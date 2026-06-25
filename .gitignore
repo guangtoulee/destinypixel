@@ -1,0 +1,10 @@
+.env*.local
+.next
+node_modules
+.npm-cache
+outputs
+work/local-db.json
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
