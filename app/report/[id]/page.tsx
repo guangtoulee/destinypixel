@@ -17,6 +17,8 @@ import { getReportRecord } from "@/lib/db/repository";
 import { elementLabelsCn } from "@/lib/engines/bazi";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 
+export const maxDuration = 60;
+
 export default async function ReportPage({
   params,
 }: {

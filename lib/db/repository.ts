@@ -44,6 +44,33 @@ type LocalStore = {
 
 const localDbPath = path.join(process.cwd(), "work", "local-db.json");
 
+function createEmptyStore(): LocalStore {
+  return { users: [], birth_records: [], reports: [] };
+}
+
+function getMemoryStore() {
+  const globalStore = globalThis as typeof globalThis & {
+    __destinyPixelLocalStore?: LocalStore;
+  };
+
+  globalStore.__destinyPixelLocalStore ??= createEmptyStore();
+  return globalStore.__destinyPixelLocalStore;
+}
+
+function replaceMemoryStore(store: LocalStore) {
+  const memoryStore = getMemoryStore();
+
+  memoryStore.users = store.users;
+  memoryStore.birth_records = store.birth_records;
+  memoryStore.reports = store.reports;
+
+  return memoryStore;
+}
+
+function shouldSkipLocalWrites() {
+  return Boolean(process.env.VERCEL || process.env.NODE_ENV === "production");
+}
+
 function hasSupabaseConfig() {
   return Boolean(
     (process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL) &&
@@ -52,16 +79,35 @@ function hasSupabaseConfig() {
 }
 
 async function readLocalStore(): Promise<LocalStore> {
+  const memoryStore = getMemoryStore();
+
+  if (memoryStore.reports.length > 0) {
+    return memoryStore;
+  }
+
   try {
-    return JSON.parse(await fs.readFile(localDbPath, "utf8")) as LocalStore;
+    return replaceMemoryStore(
+      JSON.parse(await fs.readFile(localDbPath, "utf8")) as LocalStore,
+    );
   } catch {
-    return { users: [], birth_records: [], reports: [] };
+    return memoryStore;
   }
 }
 
 async function writeLocalStore(store: LocalStore) {
-  await fs.mkdir(path.dirname(localDbPath), { recursive: true });
-  await fs.writeFile(localDbPath, JSON.stringify(store, null, 2));
+  replaceMemoryStore(store);
+
+  if (shouldSkipLocalWrites()) {
+    console.warn("Vercel 环境跳过本地写入");
+    return;
+  }
+
+  try {
+    await fs.mkdir(path.dirname(localDbPath), { recursive: true });
+    await fs.writeFile(localDbPath, JSON.stringify(store, null, 2));
+  } catch {
+    console.warn("Vercel 环境跳过本地写入");
+  }
 }
 
 async function supabaseRequest<T>(
