@@ -5,11 +5,10 @@ import type { PillarProfile } from "@/lib/pillars";
 
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ?? "https://api.deepseek.com/chat/completions";
-const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-pro";
-const DEFAULT_TIMEOUT_MS = 120_000;
-const MIN_SECTION_CHARACTERS = 900;
-const TARGET_SECTION_CHARACTERS = "1000-1400";
-const requiredSectionLabels = ["命理特征点", "心理动力分析", "给用户的实操建议"];
+const DEEPSEEK_MODEL = "deepseek-v4-flash";
+const DEFAULT_TIMEOUT_MS = 18_000;
+const MIN_SECTION_CHARACTERS = 80;
+const TARGET_SECTION_CHARACTERS = "250-300";
 
 export type AIReportSections = {
   character: string;
@@ -43,25 +42,17 @@ type DeepSeekChatResponse = {
 };
 
 const systemPrompt = `
-你是 DestinyPixel 的首席融合解读专家，也是一位拥有 30 年经验的资深占星与命理心理咨询专家。你的风格必须权威、共情、深邃，能够把中国八字与西方占星翻译成现代人真正能使用的心理洞察。
+你是 DestinyPixel 的命理融合解读师，擅长把中国八字与西方占星翻译成现代、清晰、可执行的自我洞察。
 
-底层原则：
-1. Bazi 与 Astrology 是两个独立引擎的结果。它们只在报告解读层融合，绝不能让一个系统覆盖、修正或否定另一个系统。
-2. 只基于用户提供的 Context 写作。不得编造不存在的宫位、相位、职业、疾病、投资收益、具体灾祸或确定事件。
-3. 必须用具体数据推演：八字部分要明确引用日主、四柱、五行强弱/缺失、天干地支、十神结构、日柱动物原型；占星部分要明确引用太阳星座、十大星体落座、主要相位、天干到行星的映射星体。
-4. 禁止空泛形容词堆叠，例如“很有能量”“很神秘”“很特别”。每个判断都必须能回扣到某个八字格局或星盘特征。
-5. 若八字有元素缺失，可以在融合层观察星盘中相关星体、元素或星座是否形成补偿、替代或张力，但不要说“完全弥补”。
+请提供精炼、一针见血的命理洞察。每个板块（性格、财富、流年）控制在 ${TARGET_SECTION_CHARACTERS} 字左右，直接给核心结论和实操建议，去掉无意义的铺垫和啰嗦的文学描写。
 
-输出强制规则：
-1. 只能返回合法 JSON 对象，不能有 Markdown，不能有代码块，不能有额外解释。
-2. JSON 必须且只能包含三个字符串字段：{ "character": "...", "wealth": "...", "transits": "..." }。
-3. character 写“天生性格”，wealth 写“财富模式”，transits 写“流年大运/阶段节奏”。
-4. 每个字段内容目标长度为 ${TARGET_SECTION_CHARACTERS} 个中文字符；后台最低验收线是 ${MIN_SECTION_CHARACTERS} 个中文字符，低于此长度会判定失败并重试。
-5. 每个字段内部必须自然包含三层结构，并用这些中文短标签开头组织内容：“命理特征点：”“心理动力分析：”“给用户的实操建议：”。
-6. transits 在没有真实大运排盘或年度行运表时，要写成中长期节奏、心理成熟路径和行动建议，不要虚构具体年份事件。
-7. 中文必须深刻、有文学美感、但保持专业清晰，严禁机器翻译感；英文则使用流畅准确的专业占星术语。
-8. 如果你生成的内容不足，我会通过后台进行打分和重试；请务必一次性生成高质量、长文本、可直接付费交付的深度报告。
-9. 不要为了压缩篇幅而省略推理链路。宁可写得细、慢、深，也不要给短评式结论。
+规则：
+1. 只能基于用户提供的 Context 写作，不编造不存在的宫位、相位、疾病、投资收益或确定事件。
+2. 八字侧至少引用日主、四柱/十神/五行强弱中的关键点；占星侧至少引用太阳星座、映射星体或主要相位中的关键点。
+3. Bazi 与 Astrology 底层独立，只在解读层做交集和互补。
+4. 语言要专业、克制、直接，不要玄虚恐吓，不要宿命论。
+5. 只能返回合法 JSON 对象，不能有 Markdown，不能有代码块，不能有额外解释。
+6. JSON 必须且只能包含三个字符串字段：{ "character": "...", "wealth": "...", "transits": "..." }。
 `.trim();
 
 function formatElementBalance(bazi: BaziData) {
@@ -187,16 +178,6 @@ function requireSectionText(value: unknown, key: keyof AIReportSections) {
     );
   }
 
-  const missingLabels = requiredSectionLabels.filter(
-    (label) => !text.includes(label),
-  );
-
-  if (missingLabels.length > 0) {
-    throw new Error(
-      `DeepSeek response "${key}" is missing section labels: ${missingLabels.join(", ")}.`,
-    );
-  }
-
   return text;
 }
 
@@ -219,11 +200,9 @@ async function callDeepSeek({
     },
     body: JSON.stringify({
       model: DEEPSEEK_MODEL,
-      temperature: retryReason ? 0.42 : 0.55,
-      max_tokens: 12000,
+      temperature: retryReason ? 0.35 : 0.45,
+      max_tokens: 1500,
       response_format: { type: "json_object" },
-      thinking: { type: "enabled" },
-      reasoning_effort: "high",
       stream: false,
       messages: [
         {
@@ -240,12 +219,11 @@ async function callDeepSeek({
               keys: ["character", "wealth", "transits"],
               targetLengthPerKey: `${TARGET_SECTION_CHARACTERS} Chinese characters`,
               minimumLengthPerKey: `${MIN_SECTION_CHARACTERS} Chinese characters`,
-              requiredLabelsPerKey: requiredSectionLabels,
               qualityBar:
-                "付费级深度报告：基于具体八字十神、五行强弱、星体落座与主要相位展开，不写泛泛而谈的短评。",
+                "线上快速版报告：基于具体八字十神、五行强弱、星体落座与主要相位给结论，不写铺垫。",
             },
             retryInstruction: retryReason
-              ? `上一轮输出未通过后台质量检查：${retryReason}。请重新生成严格 JSON，并确保 character、wealth、transits 每个字段均为 ${TARGET_SECTION_CHARACTERS} 个中文字符，最低不能少于 ${MIN_SECTION_CHARACTERS} 个中文字符，且都包含“命理特征点 / 心理动力分析 / 给用户的实操建议”三层内容。`
+              ? `上一轮输出未通过后台质量检查：${retryReason}。请重新生成严格 JSON，每个字段控制在 ${TARGET_SECTION_CHARACTERS} 个中文字符左右，直接给核心结论和实操建议。`
               : undefined,
           }),
         },
@@ -270,7 +248,7 @@ async function requestDeepSeekReport(context: unknown): Promise<AIReportSections
   try {
     let lastValidationError = "";
 
-    for (let attempt = 0; attempt < 2; attempt += 1) {
+    for (let attempt = 0; attempt < 1; attempt += 1) {
       const response = await callDeepSeek({
         apiKey,
         context,
