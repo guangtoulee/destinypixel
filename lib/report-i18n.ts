@@ -56,7 +56,7 @@ export const reportCopy = {
     },
     tabs: {
       natal: "Inner Map",
-      transits: "Annual Timing",
+      transits: "Monthly Timing",
       aria: "Report modules",
     },
     natalPanel: {
@@ -65,7 +65,7 @@ export const reportCopy = {
     },
     transitPanel: {
       eyebrow: "Timing Book",
-      title: "Seasonal guidance, generated on demand",
+      title: "Annual rhythm by monthly windows",
     },
     transitContext: {
       targetYear: "Reading year",
@@ -99,9 +99,9 @@ export const reportCopy = {
       winter: { title: "Winter", kicker: "Integration" },
     },
     vip: {
-      title: "VIP Transit Consultation",
+      title: "VIP Timing Consultation",
       description:
-        "A human astrologer can refine these seasonal signals into exact dates, decisions, and relationship windows.",
+        "A human astrologer can refine these monthly signals into exact dates, decisions, and relationship windows.",
       action: "Book Session",
     },
     pillarRoles: {
@@ -138,7 +138,7 @@ export const reportCopy = {
     },
     tabs: {
       natal: "内在地图",
-      transits: "年度节奏",
+      transits: "年运月令",
       aria: "报告模块",
     },
     natalPanel: {
@@ -147,7 +147,7 @@ export const reportCopy = {
     },
     transitPanel: {
       eyebrow: "时机之书",
-      title: "按需生成的四季指引",
+      title: "按节气展开的年度月令",
     },
     transitContext: {
       targetYear: "测算年份",
@@ -181,9 +181,9 @@ export const reportCopy = {
       winter: { title: "冬季", kicker: "整合" },
     },
     vip: {
-      title: "VIP 流年咨询",
+      title: "VIP 年运咨询",
       description:
-        "人工咨询师可以把这些季节信号细化为具体日期、决策窗口与关系节奏。",
+        "人工咨询师可以把这些月令信号细化为具体日期、决策窗口与关系节奏。",
       action: "预约咨询",
     },
     pillarRoles: {
@@ -220,7 +220,7 @@ export const reportCopy = {
     },
     tabs: {
       natal: "Внутренняя карта",
-      transits: "Годовой ритм",
+      transits: "Месячный ритм",
       aria: "Модули отчета",
     },
     natalPanel: {
@@ -229,7 +229,7 @@ export const reportCopy = {
     },
     transitPanel: {
       eyebrow: "Книга времени",
-      title: "Сезонный ориентир по запросу",
+      title: "Годовой ритм по месячным окнам",
     },
     transitContext: {
       targetYear: "Год чтения",
@@ -265,7 +265,7 @@ export const reportCopy = {
     vip: {
       title: "Премиальная консультация по транзитам",
       description:
-        "Живой астролог может уточнить сезонные сигналы до дат, решений и окон отношений.",
+        "Живой астролог может уточнить месячные сигналы до дат, решений и окон отношений.",
       action: "Записаться",
     },
     pillarRoles: {

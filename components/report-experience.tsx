@@ -13,11 +13,19 @@ import {
 import type { NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
 import { reportCopy } from "@/lib/report-i18n";
+import {
+  getTransitMonthDisplay,
+  getTransitOverviewDisplay,
+  transitMonthSections,
+  transitOverviewSection,
+  type TransitMonthKey,
+  type TransitSectionKey,
+} from "@/lib/report-timing";
 
 type StreamStatus = "idle" | "loading" | "ready" | "error";
 type ActiveTab = "natal" | "transits";
 type NatalKey = keyof NatalBookSections;
-type TransitKey = "spring" | "summer" | "autumn" | "winter";
+type TransitKey = TransitSectionKey;
 
 type SectionConfig<Key extends string> = {
   key: Key;
@@ -73,29 +81,17 @@ const natalSections: Array<SectionConfig<NatalKey>> = [
 
 const transitSections: Array<SectionConfig<TransitKey>> = [
   {
-    key: "spring",
-    marker: "SPRING",
-    title: "Spring",
-    kicker: "Initiation",
+    key: transitOverviewSection.key,
+    marker: transitOverviewSection.marker,
+    title: "Overview",
+    kicker: "Annual Frame",
   },
-  {
-    key: "summer",
-    marker: "SUMMER",
-    title: "Summer",
-    kicker: "Expression",
-  },
-  {
-    key: "autumn",
-    marker: "AUTUMN",
-    title: "Autumn",
-    kicker: "Refinement",
-  },
-  {
-    key: "winter",
-    marker: "WINTER",
-    title: "Winter",
-    kicker: "Integration",
-  },
+  ...transitMonthSections.map((section) => ({
+    key: section.key,
+    marker: section.marker,
+    title: section.enTitle,
+    kicker: section.enKicker,
+  })),
 ];
 
 function parseMarkedSections<Key extends string>(
@@ -166,6 +162,40 @@ function StatusPill({
   );
 }
 
+function splitInsightText(content: string) {
+  return content
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+}
+
+function InsightText({ content }: { content: string }) {
+  const paragraphs = splitInsightText(content);
+
+  if (paragraphs.length === 0) return null;
+
+  return (
+    <div className="insight-copy">
+      {paragraphs.map((paragraph, index) => (
+        <p key={`${paragraph.slice(0, 24)}-${index}`}>{paragraph}</p>
+      ))}
+    </div>
+  );
+}
+
+function formatMonthlyRange(
+  key: TransitMonthKey,
+  targetYear: number | undefined,
+  range: string,
+) {
+  if (!targetYear) return range;
+  if (key === "month11") return `${targetYear}/12/07-${targetYear + 1}/01/05`;
+  if (key === "month12") return `${targetYear + 1} · ${range}`;
+
+  return `${targetYear} · ${range}`;
+}
+
+
 function AccordionSection({
   title,
   kicker,
@@ -197,7 +227,7 @@ function AccordionSection({
       {isOpen ? (
         <div className="report-accordion-card__body">
           {content ? (
-            <p>{content}</p>
+            <InsightText content={content} />
           ) : (
             <div className="insight-skeleton">
               <span>{isLoading ? loadingLabel : queuedLabel}</span>
@@ -242,13 +272,6 @@ export default function ReportExperience({
     growth: false,
     health: false,
   });
-  const [openTransit, setOpenTransit] = useState<Record<TransitKey, boolean>>({
-    spring: true,
-    summer: false,
-    autumn: false,
-    winter: false,
-  });
-
   const streamEndpoint = useCallback(
     async (
       endpoint: "/api/generate-natal" | "/api/generate-transit",
@@ -312,6 +335,7 @@ export default function ReportExperience({
     () => parseMarkedSections(transitRaw, transitSections),
     [transitRaw],
   );
+  const transitOverview = getTransitOverviewDisplay(context.locale);
 
   function activateTab(tab: ActiveTab) {
     setActiveTab(tab);
@@ -428,22 +452,40 @@ export default function ReportExperience({
             </div>
           ) : null}
 
-          <div className="season-grid">
-            {transitSections.map((section) => {
-              const content = transitContent[section.key];
+          <article className="transit-overview-card">
+            <div className="transit-overview-card__head">
+              <span>{transitOverview.kicker}</span>
+              <strong>{transitOverview.title}</strong>
+            </div>
+            {transitContent.overview ? (
+              <InsightText content={transitContent.overview} />
+            ) : (
+              <div className="insight-skeleton">
+                <span>{copy.status.generating}</span>
+                <i />
+                <i />
+                <i />
+              </div>
+            )}
+          </article>
+
+          <div className="monthly-timing-grid">
+            {transitMonthSections.map((section, index) => {
+              const content = transitContent[section.key as TransitMonthKey];
+              const display = getTransitMonthDisplay(section, context.locale);
 
               return (
-                <article className="season-card" key={section.key}>
-                  <div>
-                    <span>{copy.seasons[section.key].kicker}</span>
-                    <strong>
-                      {luck?.targetYear
-                        ? `${luck.targetYear} · ${copy.seasons[section.key].title}`
-                        : copy.seasons[section.key].title}
-                    </strong>
+                <article className="season-card monthly-timing-card" key={section.key}>
+                  <span className="monthly-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="monthly-card-head">
+                    <span>{display.kicker}</span>
+                    <strong>{display.title}</strong>
+                    <em>{formatMonthlyRange(section.key, luck?.targetYear, display.range)}</em>
                   </div>
                   {content ? (
-                    <p>{content}</p>
+                    <InsightText content={content} />
                   ) : (
                     <div className="insight-skeleton">
                       <span>{copy.status.generating}</span>

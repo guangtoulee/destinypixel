@@ -4,6 +4,11 @@ import {
   outputLanguageNames,
   type ReportLocale,
 } from "@/lib/report-i18n";
+import {
+  getTransitMonthDisplay,
+  transitMonthSections,
+  transitPromptMarkers,
+} from "@/lib/report-timing";
 
 export type ReportGenerationContext = {
   reportId: string;
@@ -159,6 +164,21 @@ function shortContext(context: ReportGenerationContext) {
       })),
       majorAspects: context.astrology.majorAspects,
     },
+    annualTimingWindows: transitMonthSections.map((section) => {
+      const display = getTransitMonthDisplay(section, context.locale);
+
+      return {
+        marker: section.marker,
+        title: display.title,
+        range: display.range,
+        note:
+          context.locale === "zh"
+            ? "按中国节气月令理解这个时间窗。"
+            : context.locale === "ru"
+              ? "Используй это как примерное григорианское временное окно."
+              : "Use this as an approximate Gregorian timing window.",
+      };
+    }),
   });
 }
 
@@ -176,7 +196,8 @@ export function buildNatalMessages(context: ReportGenerationContext): ChatMessag
         "Use the supplied Bazi and astrology context only. Do not invent houses, medical diagnoses, fixed events, or guaranteed outcomes.",
         "Return plain text only. No Markdown, no JSON, no bullets unless a section asks for compact dimensions.",
         "You must use these exact markers and this order: [DAY_MASTER], [OUTER_PERSONA], [DEEP_SELF], [CAREER], [LOVE], [GROWTH], [HEALTH].",
-        "Each section should be materially deeper than a short summary: about 220-300 English words, equivalent to roughly 320-460 Chinese characters in density.",
+        "Each section should feel like a premium life-book chapter: about 260-360 English words, equivalent to roughly 420-620 Chinese characters in density.",
+        "Write each section as 2-3 short paragraphs separated by blank lines. The first paragraph is the core verdict, the middle paragraph is concrete analysis, and the final paragraph is practical guidance.",
         "Every section must include at least two concrete anchors from the supplied Bazi/energy structure and astrology context, then end with practical psychological guidance.",
         "Career, Love, Growth, and Health are separate modules. Do not merge them into one paragraph.",
       ].join(" "),
@@ -203,9 +224,11 @@ export function buildTransitMessages(
         "Write for an overseas paid report with direct, practical guidance.",
         "Use the natal Bazi and astrology context as the anchor. Transit timing must be based on context.bazi.luck, especially targetYear, currentYearPillar, previousYearPillar, and activeTenYearLuck. Do not invent exact future events, medical claims, lottery/investment promises, or fear-based predictions.",
         "Return plain text only. No Markdown and no JSON.",
-        "You must use these exact markers and this order: [SPRING], [SUMMER], [AUTUMN], [WINTER].",
-        "Each seasonal section must explicitly mention the target year or the active ten-year luck cycle. Do not write generic timeless seasons; the advice must change when the year pillar or ten-year luck changes.",
-        "Each seasonal section should be about 180-260 English words, or an equivalent rich but readable length in the requested language, direct, practical, and suitable for typewriter streaming.",
+        `You must use these exact markers and this order: ${transitPromptMarkers.map((marker) => `[${marker}]`).join(", ")}.`,
+        "[OVERVIEW] is the annual overview. It should be about 260-360 English words, or 420-620 Chinese characters, and must explicitly name the active ten-year luck cycle, target year, previous year residue, and the main psychological strategy for the year.",
+        "The twelve MONTH sections are not generic seasons. They are solar-term/monthly timing windows. For Chinese output, write them as solar-term months; for English or Russian output, use the approximate Gregorian date range from annualTimingWindows.",
+        "Each MONTH section should be concise but substantial: about 90-130 English words, or 150-230 Chinese characters. Use 2 short paragraphs separated by a blank line: first a concrete timing judgment, then practical guidance.",
+        "Every MONTH section must feel different. Mention either the target year, the active ten-year luck cycle, the annual pillar, the prior-year residue, or the supplied planetary resonance. Avoid repeating the same advice.",
         "Keep the first sentence useful immediately so streaming feels responsive before the full section finishes.",
       ].join(" "),
     },
@@ -288,14 +311,19 @@ export function fallbackTransitText(context: ReportGenerationContext) {
       : "当前十年大运";
 
     return [
-      "[SPRING]",
-      `${targetYear} 年春季先看 ${currentPillar} 与 ${decade} 的交会。它不是泛泛的新开始，而是从 ${previousYear} 年 ${previousPillar} 留下的惯性里重新定速：先恢复身体秩序，再打开新的目标。`,
-      "[SUMMER]",
-      `${targetYear} 年夏季强调表达与曝光。${context.profile.displayName} 需要清晰的舞台，但十年大运要求你把能量集中到一个真正能累积影响力的位置，不要分散给太多对象。`,
-      "[AUTUMN]",
-      `${targetYear} 年秋季适合修正关系、财务和承诺结构。流年干支会把前半年的选择带回现实检验，越是感到沉重，越需要简化规则。`,
-      "[WINTER]",
-      `${targetYear} 年冬季进入整合。把流年给你的提醒沉淀进 ${decade} 的长期主题里，减少噪音，保存洞察，把有效选择变成系统。`,
+      "[OVERVIEW]",
+      `${targetYear} 年的年度节奏，要放在 ${decade} 的长周期里看。${currentPillar} 不是孤立的一年，它会承接 ${previousYear} 年 ${previousPillar} 留下的惯性，把你推到一个需要重新分配体力、关系、金钱和注意力的位置。此处的重点不是追逐热闹，而是判断哪些选择真正能进入长期结构。`,
+      `对 ${context.profile.displayName} 而言，今年最重要的策略是把敏感度变成秩序，把灵感变成可复用的方法。每个月的节气月令会像一条细密的时间线，提醒你什么时候启动，什么时候收束，什么时候该把外部机会转回内在修复。`,
+      ...transitMonthSections.flatMap((section, index) => {
+        const display = getTransitMonthDisplay(section, context.locale);
+        const tone = index < 3 ? "启动与试探" : index < 6 ? "表达与承压" : index < 9 ? "修正与筛选" : "沉淀与整合";
+
+        return [
+          `[${section.marker}]`,
+          `${display.title}（${display.range}）进入 ${tone} 的窗口。${currentPillar} 与 ${decade} 会把这一段时间的主题落到具体生活里：你需要观察自己是在主动选择，还是被外界节奏牵着走。`,
+          `建议把本月当作一个小型实验：只保留最关键的目标、最必要的关系沟通和最能恢复体力的习惯。不要为了证明自己而扩大消耗，把有效选择写下来，月底再复盘它是否真的让你更稳定。`,
+        ];
+      }),
     ].join("\n\n");
   }
 
@@ -307,14 +335,26 @@ export function fallbackTransitText(context: ReportGenerationContext) {
       : "текущий десятилетний цикл";
 
     return [
-      "[SPRING]",
-      `Весна ${targetYear} года читается через ${currentPillar} и ${decade}. Это не общий сезонный совет: сначала завершите инерцию ${previousYear} года (${previousPillar}), затем восстановите ритм и выберите одну ясную цель.`,
-      "[SUMMER]",
-      `Лето ${targetYear} года требует выражения. Архетип ${context.profile.displayName} нуждается в сцене, но десятилетний цикл просит не распыляться: выбирайте аудиторию, где вашу ценность легче признать.`,
-      "[AUTUMN]",
-      `Осень ${targetYear} года проверяет договоренности, деньги и эмоциональные обязательства. Если структура тяжелеет, упрощайте правила, а не усиливайте давление.`,
-      "[WINTER]",
-      `Зима ${targetYear} года собирает опыт в систему. Верните решения года к теме ${decade}: меньше шума, больше восстановления и более точный выбор темпа.`,
+      "[OVERVIEW]",
+      `${targetYear} год читается через ${currentPillar} и ${decade}. Это не изолированный год: он завершает инерцию ${previousYear} года (${previousPillar}) и показывает, где нужно беречь силы, деньги, внимание и отношения.`,
+      `Для архетипа ${context.profile.displayName} главный ход года — превратить чувствительность в порядок, а интуицию в повторяемую практику. Месячные окна ниже помогают увидеть, когда начинать, когда редактировать выбор и когда возвращаться к восстановлению.`,
+      ...transitMonthSections.flatMap((section, index) => {
+        const display = getTransitMonthDisplay(section, context.locale);
+        const tone =
+          index < 3
+            ? "запуска"
+            : index < 6
+              ? "проявления"
+              : index < 9
+                ? "отбора"
+                : "интеграции";
+
+        return [
+          `[${section.marker}]`,
+          `${display.title} открывает окно ${tone}. Свяжите этот период с годовым полем ${targetYear} и циклом ${decade}: задача месяца — понять, где вы выбираете осознанно, а где просто реагируете на чужой темп.`,
+          "Практически стоит оставить одну главную цель, один честный разговор и один ритм восстановления. В конце месяца проверьте, стало ли больше устойчивости, ясности и внутреннего согласия.",
+        ];
+      }),
     ].join("\n\n");
   }
 
@@ -325,14 +365,26 @@ export function fallbackTransitText(context: ReportGenerationContext) {
     : "the active ten-year luck cycle";
 
   return [
-    "[SPRING]",
-    `Spring ${targetYear} is read through ${currentPillar} and ${decade}. This is not a generic restart: first complete the residue of ${previousYear} (${previousPillar}), then choose one visible goal, one relationship boundary, and one health rhythm that can survive pressure.`,
-    "[SUMMER]",
-    `Summer ${targetYear} asks for expression. Your ${context.profile.nameEn} archetype needs a clean channel for visibility, creativity, and social signal, but the decade cycle asks you not to scatter yourself. Pick the room where your value is easiest to recognize.`,
-    "[AUTUMN]",
-    `Autumn ${targetYear} is for editing. Review contracts, money patterns, and emotional obligations through the pressure of the annual pillar. When something feels heavy, simplify the structure before forcing more effort.`,
-    "[WINTER]",
-    `Winter ${targetYear} brings integration. Return the year's lessons to ${decade}: reduce noise, strengthen recovery, and preserve the choices that kept your destiny legible under pressure.`,
+    "[OVERVIEW]",
+    `${targetYear} is read through ${currentPillar} and ${decade}. This is not a generic annual forecast: it carries the residue of ${previousYear} (${previousPillar}) into a year where attention, money, relationships, and body rhythm need cleaner allocation.`,
+    `For the ${context.profile.nameEn} archetype, the central strategy is to turn sensitivity into structure and intuition into repeatable practice. The monthly windows below show when to initiate, when to edit, and when to return to recovery before pressure becomes waste.`,
+    ...transitMonthSections.flatMap((section, index) => {
+      const display = getTransitMonthDisplay(section, context.locale);
+      const tone =
+        index < 3
+          ? "initiation"
+          : index < 6
+            ? "expression"
+            : index < 9
+              ? "refinement"
+              : "integration";
+
+      return [
+        `[${section.marker}]`,
+        `${display.title} opens a ${tone} window. Read this period through ${targetYear} and ${decade}: the useful question is where you are making a clear choice, and where you are simply reacting to someone else's speed.`,
+        "Keep one primary goal, one honest conversation, and one recovery rhythm. At the end of the window, review whether your choices created more steadiness, clearer value, and less emotional leakage.",
+      ];
+    }),
   ].join("\n\n");
 }
 
@@ -371,7 +423,7 @@ export async function streamDeepSeekText({
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
         temperature: 0.42,
-        max_tokens: 3600,
+        max_tokens: Number(process.env.DEEPSEEK_STREAM_MAX_TOKENS ?? 5200),
         stream: true,
         messages,
       }),
