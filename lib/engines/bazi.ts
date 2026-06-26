@@ -200,6 +200,8 @@ type JieQiDate = {
 type LunarDate = ReturnType<ReturnType<typeof Solar.fromYmdHms>["getLunar"]> & {
   getNextJieQi(wholeDay: boolean): JieQiDate;
   getPrevJieQi(wholeDay: boolean): JieQiDate;
+  getNextJie(wholeDay: boolean): JieQiDate;
+  getPrevJie(wholeDay: boolean): JieQiDate;
 };
 
 function solarToUtcMs(solar: SolarDate) {
@@ -248,7 +250,7 @@ function calculateLuckData(
       ? "forward"
       : "reverse";
   const referenceJieQi =
-    direction === "forward" ? lunar.getNextJieQi(false) : lunar.getPrevJieQi(false);
+    direction === "forward" ? lunar.getNextJie(false) : lunar.getPrevJie(false);
   const referenceSolar = referenceJieQi.getSolar();
   const trueSolarParts = trueSolarTimeToParts(trueSolarTime);
   const birthSolar = Solar.fromYmdHms(
@@ -290,7 +292,7 @@ function calculateLuckData(
     direction,
     startAge,
     startYear,
-    calculationNote: `${direction} luck cycle from ${referenceJieQi.getName()} at ${referenceSolar.toYmdHms()}; one day is treated as roughly four months.`,
+    calculationNote: `${direction} luck cycle from solar term boundary ${referenceJieQi.getName()} at ${referenceSolar.toYmdHms()}; one day is treated as roughly four months.`,
     tenYearLuck,
     activeTenYearLuck: tenYearLuck.find(
       (cycle) => targetYear >= cycle.startYear && targetYear <= cycle.endYear,
@@ -344,6 +346,22 @@ export const trueSolarTimeCalibrationFixture = {
   expectedHourPillar: "癸丑",
 };
 
+export const luckCycleCalibrationFixture = {
+  name: "Ten-year luck cycle boundary guard",
+  input: {
+    name: "Luck Calibration",
+    gender: "male",
+    locale: "zh",
+    birthDate: "1982-03-21",
+    birthTime: "03:15",
+    city: resolveCity("Shijiazhuang")!,
+  } satisfies BirthInput,
+  expectedCycles: [
+    { pillar: "丁未", startYear: 2017, endYear: 2026 },
+    { pillar: "戊申", startYear: 2027, endYear: 2036 },
+  ],
+};
+
 export function assertBaziEngineCalibration() {
   const result = calculateBaziEngine(trueSolarTimeCalibrationFixture.input);
 
@@ -352,6 +370,24 @@ export function assertBaziEngineCalibration() {
       `True solar time calibration failed: expected ${trueSolarTimeCalibrationFixture.expectedHourPillar}, received ${result.pillars.hour}`,
     );
   }
+
+  const luckResult = calculateBaziEngine(luckCycleCalibrationFixture.input);
+
+  luckCycleCalibrationFixture.expectedCycles.forEach((expected) => {
+    const cycle = luckResult.luck.tenYearLuck.find(
+      (item) => item.startYear === expected.startYear,
+    );
+
+    if (
+      !cycle ||
+      cycle.pillar !== expected.pillar ||
+      cycle.endYear !== expected.endYear
+    ) {
+      throw new Error(
+        `Luck cycle calibration failed: expected ${expected.startYear}-${expected.endYear} ${expected.pillar}`,
+      );
+    }
+  });
 
   return result;
 }

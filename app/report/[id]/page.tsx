@@ -18,7 +18,7 @@ import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
 import { getReportRecord } from "@/lib/db/repository";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
-import type { BaziData } from "@/lib/engines/bazi";
+import { calculateBaziEngine, type BaziData } from "@/lib/engines/bazi";
 import {
   elementLabels,
   normalizeReportLocale,
@@ -232,15 +232,32 @@ export default async function ReportPage({
 
   if (!report) notFound();
 
-  const dayPillar = report.bazi_data.pillars.day;
+  const recalculatedBazi = calculateBaziEngine({
+    name: report.birth_record.name,
+    gender: report.birth_record.gender ?? "female",
+    locale: normalizeReportLocale(report.birth_record.locale ?? "en"),
+    birthDate: report.birth_record.birth_date,
+    birthTime: report.birth_record.birth_time,
+    city: {
+      id: report.birth_record.id,
+      label: report.birth_record.birth_place,
+      country: "",
+      latitude: report.birth_record.latitude,
+      longitude: report.birth_record.longitude,
+      timezone: report.birth_record.timezone || "Asia/Shanghai",
+      aliases: [report.birth_record.birth_place],
+    },
+  });
+  const baziData = recalculatedBazi;
+  const dayPillar = baziData.pillars.day;
   const profile = (pillarsDB as Record<string, PillarProfile>)[dayPillar];
   const sun = report.astro_data.placements.find(
     (placement) => placement.body === "Sun",
   );
   const mappedPlanet = report.astro_data.placements.find(
-    (placement) => placement.body === report.bazi_data.mappedPlanet,
+    (placement) => placement.body === baziData.mappedPlanet,
   );
-  const elements = Object.entries(report.bazi_data.elementBalance);
+  const elements = Object.entries(baziData.elementBalance);
   const locale = normalizeReportLocale(
     query?.locale ?? report.birth_record.locale ?? report.ai_content.meta?.locale ?? "en",
   );
@@ -255,8 +272,7 @@ export default async function ReportPage({
   const solarSecondary =
     locale === "zh" || locale === "en" ? report.astro_data.sunSign : sunSign;
   const mappedPlanetName =
-    planetLabels[locale][report.bazi_data.mappedPlanet] ??
-    report.bazi_data.mappedPlanet;
+    planetLabels[locale][baziData.mappedPlanet] ?? baziData.mappedPlanet;
   const profileName =
     locale === "zh"
       ? profile.name.cn
@@ -271,7 +287,7 @@ export default async function ReportPage({
     pillarOrder.map((key) => [
       key,
       {
-        ...getPillarDisplay(report.bazi_data.pillars[key], locale),
+        ...getPillarDisplay(baziData.pillars[key], locale),
         roleTitle: copy.pillarRoles[key].title,
         roleMicroBadge: copy.pillarRoles[key].microBadge,
       },
@@ -280,7 +296,7 @@ export default async function ReportPage({
   const initialNatal: NatalBookSections = buildInitialNatalShell({
     locale,
     profile,
-    bazi: report.bazi_data,
+    bazi: baziData,
     dayDisplay,
     sunSign,
     mappedPlanetName,
@@ -294,7 +310,7 @@ export default async function ReportPage({
       birthDate: report.birth_record.birth_date,
       birthTime: report.birth_record.birth_time,
       birthPlace: report.birth_record.birth_place,
-      trueSolarTime: report.bazi_data.trueSolarTime.time,
+      trueSolarTime: baziData.trueSolarTime.time,
     },
     profile: {
       pillar: dayPillar,
@@ -310,17 +326,17 @@ export default async function ReportPage({
       healthEn: profile.health?.en,
     },
     bazi: {
-      dayMaster: report.bazi_data.dayMaster,
+      dayMaster: baziData.dayMaster,
       dayMasterDisplay: dayDisplay.stemLabel,
-      mappedPlanet: report.bazi_data.mappedPlanet,
-      mappedPlanetCn: report.bazi_data.mappedPlanetCn,
+      mappedPlanet: baziData.mappedPlanet,
+      mappedPlanetCn: baziData.mappedPlanetCn,
       mappedPlanetDisplay: mappedPlanetName,
-      pillars: report.bazi_data.pillars,
+      pillars: baziData.pillars,
       pillarsDisplay: pillarDisplays,
-      elementBalance: report.bazi_data.elementBalance,
-      missingElements: report.bazi_data.missingElements,
-      tenGods: report.bazi_data.tenGods,
-      luck: buildLuckDisplay(report.bazi_data.luck, locale),
+      elementBalance: baziData.elementBalance,
+      missingElements: baziData.missingElements,
+      tenGods: baziData.tenGods,
+      luck: buildLuckDisplay(baziData.luck, locale),
     },
     astrology: {
       sunSign,
@@ -414,7 +430,7 @@ export default async function ReportPage({
             </span>
             <span>
               <Orbit size={14} aria-hidden="true" />
-              {copy.meta.trueSolar} {report.bazi_data.trueSolarTime.time}
+              {copy.meta.trueSolar} {baziData.trueSolarTime.time}
             </span>
             <span>
               <UserRound size={14} aria-hidden="true" />
@@ -432,7 +448,7 @@ export default async function ReportPage({
             <p>{copy.bazi.description}</p>
           </div>
 
-          <BaziChart pillars={report.bazi_data.pillars} locale={locale} />
+          <BaziChart pillars={baziData.pillars} locale={locale} />
 
           <div className="element-bars">
             <h3>{copy.bazi.elementBalance}</h3>

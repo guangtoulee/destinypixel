@@ -176,7 +176,8 @@ export function buildNatalMessages(context: ReportGenerationContext): ChatMessag
         "Use the supplied Bazi and astrology context only. Do not invent houses, medical diagnoses, fixed events, or guaranteed outcomes.",
         "Return plain text only. No Markdown, no JSON, no bullets unless a section asks for compact dimensions.",
         "You must use these exact markers and this order: [DAY_MASTER], [OUTER_PERSONA], [DEEP_SELF], [CAREER], [LOVE], [GROWTH], [HEALTH].",
-        "Each section should be concise and sharp: about 110-170 English words, equivalent to roughly 160-240 Chinese characters in density.",
+        "Each section should be materially deeper than a short summary: about 220-300 English words, equivalent to roughly 320-460 Chinese characters in density.",
+        "Every section must include at least two concrete anchors from the supplied Bazi/energy structure and astrology context, then end with practical psychological guidance.",
         "Career, Love, Growth, and Health are separate modules. Do not merge them into one paragraph.",
       ].join(" "),
     },
@@ -204,7 +205,8 @@ export function buildTransitMessages(
         "Return plain text only. No Markdown and no JSON.",
         "You must use these exact markers and this order: [SPRING], [SUMMER], [AUTUMN], [WINTER].",
         "Each seasonal section must explicitly mention the target year or the active ten-year luck cycle. Do not write generic timeless seasons; the advice must change when the year pillar or ten-year luck changes.",
-        "Each seasonal section should be about 90-140 English words, or an equivalent concise length in the requested language, direct, practical, and suitable for typewriter streaming.",
+        "Each seasonal section should be about 180-260 English words, or an equivalent rich but readable length in the requested language, direct, practical, and suitable for typewriter streaming.",
+        "Keep the first sentence useful immediately so streaming feels responsive before the full section finishes.",
       ].join(" "),
     },
     {
@@ -369,7 +371,7 @@ export async function streamDeepSeekText({
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
         temperature: 0.42,
-        max_tokens: 1700,
+        max_tokens: 3600,
         stream: true,
         messages,
       }),
