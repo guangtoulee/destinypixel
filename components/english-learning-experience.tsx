@@ -6,6 +6,7 @@ import {
   Brain,
   Check,
   ClipboardCheck,
+  Crosshair,
   Download,
   Headphones,
   LogIn,
@@ -23,7 +24,8 @@ import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from "re
 import styles from "./english-learning-experience.module.css";
 
 type LevelId = "starter" | "foundation" | "bridge" | "boost";
-type ModuleKey = "words" | "listen" | "read" | "phonics";
+type ModuleKey = "words" | "target" | "listen" | "read" | "phonics";
+type WordEntry = [string, string, string, string, string];
 
 type Assessment = {
   score: number;
@@ -49,6 +51,13 @@ type KnownWord = {
   count: number;
 };
 
+type TargetStats = {
+  score: number;
+  rounds: number;
+  streak: number;
+  bestStreak: number;
+};
+
 type LearningMemory = {
   assessment: Assessment | null;
   completed: {
@@ -61,6 +70,7 @@ type LearningMemory = {
   shadowCounts: Record<string, number>;
   readingAnswers: Record<string, boolean>;
   phonicsDone: Record<string, boolean>;
+  targetStats: TargetStats;
   voiceURI: string;
   rate: number;
 };
@@ -222,7 +232,7 @@ const diagnosticQuestions = [
   },
 ];
 
-const wordDecks: Record<LevelId, Array<[string, string, string, string, string]>> = {
+const wordDecks: Record<LevelId, WordEntry[]> = {
   starter: [
     ["always", "总是", "I always check my homework.", "al-ways：把 al 当成 all，全部时间都做。", "频率"],
     ["before", "在……之前", "Wash your hands before dinner.", "be + fore，fore 像 forward，位置在前。", "时间"],
@@ -384,6 +394,7 @@ function createDefaultMemory(): LearningMemory {
     shadowCounts: {},
     readingAnswers: {},
     phonicsDone: {},
+    targetStats: { score: 0, rounds: 0, streak: 0, bestStreak: 0 },
     voiceURI: "",
     rate: 0.78,
   };
@@ -404,6 +415,11 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
     shadowCounts: input?.shadowCounts ?? {},
     readingAnswers: input?.readingAnswers ?? {},
     phonicsDone: input?.phonicsDone ?? {},
+    targetStats: {
+      ...base.targetStats,
+      ...(input?.targetStats ?? {}),
+    },
+    voiceURI: input?.voiceURI ?? "",
     rate: input?.rate ?? 0.78,
   };
 
@@ -422,20 +438,39 @@ function estimateLevel(score: number): LevelId {
   return "boost";
 }
 
+function getRecommendedVoices(voices: SpeechSynthesisVoice[]) {
+  const isEnglish = (voice: SpeechSynthesisVoice) => voice.lang.toLowerCase().startsWith("en");
+  const namedVoices = voices.filter(
+    (voice) => isEnglish(voice) && /\b(Daniel|Karen|Moira|Samantha|Tessa)\b/i.test(voice.name),
+  );
+  const googleVoices = voices
+    .filter((voice) => isEnglish(voice) && /google/i.test(voice.name))
+    .slice(0, 3);
+
+  return [...namedVoices, ...googleVoices].filter(
+    (voice, index, list) => list.findIndex((item) => item.voiceURI === voice.voiceURI) === index,
+  );
+}
+
 function chooseBestVoice(voices: SpeechSynthesisVoice[], savedURI: string) {
-  const saved = voices.find((voice) => voice.voiceURI === savedURI);
+  const recommendedVoices = getRecommendedVoices(voices);
+  const saved = recommendedVoices.find((voice) => voice.voiceURI === savedURI);
   if (saved) return saved;
 
-  const englishVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("en"));
-  const avoid = /(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Fred|Good News|Hysterical|Jester|Junior|Pipe Organ|Ralph|Superstar|Trinoids|Whisper|Wobble|Zarvox)/i;
-  const preferred = /(Google US English|Samantha|Microsoft (Aria|Jenny|Michelle|Christopher|Guy)|Natural|Premium|Daniel|Karen|Moira|Tessa|Ava|Allison|Serena|Kate)/i;
+  return recommendedVoices[0];
+}
 
-  return (
-    englishVoices.find((voice) => preferred.test(voice.name) && !avoid.test(voice.name)) ??
-    englishVoices.find((voice) => !avoid.test(voice.name)) ??
-    englishVoices[0] ??
-    voices[0]
-  );
+function getTargetOptions(deck: WordEntry[], targetIndex: number, rounds: number) {
+  const indexes = [targetIndex];
+  for (let offset = 1; indexes.length < 3 && offset < deck.length; offset += 1) {
+    const nextIndex = (targetIndex + offset * 2) % deck.length;
+    if (!indexes.includes(nextIndex)) {
+      indexes.push(nextIndex);
+    }
+  }
+
+  const rotation = rounds % indexes.length;
+  return [...indexes.slice(rotation), ...indexes.slice(0, rotation)];
 }
 
 function formatSavedTime(date: Date | null) {
@@ -462,6 +497,7 @@ export default function EnglishLearningExperience() {
   const [authMessage, setAuthMessage] = useState("");
   const [session, setSession] = useState<MemberSession | null>(null);
   const [cloudStatus, setCloudStatus] = useState("本机保存");
+  const [targetFeedback, setTargetFeedback] = useState("先听单词，再点中对应的中文靶心。");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const mountedRef = useRef(false);
   const cloudReadyRef = useRef(false);
@@ -473,10 +509,20 @@ export default function EnglishLearningExperience() {
   const knownCount = Object.keys(memory.knownWords).length;
   const reviewCount = Object.keys(memory.reviewWords).filter((word) => memory.reviewWords[word]).length;
   const shadowTotal = Object.values(memory.shadowCounts).reduce((sum, count) => sum + count, 0);
+  const availableVoices = useMemo(() => getRecommendedVoices(voices), [voices]);
   const selectedVoice = useMemo(
     () => chooseBestVoice(voices, memory.voiceURI),
     [voices, memory.voiceURI],
   );
+  const targetDeck = wordDecks[levelId];
+  const targetIndex = memory.targetStats.rounds % targetDeck.length;
+  const targetOptions = useMemo(
+    () => getTargetOptions(targetDeck, targetIndex, memory.targetStats.rounds),
+    [memory.targetStats.rounds, targetDeck, targetIndex],
+  );
+  const targetAccuracy = memory.targetStats.rounds
+    ? Math.round((memory.targetStats.score / memory.targetStats.rounds) * 100)
+    : 0;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -509,9 +555,13 @@ export default function EnglishLearningExperience() {
       const best = chooseBestVoice(nextVoices, "");
       if (best) {
         setSpeechNotice(`当前语音：${best.name}`);
-        setMemory((current) => (current.voiceURI ? current : { ...current, voiceURI: best.voiceURI }));
+        setMemory((current) => {
+          const currentBest = chooseBestVoice(nextVoices, current.voiceURI);
+          if (!currentBest || current.voiceURI === currentBest.voiceURI) return current;
+          return { ...current, voiceURI: currentBest.voiceURI };
+        });
       } else {
-        setSpeechNotice("没有找到英文语音");
+        setSpeechNotice("未找到 Daniel/Karen/Moira/Samantha/Tessa 或 Google 英文语音");
       }
     };
 
@@ -655,17 +705,17 @@ export default function EnglishLearningExperience() {
       return;
     }
 
+    const voice = chooseBestVoice(voices, memory.voiceURI);
+    if (!voice) {
+      setSpeechNotice("未找到推荐英文语音，先在系统或浏览器里安装 Daniel/Karen/Moira/Samantha/Tessa 或 Google 英文语音。");
+      return;
+    }
+
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    const voice = chooseBestVoice(voices, memory.voiceURI);
-    if (voice) {
-      utterance.voice = voice;
-      utterance.lang = voice.lang || "en-US";
-      setSpeechNotice(`当前语音：${voice.name}`);
-    } else {
-      utterance.lang = "en-US";
-      setSpeechNotice("没有找到英文语音");
-    }
+    utterance.voice = voice;
+    utterance.lang = voice.lang || "en-US";
+    setSpeechNotice(`当前语音：${voice.name}`);
     utterance.rate = rateOverride ?? memory.rate;
     utterance.pitch = 0.98;
     utterance.volume = 0.96;
@@ -819,6 +869,68 @@ export default function EnglishLearningExperience() {
     });
   }
 
+  function answerTarget(optionIndex: number) {
+    const [word, meaning, sample] = targetDeck[targetIndex];
+    const [, chosenMeaning] = targetDeck[optionIndex];
+    const isCorrect = chosenMeaning === meaning;
+
+    patchMemory((current) => {
+      const nextKnown = { ...current.knownWords };
+      const nextReview = { ...current.reviewWords };
+      const nextStats: TargetStats = {
+        score: current.targetStats.score + (isCorrect ? 1 : 0),
+        rounds: current.targetStats.rounds + 1,
+        streak: isCorrect ? current.targetStats.streak + 1 : 0,
+        bestStreak: current.targetStats.bestStreak,
+      };
+      nextStats.bestStreak = Math.max(nextStats.bestStreak, nextStats.streak);
+
+      let wrongItems = current.wrongItems;
+      if (isCorrect) {
+        nextKnown[word] = {
+          word,
+          meaning,
+          learnedAt: new Date().toISOString(),
+          count: (nextKnown[word]?.count ?? 0) + 1,
+        };
+        delete nextReview[word];
+      } else {
+        nextReview[word] = true;
+        const wrongMap = new Map(current.wrongItems.map((item) => [item.id, item]));
+        const id = `target:${word}`;
+        const previous = wrongMap.get(id);
+        wrongMap.set(id, {
+          id,
+          prompt: `单词靶场：${word}`,
+          answer: meaning,
+          chosen: chosenMeaning,
+          type: "单词靶场",
+          date: new Date().toISOString(),
+          times: (previous?.times ?? 0) + 1,
+        });
+        wrongItems = Array.from(wrongMap.values());
+      }
+
+      return {
+        ...current,
+        targetStats: nextStats,
+        knownWords: nextKnown,
+        reviewWords: nextReview,
+        wrongItems,
+        completed: {
+          date: getTodayKey(),
+          modules: { ...current.completed.modules, target: true },
+        },
+      };
+    });
+
+    setTargetFeedback(
+      isCorrect
+        ? `命中：${word} = ${meaning}。例句：${sample}`
+        : `偏了：${word} 是「${meaning}」，不是「${chosenMeaning}」。已放进复习词。`,
+    );
+  }
+
   function addShadow(index: number) {
     patchMemory((current) => ({
       ...current,
@@ -881,6 +993,7 @@ export default function EnglishLearningExperience() {
   const navItems = [
     ["diagnostic", "摸底测评", ClipboardCheck],
     ["plan", "今日训练", Brain],
+    ["target", "单词靶场", Crosshair],
     ["listen", "听力跟读", Headphones],
     ["read", "阅读理解", BookOpen],
     ["phonics", "发音窍门", Volume2],
@@ -901,6 +1014,14 @@ export default function EnglishLearningExperience() {
       text: `${level.range} 阶段先练能造句的词，不只背中文意思。`,
       tab: "plan",
       action: "开始词卡",
+    },
+    {
+      key: "target",
+      chip: "Game",
+      title: "单词靶场",
+      text: "看英文点中文，专门把词义反应速度和错词记忆练起来。",
+      tab: "target",
+      action: "去打靶",
     },
     {
       key: "listen",
@@ -936,7 +1057,7 @@ export default function EnglishLearningExperience() {
             BS
           </div>
           <div>
-            <p className={styles.eyebrow}>Kids English Lab</p>
+            <p className={styles.eyebrow}>Adaptive English Lab</p>
             <h1>Bright Steps</h1>
           </div>
         </div>
@@ -1075,16 +1196,16 @@ export default function EnglishLearningExperience() {
             }
             aria-label="选择英文语音"
           >
-            {voices.length === 0 ? (
-              <option value="">系统英文语音</option>
+            {availableVoices.length === 0 ? (
+              <option value="">
+                {voices.length === 0 ? "正在读取推荐语音" : "未找到推荐语音"}
+              </option>
             ) : (
-              voices
-                .filter((voice) => voice.lang.toLowerCase().startsWith("en"))
-                .map((voice) => (
-                  <option key={voice.voiceURI} value={voice.voiceURI}>
-                    {voice.name} · {voice.lang}
-                  </option>
-                ))
+              availableVoices.map((voice) => (
+                <option key={voice.voiceURI} value={voice.voiceURI}>
+                  {voice.name} · {voice.lang}
+                </option>
+              ))
             )}
           </select>
           <label className={styles.speedControl}>
@@ -1129,24 +1250,24 @@ export default function EnglishLearningExperience() {
 
         <section className={styles.routeNote}>
           <p className={styles.sectionKicker}>路线</p>
-          <p>先用高频词和听读能力分级，再补课标主题词；教材同步可以后续接进来。</p>
+          <p>不按年龄分班，先摸底，再按词汇、听读和错词记录自动往合适题库走。</p>
         </section>
       </aside>
 
       <section className={styles.content}>
         <section className={styles.heroPanel}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Vocabulary · Listening · Reading · Pronunciation</p>
+            <p className={styles.eyebrow}>Vocabulary · Listening · Reading · Target Game</p>
             <h2>先找准水平，再把薄弱项一点点补上来。</h2>
-            <p>适合 11-13 岁孩子的轻量训练站：测词汇量、听句子、读短文、拆难发音词，每天 15 分钟。</p>
+            <p>全年龄可用的自适应英语训练站：先测大致词汇和理解水平，再练词卡、听读、发音和单词靶场。</p>
             <div className={styles.heroActions}>
               <button type="button" className={styles.primaryAction} onClick={() => setActiveTab("diagnostic")}>
                 <ClipboardCheck size={18} />
                 开始摸底
               </button>
-              <button type="button" className={styles.secondaryAction} onClick={() => setActiveTab("plan")}>
-                <Brain size={18} />
-                看今日训练
+              <button type="button" className={styles.secondaryAction} onClick={() => setActiveTab("target")}>
+                <Crosshair size={18} />
+                先打一局
               </button>
             </div>
           </div>
@@ -1166,7 +1287,7 @@ export default function EnglishLearningExperience() {
           </article>
           <article>
             <span>今日完成</span>
-            <strong>{completedCount} / 4</strong>
+            <strong>{completedCount} / {dailyModules.length}</strong>
           </article>
           <article>
             <span>重点补强</span>
@@ -1221,7 +1342,7 @@ export default function EnglishLearningExperience() {
             <div className={styles.panelHeading}>
               <div>
                 <p className={styles.sectionKicker}>Daily Sprint</p>
-                <h2>今日 15 分钟训练</h2>
+                <h2>今日 15-20 分钟训练</h2>
               </div>
               <button type="button" className={styles.secondaryAction} onClick={resetToday}>
                 <RefreshCcw size={17} />
@@ -1262,6 +1383,74 @@ export default function EnglishLearningExperience() {
               onMark={markWord}
               onSpeak={speak}
             />
+          </section>
+        )}
+
+        {activeTab === "target" && (
+          <section className={styles.tabPanel}>
+            <div className={styles.panelHeading}>
+              <div>
+                <p className={styles.sectionKicker}>Target Game</p>
+                <h2>单词靶场</h2>
+              </div>
+              <button type="button" className={styles.secondaryAction} onClick={() => speak(targetDeck[targetIndex][0], 0.72)}>
+                <Volume2 size={17} />
+                听当前词
+              </button>
+            </div>
+            <div className={styles.targetArena}>
+              <div className={styles.targetHud} aria-label="靶场得分">
+                <div>
+                  <span>命中</span>
+                  <strong>{memory.targetStats.score}</strong>
+                </div>
+                <div>
+                  <span>轮数</span>
+                  <strong>{memory.targetStats.rounds}</strong>
+                </div>
+                <div>
+                  <span>正确率</span>
+                  <strong>{targetAccuracy}%</strong>
+                </div>
+                <div>
+                  <span>连击</span>
+                  <strong>{memory.targetStats.streak}</strong>
+                </div>
+                <div>
+                  <span>最佳</span>
+                  <strong>{memory.targetStats.bestStreak}</strong>
+                </div>
+              </div>
+
+              <div className={styles.targetPrompt}>
+                <button type="button" className={styles.soundButton} onClick={() => speak(`${targetDeck[targetIndex][0]}. ${targetDeck[targetIndex][2]}`, 0.72)}>
+                  <Volume2 size={18} />
+                </button>
+                <div>
+                  <span>Tap the matching meaning</span>
+                  <h3>{targetDeck[targetIndex][0]}</h3>
+                  <p>{targetDeck[targetIndex][2]}</p>
+                </div>
+              </div>
+
+              <div className={styles.targetGrid}>
+                {targetOptions.map((optionIndex) => {
+                  const [, meaning] = targetDeck[optionIndex];
+                  return (
+                    <button
+                      key={`${targetDeck[targetIndex][0]}-${meaning}`}
+                      type="button"
+                      className={styles.targetButton}
+                      onClick={() => answerTarget(optionIndex)}
+                    >
+                      <span className={styles.targetRings} aria-hidden="true" />
+                      <strong>{meaning}</strong>
+                    </button>
+                  );
+                })}
+              </div>
+              <div className={styles.targetFeedback}>{targetFeedback}</div>
+            </div>
           </section>
         )}
 

@@ -4,7 +4,7 @@ import EnglishLearningExperience from "@/components/english-learning-experience"
 export const metadata: Metadata = {
   title: "Bright Steps English | DestinyPixel",
   description:
-    "A lightweight English diagnostic and daily practice space for Chinese middle-school learners.",
+    "An adaptive English diagnostic, practice, and word-game space for learners at any age.",
 };
 
 export default function EnglishPage() {
