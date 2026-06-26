@@ -18,7 +18,10 @@ export type NatalBookSections = {
   dayMaster: string;
   outerPersona: string;
   deepSelf: string;
-  lifeDimensions: string;
+  career: string;
+  love: string;
+  growth: string;
+  health: string;
 };
 
 export type AIReportSections = {
@@ -411,28 +414,38 @@ export function createInitialAIReportContent({
           dayMaster: `${profile.name.cn} 是本命盘的日柱原型。日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。`,
           outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanet}，它会影响第一印象、社会面具与可见野心。`,
           deepSelf: `深层自我来自地支图腾：${branchNames}。它们描述本能、记忆、依恋模式与潜意识动力。`,
-          lifeDimensions:
-            "事业、感情、成长与健康会被拆成清晰模块，避免一篇冗长报告吞掉所有重点。",
+          career: `事业模块会结合 ${mappedPlanet} 与十神结构，提炼最适合你的发力方式。`,
+          love: "感情模块会拆解依恋模式、边界感与亲密关系里的重复课题。",
+          growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的优势与盲区给出训练方向。`,
+          health: "健康模块只提供节律与身心照护建议，不做医学诊断。",
         }
       : locale === "ru"
         ? {
             dayMaster: `${dayDisplay.totemName} — ядро дневного столпа. Дневной столп: ${dayDisplay.pillarLabel}; дневной мастер: ${dayDisplay.stemMeaning}; солнечный знак: ${sunSign}.`,
             outerPersona: `Внешний слой начинается с четырех стволов: ${pillarNames}. Планета дневного мастера — ${mappedPlanet}; она влияет на первое впечатление и социальную роль.`,
             deepSelf: `Глубинное Я раскрывается через тотемы ветвей: ${branchNames}. Они описывают инстинкты, память, привязанность и скрытые мотивы.`,
-            lifeDimensions:
-              "Карьера, любовь, рост и здоровье разделены на ясные модули, чтобы отчет оставался практичным и пригодным для решений.",
+            career: `Карьера будет прочитана через ${mappedPlanet} и структуру карты, чтобы выделить практичный стиль реализации.`,
+            love:
+              "Любовь будет разобрана как отдельный модуль: привязанность, границы и повторяющиеся сценарии близости.",
+            growth: `Рост будет строиться вокруг силы и слепых зон качества ${dayDisplay.stemMeaning}.`,
+            health:
+              "Здоровье будет описано только как ритм восстановления и забота о теле, без медицинских диагнозов.",
           }
         : {
             dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}.`,
             outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanet}, shaping first impression, public rhythm, and visible ambition.`,
             deepSelf: `Your subterranean layer begins with the branch totems: ${branchNames}. They describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
-            lifeDimensions:
-              "Career, love, growth, and health are separated into concise modules, replacing the old one-piece long essay with practical commercial insight.",
+            career: `Career will be read through ${mappedPlanet} and the Bazi structure, focusing on your practical mode of contribution.`,
+            love:
+              "Love will be treated as its own module: attachment style, boundaries, and repeated intimacy patterns.",
+            growth: `Growth will focus on the gifts and blind spots of ${dayDisplay.stemMeaning}.`,
+            health:
+              "Health will stay in the lane of rhythm, recovery, and body awareness, without medical diagnosis.",
           };
 
   return {
     character: base.dayMaster,
-    wealth: base.lifeDimensions,
+    wealth: base.career,
     transits:
       locale === "zh"
         ? "流年运势只在你打开对应标签时生成，避免微信和 Vercel 等待长请求。"

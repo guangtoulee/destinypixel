@@ -23,14 +23,15 @@ import { createFusionReportAction } from "@/app/actions";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { cities } from "@/lib/geo/cities";
 import {
-  type Locale,
   type PillarProfile,
   pillarsDB,
 } from "@/lib/pillars";
 import {
+  normalizeReportLocale,
   reportLanguageOptions,
   type ReportLocale,
 } from "@/lib/report-i18n";
+import { getPillarDisplay } from "@/lib/bazi-totems";
 
 type Copy = {
   nav: {
@@ -44,11 +45,14 @@ type Copy = {
     title: string;
     statement: string;
     description: string;
-    languageLabel: string;
     nameLabel: string;
     dateLabel: string;
     timeLabel: string;
     genderLabel: string;
+    genderOptions: {
+      male: string;
+      female: string;
+    };
     placeLabel: string;
     placePlaceholder: string;
     dateHint: string;
@@ -103,10 +107,16 @@ type Copy = {
     button: string;
     note: string;
   };
+  stats: {
+    archetypes: string;
+    planetary: string;
+    unified: string;
+  };
+  usage: string;
   footer: string;
 };
 
-const copy: Record<Locale, Copy> = {
+const copy: Record<ReportLocale, Copy> = {
   en: {
     nav: {
       method: "The Method",
@@ -120,17 +130,20 @@ const copy: Record<Locale, Copy> = {
       statement: "Your birth has two ancient languages. We translate both.",
       description:
         "Start with your Day Pillar: a vivid elemental animal archetype. Then layer in the Sun, Moon, planets, and aspects to reveal where two systems describe the same person.",
-      languageLabel: "Language / 语言",
       nameLabel: "Name",
       dateLabel: "Date of birth",
       timeLabel: "Birth time",
-      genderLabel: "Gender / 性别",
+      genderLabel: "Gender",
+      genderOptions: {
+        male: "Male",
+        female: "Female",
+      },
       placeLabel: "Birth city",
       placePlaceholder: "Search city, e.g. Shijiazhuang",
       dateHint:
         "The backend runs Bazi and Astrology separately, then fuses their signals in the report.",
       button: "Generate my fusion report",
-      pendingButton: "正在洞察星盘，这需要一点时间...",
+      pendingButton: "Reading your chart, this may take a moment...",
       privacy: "Your birth data stays private",
     },
     result: {
@@ -193,9 +206,15 @@ const copy: Record<Locale, Copy> = {
       button: "Build my full profile",
       note: "Exact birth time and birthplace required",
     },
+    stats: {
+      archetypes: "elemental animal archetypes",
+      planetary: "planetary drives",
+      unified: "unified profile",
+    },
+    usage: "For self-reflection and entertainment",
     footer: "Two traditions. One clearer view of you.",
   },
-  cn: {
+  zh: {
     nav: {
       method: "融合方法",
       archetypes: "六十原型",
@@ -208,11 +227,14 @@ const copy: Record<Locale, Copy> = {
       statement: "你的出生，拥有两种古老语言。我们把它们翻译成同一幅人格图景。",
       description:
         "先从日柱开始：一个有画面、有性格的元素动物原型；再叠加太阳、月亮、行星与相位，看两套体系如何描述同一个你。",
-      languageLabel: "Language / 语言",
       nameLabel: "姓名",
       dateLabel: "出生日期",
       timeLabel: "出生时间",
-      genderLabel: "Gender / 性别",
+      genderLabel: "性别",
+      genderOptions: {
+        male: "男性",
+        female: "女性",
+      },
       placeLabel: "出生城市",
       placePlaceholder: "搜索城市，例如：石家庄",
       dateHint: "后端独立计算八字与星盘，再在报告页提取交集与互补信号。",
@@ -280,42 +302,145 @@ const copy: Record<Locale, Copy> = {
       button: "生成完整个人图谱",
       note: "需要准确出生时间与出生地点",
     },
+    stats: {
+      archetypes: "个元素动物原型",
+      planetary: "种行星驱力",
+      unified: "份统一画像",
+    },
+    usage: "用于自我探索与娱乐参考",
     footer: "两种传统，一幅更清晰的自我图景。",
+  },
+  ru: {
+    nav: {
+      method: "Метод",
+      archetypes: "60 архетипов",
+      premium: "Полный синтез",
+      signIn: "Войти",
+    },
+    hero: {
+      eyebrow: "Восточное время · Западное небо · Одна история",
+      title: "DestinyPixel",
+      statement: "У вашего рождения два древних языка. Мы переводим их в одну карту.",
+      description:
+        "Начните с дневного столпа: яркого стихийного животного архетипа. Затем добавьте Солнце, Луну, планеты и аспекты, чтобы увидеть, где две системы описывают одного и того же человека.",
+      nameLabel: "Имя",
+      dateLabel: "Дата рождения",
+      timeLabel: "Время рождения",
+      genderLabel: "Пол",
+      genderOptions: {
+        male: "Мужской",
+        female: "Женский",
+      },
+      placeLabel: "Город рождения",
+      placePlaceholder: "Найдите город, например Shijiazhuang",
+      dateHint:
+        "Механики Ба-цзы и астрологии считаются отдельно, а затем их сигналы соединяются в отчете.",
+      button: "Создать мой отчет",
+      pendingButton: "Читаем вашу карту, это займет немного времени...",
+      privacy: "Данные рождения остаются приватными",
+    },
+    result: {
+      sample: "Пример синтеза",
+      reading: "Ваше бесплатное чтение",
+      dayPillar: "Дневной столп",
+      stem: "Стихийное Я",
+      branch: "Животное поле",
+      strength: "Естественное выражение",
+      growth: "Точка роста",
+      premiumLabel: "Ваш небесный слой",
+      premiumTitle: "Добавьте время и место, чтобы завершить картину",
+      premiumDescription:
+        "Солнце, Луна, десять планетарных импульсов, дома и аспекты показывают, как небо усиливает или проверяет ваш базовый архетип.",
+      premiumButton: "Открыть полный синтез",
+    },
+    method: {
+      eyebrow: "Не две отдельные трактовки",
+      title: "Одна личность, увиденная через две системы координат.",
+      description:
+        "DestinyPixel рассматривает дневной столп как стихийное ядро, а натальное небо как живой контекст. Синтез ищет повторяющиеся темы, значимые напряжения и качества, которые одна система не объясняет полностью.",
+      coreTitle: "Стихийное ядро",
+      coreCopy:
+        "Десять небесных стволов становятся понятными режимами энергии, а двенадцать земных ветвей — запоминающимися животными полями.",
+      skyTitle: "Планетарные импульсы",
+      skyCopy:
+        "Солнце, Луна, планеты, знаки, дома и аспекты показывают, как ядро ищет, чувствует, действует, соединяется и взрослеет.",
+      synthesisTitle: "Резонанс",
+      synthesisCopy:
+        "Повторяющиеся сигналы становятся главной линией. Противоречия превращаются в самую полезную часть чтения.",
+    },
+    example: {
+      eyebrow: "Синтез на практике",
+      title: "Роса Кролика встречает Солнце в Рыбах.",
+      description:
+        "Gui Mao соединяет чувствительность иньской воды с тонкой социальной интуицией Кролика. Позднее Солнце в Рыбах усиливает воображение, проницаемость и эмоциональный интеллект.",
+      core: "Gui Mao · Иньская Вода и Кролик",
+      solar: "Солнце в Рыбах · 29°",
+      aspect: "Солнце тригон Юпитер · 3.2°",
+      synthesis: "Единый сигнал",
+      synthesisCopy:
+        "Мягкий интуит, который сначала считывает атмосферу, затем говорит. Творит через настроение и нуждается в ясных границах, чтобы защитить восприимчивый внутренний мир.",
+    },
+    deck: {
+      eyebrow: "Визуальный язык 60 столпов",
+      title: "Без криптических символов.",
+      description:
+        "Каждый столп становится стихийным животным с именем, образом, силой, тенью и путем роста.",
+    },
+    premium: {
+      eyebrow: "Полная личная карта",
+      title: "Выйдите за пределы дневного архетипа.",
+      description:
+        "Премиальный отчет объединяет все четыре столпа с точной натальной картой и переводит их в цельную историю личности и времени.",
+      items: [
+        "Четыре столпа, десять богов и баланс стихий",
+        "Солнце, Луна, планеты, дома и главные аспекты",
+        "Повторяющиеся черты, внутренние противоречия и окна времени",
+      ],
+      button: "Построить полный профиль",
+      note: "Требуются точное время и место рождения",
+    },
+    stats: {
+      archetypes: "стихийных животных архетипов",
+      planetary: "планетарных импульсов",
+      unified: "единый профиль",
+    },
+    usage: "Для самопознания и развлечения",
+    footer: "Две традиции. Более ясный взгляд на вас.",
   },
 };
 
-const stemDetails: Record<
-  string,
-  { en: string; cn: string; element: string }
-> = {
-  甲: { en: "Yang Wood", cn: "阳木", element: "Wood" },
-  乙: { en: "Yin Wood", cn: "阴木", element: "Wood" },
-  丙: { en: "Yang Fire", cn: "阳火", element: "Fire" },
-  丁: { en: "Yin Fire", cn: "阴火", element: "Fire" },
-  戊: { en: "Yang Earth", cn: "阳土", element: "Earth" },
-  己: { en: "Yin Earth", cn: "阴土", element: "Earth" },
-  庚: { en: "Yang Metal", cn: "阳金", element: "Metal" },
-  辛: { en: "Yin Metal", cn: "阴金", element: "Metal" },
-  壬: { en: "Yang Water", cn: "阳水", element: "Water" },
-  癸: { en: "Yin Water", cn: "阴水", element: "Water" },
-};
-
-const branchDetails: Record<string, { en: string; cn: string }> = {
-  子: { en: "Water Rat", cn: "水鼠" },
-  丑: { en: "Earth Ox", cn: "土牛" },
-  寅: { en: "Wood Tiger", cn: "木虎" },
-  卯: { en: "Wood Rabbit", cn: "木兔" },
-  辰: { en: "Earth Dragon", cn: "土龙" },
-  巳: { en: "Fire Snake", cn: "火蛇" },
-  午: { en: "Fire Horse", cn: "火马" },
-  未: { en: "Earth Sheep", cn: "土羊" },
-  申: { en: "Metal Monkey", cn: "金猴" },
-  酉: { en: "Metal Rooster", cn: "金鸡" },
-  戌: { en: "Earth Dog", cn: "土狗" },
-  亥: { en: "Water Boar", cn: "水猪" },
-};
-
 const deckPillars = ["甲子", "丙午", "戊辰", "庚申", "癸卯"];
+
+function getProfileLocale(locale: ReportLocale) {
+  return locale === "zh" ? "cn" : "en";
+}
+
+function getLocalizedProfileName(
+  profile: PillarProfile,
+  pillar: string,
+  locale: ReportLocale,
+) {
+  if (locale === "zh") return profile.name.cn;
+  if (locale === "ru") return getPillarDisplay(pillar, "ru").totemName;
+
+  return profile.name.en;
+}
+
+function getRussianPreviewText(pillar: string) {
+  const display = getPillarDisplay(pillar, "ru");
+
+  return {
+    essence: `${display.totemName} соединяет ${display.stemMeaning.toLowerCase()} с полем ${display.branchMeaning.toLowerCase()}. Это архетип тонкой реакции, внутренней памяти и точного выбора момента.`,
+    strength: `Вы сильнее всего проявляетесь там, где можно превратить интуицию в форму, а наблюдение — в зрелое решение.`,
+    growth:
+      "Рост начинается с ясных границ: меньше распыления, больше ритма, выбора и устойчивого действия.",
+  };
+}
+
+function setDocumentLocale(locale: ReportLocale) {
+  document.documentElement.lang =
+    locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
+}
 
 function FusionSubmitButton({
   label,
@@ -377,25 +502,46 @@ function FusionOrbit({ locked = false }: { locked?: boolean }) {
   );
 }
 
-export default function DestinyExperience() {
-  const [locale, setLocale] = useState<Locale>("en");
+export default function DestinyExperience({
+  initialLocale = "en",
+}: {
+  initialLocale?: ReportLocale;
+}) {
+  const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
   const [pillar, setPillar] = useState("癸卯");
   const [isSample, setIsSample] = useState(true);
   const [isWeChatBrowser, setIsWeChatBrowser] = useState(false);
-  const [reportLocale, setReportLocale] = useState<ReportLocale>("en");
   const text = copy[locale];
 
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
     [pillar],
   );
-  const stem = stemDetails[pillar[0]];
-  const branch = branchDetails[pillar[1]];
+  const display = useMemo(() => getPillarDisplay(pillar, locale), [locale, pillar]);
+  const profileLocale = getProfileLocale(locale);
+  const profileName = getLocalizedProfileName(profile, pillar, locale);
+  const russianPreview = useMemo(() => getRussianPreviewText(pillar), [pillar]);
 
   useEffect(() => {
-    document.documentElement.lang = locale === "en" ? "en" : "zh-CN";
+    setDocumentLocale(locale);
+    window.localStorage.setItem("destinypixel-locale", locale);
   }, [locale]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlLocale = params.get("locale");
+
+    if (urlLocale) return;
+
+    const storedLocale = normalizeReportLocale(
+      window.localStorage.getItem("destinypixel-locale") ?? initialLocale,
+    );
+
+    if (storedLocale !== locale) {
+      setLocale(storedLocale);
+    }
+  }, [initialLocale, locale]);
 
   useEffect(() => {
     setIsWeChatBrowser(/MicroMessenger/i.test(window.navigator.userAgent));
@@ -416,6 +562,16 @@ export default function DestinyExperience() {
       setPillar(result);
       setIsSample(false);
     }
+  }
+
+  function changeLocale(nextLocale: ReportLocale) {
+    setLocale(nextLocale);
+    setDocumentLocale(nextLocale);
+    window.localStorage.setItem("destinypixel-locale", nextLocale);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("locale", nextLocale);
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
   return (
@@ -449,19 +605,25 @@ export default function DestinyExperience() {
             <a className="sign-in" href="#signin">
               {text.nav.signIn}
             </a>
-            <button
-              className="language-switch"
-              type="button"
-              onClick={() =>
-                setLocale((current) => (current === "en" ? "cn" : "en"))
-              }
-              aria-label={
-                locale === "en" ? "切换至中文" : "Switch to English"
-              }
-            >
+            <div className="language-switch" aria-label="Language selector">
               <Languages size={15} aria-hidden="true" />
-              {locale === "en" ? "中文" : "EN"}
-            </button>
+              {reportLanguageOptions.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  data-active={locale === option.value}
+                  onClick={() => changeLocale(option.value)}
+                >
+                  {option.value === "zh"
+                    ? locale === "zh"
+                      ? "中文"
+                      : "ZH"
+                    : option.value === "ru"
+                      ? "RU"
+                      : "EN"}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </header>
@@ -478,30 +640,20 @@ export default function DestinyExperience() {
             <p className="hero-description">{text.hero.description}</p>
 
             <form className="birth-form advanced-birth-form" action={createFusionReportAction}>
+              <input type="hidden" name="locale" value={locale} />
               <div className="birth-form__grid">
-                <label className="form-field form-field--language">
-                  <span>{text.hero.languageLabel}</span>
-                  <select
-                    name="locale"
-                    value={reportLocale}
-                    onChange={(event) =>
-                      setReportLocale(event.currentTarget.value as ReportLocale)
-                    }
-                    required
-                  >
-                    {reportLanguageOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </label>
                 <label className="form-field form-field--name">
                   <span>{text.hero.nameLabel}</span>
                   <input
                     name="name"
                     type="text"
-                    placeholder={locale === "en" ? "Your name" : "你的名字"}
+                    placeholder={
+                      locale === "zh"
+                        ? "你的名字"
+                        : locale === "ru"
+                          ? "Ваше имя"
+                          : "Your name"
+                    }
                     required
                   />
                 </label>
@@ -524,13 +676,21 @@ export default function DestinyExperience() {
                   <span>{text.hero.timeLabel}</span>
                   <input name="birthTime" type="time" required />
                 </label>
-                <label className="form-field form-field--gender">
+                <div className="form-field form-field--gender">
                   <span>{text.hero.genderLabel}</span>
-                  <select name="gender" defaultValue="female" required>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                  </select>
-                </label>
+                  <div className="gender-choice" role="radiogroup" aria-label={text.hero.genderLabel}>
+                    <label>
+                      <input type="radio" name="gender" value="female" defaultChecked />
+                      <span aria-hidden="true">♀</span>
+                      {text.hero.genderOptions.female}
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="male" />
+                      <span aria-hidden="true">♂</span>
+                      {text.hero.genderOptions.male}
+                    </label>
+                  </div>
+                </div>
                 <label className="form-field form-field--place">
                   <span>{text.hero.placeLabel}</span>
                   <input
@@ -542,11 +702,20 @@ export default function DestinyExperience() {
                   />
                 </label>
                 <datalist id="city-options">
-                  {cities.map((city) => (
-                    <option key={city.id} value={city.label}>
-                      {[city.label, ...city.aliases].join(" / ")}
-                    </option>
-                  ))}
+                  {cities.map((city) => {
+                    const aliases =
+                      locale === "zh"
+                        ? city.aliases
+                        : city.aliases.filter(
+                            (alias) => !/[\u4e00-\u9fff]/.test(alias),
+                          );
+
+                    return (
+                      <option key={city.id} value={city.label}>
+                        {[city.label, ...aliases].join(" / ")}
+                      </option>
+                    );
+                  })}
                 </datalist>
               </div>
               <div className="birth-form__submit">
@@ -578,7 +747,7 @@ export default function DestinyExperience() {
               <Image
                 key={pillar}
                 src={getPillarImagePath(pillar)}
-                alt={profile.name[locale]}
+                alt={profileName}
                 fill
                 priority
                 sizes="(max-width: 768px) 82vw, 370px"
@@ -589,25 +758,33 @@ export default function DestinyExperience() {
                 {isSample ? text.result.sample : text.result.reading}
               </div>
               <div className="archetype-result__identity">
-                <p>{pillar}</p>
-                <h2>{profile.name[locale]}</h2>
+                <p>{display.pillarLabel}</p>
+                <h2>{profileName}</h2>
                 <span>
-                  {stem[locale]} · {branch[locale]}
+                  {display.stemMeaning} · {display.branchMeaning}
                 </span>
               </div>
             </div>
 
             <div className="archetype-result__body">
-              <p className="result-essence">{profile.essence[locale]}</p>
+              <p className="result-essence">
+                {locale === "ru" ? russianPreview.essence : profile.essence[profileLocale]}
+              </p>
 
               <div className="result-traits">
                 <div>
                   <span>{text.result.strength}</span>
-                  <p>{profile.career.style[locale]}</p>
+                  <p>
+                    {locale === "ru"
+                      ? russianPreview.strength
+                      : profile.career.style[profileLocale]}
+                  </p>
                 </div>
                 <div>
                   <span>{text.result.growth}</span>
-                  <p>{profile.growth[locale]}</p>
+                  <p>
+                    {locale === "ru" ? russianPreview.growth : profile.growth[profileLocale]}
+                  </p>
                 </div>
               </div>
 
@@ -627,19 +804,13 @@ export default function DestinyExperience() {
         </div>
         <div className="page-container hero-footnote">
           <span>60</span>
-          <p>
-            {locale === "en"
-              ? "elemental animal archetypes"
-              : "个元素动物原型"}
-          </p>
+          <p>{text.stats.archetypes}</p>
           <i />
           <span>10</span>
-          <p>
-            {locale === "en" ? "planetary drives" : "种行星驱力"}
-          </p>
+          <p>{text.stats.planetary}</p>
           <i />
           <span>1</span>
-          <p>{locale === "en" ? "unified profile" : "份统一画像"}</p>
+          <p>{text.stats.unified}</p>
         </div>
       </section>
 
@@ -696,7 +867,13 @@ export default function DestinyExperience() {
           <div className="fusion-example__visual">
             <Image
               src="/archetypes/gui_mao.webp"
-              alt={locale === "en" ? "The Dewy Rabbit card" : "雨露灵兔卡牌"}
+              alt={
+                locale === "zh"
+                  ? "雨露灵兔卡牌"
+                  : locale === "ru"
+                    ? "Карта Вода Кролик"
+                    : "The Dewy Rabbit card"
+              }
               width={309}
               height={418}
             />
@@ -754,17 +931,23 @@ export default function DestinyExperience() {
               const deckProfile = (
                 pillarsDB as Record<string, PillarProfile>
               )[deckPillar];
+              const deckDisplay = getPillarDisplay(deckPillar, locale);
+              const deckName = getLocalizedProfileName(
+                deckProfile,
+                deckPillar,
+                locale,
+              );
               return (
                 <article key={deckPillar} style={{ "--card-index": index } as React.CSSProperties}>
                   <Image
                     src={getPillarImagePath(deckPillar)}
-                    alt={deckProfile.name[locale]}
+                    alt={deckName}
                     width={309}
                     height={418}
                   />
                   <div>
-                    <span>{deckPillar}</span>
-                    <strong>{deckProfile.name[locale]}</strong>
+                    <span>{deckDisplay.pillarLabel}</span>
+                    <strong>{deckName}</strong>
                   </div>
                 </article>
               );
@@ -814,11 +997,7 @@ export default function DestinyExperience() {
           </div>
           <div className="footer-bottom">
             <span>© 2026 DestinyPixel</span>
-            <span>
-              {locale === "en"
-                ? "For self-reflection and entertainment"
-                : "用于自我探索与娱乐参考"}
-            </span>
+            <span>{text.usage}</span>
           </div>
         </div>
       </footer>

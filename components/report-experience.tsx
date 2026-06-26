@@ -46,10 +46,28 @@ const natalSections: Array<SectionConfig<NatalKey>> = [
     kicker: "深层自我",
   },
   {
-    key: "lifeDimensions",
-    marker: "LIFE_DIMENSIONS",
-    title: "Life Dimensions",
-    kicker: "全景运势",
+    key: "career",
+    marker: "CAREER",
+    title: "Career",
+    kicker: "事业",
+  },
+  {
+    key: "love",
+    marker: "LOVE",
+    title: "Love",
+    kicker: "感情",
+  },
+  {
+    key: "growth",
+    marker: "GROWTH",
+    title: "Growth",
+    kicker: "成长",
+  },
+  {
+    key: "health",
+    marker: "HEALTH",
+    title: "Health",
+    kicker: "健康",
   },
 ];
 
@@ -211,7 +229,10 @@ export default function ReportExperience({
     dayMaster: true,
     outerPersona: false,
     deepSelf: false,
-    lifeDimensions: false,
+    career: false,
+    love: false,
+    growth: false,
+    health: false,
   });
   const [openTransit, setOpenTransit] = useState<Record<TransitKey, boolean>>({
     spring: true,
@@ -272,7 +293,10 @@ export default function ReportExperience({
       dayMaster: parsed.dayMaster || initialNatal.dayMaster,
       outerPersona: parsed.outerPersona || initialNatal.outerPersona,
       deepSelf: parsed.deepSelf || initialNatal.deepSelf,
-      lifeDimensions: parsed.lifeDimensions || initialNatal.lifeDimensions,
+      career: parsed.career || initialNatal.career,
+      love: parsed.love || initialNatal.love,
+      growth: parsed.growth || initialNatal.growth,
+      health: parsed.health || initialNatal.health,
     };
   }, [initialNatal, natalRaw]);
 

@@ -30,7 +30,7 @@ export async function createFusionReportAction(formData: FormData) {
   const city = resolveCity(place);
 
   if (!birthDate || !birthTime || !city) {
-    redirect("/?error=missing-birth-data#birth");
+    redirect(`/?locale=${locale}&error=missing-birth-data#birth`);
   }
 
   const input = {
@@ -60,5 +60,5 @@ export async function createFusionReportAction(formData: FormData) {
     aiContent,
   });
 
-  redirect(`/report/${id}`);
+  redirect(`/report/${id}?locale=${locale}`);
 }

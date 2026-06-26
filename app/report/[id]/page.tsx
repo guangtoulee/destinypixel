@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   CalendarDays,
+  Languages,
   MapPin,
   Orbit,
   Sparkles,
   UserRound,
 } from "lucide-react";
+import PillarImageLightbox from "@/components/pillar-image-lightbox";
 import ReportExperience from "@/components/report-experience";
 import { type Gender, type NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
@@ -22,6 +24,7 @@ import {
   normalizeReportLocale,
   planetLabels,
   reportCopy,
+  reportLanguageOptions,
   zodiacLabels,
   type ReportLocale,
 } from "@/lib/report-i18n";
@@ -47,14 +50,10 @@ function BaziChart({
         return (
           <article className="pillar-chart-card" key={key}>
             <div className="pillar-card-main">
-              <div className="pillar-card-media">
-                <Image
-                  src={display.imageSrc}
-                  alt={display.totemName}
-                  width={72}
-                  height={96}
-                />
-              </div>
+              <PillarImageLightbox
+                src={display.imageSrc}
+                alt={display.totemName}
+              />
               <header>
                 <span>{role.title}</span>
                 <strong>{display.pillarLabel}</strong>
@@ -87,6 +86,35 @@ function BaziChart({
   );
 }
 
+function ReportLanguageLinks({
+  reportId,
+  locale,
+}: {
+  reportId: string;
+  locale: ReportLocale;
+}) {
+  return (
+    <div className="language-switch report-language-switch" aria-label="Language selector">
+      <Languages size={15} aria-hidden="true" />
+      {reportLanguageOptions.map((option) => (
+        <Link
+          key={option.value}
+          href={`/report/${reportId}?locale=${option.value}`}
+          data-active={locale === option.value}
+        >
+          {option.value === "zh"
+            ? locale === "zh"
+              ? "中文"
+              : "ZH"
+            : option.value === "ru"
+              ? "RU"
+              : "EN"}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 function buildInitialNatalShell({
   locale,
   profile,
@@ -114,8 +142,10 @@ function buildInitialNatalShell({
       dayMaster: `${profile.name.cn} 是本命盘的日柱原型。系统识别日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。完整命之书会在页面打开后继续流式生成。`,
       outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanetName}，它会描述你的外在气场、社会面具和第一印象。`,
       deepSelf: `深层自我来自地支场域：${branchNames}。这些动物图腾描述本能、记忆、依恋模式与潜意识驱动力。`,
-      lifeDimensions:
-        "事业、感情、成长与健康会被拆成四个更清晰的判断，不再把所有内容塞进一篇冗长报告。",
+      career: `事业模块会基于 ${mappedPlanetName}、十神结构与五行分布，给出更聚焦的职业发力点。`,
+      love: "感情模块会单独分析你的吸引模式、亲密边界与关系里的重复课题。",
+      growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的天赋与盲区，给出可执行的训练方向。`,
+      health: "健康模块只提供作息、恢复力与身心节律建议，不替代医学诊断。",
     };
   }
 
@@ -124,8 +154,12 @@ function buildInitialNatalShell({
       dayMaster: `${dayDisplay.totemName} является ядром дневного столпа. Система определяет дневной столп как ${dayDisplay.pillarLabel}, дневной мастер как ${dayDisplay.stemMeaning}, а Солнце находится в знаке ${sunSign}. Полная книга рождения загружается потоково после открытия страницы.`,
       outerPersona: `Внешний слой начинается с небесных стволов четырех столпов: ${pillarNames}. Планета дневного мастера — ${mappedPlanetName}; она описывает первое впечатление, социальную маску и стиль видимости.`,
       deepSelf: `Глубинный слой раскрывается через земные ветви: ${branchNames}. Эти тотемы показывают инстинкты, память, привязанность и внутренний психологический двигатель.`,
-      lifeDimensions:
-        "Карьера, любовь, рост и здоровье разбиты на отдельные практические блоки, чтобы отчет оставался ясным и пригодным для решения реальных задач.",
+      career: `Карьера будет разобрана отдельно через ${mappedPlanetName}, структуру карты и стиль практической реализации.`,
+      love:
+        "Любовь будет отдельным модулем: притяжение, границы и повторяющиеся сценарии близости.",
+      growth: `Рост будет строиться вокруг дара и слепых зон качества ${dayDisplay.stemMeaning}.`,
+      health:
+        "Здоровье будет описано как ритм восстановления и забота о теле, без медицинских диагнозов.",
     };
   }
 
@@ -133,17 +167,24 @@ function buildInitialNatalShell({
     dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}. The full Natal Book streams after first paint.`,
     outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanetName}. This module refines first impression, ambition style, and public rhythm.`,
     deepSelf: `Your subterranean layer begins with the earthly branches: ${branchNames}. These totems describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
-    lifeDimensions:
-      "Career, love, growth, and health are separated into concise signals, replacing the old one-piece long essay with modular commercial insight.",
+    career: `Career will be read separately through ${mappedPlanetName}, the Bazi structure, and your practical contribution style.`,
+    love:
+      "Love will be its own module: attraction pattern, emotional boundary, and repeated intimacy script.",
+    growth: `Growth will focus on the gift and blind spot of ${dayDisplay.stemMeaning}.`,
+    health:
+      "Health will stay in the lane of rhythm, recovery, and body awareness, without medical diagnosis.",
   };
 }
 
 export default async function ReportPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams?: Promise<{ locale?: string }>;
 }) {
   const { id } = await params;
+  const query = await searchParams;
   const report = await getReportRecord(id);
 
   if (!report) notFound();
@@ -158,7 +199,7 @@ export default async function ReportPage({
   );
   const elements = Object.entries(report.bazi_data.elementBalance);
   const locale = normalizeReportLocale(
-    report.birth_record.locale ?? report.ai_content.meta?.locale ?? "en",
+    query?.locale ?? report.birth_record.locale ?? report.ai_content.meta?.locale ?? "en",
   );
   const copy = reportCopy[locale];
   const gender: Gender =
@@ -253,16 +294,19 @@ export default async function ReportPage({
       </div>
 
       <header className="report-header page-container">
-        <Link href="/" className="report-back-link">
+        <Link href={`/?locale=${locale}`} className="report-back-link">
           <ArrowLeft size={15} aria-hidden="true" />
           {copy.back}
         </Link>
-        <div className="brand">
-          <span className="brand-mark" aria-hidden="true">
-            <span className="brand-mark__core" />
-            <span className="brand-mark__orbit" />
-          </span>
-          <span>DestinyPixel</span>
+        <div className="report-header-actions">
+          <div className="brand">
+            <span className="brand-mark" aria-hidden="true">
+              <span className="brand-mark__core" />
+              <span className="brand-mark__orbit" />
+            </span>
+            <span>DestinyPixel</span>
+          </div>
+          <ReportLanguageLinks reportId={report.id} locale={locale} />
         </div>
       </header>
 

@@ -142,9 +142,9 @@ export function buildNatalMessages(context: ReportGenerationContext): ChatMessag
         "Write with a mysterious but commercially clear tone.",
         "Use the supplied Bazi and astrology context only. Do not invent houses, medical diagnoses, fixed events, or guaranteed outcomes.",
         "Return plain text only. No Markdown, no JSON, no bullets unless a section asks for compact dimensions.",
-        "You must use these exact markers and this order: [DAY_MASTER], [OUTER_PERSONA], [DEEP_SELF], [LIFE_DIMENSIONS].",
-        "Each section should be concise and sharp: about 150-220 English words, equivalent to roughly 200-300 Chinese characters in density.",
-        "Life Dimensions must include compact labeled insights for Career, Love, Growth, and Health.",
+        "You must use these exact markers and this order: [DAY_MASTER], [OUTER_PERSONA], [DEEP_SELF], [CAREER], [LOVE], [GROWTH], [HEALTH].",
+        "Each section should be concise and sharp: about 110-170 English words, equivalent to roughly 160-240 Chinese characters in density.",
+        "Career, Love, Growth, and Health are separate modules. Do not merge them into one paragraph.",
       ].join(" "),
     },
     {
@@ -188,8 +188,14 @@ export function fallbackNatalText(context: ReportGenerationContext) {
       `天干层描述外在形象与社会节奏。日主映射星体为 ${context.bazi.mappedPlanetDisplay}，它显示你被他人看见时的气场、欲望与行动方式。`,
       "[DEEP_SELF]",
       `地支层来自四个动物场域：${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.totemName).join("、")}。它们揭示潜意识、依恋模式与本能反应。`,
-      "[LIFE_DIMENSIONS]",
-      "事业：寻找可复利的专业位置。感情：重视边界与稳定沟通。成长：训练薄弱元素对应的心理肌肉。健康：优先保护作息、恢复力与情绪节律。",
+      "[CAREER]",
+      `事业适合寻找可复利的专业位置，并把 ${context.bazi.mappedPlanetDisplay} 的驱力转成稳定输出。`,
+      "[LOVE]",
+      "感情需要重视边界与稳定沟通，不要让敏感度替代理性确认。",
+      "[GROWTH]",
+      "成长重点是训练薄弱元素对应的心理肌肉，把直觉转化为可执行的节奏。",
+      "[HEALTH]",
+      "健康侧重作息、恢复力与情绪节律；任何身体问题都应以专业医疗建议为准。",
     ].join("\n\n");
   }
 
@@ -201,8 +207,14 @@ export function fallbackNatalText(context: ReportGenerationContext) {
       `Небесные стволы описывают внешний образ и социальный ритм. Планета дневного мастера — ${context.bazi.mappedPlanetDisplay}; она показывает, как вас считывают другие люди.`,
       "[DEEP_SELF]",
       `Земные ветви образуют внутреннее поле: ${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.totemName).join(", ")}. Это слой инстинкта, памяти и привязанности.`,
-      "[LIFE_DIMENSIONS]",
-      "Карьера: выбирайте роль с накопительным эффектом. Любовь: держите ясные границы. Рост: тренируйте слабые стихии как психологические мышцы. Здоровье: берегите сон, восстановление и эмоциональный ритм.",
+      "[CAREER]",
+      `Карьера требует роли с накопительным эффектом, где импульс ${context.bazi.mappedPlanetDisplay} становится устойчивым вкладом.`,
+      "[LOVE]",
+      "Любовь выигрывает от ясных границ, честного темпа сближения и спокойной проверки ожиданий.",
+      "[GROWTH]",
+      "Рост начинается с тренировки слабых стихий как психологических мышц: через привычки, выбор и повторение.",
+      "[HEALTH]",
+      "Здоровье связано с восстановлением, сном и эмоциональным ритмом; это не медицинский диагноз.",
     ].join("\n\n");
   }
 
@@ -213,8 +225,15 @@ export function fallbackNatalText(context: ReportGenerationContext) {
     `The heavenly stems form the public face of the chart: ${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.stemLabel).join(", ")}. Your Day Master maps to ${context.bazi.mappedPlanetDisplay}, which describes how people first register your will, taste, tempo, and social pressure.`,
     "[DEEP_SELF]",
     `The earthly branches form the inner weather: ${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.totemName).join(", ")}. These animal fields point to memory, instinct, attachment, and the emotional logic beneath your decisions.`,
-    "[LIFE_DIMENSIONS]",
-    `Career: ${context.profile.careerStyleEn} Love: ${context.profile.loveModeEn} Growth: ${context.profile.growthEn} Health: ${context.profile.healthEn ?? "Protect rhythm, recovery, and nervous-system bandwidth before chasing peak output."}`,
+    "[CAREER]",
+    context.profile.careerStyleEn,
+    "[LOVE]",
+    context.profile.loveModeEn,
+    "[GROWTH]",
+    context.profile.growthEn,
+    "[HEALTH]",
+    context.profile.healthEn ??
+      "Protect rhythm, recovery, and nervous-system bandwidth before chasing peak output.",
   ].join("\n\n");
 }
 
