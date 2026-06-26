@@ -10,59 +10,73 @@ import {
   UserRound,
 } from "lucide-react";
 import ReportExperience from "@/components/report-experience";
-import {
-  normalizeAIReportContent,
-  type Gender,
-  type NatalBookSections,
-} from "@/lib/ai/report";
+import { type Gender, type NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
 import { getPillarImagePath } from "@/lib/archetype-assets";
-import {
-  branchTotems,
-  pillarOrder,
-  pillarRoleLabels,
-} from "@/lib/bazi-totems";
+import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
 import { getReportRecord } from "@/lib/db/repository";
-import { elementLabelsCn } from "@/lib/engines/bazi";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
+import type { BaziData } from "@/lib/engines/bazi";
+import {
+  elementLabels,
+  normalizeReportLocale,
+  planetLabels,
+  reportCopy,
+  zodiacLabels,
+  type ReportLocale,
+} from "@/lib/report-i18n";
 
 export const maxDuration = 60;
 
 function BaziChart({
   pillars,
+  locale,
 }: {
   pillars: ReportGenerationContext["bazi"]["pillars"];
+  locale: ReportLocale;
 }) {
+  const copy = reportCopy[locale];
+
   return (
     <div className="pillar-chart">
       {pillarOrder.map((key) => {
         const pillar = pillars[key];
-        const stem = pillar[0];
-        const branch = pillar[1];
-        const role = pillarRoleLabels[key];
-        const totem = branchTotems[branch];
+        const role = copy.pillarRoles[key];
+        const display = getPillarDisplay(pillar, locale);
 
         return (
           <article className="pillar-chart-card" key={key}>
-            <header>
-              <span>{role.title}</span>
-              <strong>{pillar}</strong>
-            </header>
+            <div className="pillar-card-main">
+              <div className="pillar-card-media">
+                <Image
+                  src={display.imageSrc}
+                  alt={display.totemName}
+                  width={72}
+                  height={96}
+                />
+              </div>
+              <header>
+                <span>{role.title}</span>
+                <strong>{display.pillarLabel}</strong>
+                <p>{display.totemName}</p>
+              </header>
+            </div>
             <div className="pillar-symbol-row">
               <div>
-                <span>Heavenly Stem</span>
-                <b>{stem}</b>
+                <span>{copy.bazi.heavenlyStem}</span>
+                <b>{display.stemLabel}</b>
+                <small>{display.stemMeaning}</small>
               </div>
               <div>
-                <span>Earthly Branch</span>
-                <b>{branch}</b>
+                <span>{copy.bazi.earthlyBranch}</span>
+                <b>{display.branchLabel}</b>
+                <small>{display.branchMeaning}</small>
               </div>
             </div>
             <div className="pillar-totem">
-              <span aria-hidden="true">{totem.emoji}</span>
               <div>
-                <strong>{totem.animal}</strong>
-                <small>{totem.elementField}</small>
+                <strong>{copy.bazi.elementalSignature}</strong>
+                <small>{display.stemMeaning} · {display.branchMeaning}</small>
               </div>
             </div>
             <em>{role.microBadge}</em>
@@ -71,6 +85,57 @@ function BaziChart({
       })}
     </div>
   );
+}
+
+function buildInitialNatalShell({
+  locale,
+  profile,
+  bazi,
+  dayDisplay,
+  sunSign,
+  mappedPlanetName,
+}: {
+  locale: ReportLocale;
+  profile: PillarProfile;
+  bazi: BaziData;
+  dayDisplay: ReturnType<typeof getPillarDisplay>;
+  sunSign: string;
+  mappedPlanetName: string;
+}): NatalBookSections {
+  const pillarNames = pillarOrder
+    .map((key) => getPillarDisplay(bazi.pillars[key], locale).pillarLabel)
+    .join(locale === "zh" ? "、" : ", ");
+  const branchNames = pillarOrder
+    .map((key) => getPillarDisplay(bazi.pillars[key], locale).branchLabel)
+    .join(locale === "zh" ? "、" : ", ");
+
+  if (locale === "zh") {
+    return {
+      dayMaster: `${profile.name.cn} 是本命盘的日柱原型。系统识别日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。完整命之书会在页面打开后继续流式生成。`,
+      outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanetName}，它会描述你的外在气场、社会面具和第一印象。`,
+      deepSelf: `深层自我来自地支场域：${branchNames}。这些动物图腾描述本能、记忆、依恋模式与潜意识驱动力。`,
+      lifeDimensions:
+        "事业、感情、成长与健康会被拆成四个更清晰的判断，不再把所有内容塞进一篇冗长报告。",
+    };
+  }
+
+  if (locale === "ru") {
+    return {
+      dayMaster: `${dayDisplay.totemName} является ядром дневного столпа. Система определяет дневной столп как ${dayDisplay.pillarLabel}, дневной мастер как ${dayDisplay.stemMeaning}, а Солнце находится в знаке ${sunSign}. Полная книга рождения загружается потоково после открытия страницы.`,
+      outerPersona: `Внешний слой начинается с небесных стволов четырех столпов: ${pillarNames}. Планета дневного мастера — ${mappedPlanetName}; она описывает первое впечатление, социальную маску и стиль видимости.`,
+      deepSelf: `Глубинный слой раскрывается через земные ветви: ${branchNames}. Эти тотемы показывают инстинкты, память, привязанность и внутренний психологический двигатель.`,
+      lifeDimensions:
+        "Карьера, любовь, рост и здоровье разбиты на отдельные практические блоки, чтобы отчет оставался ясным и пригодным для решения реальных задач.",
+    };
+  }
+
+  return {
+    dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}. The full Natal Book streams after first paint.`,
+    outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanetName}. This module refines first impression, ambition style, and public rhythm.`,
+    deepSelf: `Your subterranean layer begins with the earthly branches: ${branchNames}. These totems describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
+    lifeDimensions:
+      "Career, love, growth, and health are separated into concise signals, replacing the old one-piece long essay with modular commercial insight.",
+  };
 }
 
 export default async function ReportPage({
@@ -92,26 +157,53 @@ export default async function ReportPage({
     (placement) => placement.body === report.bazi_data.mappedPlanet,
   );
   const elements = Object.entries(report.bazi_data.elementBalance);
-  const legacyContent = normalizeAIReportContent(report.ai_content);
+  const locale = normalizeReportLocale(
+    report.birth_record.locale ?? report.ai_content.meta?.locale ?? "en",
+  );
+  const copy = reportCopy[locale];
   const gender: Gender =
     report.birth_record.gender ??
     report.ai_content.meta?.gender ??
     "female";
-  const headline = `${profile.name.en} × ${report.astro_data.sunSign} Sun`;
-  const initialNatal: NatalBookSections = report.ai_content.natalBook ?? {
-    dayMaster: legacyContent.character,
-    outerPersona:
-      legacyContent.wealth ||
-      `${report.bazi_data.dayMaster} maps to ${report.bazi_data.mappedPlanet}. This section studies the visible style, first impression, and social persona created by the heavenly stems.`,
-    deepSelf:
-      legacyContent.character ||
-      "The earthly branches reveal the hidden instinctual field beneath the polished surface of the chart.",
-    lifeDimensions:
-      legacyContent.transits ||
-      "Career, love, growth, and health are now separated into concise, practical signals.",
-  };
+  const dayDisplay = getPillarDisplay(dayPillar, locale);
+  const sunSign =
+    zodiacLabels[locale][report.astro_data.sunSign] ?? report.astro_data.sunSign;
+  const solarSecondary =
+    locale === "zh" || locale === "en" ? report.astro_data.sunSign : sunSign;
+  const mappedPlanetName =
+    planetLabels[locale][report.bazi_data.mappedPlanet] ??
+    report.bazi_data.mappedPlanet;
+  const profileName =
+    locale === "zh"
+      ? profile.name.cn
+      : locale === "ru"
+        ? dayDisplay.totemName
+        : profile.name.en;
+  const headline =
+    locale === "zh"
+      ? `${profileName} × ${sunSign}`
+      : `${profileName} × ${sunSign}`;
+  const pillarDisplays = Object.fromEntries(
+    pillarOrder.map((key) => [
+      key,
+      {
+        ...getPillarDisplay(report.bazi_data.pillars[key], locale),
+        roleTitle: copy.pillarRoles[key].title,
+        roleMicroBadge: copy.pillarRoles[key].microBadge,
+      },
+    ]),
+  ) as unknown as ReportGenerationContext["bazi"]["pillarsDisplay"];
+  const initialNatal: NatalBookSections = buildInitialNatalShell({
+    locale,
+    profile,
+    bazi: report.bazi_data,
+    dayDisplay,
+    sunSign,
+    mappedPlanetName,
+  });
   const generationContext = {
     reportId: report.id,
+    locale,
     gender,
     birth: {
       name: report.birth_record.name,
@@ -122,8 +214,10 @@ export default async function ReportPage({
     },
     profile: {
       pillar: dayPillar,
+      pillarDisplay: dayDisplay.pillarLabel,
       nameEn: profile.name.en,
       nameCn: profile.name.cn,
+      displayName: profileName,
       essenceEn: profile.essence.en,
       careerStyleEn: profile.career.style.en,
       wealthEn: profile.career.wealth.en,
@@ -133,15 +227,18 @@ export default async function ReportPage({
     },
     bazi: {
       dayMaster: report.bazi_data.dayMaster,
+      dayMasterDisplay: dayDisplay.stemLabel,
       mappedPlanet: report.bazi_data.mappedPlanet,
       mappedPlanetCn: report.bazi_data.mappedPlanetCn,
+      mappedPlanetDisplay: mappedPlanetName,
       pillars: report.bazi_data.pillars,
+      pillarsDisplay: pillarDisplays,
       elementBalance: report.bazi_data.elementBalance,
       missingElements: report.bazi_data.missingElements,
       tenGods: report.bazi_data.tenGods,
     },
     astrology: {
-      sunSign: report.astro_data.sunSign,
+      sunSign,
       sunSignCn: report.astro_data.sunSignCn,
       placements: report.astro_data.placements,
       majorAspects: report.astro_data.majorAspects,
@@ -158,7 +255,7 @@ export default async function ReportPage({
       <header className="report-header page-container">
         <Link href="/" className="report-back-link">
           <ArrowLeft size={15} aria-hidden="true" />
-          Back
+          {copy.back}
         </Link>
         <div className="brand">
           <span className="brand-mark" aria-hidden="true">
@@ -173,7 +270,7 @@ export default async function ReportPage({
         <div className="report-card-visual">
           <Image
             src={getPillarImagePath(dayPillar)}
-            alt={profile.name.cn}
+            alt={profileName}
             width={309}
             height={418}
             priority
@@ -183,40 +280,37 @@ export default async function ReportPage({
         <div className="report-summary">
           <p className="eyebrow">
             <Sparkles size={13} aria-hidden="true" />
-            Natal shell ready · AI streams after first paint
+            {copy.heroEyebrow}
           </p>
           <h1>{headline}</h1>
-          <p className="report-lede">
-            Your report now loads like a premium product: the Bazi and
-            Astrology engines finish first, then the Natal Book streams into
-            modular panels. Annual Transits are generated only when you ask for
-            them.
-          </p>
+          <p className="report-lede">{copy.heroLede}</p>
 
           <div className="report-identity-grid">
             <div>
-              <span>Day Pillar Archetype</span>
+              <span>{copy.identity.dayPillar}</span>
               <strong>
-                {dayPillar} · {profile.name.en}
+                {dayDisplay.pillarLabel} · {profileName}
               </strong>
-              <p>{profile.name.cn}</p>
+              <p>{dayDisplay.totemName}</p>
             </div>
             <div>
-              <span>Solar Signature</span>
+              <span>{copy.identity.solar}</span>
               <strong>
-                {sun?.sign ?? report.astro_data.sunSign}
+                {sunSign}
                 {sun ? ` · ${sun.degreeInSign}°` : ""}
               </strong>
-              <p>{sun?.signCn ?? report.astro_data.sunSignCn}</p>
+              <p>{solarSecondary}</p>
             </div>
             <div>
-              <span>Stem Planet Mapping</span>
+              <span>{copy.identity.mapping}</span>
               <strong>
-                {report.bazi_data.dayMaster} = {report.bazi_data.mappedPlanet}
+                {dayDisplay.stemLabel} = {mappedPlanetName}
               </strong>
               <p>
-                {report.bazi_data.mappedPlanetCn}
-                {mappedPlanet ? ` in ${mappedPlanet.sign}` : ""}
+                {dayDisplay.stemMeaning}
+                {mappedPlanet
+                  ? ` · ${zodiacLabels[locale][mappedPlanet.sign] ?? mappedPlanet.sign}`
+                  : ""}
               </p>
             </div>
           </div>
@@ -232,11 +326,11 @@ export default async function ReportPage({
             </span>
             <span>
               <Orbit size={14} aria-hidden="true" />
-              True solar {report.bazi_data.trueSolarTime.time}
+              {copy.meta.trueSolar} {report.bazi_data.trueSolarTime.time}
             </span>
             <span>
               <UserRound size={14} aria-hidden="true" />
-              {gender === "male" ? "Male" : "Female"}
+              {gender === "male" ? copy.meta.male : copy.meta.female}
             </span>
           </div>
         </div>
@@ -245,20 +339,18 @@ export default async function ReportPage({
       <section className="report-body page-container">
         <aside className="report-side-panel">
           <div className="report-side-panel__heading">
-            <span>Bazi Chart</span>
-            <h2>Four Pillars & Totems</h2>
-            <p>
-              Heavenly stems describe the visible drive. Earthly branches reveal
-              the animal field beneath it.
-            </p>
+            <span>{copy.bazi.eyebrow}</span>
+            <h2>{copy.bazi.title}</h2>
+            <p>{copy.bazi.description}</p>
           </div>
 
-          <BaziChart pillars={report.bazi_data.pillars} />
+          <BaziChart pillars={report.bazi_data.pillars} locale={locale} />
 
           <div className="element-bars">
+            <h3>{copy.bazi.elementBalance}</h3>
             {elements.map(([element, value]) => (
               <div key={element}>
-                <span>{elementLabelsCn[element as keyof typeof elementLabelsCn]}</span>
+                <span>{elementLabels[locale][element] ?? element}</span>
                 <i>
                   <b style={{ width: `${Math.max(8, Number(value) * 12)}%` }} />
                 </i>

@@ -192,6 +192,7 @@ export const trueSolarTimeCalibrationFixture = {
   input: {
     name: "Calibration",
     gender: "female",
+    locale: "en",
     birthDate: "1982-03-21",
     birthTime: "01:30",
     city: resolveCity("Shijiazhuang")!,

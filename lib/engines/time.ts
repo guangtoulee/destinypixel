@@ -1,8 +1,10 @@
 import type { City } from "@/lib/geo/cities";
+import type { ReportLocale } from "@/lib/report-i18n";
 
 export type BirthInput = {
   name: string;
   gender: "male" | "female";
+  locale: ReportLocale;
   birthDate: string;
   birthTime: string;
   city: City;

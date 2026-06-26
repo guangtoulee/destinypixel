@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
+import { reportCopy } from "@/lib/report-i18n";
 
 type StreamStatus = "idle" | "loading" | "ready" | "error";
 type ActiveTab = "natal" | "transits";
@@ -120,17 +121,19 @@ function parseMarkedSections<Key extends string>(
 function StatusPill({
   status,
   idleLabel,
+  labels,
 }: {
   status: StreamStatus;
   idleLabel: string;
+  labels: (typeof reportCopy)[keyof typeof reportCopy]["status"];
 }) {
   const label =
     status === "loading"
-      ? "Streaming insights..."
+      ? labels.loading
       : status === "ready"
-        ? "Insight ready"
+        ? labels.ready
         : status === "error"
-          ? "Local fallback shown"
+          ? labels.error
           : idleLabel;
 
   return (
@@ -151,6 +154,8 @@ function AccordionSection({
   content,
   isOpen,
   isLoading,
+  loadingLabel,
+  queuedLabel,
   onToggle,
 }: {
   title: string;
@@ -158,6 +163,8 @@ function AccordionSection({
   content: string;
   isOpen: boolean;
   isLoading?: boolean;
+  loadingLabel: string;
+  queuedLabel: string;
   onToggle: () => void;
 }) {
   return (
@@ -175,7 +182,7 @@ function AccordionSection({
             <p>{content}</p>
           ) : (
             <div className="insight-skeleton">
-              <span>{isLoading ? "Generating insights..." : "Queued"}</span>
+              <span>{isLoading ? loadingLabel : queuedLabel}</span>
               <i />
               <i />
               <i />
@@ -194,6 +201,7 @@ export default function ReportExperience({
   context: ReportGenerationContext;
   initialNatal: NatalBookSections;
 }) {
+  const copy = reportCopy[context.locale];
   const [activeTab, setActiveTab] = useState<ActiveTab>("natal");
   const [natalRaw, setNatalRaw] = useState("");
   const [transitRaw, setTransitRaw] = useState("");
@@ -287,7 +295,7 @@ export default function ReportExperience({
 
   return (
     <section className="report-workspace">
-      <div className="report-tabs" role="tablist" aria-label="Report modules">
+      <div className="report-tabs" role="tablist" aria-label={copy.tabs.aria}>
         <button
           type="button"
           role="tab"
@@ -295,7 +303,7 @@ export default function ReportExperience({
           onClick={() => activateTab("natal")}
         >
           <BookOpenText size={16} aria-hidden="true" />
-          Natal Chart
+          {copy.tabs.natal}
         </button>
         <button
           type="button"
@@ -304,7 +312,7 @@ export default function ReportExperience({
           onClick={() => activateTab("transits")}
         >
           <CalendarClock size={16} aria-hidden="true" />
-          Annual Transits
+          {copy.tabs.transits}
         </button>
       </div>
 
@@ -312,21 +320,27 @@ export default function ReportExperience({
         <div className="report-tab-panel" role="tabpanel">
           <div className="report-panel-heading">
             <div>
-              <span>Natal Book</span>
-              <h2>Your foundational fusion map</h2>
+              <span>{copy.natalPanel.eyebrow}</span>
+              <h2>{copy.natalPanel.title}</h2>
             </div>
-            <StatusPill status={natalStatus} idleLabel="Preparing stream" />
+            <StatusPill
+              status={natalStatus}
+              idleLabel={copy.status.idleNatal}
+              labels={copy.status}
+            />
           </div>
 
           <div className="report-accordion">
             {natalSections.map((section) => (
               <AccordionSection
                 key={section.key}
-                title={section.title}
-                kicker={section.kicker}
+                title={copy.accordion[section.key].title}
+                kicker={copy.accordion[section.key].kicker}
                 content={natalContent[section.key]}
                 isOpen={openNatal[section.key]}
                 isLoading={natalStatus === "loading"}
+                loadingLabel={copy.status.generating}
+                queuedLabel={copy.status.queued}
                 onToggle={() =>
                   setOpenNatal((current) => ({
                     ...current,
@@ -341,12 +355,13 @@ export default function ReportExperience({
         <div className="report-tab-panel" role="tabpanel">
           <div className="report-panel-heading">
             <div>
-              <span>Transit Book</span>
-              <h2>Seasonal timing, generated on demand</h2>
+              <span>{copy.transitPanel.eyebrow}</span>
+              <h2>{copy.transitPanel.title}</h2>
             </div>
             <StatusPill
               status={transitStatus}
-              idleLabel="Open tab to generate"
+              idleLabel={copy.status.idleTransit}
+              labels={copy.status}
             />
           </div>
 
@@ -357,14 +372,14 @@ export default function ReportExperience({
               return (
                 <article className="season-card" key={section.key}>
                   <div>
-                    <span>{section.kicker}</span>
-                    <strong>{section.title}</strong>
+                    <span>{copy.seasons[section.key].kicker}</span>
+                    <strong>{copy.seasons[section.key].title}</strong>
                   </div>
                   {content ? (
                     <p>{content}</p>
                   ) : (
                     <div className="insight-skeleton">
-                      <span>Generating insights...</span>
+                      <span>{copy.status.generating}</span>
                       <i />
                       <i />
                       <i />
@@ -381,14 +396,11 @@ export default function ReportExperience({
                 <Orbit size={17} aria-hidden="true" />
               </span>
               <div>
-                <h2>VIP Transit Consultation</h2>
-                <p>
-                  A human astrologer can refine these seasonal signals into
-                  exact dates, decisions, and relationship windows.
-                </p>
+                <h2>{copy.vip.title}</h2>
+                <p>{copy.vip.description}</p>
               </div>
             </div>
-            <a href="#vip">Book Session</a>
+            <a href="#vip">{copy.vip.action}</a>
           </div>
         </div>
       )}

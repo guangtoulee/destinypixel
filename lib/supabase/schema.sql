@@ -12,6 +12,7 @@ create table if not exists public.birth_records (
   user_id uuid not null references public.users(id) on delete cascade,
   name text not null,
   gender text,
+  locale text not null default 'en',
   birth_date date not null,
   birth_time time not null,
   birth_place text not null,
@@ -34,6 +35,7 @@ create table if not exists public.reports (
 );
 
 alter table public.birth_records add column if not exists gender text;
+alter table public.birth_records add column if not exists locale text not null default 'en';
 alter table public.reports alter column status set default 'ai_ready';
 
 create index if not exists birth_records_user_id_idx on public.birth_records(user_id);

@@ -27,6 +27,10 @@ import {
   type PillarProfile,
   pillarsDB,
 } from "@/lib/pillars";
+import {
+  reportLanguageOptions,
+  type ReportLocale,
+} from "@/lib/report-i18n";
 
 type Copy = {
   nav: {
@@ -40,6 +44,7 @@ type Copy = {
     title: string;
     statement: string;
     description: string;
+    languageLabel: string;
     nameLabel: string;
     dateLabel: string;
     timeLabel: string;
@@ -115,6 +120,7 @@ const copy: Record<Locale, Copy> = {
       statement: "Your birth has two ancient languages. We translate both.",
       description:
         "Start with your Day Pillar: a vivid elemental animal archetype. Then layer in the Sun, Moon, planets, and aspects to reveal where two systems describe the same person.",
+      languageLabel: "Language / 语言",
       nameLabel: "Name",
       dateLabel: "Date of birth",
       timeLabel: "Birth time",
@@ -202,6 +208,7 @@ const copy: Record<Locale, Copy> = {
       statement: "你的出生，拥有两种古老语言。我们把它们翻译成同一幅人格图景。",
       description:
         "先从日柱开始：一个有画面、有性格的元素动物原型；再叠加太阳、月亮、行星与相位，看两套体系如何描述同一个你。",
+      languageLabel: "Language / 语言",
       nameLabel: "姓名",
       dateLabel: "出生日期",
       timeLabel: "出生时间",
@@ -376,6 +383,7 @@ export default function DestinyExperience() {
   const [pillar, setPillar] = useState("癸卯");
   const [isSample, setIsSample] = useState(true);
   const [isWeChatBrowser, setIsWeChatBrowser] = useState(false);
+  const [reportLocale, setReportLocale] = useState<ReportLocale>("en");
   const text = copy[locale];
 
   const profile = useMemo(
@@ -471,6 +479,23 @@ export default function DestinyExperience() {
 
             <form className="birth-form advanced-birth-form" action={createFusionReportAction}>
               <div className="birth-form__grid">
+                <label className="form-field form-field--language">
+                  <span>{text.hero.languageLabel}</span>
+                  <select
+                    name="locale"
+                    value={reportLocale}
+                    onChange={(event) =>
+                      setReportLocale(event.currentTarget.value as ReportLocale)
+                    }
+                    required
+                  >
+                    {reportLanguageOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
                 <label className="form-field form-field--name">
                   <span>{text.hero.nameLabel}</span>
                   <input

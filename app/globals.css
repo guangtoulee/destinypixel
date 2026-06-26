@@ -286,6 +286,7 @@ a {
 }
 
 .form-field--name,
+.form-field--language,
 .form-field--gender,
 .form-field--place {
   grid-column: span 2;
@@ -1454,11 +1455,32 @@ a {
     rgba(0, 0, 0, 0.16);
 }
 
-.pillar-chart-card header {
+.pillar-card-main {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.pillar-card-media {
+  position: relative;
+  overflow: hidden;
+  width: 62px;
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+}
+
+.pillar-card-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pillar-chart-card header {
+  min-width: 0;
+  flex: 1;
 }
 
 .pillar-chart-card header span,
@@ -1471,10 +1493,21 @@ a {
 }
 
 .pillar-chart-card header strong {
+  display: block;
+  margin-top: 6px;
   color: #d6bf86;
-  font-family: serif;
+  font-family: var(--font-display);
   font-size: 21px;
   font-weight: 500;
+  line-height: 1.08;
+}
+
+.pillar-chart-card header p {
+  margin: 6px 0 0;
+  color: #b8b1ba;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
 }
 
 .pillar-symbol-row {
@@ -1497,9 +1530,17 @@ a {
   margin-top: 7px;
   color: #ece6dc;
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 21px;
   font-weight: 500;
   line-height: 1;
+}
+
+.pillar-symbol-row small {
+  display: block;
+  margin-top: 6px;
+  color: #847f8a;
+  font-size: 10px;
+  line-height: 1.35;
 }
 
 .pillar-totem {
@@ -1511,17 +1552,6 @@ a {
   border: 1px solid rgba(201, 168, 106, 0.18);
   border-radius: 7px;
   background: rgba(201, 168, 106, 0.055);
-}
-
-.pillar-totem > span {
-  display: grid;
-  width: 35px;
-  height: 35px;
-  flex: none;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 20px;
 }
 
 .pillar-totem strong,
@@ -1558,6 +1588,13 @@ a {
   display: grid;
   gap: 13px;
   margin-top: 24px;
+}
+
+.element-bars h3 {
+  margin: 0 0 2px;
+  color: #e7e0d3;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .element-bars > div {
@@ -2095,6 +2132,7 @@ a {
   }
 
   .form-field--name,
+  .form-field--language,
   .form-field--gender,
   .form-field--place {
     grid-column: span 1;

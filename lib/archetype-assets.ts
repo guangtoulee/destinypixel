@@ -26,6 +26,10 @@ export const branchSlugs: Record<string, string> = {
   亥: "hai",
 };
 
+export function getPillarSlug(pillar: string) {
+  return `${stemSlugs[pillar[0]]}_${branchSlugs[pillar[1]]}`;
+}
+
 export function getPillarImagePath(pillar: string) {
-  return `/archetype-cards/${stemSlugs[pillar[0]]}_${branchSlugs[pillar[1]]}.jpg`;
+  return `/archetypes/${getPillarSlug(pillar)}.webp`;
 }

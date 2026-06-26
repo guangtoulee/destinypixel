@@ -23,6 +23,7 @@ export type ReportRecord = {
     id: string;
     name: string;
     gender?: BirthInput["gender"];
+    locale?: BirthInput["locale"];
     birth_date: string;
     birth_time: string;
     birth_place: string;
@@ -175,6 +176,7 @@ export async function createReportRecord({
     user_id: userId,
     name: input.name,
     gender: input.gender,
+    locale: input.locale,
     birth_date: input.birthDate,
     birth_time: input.birthTime,
     birth_place: input.city.label,
@@ -202,6 +204,7 @@ export async function createReportRecord({
       id: birthRecordId,
       name: input.name,
       gender: input.gender,
+      locale: input.locale,
       birth_date: input.birthDate,
       birth_time: input.birthTime,
       birth_place: input.city.label,
@@ -219,11 +222,11 @@ export async function createReportRecord({
     } catch (error) {
       const message = error instanceof Error ? error.message : "";
 
-      if (!message.includes("gender")) {
+      if (!message.includes("gender") && !message.includes("locale")) {
         throw error;
       }
 
-      const { gender: _gender, ...legacyBirthRecord } = birthRecord;
+      const { gender: _gender, locale: _locale, ...legacyBirthRecord } = birthRecord;
       await supabaseRequest("birth_records", "POST", legacyBirthRecord);
     }
     await supabaseRequest("reports", "POST", {

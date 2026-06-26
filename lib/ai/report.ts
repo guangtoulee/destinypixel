@@ -2,6 +2,8 @@ import type { AstroData } from "@/lib/engines/astrology";
 import type { BaziData } from "@/lib/engines/bazi";
 import { elementLabelsCn } from "@/lib/engines/bazi";
 import type { PillarProfile } from "@/lib/pillars";
+import { planetLabels, type ReportLocale, zodiacLabels } from "@/lib/report-i18n";
+import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
 
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ?? "https://api.deepseek.com/chat/completions";
@@ -32,6 +34,7 @@ export type AIReportContent = AIReportSections & {
     model: string;
     generatedAt: string;
     gender?: Gender;
+    locale?: ReportLocale;
     error?: string;
   };
 };
@@ -96,18 +99,20 @@ function buildDeepSeekContext({
   astro,
   profile,
   gender,
+  locale,
 }: {
   bazi: BaziData;
   astro: AstroData;
   profile: PillarProfile;
   gender?: Gender;
+  locale?: ReportLocale;
 }) {
   const mappedPlacement = astro.placements.find(
     (placement) => placement.body === bazi.mappedPlanet,
   );
 
   return {
-    reportLanguage: "zh-CN",
+    reportLanguage: locale ?? "zh",
     product: "DestinyPixel Bazi x Astrology Fusion Report",
     gender: gender ?? "unspecified",
     fusionRule:
@@ -382,41 +387,65 @@ export function createInitialAIReportContent({
   astro,
   profile,
   gender,
+  locale,
 }: {
   bazi: BaziData;
   astro: AstroData;
   profile: PillarProfile;
   gender: Gender;
+  locale: ReportLocale;
 }): AIReportContent {
   const sun = astro.placements.find((placement) => placement.body === "Sun");
-  const mappedPlacement = astro.placements.find(
-    (placement) => placement.body === bazi.mappedPlanet,
-  );
-  const aspectSummary =
-    astro.majorAspects.length > 0
-      ? astro.majorAspects
-          .slice(0, 3)
-          .map((aspect) => `${aspect.bodies.join(" × ")} ${aspect.type}`)
-          .join(", ")
-      : "major aspects will be weighted lightly in this MVP chart";
-  const base = {
-    dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${bazi.pillars.day} as the day pillar and ${bazi.dayMaster} as the Day Master, while the astrology engine places the Sun in ${sun?.sign ?? astro.sunSign}. The full Natal Book is now streaming after the page loads, so you can read the chart shell immediately instead of waiting on a long server request.`,
-    outerPersona: `Your social layer begins with the heavenly stems: Year ${bazi.pillars.year[0]}, Month ${bazi.pillars.month[0]}, Day ${bazi.pillars.day[0]}, Hour ${bazi.pillars.hour[0]}. The mapped Day Master planet is ${bazi.mappedPlanet},${mappedPlacement ? ` placed in ${mappedPlacement.sign}` : ""}. This module will refine first impression, ambition style, and public rhythm as the AI stream arrives.`,
-    deepSelf: `Your subterranean layer begins with the earthly branches: Year ${bazi.pillars.year[1]}, Month ${bazi.pillars.month[1]}, Day ${bazi.pillars.day[1]}, Hour ${bazi.pillars.hour[1]}. The branch totems describe instinct, memory, attachment patterns, and the pressure points beneath performance. The live stream will fuse these signals with ${aspectSummary}.`,
-    lifeDimensions: `Career, love, growth, and health are separated into concise signals in the new modular report. The system will avoid the old one-piece long essay and focus on direct, commercially usable insight. Gender context is recorded as ${gender}, while the interpretation remains personality-first rather than deterministic.`,
-  };
+  const dayDisplay = getPillarDisplay(bazi.pillars.day, locale);
+  const sunSign = zodiacLabels[locale][sun?.sign ?? astro.sunSign] ?? astro.sunSign;
+  const mappedPlanet = planetLabels[locale][bazi.mappedPlanet] ?? bazi.mappedPlanet;
+  const pillarNames = pillarOrder
+    .map((key) => getPillarDisplay(bazi.pillars[key], locale).pillarLabel)
+    .join(locale === "zh" ? "、" : ", ");
+  const branchNames = pillarOrder
+    .map((key) => getPillarDisplay(bazi.pillars[key], locale).totemName)
+    .join(locale === "zh" ? "、" : ", ");
+  const base =
+    locale === "zh"
+      ? {
+          dayMaster: `${profile.name.cn} 是本命盘的日柱原型。日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。`,
+          outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanet}，它会影响第一印象、社会面具与可见野心。`,
+          deepSelf: `深层自我来自地支图腾：${branchNames}。它们描述本能、记忆、依恋模式与潜意识动力。`,
+          lifeDimensions:
+            "事业、感情、成长与健康会被拆成清晰模块，避免一篇冗长报告吞掉所有重点。",
+        }
+      : locale === "ru"
+        ? {
+            dayMaster: `${dayDisplay.totemName} — ядро дневного столпа. Дневной столп: ${dayDisplay.pillarLabel}; дневной мастер: ${dayDisplay.stemMeaning}; солнечный знак: ${sunSign}.`,
+            outerPersona: `Внешний слой начинается с четырех стволов: ${pillarNames}. Планета дневного мастера — ${mappedPlanet}; она влияет на первое впечатление и социальную роль.`,
+            deepSelf: `Глубинное Я раскрывается через тотемы ветвей: ${branchNames}. Они описывают инстинкты, память, привязанность и скрытые мотивы.`,
+            lifeDimensions:
+              "Карьера, любовь, рост и здоровье разделены на ясные модули, чтобы отчет оставался практичным и пригодным для решений.",
+          }
+        : {
+            dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}.`,
+            outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanet}, shaping first impression, public rhythm, and visible ambition.`,
+            deepSelf: `Your subterranean layer begins with the branch totems: ${branchNames}. They describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
+            lifeDimensions:
+              "Career, love, growth, and health are separated into concise modules, replacing the old one-piece long essay with practical commercial insight.",
+          };
 
   return {
     character: base.dayMaster,
     wealth: base.lifeDimensions,
     transits:
-      "Annual Transits are now generated only when you open the Annual Transits tab, preventing Vercel and WeChat from waiting on a long request.",
+      locale === "zh"
+        ? "流年运势只在你打开对应标签时生成，避免微信和 Vercel 等待长请求。"
+        : locale === "ru"
+          ? "Годовые транзиты создаются только после открытия вкладки, чтобы браузер не ждал длинный запрос."
+          : "Annual Transits are generated only when you open the Annual Transits tab, preventing the browser from waiting on a long request.",
     natalBook: base,
     meta: {
       provider: "initial",
       model: "client-streaming-shell",
       generatedAt: new Date().toISOString(),
       gender,
+      locale,
     },
   };
 }
@@ -426,14 +455,16 @@ export async function generateAIReportInsight({
   astro,
   profile,
   gender,
+  locale,
 }: {
   bazi: BaziData;
   astro: AstroData;
   profile: PillarProfile;
   gender?: Gender;
+  locale?: ReportLocale;
 }): Promise<AIReportContent> {
   const generatedAt = new Date().toISOString();
-  const context = buildDeepSeekContext({ bazi, astro, profile, gender });
+  const context = buildDeepSeekContext({ bazi, astro, profile, gender, locale });
 
   try {
     const sections = await requestDeepSeekReport(context);
@@ -445,6 +476,7 @@ export async function generateAIReportInsight({
         model: DEEPSEEK_MODEL,
         generatedAt,
         gender,
+        locale,
       },
     };
   } catch (error) {
@@ -457,6 +489,7 @@ export async function generateAIReportInsight({
         model: "local-structured-fallback",
         generatedAt,
         gender,
+        locale,
         error: reason,
       },
     };
