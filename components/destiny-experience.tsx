@@ -827,7 +827,7 @@ export default function DestinyExperience({
               <span className="method-number">01</span>
               <span className="method-icon">
                 <Image
-                  src="/archetypes/gui_mao.webp"
+                  src="/archetypes/gui_mao.jpg"
                   alt=""
                   width={68}
                   height={92}
@@ -866,7 +866,7 @@ export default function DestinyExperience({
         <div className="page-container fusion-example__layout">
           <div className="fusion-example__visual">
             <Image
-              src="/archetypes/gui_mao.webp"
+              src="/archetypes/gui_mao.jpg"
               alt={
                 locale === "zh"
                   ? "雨露灵兔卡牌"
@@ -874,8 +874,8 @@ export default function DestinyExperience({
                     ? "Карта Вода Кролик"
                     : "The Dewy Rabbit card"
               }
-              width={309}
-              height={418}
+              width={896}
+              height={1200}
             />
             <div className="fusion-example__orbit">
               <FusionOrbit />
@@ -942,8 +942,8 @@ export default function DestinyExperience({
                   <Image
                     src={getPillarImagePath(deckPillar)}
                     alt={deckName}
-                    width={309}
-                    height={418}
+                    width={896}
+                    height={1200}
                   />
                   <div>
                     <span>{deckDisplay.pillarLabel}</span>

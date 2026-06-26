@@ -359,8 +359,8 @@ export default async function ReportPage({
           <Image
             src={getPillarImagePath(dayPillar)}
             alt={profileName}
-            width={309}
-            height={418}
+            width={896}
+            height={1200}
             priority
           />
         </div>

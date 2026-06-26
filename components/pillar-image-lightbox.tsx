@@ -39,7 +39,7 @@ export default function PillarImageLightbox({
         onClick={() => setIsOpen(true)}
         aria-label={alt}
       >
-        <Image src={src} alt={alt} width={118} height={160} />
+        <Image src={src} alt={alt} width={224} height={300} />
       </button>
 
       {isOpen ? (
@@ -62,7 +62,7 @@ export default function PillarImageLightbox({
             className="pillar-lightbox__card"
             onClick={(event) => event.stopPropagation()}
           >
-            <Image src={src} alt={alt} width={309} height={418} priority />
+            <Image src={src} alt={alt} width={896} height={1200} priority />
             <p>{alt}</p>
           </div>
         </div>

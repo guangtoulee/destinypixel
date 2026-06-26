@@ -1480,7 +1480,7 @@ a {
 
 .report-loading__visual {
   width: min(100%, 285px);
-  aspect-ratio: 309 / 418;
+  aspect-ratio: 56 / 75;
   justify-self: center;
   background:
     linear-gradient(110deg, rgba(255, 255, 255, 0.03), rgba(214, 187, 124, 0.12), rgba(255, 255, 255, 0.03)),
@@ -3394,7 +3394,7 @@ a {
 
 .white-card-preview__image {
   overflow: hidden;
-  aspect-ratio: 309 / 418;
+  aspect-ratio: 56 / 75;
   border-radius: 24px;
   background: transparent;
   box-shadow: 0 22px 52px rgba(90, 76, 61, 0.18);
@@ -3646,7 +3646,7 @@ a {
 .white-card-row article {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 309 / 418;
+  aspect-ratio: 56 / 75;
   border: 1px solid rgba(91, 80, 73, 0.12);
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.18);

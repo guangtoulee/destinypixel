@@ -618,9 +618,9 @@ export default function DestinyWhiteExperience({
                 key={pillar}
                 src={getPillarImagePath(pillar)}
                 alt={cardName}
-                width={309}
-                height={418}
-                sizes="(max-width: 720px) 70vw, 309px"
+                width={896}
+                height={1200}
+                sizes="(max-width: 720px) 70vw, 360px"
                 quality={95}
                 priority
               />
@@ -718,8 +718,8 @@ export default function DestinyWhiteExperience({
                   <Image
                     src={getPillarImagePath(featuredPillar)}
                     alt={itemName}
-                    width={309}
-                    height={418}
+                    width={896}
+                    height={1200}
                     sizes="(max-width: 720px) 58vw, 240px"
                     quality={95}
                   />
