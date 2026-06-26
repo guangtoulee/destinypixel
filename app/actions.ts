@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { createInitialAIReportContent, type Gender } from "@/lib/ai/report";
 import {
   assertBaziEngineCalibration,
@@ -13,7 +14,10 @@ import {
   createReportRecord,
   hasPersistentReportStore,
 } from "@/lib/db/repository";
-import { encodeReportDraft } from "@/lib/report-draft";
+import {
+  encodeReportDraft,
+  getReportDraftCookieName,
+} from "@/lib/report-draft";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 
 function readString(formData: FormData, key: string) {
@@ -63,9 +67,24 @@ export async function createFusionReportAction(formData: FormData) {
     astro,
     aiContent,
   });
-  const draftQuery = hasPersistentReportStore()
-    ? ""
-    : `&draft=${encodeURIComponent(encodeReportDraft(input))}`;
+  const hasPersistentStore = hasPersistentReportStore();
+  const encodedDraft = hasPersistentStore ? "" : encodeReportDraft(input);
+
+  if (encodedDraft) {
+    const cookieStore = await cookies();
+
+    cookieStore.set(getReportDraftCookieName(id), encodedDraft, {
+      httpOnly: true,
+      maxAge: 60 * 60 * 24,
+      path: "/",
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+    });
+  }
+
+  const draftQuery = encodedDraft
+    ? `&draft=${encodeURIComponent(encodedDraft)}`
+    : "";
 
   redirect(`/report/${id}?locale=${locale}${draftQuery}`);
 }

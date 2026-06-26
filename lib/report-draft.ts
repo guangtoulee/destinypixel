@@ -14,6 +14,10 @@ export type DraftReportInput = {
   city: City;
 };
 
+export function getReportDraftCookieName(reportId: string) {
+  return `dp_report_${reportId.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 64)}`;
+}
+
 type DraftPayload = {
   v: 1;
   name: string;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import {
   ArrowLeft,
   CalendarDays,
@@ -24,7 +25,11 @@ import { getReportRecord, type ReportRecord } from "@/lib/db/repository";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import { calculateBaziEngine, type BaziData } from "@/lib/engines/bazi";
 import { calculateAstrologyEngine } from "@/lib/engines/astrology";
-import { decodeReportDraft, type DraftReportInput } from "@/lib/report-draft";
+import {
+  decodeReportDraft,
+  getReportDraftCookieName,
+  type DraftReportInput,
+} from "@/lib/report-draft";
 import {
   elementLabels,
   normalizeReportLocale,
@@ -288,7 +293,10 @@ export default async function ReportPage({
   const { id } = await params;
   const query = await searchParams;
   const storedReport = await getReportRecord(id);
-  const draftInput = decodeReportDraft(query?.draft);
+  const cookieStore = await cookies();
+  const draft =
+    query?.draft ?? cookieStore.get(getReportDraftCookieName(id))?.value;
+  const draftInput = decodeReportDraft(draft);
   const report =
     storedReport ?? (draftInput ? createDraftReportRecord(id, draftInput) : null);
 
@@ -431,7 +439,7 @@ export default async function ReportPage({
           <ReportLanguageLinks
             reportId={report.id}
             locale={locale}
-            draft={query?.draft}
+            draft={draft}
           />
         </div>
       </header>
