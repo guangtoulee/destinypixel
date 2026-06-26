@@ -614,7 +614,7 @@ export default function EnglishLearningExperience() {
 
   async function restoreSession(savedSession: MemberSession) {
     try {
-      setCloudStatus("正在读取云端进度");
+      setCloudStatus("正在读取进度");
       const result = await requestJson<Omit<AuthResponse, "token">>("/api/english/progress", {
         headers: {
           Authorization: `Bearer ${savedSession.token}`,
@@ -623,7 +623,7 @@ export default function EnglishLearningExperience() {
       cloudReadyRef.current = true;
       setSession(savedSession);
       setMemory(normalizeMemory(result.progress));
-      setCloudStatus("云端进度已载入");
+      setCloudStatus("进度已载入");
     } catch {
       cloudReadyRef.current = false;
       localStorage.removeItem(memberStorageKey);
@@ -644,9 +644,9 @@ export default function EnglishLearningExperience() {
         },
         body: JSON.stringify({ progress: nextMemory }),
       });
-      setCloudStatus(`云端已同步 ${formatSavedTime(new Date())}`);
+      setCloudStatus(`进度已同步 ${formatSavedTime(new Date())}`);
     } catch (error) {
-      setCloudStatus(error instanceof Error ? error.message : "云端同步失败");
+      setCloudStatus(error instanceof Error ? error.message : "同步失败");
     }
   }
 
@@ -679,8 +679,8 @@ export default function EnglishLearningExperience() {
       setMemory(normalizeMemory(result.progress));
       setAuthPassword("");
       setAuthPasswordConfirm("");
-      setAuthMessage(authMode === "register" ? "注册成功，已开始云端保存。" : "登录成功，已载入云端进度。");
-      setCloudStatus("云端进度已载入");
+      setAuthMessage(authMode === "register" ? "注册成功，已开始保存进度。" : "登录成功，已载入进度。");
+      setCloudStatus("进度已载入");
     } catch (error) {
       setAuthMessage(error instanceof Error ? error.message : "操作失败。");
     } finally {

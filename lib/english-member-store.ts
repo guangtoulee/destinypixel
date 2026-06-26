@@ -1,4 +1,6 @@
 import { createHash, pbkdf2Sync, randomBytes, timingSafeEqual } from "node:crypto";
+import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
 
 export type EnglishMemberProgress = Record<string, unknown>;
 
@@ -16,6 +18,11 @@ export type EnglishMemberRecord = {
 };
 
 const sessionDays = 45;
+const localStorePath =
+  process.env.ENGLISH_MEMBER_STORE_FILE ??
+  (process.env.VERCEL
+    ? "/tmp/destinypixel-english-members.json"
+    : join(process.cwd(), "work", "english-members.json"));
 
 function getSupabaseConfig() {
   const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -25,11 +32,11 @@ function getSupabaseConfig() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !key) {
-    throw new Error("Supabase is not configured.");
+    return null;
   }
 
   if (!/^https?:\/\//.test(url) || !/^[\x21-\x7E]+$/.test(key)) {
-    throw new Error("Supabase 环境变量还没有配置真实值。");
+    return null;
   }
 
   return { url, key };
@@ -44,7 +51,12 @@ async function supabaseRequest<T>({
   query?: string;
   body?: unknown;
 }): Promise<T> {
-  const { url, key } = getSupabaseConfig();
+  const config = getSupabaseConfig();
+  if (!config) {
+    throw new Error("会员存储还没有配置。");
+  }
+
+  const { url, key } = config;
   const response = await fetch(`${url}/rest/v1/english_members${query}`, {
     method,
     headers: {
@@ -62,6 +74,69 @@ async function supabaseRequest<T>({
   }
 
   return (await response.json()) as T;
+}
+
+type LocalEnglishMemberStore = {
+  members: EnglishMemberRecord[];
+};
+
+async function readLocalStore(): Promise<LocalEnglishMemberStore> {
+  try {
+    const text = await readFile(localStorePath, "utf8");
+    const parsed = JSON.parse(text) as Partial<LocalEnglishMemberStore>;
+
+    return { members: Array.isArray(parsed.members) ? parsed.members : [] };
+  } catch (error) {
+    if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") {
+      return { members: [] };
+    }
+
+    throw error;
+  }
+}
+
+async function writeLocalStore(store: LocalEnglishMemberStore) {
+  await mkdir(dirname(localStorePath), { recursive: true });
+  const temporaryPath = `${localStorePath}.${process.pid}.${Date.now()}.tmp`;
+  await writeFile(temporaryPath, JSON.stringify(store, null, 2), "utf8");
+  await rename(temporaryPath, localStorePath);
+}
+
+async function findLocalMemberByUsername(username: string) {
+  const normalized = normalizeUsername(username);
+  const store = await readLocalStore();
+
+  return store.members.find((member) => member.username_normalized === normalized) ?? null;
+}
+
+async function findLocalMemberByToken(token: string) {
+  const tokenHash = hashToken(token);
+  const store = await readLocalStore();
+
+  return store.members.find((member) => member.session_token_hash === tokenHash) ?? null;
+}
+
+async function insertLocalMember(member: EnglishMemberRecord) {
+  const store = await readLocalStore();
+  store.members.push(member);
+  await writeLocalStore(store);
+
+  return member;
+}
+
+async function updateLocalMember(id: string, updates: Partial<EnglishMemberRecord>) {
+  const store = await readLocalStore();
+  const index = store.members.findIndex((member) => member.id === id);
+  if (index === -1) return null;
+
+  store.members[index] = {
+    ...store.members[index],
+    ...updates,
+    updated_at: updates.updated_at ?? new Date().toISOString(),
+  };
+  await writeLocalStore(store);
+
+  return store.members[index];
 }
 
 function hashToken(token: string) {
@@ -116,6 +191,10 @@ export function validateCredentials({
 }
 
 export async function findEnglishMemberByUsername(username: string) {
+  if (!getSupabaseConfig()) {
+    return findLocalMemberByUsername(username);
+  }
+
   const normalized = normalizeUsername(username);
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "GET",
@@ -144,6 +223,32 @@ export async function registerEnglishMember({
 
   const salt = randomBytes(16).toString("base64url");
   const session = createSession();
+  const now = new Date().toISOString();
+
+  if (!getSupabaseConfig()) {
+    const member = await insertLocalMember({
+      id: randomBytes(16).toString("base64url"),
+      username: cleanUsername,
+      username_normalized: normalized,
+      password_salt: salt,
+      password_hash: createPasswordHash(password, salt),
+      session_token_hash: session.tokenHash,
+      session_expires_at: session.expires,
+      progress: safeProgress(progress),
+      created_at: now,
+      updated_at: now,
+    });
+
+    return {
+      token: session.token,
+      member: {
+        id: member.id,
+        username: member.username,
+      },
+      progress: member.progress,
+    };
+  }
+
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "POST",
     body: {
@@ -190,6 +295,22 @@ export async function loginEnglishMember({
   }
 
   const session = createSession();
+  if (!getSupabaseConfig()) {
+    const updated = await updateLocalMember(member.id, {
+      session_token_hash: session.tokenHash,
+      session_expires_at: session.expires,
+    });
+
+    return {
+      token: session.token,
+      member: {
+        id: updated?.id ?? member.id,
+        username: updated?.username ?? member.username,
+      },
+      progress: updated?.progress ?? member.progress ?? {},
+    };
+  }
+
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "PATCH",
     query: `?id=eq.${member.id}`,
@@ -212,6 +333,14 @@ export async function loginEnglishMember({
 }
 
 export async function getEnglishMemberByToken(token: string) {
+  if (!getSupabaseConfig()) {
+    const member = await findLocalMemberByToken(token);
+    if (!member || !member.session_expires_at) return null;
+    if (new Date(member.session_expires_at).getTime() < Date.now()) return null;
+
+    return member;
+  }
+
   const tokenHash = hashToken(token);
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "GET",
@@ -234,6 +363,20 @@ export async function saveEnglishMemberProgress({
 }) {
   const member = await getEnglishMemberByToken(token);
   if (!member) throw new Error("登录已过期，请重新登录。");
+
+  if (!getSupabaseConfig()) {
+    const updated = await updateLocalMember(member.id, {
+      progress: safeProgress(progress),
+    });
+
+    return {
+      member: {
+        id: updated?.id ?? member.id,
+        username: updated?.username ?? member.username,
+      },
+      progress: updated?.progress ?? member.progress ?? {},
+    };
+  }
 
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "PATCH",
