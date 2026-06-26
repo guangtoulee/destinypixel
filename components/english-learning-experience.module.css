@@ -92,6 +92,7 @@
   text-transform: uppercase;
 }
 
+.accountCard,
 .memoryCard,
 .voiceCard,
 .routeNote,
@@ -109,10 +110,87 @@
   box-shadow: 0 10px 24px rgba(35, 44, 62, 0.07);
 }
 
+.accountCard,
 .memoryCard,
 .voiceCard,
 .routeNote {
   padding: 16px;
+}
+
+.authForm {
+  display: grid;
+  gap: 10px;
+}
+
+.authSwitch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.authSwitch button,
+.authSubmit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--english-ink);
+  font-weight: 840;
+}
+
+.authSwitch .activeAuthMode,
+.authSubmit {
+  border-color: var(--english-blue);
+  background: var(--english-blue-soft);
+  color: var(--english-blue-dark);
+}
+
+.authForm label {
+  display: grid;
+  gap: 5px;
+  color: var(--english-muted);
+  font-size: 0.8rem;
+  font-weight: 780;
+}
+
+.authForm input {
+  width: 100%;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: #fbfcff;
+  color: var(--english-ink);
+}
+
+.authMessage,
+.memberPanel p {
+  margin: 0;
+  color: var(--english-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.memberPanel {
+  display: grid;
+  gap: 12px;
+}
+
+.memberBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: var(--english-blue-soft);
+  color: var(--english-blue-dark);
 }
 
 .memoryTopline {

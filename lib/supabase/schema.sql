@@ -42,3 +42,52 @@ create index if not exists birth_records_user_id_idx on public.birth_records(use
 create index if not exists reports_user_id_idx on public.reports(user_id);
 create index if not exists reports_birth_record_id_idx on public.reports(birth_record_id);
 create index if not exists reports_created_at_idx on public.reports(created_at desc);
+
+create table if not exists public.english_members (
+  id uuid primary key default gen_random_uuid(),
+  username text not null,
+  username_normalized text not null unique,
+  password_salt text not null,
+  password_hash text not null,
+  session_token_hash text,
+  session_expires_at timestamptz,
+  progress jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists english_members_username_normalized_idx
+  on public.english_members(username_normalized);
+create index if not exists english_members_session_token_hash_idx
+  on public.english_members(session_token_hash);
+create index if not exists english_members_updated_at_idx
+  on public.english_members(updated_at desc);
+
+-- Test-mode policies for the custom username/password English learning page.
+-- The app API hashes passwords server-side and talks to this table through REST.
+-- For a stricter production setup, prefer SUPABASE_SERVICE_ROLE_KEY on the server
+-- and remove these anon policies.
+alter table public.english_members enable row level security;
+
+drop policy if exists english_members_test_select on public.english_members;
+drop policy if exists english_members_test_insert on public.english_members;
+drop policy if exists english_members_test_update on public.english_members;
+
+create policy english_members_test_select
+  on public.english_members for select
+  to anon
+  using (true);
+
+create policy english_members_test_insert
+  on public.english_members for insert
+  to anon
+  with check (true);
+
+create policy english_members_test_update
+  on public.english_members for update
+  to anon
+  using (true)
+  with check (true);
+
+grant usage on schema public to anon;
+grant select, insert, update on public.english_members to anon;

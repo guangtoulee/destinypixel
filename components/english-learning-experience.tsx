@@ -8,15 +8,18 @@ import {
   ClipboardCheck,
   Download,
   Headphones,
+  LogIn,
+  LogOut,
   Play,
   RefreshCcw,
   RotateCcw,
   Square,
   Trash2,
   Upload,
+  UserRound,
   Volume2,
 } from "lucide-react";
-import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./english-learning-experience.module.css";
 
 type LevelId = "starter" | "foundation" | "bridge" | "boost";
@@ -71,6 +74,21 @@ type SessionAnswer = {
 };
 
 const storageKey = "brightStepsLearningMemoryV3";
+const memberStorageKey = "brightStepsMemberSessionV1";
+
+type MemberSession = {
+  token: string;
+  member: {
+    id: string;
+    username: string;
+  };
+};
+
+type AuthMode = "login" | "register";
+
+type AuthResponse = MemberSession & {
+  progress: Partial<LearningMemory>;
+};
 
 const levels: Record<
   LevelId,
@@ -436,8 +454,18 @@ export default function EnglishLearningExperience() {
   const [spellingValue, setSpellingValue] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [speechNotice, setSpeechNotice] = useState("正在读取英文语音");
+  const [authMode, setAuthMode] = useState<AuthMode>("login");
+  const [authUsername, setAuthUsername] = useState("");
+  const [authPassword, setAuthPassword] = useState("");
+  const [authPasswordConfirm, setAuthPasswordConfirm] = useState("");
+  const [authBusy, setAuthBusy] = useState(false);
+  const [authMessage, setAuthMessage] = useState("");
+  const [session, setSession] = useState<MemberSession | null>(null);
+  const [cloudStatus, setCloudStatus] = useState("本机保存");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const mountedRef = useRef(false);
+  const cloudReadyRef = useRef(false);
+  const syncTimerRef = useRef<number | null>(null);
 
   const levelId = memory.assessment?.level ?? "foundation";
   const level = levels[levelId];
@@ -459,6 +487,15 @@ export default function EnglishLearningExperience() {
       }
     } catch {
       setMemory(createDefaultMemory());
+    }
+
+    try {
+      const savedSession = localStorage.getItem(memberStorageKey);
+      if (savedSession) {
+        void restoreSession(JSON.parse(savedSession) as MemberSession);
+      }
+    } catch {
+      localStorage.removeItem(memberStorageKey);
     }
 
     const loadVoices = () => {
@@ -495,7 +532,118 @@ export default function EnglishLearningExperience() {
     if (!mountedRef.current) return;
     localStorage.setItem(storageKey, JSON.stringify(memory));
     setSavedAt(new Date());
+
+    if (!session?.token || !cloudReadyRef.current) return;
+
+    if (syncTimerRef.current) {
+      window.clearTimeout(syncTimerRef.current);
+    }
+
+    setCloudStatus("等待同步");
+    syncTimerRef.current = window.setTimeout(() => {
+      void syncCloudProgress(memory, false);
+    }, 900);
   }, [memory]);
+
+  async function requestJson<T>(url: string, init: RequestInit = {}) {
+    const response = await fetch(url, {
+      ...init,
+      headers: {
+        "Content-Type": "application/json",
+        ...(init.headers ?? {}),
+      },
+    });
+    const payload = (await response.json()) as T & { error?: string };
+
+    if (!response.ok) {
+      throw new Error(payload.error ?? "请求失败。");
+    }
+
+    return payload;
+  }
+
+  async function restoreSession(savedSession: MemberSession) {
+    try {
+      setCloudStatus("正在读取云端进度");
+      const result = await requestJson<Omit<AuthResponse, "token">>("/api/english/progress", {
+        headers: {
+          Authorization: `Bearer ${savedSession.token}`,
+        },
+      });
+      cloudReadyRef.current = true;
+      setSession(savedSession);
+      setMemory(normalizeMemory(result.progress));
+      setCloudStatus("云端进度已载入");
+    } catch {
+      cloudReadyRef.current = false;
+      localStorage.removeItem(memberStorageKey);
+      setSession(null);
+      setCloudStatus("登录已过期，本机保存");
+    }
+  }
+
+  async function syncCloudProgress(nextMemory = memory, announce = true) {
+    if (!session?.token) return;
+
+    try {
+      if (announce) setCloudStatus("正在同步");
+      await requestJson<Omit<AuthResponse, "token">>("/api/english/progress", {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${session.token}`,
+        },
+        body: JSON.stringify({ progress: nextMemory }),
+      });
+      setCloudStatus(`云端已同步 ${formatSavedTime(new Date())}`);
+    } catch (error) {
+      setCloudStatus(error instanceof Error ? error.message : "云端同步失败");
+    }
+  }
+
+  async function submitAuth(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setAuthBusy(true);
+    setAuthMessage("");
+
+    try {
+      const result = await requestJson<AuthResponse>(
+        authMode === "register" ? "/api/english/auth/register" : "/api/english/auth/login",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            username: authUsername,
+            password: authPassword,
+            passwordConfirm: authPasswordConfirm,
+            progress: memory,
+          }),
+        },
+      );
+      const nextSession = {
+        token: result.token,
+        member: result.member,
+      };
+
+      localStorage.setItem(memberStorageKey, JSON.stringify(nextSession));
+      cloudReadyRef.current = true;
+      setSession(nextSession);
+      setMemory(normalizeMemory(result.progress));
+      setAuthPassword("");
+      setAuthPasswordConfirm("");
+      setAuthMessage(authMode === "register" ? "注册成功，已开始云端保存。" : "登录成功，已载入云端进度。");
+      setCloudStatus("云端进度已载入");
+    } catch (error) {
+      setAuthMessage(error instanceof Error ? error.message : "操作失败。");
+    } finally {
+      setAuthBusy(false);
+    }
+  }
+
+  function logoutMember() {
+    localStorage.removeItem(memberStorageKey);
+    cloudReadyRef.current = false;
+    setSession(null);
+    setCloudStatus("已退出，本机保存");
+  }
 
   function patchMemory(updater: (current: LearningMemory) => LearningMemory) {
     setMemory((current) => normalizeMemory(updater(current)));
@@ -792,6 +940,91 @@ export default function EnglishLearningExperience() {
             <h1>Bright Steps</h1>
           </div>
         </div>
+
+        <section className={styles.accountCard}>
+          <div className={styles.memoryTopline}>
+            <p className={styles.sectionKicker}>账号</p>
+            <span>{session ? "已登录" : "未登录"}</span>
+          </div>
+          {session ? (
+            <div className={styles.memberPanel}>
+              <div className={styles.memberBadge}>
+                <UserRound size={18} />
+                <strong>{session.member.username}</strong>
+              </div>
+              <p>{cloudStatus}</p>
+              <div className={styles.memoryActions}>
+                <button type="button" onClick={() => void syncCloudProgress(memory, true)}>
+                  <Upload size={16} />
+                  立即同步
+                </button>
+                <button type="button" onClick={logoutMember}>
+                  <LogOut size={16} />
+                  退出
+                </button>
+              </div>
+            </div>
+          ) : (
+            <form className={styles.authForm} onSubmit={submitAuth}>
+              <div className={styles.authSwitch} role="group" aria-label="账号模式">
+                <button
+                  type="button"
+                  className={authMode === "login" ? styles.activeAuthMode : ""}
+                  onClick={() => setAuthMode("login")}
+                >
+                  登录
+                </button>
+                <button
+                  type="button"
+                  className={authMode === "register" ? styles.activeAuthMode : ""}
+                  onClick={() => setAuthMode("register")}
+                >
+                  注册
+                </button>
+              </div>
+              <label>
+                <span>用户名</span>
+                <input
+                  value={authUsername}
+                  onChange={(event) => setAuthUsername(event.target.value)}
+                  autoComplete="username"
+                  minLength={2}
+                  maxLength={32}
+                  required
+                />
+              </label>
+              <label>
+                <span>密码</span>
+                <input
+                  value={authPassword}
+                  onChange={(event) => setAuthPassword(event.target.value)}
+                  type="password"
+                  autoComplete={authMode === "login" ? "current-password" : "new-password"}
+                  minLength={6}
+                  required
+                />
+              </label>
+              {authMode === "register" ? (
+                <label>
+                  <span>确认密码</span>
+                  <input
+                    value={authPasswordConfirm}
+                    onChange={(event) => setAuthPasswordConfirm(event.target.value)}
+                    type="password"
+                    autoComplete="new-password"
+                    minLength={6}
+                    required
+                  />
+                </label>
+              ) : null}
+              <button type="submit" className={styles.authSubmit} disabled={authBusy}>
+                <LogIn size={16} />
+                {authBusy ? "处理中" : authMode === "register" ? "注册并保存" : "登录"}
+              </button>
+              {authMessage ? <p className={styles.authMessage}>{authMessage}</p> : null}
+            </form>
+          )}
+        </section>
 
         <section className={styles.memoryCard}>
           <div className={styles.memoryTopline}>
