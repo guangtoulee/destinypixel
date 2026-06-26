@@ -36,12 +36,16 @@ export type BaziData = {
     stems: Record<PillarKey, PillarTenGod>;
     hiddenStems: Record<PillarKey, HiddenStemTenGod[]>;
   };
+  luck: BaziLuckData;
 };
 
 const elements = ["Wood", "Fire", "Earth", "Metal", "Water"] as const;
 const pillarKeys = ["year", "month", "day", "hour"] as const;
+const heavenlyStemCycle = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"] as const;
+const earthlyBranchCycle = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"] as const;
 
 type PillarKey = (typeof pillarKeys)[number];
+type LuckDirection = "forward" | "reverse";
 type TenGodName =
   | "比肩"
   | "劫财"
@@ -63,6 +67,28 @@ type HiddenStemTenGod = {
   branch: EarthlyBranch;
   stem: HeavenlyStem;
   tenGod: TenGodName;
+};
+
+export type TenYearLuckCycle = {
+  index: number;
+  pillar: string;
+  startAge: number;
+  endAge: number;
+  startYear: number;
+  endYear: number;
+};
+
+export type BaziLuckData = {
+  targetYear: number;
+  previousYear: number;
+  currentYearPillar: string;
+  previousYearPillar: string;
+  direction: LuckDirection;
+  startAge: number;
+  startYear: number;
+  calculationNote: string;
+  tenYearLuck: TenYearLuckCycle[];
+  activeTenYearLuck?: TenYearLuckCycle;
 };
 
 const producingCycle: Record<ElementName, ElementName> = {
@@ -156,6 +182,122 @@ function calculateTenGods(
   return { stems, hiddenStems };
 }
 
+type SolarDate = {
+  getYear(): number;
+  getMonth(): number;
+  getDay(): number;
+  getHour(): number;
+  getMinute(): number;
+  getSecond(): number;
+  toYmdHms(): string;
+};
+
+type JieQiDate = {
+  getName(): string;
+  getSolar(): SolarDate;
+};
+
+type LunarDate = ReturnType<ReturnType<typeof Solar.fromYmdHms>["getLunar"]> & {
+  getNextJieQi(wholeDay: boolean): JieQiDate;
+  getPrevJieQi(wholeDay: boolean): JieQiDate;
+};
+
+function solarToUtcMs(solar: SolarDate) {
+  return Date.UTC(
+    solar.getYear(),
+    solar.getMonth() - 1,
+    solar.getDay(),
+    solar.getHour(),
+    solar.getMinute(),
+    solar.getSecond(),
+  );
+}
+
+function movePillar(pillar: string, offset: number) {
+  const stemIndex = heavenlyStemCycle.indexOf(pillar[0] as HeavenlyStem);
+  const branchIndex = earthlyBranchCycle.indexOf(pillar[1] as EarthlyBranch);
+  const normalizedStem =
+    (stemIndex + offset + heavenlyStemCycle.length * 6) %
+    heavenlyStemCycle.length;
+  const normalizedBranch =
+    (branchIndex + offset + earthlyBranchCycle.length * 5) %
+    earthlyBranchCycle.length;
+
+  return `${heavenlyStemCycle[normalizedStem]}${earthlyBranchCycle[normalizedBranch]}`;
+}
+
+function getYearPillar(year: number) {
+  return Solar.fromYmdHms(year, 6, 15, 12, 0, 0).getLunar().getYearInGanZhi();
+}
+
+function roundToOneDecimal(value: number) {
+  return Math.round(value * 10) / 10;
+}
+
+function calculateLuckData(
+  input: BirthInput,
+  lunar: LunarDate,
+  pillars: BaziData["pillars"],
+  trueSolarTime: ReturnType<typeof calculateTrueSolarTime>,
+): BaziLuckData {
+  const yearStem = pillars.year[0] as HeavenlyStem;
+  const isYangYear = stemPolarity[yearStem] === "Yang";
+  const direction: LuckDirection =
+    (input.gender === "male" && isYangYear) ||
+    (input.gender === "female" && !isYangYear)
+      ? "forward"
+      : "reverse";
+  const referenceJieQi =
+    direction === "forward" ? lunar.getNextJieQi(false) : lunar.getPrevJieQi(false);
+  const referenceSolar = referenceJieQi.getSolar();
+  const trueSolarParts = trueSolarTimeToParts(trueSolarTime);
+  const birthSolar = Solar.fromYmdHms(
+    trueSolarParts.year,
+    trueSolarParts.month,
+    trueSolarParts.day,
+    trueSolarParts.hour,
+    trueSolarParts.minute,
+    0,
+  ) as unknown as SolarDate;
+  const deltaDays =
+    Math.abs(solarToUtcMs(referenceSolar) - solarToUtcMs(birthSolar)) /
+    86_400_000;
+  const startAge = Math.max(1, roundToOneDecimal(deltaDays / 3));
+  const birthYear = Number(input.birthDate.slice(0, 4));
+  const startYear = Math.round(birthYear + startAge);
+  const step = direction === "forward" ? 1 : -1;
+  const targetYear = new Date().getFullYear();
+  const previousYear = targetYear - 1;
+  const tenYearLuck = Array.from({ length: 10 }, (_, index) => {
+    const cycleStartAge = roundToOneDecimal(startAge + index * 10);
+    const cycleStartYear = Math.round(birthYear + cycleStartAge);
+
+    return {
+      index: index + 1,
+      pillar: movePillar(pillars.month, step * (index + 1)),
+      startAge: cycleStartAge,
+      endAge: roundToOneDecimal(cycleStartAge + 9.9),
+      startYear: cycleStartYear,
+      endYear: cycleStartYear + 9,
+    };
+  });
+
+  return {
+    targetYear,
+    previousYear,
+    currentYearPillar: getYearPillar(targetYear),
+    previousYearPillar: getYearPillar(previousYear),
+    direction,
+    startAge,
+    startYear,
+    calculationNote: `${direction} luck cycle from ${referenceJieQi.getName()} at ${referenceSolar.toYmdHms()}; one day is treated as roughly four months.`,
+    tenYearLuck,
+    activeTenYearLuck: tenYearLuck.find(
+      (cycle) => targetYear >= cycle.startYear && targetYear <= cycle.endYear,
+    ),
+  };
+}
+
 export function calculateBaziEngine(input: BirthInput): BaziData {
   const trueSolarTime = calculateTrueSolarTime(input);
   const { year, month, day, hour, minute } =
@@ -173,6 +315,7 @@ export function calculateBaziEngine(input: BirthInput): BaziData {
 
   const dayMaster = pillars.day[0] as HeavenlyStem;
   const tenGods = calculateTenGods(pillars, dayMaster);
+  const luck = calculateLuckData(input, lunar as LunarDate, pillars, trueSolarTime);
 
   return {
     engine: "bazi",
@@ -184,6 +327,7 @@ export function calculateBaziEngine(input: BirthInput): BaziData {
     elementBalance: balance,
     missingElements: elements.filter((element) => balance[element] === 0),
     tenGods,
+    luck,
   };
 }
 

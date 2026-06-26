@@ -59,6 +59,37 @@ export type ReportGenerationContext = {
     elementBalance: Record<string, number>;
     missingElements: string[];
     tenGods: unknown;
+    luck?: {
+      targetYear: number;
+      previousYear: number;
+      currentYearPillar: string;
+      previousYearPillar: string;
+      currentYearPillarDisplay: string;
+      previousYearPillarDisplay: string;
+      direction: "forward" | "reverse";
+      directionLabel: string;
+      startAge: number;
+      startYear: number;
+      calculationNote: string;
+      tenYearLuck: Array<{
+        index: number;
+        pillar: string;
+        pillarDisplay: string;
+        startAge: number;
+        endAge: number;
+        startYear: number;
+        endYear: number;
+      }>;
+      activeTenYearLuck?: {
+        index: number;
+        pillar: string;
+        pillarDisplay: string;
+        startAge: number;
+        endAge: number;
+        startYear: number;
+        endYear: number;
+      };
+    };
   };
   astrology: {
     sunSign: string;
@@ -110,6 +141,7 @@ function shortContext(context: ReportGenerationContext) {
           pillars: context.bazi.pillarsDisplay,
           elementBalance: context.bazi.elementBalance,
           missingElements: context.bazi.missingElements,
+          luck: context.bazi.luck,
           tenGods:
             "Calculated internally; use displayed stem and branch roles without Chinese characters.",
         }
@@ -139,6 +171,7 @@ export function buildNatalMessages(context: ReportGenerationContext): ChatMessag
       content: [
         "You are DestinyPixel's senior Bazi x Western Astrology consultant for premium overseas users.",
         languageRule,
+        `The final output language is ${outputLanguageNames[context.locale]}. Except for the required ASCII section markers, every visible word must follow that language.`,
         "Write with a mysterious but commercially clear tone.",
         "Use the supplied Bazi and astrology context only. Do not invent houses, medical diagnoses, fixed events, or guaranteed outcomes.",
         "Return plain text only. No Markdown, no JSON, no bullets unless a section asks for compact dimensions.",
@@ -165,11 +198,13 @@ export function buildTransitMessages(
       content: [
         "You are DestinyPixel's annual transit strategist.",
         languageRule,
+        `The final output language is ${outputLanguageNames[context.locale]}. Except for the required ASCII section markers, every visible word must follow that language.`,
         "Write for an overseas paid report with direct, practical guidance.",
-        "Use the natal Bazi and astrology context as the anchor. Do not invent exact future events, medical claims, lottery/investment promises, or fear-based predictions.",
+        "Use the natal Bazi and astrology context as the anchor. Transit timing must be based on context.bazi.luck, especially targetYear, currentYearPillar, previousYearPillar, and activeTenYearLuck. Do not invent exact future events, medical claims, lottery/investment promises, or fear-based predictions.",
         "Return plain text only. No Markdown and no JSON.",
         "You must use these exact markers and this order: [SPRING], [SUMMER], [AUTUMN], [WINTER].",
-        "Each seasonal section should be about 120-170 English words, direct, practical, and suitable for typewriter streaming.",
+        "Each seasonal section must explicitly mention the target year or the active ten-year luck cycle. Do not write generic timeless seasons; the advice must change when the year pillar or ten-year luck changes.",
+        "Each seasonal section should be about 90-140 English words, or an equivalent concise length in the requested language, direct, practical, and suitable for typewriter streaming.",
       ].join(" "),
     },
     {
@@ -238,41 +273,64 @@ export function fallbackNatalText(context: ReportGenerationContext) {
 }
 
 export function fallbackTransitText(context: ReportGenerationContext) {
+  const luck = context.bazi.luck;
+  const targetYear = luck?.targetYear ?? new Date().getFullYear();
+  const previousYear = luck?.previousYear ?? targetYear - 1;
+  const activeLuck = luck?.activeTenYearLuck;
+
   if (context.locale === "zh") {
+    const currentPillar = luck?.currentYearPillarDisplay ?? "当前流年";
+    const previousPillar = luck?.previousYearPillarDisplay ?? "去年流年";
+    const decade = activeLuck
+      ? `${activeLuck.pillarDisplay}（${activeLuck.startYear}-${activeLuck.endYear}）`
+      : "当前十年大运";
+
     return [
       "[SPRING]",
-      `春季适合校准节奏。以 ${context.bazi.dayMasterDisplay} 为核心，先恢复身体秩序，再打开新的目标。`,
+      `${targetYear} 年春季先看 ${currentPillar} 与 ${decade} 的交会。它不是泛泛的新开始，而是从 ${previousYear} 年 ${previousPillar} 留下的惯性里重新定速：先恢复身体秩序，再打开新的目标。`,
       "[SUMMER]",
-      `夏季强调表达。${context.profile.displayName} 需要清晰的舞台，但不要把能量分散给太多对象。`,
+      `${targetYear} 年夏季强调表达与曝光。${context.profile.displayName} 需要清晰的舞台，但十年大运要求你把能量集中到一个真正能累积影响力的位置，不要分散给太多对象。`,
       "[AUTUMN]",
-      "秋季适合修正关系、财务和承诺结构。越是感到沉重，越需要简化规则。",
+      `${targetYear} 年秋季适合修正关系、财务和承诺结构。流年干支会把前半年的选择带回现实检验，越是感到沉重，越需要简化规则。`,
       "[WINTER]",
-      "冬季进入整合。减少噪音，保存洞察，把一年里真正有效的选择沉淀为长期系统。",
+      `${targetYear} 年冬季进入整合。把流年给你的提醒沉淀进 ${decade} 的长期主题里，减少噪音，保存洞察，把有效选择变成系统。`,
     ].join("\n\n");
   }
 
   if (context.locale === "ru") {
+    const currentPillar = luck?.currentYearPillarDisplay ?? "текущий годовой столп";
+    const previousPillar = luck?.previousYearPillarDisplay ?? "прошлый годовой столп";
+    const decade = activeLuck
+      ? `${activeLuck.pillarDisplay} (${activeLuck.startYear}-${activeLuck.endYear})`
+      : "текущий десятилетний цикл";
+
     return [
       "[SPRING]",
-      `Весна подходит для настройки ритма. Начните с дневного мастера ${context.bazi.dayMasterDisplay} и восстановите порядок до расширения.`,
+      `Весна ${targetYear} года читается через ${currentPillar} и ${decade}. Это не общий сезонный совет: сначала завершите инерцию ${previousYear} года (${previousPillar}), затем восстановите ритм и выберите одну ясную цель.`,
       "[SUMMER]",
-      `Лето требует выражения. Архетип ${context.profile.displayName} нуждается в ясной сцене, но не в рассеивании энергии.`,
+      `Лето ${targetYear} года требует выражения. Архетип ${context.profile.displayName} нуждается в сцене, но десятилетний цикл просит не распыляться: выбирайте аудиторию, где вашу ценность легче признать.`,
       "[AUTUMN]",
-      "Осень создана для редактирования договоренностей, денег и эмоциональных обязательств. Если что-то тяжелеет, упрощайте структуру.",
+      `Осень ${targetYear} года проверяет договоренности, деньги и эмоциональные обязательства. Если структура тяжелеет, упрощайте правила, а не усиливайте давление.`,
       "[WINTER]",
-      "Зима приносит интеграцию. Сократите шум, восстановите силы и превратите инсайты года в устойчивую систему.",
+      `Зима ${targetYear} года собирает опыт в систему. Верните решения года к теме ${decade}: меньше шума, больше восстановления и более точный выбор темпа.`,
     ].join("\n\n");
   }
 
+  const currentPillar = luck?.currentYearPillarDisplay ?? "the current annual pillar";
+  const previousPillar = luck?.previousYearPillarDisplay ?? "last year's pillar";
+  const decade = activeLuck
+    ? `${activeLuck.pillarDisplay} (${activeLuck.startYear}-${activeLuck.endYear})`
+    : "the active ten-year luck cycle";
+
   return [
     "[SPRING]",
-    `Spring favors calibration. Start with the Day Master ${context.bazi.dayMasterDisplay} and rebuild your rhythm before expanding. Use this season to choose one visible goal, one relationship boundary, and one health habit that can survive pressure.`,
+    `Spring ${targetYear} is read through ${currentPillar} and ${decade}. This is not a generic restart: first complete the residue of ${previousYear} (${previousPillar}), then choose one visible goal, one relationship boundary, and one health rhythm that can survive pressure.`,
     "[SUMMER]",
-    `Summer asks for expression. Your ${context.profile.nameEn} archetype needs a clean channel for visibility, creativity, and social signal. Do not scatter energy across too many audiences; pick the room where your value is easiest to recognize.`,
+    `Summer ${targetYear} asks for expression. Your ${context.profile.nameEn} archetype needs a clean channel for visibility, creativity, and social signal, but the decade cycle asks you not to scatter yourself. Pick the room where your value is easiest to recognize.`,
     "[AUTUMN]",
-    `Autumn is for editing. Review contracts, money patterns, and emotional obligations. The branch layer suggests that your unconscious timing matters: when something feels heavy, simplify the structure before forcing more effort.`,
+    `Autumn ${targetYear} is for editing. Review contracts, money patterns, and emotional obligations through the pressure of the annual pillar. When something feels heavy, simplify the structure before forcing more effort.`,
     "[WINTER]",
-    `Winter brings integration. Reduce noise, strengthen recovery, and preserve the insight gained through the year. The best transit work is not prediction; it is learning which choices keep your destiny legible under pressure.`,
+    `Winter ${targetYear} brings integration. Return the year's lessons to ${decade}: reduce noise, strengthen recovery, and preserve the choices that kept your destiny legible under pressure.`,
   ].join("\n\n");
 }
 

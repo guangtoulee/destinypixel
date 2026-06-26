@@ -220,6 +220,14 @@ export default function ReportExperience({
   initialNatal: NatalBookSections;
 }) {
   const copy = reportCopy[context.locale];
+  const luck = context.bazi.luck;
+  const startAgeDisplay = luck
+    ? context.locale === "zh"
+      ? `${luck.startAge}岁`
+      : context.locale === "ru"
+        ? `${luck.startAge} лет`
+        : `age ${luck.startAge}`
+    : "";
   const [activeTab, setActiveTab] = useState<ActiveTab>("natal");
   const [natalRaw, setNatalRaw] = useState("");
   const [transitRaw, setTransitRaw] = useState("");
@@ -389,6 +397,37 @@ export default function ReportExperience({
             />
           </div>
 
+          {luck ? (
+            <div className="transit-context-grid" aria-label={copy.transitPanel.title}>
+              <div>
+                <span>{copy.transitContext.targetYear}</span>
+                <strong>
+                  {luck.targetYear} · {luck.currentYearPillarDisplay}
+                </strong>
+              </div>
+              <div>
+                <span>{copy.transitContext.previousYear}</span>
+                <strong>
+                  {luck.previousYear} · {luck.previousYearPillarDisplay}
+                </strong>
+              </div>
+              <div>
+                <span>{copy.transitContext.tenYearLuck}</span>
+                <strong>
+                  {luck.activeTenYearLuck
+                    ? `${luck.activeTenYearLuck.pillarDisplay} · ${luck.activeTenYearLuck.startYear}-${luck.activeTenYearLuck.endYear}`
+                    : copy.status.queued}
+                </strong>
+              </div>
+              <div>
+                <span>{copy.transitContext.direction}</span>
+                <strong>
+                  {luck.directionLabel} · {copy.transitContext.starts} {startAgeDisplay}
+                </strong>
+              </div>
+            </div>
+          ) : null}
+
           <div className="season-grid">
             {transitSections.map((section) => {
               const content = transitContent[section.key];
@@ -397,7 +436,11 @@ export default function ReportExperience({
                 <article className="season-card" key={section.key}>
                   <div>
                     <span>{copy.seasons[section.key].kicker}</span>
-                    <strong>{copy.seasons[section.key].title}</strong>
+                    <strong>
+                      {luck?.targetYear
+                        ? `${luck.targetYear} · ${copy.seasons[section.key].title}`
+                        : copy.seasons[section.key].title}
+                    </strong>
                   </div>
                   {content ? (
                     <p>{content}</p>

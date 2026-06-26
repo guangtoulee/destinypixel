@@ -1,9 +1,9 @@
-import DestinyWhiteExperience from "@/components/destiny-white-experience";
+import DestinyExperience from "@/components/destiny-experience";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 
 export const maxDuration = 60;
 
-export default async function Home({
+export default async function BlackHome({
   searchParams,
 }: {
   searchParams?: Promise<{ locale?: string }>;
@@ -11,5 +11,5 @@ export default async function Home({
   const params = await searchParams;
   const initialLocale = normalizeReportLocale(params?.locale ?? "en");
 
-  return <DestinyWhiteExperience initialLocale={initialLocale} />;
+  return <DestinyExperience initialLocale={initialLocale} />;
 }

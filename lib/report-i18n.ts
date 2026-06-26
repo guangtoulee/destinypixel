@@ -67,6 +67,13 @@ export const reportCopy = {
       eyebrow: "Transit Book",
       title: "Seasonal timing, generated on demand",
     },
+    transitContext: {
+      targetYear: "Reading year",
+      previousYear: "Previous year",
+      tenYearLuck: "Ten-year luck",
+      direction: "Luck direction",
+      starts: "Starts",
+    },
     status: {
       idleNatal: "Preparing stream",
       idleTransit: "Open tab to generate",
@@ -142,6 +149,13 @@ export const reportCopy = {
       eyebrow: "运之书",
       title: "按需生成的四季节奏",
     },
+    transitContext: {
+      targetYear: "测算年份",
+      previousYear: "去年流年",
+      tenYearLuck: "十年大运",
+      direction: "大运方向",
+      starts: "起运",
+    },
     status: {
       idleNatal: "准备流式生成",
       idleTransit: "打开后开始生成",
@@ -216,6 +230,13 @@ export const reportCopy = {
     transitPanel: {
       eyebrow: "Книга транзитов",
       title: "Сезонный ритм по запросу",
+    },
+    transitContext: {
+      targetYear: "Год чтения",
+      previousYear: "Прошлый год",
+      tenYearLuck: "Десятилетний цикл",
+      direction: "Направление",
+      starts: "Старт",
     },
     status: {
       idleNatal: "Подготовка потока",

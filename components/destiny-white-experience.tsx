@@ -434,7 +434,7 @@ export default function DestinyWhiteExperience({
     <main className="white-site">
       <header className="white-header">
         <div className="white-container white-header__inner">
-          <a className="white-brand" href="/white">
+          <a className="white-brand" href="/">
             <span aria-hidden="true" />
             DestinyPixel
           </a>
@@ -446,7 +446,7 @@ export default function DestinyWhiteExperience({
           </nav>
 
           <div className="white-actions">
-            <a href="/" className="white-black-link">
+            <a href={`/black?locale=${locale}`} className="white-black-link">
               {text.nav.black}
             </a>
             <div className="white-language" aria-label="Language selector">
@@ -600,6 +600,8 @@ export default function DestinyWhiteExperience({
                 alt={cardName}
                 width={309}
                 height={418}
+                sizes="(max-width: 720px) 70vw, 309px"
+                quality={95}
                 priority
               />
             </div>
@@ -621,10 +623,46 @@ export default function DestinyWhiteExperience({
 
       <section className="white-method" id="method">
         <div className="white-container">
-          <div className="white-section-heading">
-            <p>{text.method.eyebrow}</p>
-            <h2>{text.method.title}</h2>
-            <span>{text.method.description}</span>
+          <div className="white-method-intro">
+            <div className="white-geometry-panel" aria-hidden="true">
+              <svg viewBox="0 0 560 380" focusable="false">
+                <defs>
+                  <linearGradient id="white-line-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#c9dce7" />
+                    <stop offset="48%" stopColor="#d9c3d7" />
+                    <stop offset="100%" stopColor="#d0b476" />
+                  </linearGradient>
+                </defs>
+                <path d="M78 284 C158 166 264 224 342 102 S488 116 510 58" />
+                <path d="M64 138 L188 82 L324 162 L462 112" />
+                <circle cx="188" cy="82" r="48" />
+                <circle cx="324" cy="162" r="76" />
+                <circle cx="462" cy="112" r="34" />
+                <circle cx="78" cy="284" r="10" />
+                <circle cx="188" cy="82" r="10" />
+                <circle cx="324" cy="162" r="10" />
+                <circle cx="462" cy="112" r="10" />
+                <circle cx="510" cy="58" r="10" />
+              </svg>
+              <div className="white-geometry-node white-geometry-node--one">
+                <SunMoon size={18} aria-hidden="true" />
+                <span>BaZi</span>
+              </div>
+              <div className="white-geometry-node white-geometry-node--two">
+                <Orbit size={18} aria-hidden="true" />
+                <span>Sky</span>
+              </div>
+              <div className="white-geometry-node white-geometry-node--three">
+                <Sparkles size={18} aria-hidden="true" />
+                <span>AI</span>
+              </div>
+            </div>
+
+            <div className="white-section-heading white-section-heading--method">
+              <p>{text.method.eyebrow}</p>
+              <h2>{text.method.title}</h2>
+              <span>{text.method.description}</span>
+            </div>
           </div>
 
           <div className="white-method-grid">
@@ -662,6 +700,8 @@ export default function DestinyWhiteExperience({
                     alt={itemName}
                     width={309}
                     height={418}
+                    sizes="(max-width: 720px) 58vw, 240px"
+                    quality={95}
                   />
                   <div>
                     <span>{itemDisplay.pillarLabel}</span>
@@ -729,7 +769,7 @@ export default function DestinyWhiteExperience({
           <span>DestinyPixel · V white 1.0</span>
           <span>
             <MapPin size={13} aria-hidden="true" />
-            /white
+            /
           </span>
           <span>
             <CalendarDays size={13} aria-hidden="true" />

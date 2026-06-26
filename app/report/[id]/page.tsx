@@ -115,6 +115,49 @@ function ReportLanguageLinks({
   );
 }
 
+function buildLuckDisplay(
+  luck: BaziData["luck"] | undefined,
+  locale: ReportLocale,
+): ReportGenerationContext["bazi"]["luck"] | undefined {
+  if (!luck) {
+    return undefined;
+  }
+
+  const directionLabel =
+    locale === "zh"
+      ? luck.direction === "forward"
+        ? "顺行"
+        : "逆行"
+      : locale === "ru"
+        ? luck.direction === "forward"
+          ? "прямое движение"
+          : "обратное движение"
+        : luck.direction === "forward"
+          ? "Forward"
+          : "Reverse";
+  const withDisplay = (cycle: (typeof luck.tenYearLuck)[number]) => ({
+    ...cycle,
+    pillarDisplay: getPillarDisplay(cycle.pillar, locale).pillarLabel,
+  });
+
+  return {
+    ...luck,
+    currentYearPillarDisplay: getPillarDisplay(
+      luck.currentYearPillar,
+      locale,
+    ).pillarLabel,
+    previousYearPillarDisplay: getPillarDisplay(
+      luck.previousYearPillar,
+      locale,
+    ).pillarLabel,
+    directionLabel,
+    tenYearLuck: luck.tenYearLuck.map(withDisplay),
+    activeTenYearLuck: luck.activeTenYearLuck
+      ? withDisplay(luck.activeTenYearLuck)
+      : undefined,
+  };
+}
+
 function buildInitialNatalShell({
   locale,
   profile,
@@ -277,6 +320,7 @@ export default async function ReportPage({
       elementBalance: report.bazi_data.elementBalance,
       missingElements: report.bazi_data.missingElements,
       tenGods: report.bazi_data.tenGods,
+      luck: buildLuckDisplay(report.bazi_data.luck, locale),
     },
     astrology: {
       sunSign,

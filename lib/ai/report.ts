@@ -2,11 +2,17 @@ import type { AstroData } from "@/lib/engines/astrology";
 import type { BaziData } from "@/lib/engines/bazi";
 import { elementLabelsCn } from "@/lib/engines/bazi";
 import type { PillarProfile } from "@/lib/pillars";
-import { planetLabels, type ReportLocale, zodiacLabels } from "@/lib/report-i18n";
+import {
+  languagePromptRules,
+  outputLanguageNames,
+  planetLabels,
+  type ReportLocale,
+  zodiacLabels,
+} from "@/lib/report-i18n";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
 
 const DEEPSEEK_API_URL =
-  process.env.DEEPSEEK_API_URL ?? "https://api.deepseek.com/chat/completions";
+  process.env.DEEPSEEK_API_URL ?? "https://api.deepseek.com/v1/chat/completions";
 const DEEPSEEK_MODEL = "deepseek-v4-flash";
 const DEFAULT_TIMEOUT_MS = 18_000;
 const MIN_SECTION_CHARACTERS = 80;
@@ -139,6 +145,7 @@ function buildDeepSeekContext({
         (element) => elementLabelsCn[element],
       ),
       tenGods: formatTenGods(bazi),
+      luck: bazi.luck,
       trueSolarTime: bazi.trueSolarTime,
     },
     astrology: {
@@ -214,6 +221,16 @@ async function callDeepSeek({
   signal: AbortSignal;
   retryReason?: string;
 }) {
+  const requestedLocale =
+    typeof context === "object" &&
+    context !== null &&
+    "reportLanguage" in context &&
+    (context as { reportLanguage?: ReportLocale }).reportLanguage
+      ? (context as { reportLanguage: ReportLocale }).reportLanguage
+      : "zh";
+  const languageRule = languagePromptRules[requestedLocale];
+  const outputLanguage = outputLanguageNames[requestedLocale];
+
   return fetch(DEEPSEEK_API_URL, {
     method: "POST",
     headers: {
@@ -229,23 +246,23 @@ async function callDeepSeek({
       messages: [
         {
           role: "system",
-          content: systemPrompt,
+          content: `${systemPrompt}\n\n输出语言规则：${languageRule}`,
         },
         {
           role: "user",
           content: JSON.stringify({
             context,
             writingContract: {
-              language: "zh-CN",
+              language: outputLanguage,
               outputOnly: "strict-json",
               keys: ["character", "wealth", "transits"],
-              targetLengthPerKey: `${TARGET_SECTION_CHARACTERS} Chinese characters`,
-              minimumLengthPerKey: `${MIN_SECTION_CHARACTERS} Chinese characters`,
+              targetLengthPerKey: `${TARGET_SECTION_CHARACTERS} characters in ${outputLanguage}`,
+              minimumLengthPerKey: `${MIN_SECTION_CHARACTERS} characters in ${outputLanguage}`,
               qualityBar:
-                "线上快速版报告：基于具体八字十神、五行强弱、星体落座与主要相位给结论，不写铺垫。",
+                "线上快速版报告：基于具体八字十神、五行强弱、星体落座、主要相位、大运与流年给结论，不写铺垫。",
             },
             retryInstruction: retryReason
-              ? `上一轮输出未通过后台质量检查：${retryReason}。请重新生成严格 JSON，每个字段控制在 ${TARGET_SECTION_CHARACTERS} 个中文字符左右，直接给核心结论和实操建议。`
+              ? `上一轮输出未通过后台质量检查：${retryReason}。请重新生成严格 JSON，每个字段控制在 ${TARGET_SECTION_CHARACTERS} 个字符左右，并严格遵守输出语言规则。`
               : undefined,
           }),
         },
