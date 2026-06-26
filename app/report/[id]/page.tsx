@@ -12,13 +12,19 @@ import {
 } from "lucide-react";
 import PillarImageLightbox from "@/components/pillar-image-lightbox";
 import ReportExperience from "@/components/report-experience";
-import { type Gender, type NatalBookSections } from "@/lib/ai/report";
+import {
+  createInitialAIReportContent,
+  type Gender,
+  type NatalBookSections,
+} from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
-import { getReportRecord } from "@/lib/db/repository";
+import { getReportRecord, type ReportRecord } from "@/lib/db/repository";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import { calculateBaziEngine, type BaziData } from "@/lib/engines/bazi";
+import { calculateAstrologyEngine } from "@/lib/engines/astrology";
+import { decodeReportDraft, type DraftReportInput } from "@/lib/report-draft";
 import {
   elementLabels,
   normalizeReportLocale,
@@ -30,6 +36,55 @@ import {
 } from "@/lib/report-i18n";
 
 export const maxDuration = 60;
+
+function createDraftReportRecord(
+  id: string,
+  input: DraftReportInput,
+): ReportRecord {
+  const bazi = calculateBaziEngine(input);
+  const astro = calculateAstrologyEngine(input, bazi.trueSolarTime);
+  const profile = (pillarsDB as Record<string, PillarProfile>)[
+    bazi.pillars.day
+  ];
+  const now = new Date().toISOString();
+  const birthRecordId = `draft-${id}`;
+  const aiContent = createInitialAIReportContent({
+    bazi,
+    astro,
+    profile,
+    gender: input.gender,
+    locale: input.locale,
+  });
+
+  return {
+    id,
+    user_id: "draft-user",
+    birth_record_id: birthRecordId,
+    status: "ai_pending",
+    created_at: now,
+    bazi_data: bazi,
+    astro_data: astro,
+    ai_content: aiContent,
+    user: {
+      id: "draft-user",
+      name: input.name,
+      email: null,
+    },
+    birth_record: {
+      id: birthRecordId,
+      name: input.name,
+      gender: input.gender,
+      locale: input.locale,
+      birth_date: input.birthDate,
+      birth_time: input.birthTime,
+      birth_place: input.city.label,
+      latitude: input.city.latitude,
+      longitude: input.city.longitude,
+      timezone: input.city.timezone,
+      true_solar_time: bazi.trueSolarTime.isoLike,
+    },
+  };
+}
 
 function BaziChart({
   pillars,
@@ -89,9 +144,11 @@ function BaziChart({
 function ReportLanguageLinks({
   reportId,
   locale,
+  draft,
 }: {
   reportId: string;
   locale: ReportLocale;
+  draft?: string;
 }) {
   return (
     <div className="language-switch report-language-switch" aria-label="Language selector">
@@ -99,7 +156,9 @@ function ReportLanguageLinks({
       {reportLanguageOptions.map((option) => (
         <Link
           key={option.value}
-          href={`/report/${reportId}?locale=${option.value}`}
+          href={`/report/${reportId}?locale=${option.value}${
+            draft ? `&draft=${encodeURIComponent(draft)}` : ""
+          }`}
           data-active={locale === option.value}
         >
           {option.value === "zh"
@@ -224,11 +283,14 @@ export default async function ReportPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams?: Promise<{ locale?: string }>;
+  searchParams?: Promise<{ locale?: string; draft?: string }>;
 }) {
   const { id } = await params;
   const query = await searchParams;
-  const report = await getReportRecord(id);
+  const storedReport = await getReportRecord(id);
+  const draftInput = decodeReportDraft(query?.draft);
+  const report =
+    storedReport ?? (draftInput ? createDraftReportRecord(id, draftInput) : null);
 
   if (!report) notFound();
 
@@ -366,7 +428,11 @@ export default async function ReportPage({
             </span>
             <span>DestinyPixel</span>
           </div>
-          <ReportLanguageLinks reportId={report.id} locale={locale} />
+          <ReportLanguageLinks
+            reportId={report.id}
+            locale={locale}
+            draft={query?.draft}
+          />
         </div>
       </header>
 

@@ -9,7 +9,11 @@ import {
 import { calculateAstrologyEngine } from "@/lib/engines/astrology";
 import { resolveCity } from "@/lib/geo/cities";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
-import { createReportRecord } from "@/lib/db/repository";
+import {
+  createReportRecord,
+  hasPersistentReportStore,
+} from "@/lib/db/repository";
+import { encodeReportDraft } from "@/lib/report-draft";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 
 function readString(formData: FormData, key: string) {
@@ -59,6 +63,9 @@ export async function createFusionReportAction(formData: FormData) {
     astro,
     aiContent,
   });
+  const draftQuery = hasPersistentReportStore()
+    ? ""
+    : `&draft=${encodeURIComponent(encodeReportDraft(input))}`;
 
-  redirect(`/report/${id}?locale=${locale}`);
+  redirect(`/report/${id}?locale=${locale}${draftQuery}`);
 }

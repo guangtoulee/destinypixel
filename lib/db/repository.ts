@@ -85,6 +85,10 @@ function hasSupabaseConfig() {
   );
 }
 
+export function hasPersistentReportStore() {
+  return hasSupabaseConfig() || !shouldSkipLocalWrites();
+}
+
 async function readLocalStore(): Promise<LocalStore> {
   const memoryStore = getMemoryStore();
 
