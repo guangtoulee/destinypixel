@@ -24,6 +24,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--ink);
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
   font-family: var(--font-sans);
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 a {
@@ -382,6 +384,36 @@ a {
   flex: none;
   align-items: center;
   gap: 6px;
+}
+
+.wechat-browser-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 13px 14px;
+  border: 1px solid rgba(234, 212, 158, 0.36);
+  border-radius: 8px;
+  color: #f0ddae;
+  background:
+    linear-gradient(135deg, rgba(201, 168, 106, 0.16), rgba(131, 201, 195, 0.06)),
+    rgba(8, 8, 14, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 16px 38px rgba(0, 0, 0, 0.22);
+  font-size: 12px;
+  line-height: 1.65;
+  backdrop-filter: blur(18px);
+}
+
+.wechat-browser-warning span {
+  flex: none;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.wechat-browser-warning p {
+  margin: 0;
 }
 
 .archetype-result {
@@ -1619,11 +1651,12 @@ a {
 
 @media (max-width: 640px) {
   .page-container {
-    width: min(100% - 32px, 520px);
+    width: min(100% - 24px, 520px);
   }
 
   .header-inner {
     min-height: 67px;
+    gap: 14px;
   }
 
   .brand {
@@ -1635,7 +1668,9 @@ a {
   }
 
   .language-switch {
-    height: 36px;
+    height: 38px;
+    padding-inline: 12px;
+    font-size: 13px;
   }
 
   .cosmic-backdrop {
@@ -1647,28 +1682,44 @@ a {
   }
 
   .hero-section {
-    padding-top: 58px;
+    padding-top: 42px;
   }
 
   .hero-layout {
     min-height: 0;
+    gap: 42px;
+  }
+
+  .eyebrow {
+    flex-wrap: wrap;
+    font-size: 10.5px;
+    line-height: 1.45;
   }
 
   .hero-copy h1 {
-    font-size: clamp(52px, 16vw, 68px);
+    font-size: clamp(47px, 14.5vw, 62px);
+    line-height: 1;
   }
 
   .hero-statement {
     margin-top: 23px;
-    font-size: 28px;
+    font-size: clamp(25px, 7vw, 31px);
+    line-height: 1.28;
   }
 
   .hero-description {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .birth-form {
+    margin-top: 30px;
+    padding-top: 22px;
   }
 
   .birth-form__grid {
     grid-template-columns: 1fr;
+    gap: 13px;
   }
 
   .form-field--name,
@@ -1676,18 +1727,79 @@ a {
     grid-column: span 1;
   }
 
+  .form-field {
+    gap: 8px;
+  }
+
+  .form-field > span {
+    font-size: 12px;
+  }
+
+  .form-field input {
+    height: 54px;
+    padding-inline: 14px;
+    font-size: 16px;
+  }
+
+  .birth-form__submit {
+    margin-top: 14px;
+  }
+
+  .birth-form__submit button {
+    min-height: 56px;
+    height: auto;
+    padding: 14px 15px;
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .wechat-browser-warning {
+    margin-top: 13px;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
   .birth-form__meta {
     align-items: flex-start;
     flex-direction: column;
     gap: 7px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .birth-form__meta span:last-child {
+    flex: initial;
   }
 
   .archetype-result__visual {
-    height: 400px;
+    height: min(118vw, 430px);
+  }
+
+  .archetype-result__body {
+    padding: 20px 21px 8px;
+  }
+
+  .result-essence {
+    font-size: 13px;
+    line-height: 1.7;
+    -webkit-line-clamp: 3;
   }
 
   .result-traits {
     grid-template-columns: 1fr;
+  }
+
+  .result-traits span,
+  .result-upgrade small {
+    font-size: 9px;
+  }
+
+  .result-traits p {
+    font-size: 12px;
+    line-height: 1.65;
   }
 
   .result-traits > div + div {
@@ -1701,21 +1813,35 @@ a {
     grid-template-columns: 50px 1fr auto;
   }
 
+  .result-upgrade strong {
+    font-size: 13px;
+  }
+
+  .result-upgrade p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
   .hero-footnote {
-    min-height: 78px;
-    gap: 7px;
+    min-height: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    padding-block: 16px;
   }
 
   .hero-footnote i {
-    margin-inline: 5px;
+    display: none;
   }
 
   .hero-footnote span {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .hero-footnote p {
-    max-width: 60px;
+    max-width: none;
+    margin-right: 12px;
+    font-size: 11px;
     line-height: 1.4;
   }
 
@@ -1735,11 +1861,14 @@ a {
   .section-intro h2,
   .fusion-example__copy h2,
   .premium-layout h2 {
-    font-size: 39px;
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.18;
   }
 
   .section-intro > p:last-child {
     margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .method-flow {
@@ -1748,6 +1877,15 @@ a {
 
   .method-flow article {
     padding-inline: 0;
+  }
+
+  .method-flow h3 {
+    font-size: 18px;
+  }
+
+  .method-flow p {
+    font-size: 14px;
+    line-height: 1.75;
   }
 
   .fusion-example {
@@ -1770,18 +1908,51 @@ a {
     right: 0;
   }
 
+  .fusion-example__copy > p,
+  .premium-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .fusion-signals strong {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .synthesis-note p {
+    font-size: 19px;
+  }
+
   .archetype-deck {
-    width: 690px;
-    margin-left: -68px;
-    padding-inline: 0;
+    display: flex;
+    width: 100%;
+    max-width: none;
+    margin: 48px auto 0;
+    padding: 4px 2px 18px;
+    overflow-x: auto;
+    scroll-padding-inline: 2px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    grid-template-columns: none;
+  }
+
+  .archetype-deck article {
+    flex: 0 0 min(44vw, 168px);
+    scroll-snap-align: start;
+    transform: none !important;
   }
 
   .archetype-deck article:not(:first-child) {
-    margin-left: -34px;
+    margin-left: 12px;
   }
 
-  .deck-section {
-    overflow: hidden;
+  .archetype-deck article:hover {
+    transform: translateY(-6px) !important;
+  }
+
+  .archetype-deck strong {
+    font-size: 12px;
+    line-height: 1.25;
   }
 
   .premium-section {
@@ -1791,6 +1962,24 @@ a {
   .premium-layout {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .premium-layout li {
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .premium-button {
+    min-height: 56px;
+    height: auto;
+    padding-block: 14px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .premium-note {
+    font-size: 12px;
   }
 
   .footer-main,

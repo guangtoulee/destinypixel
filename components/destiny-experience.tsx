@@ -372,6 +372,7 @@ export default function DestinyExperience() {
   const [birthDate, setBirthDate] = useState("");
   const [pillar, setPillar] = useState("癸卯");
   const [isSample, setIsSample] = useState(true);
+  const [isWeChatBrowser, setIsWeChatBrowser] = useState(false);
   const text = copy[locale];
 
   const profile = useMemo(
@@ -384,6 +385,10 @@ export default function DestinyExperience() {
   useEffect(() => {
     document.documentElement.lang = locale === "en" ? "en" : "zh-CN";
   }, [locale]);
+
+  useEffect(() => {
+    setIsWeChatBrowser(/MicroMessenger/i.test(window.navigator.userAgent));
+  }, []);
 
   function updatePreviewFromDate(value: string) {
     setBirthDate(value);
@@ -515,6 +520,14 @@ export default function DestinyExperience() {
                   pendingLabel={text.hero.pendingButton}
                 />
               </div>
+              {isWeChatBrowser ? (
+                <div className="wechat-browser-warning" role="status">
+                  <span aria-hidden="true">💡</span>
+                  <p>
+                    微信内测算可能由于网络限制导致无法加载。为了确保您能顺畅读取万字深度流年报告，强烈建议点击右上角 [...] 选择‘在浏览器打开’。
+                  </p>
+                </div>
+              ) : null}
               <div className="birth-form__meta">
                 <span>{text.hero.dateHint}</span>
                 <span>
