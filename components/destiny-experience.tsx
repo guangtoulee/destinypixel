@@ -43,6 +43,7 @@ type Copy = {
     nameLabel: string;
     dateLabel: string;
     timeLabel: string;
+    genderLabel: string;
     placeLabel: string;
     placePlaceholder: string;
     dateHint: string;
@@ -117,6 +118,7 @@ const copy: Record<Locale, Copy> = {
       nameLabel: "Name",
       dateLabel: "Date of birth",
       timeLabel: "Birth time",
+      genderLabel: "Gender / 性别",
       placeLabel: "Birth city",
       placePlaceholder: "Search city, e.g. Shijiazhuang",
       dateHint:
@@ -203,6 +205,7 @@ const copy: Record<Locale, Copy> = {
       nameLabel: "姓名",
       dateLabel: "出生日期",
       timeLabel: "出生时间",
+      genderLabel: "Gender / 性别",
       placeLabel: "出生城市",
       placePlaceholder: "搜索城市，例如：石家庄",
       dateHint: "后端独立计算八字与星盘，再在报告页提取交集与互补信号。",
@@ -495,6 +498,13 @@ export default function DestinyExperience() {
                 <label className="form-field">
                   <span>{text.hero.timeLabel}</span>
                   <input name="birthTime" type="time" required />
+                </label>
+                <label className="form-field form-field--gender">
+                  <span>{text.hero.genderLabel}</span>
+                  <select name="gender" defaultValue="female" required>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                  </select>
                 </label>
                 <label className="form-field form-field--place">
                   <span>{text.hero.placeLabel}</span>

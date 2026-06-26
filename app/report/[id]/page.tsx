@@ -3,21 +3,75 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
-  Crown,
   MapPin,
   Orbit,
   Sparkles,
-  Star,
+  UserRound,
 } from "lucide-react";
-import { normalizeAIReportContent } from "@/lib/ai/report";
+import ReportExperience from "@/components/report-experience";
+import {
+  normalizeAIReportContent,
+  type Gender,
+  type NatalBookSections,
+} from "@/lib/ai/report";
+import type { ReportGenerationContext } from "@/lib/ai/streaming";
 import { getPillarImagePath } from "@/lib/archetype-assets";
+import {
+  branchTotems,
+  pillarOrder,
+  pillarRoleLabels,
+} from "@/lib/bazi-totems";
 import { getReportRecord } from "@/lib/db/repository";
 import { elementLabelsCn } from "@/lib/engines/bazi";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 
 export const maxDuration = 60;
+
+function BaziChart({
+  pillars,
+}: {
+  pillars: ReportGenerationContext["bazi"]["pillars"];
+}) {
+  return (
+    <div className="pillar-chart">
+      {pillarOrder.map((key) => {
+        const pillar = pillars[key];
+        const stem = pillar[0];
+        const branch = pillar[1];
+        const role = pillarRoleLabels[key];
+        const totem = branchTotems[branch];
+
+        return (
+          <article className="pillar-chart-card" key={key}>
+            <header>
+              <span>{role.title}</span>
+              <strong>{pillar}</strong>
+            </header>
+            <div className="pillar-symbol-row">
+              <div>
+                <span>Heavenly Stem</span>
+                <b>{stem}</b>
+              </div>
+              <div>
+                <span>Earthly Branch</span>
+                <b>{branch}</b>
+              </div>
+            </div>
+            <div className="pillar-totem">
+              <span aria-hidden="true">{totem.emoji}</span>
+              <div>
+                <strong>{totem.animal}</strong>
+                <small>{totem.elementField}</small>
+              </div>
+            </div>
+            <em>{role.microBadge}</em>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
 
 export default async function ReportPage({
   params,
@@ -38,9 +92,61 @@ export default async function ReportPage({
     (placement) => placement.body === report.bazi_data.mappedPlanet,
   );
   const elements = Object.entries(report.bazi_data.elementBalance);
-  const aiContent = normalizeAIReportContent(report.ai_content);
-  const isDeepSeekReady = report.ai_content.meta?.provider === "deepseek";
-  const headline = `${profile.name.cn} × 太阳${report.astro_data.sunSignCn}`;
+  const legacyContent = normalizeAIReportContent(report.ai_content);
+  const gender: Gender =
+    report.birth_record.gender ??
+    report.ai_content.meta?.gender ??
+    "female";
+  const headline = `${profile.name.en} × ${report.astro_data.sunSign} Sun`;
+  const initialNatal: NatalBookSections = report.ai_content.natalBook ?? {
+    dayMaster: legacyContent.character,
+    outerPersona:
+      legacyContent.wealth ||
+      `${report.bazi_data.dayMaster} maps to ${report.bazi_data.mappedPlanet}. This section studies the visible style, first impression, and social persona created by the heavenly stems.`,
+    deepSelf:
+      legacyContent.character ||
+      "The earthly branches reveal the hidden instinctual field beneath the polished surface of the chart.",
+    lifeDimensions:
+      legacyContent.transits ||
+      "Career, love, growth, and health are now separated into concise, practical signals.",
+  };
+  const generationContext = {
+    reportId: report.id,
+    gender,
+    birth: {
+      name: report.birth_record.name,
+      birthDate: report.birth_record.birth_date,
+      birthTime: report.birth_record.birth_time,
+      birthPlace: report.birth_record.birth_place,
+      trueSolarTime: report.bazi_data.trueSolarTime.time,
+    },
+    profile: {
+      pillar: dayPillar,
+      nameEn: profile.name.en,
+      nameCn: profile.name.cn,
+      essenceEn: profile.essence.en,
+      careerStyleEn: profile.career.style.en,
+      wealthEn: profile.career.wealth.en,
+      loveModeEn: profile.love.mode.en,
+      growthEn: profile.growth.en,
+      healthEn: profile.health?.en,
+    },
+    bazi: {
+      dayMaster: report.bazi_data.dayMaster,
+      mappedPlanet: report.bazi_data.mappedPlanet,
+      mappedPlanetCn: report.bazi_data.mappedPlanetCn,
+      pillars: report.bazi_data.pillars,
+      elementBalance: report.bazi_data.elementBalance,
+      missingElements: report.bazi_data.missingElements,
+      tenGods: report.bazi_data.tenGods,
+    },
+    astrology: {
+      sunSign: report.astro_data.sunSign,
+      sunSignCn: report.astro_data.sunSignCn,
+      placements: report.astro_data.placements,
+      majorAspects: report.astro_data.majorAspects,
+    },
+  } satisfies ReportGenerationContext;
 
   return (
     <main className="report-shell">
@@ -77,38 +183,39 @@ export default async function ReportPage({
         <div className="report-summary">
           <p className="eyebrow">
             <Sparkles size={13} aria-hidden="true" />
-            {isDeepSeekReady ? "DeepSeek Insight Ready" : "AI Insight Pending"}
+            Natal shell ready · AI streams after first paint
           </p>
           <h1>{headline}</h1>
           <p className="report-lede">
-            {isDeepSeekReady
-              ? "DeepSeek 已基于真太阳时、八字四柱、十神结构、星体落座与主要相位生成本次融合解读。"
-              : aiContent.character}
+            Your report now loads like a premium product: the Bazi and
+            Astrology engines finish first, then the Natal Book streams into
+            modular panels. Annual Transits are generated only when you ask for
+            them.
           </p>
 
           <div className="report-identity-grid">
             <div>
-              <span>日柱动物原型</span>
+              <span>Day Pillar Archetype</span>
               <strong>
-                {dayPillar} · {profile.name.cn}
+                {dayPillar} · {profile.name.en}
               </strong>
-              <p>{profile.name.en}</p>
+              <p>{profile.name.cn}</p>
             </div>
             <div>
-              <span>太阳星座</span>
+              <span>Solar Signature</span>
               <strong>
-                {sun?.signCn ?? report.astro_data.sunSignCn}
+                {sun?.sign ?? report.astro_data.sunSign}
                 {sun ? ` · ${sun.degreeInSign}°` : ""}
               </strong>
-              <p>{sun?.sign ?? report.astro_data.sunSign}</p>
+              <p>{sun?.signCn ?? report.astro_data.sunSignCn}</p>
             </div>
             <div>
-              <span>天干映射星体</span>
+              <span>Stem Planet Mapping</span>
               <strong>
-                {report.bazi_data.dayMaster} = {report.bazi_data.mappedPlanetCn}
+                {report.bazi_data.dayMaster} = {report.bazi_data.mappedPlanet}
               </strong>
               <p>
-                {report.bazi_data.mappedPlanet}
+                {report.bazi_data.mappedPlanetCn}
                 {mappedPlanet ? ` in ${mappedPlanet.sign}` : ""}
               </p>
             </div>
@@ -127,31 +234,26 @@ export default async function ReportPage({
               <Orbit size={14} aria-hidden="true" />
               True solar {report.bazi_data.trueSolarTime.time}
             </span>
+            <span>
+              <UserRound size={14} aria-hidden="true" />
+              {gender === "male" ? "Male" : "Female"}
+            </span>
           </div>
         </div>
       </section>
 
       <section className="report-body page-container">
         <aside className="report-side-panel">
-          <h2>Raw Engine Output</h2>
-          <div className="pillar-table">
-            <div>
-              <span>Year</span>
-              <strong>{report.bazi_data.pillars.year}</strong>
-            </div>
-            <div>
-              <span>Month</span>
-              <strong>{report.bazi_data.pillars.month}</strong>
-            </div>
-            <div>
-              <span>Day</span>
-              <strong>{report.bazi_data.pillars.day}</strong>
-            </div>
-            <div>
-              <span>Hour</span>
-              <strong>{report.bazi_data.pillars.hour}</strong>
-            </div>
+          <div className="report-side-panel__heading">
+            <span>Bazi Chart</span>
+            <h2>Four Pillars & Totems</h2>
+            <p>
+              Heavenly stems describe the visible drive. Earthly branches reveal
+              the animal field beneath it.
+            </p>
           </div>
+
+          <BaziChart pillars={report.bazi_data.pillars} />
 
           <div className="element-bars">
             {elements.map(([element, value]) => (
@@ -166,47 +268,10 @@ export default async function ReportPage({
           </div>
         </aside>
 
-        <div className="report-modules">
-          <article>
-            <span>
-              <Star size={15} fill="currentColor" aria-hidden="true" />
-              天生性格
-            </span>
-            <p>{aiContent.character}</p>
-          </article>
-          <article>
-            <span>
-              <Sparkles size={15} aria-hidden="true" />
-              财富模式
-            </span>
-            <p>{aiContent.wealth}</p>
-          </article>
-          <article>
-            <span>
-              <Orbit size={15} aria-hidden="true" />
-              流年大运
-            </span>
-            <p>{aiContent.transits}</p>
-          </article>
-
-          <div className="vip-panel">
-            <div>
-              <span>
-                <Crown size={17} aria-hidden="true" />
-              </span>
-              <div>
-                <h2>VIP 深度咨询</h2>
-                <p>
-                  继续接入人工咨询、真实行运星历与年度追踪后，可把本报告延展为长期个人决策地图。
-                </p>
-              </div>
-            </div>
-            <a href="#vip">
-              预约解读
-              <ArrowRight size={16} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
+        <ReportExperience
+          context={generationContext}
+          initialNatal={initialNatal}
+        />
       </section>
     </main>
   );

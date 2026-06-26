@@ -2,6 +2,7 @@ import type { City } from "@/lib/geo/cities";
 
 export type BirthInput = {
   name: string;
+  gender: "male" | "female";
   birthDate: string;
   birthTime: string;
   city: City;

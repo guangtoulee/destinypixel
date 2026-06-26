@@ -9,7 +9,7 @@ export type ReportRecord = {
   id: string;
   user_id: string;
   birth_record_id: string;
-  status?: "ai_ready" | "ai_unavailable";
+  status?: "ai_ready" | "ai_pending" | "ai_unavailable";
   created_at: string;
   bazi_data: BaziData;
   astro_data: AstroData;
@@ -22,6 +22,7 @@ export type ReportRecord = {
   birth_record: {
     id: string;
     name: string;
+    gender?: BirthInput["gender"];
     birth_date: string;
     birth_time: string;
     birth_place: string;
@@ -33,12 +34,17 @@ export type ReportRecord = {
 };
 
 function getReportStatus(aiContent: AIReportContent): ReportRecord["status"] {
-  return aiContent.meta.provider === "deepseek" ? "ai_ready" : "ai_unavailable";
+  if (aiContent.meta.provider === "deepseek") return "ai_ready";
+  if (aiContent.meta.provider === "initial") return "ai_pending";
+
+  return "ai_unavailable";
 }
 
 type LocalStore = {
   users: Array<ReportRecord["user"] & { created_at: string }>;
-  birth_records: Array<ReportRecord["birth_record"] & { user_id: string; created_at: string }>;
+  birth_records: Array<
+    ReportRecord["birth_record"] & { user_id: string; created_at: string }
+  >;
   reports: ReportRecord[];
 };
 
@@ -168,6 +174,7 @@ export async function createReportRecord({
     id: birthRecordId,
     user_id: userId,
     name: input.name,
+    gender: input.gender,
     birth_date: input.birthDate,
     birth_time: input.birthTime,
     birth_place: input.city.label,
@@ -194,6 +201,7 @@ export async function createReportRecord({
     birth_record: {
       id: birthRecordId,
       name: input.name,
+      gender: input.gender,
       birth_date: input.birthDate,
       birth_time: input.birthTime,
       birth_place: input.city.label,
@@ -206,7 +214,18 @@ export async function createReportRecord({
 
   if (hasSupabaseConfig()) {
     await supabaseRequest("users", "POST", user);
-    await supabaseRequest("birth_records", "POST", birthRecord);
+    try {
+      await supabaseRequest("birth_records", "POST", birthRecord);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "";
+
+      if (!message.includes("gender")) {
+        throw error;
+      }
+
+      const { gender: _gender, ...legacyBirthRecord } = birthRecord;
+      await supabaseRequest("birth_records", "POST", legacyBirthRecord);
+    }
     await supabaseRequest("reports", "POST", {
       id: report.id,
       user_id: report.user_id,

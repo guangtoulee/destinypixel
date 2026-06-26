@@ -10,6 +10,15 @@ const DEFAULT_TIMEOUT_MS = 18_000;
 const MIN_SECTION_CHARACTERS = 80;
 const TARGET_SECTION_CHARACTERS = "250-300";
 
+export type Gender = "male" | "female";
+
+export type NatalBookSections = {
+  dayMaster: string;
+  outerPersona: string;
+  deepSelf: string;
+  lifeDimensions: string;
+};
+
 export type AIReportSections = {
   character: string;
   wealth: string;
@@ -17,10 +26,12 @@ export type AIReportSections = {
 };
 
 export type AIReportContent = AIReportSections & {
+  natalBook?: NatalBookSections;
   meta: {
-    provider: "deepseek" | "unavailable";
+    provider: "deepseek" | "initial" | "unavailable";
     model: string;
     generatedAt: string;
+    gender?: Gender;
     error?: string;
   };
 };
@@ -84,10 +95,12 @@ function buildDeepSeekContext({
   bazi,
   astro,
   profile,
+  gender,
 }: {
   bazi: BaziData;
   astro: AstroData;
   profile: PillarProfile;
+  gender?: Gender;
 }) {
   const mappedPlacement = astro.placements.find(
     (placement) => placement.body === bazi.mappedPlanet,
@@ -96,6 +109,7 @@ function buildDeepSeekContext({
   return {
     reportLanguage: "zh-CN",
     product: "DestinyPixel Bazi x Astrology Fusion Report",
+    gender: gender ?? "unspecified",
     fusionRule:
       "底层八字与星盘独立计算；这里只做前端/报告层的交集、共振与互补解读。",
     bazi: {
@@ -363,17 +377,63 @@ export function normalizeAIReportContent(
   };
 }
 
-export async function generateAIReportInsight({
+export function createInitialAIReportContent({
   bazi,
   astro,
   profile,
+  gender,
 }: {
   bazi: BaziData;
   astro: AstroData;
   profile: PillarProfile;
+  gender: Gender;
+}): AIReportContent {
+  const sun = astro.placements.find((placement) => placement.body === "Sun");
+  const mappedPlacement = astro.placements.find(
+    (placement) => placement.body === bazi.mappedPlanet,
+  );
+  const aspectSummary =
+    astro.majorAspects.length > 0
+      ? astro.majorAspects
+          .slice(0, 3)
+          .map((aspect) => `${aspect.bodies.join(" × ")} ${aspect.type}`)
+          .join(", ")
+      : "major aspects will be weighted lightly in this MVP chart";
+  const base = {
+    dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${bazi.pillars.day} as the day pillar and ${bazi.dayMaster} as the Day Master, while the astrology engine places the Sun in ${sun?.sign ?? astro.sunSign}. The full Natal Book is now streaming after the page loads, so you can read the chart shell immediately instead of waiting on a long server request.`,
+    outerPersona: `Your social layer begins with the heavenly stems: Year ${bazi.pillars.year[0]}, Month ${bazi.pillars.month[0]}, Day ${bazi.pillars.day[0]}, Hour ${bazi.pillars.hour[0]}. The mapped Day Master planet is ${bazi.mappedPlanet},${mappedPlacement ? ` placed in ${mappedPlacement.sign}` : ""}. This module will refine first impression, ambition style, and public rhythm as the AI stream arrives.`,
+    deepSelf: `Your subterranean layer begins with the earthly branches: Year ${bazi.pillars.year[1]}, Month ${bazi.pillars.month[1]}, Day ${bazi.pillars.day[1]}, Hour ${bazi.pillars.hour[1]}. The branch totems describe instinct, memory, attachment patterns, and the pressure points beneath performance. The live stream will fuse these signals with ${aspectSummary}.`,
+    lifeDimensions: `Career, love, growth, and health are separated into concise signals in the new modular report. The system will avoid the old one-piece long essay and focus on direct, commercially usable insight. Gender context is recorded as ${gender}, while the interpretation remains personality-first rather than deterministic.`,
+  };
+
+  return {
+    character: base.dayMaster,
+    wealth: base.lifeDimensions,
+    transits:
+      "Annual Transits are now generated only when you open the Annual Transits tab, preventing Vercel and WeChat from waiting on a long request.",
+    natalBook: base,
+    meta: {
+      provider: "initial",
+      model: "client-streaming-shell",
+      generatedAt: new Date().toISOString(),
+      gender,
+    },
+  };
+}
+
+export async function generateAIReportInsight({
+  bazi,
+  astro,
+  profile,
+  gender,
+}: {
+  bazi: BaziData;
+  astro: AstroData;
+  profile: PillarProfile;
+  gender?: Gender;
 }): Promise<AIReportContent> {
   const generatedAt = new Date().toISOString();
-  const context = buildDeepSeekContext({ bazi, astro, profile });
+  const context = buildDeepSeekContext({ bazi, astro, profile, gender });
 
   try {
     const sections = await requestDeepSeekReport(context);
@@ -384,6 +444,7 @@ export async function generateAIReportInsight({
         provider: "deepseek",
         model: DEEPSEEK_MODEL,
         generatedAt,
+        gender,
       },
     };
   } catch (error) {
@@ -395,6 +456,7 @@ export async function generateAIReportInsight({
         provider: "unavailable",
         model: "local-structured-fallback",
         generatedAt,
+        gender,
         error: reason,
       },
     };

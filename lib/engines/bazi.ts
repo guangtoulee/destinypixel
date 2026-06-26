@@ -191,10 +191,11 @@ export const trueSolarTimeCalibrationFixture = {
   name: "True solar time boundary guard",
   input: {
     name: "Calibration",
+    gender: "female",
     birthDate: "1982-03-21",
     birthTime: "01:30",
     city: resolveCity("Shijiazhuang")!,
-  },
+  } satisfies BirthInput,
   expectedHourPillar: "癸丑",
 };
 

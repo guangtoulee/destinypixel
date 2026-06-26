@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { generateAIReportInsight } from "@/lib/ai/report";
+import { createInitialAIReportContent, type Gender } from "@/lib/ai/report";
 import {
   assertBaziEngineCalibration,
   calculateBaziEngine,
@@ -20,6 +20,8 @@ export async function createFusionReportAction(formData: FormData) {
   assertBaziEngineCalibration();
 
   const name = readString(formData, "name") || "Guest";
+  const genderValue = readString(formData, "gender");
+  const gender: Gender = genderValue === "male" ? "male" : "female";
   const birthDate = readString(formData, "birthDate");
   const birthTime = readString(formData, "birthTime");
   const place = readString(formData, "birthPlace");
@@ -31,6 +33,7 @@ export async function createFusionReportAction(formData: FormData) {
 
   const input = {
     name,
+    gender,
     birthDate,
     birthTime,
     city,
@@ -40,10 +43,11 @@ export async function createFusionReportAction(formData: FormData) {
   const profile = (pillarsDB as Record<string, PillarProfile>)[
     bazi.pillars.day
   ];
-  const aiContent = await generateAIReportInsight({
+  const aiContent = createInitialAIReportContent({
     bazi,
     astro,
     profile,
+    gender,
   });
   const id = await createReportRecord({
     input,

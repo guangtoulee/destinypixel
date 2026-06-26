@@ -44,7 +44,8 @@ a {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -285,6 +286,7 @@ a {
 }
 
 .form-field--name,
+.form-field--gender,
 .form-field--place {
   grid-column: span 2;
 }
@@ -295,7 +297,8 @@ a {
   font-weight: 700;
 }
 
-.form-field input {
+.form-field input,
+.form-field select {
   width: 100%;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.13);
@@ -312,11 +315,16 @@ a {
     background 180ms ease;
 }
 
+.form-field select {
+  cursor: pointer;
+}
+
 .form-field input::placeholder {
   color: #5f5b66;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+.form-field select:focus {
   border-color: rgba(201, 168, 106, 0.68);
   background: rgba(11, 10, 18, 0.9);
 }
@@ -1342,11 +1350,14 @@ a {
 
 .report-body {
   display: grid;
-  grid-template-columns: 330px 1fr;
+  grid-template-columns: 370px 1fr;
   gap: clamp(48px, 7vw, 96px);
 }
 
 .report-side-panel,
+.report-workspace,
+.report-accordion-card,
+.season-card,
 .report-modules article,
 .vip-panel {
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1363,11 +1374,36 @@ a {
   padding: 24px;
 }
 
-.report-side-panel h2 {
+.report-side-panel__heading > span,
+.report-panel-heading span,
+.season-card span {
+  display: block;
+  color: #9b8154;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.report-side-panel h2,
+.report-panel-heading h2 {
   margin: 0;
   color: #e7e0d3;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.report-side-panel__heading h2,
+.report-panel-heading h2 {
+  margin-top: 8px;
+}
+
+.report-side-panel__heading p {
+  margin: 10px 0 0;
+  color: #8f8a96;
   font-size: 13px;
-  font-weight: 600;
+  line-height: 1.65;
 }
 
 .pillar-table {
@@ -1403,6 +1439,121 @@ a {
   font-weight: 500;
 }
 
+.pillar-chart {
+  display: grid;
+  gap: 11px;
+  margin-top: 22px;
+}
+
+.pillar-chart-card {
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(201, 168, 106, 0.08), transparent 44%),
+    rgba(0, 0, 0, 0.16);
+}
+
+.pillar-chart-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.pillar-chart-card header span,
+.pillar-symbol-row span {
+  color: #76717d;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pillar-chart-card header strong {
+  color: #d6bf86;
+  font-family: serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.pillar-symbol-row {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pillar-symbol-row > div {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.pillar-symbol-row b {
+  display: block;
+  margin-top: 7px;
+  color: #ece6dc;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.pillar-totem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 11px;
+  padding: 10px 11px;
+  border: 1px solid rgba(201, 168, 106, 0.18);
+  border-radius: 7px;
+  background: rgba(201, 168, 106, 0.055);
+}
+
+.pillar-totem > span {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 20px;
+}
+
+.pillar-totem strong,
+.pillar-totem small {
+  display: block;
+}
+
+.pillar-totem strong {
+  color: #efe9df;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pillar-totem small {
+  margin-top: 3px;
+  color: #89848f;
+  font-size: 10px;
+}
+
+.pillar-chart-card > em {
+  display: inline-flex;
+  margin-top: 11px;
+  padding: 5px 7px;
+  border: 1px solid rgba(131, 201, 195, 0.18);
+  border-radius: 999px;
+  color: #9fd1cc;
+  background: rgba(131, 201, 195, 0.055);
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .element-bars {
   display: grid;
   gap: 13px;
@@ -1435,6 +1586,217 @@ a {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #8fcac5, #d6bb7c);
+}
+
+.report-workspace {
+  min-width: 0;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.report-tabs {
+  display: inline-flex;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.report-tabs button {
+  display: inline-flex;
+  min-height: 38px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-inline: 13px;
+  border: 0;
+  border-radius: 6px;
+  color: #8e8995;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.report-tabs button:hover {
+  color: #eee7dc;
+}
+
+.report-tabs button[aria-selected="true"] {
+  color: #1b1307;
+  background: linear-gradient(135deg, #ead49e, #b98b4d);
+  transform: translateY(-1px);
+}
+
+.report-tab-panel {
+  margin-top: 24px;
+}
+
+.report-panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.stream-status-pill {
+  display: inline-flex;
+  min-height: 32px;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 11px;
+  border: 1px solid rgba(201, 168, 106, 0.22);
+  border-radius: 999px;
+  color: #d9c088;
+  background: rgba(201, 168, 106, 0.065);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stream-status-pill[data-status="ready"] {
+  border-color: rgba(131, 201, 195, 0.26);
+  color: #a8d9d5;
+  background: rgba(131, 201, 195, 0.06);
+}
+
+.stream-status-pill[data-status="error"] {
+  border-color: rgba(234, 212, 158, 0.3);
+  color: #ead49e;
+}
+
+.report-accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.report-accordion-card {
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.report-accordion-card button {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+}
+
+.report-accordion-card button small,
+.report-accordion-card button strong {
+  display: block;
+}
+
+.report-accordion-card button small {
+  color: #9b8154;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.report-accordion-card button strong {
+  margin-top: 5px;
+  color: #eee7dc;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.report-accordion-card button > svg {
+  flex: none;
+  color: #8f835f;
+  transition: transform 180ms ease;
+}
+
+.report-accordion-card[data-open="true"] button > svg {
+  transform: rotate(180deg);
+}
+
+.report-accordion-card__body {
+  padding: 0 20px 20px;
+}
+
+.report-accordion-card__body p,
+.season-card p {
+  margin: 0;
+  color: #b8b2bc;
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.season-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.season-card {
+  min-height: 230px;
+  padding: 20px;
+  box-shadow: none;
+}
+
+.season-card strong {
+  display: block;
+  margin-top: 7px;
+  color: #eee7dc;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.season-card p,
+.season-card .insight-skeleton {
+  margin-top: 18px;
+}
+
+.insight-skeleton {
+  display: grid;
+  gap: 10px;
+}
+
+.insight-skeleton span {
+  color: #8f835f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.insight-skeleton i {
+  display: block;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035), rgba(234, 212, 158, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.05);
+  background-size: 220% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.insight-skeleton i:nth-child(3) {
+  width: 88%;
+}
+
+.insight-skeleton i:nth-child(4) {
+  width: 64%;
 }
 
 .report-modules {
@@ -1543,6 +1905,12 @@ a {
   }
 }
 
+@keyframes skeleton-shimmer {
+  to {
+    background-position: -220% 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1643,6 +2011,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .pillar-chart {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .report-card-visual,
   .report-loading__visual {
     width: min(72vw, 310px);
@@ -1723,6 +2095,7 @@ a {
   }
 
   .form-field--name,
+  .form-field--gender,
   .form-field--place {
     grid-column: span 1;
   }
@@ -1735,7 +2108,8 @@ a {
     font-size: 12px;
   }
 
-  .form-field input {
+  .form-field input,
+  .form-field select {
     height: 54px;
     padding-inline: 14px;
     font-size: 16px;
@@ -2001,6 +2375,11 @@ a {
     font-size: 38px;
   }
 
+  .report-lede {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
   .report-identity-grid {
     grid-template-columns: 1fr;
   }
@@ -2017,6 +2396,83 @@ a {
 
   .report-body {
     gap: 22px;
+  }
+
+  .report-side-panel {
+    padding: 20px;
+  }
+
+  .pillar-chart {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-chart-card header span,
+  .pillar-symbol-row span {
+    font-size: 9px;
+  }
+
+  .pillar-totem strong {
+    font-size: 14px;
+  }
+
+  .pillar-totem small {
+    font-size: 11px;
+  }
+
+  .pillar-chart-card > em {
+    font-size: 10px;
+  }
+
+  .report-workspace {
+    padding: 16px;
+  }
+
+  .report-tabs {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .report-tabs button {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .report-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stream-status-pill {
+    min-height: 34px;
+    font-size: 10px;
+  }
+
+  .report-accordion-card button {
+    padding: 18px 16px;
+  }
+
+  .report-accordion-card button strong {
+    font-size: 24px;
+  }
+
+  .report-accordion-card__body {
+    padding: 0 16px 18px;
+  }
+
+  .report-accordion-card__body p,
+  .season-card p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .season-card {
+    min-height: 220px;
+    padding: 18px;
   }
 
   .report-modules article {
