@@ -14,12 +14,12 @@ export default function ReportLoading() {
         <div className="report-loading__panel">
           <p className="eyebrow">
             <Sparkles size={13} aria-hidden="true" />
-            DeepSeek Insight
+            Inner Map Insight
           </p>
-          <h1>Generating your fusion report</h1>
+          <h1>Reading your inner map</h1>
           <p>
-            We are combining true solar time, Four Pillars, ten gods, planetary
-            placements, and major aspects into one coherent reading.
+            We are aligning your birth-time energy, animal portrait, planetary
+            rhythm, and seasonal timing into one coherent guidance experience.
           </p>
           <span>
             <LoaderCircle className="loading-icon" size={16} aria-hidden="true" />

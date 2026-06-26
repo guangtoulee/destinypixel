@@ -58,6 +58,11 @@ type WhiteCopy = {
     sky: string;
     resonance: string;
   };
+  stats: {
+    portraits: string;
+    signals: string;
+    paths: string;
+  };
   method: {
     eyebrow: string;
     title: string;
@@ -87,17 +92,17 @@ type WhiteCopy = {
 const whiteCopy: Record<ReportLocale, WhiteCopy> = {
   en: {
     nav: {
-      method: "Method",
-      archetypes: "Archetypes",
-      report: "Report",
-      black: "V black 1.0",
+      method: "The System",
+      archetypes: "Energy Cards",
+      report: "Start Reading",
+      black: "Dark mode",
     },
     hero: {
-      version: "V white 1.0",
-      eyebrow: "Bazi archetypes · Natal sky · Soft intelligence",
-      title: "A lighter way to read destiny.",
+      version: "Multidimensional birth map",
+      eyebrow: "Birth energy · Planetary rhythm · Inner guidance",
+      title: "Meet the pattern your birthday remembers.",
       lead:
-        "DestinyPixel White keeps the same dual-engine core, then presents it through a calm, luminous interface built for overseas users.",
+        "DestinyPixel translates your birth moment into a gentle psychological mirror: symbolic animals, planetary rhythms, and AI-guided reflection for clarity, healing, and self-trust.",
       name: "Name",
       date: "Date of birth",
       time: "Birth time",
@@ -106,75 +111,80 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       male: "Male",
       city: "Birth city",
       cityPlaceholder: "Search city, e.g. Shijiazhuang",
-      submit: "Generate my fusion report",
-      pending: "Reading your chart, this may take a moment...",
-      privacy: "Bazi and Astrology are calculated separately",
+      submit: "Reveal my inner map",
+      pending: "Reading your energy field, this may take a moment...",
+      privacy: "Your birth data stays private and is used only for this reading",
     },
     card: {
-      sample: "Soft sample",
-      core: "Day Pillar",
-      sky: "Sky Layer",
-      resonance: "Resonance",
+      sample: "Energy sample",
+      core: "Core Pattern",
+      sky: "Sky Rhythm",
+      resonance: "Inner Echo",
+    },
+    stats: {
+      portraits: "energy portraits",
+      signals: "planetary signals",
+      paths: "guidance paths",
     },
     method: {
-      eyebrow: "A premium white-space system",
-      title: "A brighter product language for the same metaphysical engine.",
+      eyebrow: "A guided mirror for the self",
+      title: "Your birth moment as a multidimensional field.",
       description:
-        "The black version feels cosmic and mysterious. White 1.0 keeps the depth, but shifts into porcelain, mist, and editorial clarity.",
+        "Instead of asking you to decode ancient symbols, DestinyPixel turns them into a calm visual language for emotional patterning, timing, and self-understanding.",
       items: [
         {
-          title: "Elemental animal",
-          body: "The 60 Jiazi cards become soft visual anchors instead of cryptic characters.",
+          title: "Energy signature",
+          body: "Your birth day becomes a symbolic animal portrait: a memorable doorway into temperament, needs, and natural rhythm.",
         },
         {
-          title: "Planetary translation",
-          body: "The day master maps into a planet, then the natal sky adds timing and psychological movement.",
+          title: "Sky resonance",
+          body: "Planetary positions add a second layer, revealing where your inner pattern seeks expression, protection, and growth.",
         },
         {
-          title: "Readable insight",
-          body: "The report is designed as calm modules: core, persona, deep self, career, love, growth, and health.",
+          title: "Healing guidance",
+          body: "The reading becomes practical prompts for self-trust, relationships, work, recovery, and the next season of your life.",
         },
       ],
     },
     archetypes: {
-      eyebrow: "60 cards, one visual language",
-      title: "Pastel archetypes with cultural depth.",
+      eyebrow: "60 symbolic companions",
+      title: "A soft oracle deck for your inner landscape.",
       description:
-        "Each pillar is shown as a collectible animal card, surrounded by quiet Morandi gradients and soft UI layers.",
+        "Each card acts like a visual anchor for a different emotional climate, helping overseas users feel the system before they try to analyze it.",
     },
     fusion: {
-      eyebrow: "Example reading",
+      eyebrow: "Field reading",
       title: "The Dewy Rabbit meets a Pisces Sun.",
       description:
-        "Gui Mao carries Yin Water sensitivity and Rabbit social intelligence. Pisces repeats the same permeability, imagination, and emotional attunement.",
-      chips: ["Yin Water", "Wood Rabbit", "Pisces Sun", "Jupiter resonance"],
+        "The Dewy Rabbit suggests sensitivity, social grace, and quiet perception. A Pisces Sun echoes imagination, permeability, and a soul that heals through beauty.",
+      chips: ["Gentle sensitivity", "Social intuition", "Pisces Sun", "Emotional healing"],
     },
     premium: {
-      eyebrow: "From free day pillar to full fusion",
-      title: "A report that feels calm enough to read deeply.",
+      eyebrow: "From a free glimpse to deeper guidance",
+      title: "A reading that feels like being understood.",
       description:
-        "White 1.0 is designed for users who want mystery without visual heaviness: softer color, larger spacing, clearer modules.",
+        "Start with your birth-day portrait, then open the full map: personality patterns, love language, work rhythm, growth edge, wellbeing, and annual timing.",
       items: [
-        "True solar time Bazi engine",
-        "Independent astrology engine",
-        "Streaming AI report modules",
+        "Birth-time energy calibration",
+        "Planetary resonance mapping",
+        "Streaming reflective guidance",
       ],
-      cta: "Start the white report",
+      cta: "Begin my reading",
     },
   },
   zh: {
     nav: {
-      method: "方法",
-      archetypes: "原型",
-      report: "报告",
-      black: "黑版 1.0",
+      method: "系统",
+      archetypes: "能量卡",
+      report: "开始解读",
+      black: "深色模式",
     },
     hero: {
-      version: "V white 1.0",
-      eyebrow: "八字原型 · 出生星盘 · 柔和洞察",
-      title: "用更轻盈的方式阅读命运。",
+      version: "多维出生能量图",
+      eyebrow: "出生能量 · 行星节律 · 内在指引",
+      title: "看见你出生那天留下的能量纹理。",
       lead:
-        "DestinyPixel White 保留同一套双引擎底层，用更明亮、克制、面向海外用户的白色界面重新呈现。",
+        "DestinyPixel 将你的出生时刻转译成一张柔和的心理地图：动物象征、行星节律与 AI 引导式洞察，共同帮助你理解自己、修复关系、找回内在秩序。",
       name: "姓名",
       date: "出生日期",
       time: "出生时间",
@@ -183,71 +193,76 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       male: "男性",
       city: "出生城市",
       cityPlaceholder: "搜索城市，例如：石家庄",
-      submit: "生成融合报告",
-      pending: "正在洞察星盘，这需要一点时间...",
-      privacy: "八字与星盘底层独立计算",
+      submit: "开启我的内在地图",
+      pending: "正在读取你的能量场，这需要一点时间...",
+      privacy: "出生资料仅用于本次解读，并保持私密",
     },
     card: {
-      sample: "柔光示例",
-      core: "日柱",
-      sky: "星空层",
-      resonance: "共振",
+      sample: "能量样本",
+      core: "核心模式",
+      sky: "天空节律",
+      resonance: "内在回声",
+    },
+    stats: {
+      portraits: "能量画像",
+      signals: "行星信号",
+      paths: "指引路径",
     },
     method: {
-      eyebrow: "高级留白系统",
-      title: "同一个命理引擎，换一种更明亮的产品语言。",
+      eyebrow: "一面温柔的自我镜子",
+      title: "把出生时刻，看作一个多维能量场。",
       description:
-        "黑版偏宇宙和神秘，白版 1.0 保留深度，但把视觉切换到瓷白、雾感和编辑型清晰度。",
+        "我们不要求用户理解古老术语，而是把符号翻译成现代心理语言：看见情绪模式、关系节奏、生命阶段与自我疗愈方向。",
       items: [
         {
-          title: "元素动物",
-          body: "60 甲子卡牌成为柔和的视觉锚点，不再依赖晦涩字符。",
+          title: "能量签名",
+          body: "你的出生之日会生成一个动物画像，成为理解气质、需求与自然节奏的入口。",
         },
         {
-          title: "行星翻译",
-          body: "日主映射到星体，再由出生星盘补充心理动力与时间感。",
+          title: "星空共振",
+          body: "行星位置提供第二层信息，帮助看见你的表达方式、防御机制、亲密需求与成长方向。",
         },
         {
-          title: "模块阅读",
-          body: "报告拆成命盘核心、外在形象、深层自我、事业、感情、成长与健康。",
+          title: "疗愈指引",
+          body: "解读会落到具体生活：自我信任、关系边界、工作节奏、身心恢复与接下来一年的选择。",
         },
       ],
     },
     archetypes: {
-      eyebrow: "60 张卡牌，一套视觉语言",
-      title: "带有文化厚度的淡彩原型。",
+      eyebrow: "60 位象征伙伴",
+      title: "一套描绘内在风景的柔光卡牌。",
       description:
-        "每个柱都以动物卡牌呈现，搭配莫兰迪渐变、柔和玻璃层和更舒服的留白。",
+        "每张卡都代表一种情绪气候和生命质地，让海外用户先感受到这套系统，再进入更深入的分析。",
     },
     fusion: {
-      eyebrow: "解读示例",
+      eyebrow: "场域解读",
       title: "雨露灵兔，遇见双鱼座太阳。",
       description:
-        "癸卯带有阴水感受力与兔的社交直觉，双鱼座太阳再次强调想象力、渗透性和情绪共鸣。",
-      chips: ["阴水", "木兔", "太阳双鱼", "木星共振"],
+        "雨露灵兔象征敏感、柔软、善于感知关系中的细微波动；双鱼座太阳进一步放大想象力、共情力与通过美来疗愈自己的能力。",
+      chips: ["细腻感受力", "社交直觉", "太阳双鱼", "情绪疗愈"],
     },
     premium: {
-      eyebrow: "从免费日柱到完整融合",
-      title: "一份能让人安静读下去的报告。",
+      eyebrow: "从免费一瞥，到完整指引",
+      title: "一份像被理解一样的阅读体验。",
       description:
-        "白版 1.0 面向喜欢轻盈高级感的用户：更柔的色彩、更大的呼吸感、更清晰的模块。",
-      items: ["真太阳时八字引擎", "独立占星引擎", "流式 AI 报告模块"],
-      cta: "开始白版报告",
+        "从出生之日的动物画像开始，继续展开人格模式、亲密关系、事业节奏、成长课题、身心恢复和年度时机。",
+      items: ["出生时间能量校准", "行星共振图谱", "流式心理指引模块"],
+      cta: "开始我的解读",
     },
   },
   ru: {
     nav: {
-      method: "Метод",
-      archetypes: "Архетипы",
-      report: "Отчет",
-      black: "V black 1.0",
+      method: "Система",
+      archetypes: "Карты энергии",
+      report: "Начать",
+      black: "Темный режим",
     },
     hero: {
-      version: "V white 1.0",
-      eyebrow: "Ба-цзы · Натальное небо · Мягкий интеллект",
-      title: "Более светлый способ читать судьбу.",
+      version: "Многомерная карта рождения",
+      eyebrow: "Энергия рождения · Ритм планет · Внутренний ориентир",
+      title: "Увидьте узор, который помнит день вашего рождения.",
       lead:
-        "DestinyPixel White сохраняет тот же двойной движок, но подает его через спокойный, светлый интерфейс для международной аудитории.",
+        "DestinyPixel переводит момент рождения в мягкое психологическое зеркало: символические животные, планетарные ритмы и AI-инсайты для ясности, восстановления и доверия к себе.",
       name: "Имя",
       date: "Дата рождения",
       time: "Время рождения",
@@ -256,60 +271,65 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       male: "Мужской",
       city: "Город рождения",
       cityPlaceholder: "Найдите город, например Shijiazhuang",
-      submit: "Создать мой отчет",
-      pending: "Читаем вашу карту, это займет немного времени...",
-      privacy: "Ба-цзы и астрология считаются отдельно",
+      submit: "Открыть мою внутреннюю карту",
+      pending: "Считываем ваше энергетическое поле...",
+      privacy: "Данные рождения используются только для этого чтения",
     },
     card: {
-      sample: "Светлый пример",
-      core: "Дневной столп",
-      sky: "Небесный слой",
-      resonance: "Резонанс",
+      sample: "Образец энергии",
+      core: "Ядро паттерна",
+      sky: "Ритм неба",
+      resonance: "Внутренний отклик",
+    },
+    stats: {
+      portraits: "портретов энергии",
+      signals: "планетарных сигналов",
+      paths: "маршрутов",
     },
     method: {
-      eyebrow: "Премиальная система с воздухом",
-      title: "Тот же метафизический движок в более светлом языке продукта.",
+      eyebrow: "Мягкое зеркало для самопонимания",
+      title: "Момент рождения как многомерное поле.",
       description:
-        "Черная версия звучит космично и мистически. White 1.0 сохраняет глубину, но добавляет фарфоровую мягкость и редакционную ясность.",
+        "Мы не заставляем пользователя разбирать древние термины. Система переводит символы в современный язык эмоций, ритма, отношений и внутреннего восстановления.",
       items: [
         {
-          title: "Стихийное животное",
-          body: "60 карт Цзя-цзы становятся мягкими визуальными якорями вместо сложных символов.",
+          title: "Энергетическая подпись",
+          body: "День рождения становится образом животного: входом в темперамент, потребности и естественный ритм.",
         },
         {
-          title: "Планетарный перевод",
-          body: "Дневной мастер переводится в планету, а натальное небо добавляет психологическое движение.",
+          title: "Небесный резонанс",
+          body: "Планетарные позиции добавляют второй слой: как внутренний узор ищет выражение, защиту и рост.",
         },
         {
-          title: "Модульное чтение",
-          body: "Отчет делится на ядро, образ, глубинное Я, карьеру, любовь, рост и здоровье.",
+          title: "Восстанавливающее руководство",
+          body: "Чтение превращается в практичные подсказки для доверия к себе, отношений, работы, восстановления и следующего сезона жизни.",
         },
       ],
     },
     archetypes: {
-      eyebrow: "60 карт, один визуальный язык",
-      title: "Пастельные архетипы с культурной глубиной.",
+      eyebrow: "60 символических спутников",
+      title: "Мягкая колода для внутреннего ландшафта.",
       description:
-        "Каждый столп показан как коллекционная карта животного в мягких градиентах и светлых слоях интерфейса.",
+        "Каждая карта работает как визуальный якорь для эмоционального климата, чтобы пользователь сначала почувствовал систему, а затем углубился в анализ.",
     },
     fusion: {
-      eyebrow: "Пример чтения",
+      eyebrow: "Чтение поля",
       title: "Роса Кролика встречает Солнце в Рыбах.",
       description:
-        "Gui Mao несет чувствительность иньской воды и социальный интеллект Кролика. Рыбы повторяют воображение, проницаемость и эмоциональную настройку.",
-      chips: ["Иньская вода", "Кролик", "Солнце в Рыбах", "Резонанс Юпитера"],
+        "Роса Кролика указывает на тонкость, социальную интуицию и мягкое восприятие. Солнце в Рыбах усиливает воображение, эмпатию и исцеление через красоту.",
+      chips: ["Тонкая чувствительность", "Социальная интуиция", "Солнце в Рыбах", "Эмоциональное исцеление"],
     },
     premium: {
-      eyebrow: "От дневного столпа к полному синтезу",
-      title: "Отчет, который хочется читать спокойно.",
+      eyebrow: "От первого образа к глубокому руководству",
+      title: "Чтение, в котором вас действительно понимают.",
       description:
-        "White 1.0 создан для пользователей, которым нужна мистика без визуальной тяжести: мягкий цвет, воздух и ясные модули.",
+        "Начните с образа дня рождения, затем откройте полную карту: личные паттерны, язык любви, рабочий ритм, рост, восстановление и годовой тайминг.",
       items: [
-        "Истинное солнечное время",
-        "Независимый астрологический движок",
-        "Потоковые AI-модули отчета",
+        "Калибровка энергии рождения",
+        "Карта планетарного резонанса",
+        "Потоковое психологическое руководство",
       ],
-      cta: "Начать белый отчет",
+      cta: "Начать мое чтение",
     },
   },
 };
@@ -439,7 +459,7 @@ export default function DestinyWhiteExperience({
             DestinyPixel
           </a>
 
-          <nav className="white-nav" aria-label="White version navigation">
+          <nav className="white-nav" aria-label="Primary navigation">
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
@@ -491,11 +511,11 @@ export default function DestinyWhiteExperience({
 
             <div className="white-stats" aria-label="DestinyPixel metrics">
               <span>60</span>
-              <p>Jiazi cards</p>
+              <p>{text.stats.portraits}</p>
               <span>10</span>
-              <p>Planets</p>
+              <p>{text.stats.signals}</p>
               <span>7</span>
-              <p>Modules</p>
+              <p>{text.stats.paths}</p>
             </div>
           </div>
 
@@ -646,7 +666,7 @@ export default function DestinyWhiteExperience({
               </svg>
               <div className="white-geometry-node white-geometry-node--one">
                 <SunMoon size={18} aria-hidden="true" />
-                <span>BaZi</span>
+                <span>Birth</span>
               </div>
               <div className="white-geometry-node white-geometry-node--two">
                 <Orbit size={18} aria-hidden="true" />
@@ -766,7 +786,7 @@ export default function DestinyWhiteExperience({
 
       <footer className="white-footer">
         <div className="white-container">
-          <span>DestinyPixel · V white 1.0</span>
+          <span>DestinyPixel · Multidimensional Birth Map</span>
           <span>
             <MapPin size={13} aria-hidden="true" />
             /

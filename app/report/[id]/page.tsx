@@ -182,10 +182,10 @@ function buildInitialNatalShell({
 
   if (locale === "zh") {
     return {
-      dayMaster: `${profile.name.cn} 是本命盘的日柱原型。系统识别日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。完整命之书会在页面打开后继续流式生成。`,
-      outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanetName}，它会描述你的外在气场、社会面具和第一印象。`,
-      deepSelf: `深层自我来自地支场域：${branchNames}。这些动物图腾描述本能、记忆、依恋模式与潜意识驱动力。`,
-      career: `事业模块会基于 ${mappedPlanetName}、十神结构与五行分布，给出更聚焦的职业发力点。`,
+      dayMaster: `${profile.name.cn} 是这份内在地图的核心动物画像。系统识别你的核心坐标为 ${dayDisplay.pillarLabel}，上层信号为 ${dayDisplay.stemMeaning}，太阳节律落在 ${sunSign}。完整指引之书会在页面打开后继续流式生成。`,
+      outerPersona: `外在层从四重出生坐标展开：${pillarNames}。对应行星为 ${mappedPlanetName}，它会描述你的外在气场、社会面具和第一印象。`,
+      deepSelf: `深层自我来自动物场域：${branchNames}。这些图腾描述本能、记忆、依恋模式与潜意识驱动力。`,
+      career: `事业模块会基于 ${mappedPlanetName}、元素结构与出生能量分布，给出更聚焦的职业发力点。`,
       love: "感情模块会单独分析你的吸引模式、亲密边界与关系里的重复课题。",
       growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的天赋与盲区，给出可执行的训练方向。`,
       health: "健康模块只提供作息、恢复力与身心节律建议，不替代医学诊断。",
@@ -194,10 +194,10 @@ function buildInitialNatalShell({
 
   if (locale === "ru") {
     return {
-      dayMaster: `${dayDisplay.totemName} является ядром дневного столпа. Система определяет дневной столп как ${dayDisplay.pillarLabel}, дневной мастер как ${dayDisplay.stemMeaning}, а Солнце находится в знаке ${sunSign}. Полная книга рождения загружается потоково после открытия страницы.`,
-      outerPersona: `Внешний слой начинается с небесных стволов четырех столпов: ${pillarNames}. Планета дневного мастера — ${mappedPlanetName}; она описывает первое впечатление, социальную маску и стиль видимости.`,
-      deepSelf: `Глубинный слой раскрывается через земные ветви: ${branchNames}. Эти тотемы показывают инстинкты, память, привязанность и внутренний психологический двигатель.`,
-      career: `Карьера будет разобрана отдельно через ${mappedPlanetName}, структуру карты и стиль практической реализации.`,
+      dayMaster: `${dayDisplay.totemName} является главным животным портретом этой внутренней карты. Система определяет ключевую координату как ${dayDisplay.pillarLabel}, верхний сигнал как ${dayDisplay.stemMeaning}, а солнечный ритм находится в знаке ${sunSign}. Полная книга ориентира загружается потоково после открытия страницы.`,
+      outerPersona: `Внешний слой начинается с четырех координат рождения: ${pillarNames}. Резонансная планета — ${mappedPlanetName}; она описывает первое впечатление, социальную маску и стиль видимости.`,
+      deepSelf: `Глубинный слой раскрывается через животное поле: ${branchNames}. Эти тотемы показывают инстинкты, память, привязанность и внутренний психологический двигатель.`,
+      career: `Карьера будет разобрана отдельно через ${mappedPlanetName}, структуру энергии и стиль практической реализации.`,
       love:
         "Любовь будет отдельным модулем: притяжение, границы и повторяющиеся сценарии близости.",
       growth: `Рост будет строиться вокруг дара и слепых зон качества ${dayDisplay.stemMeaning}.`,
@@ -207,10 +207,10 @@ function buildInitialNatalShell({
   }
 
   return {
-    dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}. The full Natal Book streams after first paint.`,
-    outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanetName}. This module refines first impression, ambition style, and public rhythm.`,
-    deepSelf: `Your subterranean layer begins with the earthly branches: ${branchNames}. These totems describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
-    career: `Career will be read separately through ${mappedPlanetName}, the Bazi structure, and your practical contribution style.`,
+    dayMaster: `${profile.name.en} is the core animal portrait behind this inner map. The system identifies ${dayDisplay.pillarLabel} as your key birth coordinate and ${dayDisplay.stemMeaning} as the upper signal, while the sky layer places the Sun in ${sunSign}. The full guidance book streams after first paint.`,
+    outerPersona: `Your social layer begins with the four birth coordinates: ${pillarNames}. The resonant planet is ${mappedPlanetName}. This module refines first impression, ambition style, and public rhythm.`,
+    deepSelf: `Your subterranean layer begins with the animal fields: ${branchNames}. These totems describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
+    career: `Career will be read separately through ${mappedPlanetName}, your energy structure, and your practical contribution style.`,
     love:
       "Love will be its own module: attraction pattern, emotional boundary, and repeated intimacy script.",
     growth: `Growth will focus on the gift and blind spot of ${dayDisplay.stemMeaning}.`,

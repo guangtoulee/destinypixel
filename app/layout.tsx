@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DestinyPixel | Eastern Archetypes, Western Sky",
+  title: "DestinyPixel | Multidimensional Birth Map",
   description:
-    "Discover your elemental Day Pillar archetype, then see it in conversation with your natal astrology.",
+    "Turn your birth moment into a soft psychological mirror of energy, timing, relationships, and inner guidance.",
 };
 
 export default function RootLayout({
