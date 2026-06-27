@@ -66,12 +66,36 @@ type TextbookExamScore = {
   date: string;
 };
 
+type TextbookScanMode = "sequence" | "random" | "weak";
+
+type TextbookWordStat = {
+  word: string;
+  meaning: string;
+  bookId: string;
+  unitId: string;
+  correct: number;
+  wrong: number;
+  mastered: boolean;
+  updatedAt: string;
+};
+
+type TextbookScanState = {
+  mode: TextbookScanMode;
+  currentKey: string;
+  rounds: number;
+  streak: number;
+  bestStreak: number;
+  lastFeedback: string;
+};
+
 type TextbookMemory = {
   bookId: string;
   unitId: string;
   doneUnits: Record<string, boolean>;
   answers: Record<string, string>;
   examScores: Record<string, TextbookExamScore>;
+  wordStats: Record<string, TextbookWordStat>;
+  scan: TextbookScanState;
 };
 
 type LearningMemory = {
@@ -324,6 +348,18 @@ type TextbookBook = {
   units: TextbookUnit[];
 };
 
+type TextbookWordItem = {
+  key: string;
+  bookId: string;
+  unitId: string;
+  unitTitle: string;
+  word: string;
+  meaning: string;
+  sample: string;
+  tip: string;
+  tag: string;
+};
+
 function createTextbookUnit({
   id,
   title,
@@ -366,6 +402,81 @@ function createTextbookUnit({
       },
     ],
   };
+}
+
+function getTextbookWordItems(book: TextbookBook): TextbookWordItem[] {
+  return book.units.flatMap((unit) =>
+    unit.words.map(([word, meaning, sample, tip, tag]) => ({
+      key: `${book.id}:${unit.id}:${word}`,
+      bookId: book.id,
+      unitId: unit.id,
+      unitTitle: unit.title,
+      word,
+      meaning,
+      sample,
+      tip,
+      tag,
+    })),
+  );
+}
+
+function getTextbookMeaningOptions(items: TextbookWordItem[], currentKey: string, rounds: number) {
+  const currentIndex = Math.max(0, items.findIndex((item) => item.key === currentKey));
+  const current = items[currentIndex] ?? items[0];
+  if (!current) return [];
+
+  const meanings = [current.meaning];
+  for (let offset = 1; meanings.length < Math.min(4, items.length) && offset < items.length * 2; offset += 1) {
+    const candidate = items[(currentIndex + offset * 2) % items.length];
+    if (candidate && !meanings.includes(candidate.meaning)) {
+      meanings.push(candidate.meaning);
+    }
+  }
+
+  const rotation = meanings.length ? rounds % meanings.length : 0;
+  return [...meanings.slice(rotation), ...meanings.slice(0, rotation)];
+}
+
+function isWeakTextbookWord(stat: TextbookWordStat | undefined) {
+  return Boolean(stat && !stat.mastered && stat.wrong > 0);
+}
+
+function isMasteredTextbookWord(stat: TextbookWordStat | undefined) {
+  return Boolean(stat?.mastered);
+}
+
+function pickNextTextbookWordKey({
+  items,
+  stats,
+  currentKey,
+  mode,
+  randomValue,
+}: {
+  items: TextbookWordItem[];
+  stats: Record<string, TextbookWordStat>;
+  currentKey: string;
+  mode: TextbookScanMode;
+  randomValue: number;
+}) {
+  if (items.length === 0) return "";
+
+  if (mode === "sequence") {
+    const currentIndex = Math.max(0, items.findIndex((item) => item.key === currentKey));
+    return items[(currentIndex + 1) % items.length].key;
+  }
+
+  const weakItems = items.filter((item) => isWeakTextbookWord(stats[item.key]));
+  const unmasteredItems = items.filter((item) => !isMasteredTextbookWord(stats[item.key]));
+  const pool = mode === "weak"
+    ? weakItems.length
+      ? weakItems
+      : unmasteredItems.length
+        ? unmasteredItems
+        : items
+    : items;
+  const nextIndex = Math.floor(randomValue * pool.length) % pool.length;
+
+  return pool[nextIndex]?.key ?? items[0].key;
 }
 
 const textbookCatalog: TextbookBook[] = [
@@ -1110,6 +1221,15 @@ function createDefaultMemory(): LearningMemory {
       doneUnits: {},
       answers: {},
       examScores: {},
+      wordStats: {},
+      scan: {
+        mode: "sequence",
+        currentKey: `${defaultBook.id}:${defaultUnit.id}:${defaultUnit.words[0][0]}`,
+        rounds: 0,
+        streak: 0,
+        bestStreak: 0,
+        lastFeedback: "从第一个词开始扫漏洞，答错会自动进入弱词池。",
+      },
     },
     voiceURI: "",
     rate: 0.78,
@@ -1141,6 +1261,11 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
       doneUnits: input?.textbook?.doneUnits ?? {},
       answers: input?.textbook?.answers ?? {},
       examScores: input?.textbook?.examScores ?? {},
+      wordStats: input?.textbook?.wordStats ?? {},
+      scan: {
+        ...base.textbook.scan,
+        ...(input?.textbook?.scan ?? {}),
+      },
     },
     voiceURI: input?.voiceURI ?? "",
     rate: input?.rate ?? 0.78,
@@ -1150,6 +1275,10 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
   const unit = book.units.find((item) => item.id === merged.textbook.unitId) ?? book.units[0];
   merged.textbook.bookId = book.id;
   merged.textbook.unitId = unit.id;
+  const bookWords = getTextbookWordItems(book);
+  if (!bookWords.some((item) => item.key === merged.textbook.scan.currentKey)) {
+    merged.textbook.scan.currentKey = bookWords[0]?.key ?? "";
+  }
 
   if (merged.completed.date !== getTodayKey()) {
     merged.completed = { date: getTodayKey(), modules: {} };
@@ -1263,6 +1392,23 @@ export default function EnglishLearningExperience() {
     (question, index) => memory.textbook.answers[`${selectedUnit.id}:${index}`] === question.answer,
   ).length;
   const latestTextbookScore = memory.textbook.examScores[selectedUnit.id];
+  const textbookWords = useMemo(() => getTextbookWordItems(selectedBook), [selectedBook]);
+  const textbookMasteredCount = textbookWords.filter((item) =>
+    isMasteredTextbookWord(memory.textbook.wordStats[item.key]),
+  ).length;
+  const textbookWeakWords = textbookWords.filter((item) => isWeakTextbookWord(memory.textbook.wordStats[item.key]));
+  const textbookMasteryPercent = textbookWords.length
+    ? Math.round((textbookMasteredCount / textbookWords.length) * 100)
+    : 0;
+  const currentTextbookWord =
+    textbookWords.find((item) => item.key === memory.textbook.scan.currentKey) ?? textbookWords[0];
+  const currentTextbookWordStat = currentTextbookWord
+    ? memory.textbook.wordStats[currentTextbookWord.key]
+    : undefined;
+  const textbookScanOptions = useMemo(
+    () => getTextbookMeaningOptions(textbookWords, currentTextbookWord?.key ?? "", memory.textbook.scan.rounds),
+    [currentTextbookWord?.key, memory.textbook.scan.rounds, textbookWords],
+  );
 
   useEffect(() => {
     mountedRef.current = true;
@@ -1699,6 +1845,7 @@ export default function EnglishLearningExperience() {
   function selectTextbookBook(bookId: string) {
     const nextBook = textbookCatalog.find((book) => book.id === bookId);
     if (!nextBook) return;
+    const nextWordKey = getTextbookWordItems(nextBook)[0]?.key ?? "";
 
     patchMemory((current) => ({
       ...current,
@@ -1706,6 +1853,11 @@ export default function EnglishLearningExperience() {
         ...current.textbook,
         bookId: nextBook.id,
         unitId: nextBook.units[0].id,
+        scan: {
+          ...current.textbook.scan,
+          currentKey: nextWordKey,
+          lastFeedback: "已切换教材，从这一册的第一个词开始扫描。",
+        },
       },
     }));
   }
@@ -1720,6 +1872,211 @@ export default function EnglishLearningExperience() {
         unitId,
       },
     }));
+  }
+
+  function setTextbookScanMode(mode: TextbookScanMode) {
+    const nextKey = pickNextTextbookWordKey({
+      items: textbookWords,
+      stats: memory.textbook.wordStats,
+      currentKey: currentTextbookWord?.key ?? "",
+      mode,
+      randomValue: Math.random(),
+    });
+
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        scan: {
+          ...current.textbook.scan,
+          mode,
+          currentKey: nextKey,
+          lastFeedback:
+            mode === "weak"
+              ? "弱词强化已开启，优先抽错过的词。"
+              : mode === "random"
+                ? "随机抽测已开启，全册单词会打乱出现。"
+                : "顺序扫描已开启，从当前词继续往后扫。",
+        },
+      },
+    }));
+  }
+
+  function answerTextbookWord(choice: string) {
+    if (!currentTextbookWord) return;
+    const isCorrect = choice === currentTextbookWord.meaning;
+    const randomValue = Math.random();
+
+    patchMemory((current) => {
+      const previous = current.textbook.wordStats[currentTextbookWord.key];
+      const nextCorrect = (previous?.correct ?? 0) + (isCorrect ? 1 : 0);
+      const nextWrong = (previous?.wrong ?? 0) + (isCorrect ? 0 : 1);
+      const mastered = isCorrect
+        ? nextCorrect >= Math.max(2, nextWrong + 2)
+        : false;
+      const nextStat: TextbookWordStat = {
+        word: currentTextbookWord.word,
+        meaning: currentTextbookWord.meaning,
+        bookId: currentTextbookWord.bookId,
+        unitId: currentTextbookWord.unitId,
+        correct: nextCorrect,
+        wrong: nextWrong,
+        mastered,
+        updatedAt: new Date().toISOString(),
+      };
+      const nextStats = {
+        ...current.textbook.wordStats,
+        [currentTextbookWord.key]: nextStat,
+      };
+      const nextKnown = { ...current.knownWords };
+      const nextReview = { ...current.reviewWords };
+      let wrongItems = current.wrongItems;
+
+      if (mastered) {
+        nextKnown[currentTextbookWord.word] = {
+          word: currentTextbookWord.word,
+          meaning: currentTextbookWord.meaning,
+          learnedAt: new Date().toISOString(),
+          count: (nextKnown[currentTextbookWord.word]?.count ?? 0) + 1,
+        };
+        delete nextReview[currentTextbookWord.word];
+      } else if (!isCorrect) {
+        nextReview[currentTextbookWord.word] = true;
+        const wrongMap = new Map(current.wrongItems.map((item) => [item.id, item]));
+        const id = `textbook-word:${currentTextbookWord.key}`;
+        const previousWrong = wrongMap.get(id);
+        wrongMap.set(id, {
+          id,
+          prompt: `教材词汇：${currentTextbookWord.word}`,
+          answer: currentTextbookWord.meaning,
+          chosen: choice,
+          type: "教材漏洞扫描",
+          date: new Date().toISOString(),
+          times: (previousWrong?.times ?? 0) + 1,
+        });
+        wrongItems = Array.from(wrongMap.values());
+      }
+
+      const nextKey = pickNextTextbookWordKey({
+        items: textbookWords,
+        stats: nextStats,
+        currentKey: currentTextbookWord.key,
+        mode: current.textbook.scan.mode,
+        randomValue,
+      });
+      const nextStreak = isCorrect ? current.textbook.scan.streak + 1 : 0;
+      const masteredCount = textbookWords.filter((item) => isMasteredTextbookWord(nextStats[item.key])).length;
+      const allMastered = textbookWords.length > 0 && masteredCount >= textbookWords.length;
+
+      return {
+        ...current,
+        knownWords: nextKnown,
+        reviewWords: nextReview,
+        wrongItems,
+        textbook: {
+          ...current.textbook,
+          wordStats: nextStats,
+          scan: {
+            ...current.textbook.scan,
+            currentKey: nextKey,
+            rounds: current.textbook.scan.rounds + 1,
+            streak: nextStreak,
+            bestStreak: Math.max(current.textbook.scan.bestStreak, nextStreak),
+            lastFeedback: isCorrect
+              ? mastered
+                ? `掌握：${currentTextbookWord.word} 已进全册掌握清单。`
+                : `答对：${currentTextbookWord.word} 再命中几次就能标记掌握。`
+              : `漏洞：${currentTextbookWord.word} 是「${currentTextbookWord.meaning}」，已进弱词池。`,
+          },
+        },
+        completed: allMastered
+          ? {
+              date: getTodayKey(),
+              modules: { ...current.completed.modules, textbook: true },
+            }
+          : current.completed,
+      };
+    });
+  }
+
+  function markTextbookWordMastered() {
+    if (!currentTextbookWord) return;
+
+    patchMemory((current) => {
+      const previous = current.textbook.wordStats[currentTextbookWord.key];
+      const nextStats = {
+        ...current.textbook.wordStats,
+        [currentTextbookWord.key]: {
+          word: currentTextbookWord.word,
+          meaning: currentTextbookWord.meaning,
+          bookId: currentTextbookWord.bookId,
+          unitId: currentTextbookWord.unitId,
+          correct: Math.max(previous?.correct ?? 0, 2),
+          wrong: previous?.wrong ?? 0,
+          mastered: true,
+          updatedAt: new Date().toISOString(),
+        },
+      };
+      const nextKnown = { ...current.knownWords };
+      const nextReview = { ...current.reviewWords };
+      nextKnown[currentTextbookWord.word] = {
+        word: currentTextbookWord.word,
+        meaning: currentTextbookWord.meaning,
+        learnedAt: new Date().toISOString(),
+        count: (nextKnown[currentTextbookWord.word]?.count ?? 0) + 1,
+      };
+      delete nextReview[currentTextbookWord.word];
+
+      return {
+        ...current,
+        knownWords: nextKnown,
+        reviewWords: nextReview,
+        textbook: {
+          ...current.textbook,
+          wordStats: nextStats,
+          scan: {
+            ...current.textbook.scan,
+            lastFeedback: `${currentTextbookWord.word} 已手动标记掌握。`,
+          },
+        },
+      };
+    });
+  }
+
+  function markTextbookWordWeak() {
+    if (!currentTextbookWord) return;
+
+    patchMemory((current) => {
+      const previous = current.textbook.wordStats[currentTextbookWord.key];
+      return {
+        ...current,
+        reviewWords: {
+          ...current.reviewWords,
+          [currentTextbookWord.word]: true,
+        },
+        textbook: {
+          ...current.textbook,
+          wordStats: {
+            ...current.textbook.wordStats,
+            [currentTextbookWord.key]: {
+              word: currentTextbookWord.word,
+              meaning: currentTextbookWord.meaning,
+              bookId: currentTextbookWord.bookId,
+              unitId: currentTextbookWord.unitId,
+              correct: previous?.correct ?? 0,
+              wrong: (previous?.wrong ?? 0) + 1,
+              mastered: false,
+              updatedAt: new Date().toISOString(),
+            },
+          },
+          scan: {
+            ...current.textbook.scan,
+            mode: "weak",
+            lastFeedback: `${currentTextbookWord.word} 已加入弱词强化。`,
+          },
+        },
+      };
+    });
   }
 
   function answerTextbookExam(questionIndex: number, choice: string) {
@@ -2337,6 +2694,131 @@ export default function EnglishLearningExperience() {
                     : `${textbookCorrectCount}/${selectedUnit.exam.length}`}
                 </strong>
                 <p>{textbookAnsweredCount}/{selectedUnit.exam.length} 已答</p>
+              </div>
+            </section>
+
+            <section className={styles.gapScanPanel}>
+              <div className={styles.gapScanTopline}>
+                <div>
+                  <p className={styles.sectionKicker}>Final Check</p>
+                  <h3>期末漏洞扫描</h3>
+                  <p>覆盖 {selectedBook.label} 全册 {textbookWords.length} 个同步词块，答错进弱词池，达标后自动标记掌握。</p>
+                </div>
+                <div className={styles.masteryMeter} aria-label="全册词汇掌握率">
+                  <span style={{ width: `${textbookMasteryPercent}%` }} />
+                  <strong>{textbookMasteryPercent}%</strong>
+                </div>
+              </div>
+
+              <div className={styles.scanStatsGrid}>
+                <div>
+                  <span>已掌握</span>
+                  <strong>{textbookMasteredCount}/{textbookWords.length}</strong>
+                </div>
+                <div>
+                  <span>弱词</span>
+                  <strong>{textbookWeakWords.length}</strong>
+                </div>
+                <div>
+                  <span>扫描轮数</span>
+                  <strong>{memory.textbook.scan.rounds}</strong>
+                </div>
+                <div>
+                  <span>连击</span>
+                  <strong>{memory.textbook.scan.streak}</strong>
+                </div>
+                <div>
+                  <span>最佳连击</span>
+                  <strong>{memory.textbook.scan.bestStreak}</strong>
+                </div>
+              </div>
+
+              <div className={styles.scanModeBar} role="group" aria-label="词汇扫描模式">
+                <button
+                  type="button"
+                  className={memory.textbook.scan.mode === "sequence" ? styles.activeScanMode : ""}
+                  onClick={() => setTextbookScanMode("sequence")}
+                >
+                  顺序扫
+                </button>
+                <button
+                  type="button"
+                  className={memory.textbook.scan.mode === "random" ? styles.activeScanMode : ""}
+                  onClick={() => setTextbookScanMode("random")}
+                >
+                  随机抽
+                </button>
+                <button
+                  type="button"
+                  className={memory.textbook.scan.mode === "weak" ? styles.activeScanMode : ""}
+                  onClick={() => setTextbookScanMode("weak")}
+                >
+                  弱词强化
+                </button>
+              </div>
+
+              {currentTextbookWord ? (
+                <div className={styles.wordBossArena}>
+                  <div className={styles.wordBossPrompt}>
+                    <button type="button" className={styles.soundButton} onClick={() => speak(`${currentTextbookWord.word}. ${currentTextbookWord.sample}`, 0.72)}>
+                      <Volume2 size={18} />
+                    </button>
+                    <div>
+                      <span>{currentTextbookWord.unitTitle}</span>
+                      <h3>{currentTextbookWord.word}</h3>
+                      <p>{currentTextbookWord.sample}</p>
+                    </div>
+                    <div className={styles.wordBossBadge}>
+                      <span>{currentTextbookWordStat?.mastered ? "已掌握" : isWeakTextbookWord(currentTextbookWordStat) ? "弱词" : "待检测"}</span>
+                      <strong>{currentTextbookWordStat?.correct ?? 0}:{currentTextbookWordStat?.wrong ?? 0}</strong>
+                    </div>
+                  </div>
+
+                  <div className={styles.scanChoiceGrid}>
+                    {textbookScanOptions.map((choice) => (
+                      <button key={choice} type="button" className={styles.scanChoiceButton} onClick={() => answerTextbookWord(choice)}>
+                        <span aria-hidden="true" />
+                        <strong>{choice}</strong>
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className={styles.scanActions}>
+                    <button type="button" className={styles.miniActionStrong} onClick={markTextbookWordMastered}>
+                      会了
+                    </button>
+                    <button type="button" className={styles.miniAction} onClick={markTextbookWordWeak}>
+                      放进弱词
+                    </button>
+                    <p>{memory.textbook.scan.lastFeedback}</p>
+                  </div>
+                </div>
+              ) : null}
+
+              <div className={styles.weakWordDock}>
+                <span>弱词池</span>
+                {textbookWeakWords.length ? (
+                  textbookWeakWords.slice(0, 10).map((item) => (
+                    <button key={item.key} type="button" onClick={() => {
+                      patchMemory((current) => ({
+                        ...current,
+                        textbook: {
+                          ...current.textbook,
+                          scan: {
+                            ...current.textbook.scan,
+                            mode: "weak",
+                            currentKey: item.key,
+                            lastFeedback: `正在强化 ${item.word}。`,
+                          },
+                        },
+                      }));
+                    }}>
+                      {item.word}
+                    </button>
+                  ))
+                ) : (
+                  <strong>暂时没有漏洞</strong>
+                )}
               </div>
             </section>
 
