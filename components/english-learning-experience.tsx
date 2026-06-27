@@ -8,6 +8,8 @@ import {
   ClipboardCheck,
   Crosshair,
   Download,
+  FileText,
+  GraduationCap,
   Headphones,
   LogIn,
   LogOut,
@@ -24,7 +26,7 @@ import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from "re
 import styles from "./english-learning-experience.module.css";
 
 type LevelId = "starter" | "foundation" | "bridge" | "boost";
-type ModuleKey = "words" | "target" | "listen" | "read" | "phonics";
+type ModuleKey = "words" | "target" | "textbook" | "listen" | "read" | "phonics";
 type WordEntry = [string, string, string, string, string];
 
 type Assessment = {
@@ -58,6 +60,20 @@ type TargetStats = {
   bestStreak: number;
 };
 
+type TextbookExamScore = {
+  correct: number;
+  total: number;
+  date: string;
+};
+
+type TextbookMemory = {
+  bookId: string;
+  unitId: string;
+  doneUnits: Record<string, boolean>;
+  answers: Record<string, string>;
+  examScores: Record<string, TextbookExamScore>;
+};
+
 type LearningMemory = {
   assessment: Assessment | null;
   completed: {
@@ -71,6 +87,7 @@ type LearningMemory = {
   readingAnswers: Record<string, boolean>;
   phonicsDone: Record<string, boolean>;
   targetStats: TargetStats;
+  textbook: TextbookMemory;
   voiceURI: string;
   rate: number;
 };
@@ -279,6 +296,695 @@ const wordDecks: Record<LevelId, WordEntry[]> = {
   ],
 };
 
+type TextbookQuestion = {
+  skill: string;
+  prompt: string;
+  choices: string[];
+  answer: string;
+  explain: string;
+};
+
+type TextbookUnit = {
+  id: string;
+  title: string;
+  theme: string;
+  target: string;
+  words: WordEntry[];
+  patterns: string[];
+  drills: string[];
+  exam: TextbookQuestion[];
+};
+
+type TextbookBook = {
+  id: string;
+  grade: string;
+  semester: string;
+  label: string;
+  note: string;
+  units: TextbookUnit[];
+};
+
+function createTextbookUnit({
+  id,
+  title,
+  theme,
+  target,
+  words,
+  patterns,
+  drills,
+}: Omit<TextbookUnit, "exam">): TextbookUnit {
+  const [firstWord, firstMeaning, firstSample] = words[0];
+  const [, secondMeaning] = words[1] ?? words[0];
+
+  return {
+    id,
+    title,
+    theme,
+    target,
+    words,
+    patterns,
+    drills,
+    exam: [
+      {
+        skill: "词义反应",
+        prompt: `Which meaning matches “${firstWord}”?`,
+        choices: [firstMeaning, secondMeaning, "在……之间", "安静地"],
+        answer: firstMeaning,
+        explain: `本单元重点词 ${firstWord} 可以放进句子：${firstSample}`,
+      },
+      {
+        skill: "句型选择",
+        prompt: "Choose the sentence that best fits this unit.",
+        choices: [
+          firstSample,
+          "The mountain was invented yesterday.",
+          "She usually bought tomorrow.",
+          "Because yes, so no.",
+        ],
+        answer: firstSample,
+        explain: `这题考 ${patterns[0]}，先看主语、时态和关键词。`,
+      },
+    ],
+  };
+}
+
+const textbookCatalog: TextbookBook[] = [
+  {
+    id: "g3a",
+    grade: "三年级",
+    semester: "上册",
+    label: "三年级上册",
+    note: "入门阶段原创同步包：听说、认读和课堂指令优先。",
+    units: [
+      createTextbookUnit({
+        id: "g3a-u1",
+        title: "Greetings",
+        theme: "问候与自我介绍",
+        target: "能听懂 hello / name / friend，并说出简单问候。",
+        words: [
+          ["hello", "你好", "Hello, I am Lily.", "he-llo 两拍，开口说。", "问候"],
+          ["name", "名字", "My name is Tom.", "name 里的 a 读 /eɪ/。", "介绍"],
+          ["friend", "朋友", "This is my friend.", "fri + end，结尾 d 要带上。", "人物"],
+        ],
+        patterns: ["I am... / My name is...", "This is..."],
+        drills: ["听 3 个名字并选头像", "用 I am... 说一句自我介绍", "把 hello / hi / goodbye 分类"],
+      }),
+      createTextbookUnit({
+        id: "g3a-u2",
+        title: "Classroom",
+        theme: "教室和学习用品",
+        target: "能听懂常见课堂物品和指令。",
+        words: [
+          ["book", "书", "Open your book.", "book 和 look 押韵。", "用品"],
+          ["pencil", "铅笔", "I have a pencil.", "pen + cil，第一拍重。", "用品"],
+          ["open", "打开", "Open the door, please.", "o-pen 两拍。", "指令"],
+        ],
+        patterns: ["I have a/an...", "Open / Close..."],
+        drills: ["听指令点物品", "用 I have... 造 2 句", "区分 a book / an eraser"],
+      }),
+    ],
+  },
+  {
+    id: "g3b",
+    grade: "三年级",
+    semester: "下册",
+    label: "三年级下册",
+    note: "入门阶段原创同步包：家庭、动物、食物主题。",
+    units: [
+      createTextbookUnit({
+        id: "g3b-u1",
+        title: "Family",
+        theme: "家庭成员",
+        target: "能介绍家人并听懂 he / she。",
+        words: [
+          ["family", "家庭", "This is my family.", "fa-mi-ly 三小块。", "家庭"],
+          ["mother", "妈妈", "My mother is kind.", "th 轻咬舌。", "家庭"],
+          ["sister", "姐妹", "She is my sister.", "sis + ter。", "人物"],
+        ],
+        patterns: ["This is my...", "He / She is..."],
+        drills: ["看照片选家庭称呼", "听 he/she 选人物", "介绍 2 位家人"],
+      }),
+      createTextbookUnit({
+        id: "g3b-u2",
+        title: "Animals",
+        theme: "动物与喜好",
+        target: "能说出动物名称和简单喜好。",
+        words: [
+          ["animal", "动物", "The panda is an animal.", "an-i-mal 三拍。", "动物"],
+          ["panda", "熊猫", "I like pandas.", "pan-da 两拍。", "动物"],
+          ["cute", "可爱的", "The cat is cute.", "u 读 /juː/。", "形容"],
+        ],
+        patterns: ["I like...", "It is..."],
+        drills: ["听动物音选单词", "用 cute / big 描述动物", "选择 I like... 的正确句子"],
+      }),
+    ],
+  },
+  {
+    id: "g4a",
+    grade: "四年级",
+    semester: "上册",
+    label: "四年级上册",
+    note: "四年级原创同步包：学校、房间、天气。",
+    units: [
+      createTextbookUnit({
+        id: "g4a-u1",
+        title: "School Things",
+        theme: "书包与文具",
+        target: "能描述书包里有什么，并使用复数。",
+        words: [
+          ["schoolbag", "书包", "My schoolbag is heavy.", "school + bag。", "校园"],
+          ["notebook", "笔记本", "There is a notebook.", "note + book。", "用品"],
+          ["heavy", "重的", "The box is heavy.", "ea 读 /e/。", "形容"],
+        ],
+        patterns: ["There is / There are...", "单复数区分"],
+        drills: ["看图说数量", "听物品放进书包", "改错：There are a book"],
+      }),
+      createTextbookUnit({
+        id: "g4a-u2",
+        title: "My Home",
+        theme: "房间与位置",
+        target: "能说房间名称和物品位置。",
+        words: [
+          ["bedroom", "卧室", "My bedroom is small.", "bed + room。", "家居"],
+          ["kitchen", "厨房", "Mum is in the kitchen.", "kit-chen。", "家居"],
+          ["beside", "在……旁边", "The chair is beside the desk.", "be + side。", "方位"],
+        ],
+        patterns: ["Where is...? It is...", "方位介词 in / on / beside"],
+        drills: ["听方位摆物品", "用 where 问答", "区分 in / on / under"],
+      }),
+    ],
+  },
+  {
+    id: "g4b",
+    grade: "四年级",
+    semester: "下册",
+    label: "四年级下册",
+    note: "四年级原创同步包：时间、购物、农场。",
+    units: [
+      createTextbookUnit({
+        id: "g4b-u1",
+        title: "Time",
+        theme: "时间与日程",
+        target: "能听懂整点和半点，描述日常安排。",
+        words: [
+          ["o'clock", "……点钟", "It is seven o'clock.", "o'clock 有撇号。", "时间"],
+          ["breakfast", "早餐", "I have breakfast at seven.", "break + fast。", "生活"],
+          ["late", "迟到的", "Do not be late.", "a 读 /eɪ/。", "时间"],
+        ],
+        patterns: ["What time is it?", "at + 时间点"],
+        drills: ["听时间选钟表", "安排一天日程", "补全 at seven"],
+      }),
+      createTextbookUnit({
+        id: "g4b-u2",
+        title: "Shopping",
+        theme: "衣物与价格",
+        target: "能询问价格和表达想买什么。",
+        words: [
+          ["price", "价格", "What is the price?", "price 里 i 读 /aɪ/。", "购物"],
+          ["shirt", "衬衫", "This shirt is blue.", "sh 读 /ʃ/。", "衣物"],
+          ["cheap", "便宜的", "The bag is cheap.", "ea 读 /iː/。", "形容"],
+        ],
+        patterns: ["How much is it?", "I want..."],
+        drills: ["听价格选数字", "完成购物对话", "区分 cheap / expensive"],
+      }),
+    ],
+  },
+  {
+    id: "g5a",
+    grade: "五年级",
+    semester: "上册",
+    label: "五年级上册",
+    note: "五年级原创同步包：人物、周计划、食物。",
+    units: [
+      createTextbookUnit({
+        id: "g5a-u1",
+        title: "People Around Us",
+        theme: "人物外貌与性格",
+        target: "能描述老师、同学和朋友。",
+        words: [
+          ["strict", "严格的", "Our teacher is strict.", "str 开头连读。", "人物"],
+          ["kind", "友善的", "She is kind to us.", "i 读 /aɪ/。", "性格"],
+          ["helpful", "乐于助人的", "He is helpful at home.", "help + ful。", "性格"],
+        ],
+        patterns: ["What is he/she like?", "be + 性格形容词"],
+        drills: ["听描述选人物", "用两个形容词介绍老师", "判断 kind / strict 语境"],
+      }),
+      createTextbookUnit({
+        id: "g5a-u2",
+        title: "My Week",
+        theme: "星期与活动",
+        target: "能说一周安排和频率。",
+        words: [
+          ["weekend", "周末", "I read on the weekend.", "week + end。", "时间"],
+          ["usually", "通常", "I usually play football.", "u-su-al-ly。", "频率"],
+          ["schedule", "日程", "My schedule is full.", "sch 读 /sk/。", "学习"],
+        ],
+        patterns: ["What do you do on...?", "频率副词位置"],
+        drills: ["听星期选活动", "制作一周计划", "改错：I play usually"],
+      }),
+    ],
+  },
+  {
+    id: "g5b",
+    grade: "五年级",
+    semester: "下册",
+    label: "五年级下册",
+    note: "五年级原创同步包：季节、旅行、自然。",
+    units: [
+      createTextbookUnit({
+        id: "g5b-u1",
+        title: "Seasons",
+        theme: "季节与活动",
+        target: "能描述季节、天气和喜欢的活动。",
+        words: [
+          ["season", "季节", "Spring is my favourite season.", "sea-son 两拍。", "自然"],
+          ["spring", "春天", "Trees are green in spring.", "spr 连读。", "季节"],
+          ["because", "因为", "I like winter because I can skate.", "because 后给理由。", "连词"],
+        ],
+        patterns: ["Which season do you like?", "because 表原因"],
+        drills: ["听天气选季节", "用 because 说理由", "匹配季节活动"],
+      }),
+      createTextbookUnit({
+        id: "g5b-u2",
+        title: "Travel Plans",
+        theme: "旅行与地点",
+        target: "能表达想去哪里和计划做什么。",
+        words: [
+          ["travel", "旅行", "We will travel by train.", "tra-vel。", "旅行"],
+          ["museum", "博物馆", "I want to visit a museum.", "mu-se-um 三拍。", "地点"],
+          ["plan", "计划", "Make a plan before the trip.", "pl 开头连读。", "计划"],
+        ],
+        patterns: ["be going to / will", "visit + 地点"],
+        drills: ["听计划选城市", "写 3 句旅行计划", "区分 go to / visit"],
+      }),
+    ],
+  },
+  {
+    id: "g6a",
+    grade: "六年级",
+    semester: "上册",
+    label: "六年级上册",
+    note: "六年级原创同步包：交通、爱好、职业。",
+    units: [
+      createTextbookUnit({
+        id: "g6a-u1",
+        title: "Transportation",
+        theme: "交通方式与路线",
+        target: "能描述如何去某地，并理解路线指令。",
+        words: [
+          ["subway", "地铁", "I go to school by subway.", "sub + way。", "交通"],
+          ["crossing", "十字路口", "Turn left at the crossing.", "cross + ing。", "路线"],
+          ["straight", "笔直地", "Go straight for two minutes.", "gh 不发音。", "方位"],
+        ],
+        patterns: ["How do you get to...?", "祈使句路线指令"],
+        drills: ["听路线选地图", "说 2 种上学方式", "区分 by bus / take a bus"],
+      }),
+      createTextbookUnit({
+        id: "g6a-u2",
+        title: "Hobbies",
+        theme: "爱好与社团",
+        target: "能介绍爱好、频率和原因。",
+        words: [
+          ["hobby", "爱好", "My hobby is drawing.", "hob-by。", "兴趣"],
+          ["collect", "收集", "I collect postcards.", "col-lect 重音在后。", "兴趣"],
+          ["share", "分享", "We share ideas in the club.", "sh 读 /ʃ/。", "社交"],
+        ],
+        patterns: ["like doing / My hobby is...", "第三人称单数"],
+        drills: ["听爱好选人物", "用 like doing 造句", "改错：He like swimming"],
+      }),
+    ],
+  },
+  {
+    id: "g6b",
+    grade: "六年级",
+    semester: "下册",
+    label: "六年级下册",
+    note: "六年级原创同步包：过去经历、小升初复习、毕业表达。",
+    units: [
+      createTextbookUnit({
+        id: "g6b-u1",
+        title: "Past Events",
+        theme: "过去经历",
+        target: "能用一般过去时描述上周或假期。",
+        words: [
+          ["visited", "参观了", "We visited a farm last week.", "visit + ed。", "过去"],
+          ["stayed", "待着", "I stayed at home.", "stay + ed。", "过去"],
+          ["yesterday", "昨天", "It rained yesterday.", "yes-ter-day。", "时间"],
+        ],
+        patterns: ["一般过去时 -ed", "last / yesterday 时间标志"],
+        drills: ["听过去活动选图片", "把 go 改成 went", "写 3 句周末经历"],
+      }),
+      createTextbookUnit({
+        id: "g6b-u2",
+        title: "Graduation",
+        theme: "毕业与未来",
+        target: "能表达感谢、回忆和计划。",
+        words: [
+          ["graduate", "毕业", "We will graduate in June.", "gra-du-ate。", "学校"],
+          ["memory", "回忆", "This photo is a good memory.", "mem-o-ry。", "情感"],
+          ["future", "未来", "I want to study hard in the future.", "fu-ture。", "计划"],
+        ],
+        patterns: ["will 表未来", "thank sb. for..."],
+        drills: ["完成感谢句", "听未来计划选答案", "写一句毕业留言"],
+      }),
+    ],
+  },
+  {
+    id: "g7a",
+    grade: "七年级",
+    semester: "上册",
+    label: "七年级上册",
+    note: "七上按人教社新版单元名对齐；题目为原创同步训练，不复制课文原文。",
+    units: [
+      createTextbookUnit({
+        id: "g7a-u1",
+        title: "Unit 1 You and Me",
+        theme: "自我介绍与同伴关系",
+        target: "能介绍姓名、班级、爱好，并听懂同伴信息。",
+        words: [
+          ["classmate", "同班同学", "This is my new classmate.", "class + mate。", "校园"],
+          ["introduce", "介绍", "Let me introduce myself.", "in-tro-duce，重音在后。", "表达"],
+          ["hobby", "爱好", "My hobby is reading.", "hob-by 两拍。", "兴趣"],
+          ["together", "一起", "We study English together.", "to-ge-ther。", "关系"],
+        ],
+        patterns: ["be 动词与主语一致", "介绍姓名、年龄、班级和爱好"],
+        drills: ["听 4 条个人信息并匹配人物", "用 My hobby is... 造 3 句", "改错：He are my classmate"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u2",
+        title: "Unit 2 We're Family!",
+        theme: "家庭成员与人物关系",
+        target: "能介绍家庭成员、关系和基本性格。",
+        words: [
+          ["family", "家庭", "We are a happy family.", "fa-mi-ly 三拍。", "家庭"],
+          ["cousin", "堂/表兄弟姐妹", "My cousin is twelve.", "cou-sin，s 读 /z/。", "家庭"],
+          ["photo", "照片", "Look at this family photo.", "ph 读 /f/。", "家庭"],
+          ["parent", "父亲或母亲", "A parent can help a child.", "pa-rent。", "家庭"],
+        ],
+        patterns: ["形容词性物主代词 my / your / his / her", "This is... / These are..."],
+        drills: ["看家庭树选关系", "听人物介绍填 his/her", "用 This is... 介绍照片"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u3",
+        title: "Unit 3 My School",
+        theme: "校园空间与设施",
+        target: "能描述学校地点、设施和位置。",
+        words: [
+          ["classroom", "教室", "Our classroom is bright.", "class + room。", "校园"],
+          ["library", "图书馆", "The library is next to the lab.", "li-bra-ry。", "校园"],
+          ["playground", "操场", "We run on the playground.", "play + ground。", "校园"],
+          ["building", "建筑物", "The building has four floors.", "build + ing。", "地点"],
+        ],
+        patterns: ["There is / There are...", "方位介词 next to / between / behind"],
+        drills: ["听校园地图选位置", "用 there be 描述 3 个地点", "改错：There are a library"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u4",
+        title: "Unit 4 My Favourite Subject",
+        theme: "学科、喜好与理由",
+        target: "能表达喜欢的学科并给出理由。",
+        words: [
+          ["subject", "学科", "English is my favourite subject.", "sub-ject。", "学校"],
+          ["history", "历史", "History stories are interesting.", "his-to-ry。", "学科"],
+          ["reason", "理由", "Give me one reason.", "rea-son。", "表达"],
+          ["because", "因为", "I like science because it is useful.", "because 后给理由。", "连词"],
+        ],
+        patterns: ["What is your favourite...?", "because 表原因"],
+        drills: ["听课程表回答问题", "用 because 写 3 个理由", "区分 subject / lesson"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u5",
+        title: "Unit 5 Fun Clubs",
+        theme: "社团、能力与活动",
+        target: "能谈论社团和 can 表能力。",
+        words: [
+          ["club", "社团", "I want to join the music club.", "cl 开头连读。", "校园"],
+          ["join", "加入", "Can I join your team?", "oi 读 /ɔɪ/。", "动作"],
+          ["activity", "活动", "The club has many activities.", "ac-ti-vi-ty。", "活动"],
+          ["skill", "技能", "Speaking is an important skill.", "sk 开头连读。", "能力"],
+        ],
+        patterns: ["can / can't 表能力", "want to do"],
+        drills: ["听社团广告选活动", "用 can 写能力清单", "模拟社团报名小对话"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u6",
+        title: "Unit 6 A Day in the Life",
+        theme: "日常作息与频率",
+        target: "能描述一天安排、时间和频率。",
+        words: [
+          ["routine", "日常安排", "My morning routine is simple.", "rou-tine。", "生活"],
+          ["usually", "通常", "I usually get up at seven.", "u-su-al-ly。", "频率"],
+          ["breakfast", "早餐", "I have breakfast at home.", "break + fast。", "生活"],
+          ["finish", "完成", "I finish homework before dinner.", "fi-nish。", "动作"],
+        ],
+        patterns: ["一般现在时", "频率副词 always / usually / sometimes"],
+        drills: ["听作息表填时间", "把 I 改成 he/she", "整理自己的 weekday routine"],
+      }),
+      createTextbookUnit({
+        id: "g7a-u7",
+        title: "Unit 7 Happy Birthday!",
+        theme: "生日、日期和邀请",
+        target: "能询问日期、表达生日和邀请。",
+        words: [
+          ["birthday", "生日", "My birthday is in May.", "birth + day。", "日期"],
+          ["month", "月份", "January is the first month.", "th 轻咬舌。", "日期"],
+          ["party", "聚会", "We have a birthday party.", "par-ty。", "活动"],
+          ["invite", "邀请", "I want to invite my friends.", "in-vite。", "社交"],
+        ],
+        patterns: ["When is your birthday?", "序数词 first / second / third"],
+        drills: ["听日期选月份", "写生日邀请句", "区分 in May / on May 2nd"],
+      }),
+    ],
+  },
+  {
+    id: "g7b",
+    grade: "七年级",
+    semester: "下册",
+    label: "七年级下册",
+    note: "七下原创同步包：能力、作息、出行、规则。",
+    units: [
+      createTextbookUnit({
+        id: "g7b-u1",
+        title: "Abilities and Clubs",
+        theme: "能力与社团",
+        target: "能用 can 谈论能力和社团选择。",
+        words: [
+          ["guitar", "吉他", "She can play the guitar.", "gui-tar。", "音乐"],
+          ["dance", "跳舞", "Can you dance?", "a 读 /ɑː/。", "能力"],
+          ["join", "加入", "I want to join the art club.", "oi 读 /ɔɪ/。", "动作"],
+        ],
+        patterns: ["Can you...? Yes, I can.", "play + the + 乐器"],
+        drills: ["听能力选社团", "完成 can 问答", "写一个社团申请句"],
+      }),
+      createTextbookUnit({
+        id: "g7b-u2",
+        title: "Daily Routines",
+        theme: "作息与频率",
+        target: "能描述一天安排和时间顺序。",
+        words: [
+          ["brush", "刷", "I brush my teeth at seven.", "br 开头连读。", "生活"],
+          ["exercise", "锻炼", "My father exercises every day.", "ex-er-cise。", "健康"],
+          ["quarter", "一刻钟", "It is a quarter past six.", "qu 读 /kw/。", "时间"],
+        ],
+        patterns: ["What time do you...?", "时间表达 past / to"],
+        drills: ["听时间选活动", "排序 morning routine", "改错：He go to school"],
+      }),
+      createTextbookUnit({
+        id: "g7b-u3",
+        title: "Getting Around",
+        theme: "交通方式与距离",
+        target: "能说明如何到校和花多长时间。",
+        words: [
+          ["kilometer", "千米", "It is two kilometers from my home.", "ki-lo-me-ter。", "距离"],
+          ["ride", "骑", "I ride a bike to school.", "i 读 /aɪ/。", "交通"],
+          ["minute", "分钟", "It takes ten minutes.", "mi-nute。", "时间"],
+        ],
+        patterns: ["How do you get to...?", "It takes..."],
+        drills: ["听交通方式选人物", "计算距离与时间", "区分 by bike / ride a bike"],
+      }),
+    ],
+  },
+  {
+    id: "g8a",
+    grade: "八年级",
+    semester: "上册",
+    label: "八年级上册",
+    note: "八上原创同步包：假期、习惯、比较、未来。",
+    units: [
+      createTextbookUnit({
+        id: "g8a-u1",
+        title: "Vacation and Experience",
+        theme: "假期经历",
+        target: "能用一般过去时描述旅行和活动。",
+        words: [
+          ["vacation", "假期", "I went to Beijing on vacation.", "va-ca-tion。", "旅行"],
+          ["wonderful", "精彩的", "The trip was wonderful.", "won-der-ful。", "形容"],
+          ["decide", "决定", "We decided to visit a museum.", "de-cide。", "动词"],
+        ],
+        patterns: ["一般过去时", "anything / something"],
+        drills: ["听假期经历选地点", "把动词改过去式", "写 4 句 vacation diary"],
+      }),
+      createTextbookUnit({
+        id: "g8a-u2",
+        title: "Habits and Health",
+        theme: "频率与健康习惯",
+        target: "能谈论频率、健康习惯和建议。",
+        words: [
+          ["hardly", "几乎不", "He hardly ever eats junk food.", "hard + ly。", "频率"],
+          ["healthy", "健康的", "Vegetables are healthy.", "health + y。", "健康"],
+          ["result", "结果", "The survey result is clear.", "re-sult。", "调查"],
+        ],
+        patterns: ["How often...?", "频率副词排序"],
+        drills: ["听调查结果填频率", "做健康习惯问卷", "区分 always / hardly ever"],
+      }),
+      createTextbookUnit({
+        id: "g8a-u3",
+        title: "Comparisons",
+        theme: "人物比较",
+        target: "能用比较级描述相同与不同。",
+        words: [
+          ["outgoing", "外向的", "Tina is more outgoing.", "out + going。", "性格"],
+          ["better", "更好的", "He is better at math.", "good 的比较级。", "比较"],
+          ["similar", "相似的", "The two answers are similar.", "si-mi-lar。", "比较"],
+        ],
+        patterns: ["形容词比较级", "as...as..."],
+        drills: ["听比较选人物", "改写比较级句子", "写自己和朋友的 3 点不同"],
+      }),
+    ],
+  },
+  {
+    id: "g8b",
+    grade: "八年级",
+    semester: "下册",
+    label: "八年级下册",
+    note: "八下原创同步包：经历、故事、志愿服务、自然。",
+    units: [
+      createTextbookUnit({
+        id: "g8b-u1",
+        title: "Health and Advice",
+        theme: "健康问题与建议",
+        target: "能描述不适并给出建议。",
+        words: [
+          ["stomachache", "胃痛", "He has a stomachache.", "stomach + ache。", "健康"],
+          ["fever", "发烧", "She has a fever.", "fe-ver。", "健康"],
+          ["advice", "建议", "Can you give me some advice?", "ad-vice 不可数。", "建议"],
+        ],
+        patterns: ["have a/an + 症状", "should / shouldn't"],
+        drills: ["听症状选建议", "补全 doctor 对话", "区分 advice / advise"],
+      }),
+      createTextbookUnit({
+        id: "g8b-u2",
+        title: "Volunteering",
+        theme: "志愿服务",
+        target: "能描述帮助他人的计划和意义。",
+        words: [
+          ["volunteer", "志愿者", "I want to be a volunteer.", "vo-lun-teer。", "公益"],
+          ["raise", "筹集", "They raise money for children.", "ai 读 /eɪ/。", "公益"],
+          ["lonely", "孤独的", "We visited lonely old people.", "lone + ly。", "情感"],
+        ],
+        patterns: ["动词不定式 to do", "help sb. do"],
+        drills: ["听志愿活动选地点", "写 3 条 volunteer plan", "区分 alone / lonely"],
+      }),
+      createTextbookUnit({
+        id: "g8b-u3",
+        title: "Stories and Events",
+        theme: "故事与过去进行时",
+        target: "能讲述事件发生时正在做什么。",
+        words: [
+          ["suddenly", "突然", "Suddenly, it began to rain.", "sud-den-ly。", "故事"],
+          ["while", "当……时候", "I was reading while he was cooking.", "wh 读 /w/。", "连词"],
+          ["strange", "奇怪的", "A strange sound came from the room.", "str 开头连读。", "形容"],
+        ],
+        patterns: ["过去进行时 was/were doing", "when / while"],
+        drills: ["听故事排序", "用 was doing 造句", "区分 when / while"],
+      }),
+    ],
+  },
+  {
+    id: "g9a",
+    grade: "九年级",
+    semester: "上册",
+    label: "九年级上册",
+    note: "九上原创同步包：学习方法、节日、发明与规则。",
+    units: [
+      createTextbookUnit({
+        id: "g9a-u1",
+        title: "Learning How to Learn",
+        theme: "学习策略",
+        target: "能谈论英语学习方法和困难。",
+        words: [
+          ["pronunciation", "发音", "Good pronunciation helps listening.", "pro-nun-ci-a-tion。", "学习"],
+          ["grammar", "语法", "Grammar rules can help writing.", "gram-mar。", "学习"],
+          ["review", "复习", "Review words every day.", "re-view。", "学习"],
+        ],
+        patterns: ["by doing 表方式", "how to do"],
+        drills: ["听学习建议选方法", "用 by doing 写 4 句", "整理错词复习计划"],
+      }),
+      createTextbookUnit({
+        id: "g9a-u2",
+        title: "Festivals and Culture",
+        theme: "节日与文化",
+        target: "能介绍节日活动、传统和感受。",
+        words: [
+          ["festival", "节日", "The Spring Festival is important.", "fes-ti-val。", "文化"],
+          ["relative", "亲戚", "We visit relatives.", "re-la-tive。", "家庭"],
+          ["tradition", "传统", "This tradition is old.", "tra-di-tion。", "文化"],
+        ],
+        patterns: ["宾语从句 that / if / whether", "感叹句"],
+        drills: ["听节日活动选答案", "写一个 festival card", "判断宾语从句语序"],
+      }),
+      createTextbookUnit({
+        id: "g9a-u3",
+        title: "Inventions",
+        theme: "发明与科技",
+        target: "能描述发明用途和被动语态。",
+        words: [
+          ["invent", "发明", "People invented paper long ago.", "in-vent。", "科技"],
+          ["useful", "有用的", "The phone is useful.", "use + ful。", "形容"],
+          ["material", "材料", "The cup is made of paper.", "ma-te-ri-al。", "科技"],
+        ],
+        patterns: ["被动语态 be done", "be made of / from"],
+        drills: ["听发明年代选物品", "主动句改被动句", "说明一个 useful invention"],
+      }),
+    ],
+  },
+  {
+    id: "g9b",
+    grade: "九年级",
+    semester: "下册",
+    label: "九年级下册",
+    note: "九下原创同步包：考前综合、环境、毕业与复习。",
+    units: [
+      createTextbookUnit({
+        id: "g9b-u1",
+        title: "Exam Review Sprint",
+        theme: "中考综合复习",
+        target: "综合复习词汇、阅读、听力和写作句型。",
+        words: [
+          ["achievement", "成就", "Hard work brings achievement.", "achieve + ment。", "学业"],
+          ["challenge", "挑战", "This exam is a challenge.", "chal-lenge。", "学业"],
+          ["confidence", "信心", "Practice builds confidence.", "con-fi-dence。", "表达"],
+        ],
+        patterns: ["时态综合", "阅读定位与同义替换"],
+        drills: ["做 8 题限时模拟", "整理错题同义表达", "写一段考前目标"],
+      }),
+      createTextbookUnit({
+        id: "g9b-u2",
+        title: "Environment",
+        theme: "环境保护",
+        target: "能讨论环保问题、原因和行动。",
+        words: [
+          ["environment", "环境", "We should protect the environment.", "en-vi-ron-ment。", "环保"],
+          ["pollution", "污染", "Air pollution is serious.", "pol-lu-tion。", "环保"],
+          ["recycle", "回收", "We recycle paper and bottles.", "re-cy-cle。", "行动"],
+        ],
+        patterns: ["should / must 表建议和义务", "cause and effect"],
+        drills: ["听环保倡议选行动", "用 should 写建议", "匹配 cause / result"],
+      }),
+    ],
+  },
+];
+
 const listeningDrills = [
   {
     title: "关键词",
@@ -385,6 +1091,9 @@ function getTodayKey() {
 }
 
 function createDefaultMemory(): LearningMemory {
+  const defaultBook = textbookCatalog.find((book) => book.id === "g7a") ?? textbookCatalog[0];
+  const defaultUnit = defaultBook.units[0];
+
   return {
     assessment: null,
     completed: { date: getTodayKey(), modules: {} },
@@ -395,6 +1104,13 @@ function createDefaultMemory(): LearningMemory {
     readingAnswers: {},
     phonicsDone: {},
     targetStats: { score: 0, rounds: 0, streak: 0, bestStreak: 0 },
+    textbook: {
+      bookId: defaultBook.id,
+      unitId: defaultUnit.id,
+      doneUnits: {},
+      answers: {},
+      examScores: {},
+    },
     voiceURI: "",
     rate: 0.78,
   };
@@ -419,9 +1135,21 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
       ...base.targetStats,
       ...(input?.targetStats ?? {}),
     },
+    textbook: {
+      ...base.textbook,
+      ...(input?.textbook ?? {}),
+      doneUnits: input?.textbook?.doneUnits ?? {},
+      answers: input?.textbook?.answers ?? {},
+      examScores: input?.textbook?.examScores ?? {},
+    },
     voiceURI: input?.voiceURI ?? "",
     rate: input?.rate ?? 0.78,
   };
+
+  const book = textbookCatalog.find((item) => item.id === merged.textbook.bookId) ?? textbookCatalog[0];
+  const unit = book.units.find((item) => item.id === merged.textbook.unitId) ?? book.units[0];
+  merged.textbook.bookId = book.id;
+  merged.textbook.unitId = unit.id;
 
   if (merged.completed.date !== getTodayKey()) {
     merged.completed = { date: getTodayKey(), modules: {} };
@@ -523,6 +1251,18 @@ export default function EnglishLearningExperience() {
   const targetAccuracy = memory.targetStats.rounds
     ? Math.round((memory.targetStats.score / memory.targetStats.rounds) * 100)
     : 0;
+  const selectedBook =
+    textbookCatalog.find((book) => book.id === memory.textbook.bookId) ??
+    textbookCatalog.find((book) => book.id === "g7a") ??
+    textbookCatalog[0];
+  const selectedUnit =
+    selectedBook.units.find((unit) => unit.id === memory.textbook.unitId) ?? selectedBook.units[0];
+  const textbookAnswerKeys = selectedUnit.exam.map((_, index) => `${selectedUnit.id}:${index}`);
+  const textbookAnsweredCount = textbookAnswerKeys.filter((key) => key in memory.textbook.answers).length;
+  const textbookCorrectCount = selectedUnit.exam.filter(
+    (question, index) => memory.textbook.answers[`${selectedUnit.id}:${index}`] === question.answer,
+  ).length;
+  const latestTextbookScore = memory.textbook.examScores[selectedUnit.id];
 
   useEffect(() => {
     mountedRef.current = true;
@@ -956,6 +1696,89 @@ export default function EnglishLearningExperience() {
     }));
   }
 
+  function selectTextbookBook(bookId: string) {
+    const nextBook = textbookCatalog.find((book) => book.id === bookId);
+    if (!nextBook) return;
+
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        bookId: nextBook.id,
+        unitId: nextBook.units[0].id,
+      },
+    }));
+  }
+
+  function selectTextbookUnit(unitId: string) {
+    if (!selectedBook.units.some((unit) => unit.id === unitId)) return;
+
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        unitId,
+      },
+    }));
+  }
+
+  function answerTextbookExam(questionIndex: number, choice: string) {
+    const question = selectedUnit.exam[questionIndex];
+    if (!question) return;
+
+    patchMemory((current) => {
+      const nextAnswers = {
+        ...current.textbook.answers,
+        [`${selectedUnit.id}:${questionIndex}`]: choice,
+      };
+      const correct = selectedUnit.exam.filter(
+        (item, index) => nextAnswers[`${selectedUnit.id}:${index}`] === item.answer,
+      ).length;
+      const allAnswered = selectedUnit.exam.every((_, index) => `${selectedUnit.id}:${index}` in nextAnswers);
+
+      return {
+        ...current,
+        textbook: {
+          ...current.textbook,
+          answers: nextAnswers,
+          examScores: allAnswered
+            ? {
+                ...current.textbook.examScores,
+                [selectedUnit.id]: {
+                  correct,
+                  total: selectedUnit.exam.length,
+                  date: new Date().toISOString(),
+                },
+              }
+            : current.textbook.examScores,
+        },
+        completed: allAnswered
+          ? {
+              date: getTodayKey(),
+              modules: { ...current.completed.modules, textbook: true },
+            }
+          : current.completed,
+      };
+    });
+  }
+
+  function completeTextbookUnit() {
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        doneUnits: {
+          ...current.textbook.doneUnits,
+          [selectedUnit.id]: true,
+        },
+      },
+      completed: {
+        date: getTodayKey(),
+        modules: { ...current.completed.modules, textbook: true },
+      },
+    }));
+  }
+
   function exportMemory() {
     const blob = new Blob([JSON.stringify(memory, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -994,6 +1817,7 @@ export default function EnglishLearningExperience() {
     ["diagnostic", "摸底测评", ClipboardCheck],
     ["plan", "今日训练", Brain],
     ["target", "单词靶场", Crosshair],
+    ["textbook", "教材同步", GraduationCap],
     ["listen", "听力跟读", Headphones],
     ["read", "阅读理解", BookOpen],
     ["phonics", "发音窍门", Volume2],
@@ -1022,6 +1846,14 @@ export default function EnglishLearningExperience() {
       text: "看英文点中文，专门把词义反应速度和错词记忆练起来。",
       tab: "target",
       action: "去打靶",
+    },
+    {
+      key: "textbook",
+      chip: "PEP",
+      title: "教材同步",
+      text: `${selectedBook.label} · ${selectedUnit.title}，按单元做词汇、句型和考前模拟。`,
+      tab: "textbook",
+      action: "同步练",
     },
     {
       key: "listen",
@@ -1250,24 +2082,24 @@ export default function EnglishLearningExperience() {
 
         <section className={styles.routeNote}>
           <p className={styles.sectionKicker}>路线</p>
-          <p>不按年龄分班，先摸底，再按词汇、听读和错词记录自动往合适题库走。</p>
+          <p>不按年龄分班，先摸底，再按词汇、听读、教材单元和错词记录自动往合适题库走。</p>
         </section>
       </aside>
 
       <section className={styles.content}>
         <section className={styles.heroPanel}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Vocabulary · Listening · Reading · Target Game</p>
+            <p className={styles.eyebrow}>Vocabulary · Textbook · Listening · Target Game</p>
             <h2>先找准水平，再把薄弱项一点点补上来。</h2>
-            <p>全年龄可用的自适应英语训练站：先测大致词汇和理解水平，再练词卡、听读、发音和单词靶场。</p>
+            <p>全年龄可用的自适应英语训练站：先测大致词汇和理解水平，再练词卡、人教版同步、听读、发音和单词靶场。</p>
             <div className={styles.heroActions}>
               <button type="button" className={styles.primaryAction} onClick={() => setActiveTab("diagnostic")}>
                 <ClipboardCheck size={18} />
                 开始摸底
               </button>
-              <button type="button" className={styles.secondaryAction} onClick={() => setActiveTab("target")}>
-                <Crosshair size={18} />
-                先打一局
+              <button type="button" className={styles.secondaryAction} onClick={() => setActiveTab("textbook")}>
+                <GraduationCap size={18} />
+                教材同步
               </button>
             </div>
           </div>
@@ -1451,6 +2283,149 @@ export default function EnglishLearningExperience() {
               </div>
               <div className={styles.targetFeedback}>{targetFeedback}</div>
             </div>
+          </section>
+        )}
+
+        {activeTab === "textbook" && (
+          <section className={styles.tabPanel}>
+            <div className={styles.panelHeading}>
+              <div>
+                <p className={styles.sectionKicker}>PEP Textbook Sync</p>
+                <h2>人教版教材同步</h2>
+              </div>
+              <button type="button" className={styles.secondaryAction} onClick={completeTextbookUnit}>
+                <Check size={17} />
+                {memory.textbook.doneUnits[selectedUnit.id] ? "已完成" : "完成本单元"}
+              </button>
+            </div>
+
+            <div className={styles.textbookControls}>
+              <label>
+                <span>年级学期</span>
+                <select value={selectedBook.id} onChange={(event) => selectTextbookBook(event.target.value)}>
+                  {textbookCatalog.map((book) => (
+                    <option key={book.id} value={book.id}>
+                      {book.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span>同步单元</span>
+                <select value={selectedUnit.id} onChange={(event) => selectTextbookUnit(event.target.value)}>
+                  {selectedBook.units.map((unit) => (
+                    <option key={unit.id} value={unit.id}>
+                      {unit.title}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <section className={styles.textbookHero}>
+              <div>
+                <p className={styles.sectionKicker}>{selectedBook.grade} · {selectedBook.semester}</p>
+                <h3>{selectedUnit.title}</h3>
+                <p>{selectedUnit.theme}：{selectedUnit.target}</p>
+                <span>{selectedBook.note}</span>
+              </div>
+              <div className={styles.textbookScoreCard}>
+                <span>考前模拟</span>
+                <strong>
+                  {latestTextbookScore
+                    ? `${latestTextbookScore.correct}/${latestTextbookScore.total}`
+                    : `${textbookCorrectCount}/${selectedUnit.exam.length}`}
+                </strong>
+                <p>{textbookAnsweredCount}/{selectedUnit.exam.length} 已答</p>
+              </div>
+            </section>
+
+            <div className={styles.textbookBoard}>
+              <article className={styles.syncPanel}>
+                <div className={styles.syncPanelHeading}>
+                  <FileText size={18} />
+                  <h3>同步词块</h3>
+                </div>
+                <div className={styles.syncWordList}>
+                  {selectedUnit.words.map(([word, meaning, sample, tip, tag]) => (
+                    <div key={word} className={styles.syncWordItem}>
+                      <button type="button" className={styles.soundButton} onClick={() => speak(`${word}. ${sample}`, 0.72)}>
+                        <Volume2 size={17} />
+                      </button>
+                      <div>
+                        <strong>{word}</strong>
+                        <span>{meaning} · {tag}</span>
+                        <p>{sample}</p>
+                        <p>{tip}</p>
+                      </div>
+                      <button type="button" className={styles.miniActionStrong} onClick={() => markWord(word, meaning, true)}>
+                        记住
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </article>
+
+              <article className={styles.syncPanel}>
+                <div className={styles.syncPanelHeading}>
+                  <Brain size={18} />
+                  <h3>句型语法</h3>
+                </div>
+                <div className={styles.patternList}>
+                  {selectedUnit.patterns.map((pattern) => (
+                    <div key={pattern}>
+                      <span>Pattern</span>
+                      <strong>{pattern}</strong>
+                    </div>
+                  ))}
+                </div>
+                <div className={styles.drillList}>
+                  {selectedUnit.drills.map((drill, index) => (
+                    <p key={drill}>
+                      {index + 1}. {drill}
+                    </p>
+                  ))}
+                </div>
+              </article>
+            </div>
+
+            <article className={styles.mockExamCard}>
+              <div className={styles.syncPanelHeading}>
+                <ClipboardCheck size={18} />
+                <h3>考前模拟</h3>
+              </div>
+              <div className={styles.mockExamGrid}>
+                {selectedUnit.exam.map((question, index) => {
+                  const answerKey = `${selectedUnit.id}:${index}`;
+                  const chosen = memory.textbook.answers[answerKey];
+                  const answered = Boolean(chosen);
+                  return (
+                    <section key={question.prompt} className={styles.mockQuestion}>
+                      <span>{question.skill}</span>
+                      <strong>{index + 1}. {question.prompt}</strong>
+                      <div className={styles.choiceGrid}>
+                        {question.choices.map((choice) => (
+                          <button
+                            key={choice}
+                            type="button"
+                            className={[
+                              styles.choiceButton,
+                              answered && choice === question.answer ? styles.correctChoice : "",
+                              answered && chosen === choice && choice !== question.answer ? styles.wrongChoice : "",
+                            ].join(" ")}
+                            disabled={answered}
+                            onClick={() => answerTextbookExam(index, choice)}
+                          >
+                            {choice}
+                          </button>
+                        ))}
+                      </div>
+                      {answered ? <p>{question.explain}</p> : null}
+                    </section>
+                  );
+                })}
+              </div>
+            </article>
           </section>
         )}
 

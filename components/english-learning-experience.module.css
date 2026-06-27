@@ -914,6 +914,228 @@
   line-height: 1.6;
 }
 
+.textbookControls {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(260px, 1.2fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.textbookControls label {
+  display: grid;
+  gap: 7px;
+  color: var(--english-muted);
+  font-size: 0.82rem;
+  font-weight: 820;
+}
+
+.textbookControls select {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--english-ink);
+  font-weight: 830;
+}
+
+.textbookHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(228, 244, 239, 0.8)),
+    repeating-linear-gradient(90deg, rgba(22, 32, 45, 0.03) 0 1px, transparent 1px 34px);
+  box-shadow: 0 18px 38px rgba(35, 44, 62, 0.09);
+}
+
+.textbookHero h3 {
+  margin: 0;
+  color: var(--english-ink);
+  font-size: 1.95rem;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.textbookHero p {
+  margin: 10px 0 0;
+  color: #405060;
+  line-height: 1.65;
+}
+
+.textbookHero span {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--english-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.textbookScoreCard {
+  display: grid;
+  align-content: center;
+  min-height: 134px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #172033;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.textbookScoreCard strong {
+  display: block;
+  margin: 4px 0;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.textbookScoreCard p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.textbookBoard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.syncPanel,
+.mockExamCard {
+  padding: 18px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: var(--english-panel);
+  box-shadow: 0 16px 32px rgba(35, 44, 62, 0.08);
+}
+
+.mockExamCard {
+  margin-top: 14px;
+}
+
+.syncPanelHeading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: var(--english-blue-dark);
+}
+
+.syncPanelHeading h3 {
+  margin: 0;
+  color: var(--english-ink);
+  font-size: 1.2rem;
+  font-weight: 920;
+  letter-spacing: 0;
+}
+
+.syncWordList {
+  display: grid;
+  gap: 12px;
+}
+
+.syncWordItem {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.syncWordItem strong {
+  display: block;
+  color: var(--english-ink);
+  font-size: 1.2rem;
+}
+
+.syncWordItem span {
+  display: block;
+  margin-top: 2px;
+  color: var(--english-blue-dark);
+  font-size: 0.82rem;
+  font-weight: 830;
+}
+
+.syncWordItem p {
+  margin: 6px 0 0;
+  color: #405060;
+  line-height: 1.5;
+}
+
+.patternList {
+  display: grid;
+  gap: 10px;
+}
+
+.patternList div {
+  padding: 12px;
+  border-left: 4px solid var(--english-yellow);
+  border-radius: 8px;
+  background: #fff9e9;
+}
+
+.patternList span,
+.mockQuestion span {
+  display: block;
+  color: var(--english-muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+}
+
+.patternList strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--english-ink);
+}
+
+.drillList {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.drillList p {
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--english-teal-soft);
+  color: #265448;
+  line-height: 1.5;
+}
+
+.mockExamGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.mockQuestion {
+  padding: 14px;
+  border: 1px solid var(--english-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.mockQuestion strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--english-ink);
+  line-height: 1.5;
+}
+
+.mockQuestion p {
+  margin: 10px 0 0;
+  color: #405060;
+  line-height: 1.6;
+}
+
 .listeningBoard,
 .readingBoard {
   display: grid;
@@ -1024,6 +1246,10 @@
   .targetHud {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .textbookBoard {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1044,7 +1270,9 @@
   .choiceGrid,
   .resultGrid,
   .memoryMetrics,
-  .targetGrid {
+  .targetGrid,
+  .textbookControls,
+  .textbookHero {
     grid-template-columns: 1fr;
   }
 
@@ -1079,6 +1307,14 @@
 
   .targetButton {
     min-height: 138px;
+  }
+
+  .syncWordItem {
+    grid-template-columns: 1fr;
+  }
+
+  .syncWordItem .soundButton {
+    justify-self: start;
   }
 
   .targetRings {
