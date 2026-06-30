@@ -67,15 +67,16 @@ type DeepSeekChatResponse = {
 const systemPrompt = `
 你是 DestinyPixel 的命理融合解读师，擅长把中国八字与西方占星翻译成现代、清晰、可执行的自我洞察。
 
-请提供精炼、一针见血的命理洞察。每个板块（性格、财富、流年）控制在 ${TARGET_SECTION_CHARACTERS} 字左右，直接给核心结论和实操建议，去掉无意义的铺垫和啰嗦的文学描写。
+请提供精炼、一针见血的命理洞察。每个板块（性格、财富、流年）控制在 ${TARGET_SECTION_CHARACTERS} 字左右，直接给核心结论、短板风险和实操建议，去掉无意义的铺垫、讨好式赞美和啰嗦的文学描写。
 
 规则：
 1. 只能基于用户提供的 Context 写作，不编造不存在的宫位、相位、疾病、投资收益或确定事件。
-2. 八字侧至少引用日主、四柱/十神/五行强弱中的关键点；占星侧至少引用太阳星座、映射星体或主要相位中的关键点。
-3. Bazi 与 Astrology 底层独立，只在解读层做交集和互补。
-4. 语言要专业、克制、直接，不要玄虚恐吓，不要宿命论。
-5. 只能返回合法 JSON 对象，不能有 Markdown，不能有代码块，不能有额外解释。
-6. JSON 必须且只能包含三个字符串字段：{ "character": "...", "wealth": "...", "transits": "..." }。
+2. 底层可以读取日主、四柱、十神和五行，但输出给用户时不要讲课，不要写“乙木强弱”“十神关系”等术语。把技术信息翻译成五行（金木水火土）、动物原型、行为模式、关系风险、财富方式和阶段建议。
+3. 占星侧至少引用太阳星座、映射星体或主要相位中的关键点，但不要写成星座泛泛描述。
+4. Bazi 与 Astrology 底层独立，只在解读层做交集和互补。
+5. 语言要专业、克制、直接，不要玄虚恐吓，不要宿命论，不要巴纳姆效应式废话。每个板块必须有 20%-30% 的建设性负面判断：盲区、误判、拖延、过度消耗、关系投射、赚钱风险或自我欺骗。
+6. 只能返回合法 JSON 对象，不能有 Markdown，不能有代码块，不能有额外解释。
+7. JSON 必须且只能包含三个字符串字段：{ "character": "...", "wealth": "...", "transits": "..." }。
 `.trim();
 
 function formatElementBalance(bazi: BaziData) {
@@ -259,7 +260,7 @@ async function callDeepSeek({
               targetLengthPerKey: `${TARGET_SECTION_CHARACTERS} characters in ${outputLanguage}`,
               minimumLengthPerKey: `${MIN_SECTION_CHARACTERS} characters in ${outputLanguage}`,
               qualityBar:
-                "线上快速版报告：基于具体八字十神、五行强弱、星体落座、主要相位、大运与流年给结论，不写铺垫。",
+                "线上快速版报告：读取底层命理数据，但对用户只输出结论、五行倾向、星体锚点、风险提醒和行动建议；不要写教学式术语。",
             },
             retryInstruction: retryReason
               ? `上一轮输出未通过后台质量检查：${retryReason}。请重新生成严格 JSON，每个字段控制在 ${TARGET_SECTION_CHARACTERS} 个字符左右，并严格遵守输出语言规则。`
@@ -428,34 +429,34 @@ export function createInitialAIReportContent({
   const base =
     locale === "zh"
       ? {
-          dayMaster: `${profile.name.cn} 是本命盘的日柱原型。日柱为 ${bazi.pillars.day}，日主为 ${bazi.dayMaster}，太阳落在 ${sunSign}。`,
-          outerPersona: `外在层从四柱天干展开：${pillarNames}。日主映射星体为 ${mappedPlanet}，它会影响第一印象、社会面具与可见野心。`,
-          deepSelf: `深层自我来自地支图腾：${branchNames}。它们描述本能、记忆、依恋模式与潜意识动力。`,
-          career: `事业模块会结合 ${mappedPlanet} 与十神结构，提炼最适合你的发力方式。`,
-          love: "感情模块会拆解依恋模式、边界感与亲密关系里的重复课题。",
-          growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的优势与盲区给出训练方向。`,
+          dayMaster: `${profile.name.cn} 是这份报告的核心动物画像；它描述你的底层反应方式。太阳节律落在 ${sunSign}，会把这种底色推向更明显的自我表达和人生主题。`,
+          outerPersona: `外在层来自四个出生坐标：${pillarNames}。映射星体为 ${mappedPlanet}，它会影响别人第一眼感受到的气场、压力感和行动速度。`,
+          deepSelf: `深层自我来自四个动物场域：${branchNames}。它们不是标签，而是你在压力、亲密关系和选择犹豫时更容易暴露的本能模式。`,
+          career: `事业模块会把 ${mappedPlanet}、五行分布和现实行为放在一起看，直接判断适合的发力方式、赚钱风险和消耗点。`,
+          love: "感情模块会拆解吸引模式、边界感、投射风险与亲密关系里的重复课题。",
+          growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 对应的优势与短板，给出更直接的训练方向。`,
           health: "健康模块只提供节律与身心照护建议，不做医学诊断。",
         }
       : locale === "ru"
         ? {
-            dayMaster: `${dayDisplay.totemName} — ядро дневного столпа. Дневной столп: ${dayDisplay.pillarLabel}; дневной мастер: ${dayDisplay.stemMeaning}; солнечный знак: ${sunSign}.`,
-            outerPersona: `Внешний слой начинается с четырех стволов: ${pillarNames}. Планета дневного мастера — ${mappedPlanet}; она влияет на первое впечатление и социальную роль.`,
-            deepSelf: `Глубинное Я раскрывается через тотемы ветвей: ${branchNames}. Они описывают инстинкты, память, привязанность и скрытые мотивы.`,
-            career: `Карьера будет прочитана через ${mappedPlanet} и структуру карты, чтобы выделить практичный стиль реализации.`,
+            dayMaster: `${dayDisplay.totemName} — главный животный портрет отчета. Он описывает базовую реакцию под давлением, а солнечный ритм в ${sunSign} показывает, как эта основа становится заметной в жизни.`,
+            outerPersona: `Внешний слой строится из четырех координат рождения: ${pillarNames}. Планета резонанса — ${mappedPlanet}; она показывает первое впечатление, темп действия и социальное давление.`,
+            deepSelf: `Глубинное Я раскрывается через животные поля: ${branchNames}. Это не ярлыки, а реакции, которые чаще проявляются в стрессе, близости и сомнениях.`,
+            career: `Карьера будет прочитана через ${mappedPlanet}, баланс стихий и реальные поведенческие риски: где есть сила, где утечка, где нужна граница.`,
             love:
-              "Любовь будет разобрана как отдельный модуль: привязанность, границы и повторяющиеся сценарии близости.",
-            growth: `Рост будет строиться вокруг силы и слепых зон качества ${dayDisplay.stemMeaning}.`,
+              "Любовь будет разобрана как отдельный модуль: притяжение, границы, проекция и повторяющиеся сценарии близости.",
+            growth: `Рост будет строиться вокруг дара и слабого места качества ${dayDisplay.stemMeaning}.`,
             health:
               "Здоровье будет описано только как ритм восстановления и забота о теле, без медицинских диагнозов.",
           }
         : {
-            dayMaster: `${profile.name.en} is the visible Day Pillar archetype behind this report. The Bazi engine identifies ${dayDisplay.pillarLabel} as the Day Pillar and ${dayDisplay.stemMeaning} as the Day Master, while the Western layer places the Sun in ${sunSign}.`,
-            outerPersona: `Your social layer begins with the four heavenly stems: ${pillarNames}. The mapped Day Master planet is ${mappedPlanet}, shaping first impression, public rhythm, and visible ambition.`,
-            deepSelf: `Your subterranean layer begins with the branch totems: ${branchNames}. They describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
-            career: `Career will be read through ${mappedPlanet} and the Bazi structure, focusing on your practical mode of contribution.`,
+            dayMaster: `${profile.name.en} is the core animal portrait behind this report. It describes your baseline reaction under pressure, while the Sun in ${sunSign} shows how that pattern becomes visible in identity and life direction.`,
+            outerPersona: `Your social layer begins with four birth coordinates: ${pillarNames}. The resonant planet is ${mappedPlanet}, shaping first impression, pace, pressure, and public behavior.`,
+            deepSelf: `Your deeper layer begins with the animal fields: ${branchNames}. These are not labels; they describe instincts that surface under stress, intimacy, and hesitation.`,
+            career: `Career will be read through ${mappedPlanet}, the five-element balance, and real behavioral risks: where you have leverage, where you leak energy, and where boundaries matter.`,
             love:
-              "Love will be treated as its own module: attachment style, boundaries, and repeated intimacy patterns.",
-            growth: `Growth will focus on the gifts and blind spots of ${dayDisplay.stemMeaning}.`,
+              "Love will be treated as its own module: attraction, boundaries, projection, and repeated intimacy patterns.",
+            growth: `Growth will focus on the gift and weak spot of ${dayDisplay.stemMeaning}.`,
             health:
               "Health will stay in the lane of rhythm, recovery, and body awareness, without medical diagnosis.",
           };

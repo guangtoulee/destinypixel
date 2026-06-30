@@ -246,12 +246,12 @@ function buildInitialNatalShell({
 
   if (locale === "zh") {
     return {
-      dayMaster: `${profile.name.cn} 是这份内在地图的核心动物画像。系统识别你的核心坐标为 ${dayDisplay.pillarLabel}，上层信号为 ${dayDisplay.stemMeaning}，太阳节律落在 ${sunSign}。完整指引之书会在页面打开后继续流式生成。`,
-      outerPersona: `外在层从四重出生坐标展开：${pillarNames}。对应行星为 ${mappedPlanetName}，它会描述你的外在气场、社会面具和第一印象。`,
-      deepSelf: `深层自我来自动物场域：${branchNames}。这些图腾描述本能、记忆、依恋模式与潜意识驱动力。`,
-      career: `事业模块会基于 ${mappedPlanetName}、元素结构与出生能量分布，给出更聚焦的职业发力点。`,
-      love: "感情模块会单独分析你的吸引模式、亲密边界与关系里的重复课题。",
-      growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的天赋与盲区，给出可执行的训练方向。`,
+      dayMaster: `${profile.name.cn} 是这份内在地图的核心动物画像。它先判断你的底层反应方式：你如何吸收环境、如何保护自己、压力大时会变得更清醒还是更逃避。太阳节律落在 ${sunSign}，完整指引会继续流式生成。`,
+      outerPersona: `外在层从四重出生坐标展开：${pillarNames}。对应行星为 ${mappedPlanetName}，它描述别人第一眼感受到的气场、压力感和行动速度，也会指出你容易被误读的地方。`,
+      deepSelf: `深层自我来自动物场域：${branchNames}。这些图腾描述本能、记忆、依恋模式和压力反应，不会把你包装成完美人格。`,
+      career: `事业模块会基于 ${mappedPlanetName}、五行分布和现实行为，判断职业发力点、赚钱方式和容易消耗的坑。`,
+      love: "感情模块会单独分析吸引模式、亲密边界、投射风险与关系里的重复课题。",
+      growth: `成长模块会围绕 ${dayDisplay.stemMeaning} 的优势与短板，给出可执行的训练方向。`,
       health: "健康模块只提供作息、恢复力与身心节律建议，不替代医学诊断。",
     };
   }
@@ -271,13 +271,13 @@ function buildInitialNatalShell({
   }
 
   return {
-    dayMaster: `${profile.name.en} is the core animal portrait behind this inner map. The system identifies ${dayDisplay.pillarLabel} as your key birth coordinate and ${dayDisplay.stemMeaning} as the upper signal, while the sky layer places the Sun in ${sunSign}. The full guidance book streams after first paint.`,
-    outerPersona: `Your social layer begins with the four birth coordinates: ${pillarNames}. The resonant planet is ${mappedPlanetName}. This module refines first impression, ambition style, and public rhythm.`,
-    deepSelf: `Your subterranean layer begins with the animal fields: ${branchNames}. These totems describe instinct, memory, attachment patterns, and the pressure points beneath performance.`,
-    career: `Career will be read separately through ${mappedPlanetName}, your energy structure, and your practical contribution style.`,
+    dayMaster: `${profile.name.en} is the core animal portrait behind this inner map. It starts with a direct verdict on how you absorb pressure, protect yourself, and respond when life becomes noisy. The sky layer places the Sun in ${sunSign}; the full guidance book streams after first paint.`,
+    outerPersona: `Your social layer begins with four birth coordinates: ${pillarNames}. The resonant planet is ${mappedPlanetName}. This module reads first impression, public pressure, and where people may misread you.`,
+    deepSelf: `Your deeper layer begins with the animal fields: ${branchNames}. These totems describe instinct, memory, attachment, and pressure responses without turning you into a perfect personality type.`,
+    career: `Career will be read through ${mappedPlanetName}, five-element distribution, and practical behavior: leverage, money pattern, and energy leaks.`,
     love:
-      "Love will be its own module: attraction pattern, emotional boundary, and repeated intimacy script.",
-    growth: `Growth will focus on the gift and blind spot of ${dayDisplay.stemMeaning}.`,
+      "Love will be its own module: attraction pattern, emotional boundary, projection risk, and repeated intimacy script.",
+    growth: `Growth will focus on the gift and weak spot of ${dayDisplay.stemMeaning}.`,
     health:
       "Health will stay in the lane of rhythm, recovery, and body awareness, without medical diagnosis.",
   };
@@ -417,7 +417,11 @@ export default async function ReportPage({
   } satisfies ReportGenerationContext;
 
   return (
-    <main className="report-shell">
+    <main
+      className="report-shell"
+      data-report-export
+      data-report-title={headline}
+    >
       <div className="report-backdrop" aria-hidden="true">
         <Image src="/destinypixel-deep-space.png" alt="" fill priority />
         <span />

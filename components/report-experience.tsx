@@ -1,13 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { Dispatch, SetStateAction } from "react";
+import type { Dispatch, FormEvent, SetStateAction } from "react";
 import {
+  AlertCircle,
   BookOpenText,
   CalendarClock,
   ChevronDown,
+  Check,
+  Download,
+  FileImage,
+  LogIn,
   Loader2,
   Orbit,
+  Save,
   Sparkles,
 } from "lucide-react";
 import type { NatalBookSections } from "@/lib/ai/report";
@@ -26,6 +32,24 @@ type StreamStatus = "idle" | "loading" | "ready" | "error";
 type ActiveTab = "natal" | "transits";
 type NatalKey = keyof NatalBookSections;
 type TransitKey = TransitSectionKey;
+type AuthMode = "login" | "register";
+type ActionTone = "neutral" | "success" | "error";
+
+type MemberSummary = {
+  id: string;
+  email: string;
+  name: string | null;
+  plan: "free" | "vip";
+};
+
+type SavedReportSummary = {
+  id: string;
+  reportId: string;
+  title: string;
+  locale: string;
+  createdAt: string;
+  updatedAt: string;
+};
 
 type SectionConfig<Key extends string> = {
   key: Key;
@@ -93,6 +117,143 @@ const transitSections: Array<SectionConfig<TransitKey>> = [
     kicker: section.enKicker,
   })),
 ];
+
+const reportActionCopy = {
+  en: {
+    save: "Save to account",
+    saved: "Report saved to your account.",
+    saveBusy: "Saving...",
+    image: "Save long PNG",
+    imageBusy: "Rendering image...",
+    pdf: "Download PDF",
+    pdfBusy: "Preparing PDF...",
+    loginNeeded: "Log in or create an account to save this report.",
+    signedIn: "Signed in",
+    savedCount: "Saved reports",
+    logout: "Log out",
+    authTitle: "Save this report",
+    authSubtitle: "Create a private test account now. Social login can be added later.",
+    login: "Log in",
+    register: "Create account",
+    name: "Name",
+    namePlaceholder: "Optional display name",
+    email: "Email",
+    password: "Password",
+    confirmPassword: "Confirm password",
+    authBusy: "Processing...",
+    authDone: "Account ready. You can save the report now.",
+    exportHint:
+      "Tip: open Monthly Timing and wait for it to finish if you want the export to include annual timing.",
+    exportError: "Export failed. Please try again after the report finishes loading.",
+  },
+  zh: {
+    save: "保存到账号",
+    saved: "报告已保存到你的账号。",
+    saveBusy: "正在保存...",
+    image: "保存长图 PNG",
+    imageBusy: "正在生成长图...",
+    pdf: "下载 PDF",
+    pdfBusy: "正在生成 PDF...",
+    loginNeeded: "登录或注册后即可把这份报告保存到账号。",
+    signedIn: "已登录",
+    savedCount: "已保存报告",
+    logout: "退出",
+    authTitle: "保存这份报告",
+    authSubtitle: "先用邮箱搭建测试账号；微信、Google 登录后面可以继续接。",
+    login: "登录",
+    register: "注册账号",
+    name: "姓名",
+    namePlaceholder: "可选显示名",
+    email: "邮箱",
+    password: "密码",
+    confirmPassword: "确认密码",
+    authBusy: "处理中...",
+    authDone: "账号已就绪，现在可以保存报告。",
+    exportHint: "提示：如果要把年运月令也导出，请先打开年运月令并等待生成完成。",
+    exportError: "导出失败，请等报告加载完成后再试一次。",
+  },
+  ru: {
+    save: "Сохранить в аккаунт",
+    saved: "Отчет сохранен в аккаунте.",
+    saveBusy: "Сохранение...",
+    image: "Сохранить PNG",
+    imageBusy: "Создание изображения...",
+    pdf: "Скачать PDF",
+    pdfBusy: "Подготовка PDF...",
+    loginNeeded: "Войдите или создайте аккаунт, чтобы сохранить отчет.",
+    signedIn: "Вход выполнен",
+    savedCount: "Сохраненные отчеты",
+    logout: "Выйти",
+    authTitle: "Сохранить отчет",
+    authSubtitle:
+      "Пока это тестовый аккаунт по email; Google и WeChat можно добавить позже.",
+    login: "Войти",
+    register: "Создать аккаунт",
+    name: "Имя",
+    namePlaceholder: "Необязательное имя",
+    email: "Email",
+    password: "Пароль",
+    confirmPassword: "Повторите пароль",
+    authBusy: "Обработка...",
+    authDone: "Аккаунт готов. Теперь можно сохранить отчет.",
+    exportHint:
+      "Совет: откройте месячный прогноз и дождитесь завершения, если хотите включить его в экспорт.",
+    exportError: "Экспорт не удался. Попробуйте после полной загрузки отчета.",
+  },
+} satisfies Record<
+  keyof typeof reportCopy,
+  Record<string, string>
+>;
+
+const allNatalSectionsOpen = {
+  dayMaster: true,
+  outerPersona: true,
+  deepSelf: true,
+  career: true,
+  love: true,
+  growth: true,
+  health: true,
+} satisfies Record<NatalKey, boolean>;
+
+function waitForPaint() {
+  return new Promise<void>((resolve) => {
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+  });
+}
+
+function safeFileName(value: string) {
+  const cleaned = value
+    .trim()
+    .replace(/[\\/:*?"<>|]+/g, "-")
+    .replace(/\s+/g, "-")
+    .slice(0, 90);
+
+  return cleaned || "destinypixel-report";
+}
+
+function buildReportTitle(context: ReportGenerationContext) {
+  return `${context.profile.displayName} x ${context.astrology.sunSign} ${context.birth.birthDate}`;
+}
+
+function getExportTarget() {
+  const target = document.querySelector<HTMLElement>("[data-report-export]");
+
+  if (!target) throw new Error("Report export target was not found.");
+
+  return target;
+}
+
+function downloadBlob(blob: Blob, fileName: string) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
 
 function parseMarkedSections<Key extends string>(
   raw: string,
@@ -250,6 +411,8 @@ export default function ReportExperience({
   initialNatal: NatalBookSections;
 }) {
   const copy = reportCopy[context.locale];
+  const actionCopy = reportActionCopy[context.locale];
+  const reportTitle = useMemo(() => buildReportTitle(context), [context]);
   const luck = context.bazi.luck;
   const startAgeDisplay = luck
     ? context.locale === "zh"
@@ -263,6 +426,20 @@ export default function ReportExperience({
   const [transitRaw, setTransitRaw] = useState("");
   const [natalStatus, setNatalStatus] = useState<StreamStatus>("idle");
   const [transitStatus, setTransitStatus] = useState<StreamStatus>("idle");
+  const [exportMode, setExportMode] = useState(false);
+  const [exportBusy, setExportBusy] = useState<"idle" | "image" | "pdf">("idle");
+  const [member, setMember] = useState<MemberSummary | null>(null);
+  const [savedReports, setSavedReports] = useState<SavedReportSummary[]>([]);
+  const [saveBusy, setSaveBusy] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<AuthMode>("login");
+  const [authName, setAuthName] = useState("");
+  const [authEmail, setAuthEmail] = useState("");
+  const [authPassword, setAuthPassword] = useState("");
+  const [authPasswordConfirm, setAuthPasswordConfirm] = useState("");
+  const [authBusy, setAuthBusy] = useState(false);
+  const [actionMessage, setActionMessage] = useState("");
+  const [actionTone, setActionTone] = useState<ActionTone>("neutral");
   const [openNatal, setOpenNatal] = useState<Record<NatalKey, boolean>>({
     dayMaster: true,
     outerPersona: false,
@@ -314,6 +491,33 @@ export default function ReportExperience({
   );
 
   useEffect(() => {
+    let isMounted = true;
+
+    void fetch("/api/members/me", {
+      cache: "no-store",
+      credentials: "include",
+    })
+      .then(async (response) => {
+        if (!isMounted || !response.ok) return;
+
+        const result = (await response.json()) as {
+          member?: MemberSummary | null;
+          reports?: SavedReportSummary[];
+        };
+
+        setMember(result.member ?? null);
+        setSavedReports(result.reports ?? []);
+      })
+      .catch(() => {
+        // Silent by design: account entry is optional at this stage.
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
     void streamEndpoint("/api/generate-natal", setNatalRaw, setNatalStatus);
   }, [streamEndpoint]);
 
@@ -337,6 +541,231 @@ export default function ReportExperience({
   );
   const transitOverview = getTransitOverviewDisplay(context.locale);
 
+  function buildReportSnapshot() {
+    return {
+      context,
+      natal: natalContent,
+      transits: transitContent,
+      raw: {
+        natal: natalRaw,
+        transits: transitRaw,
+      },
+      statuses: {
+        natal: natalStatus,
+        transits: transitStatus,
+      },
+      savedFrom: "report-page",
+    };
+  }
+
+  async function submitAuth(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setAuthBusy(true);
+    setActionMessage("");
+
+    try {
+      const response = await fetch(`/api/members/auth/${authMode}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          name: authName,
+          email: authEmail,
+          password: authPassword,
+          passwordConfirm: authPasswordConfirm,
+        }),
+      });
+      const result = (await response.json()) as {
+        member?: MemberSummary;
+        error?: string;
+      };
+
+      if (!response.ok || !result.member) {
+        throw new Error(result.error ?? actionCopy.loginNeeded);
+      }
+
+      setMember(result.member);
+      setAuthOpen(false);
+      setAuthPassword("");
+      setAuthPasswordConfirm("");
+      setActionTone("success");
+      setActionMessage(actionCopy.authDone);
+    } catch (error) {
+      setActionTone("error");
+      setActionMessage(error instanceof Error ? error.message : actionCopy.loginNeeded);
+    } finally {
+      setAuthBusy(false);
+    }
+  }
+
+  async function logoutMember() {
+    await fetch("/api/members/auth/logout", {
+      method: "POST",
+      credentials: "include",
+    }).catch(() => undefined);
+    setMember(null);
+    setSavedReports([]);
+  }
+
+  async function saveReport() {
+    if (saveBusy) return;
+
+    if (!member) {
+      setAuthOpen(true);
+      setActionTone("neutral");
+      setActionMessage(actionCopy.loginNeeded);
+      return;
+    }
+
+    setActionTone("neutral");
+    setActionMessage(actionCopy.saveBusy);
+    setSaveBusy(true);
+
+    try {
+      const response = await fetch("/api/members/saved-reports", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          reportId: context.reportId,
+          title: reportTitle,
+          locale: context.locale,
+          snapshot: buildReportSnapshot(),
+        }),
+      });
+      const result = (await response.json()) as {
+        report?: SavedReportSummary;
+        error?: string;
+      };
+
+      if (!response.ok || !result.report) {
+        if (response.status === 401) setAuthOpen(true);
+        throw new Error(result.error ?? actionCopy.loginNeeded);
+      }
+
+      setSavedReports((current) => [
+        result.report!,
+        ...current.filter((report) => report.reportId !== result.report!.reportId),
+      ]);
+      setActionTone("success");
+      setActionMessage(actionCopy.saved);
+    } catch (error) {
+      setActionTone("error");
+      setActionMessage(error instanceof Error ? error.message : actionCopy.loginNeeded);
+    } finally {
+      setSaveBusy(false);
+    }
+  }
+
+  async function captureReportCanvas() {
+    const { default: html2canvas } = await import("html2canvas");
+    const previousOpenNatal = openNatal;
+
+    setExportMode(true);
+    setOpenNatal(allNatalSectionsOpen);
+    document.body.classList.add("report-exporting");
+
+    try {
+      await waitForPaint();
+
+      const target = getExportTarget();
+
+      return await html2canvas(target, {
+        allowTaint: false,
+        backgroundColor: "#fffdf8",
+        imageTimeout: 15000,
+        logging: false,
+        scale: Math.min(1.5, window.devicePixelRatio || 1),
+        scrollX: 0,
+        scrollY: -window.scrollY,
+        useCORS: true,
+        windowHeight: Math.max(target.scrollHeight, window.innerHeight),
+        windowWidth: Math.max(target.scrollWidth, window.innerWidth),
+      });
+    } finally {
+      document.body.classList.remove("report-exporting");
+      setExportMode(false);
+      setOpenNatal(previousOpenNatal);
+    }
+  }
+
+  async function downloadLongImage() {
+    if (exportBusy !== "idle") return;
+
+    setExportBusy("image");
+    setActionTone("neutral");
+    setActionMessage(actionCopy.exportHint);
+
+    try {
+      const canvas = await captureReportCanvas();
+      const blob = await new Promise<Blob>((resolve, reject) => {
+        canvas.toBlob((value) => {
+          if (value) resolve(value);
+          else reject(new Error("Canvas export failed."));
+        }, "image/png");
+      });
+
+      downloadBlob(blob, `${safeFileName(reportTitle)}.png`);
+      setActionTone("success");
+      setActionMessage(actionCopy.image);
+    } catch {
+      setActionTone("error");
+      setActionMessage(actionCopy.exportError);
+    } finally {
+      setExportBusy("idle");
+    }
+  }
+
+  async function downloadPdf() {
+    if (exportBusy !== "idle") return;
+
+    setExportBusy("pdf");
+    setActionTone("neutral");
+    setActionMessage(actionCopy.exportHint);
+
+    try {
+      const [{ jsPDF }, canvas] = await Promise.all([
+        import("jspdf"),
+        captureReportCanvas(),
+      ]);
+      const pdf = new jsPDF({
+        compress: true,
+        format: "a4",
+        orientation: "portrait",
+        unit: "mm",
+      });
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const imageHeight = (canvas.height * pageWidth) / canvas.width;
+      const imageData = canvas.toDataURL("image/jpeg", 0.92);
+      let heightLeft = imageHeight;
+      let position = 0;
+
+      pdf.addImage(imageData, "JPEG", 0, position, pageWidth, imageHeight);
+      heightLeft -= pageHeight;
+
+      while (heightLeft > 0) {
+        position = heightLeft - imageHeight;
+        pdf.addPage();
+        pdf.addImage(imageData, "JPEG", 0, position, pageWidth, imageHeight);
+        heightLeft -= pageHeight;
+      }
+
+      pdf.save(`${safeFileName(reportTitle)}.pdf`);
+      setActionTone("success");
+      setActionMessage(actionCopy.pdf);
+    } catch {
+      setActionTone("error");
+      setActionMessage(actionCopy.exportError);
+    } finally {
+      setExportBusy("idle");
+    }
+  }
+
   function activateTab(tab: ActiveTab) {
     setActiveTab(tab);
 
@@ -350,8 +779,172 @@ export default function ReportExperience({
   }
 
   return (
-    <section className="report-workspace">
-      <div className="report-tabs" role="tablist" aria-label={copy.tabs.aria}>
+    <section className="report-workspace" data-exporting={exportMode}>
+      <div className="report-action-bar" data-export-hide>
+        <div className="report-account-state">
+          {member ? (
+            <>
+              <Check size={15} aria-hidden="true" />
+              <span>
+                {actionCopy.signedIn} · {member.email}
+              </span>
+              <small>
+                {actionCopy.savedCount}: {savedReports.length}
+              </small>
+              <button type="button" onClick={logoutMember}>
+                {actionCopy.logout}
+              </button>
+            </>
+          ) : (
+            <>
+              <LogIn size={15} aria-hidden="true" />
+              <span>{actionCopy.loginNeeded}</span>
+            </>
+          )}
+        </div>
+
+        <div className="report-action-buttons">
+          <button type="button" onClick={saveReport} disabled={saveBusy}>
+            {saveBusy ? (
+              <Loader2 size={15} className="loading-icon" aria-hidden="true" />
+            ) : (
+              <Save size={15} aria-hidden="true" />
+            )}
+            {saveBusy ? actionCopy.saveBusy : actionCopy.save}
+          </button>
+          <button
+            type="button"
+            onClick={downloadLongImage}
+            disabled={exportBusy !== "idle"}
+          >
+            {exportBusy === "image" ? (
+              <Loader2 size={15} className="loading-icon" aria-hidden="true" />
+            ) : (
+              <FileImage size={15} aria-hidden="true" />
+            )}
+            {exportBusy === "image" ? actionCopy.imageBusy : actionCopy.image}
+          </button>
+          <button
+            type="button"
+            onClick={downloadPdf}
+            disabled={exportBusy !== "idle"}
+          >
+            {exportBusy === "pdf" ? (
+              <Loader2 size={15} className="loading-icon" aria-hidden="true" />
+            ) : (
+              <Download size={15} aria-hidden="true" />
+            )}
+            {exportBusy === "pdf" ? actionCopy.pdfBusy : actionCopy.pdf}
+          </button>
+        </div>
+      </div>
+
+      {authOpen ? (
+        <form className="member-auth-panel" onSubmit={submitAuth} data-export-hide>
+          <div className="member-auth-panel__heading">
+            <div>
+              <span>{actionCopy.authTitle}</span>
+              <p>{actionCopy.authSubtitle}</p>
+            </div>
+            <div className="member-auth-switch" role="group" aria-label={actionCopy.authTitle}>
+              <button
+                type="button"
+                data-active={authMode === "login"}
+                onClick={() => setAuthMode("login")}
+              >
+                {actionCopy.login}
+              </button>
+              <button
+                type="button"
+                data-active={authMode === "register"}
+                onClick={() => setAuthMode("register")}
+              >
+                {actionCopy.register}
+              </button>
+            </div>
+          </div>
+
+          <div className="member-auth-grid">
+            {authMode === "register" ? (
+              <label>
+                <span>{actionCopy.name}</span>
+                <input
+                  type="text"
+                  value={authName}
+                  onChange={(event) => setAuthName(event.target.value)}
+                  placeholder={actionCopy.namePlaceholder}
+                  autoComplete="name"
+                />
+              </label>
+            ) : null}
+            <label>
+              <span>{actionCopy.email}</span>
+              <input
+                type="email"
+                value={authEmail}
+                onChange={(event) => setAuthEmail(event.target.value)}
+                autoComplete="email"
+                required
+              />
+            </label>
+            <label>
+              <span>{actionCopy.password}</span>
+              <input
+                type="password"
+                value={authPassword}
+                onChange={(event) => setAuthPassword(event.target.value)}
+                autoComplete={authMode === "login" ? "current-password" : "new-password"}
+                required
+              />
+            </label>
+            {authMode === "register" ? (
+              <label>
+                <span>{actionCopy.confirmPassword}</span>
+                <input
+                  type="password"
+                  value={authPasswordConfirm}
+                  onChange={(event) => setAuthPasswordConfirm(event.target.value)}
+                  autoComplete="new-password"
+                  required
+                />
+              </label>
+            ) : null}
+          </div>
+
+          <button className="member-auth-submit" type="submit" disabled={authBusy}>
+            {authBusy ? (
+              <Loader2 size={15} className="loading-icon" aria-hidden="true" />
+            ) : (
+              <LogIn size={15} aria-hidden="true" />
+            )}
+            {authBusy
+              ? actionCopy.authBusy
+              : authMode === "register"
+                ? actionCopy.register
+                : actionCopy.login}
+          </button>
+        </form>
+      ) : null}
+
+      {actionMessage ? (
+        <p className="report-action-message" data-tone={actionTone} data-export-hide>
+          {actionTone === "success" ? (
+            <Check size={14} aria-hidden="true" />
+          ) : actionTone === "error" ? (
+            <AlertCircle size={14} aria-hidden="true" />
+          ) : (
+            <Sparkles size={14} aria-hidden="true" />
+          )}
+          {actionMessage}
+        </p>
+      ) : null}
+
+      <div
+        className="report-tabs"
+        role="tablist"
+        aria-label={copy.tabs.aria}
+        data-export-hide
+      >
         <button
           type="button"
           role="tab"
@@ -372,7 +965,7 @@ export default function ReportExperience({
         </button>
       </div>
 
-      {activeTab === "natal" ? (
+      {exportMode || activeTab === "natal" ? (
         <div className="report-tab-panel" role="tabpanel">
           <div className="report-panel-heading">
             <div>
@@ -393,7 +986,7 @@ export default function ReportExperience({
                 title={copy.accordion[section.key].title}
                 kicker={copy.accordion[section.key].kicker}
                 content={natalContent[section.key]}
-                isOpen={openNatal[section.key]}
+                isOpen={exportMode || openNatal[section.key]}
                 isLoading={natalStatus === "loading"}
                 loadingLabel={copy.status.generating}
                 queuedLabel={copy.status.queued}
@@ -407,7 +1000,9 @@ export default function ReportExperience({
             ))}
           </div>
         </div>
-      ) : (
+      ) : null}
+
+      {exportMode || activeTab === "transits" ? (
         <div className="report-tab-panel" role="tabpanel">
           <div className="report-panel-heading">
             <div>
@@ -512,7 +1107,7 @@ export default function ReportExperience({
             <a href="#vip">{copy.vip.action}</a>
           </div>
         </div>
-      )}
+      ) : null}
     </section>
   );
 }

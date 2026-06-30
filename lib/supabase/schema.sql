@@ -91,3 +91,38 @@ create policy english_members_test_update
 
 grant usage on schema public to anon;
 grant select, insert, update on public.english_members to anon;
+
+create table if not exists public.destiny_members (
+  id uuid primary key default gen_random_uuid(),
+  email text not null,
+  email_normalized text not null unique,
+  name text,
+  password_salt text not null,
+  password_hash text not null,
+  session_token_hash text,
+  session_expires_at timestamptz,
+  plan text not null default 'free',
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.saved_reports (
+  id uuid primary key default gen_random_uuid(),
+  member_id uuid not null references public.destiny_members(id) on delete cascade,
+  report_id text not null,
+  title text not null,
+  locale text not null default 'en',
+  report_snapshot jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (member_id, report_id)
+);
+
+create index if not exists destiny_members_email_normalized_idx
+  on public.destiny_members(email_normalized);
+create index if not exists destiny_members_session_token_hash_idx
+  on public.destiny_members(session_token_hash);
+create index if not exists saved_reports_member_id_idx
+  on public.saved_reports(member_id);
+create index if not exists saved_reports_updated_at_idx
+  on public.saved_reports(updated_at desc);

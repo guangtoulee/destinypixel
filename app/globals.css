@@ -1864,6 +1864,221 @@ a {
   padding: clamp(18px, 3vw, 28px);
 }
 
+.report-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.report-account-state,
+.report-action-message,
+.member-auth-panel {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.018)),
+    rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.report-account-state {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  color: #9c96a1;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.report-account-state > svg {
+  flex: none;
+  color: #d6bb7c;
+}
+
+.report-account-state span {
+  overflow: hidden;
+  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.report-account-state small {
+  flex: none;
+  color: #706b76;
+  font-size: 10px;
+}
+
+.report-account-state button {
+  flex: none;
+  cursor: pointer;
+  border: 0;
+  color: #d6bb7c;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.report-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.report-action-buttons button,
+.member-auth-submit {
+  display: inline-flex;
+  min-height: 38px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid rgba(201, 168, 106, 0.24);
+  border-radius: 7px;
+  color: #171006;
+  background: linear-gradient(135deg, #ead49e, #b98b4d);
+  font-size: 11px;
+  font-weight: 800;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.report-action-buttons button:hover,
+.member-auth-submit:hover {
+  box-shadow: 0 14px 32px rgba(201, 168, 106, 0.16);
+  transform: translateY(-1px);
+}
+
+.report-action-buttons button:disabled,
+.member-auth-submit:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
+.member-auth-panel {
+  display: grid;
+  gap: 16px;
+  margin: 0 0 16px;
+  padding: 16px;
+}
+
+.member-auth-panel__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.member-auth-panel__heading span,
+.member-auth-grid label span {
+  display: block;
+  color: #9b8154;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.member-auth-panel__heading p {
+  margin: 6px 0 0;
+  color: #8f8a96;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.member-auth-switch {
+  display: inline-flex;
+  flex: none;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.member-auth-switch button {
+  min-height: 30px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  color: #8e8995;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.member-auth-switch button[data-active="true"] {
+  color: #1b1307;
+  background: linear-gradient(135deg, #ead49e, #b98b4d);
+}
+
+.member-auth-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.member-auth-grid label {
+  display: grid;
+  gap: 7px;
+}
+
+.member-auth-grid input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  color: #eee7dc;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  outline: none;
+  padding-inline: 11px;
+}
+
+.member-auth-grid input:focus {
+  border-color: rgba(214, 187, 124, 0.42);
+  box-shadow: 0 0 0 4px rgba(201, 168, 106, 0.08);
+}
+
+.member-auth-submit {
+  width: max-content;
+}
+
+.report-action-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  color: #d6bb7c;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.report-action-message[data-tone="success"] {
+  border-color: rgba(131, 201, 195, 0.24);
+  color: #a8d9d5;
+}
+
+.report-action-message[data-tone="error"] {
+  border-color: rgba(234, 212, 158, 0.32);
+  color: #ead49e;
+}
+
+.report-workspace[data-exporting="true"] .report-tab-panel {
+  margin-top: 28px;
+}
+
 .report-tabs {
   display: inline-flex;
   gap: 6px;
@@ -4333,6 +4548,9 @@ a {
 .transit-overview-card,
 .report-modules article,
 .vip-panel,
+.report-account-state,
+.report-action-message,
+.member-auth-panel,
 .report-loading__visual,
 .report-loading__panel {
   border-color: rgba(91, 80, 73, 0.12);
@@ -4342,6 +4560,60 @@ a {
   box-shadow:
     0 34px 90px rgba(126, 111, 96, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.report-account-state,
+.member-auth-panel__heading p {
+  color: #7b736d;
+}
+
+.report-account-state small {
+  color: #9a9088;
+}
+
+.report-account-state button {
+  color: #9d7d4c;
+}
+
+.report-action-buttons button,
+.member-auth-submit,
+.member-auth-switch button[data-active="true"] {
+  color: #fff;
+  background: linear-gradient(135deg, #8f7d68, #c9a76e 48%, #c7b6cc);
+}
+
+.member-auth-switch {
+  border-color: rgba(91, 80, 73, 0.12);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.member-auth-switch button {
+  color: #8a817a;
+}
+
+.member-auth-grid input {
+  border-color: rgba(91, 80, 73, 0.12);
+  color: #2f2926;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.member-auth-grid input:focus {
+  border-color: rgba(176, 146, 96, 0.36);
+  box-shadow: 0 0 0 4px rgba(176, 146, 96, 0.1);
+}
+
+.report-action-message {
+  color: #9d7d4c;
+}
+
+.report-action-message[data-tone="success"] {
+  border-color: rgba(134, 164, 145, 0.28);
+  color: #718964;
+}
+
+.report-action-message[data-tone="error"] {
+  border-color: rgba(160, 92, 76, 0.28);
+  color: #9d5c4c;
 }
 
 .report-tabs {
@@ -4491,7 +4763,89 @@ a {
   color: #8c6d3e;
 }
 
+body.report-exporting {
+  overflow: visible !important;
+}
+
+body.report-exporting [data-export-hide] {
+  display: none !important;
+}
+
+body.report-exporting .report-shell {
+  overflow: visible !important;
+}
+
+body.report-exporting .report-header {
+  display: none !important;
+}
+
+@media print {
+  .report-header,
+  [data-export-hide] {
+    display: none !important;
+  }
+
+  .report-shell {
+    overflow: visible !important;
+    min-height: auto;
+    padding-bottom: 0;
+    background: #fffdf8 !important;
+  }
+
+  .report-backdrop {
+    display: none !important;
+  }
+
+  .report-body,
+  .report-hero {
+    break-inside: avoid;
+  }
+
+  .report-accordion-card,
+  .season-card,
+  .transit-overview-card {
+    break-inside: avoid;
+  }
+}
+
 @media (max-width: 640px) {
+  .report-action-bar,
+  .member-auth-panel__heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .report-action-buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .report-action-buttons button,
+  .member-auth-submit {
+    width: 100%;
+    min-height: 44px;
+    font-size: 13px;
+  }
+
+  .report-account-state {
+    width: 100%;
+  }
+
+  .member-auth-switch,
+  .member-auth-submit {
+    width: 100%;
+  }
+
+  .member-auth-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .member-auth-grid {
+    grid-template-columns: 1fr;
+  }
+
   .report-identity-grid > div {
     border-top-color: rgba(91, 80, 73, 0.12);
   }
