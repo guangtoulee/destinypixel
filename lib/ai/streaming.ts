@@ -118,7 +118,7 @@ export type ReportGenerationContext = {
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ??
   "https://api.deepseek.com/v1/chat/completions";
-const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-chat";
+const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 
 type ChatMessage = { role: "system" | "user"; content: string };
 

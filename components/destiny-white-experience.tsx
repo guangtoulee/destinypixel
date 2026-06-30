@@ -7,10 +7,13 @@ import {
   ArrowRight,
   CalendarDays,
   Check,
+  Hand,
   Languages,
   Loader2,
   MapPin,
+  MessageCircle,
   Orbit,
+  ScanFace,
   ShieldCheck,
   Sparkles,
   Stars,
@@ -33,6 +36,7 @@ type WhiteCopy = {
     method: string;
     archetypes: string;
     report: string;
+    insights: string;
     black: string;
   };
   hero: {
@@ -80,6 +84,17 @@ type WhiteCopy = {
     description: string;
     chips: string[];
   };
+  insights: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: Array<{
+      title: string;
+      body: string;
+      href: string;
+      cta: string;
+    }>;
+  };
   premium: {
     eyebrow: string;
     title: string;
@@ -95,6 +110,7 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       method: "The System",
       archetypes: "Energy Cards",
       report: "Start Reading",
+      insights: "Insight Studios",
       black: "Dark mode",
     },
     hero: {
@@ -159,6 +175,32 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         "The Dewy Rabbit suggests sensitivity, social grace, and quiet perception. A Pisces Sun echoes imagination, permeability, and a soul that heals through beauty.",
       chips: ["Gentle sensitivity", "Social intuition", "Pisces Sun", "Emotional healing"],
     },
+    insights: {
+      eyebrow: "Beyond the birth map",
+      title: "Palm, face, and one-question readings for the moment you are in.",
+      description:
+        "When you do not need a full birth report, open a smaller mirror: align a photo, confirm visible signals, or cast the question time into a Liuyao and Tarot reading.",
+      items: [
+        {
+          title: "Palm Studio",
+          body: "Guided photo alignment plus confirmed lines and mounts, translated into direct rhythm, relationship, and work advice.",
+          href: "/palm",
+          cta: "Read palm",
+        },
+        {
+          title: "Face Studio",
+          body: "A careful symbolic reading of expression, facial zones, and social signal without identity or beauty scoring.",
+          href: "/face",
+          cta: "Read face",
+        },
+        {
+          title: "Question Oracle",
+          body: "One issue at a time: time-cast Liuyao lines meet a three-card Tarot mirror for a practical next step.",
+          href: "/oracle",
+          cta: "Ask now",
+        },
+      ],
+    },
     premium: {
       eyebrow: "From a free glimpse to deeper guidance",
       title: "A reading that feels like being understood.",
@@ -177,6 +219,7 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       method: "系统",
       archetypes: "能量卡",
       report: "开始解读",
+      insights: "洞察专区",
       black: "深色模式",
     },
     hero: {
@@ -241,6 +284,32 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         "雨露灵兔象征敏感、柔软、善于感知关系中的细微波动；双鱼座太阳进一步放大想象力、共情力与通过美来疗愈自己的能力。",
       chips: ["细腻感受力", "社交直觉", "太阳双鱼", "情绪疗愈"],
     },
+    insights: {
+      eyebrow: "出生地图之外",
+      title: "手相、面相、一事一问，给当下问题更快的镜子。",
+      description:
+        "当你暂时不需要完整出生报告时，可以打开更轻的洞察：拍照对齐、确认可见特征，或用起问时间生成六爻和塔罗合参。",
+      items: [
+        {
+          title: "手相专区",
+          body: "用定位线拍摄或上传手掌，确认掌纹与掌丘，再生成更直接的关系、工作、节奏建议。",
+          href: "/palm",
+          cta: "看手相",
+        },
+        {
+          title: "面相专区",
+          body: "观察神态、三庭与眉眼鼻口下颌，把外在呈现翻译成心理、社交和压力反应。",
+          href: "/face",
+          cta: "看面相",
+        },
+        {
+          title: "问事专区",
+          body: "一事一问，用起问时间起六爻，再配合塔罗三牌，得到更清楚的下一步。",
+          href: "/oracle",
+          cta: "马上问",
+        },
+      ],
+    },
     premium: {
       eyebrow: "从免费一瞥，到完整指引",
       title: "一份像被理解一样的阅读体验。",
@@ -255,6 +324,7 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       method: "Система",
       archetypes: "Карты энергии",
       report: "Начать",
+      insights: "Студии",
       black: "Темный режим",
     },
     hero: {
@@ -318,6 +388,32 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
       description:
         "Роса Кролика указывает на тонкость, социальную интуицию и мягкое восприятие. Солнце в Рыбах усиливает воображение, эмпатию и исцеление через красоту.",
       chips: ["Тонкая чувствительность", "Социальная интуиция", "Солнце в Рыбах", "Эмоциональное исцеление"],
+    },
+    insights: {
+      eyebrow: "За пределами карты рождения",
+      title: "Ладонь, лицо и один вопрос для текущего момента.",
+      description:
+        "Когда не нужен полный отчет, откройте более быстрые зеркала: фото-направляющие, подтвержденные признаки или вопрос по времени с Лю Яо и Таро.",
+      items: [
+        {
+          title: "Ладонь",
+          body: "Выравнивание фото, линии и холмы ладони превращаются в прямые советы о ритме, работе и отношениях.",
+          href: "/palm",
+          cta: "Читать ладонь",
+        },
+        {
+          title: "Лицо",
+          body: "Символическое чтение выражения, зон лица и социального сигнала без оценок личности или красоты.",
+          href: "/face",
+          cta: "Читать лицо",
+        },
+        {
+          title: "Оракул вопроса",
+          body: "Один вопрос: линии Лю Яо по времени плюс три карты Таро для практического следующего шага.",
+          href: "/oracle",
+          cta: "Задать вопрос",
+        },
+      ],
     },
     premium: {
       eyebrow: "От первого образа к глубокому руководству",
@@ -462,6 +558,7 @@ export default function DestinyWhiteExperience({
           <nav className="white-nav" aria-label="Primary navigation">
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
+            <a href="#insights">{text.nav.insights}</a>
             <a href="#report">{text.nav.report}</a>
           </nav>
 
@@ -758,6 +855,41 @@ export default function DestinyWhiteExperience({
                 <em key={chip}>{chip}</em>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="white-insights" id="insights">
+        <div className="white-container">
+          <div className="white-section-heading">
+            <p>{text.insights.eyebrow}</p>
+            <h2>{text.insights.title}</h2>
+            <span>{text.insights.description}</span>
+          </div>
+
+          <div className="white-insight-grid">
+            {text.insights.items.map((item, index) => {
+              const Icon = index === 0 ? Hand : index === 1 ? ScanFace : MessageCircle;
+
+              return (
+                <a
+                  href={`${item.href}?locale=${locale}`}
+                  className="white-insight-card"
+                  key={item.href}
+                >
+                  <span>
+                    <Icon size={23} aria-hidden="true" />
+                  </span>
+                  <small>{String(index + 1).padStart(2, "0")}</small>
+                  <strong>{item.title}</strong>
+                  <p>{item.body}</p>
+                  <em>
+                    {item.cta}
+                    <ArrowRight size={15} aria-hidden="true" />
+                  </em>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
