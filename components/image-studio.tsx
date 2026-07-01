@@ -102,10 +102,9 @@ const aspectOptions: Array<{ label: string; value: ImageAspectRatio }> = [
 const modelOptions: Array<{
   label: string;
   value: ImageModel;
-  cost: string;
 }> = [
-  { label: "高级", value: "grok-imagine-image-quality", cost: "$0.07" },
-  { label: "快速", value: "grok-imagine-image", cost: "$0.02" },
+  { label: "高级", value: "grok-imagine-image-quality" },
+  { label: "快速", value: "grok-imagine-image" },
 ];
 
 const styleOptions = [
@@ -265,6 +264,14 @@ function formatCost(value?: number) {
   return `$${value.toFixed(2)}`;
 }
 
+function getEstimatedUnitCost(model: ImageModel, resolution: ImageResolution) {
+  if (model === "grok-imagine-image-quality") {
+    return resolution === "1k" ? 0.05 : 0.07;
+  }
+
+  return 0.02;
+}
+
 function migrateGalleryItems(input: unknown): GalleryItem[] {
   if (!Array.isArray(input)) return [];
 
@@ -333,9 +340,8 @@ export default function ImageStudio() {
   const isBusy = status !== "idle";
 
   const estimatedRunCost = useMemo(() => {
-    const unit = model === "grok-imagine-image-quality" ? 0.07 : 0.02;
-    return unit * count;
-  }, [count, model]);
+    return getEstimatedUnitCost(model, resolution) * count;
+  }, [count, model, resolution]);
 
   const sortedGallery = useMemo(() => {
     return [...gallery].sort((left, right) => {
@@ -746,7 +752,9 @@ export default function ImageStudio() {
                   type="button"
                 >
                   <span>{option.label}</span>
-                  <small>{option.cost}</small>
+                  <small>
+                    {formatCost(getEstimatedUnitCost(option.value, resolution))}
+                  </small>
                 </button>
               ))}
             </div>
@@ -827,14 +835,32 @@ export default function ImageStudio() {
             </select>
           </label>
 
-          <label className={styles.toggleRow}>
-            <input
-              checked={enhancePrompt}
-              onChange={(event) => setEnhancePrompt(event.target.checked)}
-              type="checkbox"
-            />
-            <span>DeepSeek 精准解析中文描述</span>
-          </label>
+          <div className={styles.settingsBlock}>
+            <div className={styles.blockTitle}>
+              <Sparkles aria-hidden="true" />
+              <span>解析关键词</span>
+            </div>
+            <div className={styles.segmentedTwo}>
+              <button
+                aria-pressed={enhancePrompt}
+                className={enhancePrompt ? styles.activeSegment : ""}
+                onClick={() => setEnhancePrompt(true)}
+                type="button"
+              >
+                <span>开</span>
+                <small>DeepSeek</small>
+              </button>
+              <button
+                aria-pressed={!enhancePrompt}
+                className={!enhancePrompt ? styles.activeSegment : ""}
+                onClick={() => setEnhancePrompt(false)}
+                type="button"
+              >
+                <span>关</span>
+                <small>直接生成</small>
+              </button>
+            </div>
+          </div>
         </section>
 
         <section className={styles.previewSurface} aria-label="最新生成结果">

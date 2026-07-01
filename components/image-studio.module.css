@@ -460,22 +460,6 @@
   background: rgba(239, 195, 122, 0.16) !important;
 }
 
-.toggleRow {
-  display: flex;
-  min-height: 42px;
-  align-items: center;
-  gap: 10px;
-  color: #d8d0c5;
-  font-size: 13px;
-  font-weight: 720;
-}
-
-.toggleRow input {
-  width: 18px;
-  height: 18px;
-  accent-color: #efc37a;
-}
-
 .resultGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

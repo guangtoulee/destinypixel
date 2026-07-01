@@ -55,9 +55,15 @@ const DEEPSEEK_API_URL =
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 const DEEPSEEK_TIMEOUT_MS = Number(process.env.DEEPSEEK_TIMEOUT_MS ?? 18000);
 
-const MODEL_COST: Record<ImageModel, number> = {
-  "grok-imagine-image": 0.02,
-  "grok-imagine-image-quality": 0.07,
+const MODEL_COST: Record<ImageModel, Record<ImageResolution, number>> = {
+  "grok-imagine-image": {
+    "1k": 0.02,
+    "2k": 0.02,
+  },
+  "grok-imagine-image-quality": {
+    "1k": 0.05,
+    "2k": 0.07,
+  },
 };
 
 const ASPECT_RATIOS: ImageAspectRatio[] = [
@@ -324,7 +330,9 @@ export async function generateGrokImages({
       model,
       resolution,
       aspectRatio,
-      estimatedCostUsd: Number((MODEL_COST[model] * count).toFixed(2)),
+      estimatedCostUsd: Number(
+        (MODEL_COST[model][resolution] * count).toFixed(2),
+      ),
       raw: payload,
     };
   } finally {
