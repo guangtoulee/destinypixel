@@ -109,6 +109,7 @@ type InsightCopy = {
     situation: string;
     obstacle: string;
     advice: string;
+    castNote: string;
   };
   education: Record<
     InsightMode,
@@ -208,6 +209,8 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       situation: "Situation",
       obstacle: "Obstacle",
       advice: "Advice",
+      castNote:
+        "The system casts the hexagram and cards first from your question time and question text. AI interprets the fixed cast after that.",
     },
     education: {
       palm: {
@@ -227,7 +230,7 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       oracle: {
         title: "Question oracle notes",
         body: [
-          "The six-line cast is generated from the question time and read from bottom to top. Moving lines show where the situation is changing.",
+          "The six-line cast is generated from the question time, question text, and optional birth context, then read from bottom to top. Moving lines show where the situation is changing.",
           "Tarot adds a Western mirror: situation, obstacle, and advice. The useful output is not certainty; it is a sharper next move.",
         ],
       },
@@ -321,6 +324,8 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       situation: "现状",
       obstacle: "阻碍",
       advice: "建议",
+      castNote:
+        "系统先根据起问时间和问题生成卦象与塔罗牌，再交给 AI 解读；不是 AI 事后随口改牌。",
     },
     education: {
       palm: {
@@ -340,8 +345,8 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       oracle: {
         title: "问事怎么读",
         body: [
-          "六爻按起问时间生成，从下往上看六条线，动爻代表事情正在变化的位置。它更像一张当下局势图。",
-          "塔罗补充西方镜像：现状、阻碍、建议。最后的重点不是保证结果，而是帮你看清下一步该做什么、该避开什么。",
+          "六爻由起问时间、问题文本和可选出生信息共同生成，从下往上看六条线，动爻代表事情正在变化的位置。它更像一张当下局势图。",
+          "塔罗补充西方镜像：现状、阻碍、建议。系统先固定卦象和牌，再交给 AI 解读；重点不是保证结果，而是帮你看清下一步该做什么、该避开什么。",
         ],
       },
     },
@@ -434,6 +439,8 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       situation: "Ситуация",
       obstacle: "Препятствие",
       advice: "Совет",
+      castNote:
+        "Система сначала строит гексаграмму и карты по времени и тексту вопроса. AI затем толкует уже фиксированный расклад.",
     },
     education: {
       palm: {
@@ -453,7 +460,7 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       oracle: {
         title: "Как работает оракул",
         body: [
-          "Шесть линий строятся по времени вопроса и читаются снизу вверх. Движущиеся линии показывают, где ситуация меняется.",
+          "Шесть линий строятся по времени вопроса, тексту вопроса и необязательному контексту рождения, затем читаются снизу вверх. Движущиеся линии показывают, где ситуация меняется.",
           "Таро добавляет западное зеркало: ситуация, препятствие и совет. Цель — не гарантия, а более точный следующий шаг.",
         ],
       },
@@ -761,6 +768,41 @@ const tarotCards = [
   "The World",
 ];
 
+const tarotVisuals: Record<
+  string,
+  { number: string; symbol: string; zh: string; ru: string }
+> = {
+  "The Fool": { number: "0", symbol: "∞", zh: "愚者", ru: "Шут" },
+  "The Magician": { number: "I", symbol: "✦", zh: "魔术师", ru: "Маг" },
+  "The High Priestess": { number: "II", symbol: "☾", zh: "女祭司", ru: "Жрица" },
+  "The Empress": { number: "III", symbol: "♀", zh: "皇后", ru: "Императрица" },
+  "The Emperor": { number: "IV", symbol: "♔", zh: "皇帝", ru: "Император" },
+  "The Hierophant": { number: "V", symbol: "⚿", zh: "教皇", ru: "Иерофант" },
+  "The Lovers": { number: "VI", symbol: "♡", zh: "恋人", ru: "Влюбленные" },
+  "The Chariot": { number: "VII", symbol: "↟", zh: "战车", ru: "Колесница" },
+  Strength: { number: "VIII", symbol: "♌", zh: "力量", ru: "Сила" },
+  "The Hermit": { number: "IX", symbol: "◇", zh: "隐士", ru: "Отшельник" },
+  "Wheel of Fortune": { number: "X", symbol: "◎", zh: "命运之轮", ru: "Колесо фортуны" },
+  Justice: { number: "XI", symbol: "⚖", zh: "正义", ru: "Справедливость" },
+  "The Hanged Man": { number: "XII", symbol: "⌁", zh: "倒吊人", ru: "Повешенный" },
+  Death: { number: "XIII", symbol: "✕", zh: "死神", ru: "Смерть" },
+  Temperance: { number: "XIV", symbol: "☍", zh: "节制", ru: "Умеренность" },
+  "The Devil": { number: "XV", symbol: "♄", zh: "恶魔", ru: "Дьявол" },
+  "The Tower": { number: "XVI", symbol: "⌂", zh: "高塔", ru: "Башня" },
+  "The Star": { number: "XVII", symbol: "✶", zh: "星星", ru: "Звезда" },
+  "The Moon": { number: "XVIII", symbol: "☽", zh: "月亮", ru: "Луна" },
+  "The Sun": { number: "XIX", symbol: "☉", zh: "太阳", ru: "Солнце" },
+  Judgement: { number: "XX", symbol: "⌁", zh: "审判", ru: "Суд" },
+  "The World": { number: "XXI", symbol: "◎", zh: "世界", ru: "Мир" },
+};
+
+function getTarotName(card: string, locale: ReportLocale) {
+  if (locale === "zh") return tarotVisuals[card]?.zh ?? card;
+  if (locale === "ru") return tarotVisuals[card]?.ru ?? card;
+
+  return card;
+}
+
 function languageLabel(locale: ReportLocale) {
   if (locale === "zh") return "中文";
   if (locale === "ru") return "RU";
@@ -868,6 +910,90 @@ function SelectField({
         ))}
       </select>
     </label>
+  );
+}
+
+type OracleSeed = ReturnType<typeof buildOracleSeed>;
+
+function OracleVisualBoard({
+  copy,
+  locale,
+  seed,
+}: {
+  copy: InsightCopy;
+  locale: ReportLocale;
+  seed: OracleSeed;
+}) {
+  const tarotRoles = [
+    copy.oracle.situation,
+    copy.oracle.obstacle,
+    copy.oracle.advice,
+  ];
+
+  return (
+    <aside className="insight-oracle-preview">
+      <div className="oracle-hexagram-card">
+        <header>
+          <p>
+            <Clock3 size={15} aria-hidden="true" />
+            {copy.oracle.seedTitle}
+          </p>
+          <span>
+            {copy.oracle.upper}: {seed.upperTrigram}
+          </span>
+          <span>
+            {copy.oracle.lower}: {seed.lowerTrigram}
+          </span>
+        </header>
+
+        <div className="oracle-hexagram-visual" aria-label={copy.oracle.seedTitle}>
+          {[...seed.lines].reverse().map((line) => (
+            <div
+              className="oracle-hexagram-line"
+              key={line.index}
+              data-yang={line.yang}
+              data-moving={line.moving}
+            >
+              <small>{line.index}</small>
+              <span />
+              <em />
+              <b>{line.moving ? "●" : ""}</b>
+            </div>
+          ))}
+        </div>
+
+        <footer>
+          {copy.oracle.moving}:{" "}
+          {seed.movingLines.length ? seed.movingLines.join(", ") : "0"}
+        </footer>
+      </div>
+
+      <div className="oracle-tarot-gallery">
+        <strong>{copy.oracle.tarot}</strong>
+        <div>
+          {seed.tarot.map((card, index) => {
+            const visual = tarotVisuals[card];
+
+            return (
+              <article className="oracle-tarot-card" key={`${card}-${index}`}>
+                <small>{visual?.number ?? index + 1}</small>
+                <div className="oracle-tarot-card__art">
+                  <span>{visual?.symbol ?? "✦"}</span>
+                </div>
+                <p>{tarotRoles[index]}</p>
+                <h3>{getTarotName(card, locale)}</h3>
+                {locale !== "en" && <em>{card}</em>}
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      <p className="oracle-cast-note">
+        <ShieldCheck size={14} aria-hidden="true" />
+        {copy.oracle.castNote}
+      </p>
+    </aside>
   );
 }
 
@@ -1390,41 +1516,7 @@ export default function SymbolicInsightExperience({
                   </label>
                 </div>
 
-                <aside className="insight-oracle-preview">
-                  <div>
-                    <p>
-                      <Clock3 size={15} aria-hidden="true" />
-                      {copy.oracle.seedTitle}
-                    </p>
-                    <span>
-                      {copy.oracle.upper}: {oracleSeed.upperTrigram}
-                    </span>
-                    <span>
-                      {copy.oracle.lower}: {oracleSeed.lowerTrigram}
-                    </span>
-                    <span>
-                      {copy.oracle.moving}:{" "}
-                      {oracleSeed.movingLines.length
-                        ? oracleSeed.movingLines.join(", ")
-                        : "0"}
-                    </span>
-                  </div>
-                  <div className="insight-liuyao-lines" aria-hidden="true">
-                    {[...oracleSeed.lines].reverse().map((line) => (
-                      <span
-                        key={line.index}
-                        data-yang={line.yang}
-                        data-moving={line.moving}
-                      />
-                    ))}
-                  </div>
-                  <div className="insight-tarot-strip">
-                    <strong>{copy.oracle.tarot}</strong>
-                    <span>{copy.oracle.situation}: {oracleSeed.tarot[0]}</span>
-                    <span>{copy.oracle.obstacle}: {oracleSeed.tarot[1]}</span>
-                    <span>{copy.oracle.advice}: {oracleSeed.tarot[2]}</span>
-                  </div>
-                </aside>
+                <OracleVisualBoard copy={copy} locale={locale} seed={oracleSeed} />
               </>
             )}
 

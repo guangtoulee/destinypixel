@@ -5300,13 +5300,31 @@ body.report-exporting .report-header {
 
 .insight-oracle-preview {
   display: grid;
-  gap: 18px;
+  gap: 16px;
   margin-top: 18px;
   padding: 18px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1fr);
 }
 
-.insight-oracle-preview p {
+.oracle-hexagram-card,
+.oracle-tarot-card {
+  border: 1px solid rgba(91, 80, 73, 0.12);
+  background:
+    radial-gradient(circle at 82% 16%, rgba(201, 220, 231, 0.38), transparent 36%),
+    rgba(255, 255, 255, 0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.oracle-hexagram-card {
+  display: grid;
+  min-height: 340px;
+  padding: 18px;
+  border-radius: 24px;
+  grid-template-rows: auto 1fr auto;
+}
+
+.oracle-hexagram-card header p,
+.oracle-tarot-gallery > strong {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -5318,7 +5336,7 @@ body.report-exporting .report-header {
   text-transform: uppercase;
 }
 
-.insight-oracle-preview span {
+.oracle-hexagram-card header span {
   display: block;
   margin-top: 7px;
   color: #6f6762;
@@ -5326,47 +5344,195 @@ body.report-exporting .report-header {
   line-height: 1.5;
 }
 
-.insight-liuyao-lines {
+.oracle-hexagram-visual {
   display: grid;
-  width: 92px;
-  gap: 8px;
+  gap: 10px;
   align-content: center;
+  justify-self: center;
+  width: min(100%, 180px);
+  padding-block: 16px;
 }
 
-.insight-liuyao-lines span {
+.oracle-hexagram-line {
   position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20px 1fr 18px 16px;
+  gap: 8px;
+}
+
+.oracle-hexagram-line small {
+  color: #b7a58a;
+  font-family: var(--font-display);
+  font-size: 13px;
+}
+
+.oracle-hexagram-line span,
+.oracle-hexagram-line em {
   display: block;
-  height: 8px;
+  height: 10px;
   border-radius: 999px;
-  background: #3f858b;
-}
-
-.insight-liuyao-lines span[data-yang="false"] {
-  background: linear-gradient(90deg, #3f858b 0 42%, transparent 42% 58%, #3f858b 58%);
-}
-
-.insight-liuyao-lines span[data-moving="true"]::after {
-  position: absolute;
-  top: 50%;
-  right: -15px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  content: "";
   background: #b59661;
-  transform: translateY(-50%);
 }
 
-.insight-tarot-strip {
-  grid-column: 1 / -1;
+.oracle-hexagram-line span {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3f858b, #6fb3ad);
+  box-shadow: 0 7px 16px rgba(63, 133, 139, 0.16);
+}
+
+.oracle-hexagram-line[data-yang="true"] span {
+  grid-column: 2 / 4;
+}
+
+.oracle-hexagram-line[data-yang="true"] em {
+  display: none;
+}
+
+.oracle-hexagram-line[data-yang="false"] em {
+  background: linear-gradient(135deg, #3f858b, #6fb3ad);
+  box-shadow: 0 7px 16px rgba(63, 133, 139, 0.16);
+}
+
+.oracle-hexagram-line b {
+  color: #b59661;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.oracle-hexagram-card footer {
   padding-top: 12px;
   border-top: 1px solid rgba(91, 80, 73, 0.1);
+  color: #756c66;
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.insight-tarot-strip strong {
+.oracle-tarot-gallery {
+  display: grid;
+  min-width: 0;
+  gap: 12px;
+}
+
+.oracle-tarot-gallery > div {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.oracle-tarot-card {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  min-height: 246px;
+  padding: 14px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow:
+    0 20px 44px rgba(126, 111, 96, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.oracle-tarot-card::before {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(181, 150, 97, 0.3);
+  border-radius: 15px;
+  content: "";
+  pointer-events: none;
+}
+
+.oracle-tarot-card small {
+  position: relative;
+  z-index: 1;
+  color: #a88655;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.oracle-tarot-card__art {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  justify-self: center;
+  margin-block: 16px;
+  border: 1px solid rgba(181, 150, 97, 0.28);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.78), transparent 56%),
+    conic-gradient(from 28deg, rgba(201, 220, 231, 0.7), rgba(233, 201, 193, 0.64), rgba(189, 201, 184, 0.68), rgba(201, 220, 231, 0.7));
+}
+
+.oracle-tarot-card__art::before,
+.oracle-tarot-card__art::after {
+  position: absolute;
+  inset: 13px;
+  border: 1px solid rgba(91, 80, 73, 0.13);
+  border-radius: 50%;
+  content: "";
+}
+
+.oracle-tarot-card__art::after {
+  inset: 27px;
+}
+
+.oracle-tarot-card__art span {
+  position: relative;
+  z-index: 1;
+  color: #6d5a40;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.oracle-tarot-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #9a7c4f;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.oracle-tarot-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 7px 0 0;
+  color: #2f2926;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 520;
+  line-height: 1.08;
+}
+
+.oracle-tarot-card em {
+  position: relative;
+  z-index: 1;
   display: block;
-  color: #302b28;
-  font-size: 13px;
+  margin-top: 7px;
+  color: #8a8078;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.oracle-cast-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(91, 80, 73, 0.1);
+  color: #81766f;
+  font-size: 11px;
+  line-height: 1.6;
 }
 
 .insight-submit-row {
@@ -5613,8 +5779,21 @@ body.report-exporting .report-header {
   }
 
   .insight-field--full,
-  .insight-tarot-strip {
+  .oracle-cast-note {
     grid-column: auto;
+  }
+
+  .oracle-tarot-gallery > div {
+    display: flex;
+    overflow-x: auto;
+    padding: 2px 2px 14px;
+    scroll-snap-type: x proximity;
+  }
+
+  .oracle-tarot-card {
+    flex: 0 0 min(72vw, 220px);
+    min-height: 252px;
+    scroll-snap-align: start;
   }
 
   .insight-field input,
