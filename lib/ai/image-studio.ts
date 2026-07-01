@@ -14,6 +14,20 @@ export type ImageResolution = "1k" | "2k";
 
 export type ImageModel = "grok-imagine-image" | "grok-imagine-image-quality";
 
+export type ImageAssetType =
+  | "poster"
+  | "portrait"
+  | "ecommerce"
+  | "infographic"
+  | "cartoon-character"
+  | "abstract-background"
+  | "landscape"
+  | "social"
+  | "logo-icon"
+  | "ui-mockup"
+  | "packaging"
+  | "scene";
+
 export type GeneratedImage = {
   url?: string;
   b64Json?: string;
@@ -61,6 +75,20 @@ const ASPECT_RATIOS: ImageAspectRatio[] = [
 
 const RESOLUTIONS: ImageResolution[] = ["1k", "2k"];
 const MODELS: ImageModel[] = ["grok-imagine-image", "grok-imagine-image-quality"];
+const ASSET_TYPES: ImageAssetType[] = [
+  "poster",
+  "portrait",
+  "ecommerce",
+  "infographic",
+  "cartoon-character",
+  "abstract-background",
+  "landscape",
+  "social",
+  "logo-icon",
+  "ui-mockup",
+  "packaging",
+  "scene",
+];
 
 function normalizeEnum<T extends string>(
   value: unknown,
@@ -82,6 +110,7 @@ export function normalizeImageRequest(input: Record<string, unknown>) {
   );
   const resolution = normalizeEnum(input.resolution, RESOLUTIONS, "2k");
   const aspectRatio = normalizeEnum(input.aspectRatio, ASPECT_RATIOS, "1:1");
+  const assetType = normalizeEnum(input.assetType, ASSET_TYPES, "poster");
   const count = Math.min(
     4,
     Math.max(1, Number.isFinite(Number(input.count)) ? Number(input.count) : 1),
@@ -91,6 +120,7 @@ export function normalizeImageRequest(input: Record<string, unknown>) {
     model,
     resolution,
     aspectRatio,
+    assetType,
     count: Math.floor(count),
   };
 }
@@ -137,11 +167,13 @@ function getErrorMessage(payload: unknown, fallback: string) {
 export async function refineImagePrompt({
   prompt,
   style,
+  assetType,
   aspectRatio,
   resolution,
 }: {
   prompt: string;
   style?: string;
+  assetType?: ImageAssetType;
   aspectRatio: ImageAspectRatio;
   resolution: ImageResolution;
 }) {
@@ -172,15 +204,26 @@ export async function refineImagePrompt({
           {
             role: "system",
             content:
-              "Rewrite the user's image idea into one polished English image-generation prompt. Preserve intent, add concrete composition, lighting, medium, color, and material details. Do not mention policies or explain your work. Return only the final prompt.",
+              [
+                "You are the prompt architect for a Chinese/English AI stock-asset website.",
+                "The user may write in Chinese, English, or mixed language. Understand the real commercial intent first, then convert it into one precise English image-generation prompt for Grok Imagine.",
+                "Preserve concrete product, person, place, color, cultural, era, and mood details from the user. Do not translate brand names, exact Chinese phrases, or proper nouns unless needed.",
+                "Infer the asset format from asset_type and aspect_ratio. Add composition, camera/viewpoint, subject hierarchy, material texture, lighting, background, color palette, negative space, and finish quality.",
+                "For posters and ecommerce, leave clean copy space unless the user gives exact text. For long infographics, design a vertical information layout with sections, icons, charts, and placeholder blocks; avoid tiny unreadable text. For cartoon characters, describe character sheet details, pose, expression, outfit, and clean silhouette. For portraits, specify framing, lens feel, styling, and realistic anatomy. For abstract backgrounds, avoid a single-color wash and include layered depth. For landscapes, include foreground, midground, background, season, atmosphere, and light.",
+                "If the user explicitly asks for visible text, include the exact requested text in quotes. Otherwise add: no readable text, no watermark, no logo.",
+                "Return only the final English prompt. No explanation, no bullets, no JSON.",
+              ].join(" "),
           },
           {
             role: "user",
             content: JSON.stringify({
               prompt,
+              asset_type: assetType || "poster",
               style: style || "editorial design asset",
               aspect_ratio: aspectRatio,
               resolution,
+              output_expectation:
+                "One production-ready prompt suitable for commercial material generation.",
             }),
           },
         ],

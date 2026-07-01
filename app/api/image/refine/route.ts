@@ -26,6 +26,7 @@ export async function POST(request: Request) {
   const result = await refineImagePrompt({
     prompt,
     style,
+    assetType: settings.assetType,
     aspectRatio: settings.aspectRatio,
     resolution: settings.resolution,
   });
