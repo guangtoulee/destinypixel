@@ -32,7 +32,7 @@ const symbolicReference = {
     anchors:
       "Use major lines (heart, head, life, fate), hand side, palm texture, finger proportion, mounts, and special markings. Do not make medical, legal, fertility, lifespan, or guaranteed event claims.",
     method:
-      "The uploaded/selfie image is only a local alignment aid. The model receives only the user's confirmed observations, so phrase analysis as 'from the confirmed palm signs'.",
+      "The uploaded/selfie image is only a local reference preview. The model receives only the user's confirmed observations, so phrase analysis as 'from the confirmed palm signs'.",
   },
   face: {
     frame:
@@ -40,7 +40,7 @@ const symbolicReference = {
     anchors:
       "Use three zones (forehead/midface/lower face), five features (brows, eyes, nose, mouth, jaw), symmetry, tension, expression, and user-confirmed notes. Avoid protected traits, identity, ethnicity, age guessing, attractiveness scoring, health diagnosis, or criminality claims.",
     method:
-      "The uploaded/selfie image is only a local alignment aid. The model receives only user-confirmed observations, so never claim to directly see the photo.",
+      "The uploaded/selfie image is only a local reference preview. The model receives only user-confirmed observations, so never claim to directly see the photo.",
   },
   oracle: {
     frame:
@@ -112,7 +112,7 @@ export function buildInsightMessages({
         `The final output language is ${outputLanguageNames[locale]}.`,
         "Your style is warm, oral, specific, and direct. You are allowed to be constructively sharp; avoid empty Barnum-effect comfort.",
         "Return plain text only. Do not use Markdown syntax, hash headings, bold markers, tables, or bullet lists. Section headings must be bare text lines.",
-        "Do not pretend to see an image. If the user uploaded or captured a photo, it was used only for local alignment; you only receive confirmed observations and structured inputs.",
+        "Do not pretend to see an image. If the user uploaded or captured a photo, it was used only as a local preview reference; you only receive confirmed observations and structured inputs.",
         reference.frame,
         reference.anchors,
         reference.method,
@@ -168,7 +168,7 @@ export function fallbackInsightText({
         "关系沟通",
         "你需要练习更早说出真实想法。不要等到情绪满格才沟通，那时别人听到的是攻击，不是需求。",
         "实操调整",
-        "拍照和线条定位只能帮助观察结构，不能代替真实相处。接下来可以试着在重要关系里提前说一句：我现在需要确认一件事。",
+        "照片只能帮助你回看结构和神态，不能代替真实相处。接下来可以试着在重要关系里提前说一句：我现在需要确认一件事。",
       ].join("\n\n");
     }
 

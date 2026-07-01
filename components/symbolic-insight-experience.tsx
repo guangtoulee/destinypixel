@@ -60,6 +60,7 @@ type InsightCopy = {
     title: string;
     photo: string;
     capture: string;
+    remove: string;
     localOnly: string;
     alignment: string;
   };
@@ -128,21 +129,21 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       eyebrow: "Palm · Face · Question Oracle",
       title: "Three quick mirrors for the question in front of you.",
       lead:
-        "Use a guided photo frame or a time-cast question to turn subtle signals into direct, practical insight. The tone is conversational, but the structure is disciplined.",
+        "Use a simple photo reference or a time-cast question to turn subtle signals into direct, practical insight. The tone is conversational, but the structure is disciplined.",
     },
     modes: {
       palm: {
         title: "Palm Studio",
         short: "Lines, mounts, and hand rhythm",
         body:
-          "Upload or capture your palm, align it with the guide, confirm the visible signs, then generate a detailed reading.",
+          "Upload or capture your palm as an optional reference, confirm the visible signs, then generate a detailed reading.",
         cta: "Read my palm",
       },
       face: {
         title: "Face Studio",
         short: "Expression, zones, and social signal",
         body:
-          "Use the face guide to frame a clean front-facing photo, then translate confirmed features into psychological reflection.",
+          "Use a clean front-facing photo as an optional reference, then translate confirmed features into psychological reflection.",
         cta: "Read my face",
       },
       oracle: {
@@ -154,12 +155,13 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       },
     },
     upload: {
-      title: "Photo alignment",
+      title: "Photo reference",
       photo: "Upload photo",
       capture: "Take photo",
+      remove: "Remove photo",
       localOnly:
         "The photo stays in this browser preview. DeepSeek receives only the confirmed observations below.",
-      alignment: "Align with the guide before confirming the details.",
+      alignment: "The photo is only a local reference. Confirm the visible details below.",
     },
     fields: {
       handSide: "Palm side",
@@ -240,21 +242,21 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       eyebrow: "手相 · 面相 · 一事一问",
       title: "给眼前的问题，多三面镜子。",
       lead:
-        "手相和面相用照片定位辅助观察，问事用起问时间生成六爻与塔罗。它不是玄乎的安慰，而是把细微信号转成更直接的判断和行动建议。",
+        "手相和面相用照片作本地参考，问事用起问时间生成六爻与塔罗。它不是玄乎的安慰，而是把细微信号转成更直接的判断和行动建议。",
     },
     modes: {
       palm: {
         title: "手相专区",
         short: "掌纹、掌丘与手部节奏",
         body:
-          "上传或自拍手掌，对齐线条后确认可见特征，再生成一份口语化但足够细的手相解读。",
+          "上传或自拍手掌作为参考，确认可见掌纹与掌丘特征，再生成一份口语化但足够细的手相解读。",
         cta: "看手相",
       },
       face: {
         title: "面相专区",
         short: "神态、三庭与社交信号",
         body:
-          "用面部定位线拍一张正面清晰照，确认结构特征后，把外在呈现翻译成心理与关系模式。",
+          "上传一张正面清晰照作为参考，确认结构特征后，把外在呈现翻译成心理与关系模式。",
         cta: "看面相",
       },
       oracle: {
@@ -266,12 +268,13 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       },
     },
     upload: {
-      title: "照片定位",
+      title: "照片参考",
       photo: "上传照片",
       capture: "拍一张",
+      remove: "移除照片",
       localOnly:
-        "照片只在本页预览和定位使用；发送给 DeepSeek 的只有你确认的观察项。",
-      alignment: "先把手掌或面部对齐参考线，再确认下面的特征。",
+        "照片只在本页预览参考；发送给 DeepSeek 的只有你确认的观察项。",
+      alignment: "照片只做本地参考；请直接确认下面的可见特征。",
     },
     fields: {
       handSide: "手掌",
@@ -352,21 +355,21 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       eyebrow: "Ладонь · Лицо · Один вопрос",
       title: "Три быстрых зеркала для текущего вопроса.",
       lead:
-        "Используйте фото-направляющие или время вопроса, чтобы превратить тонкие сигналы в ясный и практичный разбор.",
+        "Используйте фото как локальный ориентир или время вопроса, чтобы превратить тонкие сигналы в ясный и практичный разбор.",
     },
     modes: {
       palm: {
         title: "Ладонь",
         short: "Линии, холмы и ритм руки",
         body:
-          "Загрузите или снимите ладонь, совместите ее с направляющими и подтвердите видимые признаки.",
+          "Загрузите или снимите ладонь как ориентир и подтвердите видимые признаки.",
         cta: "Прочитать ладонь",
       },
       face: {
         title: "Лицо",
         short: "Выражение, зоны и социальный сигнал",
         body:
-          "Сделайте фронтальное фото с направляющими и переведите подтвержденные признаки в психологическое отражение.",
+          "Используйте фронтальное фото как ориентир и переведите подтвержденные признаки в психологическое отражение.",
         cta: "Прочитать лицо",
       },
       oracle: {
@@ -378,12 +381,13 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
       },
     },
     upload: {
-      title: "Выравнивание фото",
+      title: "Фото-ориентир",
       photo: "Загрузить фото",
       capture: "Сделать фото",
+      remove: "Удалить фото",
       localOnly:
         "Фото остается в браузере. DeepSeek получает только подтвержденные наблюдения.",
-      alignment: "Совместите изображение с направляющими перед подтверждением деталей.",
+      alignment: "Фото используется только как локальный ориентир. Подтвердите видимые признаки ниже.",
     },
     fields: {
       handSide: "Ладонь",
@@ -872,11 +876,13 @@ function PhotoGuide({
   previewUrl,
   copy,
   onPhoto,
+  onClear,
 }: {
   mode: "palm" | "face";
   previewUrl: string | null;
   copy: InsightCopy;
   onPhoto: (event: ChangeEvent<HTMLInputElement>) => void;
+  onClear: () => void;
 }) {
   const inputId = `insight-photo-${mode}`;
   const captureId = `insight-capture-${mode}`;
@@ -900,25 +906,6 @@ function PhotoGuide({
             {mode === "palm" ? <Hand size={46} aria-hidden="true" /> : <Eye size={46} aria-hidden="true" />}
           </div>
         )}
-        <div className="insight-guide-lines" aria-hidden="true">
-          {mode === "palm" ? (
-            <>
-              <span className="palm-guide palm-guide--heart" />
-              <span className="palm-guide palm-guide--head" />
-              <span className="palm-guide palm-guide--life" />
-              <span className="palm-guide palm-guide--fate" />
-              <span className="palm-guide palm-guide--wrist" />
-            </>
-          ) : (
-            <>
-              <span className="face-guide face-guide--oval" />
-              <span className="face-guide face-guide--center" />
-              <span className="face-guide face-guide--eyes" />
-              <span className="face-guide face-guide--nose" />
-              <span className="face-guide face-guide--mouth" />
-            </>
-          )}
-        </div>
       </div>
 
       <div className="insight-photo-actions">
@@ -938,6 +925,12 @@ function PhotoGuide({
           capture={mode === "face" ? "user" : "environment"}
           onChange={onPhoto}
         />
+        {previewUrl && (
+          <button type="button" onClick={onClear}>
+            <X size={16} aria-hidden="true" />
+            {copy.upload.remove}
+          </button>
+        )}
       </div>
 
       <p className="insight-privacy-note">
@@ -1080,6 +1073,15 @@ export default function SymbolicInsightExperience({
 
       return URL.createObjectURL(file);
     });
+    event.target.value = "";
+  }
+
+  function clearPhoto() {
+    setPreviewUrl((current) => {
+      if (current) URL.revokeObjectURL(current);
+
+      return null;
+    });
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -1089,9 +1091,9 @@ export default function SymbolicInsightExperience({
 
     const payload =
       mode === "palm"
-        ? { ...palm, hasAlignedPhoto: Boolean(previewUrl) }
+        ? { ...palm, hasPhotoReference: Boolean(previewUrl) }
         : mode === "face"
-          ? { ...face, hasAlignedPhoto: Boolean(previewUrl) }
+          ? { ...face, hasPhotoReference: Boolean(previewUrl) }
           : {
               ...oracle,
               oracleSeed,
@@ -1214,6 +1216,7 @@ export default function SymbolicInsightExperience({
                 previewUrl={previewUrl}
                 copy={copy}
                 onPhoto={handlePhoto}
+                onClear={clearPhoto}
               />
             )}
 

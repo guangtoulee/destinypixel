@@ -633,7 +633,7 @@
   .statementAlt,
   .cards,
   .footer {
-    width: min(100% - 30px, 1240px);
+    width: min(1240px, calc(100% - 30px));
   }
 
   .hero {

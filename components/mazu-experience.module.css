@@ -748,7 +748,7 @@
   .hookGrid,
   .sourceInner,
   .footer {
-    width: min(100% - 30px, 1180px);
+    width: min(1180px, calc(100% - 30px));
   }
 
   .heroImage {
