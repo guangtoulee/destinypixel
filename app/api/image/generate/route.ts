@@ -1,7 +1,7 @@
 import {
-  generateComfyImages,
   generateGrokImages,
   normalizeImageRequest,
+  queueComfyImages,
   refineImagePrompt,
   type GrokImageModel,
 } from "@/lib/ai/image-studio";
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
 
     const result =
       settings.provider === "comfyui"
-        ? await generateComfyImages({
+        ? await queueComfyImages({
             prompt: refinement.prompt,
             resolution: settings.resolution,
             aspectRatio: settings.aspectRatio,

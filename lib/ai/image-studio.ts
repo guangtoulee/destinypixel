@@ -363,6 +363,72 @@ function extractComfyOutputImages(record: unknown) {
   });
 }
 
+function getComfyImageUrl(image: {
+  filename: string;
+  type: string;
+  subfolder: string;
+}) {
+  const params = new URLSearchParams({
+    filename: image.filename,
+    type: image.type,
+  });
+
+  if (image.subfolder) params.set("subfolder", image.subfolder);
+
+  return `${COMFYUI_API_URL}/view?${params}`;
+}
+
+async function queueComfyWorkflow(workflow: ReturnType<typeof createZImageWorkflow>) {
+  const timeout = createTimeoutSignal(15000);
+
+  try {
+    const response = await fetch(`${COMFYUI_API_URL}/prompt`, {
+      method: "POST",
+      headers: { ...COMFYUI_HEADERS, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        client_id: crypto.randomUUID(),
+        prompt: workflow,
+      }),
+      signal: timeout.signal,
+    });
+    const payload = await readJsonResponse(response);
+
+    if (!response.ok) {
+      throw new Error(getErrorMessage(payload, "ComfyUI queue failed."));
+    }
+
+    const promptId =
+      typeof (payload as { prompt_id?: unknown }).prompt_id === "string"
+        ? (payload as { prompt_id: string }).prompt_id
+        : "";
+
+    if (!promptId) {
+      throw new Error("ComfyUI did not return a prompt id.");
+    }
+
+    return promptId;
+  } finally {
+    timeout.clear();
+  }
+}
+
+async function readComfyHistory(promptId: string) {
+  const response = await fetch(`${COMFYUI_API_URL}/history/${promptId}`, {
+    cache: "no-store",
+    headers: COMFYUI_HEADERS,
+  });
+  const payload = await readJsonResponse(response);
+
+  if (!response.ok) {
+    throw new Error(getErrorMessage(payload, "ComfyUI history failed."));
+  }
+
+  const record = getComfyPromptRecord(payload, promptId);
+  const outputImages = extractComfyOutputImages(record);
+
+  return { payload, record, outputImages };
+}
+
 export async function refineImagePrompt({
   prompt,
   style,
@@ -545,6 +611,56 @@ export async function generateComfyImages({
   aspectRatio: ImageAspectRatio;
   count: number;
 }): Promise<ImageGenerationResult> {
+  const queued = await queueComfyImages({
+    prompt,
+    resolution,
+    aspectRatio,
+    count,
+  });
+  const deadline = Date.now() + COMFYUI_TIMEOUT_MS;
+
+  while (Date.now() < deadline) {
+    const result = await getComfyImageJob({
+      jobId: queued.jobId,
+      prompt,
+      resolution,
+      aspectRatio,
+      count,
+    });
+
+    if (result.status === "complete" && result.images.length > 0) {
+      return {
+        images: result.images,
+        model: "z-image-comfyui",
+        provider: "comfyui",
+        resolution,
+        aspectRatio,
+        estimatedCostUsd: 0,
+        raw: result.raw,
+      };
+    }
+
+    if (result.status === "failed") {
+      throw new Error(result.error || "ComfyUI generation failed.");
+    }
+
+    await sleep(COMFYUI_POLL_INTERVAL_MS);
+  }
+
+  throw new Error("ComfyUI timed out before returning an image.");
+}
+
+export async function queueComfyImages({
+  prompt,
+  resolution,
+  aspectRatio,
+  count,
+}: {
+  prompt: string;
+  resolution: ImageResolution;
+  aspectRatio: ImageAspectRatio;
+  count: number;
+}) {
   if (!COMFYUI_API_URL) {
     throw new Error(
       "COMFYUI_API_URL is not configured. Use a local URL for LAN testing or an HTTPS tunnel URL for production.",
@@ -557,91 +673,87 @@ export async function generateComfyImages({
     resolution,
     count,
   });
-  const timeout = createTimeoutSignal(15000);
-
-  let promptId = "";
-
-  try {
-    const response = await fetch(`${COMFYUI_API_URL}/prompt`, {
-      method: "POST",
-      headers: { ...COMFYUI_HEADERS, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        client_id: crypto.randomUUID(),
-        prompt: workflow,
-      }),
-      signal: timeout.signal,
-    });
-    const payload = await readJsonResponse(response);
-
-    if (!response.ok) {
-      throw new Error(getErrorMessage(payload, "ComfyUI queue failed."));
-    }
-
-    promptId =
-      typeof (payload as { prompt_id?: unknown }).prompt_id === "string"
-        ? (payload as { prompt_id: string }).prompt_id
-        : "";
-
-    if (!promptId) {
-      throw new Error("ComfyUI did not return a prompt id.");
-    }
-  } finally {
-    timeout.clear();
-  }
-
-  const deadline = Date.now() + COMFYUI_TIMEOUT_MS;
-  let outputImages: Array<{
-    filename: string;
-    type: string;
-    subfolder: string;
-  }> = [];
-  let rawHistory: unknown;
-
-  while (Date.now() < deadline) {
-    const response = await fetch(`${COMFYUI_API_URL}/history/${promptId}`, {
-      cache: "no-store",
-      headers: COMFYUI_HEADERS,
-    });
-    const payload = await readJsonResponse(response);
-
-    if (!response.ok) {
-      throw new Error(getErrorMessage(payload, "ComfyUI history failed."));
-    }
-
-    rawHistory = payload;
-    outputImages = extractComfyOutputImages(
-      getComfyPromptRecord(payload, promptId),
-    );
-
-    if (outputImages.length > 0) break;
-    await sleep(COMFYUI_POLL_INTERVAL_MS);
-  }
-
-  if (outputImages.length === 0) {
-    throw new Error("ComfyUI timed out before returning an image.");
-  }
-
-  const images = outputImages.slice(0, count).map((image) => {
-    const params = new URLSearchParams({
-      filename: image.filename,
-      type: image.type,
-    });
-
-    if (image.subfolder) params.set("subfolder", image.subfolder);
-
-    return {
-      url: `${COMFYUI_API_URL}/view?${params}`,
-      revisedPrompt: prompt,
-    };
-  });
+  const jobId = await queueComfyWorkflow(workflow);
 
   return {
-    images,
-    model: "z-image-comfyui",
-    provider: "comfyui",
+    jobId,
+    status: "queued" as const,
+    images: [],
+    model: "z-image-comfyui" as const,
+    provider: "comfyui" as const,
     resolution,
     aspectRatio,
     estimatedCostUsd: 0,
-    raw: rawHistory,
+  };
+}
+
+export async function getComfyImageJob({
+  jobId,
+  prompt,
+  resolution,
+  aspectRatio,
+  count,
+}: {
+  jobId: string;
+  prompt?: string;
+  resolution: ImageResolution;
+  aspectRatio: ImageAspectRatio;
+  count: number;
+}) {
+  if (!COMFYUI_API_URL) {
+    throw new Error(
+      "COMFYUI_API_URL is not configured. Use a local URL for LAN testing or an HTTPS tunnel URL for production.",
+    );
+  }
+
+  const { payload, record, outputImages } = await readComfyHistory(jobId);
+  const statusRecord =
+    record && typeof record === "object"
+      ? (record as { status?: { status_str?: string; completed?: boolean } })
+          .status
+      : undefined;
+
+  if (outputImages.length > 0) {
+    return {
+      jobId,
+      status: "complete" as const,
+      images: outputImages.slice(0, count).map((image) => ({
+        url: getComfyImageUrl(image),
+        revisedPrompt: prompt,
+      })),
+      model: "z-image-comfyui" as const,
+      provider: "comfyui" as const,
+      resolution,
+      aspectRatio,
+      estimatedCostUsd: 0,
+      raw: payload,
+    };
+  }
+
+  if (statusRecord?.status_str === "error") {
+    return {
+      jobId,
+      status: "failed" as const,
+      images: [],
+      model: "z-image-comfyui" as const,
+      provider: "comfyui" as const,
+      resolution,
+      aspectRatio,
+      estimatedCostUsd: 0,
+      error: "ComfyUI generation failed.",
+      raw: payload,
+    };
+  }
+
+  return {
+    jobId,
+    status: "running" as const,
+    images: [],
+    model: "z-image-comfyui" as const,
+    provider: "comfyui" as const,
+    resolution,
+    aspectRatio,
+    estimatedCostUsd: 0,
+    raw: payload,
   };
 }

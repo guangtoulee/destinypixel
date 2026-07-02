@@ -63,6 +63,8 @@ type GenerateResponse = {
   resolution?: ImageResolution;
   aspectRatio?: ImageAspectRatio;
   estimatedCostUsd?: number;
+  jobId?: string;
+  status?: "queued" | "running" | "complete" | "failed";
   originalPrompt?: string;
   promptUsed?: string;
   promptEnhanced?: boolean;
@@ -281,6 +283,53 @@ function getNetworkErrorMessage(message: string) {
   }
 
   return message;
+}
+
+function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function waitForImageJob({
+  jobId,
+  resolution,
+  aspectRatio,
+  count,
+}: {
+  jobId: string;
+  resolution: ImageResolution;
+  aspectRatio: ImageAspectRatio;
+  count: number;
+}) {
+  const deadline = Date.now() + 10 * 60 * 1000;
+
+  while (Date.now() < deadline) {
+    await wait(2500);
+
+    const params = new URLSearchParams({
+      jobId,
+      resolution,
+      aspectRatio,
+      count: String(count),
+    });
+    const response = await fetch(`/api/image/status?${params}`, {
+      cache: "no-store",
+    });
+    const data = (await response.json()) as GenerateResponse;
+
+    if (!response.ok) {
+      throw new Error(data.error || "查询生成结果失败。");
+    }
+
+    if (data.status === "failed") {
+      throw new Error(data.error || "本地 ComfyUI 生成失败。");
+    }
+
+    if (data.status === "complete" && data.images?.length) {
+      return data;
+    }
+  }
+
+  throw new Error("本地 ComfyUI 生成超时。");
 }
 
 function formatCost(value?: number) {
@@ -520,10 +569,22 @@ export default function ImageStudio() {
 
       setStatus("generating");
 
-      const data = (await response.json()) as GenerateResponse;
+      let data = (await response.json()) as GenerateResponse;
 
       if (!response.ok) {
         throw new Error(data.error || "生成失败。");
+      }
+
+      if (data.jobId && data.provider === "comfyui") {
+        data = {
+          ...data,
+          ...(await waitForImageJob({
+            jobId: data.jobId,
+            resolution: data.resolution ?? runResolution,
+            aspectRatio: data.aspectRatio ?? aspectRatio,
+            count: runCount,
+          })),
+        };
       }
 
       const nextImages = data.images ?? [];
