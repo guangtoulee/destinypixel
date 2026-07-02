@@ -62,11 +62,16 @@ const DEEPSEEK_API_URL =
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 const DEEPSEEK_TIMEOUT_MS = Number(process.env.DEEPSEEK_TIMEOUT_MS ?? 18000);
 
-const COMFYUI_API_URL = process.env.COMFYUI_API_URL?.replace(/\/$/, "");
+const COMFYUI_API_URL = (
+  process.env.COMFYUI_API_URL ?? "https://comfy.destinypixel.com"
+).replace(/\/$/, "");
 const COMFYUI_TIMEOUT_MS = Number(process.env.COMFYUI_TIMEOUT_MS ?? 180000);
 const COMFYUI_POLL_INTERVAL_MS = Number(
   process.env.COMFYUI_POLL_INTERVAL_MS ?? 1500,
 );
+const COMFYUI_HEADERS = {
+  "ngrok-skip-browser-warning": "1",
+};
 
 const MODEL_COST: Record<GrokImageModel, Record<ImageResolution, number>> = {
   "grok-imagine-image": {
@@ -559,7 +564,7 @@ export async function generateComfyImages({
   try {
     const response = await fetch(`${COMFYUI_API_URL}/prompt`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { ...COMFYUI_HEADERS, "Content-Type": "application/json" },
       body: JSON.stringify({
         client_id: crypto.randomUUID(),
         prompt: workflow,
@@ -595,6 +600,7 @@ export async function generateComfyImages({
   while (Date.now() < deadline) {
     const response = await fetch(`${COMFYUI_API_URL}/history/${promptId}`, {
       cache: "no-store",
+      headers: COMFYUI_HEADERS,
     });
     const payload = await readJsonResponse(response);
 
@@ -624,7 +630,9 @@ export async function generateComfyImages({
 
       if (image.subfolder) params.set("subfolder", image.subfolder);
 
-      const response = await fetch(`${COMFYUI_API_URL}/view?${params}`);
+      const response = await fetch(`${COMFYUI_API_URL}/view?${params}`, {
+        headers: COMFYUI_HEADERS,
+      });
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ComfyUI image ${image.filename}.`);
