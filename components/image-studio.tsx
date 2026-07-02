@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   Brush,
   Copy,
+  Cpu,
   ExternalLink,
   Image as ImageIcon,
   Languages,
@@ -18,7 +19,11 @@ import {
 } from "lucide-react";
 import styles from "./image-studio.module.css";
 
-type ImageModel = "grok-imagine-image" | "grok-imagine-image-quality";
+type ImageProvider = "grok" | "comfyui";
+type ImageModel =
+  | "grok-imagine-image"
+  | "grok-imagine-image-quality"
+  | "z-image-comfyui";
 type ImageResolution = "1k" | "2k";
 type ImageAspectRatio =
   | "auto"
@@ -53,6 +58,7 @@ type GeneratedImage = {
 
 type GenerateResponse = {
   images?: GeneratedImage[];
+  provider?: ImageProvider;
   model?: ImageModel;
   resolution?: ImageResolution;
   aspectRatio?: ImageAspectRatio;
@@ -71,6 +77,7 @@ type GalleryItem = {
   originalPrompt: string;
   assetType: ImageAssetType;
   style: string;
+  provider: ImageProvider;
   model: ImageModel;
   resolution: ImageResolution;
   aspectRatio: ImageAspectRatio;
@@ -101,10 +108,19 @@ const aspectOptions: Array<{ label: string; value: ImageAspectRatio }> = [
 
 const modelOptions: Array<{
   label: string;
-  value: ImageModel;
+  value: Exclude<ImageModel, "z-image-comfyui">;
 }> = [
   { label: "高级", value: "grok-imagine-image-quality" },
   { label: "快速", value: "grok-imagine-image" },
+];
+
+const providerOptions: Array<{
+  label: string;
+  value: ImageProvider;
+  detail: string;
+}> = [
+  { label: "Grok API", value: "grok", detail: "云端付费" },
+  { label: "本地 ComfyUI", value: "comfyui", detail: "Z-Image" },
 ];
 
 const styleOptions = [
@@ -264,7 +280,13 @@ function formatCost(value?: number) {
   return `$${value.toFixed(2)}`;
 }
 
-function getEstimatedUnitCost(model: ImageModel, resolution: ImageResolution) {
+function getEstimatedUnitCost(
+  provider: ImageProvider,
+  model: ImageModel,
+  resolution: ImageResolution,
+) {
+  if (provider === "comfyui") return 0;
+
   if (model === "grok-imagine-image-quality") {
     return resolution === "1k" ? 0.05 : 0.07;
   }
@@ -294,6 +316,7 @@ function migrateGalleryItems(input: unknown): GalleryItem[] {
       originalPrompt: String(record.prompt || ""),
       assetType: "poster" as ImageAssetType,
       style: styleOptions[0],
+      provider: "grok" as ImageProvider,
       model: (record.model as ImageModel) || "grok-imagine-image-quality",
       resolution: (record.resolution as ImageResolution) || "2k",
       aspectRatio: (record.aspectRatio as ImageAspectRatio) || "1:1",
@@ -317,6 +340,7 @@ export default function ImageStudio() {
   const [assetType, setAssetType] = useState<ImageAssetType>("poster");
   const [prompt, setPrompt] = useState(assetTypeOptions[0].prompt);
   const [style, setStyle] = useState(assetTypeOptions[0].style);
+  const [provider, setProvider] = useState<ImageProvider>("grok");
   const [model, setModel] = useState<ImageModel>("grok-imagine-image-quality");
   const [resolution, setResolution] = useState<ImageResolution>("2k");
   const [aspectRatio, setAspectRatio] = useState<ImageAspectRatio>(
@@ -340,8 +364,8 @@ export default function ImageStudio() {
   const isBusy = status !== "idle";
 
   const estimatedRunCost = useMemo(() => {
-    return getEstimatedUnitCost(model, resolution) * count;
-  }, [count, model, resolution]);
+    return getEstimatedUnitCost(provider, model, resolution) * count;
+  }, [count, model, provider, resolution]);
 
   const sortedGallery = useMemo(() => {
     return [...gallery].sort((left, right) => {
@@ -468,6 +492,7 @@ export default function ImageStudio() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           prompt: cleanPrompt,
+          provider,
           assetType,
           style,
           model,
@@ -502,7 +527,10 @@ export default function ImageStudio() {
             originalPrompt: cleanPrompt,
             assetType,
             style,
-            model: data.model ?? model,
+            provider: data.provider ?? provider,
+            model:
+              data.model ??
+              (provider === "comfyui" ? "z-image-comfyui" : model),
             resolution: data.resolution ?? resolution,
             aspectRatio: data.aspectRatio ?? aspectRatio,
             estimatedCostUsd: Number((runCost / nextImages.length).toFixed(2)),
@@ -530,6 +558,7 @@ export default function ImageStudio() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           prompt: cleanPrompt,
+          provider,
           assetType,
           style,
           model,
@@ -571,7 +600,14 @@ export default function ImageStudio() {
     setPrompt(item.originalPrompt || item.prompt);
     setAssetType(item.assetType);
     setStyle(item.style);
-    setModel(item.model);
+    setProvider(
+      item.provider || (item.model === "z-image-comfyui" ? "comfyui" : "grok"),
+    );
+    setModel(
+      item.model === "z-image-comfyui"
+        ? "grok-imagine-image-quality"
+        : item.model,
+    );
     setResolution(item.resolution);
     setAspectRatio(item.aspectRatio);
     setImages([item.image]);
@@ -600,7 +636,7 @@ export default function ImageStudio() {
         </a>
         <div className={styles.topbarMeta}>
           <span>中文可用</span>
-          <span>Grok Imagine</span>
+          <span>{provider === "comfyui" ? "ComfyUI Z-Image" : "Grok Imagine"}</span>
           <span>{resolution.toUpperCase()}</span>
           <span>{formatCost(estimatedRunCost)} / run</span>
           <button
@@ -739,26 +775,68 @@ export default function ImageStudio() {
 
           <div className={styles.settingsBlock}>
             <div className={styles.blockTitle}>
-              <Settings2 aria-hidden="true" />
-              <span>模型</span>
+              <Cpu aria-hidden="true" />
+              <span>出图通道</span>
             </div>
             <div className={styles.segmentedTwo}>
-              {modelOptions.map((option) => (
+              {providerOptions.map((option) => (
                 <button
-                  aria-pressed={model === option.value}
-                  className={model === option.value ? styles.activeSegment : ""}
+                  aria-pressed={provider === option.value}
+                  className={
+                    provider === option.value ? styles.activeSegment : ""
+                  }
                   key={option.value}
-                  onClick={() => setModel(option.value)}
+                  onClick={() => {
+                    setProvider(option.value);
+                    if (
+                      option.value === "grok" &&
+                      model === "z-image-comfyui"
+                    ) {
+                      setModel("grok-imagine-image-quality");
+                    }
+                  }}
                   type="button"
                 >
                   <span>{option.label}</span>
-                  <small>
-                    {formatCost(getEstimatedUnitCost(option.value, resolution))}
-                  </small>
+                  <small>{option.detail}</small>
                 </button>
               ))}
             </div>
           </div>
+
+          {provider === "grok" ? (
+            <div className={styles.settingsBlock}>
+              <div className={styles.blockTitle}>
+                <Settings2 aria-hidden="true" />
+                <span>模型</span>
+              </div>
+              <div className={styles.segmentedTwo}>
+                {modelOptions.map((option) => (
+                  <button
+                    aria-pressed={model === option.value}
+                    className={
+                      model === option.value ? styles.activeSegment : ""
+                    }
+                    key={option.value}
+                    onClick={() => setModel(option.value)}
+                    type="button"
+                  >
+                    <span>{option.label}</span>
+                    <small>
+                      {formatCost(
+                        getEstimatedUnitCost(provider, option.value, resolution),
+                      )}
+                    </small>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className={styles.providerNote}>
+              <strong>Z-Image / ComfyUI</strong>
+              <span>通过后端连接本地或隧道地址，生成成本按 $0.00 记录。</span>
+            </div>
+          )}
 
           <div className={styles.settingsGrid}>
             <div className={styles.settingsBlock}>
@@ -912,7 +990,11 @@ export default function ImageStudio() {
             <div>
               <span>模型</span>
               <strong>
-                {model === "grok-imagine-image-quality" ? "高级" : "快速"}
+                {provider === "comfyui"
+                  ? "Z-Image"
+                  : model === "grok-imagine-image-quality"
+                    ? "高级"
+                    : "快速"}
               </strong>
             </div>
             <div>
@@ -978,6 +1060,11 @@ export default function ImageStudio() {
                       </span>
                       <span>
                         {item.resolution.toUpperCase()} / {item.aspectRatio}
+                      </span>
+                      <span>
+                        {(item.provider || "grok") === "comfyui"
+                          ? "ComfyUI"
+                          : "Grok"}
                       </span>
                     </div>
                     <p>{item.originalPrompt || item.prompt}</p>

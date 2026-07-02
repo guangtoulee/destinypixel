@@ -1,11 +1,13 @@
 import {
+  generateComfyImages,
   generateGrokImages,
   normalizeImageRequest,
   refineImagePrompt,
+  type GrokImageModel,
 } from "@/lib/ai/image-studio";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 180;
 
 function canAccessImageStudio(request: Request) {
   const token = process.env.IMAGE_STUDIO_ACCESS_TOKEN;
@@ -49,13 +51,27 @@ export async function POST(request: Request) {
         })
       : { prompt, skipped: true, reason: undefined };
 
-    const result = await generateGrokImages({
-      prompt: refinement.prompt,
-      model: settings.model,
-      resolution: settings.resolution,
-      aspectRatio: settings.aspectRatio,
-      count: settings.count,
-    });
+    const grokModel: GrokImageModel =
+      settings.model === "grok-imagine-image" ||
+      settings.model === "grok-imagine-image-quality"
+        ? settings.model
+        : "grok-imagine-image-quality";
+
+    const result =
+      settings.provider === "comfyui"
+        ? await generateComfyImages({
+            prompt: refinement.prompt,
+            resolution: settings.resolution,
+            aspectRatio: settings.aspectRatio,
+            count: settings.count,
+          })
+        : await generateGrokImages({
+            prompt: refinement.prompt,
+            model: grokModel,
+            resolution: settings.resolution,
+            aspectRatio: settings.aspectRatio,
+            count: settings.count,
+          });
 
     return Response.json({
       ...result,
