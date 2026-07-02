@@ -275,6 +275,14 @@ function imageSrc(image: GeneratedImage) {
   return "";
 }
 
+function getNetworkErrorMessage(message: string) {
+  if (/load failed|failed to fetch|networkerror|fetch/i.test(message)) {
+    return "连接中断了。本地 ComfyUI 出图时间比较长，先用 1K / 1 张再试。";
+  }
+
+  return message;
+}
+
 function formatCost(value?: number) {
   if (!value) return "$0.00";
   return `$${value.toFixed(2)}`;
@@ -477,10 +485,17 @@ export default function ImageStudio() {
   async function generate(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
     const cleanPrompt = prompt.trim();
+    const runResolution = provider === "comfyui" ? "1k" : resolution;
+    const runCount = provider === "comfyui" ? 1 : count;
 
     if (!cleanPrompt) {
       setError("先写一个画面想法，中文也可以。");
       return;
+    }
+
+    if (provider === "comfyui") {
+      setResolution(runResolution);
+      setCount(runCount);
     }
 
     setStatus(enhancePrompt ? "refining" : "generating");
@@ -496,9 +511,9 @@ export default function ImageStudio() {
           assetType,
           style,
           model,
-          resolution,
+          resolution: runResolution,
           aspectRatio,
-          count,
+          count: runCount,
           enhancePrompt,
         }),
       });
@@ -531,7 +546,7 @@ export default function ImageStudio() {
             model:
               data.model ??
               (provider === "comfyui" ? "z-image-comfyui" : model),
-            resolution: data.resolution ?? resolution,
+            resolution: data.resolution ?? runResolution,
             aspectRatio: data.aspectRatio ?? aspectRatio,
             estimatedCostUsd: Number((runCost / nextImages.length).toFixed(2)),
             createdAt: new Date().toISOString(),
@@ -539,7 +554,8 @@ export default function ImageStudio() {
         );
       }
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "生成失败。");
+      const message = caught instanceof Error ? caught.message : "生成失败。";
+      setError(getNetworkErrorMessage(message));
     } finally {
       setStatus("idle");
     }
@@ -562,9 +578,9 @@ export default function ImageStudio() {
           assetType,
           style,
           model,
-          resolution,
+          resolution: provider === "comfyui" ? "1k" : resolution,
           aspectRatio,
-          count,
+          count: provider === "comfyui" ? 1 : count,
         }),
       });
       const data = (await response.json()) as {
@@ -580,7 +596,8 @@ export default function ImageStudio() {
       if (data.prompt) setPrompt(data.prompt);
       if (data.reason) setError(data.reason);
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "润色失败。");
+      const message = caught instanceof Error ? caught.message : "润色失败。";
+      setError(getNetworkErrorMessage(message));
     } finally {
       setStatus("idle");
     }
@@ -788,6 +805,10 @@ export default function ImageStudio() {
                   key={option.value}
                   onClick={() => {
                     setProvider(option.value);
+                    if (option.value === "comfyui") {
+                      setResolution("1k");
+                      setCount(1);
+                    }
                     if (
                       option.value === "grok" &&
                       model === "z-image-comfyui"
@@ -849,6 +870,7 @@ export default function ImageStudio() {
                   <button
                     aria-pressed={resolution === value}
                     className={resolution === value ? styles.activeSegment : ""}
+                    disabled={provider === "comfyui" && value === "2k"}
                     key={value}
                     onClick={() => setResolution(value)}
                     type="button"
@@ -869,6 +891,7 @@ export default function ImageStudio() {
                   <button
                     aria-pressed={count === value}
                     className={count === value ? styles.activeSegment : ""}
+                    disabled={provider === "comfyui" && value > 1}
                     key={value}
                     onClick={() => setCount(value)}
                     type="button"

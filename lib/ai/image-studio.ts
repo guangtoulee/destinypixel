@@ -148,10 +148,10 @@ export function normalizeImageRequest(input: Record<string, unknown>) {
   return {
     provider,
     model: provider === "comfyui" ? "z-image-comfyui" : model,
-    resolution,
+    resolution: provider === "comfyui" ? "1k" : resolution,
     aspectRatio,
     assetType,
-    count: Math.floor(count),
+    count: provider === "comfyui" ? 1 : Math.floor(count),
   };
 }
 
@@ -621,31 +621,19 @@ export async function generateComfyImages({
     throw new Error("ComfyUI timed out before returning an image.");
   }
 
-  const images = await Promise.all(
-    outputImages.slice(0, count).map(async (image) => {
-      const params = new URLSearchParams({
-        filename: image.filename,
-        type: image.type,
-      });
+  const images = outputImages.slice(0, count).map((image) => {
+    const params = new URLSearchParams({
+      filename: image.filename,
+      type: image.type,
+    });
 
-      if (image.subfolder) params.set("subfolder", image.subfolder);
+    if (image.subfolder) params.set("subfolder", image.subfolder);
 
-      const response = await fetch(`${COMFYUI_API_URL}/view?${params}`, {
-        headers: COMFYUI_HEADERS,
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch ComfyUI image ${image.filename}.`);
-      }
-
-      const bytes = Buffer.from(await response.arrayBuffer());
-
-      return {
-        b64Json: bytes.toString("base64"),
-        revisedPrompt: prompt,
-      };
-    }),
-  );
+    return {
+      url: `${COMFYUI_API_URL}/view?${params}`,
+      revisedPrompt: prompt,
+    };
+  });
 
   return {
     images,
