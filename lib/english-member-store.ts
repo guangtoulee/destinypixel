@@ -24,6 +24,10 @@ const localStorePath =
     ? "/tmp/destinypixel-english-members.json"
     : join(process.cwd(), "work", "english-members.json"));
 
+function canUseLocalMemberStore() {
+  return !process.env.VERCEL || Boolean(process.env.ENGLISH_MEMBER_STORE_FILE);
+}
+
 function getSupabaseConfig() {
   const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key =
@@ -40,6 +44,16 @@ function getSupabaseConfig() {
   }
 
   return { url, key };
+}
+
+function shouldUseLocalMemberStore() {
+  return !getSupabaseConfig() && canUseLocalMemberStore();
+}
+
+function assertMemberStoreConfigured() {
+  if (!getSupabaseConfig() && !canUseLocalMemberStore()) {
+    throw new Error("云端会员库还没有配置，暂时不能用账号注册/登录；请配置 Supabase 后再试。");
+  }
 }
 
 async function supabaseRequest<T>({
@@ -191,10 +205,11 @@ export function validateCredentials({
 }
 
 export async function findEnglishMemberByUsername(username: string) {
-  if (!getSupabaseConfig()) {
+  if (shouldUseLocalMemberStore()) {
     return findLocalMemberByUsername(username);
   }
 
+  assertMemberStoreConfigured();
   const normalized = normalizeUsername(username);
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "GET",
@@ -213,6 +228,7 @@ export async function registerEnglishMember({
   password: string;
   progress?: unknown;
 }) {
+  assertMemberStoreConfigured();
   const message = validateCredentials({ username, password });
   if (message) throw new Error(message);
 
@@ -225,7 +241,7 @@ export async function registerEnglishMember({
   const session = createSession();
   const now = new Date().toISOString();
 
-  if (!getSupabaseConfig()) {
+  if (shouldUseLocalMemberStore()) {
     const member = await insertLocalMember({
       id: randomBytes(16).toString("base64url"),
       username: cleanUsername,
@@ -282,20 +298,21 @@ export async function loginEnglishMember({
   username: string;
   password: string;
 }) {
+  assertMemberStoreConfigured();
   const message = validateCredentials({ username, password });
   if (message) throw new Error(message);
 
   const member = await findEnglishMemberByUsername(username);
-  if (!member) throw new Error("用户名或密码不对。");
+  if (!member) throw new Error("没有这个用户名。");
 
   const expected = Buffer.from(member.password_hash);
   const actual = Buffer.from(createPasswordHash(password, member.password_salt));
   if (expected.length !== actual.length || !timingSafeEqual(expected, actual)) {
-    throw new Error("用户名或密码不对。");
+    throw new Error("密码不对。");
   }
 
   const session = createSession();
-  if (!getSupabaseConfig()) {
+  if (shouldUseLocalMemberStore()) {
     const updated = await updateLocalMember(member.id, {
       session_token_hash: session.tokenHash,
       session_expires_at: session.expires,
@@ -333,7 +350,7 @@ export async function loginEnglishMember({
 }
 
 export async function getEnglishMemberByToken(token: string) {
-  if (!getSupabaseConfig()) {
+  if (shouldUseLocalMemberStore()) {
     const member = await findLocalMemberByToken(token);
     if (!member || !member.session_expires_at) return null;
     if (new Date(member.session_expires_at).getTime() < Date.now()) return null;
@@ -341,6 +358,7 @@ export async function getEnglishMemberByToken(token: string) {
     return member;
   }
 
+  assertMemberStoreConfigured();
   const tokenHash = hashToken(token);
   const rows = await supabaseRequest<EnglishMemberRecord[]>({
     method: "GET",
@@ -364,7 +382,7 @@ export async function saveEnglishMemberProgress({
   const member = await getEnglishMemberByToken(token);
   if (!member) throw new Error("登录已过期，请重新登录。");
 
-  if (!getSupabaseConfig()) {
+  if (shouldUseLocalMemberStore()) {
     const updated = await updateLocalMember(member.id, {
       progress: safeProgress(progress),
     });
