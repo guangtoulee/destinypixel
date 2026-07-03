@@ -67,6 +67,7 @@ type TextbookExamScore = {
 };
 
 type TextbookScanMode = "sequence" | "random" | "weak";
+type TextbookSpellingMode = "cloze" | "dictation" | "photo";
 
 type TextbookWordStat = {
   word: string;
@@ -88,6 +89,30 @@ type TextbookScanState = {
   lastFeedback: string;
 };
 
+type TextbookSpellingRecord = {
+  word: string;
+  meaning: string;
+  bookId: string;
+  unitId: string;
+  expected: string;
+  answer: string;
+  mode: TextbookSpellingMode;
+  correct: boolean;
+  issues: string[];
+  ocrText?: string;
+  imageName?: string;
+  date: string;
+};
+
+type TextbookSpellingState = {
+  mode: TextbookSpellingMode;
+  currentKey: string;
+  rounds: number;
+  correct: number;
+  wrong: number;
+  lastFeedback: string;
+};
+
 type TextbookMemory = {
   bookId: string;
   unitId: string;
@@ -96,6 +121,8 @@ type TextbookMemory = {
   examScores: Record<string, TextbookExamScore>;
   wordStats: Record<string, TextbookWordStat>;
   scan: TextbookScanState;
+  spellingRecords: Record<string, TextbookSpellingRecord>;
+  spelling: TextbookSpellingState;
 };
 
 type LearningMemory = {
@@ -477,6 +504,86 @@ function pickNextTextbookWordKey({
   const nextIndex = Math.floor(randomValue * pool.length) % pool.length;
 
   return pool[nextIndex]?.key ?? items[0].key;
+}
+
+function normalizeSpellingAnswer(value: string) {
+  return value.trim().toLowerCase().replace(/[^a-z]/g, "");
+}
+
+function maskTextbookWord(word: string) {
+  const chars = word.split("");
+  const letterIndexes = chars
+    .map((char, index) => (/[a-z]/i.test(char) ? index : -1))
+    .filter((index) => index >= 0);
+  const internalIndexes = letterIndexes.slice(1, -1);
+
+  if (internalIndexes.length === 0) {
+    return chars.map((char, index) => (index === 0 ? char : "_")).join("");
+  }
+
+  const maskCount = Math.min(internalIndexes.length, Math.max(1, Math.ceil(internalIndexes.length * 0.5)));
+  const start = Math.max(0, Math.floor((internalIndexes.length - maskCount) / 2));
+  const maskIndexes = new Set(internalIndexes.slice(start, start + maskCount));
+
+  return chars.map((char, index) => (maskIndexes.has(index) ? "_" : char)).join("");
+}
+
+function getSpellingIssues(expected: string, answer: string) {
+  const expectedText = normalizeSpellingAnswer(expected);
+  const answerText = normalizeSpellingAnswer(answer);
+  const issues: string[] = [];
+
+  if (!answerText) return ["还没写出单词"];
+  if (answerText.length !== expectedText.length) {
+    issues.push(`长度应为 ${expectedText.length} 个字母，现在是 ${answerText.length} 个`);
+  }
+
+  for (let index = 0; index < Math.min(expectedText.length, answerText.length) && issues.length < 4; index += 1) {
+    if (expectedText[index] !== answerText[index]) {
+      issues.push(`第 ${index + 1} 位应为 ${expectedText[index].toUpperCase()}`);
+    }
+  }
+
+  return issues.length ? issues : ["字母顺序不对，再核一遍"];
+}
+
+function pickNextSpellingWordKey({
+  items,
+  stats,
+  currentKey,
+  randomValue,
+}: {
+  items: TextbookWordItem[];
+  stats: Record<string, TextbookWordStat>;
+  currentKey: string;
+  randomValue: number;
+}) {
+  if (items.length === 0) return "";
+
+  const weakItems = items.filter((item) => isWeakTextbookWord(stats[item.key]));
+  if (weakItems.length) {
+    const nextIndex = Math.floor(randomValue * weakItems.length) % weakItems.length;
+    return weakItems[nextIndex]?.key ?? weakItems[0].key;
+  }
+
+  const unmasteredItems = items.filter((item) => !isMasteredTextbookWord(stats[item.key]));
+  if (unmasteredItems.length) {
+    const currentIndex = Math.max(0, items.findIndex((item) => item.key === currentKey));
+    for (let offset = 1; offset <= items.length; offset += 1) {
+      const candidate = items[(currentIndex + offset) % items.length];
+      if (candidate && unmasteredItems.some((item) => item.key === candidate.key)) {
+        return candidate.key;
+      }
+    }
+  }
+
+  return pickNextTextbookWordKey({
+    items,
+    stats,
+    currentKey,
+    mode: "sequence",
+    randomValue,
+  });
 }
 
 const textbookCatalog: TextbookBook[] = [
@@ -1230,6 +1337,15 @@ function createDefaultMemory(): LearningMemory {
         bestStreak: 0,
         lastFeedback: "从第一个词开始扫漏洞，答错会自动进入弱词池。",
       },
+      spellingRecords: {},
+      spelling: {
+        mode: "cloze",
+        currentKey: `${defaultBook.id}:${defaultUnit.id}:${defaultUnit.words[0][0]}`,
+        rounds: 0,
+        correct: 0,
+        wrong: 0,
+        lastFeedback: "缺字母、听写和拍照查错都要写出完整单词才算会。",
+      },
     },
     voiceURI: "",
     rate: 0.78,
@@ -1266,6 +1382,11 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
         ...base.textbook.scan,
         ...(input?.textbook?.scan ?? {}),
       },
+      spellingRecords: input?.textbook?.spellingRecords ?? {},
+      spelling: {
+        ...base.textbook.spelling,
+        ...(input?.textbook?.spelling ?? {}),
+      },
     },
     voiceURI: input?.voiceURI ?? "",
     rate: input?.rate ?? 0.78,
@@ -1278,6 +1399,12 @@ function normalizeMemory(input: Partial<LearningMemory> | null): LearningMemory 
   const bookWords = getTextbookWordItems(book);
   if (!bookWords.some((item) => item.key === merged.textbook.scan.currentKey)) {
     merged.textbook.scan.currentKey = bookWords[0]?.key ?? "";
+  }
+  if (!bookWords.some((item) => item.key === merged.textbook.spelling.currentKey)) {
+    merged.textbook.spelling.currentKey = bookWords[0]?.key ?? "";
+  }
+  if (!["cloze", "dictation", "photo"].includes(merged.textbook.spelling.mode)) {
+    merged.textbook.spelling.mode = "cloze";
   }
 
   if (merged.completed.date !== getTodayKey()) {
@@ -1335,6 +1462,43 @@ function formatSavedTime(date: Date | null) {
   return date.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
 }
 
+function readFileAsDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(new Error("照片读取失败。"));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function resizeImageForOcr(file: File) {
+  if (!file.type.startsWith("image/")) {
+    throw new Error("请上传照片或图片。");
+  }
+
+  const dataUrl = await readFileAsDataUrl(file);
+  const image = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const nextImage = document.createElement("img");
+    nextImage.onload = () => resolve(nextImage);
+    nextImage.onerror = () => reject(new Error("照片打开失败。"));
+    nextImage.src = dataUrl;
+  });
+  const maxSide = 1280;
+  const scale = Math.min(1, maxSide / Math.max(image.naturalWidth, image.naturalHeight));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+  canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+
+  const context = canvas.getContext("2d");
+  if (!context) return dataUrl;
+
+  context.fillStyle = "#ffffff";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+  return canvas.toDataURL("image/jpeg", 0.84);
+}
+
 export default function EnglishLearningExperience() {
   const [activeTab, setActiveTab] = useState("diagnostic");
   const [memory, setMemory] = useState<LearningMemory>(() => createDefaultMemory());
@@ -1355,7 +1519,12 @@ export default function EnglishLearningExperience() {
   const [session, setSession] = useState<MemberSession | null>(null);
   const [cloudStatus, setCloudStatus] = useState("本机保存");
   const [targetFeedback, setTargetFeedback] = useState("先听单词，再点中对应的中文靶心。");
+  const [textbookSpellingValue, setTextbookSpellingValue] = useState("");
+  const [textbookOcrBusy, setTextbookOcrBusy] = useState(false);
+  const [textbookOcrMessage, setTextbookOcrMessage] = useState("");
+  const [textbookPhotoPreview, setTextbookPhotoPreview] = useState("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const textbookPhotoInputRef = useRef<HTMLInputElement | null>(null);
   const mountedRef = useRef(false);
   const cloudReadyRef = useRef(false);
   const syncTimerRef = useRef<number | null>(null);
@@ -1409,6 +1578,20 @@ export default function EnglishLearningExperience() {
     () => getTextbookMeaningOptions(textbookWords, currentTextbookWord?.key ?? "", memory.textbook.scan.rounds),
     [currentTextbookWord?.key, memory.textbook.scan.rounds, textbookWords],
   );
+  const currentSpellingWord =
+    textbookWords.find((item) => item.key === memory.textbook.spelling.currentKey) ??
+    currentTextbookWord ??
+    textbookWords[0];
+  const currentSpellingWordStat = currentSpellingWord
+    ? memory.textbook.wordStats[currentSpellingWord.key]
+    : undefined;
+  const currentSpellingRecord = currentSpellingWord
+    ? memory.textbook.spellingRecords[currentSpellingWord.key]
+    : undefined;
+  const maskedSpellingWord = currentSpellingWord ? maskTextbookWord(currentSpellingWord.word) : "";
+  const spellingAccuracy = memory.textbook.spelling.rounds
+    ? Math.round((memory.textbook.spelling.correct / memory.textbook.spelling.rounds) * 100)
+    : 0;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -1480,6 +1663,12 @@ export default function EnglishLearningExperience() {
       void syncCloudProgress(memory, false);
     }, 900);
   }, [memory]);
+
+  useEffect(() => {
+    setTextbookSpellingValue("");
+    setTextbookOcrMessage("");
+    setTextbookPhotoPreview("");
+  }, [memory.textbook.spelling.currentKey, memory.textbook.spelling.mode]);
 
   async function requestJson<T>(url: string, init: RequestInit = {}) {
     const response = await fetch(url, {
@@ -1900,6 +2089,201 @@ export default function EnglishLearningExperience() {
         },
       },
     }));
+  }
+
+  function setTextbookSpellingMode(mode: TextbookSpellingMode) {
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        spelling: {
+          ...current.textbook.spelling,
+          mode,
+          lastFeedback:
+            mode === "cloze"
+              ? "缺字母模式：补全中间字母，不能只认中文。"
+              : mode === "dictation"
+                ? "听写模式：先听再写，检查真实拼写。"
+                : "拍照查错：纸上写完拍照，系统识别后逐字检查。",
+        },
+      },
+    }));
+  }
+
+  function skipTextbookSpellingWord() {
+    if (!currentSpellingWord) return;
+    const nextKey = pickNextSpellingWordKey({
+      items: textbookWords,
+      stats: memory.textbook.wordStats,
+      currentKey: currentSpellingWord.key,
+      randomValue: Math.random(),
+    });
+
+    patchMemory((current) => ({
+      ...current,
+      textbook: {
+        ...current.textbook,
+        spelling: {
+          ...current.textbook.spelling,
+          currentKey: nextKey,
+          lastFeedback: "已换下一个词，弱词会被优先抽到。",
+        },
+      },
+    }));
+  }
+
+  function submitTextbookSpelling(answer = textbookSpellingValue, ocrText?: string, imageName?: string) {
+    if (!currentSpellingWord) return;
+
+    const submitted = answer.trim();
+    if (!submitted) {
+      setTextbookOcrMessage("先写出完整英文单词再验收。");
+      return;
+    }
+
+    const isCorrect = normalizeSpellingAnswer(submitted) === normalizeSpellingAnswer(currentSpellingWord.word);
+    const issues = isCorrect ? [] : getSpellingIssues(currentSpellingWord.word, submitted);
+    const randomValue = Math.random();
+
+    patchMemory((current) => {
+      const previous = current.textbook.wordStats[currentSpellingWord.key];
+      const nextCorrect = (previous?.correct ?? 0) + (isCorrect ? 1 : 0);
+      const nextWrong = (previous?.wrong ?? 0) + (isCorrect ? 0 : 1);
+      const mastered = isCorrect ? nextCorrect >= Math.max(2, nextWrong + 2) : false;
+      const nextStat: TextbookWordStat = {
+        word: currentSpellingWord.word,
+        meaning: currentSpellingWord.meaning,
+        bookId: currentSpellingWord.bookId,
+        unitId: currentSpellingWord.unitId,
+        correct: nextCorrect,
+        wrong: nextWrong,
+        mastered,
+        updatedAt: new Date().toISOString(),
+      };
+      const nextStats = {
+        ...current.textbook.wordStats,
+        [currentSpellingWord.key]: nextStat,
+      };
+      const nextKnown = { ...current.knownWords };
+      const nextReview = { ...current.reviewWords };
+      const wrongMap = new Map(current.wrongItems.map((item) => [item.id, item]));
+
+      if (mastered) {
+        nextKnown[currentSpellingWord.word] = {
+          word: currentSpellingWord.word,
+          meaning: currentSpellingWord.meaning,
+          learnedAt: new Date().toISOString(),
+          count: (nextKnown[currentSpellingWord.word]?.count ?? 0) + 1,
+        };
+        delete nextReview[currentSpellingWord.word];
+        wrongMap.delete(`textbook-spelling:${currentSpellingWord.key}`);
+      } else if (!isCorrect) {
+        nextReview[currentSpellingWord.word] = true;
+        const id = `textbook-spelling:${currentSpellingWord.key}`;
+        const previousWrong = wrongMap.get(id);
+        wrongMap.set(id, {
+          id,
+          prompt: `教材拼写：${currentSpellingWord.meaning}`,
+          answer: currentSpellingWord.word,
+          chosen: submitted,
+          type: "教材拼写验收",
+          date: new Date().toISOString(),
+          times: (previousWrong?.times ?? 0) + 1,
+        });
+      }
+
+      const nextKey = pickNextSpellingWordKey({
+        items: textbookWords,
+        stats: nextStats,
+        currentKey: currentSpellingWord.key,
+        randomValue,
+      });
+      const masteredCount = textbookWords.filter((item) => isMasteredTextbookWord(nextStats[item.key])).length;
+      const allMastered = textbookWords.length > 0 && masteredCount >= textbookWords.length;
+
+      return {
+        ...current,
+        knownWords: nextKnown,
+        reviewWords: nextReview,
+        wrongItems: Array.from(wrongMap.values()),
+        textbook: {
+          ...current.textbook,
+          wordStats: nextStats,
+          spellingRecords: {
+            ...current.textbook.spellingRecords,
+            [currentSpellingWord.key]: {
+              word: currentSpellingWord.word,
+              meaning: currentSpellingWord.meaning,
+              bookId: currentSpellingWord.bookId,
+              unitId: currentSpellingWord.unitId,
+              expected: currentSpellingWord.word,
+              answer: submitted,
+              mode: current.textbook.spelling.mode,
+              correct: isCorrect,
+              issues,
+              ocrText,
+              imageName,
+              date: new Date().toISOString(),
+            },
+          },
+          spelling: {
+            ...current.textbook.spelling,
+            currentKey: nextKey,
+            rounds: current.textbook.spelling.rounds + 1,
+            correct: current.textbook.spelling.correct + (isCorrect ? 1 : 0),
+            wrong: current.textbook.spelling.wrong + (isCorrect ? 0 : 1),
+            lastFeedback: isCorrect
+              ? mastered
+                ? `拼对：${currentSpellingWord.word} 已达到掌握标准。`
+                : `拼对：${currentSpellingWord.word}，再稳定几次就算真正会。`
+              : `${currentSpellingWord.word} 拼写不稳：${issues.join("；")}。已进弱词。`,
+          },
+        },
+        completed: allMastered
+          ? {
+              date: getTodayKey(),
+              modules: { ...current.completed.modules, textbook: true },
+            }
+          : current.completed,
+      };
+    });
+
+    setTextbookSpellingValue("");
+  }
+
+  async function handleTextbookPhoto(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file || !currentSpellingWord) return;
+
+    setTextbookOcrBusy(true);
+    setTextbookOcrMessage("正在识别手写单词...");
+
+    try {
+      const imageDataUrl = await resizeImageForOcr(file);
+      setTextbookPhotoPreview(imageDataUrl);
+      const result = await requestJson<{ text?: string; note?: string }>("/api/english/ocr", {
+        method: "POST",
+        body: JSON.stringify({
+          imageDataUrl,
+          expectedWord: currentSpellingWord.word,
+        }),
+      });
+      const recognizedText = (result.text ?? "").trim();
+
+      if (!recognizedText) {
+        setTextbookOcrMessage(result.note ?? "没识别出英文单词，可以手动输入后验收。");
+        return;
+      }
+
+      setTextbookSpellingValue(recognizedText);
+      submitTextbookSpelling(recognizedText, recognizedText, file.name);
+      setTextbookOcrMessage(`识别到：${recognizedText}`);
+    } catch (error) {
+      setTextbookOcrMessage(error instanceof Error ? error.message : "识别失败，可以手动输入后验收。");
+    } finally {
+      setTextbookOcrBusy(false);
+    }
   }
 
   function answerTextbookWord(choice: string) {
@@ -2819,6 +3203,141 @@ export default function EnglishLearningExperience() {
                 ) : (
                   <strong>暂时没有漏洞</strong>
                 )}
+              </div>
+            </section>
+
+            <section className={styles.spellingLabPanel}>
+              <div className={styles.spellingLabTopline}>
+                <div>
+                  <p className={styles.sectionKicker}>Spell Check</p>
+                  <h3>拼写验收</h3>
+                  <p>缺字母、听写和拍照查错都按完整英文判定，拼错会同步进弱词池。</p>
+                </div>
+                <div className={styles.spellingScorePills} aria-label="拼写验收统计">
+                  <div>
+                    <span>验收</span>
+                    <strong>{memory.textbook.spelling.rounds}</strong>
+                  </div>
+                  <div>
+                    <span>正确率</span>
+                    <strong>{spellingAccuracy}%</strong>
+                  </div>
+                  <div>
+                    <span>错拼</span>
+                    <strong>{memory.textbook.spelling.wrong}</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.spellingModeBar} role="group" aria-label="拼写验收模式">
+                <button
+                  type="button"
+                  className={memory.textbook.spelling.mode === "cloze" ? styles.activeSpellingMode : ""}
+                  onClick={() => setTextbookSpellingMode("cloze")}
+                >
+                  缺字母
+                </button>
+                <button
+                  type="button"
+                  className={memory.textbook.spelling.mode === "dictation" ? styles.activeSpellingMode : ""}
+                  onClick={() => setTextbookSpellingMode("dictation")}
+                >
+                  听写
+                </button>
+                <button
+                  type="button"
+                  className={memory.textbook.spelling.mode === "photo" ? styles.activeSpellingMode : ""}
+                  onClick={() => setTextbookSpellingMode("photo")}
+                >
+                  拍照查错
+                </button>
+              </div>
+
+              {currentSpellingWord ? (
+                <div className={styles.spellingChallenge}>
+                  <div className={styles.spellingPromptBlock}>
+                    <span>{currentSpellingWord.unitTitle} · {currentSpellingWord.tag}</span>
+                    {memory.textbook.spelling.mode === "cloze" ? (
+                      <strong className={styles.maskedWord}>{maskedSpellingWord}</strong>
+                    ) : (
+                      <strong>{memory.textbook.spelling.mode === "dictation" ? "听写输入" : "纸上默写后拍照"}</strong>
+                    )}
+                    <p>{currentSpellingWord.meaning}</p>
+                    <button type="button" className={styles.soundButton} onClick={() => speak(currentSpellingWord.word, 0.68)}>
+                      <Volume2 size={18} />
+                    </button>
+                  </div>
+
+                  <div className={styles.spellingWriteBlock}>
+                    <form
+                      className={styles.spellingInputRow}
+                      onSubmit={(event) => {
+                        event.preventDefault();
+                        submitTextbookSpelling();
+                      }}
+                    >
+                      <input
+                        value={textbookSpellingValue}
+                        onChange={(event) => setTextbookSpellingValue(event.target.value)}
+                        placeholder="写完整英文单词"
+                        autoCapitalize="none"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        spellCheck={false}
+                      />
+                      <button type="submit" className={styles.miniActionStrong}>
+                        验收
+                      </button>
+                    </form>
+
+                    {memory.textbook.spelling.mode === "photo" ? (
+                      <div className={styles.photoCheckPanel}>
+                        <button
+                          type="button"
+                          className={styles.photoUploadButton}
+                          disabled={textbookOcrBusy}
+                          onClick={() => textbookPhotoInputRef.current?.click()}
+                        >
+                          <Upload size={17} />
+                          {textbookOcrBusy ? "识别中" : "拍照上传"}
+                        </button>
+                        <input
+                          ref={textbookPhotoInputRef}
+                          className={styles.hiddenInput}
+                          type="file"
+                          accept="image/*"
+                          capture="environment"
+                          onChange={handleTextbookPhoto}
+                        />
+                        {textbookPhotoPreview ? (
+                          <img className={styles.photoPreview} src={textbookPhotoPreview} alt="手写单词预览" />
+                        ) : (
+                          <p>手机打开时会调相机，桌面也可以上传手写照片。</p>
+                        )}
+                      </div>
+                    ) : null}
+
+                    <div className={styles.spellingActionRow}>
+                      <button type="button" className={styles.miniAction} onClick={() => speak(currentSpellingWord.word, 0.62)}>
+                        慢速听
+                      </button>
+                      <button type="button" className={styles.miniAction} onClick={skipTextbookSpellingWord}>
+                        换一个
+                      </button>
+                      <span>{currentSpellingWordStat?.mastered ? "已掌握" : isWeakTextbookWord(currentSpellingWordStat) ? "弱词优先" : "待验收"}</span>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+
+              <div className={styles.spellingFeedback}>
+                <strong>{memory.textbook.spelling.lastFeedback}</strong>
+                {textbookOcrMessage ? <p>{textbookOcrMessage}</p> : null}
+                {currentSpellingRecord ? (
+                  <p>
+                    本词上次：{currentSpellingRecord.correct ? "拼对" : `拼错，${currentSpellingRecord.issues.join("；")}`}。
+                  </p>
+                ) : null}
               </div>
             </section>
 
