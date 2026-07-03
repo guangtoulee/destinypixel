@@ -1500,6 +1500,7 @@ export default function EnglishLearningExperience() {
   const [textbookPhotoPreview, setTextbookPhotoPreview] = useState("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const textbookPhotoInputRef = useRef<HTMLInputElement | null>(null);
+  const activePanelRef = useRef<HTMLDivElement | null>(null);
   const mountedRef = useRef(false);
 
   const levelId = memory.assessment?.level ?? "foundation";
@@ -1675,6 +1676,19 @@ export default function EnglishLearningExperience() {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
+  }
+
+  function openTab(tab: string) {
+    setActiveTab(tab);
+
+    window.setTimeout(() => {
+      if (!window.matchMedia("(max-width: 1120px)").matches) return;
+
+      activePanelRef.current?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start",
+      });
+    }, 0);
   }
 
   function startAssessment() {
@@ -2600,7 +2614,7 @@ export default function EnglishLearningExperience() {
               key={id}
               type="button"
               className={activeTab === id ? styles.activeNav : ""}
-              onClick={() => setActiveTab(id)}
+              onClick={() => openTab(id)}
             >
               <Icon size={17} />
               {label}
@@ -2621,11 +2635,11 @@ export default function EnglishLearningExperience() {
             <h2>先找准水平，再把薄弱项一点点补上来。</h2>
             <p>全年龄可用的自适应英语训练站：先测大致词汇和理解水平，再练词卡、人教版同步、听读、发音和单词靶场。</p>
             <div className={styles.heroActions}>
-              <button type="button" className={styles.primaryAction} onClick={() => setActiveTab("diagnostic")}>
+              <button type="button" className={styles.primaryAction} onClick={() => openTab("diagnostic")}>
                 <ClipboardCheck size={18} />
                 开始摸底
               </button>
-              <button type="button" className={styles.secondaryAction} onClick={() => setActiveTab("textbook")}>
+              <button type="button" className={styles.secondaryAction} onClick={() => openTab("textbook")}>
                 <GraduationCap size={18} />
                 教材同步
               </button>
@@ -2659,6 +2673,8 @@ export default function EnglishLearningExperience() {
           </article>
         </section>
 
+        <div ref={activePanelRef} className={styles.activePanelAnchor} aria-hidden="true" />
+
         {activeTab === "diagnostic" && (
           <section className={styles.tabPanel}>
             <div className={styles.panelHeading}>
@@ -2682,7 +2698,7 @@ export default function EnglishLearningExperience() {
                 onAnswer={recordAnswer}
                 onStartAgain={startAssessment}
                 onSpeak={speak}
-                onOpenPlan={() => setActiveTab("plan")}
+                onOpenPlan={() => openTab("plan")}
               />
               <aside className={styles.insightCard}>
                 <h3>怎么判断</h3>
@@ -2720,7 +2736,7 @@ export default function EnglishLearningExperience() {
                     <button
                       type="button"
                       className={done ? styles.secondaryAction : styles.primaryAction}
-                      onClick={() => setActiveTab(module.tab)}
+                      onClick={() => openTab(module.tab)}
                     >
                       {done ? <Check size={17} /> : <Play size={17} />}
                       {done ? "再练一次" : module.action}

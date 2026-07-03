@@ -396,6 +396,10 @@
   font-size: 1.05rem;
 }
 
+.activePanelAnchor {
+  scroll-margin-top: 18px;
+}
+
 .tabPanel {
   display: block;
 }
