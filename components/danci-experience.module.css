@@ -1,0 +1,748 @@
+.shell {
+  --cache-ink: #eaf2ff;
+  --cache-muted: #8fa4b7;
+  --cache-panel: rgba(13, 22, 32, 0.88);
+  --cache-panel-strong: rgba(19, 31, 43, 0.96);
+  --cache-line: rgba(150, 188, 204, 0.2);
+  --cache-green: #35d49a;
+  --cache-cyan: #4cc9f0;
+  --cache-yellow: #f3c969;
+  --cache-red: #f06f61;
+  --cache-violet: #8f7cff;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  min-height: 100vh;
+  color: var(--cache-ink);
+  background:
+    linear-gradient(135deg, #071019 0%, #0f1c20 42%, #201c2b 100%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 46px);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.shell button,
+.shell input {
+  font: inherit;
+}
+
+.shell button {
+  cursor: pointer;
+}
+
+.commandDeck {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: grid;
+  gap: 14px;
+  height: 100vh;
+  padding: 22px 16px;
+  border-right: 1px solid var(--cache-line);
+  background:
+    linear-gradient(180deg, rgba(9, 17, 27, 0.98), rgba(13, 28, 31, 0.94)),
+    repeating-linear-gradient(0deg, rgba(76, 201, 240, 0.05) 0 1px, transparent 1px 22px);
+  box-shadow: 18px 0 42px rgba(0, 0, 0, 0.18);
+}
+
+.identityBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(53, 212, 154, 0.42);
+  border-radius: 8px;
+  background: #0b151f;
+  color: var(--cache-green);
+  box-shadow: 0 0 24px rgba(53, 212, 154, 0.18);
+  font-weight: 950;
+}
+
+.identityBlock p,
+.topBar p,
+.riskPanel p {
+  margin: 0 0 5px;
+  color: var(--cache-cyan);
+  font-size: 0.72rem;
+  font-weight: 860;
+  text-transform: uppercase;
+}
+
+.identityBlock h1,
+.topBar h2,
+.nodeInspector h2,
+.panelTitle,
+.missionHeader,
+.historyPanel p {
+  letter-spacing: 0;
+}
+
+.identityBlock h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 950;
+}
+
+.cacheDial,
+.modePanel,
+.riskPanel,
+.historyPanel,
+.starPanel,
+.nodeInspector,
+.missionCard {
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: var(--cache-panel);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
+}
+
+.cacheDial {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.dialRing {
+  --health: 50%;
+  display: grid;
+  place-items: center;
+  min-height: 154px;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at center, #0b151f 0 51%, transparent 52%),
+    conic-gradient(var(--cache-green) 0 var(--health), rgba(255, 255, 255, 0.1) var(--health) 100%);
+}
+
+.dialRing strong {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 950;
+}
+
+.dialRing span {
+  color: var(--cache-muted);
+  font-size: 0.8rem;
+  font-weight: 820;
+}
+
+.dialStats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dialStats div {
+  min-height: 66px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dialStats span,
+.recordGrid span {
+  display: block;
+  color: var(--cache-muted);
+  font-size: 0.76rem;
+  font-weight: 820;
+}
+
+.dialStats strong,
+.recordGrid strong {
+  display: block;
+  margin-top: 6px;
+  color: #fff;
+  font-size: 1.16rem;
+}
+
+.modePanel {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.modePanel button,
+.deckActions button,
+.riskPanel button,
+.soundButton,
+.primaryAction,
+.traceGrid button,
+.partRow button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.modePanel button {
+  min-height: 42px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--cache-muted);
+  font-weight: 880;
+}
+
+.modePanel .activeMode {
+  border-color: rgba(53, 212, 154, 0.7);
+  background: rgba(53, 212, 154, 0.15);
+  color: #fff;
+  box-shadow: inset 0 0 22px rgba(53, 212, 154, 0.12);
+}
+
+.riskPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+}
+
+.riskPanel strong {
+  color: #fff;
+}
+
+.riskPanel button,
+.deckActions button {
+  min-height: 38px;
+  padding: 0 12px;
+  background: #101b26;
+  color: var(--cache-ink);
+  font-weight: 850;
+}
+
+.riskPanel .riskHot {
+  border-color: rgba(240, 111, 97, 0.6);
+  background: rgba(240, 111, 97, 0.18);
+  color: #fff;
+}
+
+.deckActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.workspace {
+  display: grid;
+  gap: 18px;
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topBar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.topBar h2 {
+  margin: 0;
+  max-width: 920px;
+  color: #fff;
+  font-size: 1.65rem;
+  font-weight: 940;
+  line-height: 1.22;
+}
+
+.gradeReadout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(243, 201, 105, 0.28);
+  border-radius: 8px;
+  background: rgba(243, 201, 105, 0.1);
+  color: #ffe5a6;
+  font-weight: 820;
+}
+
+.coreGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.starPanel,
+.nodeInspector,
+.missionCard,
+.historyPanel {
+  padding: 16px;
+}
+
+.panelTitle,
+.missionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.panelTitle span,
+.missionHeader span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.panelTitle strong,
+.missionHeader strong {
+  color: var(--cache-muted);
+  font-size: 0.82rem;
+}
+
+.starMap {
+  width: 100%;
+  min-height: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(53, 212, 154, 0.12), transparent 23%),
+    radial-gradient(circle at 70% 20%, rgba(143, 124, 255, 0.14), transparent 24%),
+    linear-gradient(180deg, rgba(5, 11, 18, 0.92), rgba(8, 16, 26, 0.76)),
+    repeating-linear-gradient(90deg, rgba(76, 201, 240, 0.05) 0 1px, transparent 1px 40px);
+}
+
+.signalLine {
+  stroke: rgba(76, 201, 240, 0.34);
+  stroke-width: 2;
+}
+
+.lockedLine {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 5 8;
+}
+
+.starNode {
+  cursor: pointer;
+  outline: none;
+}
+
+.starNode circle {
+  fill: #122335;
+  stroke: rgba(76, 201, 240, 0.8);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 10px rgba(76, 201, 240, 0.32));
+}
+
+.starNode text {
+  fill: #cde9ff;
+  font-size: 18px;
+  font-weight: 820;
+}
+
+.masteredNode circle {
+  fill: url("#nodeGlow");
+  stroke: var(--cache-green);
+}
+
+.weakNode circle {
+  stroke: var(--cache-red);
+  filter: drop-shadow(0 0 12px rgba(240, 111, 97, 0.48));
+}
+
+.selectedNode circle {
+  stroke: var(--cache-yellow);
+  stroke-width: 4;
+}
+
+.lockedNode {
+  cursor: default;
+}
+
+.lockedNode circle {
+  fill: #141922;
+  stroke: rgba(255, 255, 255, 0.14);
+  filter: none;
+}
+
+.lockedNode text {
+  fill: rgba(255, 255, 255, 0.25);
+  font-size: 13px;
+}
+
+.nodeInspector {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  background:
+    linear-gradient(180deg, rgba(18, 31, 42, 0.98), rgba(11, 21, 31, 0.92)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 28px);
+}
+
+.nodeBadge {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--cache-muted);
+}
+
+.nodeBadge span,
+.nodeBadge strong {
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.soundButton {
+  justify-self: start;
+  width: 42px;
+  height: 42px;
+  background: rgba(76, 201, 240, 0.14);
+  color: #fff;
+}
+
+.nodeInspector h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 950;
+  overflow-wrap: anywhere;
+}
+
+.nodeInspector > p {
+  margin: 0;
+  color: var(--cache-yellow);
+  font-size: 1.05rem;
+  font-weight: 840;
+}
+
+.rootFormula {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.rootFormula span {
+  min-height: 38px;
+  padding: 9px 10px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  text-align: center;
+  font-weight: 860;
+}
+
+.exampleText {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(53, 212, 154, 0.2);
+  border-radius: 8px;
+  background: rgba(53, 212, 154, 0.08);
+  color: #dffcee;
+}
+
+.exampleText p {
+  margin: 0;
+  line-height: 1.58;
+}
+
+.recordGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.recordGrid div {
+  min-height: 72px;
+  padding: 10px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.missionCard {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  background: rgba(13, 22, 32, 0.82);
+}
+
+.liveMission {
+  border-color: rgba(53, 212, 154, 0.54);
+  box-shadow: 0 0 0 1px rgba(53, 212, 154, 0.12), 0 22px 46px rgba(0, 0, 0, 0.22);
+}
+
+.missionPrompt {
+  margin: 0;
+  color: var(--cache-muted);
+  line-height: 1.6;
+}
+
+.formulaPreview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.formulaPreview span,
+.formulaPreview strong {
+  min-height: 42px;
+  padding: 10px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-align: center;
+}
+
+.formulaPreview strong {
+  grid-column: 1 / -1;
+  border-color: rgba(243, 201, 105, 0.28);
+  color: var(--cache-yellow);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+.partRow {
+  display: grid;
+  gap: 8px;
+}
+
+.partRow > span {
+  color: var(--cache-cyan);
+  font-size: 0.76rem;
+  font-weight: 840;
+}
+
+.partRow > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.partRow button {
+  display: grid;
+  min-height: 58px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.partRow button strong {
+  font-size: 0.96rem;
+}
+
+.partRow button small {
+  color: var(--cache-muted);
+  font-size: 0.68rem;
+}
+
+.partRow .selectedPart {
+  border-color: var(--cache-green);
+  background: rgba(53, 212, 154, 0.16);
+}
+
+.primaryAction {
+  min-height: 44px;
+  padding: 0 14px;
+  border-color: rgba(53, 212, 154, 0.62);
+  background: var(--cache-green);
+  color: #04120d;
+  font-weight: 900;
+}
+
+.primaryAction:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.patchWord {
+  padding: 16px;
+  border: 1px solid rgba(243, 201, 105, 0.24);
+  border-radius: 8px;
+  background: rgba(243, 201, 105, 0.08);
+  color: #fff0bd;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 2.15rem;
+  font-weight: 950;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.patchForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.patchForm input {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--cache-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0b151f;
+  font-weight: 880;
+}
+
+.patchForm input:focus {
+  border-color: var(--cache-green);
+  outline: 3px solid rgba(53, 212, 154, 0.18);
+}
+
+.traceMeaning {
+  margin: 0;
+  color: var(--cache-yellow);
+  font-size: 1.8rem;
+  font-weight: 950;
+}
+
+.traceGrid {
+  display: grid;
+  gap: 8px;
+}
+
+.traceGrid button {
+  justify-content: start;
+  min-height: 44px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-weight: 860;
+}
+
+.modePanel button:hover,
+.deckActions button:hover,
+.riskPanel button:hover,
+.soundButton:hover,
+.primaryAction:hover,
+.traceGrid button:hover,
+.partRow button:hover {
+  transform: translateY(-1px);
+}
+
+.historyPanel {
+  display: grid;
+  gap: 8px;
+}
+
+.historyPanel p {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--cache-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .commandDeck {
+    position: static;
+    height: auto;
+  }
+
+  .modePanel,
+  .deckActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coreGrid,
+  .missionGrid,
+  .topBar {
+    grid-template-columns: 1fr;
+  }
+
+  .starMap {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  .commandDeck,
+  .workspace {
+    padding: 14px;
+  }
+
+  .identityBlock h1 {
+    font-size: 1.12rem;
+  }
+
+  .cacheDial {
+    grid-template-columns: 1fr;
+  }
+
+  .modePanel {
+    grid-template-columns: 1fr;
+  }
+
+  .topBar h2 {
+    font-size: 1.18rem;
+  }
+
+  .gradeReadout {
+    align-items: start;
+    height: auto;
+    min-height: 42px;
+    padding: 10px 12px;
+  }
+
+  .starPanel,
+  .nodeInspector,
+  .missionCard,
+  .historyPanel {
+    padding: 12px;
+  }
+
+  .starMap {
+    min-height: 330px;
+  }
+
+  .starNode text {
+    font-size: 22px;
+  }
+
+  .nodeInspector h2 {
+    font-size: 2rem;
+  }
+
+  .rootFormula,
+  .recordGrid,
+  .formulaPreview,
+  .partRow > div,
+  .patchForm {
+    grid-template-columns: 1fr;
+  }
+
+  .rootFormula svg {
+    display: none;
+  }
+
+  .patchWord,
+  .traceMeaning {
+    font-size: 1.55rem;
+  }
+}
