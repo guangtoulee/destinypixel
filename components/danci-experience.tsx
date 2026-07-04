@@ -1,27 +1,19 @@
 "use client";
 
 import {
-  Activity,
   Atom,
-  BookOpen,
   Brain,
   Check,
   ChevronRight,
-  CircleDot,
-  Crosshair,
-  Database,
-  FlaskConical,
-  Gauge,
-  Play,
+  Cpu,
   RefreshCcw,
-  Rocket,
-  Shuffle,
+  ShieldAlert,
   Sparkles,
-  Target,
   Volume2,
+  X,
   Zap,
 } from "lucide-react";
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   allowedEnglishVoiceSummary,
   chooseAllowedEnglishVoice,
@@ -29,6 +21,8 @@ import {
 import styles from "./danci-experience.module.css";
 
 type CacheMode = "map" | "forge" | "patch" | "trace";
+type CombatMode = "forge" | "patch";
+type CombatStatus = "active" | "success" | "failure";
 type ThemeId = "space" | "bio" | "geo" | "machine" | "exam";
 
 type WordNode = {
@@ -75,6 +69,7 @@ type CacheMemory = {
   selectedId: string;
   mode: CacheMode;
   records: Record<string, WordRecord>;
+  computePower: number;
   patchIndex: number;
   traceIndex: number;
   forgeIndex: number;
@@ -85,6 +80,13 @@ type CacheMemory = {
   unlockedLevel: number;
   lastFeedback: string;
   history: string[];
+};
+
+type CombatState = {
+  nodeId: string;
+  mode: CombatMode;
+  status: CombatStatus;
+  seed: number;
 };
 
 const storageKey = "neuralCacheWordMemoryV1";
@@ -178,7 +180,7 @@ const wordNodes: WordNode[] = [
     level: 1,
     family: "physics",
     theme: "space",
-    root: "erg",
+    root: "energ",
     prefix: "",
     suffix: "y",
     rootMeaning: "工作 / 能量",
@@ -482,7 +484,7 @@ const wordNodes: WordNode[] = [
     level: 3,
     family: "science",
     theme: "bio",
-    root: "sci",
+    root: "scient",
     prefix: "",
     suffix: "ist",
     rootMeaning: "知道的人",
@@ -498,7 +500,7 @@ const wordNodes: WordNode[] = [
     level: 3,
     family: "science",
     theme: "exam",
-    root: "sci",
+    root: "scient",
     prefix: "",
     suffix: "ific",
     rootMeaning: "与知道有关",
@@ -738,7 +740,7 @@ const wordNodes: WordNode[] = [
     level: 2,
     family: "mind",
     theme: "exam",
-    root: "memor",
+    root: "member",
     prefix: "re",
     suffix: "",
     rootMeaning: "重新带回记忆",
@@ -751,39 +753,68 @@ const wordNodes: WordNode[] = [
 
 const prefixes: Part[] = [
   { code: nonePart, label: "∅", meaning: "不加前缀" },
-  { code: "un", label: "un-", meaning: "否定 / 反向" },
-  { code: "re", label: "re-", meaning: "再次 / 回来" },
-  { code: "in", label: "in-", meaning: "进入 / 使" },
-  { code: "trans", label: "trans-", meaning: "跨越 / 转换" },
-  { code: "con", label: "con-", meaning: "共同 / 合在一起" },
-  { code: "pro", label: "pro-", meaning: "向前 / 保护" },
-  { code: "pre", label: "pre-", meaning: "提前" },
+  { code: "at", label: "at-", meaning: "朝向 / 贴近" },
+  { code: "de", label: "de-", meaning: "向下 / 分离" },
+  { code: "en", label: "en-", meaning: "使进入 / 包围" },
   { code: "ex", label: "ex-", meaning: "向外" },
   { code: "im", label: "im-", meaning: "向内 / 进入" },
-  { code: "de", label: "de-", meaning: "向下 / 分离" },
+  { code: "in", label: "in-", meaning: "进入 / 使" },
+  { code: "net", label: "net-", meaning: "网状连接" },
+  { code: "pre", label: "pre-", meaning: "提前" },
+  { code: "pro", label: "pro-", meaning: "向前 / 保护" },
+  { code: "re", label: "re-", meaning: "再次 / 回来" },
+  { code: "trans", label: "trans-", meaning: "跨越 / 转换" },
+  { code: "un", label: "un-", meaning: "否定 / 反向" },
+  { code: "con", label: "con-", meaning: "共同 / 合在一起" },
 ];
 
 const roots: Part[] = [
-  { code: "form", label: "form", meaning: "形状 / 形成" },
-  { code: "port", label: "port", meaning: "搬运" },
-  { code: "bear", label: "bear", meaning: "承受" },
-  { code: "sci", label: "sci", meaning: "知道" },
   { code: "act", label: "act", meaning: "行动" },
-  { code: "struct", label: "struct", meaning: "建造 / 堆叠" },
-  { code: "dict", label: "dict", meaning: "说" },
-  { code: "tect", label: "tect", meaning: "覆盖 / 保护" },
+  { code: "bear", label: "bear", meaning: "承受" },
   { code: "bio", label: "bio", meaning: "生命" },
+  { code: "bright", label: "bright", meaning: "明亮 / 清晰" },
+  { code: "cord", label: "cord", meaning: "心 / 记录" },
+  { code: "dict", label: "dict", meaning: "说" },
+  { code: "energ", label: "energ", meaning: "工作 / 能量" },
+  { code: "erg", label: "erg", meaning: "工作 / 能量" },
+  { code: "form", label: "form", meaning: "形状 / 形成" },
   { code: "geo", label: "geo", meaning: "地球 / 地理" },
+  { code: "hist", label: "hist", meaning: "询问 / 记录" },
+  { code: "light", label: "light", meaning: "光 / 轻" },
+  { code: "member", label: "member", meaning: "记忆中的片段" },
+  { code: "memor", label: "memor", meaning: "记住" },
+  { code: "mut", label: "mut", meaning: "改变" },
+  { code: "nect", label: "nect", meaning: "绑在一起" },
+  { code: "plan", label: "plan", meaning: "游走 / 平面" },
+  { code: "port", label: "port", meaning: "搬运" },
+  { code: "sci", label: "sci", meaning: "知道" },
+  { code: "scient", label: "scient", meaning: "知道 / 科学" },
+  { code: "sign", label: "sign", meaning: "标记" },
+  { code: "source", label: "source", meaning: "来源" },
+  { code: "struct", label: "struct", meaning: "建造 / 堆叠" },
+  { code: "system", label: "system", meaning: "组合成整体" },
+  { code: "tack", label: "tack", meaning: "钉住 / 触碰" },
+  { code: "target", label: "target", meaning: "瞄准点" },
+  { code: "tect", label: "tect", meaning: "覆盖 / 保护" },
+  { code: "viron", label: "viron", meaning: "围绕" },
+  { code: "work", label: "work", meaning: "工作 / 运转" },
 ];
 
 const suffixes: Part[] = [
   { code: nonePart, label: "∅", meaning: "不加后缀" },
+  { code: "al", label: "-al", meaning: "……的" },
   { code: "able", label: "-able", meaning: "能被……的" },
-  { code: "tion", label: "-tion", meaning: "名词化" },
   { code: "ation", label: "-ation", meaning: "动作 / 结果" },
+  { code: "ence", label: "-ence", meaning: "性质 / 状态" },
+  { code: "et", label: "-et", meaning: "小型名词尾" },
+  { code: "graphy", label: "-graphy", meaning: "书写 / 绘制" },
+  { code: "ific", label: "-ific", meaning: "……性质的" },
   { code: "ion", label: "-ion", meaning: "动作 / 结果" },
   { code: "ist", label: "-ist", meaning: "做这件事的人" },
-  { code: "ific", label: "-ific", meaning: "……性质的" },
+  { code: "logy", label: "-logy", meaning: "学科 / 研究" },
+  { code: "ory", label: "-ory", meaning: "相关的事物" },
+  { code: "tion", label: "-tion", meaning: "名词化" },
+  { code: "ure", label: "-ure", meaning: "结果 / 结构" },
   { code: "ive", label: "-ive", meaning: "有……倾向的" },
   { code: "ment", label: "-ment", meaning: "状态 / 结果" },
   { code: "y", label: "-y", meaning: "有……性质" },
@@ -815,7 +846,7 @@ const forgeChallenges: ForgeChallenge[] = [
     targetId: "scientist",
     prompt: "生成一个人：做科学的人",
     prefix: nonePart,
-    root: "sci",
+    root: "scient",
     suffix: "ist",
   },
   {
@@ -850,9 +881,10 @@ const forgeChallenges: ForgeChallenge[] = [
 
 function createDefaultMemory(): CacheMemory {
   return {
-    selectedId: "environment",
+    selectedId: "bright",
     mode: "map",
     records: {},
+    computePower: 100,
     patchIndex: 0,
     traceIndex: 2,
     forgeIndex: 0,
@@ -886,6 +918,7 @@ function normalizeMemory(input: Partial<CacheMemory> | null): CacheMemory {
   }
 
   merged.unlockedLevel = Math.min(5, Math.max(1, Math.round(merged.unlockedLevel || 1)));
+  merged.computePower = Math.min(100, Math.max(0, Math.round(merged.computePower ?? base.computePower)));
 
   return merged;
 }
@@ -949,9 +982,34 @@ function getThemeLabel(theme: ThemeId) {
   return labels[theme];
 }
 
+const initialUnlockedIds = ["bright", "system"];
+
+function getPart(parts: Part[], code: string) {
+  return parts.find((part) => part.code === code);
+}
+
+function getForgeAnswer(node: WordNode) {
+  return {
+    prefix: node.prefix || nonePart,
+    root: node.root,
+    suffix: node.suffix || nonePart,
+  };
+}
+
+function isForgeableNode(node: WordNode) {
+  const answer = getForgeAnswer(node);
+  return Boolean(
+    getPart(prefixes, answer.prefix) &&
+      getPart(roots, answer.root) &&
+      getPart(suffixes, answer.suffix) &&
+      normalizeAnswer(buildWord(answer.prefix, answer.root, answer.suffix)) === normalizeAnswer(node.word),
+  );
+}
+
 export default function DanciExperience() {
   const [memory, setMemory] = useState<CacheMemory>(() => createDefaultMemory());
   const [loaded, setLoaded] = useState(false);
+  const [combat, setCombat] = useState<CombatState | null>(null);
   const [patchInput, setPatchInput] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedParts, setSelectedParts] = useState({
@@ -959,51 +1017,50 @@ export default function DanciExperience() {
     root: "",
     suffix: "",
   });
-  const mapRef = useRef<HTMLElement | null>(null);
-  const forgeRef = useRef<HTMLElement | null>(null);
-  const patchRef = useRef<HTMLElement | null>(null);
-  const traceRef = useRef<HTMLElement | null>(null);
+  const [lastUnlockedId, setLastUnlockedId] = useState("");
 
-  const masteredCount = wordNodes.filter((node) => getRecord(memory.records, node.id).mastered).length;
-  const weakCount = wordNodes.filter((node) => {
-    const record = getRecord(memory.records, node.id);
-    return record.wrong > record.correct && record.attempts > 0;
-  }).length;
-  const totalAttempts = Object.values(memory.records).reduce((sum, record) => sum + record.attempts, 0);
-  const totalCorrect = Object.values(memory.records).reduce((sum, record) => sum + record.correct, 0);
-  const accuracy = totalAttempts ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
-  const computedLevel = Math.min(5, Math.max(memory.unlockedLevel, 2 + Math.floor(masteredCount / 7)));
-  const cacheHealth = Math.max(
-    8,
-    Math.min(99, Math.round(42 + masteredCount * 1.5 + accuracy * 0.34 + memory.streak * 1.8 - weakCount * 5)),
-  );
-  const availableWords = wordNodes.filter((node) => node.level <= computedLevel);
+  const unlockedNodeIds = useMemo(() => {
+    const ids = new Set(initialUnlockedIds);
+    Object.entries(memory.records).forEach(([id, record]) => {
+      if (record.correct > 0 || record.mastered) {
+        ids.add(id);
+      }
+    });
+    return ids;
+  }, [memory.records]);
   const selectedNode = wordNodes.find((node) => node.id === memory.selectedId) ?? wordNodes[0];
-  const patchNode = availableWords[memory.patchIndex % availableWords.length] ?? wordNodes[0];
-  const traceNode = availableWords[memory.traceIndex % availableWords.length] ?? wordNodes[0];
-  const currentForge = forgeChallenges[memory.forgeIndex % forgeChallenges.length];
-  const forgeTarget = wordNodes.find((node) => node.id === currentForge.targetId) ?? selectedNode;
-  const traceChoices = useMemo(() => {
-    const distractors = wordNodes
-      .filter((node) => node.id !== traceNode.id && node.level <= Math.min(5, traceNode.level + 1))
-      .slice(0, 18);
-    return shuffleBySeed([traceNode, ...shuffleBySeed(distractors, memory.traceIndex).slice(0, 3)], memory.traceIndex + 7);
-  }, [memory.traceIndex, traceNode]);
-  const forgePrefixOptions = useMemo(
-    () => shuffleBySeed([currentForge.prefix, "un", "re", "trans", "in", nonePart].filter((value, index, list) => list.indexOf(value) === index), memory.forgeIndex)
-      .map((code) => prefixes.find((part) => part.code === code) ?? prefixes[0]),
-    [currentForge.prefix, memory.forgeIndex],
-  );
-  const forgeRootOptions = useMemo(
-    () => shuffleBySeed([currentForge.root, "form", "port", "act", "struct", "sci"].filter((value, index, list) => list.indexOf(value) === index), memory.forgeIndex + 3)
-      .map((code) => roots.find((part) => part.code === code) ?? roots[0]),
-    [currentForge.root, memory.forgeIndex],
-  );
-  const forgeSuffixOptions = useMemo(
-    () => shuffleBySeed([currentForge.suffix, "able", "ation", "ion", "ist", nonePart].filter((value, index, list) => list.indexOf(value) === index), memory.forgeIndex + 5)
-      .map((code) => suffixes.find((part) => part.code === code) ?? suffixes[0]),
-    [currentForge.suffix, memory.forgeIndex],
-  );
+  const combatNode = combat ? wordNodes.find((node) => node.id === combat.nodeId) ?? null : null;
+  const combatForgeChallenge = combatNode ? forgeChallenges.find((challenge) => challenge.targetId === combatNode.id) : undefined;
+  const unlockedCount = wordNodes.filter((node) => unlockedNodeIds.has(node.id)).length;
+  const gameOver = memory.computePower <= 0;
+  const shellClass = [
+    styles.shell,
+    combat ? styles.combatOpen : "",
+    combat?.status === "failure" ? styles.shellFailure : "",
+    gameOver ? styles.shellGameOver : "",
+  ].join(" ");
+  const combatForgeOptions = useMemo(() => {
+    if (!combatNode) {
+      return { prefixes: [], roots: [], suffixes: [] };
+    }
+    const answer = getForgeAnswer(combatNode);
+    const seed = combat?.seed ?? 1;
+
+    return {
+      prefixes: shuffleBySeed(
+        [answer.prefix, "un", "re", "trans", "in", nonePart].filter((value, index, list) => list.indexOf(value) === index),
+        seed,
+      ).map((code) => getPart(prefixes, code) ?? prefixes[0]),
+      roots: shuffleBySeed(
+        [answer.root, "form", "port", "act", "struct", "sci", "bear"].filter((value, index, list) => list.indexOf(value) === index),
+        seed + 3,
+      ).map((code) => getPart(roots, code) ?? roots[0]),
+      suffixes: shuffleBySeed(
+        [answer.suffix, "able", "ation", "ion", "ist", nonePart].filter((value, index, list) => list.indexOf(value) === index),
+        seed + 5,
+      ).map((code) => getPart(suffixes, code) ?? suffixes[0]),
+    };
+  }, [combat?.seed, combatNode]);
 
   useEffect(() => {
     try {
@@ -1040,148 +1097,119 @@ export default function DanciExperience() {
     setMemory((current) => normalizeMemory(updater(current)));
   }
 
-  function recordResult({
-    id,
-    correct,
-    mode,
-    feedback,
-    extra,
-  }: {
-    id: string;
-    correct: boolean;
-    mode: CacheMode;
-    feedback: string;
-    extra?: Partial<CacheMemory>;
-  }) {
+  function openCombat(node: WordNode) {
+    if (gameOver) return;
+    const forgeable = isForgeableNode(node);
+    const mode: CombatMode = forgeable && Math.random() > 0.5 ? "forge" : "patch";
+    setPatchInput("");
+    setSelectedParts({ prefix: "", root: "", suffix: "" });
+    setCombat({
+      nodeId: node.id,
+      mode,
+      status: "active",
+      seed: memory.patchIndex + memory.forgeIndex + node.word.length + Math.floor(Math.random() * 97),
+    });
+    patchMemory((current) => ({
+      ...current,
+      selectedId: node.id,
+      mode,
+      lastFeedback: `Encrypted node detected: ${node.word}`,
+    }));
+  }
+
+  function handleNodeClick(node: WordNode) {
+    if (gameOver) return;
+    if (!unlockedNodeIds.has(node.id)) {
+      openCombat(node);
+      return;
+    }
+    patchMemory((current) => ({
+      ...current,
+      selectedId: node.id,
+      mode: "map",
+      lastFeedback: `Node intel loaded: ${node.word}`,
+    }));
+  }
+
+  function resolveHack(correct: boolean) {
+    if (!combat || !combatNode) return;
+    const mode = combat.mode;
+    const feedback = correct
+      ? `Access Granted: ${combatNode.word} 节点已点亮。`
+      : `Hack Failed: ${combatNode.word} 仍处于加密状态。`;
+
     patchMemory((current) => {
-      const previous = getRecord(current.records, id);
+      const previous = getRecord(current.records, combatNode.id);
       const nextRecord: WordRecord = {
         attempts: previous.attempts + 1,
         correct: previous.correct + (correct ? 1 : 0),
         wrong: previous.wrong + (correct ? 0 : 1),
-        mastered: correct
-          ? previous.correct + 1 >= 2 && previous.correct + 1 >= previous.wrong + 1
-          : false,
+        mastered: correct ? true : previous.mastered,
         lastMode: mode,
         updatedAt: new Date().toISOString(),
       };
+      const nextStreak = correct ? current.streak + 1 : 0;
       const nextRecords = {
         ...current.records,
-        [id]: nextRecord,
+        [combatNode.id]: nextRecord,
       };
-      const nextMastered = wordNodes.filter((node) => getRecord(nextRecords, node.id).mastered).length;
-      const nextStreak = correct ? current.streak + 1 : 0;
-      const creditDelta = correct ? 3 * current.risk + nextRecord.correct : -2 * current.risk;
+      const nextUnlocked = wordNodes.filter((node) => initialUnlockedIds.includes(node.id) || getRecord(nextRecords, node.id).correct > 0).length;
 
       return {
         ...current,
-        ...extra,
         records: nextRecords,
+        computePower: Math.max(0, current.computePower - 10),
+        selectedId: combatNode.id,
+        mode,
+        patchIndex: mode === "patch" ? current.patchIndex + 1 : current.patchIndex,
+        forgeIndex: mode === "forge" ? current.forgeIndex + 1 : current.forgeIndex,
         streak: nextStreak,
         bestStreak: Math.max(current.bestStreak, nextStreak),
-        credits: Math.max(0, current.credits + creditDelta),
-        unlockedLevel: Math.min(5, Math.max(current.unlockedLevel, 2 + Math.floor(nextMastered / 7))),
+        credits: Math.max(0, current.credits + (correct ? 6 + nextRecord.correct : -3)),
+        unlockedLevel: Math.min(5, Math.max(current.unlockedLevel, 1 + Math.floor(nextUnlocked / 7))),
         lastFeedback: feedback,
-        history: [feedback, ...current.history].slice(0, 6),
+        history: [feedback, ...current.history].slice(0, 8),
       };
     });
-  }
 
-  function setMode(mode: CacheMode) {
-    patchMemory((current) => ({ ...current, mode }));
+    if (correct) {
+      setCombat({ ...combat, status: "success" });
+      setLastUnlockedId(combatNode.id);
+      setSelectedParts({ prefix: "", root: "", suffix: "" });
+      setPatchInput("");
+      window.setTimeout(() => setCombat(null), 920);
+      return;
+    }
+
+    setCombat({ ...combat, status: "failure" });
     window.setTimeout(() => {
-      const targets: Record<CacheMode, HTMLElement | null> = {
-        map: mapRef.current,
-        forge: forgeRef.current,
-        patch: patchRef.current,
-        trace: traceRef.current,
-      };
-      targets[mode]?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 30);
+      setCombat((current) => {
+        if (!current || current.nodeId !== combat.nodeId || current.status !== "failure") return current;
+        if (memory.computePower - 10 <= 0) return null;
+        return { ...current, status: "active" };
+      });
+    }, 680);
   }
 
-  function selectNode(id: string) {
-    patchMemory((current) => ({ ...current, selectedId: id, mode: "map" }));
-  }
-
-  function submitForge() {
+  function submitCombatForge() {
+    if (!combatNode) return;
     const formed = buildWord(selectedParts.prefix, selectedParts.root, selectedParts.suffix);
-    const expected = forgeTarget.word;
-    const correct = normalizeAnswer(formed) === normalizeAnswer(expected);
-
-    recordResult({
-      id: forgeTarget.id,
-      correct,
-      mode: "forge",
-      feedback: correct
-        ? `合成成功：${expected} 已写入神经缓存。`
-        : `合成失败：目标是 ${expected}，你生成了 ${formed || "空配方"}。`,
-      extra: {
-        forgeIndex: memory.forgeIndex + 1,
-        selectedId: forgeTarget.id,
-        mode: "forge",
-      },
-    });
-    setSelectedParts({ prefix: "", root: "", suffix: "" });
+    resolveHack(normalizeAnswer(formed) === normalizeAnswer(combatNode.word));
   }
 
-  function submitPatch(event: FormEvent<HTMLFormElement>) {
+  function submitCombatPatch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const answer = patchInput.trim();
-    if (!answer) return;
-    const correct = normalizeAnswer(answer) === normalizeAnswer(patchNode.word);
-
-    recordResult({
-      id: patchNode.id,
-      correct,
-      mode: "patch",
-      feedback: correct
-        ? `补丁命中：${patchNode.word} 拼写稳定度上升。`
-        : `缓存抖动：${patchNode.meaning} 应写 ${patchNode.word}。`,
-      extra: {
-        patchIndex: memory.patchIndex + 1,
-        selectedId: patchNode.id,
-        mode: "patch",
-      },
-    });
-    setPatchInput("");
-  }
-
-  function answerTrace(choiceId: string) {
-    const choice = wordNodes.find((node) => node.id === choiceId);
-    const correct = choiceId === traceNode.id;
-
-    recordResult({
-      id: traceNode.id,
-      correct,
-      mode: "trace",
-      feedback: correct
-        ? `链路追踪成功：${traceNode.word} = ${traceNode.meaning}。`
-        : `追踪偏移：${traceNode.meaning} 是 ${traceNode.word}，不是 ${choice?.word ?? "未知节点"}。`,
-      extra: {
-        traceIndex: memory.traceIndex + 1,
-        selectedId: traceNode.id,
-        mode: "trace",
-      },
-    });
-  }
-
-  function randomizeMission() {
-    patchMemory((current) => ({
-      ...current,
-      selectedId: availableWords[Math.floor(Math.random() * availableWords.length)]?.id ?? current.selectedId,
-      patchIndex: current.patchIndex + 1 + Math.floor(Math.random() * 5),
-      traceIndex: current.traceIndex + 1 + Math.floor(Math.random() * 5),
-      forgeIndex: current.forgeIndex + 1,
-      lastFeedback: "任务队列已重新洗牌。",
-    }));
+    if (!combatNode || !patchInput.trim()) return;
+    resolveHack(normalizeAnswer(patchInput) === normalizeAnswer(combatNode.word));
   }
 
   function resetMemory() {
     if (!window.confirm("重置 Neural Cache 的本机训练记录？")) return;
     setMemory(createDefaultMemory());
+    setCombat(null);
     setPatchInput("");
     setSelectedParts({ prefix: "", root: "", suffix: "" });
+    setLastUnlockedId("");
   }
 
   function speak(text: string) {
@@ -1210,316 +1238,231 @@ export default function DanciExperience() {
   }
 
   return (
-    <main className={styles.shell}>
-      <section className={styles.commandDeck}>
-        <div className={styles.identityBlock}>
-          <div className={styles.mark} aria-hidden="true">
-            NC
-          </div>
+    <main className={shellClass}>
+      <section className={styles.worldMap} aria-label="Vocabulary Galaxy world map">
+        <svg className={styles.starMap} viewBox="0 0 1040 840" preserveAspectRatio="xMidYMid meet" role="img" aria-label="单词星图">
+          <defs>
+            <radialGradient id="nodeGlow" cx="50%" cy="45%" r="65%">
+              <stop offset="0%" stopColor="#fff7ba" />
+              <stop offset="45%" stopColor="#38f6b4" />
+              <stop offset="100%" stopColor="#29a6ff" />
+            </radialGradient>
+            <filter id="electricGlow">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          {wordNodes.flatMap((node) =>
+            node.links.map((link) => {
+              const target = wordNodes.find((item) => item.id === link);
+              if (!target) return null;
+              const liveLine = unlockedNodeIds.has(node.id) && unlockedNodeIds.has(target.id);
+              return (
+                <line
+                  key={`${node.id}-${link}`}
+                  x1={node.x}
+                  y1={node.y}
+                  x2={target.x}
+                  y2={target.y}
+                  className={liveLine ? styles.signalLine : styles.fogLine}
+                />
+              );
+            }),
+          )}
+          {wordNodes.map((node) => {
+            const unlocked = unlockedNodeIds.has(node.id);
+            const selected = node.id === selectedNode.id;
+            const className = [
+              styles.starNode,
+              unlocked ? styles.unlockedNode : styles.encryptedNode,
+              selected ? styles.selectedNode : "",
+              lastUnlockedId === node.id ? styles.newlyUnlockedNode : "",
+            ].join(" ");
+
+            return (
+              <g
+                key={node.id}
+                className={className}
+                role="button"
+                tabIndex={0}
+                aria-label={`${unlocked ? "已点亮" : "加密"}节点 ${node.word}`}
+                onClick={() => handleNodeClick(node)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    handleNodeClick(node);
+                  }
+                }}
+              >
+                {lastUnlockedId === node.id ? <circle cx={node.x} cy={node.y} r={32} className={styles.unlockPulse} /> : null}
+                <circle cx={node.x} cy={node.y} r={unlocked ? 17 : 14} />
+                {unlocked ? null : (
+                  <>
+                    <path d={`M ${node.x - 6} ${node.y - 2} v-7 a6 6 0 0 1 12 0 v7`} className={styles.lockShackle} />
+                    <rect x={node.x - 9} y={node.y - 2} width="18" height="14" rx="3" className={styles.lockBody} />
+                  </>
+                )}
+                <text x={node.x + 22} y={node.y + 5}>{unlocked ? node.word : "ENCRYPTED"}</text>
+              </g>
+            );
+          })}
+        </svg>
+      </section>
+
+      <section className={styles.hud} aria-label="Neural Cache HUD">
+        <div className={styles.brandBlock}>
+          <span>NC</span>
           <div>
             <p>Neural Cache</p>
-            <h1>单词缓存查杀台</h1>
+            <h1>Vocabulary Galaxy</h1>
           </div>
         </div>
-
-        <section className={styles.cacheDial} aria-label="缓存健康度">
-          <div className={styles.dialRing} style={{ "--health": `${cacheHealth}%` } as React.CSSProperties}>
-            <strong>{cacheHealth}</strong>
-            <span>Cache Health</span>
-          </div>
-          <div className={styles.dialStats}>
-            <div>
-              <span>已掌握</span>
-              <strong>{masteredCount}/{wordNodes.length}</strong>
-            </div>
-            <div>
-              <span>弱节点</span>
-              <strong>{weakCount}</strong>
-            </div>
-            <div>
-              <span>连击</span>
-              <strong>{memory.streak}</strong>
-            </div>
-            <div>
-              <span>缓存币</span>
-              <strong>{memory.credits}</strong>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.modePanel}>
-          <button type="button" className={memory.mode === "map" ? styles.activeMode : ""} onClick={() => setMode("map")}>
-            <Rocket size={17} />
-            星图
-          </button>
-          <button type="button" className={memory.mode === "forge" ? styles.activeMode : ""} onClick={() => setMode("forge")}>
-            <FlaskConical size={17} />
-            合成炉
-          </button>
-          <button type="button" className={memory.mode === "patch" ? styles.activeMode : ""} onClick={() => setMode("patch")}>
-            <Target size={17} />
-            拼写补丁
-          </button>
-          <button type="button" className={memory.mode === "trace" ? styles.activeMode : ""} onClick={() => setMode("trace")}>
-            <Crosshair size={17} />
-            链路追踪
-          </button>
-        </section>
-
-        <section className={styles.riskPanel}>
+        <div className={styles.computeBlock}>
           <div>
-            <p>收益杠杆</p>
-            <strong>{memory.risk === 2 ? "x2 加压" : "x1 标准"}</strong>
+            <span>剩余算力</span>
+            <strong>{memory.computePower}</strong>
           </div>
-          <button
-            type="button"
-            className={memory.risk === 2 ? styles.riskHot : ""}
-            onClick={() => patchMemory((current) => ({ ...current, risk: current.risk === 1 ? 2 : 1 }))}
-          >
-            <Zap size={16} />
-            {memory.risk === 2 ? "降杠杆" : "加杠杆"}
-          </button>
-        </section>
-
-        <div className={styles.deckActions}>
-          <button type="button" onClick={randomizeMission}>
-            <Shuffle size={16} />
-            洗牌
-          </button>
-          <button type="button" onClick={resetMemory}>
-            <RefreshCcw size={16} />
-            重置
-          </button>
+          <div className={styles.computeTrack}>
+            <i style={{ width: `${memory.computePower}%` }} />
+          </div>
+        </div>
+        <div className={styles.hudStats}>
+          <span>{unlockedCount}/{wordNodes.length} nodes online</span>
+          <span>Best streak {memory.bestStreak}</span>
         </div>
       </section>
 
-      <section className={styles.workspace}>
-        <section className={styles.topBar}>
-          <div>
-            <p>Level {computedLevel} Unlocked</p>
-            <h2>{memory.lastFeedback}</h2>
-          </div>
-          <div className={styles.gradeReadout}>
-            <Gauge size={18} />
-            <span>李嘉益短板锁定：英语词汇缓存</span>
-          </div>
-        </section>
+      <section className={styles.intelPanel} aria-label="Selected node intel">
+        <div className={styles.nodeBadge}>
+          <span>{getThemeLabel(selectedNode.theme)}</span>
+          <strong>Lv.{selectedNode.level}</strong>
+        </div>
+        <button type="button" className={styles.soundButton} onClick={() => speak(`${selectedNode.word}. ${selectedNode.example}`)}>
+          <Volume2 size={17} />
+        </button>
+        <h2>{selectedNode.word}</h2>
+        <p>{selectedNode.meaning}</p>
+        <div className={styles.rootFormula}>
+          <span>{selectedNode.prefix || "∅"}</span>
+          <ChevronRight size={14} />
+          <span>{selectedNode.root}</span>
+          <ChevronRight size={14} />
+          <span>{selectedNode.suffix || "∅"}</span>
+        </div>
+        <div className={styles.exampleText}>
+          <Sparkles size={15} />
+          <p>{selectedNode.example}</p>
+        </div>
+        <p className={styles.statusFeed}>{memory.lastFeedback}</p>
+      </section>
 
-        <section className={styles.coreGrid}>
-          <article ref={mapRef} className={styles.starPanel}>
-            <div className={styles.panelTitle}>
-              <span>
-                <Database size={18} />
-                Vocabulary Galaxy
-              </span>
-              <strong>{availableWords.length} nodes online</strong>
-            </div>
-            <svg className={styles.starMap} viewBox="0 0 1040 840" role="img" aria-label="单词星图">
-              <defs>
-                <radialGradient id="nodeGlow" cx="50%" cy="45%" r="65%">
-                  <stop offset="0%" stopColor="#f5d56f" />
-                  <stop offset="48%" stopColor="#32d2a0" />
-                  <stop offset="100%" stopColor="#2368ff" />
-                </radialGradient>
-              </defs>
-              {wordNodes.flatMap((node) =>
-                node.links.map((link) => {
-                  const target = wordNodes.find((item) => item.id === link);
-                  if (!target) return null;
-                  const locked = node.level > computedLevel || target.level > computedLevel;
-                  return (
-                    <line
-                      key={`${node.id}-${link}`}
-                      x1={node.x}
-                      y1={node.y}
-                      x2={target.x}
-                      y2={target.y}
-                      className={locked ? styles.lockedLine : styles.signalLine}
-                    />
-                  );
-                }),
-              )}
-              {wordNodes.map((node) => {
-                const record = getRecord(memory.records, node.id);
-                const locked = node.level > computedLevel;
-                const selected = node.id === selectedNode.id;
-                const className = [
-                  styles.starNode,
-                  locked ? styles.lockedNode : "",
-                  record.mastered ? styles.masteredNode : "",
-                  record.wrong > record.correct ? styles.weakNode : "",
-                  selected ? styles.selectedNode : "",
-                ].join(" ");
+      <button type="button" className={styles.resetButton} onClick={resetMemory}>
+        <RefreshCcw size={16} />
+        Reset
+      </button>
 
-                return (
-                  <g
-                    key={node.id}
-                    className={className}
-                    role="button"
-                    tabIndex={locked ? -1 : 0}
-                    onClick={() => {
-                      if (!locked) selectNode(node.id);
-                    }}
-                    onKeyDown={(event) => {
-                      if (!locked && (event.key === "Enter" || event.key === " ")) {
-                        selectNode(node.id);
-                      }
-                    }}
-                  >
-                    <circle cx={node.x} cy={node.y} r={selected ? 19 : 14} />
-                    <text x={node.x + 20} y={node.y + 5}>{locked ? "LOCK" : node.word}</text>
-                  </g>
-                );
-              })}
-            </svg>
-          </article>
-
-          <article className={styles.nodeInspector}>
-            <div className={styles.nodeBadge}>
-              <span>{getThemeLabel(selectedNode.theme)}</span>
-              <strong>Lv.{selectedNode.level}</strong>
-            </div>
-            <button type="button" className={styles.soundButton} onClick={() => speak(`${selectedNode.word}. ${selectedNode.example}`)}>
-              <Volume2 size={18} />
+      {combat && combatNode ? (
+        <section className={styles.modalLayer} aria-label="Combat phase">
+          <div className={[styles.combatModal, styles[`combat${combat.status}`]].join(" ")}>
+            <button type="button" className={styles.closeButton} aria-label="关闭破解弹窗" onClick={() => setCombat(null)}>
+              <X size={18} />
             </button>
-            <h2>{selectedNode.word}</h2>
-            <p>{selectedNode.meaning}</p>
-            <div className={styles.rootFormula}>
-              <span>{selectedNode.prefix || "∅"}</span>
-              <ChevronRight size={15} />
-              <span>{selectedNode.root}</span>
-              <ChevronRight size={15} />
-              <span>{selectedNode.suffix || "∅"}</span>
-            </div>
-            <div className={styles.exampleText}>
-              <Sparkles size={16} />
-              <p>{selectedNode.example}</p>
-            </div>
-            <div className={styles.recordGrid}>
+            <div className={styles.modalHeader}>
+              <span>{combat.mode === "forge" ? <Atom size={20} /> : <Brain size={20} />}</span>
               <div>
-                <span>命中</span>
-                <strong>{getRecord(memory.records, selectedNode.id).correct}</strong>
-              </div>
-              <div>
-                <span>错漏</span>
-                <strong>{getRecord(memory.records, selectedNode.id).wrong}</strong>
-              </div>
-              <div>
-                <span>词根</span>
-                <strong>{selectedNode.rootMeaning}</strong>
+                <p>Combat Phase</p>
+                <h2>{combat.mode === "forge" ? "Root Forge" : "Spell Patch"}</h2>
               </div>
             </div>
-          </article>
-        </section>
+            <div className={styles.targetReadout}>
+              <span>Encrypted Node</span>
+              <strong>{combatNode.meaning}</strong>
+            </div>
 
-        <section className={styles.missionGrid}>
-          <article ref={forgeRef} className={[styles.missionCard, memory.mode === "forge" ? styles.liveMission : ""].join(" ")}>
-            <div className={styles.missionHeader}>
-              <span>
-                <Atom size={18} />
-                Root Forge
-              </span>
-              <strong>{forgeTarget.meaning}</strong>
-            </div>
-            <p className={styles.missionPrompt}>{currentForge.prompt}</p>
-            <div className={styles.formulaPreview}>
-              {[selectedParts.prefix, selectedParts.root, selectedParts.suffix].map((part, index) => (
-                <span key={`${part}-${index}`}>{part ? prefixes.concat(roots, suffixes).find((item) => item.code === part)?.label ?? part : "?"}</span>
-              ))}
-              <strong>{buildWord(selectedParts.prefix, selectedParts.root, selectedParts.suffix) || "awaiting formula"}</strong>
-            </div>
-            <PartRow
-              label="前缀"
-              parts={forgePrefixOptions}
-              selected={selectedParts.prefix}
-              onSelect={(code) => setSelectedParts((current) => ({ ...current, prefix: code }))}
-            />
-            <PartRow
-              label="词根"
-              parts={forgeRootOptions}
-              selected={selectedParts.root}
-              onSelect={(code) => setSelectedParts((current) => ({ ...current, root: code }))}
-            />
-            <PartRow
-              label="后缀"
-              parts={forgeSuffixOptions}
-              selected={selectedParts.suffix}
-              onSelect={(code) => setSelectedParts((current) => ({ ...current, suffix: code }))}
-            />
-            <button
-              type="button"
-              className={styles.primaryAction}
-              disabled={!selectedParts.prefix || !selectedParts.root || !selectedParts.suffix}
-              onClick={submitForge}
-            >
-              <Play size={17} />
-              注入合成炉
-            </button>
-          </article>
-
-          <article ref={patchRef} className={[styles.missionCard, memory.mode === "patch" ? styles.liveMission : ""].join(" ")}>
-            <div className={styles.missionHeader}>
-              <span>
-                <Brain size={18} />
-                Spell Patch
-              </span>
-              <strong>{patchNode.meaning}</strong>
-            </div>
-            <div className={styles.patchWord}>{maskWord(patchNode.word, memory.patchIndex)}</div>
-            <p className={styles.missionPrompt}>{patchNode.example}</p>
-            <form className={styles.patchForm} onSubmit={submitPatch}>
-              <input
-                value={patchInput}
-                onChange={(event) => setPatchInput(event.target.value)}
-                placeholder="输入完整英文"
-                autoCapitalize="none"
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck={false}
-              />
-              <button type="submit" className={styles.primaryAction}>
-                <Check size={17} />
-                修复
-              </button>
-            </form>
-          </article>
-
-          <article ref={traceRef} className={[styles.missionCard, memory.mode === "trace" ? styles.liveMission : ""].join(" ")}>
-            <div className={styles.missionHeader}>
-              <span>
-                <Activity size={18} />
-                Meaning Trace
-              </span>
-              <strong>反推英文节点</strong>
-            </div>
-            <p className={styles.traceMeaning}>{traceNode.meaning}</p>
-            <p className={styles.missionPrompt}>{traceNode.example.replace(traceNode.word, "______")}</p>
-            <div className={styles.traceGrid}>
-              {traceChoices.map((choice) => (
-                <button key={choice.id} type="button" onClick={() => answerTrace(choice.id)}>
-                  <CircleDot size={15} />
-                  {choice.word}
+            {combat.mode === "forge" ? (
+              <div className={styles.combatBody}>
+                <p className={styles.missionPrompt}>{combatForgeChallenge?.prompt ?? `合成目标单词：${combatNode.meaning}`}</p>
+                <div className={styles.formulaPreview}>
+                  {[selectedParts.prefix, selectedParts.root, selectedParts.suffix].map((part, index) => (
+                    <span key={`${part}-${index}`}>{part ? prefixes.concat(roots, suffixes).find((item) => item.code === part)?.label ?? part : "?"}</span>
+                  ))}
+                  <strong>{buildWord(selectedParts.prefix, selectedParts.root, selectedParts.suffix) || "awaiting formula"}</strong>
+                </div>
+                <PartRow
+                  label="前缀"
+                  parts={combatForgeOptions.prefixes}
+                  selected={selectedParts.prefix}
+                  onSelect={(code) => setSelectedParts((current) => ({ ...current, prefix: code }))}
+                />
+                <PartRow
+                  label="词根"
+                  parts={combatForgeOptions.roots}
+                  selected={selectedParts.root}
+                  onSelect={(code) => setSelectedParts((current) => ({ ...current, root: code }))}
+                />
+                <PartRow
+                  label="后缀"
+                  parts={combatForgeOptions.suffixes}
+                  selected={selectedParts.suffix}
+                  onSelect={(code) => setSelectedParts((current) => ({ ...current, suffix: code }))}
+                />
+                <button
+                  type="button"
+                  className={styles.primaryAction}
+                  disabled={!selectedParts.prefix || !selectedParts.root || !selectedParts.suffix || combat.status !== "active"}
+                  onClick={submitCombatForge}
+                >
+                  <Zap size={17} />
+                  Execute Hack
                 </button>
-              ))}
-            </div>
-          </article>
-        </section>
+              </div>
+            ) : (
+              <form className={styles.combatBody} onSubmit={submitCombatPatch}>
+                <div className={styles.patchWord}>{maskWord(combatNode.word, combat.seed)}</div>
+                <p className={styles.missionPrompt}>{combatNode.example}</p>
+                <div className={styles.patchForm}>
+                  <input
+                    value={patchInput}
+                    onChange={(event) => setPatchInput(event.target.value)}
+                    placeholder="输入完整英文"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    spellCheck={false}
+                  />
+                  <button type="submit" className={styles.primaryAction} disabled={combat.status !== "active"}>
+                    <Check size={17} />
+                    Inject
+                  </button>
+                </div>
+              </form>
+            )}
 
-        <section className={styles.historyPanel}>
-          <div className={styles.panelTitle}>
-            <span>
-              <BookOpen size={18} />
-              Cache Log
-            </span>
-            <strong>Best streak {memory.bestStreak}</strong>
+            {combat.status !== "active" ? (
+              <div className={styles.combatResult}>
+                {combat.status === "success" ? "ACCESS GRANTED" : "HACK FAILED"}
+              </div>
+            ) : null}
           </div>
-          {memory.history.length ? (
-            memory.history.map((item) => <p key={item}>{item}</p>)
-          ) : (
-            <p>等待第一次缓存写入。</p>
-          )}
         </section>
-      </section>
+      ) : null}
+
+      {gameOver ? (
+        <section className={styles.gameOverPanel} aria-label="Game over">
+          <div>
+            <ShieldAlert size={42} />
+            <p>Compute Power Depleted</p>
+            <h2>Game Over</h2>
+            <span>算力归零，神经缓存链路已断开。</span>
+            <button type="button" onClick={resetMemory}>
+              <Cpu size={17} />
+              重启缓存核心
+            </button>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

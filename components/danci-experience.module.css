@@ -1,22 +1,50 @@
 .shell {
-  --cache-ink: #eaf2ff;
-  --cache-muted: #8fa4b7;
-  --cache-panel: rgba(13, 22, 32, 0.88);
-  --cache-panel-strong: rgba(19, 31, 43, 0.96);
-  --cache-line: rgba(150, 188, 204, 0.2);
-  --cache-green: #35d49a;
-  --cache-cyan: #4cc9f0;
-  --cache-yellow: #f3c969;
-  --cache-red: #f06f61;
-  --cache-violet: #8f7cff;
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+  --ink: #f2f8ff;
+  --muted: #90a4b8;
+  --grid: rgba(87, 197, 255, 0.12);
+  --cyan: #47d8ff;
+  --green: #37f6a6;
+  --yellow: #ffd166;
+  --red: #ff4d6d;
+  --violet: #9b7cff;
+  position: relative;
   min-height: 100vh;
-  color: var(--cache-ink);
+  overflow: hidden;
+  color: var(--ink);
   background:
-    linear-gradient(135deg, #071019 0%, #0f1c20 42%, #201c2b 100%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 46px);
+    radial-gradient(circle at 16% 28%, rgba(55, 246, 166, 0.16), transparent 28%),
+    radial-gradient(circle at 78% 18%, rgba(155, 124, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 62% 78%, rgba(71, 216, 255, 0.12), transparent 32%),
+    #02050d;
   font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at center, black 0 48%, transparent 76%);
+  opacity: 0.48;
+}
+
+.shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 0 solid rgba(255, 77, 109, 0);
+  transition: border-color 160ms ease, border-width 160ms ease;
+}
+
+.shellFailure::after {
+  border-width: 12px;
+  border-color: rgba(255, 77, 109, 0.8);
+  animation: redEdge 680ms ease both;
 }
 
 .shell button,
@@ -28,399 +56,298 @@
   cursor: pointer;
 }
 
-.commandDeck {
-  position: sticky;
-  top: 0;
-  align-self: start;
-  display: grid;
-  gap: 14px;
+.worldMap {
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  padding: 22px 16px;
-  border-right: 1px solid var(--cache-line);
-  background:
-    linear-gradient(180deg, rgba(9, 17, 27, 0.98), rgba(13, 28, 31, 0.94)),
-    repeating-linear-gradient(0deg, rgba(76, 201, 240, 0.05) 0 1px, transparent 1px 22px);
-  box-shadow: 18px 0 42px rgba(0, 0, 0, 0.18);
+  transition: filter 220ms ease, transform 220ms ease;
 }
 
-.identityBlock {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.mark {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(53, 212, 154, 0.42);
-  border-radius: 8px;
-  background: #0b151f;
-  color: var(--cache-green);
-  box-shadow: 0 0 24px rgba(53, 212, 154, 0.18);
-  font-weight: 950;
-}
-
-.identityBlock p,
-.topBar p,
-.riskPanel p {
-  margin: 0 0 5px;
-  color: var(--cache-cyan);
-  font-size: 0.72rem;
-  font-weight: 860;
-  text-transform: uppercase;
-}
-
-.identityBlock h1,
-.topBar h2,
-.nodeInspector h2,
-.panelTitle,
-.missionHeader,
-.historyPanel p {
-  letter-spacing: 0;
-}
-
-.identityBlock h1 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 950;
-}
-
-.cacheDial,
-.modePanel,
-.riskPanel,
-.historyPanel,
-.starPanel,
-.nodeInspector,
-.missionCard {
-  border: 1px solid var(--cache-line);
-  border-radius: 8px;
-  background: var(--cache-panel);
-  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
-}
-
-.cacheDial {
-  display: grid;
-  gap: 14px;
-  padding: 16px;
-}
-
-.dialRing {
-  --health: 50%;
-  display: grid;
-  place-items: center;
-  min-height: 154px;
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at center, #0b151f 0 51%, transparent 52%),
-    conic-gradient(var(--cache-green) 0 var(--health), rgba(255, 255, 255, 0.1) var(--health) 100%);
-}
-
-.dialRing strong {
-  color: #fff;
-  font-size: 2.6rem;
-  font-weight: 950;
-}
-
-.dialRing span {
-  color: var(--cache-muted);
-  font-size: 0.8rem;
-  font-weight: 820;
-}
-
-.dialStats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.dialStats div {
-  min-height: 66px;
-  padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.dialStats span,
-.recordGrid span {
-  display: block;
-  color: var(--cache-muted);
-  font-size: 0.76rem;
-  font-weight: 820;
-}
-
-.dialStats strong,
-.recordGrid strong {
-  display: block;
-  margin-top: 6px;
-  color: #fff;
-  font-size: 1.16rem;
-}
-
-.modePanel {
-  display: grid;
-  gap: 8px;
-  padding: 10px;
-}
-
-.modePanel button,
-.deckActions button,
-.riskPanel button,
-.soundButton,
-.primaryAction,
-.traceGrid button,
-.partRow button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 1px solid var(--cache-line);
-  border-radius: 8px;
-  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
-}
-
-.modePanel button {
-  min-height: 42px;
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--cache-muted);
-  font-weight: 880;
-}
-
-.modePanel .activeMode {
-  border-color: rgba(53, 212, 154, 0.7);
-  background: rgba(53, 212, 154, 0.15);
-  color: #fff;
-  box-shadow: inset 0 0 22px rgba(53, 212, 154, 0.12);
-}
-
-.riskPanel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: center;
-  padding: 14px;
-}
-
-.riskPanel strong {
-  color: #fff;
-}
-
-.riskPanel button,
-.deckActions button {
-  min-height: 38px;
-  padding: 0 12px;
-  background: #101b26;
-  color: var(--cache-ink);
-  font-weight: 850;
-}
-
-.riskPanel .riskHot {
-  border-color: rgba(240, 111, 97, 0.6);
-  background: rgba(240, 111, 97, 0.18);
-  color: #fff;
-}
-
-.deckActions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.workspace {
-  display: grid;
-  gap: 18px;
-  width: min(1320px, 100%);
-  margin: 0 auto;
-  padding: 24px;
-}
-
-.topBar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: end;
-}
-
-.topBar h2 {
-  margin: 0;
-  max-width: 920px;
-  color: #fff;
-  font-size: 1.65rem;
-  font-weight: 940;
-  line-height: 1.22;
-}
-
-.gradeReadout {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 0 14px;
-  border: 1px solid rgba(243, 201, 105, 0.28);
-  border-radius: 8px;
-  background: rgba(243, 201, 105, 0.1);
-  color: #ffe5a6;
-  font-weight: 820;
-}
-
-.coreGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.starPanel,
-.nodeInspector,
-.missionCard,
-.historyPanel {
-  padding: 16px;
-}
-
-.panelTitle,
-.missionHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 12px;
-}
-
-.panelTitle span,
-.missionHeader span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-weight: 900;
-}
-
-.panelTitle strong,
-.missionHeader strong {
-  color: var(--cache-muted);
-  font-size: 0.82rem;
+.combatOpen .worldMap,
+.shellGameOver .worldMap {
+  filter: blur(10px) brightness(0.48) saturate(0.75);
+  transform: scale(1.02);
 }
 
 .starMap {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 520px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(53, 212, 154, 0.12), transparent 23%),
-    radial-gradient(circle at 70% 20%, rgba(143, 124, 255, 0.14), transparent 24%),
-    linear-gradient(180deg, rgba(5, 11, 18, 0.92), rgba(8, 16, 26, 0.76)),
-    repeating-linear-gradient(90deg, rgba(76, 201, 240, 0.05) 0 1px, transparent 1px 40px);
+  height: 100%;
+  box-sizing: border-box;
+  padding: clamp(64px, 8vw, 110px) clamp(14px, 4vw, 70px) clamp(86px, 10vw, 126px);
 }
 
 .signalLine {
-  stroke: rgba(76, 201, 240, 0.34);
-  stroke-width: 2;
+  stroke: rgba(71, 216, 255, 0.46);
+  stroke-width: 2.1;
+  filter: drop-shadow(0 0 8px rgba(71, 216, 255, 0.55));
+  stroke-dasharray: 11 10;
+  animation: signalFlow 9s linear infinite;
 }
 
-.lockedLine {
-  stroke: rgba(255, 255, 255, 0.08);
-  stroke-width: 1;
-  stroke-dasharray: 5 8;
+.fogLine {
+  stroke: rgba(180, 205, 235, 0.12);
+  stroke-width: 1.4;
+  stroke-dasharray: 4 12;
 }
 
 .starNode {
-  cursor: pointer;
   outline: none;
 }
 
 .starNode circle {
-  fill: #122335;
-  stroke: rgba(76, 201, 240, 0.8);
-  stroke-width: 2;
-  filter: drop-shadow(0 0 10px rgba(76, 201, 240, 0.32));
+  transition: opacity 180ms ease, r 180ms ease, stroke 180ms ease, filter 180ms ease;
 }
 
 .starNode text {
-  fill: #cde9ff;
-  font-size: 18px;
-  font-weight: 820;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0;
+  paint-order: stroke;
+  stroke: rgba(2, 5, 13, 0.8);
+  stroke-width: 4px;
 }
 
-.masteredNode circle {
+.unlockedNode {
+  cursor: pointer;
+}
+
+.unlockedNode circle {
   fill: url("#nodeGlow");
-  stroke: var(--cache-green);
+  stroke: var(--green);
+  stroke-width: 3;
+  filter: url("#electricGlow") drop-shadow(0 0 16px rgba(55, 246, 166, 0.75));
 }
 
-.weakNode circle {
-  stroke: var(--cache-red);
-  filter: drop-shadow(0 0 12px rgba(240, 111, 97, 0.48));
+.unlockedNode text {
+  fill: #f3fffb;
+}
+
+.encryptedNode {
+  cursor: crosshair;
+  opacity: 0.32;
+}
+
+.encryptedNode circle {
+  fill: #101620;
+  stroke: rgba(166, 190, 215, 0.34);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(87, 197, 255, 0.1));
+}
+
+.encryptedNode text {
+  fill: rgba(195, 211, 230, 0.56);
+  font-size: 12px;
+}
+
+.encryptedNode:hover,
+.encryptedNode:focus {
+  opacity: 0.74;
+}
+
+.encryptedNode:hover circle,
+.encryptedNode:focus circle {
+  stroke: var(--yellow);
+  filter: drop-shadow(0 0 16px rgba(255, 209, 102, 0.5));
 }
 
 .selectedNode circle {
-  stroke: var(--cache-yellow);
+  stroke: var(--yellow);
   stroke-width: 4;
 }
 
-.lockedNode {
-  cursor: default;
+.newlyUnlockedNode circle {
+  animation: nodeIgnition 980ms ease-out both;
 }
 
-.lockedNode circle {
-  fill: #141922;
-  stroke: rgba(255, 255, 255, 0.14);
-  filter: none;
+.unlockPulse {
+  fill: transparent;
+  stroke: var(--green);
+  stroke-width: 3;
+  opacity: 0;
+  animation: unlockRipple 1.2s ease-out 3;
 }
 
-.lockedNode text {
-  fill: rgba(255, 255, 255, 0.25);
-  font-size: 13px;
+.lockShackle,
+.lockBody {
+  fill: none;
+  stroke: rgba(218, 230, 245, 0.58);
+  stroke-width: 2;
+  pointer-events: none;
 }
 
-.nodeInspector {
-  position: relative;
+.lockBody {
+  fill: rgba(218, 230, 245, 0.09);
+}
+
+.hud {
+  position: fixed;
+  z-index: 4;
+  top: 18px;
+  left: 18px;
   display: grid;
-  align-content: start;
+  width: min(360px, calc(100vw - 36px));
   gap: 12px;
-  background:
-    linear-gradient(180deg, rgba(18, 31, 42, 0.98), rgba(11, 21, 31, 0.92)),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 28px);
+  padding: 14px;
+  border: 1px solid rgba(71, 216, 255, 0.32);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(3, 11, 20, 0.78), rgba(8, 18, 32, 0.58));
+  box-shadow: 0 0 40px rgba(71, 216, 255, 0.12), inset 0 0 24px rgba(71, 216, 255, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.brandBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandBlock > span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(55, 246, 166, 0.42);
+  border-radius: 8px;
+  background: rgba(55, 246, 166, 0.08);
+  color: var(--green);
+  font-weight: 950;
+}
+
+.brandBlock p,
+.modalHeader p,
+.targetReadout span,
+.computeBlock span,
+.hudStats span,
+.nodeBadge span,
+.statusFeed {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.brandBlock h1 {
+  margin: 3px 0 0;
+  color: #fff;
+  font-size: 1.02rem;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.computeBlock {
+  display: grid;
+  gap: 8px;
+}
+
+.computeBlock > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.computeBlock strong {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 950;
+}
+
+.computeTrack {
+  overflow: hidden;
+  height: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.computeTrack i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--red), var(--yellow), var(--green));
+  box-shadow: 0 0 18px rgba(55, 246, 166, 0.55);
+  transition: width 220ms ease;
+}
+
+.hudStats {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.intelPanel {
+  position: fixed;
+  z-index: 4;
+  right: 18px;
+  bottom: 18px;
+  display: grid;
+  width: min(390px, calc(100vw - 36px));
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(155, 124, 255, 0.3);
+  border-radius: 8px;
+  background: linear-gradient(155deg, rgba(8, 14, 27, 0.82), rgba(12, 26, 35, 0.58));
+  box-shadow: 0 0 46px rgba(155, 124, 255, 0.12), inset 0 0 24px rgba(71, 216, 255, 0.05);
+  backdrop-filter: blur(18px);
 }
 
 .nodeBadge {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  color: var(--cache-muted);
 }
 
 .nodeBadge span,
 .nodeBadge strong {
-  min-height: 30px;
-  padding: 6px 10px;
-  border: 1px solid var(--cache-line);
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
 }
 
-.soundButton {
-  justify-self: start;
-  width: 42px;
-  height: 42px;
-  background: rgba(76, 201, 240, 0.14);
+.nodeBadge strong {
   color: #fff;
 }
 
-.nodeInspector h2 {
+.soundButton,
+.resetButton,
+.closeButton,
+.primaryAction,
+.partRow button,
+.gameOverPanel button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease, box-shadow 140ms ease;
+}
+
+.soundButton {
+  width: 38px;
+  height: 38px;
+  background: rgba(71, 216, 255, 0.13);
+  color: #fff;
+}
+
+.intelPanel h2 {
   margin: 0;
   color: #fff;
-  font-size: 2.6rem;
+  font-size: clamp(1.9rem, 4vw, 3rem);
   font-weight: 950;
+  line-height: 1;
   overflow-wrap: anywhere;
 }
 
-.nodeInspector > p {
+.intelPanel > p:not(.statusFeed) {
   margin: 0;
-  color: var(--cache-yellow);
-  font-size: 1.05rem;
-  font-weight: 840;
+  color: var(--yellow);
+  font-size: 1.02rem;
+  font-weight: 900;
 }
 
 .rootFormula {
@@ -431,69 +358,151 @@
 }
 
 .rootFormula span {
-  min-height: 38px;
-  padding: 9px 10px;
-  border: 1px solid var(--cache-line);
+  min-width: 0;
+  min-height: 34px;
+  padding: 8px;
+  border: 1px solid rgba(71, 216, 255, 0.18);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.06);
   color: #fff;
   text-align: center;
-  font-weight: 860;
+  font-weight: 880;
+  overflow-wrap: anywhere;
 }
 
 .exampleText {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px;
+  gap: 9px;
   padding: 12px;
-  border: 1px solid rgba(53, 212, 154, 0.2);
+  border: 1px solid rgba(55, 246, 166, 0.18);
   border-radius: 8px;
-  background: rgba(53, 212, 154, 0.08);
-  color: #dffcee;
+  background: rgba(55, 246, 166, 0.07);
+  color: #dcfff0;
 }
 
 .exampleText p {
   margin: 0;
-  line-height: 1.58;
+  line-height: 1.5;
 }
 
-.recordGrid {
+.statusFeed {
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: none;
+}
+
+.resetButton {
+  position: fixed;
+  z-index: 4;
+  right: 18px;
+  top: 18px;
+  min-height: 40px;
+  padding: 0 14px;
+  background: rgba(8, 14, 27, 0.64);
+  color: #fff;
+  font-weight: 900;
+  backdrop-filter: blur(14px);
+}
+
+.modalLayer {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(14px);
 }
 
-.recordGrid div {
-  min-height: 72px;
-  padding: 10px;
-  border: 1px solid var(--cache-line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.missionGrid {
+.combatModal {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(720px, calc(100vw - 28px));
+  max-height: min(760px, calc(100vh - 28px));
+  overflow: auto;
   gap: 16px;
-  align-items: stretch;
+  padding: clamp(18px, 4vw, 28px);
+  border: 1px solid rgba(71, 216, 255, 0.34);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(5, 14, 26, 0.96), rgba(16, 11, 31, 0.92)),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+  box-shadow: 0 0 90px rgba(71, 216, 255, 0.18), inset 0 0 34px rgba(71, 216, 255, 0.08);
 }
 
-.missionCard {
-  display: grid;
+.combatsuccess {
+  border-color: rgba(55, 246, 166, 0.82);
+  animation: modalGranted 760ms cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.combatfailure {
+  border-color: rgba(255, 77, 109, 0.86);
+  animation: modalDenied 560ms linear both;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
   gap: 12px;
-  align-content: start;
-  background: rgba(13, 22, 32, 0.82);
+  padding-right: 44px;
 }
 
-.liveMission {
-  border-color: rgba(53, 212, 154, 0.54);
-  box-shadow: 0 0 0 1px rgba(53, 212, 154, 0.12), 0 22px 46px rgba(0, 0, 0, 0.22);
+.modalHeader > span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(55, 246, 166, 0.32);
+  border-radius: 8px;
+  background: rgba(55, 246, 166, 0.09);
+  color: var(--green);
+}
+
+.modalHeader h2 {
+  margin: 3px 0 0;
+  color: #fff;
+  font-size: clamp(1.55rem, 5vw, 2.35rem);
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.targetReadout {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid rgba(255, 209, 102, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 209, 102, 0.08);
+}
+
+.targetReadout strong {
+  color: var(--yellow);
+  font-size: 1.25rem;
+}
+
+.combatBody {
+  display: grid;
+  gap: 13px;
 }
 
 .missionPrompt {
   margin: 0;
-  color: var(--cache-muted);
-  line-height: 1.6;
+  color: #bed0e4;
+  line-height: 1.58;
 }
 
 .formulaPreview {
@@ -506,7 +515,7 @@
 .formulaPreview strong {
   min-height: 42px;
   padding: 10px;
-  border: 1px solid var(--cache-line);
+  border: 1px solid rgba(71, 216, 255, 0.18);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
   color: #fff;
@@ -515,9 +524,9 @@
 
 .formulaPreview strong {
   grid-column: 1 / -1;
-  border-color: rgba(243, 201, 105, 0.28);
-  color: var(--cache-yellow);
+  color: var(--yellow);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 950;
   overflow-wrap: anywhere;
 }
 
@@ -527,14 +536,14 @@
 }
 
 .partRow > span {
-  color: var(--cache-cyan);
+  color: var(--cyan);
   font-size: 0.76rem;
-  font-weight: 840;
+  font-weight: 880;
 }
 
 .partRow > div {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -547,41 +556,42 @@
 }
 
 .partRow button strong {
-  font-size: 0.96rem;
+  font-size: 0.94rem;
 }
 
 .partRow button small {
-  color: var(--cache-muted);
+  color: var(--muted);
   font-size: 0.68rem;
 }
 
 .partRow .selectedPart {
-  border-color: var(--cache-green);
-  background: rgba(53, 212, 154, 0.16);
+  border-color: rgba(55, 246, 166, 0.75);
+  background: rgba(55, 246, 166, 0.16);
+  box-shadow: inset 0 0 20px rgba(55, 246, 166, 0.12);
 }
 
 .primaryAction {
-  min-height: 44px;
-  padding: 0 14px;
-  border-color: rgba(53, 212, 154, 0.62);
-  background: var(--cache-green);
-  color: #04120d;
-  font-weight: 900;
+  min-height: 46px;
+  padding: 0 16px;
+  border-color: rgba(55, 246, 166, 0.76);
+  background: linear-gradient(135deg, var(--green), #8affd5);
+  color: #03110b;
+  font-weight: 950;
 }
 
 .primaryAction:disabled {
   cursor: not-allowed;
-  opacity: 0.48;
+  opacity: 0.45;
 }
 
 .patchWord {
-  padding: 16px;
-  border: 1px solid rgba(243, 201, 105, 0.24);
+  padding: 18px;
+  border: 1px solid rgba(255, 209, 102, 0.28);
   border-radius: 8px;
-  background: rgba(243, 201, 105, 0.08);
+  background: rgba(255, 209, 102, 0.08);
   color: #fff0bd;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 2.15rem;
+  font-size: clamp(2rem, 9vw, 3.6rem);
   font-weight: 950;
   text-align: center;
   overflow-wrap: anywhere;
@@ -595,145 +605,196 @@
 
 .patchForm input {
   min-width: 0;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 1px solid var(--cache-line);
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid rgba(71, 216, 255, 0.28);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #0b151f;
-  font-weight: 880;
+  background: rgba(241, 247, 255, 0.95);
+  color: #06111f;
+  font-weight: 900;
 }
 
 .patchForm input:focus {
-  border-color: var(--cache-green);
-  outline: 3px solid rgba(53, 212, 154, 0.18);
+  border-color: var(--green);
+  outline: 3px solid rgba(55, 246, 166, 0.2);
 }
 
-.traceMeaning {
+.combatResult {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.gameOverPanel {
+  position: fixed;
+  z-index: 12;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(16px);
+}
+
+.gameOverPanel > div {
+  display: grid;
+  place-items: center;
+  width: min(520px, calc(100vw - 32px));
+  gap: 12px;
+  padding: 32px;
+  border: 1px solid rgba(255, 77, 109, 0.44);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(24, 5, 12, 0.94), rgba(6, 12, 25, 0.92));
+  box-shadow: 0 0 80px rgba(255, 77, 109, 0.24);
+  text-align: center;
+}
+
+.gameOverPanel svg {
+  color: var(--red);
+}
+
+.gameOverPanel p {
   margin: 0;
-  color: var(--cache-yellow);
-  font-size: 1.8rem;
+  color: var(--red);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.gameOverPanel h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 10vw, 4rem);
   font-weight: 950;
 }
 
-.traceGrid {
-  display: grid;
-  gap: 8px;
+.gameOverPanel span {
+  color: #cdd8e6;
 }
 
-.traceGrid button {
-  justify-content: start;
-  min-height: 44px;
-  padding: 0 12px;
-  background: rgba(255, 255, 255, 0.07);
+.gameOverPanel button {
+  min-height: 46px;
+  padding: 0 16px;
+  background: var(--red);
   color: #fff;
-  font-weight: 860;
+  font-weight: 950;
 }
 
-.modePanel button:hover,
-.deckActions button:hover,
-.riskPanel button:hover,
 .soundButton:hover,
+.resetButton:hover,
+.closeButton:hover,
 .primaryAction:hover,
-.traceGrid button:hover,
-.partRow button:hover {
+.partRow button:hover,
+.gameOverPanel button:hover {
   transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.36);
 }
 
-.historyPanel {
-  display: grid;
-  gap: 8px;
+@keyframes signalFlow {
+  to {
+    stroke-dashoffset: -180;
+  }
 }
 
-.historyPanel p {
-  margin: 0;
-  padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--cache-muted);
-  line-height: 1.55;
+@keyframes unlockRipple {
+  0% {
+    r: 20;
+    opacity: 0.95;
+  }
+  100% {
+    r: 74;
+    opacity: 0;
+  }
 }
 
-@media (max-width: 1180px) {
-  .shell {
-    grid-template-columns: 1fr;
+@keyframes nodeIgnition {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(55, 246, 166, 0.2));
   }
-
-  .commandDeck {
-    position: static;
-    height: auto;
+  40% {
+    filter: drop-shadow(0 0 34px rgba(55, 246, 166, 1));
   }
-
-  .modePanel,
-  .deckActions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  100% {
+    filter: drop-shadow(0 0 16px rgba(55, 246, 166, 0.75));
   }
+}
 
-  .coreGrid,
-  .missionGrid,
-  .topBar {
-    grid-template-columns: 1fr;
+@keyframes modalGranted {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    box-shadow: 0 0 90px rgba(71, 216, 255, 0.18), inset 0 0 34px rgba(71, 216, 255, 0.08);
   }
+  18% {
+    transform: translate3d(-7px, 0, 0) scale(1.01);
+  }
+  36% {
+    transform: translate3d(8px, 0, 0) scale(1.02);
+    box-shadow: 0 0 120px rgba(55, 246, 166, 0.7), inset 0 0 56px rgba(55, 246, 166, 0.18);
+  }
+  54% {
+    transform: translate3d(-4px, 0, 0) scale(1.01);
+  }
+}
 
+@keyframes modalDenied {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes redEdge {
+  0%, 100% {
+    opacity: 0;
+  }
+  20%, 60% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 820px) {
   .starMap {
-    min-height: 420px;
-  }
-}
-
-@media (max-width: 720px) {
-  .commandDeck,
-  .workspace {
-    padding: 14px;
+    padding: 142px 4px 210px;
   }
 
-  .identityBlock h1 {
-    font-size: 1.12rem;
+  .hud {
+    top: 10px;
+    left: 10px;
+    width: calc(100vw - 20px);
   }
 
-  .cacheDial {
-    grid-template-columns: 1fr;
+  .resetButton {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
   }
 
-  .modePanel {
-    grid-template-columns: 1fr;
+  .intelPanel {
+    right: 10px;
+    bottom: 62px;
+    width: calc(100vw - 20px);
+    max-height: 190px;
+    overflow: auto;
   }
 
-  .topBar h2 {
-    font-size: 1.18rem;
-  }
-
-  .gradeReadout {
-    align-items: start;
-    height: auto;
-    min-height: 42px;
-    padding: 10px 12px;
-  }
-
-  .starPanel,
-  .nodeInspector,
-  .missionCard,
-  .historyPanel {
-    padding: 12px;
-  }
-
-  .starMap {
-    min-height: 330px;
-  }
-
-  .starNode text {
-    font-size: 22px;
-  }
-
-  .nodeInspector h2 {
-    font-size: 2rem;
+  .intelPanel h2 {
+    font-size: 1.65rem;
   }
 
   .rootFormula,
-  .recordGrid,
-  .formulaPreview,
-  .partRow > div,
-  .patchForm {
+  .patchForm,
+  .partRow > div {
     grid-template-columns: 1fr;
   }
 
@@ -741,8 +802,7 @@
     display: none;
   }
 
-  .patchWord,
-  .traceMeaning {
-    font-size: 1.55rem;
+  .starNode text {
+    font-size: 22px;
   }
 }
