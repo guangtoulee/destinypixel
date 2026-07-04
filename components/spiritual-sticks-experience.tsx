@@ -559,6 +559,17 @@ export default function SpiritualSticksExperience({
               />
             </label>
 
+            <button
+              className="stick-draw-button"
+              type="button"
+              data-drawing={isDrawing}
+              disabled={isDrawing}
+              onClick={drawStick}
+            >
+              {isDrawing ? text.drawing : reading ? text.redraw : text.draw}
+              <ArrowRight size={16} aria-hidden="true" />
+            </button>
+
             <div className="stick-lookup">
               <div>
                 <strong>{text.lookupTitle}</strong>
@@ -579,17 +590,6 @@ export default function SpiritualSticksExperience({
                 {text.lookupAction}
               </button>
             </div>
-
-            <button
-              className="stick-draw-button"
-              type="button"
-              data-drawing={isDrawing}
-              disabled={isDrawing}
-              onClick={drawStick}
-            >
-              {isDrawing ? text.drawing : reading ? text.redraw : text.draw}
-              <ArrowRight size={16} aria-hidden="true" />
-            </button>
           </div>
         </div>
       </section>
