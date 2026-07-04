@@ -23,7 +23,12 @@ export default async function Home({
       inLanguage: ["en", "zh-CN", "ru"],
       potentialAction: {
         "@type": "ReadAction",
-        target: [absoluteUrl("/"), absoluteUrl("/palm"), absoluteUrl("/oracle")],
+        target: [
+          absoluteUrl("/"),
+          absoluteUrl("/palm"),
+          absoluteUrl("/oracle"),
+          absoluteUrl("/sticks"),
+        ],
       },
     },
     {
@@ -46,6 +51,7 @@ export default async function Home({
         "Palm reading studio",
         "Face reading studio",
         "Tarot and Liuyao-inspired question oracle",
+        "Guanyin, Guandi, Yuelao, and wealth temple sticks",
       ],
     },
   ];

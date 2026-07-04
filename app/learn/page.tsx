@@ -55,6 +55,12 @@ const paths = [
     title: "Ask one question",
     body: "A visual Tarot and hexagram-style spread for decisions, love, career, timing, and emotional clarity.",
   },
+  {
+    href: "/sticks",
+    icon: Sparkles,
+    title: "Draw a temple stick",
+    body: "Choose Guanyin, Guandi, Yuelao, or wealth sticks for a concise sign before you make a practical decision.",
+  },
 ];
 
 export default function LearnPage() {
@@ -101,7 +107,7 @@ export default function LearnPage() {
       <section className="seo-learn-section seo-learn-section--paths">
         <div className="seo-learn-heading">
           <p>Choose the mirror that matches your question.</p>
-          <h2>Four public entry points</h2>
+          <h2>Five public entry points</h2>
         </div>
         <div className="seo-path-grid">
           {paths.map((path) => {
@@ -142,4 +148,3 @@ export default function LearnPage() {
     </main>
   );
 }
-

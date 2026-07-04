@@ -18,6 +18,10 @@ export const seoKeywordClusters = [
   "current transits astrology",
   "tarot reading online",
   "yes no tarot",
+  "temple sticks oracle",
+  "Guanyin oracle sticks",
+  "Guandi oracle sticks",
+  "Yuelao love oracle",
   "palm reading online",
   "AI palm reading",
   "face reading online",
@@ -40,6 +44,10 @@ export const seoKeywordClusters = [
   "星盘",
   "星座运势",
   "塔罗占卜",
+  "观音灵签",
+  "关帝灵签",
+  "月老灵签",
+  "财神灵签",
   "手相分析",
   "面相分析",
   "六爻起卦",
@@ -122,6 +130,23 @@ export const routeSeo = {
       "Liuyao oracle",
       "六爻起卦",
       "问事占卜",
+    ],
+  },
+  sticks: {
+    path: "/sticks",
+    title: "Temple Sticks Oracle | Guanyin, Guandi, Yuelao & Wealth Sticks",
+    description:
+      "Draw one temple stick for one clear question: Guanyin for protection, Guandi for career, Yuelao for love, and Five Wealth Gods for money and business.",
+    keywords: [
+      "temple sticks oracle",
+      "Guanyin sticks",
+      "Guandi sticks",
+      "Yuelao oracle",
+      "wealth oracle",
+      "观音灵签",
+      "关帝灵签",
+      "月老灵签",
+      "五路财神灵签",
     ],
   },
   insights: {
@@ -223,4 +248,3 @@ export function makePageMetadata({
         },
   };
 }
-

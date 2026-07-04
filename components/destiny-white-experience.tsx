@@ -95,6 +95,31 @@ type WhiteCopy = {
       cta: string;
     }>;
   };
+  sticks: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: Array<{
+      title: string;
+      body: string;
+      href: string;
+      cta: string;
+    }>;
+  };
+  blessing: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    action: string;
+    activeAction: string;
+    note: string;
+    deities: Array<{
+      key: string;
+      name: string;
+      domain: string;
+      body: string;
+    }>;
+  };
   premium: {
     eyebrow: string;
     title: string;
@@ -198,6 +223,85 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           body: "One issue at a time: time-cast Liuyao lines meet a three-card Tarot mirror for a practical next step.",
           href: "/oracle",
           cta: "Ask now",
+        },
+        {
+          title: "Temple Sticks",
+          body: "Choose a blessing tradition, set one clear intention, and draw a concise stick for love, wealth, career, or protection.",
+          href: "/sticks",
+          cta: "Draw a stick",
+        },
+      ],
+    },
+    sticks: {
+      eyebrow: "Temple oracle",
+      title: "Draw one stick for the question in your hands.",
+      description:
+        "A lighter ritual for moments that need a clear sign: choose a tradition, name the topic, and receive a concise modern reading.",
+      items: [
+        {
+          title: "Guanyin Sticks",
+          body: "A gentle all-purpose oracle for protection, family, recovery, travel, and emotional uncertainty.",
+          href: "/sticks?type=guanyin",
+          cta: "Ask Guanyin",
+        },
+        {
+          title: "Guandi Sticks",
+          body: "A decisive oracle for career, authority, contracts, exams, promotion, and public reputation.",
+          href: "/sticks?type=guandi",
+          cta: "Ask Guandi",
+        },
+        {
+          title: "Yuelao Sticks",
+          body: "A relationship oracle for love timing, attachment, reconciliation, dating, and marriage questions.",
+          href: "/sticks?type=yuelao",
+          cta: "Ask Yuelao",
+        },
+        {
+          title: "Five Wealth Gods",
+          body: "A wealth-focused oracle for cash flow, business direction, side income, and money discipline.",
+          href: "/sticks?type=wealth",
+          cta: "Ask wealth",
+        },
+      ],
+    },
+    blessing: {
+      eyebrow: "Quiet blessing",
+      title: "Light incense for the direction you want to protect.",
+      description:
+        "A small digital ritual for focus. Choose a deity archetype, make one clean wish, and let the page mark the intention for this visit.",
+      action: "Light incense",
+      activeAction: "Incense lit",
+      note: "Blessing is symbolic and reflective; real choices still belong to you.",
+      deities: [
+        {
+          key: "guanyin",
+          name: "Guanyin",
+          domain: "Compassion · Protection",
+          body: "For emotional safety, family care, recovery, and a softer way through difficulty.",
+        },
+        {
+          key: "wuye",
+          name: "Wuye",
+          domain: "Vows · Courage",
+          body: "For keeping promises, carrying pressure, and moving through a hard gate with steadiness.",
+        },
+        {
+          key: "wen-caishen",
+          name: "Civil Wealth God",
+          domain: "Order · Long money",
+          body: "For planning, accounts, study, professional skills, and stable accumulation.",
+        },
+        {
+          key: "wu-caishen",
+          name: "Martial Wealth God",
+          domain: "Action · Opportunity",
+          body: "For business courage, negotiations, decisive moves, and protecting earned value.",
+        },
+        {
+          key: "mazu",
+          name: "Mazu",
+          domain: "Travel · Safe passage",
+          body: "For journeys, distance, relocation, sea-like uncertainty, and being carried safely home.",
         },
       ],
     },
@@ -308,6 +412,85 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/oracle",
           cta: "马上问",
         },
+        {
+          title: "求签专区",
+          body: "选择观音、关帝、月老或财神签，把当下最想问的一件事交给一支签来提示方向。",
+          href: "/sticks",
+          cta: "去求签",
+        },
+      ],
+    },
+    sticks: {
+      eyebrow: "灵签小殿",
+      title: "为手里的这件事，抽一支更直接的签。",
+      description:
+        "比完整命盘更轻，也比泛泛鸡汤更清楚。选择签种、写下问题，得到一段现代白话签意。",
+      items: [
+        {
+          title: "观音灵签",
+          body: "流传最广，适合问平安、家宅、身体恢复、出行、关系缓和与整体方向。",
+          href: "/sticks?type=guanyin",
+          cta: "求观音签",
+        },
+        {
+          title: "关帝灵签",
+          body: "偏重事业、官运、考试、合同、名誉与需要决断的事情。",
+          href: "/sticks?type=guandi",
+          cta: "求关帝签",
+        },
+        {
+          title: "月老灵签",
+          body: "专看姻缘爱情，适合问暧昧、复合、婚恋时机与关系走向。",
+          href: "/sticks?type=yuelao",
+          cta: "求月老签",
+        },
+        {
+          title: "五路财神灵签",
+          body: "专问财运，适合看现金流、生意机会、副业、投资心态与守财能力。",
+          href: "/sticks?type=wealth",
+          cta: "求财神签",
+        },
+      ],
+    },
+    blessing: {
+      eyebrow: "祈福小殿",
+      title: "给想守护的方向，点一炷电子清香。",
+      description:
+        "这不是替你决定命运，而是帮你把愿望说清楚。选择一位神明意象，点香、定心、把今天最重要的愿望留下。",
+      action: "点香祈福",
+      activeAction: "已点香",
+      note: "祈福是象征性的定心仪式，真正的选择与行动仍然在你手里。",
+      deities: [
+        {
+          key: "guanyin",
+          name: "观音",
+          domain: "慈悲 · 平安",
+          body: "适合为家人、健康、关系修复、情绪安稳与渡过难关而祈愿。",
+        },
+        {
+          key: "wuye",
+          name: "五爷",
+          domain: "愿力 · 贵人",
+          body: "适合为承诺、事业关口、压力突破、贵人助力和心中所愿而祈愿。",
+        },
+        {
+          key: "wen-caishen",
+          name: "文财神",
+          domain: "规划 · 正财",
+          body: "适合为长期积累、账目清明、专业技能、学业证书与稳定收入而祈愿。",
+        },
+        {
+          key: "wu-caishen",
+          name: "武财神",
+          domain: "行动 · 机会",
+          body: "适合为生意胆识、谈判成交、项目推进、守住价值与开拓机会而祈愿。",
+        },
+        {
+          key: "mazu",
+          name: "妈祖",
+          domain: "远行 · 护航",
+          body: "适合为出行、迁移、远方亲友、跨海跨城的变化与平安归来而祈愿。",
+        },
       ],
     },
     premium: {
@@ -413,6 +596,85 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/oracle",
           cta: "Задать вопрос",
         },
+        {
+          title: "Храмовые жребии",
+          body: "Выберите традицию, сформулируйте намерение и вытяните короткий знак для любви, денег, работы или защиты.",
+          href: "/sticks",
+          cta: "Тянуть жребий",
+        },
+      ],
+    },
+    sticks: {
+      eyebrow: "Храмовый оракул",
+      title: "Один жребий для вопроса, который сейчас в руках.",
+      description:
+        "Легкий ритуал для момента, когда нужен ясный знак: выберите традицию, назовите тему и получите современное толкование.",
+      items: [
+        {
+          title: "Жребии Гуаньинь",
+          body: "Мягкий универсальный оракул для защиты, семьи, восстановления, дороги и эмоциональной неопределенности.",
+          href: "/sticks?type=guanyin",
+          cta: "Спросить",
+        },
+        {
+          title: "Жребии Гуаньди",
+          body: "Решительный оракул для карьеры, власти, договоров, экзаменов, повышения и репутации.",
+          href: "/sticks?type=guandi",
+          cta: "Спросить",
+        },
+        {
+          title: "Жребии Юэлао",
+          body: "Оракул отношений для любви, примирения, свиданий, брака и выбора в близости.",
+          href: "/sticks?type=yuelao",
+          cta: "Спросить",
+        },
+        {
+          title: "Пять богов богатства",
+          body: "Фокус на деньгах: поток средств, бизнес, дополнительный доход и финансовая дисциплина.",
+          href: "/sticks?type=wealth",
+          cta: "Спросить",
+        },
+      ],
+    },
+    blessing: {
+      eyebrow: "Тихое благословение",
+      title: "Зажгите благовоние для того, что хотите защитить.",
+      description:
+        "Небольшой цифровой ритуал для фокуса: выберите образ божества, сформулируйте желание и отметьте намерение на этот визит.",
+      action: "Зажечь",
+      activeAction: "Зажжено",
+      note: "Благословение символично; реальные решения все равно остаются за вами.",
+      deities: [
+        {
+          key: "guanyin",
+          name: "Гуаньинь",
+          domain: "Сострадание · Защита",
+          body: "Для эмоциональной безопасности, заботы о семье, восстановления и мягкого пути через трудность.",
+        },
+        {
+          key: "wuye",
+          name: "У Е",
+          domain: "Обет · Смелость",
+          body: "Для обещаний, давления, важного порога и устойчивости перед сложной задачей.",
+        },
+        {
+          key: "wen-caishen",
+          name: "Гражданский бог богатства",
+          domain: "Порядок · Долгие деньги",
+          body: "Для планирования, счетов, учебы, профессиональных навыков и стабильного накопления.",
+        },
+        {
+          key: "wu-caishen",
+          name: "Воинственный бог богатства",
+          domain: "Действие · Возможность",
+          body: "Для деловой смелости, переговоров, быстрых решений и защиты заработанной ценности.",
+        },
+        {
+          key: "mazu",
+          name: "Мацзу",
+          domain: "Путь · Безопасность",
+          body: "Для поездок, переезда, дальних близких, неопределенности и возвращения домой.",
+        },
       ],
     },
     premium: {
@@ -492,6 +754,7 @@ export default function DestinyWhiteExperience({
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
   const [pillar, setPillar] = useState("癸卯");
+  const [litBlessings, setLitBlessings] = useState<Record<string, boolean>>({});
   const text = whiteCopy[locale];
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
@@ -545,6 +808,8 @@ export default function DestinyWhiteExperience({
       setPillar(result);
     }
   }
+
+  const insightIcons = [Hand, ScanFace, MessageCircle, Sparkles] as const;
 
   return (
     <main className="white-site">
@@ -738,6 +1003,71 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
+      <section className="white-insights white-insights--priority" id="insights">
+        <div className="white-container">
+          <div className="white-section-heading">
+            <p>{text.insights.eyebrow}</p>
+            <h2>{text.insights.title}</h2>
+            <span>{text.insights.description}</span>
+          </div>
+
+          <div className="white-insight-grid">
+            {text.insights.items.map((item, index) => {
+              const Icon = insightIcons[index] ?? Sparkles;
+
+              return (
+                <a
+                  href={`${item.href}?locale=${locale}`}
+                  className="white-insight-card"
+                  key={item.href}
+                >
+                  <span>
+                    <Icon size={23} aria-hidden="true" />
+                  </span>
+                  <small>{String(index + 1).padStart(2, "0")}</small>
+                  <strong>{item.title}</strong>
+                  <p>{item.body}</p>
+                  <em>
+                    {item.cta}
+                    <ArrowRight size={15} aria-hidden="true" />
+                  </em>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="white-sticks" id="sticks">
+        <div className="white-container">
+          <div className="white-section-heading">
+            <p>{text.sticks.eyebrow}</p>
+            <h2>{text.sticks.title}</h2>
+            <span>{text.sticks.description}</span>
+          </div>
+
+          <div className="white-stick-grid">
+            {text.sticks.items.map((item, index) => (
+              <a
+                className="white-stick-card"
+                href={`${item.href}${item.href.includes("?") ? "&" : "?"}locale=${locale}`}
+                key={item.href}
+              >
+                <span className="white-stick-seal" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <strong>{item.title}</strong>
+                <p>{item.body}</p>
+                <em>
+                  {item.cta}
+                  <ArrowRight size={15} aria-hidden="true" />
+                </em>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="white-method" id="method">
         <div className="white-container">
           <div className="white-method-intro">
@@ -859,38 +1189,48 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
-      <section className="white-insights" id="insights">
+      <section className="white-blessing" id="blessing">
         <div className="white-container">
           <div className="white-section-heading">
-            <p>{text.insights.eyebrow}</p>
-            <h2>{text.insights.title}</h2>
-            <span>{text.insights.description}</span>
+            <p>{text.blessing.eyebrow}</p>
+            <h2>{text.blessing.title}</h2>
+            <span>{text.blessing.description}</span>
           </div>
 
-          <div className="white-insight-grid">
-            {text.insights.items.map((item, index) => {
-              const Icon = index === 0 ? Hand : index === 1 ? ScanFace : MessageCircle;
+          <div className="white-deity-grid">
+            {text.blessing.deities.map((deity) => {
+              const active = Boolean(litBlessings[deity.key]);
 
               return (
-                <a
-                  href={`${item.href}?locale=${locale}`}
-                  className="white-insight-card"
-                  key={item.href}
-                >
-                  <span>
-                    <Icon size={23} aria-hidden="true" />
-                  </span>
-                  <small>{String(index + 1).padStart(2, "0")}</small>
-                  <strong>{item.title}</strong>
-                  <p>{item.body}</p>
-                  <em>
-                    {item.cta}
-                    <ArrowRight size={15} aria-hidden="true" />
-                  </em>
-                </a>
+                <article className="white-deity-card" key={deity.key} data-active={active}>
+                  <div className={`white-deity-line white-deity-line--${deity.key}`} aria-hidden="true">
+                    <span />
+                    <i />
+                    <b />
+                  </div>
+                  <div>
+                    <small>{deity.domain}</small>
+                    <strong>{deity.name}</strong>
+                    <p>{deity.body}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setLitBlessings((current) => ({
+                        ...current,
+                        [deity.key]: true,
+                      }))
+                    }
+                  >
+                    <Sparkles size={15} aria-hidden="true" />
+                    {active ? text.blessing.activeAction : text.blessing.action}
+                  </button>
+                </article>
               );
             })}
           </div>
+
+          <p className="white-blessing-note">{text.blessing.note}</p>
         </div>
       </section>
 
@@ -930,6 +1270,12 @@ export default function DestinyWhiteExperience({
           </a>
           <a href={`/oracle?locale=${locale}`}>
             {locale === "zh" ? "问事" : locale === "ru" ? "Оракул" : "Oracle"}
+          </a>
+          <a href={`/sticks?locale=${locale}`}>
+            {locale === "zh" ? "求签" : locale === "ru" ? "Жребии" : "Sticks"}
+          </a>
+          <a href="#blessing">
+            {locale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
           </a>
           <span>
             <MapPin size={13} aria-hidden="true" />

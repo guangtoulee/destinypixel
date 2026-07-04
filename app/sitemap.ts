@@ -8,6 +8,7 @@ const publicRoutes = [
   { path: routeSeo.palm.path, priority: 0.7, changeFrequency: "weekly" },
   { path: routeSeo.face.path, priority: 0.68, changeFrequency: "weekly" },
   { path: routeSeo.oracle.path, priority: 0.72, changeFrequency: "weekly" },
+  { path: routeSeo.sticks.path, priority: 0.71, changeFrequency: "weekly" },
   { path: routeSeo.black.path, priority: 0.42, changeFrequency: "monthly" },
 ] as const;
 
@@ -28,4 +29,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 }
-
