@@ -266,6 +266,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/sticks?type=wealth",
           cta: "Ask wealth",
         },
+        {
+          title: "Wong Tai Sin Sticks",
+          body: "A timing-focused oracle for turning points, exams, travel, public affairs, and practical omens.",
+          href: "/sticks?type=huangdaxian",
+          cta: "Ask timing",
+        },
       ],
     },
     blessing: {
@@ -458,6 +464,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/sticks?type=wealth",
           cta: "求财神签",
         },
+        {
+          title: "黄大仙灵签",
+          body: "适合问时机、转折、考试、出行、公众事务和需要看趋势的事情。",
+          href: "/sticks?type=huangdaxian",
+          cta: "求黄大仙签",
+        },
       ],
     },
     blessing: {
@@ -644,6 +656,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           title: "Пять богов богатства",
           body: "Фокус на деньгах: поток средств, бизнес, дополнительный доход и финансовая дисциплина.",
           href: "/sticks?type=wealth",
+          cta: "Спросить",
+        },
+        {
+          title: "Жребии Вонг Тай Сина",
+          body: "Оракул сроков, поворотных моментов, дороги, экзаменов и практических предзнаменований.",
+          href: "/sticks?type=huangdaxian",
           cta: "Спросить",
         },
       ],
@@ -1228,6 +1246,9 @@ export default function DestinyWhiteExperience({
                   >
                     <span className="white-deity-mark white-deity-mark--halo" />
                     <span className="white-deity-mark white-deity-mark--head" />
+                    <span className="white-deity-face white-deity-face--brows" />
+                    <span className="white-deity-face white-deity-face--eyes" />
+                    <span className="white-deity-face white-deity-face--mouth" />
                     <span className="white-deity-mark white-deity-mark--body" />
                     <span className="white-deity-mark white-deity-mark--sleeve" />
                     <span className="white-deity-feature white-deity-feature--one" />
@@ -1287,6 +1308,9 @@ export default function DestinyWhiteExperience({
             >
               <span className="white-deity-mark white-deity-mark--halo" />
               <span className="white-deity-mark white-deity-mark--head" />
+              <span className="white-deity-face white-deity-face--brows" />
+              <span className="white-deity-face white-deity-face--eyes" />
+              <span className="white-deity-face white-deity-face--mouth" />
               <span className="white-deity-mark white-deity-mark--body" />
               <span className="white-deity-mark white-deity-mark--sleeve" />
               <span className="white-deity-feature white-deity-feature--one" />

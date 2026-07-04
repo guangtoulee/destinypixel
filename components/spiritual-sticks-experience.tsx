@@ -1,18 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowRight, Languages, Sparkles } from "lucide-react";
+import { ArrowRight, Languages, Loader2, Search, Sparkles, WandSparkles } from "lucide-react";
 import { reportLanguageOptions, type ReportLocale } from "@/lib/report-i18n";
-
-type StickType = "guanyin" | "guandi" | "yuelao" | "wealth";
-
-type StickReading = {
-  number: number;
-  level: string;
-  title: string;
-  body: string;
-  advice: string;
-};
+import {
+  getStickSign,
+  stickTypeOrder,
+  type StickSign,
+  type StickType,
+} from "@/lib/sticks/catalog";
 
 type StickCopy = {
   navHome: string;
@@ -27,6 +23,16 @@ type StickCopy = {
   drawing: string;
   ritualIdle: string;
   reveal: string;
+  lookupTitle: string;
+  lookupLabel: string;
+  lookupAction: string;
+  sourceLabel: string;
+  poemLabel: string;
+  plainLabel: string;
+  aiTitle: string;
+  aiAction: string;
+  aiLoading: string;
+  aiEmpty: string;
   result: string;
   adviceLabel: string;
   empty: string;
@@ -37,7 +43,7 @@ type StickCopy = {
   advice: string[];
 };
 
-const stickTypes: StickType[] = ["guanyin", "guandi", "yuelao", "wealth"];
+const stickTypes = stickTypeOrder;
 
 const systems: Record<
   ReportLocale,
@@ -81,6 +87,13 @@ const systems: Record<
       body: "For money flow, business direction, side income, spending discipline, and opportunity.",
       domains: ["Wealth", "Business", "Discipline"],
     },
+    huangdaxian: {
+      name: "Wong Tai Sin Sticks",
+      subtitle: "100-stick timing oracle",
+      count: 100,
+      body: "For timing, turning points, public affairs, travel, exams, and questions that need a practical omen.",
+      domains: ["Timing", "Turning point", "Omen"],
+    },
   },
   zh: {
     guanyin: {
@@ -110,6 +123,13 @@ const systems: Record<
       count: 60,
       body: "适合问财运、现金流、生意机会、副业、消费节制与守财能力。",
       domains: ["财运", "生意", "守财"],
+    },
+    huangdaxian: {
+      name: "黄大仙灵签",
+      subtitle: "百签时机系",
+      count: 100,
+      body: "适合问时机、转折、考试、出行、公众事务和需要看趋势的事情。",
+      domains: ["时机", "转折", "趋势"],
     },
   },
   ru: {
@@ -141,6 +161,13 @@ const systems: Record<
       body: "Для денежного потока, бизнеса, дополнительного дохода, дисциплины и возможностей.",
       domains: ["Деньги", "Бизнес", "Дисциплина"],
     },
+    huangdaxian: {
+      name: "Жребии Вонг Тай Сина",
+      subtitle: "100 жребиев времени",
+      count: 100,
+      body: "Для сроков, поворотных моментов, дороги, экзаменов и практических предзнаменований.",
+      domains: ["Сроки", "Поворот", "Знак"],
+    },
   },
 };
 
@@ -159,6 +186,16 @@ const copy: Record<ReportLocale, StickCopy> = {
     drawing: "Shaking the oracle cup...",
     ritualIdle: "Focus on one question, then draw one stick.",
     reveal: "The stick has landed.",
+    lookupTitle: "Already drew offline?",
+    lookupLabel: "Stick number",
+    lookupAction: "Find this stick",
+    sourceLabel: "Source note",
+    poemLabel: "Traditional verse",
+    plainLabel: "Plain reading",
+    aiTitle: "AI interpretation",
+    aiAction: "Interpret with my question",
+    aiLoading: "Reading the sign with DeepSeek...",
+    aiEmpty: "Draw or search a stick first, then generate a question-specific interpretation.",
     result: "Your stick",
     adviceLabel: "Practical advice",
     empty: "Keep the question concrete. One stick works best for one issue.",
@@ -200,6 +237,16 @@ const copy: Record<ReportLocale, StickCopy> = {
     drawing: "签筒正在摇动...",
     ritualIdle: "心里只留一个问题，然后抽一支签。",
     reveal: "这一支签已经落下。",
+    lookupTitle: "线下已经抽到签？",
+    lookupLabel: "签号",
+    lookupAction: "查这支签",
+    sourceLabel: "签文来源",
+    poemLabel: "传统签文",
+    plainLabel: "白话签意",
+    aiTitle: "AI 合参解读",
+    aiAction: "结合问题解读",
+    aiLoading: "正在结合签文和问题解读...",
+    aiEmpty: "先抽签或查签号，再让 AI 结合你的具体问题解读。",
     result: "你的签",
     adviceLabel: "行动建议",
     empty: "问题越具体，签意越有用。一支签最好只问一件事。",
@@ -241,6 +288,16 @@ const copy: Record<ReportLocale, StickCopy> = {
     drawing: "Чаша со жребиями движется...",
     ritualIdle: "Удержите один вопрос и вытяните один жребий.",
     reveal: "Жребий выпал.",
+    lookupTitle: "Уже вытянули офлайн?",
+    lookupLabel: "Номер жребия",
+    lookupAction: "Найти жребий",
+    sourceLabel: "Источник",
+    poemLabel: "Традиционный стих",
+    plainLabel: "Простое толкование",
+    aiTitle: "AI-толкование",
+    aiAction: "Толковать мой вопрос",
+    aiLoading: "DeepSeek читает знак...",
+    aiEmpty: "Сначала вытяните или найдите жребий, затем получите толкование под вопрос.",
     result: "Ваш жребий",
     adviceLabel: "Практический совет",
     empty: "Чем конкретнее вопрос, тем полезнее знак. Один жребий лучше работает для одного вопроса.",
@@ -276,18 +333,9 @@ function getRandomInt(max: number) {
   return values[0] % max;
 }
 
-function createReading(locale: ReportLocale, type: StickType): StickReading {
+function createReading(locale: ReportLocale, type: StickType): StickSign {
   const system = systems[locale][type];
-  const text = copy[locale];
-  const index = getRandomInt(text.levels.length);
-
-  return {
-    number: getRandomInt(system.count) + 1,
-    level: text.levels[index],
-    title: text.titles[index],
-    body: text.bodies[index],
-    advice: text.advice[index],
-  };
+  return getStickSign(type, getRandomInt(system.count) + 1, locale);
 }
 
 export default function SpiritualSticksExperience({
@@ -301,8 +349,11 @@ export default function SpiritualSticksExperience({
   const [selectedType, setSelectedType] = useState<StickType>(initialType);
   const [topic, setTopic] = useState(copy[initialLocale].topics[0]);
   const [question, setQuestion] = useState("");
-  const [reading, setReading] = useState<StickReading | null>(null);
+  const [reading, setReading] = useState<StickSign | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [lookupNumber, setLookupNumber] = useState("33");
+  const [aiText, setAiText] = useState("");
+  const [isInterpreting, setIsInterpreting] = useState(false);
   const text = copy[locale];
   const selectedSystem = systems[locale][selectedType];
 
@@ -314,6 +365,10 @@ export default function SpiritualSticksExperience({
   function changeLocale(nextLocale: ReportLocale) {
     setLocale(nextLocale);
     setTopic(copy[nextLocale].topics[0]);
+    setAiText("");
+    setReading((current) =>
+      current ? getStickSign(current.type, current.number, nextLocale) : current,
+    );
     window.localStorage.setItem("destinypixel-locale", nextLocale);
 
     const url = new URL(window.location.href);
@@ -325,6 +380,7 @@ export default function SpiritualSticksExperience({
   function chooseType(nextType: StickType) {
     setSelectedType(nextType);
     setReading(null);
+    setAiText("");
     setIsDrawing(false);
 
     const url = new URL(window.location.href);
@@ -340,8 +396,59 @@ export default function SpiritualSticksExperience({
     setIsDrawing(true);
     window.setTimeout(() => {
       setReading(createReading(locale, selectedType));
+      setAiText("");
       setIsDrawing(false);
     }, 950);
+  }
+
+  function lookupStick() {
+    const number = Number(lookupNumber);
+    if (!Number.isFinite(number)) return;
+
+    setReading(getStickSign(selectedType, number, locale));
+    setAiText("");
+  }
+
+  async function interpretReading() {
+    if (!reading || isInterpreting) return;
+
+    setAiText("");
+    setIsInterpreting(true);
+
+    try {
+      const response = await fetch("/api/sticks/interpret", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: selectedType,
+          locale,
+          number: reading.number,
+          topic: selectedTopic,
+          question,
+          sign: reading,
+        }),
+      });
+
+      if (!response.ok || !response.body) {
+        throw new Error("Unable to generate interpretation.");
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let nextText = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        nextText += decoder.decode(value, { stream: true });
+        setAiText(nextText);
+      }
+    } catch {
+      setAiText(reading.plain);
+    } finally {
+      setIsInterpreting(false);
+    }
   }
 
   return (
@@ -452,6 +559,27 @@ export default function SpiritualSticksExperience({
               />
             </label>
 
+            <div className="stick-lookup">
+              <div>
+                <strong>{text.lookupTitle}</strong>
+                <span>{selectedSystem.name}</span>
+              </div>
+              <label>
+                <span>{text.lookupLabel}</span>
+                <input
+                  type="number"
+                  min={1}
+                  max={selectedSystem.count}
+                  value={lookupNumber}
+                  onChange={(event) => setLookupNumber(event.target.value)}
+                />
+              </label>
+              <button type="button" onClick={lookupStick}>
+                <Search size={15} aria-hidden="true" />
+                {text.lookupAction}
+              </button>
+            </div>
+
             <button
               className="stick-draw-button"
               type="button"
@@ -497,10 +625,39 @@ export default function SpiritualSticksExperience({
                   </div>
                 </div>
                 <h2>{reading.title}</h2>
-                <p>{reading.body}</p>
+                <div className="stick-poem-block">
+                  <small>{text.poemLabel}</small>
+                  <p>{reading.poem}</p>
+                </div>
+                <div className="stick-poem-block">
+                  <small>{text.plainLabel}</small>
+                  <p>{reading.plain}</p>
+                </div>
                 <div className="stick-advice">
                   <strong>{text.adviceLabel}</strong>
                   <span>{reading.advice}</span>
+                </div>
+                <p className="stick-source-note">
+                  <strong>{text.sourceLabel}</strong>
+                  {reading.sourceNote}
+                </p>
+                <div className="stick-ai-panel">
+                  <div>
+                    <strong>{text.aiTitle}</strong>
+                    <p>{aiText || text.aiEmpty}</p>
+                  </div>
+                  <button
+                    type="button"
+                    disabled={isInterpreting}
+                    onClick={interpretReading}
+                  >
+                    {isInterpreting ? (
+                      <Loader2 className="loading-icon" size={15} aria-hidden="true" />
+                    ) : (
+                      <WandSparkles size={15} aria-hidden="true" />
+                    )}
+                    {isInterpreting ? text.aiLoading : text.aiAction}
+                  </button>
                 </div>
               </>
             ) : (

@@ -17,7 +17,7 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 - Dark visual version: ${absoluteUrl("/black")}
 
 ## Product Language
-Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, palm reading, face reading, Liuyao oracle, annual forecast, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, psychological, reflective, and practical.
+Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, annual forecast, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, psychological, reflective, and practical.
 
 ## Supported Languages
 English, Simplified Chinese, and Russian.
