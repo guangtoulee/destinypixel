@@ -505,6 +505,55 @@
   line-height: 1.58;
 }
 
+.traceWord {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(71, 216, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(71, 216, 255, 0.08);
+}
+
+.traceWord strong {
+  color: #fff;
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  font-weight: 950;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.choiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.choiceGrid button {
+  min-height: 64px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-weight: 920;
+  line-height: 1.35;
+  text-align: left;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.choiceGrid button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(55, 246, 166, 0.66);
+  background: rgba(55, 246, 166, 0.13);
+}
+
+.choiceGrid button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
 .formulaPreview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -794,6 +843,7 @@
 
   .rootFormula,
   .patchForm,
+  .choiceGrid,
   .partRow > div {
     grid-template-columns: 1fr;
   }

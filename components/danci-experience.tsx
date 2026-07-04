@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Atom,
   Brain,
   Check,
   ChevronRight,
@@ -11,7 +10,6 @@ import {
   Sparkles,
   Volume2,
   X,
-  Zap,
 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
@@ -21,7 +19,7 @@ import {
 import styles from "./danci-experience.module.css";
 
 type CacheMode = "map" | "forge" | "patch" | "trace";
-type CombatMode = "forge" | "patch";
+type CombatMode = "trace" | "patch";
 type CombatStatus = "active" | "success" | "failure";
 type ThemeId = "space" | "bio" | "geo" | "machine" | "exam";
 
@@ -89,10 +87,10 @@ type CombatState = {
   seed: number;
 };
 
-const storageKey = "neuralCacheWordMemoryV1";
+const storageKey = "neuralCacheGrade7MemoryV1";
 const nonePart = "none";
 
-const wordNodes: WordNode[] = [
+const advancedWordNodes: WordNode[] = [
   {
     id: "bright",
     word: "bright",
@@ -751,6 +749,761 @@ const wordNodes: WordNode[] = [
   },
 ];
 
+const wordNodes: WordNode[] = [
+  {
+    id: "hello",
+    word: "hello",
+    meaning: "你好",
+    level: 1,
+    family: "starter",
+    theme: "space",
+    root: "hello",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "he-llo 两拍读清楚",
+    example: "Hello, I am Li Hua.",
+    x: 85,
+    y: 95,
+    links: ["name", "friend"],
+  },
+  {
+    id: "name",
+    word: "name",
+    meaning: "名字",
+    level: 1,
+    family: "starter",
+    theme: "space",
+    root: "name",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "a 发 /eɪ/",
+    example: "My name is Jack.",
+    x: 225,
+    y: 75,
+    links: ["hello", "class", "friend"],
+  },
+  {
+    id: "class",
+    word: "class",
+    meaning: "班级；课",
+    level: 1,
+    family: "school",
+    theme: "geo",
+    root: "class",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "cl 开头连读",
+    example: "We are in Class One.",
+    x: 365,
+    y: 105,
+    links: ["name", "grade", "teacher"],
+  },
+  {
+    id: "grade",
+    word: "grade",
+    meaning: "年级",
+    level: 1,
+    family: "school",
+    theme: "geo",
+    root: "grade",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "a 发 /eɪ/",
+    example: "I am in Grade Seven.",
+    x: 505,
+    y: 75,
+    links: ["class", "school"],
+  },
+  {
+    id: "school",
+    word: "school",
+    meaning: "学校",
+    level: 1,
+    family: "school",
+    theme: "geo",
+    root: "school",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ch 在这里发 /k/",
+    example: "Our school is big.",
+    x: 660,
+    y: 110,
+    links: ["grade", "teacher", "student"],
+  },
+  {
+    id: "teacher",
+    word: "teacher",
+    meaning: "老师",
+    level: 1,
+    family: "people",
+    theme: "exam",
+    root: "teach",
+    prefix: "",
+    suffix: "er",
+    rootMeaning: "teach + er 做这件事的人",
+    example: "The teacher is kind.",
+    x: 810,
+    y: 75,
+    links: ["class", "school", "student"],
+  },
+  {
+    id: "student",
+    word: "student",
+    meaning: "学生",
+    level: 1,
+    family: "people",
+    theme: "exam",
+    root: "student",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "stu-dent 两段记",
+    example: "Every student has a book.",
+    x: 950,
+    y: 120,
+    links: ["school", "friend"],
+  },
+  {
+    id: "friend",
+    word: "friend",
+    meaning: "朋友",
+    level: 1,
+    family: "people",
+    theme: "exam",
+    root: "friend",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ie 在这里发 /e/",
+    example: "Tom is my good friend.",
+    x: 115,
+    y: 245,
+    links: ["hello", "name", "student", "family"],
+  },
+  {
+    id: "family",
+    word: "family",
+    meaning: "家庭；家人",
+    level: 1,
+    family: "family",
+    theme: "bio",
+    root: "family",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "fam-i-ly 三段记",
+    example: "This is my family.",
+    x: 270,
+    y: 255,
+    links: ["friend", "father", "mother"],
+  },
+  {
+    id: "father",
+    word: "father",
+    meaning: "父亲",
+    level: 1,
+    family: "family",
+    theme: "bio",
+    root: "father",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "th 舌尖轻咬",
+    example: "My father likes tea.",
+    x: 430,
+    y: 235,
+    links: ["family", "mother", "parent"],
+  },
+  {
+    id: "mother",
+    word: "mother",
+    meaning: "母亲",
+    level: 1,
+    family: "family",
+    theme: "bio",
+    root: "mother",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "th 舌尖轻咬",
+    example: "My mother is at home.",
+    x: 585,
+    y: 260,
+    links: ["family", "father", "sister"],
+  },
+  {
+    id: "sister",
+    word: "sister",
+    meaning: "姐妹",
+    level: 1,
+    family: "family",
+    theme: "bio",
+    root: "sister",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "sis-ter 两段记",
+    example: "My sister is twelve.",
+    x: 740,
+    y: 235,
+    links: ["mother", "brother"],
+  },
+  {
+    id: "brother",
+    word: "brother",
+    meaning: "兄弟",
+    level: 1,
+    family: "family",
+    theme: "bio",
+    root: "brother",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "br 开头连读",
+    example: "His brother can swim.",
+    x: 900,
+    y: 260,
+    links: ["sister", "parent"],
+  },
+  {
+    id: "parent",
+    word: "parent",
+    meaning: "父亲或母亲；家长",
+    level: 2,
+    family: "family",
+    theme: "bio",
+    root: "parent",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "par-ent 两段记",
+    example: "A parent can help with homework.",
+    x: 990,
+    y: 355,
+    links: ["father", "brother", "photo"],
+  },
+  {
+    id: "photo",
+    word: "photo",
+    meaning: "照片",
+    level: 2,
+    family: "family",
+    theme: "machine",
+    root: "photo",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ph 发 /f/",
+    example: "This photo is nice.",
+    x: 830,
+    y: 385,
+    links: ["parent", "map"],
+  },
+  {
+    id: "book",
+    word: "book",
+    meaning: "书",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "book",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "oo 发短 /ʊ/",
+    example: "The book is on the desk.",
+    x: 85,
+    y: 400,
+    links: ["pencil", "desk"],
+  },
+  {
+    id: "pencil",
+    word: "pencil",
+    meaning: "铅笔",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "pencil",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "pen-cil 两段记",
+    example: "I need a pencil.",
+    x: 225,
+    y: 375,
+    links: ["book", "ruler", "bag"],
+  },
+  {
+    id: "desk",
+    word: "desk",
+    meaning: "书桌",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "desk",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "短 e 发 /e/",
+    example: "The ruler is on the desk.",
+    x: 370,
+    y: 410,
+    links: ["book", "chair"],
+  },
+  {
+    id: "chair",
+    word: "chair",
+    meaning: "椅子",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "chair",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ch 发 /tʃ/",
+    example: "The chair is blue.",
+    x: 520,
+    y: 385,
+    links: ["desk", "bag"],
+  },
+  {
+    id: "bag",
+    word: "bag",
+    meaning: "包",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "bag",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "a 发 /æ/",
+    example: "My bag is black.",
+    x: 675,
+    y: 410,
+    links: ["pencil", "chair", "dictionary"],
+  },
+  {
+    id: "map",
+    word: "map",
+    meaning: "地图",
+    level: 1,
+    family: "things",
+    theme: "geo",
+    root: "map",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "a 发 /æ/",
+    example: "Look at the map.",
+    x: 120,
+    y: 545,
+    links: ["photo", "ruler"],
+  },
+  {
+    id: "ruler",
+    word: "ruler",
+    meaning: "尺子",
+    level: 1,
+    family: "things",
+    theme: "machine",
+    root: "ruler",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "u 发 /uː/",
+    example: "The ruler is long.",
+    x: 270,
+    y: 525,
+    links: ["pencil", "map", "dictionary"],
+  },
+  {
+    id: "dictionary",
+    word: "dictionary",
+    meaning: "词典",
+    level: 2,
+    family: "things",
+    theme: "exam",
+    root: "dictionary",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "dic-tion-ar-y 分块记",
+    example: "Use a dictionary after you guess.",
+    x: 430,
+    y: 555,
+    links: ["bag", "ruler", "english"],
+  },
+  {
+    id: "red",
+    word: "red",
+    meaning: "红色；红色的",
+    level: 1,
+    family: "color",
+    theme: "space",
+    root: "red",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "短 e 发 /e/",
+    example: "The apple is red.",
+    x: 590,
+    y: 535,
+    links: ["blue", "apple"],
+  },
+  {
+    id: "blue",
+    word: "blue",
+    meaning: "蓝色；蓝色的",
+    level: 1,
+    family: "color",
+    theme: "space",
+    root: "blue",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ue 发 /uː/",
+    example: "My chair is blue.",
+    x: 750,
+    y: 555,
+    links: ["red", "green", "chair"],
+  },
+  {
+    id: "green",
+    word: "green",
+    meaning: "绿色；绿色的",
+    level: 1,
+    family: "color",
+    theme: "space",
+    root: "green",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ee 发 /iː/",
+    example: "The bag is green.",
+    x: 900,
+    y: 525,
+    links: ["blue", "yellow"],
+  },
+  {
+    id: "yellow",
+    word: "yellow",
+    meaning: "黄色；黄色的",
+    level: 1,
+    family: "color",
+    theme: "space",
+    root: "yellow",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "yel-low 两段记",
+    example: "The banana is yellow.",
+    x: 980,
+    y: 625,
+    links: ["green", "banana"],
+  },
+  {
+    id: "apple",
+    word: "apple",
+    meaning: "苹果",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "apple",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ap-ple 两段记",
+    example: "I have an apple.",
+    x: 85,
+    y: 690,
+    links: ["red", "banana", "breakfast"],
+  },
+  {
+    id: "banana",
+    word: "banana",
+    meaning: "香蕉",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "banana",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ba-na-na 三段记",
+    example: "The banana is on the table.",
+    x: 225,
+    y: 735,
+    links: ["apple", "yellow", "milk"],
+  },
+  {
+    id: "milk",
+    word: "milk",
+    meaning: "牛奶",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "milk",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "短 i 发 /ɪ/",
+    example: "I drink milk for breakfast.",
+    x: 365,
+    y: 700,
+    links: ["banana", "bread"],
+  },
+  {
+    id: "bread",
+    word: "bread",
+    meaning: "面包",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "bread",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ea 在这里发 /e/",
+    example: "Bread and milk are on the desk.",
+    x: 505,
+    y: 745,
+    links: ["milk", "rice"],
+  },
+  {
+    id: "rice",
+    word: "rice",
+    meaning: "米饭；大米",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "rice",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "i_e 发 /aɪ/",
+    example: "We have rice for lunch.",
+    x: 645,
+    y: 700,
+    links: ["bread", "chicken"],
+  },
+  {
+    id: "chicken",
+    word: "chicken",
+    meaning: "鸡肉；鸡",
+    level: 1,
+    family: "food",
+    theme: "bio",
+    root: "chicken",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "ch 发 /tʃ/",
+    example: "Chicken is my favorite food.",
+    x: 790,
+    y: 740,
+    links: ["rice", "vegetable"],
+  },
+  {
+    id: "vegetable",
+    word: "vegetable",
+    meaning: "蔬菜",
+    level: 2,
+    family: "food",
+    theme: "bio",
+    root: "vegetable",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "veg-e-ta-ble 分块记",
+    example: "Carrots are vegetables.",
+    x: 940,
+    y: 705,
+    links: ["chicken", "breakfast"],
+  },
+  {
+    id: "breakfast",
+    word: "breakfast",
+    meaning: "早餐",
+    level: 2,
+    family: "food",
+    theme: "exam",
+    root: "breakfast",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "break + fast 合起来记",
+    example: "Breakfast is important.",
+    x: 650,
+    y: 620,
+    links: ["apple", "milk", "vegetable"],
+  },
+  {
+    id: "soccer",
+    word: "soccer",
+    meaning: "足球",
+    level: 2,
+    family: "activity",
+    theme: "machine",
+    root: "soccer",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "soc-cer 两段记",
+    example: "They play soccer after school.",
+    x: 85,
+    y: 805,
+    links: ["basketball", "school"],
+  },
+  {
+    id: "basketball",
+    word: "basketball",
+    meaning: "篮球",
+    level: 2,
+    family: "activity",
+    theme: "machine",
+    root: "basketball",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "basket + ball 合成记",
+    example: "Basketball is fun.",
+    x: 245,
+    y: 825,
+    links: ["soccer", "favorite"],
+  },
+  {
+    id: "music",
+    word: "music",
+    meaning: "音乐",
+    level: 1,
+    family: "subject",
+    theme: "exam",
+    root: "music",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "u 发 /juː/",
+    example: "Music is relaxing.",
+    x: 420,
+    y: 820,
+    links: ["history", "favorite"],
+  },
+  {
+    id: "history",
+    word: "history",
+    meaning: "历史",
+    level: 2,
+    family: "subject",
+    theme: "exam",
+    root: "history",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "his-to-ry 三段记",
+    example: "History is an interesting subject.",
+    x: 590,
+    y: 815,
+    links: ["music", "science"],
+  },
+  {
+    id: "science",
+    word: "science",
+    meaning: "科学",
+    level: 2,
+    family: "subject",
+    theme: "exam",
+    root: "science",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "sci 发 /saɪ/",
+    example: "Science is useful.",
+    x: 760,
+    y: 820,
+    links: ["history", "math"],
+  },
+  {
+    id: "math",
+    word: "math",
+    meaning: "数学",
+    level: 1,
+    family: "subject",
+    theme: "exam",
+    root: "math",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "th 舌尖轻咬",
+    example: "Math is not easy for everyone.",
+    x: 935,
+    y: 800,
+    links: ["science", "english"],
+  },
+  {
+    id: "english",
+    word: "English",
+    meaning: "英语；英国的",
+    level: 1,
+    family: "subject",
+    theme: "exam",
+    root: "english",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "首字母常大写",
+    example: "English can be easier with practice.",
+    x: 930,
+    y: 455,
+    links: ["dictionary", "math", "subject"],
+  },
+  {
+    id: "subject",
+    word: "subject",
+    meaning: "学科；科目",
+    level: 2,
+    family: "subject",
+    theme: "exam",
+    root: "subject",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "sub-ject 分块记",
+    example: "What is your favorite subject?",
+    x: 760,
+    y: 455,
+    links: ["english", "favorite"],
+  },
+  {
+    id: "favorite",
+    word: "favorite",
+    meaning: "最喜欢的",
+    level: 2,
+    family: "subject",
+    theme: "exam",
+    root: "favorite",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "fa-vor-ite 分块记",
+    example: "My favorite subject is English.",
+    x: 590,
+    y: 455,
+    links: ["subject", "basketball", "music"],
+  },
+  {
+    id: "monday",
+    word: "Monday",
+    meaning: "星期一",
+    level: 1,
+    family: "time",
+    theme: "geo",
+    root: "monday",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "星期首字母常大写",
+    example: "We have English on Monday.",
+    x: 430,
+    y: 670,
+    links: ["birthday", "english"],
+  },
+  {
+    id: "birthday",
+    word: "birthday",
+    meaning: "生日",
+    level: 1,
+    family: "time",
+    theme: "geo",
+    root: "birthday",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "birth + day 合成记",
+    example: "My birthday is in May.",
+    x: 270,
+    y: 650,
+    links: ["monday", "month"],
+  },
+  {
+    id: "month",
+    word: "month",
+    meaning: "月；月份",
+    level: 1,
+    family: "time",
+    theme: "geo",
+    root: "month",
+    prefix: "",
+    suffix: "",
+    rootMeaning: "th 舌尖轻咬",
+    example: "January is the first month.",
+    x: 115,
+    y: 625,
+    links: ["birthday", "monday"],
+  },
+];
+
 const prefixes: Part[] = [
   { code: nonePart, label: "∅", meaning: "不加前缀" },
   { code: "at", label: "at-", meaning: "朝向 / 贴近" },
@@ -881,7 +1634,7 @@ const forgeChallenges: ForgeChallenge[] = [
 
 function createDefaultMemory(): CacheMemory {
   return {
-    selectedId: "bright",
+    selectedId: "hello",
     mode: "map",
     records: {},
     computePower: 100,
@@ -893,7 +1646,7 @@ function createDefaultMemory(): CacheMemory {
     credits: 20,
     risk: 1,
     unlockedLevel: 2,
-    lastFeedback: "缓存已启动：先修复低阶词，再解锁派生词网络。",
+    lastFeedback: "从七年级基础词开始：先认得意思，再拼得出来。",
     history: [],
   };
 }
@@ -972,17 +1725,17 @@ function getRecord(records: Record<string, WordRecord>, id: string) {
 
 function getThemeLabel(theme: ThemeId) {
   const labels: Record<ThemeId, string> = {
-    space: "星际",
-    bio: "生物",
-    geo: "地理",
-    machine: "机械",
+    space: "日常",
+    bio: "生活",
+    geo: "校园",
+    machine: "物品",
     exam: "考点",
   };
 
   return labels[theme];
 }
 
-const initialUnlockedIds = ["bright", "system"];
+const initialUnlockedIds = ["hello", "name"];
 
 function getPart(parts: Part[], code: string) {
   return parts.find((part) => part.code === code);
@@ -1012,11 +1765,6 @@ export default function DanciExperience() {
   const [combat, setCombat] = useState<CombatState | null>(null);
   const [patchInput, setPatchInput] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedParts, setSelectedParts] = useState({
-    prefix: "",
-    root: "",
-    suffix: "",
-  });
   const [lastUnlockedId, setLastUnlockedId] = useState("");
 
   const unlockedNodeIds = useMemo(() => {
@@ -1030,8 +1778,8 @@ export default function DanciExperience() {
   }, [memory.records]);
   const selectedNode = wordNodes.find((node) => node.id === memory.selectedId) ?? wordNodes[0];
   const combatNode = combat ? wordNodes.find((node) => node.id === combat.nodeId) ?? null : null;
-  const combatForgeChallenge = combatNode ? forgeChallenges.find((challenge) => challenge.targetId === combatNode.id) : undefined;
   const unlockedCount = wordNodes.filter((node) => unlockedNodeIds.has(node.id)).length;
+  const masteredCount = wordNodes.filter((node) => getRecord(memory.records, node.id).mastered).length;
   const gameOver = memory.computePower <= 0;
   const shellClass = [
     styles.shell,
@@ -1039,27 +1787,16 @@ export default function DanciExperience() {
     combat?.status === "failure" ? styles.shellFailure : "",
     gameOver ? styles.shellGameOver : "",
   ].join(" ");
-  const combatForgeOptions = useMemo(() => {
+  const traceChoices = useMemo(() => {
     if (!combatNode) {
-      return { prefixes: [], roots: [], suffixes: [] };
+      return [];
     }
-    const answer = getForgeAnswer(combatNode);
     const seed = combat?.seed ?? 1;
+    const distractors = wordNodes
+      .filter((node) => node.id !== combatNode.id && Math.abs(node.level - combatNode.level) <= 1)
+      .slice(0, 28);
 
-    return {
-      prefixes: shuffleBySeed(
-        [answer.prefix, "un", "re", "trans", "in", nonePart].filter((value, index, list) => list.indexOf(value) === index),
-        seed,
-      ).map((code) => getPart(prefixes, code) ?? prefixes[0]),
-      roots: shuffleBySeed(
-        [answer.root, "form", "port", "act", "struct", "sci", "bear"].filter((value, index, list) => list.indexOf(value) === index),
-        seed + 3,
-      ).map((code) => getPart(roots, code) ?? roots[0]),
-      suffixes: shuffleBySeed(
-        [answer.suffix, "able", "ation", "ion", "ist", nonePart].filter((value, index, list) => list.indexOf(value) === index),
-        seed + 5,
-      ).map((code) => getPart(suffixes, code) ?? suffixes[0]),
-    };
+    return shuffleBySeed([combatNode, ...shuffleBySeed(distractors, seed).slice(0, 3)], seed + 11);
   }, [combat?.seed, combatNode]);
 
   useEffect(() => {
@@ -1099,10 +1836,9 @@ export default function DanciExperience() {
 
   function openCombat(node: WordNode) {
     if (gameOver) return;
-    const forgeable = isForgeableNode(node);
-    const mode: CombatMode = forgeable && Math.random() > 0.5 ? "forge" : "patch";
+    const record = getRecord(memory.records, node.id);
+    const mode: CombatMode = record.correct > 0 || Math.random() > 0.58 ? "patch" : "trace";
     setPatchInput("");
-    setSelectedParts({ prefix: "", root: "", suffix: "" });
     setCombat({
       nodeId: node.id,
       mode,
@@ -1113,13 +1849,18 @@ export default function DanciExperience() {
       ...current,
       selectedId: node.id,
       mode,
-      lastFeedback: `Encrypted node detected: ${node.word}`,
+      lastFeedback: `训练节点已载入：${node.word}。先主动回忆，不要只看答案。`,
     }));
   }
 
   function handleNodeClick(node: WordNode) {
     if (gameOver) return;
+    const record = getRecord(memory.records, node.id);
     if (!unlockedNodeIds.has(node.id)) {
+      openCombat(node);
+      return;
+    }
+    if (record.correct > 0 && !record.mastered) {
       openCombat(node);
       return;
     }
@@ -1127,7 +1868,7 @@ export default function DanciExperience() {
       ...current,
       selectedId: node.id,
       mode: "map",
-      lastFeedback: `Node intel loaded: ${node.word}`,
+      lastFeedback: `${node.word} 已载入。点还没掌握的亮点，可以再练一轮拼写。`,
     }));
   }
 
@@ -1135,8 +1876,8 @@ export default function DanciExperience() {
     if (!combat || !combatNode) return;
     const mode = combat.mode;
     const feedback = correct
-      ? `Access Granted: ${combatNode.word} 节点已点亮。`
-      : `Hack Failed: ${combatNode.word} 仍处于加密状态。`;
+      ? `Access Granted: ${combatNode.word} 回忆成功。`
+      : `Hack Failed: ${combatNode.word} 还没背牢，马上再来。`;
 
     patchMemory((current) => {
       const previous = getRecord(current.records, combatNode.id);
@@ -1144,7 +1885,7 @@ export default function DanciExperience() {
         attempts: previous.attempts + 1,
         correct: previous.correct + (correct ? 1 : 0),
         wrong: previous.wrong + (correct ? 0 : 1),
-        mastered: correct ? true : previous.mastered,
+        mastered: correct ? previous.correct + 1 >= 2 : previous.mastered,
         lastMode: mode,
         updatedAt: new Date().toISOString(),
       };
@@ -1162,7 +1903,7 @@ export default function DanciExperience() {
         selectedId: combatNode.id,
         mode,
         patchIndex: mode === "patch" ? current.patchIndex + 1 : current.patchIndex,
-        forgeIndex: mode === "forge" ? current.forgeIndex + 1 : current.forgeIndex,
+        traceIndex: mode === "trace" ? current.traceIndex + 1 : current.traceIndex,
         streak: nextStreak,
         bestStreak: Math.max(current.bestStreak, nextStreak),
         credits: Math.max(0, current.credits + (correct ? 6 + nextRecord.correct : -3)),
@@ -1175,7 +1916,6 @@ export default function DanciExperience() {
     if (correct) {
       setCombat({ ...combat, status: "success" });
       setLastUnlockedId(combatNode.id);
-      setSelectedParts({ prefix: "", root: "", suffix: "" });
       setPatchInput("");
       window.setTimeout(() => setCombat(null), 920);
       return;
@@ -1191,10 +1931,9 @@ export default function DanciExperience() {
     }, 680);
   }
 
-  function submitCombatForge() {
-    if (!combatNode) return;
-    const formed = buildWord(selectedParts.prefix, selectedParts.root, selectedParts.suffix);
-    resolveHack(normalizeAnswer(formed) === normalizeAnswer(combatNode.word));
+  function submitTraceChoice(choiceId: string) {
+    if (!combatNode || combat?.status !== "active") return;
+    resolveHack(choiceId === combatNode.id);
   }
 
   function submitCombatPatch(event: FormEvent<HTMLFormElement>) {
@@ -1208,7 +1947,6 @@ export default function DanciExperience() {
     setMemory(createDefaultMemory());
     setCombat(null);
     setPatchInput("");
-    setSelectedParts({ prefix: "", root: "", suffix: "" });
     setLastUnlockedId("");
   }
 
@@ -1315,8 +2053,8 @@ export default function DanciExperience() {
         <div className={styles.brandBlock}>
           <span>NC</span>
           <div>
-            <p>Neural Cache</p>
-            <h1>Vocabulary Galaxy</h1>
+            <p>Grade 7 Word Quest</p>
+            <h1>Starter Galaxy</h1>
           </div>
         </div>
         <div className={styles.computeBlock}>
@@ -1329,8 +2067,8 @@ export default function DanciExperience() {
           </div>
         </div>
         <div className={styles.hudStats}>
-          <span>{unlockedCount}/{wordNodes.length} nodes online</span>
-          <span>Best streak {memory.bestStreak}</span>
+          <span>{unlockedCount}/{wordNodes.length} words unlocked</span>
+          <span>{masteredCount} mastered</span>
         </div>
       </section>
 
@@ -1345,11 +2083,11 @@ export default function DanciExperience() {
         <h2>{selectedNode.word}</h2>
         <p>{selectedNode.meaning}</p>
         <div className={styles.rootFormula}>
-          <span>{selectedNode.prefix || "∅"}</span>
+          <span>Lv.{selectedNode.level}</span>
           <ChevronRight size={14} />
-          <span>{selectedNode.root}</span>
+          <span>{selectedNode.family}</span>
           <ChevronRight size={14} />
-          <span>{selectedNode.suffix || "∅"}</span>
+          <span>{selectedNode.rootMeaning}</span>
         </div>
         <div className={styles.exampleText}>
           <Sparkles size={15} />
@@ -1370,58 +2108,45 @@ export default function DanciExperience() {
               <X size={18} />
             </button>
             <div className={styles.modalHeader}>
-              <span>{combat.mode === "forge" ? <Atom size={20} /> : <Brain size={20} />}</span>
+              <span><Brain size={20} /></span>
               <div>
                 <p>Combat Phase</p>
-                <h2>{combat.mode === "forge" ? "Root Forge" : "Spell Patch"}</h2>
+                <h2>{combat.mode === "trace" ? "Meaning Trace" : "Spell Patch"}</h2>
               </div>
             </div>
             <div className={styles.targetReadout}>
-              <span>Encrypted Node</span>
-              <strong>{combatNode.meaning}</strong>
+              <span>{combat.mode === "trace" ? "Choose the meaning" : "Write the word"}</span>
+              <strong>{combat.mode === "trace" ? combatNode.word : combatNode.meaning}</strong>
             </div>
 
-            {combat.mode === "forge" ? (
+            {combat.mode === "trace" ? (
               <div className={styles.combatBody}>
-                <p className={styles.missionPrompt}>{combatForgeChallenge?.prompt ?? `合成目标单词：${combatNode.meaning}`}</p>
-                <div className={styles.formulaPreview}>
-                  {[selectedParts.prefix, selectedParts.root, selectedParts.suffix].map((part, index) => (
-                    <span key={`${part}-${index}`}>{part ? prefixes.concat(roots, suffixes).find((item) => item.code === part)?.label ?? part : "?"}</span>
-                  ))}
-                  <strong>{buildWord(selectedParts.prefix, selectedParts.root, selectedParts.suffix) || "awaiting formula"}</strong>
+                <p className={styles.missionPrompt}>先不要猜，脑子里读一遍这个词，再选中文意思。</p>
+                <div className={styles.traceWord}>
+                  <strong>{combatNode.word}</strong>
+                  <button type="button" className={styles.soundButton} onClick={() => speak(combatNode.word)}>
+                    <Volume2 size={17} />
+                  </button>
                 </div>
-                <PartRow
-                  label="前缀"
-                  parts={combatForgeOptions.prefixes}
-                  selected={selectedParts.prefix}
-                  onSelect={(code) => setSelectedParts((current) => ({ ...current, prefix: code }))}
-                />
-                <PartRow
-                  label="词根"
-                  parts={combatForgeOptions.roots}
-                  selected={selectedParts.root}
-                  onSelect={(code) => setSelectedParts((current) => ({ ...current, root: code }))}
-                />
-                <PartRow
-                  label="后缀"
-                  parts={combatForgeOptions.suffixes}
-                  selected={selectedParts.suffix}
-                  onSelect={(code) => setSelectedParts((current) => ({ ...current, suffix: code }))}
-                />
-                <button
-                  type="button"
-                  className={styles.primaryAction}
-                  disabled={!selectedParts.prefix || !selectedParts.root || !selectedParts.suffix || combat.status !== "active"}
-                  onClick={submitCombatForge}
-                >
-                  <Zap size={17} />
-                  Execute Hack
-                </button>
+                <div className={styles.choiceGrid}>
+                  {traceChoices.map((choice) => (
+                    <button
+                      key={choice.id}
+                      type="button"
+                      disabled={combat.status !== "active"}
+                      onClick={() => submitTraceChoice(choice.id)}
+                    >
+                      {choice.meaning}
+                    </button>
+                  ))}
+                </div>
               </div>
             ) : (
               <form className={styles.combatBody} onSubmit={submitCombatPatch}>
                 <div className={styles.patchWord}>{maskWord(combatNode.word, combat.seed)}</div>
-                <p className={styles.missionPrompt}>{combatNode.example}</p>
+                <p className={styles.missionPrompt}>
+                  {combatNode.meaning}。提示：{combatNode.rootMeaning}。
+                </p>
                 <div className={styles.patchForm}>
                   <input
                     value={patchInput}
@@ -1464,37 +2189,5 @@ export default function DanciExperience() {
         </section>
       ) : null}
     </main>
-  );
-}
-
-function PartRow({
-  label,
-  parts,
-  selected,
-  onSelect,
-}: {
-  label: string;
-  parts: Part[];
-  selected: string;
-  onSelect: (code: string) => void;
-}) {
-  return (
-    <div className={styles.partRow}>
-      <span>{label}</span>
-      <div>
-        {parts.map((part) => (
-          <button
-            key={`${label}-${part.code}`}
-            type="button"
-            className={selected === part.code ? styles.selectedPart : ""}
-            onClick={() => onSelect(part.code)}
-            title={part.meaning}
-          >
-            <strong>{part.label}</strong>
-            <small>{part.meaning}</small>
-          </button>
-        ))}
-      </div>
-    </div>
   );
 }
