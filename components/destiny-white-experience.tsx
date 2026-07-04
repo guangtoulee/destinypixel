@@ -18,6 +18,7 @@ import {
   Sparkles,
   Stars,
   SunMoon,
+  X,
 } from "lucide-react";
 import { Solar } from "lunar-javascript";
 import { createFusionReportAction } from "@/app/actions";
@@ -112,6 +113,9 @@ type WhiteCopy = {
     description: string;
     action: string;
     activeAction: string;
+    modalTitle: string;
+    modalBody: string;
+    modalClose: string;
     note: string;
     deities: Array<{
       key: string;
@@ -271,6 +275,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         "A small digital ritual for focus. Choose a deity archetype, make one clean wish, and let the page mark the intention for this visit.",
       action: "Light incense",
       activeAction: "Incense lit",
+      modalTitle: "Incense offered",
+      modalBody:
+        "Hold one clean intention for this direction. The ritual is quiet, but the next action should be concrete.",
+      modalClose: "Return",
       note: "Blessing is symbolic and reflective; real choices still belong to you.",
       deities: [
         {
@@ -459,6 +467,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         "这不是替你决定命运，而是帮你把愿望说清楚。选择一位神明意象，点香、定心、把今天最重要的愿望留下。",
       action: "点香祈福",
       activeAction: "已点香",
+      modalTitle: "清香已燃",
+      modalBody:
+        "把愿望收成一句最清楚的话，留给这一刻。仪式负责定心，真正改变局面的，仍是你接下来要做的那一步。",
+      modalClose: "回到页面",
       note: "祈福是象征性的定心仪式，真正的选择与行动仍然在你手里。",
       deities: [
         {
@@ -643,6 +655,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         "Небольшой цифровой ритуал для фокуса: выберите образ божества, сформулируйте желание и отметьте намерение на этот визит.",
       action: "Зажечь",
       activeAction: "Зажжено",
+      modalTitle: "Благовоние зажжено",
+      modalBody:
+        "Сформулируйте намерение одной ясной фразой. Ритуал собирает внимание, а следующий реальный шаг остается за вами.",
+      modalClose: "Вернуться",
       note: "Благословение символично; реальные решения все равно остаются за вами.",
       deities: [
         {
@@ -755,6 +771,9 @@ export default function DestinyWhiteExperience({
   const [birthDate, setBirthDate] = useState("");
   const [pillar, setPillar] = useState("癸卯");
   const [litBlessings, setLitBlessings] = useState<Record<string, boolean>>({});
+  const [blessingMoment, setBlessingMoment] = useState<
+    WhiteCopy["blessing"]["deities"][number] | null
+  >(null);
   const text = whiteCopy[locale];
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
@@ -1203,10 +1222,19 @@ export default function DestinyWhiteExperience({
 
               return (
                 <article className="white-deity-card" key={deity.key} data-active={active}>
-                  <div className={`white-deity-line white-deity-line--${deity.key}`} aria-hidden="true">
-                    <span />
-                    <i />
-                    <b />
+                  <div
+                    className={`white-deity-line white-deity-line--${deity.key}`}
+                    aria-hidden="true"
+                  >
+                    <span className="white-deity-mark white-deity-mark--halo" />
+                    <span className="white-deity-mark white-deity-mark--head" />
+                    <span className="white-deity-mark white-deity-mark--body" />
+                    <span className="white-deity-mark white-deity-mark--sleeve" />
+                    <span className="white-deity-feature white-deity-feature--one" />
+                    <span className="white-deity-feature white-deity-feature--two" />
+                    <span className="white-deity-incense" />
+                    <span className="white-deity-smoke white-deity-smoke--one" />
+                    <span className="white-deity-smoke white-deity-smoke--two" />
                   </div>
                   <div>
                     <small>{deity.domain}</small>
@@ -1216,10 +1244,13 @@ export default function DestinyWhiteExperience({
                   <button
                     type="button"
                     onClick={() =>
-                      setLitBlessings((current) => ({
-                        ...current,
-                        [deity.key]: true,
-                      }))
+                      {
+                        setLitBlessings((current) => ({
+                          ...current,
+                          [deity.key]: true,
+                        }));
+                        setBlessingMoment(deity);
+                      }
                     }
                   >
                     <Sparkles size={15} aria-hidden="true" />
@@ -1233,6 +1264,47 @@ export default function DestinyWhiteExperience({
           <p className="white-blessing-note">{text.blessing.note}</p>
         </div>
       </section>
+
+      {blessingMoment ? (
+        <div
+          className="white-ritual-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="white-ritual-title"
+        >
+          <div className="white-ritual-modal__panel">
+            <button
+              className="white-ritual-modal__close"
+              type="button"
+              aria-label={text.blessing.modalClose}
+              onClick={() => setBlessingMoment(null)}
+            >
+              <X size={18} aria-hidden="true" />
+            </button>
+            <div
+              className={`white-ritual-deity white-deity-line white-deity-line--${blessingMoment.key}`}
+              aria-hidden="true"
+            >
+              <span className="white-deity-mark white-deity-mark--halo" />
+              <span className="white-deity-mark white-deity-mark--head" />
+              <span className="white-deity-mark white-deity-mark--body" />
+              <span className="white-deity-mark white-deity-mark--sleeve" />
+              <span className="white-deity-feature white-deity-feature--one" />
+              <span className="white-deity-feature white-deity-feature--two" />
+              <span className="white-deity-incense" />
+              <span className="white-deity-smoke white-deity-smoke--one" />
+              <span className="white-deity-smoke white-deity-smoke--two" />
+            </div>
+            <p>{text.blessing.modalTitle}</p>
+            <h2 id="white-ritual-title">{blessingMoment.name}</h2>
+            <span>{text.blessing.modalBody}</span>
+            <small>{blessingMoment.domain}</small>
+            <button type="button" onClick={() => setBlessingMoment(null)}>
+              {text.blessing.modalClose}
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       <section className="white-premium">
         <div className="white-container white-premium__panel">

@@ -24,6 +24,9 @@ type StickCopy = {
   topicLabel: string;
   draw: string;
   redraw: string;
+  drawing: string;
+  ritualIdle: string;
+  reveal: string;
   result: string;
   adviceLabel: string;
   empty: string;
@@ -153,6 +156,9 @@ const copy: Record<ReportLocale, StickCopy> = {
     topicLabel: "Topic",
     draw: "Draw my stick",
     redraw: "Draw again",
+    drawing: "Shaking the oracle cup...",
+    ritualIdle: "Focus on one question, then draw one stick.",
+    reveal: "The stick has landed.",
     result: "Your stick",
     adviceLabel: "Practical advice",
     empty: "Keep the question concrete. One stick works best for one issue.",
@@ -191,6 +197,9 @@ const copy: Record<ReportLocale, StickCopy> = {
     topicLabel: "问题类型",
     draw: "开始求签",
     redraw: "再求一签",
+    drawing: "签筒正在摇动...",
+    ritualIdle: "心里只留一个问题，然后抽一支签。",
+    reveal: "这一支签已经落下。",
     result: "你的签",
     adviceLabel: "行动建议",
     empty: "问题越具体，签意越有用。一支签最好只问一件事。",
@@ -229,6 +238,9 @@ const copy: Record<ReportLocale, StickCopy> = {
     topicLabel: "Тема",
     draw: "Вытянуть жребий",
     redraw: "Вытянуть снова",
+    drawing: "Чаша со жребиями движется...",
+    ritualIdle: "Удержите один вопрос и вытяните один жребий.",
+    reveal: "Жребий выпал.",
     result: "Ваш жребий",
     adviceLabel: "Практический совет",
     empty: "Чем конкретнее вопрос, тем полезнее знак. Один жребий лучше работает для одного вопроса.",
@@ -290,6 +302,7 @@ export default function SpiritualSticksExperience({
   const [topic, setTopic] = useState(copy[initialLocale].topics[0]);
   const [question, setQuestion] = useState("");
   const [reading, setReading] = useState<StickReading | null>(null);
+  const [isDrawing, setIsDrawing] = useState(false);
   const text = copy[locale];
   const selectedSystem = systems[locale][selectedType];
 
@@ -312,6 +325,7 @@ export default function SpiritualSticksExperience({
   function chooseType(nextType: StickType) {
     setSelectedType(nextType);
     setReading(null);
+    setIsDrawing(false);
 
     const url = new URL(window.location.href);
     url.searchParams.set("type", nextType);
@@ -320,7 +334,14 @@ export default function SpiritualSticksExperience({
   }
 
   function drawStick() {
-    setReading(createReading(locale, selectedType));
+    if (isDrawing) return;
+
+    setReading(null);
+    setIsDrawing(true);
+    window.setTimeout(() => {
+      setReading(createReading(locale, selectedType));
+      setIsDrawing(false);
+    }, 950);
   }
 
   return (
@@ -386,6 +407,28 @@ export default function SpiritualSticksExperience({
               })}
             </div>
 
+            <div
+              className="stick-ritual-visual"
+              data-drawing={isDrawing}
+              data-revealed={Boolean(reading)}
+              aria-hidden="true"
+            >
+              <div className="stick-cup">
+                {Array.from({ length: 9 }).map((_, index) => (
+                  <span key={index} />
+                ))}
+              </div>
+              <div className="stick-reveal-slip">
+                <small>{selectedSystem.name}</small>
+                <strong>{reading ? reading.number : "?"}</strong>
+                <em>{reading ? reading.level : selectedSystem.count}</em>
+              </div>
+            </div>
+
+            <p className="stick-ritual-caption" aria-live="polite">
+              {isDrawing ? text.drawing : reading ? text.reveal : text.ritualIdle}
+            </p>
+
             <label className="stick-field">
               <span>{text.topicLabel}</span>
               <select
@@ -409,8 +452,14 @@ export default function SpiritualSticksExperience({
               />
             </label>
 
-            <button className="stick-draw-button" type="button" onClick={drawStick}>
-              {reading ? text.redraw : text.draw}
+            <button
+              className="stick-draw-button"
+              type="button"
+              data-drawing={isDrawing}
+              disabled={isDrawing}
+              onClick={drawStick}
+            >
+              {isDrawing ? text.drawing : reading ? text.redraw : text.draw}
               <ArrowRight size={16} aria-hidden="true" />
             </button>
           </div>
@@ -439,6 +488,13 @@ export default function SpiritualSticksExperience({
                   <em>
                     / {selectedSystem.count} · {reading.level}
                   </em>
+                </div>
+                <div className="stick-result-ticket" aria-hidden="true">
+                  <div className="stick-result-slip">
+                    <small>{selectedSystem.name}</small>
+                    <strong>{reading.number}</strong>
+                    <em>{reading.level}</em>
+                  </div>
                 </div>
                 <h2>{reading.title}</h2>
                 <p>{reading.body}</p>
