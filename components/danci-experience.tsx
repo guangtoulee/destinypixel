@@ -22,6 +22,10 @@ import {
   Zap,
 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import {
+  allowedEnglishVoiceSummary,
+  chooseAllowedEnglishVoice,
+} from "@/lib/english-voices";
 import styles from "./danci-experience.module.css";
 
 type CacheMode = "map" | "forge" | "patch" | "trace";
@@ -949,6 +953,7 @@ export default function DanciExperience() {
   const [memory, setMemory] = useState<CacheMemory>(() => createDefaultMemory());
   const [loaded, setLoaded] = useState(false);
   const [patchInput, setPatchInput] = useState("");
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedParts, setSelectedParts] = useState({
     prefix: "",
     root: "",
@@ -1011,6 +1016,19 @@ export default function DanciExperience() {
     } finally {
       setLoaded(true);
     }
+  }, []);
+
+  useEffect(() => {
+    if (!("speechSynthesis" in window)) return;
+
+    const loadVoices = () => setVoices(window.speechSynthesis.getVoices());
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+
+    return () => {
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.onvoiceschanged = null;
+    };
   }, []);
 
   useEffect(() => {
@@ -1168,11 +1186,26 @@ export default function DanciExperience() {
 
   function speak(text: string) {
     if (!("speechSynthesis" in window)) return;
+    const nextVoices = voices.length ? voices : window.speechSynthesis.getVoices();
+    if (!voices.length && nextVoices.length) {
+      setVoices(nextVoices);
+    }
+    const voice = chooseAllowedEnglishVoice(nextVoices);
+    if (!voice) {
+      patchMemory((current) => ({
+        ...current,
+        lastFeedback: `未找到白名单语音：${allowedEnglishVoiceSummary}`,
+      }));
+      return;
+    }
+
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US";
+    utterance.voice = voice;
+    utterance.lang = voice.lang || "en-US";
     utterance.rate = 0.76;
     utterance.pitch = 0.96;
+    utterance.volume = 0.96;
     window.speechSynthesis.speak(utterance);
   }
 

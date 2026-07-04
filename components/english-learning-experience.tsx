@@ -20,6 +20,11 @@ import {
   Volume2,
 } from "lucide-react";
 import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
+import {
+  allowedEnglishVoiceSummary,
+  chooseAllowedEnglishVoice,
+  getAllowedEnglishVoices,
+} from "@/lib/english-voices";
 import styles from "./english-learning-experience.module.css";
 
 type LevelId = "starter" | "foundation" | "bridge" | "boost";
@@ -1406,25 +1411,11 @@ function estimateLevel(score: number): LevelId {
 }
 
 function getRecommendedVoices(voices: SpeechSynthesisVoice[]) {
-  const isEnglish = (voice: SpeechSynthesisVoice) => voice.lang.toLowerCase().startsWith("en");
-  const namedVoices = voices.filter(
-    (voice) => isEnglish(voice) && /\b(Daniel|Karen|Moira|Samantha|Tessa)\b/i.test(voice.name),
-  );
-  const googleVoices = voices
-    .filter((voice) => isEnglish(voice) && /google/i.test(voice.name))
-    .slice(0, 3);
-
-  return [...namedVoices, ...googleVoices].filter(
-    (voice, index, list) => list.findIndex((item) => item.voiceURI === voice.voiceURI) === index,
-  );
+  return getAllowedEnglishVoices(voices);
 }
 
 function chooseBestVoice(voices: SpeechSynthesisVoice[], savedURI: string) {
-  const recommendedVoices = getRecommendedVoices(voices);
-  const saved = recommendedVoices.find((voice) => voice.voiceURI === savedURI);
-  if (saved) return saved;
-
-  return recommendedVoices[0];
+  return chooseAllowedEnglishVoice(voices, savedURI);
 }
 
 function getTargetOptions(deck: WordEntry[], targetIndex: number, rounds: number) {
@@ -1597,7 +1588,7 @@ export default function EnglishLearningExperience() {
           return { ...current, voiceURI: currentBest.voiceURI };
         });
       } else {
-        setSpeechNotice("未找到 Daniel/Karen/Moira/Samantha/Tessa 或 Google 英文语音");
+        setSpeechNotice(`未找到白名单语音：${allowedEnglishVoiceSummary}`);
       }
     };
 
@@ -1655,7 +1646,7 @@ export default function EnglishLearningExperience() {
 
     const voice = chooseBestVoice(voices, memory.voiceURI);
     if (!voice) {
-      setSpeechNotice("未找到推荐英文语音，先在系统或浏览器里安装 Daniel/Karen/Moira/Samantha/Tessa 或 Google 英文语音。");
+      setSpeechNotice(`未找到白名单语音，先在系统或浏览器里安装：${allowedEnglishVoiceSummary}。`);
       return;
     }
 
@@ -2572,7 +2563,7 @@ export default function EnglishLearningExperience() {
           >
             {availableVoices.length === 0 ? (
               <option value="">
-                {voices.length === 0 ? "正在读取推荐语音" : "未找到推荐语音"}
+                {voices.length === 0 ? "正在读取白名单语音" : "未找到白名单语音"}
               </option>
             ) : (
               availableVoices.map((voice) => (
