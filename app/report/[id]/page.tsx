@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -41,6 +42,19 @@ import {
 } from "@/lib/report-i18n";
 
 export const maxDuration = 60;
+
+export const metadata: Metadata = {
+  title: "Private DestinyPixel Report",
+  description: "A private generated DestinyPixel report.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
 
 function createDraftReportRecord(
   id: string,

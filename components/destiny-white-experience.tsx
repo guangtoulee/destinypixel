@@ -919,6 +919,18 @@ export default function DestinyWhiteExperience({
       <footer className="white-footer">
         <div className="white-container">
           <span>DestinyPixel · Multidimensional Birth Map</span>
+          <a href={`/learn?locale=${locale}`}>
+            {locale === "zh" ? "搜索指南" : locale === "ru" ? "Гид" : "Guide"}
+          </a>
+          <a href={`/palm?locale=${locale}`}>
+            {locale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}
+          </a>
+          <a href={`/face?locale=${locale}`}>
+            {locale === "zh" ? "面相" : locale === "ru" ? "Лицо" : "Face"}
+          </a>
+          <a href={`/oracle?locale=${locale}`}>
+            {locale === "zh" ? "问事" : locale === "ru" ? "Оракул" : "Oracle"}
+          </a>
           <span>
             <MapPin size={13} aria-hidden="true" />
             /

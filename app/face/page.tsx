@@ -1,7 +1,11 @@
+import type { Metadata } from "next";
 import SymbolicInsightExperience from "@/components/symbolic-insight-experience";
 import { normalizeReportLocale } from "@/lib/report-i18n";
+import { makePageMetadata, routeSeo } from "@/lib/seo";
 
 export const maxDuration = 60;
+
+export const metadata: Metadata = makePageMetadata(routeSeo.face);
 
 export default async function FacePage({
   searchParams,
