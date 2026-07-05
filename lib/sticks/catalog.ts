@@ -1,4 +1,5 @@
 import type { ReportLocale } from "@/lib/report-i18n";
+import { classicStickSeeds } from "@/lib/sticks/classic-source";
 
 export type StickType = "guanyin" | "guandi" | "yuelao" | "wealth" | "huangdaxian";
 
@@ -468,6 +469,28 @@ function fallbackText(type: StickType, number: number, locale: ReportLocale) {
   return generatedSignText(type, number, locale);
 }
 
+function classicText(type: StickType, number: number, locale: ReportLocale) {
+  const classic = classicStickSeeds[type]?.[number];
+
+  if (!classic) {
+    return null;
+  }
+
+  if (locale === "zh") {
+    return classic;
+  }
+
+  const generated = generatedSignText(type, number, locale);
+
+  return {
+    ...generated,
+    sourceNote:
+      locale === "ru"
+        ? "Для этого номера есть выверенный традиционный китайский текст; он показывается в китайской версии. Толкование здесь локализовано без китайских иероглифов."
+        : "A verified traditional Chinese verse exists for this number and is shown in the Chinese locale. This localized view keeps the interface free of Chinese characters.",
+  };
+}
+
 export function getStickSign(
   type: StickType,
   number: number,
@@ -476,13 +499,14 @@ export function getStickSign(
   const total = stickTypeTotals[type];
   const safeNumber = Math.min(Math.max(Math.round(number), 1), total);
   const seeded = seeds[type]?.[safeNumber]?.[locale];
-  const sign = seeded ?? fallbackText(type, safeNumber, locale);
+  const classic = classicText(type, safeNumber, locale);
+  const sign = seeded ?? classic ?? fallbackText(type, safeNumber, locale);
 
   return {
     type,
     number: safeNumber,
     total,
     ...sign,
-    isSeeded: Boolean(seeded),
+    isSeeded: Boolean(seeded ?? classic),
   };
 }
