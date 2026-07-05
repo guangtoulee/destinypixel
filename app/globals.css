@@ -5837,6 +5837,121 @@ body.report-exporting .report-header {
   }
 }
 
+.white-deity-line {
+  width: min(164px, 72vw);
+  height: auto;
+  margin-inline: auto;
+  color: #b69055;
+}
+
+.white-deity-card .white-deity-line {
+  width: min(138px, 62vw);
+}
+
+.white-ritual-modal .white-ritual-deity {
+  width: min(188px, 72vw);
+}
+
+.white-deity-line svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 20px 28px rgba(156, 125, 82, 0.12));
+}
+
+.white-deity-line__main,
+.white-deity-line__ornament,
+.white-deity-line__feature,
+.white-deity-line__soft,
+.white-deity-line__incense {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.white-deity-line__main {
+  stroke-width: 2.15;
+}
+
+.white-deity-line__ornament {
+  stroke-width: 1.85;
+}
+
+.white-deity-line__feature {
+  stroke-width: 2;
+}
+
+.white-deity-line__soft {
+  stroke-width: 1.15;
+  opacity: 0.35;
+}
+
+.white-deity-line__incense {
+  stroke-width: 2.15;
+}
+
+.white-deity-line__incense circle {
+  fill: #e5c37c;
+  stroke: none;
+  filter: drop-shadow(0 0 7px rgba(224, 177, 95, 0.68));
+}
+
+.white-deity-line__smoke {
+  opacity: 0;
+  stroke-width: 1.45;
+  transform-origin: 151px 112px;
+}
+
+.white-deity-line[data-active="true"] .white-deity-line__smoke {
+  animation: deity-line-smoke 3.2s ease-in-out infinite;
+}
+
+.white-deity-line[data-active="true"] .white-deity-line__smoke--two {
+  animation-delay: 0.65s;
+}
+
+.white-deity-line--guanyin {
+  color: #b4945d;
+}
+
+.white-deity-line--wuye {
+  color: #8f8a72;
+}
+
+.white-deity-line--wen-caishen {
+  color: #aa8752;
+}
+
+.white-deity-line--wu-caishen {
+  color: #ad735d;
+}
+
+.white-deity-line--mazu {
+  color: #6f9cad;
+}
+
+@keyframes deity-line-smoke {
+  0% {
+    opacity: 0;
+    stroke-dasharray: 0 88;
+    transform: translateY(12px) scale(0.92);
+  }
+  28% {
+    opacity: 0.55;
+  }
+  72% {
+    opacity: 0.34;
+    stroke-dasharray: 56 88;
+  }
+  100% {
+    opacity: 0;
+    stroke-dasharray: 74 88;
+    transform: translateY(-28px) translateX(-8px) scale(1.08);
+  }
+}
+
 .white-deity-card small,
 .white-deity-card strong,
 .white-deity-card p {

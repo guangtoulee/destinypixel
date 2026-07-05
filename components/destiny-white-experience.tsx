@@ -780,6 +780,129 @@ function setDocumentLocale(locale: ReportLocale) {
     locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
 }
 
+function DeityLineIcon({
+  deityKey,
+  active = false,
+  ritual = false,
+}: {
+  deityKey: string;
+  active?: boolean;
+  ritual?: boolean;
+}) {
+  const isGuanyin = deityKey === "guanyin";
+  const isWuye = deityKey === "wuye";
+  const isWenCaishen = deityKey === "wen-caishen";
+  const isWuCaishen = deityKey === "wu-caishen";
+  const isMazu = deityKey === "mazu";
+
+  return (
+    <div
+      className={`white-deity-line white-deity-line--${deityKey}${
+        ritual ? " white-ritual-deity" : ""
+      }`}
+      data-active={active || ritual}
+      aria-hidden="true"
+    >
+      <svg viewBox="0 0 180 220" role="img">
+        <g className="white-deity-line__soft">
+          <circle cx="90" cy="62" r="48" />
+          <circle cx="90" cy="151" r="58" />
+          <path d="M32 176H148" />
+          <path d="M90 24V202" />
+        </g>
+
+        <g className="white-deity-line__main">
+          <path d="M64 54C66 27 114 27 116 54C123 68 121 88 112 101H68C59 88 57 68 64 54Z" />
+          <path d="M70 56C74 42 106 42 110 56C112 77 105 94 90 98C75 94 68 77 70 56Z" />
+          <path d="M78 69C82 66 86 66 89 69" />
+          <path d="M91 69C94 66 98 66 102 69" />
+          <path d="M84 86C88 90 94 90 98 86" />
+          <path d="M88 73C86 80 86 83 90 85" />
+          <path d="M51 112C68 91 112 91 129 112C143 139 139 178 90 195C41 178 37 139 51 112Z" />
+          <path d="M53 126C76 138 103 138 127 126" />
+          <path d="M67 112C60 143 69 174 90 195" />
+          <path d="M113 112C120 143 111 174 90 195" />
+        </g>
+
+        <g className="white-deity-line__ornament">
+          <path d="M73 45C78 34 84 30 90 21C96 30 102 34 107 45" />
+          <path d="M75 45C82 40 98 40 105 45" />
+          <path d="M83 42C83 33 97 33 97 42C97 50 83 50 83 42Z" />
+          <path d="M72 50C58 60 55 77 55 96" />
+          <path d="M108 50C122 60 125 77 125 96" />
+        </g>
+
+        {isGuanyin ? (
+          <g className="white-deity-line__feature">
+            <path d="M49 107C38 101 31 93 27 84" />
+            <path d="M31 83C41 83 49 78 56 70" />
+            <path d="M37 93C45 91 52 86 58 79" />
+            <path d="M98 118C105 108 119 110 124 119C121 139 112 153 100 162C94 146 93 131 98 118Z" />
+            <path d="M103 118C110 124 115 124 121 118" />
+            <path d="M73 116C79 126 80 137 75 150" />
+            <path d="M74 117C83 112 91 113 97 121" />
+          </g>
+        ) : null}
+
+        {isWuye ? (
+          <g className="white-deity-line__feature">
+            <path d="M47 138C47 104 71 96 92 108C113 120 135 109 139 82" />
+            <path d="M137 81C145 84 149 89 151 96" />
+            <path d="M136 82C132 75 130 70 132 65" />
+            <path d="M125 91C130 94 136 94 143 91" />
+            <path d="M104 111C109 116 112 123 111 131" />
+            <circle cx="46" cy="137" r="5" />
+            <path d="M69 120L86 102L103 122" />
+          </g>
+        ) : null}
+
+        {isWenCaishen ? (
+          <g className="white-deity-line__feature">
+            <path d="M69 47H111" />
+            <path d="M75 37H105" />
+            <path d="M80 37C80 28 100 28 100 37" />
+            <path d="M49 126H81V160H49Z" />
+            <path d="M56 137H74" />
+            <path d="M56 148H71" />
+            <path d="M108 121C118 112 132 119 128 131C124 145 111 144 106 135C112 134 117 129 117 123" />
+          </g>
+        ) : null}
+
+        {isWuCaishen ? (
+          <g className="white-deity-line__feature">
+            <path d="M79 76C83 79 86 83 90 91C94 83 97 79 101 76" />
+            <path d="M82 94C86 106 94 106 98 94" />
+            <path d="M133 52V177" />
+            <path d="M133 55C151 64 150 86 133 95" />
+            <path d="M133 55C119 67 118 84 133 95" />
+            <path d="M111 124C125 128 135 139 143 155" />
+            <path d="M48 130C62 112 75 115 86 129" />
+          </g>
+        ) : null}
+
+        {isMazu ? (
+          <g className="white-deity-line__feature">
+            <path d="M69 43C77 28 103 28 111 43" />
+            <path d="M74 37L90 23L106 37" />
+            <path d="M70 51L110 51" />
+            <path d="M75 52V65M85 52V67M95 52V67M105 52V65" />
+            <path d="M39 161C49 151 59 151 69 161C79 171 89 171 99 161C109 151 119 151 129 161C135 167 142 169 149 166" />
+            <path d="M35 178C48 168 62 168 75 178C88 188 102 188 115 178C128 168 141 168 153 178" />
+          </g>
+        ) : null}
+
+        <g className="white-deity-line__incense">
+          <path d="M151 116V184" />
+          <path d="M145 184H157" />
+          <path className="white-deity-line__smoke white-deity-line__smoke--one" d="M151 111C139 96 164 87 151 70" />
+          <path className="white-deity-line__smoke white-deity-line__smoke--two" d="M151 108C165 93 140 84 154 63" />
+          <circle cx="151" cy="112" r="3" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 export default function DestinyWhiteExperience({
   initialLocale = "en",
 }: {
@@ -1240,23 +1363,7 @@ export default function DestinyWhiteExperience({
 
               return (
                 <article className="white-deity-card" key={deity.key} data-active={active}>
-                  <div
-                    className={`white-deity-line white-deity-line--${deity.key}`}
-                    aria-hidden="true"
-                  >
-                    <span className="white-deity-mark white-deity-mark--halo" />
-                    <span className="white-deity-mark white-deity-mark--head" />
-                    <span className="white-deity-face white-deity-face--brows" />
-                    <span className="white-deity-face white-deity-face--eyes" />
-                    <span className="white-deity-face white-deity-face--mouth" />
-                    <span className="white-deity-mark white-deity-mark--body" />
-                    <span className="white-deity-mark white-deity-mark--sleeve" />
-                    <span className="white-deity-feature white-deity-feature--one" />
-                    <span className="white-deity-feature white-deity-feature--two" />
-                    <span className="white-deity-incense" />
-                    <span className="white-deity-smoke white-deity-smoke--one" />
-                    <span className="white-deity-smoke white-deity-smoke--two" />
-                  </div>
+                  <DeityLineIcon deityKey={deity.key} active={active} />
                   <div>
                     <small>{deity.domain}</small>
                     <strong>{deity.name}</strong>
@@ -1302,23 +1409,7 @@ export default function DestinyWhiteExperience({
             >
               <X size={18} aria-hidden="true" />
             </button>
-            <div
-              className={`white-ritual-deity white-deity-line white-deity-line--${blessingMoment.key}`}
-              aria-hidden="true"
-            >
-              <span className="white-deity-mark white-deity-mark--halo" />
-              <span className="white-deity-mark white-deity-mark--head" />
-              <span className="white-deity-face white-deity-face--brows" />
-              <span className="white-deity-face white-deity-face--eyes" />
-              <span className="white-deity-face white-deity-face--mouth" />
-              <span className="white-deity-mark white-deity-mark--body" />
-              <span className="white-deity-mark white-deity-mark--sleeve" />
-              <span className="white-deity-feature white-deity-feature--one" />
-              <span className="white-deity-feature white-deity-feature--two" />
-              <span className="white-deity-incense" />
-              <span className="white-deity-smoke white-deity-smoke--one" />
-              <span className="white-deity-smoke white-deity-smoke--two" />
-            </div>
+            <DeityLineIcon deityKey={blessingMoment.key} ritual />
             <p>{text.blessing.modalTitle}</p>
             <h2 id="white-ritual-title">{blessingMoment.name}</h2>
             <span>{text.blessing.modalBody}</span>
