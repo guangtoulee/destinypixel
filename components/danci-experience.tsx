@@ -1,16 +1,6 @@
 "use client";
 
-import {
-  Brain,
-  Check,
-  ChevronRight,
-  Cpu,
-  RefreshCcw,
-  ShieldAlert,
-  Sparkles,
-  Volume2,
-  X,
-} from "lucide-react";
+import { Brain, Check, RefreshCcw, Sparkles, Volume2 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   allowedEnglishVoiceSummary,
@@ -18,1793 +8,261 @@ import {
 } from "@/lib/english-voices";
 import styles from "./danci-experience.module.css";
 
-type CacheMode = "map" | "forge" | "patch" | "trace";
-type CombatMode = "trace" | "patch";
-type CombatStatus = "active" | "success" | "failure";
-type ThemeId = "space" | "bio" | "geo" | "machine" | "exam";
+type TrainingMode = "study" | "meaning" | "spell" | "listen" | "feedback";
 
-type WordNode = {
+type WordItem = {
   id: string;
   word: string;
   meaning: string;
-  level: number;
+  unit: string;
+  level: 1 | 2 | 3;
   family: string;
-  theme: ThemeId;
-  root: string;
-  prefix: string;
-  suffix: string;
-  rootMeaning: string;
   example: string;
-  x: number;
-  y: number;
-  links: string[];
-};
-
-type Part = {
-  code: string;
-  label: string;
-  meaning: string;
-};
-
-type ForgeChallenge = {
-  targetId: string;
-  prompt: string;
-  prefix: string;
-  root: string;
-  suffix: string;
+  tip: string;
 };
 
 type WordRecord = {
-  attempts: number;
+  seen: number;
   correct: number;
   wrong: number;
-  mastered: boolean;
-  lastMode: CacheMode;
+  stage: 0 | 1 | 2 | 3 | 4;
+  dueAt: number;
+  lastMode: TrainingMode;
   updatedAt: string;
 };
 
-type CacheMemory = {
-  selectedId: string;
-  mode: CacheMode;
+type TrainerMemory = {
   records: Record<string, WordRecord>;
-  computePower: number;
-  patchIndex: number;
-  traceIndex: number;
-  forgeIndex: number;
+  todayKey: string;
+  todayAnswered: number;
+  totalAnswered: number;
   streak: number;
   bestStreak: number;
-  credits: number;
-  risk: 1 | 2;
-  unlockedLevel: number;
   lastFeedback: string;
-  history: string[];
 };
 
-type CombatState = {
-  nodeId: string;
-  mode: CombatMode;
-  status: CombatStatus;
-  seed: number;
+type Outcome = {
+  correct: boolean;
+  title: string;
+  body: string;
 };
 
-const storageKey = "neuralCacheGrade7MemoryV1";
-const nonePart = "none";
+const storageKey = "danciTrainerMemoryV2";
+const reviewIntervals = [5 * 60 * 1000, 30 * 60 * 1000, 24 * 60 * 60 * 1000, 3 * 24 * 60 * 60 * 1000, 7 * 24 * 60 * 60 * 1000];
 
-const advancedWordNodes: WordNode[] = [
-  {
-    id: "bright",
-    word: "bright",
-    meaning: "明亮的；聪明的",
-    level: 1,
-    family: "light",
-    theme: "space",
-    root: "bright",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "光亮 / 清晰",
-    example: "The rover follows a bright signal under the frozen moon.",
-    x: 90,
-    y: 110,
-    links: ["signal", "light"],
-  },
-  {
-    id: "signal",
-    word: "signal",
-    meaning: "信号",
-    level: 1,
-    family: "system",
-    theme: "machine",
-    root: "sign",
-    prefix: "",
-    suffix: "al",
-    rootMeaning: "标记",
-    example: "A weak signal can still guide the drone through the storm.",
-    x: 230,
-    y: 90,
-    links: ["system", "design"],
-  },
-  {
-    id: "system",
-    word: "system",
-    meaning: "系统",
-    level: 1,
-    family: "system",
-    theme: "machine",
-    root: "system",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "组合成整体",
-    example: "The oxygen system fails when one tiny sensor overheats.",
-    x: 370,
-    y: 130,
-    links: ["signal", "memory", "network"],
-  },
-  {
-    id: "memory",
-    word: "memory",
-    meaning: "记忆；内存",
-    level: 1,
-    family: "mind",
-    theme: "machine",
-    root: "memor",
-    prefix: "",
-    suffix: "y",
-    rootMeaning: "记住",
-    example: "The ship stores every route in a protected memory core.",
-    x: 520,
-    y: 90,
-    links: ["remember", "information"],
-  },
-  {
-    id: "target",
-    word: "target",
-    meaning: "目标",
-    level: 1,
-    family: "combat",
-    theme: "machine",
-    root: "target",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "瞄准点",
-    example: "The laser target moves before the robot can lock on.",
-    x: 690,
-    y: 130,
-    links: ["attack", "protect"],
-  },
-  {
-    id: "energy",
-    word: "energy",
-    meaning: "能量",
-    level: 1,
-    family: "physics",
-    theme: "space",
-    root: "energ",
-    prefix: "",
-    suffix: "y",
-    rootMeaning: "工作 / 能量",
-    example: "The shield loses energy after every asteroid hit.",
-    x: 830,
-    y: 90,
-    links: ["active", "reaction"],
-  },
-  {
-    id: "planet",
-    word: "planet",
-    meaning: "行星",
-    level: 1,
-    family: "space",
-    theme: "space",
-    root: "plan",
-    prefix: "",
-    suffix: "et",
-    rootMeaning: "游走的星体",
-    example: "One planet hides an ocean below a layer of black ice.",
-    x: 120,
-    y: 245,
-    links: ["environment", "geography"],
-  },
-  {
-    id: "environment",
-    word: "environment",
-    meaning: "环境",
-    level: 2,
-    family: "nature",
-    theme: "space",
-    root: "viron",
-    prefix: "en",
-    suffix: "ment",
-    rootMeaning: "围绕",
-    example: "Mars has a hostile environment, so the colony builds magnetic shields.",
-    x: 285,
-    y: 255,
-    links: ["planet", "biology", "resource"],
-  },
-  {
-    id: "biology",
-    word: "biology",
-    meaning: "生物学",
-    level: 2,
-    family: "science",
-    theme: "bio",
-    root: "bio",
-    prefix: "",
-    suffix: "logy",
-    rootMeaning: "生命",
-    example: "Alien biology changes fast when gravity doubles overnight.",
-    x: 450,
-    y: 240,
-    links: ["environment", "scientist", "mutation"],
-  },
-  {
-    id: "geography",
-    word: "geography",
-    meaning: "地理",
-    level: 2,
-    family: "earth",
-    theme: "geo",
-    root: "geo",
-    prefix: "",
-    suffix: "graphy",
-    rootMeaning: "地球 / 地表",
-    example: "The map team studies canyon geography before landing.",
-    x: 615,
-    y: 255,
-    links: ["planet", "transport", "resource"],
-  },
-  {
-    id: "history",
-    word: "history",
-    meaning: "历史",
-    level: 2,
-    family: "time",
-    theme: "exam",
-    root: "hist",
-    prefix: "",
-    suffix: "ory",
-    rootMeaning: "记录 / 询问",
-    example: "The base computer stores the history of every failed launch.",
-    x: 780,
-    y: 245,
-    links: ["memory", "record"],
-  },
-  {
-    id: "resource",
-    word: "resource",
-    meaning: "资源",
-    level: 2,
-    family: "economy",
-    theme: "geo",
-    root: "source",
-    prefix: "re",
-    suffix: "",
-    rootMeaning: "来源",
-    example: "Water is the rarest resource on the desert moon.",
-    x: 910,
-    y: 260,
-    links: ["environment", "export"],
-  },
-  {
-    id: "form",
-    word: "form",
-    meaning: "形式；形成",
-    level: 2,
-    family: "form",
-    theme: "machine",
-    root: "form",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "形状",
-    example: "The metal can form a bridge when heated by lasers.",
-    x: 85,
-    y: 400,
-    links: ["reform", "inform", "transform"],
-  },
-  {
-    id: "reform",
-    word: "reform",
-    meaning: "改革；重组",
-    level: 3,
-    family: "form",
-    theme: "exam",
-    root: "form",
-    prefix: "re",
-    suffix: "",
-    rootMeaning: "重新形成",
-    example: "The colony must reform its rules after the power grid fails.",
-    x: 215,
-    y: 380,
-    links: ["form", "transform"],
-  },
-  {
-    id: "inform",
-    word: "inform",
-    meaning: "通知",
-    level: 3,
-    family: "form",
-    theme: "machine",
-    root: "form",
-    prefix: "in",
-    suffix: "",
-    rootMeaning: "把信息放入形态",
-    example: "The drone will inform the team when oxygen drops.",
-    x: 350,
-    y: 405,
-    links: ["form", "information"],
-  },
-  {
-    id: "information",
-    word: "information",
-    meaning: "信息",
-    level: 3,
-    family: "form",
-    theme: "machine",
-    root: "form",
-    prefix: "in",
-    suffix: "ation",
-    rootMeaning: "形成出的内容",
-    example: "Bad information is more dangerous than no map at all.",
-    x: 500,
-    y: 370,
-    links: ["inform", "memory", "network"],
-  },
-  {
-    id: "transform",
-    word: "transform",
-    meaning: "转化；变形",
-    level: 3,
-    family: "form",
-    theme: "bio",
-    root: "form",
-    prefix: "trans",
-    suffix: "",
-    rootMeaning: "跨过去改变形态",
-    example: "The virus can transform a plant into a light sensor.",
-    x: 650,
-    y: 405,
-    links: ["form", "mutation"],
-  },
-  {
-    id: "transport",
-    word: "transport",
-    meaning: "运输",
-    level: 3,
-    family: "port",
-    theme: "geo",
-    root: "port",
-    prefix: "trans",
-    suffix: "",
-    rootMeaning: "搬运",
-    example: "A rail tunnel can transport ice from the polar mine.",
-    x: 815,
-    y: 385,
-    links: ["import", "export", "portable"],
-  },
-  {
-    id: "import",
-    word: "import",
-    meaning: "进口；输入",
-    level: 3,
-    family: "port",
-    theme: "machine",
-    root: "port",
-    prefix: "im",
-    suffix: "",
-    rootMeaning: "搬进来",
-    example: "The city must import nitrogen before the farms restart.",
-    x: 930,
-    y: 420,
-    links: ["transport", "export"],
-  },
-  {
-    id: "export",
-    word: "export",
-    meaning: "出口；输出",
-    level: 3,
-    family: "port",
-    theme: "machine",
-    root: "port",
-    prefix: "ex",
-    suffix: "",
-    rootMeaning: "搬出去",
-    example: "The server can export the route data to every scout drone.",
-    x: 860,
-    y: 535,
-    links: ["transport", "resource"],
-  },
-  {
-    id: "portable",
-    word: "portable",
-    meaning: "便携的",
-    level: 3,
-    family: "port",
-    theme: "machine",
-    root: "port",
-    prefix: "",
-    suffix: "able",
-    rootMeaning: "能被携带",
-    example: "A portable reactor keeps the rover alive for two days.",
-    x: 700,
-    y: 535,
-    links: ["transport", "unbearable"],
-  },
-  {
-    id: "bear",
-    word: "bear",
-    meaning: "承受；忍受",
-    level: 3,
-    family: "bear",
-    theme: "exam",
-    root: "bear",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "承受",
-    example: "The cable can bear the weight of a small landing craft.",
-    x: 520,
-    y: 520,
-    links: ["unbearable", "portable"],
-  },
-  {
-    id: "unbearable",
-    word: "unbearable",
-    meaning: "不可忍受的",
-    level: 4,
-    family: "bear",
-    theme: "space",
-    root: "bear",
-    prefix: "un",
-    suffix: "able",
-    rootMeaning: "不能承受",
-    example: "The unbearable heat forces the crew into underground shelters.",
-    x: 390,
-    y: 555,
-    links: ["bear", "portable"],
-  },
-  {
-    id: "science",
-    word: "science",
-    meaning: "科学",
-    level: 2,
-    family: "science",
-    theme: "exam",
-    root: "sci",
-    prefix: "",
-    suffix: "ence",
-    rootMeaning: "知道",
-    example: "Real science begins when a guess survives a brutal test.",
-    x: 165,
-    y: 560,
-    links: ["scientist", "scientific"],
-  },
-  {
-    id: "scientist",
-    word: "scientist",
-    meaning: "科学家",
-    level: 3,
-    family: "science",
-    theme: "bio",
-    root: "scient",
-    prefix: "",
-    suffix: "ist",
-    rootMeaning: "知道的人",
-    example: "The scientist grows algae that eat metal dust.",
-    x: 265,
-    y: 510,
-    links: ["science", "biology"],
-  },
-  {
-    id: "scientific",
-    word: "scientific",
-    meaning: "科学的",
-    level: 3,
-    family: "science",
-    theme: "exam",
-    root: "scient",
-    prefix: "",
-    suffix: "ific",
-    rootMeaning: "与知道有关",
-    example: "A scientific model must predict the next earthquake swarm.",
-    x: 300,
-    y: 620,
-    links: ["science", "predict"],
-  },
-  {
-    id: "active",
-    word: "active",
-    meaning: "活跃的；主动的",
-    level: 2,
-    family: "act",
-    theme: "bio",
-    root: "act",
-    prefix: "",
-    suffix: "ive",
-    rootMeaning: "行动",
-    example: "An active enzyme can repair tissue before the next battle.",
-    x: 95,
-    y: 650,
-    links: ["reaction", "activity"],
-  },
-  {
-    id: "reaction",
-    word: "reaction",
-    meaning: "反应",
-    level: 3,
-    family: "act",
-    theme: "bio",
-    root: "act",
-    prefix: "re",
-    suffix: "ion",
-    rootMeaning: "回过来的行动",
-    example: "The chemical reaction releases enough heat to melt ice.",
-    x: 455,
-    y: 670,
-    links: ["active", "energy"],
-  },
-  {
-    id: "protect",
-    word: "protect",
-    meaning: "保护",
-    level: 2,
-    family: "tect",
-    theme: "machine",
-    root: "tect",
-    prefix: "pro",
-    suffix: "",
-    rootMeaning: "盖住 / 防护",
-    example: "The shield will protect the city from solar dust.",
-    x: 630,
-    y: 660,
-    links: ["target", "construct"],
-  },
-  {
-    id: "construct",
-    word: "construct",
-    meaning: "建造",
-    level: 4,
-    family: "struct",
-    theme: "machine",
-    root: "struct",
-    prefix: "con",
-    suffix: "",
-    rootMeaning: "堆叠 / 建立",
-    example: "Robots construct a bridge from recycled spaceship parts.",
-    x: 800,
-    y: 665,
-    links: ["structure", "instruction", "protect"],
-  },
-  {
-    id: "structure",
-    word: "structure",
-    meaning: "结构",
-    level: 4,
-    family: "struct",
-    theme: "machine",
-    root: "struct",
-    prefix: "",
-    suffix: "ure",
-    rootMeaning: "搭建出的形态",
-    example: "The crystal structure stores light like a battery.",
-    x: 930,
-    y: 635,
-    links: ["construct", "instruction"],
-  },
-  {
-    id: "instruction",
-    word: "instruction",
-    meaning: "指令；说明",
-    level: 4,
-    family: "struct",
-    theme: "machine",
-    root: "struct",
-    prefix: "in",
-    suffix: "ion",
-    rootMeaning: "建立进脑中的步骤",
-    example: "One wrong instruction can crash the whole mining robot.",
-    x: 945,
-    y: 520,
-    links: ["construct", "structure"],
-  },
-  {
-    id: "predict",
-    word: "predict",
-    meaning: "预测",
-    level: 4,
-    family: "dict",
-    theme: "geo",
-    root: "dict",
-    prefix: "pre",
-    suffix: "",
-    rootMeaning: "提前说出",
-    example: "The model can predict where the storm will split.",
-    x: 80,
-    y: 745,
-    links: ["scientific", "record"],
-  },
-  {
-    id: "record",
-    word: "record",
-    meaning: "记录",
-    level: 2,
-    family: "cord",
-    theme: "exam",
-    root: "cord",
-    prefix: "re",
-    suffix: "",
-    rootMeaning: "放回心里",
-    example: "The black box records every sound before impact.",
-    x: 230,
-    y: 755,
-    links: ["history", "memory"],
-  },
-  {
-    id: "network",
-    word: "network",
-    meaning: "网络",
-    level: 2,
-    family: "system",
-    theme: "machine",
-    root: "work",
-    prefix: "net",
-    suffix: "",
-    rootMeaning: "互相连接的工作",
-    example: "A hidden network links the satellites above the jungle.",
-    x: 405,
-    y: 775,
-    links: ["system", "connect", "information"],
-  },
-  {
-    id: "connect",
-    word: "connect",
-    meaning: "连接",
-    level: 3,
-    family: "nect",
-    theme: "machine",
-    root: "nect",
-    prefix: "con",
-    suffix: "",
-    rootMeaning: "绑在一起",
-    example: "The engineer must connect three power lines before dawn.",
-    x: 560,
-    y: 780,
-    links: ["network", "signal"],
-  },
-  {
-    id: "mutation",
-    word: "mutation",
-    meaning: "变异",
-    level: 4,
-    family: "mut",
-    theme: "bio",
-    root: "mut",
-    prefix: "",
-    suffix: "ation",
-    rootMeaning: "改变",
-    example: "A mutation lets the fungus digest plastic armor.",
-    x: 710,
-    y: 775,
-    links: ["biology", "transform"],
-  },
-  {
-    id: "attack",
-    word: "attack",
-    meaning: "攻击",
-    level: 1,
-    family: "combat",
-    theme: "machine",
-    root: "tack",
-    prefix: "at",
-    suffix: "",
-    rootMeaning: "钉住 / 触碰",
-    example: "The drone will attack only after it confirms the target.",
-    x: 850,
-    y: 780,
-    links: ["target", "protect"],
-  },
-  {
-    id: "design",
-    word: "design",
-    meaning: "设计",
-    level: 2,
-    family: "sign",
-    theme: "machine",
-    root: "sign",
-    prefix: "de",
-    suffix: "",
-    rootMeaning: "做出标记",
-    example: "A clean design makes the rescue pod faster to repair.",
-    x: 990,
-    y: 760,
-    links: ["signal", "construct"],
-  },
-  {
-    id: "light",
-    word: "light",
-    meaning: "光；轻的",
-    level: 1,
-    family: "light",
-    theme: "space",
-    root: "light",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "光亮 / 不重",
-    example: "A light drone can cross the canyon without landing.",
-    x: 40,
-    y: 40,
-    links: ["bright", "energy"],
-  },
-  {
-    id: "remember",
-    word: "remember",
-    meaning: "记得",
-    level: 2,
-    family: "mind",
-    theme: "exam",
-    root: "member",
-    prefix: "re",
-    suffix: "",
-    rootMeaning: "重新带回记忆",
-    example: "The pilot must remember the code before the doors lock.",
-    x: 520,
-    y: 25,
-    links: ["memory", "record"],
-  },
+const wordBank: WordItem[] = [
+  { id: "hello", word: "hello", meaning: "你好", unit: "Starter", level: 1, family: "starter", example: "Hello, I am Li Hua.", tip: "he-llo 两拍读清楚。" },
+  { id: "name", word: "name", meaning: "名字", unit: "Starter", level: 1, family: "starter", example: "My name is Jack.", tip: "a 发 /eɪ/，尾音 m 收住。" },
+  { id: "class", word: "class", meaning: "班级；课", unit: "Starter", level: 1, family: "school", example: "We are in Class One.", tip: "cl 开头连读，a 发 /ɑː/ 或 /æ/。" },
+  { id: "grade", word: "grade", meaning: "年级", unit: "Starter", level: 1, family: "school", example: "I am in Grade Seven.", tip: "a_e 发 /eɪ/，别漏 e。" },
+  { id: "school", word: "school", meaning: "学校", unit: "Starter", level: 1, family: "school", example: "Our school is big.", tip: "ch 在这里发 /k/，不是 /tʃ/。" },
+  { id: "teacher", word: "teacher", meaning: "老师", unit: "Starter", level: 1, family: "people", example: "The teacher is kind.", tip: "teach + er，做这件事的人。" },
+  { id: "student", word: "student", meaning: "学生", unit: "Starter", level: 1, family: "people", example: "Every student has a book.", tip: "stu-dent 分两块记。" },
+  { id: "friend", word: "friend", meaning: "朋友", unit: "Unit 1", level: 1, family: "people", example: "Tom is my good friend.", tip: "ie 在这里发 /e/，不要写成 freind。" },
+  { id: "family", word: "family", meaning: "家庭；家人", unit: "Unit 2", level: 1, family: "family", example: "This is my family.", tip: "fam-i-ly 三段记。" },
+  { id: "father", word: "father", meaning: "父亲", unit: "Unit 2", level: 1, family: "family", example: "My father likes tea.", tip: "th 舌尖轻咬，a 发 /ɑː/。" },
+  { id: "mother", word: "mother", meaning: "母亲", unit: "Unit 2", level: 1, family: "family", example: "My mother is at home.", tip: "mother / father 一起对比记。" },
+  { id: "sister", word: "sister", meaning: "姐妹", unit: "Unit 2", level: 1, family: "family", example: "My sister is twelve.", tip: "sis-ter 两段记。" },
+  { id: "brother", word: "brother", meaning: "兄弟", unit: "Unit 2", level: 1, family: "family", example: "His brother can swim.", tip: "br 开头连读，th 舌尖轻咬。" },
+  { id: "parent", word: "parent", meaning: "父亲或母亲；家长", unit: "Unit 2", level: 2, family: "family", example: "A parent can help with homework.", tip: "par-ent 两段记。" },
+  { id: "photo", word: "photo", meaning: "照片", unit: "Unit 2", level: 2, family: "family", example: "This photo is nice.", tip: "ph 发 /f/。" },
+  { id: "book", word: "book", meaning: "书", unit: "Unit 3", level: 1, family: "things", example: "The book is on the desk.", tip: "oo 发短 /ʊ/。" },
+  { id: "pencil", word: "pencil", meaning: "铅笔", unit: "Unit 3", level: 1, family: "things", example: "I need a pencil.", tip: "pen-cil 两段记。" },
+  { id: "desk", word: "desk", meaning: "书桌", unit: "Unit 4", level: 1, family: "things", example: "The ruler is on the desk.", tip: "短 e 发 /e/。" },
+  { id: "chair", word: "chair", meaning: "椅子", unit: "Unit 4", level: 1, family: "things", example: "The chair is blue.", tip: "ch 发 /tʃ/，air 发 /eə/。" },
+  { id: "bag", word: "bag", meaning: "包", unit: "Unit 3", level: 1, family: "things", example: "My bag is black.", tip: "a 发 /æ/，嘴巴打开。" },
+  { id: "map", word: "map", meaning: "地图", unit: "Unit 3", level: 1, family: "things", example: "Look at the map.", tip: "a 发 /æ/，和 bag 同组。" },
+  { id: "ruler", word: "ruler", meaning: "尺子", unit: "Unit 3", level: 1, family: "things", example: "The ruler is long.", tip: "u 发 /uː/，ruler 不是 rules。" },
+  { id: "dictionary", word: "dictionary", meaning: "词典", unit: "Unit 3", level: 2, family: "things", example: "Use a dictionary after you guess.", tip: "dic-tion-ar-y 分块记。" },
+  { id: "red", word: "red", meaning: "红色；红色的", unit: "Starter", level: 1, family: "color", example: "The apple is red.", tip: "短 e 发 /e/。" },
+  { id: "blue", word: "blue", meaning: "蓝色；蓝色的", unit: "Starter", level: 1, family: "color", example: "My chair is blue.", tip: "ue 发 /uː/。" },
+  { id: "green", word: "green", meaning: "绿色；绿色的", unit: "Starter", level: 1, family: "color", example: "The bag is green.", tip: "ee 发 /iː/。" },
+  { id: "yellow", word: "yellow", meaning: "黄色；黄色的", unit: "Starter", level: 1, family: "color", example: "The banana is yellow.", tip: "yel-low 两段记。" },
+  { id: "apple", word: "apple", meaning: "苹果", unit: "Unit 6", level: 1, family: "food", example: "I have an apple.", tip: "ap-ple 两段记，双 p。" },
+  { id: "banana", word: "banana", meaning: "香蕉", unit: "Unit 6", level: 1, family: "food", example: "The banana is on the table.", tip: "ba-na-na 三段记。" },
+  { id: "milk", word: "milk", meaning: "牛奶", unit: "Unit 6", level: 1, family: "food", example: "I drink milk for breakfast.", tip: "短 i 发 /ɪ/。" },
+  { id: "bread", word: "bread", meaning: "面包", unit: "Unit 6", level: 1, family: "food", example: "Bread and milk are on the desk.", tip: "ea 在这里发 /e/。" },
+  { id: "rice", word: "rice", meaning: "米饭；大米", unit: "Unit 6", level: 1, family: "food", example: "We have rice for lunch.", tip: "i_e 发 /aɪ/。" },
+  { id: "chicken", word: "chicken", meaning: "鸡肉；鸡", unit: "Unit 6", level: 1, family: "food", example: "Chicken is my favorite food.", tip: "ch 发 /tʃ/。" },
+  { id: "vegetable", word: "vegetable", meaning: "蔬菜", unit: "Unit 6", level: 2, family: "food", example: "Carrots are vegetables.", tip: "veg-e-ta-ble 分块记。" },
+  { id: "breakfast", word: "breakfast", meaning: "早餐", unit: "Unit 6", level: 2, family: "food", example: "Breakfast is important.", tip: "break + fast 合起来记。" },
+  { id: "soccer", word: "soccer", meaning: "足球", unit: "Unit 5", level: 2, family: "activity", example: "They play soccer after school.", tip: "soc-cer 两段记。" },
+  { id: "basketball", word: "basketball", meaning: "篮球", unit: "Unit 5", level: 2, family: "activity", example: "Basketball is fun.", tip: "basket + ball 合成记。" },
+  { id: "music", word: "music", meaning: "音乐", unit: "Unit 9", level: 1, family: "subject", example: "Music is relaxing.", tip: "u 发 /juː/。" },
+  { id: "history", word: "history", meaning: "历史", unit: "Unit 9", level: 2, family: "subject", example: "History is an interesting subject.", tip: "his-to-ry 三段记。" },
+  { id: "science", word: "science", meaning: "科学", unit: "Unit 9", level: 2, family: "subject", example: "Science is useful.", tip: "sci 发 /saɪ/。" },
+  { id: "math", word: "math", meaning: "数学", unit: "Unit 9", level: 1, family: "subject", example: "Math is not easy for everyone.", tip: "th 舌尖轻咬。" },
+  { id: "english", word: "English", meaning: "英语；英国的", unit: "Unit 9", level: 1, family: "subject", example: "English can be easier with practice.", tip: "首字母常大写；练习时大小写都算对。" },
+  { id: "subject", word: "subject", meaning: "学科；科目", unit: "Unit 9", level: 2, family: "subject", example: "What is your favorite subject?", tip: "sub-ject 分块记。" },
+  { id: "favorite", word: "favorite", meaning: "最喜欢的", unit: "Unit 9", level: 2, family: "subject", example: "My favorite subject is English.", tip: "fa-vor-ite 分块记。" },
+  { id: "monday", word: "Monday", meaning: "星期一", unit: "Unit 8", level: 1, family: "time", example: "We have English on Monday.", tip: "星期首字母常大写。" },
+  { id: "birthday", word: "birthday", meaning: "生日", unit: "Unit 8", level: 1, family: "time", example: "My birthday is in May.", tip: "birth + day 合成记。" },
+  { id: "month", word: "month", meaning: "月；月份", unit: "Unit 8", level: 1, family: "time", example: "January is the first month.", tip: "th 舌尖轻咬。" },
 ];
 
-const wordNodes: WordNode[] = [
-  {
-    id: "hello",
-    word: "hello",
-    meaning: "你好",
-    level: 1,
-    family: "starter",
-    theme: "space",
-    root: "hello",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "he-llo 两拍读清楚",
-    example: "Hello, I am Li Hua.",
-    x: 85,
-    y: 95,
-    links: ["name", "friend"],
-  },
-  {
-    id: "name",
-    word: "name",
-    meaning: "名字",
-    level: 1,
-    family: "starter",
-    theme: "space",
-    root: "name",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "a 发 /eɪ/",
-    example: "My name is Jack.",
-    x: 225,
-    y: 75,
-    links: ["hello", "class", "friend"],
-  },
-  {
-    id: "class",
-    word: "class",
-    meaning: "班级；课",
-    level: 1,
-    family: "school",
-    theme: "geo",
-    root: "class",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "cl 开头连读",
-    example: "We are in Class One.",
-    x: 365,
-    y: 105,
-    links: ["name", "grade", "teacher"],
-  },
-  {
-    id: "grade",
-    word: "grade",
-    meaning: "年级",
-    level: 1,
-    family: "school",
-    theme: "geo",
-    root: "grade",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "a 发 /eɪ/",
-    example: "I am in Grade Seven.",
-    x: 505,
-    y: 75,
-    links: ["class", "school"],
-  },
-  {
-    id: "school",
-    word: "school",
-    meaning: "学校",
-    level: 1,
-    family: "school",
-    theme: "geo",
-    root: "school",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ch 在这里发 /k/",
-    example: "Our school is big.",
-    x: 660,
-    y: 110,
-    links: ["grade", "teacher", "student"],
-  },
-  {
-    id: "teacher",
-    word: "teacher",
-    meaning: "老师",
-    level: 1,
-    family: "people",
-    theme: "exam",
-    root: "teach",
-    prefix: "",
-    suffix: "er",
-    rootMeaning: "teach + er 做这件事的人",
-    example: "The teacher is kind.",
-    x: 810,
-    y: 75,
-    links: ["class", "school", "student"],
-  },
-  {
-    id: "student",
-    word: "student",
-    meaning: "学生",
-    level: 1,
-    family: "people",
-    theme: "exam",
-    root: "student",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "stu-dent 两段记",
-    example: "Every student has a book.",
-    x: 950,
-    y: 120,
-    links: ["school", "friend"],
-  },
-  {
-    id: "friend",
-    word: "friend",
-    meaning: "朋友",
-    level: 1,
-    family: "people",
-    theme: "exam",
-    root: "friend",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ie 在这里发 /e/",
-    example: "Tom is my good friend.",
-    x: 115,
-    y: 245,
-    links: ["hello", "name", "student", "family"],
-  },
-  {
-    id: "family",
-    word: "family",
-    meaning: "家庭；家人",
-    level: 1,
-    family: "family",
-    theme: "bio",
-    root: "family",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "fam-i-ly 三段记",
-    example: "This is my family.",
-    x: 270,
-    y: 255,
-    links: ["friend", "father", "mother"],
-  },
-  {
-    id: "father",
-    word: "father",
-    meaning: "父亲",
-    level: 1,
-    family: "family",
-    theme: "bio",
-    root: "father",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "th 舌尖轻咬",
-    example: "My father likes tea.",
-    x: 430,
-    y: 235,
-    links: ["family", "mother", "parent"],
-  },
-  {
-    id: "mother",
-    word: "mother",
-    meaning: "母亲",
-    level: 1,
-    family: "family",
-    theme: "bio",
-    root: "mother",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "th 舌尖轻咬",
-    example: "My mother is at home.",
-    x: 585,
-    y: 260,
-    links: ["family", "father", "sister"],
-  },
-  {
-    id: "sister",
-    word: "sister",
-    meaning: "姐妹",
-    level: 1,
-    family: "family",
-    theme: "bio",
-    root: "sister",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "sis-ter 两段记",
-    example: "My sister is twelve.",
-    x: 740,
-    y: 235,
-    links: ["mother", "brother"],
-  },
-  {
-    id: "brother",
-    word: "brother",
-    meaning: "兄弟",
-    level: 1,
-    family: "family",
-    theme: "bio",
-    root: "brother",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "br 开头连读",
-    example: "His brother can swim.",
-    x: 900,
-    y: 260,
-    links: ["sister", "parent"],
-  },
-  {
-    id: "parent",
-    word: "parent",
-    meaning: "父亲或母亲；家长",
-    level: 2,
-    family: "family",
-    theme: "bio",
-    root: "parent",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "par-ent 两段记",
-    example: "A parent can help with homework.",
-    x: 990,
-    y: 355,
-    links: ["father", "brother", "photo"],
-  },
-  {
-    id: "photo",
-    word: "photo",
-    meaning: "照片",
-    level: 2,
-    family: "family",
-    theme: "machine",
-    root: "photo",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ph 发 /f/",
-    example: "This photo is nice.",
-    x: 830,
-    y: 385,
-    links: ["parent", "map"],
-  },
-  {
-    id: "book",
-    word: "book",
-    meaning: "书",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "book",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "oo 发短 /ʊ/",
-    example: "The book is on the desk.",
-    x: 85,
-    y: 400,
-    links: ["pencil", "desk"],
-  },
-  {
-    id: "pencil",
-    word: "pencil",
-    meaning: "铅笔",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "pencil",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "pen-cil 两段记",
-    example: "I need a pencil.",
-    x: 225,
-    y: 375,
-    links: ["book", "ruler", "bag"],
-  },
-  {
-    id: "desk",
-    word: "desk",
-    meaning: "书桌",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "desk",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "短 e 发 /e/",
-    example: "The ruler is on the desk.",
-    x: 370,
-    y: 410,
-    links: ["book", "chair"],
-  },
-  {
-    id: "chair",
-    word: "chair",
-    meaning: "椅子",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "chair",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ch 发 /tʃ/",
-    example: "The chair is blue.",
-    x: 520,
-    y: 385,
-    links: ["desk", "bag"],
-  },
-  {
-    id: "bag",
-    word: "bag",
-    meaning: "包",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "bag",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "a 发 /æ/",
-    example: "My bag is black.",
-    x: 675,
-    y: 410,
-    links: ["pencil", "chair", "dictionary"],
-  },
-  {
-    id: "map",
-    word: "map",
-    meaning: "地图",
-    level: 1,
-    family: "things",
-    theme: "geo",
-    root: "map",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "a 发 /æ/",
-    example: "Look at the map.",
-    x: 120,
-    y: 545,
-    links: ["photo", "ruler"],
-  },
-  {
-    id: "ruler",
-    word: "ruler",
-    meaning: "尺子",
-    level: 1,
-    family: "things",
-    theme: "machine",
-    root: "ruler",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "u 发 /uː/",
-    example: "The ruler is long.",
-    x: 270,
-    y: 525,
-    links: ["pencil", "map", "dictionary"],
-  },
-  {
-    id: "dictionary",
-    word: "dictionary",
-    meaning: "词典",
-    level: 2,
-    family: "things",
-    theme: "exam",
-    root: "dictionary",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "dic-tion-ar-y 分块记",
-    example: "Use a dictionary after you guess.",
-    x: 430,
-    y: 555,
-    links: ["bag", "ruler", "english"],
-  },
-  {
-    id: "red",
-    word: "red",
-    meaning: "红色；红色的",
-    level: 1,
-    family: "color",
-    theme: "space",
-    root: "red",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "短 e 发 /e/",
-    example: "The apple is red.",
-    x: 590,
-    y: 535,
-    links: ["blue", "apple"],
-  },
-  {
-    id: "blue",
-    word: "blue",
-    meaning: "蓝色；蓝色的",
-    level: 1,
-    family: "color",
-    theme: "space",
-    root: "blue",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ue 发 /uː/",
-    example: "My chair is blue.",
-    x: 750,
-    y: 555,
-    links: ["red", "green", "chair"],
-  },
-  {
-    id: "green",
-    word: "green",
-    meaning: "绿色；绿色的",
-    level: 1,
-    family: "color",
-    theme: "space",
-    root: "green",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ee 发 /iː/",
-    example: "The bag is green.",
-    x: 900,
-    y: 525,
-    links: ["blue", "yellow"],
-  },
-  {
-    id: "yellow",
-    word: "yellow",
-    meaning: "黄色；黄色的",
-    level: 1,
-    family: "color",
-    theme: "space",
-    root: "yellow",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "yel-low 两段记",
-    example: "The banana is yellow.",
-    x: 980,
-    y: 625,
-    links: ["green", "banana"],
-  },
-  {
-    id: "apple",
-    word: "apple",
-    meaning: "苹果",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "apple",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ap-ple 两段记",
-    example: "I have an apple.",
-    x: 85,
-    y: 690,
-    links: ["red", "banana", "breakfast"],
-  },
-  {
-    id: "banana",
-    word: "banana",
-    meaning: "香蕉",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "banana",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ba-na-na 三段记",
-    example: "The banana is on the table.",
-    x: 225,
-    y: 735,
-    links: ["apple", "yellow", "milk"],
-  },
-  {
-    id: "milk",
-    word: "milk",
-    meaning: "牛奶",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "milk",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "短 i 发 /ɪ/",
-    example: "I drink milk for breakfast.",
-    x: 365,
-    y: 700,
-    links: ["banana", "bread"],
-  },
-  {
-    id: "bread",
-    word: "bread",
-    meaning: "面包",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "bread",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ea 在这里发 /e/",
-    example: "Bread and milk are on the desk.",
-    x: 505,
-    y: 745,
-    links: ["milk", "rice"],
-  },
-  {
-    id: "rice",
-    word: "rice",
-    meaning: "米饭；大米",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "rice",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "i_e 发 /aɪ/",
-    example: "We have rice for lunch.",
-    x: 645,
-    y: 700,
-    links: ["bread", "chicken"],
-  },
-  {
-    id: "chicken",
-    word: "chicken",
-    meaning: "鸡肉；鸡",
-    level: 1,
-    family: "food",
-    theme: "bio",
-    root: "chicken",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "ch 发 /tʃ/",
-    example: "Chicken is my favorite food.",
-    x: 790,
-    y: 740,
-    links: ["rice", "vegetable"],
-  },
-  {
-    id: "vegetable",
-    word: "vegetable",
-    meaning: "蔬菜",
-    level: 2,
-    family: "food",
-    theme: "bio",
-    root: "vegetable",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "veg-e-ta-ble 分块记",
-    example: "Carrots are vegetables.",
-    x: 940,
-    y: 705,
-    links: ["chicken", "breakfast"],
-  },
-  {
-    id: "breakfast",
-    word: "breakfast",
-    meaning: "早餐",
-    level: 2,
-    family: "food",
-    theme: "exam",
-    root: "breakfast",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "break + fast 合起来记",
-    example: "Breakfast is important.",
-    x: 650,
-    y: 620,
-    links: ["apple", "milk", "vegetable"],
-  },
-  {
-    id: "soccer",
-    word: "soccer",
-    meaning: "足球",
-    level: 2,
-    family: "activity",
-    theme: "machine",
-    root: "soccer",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "soc-cer 两段记",
-    example: "They play soccer after school.",
-    x: 85,
-    y: 805,
-    links: ["basketball", "school"],
-  },
-  {
-    id: "basketball",
-    word: "basketball",
-    meaning: "篮球",
-    level: 2,
-    family: "activity",
-    theme: "machine",
-    root: "basketball",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "basket + ball 合成记",
-    example: "Basketball is fun.",
-    x: 245,
-    y: 825,
-    links: ["soccer", "favorite"],
-  },
-  {
-    id: "music",
-    word: "music",
-    meaning: "音乐",
-    level: 1,
-    family: "subject",
-    theme: "exam",
-    root: "music",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "u 发 /juː/",
-    example: "Music is relaxing.",
-    x: 420,
-    y: 820,
-    links: ["history", "favorite"],
-  },
-  {
-    id: "history",
-    word: "history",
-    meaning: "历史",
-    level: 2,
-    family: "subject",
-    theme: "exam",
-    root: "history",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "his-to-ry 三段记",
-    example: "History is an interesting subject.",
-    x: 590,
-    y: 815,
-    links: ["music", "science"],
-  },
-  {
-    id: "science",
-    word: "science",
-    meaning: "科学",
-    level: 2,
-    family: "subject",
-    theme: "exam",
-    root: "science",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "sci 发 /saɪ/",
-    example: "Science is useful.",
-    x: 760,
-    y: 820,
-    links: ["history", "math"],
-  },
-  {
-    id: "math",
-    word: "math",
-    meaning: "数学",
-    level: 1,
-    family: "subject",
-    theme: "exam",
-    root: "math",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "th 舌尖轻咬",
-    example: "Math is not easy for everyone.",
-    x: 935,
-    y: 800,
-    links: ["science", "english"],
-  },
-  {
-    id: "english",
-    word: "English",
-    meaning: "英语；英国的",
-    level: 1,
-    family: "subject",
-    theme: "exam",
-    root: "english",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "首字母常大写",
-    example: "English can be easier with practice.",
-    x: 930,
-    y: 455,
-    links: ["dictionary", "math", "subject"],
-  },
-  {
-    id: "subject",
-    word: "subject",
-    meaning: "学科；科目",
-    level: 2,
-    family: "subject",
-    theme: "exam",
-    root: "subject",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "sub-ject 分块记",
-    example: "What is your favorite subject?",
-    x: 760,
-    y: 455,
-    links: ["english", "favorite"],
-  },
-  {
-    id: "favorite",
-    word: "favorite",
-    meaning: "最喜欢的",
-    level: 2,
-    family: "subject",
-    theme: "exam",
-    root: "favorite",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "fa-vor-ite 分块记",
-    example: "My favorite subject is English.",
-    x: 590,
-    y: 455,
-    links: ["subject", "basketball", "music"],
-  },
-  {
-    id: "monday",
-    word: "Monday",
-    meaning: "星期一",
-    level: 1,
-    family: "time",
-    theme: "geo",
-    root: "monday",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "星期首字母常大写",
-    example: "We have English on Monday.",
-    x: 430,
-    y: 670,
-    links: ["birthday", "english"],
-  },
-  {
-    id: "birthday",
-    word: "birthday",
-    meaning: "生日",
-    level: 1,
-    family: "time",
-    theme: "geo",
-    root: "birthday",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "birth + day 合成记",
-    example: "My birthday is in May.",
-    x: 270,
-    y: 650,
-    links: ["monday", "month"],
-  },
-  {
-    id: "month",
-    word: "month",
-    meaning: "月；月份",
-    level: 1,
-    family: "time",
-    theme: "geo",
-    root: "month",
-    prefix: "",
-    suffix: "",
-    rootMeaning: "th 舌尖轻咬",
-    example: "January is the first month.",
-    x: 115,
-    y: 625,
-    links: ["birthday", "monday"],
-  },
-];
+function todayKey() {
+  return new Date().toISOString().slice(0, 10);
+}
 
-const prefixes: Part[] = [
-  { code: nonePart, label: "∅", meaning: "不加前缀" },
-  { code: "at", label: "at-", meaning: "朝向 / 贴近" },
-  { code: "de", label: "de-", meaning: "向下 / 分离" },
-  { code: "en", label: "en-", meaning: "使进入 / 包围" },
-  { code: "ex", label: "ex-", meaning: "向外" },
-  { code: "im", label: "im-", meaning: "向内 / 进入" },
-  { code: "in", label: "in-", meaning: "进入 / 使" },
-  { code: "net", label: "net-", meaning: "网状连接" },
-  { code: "pre", label: "pre-", meaning: "提前" },
-  { code: "pro", label: "pro-", meaning: "向前 / 保护" },
-  { code: "re", label: "re-", meaning: "再次 / 回来" },
-  { code: "trans", label: "trans-", meaning: "跨越 / 转换" },
-  { code: "un", label: "un-", meaning: "否定 / 反向" },
-  { code: "con", label: "con-", meaning: "共同 / 合在一起" },
-];
-
-const roots: Part[] = [
-  { code: "act", label: "act", meaning: "行动" },
-  { code: "bear", label: "bear", meaning: "承受" },
-  { code: "bio", label: "bio", meaning: "生命" },
-  { code: "bright", label: "bright", meaning: "明亮 / 清晰" },
-  { code: "cord", label: "cord", meaning: "心 / 记录" },
-  { code: "dict", label: "dict", meaning: "说" },
-  { code: "energ", label: "energ", meaning: "工作 / 能量" },
-  { code: "erg", label: "erg", meaning: "工作 / 能量" },
-  { code: "form", label: "form", meaning: "形状 / 形成" },
-  { code: "geo", label: "geo", meaning: "地球 / 地理" },
-  { code: "hist", label: "hist", meaning: "询问 / 记录" },
-  { code: "light", label: "light", meaning: "光 / 轻" },
-  { code: "member", label: "member", meaning: "记忆中的片段" },
-  { code: "memor", label: "memor", meaning: "记住" },
-  { code: "mut", label: "mut", meaning: "改变" },
-  { code: "nect", label: "nect", meaning: "绑在一起" },
-  { code: "plan", label: "plan", meaning: "游走 / 平面" },
-  { code: "port", label: "port", meaning: "搬运" },
-  { code: "sci", label: "sci", meaning: "知道" },
-  { code: "scient", label: "scient", meaning: "知道 / 科学" },
-  { code: "sign", label: "sign", meaning: "标记" },
-  { code: "source", label: "source", meaning: "来源" },
-  { code: "struct", label: "struct", meaning: "建造 / 堆叠" },
-  { code: "system", label: "system", meaning: "组合成整体" },
-  { code: "tack", label: "tack", meaning: "钉住 / 触碰" },
-  { code: "target", label: "target", meaning: "瞄准点" },
-  { code: "tect", label: "tect", meaning: "覆盖 / 保护" },
-  { code: "viron", label: "viron", meaning: "围绕" },
-  { code: "work", label: "work", meaning: "工作 / 运转" },
-];
-
-const suffixes: Part[] = [
-  { code: nonePart, label: "∅", meaning: "不加后缀" },
-  { code: "al", label: "-al", meaning: "……的" },
-  { code: "able", label: "-able", meaning: "能被……的" },
-  { code: "ation", label: "-ation", meaning: "动作 / 结果" },
-  { code: "ence", label: "-ence", meaning: "性质 / 状态" },
-  { code: "et", label: "-et", meaning: "小型名词尾" },
-  { code: "graphy", label: "-graphy", meaning: "书写 / 绘制" },
-  { code: "ific", label: "-ific", meaning: "……性质的" },
-  { code: "ion", label: "-ion", meaning: "动作 / 结果" },
-  { code: "ist", label: "-ist", meaning: "做这件事的人" },
-  { code: "logy", label: "-logy", meaning: "学科 / 研究" },
-  { code: "ory", label: "-ory", meaning: "相关的事物" },
-  { code: "tion", label: "-tion", meaning: "名词化" },
-  { code: "ure", label: "-ure", meaning: "结果 / 结构" },
-  { code: "ive", label: "-ive", meaning: "有……倾向的" },
-  { code: "ment", label: "-ment", meaning: "状态 / 结果" },
-  { code: "y", label: "-y", meaning: "有……性质" },
-];
-
-const forgeChallenges: ForgeChallenge[] = [
-  {
-    targetId: "unbearable",
-    prompt: "生成一个形容词：不可忍受的",
-    prefix: "un",
-    root: "bear",
-    suffix: "able",
-  },
-  {
-    targetId: "transport",
-    prompt: "生成一个动词：跨区域运输",
-    prefix: "trans",
-    root: "port",
-    suffix: nonePart,
-  },
-  {
-    targetId: "information",
-    prompt: "生成一个名词：被整理出来的信息",
-    prefix: "in",
-    root: "form",
-    suffix: "ation",
-  },
-  {
-    targetId: "scientist",
-    prompt: "生成一个人：做科学的人",
-    prefix: nonePart,
-    root: "scient",
-    suffix: "ist",
-  },
-  {
-    targetId: "protect",
-    prompt: "生成一个动词：向前覆盖并保护",
-    prefix: "pro",
-    root: "tect",
-    suffix: nonePart,
-  },
-  {
-    targetId: "predict",
-    prompt: "生成一个动词：提前说出结果",
-    prefix: "pre",
-    root: "dict",
-    suffix: nonePart,
-  },
-  {
-    targetId: "reaction",
-    prompt: "生成一个名词：回过来的反应",
-    prefix: "re",
-    root: "act",
-    suffix: "ion",
-  },
-  {
-    targetId: "construct",
-    prompt: "生成一个动词：共同搭建",
-    prefix: "con",
-    root: "struct",
-    suffix: nonePart,
-  },
-];
-
-function createDefaultMemory(): CacheMemory {
+function createDefaultMemory(): TrainerMemory {
   return {
-    selectedId: "hello",
-    mode: "map",
     records: {},
-    computePower: 100,
-    patchIndex: 0,
-    traceIndex: 2,
-    forgeIndex: 0,
+    todayKey: todayKey(),
+    todayAnswered: 0,
+    totalAnswered: 0,
     streak: 0,
     bestStreak: 0,
-    credits: 20,
-    risk: 1,
-    unlockedLevel: 2,
-    lastFeedback: "从七年级基础词开始：先认得意思，再拼得出来。",
-    history: [],
+    lastFeedback: "今天不用闯关，也不会归零重来。只做一件事：把该复习的词回忆出来。",
   };
 }
 
-function normalizeMemory(input: Partial<CacheMemory> | null): CacheMemory {
+function normalizeMemory(input: Partial<TrainerMemory> | null): TrainerMemory {
   const base = createDefaultMemory();
-  const merged = {
+  const memory = {
     ...base,
     ...(input ?? {}),
     records: input?.records ?? {},
-    history: input?.history ?? [],
   };
 
-  if (!wordNodes.some((node) => node.id === merged.selectedId)) {
-    merged.selectedId = base.selectedId;
-  }
-  if (!["map", "forge", "patch", "trace"].includes(merged.mode)) {
-    merged.mode = "map";
-  }
-  if (![1, 2].includes(merged.risk)) {
-    merged.risk = 1;
+  if (memory.todayKey !== todayKey()) {
+    memory.todayKey = todayKey();
+    memory.todayAnswered = 0;
   }
 
-  merged.unlockedLevel = Math.min(5, Math.max(1, Math.round(merged.unlockedLevel || 1)));
-  merged.computePower = Math.min(100, Math.max(0, Math.round(merged.computePower ?? base.computePower)));
+  return memory;
+}
 
-  return merged;
+function getEmptyRecord(): WordRecord {
+  return {
+    seen: 0,
+    correct: 0,
+    wrong: 0,
+    stage: 0,
+    dueAt: 0,
+    lastMode: "study",
+    updatedAt: "",
+  };
 }
 
 function normalizeAnswer(value: string) {
   return value.trim().toLowerCase().replace(/[^a-z]/g, "");
 }
 
-function partCode(value: string) {
-  return value === nonePart ? "" : value;
+function stageLabel(stage: number) {
+  return ["初见", "认得", "会拼", "会听写", "稳固"][stage] ?? "初见";
 }
 
-function buildWord(prefix: string, root: string, suffix: string) {
-  return `${partCode(prefix)}${root}${partCode(suffix)}`;
+function nextDueText(dueAt: number) {
+  if (!dueAt || dueAt <= Date.now()) return "现在";
+  const minutes = Math.ceil((dueAt - Date.now()) / 60000);
+  if (minutes < 60) return `${minutes} 分钟后`;
+  const hours = Math.ceil(minutes / 60);
+  if (hours < 24) return `${hours} 小时后`;
+  return `${Math.ceil(hours / 24)} 天后`;
 }
 
-function maskWord(word: string, seed: number) {
-  const letters = word.split("");
-  const internal = letters
-    .map((letter, index) => (/[a-z]/i.test(letter) && index > 0 && index < letters.length - 1 ? index : -1))
-    .filter((index) => index >= 0);
-  const count = Math.min(internal.length, Math.max(1, Math.ceil(internal.length * 0.45)));
-  const start = internal.length ? seed % internal.length : 0;
-  const masked = new Set<number>();
+function getStartMode(word: WordItem, memory: TrainerMemory): TrainingMode {
+  const record = memory.records[word.id] ?? getEmptyRecord();
+  if (!record.seen) return "study";
+  if (record.stage >= 2) return "listen";
+  if (record.stage === 1) return "spell";
+  return "meaning";
+}
 
-  for (let offset = 0; offset < count; offset += 1) {
-    masked.add(internal[(start + offset * 2) % internal.length]);
+function scoreFor(id: string, seed: number) {
+  let score = seed + 17;
+  for (const char of id) {
+    score = (score * 31 + char.charCodeAt(0)) % 1000003;
   }
-
-  return letters.map((letter, index) => (masked.has(index) ? "_" : letter)).join("");
+  return score;
 }
 
-function shuffleBySeed<T>(items: T[], seed: number) {
-  return [...items].sort((a, b) => {
-    const aScore = Math.sin((seed + 1) * (items.indexOf(a) + 3)) * 10000;
-    const bScore = Math.sin((seed + 1) * (items.indexOf(b) + 3)) * 10000;
-    return aScore - bScore;
-  });
+function shuffleBySeed<T extends { id: string }>(items: T[], seed: number) {
+  return [...items].sort((a, b) => scoreFor(a.id, seed) - scoreFor(b.id, seed));
 }
 
-function getRecord(records: Record<string, WordRecord>, id: string) {
-  return records[id] ?? {
-    attempts: 0,
-    correct: 0,
-    wrong: 0,
-    mastered: false,
-    lastMode: "map" as CacheMode,
-    updatedAt: "",
-  };
+function buildChoices(word: WordItem, seed: number) {
+  const sameLevel = wordBank.filter((item) => item.id !== word.id && item.level <= Math.min(3, word.level + 1));
+  return shuffleBySeed([word, ...shuffleBySeed(sameLevel, seed).slice(0, 3)], seed + 13);
 }
 
-function getThemeLabel(theme: ThemeId) {
-  const labels: Record<ThemeId, string> = {
-    space: "日常",
-    bio: "生活",
-    geo: "校园",
-    machine: "物品",
-    exam: "考点",
-  };
+function buildQueue(memory: TrainerMemory) {
+  const now = Date.now();
+  const due = wordBank
+    .filter((word) => {
+      const record = memory.records[word.id];
+      return record && record.stage < 4 && record.dueAt <= now;
+    })
+    .sort((a, b) => (memory.records[a.id]?.dueAt ?? 0) - (memory.records[b.id]?.dueAt ?? 0));
+  const weak = wordBank
+    .filter((word) => {
+      const record = memory.records[word.id];
+      return record && record.wrong > record.correct && record.stage < 3;
+    })
+    .sort((a, b) => (memory.records[b.id]?.wrong ?? 0) - (memory.records[a.id]?.wrong ?? 0));
+  const fresh = wordBank.filter((word) => !memory.records[word.id]).slice(0, 8);
+  const learning = wordBank
+    .filter((word) => {
+      const record = memory.records[word.id];
+      return record && record.stage > 0 && record.stage < 3 && record.dueAt > now;
+    })
+    .sort((a, b) => (memory.records[a.id]?.stage ?? 0) - (memory.records[b.id]?.stage ?? 0))
+    .slice(0, 6);
 
-  return labels[theme];
+  const seen = new Set<string>();
+  return [...due, ...weak, ...fresh, ...learning]
+    .filter((word) => {
+      if (seen.has(word.id)) return false;
+      seen.add(word.id);
+      return true;
+    })
+    .slice(0, 20);
 }
 
-const initialUnlockedIds = ["hello", "name"];
-
-function getPart(parts: Part[], code: string) {
-  return parts.find((part) => part.code === code);
-}
-
-function getForgeAnswer(node: WordNode) {
-  return {
-    prefix: node.prefix || nonePart,
-    root: node.root,
-    suffix: node.suffix || nonePart,
-  };
-}
-
-function isForgeableNode(node: WordNode) {
-  const answer = getForgeAnswer(node);
-  return Boolean(
-    getPart(prefixes, answer.prefix) &&
-      getPart(roots, answer.root) &&
-      getPart(suffixes, answer.suffix) &&
-      normalizeAnswer(buildWord(answer.prefix, answer.root, answer.suffix)) === normalizeAnswer(node.word),
-  );
+function maskWord(word: string) {
+  const letters = word.split("");
+  if (letters.length <= 3) return `${letters[0]}${"_".repeat(Math.max(1, letters.length - 1))}`;
+  return letters
+    .map((letter, index) => {
+      if (index === 0 || index === letters.length - 1) return letter;
+      return index % 2 === 0 ? "_" : letter;
+    })
+    .join("");
 }
 
 export default function DanciExperience() {
-  const [memory, setMemory] = useState<CacheMemory>(() => createDefaultMemory());
+  const [memory, setMemory] = useState<TrainerMemory>(() => createDefaultMemory());
   const [loaded, setLoaded] = useState(false);
-  const [combat, setCombat] = useState<CombatState | null>(null);
-  const [patchInput, setPatchInput] = useState("");
+  const [queue, setQueue] = useState<string[]>([]);
+  const [activeId, setActiveId] = useState(wordBank[0].id);
+  const [mode, setMode] = useState<TrainingMode>("study");
+  const [input, setInput] = useState("");
+  const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [lastUnlockedId, setLastUnlockedId] = useState("");
 
-  const unlockedNodeIds = useMemo(() => {
-    const ids = new Set(initialUnlockedIds);
-    Object.entries(memory.records).forEach(([id, record]) => {
-      if (record.correct > 0 || record.mastered) {
-        ids.add(id);
-      }
-    });
-    return ids;
+  const activeWord = wordBank.find((word) => word.id === activeId) ?? wordBank[0];
+  const activeRecord = memory.records[activeWord.id] ?? getEmptyRecord();
+  const choices = useMemo(
+    () => buildChoices(activeWord, memory.totalAnswered + activeWord.word.length + activeRecord.wrong * 7),
+    [activeRecord.wrong, activeWord, memory.totalAnswered],
+  );
+  const stats = useMemo(() => {
+    const records = wordBank.map((word) => memory.records[word.id] ?? getEmptyRecord());
+    return {
+      mastered: records.filter((record) => record.stage >= 4).length,
+      active: records.filter((record) => record.stage > 0 && record.stage < 4).length,
+      weak: records.filter((record) => record.wrong > record.correct).length,
+      due: wordBank.filter((word) => {
+        const record = memory.records[word.id];
+        return record && record.stage < 4 && record.dueAt <= Date.now();
+      }).length,
+    };
   }, [memory.records]);
-  const selectedNode = wordNodes.find((node) => node.id === memory.selectedId) ?? wordNodes[0];
-  const combatNode = combat ? wordNodes.find((node) => node.id === combat.nodeId) ?? null : null;
-  const unlockedCount = wordNodes.filter((node) => unlockedNodeIds.has(node.id)).length;
-  const masteredCount = wordNodes.filter((node) => getRecord(memory.records, node.id).mastered).length;
-  const gameOver = memory.computePower <= 0;
-  const shellClass = [
-    styles.shell,
-    combat ? styles.combatOpen : "",
-    combat?.status === "failure" ? styles.shellFailure : "",
-    gameOver ? styles.shellGameOver : "",
-  ].join(" ");
-  const traceChoices = useMemo(() => {
-    if (!combatNode) {
-      return [];
-    }
-    const seed = combat?.seed ?? 1;
-    const distractors = wordNodes
-      .filter((node) => node.id !== combatNode.id && Math.abs(node.level - combatNode.level) <= 1)
-      .slice(0, 28);
-
-    return shuffleBySeed([combatNode, ...shuffleBySeed(distractors, seed).slice(0, 3)], seed + 11);
-  }, [combat?.seed, combatNode]);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(storageKey);
-      if (saved) {
-        setMemory(normalizeMemory(JSON.parse(saved) as Partial<CacheMemory>));
-      }
+      setMemory(saved ? normalizeMemory(JSON.parse(saved) as Partial<TrainerMemory>) : createDefaultMemory());
     } catch {
       setMemory(createDefaultMemory());
     } finally {
@@ -1813,8 +271,24 @@ export default function DanciExperience() {
   }, []);
 
   useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
+    if (!loaded) return;
+    localStorage.setItem(storageKey, JSON.stringify(memory));
+  }, [loaded, memory]);
 
+  useEffect(() => {
+    if (!loaded) return;
+    if (queue.length) return;
+    const nextQueue = buildQueue(memory).map((word) => word.id);
+    setQueue(nextQueue);
+    if (nextQueue[0]) {
+      const nextWord = wordBank.find((word) => word.id === nextQueue[0]) ?? wordBank[0];
+      setActiveId(nextWord.id);
+      setMode(getStartMode(nextWord, memory));
+    }
+  }, [loaded, memory, queue.length]);
+
+  useEffect(() => {
+    if (!("speechSynthesis" in window)) return;
     const loadVoices = () => setVoices(window.speechSynthesis.getVoices());
     loadVoices();
     window.speechSynthesis.onvoiceschanged = loadVoices;
@@ -1825,140 +299,13 @@ export default function DanciExperience() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!loaded) return;
-    localStorage.setItem(storageKey, JSON.stringify(memory));
-  }, [loaded, memory]);
-
-  function patchMemory(updater: (current: CacheMemory) => CacheMemory) {
-    setMemory((current) => normalizeMemory(updater(current)));
-  }
-
-  function openCombat(node: WordNode) {
-    if (gameOver) return;
-    const record = getRecord(memory.records, node.id);
-    const mode: CombatMode = record.correct > 0 || Math.random() > 0.58 ? "patch" : "trace";
-    setPatchInput("");
-    setCombat({
-      nodeId: node.id,
-      mode,
-      status: "active",
-      seed: memory.patchIndex + memory.forgeIndex + node.word.length + Math.floor(Math.random() * 97),
-    });
-    patchMemory((current) => ({
-      ...current,
-      selectedId: node.id,
-      mode,
-      lastFeedback: `训练节点已载入：${node.word}。先主动回忆，不要只看答案。`,
-    }));
-  }
-
-  function handleNodeClick(node: WordNode) {
-    if (gameOver) return;
-    const record = getRecord(memory.records, node.id);
-    if (!unlockedNodeIds.has(node.id)) {
-      openCombat(node);
-      return;
-    }
-    if (record.correct > 0 && !record.mastered) {
-      openCombat(node);
-      return;
-    }
-    patchMemory((current) => ({
-      ...current,
-      selectedId: node.id,
-      mode: "map",
-      lastFeedback: `${node.word} 已载入。点还没掌握的亮点，可以再练一轮拼写。`,
-    }));
-  }
-
-  function resolveHack(correct: boolean) {
-    if (!combat || !combatNode) return;
-    const mode = combat.mode;
-    const feedback = correct
-      ? `Access Granted: ${combatNode.word} 回忆成功。`
-      : `Hack Failed: ${combatNode.word} 还没背牢，马上再来。`;
-
-    patchMemory((current) => {
-      const previous = getRecord(current.records, combatNode.id);
-      const nextRecord: WordRecord = {
-        attempts: previous.attempts + 1,
-        correct: previous.correct + (correct ? 1 : 0),
-        wrong: previous.wrong + (correct ? 0 : 1),
-        mastered: correct ? previous.correct + 1 >= 2 : previous.mastered,
-        lastMode: mode,
-        updatedAt: new Date().toISOString(),
-      };
-      const nextStreak = correct ? current.streak + 1 : 0;
-      const nextRecords = {
-        ...current.records,
-        [combatNode.id]: nextRecord,
-      };
-      const nextUnlocked = wordNodes.filter((node) => initialUnlockedIds.includes(node.id) || getRecord(nextRecords, node.id).correct > 0).length;
-
-      return {
-        ...current,
-        records: nextRecords,
-        computePower: Math.max(0, current.computePower - 10),
-        selectedId: combatNode.id,
-        mode,
-        patchIndex: mode === "patch" ? current.patchIndex + 1 : current.patchIndex,
-        traceIndex: mode === "trace" ? current.traceIndex + 1 : current.traceIndex,
-        streak: nextStreak,
-        bestStreak: Math.max(current.bestStreak, nextStreak),
-        credits: Math.max(0, current.credits + (correct ? 6 + nextRecord.correct : -3)),
-        unlockedLevel: Math.min(5, Math.max(current.unlockedLevel, 1 + Math.floor(nextUnlocked / 7))),
-        lastFeedback: feedback,
-        history: [feedback, ...current.history].slice(0, 8),
-      };
-    });
-
-    if (correct) {
-      setCombat({ ...combat, status: "success" });
-      setLastUnlockedId(combatNode.id);
-      setPatchInput("");
-      window.setTimeout(() => setCombat(null), 920);
-      return;
-    }
-
-    setCombat({ ...combat, status: "failure" });
-    window.setTimeout(() => {
-      setCombat((current) => {
-        if (!current || current.nodeId !== combat.nodeId || current.status !== "failure") return current;
-        if (memory.computePower - 10 <= 0) return null;
-        return { ...current, status: "active" };
-      });
-    }, 680);
-  }
-
-  function submitTraceChoice(choiceId: string) {
-    if (!combatNode || combat?.status !== "active") return;
-    resolveHack(choiceId === combatNode.id);
-  }
-
-  function submitCombatPatch(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!combatNode || !patchInput.trim()) return;
-    resolveHack(normalizeAnswer(patchInput) === normalizeAnswer(combatNode.word));
-  }
-
-  function resetMemory() {
-    if (!window.confirm("重置 Neural Cache 的本机训练记录？")) return;
-    setMemory(createDefaultMemory());
-    setCombat(null);
-    setPatchInput("");
-    setLastUnlockedId("");
-  }
-
   function speak(text: string) {
     if (!("speechSynthesis" in window)) return;
     const nextVoices = voices.length ? voices : window.speechSynthesis.getVoices();
-    if (!voices.length && nextVoices.length) {
-      setVoices(nextVoices);
-    }
+    if (!voices.length && nextVoices.length) setVoices(nextVoices);
     const voice = chooseAllowedEnglishVoice(nextVoices);
     if (!voice) {
-      patchMemory((current) => ({
+      setMemory((current) => ({
         ...current,
         lastFeedback: `未找到白名单语音：${allowedEnglishVoiceSummary}`,
       }));
@@ -1969,225 +316,364 @@ export default function DanciExperience() {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = voice;
     utterance.lang = voice.lang || "en-US";
-    utterance.rate = 0.76;
+    utterance.rate = 0.78;
     utterance.pitch = 0.96;
     utterance.volume = 0.96;
     window.speechSynthesis.speak(utterance);
   }
 
+  function startRecall() {
+    const nextMemory = {
+      ...memory,
+      records: {
+        ...memory.records,
+        [activeWord.id]: {
+          ...activeRecord,
+          seen: Math.max(1, activeRecord.seen + 1),
+          lastMode: "study" as TrainingMode,
+          updatedAt: new Date().toISOString(),
+        },
+      },
+      lastFeedback: `${activeWord.word} 已看过。现在开始主动回忆。`,
+    };
+    setMemory(nextMemory);
+    setMode("meaning");
+    setOutcome(null);
+  }
+
+  function recordAnswer(correct: boolean, answerMode: TrainingMode) {
+    const previous = memory.records[activeWord.id] ?? getEmptyRecord();
+    const nextStage = correct ? (Math.min(4, previous.stage + 1) as WordRecord["stage"]) : (Math.max(0, previous.stage - 1) as WordRecord["stage"]);
+    const nextDueAt = Date.now() + (correct ? reviewIntervals[nextStage] : 4 * 60 * 1000);
+    const nextRecord: WordRecord = {
+      seen: Math.max(1, previous.seen + 1),
+      correct: previous.correct + (correct ? 1 : 0),
+      wrong: previous.wrong + (correct ? 0 : 1),
+      stage: nextStage,
+      dueAt: nextDueAt,
+      lastMode: answerMode,
+      updatedAt: new Date().toISOString(),
+    };
+    const nextStreak = correct ? memory.streak + 1 : 0;
+    const nextMemory: TrainerMemory = {
+      ...memory,
+      records: {
+        ...memory.records,
+        [activeWord.id]: nextRecord,
+      },
+      todayAnswered: memory.todayAnswered + 1,
+      totalAnswered: memory.totalAnswered + 1,
+      streak: nextStreak,
+      bestStreak: Math.max(memory.bestStreak, nextStreak),
+      lastFeedback: correct
+        ? `${activeWord.word} 升到「${stageLabel(nextStage)}」，${nextDueText(nextDueAt)}再复习。`
+        : `${activeWord.word} 降级并进入错词回流，几题后再回来。`,
+    };
+
+    setMemory(nextMemory);
+    setOutcome({
+      correct,
+      title: correct ? "回忆成功" : "还没背牢",
+      body: correct ? `下次复习：${nextDueText(nextDueAt)}` : `正确拼写：${activeWord.word}。${activeWord.tip}`,
+    });
+    setMode("feedback");
+    setInput("");
+  }
+
+  function answerMeaning(choiceId: string) {
+    if (choiceId !== activeWord.id) {
+      recordAnswer(false, "meaning");
+      return;
+    }
+    setOutcome({
+      correct: true,
+      title: "意思认对了",
+      body: "不要停在认识。下一步把它拼出来。",
+    });
+    setMode("spell");
+    setInput("");
+  }
+
+  function submitSpelling(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!input.trim()) return;
+    const correct = normalizeAnswer(input) === normalizeAnswer(activeWord.word);
+    recordAnswer(correct, mode);
+  }
+
+  function giveUp() {
+    recordAnswer(false, mode);
+  }
+
+  function nextCard() {
+    const rest = queue.filter((id) => id !== activeWord.id);
+    const nextQueue = outcome?.correct ? rest : [...rest.slice(0, 3), activeWord.id, ...rest.slice(3)];
+    const refill = nextQueue.length ? nextQueue : buildQueue(memory).map((word) => word.id).filter((id) => id !== activeWord.id);
+    const nextId = refill[0];
+    setQueue(refill);
+    setOutcome(null);
+    setInput("");
+
+    if (!nextId) {
+      setMode("feedback");
+      setActiveId(activeWord.id);
+      setOutcome({
+        correct: true,
+        title: "今天这一轮清空了",
+        body: "没有要强行重置的东西。明天回来，系统会把该复习的词叫出来。",
+      });
+      return;
+    }
+
+    const nextWord = wordBank.find((word) => word.id === nextId) ?? wordBank[0];
+    setActiveId(nextWord.id);
+    setMode(getStartMode(nextWord, memory));
+  }
+
+  function resetMemory() {
+    if (!window.confirm("清空本机背词记录？这不会影响网站代码，只会重置这个浏览器里的进度。")) return;
+    const nextMemory = createDefaultMemory();
+    const nextQueue = buildQueue(nextMemory).map((word) => word.id);
+    setMemory(nextMemory);
+    setQueue(nextQueue);
+    setActiveId(nextQueue[0] ?? wordBank[0].id);
+    setMode("study");
+    setOutcome(null);
+    setInput("");
+  }
+
   return (
-    <main className={shellClass}>
-      <section className={styles.worldMap} aria-label="Vocabulary Galaxy world map">
-        <svg className={styles.starMap} viewBox="0 0 1040 840" preserveAspectRatio="xMidYMid meet" role="img" aria-label="单词星图">
-          <defs>
-            <radialGradient id="nodeGlow" cx="50%" cy="45%" r="65%">
-              <stop offset="0%" stopColor="#fff7ba" />
-              <stop offset="45%" stopColor="#38f6b4" />
-              <stop offset="100%" stopColor="#29a6ff" />
-            </radialGradient>
-            <filter id="electricGlow">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          {wordNodes.flatMap((node) =>
-            node.links.map((link) => {
-              const target = wordNodes.find((item) => item.id === link);
-              if (!target) return null;
-              const liveLine = unlockedNodeIds.has(node.id) && unlockedNodeIds.has(target.id);
-              return (
-                <line
-                  key={`${node.id}-${link}`}
-                  x1={node.x}
-                  y1={node.y}
-                  x2={target.x}
-                  y2={target.y}
-                  className={liveLine ? styles.signalLine : styles.fogLine}
-                />
-              );
-            }),
-          )}
-          {wordNodes.map((node) => {
-            const unlocked = unlockedNodeIds.has(node.id);
-            const selected = node.id === selectedNode.id;
-            const className = [
-              styles.starNode,
-              unlocked ? styles.unlockedNode : styles.encryptedNode,
-              selected ? styles.selectedNode : "",
-              lastUnlockedId === node.id ? styles.newlyUnlockedNode : "",
-            ].join(" ");
-
-            return (
-              <g
-                key={node.id}
-                className={className}
-                role="button"
-                tabIndex={0}
-                aria-label={`${unlocked ? "已点亮" : "加密"}节点 ${node.word}`}
-                onClick={() => handleNodeClick(node)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    handleNodeClick(node);
-                  }
-                }}
-              >
-                {lastUnlockedId === node.id ? <circle cx={node.x} cy={node.y} r={32} className={styles.unlockPulse} /> : null}
-                <circle cx={node.x} cy={node.y} r={unlocked ? 17 : 14} />
-                {unlocked ? null : (
-                  <>
-                    <path d={`M ${node.x - 6} ${node.y - 2} v-7 a6 6 0 0 1 12 0 v7`} className={styles.lockShackle} />
-                    <rect x={node.x - 9} y={node.y - 2} width="18" height="14" rx="3" className={styles.lockBody} />
-                  </>
-                )}
-                <text x={node.x + 22} y={node.y + 5}>{unlocked ? node.word : "ENCRYPTED"}</text>
-              </g>
-            );
-          })}
-        </svg>
-      </section>
-
-      <section className={styles.hud} aria-label="Neural Cache HUD">
-        <div className={styles.brandBlock}>
+    <main className={styles.shell}>
+      <aside className={styles.sidebar}>
+        <div className={styles.brand}>
           <span>NC</span>
           <div>
-            <p>Grade 7 Word Quest</p>
-            <h1>Starter Galaxy</h1>
+            <p>Grade 7 Word Trainer</p>
+            <h1>Daily Recall</h1>
           </div>
         </div>
-        <div className={styles.computeBlock}>
+        <div className={styles.progressCard}>
           <div>
-            <span>剩余算力</span>
-            <strong>{memory.computePower}</strong>
+            <span>今日回忆</span>
+            <strong>{memory.todayAnswered}</strong>
           </div>
-          <div className={styles.computeTrack}>
-            <i style={{ width: `${memory.computePower}%` }} />
+          <div className={styles.progressTrack}>
+            <i style={{ width: `${Math.min(100, (memory.todayAnswered / 18) * 100)}%` }} />
           </div>
+          <p>目标不是刷完，而是把错词叫回来。</p>
         </div>
-        <div className={styles.hudStats}>
-          <span>{unlockedCount}/{wordNodes.length} words unlocked</span>
-          <span>{masteredCount} mastered</span>
+        <div className={styles.statGrid}>
+          <div><span>待复习</span><strong>{stats.due}</strong></div>
+          <div><span>学习中</span><strong>{stats.active}</strong></div>
+          <div><span>错词</span><strong>{stats.weak}</strong></div>
+          <div><span>稳固</span><strong>{stats.mastered}</strong></div>
         </div>
-      </section>
-
-      <section className={styles.intelPanel} aria-label="Selected node intel">
-        <div className={styles.nodeBadge}>
-          <span>{getThemeLabel(selectedNode.theme)}</span>
-          <strong>Lv.{selectedNode.level}</strong>
-        </div>
-        <button type="button" className={styles.soundButton} onClick={() => speak(`${selectedNode.word}. ${selectedNode.example}`)}>
-          <Volume2 size={17} />
+        <button type="button" className={styles.resetButton} onClick={resetMemory}>
+          <RefreshCcw size={16} />
+          清空本机记录
         </button>
-        <h2>{selectedNode.word}</h2>
-        <p>{selectedNode.meaning}</p>
-        <div className={styles.rootFormula}>
-          <span>Lv.{selectedNode.level}</span>
-          <ChevronRight size={14} />
-          <span>{selectedNode.family}</span>
-          <ChevronRight size={14} />
-          <span>{selectedNode.rootMeaning}</span>
+      </aside>
+
+      <section className={styles.workbench}>
+        <div className={styles.topLine}>
+          <p>{activeWord.unit} / {activeWord.family}</p>
+          <span>{stageLabel(activeRecord.stage)}</span>
         </div>
-        <div className={styles.exampleText}>
+
+        <article className={styles.card}>
+          {mode === "study" ? (
+            <StudyView word={activeWord} onSpeak={speak} onStart={startRecall} />
+          ) : null}
+
+          {mode === "meaning" ? (
+            <MeaningView word={activeWord} choices={choices} onSpeak={speak} onChoose={answerMeaning} />
+          ) : null}
+
+          {(mode === "spell" || mode === "listen") ? (
+            <SpellingView
+              word={activeWord}
+              mode={mode}
+              input={input}
+              onInput={setInput}
+              onSubmit={submitSpelling}
+              onSpeak={speak}
+              onGiveUp={giveUp}
+            />
+          ) : null}
+
+          {mode === "feedback" && outcome ? (
+            <FeedbackView word={activeWord} outcome={outcome} record={memory.records[activeWord.id] ?? activeRecord} onSpeak={speak} onNext={nextCard} />
+          ) : null}
+        </article>
+
+        <div className={styles.feedbackLine}>
           <Sparkles size={15} />
-          <p>{selectedNode.example}</p>
+          <span>{memory.lastFeedback}</span>
         </div>
-        <p className={styles.statusFeed}>{memory.lastFeedback}</p>
       </section>
 
-      <button type="button" className={styles.resetButton} onClick={resetMemory}>
-        <RefreshCcw size={16} />
-        Reset
-      </button>
-
-      {combat && combatNode ? (
-        <section className={styles.modalLayer} aria-label="Combat phase">
-          <div className={[styles.combatModal, styles[`combat${combat.status}`]].join(" ")}>
-            <button type="button" className={styles.closeButton} aria-label="关闭破解弹窗" onClick={() => setCombat(null)}>
-              <X size={18} />
-            </button>
-            <div className={styles.modalHeader}>
-              <span><Brain size={20} /></span>
-              <div>
-                <p>Combat Phase</p>
-                <h2>{combat.mode === "trace" ? "Meaning Trace" : "Spell Patch"}</h2>
-              </div>
-            </div>
-            <div className={styles.targetReadout}>
-              <span>{combat.mode === "trace" ? "Choose the meaning" : "Write the word"}</span>
-              <strong>{combat.mode === "trace" ? combatNode.word : combatNode.meaning}</strong>
-            </div>
-
-            {combat.mode === "trace" ? (
-              <div className={styles.combatBody}>
-                <p className={styles.missionPrompt}>先不要猜，脑子里读一遍这个词，再选中文意思。</p>
-                <div className={styles.traceWord}>
-                  <strong>{combatNode.word}</strong>
-                  <button type="button" className={styles.soundButton} onClick={() => speak(combatNode.word)}>
-                    <Volume2 size={17} />
-                  </button>
-                </div>
-                <div className={styles.choiceGrid}>
-                  {traceChoices.map((choice) => (
-                    <button
-                      key={choice.id}
-                      type="button"
-                      disabled={combat.status !== "active"}
-                      onClick={() => submitTraceChoice(choice.id)}
-                    >
-                      {choice.meaning}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <form className={styles.combatBody} onSubmit={submitCombatPatch}>
-                <div className={styles.patchWord}>{maskWord(combatNode.word, combat.seed)}</div>
-                <p className={styles.missionPrompt}>
-                  {combatNode.meaning}。提示：{combatNode.rootMeaning}。
-                </p>
-                <div className={styles.patchForm}>
-                  <input
-                    value={patchInput}
-                    onChange={(event) => setPatchInput(event.target.value)}
-                    placeholder="输入完整英文"
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    spellCheck={false}
-                  />
-                  <button type="submit" className={styles.primaryAction} disabled={combat.status !== "active"}>
-                    <Check size={17} />
-                    Inject
-                  </button>
-                </div>
-              </form>
-            )}
-
-            {combat.status !== "active" ? (
-              <div className={styles.combatResult}>
-                {combat.status === "success" ? "ACCESS GRANTED" : "HACK FAILED"}
-              </div>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
-
-      {gameOver ? (
-        <section className={styles.gameOverPanel} aria-label="Game over">
-          <div>
-            <ShieldAlert size={42} />
-            <p>Compute Power Depleted</p>
-            <h2>Game Over</h2>
-            <span>算力归零，神经缓存链路已断开。</span>
-            <button type="button" onClick={resetMemory}>
-              <Cpu size={17} />
-              重启缓存核心
-            </button>
-          </div>
-        </section>
-      ) : null}
+      <aside className={styles.queuePanel}>
+        <div className={styles.panelHeader}>
+          <p>Today Queue</p>
+          <strong>{queue.length || buildQueue(memory).length}</strong>
+        </div>
+        <div className={styles.queueList}>
+          {(queue.length ? queue : buildQueue(memory).map((word) => word.id)).slice(0, 12).map((id) => {
+            const word = wordBank.find((item) => item.id === id);
+            if (!word) return null;
+            const record = memory.records[word.id] ?? getEmptyRecord();
+            return (
+              <button
+                key={word.id}
+                type="button"
+                className={word.id === activeWord.id ? styles.activeQueueItem : ""}
+                onClick={() => {
+                  setActiveId(word.id);
+                  setMode(getStartMode(word, memory));
+                  setOutcome(null);
+                  setInput("");
+                }}
+              >
+                <span>{word.word}</span>
+                <small>{stageLabel(record.stage)} · {word.meaning}</small>
+              </button>
+            );
+          })}
+        </div>
+      </aside>
     </main>
+  );
+}
+
+function StudyView({ word, onSpeak, onStart }: { word: WordItem; onSpeak: (text: string) => void; onStart: () => void }) {
+  return (
+    <div className={styles.studyView}>
+      <div className={styles.modePill}><Brain size={16} />先看一眼</div>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)}>
+        <Volume2 size={20} />
+      </button>
+      <h2>{word.word}</h2>
+      <p className={styles.meaning}>{word.meaning}</p>
+      <div className={styles.exampleBox}>{word.example}</div>
+      <div className={styles.tipBox}>{word.tip}</div>
+      <button type="button" className={styles.primaryButton} onClick={onStart}>
+        开始回忆
+      </button>
+    </div>
+  );
+}
+
+function MeaningView({
+  word,
+  choices,
+  onSpeak,
+  onChoose,
+}: {
+  word: WordItem;
+  choices: WordItem[];
+  onSpeak: (text: string) => void;
+  onChoose: (id: string) => void;
+}) {
+  return (
+    <div className={styles.quizView}>
+      <div className={styles.modePill}><Brain size={16} />先认意思</div>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)}>
+        <Volume2 size={20} />
+      </button>
+      <h2>{word.word}</h2>
+      <p className={styles.prompt}>这个词是什么意思？先在脑子里说出来，再点选项。</p>
+      <div className={styles.choiceGrid}>
+        {choices.map((choice) => (
+          <button key={choice.id} type="button" onClick={() => onChoose(choice.id)}>
+            {choice.meaning}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SpellingView({
+  word,
+  mode,
+  input,
+  onInput,
+  onSubmit,
+  onSpeak,
+  onGiveUp,
+}: {
+  word: WordItem;
+  mode: TrainingMode;
+  input: string;
+  onInput: (value: string) => void;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onSpeak: (text: string) => void;
+  onGiveUp: () => void;
+}) {
+  const listenMode = mode === "listen";
+  return (
+    <form className={styles.quizView} onSubmit={onSubmit}>
+      <div className={styles.modePill}>{listenMode ? "听音写词" : "缺字母拼写"}</div>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)}>
+        <Volume2 size={20} />
+      </button>
+      <h2>{listenMode ? "Listen" : maskWord(word.word)}</h2>
+      <p className={styles.prompt}>{word.meaning}。{listenMode ? "听完直接写英文。" : `提示：${word.tip}`}</p>
+      <input
+        value={input}
+        onChange={(event) => onInput(event.target.value)}
+        placeholder="输入英文单词"
+        autoCapitalize="none"
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+      />
+      <div className={styles.actionRow}>
+        <button type="submit" className={styles.primaryButton}>
+          <Check size={17} />
+          提交
+        </button>
+        <button type="button" className={styles.secondaryButton} onClick={onGiveUp}>
+          看答案，稍后再来
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function FeedbackView({
+  word,
+  outcome,
+  record,
+  onSpeak,
+  onNext,
+}: {
+  word: WordItem;
+  outcome: Outcome;
+  record: WordRecord;
+  onSpeak: (text: string) => void;
+  onNext: () => void;
+}) {
+  return (
+    <div className={styles.feedbackView}>
+      <div className={outcome.correct ? styles.goodBadge : styles.badBadge}>
+        {outcome.correct ? "Correct" : "Again"}
+      </div>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)}>
+        <Volume2 size={20} />
+      </button>
+      <h2>{outcome.title}</h2>
+      <p className={styles.meaning}>{word.word} · {word.meaning}</p>
+      <div className={styles.exampleBox}>{word.example}</div>
+      <div className={styles.tipBox}>{outcome.body}</div>
+      <div className={styles.stageRail}>
+        {[0, 1, 2, 3, 4].map((stage) => (
+          <span key={stage} className={record.stage >= stage ? styles.stageOn : ""}>{stageLabel(stage)}</span>
+        ))}
+      </div>
+      <button type="button" className={styles.primaryButton} onClick={onNext}>
+        下一个
+      </button>
+    </div>
   );
 }
