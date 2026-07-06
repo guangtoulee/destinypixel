@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import {
   ArrowLeft,
   ArrowRight,
   Check,
+  Download,
   Gem,
   Languages,
+  Minus,
   Plus,
+  RotateCcw,
   Sparkles,
 } from "lucide-react";
 import {
@@ -21,100 +24,133 @@ import {
   type Gemstone,
 } from "@/lib/energy-style";
 import {
-  normalizeReportLocale,
   reportLanguageOptions,
   type ReportLocale,
 } from "@/lib/report-i18n";
 
 type GenderStyle = "female" | "male";
+type FocusFilter = EnergyElement | "All";
+
+const beadFitMap: Record<GenderStyle, Record<number, number[]>> = {
+  female: {
+    8: [20, 21, 22, 23],
+    10: [17, 18, 19],
+    12: [15, 16],
+    14: [13, 14],
+  },
+  male: {
+    8: [22, 23, 24],
+    10: [18, 19, 20],
+    12: [16, 17],
+    14: [14, 15],
+  },
+};
 
 const atelierCopy = {
   en: {
     back: "Back to DestinyPixel",
     eyebrow: "Celestial Atelier",
-    title: "Build a bracelet for the element you want to strengthen.",
+    title: "Build a bracelet bead by bead.",
     lead:
-      "Choose stones by five-element energy, bead size, wrist style, and intention. The workshop turns your selection into a symbolic energy report for future shop customization.",
+      "Choose a bead size and wrist style first. The workshop calculates a realistic bead count, then every gemstone tap adds one bead to the board.",
     gender: "Wrist style",
     female: "Soft fit",
     male: "Structured fit",
     beadSize: "Bead size",
-    beadCount: "Bead count",
-    filter: "Filter by element",
+    beadCount: "Fit count",
+    fitHint: "Auto-fit range",
+    filter: "Element",
     all: "All",
-    archive: "Gemstone archive",
-    creation: "Current creation",
-    alignment: "Aura alignment",
-    complete: "Complete soul piece",
-    reset: "Reset",
-    analysis: "Configuration analysis",
+    archive: "Gemstone tray",
+    creation: "Bracelet board",
+    analysis: "Configuration reading",
     balance: "Element balance",
-    selected: "Selected stones",
-    empty: "Choose gemstones to begin the bracelet.",
-    save: "Save concept",
+    selected: "Bead sequence",
+    empty: "Tap gemstones on the right to place beads into the bracelet.",
+    full: "The bracelet is full. Remove one bead before adding another.",
+    addStone: "Add bead",
+    removeBead: "Remove bead",
+    reset: "Clear board",
+    download: "Download image",
+    downloading: "Rendering...",
+    finish: "Complete design",
     shop: "Prepare for shop",
+    current: "Current",
+    target: "Target",
+    size: "Size",
+    style: "Style",
   },
   zh: {
     back: "返回 DestinyPixel",
     eyebrow: "灵石工坊",
-    title: "为你想补强的五行，定制一条手串。",
+    title: "像真实配珠盘一样，一颗一颗凑手串。",
     lead:
-      "按金木水火土、水晶属性、佩戴风格、珠径和颗数组合手串，并生成一份可用于后续商城定制的能量解析。",
+      "先选珠径和佩戴风格，系统会自动给出合理颗数。点右侧水晶就往上方手串里加一颗，也可以单颗删除，直到凑成一串。",
     gender: "佩戴风格",
     female: "女款",
     male: "男款",
     beadSize: "珠径规格",
-    beadCount: "手串颗数",
-    filter: "按五行筛选",
+    beadCount: "适配颗数",
+    fitHint: "按腕围自动推荐",
+    filter: "五行筛选",
     all: "全部",
-    archive: "晶石库",
-    creation: "当前作品",
-    alignment: "能量校准",
-    complete: "完成灵石之作",
-    reset: "重置",
+    archive: "晶石盘",
+    creation: "配珠盘",
     analysis: "成品解析",
     balance: "五行能量分布",
-    selected: "已选晶石",
-    empty: "先选择晶石，开始组合你的手串。",
-    save: "保存概念",
+    selected: "已排珠序",
+    empty: "点击右侧晶石，把珠子一颗一颗放入手串。",
+    full: "这串已经排满了，先删掉一颗再继续加。",
+    addStone: "加一颗",
+    removeBead: "删除这颗",
+    reset: "清空重排",
+    download: "下载图片",
+    downloading: "生成中...",
+    finish: "完成设计",
     shop: "准备接入商城",
+    current: "当前",
+    target: "目标",
+    size: "珠径",
+    style: "款式",
   },
   ru: {
     back: "Назад в DestinyPixel",
     eyebrow: "Celestial Atelier",
-    title: "Соберите браслет для стихии, которую хотите усилить.",
+    title: "Соберите браслет по одной бусине.",
     lead:
-      "Выберите камни по пяти стихиям, размеру бусин, стилю посадки и намерению. Мастерская создаст символический отчет для будущего магазина.",
+      "Сначала выберите размер и посадку. Мастерская рассчитает реалистичное количество бусин, а каждый камень справа добавит одну бусину.",
     gender: "Стиль запястья",
     female: "Мягкая посадка",
     male: "Структурная посадка",
     beadSize: "Размер бусин",
     beadCount: "Количество",
-    filter: "Фильтр по стихии",
+    fitHint: "Автоподбор",
+    filter: "Стихия",
     all: "Все",
-    archive: "Архив камней",
-    creation: "Текущая работа",
-    alignment: "Настройка ауры",
-    complete: "Завершить изделие",
-    reset: "Сброс",
+    archive: "Поднос камней",
+    creation: "Доска браслета",
     analysis: "Анализ сборки",
     balance: "Баланс стихий",
-    selected: "Выбранные камни",
-    empty: "Выберите камни, чтобы начать браслет.",
-    save: "Сохранить концепт",
+    selected: "Последовательность",
+    empty: "Нажмите на камни справа, чтобы добавить бусины в браслет.",
+    full: "Браслет заполнен. Удалите одну бусину перед добавлением.",
+    addStone: "Добавить",
+    removeBead: "Удалить бусину",
+    reset: "Очистить",
+    download: "Скачать PNG",
+    downloading: "Создание...",
+    finish: "Завершить",
     shop: "Подготовить магазин",
+    current: "Сейчас",
+    target: "Цель",
+    size: "Размер",
+    style: "Стиль",
   },
 };
 
 function setDocumentLocale(locale: ReportLocale) {
   document.documentElement.lang =
     locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
-}
-
-function buildBraceletPattern(stones: Gemstone[], count: number) {
-  if (stones.length === 0) return [];
-
-  return Array.from({ length: count }, (_, index) => stones[index % stones.length]);
 }
 
 function balanceFromStones(stones: Gemstone[]) {
@@ -127,27 +163,84 @@ function balanceFromStones(stones: Gemstone[]) {
   );
 }
 
+function getFitOptions(gender: GenderStyle, beadSize: number) {
+  return beadFitMap[gender][beadSize] ?? beadFitMap[gender][10];
+}
+
+function getDefaultCount(gender: GenderStyle, beadSize: number) {
+  const options = getFitOptions(gender, beadSize);
+
+  return options[Math.floor(options.length / 2)];
+}
+
+function stoneBackground(stone: Gemstone) {
+  const shine = `radial-gradient(circle at 28% 22%, ${stone.accent}, transparent 22%)`;
+  const base = `radial-gradient(circle at 60% 74%, rgba(0, 0, 0, 0.2), transparent 34%), ${stone.color}`;
+
+  if (stone.texture === "clear") {
+    return `${shine}, radial-gradient(circle at 68% 18%, rgba(255,255,255,.7), transparent 12%), ${base}`;
+  }
+
+  if (stone.texture === "cloud") {
+    return `${shine}, radial-gradient(circle at 62% 38%, rgba(255,255,255,.42), transparent 24%), radial-gradient(circle at 36% 72%, rgba(255,255,255,.25), transparent 22%), ${base}`;
+  }
+
+  if (stone.texture === "silk") {
+    return `${shine}, repeating-linear-gradient(135deg, rgba(255,255,255,.2) 0 5px, rgba(0,0,0,.08) 6px 12px), ${base}`;
+  }
+
+  if (stone.texture === "grain") {
+    return `${shine}, repeating-radial-gradient(circle at 42% 58%, rgba(255,255,255,.18) 0 2px, rgba(0,0,0,.08) 3px 7px), ${base}`;
+  }
+
+  if (stone.texture === "metallic") {
+    return `${shine}, linear-gradient(135deg, rgba(255,255,255,.44), rgba(0,0,0,.2) 42%, rgba(255,255,255,.22)), ${base}`;
+  }
+
+  return `${shine}, ${base}`;
+}
+
 function buildAnalysis(
   locale: ReportLocale,
   stones: Gemstone[],
-  focus: EnergyElement,
+  focus: FocusFilter,
   beadSize: number,
-  count: number,
+  targetCount: number,
 ) {
-  const focusName = elementStyle[focus].label[locale];
-  const names = stones.map((stone) => stone.name[locale]).join(locale === "zh" ? "、" : ", ");
+  const uniqueNames = Array.from(new Set(stones.map((stone) => stone.name[locale])));
+  const names = uniqueNames.join(locale === "zh" ? "、" : ", ");
+  const focusName = focus === "All" ? atelierCopy[locale].all : elementStyle[focus].label[locale];
 
   if (stones.length === 0) return atelierCopy[locale].empty;
 
   if (locale === "zh") {
-    return `这条 ${beadSize}mm · ${count} 颗的组合以「${focusName}」为主轴，当前选入 ${names}。它不是把好运玄学化承诺给你，而是把颜色、材质和心理暗示变成一个可佩戴的提醒：什么时候该稳，什么时候该动，什么时候该收住情绪。`;
+    return `这条 ${beadSize}mm · ${targetCount} 颗的手串当前已排入 ${stones.length} 颗，主调偏向「${focusName}」。已选 ${names}。它更接近真实配珠逻辑：每一颗珠子都占据一个腕围位置，颜色会直接影响整串的视觉气场。完成后可作为商城定制草稿，也可以先下载图片给店家或朋友参考。`;
   }
 
   if (locale === "ru") {
-    return `Эта сборка ${beadSize} мм · ${count} бусин поддерживает стихию ${focusName}. Выбраны: ${names}. Это не обещание удачи, а носимый символический якорь для настроя, цвета и намерения.`;
+    return `Эта сборка ${beadSize} мм рассчитана на ${targetCount} бусин; сейчас размещено ${stones.length}. Фокус: ${focusName}. Камни: ${names}. Каждая бусина занимает реальное место на запястье, поэтому размер и количество связаны.`;
   }
 
-  return `This ${beadSize}mm · ${count}-bead configuration supports ${focusName}. Selected stones: ${names}. It is not a promise of luck; it is a wearable symbolic anchor for color, material, and intention.`;
+  return `This ${beadSize}mm bracelet is fitted for ${targetCount} beads; ${stones.length} are placed now. Focus: ${focusName}. Stones: ${names}. Each bead occupies a real wrist position, so bead size and count are linked.`;
+}
+
+function safeFileName(value: string) {
+  return value
+    .trim()
+    .replace(/[\\/:*?"<>|]+/g, "-")
+    .replace(/\s+/g, "-")
+    .slice(0, 80) || "destinypixel-bracelet";
+}
+
+function downloadBlob(blob: Blob, fileName: string) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
 
 export default function AtelierExperience({
@@ -158,38 +251,47 @@ export default function AtelierExperience({
   initialFocus?: EnergyElement;
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
-  const [focus, setFocus] = useState<EnergyElement>(initialFocus);
+  const [focus, setFocus] = useState<FocusFilter>(initialFocus);
   const [gender, setGender] = useState<GenderStyle>("female");
   const [beadSize, setBeadSize] = useState(10);
-  const [beadCount, setBeadCount] = useState(18);
-  const [selectedIds, setSelectedIds] = useState<string[]>([
-    "clear-quartz",
-    "lapis",
-    "green-aventurine",
-  ]);
+  const [beadCount, setBeadCount] = useState(getDefaultCount("female", 10));
+  const [beadIds, setBeadIds] = useState<string[]>([]);
+  const [downloadBusy, setDownloadBusy] = useState(false);
+  const previewRef = useRef<HTMLElement | null>(null);
   const copy = atelierCopy[locale];
-  const selectedStones = useMemo(
+  const fitOptions = useMemo(() => getFitOptions(gender, beadSize), [beadSize, gender]);
+  const currentBeads = useMemo(
     () =>
-      selectedIds
+      beadIds
         .map((id) => gemstoneLibrary.find((stone) => stone.id === id))
         .filter(Boolean) as Gemstone[],
-    [selectedIds],
+    [beadIds],
   );
   const visibleStones = useMemo(
     () =>
-      focus
-        ? gemstoneLibrary.filter((stone) => stone.element === focus)
-        : gemstoneLibrary,
+      focus === "All"
+        ? gemstoneLibrary
+        : gemstoneLibrary.filter((stone) => stone.element === focus),
     [focus],
   );
-  const bracelet = buildBraceletPattern(selectedStones, beadCount);
-  const percentages = elementPercentages(balanceFromStones(bracelet));
-  const analysis = buildAnalysis(locale, selectedStones, focus, beadSize, beadCount);
+  const percentages = elementPercentages(balanceFromStones(currentBeads));
+  const analysis = buildAnalysis(locale, currentBeads, focus, beadSize, beadCount);
+  const isFull = beadIds.length >= beadCount;
 
   useEffect(() => {
     setDocumentLocale(locale);
     window.localStorage.setItem("destinypixel-locale", locale);
   }, [locale]);
+
+  useEffect(() => {
+    if (fitOptions.includes(beadCount)) return;
+
+    setBeadCount(getDefaultCount(gender, beadSize));
+  }, [beadCount, beadSize, fitOptions, gender]);
+
+  useEffect(() => {
+    setBeadIds((current) => current.slice(0, beadCount));
+  }, [beadCount]);
 
   function changeLocale(nextLocale: ReportLocale) {
     setLocale(nextLocale);
@@ -201,12 +303,43 @@ export default function AtelierExperience({
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
-  function toggleStone(stone: Gemstone) {
-    setSelectedIds((current) =>
-      current.includes(stone.id)
-        ? current.filter((id) => id !== stone.id)
-        : [...current, stone.id],
-    );
+  function addStone(stone: Gemstone) {
+    setBeadIds((current) => {
+      if (current.length >= beadCount) return current;
+
+      return [...current, stone.id];
+    });
+  }
+
+  function removeBead(index: number) {
+    setBeadIds((current) => current.filter((_, beadIndex) => beadIndex !== index));
+  }
+
+  async function downloadImage() {
+    if (!previewRef.current) return;
+
+    setDownloadBusy(true);
+
+    try {
+      const { default: html2canvas } = await import("html2canvas");
+      const canvas = await html2canvas(previewRef.current, {
+        backgroundColor: "#fbf7ef",
+        scale: Math.min(2, window.devicePixelRatio || 1.5),
+        useCORS: true,
+      });
+      const blob = await new Promise<Blob | null>((resolve) => {
+        canvas.toBlob((value) => resolve(value), "image/png", 0.95);
+      });
+
+      if (blob) {
+        downloadBlob(
+          blob,
+          `${safeFileName(`destinypixel-${beadSize}mm-${beadCount}`)}.png`,
+        );
+      }
+    } finally {
+      setDownloadBusy(false);
+    }
   }
 
   return (
@@ -237,182 +370,237 @@ export default function AtelierExperience({
         </div>
       </header>
 
-      <section className="atelier-hero">
-        <div className="atelier-aura" aria-label={copy.creation}>
-          <div className="atelier-aura__ring">
-            {bracelet.length > 0 ? (
-              bracelet.map((stone, index) => {
-                const angle = (index / bracelet.length) * 360;
+      <section className="atelier-workbench">
+        <aside className="atelier-preview-card" ref={previewRef} data-atelier-export>
+          <div className="atelier-preview-card__copy">
+            <p>
+              <Sparkles size={14} aria-hidden="true" />
+              {copy.eyebrow}
+            </p>
+            <h1>{copy.title}</h1>
+            <span>{copy.lead}</span>
+          </div>
+
+          <div className="atelier-aura atelier-aura--board" aria-label={copy.creation}>
+            <div className="atelier-aura__ring atelier-aura__ring--board">
+              {Array.from({ length: beadCount }, (_, index) => {
+                const stone = currentBeads[index];
+                const angle = (index / beadCount) * 360;
+
+                if (!stone) {
+                  return (
+                    <span
+                      className="atelier-slot"
+                      key={`slot-${index}`}
+                      style={{ "--angle": `${angle}deg`, "--bead": `${Math.max(11, beadSize * 1.35)}px` } as CSSProperties}
+                    />
+                  );
+                }
 
                 return (
-                  <span
+                  <button
+                    type="button"
+                    className="atelier-bead"
                     key={`${stone.id}-${index}`}
                     style={{
                       "--angle": `${angle}deg`,
-                      "--bead": `${Math.max(9, beadSize * 1.25)}px`,
-                      "--stone": stone.color,
-                      "--shine": stone.accent,
+                      "--bead": `${Math.max(11, beadSize * 1.35)}px`,
+                      "--stone-bg": stoneBackground(stone),
                     } as CSSProperties}
-                    title={stone.name[locale]}
-                  />
+                    title={`${copy.removeBead}: ${stone.name[locale]}`}
+                    onClick={() => removeBead(index)}
+                  >
+                    <Minus size={10} aria-hidden="true" />
+                  </button>
                 );
-              })
-            ) : (
-              <em>{copy.empty}</em>
-            )}
-          </div>
-        </div>
-
-        <div className="atelier-hero__copy">
-          <p>
-            <Sparkles size={14} aria-hidden="true" />
-            {copy.eyebrow}
-          </p>
-          <h1>{copy.title}</h1>
-          <span>{copy.lead}</span>
-        </div>
-      </section>
-
-      <section className="atelier-builder">
-        <div className="atelier-controls">
-          <div>
-            <span>{copy.gender}</span>
-            <div className="atelier-segments">
-              <button type="button" data-active={gender === "female"} onClick={() => setGender("female")}>
-                {copy.female}
-              </button>
-              <button type="button" data-active={gender === "male"} onClick={() => setGender("male")}>
-                {copy.male}
-              </button>
+              })}
+              <em>
+                {beadIds.length}/{beadCount}
+              </em>
             </div>
           </div>
 
-          <div>
-            <span>{copy.beadSize}</span>
-            <div className="atelier-options">
-              {[8, 10, 12, 14].map((size) => (
-                <button
-                  type="button"
-                  key={size}
-                  data-active={beadSize === size}
-                  onClick={() => setBeadSize(size)}
-                >
-                  <i style={{ width: size * 1.3, height: size * 1.3 }} />
-                  {size}mm
-                </button>
-              ))}
-            </div>
+          <div className="atelier-board-meta">
+            <span>
+              <small>{copy.current}</small>
+              <strong>{beadIds.length}</strong>
+            </span>
+            <span>
+              <small>{copy.target}</small>
+              <strong>{beadCount}</strong>
+            </span>
+            <span>
+              <small>{copy.size}</small>
+              <strong>{beadSize}mm</strong>
+            </span>
+            <span>
+              <small>{copy.style}</small>
+              <strong>{gender === "female" ? copy.female : copy.male}</strong>
+            </span>
           </div>
 
-          <div>
-            <span>{copy.beadCount}</span>
-            <div className="atelier-options">
-              {[15, 16, 18, 20].map((count) => (
-                <button
-                  type="button"
-                  key={count}
-                  data-active={beadCount === count}
-                  onClick={() => setBeadCount(count)}
-                >
-                  {count}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="atelier-library">
-          <div className="atelier-library__heading">
+          <div className="atelier-sequence">
+            <strong>{copy.selected}</strong>
             <div>
-              <p>{copy.archive}</p>
-              <h2>{copy.filter}</h2>
+              {currentBeads.length ? (
+                currentBeads.map((stone, index) => (
+                  <button
+                    type="button"
+                    key={`${stone.id}-strip-${index}`}
+                    onClick={() => removeBead(index)}
+                    title={`${copy.removeBead}: ${stone.name[locale]}`}
+                  >
+                    <i style={{ background: stoneBackground(stone) }} />
+                    {index + 1}
+                  </button>
+                ))
+              ) : (
+                <p>{copy.empty}</p>
+              )}
             </div>
-            <div className="atelier-element-filter" role="group" aria-label={copy.filter}>
-              {energyElements.map((element) => (
-                <button
-                  type="button"
-                  key={element}
-                  data-active={focus === element}
-                  onClick={() => setFocus(element)}
-                >
-                  {elementStyle[element].label[locale]}
-                </button>
+            {isFull ? <small>{copy.full}</small> : null}
+          </div>
+
+          <div className="atelier-analysis-card">
+            <span>
+              <Gem size={15} aria-hidden="true" />
+              {copy.analysis}
+            </span>
+            <p>{analysis}</p>
+
+            <div className="atelier-energy-bars">
+              <strong>{copy.balance}</strong>
+              {percentages.map(({ element, percent }) => (
+                <label key={element}>
+                  <span>{elementStyle[element].label[locale]}</span>
+                  <i>
+                    <b style={{ width: `${Math.max(4, percent)}%` }} />
+                  </i>
+                  <em>{percent}%</em>
+                </label>
               ))}
             </div>
           </div>
 
-          <div className="atelier-stone-grid">
-            {visibleStones.map((stone) => {
-              const active = selectedIds.includes(stone.id);
+          <div className="atelier-actions">
+            <button type="button" onClick={() => setBeadIds([])}>
+              <RotateCcw size={15} aria-hidden="true" />
+              {copy.reset}
+            </button>
+            <button type="button" onClick={downloadImage} disabled={downloadBusy}>
+              <Download size={15} aria-hidden="true" />
+              {downloadBusy ? copy.downloading : copy.download}
+            </button>
+            <button type="button" data-primary>
+              {copy.finish}
+              <ArrowRight size={15} aria-hidden="true" />
+            </button>
+          </div>
+        </aside>
 
-              return (
+        <section className="atelier-config-panel">
+          <div className="atelier-controls atelier-controls--compact">
+            <div>
+              <span>{copy.gender}</span>
+              <div className="atelier-segments">
+                <button type="button" data-active={gender === "female"} onClick={() => setGender("female")}>
+                  {copy.female}
+                </button>
+                <button type="button" data-active={gender === "male"} onClick={() => setGender("male")}>
+                  {copy.male}
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <span>{copy.beadSize}</span>
+              <div className="atelier-options atelier-options--fit">
+                {[8, 10, 12, 14].map((size) => (
+                  <button
+                    type="button"
+                    key={size}
+                    data-active={beadSize === size}
+                    onClick={() => setBeadSize(size)}
+                  >
+                    <i style={{ width: size * 1.25, height: size * 1.25 }} />
+                    <strong>{size}mm</strong>
+                    <small>
+                      {getFitOptions(gender, size)[0]}-{getFitOptions(gender, size).at(-1)}
+                    </small>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <span>{copy.beadCount}</span>
+              <small className="atelier-fit-note">{copy.fitHint}</small>
+              <div className="atelier-options">
+                {fitOptions.map((count) => (
+                  <button
+                    type="button"
+                    key={count}
+                    data-active={beadCount === count}
+                    onClick={() => setBeadCount(count)}
+                  >
+                    {count}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="atelier-library atelier-library--tray">
+            <div className="atelier-library__heading">
+              <div>
+                <p>{copy.archive}</p>
+                <h2>{copy.filter}</h2>
+              </div>
+              <div className="atelier-element-filter" role="group" aria-label={copy.filter}>
                 <button
                   type="button"
-                  className="atelier-stone-card"
-                  key={stone.id}
-                  data-active={active}
-                  onClick={() => toggleStone(stone)}
+                  data-active={focus === "All"}
+                  onClick={() => setFocus("All")}
                 >
-                  <span
-                    style={{
-                      background: `radial-gradient(circle at 30% 25%, ${stone.accent}, ${stone.color} 58%, #1d1b18)`,
-                    }}
-                  />
+                  {copy.all}
+                </button>
+                {energyElements.map((element) => (
+                  <button
+                    type="button"
+                    key={element}
+                    data-active={focus === element}
+                    onClick={() => setFocus(element)}
+                  >
+                    {elementStyle[element].label[locale]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="atelier-stone-grid atelier-stone-grid--dense">
+              {visibleStones.map((stone) => (
+                <button
+                  type="button"
+                  className="atelier-stone-card atelier-stone-card--dense"
+                  key={stone.id}
+                  data-disabled={isFull}
+                  onClick={() => addStone(stone)}
+                >
+                  <span style={{ background: stoneBackground(stone) }} />
                   <small>
                     {elementStyle[stone.element].label[locale]} · {stone.aura[locale]}
                   </small>
                   <strong>{stone.name[locale]}</strong>
                   <p>{stone.meaning[locale]}</p>
-                  <em>{active ? <Check size={14} /> : <Plus size={14} />}</em>
+                  <em>
+                    {isFull ? <Check size={14} /> : <Plus size={14} />}
+                    <span>{copy.addStone}</span>
+                  </em>
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-
-        <aside className="atelier-analysis">
-          <span>
-            <Gem size={15} aria-hidden="true" />
-            {copy.analysis}
-          </span>
-          <h2>{copy.creation}</h2>
-          <p>{analysis}</p>
-
-          <div className="atelier-energy-bars">
-            <strong>{copy.balance}</strong>
-            {percentages.map(({ element, percent }) => (
-              <label key={element}>
-                <span>{elementStyle[element].label[locale]}</span>
-                <i>
-                  <b style={{ width: `${Math.max(4, percent)}%` }} />
-                </i>
-                <em>{percent}%</em>
-              </label>
-            ))}
-          </div>
-
-          <div className="atelier-selected">
-            <strong>{copy.selected}</strong>
-            {selectedStones.length ? (
-              selectedStones.map((stone) => (
-                <span key={stone.id}>
-                  <i style={{ background: stone.color }} />
-                  {stone.name[locale]}
-                </span>
-              ))
-            ) : (
-              <p>{copy.empty}</p>
-            )}
-          </div>
-
-          <div className="atelier-actions">
-            <button type="button">{copy.save}</button>
-            <button type="button" data-primary>
-              {copy.shop}
-              <ArrowRight size={15} aria-hidden="true" />
-            </button>
-          </div>
-        </aside>
+        </section>
       </section>
     </main>
   );
