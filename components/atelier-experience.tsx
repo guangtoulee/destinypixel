@@ -173,6 +173,17 @@ function getDefaultCount(gender: GenderStyle, beadSize: number) {
   return options[Math.floor(options.length / 2)];
 }
 
+function getPreviewBeadPixels(beadSize: number) {
+  const sizes: Record<number, number> = {
+    8: 40,
+    10: 50,
+    12: 58,
+    14: 66,
+  };
+
+  return sizes[beadSize] ?? beadSize * 4.8;
+}
+
 function stoneBackground(stone: Gemstone) {
   const shine = `radial-gradient(circle at 28% 22%, ${stone.accent}, transparent 22%)`;
   const base = `radial-gradient(circle at 60% 74%, rgba(0, 0, 0, 0.2), transparent 34%), ${stone.color}`;
@@ -277,6 +288,7 @@ export default function AtelierExperience({
   const percentages = elementPercentages(balanceFromStones(currentBeads));
   const analysis = buildAnalysis(locale, currentBeads, focus, beadSize, beadCount);
   const isFull = beadIds.length >= beadCount;
+  const previewBeadPixels = getPreviewBeadPixels(beadSize);
 
   useEffect(() => {
     setDocumentLocale(locale);
@@ -392,7 +404,7 @@ export default function AtelierExperience({
                     <span
                       className="atelier-slot"
                       key={`slot-${index}`}
-                      style={{ "--angle": `${angle}deg`, "--bead": `${Math.max(11, beadSize * 1.35)}px` } as CSSProperties}
+                      style={{ "--angle": `${angle}deg`, "--bead": `${previewBeadPixels}px` } as CSSProperties}
                     />
                   );
                 }
@@ -404,7 +416,7 @@ export default function AtelierExperience({
                     key={`${stone.id}-${index}`}
                     style={{
                       "--angle": `${angle}deg`,
-                      "--bead": `${Math.max(11, beadSize * 1.35)}px`,
+                      "--bead": `${previewBeadPixels}px`,
                       "--stone-bg": stoneBackground(stone),
                     } as CSSProperties}
                     title={`${copy.removeBead}: ${stone.name[locale]}`}
