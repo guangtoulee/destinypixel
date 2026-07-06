@@ -7,6 +7,7 @@ import {
   ArrowRight,
   CalendarDays,
   Check,
+  Gem,
   Hand,
   Languages,
   Loader2,
@@ -234,6 +235,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/sticks",
           cta: "Draw a stick",
         },
+        {
+          title: "Celestial Atelier",
+          body: "Turn five-element color guidance into a crystal bracelet concept with gemstone balance and wearable intention.",
+          href: "/atelier",
+          cta: "Build bracelet",
+        },
       ],
     },
     sticks: {
@@ -432,6 +439,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/sticks",
           cta: "去求签",
         },
+        {
+          title: "灵石工坊",
+          body: "把五行补色转换成手串设计：选水晶、珠径、颗数，并生成一份可佩戴的能量解析。",
+          href: "/atelier",
+          cta: "定制手串",
+        },
       ],
     },
     sticks: {
@@ -625,6 +638,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           body: "Выберите традицию, сформулируйте намерение и вытяните короткий знак для любви, денег, работы или защиты.",
           href: "/sticks",
           cta: "Тянуть жребий",
+        },
+        {
+          title: "Celestial Atelier",
+          body: "Цвет пяти стихий превращается в концепт браслета: камни, размер бусин и символический анализ.",
+          href: "/atelier",
+          cta: "Собрать браслет",
         },
       ],
     },
@@ -969,7 +988,7 @@ export default function DestinyWhiteExperience({
     }
   }
 
-  const insightIcons = [Hand, ScanFace, MessageCircle, Sparkles] as const;
+  const insightIcons = [Hand, ScanFace, MessageCircle, Sparkles, Gem] as const;
 
   return (
     <main className="white-site">

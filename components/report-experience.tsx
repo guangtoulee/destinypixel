@@ -10,14 +10,26 @@ import {
   Check,
   Download,
   FileImage,
+  Gem,
   LogIn,
   Loader2,
   Orbit,
+  Palette,
   Save,
+  Shirt,
   Sparkles,
 } from "lucide-react";
 import type { NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
+import {
+  elementPercentages,
+  elementStyle,
+  getDailyElement,
+  getGemstonesForElement,
+  sceneAdvice,
+  strongestElement,
+  targetElement,
+} from "@/lib/energy-style";
 import { reportCopy } from "@/lib/report-i18n";
 import {
   getTransitMonthDisplay,
@@ -199,6 +211,54 @@ const reportActionCopy = {
     exportHint:
       "Совет: откройте месячный прогноз и дождитесь завершения, если хотите включить его в экспорт.",
     exportError: "Экспорт не удался. Попробуйте после полной загрузки отчета.",
+  },
+} satisfies Record<
+  keyof typeof reportCopy,
+  Record<string, string>
+>;
+
+const energyStyleCopy = {
+  en: {
+    eyebrow: "Energy styling",
+    title: "Color, outfit and daily field",
+    subtitle:
+      "A practical layer for clothes, accessories, meetings, dates, and bracelet choices. Treat it as symbolic styling guidance, not a guaranteed result.",
+    target: "Element to supplement",
+    strongest: "Dominant signal",
+    palette: "Recommended palette",
+    wardrobe: "How to wear it",
+    daily: "Today",
+    scenes: "Use by scene",
+    stones: "Bracelet stones",
+    atelier: "Open bracelet workshop",
+  },
+  zh: {
+    eyebrow: "颜色穿搭",
+    title: "五行补色与今日能量",
+    subtitle:
+      "把命盘里的五行转换成日常能用的穿搭、配饰、谈判和手串建议。它是象征性的心理与风格指引，不承诺直接改变结果。",
+    target: "建议补的元素",
+    strongest: "当前主气场",
+    palette: "适合颜色",
+    wardrobe: "穿搭方式",
+    daily: "今日运势",
+    scenes: "场景用法",
+    stones: "手串水晶",
+    atelier: "打开手串工坊",
+  },
+  ru: {
+    eyebrow: "Цветовой стиль",
+    title: "Стихии, одежда и энергия дня",
+    subtitle:
+      "Практичный слой для одежды, встреч, отношений, переговоров и браслетов. Это символическая стилистика, а не гарантия результата.",
+    target: "Стихия для поддержки",
+    strongest: "Доминирующий сигнал",
+    palette: "Палитра",
+    wardrobe: "Как носить",
+    daily: "Сегодня",
+    scenes: "По ситуациям",
+    stones: "Камни браслета",
+    atelier: "Открыть мастерскую",
   },
 } satisfies Record<
   keyof typeof reportCopy,
@@ -399,6 +459,111 @@ function AccordionSection({
           )}
         </div>
       ) : null}
+    </article>
+  );
+}
+
+function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
+  const copy = energyStyleCopy[context.locale];
+  const target = targetElement(
+    context.bazi.elementBalance,
+    context.bazi.missingElements,
+  );
+  const dominant = strongestElement(context.bazi.elementBalance);
+  const dailyElement = getDailyElement();
+  const targetMeta = elementStyle[target];
+  const dominantMeta = elementStyle[dominant];
+  const dailyMeta = elementStyle[dailyElement];
+  const stones = getGemstonesForElement(target).slice(0, 3);
+  const percentages = elementPercentages(context.bazi.elementBalance);
+  const colorChips = targetMeta.colors[context.locale];
+  const sceneEntries = Object.entries(sceneAdvice) as Array<
+    [keyof typeof sceneAdvice, (typeof sceneAdvice)[keyof typeof sceneAdvice]]
+  >;
+
+  return (
+    <article className="energy-style-panel">
+      <div className="energy-style-panel__header">
+        <div>
+          <span>
+            <Palette size={15} aria-hidden="true" />
+            {copy.eyebrow}
+          </span>
+          <h2>{copy.title}</h2>
+          <p>{copy.subtitle}</p>
+        </div>
+        <a href={`/atelier?locale=${context.locale}&focus=${target}`}>
+          <Gem size={15} aria-hidden="true" />
+          {copy.atelier}
+        </a>
+      </div>
+
+      <div className="energy-style-summary">
+        <div>
+          <small>{copy.target}</small>
+          <strong>{targetMeta.label[context.locale]}</strong>
+          <p>{targetMeta.tone[context.locale]}</p>
+        </div>
+        <div>
+          <small>{copy.strongest}</small>
+          <strong>{dominantMeta.label[context.locale]}</strong>
+          <p>{dominantMeta.tone[context.locale]}</p>
+        </div>
+        <div>
+          <small>{copy.daily}</small>
+          <strong>{dailyMeta.label[context.locale]}</strong>
+          <p>{dailyMeta.daily[context.locale]}</p>
+        </div>
+      </div>
+
+      <div className="energy-style-grid">
+        <section>
+          <h3>
+            <Shirt size={15} aria-hidden="true" />
+            {copy.palette}
+          </h3>
+          <div className="energy-color-row">
+            {colorChips.map((color, index) => (
+              <span key={color}>
+                <i data-color-index={index} />
+                {color}
+              </span>
+            ))}
+          </div>
+          <p>{targetMeta.wardrobe[context.locale]}</p>
+        </section>
+
+        <section>
+          <h3>{copy.scenes}</h3>
+          <div className="energy-scene-list">
+            {sceneEntries.map(([scene, advice]) => (
+              <p key={scene}>{advice[context.locale]}</p>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div className="energy-style-footer">
+        <div className="energy-bars-mini">
+          {percentages.map(({ element, percent }) => (
+            <span key={element}>
+              <i>
+                <b style={{ height: `${Math.max(4, percent)}%` }} />
+              </i>
+              <em>{elementStyle[element].label[context.locale]}</em>
+            </span>
+          ))}
+        </div>
+        <div className="energy-stone-list">
+          <strong>{copy.stones}</strong>
+          {stones.map((stone) => (
+            <span key={stone.id}>
+              <i style={{ background: stone.color, boxShadow: `0 0 0 5px ${stone.accent}` }} />
+              {stone.name[context.locale]} · {stone.aura[context.locale]}
+            </span>
+          ))}
+        </div>
+      </div>
     </article>
   );
 }
@@ -978,6 +1143,8 @@ export default function ReportExperience({
               labels={copy.status}
             />
           </div>
+
+          <EnergyStylePanel context={context} />
 
           <div className="report-accordion">
             {natalSections.map((section) => (
