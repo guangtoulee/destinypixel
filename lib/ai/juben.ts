@@ -107,7 +107,7 @@ const DEEPSEEK_API_URL =
   "https://api.deepseek.com/v1/chat/completions";
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 const DEEPSEEK_TIMEOUT_MS = Number(
-  process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 22000,
+  process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
 );
 
 const maxIdeaLength = 4200;
@@ -540,24 +540,35 @@ export async function generateJubenResult(
 
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), DEEPSEEK_TIMEOUT_MS);
-    const response = await fetch(DEEPSEEK_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: DEEPSEEK_MODEL,
-        temperature: 0.38,
-        max_tokens: Number(process.env.JUBEN_DEEPSEEK_MAX_TOKENS ?? 14000),
-        response_format: { type: "json_object" },
-        messages: buildJubenMessages(input),
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    const response = await Promise.race([
+      fetch(DEEPSEEK_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: DEEPSEEK_MODEL,
+          temperature: 0.38,
+          max_tokens: Number(process.env.JUBEN_DEEPSEEK_MAX_TOKENS ?? 9000),
+          response_format: { type: "json_object" },
+          messages: buildJubenMessages(input),
+        }),
+        cache: "no-store",
+        signal: controller.signal,
       }),
-      cache: "no-store",
-      signal: controller.signal,
-    });
-    clearTimeout(timeout);
+      new Promise<Response>((_, reject) => {
+        timeout = setTimeout(() => {
+          controller.abort();
+          reject(new Error("DeepSeek request timed out."));
+        }, DEEPSEEK_TIMEOUT_MS);
+      }),
+    ]);
+
+    if (timeout) {
+      clearTimeout(timeout);
+    }
 
     if (!response.ok) {
       return fallbackJubenResult(
