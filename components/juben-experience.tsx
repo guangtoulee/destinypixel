@@ -47,6 +47,14 @@ type TabKey =
   | "edit"
   | "voice";
 
+const voiceLanguageOptions = [
+  "中文",
+  "英语",
+  "俄语",
+  "印尼语",
+  "阿拉伯语",
+];
+
 const initialForm: Required<JubenRequestBody> = {
   idea:
     "一个女律师发现自己每晚 23:17 都会收到已故母亲发来的微信语音。她一开始以为是诈骗，直到语音准确说出第二天庭审会出现的证据。她越追查，越发现母亲当年的死亡和自己正在辩护的案子有关。",
@@ -58,6 +66,7 @@ const initialForm: Required<JubenRequestBody> = {
   tone: "现实主义、紧张、克制、有情感刺痛",
   productionMode: "短剧分集",
   outputTarget: "Lovart 分镜图 + Grok 视频生成",
+  voiceLanguage: "中文",
   mustHave: "每集必须有真实戏剧动作、人物关系推进、结尾钩子；母女关系要有情感重量。",
   avoid:
     "不要写成宣传片、预告片、概念片；不要只写氛围；不要靠旁白解释；不要每一幕都神神叨叨。",
@@ -92,7 +101,7 @@ function promptText(items: JubenPromptItem[]) {
   return items
     .map(
       (item) =>
-        `${item.id} / ${item.sceneId}\n${item.prompt}\nNegative: ${item.negativePrompt}`,
+        `${item.id} / ${item.sceneId}\n${item.prompt}\n负向约束：${item.negativePrompt}`,
     )
     .join("\n\n");
 }
@@ -411,7 +420,7 @@ function shotPackageText(
     "【分镜首帧 / Lovart】",
     storyboard?.prompt ??
       `${result.visualBible.globalPrompt} ${shot.shotSize}, ${shot.cameraAngle}, ${shot.visual}, ${shot.action}`,
-    `Negative: ${[
+    `负向约束：${[
       result.visualBible.globalNegative,
       storyboard?.negativePrompt,
     ]
@@ -576,7 +585,7 @@ ${tableHtml("视觉圣经", ["模块", "内容"], [
   ["人物锁定", result.visualBible.characterLocks.map((item) => `${item.character}: ${item.lockedPrompt}`).join("\n")],
   ["关键道具", result.visualBible.keyProps.join("\n")],
   ["全局 Prompt", result.visualBible.globalPrompt],
-  ["全局 Negative", result.visualBible.globalNegative],
+  ["全局负向约束", result.visualBible.globalNegative],
 ])}
 ${tableHtml(
   "分集结构",
@@ -676,7 +685,7 @@ async function downloadExcel(result: JubenResult) {
     ["生产逻辑", result.visualBible.productionLogic.join("\n")],
     ["人物锁定", result.visualBible.characterLocks.map((item) => `${item.character}: ${item.lockedPrompt}`).join("\n")],
     ["全局 Prompt", result.visualBible.globalPrompt],
-    ["全局 Negative", result.visualBible.globalNegative],
+    ["全局负向约束", result.visualBible.globalNegative],
   ]);
   addSheet(
     "分集结构",
@@ -1078,6 +1087,7 @@ export default function JubenExperience() {
         tone: payload.tone,
         productionMode: payload.productionMode,
         outputTarget: payload.outputTarget,
+        voiceLanguage: payload.voiceLanguage,
         mustHave: payload.mustHave,
         avoid: payload.avoid,
       });
@@ -1249,6 +1259,21 @@ export default function JubenExperience() {
                   setForm(updateField(form, "tone", event.target.value))
                 }
               />
+            </label>
+            <label className={styles.field}>
+              <span>输出 / 配音语言</span>
+              <select
+                value={form.voiceLanguage}
+                onChange={(event) =>
+                  setForm(updateField(form, "voiceLanguage", event.target.value))
+                }
+              >
+                {voiceLanguageOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {value}
+                  </option>
+                ))}
+              </select>
             </label>
           </div>
 
@@ -1554,7 +1579,7 @@ export default function JubenExperience() {
                   <pre>{result.visualBible.globalPrompt}</pre>
                 </article>
                 <article>
-                  <span>全局 Negative</span>
+                  <span>全局负向约束</span>
                   <pre>{result.visualBible.globalNegative}</pre>
                 </article>
               </div>

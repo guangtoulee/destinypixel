@@ -8,6 +8,7 @@ export type JubenRequestBody = {
   tone?: string;
   productionMode?: string;
   outputTarget?: string;
+  voiceLanguage?: string;
   mustHave?: string;
   avoid?: string;
 };
@@ -170,6 +171,7 @@ export function normalizeJubenRequest(body: JubenRequestBody): Required<JubenReq
     tone: cleanText(body.tone, "现实主义、紧张、克制、有生活质感"),
     productionMode: cleanText(body.productionMode, "短剧分集"),
     outputTarget: cleanText(body.outputTarget, "Lovart 分镜图 + Grok 视频生成"),
+    voiceLanguage: cleanText(body.voiceLanguage, "中文"),
     mustHave: cleanText(body.mustHave, "每集必须有明确戏剧动作、对白推进、结尾钩子，不用旁白解释剧情"),
     avoid: cleanText(
       body.avoid,
@@ -210,13 +212,15 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
         "每一场都要回答：谁想要什么，谁阻止他，观众此刻知道了什么，下一秒为什么要继续看。",
         "镜头必须服务叙事，避免只写空镜、氛围、慢动作、震撼、史诗感、燃、大片感等预告片词。",
         "输出给 Lovart/Grok 的 prompt 要具体到人物、地点、动作、构图、光线、镜头焦段感、情绪和连续性。不要只写风格词。",
-        "必须输出 visualBible，像 live action production bible：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局 negative prompt。",
+        "必须输出 visualBible，按真人影视制作圣经来写：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局负向约束。",
         "visualBible 的人物锁定必须能直接用于角色定妆和每个镜头首帧，避免人物漂移。",
         "所有镜头 prompt 必须接近 LibTV 分镜提示词密度：使用 @角色 和 @场景/道具 标签；明确出场角色、背景场景、前一个镜头承接、分段动作、禁止项、约束、站位与朝向、运镜、音效。",
         "shotList.visual 必须写成可拍画面，不少于 45 个中文字符；shotList.action 必须包含具体身体动作、道具交互、站位关系和情绪变化；continuity 必须说明与上一镜/下一镜怎么接。",
         "cameraPrompts.prompt 要写视频运动提示词，不只写镜头名；必须包含分段秒数、主体运动、摄影机运动、景深/焦点变化、光影变化和不可违反的角色位置。",
         "storyboardPrompts.prompt 要写最终分镜提示词，不少于 80 个中文字符，必须包含景别、光影氛围、人物服装/道具、空间层次和视觉风格。",
         "editPrompts.prompt 要说明剪辑节奏、声音桥、对白口型、动作点和结尾钩子，不要只说快切或慢切。",
+        "默认使用中文输出。只有 creativeBrief.voiceLanguage 明确不是中文时，才把对白、配音脚本和可读提示词翻成对应语言；结构字段名仍保持 JSON schema 不变。",
+        "即使输出给国际视频模型，也不要整段默认英语化；中文用户的创作工作流优先中文。",
         "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
         "JSON 必须完全符合这个结构，所有字段都要有内容：",
         resultSchemaHint(),
@@ -235,6 +239,7 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
             "storyboardPrompts 用于分镜图生成；cameraPrompts 用于视频运镜；editPrompts 用于剪辑节奏。",
             "voiceoverScript 只在需要时使用旁白，优先对白和行动推进。",
             "qualityChecklist 必须包含反宣传片检查项。",
+            `输出语言/配音语言：${input.voiceLanguage}。`,
           ],
         },
         null,
@@ -263,6 +268,7 @@ export function buildJubenSeedMessages(input: Required<JubenRequestBody>): ChatM
             "E01 至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "visualBible 必须包含全剧风格、人物、色彩、环境定调和全局 prompt。",
             "所有镜头都按 LibTV 镜头表思路写：画面描述、景别、光影氛围、对白/旁白、音效、运镜、最终提示词都要足够具体。",
+            `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
           ],
         },
@@ -294,10 +300,11 @@ export function buildJubenEpisodeMessages(
           episodeOutline: baseResult.episodeOutline,
           outputRules: [
             `只生成 E${String(episode).padStart(2, "0")} 的导演剧本、镜头表、分镜 Prompt、运镜 Prompt、剪辑 Prompt。`,
-            "保留 establishedVisualBible 的角色锁定、色彩、场景、全局 negative，不要换演员脸和整体风格。",
+            "保留 establishedVisualBible 的角色锁定、色彩、场景、全局负向约束，不要换演员脸和整体风格。",
             "本集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
-            "每个镜头 prompt 都要能生成 photoreal first frame，再动画成 4-7 秒短剧镜头。",
+            "每个镜头 prompt 都要能生成真人写实首帧，再动画成 4-7 秒短剧镜头。",
             "每个镜头都要给足关键词密度：@角色、@场景、站位、朝向、前后镜承接、分段动作、禁止项、输出约束、光影变化、音效、对白口型。",
+            `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "不要输出其他集的导演场景和镜头。",
             "返回完整 JSON 结构，但数组内容只放目标集的细节。",
           ],
@@ -319,7 +326,8 @@ export function buildJubenAnalysisMessages(
         "你是短剧平台的选题策划和制片开发编辑。",
         "用户只会先输入一个想法。你要先做创意简析，并自动补齐后续生成剧本包需要的参数。",
         "优先根据 idea 重新判断类型、受众、集数、时长和气质；不要因为表单里已有默认值就机械保留，除非 idea 明确要求固定规格。",
-        "判断要偏短剧工业化：类型、受众、集数、单集时长、画幅、气质、必须保留、避免方向。",
+        "判断要偏短剧工业化：类型、受众、集数、单集时长、画幅、气质、输出/配音语言、必须保留、避免方向。",
+        "默认输出/配音语言是中文；只有用户想法或 currentDraft.voiceLanguage 明确指定其他语言时，才建议英语、俄语、印尼语或阿拉伯语。",
         "必须避免把项目推成宣传片、预告片、氛围片。必须强调人物目标、冲突、反转、结尾钩子。",
         "返回严格 JSON，不要 Markdown，不要代码块。",
         "JSON 结构：",
@@ -336,6 +344,7 @@ export function buildJubenAnalysisMessages(
           '  "tone": "...",',
           '  "productionMode": "短剧分集",',
           '  "outputTarget": "Lovart 分镜图 + Grok 视频生成",',
+          '  "voiceLanguage": "中文",',
           '  "mustHave": "...",',
           '  "avoid": "...",',
           '  "revisionNotes": ["..."]',
@@ -438,80 +447,80 @@ function fallbackVisualBible(
   if (isWestern) {
     return {
       format:
-        "Vertical 9:16 live-action microdrama. Serious suspense romance, not parody, not fantasy cosplay.",
+        `${input.aspectRatio} 真人竖屏短剧，1875 年美国西部哥特悬疑爱情，不恶搞，不做奇幻 cosplay。`,
       coreStyle:
-        "Photoreal live-action vertical drama, 1880s American frontier gothic romance, remote farmhouse, prairie storm, barn loft, abandoned chapel, candlelit interiors, rain, mud, silver mirror, old Bible, velvet cloak, serious suspense, romance-thriller tone, cinematic close faces for phone screen.",
+        "真人写实电影质感，1875 美国西部荒原哥特爱情惊悚；偏远农舍、草原暴风、谷仓阁楼、废弃小教堂、烛光室内、雨、泥、银镜、旧圣经、天鹅绒斗篷；严肃悬疑与禁忌吸引并行，手机竖屏需要大量近脸特写。",
       colorPalette: [
-        "storm blue",
-        "candle amber",
-        "black leather",
-        "navy velvet",
-        "bone white",
-        "rust brown",
-        "silver mirror highlights",
+        "暴风冷蓝",
+        "烛火琥珀",
+        "黑色皮革",
+        "深海军蓝天鹅绒",
+        "骨白肤色",
+        "铁锈棕泥土",
+        "银镜高光",
       ],
       cameraLanguage: [
-        "close faces for phone screen",
-        "doorway frames",
-        "mirror reveals",
-        "one-frame shadow stings",
-        "locked dramatic pauses",
-        "minimal locations",
+        "适合手机屏幕的近脸特写",
+        "门框构图制造压迫",
+        "镜面揭示身份异常",
+        "一帧阴影惊吓点",
+        "锁定机位的戏剧停顿",
+        "少量场景反复使用",
       ],
       productionLogic: [
-        "forbidden attraction",
-        "suspicious wife",
-        "other woman",
-        "betrayal",
-        "supernatural punishment",
-        "cliffhanger every episode",
+        "禁忌吸引",
+        "妻子的怀疑",
+        "外来女人破坏家庭",
+        "背叛与反咬",
+        "超自然惩罚",
+        "每集结尾必须有钩子",
       ],
       environmentRules: [
-        "Keep sets small: farmhouse, barn, chapel.",
-        "Use rain, mud, candlelight, wood interiors and prairie storm as repeating texture.",
-        "No fantasy cosplay; all supernatural signs must appear through practical objects and performance.",
+        "场景控制在农舍、谷仓、小教堂和荒原马车附近。",
+        "反复使用雨、泥、烛光、木质室内和草原风暴作为质感。",
+        "不做奇幻 cosplay；所有超自然迹象都通过实物、表演、光影和镜面反射出现。",
       ],
       characterLocks: [
         {
-          character: "Elias Hale",
+          character: "约翰",
           lockedPrompt:
-            "34-year-old American frontier rancher and former cavalryman, wet black hat, dark leather coat, short beard, tired blue-gray eyes, revolver held low, guilt-prone protector energy.",
+            "34 岁美国西部牧场主，退役骑兵，湿黑帽、深色皮革外套、短胡子、疲惫蓝灰眼，左轮枪低垂，带愧疚感的保护者气质。",
         },
         {
-          character: "Mara Hale",
+          character: "玛莎",
           lockedPrompt:
-            "30-year-old ranch wife, beige calico dress, braided dark hair, sharp eyes, practical and controlled, silver hand mirror, small Bible or rosary, survivor energy.",
+            "30 岁牧场妻子，米色印花棉布长裙、深色编发、眼神锐利，务实克制，随身银手镜、小圣经或念珠，幸存者气质。",
         },
         {
-          character: "Lady Seraphine Voss",
+          character: "莉莉丝",
           lockedPrompt:
-            "24-looking European noblewoman, pale face, torn navy-black velvet cloak with gold embroidery, elegant accent, dangerous stillness, beautiful but predatory, no nudity.",
+            "外表 24 岁的欧洲落魄贵族女人，苍白面孔，破损深蓝黑天鹅绒斗篷带金色刺绣，优雅口音，危险的静止感，美丽但具有捕食性，不裸露。",
         },
         {
-          character: "Reverend Crowe",
+          character: "克劳牧师",
           lockedPrompt:
-            "Old half-mad frontier preacher, ragged black coat, cracked voice, rosary, silver cup, knows old-world monsters but is not clean or saintly.",
+            "年迈半疯的边境牧师，破旧黑外套，嗓音沙哑，念珠和银杯，懂旧世界怪物但并不圣洁。",
         },
       ],
       keyProps: [
-        "silver hand mirror",
-        "old Bible or rosary",
-        "wet black hat",
-        "navy-black velvet cloak",
-        "candle",
-        "barn rope",
-        "muddy threshold",
+        "银手镜",
+        "旧圣经或念珠",
+        "湿黑帽",
+        "深蓝黑天鹅绒斗篷",
+        "蜡烛",
+        "谷仓麻绳",
+        "泥泞门槛",
       ],
-      globalPrompt: `${title}, Frontier Gothic Romance version, photoreal live-action vertical short drama, 1880s American frontier gothic romance, remote farmhouse, barn, chapel, candlelit interiors, prairie storm, rain, mud, serious suspense romance, cinematic close faces, consistent characters, 9:16.`,
+      globalPrompt: `${title}，西部哥特爱情惊悚版，真人写实竖屏短剧，1875 美国边境荒原，偏远农舍、谷仓、小教堂、烛光室内、草原风暴、雨和泥，严肃悬疑爱情，手机屏幕近脸特写，人物身份和服装必须连续，${input.aspectRatio}。`,
       globalNegative:
-        "no text in image, no watermark, no logo, no subtitles inside the frame, no modern objects unless specified, no explicit nudity, no gore, no distorted hands, no extra fingers, no duplicate faces, no low-res blur, keep character identity consistent.",
+        "画面内不要文字，不要水印，不要 logo，不要内嵌字幕，不要现代物品，除非明确指定；不要裸露，不要血腥 gore，不要畸形手，不要多指，不要重复脸，不要低清模糊，必须保持角色身份一致。",
     };
   }
 
   return {
     format: `${input.aspectRatio} 真人短剧，${input.productionMode}，面向 ${input.outputTarget}。`,
     coreStyle:
-      "Photoreal live-action vertical microdrama, realistic locations, phone-screen close faces, controlled suspense, practical props, small sets, clear character continuity.",
+      "真人写实竖屏短剧，小场景、真实地点、手机屏幕近脸特写、克制悬疑、实用道具、角色外貌和服装连续。",
     colorPalette: ["现实冷色", "暖色实用光", "低饱和肤色", "关键道具高光", "暗部保留细节"],
     cameraLanguage: [
       "近脸特写承接情绪",
@@ -543,9 +552,9 @@ function fallbackVisualBible(
       },
     ],
     keyProps: ["手机", "门", "镜子", "旧照片", "证据物", "生活化服装"],
-    globalPrompt: `${title}, photoreal live-action vertical microdrama, ${input.tone}, realistic small sets, close faces, dramatic conflict, consistent character identity, clear props, no trailer montage, ${input.aspectRatio}.`,
+    globalPrompt: `${title}，真人写实竖屏短剧，${input.tone}，真实小场景，近脸特写，戏剧冲突明确，人物身份连续，道具清楚，不要预告片混剪，${input.aspectRatio}。`,
     globalNegative:
-      "no text in image, no watermark, no logo, no subtitles, no modern objects unless specified, no explicit nudity, no gore, no distorted hands, no extra fingers, no duplicate faces, no low-res blur, no poster composition, no empty atmospheric montage.",
+      "画面内不要文字，不要水印，不要 logo，不要字幕，不要未指定的现代物品，不要裸露，不要血腥 gore，不要畸形手，不要多指，不要重复脸，不要低清模糊，不要海报构图，不要空镜氛围蒙太奇。",
   };
 }
 
@@ -1013,7 +1022,7 @@ function makePromptFromShot(
   return {
     id: baseId,
     sceneId: shot.sceneId,
-    prompt: `${shot.shotId} 最终分镜提示词：${shot.shotSize}，${shot.cameraAngle}，${shot.visual}。人物动作：${shot.action}。画面必须有前景/中景/背景层次，主体清楚，关键道具可见，服装污渍和材质连续，光影氛围服务戏剧冲突，保留上一镜空间和人物朝向。现实主义短剧质感，photoreal live-action vertical drama，不要海报构图。`,
+    prompt: `${shot.shotId} 最终分镜提示词：${shot.shotSize}，${shot.cameraAngle}，${shot.visual}。人物动作：${shot.action}。画面必须有前景/中景/背景层次，主体清楚，关键道具可见，服装污渍和材质连续，光影氛围服务戏剧冲突，保留上一镜空间和人物朝向。真人写实竖屏短剧质感，不要海报构图。`,
     negativePrompt:
       "不要海报构图，不要预告片大片感，不要抽象空镜，不要夸张光效，不要多余文字，不要人物五官不连续。",
   };
@@ -1207,6 +1216,7 @@ export async function analyzeJubenIdea(
       tone: cleanText(record.tone, input.tone),
       productionMode: cleanText(record.productionMode, input.productionMode),
       outputTarget: cleanText(record.outputTarget, input.outputTarget),
+      voiceLanguage: cleanText(record.voiceLanguage, input.voiceLanguage),
       mustHave: cleanText(record.mustHave, input.mustHave),
       avoid: cleanText(record.avoid, input.avoid),
       titleSuggestion: cleanText(record.titleSuggestion, "短剧开发建议"),
