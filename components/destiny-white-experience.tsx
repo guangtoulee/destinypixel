@@ -241,6 +241,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/atelier",
           cta: "Build bracelet",
         },
+        {
+          title: "Script Studio",
+          body: "Turn a short-drama idea into a story bible, director script, shot list, storyboard prompts, camera prompts, edit prompts, and dubbing notes.",
+          href: "/juben",
+          cta: "Build script",
+        },
       ],
     },
     sticks: {
@@ -445,6 +451,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           href: "/atelier",
           cta: "定制手串",
         },
+        {
+          title: "剧本工坊",
+          body: "把短剧想法拆成故事圣经、导演剧本、镜头表、分镜 prompt、运镜 prompt、剪辑 prompt 和配音脚本。",
+          href: "/juben",
+          cta: "生成剧本",
+        },
       ],
     },
     sticks: {
@@ -644,6 +656,12 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           body: "Цвет пяти стихий превращается в концепт браслета: камни, размер бусин и символический анализ.",
           href: "/atelier",
           cta: "Собрать браслет",
+        },
+        {
+          title: "Script Studio",
+          body: "Идея короткого сериала превращается в библию истории, режиссерский сценарий, список кадров и prompts для storyboard, камеры, монтажа и озвучки.",
+          href: "/juben",
+          cta: "Создать сценарий",
         },
       ],
     },
