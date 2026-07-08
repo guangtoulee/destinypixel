@@ -149,6 +149,7 @@
 }
 
 .actionRow,
+.analyzeRow,
 .copyActions {
   display: flex;
   align-items: center;
@@ -157,6 +158,75 @@
 
 .actionRow {
   margin-top: 18px;
+}
+
+.analyzeRow {
+  margin-top: 12px;
+  align-items: stretch;
+}
+
+.analyzeRow button {
+  display: inline-flex;
+  min-height: 38px;
+  flex: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(130, 209, 189, 0.34);
+  border-radius: 7px;
+  color: #06130f;
+  background: #82d1bd;
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analyzeRow button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.analyzeRow button:disabled svg {
+  animation: spin 1s linear infinite;
+}
+
+.analyzeRow span {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  color: #a9a092;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.analysisNote {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid rgba(130, 209, 189, 0.2);
+  border-radius: 7px;
+  background: rgba(130, 209, 189, 0.06);
+}
+
+.analysisNote strong {
+  color: #e9fff8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.analysisNote p {
+  margin: 0;
+  color: #b7c9c2;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .actionRow button,
@@ -354,6 +424,33 @@
   justify-content: flex-end;
 }
 
+.episodeSwitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.episodeSwitch button {
+  display: inline-flex;
+  min-height: 32px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: #cfc6b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.episodeSwitch button[data-active="true"] {
+  border-color: rgba(242, 189, 102, 0.62);
+  color: #17100a;
+  background: #f2bd66;
+}
+
 .resultBody {
   min-height: 420px;
   overflow: auto;
@@ -441,6 +538,21 @@
 
 .episodeList article {
   padding: 14px;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.episodeList article:hover,
+.episodeList article[data-active="true"] {
+  border-color: rgba(130, 209, 189, 0.42);
+  background: rgba(130, 209, 189, 0.08);
+}
+
+.episodeList article:hover {
+  transform: translateY(-1px);
 }
 
 .episodeList header,
@@ -661,6 +773,7 @@
 
   .resultToolbar,
   .actionRow,
+  .analyzeRow,
   .copyActions {
     align-items: stretch;
     flex-direction: column;
@@ -668,8 +781,13 @@
 
   .tabs button,
   .copyActions button,
+  .analyzeRow button,
   .actionRow button {
     width: 100%;
+  }
+
+  .analyzeRow span {
+    min-height: 42px;
   }
 
   .visualPanel {

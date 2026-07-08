@@ -20,6 +20,7 @@ import {
   Video,
 } from "lucide-react";
 import type {
+  JubenAnalysisResult,
   JubenPromptItem,
   JubenRequestBody,
   JubenResult,
@@ -29,6 +30,8 @@ import type {
 import styles from "./juben-experience.module.css";
 
 type Status = "idle" | "loading" | "ready" | "error";
+type AnalyzeStatus = "idle" | "loading" | "ready" | "error";
+type EpisodeScope = number | "all";
 type TabKey =
   | "bible"
   | "outline"
@@ -88,6 +91,74 @@ function promptText(items: JubenPromptItem[]) {
 }
 
 function resultTabText(result: JubenResult, tab: TabKey) {
+  return resultTabTextForScope(result, tab, "all");
+}
+
+function sceneEpisode(sceneId: string) {
+  const match = sceneId.match(/^E(\d+)/i);
+
+  return match ? Number(match[1]) : 1;
+}
+
+function scopedResultParts(result: JubenResult, scope: EpisodeScope) {
+  const episode =
+    scope === "all" ? null : typeof scope === "number" ? scope : null;
+  const scenes =
+    episode === null
+      ? result.directorScript
+      : result.directorScript.filter((scene) => scene.episode === episode);
+  const sceneIds = new Set(scenes.map((scene) => scene.sceneId));
+  const shots =
+    episode === null
+      ? result.shotList
+      : result.shotList.filter(
+          (shot) =>
+            sceneIds.has(shot.sceneId) || sceneEpisode(shot.sceneId) === episode,
+        );
+  const storyboardPrompts =
+    episode === null
+      ? result.storyboardPrompts
+      : result.storyboardPrompts.filter(
+          (item) =>
+            sceneIds.has(item.sceneId) || sceneEpisode(item.sceneId) === episode,
+        );
+  const cameraPrompts =
+    episode === null
+      ? result.cameraPrompts
+      : result.cameraPrompts.filter(
+          (item) =>
+            sceneIds.has(item.sceneId) || sceneEpisode(item.sceneId) === episode,
+        );
+  const editPrompts =
+    episode === null
+      ? result.editPrompts
+      : result.editPrompts.filter(
+          (item) =>
+            sceneIds.has(item.sceneId) || sceneEpisode(item.sceneId) === episode,
+        );
+  const outline =
+    episode === null
+      ? result.episodeOutline
+      : result.episodeOutline.filter((item) => item.episode === episode);
+
+  return {
+    episode,
+    outline,
+    scenes,
+    shots,
+    storyboardPrompts,
+    cameraPrompts,
+    editPrompts,
+  };
+}
+
+function resultTabTextForScope(
+  result: JubenResult,
+  tab: TabKey,
+  scope: EpisodeScope,
+) {
+  const scoped = scopedResultParts(result, scope);
+
   switch (tab) {
     case "bible":
       return asPrettyJson({
@@ -95,17 +166,17 @@ function resultTabText(result: JubenResult, tab: TabKey) {
         storyBible: result.storyBible,
       });
     case "outline":
-      return asPrettyJson(result.episodeOutline);
+      return asPrettyJson(scoped.outline);
     case "script":
-      return asPrettyJson(result.directorScript);
+      return asPrettyJson(scoped.scenes);
     case "shots":
-      return asPrettyJson(result.shotList);
+      return asPrettyJson(scoped.shots);
     case "storyboard":
-      return promptText(result.storyboardPrompts);
+      return promptText(scoped.storyboardPrompts);
     case "camera":
-      return promptText(result.cameraPrompts);
+      return promptText(scoped.cameraPrompts);
     case "edit":
-      return promptText(result.editPrompts);
+      return promptText(scoped.editPrompts);
     case "voice":
       return asPrettyJson({
         voiceoverScript: result.voiceoverScript,
@@ -114,14 +185,141 @@ function resultTabText(result: JubenResult, tab: TabKey) {
   }
 }
 
-function downloadText(filename: string, text: string) {
-  const blob = new Blob([text], { type: "application/json;charset=utf-8" });
+function downloadBlob(filename: string, text: string, type: string) {
+  const blob = new Blob([text], { type });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = filename;
   anchor.click();
   URL.revokeObjectURL(url);
+}
+
+function downloadText(filename: string, text: string) {
+  downloadBlob(filename, text, "application/json;charset=utf-8");
+}
+
+function escapeHtml(value: unknown) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function tableHtml(
+  title: string,
+  headers: string[],
+  rows: Array<Array<unknown>>,
+) {
+  return [
+    `<h2>${escapeHtml(title)}</h2>`,
+    "<table>",
+    `<thead><tr>${headers.map((header) => `<th>${escapeHtml(header)}</th>`).join("")}</tr></thead>`,
+    `<tbody>${rows
+      .map(
+        (row) =>
+          `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`,
+      )
+      .join("")}</tbody>`,
+    "</table>",
+  ].join("");
+}
+
+function exportHtml(result: JubenResult) {
+  const promptRows = [
+    ...result.storyboardPrompts.map((item) => ["分镜", item.id, item.sceneId, item.prompt, item.negativePrompt]),
+    ...result.cameraPrompts.map((item) => ["运镜", item.id, item.sceneId, item.prompt, item.negativePrompt]),
+    ...result.editPrompts.map((item) => ["剪辑", item.id, item.sceneId, item.prompt, item.negativePrompt]),
+  ];
+
+  return `<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;color:#111}
+h1{font-size:24px} h2{margin-top:24px;font-size:18px}
+table{border-collapse:collapse;width:100%;margin:10px 0 22px}
+th,td{border:1px solid #999;padding:8px;vertical-align:top;font-size:12px;line-height:1.45}
+th{background:#efefef}
+</style>
+</head>
+<body>
+<h1>${escapeHtml(result.meta.title)} - 短剧生产包</h1>
+<p>${escapeHtml(result.meta.logline)}</p>
+${tableHtml("故事圣经", ["模块", "内容"], [
+  ["核心承诺", result.diagnosis.corePromise],
+  ["观众钩子", result.diagnosis.realAudienceHook],
+  ["预告片风险", result.diagnosis.trailerRisk],
+  ["修正策略", result.diagnosis.fixStrategy],
+  ["主题", result.storyBible.theme],
+  ["世界观", result.storyBible.world],
+  ["主角", result.storyBible.protagonist],
+  ["反派/阻碍", result.storyBible.antagonist],
+  ["冲突引擎", result.storyBible.conflictEngine],
+])}
+${tableHtml(
+  "分集结构",
+  ["集数", "标题", "钩子", "节拍", "转折", "结尾钩子"],
+  result.episodeOutline.map((episode) => [
+    `E${String(episode.episode).padStart(2, "0")}`,
+    episode.title,
+    episode.hook,
+    episode.beats.join("\n"),
+    episode.turn,
+    episode.cliffhanger,
+  ]),
+)}
+${tableHtml(
+  "导演剧本",
+  ["场景", "集数", "场景标题", "戏剧目的", "冲突", "动作", "对白", "情绪转折"],
+  result.directorScript.map((scene) => [
+    scene.sceneId,
+    scene.episode,
+    scene.sceneHeading,
+    scene.dramaticPurpose,
+    scene.conflict,
+    scene.action,
+    scene.dialogue.map((line) => `${line.character}: ${line.line}（${line.subtext}）`).join("\n"),
+    scene.emotionalTurn,
+  ]),
+)}
+${tableHtml(
+  "镜头表",
+  ["镜头", "场景", "景别", "机位", "运镜", "时长", "画面", "动作", "声音", "连续性"],
+  result.shotList.map((shot) => [
+    shot.shotId,
+    shot.sceneId,
+    shot.shotSize,
+    shot.cameraAngle,
+    shot.movement,
+    shot.duration,
+    shot.visual,
+    shot.action,
+    shot.sound,
+    shot.continuity,
+  ]),
+)}
+${tableHtml("AI Prompt", ["类型", "编号", "场景", "Prompt", "Negative"], promptRows)}
+</body>
+</html>`;
+}
+
+function downloadExcel(result: JubenResult) {
+  downloadBlob(
+    `${result.meta.title || "juben"}-production-pack.xls`,
+    exportHtml(result),
+    "application/vnd.ms-excel;charset=utf-8",
+  );
+}
+
+function downloadWord(result: JubenResult) {
+  downloadBlob(
+    `${result.meta.title || "juben"}-production-pack.doc`,
+    exportHtml(result),
+    "application/msword;charset=utf-8",
+  );
 }
 
 function PromptList({ items }: { items: JubenPromptItem[] }) {
@@ -211,14 +409,25 @@ export default function JubenExperience() {
   const [form, setForm] = useState<Required<JubenRequestBody>>(initialForm);
   const [result, setResult] = useState<JubenResult | null>(null);
   const [status, setStatus] = useState<Status>("idle");
+  const [analyzeStatus, setAnalyzeStatus] = useState<AnalyzeStatus>("idle");
+  const [analysis, setAnalysis] = useState<JubenAnalysisResult | null>(null);
   const [activeTab, setActiveTab] = useState<TabKey>("bible");
+  const [episodeScope, setEpisodeScope] = useState<EpisodeScope>("all");
   const [copied, setCopied] = useState<string | null>(null);
+
+  const scopedParts = useMemo(() => {
+    if (!result) {
+      return null;
+    }
+
+    return scopedResultParts(result, episodeScope);
+  }, [episodeScope, result]);
 
   const currentTabText = useMemo(() => {
     if (!result) return "";
 
-    return resultTabText(result, activeTab);
-  }, [activeTab, result]);
+    return resultTabTextForScope(result, activeTab, episodeScope);
+  }, [activeTab, episodeScope, result]);
 
   const totals = useMemo(() => {
     if (!result) {
@@ -226,14 +435,15 @@ export default function JubenExperience() {
     }
 
     return {
-      scenes: result.directorScript.length,
-      shots: result.shotList.length,
+      scenes: scopedParts?.scenes.length ?? result.directorScript.length,
+      shots: scopedParts?.shots.length ?? result.shotList.length,
       prompts:
-        result.storyboardPrompts.length +
-        result.cameraPrompts.length +
-        result.editPrompts.length,
+        (scopedParts?.storyboardPrompts.length ??
+          result.storyboardPrompts.length) +
+        (scopedParts?.cameraPrompts.length ?? result.cameraPrompts.length) +
+        (scopedParts?.editPrompts.length ?? result.editPrompts.length),
     };
-  }, [result]);
+  }, [result, scopedParts]);
 
   async function copyText(label: string, text: string) {
     if (!text) return;
@@ -261,9 +471,47 @@ export default function JubenExperience() {
 
       const payload = (await response.json()) as JubenResult;
       setResult(payload);
+      setEpisodeScope("all");
       setStatus(payload.meta.provider === "deepseek" ? "ready" : "error");
     } catch {
       setStatus("error");
+    }
+  }
+
+  async function handleAnalyze() {
+    if (form.idea.trim().length < 8) return;
+
+    setAnalyzeStatus("loading");
+
+    try {
+      const response = await fetch("/api/juben/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Analyze request failed.");
+      }
+
+      const payload = (await response.json()) as JubenAnalysisResult;
+      setAnalysis(payload);
+      setForm({
+        ...form,
+        genre: payload.genre,
+        audience: payload.audience,
+        episodeCount: payload.episodeCount,
+        episodeLength: payload.episodeLength,
+        aspectRatio: payload.aspectRatio,
+        tone: payload.tone,
+        productionMode: payload.productionMode,
+        outputTarget: payload.outputTarget,
+        mustHave: payload.mustHave,
+        avoid: payload.avoid,
+      });
+      setAnalyzeStatus("ready");
+    } catch {
+      setAnalyzeStatus("error");
     }
   }
 
@@ -296,6 +544,35 @@ export default function JubenExperience() {
               }
             />
           </label>
+
+          <div className={styles.analyzeRow}>
+            <button
+              type="button"
+              onClick={handleAnalyze}
+              disabled={analyzeStatus === "loading" || form.idea.trim().length < 8}
+            >
+              {analyzeStatus === "loading" ? (
+                <Loader2 size={16} />
+              ) : (
+                <Sparkles size={16} />
+              )}
+              {analyzeStatus === "loading" ? "正在简析" : "先简析想法"}
+            </button>
+            <span>
+              {analysis
+                ? `${analysis.titleSuggestion} · ${analysis.hook}`
+                : "先让 AI 补齐类型、受众、集数、气质和生成约束。"}
+            </span>
+          </div>
+
+          {analysis ? (
+            <div className={styles.analysisNote}>
+              <strong>{analysis.premise}</strong>
+              {analysis.revisionNotes.map((note) => (
+                <p key={note}>{note}</p>
+              ))}
+            </div>
+          ) : null}
 
           <div className={styles.fieldGrid}>
             <label className={styles.field}>
@@ -407,6 +684,9 @@ export default function JubenExperience() {
                 setForm(initialForm);
                 setResult(null);
                 setStatus("idle");
+                setAnalysis(null);
+                setAnalyzeStatus("idle");
+                setEpisodeScope("all");
               }}
             >
               <RefreshCcw size={16} />
@@ -462,7 +742,11 @@ export default function JubenExperience() {
             </div>
             <div>
               <small>格式</small>
-              <strong>{result?.meta.format ?? form.aspectRatio}</strong>
+              <strong>
+                {episodeScope === "all"
+                  ? result?.meta.format ?? form.aspectRatio
+                  : `E${String(episodeScope).padStart(2, "0")} · ${form.aspectRatio}`}
+              </strong>
             </div>
           </div>
 
@@ -513,10 +797,48 @@ export default function JubenExperience() {
                 }
               >
                 <Download size={15} />
-                下载
+                JSON
+              </button>
+              <button
+                type="button"
+                disabled={!result}
+                onClick={() => result && downloadExcel(result)}
+              >
+                <Download size={15} />
+                Excel
+              </button>
+              <button
+                type="button"
+                disabled={!result}
+                onClick={() => result && downloadWord(result)}
+              >
+                <Download size={15} />
+                Word
               </button>
             </div>
           </div>
+
+          {result ? (
+            <div className={styles.episodeSwitch} role="group" aria-label="选择集数">
+              <button
+                type="button"
+                data-active={episodeScope === "all"}
+                onClick={() => setEpisodeScope("all")}
+              >
+                全部
+              </button>
+              {result.episodeOutline.map((episode) => (
+                <button
+                  key={episode.episode}
+                  type="button"
+                  data-active={episodeScope === episode.episode}
+                  onClick={() => setEpisodeScope(episode.episode)}
+                >
+                  E{String(episode.episode).padStart(2, "0")}
+                </button>
+              ))}
+            </div>
+          ) : null}
 
           <div className={styles.resultBody}>
             {!result ? (
@@ -568,8 +890,12 @@ export default function JubenExperience() {
               </div>
             ) : activeTab === "outline" ? (
               <div className={styles.episodeList}>
-                {result.episodeOutline.map((episode) => (
-                  <article key={episode.episode}>
+                {(scopedParts?.outline ?? result.episodeOutline).map((episode) => (
+                  <article
+                    key={episode.episode}
+                    data-active={episodeScope === episode.episode}
+                    onClick={() => setEpisodeScope(episode.episode)}
+                  >
                     <header>
                       <span>E{String(episode.episode).padStart(2, "0")}</span>
                       <strong>{episode.title}</strong>
@@ -586,22 +912,22 @@ export default function JubenExperience() {
               </div>
             ) : activeTab === "script" ? (
               <div className={styles.sceneGrid}>
-                {result.directorScript.map((scene) => (
+                {(scopedParts?.scenes ?? result.directorScript).map((scene) => (
                   <SceneCard key={scene.sceneId} scene={scene} />
                 ))}
               </div>
             ) : activeTab === "shots" ? (
               <div className={styles.shotGrid}>
-                {result.shotList.map((shot) => (
+                {(scopedParts?.shots ?? result.shotList).map((shot) => (
                   <ShotCard key={shot.shotId} shot={shot} />
                 ))}
               </div>
             ) : activeTab === "storyboard" ? (
-              <PromptList items={result.storyboardPrompts} />
+              <PromptList items={scopedParts?.storyboardPrompts ?? result.storyboardPrompts} />
             ) : activeTab === "camera" ? (
-              <PromptList items={result.cameraPrompts} />
+              <PromptList items={scopedParts?.cameraPrompts ?? result.cameraPrompts} />
             ) : activeTab === "edit" ? (
-              <PromptList items={result.editPrompts} />
+              <PromptList items={scopedParts?.editPrompts ?? result.editPrompts} />
             ) : (
               <div className={styles.voiceGrid}>
                 <article>
@@ -620,11 +946,17 @@ export default function JubenExperience() {
                 </article>
                 <article>
                   <span>Lovart 分镜包</span>
-                  <pre>{result.productionPack.lovartStoryboard}</pre>
+                  <pre>
+                    {promptText(
+                      scopedParts?.storyboardPrompts ?? result.storyboardPrompts,
+                    )}
+                  </pre>
                 </article>
                 <article>
                   <span>Grok 视频包</span>
-                  <pre>{result.productionPack.grokVideo}</pre>
+                  <pre>
+                    {promptText(scopedParts?.cameraPrompts ?? result.cameraPrompts)}
+                  </pre>
                 </article>
               </div>
             )}

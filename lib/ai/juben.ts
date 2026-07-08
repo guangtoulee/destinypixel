@@ -12,6 +12,13 @@ export type JubenRequestBody = {
   avoid?: string;
 };
 
+export type JubenAnalysisResult = Required<JubenRequestBody> & {
+  titleSuggestion: string;
+  premise: string;
+  hook: string;
+  revisionNotes: string[];
+};
+
 export type JubenDialogueLine = {
   character: string;
   line: string;
@@ -118,6 +125,10 @@ function clampEpisodeCount(value: unknown) {
   return Math.min(12, Math.max(1, Math.round(value)));
 }
 
+function episodeCode(episode: number) {
+  return `E${String(episode).padStart(2, "0")}`;
+}
+
 function cleanText(value: unknown, fallback = "") {
   if (typeof value !== "string") return fallback;
 
@@ -203,10 +214,121 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
   ];
 }
 
+export function buildJubenAnalysisMessages(
+  input: Required<JubenRequestBody>,
+): ChatMessage[] {
+  return [
+    {
+      role: "system",
+      content: [
+        "你是短剧平台的选题策划和制片开发编辑。",
+        "用户只会先输入一个想法。你要先做创意简析，并自动补齐后续生成剧本包需要的参数。",
+        "优先根据 idea 重新判断类型、受众、集数、时长和气质；不要因为表单里已有默认值就机械保留，除非 idea 明确要求固定规格。",
+        "判断要偏短剧工业化：类型、受众、集数、单集时长、画幅、气质、必须保留、避免方向。",
+        "必须避免把项目推成宣传片、预告片、氛围片。必须强调人物目标、冲突、反转、结尾钩子。",
+        "返回严格 JSON，不要 Markdown，不要代码块。",
+        "JSON 结构：",
+        [
+          "{",
+          '  "titleSuggestion": "...",',
+          '  "premise": "...",',
+          '  "hook": "...",',
+          '  "genre": "...",',
+          '  "audience": "...",',
+          '  "episodeCount": 8,',
+          '  "episodeLength": "90 秒",',
+          '  "aspectRatio": "9:16 竖屏",',
+          '  "tone": "...",',
+          '  "productionMode": "短剧分集",',
+          '  "outputTarget": "Lovart 分镜图 + Grok 视频生成",',
+          '  "mustHave": "...",',
+          '  "avoid": "...",',
+          '  "revisionNotes": ["..."]',
+          "}",
+        ].join("\n"),
+      ].join("\n"),
+    },
+    {
+      role: "user",
+      content: JSON.stringify(
+        {
+          currentDraft: input,
+          instruction:
+            "根据 idea 自动生成后面参数。表单可能带有默认值，不要把默认值当成用户明确选择；如果明显不适合短剧，可以在 revisionNotes 里提示。",
+        },
+        null,
+        2,
+      ),
+    },
+  ];
+}
+
 function episodeTitle(base: string, episode: number) {
-  const titles = ["错送", "旧门牌", "等不到的人", "最后一单", "雨停之前", "门后证词"];
+  const titles = [
+    "错送",
+    "旧门牌",
+    "等不到的人",
+    "最后一单",
+    "雨停之前",
+    "门后证词",
+    "反咬",
+    "开门",
+    "交换证据",
+    "最后一夜",
+    "旧账",
+    "真相回声",
+  ];
 
   return `${titles[(episode - 1) % titles.length]}：${base}`;
+}
+
+function fallbackJubenAnalysis(
+  input: Required<JubenRequestBody>,
+  reason = "DeepSeek 简析暂不可用，已用本地策划规则补齐。",
+): JubenAnalysisResult {
+  const idea = input.idea;
+  const hasRomance = /爱|婚|妻|夫|暧昧|恋|情|女主|男主/.test(idea);
+  const hasHorror = /鬼|魔|死|尸|附身|诅咒|医院|监控|失踪/.test(idea);
+  const hasCase = /案|律师|警|证据|调查|法庭|离婚|遗产/.test(idea);
+  const genre = hasCase
+    ? "都市悬疑短剧"
+    : hasHorror
+      ? "民俗惊悚短剧"
+      : hasRomance
+        ? "情感反转短剧"
+        : input.genre || "强反转短剧";
+
+  return {
+    ...input,
+    genre,
+    audience:
+      hasRomance || hasHorror
+        ? "18-35 岁，喜欢反转、亲情悬疑、情感拉扯和强钩子的竖屏短剧用户"
+        : input.audience,
+    episodeCount: input.episodeCount || 8,
+    episodeLength: input.episodeLength || "90 秒",
+    aspectRatio: input.aspectRatio || "9:16 竖屏",
+    tone:
+      hasHorror
+        ? "现实主义、紧张、克制、带民俗惊悚和情感刺痛"
+        : input.tone,
+    productionMode: "短剧分集",
+    outputTarget: "Lovart 分镜图 + Grok 视频生成",
+    titleSuggestion: hasHorror ? "夜里多出来的人" : "第一场真相",
+    premise:
+      "主角被一个看似偶然的小事件拖入更大的隐情，每集用一个具体行动推进真相，而不是用旁白解释世界观。",
+    hook:
+      "观众追看的核心不是设定有多奇，而是主角每次接近真相都会付出新的现实代价。",
+    mustHave:
+      "每集必须有真实戏剧动作、人物关系推进、信息反转和结尾钩子；主角要主动调查或选择，不能只被动受害。",
+    avoid:
+      "不要写成宣传片、预告片、概念片；不要只写氛围；不要靠旁白解释；不要连续空镜；不要每一幕都神神叨叨。",
+    revisionNotes: [
+      reason,
+      "建议先确认主角每集的具体目标：找人、取证、隐瞒、交换、逃离或摊牌。",
+      "建议把反派或阻碍落到可拍的人和事上，不只用抽象邪恶或命运感。",
+    ],
+  };
 }
 
 export function fallbackJubenResult(
@@ -240,7 +362,7 @@ export function fallbackJubenResult(
 
   const directorScript: JubenScene[] = episodeOutline.flatMap((episode) => [
     {
-      sceneId: `E${String(episode.episode).padStart(2, "0")}-S01`,
+      sceneId: `${episodeCode(episode.episode)}-S01`,
       episode: episode.episode,
       sceneHeading: "外. 老小区楼下 - 夜",
       dramaticPurpose: "用一个可拍行动把主角推入事件，不靠旁白解释。",
@@ -262,7 +384,7 @@ export function fallbackJubenResult(
       emotionalTurn: "主角从烦躁变成警觉。",
     },
     {
-      sceneId: `E${String(episode.episode).padStart(2, "0")}-S02`,
+      sceneId: `${episodeCode(episode.episode)}-S02`,
       episode: episode.episode,
       sceneHeading: "内. 楼道四层 - 夜",
       dramaticPurpose: "把悬念落到人物选择：退单还是敲门。",
@@ -324,7 +446,7 @@ export function fallbackJubenResult(
     },
   ]);
 
-  const promptItems = shotList.slice(0, 12).map((shot, index) => ({
+  const promptItems = shotList.map((shot, index) => ({
     id: `SB-${String(index + 1).padStart(2, "0")}`,
     sceneId: shot.sceneId,
     prompt: `${input.aspectRatio} 短剧分镜图，${shot.shotSize}，${shot.cameraAngle}，${shot.visual}，人物动作：${shot.action}，现实主义短剧质感，生活化服装，清晰场景连续性，暗雨夜但主体可辨认。`,
@@ -445,6 +567,172 @@ function looksLikeJubenResult(value: unknown): value is JubenResult {
   );
 }
 
+function looksLikeAnalysisResult(value: unknown): value is Partial<JubenAnalysisResult> {
+  if (!isRecord(value)) return false;
+
+  return typeof value.genre === "string" || typeof value.audience === "string";
+}
+
+function episodeFromSceneId(sceneId: string) {
+  const match = sceneId.match(/^E(\d+)/i);
+
+  return match ? Number(match[1]) : 1;
+}
+
+function normalizeEpisodeOutlines(
+  result: JubenResult,
+  input: Required<JubenRequestBody>,
+) {
+  const existing = result.episodeOutline.filter(
+    (episode) =>
+      typeof episode.episode === "number" &&
+      episode.episode >= 1 &&
+      episode.episode <= input.episodeCount,
+  );
+  const byEpisode = new Map(existing.map((episode) => [episode.episode, episode]));
+
+  for (let episode = 1; episode <= input.episodeCount; episode += 1) {
+    if (!byEpisode.has(episode)) {
+      byEpisode.set(episode, {
+        episode,
+        title: episodeTitle(result.meta.title, episode),
+        hook:
+          episode === 1
+            ? "用一个具体动作把主角推入事件，不解释设定。"
+            : "上一集的证据被推翻，主角必须换一种方式继续追。",
+        beats: [
+          "开场接住上一集钩子，用人物行动推进。",
+          "阻碍升级，关系或现实代价变重。",
+          "出现新证据，迫使主角做选择。",
+        ],
+        turn: "主角从反应变成主动选择。",
+        cliffhanger:
+          episode === input.episodeCount
+            ? "真相落地，但主角必须承担最后代价。"
+            : "新证据指向一个更亲近的人。",
+      });
+    }
+  }
+
+  return Array.from(byEpisode.values()).sort((a, b) => a.episode - b.episode);
+}
+
+function makeSceneFromOutline(
+  outline: JubenResult["episodeOutline"][number],
+  sceneIndex: number,
+  result: JubenResult,
+): JubenScene {
+  const sceneId = `${episodeCode(outline.episode)}-S${String(sceneIndex).padStart(2, "0")}`;
+  const isFirst = sceneIndex === 1;
+  const beat = outline.beats[(sceneIndex - 1) % Math.max(outline.beats.length, 1)];
+
+  return {
+    sceneId,
+    episode: outline.episode,
+    sceneHeading: isFirst ? "内. 主角工作现场 - 夜" : "外. 关键地点入口 - 夜",
+    dramaticPurpose: isFirst
+      ? "接住本集钩子，把主角目标落成一个具体行动。"
+      : "让主角付出代价并拿到下一条证据。",
+    conflict: isFirst
+      ? "主角想验证线索，对方要求她先放弃或撒谎。"
+      : "线索指向更危险的人，主角必须在安全和真相之间选择。",
+    action:
+      beat ||
+      `${result.storyBible.protagonist} 根据上一集留下的线索赶到现场，发现事情并不按她的判断发展。`,
+    dialogue: [
+      {
+        character: "主角",
+        line: isFirst ? "我只问一句，这件事到底是谁让你瞒的？" : "如果我现在走，就再也没人知道真相了。",
+        subtext: "她已经从被动反应转向主动追问。",
+      },
+      {
+        character: "阻碍者",
+        line: isFirst ? "你知道得越少，越安全。" : "你以为你救的是别人，其实是在害自己。",
+        subtext: "对方用恐惧和现实代价逼她后退。",
+      },
+    ],
+    emotionalTurn: isFirst ? outline.turn : outline.cliffhanger,
+  };
+}
+
+function ensureSceneCoverage(
+  result: JubenResult,
+  outlines: JubenResult["episodeOutline"],
+) {
+  const scenes = result.directorScript
+    .filter((scene) => scene.sceneId && scene.action)
+    .map((scene) => ({
+      ...scene,
+      episode: scene.episode || episodeFromSceneId(scene.sceneId),
+    }));
+
+  outlines.forEach((outline) => {
+    const current = scenes.filter((scene) => scene.episode === outline.episode);
+
+    for (let index = current.length + 1; index <= 2; index += 1) {
+      scenes.push(makeSceneFromOutline(outline, index, result));
+    }
+  });
+
+  return scenes.sort((a, b) => a.sceneId.localeCompare(b.sceneId));
+}
+
+function makeShotFromScene(scene: JubenScene, shotIndex: number): JubenShot {
+  const presets = [
+    {
+      shotSize: "中近景",
+      cameraAngle: "平视略贴近人物",
+      movement: "手持轻微跟进",
+      duration: "4s",
+      visual: scene.action,
+      action: "主角进入现场并开始执行本场目标。",
+      sound: "现场环境声压低，保留脚步和呼吸。",
+      continuity: "接上一场情绪，不换服装和核心道具。",
+    },
+    {
+      shotSize: "过肩中景",
+      cameraAngle: "从主角肩后看向阻碍者",
+      movement: "慢推到两人之间",
+      duration: "5s",
+      visual: scene.conflict,
+      action: "阻碍者给出压力，主角没有立刻退。",
+      sound: "对白清楚，背景声保持真实。",
+      continuity: "人物轴线保持稳定，主角在画面左侧。",
+    },
+    {
+      shotSize: "特写",
+      cameraAngle: "正面平视关键物件或表情",
+      movement: "静止停顿后切走",
+      duration: "3s",
+      visual: scene.emotionalTurn,
+      action: "新证据出现，主角做出本集下一步选择。",
+      sound: "低频点入，随后留半秒空白。",
+      continuity: "结尾必须能接下一镜或下一集钩子。",
+    },
+  ];
+  const preset = presets[(shotIndex - 1) % presets.length];
+
+  return {
+    shotId: `${scene.sceneId}-${String(shotIndex).padStart(2, "0")}`,
+    sceneId: scene.sceneId,
+    ...preset,
+  };
+}
+
+function ensureShotCoverage(existing: JubenShot[], scenes: JubenScene[]) {
+  const shots = existing.filter((shot) => shot.shotId && shot.sceneId);
+
+  scenes.forEach((scene) => {
+    const current = shots.filter((shot) => shot.sceneId === scene.sceneId);
+
+    for (let index = current.length + 1; index <= 3; index += 1) {
+      shots.push(makeShotFromScene(scene, index));
+    }
+  });
+
+  return shots.sort((a, b) => a.shotId.localeCompare(b.shotId));
+}
+
 function makePromptFromShot(
   shot: JubenShot,
   type: "storyboard" | "camera" | "edit",
@@ -488,31 +776,55 @@ function ensurePromptCoverage(
   type: "storyboard" | "camera" | "edit",
 ) {
   const normalized = existing.filter((item) => item.sceneId && item.prompt);
+  const shotCountsByScene = shots.reduce((map, shot) => {
+    map.set(shot.sceneId, (map.get(shot.sceneId) ?? 0) + 1);
+    return map;
+  }, new Map<string, number>());
+  const promptCountsByScene = normalized.reduce((map, item) => {
+    map.set(item.sceneId, (map.get(item.sceneId) ?? 0) + 1);
+    return map;
+  }, new Map<string, number>());
 
   shots.forEach((shot) => {
-    if (normalized.length < shots.length) {
+    const neededForScene = shotCountsByScene.get(shot.sceneId) ?? 1;
+    const currentForScene = promptCountsByScene.get(shot.sceneId) ?? 0;
+
+    if (currentForScene < neededForScene) {
       normalized.push(makePromptFromShot(shot, type, normalized.length));
+      promptCountsByScene.set(shot.sceneId, currentForScene + 1);
     }
   });
 
   return normalized;
 }
 
-function ensureJubenCoverage(result: JubenResult): JubenResult {
+function ensureJubenCoverage(
+  result: JubenResult,
+  input: Required<JubenRequestBody>,
+): JubenResult {
+  const episodeOutline = normalizeEpisodeOutlines(result, input);
+  const directorScript = ensureSceneCoverage(
+    { ...result, episodeOutline },
+    episodeOutline,
+  );
+  const shotList = ensureShotCoverage(result.shotList, directorScript);
   const storyboardPrompts = ensurePromptCoverage(
     result.storyboardPrompts,
-    result.shotList,
+    shotList,
     "storyboard",
   );
   const cameraPrompts = ensurePromptCoverage(
     result.cameraPrompts,
-    result.shotList,
+    shotList,
     "camera",
   );
-  const editPrompts = ensurePromptCoverage(result.editPrompts, result.shotList, "edit");
+  const editPrompts = ensurePromptCoverage(result.editPrompts, shotList, "edit");
 
   return {
     ...result,
+    episodeOutline,
+    directorScript,
+    shotList,
     storyboardPrompts,
     cameraPrompts,
     editPrompts,
@@ -528,6 +840,108 @@ function ensureJubenCoverage(result: JubenResult): JubenResult {
   };
 }
 
+async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
+  const apiKey = process.env.DEEPSEEK_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("DEEPSEEK_API_KEY is not configured.");
+  }
+
+  const controller = new AbortController();
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+
+  const response = await Promise.race([
+    fetch(DEEPSEEK_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: DEEPSEEK_MODEL,
+        temperature: 0.38,
+        max_tokens: maxTokens,
+        response_format: { type: "json_object" },
+        messages,
+      }),
+      cache: "no-store",
+      signal: controller.signal,
+    }),
+    new Promise<Response>((_, reject) => {
+      timeout = setTimeout(() => {
+        controller.abort();
+        reject(new Error("DeepSeek request timed out."));
+      }, DEEPSEEK_TIMEOUT_MS);
+    }),
+  ]).finally(() => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`DeepSeek request failed with ${response.status}.`);
+  }
+
+  const payload = (await response.json()) as {
+    choices?: Array<{ message?: { content?: string } }>;
+  };
+  const content = payload.choices?.[0]?.message?.content;
+  const parsed = typeof content === "string" ? parseJsonObject(content) : null;
+
+  if (!parsed) {
+    throw new Error("DeepSeek response did not contain JSON.");
+  }
+
+  return parsed;
+}
+
+export async function analyzeJubenIdea(
+  body: JubenRequestBody,
+): Promise<JubenAnalysisResult> {
+  const input = normalizeJubenRequest(body);
+
+  try {
+    const parsed = await requestDeepSeekJson(
+      buildJubenAnalysisMessages(input),
+      Number(process.env.JUBEN_ANALYSIS_MAX_TOKENS ?? 1800),
+    );
+
+    if (!looksLikeAnalysisResult(parsed)) {
+      return fallbackJubenAnalysis(input, "DeepSeek 简析结构不完整。");
+    }
+
+    const record = parsed as Partial<JubenAnalysisResult>;
+    return {
+      ...input,
+      genre: cleanText(record.genre, input.genre),
+      audience: cleanText(record.audience, input.audience),
+      episodeCount: clampEpisodeCount(record.episodeCount ?? input.episodeCount),
+      episodeLength: cleanText(record.episodeLength, input.episodeLength),
+      aspectRatio: cleanText(record.aspectRatio, input.aspectRatio),
+      tone: cleanText(record.tone, input.tone),
+      productionMode: cleanText(record.productionMode, input.productionMode),
+      outputTarget: cleanText(record.outputTarget, input.outputTarget),
+      mustHave: cleanText(record.mustHave, input.mustHave),
+      avoid: cleanText(record.avoid, input.avoid),
+      titleSuggestion: cleanText(record.titleSuggestion, "短剧开发建议"),
+      premise: cleanText(record.premise, "这个想法适合按短剧分集推进。"),
+      hook: cleanText(record.hook, "每集用人物行动和新证据制造追看。"),
+      revisionNotes:
+        Array.isArray(record.revisionNotes) && record.revisionNotes.length > 0
+          ? record.revisionNotes
+              .filter((note): note is string => typeof note === "string")
+              .slice(0, 5)
+          : ["已根据想法自动补齐生成参数。"],
+    };
+  } catch (error) {
+    const reason =
+      error instanceof Error ? error.message : "DeepSeek 简析请求失败。";
+
+    return fallbackJubenAnalysis(input, reason);
+  }
+}
+
 export async function generateJubenResult(
   body: JubenRequestBody,
 ): Promise<JubenResult> {
@@ -535,56 +949,26 @@ export async function generateJubenResult(
   const apiKey = process.env.DEEPSEEK_API_KEY;
 
   if (!apiKey) {
-    return fallbackJubenResult(input, "DEEPSEEK_API_KEY is not configured.");
+    return ensureJubenCoverage(
+      fallbackJubenResult(input, "DEEPSEEK_API_KEY is not configured."),
+      input,
+    );
   }
 
   try {
-    const controller = new AbortController();
-    let timeout: ReturnType<typeof setTimeout> | undefined;
-    const response = await Promise.race([
-      fetch(DEEPSEEK_API_URL, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: DEEPSEEK_MODEL,
-          temperature: 0.38,
-          max_tokens: Number(process.env.JUBEN_DEEPSEEK_MAX_TOKENS ?? 9000),
-          response_format: { type: "json_object" },
-          messages: buildJubenMessages(input),
-        }),
-        cache: "no-store",
-        signal: controller.signal,
-      }),
-      new Promise<Response>((_, reject) => {
-        timeout = setTimeout(() => {
-          controller.abort();
-          reject(new Error("DeepSeek request timed out."));
-        }, DEEPSEEK_TIMEOUT_MS);
-      }),
-    ]);
-
-    if (timeout) {
-      clearTimeout(timeout);
-    }
-
-    if (!response.ok) {
-      return fallbackJubenResult(
-        input,
-        `DeepSeek request failed with ${response.status}.`,
-      );
-    }
-
-    const payload = (await response.json()) as {
-      choices?: Array<{ message?: { content?: string } }>;
-    };
-    const content = payload.choices?.[0]?.message?.content;
-    const parsed = typeof content === "string" ? parseJsonObject(content) : null;
+    const parsed = await requestDeepSeekJson(
+      buildJubenMessages(input),
+      Number(process.env.JUBEN_DEEPSEEK_MAX_TOKENS ?? 9000),
+    );
 
     if (!looksLikeJubenResult(parsed)) {
-      return fallbackJubenResult(input, "DeepSeek JSON did not match the expected structure.");
+      return ensureJubenCoverage(
+        fallbackJubenResult(
+          input,
+          "DeepSeek JSON did not match the expected structure.",
+        ),
+        input,
+      );
     }
 
     return ensureJubenCoverage({
@@ -595,11 +979,14 @@ export async function generateJubenResult(
         model: DEEPSEEK_MODEL,
         generatedAt: new Date().toISOString(),
       },
-    });
+    }, input);
   } catch {
-    return fallbackJubenResult(
+    return ensureJubenCoverage(
+      fallbackJubenResult(
+        input,
+        `DeepSeek request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
+      ),
       input,
-      `DeepSeek request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
     );
   }
 }
