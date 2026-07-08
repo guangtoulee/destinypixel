@@ -1,5 +1,4 @@
 import mammoth from "mammoth";
-import { PDFParse } from "pdf-parse";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -23,6 +22,7 @@ function fileExtension(name: string) {
 }
 
 async function extractPdfText(buffer: Buffer) {
+  const { PDFParse } = await import("pdf-parse");
   const parser = new PDFParse({ data: buffer });
 
   try {
