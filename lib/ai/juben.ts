@@ -1025,6 +1025,7 @@ function ensurePromptCoverage(
   type: "storyboard" | "camera" | "edit",
 ) {
   const idPrefix = type === "storyboard" ? "SB" : type === "camera" ? "CAM" : "ED";
+  const minPromptLength = type === "storyboard" ? 120 : type === "camera" ? 180 : 140;
   const sceneIds = new Set(shots.map((shot) => shot.sceneId));
   const normalized = existing.filter(
     (item) => item.sceneId && item.prompt && sceneIds.has(item.sceneId),
@@ -1048,10 +1049,32 @@ function ensurePromptCoverage(
     }
   });
 
-  return normalized.map((item, index) => ({
-    ...item,
-    id: `${idPrefix}-${item.sceneId}-${String(index + 1).padStart(2, "0")}`,
-  }));
+  const scenePromptIndex = new Map<string, number>();
+
+  return normalized.map((item, index) => {
+    const currentIndex = scenePromptIndex.get(item.sceneId) ?? 0;
+    const sameSceneShots = shots.filter((shot) => shot.sceneId === item.sceneId);
+    const fallbackShot = sameSceneShots[currentIndex] ?? sameSceneShots[0] ?? shots[index];
+    const fallback = fallbackShot
+      ? makePromptFromShot(fallbackShot, type, index)
+      : null;
+    const prompt =
+      item.prompt.length >= minPromptLength || !fallback
+        ? item.prompt
+        : `${item.prompt}\n补充控制：${fallback.prompt}`;
+    const negativePrompt = [item.negativePrompt, fallback?.negativePrompt]
+      .filter(Boolean)
+      .join("；");
+
+    scenePromptIndex.set(item.sceneId, currentIndex + 1);
+
+    return {
+      ...item,
+      id: `${idPrefix}-${item.sceneId}-${String(index + 1).padStart(2, "0")}`,
+      prompt,
+      negativePrompt,
+    };
+  });
 }
 
 function ensureJubenCoverage(
