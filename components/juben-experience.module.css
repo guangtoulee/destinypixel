@@ -150,6 +150,7 @@
 
 .actionRow,
 .analyzeRow,
+.uploadRow,
 .copyActions {
   display: flex;
   align-items: center;
@@ -163,6 +164,61 @@
 .analyzeRow {
   margin-top: 12px;
   align-items: stretch;
+}
+
+.uploadRow {
+  margin-top: 12px;
+  align-items: stretch;
+}
+
+.uploadRow label {
+  display: inline-flex;
+  min-height: 38px;
+  flex: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed rgba(242, 189, 102, 0.46);
+  border-radius: 7px;
+  color: #f6d08a;
+  background: rgba(242, 189, 102, 0.08);
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.uploadRow label:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.uploadRow input {
+  display: none;
+}
+
+.uploadRow p {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  color: #a9a092;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.uploadRow p[data-status="ready"] {
+  color: #b9f0df;
+}
+
+.uploadRow p[data-status="error"] {
+  color: #ffad9f;
 }
 
 .analyzeRow button {
@@ -451,6 +507,50 @@
   background: #f2bd66;
 }
 
+.episodeDetailBar {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(130, 209, 189, 0.18);
+  border-radius: 7px;
+  background: rgba(130, 209, 189, 0.055);
+  padding: 8px 10px;
+}
+
+.episodeDetailBar span {
+  color: #d9f7ee;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.episodeDetailBar button,
+.shotPackageCard button {
+  display: inline-flex;
+  min-height: 32px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid rgba(130, 209, 189, 0.38);
+  border-radius: 7px;
+  color: #06130f;
+  background: #82d1bd;
+  padding: 0 11px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.episodeDetailBar button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.episodeDetailBar button:disabled svg {
+  animation: spin 1s linear infinite;
+}
+
 .resultBody {
   min-height: 420px;
   overflow: auto;
@@ -488,8 +588,10 @@
 }
 
 .bibleGrid,
+.visualBibleGrid,
 .sceneGrid,
 .shotGrid,
+.shotPackageGrid,
 .promptList,
 .episodeList,
 .voiceGrid {
@@ -503,9 +605,11 @@
 }
 
 .bibleGrid article,
+.visualBibleGrid article,
 .episodeList article,
 .sceneCard,
 .shotCard,
+.shotPackageCard,
 .promptItem,
 .voiceGrid article {
   min-width: 0;
@@ -518,7 +622,28 @@
   padding: 14px;
 }
 
+.visualBibleGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.visualBibleGrid article {
+  padding: 14px;
+}
+
+.visualBibleGrid article:nth-last-child(-n + 2),
+.visualBibleGrid article:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.visualBibleGrid span,
+.shotPackageCard header span {
+  color: #82d1bd;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .bibleGrid p,
+.visualBibleGrid p,
 .voiceGrid p {
   margin: 8px 0 0;
   color: #e2d8c6;
@@ -527,6 +652,7 @@
 }
 
 .bibleGrid ul,
+.visualBibleGrid ul,
 .voiceGrid ul,
 .episodeList ol {
   margin: 10px 0 0;
@@ -534,6 +660,19 @@
   color: #d7cfc2;
   font-size: 13px;
   line-height: 1.7;
+}
+
+.visualBibleGrid pre,
+.shotPackageCard pre {
+  overflow: auto;
+  margin: 10px 0 0;
+  padding: 12px;
+  border-radius: 6px;
+  color: #f3ead9;
+  background: rgba(0, 0, 0, 0.38);
+  font-size: 12px;
+  line-height: 1.65;
+  white-space: pre-wrap;
 }
 
 .episodeList article {
@@ -671,6 +810,32 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.shotPackageGrid {
+  grid-template-columns: 1fr;
+}
+
+.shotPackageCard {
+  padding: 14px;
+}
+
+.shotPackageCard header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shotPackageCard header > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.shotPackageCard header strong {
+  color: #fffaf0;
+  font-size: 15px;
+}
+
 .shotCard header span {
   color: #f2bd66;
   font-size: 12px;
@@ -764,16 +929,20 @@
   .fieldGrid,
   .metricRow,
   .bibleGrid,
+  .visualBibleGrid,
   .sceneGrid,
   .shotGrid,
+  .shotPackageGrid,
   .promptList,
   .voiceGrid {
     grid-template-columns: 1fr;
   }
 
   .resultToolbar,
+  .episodeDetailBar,
   .actionRow,
   .analyzeRow,
+  .uploadRow,
   .copyActions {
     align-items: stretch;
     flex-direction: column;
@@ -782,12 +951,20 @@
   .tabs button,
   .copyActions button,
   .analyzeRow button,
+  .uploadRow label,
+  .episodeDetailBar button,
   .actionRow button {
     width: 100%;
   }
 
-  .analyzeRow span {
+  .analyzeRow span,
+  .uploadRow p {
     min-height: 42px;
+  }
+
+  .visualBibleGrid article:nth-last-child(-n + 2),
+  .visualBibleGrid article:nth-child(5) {
+    grid-column: auto;
   }
 
   .visualPanel {

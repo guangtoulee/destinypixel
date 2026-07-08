@@ -56,6 +56,22 @@ export type JubenPromptItem = {
   negativePrompt: string;
 };
 
+export type JubenVisualBible = {
+  format: string;
+  coreStyle: string;
+  colorPalette: string[];
+  cameraLanguage: string[];
+  productionLogic: string[];
+  environmentRules: string[];
+  characterLocks: Array<{
+    character: string;
+    lockedPrompt: string;
+  }>;
+  keyProps: string[];
+  globalPrompt: string;
+  globalNegative: string;
+};
+
 export type JubenResult = {
   meta: {
     title: string;
@@ -80,6 +96,7 @@ export type JubenResult = {
     conflictEngine: string;
     visualRules: string[];
   };
+  visualBible: JubenVisualBible;
   episodeOutline: Array<{
     episode: number;
     title: string;
@@ -107,6 +124,11 @@ export type JubenResult = {
   qualityChecklist: string[];
 };
 
+export type JubenEpisodeRequestBody = JubenRequestBody & {
+  episode?: number;
+  baseResult?: JubenResult;
+};
+
 type ChatMessage = { role: "system" | "user"; content: string };
 
 const DEEPSEEK_API_URL =
@@ -117,7 +139,7 @@ const DEEPSEEK_TIMEOUT_MS = Number(
   process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
 );
 
-const maxIdeaLength = 4200;
+const maxIdeaLength = 16000;
 
 function clampEpisodeCount(value: unknown) {
   if (typeof value !== "number" || !Number.isFinite(value)) return 3;
@@ -162,6 +184,7 @@ function resultSchemaHint() {
     '  "meta": {"title": "...", "logline": "...", "format": "...", "provider": "deepseek", "model": "...", "generatedAt": "ISO string"},',
     '  "diagnosis": {"corePromise": "...", "realAudienceHook": "...", "trailerRisk": "...", "fixStrategy": "..."},',
     '  "storyBible": {"theme": "...", "world": "...", "protagonist": "...", "antagonist": "...", "relationshipEngine": "...", "conflictEngine": "...", "visualRules": ["..."]},',
+    '  "visualBible": {"format": "...", "coreStyle": "...", "colorPalette": ["..."], "cameraLanguage": ["..."], "productionLogic": ["..."], "environmentRules": ["..."], "characterLocks": [{"character": "...", "lockedPrompt": "..."}], "keyProps": ["..."], "globalPrompt": "...", "globalNegative": "..."},',
     '  "episodeOutline": [{"episode": 1, "title": "...", "hook": "...", "beats": ["..."], "turn": "...", "cliffhanger": "..."}],',
     '  "directorScript": [{"sceneId": "E01-S01", "episode": 1, "sceneHeading": "内/外. 地点 - 时间", "dramaticPurpose": "...", "conflict": "...", "action": "...", "dialogue": [{"character": "...", "line": "...", "subtext": "..."}], "emotionalTurn": "..."}],',
     '  "shotList": [{"shotId": "E01-S01-01", "sceneId": "E01-S01", "shotSize": "...", "cameraAngle": "...", "movement": "...", "duration": "3s", "visual": "...", "action": "...", "sound": "...", "continuity": "..."}],',
@@ -187,6 +210,8 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
         "每一场都要回答：谁想要什么，谁阻止他，观众此刻知道了什么，下一秒为什么要继续看。",
         "镜头必须服务叙事，避免只写空镜、氛围、慢动作、震撼、史诗感、燃、大片感等预告片词。",
         "输出给 Lovart/Grok 的 prompt 要具体到人物、地点、动作、构图、光线、镜头焦段感、情绪和连续性。不要只写风格词。",
+        "必须输出 visualBible，像 live action production bible：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局 negative prompt。",
+        "visualBible 的人物锁定必须能直接用于角色定妆和每个镜头首帧，避免人物漂移。",
         "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
         "JSON 必须完全符合这个结构，所有字段都要有内容：",
         resultSchemaHint(),
@@ -205,6 +230,69 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
             "storyboardPrompts 用于分镜图生成；cameraPrompts 用于视频运镜；editPrompts 用于剪辑节奏。",
             "voiceoverScript 只在需要时使用旁白，优先对白和行动推进。",
             "qualityChecklist 必须包含反宣传片检查项。",
+          ],
+        },
+        null,
+        2,
+      ),
+    },
+  ];
+}
+
+export function buildJubenSeedMessages(input: Required<JubenRequestBody>): ChatMessage[] {
+  const [system] = buildJubenMessages(input);
+
+  return [
+    system,
+    {
+      role: "user",
+      content: JSON.stringify(
+        {
+          creativeBrief: input,
+          mode: "quick_seed",
+          targetEpisode: 1,
+          outputRules: [
+            "先快速生成故事圣经、视觉圣经、全剧分集结构，以及第 1 集的导演剧本、镜头表、分镜 Prompt、运镜 Prompt、剪辑 Prompt。",
+            "episodeOutline 数量必须等于 episodeCount。",
+            "directorScript、shotList、storyboardPrompts、cameraPrompts、editPrompts 只生成 E01，不要一次性生成后面所有集。",
+            "E01 至少 2 个导演场景；每个导演场景至少 3 个镜头。",
+            "visualBible 必须包含全剧风格、人物、色彩、环境定调和全局 prompt。",
+            "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
+          ],
+        },
+        null,
+        2,
+      ),
+    },
+  ];
+}
+
+export function buildJubenEpisodeMessages(
+  input: Required<JubenRequestBody>,
+  baseResult: JubenResult,
+  episode: number,
+): ChatMessage[] {
+  const [system] = buildJubenMessages(input);
+
+  return [
+    system,
+    {
+      role: "user",
+      content: JSON.stringify(
+        {
+          creativeBrief: input,
+          mode: "single_episode_detail",
+          targetEpisode: episode,
+          establishedStoryBible: baseResult.storyBible,
+          establishedVisualBible: baseResult.visualBible,
+          episodeOutline: baseResult.episodeOutline,
+          outputRules: [
+            `只生成 E${String(episode).padStart(2, "0")} 的导演剧本、镜头表、分镜 Prompt、运镜 Prompt、剪辑 Prompt。`,
+            "保留 establishedVisualBible 的角色锁定、色彩、场景、全局 negative，不要换演员脸和整体风格。",
+            "本集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
+            "每个镜头 prompt 都要能生成 photoreal first frame，再动画成 4-7 秒短剧镜头。",
+            "不要输出其他集的导演场景和镜头。",
+            "返回完整 JSON 结构，但数组内容只放目标集的细节。",
           ],
         },
         null,
@@ -328,6 +416,129 @@ function fallbackJubenAnalysis(
       "建议先确认主角每集的具体目标：找人、取证、隐瞒、交换、逃离或摊牌。",
       "建议把反派或阻碍落到可拍的人和事上，不只用抽象邪恶或命运感。",
     ],
+  };
+}
+
+function fallbackVisualBible(
+  input: Required<JubenRequestBody>,
+  title: string,
+): JubenVisualBible {
+  const isWestern =
+    /西部|美国|牧场|牛仔|农场|谷仓|教堂|牧师|画皮|贵族|frontier|western/i.test(
+      input.idea,
+    );
+
+  if (isWestern) {
+    return {
+      format:
+        "Vertical 9:16 live-action microdrama. Serious suspense romance, not parody, not fantasy cosplay.",
+      coreStyle:
+        "Photoreal live-action vertical drama, 1880s American frontier gothic romance, remote farmhouse, prairie storm, barn loft, abandoned chapel, candlelit interiors, rain, mud, silver mirror, old Bible, velvet cloak, serious suspense, romance-thriller tone, cinematic close faces for phone screen.",
+      colorPalette: [
+        "storm blue",
+        "candle amber",
+        "black leather",
+        "navy velvet",
+        "bone white",
+        "rust brown",
+        "silver mirror highlights",
+      ],
+      cameraLanguage: [
+        "close faces for phone screen",
+        "doorway frames",
+        "mirror reveals",
+        "one-frame shadow stings",
+        "locked dramatic pauses",
+        "minimal locations",
+      ],
+      productionLogic: [
+        "forbidden attraction",
+        "suspicious wife",
+        "other woman",
+        "betrayal",
+        "supernatural punishment",
+        "cliffhanger every episode",
+      ],
+      environmentRules: [
+        "Keep sets small: farmhouse, barn, chapel.",
+        "Use rain, mud, candlelight, wood interiors and prairie storm as repeating texture.",
+        "No fantasy cosplay; all supernatural signs must appear through practical objects and performance.",
+      ],
+      characterLocks: [
+        {
+          character: "Elias Hale",
+          lockedPrompt:
+            "34-year-old American frontier rancher and former cavalryman, wet black hat, dark leather coat, short beard, tired blue-gray eyes, revolver held low, guilt-prone protector energy.",
+        },
+        {
+          character: "Mara Hale",
+          lockedPrompt:
+            "30-year-old ranch wife, beige calico dress, braided dark hair, sharp eyes, practical and controlled, silver hand mirror, small Bible or rosary, survivor energy.",
+        },
+        {
+          character: "Lady Seraphine Voss",
+          lockedPrompt:
+            "24-looking European noblewoman, pale face, torn navy-black velvet cloak with gold embroidery, elegant accent, dangerous stillness, beautiful but predatory, no nudity.",
+        },
+        {
+          character: "Reverend Crowe",
+          lockedPrompt:
+            "Old half-mad frontier preacher, ragged black coat, cracked voice, rosary, silver cup, knows old-world monsters but is not clean or saintly.",
+        },
+      ],
+      keyProps: [
+        "silver hand mirror",
+        "old Bible or rosary",
+        "wet black hat",
+        "navy-black velvet cloak",
+        "candle",
+        "barn rope",
+        "muddy threshold",
+      ],
+      globalPrompt: `${title}, Frontier Gothic Romance version, photoreal live-action vertical short drama, 1880s American frontier gothic romance, remote farmhouse, barn, chapel, candlelit interiors, prairie storm, rain, mud, serious suspense romance, cinematic close faces, consistent characters, 9:16.`,
+      globalNegative:
+        "no text in image, no watermark, no logo, no subtitles inside the frame, no modern objects unless specified, no explicit nudity, no gore, no distorted hands, no extra fingers, no duplicate faces, no low-res blur, keep character identity consistent.",
+    };
+  }
+
+  return {
+    format: `${input.aspectRatio} 真人短剧，${input.productionMode}，面向 ${input.outputTarget}。`,
+    coreStyle:
+      "Photoreal live-action vertical microdrama, realistic locations, phone-screen close faces, controlled suspense, practical props, small sets, clear character continuity.",
+    colorPalette: ["现实冷色", "暖色实用光", "低饱和肤色", "关键道具高光", "暗部保留细节"],
+    cameraLanguage: [
+      "近脸特写承接情绪",
+      "门框和窗框制造压迫",
+      "关键物件做证据揭示",
+      "手持轻微跟拍表现现实紧张",
+      "结尾停顿后切黑",
+    ],
+    productionLogic: [
+      "每集一个明确目标",
+      "每场一个可拍阻碍",
+      "每集结尾一个新证据或新危险",
+      "不用旁白替代戏剧动作",
+    ],
+    environmentRules: [
+      "场景数量控制在少量可复用空间。",
+      "所有风格选择服务人物关系和信息揭示。",
+      "避免空镜、概念镜头和预告片式混剪。",
+    ],
+    characterLocks: [
+      {
+        character: "主角",
+        lockedPrompt: `${input.genre} 主角，现实生活质感，明确欲望和压力，服装道具连续，面部特征稳定。`,
+      },
+      {
+        character: "核心阻碍者",
+        lockedPrompt:
+          "短剧反派或阻碍者，真实人物动机，表演克制，压迫感来自关系和信息差，不靠夸张造型。",
+      },
+    ],
+    keyProps: ["手机", "门", "镜子", "旧照片", "证据物", "生活化服装"],
+    globalPrompt: `${title}, photoreal live-action vertical microdrama, ${input.tone}, realistic small sets, close faces, dramatic conflict, consistent character identity, clear props, no trailer montage, ${input.aspectRatio}.`,
+    globalNegative:
+      "no text in image, no watermark, no logo, no subtitles, no modern objects unless specified, no explicit nudity, no gore, no distorted hands, no extra fingers, no duplicate faces, no low-res blur, no poster composition, no empty atmospheric montage.",
   };
 }
 
@@ -483,6 +694,7 @@ export function fallbackJubenResult(
         "镜头连续性固定：主角左侧入画，阻碍右侧压迫，真相从门缝或屏幕出现。",
       ],
     },
+    visualBible: fallbackVisualBible(input, title),
     episodeOutline,
     directorScript,
     shotList,
@@ -579,6 +791,25 @@ function episodeFromSceneId(sceneId: string) {
   return match ? Number(match[1]) : 1;
 }
 
+function looksLikeVisualBible(value: unknown): value is JubenVisualBible {
+  return (
+    isRecord(value) &&
+    typeof value.globalPrompt === "string" &&
+    typeof value.globalNegative === "string"
+  );
+}
+
+function ensureVisualBible(
+  result: JubenResult,
+  input: Required<JubenRequestBody>,
+) {
+  if (looksLikeVisualBible(result.visualBible)) {
+    return result.visualBible;
+  }
+
+  return fallbackVisualBible(input, result.meta.title);
+}
+
 function normalizeEpisodeOutlines(
   result: JubenResult,
   input: Required<JubenRequestBody>,
@@ -658,15 +889,23 @@ function makeSceneFromOutline(
 function ensureSceneCoverage(
   result: JubenResult,
   outlines: JubenResult["episodeOutline"],
+  detailEpisodes?: number[],
 ) {
+  const detailSet =
+    detailEpisodes && detailEpisodes.length > 0
+      ? new Set(detailEpisodes)
+      : new Set(outlines.map((outline) => outline.episode));
   const scenes = result.directorScript
     .filter((scene) => scene.sceneId && scene.action)
     .map((scene) => ({
       ...scene,
       episode: scene.episode || episodeFromSceneId(scene.sceneId),
-    }));
+    }))
+    .filter((scene) => detailSet.has(scene.episode));
 
   outlines.forEach((outline) => {
+    if (!detailSet.has(outline.episode)) return;
+
     const current = scenes.filter((scene) => scene.episode === outline.episode);
 
     for (let index = current.length + 1; index <= 2; index += 1) {
@@ -720,7 +959,10 @@ function makeShotFromScene(scene: JubenScene, shotIndex: number): JubenShot {
 }
 
 function ensureShotCoverage(existing: JubenShot[], scenes: JubenScene[]) {
-  const shots = existing.filter((shot) => shot.shotId && shot.sceneId);
+  const sceneIds = new Set(scenes.map((scene) => scene.sceneId));
+  const shots = existing.filter(
+    (shot) => shot.shotId && shot.sceneId && sceneIds.has(shot.sceneId),
+  );
 
   scenes.forEach((scene) => {
     const current = shots.filter((shot) => shot.sceneId === scene.sceneId);
@@ -775,7 +1017,11 @@ function ensurePromptCoverage(
   shots: JubenShot[],
   type: "storyboard" | "camera" | "edit",
 ) {
-  const normalized = existing.filter((item) => item.sceneId && item.prompt);
+  const idPrefix = type === "storyboard" ? "SB" : type === "camera" ? "CAM" : "ED";
+  const sceneIds = new Set(shots.map((shot) => shot.sceneId));
+  const normalized = existing.filter(
+    (item) => item.sceneId && item.prompt && sceneIds.has(item.sceneId),
+  );
   const shotCountsByScene = shots.reduce((map, shot) => {
     map.set(shot.sceneId, (map.get(shot.sceneId) ?? 0) + 1);
     return map;
@@ -795,17 +1041,25 @@ function ensurePromptCoverage(
     }
   });
 
-  return normalized;
+  return normalized.map((item, index) => ({
+    ...item,
+    id: `${idPrefix}-${item.sceneId}-${String(index + 1).padStart(2, "0")}`,
+  }));
 }
 
 function ensureJubenCoverage(
   result: JubenResult,
   input: Required<JubenRequestBody>,
+  options?: {
+    detailEpisodes?: number[];
+  },
 ): JubenResult {
   const episodeOutline = normalizeEpisodeOutlines(result, input);
+  const visualBible = ensureVisualBible(result, input);
   const directorScript = ensureSceneCoverage(
     { ...result, episodeOutline },
     episodeOutline,
+    options?.detailEpisodes,
   );
   const shotList = ensureShotCoverage(result.shotList, directorScript);
   const storyboardPrompts = ensurePromptCoverage(
@@ -823,6 +1077,7 @@ function ensureJubenCoverage(
   return {
     ...result,
     episodeOutline,
+    visualBible,
     directorScript,
     shotList,
     storyboardPrompts,
@@ -952,13 +1207,14 @@ export async function generateJubenResult(
     return ensureJubenCoverage(
       fallbackJubenResult(input, "DEEPSEEK_API_KEY is not configured."),
       input,
+      { detailEpisodes: [1] },
     );
   }
 
   try {
     const parsed = await requestDeepSeekJson(
-      buildJubenMessages(input),
-      Number(process.env.JUBEN_DEEPSEEK_MAX_TOKENS ?? 9000),
+      buildJubenSeedMessages(input),
+      Number(process.env.JUBEN_SEED_MAX_TOKENS ?? 5200),
     );
 
     if (!looksLikeJubenResult(parsed)) {
@@ -968,6 +1224,7 @@ export async function generateJubenResult(
           "DeepSeek JSON did not match the expected structure.",
         ),
         input,
+        { detailEpisodes: [1] },
       );
     }
 
@@ -979,7 +1236,7 @@ export async function generateJubenResult(
         model: DEEPSEEK_MODEL,
         generatedAt: new Date().toISOString(),
       },
-    }, input);
+    }, input, { detailEpisodes: [1] });
   } catch {
     return ensureJubenCoverage(
       fallbackJubenResult(
@@ -987,6 +1244,78 @@ export async function generateJubenResult(
         `DeepSeek request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
       ),
       input,
+      { detailEpisodes: [1] },
+    );
+  }
+}
+
+export async function generateJubenEpisodeResult(
+  body: JubenEpisodeRequestBody,
+): Promise<JubenResult> {
+  const input = normalizeJubenRequest(body);
+  const episode = clampEpisodeCount(body.episode ?? 1);
+  const baseResult =
+    body.baseResult && looksLikeJubenResult(body.baseResult)
+      ? ensureJubenCoverage(body.baseResult, input, {
+          detailEpisodes: [episode],
+        })
+      : fallbackJubenResult(input, "Missing base result; used local structure.");
+  const apiKey = process.env.DEEPSEEK_API_KEY;
+
+  if (!apiKey) {
+    return ensureJubenCoverage(
+      {
+        ...fallbackJubenResult(input, "DEEPSEEK_API_KEY is not configured."),
+        meta: baseResult.meta,
+        storyBible: baseResult.storyBible,
+        visualBible: baseResult.visualBible,
+        episodeOutline: baseResult.episodeOutline,
+      },
+      input,
+      { detailEpisodes: [episode] },
+    );
+  }
+
+  try {
+    const parsed = await requestDeepSeekJson(
+      buildJubenEpisodeMessages(input, baseResult, episode),
+      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 4600),
+    );
+
+    if (!looksLikeJubenResult(parsed)) {
+      throw new Error("DeepSeek episode JSON did not match the expected structure.");
+    }
+
+    return ensureJubenCoverage(
+      {
+        ...parsed,
+        meta: {
+          ...baseResult.meta,
+          provider: "deepseek",
+          model: DEEPSEEK_MODEL,
+          generatedAt: new Date().toISOString(),
+        },
+        storyBible: baseResult.storyBible,
+        visualBible: baseResult.visualBible,
+        episodeOutline: baseResult.episodeOutline,
+      },
+      input,
+      { detailEpisodes: [episode] },
+    );
+  } catch {
+    return ensureJubenCoverage(
+      {
+        ...fallbackJubenResult(
+          input,
+          `DeepSeek episode request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
+        ),
+        meta: baseResult.meta,
+        storyBible: baseResult.storyBible,
+        visualBible: baseResult.visualBible,
+        episodeOutline: baseResult.episodeOutline,
+      },
+      input,
+      { detailEpisodes: [episode] },
     );
   }
 }

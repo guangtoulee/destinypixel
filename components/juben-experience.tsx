@@ -9,6 +9,7 @@ import {
   Clapperboard,
   Copy,
   Download,
+  FileText,
   FileJson,
   Film,
   Loader2,
@@ -17,6 +18,7 @@ import {
   RefreshCcw,
   Scissors,
   Sparkles,
+  Upload,
   Video,
 } from "lucide-react";
 import type {
@@ -31,10 +33,13 @@ import styles from "./juben-experience.module.css";
 
 type Status = "idle" | "loading" | "ready" | "error";
 type AnalyzeStatus = "idle" | "loading" | "ready" | "error";
+type UploadStatus = "idle" | "loading" | "ready" | "error";
 type EpisodeScope = number | "all";
 type TabKey =
   | "bible"
+  | "visual"
   | "outline"
+  | "shotpack"
   | "script"
   | "shots"
   | "storyboard"
@@ -60,7 +65,9 @@ const initialForm: Required<JubenRequestBody> = {
 
 const tabs: Array<{ key: TabKey; label: string; icon: typeof BookOpenText }> = [
   { key: "bible", label: "故事圣经", icon: BookOpenText },
+  { key: "visual", label: "视觉圣经", icon: FileText },
   { key: "outline", label: "分集结构", icon: PanelTop },
+  { key: "shotpack", label: "镜头包", icon: Sparkles },
   { key: "script", label: "导演剧本", icon: Clapperboard },
   { key: "shots", label: "镜头表", icon: Film },
   { key: "storyboard", label: "分镜 Prompt", icon: Sparkles },
@@ -152,6 +159,90 @@ function scopedResultParts(result: JubenResult, scope: EpisodeScope) {
   };
 }
 
+function findSceneForShot(result: JubenResult, shot: JubenShot) {
+  return result.directorScript.find((scene) => scene.sceneId === shot.sceneId);
+}
+
+function promptForShot(
+  items: JubenPromptItem[],
+  shot: JubenShot,
+  scopedShots: JubenShot[],
+) {
+  const direct = items.find((item) => item.prompt.includes(shot.shotId));
+
+  if (direct) return direct;
+
+  const sameSceneShots = scopedShots.filter(
+    (candidate) => candidate.sceneId === shot.sceneId,
+  );
+  const sameScenePrompts = items.filter((item) => item.sceneId === shot.sceneId);
+  const shotIndex = sameSceneShots.findIndex(
+    (candidate) => candidate.shotId === shot.shotId,
+  );
+
+  return sameScenePrompts[Math.max(shotIndex, 0)] ?? sameScenePrompts[0];
+}
+
+function shotPackageText(
+  result: JubenResult,
+  shot: JubenShot,
+  scopedShots: JubenShot[],
+) {
+  const scene = findSceneForShot(result, shot);
+  const storyboard = promptForShot(result.storyboardPrompts, shot, scopedShots);
+  const camera = promptForShot(result.cameraPrompts, shot, scopedShots);
+  const edit = promptForShot(result.editPrompts, shot, scopedShots);
+  const characterLocks =
+    result.visualBible.characterLocks
+      ?.map((item) => `${item.character}: ${item.lockedPrompt}`)
+      .join("\n") || "";
+  const dialogue =
+    scene?.dialogue
+      .map((line) => `${line.character}: ${line.line}（${line.subtext}）`)
+      .join("\n") || "本镜头以动作、表情和环境声推进。";
+
+  return [
+    `${shot.shotId} / ${scene?.sceneHeading ?? shot.sceneId}`,
+    "",
+    "【全局风格】",
+    result.visualBible.globalPrompt,
+    characterLocks ? `\n【人物锁定】\n${characterLocks}` : "",
+    "",
+    "【分镜首帧 / Lovart】",
+    storyboard?.prompt ??
+      `${result.visualBible.globalPrompt} ${shot.shotSize}, ${shot.cameraAngle}, ${shot.visual}, ${shot.action}`,
+    `Negative: ${[
+      result.visualBible.globalNegative,
+      storyboard?.negativePrompt,
+    ]
+      .filter(Boolean)
+      .join(", ")}`,
+    "",
+    "【视频运镜 / Grok】",
+    camera?.prompt ??
+      `${shot.shotId} ${shot.duration}, ${shot.movement}, ${shot.visual}, ${shot.action}`,
+    "",
+    "【剪辑】",
+    edit?.prompt ??
+      `${shot.duration}，先给动作，再给反应或证据，结尾接下一镜。声音：${shot.sound}`,
+    "",
+    "【配音 / 声音】",
+    dialogue,
+    `声音：${shot.sound}`,
+    `连续性：${shot.continuity}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function shotPackageTextForScope(result: JubenResult, scope: EpisodeScope) {
+  const scoped = scopedResultParts(result, scope);
+
+  return scoped.shots
+    .map((shot) => shotPackageText(result, shot, scoped.shots))
+    .join("\n\n---\n\n");
+}
+
 function resultTabTextForScope(
   result: JubenResult,
   tab: TabKey,
@@ -165,8 +256,12 @@ function resultTabTextForScope(
         diagnosis: result.diagnosis,
         storyBible: result.storyBible,
       });
+    case "visual":
+      return asPrettyJson(result.visualBible);
     case "outline":
       return asPrettyJson(scoped.outline);
+    case "shotpack":
+      return shotPackageTextForScope(result, scope);
     case "script":
       return asPrettyJson(scoped.scenes);
     case "shots":
@@ -185,14 +280,26 @@ function resultTabTextForScope(
   }
 }
 
-function downloadBlob(filename: string, text: string, type: string) {
-  const blob = new Blob([text], { type });
+function safeSheetName(value: string) {
+  return value.replace(/[:\\/?*[\]]/g, "").slice(0, 31) || "Sheet";
+}
+
+function downloadBlobPart(filename: string, data: BlobPart[], type: string) {
+  const blob = new Blob(data, { type });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = filename;
+  document.body.appendChild(anchor);
   anchor.click();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => {
+    URL.revokeObjectURL(url);
+    anchor.remove();
+  }, 1000);
+}
+
+function downloadBlob(filename: string, text: string, type: string) {
+  downloadBlobPart(filename, [text], type);
 }
 
 function downloadText(filename: string, text: string) {
@@ -259,6 +366,18 @@ ${tableHtml("故事圣经", ["模块", "内容"], [
   ["反派/阻碍", result.storyBible.antagonist],
   ["冲突引擎", result.storyBible.conflictEngine],
 ])}
+${tableHtml("视觉圣经", ["模块", "内容"], [
+  ["格式", result.visualBible.format],
+  ["核心风格", result.visualBible.coreStyle],
+  ["色彩", result.visualBible.colorPalette.join("\n")],
+  ["摄影语言", result.visualBible.cameraLanguage.join("\n")],
+  ["生产逻辑", result.visualBible.productionLogic.join("\n")],
+  ["环境规则", result.visualBible.environmentRules.join("\n")],
+  ["人物锁定", result.visualBible.characterLocks.map((item) => `${item.character}: ${item.lockedPrompt}`).join("\n")],
+  ["关键道具", result.visualBible.keyProps.join("\n")],
+  ["全局 Prompt", result.visualBible.globalPrompt],
+  ["全局 Negative", result.visualBible.globalNegative],
+])}
 ${tableHtml(
   "分集结构",
   ["集数", "标题", "钩子", "节拍", "转折", "结尾钩子"],
@@ -302,22 +421,111 @@ ${tableHtml(
   ]),
 )}
 ${tableHtml("AI Prompt", ["类型", "编号", "场景", "Prompt", "Negative"], promptRows)}
+${tableHtml(
+  "镜头整合包",
+  ["镜头", "整合内容"],
+  result.shotList.map((shot) => [
+    shot.shotId,
+    shotPackageText(result, shot, result.shotList),
+  ]),
+)}
 </body>
 </html>`;
 }
 
-function downloadExcel(result: JubenResult) {
-  downloadBlob(
-    `${result.meta.title || "juben"}-production-pack.xls`,
-    exportHtml(result),
-    "application/vnd.ms-excel;charset=utf-8",
+async function downloadExcel(result: JubenResult) {
+  const ExcelJS = await import("exceljs");
+  const workbook = new ExcelJS.Workbook();
+  workbook.creator = "DestinyPixel Juben";
+  workbook.created = new Date();
+
+  const addSheet = (
+    name: string,
+    headers: string[],
+    rows: Array<Array<unknown>>,
+  ) => {
+    const sheet = workbook.addWorksheet(safeSheetName(name));
+    sheet.addRow(headers);
+    rows.forEach((row) => sheet.addRow(row.map((cell) => String(cell ?? ""))));
+    sheet.getRow(1).font = { bold: true };
+    sheet.getRow(1).alignment = { vertical: "top", wrapText: true };
+    sheet.eachRow((row) => {
+      row.alignment = { vertical: "top", wrapText: true };
+    });
+    sheet.columns = headers.map((header, index) => ({
+      header,
+      key: String(index),
+      width: index === 0 ? 18 : 42,
+    }));
+  };
+
+  addSheet("故事圣经", ["模块", "内容"], [
+    ["标题", result.meta.title],
+    ["一句话", result.meta.logline],
+    ["核心承诺", result.diagnosis.corePromise],
+    ["观众钩子", result.diagnosis.realAudienceHook],
+    ["预告片风险", result.diagnosis.trailerRisk],
+    ["主题", result.storyBible.theme],
+    ["冲突引擎", result.storyBible.conflictEngine],
+  ]);
+  addSheet("视觉圣经", ["模块", "内容"], [
+    ["格式", result.visualBible.format],
+    ["核心风格", result.visualBible.coreStyle],
+    ["色彩", result.visualBible.colorPalette.join("\n")],
+    ["摄影语言", result.visualBible.cameraLanguage.join("\n")],
+    ["生产逻辑", result.visualBible.productionLogic.join("\n")],
+    ["人物锁定", result.visualBible.characterLocks.map((item) => `${item.character}: ${item.lockedPrompt}`).join("\n")],
+    ["全局 Prompt", result.visualBible.globalPrompt],
+    ["全局 Negative", result.visualBible.globalNegative],
+  ]);
+  addSheet(
+    "分集结构",
+    ["集数", "标题", "钩子", "节拍", "转折", "结尾钩子"],
+    result.episodeOutline.map((episode) => [
+      `E${String(episode.episode).padStart(2, "0")}`,
+      episode.title,
+      episode.hook,
+      episode.beats.join("\n"),
+      episode.turn,
+      episode.cliffhanger,
+    ]),
+  );
+  addSheet(
+    "导演剧本",
+    ["场景", "集数", "场景标题", "戏剧目的", "冲突", "动作", "对白", "情绪转折"],
+    result.directorScript.map((scene) => [
+      scene.sceneId,
+      scene.episode,
+      scene.sceneHeading,
+      scene.dramaticPurpose,
+      scene.conflict,
+      scene.action,
+      scene.dialogue.map((line) => `${line.character}: ${line.line}（${line.subtext}）`).join("\n"),
+      scene.emotionalTurn,
+    ]),
+  );
+  addSheet(
+    "镜头整合包",
+    ["镜头", "场景", "整合内容"],
+    result.shotList.map((shot) => [
+      shot.shotId,
+      shot.sceneId,
+      shotPackageText(result, shot, result.shotList),
+    ]),
+  );
+
+  const buffer = await workbook.xlsx.writeBuffer();
+  downloadBlobPart(
+    `${result.meta.title || "juben"}-production-pack.xlsx`,
+    [buffer],
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   );
 }
 
 function downloadWord(result: JubenResult) {
   downloadBlob(
     `${result.meta.title || "juben"}-production-pack.doc`,
-    exportHtml(result),
+    `\ufeff${exportHtml(result)}`,
     "application/msword;charset=utf-8",
   );
 }
@@ -405,14 +613,51 @@ function ShotCard({ shot }: { shot: JubenShot }) {
   );
 }
 
+function ShotPackageCard({
+  result,
+  shot,
+  scopedShots,
+  onCopy,
+  copied,
+}: {
+  result: JubenResult;
+  shot: JubenShot;
+  scopedShots: JubenShot[];
+  onCopy: (label: string, text: string) => void;
+  copied: string | null;
+}) {
+  const scene = findSceneForShot(result, shot);
+  const text = shotPackageText(result, shot, scopedShots);
+  const copyLabel = `shot-${shot.shotId}`;
+
+  return (
+    <article className={styles.shotPackageCard}>
+      <header>
+        <div>
+          <strong>{shot.shotId}</strong>
+          <span>{scene?.sceneHeading ?? shot.sceneId}</span>
+        </div>
+        <button type="button" onClick={() => onCopy(copyLabel, text)}>
+          {copied === copyLabel ? <Check size={14} /> : <Copy size={14} />}
+          复制本镜
+        </button>
+      </header>
+      <pre>{text}</pre>
+    </article>
+  );
+}
+
 export default function JubenExperience() {
   const [form, setForm] = useState<Required<JubenRequestBody>>(initialForm);
   const [result, setResult] = useState<JubenResult | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [analyzeStatus, setAnalyzeStatus] = useState<AnalyzeStatus>("idle");
+  const [uploadStatus, setUploadStatus] = useState<UploadStatus>("idle");
+  const [uploadMessage, setUploadMessage] = useState("");
   const [analysis, setAnalysis] = useState<JubenAnalysisResult | null>(null);
   const [activeTab, setActiveTab] = useState<TabKey>("bible");
   const [episodeScope, setEpisodeScope] = useState<EpisodeScope>("all");
+  const [detailStatus, setDetailStatus] = useState<Record<number, Status>>({});
   const [copied, setCopied] = useState<string | null>(null);
 
   const scopedParts = useMemo(() => {
@@ -456,7 +701,7 @@ export default function JubenExperience() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("loading");
-    setActiveTab("bible");
+    setActiveTab("visual");
 
     try {
       const response = await fetch("/api/juben/generate", {
@@ -475,6 +720,133 @@ export default function JubenExperience() {
       setStatus(payload.meta.provider === "deepseek" ? "ready" : "error");
     } catch {
       setStatus("error");
+    }
+  }
+
+  async function handleUploadFile(file: File | undefined) {
+    if (!file) return;
+
+    setUploadStatus("loading");
+    setUploadMessage(`正在解析 ${file.name}`);
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const response = await fetch("/api/juben/extract", {
+        method: "POST",
+        body: formData,
+      });
+      const payload = (await response.json()) as {
+        filename?: string;
+        text?: string;
+        truncated?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || !payload.text) {
+        throw new Error(payload.error ?? "文件解析失败。");
+      }
+
+      setForm((current) => updateField(current, "idea", payload.text ?? ""));
+      setUploadStatus("ready");
+      setUploadMessage(
+        `${payload.filename ?? file.name} 已导入${
+          payload.truncated ? "，长文已截取前段核心内容" : ""
+        }`,
+      );
+    } catch (error) {
+      setUploadStatus("error");
+      setUploadMessage(
+        error instanceof Error ? error.message : "文件解析失败，请手动粘贴。",
+      );
+    }
+  }
+
+  function mergeEpisodeResult(
+    base: JubenResult,
+    detail: JubenResult,
+    episode: number,
+  ): JubenResult {
+    const sortScenes = (items: JubenScene[]) =>
+      [...items].sort((a, b) => a.sceneId.localeCompare(b.sceneId));
+    const sortShots = (items: JubenShot[]) =>
+      [...items].sort((a, b) => a.shotId.localeCompare(b.shotId));
+    const sortPrompts = (items: JubenPromptItem[]) =>
+      [...items].sort((a, b) => a.id.localeCompare(b.id));
+    const sceneBelongsToEpisode = (scene: JubenScene) => scene.episode === episode;
+    const shotBelongsToEpisode = (shot: JubenShot) =>
+      sceneEpisode(shot.sceneId) === episode;
+    const promptBelongsToEpisode = (item: JubenPromptItem) =>
+      sceneEpisode(item.sceneId) === episode;
+    const storyboardPrompts = sortPrompts([
+      ...base.storyboardPrompts.filter((item) => !promptBelongsToEpisode(item)),
+      ...detail.storyboardPrompts,
+    ]);
+    const cameraPrompts = sortPrompts([
+      ...base.cameraPrompts.filter((item) => !promptBelongsToEpisode(item)),
+      ...detail.cameraPrompts,
+    ]);
+
+    return {
+      ...base,
+      meta: {
+        ...base.meta,
+        provider: detail.meta.provider,
+        model: detail.meta.model,
+        generatedAt: detail.meta.generatedAt,
+      },
+      visualBible: detail.visualBible ?? base.visualBible,
+      directorScript: sortScenes([
+        ...base.directorScript.filter((scene) => !sceneBelongsToEpisode(scene)),
+        ...detail.directorScript,
+      ]),
+      shotList: sortShots([
+        ...base.shotList.filter((shot) => !shotBelongsToEpisode(shot)),
+        ...detail.shotList,
+      ]),
+      storyboardPrompts,
+      cameraPrompts,
+      editPrompts: sortPrompts([
+        ...base.editPrompts.filter((item) => !promptBelongsToEpisode(item)),
+        ...detail.editPrompts,
+      ]),
+      voiceoverScript: detail.voiceoverScript ?? base.voiceoverScript,
+      productionPack: {
+        ...base.productionPack,
+        lovartStoryboard: storyboardPrompts
+          .map((item) => `${item.id} / ${item.sceneId}: ${item.prompt}`)
+          .join("\n\n"),
+        grokVideo: cameraPrompts
+          .map((item) => `${item.id} / ${item.sceneId}: ${item.prompt}`)
+          .join("\n\n"),
+      },
+    };
+  }
+
+  async function generateEpisodeDetail(episode: number) {
+    if (!result) return;
+
+    setDetailStatus((current) => ({ ...current, [episode]: "loading" }));
+
+    try {
+      const response = await fetch("/api/juben/episode", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, episode, baseResult: result }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Episode request failed.");
+      }
+
+      const payload = (await response.json()) as JubenResult;
+      setResult((current) =>
+        current ? mergeEpisodeResult(current, payload, episode) : payload,
+      );
+      setDetailStatus((current) => ({ ...current, [episode]: "ready" }));
+      setActiveTab("shotpack");
+    } catch {
+      setDetailStatus((current) => ({ ...current, [episode]: "error" }));
     }
   }
 
@@ -515,6 +887,12 @@ export default function JubenExperience() {
     }
   }
 
+  const selectedEpisode = scopedParts?.episode ?? null;
+  const selectedEpisodeHasDetails =
+    selectedEpisode !== null ? (scopedParts?.shots.length ?? 0) > 0 : true;
+  const selectedEpisodeStatus =
+    selectedEpisode !== null ? detailStatus[selectedEpisode] ?? "idle" : "idle";
+
   return (
     <main className={styles.shell}>
       <header className={styles.topbar}>
@@ -544,6 +922,25 @@ export default function JubenExperience() {
               }
             />
           </label>
+
+          <div className={styles.uploadRow}>
+            <label>
+              <Upload size={16} />
+              <span>{uploadStatus === "loading" ? "正在导入" : "上传脚本"}</span>
+              <input
+                type="file"
+                accept=".doc,.docx,.pdf,.txt,.md,image/*"
+                disabled={uploadStatus === "loading"}
+                onChange={(event) => {
+                  void handleUploadFile(event.target.files?.[0]);
+                  event.currentTarget.value = "";
+                }}
+              />
+            </label>
+            <p data-status={uploadStatus}>
+              {uploadMessage || "支持 docx、pdf、txt、md、图片；导入后可继续手动修改。"}
+            </p>
+          </div>
 
           <div className={styles.analyzeRow}>
             <button
@@ -686,6 +1083,9 @@ export default function JubenExperience() {
                 setStatus("idle");
                 setAnalysis(null);
                 setAnalyzeStatus("idle");
+                setUploadStatus("idle");
+                setUploadMessage("");
+                setDetailStatus({});
                 setEpisodeScope("all");
               }}
             >
@@ -698,7 +1098,7 @@ export default function JubenExperience() {
               ) : (
                 <Sparkles size={17} />
               )}
-              {status === "loading" ? "正在拆解" : "生成剧本包"}
+              {status === "loading" ? "正在拆解" : "生成骨架+第一集"}
             </button>
           </div>
         </form>
@@ -715,7 +1115,7 @@ export default function JubenExperience() {
             <div className={styles.visualOverlay}>
               <span data-status={status}>
                 {status === "loading"
-                  ? "DeepSeek 正在拆场"
+                  ? "DeepSeek 正在拆骨架"
                   : status === "ready"
                     ? "DeepSeek 生成完成"
                     : status === "error"
@@ -840,6 +1240,33 @@ export default function JubenExperience() {
             </div>
           ) : null}
 
+          {result && selectedEpisode !== null ? (
+            <div className={styles.episodeDetailBar}>
+              <span>
+                E{String(selectedEpisode).padStart(2, "0")}
+                {selectedEpisodeHasDetails
+                  ? " 已有镜头细节"
+                  : " 还没有导演剧本、镜头和 Prompt"}
+              </span>
+              <button
+                type="button"
+                disabled={selectedEpisodeStatus === "loading"}
+                onClick={() => generateEpisodeDetail(selectedEpisode)}
+              >
+                {selectedEpisodeStatus === "loading" ? (
+                  <Loader2 size={15} />
+                ) : (
+                  <Sparkles size={15} />
+                )}
+                {selectedEpisodeStatus === "loading"
+                  ? "正在生成本集"
+                  : selectedEpisodeHasDetails
+                    ? "重生成本集细节"
+                    : "生成本集细节"}
+              </button>
+            </div>
+          ) : null}
+
           <div className={styles.resultBody}>
             {!result ? (
               <div className={styles.emptyState}>
@@ -888,6 +1315,49 @@ export default function JubenExperience() {
                   </ul>
                 </article>
               </div>
+            ) : activeTab === "visual" ? (
+              <div className={styles.visualBibleGrid}>
+                <article>
+                  <span>格式</span>
+                  <p>{result.visualBible.format}</p>
+                </article>
+                <article>
+                  <span>核心风格</span>
+                  <p>{result.visualBible.coreStyle}</p>
+                </article>
+                <article>
+                  <span>色彩</span>
+                  <ul>
+                    {result.visualBible.colorPalette.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+                <article>
+                  <span>摄影语言</span>
+                  <ul>
+                    {result.visualBible.cameraLanguage.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+                <article>
+                  <span>人物锁定</span>
+                  {result.visualBible.characterLocks.map((item) => (
+                    <p key={item.character}>
+                      <strong>{item.character}</strong>：{item.lockedPrompt}
+                    </p>
+                  ))}
+                </article>
+                <article>
+                  <span>全局 Prompt</span>
+                  <pre>{result.visualBible.globalPrompt}</pre>
+                </article>
+                <article>
+                  <span>全局 Negative</span>
+                  <pre>{result.visualBible.globalNegative}</pre>
+                </article>
+              </div>
             ) : activeTab === "outline" ? (
               <div className={styles.episodeList}>
                 {(scopedParts?.outline ?? result.episodeOutline).map((episode) => (
@@ -910,6 +1380,27 @@ export default function JubenExperience() {
                   </article>
                 ))}
               </div>
+            ) : activeTab === "shotpack" ? (
+              (scopedParts?.shots.length ?? 0) > 0 ? (
+                <div className={styles.shotPackageGrid}>
+                  {(scopedParts?.shots ?? result.shotList).map((shot) => (
+                    <ShotPackageCard
+                      key={shot.shotId}
+                      result={result}
+                      shot={shot}
+                      scopedShots={scopedParts?.shots ?? result.shotList}
+                      onCopy={copyText}
+                      copied={copied}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.emptyState}>
+                  <Sparkles size={28} />
+                  <strong>这一集还没有镜头细节。</strong>
+                  <p>点上方“生成本集细节”，会补导演剧本、镜头和整合 Prompt。</p>
+                </div>
+              )
             ) : activeTab === "script" ? (
               <div className={styles.sceneGrid}>
                 {(scopedParts?.scenes ?? result.directorScript).map((scene) => (
