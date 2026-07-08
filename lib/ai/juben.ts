@@ -106,6 +106,9 @@ const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ??
   "https://api.deepseek.com/v1/chat/completions";
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
+const DEEPSEEK_TIMEOUT_MS = Number(
+  process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 22000,
+);
 
 const maxIdeaLength = 4200;
 
@@ -536,6 +539,8 @@ export async function generateJubenResult(
   }
 
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), DEEPSEEK_TIMEOUT_MS);
     const response = await fetch(DEEPSEEK_API_URL, {
       method: "POST",
       headers: {
@@ -550,7 +555,9 @@ export async function generateJubenResult(
         messages: buildJubenMessages(input),
       }),
       cache: "no-store",
+      signal: controller.signal,
     });
+    clearTimeout(timeout);
 
     if (!response.ok) {
       return fallbackJubenResult(
@@ -579,6 +586,9 @@ export async function generateJubenResult(
       },
     });
   } catch {
-    return fallbackJubenResult(input, "DeepSeek request failed before completion.");
+    return fallbackJubenResult(
+      input,
+      `DeepSeek request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
+    );
   }
 }
