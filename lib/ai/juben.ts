@@ -212,6 +212,11 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
         "输出给 Lovart/Grok 的 prompt 要具体到人物、地点、动作、构图、光线、镜头焦段感、情绪和连续性。不要只写风格词。",
         "必须输出 visualBible，像 live action production bible：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局 negative prompt。",
         "visualBible 的人物锁定必须能直接用于角色定妆和每个镜头首帧，避免人物漂移。",
+        "所有镜头 prompt 必须接近 LibTV 分镜提示词密度：使用 @角色 和 @场景/道具 标签；明确出场角色、背景场景、前一个镜头承接、分段动作、禁止项、约束、站位与朝向、运镜、音效。",
+        "shotList.visual 必须写成可拍画面，不少于 45 个中文字符；shotList.action 必须包含具体身体动作、道具交互、站位关系和情绪变化；continuity 必须说明与上一镜/下一镜怎么接。",
+        "cameraPrompts.prompt 要写视频运动提示词，不只写镜头名；必须包含分段秒数、主体运动、摄影机运动、景深/焦点变化、光影变化和不可违反的角色位置。",
+        "storyboardPrompts.prompt 要写最终分镜提示词，不少于 80 个中文字符，必须包含景别、光影氛围、人物服装/道具、空间层次和视觉风格。",
+        "editPrompts.prompt 要说明剪辑节奏、声音桥、对白口型、动作点和结尾钩子，不要只说快切或慢切。",
         "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
         "JSON 必须完全符合这个结构，所有字段都要有内容：",
         resultSchemaHint(),
@@ -257,6 +262,7 @@ export function buildJubenSeedMessages(input: Required<JubenRequestBody>): ChatM
             "directorScript、shotList、storyboardPrompts、cameraPrompts、editPrompts 只生成 E01，不要一次性生成后面所有集。",
             "E01 至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "visualBible 必须包含全剧风格、人物、色彩、环境定调和全局 prompt。",
+            "所有镜头都按 LibTV 镜头表思路写：画面描述、景别、光影氛围、对白/旁白、音效、运镜、最终提示词都要足够具体。",
             "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
           ],
         },
@@ -291,6 +297,7 @@ export function buildJubenEpisodeMessages(
             "保留 establishedVisualBible 的角色锁定、色彩、场景、全局 negative，不要换演员脸和整体风格。",
             "本集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "每个镜头 prompt 都要能生成 photoreal first frame，再动画成 4-7 秒短剧镜头。",
+            "每个镜头都要给足关键词密度：@角色、@场景、站位、朝向、前后镜承接、分段动作、禁止项、输出约束、光影变化、音效、对白口型。",
             "不要输出其他集的导演场景和镜头。",
             "返回完整 JSON 结构，但数组内容只放目标集的细节。",
           ],
@@ -987,7 +994,7 @@ function makePromptFromShot(
     return {
       id: baseId,
       sceneId: shot.sceneId,
-      prompt: `${shot.shotId} 运镜生成：${shot.shotSize}，${shot.cameraAngle}，${shot.movement}，时长 ${shot.duration}。画面内容：${shot.visual}。人物动作：${shot.action}。保持同一场景、服装、道具、光线和情绪连续，不要跳成预告片混剪。`,
+      prompt: `${shot.shotId} 视频运动提示词：出场角色保持上一镜身份和服装连续，背景场景保持同一空间。0-2秒，${shot.shotSize}从${shot.cameraAngle}建立主体和环境层次；2-${shot.duration}，${shot.movement}跟随动作“${shot.action}”，焦点从关键道具或人物眼神切换到冲突反应。画面内容：${shot.visual}。光影必须平滑过渡，景深清楚，人物站位不跳轴，动作点落在剪辑节奏上。禁止突然换景、变脸、空镜堆砌、预告片混剪。`,
       negativePrompt:
         "不要空镜堆砌，不要大幅度无目的摇晃，不要电影预告片节奏，不要人物变脸，不要随机换景。",
     };
@@ -997,7 +1004,7 @@ function makePromptFromShot(
     return {
       id: baseId,
       sceneId: shot.sceneId,
-      prompt: `${shot.shotId} 剪辑指令：镜头 ${shot.duration}，先给可见动作，再给反应或证据。声音使用 ${shot.sound}，转场要服务 ${shot.continuity}。结尾必须推动下一镜，不做纯氛围停留。`,
+      prompt: `${shot.shotId} 剪辑指令：镜头 ${shot.duration}，开头 1 秒接上一镜动作或视线，中段给“${shot.action}”的清晰动作点，末尾停在证据、表情或阻碍上形成下一镜钩子。对白口型必须对齐，声音使用 ${shot.sound}，环境底噪不断，转场必须服务连续性：${shot.continuity}。不要用字幕解释剧情，不要剪成预告片。`,
       negativePrompt:
         "不要宣传片蒙太奇，不要无意义闪白，不要史诗音乐硬推，不要把剧情用字幕解释完。",
     };
@@ -1006,7 +1013,7 @@ function makePromptFromShot(
   return {
     id: baseId,
     sceneId: shot.sceneId,
-    prompt: `${shot.shotId} 分镜图，${shot.shotSize}，${shot.cameraAngle}，${shot.visual}。人物动作：${shot.action}。现实主义短剧质感，主体清楚，构图服务戏剧冲突，保留关键道具和场景连续性。`,
+    prompt: `${shot.shotId} 最终分镜提示词：${shot.shotSize}，${shot.cameraAngle}，${shot.visual}。人物动作：${shot.action}。画面必须有前景/中景/背景层次，主体清楚，关键道具可见，服装污渍和材质连续，光影氛围服务戏剧冲突，保留上一镜空间和人物朝向。现实主义短剧质感，photoreal live-action vertical drama，不要海报构图。`,
     negativePrompt:
       "不要海报构图，不要预告片大片感，不要抽象空镜，不要夸张光效，不要多余文字，不要人物五官不连续。",
   };

@@ -183,6 +183,204 @@ function promptForShot(
   return sameScenePrompts[Math.max(shotIndex, 0)] ?? sameScenePrompts[0];
 }
 
+function atTag(value: string) {
+  return `@${value.replace(/^@/, "").trim()}`;
+}
+
+function shotSeconds(shot: JubenShot) {
+  const match = shot.duration.match(/\d+/);
+
+  return match ? Math.max(4, Number(match[0])) : 6;
+}
+
+function scenePlace(scene?: JubenScene) {
+  if (!scene) return "当前场景";
+
+  const withoutPrefix = scene.sceneHeading.replace(/^(内|外|内\/外|外\/内)\.\s*/, "");
+  return withoutPrefix.split(/\s*[-－—]\s*/)[0]?.trim() || scene.sceneHeading;
+}
+
+function characterRoster(result: JubenResult) {
+  return result.visualBible.characterLocks.length > 0
+    ? result.visualBible.characterLocks
+    : [
+        {
+          character: "主角",
+          lockedPrompt: result.storyBible.protagonist,
+        },
+        {
+          character: "阻碍者",
+          lockedPrompt: result.storyBible.antagonist,
+        },
+      ];
+}
+
+function characterRosterText(result: JubenResult) {
+  return characterRoster(result)
+    .map((item) => `${atTag(item.character)}：${item.lockedPrompt}`)
+    .join("\n");
+}
+
+function backgroundSceneText(result: JubenResult, scene?: JubenScene) {
+  const place = scenePlace(scene);
+  const rules = [
+    ...result.visualBible.environmentRules.slice(0, 3),
+    ...result.visualBible.keyProps.slice(0, 4).map((prop) => `关键道具：${prop}`),
+  ];
+
+  return [`${atTag(place)}：${scene?.sceneHeading ?? "本镜头场景"}，${result.visualBible.coreStyle}`, ...rules]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function previousShotText(
+  result: JubenResult,
+  shot: JubenShot,
+  scopedShots: JubenShot[],
+) {
+  const currentIndex = scopedShots.findIndex(
+    (candidate) => candidate.shotId === shot.shotId,
+  );
+  const previousShot = currentIndex > 0 ? scopedShots[currentIndex - 1] : null;
+  const previousScene = previousShot ? findSceneForShot(result, previousShot) : null;
+
+  if (!previousShot) {
+    return "本集第一镜：用具体动作建立人物目标、空间关系和第一处异常，不用旁白解释设定。";
+  }
+
+  return `${previousShot.shotId} / ${previousScene?.sceneHeading ?? previousShot.sceneId}：${previousShot.visual} ${previousShot.action} 连续性：${previousShot.continuity}`;
+}
+
+function dialogueText(scene?: JubenScene) {
+  if (!scene || scene.dialogue.length === 0) {
+    return "本镜头以动作、表情、呼吸和环境声推进；如需对白，口型必须清楚。";
+  }
+
+  return scene.dialogue
+    .map((line) => `${atTag(line.character)}开口：“${line.line}”（${line.subtext}）`)
+    .join("\n");
+}
+
+function splitActionText(
+  result: JubenResult,
+  shot: JubenShot,
+  scene?: JubenScene,
+) {
+  const total = shotSeconds(shot);
+  const mid = Math.max(2, Math.floor(total / 2));
+  const mainCharacter =
+    characterRoster(result)[0]?.character ?? scene?.dialogue[0]?.character ?? "主角";
+  const antagonist =
+    characterRoster(result)[1]?.character ?? scene?.dialogue[1]?.character ?? "阻碍者";
+
+  return [
+    `【0-${mid}秒：动作建立】`,
+    `画面：${shot.visual} ${atTag(mainCharacter)}执行动作：${shot.action}。景别为${shot.shotSize}，${shot.cameraAngle}，空间必须有前景/中景/背景层次。`,
+    `禁止：主体突然换脸；动作迟缓散漫；画面没有景深层次；服装和道具与上一镜不连续；光线突然刺眼。`,
+    `约束：${shot.continuity}；关键道具必须可见；人物手部结构自然真实；镜面/反光物品必须明确正反面，不能污染画面。`,
+    `站位与朝向：${atTag(mainCharacter)}占据主要视觉中心，${atTag(antagonist)}或阻碍信息保留在可识别的位置，人物视线必须服务冲突。`,
+    `运镜：${shot.movement}，镜头从${shot.cameraAngle}进入，不跳轴，不随机换景。`,
+    `音效：${shot.sound}`,
+    "",
+    `【${mid}-${total}秒：反应与钩子】`,
+    `画面：动作推进到情绪或信息反转，${scene?.emotionalTurn ?? shot.visual}。光影按照“${result.visualBible.colorPalette.slice(0, 4).join(" / ")}”逐步变化，压迫感增强。`,
+    `禁止：对白无口型；人物关系不推进；背景角色离开既定位置；手部穿模；裙摆/外套/帽子/道具突然变干净或消失。`,
+    `约束：必须给出清晰反应和下一镜钩子；保留${scenePlace(scene)}的空间连续性；${result.visualBible.globalNegative}`,
+    `站位与朝向：主体动作结束后，视线或身体朝向必须指向下一镜的冲突来源。`,
+    `运镜：保持${shot.movement}的运动逻辑，最后定格在表情、证据物或阻碍者反应上。`,
+    `音效：${shot.sound}，环境底噪不断，结尾留出剪辑点。`,
+  ].join("\n");
+}
+
+function libtvFinalPrompt(
+  result: JubenResult,
+  shot: JubenShot,
+  scene?: JubenScene,
+  scopedShots: JubenShot[] = result.shotList,
+) {
+  const storyboard = promptForShot(result.storyboardPrompts, shot, scopedShots);
+  const camera = promptForShot(result.cameraPrompts, shot, scopedShots);
+  const characters = characterRoster(result)
+    .slice(0, 4)
+    .map((item) => `${atTag(item.character)}（${item.lockedPrompt}）`)
+    .join("、");
+  const place = atTag(scenePlace(scene));
+
+  return [
+    `${shot.shotSize}，${result.visualBible.colorPalette.slice(0, 3).join("、")}交替的${place}。`,
+    `${characters}。`,
+    `${shot.visual} ${shot.action}`,
+    dialogueText(scene),
+    `镜头语言：${shot.cameraAngle}，${shot.movement}，${camera?.prompt ?? ""}`,
+    `光影氛围：${result.visualBible.coreStyle}`,
+    `音效：${shot.sound}`,
+    `最终约束：${shot.continuity}；${storyboard?.negativePrompt ?? ""}；${result.visualBible.globalNegative}`,
+    `[视觉风格：${result.visualBible.format}]`,
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function libtvStructuredPrompt(
+  result: JubenResult,
+  shot: JubenShot,
+  scene: JubenScene | undefined,
+  scopedShots: JubenShot[],
+) {
+  const storyboard = promptForShot(result.storyboardPrompts, shot, scopedShots);
+  const camera = promptForShot(result.cameraPrompts, shot, scopedShots);
+  const edit = promptForShot(result.editPrompts, shot, scopedShots);
+
+  return [
+    "出场角色：",
+    characterRosterText(result),
+    "",
+    "---",
+    "",
+    "背景场景：",
+    backgroundSceneText(result, scene),
+    "",
+    "---",
+    "",
+    "前一个分镜描述：",
+    previousShotText(result, shot, scopedShots),
+    "",
+    "---",
+    "",
+    "分段动作：",
+    splitActionText(result, shot, scene),
+    "",
+    "---",
+    "",
+    "对白/旁白：",
+    dialogueText(scene),
+    "",
+    "---",
+    "",
+    "分镜提示词：",
+    storyboard?.prompt ?? `${result.visualBible.globalPrompt} ${shot.visual}`,
+    "",
+    "视频运动提示词：",
+    camera?.prompt ?? `${shot.shotId} ${shot.duration} ${shot.movement} ${shot.action}`,
+    "",
+    "剪辑提示词：",
+    edit?.prompt ?? `${shot.duration}，动作点清晰，声音桥连续，结尾形成钩子。`,
+    "",
+    "---",
+    "",
+    "输出约束：",
+    "1. 角色外貌、身高体态、服装、发型、核心道具必须与视觉圣经一致。",
+    "2. 对白必须有准确口型，不能只用字幕表达。",
+    "3. 背景角色必须停留在既定空间位置，不得无故离开或穿帮。",
+    "4. 光影必须体现本剧色彩策略，冷暖过渡要平滑，压迫感逐步增强。",
+    "5. 手部、手指、脸部、眼神和道具接触必须真实自然，无穿模。",
+    "6. 镜面、玻璃、银器、反光物必须约束正反面和反射内容，避免污染主体。",
+    "7. 保持原参考图元素和人物身份一致，不改变服装、道具和时代背景。",
+    `8. ${result.visualBible.globalNegative}`,
+    `[视觉风格：${result.visualBible.format}]`,
+  ].join("\n");
+}
+
 function shotPackageText(
   result: JubenResult,
   shot: JubenShot,
@@ -196,13 +394,15 @@ function shotPackageText(
     result.visualBible.characterLocks
       ?.map((item) => `${item.character}: ${item.lockedPrompt}`)
       .join("\n") || "";
-  const dialogue =
-    scene?.dialogue
-      .map((line) => `${line.character}: ${line.line}（${line.subtext}）`)
-      .join("\n") || "本镜头以动作、表情和环境声推进。";
 
   return [
     `${shot.shotId} / ${scene?.sceneHeading ?? shot.sceneId}`,
+    "",
+    "【LibTV 最终提示词】",
+    libtvFinalPrompt(result, shot, scene, scopedShots),
+    "",
+    "【LibTV 结构化提示词】",
+    libtvStructuredPrompt(result, shot, scene, scopedShots),
     "",
     "【全局风格】",
     result.visualBible.globalPrompt,
@@ -227,7 +427,7 @@ function shotPackageText(
       `${shot.duration}，先给动作，再给反应或证据，结尾接下一镜。声音：${shot.sound}`,
     "",
     "【配音 / 声音】",
-    dialogue,
+    dialogueText(scene),
     `声音：${shot.sound}`,
     `连续性：${shot.continuity}`,
   ]
