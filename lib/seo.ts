@@ -223,6 +223,26 @@ export const routeSeo = {
       "shot list generator",
     ],
   },
+  prompt: {
+    path: "/prompt",
+    title: "AI Prompt 雷达 | 热门图片视频提示词与中文扩写",
+    description:
+      "面向中文创作者的 AI prompt 工作台：聚合热门图片、视频 prompt 和案例，支持手动导入、图片反推 prompt、描述词扩写与每日收集任务架构。",
+    keywords: [
+      "AI prompt",
+      "提示词",
+      "图片提示词",
+      "视频提示词",
+      "prompt瀑布流",
+      "图片反推prompt",
+      "AI提示词扩写",
+      "X prompt trends",
+      "Midjourney prompt",
+      "Grok image prompt",
+      "Seedance video prompt",
+      "Veo prompt",
+    ],
+  },
   black: {
     path: "/black",
     title: "DestinyPixel Black | Cosmic Birth Map Interface",

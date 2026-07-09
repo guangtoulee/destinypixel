@@ -126,3 +126,40 @@ create index if not exists saved_reports_member_id_idx
   on public.saved_reports(member_id);
 create index if not exists saved_reports_updated_at_idx
   on public.saved_reports(updated_at desc);
+
+create table if not exists public.prompt_items (
+  id text primary key,
+  title text not null,
+  description text not null,
+  prompt text not null,
+  negative_prompt text not null,
+  image_url text,
+  video_url text,
+  source_url text,
+  source_type text not null default 'manual',
+  author_name text,
+  author_handle text,
+  created_at timestamptz not null default now(),
+  imported_at timestamptz not null default now(),
+  tags text[] not null default '{}'::text[],
+  model_hints text[] not null default '{}'::text[],
+  style text not null default '',
+  lighting text not null default '',
+  camera text not null default '',
+  palette text not null default '',
+  mood text not null default '',
+  composition text not null default '',
+  aspect_ratio text not null default 'auto',
+  language text not null default 'zh',
+  content_type text not null default 'image',
+  metrics jsonb not null default '{}'::jsonb,
+  compliance_note text,
+  raw_text text
+);
+
+create index if not exists prompt_items_created_at_idx
+  on public.prompt_items(created_at desc);
+create index if not exists prompt_items_source_type_idx
+  on public.prompt_items(source_type);
+create index if not exists prompt_items_content_type_idx
+  on public.prompt_items(content_type);
