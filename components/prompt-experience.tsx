@@ -143,6 +143,18 @@ const starterIdeas = [
   "咖啡杯从桌面滑向镜头，4 秒产品视频",
 ];
 
+const breakdownLabels: Record<string, string> = {
+  subject: "对象",
+  style: "风格",
+  lighting: "光线",
+  camera: "镜头",
+  palette: "色调",
+  scene: "场景",
+  mood: "氛围",
+  composition: "构图",
+  quality: "质量",
+};
+
 function formatDate(value: string) {
   const date = new Date(value);
 
@@ -181,6 +193,46 @@ function contentLabel(value: PromptContentType) {
 
 function mediaSrc(item: PromptFeedItem) {
   return item.imageUrl || item.videoUrl || "";
+}
+
+function formatBreakdown(breakdown: Record<string, string>) {
+  return Object.entries(breakdown)
+    .filter(([, value]) => Boolean(value?.trim()))
+    .map(([key, value]) => `${breakdownLabels[key] || key}：${value}`)
+    .join("\n");
+}
+
+function buildExpansionCopy(result: PromptExpansionResult) {
+  return [
+    result.prompt,
+    "",
+    "【细节拆解】",
+    formatBreakdown(result.breakdown),
+    "",
+    "【负向约束】",
+    result.negativePrompt,
+    "",
+    `【画幅】${result.aspectRatio}`,
+    result.modelHints.length ? `【适合模型】${result.modelHints.join(" / ")}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function buildImageAnalysisCopy(result: PromptImageAnalysisResult) {
+  return [
+    result.prompt,
+    "",
+    "【细节拆解】",
+    formatBreakdown(result.breakdown),
+    "",
+    "【负向约束】",
+    result.negativePrompt,
+    "",
+    result.modelHints.length ? `【适合模型】${result.modelHints.join(" / ")}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 }
 
 export default function PromptExperience() {
@@ -703,12 +755,15 @@ export default function PromptExperience() {
                     </span>
                     <button
                       onClick={() =>
-                        void copyText(expanded.prompt, "expanded-prompt")
+                        void copyText(
+                          buildExpansionCopy(expanded),
+                          "expanded-prompt",
+                        )
                       }
                       type="button"
                     >
                       <Copy aria-hidden="true" />
-                      {copied === "expanded-prompt" ? "已复制" : "复制"}
+                      {copied === "expanded-prompt" ? "已复制" : "复制整包"}
                     </button>
                   </div>
                   <h3>{expanded.title}</h3>
@@ -720,7 +775,7 @@ export default function PromptExperience() {
                   <div className={styles.breakdownGrid}>
                     {Object.entries(expanded.breakdown).map(([key, value]) => (
                       <span key={key}>
-                        <strong>{key}</strong>
+                        <strong>{breakdownLabels[key] || key}</strong>
                         {value}
                       </span>
                     ))}
@@ -737,12 +792,15 @@ export default function PromptExperience() {
                     </span>
                     <button
                       onClick={() =>
-                        void copyText(imageResult.prompt, "image-prompt")
+                        void copyText(
+                          buildImageAnalysisCopy(imageResult),
+                          "image-prompt",
+                        )
                       }
                       type="button"
                     >
                       <Copy aria-hidden="true" />
-                      {copied === "image-prompt" ? "已复制" : "复制"}
+                      {copied === "image-prompt" ? "已复制" : "复制整包"}
                     </button>
                   </div>
                   <h3>{imageResult.title}</h3>
