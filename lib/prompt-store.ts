@@ -1,9 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import promptRadarSnapshot from "@/data/prompt-radar.json";
 import {
   dedupePromptItems,
   normalizePromptFeedItem,
-  seedPromptItems,
   type PromptFeedItem,
   type PromptMetrics,
 } from "@/lib/ai/prompt";
@@ -44,6 +44,13 @@ type PromptItemRow = {
 };
 
 const localPromptStorePath = path.join(process.cwd(), "work", "prompt-feed.json");
+const snapshotPromptItems = promptRadarSnapshot.items.map((item) =>
+  normalizePromptFeedItem(
+    item as Omit<Partial<PromptFeedItem>, "metrics"> & {
+      metrics?: Partial<PromptMetrics>;
+    },
+  ),
+);
 
 function shouldSkipLocalWrites() {
   return Boolean(process.env.VERCEL || process.env.NODE_ENV === "production");
@@ -51,6 +58,7 @@ function shouldSkipLocalWrites() {
 
 function hasSupabaseConfig() {
   return Boolean(
+    process.env.PROMPT_SUPABASE_ENABLED === "true" &&
     (process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL) &&
       process.env.SUPABASE_SERVICE_ROLE_KEY,
   );
@@ -255,13 +263,17 @@ export async function readPromptFeed(limit = 48) {
   const items = dedupePromptItems([
     ...supabase.items,
     ...localStore.items,
-    ...seedPromptItems,
+    ...snapshotPromptItems,
   ]).slice(0, limit);
 
   return {
     items,
-    updatedAt: localStore.updatedAt,
-    persistent: supabase.available || !shouldSkipLocalWrites(),
+    updatedAt:
+      localStore.items.length > 0
+        ? localStore.updatedAt
+        : promptRadarSnapshot.updatedAt,
+    persistent: true,
+    sourceSummary: promptRadarSnapshot.sourceSummary,
   };
 }
 

@@ -2,7 +2,7 @@ export type PromptLanguage = "zh" | "en";
 
 export type PromptContentType = "image" | "video" | "prompt" | "case";
 
-export type PromptSourceType = "x" | "manual" | "seed" | "api";
+export type PromptSourceType = "x" | "community" | "manual" | "seed" | "api";
 
 export type PromptMetrics = {
   likes: number;
@@ -72,6 +72,8 @@ export type PromptExpansionResult = {
     composition: string;
     quality: string;
   };
+  preservedDetails: string[];
+  creativeAdditions: string[];
   variants: string[];
   provider: "deepseek" | "local-fallback";
   model: string;
@@ -145,11 +147,11 @@ const maxImportTextLength = 24000;
 
 export const promptSourcePlan = {
   primary:
-    "优先使用 X API v2 recent search，通过 Bearer Token 收集最近 7 天的公开视频/图片 prompt 线索。",
+    "公开 X 搜索快照与 CC BY 社区索引并行收集，保留作者、时间、互动量、生成图和原帖链接。",
   fallback:
-    "未配置 X 凭证时，使用手动导入和内置样例；每日任务仍然走同一个 cron 刷新入口。",
+    "X 付费 API 不可用时，GitHub Actions 每天三次刷新公开索引；建好 prompt_items 表并设置 PROMPT_SUPABASE_ENABLED=true 后可持久化人工导入。",
   compliance:
-    "不抓取 X 页面 HTML；只保存来源链接、作者归属和官方 API 返回的媒体元数据，并回链原帖。",
+    "不抓取 X 页面 HTML；只保存公开搜索结果、社区许可数据和必要元数据，并始终回链原作者。",
 };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -179,7 +181,14 @@ function normalizeContentType(value: unknown): PromptContentType {
 }
 
 function normalizeSourceType(value: unknown): PromptSourceType {
-  if (value === "x" || value === "manual" || value === "api") return value;
+  if (
+    value === "x" ||
+    value === "community" ||
+    value === "manual" ||
+    value === "api"
+  ) {
+    return value;
+  }
 
   return "seed";
 }
@@ -291,48 +300,6 @@ function makeSlug(value: string) {
     .slice(0, 80);
 
   return slug || crypto.randomUUID();
-}
-
-function includesAny(value: string, patterns: RegExp[]) {
-  return patterns.some((pattern) => pattern.test(value));
-}
-
-function enrichSubjectSeed(idea: string, zh: boolean) {
-  const parts = [idea];
-
-  if (includesAny(idea, [/美女|女孩|女生|女性|女人|模特|girl|woman|beauty/i])) {
-    parts.push(
-      zh
-        ? "东方审美的高级人物设定，鹅蛋脸，杏眼，长睫毛，柳叶眉，鼻梁清秀，唇形自然，黑色长发带轻微空气感，表情从容，有清冷但亲近的气质"
-        : "refined East Asian beauty, oval face, almond eyes, long lashes, willow-shaped brows, elegant nose bridge, natural lips, softly flowing dark hair, calm and approachable expression",
-    );
-  }
-
-  if (includesAny(idea, [/服装|时尚|裙|长裙|穿搭|礼服|fashion|dress|outfit/i])) {
-    parts.push(
-      zh
-        ? "服装改写为宽松飘逸的水墨蓝长裙，半透明雪纺外层，细腻银线刺绣，腰线轻收，裙摆像水波一样展开，布料随动作产生柔和褶皱"
-        : "a flowing ink-blue dress with a translucent chiffon outer layer, subtle silver embroidery, softly defined waistline, water-like hem movement, gentle fabric folds",
-    );
-  }
-
-  if (includesAny(idea, [/产品|电商|瓶|包|箱|咖啡|香水|护肤|product|bottle|coffee|bag/i])) {
-    parts.push(
-      zh
-        ? "产品细节要有可检查的材质、边缘高光、真实反射、微小使用痕迹和高级商业摄影留白"
-        : "inspectable material details, crisp edge highlights, realistic reflections, tiny use marks, and polished commercial negative space",
-    );
-  }
-
-  if (includesAny(idea, [/国风|东方|水墨|汉服|古风|山水|中式|ink|oriental|chinese/i])) {
-    parts.push(
-      zh
-        ? "东方意境：远处淡墨山影、薄雾、宣纸般的柔和留白、竹影或水纹作为背景层次"
-        : "East Asian poetic atmosphere with distant ink-wash mountains, mist, paper-like negative space, bamboo shadows or water ripples in the background",
-    );
-  }
-
-  return parts.join(zh ? "，" : ", ");
 }
 
 function stripUrls(value: string) {
@@ -635,63 +602,38 @@ function fallbackPromptExpansion(
   const style = input.stylePreference || (isVideo ? "真人写实视频" : "电影级商业摄影");
   const aspectRatio = input.aspectRatio || (isVideo ? "9:16" : "3:4");
   const avoid = input.avoid || "水印、logo、乱码文字、低清模糊、主体漂移、畸形手、多余肢体";
-  const title = zh ? `${idea.slice(0, 22)} · 完整 Prompt` : `${idea.slice(0, 28)} · Expanded prompt`;
-  const subjectSeed = enrichSubjectSeed(idea, zh);
+  const title = zh ? `${idea.slice(0, 22)} · 基础整理` : `${idea.slice(0, 28)} · Basic draft`;
   const breakdown = zh
     ? {
-        subject: subjectSeed,
-        style: `${style}，带明确审美取向，不只是普通写实`,
-        lighting: "窗边柔和侧逆光，面部有干净眼神光，发丝边缘有微弱轮廓光，暗部保留层次",
+        subject: idea,
+        style,
+        lighting: "未补写，等待智能服务根据主体与场景决定",
         camera: isVideo
-          ? "竖屏中近景开场，0-2 秒建立主体神态，2-4 秒镜头轻推，焦点从眼神过渡到服装/道具细节"
-          : "85mm 人像摄影感，f/1.8 浅景深，主体边缘清楚，背景轻微虚化但有故事信息",
-        palette: "水墨蓝、象牙白、雾灰、少量银色高光，整体低饱和但有记忆点",
-        scene: "真实可拍的室内窗边或半开放廊下，前景有轻纱/花枝/玻璃反光，中景是主体，远景留出朦胧空间",
-        mood: "清冷、温柔、含蓄，有东方诗意和高级时装杂志感",
-        composition: "三分线构图，人物微微侧身回头，手部自然触碰裙摆或道具，留白服务海报标题区",
-        quality: "8k 超高清，真实皮肤纹理，布料纤维、发丝、刺绣、反光边缘都清楚，画面干净不油腻",
+          ? "未补写，等待智能服务生成分段动作与运镜"
+          : "未补写，等待智能服务根据画面意图选择镜头",
+        palette: "未补写，保持用户明确给出的颜色",
+        scene: "未补写，不擅自加入室内、窗边、廊下等固定场景",
+        mood: "未补写，等待智能服务根据主体关系推导",
+        composition: `保持用户意图，画幅 ${aspectRatio}`,
+        quality: "主体、材质和空间关系清楚，不改变用户明确设定",
       }
     : {
-        subject: subjectSeed,
-        style: `${style}, with a clear aesthetic direction instead of generic realism`,
-        lighting: "soft side-back window light, clean catchlights, subtle rim light on hair, preserved shadow detail",
+        subject: idea,
+        style,
+        lighting: "Not expanded; waiting for the intelligent service to infer lighting from the subject and scene.",
         camera: isVideo
-          ? "vertical medium close opening, 0-2s establish expression, 2-4s slow push-in, focus shifts from eyes to outfit or prop details"
-          : "85mm portrait photography, f/1.8 shallow depth of field, clear subject separation, softly readable background",
-        palette: "ink blue, ivory white, mist gray, restrained silver highlights",
-        scene: "a believable window-side interior or semi-open corridor with foreground veil, flower branch, or glass reflection, layered depth",
-        mood: "cool, gentle, understated, poetic, editorial",
-        composition: "rule-of-thirds, slight side turn and glance back, natural hand gesture touching fabric or prop, poster-ready negative space",
-        quality: "8k, realistic skin texture, crisp fabric fibers, hair strands, embroidery, clean reflective edges",
+          ? "Not expanded; waiting for timed action and camera direction."
+          : "Not expanded; waiting for a lens choice based on the visual intent.",
+        palette: "Not expanded; preserve every color explicitly provided by the user.",
+        scene: "Not expanded; no default location is inserted.",
+        mood: "Not expanded; waiting for contextual inference.",
+        composition: `Preserve user intent in ${aspectRatio}.`,
+        quality: "Keep the subject, materials, and spatial relationships clear without replacing explicit constraints.",
       };
 
   const prompt = zh
-    ? [
-        `${idea}。${style}，${breakdown.scene}。`,
-        `光线：${breakdown.lighting}。`,
-        `摄影/镜头：${breakdown.camera}。`,
-        `色调：${breakdown.palette}。`,
-        `氛围：${breakdown.mood}。`,
-        `构图：${breakdown.composition}。`,
-        `质量：${breakdown.quality}。`,
-        isVideo
-          ? "视频动作：0-1 秒建立主体和空间，1-3 秒主体完成一个清晰动作，3-5 秒镜头停在表情、道具或结果上；动作连续，焦点平滑，不突然换景。"
-          : "画面必须像真实拍摄结果，主体边缘清楚，细节可检查，留白自然。",
-        `画幅：${aspectRatio}。`,
-      ].join("")
-    : [
-        `${idea}. ${style}, ${breakdown.scene}. `,
-        `Lighting: ${breakdown.lighting}. `,
-        `Camera: ${breakdown.camera}. `,
-        `Color palette: ${breakdown.palette}. `,
-        `Mood: ${breakdown.mood}. `,
-        `Composition: ${breakdown.composition}. `,
-        `Quality: ${breakdown.quality}. `,
-        isVideo
-          ? "Motion: 0-1s establish subject and space, 1-3s show one clear subject action, 3-5s hold on expression, prop, or outcome; continuous motion and smooth focus, no sudden scene change. "
-          : "The image should feel physically photographed, with clean subject edges, inspectable details, and natural negative space. ",
-        `Aspect ratio: ${aspectRatio}.`,
-      ].join("");
+    ? `${idea}。风格：${style}。画幅：${aspectRatio}。保留上述所有明确设定，不擅自替换服装、颜色、版型、年龄、身份、场景或动作。`
+    : `${idea}. Style: ${style}. Aspect ratio: ${aspectRatio}. Preserve every explicit attribute above; do not replace clothing, color, fit, age, identity, location, or action.`;
 
   return {
     title,
@@ -704,17 +646,9 @@ function fallbackPromptExpansion(
     aspectRatio,
     modelHints: isVideo ? ["Seedance", "Veo", "Kling"] : ["Grok Imagine", "Midjourney", "Flux"],
     breakdown,
-    variants: zh
-      ? [
-          `${prompt} 更偏纪录片写实，减少装饰，增强生活细节。`,
-          `${prompt} 更偏商业广告，高光更干净，背景更简洁。`,
-          `${prompt} 更偏电影悬疑，暗部更深，主体表情更克制。`,
-        ]
-      : [
-          `${prompt} More documentary realism, fewer decorative details, stronger everyday texture.`,
-          `${prompt} More commercial advertising polish, cleaner highlights, simpler background.`,
-          `${prompt} More cinematic suspense, deeper shadows, restrained subject expression.`,
-        ],
+    preservedDetails: [idea],
+    creativeAdditions: [],
+    variants: [],
     provider: "local-fallback",
     model: note || "structured-local-expander",
     generatedAt: new Date().toISOString(),
@@ -731,13 +665,17 @@ function buildPromptExpansionMessages(
       content: [
         "You are a senior AI image and video prompt director for Chinese creators.",
         "Expand rough ideas into production-ready, visually rich prompts with subject, style, lighting, camera, palette, scene, mood, composition, quality, and negative constraints.",
-        "Do not merely rewrite or summarize the user input. Add tasteful inferred details that improve the image: face shape, eyes, eyebrows, eyelashes, hair, pose, wardrobe cut, fabric, material texture, props, environment layers, color accents, and camera language.",
-        "If the user writes generic words like 美女, 时尚服装, 国风, 产品, 海报, 街头, 赛博, expand them into concrete visual choices. Example: 美女 can become 杏眼、长睫毛、柳叶眉、自然唇形、黑色长发、从容表情. 时尚服装 can become 水墨蓝长裙、半透明雪纺、银线刺绣、飘逸裙摆.",
-        "Make the result feel designed and evocative, not generic. Prefer specific nouns, colors, materials, micro-actions, atmosphere, and compositional relationships.",
+        "First silently separate the input into LOCKED FACTS and OPEN SLOTS. LOCKED FACTS are every explicit identity, age range, ethnicity, garment category, garment fit, garment length, color, material, pose, action, location, time, object, relationship, and aspect ratio. They are hard constraints.",
+        "Never replace, soften, or contradict a locked fact. A tight top must remain tight; a short skirt must remain a short skirt; a specified color, location, age, identity, and action must remain. Do not turn one garment into another merely to make the result more poetic.",
+        "Only invent details for OPEN SLOTS. Add context-sensitive specifics such as facial traits, hairstyle, fabric weave, seams, accessories, micro-expression, environmental evidence, light behavior, lens choice, color relationships, and compositional tension.",
+        "Choose additions from the actual semantic context. Campus, street, product, fantasy, documentary, fashion, food, architecture, and UI prompts must not share one recurring scene, palette, lens, pose, or mood.",
+        "Do not copy examples, stock phrases, or a house template. Avoid defaulting to ink blue, ivory, mist, silver, window light, corridors, chiffon, embroidery, 85mm, or Eastern poetry unless the user's idea genuinely calls for them.",
+        "Make the result feel art-directed and surprising while remaining faithful. Prefer specific nouns, physically plausible materials, micro-actions, spatial evidence, and a coherent visual idea over adjective stacking.",
         "Respect safety and commercial usability: do not add nudity, sexual anatomy, minors, young-looking sexualization, pornographic framing, or fetish detail. If the user asks for exposed sexual anatomy, transform it into tasteful fashion, portrait, swimwear, or editorial styling without explicit anatomy.",
         "Default to Chinese output when language is zh. Use English only when language is en.",
         "For video prompts include segmented timing, subject motion, camera motion, focus changes, and continuity constraints.",
-        "The main prompt should be 180-360 Chinese characters for image prompts, or 220-420 Chinese characters for video prompts. The breakdown fields should be concrete and useful, not one-word labels.",
+        "The main prompt should usually be 220-480 Chinese characters for image prompts, or 280-560 Chinese characters for video prompts. The breakdown fields should add useful information instead of repeating the same sentence.",
+        "Before returning JSON, silently audit the result against every locked fact and repair any contradiction.",
         "Return strict JSON only. No markdown.",
         "Schema:",
         "{",
@@ -746,6 +684,8 @@ function buildPromptExpansionMessages(
         '  "negativePrompt": "...",',
         '  "modelHints": ["..."],',
         '  "breakdown": {"subject": "...", "style": "...", "lighting": "...", "camera": "...", "palette": "...", "scene": "...", "mood": "...", "composition": "...", "quality": "..."},',
+        '  "preservedDetails": ["explicit user detail 1", "explicit user detail 2"],',
+        '  "creativeAdditions": ["new inferred detail 1", "new inferred detail 2"],',
         '  "variants": ["...", "...", "..."]',
         "}",
       ].join("\n"),
@@ -762,10 +702,11 @@ function buildPromptExpansionMessages(
           avoid: input.avoid,
           outputRules: [
             "The main prompt must be directly usable in image/video generation tools.",
-            "Do not stay close to the original sentence. Improve it with concrete inferred details while preserving the user's intent.",
+            "Preserve every explicit fact exactly in meaning. Expansion means filling missing visual decisions, never replacing supplied ones.",
             "Include subject details, face/hair/wardrobe/materials if relevant, style, lighting, camera/lens, palette, scene, mood, composition, quality, and negative constraints.",
             "Use concrete visual nouns and action constraints; avoid vague words only.",
             "For Chinese output, use vivid Chinese visual language suitable for copy-paste prompt generation.",
+            "List preservedDetails and creativeAdditions separately so the user can audit what was kept and what was invented.",
             "Negative prompt must include the user's avoid list plus no watermark, no messy text, no low quality, no distorted hands/fingers, no subject drift, no explicit sexual anatomy.",
           ],
         },
@@ -883,6 +824,14 @@ export async function expandPrompt(
             quality: cleanText(record.breakdown.quality, fallback.breakdown.quality, 300),
           }
         : fallback.breakdown,
+      preservedDetails:
+        Array.isArray(record.preservedDetails) && record.preservedDetails.length > 0
+          ? uniqueStrings(record.preservedDetails, 12)
+          : fallback.preservedDetails,
+      creativeAdditions:
+        Array.isArray(record.creativeAdditions) && record.creativeAdditions.length > 0
+          ? uniqueStrings(record.creativeAdditions, 12)
+          : fallback.creativeAdditions,
       variants:
         Array.isArray(record.variants) && record.variants.length > 0
           ? uniqueStrings(record.variants, 4)

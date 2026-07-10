@@ -1,0 +1,41 @@
+name: Update prompt radar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 1,7,13 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prompt-radar-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect public prompt signals
+        env:
+          ANYSEARCH_API_KEY: ${{ secrets.ANYSEARCH_API_KEY }}
+        run: node scripts/update-prompt-radar.mjs
+
+      - name: Commit refreshed snapshot
+        run: |
+          if git diff --quiet -- data/prompt-radar.json; then
+            echo "Prompt radar is already current."
+            exit 0
+          fi
+          git config user.name "destinypixel-radar[bot]"
+          git config user.email "destinypixel-radar[bot]@users.noreply.github.com"
+          git add data/prompt-radar.json
+          git commit -m "chore: refresh prompt radar"
+          git push origin HEAD:main
