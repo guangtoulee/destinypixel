@@ -73,6 +73,15 @@ export type JubenVisualBible = {
   globalNegative: string;
 };
 
+export type JubenProductionPlan = {
+  adaptationBrief: string;
+  shootingStrategy: string;
+  locationPlan: string[];
+  referenceAssets: string[];
+  generationOrder: string[];
+  qualityGates: string[];
+};
+
 export type JubenResult = {
   meta: {
     title: string;
@@ -97,14 +106,18 @@ export type JubenResult = {
     conflictEngine: string;
     visualRules: string[];
   };
+  productionPlan: JubenProductionPlan;
   visualBible: JubenVisualBible;
   episodeOutline: Array<{
     episode: number;
     title: string;
     hook: string;
+    objective: string;
+    obstacle: string;
     beats: string[];
     turn: string;
     cliffhanger: string;
+    durationPlan: string[];
   }>;
   directorScript: JubenScene[];
   shotList: JubenShot[];
@@ -186,8 +199,9 @@ function resultSchemaHint() {
     '  "meta": {"title": "...", "logline": "...", "format": "...", "provider": "deepseek", "model": "...", "generatedAt": "ISO string"},',
     '  "diagnosis": {"corePromise": "...", "realAudienceHook": "...", "trailerRisk": "...", "fixStrategy": "..."},',
     '  "storyBible": {"theme": "...", "world": "...", "protagonist": "...", "antagonist": "...", "relationshipEngine": "...", "conflictEngine": "...", "visualRules": ["..."]},',
+    '  "productionPlan": {"adaptationBrief": "...", "shootingStrategy": "...", "locationPlan": ["..."], "referenceAssets": ["..."], "generationOrder": ["..."], "qualityGates": ["..."]},',
     '  "visualBible": {"format": "...", "coreStyle": "...", "colorPalette": ["..."], "cameraLanguage": ["..."], "productionLogic": ["..."], "environmentRules": ["..."], "characterLocks": [{"character": "...", "lockedPrompt": "..."}], "keyProps": ["..."], "globalPrompt": "...", "globalNegative": "..."},',
-    '  "episodeOutline": [{"episode": 1, "title": "...", "hook": "...", "beats": ["..."], "turn": "...", "cliffhanger": "..."}],',
+    '  "episodeOutline": [{"episode": 1, "title": "...", "hook": "...", "objective": "...", "obstacle": "...", "beats": ["..."], "turn": "...", "cliffhanger": "...", "durationPlan": ["0-5秒：..."]}],',
     '  "directorScript": [{"sceneId": "E01-S01", "episode": 1, "sceneHeading": "内/外. 地点 - 时间", "dramaticPurpose": "...", "conflict": "...", "action": "...", "dialogue": [{"character": "...", "line": "...", "subtext": "..."}], "emotionalTurn": "..."}],',
     '  "shotList": [{"shotId": "E01-S01-01", "sceneId": "E01-S01", "shotSize": "...", "cameraAngle": "...", "movement": "...", "duration": "3s", "visual": "...", "action": "...", "sound": "...", "continuity": "..."}],',
     '  "storyboardPrompts": [{"id": "SB-01", "sceneId": "E01-S01", "prompt": "...", "negativePrompt": "..."}],',
@@ -213,6 +227,7 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
         "镜头必须服务叙事，避免只写空镜、氛围、慢动作、震撼、史诗感、燃、大片感等预告片词。",
         "输出给 Lovart/Grok 的 prompt 要具体到人物、地点、动作、构图、光线、镜头焦段感、情绪和连续性。不要只写风格词。",
         "必须输出 visualBible，按真人影视制作圣经来写：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局负向约束。",
+        "必须输出 productionPlan，把改编方向、低成本拍法、可复用场景、角色/场景/道具参考资产、AI生成顺序和质量审批节点写清楚。",
         "visualBible 的人物锁定必须能直接用于角色定妆和每个镜头首帧，避免人物漂移。",
         "所有镜头 prompt 必须接近 LibTV 分镜提示词密度：使用 @角色 和 @场景/道具 标签；明确出场角色、背景场景、前一个镜头承接、分段动作、禁止项、约束、站位与朝向、运镜、音效。",
         "shotList.visual 必须写成可拍画面，不少于 45 个中文字符；shotList.action 必须包含具体身体动作、道具交互、站位关系和情绪变化；continuity 必须说明与上一镜/下一镜怎么接。",
@@ -233,6 +248,7 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
           creativeBrief: input,
           outputRules: [
             "episodeOutline 数量必须等于 episodeCount。",
+            "每集必须写 objective、obstacle、turn、cliffhanger，并用 durationPlan 按秒分配开场钩子、冲突升级、反转和结尾停点。",
             "每集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "directorScript 必须像剧本，不要像梗概。",
             "shotList 必须能被导演、摄影、AI视频工具直接使用。",
@@ -264,9 +280,11 @@ export function buildJubenSeedMessages(input: Required<JubenRequestBody>): ChatM
           outputRules: [
             "先快速生成故事圣经、视觉圣经、全剧分集结构，以及第 1 集的导演剧本、镜头表、分镜 Prompt、运镜 Prompt、剪辑 Prompt。",
             "episodeOutline 数量必须等于 episodeCount。",
+            "分集结构不能只是剧情摘要；每集都要有具体目标、具体阻碍、关系变化、信息反转和按秒节拍。",
             "directorScript、shotList、storyboardPrompts、cameraPrompts、editPrompts 只生成 E01，不要一次性生成后面所有集。",
             "E01 至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "visualBible 必须包含全剧风格、人物、色彩、环境定调和全局 prompt。",
+            "productionPlan 必须列出先生成角色定妆、场景、关键道具，再生成代表镜头和批量镜头的顺序。",
             "所有镜头都按 LibTV 镜头表思路写：画面描述、景别、光影氛围、对白/旁白、音效、运镜、最终提示词都要足够具体。",
             `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
@@ -304,6 +322,7 @@ export function buildJubenEpisodeMessages(
             "本集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "每个镜头 prompt 都要能生成真人写实首帧，再动画成 4-7 秒短剧镜头。",
             "每个镜头都要给足关键词密度：@角色、@场景、站位、朝向、前后镜承接、分段动作、禁止项、输出约束、光影变化、音效、对白口型。",
+            "每个镜头必须有明确的首帧状态和结束状态；4-7秒内只保留一个主动作和一个主运镜，避免模型执行失败。",
             `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "不要输出其他集的导演场景和镜头。",
             "返回完整 JSON 结构，但数组内容只放目标集的细节。",
@@ -574,6 +593,14 @@ export function fallbackJubenResult(
         episode === 1
           ? "主角完成一件看似普通的小事，却发现收件人身份不成立。"
           : "上一集留下的证据被推翻，主角必须换一种方式接近真相。",
+      objective:
+        episode === 1
+          ? "确认异常订单的收件人是否真实存在，并安全完成这一单。"
+          : "验证上一集留下的新证据，在阻碍者反应前拿到可继续追查的事实。",
+      obstacle:
+        episode === 1
+          ? "保安、封闭门牌和系统催单同时逼主角离开。"
+          : "现实利益与人物关系同时施压，关键人物还在故意给出互相矛盾的信息。",
       beats: [
         "开场用一个具体行动切入，不解释世界观。",
         "主角遇到阻碍，对方用现实利益或情感压力逼他退后。",
@@ -584,6 +611,13 @@ export function fallbackJubenResult(
         episode === episodeCount
           ? "真相出现，但代价落到主角自己身上。"
           : "关键人物说出一句与证据相反的话，切黑。",
+      durationPlan: [
+        "0-5秒：承接上一集或用异常行动直接开场。",
+        "5-25秒：主角目标落地，阻碍者出现。",
+        "25-65秒：验证、对抗、关系变化，至少一次可见动作升级。",
+        "65-85秒：新证据推翻旧判断。",
+        "85-90秒：反应停点或危险动作形成结尾钩子。",
+      ],
     };
   });
 
@@ -710,6 +744,37 @@ export function fallbackJubenResult(
         "镜头连续性固定：主角左侧入画，阻碍右侧压迫，真相从门缝或屏幕出现。",
       ],
     },
+    productionPlan: {
+      adaptationBrief:
+        "把悬念落实到一个普通人必须完成的现实任务上；每集只解决一个问题，同时让人物关系和代价升级，形成可连续拍摄的完整短剧，而不是素材混剪。",
+      shootingStrategy:
+        "优先小场景、少角色、可复用机位。每个4-7秒生成片段只安排一个主动作和一个主运镜，先生成静态首帧确认身份与构图，再做图生视频。",
+      locationPlan: [
+        "老小区楼下：建立职业现实和外部阻碍，可覆盖2-3集。",
+        "四层楼道与404门口：核心悬念空间，靠门缝、猫眼和感应灯变化重复利用。",
+        "保安室：证据交换和人物对峙空间，控制群众与复杂调度。",
+      ],
+      referenceAssets: [
+        "主角正面、侧面、全身定妆参考",
+        "核心阻碍者定妆参考",
+        "楼道空间与门牌方位参考",
+        "外卖箱、订单小票、旧收据三件关键道具参考",
+      ],
+      generationOrder: [
+        "锁定角色定妆和服装",
+        "锁定场景结构与关键道具",
+        "生成一张代表性近景并确认风格",
+        "按场景批量生成首帧",
+        "按镜头逐条生成4-7秒视频",
+        "最后统一对白、环境声和剪辑节奏",
+      ],
+      qualityGates: [
+        "立项：目标、阻碍、受众钩子和结局承诺成立",
+        "圣经：角色脸、服装、场景方位和关键道具已锁定",
+        "单镜：代表镜头通过后才批量生成",
+        "粗剪：对白可听清、动作连续、结尾钩子成立",
+      ],
+    },
     visualBible: fallbackVisualBible(input, title),
     episodeOutline,
     directorScript,
@@ -826,6 +891,53 @@ function ensureVisualBible(
   return fallbackVisualBible(input, result.meta.title);
 }
 
+function ensureProductionPlan(
+  result: JubenResult,
+  input: Required<JubenRequestBody>,
+): JubenProductionPlan {
+  const plan: Record<string, unknown> = isRecord(result.productionPlan)
+    ? result.productionPlan
+    : {};
+  const list = (value: unknown, fallback: string[]) =>
+    Array.isArray(value) && value.some((item) => typeof item === "string")
+      ? value.filter((item): item is string => typeof item === "string")
+      : fallback;
+
+  return {
+    adaptationBrief: cleanText(
+      plan.adaptationBrief,
+      `把“${result.meta.logline}”改编成有连续人物目标、现实阻碍、关系推进和分集钩子的${input.productionMode}，避免预告片式摘要。`,
+    ),
+    shootingStrategy: cleanText(
+      plan.shootingStrategy,
+      `采用${input.aspectRatio}的小场景真人短剧拍法；每个4-7秒片段只安排一个主动作和一个主运镜，先锁定首帧再生成视频。`,
+    ),
+    locationPlan: list(plan.locationPlan, [
+      "控制在3-5个可复用主场景，同一场景通过机位、时间和道具状态变化覆盖多集。",
+      "每个场景先固定入口、人物站位、主光方向和关键道具位置。",
+    ]),
+    referenceAssets: list(plan.referenceAssets, [
+      "主要角色正面、侧面、全身定妆参考",
+      "核心场景空景与人物站位参考",
+      "剧情关键道具的正反面与尺寸参考",
+    ]),
+    generationOrder: list(plan.generationOrder, [
+      "角色定妆与服装锁定",
+      "场景和关键道具锁定",
+      "代表镜头首帧测试",
+      "按场景批量生成首帧",
+      "逐镜生成视频并记录重试原因",
+      "对白、声音和剪辑统一交付",
+    ]),
+    qualityGates: list(plan.qualityGates, [
+      "确认改编方向、时长、画幅和目标受众",
+      "确认故事圣经、视觉圣经和分集结构",
+      "确认一条代表镜头后再批量生成",
+      "粗剪通过后再做昂贵重生成和最终声音",
+    ]),
+  };
+}
+
 function normalizeEpisodeOutlines(
   result: JubenResult,
   input: Required<JubenRequestBody>,
@@ -847,6 +959,8 @@ function normalizeEpisodeOutlines(
           episode === 1
             ? "用一个具体动作把主角推入事件，不解释设定。"
             : "上一集的证据被推翻，主角必须换一种方式继续追。",
+        objective: "用一个可见行动验证本集线索，并拿到能推动下一集的结果。",
+        obstacle: "阻碍者用现实代价、关系压力或错误信息逼主角退后。",
         beats: [
           "开场接住上一集钩子，用人物行动推进。",
           "阻碍升级，关系或现实代价变重。",
@@ -857,11 +971,38 @@ function normalizeEpisodeOutlines(
           episode === input.episodeCount
             ? "真相落地，但主角必须承担最后代价。"
             : "新证据指向一个更亲近的人。",
+        durationPlan: [
+          "0-5秒：接住钩子并让人物行动。",
+          "5-25秒：目标与阻碍正面相撞。",
+          "25-65秒：验证、对抗和关系变化。",
+          "65-85秒：证据反转旧判断。",
+          "85-90秒：反应或危险动作停点。",
+        ],
       });
     }
   }
 
-  return Array.from(byEpisode.values()).sort((a, b) => a.episode - b.episode);
+  return Array.from(byEpisode.values())
+    .map((episode) => ({
+      ...episode,
+      objective:
+        cleanText(episode.objective) ||
+        "用一个可见行动验证本集线索，并拿到能推动下一集的结果。",
+      obstacle:
+        cleanText(episode.obstacle) ||
+        "阻碍者用现实代价、关系压力或错误信息逼主角退后。",
+      durationPlan:
+        Array.isArray(episode.durationPlan) && episode.durationPlan.length > 0
+          ? episode.durationPlan
+          : [
+              "0-5秒：开场钩子和具体行动。",
+              "5-25秒：目标与阻碍建立。",
+              "25-65秒：对抗和关系推进。",
+              "65-85秒：反转或新证据。",
+              "85-90秒：结尾停点。",
+            ],
+    }))
+    .sort((a, b) => a.episode - b.episode);
 }
 
 function makeSceneFromOutline(
@@ -878,11 +1019,11 @@ function makeSceneFromOutline(
     episode: outline.episode,
     sceneHeading: isFirst ? "内. 主角工作现场 - 夜" : "外. 关键地点入口 - 夜",
     dramaticPurpose: isFirst
-      ? "接住本集钩子，把主角目标落成一个具体行动。"
-      : "让主角付出代价并拿到下一条证据。",
+      ? `接住本集钩子，把“${outline.objective}”落成一个具体行动。`
+      : `让主角为“${outline.objective}”付出代价，并拿到下一条证据。`,
     conflict: isFirst
-      ? "主角想验证线索，对方要求她先放弃或撒谎。"
-      : "线索指向更危险的人，主角必须在安全和真相之间选择。",
+      ? outline.obstacle
+      : `${outline.obstacle}继续升级，主角必须在安全和真相之间选择。`,
     action:
       beat ||
       `${result.storyBible.protagonist} 根据上一集留下的线索赶到现场，发现事情并不按她的判断发展。`,
@@ -1095,6 +1236,7 @@ function ensureJubenCoverage(
 ): JubenResult {
   const episodeOutline = normalizeEpisodeOutlines(result, input);
   const visualBible = ensureVisualBible(result, input);
+  const productionPlan = ensureProductionPlan(result, input);
   const directorScript = ensureSceneCoverage(
     { ...result, episodeOutline },
     episodeOutline,
@@ -1117,6 +1259,7 @@ function ensureJubenCoverage(
     ...result,
     episodeOutline,
     visualBible,
+    productionPlan,
     directorScript,
     shotList,
     storyboardPrompts,
@@ -1142,10 +1285,10 @@ async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
   }
 
   const controller = new AbortController();
-  let timeout: ReturnType<typeof setTimeout> | undefined;
+  const timeout = setTimeout(() => controller.abort(), DEEPSEEK_TIMEOUT_MS);
 
-  const response = await Promise.race([
-    fetch(DEEPSEEK_API_URL, {
+  try {
+    const response = await fetch(DEEPSEEK_API_URL, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -1160,34 +1303,32 @@ async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
       }),
       cache: "no-store",
       signal: controller.signal,
-    }),
-    new Promise<Response>((_, reject) => {
-      timeout = setTimeout(() => {
-        controller.abort();
-        reject(new Error("DeepSeek request timed out."));
-      }, DEEPSEEK_TIMEOUT_MS);
-    }),
-  ]).finally(() => {
-    if (timeout) {
-      clearTimeout(timeout);
+    });
+
+    if (!response.ok) {
+      throw new Error(`DeepSeek request failed with ${response.status}.`);
     }
-  });
 
-  if (!response.ok) {
-    throw new Error(`DeepSeek request failed with ${response.status}.`);
+    const payload = (await response.json()) as {
+      choices?: Array<{ message?: { content?: string } }>;
+    };
+    const content = payload.choices?.[0]?.message?.content;
+    const parsed = typeof content === "string" ? parseJsonObject(content) : null;
+
+    if (!parsed) {
+      throw new Error("DeepSeek response did not contain JSON.");
+    }
+
+    return parsed;
+  } catch (error) {
+    if (controller.signal.aborted) {
+      throw new Error(`DeepSeek request timed out after ${DEEPSEEK_TIMEOUT_MS}ms.`);
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeout);
   }
-
-  const payload = (await response.json()) as {
-    choices?: Array<{ message?: { content?: string } }>;
-  };
-  const content = payload.choices?.[0]?.message?.content;
-  const parsed = typeof content === "string" ? parseJsonObject(content) : null;
-
-  if (!parsed) {
-    throw new Error("DeepSeek response did not contain JSON.");
-  }
-
-  return parsed;
 }
 
 export async function analyzeJubenIdea(
@@ -1302,18 +1443,18 @@ export async function generateJubenEpisodeResult(
       : fallbackJubenResult(input, "Missing base result; used local structure.");
   const apiKey = process.env.DEEPSEEK_API_KEY;
 
+  const useCurrentStoryFallback = (reason: string): JubenResult => ({
+    ...baseResult,
+    meta: {
+      ...baseResult.meta,
+      provider: "local-structured-fallback",
+      model: reason,
+      generatedAt: new Date().toISOString(),
+    },
+  });
+
   if (!apiKey) {
-    return ensureJubenCoverage(
-      {
-        ...fallbackJubenResult(input, "DEEPSEEK_API_KEY is not configured."),
-        meta: baseResult.meta,
-        storyBible: baseResult.storyBible,
-        visualBible: baseResult.visualBible,
-        episodeOutline: baseResult.episodeOutline,
-      },
-      input,
-      { detailEpisodes: [episode] },
-    );
+    return useCurrentStoryFallback("DEEPSEEK_API_KEY is not configured.");
   }
 
   try {
@@ -1343,19 +1484,8 @@ export async function generateJubenEpisodeResult(
       { detailEpisodes: [episode] },
     );
   } catch {
-    return ensureJubenCoverage(
-      {
-        ...fallbackJubenResult(
-          input,
-          `DeepSeek episode request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
-        ),
-        meta: baseResult.meta,
-        storyBible: baseResult.storyBible,
-        visualBible: baseResult.visualBible,
-        episodeOutline: baseResult.episodeOutline,
-      },
-      input,
-      { detailEpisodes: [episode] },
+    return useCurrentStoryFallback(
+      `DeepSeek episode request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
     );
   }
 }
