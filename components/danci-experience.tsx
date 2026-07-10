@@ -1,6 +1,22 @@
 "use client";
 
-import { Brain, Check, RefreshCcw, Sparkles, Volume2 } from "lucide-react";
+import {
+  AudioLines,
+  BrainCircuit,
+  Check,
+  ChevronRight,
+  CircleHelp,
+  Delete,
+  Headphones,
+  Keyboard,
+  LockKeyhole,
+  RefreshCcw,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  Volume2,
+  Zap,
+} from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   allowedEnglishVoiceSummary,
@@ -8,7 +24,8 @@ import {
 } from "@/lib/english-voices";
 import styles from "./danci-experience.module.css";
 
-type TrainingMode = "study" | "meaning" | "spell" | "listen" | "feedback";
+type RecallMode = "meaning" | "tiles" | "spell" | "listen" | "context";
+type TrainingMode = "briefing" | "study" | RecallMode | "correction" | "feedback" | "complete";
 
 type WordItem = {
   id: string;
@@ -29,6 +46,7 @@ type WordRecord = {
   dueAt: number;
   lastMode: TrainingMode;
   updatedAt: string;
+  mistakes: Record<RecallMode, number>;
 };
 
 type TrainerMemory = {
@@ -39,16 +57,39 @@ type TrainerMemory = {
   streak: number;
   bestStreak: number;
   lastFeedback: string;
+  completedMissions: number;
+  todayMissions: number;
 };
 
 type Outcome = {
   correct: boolean;
   title: string;
   body: string;
+  needsCorrection: boolean;
+  assisted?: boolean;
+  recovered?: boolean;
+  mode: RecallMode;
+};
+
+type SessionStats = {
+  cleanHits: number;
+  misses: number;
+  recovered: number;
+  xp: number;
+  combo: number;
+  bestCombo: number;
+  errors: Record<RecallMode, number>;
+};
+
+type LetterTile = {
+  id: string;
+  letter: string;
 };
 
 const storageKey = "danciTrainerMemoryV2";
-const reviewIntervals = [5 * 60 * 1000, 30 * 60 * 1000, 24 * 60 * 60 * 1000, 3 * 24 * 60 * 60 * 1000, 7 * 24 * 60 * 60 * 1000];
+const missionSize = 6;
+const reviewIntervals = [10 * 60 * 1000, 30 * 60 * 1000, 24 * 60 * 60 * 1000, 3 * 24 * 60 * 60 * 1000, 7 * 24 * 60 * 60 * 1000];
+const recallModes: RecallMode[] = ["meaning", "tiles", "spell", "listen", "context"];
 
 const wordBank: WordItem[] = [
   { id: "hello", word: "hello", meaning: "你好", unit: "Starter", level: 1, family: "starter", example: "Hello, I am Li Hua.", tip: "he-llo 两拍读清楚。" },
@@ -100,36 +141,20 @@ const wordBank: WordItem[] = [
   { id: "month", word: "month", meaning: "月；月份", unit: "Unit 8", level: 1, family: "time", example: "January is the first month.", tip: "th 舌尖轻咬。" },
 ];
 
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
+function emptyMistakes(): Record<RecallMode, number> {
+  return { meaning: 0, tiles: 0, spell: 0, listen: 0, context: 0 };
 }
 
-function createDefaultMemory(): TrainerMemory {
+function createSessionStats(): SessionStats {
   return {
-    records: {},
-    todayKey: todayKey(),
-    todayAnswered: 0,
-    totalAnswered: 0,
-    streak: 0,
-    bestStreak: 0,
-    lastFeedback: "今天不用闯关，也不会归零重来。只做一件事：把该复习的词回忆出来。",
+    cleanHits: 0,
+    misses: 0,
+    recovered: 0,
+    xp: 0,
+    combo: 0,
+    bestCombo: 0,
+    errors: emptyMistakes(),
   };
-}
-
-function normalizeMemory(input: Partial<TrainerMemory> | null): TrainerMemory {
-  const base = createDefaultMemory();
-  const memory = {
-    ...base,
-    ...(input ?? {}),
-    records: input?.records ?? {},
-  };
-
-  if (memory.todayKey !== todayKey()) {
-    memory.todayKey = todayKey();
-    memory.todayAnswered = 0;
-  }
-
-  return memory;
 }
 
 function getEmptyRecord(): WordRecord {
@@ -141,7 +166,55 @@ function getEmptyRecord(): WordRecord {
     dueAt: 0,
     lastMode: "study",
     updatedAt: "",
+    mistakes: emptyMistakes(),
   };
+}
+
+function todayKey() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${now.getFullYear()}-${month}-${day}`;
+}
+
+function createDefaultMemory(): TrainerMemory {
+  return {
+    records: {},
+    todayKey: todayKey(),
+    todayAnswered: 0,
+    totalAnswered: 0,
+    streak: 0,
+    bestStreak: 0,
+    lastFeedback: "任务舱待命。",
+    completedMissions: 0,
+    todayMissions: 0,
+  };
+}
+
+function normalizeMemory(input: Partial<TrainerMemory> | null): TrainerMemory {
+  const base = createDefaultMemory();
+  const records = Object.fromEntries(
+    Object.entries(input?.records ?? {}).map(([id, rawRecord]) => {
+      const record = rawRecord as Partial<WordRecord>;
+      return [
+        id,
+        {
+          ...getEmptyRecord(),
+          ...record,
+          mistakes: { ...emptyMistakes(), ...(record.mistakes ?? {}) },
+        } satisfies WordRecord,
+      ];
+    }),
+  );
+  const memory: TrainerMemory = { ...base, ...(input ?? {}), records };
+
+  if (memory.todayKey !== todayKey()) {
+    memory.todayKey = todayKey();
+    memory.todayAnswered = 0;
+    memory.todayMissions = 0;
+  }
+
+  return memory;
 }
 
 function normalizeAnswer(value: string) {
@@ -150,6 +223,22 @@ function normalizeAnswer(value: string) {
 
 function stageLabel(stage: number) {
   return ["初见", "认得", "会拼", "会听写", "稳固"][stage] ?? "初见";
+}
+
+function modeLabel(mode: TrainingMode) {
+  const labels: Record<TrainingMode, string> = {
+    briefing: "任务简报",
+    study: "新词侦察",
+    meaning: "意义锁定",
+    tiles: "字母组装",
+    spell: "主动拼写",
+    listen: "听音写词",
+    context: "语境填空",
+    correction: "立即订正",
+    feedback: "结果回传",
+    complete: "任务完成",
+  };
+  return labels[mode];
 }
 
 function nextDueText(dueAt: number) {
@@ -161,103 +250,173 @@ function nextDueText(dueAt: number) {
   return `${Math.ceil(hours / 24)} 天后`;
 }
 
-function getStartMode(word: WordItem, memory: TrainerMemory): TrainingMode {
-  const record = memory.records[word.id] ?? getEmptyRecord();
-  if (!record.seen) return "study";
-  if (record.stage >= 2) return "listen";
-  if (record.stage === 1) return "spell";
-  return "meaning";
-}
-
-function scoreFor(id: string, seed: number) {
-  let score = seed + 17;
-  for (const char of id) {
-    score = (score * 31 + char.charCodeAt(0)) % 1000003;
-  }
-  return score;
-}
-
 function shuffleBySeed<T extends { id: string }>(items: T[], seed: number) {
-  return [...items].sort((a, b) => scoreFor(a.id, seed) - scoreFor(b.id, seed));
+  const shuffled = [...items];
+  let state = seed + items.reduce((total, item) => {
+    return total + [...item.id].reduce((sum, character) => sum + character.charCodeAt(0), 0);
+  }, 0);
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    state = (state * 1664525 + 1013904223) >>> 0;
+    const target = state % (index + 1);
+    [shuffled[index], shuffled[target]] = [shuffled[target], shuffled[index]];
+  }
+
+  return shuffled;
 }
 
 function buildChoices(word: WordItem, seed: number) {
-  const sameLevel = wordBank.filter((item) => item.id !== word.id && item.level <= Math.min(3, word.level + 1));
-  return shuffleBySeed([word, ...shuffleBySeed(sameLevel, seed).slice(0, 3)], seed + 13);
+  const peers = wordBank.filter((item) => item.id !== word.id && item.level <= Math.min(3, word.level + 1));
+  const choices = shuffleBySeed([word, ...shuffleBySeed(peers, seed).slice(0, 3)], seed + 13);
+  if (choices[0]?.id === word.id && choices.length > 1) {
+    const target = 1 + (seed % (choices.length - 1));
+    [choices[0], choices[target]] = [choices[target], choices[0]];
+  }
+  return choices;
 }
 
-function buildQueue(memory: TrainerMemory) {
+function buildMission(memory: TrainerMemory) {
   const now = Date.now();
+  const seenCount = Object.values(memory.records).filter((record) => record.seen > 0).length;
   const due = wordBank
-    .filter((word) => {
-      const record = memory.records[word.id];
-      return record && record.stage < 4 && record.dueAt <= now;
-    })
+    .filter((word) => memory.records[word.id]?.dueAt <= now)
     .sort((a, b) => (memory.records[a.id]?.dueAt ?? 0) - (memory.records[b.id]?.dueAt ?? 0));
   const weak = wordBank
     .filter((word) => {
       const record = memory.records[word.id];
-      return record && record.wrong > record.correct && record.stage < 3;
+      return record && record.wrong > 0 && record.wrong >= Math.max(1, Math.floor(record.correct / 2));
     })
     .sort((a, b) => (memory.records[b.id]?.wrong ?? 0) - (memory.records[a.id]?.wrong ?? 0));
-  const fresh = wordBank.filter((word) => !memory.records[word.id]).slice(0, 8);
+  const fresh = wordBank.filter((word) => !memory.records[word.id]?.seen);
+  const freshLimit = seenCount === 0 ? missionSize : 3;
   const learning = wordBank
     .filter((word) => {
       const record = memory.records[word.id];
-      return record && record.stage > 0 && record.stage < 3 && record.dueAt > now;
+      return record && record.stage < 4 && record.dueAt > now;
     })
-    .sort((a, b) => (memory.records[a.id]?.stage ?? 0) - (memory.records[b.id]?.stage ?? 0))
-    .slice(0, 6);
+    .sort((a, b) => (memory.records[a.id]?.stage ?? 0) - (memory.records[b.id]?.stage ?? 0));
+  const fallback = [...fresh.slice(freshLimit), ...wordBank]
+    .sort((a, b) => (memory.records[a.id]?.dueAt ?? 0) - (memory.records[b.id]?.dueAt ?? 0));
+  const candidates = [...due, ...weak, ...fresh.slice(0, freshLimit), ...learning, ...fallback];
+  const selected = new Set<string>();
 
-  const seen = new Set<string>();
-  return [...due, ...weak, ...fresh, ...learning]
+  return candidates
     .filter((word) => {
-      if (seen.has(word.id)) return false;
-      seen.add(word.id);
+      if (selected.has(word.id)) return false;
+      selected.add(word.id);
       return true;
     })
-    .slice(0, 20);
+    .slice(0, missionSize);
+}
+
+function getStartMode(word: WordItem, memory: TrainerMemory, recheck = false): TrainingMode {
+  const record = memory.records[word.id] ?? getEmptyRecord();
+  if (recheck) return "spell";
+  if (!record.seen) return "study";
+  if (record.stage === 0) return "meaning";
+  if (record.stage === 1) return "spell";
+  if (record.stage === 2) return "listen";
+  return record.lastMode === "context" ? "listen" : "context";
 }
 
 function maskWord(word: string) {
-  const letters = word.split("");
+  const letters = normalizeAnswer(word).split("");
   if (letters.length <= 3) return `${letters[0]}${"_".repeat(Math.max(1, letters.length - 1))}`;
-  return letters
-    .map((letter, index) => {
-      if (index === 0 || index === letters.length - 1) return letter;
-      return index % 2 === 0 ? "_" : letter;
-    })
-    .join("");
+  return letters.map((letter, index) => (index === 0 || index === letters.length - 1 || index % 3 === 0 ? letter : "_")).join("");
+}
+
+function maskExample(word: WordItem) {
+  const escaped = word.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return word.example.replace(new RegExp(escaped, "i"), "_____");
+}
+
+function buildLetterTiles(word: string, seed: number): LetterTile[] {
+  const source = normalizeAnswer(word)
+    .split("")
+    .map((letter, index) => ({ id: `${index}-${letter}`, letter }));
+  const shuffled = shuffleBySeed(source, seed);
+  if (shuffled.map((tile) => tile.letter).join("") === normalizeAnswer(word) && shuffled.length > 1) {
+    return [...shuffled.slice(1), shuffled[0]];
+  }
+  return shuffled;
+}
+
+function getMissionMix(words: WordItem[], memory: TrainerMemory) {
+  const now = Date.now();
+  return words.reduce(
+    (mix, word) => {
+      const record = memory.records[word.id];
+      if (!record?.seen) mix.fresh += 1;
+      else if (record.wrong > 0 && record.wrong >= Math.max(1, Math.floor(record.correct / 2))) mix.weak += 1;
+      else if (record.dueAt <= now) mix.review += 1;
+      else mix.review += 1;
+      return mix;
+    },
+    { review: 0, weak: 0, fresh: 0 },
+  );
+}
+
+function getWeakestMode(errors: Record<RecallMode, number>) {
+  const labels: Record<RecallMode, string> = {
+    meaning: "词义辨认",
+    tiles: "字母顺序",
+    spell: "主动拼写",
+    listen: "听音辨词",
+    context: "语境调用",
+  };
+  const [mode, count] = recallModes
+    .map((item) => [item, errors[item]] as const)
+    .sort((a, b) => b[1] - a[1])[0];
+  return count ? labels[mode] : "本轮无明显短板";
 }
 
 export default function DanciExperience() {
   const [memory, setMemory] = useState<TrainerMemory>(() => createDefaultMemory());
   const [loaded, setLoaded] = useState(false);
+  const [missionStarted, setMissionStarted] = useState(false);
   const [queue, setQueue] = useState<string[]>([]);
+  const [missionTarget, setMissionTarget] = useState(missionSize);
+  const [tasksDone, setTasksDone] = useState(0);
+  const [completedWords, setCompletedWords] = useState<string[]>([]);
+  const [recheckCounts, setRecheckCounts] = useState<Record<string, number>>({});
+  const [session, setSession] = useState<SessionStats>(() => createSessionStats());
   const [activeId, setActiveId] = useState(wordBank[0].id);
-  const [mode, setMode] = useState<TrainingMode>("study");
+  const [mode, setMode] = useState<TrainingMode>("briefing");
   const [input, setInput] = useState("");
   const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const [tileSelection, setTileSelection] = useState<string[]>([]);
+  const [hintShown, setHintShown] = useState(false);
+  const [correctionError, setCorrectionError] = useState(false);
+  const [consolePulse, setConsolePulse] = useState<"neutral" | "success" | "fail">("neutral");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
 
   const activeWord = wordBank.find((word) => word.id === activeId) ?? wordBank[0];
-  const activeRecord = memory.records[activeWord.id] ?? getEmptyRecord();
+  const activeRecord: WordRecord = {
+    ...getEmptyRecord(),
+    ...(memory.records[activeWord.id] ?? {}),
+    mistakes: { ...emptyMistakes(), ...(memory.records[activeWord.id]?.mistakes ?? {}) },
+  };
   const choices = useMemo(
     () => buildChoices(activeWord, memory.totalAnswered + activeWord.word.length + activeRecord.wrong * 7),
     [activeRecord.wrong, activeWord, memory.totalAnswered],
   );
+  const letterTiles = useMemo(
+    () => buildLetterTiles(activeWord.word, memory.totalAnswered + activeWord.word.length * 11),
+    [activeWord, memory.totalAnswered],
+  );
+  const tileAnswer = tileSelection.map((id) => letterTiles.find((tile) => tile.id === id)?.letter ?? "").join("");
+  const preview = useMemo(() => buildMission(memory), [memory]);
+  const missionMix = useMemo(() => getMissionMix(preview, memory), [memory, preview]);
   const stats = useMemo(() => {
     const records = wordBank.map((word) => memory.records[word.id] ?? getEmptyRecord());
     return {
       mastered: records.filter((record) => record.stage >= 4).length,
       active: records.filter((record) => record.stage > 0 && record.stage < 4).length,
-      weak: records.filter((record) => record.wrong > record.correct).length,
-      due: wordBank.filter((word) => {
-        const record = memory.records[word.id];
-        return record && record.stage < 4 && record.dueAt <= Date.now();
-      }).length,
+      weak: records.filter((record) => record.wrong > 0 && record.wrong >= record.correct).length,
     };
   }, [memory.records]);
+  const missionPower = Math.min(100, Math.round((tasksDone / Math.max(1, missionTarget)) * 100));
+  const baseModules = Math.min(12, memory.completedMissions + Math.floor(stats.mastered / 2));
 
   useEffect(() => {
     try {
@@ -276,28 +435,21 @@ export default function DanciExperience() {
   }, [loaded, memory]);
 
   useEffect(() => {
-    if (!loaded) return;
-    if (queue.length) return;
-    const nextQueue = buildQueue(memory).map((word) => word.id);
-    setQueue(nextQueue);
-    if (nextQueue[0]) {
-      const nextWord = wordBank.find((word) => word.id === nextQueue[0]) ?? wordBank[0];
-      setActiveId(nextWord.id);
-      setMode(getStartMode(nextWord, memory));
-    }
-  }, [loaded, memory, queue.length]);
-
-  useEffect(() => {
     if (!("speechSynthesis" in window)) return;
     const loadVoices = () => setVoices(window.speechSynthesis.getVoices());
     loadVoices();
     window.speechSynthesis.onvoiceschanged = loadVoices;
-
     return () => {
       window.speechSynthesis.cancel();
       window.speechSynthesis.onvoiceschanged = null;
     };
   }, []);
+
+  function pulse(state: "success" | "fail") {
+    setConsolePulse(state);
+    if ("vibrate" in navigator) navigator.vibrate(state === "success" ? 18 : [35, 25, 35]);
+    window.setTimeout(() => setConsolePulse("neutral"), 520);
+  }
 
   function speak(text: string) {
     if (!("speechSynthesis" in window)) return;
@@ -305,10 +457,7 @@ export default function DanciExperience() {
     if (!voices.length && nextVoices.length) setVoices(nextVoices);
     const voice = chooseAllowedEnglishVoice(nextVoices);
     if (!voice) {
-      setMemory((current) => ({
-        ...current,
-        lastFeedback: `未找到白名单语音：${allowedEnglishVoiceSummary}`,
-      }));
+      setMemory((current) => ({ ...current, lastFeedback: `未找到白名单语音：${allowedEnglishVoiceSummary}` }));
       return;
     }
 
@@ -316,36 +465,66 @@ export default function DanciExperience() {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = voice;
     utterance.lang = voice.lang || "en-US";
-    utterance.rate = 0.78;
-    utterance.pitch = 0.96;
-    utterance.volume = 0.96;
+    utterance.rate = 0.9;
+    utterance.pitch = 1;
+    utterance.volume = 0.94;
     window.speechSynthesis.speak(utterance);
   }
 
+  function activateWord(id: string, sourceMemory: TrainerMemory, recheck = false) {
+    const word = wordBank.find((item) => item.id === id) ?? wordBank[0];
+    setActiveId(word.id);
+    setMode(getStartMode(word, sourceMemory, recheck));
+    setInput("");
+    setOutcome(null);
+    setTileSelection([]);
+    setHintShown(false);
+    setCorrectionError(false);
+    setConsolePulse("neutral");
+  }
+
+  function startMission() {
+    const nextQueue = buildMission(memory).map((word) => word.id);
+    setMissionStarted(true);
+    setQueue(nextQueue);
+    setMissionTarget(nextQueue.length);
+    setTasksDone(0);
+    setCompletedWords([]);
+    setRecheckCounts({});
+    setSession(createSessionStats());
+    if (nextQueue[0]) activateWord(nextQueue[0], memory);
+  }
+
   function startRecall() {
+    const nextRecord: WordRecord = {
+      ...activeRecord,
+      seen: Math.max(1, activeRecord.seen + 1),
+      lastMode: "study",
+      updatedAt: new Date().toISOString(),
+    };
     const nextMemory = {
       ...memory,
-      records: {
-        ...memory.records,
-        [activeWord.id]: {
-          ...activeRecord,
-          seen: Math.max(1, activeRecord.seen + 1),
-          lastMode: "study" as TrainingMode,
-          updatedAt: new Date().toISOString(),
-        },
-      },
-      lastFeedback: `${activeWord.word} 已看过。现在开始主动回忆。`,
+      records: { ...memory.records, [activeWord.id]: nextRecord },
+      lastFeedback: `${activeWord.word} 已进入短时记忆。`,
     };
     setMemory(nextMemory);
     setMode("meaning");
     setOutcome(null);
   }
 
-  function recordAnswer(correct: boolean, answerMode: TrainingMode) {
+  function recordAnswer(correct: boolean, answerMode: RecallMode, assisted = false) {
     const previous = memory.records[activeWord.id] ?? getEmptyRecord();
-    const nextStage = correct ? (Math.min(4, previous.stage + 1) as WordRecord["stage"]) : (Math.max(0, previous.stage - 1) as WordRecord["stage"]);
-    const nextDueAt = Date.now() + (correct ? reviewIntervals[nextStage] : 4 * 60 * 1000);
+    const promoted = correct && !assisted;
+    const nextStage = promoted
+      ? (Math.min(4, previous.stage + 1) as WordRecord["stage"])
+      : correct
+        ? previous.stage
+        : (Math.max(0, previous.stage - 1) as WordRecord["stage"]);
+    const nextDueAt = Date.now() + (correct ? (assisted ? reviewIntervals[0] : reviewIntervals[nextStage]) : reviewIntervals[0]);
+    const mistakes = { ...emptyMistakes(), ...(previous.mistakes ?? {}) };
+    if (!correct) mistakes[answerMode] += 1;
     const nextRecord: WordRecord = {
+      ...previous,
       seen: Math.max(1, previous.seen + 1),
       correct: previous.correct + (correct ? 1 : 0),
       wrong: previous.wrong + (correct ? 0 : 1),
@@ -353,31 +532,54 @@ export default function DanciExperience() {
       dueAt: nextDueAt,
       lastMode: answerMode,
       updatedAt: new Date().toISOString(),
+      mistakes,
     };
-    const nextStreak = correct ? memory.streak + 1 : 0;
+    const nextStreak = correct && !assisted ? memory.streak + 1 : 0;
     const nextMemory: TrainerMemory = {
       ...memory,
-      records: {
-        ...memory.records,
-        [activeWord.id]: nextRecord,
-      },
+      records: { ...memory.records, [activeWord.id]: nextRecord },
       todayAnswered: memory.todayAnswered + 1,
       totalAnswered: memory.totalAnswered + 1,
       streak: nextStreak,
       bestStreak: Math.max(memory.bestStreak, nextStreak),
       lastFeedback: correct
-        ? `${activeWord.word} 升到「${stageLabel(nextStage)}」，${nextDueText(nextDueAt)}再复习。`
-        : `${activeWord.word} 降级并进入错词回流，几题后再回来。`,
+        ? `${activeWord.word} · ${stageLabel(nextStage)} · ${nextDueText(nextDueAt)}复习`
+        : `${activeWord.word} 已进入订正与回流。`,
     };
 
     setMemory(nextMemory);
+    setSession((current) => {
+      const combo = correct && !assisted ? current.combo + 1 : 0;
+      const errors = { ...current.errors };
+      if (!correct) errors[answerMode] += 1;
+      return {
+        cleanHits: current.cleanHits + (correct && !assisted ? 1 : 0),
+        misses: current.misses + (correct ? 0 : 1),
+        recovered: current.recovered,
+        xp: current.xp + (correct ? (assisted ? 5 : 12 + Math.min(5, current.combo) * 2) : 0),
+        combo,
+        bestCombo: Math.max(current.bestCombo, combo),
+        errors,
+      };
+    });
+    const successTitle: Record<RecallMode, string> = {
+      meaning: "词义已锁定",
+      tiles: "拼写序列锁定",
+      spell: "主动拼写命中",
+      listen: "听写命中",
+      context: "语境调用成功",
+    };
     setOutcome({
       correct,
-      title: correct ? "回忆成功" : "还没背牢",
-      body: correct ? `下次复习：${nextDueText(nextDueAt)}` : `正确拼写：${activeWord.word}。${activeWord.tip}`,
+      assisted,
+      title: correct ? (assisted ? "借助线索完成" : successTitle[answerMode]) : "信号未锁定",
+      body: correct ? `${nextDueText(nextDueAt)}再次调用` : `正确拼写：${activeWord.word}`,
+      needsCorrection: !correct,
+      mode: answerMode,
     });
     setMode("feedback");
     setInput("");
+    pulse(correct ? "success" : "fail");
   }
 
   function answerMeaning(choiceId: string) {
@@ -385,179 +587,355 @@ export default function DanciExperience() {
       recordAnswer(false, "meaning");
       return;
     }
-    setOutcome({
-      correct: true,
-      title: "意思认对了",
-      body: "不要停在认识。下一步把它拼出来。",
-    });
-    setMode("spell");
-    setInput("");
+    setMode("tiles");
+    setTileSelection([]);
+    setMemory((current) => ({ ...current, lastFeedback: "词义已确认，继续重建字母序列。" }));
+  }
+
+  function selectTile(id: string) {
+    if (tileSelection.includes(id)) return;
+    setTileSelection((current) => [...current, id]);
+  }
+
+  function submitTiles() {
+    if (tileSelection.length !== letterTiles.length) return;
+    recordAnswer(normalizeAnswer(tileAnswer) === normalizeAnswer(activeWord.word), "tiles");
   }
 
   function submitSpelling(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!input.trim()) return;
     const correct = normalizeAnswer(input) === normalizeAnswer(activeWord.word);
-    recordAnswer(correct, mode);
-  }
 
-  function giveUp() {
-    recordAnswer(false, mode);
-  }
-
-  function nextCard() {
-    const rest = queue.filter((id) => id !== activeWord.id);
-    const nextQueue = outcome?.correct ? rest : [...rest.slice(0, 3), activeWord.id, ...rest.slice(3)];
-    const refill = nextQueue.length ? nextQueue : buildQueue(memory).map((word) => word.id).filter((id) => id !== activeWord.id);
-    const nextId = refill[0];
-    setQueue(refill);
-    setOutcome(null);
-    setInput("");
-
-    if (!nextId) {
-      setMode("feedback");
-      setActiveId(activeWord.id);
+    if (mode === "correction") {
+      if (!correct) {
+        setCorrectionError(true);
+        setInput("");
+        pulse("fail");
+        return;
+      }
+      setSession((current) => ({ ...current, recovered: current.recovered + 1, xp: current.xp + 4 }));
+      setMemory((current) => ({ ...current, lastFeedback: `${activeWord.word} 已完成立即订正。` }));
       setOutcome({
         correct: true,
-        title: "今天这一轮清空了",
-        body: "没有要强行重置的东西。明天回来，系统会把该复习的词叫出来。",
+        recovered: true,
+        title: "订正完成",
+        body: "两题后会再次抽查",
+        needsCorrection: false,
+        mode: outcome?.mode ?? "spell",
       });
+      setMode("feedback");
+      setInput("");
+      pulse("success");
       return;
     }
 
-    const nextWord = wordBank.find((word) => word.id === nextId) ?? wordBank[0];
-    setActiveId(nextWord.id);
-    setMode(getStartMode(nextWord, memory));
+    if (mode === "spell" || mode === "listen" || mode === "context") {
+      recordAnswer(correct, mode, hintShown);
+    }
+  }
+
+  function giveUp() {
+    if (mode === "spell" || mode === "listen" || mode === "context") recordAnswer(false, mode);
+  }
+
+  function startCorrection() {
+    setMode("correction");
+    setInput("");
+    setCorrectionError(false);
+    setConsolePulse("neutral");
+  }
+
+  function advance() {
+    const isRecheck = (recheckCounts[activeWord.id] ?? 0) > 0;
+    const needsRecheck = Boolean(outcome?.recovered) && !isRecheck;
+    const nextRechecks = { ...recheckCounts };
+    let rest = queue[0] === activeWord.id ? queue.slice(1) : queue.filter((id) => id !== activeWord.id);
+
+    if (needsRecheck) {
+      const insertAt = Math.min(2, rest.length);
+      rest = [...rest.slice(0, insertAt), activeWord.id, ...rest.slice(insertAt)];
+      nextRechecks[activeWord.id] = 1;
+      setMissionTarget((current) => current + 1);
+    }
+
+    setTasksDone((current) => current + 1);
+    setCompletedWords((current) => (current.includes(activeWord.id) ? current : [...current, activeWord.id]));
+    setRecheckCounts(nextRechecks);
+    setQueue(rest);
+    setOutcome(null);
+    setInput("");
+
+    if (!rest.length) {
+      setMode("complete");
+      setMemory((current) => ({
+        ...current,
+        completedMissions: current.completedMissions + 1,
+        todayMissions: current.todayMissions + 1,
+        lastFeedback: "任务完成，长期进度已保存。",
+      }));
+      return;
+    }
+
+    const nextId = rest[0];
+    activateWord(nextId, memory, (nextRechecks[nextId] ?? 0) > 0);
   }
 
   function resetMemory() {
-    if (!window.confirm("清空本机背词记录？这不会影响网站代码，只会重置这个浏览器里的进度。")) return;
+    if (!window.confirm("清空这个浏览器里的全部背词进度？")) return;
     const nextMemory = createDefaultMemory();
-    const nextQueue = buildQueue(nextMemory).map((word) => word.id);
     setMemory(nextMemory);
-    setQueue(nextQueue);
-    setActiveId(nextQueue[0] ?? wordBank[0].id);
-    setMode("study");
+    setMissionStarted(false);
+    setQueue([]);
+    setMode("briefing");
     setOutcome(null);
     setInput("");
   }
 
   return (
     <main className={styles.shell}>
-      <aside className={styles.sidebar}>
+      <header className={styles.hud}>
         <div className={styles.brand}>
-          <span>NC</span>
+          <span className={styles.brandMark}><BrainCircuit size={24} /></span>
           <div>
-            <p>Grade 7 Word Trainer</p>
-            <h1>Daily Recall</h1>
+            <p>GRADE 7 WORD OPS</p>
+            <h1>Recall Base</h1>
           </div>
         </div>
-        <div className={styles.progressCard}>
-          <div>
-            <span>今日回忆</span>
-            <strong>{memory.todayAnswered}</strong>
-          </div>
-          <div className={styles.progressTrack}>
-            <i style={{ width: `${Math.min(100, (memory.todayAnswered / 18) * 100)}%` }} />
-          </div>
-          <p>目标不是刷完，而是把错词叫回来。</p>
+        <div className={styles.hudStats}>
+          <div><span>今日调用</span><strong>{memory.todayAnswered}</strong></div>
+          <div><span>稳定词汇</span><strong>{stats.mastered}</strong></div>
+          <div><span>连续命中</span><strong>{memory.streak}</strong></div>
         </div>
-        <div className={styles.statGrid}>
-          <div><span>待复习</span><strong>{stats.due}</strong></div>
-          <div><span>学习中</span><strong>{stats.active}</strong></div>
-          <div><span>错词</span><strong>{stats.weak}</strong></div>
-          <div><span>稳固</span><strong>{stats.mastered}</strong></div>
-        </div>
-        <button type="button" className={styles.resetButton} onClick={resetMemory}>
-          <RefreshCcw size={16} />
-          清空本机记录
+        <button type="button" className={styles.iconButton} onClick={resetMemory} title="清空本机进度" aria-label="清空本机进度">
+          <RefreshCcw size={18} />
         </button>
-      </aside>
+      </header>
 
-      <section className={styles.workbench}>
-        <div className={styles.topLine}>
-          <p>{activeWord.unit} / {activeWord.family}</p>
-          <span>{stageLabel(activeRecord.stage)}</span>
+      {!loaded ? (
+        <section className={styles.bootPanel}><BrainCircuit size={30} /><span>正在载入记忆档案</span></section>
+      ) : !missionStarted ? (
+        <BriefingView
+          words={preview}
+          mix={missionMix}
+          completedMissions={memory.completedMissions}
+          moduleCount={baseModules}
+          onStart={startMission}
+        />
+      ) : (
+        <div className={styles.gameGrid}>
+          <MissionRail target={missionTarget} done={tasksDone} combo={session.combo} />
+
+          <section className={`${styles.console} ${consolePulse === "success" ? styles.consoleSuccess : ""} ${consolePulse === "fail" ? styles.consoleFail : ""}`}>
+            <div className={styles.consoleHeader}>
+              <div>
+                <span>MISSION {String(memory.todayMissions + 1).padStart(2, "0")}</span>
+                <strong>{modeLabel(mode)}</strong>
+              </div>
+              <div className={styles.powerReadout}>
+                <span>基地充能 {missionPower}%</span>
+                <div><i style={{ width: `${missionPower}%` }} /></div>
+              </div>
+              <b>{Math.min(tasksDone + 1, missionTarget)} / {missionTarget}</b>
+            </div>
+
+            <div className={styles.consoleBody}>
+              {mode === "study" ? <StudyView word={activeWord} onSpeak={speak} onStart={startRecall} /> : null}
+              {mode === "meaning" ? <MeaningView word={activeWord} choices={choices} onSpeak={speak} onChoose={answerMeaning} /> : null}
+              {mode === "tiles" ? (
+                <TilesView
+                  word={activeWord}
+                  tiles={letterTiles}
+                  selected={tileSelection}
+                  answer={tileAnswer}
+                  onSelect={selectTile}
+                  onUndo={() => setTileSelection((current) => current.slice(0, -1))}
+                  onClear={() => setTileSelection([])}
+                  onSubmit={submitTiles}
+                  onSpeak={speak}
+                />
+              ) : null}
+              {(mode === "spell" || mode === "listen" || mode === "context") ? (
+                <RecallView
+                  word={activeWord}
+                  mode={mode}
+                  input={input}
+                  hintShown={hintShown}
+                  onInput={setInput}
+                  onSubmit={submitSpelling}
+                  onSpeak={speak}
+                  onHint={() => setHintShown(true)}
+                  onGiveUp={giveUp}
+                />
+              ) : null}
+              {mode === "correction" ? (
+                <CorrectionView
+                  word={activeWord}
+                  input={input}
+                  hasError={correctionError}
+                  onInput={setInput}
+                  onSubmit={submitSpelling}
+                  onSpeak={speak}
+                />
+              ) : null}
+              {mode === "feedback" && outcome ? (
+                <FeedbackView
+                  word={activeWord}
+                  outcome={outcome}
+                  record={memory.records[activeWord.id] ?? activeRecord}
+                  onSpeak={speak}
+                  onNext={outcome.needsCorrection ? startCorrection : advance}
+                />
+              ) : null}
+              {mode === "complete" ? (
+                <CompleteView
+                  session={session}
+                  wordCount={completedWords.length}
+                  moduleCount={baseModules}
+                  onNext={startMission}
+                />
+              ) : null}
+            </div>
+          </section>
+
+          <BaseStatus
+            moduleCount={baseModules}
+            power={missionPower}
+            active={stats.active}
+            weak={stats.weak}
+            feedback={memory.lastFeedback}
+          />
         </div>
-
-        <article className={styles.card}>
-          {mode === "study" ? (
-            <StudyView word={activeWord} onSpeak={speak} onStart={startRecall} />
-          ) : null}
-
-          {mode === "meaning" ? (
-            <MeaningView word={activeWord} choices={choices} onSpeak={speak} onChoose={answerMeaning} />
-          ) : null}
-
-          {(mode === "spell" || mode === "listen") ? (
-            <SpellingView
-              word={activeWord}
-              mode={mode}
-              input={input}
-              onInput={setInput}
-              onSubmit={submitSpelling}
-              onSpeak={speak}
-              onGiveUp={giveUp}
-            />
-          ) : null}
-
-          {mode === "feedback" && outcome ? (
-            <FeedbackView word={activeWord} outcome={outcome} record={memory.records[activeWord.id] ?? activeRecord} onSpeak={speak} onNext={nextCard} />
-          ) : null}
-        </article>
-
-        <div className={styles.feedbackLine}>
-          <Sparkles size={15} />
-          <span>{memory.lastFeedback}</span>
-        </div>
-      </section>
-
-      <aside className={styles.queuePanel}>
-        <div className={styles.panelHeader}>
-          <p>Today Queue</p>
-          <strong>{queue.length || buildQueue(memory).length}</strong>
-        </div>
-        <div className={styles.queueList}>
-          {(queue.length ? queue : buildQueue(memory).map((word) => word.id)).slice(0, 12).map((id) => {
-            const word = wordBank.find((item) => item.id === id);
-            if (!word) return null;
-            const record = memory.records[word.id] ?? getEmptyRecord();
-            return (
-              <button
-                key={word.id}
-                type="button"
-                className={word.id === activeWord.id ? styles.activeQueueItem : ""}
-                onClick={() => {
-                  setActiveId(word.id);
-                  setMode(getStartMode(word, memory));
-                  setOutcome(null);
-                  setInput("");
-                }}
-              >
-                <span>{word.word}</span>
-                <small>{stageLabel(record.stage)} · {word.meaning}</small>
-              </button>
-            );
-          })}
-        </div>
-      </aside>
+      )}
     </main>
+  );
+}
+
+function BriefingView({
+  words,
+  mix,
+  completedMissions,
+  moduleCount,
+  onStart,
+}: {
+  words: WordItem[];
+  mix: { review: number; weak: number; fresh: number };
+  completedMissions: number;
+  moduleCount: number;
+  onStart: () => void;
+}) {
+  return (
+    <section className={styles.briefing}>
+      <div className={styles.briefingCopy}>
+        <span className={styles.eyebrow}><Target size={16} /> DAILY MISSION</span>
+        <h2>这一局，拿下 {words.length} 个词</h2>
+        <p>七年级核心词库 · 预计 6 分钟</p>
+        <div className={styles.mixBar} aria-label="本轮词汇组成">
+          {mix.review ? <i className={styles.reviewMix} style={{ flex: mix.review }} /> : null}
+          {mix.weak ? <i className={styles.weakMix} style={{ flex: mix.weak }} /> : null}
+          {mix.fresh ? <i className={styles.freshMix} style={{ flex: mix.fresh }} /> : null}
+        </div>
+        <div className={styles.mixLegend}>
+          <span><i className={styles.reviewDot} />复习 {mix.review}</span>
+          <span><i className={styles.weakDot} />薄弱 {mix.weak}</span>
+          <span><i className={styles.freshDot} />新词 {mix.fresh}</span>
+        </div>
+        <button type="button" className={styles.primaryButton} onClick={onStart}>
+          <Zap size={19} />
+          启动任务
+          <ChevronRight size={19} />
+        </button>
+      </div>
+      <div className={styles.briefingBase}>
+        <div className={styles.baseTitle}>
+          <div><span>MEMORY BASE</span><strong>LV.{Math.max(1, completedMissions + 1)}</strong></div>
+          <small>{moduleCount} / 12 模块在线</small>
+        </div>
+        <ModuleGrid count={moduleCount} />
+      </div>
+    </section>
+  );
+}
+
+function MissionRail({ target, done, combo }: { target: number; done: number; combo: number }) {
+  return (
+    <aside className={styles.missionRail} aria-label="任务进度">
+      <div className={styles.railHeading}>
+        <span>RUN PATH</span>
+        <strong>{combo > 1 ? `COMBO ×${combo}` : "STABLE"}</strong>
+      </div>
+      <div className={styles.railSteps}>
+        {Array.from({ length: target }).map((_, index) => {
+          const complete = index < done;
+          const active = index === done;
+          return (
+            <span key={index} className={`${complete ? styles.stepComplete : ""} ${active ? styles.stepActive : ""}`} title={`任务 ${index + 1}`}>
+              {complete ? <Check size={15} /> : index + 1}
+            </span>
+          );
+        })}
+      </div>
+    </aside>
+  );
+}
+
+function BaseStatus({
+  moduleCount,
+  power,
+  active,
+  weak,
+  feedback,
+}: {
+  moduleCount: number;
+  power: number;
+  active: number;
+  weak: number;
+  feedback: string;
+}) {
+  return (
+    <aside className={styles.baseStatus}>
+      <div className={styles.baseTitle}>
+        <div><span>MEMORY BASE</span><strong>{power}%</strong></div>
+        <small>{moduleCount} / 12 模块在线</small>
+      </div>
+      <ModuleGrid count={moduleCount} />
+      <div className={styles.baseReadouts}>
+        <div><span>学习中</span><strong>{active}</strong></div>
+        <div><span>需加固</span><strong>{weak}</strong></div>
+      </div>
+      <p className={styles.statusLine}><Sparkles size={15} />{feedback}</p>
+    </aside>
+  );
+}
+
+function ModuleGrid({ count }: { count: number }) {
+  return (
+    <div className={styles.moduleGrid}>
+      {Array.from({ length: 12 }).map((_, index) => {
+        const lit = index < count;
+        return (
+          <span key={index} className={lit ? styles.moduleLit : ""} title={lit ? `模块 ${index + 1} 在线` : `模块 ${index + 1} 未解锁`}>
+            {lit ? <Zap size={17} /> : <LockKeyhole size={14} />}
+          </span>
+        );
+      })}
+    </div>
   );
 }
 
 function StudyView({ word, onSpeak, onStart }: { word: WordItem; onSpeak: (text: string) => void; onStart: () => void }) {
   return (
-    <div className={styles.studyView}>
-      <div className={styles.modePill}><Brain size={16} />先看一眼</div>
-      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)}>
-        <Volume2 size={20} />
+    <div className={styles.learningView}>
+      <span className={styles.eyebrow}><BrainCircuit size={16} /> SCAN / 新词侦察</span>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)} title="播放单词和例句" aria-label="播放单词和例句">
+        <Volume2 size={21} />
       </button>
-      <h2>{word.word}</h2>
-      <p className={styles.meaning}>{word.meaning}</p>
-      <div className={styles.exampleBox}>{word.example}</div>
-      <div className={styles.tipBox}>{word.tip}</div>
+      <h2 className={styles.heroWord}>{word.word}</h2>
+      <p className={styles.heroMeaning}>{word.meaning}</p>
+      <p className={styles.exampleLine}>{word.example}</p>
+      <p className={styles.memoryTip}><Sparkles size={16} />{word.tip}</p>
       <button type="button" className={styles.primaryButton} onClick={onStart}>
-        开始回忆
+        遮住并锁定 <ChevronRight size={18} />
       </button>
     </div>
   );
@@ -575,68 +953,155 @@ function MeaningView({
   onChoose: (id: string) => void;
 }) {
   return (
-    <div className={styles.quizView}>
-      <div className={styles.modePill}><Brain size={16} />先认意思</div>
-      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)}>
-        <Volume2 size={20} />
+    <div className={styles.learningView}>
+      <span className={styles.eyebrow}><Target size={16} /> TRACE / 意义锁定</span>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)} title="播放单词" aria-label="播放单词">
+        <Volume2 size={21} />
       </button>
-      <h2>{word.word}</h2>
-      <p className={styles.prompt}>这个词是什么意思？先在脑子里说出来，再点选项。</p>
+      <h2 className={styles.heroWord}>{word.word}</h2>
+      <p className={styles.prompt}>先在脑中说出中文，再锁定目标。</p>
       <div className={styles.choiceGrid}>
         {choices.map((choice) => (
-          <button key={choice.id} type="button" onClick={() => onChoose(choice.id)}>
-            {choice.meaning}
-          </button>
+          <button key={choice.id} type="button" onClick={() => onChoose(choice.id)}>{choice.meaning}</button>
         ))}
       </div>
     </div>
   );
 }
 
-function SpellingView({
+function TilesView({
+  word,
+  tiles,
+  selected,
+  answer,
+  onSelect,
+  onUndo,
+  onClear,
+  onSubmit,
+  onSpeak,
+}: {
+  word: WordItem;
+  tiles: LetterTile[];
+  selected: string[];
+  answer: string;
+  onSelect: (id: string) => void;
+  onUndo: () => void;
+  onClear: () => void;
+  onSubmit: () => void;
+  onSpeak: (text: string) => void;
+}) {
+  const letterCount = normalizeAnswer(word.word).length;
+  return (
+    <div className={styles.learningView}>
+      <span className={styles.eyebrow}><Keyboard size={16} /> FORGE / 字母组装</span>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)} title="播放单词" aria-label="播放单词">
+        <Volume2 size={21} />
+      </button>
+      <p className={styles.heroMeaning}>{word.meaning}</p>
+      <div className={styles.letterSlots} aria-label="已选择的字母">
+        {Array.from({ length: letterCount }).map((_, index) => <span key={index}>{answer[index] ?? ""}</span>)}
+      </div>
+      <div className={styles.tileBank}>
+        {tiles.map((tile) => (
+          <button key={tile.id} type="button" disabled={selected.includes(tile.id)} onClick={() => onSelect(tile.id)}>{tile.letter}</button>
+        ))}
+      </div>
+      <div className={styles.actionRow}>
+        <button type="button" className={styles.iconButtonLarge} onClick={onUndo} disabled={!selected.length} title="撤销一个字母" aria-label="撤销一个字母"><Delete size={20} /></button>
+        <button type="button" className={styles.secondaryButton} onClick={onClear} disabled={!selected.length}>清空</button>
+        <button type="button" className={styles.primaryButton} onClick={onSubmit} disabled={selected.length !== letterCount}><Target size={18} />锁定拼写</button>
+      </div>
+    </div>
+  );
+}
+
+function RecallView({
   word,
   mode,
   input,
+  hintShown,
   onInput,
   onSubmit,
   onSpeak,
+  onHint,
   onGiveUp,
 }: {
   word: WordItem;
-  mode: TrainingMode;
+  mode: "spell" | "listen" | "context";
   input: string;
+  hintShown: boolean;
   onInput: (value: string) => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
   onSpeak: (text: string) => void;
+  onHint: () => void;
   onGiveUp: () => void;
 }) {
-  const listenMode = mode === "listen";
+  const icon = mode === "listen" ? <Headphones size={16} /> : mode === "context" ? <AudioLines size={16} /> : <Keyboard size={16} />;
   return (
-    <form className={styles.quizView} onSubmit={onSubmit}>
-      <div className={styles.modePill}>{listenMode ? "听音写词" : "缺字母拼写"}</div>
-      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)}>
-        <Volume2 size={20} />
-      </button>
-      <h2>{listenMode ? "Listen" : maskWord(word.word)}</h2>
-      <p className={styles.prompt}>{word.meaning}。{listenMode ? "听完直接写英文。" : `提示：${word.tip}`}</p>
+    <form className={styles.learningView} onSubmit={onSubmit}>
+      <span className={styles.eyebrow}>{icon} RECALL / {modeLabel(mode)}</span>
+      {mode === "listen" ? (
+        <button type="button" className={styles.listenTarget} onClick={() => onSpeak(word.word)} aria-label="播放听写单词">
+          <Volume2 size={34} /><span>播放听写</span>
+        </button>
+      ) : null}
+      {mode === "spell" ? <p className={styles.recallClue}>{word.meaning}</p> : null}
+      {mode === "context" ? (
+        <div className={styles.contextClue}><p>{maskExample(word)}</p><span>{word.meaning}</span></div>
+      ) : null}
+      {hintShown ? <p className={styles.hintReveal}><CircleHelp size={16} />{maskWord(word.word)} · {word.tip}</p> : null}
       <input
         value={input}
         onChange={(event) => onInput(event.target.value)}
-        placeholder="输入英文单词"
+        placeholder="输入完整英文单词"
         autoCapitalize="none"
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
+        aria-label="输入完整英文单词"
       />
       <div className={styles.actionRow}>
-        <button type="submit" className={styles.primaryButton}>
-          <Check size={17} />
-          提交
-        </button>
-        <button type="button" className={styles.secondaryButton} onClick={onGiveUp}>
-          看答案，稍后再来
-        </button>
+        <button type="submit" className={styles.primaryButton} disabled={!input.trim()}><Check size={18} />提交答案</button>
+        {!hintShown ? <button type="button" className={styles.secondaryButton} onClick={onHint}><CircleHelp size={17} />线索</button> : null}
+        <button type="button" className={styles.quietButton} onClick={onGiveUp}>暂时没想起来</button>
       </div>
+    </form>
+  );
+}
+
+function CorrectionView({
+  word,
+  input,
+  hasError,
+  onInput,
+  onSubmit,
+  onSpeak,
+}: {
+  word: WordItem;
+  input: string;
+  hasError: boolean;
+  onInput: (value: string) => void;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onSpeak: (text: string) => void;
+}) {
+  return (
+    <form className={styles.learningView} onSubmit={onSubmit}>
+      <span className={`${styles.eyebrow} ${styles.warningEyebrow}`}><RefreshCcw size={16} /> PATCH / 立即订正</span>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(word.word)} title="再次播放" aria-label="再次播放"><Volume2 size={21} /></button>
+      <p className={styles.recallClue}>{word.meaning}</p>
+      <p className={styles.maskedWord}>{maskWord(word.word)}</p>
+      {hasError ? <p className={styles.correctionError}>再看线索：{word.tip}</p> : null}
+      <input
+        value={input}
+        onChange={(event) => onInput(event.target.value)}
+        placeholder="遮住答案，再写一次"
+        autoCapitalize="none"
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+        aria-label="订正单词"
+      />
+      <button type="submit" className={styles.primaryButton} disabled={!input.trim()}><ShieldCheck size={18} />完成订正</button>
     </form>
   );
 }
@@ -655,25 +1120,52 @@ function FeedbackView({
   onNext: () => void;
 }) {
   return (
-    <div className={styles.feedbackView}>
-      <div className={outcome.correct ? styles.goodBadge : styles.badBadge}>
-        {outcome.correct ? "Correct" : "Again"}
-      </div>
-      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)}>
-        <Volume2 size={20} />
-      </button>
-      <h2>{outcome.title}</h2>
-      <p className={styles.meaning}>{word.word} · {word.meaning}</p>
-      <div className={styles.exampleBox}>{word.example}</div>
-      <div className={styles.tipBox}>{outcome.body}</div>
+    <div className={styles.learningView}>
+      <span className={`${styles.eyebrow} ${outcome.correct ? styles.successEyebrow : styles.failEyebrow}`}>
+        {outcome.correct ? <ShieldCheck size={16} /> : <RefreshCcw size={16} />}
+        {outcome.correct ? "LOCKED / 命中" : "REPAIR / 待订正"}
+      </span>
+      <button type="button" className={styles.audioButton} onClick={() => onSpeak(`${word.word}. ${word.example}`)} title="播放单词和例句" aria-label="播放单词和例句"><Volume2 size={21} /></button>
+      <h2 className={outcome.correct ? styles.feedbackTitle : styles.answerWord}>{outcome.correct ? outcome.title : word.word}</h2>
+      <p className={styles.heroMeaning}>{word.meaning}</p>
+      <p className={styles.exampleLine}>{word.example}</p>
+      <p className={styles.memoryTip}><Sparkles size={16} />{outcome.needsCorrection ? word.tip : outcome.body}</p>
       <div className={styles.stageRail}>
-        {[0, 1, 2, 3, 4].map((stage) => (
-          <span key={stage} className={record.stage >= stage ? styles.stageOn : ""}>{stageLabel(stage)}</span>
-        ))}
+        {[0, 1, 2, 3, 4].map((stage) => <span key={stage} className={record.stage >= stage ? styles.stageOn : ""}>{stageLabel(stage)}</span>)}
       </div>
       <button type="button" className={styles.primaryButton} onClick={onNext}>
-        下一个
+        {outcome.needsCorrection ? <><RefreshCcw size={18} />遮住，再写一次</> : <>继续任务<ChevronRight size={18} /></>}
       </button>
+    </div>
+  );
+}
+
+function CompleteView({
+  session,
+  wordCount,
+  moduleCount,
+  onNext,
+}: {
+  session: SessionStats;
+  wordCount: number;
+  moduleCount: number;
+  onNext: () => void;
+}) {
+  const attempts = session.cleanHits + session.misses;
+  const accuracy = attempts ? Math.round((session.cleanHits / attempts) * 100) : 100;
+  return (
+    <div className={styles.completeView}>
+      <span className={`${styles.eyebrow} ${styles.successEyebrow}`}><ShieldCheck size={16} /> MISSION COMPLETE</span>
+      <h2>基地模块已点亮</h2>
+      <ModuleGrid count={moduleCount} />
+      <div className={styles.resultReadouts}>
+        <div><span>首答命中</span><strong>{accuracy}%</strong></div>
+        <div><span>完成词汇</span><strong>{wordCount}</strong></div>
+        <div><span>成功订正</span><strong>{session.recovered}</strong></div>
+        <div><span>本局经验</span><strong>{session.xp}</strong></div>
+      </div>
+      <p className={styles.diagnosis}><Target size={17} />训练焦点：{getWeakestMode(session.errors)}</p>
+      <button type="button" className={styles.primaryButton} onClick={onNext}><Zap size={18} />再来一局</button>
     </div>
   );
 }
