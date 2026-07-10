@@ -684,7 +684,7 @@ function buildPromptExpansionMessages(
         '  "breakdown": {"subject": "...", "style": "...", "lighting": "...", "camera": "...", "palette": "...", "scene": "...", "mood": "...", "composition": "...", "quality": "..."},',
         '  "preservedDetails": ["explicit user detail 1", "explicit user detail 2"],',
         '  "creativeAdditions": ["new inferred detail 1", "new inferred detail 2"],',
-        '  "variants": ["...", "...", "..."]',
+        '  "variants": []',
         "}",
       ].join("\n"),
     },
@@ -705,6 +705,7 @@ function buildPromptExpansionMessages(
             "Use concrete visual nouns and action constraints; avoid vague words only.",
             "For Chinese output, use vivid Chinese visual language suitable for copy-paste prompt generation.",
             "List preservedDetails and creativeAdditions separately so the user can audit what was kept and what was invented.",
+            "Set variants to an empty array. Spend the output budget on one excellent prompt instead of alternate prompts.",
             "Negative prompt must include the user's avoid list plus no watermark, no messy text, no low quality, no distorted hands/fingers, no subject drift, no explicit sexual anatomy.",
           ],
         },
@@ -717,6 +718,93 @@ function buildPromptExpansionMessages(
 
 function looksLikePromptExpansion(value: unknown): value is Partial<PromptExpansionResult> {
   return isRecord(value) && typeof value.prompt === "string";
+}
+
+function buildPromptRepairMessages(
+  input: Required<PromptExpandRequest> & { language: PromptLanguage; contentType: "image" | "video" },
+): ChatMessage[] {
+  return [
+    {
+      role: "system",
+      content: [
+        "Return one complete strict JSON object for an AI visual prompt. No markdown and no commentary.",
+        "Preserve every explicit user detail exactly in meaning. Never replace a specified garment, fit, length, color, identity, age, action, location, or aspect ratio.",
+        "Fill only unspecified visual details with context-sensitive choices. Avoid reusable house templates and stock phrases.",
+        "Use Chinese when language is zh. Keep the main prompt concise but production-ready.",
+        'Schema: {"title":"","prompt":"","negativePrompt":"","modelHints":[],"breakdown":{"subject":"","style":"","lighting":"","camera":"","palette":"","scene":"","mood":"","composition":"","quality":""},"preservedDetails":[],"creativeAdditions":[],"variants":[]}',
+      ].join("\n"),
+    },
+    {
+      role: "user",
+      content: JSON.stringify({
+        ...input,
+        instruction:
+          "Produce a complete JSON response. For image prompts use roughly 180-340 Chinese characters; for video prompts use roughly 240-420 Chinese characters.",
+      }),
+    },
+  ];
+}
+
+async function requestPromptExpansionContent({
+  apiKey,
+  messages,
+  maxTokens,
+  temperature,
+  timeoutMs,
+}: {
+  apiKey: string;
+  messages: ChatMessage[];
+  maxTokens: number;
+  temperature: number;
+  timeoutMs: number;
+}) {
+  const timeout = createTimeoutSignal(timeoutMs);
+
+  try {
+    const response = await fetch(DEEPSEEK_API_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: DEEPSEEK_MODEL,
+        temperature,
+        max_tokens: maxTokens,
+        response_format: { type: "json_object" },
+        messages,
+      }),
+      cache: "no-store",
+      signal: timeout.signal,
+    });
+    const payload = await readJsonResponse(response);
+
+    if (!response.ok) {
+      return {
+        content: "",
+        error: getErrorMessage(payload, "DeepSeek prompt expansion failed."),
+      };
+    }
+
+    const content = (
+      payload as {
+        choices?: Array<{ message?: { content?: string } }>;
+      }
+    ).choices?.[0]?.message?.content;
+
+    return {
+      content: typeof content === "string" ? content : "",
+      error: typeof content === "string" ? "" : "DeepSeek returned no content.",
+    };
+  } catch (error) {
+    return {
+      content: "",
+      error:
+        error instanceof Error ? error.message : "DeepSeek prompt expansion failed.",
+    };
+  } finally {
+    timeout.clear();
+  }
 }
 
 export function normalizePromptExpandRequest(body: PromptExpandRequest) {
@@ -752,43 +840,31 @@ export async function expandPrompt(
     return fallbackPromptExpansion(input, "DEEPSEEK_API_KEY is not configured.");
   }
 
-  const timeout = createTimeoutSignal(PROMPT_DEEPSEEK_TIMEOUT_MS);
-
   try {
-    const response = await fetch(DEEPSEEK_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: DEEPSEEK_MODEL,
-        temperature: 0.68,
-        max_tokens: 1800,
-        response_format: { type: "json_object" },
-        messages: buildPromptExpansionMessages(input),
-      }),
-      cache: "no-store",
-      signal: timeout.signal,
+    const primary = await requestPromptExpansionContent({
+      apiKey,
+      messages: buildPromptExpansionMessages(input),
+      maxTokens: 2000,
+      temperature: 0.68,
+      timeoutMs: Math.min(PROMPT_DEEPSEEK_TIMEOUT_MS, 33000),
     });
-    const payload = await readJsonResponse(response);
-
-    if (!response.ok) {
-      return fallbackPromptExpansion(
-        input,
-        getErrorMessage(payload, "DeepSeek prompt expansion failed."),
-      );
-    }
-
-    const content = (
-      payload as {
-        choices?: Array<{ message?: { content?: string } }>;
-      }
-    ).choices?.[0]?.message?.content;
-    const parsed = typeof content === "string" ? parseJsonObject(content) : null;
+    let parsed = primary.content ? parseJsonObject(primary.content) : null;
+    let failureMessage = primary.error || "DeepSeek returned an incomplete JSON shape.";
 
     if (!looksLikePromptExpansion(parsed)) {
-      return fallbackPromptExpansion(input, "DeepSeek returned an incomplete JSON shape.");
+      const repair = await requestPromptExpansionContent({
+        apiKey,
+        messages: buildPromptRepairMessages(input),
+        maxTokens: 1500,
+        temperature: 0.42,
+        timeoutMs: Math.min(PROMPT_DEEPSEEK_TIMEOUT_MS, 18000),
+      });
+      parsed = repair.content ? parseJsonObject(repair.content) : null;
+      failureMessage = repair.error || failureMessage;
+    }
+
+    if (!looksLikePromptExpansion(parsed)) {
+      return fallbackPromptExpansion(input, failureMessage);
     }
 
     const fallback = fallbackPromptExpansion(input);
@@ -843,8 +919,6 @@ export async function expandPrompt(
       error instanceof Error ? error.message : "DeepSeek prompt expansion failed.";
 
     return fallbackPromptExpansion(input, message);
-  } finally {
-    timeout.clear();
   }
 }
 
