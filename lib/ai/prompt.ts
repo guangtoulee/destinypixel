@@ -119,9 +119,7 @@ const DEEPSEEK_API_URL =
   "https://api.deepseek.com/v1/chat/completions";
 const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 const PROMPT_DEEPSEEK_TIMEOUT_MS = Number(
-  process.env.PROMPT_DEEPSEEK_TIMEOUT_MS ??
-    process.env.DEEPSEEK_TIMEOUT_MS ??
-    22000,
+  process.env.PROMPT_DEEPSEEK_TIMEOUT_MS ?? 45000,
 );
 
 const X_RECENT_SEARCH_URL =
@@ -765,8 +763,8 @@ export async function expandPrompt(
       },
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
-        temperature: 0.72,
-        max_tokens: 2400,
+        temperature: 0.68,
+        max_tokens: 1800,
         response_format: { type: "json_object" },
         messages: buildPromptExpansionMessages(input),
       }),
