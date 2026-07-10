@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Solar } from "lunar-javascript";
 import { createFusionReportAction } from "@/app/actions";
+import { DeityPortrait } from "@/components/deity-portraits";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay } from "@/lib/bazi-totems";
 import { cities } from "@/lib/geo/cities";
@@ -207,9 +208,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
     },
     insights: {
       eyebrow: "Beyond the birth map",
-      title: "Palm, face, and one-question readings for the moment you are in.",
+      title: "Four focused doors into the moment you are living now.",
       description:
-        "When you do not need a full birth report, open a smaller mirror: align a photo, confirm visible signals, or cast the question time into a Liuyao and Tarot reading.",
+        "Read a visible pattern, ask one precise question, or turn your energy palette into something wearable. Each studio starts with a different kind of evidence.",
       items: [
         {
           title: "Palm Studio",
@@ -230,22 +231,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           cta: "Ask now",
         },
         {
-          title: "Temple Sticks",
-          body: "Choose a blessing tradition, set one clear intention, and draw a concise stick for love, wealth, career, or protection.",
-          href: "/sticks",
-          cta: "Draw a stick",
-        },
-        {
           title: "Celestial Atelier",
           body: "Turn five-element color guidance into a crystal bracelet concept with gemstone balance and wearable intention.",
           href: "/atelier",
           cta: "Build bracelet",
-        },
-        {
-          title: "Script Studio",
-          body: "Turn a short-drama idea into a story bible, director script, shot list, storyboard prompts, camera prompts, edit prompts, and dubbing notes.",
-          href: "/juben",
-          cta: "Build script",
         },
       ],
     },
@@ -308,9 +297,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         },
         {
           key: "wuye",
-          name: "Wuye",
+          name: "Wutai Wuye",
           domain: "Vows · Courage",
-          body: "For keeping promises, carrying pressure, and moving through a hard gate with steadiness.",
+          body: "The Fifth Dragon King of Wutai: for keeping promises, carrying pressure, and moving through a hard gate with steadiness.",
         },
         {
           key: "wen-caishen",
@@ -417,9 +406,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
     },
     insights: {
       eyebrow: "出生地图之外",
-      title: "手相、面相、一事一问，给当下问题更快的镜子。",
+      title: "四种更聚焦的入口，照见你正在经历的此刻。",
       description:
-        "当你暂时不需要完整出生报告时，可以打开更轻的洞察：拍照对齐、确认可见特征，或用起问时间生成六爻和塔罗合参。",
+        "看清可见的身体信号、问一件具体的事，或把能量配色变成可以佩戴的物件。每个专区都从不同证据开始，而不是重复一套泛泛话术。",
       items: [
         {
           title: "手相专区",
@@ -440,22 +429,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           cta: "马上问",
         },
         {
-          title: "求签专区",
-          body: "选择观音、关帝、月老或财神签，把当下最想问的一件事交给一支签来提示方向。",
-          href: "/sticks",
-          cta: "去求签",
-        },
-        {
           title: "灵石工坊",
           body: "把五行补色转换成手串设计：选水晶、珠径、颗数，并生成一份可佩戴的能量解析。",
           href: "/atelier",
           cta: "定制手串",
-        },
-        {
-          title: "剧本工坊",
-          body: "把短剧想法拆成故事圣经、导演剧本、镜头表、分镜 prompt、运镜 prompt、剪辑 prompt 和配音脚本。",
-          href: "/juben",
-          cta: "生成剧本",
         },
       ],
     },
@@ -518,9 +495,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         },
         {
           key: "wuye",
-          name: "五爷",
+          name: "五爷（五龙王）",
           domain: "愿力 · 贵人",
-          body: "适合为承诺、事业关口、压力突破、贵人助力和心中所愿而祈愿。",
+          body: "五台山五龙王意象，适合为承诺、事业关口、压力突破、贵人助力和心中所愿而祈愿。",
         },
         {
           key: "wen-caishen",
@@ -623,9 +600,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
     },
     insights: {
       eyebrow: "За пределами карты рождения",
-      title: "Ладонь, лицо и один вопрос для текущего момента.",
+      title: "Четыре точных входа в тот момент, который вы проживаете.",
       description:
-        "Когда не нужен полный отчет, откройте более быстрые зеркала: фото-направляющие, подтвержденные признаки или вопрос по времени с Лю Яо и Таро.",
+        "Считайте видимый сигнал, задайте один точный вопрос или превратите палитру энергии в носимый предмет. Каждая студия начинает с другого типа данных.",
       items: [
         {
           title: "Ладонь",
@@ -646,22 +623,10 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
           cta: "Задать вопрос",
         },
         {
-          title: "Храмовые жребии",
-          body: "Выберите традицию, сформулируйте намерение и вытяните короткий знак для любви, денег, работы или защиты.",
-          href: "/sticks",
-          cta: "Тянуть жребий",
-        },
-        {
           title: "Celestial Atelier",
           body: "Цвет пяти стихий превращается в концепт браслета: камни, размер бусин и символический анализ.",
           href: "/atelier",
           cta: "Собрать браслет",
-        },
-        {
-          title: "Script Studio",
-          body: "Идея короткого сериала превращается в библию истории, режиссерский сценарий, список кадров и prompts для storyboard, камеры, монтажа и озвучки.",
-          href: "/juben",
-          cta: "Создать сценарий",
         },
       ],
     },
@@ -724,9 +689,9 @@ const whiteCopy: Record<ReportLocale, WhiteCopy> = {
         },
         {
           key: "wuye",
-          name: "У Е",
+          name: "Утайский У Е",
           domain: "Обет · Смелость",
-          body: "Для обещаний, давления, важного порога и устойчивости перед сложной задачей.",
+          body: "Пятый Царь Драконов Утая: для обещаний, давления, важного порога и устойчивости перед сложной задачей.",
         },
         {
           key: "wen-caishen",
@@ -817,129 +782,6 @@ function setDocumentLocale(locale: ReportLocale) {
     locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
 }
 
-function DeityLineIcon({
-  deityKey,
-  active = false,
-  ritual = false,
-}: {
-  deityKey: string;
-  active?: boolean;
-  ritual?: boolean;
-}) {
-  const isGuanyin = deityKey === "guanyin";
-  const isWuye = deityKey === "wuye";
-  const isWenCaishen = deityKey === "wen-caishen";
-  const isWuCaishen = deityKey === "wu-caishen";
-  const isMazu = deityKey === "mazu";
-
-  return (
-    <div
-      className={`white-deity-line white-deity-line--${deityKey}${
-        ritual ? " white-ritual-deity" : ""
-      }`}
-      data-active={active || ritual}
-      aria-hidden="true"
-    >
-      <svg viewBox="0 0 180 220" role="img">
-        <g className="white-deity-line__soft">
-          <circle cx="90" cy="62" r="48" />
-          <circle cx="90" cy="151" r="58" />
-          <path d="M32 176H148" />
-          <path d="M90 24V202" />
-        </g>
-
-        <g className="white-deity-line__main">
-          <path d="M64 54C66 27 114 27 116 54C123 68 121 88 112 101H68C59 88 57 68 64 54Z" />
-          <path d="M70 56C74 42 106 42 110 56C112 77 105 94 90 98C75 94 68 77 70 56Z" />
-          <path d="M78 69C82 66 86 66 89 69" />
-          <path d="M91 69C94 66 98 66 102 69" />
-          <path d="M84 86C88 90 94 90 98 86" />
-          <path d="M88 73C86 80 86 83 90 85" />
-          <path d="M51 112C68 91 112 91 129 112C143 139 139 178 90 195C41 178 37 139 51 112Z" />
-          <path d="M53 126C76 138 103 138 127 126" />
-          <path d="M67 112C60 143 69 174 90 195" />
-          <path d="M113 112C120 143 111 174 90 195" />
-        </g>
-
-        <g className="white-deity-line__ornament">
-          <path d="M73 45C78 34 84 30 90 21C96 30 102 34 107 45" />
-          <path d="M75 45C82 40 98 40 105 45" />
-          <path d="M83 42C83 33 97 33 97 42C97 50 83 50 83 42Z" />
-          <path d="M72 50C58 60 55 77 55 96" />
-          <path d="M108 50C122 60 125 77 125 96" />
-        </g>
-
-        {isGuanyin ? (
-          <g className="white-deity-line__feature">
-            <path d="M49 107C38 101 31 93 27 84" />
-            <path d="M31 83C41 83 49 78 56 70" />
-            <path d="M37 93C45 91 52 86 58 79" />
-            <path d="M98 118C105 108 119 110 124 119C121 139 112 153 100 162C94 146 93 131 98 118Z" />
-            <path d="M103 118C110 124 115 124 121 118" />
-            <path d="M73 116C79 126 80 137 75 150" />
-            <path d="M74 117C83 112 91 113 97 121" />
-          </g>
-        ) : null}
-
-        {isWuye ? (
-          <g className="white-deity-line__feature">
-            <path d="M47 138C47 104 71 96 92 108C113 120 135 109 139 82" />
-            <path d="M137 81C145 84 149 89 151 96" />
-            <path d="M136 82C132 75 130 70 132 65" />
-            <path d="M125 91C130 94 136 94 143 91" />
-            <path d="M104 111C109 116 112 123 111 131" />
-            <circle cx="46" cy="137" r="5" />
-            <path d="M69 120L86 102L103 122" />
-          </g>
-        ) : null}
-
-        {isWenCaishen ? (
-          <g className="white-deity-line__feature">
-            <path d="M69 47H111" />
-            <path d="M75 37H105" />
-            <path d="M80 37C80 28 100 28 100 37" />
-            <path d="M49 126H81V160H49Z" />
-            <path d="M56 137H74" />
-            <path d="M56 148H71" />
-            <path d="M108 121C118 112 132 119 128 131C124 145 111 144 106 135C112 134 117 129 117 123" />
-          </g>
-        ) : null}
-
-        {isWuCaishen ? (
-          <g className="white-deity-line__feature">
-            <path d="M79 76C83 79 86 83 90 91C94 83 97 79 101 76" />
-            <path d="M82 94C86 106 94 106 98 94" />
-            <path d="M133 52V177" />
-            <path d="M133 55C151 64 150 86 133 95" />
-            <path d="M133 55C119 67 118 84 133 95" />
-            <path d="M111 124C125 128 135 139 143 155" />
-            <path d="M48 130C62 112 75 115 86 129" />
-          </g>
-        ) : null}
-
-        {isMazu ? (
-          <g className="white-deity-line__feature">
-            <path d="M69 43C77 28 103 28 111 43" />
-            <path d="M74 37L90 23L106 37" />
-            <path d="M70 51L110 51" />
-            <path d="M75 52V65M85 52V67M95 52V67M105 52V65" />
-            <path d="M39 161C49 151 59 151 69 161C79 171 89 171 99 161C109 151 119 151 129 161C135 167 142 169 149 166" />
-            <path d="M35 178C48 168 62 168 75 178C88 188 102 188 115 178C128 168 141 168 153 178" />
-          </g>
-        ) : null}
-
-        <g className="white-deity-line__incense">
-          <path d="M151 116V184" />
-          <path d="M145 184H157" />
-          <path className="white-deity-line__smoke white-deity-line__smoke--one" d="M151 111C139 96 164 87 151 70" />
-          <path className="white-deity-line__smoke white-deity-line__smoke--two" d="M151 108C165 93 140 84 154 63" />
-          <circle cx="151" cy="112" r="3" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
 export default function DestinyWhiteExperience({
   initialLocale = "en",
 }: {
@@ -949,10 +791,21 @@ export default function DestinyWhiteExperience({
   const [birthDate, setBirthDate] = useState("");
   const [pillar, setPillar] = useState("癸卯");
   const [litBlessings, setLitBlessings] = useState<Record<string, boolean>>({});
+  const [selectedDeityKey, setSelectedDeityKey] = useState("guanyin");
   const [blessingMoment, setBlessingMoment] = useState<
     WhiteCopy["blessing"]["deities"][number] | null
   >(null);
   const text = whiteCopy[locale];
+  const selectedDeity =
+    text.blessing.deities.find((deity) => deity.key === selectedDeityKey) ??
+    text.blessing.deities[0];
+  const selectedBlessingActive = Boolean(litBlessings[selectedDeity.key]);
+  const mobileNavLabels =
+    locale === "zh"
+      ? { report: "排盘", insights: "洞察", sticks: "求签", blessing: "祈福" }
+      : locale === "ru"
+        ? { report: "Карта", insights: "Студии", sticks: "Жребий", blessing: "Обряд" }
+        : { report: "Map", insights: "Studios", sticks: "Sticks", blessing: "Blessing" };
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
     [pillar],
@@ -1006,7 +859,7 @@ export default function DestinyWhiteExperience({
     }
   }
 
-  const insightIcons = [Hand, ScanFace, MessageCircle, Sparkles, Gem] as const;
+  const insightIcons = [Hand, ScanFace, MessageCircle, Gem] as const;
 
   return (
     <main className="white-site">
@@ -1018,9 +871,9 @@ export default function DestinyWhiteExperience({
           </a>
 
           <nav className="white-nav" aria-label="Primary navigation">
+            <a href="#insights">{text.nav.insights}</a>
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
-            <a href="#insights">{text.nav.insights}</a>
             <a href="#report">{text.nav.report}</a>
           </nav>
 
@@ -1050,6 +903,25 @@ export default function DestinyWhiteExperience({
           </div>
         </div>
       </header>
+
+      <nav className="white-mobile-dock" aria-label="Mobile navigation">
+        <a href="#report">
+          <SunMoon size={18} aria-hidden="true" />
+          <span>{mobileNavLabels.report}</span>
+        </a>
+        <a href="#insights">
+          <Sparkles size={18} aria-hidden="true" />
+          <span>{mobileNavLabels.insights}</span>
+        </a>
+        <a href={`/sticks?locale=${locale}`}>
+          <Stars size={18} aria-hidden="true" />
+          <span>{mobileNavLabels.sticks}</span>
+        </a>
+        <a href="#blessing">
+          <Orbit size={18} aria-hidden="true" />
+          <span>{mobileNavLabels.blessing}</span>
+        </a>
+      </nav>
 
       <section className="white-hero">
         <div className="white-ambient" aria-hidden="true">
@@ -1235,36 +1107,6 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
-      <section className="white-sticks" id="sticks">
-        <div className="white-container">
-          <div className="white-section-heading">
-            <p>{text.sticks.eyebrow}</p>
-            <h2>{text.sticks.title}</h2>
-            <span>{text.sticks.description}</span>
-          </div>
-
-          <div className="white-stick-grid">
-            {text.sticks.items.map((item, index) => (
-              <a
-                className="white-stick-card"
-                href={`${item.href}${item.href.includes("?") ? "&" : "?"}locale=${locale}`}
-                key={item.href}
-              >
-                <span className="white-stick-seal" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <strong>{item.title}</strong>
-                <p>{item.body}</p>
-                <em>
-                  {item.cta}
-                  <ArrowRight size={15} aria-hidden="true" />
-                </em>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="white-method" id="method">
         <div className="white-container">
           <div className="white-method-intro">
@@ -1386,6 +1228,38 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
+      <section className="white-sticks" id="sticks">
+        <div className="white-container white-sticks__layout">
+          <div className="white-section-heading white-section-heading--sticks">
+            <p>{text.sticks.eyebrow}</p>
+            <h2>{text.sticks.title}</h2>
+            <span>{text.sticks.description}</span>
+            <a href={`/sticks?locale=${locale}`}>
+              {locale === "zh" ? "进入求签小殿" : locale === "ru" ? "Открыть храм жребиев" : "Enter the oracle hall"}
+              <ArrowRight size={16} aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="white-stick-index">
+            {text.sticks.items.map((item, index) => (
+              <a
+                href={`${item.href}${item.href.includes("?") ? "&" : "?"}locale=${locale}`}
+                key={item.href}
+              >
+                <span className="white-stick-seal" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <strong>{item.title}</strong>
+                  <p>{item.body}</p>
+                </div>
+                <ArrowRight size={17} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="white-blessing" id="blessing">
         <div className="white-container">
           <div className="white-section-heading">
@@ -1394,36 +1268,56 @@ export default function DestinyWhiteExperience({
             <span>{text.blessing.description}</span>
           </div>
 
-          <div className="white-deity-grid">
-            {text.blessing.deities.map((deity) => {
-              const active = Boolean(litBlessings[deity.key]);
+          <div className="white-blessing-stage">
+            <div className="white-deity-selector" role="tablist" aria-label={text.blessing.title}>
+              {text.blessing.deities.map((deity, index) => {
+                const selected = deity.key === selectedDeity.key;
+                const active = Boolean(litBlessings[deity.key]);
 
-              return (
-                <article className="white-deity-card" key={deity.key} data-active={active}>
-                  <DeityLineIcon deityKey={deity.key} active={active} />
-                  <div>
-                    <small>{deity.domain}</small>
-                    <strong>{deity.name}</strong>
-                    <p>{deity.body}</p>
-                  </div>
+                return (
                   <button
                     type="button"
-                    onClick={() =>
-                      {
-                        setLitBlessings((current) => ({
-                          ...current,
-                          [deity.key]: true,
-                        }));
-                        setBlessingMoment(deity);
-                      }
-                    }
+                    role="tab"
+                    aria-selected={selected}
+                    data-selected={selected}
+                    data-lit={active}
+                    key={deity.key}
+                    onClick={() => setSelectedDeityKey(deity.key)}
                   >
-                    <Sparkles size={15} aria-hidden="true" />
-                    {active ? text.blessing.activeAction : text.blessing.action}
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <strong>{deity.name}</strong>
+                      <small>{deity.domain}</small>
+                    </div>
+                    {active ? <Check size={15} aria-hidden="true" /> : <ArrowRight size={15} aria-hidden="true" />}
                   </button>
-                </article>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            <article className="white-shrine" data-deity={selectedDeity.key} data-active={selectedBlessingActive}>
+              <div className="white-shrine__visual">
+                <DeityPortrait deityKey={selectedDeity.key} active={selectedBlessingActive} />
+              </div>
+              <div className="white-shrine__copy">
+                <small>{selectedDeity.domain}</small>
+                <h3>{selectedDeity.name}</h3>
+                <p>{selectedDeity.body}</p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLitBlessings((current) => ({
+                      ...current,
+                      [selectedDeity.key]: true,
+                    }));
+                    setBlessingMoment(selectedDeity);
+                  }}
+                >
+                  <Sparkles size={16} aria-hidden="true" />
+                  {selectedBlessingActive ? text.blessing.activeAction : text.blessing.action}
+                </button>
+              </div>
+            </article>
           </div>
 
           <p className="white-blessing-note">{text.blessing.note}</p>
@@ -1446,7 +1340,7 @@ export default function DestinyWhiteExperience({
             >
               <X size={18} aria-hidden="true" />
             </button>
-            <DeityLineIcon deityKey={blessingMoment.key} ritual />
+            <DeityPortrait deityKey={blessingMoment.key} ritual />
             <p>{text.blessing.modalTitle}</p>
             <h2 id="white-ritual-title">{blessingMoment.name}</h2>
             <span>{text.blessing.modalBody}</span>
