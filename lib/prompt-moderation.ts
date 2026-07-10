@@ -13,7 +13,7 @@ export type PromptModerationState = {
 const bucketId = "prompt-admin";
 const objectPath = "moderation.json";
 const localPath = path.join(process.cwd(), "work", "prompt-moderation.json");
-const cacheLifetimeMs = 15_000;
+const cacheLifetimeMs = 0;
 
 function emptyState(): PromptModerationState {
   return { pinnedIds: [], deletedIds: [], updatedAt: new Date(0).toISOString() };
