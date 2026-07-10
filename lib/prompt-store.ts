@@ -7,6 +7,10 @@ import {
   type PromptFeedItem,
   type PromptMetrics,
 } from "@/lib/ai/prompt";
+import {
+  applyPromptModeration,
+  readPromptModeration,
+} from "@/lib/prompt-moderation";
 
 type PromptStoreShape = {
   updatedAt: string;
@@ -258,13 +262,14 @@ async function upsertSupabasePromptItems(items: PromptFeedItem[]) {
 }
 
 export async function readPromptFeed(limit = 48) {
-  const supabase = await readSupabasePromptItems(limit);
+  const supabase = await readSupabasePromptItems(Math.max(limit, 120));
   const localStore = await readLocalPromptStore();
-  const items = dedupePromptItems([
+  const moderation = await readPromptModeration();
+  const items = applyPromptModeration(dedupePromptItems([
     ...supabase.items,
     ...localStore.items,
     ...snapshotPromptItems,
-  ]).slice(0, limit);
+  ]), moderation).slice(0, limit);
 
   return {
     items,

@@ -50,6 +50,7 @@
 
 .brand,
 .pageNav,
+.topbarStatus,
 .liveStamp,
 .signalTicker,
 .tickerLabel,
@@ -63,6 +64,7 @@
 .resultIdentity,
 .radarToolbar,
 .filterBar,
+.categoryRail,
 .searchBox,
 .signalMeta,
 .signalAuthor,
@@ -70,6 +72,8 @@
 .signalFooter,
 .visualTopline,
 .visualActions,
+.adminControls,
+.adminDialogHead,
 .sourceLedger,
 .footerLine {
   display: flex;
@@ -100,6 +104,11 @@
   color: var(--acid);
 }
 
+.topbarStatus {
+  justify-self: end;
+  gap: 7px;
+}
+
 .liveStamp {
   justify-self: end;
   gap: 8px;
@@ -120,6 +129,29 @@
 .liveStamp time {
   color: rgba(255, 255, 255, 0.5);
   font-variant-numeric: tabular-nums;
+}
+
+.adminTrigger {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 0;
+  color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.adminTrigger:hover,
+.adminTrigger[data-active="true"] {
+  color: var(--acid);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.adminTrigger svg {
+  width: 13px;
+  height: 13px;
 }
 
 .signalTicker {
@@ -863,6 +895,55 @@
   background: transparent;
 }
 
+.categoryRail {
+  min-height: 46px;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  scrollbar-width: none;
+}
+
+.categoryRail::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryRail > span {
+  flex: none;
+  width: 158px;
+  color: var(--acid);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.categoryRail button {
+  min-height: 45px;
+  flex: none;
+  border: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  padding: 0 13px;
+  font-size: 10px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.categoryRail button b {
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.42);
+  font-family: Georgia, serif;
+  font-size: 9px;
+}
+
+.categoryRail button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--paper-bright);
+}
+
+.categoryRail button[aria-pressed="true"] b {
+  color: var(--blue);
+}
+
 .feedNotice {
   margin: 14px 0 0;
   border-left: 3px solid var(--acid);
@@ -916,6 +997,15 @@
   font-size: 11px;
 }
 
+.signalMeta .categoryTag {
+  margin: 0 auto;
+  border: 1px solid var(--ink);
+  padding: 3px 6px;
+  font-family: "SF Pro Display", "PingFang SC", sans-serif;
+  font-size: 8px;
+  font-weight: 950;
+}
+
 .signalAuthor {
   gap: 8px;
   margin-top: 14px;
@@ -928,6 +1018,20 @@
   height: 6px;
   background: var(--coral);
   box-shadow: none;
+}
+
+.signalAuthor b {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+  color: var(--blue);
+  font-size: 8px;
+}
+
+.signalAuthor b svg {
+  width: 10px;
+  height: 10px;
 }
 
 .signalCard h3 {
@@ -984,6 +1088,48 @@
   place-items: center;
   border: 1px solid var(--ink);
   color: var(--ink);
+}
+
+.adminControls {
+  gap: 5px;
+  margin-left: auto;
+}
+
+.adminControls button {
+  display: grid;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  place-items: center;
+  border: 1px solid currentColor;
+  color: var(--ink);
+  background: var(--acid);
+  padding: 0;
+  cursor: pointer;
+}
+
+.adminControls button:last-child {
+  color: #fff;
+  background: var(--coral);
+}
+
+.adminControls button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.adminControls svg {
+  width: 13px;
+  height: 13px;
+}
+
+.signalFooter > .adminControls {
+  margin-left: 0;
+}
+
+.visualActions > .adminControls {
+  margin-left: auto;
 }
 
 .caseSection {
@@ -1179,6 +1325,152 @@
   color: var(--blue);
   font-size: 9px;
   font-weight: 950;
+}
+
+.textArchive .adminControls {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.adminOverlay {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(17, 17, 15, 0.76);
+  padding: 20px;
+  backdrop-filter: blur(9px);
+}
+
+.adminDialog {
+  width: min(430px, 100%);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper-bright);
+  box-shadow: 12px 12px 0 var(--acid);
+}
+
+.adminDialogHead {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ink);
+  padding: 18px 20px;
+}
+
+.adminDialogHead span {
+  color: var(--blue);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.adminDialogHead h2 {
+  margin: 3px 0 0;
+  font-family: "Songti SC", Georgia, serif;
+  font-size: 28px;
+}
+
+.adminDialogHead > button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+}
+
+.adminDialogHead svg {
+  width: 16px;
+  height: 16px;
+}
+
+.adminForm {
+  display: grid;
+  gap: 14px;
+  padding: 22px 20px 24px;
+}
+
+.adminForm label {
+  display: grid;
+  gap: 7px;
+}
+
+.adminForm label span {
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.adminForm input {
+  min-width: 0;
+  height: 48px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  color: var(--ink);
+  background: #fff;
+  padding: 0 12px;
+  outline: none;
+}
+
+.adminForm input:focus {
+  box-shadow: inset 4px 0 0 var(--blue);
+}
+
+.adminForm > p {
+  margin: 0;
+  color: #b72416;
+  font-size: 11px;
+}
+
+.adminForm > button,
+.adminSession > button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  color: #fff;
+  background: var(--ink);
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.adminForm > button svg,
+.adminSession > button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.adminSession {
+  display: grid;
+  justify-items: start;
+  padding: 26px 20px;
+}
+
+.adminSession > svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  color: var(--blue);
+}
+
+.adminSession strong {
+  font-family: "Songti SC", Georgia, serif;
+  font-size: 22px;
+}
+
+.adminSession p {
+  margin: 8px 0 20px;
+  color: #67635b;
+  font-size: 11px;
+}
+
+.adminSession > button {
+  width: 100%;
 }
 
 .textArchive h3 {
@@ -1422,6 +1714,11 @@
     height: auto;
   }
 
+  .categoryRail > span {
+    width: auto;
+    padding-right: 16px;
+  }
+
   .filterBar {
     width: 100%;
     min-height: 48px;
@@ -1466,6 +1763,22 @@
 
   .liveStamp span {
     display: none;
+  }
+
+  .topbarStatus {
+    gap: 2px;
+  }
+
+  .categoryRail {
+    width: calc(100vw - 36px);
+  }
+
+  .categoryRail > span {
+    display: none;
+  }
+
+  .categoryRail button:first-of-type {
+    border-left: 0;
   }
 
   .tickerLabel {

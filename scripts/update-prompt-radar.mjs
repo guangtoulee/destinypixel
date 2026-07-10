@@ -62,6 +62,21 @@ function inferContentType(text) {
   return "image";
 }
 
+function inferCategory(text, contentType) {
+  if (
+    contentType === "video" ||
+    /seedance|veo|kling|runway|视频|短片|分镜|运镜|镜头序列|video|motion/i.test(text)
+  ) return "视频叙事";
+  if (/产品|商品|电商|包装|广告|品牌|product|commercial|packaging|e-?commerce/i.test(text)) return "产品商业";
+  if (/海报|字体|排版|信息图|地图|菜单|logo|标志|poster|typography|infographic|graphic design|editorial design/i.test(text)) return "平面设计";
+  if (/插画|动漫|卡通|角色|手办|图标|三维|渲染|像素|illustration|anime|cartoon|character|3d|render|icon|pixel art/i.test(text)) return "插画三维";
+  if (/工作流|教程|模型|更新|评测|节点|参数|工具|workflow|tutorial|model update|benchmark|comfyui|pipeline/i.test(text)) return "工具工作流";
+  if (/人像|肖像|自拍|人物|女孩|男孩|女性|男性|美女|时装|服装|portrait|selfie|fashion|woman|girl|man|boy/i.test(text)) return "人像时尚";
+  if (/建筑|室内|空间|家居|展厅|城市|街区|architecture|interior|building|urban|room/i.test(text)) return "建筑空间";
+  if (/风景|旅行|山川|海岸|森林|自然|城市漫游|landscape|travel|nature|scenery|mountain|ocean/i.test(text)) return "风景旅行";
+  return "视觉创意";
+}
+
 function inferTags(text) {
   const rules = [
     [/gpt image|gpt-image/i, "GPT Image 2"],
@@ -131,6 +146,7 @@ function parseCommunityEntry(block) {
 
   const contentType = inferContentType(`${title} ${description} ${prompt}`);
   const tags = inferTags(`${title} ${description} ${prompt}`);
+  const category = inferCategory(`${title} ${description} ${prompt} ${tags.join(" ")}`, contentType);
 
   return {
     id: `community-${postId}`,
@@ -156,6 +172,7 @@ function parseCommunityEntry(block) {
     aspectRatio: prompt.match(/(?:--ar|比例|画幅)[：:\s]*(\d+[:：]\d+)/i)?.[1]?.replace("：", ":") || "auto",
     language,
     contentType,
+    category,
     metrics: { likes: 0, reposts: 0, replies: 0, quotes: 0, bookmarks: 0, views: 0, score: 0 },
     complianceNote: `CC BY 4.0 community index via YouMind; original X author and post linked.${tryUrl ? ` Detail: ${tryUrl}` : ""}`,
     rawText: prompt,
@@ -261,6 +278,7 @@ function parseAnySearchResult(block) {
   metrics.score = scoreMetrics(metrics);
   const contentType = inferContentType(`${headline} ${body}`);
   const title = headline.replace(/^@[^:]+:\s*/, "").split(/\n/)[0].slice(0, 96);
+  const category = inferCategory(`${headline} ${body}`, contentType);
 
   return {
     id: `x-public-${postId}`,
@@ -285,6 +303,7 @@ function parseAnySearchResult(block) {
     aspectRatio: "auto",
     language: /Lang:\s*zh/i.test(metaPart) ? "zh" : "en",
     contentType,
+    category,
     metrics,
     complianceNote: "Discovered through public social search; original X author and post linked.",
     rawText: body,
@@ -343,6 +362,13 @@ async function main() {
       : previous.items.filter((item) => item.sourceType === "x");
 
   const items = dedupe([...xItems, ...communityItems])
+    .map((item) => ({
+      ...item,
+      category: inferCategory(
+        `${item.title || ""} ${item.description || ""} ${item.prompt || ""} ${(item.tags || []).join(" ")}`,
+        item.contentType || inferContentType(item.prompt || ""),
+      ),
+    }))
     .sort((left, right) => {
       const scoreDiff = (right.metrics?.score || 0) - (left.metrics?.score || 0);
       if (scoreDiff) return scoreDiff;
@@ -353,7 +379,7 @@ async function main() {
   if (items.length === 0) throw new Error("No prompt radar items were collected");
 
   const payload = {
-    version: 1,
+    version: 2,
     updatedAt: new Date().toISOString(),
     sourceSummary: {
       community: communityItems.length,

@@ -14,13 +14,19 @@ import {
   Image as ImageIcon,
   Languages,
   Loader2,
+  LockKeyhole,
+  LogOut,
+  Pin,
   Radio,
   RefreshCw,
   Search,
+  ShieldCheck,
   Sparkles,
+  Trash2,
   Upload,
   Video,
   WandSparkles,
+  X,
   Zap,
 } from "lucide-react";
 import styles from "./prompt-experience.module.css";
@@ -28,6 +34,16 @@ import styles from "./prompt-experience.module.css";
 type PromptLanguage = "zh" | "en";
 type PromptContentType = "image" | "video" | "prompt" | "case";
 type PromptSourceType = "x" | "community" | "manual" | "seed" | "api";
+type PromptCategory =
+  | "人像时尚"
+  | "产品商业"
+  | "视频叙事"
+  | "平面设计"
+  | "插画三维"
+  | "建筑空间"
+  | "风景旅行"
+  | "工具工作流"
+  | "视觉创意";
 type ActiveTool = "expand" | "image";
 
 type PromptMetrics = {
@@ -65,7 +81,9 @@ type PromptFeedItem = {
   aspectRatio: string;
   language: PromptLanguage;
   contentType: PromptContentType;
+  category: PromptCategory;
   metrics: PromptMetrics;
+  isPinned?: boolean;
   complianceNote?: string;
 };
 
@@ -133,6 +151,20 @@ type ImportResponse = {
 
 type Status = "idle" | "loading" | "ready" | "error";
 type FeedFilter = "all" | PromptContentType;
+type CategoryFilter = "all" | PromptCategory;
+type AdminStatus = "guest" | "checking" | "authenticated";
+
+const categoryOrder: PromptCategory[] = [
+  "人像时尚",
+  "产品商业",
+  "视频叙事",
+  "平面设计",
+  "插画三维",
+  "建筑空间",
+  "风景旅行",
+  "工具工作流",
+  "视觉创意",
+];
 
 const styleOptions = [
   "电影级商业摄影",
@@ -247,6 +279,7 @@ function buildImageAnalysisCopy(result: PromptImageAnalysisResult) {
 function buildFeedCopy(item: PromptFeedItem) {
   return [
     item.prompt,
+    `【分类】${item.category}`,
     "",
     "【细节拆解】",
     `风格：${item.style}`,
@@ -276,6 +309,7 @@ export default function PromptExperience() {
   const [sourcePlan, setSourcePlan] = useState<FeedResponse["sourcePlan"]>();
   const [sourceSummary, setSourceSummary] = useState<FeedResponse["sourceSummary"]>();
   const [activeFilter, setActiveFilter] = useState<FeedFilter>("all");
+  const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTool, setActiveTool] = useState<ActiveTool>("expand");
 
@@ -298,11 +332,23 @@ export default function PromptExperience() {
   const [importStatus, setImportStatus] = useState<Status>("idle");
   const [importError, setImportError] = useState("");
   const [copied, setCopied] = useState("");
+  const [adminOpen, setAdminOpen] = useState(false);
+  const [adminStatus, setAdminStatus] = useState<AdminStatus>("guest");
+  const [adminUsername, setAdminUsername] = useState("lee");
+  const [adminPassword, setAdminPassword] = useState("");
+  const [adminError, setAdminError] = useState("");
+  const [moderatingId, setModeratingId] = useState("");
+
+  const availableCategories = useMemo(
+    () => categoryOrder.filter((category) => items.some((item) => item.category === category)),
+    [items],
+  );
 
   const filteredItems = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
     return items.filter((item) => {
       const typeMatch = activeFilter === "all" || item.contentType === activeFilter;
+      const categoryMatch = activeCategory === "all" || item.category === activeCategory;
       const queryMatch = query
         ? [
             item.title,
@@ -312,14 +358,15 @@ export default function PromptExperience() {
             item.modelHints.join(" "),
             item.authorName || "",
             item.authorHandle || "",
+            item.category,
           ]
             .join(" ")
             .toLowerCase()
             .includes(query)
         : true;
-      return typeMatch && queryMatch;
+      return typeMatch && categoryMatch && queryMatch;
     });
-  }, [activeFilter, items, searchTerm]);
+  }, [activeCategory, activeFilter, items, searchTerm]);
 
   const signalItems = useMemo(
     () => filteredItems.filter((item) => item.sourceType === "x").slice(0, 10),
@@ -340,6 +387,7 @@ export default function PromptExperience() {
       return filteredItems
         .filter((item) => Boolean(mediaSrc(item)))
         .sort((left, right) => {
+          if (left.isPinned !== right.isPinned) return left.isPinned ? -1 : 1;
           const leftRank = editorialOrder.findIndex((token) => left.imageUrl?.includes(token));
           const rightRank = editorialOrder.findIndex((token) => right.imageUrl?.includes(token));
           const normalizedLeft = leftRank === -1 ? editorialOrder.length : leftRank;
@@ -487,6 +535,111 @@ export default function PromptExperience() {
     }
   }
 
+  async function openAdmin() {
+    setAdminOpen(true);
+    setAdminError("");
+    if (adminStatus === "authenticated") return;
+    setAdminStatus("checking");
+    try {
+      const response = await fetch("/api/prompt/admin/session", { cache: "no-store" });
+      const data = (await response.json()) as { authenticated?: boolean; username?: string };
+      setAdminStatus(data.authenticated ? "authenticated" : "guest");
+      if (data.username) setAdminUsername(data.username);
+    } catch {
+      setAdminStatus("guest");
+    }
+  }
+
+  async function submitAdminLogin(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setAdminStatus("checking");
+    setAdminError("");
+    try {
+      const response = await fetch("/api/prompt/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: adminUsername, password: adminPassword }),
+      });
+      const data = (await response.json()) as { authenticated?: boolean; error?: string };
+      if (!response.ok || !data.authenticated) {
+        throw new Error(data.error || "登录失败。");
+      }
+      setAdminStatus("authenticated");
+      setAdminPassword("");
+      setAdminOpen(false);
+      setFeedNotice("管理员模式已开启，可以置顶或删除案例。");
+    } catch (error) {
+      setAdminStatus("guest");
+      setAdminError(error instanceof Error ? error.message : "登录失败。");
+    }
+  }
+
+  async function logoutAdmin() {
+    await fetch("/api/prompt/admin/logout", { method: "POST" }).catch(() => null);
+    setAdminStatus("guest");
+    setAdminOpen(false);
+    setFeedNotice("管理员模式已退出。");
+  }
+
+  async function moderateItem(item: PromptFeedItem, action: "pin" | "unpin" | "delete") {
+    if (action === "delete" && !window.confirm(`确定从雷达中删除“${item.title}”？`)) {
+      return;
+    }
+    setModeratingId(item.id);
+    setFeedError("");
+    try {
+      const response = await fetch("/api/prompt/admin/moderate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: item.id, action }),
+      });
+      const data = (await response.json()) as { ok?: boolean; error?: string };
+      if (!response.ok || !data.ok) throw new Error(data.error || "管理操作失败。");
+      await loadFeed(false);
+      setFeedNotice(
+        action === "delete"
+          ? "案例已删除，后续定时抓取不会把它重新放回来。"
+          : action === "pin"
+            ? "案例已置顶。"
+            : "已取消置顶。",
+      );
+    } catch (error) {
+      if (responseNeedsLogin(error)) setAdminStatus("guest");
+      setFeedError(error instanceof Error ? error.message : "管理操作失败。");
+    } finally {
+      setModeratingId("");
+    }
+  }
+
+  function responseNeedsLogin(error: unknown) {
+    return error instanceof Error && error.message.includes("登录");
+  }
+
+  function adminControls(item: PromptFeedItem) {
+    if (adminStatus !== "authenticated") return null;
+    const busy = moderatingId === item.id;
+    return (
+      <div className={styles.adminControls}>
+        <button
+          disabled={busy}
+          onClick={() => void moderateItem(item, item.isPinned ? "unpin" : "pin")}
+          title={item.isPinned ? "取消置顶" : "置顶"}
+          type="button"
+        >
+          {busy ? <Loader2 aria-hidden="true" className={styles.spin} /> : <Pin aria-hidden="true" />}
+        </button>
+        <button
+          disabled={busy}
+          onClick={() => void moderateItem(item, "delete")}
+          title="删除"
+          type="button"
+        >
+          <Trash2 aria-hidden="true" />
+        </button>
+      </div>
+    );
+  }
+
   const activeResult = activeTool === "expand" ? expanded : imageResult;
 
   return (
@@ -501,10 +654,22 @@ export default function PromptExperience() {
           <a href="#signals">实时信号</a>
           <a href="#cases">案例墙</a>
         </nav>
-        <div className={styles.liveStamp}>
-          <i aria-hidden="true" />
-          <span>{feedStatus === "loading" ? "SYNCING" : "RADAR LIVE"}</span>
-          <time>{updatedAt ? formatDate(updatedAt) : "--:--"}</time>
+        <div className={styles.topbarStatus}>
+          <div className={styles.liveStamp}>
+            <i aria-hidden="true" />
+            <span>{feedStatus === "loading" ? "SYNCING" : "RADAR LIVE"}</span>
+            <time>{updatedAt ? formatDate(updatedAt) : "--:--"}</time>
+          </div>
+          <button
+            aria-label="打开管理员入口"
+            className={styles.adminTrigger}
+            data-active={adminStatus === "authenticated"}
+            onClick={() => void openAdmin()}
+            title="管理"
+            type="button"
+          >
+            <ShieldCheck aria-hidden="true" />
+          </button>
         </div>
       </header>
 
@@ -827,6 +992,27 @@ export default function PromptExperience() {
           </button>
         </div>
 
+        <div className={styles.categoryRail} aria-label="内容分类筛选">
+          <span>INDEX BY SUBJECT</span>
+          <button
+            aria-pressed={activeCategory === "all"}
+            onClick={() => setActiveCategory("all")}
+            type="button"
+          >
+            全分类 <b>{items.length}</b>
+          </button>
+          {availableCategories.map((category) => (
+            <button
+              aria-pressed={activeCategory === category}
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              type="button"
+            >
+              {category} <b>{items.filter((item) => item.category === category).length}</b>
+            </button>
+          ))}
+        </div>
+
         {feedNotice || feedError ? (
           <p className={styles.feedNotice} data-tone={feedError ? "error" : "neutral"}>
             {feedError || feedNotice}
@@ -839,11 +1025,13 @@ export default function PromptExperience() {
               <article className={styles.signalCard} data-tone={index % 4} key={item.id}>
                 <div className={styles.signalMeta}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span className={styles.categoryTag}>{item.category}</span>
                   <time>{formatDate(item.createdAt)}</time>
                 </div>
                 <div className={styles.signalAuthor}>
                   <i aria-hidden="true" />
                   <span>{item.authorHandle || item.authorName || "X CREATOR"}</span>
+                  {item.isPinned ? <b><Pin aria-hidden="true" /> 置顶</b> : null}
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -858,6 +1046,7 @@ export default function PromptExperience() {
                       <ArrowUpRight aria-hidden="true" />
                     </a>
                   ) : null}
+                  {adminControls(item)}
                 </div>
               </article>
             ))}
@@ -891,11 +1080,11 @@ export default function PromptExperience() {
                   )}
                 </div>
                 <div className={styles.visualTopline}>
-                  <span>{sourceLabel(item.sourceType)}</span>
+                  <span>{item.isPinned ? "PINNED / " : ""}{item.category}</span>
                   <span>{contentLabel(item.contentType)} / {item.aspectRatio}</span>
                 </div>
                 <div className={styles.visualCaption}>
-                  <p>{item.authorHandle || item.authorName || "COMMUNITY"}</p>
+                  <p>{sourceLabel(item.sourceType)} · {item.authorHandle || item.authorName || "COMMUNITY"}</p>
                   <h3>{item.title}</h3>
                   <div className={styles.visualPrompt}>{item.prompt}</div>
                   <div className={styles.visualActions}>
@@ -912,6 +1101,7 @@ export default function PromptExperience() {
                         原帖 <ExternalLink aria-hidden="true" />
                       </a>
                     ) : null}
+                    {adminControls(item)}
                   </div>
                 </div>
               </article>
@@ -923,12 +1113,13 @@ export default function PromptExperience() {
           <div className={styles.textArchive}>
             {textArchive.map((item) => (
               <article key={item.id}>
-                <span>{sourceLabel(item.sourceType)}</span>
+                <span>{item.category} / {sourceLabel(item.sourceType)}</span>
                 <h3>{item.title}</h3>
                 <p>{item.prompt}</p>
                 <button onClick={() => void copyText(buildFeedCopy(item), item.id)} type="button">
                   <Copy aria-hidden="true" /> 复制整包
                 </button>
+                {adminControls(item)}
               </article>
             ))}
           </div>
@@ -983,6 +1174,67 @@ export default function PromptExperience() {
           <span><Clock3 aria-hidden="true" /> 09:30 · 15:30 · 21:30 CST</span>
         </div>
       </footer>
+
+      {adminOpen ? (
+        <div className={styles.adminOverlay} onMouseDown={() => setAdminOpen(false)}>
+          <section
+            aria-labelledby="prompt-admin-title"
+            aria-modal="true"
+            className={styles.adminDialog}
+            onMouseDown={(event) => event.stopPropagation()}
+            role="dialog"
+          >
+            <div className={styles.adminDialogHead}>
+              <div>
+                <span>PRIVATE CONTROL</span>
+                <h2 id="prompt-admin-title">雷达管理员</h2>
+              </div>
+              <button onClick={() => setAdminOpen(false)} title="关闭" type="button">
+                <X aria-hidden="true" />
+              </button>
+            </div>
+            {adminStatus === "authenticated" ? (
+              <div className={styles.adminSession}>
+                <ShieldCheck aria-hidden="true" />
+                <strong>{adminUsername} 已登录</strong>
+                <p>关闭面板后，每个案例会显示置顶和删除按钮。</p>
+                <button onClick={() => void logoutAdmin()} type="button">
+                  <LogOut aria-hidden="true" /> 退出管理模式
+                </button>
+              </div>
+            ) : (
+              <form className={styles.adminForm} onSubmit={submitAdminLogin}>
+                <label>
+                  <span>用户名</span>
+                  <input
+                    autoComplete="username"
+                    onChange={(event) => setAdminUsername(event.target.value)}
+                    value={adminUsername}
+                  />
+                </label>
+                <label>
+                  <span>密码</span>
+                  <input
+                    autoComplete="current-password"
+                    onChange={(event) => setAdminPassword(event.target.value)}
+                    type="password"
+                    value={adminPassword}
+                  />
+                </label>
+                {adminError ? <p>{adminError}</p> : null}
+                <button disabled={adminStatus === "checking"} type="submit">
+                  {adminStatus === "checking" ? (
+                    <Loader2 aria-hidden="true" className={styles.spin} />
+                  ) : (
+                    <LockKeyhole aria-hidden="true" />
+                  )}
+                  {adminStatus === "checking" ? "验证中" : "进入控制台"}
+                </button>
+              </form>
+            )}
+          </section>
+        </div>
+      ) : null}
     </main>
   );
 }

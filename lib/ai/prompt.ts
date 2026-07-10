@@ -4,6 +4,17 @@ export type PromptContentType = "image" | "video" | "prompt" | "case";
 
 export type PromptSourceType = "x" | "community" | "manual" | "seed" | "api";
 
+export type PromptCategory =
+  | "人像时尚"
+  | "产品商业"
+  | "视频叙事"
+  | "平面设计"
+  | "插画三维"
+  | "建筑空间"
+  | "风景旅行"
+  | "工具工作流"
+  | "视觉创意";
+
 export type PromptMetrics = {
   likes: number;
   reposts: number;
@@ -39,7 +50,9 @@ export type PromptFeedItem = {
   aspectRatio: string;
   language: PromptLanguage;
   contentType: PromptContentType;
+  category: PromptCategory;
   metrics: PromptMetrics;
+  isPinned?: boolean;
   complianceNote?: string;
   rawText?: string;
 };
@@ -176,6 +189,62 @@ function normalizeContentType(value: unknown): PromptContentType {
   }
 
   return "image";
+}
+
+const promptCategories: PromptCategory[] = [
+  "人像时尚",
+  "产品商业",
+  "视频叙事",
+  "平面设计",
+  "插画三维",
+  "建筑空间",
+  "风景旅行",
+  "工具工作流",
+  "视觉创意",
+];
+
+export function inferPromptCategory(
+  text: string,
+  contentType: PromptContentType = "image",
+): PromptCategory {
+  if (
+    contentType === "video" ||
+    /seedance|veo|kling|runway|视频|短片|分镜|运镜|镜头序列|video|motion/i.test(text)
+  ) {
+    return "视频叙事";
+  }
+  if (/产品|商品|电商|包装|广告|品牌|product|commercial|packaging|e-?commerce/i.test(text)) {
+    return "产品商业";
+  }
+  if (/海报|字体|排版|信息图|地图|菜单|logo|标志|poster|typography|infographic|graphic design|editorial design/i.test(text)) {
+    return "平面设计";
+  }
+  if (/插画|动漫|卡通|角色|手办|图标|三维|渲染|像素|illustration|anime|cartoon|character|3d|render|icon|pixel art/i.test(text)) {
+    return "插画三维";
+  }
+  if (/工作流|教程|模型|更新|评测|节点|参数|工具|workflow|tutorial|model update|benchmark|comfyui|pipeline/i.test(text)) {
+    return "工具工作流";
+  }
+  if (/人像|肖像|自拍|人物|女孩|男孩|女性|男性|美女|时装|服装|portrait|selfie|fashion|woman|girl|man|boy/i.test(text)) {
+    return "人像时尚";
+  }
+  if (/建筑|室内|空间|家居|展厅|城市|街区|architecture|interior|building|urban|room/i.test(text)) {
+    return "建筑空间";
+  }
+  if (/风景|旅行|山川|海岸|森林|自然|城市漫游|landscape|travel|nature|scenery|mountain|ocean/i.test(text)) {
+    return "风景旅行";
+  }
+  return "视觉创意";
+}
+
+function normalizeCategory(
+  value: unknown,
+  text: string,
+  contentType: PromptContentType,
+): PromptCategory {
+  return promptCategories.includes(value as PromptCategory)
+    ? (value as PromptCategory)
+    : inferPromptCategory(text, contentType);
 }
 
 function normalizeSourceType(value: unknown): PromptSourceType {
@@ -419,7 +488,9 @@ export function normalizePromptFeedItem(
     aspectRatio: cleanText(value.aspectRatio, contentType === "video" ? "9:16" : "3:4", 24),
     language: normalizeLanguage(value.language),
     contentType,
+    category: normalizeCategory(value.category, `${prompt} ${rawText} ${tags.join(" ")}`, contentType),
     metrics: normalizeMetrics(value.metrics),
+    isPinned: value.isPinned === true,
     complianceNote: cleanText(value.complianceNote, "", 260) || undefined,
     rawText: rawText || undefined,
   };
