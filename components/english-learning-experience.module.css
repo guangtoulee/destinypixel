@@ -1772,3 +1772,573 @@
     justify-content: start;
   }
 }
+
+/* Mission workspace refresh */
+.shell {
+  position: relative;
+  display: block;
+  min-height: 100svh;
+  color: var(--english-ink);
+  background:
+    linear-gradient(rgba(23, 65, 120, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 132, 102, 0.035) 1px, transparent 1px),
+    #edf1f2;
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+.topBar {
+  position: sticky;
+  z-index: 40;
+  top: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto 44px;
+  gap: 16px;
+  align-items: center;
+  min-height: 72px;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(152, 196, 199, 0.22);
+  background: rgba(8, 20, 25, 0.94);
+  box-shadow: 0 14px 38px rgba(17, 29, 35, 0.18);
+  backdrop-filter: blur(20px);
+}
+
+.topBar .brandBlock {
+  min-width: 178px;
+}
+
+.topBar .brandMark {
+  width: 44px;
+  height: 44px;
+  border-color: rgba(244, 191, 82, 0.54);
+  border-radius: 6px;
+  color: #11191c;
+  background: var(--english-yellow);
+  box-shadow: 0 10px 24px rgba(244, 191, 82, 0.17);
+}
+
+.topBar .brandBlock h1 {
+  color: #fff;
+}
+
+.topBar .brandBlock .eyebrow {
+  color: #67d8dc;
+}
+
+.topBar .mainNav {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+}
+
+.topBar .mainNav::-webkit-scrollbar {
+  display: none;
+}
+
+.topBar .mainNav button {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.79rem;
+  white-space: nowrap;
+}
+
+.topBar .mainNav button:hover {
+  border-color: rgba(103, 216, 220, 0.26);
+  color: #fff;
+  background: rgba(103, 216, 220, 0.08);
+}
+
+.topBar .mainNav .activeNav {
+  border-color: rgba(244, 191, 82, 0.48);
+  color: #152026;
+  background: var(--english-yellow);
+}
+
+.topStats {
+  display: flex;
+  align-items: stretch;
+}
+
+.topStats > div {
+  display: grid;
+  min-width: 72px;
+  padding: 1px 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.topStats span {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.64rem;
+  font-weight: 760;
+}
+
+.topStats strong {
+  margin-top: 2px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 880;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settingsButton,
+.drawerHeading button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+  transition: color 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.settingsButton:hover {
+  border-color: rgba(103, 216, 220, 0.44);
+  color: #67d8dc;
+  background: rgba(103, 216, 220, 0.08);
+}
+
+.settingsLayer {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(7, 17, 21, 0.62);
+  backdrop-filter: blur(7px);
+}
+
+.settingsDrawer {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  width: min(430px, 100%);
+  height: 100svh;
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 1px solid rgba(23, 65, 120, 0.15);
+  background: #f1f5f5;
+  box-shadow: -22px 0 60px rgba(5, 16, 20, 0.22);
+  animation: drawerIn 190ms ease both;
+}
+
+.drawerHeading {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--english-line);
+}
+
+.drawerHeading h2 {
+  margin: 0;
+  color: var(--english-ink);
+  font-size: 1.55rem;
+  letter-spacing: 0;
+}
+
+.drawerHeading button {
+  color: var(--english-muted);
+  border-color: var(--english-line);
+  background: #fff;
+}
+
+.settingsDrawer .memoryCard,
+.settingsDrawer .voiceCard {
+  padding: 16px;
+  box-shadow: none;
+}
+
+.settingsDrawer .voiceCard {
+  margin: 0;
+}
+
+.content {
+  display: grid;
+  gap: 18px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 20px 20px 64px;
+}
+
+.missionBanner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 360px);
+  gap: 28px;
+  align-items: end;
+  min-height: 344px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 51, 0.2);
+  border-radius: 7px;
+  background: #111a20;
+  box-shadow: 0 24px 56px rgba(35, 44, 62, 0.17);
+}
+
+.missionBanner::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(9, 18, 23, 0.88) 0%, rgba(9, 18, 23, 0.68) 43%, rgba(9, 18, 23, 0.12) 72%),
+    linear-gradient(0deg, rgba(9, 18, 23, 0.7), transparent 62%);
+}
+
+.missionBanner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.missionCopy,
+.missionStatus {
+  position: relative;
+  z-index: 2;
+}
+
+.missionCopy {
+  max-width: 710px;
+  padding: 34px;
+}
+
+.missionCopy .eyebrow {
+  color: #67d8dc;
+}
+
+.missionCopy h2 {
+  max-width: 630px;
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 2.75rem;
+  font-weight: 950;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.missionCopy > p:not(.eyebrow) {
+  max-width: 610px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+}
+
+.missionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.missionActions .primaryAction {
+  border-color: var(--english-yellow);
+  color: #12191d;
+  background: var(--english-yellow);
+}
+
+.missionActions .secondaryAction {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background: rgba(8, 20, 25, 0.44);
+}
+
+.danciAction {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(103, 216, 220, 0.44);
+  border-radius: 8px;
+  color: #9bf0f1;
+  background: rgba(103, 216, 220, 0.09);
+  font-weight: 850;
+  text-decoration: none;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.danciAction:hover {
+  transform: translateY(-1px);
+  background: rgba(103, 216, 220, 0.15);
+}
+
+.missionStatus {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 24px 24px 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(7, 18, 22, 0.76);
+  backdrop-filter: blur(14px);
+}
+
+.missionStatus > div {
+  min-width: 0;
+  min-height: 72px;
+  padding: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.missionStatus span,
+.missionStatus strong {
+  display: block;
+}
+
+.missionStatus span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.68rem;
+  font-weight: 760;
+}
+
+.missionStatus strong {
+  margin-top: 6px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 880;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activePanelAnchor {
+  height: 0;
+  scroll-margin-top: 90px;
+}
+
+.tabPanel {
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.panelHeading {
+  margin-top: 0;
+}
+
+.panelHeading h2 {
+  color: #111c24;
+  font-size: 1.7rem;
+}
+
+.testCard,
+.insightCard,
+.dailyCard,
+.listenCard,
+.readingCard,
+.phonicsCard,
+.wordCard,
+.syncPanel,
+.mockExamCard {
+  border-radius: 7px;
+  box-shadow: 0 13px 32px rgba(35, 44, 62, 0.07);
+}
+
+.dailyGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dailyCard {
+  min-height: 170px;
+  padding: 17px;
+  border-left: 4px solid var(--english-blue);
+}
+
+.dailyCard:nth-child(2n) {
+  border-left-color: var(--english-green);
+}
+
+.dailyCard:nth-child(3n) {
+  border-left-color: var(--english-yellow);
+}
+
+.dailyCard p {
+  margin: 8px 0 14px;
+}
+
+.dailyChip {
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.gapScanPanel {
+  border-radius: 7px;
+  background: #101d24;
+  box-shadow: 0 22px 50px rgba(17, 34, 41, 0.17);
+}
+
+.spellingLabPanel {
+  border-radius: 7px;
+  background: #f6faf9;
+  box-shadow: 0 16px 38px rgba(35, 44, 62, 0.08);
+}
+
+.targetArena {
+  border-radius: 7px;
+  box-shadow: 0 22px 48px rgba(23, 32, 51, 0.14);
+}
+
+@keyframes drawerIn {
+  from { opacity: 0.4; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 1180px) {
+  .topBar {
+    grid-template-columns: auto minmax(0, 1fr) 44px;
+  }
+
+  .topStats {
+    display: none;
+  }
+
+  .missionBanner {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+}
+
+@media (max-width: 760px) {
+  .topBar {
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    min-height: 64px;
+    padding: 8px 10px 7px;
+  }
+
+  .topBar .brandBlock {
+    min-width: 0;
+  }
+
+  .topBar .brandBlock .eyebrow {
+    display: none;
+  }
+
+  .topBar .brandMark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .topBar .mainNav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    margin: 0 -2px;
+    padding-top: 3px;
+  }
+
+  .topBar .mainNav button {
+    min-height: 40px;
+    padding: 0 11px;
+  }
+
+  .settingsButton {
+    width: 42px;
+    height: 42px;
+  }
+
+  .settingsDrawer {
+    padding: 16px;
+  }
+
+  .content {
+    gap: 14px;
+    padding: 12px 10px 48px;
+  }
+
+  .missionBanner {
+    display: block;
+    min-height: 520px;
+  }
+
+  .missionBanner::after {
+    background: linear-gradient(0deg, rgba(8, 18, 23, 0.95) 0%, rgba(8, 18, 23, 0.73) 54%, rgba(8, 18, 23, 0.08) 100%);
+  }
+
+  .missionBanner > img {
+    object-position: 62% center;
+  }
+
+  .missionCopy {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .missionCopy h2 {
+    font-size: 2.2rem;
+  }
+
+  .missionCopy > p:not(.eyebrow) {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .missionActions {
+    gap: 7px;
+    margin-top: 16px;
+  }
+
+  .missionActions .primaryAction,
+  .missionActions .secondaryAction,
+  .danciAction {
+    min-height: 42px;
+    padding: 0 11px;
+    font-size: 0.82rem;
+  }
+
+  .missionStatus {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+  }
+
+  .missionStatus > div {
+    min-height: 61px;
+    padding: 9px;
+  }
+
+  .missionStatus strong {
+    font-size: 0.8rem;
+  }
+
+  .dailyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dailyCard {
+    min-height: 158px;
+  }
+
+  .panelHeading h2 {
+    font-size: 1.45rem;
+  }
+
+  .activePanelAnchor {
+    scroll-margin-top: 118px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settingsDrawer {
+    animation: none;
+  }
+}

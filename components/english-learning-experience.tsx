@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   BookOpen,
   Brain,
@@ -15,9 +16,12 @@ import {
   RefreshCcw,
   RotateCcw,
   Square,
+  Settings2,
   Trash2,
   Upload,
   Volume2,
+  X,
+  Zap,
 } from "lucide-react";
 import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -78,6 +82,7 @@ type TextbookWordStat = {
   unitId: string;
   correct: number;
   wrong: number;
+  productiveCorrect?: number;
   mastered: boolean;
   updatedAt: string;
 };
@@ -435,6 +440,12 @@ function getTextbookWordItems(book: TextbookBook): TextbookWordItem[] {
   );
 }
 
+function rotateOptions<T>(options: readonly T[], seed: number) {
+  if (options.length === 0) return [];
+  const rotation = (seed * 2 + 1) % options.length;
+  return [...options.slice(rotation), ...options.slice(0, rotation)];
+}
+
 function getTextbookMeaningOptions(items: TextbookWordItem[], currentKey: string, rounds: number) {
   const currentIndex = Math.max(0, items.findIndex((item) => item.key === currentKey));
   const current = items[currentIndex] ?? items[0];
@@ -448,8 +459,7 @@ function getTextbookMeaningOptions(items: TextbookWordItem[], currentKey: string
     }
   }
 
-  const rotation = meanings.length ? rounds % meanings.length : 0;
-  return [...meanings.slice(rotation), ...meanings.slice(0, rotation)];
+  return rotateOptions(meanings, rounds);
 }
 
 function isWeakTextbookWord(stat: TextbookWordStat | undefined) {
@@ -1427,8 +1437,7 @@ function getTargetOptions(deck: WordEntry[], targetIndex: number, rounds: number
     }
   }
 
-  const rotation = rounds % indexes.length;
-  return [...indexes.slice(rotation), ...indexes.slice(0, rotation)];
+  return rotateOptions(indexes, rounds);
 }
 
 function formatSavedTime(date: Date | null) {
@@ -1475,6 +1484,7 @@ async function resizeImageForOcr(file: File) {
 
 export default function EnglishLearningExperience() {
   const [activeTab, setActiveTab] = useState("diagnostic");
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [memory, setMemory] = useState<LearningMemory>(() => createDefaultMemory());
   const [savedAt, setSavedAt] = useState<Date | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -2026,7 +2036,11 @@ export default function EnglishLearningExperience() {
       const previous = current.textbook.wordStats[currentSpellingWord.key];
       const nextCorrect = (previous?.correct ?? 0) + (isCorrect ? 1 : 0);
       const nextWrong = (previous?.wrong ?? 0) + (isCorrect ? 0 : 1);
-      const mastered = isCorrect ? nextCorrect >= Math.max(2, nextWrong + 2) : false;
+      const previousProductiveCorrect = previous?.productiveCorrect ?? (previous?.mastered ? 1 : 0);
+      const nextProductiveCorrect = previousProductiveCorrect + (isCorrect ? 1 : 0);
+      const mastered = isCorrect
+        ? nextProductiveCorrect >= 1 && nextCorrect >= Math.max(2, nextWrong + 2)
+        : false;
       const nextStat: TextbookWordStat = {
         word: currentSpellingWord.word,
         meaning: currentSpellingWord.meaning,
@@ -2034,6 +2048,7 @@ export default function EnglishLearningExperience() {
         unitId: currentSpellingWord.unitId,
         correct: nextCorrect,
         wrong: nextWrong,
+        productiveCorrect: nextProductiveCorrect,
         mastered,
         updatedAt: new Date().toISOString(),
       };
@@ -2172,8 +2187,9 @@ export default function EnglishLearningExperience() {
       const previous = current.textbook.wordStats[currentTextbookWord.key];
       const nextCorrect = (previous?.correct ?? 0) + (isCorrect ? 1 : 0);
       const nextWrong = (previous?.wrong ?? 0) + (isCorrect ? 0 : 1);
+      const productiveCorrect = previous?.productiveCorrect ?? (previous?.mastered ? 1 : 0);
       const mastered = isCorrect
-        ? nextCorrect >= Math.max(2, nextWrong + 2)
+        ? productiveCorrect >= 1 && nextCorrect >= Math.max(2, nextWrong + 2)
         : false;
       const nextStat: TextbookWordStat = {
         word: currentTextbookWord.word,
@@ -2182,6 +2198,7 @@ export default function EnglishLearningExperience() {
         unitId: currentTextbookWord.unitId,
         correct: nextCorrect,
         wrong: nextWrong,
+        productiveCorrect,
         mastered,
         updatedAt: new Date().toISOString(),
       };
@@ -2246,7 +2263,7 @@ export default function EnglishLearningExperience() {
             lastFeedback: isCorrect
               ? mastered
                 ? `掌握：${currentTextbookWord.word} 已进全册掌握清单。`
-                : `答对：${currentTextbookWord.word} 再命中几次就能标记掌握。`
+                : `词义答对：${currentTextbookWord.word}；还要在拼写或听写中命中，才算真正掌握。`
               : `漏洞：${currentTextbookWord.word} 是「${currentTextbookWord.meaning}」，已进弱词池。`,
           },
         },
@@ -2260,44 +2277,52 @@ export default function EnglishLearningExperience() {
     });
   }
 
-  function markTextbookWordMastered() {
+  function markTextbookWordFamiliar() {
     if (!currentTextbookWord) return;
 
     patchMemory((current) => {
       const previous = current.textbook.wordStats[currentTextbookWord.key];
-      const nextStats = {
-        ...current.textbook.wordStats,
-        [currentTextbookWord.key]: {
-          word: currentTextbookWord.word,
-          meaning: currentTextbookWord.meaning,
-          bookId: currentTextbookWord.bookId,
-          unitId: currentTextbookWord.unitId,
-          correct: Math.max(previous?.correct ?? 0, 2),
-          wrong: previous?.wrong ?? 0,
-          mastered: true,
-          updatedAt: new Date().toISOString(),
-        },
-      };
-      const nextKnown = { ...current.knownWords };
-      const nextReview = { ...current.reviewWords };
-      nextKnown[currentTextbookWord.word] = {
+      const nextStat: TextbookWordStat = {
         word: currentTextbookWord.word,
         meaning: currentTextbookWord.meaning,
-        learnedAt: new Date().toISOString(),
-        count: (nextKnown[currentTextbookWord.word]?.count ?? 0) + 1,
+        bookId: currentTextbookWord.bookId,
+        unitId: currentTextbookWord.unitId,
+        correct: Math.max(previous?.correct ?? 0, 1),
+        wrong: previous?.wrong ?? 0,
+        productiveCorrect: previous?.productiveCorrect ?? (previous?.mastered ? 1 : 0),
+        mastered: previous?.mastered ?? false,
+        updatedAt: new Date().toISOString(),
       };
-      delete nextReview[currentTextbookWord.word];
+      const nextStats = {
+        ...current.textbook.wordStats,
+        [currentTextbookWord.key]: nextStat,
+      };
+      const nextReview = { ...current.reviewWords };
+      if (!nextStat.mastered) nextReview[currentTextbookWord.word] = true;
+
+      const suggestedKey = pickNextTextbookWordKey({
+        items: textbookWords,
+        stats: nextStats,
+        currentKey: currentTextbookWord.key,
+        mode: current.textbook.scan.mode,
+        randomValue: Math.random(),
+      });
+      const currentIndex = Math.max(0, textbookWords.findIndex((item) => item.key === currentTextbookWord.key));
+      const nextKey = suggestedKey === currentTextbookWord.key && textbookWords.length > 1
+        ? textbookWords[(currentIndex + 1) % textbookWords.length].key
+        : suggestedKey;
 
       return {
         ...current,
-        knownWords: nextKnown,
         reviewWords: nextReview,
         textbook: {
           ...current.textbook,
           wordStats: nextStats,
           scan: {
             ...current.textbook.scan,
-            lastFeedback: `${currentTextbookWord.word} 已手动标记掌握。`,
+            currentKey: nextKey,
+            rounds: current.textbook.scan.rounds + 1,
+            lastFeedback: `${currentTextbookWord.word} 已标记为认识；通过拼写或听写后才算掌握。`,
           },
         },
       };
@@ -2326,6 +2351,7 @@ export default function EnglishLearningExperience() {
               unitId: currentTextbookWord.unitId,
               correct: previous?.correct ?? 0,
               wrong: (previous?.wrong ?? 0) + 1,
+              productiveCorrect: previous?.productiveCorrect ?? (previous?.mastered ? 1 : 0),
               mastered: false,
               updatedAt: new Date().toISOString(),
             },
@@ -2501,103 +2527,16 @@ export default function EnglishLearningExperience() {
 
   return (
     <main className={styles.shell}>
-      <aside className={styles.sidePanel} aria-label="学习导航">
+      <header className={styles.topBar}>
         <div className={styles.brandBlock}>
           <div className={styles.brandMark} aria-hidden="true">
             BS
           </div>
           <div>
-            <p className={styles.eyebrow}>Adaptive English Lab</p>
+            <p className={styles.eyebrow}>Adaptive Lab</p>
             <h1>Bright Steps</h1>
           </div>
         </div>
-
-        <section className={styles.memoryCard}>
-          <div className={styles.memoryTopline}>
-            <p className={styles.sectionKicker}>学习记忆</p>
-            <span>已保存 {formatSavedTime(savedAt)}</span>
-          </div>
-          <div className={styles.memoryMetrics}>
-            <div>
-              <strong>{knownCount}</strong>
-              <span>已掌握</span>
-            </div>
-            <div>
-              <strong>{reviewCount}</strong>
-              <span>再练词</span>
-            </div>
-            <div>
-              <strong>{memory.wrongItems.length}</strong>
-              <span>错题</span>
-            </div>
-            <div>
-              <strong>{shadowTotal}</strong>
-              <span>跟读</span>
-            </div>
-          </div>
-          <div className={styles.memoryActions}>
-            <button type="button" onClick={exportMemory}>
-              <Download size={16} />
-              导出
-            </button>
-            <button type="button" onClick={() => fileInputRef.current?.click()}>
-              <Upload size={16} />
-              导入
-            </button>
-            <button type="button" onClick={clearMemory}>
-              <Trash2 size={16} />
-              清空
-            </button>
-          </div>
-          <input ref={fileInputRef} className={styles.hiddenInput} type="file" accept="application/json" onChange={importMemory} />
-        </section>
-
-        <section className={styles.voiceCard}>
-          <p className={styles.sectionKicker}>语音</p>
-          <select
-            value={selectedVoice?.voiceURI ?? ""}
-            onChange={(event) =>
-              patchMemory((current) => ({ ...current, voiceURI: event.target.value }))
-            }
-            aria-label="选择英文语音"
-          >
-            {availableVoices.length === 0 ? (
-              <option value="">
-                {voices.length === 0 ? "正在读取白名单语音" : "未找到白名单语音"}
-              </option>
-            ) : (
-              availableVoices.map((voice) => (
-                <option key={voice.voiceURI} value={voice.voiceURI}>
-                  {voice.name} · {voice.lang}
-                </option>
-              ))
-            )}
-          </select>
-          <label className={styles.speedControl}>
-            <span>速度 {memory.rate.toFixed(2)}</span>
-            <input
-              type="range"
-              min="0.62"
-              max="0.95"
-              step="0.01"
-              value={memory.rate}
-              onChange={(event) =>
-                patchMemory((current) => ({ ...current, rate: Number(event.target.value) }))
-              }
-            />
-          </label>
-          <div className={styles.voiceActions}>
-            <button type="button" onClick={() => speak("This voice sounds clear and friendly.", memory.rate)}>
-              <Play size={16} />
-              试听
-            </button>
-            <button type="button" onClick={stopSpeech}>
-              <Square size={16} />
-              停止
-            </button>
-          </div>
-          <p className={styles.voiceNotice}>{speechNotice}</p>
-        </section>
 
         <nav className={styles.mainNav} aria-label="主功能">
           {navItems.map(([id, label, Icon]) => (
@@ -2613,56 +2552,131 @@ export default function EnglishLearningExperience() {
           ))}
         </nav>
 
-        <section className={styles.routeNote}>
-          <p className={styles.sectionKicker}>路线</p>
-          <p>不按年龄分班，先摸底，再按词汇、听读、教材单元和错词记录自动往合适题库走。</p>
-        </section>
-      </aside>
+        <div className={styles.topStats} aria-label="学习状态">
+          <div><span>级别</span><strong>{memory.assessment ? level.name : "待摸底"}</strong></div>
+          <div><span>今日</span><strong>{completedCount}/{dailyModules.length}</strong></div>
+          <div><span>弱项</span><strong>{memory.wrongItems.length + textbookWeakWords.length}</strong></div>
+        </div>
 
-      <section className={styles.content}>
-        <section className={styles.heroPanel}>
-          <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Vocabulary · Textbook · Listening · Target Game</p>
-            <h2>先找准水平，再把薄弱项一点点补上来。</h2>
-            <p>全年龄可用的自适应英语训练站：先测大致词汇和理解水平，再练词卡、人教版同步、听读、发音和单词靶场。</p>
-            <div className={styles.heroActions}>
-              <button type="button" className={styles.primaryAction} onClick={() => openTab("diagnostic")}>
-                <ClipboardCheck size={18} />
-                开始摸底
-              </button>
-              <button type="button" className={styles.secondaryAction} onClick={() => openTab("textbook")}>
-                <GraduationCap size={18} />
-                教材同步
+        <button
+          type="button"
+          className={styles.settingsButton}
+          onClick={() => setSettingsOpen(true)}
+          aria-label="学习设置"
+          aria-expanded={settingsOpen}
+          title="学习设置"
+        >
+          <Settings2 size={19} />
+        </button>
+      </header>
+
+      {settingsOpen ? (
+        <div className={styles.settingsLayer} onClick={() => setSettingsOpen(false)}>
+          <aside
+            className={styles.settingsDrawer}
+            role="dialog"
+            aria-modal="true"
+            aria-label="学习设置"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className={styles.drawerHeading}>
+              <div>
+                <p className={styles.sectionKicker}>LEARNING PROFILE</p>
+                <h2>学习设置</h2>
+              </div>
+              <button type="button" onClick={() => setSettingsOpen(false)} aria-label="关闭学习设置" title="关闭">
+                <X size={20} />
               </button>
             </div>
-          </div>
-          <Image
-            src="/english/hero-study.png"
-            alt="两个孩子在家里用平板和耳机学习英语"
-            width={1792}
-            height={1024}
-            priority
-          />
-        </section>
 
-        <section className={styles.statusStrip} aria-label="当前学习状态">
-          <article>
-            <span>估算级别</span>
-            <strong>{memory.assessment ? `${level.name} · ${level.range}` : "未测评"}</strong>
-          </article>
-          <article>
-            <span>今日完成</span>
-            <strong>{completedCount} / {dailyModules.length}</strong>
-          </article>
-          <article>
-            <span>重点补强</span>
-            <strong>{memory.assessment ? level.focus : "先做摸底"}</strong>
-          </article>
-          <article>
-            <span>学习档案</span>
-            <strong>{knownCount + memory.wrongItems.length + reviewCount} 条记录</strong>
-          </article>
-        </section>
+            <section className={styles.memoryCard}>
+              <div className={styles.memoryTopline}>
+                <p className={styles.sectionKicker}>本机学习记忆</p>
+                <span>已保存 {formatSavedTime(savedAt)}</span>
+              </div>
+              <div className={styles.memoryMetrics}>
+                <div><strong>{knownCount}</strong><span>已掌握</span></div>
+                <div><strong>{reviewCount}</strong><span>再练词</span></div>
+                <div><strong>{memory.wrongItems.length}</strong><span>错题</span></div>
+                <div><strong>{shadowTotal}</strong><span>跟读</span></div>
+              </div>
+              <div className={styles.memoryActions}>
+                <button type="button" onClick={exportMemory}><Download size={16} />导出</button>
+                <button type="button" onClick={() => fileInputRef.current?.click()}><Upload size={16} />导入</button>
+                <button type="button" onClick={clearMemory}><Trash2 size={16} />清空</button>
+              </div>
+              <input ref={fileInputRef} className={styles.hiddenInput} type="file" accept="application/json" onChange={importMemory} />
+            </section>
+
+            <section className={styles.voiceCard}>
+              <p className={styles.sectionKicker}>语音</p>
+              <select
+                value={selectedVoice?.voiceURI ?? ""}
+                onChange={(event) => patchMemory((current) => ({ ...current, voiceURI: event.target.value }))}
+                aria-label="选择英文语音"
+              >
+                {availableVoices.length === 0 ? (
+                  <option value="">{voices.length === 0 ? "正在读取白名单语音" : "未找到白名单语音"}</option>
+                ) : (
+                  availableVoices.map((voice) => (
+                    <option key={voice.voiceURI} value={voice.voiceURI}>{voice.name} · {voice.lang}</option>
+                  ))
+                )}
+              </select>
+              <label className={styles.speedControl}>
+                <span>速度 {memory.rate.toFixed(2)}</span>
+                <input
+                  type="range"
+                  min="0.62"
+                  max="0.95"
+                  step="0.01"
+                  value={memory.rate}
+                  onChange={(event) => patchMemory((current) => ({ ...current, rate: Number(event.target.value) }))}
+                />
+              </label>
+              <div className={styles.voiceActions}>
+                <button type="button" onClick={() => speak("This voice sounds clear and friendly.", memory.rate)}><Play size={16} />试听</button>
+                <button type="button" onClick={stopSpeech}><Square size={16} />停止</button>
+              </div>
+              <p className={styles.voiceNotice}>{speechNotice}</p>
+            </section>
+          </aside>
+        </div>
+      ) : null}
+
+      <section className={styles.content}>
+        {(activeTab === "diagnostic" || activeTab === "plan") ? (
+          <section className={styles.missionBanner}>
+            <Image
+              src="/english/hero-study.png"
+              alt="两个孩子在家里用平板和耳机学习英语"
+              width={1792}
+              height={1024}
+              priority
+            />
+            <div className={styles.missionCopy}>
+              <p className={styles.eyebrow}>{memory.assessment ? "TODAY'S ROUTE" : "LEVEL CHECK"}</p>
+              <h2>{memory.assessment ? `今天先攻：${level.focus}` : "先用 3 分钟找准起点"}</h2>
+              <p>{memory.assessment ? `${level.name} · ${level.range}，训练会优先调用错词、教材弱项和听读记录。` : "完成词汇、听力、阅读和拼写摸底，系统再安排合适难度。"}</p>
+              <div className={styles.missionActions}>
+                <button type="button" className={styles.primaryAction} onClick={() => openTab(memory.assessment ? "plan" : "diagnostic")}>
+                  {memory.assessment ? <Zap size={18} /> : <ClipboardCheck size={18} />}
+                  {memory.assessment ? "开始今日训练" : "开始摸底"}
+                </button>
+                <button type="button" className={styles.secondaryAction} onClick={() => openTab("textbook")}>
+                  <GraduationCap size={18} />教材同步
+                </button>
+                <Link className={styles.danciAction} href="/danci"><Brain size={18} />背词基地</Link>
+              </div>
+            </div>
+            <div className={styles.missionStatus} aria-label="今日学习状态">
+              <div><span>级别</span><strong>{memory.assessment ? `${level.name} · ${level.range}` : "未测评"}</strong></div>
+              <div><span>今日任务</span><strong>{completedCount} / {dailyModules.length}</strong></div>
+              <div><span>教材</span><strong>{selectedBook.label}</strong></div>
+              <div><span>全册掌握</span><strong>{textbookMasteryPercent}%</strong></div>
+            </div>
+          </section>
+        ) : null}
 
         <div ref={activePanelRef} className={styles.activePanelAnchor} aria-hidden="true" />
 
@@ -2948,7 +2962,9 @@ export default function EnglishLearningExperience() {
                     </div>
                     <div className={styles.wordBossBadge}>
                       <span>{currentTextbookWordStat?.mastered ? "已掌握" : isWeakTextbookWord(currentTextbookWordStat) ? "弱词" : "待检测"}</span>
-                      <strong>{currentTextbookWordStat?.correct ?? 0}:{currentTextbookWordStat?.wrong ?? 0}</strong>
+                      <strong>
+                        辨认 {currentTextbookWordStat?.correct ?? 0} · 输出 {currentTextbookWordStat?.productiveCorrect ?? (currentTextbookWordStat?.mastered ? 1 : 0)}
+                      </strong>
                     </div>
                   </div>
 
@@ -2962,8 +2978,8 @@ export default function EnglishLearningExperience() {
                   </div>
 
                   <div className={styles.scanActions}>
-                    <button type="button" className={styles.miniActionStrong} onClick={markTextbookWordMastered}>
-                      会了
+                    <button type="button" className={styles.miniActionStrong} onClick={markTextbookWordFamiliar}>
+                      认识，下一词
                     </button>
                     <button type="button" className={styles.miniAction} onClick={markTextbookWordWeak}>
                       放进弱词
@@ -3199,7 +3215,7 @@ export default function EnglishLearningExperience() {
                       <span>{question.skill}</span>
                       <strong>{index + 1}. {question.prompt}</strong>
                       <div className={styles.choiceGrid}>
-                        {question.choices.map((choice) => (
+                        {rotateOptions(question.choices, index).map((choice) => (
                           <button
                             key={choice}
                             type="button"
@@ -3425,7 +3441,8 @@ function DiagnosticCard({
 
   const question = diagnosticQuestions[questionIndex];
   const progress = Math.round((questionIndex / diagnosticQuestions.length) * 100);
-  const choices = "choices" in question && question.choices ? question.choices : [];
+  const sourceChoices = "choices" in question && question.choices ? question.choices : [];
+  const choices = rotateOptions(sourceChoices, questionIndex);
 
   return (
     <article className={styles.testCard}>
