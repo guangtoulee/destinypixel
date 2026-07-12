@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-12T06:58:42.723Z",
+  "updatedAt": "2026-07-12T09:27:32.999Z",
   "sourceSummary": {
     "community": 70,
-    "publicX": 66,
-    "total": 136
+    "publicX": 74,
+    "total": 144
   },
   "items": [
     {
@@ -490,6 +490,51 @@
       "rawText": "POV: The kiss that broke the internet, recreated with AI on the tip of Tokyo Tower. A viral cinematic moment, reimagined with seamless camera movement, perfect character consistency, and a breathtaking skyline that never leaves the frame. Every shot stays locked to the very top of Tokyo Tower for a romance that feels straight out of a blockbuster. Made with GPT Image 2 and Seedance on @itsPolloAI for the Peak Moment Challenge. Prompt: PART 1 • 0:00–0:15 — THE REVEAL & THE KISS (9:16) 0:00–0:03 — Arrival Continuous crane arc already in motion around the couple on the tip of Tokyo Tower's antenna mast. Only one Tokyo Tower visible. Wind moves Jessy's hair and trench dress. He wears the yellow kawaii mascot helmet. Jessy: \"You're seriously wearing that up here?\" Man: \"Only for you.\" 0:03–0:06 — Reveal Camera continues the same arc. He removes the helmet, revealing tousled brown hair and blue eyes. 0:06–0:09 — Pull Continuous crane widens. He pulls Jessy close by the waist, she grabs his jacket collar. The Polloai flag becomes visible above. 0:09–0:12 — Kiss Camera keeps pulling back with a subtle Dutch roll. They kiss on the tip of Tokyo Tower as the grade transitions from hazy news footage to warm cinematic. 0:12–0:15 — Sway Wide shot. They slowly turn while kissing. Tokyo Tower and the Polloai flag remain clearly visible. PART 2 • 0:15–0:25 — THE SPIN & THE VIEW (9:16) Continuity: First frame must exactly match the last frame of Part 1. 0:15–0:18 — Spin Continue the identical crane arc and orbit. He spins Jessy once on the tower tip. Dress, jewelry and blue-streaked hair flow naturally. Jessy: \"Don't drop me from up here!\" 0:18–0:21 — Second Kiss Orbit tightens into a close two-shot. They share another soft kiss, foreheads touching between kisses. 0:21–0:23 — View Camera cranes upward and pulls back. They face the glowing Tokyo skyline together with the Polloai flag above. 0:23–0:25 — Hold Slow push-in. They remain embracing on the tip of Tokyo Tower until fade to black. Strict: Maintain the exact reference camera movement throughout. All actions happen only on the tip of Tokyo Tower, with only one Tokyo Tower visible in every shot. #PolloAI #PolloPeakMoment"
     },
     {
+      "id": "x-public-2075672198518632940",
+      "title": "How to get 100% consistent product ads from one seedance 2.0 generation all directed from one ch",
+      "description": "How to get 100% consistent product ads from one seedance 2.0 generation all directed from one chat with the hashtag Comfy MCP. @hellorob didn't let the agent improvise a pipeline. He pointed it at his existing ComfyUI wo",
+      "prompt": "How to get 100% consistent product ads from one seedance 2.0 generation all directed from one chat with the hashtag Comfy MCP. @hellorob didn't let the agent improvise a pipeline. He pointed it at his existing ComfyUI workflows ( listed below ) and directed every shot: the sprite close-up, the bezel turn, the display flip, and the display changing to the time 10:04. The consistency secret is the driving video: → DepthAnything V3 pass blended with Canny edge lines — fine detail like the tiny debossed logo survives every gen → The original sprite outline kept leaking through those edge lines, so Claude suggested a SAM3 mask over the screen to kill it → With the screen masked, swapping in a new star sprite is just prompting: one GPT-Image-2 reference still + one line in the Seedance prompt And the entire process is now a reusable Claude skill.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ComfyUI/status/2075672198518632940",
+      "sourceType": "x",
+      "authorName": "ComfyUI",
+      "authorHandle": "@ComfyUI",
+      "createdAt": "2026-07-10T20:03:10.000Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 181,
+        "reposts": 28,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 167,
+        "views": 12324,
+        "score": 1006
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "How to get 100% consistent product ads from one seedance 2.0 generation all directed from one chat with the hashtag Comfy MCP. @hellorob didn't let the agent improvise a pipeline. He pointed it at his existing ComfyUI workflows ( listed below ) and directed every shot: the sprite close-up, the bezel turn, the display flip, and the display changing to the time 10:04. The consistency secret is the driving video: → DepthAnything V3 pass blended with Canny edge lines — fine detail like the tiny debossed logo survives every gen → The original sprite outline kept leaking through those edge lines, so Claude suggested a SAM3 mask over the screen to kill it → With the screen masked, swapping in a new star sprite is just prompting: one GPT-Image-2 reference still + one line in the Seedance prompt And the entire process is now a reusable Claude skill."
+    },
+    {
       "id": "x-public-2074491289597247773",
       "title": "From a single idea to a cinematic story. Prompt: ChatGPT Image: Midjourney Video: Veo 3 Inspired",
       "description": "From a single idea to a cinematic story. Prompt: ChatGPT Image: Midjourney Video: Veo 3 Inspired by house of dragon ,prompt in the comments",
@@ -725,7 +770,7 @@
       "authorName": "Jasmine Ai",
       "authorHandle": "@jasminekhan90_",
       "createdAt": "2026-07-11T13:57:11.000Z",
-      "importedAt": "2026-07-12T04:54:25.475Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
       "tags": [
         "Seedance",
         "Kling",
@@ -748,13 +793,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 306,
+        "likes": 292,
         "reposts": 10,
-        "replies": 13,
+        "replies": 14,
         "quotes": 0,
-        "bookmarks": 4,
-        "views": 31242,
-        "score": 739
+        "bookmarks": 3,
+        "views": 31331,
+        "score": 710
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Riding into a kingdom where dragons guard the skies and magic fills the air. Created with seedance 2.0 on @Lart_AI Give it a try here 👇  Prompt: A breathtaking cinematic fantasy scene of a beautiful princess wearing an elegant white and gold royal gown riding a majestic white horse through a magical kingdom. The camera starts with a low-angle close-up of the horse's hooves galloping over a glowing cobblestone path, then smoothly pulls back to reveal the princess as her long hair and flowing cape move gracefully in the wind. Colorful flowers bloom along the roadside, butterflies flutter through the air, and sparkling magical particles float around her. In the distance stands a magnificent golden castle surrounded by waterfalls and lush green hills. Two enormous dragons soar gracefully above the castle, their wings casting dramatic shadows as they circle the towers. The princess looks up with a gentle smile while sunlight streams through the clouds, creating god rays and a dreamy atmosphere. The camera performs a slow cinematic orbit before ending on a wide aerial shot of the magical kingdom. Ultra-realistic, fantasy epic, volumetric lighting, soft fog, HDR, highly detailed, cinematic color grading, smooth camera movement, 4K, 24fps, shallow depth of field, masterpiece. Negative Prompt: Low quality, blurry, cartoon, anime, low resolution, flickering, jittery motion, extra limbs, deformed face, bad anatomy, duplicate horse, distorted castle, text, watermark, logo, oversaturated colors, camera shake, motion artifacts. #Seedance2 #LartAI #AIVideo #AIAnimation #ContentCreator"
@@ -1405,6 +1450,52 @@
       "rawText": "Seedance 2.0 on Vidfield AI Prompt: Create a 15-second realistic cinematic slice-of-life video in 16:9, 24fps. Visual-only video, no dialogue, no voice, no music, no sound effects, no subtitles, no text on screen. Warm golden-hour sunlight, soft handheld camera, muted film color grade, slight grain, natural shadows, peaceful nostalgic mood. Fully realistic live-action style, not game-like, not animated. Main character: a young Japanese woman in her early 20s with soft natural features, dark hair tied in a loose low bun with a small traditional hairpin. She wears elegant traditional Japanese attire: a simple cream-and-muted-blue yukata/kimono-style outfit with a subtle floral pattern, tied with a soft obi belt, light tabi-style sandals. Keep her calm, gentle, warm expression consistent in every shot. Location: a long narrow real-life residential alley with a Japanese touch. Tall tan stone and concrete walls, sandy dusty ground, warm sunlight glowing on one side, soft tree shadows across the path, palm trees and green leaves above the walls, small Japanese details like a wooden gate, paper lantern near a doorway, simple noren curtain, potted bonsai-style plants, and a blue painted wall far ahead. One bicycle leans near the end of the alley. Quiet empty neighborhood feeling. 0:00–0:02: Rear tracking shot. The Japanese woman walks slowly through the narrow alley from behind. Her yukata fabric moves gently as she walks. Golden sunlight stretches across the tan walls. Camera follows with natural handheld motion. 0:02–0:04: Wide alley shot. A small gray-brown tabby cat appears from a low gap near the left side wall and steps into the alley. The woman notices it, slows down, and turns slightly toward it. 0:04–0:06: Medium side shot. The cat walks near her feet and looks up. She smiles softly, bends down slowly, and extends one hand in a gentle careful way. 0:06–0:08: Low close-up. The cat sniffs her fingers, then rubs its head against her hand. She gently pets the cat’s head and back. Show realistic fur texture, tiny whisker movement, and natural cat behavior. 0:08–0:10: Emotional close-up. The woman smiles warmly while petting the cat. Sunlight flickers through tree leaves across her face, hairpin, shoulders, and kimono fabric. 0:10–0:12: Medium-wide shot. The cat walks ahead a few steps, then looks back at her. She stands slowly and follows it with a peaceful curious smile. The Japanese alley details remain subtle and realistic. 0:12–0:14: Front tracking shot. She walks toward camera with the cat beside her near the wall. She looks down at the cat and smiles. The long alley, tan walls, Japanese details, blue wall, bicycle, and trees remain visible in the background. 0:14–0:15: Final close shot. The cat brushes against her leg. She looks toward the camera with a soft peaceful smile, then looks down at the cat again. Hold the warm golden Japanese alley atmosphere for a gentle cinematic ending."
     },
     {
+      "id": "x-public-2075647316820955362",
+      "title": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka k",
+      "description": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka kaydet. Bu ucretsiz site, AI videolarinda kullanilan en populer kamera hareketlerini tek bir yerde topluyor. Her hareket icin",
+      "prompt": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka kaydet. Bu ucretsiz site, AI videolarinda kullanilan en populer kamera hareketlerini tek bir yerde topluyor. Her hareket icin: Gorsel ornekler sunuyor. Ne ise yaradigini anlatiyor. Ve hazir prompt veriyor. Tek yapman gereken kendi sahnene gore duzenlemek. Kling. Seedance. Higgsfield. Runway. Ve daha birçok AI video modeliyle uyumlu calisiyor. Dogru kamera hareketi... Bazen kullandigin modelden bile daha buyuk fark yaratabiliyor.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/GcodeXS/status/2075647316820955362",
+      "sourceType": "x",
+      "authorName": "G-Code",
+      "authorHandle": "@GcodeXS",
+      "createdAt": "2026-07-10T18:24:18.000Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "Runway",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Runway",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 51,
+        "reposts": 4,
+        "replies": 4,
+        "quotes": 1,
+        "bookmarks": 63,
+        "views": 5563,
+        "score": 325
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka kaydet. Bu ucretsiz site, AI videolarinda kullanilan en populer kamera hareketlerini tek bir yerde topluyor. Her hareket icin: Gorsel ornekler sunuyor. Ne ise yaradigini anlatiyor. Ve hazir prompt veriyor. Tek yapman gereken kendi sahnene gore duzenlemek. Kling. Seedance. Higgsfield. Runway. Ve daha birçok AI video modeliyle uyumlu calisiyor. Dogru kamera hareketi... Bazen kullandigin modelden bile daha buyuk fark yaratabiliyor."
+    },
+    {
       "id": "x-public-2074841443256971319",
       "title": "📖YOU COULD BE USING SEEDANCE 2.0 WRONGLY AND HERE'S WHY Three models were tested: GPT, Gemini a",
       "description": "📖YOU COULD BE USING SEEDANCE 2.0 WRONGLY AND HERE'S WHY Three models were tested: GPT, Gemini and Claude and the difference is greater than expected Three models. One task. Write a cinematic prompt for AI video. Here's ",
@@ -1764,7 +1855,7 @@
       "authorName": "Jimmy Neuron 💡",
       "authorHandle": "@Neuron_404",
       "createdAt": "2026-07-11T10:58:06.000Z",
-      "importedAt": "2026-07-12T06:58:42.719Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
       "tags": [
         "Seedance",
         "产品",
@@ -1785,13 +1876,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 48,
+        "likes": 49,
         "reposts": 6,
         "replies": 11,
         "quotes": 0,
         "bookmarks": 21,
-        "views": 2326,
-        "score": 199
+        "views": 2403,
+        "score": 201
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Оne image turns into a finished YOUTUBE video with AI. one image becomes a storyboard, then a full ai video. the whole trick: build a numbered panel grid from a single reference in chatgpt, then animate it panel by panel in seedance 2.0. the same flow works for product ads, movie trailers and comic animations. > upload one reference image to chatgpt > turn it into a grid of story frames > describe what happens in each frame > bring the frames to life as video with ai one image now carries an entire video - no shoot, no timeline, just a grid and prompts. give it a try. follow me so you don't miss out on trends in the world of ai."
@@ -2138,6 +2229,48 @@
       "rawText": "Seedance 2.0 Prompt 👇 Scene & Mood: Cinematic luxury portrait in a warm amber Arabian lounge. Calm, powerful, mysterious mood. Rich red textiles, brass lanterns, patterned cushions, soft haze, and practical firelight. Frame Map: Start from image1composition. Subject stays center right in a medium wide seated portrait, facing camera. Knees and hands remain visible. Ornate tea table and brass objects stay softly blurred in the lower foreground. Lanterns, cushions, and carved wall decor remain behind him. Keep warm negative space on the left. Slow push in ends as a closer medium portrait. Subject Lock: Image1 Preserve the same seated male subject: same face, skin tone, trimmed facial hair, dark sunglasses, red and white keffiyeh, black agal, white thobe, leopard pattern cloak, watch, rings, body shape, seated posture, relaxed hand placement, and composed expression. Image 1 the same face, hair, wardrobe, body shape, and silhouette throughout. Cloak stays naturally draped over both shoulders. Thobe stays matte white with soft real fabric folds. Cross Frame Rules: No identity drift, no face change, no wardrobe change, no altered sunglasses, no extra jewelry, no headwear change. Subject remains center right at the same depth and eyeline. Do not add people or modern objects. Keep the same lounge layout, lantern positions, patterned textiles, brass objects, amber palette, and shallow depth. Movement: 15s continuous shot. Subject remains seated and still with slow breathing. His right fingers relax slightly on his knee, left hand barely shifts against the fabric, and his head tilts a few degrees toward camera. Keffiyeh edge, cloak fibers, thobe folds, watch, and rings catch tiny natural movements. Lantern flames flicker gently, brass highlights shimmer softly, haze drifts in the background. Camera makes a slow, smooth push in with subtle handheld breath, never shaky. Last Frame: End on a closer medium portrait. Subject remains center-right, sunglasses facing camera, shoulders and upper torso dominant, right hand relaxed on knee, leopard cloak framing the white thobe. Lantern glow and patterned textiles stay softly visible behind him. Camera settles nearly locked. No on screen text, no captions, no signage typography, no rendered text in the frame. World Plate: Ornate lounge with burgundy, red, black, gold, and amber tones. Layered rugs, cushions, wall hangings, carved circular wall decor, brass lanterns, and polished metal objects create depth. Lighting comes from practical lanterns with soft falloff and lifted shadows. Mild incense haze adds air depth. Textures feel tactile: woven fabric, matte cotton, aged brass, carved metal, natural looking fur. Sound Bed: Diegetic audio only: quiet lantern flame flicker, faint room tone, soft fabric rustle from breathing, subtle jewelry movement, distant air movement. No music, no score, no vocals, no lyrics. Capture Realism: Natural skin texture, matte skin, realistic facial hair, believable fabric weight, soft highlight rolloff, lifted shadows, mild grain, restrained contrast, no plastic AI gloss, no doll skin, no over sharpening, no crushed blacks, no clipped whites. Brass glows softly, not mirror shiny. Fur texture stays natural. Camera Capture: 50mm cinema lens, slow push in portrait shot, 24fps, 180 degree shutter, wide latitude cinema capture, subtle handheld breath, shallow depth of field, fine 35mm film grain, warm amber burgundy grade, realistic practical lantern light, 15s runtime."
     },
     {
+      "id": "x-public-2075756972553486681",
+      "title": "Grok Imagine prompt: Realistic 4K cinematic quality /Smoot mix realism /interpolation and upscal",
+      "description": "Grok Imagine prompt: Realistic 4K cinematic quality /Smoot mix realism /interpolation and upscale /Volumetric effect / Softer, more intense shadows / Intense/ clouds color",
+      "prompt": "Grok Imagine prompt: Realistic 4K cinematic quality /Smoot mix realism /interpolation and upscale /Volumetric effect / Softer, more intense shadows / Intense/ clouds color",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/orgunus93304/status/2075756972553486681",
+      "sourceType": "x",
+      "authorName": "Arak Dark",
+      "authorHandle": "@orgunus93304",
+      "createdAt": "2026-07-11T01:40:02.000Z",
+      "importedAt": "2026-07-12T09:27:32.994Z",
+      "tags": [
+        "Grok Imagine",
+        "摄影"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "视觉创意",
+      "metrics": {
+        "likes": 18,
+        "reposts": 3,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 905,
+        "score": 51
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: Realistic 4K cinematic quality /Smoot mix realism /interpolation and upscale /Volumetric effect / Softer, more intense shadows / Intense/ clouds color"
+    },
+    {
       "id": "x-public-2075926643663610152",
       "title": "🚨GUESS WHICH VIDEO WAS SHOT ON A REAL CAMERA AND WHICH ONE WAS MADE IN SEEDANCE To make AI vide",
       "description": "🚨GUESS WHICH VIDEO WAS SHOT ON A REAL CAMERA AND WHICH ONE WAS MADE IN SEEDANCE To make AI video look real, it’s not enough to just write “realistic”. You have to deliberately add the things that usually ruin a shot: > ",
@@ -2431,6 +2564,50 @@
       "rawText": "Grok Imagine prompt: Slow rise of dawn-star, bioluminescent flowers pulsing light, banners stirring in a faint night breeze, divine glow on armor breathing softly."
     },
     {
+      "id": "x-public-2076041853707677978",
+      "title": "28-th Prompt for AI model Scene 1: Seedance 2.0 | 10 seconds | Ultra-realistic live-action cinem",
+      "description": "28-th Prompt for AI model Scene 1: Seedance 2.0 | 10 seconds | Ultra-realistic live-action cinematic | Single continuous take | Absolutely NO CUTS | TRUE IMAX cinematic presentation | 24fps | Wild organic handheld cinema",
+      "prompt": "28-th Prompt for AI model Scene 1: Seedance 2.0 | 10 seconds | Ultra-realistic live-action cinematic | Single continuous take | Absolutely NO CUTS | TRUE IMAX cinematic presentation | 24fps | Wild organic handheld cinematography | Raw documentary realism | Deliberately imperfect framing | Subject frequently off-center | Aggressive whip pans | Violent push-ins | Natural operator corrections | Fight choreography inspired by Atomic Blonde | Color grading inspired by Atomic Blonde with subtle Gothic noir: cold steel-blue shadows, warm golden chandelier highlights, rich burgundy tones, deep blacks, high contrast, subtle film grain. ABSOLUTELY NO MUSIC. Only realistic production audio: polished marble footsteps, breathing, cloth movement, leather coat movement, heavy body impacts, punches, elbows, knees, kicks, subtle bone impacts, marble echoes, broken crystal, drifting debris, natural ballroom ambience. MAIN SUBJECT Man identical to the uploaded reference image. Identical face, hairstyle, facial hair, skin tone, body proportions, tattoos, expression, and outfit. Wearing the identical luxurious white tailored suit with the jacket open, exposing the chest tattoos, white tailored trousers, black belt with a large gold “M” buckle, gold waist chain, white sneakers, dark sunglasses, wristwatch, and the identical dramatic long black feather coat draped over his shoulders. Hair tied into the identical man bun throughout the sequence. Calm, fearless, emotionless, highly trained elite assassin. LOCATION A breathtaking Gothic European grand ballroom inside an ancient luxury palace. Towering black marble columns. Massive crystal chandeliers. Gothic vaulted ceiling. Pointed arches. Black-and-gold baroque architecture. Tall stained-glass windows. Polished black-and-white marble floor reflecting warm chandelier light. Thin atmospheric haze. Completely empty. No furniture. No tables. No chairs. No guests. Only the man and three elite villains. VILLAINS Three elite professional fighters wearing impeccably tailored black Italian suits, crisp white dress shirts, black ties, and polished black leather shoes. Athletic, disciplined, intimidating, fighting with ruthless efficiency using realistic close-quarters combat. CAMERA LANGUAGE The camera behaves like a real combat cameraman trapped inside the fight. Wild handheld movement. Violent whip pans. Rapid push-ins. Micro-shakes. Sudden reframing. Realistic focus breathing. Natural rolling shutter. Bodies repeatedly block the lens. The operator almost loses the subject multiple times before instinctively recovering. The man is intentionally not centered for much of the sequence. TIMELINE 0.0–1.5s The handheld camera follows closely behind the man as he walks confidently along the second-floor balcony overlooking the vast Gothic ballroom. Without hesitation, he plants one foot onto the marble railing and launches himself into the enormous open atrium. His long black feather coat billows dramatically behind him. The camera instinctively dives after him, briefly losing the frame. 1.5–2.8s Falling beside him beneath the enormous crystal chandeliers, the camera struggles to keep pace. His feather coat and open white suit move naturally through the air before he rotates smoothly and lands in a powerful three-point landing. Marble dust and tiny crystal fragments burst across the polished floor. 2.8–3.8s Three elite villains slowly emerge from different directions, silently surrounding him in a loose triangle formation. They immediately rush forward together. 3.8–6.2s The fight erupts instantly. He slips between the first two attackers with explosive footwork, smashing a brutal elbow into the first villain’s jaw before driving a crushing knee into the second villain’s ribs. The handheld camera violently whip-pans between impacts, repeatedly blocked by moving bodies before recovering the action. Light blood sprays from a split lip. No gore. #actionmovie #fight",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/LitvinAntonio/status/2076041853707677978",
+      "sourceType": "x",
+      "authorName": "LeadingPromptTechnolog",
+      "authorHandle": "@LitvinAntonio",
+      "createdAt": "2026-07-11T20:32:03.000Z",
+      "importedAt": "2026-07-12T09:27:32.996Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 172,
+        "score": 3
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "28-th Prompt for AI model Scene 1: Seedance 2.0 | 10 seconds | Ultra-realistic live-action cinematic | Single continuous take | Absolutely NO CUTS | TRUE IMAX cinematic presentation | 24fps | Wild organic handheld cinematography | Raw documentary realism | Deliberately imperfect framing | Subject frequently off-center | Aggressive whip pans | Violent push-ins | Natural operator corrections | Fight choreography inspired by Atomic Blonde | Color grading inspired by Atomic Blonde with subtle Gothic noir: cold steel-blue shadows, warm golden chandelier highlights, rich burgundy tones, deep blacks, high contrast, subtle film grain. ABSOLUTELY NO MUSIC. Only realistic production audio: polished marble footsteps, breathing, cloth movement, leather coat movement, heavy body impacts, punches, elbows, knees, kicks, subtle bone impacts, marble echoes, broken crystal, drifting debris, natural ballroom ambience. MAIN SUBJECT Man identical to the uploaded reference image. Identical face, hairstyle, facial hair, skin tone, body proportions, tattoos, expression, and outfit. Wearing the identical luxurious white tailored suit with the jacket open, exposing the chest tattoos, white tailored trousers, black belt with a large gold “M” buckle, gold waist chain, white sneakers, dark sunglasses, wristwatch, and the identical dramatic long black feather coat draped over his shoulders. Hair tied into the identical man bun throughout the sequence. Calm, fearless, emotionless, highly trained elite assassin. LOCATION A breathtaking Gothic European grand ballroom inside an ancient luxury palace. Towering black marble columns. Massive crystal chandeliers. Gothic vaulted ceiling. Pointed arches. Black-and-gold baroque architecture. Tall stained-glass windows. Polished black-and-white marble floor reflecting warm chandelier light. Thin atmospheric haze. Completely empty. No furniture. No tables. No chairs. No guests. Only the man and three elite villains. VILLAINS Three elite professional fighters wearing impeccably tailored black Italian suits, crisp white dress shirts, black ties, and polished black leather shoes. Athletic, disciplined, intimidating, fighting with ruthless efficiency using realistic close-quarters combat. CAMERA LANGUAGE The camera behaves like a real combat cameraman trapped inside the fight. Wild handheld movement. Violent whip pans. Rapid push-ins. Micro-shakes. Sudden reframing. Realistic focus breathing. Natural rolling shutter. Bodies repeatedly block the lens. The operator almost loses the subject multiple times before instinctively recovering. The man is intentionally not centered for much of the sequence. TIMELINE 0.0–1.5s The handheld camera follows closely behind the man as he walks confidently along the second-floor balcony overlooking the vast Gothic ballroom. Without hesitation, he plants one foot onto the marble railing and launches himself into the enormous open atrium. His long black feather coat billows dramatically behind him. The camera instinctively dives after him, briefly losing the frame. 1.5–2.8s Falling beside him beneath the enormous crystal chandeliers, the camera struggles to keep pace. His feather coat and open white suit move naturally through the air before he rotates smoothly and lands in a powerful three-point landing. Marble dust and tiny crystal fragments burst across the polished floor. 2.8–3.8s Three elite villains slowly emerge from different directions, silently surrounding him in a loose triangle formation. They immediately rush forward together. 3.8–6.2s The fight erupts instantly. He slips between the first two attackers with explosive footwork, smashing a brutal elbow into the first villain’s jaw before driving a crushing knee into the second villain’s ribs. The handheld camera violently whip-pans between impacts, repeatedly blocked by moving bodies before recovering the action. Light blood sprays from a split lip. No gore. #actionmovie #fight"
+    },
+    {
       "id": "x-public-2075606219562320078",
       "title": "I used to do a lot of these mini city prompts. Here is a new structure I have been trying lately",
       "description": "I used to do a lot of these mini city prompts. Here is a new structure I have been trying lately. Animated with Kling. Prompt: I(0) = empty palm of hand, no sphere. I(1) = full detailed micro‑globe. ∂I/∂t = Δ(I, $ CITY) ",
@@ -2472,6 +2649,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I used to do a lot of these mini city prompts. Here is a new structure I have been trying lately. Animated with Kling. Prompt: I(0) = empty palm of hand, no sphere. I(1) = full detailed micro‑globe. ∂I/∂t = Δ(I, $ CITY) guided by: - Sphere appearing in palm. - Skyline crust growing radially as tiny plastic blocks. - Artery wrapping and curving. - Life details popping in. - Lighting evolving to daylight, DOF engaging. Integration: t=0.0–0.2: Hand appears, empty sphere materializes as a smooth grey ball. t=0.2–0.5: Building blocks erupt from surface, filling all space, height map guided by $ CITY. t=0.5–0.7: Artery curves around the front, dividing the dense crust. t=0.7–0.9: Tiny cars, boats, trees appear; material shifts to architectural model (plastic/wood). t=0.9–1.0: Daylight and DOF finalize, foreground hand sharp, background bokeh. Output I(1): photorealistic 1:1 macro image, ultra‑detailed, no empty space."
+    },
+    {
+      "id": "x-public-2076227159681573184",
+      "title": "Grok Imagine prompt: My invisible strings are these search words 👇 SEO 🌹📜🧵✨🔮🪄🌙🕯️💫🃏🥀 w",
+      "description": "Grok Imagine prompt: My invisible strings are these search words 👇 #SEO 🌹📜🧵✨🔮🪄🌙🕯️💫🃏🥀 word trick- y'all know you're all doing it 🍦🫠💓🪞📝🥶☕️🎤🎬🤠🔫😅🖤🍧👒☃️🥁🩶🙌🧊🧚🏿🍔🌭🤣🌹🤍❄️🎻 AI Magic, Mesmerizing,",
+      "prompt": "Grok Imagine prompt: My invisible strings are these search words 👇 #SEO 🌹📜🧵✨🔮🪄🌙🕯️💫🃏🥀 word trick- y'all know you're all doing it 🍦🫠💓🪞📝🥶☕️🎤🎬🤠🔫😅🖤🍧👒☃️🥁🩶🙌🧊🧚🏿🍔🌭🤣🌹🤍❄️🎻 AI Magic, Mesmerizing, Ethereal, Surreal, Hypnotic, Pure Wonder, AI Art, ASMR, Japan, Aesthetic, Dreamy, Wow, Magic Trick, Levitation, Japanese Beauty, For You, Aesthetic Video, Surreal Art, A.I. girlfriend, A.I. boyfriend, Cybertruck, Grimace Shake, Fiber Maxxing, Butter Yellow, Hugo Spritz, 7/11 Day, Slurpee, Bocce, Travelers Championship, PCE Report, Jorts, Capri Pants, Chilled Red",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AliciaMcnatt/status/2076227159681573184",
+      "sourceType": "x",
+      "authorName": "Alicia McNatt",
+      "authorHandle": "@AliciaMcnatt",
+      "createdAt": "2026-07-12T08:48:23.000Z",
+      "importedAt": "2026-07-12T09:27:32.994Z",
+      "tags": [
+        "Grok Imagine",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 24,
+        "score": 2
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: My invisible strings are these search words 👇 #SEO 🌹📜🧵✨🔮🪄🌙🕯️💫🃏🥀 word trick- y'all know you're all doing it 🍦🫠💓🪞📝🥶☕️🎤🎬🤠🔫😅🖤🍧👒☃️🥁🩶🙌🧊🧚🏿🍔🌭🤣🌹🤍❄️🎻 AI Magic, Mesmerizing, Ethereal, Surreal, Hypnotic, Pure Wonder, AI Art, ASMR, Japan, Aesthetic, Dreamy, Wow, Magic Trick, Levitation, Japanese Beauty, For You, Aesthetic Video, Surreal Art, A.I. girlfriend, A.I. boyfriend, Cybertruck, Grimace Shake, Fiber Maxxing, Butter Yellow, Hugo Spritz, 7/11 Day, Slurpee, Bocce, Travelers Championship, PCE Report, Jorts, Capri Pants, Chilled Red"
     },
     {
       "id": "x-public-2075792269408653370",
@@ -2602,6 +2822,48 @@
       "rawText": "Grok Imagine prompt: Grok Imagine Submission The warmth from my hands would spread upward, drawing out stress like the tide pulling away from the shore. The moon and night stars twinkle above us. With every breath, I’d imagine negative energy slipping away from him, re..."
     },
     {
+      "id": "x-public-2074058236144091448",
+      "title": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float",
+      "description": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photogr",
+      "prompt": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AliciaMcnatt/status/2074058236144091448",
+      "sourceType": "x",
+      "authorName": "Alicia McNatt",
+      "authorHandle": "@AliciaMcnatt",
+      "createdAt": "2026-07-06T09:09:52.000Z",
+      "importedAt": "2026-07-12T09:27:32.994Z",
+      "tags": [
+        "Grok Imagine",
+        "摄影"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "风景旅行",
+      "metrics": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 46,
+        "score": 2
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
+    },
+    {
       "id": "x-public-2075928661392593152",
       "title": "Seedance 2.0 4K on Higgsfield Prompt: A dangerous motorcycle ice racer with frost-covered black ",
       "description": "Seedance 2.0 4K on Higgsfield Prompt: A dangerous motorcycle ice racer with frost-covered black racing gear, mirrored helmet visor, and glowing bike headlights cutting through snowstorms. Frozen arctic industrial wastela",
@@ -2655,7 +2917,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -2697,7 +2959,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "平面设计",
         "摄影"
@@ -2823,7 +3085,7 @@
       "authorName": "𝟡𝟜 ᴾᴸᴬʸᶠᴼᴿᴳᴱ",
       "authorHandle": "@94vanAI",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.276Z",
+      "importedAt": "2026-07-12T09:27:29.637Z",
       "tags": [
         "摄影"
       ],
@@ -2864,7 +3126,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [
         "人像"
       ],
@@ -2905,7 +3167,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [
         "人像",
         "摄影"
@@ -2947,7 +3209,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -2986,7 +3248,7 @@
       "authorName": "Derya Unutmaz, MD",
       "authorHandle": "@DeryaTR_",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [
         "人像",
         "产品",
@@ -3029,7 +3291,7 @@
       "authorName": "Valentin de Delalande",
       "authorHandle": "@valentinlulu",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [
         "人像",
         "摄影"
@@ -3071,7 +3333,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.638Z",
       "tags": [
         "人像"
       ],
@@ -3112,7 +3374,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -3154,7 +3416,7 @@
       "authorName": "ToroJushiAi",
       "authorHandle": "@ToroJushiAi",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -3196,7 +3458,7 @@
       "authorName": "essan | AIクリエイター",
       "authorHandle": "@essan_x",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像"
       ],
@@ -3237,7 +3499,7 @@
       "authorName": "NIKKO",
       "authorHandle": "@AIArtAlchemist",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -3279,7 +3541,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -3321,7 +3583,7 @@
       "authorName": "essan | AIクリエイター",
       "authorHandle": "@essan_x",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像"
       ],
@@ -3362,7 +3624,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像"
       ],
@@ -3403,7 +3665,7 @@
       "authorName": "ぱんちゃん🍞｜AI ×クリエイティブ",
       "authorHandle": "@panchaaan_2",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像",
         "摄影"
@@ -3445,7 +3707,7 @@
       "authorName": "essan | AIクリエイター",
       "authorHandle": "@essan_x",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -3484,7 +3746,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "摄影"
       ],
@@ -3525,7 +3787,7 @@
       "authorName": "Moses",
       "authorHandle": "@FrickinMoses",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像"
       ],
@@ -3566,7 +3828,7 @@
       "authorName": "AIで妄想世界🌍️",
       "authorHandle": "@Buusk3",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.639Z",
       "tags": [
         "人像"
       ],
@@ -3607,7 +3869,7 @@
       "authorName": "坂本健太｜IdeaReal 🪼",
       "authorHandle": "@ksakamoto7",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.640Z",
       "tags": [
         "Grok Imagine",
         "人像",
@@ -3652,7 +3914,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.640Z",
       "tags": [
         "人像"
       ],
@@ -3693,7 +3955,7 @@
       "authorName": "ｱﾈ",
       "authorHandle": "@ane_delulu",
       "createdAt": "2026-07-10T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.277Z",
+      "importedAt": "2026-07-12T09:27:29.640Z",
       "tags": [
         "人像",
         "摄影"
@@ -5594,6 +5856,94 @@
       "rawText": "创作一张 9:16 竖版超精细写实动漫风格人像，描绘一位美丽的日本年轻女性在七夕夜市的场景。她身着深海军蓝浴衣，上面饰有紫色桔梗花纹和细小的星点图案。她留着乌黑亮丽的长发，扎成高侧马尾，配有小巧的紫色花朵发饰，留着柔和的刘海，拥有一双明亮传神的棕色大眼睛、光滑白皙的皮肤和温柔自信的微笑。姿势为侧身四分之三视角，一只手抬起触碰马尾顶部，另一只手轻轻捏住衣领边缘，营造出优雅动人的马尾主题构图。浴衣采用低领、宽袖设计，高开叉露出一条腿，腰间系着金属银色腰带，并垂下淡紫色的丝带。背景设定在梦幻的夜间竹林，头顶是星空和清晰可见的银河，竹枝上挂着五颜六色的七夕许愿签，背景中点缀着温暖的灯笼，前景是一片发光的紫色桔梗花丛。运用电影级虚化效果、发丝边缘柔光、梦幻般的蓝紫色萤火虫光点、浅景深、高质感精细插画渲染、真实的布料纹理，营造出浪漫的节日氛围。添加两处可见的文字叠加：左上角半透明的“CapCut AI”水印，以及右下角粉白色的签名“@Me_Rock369”。主要可自定义细节：{argument name=\"character name\" default=\"无名日本年轻女性\"}, {argument name=\"yukata color\" default=\"深海军蓝\"}, {argument name=\"flower motif\" default=\"紫色桔梗花\"}, {argument name=\"festival setting\" default=\"七夕夜间竹林\"}, {argument name=\"signature text\" default=\"@Me_Rock369\"}。"
     },
     {
+      "id": "x-public-2073814316898250786",
+      "title": "Grok Imagine prompt: queen made of this light: Crystalline lighting, sharp cool white light, pur",
+      "description": "Grok Imagine prompt: queen made of this light: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clarity glass-like refractions, sparkli",
+      "prompt": "Grok Imagine prompt: queen made of this light: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clarity glass-like refractions, sparkling facets, bright pristine illumination, cool toned sparkles, sharp clean light",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AliciaMcnatt/status/2073814316898250786",
+      "sourceType": "x",
+      "authorName": "Alicia McNatt",
+      "authorHandle": "@AliciaMcnatt",
+      "createdAt": "2026-07-05T17:00:37.000Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
+      "tags": [
+        "Grok Imagine",
+        "Kling"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 13,
+        "score": 0
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: queen made of this light: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clarity glass-like refractions, sparkling facets, bright pristine illumination, cool toned sparkles, sharp clean light"
+    },
+    {
+      "id": "x-public-2073810848263602381",
+      "title": "Grok Imagine prompt: built a king from a light prompt: described the light to be: Crystalline li",
+      "description": "Grok Imagine prompt: built a king from a light prompt: described the light to be: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clar",
+      "prompt": "Grok Imagine prompt: built a king from a light prompt: described the light to be: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clarity glass-like refractions, sparkling facets, bright pristine illumination, cool toned sparkles, sharp clean light",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AliciaMcnatt/status/2073810848263602381",
+      "sourceType": "x",
+      "authorName": "Alicia McNatt",
+      "authorHandle": "@AliciaMcnatt",
+      "createdAt": "2026-07-05T16:46:50.000Z",
+      "importedAt": "2026-07-12T09:27:32.995Z",
+      "tags": [
+        "Grok Imagine",
+        "Kling"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 12,
+        "score": 0
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: built a king from a light prompt: described the light to be: Crystalline lighting, sharp cool white light, pure scientific illumination, clean bright neutral highlights, microscopic detail, high clarity glass-like refractions, sparkling facets, bright pristine illumination, cool toned sparkles, sharp clean light"
+    },
+    {
       "id": "x-public-2073407789985083539",
       "title": "Grok Imagine prompt: masterpiece, best quality, ultra-detailed, sharp focus, intricate details, ",
       "description": "Grok Imagine prompt: masterpiece, best quality, ultra-detailed, sharp focus, intricate details, 16k, photorealistic Realistic Vision, Juggernaut, EpicRealism, , calm and relaxed expression, kind eyes, warm and approachab",
@@ -5647,7 +5997,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.280Z",
+      "importedAt": "2026-07-12T09:27:29.645Z",
       "tags": [
         "产品",
         "平面设计",
@@ -5690,7 +6040,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.280Z",
+      "importedAt": "2026-07-12T09:27:29.645Z",
       "tags": [
         "平面设计"
       ],
@@ -5731,7 +6081,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-12T06:58:39.280Z",
+      "importedAt": "2026-07-12T09:27:29.645Z",
       "tags": [
         "平面设计"
       ],
