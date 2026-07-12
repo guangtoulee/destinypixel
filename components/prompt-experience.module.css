@@ -959,9 +959,20 @@
 .signalDeck {
   display: grid;
   margin-top: 24px;
+  overflow-x: auto;
+  padding: 0 0 18px;
+  scrollbar-color: var(--acid) rgba(255, 255, 255, 0.18);
+  grid-auto-columns: minmax(280px, 340px);
+  grid-auto-flow: column;
+}
+
+.articleDeck {
   gap: 1px;
-  overflow: hidden;
+  overflow: visible;
   background: var(--ink);
+  padding-bottom: 0;
+  grid-auto-columns: auto;
+  grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
@@ -969,7 +980,7 @@
   display: grid;
   min-height: 390px;
   align-content: start;
-  border: 0;
+  border-right: 1px solid var(--ink);
   color: var(--ink);
   background: var(--paper-bright);
   padding: 18px;
@@ -1099,6 +1110,46 @@
   place-items: center;
   border: 1px solid var(--ink);
   color: var(--ink);
+}
+
+.articleMore {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
+}
+
+.articleMore button {
+  display: inline-flex;
+  min-height: 53px;
+  flex: none;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  color: var(--ink);
+  background: var(--acid);
+  padding: 0 18px;
+  font-size: 10px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.articleMore button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.articleTimelineNote {
+  margin: 16px 0 0;
+  border-left: 3px solid var(--acid);
+  color: rgba(255, 255, 255, 0.72);
+  padding-left: 10px;
+  font-size: 10px;
 }
 
 .adminControls {
@@ -1921,7 +1972,28 @@
   }
 
   .signalDeck {
+    grid-auto-columns: minmax(270px, 84vw);
+  }
+
+  .articleDeck {
+    grid-auto-columns: auto;
+    grid-auto-flow: row;
     grid-template-columns: 1fr;
+  }
+
+  .articleMore {
+    align-items: stretch;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+
+  .articleMore span {
+    padding-inline: 4px;
+  }
+
+  .articleMore button {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .visualGrid {

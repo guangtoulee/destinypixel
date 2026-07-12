@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   Check,
   Clock3,
@@ -155,7 +156,7 @@ type PromptTranslation = {
 };
 
 type Status = "idle" | "loading" | "ready" | "error";
-type FeedFilter = "all" | PromptContentType;
+type FeedFilter = "all" | "article" | PromptContentType;
 type CategoryFilter = "all" | PromptCategory;
 type AdminStatus = "guest" | "checking" | "authenticated";
 
@@ -361,7 +362,11 @@ export default function PromptExperience() {
   const filteredItems = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
     return items.filter((item) => {
-      const typeMatch = activeFilter === "all" || item.contentType === activeFilter;
+      const typeMatch =
+        activeFilter === "all" ||
+        (activeFilter === "article"
+          ? item.sourceType === "x" && !mediaSrc(item)
+          : item.contentType === activeFilter);
       const categoryMatch = activeCategory === "all" || item.category === activeCategory;
       const queryMatch = query
         ? [
@@ -384,9 +389,18 @@ export default function PromptExperience() {
     });
   }, [activeCategory, activeFilter, items, searchTerm, translations]);
 
-  const signalItems = useMemo(
-    () => filteredItems.filter((item) => item.sourceType === "x"),
-    [filteredItems],
+  const signalItems = useMemo(() => {
+    const articles = filteredItems
+      .filter((item) => item.sourceType === "x" && !mediaSrc(item))
+      .sort((left, right) => {
+        if (left.isPinned !== right.isPinned) return left.isPinned ? -1 : 1;
+        return new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime();
+      });
+    return activeFilter === "article" ? articles : articles.slice(0, 10);
+  }, [activeFilter, filteredItems]);
+  const articleCount = useMemo(
+    () => items.filter((item) => item.sourceType === "x" && !mediaSrc(item)).length,
+    [items],
   );
   const visualItems = useMemo(
     () => {
@@ -1010,8 +1024,8 @@ export default function PromptExperience() {
       <section className={styles.radarSection} id="signals">
         <div className={styles.sectionHeading}>
           <div>
-            <p>公开信号 / 新内容持续累积</p>
-            <h2>正在被讨论的画面方法</h2>
+            <p>{activeFilter === "article" ? "文章档案 / 按发布时间倒序" : "最新文章 / 横向浏览"}</p>
+            <h2>{activeFilter === "article" ? "所有文章，沿时间线展开。" : "刚刚被讨论的画面方法"}</h2>
           </div>
           <div className={styles.radarStats}>
             <span><b>{sourceSummary?.publicX ?? signalItems.length}</b> X 信号</span>
@@ -1022,14 +1036,14 @@ export default function PromptExperience() {
 
         <div className={styles.radarToolbar}>
           <div className={styles.filterBar} aria-label="案例类型筛选">
-            {(["all", "image", "video", "prompt", "case"] as FeedFilter[]).map((filter) => (
+            {(["all", "image", "video", "prompt", "case", "article"] as FeedFilter[]).map((filter) => (
               <button
                 aria-pressed={activeFilter === filter}
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 type="button"
               >
-                {filter === "all" ? "全部" : contentLabel(filter)}
+                {filter === "all" ? "全部" : filter === "article" ? "文章" : contentLabel(filter)}
               </button>
             ))}
           </div>
@@ -1080,7 +1094,7 @@ export default function PromptExperience() {
         ) : null}
 
         {signalItems.length ? (
-          <div className={styles.signalDeck}>
+          <div className={`${styles.signalDeck} ${activeFilter === "article" ? styles.articleDeck : ""}`}>
             {signalItems.map((item, index) => (
               <article className={styles.signalCard} data-tone={index % 4} key={item.id}>
                 <div className={styles.signalMeta}>
@@ -1113,9 +1127,28 @@ export default function PromptExperience() {
             ))}
           </div>
         ) : null}
+
+        {activeFilter !== "article" && articleCount > signalItems.length ? (
+          <div className={styles.articleMore}>
+            <span>首页显示最新 {signalItems.length} 篇，共收录 {articleCount} 篇纯文字文章</span>
+            <button
+              onClick={() => {
+                setActiveFilter("article");
+                setActiveCategory("all");
+                setSearchTerm("");
+              }}
+              type="button"
+            >
+              查看全部文章 <ArrowRight aria-hidden="true" />
+            </button>
+          </div>
+        ) : activeFilter === "article" ? (
+          <p className={styles.articleTimelineNote}>已按发布时间从新到旧排列，共 {signalItems.length} 篇。</p>
+        ) : null}
       </section>
 
-      <section className={styles.caseSection} id="cases">
+      {activeFilter !== "article" ? (
+        <section className={styles.caseSection} id="cases">
         <div className={styles.caseMasthead}>
           <div>
             <p>视觉索引 / 带原图与原帖</p>
@@ -1192,7 +1225,8 @@ export default function PromptExperience() {
             <span>没有匹配的案例</span>
           </div>
         ) : null}
-      </section>
+        </section>
+      ) : null}
 
       <footer className={styles.dataFooter}>
         <details>
