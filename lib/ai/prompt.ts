@@ -64,6 +64,7 @@ export type PromptExpandRequest = {
   aspectRatio?: string;
   stylePreference?: string;
   avoid?: string;
+  variationSeed?: string;
 };
 
 export type PromptExpansionResult = {
@@ -661,6 +662,124 @@ export const seedPromptItems: PromptFeedItem[] = [
   }),
 ];
 
+const creativeDeck = {
+  visualApproach: [
+    "偶发瞬间的街头抓拍",
+    "近距离观察式人物小品",
+    "可真实搭建的荒诞广告概念",
+    "克制直接的目录摄影",
+    "带环境信息的低机位肖像",
+    "物件与人物互相讲故事的静物叙事",
+    "粗粝闪光灯纪实",
+    "轻松、未经排练的生活切片",
+    "具有平面秩序的现代编辑摄影",
+    "强调空间尺度的广角现场感",
+    "安静但带悬念的电影静帧",
+    "明快、带一点幽默的社交媒体影像",
+  ],
+  moment: [
+    "清晨店铺刚开门的短暂时刻",
+    "正午硬光把影子压得很短",
+    "雨刚停，地面仍有杂乱反光",
+    "傍晚自然光与室内灯开始混合",
+    "深夜便利店式混合色温",
+    "阴天均匀漫射光下的真实肤色",
+    "普通室内顶灯制造的不完美现场感",
+    "日落前十分钟快速变化的暖光",
+    "手机闪光灯突然照亮前景",
+    "车窗或地铁灯不断掠过主体",
+  ],
+  camera: [
+    "24mm 广角近距离，环境略有透视夸张",
+    "28mm 手持抓拍，轻微倾斜但主体稳定",
+    "35mm 环境人像，人物与场景信息并重",
+    "50mm 正常视角，像站在现场观察",
+    "70mm 中焦压缩，前后人物形成关系",
+    "90mm 远距离偷偷拍到的瞬间感",
+    "手机 0.5x 超广角，边缘有自然拉伸",
+    "手机 1x 主摄，自动曝光保留真实瑕疵",
+    "手机 2x 人像焦段，背景只是轻度虚化",
+    "近距离直闪，快门冻结细小动作",
+  ],
+  palette: [
+    "互补色碰撞，主色明确，背景保持中性",
+    "接近真实环境色，只保留一个醒目的高饱和点",
+    "冷暖混合色温，不强行统一成单一色调",
+    "高明度低饱和，材质颜色依然可辨",
+    "深色背景配局部高光，避免通篇压暗",
+    "日常塑料、金属和织物本身的颜色关系",
+    "带轻微偏色的消费级相机观感",
+    "干净黑白基底配一个意外的彩色物件",
+  ],
+  composition: [
+    "主体不完全居中，画外空间暗示下一步动作",
+    "前景遮挡一小部分画面，像从现场缝隙看过去",
+    "人物贴近画面边缘，环境占据更多叙事面积",
+    "对称结构中故意保留一个不对称细节",
+    "俯拍形成物件关系图，手部动作成为视觉中心",
+    "低机位让近处物体建立夸张尺度",
+    "半身近景截取在动作进行中，不摆标准姿势",
+    "大面积留白服务气氛，而不是预留海报文字",
+    "多层人物或物件形成前中后景视线接力",
+    "像朋友随手拍到的非标准裁切",
+  ],
+  texture: [
+    "保留轻微运动模糊、噪点和真实曝光误差",
+    "细节清楚但不过度锐化，皮肤与材料不过分抛光",
+    "消费级手机 HDR，亮部克制、暗部略有颗粒",
+    "胶片扫描般柔和高光与细颗粒",
+    "商业摄影的材质控制配少量现场瑕疵",
+    "空气中的水汽、灰尘或薄烟只作为空间证据",
+    "直闪产生硬边阴影和真实反光点",
+    "自然光下保留织物褶皱、指纹与使用痕迹",
+  ],
+  actionRhythm: [
+    "动作刚开始就切入，在结果发生前结束",
+    "先静止观察，再用一个小动作改变关系",
+    "主体动作与背景动作方向相反",
+    "用一次短暂遮挡完成自然转场",
+    "镜头跟不上动作半拍，形成真实反应感",
+    "从环境细节开始，快速找到主体动作",
+  ],
+};
+
+function seededChoice(seed: string, salt: string, options: string[]) {
+  let hash = 2166136261;
+  for (const character of `${seed}:${salt}`) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return options[Math.abs(hash) % options.length];
+}
+
+function buildCreativeStimulus(
+  input: Required<PromptExpandRequest> & {
+    language: PromptLanguage;
+    contentType: "image" | "video";
+  },
+) {
+  const seed = input.variationSeed || `${Date.now()}-${Math.random()}`;
+  const phoneMode = /手机|自拍|随手拍/i.test(input.stylePreference);
+  const selectedApproach = phoneMode
+    ? "手机前后摄像头的近距离随手拍，不使用电影机、影棚或昂贵镜头语言"
+    : seededChoice(seed, "approach", creativeDeck.visualApproach);
+  return {
+    variationId: seed,
+    selectedApproach,
+    moment: seededChoice(seed, "moment", creativeDeck.moment),
+    camera: phoneMode
+      ? seededChoice(seed, "phone-camera", creativeDeck.camera.slice(6))
+      : seededChoice(seed, "camera", creativeDeck.camera),
+    palette: seededChoice(seed, "palette", creativeDeck.palette),
+    composition: seededChoice(seed, "composition", creativeDeck.composition),
+    texture: seededChoice(seed, "texture", creativeDeck.texture),
+    actionRhythm:
+      input.contentType === "video"
+        ? seededChoice(seed, "action", creativeDeck.actionRhythm)
+        : "抓住动作进行中的瞬间，不使用僵硬标准姿势",
+  };
+}
+
 function fallbackPromptExpansion(
   input: Required<PromptExpandRequest> & { language: PromptLanguage; contentType: "image" | "video" },
   note?: string,
@@ -668,7 +787,11 @@ function fallbackPromptExpansion(
   const idea = cleanText(input.idea, "一个高级、真实、有清晰主体的 AI 视觉画面", 900);
   const isVideo = input.contentType === "video";
   const zh = input.language === "zh";
-  const style = input.stylePreference || (isVideo ? "真人写实视频" : "电影级商业摄影");
+  const stimulus = buildCreativeStimulus(input);
+  const style =
+    input.stylePreference === "随机拍摄"
+      ? stimulus.selectedApproach
+      : input.stylePreference || (isVideo ? "真人写实视频" : "电影级商业摄影");
   const aspectRatio = input.aspectRatio || (isVideo ? "9:16" : "3:4");
   const avoid = input.avoid || "水印、logo、乱码文字、低清模糊、主体漂移、畸形手、多余肢体";
   const title = zh ? `${idea.slice(0, 22)} · 基础整理` : `${idea.slice(0, 28)} · Basic draft`;
@@ -728,6 +851,7 @@ function fallbackPromptExpansion(
 function buildPromptExpansionMessages(
   input: Required<PromptExpandRequest> & { language: PromptLanguage; contentType: "image" | "video" },
 ): ChatMessage[] {
+  const creativeStimulus = buildCreativeStimulus(input);
   return [
     {
       role: "system",
@@ -740,6 +864,9 @@ function buildPromptExpansionMessages(
         "Choose additions from the actual semantic context. Campus, street, product, fantasy, documentary, fashion, food, architecture, and UI prompts must not share one recurring scene, palette, lens, pose, or mood.",
         "Do not copy examples, stock phrases, or a house template. Avoid defaulting to ink blue, ivory, mist, silver, window light, corridors, chiffon, embroidery, 85mm, or Eastern poetry unless the user's idea genuinely calls for them.",
         "Make the result feel art-directed and surprising while remaining faithful. Prefer specific nouns, physically plausible materials, micro-actions, spatial evidence, and a coherent visual idea over adjective stacking.",
+        "Treat variationSeed as a demand for a genuinely new direction. For repeated ideas, change at least five OPEN-SLOT decisions across setting, moment, light, lens distance, color relationship, composition, texture, and micro-action.",
+        "The creative stimulus is an anti-repetition nudge, not a new locked fact. Reinterpret or reject any stimulus that conflicts with the user's explicit idea, but do not fall back to the same house style.",
+        "When stylePreference requests phone selfie or casual mobile capture, use plausible phone optics, arm-length distance or friend-shot framing, available light/phone flash, consumer auto-exposure, and natural imperfections. Do not describe cinema cameras, studio rigs, or 85mm portrait lenses.",
         "Respect safety and commercial usability: do not add nudity, sexual anatomy, minors, young-looking sexualization, pornographic framing, or fetish detail. If the user asks for exposed sexual anatomy, transform it into tasteful fashion, portrait, swimwear, or editorial styling without explicit anatomy.",
         "Default to Chinese output when language is zh. Use English only when language is en.",
         "For video prompts include segmented timing, subject motion, camera motion, focus changes, and continuity constraints.",
@@ -769,6 +896,7 @@ function buildPromptExpansionMessages(
           aspectRatio: input.aspectRatio,
           stylePreference: input.stylePreference,
           avoid: input.avoid,
+          creativeStimulus,
           outputRules: [
             "The main prompt must be directly usable in image/video generation tools.",
             "Preserve every explicit fact exactly in meaning. Expansion means filling missing visual decisions, never replacing supplied ones.",
@@ -776,6 +904,7 @@ function buildPromptExpansionMessages(
             "Use concrete visual nouns and action constraints; avoid vague words only.",
             "For Chinese output, use vivid Chinese visual language suitable for copy-paste prompt generation.",
             "List preservedDetails and creativeAdditions separately so the user can audit what was kept and what was invented.",
+            "Use the variationId and creativeStimulus to make this run visibly different from prior runs while changing only OPEN SLOTS.",
             "Set variants to an empty array. Spend the output budget on one excellent prompt instead of alternate prompts.",
             "Negative prompt must include the user's avoid list plus no watermark, no messy text, no low quality, no distorted hands/fingers, no subject drift, no explicit sexual anatomy.",
           ],
@@ -809,6 +938,7 @@ function buildPromptRepairMessages(
       role: "user",
       content: JSON.stringify({
         ...input,
+        creativeStimulus: buildCreativeStimulus(input),
         instruction:
           "Produce a complete JSON response. For image prompts use roughly 180-340 Chinese characters; for video prompts use roughly 240-420 Chinese characters.",
       }),
@@ -890,6 +1020,11 @@ export function normalizePromptExpandRequest(body: PromptExpandRequest) {
     aspectRatio: cleanText(body.aspectRatio, contentType === "video" ? "9:16" : "3:4", 24),
     stylePreference: cleanText(body.stylePreference, "", 160),
     avoid: cleanText(body.avoid, "", 500),
+    variationSeed: cleanText(
+      body.variationSeed,
+      `${Date.now()}-${Math.random()}`,
+      120,
+    ),
   };
 }
 
@@ -916,7 +1051,7 @@ export async function expandPrompt(
       apiKey,
       messages: buildPromptExpansionMessages(input),
       maxTokens: 2000,
-      temperature: 0.68,
+      temperature: 1.05,
       timeoutMs: Math.min(PROMPT_DEEPSEEK_TIMEOUT_MS, 33000),
     });
     let parsed = primary.content ? parseJsonObject(primary.content) : null;
@@ -927,7 +1062,7 @@ export async function expandPrompt(
         apiKey,
         messages: buildPromptRepairMessages(input),
         maxTokens: 1500,
-        temperature: 0.42,
+        temperature: 0.72,
         timeoutMs: Math.min(PROMPT_DEEPSEEK_TIMEOUT_MS, 18000),
       });
       parsed = repair.content ? parseJsonObject(repair.content) : null;

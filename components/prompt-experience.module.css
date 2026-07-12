@@ -959,18 +959,17 @@
 .signalDeck {
   display: grid;
   margin-top: 24px;
-  overflow-x: auto;
-  padding: 0 0 18px;
-  scrollbar-color: var(--acid) rgba(255, 255, 255, 0.18);
-  grid-auto-columns: minmax(280px, 340px);
-  grid-auto-flow: column;
+  gap: 1px;
+  overflow: hidden;
+  background: var(--ink);
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
 .signalCard {
   display: grid;
   min-height: 390px;
   align-content: start;
-  border-right: 1px solid var(--ink);
+  border: 0;
   color: var(--ink);
   background: var(--paper-bright);
   padding: 18px;
@@ -1027,6 +1026,18 @@
   margin-left: auto;
   color: var(--blue);
   font-size: 8px;
+}
+
+.signalAuthor em {
+  margin-left: auto;
+  color: var(--blue);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.signalAuthor em + b {
+  margin-left: 0;
 }
 
 .signalAuthor b svg {
@@ -1822,12 +1833,18 @@
   }
 
   .controlRail {
-    flex-wrap: wrap;
+    display: grid;
+    min-height: 0;
+    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr) 112px;
   }
 
   .modeToggle {
+    display: grid;
     width: 100%;
     min-height: 48px;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
     border-right: 0;
     border-bottom: 1px solid var(--ink);
   }
@@ -1837,7 +1854,24 @@
   }
 
   .controlRail label {
-    min-height: 62px;
+    height: auto;
+    min-height: 78px;
+    align-content: center;
+    background: var(--paper-bright);
+    padding: 10px 12px;
+  }
+
+  .controlRail label:last-child {
+    max-width: none;
+  }
+
+  .controlRail select {
+    height: 34px;
+    border: 1px solid rgba(17, 17, 15, 0.35);
+    border-radius: 0;
+    background: #fff;
+    padding: 0 6px;
+    font-size: 11px;
   }
 
   .generateRow {
@@ -1887,7 +1921,7 @@
   }
 
   .signalDeck {
-    grid-auto-columns: minmax(270px, 84vw);
+    grid-template-columns: 1fr;
   }
 
   .visualGrid {

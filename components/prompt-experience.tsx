@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -149,6 +149,11 @@ type ImportResponse = {
   error?: string;
 };
 
+type PromptTranslation = {
+  title: string;
+  description: string;
+};
+
 type Status = "idle" | "loading" | "ready" | "error";
 type FeedFilter = "all" | PromptContentType;
 type CategoryFilter = "all" | PromptCategory;
@@ -167,6 +172,8 @@ const categoryOrder: PromptCategory[] = [
 ];
 
 const styleOptions = [
+  "随机拍摄",
+  "手机自拍 / 随手抓拍",
   "电影级商业摄影",
   "自然纪实摄影",
   "杂志时装大片",
@@ -215,11 +222,11 @@ function formatNumber(value: number) {
 }
 
 function sourceLabel(value: PromptSourceType) {
-  if (value === "x") return "X / LIVE";
-  if (value === "community") return "COMMUNITY INDEX";
-  if (value === "manual") return "MANUAL";
-  if (value === "api") return "PUBLIC API";
-  return "ARCHIVE";
+  if (value === "x") return "X / 实时";
+  if (value === "community") return "社区索引";
+  if (value === "manual") return "手动导入";
+  if (value === "api") return "公开 API";
+  return "历史归档";
 }
 
 function contentLabel(value: PromptContentType) {
@@ -338,6 +345,13 @@ export default function PromptExperience() {
   const [adminPassword, setAdminPassword] = useState("");
   const [adminError, setAdminError] = useState("");
   const [moderatingId, setModeratingId] = useState("");
+  const [translations, setTranslations] = useState<Record<string, PromptTranslation>>({});
+  const requestedTranslations = useRef(new Set<string>());
+
+  const displayTitle = (item: PromptFeedItem) =>
+    translations[item.id]?.title || item.title;
+  const displayDescription = (item: PromptFeedItem) =>
+    translations[item.id]?.description || item.description;
 
   const availableCategories = useMemo(
     () => categoryOrder.filter((category) => items.some((item) => item.category === category)),
@@ -353,6 +367,8 @@ export default function PromptExperience() {
         ? [
             item.title,
             item.description,
+            translations[item.id]?.title || "",
+            translations[item.id]?.description || "",
             item.prompt,
             item.tags.join(" "),
             item.modelHints.join(" "),
@@ -366,10 +382,10 @@ export default function PromptExperience() {
         : true;
       return typeMatch && categoryMatch && queryMatch;
     });
-  }, [activeCategory, activeFilter, items, searchTerm]);
+  }, [activeCategory, activeFilter, items, searchTerm, translations]);
 
   const signalItems = useMemo(
-    () => filteredItems.filter((item) => item.sourceType === "x").slice(0, 10),
+    () => filteredItems.filter((item) => item.sourceType === "x"),
     [filteredItems],
   );
   const visualItems = useMemo(
@@ -394,16 +410,13 @@ export default function PromptExperience() {
           const normalizedRight = rightRank === -1 ? editorialOrder.length : rightRank;
           if (normalizedLeft !== normalizedRight) return normalizedLeft - normalizedRight;
           return new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime();
-        })
-        .slice(0, 30);
+        });
     },
     [filteredItems],
   );
   const textArchive = useMemo(
     () =>
-      filteredItems
-        .filter((item) => item.sourceType !== "x" && !mediaSrc(item))
-        .slice(0, 8),
+      filteredItems.filter((item) => item.sourceType !== "x" && !mediaSrc(item)),
     [filteredItems],
   );
 
@@ -412,7 +425,7 @@ export default function PromptExperience() {
     setFeedError("");
     setFeedNotice("");
     try {
-      const params = new URLSearchParams({ limit: "48" });
+      const params = new URLSearchParams({ limit: "2000" });
       if (refresh) params.set("refresh", "1");
       const response = await fetch(`/api/prompt/feed?${params}`, { cache: "no-store" });
       const data = (await response.json()) as FeedResponse;
@@ -438,6 +451,49 @@ export default function PromptExperience() {
   useEffect(() => {
     void loadFeed(false);
   }, []);
+
+  useEffect(() => {
+    const ids = items
+      .filter(
+        (item) =>
+          item.sourceType === "x" &&
+          item.language === "en" &&
+          !translations[item.id] &&
+          !requestedTranslations.current.has(item.id),
+      )
+      .map((item) => item.id);
+    if (ids.length === 0) return;
+
+    let cancelled = false;
+    void (async () => {
+      for (let index = 0; index < ids.length; index += 16) {
+        if (cancelled) break;
+        const chunk = ids.slice(index, index + 16);
+        chunk.forEach((id) => requestedTranslations.current.add(id));
+        try {
+          const response = await fetch("/api/prompt/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ids: chunk }),
+          });
+          const data = (await response.json()) as {
+            translations?: Record<string, PromptTranslation>;
+          };
+          if (!response.ok || cancelled) continue;
+          setTranslations((current) => ({
+            ...current,
+            ...(data.translations || {}),
+          }));
+        } catch {
+          chunk.forEach((id) => requestedTranslations.current.delete(id));
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [items, translations]);
 
   async function copyText(value: string, key: string) {
     if (!value) return;
@@ -470,6 +526,10 @@ export default function PromptExperience() {
           aspectRatio,
           stylePreference,
           avoid,
+          variationSeed:
+            typeof crypto !== "undefined" && "randomUUID" in crypto
+              ? crypto.randomUUID()
+              : `${Date.now()}-${Math.random()}`,
         }),
       });
       const data = (await response.json()) as PromptExpansionResult & { error?: string };
@@ -675,14 +735,14 @@ export default function PromptExperience() {
 
       <div className={styles.signalTicker} aria-label="实时信号滚动条">
         <span className={styles.tickerLabel}>
-          <Radio aria-hidden="true" /> LIVE WIRE
+          <Radio aria-hidden="true" /> 实时线报
         </span>
         <div className={styles.tickerTrack}>
           {(items.filter((item) => item.sourceType === "x").slice(0, 5) || []).map(
             (item) => (
               <a href={item.sourceUrl} key={item.id} rel="noreferrer" target="_blank">
                 <b>{item.authorHandle || "@X"}</b>
-                <span>{item.title}</span>
+                <span>{displayTitle(item)}</span>
               </a>
             ),
           )}
@@ -950,7 +1010,7 @@ export default function PromptExperience() {
       <section className={styles.radarSection} id="signals">
         <div className={styles.sectionHeading}>
           <div>
-            <p>PUBLIC SIGNALS / 近 14 天</p>
+            <p>公开信号 / 新内容持续累积</p>
             <h2>正在被讨论的画面方法</h2>
           </div>
           <div className={styles.radarStats}>
@@ -993,7 +1053,7 @@ export default function PromptExperience() {
         </div>
 
         <div className={styles.categoryRail} aria-label="内容分类筛选">
-          <span>INDEX BY SUBJECT</span>
+          <span>按主题浏览</span>
           <button
             aria-pressed={activeCategory === "all"}
             onClick={() => setActiveCategory("all")}
@@ -1031,16 +1091,17 @@ export default function PromptExperience() {
                 <div className={styles.signalAuthor}>
                   <i aria-hidden="true" />
                   <span>{item.authorHandle || item.authorName || "X CREATOR"}</span>
+                  {translations[item.id] ? <em>中文译文</em> : null}
                   {item.isPinned ? <b><Pin aria-hidden="true" /> 置顶</b> : null}
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3>{displayTitle(item)}</h3>
+                <p>{displayDescription(item)}</p>
                 <div className={styles.signalTags}>
                   {item.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
                 <div className={styles.signalFooter}>
                   <span><Zap aria-hidden="true" /> {formatNumber(item.metrics.score)}</span>
-                  <span>{formatNumber(item.metrics.views)} views</span>
+                  <span>{formatNumber(item.metrics.views)} 浏览</span>
                   {item.sourceUrl ? (
                     <a href={item.sourceUrl} rel="noreferrer" target="_blank" title="打开 X 原帖">
                       <ArrowUpRight aria-hidden="true" />
@@ -1057,10 +1118,10 @@ export default function PromptExperience() {
       <section className={styles.caseSection} id="cases">
         <div className={styles.caseMasthead}>
           <div>
-            <p>VISUAL INDEX / 带原图与原帖</p>
+            <p>视觉索引 / 带原图与原帖</p>
             <h2>不是灵感图，是可以拆开的案例。</h2>
           </div>
-          <span>UPDATED {updatedAt ? formatDate(updatedAt) : "--"}</span>
+          <span>更新于 {updatedAt ? formatDate(updatedAt) : "--"}</span>
         </div>
 
         {feedStatus === "loading" && items.length === 0 ? (
@@ -1076,7 +1137,7 @@ export default function PromptExperience() {
                   {item.videoUrl && !item.imageUrl ? (
                     <video controls loop muted playsInline src={item.videoUrl} />
                   ) : (
-                    <img alt={item.title} loading="lazy" src={mediaSrc(item)} />
+                    <img alt={displayTitle(item)} loading="lazy" src={mediaSrc(item)} />
                   )}
                 </div>
                 <div className={styles.visualTopline}>
@@ -1085,7 +1146,7 @@ export default function PromptExperience() {
                 </div>
                 <div className={styles.visualCaption}>
                   <p>{sourceLabel(item.sourceType)} · {item.authorHandle || item.authorName || "COMMUNITY"}</p>
-                  <h3>{item.title}</h3>
+                  <h3>{displayTitle(item)}</h3>
                   <div className={styles.visualPrompt}>{item.prompt}</div>
                   <div className={styles.visualActions}>
                     <button
@@ -1114,7 +1175,7 @@ export default function PromptExperience() {
             {textArchive.map((item) => (
               <article key={item.id}>
                 <span>{item.category} / {sourceLabel(item.sourceType)}</span>
-                <h3>{item.title}</h3>
+                <h3>{displayTitle(item)}</h3>
                 <p>{item.prompt}</p>
                 <button onClick={() => void copyText(buildFeedCopy(item), item.id)} type="button">
                   <Copy aria-hidden="true" /> 复制整包

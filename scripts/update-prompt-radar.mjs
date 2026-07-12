@@ -341,6 +341,13 @@ function dedupe(items) {
   });
 }
 
+function isAllowedArchiveItem(item) {
+  const postId = item?.sourceUrl?.match(/status\/(\d+)/)?.[1];
+  if (postId && blockedPublicPostIds.has(postId)) return false;
+  const text = `${item?.title || ""} ${item?.description || ""} ${item?.prompt || ""}`;
+  return !/(?:onlyfans|porn|nsfw|nude|bikini|lingerie|ai girlfriend|virtual girlfriend|比基尼|内衣|情趣)/i.test(text);
+}
+
 async function main() {
   const previous = await fs
     .readFile(outputPath, "utf8")
@@ -352,16 +359,17 @@ async function main() {
     collectPublicX(),
   ]);
 
-  const communityItems =
-    communityResult.status === "fulfilled"
-      ? communityResult.value
-      : previous.items.filter((item) => item.sourceType === "community");
-  const xItems =
-    xResult.status === "fulfilled" && xResult.value.length > 0
-      ? xResult.value
-      : previous.items.filter((item) => item.sourceType === "x");
+  const previousItems = Array.isArray(previous.items) ? previous.items : [];
+  const freshCommunityItems =
+    communityResult.status === "fulfilled" ? communityResult.value : [];
+  const freshXItems =
+    xResult.status === "fulfilled" ? xResult.value : [];
 
-  const items = dedupe([...xItems, ...communityItems])
+  const items = dedupe([
+    ...freshXItems,
+    ...freshCommunityItems,
+    ...previousItems,
+  ].filter(isAllowedArchiveItem))
     .map((item) => ({
       ...item,
       category: inferCategory(
@@ -373,17 +381,16 @@ async function main() {
       const scoreDiff = (right.metrics?.score || 0) - (left.metrics?.score || 0);
       if (scoreDiff) return scoreDiff;
       return new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime();
-    })
-    .slice(0, 40);
+    });
 
   if (items.length === 0) throw new Error("No prompt radar items were collected");
 
   const payload = {
-    version: 2,
+    version: 3,
     updatedAt: new Date().toISOString(),
     sourceSummary: {
-      community: communityItems.length,
-      publicX: xItems.length,
+      community: items.filter((item) => item.sourceType === "community").length,
+      publicX: items.filter((item) => item.sourceType === "x").length,
       total: items.length,
     },
     items,
@@ -392,7 +399,7 @@ async function main() {
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
   console.log(
-    `Prompt radar updated: ${items.length} items (${xItems.length} public X, ${communityItems.length} community).`,
+    `Prompt radar updated: ${items.length} retained items (${freshXItems.length} fresh public X, ${freshCommunityItems.length} fresh community).`,
   );
 }
 

@@ -261,7 +261,7 @@ async function upsertSupabasePromptItems(items: PromptFeedItem[]) {
   }
 }
 
-export async function readPromptFeed(limit = 48) {
+export async function readPromptFeed(limit = 2000) {
   const supabase = await readSupabasePromptItems(Math.max(limit, 120));
   const localStore = await readLocalPromptStore();
   const moderation = await readPromptModeration();
@@ -293,7 +293,7 @@ export async function savePromptItems(items: PromptFeedItem[]) {
 
   const wroteSupabase = await upsertSupabasePromptItems(normalized);
   const localStore = await readLocalPromptStore();
-  const merged = dedupePromptItems([...normalized, ...localStore.items]).slice(0, 400);
+  const merged = dedupePromptItems([...normalized, ...localStore.items]);
   const updatedAt = new Date().toISOString();
 
   await writeLocalPromptStore({

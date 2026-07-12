@@ -11,8 +11,8 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const shouldRefresh = url.searchParams.get("refresh") === "1";
   const limit = Math.min(
-    72,
-    Math.max(12, Number(url.searchParams.get("limit") || 48)),
+    5000,
+    Math.max(12, Number(url.searchParams.get("limit") || 2000)),
   );
   let refresh:
     | Awaited<ReturnType<typeof collectPromptItemsFromX>>
