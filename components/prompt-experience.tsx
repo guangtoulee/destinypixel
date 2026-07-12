@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -31,6 +32,7 @@ import {
   Zap,
 } from "lucide-react";
 import styles from "./prompt-experience.module.css";
+import { promptCategoryLink, promptItemLink } from "@/lib/prompt-links";
 
 type PromptLanguage = "zh" | "en";
 type PromptContentType = "image" | "video" | "prompt" | "case";
@@ -1108,7 +1110,7 @@ export default function PromptExperience() {
                   {translations[item.id] ? <em>中文译文</em> : null}
                   {item.isPinned ? <b><Pin aria-hidden="true" /> 置顶</b> : null}
                 </div>
-                <h3>{displayTitle(item)}</h3>
+                <h3><Link href={promptItemLink(item)}>{displayTitle(item)}</Link></h3>
                 <p>{displayDescription(item)}</p>
                 <div className={styles.signalTags}>
                   {item.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}
@@ -1116,6 +1118,9 @@ export default function PromptExperience() {
                 <div className={styles.signalFooter}>
                   <span><Zap aria-hidden="true" /> {formatNumber(item.metrics.score)}</span>
                   <span>{formatNumber(item.metrics.views)} 浏览</span>
+                  <Link href={promptItemLink(item)} title="查看中文拆解">
+                    <ArrowRight aria-hidden="true" />
+                  </Link>
                   {item.sourceUrl ? (
                     <a href={item.sourceUrl} rel="noreferrer" target="_blank" title="打开 X 原帖">
                       <ArrowUpRight aria-hidden="true" />
@@ -1131,16 +1136,9 @@ export default function PromptExperience() {
         {activeFilter !== "article" && articleCount > signalItems.length ? (
           <div className={styles.articleMore}>
             <span>首页显示最新 {signalItems.length} 篇，共收录 {articleCount} 篇纯文字文章</span>
-            <button
-              onClick={() => {
-                setActiveFilter("article");
-                setActiveCategory("all");
-                setSearchTerm("");
-              }}
-              type="button"
-            >
+            <Link href="/prompt/articles">
               查看全部文章 <ArrowRight aria-hidden="true" />
-            </button>
+            </Link>
           </div>
         ) : activeFilter === "article" ? (
           <p className={styles.articleTimelineNote}>已按发布时间从新到旧排列，共 {signalItems.length} 篇。</p>
@@ -1174,12 +1172,12 @@ export default function PromptExperience() {
                   )}
                 </div>
                 <div className={styles.visualTopline}>
-                  <span>{item.isPinned ? "PINNED / " : ""}{item.category}</span>
+                  <Link href={promptCategoryLink(item.category)}>{item.isPinned ? "PINNED / " : ""}{item.category}</Link>
                   <span>{contentLabel(item.contentType)} / {item.aspectRatio}</span>
                 </div>
                 <div className={styles.visualCaption}>
                   <p>{sourceLabel(item.sourceType)} · {item.authorHandle || item.authorName || "COMMUNITY"}</p>
-                  <h3>{displayTitle(item)}</h3>
+                  <h3><Link href={promptItemLink(item)}>{displayTitle(item)}</Link></h3>
                   <div className={styles.visualPrompt}>{item.prompt}</div>
                   <div className={styles.visualActions}>
                     <button
@@ -1190,6 +1188,9 @@ export default function PromptExperience() {
                       {copied === item.id ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
                       {copied === item.id ? "已复制" : "复制整包"}
                     </button>
+                    <Link href={promptItemLink(item)}>
+                      中文拆解 <ArrowRight aria-hidden="true" />
+                    </Link>
                     {item.sourceUrl ? (
                       <a href={item.sourceUrl} rel="noreferrer" target="_blank">
                         原帖 <ExternalLink aria-hidden="true" />
@@ -1208,7 +1209,7 @@ export default function PromptExperience() {
             {textArchive.map((item) => (
               <article key={item.id}>
                 <span>{item.category} / {sourceLabel(item.sourceType)}</span>
-                <h3>{displayTitle(item)}</h3>
+                <h3><Link href={promptItemLink(item)}>{displayTitle(item)}</Link></h3>
                 <p>{item.prompt}</p>
                 <button onClick={() => void copyText(buildFeedCopy(item), item.id)} type="button">
                   <Copy aria-hidden="true" /> 复制整包

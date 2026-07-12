@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   category: "Lifestyle",
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
   alternates: {
     canonical: "/",
     languages: {

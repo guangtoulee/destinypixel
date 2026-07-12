@@ -15,6 +15,9 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 - Temple Sticks Oracle: ${absoluteUrl("/sticks")}
 - Insight Studios: ${absoluteUrl("/insights")}
 - AI Short Drama Script Studio: ${absoluteUrl("/juben")}
+- AI Prompt Radar and Chinese Prompt Studio: ${absoluteUrl("/prompt")}
+- Prompt trend article archive: ${absoluteUrl("/prompt/articles")}
+- Prompt editorial and source policy: ${absoluteUrl("/prompt/about")}
 - Dark visual version: ${absoluteUrl("/black")}
 
 ## Product Language
@@ -25,6 +28,9 @@ English, Simplified Chinese, and Russian.
 
 ## Privacy And Indexing
 Generated personal reports under /report/ are private and should not be indexed. Public search engines and AI crawlers should use the guide, homepage, and studio pages as the canonical context.
+
+## Prompt Radar
+Prompt Radar is a Chinese-language creative research tool. It indexes public AI image and video discussions, keeps original source attribution, and adds structured editorial notes, model guidance, prompt breakdowns, and replication advice. Category hubs under /prompt/category/ and selected case or article detail pages are the preferred citation targets. Public source excerpts remain attributed to their original authors; DestinyPixel's editorial interpretation is separately labeled.
 
 ## Safety Boundary
 DestinyPixel is for reflection, culture, and entertainment-informed self-guidance. It does not replace medical, legal, financial, psychological, or emergency advice.

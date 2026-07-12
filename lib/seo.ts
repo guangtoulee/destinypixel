@@ -225,9 +225,9 @@ export const routeSeo = {
   },
   prompt: {
     path: "/prompt",
-    title: "AI Prompt 雷达 | 热门图片视频提示词与中文扩写",
+    title: "AI Prompt 雷达 | 图片视频提示词、中文扩写与案例拆解",
     description:
-      "面向中文创作者的 AI prompt 工作台：聚合热门图片、视频 prompt 和案例，支持手动导入、图片反推 prompt、描述词扩写与每日收集任务架构。",
+      "面向中文创作者的 AI Prompt 工作台与案例库：智能扩写简单描述，图片反推 Prompt，按主题浏览热门图片、视频与工作流，并查看中文拆解和原始来源。",
     keywords: [
       "AI prompt",
       "提示词",
@@ -241,6 +241,10 @@ export const routeSeo = {
       "Grok image prompt",
       "Seedance video prompt",
       "Veo prompt",
+      "Seedance 2.0 prompt",
+      "手机自拍 prompt",
+      "AI人像提示词",
+      "AI视频运镜提示词",
     ],
   },
   black: {
