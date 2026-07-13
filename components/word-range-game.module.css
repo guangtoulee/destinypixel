@@ -1,0 +1,1182 @@
+.gameShell {
+  --cyan: #65e5e1;
+  --lime: #8ff0a7;
+  --amber: #ffc857;
+  --red: #ff5b64;
+  position: relative;
+  min-height: min(730px, calc(100svh - 132px));
+  overflow: hidden;
+  border: 1px solid rgba(112, 225, 222, 0.22);
+  border-radius: 7px;
+  color: #f7fbfc;
+  background: #071014;
+  box-shadow: 0 30px 72px rgba(6, 16, 20, 0.34);
+  isolation: isolate;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.gameShell:fullscreen {
+  width: 100vw;
+  height: 100svh;
+  min-height: 100svh;
+  border: 0;
+  border-radius: 0;
+}
+
+.worldBackdrop,
+.scanlines {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.worldBackdrop {
+  background:
+    linear-gradient(180deg, rgba(4, 12, 16, 0.28), rgba(2, 9, 12, 0.82)),
+    url("/danci/recall-command-base.webp") center / cover no-repeat;
+  transform: scale(1.015);
+}
+
+.scanlines {
+  z-index: -1;
+  opacity: 0.23;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(104, 230, 226, 0.08) 3px 4px),
+    radial-gradient(circle at 50% 34%, transparent 0 32%, rgba(0, 0, 0, 0.42) 88%);
+  mix-blend-mode: screen;
+}
+
+.briefing,
+.summary {
+  position: relative;
+  display: flex;
+  min-height: inherit;
+  flex-direction: column;
+}
+
+.briefing::before,
+.summary::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(3, 12, 16, 0.95) 0%, rgba(3, 12, 16, 0.78) 43%, rgba(3, 12, 16, 0.16) 74%),
+    linear-gradient(0deg, rgba(3, 12, 16, 0.8), transparent 50%);
+}
+
+.briefingTopline,
+.hud,
+.arenaFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.briefingTopline {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(101, 229, 225, 0.18);
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.73rem;
+  font-weight: 850;
+}
+
+.briefingTopline span {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.onlineSignal {
+  color: var(--lime);
+}
+
+.onlineSignal i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 14px var(--lime);
+  animation: signalPulse 1.4s ease-in-out infinite;
+}
+
+.briefingCopy {
+  width: min(650px, 100%);
+  margin: auto 0;
+  padding: 54px clamp(24px, 6vw, 78px) 40px;
+}
+
+.briefingCopy > p,
+.summary > p {
+  margin: 0 0 10px;
+  color: var(--cyan);
+  font-size: 0.77rem;
+  font-weight: 900;
+}
+
+.briefingCopy h2 {
+  max-width: 580px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-weight: 950;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-shadow: 0 0 34px rgba(101, 229, 225, 0.22);
+}
+
+.briefingRule {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 24px 0 28px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.84rem;
+  font-weight: 760;
+}
+
+.briefingRule span {
+  padding: 0 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.briefingRule span:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.launchButton,
+.exitButton {
+  min-height: 50px;
+  padding: 0 22px;
+  border: 1px solid var(--amber);
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.launchButton {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #111a1e;
+  background: var(--amber);
+  box-shadow: 0 0 30px rgba(255, 200, 87, 0.18);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.launchButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 42px rgba(255, 200, 87, 0.32);
+}
+
+.briefingStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: auto;
+  border-top: 1px solid rgba(101, 229, 225, 0.18);
+  background: rgba(2, 10, 13, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.briefingStats div {
+  min-width: 0;
+  padding: 17px 22px;
+  border-right: 1px solid rgba(101, 229, 225, 0.14);
+}
+
+.briefingStats span,
+.briefingStats strong {
+  display: block;
+}
+
+.briefingStats span {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.68rem;
+  font-weight: 760;
+}
+
+.briefingStats strong {
+  margin-top: 5px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.98rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.arena {
+  --aim-x: 50%;
+  --aim-y: 52%;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: inherit;
+  overflow: hidden;
+}
+
+.arena::before,
+.arena::after {
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arena::before {
+  border: 0 solid var(--red);
+  box-shadow: inset 0 0 100px rgba(255, 74, 85, 0.86);
+}
+
+.arena::after {
+  background: rgba(118, 255, 170, 0.14);
+  box-shadow: inset 0 0 120px rgba(104, 255, 172, 0.4);
+}
+
+.missState {
+  animation: arenaShake 380ms cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.missState::before {
+  animation: dangerFlash 540ms ease both;
+}
+
+.hitState::after {
+  animation: successFlash 420ms ease both;
+}
+
+.hud {
+  position: relative;
+  z-index: 12;
+  gap: 14px;
+  min-height: 70px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(101, 229, 225, 0.2);
+  background: rgba(2, 11, 14, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.missionId span,
+.scoreBlock span {
+  display: block;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.61rem;
+  font-weight: 800;
+}
+
+.missionId strong,
+.scoreBlock strong {
+  display: block;
+  margin-top: 2px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreBlock {
+  margin-left: auto;
+  text-align: right;
+}
+
+.progressTrack {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(12px, 36px));
+  gap: 4px;
+}
+
+.progressTrack i {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.14);
+  transform: skewX(-18deg);
+}
+
+.progressTrack .done {
+  background: var(--lime);
+  box-shadow: 0 0 10px rgba(143, 240, 167, 0.58);
+}
+
+.progressTrack .current {
+  background: var(--amber);
+  animation: currentWave 700ms ease-in-out infinite alternate;
+}
+
+.fullscreenButton {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(101, 229, 225, 0.24);
+  border-radius: 4px;
+  color: var(--cyan);
+  background: rgba(101, 229, 225, 0.07);
+}
+
+.sideHud {
+  position: absolute;
+  z-index: 13;
+  top: 84px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.shieldMeter,
+.comboMeter {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  border: 1px solid rgba(101, 229, 225, 0.18);
+  border-radius: 4px;
+  background: rgba(2, 11, 14, 0.75);
+  backdrop-filter: blur(9px);
+}
+
+.shieldMeter {
+  gap: 5px;
+  padding: 0 10px;
+  color: var(--cyan);
+}
+
+.shieldMeter i {
+  width: 18px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.13);
+  transform: skewX(-18deg);
+}
+
+.shieldMeter .shieldOn {
+  background: var(--cyan);
+  box-shadow: 0 0 9px rgba(101, 229, 225, 0.68);
+}
+
+.comboMeter {
+  gap: 7px;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.comboMeter span {
+  font-size: 0.63rem;
+  font-weight: 800;
+}
+
+.comboMeter strong {
+  color: #fff;
+}
+
+.comboHot {
+  border-color: rgba(255, 200, 87, 0.66);
+  color: var(--amber);
+  box-shadow: 0 0 24px rgba(255, 200, 87, 0.13);
+  animation: comboThrob 620ms ease-in-out infinite alternate;
+}
+
+.commandPanel {
+  position: relative;
+  z-index: 8;
+  display: grid;
+  justify-items: center;
+  width: min(680px, calc(100% - 32px));
+  min-height: 122px;
+  margin: 26px auto 0;
+  padding: 14px 20px;
+  border: 1px solid rgba(101, 229, 225, 0.34);
+  border-radius: 5px;
+  background: rgba(2, 12, 15, 0.82);
+  box-shadow: 0 0 38px rgba(24, 181, 186, 0.08), inset 0 0 30px rgba(101, 229, 225, 0.03);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.modeChip {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid rgba(255, 200, 87, 0.34);
+  border-radius: 3px;
+  color: var(--amber);
+  background: rgba(255, 200, 87, 0.07);
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.commandPanel > strong {
+  margin: 4px 0 1px;
+  color: #fff;
+  font-size: clamp(1.7rem, 4vw, 2.55rem);
+  font-weight: 950;
+  line-height: 1.05;
+  text-shadow: 0 0 24px rgba(101, 229, 225, 0.22);
+}
+
+.commandPanel > small {
+  max-width: 530px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.commandPanel > button {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin: 4px 0 5px;
+  place-items: center;
+  border: 1px solid rgba(101, 229, 225, 0.46);
+  border-radius: 50%;
+  color: #061115;
+  background: var(--cyan);
+  box-shadow: 0 0 30px rgba(101, 229, 225, 0.26);
+  animation: audioBeacon 1.2s ease-in-out infinite;
+}
+
+.droneField {
+  position: relative;
+  z-index: 7;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(8px, 2vw, 18px);
+  align-items: center;
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0 28px;
+}
+
+.drone {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 170px;
+  padding: 80px 8px 10px;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.45));
+  animation: droneFloat var(--drift-speed) ease-in-out var(--drift-delay) infinite alternate;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.drone:nth-child(2n) {
+  transform: translateY(24px);
+}
+
+.drone:disabled {
+  cursor: default;
+}
+
+.droneWing,
+.droneCore {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+}
+
+.droneWing {
+  width: 118px;
+  height: 47px;
+  border: 1px solid rgba(101, 229, 225, 0.6);
+  clip-path: polygon(0 34%, 34% 0, 50% 25%, 66% 0, 100% 34%, 84% 100%, 16% 100%);
+  background: linear-gradient(180deg, #20343b, #081318 74%);
+  box-shadow: inset 0 0 16px rgba(101, 229, 225, 0.1), 0 0 16px rgba(101, 229, 225, 0.08);
+  transform: translateX(-50%);
+  transition: filter 120ms ease, transform 120ms ease;
+}
+
+.droneCore {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 2px solid rgba(255, 200, 87, 0.68);
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffdb7c 0 12%, #7e4d13 14% 20%, #071115 24% 58%, #20353a 60%);
+  box-shadow: 0 0 22px rgba(255, 200, 87, 0.2);
+  transform: translate(-50%, -4px);
+}
+
+.droneCore i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff1b8;
+  box-shadow: 0 0 13px var(--amber);
+}
+
+.drone strong,
+.drone small {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.drone strong {
+  align-self: end;
+  min-height: 52px;
+  padding: 9px 7px;
+  border: 1px solid rgba(101, 229, 225, 0.28);
+  border-radius: 4px;
+  background: rgba(2, 12, 15, 0.88);
+  font-size: clamp(0.75rem, 1.45vw, 1rem);
+  line-height: 1.25;
+  backdrop-filter: blur(9px);
+}
+
+.drone small {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+
+.drone:hover .droneWing,
+.drone:focus-visible .droneWing {
+  filter: brightness(1.35);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.drone:active .droneWing {
+  filter: brightness(1.8);
+  transform: translateX(-50%) scale(0.94);
+}
+
+.destroyed {
+  animation: droneDestroy 600ms ease both;
+}
+
+.destroyed .droneWing,
+.destroyed .droneCore {
+  filter: brightness(2.2);
+}
+
+.deflected {
+  animation: droneDeflect 460ms ease both;
+}
+
+.particleBurst {
+  position: absolute;
+  z-index: 5;
+  top: 56px;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+}
+
+.particleBurst i {
+  --angle: calc(var(--particle) * 36deg);
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  background: var(--lime);
+  box-shadow: 0 0 8px var(--lime);
+  animation: particleFly 620ms ease-out both;
+  transform: rotate(var(--angle)) translateX(0);
+}
+
+.bossField {
+  position: relative;
+  z-index: 7;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.65fr) minmax(320px, 1.35fr);
+  gap: 24px;
+  align-items: center;
+  width: min(950px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 14px 0 28px;
+}
+
+.bossCore {
+  position: relative;
+  display: grid;
+  width: min(230px, 100%);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: center;
+  border: 1px solid rgba(255, 91, 100, 0.62);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 91, 100, 0.92) 0 7%, transparent 8% 25%, rgba(255, 91, 100, 0.2) 26% 27%, transparent 28% 48%, rgba(255, 91, 100, 0.24) 49% 50%, rgba(3, 12, 16, 0.72) 51%);
+  box-shadow: 0 0 60px rgba(255, 91, 100, 0.2), inset 0 0 48px rgba(255, 91, 100, 0.13);
+  animation: bossRotate 8s linear infinite;
+}
+
+.bossCore::before,
+.bossCore::after,
+.bossCore span {
+  position: absolute;
+  border: 1px dashed rgba(255, 200, 87, 0.5);
+  border-radius: 50%;
+  content: "";
+}
+
+.bossCore::before { inset: 12%; }
+.bossCore::after { inset: 28%; }
+.bossCore span { inset: -8%; animation: bossRotate 5s linear infinite reverse; }
+
+.bossCore i {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 950;
+  transform: rotate(0deg);
+}
+
+.spellConsole {
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid rgba(101, 229, 225, 0.28);
+  border-radius: 5px;
+  background: rgba(2, 11, 14, 0.86);
+  backdrop-filter: blur(12px);
+}
+
+.spellSlots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.spellSlots span {
+  display: grid;
+  width: clamp(28px, 4vw, 40px);
+  height: 44px;
+  place-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.spellSlots .filledSlot {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  text-shadow: 0 0 14px rgba(101, 229, 225, 0.55);
+}
+
+.letterRack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+}
+
+.letterRack button,
+.spellActions button {
+  display: grid;
+  min-width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(101, 229, 225, 0.32);
+  border-radius: 4px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(38, 69, 76, 0.94), rgba(7, 20, 25, 0.98));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.letterRack button:disabled {
+  opacity: 0.18;
+}
+
+.letterRack button:not(:disabled):active,
+.spellActions button:not(:disabled):active {
+  transform: translateY(2px) scale(0.96);
+}
+
+.letterRack .deleteKey {
+  color: var(--amber);
+  border-color: rgba(255, 200, 87, 0.36);
+}
+
+.spellActions {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+}
+
+.spellActions .fireButton {
+  display: inline-flex;
+  width: auto;
+  min-width: 128px;
+  gap: 8px;
+  padding: 0 16px;
+  border-color: var(--amber);
+  color: #111a1e;
+  background: var(--amber);
+}
+
+.aimReticle {
+  position: absolute;
+  z-index: 19;
+  top: var(--aim-y);
+  left: var(--aim-x);
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(101, 229, 225, 0.8);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 120ms ease;
+}
+
+.arena:hover .aimReticle {
+  opacity: 0.72;
+}
+
+.aimReticle::before,
+.aimReticle::after,
+.aimReticle span,
+.aimReticle i {
+  position: absolute;
+  content: "";
+  background: var(--cyan);
+}
+
+.aimReticle::before { width: 1px; height: 70px; }
+.aimReticle::after { width: 70px; height: 1px; }
+.aimReticle span { width: 8px; height: 8px; border-radius: 50%; }
+.aimReticle i { width: 22px; height: 22px; border: 1px solid var(--cyan); border-radius: 50%; background: transparent; }
+
+.tracer {
+  --origin-x: 50%;
+  --origin-y: calc(100% - 44px);
+  position: absolute;
+  z-index: 18;
+  top: var(--origin-y);
+  left: var(--origin-x);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 8px #fff, 0 0 22px var(--cyan);
+  pointer-events: none;
+  animation: tracerFire 260ms ease-out both;
+}
+
+.tracerMiss {
+  box-shadow: 0 0 8px #fff, 0 0 22px var(--red);
+}
+
+.combatFeedback {
+  position: absolute;
+  z-index: 24;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: min(410px, calc(100% - 36px));
+  padding: 14px 17px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(16px);
+  animation: feedbackIn 260ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.combatFeedback strong,
+.combatFeedback span {
+  display: block;
+}
+
+.combatFeedback strong {
+  font-size: 1.08rem;
+}
+
+.combatFeedback span {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+}
+
+.feedbackGood {
+  border-color: rgba(143, 240, 167, 0.7);
+  background: rgba(7, 71, 48, 0.88);
+  box-shadow: 0 0 46px rgba(143, 240, 167, 0.2);
+}
+
+.feedbackBad {
+  border-color: rgba(255, 91, 100, 0.72);
+  background: rgba(91, 18, 26, 0.9);
+  box-shadow: 0 0 46px rgba(255, 91, 100, 0.2);
+}
+
+.arenaFooter {
+  position: relative;
+  z-index: 12;
+  min-height: 38px;
+  padding: 0 14px;
+  border-top: 1px solid rgba(101, 229, 225, 0.16);
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(2, 11, 14, 0.86);
+  font-size: 0.62rem;
+  font-weight: 780;
+}
+
+.arenaFooter span:last-child {
+  color: var(--cyan);
+}
+
+.overdrive .worldBackdrop {
+  filter: saturate(1.25);
+}
+
+.summary {
+  align-items: center;
+  justify-content: center;
+  padding: 40px 22px;
+  text-align: center;
+}
+
+.summary::before {
+  background: radial-gradient(circle at 50% 42%, rgba(20, 91, 83, 0.28), rgba(2, 10, 13, 0.93) 62%);
+}
+
+.rankSeal {
+  position: relative;
+  display: grid;
+  width: 144px;
+  height: 144px;
+  margin-bottom: 24px;
+  place-items: center;
+  border: 1px solid rgba(255, 200, 87, 0.66);
+  border-radius: 50%;
+  background: rgba(255, 200, 87, 0.08);
+  box-shadow: 0 0 60px rgba(255, 200, 87, 0.2), inset 0 0 28px rgba(255, 200, 87, 0.08);
+}
+
+.rankSeal::before {
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(255, 200, 87, 0.48);
+  border-radius: 50%;
+  content: "";
+  animation: bossRotate 9s linear infinite;
+}
+
+.rankSeal svg {
+  position: absolute;
+  top: 23px;
+  color: var(--amber);
+}
+
+.rankSeal strong {
+  margin-top: 10px;
+  color: var(--amber);
+  font-size: 3.5rem;
+  font-weight: 950;
+}
+
+.rankSeal span {
+  position: absolute;
+  bottom: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.62rem;
+  font-weight: 850;
+}
+
+.summary h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  letter-spacing: 0;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(580px, 100%);
+  margin: 26px 0 14px;
+  border: 1px solid rgba(101, 229, 225, 0.18);
+  background: rgba(2, 11, 14, 0.64);
+}
+
+.summaryGrid div {
+  padding: 14px;
+  border-right: 1px solid rgba(101, 229, 225, 0.14);
+}
+
+.summaryGrid span,
+.summaryGrid strong {
+  display: block;
+}
+
+.summaryGrid span {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.68rem;
+}
+
+.summaryGrid strong {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 1.45rem;
+}
+
+.wordLoot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 680px;
+  margin: 6px 0 26px;
+}
+
+.wordLoot span {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid rgba(101, 229, 225, 0.2);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(101, 229, 225, 0.05);
+  font-size: 0.75rem;
+}
+
+.wordLoot b {
+  color: var(--cyan);
+}
+
+.summary .launchButton {
+  min-width: 170px;
+}
+
+.exitButton {
+  margin-top: 9px;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.54);
+  background: transparent;
+}
+
+@keyframes signalPulse { 50% { opacity: 0.35; transform: scale(0.72); } }
+@keyframes currentWave { to { opacity: 0.45; } }
+@keyframes comboThrob { to { transform: scale(1.04); } }
+@keyframes audioBeacon { 50% { box-shadow: 0 0 46px rgba(101, 229, 225, 0.48); transform: scale(1.05); } }
+@keyframes droneFloat { from { translate: 0 -9px; rotate: -1.5deg; } to { translate: 0 12px; rotate: 1.5deg; } }
+@keyframes droneDestroy { 45% { transform: scale(1.18); opacity: 1; } 100% { transform: scale(0.28) rotate(12deg); opacity: 0; filter: brightness(3); } }
+@keyframes droneDeflect { 25% { transform: translateX(-12px) rotate(-4deg); } 55% { transform: translateX(10px) rotate(3deg); } 100% { transform: translateX(0); } }
+@keyframes particleFly { to { opacity: 0; transform: rotate(var(--angle)) translateX(78px) scale(0.2); } }
+@keyframes bossRotate { to { transform: rotate(360deg); } }
+@keyframes tracerFire { to { top: var(--shot-y); left: var(--shot-x); transform: scale(0.25); } }
+@keyframes arenaShake { 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+@keyframes dangerFlash { 20%, 70% { opacity: 1; border-width: 4px; } 100% { opacity: 0; } }
+@keyframes successFlash { 25% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes feedbackIn { from { opacity: 0; transform: translate(-50%, -42%) scale(0.9); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+
+@media (max-width: 800px) {
+  .gameShell {
+    min-height: min(680px, calc(100svh - 126px));
+  }
+
+  .briefingCopy {
+    padding: 44px 24px 28px;
+  }
+
+  .briefingCopy h2 {
+    max-width: 430px;
+    font-size: clamp(2.75rem, 13vw, 4.8rem);
+  }
+
+  .briefingStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .briefingStats div {
+    padding: 12px 14px;
+  }
+
+  .hud {
+    min-height: 58px;
+    padding: 8px 9px;
+  }
+
+  .progressTrack {
+    position: absolute;
+    right: 9px;
+    bottom: -7px;
+    left: 9px;
+  }
+
+  .scoreBlock strong,
+  .missionId strong {
+    font-size: 0.9rem;
+  }
+
+  .fullscreenButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sideHud {
+    top: 72px;
+    right: 10px;
+    left: 10px;
+    justify-content: space-between;
+  }
+
+  .commandPanel {
+    min-height: 116px;
+    margin-top: 54px;
+    padding: 12px 14px;
+  }
+
+  .commandPanel > strong {
+    font-size: 1.78rem;
+  }
+
+  .commandPanel > small {
+    max-width: 100%;
+    font-size: 0.68rem;
+  }
+
+  .droneField {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 8px;
+    align-content: center;
+    padding: 4px 0 8px;
+  }
+
+  .drone {
+    min-height: 127px;
+    padding-top: 66px;
+  }
+
+  .drone:nth-child(2n) {
+    transform: none;
+  }
+
+  .droneWing,
+  .droneCore {
+    top: 20px;
+  }
+
+  .droneWing {
+    width: 96px;
+    height: 38px;
+  }
+
+  .droneCore {
+    width: 44px;
+    height: 44px;
+  }
+
+  .drone strong {
+    min-height: 42px;
+    padding: 7px 5px;
+    font-size: 0.78rem;
+  }
+
+  .bossField {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 6px 0 12px;
+  }
+
+  .bossCore {
+    width: 105px;
+  }
+
+  .bossCore i {
+    font-size: 0.85rem;
+  }
+
+  .spellConsole {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .spellSlots span {
+    width: 27px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .letterRack button,
+  .spellActions button {
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .arenaFooter {
+    min-height: 30px;
+  }
+
+  .arenaFooter span:nth-child(2) {
+    display: none;
+  }
+
+  .aimReticle {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .gameShell {
+    min-height: 660px;
+  }
+
+  .briefingTopline {
+    padding: 15px;
+  }
+
+  .briefingRule {
+    gap: 8px;
+  }
+
+  .briefingRule span {
+    padding: 0 9px;
+    font-size: 0.75rem;
+  }
+
+  .commandPanel {
+    width: calc(100% - 20px);
+  }
+
+  .droneField,
+  .bossField {
+    width: calc(100% - 16px);
+  }
+
+  .shieldMeter,
+  .comboMeter {
+    padding: 0 8px;
+  }
+
+  .shieldMeter i {
+    width: 13px;
+  }
+
+  .combatFeedback {
+    padding: 12px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gameShell *,
+  .gameShell *::before,
+  .gameShell *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -29,6 +29,7 @@ import {
   chooseAllowedEnglishVoice,
   getAllowedEnglishVoices,
 } from "@/lib/english-voices";
+import WordRangeGame, { RangeAnswer } from "./word-range-game";
 import styles from "./english-learning-experience.module.css";
 
 type LevelId = "starter" | "foundation" | "bridge" | "boost";
@@ -1428,18 +1429,6 @@ function chooseBestVoice(voices: SpeechSynthesisVoice[], savedURI: string) {
   return chooseAllowedEnglishVoice(voices, savedURI);
 }
 
-function getTargetOptions(deck: WordEntry[], targetIndex: number, rounds: number) {
-  const indexes = [targetIndex];
-  for (let offset = 1; indexes.length < 3 && offset < deck.length; offset += 1) {
-    const nextIndex = (targetIndex + offset * 2) % deck.length;
-    if (!indexes.includes(nextIndex)) {
-      indexes.push(nextIndex);
-    }
-  }
-
-  return rotateOptions(indexes, rounds);
-}
-
 function formatSavedTime(date: Date | null) {
   if (!date) return "等待保存";
   return date.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
@@ -1494,7 +1483,6 @@ export default function EnglishLearningExperience() {
   const [spellingValue, setSpellingValue] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [speechNotice, setSpeechNotice] = useState("正在读取英文语音");
-  const [targetFeedback, setTargetFeedback] = useState("先听单词，再点中对应的中文靶心。");
   const [textbookSpellingValue, setTextbookSpellingValue] = useState("");
   const [textbookOcrBusy, setTextbookOcrBusy] = useState(false);
   const [textbookOcrMessage, setTextbookOcrMessage] = useState("");
@@ -1516,14 +1504,6 @@ export default function EnglishLearningExperience() {
     [voices, memory.voiceURI],
   );
   const targetDeck = wordDecks[levelId];
-  const targetIndex = memory.targetStats.rounds % targetDeck.length;
-  const targetOptions = useMemo(
-    () => getTargetOptions(targetDeck, targetIndex, memory.targetStats.rounds),
-    [memory.targetStats.rounds, targetDeck, targetIndex],
-  );
-  const targetAccuracy = memory.targetStats.rounds
-    ? Math.round((memory.targetStats.score / memory.targetStats.rounds) * 100)
-    : 0;
   const selectedBook =
     textbookCatalog.find((book) => book.id === memory.textbook.bookId) ??
     textbookCatalog.find((book) => book.id === "g7a") ??
@@ -1831,24 +1811,28 @@ export default function EnglishLearningExperience() {
     });
   }
 
-  function answerTarget(optionIndex: number) {
-    const [word, meaning, sample] = targetDeck[targetIndex];
-    const [, chosenMeaning] = targetDeck[optionIndex];
-    const isCorrect = chosenMeaning === meaning;
+  function answerTarget(result: RangeAnswer) {
+    const [word, meaning] = result.word;
+    const modeLabel = {
+      meaning: "识义拦截",
+      audio: "声纹追踪",
+      reverse: "反向锁定",
+      spelling: "拼写破盾",
+    }[result.mode];
 
     patchMemory((current) => {
       const nextKnown = { ...current.knownWords };
       const nextReview = { ...current.reviewWords };
       const nextStats: TargetStats = {
-        score: current.targetStats.score + (isCorrect ? 1 : 0),
+        score: current.targetStats.score + (result.correct ? 1 : 0),
         rounds: current.targetStats.rounds + 1,
-        streak: isCorrect ? current.targetStats.streak + 1 : 0,
+        streak: result.correct ? current.targetStats.streak + 1 : 0,
         bestStreak: current.targetStats.bestStreak,
       };
       nextStats.bestStreak = Math.max(nextStats.bestStreak, nextStats.streak);
 
       let wrongItems = current.wrongItems;
-      if (isCorrect) {
+      if (result.correct) {
         nextKnown[word] = {
           word,
           meaning,
@@ -1863,10 +1847,10 @@ export default function EnglishLearningExperience() {
         const previous = wrongMap.get(id);
         wrongMap.set(id, {
           id,
-          prompt: `单词靶场：${word}`,
+          prompt: `单词靶场 · ${modeLabel}：${word}`,
           answer: meaning,
-          chosen: chosenMeaning,
-          type: "单词靶场",
+          chosen: result.chosen,
+          type: `单词靶场·${modeLabel}`,
           date: new Date().toISOString(),
           times: (previous?.times ?? 0) + 1,
         });
@@ -1885,12 +1869,6 @@ export default function EnglishLearningExperience() {
         },
       };
     });
-
-    setTargetFeedback(
-      isCorrect
-        ? `命中：${word} = ${meaning}。例句：${sample}`
-        : `偏了：${word} 是「${meaning}」，不是「${chosenMeaning}」。已放进复习词。`,
-    );
   }
 
   function addShadow(index: number) {
@@ -2486,10 +2464,10 @@ export default function EnglishLearningExperience() {
     {
       key: "target",
       chip: "Game",
-      title: "单词靶场",
-      text: "看英文点中文，专门把词义反应速度和错词记忆练起来。",
+      title: "单词空港防线",
+      text: "移动靶拦截、听音锁定、反向召回，再用拼写 Boss 验证是否真的记住。",
       tab: "target",
-      action: "去打靶",
+      action: "进入战场",
     },
     {
       key: "textbook",
@@ -2768,70 +2746,15 @@ export default function EnglishLearningExperience() {
         )}
 
         {activeTab === "target" && (
-          <section className={styles.tabPanel}>
-            <div className={styles.panelHeading}>
-              <div>
-                <p className={styles.sectionKicker}>Target Game</p>
-                <h2>单词靶场</h2>
-              </div>
-              <button type="button" className={styles.secondaryAction} onClick={() => speak(targetDeck[targetIndex][0], 0.72)}>
-                <Volume2 size={17} />
-                听当前词
-              </button>
-            </div>
-            <div className={styles.targetArena}>
-              <div className={styles.targetHud} aria-label="靶场得分">
-                <div>
-                  <span>命中</span>
-                  <strong>{memory.targetStats.score}</strong>
-                </div>
-                <div>
-                  <span>轮数</span>
-                  <strong>{memory.targetStats.rounds}</strong>
-                </div>
-                <div>
-                  <span>正确率</span>
-                  <strong>{targetAccuracy}%</strong>
-                </div>
-                <div>
-                  <span>连击</span>
-                  <strong>{memory.targetStats.streak}</strong>
-                </div>
-                <div>
-                  <span>最佳</span>
-                  <strong>{memory.targetStats.bestStreak}</strong>
-                </div>
-              </div>
-
-              <div className={styles.targetPrompt}>
-                <button type="button" className={styles.soundButton} onClick={() => speak(`${targetDeck[targetIndex][0]}. ${targetDeck[targetIndex][2]}`, 0.72)}>
-                  <Volume2 size={18} />
-                </button>
-                <div>
-                  <span>Tap the matching meaning</span>
-                  <h3>{targetDeck[targetIndex][0]}</h3>
-                  <p>{targetDeck[targetIndex][2]}</p>
-                </div>
-              </div>
-
-              <div className={styles.targetGrid}>
-                {targetOptions.map((optionIndex) => {
-                  const [, meaning] = targetDeck[optionIndex];
-                  return (
-                    <button
-                      key={`${targetDeck[targetIndex][0]}-${meaning}`}
-                      type="button"
-                      className={styles.targetButton}
-                      onClick={() => answerTarget(optionIndex)}
-                    >
-                      <span className={styles.targetRings} aria-hidden="true" />
-                      <strong>{meaning}</strong>
-                    </button>
-                  );
-                })}
-              </div>
-              <div className={styles.targetFeedback}>{targetFeedback}</div>
-            </div>
+          <section className={`${styles.tabPanel} ${styles.targetGamePanel}`}>
+            <WordRangeGame
+              deck={targetDeck}
+              levelLabel={`${level.name} · ${level.range}`}
+              reviewWords={Object.keys(memory.reviewWords).filter((word) => memory.reviewWords[word])}
+              stats={memory.targetStats}
+              onAnswer={answerTarget}
+              onSpeak={speak}
+            />
           </section>
         )}
 
