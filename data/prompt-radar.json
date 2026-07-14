@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-13T21:35:18.778Z",
+  "updatedAt": "2026-07-14T04:28:27.821Z",
   "sourceSummary": {
     "community": 112,
-    "publicX": 110,
-    "total": 222
+    "publicX": 111,
+    "total": 223
   },
   "items": [
     {
@@ -327,7 +327,7 @@
       "authorName": "Kōda",
       "authorHandle": "@aimikoda",
       "createdAt": "2026-07-12T06:05:44.000Z",
-      "importedAt": "2026-07-13T21:35:18.773Z",
+      "importedAt": "2026-07-14T04:28:27.816Z",
       "tags": [
         "GPT Image 2",
         "Midjourney",
@@ -351,13 +351,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 635,
-        "reposts": 69,
-        "replies": 30,
+        "likes": 679,
+        "reposts": 76,
+        "replies": 31,
         "quotes": 2,
-        "bookmarks": 424,
-        "views": 33581,
-        "score": 2921
+        "bookmarks": 461,
+        "views": 35540,
+        "score": 3153
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Midjourney + Seedance 2.0 - Prompt Share Contemporary dance performance. Character generated with Midjourney v8.2 preview, storyboard generated with GPT Image 2 and the video generated with Seedance 2.0 You can find the sref and prompts below."
@@ -1288,6 +1288,49 @@
       "rawText": "A 20-year-old finished a $40,000 animation before her flight started boarding. She was sitting at the airport with one carry-on, an iPhone plugged into the wall, and a lollipop in her mouth. No camera. No editing computer. She has never opened Blender. She found a viral 3D animation on TikTok, took a screenshot and uploaded it to ChatGPT with one sentence: “Write the prompt for a video like this.” ChatGPT broke down the lighting, camera movement, textures and character design. She copied the result into an AI video generator. A few minutes later, a pineapple in sunglasses, a crowned strawberry and a blueberry holding a glass were fully animated, voiced and lip-synced. She uploaded the finished short to YouTube before boarding began. A traditional animation studio would need a team, two months and roughly $40,000 to produce the same kind of video. She did it beside an airport charging outlet with a phone in one hand. The production advantage is no longer owning a studio. It is knowing what to show the machine."
     },
     {
+      "id": "x-public-2076690363469943245",
+      "title": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Chara",
+      "description": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly cons",
+      "prompt": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly consistent character still look like a slideshow instead of a scene. The secret is camera vocabulary. The creators whose sequences actually feel directed aren't writing better character prompts than you. They're issuing real camera instructions instead of vague ones — and most people never learn the difference. There's a free reference that makes this fast to fix: aicameramovements,com It's not a generation tool, it's a vocabulary bank — every camera move broken down into name, description, speed, framing, and exactly how the shot should end. Whip pan left, tilt up, crash zoom out, dolly in, truck right — each one with a ready-to-copy prompt attached. What actually changes once you use real terms instead of vague ones: - \"Camera moves closer\" becomes \"dolly in — smooth controlled push, subject position consistent while distance closes, finish in a tighter composition\" - \"Fast cut to wide\" becomes \"crash zoom out — snap the lens rapidly away, land on a bold wider composition\" - Seedance stops guessing your intent because you're no longer describing a feeling, you're issuing a direction Why this matters for anything built with a character sheet or grid: - A locked character still reads as static if every shot uses the same vague \"camera moves\" instruction - Real shot vocabulary is what turns a consistent character into a directed sequence, not just a slideshow of correct faces - Once you know the terms, you can assign a specific move to each panel in your storyboard instead of leaving pacing to chance If your sequences hold together but still feel flat, this is probably why. It was never just the character sheet. It's the camera language you pair it with. (h/t @NexlowX for the original find)",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Primee32/status/2076690363469943245",
+      "sourceType": "x",
+      "authorName": "Primee32",
+      "authorHandle": "@Primee32",
+      "createdAt": "2026-07-13T15:29:00.000Z",
+      "importedAt": "2026-07-14T04:28:27.816Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "平面设计"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 94,
+        "reposts": 11,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 130,
+        "views": 6947,
+        "score": 637
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly consistent character still look like a slideshow instead of a scene. The secret is camera vocabulary. The creators whose sequences actually feel directed aren't writing better character prompts than you. They're issuing real camera instructions instead of vague ones — and most people never learn the difference. There's a free reference that makes this fast to fix: aicameramovements,com It's not a generation tool, it's a vocabulary bank — every camera move broken down into name, description, speed, framing, and exactly how the shot should end. Whip pan left, tilt up, crash zoom out, dolly in, truck right — each one with a ready-to-copy prompt attached. What actually changes once you use real terms instead of vague ones: - \"Camera moves closer\" becomes \"dolly in — smooth controlled push, subject position consistent while distance closes, finish in a tighter composition\" - \"Fast cut to wide\" becomes \"crash zoom out — snap the lens rapidly away, land on a bold wider composition\" - Seedance stops guessing your intent because you're no longer describing a feeling, you're issuing a direction Why this matters for anything built with a character sheet or grid: - A locked character still reads as static if every shot uses the same vague \"camera moves\" instruction - Real shot vocabulary is what turns a consistent character into a directed sequence, not just a slideshow of correct faces - Once you know the terms, you can assign a specific move to each panel in your storyboard instead of leaving pacing to chance If your sequences hold together but still feel flat, this is probably why. It was never just the character sheet. It's the camera language you pair it with. (h/t @NexlowX for the original find)"
+    },
+    {
       "id": "x-public-2075302435514429487",
       "title": "This entire Pixar-style animation started with one prompt in GPT-5.6 + Seedance 2.0 No animation",
       "description": "This entire Pixar-style animation started with one prompt in GPT-5.6 + Seedance 2.0 No animation studio No keyframe artists No traditional pipeline Just GPT-5.6 + Seedance 2.0 turning a single storyboard into a full anim",
@@ -1890,49 +1933,6 @@
       "rawText": "Seedance 2.0 on Vidfield AI Prompt: Create a 15-second realistic cinematic slice-of-life video in 16:9, 24fps. Visual-only video, no dialogue, no voice, no music, no sound effects, no subtitles, no text on screen. Warm golden-hour sunlight, soft handheld camera, muted film color grade, slight grain, natural shadows, peaceful nostalgic mood. Fully realistic live-action style, not game-like, not animated. Main character: a young Japanese woman in her early 20s with soft natural features, dark hair tied in a loose low bun with a small traditional hairpin. She wears elegant traditional Japanese attire: a simple cream-and-muted-blue yukata/kimono-style outfit with a subtle floral pattern, tied with a soft obi belt, light tabi-style sandals. Keep her calm, gentle, warm expression consistent in every shot. Location: a long narrow real-life residential alley with a Japanese touch. Tall tan stone and concrete walls, sandy dusty ground, warm sunlight glowing on one side, soft tree shadows across the path, palm trees and green leaves above the walls, small Japanese details like a wooden gate, paper lantern near a doorway, simple noren curtain, potted bonsai-style plants, and a blue painted wall far ahead. One bicycle leans near the end of the alley. Quiet empty neighborhood feeling. 0:00–0:02: Rear tracking shot. The Japanese woman walks slowly through the narrow alley from behind. Her yukata fabric moves gently as she walks. Golden sunlight stretches across the tan walls. Camera follows with natural handheld motion. 0:02–0:04: Wide alley shot. A small gray-brown tabby cat appears from a low gap near the left side wall and steps into the alley. The woman notices it, slows down, and turns slightly toward it. 0:04–0:06: Medium side shot. The cat walks near her feet and looks up. She smiles softly, bends down slowly, and extends one hand in a gentle careful way. 0:06–0:08: Low close-up. The cat sniffs her fingers, then rubs its head against her hand. She gently pets the cat’s head and back. Show realistic fur texture, tiny whisker movement, and natural cat behavior. 0:08–0:10: Emotional close-up. The woman smiles warmly while petting the cat. Sunlight flickers through tree leaves across her face, hairpin, shoulders, and kimono fabric. 0:10–0:12: Medium-wide shot. The cat walks ahead a few steps, then looks back at her. She stands slowly and follows it with a peaceful curious smile. The Japanese alley details remain subtle and realistic. 0:12–0:14: Front tracking shot. She walks toward camera with the cat beside her near the wall. She looks down at the cat and smiles. The long alley, tan walls, Japanese details, blue wall, bicycle, and trees remain visible in the background. 0:14–0:15: Final close shot. The cat brushes against her leg. She looks toward the camera with a soft peaceful smile, then looks down at the cat again. Hold the warm golden Japanese alley atmosphere for a gentle cinematic ending."
     },
     {
-      "id": "x-public-2076690363469943245",
-      "title": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Chara",
-      "description": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly cons",
-      "prompt": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly consistent character still look like a slideshow instead of a scene. The secret is camera vocabulary. The creators whose sequences actually feel directed aren't writing better character prompts than you. They're issuing real camera instructions instead of vague ones — and most people never learn the difference. There's a free reference that makes this fast to fix: aicameramovements,com It's not a generation tool, it's a vocabulary bank — every camera move broken down into name, description, speed, framing, and exactly how the shot should end. Whip pan left, tilt up, crash zoom out, dolly in, truck right — each one with a ready-to-copy prompt attached. What actually changes once you use real terms instead of vague ones: - \"Camera moves closer\" becomes \"dolly in — smooth controlled push, subject position consistent while distance closes, finish in a tighter composition\" - \"Fast cut to wide\" becomes \"crash zoom out — snap the lens rapidly away, land on a bold wider composition\" - Seedance stops guessing your intent because you're no longer describing a feeling, you're issuing a direction Why this matters for anything built with a character sheet or grid: - A locked character still reads as static if every shot uses the same vague \"camera moves\" instruction - Real shot vocabulary is what turns a consistent character into a directed sequence, not just a slideshow of correct faces - Once you know the terms, you can assign a specific move to each panel in your storyboard instead of leaving pacing to chance If your sequences hold together but still feel flat, this is probably why. It was never just the character sheet. It's the camera language you pair it with. (h/t @NexlowX for the original find)",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Primee32/status/2076690363469943245",
-      "sourceType": "x",
-      "authorName": "Primee32",
-      "authorHandle": "@Primee32",
-      "createdAt": "2026-07-13T15:29:00.000Z",
-      "importedAt": "2026-07-13T21:35:18.775Z",
-      "tags": [
-        "Seedance",
-        "视频",
-        "平面设计"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 61,
-        "reposts": 7,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 60,
-        "views": 3415,
-        "score": 337
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "THERE'S A SECOND SKILL EVERY GREAT AI VIDEO CREATOR HAS — AND ALMOST NOBODY TALKS ABOUT IT Character consistency gets all the attention. Nobody mentions the other half of the problem — the one that makes a perfectly consistent character still look like a slideshow instead of a scene. The secret is camera vocabulary. The creators whose sequences actually feel directed aren't writing better character prompts than you. They're issuing real camera instructions instead of vague ones — and most people never learn the difference. There's a free reference that makes this fast to fix: aicameramovements,com It's not a generation tool, it's a vocabulary bank — every camera move broken down into name, description, speed, framing, and exactly how the shot should end. Whip pan left, tilt up, crash zoom out, dolly in, truck right — each one with a ready-to-copy prompt attached. What actually changes once you use real terms instead of vague ones: - \"Camera moves closer\" becomes \"dolly in — smooth controlled push, subject position consistent while distance closes, finish in a tighter composition\" - \"Fast cut to wide\" becomes \"crash zoom out — snap the lens rapidly away, land on a bold wider composition\" - Seedance stops guessing your intent because you're no longer describing a feeling, you're issuing a direction Why this matters for anything built with a character sheet or grid: - A locked character still reads as static if every shot uses the same vague \"camera moves\" instruction - Real shot vocabulary is what turns a consistent character into a directed sequence, not just a slideshow of correct faces - Once you know the terms, you can assign a specific move to each panel in your storyboard instead of leaving pacing to chance If your sequences hold together but still feel flat, this is probably why. It was never just the character sheet. It's the camera language you pair it with. (h/t @NexlowX for the original find)"
-    },
-    {
       "id": "x-public-2075647316820955362",
       "title": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka k",
       "description": "AI VIDEO URETENLER ICIN ALTIN DEGERINDE BIR KAYNAK Prompt yazmakta zorulaniyorsan bunu mutlaka kaydet. Bu ucretsiz site, AI videolarinda kullanilan en populer kamera hareketlerini tek bir yerde topluyor. Her hareket icin",
@@ -2414,7 +2414,7 @@
       "authorName": "Shara I Ai Video Creator",
       "authorHandle": "@itsshara_ai",
       "createdAt": "2026-07-12T14:25:50.000Z",
-      "importedAt": "2026-07-13T21:35:18.775Z",
+      "importedAt": "2026-07-14T04:28:27.816Z",
       "tags": [
         "Kling",
         "视频"
@@ -2435,13 +2435,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 72,
+        "likes": 73,
         "reposts": 6,
         "replies": 36,
         "quotes": 0,
         "bookmarks": 17,
-        "views": 2096,
-        "score": 259
+        "views": 2140,
+        "score": 261
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "A fashion company just paid me $280 for a video I made in 10 minutes. I didn't touch a camera. I didn't hire a model. I didn't open an editing app. I typed ONE sentence into Kling AI. That's it. That's the whole job. welcome to the future of content creation."
@@ -3020,7 +3020,7 @@
       "authorName": "Nexlow",
       "authorHandle": "@NexlowX",
       "createdAt": "2026-07-13T11:01:00.000Z",
-      "importedAt": "2026-07-13T21:35:18.775Z",
+      "importedAt": "2026-07-14T04:28:27.816Z",
       "tags": [
         "Seedance",
         "产品",
@@ -3046,9 +3046,9 @@
         "reposts": 6,
         "replies": 7,
         "quotes": 0,
-        "bookmarks": 20,
-        "views": 1636,
-        "score": 144
+        "bookmarks": 25,
+        "views": 1972,
+        "score": 160
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "MOST PEOPLE ARE PROMPTING SEEDANCE 2.0 LIKE IT’S A SEARCH BAR AND IT’S COSTING THEM One simple structural change fixes most of the inconsistency. You know the cycle: write a sentence, hit generate, hate it, rewrite the whole thing from scratch. Most of us have been stuck there. The creators getting consistent results ditched that approach months ago. They treat prompts more like a production brief — every piece handled separately instead of crammed into one wall of text. Break it down like this: • Character identity • Environment + visual style • Camera behavior • Action sequence + pacing • Transitions That’s honestly it. Why it works so well: • Your character actually stays consistent across shots • Camera moves feel intentional instead of drunk • You can tweak one thing without breaking everything else • It turns into a reusable template for the whole series Simple workflow: 1. Decide what the video actually needs to say 2. Nail the character description once, in detail 3. Define environment/style as its own block 4. Write action and camera separately 5. Combine them cleanly Example: Character — hooded dragon knight Environment — misty ash-covered ruins Action — crouching, reaching for the eggs Camera — slow handheld push-in Style — cinematic, desaturated, 24fps Once you have this, the next scene isn’t a full rewrite. You just change one field. We’re moving from “prompting” to “designing a system.” The future of AI video isn’t a better sentence — it’s a structure you reuse instead of rebuild every time. More on what sits next to this soon. Full breakdown in the thread above — steal it before everyone else catches on."
@@ -3521,6 +3521,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I remember having a very similar style on Midjourney back in the day. A long time ago actually. Now you can do it with GPT Prompt: 2x2 grid, 16:9, do this for 4 days that made humans hope: input = $ subject # 1. analyze the subject. silhouette = extract_silhouette(input) internal_rhythm = detect_repeated_details(input) gesture_flow = infer_motion_paths(input) focal_zones = detect_focal_regions(input) # 2. convert the subject into an optical terrain. subject_field = morph_into_op_art( silhouette, surface_logic=[ 'wavy contour bands', 'parallel black-white ribbons', 'nested curves', 'glowing grayscale gradients', 'liquid negative space' ], preserve_identity=true ) # 3. replace texture with hypnotic pattern behavior. pattern_layer = generate_patterns( source=internal_rhythm, pattern_types=[ 'concentric rings', 'spiral curls', 'bubble chains', 'dot constellations', 'striped topographic lines', 'ornamental lace paths' ], contrast='pure black to bright white', density='medium-high' ) # 4. turn the environment into a dream metropolis / symbolic field. background = construct_surreal_stage( based_on=input, elements=[ 'impossible towers', 'floating moons', 'arched city silhouettes', 'long luminous roadways', 'wave-like ground planes', 'star-speckled black sky' ], style='monochrome dream architecture' ) # 5. add grayscale glow, not color. lighting = apply_luminous_monochrome( highlights='soft white glow along edges', shadows='deep velvet black', midtones='smooth metallic gray gradients' ) output: a black-and-white surreal op-art transformation of $ subject, where form, ground, and background become flowing optical waves, glowing city geometry, ornamental pattern density, and hypnotic grayscale depth. avoid: - color - flat simple vector only - messy sketch lines - realistic material texture - cartoon cuteness - photographic depth of field"
+    },
+    {
+      "id": "x-public-2076882630692258092",
+      "title": "ONE SPIN AND SHE'S A DIFFERENT PERSON. Seedance 2.0 Prompt: Scene & Mood: Sharp studio editorial",
+      "description": "ONE SPIN AND SHE'S A DIFFERENT PERSON. Seedance 2.0 Prompt: Scene & Mood: Sharp studio editorial built around a single continuous spin transformation. A woman in a fitted matte-black slip dress stands center frame under ",
+      "prompt": "ONE SPIN AND SHE'S A DIFFERENT PERSON. Seedance 2.0 Prompt: Scene & Mood: Sharp studio editorial built around a single continuous spin transformation. A woman in a fitted matte-black slip dress stands center frame under moody spotlighting, still and composed, then spins once and completes the rotation in a completely different look: a structured chrome art-deco gown with metallic panel detailing. The mood is theatrical, high-impact, confident, with the spin treated as one unbroken magic trick rather than a cut. Frame Map: Begin in a medium-full frontal composition, subject centered, arms relaxed at her sides, dark studio backdrop with a single hard key light from camera-left casting a long diagonal shadow. Maintain headroom above and enough negative space on both sides to track the dress silhouette expanding mid-spin. The floor is glossy black, reflecting a faint silhouette. Subject Lock: Keep the same face, hair part, height, and body proportions throughout both looks. Look A: sleek middle-parted dark hair, matte-black slip dress, bare shoulders, minimal silver jewelry, neutral confident expression. Look B (post-spin): same hair now swept into a sharp low chignon, structured chrome-panel gown with a stiff architectural collar, metallic cuff on one wrist, same facial features and expression carried through. Do not change her height, face shape, or skin tone between looks. Cross-Frame Rules: She is the only person and subject in frame at all times. The transformation must occur entirely within the single continuous spin motion — no jump cuts, no freeze frames, no duplicated bodies mid-spin. Fabric physics must look weighty and real during the whirl, not liquid or melting. No on-screen text, no captions, no signage typography, no rendered text in the frame. Movement: 6 seconds total. She begins still for 1 second, then initiates a fast single clockwise spin over 2 seconds, dress and hair flaring outward with real centrifugal motion, arms lifting slightly for balance. As she completes the rotation and faces camera again, the new gown settles into place with a final fabric snap and hair falls into its chignon shape naturally. She holds the new pose, still and composed, for the final 3 seconds, chin lifted, eyes locked on camera. Last Frame: She stands still in the chrome art-deco gown, facing camera directly, chin slightly lifted, one hand resting at her hip, expression calm and powerful. Studio light holds steady on her face. No on-screen text, no captions, no signage typography, no rendered text in the frame. World Plate: Minimal black-box studio, single hard key light, glossy reflective floor, deep shadow falloff into the background with no visible walls or props. Clean, high-contrast, editorial darkness. Sound Bed: Diegetic audio only: fabric whoosh during the spin, a soft heel pivot on the glossy floor, faint jewelry chime, quiet room tone. No music, no soundtrack, no score, no lyrics. Capture Realism: Natural skin texture, real fabric weight and flare physics, believable hair movement settling into the chignon, grounded contact shadows, soft highlight rolloff, fine 35mm grain. Avoid AI gloss, warped limbs, melted fabric, duplicated body parts, or hair clipping through the gown collar. Camera Capture: 6 seconds, 24fps, locked-off static camera, 50mm lens, shallow depth of field isolating subject from the dark backdrop, punchy contrast grade, fine grain, crisp studio realism.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/bmx_ai13/status/2076882630692258092",
+      "sourceType": "x",
+      "authorName": "BMX",
+      "authorHandle": "@bmx_ai13",
+      "createdAt": "2026-07-14T04:13:00.000Z",
+      "importedAt": "2026-07-14T04:28:27.815Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 1,
+        "views": 106,
+        "score": 22
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "ONE SPIN AND SHE'S A DIFFERENT PERSON. Seedance 2.0 Prompt: Scene & Mood: Sharp studio editorial built around a single continuous spin transformation. A woman in a fitted matte-black slip dress stands center frame under moody spotlighting, still and composed, then spins once and completes the rotation in a completely different look: a structured chrome art-deco gown with metallic panel detailing. The mood is theatrical, high-impact, confident, with the spin treated as one unbroken magic trick rather than a cut. Frame Map: Begin in a medium-full frontal composition, subject centered, arms relaxed at her sides, dark studio backdrop with a single hard key light from camera-left casting a long diagonal shadow. Maintain headroom above and enough negative space on both sides to track the dress silhouette expanding mid-spin. The floor is glossy black, reflecting a faint silhouette. Subject Lock: Keep the same face, hair part, height, and body proportions throughout both looks. Look A: sleek middle-parted dark hair, matte-black slip dress, bare shoulders, minimal silver jewelry, neutral confident expression. Look B (post-spin): same hair now swept into a sharp low chignon, structured chrome-panel gown with a stiff architectural collar, metallic cuff on one wrist, same facial features and expression carried through. Do not change her height, face shape, or skin tone between looks. Cross-Frame Rules: She is the only person and subject in frame at all times. The transformation must occur entirely within the single continuous spin motion — no jump cuts, no freeze frames, no duplicated bodies mid-spin. Fabric physics must look weighty and real during the whirl, not liquid or melting. No on-screen text, no captions, no signage typography, no rendered text in the frame. Movement: 6 seconds total. She begins still for 1 second, then initiates a fast single clockwise spin over 2 seconds, dress and hair flaring outward with real centrifugal motion, arms lifting slightly for balance. As she completes the rotation and faces camera again, the new gown settles into place with a final fabric snap and hair falls into its chignon shape naturally. She holds the new pose, still and composed, for the final 3 seconds, chin lifted, eyes locked on camera. Last Frame: She stands still in the chrome art-deco gown, facing camera directly, chin slightly lifted, one hand resting at her hip, expression calm and powerful. Studio light holds steady on her face. No on-screen text, no captions, no signage typography, no rendered text in the frame. World Plate: Minimal black-box studio, single hard key light, glossy reflective floor, deep shadow falloff into the background with no visible walls or props. Clean, high-contrast, editorial darkness. Sound Bed: Diegetic audio only: fabric whoosh during the spin, a soft heel pivot on the glossy floor, faint jewelry chime, quiet room tone. No music, no soundtrack, no score, no lyrics. Capture Realism: Natural skin texture, real fabric weight and flare physics, believable hair movement settling into the chignon, grounded contact shadows, soft highlight rolloff, fine 35mm grain. Avoid AI gloss, warped limbs, melted fabric, duplicated body parts, or hair clipping through the gown collar. Camera Capture: 6 seconds, 24fps, locked-off static camera, 50mm lens, shallow depth of field isolating subject from the dark backdrop, punchy contrast grade, fine grain, crisp studio realism."
     },
     {
       "id": "x-public-2076041853707677978",
@@ -4292,7 +4334,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-13T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -4334,7 +4376,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-07-13T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -4376,7 +4418,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-13T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -4542,7 +4584,7 @@
       "authorName": "vevrier90333",
       "authorHandle": "@vevrier9033833",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.080Z",
+      "importedAt": "2026-07-14T04:28:18.986Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -4583,7 +4625,7 @@
       "authorName": "Amy G",
       "authorHandle": "@amynys",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.987Z",
       "tags": [
         "人像"
       ],
@@ -4624,7 +4666,7 @@
       "authorName": "Cosmic Cowboy",
       "authorHandle": "@CosmicCowboyCDN",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.987Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -4665,7 +4707,7 @@
       "authorName": "John",
       "authorHandle": "@johnAGI168",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像"
       ],
@@ -4706,7 +4748,7 @@
       "authorName": "BMX",
       "authorHandle": "@bmx_ai13",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像",
         "摄影"
@@ -4748,7 +4790,7 @@
       "authorName": "Dilshad Hussain",
       "authorHandle": "@DilshadAI1",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像"
       ],
@@ -4789,7 +4831,7 @@
       "authorName": "lovimg_com",
       "authorHandle": "@lovimg_com",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像",
         "摄影"
@@ -4831,7 +4873,7 @@
       "authorName": "auqib",
       "authorHandle": "@auqibhabib",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像",
         "摄影"
@@ -4873,7 +4915,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像"
       ],
@@ -4914,7 +4956,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像"
       ],
@@ -4955,7 +4997,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "摄影"
       ],
@@ -4996,7 +5038,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.082Z",
+      "importedAt": "2026-07-14T04:28:18.988Z",
       "tags": [
         "人像",
         "摄影"
@@ -5038,7 +5080,7 @@
       "authorName": "TWnese",
       "authorHandle": "@TWnese",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -5080,7 +5122,7 @@
       "authorName": "Virena",
       "authorHandle": "@vireonixx",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "摄影"
       ],
@@ -5121,7 +5163,7 @@
       "authorName": "よった~公儀介錯人やぶにらみ黙示録~子貸し腕貸し仕る/天の裁きは待ってはおれぬ/必殺必中万屋稼業",
       "authorHandle": "@9YGMEQ63135ka5O",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -5160,7 +5202,7 @@
       "authorName": "月无关 | 0xKyne",
       "authorHandle": "@0xkyne",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "摄影"
       ],
@@ -5201,7 +5243,7 @@
       "authorName": "宇宙塵散",
       "authorHandle": "@ty106834",
       "createdAt": "2026-07-12T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.990Z",
       "tags": [
         "平面设计"
       ],
@@ -5449,7 +5491,7 @@
       "authorName": "Lipstick",
       "authorHandle": "@lipsticksplus",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -5491,7 +5533,7 @@
       "authorName": "Harboris",
       "authorHandle": "@harboriis",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像",
         "摄影"
@@ -5533,7 +5575,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像"
       ],
@@ -5574,7 +5616,7 @@
       "authorName": "サファ【AIイラスト多め】",
       "authorHandle": "@safa_dayo",
       "createdAt": "2026-07-11T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.083Z",
+      "importedAt": "2026-07-14T04:28:18.989Z",
       "tags": [
         "人像"
       ],
@@ -9274,7 +9316,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.086Z",
+      "importedAt": "2026-07-14T04:28:18.994Z",
       "tags": [
         "产品",
         "平面设计",
@@ -9317,7 +9359,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.086Z",
+      "importedAt": "2026-07-14T04:28:18.994Z",
       "tags": [
         "平面设计"
       ],
@@ -9358,7 +9400,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-13T21:35:17.087Z",
+      "importedAt": "2026-07-14T04:28:18.994Z",
       "tags": [
         "平面设计"
       ],
