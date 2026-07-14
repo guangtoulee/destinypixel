@@ -12,7 +12,6 @@ import { resolveCity } from "@/lib/geo/cities";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import {
   createReportRecord,
-  hasPersistentReportStore,
 } from "@/lib/db/repository";
 import {
   encodeReportDraft,
@@ -61,14 +60,13 @@ export async function createFusionReportAction(formData: FormData) {
     gender,
     locale,
   });
-  const id = await createReportRecord({
+  const { id, persisted } = await createReportRecord({
     input,
     bazi,
     astro,
     aiContent,
   });
-  const hasPersistentStore = hasPersistentReportStore();
-  const encodedDraft = hasPersistentStore ? "" : encodeReportDraft(input);
+  const encodedDraft = persisted ? "" : encodeReportDraft(input);
 
   if (encodedDraft) {
     const cookieStore = await cookies();

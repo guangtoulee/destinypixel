@@ -50,6 +50,7 @@ type LocalStore = {
 };
 
 const localDbPath = path.join(process.cwd(), "work", "local-db.json");
+const SUPABASE_TIMEOUT_MS = 5_000;
 
 function createEmptyStore(): LocalStore {
   return { users: [], birth_records: [], reports: [] };
@@ -83,10 +84,6 @@ function hasSupabaseConfig() {
     (process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL) &&
       process.env.SUPABASE_SERVICE_ROLE_KEY,
   );
-}
-
-export function hasPersistentReportStore() {
-  return hasSupabaseConfig() || !shouldSkipLocalWrites();
 }
 
 async function readLocalStore(): Promise<LocalStore> {
@@ -144,6 +141,7 @@ async function supabaseRequest<T>(
     },
     body: body ? JSON.stringify(body) : undefined,
     cache: "no-store",
+    signal: AbortSignal.timeout(SUPABASE_TIMEOUT_MS),
   });
 
   if (!response.ok) {
@@ -220,30 +218,42 @@ export async function createReportRecord({
   };
 
   if (hasSupabaseConfig()) {
-    await supabaseRequest("users", "POST", user);
     try {
-      await supabaseRequest("birth_records", "POST", birthRecord);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "";
+      await supabaseRequest("users", "POST", user);
+      try {
+        await supabaseRequest("birth_records", "POST", birthRecord);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : "";
 
-      if (!message.includes("gender") && !message.includes("locale")) {
-        throw error;
+        if (!message.includes("gender") && !message.includes("locale")) {
+          throw error;
+        }
+
+        const {
+          gender: _gender,
+          locale: _locale,
+          ...legacyBirthRecord
+        } = birthRecord;
+        await supabaseRequest("birth_records", "POST", legacyBirthRecord);
       }
+      await supabaseRequest("reports", "POST", {
+        id: report.id,
+        user_id: report.user_id,
+        birth_record_id: report.birth_record_id,
+        bazi_data: report.bazi_data,
+        astro_data: report.astro_data,
+        ai_content: report.ai_content,
+        status: report.status,
+        created_at: report.created_at,
+      });
 
-      const { gender: _gender, locale: _locale, ...legacyBirthRecord } = birthRecord;
-      await supabaseRequest("birth_records", "POST", legacyBirthRecord);
+      return { id: report.id, persisted: true } as const;
+    } catch (error) {
+      console.warn(
+        "Supabase report storage unavailable; using the report draft fallback.",
+        error instanceof Error ? error.message : error,
+      );
     }
-    await supabaseRequest("reports", "POST", {
-      id: report.id,
-      user_id: report.user_id,
-      birth_record_id: report.birth_record_id,
-      bazi_data: report.bazi_data,
-      astro_data: report.astro_data,
-      ai_content: report.ai_content,
-      status: report.status,
-      created_at: report.created_at,
-    });
-    return report.id;
   }
 
   const store = await readLocalStore();
@@ -252,46 +262,55 @@ export async function createReportRecord({
   store.reports.push(report);
   await writeLocalStore(store);
 
-  return report.id;
+  return { id: report.id, persisted: false } as const;
 }
 
 export async function getReportRecord(id: string): Promise<ReportRecord | null> {
   if (hasSupabaseConfig()) {
-    const reports = await supabaseRequest<
-      Array<{
-        id: string;
-        user_id: string;
-        birth_record_id: string;
-        status?: ReportRecord["status"];
-        created_at: string;
-        bazi_data: BaziData;
-        astro_data: AstroData;
-        ai_content: AIReportContent;
-      }>
-    >("reports", "GET", undefined, `?id=eq.${id}&limit=1`);
+    try {
+      const reports = await supabaseRequest<
+        Array<{
+          id: string;
+          user_id: string;
+          birth_record_id: string;
+          status?: ReportRecord["status"];
+          created_at: string;
+          bazi_data: BaziData;
+          astro_data: AstroData;
+          ai_content: AIReportContent;
+        }>
+      >("reports", "GET", undefined, `?id=eq.${id}&limit=1`);
 
-    if (!reports[0]) return null;
+      if (reports[0]) {
+        const [user] = await supabaseRequest<Array<ReportRecord["user"]>>(
+          "users",
+          "GET",
+          undefined,
+          `?id=eq.${reports[0].user_id}&limit=1`,
+        );
+        const [birthRecord] = await supabaseRequest<
+          Array<ReportRecord["birth_record"]>
+        >(
+          "birth_records",
+          "GET",
+          undefined,
+          `?id=eq.${reports[0].birth_record_id}&limit=1`,
+        );
 
-    const [user] = await supabaseRequest<Array<ReportRecord["user"]>>(
-      "users",
-      "GET",
-      undefined,
-      `?id=eq.${reports[0].user_id}&limit=1`,
-    );
-    const [birthRecord] = await supabaseRequest<
-      Array<ReportRecord["birth_record"]>
-    >(
-      "birth_records",
-      "GET",
-      undefined,
-      `?id=eq.${reports[0].birth_record_id}&limit=1`,
-    );
-
-    return {
-      ...reports[0],
-      user,
-      birth_record: birthRecord,
-    };
+        if (user && birthRecord) {
+          return {
+            ...reports[0],
+            user,
+            birth_record: birthRecord,
+          };
+        }
+      }
+    } catch (error) {
+      console.warn(
+        "Supabase report lookup unavailable; trying the local draft fallback.",
+        error instanceof Error ? error.message : error,
+      );
+    }
   }
 
   const store = await readLocalStore();
