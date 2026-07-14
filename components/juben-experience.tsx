@@ -46,6 +46,7 @@ type AnalyzeStatus = "idle" | "loading" | "ready" | "error";
 type UploadStatus = "idle" | "loading" | "ready" | "error";
 type EpisodeScope = number | "all";
 type TabKey =
+  | "source"
   | "development"
   | "visual"
   | "outline"
@@ -70,6 +71,9 @@ const voiceLanguageOptions = [
 const initialForm: Required<JubenRequestBody> = {
   idea:
     "一个女律师发现自己每晚 23:17 都会收到已故母亲发来的微信语音。她一开始以为是诈骗，直到语音准确说出第二天庭审会出现的证据。她越追查，越发现母亲当年的死亡和自己正在辩护的案子有关。",
+  sourceMode: "idea",
+  sourceFilename: "",
+  adaptationMode: "创意扩写",
   genre: "都市悬疑短剧",
   audience: "18-35 岁，喜欢反转、亲情悬疑、强情绪钩子的竖屏短剧用户",
   episodeCount: 4,
@@ -85,6 +89,7 @@ const initialForm: Required<JubenRequestBody> = {
 };
 
 const tabs: Array<{ key: TabKey; label: string; icon: typeof BookOpenText }> = [
+  { key: "source", label: "原稿校对", icon: ClipboardCheck },
   { key: "development", label: "立项圣经", icon: BookOpenText },
   { key: "visual", label: "视觉定调", icon: Palette },
   { key: "outline", label: "分集节拍", icon: LayoutList },
@@ -278,6 +283,18 @@ function dialogueText(scene?: JubenScene) {
     .join("\n");
 }
 
+function dialogueTextForShot(scene: JubenScene | undefined, shot: JubenShot) {
+  const match = shot.visual.match(/^(.+?)在.+?原稿对白：“([\s\S]+)”/);
+
+  if (match) {
+    return `${atTag(match[1])}开口：“${match[2]}”（原稿对白，必须准确发音并对齐口型）`;
+  }
+
+  return scene?.dialogue.length
+    ? "本镜头不新增对白，只保留上一句尾音、人物反应、呼吸和现场环境声。"
+    : "本镜头以动作、表情、呼吸和环境声推进，不增加原稿之外的台词。";
+}
+
 function splitActionText(
   result: JubenResult,
   shot: JubenShot,
@@ -327,7 +344,7 @@ function libtvFinalPrompt(
     `${shot.shotSize}，${result.visualBible.colorPalette.slice(0, 3).join("、")}交替的${place}。`,
     `${characters}。`,
     `${shot.visual} ${shot.action}`,
-    dialogueText(scene),
+    dialogueTextForShot(scene, shot),
     `镜头语言：${shot.cameraAngle}，${shot.movement}，${camera?.prompt ?? ""}`,
     `光影氛围：${result.visualBible.coreStyle}`,
     `音效：${shot.sound}`,
@@ -370,7 +387,7 @@ function libtvStructuredPrompt(
     "---",
     "",
     "对白/旁白：",
-    dialogueText(scene),
+    dialogueTextForShot(scene, shot),
     "",
     "---",
     "",
@@ -444,7 +461,7 @@ function shotPackageText(
       `${shot.duration}，先给动作，再给反应或证据，结尾接下一镜。声音：${shot.sound}`,
     "",
     "【配音 / 声音】",
-    dialogueText(scene),
+    dialogueTextForShot(scene, shot),
     `声音：${shot.sound}`,
     `连续性：${shot.continuity}`,
   ]
@@ -468,6 +485,11 @@ function resultTabTextForScope(
   const scoped = scopedResultParts(result, scope);
 
   switch (tab) {
+    case "source":
+      return asPrettyJson({
+        sourceManifest: result.sourceManifest,
+        fidelityReport: result.fidelityReport,
+      });
     case "development":
       return asPrettyJson({
         diagnosis: result.diagnosis,
@@ -989,7 +1011,7 @@ function ShotPackageCard({
   const firstFrame = storyboard?.prompt ?? `${result.visualBible.globalPrompt} ${shot.visual}`;
   const motion = camera?.prompt ?? `${shot.duration}，${shot.movement}，${shot.action}`;
   const editText = edit?.prompt ?? `${shot.duration}，动作点清楚，结尾接下一镜。`;
-  const voice = `${dialogueText(scene)}\n声音：${shot.sound}`;
+  const voice = `${dialogueTextForShot(scene, shot)}\n声音：${shot.sound}`;
 
   return (
     <article className={styles.shotPackageCard}>
@@ -1043,7 +1065,7 @@ export default function JubenExperience() {
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>("idle");
   const [uploadMessage, setUploadMessage] = useState("");
   const [analysis, setAnalysis] = useState<JubenAnalysisResult | null>(null);
-  const [activeTab, setActiveTab] = useState<TabKey>("development");
+  const [activeTab, setActiveTab] = useState<TabKey>("source");
   const [episodeScope, setEpisodeScope] = useState<EpisodeScope>("all");
   const [detailStatus, setDetailStatus] = useState<Record<number, Status>>({});
   const [copied, setCopied] = useState<string | null>(null);
@@ -1121,10 +1143,49 @@ export default function JubenExperience() {
       const payload = (await response.json()) as JubenResult;
       setResult(payload);
       setEpisodeScope(1);
-      setStatus(payload.meta.provider === "deepseek" ? "ready" : "error");
+      setStatus(
+        payload.meta.provider === "local-structured-fallback" ? "error" : "ready",
+      );
     } catch {
       setStatus("error");
     }
+  }
+
+  function applyAnalysisPayload(
+    payload: JubenAnalysisResult,
+    baseForm: Required<JubenRequestBody>,
+  ) {
+    setAnalysis(payload);
+    setForm({
+      ...baseForm,
+      sourceMode: payload.sourceMode,
+      sourceFilename: payload.sourceFilename,
+      adaptationMode: payload.adaptationMode,
+      genre: payload.genre,
+      audience: payload.audience,
+      episodeCount: payload.episodeCount,
+      episodeLength: payload.episodeLength,
+      aspectRatio: payload.aspectRatio,
+      tone: payload.tone,
+      productionMode: payload.productionMode,
+      outputTarget: payload.outputTarget,
+      voiceLanguage: payload.voiceLanguage,
+      mustHave: payload.mustHave,
+      avoid: payload.avoid,
+    });
+  }
+
+  async function analyzeDraft(targetForm: Required<JubenRequestBody>) {
+    const response = await fetch("/api/juben/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(targetForm),
+    });
+
+    if (!response.ok) throw new Error("Analyze request failed.");
+    const payload = (await response.json()) as JubenAnalysisResult;
+    applyAnalysisPayload(payload, targetForm);
+    return payload;
   }
 
   async function handleUploadFile(file: File | undefined) {
@@ -1151,14 +1212,26 @@ export default function JubenExperience() {
         throw new Error(payload.error ?? "文件解析失败。");
       }
 
-      setForm((current) => updateField(current, "idea", payload.text ?? ""));
+      const nextForm: Required<JubenRequestBody> = {
+        ...form,
+        idea: payload.text,
+        sourceMode: "document",
+        sourceFilename: payload.filename ?? file.name,
+        adaptationMode: "忠实拆解",
+      };
+      setForm(nextForm);
       setUploadStatus("ready");
       setUploadMessage(
         `${payload.filename ?? file.name} 已导入${
           payload.truncated ? "，长文已截取前段核心内容" : ""
         }`,
       );
+      setAnalyzeStatus("loading");
+      await analyzeDraft(nextForm);
+      setAnalyzeStatus("ready");
+      setActiveTab("source");
     } catch (error) {
+      setAnalyzeStatus("error");
       setUploadStatus("error");
       setUploadMessage(
         error instanceof Error ? error.message : "文件解析失败，请手动粘贴。",
@@ -1247,7 +1320,9 @@ export default function JubenExperience() {
       setResult((current) =>
         current ? mergeEpisodeResult(current, payload, episode) : payload,
       );
-      setStatus(payload.meta.provider === "deepseek" ? "ready" : "error");
+      setStatus(
+        payload.meta.provider === "local-structured-fallback" ? "error" : "ready",
+      );
       setDetailStatus((current) => ({ ...current, [episode]: "ready" }));
       setActiveTab("shotpack");
     } catch {
@@ -1261,32 +1336,7 @@ export default function JubenExperience() {
     setAnalyzeStatus("loading");
 
     try {
-      const response = await fetch("/api/juben/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (!response.ok) {
-        throw new Error("Analyze request failed.");
-      }
-
-      const payload = (await response.json()) as JubenAnalysisResult;
-      setAnalysis(payload);
-      setForm({
-        ...form,
-        genre: payload.genre,
-        audience: payload.audience,
-        episodeCount: payload.episodeCount,
-        episodeLength: payload.episodeLength,
-        aspectRatio: payload.aspectRatio,
-        tone: payload.tone,
-        productionMode: payload.productionMode,
-        outputTarget: payload.outputTarget,
-        voiceLanguage: payload.voiceLanguage,
-        mustHave: payload.mustHave,
-        avoid: payload.avoid,
-      });
+      await analyzeDraft(form);
       setAnalyzeStatus("ready");
     } catch {
       setAnalyzeStatus("error");
@@ -1304,11 +1354,13 @@ export default function JubenExperience() {
       : null;
   const statusLabel =
     status === "loading"
-      ? "正在生成骨架和第一集"
+      ? "正在锁定原稿并拆解全剧"
       : status === "ready"
-        ? "DeepSeek 已完成"
+        ? result?.meta.provider === "source-locked"
+          ? "原稿锁定与拆解已完成"
+          : "DeepSeek 已完成"
         : status === "error"
-          ? "已生成备用结构，可继续编辑"
+          ? "原稿备用拆解已完成，可继续生成"
           : "等待项目输入";
 
   return (
@@ -1327,13 +1379,37 @@ export default function JubenExperience() {
       <section className={styles.workspace}>
         <form className={styles.inputPanel} onSubmit={handleSubmit}>
           <div className={styles.panelHeading}>
-            <span>项目简报 · 01</span>
-            <h1>把故事变成可执行的短剧生产包。</h1>
-            <p>先简析，再生成全剧骨架和第一集；其余集数按需展开。</p>
+            <span>短剧生产工作台 · 原稿优先</span>
+            <h1>先锁原稿，再拆成真正能拍的AI镜头。</h1>
+            <p>上传完整剧本会自动识别人物、分集、场次和关键对白；逐集生成，避免串戏和长请求失败。</p>
+          </div>
+
+          <div className={styles.sourceModeBar}>
+            <button
+              type="button"
+              data-active={form.sourceMode === "idea"}
+              onClick={() =>
+                setForm({
+                  ...form,
+                  sourceMode: "idea",
+                  sourceFilename: "",
+                  adaptationMode: "创意扩写",
+                })
+              }
+            >
+              <Sparkles size={14} />从想法创作
+            </button>
+            <button
+              type="button"
+              data-active={form.sourceMode === "document"}
+              disabled={form.sourceMode !== "document"}
+            >
+              <FileText size={14} />原稿忠实拆解
+            </button>
           </div>
 
           <label className={styles.field}>
-            <span>想法 / 大概剧情</span>
+            <span>{form.sourceMode === "document" ? "原稿全文（可校正）" : "想法 / 大概剧情"}</span>
             <textarea
               className={styles.ideaInput}
               value={form.idea}
@@ -1373,18 +1449,30 @@ export default function JubenExperience() {
               ) : (
                 <Sparkles size={16} />
               )}
-              {analyzeStatus === "loading" ? "正在简析" : "先简析想法"}
+              {analyzeStatus === "loading"
+                ? "正在识别原稿"
+                : form.sourceMode === "document"
+                  ? "重新校对原稿"
+                  : "先简析想法"}
             </button>
             <span>
               {analysis
                 ? `${analysis.titleSuggestion} · ${analysis.hook}`
-                : "先让 AI 补齐类型、受众、集数、气质和生成约束。"}
+                : "先识别题材、人物、分集、场次和硬约束，再进入生成。"}
             </span>
           </div>
 
           {analysis ? (
             <div className={styles.analysisNote}>
               <strong>{analysis.premise}</strong>
+              {analysis.sourceManifest.mode === "document" ? (
+                <div className={styles.sourceSummary}>
+                  <span>《{analysis.sourceManifest.title}》</span>
+                  <span>{analysis.sourceManifest.episodeCount} 集</span>
+                  <span>{analysis.sourceManifest.scenes.length} 场</span>
+                  <span>{analysis.sourceManifest.characters.length} 个角色</span>
+                </div>
+              ) : null}
               {analysis.revisionNotes.map((note) => (
                 <p key={note}>{note}</p>
               ))}
@@ -1485,6 +1573,19 @@ export default function JubenExperience() {
                 ))}
               </select>
             </label>
+            <label className={styles.field}>
+              <span>改编强度</span>
+              <select
+                value={form.adaptationMode}
+                onChange={(event) =>
+                  setForm(updateField(form, "adaptationMode", event.target.value))
+                }
+              >
+                {["忠实拆解", "适度优化", "创意扩写"].map((value) => (
+                  <option key={value} value={value}>{value}</option>
+                ))}
+              </select>
+            </label>
           </div>
 
           <label className={styles.field}>
@@ -1522,7 +1623,7 @@ export default function JubenExperience() {
                 setUploadMessage("");
                 setDetailStatus({});
                 setEpisodeScope("all");
-                setActiveTab("development");
+                setActiveTab("source");
               }}
             >
               <RefreshCcw size={16} />
@@ -1534,7 +1635,7 @@ export default function JubenExperience() {
               ) : (
                 <Sparkles size={17} />
               )}
-              {status === "loading" ? "正在拆解" : "生成骨架+第一集"}
+              {status === "loading" ? "正在拆解" : "锁定原稿并拆全剧"}
             </button>
           </div>
         </form>
@@ -1553,9 +1654,11 @@ export default function JubenExperience() {
                 {status === "loading"
                   ? "DeepSeek 正在拆骨架"
                   : status === "ready"
-                    ? "DeepSeek 生成完成"
+                    ? result?.meta.provider === "source-locked"
+                      ? "原稿保真引擎完成"
+                      : "DeepSeek 生成完成"
                     : status === "error"
-                      ? "本地结构化样片"
+                      ? "原稿保真备用稿"
                       : "等待生成"}
               </span>
               <strong>{result?.meta.title ?? "未命名短剧项目"}</strong>
@@ -1699,6 +1802,99 @@ export default function JubenExperience() {
                 <p>
                   输出会按剧作、导演、摄影、AI 分镜、视频运镜、剪辑和配音拆开。
                 </p>
+              </div>
+            ) : activeTab === "source" ? (
+              <div className={styles.sourceAudit}>
+                <div className={styles.fidelityBanner} data-status={result.fidelityReport.status}>
+                  <div>
+                    <ShieldCheck size={22} />
+                    <span>原稿保真度</span>
+                    <strong>{result.fidelityReport.score}</strong>
+                  </div>
+                  <p>
+                    {result.fidelityReport.status === "locked"
+                      ? "标题、人物、分集、场次与关键对白已锁定，可以按集生成。"
+                      : result.fidelityReport.status === "review"
+                        ? "发现偏离项，请先检查警告后再生成镜头。"
+                        : "当前为创意扩写模式，没有上传原稿作为硬约束。"}
+                  </p>
+                </div>
+
+                <section className={styles.manifestOverview}>
+                  <header>
+                    <div>
+                      <span>来源文件</span>
+                      <strong>{result.sourceManifest.filename || "手动输入"}</strong>
+                    </div>
+                    <div>
+                      <span>原稿标题</span>
+                      <strong>《{result.sourceManifest.title}》</strong>
+                    </div>
+                    <div>
+                      <span>原稿规格</span>
+                      <strong>{result.sourceManifest.episodeCount} 集 · {result.sourceManifest.episodeLength}</strong>
+                    </div>
+                    <div>
+                      <span>拆解方式</span>
+                      <strong>{result.sourceManifest.fidelityMode}</strong>
+                    </div>
+                  </header>
+                </section>
+
+                <div className={styles.manifestColumns}>
+                  <section>
+                    <h3><Users size={16} />锁定人物</h3>
+                    {result.sourceManifest.characters.length > 0 ? (
+                      result.sourceManifest.characters.map((character) => (
+                        <article key={character.name}>
+                          <strong>{character.name}</strong>
+                          <p>{character.description}</p>
+                        </article>
+                      ))
+                    ) : (
+                      <p>创意模式将在视觉圣经阶段锁定人物。</p>
+                    )}
+                  </section>
+                  <section>
+                    <h3><LayoutList size={16} />分集与场次</h3>
+                    {result.sourceManifest.episodes.map((episode) => (
+                      <article key={episode.episode}>
+                        <strong>E{String(episode.episode).padStart(2, "0")} · {episode.title}</strong>
+                        <p>{episode.sceneCount} 场原稿，按原顺序拆镜</p>
+                      </article>
+                    ))}
+                  </section>
+                </div>
+
+                <section className={styles.protectedFacts}>
+                  <h3><ClipboardCheck size={16} />禁止改写的原稿事实</h3>
+                  <div>
+                    {result.sourceManifest.protectedFacts.map((fact) => (
+                      <span key={fact}><Check size={13} />{fact}</span>
+                    ))}
+                  </div>
+                </section>
+
+                {result.fidelityReport.warnings.length > 0 ? (
+                  <section className={styles.fidelityWarnings}>
+                    <h3>需要人工确认</h3>
+                    {result.fidelityReport.warnings.map((warning) => <p key={warning}>{warning}</p>)}
+                  </section>
+                ) : null}
+
+                {result.sourceManifest.scenes.length > 0 ? (
+                  <details className={styles.sourceSceneList}>
+                    <summary>查看原稿 {result.sourceManifest.scenes.length} 场对应关系</summary>
+                    <ol>
+                      {result.sourceManifest.scenes.map((scene, index) => (
+                        <li key={`${scene.episode}-${index}`}>
+                          <strong>E{String(scene.episode).padStart(2, "0")} · {scene.sourceLabel} · {scene.heading}</strong>
+                          <span>{scene.dialogue.map((line) => line.character).filter((name, itemIndex, names) => names.indexOf(name) === itemIndex).join("、") || "动作场"}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                ) : null}
               </div>
             ) : activeTab === "development" ? (
               <div className={styles.bibleGrid}>
