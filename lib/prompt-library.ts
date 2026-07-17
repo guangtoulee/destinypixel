@@ -4,6 +4,11 @@ import {
   type PromptCategory,
   type PromptFeedItem,
 } from "@/lib/ai/prompt";
+import {
+  curatePromptArticles,
+  isHighQualityPromptArticle,
+  promptArticleLimits,
+} from "@/lib/prompt-quality";
 
 export type PromptCategoryProfile = {
   name: PromptCategory;
@@ -123,10 +128,10 @@ function editorialCandidates() {
     .filter((item) => !isPromptArticle(item) && Boolean(item.imageUrl || item.videoUrl))
     .sort((left, right) => right.metrics.score - left.metrics.score)
     .slice(0, 28);
-  const articles = promptSnapshotItems
-    .filter((item) => isPromptArticle(item) && item.prompt.length >= 280 && item.sourceUrl)
-    .sort((left, right) => right.metrics.score - left.metrics.score)
-    .slice(0, 16);
+  const articles = curatePromptArticles(
+    promptSnapshotItems.filter((item) => isPromptArticle(item) && Boolean(item.sourceUrl)),
+    promptArticleLimits.indexed,
+  );
 
   return [...visual, ...articles];
 }
@@ -180,7 +185,12 @@ export function buildPromptEditorial(item: PromptFeedItem) {
 
 export function relatedPromptItems(item: PromptFeedItem, limit = 4) {
   return promptSnapshotItems
-    .filter((candidate) => candidate.id !== item.id && candidate.category === item.category)
+    .filter(
+      (candidate) =>
+        candidate.id !== item.id &&
+        candidate.category === item.category &&
+        (!isPromptArticle(candidate) || isHighQualityPromptArticle(candidate)),
+    )
     .sort((left, right) => {
       const leftModelMatch = left.modelHints.some((model) => item.modelHints.includes(model)) ? 1 : 0;
       const rightModelMatch = right.modelHints.some((model) => item.modelHints.includes(model)) ? 1 : 0;

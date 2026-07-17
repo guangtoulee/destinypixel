@@ -8,6 +8,7 @@ import {
   promptCategoryProfiles,
   promptSnapshotItems,
 } from "@/lib/prompt-library";
+import { isHighQualityPromptArticle } from "@/lib/prompt-quality";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import styles from "../../prompt-library.module.css";
 
@@ -36,7 +37,11 @@ export default async function PromptCategoryPage({ params }: PageProps) {
   const profile = getPromptCategoryProfile((await params).slug);
   if (!profile) notFound();
   const items = promptSnapshotItems
-    .filter((item) => item.category === profile.name)
+    .filter(
+      (item) =>
+        item.category === profile.name &&
+        (!(item.sourceType === "x" && !item.imageUrl && !item.videoUrl) || isHighQualityPromptArticle(item)),
+    )
     .sort((left, right) => new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime());
   const schema = {
     "@context": "https://schema.org",

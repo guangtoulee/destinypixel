@@ -19,6 +19,7 @@ import {
   LockKeyhole,
   LogOut,
   Pin,
+  PinOff,
   Radio,
   RefreshCw,
   Search,
@@ -33,6 +34,11 @@ import {
 } from "lucide-react";
 import styles from "./prompt-experience.module.css";
 import { promptCategoryLink, promptItemLink } from "@/lib/prompt-links";
+import {
+  curatePromptArticles,
+  isHighQualityPromptArticle,
+  promptArticleLimits,
+} from "@/lib/prompt-quality";
 
 type PromptLanguage = "zh" | "en";
 type PromptContentType = "image" | "video" | "prompt" | "case";
@@ -367,7 +373,7 @@ export default function PromptExperience() {
       const typeMatch =
         activeFilter === "all" ||
         (activeFilter === "article"
-          ? item.sourceType === "x" && !mediaSrc(item)
+          ? isHighQualityPromptArticle(item)
           : item.contentType === activeFilter);
       const categoryMatch = activeCategory === "all" || item.category === activeCategory;
       const queryMatch = query
@@ -392,16 +398,11 @@ export default function PromptExperience() {
   }, [activeCategory, activeFilter, items, searchTerm, translations]);
 
   const signalItems = useMemo(() => {
-    const articles = filteredItems
-      .filter((item) => item.sourceType === "x" && !mediaSrc(item))
-      .sort((left, right) => {
-        if (left.isPinned !== right.isPinned) return left.isPinned ? -1 : 1;
-        return new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime();
-      });
-    return activeFilter === "article" ? articles : articles.slice(0, 10);
+    const articles = curatePromptArticles(filteredItems, promptArticleLimits.archive);
+    return activeFilter === "article" ? articles : articles.slice(0, promptArticleLimits.home);
   }, [activeFilter, filteredItems]);
   const articleCount = useMemo(
-    () => items.filter((item) => item.sourceType === "x" && !mediaSrc(item)).length,
+    () => items.filter(isHighQualityPromptArticle).length,
     [items],
   );
   const visualItems = useMemo(
@@ -474,6 +475,7 @@ export default function PromptExperience() {
         (item) =>
           item.sourceType === "x" &&
           item.language === "en" &&
+          isHighQualityPromptArticle(item) &&
           !translations[item.id] &&
           !requestedTranslations.current.has(item.id),
       )
@@ -697,12 +699,20 @@ export default function PromptExperience() {
     return (
       <div className={styles.adminControls}>
         <button
+          aria-pressed={item.isPinned === true}
           disabled={busy}
           onClick={() => void moderateItem(item, item.isPinned ? "unpin" : "pin")}
           title={item.isPinned ? "取消置顶" : "置顶"}
           type="button"
         >
-          {busy ? <Loader2 aria-hidden="true" className={styles.spin} /> : <Pin aria-hidden="true" />}
+          {busy ? (
+            <Loader2 aria-hidden="true" className={styles.spin} />
+          ) : item.isPinned ? (
+            <PinOff aria-hidden="true" />
+          ) : (
+            <Pin aria-hidden="true" />
+          )}
+          <span>{item.isPinned ? "取消置顶" : "置顶"}</span>
         </button>
         <button
           disabled={busy}
@@ -1135,13 +1145,13 @@ export default function PromptExperience() {
 
         {activeFilter !== "article" && articleCount > signalItems.length ? (
           <div className={styles.articleMore}>
-            <span>首页显示最新 {signalItems.length} 篇，共收录 {articleCount} 篇纯文字文章</span>
+            <span>首页显示最新 {signalItems.length} 篇，共筛出 {articleCount} 篇高质量文章</span>
             <Link href="/prompt/articles">
               查看全部文章 <ArrowRight aria-hidden="true" />
             </Link>
           </div>
         ) : activeFilter === "article" ? (
-          <p className={styles.articleTimelineNote}>已按发布时间从新到旧排列，共 {signalItems.length} 篇。</p>
+          <p className={styles.articleTimelineNote}>已按质量门槛筛选并按发布时间从新到旧排列，共 {signalItems.length} 篇。</p>
         ) : null}
       </section>
 

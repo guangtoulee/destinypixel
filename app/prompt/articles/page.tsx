@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import PromptLibraryCard from "@/components/prompt-library-card";
 import { isPromptArticle, promptSnapshotItems } from "@/lib/prompt-library";
+import { curatePromptArticles, promptArticleLimits } from "@/lib/prompt-quality";
 import { siteName } from "@/lib/seo";
 import styles from "../prompt-library.module.css";
 
@@ -22,9 +23,10 @@ export const metadata: Metadata = {
 };
 
 export default function PromptArticlesPage() {
-  const articles = promptSnapshotItems
-    .filter(isPromptArticle)
-    .sort((left, right) => new Date(right.createdAt).getTime() - new Date(left.createdAt).getTime());
+  const articles = curatePromptArticles(
+    promptSnapshotItems.filter(isPromptArticle),
+    promptArticleLimits.archive,
+  );
 
   return (
     <main className={styles.libraryPage} data-accent="acid">
@@ -41,7 +43,7 @@ export default function PromptArticlesPage() {
         </div>
       </header>
       <div className={styles.archiveTicker}>
-        <span>{articles.length} 篇当前收录</span>
+        <span>{articles.length} 篇编辑精选</span>
         <span>每日三次更新</span>
         <span>公开来源可追溯</span>
       </div>
