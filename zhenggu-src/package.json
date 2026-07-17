@@ -1,0 +1,24 @@
+{
+  "name": "zhenggu-anatomy-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "build:deploy": "tsc && vite build --base=/zhenggu-assets/",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "lucide": "^0.468.0",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@types/pngjs": "^6.0.5",
+    "@types/three": "^0.171.0",
+    "playwright-core": "^1.61.1",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
