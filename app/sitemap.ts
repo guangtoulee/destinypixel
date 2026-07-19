@@ -17,6 +17,7 @@ const publicRoutes = [
   { path: routeSeo.sticks.path, priority: 0.71, changeFrequency: "weekly" },
   { path: routeSeo.atelier.path, priority: 0.73, changeFrequency: "weekly" },
   { path: routeSeo.juben.path, priority: 0.76, changeFrequency: "weekly" },
+  { path: routeSeo.daoyan.path, priority: 0.79, changeFrequency: "weekly" },
   { path: routeSeo.prompt.path, priority: 0.78, changeFrequency: "daily" },
   { path: routeSeo.black.path, priority: 0.42, changeFrequency: "monthly" },
 ] as const;

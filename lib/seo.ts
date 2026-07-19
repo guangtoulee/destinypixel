@@ -223,6 +223,24 @@ export const routeSeo = {
       "shot list generator",
     ],
   },
+  daoyan: {
+    path: "/daoyan",
+    title: "AI 导演工作台 | 连续短剧剧本、资产锁定与视频生产包",
+    description:
+      "从故事立项、人物场景资产锁定和分集因果，到完整单集导演本、连续视频单元、首末帧 Prompt 与生产看板，面向 Lovart、Grok 和 AI 短剧制作。",
+    keywords: [
+      "AI导演",
+      "AI短剧工作流",
+      "连续短剧剧本",
+      "短剧导演脚本",
+      "角色一致性",
+      "首尾帧提示词",
+      "Lovart prompt",
+      "Grok video prompt",
+      "AI film production workflow",
+      "vertical drama director",
+    ],
+  },
   prompt: {
     path: "/prompt",
     title: "AI Prompt 雷达 | 图片视频提示词、中文扩写与案例拆解",
