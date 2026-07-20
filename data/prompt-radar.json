@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-20T10:25:47.584Z",
+  "updatedAt": "2026-07-20T15:29:12.199Z",
   "sourceSummary": {
-    "community": 231,
-    "publicX": 162,
-    "total": 393
+    "community": 243,
+    "publicX": 164,
+    "total": 407
   },
   "items": [
     {
@@ -102,6 +102,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "50 AI tools that will save you hundreds of hours in 2026. 🤯 1. Claude — Solve any problem 2. Perplexity — Research anything 3. PortfolioTab — Create your portfolio 4. Kling AI — Create AI videos 5. Tripo AI — Create 3D models 6. Gemini — Perfect writing 7. CapCut — Edit videos 8. The AI Library — Discover useful AI tools 9. YouLearn — Summarize YouTube videos 10. Canva — Design graphics 11. ElevenLabs — Clone voices 12. Podcastle — Edit podcasts 13. ChatGPT — Brainstorm ideas 14. NotebookLM — Analyze documents 15. Lovable — Build web apps 16. Bolt new — Generate full-stack apps 17. Cursor — AI coding assistant 18. Windsurf — AI software development 19. Replit — Build apps in your browser 20. Gamma — Create presentations 21. HeyGen — Create AI avatar videos 22. Synthesia — Generate AI presenter videos 23. Midjourney — Generate AI art 24. Ideogram — Create images with text 25. Runway — AI video editing 26. Pika — Generate AI videos 27. Luma AI — Create cinematic AI videos 28. Leonardo AI — Create game assets & artwork 29. Figma AI — Design UI/UX 30. Framer AI — Build websites 31. Tally — Create smart forms 32. Otter ai — Transcribe meetings 33. Fireflies ai — AI meeting notes 34. Granola — AI meeting assistant 35. Wispr Flow — Voice-to-text 36. Zapier — Automate workflows 37. Make — Connect apps with automation 38. n8n — Open-source automation 39. Photoroom — Edit product photos 40. Remove bg — Remove image backgrounds 41. Suno — Generate AI music 42. Udio — Create original songs 43. DeepL — Translate accurately 44. Poe — Access multiple AI models 45. Grok — Real-time AI assistant 46. Genspark — AI super agent 47. Manus — Autonomous AI agent 48. Elicit — Research papers faster 49. SciSpace — Understand research papers 50. Notion AI — Write and organize notes ✅ Save this list—you'll probably use it more than you think."
+    },
+    {
+      "id": "x-public-2078551452201754980",
+      "title": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude",
+      "description": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the ",
+      "prompt": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Axel_bitblaze69/status/2078551452201754980",
+      "sourceType": "x",
+      "authorName": "Axel Bitblaze 🪓",
+      "authorHandle": "@Axel_bitblaze69",
+      "createdAt": "2026-07-18T18:44:18.000Z",
+      "importedAt": "2026-07-20T15:29:12.192Z",
+      "tags": [
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1004,
+        "reposts": 128,
+        "replies": 30,
+        "quotes": 5,
+        "bookmarks": 2253,
+        "views": 94263,
+        "score": 9513
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
     },
     {
       "id": "x-public-2074158868142194898",
@@ -229,48 +271,6 @@
       "rawText": "A 20 YEAR OLD IS MAKING $20,000 A MONTH WITH THE LAZIEST BUSINESS MODEL ON THE INTERNET. SHE WORKS TWENTY MINUTES A DAY FROM HER CAR. SHE HAS NEVER PRODUCED AN ORIGINAL IDEA. Children's YouTube is a goldmine. Channels with simple songs and bright colors pull hundreds of millions of views. Traditional studios spend a fortune to animate them. She spends zero dollars and does it from the driver's seat. She opens YouTube on her phone. She finds a viral baby video with millions of views. She copies the link. She uses a free tool to rip the entire transcript of the video. She takes that transcript and pastes it into an AI platform called Swagga. She types one sentence: \"Make me a prompt for a similar video using this as inspiration.\" The AI acts as her creative director. It analyzes the viral song and spits out a highly detailed master prompt for a new, original 3D animation. She copies the prompt. She switches to the video generator tab. She selects Sora 2 and hits generate. Three minutes later, the AI outputs a fully rendered, broadcast-ready 3D animation. A brightly colored, musical video designed specifically to capture the attention of a toddler. She downloads it. She posts it. She puts her car in drive. The entire process takes twenty minutes. Her channel pulls in thousands of dollars a week in AdSense. She is running a complete children's television network without an office, without animators, and without original ideas. The traditional creator economy is obsessed with authenticity and hard work. The ghost economy is obsessed with leverage. Most people will watch her video and call it lazy. A few will open a new tab."
     },
     {
-      "id": "x-public-2078551452201754980",
-      "title": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude",
-      "description": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the ",
-      "prompt": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Axel_bitblaze69/status/2078551452201754980",
-      "sourceType": "x",
-      "authorName": "Axel Bitblaze 🪓",
-      "authorHandle": "@Axel_bitblaze69",
-      "createdAt": "2026-07-18T18:44:18.000Z",
-      "importedAt": "2026-07-19T14:38:59.337Z",
-      "tags": [
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 627,
-        "reposts": 77,
-        "replies": 22,
-        "quotes": 3,
-        "bookmarks": 1410,
-        "views": 45088,
-        "score": 5913
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
-    },
-    {
       "id": "x-public-2075595979902919010",
       "title": "🎬 Want to create a cinematic 15-second slice-of-life video with AI? In 3 simple steps: 1- Creat",
       "description": "🎬 Want to create a cinematic 15-second slice-of-life video with AI? In 3 simple steps: 1- Create a consistent character with GPT Image 2 2- Write a scene-by-scene story 3- Animate everything with Seedance 2.0 Your ultra",
@@ -314,6 +314,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🎬 Want to create a cinematic 15-second slice-of-life video with AI? In 3 simple steps: 1- Create a consistent character with GPT Image 2 2- Write a scene-by-scene story 3- Animate everything with Seedance 2.0 Your ultra-realistic short film is ready ✨ Start creating 👇"
+    },
+    {
+      "id": "x-public-2078444653205230052",
+      "title": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prom",
+      "description": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇",
+      "prompt": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/HeyAbhishek/status/2078444653205230052",
+      "sourceType": "x",
+      "authorName": "Abhishek",
+      "authorHandle": "@HeyAbhishek",
+      "createdAt": "2026-07-18T11:39:55.000Z",
+      "importedAt": "2026-07-20T15:29:12.190Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 674,
+        "reposts": 105,
+        "replies": 20,
+        "quotes": 7,
+        "bookmarks": 842,
+        "views": 41522,
+        "score": 4418
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇"
     },
     {
       "id": "x-public-2076291436283396496",
@@ -2332,6 +2377,50 @@
       "rawText": "llevo un rato dándole vueltas a esto y no me lo creo Seedance 2.0 on Higgsfield AI Prompts y assets open-source completos abajo: o sea el prompt que usaron ELLOS para ESTE video, te lo ponen ahí para que lo copies, así de fácil antes tocabas adivinar cómo lo habían hecho ahora te lo dan todo hecho @Image1 is the lead performer — preserve her exact identity in every shot: cornrow braids, septum ring, statement earrings, sculptural glossy white wrapped top, dark indigo denim. @Audio1 is the music track — entire edit cut to it; no invented music, no voiceover, no lip-sync. Music-video route: dance/performance, rooftop golden-hour editorial. Track: industrial hip-hop, 95 BPM half-time, distorted 808s, luxury-noir. Director thesis: a skyline coronation — the lead and her four dancers own an empty rooftop at last light, silhouettes against the city. Visual world: flat concrete rooftop of a brutalist tower at golden hour, low sun raking long shadows across the roof, city skyline hazy in the background, wind moving fabric. Background dancers: 4 dancers in tonal rust and camel utilitarian looks, sculptural streetwear. Palette: golden amber, rust, concrete, bone white top cutting through, deep indigo. Natural light only, no neon, no particles. Cut map synced to @Audio1 : 0.0–2.0s THE BREATH — static ultra-wide from across the rooftop: five figures spread far apart in a pentagon, all facing the sun, long shadows pointing at camera. Wind and stillness. 2.0s THE DROP — 808 kick: all five pivot to camera in unison on the hit; hard cut to low-angle medium of the lead, sun flaring behind her braids. 2.0–4.0s she struts along the roof edge parapet line (safe, well inside the roof), the four dancers converging on her diagonally from the corners in lockstep, shadows sweeping like clock hands; camera dollying backward. 4.0s snare — whip-pan: full freeze in a tight cluster, she hits a profile vogue arm frame, dancers frozen in four different angular silhouettes against the skyline. 4.0–8.0s golden-hour choreography in medium-wide: her sharp head isolations and New Way vogue arm lines land on the snares; the four dancers frame her in rotating formations — box, diagonal, split pairs — changing formation exactly on each snare hit; torso rolls ripple through the group on the 808 slides. Camera orbits with the sun cross-lighting faces. 8.0s hi-hat triple roll — 3 rapid macro inserts: her earring flaring in backlight, four hands hitting the same vogue frame stacked in depth, boots pivoting on rooftop gravel. 8.5–12.0s escalation: accelerating orbital around the cluster as the dancers whip around her in a fast carousel, her solo arm work speeding up at the axis, long shadows strobing across the lens; speed-ramp slow-motion stretch — hair and fabric floating in wind — then snap back on the kick. 12.0s bass slide — the whole group drops level together into deep sliding lunges across the concrete, camera dutch and low, the sun skimming the roof surface. 13.5–15.0s FINAL BUTTON — hard cut to the opening ultra-wide: pentagon reformed but now all facing camera, the lead center in a frozen vogue pose one arm high, four dancers kneeling on one knee, five long shadows converging at the lens; micro push-in, hold. Loopable. Performance rules: lead stoic, owns the horizon; dancers precise, faces neutral. Continuity: same five people, same wardrobe, same rooftop and light. Audio intent: every cut and formation change on a hit of @Audio1 ; faint foley only (wind, gravel, fabric). Quality bar: expensive editorial music video, natural cinematic grade, no AI gloss, no glow, no lens-flare abuse."
     },
     {
+      "id": "x-public-2076979039747920309",
+      "title": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Cr",
+      "description": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 1",
+      "prompt": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 10-second cinematic 3D animation by recreating every storyboard panel in sequence. Do NOT animate the storyboard page itself. Rebuild every scene as a real animated environment while keeping the exact same girl, outfit, hairstyle, facial features, kitchen, colors, lighting, props, and overall style from the storyboard. 0.00–1.25s: The girl happily waves at the camera and points toward the cupcake ingredients on the table. 1.25–2.50s: She pours flour into a clear glass bowl. Soft flour particles float naturally. 2.50–3.75s: She gently whisks the cupcake batter while smiling. 3.75–5.00s: Extreme close-up of creamy batter being poured into colorful cupcake liners. 5.00–6.25s: She sprinkles rainbow sprinkles over the cupcake batter. 6.25–7.50s: Top-down shot of the cupcake tray as she carefully places it into the oven. 7.50–8.75s: Inside the oven, the cupcakes rise into fluffy golden cupcakes with warm glowing light. 8.75–10.00s: She removes the cupcakes, proudly presents them to the camera, smiles brightly, and gives a cute thumbs-up. Style: Pixar-quality 3D animation, ultra-cute, cozy bakery kitchen, warm golden lighting, soft pastel colors, cinematic depth of field, smooth camera movements, realistic hand movements, natural facial expressions, seamless transitions, high detail, 4K look. Camera: Follow the storyboard camera angles exactly (wide shot, medium shot, close-up, extreme close-up, top-down, close-up, wide shot). Important: Treat the uploaded storyboard only as a reference. Never animate the storyboard page itself. Recreate every scene from scratch in full 3D animation. Do not show storyboard borders or text.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/HaniaAi12/status/2076979039747920309",
+      "sourceType": "x",
+      "authorName": "Hania Ai",
+      "authorHandle": "@HaniaAi12",
+      "createdAt": "2026-07-14T10:36:06.000Z",
+      "importedAt": "2026-07-20T15:29:12.191Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 112,
+        "reposts": 24,
+        "replies": 31,
+        "quotes": 0,
+        "bookmarks": 63,
+        "views": 6756,
+        "score": 554
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 10-second cinematic 3D animation by recreating every storyboard panel in sequence. Do NOT animate the storyboard page itself. Rebuild every scene as a real animated environment while keeping the exact same girl, outfit, hairstyle, facial features, kitchen, colors, lighting, props, and overall style from the storyboard. 0.00–1.25s: The girl happily waves at the camera and points toward the cupcake ingredients on the table. 1.25–2.50s: She pours flour into a clear glass bowl. Soft flour particles float naturally. 2.50–3.75s: She gently whisks the cupcake batter while smiling. 3.75–5.00s: Extreme close-up of creamy batter being poured into colorful cupcake liners. 5.00–6.25s: She sprinkles rainbow sprinkles over the cupcake batter. 6.25–7.50s: Top-down shot of the cupcake tray as she carefully places it into the oven. 7.50–8.75s: Inside the oven, the cupcakes rise into fluffy golden cupcakes with warm glowing light. 8.75–10.00s: She removes the cupcakes, proudly presents them to the camera, smiles brightly, and gives a cute thumbs-up. Style: Pixar-quality 3D animation, ultra-cute, cozy bakery kitchen, warm golden lighting, soft pastel colors, cinematic depth of field, smooth camera movements, realistic hand movements, natural facial expressions, seamless transitions, high detail, 4K look. Camera: Follow the storyboard camera angles exactly (wide shot, medium shot, close-up, extreme close-up, top-down, close-up, wide shot). Important: Treat the uploaded storyboard only as a reference. Never animate the storyboard page itself. Recreate every scene from scratch in full 3D animation. Do not show storyboard borders or text."
+    },
+    {
       "id": "x-public-2077836264934690834",
       "title": "Seedance 2.0 on Higgsfield AI Full open-sourced prompts & assets below: I've always been curious",
       "description": "Seedance 2.0 on Higgsfield AI Full open-sourced prompts & assets below: I've always been curious about how cinematic AI videos are actually made. Seeing every prompt, reference image, and generation setting made this one",
@@ -2461,50 +2550,6 @@
       "rawText": "THIS ENTIRE CINEMATIC ACTION SHOT WAS GENERATED WITH AI. AND YOU CAN SEE EXACTLY HOW IT WAS MADE. Higgsfield has just open-sourced its Originals, giving creators full access to the workflow behind some of its best productions. For every project you can inspect: → the complete prompt → every image and audio reference → the exact generation settings, including model, quality and resolution This scene combines a continuous one-take camera move, large-scale naval combat, realistic explosions, character consistency and cinematic pacing, all driven by a single prompt. Nothing is hidden. You can study it, copy it, recreate it or use it as the starting point for your own projects. Full prompt: \"SCENE CONTEXT One continuous shot. The camera faces down the wrecked, burning deck toward the BOW of the ship — and Eduardo, blown off the raised STERN DECK behind the camera by a blast, comes FLYING IN from ABOVE AND BEHIND — leaping off the second level, sailing in over the lens on a forward arc, through raining seawater — slams onto the MAIN deck one level below, AHEAD of the camera, and rolls through a tumbling somersault, momentum carrying him toward the bow. Two crewmen flee past him — one leaps overboard. Eduardo fights his way toward the bow under incoming fire: an explosion bursts on his LEFT — he dodges away and is knocked down; he struggles back to his feet — a second explosion on his RIGHT — he ducks and shields behind debris; then he breaks into a sprint for the bow — the camera sweeps around ahead of him and settles OFF THE BOW, FRONTAL: he leaps over the bow rail TOWARD the camera, the ship filling the background behind him — and THE INSTANT he clears the rail, a COLOSSAL explosion consumes the ship behind him: the blast wall catches him MID-AIR and he VANISHES inside it — he never escapes. The cloud overtakes the camera; the frame floods to 100% smoke and dust. The shot ENDS inside the dust: no transition, no reveal — it holds to the end. ACTIVE REFERENCES >> — lean pirate captain, dark curly hair falling free from under a dusty mustard-yellow cloth bandana, a small white shark tooth pinned to the front of the bandana above his temple, thin moustache, gold hoop earrings, cream linen shirt under a worn brown leather waistcoat, cloth sash and leather belts. 100% matches the reference; the man fighting down the deck toward the bow. >> — Eduardo's galleon: pale square sails, tall wooden sterncastle. 100% matches the reference; controls the ship's exterior — sails, masts, rigging and hull; already battle-damaged in this shot — burst bulwark, smoldering rigging, debris on the deck. >> — the deck of the same galleon seen FROM THE RAISED STERN DECK LOOKING FORWARD TOWARD THE BOW: the great wheel and brass compass binnacle in the near foreground, an ornate lantern post, a carved balustrade, a staircase descending to the long MAIN deck — weathered planking, small cannons along both rails, black gratings, coiled ropes, the mainmast amidships, the forecastle and bow in the far depth, open sea on both sides. 100% matches the reference; controls the full on-deck geography, set dressing AND the shot's base viewing direction — from the stern toward the bow. >> — calm bright sea, glittering sun path, hazy horizon. Controls water and sky atmosphere only. >> — weathered pirate crewmen (bandanas, rough shirts, vests). 100% match the reference; TWO of them appear early in the shot, fleeing — one leaps overboard. LOCATION MAP The deck of >> aboard >> on >> — the raised stern deck (wheel, binnacle, balustrade) at the BACK, the staircase down, the long main deck with cannons, gratings and the mainmast running FORWARD to the distant BOW, exactly as on the reference — the main deck now a wrecked corridor of splintered planks, fallen spars, torn rigging and small fires. The camera sits at the forward edge of the raised stern deck, just past the wheel, LOOKING FORWARD along the whole deck toward the bow — the reference's own vantage; the wheel and binnacle may edge the near foreground. The bow rail and bowsprit are the destination, background-center, open sea beyond them. Sea and smoke beyond the broken side rails; seawater from near-miss columns rains down over the deck in the opening. FIRST FRAME / BLOCKING First frame: deck level, MS, camera facing down the wrecked deck toward the BOW in the background-center — the view of >>: from the stern-deck edge the long main deck runs away to the bow and bowsprit against open sea and sky, cannons along both rails, the mainmast mid-depth, smoke streaming across the frame, small fires burning left and right, seawater spray falling across the deck like rain, the deck listing, loose gear sliding; the wheel and binnacle just behind/beside the camera, edging the near foreground. Eduardo is NOT in the first frame; within the first half second he comes off that second level behind the camera — his body sweeping in OVER the lens from above and behind, boots crossing the top of the frame, flying FORWARD and DOWN one deck-height into the depth of the shot toward the bow. FORMAT MODE One continuous shot — the camera does not cut on its own. The shot ENDS inside the dust whiteout; there is NO location change and NO reveal after it. PHASE 1 — the landing and the gauntlet: >> comes FLYING IN from ABOVE AND BEHIND the camera — blown off the stern deck by a blast, his body sweeping in over the lens and arcing DOWN-AND-FORWARD one full deck-height onto the main deck below, arms out in front of him, back to camera — falling THROUGH a curtain of seawater raining down from a collapsed near-miss column; he SLAMS onto the wet MAIN-deck planks in the depth of the frame and rolls through a hard tumbling somersault AWAY from the lens, toward the bow, water bursting off him and the boards, scattering debris, coming up to a crouch facing the bow, soaked and shaken. TWO crewmen of >> bolt past him in panic — one sprints aft past the camera, the other vaults the side rail and LEAPS OVERBOARD, legs kicking. Eduardo starts working down the deck toward the bow, camera following behind. An incoming round EXPLODES on his LEFT — a burst of flame, planks and spray — he flinches away to the right and is knocked off his feet onto the deck. He struggles up, heavy and unsteady, one hand pushing off a fallen spar — and a second round EXPLODES on his RIGHT — he ducks hard, shielding his head behind a broken mast stump, debris raining over him. PHASE 2 — the sprint, the frontal jump, the blast, the dust: he shoves off and breaks into a desperate sprint at 12 km/h for the bow — and as he runs, the camera SWEEPS AROUND him in one continuous arc, ending positioned OFF THE BOW, out over the open water, FACING BACK at the ship: now Eduardo sprints STRAIGHT AT THE CAMERA, the burning ship towering behind him. He plants one boot on the bow rail and LEAPS OVERBOARD TOWARD THE CAMERA — body launching up and out over the water, frontal, face and reaching arms filling the frame — and THE INSTANT he clears the rail, mid-air, the ENTIRE SHIP EXPLODES behind him in full view: a colossal white flash silhouetting his flying body for two frames, the whole vessel going up in one blast — and the expanding wall of flame-lit smoke and debris CATCHES HIM IN THE AIR from behind, swallowing his silhouette whole before he can fall clear — he VANISHES inside the explosion, never escaping it — and the cloud overtakes the lens, the dust filling 100% of the frame. The dust churns, a deep orange glow pulsing inside it and fading. HOLD inside the full dust to the last frame — the generation ENDS here, inside the dust. He never reaches the water; the blast takes him mid-air. OPTICS 47° neutral through the landing, the gauntlet and the jump. No drift. Focus rides Eduardo throughout; in the final dust the frame is pure particulate with no fixed plane. CAMERA Handheld chase behind him for the entire shot, deck level, always looking TOWARD THE BOW — footstep energy visible, jolted by each explosion; in phase 2 it accelerates after his sprint, then arcs around him in one unbroken move and settles off the bow over the water, FRONTAL to Eduardo — he runs and leaps straight into the lens with the ship in the background of his jump. The final blast is the WHOLE SHIP exploding behind his airborne body — a colossal flash, then the wall of smoke bursting forward, swallowing him mid-air and then the lens — the camera stays buried, holding inside the churning dust until the end. ACTION Strict order of events: flying entry from above through falling seawater → hard landing roll (somersault over one shoulder, forward momentum carrying the roll toward the bow, ending in a crouch) → two crewmen flee past, one over the side → left explosion → dodge right → knocked down → a hard, clumsy struggle back to his feet → right explosion → duck and shield behind the mast stump → shove off → full sprint to the bow, camera arcing around to meet him head-on → one boot on the rail → LEAP overboard straight toward the camera → THE INSTANT he clears the rail, the ENTIRE SHIP EXPLODES behind him → the blast wall catches him MID-AIR and swallows him whole → the cloud overtakes the camera → dust to 100% → hold in the dust → END. He never escapes and never reaches the water. Each explosion visibly moves his body: the first throws him down, the second folds him behind cover. PERFORMANCE During the gauntlet: jaw clenched, eyes fixed forward, water streaming off his face after the landing. The fleeing crewmen are pure panic — arms pumping, one glance back, the vault over the rail desperate. In the final sprint: full commitment, arms reaching for the rail, eyes wide — in the jump: full commitment, arms reaching at the lens, eyes wide — and mid-air the world behind him turns white: his flying silhouette swallowed by the blast, reaching hands the last thing visible. PHYSICS The flying entry has true ballistic momentum: he arrives on an arc from above, and the landing roll absorbs it — impact compresses the body, the somersault carries the leftover energy, no weightless float. Falling seawater has real weight — it rains in heavy drops and sheets, splashing off planks, soaking cloth so it clings and darkens. The listing deck tilts his movement; debris has weight and stops his foot when hit. The two deck explosions throw real shockwaves — planks lift, flame flashes then roll into smoke, and Eduardo's falls carry true body weight, hard contact with the deck, no bounce. The overboard crewman drops with real gravity. The final whole-ship explosion obeys mass: the shockwave arrives first — cloth and hair snap flat, the deck bucks under his planted boot — then the fireball's light, then the wall of smoke and debris, heavy pieces falling short, fine dust travelling farthest and swallowing the frame. Dust churns with internal motion, dense, filling every corner of the frame. LIGHTING High sea daylight 5600K, hardened by fire-glow accents from the deck fires and smoke shadow sweeping the deck; falling water catches the sun as bright streaks; each of the two explosions throws a brief warm flash from its side of the frame. The final whole-ship blast: two frames of white-hot overexposure flooding from behind, then deep fire-orange glow inside the rolling dust, fading toward neutral grey-brown as the frame holds and ends. AUDIO Phase 1: a whistling whoosh as he drops in, heavy water raining on planks, a THUD and clatter of the landing roll, grunt, ragged breath; panicked boots of the fleeing crewmen, a yell and a distant splash as one goes over the side; then BOOM left, ringing ears, his grunt as he hits the deck; scrabbling boots; BOOM right, debris pattering down over him. Phase 2: sprinting boots hammering the deck, the wooden knock of his boot on the bow rail, half a beat of pure wind as he hangs in the air — then ONE colossal BOOM as the whole ship goes up behind him, the deepest sound of the film, cracking timber and folding masts inside the roar, everything collapsing into a muffled ring, sound buried with the picture — the ring and the churn of dust holding to the last frame. No music. STYLE Photoreal live-action, fine film grain, real pyrotechnic and particulate language, one unbroken take, 8K master. POSITIVE LOCKS One continuous shot; the camera stays at deck level, behind Eduardo, always looking TOWARD THE BOW. The shot OPENS with Eduardo NOT in frame; he flies in from ABOVE AND BEHIND the camera, over the lens, on a forward arc toward the bow, through falling seawater, and lands in a tumbling roll ahead of the camera — he does not walk into frame and never appears standing before the landing. Exactly TWO fleeing crewmen: one runs aft, one leaps overboard — they appear only in the opening beat. The deck explosions land in strict order after his landing: first LEFT of him (he dodges and falls), then RIGHT of him (he ducks behind cover), then the final blast — the ENTIRE SHIP exploding the INSTANT he clears the bow rail — three explosions total, no more. The jump is FRONTAL: the camera faces Eduardo from off the bow, he leaps toward the lens with the exploding ship behind him in frame. HE NEVER ESCAPES: the blast wall catches him MID-AIR and he vanishes inside the explosion before he can fall clear — no water contact, no landing, no survival beat; the dust swallows him and then the lens. The deck matches >> throughout the run — the shot holds the reference's vantage: from the stern deck forward to the bow, wheel and binnacle at the near edge of frame, never ahead of him; sails, masts and hull match >>. The dust reaches 100% frame coverage and the shot ENDS inside the dust: the frame stays fully dust-filled to the last frame, no clearing, no new location, no reveal. Eduardo's head: mustard-yellow bandana with the small white shark tooth at the front, hair loose.\" Made with Seedance 2.0 on Higgsfield AI. Full open-sourced prompts & assets below 👇"
     },
     {
-      "id": "x-public-2076979039747920309",
-      "title": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Cr",
-      "description": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 1",
-      "prompt": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 10-second cinematic 3D animation by recreating every storyboard panel in sequence. Do NOT animate the storyboard page itself. Rebuild every scene as a real animated environment while keeping the exact same girl, outfit, hairstyle, facial features, kitchen, colors, lighting, props, and overall style from the storyboard. 0.00–1.25s: The girl happily waves at the camera and points toward the cupcake ingredients on the table. 1.25–2.50s: She pours flour into a clear glass bowl. Soft flour particles float naturally. 2.50–3.75s: She gently whisks the cupcake batter while smiling. 3.75–5.00s: Extreme close-up of creamy batter being poured into colorful cupcake liners. 5.00–6.25s: She sprinkles rainbow sprinkles over the cupcake batter. 6.25–7.50s: Top-down shot of the cupcake tray as she carefully places it into the oven. 7.50–8.75s: Inside the oven, the cupcakes rise into fluffy golden cupcakes with warm glowing light. 8.75–10.00s: She removes the cupcakes, proudly presents them to the camera, smiles brightly, and gives a cute thumbs-up. Style: Pixar-quality 3D animation, ultra-cute, cozy bakery kitchen, warm golden lighting, soft pastel colors, cinematic depth of field, smooth camera movements, realistic hand movements, natural facial expressions, seamless transitions, high detail, 4K look. Camera: Follow the storyboard camera angles exactly (wide shot, medium shot, close-up, extreme close-up, top-down, close-up, wide shot). Important: Treat the uploaded storyboard only as a reference. Never animate the storyboard page itself. Recreate every scene from scratch in full 3D animation. Do not show storyboard borders or text.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/HaniaAi12/status/2076979039747920309",
-      "sourceType": "x",
-      "authorName": "Hania Ai",
-      "authorHandle": "@HaniaAi12",
-      "createdAt": "2026-07-14T10:36:06.000Z",
-      "importedAt": "2026-07-16T04:39:44.812Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 107,
-        "reposts": 24,
-        "replies": 31,
-        "quotes": 0,
-        "bookmarks": 57,
-        "views": 4595,
-        "score": 521
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "One storyboard. One prompt. Endless possibilities. This entire animation was created with AI. Create with GPT IMAGE 2 + Seedance 2.0 Prompt: Use the uploaded storyboard image as a visual reference only. Create a single 10-second cinematic 3D animation by recreating every storyboard panel in sequence. Do NOT animate the storyboard page itself. Rebuild every scene as a real animated environment while keeping the exact same girl, outfit, hairstyle, facial features, kitchen, colors, lighting, props, and overall style from the storyboard. 0.00–1.25s: The girl happily waves at the camera and points toward the cupcake ingredients on the table. 1.25–2.50s: She pours flour into a clear glass bowl. Soft flour particles float naturally. 2.50–3.75s: She gently whisks the cupcake batter while smiling. 3.75–5.00s: Extreme close-up of creamy batter being poured into colorful cupcake liners. 5.00–6.25s: She sprinkles rainbow sprinkles over the cupcake batter. 6.25–7.50s: Top-down shot of the cupcake tray as she carefully places it into the oven. 7.50–8.75s: Inside the oven, the cupcakes rise into fluffy golden cupcakes with warm glowing light. 8.75–10.00s: She removes the cupcakes, proudly presents them to the camera, smiles brightly, and gives a cute thumbs-up. Style: Pixar-quality 3D animation, ultra-cute, cozy bakery kitchen, warm golden lighting, soft pastel colors, cinematic depth of field, smooth camera movements, realistic hand movements, natural facial expressions, seamless transitions, high detail, 4K look. Camera: Follow the storyboard camera angles exactly (wide shot, medium shot, close-up, extreme close-up, top-down, close-up, wide shot). Important: Treat the uploaded storyboard only as a reference. Never animate the storyboard page itself. Recreate every scene from scratch in full 3D animation. Do not show storyboard borders or text."
-    },
-    {
       "id": "x-public-2075106918675399074",
       "title": "The scary part? Most people won't realize she's AI. No actress. No camera. No lighting setup. No",
       "description": "The scary part? Most people won't realize she's AI. No actress. No camera. No lighting setup. No film crew. No expensive production. This entire video was created using Creatify. A few years ago, producing a video like t",
@@ -2588,6 +2633,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Two new image models in two days! Seedream 5.0 Pro Muse Image I tested both on the same cinematic prompt against Midjourney and GPT Image 2. Midjourney is still the aesthetic benchmark for me. But Muse and Seedream both look genuinely useful, especially as editing and control tools rather than pure taste engines. Feels like they’ll sit in my workflow more like GPT Image 2, alongside Midjourney and Krea. The MJ stills are from a cool project I'm working on with @mikiovsh really looking forward to sharing it soon!"
+    },
+    {
+      "id": "x-public-2078848836035039690",
+      "title": "THE AGENT THAT BUILT A FULL ANIMATED AD FROM ONE INSTRUCTION IN SEEDANCE 2.0 × GPT IMAGE 2.0 One",
+      "description": "THE AGENT THAT BUILT A FULL ANIMATED AD FROM ONE INSTRUCTION IN SEEDANCE 2.0 × GPT IMAGE 2.0 One prompt. One AI agent. A full 15-second chase-to-punchline commercial, from character sheets to final cut, with no manual sh",
+      "prompt": "THE AGENT THAT BUILT A FULL ANIMATED AD FROM ONE INSTRUCTION IN SEEDANCE 2.0 × GPT IMAGE 2.0 One prompt. One AI agent. A full 15-second chase-to-punchline commercial, from character sheets to final cut, with no manual shot-by-shot work. No re-prompting between shots. No building character references one by one. No stitching the sequence together by hand. Most people still treat AI video like a one-shot-at-a-time job — generate a frame, check it, generate the next, repeat until it's done. The real shift happens when you hand the whole pipeline to an agent that turns one instruction into tracked tasks and runs them at the same time. 1. Give the agent the full brief once — the characters you want, the tool stack, how many shots, the format and resolution 2. The agent builds a character sheet for each character in GPT Image 2.0 first — full body views, poses, close-ups, locked before any video gets made 3. The agent plans the shots itself — chase, standoff, reveal, sharing moment, each with its own timing 4. Every shot becomes its own task, generated on its own in Seedance 2.0 5. The agent checks in as each task finishes — accepting what's ready, flagging what's done, running the rest in parallel instead of waiting one by one 6. The last step stitches every finished shot into one sequence, product shot included, ready to post Why this works - Treating each shot as its own task means one bad generation doesn't hold up the rest - Locking the character sheets first is what keeps the officer, the thief, and the product looking the same across five different shots - Running shots in parallel cuts the total time way down - The agent handles the planning and checking, so your job becomes approving, not generating Use cases: ⁃ Branded or product-placement animated shorts ⁃ Multi-character sequences with dialogue and a clear story beat ⁃ Small teams wanting agency-level output without an agency ⁃ Testing a full commercial idea before spending a real budget on it One shot needed a redo because the officer's expression looked off in the standoff. Still one instruction in, one finished ad out — the agent did the part that used to take a whole team.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Primee32/status/2078848836035039690",
+      "sourceType": "x",
+      "authorName": "Primee32",
+      "authorHandle": "@Primee32",
+      "createdAt": "2026-07-19T14:26:00.000Z",
+      "importedAt": "2026-07-20T15:29:12.192Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 85,
+        "reposts": 8,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 93,
+        "views": 8312,
+        "score": 503
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "THE AGENT THAT BUILT A FULL ANIMATED AD FROM ONE INSTRUCTION IN SEEDANCE 2.0 × GPT IMAGE 2.0 One prompt. One AI agent. A full 15-second chase-to-punchline commercial, from character sheets to final cut, with no manual shot-by-shot work. No re-prompting between shots. No building character references one by one. No stitching the sequence together by hand. Most people still treat AI video like a one-shot-at-a-time job — generate a frame, check it, generate the next, repeat until it's done. The real shift happens when you hand the whole pipeline to an agent that turns one instruction into tracked tasks and runs them at the same time. 1. Give the agent the full brief once — the characters you want, the tool stack, how many shots, the format and resolution 2. The agent builds a character sheet for each character in GPT Image 2.0 first — full body views, poses, close-ups, locked before any video gets made 3. The agent plans the shots itself — chase, standoff, reveal, sharing moment, each with its own timing 4. Every shot becomes its own task, generated on its own in Seedance 2.0 5. The agent checks in as each task finishes — accepting what's ready, flagging what's done, running the rest in parallel instead of waiting one by one 6. The last step stitches every finished shot into one sequence, product shot included, ready to post Why this works - Treating each shot as its own task means one bad generation doesn't hold up the rest - Locking the character sheets first is what keeps the officer, the thief, and the product looking the same across five different shots - Running shots in parallel cuts the total time way down - The agent handles the planning and checking, so your job becomes approving, not generating Use cases: ⁃ Branded or product-placement animated shorts ⁃ Multi-character sequences with dialogue and a clear story beat ⁃ Small teams wanting agency-level output without an agency ⁃ Testing a full commercial idea before spending a real budget on it One shot needed a redo because the officer's expression looked off in the standoff. Still one instruction in, one finished ad out — the agent did the part that used to take a whole team."
     },
     {
       "id": "x-public-2078376529395106020",
@@ -6320,6 +6410,166 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2079011407383712218",
+      "title": "社交媒体帖子 - 低角度天台时尚摄影",
+      "description": "一份详细的时尚摄影提示词，描绘了一位身着优雅服饰的女性在天台露台上的场景，采用低角度广角视角，呈现出清爽的夏日美学。",
+      "prompt": "主题：双腿向天空延伸。\n\n主体：一张 9:16 的竖构图时尚照片，描绘了一位 {argument name=\"character\" default=\"虚构的成年女性\"} 在光洁的天台露台上低姿蹲伏，背景是晴朗的天空。主体主要位于画面中心偏右位置，占据约 80% 的画幅。一只穿着黑色高跟鞋的腿向前伸展，最为突出，视线自然流向折叠的另一条腿、上半身及蓝天。\n\n人物/表情：一位自然、优雅的成年女性。她拥有成熟的女性立体身材、纤细的腰肢、修长的双腿和柔和的身体线条。深棕色头发低低地松散扎起，脸颊旁留有几缕细碎的发丝。淡珊瑚色腮红，精致的眼妆，自然光泽的粉米色嘴唇。她的脸转向画面左下方，静静地注视着自己的双脚。嘴角带着一丝极浅的微笑。\n\n服装/姿势：{argument name=\"clothing\" default=\"一件象牙白细罗纹深 V 领长袖裹身式上衣\"}。领口自然敞开，展现出女性线条，衣物重叠处纹理清晰，带有细微褶皱。黑色高腰短裤，亮面黑色尖头高跟鞋。头上戴着一顶无标志的圆形象牙白报童帽。左手撑在地面上，指尖张开，右手轻轻触碰后脑勺。一侧膝盖靠近胸部抬起，另一条腿向内折叠，臀部和撑地的手支撑身体重量。自然呈现脚底与地面、指尖与地面的接触感。\n\n背景/光影：背景是 {argument name=\"sky condition\" default=\"带有积云的鲜艳钴蓝色天空\"}，没有建筑物或招牌。地面是浅灰色抛光大理石风格面板，隐约反射着天空、人物的手、鞋子和腿部。阳光从左上方高处照射下来，在肩膀、锁骨、手臂和腿部前方形成强烈的白色高光。人物的影子向右下方拉长，鞋子的漆皮表面反射出蓝天和白光的窄条光影。空气干燥透明，营造出强烈的盛夏阳光感。\n\n构图/摄影：9:16 竖构图。从贴近地面的极低位置仰拍，具有相当于 24-28mm 的广角感。透视效果使前景中的高跟鞋和腿部显得较大，脸部和上半身略小。头部上方留出约 20% 的蓝天留白，确保鞋尖不会在底部边缘被裁切。焦点准确对准脸部和上半身，同时保持前景鞋子的轮廓清晰可见。背景云层略微柔化。\n\n质感/风格：一张明亮、清爽的写实照片，让人联想到夏季时尚杂志。精准描绘自然的皮肤纹理、锁骨和膝盖的立体感、细微的绒毛、罗纹针织衣物、地面反射及漆皮光泽。以白色、黑色和蓝色为主色调，保持高透明度和适中的对比度。避免过度的皮肤修饰或人工光泽，呈现出真实户外摄影特有的质感。\n\n负面提示词：未成年人、不自然的面孔、多余的手指、手指缺失、手脚融合、关节断裂、腿部扭曲、鞋子与脚接触不良、漂浮、不自然的重力、透视错误、阴影与光源矛盾、过度皮肤修正、塑料感皮肤、文字、Logo、水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537327767_er8aka_HNjJl3kaYAAYShS.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2079011407383712218",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-07-20T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29206",
+      "rawText": "主题：双腿向天空延伸。\n\n主体：一张 9:16 的竖构图时尚照片，描绘了一位 {argument name=\"character\" default=\"虚构的成年女性\"} 在光洁的天台露台上低姿蹲伏，背景是晴朗的天空。主体主要位于画面中心偏右位置，占据约 80% 的画幅。一只穿着黑色高跟鞋的腿向前伸展，最为突出，视线自然流向折叠的另一条腿、上半身及蓝天。\n\n人物/表情：一位自然、优雅的成年女性。她拥有成熟的女性立体身材、纤细的腰肢、修长的双腿和柔和的身体线条。深棕色头发低低地松散扎起，脸颊旁留有几缕细碎的发丝。淡珊瑚色腮红，精致的眼妆，自然光泽的粉米色嘴唇。她的脸转向画面左下方，静静地注视着自己的双脚。嘴角带着一丝极浅的微笑。\n\n服装/姿势：{argument name=\"clothing\" default=\"一件象牙白细罗纹深 V 领长袖裹身式上衣\"}。领口自然敞开，展现出女性线条，衣物重叠处纹理清晰，带有细微褶皱。黑色高腰短裤，亮面黑色尖头高跟鞋。头上戴着一顶无标志的圆形象牙白报童帽。左手撑在地面上，指尖张开，右手轻轻触碰后脑勺。一侧膝盖靠近胸部抬起，另一条腿向内折叠，臀部和撑地的手支撑身体重量。自然呈现脚底与地面、指尖与地面的接触感。\n\n背景/光影：背景是 {argument name=\"sky condition\" default=\"带有积云的鲜艳钴蓝色天空\"}，没有建筑物或招牌。地面是浅灰色抛光大理石风格面板，隐约反射着天空、人物的手、鞋子和腿部。阳光从左上方高处照射下来，在肩膀、锁骨、手臂和腿部前方形成强烈的白色高光。人物的影子向右下方拉长，鞋子的漆皮表面反射出蓝天和白光的窄条光影。空气干燥透明，营造出强烈的盛夏阳光感。\n\n构图/摄影：9:16 竖构图。从贴近地面的极低位置仰拍，具有相当于 24-28mm 的广角感。透视效果使前景中的高跟鞋和腿部显得较大，脸部和上半身略小。头部上方留出约 20% 的蓝天留白，确保鞋尖不会在底部边缘被裁切。焦点准确对准脸部和上半身，同时保持前景鞋子的轮廓清晰可见。背景云层略微柔化。\n\n质感/风格：一张明亮、清爽的写实照片，让人联想到夏季时尚杂志。精准描绘自然的皮肤纹理、锁骨和膝盖的立体感、细微的绒毛、罗纹针织衣物、地面反射及漆皮光泽。以白色、黑色和蓝色为主色调，保持高透明度和适中的对比度。避免过度的皮肤修饰或人工光泽，呈现出真实户外摄影特有的质感。\n\n负面提示词：未成年人、不自然的面孔、多余的手指、手指缺失、手脚融合、关节断裂、腿部扭曲、鞋子与脚接触不良、漂浮、不自然的重力、透视错误、阴影与光源矛盾、过度皮肤修正、塑料感皮肤、文字、Logo、水印。"
+    },
+    {
+      "id": "community-2078835666159599926",
+      "title": "个人资料 / 头像 - 夏日咖啡馆动漫狼耳少年",
+      "description": "一个用于创作时尚兽耳少年的竖版动漫角色插画提示词，展现其在轻松夏日咖啡馆中的装扮。",
+      "prompt": "创作一张精致的竖版动漫插画，描绘一名拥有黑色狼耳/猫耳、神情冷静且略带疏离感的雌雄莫辨少年，他正坐在明亮的夏日咖啡馆中。他拥有长长的层次感 {argument name=\"hair color\" default=\"亮黑色头发，带有深紫罗兰色挑染和白色前额发束\"}、紫罗兰色的眼睛、白皙的皮肤以及柔和优雅的面部特征；刘海遮住了一部分眼睛，长发垂在肩上。为他穿上清爽休闲的咖啡馆装扮：戴着一顶宽檐天然草帽（帽檐盖在兽耳上），穿着一件超大号白色开衫衬衫（袖子卷起），内搭米色与奶油色条纹衬衫，下身穿着宽松的橄榄卡其色七分裤，脚踩白色低帮运动鞋，佩戴棕色皮质腕表和细银项链，胸前挂着紫蓝色渐变太阳镜。让他随意地坐在浅色木质咖啡桌旁，一条腿向前弯曲，一只手放在桌上或拿着一个带有白色杯套的外带咖啡杯，另一只手臂自然放松。背景使用阳光充足的室内咖啡馆，配有大窗户、柔软的白色家具、绿植，以及明亮柔和的夏日漫射光和轻微的虚化效果。风格：高质量现代日式动漫、细腻的线条、明亮的皮肤阴影、柔和的粉彩高光、空气感氛围、微妙的色差光晕、细致的布料褶皱、反光的太阳镜、干净的构图、竖版肖像构图、无文字、无水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537358724_unbe4y_HNmCAzAbkAADlwh.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/kuro_kuroneko92/status/2078835666159599926#reversed-0",
+      "sourceType": "community",
+      "authorName": "🐈‍⬛クロ",
+      "authorHandle": "@kuro_kuroneko92",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.429Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29247",
+      "rawText": "创作一张精致的竖版动漫插画，描绘一名拥有黑色狼耳/猫耳、神情冷静且略带疏离感的雌雄莫辨少年，他正坐在明亮的夏日咖啡馆中。他拥有长长的层次感 {argument name=\"hair color\" default=\"亮黑色头发，带有深紫罗兰色挑染和白色前额发束\"}、紫罗兰色的眼睛、白皙的皮肤以及柔和优雅的面部特征；刘海遮住了一部分眼睛，长发垂在肩上。为他穿上清爽休闲的咖啡馆装扮：戴着一顶宽檐天然草帽（帽檐盖在兽耳上），穿着一件超大号白色开衫衬衫（袖子卷起），内搭米色与奶油色条纹衬衫，下身穿着宽松的橄榄卡其色七分裤，脚踩白色低帮运动鞋，佩戴棕色皮质腕表和细银项链，胸前挂着紫蓝色渐变太阳镜。让他随意地坐在浅色木质咖啡桌旁，一条腿向前弯曲，一只手放在桌上或拿着一个带有白色杯套的外带咖啡杯，另一只手臂自然放松。背景使用阳光充足的室内咖啡馆，配有大窗户、柔软的白色家具、绿植，以及明亮柔和的夏日漫射光和轻微的虚化效果。风格：高质量现代日式动漫、细腻的线条、明亮的皮肤阴影、柔和的粉彩高光、空气感氛围、微妙的色差光晕、细致的布料褶皱、反光的太阳镜、干净的构图、竖版肖像构图、无文字、无水印。"
+    },
+    {
+      "id": "community-2078796276226003380",
+      "title": "个人资料 / 头像 - 阳光集市街上的狐耳少女",
+      "description": "一个精细的竖版动漫提示词，用于创作一位在怀旧花丛集市街上的浪漫和服狐耳少女。",
+      "prompt": "创作一张精致的竖版动漫插画，描绘 {argument name=\"character name\" default=\"一位年轻的狐耳少女\"} 侧身站在阳光明媚的复古商业街上，回眸露出一抹淡淡的忧郁微笑。她拥有极长的 {argument name=\"hair color\" default=\"银白色\"} 直刘海长发，肤色白皙，温柔的粉色眼眸，头部有且仅有 2 只毛茸茸的动物耳朵，右下方可见 1 条毛茸茸的大白尾巴。为她穿上一件华丽的 {argument name=\"kimono color\" default=\"灰粉色\"} 和服，配有层叠的蕾丝边、绣花锦缎、背部宽大的系带腰封以及垂下的流苏装饰。在她的头部右侧添加精美的发饰：包括 3 朵醒目的花朵、金属叶片与珠宝装饰、长链条、紫色流苏、半透明丝带蝴蝶结，并在耳朵后方戴上一顶小圆帽或类似光环的头饰。场景设定在一条怀旧的日欧风格集市巷道中，伴有温暖的清晨逆光、鹅卵石路面、木质店面、头顶的绿树以及点缀着云朵的柔和蓝天。左侧放置 2 盏复古街灯，其中一盏为高大的黑色灯笼，另一盏为较小的发光灯笼，并挂有 1 个椭圆形的店铺招牌，上面写着 {argument name=\"shop sign text\" default=\"owa days\"}，下方带有一个小小的爪印。背景中，身着素雅和服风格服装的行人正缓步走远，画面经过柔焦处理，不会喧宾夺主。左下角前景处放置大簇盛开的花朵，包括淡粉色和淡紫色的花卉。使用高精度的线条、浪漫的柔和色调、穿过发丝的明亮轮廓光、复杂的布料纹理、浅景深效果、梦幻般的水彩水墨动漫渲染风格，采用 9:16 竖构图，画面中不包含现代物品，无水印，除店铺招牌外无其他可读文字。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537361158_2m2ccj_HNleMbIaIAAn1sM.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Days57723399006/status/2078796276226003380#reversed-0",
+      "sourceType": "community",
+      "authorName": "おわ Days",
+      "authorHandle": "@Days57723399006",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.430Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29251",
+      "rawText": "创作一张精致的竖版动漫插画，描绘 {argument name=\"character name\" default=\"一位年轻的狐耳少女\"} 侧身站在阳光明媚的复古商业街上，回眸露出一抹淡淡的忧郁微笑。她拥有极长的 {argument name=\"hair color\" default=\"银白色\"} 直刘海长发，肤色白皙，温柔的粉色眼眸，头部有且仅有 2 只毛茸茸的动物耳朵，右下方可见 1 条毛茸茸的大白尾巴。为她穿上一件华丽的 {argument name=\"kimono color\" default=\"灰粉色\"} 和服，配有层叠的蕾丝边、绣花锦缎、背部宽大的系带腰封以及垂下的流苏装饰。在她的头部右侧添加精美的发饰：包括 3 朵醒目的花朵、金属叶片与珠宝装饰、长链条、紫色流苏、半透明丝带蝴蝶结，并在耳朵后方戴上一顶小圆帽或类似光环的头饰。场景设定在一条怀旧的日欧风格集市巷道中，伴有温暖的清晨逆光、鹅卵石路面、木质店面、头顶的绿树以及点缀着云朵的柔和蓝天。左侧放置 2 盏复古街灯，其中一盏为高大的黑色灯笼，另一盏为较小的发光灯笼，并挂有 1 个椭圆形的店铺招牌，上面写着 {argument name=\"shop sign text\" default=\"owa days\"}，下方带有一个小小的爪印。背景中，身着素雅和服风格服装的行人正缓步走远，画面经过柔焦处理，不会喧宾夺主。左下角前景处放置大簇盛开的花朵，包括淡粉色和淡紫色的花卉。使用高精度的线条、浪漫的柔和色调、穿过发丝的明亮轮廓光、复杂的布料纹理、浅景深效果、梦幻般的水彩水墨动漫渲染风格，采用 9:16 竖构图，画面中不包含现代物品，无水印，除店铺招牌外无其他可读文字。"
+    },
+    {
+      "id": "community-2078757249670156582",
+      "title": "个人资料 / 头像 - 哥特月光贵族",
+      "description": "一个用于生成忧郁动漫哥特贵族在维多利亚时代月光室内休憩场景的详细提示词。",
+      "prompt": "创作一张高度精细的竖构图动漫插画，描绘一位优雅的中性风哥特贵族，正慵懒地躺在黑暗烛光卧室里的黑色天鹅绒维多利亚式沙发上。主体为 {argument name=\"character name\" default=\"一位空灵的白发贵族少年\"}，留着凌乱的层次感 {argument name=\"hair color\" default=\"雪白色\"} 长发，随意扎成低侧马尾，拥有苍白的瓷器般肌肤、精致锐利的五官，以及明亮的 {argument name=\"eye color\" default=\"金琥珀色\"} 双眸，表情平静、迷人且略带忧郁。角色姿势为斜倚在画面中：一只手臂搭在沙发扶手上，另一只手抬至胸前，露出修长优雅的手指，一只大腿靠近镜头以呈现戏剧性的透视感。身着华丽的哥特洛丽塔 / 吸血鬼贵族服饰：一件挺括的白色高领衬衫，配有泡泡袖和荷叶边袖口，颈部系着巨大的黑色多层领结，佩戴一枚红色椭圆形宝石胸针，躯干上系着带有金属环的黑色皮质束带，穿着带有多个银色扣环和系带的光泽感黑色高腰束腰短裤，佩戴黑色铆钉腕带，大腿上系着黑色吊带袜带。必须包含以下可见的服饰/配饰元素：1 件白色荷叶边衬衫，1 个黑色多层领结，1 枚红色宝石胸针，1 条黑色躯干束带，1 件光泽感黑色束腰短裤，2 个铆钉腕带，2 条大腿吊带，以及若干作为五金细节的银色扣环和圆环。环境为夜晚奢华的哥特式房间：厚重的深色窗帘，拱形窗户展示着明亮的满月和多云的夜空，装饰华丽的雕花家具，摆放着古董物品的边桌，右侧点燃着高大的烛台。光影采用忧郁的明暗对照法，左侧窗户射入冷色调月光，右侧映照暖色调烛光，在发丝和光泽皮革上形成银色高光。风格：超精致的日本动漫关键视觉图，哥特浪漫主义，复杂的线条，戏剧性的阴影，绘画感渲染，高级时装编辑构图，感性而不失格调，无文字，无水印，无多余角色。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537353541_7vb52n_HNk6shqaQAAffL-.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/hmst_yyyy/status/2078757249670156582#reversed-0",
+      "sourceType": "community",
+      "authorName": "🐹🐹",
+      "authorHandle": "@hmst_yyyy",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.430Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29240",
+      "rawText": "创作一张高度精细的竖构图动漫插画，描绘一位优雅的中性风哥特贵族，正慵懒地躺在黑暗烛光卧室里的黑色天鹅绒维多利亚式沙发上。主体为 {argument name=\"character name\" default=\"一位空灵的白发贵族少年\"}，留着凌乱的层次感 {argument name=\"hair color\" default=\"雪白色\"} 长发，随意扎成低侧马尾，拥有苍白的瓷器般肌肤、精致锐利的五官，以及明亮的 {argument name=\"eye color\" default=\"金琥珀色\"} 双眸，表情平静、迷人且略带忧郁。角色姿势为斜倚在画面中：一只手臂搭在沙发扶手上，另一只手抬至胸前，露出修长优雅的手指，一只大腿靠近镜头以呈现戏剧性的透视感。身着华丽的哥特洛丽塔 / 吸血鬼贵族服饰：一件挺括的白色高领衬衫，配有泡泡袖和荷叶边袖口，颈部系着巨大的黑色多层领结，佩戴一枚红色椭圆形宝石胸针，躯干上系着带有金属环的黑色皮质束带，穿着带有多个银色扣环和系带的光泽感黑色高腰束腰短裤，佩戴黑色铆钉腕带，大腿上系着黑色吊带袜带。必须包含以下可见的服饰/配饰元素：1 件白色荷叶边衬衫，1 个黑色多层领结，1 枚红色宝石胸针，1 条黑色躯干束带，1 件光泽感黑色束腰短裤，2 个铆钉腕带，2 条大腿吊带，以及若干作为五金细节的银色扣环和圆环。环境为夜晚奢华的哥特式房间：厚重的深色窗帘，拱形窗户展示着明亮的满月和多云的夜空，装饰华丽的雕花家具，摆放着古董物品的边桌，右侧点燃着高大的烛台。光影采用忧郁的明暗对照法，左侧窗户射入冷色调月光，右侧映照暖色调烛光，在发丝和光泽皮革上形成银色高光。风格：超精致的日本动漫关键视觉图，哥特浪漫主义，复杂的线条，戏剧性的阴影，绘画感渲染，高级时装编辑构图，感性而不失格调，无文字，无水印，无多余角色。"
+    },
+    {
       "id": "community-2078751947323277447",
       "title": "个人资料 / 头像 - 印尼女性公园摄影",
       "description": "生成一张高度逼真的生活方式肖像，展现一位印尼女性在郁郁葱葱、阳光明媚的公园中手持相机的画面，聚焦于自然美感与春季时尚。",
@@ -6331,7 +6581,7 @@
       "authorName": "By",
       "authorHandle": "@rhodezio_ai",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.089Z",
+      "importedAt": "2026-07-20T15:29:06.431Z",
       "tags": [
         "人像",
         "摄影"
@@ -6362,6 +6612,337 @@
       "rawText": "一张超逼真的生活方式肖像，主角是一位迷人的 {argument name=\"subject\" default=\"20 岁的印尼女性\"}，站在 {argument name=\"setting\" default=\"郁郁葱葱的绿色公园\"} 中，背景是明媚的清晨。她手持一台高端黑色无反相机靠近一只眼睛，仿佛正在拍照。她留着一头柔顺的乌黑长发，自然垂落并带有柔和的侧分，拥有温暖的中等肤色、优雅的五官、温柔甜美的微笑、富有表现力的深褐色眼睛，以及极简的自然妆容，散发着清新光泽。她身穿一件漂亮的 {argument name=\"outfit\" default=\"无袖蓝色碎花连衣裙\"}，裙摆在微风中轻轻飘动，营造出优雅且充满女性魅力的造型。裙子采用柔和的白色和浅蓝色精致花卉图案，呈现出清新的春日美感。不穿外套，无任何分散服装注意力的配饰。场景是一个宁静的绿色公园，有充满活力的树木、色彩斑斓的花朵、修剪整齐的草坪，温暖的金色晨光透过叶片洒下。奶油般的自然背景虚化，真实的抓拍氛围，逼真的皮肤纹理，电影级景深，85mm 镜头，f/1.8，单反相机品质的编辑时尚摄影，超细节 8K，自然色彩，构图干净，微风轻轻拂动她的头发和裙摆，高度写实，无浓重的 AI 感，无多余手指，解剖结构正确的手部，无模糊，无水印，无文字。"
     },
     {
+      "id": "community-2078691005604454432",
+      "title": "个人资料 / 头像 - 电影感地铁人脸重构",
+      "description": "专为重构肖像摄影设计的详细提示词，将参考照片中的人脸置于具有逼真光影和动态模糊的电影感地铁场景中。",
+      "prompt": "上传一张你的面部参考照片。利用上传的图像，精准重构你的面部，并将你置于这个特定的 {argument name=\"location\" default=\"地铁站\"} 场景中，仅限上半身肖像。你正站在站台上，身体微微向左倾斜，头部向上并向右倾斜 20 到 25 度，目光越过镜头向上看，表情深沉忧郁，不要直视镜头。\n\n{argument name=\"glasses style\" default=\"加粗黑色长方形框架眼镜\"}。身穿 {argument name=\"clothing\" default=\"深黑色高领结构感大衣\"}，扣子扣好。你的正后方，一列地铁正全速疾驰而过。\n\n极端的水平动态模糊充斥着整个背景，银灰色车身模糊，伴随着鲜艳的电光蓝条纹和模糊中温暖的橙色光带。冷青蓝色的顶置荧光灯从上方自然地投射在你的脸部和头发上。微妙的蓝色列车光线映照在你右肩边缘。冷色调电影级调色，青色阴影，冷肤色。细腻的胶片颗粒感。\n\n请勿直接粘贴人脸。冷色调的青色荧光必须从上方自然地落在你的脸上，形成逼真的阴影，右肩带有微妙的蓝色轮廓光，且面部呈现出与地下地铁环境完美匹配的冷色调。比例 1:1。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537305948_fr5xe5_HNj-aOObAAAuYUx.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/harboriis/status/2078691005604454432",
+      "sourceType": "community",
+      "authorName": "Harboris",
+      "authorHandle": "@harboriis",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.431Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "1:1",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29178",
+      "rawText": "上传一张你的面部参考照片。利用上传的图像，精准重构你的面部，并将你置于这个特定的 {argument name=\"location\" default=\"地铁站\"} 场景中，仅限上半身肖像。你正站在站台上，身体微微向左倾斜，头部向上并向右倾斜 20 到 25 度，目光越过镜头向上看，表情深沉忧郁，不要直视镜头。\n\n{argument name=\"glasses style\" default=\"加粗黑色长方形框架眼镜\"}。身穿 {argument name=\"clothing\" default=\"深黑色高领结构感大衣\"}，扣子扣好。你的正后方，一列地铁正全速疾驰而过。\n\n极端的水平动态模糊充斥着整个背景，银灰色车身模糊，伴随着鲜艳的电光蓝条纹和模糊中温暖的橙色光带。冷青蓝色的顶置荧光灯从上方自然地投射在你的脸部和头发上。微妙的蓝色列车光线映照在你右肩边缘。冷色调电影级调色，青色阴影，冷肤色。细腻的胶片颗粒感。\n\n请勿直接粘贴人脸。冷色调的青色荧光必须从上方自然地落在你的脸上，形成逼真的阴影，右肩带有微妙的蓝色轮廓光，且面部呈现出与地下地铁环境完美匹配的冷色调。比例 1:1。"
+    },
+    {
+      "id": "community-2078686109232677310",
+      "title": "个人资料 / 头像 - 高对比度轮廓光人像",
+      "description": "这是一个用于生成风格化侧面人像的提示词，具有强烈的红橙色轮廓光和高对比度效果。它描述了一位女性拍摄镜面自拍的场景，并包含了具体的时尚和妆容细节。",
+      "prompt": "Don't change your features\n3:4 宽高比\n一张 {argument name=\"subject\" default=\"年轻女性\"} 的特写人像，以 {argument name=\"background\" default=\"浅色中性背景\"} 为衬托，呈现清晰的侧面轮廓。她反戴着一顶略显宽松的浅酒红色棒球帽，帽檐向上倾斜。{argument name=\"lighting\" default=\"戏剧性的强力红橙色轮廓光\"} 照亮了她脸部的右侧，突显出她分明的五官、锐利的黑色猫眼眼线以及光泽感十足、微微张开的红唇。一只涂着深色指甲油的手靠近嘴部；她正侧着脸进行镜面自拍。脸部左侧处于阴影中，形成了强烈的对比。构图紧凑，聚焦于人物的表情和引人注目的光影效果。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537310487_l4zeua_HNj5_a1a8AI6Bf2.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2078686109232677310",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.431Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29184",
+      "rawText": "Don't change your features\n3:4 宽高比\n一张 {argument name=\"subject\" default=\"年轻女性\"} 的特写人像，以 {argument name=\"background\" default=\"浅色中性背景\"} 为衬托，呈现清晰的侧面轮廓。她反戴着一顶略显宽松的浅酒红色棒球帽，帽檐向上倾斜。{argument name=\"lighting\" default=\"戏剧性的强力红橙色轮廓光\"} 照亮了她脸部的右侧，突显出她分明的五官、锐利的黑色猫眼眼线以及光泽感十足、微微张开的红唇。一只涂着深色指甲油的手靠近嘴部；她正侧着脸进行镜面自拍。脸部左侧处于阴影中，形成了强烈的对比。构图紧凑，聚焦于人物的表情和引人注目的光影效果。"
+    },
+    {
+      "id": "community-2078684323553927234",
+      "title": "个人资料 / 头像 - 火车上的抓拍肖像",
+      "description": "一个写实风格的特写肖像提示词，用于生成一位坐在行驶火车上、手持智能手机的害羞年轻女性。",
+      "prompt": "创作一张垂直构图的写实风格特写肖像，拍摄一位坐在火车座位上的年轻女性。视角略微从上方俯拍且非常靠近，呈现出如同用智能手机抓拍的效果。主体为 {argument name=\"character description\" default=\"一位留着黑色长直发、带有轻薄刘海的年轻日本女性\"}，身穿 {argument name=\"outfit\" default=\"一件米色超大款针织开衫，内搭白色翻领衬衫和深色格子学院风领带，开衫袖口为长款罗纹设计\"}。她坐在火车窗边，窗外景色因运动而模糊，暗示火车正在行驶；画面左侧边缘包含一个紫色火车座椅，右侧为金属窗框，左下方隐约可见一个小巧的黑色皮包。她左手拿着 {argument name=\"phone\" default=\"一部银色智能手机\"} 靠近镜头，右手缩进毛衣袖子里，轻轻遮住嘴巴，做出害羞而俏皮的姿态。她的表情是 {argument name=\"expression\" default=\"温柔微笑，眼神温暖地注视镜头，略显羞涩与调皮\"}。利用窗户射入的自然光，呈现真实的皮肤质感、细腻的眼睛细节、柔和的阴影、浅景深，以及背景中微妙的动态模糊。构图应紧凑地聚焦于她的脸部、上半身、双手和手机，脸部位于画面右上部，手机位于左侧前景。风格：超写实现代日本火车抓拍肖像，高细节，自然色彩分级，亲切的日常氛围。避免出现文字、Logo、多余人物、夸张的动漫特征、浓妆或摄影棚灯光。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537351420_5btdqv_HNj4X_xbkAAXzT0.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/mashiro_minase/status/2078684323553927234#reversed-0",
+      "sourceType": "community",
+      "authorName": "K's Al Photo Studio",
+      "authorHandle": "@mashiro_minase",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.431Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29236",
+      "rawText": "创作一张垂直构图的写实风格特写肖像，拍摄一位坐在火车座位上的年轻女性。视角略微从上方俯拍且非常靠近，呈现出如同用智能手机抓拍的效果。主体为 {argument name=\"character description\" default=\"一位留着黑色长直发、带有轻薄刘海的年轻日本女性\"}，身穿 {argument name=\"outfit\" default=\"一件米色超大款针织开衫，内搭白色翻领衬衫和深色格子学院风领带，开衫袖口为长款罗纹设计\"}。她坐在火车窗边，窗外景色因运动而模糊，暗示火车正在行驶；画面左侧边缘包含一个紫色火车座椅，右侧为金属窗框，左下方隐约可见一个小巧的黑色皮包。她左手拿着 {argument name=\"phone\" default=\"一部银色智能手机\"} 靠近镜头，右手缩进毛衣袖子里，轻轻遮住嘴巴，做出害羞而俏皮的姿态。她的表情是 {argument name=\"expression\" default=\"温柔微笑，眼神温暖地注视镜头，略显羞涩与调皮\"}。利用窗户射入的自然光，呈现真实的皮肤质感、细腻的眼睛细节、柔和的阴影、浅景深，以及背景中微妙的动态模糊。构图应紧凑地聚焦于她的脸部、上半身、双手和手机，脸部位于画面右上部，手机位于左侧前景。风格：超写实现代日本火车抓拍肖像，高细节，自然色彩分级，亲切的日常氛围。避免出现文字、Logo、多余人物、夸张的动漫特征、浓妆或摄影棚灯光。"
+    },
+    {
+      "id": "community-2078684130498461961",
+      "title": "个人资料 / 头像 - 超逼真韩系智能手机自拍",
+      "description": "这是一条高度详细的提示词，用于生成一张年轻东亚女性的抓拍感、随性智能手机自拍。它强调自然光线、皮肤纹理和舒适的卧室环境，以避免产生人工合成的 AI 感。",
+      "prompt": "超逼真的智能手机自拍，看起来就像是用手机随手拍摄的，而非单反相机或 AI 渲染。画面主体为一位 {argument name=\"subject\" default=\"美丽的年轻东亚女性\"}，拥有白皙如瓷的皮肤、精致的 V 字脸、柔和的棕色杏仁眼，妆容为清透的韩系妆，搭配自然的粉色嘴唇、淡眼线，以及一款 {argument name=\"haircut\" default=\"齐肩粉色波波头，配有空气感轻薄刘海\"} 修饰脸型。\n她舒适地坐在整洁的床上，身处一个 {argument name=\"setting\" default=\"温馨简约的卧室\"}，背景墙面为暖奶油色。背景中装饰着几张美学拼贴画和花卉海报，营造出柔和的韩系房间氛围。她穿着一件可爱的白色针织毛衣，领口和袖口带有粉色罗纹，并印有复古卡通小猫图案，展现出温馨、女性化且充满青春气息的审美。\n她身体微微前倾，双臂自然伸展，仿佛正在自己拿着手机拍摄，脸上带着温柔的微笑，一只眼睛微微眯起，表情俏皮。构图为从略高的手持角度拍摄的近景上半身自拍。柔和的自然光从附近的窗户射入，带来均匀的漫反射光线和真实的肤色。\n图像包含细微的智能手机 HDR 处理效果、轻微的传感器噪点、真实的皮肤纹理、轻微的边缘柔化、真实的室内曝光、自然的白平衡以及少许手持拍摄的不完美感。没有专业灯光，没有影棚布置，没有 AI 带来的过度锐化，没有夸张的美颜滤镜，也没有过度的虚化。整体效果应显得随性、温馨，就像一张发布在社交媒体上的真实旗舰手机前置摄像头自拍。\n长宽比：3:4\n风格：超写实摄影，自然智能手机自拍，室内抓拍人像，韩系美学，温馨卧室，真实的手机摄像头画质，真实光影，高细节。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537309780_h4m79x_HNj4LoAWEAAToq0.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/saniaspeaks_/status/2078684130498461961",
+      "sourceType": "community",
+      "authorName": "𝗦𝗮𝗻𝗶𝗮",
+      "authorHandle": "@saniaspeaks_",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.432Z",
+      "tags": [
+        "人像",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29183",
+      "rawText": "超逼真的智能手机自拍，看起来就像是用手机随手拍摄的，而非单反相机或 AI 渲染。画面主体为一位 {argument name=\"subject\" default=\"美丽的年轻东亚女性\"}，拥有白皙如瓷的皮肤、精致的 V 字脸、柔和的棕色杏仁眼，妆容为清透的韩系妆，搭配自然的粉色嘴唇、淡眼线，以及一款 {argument name=\"haircut\" default=\"齐肩粉色波波头，配有空气感轻薄刘海\"} 修饰脸型。\n她舒适地坐在整洁的床上，身处一个 {argument name=\"setting\" default=\"温馨简约的卧室\"}，背景墙面为暖奶油色。背景中装饰着几张美学拼贴画和花卉海报，营造出柔和的韩系房间氛围。她穿着一件可爱的白色针织毛衣，领口和袖口带有粉色罗纹，并印有复古卡通小猫图案，展现出温馨、女性化且充满青春气息的审美。\n她身体微微前倾，双臂自然伸展，仿佛正在自己拿着手机拍摄，脸上带着温柔的微笑，一只眼睛微微眯起，表情俏皮。构图为从略高的手持角度拍摄的近景上半身自拍。柔和的自然光从附近的窗户射入，带来均匀的漫反射光线和真实的肤色。\n图像包含细微的智能手机 HDR 处理效果、轻微的传感器噪点、真实的皮肤纹理、轻微的边缘柔化、真实的室内曝光、自然的白平衡以及少许手持拍摄的不完美感。没有专业灯光，没有影棚布置，没有 AI 带来的过度锐化，没有夸张的美颜滤镜，也没有过度的虚化。整体效果应显得随性、温馨，就像一张发布在社交媒体上的真实旗舰手机前置摄像头自拍。\n长宽比：3:4\n风格：超写实摄影，自然智能手机自拍，室内抓拍人像，韩系美学，温馨卧室，真实的手机摄像头画质，真实光影，高细节。"
+    },
+    {
+      "id": "community-2078664096262799784",
+      "title": "个人资料 / 头像 - 训练镜面自拍时尚肖像",
+      "description": "一个逼真的竖屏肖像提示词，用于创作一位身着日系校园风服装、在紫色火车座椅上进行镜面自拍的年轻女性。",
+      "prompt": "创作一张竖屏超写实时尚肖像，画面主体为一位 {argument name=\"subject\" default=\"年轻女性\"}，她正坐在通勤火车的紫色斑点长椅上，用智能手机进行镜面自拍。画面采用略微仰视的正面全身构图，她坐在火车左侧墙壁旁，右侧是窗户，身后是米色的金属内饰板。她的面部被一部带有绗缝手机壳和多个后置摄像头的黑色智能手机遮挡了一半，手机遮住了她的下半张脸，而她的一双大眼睛正注视着镜子/摄像头。她留着 {argument name=\"hair color and style\" default=\"黑色长卷发，配有柔和的刘海\"}；一只手拿着手机，另一只手轻轻触碰脸颊旁的一缕头发。她身着日系校服风格的服装，包含 6 件清晰可见的主要服饰/配饰：米色开衫、白色翻领衬衫、海军蓝格纹领结、海军蓝格纹百褶裙、黑色过膝袜和黑色乐福鞋。一个大型黑色长方形书包横放在她膝盖上，书包上挂着一个带有银色钥匙扣的小巧圆形粉色挂件。火车座椅呈深紫色，带有斑驳纹理，地板为米色，窗外是柔和模糊的户外景色，光线为自然的日间光，画面真实、随性、柔和，呈现出地道的手机自拍构图，且无任何文字或水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537344633_p8uclb_HNjl-UWa4AAsxD1.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/mashiro_minase/status/2078664096262799784#reversed-0",
+      "sourceType": "community",
+      "authorName": "K's Al Photo Studio",
+      "authorHandle": "@mashiro_minase",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.432Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29227",
+      "rawText": "创作一张竖屏超写实时尚肖像，画面主体为一位 {argument name=\"subject\" default=\"年轻女性\"}，她正坐在通勤火车的紫色斑点长椅上，用智能手机进行镜面自拍。画面采用略微仰视的正面全身构图，她坐在火车左侧墙壁旁，右侧是窗户，身后是米色的金属内饰板。她的面部被一部带有绗缝手机壳和多个后置摄像头的黑色智能手机遮挡了一半，手机遮住了她的下半张脸，而她的一双大眼睛正注视着镜子/摄像头。她留着 {argument name=\"hair color and style\" default=\"黑色长卷发，配有柔和的刘海\"}；一只手拿着手机，另一只手轻轻触碰脸颊旁的一缕头发。她身着日系校服风格的服装，包含 6 件清晰可见的主要服饰/配饰：米色开衫、白色翻领衬衫、海军蓝格纹领结、海军蓝格纹百褶裙、黑色过膝袜和黑色乐福鞋。一个大型黑色长方形书包横放在她膝盖上，书包上挂着一个带有银色钥匙扣的小巧圆形粉色挂件。火车座椅呈深紫色，带有斑驳纹理，地板为米色，窗外是柔和模糊的户外景色，光线为自然的日间光，画面真实、随性、柔和，呈现出地道的手机自拍构图，且无任何文字或水印。"
+    },
+    {
+      "id": "community-2078981963243737317",
+      "title": "社交媒体帖子 - 复古卧室清晨肖像",
+      "description": "一个关于复古风格卧室肖像的高细节提示词，包含柔和的自然光和植物元素。",
+      "prompt": "主题：绿荫下的清晨\n\n主体：2:3 纵向室内肖像。一位 {argument name=\"gender\" default=\"成年女性\"} 倚靠在 {argument name=\"bedroom style\" default=\"复古风格卧室\"} 中床铺的左中位置，周围环绕着植物。人物占据画面约 70%，头部略高于中心，双腿向右下方延伸。\n\n人物/表情：一位气质自然平静的成年女性。{argument name=\"hair color\" default=\"浅棕色\"} 中长发低位松散扎起，留有轻薄的空气刘海和脸颊两侧的碎发。淡淡的珊瑚色腮红，精致的棕色眼妆，自然光泽的玫瑰米色嘴唇。脸部向画面左上方倾斜，双眼注视着窗外的光线。嘴唇微张，表情宁静，仿佛正在安静地呼吸。\n\n服装/姿势：象牙白蕾丝吊带和带有配套精致荷叶边的短裤。胸部采用优雅的 3D 剪裁，躯干装饰着透明刺绣蕾丝。左手置于身后床铺上以支撑上半身。右臂向右下方斜向伸展，右手手指轻轻触碰弯曲的脚尖。一条腿深深弯曲并交叉在身前，另一条腿从床沿向右下方延伸。脊椎微微拱起，肩部和锁骨自然舒展。\n\n背景/光线：带有旧木框的大窗户，米白色蕾丝窗帘，花卉图案床品，白色荷叶边枕头，以及玻璃花瓶中的淡粉色花朵。从窗边到床头错落有致地摆放着各种大小的观叶植物，通过前景、中景和背景的叶片层次营造出深度感。强烈的清晨自然光从窗户左上方射入，在肩膀、胸部、大腿和小腿上投下带有叶影的光斑。右侧有绿色的反射光，地板上有一片温暖的阳光。背景花园呈现出圆形的虚化效果。\n\n构图/相机：接近全身的三分之二身位拍摄。相机位于视平线高度，大致与床齐平，相当于 50mm 镜头。人物位于中心偏左，为右侧的植物和延伸的腿部留出空间。顶部有大面积的窗户和绿植留白，前景下方有模糊的铁艺床架。焦点对准面部和上半身，由于浅景深，背景呈现柔和的虚化效果。\n\n质感/风格：利用自然光的日系肖像摄影。保留白皙皮肤的细腻纹理，避免过度磨皮。以象牙白、淡粉色、深绿色和木框棕色为基调，低对比度，柔和的高光。细致描绘蕾丝、植物叶片和花卉织物的质感，增加少量胶片颗粒感和细腻的光晕效果。\n\n负面提示词：未成年人形象、不自然的面部、不自然的眼神、多余的手指、缺失的手指、肢体融合、关节断裂、脚趾畸形、手脚接触不良、重力感不自然、透视错误、阴影与光源不一致、过度曝光、文字、Logo、水印、过度磨皮、塑料感皮肤。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537324338_8gd7iv_HNjFH-8acAA_lYD.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2078981963243737317",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.434Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29200",
+      "rawText": "主题：绿荫下的清晨\n\n主体：2:3 纵向室内肖像。一位 {argument name=\"gender\" default=\"成年女性\"} 倚靠在 {argument name=\"bedroom style\" default=\"复古风格卧室\"} 中床铺的左中位置，周围环绕着植物。人物占据画面约 70%，头部略高于中心，双腿向右下方延伸。\n\n人物/表情：一位气质自然平静的成年女性。{argument name=\"hair color\" default=\"浅棕色\"} 中长发低位松散扎起，留有轻薄的空气刘海和脸颊两侧的碎发。淡淡的珊瑚色腮红，精致的棕色眼妆，自然光泽的玫瑰米色嘴唇。脸部向画面左上方倾斜，双眼注视着窗外的光线。嘴唇微张，表情宁静，仿佛正在安静地呼吸。\n\n服装/姿势：象牙白蕾丝吊带和带有配套精致荷叶边的短裤。胸部采用优雅的 3D 剪裁，躯干装饰着透明刺绣蕾丝。左手置于身后床铺上以支撑上半身。右臂向右下方斜向伸展，右手手指轻轻触碰弯曲的脚尖。一条腿深深弯曲并交叉在身前，另一条腿从床沿向右下方延伸。脊椎微微拱起，肩部和锁骨自然舒展。\n\n背景/光线：带有旧木框的大窗户，米白色蕾丝窗帘，花卉图案床品，白色荷叶边枕头，以及玻璃花瓶中的淡粉色花朵。从窗边到床头错落有致地摆放着各种大小的观叶植物，通过前景、中景和背景的叶片层次营造出深度感。强烈的清晨自然光从窗户左上方射入，在肩膀、胸部、大腿和小腿上投下带有叶影的光斑。右侧有绿色的反射光，地板上有一片温暖的阳光。背景花园呈现出圆形的虚化效果。\n\n构图/相机：接近全身的三分之二身位拍摄。相机位于视平线高度，大致与床齐平，相当于 50mm 镜头。人物位于中心偏左，为右侧的植物和延伸的腿部留出空间。顶部有大面积的窗户和绿植留白，前景下方有模糊的铁艺床架。焦点对准面部和上半身，由于浅景深，背景呈现柔和的虚化效果。\n\n质感/风格：利用自然光的日系肖像摄影。保留白皙皮肤的细腻纹理，避免过度磨皮。以象牙白、淡粉色、深绿色和木框棕色为基调，低对比度，柔和的高光。细致描绘蕾丝、植物叶片和花卉织物的质感，增加少量胶片颗粒感和细腻的光晕效果。\n\n负面提示词：未成年人形象、不自然的面部、不自然的眼神、多余的手指、缺失的手指、肢体融合、关节断裂、脚趾畸形、手脚接触不良、重力感不自然、透视错误、阴影与光源不一致、过度曝光、文字、Logo、水印、过度磨皮、塑料感皮肤。"
+    },
+    {
+      "id": "community-2078963095871934961",
+      "title": "社交媒体帖子 - 电影感时尚沙发人像",
+      "description": "一份详细的提示词，用于创作一张情绪化、电影感的时尚人像，描绘一位女性斜倚在皮质沙发上的场景。画面呈现出细腻的光影效果和逼真的织物纹理。",
+      "prompt": "电影感超写实时尚人像。一位留着蓬松长发的年轻女性（{argument name=\"hair color\" default=\"黑色长发\"}），斜倚在宁静现代室内的一张大型哑光黑色皮质转角沙发上。位于画面中右侧，沙发在画面下半部分大面积延伸。平滑白皙的皮肤，精致的五官，杏仁状的深色眼睛，柔和的眉形，淡淡的猫眼眼线，自然的玫瑰红唇色，妆容清透。冷静、疏离、沉思的表情——头部转向画面右侧，视线看向画外；躯干微微向观众倾斜。手臂与配饰：左臂随意搭在左侧升起的靠背上——手肘弯曲，手腕放松，手指自然地垂在深色皮革上。手腕上佩戴着 {argument name=\"accessory\" default=\"深蓝色串珠手链\"}，几枚精致的戒指，一条小吊坠项链，以及细小精致的耳环。右手放松地置于臀部和大腿上方，部分被姿势遮挡。服装：{argument name=\"top\" default=\"一件超大款深海军蓝美式橄榄球运动衫\"}——带有微妙的同色系图案。胸部上方有一个白色的小型弧形运动品牌标志。中央垂直装饰性几何面板：交织的红色、微妙的蓝色和浅灰色缝线，形成拉长的菱形和十字准线图案。运动衫自然垂坠，呈现出逼真的褶皱、织物纹理和略显宽松的袖子。运动衫下方隐约可见黑色修身短裤。腿部与鞋履：优雅的人像姿势——一只膝盖在画面中右侧显著抬起，另一条腿交叉在下方，向右下方对角线延伸。逼真的人体比例，自然的皮肤纹理，精致的膝盖和脚踝轮廓，腿部有柔和的高光。极简主义黑色露趾穆勒凉鞋——细带，低细跟。一只鞋在画面中下部清晰可见；伸出的脚向右下方延伸。沙发：大型、低矮、现代风格——光滑的炭黑色皮革，大靠垫，圆润的软包扶手，可见的接缝，带有轻微的冷色调反光。身体下方的靠垫有轻微的凹陷感。前景中宽阔的沙发座营造出深度和私密的氛围。沙发和伸出的脚下方：深炭灰色瓷砖地面，带有微妙的线性缝隙和略带纹理的哑光饰面。背景：上半部分是大面积的窗户——落地透明白色薄纱窗帘，呈柔和的垂直褶皱垂下，底部略显褶皱且不平整。明亮的阴天日光透过窗户，营造出淡蓝灰色的光晕。窗外景色高度模糊且失焦——暗示着远处的城市建筑或模糊的冬季景观。一道深色的石质或木质窗台在沙发后方水平延伸。色调与光影：冷色调、低饱和度的蓝灰色——深黑色、海军蓝调、浅肤色高光，以及运动衫中克制的红色点缀。来自窗户上方和后方的柔和漫射定向光——透过发丝形成柔和的轮廓光，面部、肩部和腿部有细腻的照明。沙发和前景下方有深邃但细节丰富的阴影。情绪化、奢华、宁静的氛围；非商业化的明亮风格。相机：略微高角度拍摄，全画幅 50mm 镜头，浅至中等景深——女性和附近的沙发细节清晰锐利，窗帘和外部背景柔和模糊。逼真的皮肤，单根发丝，准确的手脚，真实的织物褶皱，纯正的皮革纹理，优雅的人像构图，高对比度，丰富的色调层次，精致的电影写实感，带有轻微的胶片颗粒感。负面提示：无强闪光，无夸张的魅力修图，无文字，无水印，无额外人物，无畸形肢体，无重复手指，无畸形鞋履，无杂乱元素。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537330789_85z81z_HNl0U1SWoAAXQ40.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ToroJushiAi/status/2078963095871934961",
+      "sourceType": "community",
+      "authorName": "ToroJushiAi",
+      "authorHandle": "@ToroJushiAi",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.434Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29211",
+      "rawText": "电影感超写实时尚人像。一位留着蓬松长发的年轻女性（{argument name=\"hair color\" default=\"黑色长发\"}），斜倚在宁静现代室内的一张大型哑光黑色皮质转角沙发上。位于画面中右侧，沙发在画面下半部分大面积延伸。平滑白皙的皮肤，精致的五官，杏仁状的深色眼睛，柔和的眉形，淡淡的猫眼眼线，自然的玫瑰红唇色，妆容清透。冷静、疏离、沉思的表情——头部转向画面右侧，视线看向画外；躯干微微向观众倾斜。手臂与配饰：左臂随意搭在左侧升起的靠背上——手肘弯曲，手腕放松，手指自然地垂在深色皮革上。手腕上佩戴着 {argument name=\"accessory\" default=\"深蓝色串珠手链\"}，几枚精致的戒指，一条小吊坠项链，以及细小精致的耳环。右手放松地置于臀部和大腿上方，部分被姿势遮挡。服装：{argument name=\"top\" default=\"一件超大款深海军蓝美式橄榄球运动衫\"}——带有微妙的同色系图案。胸部上方有一个白色的小型弧形运动品牌标志。中央垂直装饰性几何面板：交织的红色、微妙的蓝色和浅灰色缝线，形成拉长的菱形和十字准线图案。运动衫自然垂坠，呈现出逼真的褶皱、织物纹理和略显宽松的袖子。运动衫下方隐约可见黑色修身短裤。腿部与鞋履：优雅的人像姿势——一只膝盖在画面中右侧显著抬起，另一条腿交叉在下方，向右下方对角线延伸。逼真的人体比例，自然的皮肤纹理，精致的膝盖和脚踝轮廓，腿部有柔和的高光。极简主义黑色露趾穆勒凉鞋——细带，低细跟。一只鞋在画面中下部清晰可见；伸出的脚向右下方延伸。沙发：大型、低矮、现代风格——光滑的炭黑色皮革，大靠垫，圆润的软包扶手，可见的接缝，带有轻微的冷色调反光。身体下方的靠垫有轻微的凹陷感。前景中宽阔的沙发座营造出深度和私密的氛围。沙发和伸出的脚下方：深炭灰色瓷砖地面，带有微妙的线性缝隙和略带纹理的哑光饰面。背景：上半部分是大面积的窗户——落地透明白色薄纱窗帘，呈柔和的垂直褶皱垂下，底部略显褶皱且不平整。明亮的阴天日光透过窗户，营造出淡蓝灰色的光晕。窗外景色高度模糊且失焦——暗示着远处的城市建筑或模糊的冬季景观。一道深色的石质或木质窗台在沙发后方水平延伸。色调与光影：冷色调、低饱和度的蓝灰色——深黑色、海军蓝调、浅肤色高光，以及运动衫中克制的红色点缀。来自窗户上方和后方的柔和漫射定向光——透过发丝形成柔和的轮廓光，面部、肩部和腿部有细腻的照明。沙发和前景下方有深邃但细节丰富的阴影。情绪化、奢华、宁静的氛围；非商业化的明亮风格。相机：略微高角度拍摄，全画幅 50mm 镜头，浅至中等景深——女性和附近的沙发细节清晰锐利，窗帘和外部背景柔和模糊。逼真的皮肤，单根发丝，准确的手脚，真实的织物褶皱，纯正的皮革纹理，优雅的人像构图，高对比度，丰富的色调层次，精致的电影写实感，带有轻微的胶片颗粒感。负面提示：无强闪光，无夸张的魅力修图，无文字，无水印，无额外人物，无畸形肢体，无重复手指，无畸形鞋履，无杂乱元素。"
+    },
+    {
+      "id": "community-2078918357798338794",
+      "title": "社交媒体帖子 - 夏季偶像猫娘祭",
+      "description": "一个生动的动漫提示词，用于生成在拥挤的户外夏季音乐节上表演的粉发猫娘偶像。",
+      "prompt": "创作一张充满活力的竖版动漫插画，描绘一位欢快的猫娘偶像在大型户外夏季音乐节上表演的场景。主体是 {argument name=\"character name\" default=\"一位粉发猫娘偶像\"}，以低角度四分之三侧面视角位于前景，正对着观众灿烂微笑，拥有红色双眼和蓬松的短 {argument name=\"hair color\" default=\"粉色\"} 头发，戴着黑色猫耳（内侧毛色较浅）、黄色小星星发夹，身后有一条卷曲的黑色猫尾。她身穿日式水手服风格的校园偶像装：露脐白色衬衫搭配深海军蓝水手领和袖口装饰、橙色领带、深色百褶短裙以及黑色露指手套。她的右手在脸旁比出 V 字手势，右侧放置着一个黑色舞台麦克风支架。背景是挥舞着荧光棒的庞大节日人群、空中飘洒的彩色纸屑、棕榈树、带有明亮灯光的舞台桁架，以及写有 {argument name=\"festival text\" default=\"SUMMER IDOL FESTIVAL\"} 的横幅和写着“IDOL!”的竖旗。使用耀眼的夏日正午天空，色彩饱和度高，配以蓬松的云朵、镜头光晕、闪烁的高光、动态效果、鲜艳的彩虹色节日氛围、光泽感的高细节动漫渲染、戏剧性的逆光效果、清晰的面部细节以及充满活力的偶像演唱会氛围。竖版 9:16 构图，精致的 Pixiv 风格插画，无水印，前景无多余角色。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1784537349063_545dud_HNnNCgwa8AAK0ZX.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/9YGMEQ63135ka5O/status/2078918357798338794#reversed-0",
+      "sourceType": "community",
+      "authorName": "よった~公儀介錯人やぶにらみ黙示録~子貸し腕貸し仕る/天の裁きは待ってはおれぬ/必殺必中万屋稼業",
+      "authorHandle": "@9YGMEQ63135ka5O",
+      "createdAt": "2026-07-19T12:00:00.000Z",
+      "importedAt": "2026-07-20T15:29:06.434Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=29234",
+      "rawText": "创作一张充满活力的竖版动漫插画，描绘一位欢快的猫娘偶像在大型户外夏季音乐节上表演的场景。主体是 {argument name=\"character name\" default=\"一位粉发猫娘偶像\"}，以低角度四分之三侧面视角位于前景，正对着观众灿烂微笑，拥有红色双眼和蓬松的短 {argument name=\"hair color\" default=\"粉色\"} 头发，戴着黑色猫耳（内侧毛色较浅）、黄色小星星发夹，身后有一条卷曲的黑色猫尾。她身穿日式水手服风格的校园偶像装：露脐白色衬衫搭配深海军蓝水手领和袖口装饰、橙色领带、深色百褶短裙以及黑色露指手套。她的右手在脸旁比出 V 字手势，右侧放置着一个黑色舞台麦克风支架。背景是挥舞着荧光棒的庞大节日人群、空中飘洒的彩色纸屑、棕榈树、带有明亮灯光的舞台桁架，以及写有 {argument name=\"festival text\" default=\"SUMMER IDOL FESTIVAL\"} 的横幅和写着“IDOL!”的竖旗。使用耀眼的夏日正午天空，色彩饱和度高，配以蓬松的云朵、镜头光晕、闪烁的高光、动态效果、鲜艳的彩虹色节日氛围、光泽感的高细节动漫渲染、戏剧性的逆光效果、清晰的面部细节以及充满活力的偶像演唱会氛围。竖版 9:16 构图，精致的 Pixiv 风格插画，无水印，前景无多余角色。"
+    },
+    {
       "id": "community-2078601584024707576",
       "title": "个人资料 / 头像 - 高角度金发自拍人像",
       "description": "一张逼真的竖版生活方式自拍，展现了在温暖公寓光线下微笑的金发女性，适用于美妆、时尚或社交媒体人像生成。",
@@ -6373,7 +6954,7 @@
       "authorName": "David",
       "authorHandle": "@tealdog2",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.090Z",
+      "importedAt": "2026-07-20T15:29:06.432Z",
       "tags": [
         "人像"
       ],
@@ -6414,7 +6995,7 @@
       "authorName": "AIgravure_jp🖥️🎨",
       "authorHandle": "@bananalink55",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.090Z",
+      "importedAt": "2026-07-20T15:29:06.432Z",
       "tags": [
         "人像",
         "摄影"
@@ -6456,7 +7037,7 @@
       "authorName": "Arina Ai",
       "authorHandle": "@Arina_hoqe",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.090Z",
+      "importedAt": "2026-07-20T15:29:06.432Z",
       "tags": [
         "人像",
         "摄影"
@@ -6498,7 +7079,7 @@
       "authorName": "AYi",
       "authorHandle": "@AYi_AInotes",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.090Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像",
         "摄影"
@@ -6540,7 +7121,7 @@
       "authorName": "John",
       "authorHandle": "@johnAGI168",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.090Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像",
         "摄影"
@@ -6582,7 +7163,7 @@
       "authorName": "WasifAI",
       "authorHandle": "@doctorwasif",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像"
       ],
@@ -6623,7 +7204,7 @@
       "authorName": "WILDCORE",
       "authorHandle": "@wildcore_stuido",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像",
         "摄影"
@@ -6665,7 +7246,7 @@
       "authorName": "H A J R A",
       "authorHandle": "@codewithhajra",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像"
       ],
@@ -6706,7 +7287,7 @@
       "authorName": "千叶照相馆",
       "authorHandle": "@Chiyeaiart",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像",
         "平面设计",
@@ -6749,7 +7330,7 @@
       "authorName": "春永睦月　Harunaga Mutsuki",
       "authorHandle": "@HarunagaMutsuki",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像"
       ],
@@ -6790,7 +7371,7 @@
       "authorName": "lovimg_com",
       "authorHandle": "@lovimg_com",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.091Z",
+      "importedAt": "2026-07-20T15:29:06.433Z",
       "tags": [
         "人像",
         "摄影"
@@ -16451,7 +17032,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.099Z",
+      "importedAt": "2026-07-20T15:29:06.445Z",
       "tags": [
         "产品",
         "平面设计",
@@ -16494,7 +17075,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.099Z",
+      "importedAt": "2026-07-20T15:29:06.445Z",
       "tags": [
         "平面设计"
       ],
@@ -16535,7 +17116,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-20T10:25:44.099Z",
+      "importedAt": "2026-07-20T15:29:06.446Z",
       "tags": [
         "平面设计"
       ],
