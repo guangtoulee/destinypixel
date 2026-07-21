@@ -46,7 +46,7 @@ const symbolicReference = {
     frame:
       "One question, one reading. Combine a time-cast six-line hexagram pattern with a three-card tarot spread to create a practical decision mirror.",
     anchors:
-      "Use six lines from bottom to top, moving lines, upper/lower trigrams, question time, optional birth context, and tarot cards for situation, obstacle, and advice.",
+      "Use the six lines strictly from bottom (line 1) to top (line 6). Coin totals 6 and 8 are yin, 7 and 9 are yang; 6 and 9 are moving lines. Read lines 1-3 as the lower trigram and lines 4-6 as the upper trigram. Use each tarot card's exact full-deck name, spread role, upright/reversed orientation, and supplied orientation keywords.",
     method:
       "Give a clear tendency, conditions, timing window, risk, and next action. Avoid absolute guarantees, lottery claims, medical/legal certainty, or fear-based predictions.",
   },
@@ -87,7 +87,7 @@ const outputInstructions: Record<InsightMode, string[]> = {
     "Use these exact section headers in the target language: Direct answer, Hexagram signal, Tarot mirror, Hidden risk, Best timing, Action plan.",
     "Each section should be oral, direct, and detailed: 120-180 Chinese characters or 90-130 English/Russian words.",
     "Give a clear tendency rather than vague comfort. Say what should be done, avoided, delayed, or verified.",
-    "Mention both the six-line/time-cast signal and the tarot spread. Do not guarantee outcomes.",
+    "Mention both the six-line/time-cast signal and all three tarot cards. Respect every card's upright or reversed orientation; never silently flip, replace, or redraw a card. Do not guarantee outcomes.",
   ],
 };
 
