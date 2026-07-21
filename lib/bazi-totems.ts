@@ -1,11 +1,11 @@
 import { getPillarImagePath, stemSlugs, branchSlugs } from "@/lib/archetype-assets";
 import type { BaziData } from "@/lib/engines/bazi";
-import { elementLabels } from "@/lib/report-i18n";
-import type { ReportLocale } from "@/lib/report-i18n";
+import { contentLocale, elementLabels } from "@/lib/report-i18n";
+import type { ContentLocale, ReportLocale } from "@/lib/report-i18n";
 
 export type PillarKey = keyof BaziData["pillars"];
 
-type Localized = Record<ReportLocale, string>;
+type Localized = Record<ContentLocale, string>;
 
 export const pillarOrder: PillarKey[] = ["year", "month", "day", "hour"];
 
@@ -228,28 +228,29 @@ export const branchTotems: Record<
 };
 
 export function getPillarDisplay(pillar: string, locale: ReportLocale) {
+  const copyLocale = contentLocale(locale);
   const stem = pillar[0];
   const branch = pillar[1];
   const stemInfo = stemDetails[stem];
   const branchInfo = branchTotems[branch];
   const pillarPinyin = `${stemInfo.pinyin} ${branchInfo.pinyin}`;
   const totemName =
-    locale === "zh"
+    copyLocale === "zh"
       ? `${stemInfo.polarityElement.zh}${branchInfo.animal.zh}`
-      : `${elementLabels[locale][stemInfo.element] ?? stemInfo.element} ${
-          branchInfo.animal[locale]
+      : `${elementLabels[copyLocale][stemInfo.element] ?? stemInfo.element} ${
+          branchInfo.animal[copyLocale]
         }`;
 
   return {
     imageSrc: getPillarImagePath(pillar),
     slug: `${stemSlugs[stem]}_${branchSlugs[branch]}`,
-    pillarLabel: locale === "zh" ? pillar : pillarPinyin,
-    stemLabel: locale === "zh" ? stem : stemInfo.pinyin,
-    branchLabel: locale === "zh" ? branch : branchInfo.pinyin,
-    stemMeaning: stemInfo.polarityElement[locale],
-    branchMeaning: branchInfo.elementField[locale],
+    pillarLabel: copyLocale === "zh" ? pillar : pillarPinyin,
+    stemLabel: copyLocale === "zh" ? stem : stemInfo.pinyin,
+    branchLabel: copyLocale === "zh" ? branch : branchInfo.pinyin,
+    stemMeaning: stemInfo.polarityElement[copyLocale],
+    branchMeaning: branchInfo.elementField[copyLocale],
     totemName,
-    animal: branchInfo.animal[locale],
+    animal: branchInfo.animal[copyLocale],
     pinyin: pillarPinyin,
   };
 }

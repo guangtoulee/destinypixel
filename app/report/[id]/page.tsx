@@ -32,6 +32,7 @@ import {
   type DraftReportInput,
 } from "@/lib/report-draft";
 import {
+  contentLocale,
   elementLabels,
   normalizeReportLocale,
   planetLabels,
@@ -112,7 +113,7 @@ function BaziChart({
   pillars: ReportGenerationContext["bazi"]["pillars"];
   locale: ReportLocale;
 }) {
-  const copy = reportCopy[locale];
+  const copy = reportCopy[contentLocale(locale)];
 
   return (
     <div className="pillar-chart">
@@ -345,26 +346,27 @@ export default async function ReportPage({
   const locale = normalizeReportLocale(
     query?.locale ?? report.birth_record.locale ?? report.ai_content.meta?.locale ?? "en",
   );
-  const copy = reportCopy[locale];
+  const copyLocale = contentLocale(locale);
+  const copy = reportCopy[copyLocale];
   const gender: Gender =
     report.birth_record.gender ??
     report.ai_content.meta?.gender ??
     "female";
   const dayDisplay = getPillarDisplay(dayPillar, locale);
   const sunSign =
-    zodiacLabels[locale][report.astro_data.sunSign] ?? report.astro_data.sunSign;
+    zodiacLabels[copyLocale][report.astro_data.sunSign] ?? report.astro_data.sunSign;
   const solarSecondary =
-    locale === "zh" || locale === "en" ? report.astro_data.sunSign : sunSign;
+    copyLocale === "zh" || locale === "en" ? report.astro_data.sunSign : sunSign;
   const mappedPlanetName =
-    planetLabels[locale][baziData.mappedPlanet] ?? baziData.mappedPlanet;
+    planetLabels[copyLocale][baziData.mappedPlanet] ?? baziData.mappedPlanet;
   const profileName =
-    locale === "zh"
+    copyLocale === "zh"
       ? profile.name.cn
       : locale === "ru"
         ? dayDisplay.totemName
         : profile.name.en;
   const headline =
-    locale === "zh"
+    copyLocale === "zh"
       ? `${profileName} × ${sunSign}`
       : `${profileName} × ${sunSign}`;
   const pillarDisplays = Object.fromEntries(
@@ -505,7 +507,7 @@ export default async function ReportPage({
               <p>
                 {dayDisplay.stemMeaning}
                 {mappedPlanet
-                  ? ` · ${zodiacLabels[locale][mappedPlanet.sign] ?? mappedPlanet.sign}`
+                  ? ` · ${zodiacLabels[copyLocale][mappedPlanet.sign] ?? mappedPlanet.sign}`
                   : ""}
               </p>
             </div>
@@ -546,7 +548,7 @@ export default async function ReportPage({
             <h3>{copy.bazi.elementBalance}</h3>
             {elements.map(([element, value]) => (
               <div key={element}>
-                <span>{elementLabels[locale][element] ?? element}</span>
+                <span>{elementLabels[copyLocale][element] ?? element}</span>
                 <i>
                   <b style={{ width: `${Math.max(8, Number(value) * 12)}%` }} />
                 </i>

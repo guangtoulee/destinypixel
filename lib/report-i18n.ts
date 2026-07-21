@@ -1,4 +1,5 @@
-export type ReportLocale = "en" | "zh" | "ru";
+export type ContentLocale = "en" | "zh" | "ru";
+export type ReportLocale = ContentLocale | "zh-TW";
 
 export const reportLanguageOptions: Array<{
   value: ReportLocale;
@@ -6,25 +7,33 @@ export const reportLanguageOptions: Array<{
 }> = [
   { value: "en", label: "English" },
   { value: "zh", label: "中文" },
+  { value: "zh-TW", label: "繁體" },
   { value: "ru", label: "Русский" },
 ];
 
 export function normalizeReportLocale(value: string): ReportLocale {
   if (value === "zh" || value === "cn") return "zh";
+  if (value === "zh-TW" || value === "zh-Hant" || value === "tw") return "zh-TW";
   if (value === "ru") return "ru";
 
   return "en";
 }
 
+export function contentLocale(locale: ReportLocale): ContentLocale {
+  return locale === "zh-TW" ? "zh" : locale;
+}
+
 export const outputLanguageNames: Record<ReportLocale, string> = {
   en: "English",
   zh: "Simplified Chinese",
+  "zh-TW": "Traditional Chinese (Taiwan)",
   ru: "Russian",
 };
 
 export const languagePromptRules: Record<ReportLocale, string> = {
   en: "Write only in fluent professional English. Do not use Chinese characters or Russian text.",
   zh: "只使用简体中文输出。不要夹杂英文解释，除非是必要的专有名词。",
+  "zh-TW": "只使用自然、專業的繁體中文輸出，採用臺灣常用字形與措辭。不要輸出簡體中文，也不要夾雜英文解釋，除非是必要的專有名詞。",
   ru: "Пиши только на грамотном профессиональном русском языке. Не используй китайские иероглифы или английские пояснения, кроме необходимых названий бренда.",
 };
 
@@ -277,7 +286,7 @@ export const reportCopy = {
   },
 } as const;
 
-export const elementLabels: Record<ReportLocale, Record<string, string>> = {
+export const elementLabels: Record<ContentLocale, Record<string, string>> = {
   en: {
     Wood: "Wood",
     Fire: "Fire",
@@ -301,7 +310,7 @@ export const elementLabels: Record<ReportLocale, Record<string, string>> = {
   },
 };
 
-export const zodiacLabels: Record<ReportLocale, Record<string, string>> = {
+export const zodiacLabels: Record<ContentLocale, Record<string, string>> = {
   en: {
     Aries: "Aries",
     Taurus: "Taurus",
@@ -346,7 +355,7 @@ export const zodiacLabels: Record<ReportLocale, Record<string, string>> = {
   },
 };
 
-export const planetLabels: Record<ReportLocale, Record<string, string>> = {
+export const planetLabels: Record<ContentLocale, Record<string, string>> = {
   en: {
     Sun: "Sun",
     Moon: "Moon",

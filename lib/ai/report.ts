@@ -3,6 +3,7 @@ import type { BaziData } from "@/lib/engines/bazi";
 import { elementLabelsCn } from "@/lib/engines/bazi";
 import type { PillarProfile } from "@/lib/pillars";
 import {
+  contentLocale,
   languagePromptRules,
   outputLanguageNames,
   planetLabels,
@@ -416,18 +417,19 @@ export function createInitialAIReportContent({
   gender: Gender;
   locale: ReportLocale;
 }): AIReportContent {
+  const copyLocale = contentLocale(locale);
   const sun = astro.placements.find((placement) => placement.body === "Sun");
   const dayDisplay = getPillarDisplay(bazi.pillars.day, locale);
-  const sunSign = zodiacLabels[locale][sun?.sign ?? astro.sunSign] ?? astro.sunSign;
-  const mappedPlanet = planetLabels[locale][bazi.mappedPlanet] ?? bazi.mappedPlanet;
+  const sunSign = zodiacLabels[copyLocale][sun?.sign ?? astro.sunSign] ?? astro.sunSign;
+  const mappedPlanet = planetLabels[copyLocale][bazi.mappedPlanet] ?? bazi.mappedPlanet;
   const pillarNames = pillarOrder
     .map((key) => getPillarDisplay(bazi.pillars[key], locale).pillarLabel)
-    .join(locale === "zh" ? "、" : ", ");
+    .join(copyLocale === "zh" ? "、" : ", ");
   const branchNames = pillarOrder
     .map((key) => getPillarDisplay(bazi.pillars[key], locale).totemName)
-    .join(locale === "zh" ? "、" : ", ");
+    .join(copyLocale === "zh" ? "、" : ", ");
   const base =
-    locale === "zh"
+    copyLocale === "zh"
       ? {
           dayMaster: `${profile.name.cn} 是这份报告的核心动物画像；它描述你的底层反应方式。太阳节律落在 ${sunSign}，会把这种底色推向更明显的自我表达和人生主题。`,
           outerPersona: `外在层来自四个出生坐标：${pillarNames}。映射星体为 ${mappedPlanet}，它会影响别人第一眼感受到的气场、压力感和行动速度。`,
@@ -465,7 +467,7 @@ export function createInitialAIReportContent({
     character: base.dayMaster,
     wealth: base.career,
     transits:
-      locale === "zh"
+      copyLocale === "zh"
         ? "流年运势只在你打开对应标签时生成，避免微信和 Vercel 等待长请求。"
         : locale === "ru"
           ? "Годовые транзиты создаются только после открытия вкладки, чтобы браузер не ждал длинный запрос."

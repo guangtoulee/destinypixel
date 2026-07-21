@@ -27,8 +27,10 @@ import {
   pillarsDB,
 } from "@/lib/pillars";
 import {
+  contentLocale,
   normalizeReportLocale,
   reportLanguageOptions,
+  type ContentLocale,
   type ReportLocale,
 } from "@/lib/report-i18n";
 import { getPillarDisplay } from "@/lib/bazi-totems";
@@ -116,7 +118,7 @@ type Copy = {
   footer: string;
 };
 
-const copy: Record<ReportLocale, Copy> = {
+const copy: Record<ContentLocale, Copy> = {
   en: {
     nav: {
       method: "The Method",
@@ -412,7 +414,7 @@ const copy: Record<ReportLocale, Copy> = {
 const deckPillars = ["甲子", "丙午", "戊辰", "庚申", "癸卯"];
 
 function getProfileLocale(locale: ReportLocale) {
-  return locale === "zh" ? "cn" : "en";
+  return contentLocale(locale) === "zh" ? "cn" : "en";
 }
 
 function getLocalizedProfileName(
@@ -420,7 +422,7 @@ function getLocalizedProfileName(
   pillar: string,
   locale: ReportLocale,
 ) {
-  if (locale === "zh") return profile.name.cn;
+  if (contentLocale(locale) === "zh") return profile.name.cn;
   if (locale === "ru") return getPillarDisplay(pillar, "ru").totemName;
 
   return profile.name.en;
@@ -439,7 +441,13 @@ function getRussianPreviewText(pillar: string) {
 
 function setDocumentLocale(locale: ReportLocale) {
   document.documentElement.lang =
-    locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
+    locale === "zh-TW"
+      ? "zh-TW"
+      : locale === "zh"
+        ? "zh-CN"
+        : locale === "ru"
+          ? "ru"
+          : "en";
 }
 
 function FusionSubmitButton({
@@ -512,7 +520,8 @@ export default function DestinyExperience({
   const [pillar, setPillar] = useState("癸卯");
   const [isSample, setIsSample] = useState(true);
   const [isWeChatBrowser, setIsWeChatBrowser] = useState(false);
-  const text = copy[locale];
+  const copyLocale = contentLocale(locale);
+  const text = copy[copyLocale];
 
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
@@ -615,9 +624,9 @@ export default function DestinyExperience({
                   onClick={() => changeLocale(option.value)}
                 >
                   {option.value === "zh"
-                    ? locale === "zh"
-                      ? "中文"
-                      : "ZH"
+                    ? "简"
+                    : option.value === "zh-TW"
+                      ? "繁"
                     : option.value === "ru"
                       ? "RU"
                       : "EN"}
@@ -648,7 +657,7 @@ export default function DestinyExperience({
                     name="name"
                     type="text"
                     placeholder={
-                      locale === "zh"
+                      copyLocale === "zh"
                         ? "你的名字"
                         : locale === "ru"
                           ? "Ваше имя"
@@ -704,7 +713,7 @@ export default function DestinyExperience({
                 <datalist id="city-options">
                   {cities.map((city) => {
                     const aliases =
-                      locale === "zh"
+                      copyLocale === "zh"
                         ? city.aliases
                         : city.aliases.filter(
                             (alias) => !/[\u4e00-\u9fff]/.test(alias),
@@ -868,7 +877,7 @@ export default function DestinyExperience({
             <Image
               src="/archetypes/gui_mao.jpg"
               alt={
-                locale === "zh"
+                copyLocale === "zh"
                   ? "雨露灵兔卡牌"
                   : locale === "ru"
                     ? "Карта Вода Кролик"
