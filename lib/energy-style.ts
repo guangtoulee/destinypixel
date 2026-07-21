@@ -1,4 +1,4 @@
-import type { ReportLocale } from "@/lib/report-i18n";
+import type { ContentLocale } from "@/lib/report-i18n";
 
 export type EnergyElement = "Wood" | "Fire" | "Earth" | "Metal" | "Water";
 export type StyleScene = "wealth" | "career" | "love" | "negotiation";
@@ -6,9 +6,9 @@ export type StyleScene = "wealth" | "career" | "love" | "negotiation";
 export type Gemstone = {
   id: string;
   element: EnergyElement;
-  name: Record<ReportLocale, string>;
-  aura: Record<ReportLocale, string>;
-  meaning: Record<ReportLocale, string>;
+  name: Record<ContentLocale, string>;
+  aura: Record<ContentLocale, string>;
+  meaning: Record<ContentLocale, string>;
   color: string;
   accent: string;
   texture: "clear" | "cloud" | "silk" | "grain" | "metallic" | "solid";
@@ -121,15 +121,15 @@ export const elementStyle = {
 } satisfies Record<
   EnergyElement,
   {
-    label: Record<ReportLocale, string>;
-    tone: Record<ReportLocale, string>;
-    colors: Record<ReportLocale, string[]>;
-    wardrobe: Record<ReportLocale, string>;
-    daily: Record<ReportLocale, string>;
+    label: Record<ContentLocale, string>;
+    tone: Record<ContentLocale, string>;
+    colors: Record<ContentLocale, string[]>;
+    wardrobe: Record<ContentLocale, string>;
+    daily: Record<ContentLocale, string>;
   }
 >;
 
-export const sceneAdvice: Record<StyleScene, Record<ReportLocale, string>> = {
+export const sceneAdvice: Record<StyleScene, Record<ContentLocale, string>> = {
   wealth: {
     en: "Money: keep the main outfit low-noise and add one metal or earth accent. It reads as disciplined, not thirsty.",
     zh: "财运：主穿搭保持低噪音，加一个金或土的点睛色。看起来会更有纪律，不会显得急着求财。",

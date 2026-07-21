@@ -1,4 +1,5 @@
-import type { ReportLocale } from "@/lib/report-i18n";
+import { contentLocale } from "@/lib/report-i18n";
+import type { ContentLocale, ReportLocale } from "@/lib/report-i18n";
 import { classicStickSeeds } from "@/lib/sticks/classic-source";
 
 export type StickType = "guanyin" | "guandi" | "yuelao" | "wealth" | "huangdaxian";
@@ -33,7 +34,7 @@ export const stickTypeTotals: Record<StickType, number> = {
 };
 
 type LocalizedSeed = Record<
-  ReportLocale,
+  ContentLocale,
   {
     level: string;
     title: string;
@@ -244,7 +245,7 @@ const seeds: Partial<Record<StickType, Record<number, LocalizedSeed>>> = {
   },
 };
 
-const fallbackLevels: Record<ReportLocale, string[]> = {
+const fallbackLevels: Record<ContentLocale, string[]> = {
   en: ["Great Blessing", "Good", "Steady", "Blocked", "Wait"],
   zh: ["上吉", "中吉", "中平", "小阻", "待时"],
   ru: ["Большая удача", "Хорошо", "Ровно", "Препятствие", "Ждать"],
@@ -253,7 +254,7 @@ const fallbackLevels: Record<ReportLocale, string[]> = {
 const generatedThemes: Record<
   StickType,
   Record<
-    ReportLocale,
+    ContentLocale,
     Array<{
       title: string;
       image: string;
@@ -426,12 +427,16 @@ const generatedThemes: Record<
 };
 
 function generatedSignText(type: StickType, number: number, locale: ReportLocale) {
-  const themes = generatedThemes[type][locale];
+  const copyLocale = contentLocale(locale);
+  const themes = generatedThemes[type][copyLocale];
   const theme = themes[(number - 1) % themes.length];
-  const level = fallbackLevels[locale][(number + themes.length) % fallbackLevels[locale].length];
+  const level =
+    fallbackLevels[copyLocale][
+      (number + themes.length) % fallbackLevels[copyLocale].length
+    ];
   const phase = Math.floor((number - 1) / themes.length) + 1;
 
-  if (locale === "zh") {
+  if (copyLocale === "zh") {
     return {
       level,
       title: `${theme.title} · 第 ${number} 签`,
@@ -476,7 +481,7 @@ function classicText(type: StickType, number: number, locale: ReportLocale) {
     return null;
   }
 
-  if (locale === "zh") {
+  if (contentLocale(locale) === "zh") {
     return classic;
   }
 
@@ -498,7 +503,7 @@ export function getStickSign(
 ): StickSign {
   const total = stickTypeTotals[type];
   const safeNumber = Math.min(Math.max(Math.round(number), 1), total);
-  const seeded = seeds[type]?.[safeNumber]?.[locale];
+  const seeded = seeds[type]?.[safeNumber]?.[contentLocale(locale)];
   const classic = classicText(type, safeNumber, locale);
   const sign = seeded ?? classic ?? fallbackText(type, safeNumber, locale);
 

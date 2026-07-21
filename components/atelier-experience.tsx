@@ -24,6 +24,7 @@ import {
   type Gemstone,
 } from "@/lib/energy-style";
 import {
+  contentLocale,
   reportLanguageOptions,
   type ReportLocale,
 } from "@/lib/report-i18n";
@@ -150,7 +151,13 @@ const atelierCopy = {
 
 function setDocumentLocale(locale: ReportLocale) {
   document.documentElement.lang =
-    locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
+    locale === "zh-TW"
+      ? "zh-TW"
+      : locale === "zh"
+        ? "zh-CN"
+        : locale === "ru"
+          ? "ru"
+          : "en";
 }
 
 function balanceFromStones(stones: Gemstone[]) {
@@ -218,13 +225,15 @@ function buildAnalysis(
   beadSize: number,
   targetCount: number,
 ) {
-  const uniqueNames = Array.from(new Set(stones.map((stone) => stone.name[locale])));
-  const names = uniqueNames.join(locale === "zh" ? "、" : ", ");
-  const focusName = focus === "All" ? atelierCopy[locale].all : elementStyle[focus].label[locale];
+  const copyLocale = contentLocale(locale);
+  const uniqueNames = Array.from(new Set(stones.map((stone) => stone.name[copyLocale])));
+  const names = uniqueNames.join(copyLocale === "zh" ? "、" : ", ");
+  const focusName =
+    focus === "All" ? atelierCopy[copyLocale].all : elementStyle[focus].label[copyLocale];
 
-  if (stones.length === 0) return atelierCopy[locale].empty;
+  if (stones.length === 0) return atelierCopy[copyLocale].empty;
 
-  if (locale === "zh") {
+  if (copyLocale === "zh") {
     return `这条 ${beadSize}mm · ${targetCount} 颗的手串当前已排入 ${stones.length} 颗，主调偏向「${focusName}」。已选 ${names}。它更接近真实配珠逻辑：每一颗珠子都占据一个腕围位置，颜色会直接影响整串的视觉气场。完成后可作为商城定制草稿，也可以先下载图片给店家或朋友参考。`;
   }
 
@@ -269,7 +278,8 @@ export default function AtelierExperience({
   const [beadIds, setBeadIds] = useState<string[]>([]);
   const [downloadBusy, setDownloadBusy] = useState(false);
   const previewRef = useRef<HTMLElement | null>(null);
-  const copy = atelierCopy[locale];
+  const copyLocale = contentLocale(locale);
+  const copy = atelierCopy[copyLocale];
   const fitOptions = useMemo(() => getFitOptions(gender, beadSize), [beadSize, gender]);
   const currentBeads = useMemo(
     () =>
@@ -371,9 +381,9 @@ export default function AtelierExperience({
               onClick={() => changeLocale(option.value)}
             >
               {option.value === "zh"
-                ? locale === "zh"
-                  ? "中文"
-                  : "ZH"
+                ? "简"
+                : option.value === "zh-TW"
+                  ? "繁"
                 : option.value === "ru"
                   ? "RU"
                   : "EN"}
@@ -419,7 +429,7 @@ export default function AtelierExperience({
                       "--bead": `${previewBeadPixels}px`,
                       "--stone-bg": stoneBackground(stone),
                     } as CSSProperties}
-                    title={`${copy.removeBead}: ${stone.name[locale]}`}
+                    title={`${copy.removeBead}: ${stone.name[copyLocale]}`}
                     onClick={() => removeBead(index)}
                   >
                     <Minus size={10} aria-hidden="true" />
@@ -460,7 +470,7 @@ export default function AtelierExperience({
                     type="button"
                     key={`${stone.id}-strip-${index}`}
                     onClick={() => removeBead(index)}
-                    title={`${copy.removeBead}: ${stone.name[locale]}`}
+                    title={`${copy.removeBead}: ${stone.name[copyLocale]}`}
                   >
                     <i style={{ background: stoneBackground(stone) }} />
                     {index + 1}
@@ -484,7 +494,7 @@ export default function AtelierExperience({
               <strong>{copy.balance}</strong>
               {percentages.map(({ element, percent }) => (
                 <label key={element}>
-                  <span>{elementStyle[element].label[locale]}</span>
+                  <span>{elementStyle[element].label[copyLocale]}</span>
                   <i>
                     <b style={{ width: `${Math.max(4, percent)}%` }} />
                   </i>
@@ -583,7 +593,7 @@ export default function AtelierExperience({
                     data-active={focus === element}
                     onClick={() => setFocus(element)}
                   >
-                    {elementStyle[element].label[locale]}
+                    {elementStyle[element].label[copyLocale]}
                   </button>
                 ))}
               </div>
@@ -600,10 +610,10 @@ export default function AtelierExperience({
                 >
                   <span style={{ background: stoneBackground(stone) }} />
                   <small>
-                    {elementStyle[stone.element].label[locale]} · {stone.aura[locale]}
+                    {elementStyle[stone.element].label[copyLocale]} · {stone.aura[copyLocale]}
                   </small>
-                  <strong>{stone.name[locale]}</strong>
-                  <p>{stone.meaning[locale]}</p>
+                  <strong>{stone.name[copyLocale]}</strong>
+                  <p>{stone.meaning[copyLocale]}</p>
                   <em>
                     {isFull ? <Check size={14} /> : <Plus size={14} />}
                     <span>{copy.addStone}</span>

@@ -30,7 +30,7 @@ import {
   strongestElement,
   targetElement,
 } from "@/lib/energy-style";
-import { reportCopy } from "@/lib/report-i18n";
+import { contentLocale, reportCopy } from "@/lib/report-i18n";
 import {
   getTransitMonthDisplay,
   getTransitOverviewDisplay,
@@ -464,7 +464,8 @@ function AccordionSection({
 }
 
 function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
-  const copy = energyStyleCopy[context.locale];
+  const copyLocale = contentLocale(context.locale);
+  const copy = energyStyleCopy[copyLocale];
   const target = targetElement(
     context.bazi.elementBalance,
     context.bazi.missingElements,
@@ -476,7 +477,7 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
   const dailyMeta = elementStyle[dailyElement];
   const stones = getGemstonesForElement(target).slice(0, 3);
   const percentages = elementPercentages(context.bazi.elementBalance);
-  const colorChips = targetMeta.colors[context.locale];
+  const colorChips = targetMeta.colors[copyLocale];
   const sceneEntries = Object.entries(sceneAdvice) as Array<
     [keyof typeof sceneAdvice, (typeof sceneAdvice)[keyof typeof sceneAdvice]]
   >;
@@ -501,18 +502,18 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
       <div className="energy-style-summary">
         <div>
           <small>{copy.target}</small>
-          <strong>{targetMeta.label[context.locale]}</strong>
-          <p>{targetMeta.tone[context.locale]}</p>
+          <strong>{targetMeta.label[copyLocale]}</strong>
+          <p>{targetMeta.tone[copyLocale]}</p>
         </div>
         <div>
           <small>{copy.strongest}</small>
-          <strong>{dominantMeta.label[context.locale]}</strong>
-          <p>{dominantMeta.tone[context.locale]}</p>
+          <strong>{dominantMeta.label[copyLocale]}</strong>
+          <p>{dominantMeta.tone[copyLocale]}</p>
         </div>
         <div>
           <small>{copy.daily}</small>
-          <strong>{dailyMeta.label[context.locale]}</strong>
-          <p>{dailyMeta.daily[context.locale]}</p>
+          <strong>{dailyMeta.label[copyLocale]}</strong>
+          <p>{dailyMeta.daily[copyLocale]}</p>
         </div>
       </div>
 
@@ -530,14 +531,14 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
               </span>
             ))}
           </div>
-          <p>{targetMeta.wardrobe[context.locale]}</p>
+          <p>{targetMeta.wardrobe[copyLocale]}</p>
         </section>
 
         <section>
           <h3>{copy.scenes}</h3>
           <div className="energy-scene-list">
             {sceneEntries.map(([scene, advice]) => (
-              <p key={scene}>{advice[context.locale]}</p>
+              <p key={scene}>{advice[copyLocale]}</p>
             ))}
           </div>
         </section>
@@ -550,7 +551,7 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
               <i>
                 <b style={{ height: `${Math.max(4, percent)}%` }} />
               </i>
-              <em>{elementStyle[element].label[context.locale]}</em>
+              <em>{elementStyle[element].label[copyLocale]}</em>
             </span>
           ))}
         </div>
@@ -559,7 +560,7 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
           {stones.map((stone) => (
             <span key={stone.id}>
               <i style={{ background: stone.color, boxShadow: `0 0 0 5px ${stone.accent}` }} />
-              {stone.name[context.locale]} · {stone.aura[context.locale]}
+              {stone.name[copyLocale]} · {stone.aura[copyLocale]}
             </span>
           ))}
         </div>
@@ -575,12 +576,13 @@ export default function ReportExperience({
   context: ReportGenerationContext;
   initialNatal: NatalBookSections;
 }) {
-  const copy = reportCopy[context.locale];
-  const actionCopy = reportActionCopy[context.locale];
+  const copyLocale = contentLocale(context.locale);
+  const copy = reportCopy[copyLocale];
+  const actionCopy = reportActionCopy[copyLocale];
   const reportTitle = useMemo(() => buildReportTitle(context), [context]);
   const luck = context.bazi.luck;
   const startAgeDisplay = luck
-    ? context.locale === "zh"
+    ? copyLocale === "zh"
       ? `${luck.startAge}岁`
       : context.locale === "ru"
         ? `${luck.startAge} лет`

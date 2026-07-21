@@ -29,8 +29,10 @@ import { getPillarDisplay } from "@/lib/bazi-totems";
 import { cities } from "@/lib/geo/cities";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import {
+  contentLocale,
   normalizeReportLocale,
   reportLanguageOptions,
+  type ContentLocale,
   type ReportLocale,
 } from "@/lib/report-i18n";
 
@@ -135,7 +137,7 @@ type WhiteCopy = {
   };
 };
 
-const whiteCopy: Record<ReportLocale, WhiteCopy> = {
+const whiteCopy: Record<ContentLocale, WhiteCopy> = {
   en: {
     nav: {
       method: "The System",
@@ -757,7 +759,7 @@ function WhiteSubmitButton({
 }
 
 function profileName(profile: PillarProfile, pillar: string, locale: ReportLocale) {
-  if (locale === "zh") return profile.name.cn;
+  if (contentLocale(locale) === "zh") return profile.name.cn;
   if (locale === "ru") return getPillarDisplay(pillar, "ru").totemName;
 
   return profile.name.en;
@@ -768,7 +770,7 @@ function profileEssence(
   pillar: string,
   locale: ReportLocale,
 ) {
-  if (locale === "zh") return profile.essence.cn;
+  if (contentLocale(locale) === "zh") return profile.essence.cn;
   if (locale === "ru") {
     const display = getPillarDisplay(pillar, "ru");
     return `${display.totemName} соединяет ${display.stemMeaning.toLowerCase()} и ${display.branchMeaning.toLowerCase()} в мягкий, наблюдательный архетип.`;
@@ -779,7 +781,13 @@ function profileEssence(
 
 function setDocumentLocale(locale: ReportLocale) {
   document.documentElement.lang =
-    locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
+    locale === "zh-TW"
+      ? "zh-TW"
+      : locale === "zh"
+        ? "zh-CN"
+        : locale === "ru"
+          ? "ru"
+          : "en";
 }
 
 export default function DestinyWhiteExperience({
@@ -795,13 +803,14 @@ export default function DestinyWhiteExperience({
   const [blessingMoment, setBlessingMoment] = useState<
     WhiteCopy["blessing"]["deities"][number] | null
   >(null);
-  const text = whiteCopy[locale];
+  const copyLocale = contentLocale(locale);
+  const text = whiteCopy[copyLocale];
   const selectedDeity =
     text.blessing.deities.find((deity) => deity.key === selectedDeityKey) ??
     text.blessing.deities[0];
   const selectedBlessingActive = Boolean(litBlessings[selectedDeity.key]);
   const mobileNavLabels =
-    locale === "zh"
+    copyLocale === "zh"
       ? { report: "排盘", insights: "洞察", sticks: "求签", blessing: "祈福" }
       : locale === "ru"
         ? { report: "Карта", insights: "Студии", sticks: "Жребий", blessing: "Обряд" }
@@ -891,9 +900,9 @@ export default function DestinyWhiteExperience({
                   onClick={() => changeLocale(option.value)}
                 >
                   {option.value === "zh"
-                    ? locale === "zh"
-                      ? "中文"
-                      : "ZH"
+                    ? "简"
+                    : option.value === "zh-TW"
+                      ? "繁"
                     : option.value === "ru"
                       ? "RU"
                       : "EN"}
@@ -969,7 +978,7 @@ export default function DestinyWhiteExperience({
                   name="name"
                   type="text"
                   placeholder={
-                    locale === "zh"
+                    copyLocale === "zh"
                       ? "你的名字"
                       : locale === "ru"
                         ? "Ваше имя"
@@ -1022,7 +1031,7 @@ export default function DestinyWhiteExperience({
               <datalist id="white-city-options">
                 {cities.map((city) => {
                   const aliases =
-                    locale === "zh"
+                    copyLocale === "zh"
                       ? city.aliases
                       : city.aliases.filter((alias) => !/[\u4e00-\u9fff]/.test(alias));
 
@@ -1235,7 +1244,7 @@ export default function DestinyWhiteExperience({
             <h2>{text.sticks.title}</h2>
             <span>{text.sticks.description}</span>
             <a href={`/sticks?locale=${locale}`}>
-              {locale === "zh" ? "进入求签小殿" : locale === "ru" ? "Открыть храм жребиев" : "Enter the oracle hall"}
+              {copyLocale === "zh" ? "进入求签小殿" : locale === "ru" ? "Открыть храм жребиев" : "Enter the oracle hall"}
               <ArrowRight size={16} aria-hidden="true" />
             </a>
           </div>
@@ -1378,22 +1387,22 @@ export default function DestinyWhiteExperience({
         <div className="white-container">
           <span>DestinyPixel · Multidimensional Birth Map</span>
           <a href={`/learn?locale=${locale}`}>
-            {locale === "zh" ? "搜索指南" : locale === "ru" ? "Гид" : "Guide"}
+            {copyLocale === "zh" ? "搜索指南" : locale === "ru" ? "Гид" : "Guide"}
           </a>
           <a href={`/palm?locale=${locale}`}>
-            {locale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}
+            {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}
           </a>
           <a href={`/face?locale=${locale}`}>
-            {locale === "zh" ? "面相" : locale === "ru" ? "Лицо" : "Face"}
+            {copyLocale === "zh" ? "面相" : locale === "ru" ? "Лицо" : "Face"}
           </a>
           <a href={`/oracle?locale=${locale}`}>
-            {locale === "zh" ? "问事" : locale === "ru" ? "Оракул" : "Oracle"}
+            {copyLocale === "zh" ? "问事" : locale === "ru" ? "Оракул" : "Oracle"}
           </a>
           <a href={`/sticks?locale=${locale}`}>
-            {locale === "zh" ? "求签" : locale === "ru" ? "Жребии" : "Sticks"}
+            {copyLocale === "zh" ? "求签" : locale === "ru" ? "Жребии" : "Sticks"}
           </a>
           <a href="#blessing">
-            {locale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
+            {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
           </a>
           <span>
             <MapPin size={13} aria-hidden="true" />

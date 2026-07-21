@@ -2,7 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { ArrowRight, Languages, Loader2, Search, Sparkles, WandSparkles } from "lucide-react";
-import { reportLanguageOptions, type ReportLocale } from "@/lib/report-i18n";
+import {
+  contentLocale,
+  reportLanguageOptions,
+  type ContentLocale,
+  type ReportLocale,
+} from "@/lib/report-i18n";
 import {
   getStickSign,
   stickTypeOrder,
@@ -46,7 +51,7 @@ type StickCopy = {
 const stickTypes = stickTypeOrder;
 
 const systems: Record<
-  ReportLocale,
+  ContentLocale,
   Record<
     StickType,
     {
@@ -171,7 +176,7 @@ const systems: Record<
   },
 };
 
-const copy: Record<ReportLocale, StickCopy> = {
+const copy: Record<ContentLocale, StickCopy> = {
   en: {
     navHome: "Home",
     heroEyebrow: "Temple sticks · One question · One sign",
@@ -334,7 +339,7 @@ function getRandomInt(max: number) {
 }
 
 function createReading(locale: ReportLocale, type: StickType): StickSign {
-  const system = systems[locale][type];
+  const system = systems[contentLocale(locale)][type];
   return getStickSign(type, getRandomInt(system.count) + 1, locale);
 }
 
@@ -347,15 +352,16 @@ export default function SpiritualSticksExperience({
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [selectedType, setSelectedType] = useState<StickType>(initialType);
-  const [topic, setTopic] = useState(copy[initialLocale].topics[0]);
+  const [topic, setTopic] = useState(copy[contentLocale(initialLocale)].topics[0]);
   const [question, setQuestion] = useState("");
   const [reading, setReading] = useState<StickSign | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lookupNumber, setLookupNumber] = useState("33");
   const [aiText, setAiText] = useState("");
   const [isInterpreting, setIsInterpreting] = useState(false);
-  const text = copy[locale];
-  const selectedSystem = systems[locale][selectedType];
+  const copyLocale = contentLocale(locale);
+  const text = copy[copyLocale];
+  const selectedSystem = systems[copyLocale][selectedType];
 
   const selectedTopic = useMemo(() => {
     if (text.topics.includes(topic)) return topic;
@@ -364,7 +370,7 @@ export default function SpiritualSticksExperience({
 
   function changeLocale(nextLocale: ReportLocale) {
     setLocale(nextLocale);
-    setTopic(copy[nextLocale].topics[0]);
+    setTopic(copy[contentLocale(nextLocale)].topics[0]);
     setAiText("");
     setReading((current) =>
       current ? getStickSign(current.type, current.number, nextLocale) : current,
@@ -472,9 +478,9 @@ export default function SpiritualSticksExperience({
                 onClick={() => changeLocale(option.value)}
               >
                 {option.value === "zh"
-                  ? locale === "zh"
-                    ? "中文"
-                    : "ZH"
+                  ? "简"
+                  : option.value === "zh-TW"
+                    ? "繁"
                   : option.value === "ru"
                     ? "RU"
                     : "EN"}
@@ -498,7 +504,7 @@ export default function SpiritualSticksExperience({
           <div className="stick-draw-panel">
             <div className="stick-type-grid">
               {stickTypes.map((type) => {
-                const system = systems[locale][type];
+                const system = systems[copyLocale][type];
 
                 return (
                   <button

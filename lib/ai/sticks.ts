@@ -1,7 +1,9 @@
 import {
+  contentLocale,
   languagePromptRules,
   normalizeReportLocale,
   outputLanguageNames,
+  type ContentLocale,
   type ReportLocale,
 } from "@/lib/report-i18n";
 import {
@@ -22,7 +24,7 @@ export type StickInterpretRequestBody = {
 
 type ChatMessage = { role: "system" | "user"; content: string };
 
-const stickSectionHeadings: Record<ReportLocale, string[]> = {
+const stickSectionHeadings: Record<ContentLocale, string[]> = {
   en: [
     "Main sign",
     "What it means for your question",
@@ -72,7 +74,7 @@ export function buildStickMessages({
   question: string;
 }): ChatMessage[] {
   const languageRule = languagePromptRules[locale];
-  const sectionHeadings = stickSectionHeadings[locale];
+  const sectionHeadings = stickSectionHeadings[contentLocale(locale)];
 
   return [
     {
@@ -122,7 +124,7 @@ export function fallbackStickText({
   topic: string;
   question: string;
 }) {
-  if (locale === "zh") {
+  if (contentLocale(locale) === "zh") {
     return [
       "主要签意",
       `${sign.title} 的核心提示是：先看手里已经出现的条件，再判断下一步。${sign.plain}`,

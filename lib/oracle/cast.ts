@@ -1,3 +1,4 @@
+import { contentLocale } from "@/lib/report-i18n";
 import type { ReportLocale } from "@/lib/report-i18n";
 
 export type OracleLine = {
@@ -186,11 +187,11 @@ export function resolveTrigram(linesBottomUp: Array<Pick<OracleLine, "yang">>) {
 }
 
 export function localizeTrigram(trigram: Trigram, locale: ReportLocale) {
-  return trigram[locale];
+  return trigram[contentLocale(locale)];
 }
 
 export function localizeTarotCard(card: TarotCard, locale: ReportLocale) {
-  return card[locale];
+  return card[contentLocale(locale)];
 }
 
 export function castOracle({

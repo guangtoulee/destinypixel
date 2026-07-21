@@ -6,6 +6,7 @@ import {
   siteName,
   siteUrl,
 } from "@/lib/seo";
+import { TraditionalChineseBridge } from "@/components/traditional-chinese-bridge";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     languages: {
       en: "/?locale=en",
       zh: "/?locale=zh",
+      "zh-Hant": "/?locale=zh-TW",
       ru: "/?locale=ru",
       "x-default": "/",
     },
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     description: defaultSeoDescription,
     siteName,
     locale: "en_US",
-    alternateLocale: ["zh_CN", "ru_RU"],
+    alternateLocale: ["zh_CN", "zh_TW", "ru_RU"],
     images: [
       {
         url: "/opengraph-image",
@@ -82,7 +84,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body>{children}</body>
+      <body>
+        <TraditionalChineseBridge />
+        {children}
+      </body>
     </html>
   );
 }

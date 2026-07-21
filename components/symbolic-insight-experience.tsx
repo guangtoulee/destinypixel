@@ -24,8 +24,10 @@ import {
   type InsightMode,
 } from "@/lib/ai/insights";
 import {
+  contentLocale,
   normalizeReportLocale,
   reportLanguageOptions,
+  type ContentLocale,
   type ReportLocale,
 } from "@/lib/report-i18n";
 import {
@@ -33,6 +35,7 @@ import {
   localizeTarotCard,
   localizeTrigram,
 } from "@/lib/oracle/cast";
+import { TarotCardArt } from "@/components/tarot-card-art";
 
 type InsightStatus = "idle" | "loading" | "ready" | "error";
 type ReadingDomain = "general" | "career" | "love" | "money" | "wellbeing";
@@ -125,7 +128,7 @@ type InsightCopy = {
   >;
 };
 
-const insightCopy: Record<ReportLocale, InsightCopy> = {
+const insightCopy: Record<ContentLocale, InsightCopy> = {
   en: {
     nav: {
       home: "Birth Map",
@@ -473,7 +476,7 @@ const insightCopy: Record<ReportLocale, InsightCopy> = {
   },
 };
 
-const optionSets: Record<string, Record<ReportLocale, Option[]>> = {
+const optionSets: Record<string, Record<ContentLocale, Option[]>> = {
   handSide: {
     en: [
       { value: "left palm", label: "Left palm" },
@@ -739,6 +742,7 @@ const optionSets: Record<string, Record<ReportLocale, Option[]>> = {
 
 function languageLabel(locale: ReportLocale) {
   if (locale === "zh") return "中文";
+  if (locale === "zh-TW") return "繁體";
   if (locale === "ru") return "RU";
 
   return "EN";
@@ -746,7 +750,13 @@ function languageLabel(locale: ReportLocale) {
 
 function setDocumentLocale(locale: ReportLocale) {
   document.documentElement.lang =
-    locale === "zh" ? "zh-CN" : locale === "ru" ? "ru" : "en";
+    locale === "zh-TW"
+      ? "zh-TW"
+      : locale === "zh"
+        ? "zh-CN"
+        : locale === "ru"
+          ? "ru"
+          : "en";
 }
 
 function formatDateTimeLocal(date: Date) {
@@ -782,14 +792,16 @@ function tarotOrientationLabel(
   orientation: "upright" | "reversed",
   locale: ReportLocale,
 ) {
-  if (locale === "zh") return orientation === "upright" ? "正位" : "逆位";
+  if (contentLocale(locale) === "zh") {
+    return orientation === "upright" ? "正位" : "逆位";
+  }
   if (locale === "ru") return orientation === "upright" ? "Прямая" : "Перевернутая";
 
   return orientation === "upright" ? "Upright" : "Reversed";
 }
 
 function getDefaultObservation(key: string, locale: ReportLocale) {
-  return optionSets[key][locale][0]?.value ?? "";
+  return optionSets[key][contentLocale(locale)][0]?.value ?? "";
 }
 
 function SelectField({
@@ -887,12 +899,13 @@ function OracleVisualBoard({
                 >
                   {tarotOrientationLabel(card.orientation, locale)}
                 </span>
-                <div
-                  className="oracle-tarot-card__art"
-                  data-orientation={card.orientation}
-                >
-                  <span>{card.symbol}</span>
-                </div>
+                <TarotCardArt
+                  id={card.id}
+                  arcana={card.arcana}
+                  number={card.number}
+                  symbol={card.symbol}
+                  orientation={card.orientation}
+                />
                 <p>{tarotRoles[index]}</p>
                 <h3>{localizeTarotCard(card, locale)}</h3>
                 {locale !== "en" && <em>{card.en}</em>}
@@ -1048,7 +1061,8 @@ export default function SymbolicInsightExperience({
     birthTime: "",
     domain: "general" as ReadingDomain,
   });
-  const copy = insightCopy[locale];
+  const copyLocale = contentLocale(locale);
+  const copy = insightCopy[copyLocale];
   const activeModeCopy = copy.modes[mode];
   const oracleSeed = useMemo(
     () =>
@@ -1162,7 +1176,7 @@ export default function SymbolicInsightExperience({
     } catch {
       setStatus("error");
       setResult(
-        locale === "zh"
+        copyLocale === "zh"
           ? "这次在线生成没有成功，但核心逻辑已经保留。请稍后再试，或缩短输入内容后重新生成。"
           : locale === "ru"
             ? "Онлайн-генерация не удалась. Попробуйте позже или сократите ввод."
@@ -1264,13 +1278,13 @@ export default function SymbolicInsightExperience({
                 <SelectField
                   label={copy.fields.handSide}
                   value={palm.handSide}
-                  options={optionSets.handSide[locale]}
+                  options={optionSets.handSide[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, handSide: value }))}
                 />
                 <SelectField
                   label={copy.fields.dominantHand}
                   value={palm.dominantHand}
-                  options={optionSets.dominantHand[locale]}
+                  options={optionSets.dominantHand[copyLocale]}
                   onChange={(value) =>
                     setPalm((current) => ({ ...current, dominantHand: value }))
                   }
@@ -1278,7 +1292,7 @@ export default function SymbolicInsightExperience({
                 <SelectField
                   label={copy.fields.lineClarity}
                   value={palm.lineClarity}
-                  options={optionSets.lineClarity[locale]}
+                  options={optionSets.lineClarity[copyLocale]}
                   onChange={(value) =>
                     setPalm((current) => ({ ...current, lineClarity: value }))
                   }
@@ -1286,31 +1300,31 @@ export default function SymbolicInsightExperience({
                 <SelectField
                   label={copy.fields.heartLine}
                   value={palm.heartLine}
-                  options={optionSets.heartLine[locale]}
+                  options={optionSets.heartLine[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, heartLine: value }))}
                 />
                 <SelectField
                   label={copy.fields.headLine}
                   value={palm.headLine}
-                  options={optionSets.headLine[locale]}
+                  options={optionSets.headLine[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, headLine: value }))}
                 />
                 <SelectField
                   label={copy.fields.lifeLine}
                   value={palm.lifeLine}
-                  options={optionSets.lifeLine[locale]}
+                  options={optionSets.lifeLine[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, lifeLine: value }))}
                 />
                 <SelectField
                   label={copy.fields.fateLine}
                   value={palm.fateLine}
-                  options={optionSets.fateLine[locale]}
+                  options={optionSets.fateLine[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, fateLine: value }))}
                 />
                 <SelectField
                   label={copy.fields.mounts}
                   value={palm.mounts}
-                  options={optionSets.mounts[locale]}
+                  options={optionSets.mounts[copyLocale]}
                   onChange={(value) => setPalm((current) => ({ ...current, mounts: value }))}
                 />
               </div>
@@ -1321,37 +1335,37 @@ export default function SymbolicInsightExperience({
                 <SelectField
                   label={copy.fields.faceShape}
                   value={face.faceShape}
-                  options={optionSets.faceShape[locale]}
+                  options={optionSets.faceShape[copyLocale]}
                   onChange={(value) => setFace((current) => ({ ...current, faceShape: value }))}
                 />
                 <SelectField
                   label={copy.fields.browEye}
                   value={face.browEye}
-                  options={optionSets.browEye[locale]}
+                  options={optionSets.browEye[copyLocale]}
                   onChange={(value) => setFace((current) => ({ ...current, browEye: value }))}
                 />
                 <SelectField
                   label={copy.fields.nose}
                   value={face.nose}
-                  options={optionSets.nose[locale]}
+                  options={optionSets.nose[copyLocale]}
                   onChange={(value) => setFace((current) => ({ ...current, nose: value }))}
                 />
                 <SelectField
                   label={copy.fields.mouth}
                   value={face.mouth}
-                  options={optionSets.mouth[locale]}
+                  options={optionSets.mouth[copyLocale]}
                   onChange={(value) => setFace((current) => ({ ...current, mouth: value }))}
                 />
                 <SelectField
                   label={copy.fields.jaw}
                   value={face.jaw}
-                  options={optionSets.jaw[locale]}
+                  options={optionSets.jaw[copyLocale]}
                   onChange={(value) => setFace((current) => ({ ...current, jaw: value }))}
                 />
                 <SelectField
                   label={copy.fields.expression}
                   value={face.expression}
-                  options={optionSets.expression[locale]}
+                  options={optionSets.expression[copyLocale]}
                   onChange={(value) =>
                     setFace((current) => ({ ...current, expression: value }))
                   }
@@ -1393,7 +1407,7 @@ export default function SymbolicInsightExperience({
                   <SelectField
                     label={copy.fields.domain}
                     value={oracle.domain}
-                    options={optionSets.domain[locale]}
+                    options={optionSets.domain[copyLocale]}
                     onChange={(value) =>
                       setOracle((current) => ({
                         ...current,

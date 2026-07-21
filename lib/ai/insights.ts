@@ -1,7 +1,9 @@
 import {
+  contentLocale,
   languagePromptRules,
   normalizeReportLocale,
   outputLanguageNames,
+  type ContentLocale,
   type ReportLocale,
 } from "@/lib/report-i18n";
 
@@ -52,7 +54,7 @@ const symbolicReference = {
   },
 } satisfies Record<InsightMode, { frame: string; anchors: string; method: string }>;
 
-const modeLabels: Record<InsightMode, Record<ReportLocale, string>> = {
+const modeLabels: Record<InsightMode, Record<ContentLocale, string>> = {
   palm: {
     en: "Palm Reading Studio",
     zh: "手相专区",
@@ -107,7 +109,7 @@ export function buildInsightMessages({
     {
       role: "system",
       content: [
-        `You are DestinyPixel's ${modeLabels[mode][locale]} consultant.`,
+        `You are DestinyPixel's ${modeLabels[mode][contentLocale(locale)]} consultant.`,
         languageRule,
         `The final output language is ${outputLanguageNames[locale]}.`,
         "Your style is warm, oral, specific, and direct. You are allowed to be constructively sharp; avoid empty Barnum-effect comfort.",
@@ -145,7 +147,7 @@ export function fallbackInsightText({
   locale: ReportLocale;
   payload: Record<string, unknown>;
 }) {
-  if (locale === "zh") {
+  if (contentLocale(locale) === "zh") {
     if (mode === "oracle") {
       return [
         "直接答案",
