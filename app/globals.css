@@ -8004,7 +8004,7 @@ body.report-exporting .report-header {
   position: relative;
   display: grid;
   align-items: center;
-  grid-template-columns: 20px 1fr 18px 16px;
+  grid-template-columns: 20px minmax(0, 1fr) 16px;
   gap: 8px;
 }
 
@@ -8014,31 +8014,28 @@ body.report-exporting .report-header {
   font-size: 13px;
 }
 
-.oracle-hexagram-line span,
-.oracle-hexagram-line em {
+.oracle-hexagram-line__mark {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.oracle-hexagram-line__mark span {
   display: block;
+  width: 100%;
   height: 10px;
   border-radius: 999px;
-  background: #b59661;
-}
-
-.oracle-hexagram-line span {
-  border-radius: 999px;
   background: linear-gradient(135deg, #3f858b, #6fb3ad);
   box-shadow: 0 7px 16px rgba(63, 133, 139, 0.16);
 }
 
-.oracle-hexagram-line[data-yang="true"] span {
-  grid-column: 2 / 4;
+.oracle-hexagram-line__mark[data-yang="true"] {
+  display: block;
 }
 
-.oracle-hexagram-line[data-yang="true"] em {
+.oracle-hexagram-line__mark[data-yang="true"] span:last-child {
   display: none;
-}
-
-.oracle-hexagram-line[data-yang="false"] em {
-  background: linear-gradient(135deg, #3f858b, #6fb3ad);
-  box-shadow: 0 7px 16px rgba(63, 133, 139, 0.16);
 }
 
 .oracle-hexagram-line b {
@@ -8071,6 +8068,7 @@ body.report-exporting .report-header {
   position: relative;
   display: grid;
   overflow: hidden;
+  min-width: 0;
   min-height: 246px;
   padding: 14px;
   border-radius: 20px;
@@ -8096,6 +8094,29 @@ body.report-exporting .report-header {
   font-family: var(--font-display);
   font-size: 12px;
   font-weight: 850;
+}
+
+.oracle-tarot-card__orientation {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding-inline: 7px;
+  border: 1px solid rgba(181, 150, 97, 0.24);
+  border-radius: 999px;
+  color: #5f7f80;
+  background: rgba(255, 255, 255, 0.68);
+  font-size: 9px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.oracle-tarot-card__orientation[data-orientation="reversed"] {
+  color: #a35e4b;
+  background: rgba(252, 240, 235, 0.82);
 }
 
 .oracle-tarot-card__art {
@@ -8134,6 +8155,10 @@ body.report-exporting .report-header {
   font-family: var(--font-display);
   font-size: 30px;
   line-height: 1;
+}
+
+.oracle-tarot-card__art[data-orientation="reversed"] {
+  transform: rotate(180deg);
 }
 
 .oracle-tarot-card p {
@@ -8502,16 +8527,62 @@ body.report-exporting .report-header {
   }
 
   .oracle-tarot-gallery > div {
-    display: flex;
-    overflow-x: auto;
-    padding: 2px 2px 14px;
-    scroll-snap-type: x proximity;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .oracle-tarot-card {
-    flex: 0 0 min(72vw, 220px);
-    min-height: 252px;
-    scroll-snap-align: start;
+    min-height: 214px;
+    padding: 9px 7px 12px;
+    border-radius: 16px;
+  }
+
+  .oracle-tarot-card::before {
+    inset: 6px;
+    border-radius: 12px;
+  }
+
+  .oracle-tarot-card__orientation {
+    top: 8px;
+    right: 8px;
+    min-height: 19px;
+    padding-inline: 5px;
+    font-size: 8px;
+  }
+
+  .oracle-tarot-card__art {
+    width: 52px;
+    height: 52px;
+    margin-block: 28px 12px;
+  }
+
+  .oracle-tarot-card__art::before {
+    inset: 8px;
+  }
+
+  .oracle-tarot-card__art::after {
+    inset: 18px;
+  }
+
+  .oracle-tarot-card__art span {
+    font-size: 22px;
+  }
+
+  .oracle-tarot-card p {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .oracle-tarot-card h3 {
+    overflow-wrap: anywhere;
+    font-size: 15px;
+    line-height: 1.18;
+  }
+
+  .oracle-tarot-card em {
+    overflow-wrap: anywhere;
+    font-size: 8px;
   }
 
   .insight-field input,

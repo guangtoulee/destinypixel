@@ -28,6 +28,11 @@ import {
   reportLanguageOptions,
   type ReportLocale,
 } from "@/lib/report-i18n";
+import {
+  castOracle,
+  localizeTarotCard,
+  localizeTrigram,
+} from "@/lib/oracle/cast";
 
 type InsightStatus = "idle" | "loading" | "ready" | "error";
 type ReadingDomain = "general" | "career" | "love" | "money" | "wellbeing";
@@ -732,77 +737,6 @@ const optionSets: Record<string, Record<ReportLocale, Option[]>> = {
   },
 };
 
-const trigramData = [
-  { key: "qian", en: "Qian / Heaven", zh: "乾 / 天", ru: "Цянь / Небо" },
-  { key: "dui", en: "Dui / Lake", zh: "兑 / 泽", ru: "Дуй / Озеро" },
-  { key: "li", en: "Li / Fire", zh: "离 / 火", ru: "Ли / Огонь" },
-  { key: "zhen", en: "Zhen / Thunder", zh: "震 / 雷", ru: "Чжэнь / Гром" },
-  { key: "xun", en: "Xun / Wind", zh: "巽 / 风", ru: "Сюнь / Ветер" },
-  { key: "kan", en: "Kan / Water", zh: "坎 / 水", ru: "Кань / Вода" },
-  { key: "gen", en: "Gen / Mountain", zh: "艮 / 山", ru: "Гэнь / Гора" },
-  { key: "kun", en: "Kun / Earth", zh: "坤 / 地", ru: "Кунь / Земля" },
-];
-
-const tarotCards = [
-  "The Fool",
-  "The Magician",
-  "The High Priestess",
-  "The Empress",
-  "The Emperor",
-  "The Hierophant",
-  "The Lovers",
-  "The Chariot",
-  "Strength",
-  "The Hermit",
-  "Wheel of Fortune",
-  "Justice",
-  "The Hanged Man",
-  "Death",
-  "Temperance",
-  "The Devil",
-  "The Tower",
-  "The Star",
-  "The Moon",
-  "The Sun",
-  "Judgement",
-  "The World",
-];
-
-const tarotVisuals: Record<
-  string,
-  { number: string; symbol: string; zh: string; ru: string }
-> = {
-  "The Fool": { number: "0", symbol: "∞", zh: "愚者", ru: "Шут" },
-  "The Magician": { number: "I", symbol: "✦", zh: "魔术师", ru: "Маг" },
-  "The High Priestess": { number: "II", symbol: "☾", zh: "女祭司", ru: "Жрица" },
-  "The Empress": { number: "III", symbol: "♀", zh: "皇后", ru: "Императрица" },
-  "The Emperor": { number: "IV", symbol: "♔", zh: "皇帝", ru: "Император" },
-  "The Hierophant": { number: "V", symbol: "⚿", zh: "教皇", ru: "Иерофант" },
-  "The Lovers": { number: "VI", symbol: "♡", zh: "恋人", ru: "Влюбленные" },
-  "The Chariot": { number: "VII", symbol: "↟", zh: "战车", ru: "Колесница" },
-  Strength: { number: "VIII", symbol: "♌", zh: "力量", ru: "Сила" },
-  "The Hermit": { number: "IX", symbol: "◇", zh: "隐士", ru: "Отшельник" },
-  "Wheel of Fortune": { number: "X", symbol: "◎", zh: "命运之轮", ru: "Колесо фортуны" },
-  Justice: { number: "XI", symbol: "⚖", zh: "正义", ru: "Справедливость" },
-  "The Hanged Man": { number: "XII", symbol: "⌁", zh: "倒吊人", ru: "Повешенный" },
-  Death: { number: "XIII", symbol: "✕", zh: "死神", ru: "Смерть" },
-  Temperance: { number: "XIV", symbol: "☍", zh: "节制", ru: "Умеренность" },
-  "The Devil": { number: "XV", symbol: "♄", zh: "恶魔", ru: "Дьявол" },
-  "The Tower": { number: "XVI", symbol: "⌂", zh: "高塔", ru: "Башня" },
-  "The Star": { number: "XVII", symbol: "✶", zh: "星星", ru: "Звезда" },
-  "The Moon": { number: "XVIII", symbol: "☽", zh: "月亮", ru: "Луна" },
-  "The Sun": { number: "XIX", symbol: "☉", zh: "太阳", ru: "Солнце" },
-  Judgement: { number: "XX", symbol: "⌁", zh: "审判", ru: "Суд" },
-  "The World": { number: "XXI", symbol: "◎", zh: "世界", ru: "Мир" },
-};
-
-function getTarotName(card: string, locale: ReportLocale) {
-  if (locale === "zh") return tarotVisuals[card]?.zh ?? card;
-  if (locale === "ru") return tarotVisuals[card]?.ru ?? card;
-
-  return card;
-}
-
 function languageLabel(locale: ReportLocale) {
   if (locale === "zh") return "中文";
   if (locale === "ru") return "RU";
@@ -822,23 +756,6 @@ function formatDateTimeLocal(date: Date) {
   return local.toISOString().slice(0, 16);
 }
 
-function hashString(value: string) {
-  let hash = 2166136261;
-
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-
-  return Math.abs(hash >>> 0);
-}
-
-function localizeTrigram(index: number, locale: ReportLocale) {
-  const trigram = trigramData[index % trigramData.length];
-
-  return trigram[locale];
-}
-
 function buildOracleSeed({
   question,
   questionTime,
@@ -852,36 +769,23 @@ function buildOracleSeed({
   domain: ReadingDomain;
   locale: ReportLocale;
 }) {
-  const seed = hashString(`${question}|${questionTime}|${birthDate}|${domain}`);
-  const lines = Array.from({ length: 6 }, (_, index) => {
-    const value = (seed >> (index * 4)) + index * 17;
-
-    return {
-      index: index + 1,
-      yang: value % 2 === 0,
-      moving: value % 5 === 0 || value % 7 === 0,
-    };
-  });
-  const lowerIndex = lines
-    .slice(0, 3)
-    .reduce((sum, line, index) => sum + (line.yang ? 1 << index : 0), 0);
-  const upperIndex = lines
-    .slice(3, 6)
-    .reduce((sum, line, index) => sum + (line.yang ? 1 << index : 0), 0);
-  const tarot = [0, 1, 2].map((index) => {
-    const cardIndex = (seed + index * 7 + question.length * (index + 1)) % tarotCards.length;
-
-    return tarotCards[cardIndex];
-  });
+  const cast = castOracle({ question, questionTime, birthDate, domain });
 
   return {
-    seed,
-    lowerTrigram: localizeTrigram(lowerIndex, locale),
-    upperTrigram: localizeTrigram(upperIndex, locale),
-    lines,
-    movingLines: lines.filter((line) => line.moving).map((line) => line.index),
-    tarot,
+    ...cast,
+    lowerTrigram: localizeTrigram(cast.lowerTrigram, locale),
+    upperTrigram: localizeTrigram(cast.upperTrigram, locale),
   };
+}
+
+function tarotOrientationLabel(
+  orientation: "upright" | "reversed",
+  locale: ReportLocale,
+) {
+  if (locale === "zh") return orientation === "upright" ? "正位" : "逆位";
+  if (locale === "ru") return orientation === "upright" ? "Прямая" : "Перевернутая";
+
+  return orientation === "upright" ? "Upright" : "Reversed";
 }
 
 function getDefaultObservation(key: string, locale: ReportLocale) {
@@ -955,8 +859,10 @@ function OracleVisualBoard({
               data-moving={line.moving}
             >
               <small>{line.index}</small>
-              <span />
-              <em />
+              <div className="oracle-hexagram-line__mark" data-yang={line.yang}>
+                <span />
+                <span />
+              </div>
               <b>{line.moving ? "●" : ""}</b>
             </div>
           ))}
@@ -972,17 +878,24 @@ function OracleVisualBoard({
         <strong>{copy.oracle.tarot}</strong>
         <div>
           {seed.tarot.map((card, index) => {
-            const visual = tarotVisuals[card];
-
             return (
-              <article className="oracle-tarot-card" key={`${card}-${index}`}>
-                <small>{visual?.number ?? index + 1}</small>
-                <div className="oracle-tarot-card__art">
-                  <span>{visual?.symbol ?? "✦"}</span>
+              <article className="oracle-tarot-card" key={card.id}>
+                <small>{card.number}</small>
+                <span
+                  className="oracle-tarot-card__orientation"
+                  data-orientation={card.orientation}
+                >
+                  {tarotOrientationLabel(card.orientation, locale)}
+                </span>
+                <div
+                  className="oracle-tarot-card__art"
+                  data-orientation={card.orientation}
+                >
+                  <span>{card.symbol}</span>
                 </div>
                 <p>{tarotRoles[index]}</p>
-                <h3>{getTarotName(card, locale)}</h3>
-                {locale !== "en" && <em>{card}</em>}
+                <h3>{localizeTarotCard(card, locale)}</h3>
+                {locale !== "en" && <em>{card.en}</em>}
               </article>
             );
           })}
