@@ -1963,7 +1963,7 @@ export async function generateJubenEpisodeResult(
   try {
     const parsed = await requestDeepSeekJson(
       buildJubenEpisodeMessages(input, baseResult, episode),
-      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 4600),
+      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 7000),
       DEEPSEEK_EPISODE_TIMEOUT_MS,
     );
 
@@ -2000,9 +2000,11 @@ export async function generateJubenEpisodeResult(
     }
 
     return covered;
-  } catch {
+  } catch (error) {
+    const reason =
+      error instanceof Error ? error.message : "DeepSeek episode request failed.";
     return useCurrentStoryFallback(
-      `DeepSeek episode request exceeded ${DEEPSEEK_EPISODE_TIMEOUT_MS}ms or failed before completion.`,
+      `DeepSeek 单集精拆未完成：${reason}`,
     );
   }
 }
