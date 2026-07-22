@@ -1513,6 +1513,77 @@ function makeShotFromScene(scene: JubenScene, shotIndex: number): JubenShot {
   };
 }
 
+function splitBlueprintText(value: string, fallbacks: string[]) {
+  const chunks = value
+    .split(/(?<=[。！？；])|[，,]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (chunks.length < 3) {
+    return fallbacks.map((fallback, index) => chunks[index] || fallback);
+  }
+
+  const size = Math.ceil(chunks.length / 3);
+  return [0, 1, 2].map((index) => {
+    const segment = chunks.slice(index * size, (index + 1) * size).join("，");
+    return segment || fallbacks[index];
+  });
+}
+
+function expandBlueprintShot(scene: JubenScene, blueprint: JubenShot) {
+  const visuals = splitBlueprintText(blueprint.visual, [
+    scene.action,
+    scene.conflict,
+    scene.emotionalTurn,
+  ]);
+  const actions = splitBlueprintText(blueprint.action, [
+    "从上一场结束姿态进入本场，完成第一个原稿动作。",
+    "承接上一镜动作，完成阻碍出现后的具体反应。",
+    "完成本场最后动作，并停在原稿转折或证据上。",
+  ]);
+  const sounds = splitBlueprintText(blueprint.sound, [
+    "保留开场环境底噪与第一个动作声。",
+    "保留动作中段的道具、脚步、衣料或原稿对白。",
+    "保留动作落点声，末尾留半秒环境声。",
+  ]);
+
+  return [
+    {
+      ...blueprint,
+      shotId: `${scene.sceneId}-01`,
+      duration: blueprint.duration || "10s",
+      visual: visuals[0],
+      action: actions[0],
+      sound: sounds[0],
+      continuity: `承接上一场或本集开场状态；${blueprint.continuity}`,
+    },
+    {
+      ...blueprint,
+      shotId: `${scene.sceneId}-02`,
+      shotSize: "近景动作细节",
+      cameraAngle: "三分之二侧面贴近本场关键动作与道具",
+      movement: "沿动作方向短移，动作落点后锁定",
+      duration: "12s",
+      visual: visuals[1],
+      action: actions[1],
+      sound: sounds[1],
+      continuity: `直接承接${scene.sceneId}-01的站位、视线、服装和道具状态，不重复开场动作。`,
+    },
+    {
+      ...blueprint,
+      shotId: `${scene.sceneId}-03`,
+      shotSize: "反应特写",
+      cameraAngle: "正面平视人物反应或本场结果物证",
+      movement: "从动作结果轻推至表情、证据或新的阻碍",
+      duration: "9s",
+      visual: visuals[2],
+      action: actions[2],
+      sound: sounds[2],
+      continuity: `承接${scene.sceneId}-02的动作结果；结尾状态必须直接交给下一镜。`,
+    },
+  ] satisfies JubenShot[];
+}
+
 function ensureShotCoverage(
   existing: JubenShot[],
   scenes: JubenScene[],
@@ -1525,6 +1596,12 @@ function ensureShotCoverage(
 
   scenes.forEach((scene) => {
     const current = shots.filter((shot) => shot.sceneId === scene.sceneId);
+
+    if (current.length === 1 && minimumPerScene >= 3) {
+      const blueprintIndex = shots.indexOf(current[0]);
+      shots.splice(blueprintIndex, 1, ...expandBlueprintShot(scene, current[0]));
+      return;
+    }
 
     for (let index = current.length + 1; index <= minimumPerScene; index += 1) {
       shots.push(makeShotFromScene(scene, index));
