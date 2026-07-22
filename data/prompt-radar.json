@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-21T15:22:57.579Z",
+  "updatedAt": "2026-07-22T04:47:44.525Z",
   "sourceSummary": {
     "community": 254,
-    "publicX": 170,
-    "total": 424
+    "publicX": 173,
+    "total": 427
   },
   "items": [
     {
@@ -114,7 +114,7 @@
       "authorName": "Axel Bitblaze 🪓",
       "authorHandle": "@Axel_bitblaze69",
       "createdAt": "2026-07-18T18:44:18.000Z",
-      "importedAt": "2026-07-20T15:29:12.192Z",
+      "importedAt": "2026-07-22T04:47:44.518Z",
       "tags": [
         "视频",
         "摄影"
@@ -134,13 +134,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 1004,
-        "reposts": 128,
+        "likes": 1047,
+        "reposts": 134,
         "replies": 30,
         "quotes": 5,
-        "bookmarks": 2253,
-        "views": 94263,
-        "score": 9513
+        "bookmarks": 2308,
+        "views": 107798,
+        "score": 9815
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
@@ -1132,6 +1132,50 @@
       "rawText": "Day 10/20 in creating AI videos for my portfolio Today's video is for Orchid&Ash, a US-based skincare brand. How I did it: • Fed my idea to Claude and created the prompt for a 7-scene storyboard for the Restorative Face cream • Created the storyboard image with ChatGPT • Turned the frames into 4-second videos using Google flow (used the 9:16 framing) • Produced the voice-over in Eleven Labs, using an American female voice. • Edited the pacing and sound in CapCut What do you think about it? If your brand or product needs AI-generated content like this, DM me. I'm open to collabs, freelance work, and full-time roles."
     },
     {
+      "id": "x-public-2077197938753953971",
+      "title": "Just tested this AI-generated storyboard for a beauty product review The scene flow is clean, th",
+      "description": "Just tested this AI-generated storyboard for a beauty product review The scene flow is clean, the shots are well-paced, and it's perfect for creating short-form content in minutes. Create with GPT IMAGE 2+seedance 2.0 Pr",
+      "prompt": "Just tested this AI-generated storyboard for a beauty product review The scene flow is clean, the shots are well-paced, and it's perfect for creating short-form content in minutes. Create with GPT IMAGE 2+seedance 2.0 Prompt⤵️",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/HaniaAi12/status/2077197938753953971",
+      "sourceType": "x",
+      "authorName": "Hania Ai",
+      "authorHandle": "@HaniaAi12",
+      "createdAt": "2026-07-15T01:05:55.000Z",
+      "importedAt": "2026-07-22T04:47:44.516Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 233,
+        "reposts": 53,
+        "replies": 56,
+        "quotes": 1,
+        "bookmarks": 209,
+        "views": 11236,
+        "score": 1386
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Just tested this AI-generated storyboard for a beauty product review The scene flow is clean, the shots are well-paced, and it's perfect for creating short-form content in minutes. Create with GPT IMAGE 2+seedance 2.0 Prompt⤵️"
+    },
+    {
       "id": "x-public-2079040487902908892",
       "title": "Still obsessed with recreating real-life aesthetic videos with AI 🤯 Found a gorgeous cinematic ",
       "description": "Still obsessed with recreating real-life aesthetic videos with AI 🤯 Found a gorgeous cinematic clip online and challenged myself to remake it. Tbh, I’m absolutely in love with how this turned out. The realism is getting",
@@ -1796,6 +1840,91 @@
       "rawText": "Midjourney v8.2 + Seedance 2.0 Mini --sref 74117661 --stylize 1000 --profile ycjrvus --preview Prompt: The swordswoman @[reference image] launches forward from complete stillness, crossing the space in a single compressed burst as blue and violet trails tear behind her body. Her blade cuts through the frame, triggering a circular shock explosion filled with orange pigment fragments, followed by several delayed color trails that reveal the full path of the strike. 16 cuts. No background music or score. High-end cinematic 3D realism fused with graphic painterly anime action. Hyper-fast sword choreography, compressed acceleration, chromatic motion trails, explosive shockwave bursts and fractured pigment splashes define every movement. Each strike releases expanding pressure rings, directional color ruptures and sharp ribbon-like trails that remain suspended for a split second before breaking into glowing fragments. Aggressive tracking shots, extreme perspective, rapid orbiting angles and sudden impact close-ups amplify speed while deep negative space, low-key lighting and controlled blue, violet and orange accents preserve strong silhouette readability. Realistic body weight, metallic materials and feature-film rendering ground the action beneath the abstract color physics."
     },
     {
+      "id": "x-public-2079103022240604342",
+      "title": "Stickman channels are pulling millions of views and you can make this content with zero animatio",
+      "description": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Ba",
+      "prompt": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Banana 2 create the visual base for each scene 3 Veo 3.1 Fast turns images into cinematic video clips 4 CapCut assembles all scenes into a finished video The secret to smooth continuity save the last frame of each clip and use it as the starting point for the next scene The stickman niche is fully monetized on YouTube TikTok and Instagram Reels No animation skills No team Just AI and a repeatable system",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Durektor97/status/2079103022240604342",
+      "sourceType": "x",
+      "authorName": "⁠Durektor97",
+      "authorHandle": "@Durektor97",
+      "createdAt": "2026-07-20T07:16:03.000Z",
+      "importedAt": "2026-07-22T04:47:44.519Z",
+      "tags": [
+        "Veo",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Veo",
+        "Seedance"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 144,
+        "reposts": 22,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 178,
+        "views": 9652,
+        "score": 934
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Banana 2 create the visual base for each scene 3 Veo 3.1 Fast turns images into cinematic video clips 4 CapCut assembles all scenes into a finished video The secret to smooth continuity save the last frame of each clip and use it as the starting point for the next scene The stickman niche is fully monetized on YouTube TikTok and Instagram Reels No animation skills No team Just AI and a repeatable system"
+    },
+    {
+      "id": "x-public-2078099355631063049",
+      "title": "One image. One prompt. And this came out 🤍✨ Made this on my phone with Pollo AI's Image to Vide",
+      "description": "One image. One prompt. And this came out 🤍✨ Made this on my phone with Pollo AI's Image to Video — Seedance 2.0 4K. → Skin application looks completely natural → Lighting and tones stay true to the original shot → Looks",
+      "prompt": "One image. One prompt. And this came out 🤍✨ Made this on my phone with Pollo AI's Image to Video — Seedance 2.0 4K. → Skin application looks completely natural → Lighting and tones stay true to the original shot → Looks like a real UGC skincare ad, not AI output Honestly, high-end content just got a lot easier to make — anywhere, anytime.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Arcane_Aii/status/2078099355631063049",
+      "sourceType": "x",
+      "authorName": "Arcane Ai",
+      "authorHandle": "@Arcane_Aii",
+      "createdAt": "2026-07-17T12:47:50.000Z",
+      "importedAt": "2026-07-22T04:47:44.517Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 187,
+        "reposts": 84,
+        "replies": 28,
+        "quotes": 0,
+        "bookmarks": 37,
+        "views": 41638,
+        "score": 932
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One image. One prompt. And this came out 🤍✨ Made this on my phone with Pollo AI's Image to Video — Seedance 2.0 4K. → Skin application looks completely natural → Lighting and tones stay true to the original shot → Looks like a real UGC skincare ad, not AI output Honestly, high-end content just got a lot easier to make — anywhere, anytime."
+    },
+    {
       "id": "x-public-2077389944016801958",
       "title": "GPT image 2.0 combined with Seedance 2.0 is changing how animated videos are created. With a sin",
       "description": "GPT image 2.0 combined with Seedance 2.0 is changing how animated videos are created. With a single prompt like the one below , AI can generate an entire storyboard and turn it into a cinematic 2D animation, complete wit",
@@ -2067,6 +2196,49 @@
       "rawText": "Seedance 2.0 on @nadou_pro Prompt: { \"video_prompt\": \"A first-person POV shot of a hand holding a black marker, pointing it at real-world objects in an urban city setting. The video uses a creative 'doodle overlay' effect. As the hand waves the marker with a swift motion, real-world objects instantly transform into cute, 2D cartoon animations with clean blue and white outlines. 1. A real subway train passing on an elevated track transforms into a playful, minimalist blue and white cartoon train. 2. A real pigeon on a paved sidewalk transforms into a stylized white cartoon bird flying away, leaving small hand-drawn dust clouds. 3. A real green bus driving on a city street transforms into a giant, adorable 2D animated orange tabby cat walking casually. 4. A real woman sitting at a bus stop transforms into a classic 2D anime-style girl waving happily. The final shot shows the hand tossing an object into the sky, transforming the entire city sky into a bright, vibrant anime sunset with fluffy white clouds and a smiling cartoon sun. Smooth transitions, playful and whimsical energy, high-contrast mix of live-action and 2D cel animation.\" } Frame-by-Frame Generation Prompts If you want to generate the specific static assets or concepts individually, you can use these tailored image prompts: * The Cartoon Train: > A crisp first-person POV photograph of a hand holding a black marker aimed at an elevated city train track. Overlaid on the real scene is a bright 2D vector doodle of a minimalist blue and white cartoon subway train passing by. Playful, mixed media, urban street style. > * The Pigeon Transformation: > First-person perspective looking down at a paved city sidewalk. A hand holds a black marker, pointing at a stylized, hand-drawn 2D white cartoon dove that is mid-flight, bursting out from where a real bird just stood. Whimsical line art overlay. > * The Giant Cat Bus: > A wide POV shot of a city street next to a sidewalk. A hand with a marker is tracking a giant, cute 2D animated orange tabby cat with green eyes as it walks down the vehicle lane where a bus should be. High contrast between the realistic asphalt and the bright, solid-colored character art. > * The Anime Sky: > A low-angle POV shot looking up past city high-rise apartments into the sky. The realistic sky transitions instantly into a beautiful, vibrant 2D anime-style pastel sunset filled with soft, puffy white clouds and a simple, cheerful cartoon sun illustration. >"
     },
     {
+      "id": "x-public-2079604664220123504",
+      "title": "Electric Car Ad \"DRIVE THE FUTURE \" Where cutting-edge technology meets cinematic storytelling. ",
+      "description": "Electric Car Ad \"DRIVE THE FUTURE \" Where cutting-edge technology meets cinematic storytelling. Created entirely with Seedance 2.0, this concept highlights how AI is reshaping the future of commercial production, one fra",
+      "prompt": "Electric Car Ad \"DRIVE THE FUTURE \" Where cutting-edge technology meets cinematic storytelling. Created entirely with Seedance 2.0, this concept highlights how AI is reshaping the future of commercial production, one frame at a time. Prompt in the comments",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AmControo/status/2079604664220123504",
+      "sourceType": "x",
+      "authorName": "FATHELA ESQ",
+      "authorHandle": "@AmControo",
+      "createdAt": "2026-07-21T16:29:23.000Z",
+      "importedAt": "2026-07-22T04:47:44.518Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 136,
+        "reposts": 109,
+        "replies": 32,
+        "quotes": 0,
+        "bookmarks": 11,
+        "views": 26740,
+        "score": 826
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Electric Car Ad \"DRIVE THE FUTURE \" Where cutting-edge technology meets cinematic storytelling. Created entirely with Seedance 2.0, this concept highlights how AI is reshaping the future of commercial production, one frame at a time. Prompt in the comments"
+    },
+    {
       "id": "x-public-2074137524096712721",
       "title": "🤯 AI Visual Systems Vol.10.5: Distorted Identity Posters! Made with ChatGPT-Image2. 4 direction",
       "description": "🤯 AI Visual Systems Vol.10.5: Distorted Identity Posters! Made with ChatGPT-Image2. 4 directions: 1. STATIC MUSE — monochrome scan distortion 2. ECHO FACE — digital identity blur 3. BLUE IRIS — narrow light shadow portr",
@@ -2154,49 +2326,6 @@
       "rawText": "Compared the same prompt in Veo 3.1, Kling 3.0, and Seedance 2.0 and got this result Look at the differences in how they render the punch impact Which model do you think did well? Prompt in the comments"
     },
     {
-      "id": "x-public-2079103022240604342",
-      "title": "Stickman channels are pulling millions of views and you can make this content with zero animatio",
-      "description": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Ba",
-      "prompt": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Banana 2 create the visual base for each scene 3 Veo 3.1 Fast turns images into cinematic video clips 4 CapCut assembles all scenes into a finished video The secret to smooth continuity save the last frame of each clip and use it as the starting point for the next scene The stickman niche is fully monetized on YouTube TikTok and Instagram Reels No animation skills No team Just AI and a repeatable system",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Durektor97/status/2079103022240604342",
-      "sourceType": "x",
-      "authorName": "⁠Durektor97",
-      "authorHandle": "@Durektor97",
-      "createdAt": "2026-07-20T07:16:03.000Z",
-      "importedAt": "2026-07-21T04:48:10.920Z",
-      "tags": [
-        "Veo",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Veo",
-        "Seedance"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 125,
-        "reposts": 18,
-        "replies": 5,
-        "quotes": 0,
-        "bookmarks": 145,
-        "views": 8190,
-        "score": 778
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Stickman channels are pulling millions of views and you can make this content with zero animation skills Here is the full workflow 1 ChatGPT generates the idea script and prompts for every scene 2 Google Flow and Nano Banana 2 create the visual base for each scene 3 Veo 3.1 Fast turns images into cinematic video clips 4 CapCut assembles all scenes into a finished video The secret to smooth continuity save the last frame of each clip and use it as the starting point for the next scene The stickman niche is fully monetized on YouTube TikTok and Instagram Reels No animation skills No team Just AI and a repeatable system"
-    },
-    {
       "id": "x-public-2075607405162066204",
       "title": "Here's how to get 100% consistent product ads from one seedance 2.0 generation. I did it all in ",
       "description": "Here's how to get 100% consistent product ads from one seedance 2.0 generation. I did it all in a single chat using the Comfy MCP. The real control here comes from calling my existing workflows (shared below) instead of ",
@@ -2241,6 +2370,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Here's how to get 100% consistent product ads from one seedance 2.0 generation. I did it all in a single chat using the Comfy MCP. The real control here comes from calling my existing workflows (shared below) instead of the agent improvising a pipeline. I directed the agent to call my ComfyUI workflow for cinematic product ads. I specified the close-up shot of the sprite animating, the bezel turn flipping the screen, the display changing to the time 10:04. Now for the consistent variations. The driving video does the heavy lifting but you need to get it right → depthanything v3 pass blended with canny edge lines to show the fine detail... it's why the tiny debossed logo is there → the initial sprite outline lived in those edge lines too, and every gen kept inheriting it. claude suggested a sam3 mask over the screen to hide it (s/o the agent) → with the screen masked, the new star sprite is just prompting: one gpt-image-2 still to generate a reference, one extra line in the seedance 2.0 prompt, and it animates oh and the whole process is a claude skill now."
+    },
+    {
+      "id": "x-public-2079133044145848581",
+      "title": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm post",
+      "description": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Ful",
+      "prompt": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Full contact from frame one He didn't post this anywhere. Didn't make a tutorial. Just dropped the file in a DM and said \"tell me this looks like AI\" I couldn't Three documents. That's what separated his output from everyone else's failed generations → Character sheet: face, dress, hair, three angles, locked → Location sheet: bathroom, fluorescent light, water level, locked → Storyboard: every shot in order, locked before a single frame rendered She gets thrown into a door. Water sprays across tile. The camera holds her face. Not one feature drifts Production studios are quietly testing this on real pre-vis budgets. Nobody is posting about it publicly yet You're still rewriting prompts and wondering why your character changes face at frame twelve The prompt was never the problem. The three documents you never built were",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/cipgerx/status/2079133044145848581",
+      "sourceType": "x",
+      "authorName": "Cip⚡️",
+      "authorHandle": "@cipgerx",
+      "createdAt": "2026-07-20T09:15:20.000Z",
+      "importedAt": "2026-07-22T04:47:44.518Z",
+      "tags": [
+        "Seedance",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 115,
+        "reposts": 11,
+        "replies": 22,
+        "quotes": 1,
+        "bookmarks": 123,
+        "views": 28837,
+        "score": 726
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Full contact from frame one He didn't post this anywhere. Didn't make a tutorial. Just dropped the file in a DM and said \"tell me this looks like AI\" I couldn't Three documents. That's what separated his output from everyone else's failed generations → Character sheet: face, dress, hair, three angles, locked → Location sheet: bathroom, fluorescent light, water level, locked → Storyboard: every shot in order, locked before a single frame rendered She gets thrown into a door. Water sprays across tile. The camera holds her face. Not one feature drifts Production studios are quietly testing this on real pre-vis budgets. Nobody is posting about it publicly yet You're still rewriting prompts and wondering why your character changes face at frame twelve The prompt was never the problem. The three documents you never built were"
     },
     {
       "id": "x-public-2075942482823856456",
@@ -2457,48 +2628,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "A 20-year-old finished a $40,000 animation before her flight started boarding. She was sitting at the airport with one carry-on, an iPhone plugged into the wall, and a lollipop in her mouth. No camera. No editing computer. She has never opened Blender. She found a viral 3D animation on TikTok, took a screenshot and uploaded it to ChatGPT with one sentence: “Write the prompt for a video like this.” ChatGPT broke down the lighting, camera movement, textures and character design. She copied the result into an AI video generator. A few minutes later, a pineapple in sunglasses, a crowned strawberry and a blueberry holding a glass were fully animated, voiced and lip-synced. She uploaded the finished short to YouTube before boarding began. A traditional animation studio would need a team, two months and roughly $40,000 to produce the same kind of video. She did it beside an airport charging outlet with a phone in one hand. The production advantage is no longer owning a studio. It is knowing what to show the machine."
-    },
-    {
-      "id": "x-public-2079133044145848581",
-      "title": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm post",
-      "description": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Ful",
-      "prompt": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Full contact from frame one He didn't post this anywhere. Didn't make a tutorial. Just dropped the file in a DM and said \"tell me this looks like AI\" I couldn't Three documents. That's what separated his output from everyone else's failed generations → Character sheet: face, dress, hair, three angles, locked → Location sheet: bathroom, fluorescent light, water level, locked → Storyboard: every shot in order, locked before a single frame rendered She gets thrown into a door. Water sprays across tile. The camera holds her face. Not one feature drifts Production studios are quietly testing this on real pre-vis budgets. Nobody is posting about it publicly yet You're still rewriting prompts and wondering why your character changes face at frame twelve The prompt was never the problem. The three documents you never built were",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/cipgerx/status/2079133044145848581",
-      "sourceType": "x",
-      "authorName": "Cip⚡️",
-      "authorHandle": "@cipgerx",
-      "createdAt": "2026-07-20T09:15:20.000Z",
-      "importedAt": "2026-07-21T15:22:57.571Z",
-      "tags": [
-        "Seedance",
-        "产品"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 108,
-        "reposts": 10,
-        "replies": 22,
-        "quotes": 1,
-        "bookmarks": 116,
-        "views": 27476,
-        "score": 684
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Full contact from frame one He didn't post this anywhere. Didn't make a tutorial. Just dropped the file in a DM and said \"tell me this looks like AI\" I couldn't Three documents. That's what separated his output from everyone else's failed generations → Character sheet: face, dress, hair, three angles, locked → Location sheet: bathroom, fluorescent light, water level, locked → Storyboard: every shot in order, locked before a single frame rendered She gets thrown into a door. Water sprays across tile. The camera holds her face. Not one feature drifts Production studios are quietly testing this on real pre-vis budgets. Nobody is posting about it publicly yet You're still rewriting prompts and wondering why your character changes face at frame twelve The prompt was never the problem. The three documents you never built were"
     },
     {
       "id": "x-public-2077739174812357115",
@@ -6673,7 +6802,7 @@
       "authorName": "AiPic-Dressup Faceswap PhotoRestoe",
       "authorHandle": "@AiPic_AiWaifu",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.106Z",
       "tags": [
         "人像",
         "摄影"
@@ -6715,7 +6844,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.106Z",
       "tags": [
         "人像",
         "摄影"
@@ -6757,7 +6886,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.829Z",
+      "importedAt": "2026-07-22T04:47:41.101Z",
       "tags": [
         "人像",
         "摄影"
@@ -6799,7 +6928,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.103Z",
       "tags": [
         "人像"
       ],
@@ -6840,7 +6969,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.103Z",
       "tags": [
         "人像"
       ],
@@ -6881,7 +7010,7 @@
       "authorName": "vevrier90333",
       "authorHandle": "@vevrier9033833",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.103Z",
       "tags": [
         "人像",
         "摄影"
@@ -6923,7 +7052,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.103Z",
       "tags": [
         "人像",
         "摄影"
@@ -6965,7 +7094,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.104Z",
       "tags": [
         "人像",
         "摄影"
@@ -7007,7 +7136,7 @@
       "authorName": "Arina Ai",
       "authorHandle": "@Arina_hoqe",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.830Z",
+      "importedAt": "2026-07-22T04:47:41.104Z",
       "tags": [
         "人像"
       ],
@@ -7048,7 +7177,7 @@
       "authorName": "iX｜AIART/AIMOVIE【2nd】",
       "authorHandle": "@iX00AI2",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.106Z",
       "tags": [
         "平面设计"
       ],
@@ -7089,7 +7218,7 @@
       "authorName": "ToroJushiAi",
       "authorHandle": "@ToroJushiAi",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.106Z",
       "tags": [
         "人像",
         "摄影"
@@ -7172,7 +7301,7 @@
       "authorName": "🐈‍⬛クロ",
       "authorHandle": "@kuro_kuroneko92",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.104Z",
       "tags": [
         "人像"
       ],
@@ -7213,7 +7342,7 @@
       "authorName": "おわ Days",
       "authorHandle": "@Days57723399006",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.104Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -7252,7 +7381,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -7291,7 +7420,7 @@
       "authorName": "By",
       "authorHandle": "@rhodezio_ai",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -7333,7 +7462,7 @@
       "authorName": "Harboris",
       "authorHandle": "@harboriis",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -7375,7 +7504,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像"
       ],
@@ -7416,7 +7545,7 @@
       "authorName": "K's Al Photo Studio",
       "authorHandle": "@mashiro_minase",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -7458,7 +7587,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "平面设计",
@@ -7501,7 +7630,7 @@
       "authorName": "K's Al Photo Studio",
       "authorHandle": "@mashiro_minase",
       "createdAt": "2026-07-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像"
       ],
@@ -7664,7 +7793,7 @@
       "authorName": "David",
       "authorHandle": "@tealdog2",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像"
       ],
@@ -7705,7 +7834,7 @@
       "authorName": "AIgravure_jp🖥️🎨",
       "authorHandle": "@bananalink55",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.831Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -7747,7 +7876,7 @@
       "authorName": "Arina Ai",
       "authorHandle": "@Arina_hoqe",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -7789,7 +7918,7 @@
       "authorName": "AYi",
       "authorHandle": "@AYi_AInotes",
       "createdAt": "2026-07-18T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.832Z",
+      "importedAt": "2026-07-22T04:47:41.105Z",
       "tags": [
         "人像",
         "摄影"
@@ -17742,7 +17871,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.839Z",
+      "importedAt": "2026-07-22T04:47:41.113Z",
       "tags": [
         "产品",
         "平面设计",
@@ -17785,7 +17914,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.839Z",
+      "importedAt": "2026-07-22T04:47:41.113Z",
       "tags": [
         "平面设计"
       ],
@@ -17826,7 +17955,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-21T15:22:52.839Z",
+      "importedAt": "2026-07-22T04:47:41.113Z",
       "tags": [
         "平面设计"
       ],
