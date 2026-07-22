@@ -169,7 +169,7 @@ const DEEPSEEK_TIMEOUT_MS = Number(
   process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
 );
 const DEEPSEEK_EPISODE_TIMEOUT_MS = Number(
-  process.env.JUBEN_EPISODE_TIMEOUT_MS ?? 40000,
+  process.env.JUBEN_EPISODE_TIMEOUT_MS ?? 55000,
 );
 
 const maxIdeaLength = 180000;
