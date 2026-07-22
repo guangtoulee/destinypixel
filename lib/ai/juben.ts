@@ -168,6 +168,9 @@ const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 const DEEPSEEK_TIMEOUT_MS = Number(
   process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
 );
+const DEEPSEEK_EPISODE_TIMEOUT_MS = Number(
+  process.env.JUBEN_EPISODE_TIMEOUT_MS ?? 40000,
+);
 
 const maxIdeaLength = 180000;
 
@@ -1717,7 +1720,11 @@ function ensureJubenCoverage(
   };
 }
 
-async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
+async function requestDeepSeekJson(
+  messages: ChatMessage[],
+  maxTokens: number,
+  timeoutMs = DEEPSEEK_TIMEOUT_MS,
+) {
   const apiKey = process.env.DEEPSEEK_API_KEY;
 
   if (!apiKey) {
@@ -1725,7 +1732,7 @@ async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
   }
 
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), DEEPSEEK_TIMEOUT_MS);
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
     const response = await fetch(DEEPSEEK_API_URL, {
@@ -1762,7 +1769,7 @@ async function requestDeepSeekJson(messages: ChatMessage[], maxTokens: number) {
     return parsed;
   } catch (error) {
     if (controller.signal.aborted) {
-      throw new Error(`DeepSeek request timed out after ${DEEPSEEK_TIMEOUT_MS}ms.`);
+      throw new Error(`DeepSeek request timed out after ${timeoutMs}ms.`);
     }
 
     throw error;
@@ -1953,6 +1960,7 @@ export async function generateJubenEpisodeResult(
     const parsed = await requestDeepSeekJson(
       buildJubenEpisodeMessages(input, baseResult, episode),
       Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 7000),
+      DEEPSEEK_EPISODE_TIMEOUT_MS,
     );
 
     if (!looksLikeEpisodeDetail(parsed)) {
@@ -1990,7 +1998,7 @@ export async function generateJubenEpisodeResult(
     return covered;
   } catch {
     return useCurrentStoryFallback(
-      `DeepSeek episode request exceeded ${DEEPSEEK_TIMEOUT_MS}ms or failed before completion.`,
+      `DeepSeek episode request exceeded ${DEEPSEEK_EPISODE_TIMEOUT_MS}ms or failed before completion.`,
     );
   }
 }
