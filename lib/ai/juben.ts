@@ -1987,7 +1987,7 @@ export async function generateJubenEpisodeResult(
         },
       },
       input,
-      { detailEpisodes: [episode] },
+      { detailEpisodes: [episode], minimumShotsPerScene: 3 },
     );
 
     if (
