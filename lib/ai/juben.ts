@@ -403,6 +403,7 @@ export function buildJubenEpisodeMessages(
         "必须按原稿场次顺序覆盖全部场次；原稿对白逐字保留。每镜8-15秒，可包含2-3段连续动作，但只有一个核心叙事任务和一条清楚运镜。",
         "画面描述必须具体到人物、站位、朝向、身体动作、道具接触、表情变化、前中后景和镜头结束状态，不能写抽象氛围句。",
         "shotList.visual 不少于60个中文字符；action 写清开始状态、动作链和结束状态；continuity 明确承接上一镜的服装、道具、站位、视线和环境。",
+        "为控制响应长度，每个原稿场次只输出1个最关键的高质量蓝图镜头；系统会依据该场导演动作自动扩展为3个生产镜头。directorScript 每个文字字段控制在120个中文字符内。",
         "输出语言默认中文。不得写成宣传片、预告片、概念片、海报文案或英语提示词。",
         "只返回严格JSON，不要Markdown。JSON只含 directorScript 与 shotList 两个数组。",
       ].join("\n"),
@@ -461,7 +462,7 @@ export function buildJubenEpisodeMessages(
             `只生成 E${String(episode).padStart(2, "0")} 的导演剧本与镜头表。`,
             "保留 establishedVisualBible 的角色锁定、色彩、场景、全局负向约束，不要换演员脸和整体风格。",
             "directorScript 必须与 sourceManifest.scenes 一一对应，sceneId 顺序连续，不得漏场。",
-            "镜头按8-15秒生产片段设计，每场通常2-5镜；长动作可以拆，短动作不能注水。",
+            "shotList 对 sourceManifest.scenes 每场恰好输出1个8-15秒蓝图镜头，不要在模型响应里扩写更多镜头；后续系统会自动补齐每场至少3镜。",
             "每个镜头必须有明确首帧、分段动作和结束状态，后续系统会据此组装 LibTV 式完整提示词。",
             "文档模式下必须覆盖 sourceEpisodeScenes 的全部场次和原稿对白，不得删掉原稿冲突，不得新增无关人物与地点。",
             `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
@@ -1962,7 +1963,7 @@ export async function generateJubenEpisodeResult(
   try {
     const parsed = await requestDeepSeekJson(
       buildJubenEpisodeMessages(input, baseResult, episode),
-      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 7000),
+      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 4600),
       DEEPSEEK_EPISODE_TIMEOUT_MS,
     );
 
