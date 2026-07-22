@@ -4,7 +4,7 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 const maxFileBytes = 12 * 1024 * 1024;
-const maxExtractedChars = 16000;
+const maxExtractedChars = 180000;
 
 function cleanExtractedText(value: string) {
   return value
