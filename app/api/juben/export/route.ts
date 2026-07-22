@@ -56,18 +56,89 @@ function docTable(headers: string[], rows: Array<Array<unknown>>) {
   });
 }
 
+function sceneForShot(result: JubenResult, sceneId: string) {
+  return result.directorScript.find((scene) => scene.sceneId === sceneId);
+}
+
+function promptForShot(
+  items: JubenResult["storyboardPrompts"],
+  result: JubenResult,
+  shot: JubenResult["shotList"][number],
+) {
+  const direct = items.find((item) => item.prompt.includes(shot.shotId));
+  if (direct) return direct;
+  const sameSceneShots = result.shotList.filter((item) => item.sceneId === shot.sceneId);
+  const sameScenePrompts = items.filter((item) => item.sceneId === shot.sceneId);
+  const index = sameSceneShots.findIndex((item) => item.shotId === shot.shotId);
+  return sameScenePrompts[Math.max(index, 0)] ?? sameScenePrompts[0];
+}
+
+function dialogueForShot(result: JubenResult, shot: JubenResult["shotList"][number]) {
+  const scene = sceneForShot(result, shot.sceneId);
+  const explicit = shot.visual.match(/^(.+?)在.+?原稿对白：“([\s\S]+)”/);
+  if (explicit) return `@${explicit[1]}：“${explicit[2]}”（逐字保留并对齐口型）`;
+  const embedded = scene?.dialogue.find((line) =>
+    `${shot.visual}\n${shot.action}`.includes(line.line),
+  );
+  return embedded
+    ? `@${embedded.character}：“${embedded.line}”（逐字保留并对齐口型）`
+    : "无新增对白；以动作、表情、呼吸和环境声推进。";
+}
+
+function charactersForShot(result: JubenResult, shot: JubenResult["shotList"][number]) {
+  const scene = sceneForShot(result, shot.sceneId);
+  const content = `${shot.visual} ${shot.action} ${scene?.action ?? ""}`;
+  const matches = result.visualBible.characterLocks.filter((item) => {
+    const aliases = [
+      item.character,
+      item.character.split("·")[0],
+      ...Array.from(item.lockedPrompt.matchAll(/(?:白玫瑰|红玫瑰|公主|厉鬼|老国王|安布罗斯|亨利|埃德蒙|学士|布兰温)/g)).map((match) => match[0]),
+    ];
+    return aliases.some((alias) => alias.length >= 2 && content.includes(alias));
+  });
+  return (matches.length > 0 ? matches : result.visualBible.characterLocks.slice(0, 1)).slice(0, 4);
+}
+
+function finalVideoPrompt(result: JubenResult, shot: JubenResult["shotList"][number]) {
+  const scene = sceneForShot(result, shot.sceneId);
+  const storyboard = promptForShot(result.storyboardPrompts, result, shot);
+  const camera = promptForShot(result.cameraPrompts, result, shot);
+  const edit = promptForShot(result.editPrompts, result, shot);
+  const index = result.shotList.findIndex((item) => item.shotId === shot.shotId);
+  const previous = index > 0 ? result.shotList[index - 1] : null;
+  const characters = charactersForShot(result, shot)
+    .map((item) => `@${item.character}：${item.lockedPrompt}`)
+    .join("\n");
+
+  return [
+    "出场角色：",
+    characters,
+    "",
+    "背景场景：",
+    `${scene?.sceneHeading ?? shot.sceneId}；${result.visualBible.coreStyle}`,
+    "",
+    "前一个分镜描述：",
+    previous ? `${previous.shotId}：${previous.visual} ${previous.action}` : "本集第一镜，直接以原稿动作开场。",
+    "",
+    "分段动作：",
+    `【0-${Math.max(2, Math.floor(Number.parseInt(shot.duration, 10) / 2))}秒】${shot.visual}`,
+    `【后半段】${shot.action}；结束状态：${shot.continuity}`,
+    "",
+    `景别：${shot.shotSize}；机位：${shot.cameraAngle}`,
+    `光影氛围：${result.visualBible.colorPalette.slice(0, 4).join("、")}`,
+    `对白/旁白：${dialogueForShot(result, shot)}`,
+    `音效：${shot.sound}`,
+    `运镜：${shot.movement}；${camera?.prompt ?? ""}`,
+    `首帧提示词：${storyboard?.prompt ?? result.visualBible.globalPrompt}`,
+    `剪辑：${edit?.prompt ?? "动作点清楚，环境声连续，结尾保留停点。"}`,
+    `输出约束：${shot.continuity}；${storyboard?.negativePrompt ?? ""}；${result.visualBible.globalNegative}`,
+    `[视觉风格：${result.visualBible.format}]`,
+  ].join("\n");
+}
+
 async function buildWord(result: JubenResult) {
   const shotSections = result.shotList.flatMap((shot) => {
     const scene = result.directorScript.find(
-      (item) => item.sceneId === shot.sceneId,
-    );
-    const storyboard = result.storyboardPrompts.find(
-      (item) => item.sceneId === shot.sceneId,
-    );
-    const camera = result.cameraPrompts.find(
-      (item) => item.sceneId === shot.sceneId,
-    );
-    const edit = result.editPrompts.find(
       (item) => item.sceneId === shot.sceneId,
     );
 
@@ -76,18 +147,8 @@ async function buildWord(result: JubenResult) {
         text: `${shot.shotId} · ${scene?.sceneHeading ?? shot.sceneId}`,
         heading: HeadingLevel.HEADING_3,
       }),
-      docTable(["模块", "内容"], [
-        ["时长 / 景别", `${shot.duration} · ${shot.shotSize}`],
-        ["机位 / 运镜", `${shot.cameraAngle} · ${shot.movement}`],
-        ["画面", shot.visual],
-        ["动作", shot.action],
-        ["对白", scene?.dialogue.map((line) => `${line.character}: ${line.line}（${line.subtext}）`).join("\n")],
-        ["声音", shot.sound],
-        ["连续性", shot.continuity],
-        ["首帧 Prompt", storyboard?.prompt],
-        ["视频运动 Prompt", camera?.prompt],
-        ["剪辑 Prompt", edit?.prompt],
-        ["负向约束", [result.visualBible.globalNegative, storyboard?.negativePrompt].filter(Boolean).join("；")],
+      docTable(["镜头信息", "画面与执行", "对白 / 声音", "最终视频提示词"], [
+        [`${shot.shotId}\n${shot.duration}\n${shot.shotSize}\n${shot.cameraAngle}`, `${shot.visual}\n动作：${shot.action}\n运镜：${shot.movement}\n连续性：${shot.continuity}`, `${dialogueForShot(result, shot)}\n音效：${shot.sound}`, finalVideoPrompt(result, shot)],
       ]),
     ];
   });
@@ -180,8 +241,19 @@ async function buildExcel(result: JubenResult) {
     sheet.eachRow((row) => {
       row.alignment = { vertical: "top", wrapText: true };
     });
-    headers.forEach((_, index) => {
-      sheet.getColumn(index + 1).width = index === 0 ? 18 : 38;
+    headers.forEach((header, index) => {
+      const widths: Record<string, number> = {
+        "镜号": 18,
+        "时长": 10,
+        "画面描述": 64,
+        "景别": 18,
+        "光影氛围": 34,
+        "对白 / 旁白": 42,
+        "音效": 34,
+        "运镜": 34,
+        "最终视频提示词": 82,
+      };
+      sheet.getColumn(index + 1).width = widths[header] ?? (index === 0 ? 18 : 38);
     });
   };
 
@@ -238,13 +310,18 @@ async function buildExcel(result: JubenResult) {
   );
   addSheet(
     "逐镜生成表",
-    ["镜头", "场景", "时长", "景别", "机位", "运镜", "画面", "动作", "声音", "连续性", "首帧 Prompt", "视频运动 Prompt", "剪辑 Prompt", "负向约束"],
-    result.shotList.map((shot) => {
-      const storyboard = result.storyboardPrompts.find((item) => item.sceneId === shot.sceneId);
-      const camera = result.cameraPrompts.find((item) => item.sceneId === shot.sceneId);
-      const edit = result.editPrompts.find((item) => item.sceneId === shot.sceneId);
-      return [shot.shotId, shot.sceneId, shot.duration, shot.shotSize, shot.cameraAngle, shot.movement, shot.visual, shot.action, shot.sound, shot.continuity, storyboard?.prompt, camera?.prompt, edit?.prompt, [result.visualBible.globalNegative, storyboard?.negativePrompt].filter(Boolean).join("；")];
-    }),
+    ["镜号", "时长", "画面描述", "景别", "光影氛围", "对白 / 旁白", "音效", "运镜", "最终视频提示词"],
+    result.shotList.map((shot) => [
+      shot.shotId,
+      shot.duration,
+      `${shot.visual}\n动作：${shot.action}\n连续性：${shot.continuity}`,
+      `${shot.shotSize}\n${shot.cameraAngle}`,
+      `${result.visualBible.colorPalette.slice(0, 4).join("、")}\n${result.visualBible.coreStyle}`,
+      dialogueForShot(result, shot),
+      shot.sound,
+      shot.movement,
+      finalVideoPrompt(result, shot),
+    ]),
   );
 
   return workbook.xlsx.writeBuffer();

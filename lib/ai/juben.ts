@@ -169,7 +169,36 @@ const DEEPSEEK_TIMEOUT_MS = Number(
   process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
 );
 
-const maxIdeaLength = 16000;
+const maxIdeaLength = 180000;
+
+export class JubenSourceParseError extends Error {
+  sourceManifest: JubenSourceManifest;
+
+  constructor(message: string, sourceManifest: JubenSourceManifest) {
+    super(message);
+    this.name = "JubenSourceParseError";
+    this.sourceManifest = sourceManifest;
+  }
+}
+
+function assertUsableDocumentSource(
+  source: JubenSourceManifest,
+  episode?: number,
+) {
+  if (source.mode !== "document") return;
+  if (source.scenes.length === 0) {
+    throw new JubenSourceParseError(
+      "没有从文档中识别到任何场次，已停止生成，避免把示例内容误当成客户原稿。请使用【场 2-1】、[场2-1]、【场景一】等分场标题，或先把正文粘贴到输入框。",
+      source,
+    );
+  }
+  if (episode && !source.scenes.some((scene) => scene.episode === episode)) {
+    throw new JubenSourceParseError(
+      `原稿中没有识别到第 ${episode} 集的场次，已停止生成这一集，避免补写无关剧情。`,
+      source,
+    );
+  }
+}
 
 function clampEpisodeCount(value: unknown) {
   if (typeof value !== "number" || !Number.isFinite(value)) return 3;
@@ -343,37 +372,97 @@ export function buildJubenEpisodeMessages(
   baseResult: JubenResult,
   episode: number,
 ): ChatMessage[] {
-  const [system] = buildJubenMessages(input);
   const sourceManifest = parseJubenSource(input);
   const sourceEpisodeScenes = sourceManifest.scenes.filter(
     (scene) => scene.episode === episode,
   );
+  const sourceContext = {
+    mode: sourceManifest.mode,
+    filename: sourceManifest.filename,
+    title: sourceManifest.title,
+    genre: sourceManifest.genre,
+    episodeCount: sourceManifest.episodeCount,
+    episodeLength: sourceManifest.episodeLength,
+    characters: sourceManifest.characters,
+    episodes: sourceManifest.episodes.filter((item) => item.episode === episode),
+    scenes: sourceEpisodeScenes,
+    anchorLines: sourceManifest.anchorLines,
+    protectedFacts: sourceManifest.protectedFacts,
+    fidelityMode: sourceManifest.fidelityMode,
+  };
 
   return [
-    system,
+    {
+      role: "system",
+      content: [
+        "你是资深短剧分镜导演，负责把一集已锁定原稿拆成可直接交给AI视频平台的镜头表。",
+        "这是原稿影视化，不是自由创作。不得新增无关人物、地点、事件、对白或结局；不得套用任何示例故事。",
+        "必须按原稿场次顺序覆盖全部场次；原稿对白逐字保留。每镜8-15秒，可包含2-3段连续动作，但只有一个核心叙事任务和一条清楚运镜。",
+        "画面描述必须具体到人物、站位、朝向、身体动作、道具接触、表情变化、前中后景和镜头结束状态，不能写抽象氛围句。",
+        "shotList.visual 不少于60个中文字符；action 写清开始状态、动作链和结束状态；continuity 明确承接上一镜的服装、道具、站位、视线和环境。",
+        "输出语言默认中文。不得写成宣传片、预告片、概念片、海报文案或英语提示词。",
+        "只返回严格JSON，不要Markdown。JSON只含 directorScript 与 shotList 两个数组。",
+      ].join("\n"),
+    },
     {
       role: "user",
       content: JSON.stringify(
         {
-          creativeBrief: input,
-          sourceManifest,
-          sourceEpisodeScenes,
+          creativeBrief: {
+            adaptationMode: input.adaptationMode,
+            aspectRatio: input.aspectRatio,
+            episodeLength: input.episodeLength,
+            tone: input.tone,
+            voiceLanguage: input.voiceLanguage,
+            mustHave: input.mustHave,
+            avoid: input.avoid,
+          },
+          sourceManifest: sourceContext,
           mode: "single_episode_detail",
           targetEpisode: episode,
-          establishedStoryBible: baseResult.storyBible,
-          establishedVisualBible: baseResult.visualBible,
-          episodeOutline: baseResult.episodeOutline,
+          establishedVisualBible: {
+            format: baseResult.visualBible.format,
+            coreStyle: baseResult.visualBible.coreStyle,
+            colorPalette: baseResult.visualBible.colorPalette,
+            cameraLanguage: baseResult.visualBible.cameraLanguage,
+            characterLocks: baseResult.visualBible.characterLocks,
+            keyProps: baseResult.visualBible.keyProps,
+            globalNegative: baseResult.visualBible.globalNegative,
+          },
+          episodeOutline: baseResult.episodeOutline.find((item) => item.episode === episode),
+          responseSchema: {
+            directorScript: [{
+              sceneId: `E${String(episode).padStart(2, "0")}-S01`,
+              episode,
+              sceneHeading: "内/外. 原稿地点 - 时间",
+              dramaticPurpose: "本场目标",
+              conflict: "具体阻碍",
+              action: "按原稿发生的可拍动作",
+              dialogue: [{ character: "原稿角色", line: "原稿对白", subtext: "表演提示" }],
+              emotionalTurn: "本场结束状态",
+            }],
+            shotList: [{
+              shotId: `E${String(episode).padStart(2, "0")}-S01-01`,
+              sceneId: `E${String(episode).padStart(2, "0")}-S01`,
+              shotSize: "景别",
+              cameraAngle: "机位与构图",
+              movement: "单一明确运镜",
+              duration: "12s",
+              visual: "详细画面描述",
+              action: "开始状态→动作链→结束状态",
+              sound: "原稿对白、动作音效、环境底噪",
+              continuity: "与前后镜的连续性约束",
+            }],
+          },
           outputRules: [
-            `只生成 E${String(episode).padStart(2, "0")} 的导演剧本、镜头表、分镜 Prompt、运镜 Prompt、剪辑 Prompt。`,
+            `只生成 E${String(episode).padStart(2, "0")} 的导演剧本与镜头表。`,
             "保留 establishedVisualBible 的角色锁定、色彩、场景、全局负向约束，不要换演员脸和整体风格。",
-            "本集至少 2 个导演场景；每个导演场景至少 3 个镜头。",
-            "每个镜头 prompt 都要能生成真人写实首帧，再动画成 4-7 秒短剧镜头。",
-            "每个镜头都要给足关键词密度：@角色、@场景、站位、朝向、前后镜承接、分段动作、禁止项、输出约束、光影变化、音效、对白口型。",
-            "每个镜头必须有明确的首帧状态和结束状态；4-7秒内只保留一个主动作和一个主运镜，避免模型执行失败。",
+            "directorScript 必须与 sourceManifest.scenes 一一对应，sceneId 顺序连续，不得漏场。",
+            "镜头按8-15秒生产片段设计，每场通常2-5镜；长动作可以拆，短动作不能注水。",
+            "每个镜头必须有明确首帧、分段动作和结束状态，后续系统会据此组装 LibTV 式完整提示词。",
             "文档模式下必须覆盖 sourceEpisodeScenes 的全部场次和原稿对白，不得删掉原稿冲突，不得新增无关人物与地点。",
             `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "不要输出其他集的导演场景和镜头。",
-            "返回完整 JSON 结构，但数组内容只放目标集的细节。",
           ],
         },
         null,
@@ -550,9 +639,51 @@ function fallbackVisualBible(
 ): JubenVisualBible {
   const source = parseJubenSource(input);
   const isWestern =
-    /西部|美国|牧场|牛仔|农场|谷仓|教堂|牧师|画皮|贵族|frontier|western/i.test(
+    /美国西部|西部荒原|西部边境|牛仔|牧场主|拓荒|frontier|western/i.test(
       input.idea,
     );
+  const isBritishGothic =
+    /英伦|英格兰|玫瑰战争|约克|都铎|王国大厅|哥特权谋|城堡主卧/.test(
+      input.idea,
+    );
+  const sourceLocations = Array.from(
+    new Set(source.scenes.map((scene) => scene.heading.split(" - ")[0].replace(/^(内|外)\.\s*/, ""))),
+  ).filter(Boolean);
+  const characterLocks = source.characters.length > 0
+    ? source.characters.map((item) => ({
+        character: item.name,
+        lockedPrompt: `${item.description}。真人写实定妆，年龄、发型、服装、身份道具和面部特征在全剧保持一致。`,
+      }))
+    : [
+        {
+          character: "主角",
+          lockedPrompt: `${input.genre} 主角，现实生活质感，明确欲望和压力，服装道具连续，面部特征稳定。`,
+        },
+        {
+          character: "核心阻碍者",
+          lockedPrompt:
+            "短剧反派或阻碍者，真实人物动机，表演克制，压迫感来自关系和信息差，不靠夸张造型。",
+        },
+      ];
+  const propCandidates = [
+    "佩剑",
+    "短剑",
+    "圣水瓶",
+    "验尸工具",
+    "假死药瓶",
+    "密信",
+    "吸血鬼獠牙",
+    "蛛丝团",
+    "黑焰甲片",
+    "铜烛台",
+    "玫瑰纹腰牌",
+    "黑镜",
+    "药碗",
+    "手机",
+    "电脑",
+    "镜子",
+    "旧照片",
+  ].filter((item) => input.idea.includes(item));
 
   if (isWestern) {
     return {
@@ -627,25 +758,48 @@ function fallbackVisualBible(
     };
   }
 
-  const sourceLocations = Array.from(
-    new Set(source.scenes.map((scene) => scene.heading.split(" - ")[0].replace(/^(内|外)\.\s*/, ""))),
-  ).filter(Boolean);
-  const characterLocks = source.characters.length > 0
-    ? source.characters.map((item) => ({
-        character: item.name,
-        lockedPrompt: `${item.description}。真人写实定妆，年龄、发型、服装、身份道具和面部特征在全剧保持一致。`,
-      }))
-    : [
-        {
-          character: "主角",
-          lockedPrompt: `${input.genre} 主角，现实生活质感，明确欲望和压力，服装道具连续，面部特征稳定。`,
-        },
-        {
-          character: "核心阻碍者",
-          lockedPrompt:
-            "短剧反派或阻碍者，真实人物动机，表演克制，压迫感来自关系和信息差，不靠夸张造型。",
-        },
-      ];
+  if (isBritishGothic) {
+    return {
+      format: `${input.aspectRatio} 真人写实微短剧，架空玫瑰战争时期英伦哥特权谋悬疑，不做美国西部，不做奇幻 cosplay。`,
+      coreStyle:
+        "真人写实英伦哥特宫廷短剧，冷青石墙与暖橙烛火对撞，雾、城堡、行营、旧教堂与审判大厅；超自然只通过局部特写、影子、实物和声音显形，人物关系与权谋信息优先。",
+      colorPalette: [
+        "哥特青灰",
+        "惨白月光",
+        "烛火暖橙",
+        "病黄烛光",
+        "毒液冷蓝",
+        "玫瑰暗红",
+        "铅灰黎明",
+      ],
+      cameraLanguage: [
+        "竖屏中央轴近脸特写",
+        "门框、廊柱与高窗形成纵向压迫",
+        "关键证物大特写承担叙事",
+        "动作段手持跟拍与短促快切",
+        "反转前锁定机位留表演停顿",
+        "超自然出现前保留半秒静默",
+      ],
+      productionLogic: [
+        "先锁人物定妆与双时间线服装",
+        "按原稿场次顺序逐镜生成",
+        "每个视频片段只执行一个主动作",
+        "关键对白保留准确口型",
+        "证物状态跨集连续",
+        "每集结尾落实原稿钩子",
+      ],
+      environmentRules: [
+        `原稿空间锁定为：${sourceLocations.join("、")}；不得替换成现代城市、美国西部或无关棚景。`,
+        "同一场景的入口、主光方向、人物轴线、门窗和主要陈设必须固定。",
+        "超自然迹象少而明确，不用大面积魔法特效或宣传片式空镜代替剧情。",
+      ],
+      characterLocks,
+      keyProps: propCandidates.length > 0 ? propCandidates : ["双王子佩剑", "圣水", "密信", "黑镜"],
+      globalPrompt: `${title}，架空玫瑰战争时期英伦哥特权谋悬疑，真人写实${input.aspectRatio}短剧，冷青石墙与暖橙烛火对撞，城堡、行营与审判大厅，近脸特写和证物大特写，人物身份、时代服装、武器、伤痕与道具状态严格连续，按原稿因果逐镜表演，不做美国西部，不做海报或预告片。`,
+      globalNegative:
+        "画面内不要文字、水印、logo、内嵌字幕；不要现代物品、美国西部服装、牛仔帽、农舍马车套模板；不要奇幻 cosplay、裸露、血腥 gore、畸形手、多指、重复脸、低清模糊、海报构图、空镜蒙太奇；不得改变原稿人物身份和时代背景。",
+    };
+  }
 
   return {
     format: `${input.aspectRatio} 真人短剧，${input.productionMode}，面向 ${input.outputTarget}。`,
@@ -673,7 +827,7 @@ function fallbackVisualBible(
       "避免空镜、概念镜头和预告片式混剪。",
     ],
     characterLocks,
-    keyProps: ["手机", "门", "镜子", "旧照片", "证据物", "生活化服装"],
+    keyProps: propCandidates.length > 0 ? propCandidates : ["原稿关键道具", "人物身份道具", "连续性证据物"],
     globalPrompt: `${title}，真人写实竖屏短剧，${input.tone}，真实小场景，近脸特写，戏剧冲突明确，人物身份连续，道具清楚，不要预告片混剪，${input.aspectRatio}。`,
     globalNegative:
       "画面内不要文字，不要水印，不要 logo，不要字幕，不要未指定的现代物品，不要裸露，不要血腥 gore，不要畸形手，不要多指，不要重复脸，不要低清模糊，不要海报构图，不要空镜氛围蒙太奇。",
@@ -685,6 +839,7 @@ export function fallbackJubenResult(
   reason = "DeepSeek 暂不可用，已按当前原稿生成结构化备用稿。",
 ): JubenResult {
   const sourceManifest = parseJubenSource(input);
+  assertUsableDocumentSource(sourceManifest);
   const title = sourceManifest.title || "未命名短剧";
   const episodeCount = sourceManifest.mode === "document"
     ? sourceManifest.episodeCount
@@ -792,7 +947,7 @@ export function fallbackJubenResult(
     let current = "";
 
     for (const clause of clauses) {
-      if (current && current.length + clause.length > 24) {
+      if (current && current.length + clause.length > 44) {
         chunks.push(current);
         current = clause;
       } else {
@@ -810,7 +965,7 @@ export function fallbackJubenResult(
     let current = "";
 
     for (const clause of clauses) {
-      if (current && current.length + clause.length > 52) {
+      if (current && current.length + clause.length > 110) {
         chunks.push(current);
         current = clause;
       } else {
@@ -853,7 +1008,8 @@ export function fallbackJubenResult(
       }
     }
     const beatShots: JubenShot[] = productionBeats.map((beat, index) => {
-      const shotId = `${scene.sceneId}-${String(index + 2).padStart(2, "0")}`;
+      const shotOffset = sourceManifest.mode === "document" ? 1 : 2;
+      const shotId = `${scene.sceneId}-${String(index + shotOffset).padStart(2, "0")}`;
 
       if (beat.kind === "dialogue") {
         return {
@@ -862,7 +1018,7 @@ export function fallbackJubenResult(
           shotSize: index % 2 === 0 ? "中近景" : "近景反打",
           cameraAngle: index % 2 === 0 ? "平视人物，保留对手肩部前景" : "反打平视，保持180度轴线",
           movement: "对白起句轻推，句尾停住反应",
-          duration: `${Math.max(4, Math.min(7, Math.ceil(beat.line.line.length / 4)))}s`,
+          duration: `${Math.max(8, Math.min(15, Math.ceil(beat.line.line.length / 4) + 5))}s`,
           visual: `${beat.line.character}在${scene.sceneHeading}中说出原稿对白：“${beat.line.line}”，对手反应必须留在画面空间关系内。`,
           action: `${beat.line.character}按“${beat.line.subtext}”完成细小动作并准确对口型，不增加原稿之外的行为。`,
           sound: `${beat.line.character}原稿对白清楚，保留现场底噪，不铺满配乐。`,
@@ -874,17 +1030,17 @@ export function fallbackJubenResult(
         shotId,
         sceneId: scene.sceneId,
         shotSize: index % 3 === 0 ? "中景动作镜头" : "近景动作细节",
-        cameraAngle: index % 3 === 0 ? "平视保持空间关系" : "三分之二侧面贴近手部、屏幕或表情",
+        cameraAngle: index % 3 === 0 ? "平视保持空间关系" : "三分之二侧面贴近手部、关键道具或表情",
         movement: index % 2 === 0 ? "跟随主动作短移后锁定" : "固定机位，动作完成后轻推",
-        duration: `${Math.max(4, Math.min(7, Math.ceil(beat.text.length / 10) + 2))}s`,
+        duration: `${Math.max(8, Math.min(15, Math.ceil(beat.text.length / 11) + 4))}s`,
         visual: `${scene.sceneHeading}。严格执行原稿动作：${beat.text}`,
         action: "只执行这一段原稿动作，明确起始姿态、道具接触和结束状态，不提前表演下一镜。",
-        sound: "保留与动作对应的脚步、衣料、键鼠、纸张、门或空间环境声。",
+        sound: "保留与动作对应的脚步、衣料、金属、纸张、门或空间环境声。",
         continuity: `按原稿顺序承接${scene.sceneId}前一动作，人物站位、道具状态和视线不得跳变。`,
       };
     });
 
-    return [
+    const framedShots = [
       {
         shotId: `${scene.sceneId}-01`,
         sceneId: scene.sceneId,
@@ -911,6 +1067,9 @@ export function fallbackJubenResult(
         continuity: "保持原稿场次顺序，下一镜必须承接本场产生的新状态。",
       },
     ];
+    return sourceManifest.mode === "document" && beatShots.length > 0
+      ? beatShots
+      : framedShots;
   });
 
   const promptItems = shotList.map((shot, index) => ({
@@ -971,30 +1130,30 @@ export function fallbackJubenResult(
       visualRules: [
         "原稿人物姓名、身份、年龄、服装和核心道具必须全剧连续。",
         "原稿场次按顺序拍摄，允许拆镜但不允许跨场拼贴成氛围蒙太奇。",
-        "电脑界面、审批文件、邮件或系统对话框使用后期叠加，画面生成阶段锁定屏幕位置与视线。",
+        "涉及文书、信件、屏幕或特殊道具时，生成阶段锁定尺寸、正反面、持握关系与人物视线；可读文字统一后期叠加。",
       ],
     },
     productionPlan: {
       adaptationBrief:
         `采用“${sourceManifest.fidelityMode}”：锁定《${title}》的${sourceManifest.scenes.length || "全部"}场原稿、人物关系、关键对白和结局；只补足适合AI生成的动作颗粒度、镜头连续性和生产约束。`,
       shootingStrategy:
-        "优先小场景、少角色、可复用机位。每个4-7秒生成片段只安排一个主动作和一个主运镜，先生成静态首帧确认身份与构图，再做图生视频。",
+        "优先小场景、少角色、可复用机位。每个8-15秒生成片段只安排一个核心叙事任务和一个主运镜，片内可按2-3段连续动作执行；先生成静态首帧确认身份与构图，再做图生视频。",
       locationPlan: [
         ...(locations.length > 0
-          ? locations.map((location) => `${location}：按原稿场次复用，先锁定入口、桌椅、窗户、屏幕和人物轴线。`)
+          ? locations.map((location) => `${location}：按原稿场次复用，先锁定出入口、主要陈设、主光方向和人物轴线。`)
           : ["根据原始创意锁定3-5个可复用主场景。"]),
       ],
       referenceAssets: [
         ...sourceManifest.characters.map((item) => `${item.name}：正面、侧面、全身定妆与身份道具参考`),
         ...locations.map((location) => `${location}：空景、主光方向与人物站位参考`),
-        "原稿关键文件、手机/电脑界面与道具的正反面参考",
+        "原稿关键文书、武器、证物或电子界面的正反面与持握参考",
       ],
       generationOrder: [
         "锁定角色定妆和服装",
         "锁定场景结构与关键道具",
         "生成一张代表性近景并确认风格",
         "按场景批量生成首帧",
-        "按镜头逐条生成4-7秒视频",
+        "按镜头逐条生成8-15秒视频",
         "最后统一对白、环境声和剪辑节奏",
       ],
       qualityGates: [
@@ -1087,6 +1246,10 @@ function looksLikeJubenResult(value: unknown): value is JubenResult {
     Array.isArray(value.storyboardPrompts) &&
     isRecord(value.productionPack)
   );
+}
+
+function looksLikeEpisodeDetail(value: unknown): value is Pick<JubenResult, "directorScript" | "shotList"> {
+  return isRecord(value) && Array.isArray(value.directorScript) && Array.isArray(value.shotList);
 }
 
 function looksLikeAnalysisResult(value: unknown): value is Partial<JubenAnalysisResult> {
@@ -1344,7 +1507,11 @@ function makeShotFromScene(scene: JubenScene, shotIndex: number): JubenShot {
   };
 }
 
-function ensureShotCoverage(existing: JubenShot[], scenes: JubenScene[]) {
+function ensureShotCoverage(
+  existing: JubenShot[],
+  scenes: JubenScene[],
+  minimumPerScene = 3,
+) {
   const sceneIds = new Set(scenes.map((scene) => scene.sceneId));
   const shots = existing.filter(
     (shot) => shot.shotId && shot.sceneId && sceneIds.has(shot.sceneId),
@@ -1353,7 +1520,7 @@ function ensureShotCoverage(existing: JubenShot[], scenes: JubenScene[]) {
   scenes.forEach((scene) => {
     const current = shots.filter((shot) => shot.sceneId === scene.sceneId);
 
-    for (let index = current.length + 1; index <= 3; index += 1) {
+    for (let index = current.length + 1; index <= minimumPerScene; index += 1) {
       shots.push(makeShotFromScene(scene, index));
     }
   });
@@ -1471,7 +1638,11 @@ function ensureJubenCoverage(
     episodeOutline,
     options?.detailEpisodes,
   );
-  const shotList = ensureShotCoverage(result.shotList, directorScript);
+  const shotList = ensureShotCoverage(
+    result.shotList,
+    directorScript,
+    input.sourceMode === "document" ? 1 : 3,
+  );
   const storyboardPrompts = ensurePromptCoverage(
     result.storyboardPrompts,
     shotList,
@@ -1484,7 +1655,7 @@ function ensureJubenCoverage(
   );
   const editPrompts = ensurePromptCoverage(result.editPrompts, shotList, "edit");
   const sourceManifest = parseJubenSource(input);
-  const fidelityWarnings = sourceFidelityWarnings(sourceManifest, {
+  let fidelityWarnings = sourceFidelityWarnings(sourceManifest, {
     title: result.meta.title,
     text: JSON.stringify({
       diagnosis: result.diagnosis,
@@ -1493,6 +1664,11 @@ function ensureJubenCoverage(
       directorScript,
     }),
   });
+  if (options?.detailEpisodes?.length) {
+    fidelityWarnings = fidelityWarnings.filter(
+      (warning) => !warning.startsWith("缺少原稿角色"),
+    );
+  }
   if (sourceManifest.mode === "document") {
     const detailSet = new Set(options?.detailEpisodes ?? []);
     const expectedScenes = sourceManifest.scenes.filter(
@@ -1600,6 +1776,7 @@ export async function analyzeJubenIdea(
 ): Promise<JubenAnalysisResult> {
   const input = normalizeJubenRequest(body);
   const source = parseJubenSource(input);
+  assertUsableDocumentSource(source);
 
   if (source.mode === "document") {
     return fallbackJubenAnalysis(
@@ -1737,6 +1914,7 @@ export async function generateJubenEpisodeResult(
   const input = normalizeJubenRequest(body);
   const source = parseJubenSource(input);
   const episode = clampEpisodeCount(body.episode ?? 1);
+  assertUsableDocumentSource(source, episode);
   const baseResult =
     body.baseResult && looksLikeJubenResult(body.baseResult)
       ? ensureJubenCoverage(body.baseResult, input, {
@@ -1744,17 +1922,6 @@ export async function generateJubenEpisodeResult(
         })
       : fallbackJubenResult(input, "Missing base result; used local structure.");
   const apiKey = process.env.DEEPSEEK_API_KEY;
-
-  if (source.mode === "document") {
-    return ensureJubenCoverage(
-      fallbackJubenResult(
-        input,
-        `原稿锁定引擎：已按文档生成 E${String(episode).padStart(2, "0")} 的逐镜生产包。`,
-      ),
-      input,
-      { detailEpisodes: [episode] },
-    );
-  }
 
   const useCurrentStoryFallback = (reason: string): JubenResult => {
     const sourceGrounded = ensureJubenCoverage(
@@ -1785,25 +1952,27 @@ export async function generateJubenEpisodeResult(
   try {
     const parsed = await requestDeepSeekJson(
       buildJubenEpisodeMessages(input, baseResult, episode),
-      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 4600),
+      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 7000),
     );
 
-    if (!looksLikeJubenResult(parsed)) {
+    if (!looksLikeEpisodeDetail(parsed)) {
       throw new Error("DeepSeek episode JSON did not match the expected structure.");
     }
 
     const covered = ensureJubenCoverage(
       {
-        ...parsed,
+        ...baseResult,
+        directorScript: parsed.directorScript,
+        shotList: parsed.shotList,
+        storyboardPrompts: [],
+        cameraPrompts: [],
+        editPrompts: [],
         meta: {
           ...baseResult.meta,
           provider: "deepseek",
           model: DEEPSEEK_MODEL,
           generatedAt: new Date().toISOString(),
         },
-        storyBible: baseResult.storyBible,
-        visualBible: baseResult.visualBible,
-        episodeOutline: baseResult.episodeOutline,
       },
       input,
       { detailEpisodes: [episode] },

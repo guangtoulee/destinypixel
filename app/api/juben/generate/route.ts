@@ -1,5 +1,6 @@
 import {
   generateJubenResult,
+  JubenSourceParseError,
   type JubenRequestBody,
 } from "@/lib/ai/juben";
 
@@ -15,7 +16,18 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const result = await generateJubenResult(body);
+  let result;
+  try {
+    result = await generateJubenResult(body);
+  } catch (error) {
+    if (error instanceof JubenSourceParseError) {
+      return Response.json(
+        { error: error.message, sourceManifest: error.sourceManifest },
+        { status: 422 },
+      );
+    }
+    throw error;
+  }
 
   return Response.json(result, {
     headers: {

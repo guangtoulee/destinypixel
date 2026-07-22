@@ -2385,3 +2385,293 @@
     border-bottom: 0;
   }
 }
+
+/* Production-table view: one row equals one downstream generation task. */
+.tabs {
+  grid-template-columns: repeat(5, minmax(104px, 1fr));
+}
+
+.inlineError {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid #7b4338;
+  border-radius: 5px;
+  color: #f2b6a6;
+  background: #241713;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.inlineError svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+.shotWorkbench {
+  min-width: 0;
+}
+
+.shotWorkbenchHeader {
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #303430;
+  background: #151915;
+  padding: 12px 14px;
+}
+
+.shotWorkbenchHeader > div {
+  display: grid;
+  gap: 3px;
+}
+
+.shotWorkbenchHeader span {
+  color: #72d0b3;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.shotWorkbenchHeader strong {
+  color: #f4f2eb;
+  font-size: 15px;
+}
+
+.shotWorkbenchHeader p {
+  margin: 0;
+  color: #8f978f;
+  font-size: 11px;
+}
+
+.shotWorkbenchHeader button,
+.shotCopyCell button {
+  display: inline-flex;
+  min-height: 34px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #4e7064;
+  border-radius: 4px;
+  color: #dffff4;
+  background: #20372f;
+  padding: 0 11px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.shotTableScroll {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #505750 #151815;
+}
+
+.shotTable {
+  width: 100%;
+  min-width: 1840px;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  color: #d4d7d1;
+  background: #101310;
+}
+
+.shotTable th {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  border-right: 1px solid #303430;
+  border-bottom: 1px solid #3a3f3a;
+  color: #aeb4ad;
+  background: #1b1e1b;
+  padding: 10px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.shotTable th:nth-child(1) { width: 132px; }
+.shotTable th:nth-child(2) { width: 66px; }
+.shotTable th:nth-child(3) { width: 360px; }
+.shotTable th:nth-child(4) { width: 132px; }
+.shotTable th:nth-child(5) { width: 210px; }
+.shotTable th:nth-child(6) { width: 240px; }
+.shotTable th:nth-child(7) { width: 180px; }
+.shotTable th:nth-child(8) { width: 190px; }
+.shotTable th:nth-child(9) { width: 400px; }
+.shotTable th:nth-child(10) { width: 70px; }
+
+.shotTable td {
+  border-right: 1px solid #2b302b;
+  border-bottom: 1px solid #2f342f;
+  padding: 11px;
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.shotTable tr:hover td {
+  background: #151a16;
+}
+
+.shotTable td:last-child,
+.shotTable th:last-child {
+  border-right: 0;
+}
+
+.shotTable p,
+.shotTable small,
+.shotTable em {
+  display: block;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.shotTable small {
+  margin-top: 7px;
+  color: #aeb4ad;
+}
+
+.shotTable em {
+  margin-top: 7px;
+  color: #7fa996;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.shotNumberCell {
+  background: #131713;
+}
+
+.shotNumberCell strong {
+  display: block;
+  color: #72d0b3;
+  font-size: 11px;
+}
+
+.shotNumberCell span {
+  display: block;
+  margin-top: 5px;
+  color: #c9cdc7;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.shotVisualCell > p {
+  color: #f0efe9;
+  font-size: 12px;
+}
+
+.finalPromptCell > p {
+  max-height: 178px;
+  overflow: auto;
+  color: #d7d8d1;
+  scrollbar-width: thin;
+  scrollbar-color: #444b44 transparent;
+}
+
+.finalPromptCell details {
+  margin-top: 9px;
+  border-top: 1px solid #303630;
+  padding-top: 7px;
+}
+
+.finalPromptCell summary {
+  cursor: pointer;
+  color: #efbd65;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.finalPromptCell pre {
+  max-height: 360px;
+  overflow: auto;
+  margin: 8px 0 0;
+  border: 1px solid #343934;
+  border-radius: 4px;
+  color: #d4d7d1;
+  background: #0a0d0a;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.shotCopyCell {
+  text-align: center;
+}
+
+.shotCopyCell button {
+  width: 34px;
+  min-height: 34px;
+  padding: 0;
+}
+
+@media (max-width: 1220px) {
+  .tabs {
+    grid-template-columns: repeat(5, 112px);
+  }
+}
+
+@media (max-width: 700px) {
+  .shotWorkbenchHeader {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .shotWorkbenchHeader button {
+    width: 100%;
+  }
+
+  .shotTableScroll {
+    overflow: visible;
+  }
+
+  .shotTable,
+  .shotTable tbody,
+  .shotTable tr,
+  .shotTable td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .shotTable thead {
+    display: none;
+  }
+
+  .shotTable tr {
+    border-bottom: 8px solid #0c0f0c;
+  }
+
+  .shotTable td {
+    position: relative;
+    border-right: 0;
+    padding: 10px 12px 10px 108px;
+  }
+
+  .shotTable td::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 84px;
+    color: #747d75;
+    content: attr(data-label);
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .shotNumberCell {
+    min-height: 58px;
+  }
+
+  .shotCopyCell {
+    text-align: left;
+  }
+}

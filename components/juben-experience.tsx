@@ -89,13 +89,11 @@ const initialForm: Required<JubenRequestBody> = {
 };
 
 const tabs: Array<{ key: TabKey; label: string; icon: typeof BookOpenText }> = [
-  { key: "source", label: "原稿校对", icon: ClipboardCheck },
-  { key: "development", label: "立项圣经", icon: BookOpenText },
-  { key: "visual", label: "视觉定调", icon: Palette },
-  { key: "outline", label: "分集节拍", icon: LayoutList },
-  { key: "episode", label: "导演剧本", icon: Clapperboard },
-  { key: "shotpack", label: "生成镜头", icon: Film },
-  { key: "delivery", label: "交付导出", icon: Download },
+  { key: "source", label: "原稿核对", icon: ClipboardCheck },
+  { key: "visual", label: "资产定调", icon: Palette },
+  { key: "outline", label: "分集结构", icon: LayoutList },
+  { key: "episode", label: "场次剧本", icon: Clapperboard },
+  { key: "shotpack", label: "逐镜生产台", icon: Film },
 ];
 
 function updateField<K extends keyof Required<JubenRequestBody>>(
@@ -237,8 +235,30 @@ function characterRoster(result: JubenResult) {
       ];
 }
 
-function characterRosterText(result: JubenResult) {
-  return characterRoster(result)
+function characterAliasesForPrompt(character: { character: string; lockedPrompt: string }) {
+  const aliases = new Set([
+    character.character,
+    character.character.split("·")[0],
+    character.character.replace(/(?:修士|学士|王子|公主|国王|侍女)$/g, ""),
+  ]);
+  for (const match of character.lockedPrompt.matchAll(/(?:白玫瑰|红玫瑰|公主|厉鬼|老国王|安布罗斯|亨利|埃德蒙|学士|布兰温)/g)) {
+    aliases.add(match[0]);
+  }
+  return Array.from(aliases).filter((item) => item.length >= 2);
+}
+
+function charactersForShot(result: JubenResult, shot: JubenShot, scene?: JubenScene) {
+  const content = [shot.visual, shot.action, scene?.action, scene?.dialogue.map((line) => `${line.character}${line.line}`).join(" ")]
+    .filter(Boolean)
+    .join(" ");
+  const matches = characterRoster(result).filter((item) =>
+    characterAliasesForPrompt(item).some((alias) => content.includes(alias)),
+  );
+  return matches.length > 0 ? matches.slice(0, 4) : characterRoster(result).slice(0, 1);
+}
+
+function characterRosterText(result: JubenResult, shot?: JubenShot, scene?: JubenScene) {
+  return (shot ? charactersForShot(result, shot, scene) : characterRoster(result))
     .map((item) => `${atTag(item.character)}：${item.lockedPrompt}`)
     .join("\n");
 }
@@ -290,6 +310,13 @@ function dialogueTextForShot(scene: JubenScene | undefined, shot: JubenShot) {
     return `${atTag(match[1])}开口：“${match[2]}”（原稿对白，必须准确发音并对齐口型）`;
   }
 
+  const embedded = scene?.dialogue.find((line) =>
+    `${shot.visual}\n${shot.action}`.includes(line.line),
+  );
+  if (embedded) {
+    return `${atTag(embedded.character)}开口：“${embedded.line}”（原稿对白，必须准确发音并对齐口型）`;
+  }
+
   return scene?.dialogue.length
     ? "本镜头不新增对白，只保留上一句尾音、人物反应、呼吸和现场环境声。"
     : "本镜头以动作、表情、呼吸和环境声推进，不增加原稿之外的台词。";
@@ -302,10 +329,9 @@ function splitActionText(
 ) {
   const total = shotSeconds(shot);
   const mid = Math.max(2, Math.floor(total / 2));
-  const mainCharacter =
-    characterRoster(result)[0]?.character ?? scene?.dialogue[0]?.character ?? "主角";
-  const antagonist =
-    characterRoster(result)[1]?.character ?? scene?.dialogue[1]?.character ?? "阻碍者";
+  const scopedCharacters = charactersForShot(result, shot, scene);
+  const mainCharacter = scopedCharacters[0]?.character ?? scene?.dialogue[0]?.character ?? "主角";
+  const antagonist = scopedCharacters[1]?.character ?? scene?.dialogue[1]?.character ?? "阻碍者";
 
   return [
     `【0-${mid}秒：动作建立】`,
@@ -334,8 +360,7 @@ function libtvFinalPrompt(
 ) {
   const storyboard = promptForShot(result.storyboardPrompts, shot, scopedShots);
   const camera = promptForShot(result.cameraPrompts, shot, scopedShots);
-  const characters = characterRoster(result)
-    .slice(0, 4)
+  const characters = charactersForShot(result, shot, scene)
     .map((item) => `${atTag(item.character)}（${item.lockedPrompt}）`)
     .join("、");
   const place = atTag(scenePlace(scene));
@@ -367,7 +392,7 @@ function libtvStructuredPrompt(
 
   return [
     "出场角色：",
-    characterRosterText(result),
+    characterRosterText(result, shot, scene),
     "",
     "---",
     "",
@@ -1046,6 +1071,114 @@ function ShotPackageCard({
   );
 }
 
+function shotLightText(result: JubenResult) {
+  return [
+    ...result.visualBible.colorPalette.slice(0, 3),
+    result.visualBible.coreStyle,
+  ].join(" · ");
+}
+
+function ShotWorkbenchTable({
+  result,
+  shots,
+  episode,
+  onCopy,
+  copied,
+}: {
+  result: JubenResult;
+  shots: JubenShot[];
+  episode: number;
+  onCopy: (label: string, text: string) => void;
+  copied: string | null;
+}) {
+  const episodeLabel = `E${String(episode).padStart(2, "0")}`;
+
+  return (
+    <section className={styles.shotWorkbench}>
+      <header className={styles.shotWorkbenchHeader}>
+        <div>
+          <span>{episodeLabel} · AI 视频生成镜头表</span>
+          <strong>每行就是一个可生成、可剪辑的镜头任务</strong>
+          <p>先检查画面与对白，再复制“最终提示词”或整镜结构到 Lovart、Grok 等平台。</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => onCopy(`episode-${episode}`, shotPackageTextForScope(result, episode))}
+        >
+          {copied === `episode-${episode}` ? <Check size={15} /> : <Copy size={15} />}
+          复制本集全部
+        </button>
+      </header>
+      <div className={styles.shotTableScroll}>
+        <table className={styles.shotTable}>
+          <thead>
+            <tr>
+              <th>镜号</th>
+              <th>时长</th>
+              <th>画面描述</th>
+              <th>景别</th>
+              <th>光影氛围</th>
+              <th>对白 / 旁白</th>
+              <th>音效</th>
+              <th>运镜</th>
+              <th>最终提示词</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            {shots.map((shot) => {
+              const scene = findSceneForShot(result, shot);
+              const finalPrompt = libtvFinalPrompt(result, shot, scene, shots);
+              const structuredPrompt = libtvStructuredPrompt(result, shot, scene, shots);
+              const copyLabel = `table-${shot.shotId}`;
+
+              return (
+                <tr key={shot.shotId}>
+                  <td data-label="镜号" className={styles.shotNumberCell}>
+                    <strong>{shot.shotId}</strong>
+                    <span>{scene?.sceneHeading ?? shot.sceneId}</span>
+                  </td>
+                  <td data-label="时长"><b>{shot.duration}</b></td>
+                  <td data-label="画面描述" className={styles.shotVisualCell}>
+                    <p>{shot.visual}</p>
+                    <small>动作：{shot.action}</small>
+                    <em>连续性：{shot.continuity}</em>
+                  </td>
+                  <td data-label="景别">
+                    <b>{shot.shotSize}</b>
+                    <small>{shot.cameraAngle}</small>
+                  </td>
+                  <td data-label="光影氛围"><p>{shotLightText(result)}</p></td>
+                  <td data-label="对白 / 旁白"><p>{dialogueTextForShot(scene, shot)}</p></td>
+                  <td data-label="音效"><p>{shot.sound}</p></td>
+                  <td data-label="运镜"><p>{shot.movement}</p></td>
+                  <td data-label="最终提示词" className={styles.finalPromptCell}>
+                    <p>{finalPrompt}</p>
+                    <details>
+                      <summary>查看完整 LibTV 结构</summary>
+                      <pre>{structuredPrompt}</pre>
+                    </details>
+                  </td>
+                  <td data-label="操作" className={styles.shotCopyCell}>
+                    <button
+                      type="button"
+                      title={`复制 ${shot.shotId} 完整提示词`}
+                      aria-label={`复制 ${shot.shotId} 完整提示词`}
+                      onClick={() => onCopy(copyLabel, structuredPrompt)}
+                    >
+                      {copied === copyLabel ? <Check size={15} /> : <Copy size={15} />}
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function EmptyEpisode({ onOutline }: { onOutline: () => void }) {
   return (
     <div className={styles.emptyState}>
@@ -1069,6 +1202,7 @@ export default function JubenExperience() {
   const [episodeScope, setEpisodeScope] = useState<EpisodeScope>("all");
   const [detailStatus, setDetailStatus] = useState<Record<number, Status>>({});
   const [copied, setCopied] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const scopedParts = useMemo(() => {
     if (!result) {
@@ -1127,7 +1261,8 @@ export default function JubenExperience() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("loading");
-    setActiveTab("outline");
+    setErrorMessage("");
+    setActiveTab("shotpack");
 
     try {
       const response = await fetch("/api/juben/generate", {
@@ -1136,18 +1271,16 @@ export default function JubenExperience() {
         body: JSON.stringify(form),
       });
 
-      if (!response.ok) {
-        throw new Error("Request failed.");
-      }
-
-      const payload = (await response.json()) as JubenResult;
+      const payload = (await response.json()) as JubenResult & { error?: string };
+      if (!response.ok) throw new Error(payload.error || "原稿拆解失败，请检查文档格式。");
       setResult(payload);
       setEpisodeScope(1);
       setStatus(
         payload.meta.provider === "local-structured-fallback" ? "error" : "ready",
       );
-    } catch {
+    } catch (error) {
       setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "原稿拆解失败。");
     }
   }
 
@@ -1182,8 +1315,8 @@ export default function JubenExperience() {
       body: JSON.stringify(targetForm),
     });
 
-    if (!response.ok) throw new Error("Analyze request failed.");
-    const payload = (await response.json()) as JubenAnalysisResult;
+    const payload = (await response.json()) as JubenAnalysisResult & { error?: string };
+    if (!response.ok) throw new Error(payload.error || "没有识别到可用场次，请检查原稿分场标题。");
     applyAnalysisPayload(payload, targetForm);
     return payload;
   }
@@ -1192,6 +1325,7 @@ export default function JubenExperience() {
     if (!file) return;
 
     setUploadStatus("loading");
+    setErrorMessage("");
     setUploadMessage(`正在解析 ${file.name}`);
 
     try {
@@ -1236,6 +1370,7 @@ export default function JubenExperience() {
       setUploadMessage(
         error instanceof Error ? error.message : "文件解析失败，请手动粘贴。",
       );
+      setErrorMessage(error instanceof Error ? error.message : "文件解析失败，请手动粘贴。");
     }
   }
 
@@ -1304,6 +1439,7 @@ export default function JubenExperience() {
     if (!result) return;
 
     setDetailStatus((current) => ({ ...current, [episode]: "loading" }));
+    setErrorMessage("");
 
     try {
       const response = await fetch("/api/juben/episode", {
@@ -1312,21 +1448,23 @@ export default function JubenExperience() {
         body: JSON.stringify({ ...form, episode, baseResult: result }),
       });
 
-      if (!response.ok) {
-        throw new Error("Episode request failed.");
-      }
-
-      const payload = (await response.json()) as JubenResult;
+      const payload = (await response.json()) as JubenResult & { error?: string };
+      if (!response.ok) throw new Error(payload.error || "本集生成失败，请检查原稿分集标题。");
       setResult((current) =>
         current ? mergeEpisodeResult(current, payload, episode) : payload,
       );
-      setStatus(
-        payload.meta.provider === "local-structured-fallback" ? "error" : "ready",
+      const usedFallback = payload.meta.provider === "local-structured-fallback";
+      setStatus(usedFallback ? "error" : "ready");
+      setErrorMessage(
+        usedFallback
+          ? `DeepSeek 未完成本集精拆，当前保留原稿镜头草案。原因：${payload.meta.model}`
+          : "",
       );
       setDetailStatus((current) => ({ ...current, [episode]: "ready" }));
       setActiveTab("shotpack");
-    } catch {
+    } catch (error) {
       setDetailStatus((current) => ({ ...current, [episode]: "error" }));
+      setErrorMessage(error instanceof Error ? error.message : "本集生成失败。");
     }
   }
 
@@ -1338,8 +1476,9 @@ export default function JubenExperience() {
     try {
       await analyzeDraft(form);
       setAnalyzeStatus("ready");
-    } catch {
+    } catch (error) {
       setAnalyzeStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "简析失败，请稍后重试。");
     }
   }
 
@@ -1360,7 +1499,7 @@ export default function JubenExperience() {
           ? "原稿锁定与拆解已完成"
           : "DeepSeek 已完成"
         : status === "error"
-          ? "原稿备用拆解已完成，可继续生成"
+          ? errorMessage || "生成失败，请检查原稿"
           : "等待项目输入";
 
   return (
@@ -1624,18 +1763,32 @@ export default function JubenExperience() {
                 setDetailStatus({});
                 setEpisodeScope("all");
                 setActiveTab("source");
+                setErrorMessage("");
               }}
             >
               <RefreshCcw size={16} />
               重置样例
             </button>
-            <button type="submit" disabled={status === "loading"}>
-              {status === "loading" ? (
+            <button
+              type="submit"
+              disabled={
+                status === "loading" ||
+                analyzeStatus === "loading" ||
+                uploadStatus === "loading"
+              }
+            >
+              {status === "loading" ||
+              analyzeStatus === "loading" ||
+              uploadStatus === "loading" ? (
                 <Loader2 size={17} />
               ) : (
                 <Sparkles size={17} />
               )}
-              {status === "loading" ? "正在拆解" : "锁定原稿并拆全剧"}
+              {status === "loading"
+                ? "正在拆解"
+                : analyzeStatus === "loading" || uploadStatus === "loading"
+                  ? "正在识别原稿"
+                  : "锁定原稿并拆全剧"}
             </button>
           </div>
         </form>
@@ -1716,24 +1869,21 @@ export default function JubenExperience() {
                 {copied === "tab" ? <Check size={15} /> : <Copy size={15} />}
                 复制当前页
               </button>
-              {activeTab === "delivery" ? (
-                <>
-                  <button type="button" disabled={!result} onClick={() => copyText("json", result ? asPrettyJson(result) : "")}>
-                    {copied === "json" ? <Check size={15} /> : <FileJson size={15} />}复制 JSON
-                  </button>
-                  <button type="button" disabled={!result} onClick={() => result && downloadText(`${result.meta.title || "juben"}-production-pack.json`, asPrettyJson(result))}>
-                    <Download size={15} />JSON
-                  </button>
-                  <button type="button" disabled={!result} onClick={() => result && void downloadProductionFile(result, "excel")}>
-                    <Download size={15} />Excel
-                  </button>
-                  <button type="button" disabled={!result} onClick={() => result && void downloadProductionFile(result, "word")}>
-                    <Download size={15} />Word
-                  </button>
-                </>
-              ) : null}
+              <button type="button" disabled={!result} title="下载 Excel 镜头表" onClick={() => result && void downloadProductionFile(result, "excel")}>
+                <Download size={15} />Excel
+              </button>
+              <button type="button" disabled={!result} title="下载 Word 生产包" onClick={() => result && void downloadProductionFile(result, "word")}>
+                <FileText size={15} />Word
+              </button>
             </div>
           </div>
+
+          {errorMessage ? (
+            <div className={styles.inlineError} role="alert">
+              <ShieldCheck size={16} />
+              <span>{errorMessage}</span>
+            </div>
+          ) : null}
 
           {result ? (
             <div className={styles.episodeSwitch} role="group" aria-label="选择集数">
@@ -1771,7 +1921,7 @@ export default function JubenExperience() {
                 <span>E{String(selectedEpisode).padStart(2, "0")} · {selectedOutline?.title}</span>
                 <small>
                   {selectedEpisodeHasDetails
-                    ? `${scopedParts?.scenes.length ?? 0} 场 · ${scopedParts?.shots.length ?? 0} 镜，已可进入生成`
+                    ? `${scopedParts?.scenes.length ?? 0} 场 · ${scopedParts?.shots.length ?? 0} 镜，${detailStatus[selectedEpisode] === "ready" ? "AI 精拆已完成" : "原稿镜头草案已就绪，可继续 AI 精拆"}`
                     : "只有分集骨架，尚未生成导演剧本和镜头"}
                 </small>
               </div>
@@ -1786,10 +1936,10 @@ export default function JubenExperience() {
                   <Sparkles size={15} />
                 )}
                 {selectedEpisodeStatus === "loading"
-                  ? "正在生成本集"
-                  : selectedEpisodeHasDetails
-                    ? "重做本集"
-                    : "生成本集导演包"}
+                  ? "正在 AI 精拆本集"
+                  : detailStatus[selectedEpisode] === "ready"
+                    ? "重新 AI 精拆"
+                    : "AI 精拆本集"}
               </button>
             </div>
           ) : null}
@@ -2072,11 +2222,9 @@ export default function JubenExperience() {
                         ) : (
                           <Sparkles size={14} />
                         )}
-                        {result.shotList.some(
-                          (shot) => sceneEpisode(shot.sceneId) === episode.episode,
-                        )
-                          ? "重做本集"
-                          : "生成导演包"}
+                        {detailStatus[episode.episode] === "ready"
+                          ? "重新 AI 精拆"
+                          : "AI 精拆本集"}
                       </button>
                     </footer>
                   </article>
@@ -2086,23 +2234,18 @@ export default function JubenExperience() {
               selectedEpisode === null ? (
                 <EmptyEpisode onOutline={() => setActiveTab("outline")} />
               ) : (scopedParts?.shots.length ?? 0) > 0 ? (
-                <div className={styles.shotPackageGrid}>
-                  {(scopedParts?.shots ?? result.shotList).map((shot) => (
-                    <ShotPackageCard
-                      key={shot.shotId}
-                      result={result}
-                      shot={shot}
-                      scopedShots={scopedParts?.shots ?? result.shotList}
-                      onCopy={copyText}
-                      copied={copied}
-                    />
-                  ))}
-                </div>
+                <ShotWorkbenchTable
+                  result={result}
+                  shots={scopedParts?.shots ?? result.shotList}
+                  episode={selectedEpisode}
+                  onCopy={copyText}
+                  copied={copied}
+                />
               ) : (
                 <div className={styles.emptyState}>
                   <Sparkles size={28} />
                   <strong>这一集还没有镜头细节。</strong>
-                  <p>点上方“生成本集细节”，会补导演剧本、镜头和整合 Prompt。</p>
+                  <p>点上方“AI 精拆本集”，只处理当前集并生成完整逐镜生产表。</p>
                 </div>
               )
             ) : activeTab === "episode" ? (
@@ -2122,7 +2265,7 @@ export default function JubenExperience() {
                 <div className={styles.emptyState}>
                   <Clapperboard size={28} />
                   <strong>本集还没有导演剧本</strong>
-                  <p>点击上方“生成本集导演包”，只生成当前集，等待时间更短。</p>
+                  <p>点击上方“AI 精拆本集”，只处理当前集，等待时间更短。</p>
                 </div>
               )
             ) : (
