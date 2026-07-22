@@ -1469,36 +1469,38 @@ function ensureSceneCoverage(
 }
 
 function makeShotFromScene(scene: JubenScene, shotIndex: number): JubenShot {
+  const dialogue = scene.dialogue[(shotIndex - 1) % Math.max(scene.dialogue.length, 1)];
+  const speaker = dialogue?.character || "行动人物";
   const presets = [
     {
       shotSize: "中近景",
       cameraAngle: "平视略贴近人物",
       movement: "手持轻微跟进",
-      duration: "4s",
-      visual: scene.action,
-      action: "主角进入现场并开始执行本场目标。",
-      sound: "现场环境声压低，保留脚步和呼吸。",
-      continuity: "接上一场情绪，不换服装和核心道具。",
+      duration: "10s",
+      visual: `${scene.sceneHeading}。按导演场次执行：${scene.action}`,
+      action: "从上一镜结束姿态起步，完成本场第一个可见动作并停在阻碍出现的瞬间。",
+      sound: "保留与动作同步的脚步、衣料、道具接触和空间底噪。",
+      continuity: "承接上一镜人物站位、服装、道具和光线，动作完成前不跳时空。",
     },
     {
       shotSize: "过肩中景",
-      cameraAngle: "从主角肩后看向阻碍者",
-      movement: "慢推到两人之间",
-      duration: "5s",
-      visual: scene.conflict,
-      action: "阻碍者给出压力，主角没有立刻退。",
-      sound: "对白清楚，背景声保持真实。",
-      continuity: "人物轴线保持稳定，主角在画面左侧。",
+      cameraAngle: "从行动人物肩后看向阻碍者",
+      movement: "沿人物视线缓慢推近后锁定",
+      duration: "12s",
+      visual: `${scene.sceneHeading}。冲突在同一空间内升级：${scene.conflict}${dialogue ? ` ${speaker}说出原稿对白：“${dialogue.line}”。` : ""}`,
+      action: `${speaker}面对具体阻碍完成反应动作，对白结束后保留对手一拍反应。`,
+      sound: dialogue ? `${speaker}原稿对白清楚并准确对口型，环境底噪连续。` : "动作音效清楚，环境底噪连续，不用旁白补剧情。",
+      continuity: "保持180度轴线、人物朝向和视线关系，关键道具仍在上一镜位置。",
     },
     {
       shotSize: "特写",
       cameraAngle: "正面平视关键物件或表情",
-      movement: "静止停顿后切走",
-      duration: "3s",
-      visual: scene.emotionalTurn,
-      action: "新证据出现，主角做出本集下一步选择。",
-      sound: "低频点入，随后留半秒空白。",
-      continuity: "结尾必须能接下一镜或下一集钩子。",
+      movement: "从关键道具或眼神轻推至结束状态",
+      duration: "9s",
+      visual: `${scene.sceneHeading}。本场转折必须落成可见结果：${scene.emotionalTurn}`,
+      action: "人物先完成上一镜反应，再用一个明确动作确认选择，末尾定格在证据、表情或新的阻碍上。",
+      sound: "动作落点给真实声响，随后留半秒环境声停点。",
+      continuity: "保留本场服装、伤痕、道具状态和光线方向，结尾状态直接交给下一镜。",
     },
   ];
   const preset = presets[(shotIndex - 1) % presets.length];
@@ -1631,6 +1633,7 @@ function ensureJubenCoverage(
   input: Required<JubenRequestBody>,
   options?: {
     detailEpisodes?: number[];
+    minimumShotsPerScene?: number;
   },
 ): JubenResult {
   const episodeOutline = normalizeEpisodeOutlines(result, input);
@@ -1644,7 +1647,7 @@ function ensureJubenCoverage(
   const shotList = ensureShotCoverage(
     result.shotList,
     directorScript,
-    input.sourceMode === "document" ? 1 : 3,
+    options?.minimumShotsPerScene ?? (input.sourceMode === "document" ? 1 : 3),
   );
   const storyboardPrompts = ensurePromptCoverage(
     result.storyboardPrompts,
@@ -1934,7 +1937,7 @@ export async function generateJubenEpisodeResult(
     const sourceGrounded = ensureJubenCoverage(
       fallbackJubenResult(input, reason),
       input,
-      { detailEpisodes: [episode] },
+      { detailEpisodes: [episode], minimumShotsPerScene: 3 },
     );
 
     return {
