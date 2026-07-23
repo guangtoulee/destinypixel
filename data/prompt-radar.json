@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-22T15:20:22.851Z",
+  "updatedAt": "2026-07-23T04:52:52.705Z",
   "sourceSummary": {
     "community": 275,
-    "publicX": 174,
-    "total": 449
+    "publicX": 175,
+    "total": 450
   },
   "items": [
     {
@@ -326,7 +326,7 @@
       "authorName": "Abhishek",
       "authorHandle": "@HeyAbhishek",
       "createdAt": "2026-07-18T11:39:55.000Z",
-      "importedAt": "2026-07-22T15:20:22.841Z",
+      "importedAt": "2026-07-23T04:52:52.697Z",
       "tags": [
         "GPT Image 2",
         "Seedance",
@@ -349,13 +349,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 685,
-        "reposts": 106,
+        "likes": 687,
+        "reposts": 105,
         "replies": 21,
         "quotes": 6,
-        "bookmarks": 856,
-        "views": 43783,
-        "score": 4489
+        "bookmarks": 861,
+        "views": 44149,
+        "score": 4504
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇"
@@ -578,6 +578,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🤯热门视频避免误审或卡脸，先转成 Depth 保留动作，AI完美复刻！ 推友 @impalementd 分享了一个好方法： 把参考视频转成 Depth，可以避免原视频因画面问题被卡！ 抖音热门的“拖拉机舞”，被我换成机能辣妹在田边跳，引来村狗围观🤣 🌟制作流程： 1. 准备一段你喜欢的视频（比如舞蹈） 2. 使用深度估计模型gradio转换Depth视频 3. 生成新的角色＋场景参考图 4. 参考评论区提示词 + 素材 给Seedance生成新视频 这套方式适合做更干净的动作迁移！ 动作可以参考，角色、服装、场景和叙事则重新创作，最后做出来就是一个全新的版本。 Workflow + Prompt below 👇"
+    },
+    {
+      "id": "x-public-2079603680601317379",
+      "title": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-",
+      "description": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Cla",
+      "prompt": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Claude write the script and every shot prompt: 1 day > Midjourney lock the fighter from every angle: 2 hours > Kling animate the dojo brawl shot by shot: 2 days > ElevenLabs voice the cast with real direction: 1 hour > DaVinci score it and cut the clips into a film: 1 day Ip Man booked a fight choreographer, a stunt team and a period set for one scene. she booked a $60 pipeline and a laptop. the full fight pipeline is in the article above👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/0x_fokki/status/2079603680601317379",
+      "sourceType": "x",
+      "authorName": "Fokki",
+      "authorHandle": "@0x_fokki",
+      "createdAt": "2026-07-21T16:25:29.000Z",
+      "importedAt": "2026-07-23T04:52:52.697Z",
+      "tags": [
+        "Midjourney",
+        "Kling"
+      ],
+      "modelHints": [
+        "Midjourney",
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 373,
+        "reposts": 53,
+        "replies": 26,
+        "quotes": 6,
+        "bookmarks": 435,
+        "views": 36899,
+        "score": 2381
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Claude write the script and every shot prompt: 1 day > Midjourney lock the fighter from every angle: 2 hours > Kling animate the dojo brawl shot by shot: 2 days > ElevenLabs voice the cast with real direction: 1 hour > DaVinci score it and cut the clips into a film: 1 day Ip Man booked a fight choreographer, a stunt team and a period set for one scene. she booked a $60 pipeline and a laptop. the full fight pipeline is in the article above👇"
     },
     {
       "id": "x-public-2074848565151642013",
@@ -2282,50 +2326,6 @@
       "rawText": "🤯 AI Visual Systems Vol.10.5: Distorted Identity Posters! Made with ChatGPT-Image2. 4 directions: 1. STATIC MUSE — monochrome scan distortion 2. ECHO FACE — digital identity blur 3. BLUE IRIS — narrow light shadow portrait 4. SPECTRAL DRIFT — chromatic glitch motion Great for music covers, artist visuals, tech posters and fashion editorials. Prompt in the comments 👇"
     },
     {
-      "id": "x-public-2079603680601317379",
-      "title": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-",
-      "description": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Cla",
-      "prompt": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Claude write the script and every shot prompt: 1 day > Midjourney lock the fighter from every angle: 2 hours > Kling animate the dojo brawl shot by shot: 2 days > ElevenLabs voice the cast with real direction: 1 hour > DaVinci score it and cut the clips into a film: 1 day Ip Man booked a fight choreographer, a stunt team and a period set for one scene. she booked a $60 pipeline and a laptop. the full fight pipeline is in the article above👇",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/0x_fokki/status/2079603680601317379",
-      "sourceType": "x",
-      "authorName": "Fokki",
-      "authorHandle": "@0x_fokki",
-      "createdAt": "2026-07-21T16:25:29.000Z",
-      "importedAt": "2026-07-22T10:00:10.460Z",
-      "tags": [
-        "Midjourney",
-        "Kling"
-      ],
-      "modelHints": [
-        "Midjourney",
-        "Kling",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 153,
-        "reposts": 17,
-        "replies": 21,
-        "quotes": 3,
-        "bookmarks": 131,
-        "views": 10013,
-        "score": 817
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Claude write the script and every shot prompt: 1 day > Midjourney lock the fighter from every angle: 2 hours > Kling animate the dojo brawl shot by shot: 2 days > ElevenLabs voice the cast with real direction: 1 hour > DaVinci score it and cut the clips into a film: 1 day Ip Man booked a fight choreographer, a stunt team and a period set for one scene. she booked a $60 pipeline and a laptop. the full fight pipeline is in the article above👇"
-    },
-    {
       "id": "x-public-2074854069156397309",
       "title": "Compared the same prompt in Veo 3.1, Kling 3.0, and Seedance 2.0 and got this result Look at the",
       "description": "Compared the same prompt in Veo 3.1, Kling 3.0, and Seedance 2.0 and got this result Look at the differences in how they render the punch impact Which model do you think did well? Prompt in the comments",
@@ -2630,6 +2630,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.0 4K on Higgsfield Prompt: @ Image_1 is the master character reference. Match her identity, facial structure, body proportions, hairstyle, wardrobe, accessories, revolver, colors, textures, silhouette, and overall presence exactly in every frame. No identity drift, no wardrobe changes, no hairstyle changes, no prop changes, no AI morphing, no flickering, and no inconsistencies. GLOBAL STYLE • Cinematic modern Western • Low golden-hour sunlight from camera-left • Warm amber highlights with cool teal shadows • Fine cinematic film grain • Soft halation around the sun • Long dramatic shadows • Open prairie, dusty dirt road, distant blue mountains • Rising dust illuminated by backlight • Premium Hollywood production quality CHARACTERS • The Stranger (FOCAL): Match @ Image1 exactly. • Lead Bandit: Dusty tan duster, wide-brim brown hat, red bandana covering lower face. • Three background riders: Bandana-masked silhouettes on horseback, partially obscured by dust. SEQUENCE SHOT 1 (0–3s) — HOOK Full side-tracking shot as a stagecoach races across the prairie at full gallop. Four bandits pursue on horseback while firing pistols into the air. Dust explodes behind the coach, glowing in the golden backlight. The camera tracks with the coach before whip-panning down to pounding hooves. SFX: Hoof thunder, gunshots, wooden carriage rattle, tense orchestral strings. Lead Bandit shouts: \"Stop the coach!\" SHOT 2 (3–6s) — RISING Low-angle tracking shot alongside the speeding coach. The Lead Bandit pushes his horse alongside, leaps onto the moving roof, struggles for balance, crawls toward the carriage door, and grips the rail naturally with realistic weight and momentum. SFX: Boot scraping wood, heavy breathing, rushing wind. SHOT 3 (6–9s) — GREED Close-up of the Lead Bandit's eyes above the bandana, followed by an extreme close-up of his gloved hand wrapping around the brass door handle. He grins confidently before yanking the handle open while riders continue racing behind. SFX: Metal latch click, quiet chuckle. SHOT 4 (9–12s) — THE REVEAL Over-the-shoulder view from behind the Lead Bandit into the dim stagecoach interior. Music stops instantly, leaving only wind and the carriage creaking. Sitting calmly inside is the Stranger, matching @ Image1 perfectly. Hat low, hands relaxed, completely motionless. She slowly lifts her eyes toward him. A sharp beam of golden sunlight cuts across her face and cow-print corset while the rest of the cabin remains in teal shadow. The Lead Bandit's confident grin disappears instantly as his eyes widen and his breathing catches. SFX: Wind, leather creak, carriage springs. SHOT 5 (12–15s) — THE BUTTON Extreme close-up of the Stranger's hand already resting on the ivory-grip engraved revolver. Focus locks on the revolver before snapping into an extreme close-up of her cold eyes beneath the hat brim. She slowly tightens her grip with all five fingers, tilts her head slightly as if silently saying, \"Well, hello.\" Hard cut to black. SFX: Leather creak, one deep cinematic chord, single spur chime. Centered title appears: \"THE LAST STAGECOACH\" TECHNICAL REQUIREMENTS • 15-second duration • 16:9 landscape • Ultra-realistic live action • Hollywood Western film quality • Stable cinematic camera movement • Realistic horse animation and physics • Natural body mechanics • Accurate fabric simulation • Consistent lighting throughout • Perfect facial consistency using @ Image1 • Straight geometry and natural proportions • No AI artifacts • No flickering • No morphing • No duplicated objects • No clipping • No physics errors • No subtitles • No watermark • No logos"
+    },
+    {
+      "id": "x-public-2079988304368513376",
+      "title": "A fun AI video effect to try: balance on top of a moving animal while pulling off impossible tri",
+      "description": "A fun AI video effect to try: balance on top of a moving animal while pulling off impossible tricks. This ComfyUI workflow uses an LLM to generate the right Seedance 2.0 prompts, making it easy to recreate this viral-sty",
+      "prompt": "A fun AI video effect to try: balance on top of a moving animal while pulling off impossible tricks. This ComfyUI workflow uses an LLM to generate the right Seedance 2.0 prompts, making it easy to recreate this viral-style effect with smooth, consistent results. To try this workflow, link below 👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ComfyUI/status/2079988304368513376",
+      "sourceType": "x",
+      "authorName": "ComfyUI",
+      "authorHandle": "@ComfyUI",
+      "createdAt": "2026-07-22T17:53:50.000Z",
+      "importedAt": "2026-07-23T04:52:52.699Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 170,
+        "reposts": 20,
+        "replies": 9,
+        "quotes": 2,
+        "bookmarks": 78,
+        "views": 10157,
+        "score": 689
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "A fun AI video effect to try: balance on top of a moving animal while pulling off impossible tricks. This ComfyUI workflow uses an LLM to generate the right Seedance 2.0 prompts, making it easy to recreate this viral-style effect with smooth, consistent results. To try this workflow, link below 👇"
     },
     {
       "id": "x-public-2075870061319893191",
@@ -6846,7 +6888,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-07-22T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.419Z",
+      "importedAt": "2026-07-23T04:52:48.622Z",
       "tags": [
         "人像",
         "摄影"
@@ -6888,7 +6930,7 @@
       "authorName": "Jona |🇦🇷",
       "authorHandle": "@unllamas",
       "createdAt": "2026-07-22T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.420Z",
+      "importedAt": "2026-07-23T04:52:48.623Z",
       "tags": [
         "人像",
         "摄影"
@@ -6930,7 +6972,7 @@
       "authorName": "Simply Ray",
       "authorHandle": "@kingofdairyque",
       "createdAt": "2026-07-22T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "摄影"
       ],
@@ -6971,7 +7013,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-07-22T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7013,7 +7055,7 @@
       "authorName": "simeon-sanai",
       "authorHandle": "@Naiknelofar788",
       "createdAt": "2026-07-22T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7055,7 +7097,7 @@
       "authorName": "Marco",
       "authorHandle": "@ai_artworkgen",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.420Z",
+      "importedAt": "2026-07-23T04:52:48.623Z",
       "tags": [
         "人像"
       ],
@@ -7096,7 +7138,7 @@
       "authorName": "A1ejandro",
       "authorHandle": "@a_galaktionov",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.420Z",
+      "importedAt": "2026-07-23T04:52:48.623Z",
       "tags": [
         "人像"
       ],
@@ -7137,7 +7179,7 @@
       "authorName": "ToroJushiAi",
       "authorHandle": "@ToroJushiAi",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.420Z",
+      "importedAt": "2026-07-23T04:52:48.623Z",
       "tags": [
         "人像",
         "摄影"
@@ -7179,7 +7221,7 @@
       "authorName": "小森映像",
       "authorHandle": "@komorimedia",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.420Z",
+      "importedAt": "2026-07-23T04:52:48.623Z",
       "tags": [
         "人像",
         "摄影"
@@ -7221,7 +7263,7 @@
       "authorName": "Ciri",
       "authorHandle": "@Ciri_ai",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "人像"
       ],
@@ -7262,7 +7304,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "摄影"
       ],
@@ -7303,7 +7345,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "人像",
         "摄影"
@@ -7345,7 +7387,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "人像"
       ],
@@ -7386,7 +7428,7 @@
       "authorName": "Mr Das",
       "authorHandle": "@MrDasOnX",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "人像"
       ],
@@ -7427,7 +7469,7 @@
       "authorName": "おわ Days",
       "authorHandle": "@Days57723399006",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -7466,7 +7508,7 @@
       "authorName": "𝟡𝟜 ᴾᴸᴬʸᶠᴼᴿᴳᴱ",
       "authorHandle": "@94vanAI",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.624Z",
       "tags": [
         "人像"
       ],
@@ -7507,7 +7549,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.421Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7549,7 +7591,7 @@
       "authorName": "みのるＴＶ",
       "authorHandle": "@minoru_SB99",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7591,7 +7633,7 @@
       "authorName": "AiPic-Dressup Faceswap PhotoRestoe",
       "authorHandle": "@AiPic_AiWaifu",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7633,7 +7675,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7675,7 +7717,7 @@
       "authorName": "CHAse",
       "authorHandle": "@CHAseUnre",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7717,7 +7759,7 @@
       "authorName": "ToroJushiAi",
       "authorHandle": "@ToroJushiAi",
       "createdAt": "2026-07-21T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -7801,7 +7843,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像",
         "摄影"
@@ -7843,7 +7885,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-20T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.422Z",
+      "importedAt": "2026-07-23T04:52:48.625Z",
       "tags": [
         "人像"
       ],
@@ -18786,7 +18828,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.429Z",
+      "importedAt": "2026-07-23T04:52:48.631Z",
       "tags": [
         "产品",
         "平面设计",
@@ -18829,7 +18871,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.429Z",
+      "importedAt": "2026-07-23T04:52:48.631Z",
       "tags": [
         "平面设计"
       ],
@@ -18870,7 +18912,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-22T15:20:18.430Z",
+      "importedAt": "2026-07-23T04:52:48.631Z",
       "tags": [
         "平面设计"
       ],
