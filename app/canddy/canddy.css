@@ -1,0 +1,1846 @@
+.canddy-page {
+  --ink: #10100f;
+  --paper: #f5f3ed;
+  --cream: #ece9df;
+  --gold: #e5a900;
+  --gold-soft: #ffd64b;
+  --blue: #008fcb;
+  --cyan: #72d9e3;
+  --red: #ea3e35;
+  --line: rgba(16, 16, 15, 0.14);
+}
+
+.canddy-page * {
+  box-sizing: border-box;
+}
+
+.canddy-page {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.canddy-page button,
+.canddy-page input,
+.canddy-page textarea {
+  font: inherit;
+}
+
+.canddy-page button,
+.canddy-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.canddy-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.canddy-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.canddy-page {
+  overflow: clip;
+}
+
+.canddy-page .notice-bar {
+  height: 34px;
+  padding: 0 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.78);
+  background: #080808;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.canddy-page .notice-bar a {
+  color: rgba(255, 255, 255, 0.46);
+  letter-spacing: 0.03em;
+}
+
+.canddy-page .site-header {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: 86px;
+  padding: 0 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.canddy-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 185px;
+}
+
+.canddy-page .brand-whole {
+  font-family: Arial Black, Inter, sans-serif;
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -0.1em;
+  font-weight: 900;
+}
+
+.canddy-page .brand-whole span {
+  position: relative;
+  display: inline-block;
+}
+
+.canddy-page .brand-whole span::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--gold-soft);
+  border-radius: 50%;
+  top: 10px;
+  left: 8px;
+}
+
+.canddy-page .brand-divider {
+  width: 1px;
+  height: 20px;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.canddy-page .brand-china {
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  opacity: 0.72;
+}
+
+.canddy-page .desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 50px);
+  font-size: 13px;
+}
+
+.canddy-page .desktop-nav a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.73);
+  transition: color 180ms ease;
+}
+
+.canddy-page .desktop-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  height: 1px;
+  background: var(--gold-soft);
+  transition: right 220ms ease;
+}
+
+.canddy-page .desktop-nav a:hover {
+  color: #fff;
+}
+
+.canddy-page .desktop-nav a:hover::after {
+  right: 0;
+}
+
+.canddy-page .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 185px;
+  justify-content: flex-end;
+}
+
+.canddy-page .cart-button {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.canddy-page .cart-button span {
+  display: inline-grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  margin-left: 6px;
+  color: #111;
+  background: var(--gold-soft);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.canddy-page .menu-button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.canddy-page .menu-button i {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 5px 0;
+  background: #fff;
+}
+
+.canddy-page .mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  padding: 110px 9vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+  background: #0b0b0b;
+  transform: translateX(100%);
+  transition: transform 380ms cubic-bezier(0.75, 0, 0.18, 1);
+}
+
+.canddy-page .mobile-menu.open {
+  transform: translateX(0);
+}
+
+.canddy-page .mobile-menu > a {
+  font-size: clamp(30px, 8vw, 54px);
+  line-height: 1.15;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+
+.canddy-page .close-button {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.canddy-page .hero {
+  position: relative;
+  min-height: min(880px, calc(100svh - 34px));
+  padding: 170px 6vw 80px;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 77% 51%, rgba(230, 168, 0, 0.23), transparent 28%),
+    radial-gradient(circle at 91% 83%, rgba(3, 146, 205, 0.18), transparent 25%),
+    #10100f;
+}
+
+.canddy-page .hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+  background-size: 82px 82px;
+  mask-image: linear-gradient(to right, black, transparent 80%);
+}
+
+.canddy-page .hero-copy,
+.canddy-page .hero-products {
+  position: relative;
+  z-index: 2;
+}
+
+.canddy-page .eyebrow {
+  margin: 0 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,.56);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+.canddy-page .eyebrow span {
+  width: 32px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+.canddy-page .eyebrow.dark {
+  color: rgba(16,16,15,.5);
+}
+
+.canddy-page .eyebrow.dark span {
+  background: var(--ink);
+}
+
+.canddy-page .hero h1 {
+  margin: 0;
+  max-width: 680px;
+  font-family: "Arial Narrow", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(62px, 7vw, 116px);
+  line-height: .89;
+  letter-spacing: -0.075em;
+  font-weight: 800;
+}
+
+.canddy-page .hero h1 em {
+  color: var(--gold-soft);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.canddy-page .hero-description {
+  max-width: 500px;
+  margin: 34px 0 0;
+  color: rgba(255,255,255,.6);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.canddy-page .hero-cta {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.canddy-page .primary-button {
+  min-height: 52px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border: 1px solid var(--gold-soft);
+  color: #151515;
+  background: var(--gold-soft);
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.canddy-page .primary-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.canddy-page .primary-button span {
+  font-size: 20px;
+}
+
+.canddy-page .primary-button.light {
+  color: #111;
+  background: #fff;
+  border-color: #fff;
+}
+
+.canddy-page .primary-button.dark-button {
+  color: #fff;
+  background: #111;
+  border-color: #111;
+}
+
+.canddy-page .primary-button.full {
+  width: 100%;
+}
+
+.canddy-page .text-link {
+  color: rgba(255,255,255,.78);
+  font-size: 13px;
+}
+
+.canddy-page .text-link span {
+  margin-left: 8px;
+  transition: margin 180ms ease;
+}
+
+.canddy-page .text-link:hover span {
+  margin-left: 14px;
+}
+
+.canddy-page .hero-products {
+  min-height: 580px;
+}
+
+.canddy-page .hero-moon {
+  position: absolute;
+  width: min(37vw, 560px);
+  aspect-ratio: 1;
+  top: 9%;
+  right: -5%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f8cc2f, #c68100 68%, #6f4400);
+  box-shadow: inset -38px -30px 70px rgba(0,0,0,.25), 0 0 120px rgba(226,169,0,.16);
+}
+
+.canddy-page .hero-moon::before,
+.canddy-page .hero-moon::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+}
+
+.canddy-page .hero-moon::before {
+  width: 18%;
+  height: 18%;
+  top: 24%;
+  left: 20%;
+}
+
+.canddy-page .hero-moon::after {
+  width: 8%;
+  height: 8%;
+  bottom: 28%;
+  right: 26%;
+}
+
+.canddy-page .hero-card {
+  position: absolute;
+  width: min(25vw, 380px);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 35px 80px rgba(0,0,0,.32);
+}
+
+.canddy-page .hero-card-label {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  color: rgba(255,255,255,.48);
+  font-size: 9px;
+  letter-spacing: .18em;
+}
+
+.canddy-page .hero-card img {
+  width: 100%;
+  aspect-ratio: 1.15;
+  object-fit: contain;
+  background: #fff;
+}
+
+.canddy-page .hero-card strong {
+  display: block;
+  margin-top: 15px;
+  font-size: 22px;
+  letter-spacing: -.03em;
+}
+
+.canddy-page .hero-card small {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255,255,255,.52);
+  font-size: 11px;
+}
+
+.canddy-page .sleep-card {
+  z-index: 3;
+  top: 5%;
+  left: 2%;
+  background: linear-gradient(145deg, rgba(24,24,24,.92), rgba(103,73,5,.74));
+  transform: rotate(-5deg);
+  animation: floatSleep 6s ease-in-out infinite;
+}
+
+.canddy-page .gastro-card {
+  z-index: 4;
+  right: 0;
+  bottom: 2%;
+  background: linear-gradient(145deg, rgba(0,127,183,.82), rgba(137,19,17,.76));
+  transform: rotate(5deg);
+  animation: floatGastro 6.5s ease-in-out infinite .3s;
+}
+
+.canddy-page .hero-note {
+  position: absolute;
+  right: 0;
+  bottom: -33px;
+  color: rgba(255,255,255,.35);
+  font-size: 9px;
+}
+
+@keyframes floatSleep {
+  0%,100% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(-3deg) translateY(-11px); }
+}
+
+@keyframes floatGastro {
+  0%,100% { transform: rotate(5deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(11px); }
+}
+
+.canddy-page .scroll-cue {
+  position: absolute;
+  z-index: 2;
+  left: 3.5vw;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,.4);
+  font-size: 9px;
+  letter-spacing: .15em;
+}
+
+.canddy-page .scroll-cue span {
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+}
+
+.canddy-page .benefit-strip {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #111;
+  background: var(--gold-soft);
+}
+
+.canddy-page .marquee-track {
+  width: max-content;
+  display: flex;
+  gap: 48px;
+  animation: marquee 25s linear infinite;
+}
+
+.canddy-page .marquee-track span {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.canddy-page .marquee-track i {
+  font-style: normal;
+  font-size: 10px;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+.canddy-page .products-section,
+.canddy-page .collections-section,
+.canddy-page .quality-section,
+.canddy-page .use-section {
+  padding: 120px 5vw;
+}
+
+.canddy-page .section-heading {
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  align-items: end;
+  gap: 80px;
+}
+
+.canddy-page .section-heading h2,
+.canddy-page .quality-intro h2,
+.canddy-page .use-heading h2,
+.canddy-page .shop-heading h2,
+.canddy-page .story-copy h2 {
+  margin: 0;
+  font-size: clamp(44px, 5.6vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -.065em;
+  font-weight: 700;
+}
+
+.canddy-page .section-heading > p,
+.canddy-page .quality-intro > p:last-child {
+  margin: 0;
+  color: rgba(16,16,15,.58);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.canddy-page .feature-product {
+  max-width: 1400px;
+  min-height: 660px;
+  margin: 0 auto 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.canddy-page .feature-visual-wrap {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.canddy-page .feature-number {
+  position: absolute;
+  left: 30px;
+  bottom: 15px;
+  color: rgba(255,255,255,.28);
+  font-size: clamp(84px, 11vw, 170px);
+  line-height: 1;
+  letter-spacing: -.08em;
+  font-weight: 800;
+}
+
+.canddy-page .feature-sleep .feature-visual-wrap {
+  background: #191816;
+}
+
+.canddy-page .feature-gastro .feature-visual-wrap {
+  background: #0a8dbb;
+}
+
+.canddy-page .feature-copy {
+  padding: clamp(48px, 6vw, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.canddy-page .feature-sleep .feature-copy {
+  color: #fff;
+  background: #b98602;
+}
+
+.canddy-page .feature-gastro .feature-copy {
+  color: #111;
+  background: #e9e7df;
+}
+
+.canddy-page .feature-kicker {
+  margin-bottom: 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  opacity: .62;
+}
+
+.canddy-page .feature-copy h3 {
+  margin: 0;
+  font-size: clamp(40px, 4.6vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -.06em;
+}
+
+.canddy-page .feature-copy > p {
+  max-width: 570px;
+  margin: 28px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: .68;
+}
+
+.canddy-page .ingredient-row {
+  margin-top: 38px;
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  border-color: rgba(255,255,255,.25);
+}
+
+.canddy-page .feature-gastro .ingredient-row {
+  border-color: rgba(16,16,15,.18);
+}
+
+.canddy-page .ingredient-row div + div {
+  padding-left: 18px;
+  border-left: 1px solid rgba(255,255,255,.2);
+}
+
+.canddy-page .feature-gastro .ingredient-row div + div {
+  border-color: rgba(16,16,15,.16);
+}
+
+.canddy-page .ingredient-row strong {
+  display: block;
+  font-size: clamp(25px, 2.8vw, 40px);
+  letter-spacing: -.05em;
+}
+
+.canddy-page .ingredient-row span {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  opacity: .56;
+}
+
+.canddy-page .product-notes {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.canddy-page .product-notes span {
+  padding: 8px 11px;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  font-size: 10px;
+  opacity: .66;
+}
+
+.canddy-page .feature-actions {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.canddy-page .feature-actions > a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  font-size: 12px;
+  opacity: .72;
+}
+
+.canddy-page .legal-line {
+  max-width: 570px;
+  margin-top: 18px;
+  font-size: 9px;
+  line-height: 1.6;
+  opacity: .45;
+}
+
+.canddy-page .product-visual {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.canddy-page .product-visual img {
+  position: relative;
+  z-index: 3;
+  width: 78%;
+  max-height: 76%;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 35px 28px rgba(0,0,0,.32));
+  transition: transform 450ms cubic-bezier(.2,.8,.2,1);
+}
+
+.canddy-page .feature-product:hover .product-visual img,
+.canddy-page .shop-card:hover .product-visual img {
+  transform: translateY(-8px) rotate(-1.5deg) scale(1.02);
+}
+
+.canddy-page .product-glow {
+  position: absolute;
+  width: 57%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.canddy-page .product-visual.gold .product-glow {
+  background: radial-gradient(circle at 40% 30%, #ffe271, #a87300 65%, #3c2b00);
+  box-shadow: 0 0 100px rgba(229,169,0,.35);
+}
+
+.canddy-page .product-visual.blue .product-glow {
+  background: radial-gradient(circle at 35% 35%, #a5edf1, #058eba 58%, #bb262a 100%);
+  box-shadow: 0 0 100px rgba(2,153,204,.38);
+}
+
+.canddy-page .product-orbit {
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+}
+
+.canddy-page .orbit-one {
+  width: 77%;
+  height: 36%;
+  transform: rotate(15deg);
+}
+
+.canddy-page .orbit-two {
+  width: 64%;
+  height: 72%;
+  transform: rotate(-28deg);
+}
+
+.canddy-page .moments-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.canddy-page .moment-card {
+  min-height: 540px;
+  padding: 64px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.canddy-page .moment-card > span {
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 100px;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+.canddy-page .moment-card h3 {
+  margin: 0;
+  font-size: clamp(40px, 4.4vw, 66px);
+  line-height: 1.06;
+  letter-spacing: -.055em;
+}
+
+.canddy-page .moment-card p {
+  max-width: 430px;
+  margin: 24px 0 0;
+  color: rgba(255,255,255,.6);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.canddy-page .moment-card.night {
+  background:
+    radial-gradient(circle at 78% 22%, #e8b80e 0 10%, transparent 10.5%),
+    radial-gradient(circle at 73% 25%, rgba(232,184,14,.18), transparent 24%),
+    linear-gradient(145deg, #080808, #272012);
+}
+
+.canddy-page .moment-card.aftermeal {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.62) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 65% 33%, rgba(255,255,255,.14) 0 18%, transparent 18.5%),
+    linear-gradient(145deg, #0d779f, #cf3534);
+}
+
+.canddy-page .compact-heading {
+  align-items: center;
+}
+
+.canddy-page .jake-logo {
+  width: min(300px, 100%);
+  justify-self: end;
+}
+
+.canddy-page .collection-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.canddy-page .collection-card {
+  min-height: 590px;
+  padding: 18px 18px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 280ms ease;
+}
+
+.canddy-page .collection-card:hover {
+  transform: translateY(-8px);
+}
+
+.canddy-page .collection-card.orange { background: #ffca38; }
+.canddy-page .collection-card.mint { background: #a7ded2; }
+.canddy-page .collection-card.violet { background: #cbb8e4; }
+
+.canddy-page .collection-image {
+  margin-bottom: 28px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.canddy-page .collection-image img {
+  width: 100%;
+  aspect-ratio: 1.2;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+
+.canddy-page .collection-card:hover .collection-image img {
+  transform: scale(1.035);
+}
+
+.canddy-page .collection-card > span {
+  color: rgba(16,16,15,.52);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.canddy-page .collection-card h3 {
+  margin: 12px 0 0;
+  font-size: 29px;
+  letter-spacing: -.04em;
+}
+
+.canddy-page .collection-card p {
+  margin: 15px 0 24px;
+  color: rgba(16,16,15,.63);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.canddy-page .collection-card > a {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(16,16,15,.18);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.canddy-page .story-section {
+  display: grid;
+  grid-template-columns: .93fr 1.07fr;
+  color: #fff;
+  background: #111;
+}
+
+.canddy-page .story-media {
+  position: relative;
+  min-height: 790px;
+}
+
+.canddy-page .story-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.45), transparent 50%);
+}
+
+.canddy-page .story-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.canddy-page .story-stat {
+  position: absolute;
+  z-index: 2;
+  right: 28px;
+  bottom: 28px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  background: var(--gold-soft);
+  border-radius: 50%;
+}
+
+.canddy-page .story-stat strong {
+  font-size: 43px;
+  letter-spacing: -.05em;
+}
+
+.canddy-page .story-stat span {
+  font-size: 11px;
+}
+
+.canddy-page .story-copy {
+  padding: clamp(70px, 8vw, 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.canddy-page .story-copy h2 {
+  font-size: clamp(44px, 4.8vw, 76px);
+}
+
+.canddy-page .story-copy > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 26px 0 0;
+  color: rgba(255,255,255,.58);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.canddy-page .story-metrics {
+  margin-top: 50px;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.canddy-page .story-metrics div + div {
+  padding-left: 20px;
+  border-left: 1px solid rgba(255,255,255,.16);
+}
+
+.canddy-page .story-metrics strong {
+  display: block;
+  color: var(--gold-soft);
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: -.05em;
+}
+
+.canddy-page .story-metrics span {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255,255,255,.46);
+  font-size: 10px;
+}
+
+.canddy-page .story-copy > small {
+  margin-top: 22px;
+  color: rgba(255,255,255,.3);
+  font-size: 9px;
+}
+
+.canddy-page .quality-section {
+  background: #dedbd1;
+}
+
+.canddy-page .quality-intro {
+  max-width: 900px;
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.canddy-page .quality-intro .eyebrow {
+  justify-content: center;
+}
+
+.canddy-page .quality-intro > p:last-child {
+  max-width: 650px;
+  margin: 30px auto 0;
+}
+
+.canddy-page .quality-path {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.canddy-page .quality-step {
+  min-height: 270px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.canddy-page .quality-step + .quality-step {
+  border-left: 1px solid var(--line);
+}
+
+.canddy-page .quality-step span {
+  margin-bottom: auto;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.canddy-page .quality-step strong {
+  margin-top: 60px;
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+
+.canddy-page .quality-step p {
+  margin: 14px 0 0;
+  color: rgba(16,16,15,.54);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.canddy-page .cert-row {
+  max-width: 1400px;
+  margin: 65px auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 15px;
+}
+
+.canddy-page .cert-row > span {
+  min-height: 84px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(16,16,15,.19);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+.canddy-page .cert-row small {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  color: rgba(16,16,15,.45);
+  text-align: center;
+  font-size: 9px;
+}
+
+.canddy-page .shop-section {
+  padding: 120px 5vw;
+  color: #fff;
+  background: #111;
+}
+
+.canddy-page .shop-heading {
+  max-width: 1400px;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  align-items: end;
+  gap: 50px;
+}
+
+.canddy-page .shop-heading .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -10px;
+}
+
+.canddy-page .shop-heading > p:last-child {
+  margin: 0;
+  color: rgba(255,255,255,.5);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.canddy-page .shop-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.canddy-page .shop-card {
+  min-height: 630px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.canddy-page .shop-card.gold {
+  color: #111;
+  background: #cf9a04;
+}
+
+.canddy-page .shop-card.blue {
+  color: #111;
+  background: #25a9c8;
+}
+
+.canddy-page .shop-card .product-visual {
+  position: relative;
+  min-height: 420px;
+}
+
+.canddy-page .product-visual.compact img {
+  width: 65%;
+  max-height: 70%;
+}
+
+.canddy-page .product-visual.compact .product-glow {
+  width: 42%;
+  opacity: .85;
+}
+
+.canddy-page .shop-card-copy {
+  padding: 28px 34px 32px;
+  background: rgba(255,255,255,.74);
+  backdrop-filter: blur(14px);
+}
+
+.canddy-page .shop-card-copy > span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  opacity: .5;
+}
+
+.canddy-page .shop-card-copy h3 {
+  margin: 9px 0 0;
+  font-size: 27px;
+  letter-spacing: -.04em;
+}
+
+.canddy-page .shop-card-copy > p {
+  margin: 8px 0 0;
+  font-size: 11px;
+  opacity: .58;
+}
+
+.canddy-page .shop-card-bottom {
+  margin-top: 24px;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(16,16,15,.14);
+}
+
+.canddy-page .shop-card-bottom strong {
+  font-size: 12px;
+}
+
+.canddy-page .shop-card-bottom button {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #111;
+  font-size: 21px;
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.canddy-page .shop-card-bottom button:hover {
+  transform: rotate(90deg);
+}
+
+.canddy-page .use-section {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 90px;
+}
+
+.canddy-page .use-heading h2 {
+  font-size: clamp(44px, 5vw, 74px);
+}
+
+.canddy-page .use-grid details {
+  border-top: 1px solid var(--line);
+}
+
+.canddy-page .use-grid details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.canddy-page .use-grid summary {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.canddy-page .use-grid summary::-webkit-details-marker {
+  display: none;
+}
+
+.canddy-page .use-grid summary span {
+  font-size: 22px;
+  font-weight: 300;
+  transition: transform 180ms ease;
+}
+
+.canddy-page .use-grid details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.canddy-page .use-grid details p {
+  max-width: 720px;
+  margin: -5px 0 28px;
+  color: rgba(16,16,15,.57);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.canddy-page .compliance-section {
+  padding: 36px 5vw;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 24px;
+  color: #2f2503;
+  background: var(--gold-soft);
+}
+
+.canddy-page .compliance-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(47,37,3,.35);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.canddy-page .compliance-section strong {
+  font-size: 13px;
+}
+
+.canddy-page .compliance-section p {
+  margin: 7px 0 0;
+  max-width: 1150px;
+  font-size: 10px;
+  line-height: 1.65;
+  opacity: .67;
+}
+
+.canddy-page footer {
+  padding: 100px 5vw 28px;
+  color: #fff;
+  background: #090909;
+}
+
+.canddy-page .footer-top {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 70px;
+}
+
+.canddy-page .footer-brand {
+  color: #fff;
+}
+
+.canddy-page .footer-top h2 {
+  margin: 55px 0 0;
+  font-size: clamp(45px, 5vw, 74px);
+  line-height: 1.03;
+  letter-spacing: -.06em;
+}
+
+.canddy-page .footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.canddy-page .footer-links > div {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.canddy-page .footer-links strong {
+  margin-bottom: 15px;
+  color: rgba(255,255,255,.35);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.canddy-page .footer-links a,
+.canddy-page .footer-links span {
+  color: rgba(255,255,255,.68);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.canddy-page .footer-links a:hover {
+  color: var(--gold-soft);
+}
+
+.canddy-page .footer-bottom {
+  max-width: 1400px;
+  margin: 80px auto 0;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255,255,255,.13);
+  color: rgba(255,255,255,.3);
+  font-size: 9px;
+}
+
+.canddy-page .drawer-backdrop,
+.canddy-page .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,.68);
+  backdrop-filter: blur(4px);
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.canddy-page .drawer-backdrop.visible,
+.canddy-page .modal-backdrop.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.canddy-page .cart-drawer {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(480px, 100vw);
+  display: flex;
+  flex-direction: column;
+  background: #f4f2eb;
+  transform: translateX(100%);
+  transition: transform 380ms cubic-bezier(.75,0,.18,1);
+}
+
+.canddy-page .cart-drawer.open {
+  transform: translateX(0);
+}
+
+.canddy-page .drawer-header {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.canddy-page .drawer-header span {
+  font-size: 8px;
+  letter-spacing: .15em;
+  opacity: .48;
+}
+
+.canddy-page .drawer-header h2 {
+  margin: 5px 0 0;
+  font-size: 29px;
+  letter-spacing: -.04em;
+}
+
+.canddy-page .drawer-header button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.canddy-page .drawer-body {
+  padding: 28px 32px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.canddy-page .empty-cart {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.canddy-page .empty-cart > span {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 36px;
+  opacity: .32;
+}
+
+.canddy-page .empty-cart h3 {
+  margin: 25px 0 0;
+  font-size: 22px;
+}
+
+.canddy-page .empty-cart p {
+  max-width: 280px;
+  margin: 10px 0 25px;
+  color: rgba(16,16,15,.5);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.canddy-page .empty-cart button,
+.canddy-page .submitted-state button {
+  padding: 11px 20px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.canddy-page .cart-item {
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.canddy-page .cart-item img {
+  width: 110px;
+  height: 100px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.canddy-page .cart-item strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.canddy-page .cart-item span {
+  display: block;
+  margin-top: 7px;
+  color: rgba(16,16,15,.48);
+  font-size: 9px;
+}
+
+.canddy-page .quantity {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.canddy-page .quantity button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.canddy-page .quantity b {
+  min-width: 14px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.canddy-page .drawer-footer {
+  padding: 25px 32px 32px;
+  border-top: 1px solid var(--line);
+}
+
+.canddy-page .drawer-footer p {
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.canddy-page .drawer-footer small {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: rgba(16,16,15,.4);
+  font-size: 8px;
+}
+
+.canddy-page .modal-backdrop {
+  z-index: 110;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.canddy-page .inquiry-modal {
+  position: relative;
+  width: min(570px, 100%);
+  max-height: calc(100svh - 44px);
+  padding: clamp(34px, 6vw, 60px);
+  overflow-y: auto;
+  background: #f5f3ed;
+  transform: translateY(20px);
+  transition: transform 250ms ease;
+}
+
+.canddy-page .modal-backdrop.visible .inquiry-modal {
+  transform: translateY(0);
+}
+
+.canddy-page .modal-close {
+  top: 18px;
+  right: 18px;
+  color: #111;
+  border-color: var(--line);
+}
+
+.canddy-page .modal-kicker {
+  color: rgba(16,16,15,.5);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.canddy-page .inquiry-modal h2 {
+  margin: 14px 0 0;
+  font-size: clamp(32px, 6vw, 48px);
+  letter-spacing: -.055em;
+}
+
+.canddy-page .inquiry-modal > p {
+  margin: 14px 0 28px;
+  color: rgba(16,16,15,.5);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.canddy-page .inquiry-modal form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.canddy-page .inquiry-modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(16,16,15,.62);
+  font-size: 9px;
+}
+
+.canddy-page .inquiry-modal label:nth-child(4),
+.canddy-page .inquiry-modal form > button {
+  grid-column: 1 / -1;
+}
+
+.canddy-page .inquiry-modal input,
+.canddy-page .inquiry-modal textarea {
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  outline: 0;
+  background: transparent;
+  font-size: 12px;
+  resize: vertical;
+}
+
+.canddy-page .inquiry-modal input:focus,
+.canddy-page .inquiry-modal textarea:focus {
+  border-color: #111;
+}
+
+.canddy-page .submitted-state {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.canddy-page .submitted-state > span {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  color: #111;
+  background: var(--gold-soft);
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.canddy-page .submitted-state p {
+  max-width: 350px;
+  margin: 15px auto 27px;
+  color: rgba(16,16,15,.5);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+@media (max-width: 1100px) {
+  .canddy-page .hero {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 5vw;
+    padding-right: 4vw;
+  }
+
+  .canddy-page .hero-products { min-height: 520px; }
+  .canddy-page .hero-card { width: min(31vw, 340px); }
+  .canddy-page .feature-copy { padding: 50px; }
+  .canddy-page .feature-product { min-height: 590px; }
+  .canddy-page .feature-visual-wrap { min-height: 590px; }
+  .canddy-page .story-copy { padding: 70px 55px; }
+  .canddy-page .quality-step { padding: 22px; }
+}
+
+@media (max-width: 900px) {
+  .canddy-page .desktop-nav { display: none; }
+  .canddy-page .menu-button { display: block; }
+  .canddy-page .header-actions { min-width: unset; }
+  .canddy-page .hero {
+    min-height: auto;
+    padding-top: 175px;
+    padding-bottom: 90px;
+    grid-template-columns: 1fr;
+  }
+  .canddy-page .hero-copy { max-width: 700px; }
+  .canddy-page .hero-products { min-height: 610px; margin-top: 20px; }
+  .canddy-page .hero-moon { width: min(70vw, 540px); right: 5%; }
+  .canddy-page .hero-card { width: min(45vw, 360px); }
+  .canddy-page .sleep-card { left: 7%; }
+  .canddy-page .gastro-card { right: 4%; }
+  .canddy-page .section-heading,
+  .canddy-page .shop-heading,
+  .canddy-page .use-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .canddy-page .feature-product { grid-template-columns: 1fr; }
+  .canddy-page .feature-gastro .feature-copy { order: 2; }
+  .canddy-page .feature-gastro .feature-visual-wrap { order: 1; }
+  .canddy-page .feature-visual-wrap { min-height: 550px; }
+  .canddy-page .moments-section { grid-template-columns: 1fr; }
+  .canddy-page .moment-card { min-height: 480px; }
+  .canddy-page .collection-grid { grid-template-columns: 1fr 1fr; }
+  .canddy-page .collection-card:last-child { grid-column: 1 / -1; }
+  .canddy-page .story-section { grid-template-columns: 1fr; }
+  .canddy-page .story-media { min-height: 620px; }
+  .canddy-page .quality-path { grid-template-columns: 1fr 1fr; }
+  .canddy-page .quality-step:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+  .canddy-page .quality-step:nth-child(4) { border-top: 1px solid var(--line); }
+  .canddy-page .cert-row { grid-template-columns: repeat(3, 1fr); }
+  .canddy-page .shop-heading .eyebrow { margin-bottom: 0; }
+  .canddy-page .footer-top { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .canddy-page .notice-bar {
+    height: 30px;
+    justify-content: center;
+    font-size: 9px;
+  }
+  .canddy-page .notice-bar a { display: none; }
+  .canddy-page .site-header { top: 30px; height: 72px; padding: 0 20px; }
+  .canddy-page .brand { min-width: 0; gap: 9px; }
+  .canddy-page .brand-whole { font-size: 24px; }
+  .canddy-page .brand-divider { height: 17px; }
+  .canddy-page .brand-china { font-size: 10px; }
+  .canddy-page .cart-button { font-size: 0; }
+  .canddy-page .cart-button span { font-size: 10px; margin: 0; }
+  .canddy-page .hero {
+    padding: 145px 22px 65px;
+  }
+  .canddy-page .hero h1 { font-size: clamp(54px, 17vw, 80px); }
+  .canddy-page .hero-description { font-size: 13px; line-height: 1.8; }
+  .canddy-page .hero-cta { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .canddy-page .hero-products { min-height: 470px; margin-top: 15px; }
+  .canddy-page .hero-moon { width: 88vw; right: -28vw; top: 8%; }
+  .canddy-page .hero-card { width: 68vw; padding: 12px; }
+  .canddy-page .sleep-card { top: 5%; left: 0; }
+  .canddy-page .gastro-card { right: 0; bottom: 0; }
+  .canddy-page .hero-card strong { font-size: 17px; }
+  .canddy-page .hero-card small { font-size: 9px; }
+  .canddy-page .hero-note { bottom: -25px; }
+  .canddy-page .scroll-cue { display: none; }
+  .canddy-page .benefit-strip { height: 52px; }
+  .canddy-page .products-section,
+  .canddy-page .collections-section,
+  .canddy-page .quality-section,
+  .canddy-page .use-section,
+  .canddy-page .shop-section { padding: 80px 18px; }
+  .canddy-page .section-heading { margin-bottom: 48px; }
+  .canddy-page .section-heading h2,
+  .canddy-page .quality-intro h2,
+  .canddy-page .use-heading h2,
+  .canddy-page .shop-heading h2 { font-size: 43px; }
+  .canddy-page .section-heading > p { font-size: 12px; }
+  .canddy-page .feature-product { margin-bottom: 18px; }
+  .canddy-page .feature-visual-wrap { min-height: 410px; }
+  .canddy-page .feature-copy { padding: 45px 24px; }
+  .canddy-page .feature-copy h3 { font-size: 42px; }
+  .canddy-page .feature-copy > p { font-size: 12px; }
+  .canddy-page .ingredient-row { gap: 7px; }
+  .canddy-page .ingredient-row div + div { padding-left: 9px; }
+  .canddy-page .ingredient-row strong { font-size: 25px; }
+  .canddy-page .ingredient-row span { font-size: 8px; }
+  .canddy-page .feature-actions { align-items: flex-start; flex-direction: column; }
+  .canddy-page .product-visual img { width: 88%; }
+  .canddy-page .product-glow { width: 72%; }
+  .canddy-page .moment-card { min-height: 430px; padding: 38px 25px; }
+  .canddy-page .moment-card h3 { font-size: 43px; }
+  .canddy-page .compact-heading { margin-bottom: 45px; }
+  .canddy-page .jake-logo { justify-self: start; width: 230px; }
+  .canddy-page .collection-grid { grid-template-columns: 1fr; }
+  .canddy-page .collection-card,
+  .canddy-page .collection-card:last-child { grid-column: auto; min-height: 520px; }
+  .canddy-page .story-media { min-height: 480px; }
+  .canddy-page .story-stat { width: 120px; height: 120px; right: 17px; bottom: 17px; }
+  .canddy-page .story-stat strong { font-size: 34px; }
+  .canddy-page .story-copy { padding: 75px 24px; }
+  .canddy-page .story-copy h2 { font-size: 43px; }
+  .canddy-page .story-copy > p:not(.eyebrow) { font-size: 12px; }
+  .canddy-page .story-metrics { gap: 8px; }
+  .canddy-page .story-metrics div + div { padding-left: 8px; }
+  .canddy-page .story-metrics strong { font-size: 27px; }
+  .canddy-page .quality-intro { margin-bottom: 55px; }
+  .canddy-page .quality-path { grid-template-columns: 1fr; }
+  .canddy-page .quality-step + .quality-step,
+  .canddy-page .quality-step:nth-child(3),
+  .canddy-page .quality-step:nth-child(4) { border-left: 0; border-top: 1px solid var(--line); }
+  .canddy-page .quality-step { min-height: 220px; }
+  .canddy-page .cert-row { grid-template-columns: repeat(2, 1fr); }
+  .canddy-page .cert-row > span { min-height: 70px; }
+  .canddy-page .shop-grid { grid-template-columns: 1fr; }
+  .canddy-page .shop-card { min-height: 540px; }
+  .canddy-page .shop-card .product-visual { min-height: 350px; }
+  .canddy-page .shop-card-copy { padding: 24px; }
+  .canddy-page .use-grid summary { font-size: 14px; }
+  .canddy-page .compliance-section { padding: 30px 20px; align-items: flex-start; }
+  .canddy-page footer { padding: 75px 22px 25px; }
+  .canddy-page .footer-top h2 { margin-top: 40px; font-size: 45px; }
+  .canddy-page .footer-links { grid-template-columns: 1fr 1fr; gap: 40px 25px; }
+  .canddy-page .footer-links > div:last-child { grid-column: 1 / -1; }
+  .canddy-page .footer-bottom { margin-top: 55px; flex-direction: column; }
+  .canddy-page .drawer-header,
+  .canddy-page .drawer-body,
+  .canddy-page .drawer-footer { padding-left: 22px; padding-right: 22px; }
+  .canddy-page .inquiry-modal form { grid-template-columns: 1fr; }
+  .canddy-page .inquiry-modal label:nth-child(4),
+  .canddy-page .inquiry-modal form > button { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .canddy-page *,
+  .canddy-page *::before,
+  .canddy-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
