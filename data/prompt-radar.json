@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-07-31T10:06:00.217Z",
+  "updatedAt": "2026-07-31T15:37:52.127Z",
   "sourceSummary": {
-    "community": 431,
-    "publicX": 204,
-    "total": 635
+    "community": 444,
+    "publicX": 206,
+    "total": 650
   },
   "items": [
     {
@@ -48,6 +48,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Codex 5.6 真的要让剪辑师失业了！ 它现在的视频制作能力提升了不止一个档次，直接一句话生成视频！ 重度实测一周，筛选出这 4 个Skill，直接实现全流程闭环： 1️⃣ HyperFrames （内置插件） 负责整片策划、动效生成、画面合成与最终渲染。它能把文字构思直接转化为高水准的动态视频框架，实现全流程闭环交付。 2️⃣ Remotion （内置插件） 基于 React 模板的视频生成工具。支持通过代码批量生产高质感视频，尤其适合数字人+动效结合的自媒体内容，实现真正的工业化生产。 3️⃣ video-use 专门处理真人素材的剪辑工具。能自动识别镜头、精准卡点并完成后期剪辑，让 AI 具备了职业级的剪辑逻辑。 地址： 4️⃣ Seedance 针对顶级视频大模型的提示词工具。专门生成电影级运镜和实拍感指令，补齐了 AI 视频在审美和镜头质感上的短板。 地址： 现在用 Codex 5.6 + 这4个Skill，从脚本→动效→剪辑→渲染，全程AI闭环。"
+    },
+    {
+      "id": "x-public-2082408413829669201",
+      "title": "This tool is literally Higgsfield AI but FREE for good. It's called Wan2GP. A full AI video stud",
+      "description": "This tool is literally Higgsfield AI but FREE for good. It's called Wan2GP. A full AI video studio built specifically for people without expensive hardware. Runs on as little as 6GB of VRAM, even old RTX 10-series cards ",
+      "prompt": "This tool is literally Higgsfield AI but FREE for good. It's called Wan2GP. A full AI video studio built specifically for people without expensive hardware. Runs on as little as 6GB of VRAM, even old RTX 10-series cards and 8GB laptops. Everything stays on your machine, no uploads, no caps, no watermarks. What you get in one app: • Text-to-video and image-to-video generation • The best open models built in: Wan 2.2, LTX-2, Hunyuan Video, Flux • A full browser interface with a queue system • LoRA support to customize any model • Mask editor and prompt enhancer included A 5-second clip generates in minutes on a mid-range gaming rig. No subscription, ever. 100% Free. Open Source.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/simplifyinAI/status/2082408413829669201",
+      "sourceType": "x",
+      "authorName": "Simplifying AI",
+      "authorHandle": "@simplifyinAI",
+      "createdAt": "2026-07-29T10:10:29.000Z",
+      "importedAt": "2026-07-31T15:37:52.115Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1888,
+        "reposts": 249,
+        "replies": 35,
+        "quotes": 5,
+        "bookmarks": 3331,
+        "views": 107366,
+        "score": 15030
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This tool is literally Higgsfield AI but FREE for good. It's called Wan2GP. A full AI video studio built specifically for people without expensive hardware. Runs on as little as 6GB of VRAM, even old RTX 10-series cards and 8GB laptops. Everything stays on your machine, no uploads, no caps, no watermarks. What you get in one app: • Text-to-video and image-to-video generation • The best open models built in: Wan 2.2, LTX-2, Hunyuan Video, Flux • A full browser interface with a queue system • LoRA support to customize any model • Mask editor and prompt enhancer included A 5-second clip generates in minutes on a mid-range gaming rig. No subscription, ever. 100% Free. Open Source."
     },
     {
       "id": "x-public-2076202198888022135",
@@ -4628,6 +4669,50 @@
       "rawText": "Seedance 2.0 Prompt: Generate a seamless continuous one-take video using the reference images. No dialogue, hard cuts, fade transitions, or opacity changes at any moment. Use ultra slow motion with a relaxed summer atmosphere and nostalgic ’90s visual aesthetic. Connect every scene naturally using only smooth camera movement transitions. Add matching transition sound effects and keep the cinematic ambient audio flowing continuously without interruption. No music. Maintain visual consistency, coherent motion, and realistic cinematic lighting throughout. 15 seconds, 16:9 aspect ratio, 720p resolution. The camera movement was the most important part. Instead of asking the model to switch between scenes, I described every transition as a physical camera action, such as pushing through an object, panning past a foreground element, or following the subject into the next environment."
     },
     {
+      "id": "x-public-2081396725361918036",
+      "title": "Dance rehearsal mini vlog created using Seedance 2.0 Prompt: Format: 16:9 Concept: \"Behind the C",
+      "description": "Dance rehearsal mini vlog created using Seedance 2.0 Prompt: Format: 16:9 Concept: \"Behind the Choreography\" Create a hyper-realistic self-recorded vlog filmed entirely on a modern flagship smartphone using the front-fac",
+      "prompt": "Dance rehearsal mini vlog created using Seedance 2.0 Prompt: Format: 16:9 Concept: \"Behind the Choreography\" Create a hyper-realistic self-recorded vlog filmed entirely on a modern flagship smartphone using the front-facing camera. The entire video is captured by the idol herself in one continuous take, creating an authentic behind-the-scenes experience. The footage should feel completely unscripted, with natural handheld movement, subtle smartphone stabilization, realistic autofocus breathing, automatic HDR exposure adjustments, occasional imperfect framing, and genuine ambient sound. No cinematic shots, jump cuts, transitions, slow motion, or stylized editing. Visual Style Modern smartphone video with crisp 4K detail, realistic HDR, balanced indoor lighting, true-to-life colours, natural skin texture, and clean image processing. No filters, no beauty mode, no film grain, and no artificial cinematic effects. It should look exactly like a real selfie vlog filmed on a flagship phone. Character YURI, a Korean female idol in her twenties with long black hair tied into a neat high ponytail, minimal rehearsal makeup, naturally glowing skin, and an energetic, cheerful personality. She wears realistic dance practice clothing: an oversized charcoal zip-up hoodie over a fitted black athletic top, loose grey sweatpants, white sneakers, and a smartwatch. During rehearsal, she removes the hoodie and ties it around her waist, matching a real dance studio environment. Location A professional K-pop dance practice studio with mirrored walls, polished wooden floors, ceiling speakers, bright rehearsal lighting, backpacks, water bottles, towels, portable fans, and dancers warming up naturally in the background. The recording starts just outside the practice room. YURI smiles at the phone. \"Come with me... today you get to see what rehearsal actually looks like.\" She opens the studio door and walks inside, greeting the dancers with a quick wave before placing her backpack beside the mirror. She stretches while chatting casually to the camera. \"Everyone sees the performance... but not this part.\" The music starts. She removes her hoodie, ties it around her waist, and joins the rehearsal. Between dance sections she briefly films herself catching her breath, laughing after making a small mistake, checking the choreography in the mirror, taking a quick sip of water, and celebrating when the team finally nails a difficult sequence. Breathing heavily but smiling, she looks into the camera. \"We've been repeating this part forever... but it's finally coming together.\" The rehearsal finishes. The dancers applaud each other while packing their bags. YURI wipes away sweat with a towel, picks up her hoodie, and walks toward the exit. Before leaving, she turns the phone back to herself. \"That's what happens before you ever see us on stage. Thanks for hanging out with me, see you at the performance.\" She smiles, waves, switches off the studio lights as she leaves, and the recording ends naturally. Generation Requirements One continuous uninterrupted recording with consistent facial identity, realistic dance movements, believable fatigue, natural eye contact, accurate mirror reflections, physically correct body mechanics, stable clothing continuity, authentic smartphone camera behaviour, realistic indoor acoustics, and no AI artifacts, warped anatomy, duplicated reflections, jump cuts, floating objects, or unnatural motion. The final result should be indistinguishable from a real K-pop idol's behind-the-scenes rehearsal vlog filmed on her own smartphone.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/john_my07/status/2081396725361918036",
+      "sourceType": "x",
+      "authorName": "Johnn",
+      "authorHandle": "@john_my07",
+      "createdAt": "2026-07-26T15:10:24.000Z",
+      "importedAt": "2026-07-31T15:37:52.115Z",
+      "tags": [
+        "Seedance",
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 102,
+        "reposts": 6,
+        "replies": 43,
+        "quotes": 0,
+        "bookmarks": 53,
+        "views": 5156,
+        "score": 440
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Dance rehearsal mini vlog created using Seedance 2.0 Prompt: Format: 16:9 Concept: \"Behind the Choreography\" Create a hyper-realistic self-recorded vlog filmed entirely on a modern flagship smartphone using the front-facing camera. The entire video is captured by the idol herself in one continuous take, creating an authentic behind-the-scenes experience. The footage should feel completely unscripted, with natural handheld movement, subtle smartphone stabilization, realistic autofocus breathing, automatic HDR exposure adjustments, occasional imperfect framing, and genuine ambient sound. No cinematic shots, jump cuts, transitions, slow motion, or stylized editing. Visual Style Modern smartphone video with crisp 4K detail, realistic HDR, balanced indoor lighting, true-to-life colours, natural skin texture, and clean image processing. No filters, no beauty mode, no film grain, and no artificial cinematic effects. It should look exactly like a real selfie vlog filmed on a flagship phone. Character YURI, a Korean female idol in her twenties with long black hair tied into a neat high ponytail, minimal rehearsal makeup, naturally glowing skin, and an energetic, cheerful personality. She wears realistic dance practice clothing: an oversized charcoal zip-up hoodie over a fitted black athletic top, loose grey sweatpants, white sneakers, and a smartwatch. During rehearsal, she removes the hoodie and ties it around her waist, matching a real dance studio environment. Location A professional K-pop dance practice studio with mirrored walls, polished wooden floors, ceiling speakers, bright rehearsal lighting, backpacks, water bottles, towels, portable fans, and dancers warming up naturally in the background. The recording starts just outside the practice room. YURI smiles at the phone. \"Come with me... today you get to see what rehearsal actually looks like.\" She opens the studio door and walks inside, greeting the dancers with a quick wave before placing her backpack beside the mirror. She stretches while chatting casually to the camera. \"Everyone sees the performance... but not this part.\" The music starts. She removes her hoodie, ties it around her waist, and joins the rehearsal. Between dance sections she briefly films herself catching her breath, laughing after making a small mistake, checking the choreography in the mirror, taking a quick sip of water, and celebrating when the team finally nails a difficult sequence. Breathing heavily but smiling, she looks into the camera. \"We've been repeating this part forever... but it's finally coming together.\" The rehearsal finishes. The dancers applaud each other while packing their bags. YURI wipes away sweat with a towel, picks up her hoodie, and walks toward the exit. Before leaving, she turns the phone back to herself. \"That's what happens before you ever see us on stage. Thanks for hanging out with me, see you at the performance.\" She smiles, waves, switches off the studio lights as she leaves, and the recording ends naturally. Generation Requirements One continuous uninterrupted recording with consistent facial identity, realistic dance movements, believable fatigue, natural eye contact, accurate mirror reflections, physically correct body mechanics, stable clothing continuity, authentic smartphone camera behaviour, realistic indoor acoustics, and no AI artifacts, warped anatomy, duplicated reflections, jump cuts, floating objects, or unnatural motion. The final result should be indistinguishable from a real K-pop idol's behind-the-scenes rehearsal vlog filmed on her own smartphone."
+    },
+    {
       "id": "x-public-2080599731097706736",
       "title": "I created this 15-second cinematic product video with @gptproto using Seedance 2.0, and I was re",
       "description": "I created this 15-second cinematic product video with @gptproto using Seedance 2.0, and I was really impressed by how smooth the workflow was. What stood out to me was being able to access multiple advanced AI models in ",
@@ -8141,6 +8226,458 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2083029263838798254",
+      "title": "个人资料 / 头像 - 泪眼朦胧的粉彩女仆动漫贴纸",
+      "description": "生成一张近景粉彩动漫女仆角色贴纸，包含双马尾、兽耳以及悲伤的泪眼表情，适用于表情包或同人头像。",
+      "prompt": "创作一张正方形的动漫近景头像贴纸，主角为 {argument name=\"character name\" default=\"一位可爱的虚拟偶像女仆女孩\"}，正面对着镜头，背景为极浅的淡紫色。画面仅展示头部、肩膀和上胸部，居中且对称，采用超大 Q 版头部比例和柔和细腻的线条。角色留着长双马尾，发色为 {argument name=\"hair color\" default=\"棉花糖粉色，带有明亮的青蓝色挑染和蓝色发梢\"}，留着整齐的齐刘海，两侧有两条编发，头发后方竖起一对白色大兽耳。头戴白色荷叶边女仆发箍，顶部配有一顶小型水手帽，帽上印有醒目的黑色船锚标志。两侧各有一个大型发饰：黑白相间的荷叶边矩形女仆发夹，配有浅灰色蝴蝶结和垂下的丝带。表情悲伤且泪眼婆娑：半睁的紫粉色闪亮双眼，下眼睑处有明显的泪水，脸颊泛红，小巧的嘴角下垂，呈现出脆弱的嘟嘴神态。身穿白色荷叶边女仆装，配有高领荷叶边，隐约可见露肩袖，胸衣带有黑色滚边，颈部系有一个显眼的淡紫色蝴蝶结。采用柔和的粉彩 VTuber 同人画风，眼睛光泽感强，脸颊有柔和的腮红渐变，干净的赛璐珞阴影，发丝带有细腻的高光，无文字，无水印，无其他角色，构图紧凑，呈现出数字贴纸或表情包的效果。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487783534_dph81i_HOhoDo4a8AA7n1p.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AquaSuisei_445/status/2083029263838798254#reversed-0",
+      "sourceType": "community",
+      "authorName": "真夜ありあ",
+      "authorHandle": "@AquaSuisei_445",
+      "createdAt": "2026-07-31T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.963Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30397",
+      "rawText": "创作一张正方形的动漫近景头像贴纸，主角为 {argument name=\"character name\" default=\"一位可爱的虚拟偶像女仆女孩\"}，正面对着镜头，背景为极浅的淡紫色。画面仅展示头部、肩膀和上胸部，居中且对称，采用超大 Q 版头部比例和柔和细腻的线条。角色留着长双马尾，发色为 {argument name=\"hair color\" default=\"棉花糖粉色，带有明亮的青蓝色挑染和蓝色发梢\"}，留着整齐的齐刘海，两侧有两条编发，头发后方竖起一对白色大兽耳。头戴白色荷叶边女仆发箍，顶部配有一顶小型水手帽，帽上印有醒目的黑色船锚标志。两侧各有一个大型发饰：黑白相间的荷叶边矩形女仆发夹，配有浅灰色蝴蝶结和垂下的丝带。表情悲伤且泪眼婆娑：半睁的紫粉色闪亮双眼，下眼睑处有明显的泪水，脸颊泛红，小巧的嘴角下垂，呈现出脆弱的嘟嘴神态。身穿白色荷叶边女仆装，配有高领荷叶边，隐约可见露肩袖，胸衣带有黑色滚边，颈部系有一个显眼的淡紫色蝴蝶结。采用柔和的粉彩 VTuber 同人画风，眼睛光泽感强，脸颊有柔和的腮红渐变，干净的赛璐珞阴影，发丝带有细腻的高光，无文字，无水印，无其他角色，构图紧凑，呈现出数字贴纸或表情包的效果。"
+    },
+    {
+      "id": "community-2083076046673383837",
+      "title": "社交媒体帖子 - 东亚女性热气球节",
+      "description": "一张超写实的旅行人像，展现了一位女性在日落热气球节上的风采，融合了电影级光影与精致的时尚摄影风格。",
+      "prompt": "一张超写实的旅行人像，展现了一位迷人的年轻 {argument name=\"ethnicity\" default=\"东亚\"} 女性在温暖的夏日傍晚，尽情享受热闹非凡的热气球节。她留着一头柔顺的 {argument name=\"hair color\" default=\"栗棕色\"} 长发，在微风中轻轻飘动；白皙的肌肤透着自然光泽，双颊泛着柔和的红晕，明亮的榛棕色双眸充满神采，妆容精致日常，双唇呈现自然的玫瑰色光泽。她身着 {argument name=\"outfit\" default=\"一件时尚的浅蓝色牛仔连体短裤，内搭修身黑色背心，腰间系着一条细黑色腰带\"}。肩上背着一个精致的黑色小圆包，领口随意挂着一副时尚墨镜。她对着镜头露出灿烂真诚的笑容，一只脚微微向前，双手轻叠在身前，姿态轻松亲和。背景中，数十个色彩斑斓的热气球正升入金色的落日余晖中，下方是绿意盎然、人头攒动的节日草坪。远处的装饰性雕塑、彩色帐篷和零星的气球为画面增添了层次感与活力。浓郁的黄金时刻光影为景观披上暖色调，营造出柔和的高光、自然的阴影和优美的镜头压缩感。浅景深带来奶油般的背景虚化效果，色彩鲜艳且富有电影质感，呈现出高端旅行杂志的审美。这组受韩系风格启发的时尚摄影作品，使用 85mm 人像镜头在 f/1.8 光圈下拍摄，具备 HDR、超高清 8K 分辨率、真实的皮肤细节、编辑级构图，完美捕捉了户外冒险的欢乐氛围。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487732007_d7ee0s_HOiSldxakAAnto2.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/john_my07/status/2083076046673383837",
+      "sourceType": "community",
+      "authorName": "Johnn",
+      "authorHandle": "@john_my07",
+      "createdAt": "2026-07-31T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30352",
+      "rawText": "一张超写实的旅行人像，展现了一位迷人的年轻 {argument name=\"ethnicity\" default=\"东亚\"} 女性在温暖的夏日傍晚，尽情享受热闹非凡的热气球节。她留着一头柔顺的 {argument name=\"hair color\" default=\"栗棕色\"} 长发，在微风中轻轻飘动；白皙的肌肤透着自然光泽，双颊泛着柔和的红晕，明亮的榛棕色双眸充满神采，妆容精致日常，双唇呈现自然的玫瑰色光泽。她身着 {argument name=\"outfit\" default=\"一件时尚的浅蓝色牛仔连体短裤，内搭修身黑色背心，腰间系着一条细黑色腰带\"}。肩上背着一个精致的黑色小圆包，领口随意挂着一副时尚墨镜。她对着镜头露出灿烂真诚的笑容，一只脚微微向前，双手轻叠在身前，姿态轻松亲和。背景中，数十个色彩斑斓的热气球正升入金色的落日余晖中，下方是绿意盎然、人头攒动的节日草坪。远处的装饰性雕塑、彩色帐篷和零星的气球为画面增添了层次感与活力。浓郁的黄金时刻光影为景观披上暖色调，营造出柔和的高光、自然的阴影和优美的镜头压缩感。浅景深带来奶油般的背景虚化效果，色彩鲜艳且富有电影质感，呈现出高端旅行杂志的审美。这组受韩系风格启发的时尚摄影作品，使用 85mm 人像镜头在 f/1.8 光圈下拍摄，具备 HDR、超高清 8K 分辨率、真实的皮肤细节、编辑级构图，完美捕捉了户外冒险的欢乐氛围。"
+    },
+    {
+      "id": "community-2083075184840655010",
+      "title": "社交媒体帖子 - 温馨阳光室内生活方式肖像",
+      "description": "一份全面且详尽的提示词，用于生成一位女性在阳光明媚的客厅中的写实肖像，重点在于光影、质感和轻松的氛围。",
+      "prompt": "主题：{argument name=\"theme\" default=\"阳光与摄影集\"}\n\n主要人物：一张写实的生活方式肖像，一位 {argument name=\"model age\" default=\"20 多岁\"} 的女性坐在铺满温暖阳光的客厅里，身下是一块米色的长绒地毯，上半身倚靠在画面左侧的象牙白织物沙发上。女性呈对角线分布，从左上角延伸至右下角，头部和肩部位于左上，胸部位于中左，腰部位于中右，弯曲且交叠的双腿在下半部分显著延伸至右下角。她的右肘靠在沙发座垫上，右手轻轻托住后脑勺。左臂从身体侧面延伸至腰部，但前臂被身体和画面边缘遮挡。她的上半身向右倾斜，腰部微微扭转，双膝深弯，双腿前后交叠。\n\n人物/表情：脸型小巧且略长，肤色呈浅米色，棕色眉毛修剪精致，深棕色大眼睛，精致的眼线和长睫毛，脸颊呈淡珊瑚粉色，嘴唇为自然的粉米色。她以平静的表情注视着镜头，脸部微微向右倾斜，双唇微张。头发为中长发，长度过肩，呈红棕色，薄刘海轻垂在额前，脸部周围有层次感，发梢向内和向外柔和地卷曲。来自画面右上方的光线在发顶、刘海、脸颊、鼻梁和锁骨处营造出纤细的金色高光，窗影淡淡地落在她的脸颊上。双耳佩戴着小巧的单颗耳钉。\n\n服装/姿势：{argument name=\"clothing\" default=\"一件淡三文鱼粉色的罗纹针织吊带背心，配有细肩带\"}。领口为深亨利领，短前襟上垂直排列着几颗同色小纽扣，全身布满密集的竖向罗纹。下摆较短，在腹部上方微微外扩，露出腰部和肚脐。下身穿着柔软的白色短裤，配有厚实的松紧腰带，臀部周围有细密的褶皱，裤腿和侧面边缘带有双层荷叶边，腰部扭转处呈现出薄织物带来的自然褶皱。她的右手触碰着头发和后脑勺，自然地连接起肩膀、手肘和手腕。前景中的大腿和膝盖表现突出，后腿弯曲在下方，双脚在右下边缘被部分裁切。\n\n背景/光影：左下角前景处放置着一本打开的摄影集，跨页展示着多张女性肖像。另一本带有白色封面的薄摄影集斜放在右下角女性腰部后方。左侧中景是一张厚实的象牙白沙发，靠背上铺着一条自然色调的图案针织毯和靠垫。后方中心是一株叶片向上舒展的高大室内植物。右后方是一个蜂蜜色的木质矮项目/书架，右上部分垂直排列着不同颜色的书籍，中间放着一个绿色植物的小白盆，右下角堆放着书籍。右边缘显示出部分矮木桌的桌腿和桌面，上方可见明亮的窗户和模糊的绿植。主要光源是来自右上角窗户的温暖自然光，明亮地照亮了头发、脸部、肩膀、胸部、腹部、大腿和地毯，同时在沙发下方和家具后方投下柔和的棕色阴影。\n\n构图/摄影：3:4 竖构图，室内生活方式肖像，从靠近地面的低角度拍摄，略微仰视女性的视线水平。脸部位于左上三分之一处，胸部位于中心，白色短裤位于中右，明亮的前景大腿和交叠的双膝占据了下半部分的大面积区域。主体占据了约四分之三的画面，右臂、双脚和前景的摄影集部分被画面边缘自然裁切。眼睛和脸部是焦点最清晰的地方，同时保持了头发、衣服、前景腿部和打开的摄影集的细节。背景中的室内植物、书架和窗户呈现出浅景深带来的柔和模糊效果。标准镜头的视角为前景腿部提供了自然的透视感，避免了极端的广角畸变。\n\n质感/风格：高分辨率写实数码摄影。以温暖的奶油色、米色、淡粉色、白色和木棕色为主调，室内植物的绿色作为小面积点缀。皮肤没有过度磨皮，保留了脸颊淡淡的红晕、肩膀和腿部柔和的光泽，以及光影之间平滑的过渡。清晰呈现的细节包括单根头发的反光、吊带背心密集的竖向罗纹、短裤的薄织物和荷叶边、沙发的编织纹理、地毯的长纤维、摄影集的亮面纸张以及家具的木纹。实现了背景柔焦与前景清晰度之间的平衡，呈现出干净、自然的生活方式质感。\n\n负面提示词：避免脸部畸变、眼睛不对齐、手指或手腕不自然、手指数量错误、手臂与头发融合、肩膀或胸腔变形、腿部交叠断裂、关节角度反转、在地毯上着地感差、衣服穿模、强烈的广角畸变、背景家具透视错误、不自然的阴影、摄影集中可辨认的文字、Logo、水印或过度磨皮。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487760201_7jqzqh_HOW8vBSawAAghM5.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2083075184840655010",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-07-31T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30381",
+      "rawText": "主题：{argument name=\"theme\" default=\"阳光与摄影集\"}\n\n主要人物：一张写实的生活方式肖像，一位 {argument name=\"model age\" default=\"20 多岁\"} 的女性坐在铺满温暖阳光的客厅里，身下是一块米色的长绒地毯，上半身倚靠在画面左侧的象牙白织物沙发上。女性呈对角线分布，从左上角延伸至右下角，头部和肩部位于左上，胸部位于中左，腰部位于中右，弯曲且交叠的双腿在下半部分显著延伸至右下角。她的右肘靠在沙发座垫上，右手轻轻托住后脑勺。左臂从身体侧面延伸至腰部，但前臂被身体和画面边缘遮挡。她的上半身向右倾斜，腰部微微扭转，双膝深弯，双腿前后交叠。\n\n人物/表情：脸型小巧且略长，肤色呈浅米色，棕色眉毛修剪精致，深棕色大眼睛，精致的眼线和长睫毛，脸颊呈淡珊瑚粉色，嘴唇为自然的粉米色。她以平静的表情注视着镜头，脸部微微向右倾斜，双唇微张。头发为中长发，长度过肩，呈红棕色，薄刘海轻垂在额前，脸部周围有层次感，发梢向内和向外柔和地卷曲。来自画面右上方的光线在发顶、刘海、脸颊、鼻梁和锁骨处营造出纤细的金色高光，窗影淡淡地落在她的脸颊上。双耳佩戴着小巧的单颗耳钉。\n\n服装/姿势：{argument name=\"clothing\" default=\"一件淡三文鱼粉色的罗纹针织吊带背心，配有细肩带\"}。领口为深亨利领，短前襟上垂直排列着几颗同色小纽扣，全身布满密集的竖向罗纹。下摆较短，在腹部上方微微外扩，露出腰部和肚脐。下身穿着柔软的白色短裤，配有厚实的松紧腰带，臀部周围有细密的褶皱，裤腿和侧面边缘带有双层荷叶边，腰部扭转处呈现出薄织物带来的自然褶皱。她的右手触碰着头发和后脑勺，自然地连接起肩膀、手肘和手腕。前景中的大腿和膝盖表现突出，后腿弯曲在下方，双脚在右下边缘被部分裁切。\n\n背景/光影：左下角前景处放置着一本打开的摄影集，跨页展示着多张女性肖像。另一本带有白色封面的薄摄影集斜放在右下角女性腰部后方。左侧中景是一张厚实的象牙白沙发，靠背上铺着一条自然色调的图案针织毯和靠垫。后方中心是一株叶片向上舒展的高大室内植物。右后方是一个蜂蜜色的木质矮项目/书架，右上部分垂直排列着不同颜色的书籍，中间放着一个绿色植物的小白盆，右下角堆放着书籍。右边缘显示出部分矮木桌的桌腿和桌面，上方可见明亮的窗户和模糊的绿植。主要光源是来自右上角窗户的温暖自然光，明亮地照亮了头发、脸部、肩膀、胸部、腹部、大腿和地毯，同时在沙发下方和家具后方投下柔和的棕色阴影。\n\n构图/摄影：3:4 竖构图，室内生活方式肖像，从靠近地面的低角度拍摄，略微仰视女性的视线水平。脸部位于左上三分之一处，胸部位于中心，白色短裤位于中右，明亮的前景大腿和交叠的双膝占据了下半部分的大面积区域。主体占据了约四分之三的画面，右臂、双脚和前景的摄影集部分被画面边缘自然裁切。眼睛和脸部是焦点最清晰的地方，同时保持了头发、衣服、前景腿部和打开的摄影集的细节。背景中的室内植物、书架和窗户呈现出浅景深带来的柔和模糊效果。标准镜头的视角为前景腿部提供了自然的透视感，避免了极端的广角畸变。\n\n质感/风格：高分辨率写实数码摄影。以温暖的奶油色、米色、淡粉色、白色和木棕色为主调，室内植物的绿色作为小面积点缀。皮肤没有过度磨皮，保留了脸颊淡淡的红晕、肩膀和腿部柔和的光泽，以及光影之间平滑的过渡。清晰呈现的细节包括单根头发的反光、吊带背心密集的竖向罗纹、短裤的薄织物和荷叶边、沙发的编织纹理、地毯的长纤维、摄影集的亮面纸张以及家具的木纹。实现了背景柔焦与前景清晰度之间的平衡，呈现出干净、自然的生活方式质感。\n\n负面提示词：避免脸部畸变、眼睛不对齐、手指或手腕不自然、手指数量错误、手臂与头发融合、肩膀或胸腔变形、腿部交叠断裂、关节角度反转、在地毯上着地感差、衣服穿模、强烈的广角畸变、背景家具透视错误、不自然的阴影、摄影集中可辨认的文字、Logo、水印或过度磨皮。"
+    },
+    {
+      "id": "community-2083072422857847029",
+      "title": "社交媒体帖子 - 照片级真实感草地时尚大片",
+      "description": "生成一张在野花丛中拍摄的专业户外时尚人像，利用先进的相机设置和光影效果，呈现极致的真实感。",
+      "prompt": "参考图中 {argument name=\"subject\" default=\"年轻亚裔女性\"} 的超写实户外时尚人像，保留其精准的面部特征、柔和的脸部轮廓、自然的皮肤纹理、深棕色眼眸、淡粉色双唇，以及扎成随性低马尾的深棕色长发，几缕发丝自然地拂过脸颊。她优雅地坐在 {argument name=\"setting\" default=\"广阔的野花草甸\"} 中，单手向后支撑，双腿轻柔地叠向一侧，目光望向地平线，神情平静而梦幻。姿态自然随性，仿佛是在真实时尚大片拍摄过程中捕捉到的瞬间。她身着与参考图相同的 {argument name=\"clothing\" default=\"奶油色碎花连衣裙\"}，点缀着细小的柔和色调花朵，肩带系成蝴蝶结，心形领口饰有精致的荷叶边，前襟系带束腰设计，修身剪裁，面料轻盈飘逸。环境：一望无际的白色雏菊与明亮的黄色野花丛，郁郁葱葱的绿草，背景是茂密的森林树线，连绵起伏的丘陵，湛蓝的夏日天空点缀着大朵蓬松的积云，空气清澈，充满清新的乡村气息。光影：纯正的夏日金色日光，来自相机左侧的自然定向阳光，柔和的阴影，真实的皮肤高光，发丝上的细腻逆光，物理级全局光照，曝光平衡，无 HDR 过度处理痕迹。相机：全画幅 Sony A7R V，85mm f/1.8 人像镜头，平视角度并带有轻微侧向视角，中景全身构图，浅景深，奶油般柔滑的电影感虚化，前景花朵轻微模糊，主体焦点精准锐利。风格：奢华户外时尚大片摄影，Vogue 乡村美学，电影级写实感，不经意的抓拍瞬间，自然的身体比例，真实的衣物褶皱，风与裙摆及发丝的互动，还原真实色彩，极其细腻的皮肤毛孔，微观纹理，高动态范围，细腻的胶片感调色，与真实的单反摄影作品无异。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487738402_park0e_HOiPUlXbsAAjsB4.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/meng_dagg695/status/2083072422857847029",
+      "sourceType": "community",
+      "authorName": "Shahid Wani",
+      "authorHandle": "@meng_dagg695",
+      "createdAt": "2026-07-31T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30359",
+      "rawText": "参考图中 {argument name=\"subject\" default=\"年轻亚裔女性\"} 的超写实户外时尚人像，保留其精准的面部特征、柔和的脸部轮廓、自然的皮肤纹理、深棕色眼眸、淡粉色双唇，以及扎成随性低马尾的深棕色长发，几缕发丝自然地拂过脸颊。她优雅地坐在 {argument name=\"setting\" default=\"广阔的野花草甸\"} 中，单手向后支撑，双腿轻柔地叠向一侧，目光望向地平线，神情平静而梦幻。姿态自然随性，仿佛是在真实时尚大片拍摄过程中捕捉到的瞬间。她身着与参考图相同的 {argument name=\"clothing\" default=\"奶油色碎花连衣裙\"}，点缀着细小的柔和色调花朵，肩带系成蝴蝶结，心形领口饰有精致的荷叶边，前襟系带束腰设计，修身剪裁，面料轻盈飘逸。环境：一望无际的白色雏菊与明亮的黄色野花丛，郁郁葱葱的绿草，背景是茂密的森林树线，连绵起伏的丘陵，湛蓝的夏日天空点缀着大朵蓬松的积云，空气清澈，充满清新的乡村气息。光影：纯正的夏日金色日光，来自相机左侧的自然定向阳光，柔和的阴影，真实的皮肤高光，发丝上的细腻逆光，物理级全局光照，曝光平衡，无 HDR 过度处理痕迹。相机：全画幅 Sony A7R V，85mm f/1.8 人像镜头，平视角度并带有轻微侧向视角，中景全身构图，浅景深，奶油般柔滑的电影感虚化，前景花朵轻微模糊，主体焦点精准锐利。风格：奢华户外时尚大片摄影，Vogue 乡村美学，电影级写实感，不经意的抓拍瞬间，自然的身体比例，真实的衣物褶皱，风与裙摆及发丝的互动，还原真实色彩，极其细腻的皮肤毛孔，微观纹理，高动态范围，细腻的胶片感调色，与真实的单反摄影作品无异。"
+    },
+    {
+      "id": "community-2083060815884701877",
+      "title": "社交媒体帖子 - 手工混合媒介肖像画",
+      "description": "一个艺术提示词，用于生成具有原始混合媒介外观的肖像，结合了丙烯画笔触、木炭和墨水纹理，营造出手工制作的质感。",
+      "prompt": "创作一幅高度精细的混合媒介肖像画，主体为 {argument name=\"subject\" default=\"主体面部\"}，结合丙烯画笔触、木炭涂抹、铅笔素描、粗糙的颜料飞溅、拼贴纹理、纸张颗粒、富有表现力的墨迹以及不完美的手工细节，打造出真实的人工艺术作品外观。整体构图应呈现出原始、艺术且自然不完美的质感，避免过于干净或过于精致的数字效果。使用 {argument name=\"colors\" default=\"明亮、醒目且充满活力的色彩\"} 并搭配丰富的色调变化，使作品充满活力且引人入胜，避免单调。添加可见的皮肤纹理细节、分层颜料质感、细腻的粗糙笔触和有机的不完美感，以增强真实感和艺术深度。混合媒介风格应贯穿整个视觉呈现，包括服装和周围的艺术元素，使最终作品在视觉上协调统一，完全沉浸在混合媒介的美学中。主体的姿势和面部表情必须显得 {argument name=\"mood\" default=\"放松且自然\"}，避免僵硬的肢体语言、尴尬的姿势或阴郁的情绪基调。姿势、角度、表情和整体构图必须与所附参考照片保持一致，同时保留主体的身份特征。服装应现代、时尚、休闲且前卫，包含分层服装细节、潮流当代时尚元素、独特的纹理以及能增强艺术氛围的视觉趣味配饰。避免平庸、通用、重复或标准的服装设计，并确保服装与参考图片中的服装完全不同。专注于创作一幅视觉平衡、艺术氛围浓厚、具有真实手工不完美感、丰富的混合媒介层次以及强烈情感能量的作品，同时保持优雅且美观的肖像构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487737504_0jh14k_HOiEw2ebkAA7xlJ.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/de_mon010/status/2083060815884701877",
+      "sourceType": "community",
+      "authorName": "Karlos",
+      "authorHandle": "@de_mon010",
+      "createdAt": "2026-07-31T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30357",
+      "rawText": "创作一幅高度精细的混合媒介肖像画，主体为 {argument name=\"subject\" default=\"主体面部\"}，结合丙烯画笔触、木炭涂抹、铅笔素描、粗糙的颜料飞溅、拼贴纹理、纸张颗粒、富有表现力的墨迹以及不完美的手工细节，打造出真实的人工艺术作品外观。整体构图应呈现出原始、艺术且自然不完美的质感，避免过于干净或过于精致的数字效果。使用 {argument name=\"colors\" default=\"明亮、醒目且充满活力的色彩\"} 并搭配丰富的色调变化，使作品充满活力且引人入胜，避免单调。添加可见的皮肤纹理细节、分层颜料质感、细腻的粗糙笔触和有机的不完美感，以增强真实感和艺术深度。混合媒介风格应贯穿整个视觉呈现，包括服装和周围的艺术元素，使最终作品在视觉上协调统一，完全沉浸在混合媒介的美学中。主体的姿势和面部表情必须显得 {argument name=\"mood\" default=\"放松且自然\"}，避免僵硬的肢体语言、尴尬的姿势或阴郁的情绪基调。姿势、角度、表情和整体构图必须与所附参考照片保持一致，同时保留主体的身份特征。服装应现代、时尚、休闲且前卫，包含分层服装细节、潮流当代时尚元素、独特的纹理以及能增强艺术氛围的视觉趣味配饰。避免平庸、通用、重复或标准的服装设计，并确保服装与参考图片中的服装完全不同。专注于创作一幅视觉平衡、艺术氛围浓厚、具有真实手工不完美感、丰富的混合媒介层次以及强烈情感能量的作品，同时保持优雅且美观的肖像构图。"
+    },
+    {
+      "id": "community-2082919211987317119",
+      "title": "个人资料 / 头像 - 奢华白色西装影棚肖像",
+      "description": "生成一张精致的奢华影棚肖像，展示一名身着全白正装的男士坐姿，适用于个人品牌推广或杂志风格的个人形象照。",
+      "prompt": "创作一张奢华的杂志风格影棚肖像，主角是一位自信的年轻人 {argument name=\"subject description\" default=\"20 多岁的黑人男性\"}，他坐在一组极简的白色几何方块上，构图居中且呈正方形。他身着无可挑剔的全白正装：剪裁合身的白色西装外套、带有精致纽扣的白色马甲、白色衬衫、白色领带、修身白色长裤、白色袜子和亮面白色正装皮鞋，手腕上佩戴着一块低调的银色腕表。姿势设定为坐姿，双腿交叉，一只手自然地放在膝盖上，另一只手肘支撑在高大的白色方块上，指尖轻触太阳穴。表情为平静的直视镜头，嘴角带着柔和的微笑，妆容精致，留着整洁的 {argument name=\"hair style\" default=\"黑色渐变短发\"}。背景是优雅的垂褶 {argument name=\"backdrop color\" default=\"银灰色缎面织物\"}，带有柔和的褶皱，营造出高级影棚的质感。灯光采用高端肖像布光：左前方使用大型柔光箱照明，辅以柔和的补光，呈现平滑的肤色、清晰的面部细节，方块下方带有微妙的阴影，避免强烈的对比。整体氛围精致、充满抱负、简洁且奢华，如同时尚杂志或个人品牌肖像。采用写实摄影风格，面部焦点清晰，比例自然，呈现 85mm 肖像镜头的视觉效果，景深为浅至中等，正方形裁剪，无文字，无水印，无额外道具。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487776788_y9vydb_HOgD-YYXwAAQVtx.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/abs_uiux/status/2082919211987317119#reversed-0",
+      "sourceType": "community",
+      "authorName": "Abkr Sadiq",
+      "authorHandle": "@abs_uiux",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.964Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30390",
+      "rawText": "创作一张奢华的杂志风格影棚肖像，主角是一位自信的年轻人 {argument name=\"subject description\" default=\"20 多岁的黑人男性\"}，他坐在一组极简的白色几何方块上，构图居中且呈正方形。他身着无可挑剔的全白正装：剪裁合身的白色西装外套、带有精致纽扣的白色马甲、白色衬衫、白色领带、修身白色长裤、白色袜子和亮面白色正装皮鞋，手腕上佩戴着一块低调的银色腕表。姿势设定为坐姿，双腿交叉，一只手自然地放在膝盖上，另一只手肘支撑在高大的白色方块上，指尖轻触太阳穴。表情为平静的直视镜头，嘴角带着柔和的微笑，妆容精致，留着整洁的 {argument name=\"hair style\" default=\"黑色渐变短发\"}。背景是优雅的垂褶 {argument name=\"backdrop color\" default=\"银灰色缎面织物\"}，带有柔和的褶皱，营造出高级影棚的质感。灯光采用高端肖像布光：左前方使用大型柔光箱照明，辅以柔和的补光，呈现平滑的肤色、清晰的面部细节，方块下方带有微妙的阴影，避免强烈的对比。整体氛围精致、充满抱负、简洁且奢华，如同时尚杂志或个人品牌肖像。采用写实摄影风格，面部焦点清晰，比例自然，呈现 85mm 肖像镜头的视觉效果，景深为浅至中等，正方形裁剪，无文字，无水印，无额外道具。"
+    },
+    {
+      "id": "community-2082836269927674172",
+      "title": "个人资料 / 头像 - 粉色女仆装镜面自拍",
+      "description": "一份关于女性身着粉色女仆风连衣裙进行写实镜面自拍的详细提示词，捕捉了真实的智能手机拍摄质感及公寓室内场景。",
+      "prompt": "创作一张 3:4 的写实镜面自拍肖像，画面中是一位美丽的成年 {argument name=\"ethnicity\" default=\"东亚裔\"} 女性，正在现代公寓的更衣区摆姿势。她拥有柔和的沙漏型身材、白皙透亮的皮肤、精致如洋娃娃般的脸庞、大而深邃的杏仁眼、小巧精致的鼻子以及柔软光泽的粉色嘴唇。她留着一头直达腰间的超长黑发，厚实的齐刘海和层次分明的发丝修饰着脸颊。她穿着一件 {argument name=\"dress style\" default=\"可爱的淡粉色女仆风迷你连衣裙\"}，配有荷叶边肩带、修身蕾丝腰部设计、缎带细节、背部大蝴蝶结以及短款层叠百褶裙。头上戴着一个配套的粉色荷叶边女仆发箍，上面点缀着小红蝴蝶结。她几乎侧身站立，腰部轻微扭向镜子，下背部微拱，一侧臀部微微向外。一只手拿着一部 {argument name=\"phone color\" default=\"淡蓝色\"} 智能手机挡在脸前，另一只手的食指轻轻抵在下巴下方，呈现出害羞而俏皮的姿势。她的双眼注视着手机屏幕，表情平静且略带嘟嘴。镜子里映出真实的公寓室内环境，包括深色门框、奶油色墙壁、灰色大理石地板，以及一个摆放着香水瓶和个人物品的小型黑色展示柜。温暖柔和的室内光线，真实的手机手持拍摄质感，略显不完美的对焦，细腻的数字噪点，真实的镜面透视与身体比例，自然的皮肤纹理，无浮动标题，无添加文字，无水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487734832_ip17ko_HOe4icRWMAAhOxu.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/johnAGI168/status/2082836269927674172",
+      "sourceType": "community",
+      "authorName": "John",
+      "authorHandle": "@johnAGI168",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30355",
+      "rawText": "创作一张 3:4 的写实镜面自拍肖像，画面中是一位美丽的成年 {argument name=\"ethnicity\" default=\"东亚裔\"} 女性，正在现代公寓的更衣区摆姿势。她拥有柔和的沙漏型身材、白皙透亮的皮肤、精致如洋娃娃般的脸庞、大而深邃的杏仁眼、小巧精致的鼻子以及柔软光泽的粉色嘴唇。她留着一头直达腰间的超长黑发，厚实的齐刘海和层次分明的发丝修饰着脸颊。她穿着一件 {argument name=\"dress style\" default=\"可爱的淡粉色女仆风迷你连衣裙\"}，配有荷叶边肩带、修身蕾丝腰部设计、缎带细节、背部大蝴蝶结以及短款层叠百褶裙。头上戴着一个配套的粉色荷叶边女仆发箍，上面点缀着小红蝴蝶结。她几乎侧身站立，腰部轻微扭向镜子，下背部微拱，一侧臀部微微向外。一只手拿着一部 {argument name=\"phone color\" default=\"淡蓝色\"} 智能手机挡在脸前，另一只手的食指轻轻抵在下巴下方，呈现出害羞而俏皮的姿势。她的双眼注视着手机屏幕，表情平静且略带嘟嘴。镜子里映出真实的公寓室内环境，包括深色门框、奶油色墙壁、灰色大理石地板，以及一个摆放着香水瓶和个人物品的小型黑色展示柜。温暖柔和的室内光线，真实的手机手持拍摄质感，略显不完美的对焦，细腻的数字噪点，真实的镜面透视与身体比例，自然的皮肤纹理，无浮动标题，无添加文字，无水印。"
+    },
+    {
+      "id": "community-2082816881841639454",
+      "title": "个人资料 / 头像 - 动漫伙伴肖像",
+      "description": "创作一张超写实的竖版肖像，展示人物与其亲昵的动漫版形象，呈现俏皮的韩国网红美学风格。",
+      "prompt": "请仅使用上传的参考图作为身份识别依据，准确保留主体的面部特征、发型、比例及可辨识的外观。创作一张高质量的竖版肖像，其中包含 {argument name=\"subject description\" default=\"同一人物的两个版本：一个栩栩如生的超写实主体，以及一个较小的、精美的动漫对应形象\"}，两者需具备相同的面部、发型、服装和个性。动漫伙伴应表现得极其亲昵——例如挽着主体的胳膊、靠在主体身上、比出小巧的手指爱心，或是用闪烁着崇拜光芒的眼睛抬头仰望。与此同时，写实版本应呈现 {argument name=\"expression\" default=\"一种可爱且刻意装出的冷漠或轻微尴尬的表情\"}，仿佛在假装被困扰，实则暗自享受这份关注。强调两个角色之间俏皮的化学反应，动漫版本直率地表达爱意，而写实版本则在戏谑的态度下隐约流露温情。场景设定为 {argument name=\"aesthetic\" default=\"干净、柔和的韩国网红美学风格\"}，配以柔和的自然光、优雅的构图、主体清晰的写实感、精致的动漫插画质感，以及整体奢华且适合社交媒体发布的视觉效果。\n\n避免：真实的愤怒或敌意、面无表情、阴暗或诡异的氛围、面部相似度低、塑料或玩偶般的渲染、解剖结构扭曲、多余的肢体或手指、杂乱的背景、文字、Logo 或水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487740245_yunhqj_HOem5kPboAAyEbA.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/mehvishs25/status/2082816881841639454",
+      "sourceType": "community",
+      "authorName": "Meem",
+      "authorHandle": "@mehvishs25",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30362",
+      "rawText": "请仅使用上传的参考图作为身份识别依据，准确保留主体的面部特征、发型、比例及可辨识的外观。创作一张高质量的竖版肖像，其中包含 {argument name=\"subject description\" default=\"同一人物的两个版本：一个栩栩如生的超写实主体，以及一个较小的、精美的动漫对应形象\"}，两者需具备相同的面部、发型、服装和个性。动漫伙伴应表现得极其亲昵——例如挽着主体的胳膊、靠在主体身上、比出小巧的手指爱心，或是用闪烁着崇拜光芒的眼睛抬头仰望。与此同时，写实版本应呈现 {argument name=\"expression\" default=\"一种可爱且刻意装出的冷漠或轻微尴尬的表情\"}，仿佛在假装被困扰，实则暗自享受这份关注。强调两个角色之间俏皮的化学反应，动漫版本直率地表达爱意，而写实版本则在戏谑的态度下隐约流露温情。场景设定为 {argument name=\"aesthetic\" default=\"干净、柔和的韩国网红美学风格\"}，配以柔和的自然光、优雅的构图、主体清晰的写实感、精致的动漫插画质感，以及整体奢华且适合社交媒体发布的视觉效果。\n\n避免：真实的愤怒或敌意、面无表情、阴暗或诡异的氛围、面部相似度低、塑料或玩偶般的渲染、解剖结构扭曲、多余的肢体或手指、杂乱的背景、文字、Logo 或水印。"
+    },
+    {
+      "id": "community-2082806176950153464",
+      "title": "个人资料 / 头像 - 生日卧室 Salwar Kameez 人像",
+      "description": "生成一张写实的节日氛围卧室人像，主角为身着刺绣巴基斯坦 Salwar Kameez 的南亚女性，适用于生日主题的社交媒体视觉内容。",
+      "prompt": "创作一张写实的竖版人像照片，画面中一位美丽的年轻南亚女性站在布置温馨的生日主题卧室床边。她皮肤白皙，留着侧分的长直浅棕色头发，妆容自然柔和，涂着红色唇膏，神情平静地直视镜头。她身着优雅的传统巴基斯坦 Salwar Kameez，颜色为 {argument name=\"outfit colors\" default=\"皇家紫和芥末黄\"}，领口、袖口、下摆和 dupatta 边缘带有精致的金色刺绣；Kameez 上有白色小圆点图案，搭配紫色长裤，一条透明的紫色雪纺 dupatta 披在肩上并垂在身前。房间温馨且充满节日气息：右侧是一张带有米色簇绒床头的床，铺着浅色花卉床罩，上面放着包装好的礼物或彩色枕头；她身后是带有花卉和几何图案的窗帘。画面中需包含 2 组清晰可见的气球：一组红色气球位于中上方偏右，另一组红白相间的气球位于右上角。添加红色的金属字母气球，拼写出部分可见的生日祝福，其中清晰可见的字母类似于“H B D”。使用温暖的室内光线，浅景深，呈现柔和的智能手机人像写实感，肤色略带奶油质感，营造出庆祝性的居家卧室氛围。在右下角添加一个微妙的 TikTok 风格水印，内容为 {argument name=\"watermark text\" default=\"@userot8jfzpcc4\"}。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487802955_h4wu0p_HOecqXobAAA-sjM.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Arzoo12sh/status/2082806176950153464#reversed-0",
+      "sourceType": "community",
+      "authorName": "Arzoo Ai",
+      "authorHandle": "@Arzoo12sh",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30421",
+      "rawText": "创作一张写实的竖版人像照片，画面中一位美丽的年轻南亚女性站在布置温馨的生日主题卧室床边。她皮肤白皙，留着侧分的长直浅棕色头发，妆容自然柔和，涂着红色唇膏，神情平静地直视镜头。她身着优雅的传统巴基斯坦 Salwar Kameez，颜色为 {argument name=\"outfit colors\" default=\"皇家紫和芥末黄\"}，领口、袖口、下摆和 dupatta 边缘带有精致的金色刺绣；Kameez 上有白色小圆点图案，搭配紫色长裤，一条透明的紫色雪纺 dupatta 披在肩上并垂在身前。房间温馨且充满节日气息：右侧是一张带有米色簇绒床头的床，铺着浅色花卉床罩，上面放着包装好的礼物或彩色枕头；她身后是带有花卉和几何图案的窗帘。画面中需包含 2 组清晰可见的气球：一组红色气球位于中上方偏右，另一组红白相间的气球位于右上角。添加红色的金属字母气球，拼写出部分可见的生日祝福，其中清晰可见的字母类似于“H B D”。使用温暖的室内光线，浅景深，呈现柔和的智能手机人像写实感，肤色略带奶油质感，营造出庆祝性的居家卧室氛围。在右下角添加一个微妙的 TikTok 风格水印，内容为 {argument name=\"watermark text\" default=\"@userot8jfzpcc4\"}。"
+    },
+    {
+      "id": "community-2082784300836294747",
+      "title": "个人资料 / 头像 - 可爱闭眼猫咪贴纸",
+      "description": "生成一款简单的 Q 版黑白猫咪贴纸，支持自定义斑纹和表情，适用于吉祥物或表情包风格的艺术创作。",
+      "prompt": "创作一张可爱的 Q 版坐姿猫咪贴纸插画，背景为纯白色。猫咪主体为白色，带有 {argument name=\"patch color\" default=\"黑色\"} 斑纹：头部和耳朵的右侧（观察者视角）覆盖有一块大的圆形斑点，身体两侧有小块深色斑点，右侧（观察者视角）有一条深色的卷曲尾巴。猫咪拥有超大的三角形耳朵，内耳为柔和的粉色，配有一个极小的黑色椭圆形鼻子、一个小巧的猫咪嘟嘟嘴，每侧脸颊各有三根胡须，闭上的水平双眼形状为 {argument name=\"eye shape\" default=\"ーー\"}。在脸颊上添加两个粉色椭圆形腮红，每个腮红上有三道深色的腮红纹路。使用粗而平滑的黑色轮廓线，圆润简化的爪子并带有可见的脚趾线条，角色周围带有白色贴纸模切边，贴纸边缘外侧有非常细微的浅灰色阴影/轮廓。猫咪居中，正面朝向，对称，极简，干净的矢量风格动漫吉祥物，无文字，无背景物体。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487780905_qx5e4v_HOeI63CawAAMUX1.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ippoippo522/status/2082784300836294747#reversed-0",
+      "sourceType": "community",
+      "authorName": "イッポイッポ",
+      "authorHandle": "@ippoippo522",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30394",
+      "rawText": "创作一张可爱的 Q 版坐姿猫咪贴纸插画，背景为纯白色。猫咪主体为白色，带有 {argument name=\"patch color\" default=\"黑色\"} 斑纹：头部和耳朵的右侧（观察者视角）覆盖有一块大的圆形斑点，身体两侧有小块深色斑点，右侧（观察者视角）有一条深色的卷曲尾巴。猫咪拥有超大的三角形耳朵，内耳为柔和的粉色，配有一个极小的黑色椭圆形鼻子、一个小巧的猫咪嘟嘟嘴，每侧脸颊各有三根胡须，闭上的水平双眼形状为 {argument name=\"eye shape\" default=\"ーー\"}。在脸颊上添加两个粉色椭圆形腮红，每个腮红上有三道深色的腮红纹路。使用粗而平滑的黑色轮廓线，圆润简化的爪子并带有可见的脚趾线条，角色周围带有白色贴纸模切边，贴纸边缘外侧有非常细微的浅灰色阴影/轮廓。猫咪居中，正面朝向，对称，极简，干净的矢量风格动漫吉祥物，无文字，无背景物体。"
+    },
+    {
+      "id": "community-2082775710909776090",
+      "title": "个人资料 / 头像 - 阳光下的城市街头人像",
+      "description": "一张写实风格的正方形特写人像，画面中是一位长发被风吹拂的年轻女性，她面带微笑，背景是带有金色镜头光晕的模糊城市街道。",
+      "prompt": "创作一张超写实风格的特写人像摄影作品，拍摄对象是一位年轻的 {argument name=\"subject ethnicity\" default=\"东亚裔\"} 女性，她正对着镜头温柔微笑，背景是明亮的城市街道。构图采用极紧凑的特写，人脸略微偏离中心，深棕黑色的长发随风吹拂，零散的发丝掠过她的额头、眼睛和脸颊。她拥有水润透亮的肌肤、自然光泽的粉色嘴唇、精致的淡妆、温暖的棕色眼眸，表情自然且随性。场景采用逆光拍摄，强烈的午后低角度阳光从她脑后射入，在发丝右上方形成明亮的星芒镜头光晕，画面中带有横向的光斑条纹，发丝边缘呈现出耀眼的轮廓光，并带有朦胧的胶片质感。使用浅景深效果，使城市背景高度虚化：呈现出冷蓝灰调的模糊建筑、街道护栏、道路和停放的车辆。画面左侧边缘应包含柔和的失焦前景虚化，仿佛有手、头发或相机带遮挡了部分镜头。调色风格采用温暖的金色高光、柔和的对比度、轻微的过曝感，保留真实的皮肤纹理，呈现怀旧的 35mm 胶片摄影美学。正方形 1:1 构图，亲密的抓拍视角，写实光学效果，无文字，无水印，无配饰，无其他人物。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487782494_naeyu0_HOdT3mobMAArlYo.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AIsouken_/status/2082775710909776090#reversed-0",
+      "sourceType": "community",
+      "authorName": "ハム所長【AI研究者🔬】",
+      "authorHandle": "@AIsouken_",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30396",
+      "rawText": "创作一张超写实风格的特写人像摄影作品，拍摄对象是一位年轻的 {argument name=\"subject ethnicity\" default=\"东亚裔\"} 女性，她正对着镜头温柔微笑，背景是明亮的城市街道。构图采用极紧凑的特写，人脸略微偏离中心，深棕黑色的长发随风吹拂，零散的发丝掠过她的额头、眼睛和脸颊。她拥有水润透亮的肌肤、自然光泽的粉色嘴唇、精致的淡妆、温暖的棕色眼眸，表情自然且随性。场景采用逆光拍摄，强烈的午后低角度阳光从她脑后射入，在发丝右上方形成明亮的星芒镜头光晕，画面中带有横向的光斑条纹，发丝边缘呈现出耀眼的轮廓光，并带有朦胧的胶片质感。使用浅景深效果，使城市背景高度虚化：呈现出冷蓝灰调的模糊建筑、街道护栏、道路和停放的车辆。画面左侧边缘应包含柔和的失焦前景虚化，仿佛有手、头发或相机带遮挡了部分镜头。调色风格采用温暖的金色高光、柔和的对比度、轻微的过曝感，保留真实的皮肤纹理，呈现怀旧的 35mm 胶片摄影美学。正方形 1:1 构图，亲密的抓拍视角，写实光学效果，无文字，无水印，无配饰，无其他人物。"
+    },
+    {
       "id": "community-2082737988862091375",
       "title": "个人资料 / 头像 - 发光眼镜青蛙表情包",
       "description": "一张特写风格的卡通青蛙推眼镜表情包，适合用于制作自鸣得意的反应图或二次创作的表情包素材。",
@@ -8152,7 +8689,7 @@
       "authorName": "MB",
       "authorHandle": "@twMoonBoy",
       "createdAt": "2026-07-30T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.790Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -8185,13 +8722,13 @@
       "description": "一个以东亚女性为主角、置身于温馨居家环境中的超写实智能手机自拍提示词。",
       "prompt": "一张超写实的竖屏智能手机自拍，画面中是一位美丽的东亚年轻女性，坐在 {argument name=\"setting\" default=\"温馨的韩式卧室\"} 里。她拥有瓷白细腻的皮肤、明亮深邃的棕色大眼睛、自然饱满的淡粉色嘴唇、小巧挺直的鼻梁以及精致的鹅蛋脸。她中等长度的深棕色头发略显凌乱，空气刘海和几缕发丝自然地垂在脸颊两侧，营造出一种清新的“刚睡醒”感。她微微歪着头，一只手轻轻撩起头发别在耳后。她直视手机镜头，带着淡淡的浪漫微笑，表情柔和放松。她穿着一件 {argument name=\"outfit\" default=\"超大款毛绒海军蓝露肩针织毛衣\"}，毛衣从一侧肩膀自然滑落，露出肩部和锁骨。毛衣呈现出真实的绒毛质感、自然的褶皱和宽松的袖口。背景中有一个白色的书架，上面摆放着书籍、发光的蜡烛、精致的小玻璃罐、艺术画框、复古照片、可爱的房间装饰品以及一株小绿植。温暖的室内自然光与柔和的金色烛光交织，营造出柔和的阴影和温馨的氛围。画面由现代智能手机以手臂距离拍摄，略高于视线水平，采用 26mm 等效手机镜头，9:16 竖屏构图，带有轻微真实的广角畸变、真实的曝光、自动白平衡、轻微的手机 HDR 处理、细微的传感器噪点、真实的皮肤毛孔、细小的面部绒毛、自然的单根发丝，以及略显随意的社交媒体构图。在左下角添加一行手写的韩文浪漫文字：“{argument name=\"text\" default=\"오늘도 보고싶어 ♡\"}”，使用精致的奶油白色手写韩文字体。拒绝专业摄影棚灯光，拒绝美颜滤镜，拒绝浓妆艳抹，拒绝塑料感皮肤，拒绝不切实际的面部比例，拒绝明显的 AI 生成感，呈现自然真实的韩式生活自拍，超写实画质。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401373415_nqwh4t_HOddTbiaAAA-MiC.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487768901_ydagnp_HOddTbiaAAA-MiC.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/sha_zdiii/status/2082735969849970918",
       "sourceType": "community",
       "authorName": "shah_zadii",
       "authorHandle": "@sha_zdiii",
       "createdAt": "2026-07-30T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
       "tags": [
         "摄影"
       ],
@@ -8221,18 +8758,102 @@
       "rawText": "一张超写实的竖屏智能手机自拍，画面中是一位美丽的东亚年轻女性，坐在 {argument name=\"setting\" default=\"温馨的韩式卧室\"} 里。她拥有瓷白细腻的皮肤、明亮深邃的棕色大眼睛、自然饱满的淡粉色嘴唇、小巧挺直的鼻梁以及精致的鹅蛋脸。她中等长度的深棕色头发略显凌乱，空气刘海和几缕发丝自然地垂在脸颊两侧，营造出一种清新的“刚睡醒”感。她微微歪着头，一只手轻轻撩起头发别在耳后。她直视手机镜头，带着淡淡的浪漫微笑，表情柔和放松。她穿着一件 {argument name=\"outfit\" default=\"超大款毛绒海军蓝露肩针织毛衣\"}，毛衣从一侧肩膀自然滑落，露出肩部和锁骨。毛衣呈现出真实的绒毛质感、自然的褶皱和宽松的袖口。背景中有一个白色的书架，上面摆放着书籍、发光的蜡烛、精致的小玻璃罐、艺术画框、复古照片、可爱的房间装饰品以及一株小绿植。温暖的室内自然光与柔和的金色烛光交织，营造出柔和的阴影和温馨的氛围。画面由现代智能手机以手臂距离拍摄，略高于视线水平，采用 26mm 等效手机镜头，9:16 竖屏构图，带有轻微真实的广角畸变、真实的曝光、自动白平衡、轻微的手机 HDR 处理、细微的传感器噪点、真实的皮肤毛孔、细小的面部绒毛、自然的单根发丝，以及略显随意的社交媒体构图。在左下角添加一行手写的韩文浪漫文字：“{argument name=\"text\" default=\"오늘도 보고싶어 ♡\"}”，使用精致的奶油白色手写韩文字体。拒绝专业摄影棚灯光，拒绝美颜滤镜，拒绝浓妆艳抹，拒绝塑料感皮肤，拒绝不切实际的面部比例，拒绝明显的 AI 生成感，呈现自然真实的韩式生活自拍，超写实画质。"
     },
     {
+      "id": "community-2082726400134639870",
+      "title": "个人资料 / 头像 - 公园休闲生活风肖像",
+      "description": "一个关于女性身着休闲大码服装坐在公园长椅上的生活方式摄影提示词，背景为阳光明媚的一天。",
+      "prompt": "一位迷人的年轻女性在 {argument name=\"location\" default=\"郁郁葱葱的城市公园\"} 的木质长椅上悠闲地坐着，时间是明媚的午后，她身穿 {argument name=\"outfit\" default=\"浅灰色大码连帽衫和配套运动裤\"}，脚踩干净的白色运动鞋，留着 {argument name=\"hairstyle\" default=\"凌乱的高丸子头，脸颊两侧有柔和的发丝修饰\"}，妆容自然，带着温暖柔和的微笑，直视镜头，一只手轻触头发，姿态放松自信，一条腿盘在长椅上，电影级生活方式摄影，鲜艳的花朵，高大的绿树，柔和的阳光透过叶片洒下，浅景深，奶油般虚化的背景，超逼真的皮肤纹理，高端时尚杂志大片，单反摄影，85mm 镜头，f/1.8，自然光，HDR，超精细，照片级真实感，8K，顶级画质。\n保持与参考图像相同的人脸。\n摄像机角度：跟随拍摄。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487732986_rmhsgl_HOdUnS2a4AALPbI.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/DaniaSafvi/status/2082726400134639870",
+      "sourceType": "community",
+      "authorName": "DaniaSafvi",
+      "authorHandle": "@DaniaSafvi",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.965Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30224",
+      "rawText": "一位迷人的年轻女性在 {argument name=\"location\" default=\"郁郁葱葱的城市公园\"} 的木质长椅上悠闲地坐着，时间是明媚的午后，她身穿 {argument name=\"outfit\" default=\"浅灰色大码连帽衫和配套运动裤\"}，脚踩干净的白色运动鞋，留着 {argument name=\"hairstyle\" default=\"凌乱的高丸子头，脸颊两侧有柔和的发丝修饰\"}，妆容自然，带着温暖柔和的微笑，直视镜头，一只手轻触头发，姿态放松自信，一条腿盘在长椅上，电影级生活方式摄影，鲜艳的花朵，高大的绿树，柔和的阳光透过叶片洒下，浅景深，奶油般虚化的背景，超逼真的皮肤纹理，高端时尚杂志大片，单反摄影，85mm 镜头，f/1.8，自然光，HDR，超精细，照片级真实感，8K，顶级画质。\n保持与参考图像相同的人脸。\n摄像机角度：跟随拍摄。"
+    },
+    {
+      "id": "community-2082707020193677575",
+      "title": "个人资料 / 头像 - 秋日城市街头人像",
+      "description": "这是一个用于生成柔美、优雅的东亚女性秋日城市街头人像的写实提示词。它强调自然光影、季节性时尚穿搭以及高质量的单反摄影细节。",
+      "prompt": "一张令人惊叹的写实街头人像，描绘了一位美丽的年轻 {argument name=\"ethnicity\" default=\"东亚\"} 女性，站在黄金时段一条安静的城市林荫道上。她留着柔顺的深棕色长发，拥有无瑕的瓷肌、柔和的棕色双眸、自然清晰的眉形、精致的桃色系妆容、红润的腮红以及水润的粉色嘴唇。她身穿一件优雅的露肩 {argument name=\"sweater color\" default=\"淡粉色\"} 针织毛衣，毛衣采用精致的镂空编织纹理，露出一侧肩膀，展现出优雅的女性魅力。她佩戴着极简风格的珍珠耳钉，手中拿着一片 {argument name=\"accessory\" default=\"干枯的秋叶\"}。她直视镜头，表情柔和、宁静且略带梦幻。背景中可以看到成熟的梧桐树、宁静的城市人行道、停放的车辆、现代化的店面，以及透过树叶洒下的午后暖阳，营造出美丽的光斑效果和温馨的秋日氛围。电影级构图，浅景深，奶油般虚化的背景，超写实单反摄影，奢华生活方式编辑风格，韩系时尚美学，Vogue 风格人像，85mm 镜头，f/1.4，HDR，8K，高细节皮肤纹理，自然光，高级色彩分级，柔和的粉彩色调，优雅极简时尚，杂志级摄影品质。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487734546_m9r18u_HOdC6OBaUAEGPc6.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Aqsahere_/status/2082707020193677575",
+      "sourceType": "community",
+      "authorName": "Aqsa",
+      "authorHandle": "@Aqsahere_",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30226",
+      "rawText": "一张令人惊叹的写实街头人像，描绘了一位美丽的年轻 {argument name=\"ethnicity\" default=\"东亚\"} 女性，站在黄金时段一条安静的城市林荫道上。她留着柔顺的深棕色长发，拥有无瑕的瓷肌、柔和的棕色双眸、自然清晰的眉形、精致的桃色系妆容、红润的腮红以及水润的粉色嘴唇。她身穿一件优雅的露肩 {argument name=\"sweater color\" default=\"淡粉色\"} 针织毛衣，毛衣采用精致的镂空编织纹理，露出一侧肩膀，展现出优雅的女性魅力。她佩戴着极简风格的珍珠耳钉，手中拿着一片 {argument name=\"accessory\" default=\"干枯的秋叶\"}。她直视镜头，表情柔和、宁静且略带梦幻。背景中可以看到成熟的梧桐树、宁静的城市人行道、停放的车辆、现代化的店面，以及透过树叶洒下的午后暖阳，营造出美丽的光斑效果和温馨的秋日氛围。电影级构图，浅景深，奶油般虚化的背景，超写实单反摄影，奢华生活方式编辑风格，韩系时尚美学，Vogue 风格人像，85mm 镜头，f/1.4，HDR，8K，高细节皮肤纹理，自然光，高级色彩分级，柔和的粉彩色调，优雅极简时尚，杂志级摄影品质。"
+    },
+    {
       "id": "community-2082696386563215521",
       "title": "个人资料 / 头像 - 奢华行政办公室肖像",
       "description": "一张超写实的编辑风格肖像，展现了一位自信的年轻高管坐在高端办公室内，背景是极具戏剧性的城市日落天际线。",
       "prompt": "创作一张超写实的优质编辑风格肖像，主角为 {argument name=\"character name\" default=\"一位年轻的黑人男性高管\"}，他自信地坐在豪华的现代行政办公室内。主体位于画面中心，直视镜头，表情冷静、专注且充满自信。他留着修剪整齐的黑色短发，拥有光滑的中深色皮肤、干净的面部、对称的五官，展现出沉稳的 CEO 气质。他身穿剪裁合身的炭黑色双排扣条纹西装，搭配挺括的白色衬衫、深祖母绿领带、同色系口袋巾、黑色正装袜以及一块精致的银色奢华腕表。他坐在黑色真皮行政扶手椅上，一条腿交叉，左手自然地放在扶手上，右手将一本纤薄的黑色笔记本放在膝盖上。\n\n场景设定在 {argument name=\"office location\" default=\"一间俯瞰迪拜的高层豪华行政办公室\"}。他身后是落地窗，窗外是温暖的日落天际线，包括错落有致的摩天大楼和右侧一座类似哈利法塔的建筑。办公室内部装饰有深色胡桃木镶板、带有书籍和装饰性奖项的嵌入式书架、一幅大型抽象黑米色边框画、一盆盆栽、一张配有黄铜台灯的宽大木质行政办公桌、一张现代玻璃会议桌、黑色办公椅、大理石地面以及带有发光灯槽的温暖嵌入式天花板照明。利用窗户射入的黄金时段光线与柔和的电影感室内光线相结合，呈现皮革、玻璃、金属和大理石上的真实反射效果，采用浅景深、高端杂志封面风格、清晰的面部细节、自然的皮肤纹理、平衡的对比度以及高端的企业成功美学。采用竖构图肖像，腰部到全身的坐姿构图，平视视角，50mm 编辑镜头质感。避免出现文字、标志、水印、手部畸形、多余手指、不切实际的珠宝或夸张的面部修图。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401412776_qwi9js_HOc5Tb8WsAEwXe3.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487775331_pj7q5k_HOc5Tb8WsAEwXe3.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/abs_uiux/status/2082696386563215521#reversed-0",
       "sourceType": "community",
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-07-30T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
       "tags": [
         "人像"
       ],
@@ -8262,18 +8883,60 @@
       "rawText": "创作一张超写实的优质编辑风格肖像，主角为 {argument name=\"character name\" default=\"一位年轻的黑人男性高管\"}，他自信地坐在豪华的现代行政办公室内。主体位于画面中心，直视镜头，表情冷静、专注且充满自信。他留着修剪整齐的黑色短发，拥有光滑的中深色皮肤、干净的面部、对称的五官，展现出沉稳的 CEO 气质。他身穿剪裁合身的炭黑色双排扣条纹西装，搭配挺括的白色衬衫、深祖母绿领带、同色系口袋巾、黑色正装袜以及一块精致的银色奢华腕表。他坐在黑色真皮行政扶手椅上，一条腿交叉，左手自然地放在扶手上，右手将一本纤薄的黑色笔记本放在膝盖上。\n\n场景设定在 {argument name=\"office location\" default=\"一间俯瞰迪拜的高层豪华行政办公室\"}。他身后是落地窗，窗外是温暖的日落天际线，包括错落有致的摩天大楼和右侧一座类似哈利法塔的建筑。办公室内部装饰有深色胡桃木镶板、带有书籍和装饰性奖项的嵌入式书架、一幅大型抽象黑米色边框画、一盆盆栽、一张配有黄铜台灯的宽大木质行政办公桌、一张现代玻璃会议桌、黑色办公椅、大理石地面以及带有发光灯槽的温暖嵌入式天花板照明。利用窗户射入的黄金时段光线与柔和的电影感室内光线相结合，呈现皮革、玻璃、金属和大理石上的真实反射效果，采用浅景深、高端杂志封面风格、清晰的面部细节、自然的皮肤纹理、平衡的对比度以及高端的企业成功美学。采用竖构图肖像，腰部到全身的坐姿构图，平视视角，50mm 编辑镜头质感。避免出现文字、标志、水印、手部畸形、多余手指、不切实际的珠宝或夸张的面部修图。"
     },
     {
+      "id": "community-2082677807159910652",
+      "title": "个人资料 / 头像 - 南亚女性室内自拍",
+      "description": "这是一个用于 gpt-image-2 的写实肖像提示词，利用参考图进行面部特征识别，同时生成全新的发型和传统的南亚服饰，营造舒适的室内环境。",
+      "prompt": "请仅使用上传的参考图作为面部参考，并 100% 保留其面部特征，包括脸型、肤色、眼睛、眉毛、鼻子、嘴唇、下颌线、面部比例、表情、笑容、年龄以及所有独特的面部特征。请勿复制或参考上传图片中的发型、发际线或发量。请严格按照下文描述生成发型，使其独立于参考图。\n\n创作一张超写实的室内自拍，画面中的年轻女性正坐在木质书桌前，环境光线温暖。她留着 {argument name=\"hair style\" default=\"长款波浪深棕色秀发\"}，中分发型，几缕发丝自然垂落在脸颊两侧。她戴着大号细金框圆眼镜，妆容自然清新，涂着亮面粉色唇釉，佩戴金质圆圈耳环和一条带有星星吊坠的精致金项链。手腕上佩戴着一块金表，并搭配了一条串珠手链。\n\n她身穿一件 {argument name=\"outfit\" default=\"米色/灰白色库尔塔（kurta），饰有优雅的蓝色花卉印花\"}，领口处有蕾丝装饰，并配有珍珠纽扣。一条相衬的蓝白花卉薄纱披肩（dupatta）优雅地搭在肩上。\n\n她姿态自然，一只手轻轻抬起触碰头发，面前的木桌上放着一本螺旋笔记本。\n\n背景设定为 {argument name=\"setting\" default=\"带有窗台的温馨房间\"}，窗台上摆放着一盆绿色小盆栽；背景中的白色项目墙上装饰着钉好的旅行照片，并配有深色木质橱柜，营造出温暖舒适的氛围。\n\n画面需采用温暖的室内光线，呈现自然的生活化美感，具备照片级真实画质、超细腻的真实皮肤纹理、浅景深效果、自然的色彩分级以及 8K 分辨率。最终生成的图像必须与上传的参考图保持完美的面部特征一致性，同时仅使用新描述的发型，而非参考图中的发型。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487744276_88scp9_HOcobFdacAAoLxB.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/MahnoorAi12/status/2082677807159910652",
+      "sourceType": "community",
+      "authorName": "Mahnoor Fatima",
+      "authorHandle": "@MahnoorAi12",
+      "createdAt": "2026-07-30T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "GPT Image 2",
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30367",
+      "rawText": "请仅使用上传的参考图作为面部参考，并 100% 保留其面部特征，包括脸型、肤色、眼睛、眉毛、鼻子、嘴唇、下颌线、面部比例、表情、笑容、年龄以及所有独特的面部特征。请勿复制或参考上传图片中的发型、发际线或发量。请严格按照下文描述生成发型，使其独立于参考图。\n\n创作一张超写实的室内自拍，画面中的年轻女性正坐在木质书桌前，环境光线温暖。她留着 {argument name=\"hair style\" default=\"长款波浪深棕色秀发\"}，中分发型，几缕发丝自然垂落在脸颊两侧。她戴着大号细金框圆眼镜，妆容自然清新，涂着亮面粉色唇釉，佩戴金质圆圈耳环和一条带有星星吊坠的精致金项链。手腕上佩戴着一块金表，并搭配了一条串珠手链。\n\n她身穿一件 {argument name=\"outfit\" default=\"米色/灰白色库尔塔（kurta），饰有优雅的蓝色花卉印花\"}，领口处有蕾丝装饰，并配有珍珠纽扣。一条相衬的蓝白花卉薄纱披肩（dupatta）优雅地搭在肩上。\n\n她姿态自然，一只手轻轻抬起触碰头发，面前的木桌上放着一本螺旋笔记本。\n\n背景设定为 {argument name=\"setting\" default=\"带有窗台的温馨房间\"}，窗台上摆放着一盆绿色小盆栽；背景中的白色项目墙上装饰着钉好的旅行照片，并配有深色木质橱柜，营造出温暖舒适的氛围。\n\n画面需采用温暖的室内光线，呈现自然的生活化美感，具备照片级真实画质、超细腻的真实皮肤纹理、浅景深效果、自然的色彩分级以及 8K 分辨率。最终生成的图像必须与上传的参考图保持完美的面部特征一致性，同时仅使用新描述的发型，而非参考图中的发型。"
+    },
+    {
       "id": "community-2082665434101448880",
       "title": "个人资料 / 头像 - 复古怀旧风格眼睛特写",
       "description": "一个风格化特写肖像的提示词，聚焦于透过发丝窥视的一只眼睛。营造出带有温暖金色漏光效果的复古胶片美学，以及怀旧、梦幻的氛围。",
       "prompt": "在不改变我面部特征的前提下创作一张肖像。一张我的特写肖像，仅露出一只眼睛，透过垂在脸上的浓密波浪长发窥视。睫毛捕捉到来自阳光的 {argument name=\"glow color\" default=\"温暖金色\"} 光芒。完美的妆容，{argument name=\"lip color\" default=\"干枯玫瑰色\"} 的双唇，以及自然美黑、光滑的皮肤。\n\n脸部的其余部分经过柔焦处理并移出画面。复古胶片美学、轻微的倾斜角度以及温暖的金色漏光，营造出怀旧的氛围。皮肤看起来光滑且精致。\n宽高比：9:16",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401356598_ookziu_HOcdJXnaYAA1HrN.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785487736187_5xpff8_HOcdJXnaYAA1HrN.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/MissDelulu9/status/2082665434101448880",
       "sourceType": "community",
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-07-30T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
       "tags": [
         "人像"
       ],
@@ -8424,18 +9087,142 @@
       "rawText": "在一个夏夜，位于 {argument name=\"location\" default=\"民宿木质屋顶露台\"} 上，头顶悬挂的暖色串灯轻轻摇曳，落地灯伫立在编织吊椅旁，将昏暗的光影投射在木板上。她侧身坐在吊椅边缘，一条腿蜷起，脚踝搭在椅框上，另一条腿自然垂下，脚尖触碰地面。一只手握住绳索，另一只手端着一杯冰镇柠檬薄荷水，杯壁凝结着细密的水珠。她没有直视镜头，而是微微转过脸，眼中带着一丝俏皮的笑意，嘴角勾起半抹弧度，仿佛为了这一刻的定格而刻意放慢了节奏。她身穿一件 {argument name=\"dress color\" default=\"珊瑚粉色\"} 弹力针织单肩中长裙，不对称的领口从左肩斜切至右腋下，露出了左肩和锁骨。高弹力的细罗纹针织面料从胸部到臀部紧贴身体，勾勒出平滑饱满的轮廓。裙摆落在膝盖上方约一掌宽处，右侧有一道延伸至大腿上部的细长开衩。内衬采用超薄无痕弹力面料，在修饰身形的同时避免透视。无外搭。一双 {argument name=\"shoes\" default=\"米白色平底凉鞋\"} 放在她脚边。光线来自右后方的落地灯和上方的串灯，在裙摆和她的肩头投下温暖的金色高光，柔和的阴影在木板上延伸。背景包括深色的木质栏杆、几盆蕨类植物、远处稀疏的城市灯火以及深蓝紫色的夜空。"
     },
     {
-      "id": "community-2082726400134639870",
-      "title": "社交媒体帖子 - 公园休闲生活风肖像",
-      "description": "一个关于女性身着休闲大码服装坐在公园长椅上的生活方式摄影提示词，背景为阳光明媚的一天。",
-      "prompt": "一位迷人的年轻女性在 {argument name=\"location\" default=\"郁郁葱葱的城市公园\"} 的木质长椅上悠闲地坐着，时间是明媚的午后，她身穿 {argument name=\"outfit\" default=\"浅灰色大码连帽衫和配套运动裤\"}，脚踩干净的白色运动鞋，留着 {argument name=\"hairstyle\" default=\"凌乱的高丸子头，脸颊两侧有柔和的发丝修饰\"}，妆容自然，带着温暖柔和的微笑，直视镜头，一只手轻触头发，姿态放松自信，一条腿盘在长椅上，电影级生活方式摄影，鲜艳的花朵，高大的绿树，柔和的阳光透过叶片洒下，浅景深，奶油般虚化的背景，超逼真的皮肤纹理，高端时尚杂志大片，单反摄影，85mm 镜头，f/1.8，自然光，HDR，超精细，照片级真实感，8K，顶级画质。\n保持与参考图像相同的人脸。\n摄像机角度：跟随拍摄。",
+      "id": "community-2082587420986622046",
+      "title": "个人资料 / 头像 - 柔和彩虹色 3D 女孩半身像",
+      "description": "一款柔和的 3D 彩虹色女孩半身肖像，风格可爱且极具艺术感，适合用于奇幻角色设计或个人头像。",
+      "prompt": "创作一张干净的 3D 风格化年轻女孩半身肖像，采用柔软的玩具质感粘土材质，主体居中于白色背景。角色拥有圆润的大头、精致的小鼻子、温柔的闭口微笑、光滑的脸颊，以及简化的大杏仁眼（无可见瞳孔），散发着柔和的彩虹渐变光泽。她留着浓密的长波浪卷发，侧分刘海，发丝呈丝带状雕塑感，环绕脸部，长发在肩后呈现出宽阔柔和的波浪。她穿着一件简单的圆领无袖上衣，画面展示从上半身开始的半身雕塑。整体采用虹彩般的彩虹色调，融合了青色、绿松石色、紫罗兰色、薰衣草色、粉色、桃色、橙色、薄荷绿和柔黄色，色彩过渡平滑，具有次表面散射的柔和感。光照应明亮、均匀且具备摄影棚级的干净感，呈现出光泽哑光塑料或粘土的质感，带有柔和的高光和极少的阴影。构图为竖向肖像，四分之三侧面视角，头部和肩部占据画面大部分空间，周围留有大量干净的白色负空间。在右下角添加一个小巧的手写艺术家签名和日期，内容为 {argument name=\"signature text\" default=\"July 29, 2026 Oyagi\"}。除该签名外，图像中不应包含任何文字，背景无杂物，无硬轮廓线，无写实皮肤纹理，且不添加额外配饰。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401355988_e0beq9_HOdUnS2a4AALPbI.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/DaniaSafvi/status/2082726400134639870",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401428737_5x5omb_HObWOMaaEAAbzBo.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/bikurin59/status/2082587420986622046#reversed-0",
       "sourceType": "community",
-      "authorName": "DaniaSafvi",
-      "authorHandle": "@DaniaSafvi",
-      "createdAt": "2026-07-30T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.793Z",
+      "authorName": "おやぎ",
+      "authorHandle": "@bikurin59",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30309",
+      "rawText": "创作一张干净的 3D 风格化年轻女孩半身肖像，采用柔软的玩具质感粘土材质，主体居中于白色背景。角色拥有圆润的大头、精致的小鼻子、温柔的闭口微笑、光滑的脸颊，以及简化的大杏仁眼（无可见瞳孔），散发着柔和的彩虹渐变光泽。她留着浓密的长波浪卷发，侧分刘海，发丝呈丝带状雕塑感，环绕脸部，长发在肩后呈现出宽阔柔和的波浪。她穿着一件简单的圆领无袖上衣，画面展示从上半身开始的半身雕塑。整体采用虹彩般的彩虹色调，融合了青色、绿松石色、紫罗兰色、薰衣草色、粉色、桃色、橙色、薄荷绿和柔黄色，色彩过渡平滑，具有次表面散射的柔和感。光照应明亮、均匀且具备摄影棚级的干净感，呈现出光泽哑光塑料或粘土的质感，带有柔和的高光和极少的阴影。构图为竖向肖像，四分之三侧面视角，头部和肩部占据画面大部分空间，周围留有大量干净的白色负空间。在右下角添加一个小巧的手写艺术家签名和日期，内容为 {argument name=\"signature text\" default=\"July 29, 2026 Oyagi\"}。除该签名外，图像中不应包含任何文字，背景无杂物，无硬轮廓线，无写实皮肤纹理，且不添加额外配饰。"
+    },
+    {
+      "id": "community-2082555055429792049",
+      "title": "个人资料 / 头像 - 博物馆级石墨肖像画",
+      "description": "一个写实的石墨铅笔肖像提示词，用于在纹理纸张上创作优雅的手绘半身肖像。",
+      "prompt": "创作一张超写实的石墨铅笔肖像，主体为 {argument name=\"subject\" default=\"一位年轻黑人男性\"}，呈现博物馆级的手绘风格。画面为半身四分之三侧面肖像，背景为米白色纹理绘图纸；头部略微转向观众左侧，双眼平静地看向观众右侧。保持自然的脸部比例以及沉稳、严肃的表情。主体留着短而紧密的纹理黑发，深色皮肤以灰度色调呈现，下巴和颌骨处有细微胡茬，嘴唇饱满，佩戴透明镜片且带有细微高光的细框长方形金属眼镜。身着 {argument name=\"outfit\" default=\"一件浅色翻领衬衫，搭配深色领带\"}。运用卓越的石墨细节：可见的铅笔排线、交叉排线、柔和的过渡、细腻的皮肤纹理，以及在眼睛、鼻子、脸颊、嘴唇、耳朵、眼镜、衣领和领带周围进行写实的阴影处理。背景保持极简，并带有淡淡的斜向铅笔笔触，无文字、无色彩、无水印。最终图像应呈现为扫描或拍摄于纸张上的精致传统石墨素描，具备高度写实感和优雅的肖像构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401413013_pbuoce_HOa4vYtXgAAa8L9.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/abs_uiux/status/2082555055429792049#reversed-0",
+      "sourceType": "community",
+      "authorName": "Abkr Sadiq",
+      "authorHandle": "@abs_uiux",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30291",
+      "rawText": "创作一张超写实的石墨铅笔肖像，主体为 {argument name=\"subject\" default=\"一位年轻黑人男性\"}，呈现博物馆级的手绘风格。画面为半身四分之三侧面肖像，背景为米白色纹理绘图纸；头部略微转向观众左侧，双眼平静地看向观众右侧。保持自然的脸部比例以及沉稳、严肃的表情。主体留着短而紧密的纹理黑发，深色皮肤以灰度色调呈现，下巴和颌骨处有细微胡茬，嘴唇饱满，佩戴透明镜片且带有细微高光的细框长方形金属眼镜。身着 {argument name=\"outfit\" default=\"一件浅色翻领衬衫，搭配深色领带\"}。运用卓越的石墨细节：可见的铅笔排线、交叉排线、柔和的过渡、细腻的皮肤纹理，以及在眼睛、鼻子、脸颊、嘴唇、耳朵、眼镜、衣领和领带周围进行写实的阴影处理。背景保持极简，并带有淡淡的斜向铅笔笔触，无文字、无色彩、无水印。最终图像应呈现为扫描或拍摄于纸张上的精致传统石墨素描，具备高度写实感和优雅的肖像构图。"
+    },
+    {
+      "id": "community-2082547278322221497",
+      "title": "个人资料 / 头像 - 单色女性骑士肖像",
+      "description": "一个电影感的黑白奇幻肖像提示词，用于生成身着盔甲、手持长剑并以远方城堡为背景的动漫风格女性骑士。",
+      "prompt": "创作一张竖构图的单色黑白奇幻肖像，主角为 {argument name=\"character name\" default=\"一位年轻女骑士\"}，采用精致的半写实动漫风格。画面呈现她腰部以上的四分之三背影，她转头回眸，直视观众，拥有明亮动人的大眼睛、精致的嘴唇、白皙发光的皮肤以及冷静严肃的表情。她留着 {argument name=\"hair color\" default=\"乌黑\"} 的高马尾，长发飘逸，碎发随风拂动。她身上需精确包含 5 个可见的盔甲与服饰元素：一件带有雕刻纹理的亮面胸甲、一个带有铆钉的圆形雕花肩甲、一只锁子甲袖子、一件在身后拖曳的深色斗篷，以及一只握住武器的盔甲手套。在她身侧添加 1 把垂直的长剑，剑柄缠绕深色布料，配有护手和华丽的剑首。盔甲需高度抛光，带有花卉金银丝细工雕刻、明亮的高光、细微的光点以及逼真的金属反射。场景设定在风吹拂的柔软草地上，远景山丘上设有 1 座模糊的中世纪城堡，天空明亮多云。使用浅景深、来自右上方的电影感轮廓光、柔和的大气雾气、飘浮的白色微粒、优雅的高细节线条、平滑的灰度渐变、强烈的对比度，且完全无色彩。无文字，无水印，无额外角色，无现代物品。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401426166_ty4qes_HOaxhYbbMAA3TIm.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/HarunagaMutsuki/status/2082547278322221497#reversed-0",
+      "sourceType": "community",
+      "authorName": "春永睦月　Harunaga Mutsuki",
+      "authorHandle": "@HarunagaMutsuki",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30305",
+      "rawText": "创作一张竖构图的单色黑白奇幻肖像，主角为 {argument name=\"character name\" default=\"一位年轻女骑士\"}，采用精致的半写实动漫风格。画面呈现她腰部以上的四分之三背影，她转头回眸，直视观众，拥有明亮动人的大眼睛、精致的嘴唇、白皙发光的皮肤以及冷静严肃的表情。她留着 {argument name=\"hair color\" default=\"乌黑\"} 的高马尾，长发飘逸，碎发随风拂动。她身上需精确包含 5 个可见的盔甲与服饰元素：一件带有雕刻纹理的亮面胸甲、一个带有铆钉的圆形雕花肩甲、一只锁子甲袖子、一件在身后拖曳的深色斗篷，以及一只握住武器的盔甲手套。在她身侧添加 1 把垂直的长剑，剑柄缠绕深色布料，配有护手和华丽的剑首。盔甲需高度抛光，带有花卉金银丝细工雕刻、明亮的高光、细微的光点以及逼真的金属反射。场景设定在风吹拂的柔软草地上，远景山丘上设有 1 座模糊的中世纪城堡，天空明亮多云。使用浅景深、来自右上方的电影感轮廓光、柔和的大气雾气、飘浮的白色微粒、优雅的高细节线条、平滑的灰度渐变、强烈的对比度，且完全无色彩。无文字，无水印，无额外角色，无现代物品。"
+    },
+    {
+      "id": "community-2082452177050890519",
+      "title": "个人资料 / 头像 - 温馨女孩与萨摩耶友谊肖像",
+      "description": "一个专注于身份保留以及人与大型毛茸茸犬只互动的生活方式肖像提示词。",
+      "prompt": "使用提供的参考图像。保留 {argument name=\"subject name\" default=\"Main Ingrid\"} 的确切面部特征、{argument name=\"ethnicity\" default=\"温暖的菲律宾人特征\"}、长波浪黑发、自然微笑以及中等自然的身体比例。她身穿白色修身短款上衣、米色慢跑工装裤、一件从一侧肩膀滑落的宽松棕色连帽衫，以及黑白运动鞋。紧挨着她站立的是一只 {argument name=\"dog breed\" default=\"巨大的毛茸茸萨摩耶\"}，拥有雪白亮丽的毛发、厚实如云朵般的皮毛、温柔的深色眼睛、快乐的微笑表情以及可爱的吐舌笑容。Ingrid 一只手充满爱意地环绕着萨摩耶的脖子，同时将头轻轻靠在它毛茸茸的肩膀上。两人都面向镜头，表情温暖而平静，散发出信任与陪伴的气息。干净的米色无缝摄影棚背景，柔和的漫射摄影棚灯光，超逼真的毛发质感，照片级皮肤质感，奢华宠物肖像摄影，浅景深，电影级构图，温暖舒适的氛围，8K 分辨率，高细节，温馨的友谊肖像。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401400359_6f0a0x_HOZbNKRaMAAnoX7.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Arina_hoqe/status/2082452177050890519",
+      "sourceType": "community",
+      "authorName": "Arina Ai",
+      "authorHandle": "@Arina_hoqe",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
       "tags": [
         "人像",
         "摄影"
@@ -8462,8 +9249,88 @@
         "views": 0,
         "score": 0
       },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30224",
-      "rawText": "一位迷人的年轻女性在 {argument name=\"location\" default=\"郁郁葱葱的城市公园\"} 的木质长椅上悠闲地坐着，时间是明媚的午后，她身穿 {argument name=\"outfit\" default=\"浅灰色大码连帽衫和配套运动裤\"}，脚踩干净的白色运动鞋，留着 {argument name=\"hairstyle\" default=\"凌乱的高丸子头，脸颊两侧有柔和的发丝修饰\"}，妆容自然，带着温暖柔和的微笑，直视镜头，一只手轻触头发，姿态放松自信，一条腿盘在长椅上，电影级生活方式摄影，鲜艳的花朵，高大的绿树，柔和的阳光透过叶片洒下，浅景深，奶油般虚化的背景，超逼真的皮肤纹理，高端时尚杂志大片，单反摄影，85mm 镜头，f/1.8，自然光，HDR，超精细，照片级真实感，8K，顶级画质。\n保持与参考图像相同的人脸。\n摄像机角度：跟随拍摄。"
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30276",
+      "rawText": "使用提供的参考图像。保留 {argument name=\"subject name\" default=\"Main Ingrid\"} 的确切面部特征、{argument name=\"ethnicity\" default=\"温暖的菲律宾人特征\"}、长波浪黑发、自然微笑以及中等自然的身体比例。她身穿白色修身短款上衣、米色慢跑工装裤、一件从一侧肩膀滑落的宽松棕色连帽衫，以及黑白运动鞋。紧挨着她站立的是一只 {argument name=\"dog breed\" default=\"巨大的毛茸茸萨摩耶\"}，拥有雪白亮丽的毛发、厚实如云朵般的皮毛、温柔的深色眼睛、快乐的微笑表情以及可爱的吐舌笑容。Ingrid 一只手充满爱意地环绕着萨摩耶的脖子，同时将头轻轻靠在它毛茸茸的肩膀上。两人都面向镜头，表情温暖而平静，散发出信任与陪伴的气息。干净的米色无缝摄影棚背景，柔和的漫射摄影棚灯光，超逼真的毛发质感，照片级皮肤质感，奢华宠物肖像摄影，浅景深，电影级构图，温暖舒适的氛围，8K 分辨率，高细节，温馨的友谊肖像。"
+    },
+    {
+      "id": "community-2082443601389466021",
+      "title": "个人资料 / 头像 - 简洁扁平化矢量头像",
+      "description": "生成一个专业且现代的扁平化矢量头像，主角为佩戴眼镜并留有胡须的男性，背景为纯色，非常适合用作个人资料图标。",
+      "prompt": "创建一个简洁、正面的年轻男性矢量头像，采用现代扁平化插画风格。肖像需完美居中，裁剪范围从上胸部向上，主体应填满大部分方形画幅。运用大胆的几何形状、平滑的色彩过渡、清晰的边缘以及平衡对称的构图。面部特征应简化且富有表现力，具备明亮的双眼、细腻的阴影和自然的肤色。他拥有 {argument name=\"hair style\" default=\"向后梳理整齐的浓密棕色头发\"}，留着 {argument name=\"facial hair\" default=\"修剪整齐的浓密胡须\"}，佩戴圆形黑色眼镜，身穿纯黑色圆领 T 恤。背景为 {argument name=\"background\" default=\"纯暖橙色背景\"}，无任何图案或杂物。保持现代矢量艺术风格的精致数字头像美感，色彩鲜艳，线条锐利，细节极简，绝对不含写实纹理。高分辨率，1:1 纵横比，适用于专业个人资料图片。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401353440_2bn98y_HOZTakebAAAGhtx.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/j_smeaton99/status/2082443601389466021",
+      "sourceType": "community",
+      "authorName": "Jack",
+      "authorHandle": "@j_smeaton99",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30223",
+      "rawText": "创建一个简洁、正面的年轻男性矢量头像，采用现代扁平化插画风格。肖像需完美居中，裁剪范围从上胸部向上，主体应填满大部分方形画幅。运用大胆的几何形状、平滑的色彩过渡、清晰的边缘以及平衡对称的构图。面部特征应简化且富有表现力，具备明亮的双眼、细腻的阴影和自然的肤色。他拥有 {argument name=\"hair style\" default=\"向后梳理整齐的浓密棕色头发\"}，留着 {argument name=\"facial hair\" default=\"修剪整齐的浓密胡须\"}，佩戴圆形黑色眼镜，身穿纯黑色圆领 T 恤。背景为 {argument name=\"background\" default=\"纯暖橙色背景\"}，无任何图案或杂物。保持现代矢量艺术风格的精致数字头像美感，色彩鲜艳，线条锐利，细节极简，绝对不含写实纹理。高分辨率，1:1 纵横比，适用于专业个人资料图片。"
+    },
+    {
+      "id": "community-2082437668277797178",
+      "title": "个人资料 / 头像 - 南亚女性镜面自拍",
+      "description": "一份详细的提示词，用于创作一张自然、具有 Z 世代风格的南亚女性镜面自拍，重点在于保持面部特征的一致性。",
+      "prompt": "仅将上传的图片作为面部特征参考。严格锁定 100% 的面部特征，以保持人物身份。保留参考图中人物的面部结构、面部比例、眼睛、眉毛、鼻子、嘴唇、下颌线、肤色、自然表情以及整体身份特征。请勿复制或沿用参考图中的发型、头发长度、发色、发际线造型、服装、配饰、姿势、背景、光照或拍摄角度。在保持面部完全一致的前提下，生成下文描述的全新发型和场景。\n\n创作一张自然、中景的镜面自拍，主角是一位 20 出头、美丽的 {argument name=\"ethnicity\" default=\"南亚\"} 女性，随意地站在 {argument name=\"setting\" default=\"现代公共洗手间\"} 中。画面应呈现出一种毫不费力、自然且具有 Z 世代风格的质感，如同 Pinterest 或 Instagram 上随手拍摄的镜面照片。\n\n她留着蓬松的深棕色层次感长发，带有柔和的吹整效果、自然的动感、略显凌乱的有机质感、放松的蓬松度以及逼真的发丝细节。头发随意中分，造型自然。\n\n她的皮肤看起来清新自然，肤色平滑，眉毛修剪得当，妆容极简，嘴唇自然。她表情冷静、冷淡且随性，双唇微嘟，下颌放松。她的视线略微看向左侧，而不是直视镜子，营造出一种毫不费力的“冷淡风酷女孩”美学。\n\n她穿着一件修身的 {argument name=\"top style\" default=\"浅灰色圆领 T 恤\"}，材质为柔软的棉质，搭配高腰黑色牛仔裤。她的右手随意插在牛仔裤前兜里，食指戴着一枚粗犷的银色戒指。左手拿着一部现代黑色智能手机进行镜面自拍。\n\n洗手间干净且真实：\n- 左侧墙壁铺满白色方格瓷砖。\n- 右侧是浅木纹材质的厕所隔间，上面贴着一张白色小纸条。\n- 深色条纹天花板，配有嵌入式灯具。\n- 前景中有一个模糊的白色洗手池，洗手池边缘放着另一部屏幕朝下的智能手机。\n\n光照为冷白色的室内 LED 灯光，营造出干净、清爽、现代的氛围，并带有柔和的自然阴影和真实的肤色。画面应具有真实感和自然抓拍的质感。\n\n通过镜面进行平视拍摄，类似于高端智能手机拍摄的照片，具有微妙的景深效果。采用 Kodak Portra 400 风格的调色，带有极轻微的胶片颗粒感，真实的皮肤纹理，Pinterest 美学，Instagram 编辑风格，Z 世代时尚氛围，极致",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401360259_wyezkm_HOZOApKWEAA6CPm.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/MahnoorAi12/status/2082437668277797178",
+      "sourceType": "community",
+      "authorName": "Mahnoor Fatima",
+      "authorHandle": "@MahnoorAi12",
+      "createdAt": "2026-07-29T12:00:00.000Z",
+      "importedAt": "2026-07-31T15:37:47.966Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30230",
+      "rawText": "仅将上传的图片作为面部特征参考。严格锁定 100% 的面部特征，以保持人物身份。保留参考图中人物的面部结构、面部比例、眼睛、眉毛、鼻子、嘴唇、下颌线、肤色、自然表情以及整体身份特征。请勿复制或沿用参考图中的发型、头发长度、发色、发际线造型、服装、配饰、姿势、背景、光照或拍摄角度。在保持面部完全一致的前提下，生成下文描述的全新发型和场景。\n\n创作一张自然、中景的镜面自拍，主角是一位 20 出头、美丽的 {argument name=\"ethnicity\" default=\"南亚\"} 女性，随意地站在 {argument name=\"setting\" default=\"现代公共洗手间\"} 中。画面应呈现出一种毫不费力、自然且具有 Z 世代风格的质感，如同 Pinterest 或 Instagram 上随手拍摄的镜面照片。\n\n她留着蓬松的深棕色层次感长发，带有柔和的吹整效果、自然的动感、略显凌乱的有机质感、放松的蓬松度以及逼真的发丝细节。头发随意中分，造型自然。\n\n她的皮肤看起来清新自然，肤色平滑，眉毛修剪得当，妆容极简，嘴唇自然。她表情冷静、冷淡且随性，双唇微嘟，下颌放松。她的视线略微看向左侧，而不是直视镜子，营造出一种毫不费力的“冷淡风酷女孩”美学。\n\n她穿着一件修身的 {argument name=\"top style\" default=\"浅灰色圆领 T 恤\"}，材质为柔软的棉质，搭配高腰黑色牛仔裤。她的右手随意插在牛仔裤前兜里，食指戴着一枚粗犷的银色戒指。左手拿着一部现代黑色智能手机进行镜面自拍。\n\n洗手间干净且真实：\n- 左侧墙壁铺满白色方格瓷砖。\n- 右侧是浅木纹材质的厕所隔间，上面贴着一张白色小纸条。\n- 深色条纹天花板，配有嵌入式灯具。\n- 前景中有一个模糊的白色洗手池，洗手池边缘放着另一部屏幕朝下的智能手机。\n\n光照为冷白色的室内 LED 灯光，营造出干净、清爽、现代的氛围，并带有柔和的自然阴影和真实的肤色。画面应具有真实感和自然抓拍的质感。\n\n通过镜面进行平视拍摄，类似于高端智能手机拍摄的照片，具有微妙的景深效果。采用 Kodak Portra 400 风格的调色，带有极轻微的胶片颗粒感，真实的皮肤纹理，Pinterest 美学，Instagram 编辑风格，Z 世代时尚氛围，极致"
     },
     {
       "id": "community-2082611886613295548",
@@ -8506,252 +9373,6 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30260",
       "rawText": "竖构图 9:16，一张写实且明亮的室内生活方式肖像。仅描绘一名虚构的 {argument name=\"person\" default=\"成年东亚女性\"}，而非真实人物。外貌设定为 {argument name=\"age\" default=\"20 多岁后期\"}。将女性面部中心置于屏幕宽度约 48% 的位置，包含头发、肩膀和胸部的上半身视觉中心置于约 50% 的位置，避免人物过度偏向某一侧。在竖构图中自然地容纳从头顶到胸部以下的人物，面部位于顶部约 20-43% 处，肩膀和胸部居中，白色上衣延伸至底部。头顶上方留出极窄的边距。在屏幕右边缘包含部分弯曲的右臂和淡米色膝盖，自然地暗示手触碰后脑勺的动作。请勿不自然地切割额头、下巴、头发、肩膀或主要服装。\n\n女性单膝跪在明亮的沙发或床上，上身微微抬起。面部呈三分之二侧面，面向屏幕左侧。视线投向左侧窗外，双眼不要眯得太紧，唇角带着极轻微、平静的微笑。展现一种安静、沉稳的情绪，仿佛在假日清晨心不在焉地望向窗外。请勿抬起下巴，放松颈部和肩膀。\n\n面部特征呈自然的椭圆形。左右眼的高度和大小对齐，深棕色瞳孔中带有小小的窗户反光。眉毛不要太细，呈自然的深棕色。妆容清淡，唇色为淡珊瑚色，脸颊颜色自然，眼角处有适度的棕色。皮肤明亮健康，保留脸颊和鼻翼上自然的毛孔和细微绒毛。避免过度修饰皮肤或产生塑料般的统一感。\n\n头发为深棕色至接近黑色。在后脑勺稍高的位置扎成一个松散的小发髻。刘海向左右自然偏分，在鬓角、耳前和颈后留出几缕细碎的发丝。右手轻轻触碰后脑勺的头发，手指位置自然地隐藏在发丝中。请勿生成多余的手指或融合的手部。\n\n服装为 {argument name=\"clothing\" default=\"纯白色罗纹背心\"}。肩带较宽，圆领深度适中，材质为柔软的棉质针织面料。在胸部、侧面和腰部勾勒出细致的垂直罗纹和自然的褶皱。请勿包含透明度、标志、图案或装饰。下半身穿着浅米色的柔软休闲裤。在屏幕右下方的弯曲膝盖处展示织物的褶皱。\n\n前景为女性的肩膀、面部和白色上衣。中景为明亮的象牙白沙发或床。左后方放置一个大白色窗框，窗外有淡淡的日光，亮度不过曝。右后方适度布置一面白墙、细木框、模糊的室内植物和小件木质家具。背景物体应比人物更不显眼，请勿生成文字或标志。\n\n相机位于胸部高度，略低于女性视线水平。从中近距离拍摄，从正面略微向左环绕。焦距感约为 50mm。避免广角带来的面部拉伸或手臂夸张。聚焦于面部和近处的肩膀，采用浅至中等的景深，优雅地虚化后脑勺、右臂、膝盖和背景。保持面部轮廓、瞳孔、嘴唇和碎发的清晰度。\n\n主要光源是来自左侧大窗户的柔和自然光。光线明亮地包裹着左脸颊、鼻梁、嘴唇、颈部和左肩，在右脸颊和右臂上留下淡淡的阴影。光线经过漫反射，不会产生生硬的阴影。色温略偏中性至暖色。曝光为高调，但保留了白色上衣和窗户的层次感。在右后方的木材和皮肤上添加极淡的暖色调。整体配色方案为白色、象牙白、淡米色、柔和的棕色以及植物的暗绿色。\n\n真实地描绘皮肤毛孔、嘴唇的自然湿润感、瞳孔的透明度、细发流向、罗纹纤维以及休闲裤的柔软质感。商业摄影品质，营造出干净、平静的清晨健康感、家居服、美感和假日生活氛围。请勿包含文字、标志、品牌名称、签名或水印。避免出现多余的人物、多余的手臂或手指、缺失的手、融合的手指、破碎的肩膀、扭曲的脖子、不对称的眼睛、扭曲的窗框、重复的背景物体、过度的胸部强调、玩偶般的皮肤、过度的皮肤平滑、过强的 HDR 或插画风格。"
-    },
-    {
-      "id": "community-2082587420986622046",
-      "title": "个人资料 / 头像 - 柔和彩虹色 3D 女孩半身像",
-      "description": "一款柔和的 3D 彩虹色女孩半身肖像，风格可爱且极具艺术感，适合用于奇幻角色设计或个人头像。",
-      "prompt": "创作一张干净的 3D 风格化年轻女孩半身肖像，采用柔软的玩具质感粘土材质，主体居中于白色背景。角色拥有圆润的大头、精致的小鼻子、温柔的闭口微笑、光滑的脸颊，以及简化的大杏仁眼（无可见瞳孔），散发着柔和的彩虹渐变光泽。她留着浓密的长波浪卷发，侧分刘海，发丝呈丝带状雕塑感，环绕脸部，长发在肩后呈现出宽阔柔和的波浪。她穿着一件简单的圆领无袖上衣，画面展示从上半身开始的半身雕塑。整体采用虹彩般的彩虹色调，融合了青色、绿松石色、紫罗兰色、薰衣草色、粉色、桃色、橙色、薄荷绿和柔黄色，色彩过渡平滑，具有次表面散射的柔和感。光照应明亮、均匀且具备摄影棚级的干净感，呈现出光泽哑光塑料或粘土的质感，带有柔和的高光和极少的阴影。构图为竖向肖像，四分之三侧面视角，头部和肩部占据画面大部分空间，周围留有大量干净的白色负空间。在右下角添加一个小巧的手写艺术家签名和日期，内容为 {argument name=\"signature text\" default=\"July 29, 2026 Oyagi\"}。除该签名外，图像中不应包含任何文字，背景无杂物，无硬轮廓线，无写实皮肤纹理，且不添加额外配饰。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401428737_5x5omb_HObWOMaaEAAbzBo.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/bikurin59/status/2082587420986622046#reversed-0",
-      "sourceType": "community",
-      "authorName": "おやぎ",
-      "authorHandle": "@bikurin59",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
-      "tags": [
-        "人像",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测摄影提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "image",
-      "category": "插画三维",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30309",
-      "rawText": "创作一张干净的 3D 风格化年轻女孩半身肖像，采用柔软的玩具质感粘土材质，主体居中于白色背景。角色拥有圆润的大头、精致的小鼻子、温柔的闭口微笑、光滑的脸颊，以及简化的大杏仁眼（无可见瞳孔），散发着柔和的彩虹渐变光泽。她留着浓密的长波浪卷发，侧分刘海，发丝呈丝带状雕塑感，环绕脸部，长发在肩后呈现出宽阔柔和的波浪。她穿着一件简单的圆领无袖上衣，画面展示从上半身开始的半身雕塑。整体采用虹彩般的彩虹色调，融合了青色、绿松石色、紫罗兰色、薰衣草色、粉色、桃色、橙色、薄荷绿和柔黄色，色彩过渡平滑，具有次表面散射的柔和感。光照应明亮、均匀且具备摄影棚级的干净感，呈现出光泽哑光塑料或粘土的质感，带有柔和的高光和极少的阴影。构图为竖向肖像，四分之三侧面视角，头部和肩部占据画面大部分空间，周围留有大量干净的白色负空间。在右下角添加一个小巧的手写艺术家签名和日期，内容为 {argument name=\"signature text\" default=\"July 29, 2026 Oyagi\"}。除该签名外，图像中不应包含任何文字，背景无杂物，无硬轮廓线，无写实皮肤纹理，且不添加额外配饰。"
-    },
-    {
-      "id": "community-2082555055429792049",
-      "title": "个人资料 / 头像 - 博物馆级石墨肖像画",
-      "description": "一个写实的石墨铅笔肖像提示词，用于在纹理纸张上创作优雅的手绘半身肖像。",
-      "prompt": "创作一张超写实的石墨铅笔肖像，主体为 {argument name=\"subject\" default=\"一位年轻黑人男性\"}，呈现博物馆级的手绘风格。画面为半身四分之三侧面肖像，背景为米白色纹理绘图纸；头部略微转向观众左侧，双眼平静地看向观众右侧。保持自然的脸部比例以及沉稳、严肃的表情。主体留着短而紧密的纹理黑发，深色皮肤以灰度色调呈现，下巴和颌骨处有细微胡茬，嘴唇饱满，佩戴透明镜片且带有细微高光的细框长方形金属眼镜。身着 {argument name=\"outfit\" default=\"一件浅色翻领衬衫，搭配深色领带\"}。运用卓越的石墨细节：可见的铅笔排线、交叉排线、柔和的过渡、细腻的皮肤纹理，以及在眼睛、鼻子、脸颊、嘴唇、耳朵、眼镜、衣领和领带周围进行写实的阴影处理。背景保持极简，并带有淡淡的斜向铅笔笔触，无文字、无色彩、无水印。最终图像应呈现为扫描或拍摄于纸张上的精致传统石墨素描，具备高度写实感和优雅的肖像构图。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401413013_pbuoce_HOa4vYtXgAAa8L9.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/abs_uiux/status/2082555055429792049#reversed-0",
-      "sourceType": "community",
-      "authorName": "Abkr Sadiq",
-      "authorHandle": "@abs_uiux",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
-      "tags": [
-        "人像"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测视觉提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "人像时尚",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30291",
-      "rawText": "创作一张超写实的石墨铅笔肖像，主体为 {argument name=\"subject\" default=\"一位年轻黑人男性\"}，呈现博物馆级的手绘风格。画面为半身四分之三侧面肖像，背景为米白色纹理绘图纸；头部略微转向观众左侧，双眼平静地看向观众右侧。保持自然的脸部比例以及沉稳、严肃的表情。主体留着短而紧密的纹理黑发，深色皮肤以灰度色调呈现，下巴和颌骨处有细微胡茬，嘴唇饱满，佩戴透明镜片且带有细微高光的细框长方形金属眼镜。身着 {argument name=\"outfit\" default=\"一件浅色翻领衬衫，搭配深色领带\"}。运用卓越的石墨细节：可见的铅笔排线、交叉排线、柔和的过渡、细腻的皮肤纹理，以及在眼睛、鼻子、脸颊、嘴唇、耳朵、眼镜、衣领和领带周围进行写实的阴影处理。背景保持极简，并带有淡淡的斜向铅笔笔触，无文字、无色彩、无水印。最终图像应呈现为扫描或拍摄于纸张上的精致传统石墨素描，具备高度写实感和优雅的肖像构图。"
-    },
-    {
-      "id": "community-2082547278322221497",
-      "title": "个人资料 / 头像 - 单色女性骑士肖像",
-      "description": "一个电影感的黑白奇幻肖像提示词，用于生成身着盔甲、手持长剑并以远方城堡为背景的动漫风格女性骑士。",
-      "prompt": "创作一张竖构图的单色黑白奇幻肖像，主角为 {argument name=\"character name\" default=\"一位年轻女骑士\"}，采用精致的半写实动漫风格。画面呈现她腰部以上的四分之三背影，她转头回眸，直视观众，拥有明亮动人的大眼睛、精致的嘴唇、白皙发光的皮肤以及冷静严肃的表情。她留着 {argument name=\"hair color\" default=\"乌黑\"} 的高马尾，长发飘逸，碎发随风拂动。她身上需精确包含 5 个可见的盔甲与服饰元素：一件带有雕刻纹理的亮面胸甲、一个带有铆钉的圆形雕花肩甲、一只锁子甲袖子、一件在身后拖曳的深色斗篷，以及一只握住武器的盔甲手套。在她身侧添加 1 把垂直的长剑，剑柄缠绕深色布料，配有护手和华丽的剑首。盔甲需高度抛光，带有花卉金银丝细工雕刻、明亮的高光、细微的光点以及逼真的金属反射。场景设定在风吹拂的柔软草地上，远景山丘上设有 1 座模糊的中世纪城堡，天空明亮多云。使用浅景深、来自右上方的电影感轮廓光、柔和的大气雾气、飘浮的白色微粒、优雅的高细节线条、平滑的灰度渐变、强烈的对比度，且完全无色彩。无文字，无水印，无额外角色，无现代物品。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401426166_ty4qes_HOaxhYbbMAA3TIm.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/HarunagaMutsuki/status/2082547278322221497#reversed-0",
-      "sourceType": "community",
-      "authorName": "春永睦月　Harunaga Mutsuki",
-      "authorHandle": "@HarunagaMutsuki",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
-      "tags": [
-        "人像"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测视觉提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "插画三维",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30305",
-      "rawText": "创作一张竖构图的单色黑白奇幻肖像，主角为 {argument name=\"character name\" default=\"一位年轻女骑士\"}，采用精致的半写实动漫风格。画面呈现她腰部以上的四分之三背影，她转头回眸，直视观众，拥有明亮动人的大眼睛、精致的嘴唇、白皙发光的皮肤以及冷静严肃的表情。她留着 {argument name=\"hair color\" default=\"乌黑\"} 的高马尾，长发飘逸，碎发随风拂动。她身上需精确包含 5 个可见的盔甲与服饰元素：一件带有雕刻纹理的亮面胸甲、一个带有铆钉的圆形雕花肩甲、一只锁子甲袖子、一件在身后拖曳的深色斗篷，以及一只握住武器的盔甲手套。在她身侧添加 1 把垂直的长剑，剑柄缠绕深色布料，配有护手和华丽的剑首。盔甲需高度抛光，带有花卉金银丝细工雕刻、明亮的高光、细微的光点以及逼真的金属反射。场景设定在风吹拂的柔软草地上，远景山丘上设有 1 座模糊的中世纪城堡，天空明亮多云。使用浅景深、来自右上方的电影感轮廓光、柔和的大气雾气、飘浮的白色微粒、优雅的高细节线条、平滑的灰度渐变、强烈的对比度，且完全无色彩。无文字，无水印，无额外角色，无现代物品。"
-    },
-    {
-      "id": "community-2082452177050890519",
-      "title": "个人资料 / 头像 - 温馨女孩与萨摩耶友谊肖像",
-      "description": "一个专注于身份保留以及人与大型毛茸茸犬只互动的生活方式肖像提示词。",
-      "prompt": "使用提供的参考图像。保留 {argument name=\"subject name\" default=\"Main Ingrid\"} 的确切面部特征、{argument name=\"ethnicity\" default=\"温暖的菲律宾人特征\"}、长波浪黑发、自然微笑以及中等自然的身体比例。她身穿白色修身短款上衣、米色慢跑工装裤、一件从一侧肩膀滑落的宽松棕色连帽衫，以及黑白运动鞋。紧挨着她站立的是一只 {argument name=\"dog breed\" default=\"巨大的毛茸茸萨摩耶\"}，拥有雪白亮丽的毛发、厚实如云朵般的皮毛、温柔的深色眼睛、快乐的微笑表情以及可爱的吐舌笑容。Ingrid 一只手充满爱意地环绕着萨摩耶的脖子，同时将头轻轻靠在它毛茸茸的肩膀上。两人都面向镜头，表情温暖而平静，散发出信任与陪伴的气息。干净的米色无缝摄影棚背景，柔和的漫射摄影棚灯光，超逼真的毛发质感，照片级皮肤质感，奢华宠物肖像摄影，浅景深，电影级构图，温暖舒适的氛围，8K 分辨率，高细节，温馨的友谊肖像。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401400359_6f0a0x_HOZbNKRaMAAnoX7.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/Arina_hoqe/status/2082452177050890519",
-      "sourceType": "community",
-      "authorName": "Arina Ai",
-      "authorHandle": "@Arina_hoqe",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.791Z",
-      "tags": [
-        "人像",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测摄影提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "人像时尚",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30276",
-      "rawText": "使用提供的参考图像。保留 {argument name=\"subject name\" default=\"Main Ingrid\"} 的确切面部特征、{argument name=\"ethnicity\" default=\"温暖的菲律宾人特征\"}、长波浪黑发、自然微笑以及中等自然的身体比例。她身穿白色修身短款上衣、米色慢跑工装裤、一件从一侧肩膀滑落的宽松棕色连帽衫，以及黑白运动鞋。紧挨着她站立的是一只 {argument name=\"dog breed\" default=\"巨大的毛茸茸萨摩耶\"}，拥有雪白亮丽的毛发、厚实如云朵般的皮毛、温柔的深色眼睛、快乐的微笑表情以及可爱的吐舌笑容。Ingrid 一只手充满爱意地环绕着萨摩耶的脖子，同时将头轻轻靠在它毛茸茸的肩膀上。两人都面向镜头，表情温暖而平静，散发出信任与陪伴的气息。干净的米色无缝摄影棚背景，柔和的漫射摄影棚灯光，超逼真的毛发质感，照片级皮肤质感，奢华宠物肖像摄影，浅景深，电影级构图，温暖舒适的氛围，8K 分辨率，高细节，温馨的友谊肖像。"
-    },
-    {
-      "id": "community-2082443601389466021",
-      "title": "个人资料 / 头像 - 简洁扁平化矢量头像",
-      "description": "生成一个专业且现代的扁平化矢量头像，主角为佩戴眼镜并留有胡须的男性，背景为纯色，非常适合用作个人资料图标。",
-      "prompt": "创建一个简洁、正面的年轻男性矢量头像，采用现代扁平化插画风格。肖像需完美居中，裁剪范围从上胸部向上，主体应填满大部分方形画幅。运用大胆的几何形状、平滑的色彩过渡、清晰的边缘以及平衡对称的构图。面部特征应简化且富有表现力，具备明亮的双眼、细腻的阴影和自然的肤色。他拥有 {argument name=\"hair style\" default=\"向后梳理整齐的浓密棕色头发\"}，留着 {argument name=\"facial hair\" default=\"修剪整齐的浓密胡须\"}，佩戴圆形黑色眼镜，身穿纯黑色圆领 T 恤。背景为 {argument name=\"background\" default=\"纯暖橙色背景\"}，无任何图案或杂物。保持现代矢量艺术风格的精致数字头像美感，色彩鲜艳，线条锐利，细节极简，绝对不含写实纹理。高分辨率，1:1 纵横比，适用于专业个人资料图片。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401353440_2bn98y_HOZTakebAAAGhtx.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/j_smeaton99/status/2082443601389466021",
-      "sourceType": "community",
-      "authorName": "Jack",
-      "authorHandle": "@j_smeaton99",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.792Z",
-      "tags": [
-        "人像"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测视觉提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "image",
-      "category": "插画三维",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30223",
-      "rawText": "创建一个简洁、正面的年轻男性矢量头像，采用现代扁平化插画风格。肖像需完美居中，裁剪范围从上胸部向上，主体应填满大部分方形画幅。运用大胆的几何形状、平滑的色彩过渡、清晰的边缘以及平衡对称的构图。面部特征应简化且富有表现力，具备明亮的双眼、细腻的阴影和自然的肤色。他拥有 {argument name=\"hair style\" default=\"向后梳理整齐的浓密棕色头发\"}，留着 {argument name=\"facial hair\" default=\"修剪整齐的浓密胡须\"}，佩戴圆形黑色眼镜，身穿纯黑色圆领 T 恤。背景为 {argument name=\"background\" default=\"纯暖橙色背景\"}，无任何图案或杂物。保持现代矢量艺术风格的精致数字头像美感，色彩鲜艳，线条锐利，细节极简，绝对不含写实纹理。高分辨率，1:1 纵横比，适用于专业个人资料图片。"
-    },
-    {
-      "id": "community-2082437668277797178",
-      "title": "个人资料 / 头像 - 南亚女性镜面自拍",
-      "description": "一份详细的提示词，用于创作一张自然、具有 Z 世代风格的南亚女性镜面自拍，重点在于保持面部特征的一致性。",
-      "prompt": "仅将上传的图片作为面部特征参考。严格锁定 100% 的面部特征，以保持人物身份。保留参考图中人物的面部结构、面部比例、眼睛、眉毛、鼻子、嘴唇、下颌线、肤色、自然表情以及整体身份特征。请勿复制或沿用参考图中的发型、头发长度、发色、发际线造型、服装、配饰、姿势、背景、光照或拍摄角度。在保持面部完全一致的前提下，生成下文描述的全新发型和场景。\n\n创作一张自然、中景的镜面自拍，主角是一位 20 出头、美丽的 {argument name=\"ethnicity\" default=\"南亚\"} 女性，随意地站在 {argument name=\"setting\" default=\"现代公共洗手间\"} 中。画面应呈现出一种毫不费力、自然且具有 Z 世代风格的质感，如同 Pinterest 或 Instagram 上随手拍摄的镜面照片。\n\n她留着蓬松的深棕色层次感长发，带有柔和的吹整效果、自然的动感、略显凌乱的有机质感、放松的蓬松度以及逼真的发丝细节。头发随意中分，造型自然。\n\n她的皮肤看起来清新自然，肤色平滑，眉毛修剪得当，妆容极简，嘴唇自然。她表情冷静、冷淡且随性，双唇微嘟，下颌放松。她的视线略微看向左侧，而不是直视镜子，营造出一种毫不费力的“冷淡风酷女孩”美学。\n\n她穿着一件修身的 {argument name=\"top style\" default=\"浅灰色圆领 T 恤\"}，材质为柔软的棉质，搭配高腰黑色牛仔裤。她的右手随意插在牛仔裤前兜里，食指戴着一枚粗犷的银色戒指。左手拿着一部现代黑色智能手机进行镜面自拍。\n\n洗手间干净且真实：\n- 左侧墙壁铺满白色方格瓷砖。\n- 右侧是浅木纹材质的厕所隔间，上面贴着一张白色小纸条。\n- 深色条纹天花板，配有嵌入式灯具。\n- 前景中有一个模糊的白色洗手池，洗手池边缘放着另一部屏幕朝下的智能手机。\n\n光照为冷白色的室内 LED 灯光，营造出干净、清爽、现代的氛围，并带有柔和的自然阴影和真实的肤色。画面应具有真实感和自然抓拍的质感。\n\n通过镜面进行平视拍摄，类似于高端智能手机拍摄的照片，具有微妙的景深效果。采用 Kodak Portra 400 风格的调色，带有极轻微的胶片颗粒感，真实的皮肤纹理，Pinterest 美学，Instagram 编辑风格，Z 世代时尚氛围，极致",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1785401360259_wyezkm_HOZOApKWEAA6CPm.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/MahnoorAi12/status/2082437668277797178",
-      "sourceType": "community",
-      "authorName": "Mahnoor Fatima",
-      "authorHandle": "@MahnoorAi12",
-      "createdAt": "2026-07-29T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.792Z",
-      "tags": [],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测视觉提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "人像时尚",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=30230",
-      "rawText": "仅将上传的图片作为面部特征参考。严格锁定 100% 的面部特征，以保持人物身份。保留参考图中人物的面部结构、面部比例、眼睛、眉毛、鼻子、嘴唇、下颌线、肤色、自然表情以及整体身份特征。请勿复制或沿用参考图中的发型、头发长度、发色、发际线造型、服装、配饰、姿势、背景、光照或拍摄角度。在保持面部完全一致的前提下，生成下文描述的全新发型和场景。\n\n创作一张自然、中景的镜面自拍，主角是一位 20 出头、美丽的 {argument name=\"ethnicity\" default=\"南亚\"} 女性，随意地站在 {argument name=\"setting\" default=\"现代公共洗手间\"} 中。画面应呈现出一种毫不费力、自然且具有 Z 世代风格的质感，如同 Pinterest 或 Instagram 上随手拍摄的镜面照片。\n\n她留着蓬松的深棕色层次感长发，带有柔和的吹整效果、自然的动感、略显凌乱的有机质感、放松的蓬松度以及逼真的发丝细节。头发随意中分，造型自然。\n\n她的皮肤看起来清新自然，肤色平滑，眉毛修剪得当，妆容极简，嘴唇自然。她表情冷静、冷淡且随性，双唇微嘟，下颌放松。她的视线略微看向左侧，而不是直视镜子，营造出一种毫不费力的“冷淡风酷女孩”美学。\n\n她穿着一件修身的 {argument name=\"top style\" default=\"浅灰色圆领 T 恤\"}，材质为柔软的棉质，搭配高腰黑色牛仔裤。她的右手随意插在牛仔裤前兜里，食指戴着一枚粗犷的银色戒指。左手拿着一部现代黑色智能手机进行镜面自拍。\n\n洗手间干净且真实：\n- 左侧墙壁铺满白色方格瓷砖。\n- 右侧是浅木纹材质的厕所隔间，上面贴着一张白色小纸条。\n- 深色条纹天花板，配有嵌入式灯具。\n- 前景中有一个模糊的白色洗手池，洗手池边缘放着另一部屏幕朝下的智能手机。\n\n光照为冷白色的室内 LED 灯光，营造出干净、清爽、现代的氛围，并带有柔和的自然阴影和真实的肤色。画面应具有真实感和自然抓拍的质感。\n\n通过镜面进行平视拍摄，类似于高端智能手机拍摄的照片，具有微妙的景深效果。采用 Kodak Portra 400 风格的调色，带有极轻微的胶片颗粒感，真实的皮肤纹理，Pinterest 美学，Instagram 编辑风格，Z 世代时尚氛围，极致"
     },
     {
       "id": "community-2082427106550481030",
@@ -26550,7 +27171,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.799Z",
+      "importedAt": "2026-07-31T15:37:47.973Z",
       "tags": [
         "产品",
         "平面设计",
@@ -26593,7 +27214,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.799Z",
+      "importedAt": "2026-07-31T15:37:47.973Z",
       "tags": [
         "平面设计"
       ],
@@ -26634,7 +27255,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-07-31T10:05:55.799Z",
+      "importedAt": "2026-07-31T15:37:47.973Z",
       "tags": [
         "平面设计"
       ],
