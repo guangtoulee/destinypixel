@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-01T14:46:45.287Z",
+  "updatedAt": "2026-08-02T04:55:51.088Z",
   "sourceSummary": {
     "community": 468,
-    "publicX": 209,
-    "total": 677
+    "publicX": 210,
+    "total": 678
   },
   "items": [
     {
@@ -3225,6 +3225,51 @@
       "rawText": "holy.. Claude does motion design now 🤯 you describe the video in chat and Higgsfield’s MCP handles the rest - model choice, the shots, the render, the finished file. the mechanism: one OAuth connection, 30+ video models inside Claude - Veo 3.1, Sora 2, Kling 3.0. you describe the shot, Claude picks the model and returns the finished clip. up to 4K, 15s. no key, no editor. how to set up (2 min): 1.  → Settings → Connectors → Add custom connector 2. paste  3. sign in with your Higgsfield account - OAuth, no key then just ask: “make me a 9:16 clip of…” that’s the full setup. your buddy’s still stitching renders across four browser tabs. you type one sentence and the shot comes back done."
     },
     {
+      "id": "x-public-2081303270736240714",
+      "title": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fas",
+      "description": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline ",
+      "prompt": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/framexin/status/2081303270736240714",
+      "sourceType": "x",
+      "authorName": "framexin",
+      "authorHandle": "@framexin",
+      "createdAt": "2026-07-26T08:59:03.000Z",
+      "importedAt": "2026-08-02T04:55:51.077Z",
+      "tags": [
+        "Kling",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 140,
+        "reposts": 10,
+        "replies": 21,
+        "quotes": 0,
+        "bookmarks": 137,
+        "views": 52343,
+        "score": 857
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product."
+    },
+    {
       "id": "x-public-2076942151959588906",
       "title": "Built with GPT Image 2 + Omni Flash + Seedance 2.0. I wanted to see if AI could generate a clien",
       "description": "Built with GPT Image 2 + Omni Flash + Seedance 2.0. I wanted to see if AI could generate a client ready storyboard, not just a few nice looking frames. So I gave it one prompt. The result: ✅ 12-shot storyboard ✅ Realisti",
@@ -3313,51 +3358,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.0 on @nadou_pro Prompt: { \"video_prompt\": \"A first-person POV shot of a hand holding a black marker, pointing it at real-world objects in an urban city setting. The video uses a creative 'doodle overlay' effect. As the hand waves the marker with a swift motion, real-world objects instantly transform into cute, 2D cartoon animations with clean blue and white outlines. 1. A real subway train passing on an elevated track transforms into a playful, minimalist blue and white cartoon train. 2. A real pigeon on a paved sidewalk transforms into a stylized white cartoon bird flying away, leaving small hand-drawn dust clouds. 3. A real green bus driving on a city street transforms into a giant, adorable 2D animated orange tabby cat walking casually. 4. A real woman sitting at a bus stop transforms into a classic 2D anime-style girl waving happily. The final shot shows the hand tossing an object into the sky, transforming the entire city sky into a bright, vibrant anime sunset with fluffy white clouds and a smiling cartoon sun. Smooth transitions, playful and whimsical energy, high-contrast mix of live-action and 2D cel animation.\" } Frame-by-Frame Generation Prompts If you want to generate the specific static assets or concepts individually, you can use these tailored image prompts: * The Cartoon Train: > A crisp first-person POV photograph of a hand holding a black marker aimed at an elevated city train track. Overlaid on the real scene is a bright 2D vector doodle of a minimalist blue and white cartoon subway train passing by. Playful, mixed media, urban street style. > * The Pigeon Transformation: > First-person perspective looking down at a paved city sidewalk. A hand holds a black marker, pointing at a stylized, hand-drawn 2D white cartoon dove that is mid-flight, bursting out from where a real bird just stood. Whimsical line art overlay. > * The Giant Cat Bus: > A wide POV shot of a city street next to a sidewalk. A hand with a marker is tracking a giant, cute 2D animated orange tabby cat with green eyes as it walks down the vehicle lane where a bus should be. High contrast between the realistic asphalt and the bright, solid-colored character art. > * The Anime Sky: > A low-angle POV shot looking up past city high-rise apartments into the sky. The realistic sky transitions instantly into a beautiful, vibrant 2D anime-style pastel sunset filled with soft, puffy white clouds and a simple, cheerful cartoon sun illustration. >"
-    },
-    {
-      "id": "x-public-2081303270736240714",
-      "title": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fas",
-      "description": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline ",
-      "prompt": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/framexin/status/2081303270736240714",
-      "sourceType": "x",
-      "authorName": "framexin",
-      "authorHandle": "@framexin",
-      "createdAt": "2026-07-26T08:59:03.000Z",
-      "importedAt": "2026-07-31T10:06:00.204Z",
-      "tags": [
-        "Kling",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Kling",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 139,
-        "reposts": 10,
-        "replies": 20,
-        "quotes": 0,
-        "bookmarks": 135,
-        "views": 49484,
-        "score": 842
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product."
     },
     {
       "id": "x-public-2074137524096712721",
@@ -3667,6 +3667,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This is literally Fable moment for AI filmmaking. This full movie trailer was created on Buzzy using Seedance 2.5. With Buzzy, creators can: → Generate 30-second cinematic scenes in one go → Create in native 4K with 10-bit color → Use up to 50 image, video, and audio references for stronger character and style consistency This moves AI filmmaking beyond isolated clips. Instead of editing and stitching short individual videos, creators can now build complete stories and cinematic sequences on Buzzy. Seedance 2.5 is coming soon to Buzzy. #Seedance25 #AIFilmmaking #AIVideo"
+    },
+    {
+      "id": "x-public-2083167466927387111",
+      "title": "Dreamina Seedance 2.5 is almost here! 🔥— today — while US rollout begins August 7. https://t.co",
+      "description": "Dreamina Seedance 2.5 is almost here! 🔥— today — while US rollout begins August 7.  Graduating from \"prompt-based guessing\" to **\"reference-driven creation\"** — this brings the magnificent upgrade creators have been wai",
+      "prompt": "Dreamina Seedance 2.5 is almost here! 🔥— today — while US rollout begins August 7.  Graduating from \"prompt-based guessing\" to **\"reference-driven creation\"** — this brings the magnificent upgrade creators have been waiting for. ✅ The entire integrated Seedance suite (2.5, 2.0, and upcoming generation models) lands exactly at its lowest-ever tier ✅ Dreamina goes beyond simply being the ideal platform for Seedance 2.5 — it truly is the most affordable way to run it, full-capacity, devoid of annoying add-ons What makes this release revolutionary? First video model to accept 50 multimodal references — funnel in characters, scenes, reference shots, and audio layers easily in one go. Cut out the endless prompt writing. 🎬 30-second native clips — visualize complete stories, never just rough fragments. Utilizing 2 extensions smoothly available in post-editing, plus a fascinating ultra-long mode scaling up to 3 minutes. ✂️ Professional editing — crisp 3D white model preview, solid green screen workflow, completely with Blender/Maya plugin support. 🌏 10+ languages — precise lip-sync and subtitles align perfectly. There are zero translation tools needed. Dreamina Seedance 2.5 is launching globally first on Dreamina — firmly holding the 2026 title as best AI video model for creators. Coming soon. Make magic with Seedance 2.0 today and dominate the workflow! #dreamina #dreaminapartner #seedance #dreaminaseedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/JameFalken/status/2083167466927387111",
+      "sourceType": "x",
+      "authorName": "MR LARK DAVIS 🚀📊",
+      "authorHandle": "@JameFalken",
+      "createdAt": "2026-07-31T12:26:42.000Z",
+      "importedAt": "2026-08-02T04:55:51.078Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 112,
+        "reposts": 110,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 4,
+        "views": 14008,
+        "score": 710
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Dreamina Seedance 2.5 is almost here! 🔥— today — while US rollout begins August 7.  Graduating from \"prompt-based guessing\" to **\"reference-driven creation\"** — this brings the magnificent upgrade creators have been waiting for. ✅ The entire integrated Seedance suite (2.5, 2.0, and upcoming generation models) lands exactly at its lowest-ever tier ✅ Dreamina goes beyond simply being the ideal platform for Seedance 2.5 — it truly is the most affordable way to run it, full-capacity, devoid of annoying add-ons What makes this release revolutionary? First video model to accept 50 multimodal references — funnel in characters, scenes, reference shots, and audio layers easily in one go. Cut out the endless prompt writing. 🎬 30-second native clips — visualize complete stories, never just rough fragments. Utilizing 2 extensions smoothly available in post-editing, plus a fascinating ultra-long mode scaling up to 3 minutes. ✂️ Professional editing — crisp 3D white model preview, solid green screen workflow, completely with Blender/Maya plugin support. 🌏 10+ languages — precise lip-sync and subtitles align perfectly. There are zero translation tools needed. Dreamina Seedance 2.5 is launching globally first on Dreamina — firmly holding the 2026 title as best AI video model for creators. Coming soon. Make magic with Seedance 2.0 today and dominate the workflow! #dreamina #dreaminapartner #seedance #dreaminaseedance25"
     },
     {
       "id": "x-public-2083167038147829963",
@@ -8365,7 +8407,7 @@
       "authorName": "underwood",
       "authorHandle": "@underwoodxie96",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.531Z",
+      "importedAt": "2026-08-02T04:55:46.901Z",
       "tags": [
         "摄影"
       ],
@@ -8406,7 +8448,7 @@
       "authorName": "Karlos",
       "authorHandle": "@de_mon010",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.532Z",
+      "importedAt": "2026-08-02T04:55:46.902Z",
       "tags": [
         "人像"
       ],
@@ -8447,7 +8489,7 @@
       "authorName": "バースバイブ遊",
       "authorHandle": "@m19940000",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.532Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像",
         "摄影"
@@ -8489,7 +8531,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.532Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像"
       ],
@@ -8530,7 +8572,7 @@
       "authorName": "りぉみ",
       "authorHandle": "@riomimimimi",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.532Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -8569,7 +8611,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像",
         "摄影"
@@ -8611,7 +8653,7 @@
       "authorName": "ICREAT AI",
       "authorHandle": "@icreat_ai",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "摄影"
       ],
@@ -8652,7 +8694,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -8694,7 +8736,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -8736,7 +8778,7 @@
       "authorName": "Johnn",
       "authorHandle": "@john_my07",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -8778,7 +8820,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "摄影"
       ],
@@ -8819,7 +8861,7 @@
       "authorName": "AiPhotoDesigner",
       "authorHandle": "@AiPhotoDesigner",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像",
         "摄影"
@@ -8861,7 +8903,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像",
         "摄影"
@@ -8903,7 +8945,7 @@
       "authorName": "Nailai7981",
       "authorHandle": "@VIBEQUIRKLABS",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.903Z",
       "tags": [
         "人像",
         "摄影"
@@ -8945,7 +8987,7 @@
       "authorName": "AiPhotoDesigner",
       "authorHandle": "@AiPhotoDesigner",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像"
       ],
@@ -8986,7 +9028,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "平面设计"
@@ -9028,7 +9070,7 @@
       "authorName": "レティシア・ノエル",
       "authorHandle": "@N7S6P1",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -9067,7 +9109,7 @@
       "authorName": "Mr.pinecone",
       "authorHandle": "@Mrpinecone888",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像"
       ],
@@ -9108,7 +9150,7 @@
       "authorName": "ギン",
       "authorHandle": "@takkun_life_ea",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "摄影"
       ],
@@ -9149,7 +9191,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -9191,7 +9233,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -9233,7 +9275,7 @@
       "authorName": "Snow",
       "authorHandle": "@iamrealsnow",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像"
       ],
@@ -9274,7 +9316,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -9316,7 +9358,7 @@
       "authorName": "Mr.pinecone",
       "authorHandle": "@Mrpinecone888",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.533Z",
+      "importedAt": "2026-08-02T04:55:46.904Z",
       "tags": [
         "人像",
         "摄影"
@@ -28292,7 +28334,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.538Z",
+      "importedAt": "2026-08-02T04:55:46.910Z",
       "tags": [
         "产品",
         "平面设计",
@@ -28335,7 +28377,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.538Z",
+      "importedAt": "2026-08-02T04:55:46.910Z",
       "tags": [
         "平面设计"
       ],
@@ -28376,7 +28418,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-01T14:46:41.538Z",
+      "importedAt": "2026-08-02T04:55:46.911Z",
       "tags": [
         "平面设计"
       ],
