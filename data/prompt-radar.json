@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-06T10:09:15.668Z",
+  "updatedAt": "2026-08-06T15:42:37.777Z",
   "sourceSummary": {
     "community": 468,
     "publicX": 235,
@@ -2043,7 +2043,7 @@
       "authorName": "Rina",
       "authorHandle": "@irinatoxi",
       "createdAt": "2026-07-31T12:46:21.000Z",
-      "importedAt": "2026-08-04T10:11:45.258Z",
+      "importedAt": "2026-08-06T15:42:37.765Z",
       "tags": [
         "Midjourney"
       ],
@@ -2067,8 +2067,8 @@
         "replies": 6,
         "quotes": 0,
         "bookmarks": 258,
-        "views": 27113,
-        "score": 1326
+        "views": 27602,
+        "score": 1327
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "3D character artists should be more worried about Kimi K3 than Midjourney. Image generators can fake one pretty frame. The real threat is AI taking a dead base mesh and handling the painful middle: hair, clothes, materials, lighting, posing, camera work, and fifty tiny fixes nobody posts online. That is exactly where workflows around Kimi K3 are heading. Not “generate an anime girl,” but keep refining the same editable 3D scene until it stops looking like a mannequin and starts looking marketable. When that works reliably, clients will stop paying for hours of technical suffering. They will pay for taste. And a lot of portfolios are not going to survive that distinction."
@@ -5606,6 +5606,49 @@
       "rawText": "Seedance 2.0 on Vidfield AI Prompt: \"Create a 15-second realistic cinematic slice-of-life video in 16:9, 24fps. Visual-only video, no dialogue, no voice, no music, no sound effects, no subtitles, no text on screen. Warm golden-hour sunlight, soft handheld camera, muted film color grade, slight grain, natural shadows, peaceful nostalgic neighborhood mood. Fully realistic live-action style, not game-like, not animated. Main character: a young Korean woman in her early 20s with messy dark brown hair tied in a loose ponytail, soft natural face, calm gentle expression, dark gray cropped sleeveless tank top, loose light-wash blue jeans, black necklace, casual sneakers. Keep her look consistent in every shot. Location: a long narrow real-life residential alley between tall tan stone and concrete walls. Sandy dusty ground, warm sunlight glowing on one side, soft tree shadows across the path, palm trees and green leaves visible above the walls, a blue painted wall far ahead, one bicycle leaning near the end of the alley, quiet empty neighborhood feeling. 0:00–0:02: Rear tracking shot. The Korean woman walks slowly through the long narrow alley from behind. Golden sunlight stretches across the tan walls. Camera follows with natural handheld motion. 0:02–0:04: Wide alley shot. A small gray-brown tabby cat appears from a low gap near the left side wall and steps into the alley. The woman notices it, slows down, and turns slightly toward it. 0:04–0:06: Medium side shot. The cat walks near her feet and looks up. She smiles softly, bends down slowly, and extends one hand in a gentle careful way. 0:06–0:08: Low close-up. The cat sniffs her fingers, then rubs its head against her hand. She gently pets the cat’s head and back. Show realistic fur texture, tiny whisker movement, and natural cat behavior. 0:08–0:10: Emotional close-up. The woman smiles warmly while petting the cat. Sunlight flickers through tree leaves across her face, shoulders, and hair. Keep the moment soft, calm, and human. 0:10–0:12: Medium-wide shot. The cat walks ahead a few steps, then looks back at her. She stands slowly and follows it with a curious peaceful smile. 0:12–0:14: Front tracking shot. She walks toward camera with the cat beside her near the wall. She looks down at the cat and smiles. The long alley, tan walls, blue wall far behind, trees, and bicycle remain visible. 0:14–0:15: Final close shot. The cat brushes against her leg. She looks toward the camera with a soft peaceful smile, then looks down at the cat again. Hold the warm golden alley atmosphere for a gentle cinematic ending.\""
     },
     {
+      "id": "x-public-2083381900719407359",
+      "title": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you w",
+      "description": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product ",
+      "prompt": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product references, story notes, and continuity rules. Step 2: Define the objective. Describe the story, commercial, trailer, or scene you want to create and explain the visual style, pacing, and overall creative direction. Step 3: Ask ChatGPT to break the story into multiple 5 to 10 second batches. Each batch should have a clearly defined start frame and end frame. The end frame of one batch must become the exact start frame of the next to maintain perfect continuity. Step 4: Ask ChatGPT to generate a detailed storyboard for every batch. Keep the same characters, costumes, props, lighting, scale, camera direction, and environment consistent across all frames. Step 5: Review the storyboard. Regenerate individual batches until every transition, action, and composition feels natural and continuous. Step 6: Once the storyboard is approved, ask ChatGPT to convert each batch into a professional Seedance 2.0 video prompt. Each prompt should include cinematography, camera movement, character performance, continuity rules, environment details, and animation instructions. Step 7: Generate every batch in Seedance 2.0. Render them in parallel for speed or one by one if you want to review each scene before continuing. Step 8: If any shot breaks continuity, regenerate only that specific batch while keeping the same start frame, end frame, characters, and visual style. Step 9: Stitch all generated clips together in chronological order. Since every batch shares matching transition frames, the complete video should play as one seamless, continuous sequence. Step 10: Perform the final edit by adding sound effects, music, dialogue, color grading, and any finishing touches before exporting the completed video.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/beginnersblog1/status/2083381900719407359",
+      "sourceType": "x",
+      "authorName": "Beginnersblog",
+      "authorHandle": "@beginnersblog1",
+      "createdAt": "2026-08-01T02:38:47.000Z",
+      "importedAt": "2026-08-06T15:42:37.767Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 69,
+        "reposts": 9,
+        "replies": 7,
+        "quotes": 1,
+        "bookmarks": 96,
+        "views": 4792,
+        "score": 482
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product references, story notes, and continuity rules. Step 2: Define the objective. Describe the story, commercial, trailer, or scene you want to create and explain the visual style, pacing, and overall creative direction. Step 3: Ask ChatGPT to break the story into multiple 5 to 10 second batches. Each batch should have a clearly defined start frame and end frame. The end frame of one batch must become the exact start frame of the next to maintain perfect continuity. Step 4: Ask ChatGPT to generate a detailed storyboard for every batch. Keep the same characters, costumes, props, lighting, scale, camera direction, and environment consistent across all frames. Step 5: Review the storyboard. Regenerate individual batches until every transition, action, and composition feels natural and continuous. Step 6: Once the storyboard is approved, ask ChatGPT to convert each batch into a professional Seedance 2.0 video prompt. Each prompt should include cinematography, camera movement, character performance, continuity rules, environment details, and animation instructions. Step 7: Generate every batch in Seedance 2.0. Render them in parallel for speed or one by one if you want to review each scene before continuing. Step 8: If any shot breaks continuity, regenerate only that specific batch while keeping the same start frame, end frame, characters, and visual style. Step 9: Stitch all generated clips together in chronological order. Since every batch shares matching transition frames, the complete video should play as one seamless, continuous sequence. Step 10: Perform the final edit by adding sound effects, music, dialogue, color grading, and any finishing touches before exporting the completed video."
+    },
+    {
       "id": "x-public-2076342276536615212",
       "title": "YOU HAVE BEEN TRAINED TO TRUST A PHOTO YOUR OWN EYES CAN NO LONGER VERIFY That queso smash on th",
       "description": "YOU HAVE BEEN TRAINED TO TRUST A PHOTO YOUR OWN EYES CAN NO LONGER VERIFY That queso smash on the sign outside? It was never plated, never cooked, never real. It was generated by a prompt, approved by a manager who thoug",
@@ -5646,49 +5689,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "YOU HAVE BEEN TRAINED TO TRUST A PHOTO YOUR OWN EYES CAN NO LONGER VERIFY That queso smash on the sign outside? It was never plated, never cooked, never real. It was generated by a prompt, approved by a manager who thought nobody would notice. > menu boards, delivery apps, and social platforms are increasingly running AI-generated food photography instead of real shots - Forkable, a US catering platform, quietly swapped real restaurant photos for AI images across its entire site without telling the restaurants themselves > McDonald's Netherlands pulled a fully AI-generated Christmas ad within days of backlash, proof that even a billion-dollar brand can't out-market the moment customers spot the uncanny gloss of a synthetic image > under the FTC's \"reasonable consumer standard,\" AI food imagery can legally count as false advertising the moment it materially changes what someone expected to receive - a disclaimer buried in fine print doesn't erase that > the deception now runs both directions: some customers use AI-edited photos of \"raw\" or \"moldy\" food to fraud their way into refunds, forcing DoorDash and other platforms to build detection systems just to catch fabricated evidence > researchers call this a live regulatory blind spot - almost no jurisdiction has updated food fraud law to cover AI-generated imagery, meaning there is currently very little legal deterrent for either the restaurant or the customer How to actually spot it before you order: > look for unnaturally perfect symmetry - real melted cheese pulls unevenly, AI cheese pulls in a suspiciously smooth arc > check the shadows - AI food photos often have lighting that doesn't match the direction of any visible light source > zoom in on garnish and texture - AI still struggles with fine details like sesame seed placement, herb sprigs, or steam > search the exact dish name plus the restaurant on Reddit or Instagram - real customer photos will contradict the marketing fast You were taught to trust your eyes at the counter. Now the eyes need training too."
-    },
-    {
-      "id": "x-public-2083381900719407359",
-      "title": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you w",
-      "description": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product ",
-      "prompt": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product references, story notes, and continuity rules. Step 2: Define the objective. Describe the story, commercial, trailer, or scene you want to create and explain the visual style, pacing, and overall creative direction. Step 3: Ask ChatGPT to break the story into multiple 5 to 10 second batches. Each batch should have a clearly defined start frame and end frame. The end frame of one batch must become the exact start frame of the next to maintain perfect continuity. Step 4: Ask ChatGPT to generate a detailed storyboard for every batch. Keep the same characters, costumes, props, lighting, scale, camera direction, and environment consistent across all frames. Step 5: Review the storyboard. Regenerate individual batches until every transition, action, and composition feels natural and continuous. Step 6: Once the storyboard is approved, ask ChatGPT to convert each batch into a professional Seedance 2.0 video prompt. Each prompt should include cinematography, camera movement, character performance, continuity rules, environment details, and animation instructions. Step 7: Generate every batch in Seedance 2.0. Render them in parallel for speed or one by one if you want to review each scene before continuing. Step 8: If any shot breaks continuity, regenerate only that specific batch while keeping the same start frame, end frame, characters, and visual style. Step 9: Stitch all generated clips together in chronological order. Since every batch shares matching transition frames, the complete video should play as one seamless, continuous sequence. Step 10: Perform the final edit by adding sound effects, music, dialogue, color grading, and any finishing touches before exporting the completed video.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/beginnersblog1/status/2083381900719407359",
-      "sourceType": "x",
-      "authorName": "Beginnersblog",
-      "authorHandle": "@beginnersblog1",
-      "createdAt": "2026-08-01T02:38:47.000Z",
-      "importedAt": "2026-08-06T10:09:15.656Z",
-      "tags": [
-        "Seedance",
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 69,
-        "reposts": 9,
-        "replies": 7,
-        "quotes": 1,
-        "bookmarks": 95,
-        "views": 4746,
-        "score": 478
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product references, story notes, and continuity rules. Step 2: Define the objective. Describe the story, commercial, trailer, or scene you want to create and explain the visual style, pacing, and overall creative direction. Step 3: Ask ChatGPT to break the story into multiple 5 to 10 second batches. Each batch should have a clearly defined start frame and end frame. The end frame of one batch must become the exact start frame of the next to maintain perfect continuity. Step 4: Ask ChatGPT to generate a detailed storyboard for every batch. Keep the same characters, costumes, props, lighting, scale, camera direction, and environment consistent across all frames. Step 5: Review the storyboard. Regenerate individual batches until every transition, action, and composition feels natural and continuous. Step 6: Once the storyboard is approved, ask ChatGPT to convert each batch into a professional Seedance 2.0 video prompt. Each prompt should include cinematography, camera movement, character performance, continuity rules, environment details, and animation instructions. Step 7: Generate every batch in Seedance 2.0. Render them in parallel for speed or one by one if you want to review each scene before continuing. Step 8: If any shot breaks continuity, regenerate only that specific batch while keeping the same start frame, end frame, characters, and visual style. Step 9: Stitch all generated clips together in chronological order. Since every batch shares matching transition frames, the complete video should play as one seamless, continuous sequence. Step 10: Perform the final edit by adding sound effects, music, dialogue, color grading, and any finishing touches before exporting the completed video."
     },
     {
       "id": "x-public-2075832191959838840",
@@ -5963,7 +5963,7 @@
       "authorName": "ᴍᴜʀᴘʜʏ",
       "authorHandle": "@Diplomeme",
       "createdAt": "2026-07-30T06:35:27.000Z",
-      "importedAt": "2026-08-06T10:09:15.657Z",
+      "importedAt": "2026-08-06T15:42:37.766Z",
       "tags": [
         "Seedance",
         "视频",
@@ -5989,7 +5989,7 @@
         "replies": 45,
         "quotes": 0,
         "bookmarks": 47,
-        "views": 4654,
+        "views": 4731,
         "score": 429
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -9476,7 +9476,7 @@
       "authorName": "underwood",
       "authorHandle": "@underwoodxie96",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.694Z",
+      "importedAt": "2026-08-06T15:42:34.280Z",
       "tags": [
         "摄影"
       ],
@@ -9517,7 +9517,7 @@
       "authorName": "Karlos",
       "authorHandle": "@de_mon010",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.695Z",
+      "importedAt": "2026-08-06T15:42:34.281Z",
       "tags": [
         "人像"
       ],
@@ -9558,7 +9558,7 @@
       "authorName": "バースバイブ遊",
       "authorHandle": "@m19940000",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.695Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像",
         "摄影"
@@ -9600,7 +9600,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.695Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像"
       ],
@@ -9641,7 +9641,7 @@
       "authorName": "りぉみ",
       "authorHandle": "@riomimimimi",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.695Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -9680,7 +9680,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像",
         "摄影"
@@ -9722,7 +9722,7 @@
       "authorName": "ICREAT AI",
       "authorHandle": "@icreat_ai",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "摄影"
       ],
@@ -9763,7 +9763,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -9805,7 +9805,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -9847,7 +9847,7 @@
       "authorName": "Johnn",
       "authorHandle": "@john_my07",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -9889,7 +9889,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-08-01T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "摄影"
       ],
@@ -9930,7 +9930,7 @@
       "authorName": "AiPhotoDesigner",
       "authorHandle": "@AiPhotoDesigner",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像",
         "摄影"
@@ -9972,7 +9972,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像",
         "摄影"
@@ -10014,7 +10014,7 @@
       "authorName": "Nailai7981",
       "authorHandle": "@VIBEQUIRKLABS",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.282Z",
       "tags": [
         "人像",
         "摄影"
@@ -10056,7 +10056,7 @@
       "authorName": "AiPhotoDesigner",
       "authorHandle": "@AiPhotoDesigner",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像"
       ],
@@ -10097,7 +10097,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "平面设计"
@@ -10139,7 +10139,7 @@
       "authorName": "レティシア・ノエル",
       "authorHandle": "@N7S6P1",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -10178,7 +10178,7 @@
       "authorName": "Mr.pinecone",
       "authorHandle": "@Mrpinecone888",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像"
       ],
@@ -10219,7 +10219,7 @@
       "authorName": "ギン",
       "authorHandle": "@takkun_life_ea",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "摄影"
       ],
@@ -10260,7 +10260,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -10302,7 +10302,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.696Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -10344,7 +10344,7 @@
       "authorName": "Snow",
       "authorHandle": "@iamrealsnow",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像"
       ],
@@ -10385,7 +10385,7 @@
       "authorName": "serein ｜买美股上币安",
       "authorHandle": "@you1873118",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -10427,7 +10427,7 @@
       "authorName": "Mr.pinecone",
       "authorHandle": "@Mrpinecone888",
       "createdAt": "2026-07-31T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.697Z",
+      "importedAt": "2026-08-06T15:42:34.283Z",
       "tags": [
         "人像",
         "摄影"
@@ -29403,7 +29403,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.703Z",
+      "importedAt": "2026-08-06T15:42:34.290Z",
       "tags": [
         "产品",
         "平面设计",
@@ -29446,7 +29446,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.703Z",
+      "importedAt": "2026-08-06T15:42:34.290Z",
       "tags": [
         "平面设计"
       ],
@@ -29487,7 +29487,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-06T10:09:12.703Z",
+      "importedAt": "2026-08-06T15:42:34.290Z",
       "tags": [
         "平面设计"
       ],
