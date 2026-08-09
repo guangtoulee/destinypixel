@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-08T14:06:54.121Z",
+  "updatedAt": "2026-08-09T03:17:22.872Z",
   "sourceSummary": {
     "community": 515,
-    "publicX": 247,
-    "total": 762
+    "publicX": 253,
+    "total": 768
   },
   "items": [
     {
@@ -191,7 +191,7 @@
       "authorName": "zero",
       "authorHandle": "@twoclipping",
       "createdAt": "2026-08-06T06:13:48.000Z",
-      "importedAt": "2026-08-08T03:10:04.990Z",
+      "importedAt": "2026-08-09T03:17:22.858Z",
       "tags": [
         "Seedance",
         "产品",
@@ -212,13 +212,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 1459,
-        "reposts": 159,
-        "replies": 1275,
-        "quotes": 12,
-        "bookmarks": 2786,
-        "views": 93470,
-        "score": 13410
+        "likes": 1550,
+        "reposts": 167,
+        "replies": 1358,
+        "quotes": 13,
+        "bookmarks": 2933,
+        "views": 106929,
+        "score": 14178
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "ByteDance released an official Seedance 2.5 prompt guide and most people still don't know it exists i turned the whole thing into a Claude skill by the time Seedance 2.5 hits every platform your claude will already be an expert at every prompting style the official ByteDance team uses, while everyone else starts from zero 30 seconds to install, then you just describe what you want • ultra realistic travel vlogs, same face in every location • cinematics that hold 4 characters without drifting • meta ads that don't read as AI • swap the product in a winning ad, every cut identical • bullet time, FPV, one-take, dolly zoom, all named in the spec 23 task types, 67 templates, straight from ByteDance and sitting inside your claude comment 'SEEDANCE' and ill send you the skill i built (must be following so the dm goes through)"
@@ -355,6 +355,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And that's the part nobody expects > he generated two frames with AI > turned them into a clip with Seedance 2.0 > then gave it to Claude 4.8 to wrap into a full immersive scrollable experience Three effects that make the user feel like they're physically moving through a space: > see-through scrub > 3D scroll > mouse tracking None of them are actually 3D. The browser never renders a single polygon. It's a video being controlled by scroll position and cursor movement Most people assume sites like this require a creative developer who specializes in WebGL and weeks of optimization. The actual pipeline is three steps and fits in an afternoon full walkthrough in the article below. bookmark this before you need it"
+    },
+    {
+      "id": "x-public-2086114408875647274",
+      "title": "Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratc",
+      "description": "Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratch using Grok Imagine and its full set of editing tools The segment + precise editing tools are insanely useful Instead of re",
+      "prompt": "Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratch using Grok Imagine and its full set of editing tools The segment + precise editing tools are insanely useful Instead of regenerating the entire image, you can target exactly what you want to change while keeping everything else intact That level of control makes editing much faster and more practical Grok Imagine is becoming a seriously powerful image editor….not just an image generator",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/XFreeze/status/2086114408875647274",
+      "sourceType": "x",
+      "authorName": "X Freeze",
+      "authorHandle": "@XFreeze",
+      "createdAt": "2026-08-08T15:36:47.000Z",
+      "importedAt": "2026-08-09T03:17:22.857Z",
+      "tags": [
+        "Grok Imagine"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "image",
+      "category": "视觉创意",
+      "metrics": {
+        "likes": 641,
+        "reposts": 63,
+        "replies": 94,
+        "quotes": 24,
+        "bookmarks": 157,
+        "views": 2595419,
+        "score": 7362
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine’s image editing literally blows my mind I just edited this entire image from scratch using Grok Imagine and its full set of editing tools The segment + precise editing tools are insanely useful Instead of regenerating the entire image, you can target exactly what you want to change while keeping everything else intact That level of control makes editing much faster and more practical Grok Imagine is becoming a seriously powerful image editor….not just an image generator"
     },
     {
       "id": "x-public-2073115565150052371",
@@ -1608,6 +1649,49 @@
       "rawText": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile responsive, built in one session by describing what you want. No agency, no code, no months of work. Here's the workflow, start to finish: 1. Find a look on Pinterest. Grab an image with the vibe you want (3D, animation, depth). 2. Turn it into a video. Use an AI image-to-video tool (Higgsfield, Kling) to animate it. Tell it to move but not zoom or reposition. 3. Build the hero with Fable 5. In Claude Code, describe the hero section, drop your video in as the background, set your colors. 4. Build section by section. Ask for the next sections in the same style. Once Fable has your fonts, colors, and layout locked, it reuses them and avoids generic AI-slop pages. 5. Refine with references. Screenshot a background, blur it in Figma to grab the average color, and tell Fable to match it. 6. Post it to grow. Screen-record the site, post the clip, and tag the tools you used. Companies repost work that shows off their platform. The people building real things with Fable now are going to be way ahead when everyone else catches up. Bookmark this."
     },
     {
+      "id": "x-public-2085606298180276259",
+      "title": "Okay, this is a big one: Seedance 2.5 is now live globally on CapCut, and AI video finally feels",
+      "description": "Okay, this is a big one: Seedance 2.5 is now live globally on CapCut, and AI video finally feels less like collecting clips and more like building a story. Recreating one viral ad shot is easy. Keeping the product, style",
+      "prompt": "Okay, this is a big one: Seedance 2.5 is now live globally on CapCut, and AI video finally feels less like collecting clips and more like building a story. Recreating one viral ad shot is easy. Keeping the product, style, and motion consistent long enough to make a real campaign? That is where most AI workflows fall apart, and what Seedance 2.5 in CapCut PC is built to address.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/FellMentKE/status/2085606298180276259",
+      "sourceType": "x",
+      "authorName": "FELIX",
+      "authorHandle": "@FellMentKE",
+      "createdAt": "2026-08-07T05:57:44.000Z",
+      "importedAt": "2026-08-09T03:17:22.858Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 298,
+        "reposts": 100,
+        "replies": 23,
+        "quotes": 0,
+        "bookmarks": 109,
+        "views": 107074,
+        "score": 1560
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Okay, this is a big one: Seedance 2.5 is now live globally on CapCut, and AI video finally feels less like collecting clips and more like building a story. Recreating one viral ad shot is easy. Keeping the product, style, and motion consistent long enough to make a real campaign? That is where most AI workflows fall apart, and what Seedance 2.5 in CapCut PC is built to address."
+    },
+    {
       "id": "x-public-2077958272783442257",
       "title": "Building AI Agents from Scratch Tutorial Series (AI Era Edition) in 30 days.( If interested say ",
       "description": "Building AI Agents from Scratch Tutorial Series (AI Era Edition) in 30 days.( If interested say hi 👋) Master modern AI agent engineering by building production-ready autonomous AI systems from the ground up. 1. Day 1: W",
@@ -2845,6 +2929,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🚨 The ultimate AI video showdown is here: Seedance 2.5 vs Flux 3! 👑 I put both models head-to-head to test skin textures, motion consistency, and native audio. One struggled with heavy AI smoothing, while the other delivered incredible organic details directly out of the engine. 🤯 See which one takes the #1 spot. Full video review in the comments."
+    },
+    {
+      "id": "x-public-2085420070952649179",
+      "title": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluş",
+      "description": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIM",
+      "prompt": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIMAX H3 5- KLING 3.0 6- GEMINI OMNI FLASH 7- GROK IMAGINE 1.5 Prompt: Tarih öncesi çağlarda geçen bir konser sahnesi. Sahnede mağara adamları var, tarih öncesi insanlar, anlaşılmaz bir dilde şarkı söylüyorlar. Etrafta dinozorlar da dolaşıyor. Konseri izleyen kalabalık bir topluluk var. Çekim multi-shot olacak, doğal ve belgesel havasında bir kamera hissi olmalı. Görsel stil ultra gerçekçi olmalı.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ozansihay/status/2085420070952649179",
+      "sourceType": "x",
+      "authorName": "Ozan Sihay",
+      "authorHandle": "@ozansihay",
+      "createdAt": "2026-08-06T17:37:44.000Z",
+      "importedAt": "2026-08-09T03:17:22.857Z",
+      "tags": [
+        "Grok Imagine",
+        "Seedance",
+        "Kling",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 218,
+        "reposts": 16,
+        "replies": 49,
+        "quotes": 2,
+        "bookmarks": 164,
+        "views": 24904,
+        "score": 1097
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIMAX H3 5- KLING 3.0 6- GEMINI OMNI FLASH 7- GROK IMAGINE 1.5 Prompt: Tarih öncesi çağlarda geçen bir konser sahnesi. Sahnede mağara adamları var, tarih öncesi insanlar, anlaşılmaz bir dilde şarkı söylüyorlar. Etrafta dinozorlar da dolaşıyor. Konseri izleyen kalabalık bir topluluk var. Çekim multi-shot olacak, doğal ve belgesel havasında bir kamera hissi olmalı. Görsel stil ultra gerçekçi olmalı."
     },
     {
       "id": "x-public-2075386988426096709",
@@ -4304,52 +4434,6 @@
       "rawText": "Seedance 2.0 on @nadou_pro Prompt: { \"video_prompt\": \"A first-person POV shot of a hand holding a black marker, pointing it at real-world objects in an urban city setting. The video uses a creative 'doodle overlay' effect. As the hand waves the marker with a swift motion, real-world objects instantly transform into cute, 2D cartoon animations with clean blue and white outlines. 1. A real subway train passing on an elevated track transforms into a playful, minimalist blue and white cartoon train. 2. A real pigeon on a paved sidewalk transforms into a stylized white cartoon bird flying away, leaving small hand-drawn dust clouds. 3. A real green bus driving on a city street transforms into a giant, adorable 2D animated orange tabby cat walking casually. 4. A real woman sitting at a bus stop transforms into a classic 2D anime-style girl waving happily. The final shot shows the hand tossing an object into the sky, transforming the entire city sky into a bright, vibrant anime sunset with fluffy white clouds and a smiling cartoon sun. Smooth transitions, playful and whimsical energy, high-contrast mix of live-action and 2D cel animation.\" } Frame-by-Frame Generation Prompts If you want to generate the specific static assets or concepts individually, you can use these tailored image prompts: * The Cartoon Train: > A crisp first-person POV photograph of a hand holding a black marker aimed at an elevated city train track. Overlaid on the real scene is a bright 2D vector doodle of a minimalist blue and white cartoon subway train passing by. Playful, mixed media, urban street style. > * The Pigeon Transformation: > First-person perspective looking down at a paved city sidewalk. A hand holds a black marker, pointing at a stylized, hand-drawn 2D white cartoon dove that is mid-flight, bursting out from where a real bird just stood. Whimsical line art overlay. > * The Giant Cat Bus: > A wide POV shot of a city street next to a sidewalk. A hand with a marker is tracking a giant, cute 2D animated orange tabby cat with green eyes as it walks down the vehicle lane where a bus should be. High contrast between the realistic asphalt and the bright, solid-colored character art. > * The Anime Sky: > A low-angle POV shot looking up past city high-rise apartments into the sky. The realistic sky transitions instantly into a beautiful, vibrant 2D anime-style pastel sunset filled with soft, puffy white clouds and a simple, cheerful cartoon sun illustration. >"
     },
     {
-      "id": "x-public-2085420070952649179",
-      "title": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluş",
-      "description": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIM",
-      "prompt": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIMAX H3 5- KLING 3.0 6- GEMINI OMNI FLASH 7- GROK IMAGINE 1.5 Prompt: Tarih öncesi çağlarda geçen bir konser sahnesi. Sahnede mağara adamları var, tarih öncesi insanlar, anlaşılmaz bir dilde şarkı söylüyorlar. Etrafta dinozorlar da dolaşıyor. Konseri izleyen kalabalık bir topluluk var. Çekim multi-shot olacak, doğal ve belgesel havasında bir kamera hissi olmalı. Görsel stil ultra gerçekçi olmalı.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/ozansihay/status/2085420070952649179",
-      "sourceType": "x",
-      "authorName": "Ozan Sihay",
-      "authorHandle": "@ozansihay",
-      "createdAt": "2026-08-06T17:37:44.000Z",
-      "importedAt": "2026-08-07T08:34:26.802Z",
-      "tags": [
-        "Grok Imagine",
-        "Seedance",
-        "Kling",
-        "视频"
-      ],
-      "modelHints": [
-        "Grok Imagine",
-        "Seedance",
-        "Kling",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 169,
-        "reposts": 11,
-        "replies": 36,
-        "quotes": 2,
-        "bookmarks": 124,
-        "views": 18313,
-        "score": 833
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIMAX H3 5- KLING 3.0 6- GEMINI OMNI FLASH 7- GROK IMAGINE 1.5 Prompt: Tarih öncesi çağlarda geçen bir konser sahnesi. Sahnede mağara adamları var, tarih öncesi insanlar, anlaşılmaz bir dilde şarkı söylüyorlar. Etrafta dinozorlar da dolaşıyor. Konseri izleyen kalabalık bir topluluk var. Çekim multi-shot olacak, doğal ve belgesel havasında bir kamera hissi olmalı. Görsel stil ultra gerçekçi olmalı."
-    },
-    {
       "id": "x-public-2083637656676860168",
       "title": "ByteDance's official AI creative hub, Dreamina, just dropped the highly anticipated Dreamina See",
       "description": "ByteDance's official AI creative hub, Dreamina, just dropped the highly anticipated Dreamina Seedance 2.5. If you are planning to build with Seedance, Dreamina is absolutely the platform I recommend using right now. Here",
@@ -5477,6 +5561,49 @@
       "rawText": "Made with Seedance 2.0 Prompt: A cinematic wide shot high above the clouds on a bright sunny day. A giant, fluffy white cloud floats through a deep blue sky with soft wispy clouds. A diverse group of stylish men and women stand in a perfect single-file line on top of the cloud, wearing elegant minimalist fashion in white, brown, cream, and red tones. The camera slowly tracks sideways, creating a calm, dreamlike atmosphere. Suddenly, the first person confidently steps off the edge, diving gracefully before seamlessly flying like a superhero. The others follow one by one in perfect rhythm, soaring through the sky in an organized formation, their clothes flowing naturally in the wind and leaving subtle white vapor trails. Soft natural daylight, surreal luxury fashion editorial aesthetic, photorealistic humans, ultra-smooth cinematic camera movement, volumetric lighting, realistic cloud physics, highly detailed clothing textures, natural motion blur, 8K HDR, masterpiece quality."
     },
     {
+      "id": "x-public-2086063513907171692",
+      "title": "it's insane what you can make with Seedance 2.5 just made this entire video from a single prompt",
+      "description": "it's insane what you can make with Seedance 2.5 just made this entire video from a single prompt, no camera, no editing, nothing if you want to make videos like this, check my free guide below full prompt for this video:",
+      "prompt": "it's insane what you can make with Seedance 2.5 just made this entire video from a single prompt, no camera, no editing, nothing if you want to make videos like this, check my free guide below full prompt for this video: CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her propping the camera against a jar of flour on the kitchen counter, shooting her from a three-quarter angle as she cooks. She picks it up for close-ups of the food, then sets it back. The camera gets flour dust on the lens at one point — she wipes it with her sleeve and keeps going. Keep subtle handheld shake, drifting composition, autofocus hunting, rushed reframing when something sizzles, exposure breathing between the dark counter and the bright stove, and imperfect framing throughout. The camera itself is never visible. LOOK: Warm kitchen lighting — a single overhead fixture casting yellowish light, the stove adding a bright warm glow on the food. Steam and smoke catch the light. Gentle film grain heavy in the shadows, slightly softened sharpness, subtle halation from the stove flame. Her face is warm and golden. It should feel like authentic footage from someone's everyday life rather than a polished commercial. STYLE: A comfortable, slightly chaotic cooking vlog. She talks to the camera like a friend is in the room. Small laughs, pauses, fixing her hair, wiping her hands on the apron, tasting and reacting. She makes small mistakes and laughs at herself. She speaks in short, natural sentences with frequent pauses. Never rush dialogue. Leave quiet moments between lines. CHARACTER: A beautiful woman in her late 20s. Long dark brown hair tied back in a low messy bun with a kitchen towel over her shoulder, warm olive skin, brown eyes, no makeup. She wears a cream-colored linen shirt with the sleeves rolled up and a dark green apron. Flour on her cheek. Natural, relaxed, a little messy. SETTING: A small home kitchen in the evening. White tile counter, a gas stove with a well-used pan, a cutting board with onions and garlic, a jar of flour, a wooden spoon, a glass of red wine. The overhead light is the only source. A window above the sink shows darkness outside. Intimate and slightly cluttered. SCENES: The vlog opens with the camera propped against a flour jar. She chops an onion, eyes watering. \"I don't know why I keep doing this to myself.\" She wipes her eye with the back of her wrist. Picks up the camera, holds it close to the cutting board. \"Look. The onion won.\" Sets it back. Pours olive oil into the pan. It sizzles loud. She jumps. She adds the onion. Steam rises into the light. She stirs. \"Okay that smells better.\" She sips from a glass of wine. Looks at the camera. \"Don't judge.\" She adds garlic. It sizzles harder. She moves the pan off the heat. \"Too hot. Always too hot.\" She picks up the camera, selfie mode, flour on her cheek. She hasn't noticed. \"It's going to be fine. Probably.\" She tastes from the wooden spoon, winces, then nods. \"Okay. Yeah. It's good.\" Flour dust on the lens. She wipes it with her sleeve. A smile. The frame goes dark. Cut.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AnatoliKopadze/status/2086063513907171692",
+      "sourceType": "x",
+      "authorName": "Anatoli Kopadze",
+      "authorHandle": "@AnatoliKopadze",
+      "createdAt": "2026-08-08T12:14:33.000Z",
+      "importedAt": "2026-08-09T03:17:22.858Z",
+      "tags": [
+        "Seedance",
+        "人像",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 82,
+        "reposts": 14,
+        "replies": 10,
+        "quotes": 1,
+        "bookmarks": 110,
+        "views": 23466,
+        "score": 610
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "it's insane what you can make with Seedance 2.5 just made this entire video from a single prompt, no camera, no editing, nothing if you want to make videos like this, check my free guide below full prompt for this video: CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her propping the camera against a jar of flour on the kitchen counter, shooting her from a three-quarter angle as she cooks. She picks it up for close-ups of the food, then sets it back. The camera gets flour dust on the lens at one point — she wipes it with her sleeve and keeps going. Keep subtle handheld shake, drifting composition, autofocus hunting, rushed reframing when something sizzles, exposure breathing between the dark counter and the bright stove, and imperfect framing throughout. The camera itself is never visible. LOOK: Warm kitchen lighting — a single overhead fixture casting yellowish light, the stove adding a bright warm glow on the food. Steam and smoke catch the light. Gentle film grain heavy in the shadows, slightly softened sharpness, subtle halation from the stove flame. Her face is warm and golden. It should feel like authentic footage from someone's everyday life rather than a polished commercial. STYLE: A comfortable, slightly chaotic cooking vlog. She talks to the camera like a friend is in the room. Small laughs, pauses, fixing her hair, wiping her hands on the apron, tasting and reacting. She makes small mistakes and laughs at herself. She speaks in short, natural sentences with frequent pauses. Never rush dialogue. Leave quiet moments between lines. CHARACTER: A beautiful woman in her late 20s. Long dark brown hair tied back in a low messy bun with a kitchen towel over her shoulder, warm olive skin, brown eyes, no makeup. She wears a cream-colored linen shirt with the sleeves rolled up and a dark green apron. Flour on her cheek. Natural, relaxed, a little messy. SETTING: A small home kitchen in the evening. White tile counter, a gas stove with a well-used pan, a cutting board with onions and garlic, a jar of flour, a wooden spoon, a glass of red wine. The overhead light is the only source. A window above the sink shows darkness outside. Intimate and slightly cluttered. SCENES: The vlog opens with the camera propped against a flour jar. She chops an onion, eyes watering. \"I don't know why I keep doing this to myself.\" She wipes her eye with the back of her wrist. Picks up the camera, holds it close to the cutting board. \"Look. The onion won.\" Sets it back. Pours olive oil into the pan. It sizzles loud. She jumps. She adds the onion. Steam rises into the light. She stirs. \"Okay that smells better.\" She sips from a glass of wine. Looks at the camera. \"Don't judge.\" She adds garlic. It sizzles harder. She moves the pan off the heat. \"Too hot. Always too hot.\" She picks up the camera, selfie mode, flour on her cheek. She hasn't noticed. \"It's going to be fine. Probably.\" She tastes from the wooden spoon, winces, then nods. \"Okay. Yeah. It's good.\" Flour dust on the lens. She wipes it with her sleeve. A smile. The frame goes dark. Cut."
+    },
+    {
       "id": "x-public-2084594400047329417",
       "title": "This might be the best synthetic performance I have got from a video model. We can generate 30-s",
       "description": "This might be the best synthetic performance I have got from a video model. We can generate 30-second shots and create near seamless extensions (with a bit of post blending) for far longer sequences, powered by @seedance",
@@ -5731,6 +5858,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "The VFX world may never be the same again. @seedance 2.5 on BytePlus completely changed how I think about AI video generation. I tested it with a brutal challenge: freezing an entire fairground for 30 seconds in one continuous shot, using myself as the reference. What surprised me most wasn’t just the realism. It was how quickly I got a usable result. Previously, a complex shot like this could take multiple generations and endless trial-and-error. With Seedance 2.5, I was able to achieve a strong result within just a few attempts, which means significantly lower generation costs and a much more efficient creative process. Seedance2.5 API is about to launch on @BytePlusGlobal, and @lumina_ai_aiart will also roll out Seedance2.5 soon. Less retrying. Lower cost. Faster creation. This is what the next generation of AI filmmaking looks like. PROMPT & WORKFLOW 👇"
+    },
+    {
+      "id": "x-public-2086051510929309837",
+      "title": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPoll",
+      "description": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And",
+      "prompt": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And right now, you can get Seedance 2.5 on Pollo AI for 50% OFF for a limited time. Prompt : Create an ultra-realistic cinematic delivery-rider story with a strong orange brand identity. She wears a professional orange delivery jacket, orange helmet, dark fitted cargo pants, practical sneakers, and an orange delivery backpack. Her scooter/motorbike is also orange with subtle matching details. Keep the same outfit, bike, helmet, and backpack consistent in every scene. The video opens with her relaxing at home when her phone suddenly receives a new food-delivery order. She checks the notification, quickly grabs her orange helmet and delivery bag, and heads outside with a focused but energetic expression. She starts her orange scooter, pulls onto a busy city street, and navigates through realistic traffic. Use dynamic tracking shots, helmet-mounted POV, low-angle wheel shots, side tracking shots, and close-ups of her focused face and hands controlling the bike. She checks her watch while stopped safely at a traffic signal, realizes she needs to move quickly, and continues through the city. Show her arriving at the restaurant, parking the scooter, rushing inside, and receiving a freshly packed food order from the staff. She secures the package inside her orange delivery bag and immediately rides toward the customer's location. Show fast-paced but safe city movement, changing streets, traffic, sunlight reflections, and realistic urban atmosphere. She arrives at the destination, quickly removes her helmet, grabs the delivery bag, and walks toward the customer. She hands over the food with a warm smile, checks her phone showing the completed delivery, and looks relieved and proud. Finish with a cinematic hero shot of her getting back onto the orange scooter and riding away through the glowing city street as the camera follows from behind. Style: Premium cinematic commercial, realistic delivery-rider lifestyle, energetic storytelling, strong orange-and-black visual identity, natural expressions, realistic traffic, authentic urban environments, dynamic handheld and gimbal camera movement, dramatic low angles, POV shots, shallow depth of field, realistic motion blur, physically accurate lighting, detailed fabric and vehicle textures, photorealistic 4K HDR, polished brand-film quality.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AIwithSynthia/status/2086051510929309837",
+      "sourceType": "x",
+      "authorName": "Synthia",
+      "authorHandle": "@AIwithSynthia",
+      "createdAt": "2026-08-08T11:26:51.000Z",
+      "importedAt": "2026-08-09T03:17:22.859Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 145,
+        "reposts": 3,
+        "replies": 33,
+        "quotes": 0,
+        "bookmarks": 64,
+        "views": 13618,
+        "score": 554
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And right now, you can get Seedance 2.5 on Pollo AI for 50% OFF for a limited time. Prompt : Create an ultra-realistic cinematic delivery-rider story with a strong orange brand identity. She wears a professional orange delivery jacket, orange helmet, dark fitted cargo pants, practical sneakers, and an orange delivery backpack. Her scooter/motorbike is also orange with subtle matching details. Keep the same outfit, bike, helmet, and backpack consistent in every scene. The video opens with her relaxing at home when her phone suddenly receives a new food-delivery order. She checks the notification, quickly grabs her orange helmet and delivery bag, and heads outside with a focused but energetic expression. She starts her orange scooter, pulls onto a busy city street, and navigates through realistic traffic. Use dynamic tracking shots, helmet-mounted POV, low-angle wheel shots, side tracking shots, and close-ups of her focused face and hands controlling the bike. She checks her watch while stopped safely at a traffic signal, realizes she needs to move quickly, and continues through the city. Show her arriving at the restaurant, parking the scooter, rushing inside, and receiving a freshly packed food order from the staff. She secures the package inside her orange delivery bag and immediately rides toward the customer's location. Show fast-paced but safe city movement, changing streets, traffic, sunlight reflections, and realistic urban atmosphere. She arrives at the destination, quickly removes her helmet, grabs the delivery bag, and walks toward the customer. She hands over the food with a warm smile, checks her phone showing the completed delivery, and looks relieved and proud. Finish with a cinematic hero shot of her getting back onto the orange scooter and riding away through the glowing city street as the camera follows from behind. Style: Premium cinematic commercial, realistic delivery-rider lifestyle, energetic storytelling, strong orange-and-black visual identity, natural expressions, realistic traffic, authentic urban environments, dynamic handheld and gimbal camera movement, dramatic low angles, POV shots, shallow depth of field, realistic motion blur, physically accurate lighting, detailed fabric and vehicle textures, photorealistic 4K HDR, polished brand-film quality."
     },
     {
       "id": "x-public-2077836264934690834",
@@ -6035,6 +6205,50 @@
       "rawText": "ChatGPT + Seedance 2.0 Workflow Step 1: Create a new ChatGPT project and upload everything you want the model to remember throughout the production, including character sheets, location references, style guides, product references, story notes, and continuity rules. Step 2: Define the objective. Describe the story, commercial, trailer, or scene you want to create and explain the visual style, pacing, and overall creative direction. Step 3: Ask ChatGPT to break the story into multiple 5 to 10 second batches. Each batch should have a clearly defined start frame and end frame. The end frame of one batch must become the exact start frame of the next to maintain perfect continuity. Step 4: Ask ChatGPT to generate a detailed storyboard for every batch. Keep the same characters, costumes, props, lighting, scale, camera direction, and environment consistent across all frames. Step 5: Review the storyboard. Regenerate individual batches until every transition, action, and composition feels natural and continuous. Step 6: Once the storyboard is approved, ask ChatGPT to convert each batch into a professional Seedance 2.0 video prompt. Each prompt should include cinematography, camera movement, character performance, continuity rules, environment details, and animation instructions. Step 7: Generate every batch in Seedance 2.0. Render them in parallel for speed or one by one if you want to review each scene before continuing. Step 8: If any shot breaks continuity, regenerate only that specific batch while keeping the same start frame, end frame, characters, and visual style. Step 9: Stitch all generated clips together in chronological order. Since every batch shares matching transition frames, the complete video should play as one seamless, continuous sequence. Step 10: Perform the final edit by adding sound effects, music, dialogue, color grading, and any finishing touches before exporting the completed video."
     },
     {
+      "id": "x-public-2085982788587806858",
+      "title": "The biggest shift in AI video isn’t just better visuals—it’s giving creators more control over w",
+      "description": "The biggest shift in AI video isn’t just better visuals—it’s giving creators more control over what they can bring to life.🔥 It’s the amount of creative control that’s becoming available to creators. Better character co",
+      "prompt": "The biggest shift in AI video isn’t just better visuals—it’s giving creators more control over what they can bring to life.🔥 It’s the amount of creative control that’s becoming available to creators. Better character consistency, smoother motion, stronger scene details, more natural expressions, and more cinematic camera movement can completely change the way we approach visual storytelling. Seedance 2.5 on @morphic is a great example of where this space is heading. The goal is no longer just to generate a cool-looking clip from a prompt. It’s about having enough control to actually bring a specific creative idea to life. Instead of spending most of the time regenerating clips and fixing inconsistencies, creators can spend more time experimenting with different concepts, characters, camera angles, environments, and stories. That opens up a lot of possibilities for filmmakers, marketers, content creators, and even people who have never worked with traditional video production before. AI video still has a long way to go, but the progress is becoming harder to ignore. The gap between imagining a scene and actually seeing it on screen keeps getting smaller. Now I’m really curious to see what creators do with Seedance 2.5 on @morphic. 🎬",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/FutureGirlAi/status/2085982788587806858",
+      "sourceType": "x",
+      "authorName": "Jane Austen",
+      "authorHandle": "@FutureGirlAi",
+      "createdAt": "2026-08-08T06:53:47.000Z",
+      "importedAt": "2026-08-09T03:17:22.859Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 22,
+        "reposts": 14,
+        "replies": 9,
+        "quotes": 0,
+        "bookmarks": 5,
+        "views": 187237,
+        "score": 498
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "The biggest shift in AI video isn’t just better visuals—it’s giving creators more control over what they can bring to life.🔥 It’s the amount of creative control that’s becoming available to creators. Better character consistency, smoother motion, stronger scene details, more natural expressions, and more cinematic camera movement can completely change the way we approach visual storytelling. Seedance 2.5 on @morphic is a great example of where this space is heading. The goal is no longer just to generate a cool-looking clip from a prompt. It’s about having enough control to actually bring a specific creative idea to life. Instead of spending most of the time regenerating clips and fixing inconsistencies, creators can spend more time experimenting with different concepts, characters, camera angles, environments, and stories. That opens up a lot of possibilities for filmmakers, marketers, content creators, and even people who have never worked with traditional video production before. AI video still has a long way to go, but the progress is becoming harder to ignore. The gap between imagining a scene and actually seeing it on screen keeps getting smaller. Now I’m really curious to see what creators do with Seedance 2.5 on @morphic. 🎬"
+    },
+    {
       "id": "x-public-2080946198291026093",
       "title": "Zero VFX experience. Just Claude, Seedance 2.0, and a phone clip. The result looks like a $10M s",
       "description": "Zero VFX experience. Just Claude, Seedance 2.0, and a phone clip. The result looks like a $10M scene In this tutorial you'll learn how to create cinematic AI VFX from your own real footage — no green screen, no masking, ",
@@ -6291,6 +6505,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "MiniMax H3 × Midjourney V8.2 I just made a Hollywood-style space movie scene on @itsPolloAI and the result is insane. Midjourney V8.2 created the cinematic reference image. Then MiniMax H3 turned it into a full sci-fi sequence with an alien mothership, zero-gravity destruction, space battles, cinematic dialogue and synchronized audio. All from one detailed prompt."
+    },
+    {
+      "id": "x-public-2085991584412377500",
+      "title": "Most AI video tools make you write prompts and hope the camera moves the way you want. @magnific",
+      "description": "Most AI video tools make you write prompts and hope the camera moves the way you want. @magnific just dropped Seedance 2.5 with 3D motion control and it works completely different. > You place points in 3D space where yo",
+      "prompt": "Most AI video tools make you write prompts and hope the camera moves the way you want. @magnific just dropped Seedance 2.5 with 3D motion control and it works completely different. > You place points in 3D space where you want the camera to go. > Connect them to create the exact path. > Add your reference videos. > The model follows that path. No more typing \"camera slowly pans right\" and getting random movement. You draw the camera path yourself like you're using actual video software. It handles 50 reference videos at once, makes 30-second clips, and lets you edit, extend, or boost to 4K without leaving. Works on Magnific, MCP, Spaces, Plugins, and their API.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/thetripathi58/status/2085991584412377500",
+      "sourceType": "x",
+      "authorName": "Chidanand Tripathi",
+      "authorHandle": "@thetripathi58",
+      "createdAt": "2026-08-08T07:28:44.000Z",
+      "importedAt": "2026-08-09T03:17:22.858Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 111,
+        "reposts": 38,
+        "replies": 15,
+        "quotes": 1,
+        "bookmarks": 15,
+        "views": 8908,
+        "score": 455
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Most AI video tools make you write prompts and hope the camera moves the way you want. @magnific just dropped Seedance 2.5 with 3D motion control and it works completely different. > You place points in 3D space where you want the camera to go. > Connect them to create the exact path. > Add your reference videos. > The model follows that path. No more typing \"camera slowly pans right\" and getting random movement. You draw the camera path yourself like you're using actual video software. It handles 50 reference videos at once, makes 30-second clips, and lets you edit, extend, or boost to 4K without leaving. Works on Magnific, MCP, Spaces, Plugins, and their API."
     },
     {
       "id": "x-public-2078098252071862756",
@@ -9992,7 +10248,7 @@
       "authorName": "癒音ちー✨ゆおんちー✨癒やし声ASMRとAI",
       "authorHandle": "@chi_vc_",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.292Z",
+      "importedAt": "2026-08-09T03:17:18.970Z",
       "tags": [
         "人像"
       ],
@@ -10033,7 +10289,7 @@
       "authorName": "SPLASH GIRLS@AI Image",
       "authorHandle": "@splash_GL",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.293Z",
+      "importedAt": "2026-08-09T03:17:18.970Z",
       "tags": [
         "人像",
         "摄影"
@@ -10075,7 +10331,7 @@
       "authorName": "Avelyrah",
       "authorHandle": "@AvelyrahnAI",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.293Z",
+      "importedAt": "2026-08-09T03:17:18.971Z",
       "tags": [
         "人像",
         "摄影"
@@ -10117,7 +10373,7 @@
       "authorName": "南鸢 nuyoah",
       "authorHandle": "@nanyuan0412",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.294Z",
+      "importedAt": "2026-08-09T03:17:18.971Z",
       "tags": [
         "人像",
         "摄影"
@@ -10159,7 +10415,7 @@
       "authorName": "菜々花",
       "authorHandle": "@NanakatoAi",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.294Z",
+      "importedAt": "2026-08-09T03:17:18.971Z",
       "tags": [
         "人像",
         "视频"
@@ -10201,7 +10457,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.295Z",
+      "importedAt": "2026-08-09T03:17:18.971Z",
       "tags": [
         "人像",
         "摄影"
@@ -10243,7 +10499,7 @@
       "authorName": "DaniaSafvi",
       "authorHandle": "@DaniaSafvi",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.298Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "人像",
         "摄影"
@@ -10285,7 +10541,7 @@
       "authorName": "英爺",
       "authorHandle": "@passioncomhide1",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.298Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "摄影"
       ],
@@ -10326,7 +10582,7 @@
       "authorName": "Sidra",
       "authorHandle": "@kakarPathan_",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.298Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "人像",
         "摄影"
@@ -10368,7 +10624,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.298Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "人像",
         "摄影"
@@ -10410,7 +10666,7 @@
       "authorName": "Danny Wallace",
       "authorHandle": "@maestroalvarez",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.299Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "摄影"
       ],
@@ -10451,7 +10707,7 @@
       "authorName": "Danny Wallace",
       "authorHandle": "@maestroalvarez",
       "createdAt": "2026-08-08T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.299Z",
+      "importedAt": "2026-08-09T03:17:18.974Z",
       "tags": [
         "Runway",
         "摄影"
@@ -10495,7 +10751,7 @@
       "authorName": "AI设计钟师傅",
       "authorHandle": "@drmrzhong",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.295Z",
+      "importedAt": "2026-08-09T03:17:18.972Z",
       "tags": [
         "人像",
         "摄影"
@@ -10537,7 +10793,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.295Z",
+      "importedAt": "2026-08-09T03:17:18.972Z",
       "tags": [
         "人像",
         "摄影"
@@ -10579,7 +10835,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.296Z",
+      "importedAt": "2026-08-09T03:17:18.972Z",
       "tags": [
         "Kling"
       ],
@@ -10622,7 +10878,7 @@
       "authorName": "Selina",
       "authorHandle": "@selinatasnim1",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.296Z",
+      "importedAt": "2026-08-09T03:17:18.972Z",
       "tags": [
         "人像",
         "视频",
@@ -10665,7 +10921,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.296Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "摄影"
@@ -10707,7 +10963,7 @@
       "authorName": "Noor 🌸",
       "authorHandle": "@Noor_ul_ain43",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.296Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "摄影"
@@ -10749,7 +11005,7 @@
       "authorName": "Kashberg",
       "authorHandle": "@Kashberg_0",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.297Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "视频",
@@ -10792,7 +11048,7 @@
       "authorName": "daisuke onarimon",
       "authorHandle": "@daisukeonarimon",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.297Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "摄影"
@@ -10834,7 +11090,7 @@
       "authorName": "TakTempest",
       "authorHandle": "@222TT222",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.297Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -10873,7 +11129,7 @@
       "authorName": "KOBATAKA｜Vibe Modeling",
       "authorHandle": "@shion_takk",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.297Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "摄影"
@@ -10915,7 +11171,7 @@
       "authorName": "Adam也叫吉米",
       "authorHandle": "@Adam38363368936",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.297Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "人像",
         "摄影"
@@ -10957,7 +11213,7 @@
       "authorName": "Adam也叫吉米",
       "authorHandle": "@Adam38363368936",
       "createdAt": "2026-08-07T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.298Z",
+      "importedAt": "2026-08-09T03:17:18.973Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -31890,7 +32146,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.314Z",
+      "importedAt": "2026-08-09T03:17:18.985Z",
       "tags": [
         "产品",
         "平面设计",
@@ -31933,7 +32189,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.315Z",
+      "importedAt": "2026-08-09T03:17:18.985Z",
       "tags": [
         "平面设计"
       ],
@@ -31974,7 +32230,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-08T14:06:50.315Z",
+      "importedAt": "2026-08-09T03:17:18.985Z",
       "tags": [
         "平面设计"
       ],
