@@ -74,7 +74,7 @@ function normalizeLines(value: string) {
     .replace(/\r/g, "")
     .replace(/[\u2028\u2029]/g, "\n")
     .split("\n")
-    .map((line) => line.replace(/[\t ]+/g, " ").trim())
+    .map((line) => line.replace(/ +/g, " ").replace(/\t+/g, "\t").trim())
     .filter(Boolean);
 }
 
@@ -135,13 +135,16 @@ function parseEpisodeHeading(line: string) {
 }
 
 function parseSceneHeading(line: string, currentEpisode: number) {
+  const ordinal = line.match(
+    /^[【[]\s*第?\s*([一二三四五六七八九十百〇\d]+)\s*场\s*[】\]]\s*(.*)$/i,
+  );
   const bracketed = line.match(
     /^[【[]\s*(?:场景?|SCENE)\s*([一二三四五六七八九十百〇\d]+(?:\s*[-—–]\s*\d+)?)\s*[】\]]\s*(.*)$/i,
   );
   const plain = line.match(
     /^(?:场景?|SCENE)\s*([一二三四五六七八九十百〇\d]+(?:\s*[-—–]\s*\d+)?)\s*[：:.、-]\s*(.+)$/i,
   );
-  const match = bracketed || plain;
+  const match = ordinal || bracketed || plain;
   if (!match) return null;
 
   const label = match[1].replace(/\s+/g, "").replace(/[—–]/g, "-");
@@ -175,7 +178,11 @@ function scenePayload(value: string) {
 }
 
 const structuralSpeakerNames = new Set([
+  "主题",
   "类型",
+  "时长",
+  "风格",
+  "内容简介",
   "媒介",
   "结构",
   "题材定位",
@@ -185,6 +192,12 @@ const structuralSpeakerNames = new Set([
   "内外景／地点／时间",
   "内外景/地点/时间",
   "地点",
+  "场景",
+  "时间",
+  "景别",
+  "人物",
+  "身份",
+  "性格画像",
   "戏剧问题",
   "视觉时刻",
   "情绪走向",
@@ -205,6 +218,15 @@ function normalizeSpeakerName(value: string) {
     .replace(/^[•·\-\s]+/, "")
     .replace(/(?:低语|嘶吼|大喊|喊|问|答|说|气声断续|画外音|旁白)$/g, "")
     .trim();
+}
+
+function isPlausibleSpeakerName(value: string) {
+  const name = normalizeSpeakerName(value);
+
+  return name.length > 0 &&
+    name.length <= 10 &&
+    !structuralSpeakerNames.has(name) &&
+    !/^[△▲]|(?:镜头|特写|蒙太奇|画面|屏幕|手机|消息|想起|航拍)/.test(name);
 }
 
 function characterAliases(characters: JubenSourceCharacter[]) {
@@ -251,7 +273,7 @@ function inlineDialogues(
 
 function parseCharacterProfiles(lines: string[]) {
   const characters: JubenSourceCharacter[] = [];
-  const start = lines.findIndex((line) => /^(?:[一二三四五六七八九十百]+、)?(?:人物拆解|人物表|人物小传|角色设定|角色档案)/.test(line));
+  const start = lines.findIndex((line) => /^(?:[一二三四五六七八九十百]+、)?(?:人物拆解|(?:主要)?人物表|人物小传|角色设定|角色档案)/.test(line));
   if (start < 0) return characters;
 
   let current: JubenSourceCharacter | null = null;
@@ -267,6 +289,32 @@ function parseCharacterProfiles(lines: string[]) {
   for (let index = start + 1; index < lines.length; index += 1) {
     const line = lines[index];
     if (/^[一二三四五六七八九十百]+、/.test(line)) break;
+
+    const tableCells = line.split("\t").map((cell) => cell.trim()).filter(Boolean);
+    if (tableCells.length >= 2 && !/^人物$/.test(tableCells[0])) {
+      const nameCell = tableCells[0].match(/^(.{1,30}?)(?:（([^）]+)）|\(([^)]+)\))?$/);
+      if (nameCell) {
+        flush();
+        characters.push({
+          name: nameCell[1].trim(),
+          description: [nameCell[2] || nameCell[3], ...tableCells.slice(1)]
+            .filter(Boolean)
+            .join("，"),
+        });
+        continue;
+      }
+    }
+
+    const stackedName = line.match(/^(.{1,30}?)（((?:男|女)[^）]{0,30})）$/);
+    if (stackedName && lines[index + 1] && lines[index + 2]) {
+      flush();
+      characters.push({
+        name: stackedName[1].trim(),
+        description: `${stackedName[2]}，${lines[index + 1]}，${lines[index + 2]}`,
+      });
+      index += 2;
+      continue;
+    }
 
     const heading = line.match(
       /^([^•：:（(]{1,40}?)(?:（([^）]{1,100})）|\(([^)]{1,100})\))?\s*(?:——|--|—)\s*(.+)$/,
@@ -316,13 +364,26 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
   let currentEpisode = 1;
   let currentEpisodeTitle = title;
   let currentScene: JubenSourceScene | null = null;
+  let currentSceneLocation = "";
+  let currentSceneTime = "";
+  let currentSceneInterior = "";
+  let pendingDialogueSpeaker = "";
   let inCharacterTable = false;
 
   const flushScene = () => {
     if (!currentScene) return;
+    if (currentSceneLocation) {
+      currentScene.heading = cleanHeading(
+        `${currentSceneLocation}/${currentSceneTime || "日"}/${currentSceneInterior || "内景"}`,
+      );
+    }
     currentScene.action = currentScene.action.trim();
     scenes.push(currentScene);
     currentScene = null;
+    currentSceneLocation = "";
+    currentSceneTime = "";
+    currentSceneInterior = "";
+    pendingDialogueSpeaker = "";
   };
 
   for (const line of lines) {
@@ -373,6 +434,10 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
         dialogue,
         beats: payload ? [{ kind: "action" as const, text: payload }] : [],
       };
+      currentSceneLocation = "";
+      currentSceneTime = "";
+      currentSceneInterior = "";
+      pendingDialogueSpeaker = "";
       for (const item of dialogue) {
         if (item.line.length >= 4 && anchorLines.length < 20) {
           anchorLines.push(`${item.character}：${item.line}`);
@@ -380,6 +445,56 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
       }
       if (/(?:戏剧问题|视觉时刻|镜头组|预估时长)[：:]/.test(sceneMatch.remainder)) {
         flushScene();
+      }
+      continue;
+    }
+
+    if (currentScene && /^--\s*\d+\s+of\s+\d+\s*--$/i.test(line)) {
+      continue;
+    }
+
+    const sceneField = currentScene
+      ? line.match(/^(场景|地点|时间|景别|人物)[：:]\s*(.+)$/)
+      : null;
+    if (currentScene && sceneField) {
+      const [, key, value] = sceneField;
+      if (key === "场景" || key === "地点") currentSceneLocation = value;
+      if (key === "时间") currentSceneTime = value;
+      if (key === "景别") currentSceneInterior = value;
+      if (key === "人物") {
+        for (const rawName of value.split(/[、，,]/)) {
+          const name = rawName
+            .replace(/（[^）]*）|\([^)]*\)/g, "")
+            .replace(/^程实的/, "")
+            .trim();
+          if (!name || /^(?:其他|数名|施工队员|工作人员)/.test(name)) continue;
+          if (!characters.some((item) =>
+            item.name === name ||
+            item.name.includes(name) ||
+            name.includes(item.name) ||
+            item.description.includes(name),
+          )) {
+            characters.push({
+              name,
+              description: "由原稿场次人物栏识别，造型与表演信息待资产定调阶段补齐。",
+            });
+          }
+        }
+      }
+      continue;
+    }
+
+    const bracketedSpeaker = currentScene
+      ? line.match(/^[【[]\s*([^\]】]{1,16})\s*[】\]]$/)
+      : null;
+    if (currentScene && bracketedSpeaker && !/^(?:第?\s*\d+\s*场|场景?)/.test(bracketedSpeaker[1])) {
+      const cue = normalizeSpeakerName(bracketedSpeaker[1]);
+      const isDialogueCue = /^(?:旁白|画外音|内心|独白)$/.test(cue) ||
+        characters.some((item) => item.name === cue);
+      if (isDialogueCue) pendingDialogueSpeaker = cue;
+      else {
+        currentScene.action += `${currentScene.action ? " " : ""}${line}`;
+        currentScene.beats.push({ kind: "action", text: line });
       }
       continue;
     }
@@ -399,8 +514,37 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
 
     if (!currentScene) continue;
 
+    if (pendingDialogueSpeaker) {
+      const dialogue = {
+        character: pendingDialogueSpeaker,
+        note: "",
+        line: line.replace(/^[「“\"]|[」”\"]$/g, "").trim(),
+      };
+      currentScene.dialogue.push(dialogue);
+      currentScene.beats.push({ kind: "dialogue", ...dialogue });
+      if (!characters.some((item) => item.name === dialogue.character)) {
+        characters.push({
+          name: dialogue.character,
+          description: "由原稿对白标记识别。",
+        });
+      }
+      pendingDialogueSpeaker = "";
+      continue;
+    }
+
     const dialogueMatch = line.match(/^([^：:（(]{1,16})(?:（([^）]+)）|\(([^)]+)\))?[：:]\s*(.+)$/);
-    if (dialogueMatch && !/^【/.test(line)) {
+    const dialogueSpeaker = dialogueMatch?.[1].trim() || "";
+    const isKnownSpeaker = characters.some((item) =>
+      item.name === dialogueSpeaker ||
+      dialogueSpeaker.includes(item.name) ||
+      item.name.includes(dialogueSpeaker),
+    );
+    const startsWithQuote = /^[「『“\"]/.test(dialogueMatch?.[4] || "");
+    if (
+      dialogueMatch &&
+      !/^【/.test(line) &&
+      (isKnownSpeaker || (startsWithQuote && isPlausibleSpeakerName(dialogueSpeaker)))
+    ) {
       const dialogue = {
         character: dialogueMatch[1].trim(),
         note: (dialogueMatch[2] || dialogueMatch[3] || "").trim(),
@@ -423,17 +567,23 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
   flushScene();
 
   const knownCharacterNames = new Set(characters.map((item) => item.name));
-  const inferredSpeakers = characters.length > 0 ? [] : unique([
+  const inferredSpeakers = unique([
     ...lines.flatMap((line) => {
-      const match = line.match(/^([^：:（）()]{2,16})(?:（[^）]+）|\([^)]+\))?[：:]\s*[“\"]?(.+)/);
-      return match && !structuralSpeakerNames.has(match[1].trim())
+      const match = line.match(/^([^：:（）()]{2,16})(?:（[^）]+）|\([^)]+\))?[：:]\s*[「『“\"](.+)/);
+      return match &&
+        !structuralSpeakerNames.has(match[1].trim()) &&
+        !/^第[一二三四五六七八九十百〇\d]+幕/.test(match[1].trim()) &&
+        isPlausibleSpeakerName(match[1])
         ? [normalizeSpeakerName(match[1])]
         : [];
     }),
     ...Array.from(text.matchAll(/@([\p{Script=Han}A-Za-z][\p{Script=Han}A-Za-z·]{0,19})/gu)).map((match) => match[1]),
   ]).filter((name) => name && !structuralSpeakerNames.has(name));
   for (const name of inferredSpeakers) {
-    if (knownCharacterNames.has(name)) continue;
+    if (
+      knownCharacterNames.has(name) ||
+      Array.from(knownCharacterNames).some((known) => known.includes(name) || name.includes(known))
+    ) continue;
     characters.push({
       name,
       description: "由原稿对白或场内标记识别，外形、服装与表演信息待在资产锁定阶段补齐。",
@@ -461,15 +611,19 @@ export function parseJubenSource(input: SourceInput): JubenSourceManifest {
   if (/双集|上集\s*\+\s*下集/.test(formatLine)) inferredEpisodeCount = 2;
   const numericEpisodeMatch = text.match(/(?:共|全)\s*(\d+)\s*集/) || formatLine.match(/(\d+)\s*集/);
   if (numericEpisodeMatch) inferredEpisodeCount = Number(numericEpisodeMatch[1]);
+  const chineseEpisodeMatch = text.match(/(?:时长|集数)[：:]?[^\n]{0,12}([一二三四五六七八九十])\s*集/);
+  if (chineseEpisodeMatch) inferredEpisodeCount = parseChineseNumber(chineseEpisodeMatch[1]);
   if (episodes.length > 0) inferredEpisodeCount = Math.max(...episodes.map((item) => item.episode));
 
   let episodeLength = input.episodeLength || "90 秒";
   const eachMinutes = formatLine.match(/各约\s*(\d+)\s*分钟/);
   const singleMinutes = text.match(/单集(?:时长)?[^\d]{0,8}(\d+)(?:\s*[–—-]\s*(\d+))?\s*分钟/);
+  const documentMinutes = text.match(/时长[：:]?[^\d\n]{0,16}(\d+)\s*分钟/);
   if (eachMinutes) episodeLength = `${eachMinutes[1]} 分钟`;
   else if (singleMinutes) episodeLength = singleMinutes[2]
     ? `${singleMinutes[1]}-${singleMinutes[2]} 分钟`
     : `${singleMinutes[1]} 分钟`;
+  else if (documentMinutes) episodeLength = `${documentMinutes[1]} 分钟`;
 
   const protectedFacts = [
     `原稿标题：${title}`,

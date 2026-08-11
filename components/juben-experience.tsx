@@ -1327,6 +1327,7 @@ export default function JubenExperience() {
     setUploadStatus("loading");
     setErrorMessage("");
     setUploadMessage(`正在解析 ${file.name}`);
+    let importedForm: Required<JubenRequestBody> | null = null;
 
     try {
       const formData = new FormData();
@@ -1338,6 +1339,8 @@ export default function JubenExperience() {
       const payload = (await response.json()) as {
         filename?: string;
         text?: string;
+        characters?: number;
+        method?: string;
         truncated?: boolean;
         error?: string;
       };
@@ -1353,24 +1356,42 @@ export default function JubenExperience() {
         sourceFilename: payload.filename ?? file.name,
         adaptationMode: "忠实拆解",
       };
+      importedForm = nextForm;
       setForm(nextForm);
+      setResult(null);
+      setStatus("idle");
+      setDetailStatus({});
+      setEpisodeScope("all");
       setUploadStatus("ready");
       setUploadMessage(
-        `${payload.filename ?? file.name} 已导入${
+        `${payload.filename ?? file.name} 已导入，共 ${
+          payload.characters ?? payload.text.length
+        } 字${
           payload.truncated ? "，长文已截取前段核心内容" : ""
         }`,
       );
-      setAnalyzeStatus("loading");
-      await analyzeDraft(nextForm);
-      setAnalyzeStatus("ready");
       setActiveTab("source");
     } catch (error) {
-      setAnalyzeStatus("error");
       setUploadStatus("error");
       setUploadMessage(
         error instanceof Error ? error.message : "文件解析失败，请手动粘贴。",
       );
       setErrorMessage(error instanceof Error ? error.message : "文件解析失败，请手动粘贴。");
+      return;
+    }
+
+    if (!importedForm) return;
+
+    setAnalyzeStatus("loading");
+    try {
+      await analyzeDraft(importedForm);
+      setAnalyzeStatus("ready");
+    } catch (error) {
+      setAnalyzeStatus("error");
+      const message =
+        error instanceof Error ? error.message : "自动校对暂时失败。";
+      setUploadMessage((current) => `${current}；自动校对失败，可直接检查原稿后重试`);
+      setErrorMessage(`文件已经成功导入，仅自动校对失败：${message}`);
     }
   }
 
@@ -1564,8 +1585,11 @@ export default function JubenExperience() {
               <span>{uploadStatus === "loading" ? "正在导入" : "上传脚本"}</span>
               <input
                 type="file"
-                accept=".doc,.docx,.pdf,.txt,.md,image/*"
+                accept=".doc,.docx,.dotx,.docm,.dotm,.pdf,.txt,.md,image/*"
                 disabled={uploadStatus === "loading"}
+                onClick={(event) => {
+                  event.currentTarget.value = "";
+                }}
                 onChange={(event) => {
                   void handleUploadFile(event.target.files?.[0]);
                   event.currentTarget.value = "";
@@ -1573,7 +1597,7 @@ export default function JubenExperience() {
               />
             </label>
             <p data-status={uploadStatus}>
-              {uploadMessage || "支持 docx、pdf、txt、md、图片；导入后可继续手动修改。"}
+              {uploadMessage || "支持 doc、docx、dotx、pdf、txt、md、图片；导入后可继续手动修改。"}
             </p>
           </div>
 
