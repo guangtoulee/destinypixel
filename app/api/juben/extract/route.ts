@@ -23,6 +23,11 @@ function fileExtension(name: string) {
 }
 
 async function extractPdfText(buffer: Buffer) {
+  if (typeof globalThis.DOMMatrix === "undefined") {
+    const { DOMMatrix, ImageData, Path2D } = await import("@napi-rs/canvas");
+    Object.assign(globalThis, { DOMMatrix, ImageData, Path2D });
+  }
+
   const { PDFParse } = await import("pdf-parse");
   const parser = new PDFParse({ data: buffer });
 
