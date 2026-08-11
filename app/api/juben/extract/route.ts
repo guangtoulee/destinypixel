@@ -1,4 +1,5 @@
 import mammoth from "mammoth";
+import WordExtractor from "word-extractor";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -31,6 +32,13 @@ async function extractPdfText(buffer: Buffer) {
   } finally {
     await parser.destroy();
   }
+}
+
+async function extractLegacyWordText(buffer: Buffer) {
+  const extractor = new WordExtractor();
+  const document = await extractor.extract(buffer);
+
+  return document.getBody();
 }
 
 async function extractImageText(buffer: Buffer, mimeType: string) {
@@ -122,24 +130,26 @@ export async function POST(request: Request) {
     const extension = fileExtension(file.name);
     const mimeType = file.type || "application/octet-stream";
     let text = "";
+    let method = "plain-text";
 
     if (extension === "txt" || extension === "md" || mimeType.startsWith("text/")) {
       text = buffer.toString("utf8");
-    } else if (extension === "docx") {
+    } else if (["docx", "dotx", "docm", "dotm"].includes(extension)) {
       const result = await mammoth.extractRawText({ buffer });
       text = result.value;
+      method = "word-ooxml";
+    } else if (extension === "doc") {
+      text = await extractLegacyWordText(buffer);
+      method = "word-legacy";
     } else if (extension === "pdf" || mimeType === "application/pdf") {
       text = await extractPdfText(buffer);
+      method = "pdf-text";
     } else if (mimeType.startsWith("image/")) {
       text = await extractImageText(buffer, mimeType);
-    } else if (extension === "doc") {
-      return Response.json(
-        { error: "暂不支持老式 .doc，请另存为 .docx 后上传。" },
-        { status: 415 },
-      );
+      method = "image-ocr";
     } else {
       return Response.json(
-        { error: "请上传 docx、pdf、txt、md 或图片文件。" },
+        { error: "请上传 doc、docx、dotx、pdf、txt、md 或图片文件。" },
         { status: 415 },
       );
     }
@@ -156,6 +166,8 @@ export async function POST(request: Request) {
     return Response.json({
       filename: file.name,
       text: cleaned,
+      characters: cleaned.length,
+      method,
       truncated: text.length > maxExtractedChars,
     });
   } catch (error) {
@@ -164,7 +176,7 @@ export async function POST(request: Request) {
         error:
           error instanceof Error
             ? error.message
-            : "文件解析失败，请换成 docx、pdf、txt 或清晰图片。",
+            : "文件解析失败，请换成 doc、docx、dotx、pdf、txt 或清晰图片。",
       },
       { status: 400 },
     );
