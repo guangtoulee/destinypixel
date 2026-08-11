@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.80",
     "docx": "^9.7.1",
     "exceljs": "^4.4.0",
     "html2canvas": "^1.4.1",
