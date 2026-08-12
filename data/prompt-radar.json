@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-12T03:39:09.398Z",
+  "updatedAt": "2026-08-12T08:48:27.228Z",
   "sourceSummary": {
     "community": 583,
-    "publicX": 267,
-    "total": 850
+    "publicX": 270,
+    "total": 853
   },
   "items": [
     {
@@ -580,7 +580,7 @@
       "authorName": "MAX",
       "authorHandle": "@maxxmalist",
       "createdAt": "2026-08-06T17:46:53.000Z",
-      "importedAt": "2026-08-11T14:36:31.308Z",
+      "importedAt": "2026-08-12T08:48:27.208Z",
       "tags": [
         "Seedance",
         "人像",
@@ -601,13 +601,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 644,
-        "reposts": 52,
+        "likes": 652,
+        "reposts": 53,
         "replies": 35,
         "quotes": 12,
-        "bookmarks": 1045,
-        "views": 221581,
-        "score": 5145
+        "bookmarks": 1061,
+        "views": 224168,
+        "score": 5218
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "it's insane what seedance 2.5 is capable of here's another example full prompt: CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her holding the camera at arm's length in selfie mode while stepping outside her apartment building with her dog. The first 20–30 seconds are entirely handheld. Later she occasionally places the camera on a park bench, low stone wall, picnic table, or the ground for wider shots. Keep subtle handheld shake, drifting composition, autofocus hunting, rushed reframing, uneven zooms, exposure breathing, brief accidental face cropping, and imperfect framing throughout. The camera itself is never visible. LOOK: Warm analog tape texture with gentle film grain, slightly softened sharpness, subtle halation around sunlight, realistic skin tones, low contrast, tiny exposure shifts, and natural motion blur. It should feel like authentic footage from someone's everyday life rather than a polished commercial. STYLE: A relaxed morning lifestyle vlog. Quiet, cozy, and spontaneous. She occasionally laughs at her dog, pauses to look around, adjusts the leash, brushes hair away from her face, and speaks naturally in short sentences with comfortable pauses. CHARACTER: EMMA — a beautiful white woman in her mid-20s. Long light brown hair in a messy ponytail, green eyes, minimal makeup, oversized gray hoodie, black biker shorts, white sneakers, and a small crossbody bag. She is walking a happy golden retriever. SETTING: A peaceful suburban neighborhood on a sunny morning. Tree-lined sidewalks, quiet residential streets, birds singing, a small park with benches, green grass, and soft golden morning light. Very few people are around. SCENES: The vlog opens in selfie mode. Emma holds the camera while leaving her apartment building with the golden retriever excitedly pulling on the leash. \"Good morning.\" She smiles. \"Someone couldn't wait.\" The dog eagerly sniffs everything as they walk down the sidewalk. She laughs quietly. \"He has to inspect every single tree.\" Still holding the camera, she walks into a small neighborhood park. The dog suddenly stops and stares at a squirrel. \"Oh... there we go.\" She smiles and gently shakes her head. She places the camera on a nearby bench for a wider angle while throwing a tennis ball. The dog happily chases after it. \"Worth waking up early.\" She picks the camera back up. Walking slowly through the park, she looks up at the trees for a moment. \"It's actually really peaceful out here.\" The dog returns with the ball but drops it halfway. She laughs. \"Close enough.\" She sits on the bench while the dog lies beside her. She scratches behind his ears. \"I think he's happier than I am.\" She stands up and continues walking. The camera stays in selfie mode as they head toward home. \"Coffee is definitely next.\" She smiles into the lens. \"See you later.\" She gives a small wave and ends the recording."
@@ -654,6 +654,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "One very useful tool in Agent mode is image cropping of Grok Imagine . I don't know why no one talks about it, as it is a crucial element for creating smooth transitions. During a conversation, you need to frame each person and switch camera angles to add energy to your video. Being able to pick the frame you want and crop it saves a huge amount of time."
+    },
+    {
+      "id": "x-public-2085016258475344350",
+      "title": "i just figured out how to get flawless generations in Seedance 2.5 every single time every gener",
+      "description": "i just figured out how to get flawless generations in Seedance 2.5 every single time every generation costs real money and one vague prompt means you're paying for a clip that goes straight to trash i burned through more",
+      "prompt": "i just figured out how to get flawless generations in Seedance 2.5 every single time every generation costs real money and one vague prompt means you're paying for a clip that goes straight to trash i burned through more credits than i want to admit before i figured out the fix, a single prompt template that comes back CLEAN every time, 30 second continuous shot, character locked, camera doing exactly what i wrote, nothing random in the frame the difference is structure, the model reads timestamps, reference assets and constraints way better than loose descriptions, so i stopped describing vibes and started scripting seconds i packaged my entire template and i'm giving it away today: -prompt template for full 30-second videos (first try output, no rerolls) -the reference asset setup that keeps characters locked across the whole clip -my negative prompt list that kills 90% of weird AI artifacts -how to run 2.5 without torching your budget RT + reply \"SEEDANCE\" and i send it over (must follow so i can dm) it’s coming soon to higgsfield, so bookmark this, you’ll need it",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/maxxmalist/status/2085016258475344350",
+      "sourceType": "x",
+      "authorName": "MAX",
+      "authorHandle": "@maxxmalist",
+      "createdAt": "2026-08-05T14:53:08.000Z",
+      "importedAt": "2026-08-12T08:48:27.208Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 434,
+        "reposts": 203,
+        "replies": 326,
+        "quotes": 3,
+        "bookmarks": 810,
+        "views": 68621,
+        "score": 4582
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "i just figured out how to get flawless generations in Seedance 2.5 every single time every generation costs real money and one vague prompt means you're paying for a clip that goes straight to trash i burned through more credits than i want to admit before i figured out the fix, a single prompt template that comes back CLEAN every time, 30 second continuous shot, character locked, camera doing exactly what i wrote, nothing random in the frame the difference is structure, the model reads timestamps, reference assets and constraints way better than loose descriptions, so i stopped describing vibes and started scripting seconds i packaged my entire template and i'm giving it away today: -prompt template for full 30-second videos (first try output, no rerolls) -the reference asset setup that keeps characters locked across the whole clip -my negative prompt list that kills 90% of weird AI artifacts -how to run 2.5 without torching your budget RT + reply \"SEEDANCE\" and i send it over (must follow so i can dm) it’s coming soon to higgsfield, so bookmark this, you’ll need it"
     },
     {
       "id": "x-public-2078444653205230052",
@@ -1900,6 +1942,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile responsive, built in one session by describing what you want. No agency, no code, no months of work. Here's the workflow, start to finish: 1. Find a look on Pinterest. Grab an image with the vibe you want (3D, animation, depth). 2. Turn it into a video. Use an AI image-to-video tool (Higgsfield, Kling) to animate it. Tell it to move but not zoom or reposition. 3. Build the hero with Fable 5. In Claude Code, describe the hero section, drop your video in as the background, set your colors. 4. Build section by section. Ask for the next sections in the same style. Once Fable has your fonts, colors, and layout locked, it reuses them and avoids generic AI-slop pages. 5. Refine with references. Screenshot a background, blur it in Figma to grab the average color, and tell Fable to match it. 6. Post it to grow. Screen-record the site, post the clip, and tag the tools you used. Companies repost work that shows off their platform. The people building real things with Fable now are going to be way ahead when everyone else catches up. Bookmark this."
+    },
+    {
+      "id": "x-public-2087007818721423855",
+      "title": "Seedance 2.5 on @openartai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photoreal",
+      "description": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individua",
+      "prompt": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/frametheory058/status/2087007818721423855",
+      "sourceType": "x",
+      "authorName": "Nexora",
+      "authorHandle": "@frametheory058",
+      "createdAt": "2026-08-11T02:46:53.000Z",
+      "importedAt": "2026-08-12T08:48:27.208Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 322,
+        "reposts": 34,
+        "replies": 63,
+        "quotes": 6,
+        "bookmarks": 233,
+        "views": 44203,
+        "score": 1648
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark."
     },
     {
       "id": "x-public-2085606298180276259",
@@ -4465,6 +4550,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I tried this Kling prompt with Grok Imagine, and the result is excellent. POV girlfriend video, brunette girl in cropped cream lounge top and cozy shorts holding the viewer’s hand while walking forward through a warm sunlit kitchen, then past the kitchen and into the bedroom. soft over-the-shoulder smiles, natural hair movement, realistic iphone handheld camera, slight camera shake, warm golden hour lighting, authentic TikTok vibe, realistic movement, casual intimate atmosphere, 9:16Continuous forward walking only. Do not stop. Do not turn around. Do not walk toward the camera. Natural walking speed. Subtle body movement. Realistic pacing. No slow motion. No dramatic cinematic movement. No dancing. No talking."
+    },
+    {
+      "id": "x-public-2086073927537934724",
+      "title": "我艹，Seedance 2.5: 无限用，真敢放！🤯 Higgsfield 这次是真敢放： Seedance 2.5，眼下最贵的视频模型，在 Higgsfield 上直接 33 天无限用，零",
+      "description": "我艹，Seedance 2.5: 无限用，真敢放！🤯 Higgsfield 这次是真敢放： Seedance 2.5，眼下最贵的视频模型，在 Higgsfield 上直接 33 天无限用，零积分成本。 30 秒单镜头直出、音画一次生成、50 路参考锁脸、局部编辑不用整条重跑。做视频的知道，这几条背后分别对应多少后期活。 一个月不用数着额度过日子，玩法就变了： → prompt 和参考组合一次测饱，攒出自己的配方库 → 给客户出片敢多做",
+      "prompt": "我艹，Seedance 2.5: 无限用，真敢放！🤯 Higgsfield 这次是真敢放： Seedance 2.5，眼下最贵的视频模型，在 Higgsfield 上直接 33 天无限用，零积分成本。 30 秒单镜头直出、音画一次生成、50 路参考锁脸、局部编辑不用整条重跑。做视频的知道，这几条背后分别对应多少后期活。 一个月不用数着额度过日子，玩法就变了： → prompt 和参考组合一次测饱，攒出自己的配方库 → 给客户出片敢多做几版备选，不心疼额度 → 同一条片做两遍挑好的发，产能上来了才敢这么干 → 顺手冲一下他们 100 万美金的 AI 电影节 先听我挂的这条片：对白、笑声、环境音是跟画面同一遍生成的，后期一层都没贴。",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/servasyy_ai/status/2086073927537934724",
+      "sourceType": "x",
+      "authorName": "huangserva",
+      "authorHandle": "@servasyy_ai",
+      "createdAt": "2026-08-08T12:55:56.000Z",
+      "importedAt": "2026-08-12T08:48:27.209Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 115,
+        "reposts": 11,
+        "replies": 118,
+        "quotes": 9,
+        "bookmarks": 116,
+        "views": 56973,
+        "score": 881
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "我艹，Seedance 2.5: 无限用，真敢放！🤯 Higgsfield 这次是真敢放： Seedance 2.5，眼下最贵的视频模型，在 Higgsfield 上直接 33 天无限用，零积分成本。 30 秒单镜头直出、音画一次生成、50 路参考锁脸、局部编辑不用整条重跑。做视频的知道，这几条背后分别对应多少后期活。 一个月不用数着额度过日子，玩法就变了： → prompt 和参考组合一次测饱，攒出自己的配方库 → 给客户出片敢多做几版备选，不心疼额度 → 同一条片做两遍挑好的发，产能上来了才敢这么干 → 顺手冲一下他们 100 万美金的 AI 电影节 先听我挂的这条片：对白、笑声、环境音是跟画面同一遍生成的，后期一层都没贴。"
     },
     {
       "id": "x-public-2082872504448659483",
@@ -10844,7 +10971,7 @@
       "authorName": "liana",
       "authorHandle": "@Lianaalane",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.659Z",
+      "importedAt": "2026-08-12T08:48:23.541Z",
       "tags": [
         "人像",
         "摄影"
@@ -10886,7 +11013,7 @@
       "authorName": "Noor",
       "authorHandle": "@noorlewisx",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.542Z",
       "tags": [
         "人像",
         "摄影"
@@ -10928,7 +11055,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.542Z",
       "tags": [
         "人像",
         "摄影"
@@ -10970,7 +11097,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.542Z",
       "tags": [
         "人像",
         "摄影"
@@ -11012,7 +11139,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.542Z",
       "tags": [
         "人像",
         "摄影"
@@ -11054,7 +11181,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.542Z",
       "tags": [
         "人像",
         "摄影"
@@ -11096,7 +11223,7 @@
       "authorName": "simeon-sanai",
       "authorHandle": "@Naiknelofar788",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.660Z",
+      "importedAt": "2026-08-12T08:48:23.543Z",
       "tags": [
         "人像",
         "摄影"
@@ -11138,7 +11265,7 @@
       "authorName": "Iman",
       "authorHandle": "@ajeebmizaj",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.543Z",
       "tags": [
         "人像",
         "摄影"
@@ -11180,7 +11307,7 @@
       "authorName": "春永睦月　Harunaga Mutsuki",
       "authorHandle": "@HarunagaMutsuki",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "摄影"
       ],
@@ -11221,7 +11348,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "人像",
         "摄影"
@@ -11263,7 +11390,7 @@
       "authorName": "Nailai7981",
       "authorHandle": "@VIBEQUIRKLABS",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "人像",
         "摄影"
@@ -11305,7 +11432,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.663Z",
+      "importedAt": "2026-08-12T08:48:23.546Z",
       "tags": [
         "摄影"
       ],
@@ -11346,7 +11473,7 @@
       "authorName": "Loriel.AI",
       "authorHandle": "@ou_zhen599",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.663Z",
+      "importedAt": "2026-08-12T08:48:23.546Z",
       "tags": [
         "GPT Image 2",
         "平面设计",
@@ -11389,7 +11516,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.543Z",
       "tags": [
         "Kling",
         "人像",
@@ -11434,7 +11561,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.543Z",
       "tags": [
         "人像",
         "摄影"
@@ -11476,7 +11603,7 @@
       "authorName": "Feyber | AI Creator",
       "authorHandle": "@woleswoosh",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "摄影"
@@ -11518,7 +11645,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "摄影"
@@ -11560,7 +11687,7 @@
       "authorName": "李岳",
       "authorHandle": "@liyue_ai",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.661Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "摄影"
@@ -11602,7 +11729,7 @@
       "authorName": "Clark Rhuzel",
       "authorHandle": "@clarkrhuz",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "摄影"
@@ -11644,7 +11771,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "平面设计",
@@ -11687,7 +11814,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.544Z",
       "tags": [
         "人像",
         "摄影"
@@ -11729,7 +11856,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "人像",
         "摄影"
@@ -11771,7 +11898,7 @@
       "authorName": "Ahmad Faraz",
       "authorHandle": "@iamahmedfaraz66",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "人像",
         "摄影"
@@ -11813,7 +11940,7 @@
       "authorName": "Mr. Tariq",
       "authorHandle": "@AiWithTariq",
       "createdAt": "2026-08-10T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.662Z",
+      "importedAt": "2026-08-12T08:48:23.545Z",
       "tags": [
         "人像"
       ],
@@ -35610,7 +35737,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.672Z",
+      "importedAt": "2026-08-12T08:48:23.563Z",
       "tags": [
         "产品",
         "平面设计",
@@ -35653,7 +35780,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.672Z",
+      "importedAt": "2026-08-12T08:48:23.564Z",
       "tags": [
         "平面设计"
       ],
@@ -35694,7 +35821,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T03:39:06.672Z",
+      "importedAt": "2026-08-12T08:48:23.564Z",
       "tags": [
         "平面设计"
       ],
