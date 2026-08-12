@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   allowedDevOrigins: ["127.0.0.1"],
-  serverExternalPackages: ["@napi-rs/canvas", "pdf-parse", "word-extractor"],
+  serverExternalPackages: ["pdf-parse", "word-extractor"],
   async rewrites() {
     return [
       {
@@ -17,9 +17,6 @@ const nextConfig: NextConfig = {
           "https://zhuangli-jiankangbao.anyulee.chatgpt.site/jiankangbao/:path*",
       },
     ];
-  },
-  outputFileTracingIncludes: {
-    "/api/juben/extract": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
   },
   turbopack: {
     root: process.cwd(),
