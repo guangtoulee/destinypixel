@@ -23,20 +23,10 @@ function fileExtension(name: string) {
 }
 
 async function extractPdfText(buffer: Buffer) {
-  if (typeof globalThis.DOMMatrix === "undefined") {
-    const { DOMMatrix, ImageData, Path2D } = await import("@napi-rs/canvas");
-    Object.assign(globalThis, { DOMMatrix, ImageData, Path2D });
-  }
+  const pdfParse = (await import("pdf-parse")).default;
+  const result = await pdfParse(buffer);
 
-  const { PDFParse } = await import("pdf-parse");
-  const parser = new PDFParse({ data: buffer });
-
-  try {
-    const result = await parser.getText();
-    return result.text;
-  } finally {
-    await parser.destroy();
-  }
+  return result.text;
 }
 
 async function extractLegacyWordText(buffer: Buffer) {
