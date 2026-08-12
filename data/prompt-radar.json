@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-12T08:48:27.228Z",
+  "updatedAt": "2026-08-12T14:36:55.731Z",
   "sourceSummary": {
-    "community": 583,
-    "publicX": 270,
-    "total": 853
+    "community": 604,
+    "publicX": 273,
+    "total": 877
   },
   "items": [
     {
@@ -580,7 +580,7 @@
       "authorName": "MAX",
       "authorHandle": "@maxxmalist",
       "createdAt": "2026-08-06T17:46:53.000Z",
-      "importedAt": "2026-08-12T08:48:27.208Z",
+      "importedAt": "2026-08-12T14:36:55.712Z",
       "tags": [
         "Seedance",
         "人像",
@@ -601,13 +601,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 652,
+        "likes": 655,
         "reposts": 53,
         "replies": 35,
         "quotes": 12,
-        "bookmarks": 1061,
-        "views": 224168,
-        "score": 5218
+        "bookmarks": 1062,
+        "views": 225003,
+        "score": 5229
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "it's insane what seedance 2.5 is capable of here's another example full prompt: CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her holding the camera at arm's length in selfie mode while stepping outside her apartment building with her dog. The first 20–30 seconds are entirely handheld. Later she occasionally places the camera on a park bench, low stone wall, picnic table, or the ground for wider shots. Keep subtle handheld shake, drifting composition, autofocus hunting, rushed reframing, uneven zooms, exposure breathing, brief accidental face cropping, and imperfect framing throughout. The camera itself is never visible. LOOK: Warm analog tape texture with gentle film grain, slightly softened sharpness, subtle halation around sunlight, realistic skin tones, low contrast, tiny exposure shifts, and natural motion blur. It should feel like authentic footage from someone's everyday life rather than a polished commercial. STYLE: A relaxed morning lifestyle vlog. Quiet, cozy, and spontaneous. She occasionally laughs at her dog, pauses to look around, adjusts the leash, brushes hair away from her face, and speaks naturally in short sentences with comfortable pauses. CHARACTER: EMMA — a beautiful white woman in her mid-20s. Long light brown hair in a messy ponytail, green eyes, minimal makeup, oversized gray hoodie, black biker shorts, white sneakers, and a small crossbody bag. She is walking a happy golden retriever. SETTING: A peaceful suburban neighborhood on a sunny morning. Tree-lined sidewalks, quiet residential streets, birds singing, a small park with benches, green grass, and soft golden morning light. Very few people are around. SCENES: The vlog opens in selfie mode. Emma holds the camera while leaving her apartment building with the golden retriever excitedly pulling on the leash. \"Good morning.\" She smiles. \"Someone couldn't wait.\" The dog eagerly sniffs everything as they walk down the sidewalk. She laughs quietly. \"He has to inspect every single tree.\" Still holding the camera, she walks into a small neighborhood park. The dog suddenly stops and stares at a squirrel. \"Oh... there we go.\" She smiles and gently shakes her head. She places the camera on a nearby bench for a wider angle while throwing a tennis ball. The dog happily chases after it. \"Worth waking up early.\" She picks the camera back up. Walking slowly through the park, she looks up at the trees for a moment. \"It's actually really peaceful out here.\" The dog returns with the ball but drops it halfway. She laughs. \"Close enough.\" She sits on the bench while the dog lies beside her. She scratches behind his ears. \"I think he's happier than I am.\" She stands up and continues walking. The camera stays in selfie mode as they head toward home. \"Coffee is definitely next.\" She smiles into the lens. \"See you later.\" She gives a small wave and ends the recording."
@@ -666,7 +666,7 @@
       "authorName": "MAX",
       "authorHandle": "@maxxmalist",
       "createdAt": "2026-08-05T14:53:08.000Z",
-      "importedAt": "2026-08-12T08:48:27.208Z",
+      "importedAt": "2026-08-12T14:36:55.711Z",
       "tags": [
         "Seedance",
         "视频"
@@ -690,9 +690,9 @@
         "reposts": 203,
         "replies": 326,
         "quotes": 3,
-        "bookmarks": 810,
-        "views": 68621,
-        "score": 4582
+        "bookmarks": 811,
+        "views": 68869,
+        "score": 4586
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "i just figured out how to get flawless generations in Seedance 2.5 every single time every generation costs real money and one vague prompt means you're paying for a clip that goes straight to trash i burned through more credits than i want to admit before i figured out the fix, a single prompt template that comes back CLEAN every time, 30 second continuous shot, character locked, camera doing exactly what i wrote, nothing random in the frame the difference is structure, the model reads timestamps, reference assets and constraints way better than loose descriptions, so i stopped describing vibes and started scripting seconds i packaged my entire template and i'm giving it away today: -prompt template for full 30-second videos (first try output, no rerolls) -the reference asset setup that keeps characters locked across the whole clip -my negative prompt list that kills 90% of weird AI artifacts -how to run 2.5 without torching your budget RT + reply \"SEEDANCE\" and i send it over (must follow so i can dm) it’s coming soon to higgsfield, so bookmark this, you’ll need it"
@@ -1901,6 +1901,49 @@
       "rawText": "Can't get enough of Seedance 2.5. The best part is it can generate 30s video in one single prompt, and the result is so realistic! So, here's another one that I made using @capcutapp. Prompt: [STYLE + CAMERA + ATMOSPHERE] Gritty, raw handheld 35mm film aesthetic with natural film grain. Harsh direct sunlight creating high-contrast shadows over a dramatic coastal cliff and open ocean. Continuous single-take handheld tracking shot (3rd-person / over-the-shoulder) with no cuts. Atmosphere: high-altitude wind, realistic coastal cliff and ocean physics, sudden wingsuit deployment. Audio: heavy rhythmic breathing, intense wind howl, fabric snap of wingsuit opening, high-speed air rush over open water, near-miss whooshes past yachts, soft landing roll on sand, distant ocean waves and beach ambient noise, final bite sounds. [IMAGE REFERENCES] Use the provided Hoshino character sheet as the single strict visual reference for the male character. Exact face, black hair, dark brown eyes, lean athletic build (178 cm), gold earrings, and overall facial structure locked from the reference. Outfit: modern high-performance cliff-jumping wingsuit — sleek, form-fitting design in matte charcoal black with sharp white paneling and subtle gold zipper accents (matching his minimalist aesthetic). The wingsuit is worn from the start with a matching technical backpack. Body proportions, posture, and face remain fully locked to the Hoshino reference. [TIMELINE SECOND BY SECOND] 0-3s: [Handheld medium] Hoshino stands on the edge of a high rocky cliff overlooking the open ocean, wearing his charcoal-and-white wingsuit and technical backpack. He looks straight into the camera with calm, confident intensity, then turns and launches into a clear, controlled forward somersault in slow motion as he leaves the cliff edge. 3-5s: [Continuous freefall] He completes the somersault and falls head-first toward the sea. At exactly 1.5 seconds into the fall he fully deploys the wingsuit with a sharp snap. The wing membranes inflate and he levels out into a smooth glide. 5-12s: [High-speed tracking] Camera stays locked behind him as he rockets at full speed just above the ocean surface along the coastline. He weaves tightly past sheer cliff faces, banking hard left and right, turquoise water and rocky walls streaking past at extreme velocity. 12-18s: [Low-level chaos] He drops lower, flying just above the water. He almost collides with a large luxury yacht that suddenly turns, banks hard to avoid it, then narrowly misses a smaller motor yacht. He dips under a yacht’s outstretched boom and threads between two more vessels. 18-23s: [Water-level action] Still flying extremely low over the sea, he dodges a startled seabird that dives across his path, skims past a group of people on a nearby yacht who scatter in surprise, and banks sharply to avoid an open yacht swim platform. The camera stays locked behind him through every near-miss. 23-26s: [Landing] He flares the wingsuit hard, touches down with both feet on the soft beach sand and immediately rolls forward to kill the speed. He stands up, peels off the wingsuit in one fluid motion and drops it on the sand beside him, revealing a clean fitted white undershirt underneath. 26-28s: [Beach level] He walks a few steps still wearing the backpack and stops right in front of a classic beachside hot-dog cart. The vendor hands him a steaming hot dog fresh off the grill. 28-30s: [Close continuous] He turns, looks directly into the camera, takes a big bite of the hot dog and chews with a calm, satisfied expression as the shot holds. [STYLE & QUALITY BOOSTERS] Photorealistic 8K, ultra-detailed textures, cinematic lighting, perfect motion blur, high dynamic range, coherent physics (fabric, air, wingsuit membranes, impact, roll, near-misses with yachts, water spray), stable character locked to the Hoshino reference, realistic ocean reflections, cliff rock textures and wind, no artifacts, movie-level stability, pure single continuous take."
     },
     {
+      "id": "x-public-2087007818721423855",
+      "title": "Seedance 2.5 on @openartai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photoreal",
+      "description": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individua",
+      "prompt": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/frametheory058/status/2087007818721423855",
+      "sourceType": "x",
+      "authorName": "Nexora",
+      "authorHandle": "@frametheory058",
+      "createdAt": "2026-08-11T02:46:53.000Z",
+      "importedAt": "2026-08-12T14:36:55.711Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 333,
+        "reposts": 35,
+        "replies": 66,
+        "quotes": 6,
+        "bookmarks": 240,
+        "views": 45452,
+        "score": 1701
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark."
+    },
+    {
       "id": "x-public-2073498982731718929",
       "title": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building gam",
       "description": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile re",
@@ -1942,49 +1985,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile responsive, built in one session by describing what you want. No agency, no code, no months of work. Here's the workflow, start to finish: 1. Find a look on Pinterest. Grab an image with the vibe you want (3D, animation, depth). 2. Turn it into a video. Use an AI image-to-video tool (Higgsfield, Kling) to animate it. Tell it to move but not zoom or reposition. 3. Build the hero with Fable 5. In Claude Code, describe the hero section, drop your video in as the background, set your colors. 4. Build section by section. Ask for the next sections in the same style. Once Fable has your fonts, colors, and layout locked, it reuses them and avoids generic AI-slop pages. 5. Refine with references. Screenshot a background, blur it in Figma to grab the average color, and tell Fable to match it. 6. Post it to grow. Screen-record the site, post the clip, and tag the tools you used. Companies repost work that shows off their platform. The people building real things with Fable now are going to be way ahead when everyone else catches up. Bookmark this."
-    },
-    {
-      "id": "x-public-2087007818721423855",
-      "title": "Seedance 2.5 on @openartai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photoreal",
-      "description": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individua",
-      "prompt": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/frametheory058/status/2087007818721423855",
-      "sourceType": "x",
-      "authorName": "Nexora",
-      "authorHandle": "@frametheory058",
-      "createdAt": "2026-08-11T02:46:53.000Z",
-      "importedAt": "2026-08-12T08:48:27.208Z",
-      "tags": [
-        "Seedance",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 322,
-        "reposts": 34,
-        "replies": 63,
-        "quotes": 6,
-        "bookmarks": 233,
-        "views": 44203,
-        "score": 1648
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark."
     },
     {
       "id": "x-public-2085606298180276259",
@@ -3364,6 +3364,50 @@
       "rawText": "POV: The kiss that broke the internet, recreated with AI on the tip of Tokyo Tower. A viral cinematic moment, reimagined with seamless camera movement, perfect character consistency, and a breathtaking skyline that never leaves the frame. Every shot stays locked to the very top of Tokyo Tower for a romance that feels straight out of a blockbuster. Made with GPT Image 2 and Seedance on @itsPolloAI for the Peak Moment Challenge. Prompt: PART 1 • 0:00–0:15 — THE REVEAL & THE KISS (9:16) 0:00–0:03 — Arrival Continuous crane arc already in motion around the couple on the tip of Tokyo Tower's antenna mast. Only one Tokyo Tower visible. Wind moves Jessy's hair and trench dress. He wears the yellow kawaii mascot helmet. Jessy: \"You're seriously wearing that up here?\" Man: \"Only for you.\" 0:03–0:06 — Reveal Camera continues the same arc. He removes the helmet, revealing tousled brown hair and blue eyes. 0:06–0:09 — Pull Continuous crane widens. He pulls Jessy close by the waist, she grabs his jacket collar. The Polloai flag becomes visible above. 0:09–0:12 — Kiss Camera keeps pulling back with a subtle Dutch roll. They kiss on the tip of Tokyo Tower as the grade transitions from hazy news footage to warm cinematic. 0:12–0:15 — Sway Wide shot. They slowly turn while kissing. Tokyo Tower and the Polloai flag remain clearly visible. PART 2 • 0:15–0:25 — THE SPIN & THE VIEW (9:16) Continuity: First frame must exactly match the last frame of Part 1. 0:15–0:18 — Spin Continue the identical crane arc and orbit. He spins Jessy once on the tower tip. Dress, jewelry and blue-streaked hair flow naturally. Jessy: \"Don't drop me from up here!\" 0:18–0:21 — Second Kiss Orbit tightens into a close two-shot. They share another soft kiss, foreheads touching between kisses. 0:21–0:23 — View Camera cranes upward and pulls back. They face the glowing Tokyo skyline together with the Polloai flag above. 0:23–0:25 — Hold Slow push-in. They remain embracing on the tip of Tokyo Tower until fade to black. Strict: Maintain the exact reference camera movement throughout. All actions happen only on the tip of Tokyo Tower, with only one Tokyo Tower visible in every shot. #PolloAI #PolloPeakMoment"
     },
     {
+      "id": "x-public-2084822856106651994",
+      "title": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人",
+      "description": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人都想找一个好用又便宜的生成式模型API平台， 说实话，真的很不好找！！ 大大小小的AI平台用了不少，要么贵的要死，要么可用模型少的可怜， 要么就是个黑盒子，花钱用的啥模型都不知道！ 今天看到Pika @pika_labs上线了Pika API Cl",
+      "prompt": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人都想找一个好用又便宜的生成式模型API平台， 说实话，真的很不好找！！ 大大小小的AI平台用了不少，要么贵的要死，要么可用模型少的可怜， 要么就是个黑盒子，花钱用的啥模型都不知道！ 今天看到Pika @pika_labs上线了Pika API Club，我就知道这事稳了！！ 果不其然，Pika还是太懂AI视频创作者了！ 基本上能用到的模型都包圆了，定价也特别香， 应该都是从厂商拿的“集采价”，而且还让利给了用户！ Pika API定价比Runway、Fal等等都要便宜不少， Seedance 2.0的价格相对Runway，最高能便宜87%，相当于打1.3折！！ 关键是，每月才10美金，可以用70多个生成式模型， 不光是视频，主流模型都有，1个API能接住所有的模型需求！！ 所以搞了一个创意工作台，把原创的一些提示词做成预设， 一键套用成片，效率直接拉满！！",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/yyyole/status/2084822856106651994",
+      "sourceType": "x",
+      "authorName": "沐阳",
+      "authorHandle": "@yyyole",
+      "createdAt": "2026-08-05T02:04:37.000Z",
+      "importedAt": "2026-08-12T14:36:55.711Z",
+      "tags": [
+        "Seedance",
+        "Runway",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Runway",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 156,
+        "reposts": 18,
+        "replies": 18,
+        "quotes": 1,
+        "bookmarks": 205,
+        "views": 23887,
+        "score": 1068
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人都想找一个好用又便宜的生成式模型API平台， 说实话，真的很不好找！！ 大大小小的AI平台用了不少，要么贵的要死，要么可用模型少的可怜， 要么就是个黑盒子，花钱用的啥模型都不知道！ 今天看到Pika @pika_labs上线了Pika API Club，我就知道这事稳了！！ 果不其然，Pika还是太懂AI视频创作者了！ 基本上能用到的模型都包圆了，定价也特别香， 应该都是从厂商拿的“集采价”，而且还让利给了用户！ Pika API定价比Runway、Fal等等都要便宜不少， Seedance 2.0的价格相对Runway，最高能便宜87%，相当于打1.3折！！ 关键是，每月才10美金，可以用70多个生成式模型， 不光是视频，主流模型都有，1个API能接住所有的模型需求！！ 所以搞了一个创意工作台，把原创的一些提示词做成预设， 一键套用成片，效率直接拉满！！"
+    },
+    {
       "id": "x-public-2081976392712118780",
       "title": "Crafted with Seedance 2.0 + GPT Image 2 @itsPolloAI Storyboard Prompt: Create a raw kung fu perf",
       "description": "Crafted with Seedance 2.0 + GPT Image 2 @itsPolloAI Storyboard Prompt: Create a raw kung fu performance storyboard focused on extreme physical action. Use reference image for the character. 16:9 storyboard sheet, 12 cine",
@@ -4332,6 +4376,52 @@
       "rawText": "Made medieval battle cinematic using multiple tools. AI content isn't just about using tools. It's about how you chain them together. Tools used GPT image 2.0 : Image Generation Claude: storyboard structure + per-cut video prompts Kling+Grok: video generation CapCut: editing Prompt in the comments"
     },
     {
+      "id": "x-public-2087225781823111267",
+      "title": "i probably shouldn't be giving this away but fck it i built an agent that turns your ad script i",
+      "description": "i probably shouldn't be giving this away but f*ck it i built an agent that turns your ad script into model-specific prompts for AI video generation, based on skills for each model i use day-to-day here's how it works: > ",
+      "prompt": "i probably shouldn't be giving this away but f*ck it i built an agent that turns your ad script into model-specific prompts for AI video generation, based on skills for each model i use day-to-day here's how it works: > pick your mode - first frame or full video generation > pick your model - gpt-image-2, omni, kling, seedance 2.0 or 2.5 > paste your script - it splits it into scenes > get a prompt per scene, tuned for the exact model you picked most people think the model is what makes the ad... and it's true, but the prompt is what gets you a good generation on the first try instead of wasting money on rerolls - seedance wants timestamps. - omni wants references tagged. - gpt-image wants art direction and reference feed them all the same generic prompt and they all hand you slop these skills took me months of daily reps to get right, now i'm sharing it with you RT + reply \"SCENES\" and i'll send you the full thing so you can run in on your PC (must follow so i can dm)",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/maxxmalist/status/2087225781823111267",
+      "sourceType": "x",
+      "authorName": "MAX",
+      "authorHandle": "@maxxmalist",
+      "createdAt": "2026-08-11T17:12:59.000Z",
+      "importedAt": "2026-08-12T14:36:55.709Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "Kling",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 78,
+        "reposts": 59,
+        "replies": 103,
+        "quotes": 1,
+        "bookmarks": 129,
+        "views": 10679,
+        "score": 906
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "i probably shouldn't be giving this away but f*ck it i built an agent that turns your ad script into model-specific prompts for AI video generation, based on skills for each model i use day-to-day here's how it works: > pick your mode - first frame or full video generation > pick your model - gpt-image-2, omni, kling, seedance 2.0 or 2.5 > paste your script - it splits it into scenes > get a prompt per scene, tuned for the exact model you picked most people think the model is what makes the ad... and it's true, but the prompt is what gets you a good generation on the first try instead of wasting money on rerolls - seedance wants timestamps. - omni wants references tagged. - gpt-image wants art direction and reference feed them all the same generic prompt and they all hand you slop these skills took me months of daily reps to get right, now i'm sharing it with you RT + reply \"SCENES\" and i'll send you the full thing so you can run in on your PC (must follow so i can dm)"
+    },
+    {
       "id": "x-public-2081039308446674999",
       "title": "\"Luxury Bags Collection with AI influencer \" This influencer doesn’t exist. None of this is real",
       "description": "\"Luxury Bags Collection with AI influencer \" This influencer doesn’t exist. None of this is real. Every shot, every angle, every detail of the luxury bag you’re seeing was created with AI. This is what AI looks like now.",
@@ -4562,7 +4652,7 @@
       "authorName": "huangserva",
       "authorHandle": "@servasyy_ai",
       "createdAt": "2026-08-08T12:55:56.000Z",
-      "importedAt": "2026-08-12T08:48:27.209Z",
+      "importedAt": "2026-08-12T14:36:55.712Z",
       "tags": [
         "Seedance",
         "视频"
@@ -4587,8 +4677,8 @@
         "replies": 118,
         "quotes": 9,
         "bookmarks": 116,
-        "views": 56973,
-        "score": 881
+        "views": 57401,
+        "score": 882
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "我艹，Seedance 2.5: 无限用，真敢放！🤯 Higgsfield 这次是真敢放： Seedance 2.5，眼下最贵的视频模型，在 Higgsfield 上直接 33 天无限用，零积分成本。 30 秒单镜头直出、音画一次生成、50 路参考锁脸、局部编辑不用整条重跑。做视频的知道，这几条背后分别对应多少后期活。 一个月不用数着额度过日子，玩法就变了： → prompt 和参考组合一次测饱，攒出自己的配方库 → 给客户出片敢多做几版备选，不心疼额度 → 同一条片做两遍挑好的发，产能上来了才敢这么干 → 顺手冲一下他们 100 万美金的 AI 电影节 先听我挂的这条片：对白、笑声、环境音是跟画面同一遍生成的，后期一层都没贴。"
@@ -6539,6 +6629,44 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And right now, you can get Seedance 2.5 on Pollo AI for 50% OFF for a limited time. Prompt : Create an ultra-realistic cinematic delivery-rider story with a strong orange brand identity. She wears a professional orange delivery jacket, orange helmet, dark fitted cargo pants, practical sneakers, and an orange delivery backpack. Her scooter/motorbike is also orange with subtle matching details. Keep the same outfit, bike, helmet, and backpack consistent in every scene. The video opens with her relaxing at home when her phone suddenly receives a new food-delivery order. She checks the notification, quickly grabs her orange helmet and delivery bag, and heads outside with a focused but energetic expression. She starts her orange scooter, pulls onto a busy city street, and navigates through realistic traffic. Use dynamic tracking shots, helmet-mounted POV, low-angle wheel shots, side tracking shots, and close-ups of her focused face and hands controlling the bike. She checks her watch while stopped safely at a traffic signal, realizes she needs to move quickly, and continues through the city. Show her arriving at the restaurant, parking the scooter, rushing inside, and receiving a freshly packed food order from the staff. She secures the package inside her orange delivery bag and immediately rides toward the customer's location. Show fast-paced but safe city movement, changing streets, traffic, sunlight reflections, and realistic urban atmosphere. She arrives at the destination, quickly removes her helmet, grabs the delivery bag, and walks toward the customer. She hands over the food with a warm smile, checks her phone showing the completed delivery, and looks relieved and proud. Finish with a cinematic hero shot of her getting back onto the orange scooter and riding away through the glowing city street as the camera follows from behind. Style: Premium cinematic commercial, realistic delivery-rider lifestyle, energetic storytelling, strong orange-and-black visual identity, natural expressions, realistic traffic, authentic urban environments, dynamic handheld and gimbal camera movement, dramatic low angles, POV shots, shallow depth of field, realistic motion blur, physically accurate lighting, detailed fabric and vehicle textures, photorealistic 4K HDR, polished brand-film quality."
+    },
+    {
+      "id": "x-public-2086836690229030978",
+      "title": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged,",
+      "description": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support f",
+      "prompt": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Raullen/status/2086836690229030978",
+      "sourceType": "x",
+      "authorName": "raullen",
+      "authorHandle": "@Raullen",
+      "createdAt": "2026-08-10T15:26:53.000Z",
+      "importedAt": "2026-08-12T14:36:55.710Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 205,
+        "reposts": 10,
+        "replies": 49,
+        "quotes": 2,
+        "bookmarks": 5,
+        "views": 10737,
+        "score": 541
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️"
     },
     {
       "id": "x-public-2086735082308657236",
@@ -10960,6 +11088,806 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2087405719654121837",
+      "title": "个人资料 / 头像 - Smiling Woman with Bouquet and Bicep Flex",
+      "description": "A cheerful prompt for GPT Image 2 featuring a woman in a park holding a pink bouquet while flexing her arm, highlighting a bright, high-key photographic style.",
+      "prompt": "Subject: Bouquet and Bicep Flex\n\nMain: {argument name=\"scene\" default=\"A vertical waist-up photo of a single woman in a sunny green promenade, holding a pink bouquet in her left arm and flexing her right bicep\"}. {argument name=\"clothing\" default=\"A white ribbed sleeveless top, V-neck, with small white buttons down the front\"}. A white high-waisted flare skirt with a pale blue floral pattern.\n\nCharacter/Expression: Face forward, large brown eyes looking at the camera, bright smile showing teeth. Rounded oval face with a small chin, round almond eyes, thin parallel brows, thin bridge and small tip of the nose, pale coral lips. Bright skin with pink blush and natural eye makeup. Dark brown long hair with thin bangs and loose waves, flowing together toward the right side of the chest.\n\nBackground/Light: A bright tiled promenade extends from the bottom to the back right, with low hedges and fresh green trees on the sides, a green hill in the center-back, and a white building on the far right. Soft midday main light from above brightly illuminates the skin and flowers. The bouquet consists of pale pink roses, small pink and white flowers, and green leaves, wrapped in pink paper and transparent mesh.\n\nComposition/Camera: 3:4 portrait, eye-level shot from head to below the waist. The subject occupies the center, the bouquet is in the lower-left foreground, and the bent arm extends to the upper right. Focus on the face and bouquet, with the background brightly blurred due to shallow depth of field.\n\nTexture/Style: High-key photorealistic live-action photo. Soft, high-definition depiction of petals, wrapping paper, ribbed fabric, skin, and hair, refreshing with white, pink, pale blue, and fresh green.\n\nNegative: Do not make the flexed right arm thin; do not make the bouquet small.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523335316_35qir6_HPH_jLga8AALIV_.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087405719654121837",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.881Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31205",
+      "rawText": "Subject: Bouquet and Bicep Flex\n\nMain: {argument name=\"scene\" default=\"A vertical waist-up photo of a single woman in a sunny green promenade, holding a pink bouquet in her left arm and flexing her right bicep\"}. {argument name=\"clothing\" default=\"A white ribbed sleeveless top, V-neck, with small white buttons down the front\"}. A white high-waisted flare skirt with a pale blue floral pattern.\n\nCharacter/Expression: Face forward, large brown eyes looking at the camera, bright smile showing teeth. Rounded oval face with a small chin, round almond eyes, thin parallel brows, thin bridge and small tip of the nose, pale coral lips. Bright skin with pink blush and natural eye makeup. Dark brown long hair with thin bangs and loose waves, flowing together toward the right side of the chest.\n\nBackground/Light: A bright tiled promenade extends from the bottom to the back right, with low hedges and fresh green trees on the sides, a green hill in the center-back, and a white building on the far right. Soft midday main light from above brightly illuminates the skin and flowers. The bouquet consists of pale pink roses, small pink and white flowers, and green leaves, wrapped in pink paper and transparent mesh.\n\nComposition/Camera: 3:4 portrait, eye-level shot from head to below the waist. The subject occupies the center, the bouquet is in the lower-left foreground, and the bent arm extends to the upper right. Focus on the face and bouquet, with the background brightly blurred due to shallow depth of field.\n\nTexture/Style: High-key photorealistic live-action photo. Soft, high-definition depiction of petals, wrapping paper, ribbed fabric, skin, and hair, refreshing with white, pink, pale blue, and fresh green.\n\nNegative: Do not make the flexed right arm thin; do not make the bouquet small."
+    },
+    {
+      "id": "community-2087399552609550777",
+      "title": "个人资料 / 头像 - Anime Girl at Mediterranean Window",
+      "description": "Generates a romantic semi-realistic anime portrait of a young woman in a mint chiffon dress by a sunlit village window.",
+      "prompt": "Create a luminous, highly detailed semi-realistic anime portrait of one young woman standing at an open rustic wooden window in a Mediterranean hillside village. She has {argument name=\"hair color\" default=\"soft light brown\"} long wavy hair with airy bangs, one dark teal ribbon bow and one small gold butterfly hair clip on the right side of her head, large hazel-brown eyes, delicate porcelain skin, and a calm slightly wistful expression as she turns back toward the viewer. She wears a pale mint-green chiffon dress with a fitted bodice, sheer translucent puff sleeves, a flowing semi-transparent layered skirt, and a thin gold chain belt tied at the waist; keep the fabric elegant, romantic, and softly translucent without explicit nudity. Her pose: standing in three-quarter view, one hand resting on the weathered wooden sill and the other arm relaxed near the open window frame. The scene includes exactly one clear glass vase on the left side of the sill containing five orange daisy-like flowers with green stems and leaves. Frame the composition with two cream lace curtains, one on each side, and an open wooden casement window on the right. Outside the window, show terracotta rooftops, beige stone houses, one church bell tower near the center background, a blue lake or sea inlet, and hazy green mountains under bright morning sunlight. Use soft backlighting, warm golden highlights, gentle depth of field, intricate lace texture, realistic wood grain, delicate hair strands, pastel colors, cinematic natural light, vertical portrait composition, dreamy European summer atmosphere, no text, no watermark.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523367676_hht9vp_HPfnAn5agAAkJut.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/catfish01090122/status/2087399552609550777#reversed-0",
+      "sourceType": "community",
+      "authorName": "nekop",
+      "authorHandle": "@catfish01090122",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.881Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31242",
+      "rawText": "Create a luminous, highly detailed semi-realistic anime portrait of one young woman standing at an open rustic wooden window in a Mediterranean hillside village. She has {argument name=\"hair color\" default=\"soft light brown\"} long wavy hair with airy bangs, one dark teal ribbon bow and one small gold butterfly hair clip on the right side of her head, large hazel-brown eyes, delicate porcelain skin, and a calm slightly wistful expression as she turns back toward the viewer. She wears a pale mint-green chiffon dress with a fitted bodice, sheer translucent puff sleeves, a flowing semi-transparent layered skirt, and a thin gold chain belt tied at the waist; keep the fabric elegant, romantic, and softly translucent without explicit nudity. Her pose: standing in three-quarter view, one hand resting on the weathered wooden sill and the other arm relaxed near the open window frame. The scene includes exactly one clear glass vase on the left side of the sill containing five orange daisy-like flowers with green stems and leaves. Frame the composition with two cream lace curtains, one on each side, and an open wooden casement window on the right. Outside the window, show terracotta rooftops, beige stone houses, one church bell tower near the center background, a blue lake or sea inlet, and hazy green mountains under bright morning sunlight. Use soft backlighting, warm golden highlights, gentle depth of field, intricate lace texture, realistic wood grain, delicate hair strands, pastel colors, cinematic natural light, vertical portrait composition, dreamy European summer atmosphere, no text, no watermark."
+    },
+    {
+      "id": "community-2087364827987738672",
+      "title": "个人资料 / 头像 - Striped Hijab Editorial Portrait",
+      "description": "A detailed prompt for generating high-resolution, editorial-style portraits of a woman in a striped hijab, utilizing natural sunlight and architectural shadows for a cinematic look.",
+      "prompt": "Ultra-realistic vertical close-up portrait of a beautiful young woman wearing a soft pastel striped hijab and a flowing orange-and-white striped traditional outfit. She is positioned upright and naturally facing the camera, with her head straight and shoulders aligned, creating a clean, balanced portrait composition.\nShe has fair luminous skin with realistic natural texture, softly flushed rosy cheeks, delicate facial features, long dark eyelashes, naturally shaped eyebrows, striking light hazel-green eyes, and glossy soft-pink lips. She looks directly into the camera with a calm, gentle, slightly dreamy expression.\nHer hijab is loosely and naturally wrapped around her head, featuring beautiful pastel mint green, powder blue, cream, and soft beige tones, with realistic fabric folds and fine textile texture. Her outfit features warm orange, peach, cream, and white vertical stripes, coordinated beautifully with the hijab.\nShe is standing or sitting upright beside a simple muted gray interior wall. Warm natural sunlight enters from a nearby window, illuminating one side of her face and creating realistic highlights on her forehead, cheeks, nose, and lips. Soft architectural shadows fall naturally across the wall behind her, creating an artistic sunlit atmosphere.\nStraight camera orientation, upright composition, natural eye-level smartphone photography, face centered in frame, realistic perspective, authentic skin texture, subtle natural imperfections, soft sunlight, gentle shadows, cinematic realism, editorial Instagram aesthetic, photorealistic, ultra-detailed, 8K quality, vertical 3:4 aspect ratio.\nNegative prompt: rotated image, tilted head, sideways composition, Dutch angle, distorted perspective, plastic skin, excessive makeup, artificial eyes, over-smoothed face, CGI, cartoon, unrealistic fabric, warped facial features, low resolution, excessive sharpening.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523321104_95i5km_HPfPOY_acAAllP1.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/jzaib4269/status/2087364827987738672",
+      "sourceType": "community",
+      "authorName": "Jahan Zaib",
+      "authorHandle": "@jzaib4269",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.881Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31187",
+      "rawText": "Ultra-realistic vertical close-up portrait of a beautiful young woman wearing a soft pastel striped hijab and a flowing orange-and-white striped traditional outfit. She is positioned upright and naturally facing the camera, with her head straight and shoulders aligned, creating a clean, balanced portrait composition.\nShe has fair luminous skin with realistic natural texture, softly flushed rosy cheeks, delicate facial features, long dark eyelashes, naturally shaped eyebrows, striking light hazel-green eyes, and glossy soft-pink lips. She looks directly into the camera with a calm, gentle, slightly dreamy expression.\nHer hijab is loosely and naturally wrapped around her head, featuring beautiful pastel mint green, powder blue, cream, and soft beige tones, with realistic fabric folds and fine textile texture. Her outfit features warm orange, peach, cream, and white vertical stripes, coordinated beautifully with the hijab.\nShe is standing or sitting upright beside a simple muted gray interior wall. Warm natural sunlight enters from a nearby window, illuminating one side of her face and creating realistic highlights on her forehead, cheeks, nose, and lips. Soft architectural shadows fall naturally across the wall behind her, creating an artistic sunlit atmosphere.\nStraight camera orientation, upright composition, natural eye-level smartphone photography, face centered in frame, realistic perspective, authentic skin texture, subtle natural imperfections, soft sunlight, gentle shadows, cinematic realism, editorial Instagram aesthetic, photorealistic, ultra-detailed, 8K quality, vertical 3:4 aspect ratio.\nNegative prompt: rotated image, tilted head, sideways composition, Dutch angle, distorted perspective, plastic skin, excessive makeup, artificial eyes, over-smoothed face, CGI, cartoon, unrealistic fabric, warped facial features, low resolution, excessive sharpening."
+    },
+    {
+      "id": "community-2087359834874417467",
+      "title": "个人资料 / 头像 - Sunlit Library Portrait",
+      "description": "A realistic vertical portrait prompt for creating a softly backlit young woman in a red hoodie and black beanie inside a cozy library room.",
+      "prompt": "Create a realistic vertical portrait photograph of a young East Asian woman with long straight dark brown hair and soft bangs, wearing a black ribbed knit beanie and an oversized {argument name=\"hoodie color\" default=\"bright red\"} hoodie with drawstrings. She is seated indoors in a cozy reading room or library, shown from about mid-thigh upward, turned in left profile and gazing thoughtfully toward a bright window. Add a small oval pendant necklace visible over the hoodie. The background should include a large sunlit window on the left with sheer overexposed daylight, a small potted plant and tiny clock on the windowsill, and white bookshelves filled with books along the right side. Use soft natural backlight, warm pale tones, shallow depth of field, gentle lens flare near the right edge, slightly hazy film-like atmosphere, realistic skin texture, delicate makeup, calm introspective mood, and a 9:16 vertical composition. No text, no watermark, no extra people.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523371302_innt5r_HPfKnsLa0AAFVCJ.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/VIBEQUIRKLABS/status/2087359834874417467#reversed-0",
+      "sourceType": "community",
+      "authorName": "Nailai7981",
+      "authorHandle": "@VIBEQUIRKLABS",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.882Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31249",
+      "rawText": "Create a realistic vertical portrait photograph of a young East Asian woman with long straight dark brown hair and soft bangs, wearing a black ribbed knit beanie and an oversized {argument name=\"hoodie color\" default=\"bright red\"} hoodie with drawstrings. She is seated indoors in a cozy reading room or library, shown from about mid-thigh upward, turned in left profile and gazing thoughtfully toward a bright window. Add a small oval pendant necklace visible over the hoodie. The background should include a large sunlit window on the left with sheer overexposed daylight, a small potted plant and tiny clock on the windowsill, and white bookshelves filled with books along the right side. Use soft natural backlight, warm pale tones, shallow depth of field, gentle lens flare near the right edge, slightly hazy film-like atmosphere, realistic skin texture, delicate makeup, calm introspective mood, and a 9:16 vertical composition. No text, no watermark, no extra people."
+    },
+    {
+      "id": "community-2087437533290582525",
+      "title": "社交媒体帖子 - New York Street Coffee Lifestyle Portrait",
+      "description": "An ultra-realistic lifestyle portrait of a woman in a detailed New York City street environment, focusing on natural lighting and urban realism.",
+      "prompt": "Create an ultra-realistic close-up cinematic portrait of a {argument name=\"subject\" default=\"stylish Asian woman\"} on a modern New York City street during the afternoon, holding a {argument name=\"object\" default=\"simple elegant ceramic coffee mug\"} with no logo, no branding, and no recognizable coffee-shop design. Frame her from approximately waist/chest-up, with her face and coffee mug clearly visible. She has natural Asian facial features, realistic skin texture, detailed individual hair strands, subtle makeup, and a relaxed confident expression. She is casually holding the plain ceramic mug near her face/chest, with natural fingers and realistic hand anatomy. A small amount of authentic steam rises from the coffee. The New York street background must remain sharp and highly detailed, rather than heavily blurred: modern glass buildings, contemporary storefronts, clean sidewalks, traffic lights, street trees, cars, pedestrians, café terraces, reflections in windows, and realistic urban activity. Maintain enough depth separation to keep the woman as the primary subject while allowing the entire city environment to remain clearly recognizable. Lighting: beautiful natural afternoon sunlight, soft directional illumination on her face, realistic shadows, subtle reflections from surrounding glass architecture, physically accurate exposure. Camera: close-up lifestyle street photography, 50mm lens, eye-level viewpoint, high-resolution full-frame camera, realistic depth of field but moderate background separation—not excessive bokeh. Style: photorealistic, premium fashion-editorial street photography, cinematic realism, natural skin pores, realistic hair, authentic clothing textures, sharp environmental details, realistic colors, sophisticated modern urban atmosphere. Important: plain unbranded ceramic mug only. No Starbucks-style branding, no logos, no text, no recognizable corporate designs, no watermarks. Negative prompt: cartoon, CGI look, plastic skin, over-smoothed face, distorted hands, extra fingers, deformed mug, blurry background, excessive bokeh, warped buildings, duplicate people, unnatural anatomy, logos, text, watermark.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523313355_aidn3p_HPgRXdCa8AAz72x.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/KaminiKamini222/status/2087437533290582525",
+      "sourceType": "community",
+      "authorName": "mini singh",
+      "authorHandle": "@KaminiKamini222",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31181",
+      "rawText": "Create an ultra-realistic close-up cinematic portrait of a {argument name=\"subject\" default=\"stylish Asian woman\"} on a modern New York City street during the afternoon, holding a {argument name=\"object\" default=\"simple elegant ceramic coffee mug\"} with no logo, no branding, and no recognizable coffee-shop design. Frame her from approximately waist/chest-up, with her face and coffee mug clearly visible. She has natural Asian facial features, realistic skin texture, detailed individual hair strands, subtle makeup, and a relaxed confident expression. She is casually holding the plain ceramic mug near her face/chest, with natural fingers and realistic hand anatomy. A small amount of authentic steam rises from the coffee. The New York street background must remain sharp and highly detailed, rather than heavily blurred: modern glass buildings, contemporary storefronts, clean sidewalks, traffic lights, street trees, cars, pedestrians, café terraces, reflections in windows, and realistic urban activity. Maintain enough depth separation to keep the woman as the primary subject while allowing the entire city environment to remain clearly recognizable. Lighting: beautiful natural afternoon sunlight, soft directional illumination on her face, realistic shadows, subtle reflections from surrounding glass architecture, physically accurate exposure. Camera: close-up lifestyle street photography, 50mm lens, eye-level viewpoint, high-resolution full-frame camera, realistic depth of field but moderate background separation—not excessive bokeh. Style: photorealistic, premium fashion-editorial street photography, cinematic realism, natural skin pores, realistic hair, authentic clothing textures, sharp environmental details, realistic colors, sophisticated modern urban atmosphere. Important: plain unbranded ceramic mug only. No Starbucks-style branding, no logos, no text, no recognizable corporate designs, no watermarks. Negative prompt: cartoon, CGI look, plastic skin, over-smoothed face, distorted hands, extra fingers, deformed mug, blurry background, excessive bokeh, warped buildings, duplicate people, unnatural anatomy, logos, text, watermark."
+    },
+    {
+      "id": "community-2087394451014537381",
+      "title": "社交媒体帖子 - Woman enjoying mountain scenery",
+      "description": "A serenity-themed photorealistic lifestyle prompt of a traveler sitting on a mountain peak overlooking a snow-capped alpine valley.",
+      "prompt": "A photorealistic, high-resolution lifestyle photograph of the same {argument name=\"subject\" default=\"young woman with brown hair styled in a high ponytail\"}, wearing a light cream-colored sweater, dark leggings, thick white socks, and white sneakers, sitting on a high rocky mountain peak overlooking a {argument name=\"background\" default=\"vast, breathtaking alpine valley with snow-capped peaks\"} in the background. In the composition, she sits in profile with her knees tucked up, leaning her head on her hand with her eyes closed in a peaceful, serene expression as she enjoys the fresh mountain breeze, accompanied by a vintage canvas backpack with leather straps resting on the rock beside her. The lighting is bright and natural daylight with soft clouds drifting below, and the shot is captured from a slightly elevated angle with a shallow depth of field that keeps the traveler sharply in focus while softly blurring the magnificent distant mountain ranges.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523339187_z5277g_HPfqLmCa8AAN42e.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AvelyrahnAI/status/2087394451014537381",
+      "sourceType": "community",
+      "authorName": "Avelyrah",
+      "authorHandle": "@AvelyrahnAI",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31210",
+      "rawText": "A photorealistic, high-resolution lifestyle photograph of the same {argument name=\"subject\" default=\"young woman with brown hair styled in a high ponytail\"}, wearing a light cream-colored sweater, dark leggings, thick white socks, and white sneakers, sitting on a high rocky mountain peak overlooking a {argument name=\"background\" default=\"vast, breathtaking alpine valley with snow-capped peaks\"} in the background. In the composition, she sits in profile with her knees tucked up, leaning her head on her hand with her eyes closed in a peaceful, serene expression as she enjoys the fresh mountain breeze, accompanied by a vintage canvas backpack with leather straps resting on the rock beside her. The lighting is bright and natural daylight with soft clouds drifting below, and the shot is captured from a slightly elevated angle with a shallow depth of field that keeps the traveler sharply in focus while softly blurring the magnificent distant mountain ranges."
+    },
+    {
+      "id": "community-2087375520703054073",
+      "title": "社交媒体帖子 - Reaching Hand in Neon Night Cityscape",
+      "description": "A cinematic high-angle prompt depicting a woman reaching her hand towards the camera against a vibrant, bokeh-filled neon street background.",
+      "prompt": "Subject:\nHand reaching towards the neon lights\n\nPrimary Subject:\nA vertical wide-angle photo of a single woman in the lower right corner, leaning forward and reaching her right hand out significantly toward the camera beside a {argument name=\"location\" default=\"downtown pedestrian bridge\"}. She is wearing {argument name=\"clothing color\" default=\"pink\"} ruffled clothes, in a pose with one leg raised behind her, against a night road with cars and glowing signs.\n\nCharacter/Expression:\nThe upper body and head lean heavily to the left of the frame, with {argument name=\"eye color\" default=\"brown\"} eyes looking up toward the camera, and glossy pink lips lightly closed in a serious yet soft expression. A small oval face with a rounded chin, large almond-shaped eyes, thin parallel eyebrows, and a small, well-shaped nose. Eyeliner extending from the outer corners of the eyes with pink lower eyelids and bright glossy skin. Long light-brown hair with thin bangs and large waves flowing over the left shoulder.\n\nClothing/Pose:\nA short camisole top with a light pink floral pattern, thin shoulder straps, lace trim, and a ribbon tie at the chest. A pink belt and a short pleated skirt layered with sheer plaid fabric, lace, and ruffles. White high socks and white/pink platform sneakers. A pink shoulder bag with a small stuffed animal charm. She is holding a black handrail with her left hand, standing on her left leg with her right knee bent back and shoe raised to the lower left, extending her right arm toward the camera at the upper right of the frame.\n\nBackground/Lighting:\nA large night street with cars lined up from the left to the center background, colorful vertical signs and window lights on both sides, and a single man standing in the right middle ground. In addition to the diffused light from streetlamps and signs, a soft white light source on the camera side brightly illuminates the face and torso. The background consists of blue dusk and warm-colored bokeh.\n\nComposition/Camera:\n3:4 vertical orientation, a wide-angle portrait with a strong high-angle view looking down at the subject. The person occupies a large portion from the bottom right to the center, with the extended right hand appearing extremely large in the upper right foreground, while the head and torso recede and appear smaller. The entire figure from head to the raised shoe is within the frame, with focus on the face and a slight blur on the hand and night scenery.\n\nTexture/Style:\nA photorealistic live-action photo with a flash feel. High-definition rendering of lace, transparent ruffles, metal charms, skin, road surface, and neon reflections, with a strong contrast between pink and the blue night.\n\nNegative:\nDo not make the foreground right hand small; do not lower the right leg raised behind.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523327406_ajtjfq_HPH9OOFaMAAwB6-.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087375520703054073",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31193",
+      "rawText": "Subject:\nHand reaching towards the neon lights\n\nPrimary Subject:\nA vertical wide-angle photo of a single woman in the lower right corner, leaning forward and reaching her right hand out significantly toward the camera beside a {argument name=\"location\" default=\"downtown pedestrian bridge\"}. She is wearing {argument name=\"clothing color\" default=\"pink\"} ruffled clothes, in a pose with one leg raised behind her, against a night road with cars and glowing signs.\n\nCharacter/Expression:\nThe upper body and head lean heavily to the left of the frame, with {argument name=\"eye color\" default=\"brown\"} eyes looking up toward the camera, and glossy pink lips lightly closed in a serious yet soft expression. A small oval face with a rounded chin, large almond-shaped eyes, thin parallel eyebrows, and a small, well-shaped nose. Eyeliner extending from the outer corners of the eyes with pink lower eyelids and bright glossy skin. Long light-brown hair with thin bangs and large waves flowing over the left shoulder.\n\nClothing/Pose:\nA short camisole top with a light pink floral pattern, thin shoulder straps, lace trim, and a ribbon tie at the chest. A pink belt and a short pleated skirt layered with sheer plaid fabric, lace, and ruffles. White high socks and white/pink platform sneakers. A pink shoulder bag with a small stuffed animal charm. She is holding a black handrail with her left hand, standing on her left leg with her right knee bent back and shoe raised to the lower left, extending her right arm toward the camera at the upper right of the frame.\n\nBackground/Lighting:\nA large night street with cars lined up from the left to the center background, colorful vertical signs and window lights on both sides, and a single man standing in the right middle ground. In addition to the diffused light from streetlamps and signs, a soft white light source on the camera side brightly illuminates the face and torso. The background consists of blue dusk and warm-colored bokeh.\n\nComposition/Camera:\n3:4 vertical orientation, a wide-angle portrait with a strong high-angle view looking down at the subject. The person occupies a large portion from the bottom right to the center, with the extended right hand appearing extremely large in the upper right foreground, while the head and torso recede and appear smaller. The entire figure from head to the raised shoe is within the frame, with focus on the face and a slight blur on the hand and night scenery.\n\nTexture/Style:\nA photorealistic live-action photo with a flash feel. High-definition rendering of lace, transparent ruffles, metal charms, skin, road surface, and neon reflections, with a strong contrast between pink and the blue night.\n\nNegative:\nDo not make the foreground right hand small; do not lower the right leg raised behind."
+    },
+    {
+      "id": "community-2087344566836113764",
+      "title": "社交媒体帖子 - Woman at Waterfall in Floral Dress",
+      "description": "A cinematic photo prompt for GPT Image 2 featuring a woman in a floral dress walking in a forest stream by a waterfall.",
+      "prompt": "Subject:\n{argument name=\"subject\" default=\"Arms spread at a waterfall basin\"}\n\nMain Subject:\nA vertical full-body photo of a single woman in the center of the frame, walking through shallow water at a waterfall basin in a deep forest with her back to the camera, spreading both arms to the sides. The hem of her {argument name=\"clothing\" default=\"black small floral print dress\"} swirls and spreads.\n\nPerson/Expression:\nA profile view with the back to the camera and the face turned to the left of the screen. A quiet expression with downcast eyes, a slender nose, and closed lips visible in the silhouette. Fair skin. Her {argument name=\"hair color\" default=\"dark brown long hair\"} is partially tied back at the crown, with the rest flowing down her back, and the ends and fine loose strands fluttering in the wind to the right.\n\nClothing/Pose:\nA short one-piece dress with thin shoulder straps featuring small white and yellow flowers on a black background. The back is deeply V-shaped with a thin strap across the shoulder blades and a layered sheer frill hem. Both arms are extended to the sides slightly lower than the shoulders, with relaxed fingertips. Feet together, wading forward in ankle-deep water.\n\nBackground/Lighting:\nThe bottom of the screen shows a transparent blue-green shallow area with fine reflections, and the entire background is a dark mossy rock wall. A thin waterfall descends in the right middle ground, with bright green leaves at the top right. Soft sunlight filters in diagonally from the top right, edging the hair, arms, legs, and swirling hem in gold.\n\nComposition/Camera:\nA 9:16 very vertical full-body portrait from behind, captured from a low horizontal viewpoint near the water surface, including head to toe and reflections. The person occupies a large part of the lower center, leaving the dark rock wall as negative space in the upper half. Focus on the person and the hem, with a shallow depth of field softly blurring the waterfall and rock wall.\n\nTexture/Style:\nCinematic photorealistic live-action photography. High-definition depiction of translucent wet fabric, skin, water surface, splashes, and mossy rocks, contrasting deep green with warm backlight.\n\nNegative:\nDo not flip the back-facing posture; do not thin the spreading floral hem.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523335541_e20f1m_HPH7FjfaMAAKBWa.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087344566836113764",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.885Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31207",
+      "rawText": "Subject:\n{argument name=\"subject\" default=\"Arms spread at a waterfall basin\"}\n\nMain Subject:\nA vertical full-body photo of a single woman in the center of the frame, walking through shallow water at a waterfall basin in a deep forest with her back to the camera, spreading both arms to the sides. The hem of her {argument name=\"clothing\" default=\"black small floral print dress\"} swirls and spreads.\n\nPerson/Expression:\nA profile view with the back to the camera and the face turned to the left of the screen. A quiet expression with downcast eyes, a slender nose, and closed lips visible in the silhouette. Fair skin. Her {argument name=\"hair color\" default=\"dark brown long hair\"} is partially tied back at the crown, with the rest flowing down her back, and the ends and fine loose strands fluttering in the wind to the right.\n\nClothing/Pose:\nA short one-piece dress with thin shoulder straps featuring small white and yellow flowers on a black background. The back is deeply V-shaped with a thin strap across the shoulder blades and a layered sheer frill hem. Both arms are extended to the sides slightly lower than the shoulders, with relaxed fingertips. Feet together, wading forward in ankle-deep water.\n\nBackground/Lighting:\nThe bottom of the screen shows a transparent blue-green shallow area with fine reflections, and the entire background is a dark mossy rock wall. A thin waterfall descends in the right middle ground, with bright green leaves at the top right. Soft sunlight filters in diagonally from the top right, edging the hair, arms, legs, and swirling hem in gold.\n\nComposition/Camera:\nA 9:16 very vertical full-body portrait from behind, captured from a low horizontal viewpoint near the water surface, including head to toe and reflections. The person occupies a large part of the lower center, leaving the dark rock wall as negative space in the upper half. Focus on the person and the hem, with a shallow depth of field softly blurring the waterfall and rock wall.\n\nTexture/Style:\nCinematic photorealistic live-action photography. High-definition depiction of translucent wet fabric, skin, water surface, splashes, and mossy rocks, contrasting deep green with warm backlight.\n\nNegative:\nDo not flip the back-facing posture; do not thin the spreading floral hem."
+    },
+    {
+      "id": "community-2087330332874006747",
+      "title": "社交媒体帖子 - Jiangnan Night Hanfu Cinematic Photography",
+      "description": "A professional prompt for generating high-fidelity cinematic photography of traditional Chinese Hanfu in a Jiangnan water town setting at night, featuring CCD camera aesthetics and realistic textures.",
+      "prompt": "Theme: A carved wooden corridor overlooking the water on the second floor of a Jiangnan song tower under a moonlit night. A clearly adult woman leans against the carved railing, turning her head to look at the camera after hearing a soft call. Like a cinematic shot, a natural and beautiful Ming Dynasty Jiangnan photoshoot. Subject: Facial identity strictly follows the attached reference image: consistently matching facial features, proportions, skin tone, and overall identity; hairstyle, hair accessories, and expressions follow the current era, scene, and activity, without copying the reference's hairstyle or neutral expression. Body Anchors: She has a petite Korean fashion model figure, about 163cm tall, elegant feminine proportions, naturally charming yet realistic hourglass silhouette. She has naturally full and well-proportioned breasts with realistic volume, soft lower fullness, authentic weight, natural gravity, and believable soft tissue. Her body features narrow ribs, a slim and toned waist, soft rounded hips, full upper thighs, firm feminine limbs, and realistic anatomy. Each piece of clothing fits her body naturally with believable fabric tension, realistic folds, subtle compression, and authentic garment physics. Hairstyle, makeup, and expression are determined by the theme. Character/Expression: Makeup: Apricot pink milk tea amber makeup—gradient apricot pink milk tea eyeshadow, slight rose brown at the eye corners, low-saturation peach blush spreading from under eyes to the center of the face; Expression: Lost in thought by the window, features: eyes not fully focused, lips relaxed, face calm; Hairstyle and accessories: Classical half-up half-down style with jade ornaments, long black hair partially tied up, bun positioned at middle-low height, long hair falling naturally, a few stray hairs framing the face. Clothing/Pose: Clothing: Classical long dress with a cinnabar red to ivory white gradient, complete opaque inner layer with a low-shoulder neckline, wide draping water sleeves, sheer outer gauze, restrained gold thread embroidery, and era-appropriate back ribbons, clear but not overly tight waistband, paired with gilded flower branch hairpins, pearl tassel earrings, and thin gold bracelets; Pose: Leaning against the carved railing, turning back to look at the camera after hearing a soft call, environmental contact points providing slight support, weight mainly on one leg or the seating surface, the other limb naturally relaxed; Material Physics: Silk, gauze, thin silk, crepe, or cotton/linen retain their respective textures, metal ornaments only provide local reflections without altering the physics of the main fabric. Background/Lighting: Second-floor carved corridor of a Jiangnan song tower by the water at night. The environment includes only carved wooden railings, vermillion gauze curtains, gilded palace lanterns, a guqin (ancient zither), celadon wine sets, a sandalwood censer, and a screen. Dancers and musicians downstairs are soft, out-of-focus environmental layers. Outside the corridor, the moonlit sky and light-colored gauze curtains form a wide, soft main light, continuously illuminating the entire face. The face receives only one primary flash direction, with highlights rolling off continuously, avoiding random discrete spots or local bleaching. Composition/Lens: 70mm two-thirds body environmental portrait, lens height near the railing level, the figure's turning line and wide sleeves forming a diagonal, depth of the tower and the performance below softly blurred; 9:16 vertical aspect ratio, the figure located slightly left of center and occupying about 60%-72% of the frame, leaving negative space in the direction of sight or movement. Texture/Style: Portable CCD direct flash: 2000s portable CCD digital camera, 28–35mm equivalent close-range wide-angle, on-camera flash illuminating the subject, background one stop lower, limited dynamic range with minor highlight clipping, slight digital sharpening, cool/warm color cast, realistic shadow noise, and upload compression. Skin shows realistic pores and fine facial hair, natural skin tone transitions, clear hair details, believable fabric textures, and subtle digital noise with natural high dynamic range. A small handwritten signature 'Zhong' is naturally added in the bottom right corner. Negative: Avoid random facial spots, local bleaching, oily shine, point light sources, multi-colored light fragmenting facial features; avoid extra fingers, missing fingers, extra arms, deformed gestures; avoid underage look, baby face, plastic skin, oily highlights, excessive blurring, doll-like skin texture; avoid gibberish text, real brand logos, or watermarks that distract from the subject.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523323885_52uv37_HPevt7cakAAlcvC.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/drmrzhong/status/2087330332874006747",
+      "sourceType": "community",
+      "authorName": "AI设计钟师傅",
+      "authorHandle": "@drmrzhong",
+      "createdAt": "2026-08-12T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.885Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31191",
+      "rawText": "Theme: A carved wooden corridor overlooking the water on the second floor of a Jiangnan song tower under a moonlit night. A clearly adult woman leans against the carved railing, turning her head to look at the camera after hearing a soft call. Like a cinematic shot, a natural and beautiful Ming Dynasty Jiangnan photoshoot. Subject: Facial identity strictly follows the attached reference image: consistently matching facial features, proportions, skin tone, and overall identity; hairstyle, hair accessories, and expressions follow the current era, scene, and activity, without copying the reference's hairstyle or neutral expression. Body Anchors: She has a petite Korean fashion model figure, about 163cm tall, elegant feminine proportions, naturally charming yet realistic hourglass silhouette. She has naturally full and well-proportioned breasts with realistic volume, soft lower fullness, authentic weight, natural gravity, and believable soft tissue. Her body features narrow ribs, a slim and toned waist, soft rounded hips, full upper thighs, firm feminine limbs, and realistic anatomy. Each piece of clothing fits her body naturally with believable fabric tension, realistic folds, subtle compression, and authentic garment physics. Hairstyle, makeup, and expression are determined by the theme. Character/Expression: Makeup: Apricot pink milk tea amber makeup—gradient apricot pink milk tea eyeshadow, slight rose brown at the eye corners, low-saturation peach blush spreading from under eyes to the center of the face; Expression: Lost in thought by the window, features: eyes not fully focused, lips relaxed, face calm; Hairstyle and accessories: Classical half-up half-down style with jade ornaments, long black hair partially tied up, bun positioned at middle-low height, long hair falling naturally, a few stray hairs framing the face. Clothing/Pose: Clothing: Classical long dress with a cinnabar red to ivory white gradient, complete opaque inner layer with a low-shoulder neckline, wide draping water sleeves, sheer outer gauze, restrained gold thread embroidery, and era-appropriate back ribbons, clear but not overly tight waistband, paired with gilded flower branch hairpins, pearl tassel earrings, and thin gold bracelets; Pose: Leaning against the carved railing, turning back to look at the camera after hearing a soft call, environmental contact points providing slight support, weight mainly on one leg or the seating surface, the other limb naturally relaxed; Material Physics: Silk, gauze, thin silk, crepe, or cotton/linen retain their respective textures, metal ornaments only provide local reflections without altering the physics of the main fabric. Background/Lighting: Second-floor carved corridor of a Jiangnan song tower by the water at night. The environment includes only carved wooden railings, vermillion gauze curtains, gilded palace lanterns, a guqin (ancient zither), celadon wine sets, a sandalwood censer, and a screen. Dancers and musicians downstairs are soft, out-of-focus environmental layers. Outside the corridor, the moonlit sky and light-colored gauze curtains form a wide, soft main light, continuously illuminating the entire face. The face receives only one primary flash direction, with highlights rolling off continuously, avoiding random discrete spots or local bleaching. Composition/Lens: 70mm two-thirds body environmental portrait, lens height near the railing level, the figure's turning line and wide sleeves forming a diagonal, depth of the tower and the performance below softly blurred; 9:16 vertical aspect ratio, the figure located slightly left of center and occupying about 60%-72% of the frame, leaving negative space in the direction of sight or movement. Texture/Style: Portable CCD direct flash: 2000s portable CCD digital camera, 28–35mm equivalent close-range wide-angle, on-camera flash illuminating the subject, background one stop lower, limited dynamic range with minor highlight clipping, slight digital sharpening, cool/warm color cast, realistic shadow noise, and upload compression. Skin shows realistic pores and fine facial hair, natural skin tone transitions, clear hair details, believable fabric textures, and subtle digital noise with natural high dynamic range. A small handwritten signature 'Zhong' is naturally added in the bottom right corner. Negative: Avoid random facial spots, local bleaching, oily shine, point light sources, multi-colored light fragmenting facial features; avoid extra fingers, missing fingers, extra arms, deformed gestures; avoid underage look, baby face, plastic skin, oily highlights, excessive blurring, doll-like skin texture; avoid gibberish text, real brand logos, or watermarks that distract from the subject."
+    },
+    {
+      "id": "community-2087318860215230611",
+      "title": "个人资料 / 头像 - Rooftop School Uniform Portrait",
+      "description": "A photorealistic portrait prompt for creating a young adult woman crouching on a sunny rooftop with a blurred mountain village background.",
+      "prompt": "Create a photorealistic outdoor portrait of a {argument name=\"subject\" default=\"young adult East Asian woman\"} crouching on a sunlit rooftop terrace in a quiet hillside town. She has long straight dark brown hair with soft bangs, fair skin, natural makeup, and a calm neutral expression while looking directly into the camera. She wears a slightly loose pale blue-white button-up dress shirt with rolled sleeves, a loosened black necktie, a black skirt, and glossy black pointed high heels. Pose her low to the ground with knees bent apart, elbows relaxed forward, hands hanging naturally between her legs, balanced on her heels. The setting is a white concrete rooftop parapet with a gray tiled floor; behind her is a softly blurred village of traditional rooftops, utility wires on the left, green forested mountains, and a bright pale blue sky. Use natural midday sunlight, crisp highlights on the face and clothing, soft shadows on the floor, shallow depth of field, realistic skin texture, high-resolution DSLR look, 50mm portrait lens feel, centered composition, vertical 3:4 framing. Avoid text, logos, watermarks, extra people, exaggerated anatomy, or overly stylized rendering.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523363224_aozcji_HPH5OBZbgAAkhF5.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/airikuokun/status/2087318860215230611#reversed-0",
+      "sourceType": "community",
+      "authorName": "リクオくん",
+      "authorHandle": "@airikuokun",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.882Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31236",
+      "rawText": "Create a photorealistic outdoor portrait of a {argument name=\"subject\" default=\"young adult East Asian woman\"} crouching on a sunlit rooftop terrace in a quiet hillside town. She has long straight dark brown hair with soft bangs, fair skin, natural makeup, and a calm neutral expression while looking directly into the camera. She wears a slightly loose pale blue-white button-up dress shirt with rolled sleeves, a loosened black necktie, a black skirt, and glossy black pointed high heels. Pose her low to the ground with knees bent apart, elbows relaxed forward, hands hanging naturally between her legs, balanced on her heels. The setting is a white concrete rooftop parapet with a gray tiled floor; behind her is a softly blurred village of traditional rooftops, utility wires on the left, green forested mountains, and a bright pale blue sky. Use natural midday sunlight, crisp highlights on the face and clothing, soft shadows on the floor, shallow depth of field, realistic skin texture, high-resolution DSLR look, 50mm portrait lens feel, centered composition, vertical 3:4 framing. Avoid text, logos, watermarks, extra people, exaggerated anatomy, or overly stylized rendering."
+    },
+    {
+      "id": "community-2087305561079456229",
+      "title": "个人资料 / 头像 - Crouching Portrait Overlooking Mountain Town",
+      "description": "A photorealistic full-body portrait of a woman in a white shirt and black tie, crouching on a rooftop overlooking a mountain town.",
+      "prompt": "Subject:\n{argument name=\"location\" default=\"Rooftop overlooking a mountain town\"}\n\nMain Subject:\nA vertical full-body photograph of a single woman in the center of the screen, crouching deeply and hanging both hands between her knees on a rooftop overlooking a mountain town. She is wearing a {argument name=\"clothing\" default=\"white shirt and black tie\"}, a black mini skirt, and pumps.\n\nPerson/Expression:\nFacing front, with dark brown eyes towards the camera, a quiet expression with closed pale lips. Slightly long oval face with a small round chin, almond-shaped eyes with suppressed width, thin parallel eyebrows, thin bridge of the nose, and a small tip. Natural beige-based light makeup. {argument name=\"hairstyle\" default=\"Dark brown long straight hair\"} with a near-center parting and thin bangs, falling from both shoulders to below the chest.\n\nClothing/Pose:\nA very faint blueish-white long-sleeved shirt. Collared, with sleeves rolled up near the elbow, and a thin black tie hanging loosely and long. A black high-waisted pleated mini skirt and black shiny pointed high-heeled pumps. Both knees are opened wide to the left and right with heels grounded, crouching deeply, extending both arms between the legs with fingertips pointing down.\n\nBackground/Light:\nA gray rooftop floor and a white low wall at the bottom of the screen, a town with crowded tiled roofs in the center background, diagonal power lines on the left, and green mountain ranges and a pale blue sky in the upper half. Hard midday main light hits from the upper right of the screen, stretching a dark shadow of the person towards the lower left of the floor.\n\nComposition/Camera:\nA 3:4 vertical, full-body portrait captured from head to toe from a horizontal viewpoint slightly lower than the crouching person. The person occupies a large portion of the lower center, leaving the mountains and sky as empty space in the upper half. Focus on the face, with the townscape and mountains softly blurred with a shallow depth of field.\n\nTexture/Style:\nA photorealistic live-action photograph in natural light. High-definition depiction of shirt fabric, pleats, shiny shoes, concrete, and tiled roofs, based on calm black, white, and green tones.\n\nNegative:\nDo not make the deep crouching posture a standing posture; do not omit the loose black tie.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523332788_w18wu0_HPH5OBZbgAAkhF5.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087305561079456229",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.882Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31202",
+      "rawText": "Subject:\n{argument name=\"location\" default=\"Rooftop overlooking a mountain town\"}\n\nMain Subject:\nA vertical full-body photograph of a single woman in the center of the screen, crouching deeply and hanging both hands between her knees on a rooftop overlooking a mountain town. She is wearing a {argument name=\"clothing\" default=\"white shirt and black tie\"}, a black mini skirt, and pumps.\n\nPerson/Expression:\nFacing front, with dark brown eyes towards the camera, a quiet expression with closed pale lips. Slightly long oval face with a small round chin, almond-shaped eyes with suppressed width, thin parallel eyebrows, thin bridge of the nose, and a small tip. Natural beige-based light makeup. {argument name=\"hairstyle\" default=\"Dark brown long straight hair\"} with a near-center parting and thin bangs, falling from both shoulders to below the chest.\n\nClothing/Pose:\nA very faint blueish-white long-sleeved shirt. Collared, with sleeves rolled up near the elbow, and a thin black tie hanging loosely and long. A black high-waisted pleated mini skirt and black shiny pointed high-heeled pumps. Both knees are opened wide to the left and right with heels grounded, crouching deeply, extending both arms between the legs with fingertips pointing down.\n\nBackground/Light:\nA gray rooftop floor and a white low wall at the bottom of the screen, a town with crowded tiled roofs in the center background, diagonal power lines on the left, and green mountain ranges and a pale blue sky in the upper half. Hard midday main light hits from the upper right of the screen, stretching a dark shadow of the person towards the lower left of the floor.\n\nComposition/Camera:\nA 3:4 vertical, full-body portrait captured from head to toe from a horizontal viewpoint slightly lower than the crouching person. The person occupies a large portion of the lower center, leaving the mountains and sky as empty space in the upper half. Focus on the face, with the townscape and mountains softly blurred with a shallow depth of field.\n\nTexture/Style:\nA photorealistic live-action photograph in natural light. High-definition depiction of shirt fabric, pleats, shiny shoes, concrete, and tiled roofs, based on calm black, white, and green tones.\n\nNegative:\nDo not make the deep crouching posture a standing posture; do not omit the loose black tie."
+    },
+    {
+      "id": "community-2087207886393139403",
+      "title": "个人资料 / 头像 - Realistic Woman Portrait with Wood Background",
+      "description": "An ultra-realistic smartphone-style portrait prompt of a young woman with wavy brown hair and blue-green eyes, seated against a dark wooden-paneled interior.",
+      "prompt": "Ultra-realistic close-up portrait of a {argument name=\"woman\" default=\"beautiful young woman\"} seated against a dark, richly textured wooden-paneled interior. She has {argument name=\"hair color\" default=\"long, naturally wavy medium-brown hair\"} with subtle highlights, parted slightly off-center and cascading over one shoulder. Her head is gently tilted toward the camera, creating an elegant, intimate composition. She has fair luminous skin with realistic natural texture, soft rosy cheeks, delicate facial features, expressive pale blue-green eyes with detailed irises and natural catchlights, softly defined brown eyebrows, long natural eyelashes, a small refined nose, and naturally full glossy pink lips. Her expression is calm, gentle, and slightly dreamy, looking directly into the camera. She is wearing an elegant {argument name=\"outfit\" default=\"burgundy off-the-shoulder top\"} that naturally reveals her shoulders and collarbones. Warm indoor lighting softly illuminates her face while preserving realistic shadows and depth. The dark wooden background creates a cozy, sophisticated atmosphere with subtle vertical paneling and rich brown tones. Photography: ultra-realistic smartphone portrait, close-up framing, slightly high camera angle, shallow depth of field, natural skin texture, realistic hair strands, soft warm lighting, subtle highlights, authentic facial proportions, cinematic depth, photorealistic, highly detailed, 8K quality, editorial beauty photography, natural color grading, no excessive retouching. Aspect ratio: 3:4 vertical.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523305339_8gborm_HPdAepRb0AAwbzE.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/jzaib4269/status/2087207886393139403",
+      "sourceType": "community",
+      "authorName": "Jahan Zaib",
+      "authorHandle": "@jzaib4269",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.882Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31171",
+      "rawText": "Ultra-realistic close-up portrait of a {argument name=\"woman\" default=\"beautiful young woman\"} seated against a dark, richly textured wooden-paneled interior. She has {argument name=\"hair color\" default=\"long, naturally wavy medium-brown hair\"} with subtle highlights, parted slightly off-center and cascading over one shoulder. Her head is gently tilted toward the camera, creating an elegant, intimate composition. She has fair luminous skin with realistic natural texture, soft rosy cheeks, delicate facial features, expressive pale blue-green eyes with detailed irises and natural catchlights, softly defined brown eyebrows, long natural eyelashes, a small refined nose, and naturally full glossy pink lips. Her expression is calm, gentle, and slightly dreamy, looking directly into the camera. She is wearing an elegant {argument name=\"outfit\" default=\"burgundy off-the-shoulder top\"} that naturally reveals her shoulders and collarbones. Warm indoor lighting softly illuminates her face while preserving realistic shadows and depth. The dark wooden background creates a cozy, sophisticated atmosphere with subtle vertical paneling and rich brown tones. Photography: ultra-realistic smartphone portrait, close-up framing, slightly high camera angle, shallow depth of field, natural skin texture, realistic hair strands, soft warm lighting, subtle highlights, authentic facial proportions, cinematic depth, photorealistic, highly detailed, 8K quality, editorial beauty photography, natural color grading, no excessive retouching. Aspect ratio: 3:4 vertical."
+    },
+    {
+      "id": "community-2087178731055943753",
+      "title": "个人资料 / 头像 - High-Contrast Monochrome Identity Portrait",
+      "description": "A sophisticated GPT Image 2 prompt designed to maintain exact facial identity in a cinematic black-and-white portrait with dramatic side lighting.",
+      "prompt": "Use my uploaded reference image as the primary facial identity reference. Preserve my exact facial identity with maximum accuracy. Keep my facial structure, face shape, jawline, cheekbones, eyebrows, eye shape, nose, lips, ears, skin tone, hairstyle, hair texture, beard/stubble pattern, and all distinctive facial characteristics recognizable and consistent. Do not beautify, feminize, de-age, or alter my identity. Create a cinematic, ultra-realistic black-and-white portrait of me sitting at a dark wooden table in a sophisticated, dimly lit interior. I am wearing a {argument name=\"clothing\" default=\"loose black crew-neck T-shirt\"}. I am seated naturally, leaning slightly forward, with one hand gently resting beneath my chin in a thoughtful, confident pose. My other hand rests on the table while holding a {argument name=\"object\" default=\"plain white ceramic coffee cup\"}. My expression is calm, serious, and introspective, with natural direct eye contact toward the camera. Use dramatic {argument name=\"lighting\" default=\"side window lighting\"}, illuminating one side of my face while the other falls into deep cinematic shadow. High-contrast monochrome photography, rich blacks, soft highlights, realistic skin texture, detailed beard and individual hair strands, subtle film grain, and premium editorial fashion photography. The background should be a dark modern interior with a large window or glass door, softly blurred outdoor foliage and architectural details. Strong shallow depth of field and creamy natural bokeh. Add subtle out-of-focus foliage in the foreground. Composition: vertical 4:5 portrait, upper-body framing, subject slightly off-center, coffee cup clearly visible in the lower portion of the frame. Natural proportions and realistic anatomy. Absolutely no text, no typography, no logos, no captions, no watermark, and no writing anywhere in the image. Ultra-realistic, photorealistic, cinematic monochrome, 85mm lens look, f/1.8, shallow depth of field, sophisticated, moody, timeless, high-end editorial portrait photography.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523300707_c5efk4_HPcl_JcaAAAAsJG.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Professor_134/status/2087178731055943753",
+      "sourceType": "community",
+      "authorName": "Professor",
+      "authorHandle": "@Professor_134",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.882Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31165",
+      "rawText": "Use my uploaded reference image as the primary facial identity reference. Preserve my exact facial identity with maximum accuracy. Keep my facial structure, face shape, jawline, cheekbones, eyebrows, eye shape, nose, lips, ears, skin tone, hairstyle, hair texture, beard/stubble pattern, and all distinctive facial characteristics recognizable and consistent. Do not beautify, feminize, de-age, or alter my identity. Create a cinematic, ultra-realistic black-and-white portrait of me sitting at a dark wooden table in a sophisticated, dimly lit interior. I am wearing a {argument name=\"clothing\" default=\"loose black crew-neck T-shirt\"}. I am seated naturally, leaning slightly forward, with one hand gently resting beneath my chin in a thoughtful, confident pose. My other hand rests on the table while holding a {argument name=\"object\" default=\"plain white ceramic coffee cup\"}. My expression is calm, serious, and introspective, with natural direct eye contact toward the camera. Use dramatic {argument name=\"lighting\" default=\"side window lighting\"}, illuminating one side of my face while the other falls into deep cinematic shadow. High-contrast monochrome photography, rich blacks, soft highlights, realistic skin texture, detailed beard and individual hair strands, subtle film grain, and premium editorial fashion photography. The background should be a dark modern interior with a large window or glass door, softly blurred outdoor foliage and architectural details. Strong shallow depth of field and creamy natural bokeh. Add subtle out-of-focus foliage in the foreground. Composition: vertical 4:5 portrait, upper-body framing, subject slightly off-center, coffee cup clearly visible in the lower portion of the frame. Natural proportions and realistic anatomy. Absolutely no text, no typography, no logos, no captions, no watermark, and no writing anywhere in the image. Ultra-realistic, photorealistic, cinematic monochrome, 85mm lens look, f/1.8, shallow depth of field, sophisticated, moody, timeless, high-end editorial portrait photography."
+    },
+    {
+      "id": "community-2087163738969583863",
+      "title": "个人资料 / 头像 - Fantasy Craftswoman Cosplay Portrait",
+      "description": "A photorealistic full-body fantasy cosplay portrait of a silver-haired craftswoman adventurer in a magical workshop village.",
+      "prompt": "Create a cinematic photorealistic full-body cosplay portrait of {argument name=\"character name\" default=\"Soara\"}, a young fantasy craftswoman adventurer standing confidently in a low-angle hero pose on a grassy rocky hillside. She has long {argument name=\"hair color\" default=\"silver-gray\"} hair tied into a high side ponytail with a large dark brown bow, soft bangs framing her face, pale skin, and a calm serious expression. Dress her in a dark forest-green military-style tunic dress with gold piping, high collar, long sleeves with wide cuffs, double rows of brass buttons, a brown leather belt, shoulder straps, black textured tights, and tall dark brown leather boots with light shearling cuffs. Add exactly 5 visible carried/tool elements: 1 large adjustable wrench in her left hand, 1 wooden mallet in her right hand, 1 blue leather tool pouch at her hip holding metal hand tools, 1 brown backpack strapped to her back, and 1 cluster of metal tools protruding from the backpack. The setting is a whimsical medieval-fantasy artisan village beside a massive ancient tree, with a cozy workshop doorway carved into the tree trunk on the right, a small round-roofed cottage and wooden balcony structures in the midground, scattered barrels and workshop clutter, distant green mountains, rocks, grass, and a bright cloudy sky. Use natural warm daylight, soft haze, shallow depth of field, highly detailed fabric and leather textures, realistic skin, wind-tossed hair strands, muted earthy colors, epic fantasy realism, vertical 4:5 composition, no text, no watermark, no anime line art.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523368918_n3yj7r_HPcYWg7bkAAlFzd.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/kabumira862571/status/2087163738969583863#reversed-0",
+      "sourceType": "community",
+      "authorName": "カーブミラー",
+      "authorHandle": "@kabumira862571",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31245",
+      "rawText": "Create a cinematic photorealistic full-body cosplay portrait of {argument name=\"character name\" default=\"Soara\"}, a young fantasy craftswoman adventurer standing confidently in a low-angle hero pose on a grassy rocky hillside. She has long {argument name=\"hair color\" default=\"silver-gray\"} hair tied into a high side ponytail with a large dark brown bow, soft bangs framing her face, pale skin, and a calm serious expression. Dress her in a dark forest-green military-style tunic dress with gold piping, high collar, long sleeves with wide cuffs, double rows of brass buttons, a brown leather belt, shoulder straps, black textured tights, and tall dark brown leather boots with light shearling cuffs. Add exactly 5 visible carried/tool elements: 1 large adjustable wrench in her left hand, 1 wooden mallet in her right hand, 1 blue leather tool pouch at her hip holding metal hand tools, 1 brown backpack strapped to her back, and 1 cluster of metal tools protruding from the backpack. The setting is a whimsical medieval-fantasy artisan village beside a massive ancient tree, with a cozy workshop doorway carved into the tree trunk on the right, a small round-roofed cottage and wooden balcony structures in the midground, scattered barrels and workshop clutter, distant green mountains, rocks, grass, and a bright cloudy sky. Use natural warm daylight, soft haze, shallow depth of field, highly detailed fabric and leather textures, realistic skin, wind-tossed hair strands, muted earthy colors, epic fantasy realism, vertical 4:5 composition, no text, no watermark, no anime line art."
+    },
+    {
+      "id": "community-2087154565325926720",
+      "title": "个人资料 / 头像 - Female Baseball Pitcher at Night",
+      "description": "A detailed prompt for a photorealistic sports portrait of a woman pitching on a mound under stadium lights at night.",
+      "prompt": "Subject: Night game pitching pose\n\nMain: {argument name=\"scene\" default=\"A vertical full-body photo of a single woman on a baseball mound at night, raising her left knee high before pitching and holding a black glove in front of her chest\"}. {argument name=\"clothing\" default=\"An off-white short-sleeved baseball shirt and a dark navy high-waisted pleated mini skirt\"}. Spectator stands and two strong lighting towers are in the background.\n\nCharacter/Expression: Body turned to the left, looking back at the camera over the shoulder with brown eyes staring straight and smiling modestly. Small rounded oval face with a round chin, large almond eyes, thin parallel brows, small well-shaped nose, and pale coral lips. Light pink on the cheeks, natural eye makeup. Dark brown short bob with bangs touching the eyebrows and ends flipping outward.\n\nClothing/Pose: Off-white short-sleeved baseball shirt. Dark navy round neck and sleeve piping, with a small dark mark on the chest. Dark navy high-waisted pleated mini skirt, white ribbed socks, and white spikes with dark navy lines. Hands together inside a black leather glove, raising her left knee higher than the waist, standing on her right leg.\n\nBackground/Light: Reddish-brown mound dirt and white lines at the bottom, green fence and stadium in the middle ground, blurred spectator stands in the background. White lighting towers shine strongly in the upper left and right. Hard main light from the upper left and right evenly illuminates the hair, face, clothes, and legs; the night sky is deep navy-black.\n\nComposition/Camera: 3:4 portrait, near-eye-level sports portrait from the head to below the shin of the pivot leg. The subject occupies the center, with the raised left leg extending to the left. Focus on the face and glove, with the spectator stands strongly blurred due to shallow depth of field.\n\nTexture/Style: Sharp photorealistic live-action photo. High-definition depiction of leather glove, uniform fabric, dirt, and skin, utilizing the contrast between strong stadium lighting and the dark night.\n\nNegative: Do not lower the raised left leg; do not hold the glove with one hand.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523335379_jwzpw2_HPGwgX4bEAEK1N1.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087154565325926720",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31206",
+      "rawText": "Subject: Night game pitching pose\n\nMain: {argument name=\"scene\" default=\"A vertical full-body photo of a single woman on a baseball mound at night, raising her left knee high before pitching and holding a black glove in front of her chest\"}. {argument name=\"clothing\" default=\"An off-white short-sleeved baseball shirt and a dark navy high-waisted pleated mini skirt\"}. Spectator stands and two strong lighting towers are in the background.\n\nCharacter/Expression: Body turned to the left, looking back at the camera over the shoulder with brown eyes staring straight and smiling modestly. Small rounded oval face with a round chin, large almond eyes, thin parallel brows, small well-shaped nose, and pale coral lips. Light pink on the cheeks, natural eye makeup. Dark brown short bob with bangs touching the eyebrows and ends flipping outward.\n\nClothing/Pose: Off-white short-sleeved baseball shirt. Dark navy round neck and sleeve piping, with a small dark mark on the chest. Dark navy high-waisted pleated mini skirt, white ribbed socks, and white spikes with dark navy lines. Hands together inside a black leather glove, raising her left knee higher than the waist, standing on her right leg.\n\nBackground/Light: Reddish-brown mound dirt and white lines at the bottom, green fence and stadium in the middle ground, blurred spectator stands in the background. White lighting towers shine strongly in the upper left and right. Hard main light from the upper left and right evenly illuminates the hair, face, clothes, and legs; the night sky is deep navy-black.\n\nComposition/Camera: 3:4 portrait, near-eye-level sports portrait from the head to below the shin of the pivot leg. The subject occupies the center, with the raised left leg extending to the left. Focus on the face and glove, with the spectator stands strongly blurred due to shallow depth of field.\n\nTexture/Style: Sharp photorealistic live-action photo. High-definition depiction of leather glove, uniform fabric, dirt, and skin, utilizing the contrast between strong stadium lighting and the dark night.\n\nNegative: Do not lower the raised left leg; do not hold the glove with one hand."
+    },
+    {
+      "id": "community-2087133727415837183",
+      "title": "个人资料 / 头像 - White Suit Man in Hooded Crowd",
+      "description": "An ultra-realistic black-and-white cinematic fashion portrait of a confident man in a white suit surrounded by ominous hooded figures.",
+      "prompt": "Create an ultra-realistic cinematic black-and-white editorial portrait of a {argument name=\"character description\" default=\"handsome, confident young man\"} standing calmly in the exact center of a mysterious crowd. He wears a perfectly tailored {argument name=\"suit color\" default=\"white\"} luxury suit jacket with sharp lapels over a slightly open white dress shirt, no tie, elegant and sophisticated. His hair is dark, thick, tousled, and textured; he has a clean-shaven face with subtle stubble, strong jawline, direct calm eye contact, and a composed faintly serious expression. Surround him with exactly 12 visible hooded figures in black robes: 2 large blurred foreground silhouettes framing the lower left and lower right edges, 4 midground hooded figures with partially visible shadowed faces around his shoulders, and 6 background hooded figures fading into darkness behind him. The hooded crowd should feel anonymous, ominous, and cult-like, with faces mostly hidden in deep shadow and only faint eyes/noses visible. Use a tight vertical portrait composition, chest-up framing, centered symmetry, shallow depth of field, dramatic high-contrast lighting, soft diffused light on the man’s face and white suit, deep black background, moody editorial fashion photography, 85mm lens look, realistic skin texture, crisp suit fabric, film-grain texture, no text, no logos, no color, no extra subjects.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523374767_rwn36u_HPb9DzWaQAAeMTL.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/OrhanGhazi65942/status/2087133727415837183#reversed-0",
+      "sourceType": "community",
+      "authorName": "ORHAN",
+      "authorHandle": "@OrhanGhazi65942",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31253",
+      "rawText": "Create an ultra-realistic cinematic black-and-white editorial portrait of a {argument name=\"character description\" default=\"handsome, confident young man\"} standing calmly in the exact center of a mysterious crowd. He wears a perfectly tailored {argument name=\"suit color\" default=\"white\"} luxury suit jacket with sharp lapels over a slightly open white dress shirt, no tie, elegant and sophisticated. His hair is dark, thick, tousled, and textured; he has a clean-shaven face with subtle stubble, strong jawline, direct calm eye contact, and a composed faintly serious expression. Surround him with exactly 12 visible hooded figures in black robes: 2 large blurred foreground silhouettes framing the lower left and lower right edges, 4 midground hooded figures with partially visible shadowed faces around his shoulders, and 6 background hooded figures fading into darkness behind him. The hooded crowd should feel anonymous, ominous, and cult-like, with faces mostly hidden in deep shadow and only faint eyes/noses visible. Use a tight vertical portrait composition, chest-up framing, centered symmetry, shallow depth of field, dramatic high-contrast lighting, soft diffused light on the man’s face and white suit, deep black background, moody editorial fashion photography, 85mm lens look, realistic skin texture, crisp suit fabric, film-grain texture, no text, no logos, no color, no extra subjects."
+    },
+    {
+      "id": "community-2087115488380043629",
+      "title": "个人资料 / 头像 - Cinematic Male Studio Portrait",
+      "description": "A polished realistic portrait prompt for generating a dramatic amber-and-cyan lit male studio headshot.",
+      "prompt": "Create a cinematic, polished, naturally realistic studio portrait of a {argument name=\"subject\" default=\"handsome young adult man\"} facing the camera head-on from mid-chest up. He has {argument name=\"hair color and style\" default=\"thick tousled dark brown hair with volume\"}, warm brown eyes, strong brows, subtle stubble and a faint mustache, a defined jawline, and a calm serious expression with closed lips. Dress him in a {argument name=\"clothing\" default=\"plain off-white crewneck sweatshirt\"}. Use dramatic movie-style lighting with a warm amber key/rim light from the viewer’s left catching the hair, cheek, ear, and shoulder, balanced by a cool cyan-blue rim/fill light from the viewer’s right. Set him against a dark smoky blue-black studio background with a soft teal glow on the right side, shallow depth of field, crisp facial detail, realistic skin texture, natural pores, glossy catchlights, and high-end editorial color grading. Center the subject symmetrically, vertical 4:5 composition, no text, no accessories, no watermark, no extra people.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523353425_0xgs3r_HPbsds7aEAAAFq8.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/MdAyubMondol1/status/2087115488380043629#reversed-0",
+      "sourceType": "community",
+      "authorName": "Md Ayub Mondol",
+      "authorHandle": "@MdAyubMondol1",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31222",
+      "rawText": "Create a cinematic, polished, naturally realistic studio portrait of a {argument name=\"subject\" default=\"handsome young adult man\"} facing the camera head-on from mid-chest up. He has {argument name=\"hair color and style\" default=\"thick tousled dark brown hair with volume\"}, warm brown eyes, strong brows, subtle stubble and a faint mustache, a defined jawline, and a calm serious expression with closed lips. Dress him in a {argument name=\"clothing\" default=\"plain off-white crewneck sweatshirt\"}. Use dramatic movie-style lighting with a warm amber key/rim light from the viewer’s left catching the hair, cheek, ear, and shoulder, balanced by a cool cyan-blue rim/fill light from the viewer’s right. Set him against a dark smoky blue-black studio background with a soft teal glow on the right side, shallow depth of field, crisp facial detail, realistic skin texture, natural pores, glossy catchlights, and high-end editorial color grading. Center the subject symmetrically, vertical 4:5 composition, no text, no accessories, no watermark, no extra people."
+    },
+    {
+      "id": "community-2087103729720000700",
+      "title": "个人资料 / 头像 - Reaching Hand in Summer Park",
+      "description": "A prompt for a wide-angle, low-angle portrait of a woman reaching her hand towards the camera in a lush green park under a bright summer sky.",
+      "prompt": "Subject: Hand reaching toward the summer sky\n\nMain: {argument name=\"scene\" default=\"A vertical full-body-leaning photo of a single woman in a sunny park, reaching her left hand out greatly toward the camera\"}. {argument name=\"clothing\" default=\"A short peach-colored dress with a small floral pattern\"}, with the palm in the immediate foreground, blue sky, and trees as main elements.\n\nCharacter/Expression: Leaning forward slightly, face facing forward, brown eyes looking at the camera with lips slightly parted. Small oval face with a thin chin, slightly slanted almond eyes, thin parallel brows, straight nose, and glossy pale pink lips. Bright skin with pink blush and thin eyeliner lifting the corners of the eyes. Long brown hair with thin bangs and large waves flowing to the right side of the chest.\n\nBackground/Light: Green grass at the bottom, dark green trees on the sides and center-back, and a vivid blue sky with few clouds in the upper half. Hard direct sunlight from the upper left creates starburst rays and lens flares, brightly rimming the hair and shoulders.\n\nComposition/Camera: 3:4 portrait, low-angle view looking up from near the ground. The subject occupies most of the center, showing from head to below the thighs. The extended left hand is extremely large in the lower-left foreground, creating a wide-angle perspective where the face and torso appear smaller in the distance. Focus on the face, with the hand slightly blurred.\n\nTexture/Style: Vivid photorealistic live-action photo. High-definition expression of skin, thin floral fabric, lace, translucent nails, grass, and sunlight filtering through trees.\n\nNegative: Do not make the hand in front small; do not change the shape of the lace-up dress.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523334150_o9i9xp_HPGqf9tbMAAari7.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087103729720000700",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31204",
+      "rawText": "Subject: Hand reaching toward the summer sky\n\nMain: {argument name=\"scene\" default=\"A vertical full-body-leaning photo of a single woman in a sunny park, reaching her left hand out greatly toward the camera\"}. {argument name=\"clothing\" default=\"A short peach-colored dress with a small floral pattern\"}, with the palm in the immediate foreground, blue sky, and trees as main elements.\n\nCharacter/Expression: Leaning forward slightly, face facing forward, brown eyes looking at the camera with lips slightly parted. Small oval face with a thin chin, slightly slanted almond eyes, thin parallel brows, straight nose, and glossy pale pink lips. Bright skin with pink blush and thin eyeliner lifting the corners of the eyes. Long brown hair with thin bangs and large waves flowing to the right side of the chest.\n\nBackground/Light: Green grass at the bottom, dark green trees on the sides and center-back, and a vivid blue sky with few clouds in the upper half. Hard direct sunlight from the upper left creates starburst rays and lens flares, brightly rimming the hair and shoulders.\n\nComposition/Camera: 3:4 portrait, low-angle view looking up from near the ground. The subject occupies most of the center, showing from head to below the thighs. The extended left hand is extremely large in the lower-left foreground, creating a wide-angle perspective where the face and torso appear smaller in the distance. Focus on the face, with the hand slightly blurred.\n\nTexture/Style: Vivid photorealistic live-action photo. High-definition expression of skin, thin floral fabric, lace, translucent nails, grass, and sunlight filtering through trees.\n\nNegative: Do not make the hand in front small; do not change the shape of the lace-up dress."
+    },
+    {
+      "id": "community-2087076047254929739",
+      "title": "个人资料 / 头像 - Woman Holding Train Hand Strap",
+      "description": "A detailed prompt for generating a photorealistic image of a woman in a sunlit train car, focusing on specific facial features, attire, and soft lighting through the window.",
+      "prompt": "Subject: Train strap in window light\n\nMain: {argument name=\"scene\" default=\"A vertical upper-body photo of a single woman in a bright train car, raising her right arm to hold a round hand strap\"}. {argument name=\"clothing\" default=\"A white sleeveless blouse, a dark navy pleated skirt, and red seats are visible\"}.\n\nCharacter/Expression: Head tilted slightly to the left, large brown eyes directed at the camera, smiling gently with closed lips. Slightly long oval face with a small round chin, rounded almond-shaped eyes, thin gentle eyebrows, thin bridge and small tip of the nose, pale rose lips with a thinner upper lip and thicker lower lip. Bright skin with natural light makeup. Dark brown shoulder-length hair with a center-part, thin bangs, and ends flowing lightly outward.\n\nBackground/Light: A metal vertical pole and another strap on the left, a red bench at the bottom, a large train window with a silver frame on the right. Soft white main light coming through the window illuminates the face, arm, and white cloth from the right, with the outdoor background blurred at a high exposure.\n\nComposition/Camera: 3:4 portrait, near-eye-level shot from the hand above the head to below the waist. The subject occupies the center, the raised arm creates a diagonal line to the upper right, and the skirt is cropped at the bottom. Focus on the face, with the train interior softly blurred due to shallow depth of field.\n\nTexture/Style: Clean photorealistic live-action photo. High-definition depiction of thin pleated fabric, skin, metal, window glass, and red seats, finished lightly with white natural light.\n\nNegative: Do not break the contact between the raised hand and the strap; do not omit the vertical pleats of the blouse.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523333832_80sy3y_HPGowbFbsAAFUYU.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2087076047254929739",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.883Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31113",
+      "rawText": "Subject: Train strap in window light\n\nMain: {argument name=\"scene\" default=\"A vertical upper-body photo of a single woman in a bright train car, raising her right arm to hold a round hand strap\"}. {argument name=\"clothing\" default=\"A white sleeveless blouse, a dark navy pleated skirt, and red seats are visible\"}.\n\nCharacter/Expression: Head tilted slightly to the left, large brown eyes directed at the camera, smiling gently with closed lips. Slightly long oval face with a small round chin, rounded almond-shaped eyes, thin gentle eyebrows, thin bridge and small tip of the nose, pale rose lips with a thinner upper lip and thicker lower lip. Bright skin with natural light makeup. Dark brown shoulder-length hair with a center-part, thin bangs, and ends flowing lightly outward.\n\nBackground/Light: A metal vertical pole and another strap on the left, a red bench at the bottom, a large train window with a silver frame on the right. Soft white main light coming through the window illuminates the face, arm, and white cloth from the right, with the outdoor background blurred at a high exposure.\n\nComposition/Camera: 3:4 portrait, near-eye-level shot from the hand above the head to below the waist. The subject occupies the center, the raised arm creates a diagonal line to the upper right, and the skirt is cropped at the bottom. Focus on the face, with the train interior softly blurred due to shallow depth of field.\n\nTexture/Style: Clean photorealistic live-action photo. High-definition depiction of thin pleated fabric, skin, metal, window glass, and red seats, finished lightly with white natural light.\n\nNegative: Do not break the contact between the raised hand and the strap; do not omit the vertical pleats of the blouse."
+    },
+    {
       "id": "community-2087052433113637072",
       "title": "个人资料 / 头像 - Professional Corporate Office Portrait",
       "description": "A photorealistic office portrait prompt designed for professional corporate aesthetics, utilizing face reference features to maintain subject consistency.",
@@ -10971,7 +11899,7 @@
       "authorName": "liana",
       "authorHandle": "@Lianaalane",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.541Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
       "tags": [
         "人像",
         "摄影"
@@ -11000,6 +11928,170 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31085",
       "rawText": "Create a 9:16 vertical photorealistic office portrait using the second image as the exact face reference. Keep her facial identity, hair, and features unchanged. Place her seated at the same modern office desk with laptop, documents, books, floor-to-ceiling windows, {argument name=\"view\" default=\"city view\"}, and wall frame from the first image. Keep the same outfit and professional mood. Soft natural daylight, premium corporate aesthetic, realistic details, 4K."
+    },
+    {
+      "id": "community-2087033253157085496",
+      "title": "个人资料 / 头像 - Reading Over a Seaside Inlet",
+      "description": "A photorealistic lifestyle scene of a woman reading on a balcony framed by Japanese architecture with a tranquil coastal inlet view.",
+      "prompt": "Create a serene, photorealistic vertical image of {argument name=\"subject\" default=\"a young adult woman\"} sitting sideways on a simple wooden chair on a sunlit balcony, reading an open paperback book and gently looking back toward the viewer. She has {argument name=\"hair color and style\" default=\"long dark brown softly wavy hair with bangs\"} and wears a minimal {argument name=\"outfit\" default=\"warm beige two-piece swimsuit\"}. Frame the scene from inside a traditional Japanese-style room or doorway, with wooden sliding door frames and translucent paper panels on the left and a warm cream stucco wall on the right, creating a natural architectural frame around the subject. The balcony overlooks {argument name=\"view\" default=\"a quiet rocky inlet with clear turquoise seawater, a small shrine-like wooden structure on the shore, pine trees, green hills, and the open sea in the distance\"}. Use warm late-afternoon sunlight, soft natural shadows, a peaceful vacation atmosphere, realistic skin tones, shallow depth of field with the distant coast slightly softened, and high-end lifestyle photography composition. Keep the mood quiet and contemplative, centered on reading by the sea; no visible logos, no extra people, no modern clutter, no text overlays.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523363424_4yqz7e_HPGi7IHbAAAqTR_.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/airikuokun/status/2087033253157085496#reversed-0",
+      "sourceType": "community",
+      "authorName": "リクオくん",
+      "authorHandle": "@airikuokun",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31237",
+      "rawText": "Create a serene, photorealistic vertical image of {argument name=\"subject\" default=\"a young adult woman\"} sitting sideways on a simple wooden chair on a sunlit balcony, reading an open paperback book and gently looking back toward the viewer. She has {argument name=\"hair color and style\" default=\"long dark brown softly wavy hair with bangs\"} and wears a minimal {argument name=\"outfit\" default=\"warm beige two-piece swimsuit\"}. Frame the scene from inside a traditional Japanese-style room or doorway, with wooden sliding door frames and translucent paper panels on the left and a warm cream stucco wall on the right, creating a natural architectural frame around the subject. The balcony overlooks {argument name=\"view\" default=\"a quiet rocky inlet with clear turquoise seawater, a small shrine-like wooden structure on the shore, pine trees, green hills, and the open sea in the distance\"}. Use warm late-afternoon sunlight, soft natural shadows, a peaceful vacation atmosphere, realistic skin tones, shallow depth of field with the distant coast slightly softened, and high-end lifestyle photography composition. Keep the mood quiet and contemplative, centered on reading by the sea; no visible logos, no extra people, no modern clutter, no text overlays."
+    },
+    {
+      "id": "community-2087029582981685345",
+      "title": "个人资料 / 头像 - Skincare Self-Care Selfie Prompt",
+      "description": "A detailed prompt for generating a realistic smartphone-style selfie featuring a subject wearing a skincare face mask in a cozy home environment.",
+      "prompt": "{\n  \"image_generation\": {\n    \"subject\": {\n      \"description\": \"young woman\",\n      \"identity\": \"preserve facial features and identity exactly\",\n      \"pose\": \"low-angle selfie\",\n      \"expression\": \"playfully sticking out her tongue\"\n    },\n    \"appearance\": {\n      \"hair\": \"messy bun\",\n      \"nails\": \"square-shaped dark brown nails\",\n      \"skin\": \"natural realistic skin texture\"\n    },\n    \"outfit\": {\n      \"top\": \"loose brown t-shirt with a printed design\"\n    },\n    \"face\": {\n      \"mask\": \"{argument name=\"mask type\" default=\"white fabric skincare face mask\"}\"\n    },\n    \"props\": {\n      \"glass\": \"transparent glass filled with ice cubes\"\n    },\n    \"environment\": {\n      \"setting\": \"cozy modern home interior\",\n      \"background\": \"white wall with a modern lamp\",\n      \"atmosphere\": \"relaxed chill evening and self-care\"\n    },\n    \"lighting\": {\n      \"type\": \"warm indoor home lighting\",\n      \"style\": \"soft and natural\"\n    },\n    \"camera\": {\n      \"type\": \"smartphone selfie camera\",\n      \"angle\": \"low angle\",\n      \"framing\": \"portrait\",\n      \"aspect_ratio\": \"3:4\"\n    },\n    \"style\": {\n      \"quality\": \"high resolution\",\n      \"look\": \"realistic smartphone photography\",\n      \"details\": \"natural skin texture, realistic lighting, subtle film grain, high quality\"\n    }\n  }\n}",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786437677550_sl58id_HPaeVBGXQAA3YZR.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/saniaspeaks_/status/2087029582981685345",
+      "sourceType": "community",
+      "authorName": "𝗦𝗮𝗻𝗶𝗮",
+      "authorHandle": "@saniaspeaks_",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31088",
+      "rawText": "{\n  \"image_generation\": {\n    \"subject\": {\n      \"description\": \"young woman\",\n      \"identity\": \"preserve facial features and identity exactly\",\n      \"pose\": \"low-angle selfie\",\n      \"expression\": \"playfully sticking out her tongue\"\n    },\n    \"appearance\": {\n      \"hair\": \"messy bun\",\n      \"nails\": \"square-shaped dark brown nails\",\n      \"skin\": \"natural realistic skin texture\"\n    },\n    \"outfit\": {\n      \"top\": \"loose brown t-shirt with a printed design\"\n    },\n    \"face\": {\n      \"mask\": \"{argument name=\"mask type\" default=\"white fabric skincare face mask\"}\"\n    },\n    \"props\": {\n      \"glass\": \"transparent glass filled with ice cubes\"\n    },\n    \"environment\": {\n      \"setting\": \"cozy modern home interior\",\n      \"background\": \"white wall with a modern lamp\",\n      \"atmosphere\": \"relaxed chill evening and self-care\"\n    },\n    \"lighting\": {\n      \"type\": \"warm indoor home lighting\",\n      \"style\": \"soft and natural\"\n    },\n    \"camera\": {\n      \"type\": \"smartphone selfie camera\",\n      \"angle\": \"low angle\",\n      \"framing\": \"portrait\",\n      \"aspect_ratio\": \"3:4\"\n    },\n    \"style\": {\n      \"quality\": \"high resolution\",\n      \"look\": \"realistic smartphone photography\",\n      \"details\": \"natural skin texture, realistic lighting, subtle film grain, high quality\"\n    }\n  }\n}"
+    },
+    {
+      "id": "community-2087028978888720695",
+      "title": "个人资料 / 头像 - Cinematic Monochrome Fantasy Portrait",
+      "description": "A dramatic black-and-white fantasy editorial portrait prompt featuring a central subject surrounded by mysterious hooded figures, emphasizing high contrast and cinematic depth.",
+      "prompt": "Create a cinematic black-and-white fantasy editorial portrait of {argument name=\"subject\" default=\"me standing confidently in the center of a large mysterious crowd\"}. The camera is positioned at approximately chest-to-eye level, with me as the clear focal subject. My body is shown from approximately the waist/chest up, while several {argument name=\"figures\" default=\"dark hooded figures\"} surround me in the foreground and background. Pose & expression: I am standing upright and composed, looking slightly to the side rather than directly at the camera, with a calm, serious, powerful expression. Natural posture, elegant presence. Hair: Keep my natural hair color converted to monochrome and style it into an elegant, intricate braided updo with soft loose strands framing the face. The hairstyle should look sophisticated and cinematic. Clothing: Replace my clothing with an {argument name=\"outfit\" default=\"elegant light-colored formal/fantasy dress\"}, long sleeves, refined high-fashion design, modest neckline, smooth flowing fabric. Add an elaborate statement collar/neckpiece with metallic ornamental details. Crowd: Surround me with many mysterious figures wearing deep black hooded robes. Their faces should remain mostly hidden in shadow, creating a dramatic anonymous crowd. The foreground figures should partially obscure the lower and side portions of the frame, naturally creating a tunnel-like composition that draws attention toward me. Lighting: Extremely dramatic cinematic lighting. The central woman is brightly illuminated while the surrounding hooded figures remain almost completely black and shadowed. Strong subject separation, soft highlights on the face, deep shadows, atmospheric contrast. Color & style: Strictly black and white monochrome, high contrast, cinematic film photography, dark fantasy editorial aesthetic, subtle film grain, realistic skin texture, detailed fabric, dramatic atmosphere, sophisticated composition. Composition: Vertical portrait, central symmetrical framing, shallow depth of field, central subject in sharp focus, background crowd slightly softer, foreground silhouettes blurred and dark, cinematic depth and perspective. Important identity instructions: My uploaded face must remain recognizable as the exact same person. Do not change my facial features or make me resemble a different person. Do not add glasses or sunglasses. No text, watermark, logo, or extra objects.",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523311927_pwrihk_HPadyZVbcAAS0JK.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AiwithLariab/status/2087028978888720695",
+      "sourceType": "community",
+      "authorName": "Laraib Fatima‎",
+      "authorHandle": "@AiwithLariab",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.884Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31079",
+      "rawText": "Create a cinematic black-and-white fantasy editorial portrait of {argument name=\"subject\" default=\"me standing confidently in the center of a large mysterious crowd\"}. The camera is positioned at approximately chest-to-eye level, with me as the clear focal subject. My body is shown from approximately the waist/chest up, while several {argument name=\"figures\" default=\"dark hooded figures\"} surround me in the foreground and background. Pose & expression: I am standing upright and composed, looking slightly to the side rather than directly at the camera, with a calm, serious, powerful expression. Natural posture, elegant presence. Hair: Keep my natural hair color converted to monochrome and style it into an elegant, intricate braided updo with soft loose strands framing the face. The hairstyle should look sophisticated and cinematic. Clothing: Replace my clothing with an {argument name=\"outfit\" default=\"elegant light-colored formal/fantasy dress\"}, long sleeves, refined high-fashion design, modest neckline, smooth flowing fabric. Add an elaborate statement collar/neckpiece with metallic ornamental details. Crowd: Surround me with many mysterious figures wearing deep black hooded robes. Their faces should remain mostly hidden in shadow, creating a dramatic anonymous crowd. The foreground figures should partially obscure the lower and side portions of the frame, naturally creating a tunnel-like composition that draws attention toward me. Lighting: Extremely dramatic cinematic lighting. The central woman is brightly illuminated while the surrounding hooded figures remain almost completely black and shadowed. Strong subject separation, soft highlights on the face, deep shadows, atmospheric contrast. Color & style: Strictly black and white monochrome, high contrast, cinematic film photography, dark fantasy editorial aesthetic, subtle film grain, realistic skin texture, detailed fabric, dramatic atmosphere, sophisticated composition. Composition: Vertical portrait, central symmetrical framing, shallow depth of field, central subject in sharp focus, background crowd slightly softer, foreground silhouettes blurred and dark, cinematic depth and perspective. Important identity instructions: My uploaded face must remain recognizable as the exact same person. Do not change my facial features or make me resemble a different person. Do not add glasses or sunglasses. No text, watermark, logo, or extra objects."
+    },
+    {
+      "id": "community-2087297917459792067",
+      "title": "社交媒体帖子 - Girl in Yukata with Platinum Fireworks",
+      "description": "A Japanese-style prompt for generating a scene of a girl in a traditional yukata standing on shrine stone steps during a fireworks display.",
+      "prompt": "{argument name=\"location\" default=\"shrine stone steps\"} with a {argument name=\"subject\" default=\"girl in a yukata\"} x {argument name=\"fireworks type\" default=\"platinum fireworks\"}",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786523327710_c6fb6p_HPeSYehaYAAptsy.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/HarunagaMutsuki/status/2087297917459792067",
+      "sourceType": "community",
+      "authorName": "春永睦月　Harunaga Mutsuki",
+      "authorHandle": "@HarunagaMutsuki",
+      "createdAt": "2026-08-11T12:00:00.000Z",
+      "importedAt": "2026-08-12T14:36:52.885Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31194",
+      "rawText": "{argument name=\"location\" default=\"shrine stone steps\"} with a {argument name=\"subject\" default=\"girl in a yukata\"} x {argument name=\"fireworks type\" default=\"platinum fireworks\"}"
     },
     {
       "id": "community-2087034955314712845",
@@ -11042,48 +12134,6 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31083",
       "rawText": "A beautiful young adult woman with {argument name=\"hair style\" default=\"long wavy black hair\"} and expressive brown eyes, wearing an {argument name=\"outfit style\" default=\"elegant black outfit\"}, standing in a {argument name=\"setting\" default=\"luxurious modern city\"} at golden hour. Soft cinematic lighting on her face, natural skin texture, subtle wind moving her hair, confident and graceful expression, realistic facial features, shallow depth of field, premium fashion photography, ultra-detailed, photorealistic, 85mm lens, cinematic color grading, 8K quality."
-    },
-    {
-      "id": "community-2087029582981685345",
-      "title": "个人资料 / 头像 - Skincare Self-Care Selfie Prompt",
-      "description": "A detailed prompt for generating a realistic smartphone-style selfie featuring a subject wearing a skincare face mask in a cozy home environment.",
-      "prompt": "{\n  \"image_generation\": {\n    \"subject\": {\n      \"description\": \"young woman\",\n      \"identity\": \"preserve facial features and identity exactly\",\n      \"pose\": \"low-angle selfie\",\n      \"expression\": \"playfully sticking out her tongue\"\n    },\n    \"appearance\": {\n      \"hair\": \"messy bun\",\n      \"nails\": \"square-shaped dark brown nails\",\n      \"skin\": \"natural realistic skin texture\"\n    },\n    \"outfit\": {\n      \"top\": \"loose brown t-shirt with a printed design\"\n    },\n    \"face\": {\n      \"mask\": \"{argument name=\"mask type\" default=\"white fabric skincare face mask\"}\"\n    },\n    \"props\": {\n      \"glass\": \"transparent glass filled with ice cubes\"\n    },\n    \"environment\": {\n      \"setting\": \"cozy modern home interior\",\n      \"background\": \"white wall with a modern lamp\",\n      \"atmosphere\": \"relaxed chill evening and self-care\"\n    },\n    \"lighting\": {\n      \"type\": \"warm indoor home lighting\",\n      \"style\": \"soft and natural\"\n    },\n    \"camera\": {\n      \"type\": \"smartphone selfie camera\",\n      \"angle\": \"low angle\",\n      \"framing\": \"portrait\",\n      \"aspect_ratio\": \"3:4\"\n    },\n    \"style\": {\n      \"quality\": \"high resolution\",\n      \"look\": \"realistic smartphone photography\",\n      \"details\": \"natural skin texture, realistic lighting, subtle film grain, high quality\"\n    }\n  }\n}",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786437677550_sl58id_HPaeVBGXQAA3YZR.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/saniaspeaks_/status/2087029582981685345",
-      "sourceType": "community",
-      "authorName": "𝗦𝗮𝗻𝗶𝗮",
-      "authorHandle": "@saniaspeaks_",
-      "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.542Z",
-      "tags": [
-        "人像",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测摄影提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "人像时尚",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31088",
-      "rawText": "{\n  \"image_generation\": {\n    \"subject\": {\n      \"description\": \"young woman\",\n      \"identity\": \"preserve facial features and identity exactly\",\n      \"pose\": \"low-angle selfie\",\n      \"expression\": \"playfully sticking out her tongue\"\n    },\n    \"appearance\": {\n      \"hair\": \"messy bun\",\n      \"nails\": \"square-shaped dark brown nails\",\n      \"skin\": \"natural realistic skin texture\"\n    },\n    \"outfit\": {\n      \"top\": \"loose brown t-shirt with a printed design\"\n    },\n    \"face\": {\n      \"mask\": \"{argument name=\"mask type\" default=\"white fabric skincare face mask\"}\"\n    },\n    \"props\": {\n      \"glass\": \"transparent glass filled with ice cubes\"\n    },\n    \"environment\": {\n      \"setting\": \"cozy modern home interior\",\n      \"background\": \"white wall with a modern lamp\",\n      \"atmosphere\": \"relaxed chill evening and self-care\"\n    },\n    \"lighting\": {\n      \"type\": \"warm indoor home lighting\",\n      \"style\": \"soft and natural\"\n    },\n    \"camera\": {\n      \"type\": \"smartphone selfie camera\",\n      \"angle\": \"low angle\",\n      \"framing\": \"portrait\",\n      \"aspect_ratio\": \"3:4\"\n    },\n    \"style\": {\n      \"quality\": \"high resolution\",\n      \"look\": \"realistic smartphone photography\",\n      \"details\": \"natural skin texture, realistic lighting, subtle film grain, high quality\"\n    }\n  }\n}"
     },
     {
       "id": "community-2087016405510045752",
@@ -11335,48 +12385,6 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31132",
       "rawText": "Create a vertical dark-pop horror anime streetwear illustration set in a narrow urban alley covered wall-to-wall with vivid graffiti. Two young punk girls stand full-body in the center, slightly low-angle perspective, facing the viewer with cool, defiant expressions. The scene should feel like Harajuku/Shibuya alternative fashion mixed with cute horror: neon pink, cyan, yellow, black, and white paint splashes, skulls, crosses, cartoon ghosts, bats, stitched monster faces, and spray-painted tags on both walls and the wet pavement. The sky above the alley is bright turquoise blue, framed by tall grimy buildings, fire escapes, pipes, and dense graffiti murals. The girls are close together and similar in height, with pale skin, dark eyes, black hair with bangs, and long side braids or loose strands. Left girl: black oversized hoodie with a large pink creepy-cute cat graphic, black beanie with a small skull/cat patch, ripped black cargo pants with pink straps, dangling chains, star and cross patches, plush skull charms, and chunky black-and-white platform sneakers with hot pink laces. Right girl: white oversized hoodie with a black-and-pink cartoon monster face graphic, pink beret or beanie with a small horror patch, ripped black cargo pants with pink cross patch, chains, charms, and matching chunky platform sneakers. Include exactly 2 main characters. Include many graffiti motifs but make the most visible recurring motifs countable: 5 large cute-horror creature faces on the walls, 3 large pink crosses on clothing or wall art, 4 small skull charms or skull icons on outfits, and 2 large blue/yellow graffiti word shapes on the right wall. Use detailed Japanese anime linework, gritty ink texture, halftone dots, comic-book shading, high contrast, saturated neon colors, paint splatter, distressed fabric, and cinematic low-angle composition. Avoid readable brand logos; any lettering should be stylized graffiti-like gibberish. Theme: {argument name=\"theme\" default=\"dark pop horror\"}; color palette: {argument name=\"color palette\" default=\"neon pink, cyan, yellow, black, and white\"}; setting: {argument name=\"setting\" default=\"narrow graffiti-covered urban alley\"}; character style: {argument name=\"character style\" default=\"cute punk anime girls\"}; outfit focus: {argument name=\"outfit focus\" default=\"oversized hoodies, ripped cargo pants, chains, charms, and platform sneakers\"}."
-    },
-    {
-      "id": "community-2087076047254929739",
-      "title": "社交媒体帖子 - Train Window Light Portrait",
-      "description": "This prompt generates a soft, airy portrait of a woman inside a train car, holding onto a strap while being illuminated by gentle window light. It captures textures of a pleated blouse and the metallic train interior.",
-      "prompt": "Subject:\nTrain strap in window light\n\nMain Subject:\nA vertical upper-body photo of a single woman in a bright train car, raising her right arm to hold a round strap. A {argument name=\"top color\" default=\"white sleeveless blouse\"}, {argument name=\"bottom color\" default=\"dark navy pleated skirt\"}, and red seats are visible.\n\nPerson/Expression:\nFace tilted slightly to the left, large brown eyes directed at the camera, smiling gently with closed lips. Slightly long oval face with a small round chin, rounded almond-shaped eyes, thin gentle eyebrows, slender nose bridge and small tip, pale rose lips with a thinner upper lip and a thicker lower lip. Bright skin with natural light makeup. {argument name=\"hair color\" default=\"Dark brown\"} shoulder-length hair with a center-ish part, thin bangs, and ends lightly flowing outward.\n\nClothing/Pose:\nWhite round-neck thin collar, sleeveless blouse with fine vertical pleats and transparency. High-waisted dark navy pleated skirt. The person's own left arm (screen right) bent overhead to grip a gray circular strap, right arm lowered to the side. Upper body tilted slightly to the left.\n\nBackground/Light:\nMetal vertical pole and other straps on the left, a red bench at the bottom, large car window and silver frame on the right. Soft white main light coming through the window from the right brightly illuminates the face, arm, and white cloth, while the outdoor background is blurred with high exposure.\n\nComposition/Camera:\n3:4 vertical, close-up portrait from the hand above the head to below the waist at almost eye level. The person occupies the center largely, the raised arm creating a diagonal line to the top right, and the skirt is cropped at the bottom edge. Focus on the face, with the train interior softly blurred with a shallow depth of field.\n\nTexture/Style:\nA clean photorealistic live-action photo. High-definition depiction of thin pleated fabric, skin, metal, window glass, and red seats, finished lightly with white natural light.\n\nNegative:\nDo not break the contact between the raised hand and the strap; do not omit the vertical pleats of the blouse.",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1786437703330_ejbsjd_HPGowbFbsAAFUYU.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/CyberTotal2026/status/2087076047254929739",
-      "sourceType": "community",
-      "authorName": "Prompt アトリエ｜AI画像プロンプト",
-      "authorHandle": "@CyberTotal2026",
-      "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.545Z",
-      "tags": [
-        "人像",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测摄影提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "人像时尚",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=31113",
-      "rawText": "Subject:\nTrain strap in window light\n\nMain Subject:\nA vertical upper-body photo of a single woman in a bright train car, raising her right arm to hold a round strap. A {argument name=\"top color\" default=\"white sleeveless blouse\"}, {argument name=\"bottom color\" default=\"dark navy pleated skirt\"}, and red seats are visible.\n\nPerson/Expression:\nFace tilted slightly to the left, large brown eyes directed at the camera, smiling gently with closed lips. Slightly long oval face with a small round chin, rounded almond-shaped eyes, thin gentle eyebrows, slender nose bridge and small tip, pale rose lips with a thinner upper lip and a thicker lower lip. Bright skin with natural light makeup. {argument name=\"hair color\" default=\"Dark brown\"} shoulder-length hair with a center-ish part, thin bangs, and ends lightly flowing outward.\n\nClothing/Pose:\nWhite round-neck thin collar, sleeveless blouse with fine vertical pleats and transparency. High-waisted dark navy pleated skirt. The person's own left arm (screen right) bent overhead to grip a gray circular strap, right arm lowered to the side. Upper body tilted slightly to the left.\n\nBackground/Light:\nMetal vertical pole and other straps on the left, a red bench at the bottom, large car window and silver frame on the right. Soft white main light coming through the window from the right brightly illuminates the face, arm, and white cloth, while the outdoor background is blurred with high exposure.\n\nComposition/Camera:\n3:4 vertical, close-up portrait from the hand above the head to below the waist at almost eye level. The person occupies the center largely, the raised arm creating a diagonal line to the top right, and the skirt is cropped at the bottom edge. Focus on the face, with the train interior softly blurred with a shallow depth of field.\n\nTexture/Style:\nA clean photorealistic live-action photo. High-definition depiction of thin pleated fabric, skin, metal, window glass, and red seats, finished lightly with white natural light.\n\nNegative:\nDo not break the contact between the raised hand and the strap; do not omit the vertical pleats of the blouse."
     },
     {
       "id": "community-2087074240227144070",
@@ -35737,7 +36745,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.563Z",
+      "importedAt": "2026-08-12T14:36:52.897Z",
       "tags": [
         "产品",
         "平面设计",
@@ -35780,7 +36788,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.564Z",
+      "importedAt": "2026-08-12T14:36:52.897Z",
       "tags": [
         "平面设计"
       ],
@@ -35821,7 +36829,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-12T08:48:23.564Z",
+      "importedAt": "2026-08-12T14:36:52.897Z",
       "tags": [
         "平面设计"
       ],
