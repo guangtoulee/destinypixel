@@ -2472,7 +2472,7 @@
 
 .shotTable {
   width: 100%;
-  min-width: 1840px;
+  min-width: 1080px;
   border-spacing: 0;
   border-collapse: separate;
   table-layout: fixed;
@@ -2494,16 +2494,12 @@
   font-weight: 850;
 }
 
-.shotTable th:nth-child(1) { width: 132px; }
-.shotTable th:nth-child(2) { width: 66px; }
-.shotTable th:nth-child(3) { width: 360px; }
-.shotTable th:nth-child(4) { width: 132px; }
-.shotTable th:nth-child(5) { width: 210px; }
-.shotTable th:nth-child(6) { width: 240px; }
-.shotTable th:nth-child(7) { width: 180px; }
-.shotTable th:nth-child(8) { width: 190px; }
-.shotTable th:nth-child(9) { width: 400px; }
-.shotTable th:nth-child(10) { width: 70px; }
+.shotTable th:nth-child(1) { width: 120px; }
+.shotTable th:nth-child(2) { width: 260px; }
+.shotTable th:nth-child(3) { width: 150px; }
+.shotTable th:nth-child(4) { width: 210px; }
+.shotTable th:nth-child(5) { width: 150px; }
+.shotTable th:nth-child(6) { width: 360px; }
 
 .shotTable td {
   border-right: 1px solid #2b302b;
@@ -2562,6 +2558,16 @@
   line-height: 1.45;
 }
 
+.shotNumberCell b {
+  display: inline-block;
+  margin-top: 5px;
+  border: 1px solid #495049;
+  border-radius: 3px;
+  color: #e9c783;
+  padding: 1px 6px;
+  font-size: 10px;
+}
+
 .shotVisualCell > p {
   color: #f0efe9;
   font-size: 12px;
@@ -2603,6 +2609,34 @@
   white-space: pre-wrap;
 }
 
+.finalPromptActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.finalPromptActions button {
+  display: inline-flex;
+  min-height: 30px;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #4e7064;
+  border-radius: 4px;
+  color: #dffff4;
+  background: #20372f;
+  padding: 0 9px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.finalPromptActions button + button {
+  border-color: #575044;
+  color: #e4d8c1;
+  background: #27231c;
+}
+
 .shotCopyCell {
   text-align: center;
 }
@@ -2616,6 +2650,17 @@
 @media (max-width: 1220px) {
   .tabs {
     grid-template-columns: repeat(5, 112px);
+  }
+}
+
+@media (max-width: 1380px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .inputPanel {
+    position: static;
+    max-height: none;
   }
 }
 

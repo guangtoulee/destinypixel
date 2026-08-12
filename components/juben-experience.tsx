@@ -358,23 +358,21 @@ function libtvFinalPrompt(
   scene?: JubenScene,
   scopedShots: JubenShot[] = result.shotList,
 ) {
-  const storyboard = promptForShot(result.storyboardPrompts, shot, scopedShots);
-  const camera = promptForShot(result.cameraPrompts, shot, scopedShots);
   const characters = charactersForShot(result, shot, scene)
     .map((item) => `${atTag(item.character)}（${item.lockedPrompt}）`)
     .join("、");
   const place = atTag(scenePlace(scene));
+  const dialogue = dialogueTextForShot(scene, shot);
 
   return [
-    `${shot.shotSize}，${result.visualBible.colorPalette.slice(0, 3).join("、")}交替的${place}。`,
-    `${characters}。`,
-    `${shot.visual} ${shot.action}`,
-    dialogueTextForShot(scene, shot),
-    `镜头语言：${shot.cameraAngle}，${shot.movement}，${camera?.prompt ?? ""}`,
-    `光影氛围：${result.visualBible.coreStyle}`,
+    `${shot.duration}，${result.visualBible.format}。${place}，${shot.shotSize}，${shot.cameraAngle}。`,
+    `角色：${characters}。`,
+    `画面与动作：${shot.visual} ${shot.action}`,
+    `对白：${dialogue}`,
+    `运镜：${shot.movement}。`,
+    `光影：${result.visualBible.colorPalette.slice(0, 4).join("、")}；${result.visualBible.coreStyle}。`,
     `音效：${shot.sound}`,
-    `最终约束：${shot.continuity}；${storyboard?.negativePrompt ?? ""}；${result.visualBible.globalNegative}`,
-    `[视觉风格：${result.visualBible.format}]`,
+    `连续性：${shot.continuity}。禁止换脸、跳轴、随机换景、空镜混剪、道具或服装突变；无文字、水印、畸形手和重复脸。`,
   ]
     .filter(Boolean)
     .join(" ");
@@ -1113,16 +1111,12 @@ function ShotWorkbenchTable({
         <table className={styles.shotTable}>
           <thead>
             <tr>
-              <th>镜号</th>
-              <th>时长</th>
+              <th>镜号 / 时长</th>
               <th>画面描述</th>
-              <th>景别</th>
-              <th>光影氛围</th>
-              <th>对白 / 旁白</th>
-              <th>音效</th>
+              <th>景别 / 光影</th>
+              <th>对白 / 音效</th>
               <th>运镜</th>
-              <th>最终提示词</th>
-              <th>操作</th>
+              <th>最终视频提示词</th>
             </tr>
           </thead>
           <tbody>
@@ -1134,40 +1128,48 @@ function ShotWorkbenchTable({
 
               return (
                 <tr key={shot.shotId}>
-                  <td data-label="镜号" className={styles.shotNumberCell}>
+                  <td data-label="镜号 / 时长" className={styles.shotNumberCell}>
                     <strong>{shot.shotId}</strong>
+                    <b>{shot.duration}</b>
                     <span>{scene?.sceneHeading ?? shot.sceneId}</span>
                   </td>
-                  <td data-label="时长"><b>{shot.duration}</b></td>
                   <td data-label="画面描述" className={styles.shotVisualCell}>
                     <p>{shot.visual}</p>
                     <small>动作：{shot.action}</small>
                     <em>连续性：{shot.continuity}</em>
                   </td>
-                  <td data-label="景别">
+                  <td data-label="景别 / 光影">
                     <b>{shot.shotSize}</b>
                     <small>{shot.cameraAngle}</small>
+                    <p>{shotLightText(result)}</p>
                   </td>
-                  <td data-label="光影氛围"><p>{shotLightText(result)}</p></td>
-                  <td data-label="对白 / 旁白"><p>{dialogueTextForShot(scene, shot)}</p></td>
-                  <td data-label="音效"><p>{shot.sound}</p></td>
+                  <td data-label="对白 / 音效">
+                    <p>{dialogueTextForShot(scene, shot)}</p>
+                    <small>音效：{shot.sound}</small>
+                  </td>
                   <td data-label="运镜"><p>{shot.movement}</p></td>
-                  <td data-label="最终提示词" className={styles.finalPromptCell}>
+                  <td data-label="最终视频提示词" className={styles.finalPromptCell}>
                     <p>{finalPrompt}</p>
+                    <div className={styles.finalPromptActions}>
+                      <button
+                        type="button"
+                        onClick={() => onCopy(copyLabel, finalPrompt)}
+                      >
+                        {copied === copyLabel ? <Check size={14} /> : <Copy size={14} />}
+                        复制精简版
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => onCopy(`${copyLabel}-full`, structuredPrompt)}
+                      >
+                        {copied === `${copyLabel}-full` ? <Check size={14} /> : <Workflow size={14} />}
+                        复制严谨版
+                      </button>
+                    </div>
                     <details>
-                      <summary>查看完整 LibTV 结构</summary>
+                      <summary>展开完整约束</summary>
                       <pre>{structuredPrompt}</pre>
                     </details>
-                  </td>
-                  <td data-label="操作" className={styles.shotCopyCell}>
-                    <button
-                      type="button"
-                      title={`复制 ${shot.shotId} 完整提示词`}
-                      aria-label={`复制 ${shot.shotId} 完整提示词`}
-                      onClick={() => onCopy(copyLabel, structuredPrompt)}
-                    >
-                      {copied === copyLabel ? <Check size={15} /> : <Copy size={15} />}
-                    </button>
                   </td>
                 </tr>
               );
