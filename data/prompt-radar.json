@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-14T03:39:41.611Z",
+  "updatedAt": "2026-08-14T08:45:19.015Z",
   "sourceSummary": {
     "community": 618,
-    "publicX": 284,
-    "total": 902
+    "publicX": 286,
+    "total": 904
   },
   "items": [
     {
@@ -968,7 +968,7 @@
       "authorName": "Saul Goodman",
       "authorHandle": "@Goodmanprotocol",
       "createdAt": "2026-08-10T13:25:14.000Z",
-      "importedAt": "2026-08-14T03:39:41.592Z",
+      "importedAt": "2026-08-14T08:45:18.995Z",
       "tags": [
         "Seedance",
         "视频",
@@ -994,8 +994,8 @@
         "replies": 43,
         "quotes": 8,
         "bookmarks": 624,
-        "views": 83760,
-        "score": 3497
+        "views": 84296,
+        "score": 3498
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.5 Prompt: Create a 30-second ultra-realistic candid home-video sequence of a young Korean woman in her early 20s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Young Korean woman, natural everyday appearance, realistic skin texture, minimal makeup, black wavy hair in a messy side ponytail with wispy bangs. Faded charcoal-grey sleeveless crop top, loose high-waisted light-wash jeans, black canvas sneakers, simple black cord necklace. Warm, relaxed personality. Keep her face, body, hairstyle, clothing, and appearance perfectly consistent throughout. SETTING: Authentic Korean residential neighborhood — narrow concrete alleys, low-rise homes, small terraces, potted plants, laundry lines, bicycles, utility poles, overhead wires and mature trees. Quiet, lived-in atmosphere. No shops, advertisements, crowds, cafés, or commercial activity. VISUAL STYLE: Ultra-realistic documentary home-video footage from an early-2000s consumer DV camcorder. Imperfect handheld operation, natural camera shake, awkward framing, occasional reframing, autofocus hunting, slight lens breathing, exposure pumping between sunlight and shade, subtle motion blur, mild rolling shutter, faded colors, soft contrast, slight digital compression and sensor noise. No stabilization, no cinematic camera moves, no modern color grading. Everything must feel genuinely captured, not AI-generated. TIMELINE: 00:00–00:05 — Outside her small house, she sits on a low concrete wall adjusting her messy ponytail. Wind moves loose strands of hair. She casually smiles while the camera struggles to lock focus. 00:05–00:10 — She walks into a narrow residential alley. A stray cat approaches. She crouches naturally, pets it and gently feeds it. Autofocus shifts imperfectly between her face and the cat. 00:10–00:15 — In a small front yard, she hangs laundry on a clothesline. Fabric moves naturally in the breeze while sunlight and cloud shadows subtly change the exposure. 00:15–00:20 — She sits on a quiet terrace with a simple ceramic coffee cup, casually watching the neighborhood and brushing loose hair behind her ear. Handheld side angle with natural camera drift. 00:20–00:25 — Close side profile. Someone off-camera casually greets her. She turns, smiles warmly, raises her hand and naturally says, “Annyeong.” The camera reacts slightly late. 00:25–00:30 — She walks slowly down a tree-lined residential lane holding her coffee. She notices the camera, gives a small genuine smile, then looks away and continues walking. The recording abruptly cuts to black mid-motion like an old camcorder being switched off. AUDIO: Only authentic location sound: birds, distant motorcycles, light wind, rustling leaves, faint neighborhood chatter, cat sounds, footsteps on concrete, laundry moving on the clothesline and subtle residential ambience. Natural Korean speech only. No music, narration, cinematic sound effects, or artificial sound design. GOAL: Make it feel like a forgotten personal home video from the early 2000s — intimate, spontaneous, imperfect, warm, mundane and deeply believable. Prioritize realistic human motion, natural facial expressions, physical interaction, environmental detail and consistent identity over cinematic beauty."
@@ -1087,6 +1087,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Midjourney + Seedance 2.0 - Prompt Share Contemporary dance performance. Character generated with Midjourney v8.2 preview, storyboard generated with GPT Image 2 and the video generated with Seedance 2.0 You can find the sref and prompts below."
+    },
+    {
+      "id": "x-public-2087183686953562184",
+      "title": "牛逼！打死我都不敢信，有公司愿意把这种东西开源！ AI 视频圈最没用的就是“只放成片”，但 Higgsfield 把花了 200 万美元做的 110 分钟的 AI 长片《The Cully H",
+      "description": "牛逼！打死我都不敢信，有公司愿意把这种东西开源！ AI 视频圈最没用的就是“只放成片”，但 Higgsfield 把花了 200 万美元做的 110 分钟的 AI 长片《The Cully Hill Boys》完全开源了，每条提示词、每份素材，全部公开。 另外，这也是AI电影行业非常大的突破，它是全球首部由名人形象授权主演的 AI 长片，并且上周刚在纽约办完全球首映。 然后老规矩，整个项目全开源：提示词、参考图、资产，全都摆在项目页里随",
+      "prompt": "牛逼！打死我都不敢信，有公司愿意把这种东西开源！ AI 视频圈最没用的就是“只放成片”，但 Higgsfield 把花了 200 万美元做的 110 分钟的 AI 长片《The Cully Hill Boys》完全开源了，每条提示词、每份素材，全部公开。 另外，这也是AI电影行业非常大的突破，它是全球首部由名人形象授权主演的 AI 长片，并且上周刚在纽约办完全球首映。 然后老规矩，整个项目全开源：提示词、参考图、资产，全都摆在项目页里随便翻。 我翻了一圈，最惊到我的是这几个点： 1、真人授权比想象中轻太多：N3on 本人就录了 2 分钟语音、给了几张照片，片子里那个活灵活现的他就是这么来的 2、全片拆成约 1000 个资产、100+ 个场景分开推进，所以 28 个人 4 周就扛下了 110 分钟这个体量 3、每个场景的提示词和参考资产都能点开看，等于一部办过首映的长片制作全程，摆在你面前随便抄作业 4、prompt 别写短句碎片，人家平均一条 3000 个词，等于把分镜脚本直接写成 prompt 5、抽卡这件事，一定要放平心态，就算对于专业团队，64 抽 1 也无法避免 这就是最好的学习“AI 视频”的方法，真建议每个做内容的人都去研究一遍，冲！！！ Made with Seedance 2.5 on Higgsfield.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/gkxspace/status/2087183686953562184",
+      "sourceType": "x",
+      "authorName": "余温",
+      "authorHandle": "@gkxspace",
+      "createdAt": "2026-08-11T14:25:43.000Z",
+      "importedAt": "2026-08-14T08:45:18.995Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 427,
+        "reposts": 85,
+        "replies": 75,
+        "quotes": 8,
+        "bookmarks": 577,
+        "views": 87023,
+        "score": 3198
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "牛逼！打死我都不敢信，有公司愿意把这种东西开源！ AI 视频圈最没用的就是“只放成片”，但 Higgsfield 把花了 200 万美元做的 110 分钟的 AI 长片《The Cully Hill Boys》完全开源了，每条提示词、每份素材，全部公开。 另外，这也是AI电影行业非常大的突破，它是全球首部由名人形象授权主演的 AI 长片，并且上周刚在纽约办完全球首映。 然后老规矩，整个项目全开源：提示词、参考图、资产，全都摆在项目页里随便翻。 我翻了一圈，最惊到我的是这几个点： 1、真人授权比想象中轻太多：N3on 本人就录了 2 分钟语音、给了几张照片，片子里那个活灵活现的他就是这么来的 2、全片拆成约 1000 个资产、100+ 个场景分开推进，所以 28 个人 4 周就扛下了 110 分钟这个体量 3、每个场景的提示词和参考资产都能点开看，等于一部办过首映的长片制作全程，摆在你面前随便抄作业 4、prompt 别写短句碎片，人家平均一条 3000 个词，等于把分镜脚本直接写成 prompt 5、抽卡这件事，一定要放平心态，就算对于专业团队，64 抽 1 也无法避免 这就是最好的学习“AI 视频”的方法，真建议每个做内容的人都去研究一遍，冲！！！ Made with Seedance 2.5 on Higgsfield."
     },
     {
       "id": "x-public-2083878550885830769",
@@ -2454,6 +2496,44 @@
       "rawText": "This looks less like AI, and more like the opening scene of a $200M action movie. Built entirely with Seedance 2.0 on @thankyouai_hq The realism, camera movement, and cinematic action are reaching a whole new level. 🎁 Give it a try yourself? Grab my invite code LVEKVO →  and unlock 100 FREE credits to start creating your own AI videos. First 99 people only—don't miss it. Full prompt is dropped in the comments 👇"
     },
     {
+      "id": "x-public-2086836690229030978",
+      "title": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged,",
+      "description": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support f",
+      "prompt": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Raullen/status/2086836690229030978",
+      "sourceType": "x",
+      "authorName": "raullen",
+      "authorHandle": "@Raullen",
+      "createdAt": "2026-08-10T15:26:53.000Z",
+      "importedAt": "2026-08-14T08:45:18.993Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 460,
+        "reposts": 99,
+        "replies": 72,
+        "quotes": 2,
+        "bookmarks": 7,
+        "views": 33846,
+        "score": 1483
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️"
+    },
+    {
       "id": "x-public-2085761097072865511",
       "title": "Seedance 2.5 is now live globally on Dreamina, including the US, and Dreamina was the first plat",
       "description": "Seedance 2.5 is now live globally on Dreamina, including the US, and Dreamina was the first platform in the US to bring it to creators. The full Seedance lineup is now available at the lowest price across platforms, with",
@@ -3616,6 +3696,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "POV: The kiss that broke the internet, recreated with AI on the tip of Tokyo Tower. A viral cinematic moment, reimagined with seamless camera movement, perfect character consistency, and a breathtaking skyline that never leaves the frame. Every shot stays locked to the very top of Tokyo Tower for a romance that feels straight out of a blockbuster. Made with GPT Image 2 and Seedance on @itsPolloAI for the Peak Moment Challenge. Prompt: PART 1 • 0:00–0:15 — THE REVEAL & THE KISS (9:16) 0:00–0:03 — Arrival Continuous crane arc already in motion around the couple on the tip of Tokyo Tower's antenna mast. Only one Tokyo Tower visible. Wind moves Jessy's hair and trench dress. He wears the yellow kawaii mascot helmet. Jessy: \"You're seriously wearing that up here?\" Man: \"Only for you.\" 0:03–0:06 — Reveal Camera continues the same arc. He removes the helmet, revealing tousled brown hair and blue eyes. 0:06–0:09 — Pull Continuous crane widens. He pulls Jessy close by the waist, she grabs his jacket collar. The Polloai flag becomes visible above. 0:09–0:12 — Kiss Camera keeps pulling back with a subtle Dutch roll. They kiss on the tip of Tokyo Tower as the grade transitions from hazy news footage to warm cinematic. 0:12–0:15 — Sway Wide shot. They slowly turn while kissing. Tokyo Tower and the Polloai flag remain clearly visible. PART 2 • 0:15–0:25 — THE SPIN & THE VIEW (9:16) Continuity: First frame must exactly match the last frame of Part 1. 0:15–0:18 — Spin Continue the identical crane arc and orbit. He spins Jessy once on the tower tip. Dress, jewelry and blue-streaked hair flow naturally. Jessy: \"Don't drop me from up here!\" 0:18–0:21 — Second Kiss Orbit tightens into a close two-shot. They share another soft kiss, foreheads touching between kisses. 0:21–0:23 — View Camera cranes upward and pulls back. They face the glowing Tokyo skyline together with the Polloai flag above. 0:23–0:25 — Hold Slow push-in. They remain embracing on the tip of Tokyo Tower until fade to black. Strict: Maintain the exact reference camera movement throughout. All actions happen only on the tip of Tokyo Tower, with only one Tokyo Tower visible in every shot. #PolloAI #PolloPeakMoment"
+    },
+    {
+      "id": "x-public-2087774014957850843",
+      "title": "Made this cinematic sequence using Seedance 2.5 The realism, camera movements, water physics, ex",
+      "description": "Made this cinematic sequence using Seedance 2.5 The realism, camera movements, water physics, explosions, and intense atmosphere are on another level. AI video generation is getting seriously cinematic. Prompt ⤵️ Create ",
+      "prompt": "Made this cinematic sequence using Seedance 2.5 The realism, camera movements, water physics, explosions, and intense atmosphere are on another level. AI video generation is getting seriously cinematic. Prompt ⤵️ Create a 30-second ultra-realistic cinematic disaster sequence with a dark, intense, Hollywood-blockbuster atmosphere. Main character: A young woman with short, messy dark hair, wearing a soaked white T-shirt and light-colored shorts. Keep her appearance consistent throughout the entire video. Her face should remain realistic and expressive, showing fear, shock, exhaustion, and determination. Scene 1 — 0–5 seconds: Open with an extreme close-up of the woman running toward the camera through a dark industrial shipping yard at night. Heavy rain is falling, her hair and clothes are completely wet, and she is breathing heavily. Behind her, bright industrial lights glow through thick smoke and mist. The camera moves backward smoothly while maintaining focus on her face. Add realistic rain droplets on the camera lens, dramatic backlighting, atmospheric fog, and handheld cinematic movement. Scene 2 — 5–10 seconds: Cut to a wider shot as she runs through the flooded container yard. Large shipping containers surround her, emergency lights flash in the distance, and explosions/fire erupt behind her. She looks over her shoulder in panic while continuing to run. Water splashes dramatically around her legs with every step. Use realistic fire, smoke, debris, rain, and volumetric lighting. Scene 3 — 10–15 seconds: She suddenly loses her balance and falls into the flooded ground. Show the impact in slow motion for a moment, with water splashing around her. She quickly pushes herself back up while terrified people run in the background. A massive wave of smoke, debris, and water moves through the shipping yard behind them. Use a low-angle camera close to the ground for a powerful disaster-movie perspective. Scene 4 — 15–21 seconds: She gets back on her feet and starts sprinting toward safety. The camera tracks alongside her at high speed. Containers shake, debris flies through the air, vehicles and objects are pushed around by the powerful force behind her. Keep her face and body consistent. Alternate between close-ups of her frightened expression and wide shots showing the enormous scale of destruction. Scene 5 — 21–25 seconds: She reaches a large modern building filled with terrified people. The camera follows her inside as everyone rushes toward safety. People are falling, crawling, and helping each other while water and debris can be seen outside through the entrance. The lighting changes from cold blue-gray exterior lighting to dramatic warm interior lighting. Scene 6 — 25–30 seconds: Suddenly transition to a massive luxury yacht in the middle of a violent ocean. Huge dark waves surround the vessel under a stormy sky. The camera starts behind the yacht and slowly reveals an enormous shark-like sea creature emerging from the ocean directly behind it, creating a terrifying final reveal. The creature rises through the waves with water cascading from its body. End with a gigantic wave crashing toward the yacht. Visual style: photorealistic Hollywood disaster film, cinematic color grading, realistic skin texture, physically accurate water and rain, volumetric fog, dramatic practical lighting, realistic fire and smoke, detailed environments, natural motion blur, shallow depth of field, dynamic camera movement, high contrast, atmospheric storm clouds, extremely detailed CGI, 4K cinematic quality. Camera: mixture of handheld close-ups, smooth tracking shots, wide establishing shots, low-angle disaster shots, slow-motion impact moments, and dramatic aerial/wide shots. Sound design: heavy rainfall, thunder, distant explosions, sirens, screaming crowds, footsteps splashing through water, crashing metal, deep cinematic bass, roaring waves, and an intense rising orchestral score that builds toward the final creature reveal.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Noor_ul_ain43/status/2087774014957850843",
+      "sourceType": "x",
+      "authorName": "Noor 🌸",
+      "authorHandle": "@Noor_ul_ain43",
+      "createdAt": "2026-08-13T05:31:28.000Z",
+      "importedAt": "2026-08-14T08:45:18.996Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 231,
+        "reposts": 9,
+        "replies": 49,
+        "quotes": 1,
+        "bookmarks": 167,
+        "views": 11221,
+        "score": 1073
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Made this cinematic sequence using Seedance 2.5 The realism, camera movements, water physics, explosions, and intense atmosphere are on another level. AI video generation is getting seriously cinematic. Prompt ⤵️ Create a 30-second ultra-realistic cinematic disaster sequence with a dark, intense, Hollywood-blockbuster atmosphere. Main character: A young woman with short, messy dark hair, wearing a soaked white T-shirt and light-colored shorts. Keep her appearance consistent throughout the entire video. Her face should remain realistic and expressive, showing fear, shock, exhaustion, and determination. Scene 1 — 0–5 seconds: Open with an extreme close-up of the woman running toward the camera through a dark industrial shipping yard at night. Heavy rain is falling, her hair and clothes are completely wet, and she is breathing heavily. Behind her, bright industrial lights glow through thick smoke and mist. The camera moves backward smoothly while maintaining focus on her face. Add realistic rain droplets on the camera lens, dramatic backlighting, atmospheric fog, and handheld cinematic movement. Scene 2 — 5–10 seconds: Cut to a wider shot as she runs through the flooded container yard. Large shipping containers surround her, emergency lights flash in the distance, and explosions/fire erupt behind her. She looks over her shoulder in panic while continuing to run. Water splashes dramatically around her legs with every step. Use realistic fire, smoke, debris, rain, and volumetric lighting. Scene 3 — 10–15 seconds: She suddenly loses her balance and falls into the flooded ground. Show the impact in slow motion for a moment, with water splashing around her. She quickly pushes herself back up while terrified people run in the background. A massive wave of smoke, debris, and water moves through the shipping yard behind them. Use a low-angle camera close to the ground for a powerful disaster-movie perspective. Scene 4 — 15–21 seconds: She gets back on her feet and starts sprinting toward safety. The camera tracks alongside her at high speed. Containers shake, debris flies through the air, vehicles and objects are pushed around by the powerful force behind her. Keep her face and body consistent. Alternate between close-ups of her frightened expression and wide shots showing the enormous scale of destruction. Scene 5 — 21–25 seconds: She reaches a large modern building filled with terrified people. The camera follows her inside as everyone rushes toward safety. People are falling, crawling, and helping each other while water and debris can be seen outside through the entrance. The lighting changes from cold blue-gray exterior lighting to dramatic warm interior lighting. Scene 6 — 25–30 seconds: Suddenly transition to a massive luxury yacht in the middle of a violent ocean. Huge dark waves surround the vessel under a stormy sky. The camera starts behind the yacht and slowly reveals an enormous shark-like sea creature emerging from the ocean directly behind it, creating a terrifying final reveal. The creature rises through the waves with water cascading from its body. End with a gigantic wave crashing toward the yacht. Visual style: photorealistic Hollywood disaster film, cinematic color grading, realistic skin texture, physically accurate water and rain, volumetric fog, dramatic practical lighting, realistic fire and smoke, detailed environments, natural motion blur, shallow depth of field, dynamic camera movement, high contrast, atmospheric storm clouds, extremely detailed CGI, 4K cinematic quality. Camera: mixture of handheld close-ups, smooth tracking shots, wide establishing shots, low-angle disaster shots, slow-motion impact moments, and dramatic aerial/wide shots. Sound design: heavy rainfall, thunder, distant explosions, sirens, screaming crowds, footsteps splashing through water, crashing metal, deep cinematic bass, roaring waves, and an intense rising orchestral score that builds toward the final creature reveal."
     },
     {
       "id": "x-public-2084822856106651994",
@@ -7054,44 +7177,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And right now, you can get Seedance 2.5 on Pollo AI for 50% OFF for a limited time. Prompt : Create an ultra-realistic cinematic delivery-rider story with a strong orange brand identity. She wears a professional orange delivery jacket, orange helmet, dark fitted cargo pants, practical sneakers, and an orange delivery backpack. Her scooter/motorbike is also orange with subtle matching details. Keep the same outfit, bike, helmet, and backpack consistent in every scene. The video opens with her relaxing at home when her phone suddenly receives a new food-delivery order. She checks the notification, quickly grabs her orange helmet and delivery bag, and heads outside with a focused but energetic expression. She starts her orange scooter, pulls onto a busy city street, and navigates through realistic traffic. Use dynamic tracking shots, helmet-mounted POV, low-angle wheel shots, side tracking shots, and close-ups of her focused face and hands controlling the bike. She checks her watch while stopped safely at a traffic signal, realizes she needs to move quickly, and continues through the city. Show her arriving at the restaurant, parking the scooter, rushing inside, and receiving a freshly packed food order from the staff. She secures the package inside her orange delivery bag and immediately rides toward the customer's location. Show fast-paced but safe city movement, changing streets, traffic, sunlight reflections, and realistic urban atmosphere. She arrives at the destination, quickly removes her helmet, grabs the delivery bag, and walks toward the customer. She hands over the food with a warm smile, checks her phone showing the completed delivery, and looks relieved and proud. Finish with a cinematic hero shot of her getting back onto the orange scooter and riding away through the glowing city street as the camera follows from behind. Style: Premium cinematic commercial, realistic delivery-rider lifestyle, energetic storytelling, strong orange-and-black visual identity, natural expressions, realistic traffic, authentic urban environments, dynamic handheld and gimbal camera movement, dramatic low angles, POV shots, shallow depth of field, realistic motion blur, physically accurate lighting, detailed fabric and vehicle textures, photorealistic 4K HDR, polished brand-film quality."
-    },
-    {
-      "id": "x-public-2086836690229030978",
-      "title": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged,",
-      "description": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support f",
-      "prompt": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Raullen/status/2086836690229030978",
-      "sourceType": "x",
-      "authorName": "raullen",
-      "authorHandle": "@Raullen",
-      "createdAt": "2026-08-10T15:26:53.000Z",
-      "importedAt": "2026-08-12T14:36:55.710Z",
-      "tags": [],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "实时 AI 视觉案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "查看原帖画面",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "prompt",
-      "category": "插画三维",
-      "metrics": {
-        "likes": 205,
-        "reposts": 10,
-        "replies": 49,
-        "quotes": 2,
-        "bookmarks": 5,
-        "views": 10737,
-        "score": 541
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "🐆 Rapid-MLX v0.12 is here. We’ve officially evolved from a simple chat app into a full-fledged, on-device AI studio for Apple Silicon! 🖥️✨ We didn't just push the MLX inference engine to its limits and expand support for a massive lineup of local open-source models—we are alpha-launching the highly anticipated Desktop Version. (A huge shoutout to the @iotex_io community for grinding through the closed beta with us. Your feedback was incredible and helped shape this beast.) Here are the game-changing features you can run on your Mac right now, 100% free and 100% offline 👇 🚀 Blazing Fast Local LLMs Run anything from 4B up to Qwen3.5-122B completely offline. No guessing games—we recommend models matched perfectly to your Mac's actual RAM. Rich chat includes syntax highlighting, markdown tables, and honest tok/s metrics. 🎨 Local Image Generation A brand new Images tab to render directly on your machine. Pick a model (FLUX.2-klein, Z-Image-Turbo), prompt, and refine. Everything lands in a visual filmstrip. 👁️ Vision & Live Web Tools Attach an image and chat about it with local vision. Need real-time data? Our built-in web tools (weather, search, page-fetch) run mid-answer with strict, transparent privacy controls. 🤖 Plug-and-Play Coding Agents Wire up Claude Code, Codex, Cline, or Continue in seconds. One copy-paste from the Launch tab spins up a local OpenAI/Anthropic-compatible endpoint. 🔒 Private by Design Everything runs on-device. Signed, notarized, and entirely local. Your data stays yours. Turn your Mac into an AI powerhouse today. ⚡️"
     },
     {
       "id": "x-public-2086735082308657236",
@@ -11567,7 +11652,7 @@
       "authorName": "Soran",
       "authorHandle": "@Soranlan",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.461Z",
+      "importedAt": "2026-08-14T08:45:15.290Z",
       "tags": [
         "人像",
         "摄影"
@@ -11609,7 +11694,7 @@
       "authorName": "Johnn",
       "authorHandle": "@john_my07",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.462Z",
+      "importedAt": "2026-08-14T08:45:15.291Z",
       "tags": [
         "人像",
         "摄影"
@@ -11651,7 +11736,7 @@
       "authorName": "Amelia Ai",
       "authorHandle": "@AmeliaAi12",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.463Z",
+      "importedAt": "2026-08-14T08:45:15.291Z",
       "tags": [
         "人像",
         "摄影"
@@ -11693,7 +11778,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.463Z",
+      "importedAt": "2026-08-14T08:45:15.291Z",
       "tags": [
         "人像",
         "视频",
@@ -11736,7 +11821,7 @@
       "authorName": "CHAse",
       "authorHandle": "@CHAseUnre",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.463Z",
+      "importedAt": "2026-08-14T08:45:15.292Z",
       "tags": [
         "人像",
         "产品",
@@ -11779,7 +11864,7 @@
       "authorName": "Feyber | AI Creator",
       "authorHandle": "@woleswoosh",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.467Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -11821,7 +11906,7 @@
       "authorName": "杂学大师✨",
       "authorHandle": "@Techbruneth",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.468Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -11863,7 +11948,7 @@
       "authorName": "Elisia",
       "authorHandle": "@AiwithElisia",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.468Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -11905,7 +11990,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-13T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.468Z",
+      "importedAt": "2026-08-14T08:45:15.295Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -11948,7 +12033,7 @@
       "authorName": "Feyber | AI Creator",
       "authorHandle": "@woleswoosh",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.464Z",
+      "importedAt": "2026-08-14T08:45:15.292Z",
       "tags": [
         "人像",
         "摄影"
@@ -11990,7 +12075,7 @@
       "authorName": "李岳",
       "authorHandle": "@liyue_ai",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.464Z",
+      "importedAt": "2026-08-14T08:45:15.292Z",
       "tags": [
         "人像",
         "视频",
@@ -12033,7 +12118,7 @@
       "authorName": "🇻🇳 Gdragon_stk 🇸🇪",
       "authorHandle": "@zaizai36077041",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.464Z",
+      "importedAt": "2026-08-14T08:45:15.292Z",
       "tags": [
         "人像",
         "摄影"
@@ -12075,7 +12160,7 @@
       "authorName": "AloneHonko",
       "authorHandle": "@AloneHonko",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.465Z",
+      "importedAt": "2026-08-14T08:45:15.292Z",
       "tags": [
         "GPT Image 2",
         "Kling"
@@ -12120,7 +12205,7 @@
       "authorName": "Rooko.ai",
       "authorHandle": "@Rooko_ai",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.465Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "平面设计",
@@ -12163,7 +12248,7 @@
       "authorName": "nekop",
       "authorHandle": "@catfish01090122",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.465Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "摄影"
@@ -12205,7 +12290,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.466Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "摄影"
@@ -12247,7 +12332,7 @@
       "authorName": "Nailai7981",
       "authorHandle": "@VIBEQUIRKLABS",
       "createdAt": "2026-08-12T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.466Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "摄影"
@@ -12542,7 +12627,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.466Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "摄影"
@@ -12584,7 +12669,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.466Z",
+      "importedAt": "2026-08-14T08:45:15.293Z",
       "tags": [
         "人像",
         "摄影"
@@ -12626,7 +12711,7 @@
       "authorName": "Professor",
       "authorHandle": "@Professor_134",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.466Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -12669,7 +12754,7 @@
       "authorName": "カーブミラー",
       "authorHandle": "@kabumira862571",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.467Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -12711,7 +12796,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.467Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -12753,7 +12838,7 @@
       "authorName": "ORHAN",
       "authorHandle": "@OrhanGhazi65942",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.467Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -12795,7 +12880,7 @@
       "authorName": "Md Ayub Mondol",
       "authorHandle": "@MdAyubMondol1",
       "createdAt": "2026-08-11T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.467Z",
+      "importedAt": "2026-08-14T08:45:15.294Z",
       "tags": [
         "人像",
         "摄影"
@@ -37809,7 +37894,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.483Z",
+      "importedAt": "2026-08-14T08:45:15.307Z",
       "tags": [
         "产品",
         "平面设计",
@@ -37852,7 +37937,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.483Z",
+      "importedAt": "2026-08-14T08:45:15.307Z",
       "tags": [
         "平面设计"
       ],
@@ -37893,7 +37978,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-14T03:39:38.484Z",
+      "importedAt": "2026-08-14T08:45:15.307Z",
       "tags": [
         "平面设计"
       ],
