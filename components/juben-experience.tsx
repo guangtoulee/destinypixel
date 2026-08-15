@@ -322,6 +322,25 @@ function dialogueTextForShot(scene: JubenScene | undefined, shot: JubenShot) {
     : "本镜头以动作、表情、呼吸和环境声推进，不增加原稿之外的台词。";
 }
 
+function conciseDialogueForShot(scene: JubenScene | undefined, shot: JubenShot) {
+  const match = shot.visual.match(/^(.+?)在.+?原稿对白：“([\s\S]+)”/);
+  if (match) return `${atTag(match[1])}：“${match[2]}”`;
+
+  const embedded = scene?.dialogue.find((line) =>
+    `${shot.visual}\n${shot.action}`.includes(line.line),
+  );
+  if (embedded) return `${atTag(embedded.character)}：“${embedded.line}”`;
+
+  return "无新增对白";
+}
+
+function compactText(value: string, maxLength: number) {
+  const cleaned = value.replace(/\s+/g, " ").trim();
+  return cleaned.length > maxLength
+    ? `${cleaned.slice(0, maxLength).replace(/[，；、\s]+$/g, "")}…`
+    : cleaned;
+}
+
 function splitActionText(
   result: JubenResult,
   shot: JubenShot,
@@ -356,23 +375,25 @@ function libtvFinalPrompt(
   result: JubenResult,
   shot: JubenShot,
   scene?: JubenScene,
-  scopedShots: JubenShot[] = result.shotList,
+  _scopedShots: JubenShot[] = result.shotList,
 ) {
   const characters = charactersForShot(result, shot, scene)
-    .map((item) => `${atTag(item.character)}（${item.lockedPrompt}）`)
+    .map((item) => atTag(item.character))
     .join("、");
   const place = atTag(scenePlace(scene));
-  const dialogue = dialogueTextForShot(scene, shot);
+  const dialogue = conciseDialogueForShot(scene, shot);
+  const visualAction = shot.visual.includes(shot.action.slice(0, 16))
+    ? shot.visual
+    : `${shot.visual} ${shot.action}`;
 
   return [
-    `${shot.duration}，${result.visualBible.format}。${place}，${shot.shotSize}，${shot.cameraAngle}。`,
-    `角色：${characters}。`,
-    `画面与动作：${shot.visual} ${shot.action}`,
-    `对白：${dialogue}`,
-    `运镜：${shot.movement}。`,
-    `光影：${result.visualBible.colorPalette.slice(0, 4).join("、")}；${result.visualBible.coreStyle}。`,
-    `音效：${shot.sound}`,
-    `连续性：${shot.continuity}。禁止换脸、跳轴、随机换景、空镜混剪、道具或服装突变；无文字、水印、畸形手和重复脸。`,
+    `${shot.duration}｜${place}｜${shot.shotSize}，${shot.cameraAngle}。`,
+    `${characters}：${compactText(visualAction, 110)}。`,
+    `对白：${compactText(dialogue, 60)}。`,
+    `运镜：${compactText(shot.movement, 50)}。`,
+    `光影：${result.visualBible.colorPalette.slice(0, 3).join("、")}。`,
+    `音效：${compactText(shot.sound, 40)}。`,
+    `连续：${compactText(shot.continuity, 45)}。无文字水印，人物、服装和道具连续。`,
   ]
     .filter(Boolean)
     .join(" ");
@@ -496,8 +517,14 @@ function shotPackageTextForScope(result: JubenResult, scope: EpisodeScope) {
   const scoped = scopedResultParts(result, scope);
 
   return scoped.shots
-    .map((shot) => shotPackageText(result, shot, scoped.shots))
-    .join("\n\n---\n\n");
+    .map((shot) => {
+      const scene = findSceneForShot(result, shot);
+      return [
+        `${shot.shotId}｜${shot.duration}｜${scene?.sceneHeading ?? shot.sceneId}`,
+        libtvFinalPrompt(result, shot, scene, scoped.shots),
+      ].join("\n");
+    })
+    .join("\n\n");
 }
 
 function resultTabTextForScope(
@@ -1072,7 +1099,7 @@ function ShotPackageCard({
 function shotLightText(result: JubenResult) {
   return [
     ...result.visualBible.colorPalette.slice(0, 3),
-    result.visualBible.coreStyle,
+    compactText(result.visualBible.coreStyle, 48),
   ].join(" · ");
 }
 
@@ -1097,7 +1124,7 @@ function ShotWorkbenchTable({
         <div>
           <span>{episodeLabel} · AI 视频生成镜头表</span>
           <strong>每行就是一个可生成、可剪辑的镜头任务</strong>
-          <p>先检查画面与对白，再复制“最终提示词”或整镜结构到 Lovart、Grok 等平台。</p>
+          <p>默认复制短版直接生成；身份锁定与通用约束在资产定调中统一设置，不再逐镜重复。</p>
         </div>
         <button
           type="button"

@@ -163,13 +163,17 @@ type ChatMessage = { role: "system" | "user"; content: string };
 
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ??
-  "https://api.deepseek.com/v1/chat/completions";
-const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
+  "https://api.deepseek.com/chat/completions";
+const configuredDeepSeekModel = process.env.DEEPSEEK_MODEL?.trim();
+const DEEPSEEK_MODEL =
+  configuredDeepSeekModel && !configuredDeepSeekModel.includes("flash")
+    ? configuredDeepSeekModel
+    : "deepseek-v4-pro";
 const DEEPSEEK_TIMEOUT_MS = Number(
-  process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 16000,
+  process.env.JUBEN_DEEPSEEK_TIMEOUT_MS ?? 120000,
 );
 const DEEPSEEK_EPISODE_TIMEOUT_MS = Number(
-  process.env.JUBEN_EPISODE_TIMEOUT_MS ?? 55000,
+  process.env.JUBEN_EPISODE_TIMEOUT_MS ?? 150000,
 );
 
 const maxIdeaLength = 180000;
@@ -295,11 +299,10 @@ export function buildJubenMessages(input: Required<JubenRequestBody>): ChatMessa
         "必须输出 visualBible，按真人影视制作圣经来写：全剧格式、核心风格、色彩、摄影语言、生产逻辑、环境规则、人物锁定 prompt、全局正向 prompt 和全局负向约束。",
         "必须输出 productionPlan，把改编方向、低成本拍法、可复用场景、角色/场景/道具参考资产、AI生成顺序和质量审批节点写清楚。",
         "visualBible 的人物锁定必须能直接用于角色定妆和每个镜头首帧，避免人物漂移。",
-        "所有镜头 prompt 必须接近 LibTV 分镜提示词密度：使用 @角色 和 @场景/道具 标签；明确出场角色、背景场景、前一个镜头承接、分段动作、禁止项、约束、站位与朝向、运镜、音效。",
-        "shotList.visual 必须写成可拍画面，不少于 45 个中文字符；shotList.action 必须包含具体身体动作、道具交互、站位关系和情绪变化；continuity 必须说明与上一镜/下一镜怎么接。",
-        "cameraPrompts.prompt 要写视频运动提示词，不只写镜头名；必须包含分段秒数、主体运动、摄影机运动、景深/焦点变化、光影变化和不可违反的角色位置。",
-        "storyboardPrompts.prompt 要写最终分镜提示词，不少于 80 个中文字符，必须包含景别、光影氛围、人物服装/道具、空间层次和视觉风格。",
-        "editPrompts.prompt 要说明剪辑节奏、声音桥、对白口型、动作点和结尾钩子，不要只说快切或慢切。",
+        "逐镜字段必须短而具体，不复述全局视觉圣经。角色定妆、统一画幅、通用负向约束只在 visualBible 写一次；逐镜只写本镜新增或变化的信息。",
+        "shotList.visual 控制在25-70个中文字符，写清可见画面；action 控制在20-60字，只写身体动作、道具交互和结束状态；continuity 控制在40字内，只写必须承接的变化。",
+        "storyboardPrompts.prompt 控制在50-110字，包含景别、主体、动作、空间和本镜光线；cameraPrompts.prompt 控制在40-100字，只写时间段、主体运动、摄影机运动和停点。",
+        "editPrompts.prompt 控制在30-80字，只写剪辑点、声音桥和结尾停点。禁止在多个字段重复同一句动作、连续性或负向约束。",
         "默认使用中文输出。只有 creativeBrief.voiceLanguage 明确不是中文时，才把对白、配音脚本和可读提示词翻成对应语言；结构字段名仍保持 JSON schema 不变。",
         "即使输出给国际视频模型，也不要整段默认英语化；中文用户的创作工作流优先中文。",
         "如果 sourceManifest.mode 是 document，这不是自由创作任务，而是原稿影视化拆解任务。标题、人物姓名与关系、分集数量、场次顺序、关键事件、关键对白和结局都是硬约束。",
@@ -357,7 +360,7 @@ export function buildJubenSeedMessages(input: Required<JubenRequestBody>): ChatM
             "E01 至少 2 个导演场景；每个导演场景至少 3 个镜头。",
             "visualBible 必须包含全剧风格、人物、色彩、环境定调和全局 prompt。",
             "productionPlan 必须列出先生成角色定妆、场景、关键道具，再生成代表镜头和批量镜头的顺序。",
-            "所有镜头都按 LibTV 镜头表思路写：画面描述、景别、光影氛围、对白/旁白、音效、运镜、最终提示词都要足够具体。",
+            "镜头表按 LibTV 的字段完整度写，但表达要短：每项只承担一个功能，不重复全局风格和通用禁用词。",
             "文档模式下逐场对应 sourceManifest.scenes，E01 不得漏掉原稿第一集场次，不得把别的故事套进来。",
             `输出语言/配音语言：${input.voiceLanguage}。默认中文，不要无故写成英语。`,
             "返回严格 JSON。不要 Markdown，不要代码块，不要解释。",
@@ -401,8 +404,8 @@ export function buildJubenEpisodeMessages(
         "你是资深短剧分镜导演，负责把一集已锁定原稿拆成可直接交给AI视频平台的镜头表。",
         "这是原稿影视化，不是自由创作。不得新增无关人物、地点、事件、对白或结局；不得套用任何示例故事。",
         "必须按原稿场次顺序覆盖全部场次；原稿对白逐字保留。每镜8-15秒，可包含2-3段连续动作，但只有一个核心叙事任务和一条清楚运镜。",
-        "画面描述必须具体到人物、站位、朝向、身体动作、道具接触、表情变化、前中后景和镜头结束状态，不能写抽象氛围句。",
-        "shotList.visual 不少于60个中文字符；action 写清开始状态、动作链和结束状态；continuity 明确承接上一镜的服装、道具、站位、视线和环境。",
+        "画面描述必须可见、可拍，但只写本镜发生的事：人物、站位、关键动作、道具和结束状态，不写抽象氛围句。",
+        "shotList.visual 控制在30-80个中文字符；action 控制在20-60字；continuity 控制在40字内，只记录与上一镜不同或必须锁定的服装、道具、站位、视线。",
         "为控制响应长度，每个原稿场次只输出1个最关键的高质量蓝图镜头；系统会依据该场导演动作自动扩展为3个生产镜头。directorScript 每个文字字段控制在120个中文字符内。",
         "输出语言默认中文。不得写成宣传片、预告片、概念片、海报文案或英语提示词。",
         "只返回严格JSON，不要Markdown。JSON只含 directorScript 与 shotList 两个数组。",
@@ -1623,9 +1626,8 @@ function makePromptFromShot(
     return {
       id: baseId,
       sceneId: shot.sceneId,
-      prompt: `${shot.shotId} 视频运动提示词：出场角色保持上一镜身份和服装连续，背景场景保持同一空间。0-2秒，${shot.shotSize}从${shot.cameraAngle}建立主体和环境层次；2-${shot.duration}，${shot.movement}跟随动作“${shot.action}”，焦点从关键道具或人物眼神切换到冲突反应。画面内容：${shot.visual}。光影必须平滑过渡，景深清楚，人物站位不跳轴，动作点落在剪辑节奏上。禁止突然换景、变脸、空镜堆砌、预告片混剪。`,
-      negativePrompt:
-        "不要空镜堆砌，不要大幅度无目的摇晃，不要电影预告片节奏，不要人物变脸，不要随机换景。",
+      prompt: `${shot.shotId}｜${shot.duration}。起幅：${shot.shotSize}，${shot.cameraAngle}；动作：${shot.action}；运镜：${shot.movement}；结尾停在动作结果或人物反应。`,
+      negativePrompt: "不跳轴、不随机换景、不无目的晃动。",
     };
   }
 
@@ -1633,18 +1635,16 @@ function makePromptFromShot(
     return {
       id: baseId,
       sceneId: shot.sceneId,
-      prompt: `${shot.shotId} 剪辑指令：镜头 ${shot.duration}，开头 1 秒接上一镜动作或视线，中段给“${shot.action}”的清晰动作点，末尾停在证据、表情或阻碍上形成下一镜钩子。对白口型必须对齐，声音使用 ${shot.sound}，环境底噪不断，转场必须服务连续性：${shot.continuity}。不要用字幕解释剧情，不要剪成预告片。`,
-      negativePrompt:
-        "不要宣传片蒙太奇，不要无意义闪白，不要史诗音乐硬推，不要把剧情用字幕解释完。",
+      prompt: `${shot.shotId}｜${shot.duration}。开头承接上一镜，中段落在核心动作，结尾停在反应或证据；对白对口型，声音桥：${shot.sound}。`,
+      negativePrompt: "不混剪、不闪白、不用字幕解释剧情。",
     };
   }
 
   return {
     id: baseId,
     sceneId: shot.sceneId,
-    prompt: `${shot.shotId} 最终分镜提示词：${shot.shotSize}，${shot.cameraAngle}，${shot.visual}。人物动作：${shot.action}。画面必须有前景/中景/背景层次，主体清楚，关键道具可见，服装污渍和材质连续，光影氛围服务戏剧冲突，保留上一镜空间和人物朝向。真人写实竖屏短剧质感，不要海报构图。`,
-    negativePrompt:
-      "不要海报构图，不要预告片大片感，不要抽象空镜，不要夸张光效，不要多余文字，不要人物五官不连续。",
+    prompt: `${shot.shotId}｜${shot.shotSize}，${shot.cameraAngle}。${shot.visual} 动作：${shot.action} 关键道具和人物关系清楚，保留前中后景。`,
+    negativePrompt: "不做海报、空镜或预告片构图；无文字水印。",
   };
 }
 
@@ -1654,7 +1654,6 @@ function ensurePromptCoverage(
   type: "storyboard" | "camera" | "edit",
 ) {
   const idPrefix = type === "storyboard" ? "SB" : type === "camera" ? "CAM" : "ED";
-  const minPromptLength = type === "storyboard" ? 120 : type === "camera" ? 180 : 140;
   const sceneIds = new Set(shots.map((shot) => shot.sceneId));
   const normalized = existing.filter(
     (item) => item.sceneId && item.prompt && sceneIds.has(item.sceneId),
@@ -1687,13 +1686,9 @@ function ensurePromptCoverage(
     const fallback = fallbackShot
       ? makePromptFromShot(fallbackShot, type, index)
       : null;
-    const prompt =
-      item.prompt.length >= minPromptLength || !fallback
-        ? item.prompt
-        : `${item.prompt}\n补充控制：${fallback.prompt}`;
-    const negativePrompt = [item.negativePrompt, fallback?.negativePrompt]
-      .filter(Boolean)
-      .join("；");
+    const prompt = item.prompt.trim() || fallback?.prompt || "";
+    const negativePrompt =
+      item.negativePrompt?.trim() || fallback?.negativePrompt || "";
 
     scenePromptIndex.set(item.sceneId, currentIndex + 1);
 
@@ -1805,6 +1800,7 @@ async function requestDeepSeekJson(
   messages: ChatMessage[],
   maxTokens: number,
   timeoutMs = DEEPSEEK_TIMEOUT_MS,
+  reasoningEffort: "high" | "max" = "max",
 ) {
   const apiKey = process.env.DEEPSEEK_API_KEY;
 
@@ -1824,7 +1820,8 @@ async function requestDeepSeekJson(
       },
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
-        temperature: 0.38,
+        thinking: { type: "enabled" },
+        reasoning_effort: reasoningEffort,
         max_tokens: maxTokens,
         response_format: { type: "json_object" },
         messages,
@@ -1877,6 +1874,8 @@ export async function analyzeJubenIdea(
     const parsed = await requestDeepSeekJson(
       buildJubenAnalysisMessages(input),
       Number(process.env.JUBEN_ANALYSIS_MAX_TOKENS ?? 1800),
+      Math.min(DEEPSEEK_TIMEOUT_MS, 50_000),
+      "high",
     );
 
     if (!looksLikeAnalysisResult(parsed)) {
@@ -1945,7 +1944,9 @@ export async function generateJubenResult(
   try {
     const parsed = await requestDeepSeekJson(
       buildJubenSeedMessages(input),
-      Number(process.env.JUBEN_SEED_MAX_TOKENS ?? 5200),
+      Number(process.env.JUBEN_SEED_MAX_TOKENS ?? 10000),
+      DEEPSEEK_TIMEOUT_MS,
+      "high",
     );
 
     if (!looksLikeJubenResult(parsed)) {
@@ -2040,8 +2041,9 @@ export async function generateJubenEpisodeResult(
   try {
     const parsed = await requestDeepSeekJson(
       buildJubenEpisodeMessages(input, baseResult, episode),
-      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 7000),
+      Number(process.env.JUBEN_EPISODE_MAX_TOKENS ?? 12000),
       DEEPSEEK_EPISODE_TIMEOUT_MS,
+      "high",
     );
 
     if (!looksLikeEpisodeDetail(parsed)) {
