@@ -5,7 +5,7 @@ import {
 } from "@/lib/ai/juben";
 
 export const runtime = "nodejs";
-export const maxDuration = 90;
+export const maxDuration = 180;
 
 export async function POST(request: Request) {
   let body: JubenEpisodeRequestBody;
