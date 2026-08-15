@@ -13,6 +13,15 @@ export async function POST(request: Request) {
   const stream = await streamDeepSeekText({
     messages: buildNatalMessages(context),
     fallbackText: fallbackNatalText(context),
+    requiredMarkers: [
+      "DAY_MASTER",
+      "OUTER_PERSONA",
+      "DEEP_SELF",
+      "CAREER",
+      "LOVE",
+      "GROWTH",
+      "HEALTH",
+    ],
   });
 
   return new Response(stream, {

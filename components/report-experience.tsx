@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { Dispatch, FormEvent, SetStateAction } from "react";
+import type { CSSProperties, Dispatch, FormEvent, SetStateAction } from "react";
 import {
   AlertCircle,
   BookOpenText,
@@ -15,6 +15,7 @@ import {
   Loader2,
   Orbit,
   Palette,
+  RefreshCw,
   Save,
   Shirt,
   Sparkles,
@@ -36,6 +37,7 @@ import {
   getTransitOverviewDisplay,
   transitMonthSections,
   transitOverviewSection,
+  transitPromptMarkers,
   type TransitMonthKey,
   type TransitSectionKey,
 } from "@/lib/report-timing";
@@ -157,6 +159,7 @@ const reportActionCopy = {
     exportHint:
       "Tip: open Monthly Timing and wait for it to finish if you want the export to include annual timing.",
     exportError: "Export failed. Please try again after the report finishes loading.",
+    retry: "Retry AI insight",
   },
   zh: {
     save: "保存到账号",
@@ -183,6 +186,7 @@ const reportActionCopy = {
     authDone: "账号已就绪，现在可以保存报告。",
     exportHint: "提示：如果要把年运月令也导出，请先打开年运月令并等待生成完成。",
     exportError: "导出失败，请等报告加载完成后再试一次。",
+    retry: "重新生成 AI 洞察",
   },
   ru: {
     save: "Сохранить в аккаунт",
@@ -211,6 +215,7 @@ const reportActionCopy = {
     exportHint:
       "Совет: откройте месячный прогноз и дождитесь завершения, если хотите включить его в экспорт.",
     exportError: "Экспорт не удался. Попробуйте после полной загрузки отчета.",
+    retry: "Повторить AI-анализ",
   },
 } satisfies Record<
   keyof typeof reportCopy,
@@ -353,6 +358,13 @@ function parseMarkedSections<Key extends string>(
   return result;
 }
 
+function hasCompleteStream(raw: string, requiredMarkers: string[]) {
+  return (
+    raw.trim().length >= 120 &&
+    requiredMarkers.every((marker) => raw.includes(`[${marker}]`))
+  );
+}
+
 function StatusPill({
   status,
   idleLabel,
@@ -481,11 +493,16 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
   const sceneEntries = Object.entries(sceneAdvice) as Array<
     [keyof typeof sceneAdvice, (typeof sceneAdvice)[keyof typeof sceneAdvice]]
   >;
+  const elementSurface = (element: keyof typeof elementStyle) =>
+    ({
+      "--energy-accent": elementStyle[element].accent,
+      "--energy-soft": elementStyle[element].soft,
+    }) as CSSProperties;
 
   return (
-    <article className="energy-style-panel">
+    <article className="energy-style-panel" style={elementSurface(target)}>
       <div className="energy-style-panel__header">
-        <div>
+        <div style={elementSurface(target)}>
           <span>
             <Palette size={15} aria-hidden="true" />
             {copy.eyebrow}
@@ -500,17 +517,17 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
       </div>
 
       <div className="energy-style-summary">
-        <div>
+        <div style={elementSurface(target)}>
           <small>{copy.target}</small>
           <strong>{targetMeta.label[copyLocale]}</strong>
           <p>{targetMeta.tone[copyLocale]}</p>
         </div>
-        <div>
+        <div style={elementSurface(dominant)}>
           <small>{copy.strongest}</small>
           <strong>{dominantMeta.label[copyLocale]}</strong>
           <p>{dominantMeta.tone[copyLocale]}</p>
         </div>
-        <div>
+        <div style={elementSurface(dailyElement)}>
           <small>{copy.daily}</small>
           <strong>{dailyMeta.label[copyLocale]}</strong>
           <p>{dailyMeta.daily[copyLocale]}</p>
@@ -526,7 +543,7 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
           <div className="energy-color-row">
             {colorChips.map((color, index) => (
               <span key={color}>
-                <i data-color-index={index} />
+                <i style={{ background: targetMeta.swatches[index] }} />
                 {color}
               </span>
             ))}
@@ -549,7 +566,12 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
           {percentages.map(({ element, percent }) => (
             <span key={element}>
               <i>
-                <b style={{ height: `${Math.max(4, percent)}%` }} />
+                <b
+                  style={{
+                    height: `${Math.max(4, percent)}%`,
+                    background: elementStyle[element].accent,
+                  }}
+                />
               </i>
               <em>{elementStyle[element].label[copyLocale]}</em>
             </span>
@@ -572,9 +594,13 @@ function EnergyStylePanel({ context }: { context: ReportGenerationContext }) {
 export default function ReportExperience({
   context,
   initialNatal,
+  fallbackNatalRaw,
+  fallbackTransitRaw,
 }: {
   context: ReportGenerationContext;
   initialNatal: NatalBookSections;
+  fallbackNatalRaw: string;
+  fallbackTransitRaw: string;
 }) {
   const copyLocale = contentLocale(context.locale);
   const copy = reportCopy[copyLocale];
@@ -621,9 +647,13 @@ export default function ReportExperience({
       endpoint: "/api/generate-natal" | "/api/generate-transit",
       setRaw: Dispatch<SetStateAction<string>>,
       setStatus: Dispatch<SetStateAction<StreamStatus>>,
+      fallbackRaw: string,
+      requiredMarkers: string[],
     ) => {
       setStatus("loading");
       setRaw("");
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 55000);
 
       try {
         const response = await fetch(endpoint, {
@@ -632,6 +662,7 @@ export default function ReportExperience({
             "Content-Type": "application/json",
           },
           body: JSON.stringify(context),
+          signal: controller.signal,
         });
 
         if (!response.ok || !response.body) {
@@ -640,18 +671,33 @@ export default function ReportExperience({
 
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
+        let completeText = "";
 
         while (true) {
           const { done, value } = await reader.read();
 
           if (done) break;
 
-          setRaw((current) => current + decoder.decode(value, { stream: true }));
+          const chunk = decoder.decode(value, { stream: true });
+          completeText += chunk;
+          setRaw(completeText);
+        }
+
+        completeText += decoder.decode();
+        setRaw(completeText);
+
+        if (!hasCompleteStream(completeText, requiredMarkers)) {
+          setRaw(fallbackRaw);
+          setStatus("error");
+          return;
         }
 
         setStatus("ready");
       } catch {
+        setRaw(fallbackRaw);
         setStatus("error");
+      } finally {
+        window.clearTimeout(timeout);
       }
     },
     [context],
@@ -685,27 +731,42 @@ export default function ReportExperience({
   }, []);
 
   useEffect(() => {
-    void streamEndpoint("/api/generate-natal", setNatalRaw, setNatalStatus);
-  }, [streamEndpoint]);
+    void streamEndpoint(
+      "/api/generate-natal",
+      setNatalRaw,
+      setNatalStatus,
+      fallbackNatalRaw,
+      natalSections.map((section) => section.marker),
+    );
+  }, [fallbackNatalRaw, streamEndpoint]);
 
   const natalContent = useMemo(() => {
     const parsed = parseMarkedSections(natalRaw, natalSections);
+    const fallback = parseMarkedSections(fallbackNatalRaw, natalSections);
 
     return {
-      dayMaster: parsed.dayMaster || initialNatal.dayMaster,
-      outerPersona: parsed.outerPersona || initialNatal.outerPersona,
-      deepSelf: parsed.deepSelf || initialNatal.deepSelf,
-      career: parsed.career || initialNatal.career,
-      love: parsed.love || initialNatal.love,
-      growth: parsed.growth || initialNatal.growth,
-      health: parsed.health || initialNatal.health,
+      dayMaster: parsed.dayMaster || fallback.dayMaster || initialNatal.dayMaster,
+      outerPersona:
+        parsed.outerPersona || fallback.outerPersona || initialNatal.outerPersona,
+      deepSelf: parsed.deepSelf || fallback.deepSelf || initialNatal.deepSelf,
+      career: parsed.career || fallback.career || initialNatal.career,
+      love: parsed.love || fallback.love || initialNatal.love,
+      growth: parsed.growth || fallback.growth || initialNatal.growth,
+      health: parsed.health || fallback.health || initialNatal.health,
     };
-  }, [initialNatal, natalRaw]);
+  }, [fallbackNatalRaw, initialNatal, natalRaw]);
 
-  const transitContent = useMemo(
-    () => parseMarkedSections(transitRaw, transitSections),
-    [transitRaw],
-  );
+  const transitContent = useMemo(() => {
+    const parsed = parseMarkedSections(transitRaw, transitSections);
+    const fallback = parseMarkedSections(fallbackTransitRaw, transitSections);
+
+    return Object.fromEntries(
+      transitSections.map((section) => [
+        section.key,
+        parsed[section.key] || fallback[section.key],
+      ]),
+    ) as Record<TransitKey, string>;
+  }, [fallbackTransitRaw, transitRaw]);
   const transitOverview = getTransitOverviewDisplay(context.locale);
 
   function buildReportSnapshot() {
@@ -936,11 +997,16 @@ export default function ReportExperience({
   function activateTab(tab: ActiveTab) {
     setActiveTab(tab);
 
-    if (tab === "transits" && transitStatus === "idle") {
+    if (
+      tab === "transits" &&
+      (transitStatus === "idle" || transitStatus === "error")
+    ) {
       void streamEndpoint(
         "/api/generate-transit",
         setTransitRaw,
         setTransitStatus,
+        fallbackTransitRaw,
+        [...transitPromptMarkers],
       );
     }
   }
@@ -1139,11 +1205,30 @@ export default function ReportExperience({
               <span>{copy.natalPanel.eyebrow}</span>
               <h2>{copy.natalPanel.title}</h2>
             </div>
-            <StatusPill
-              status={natalStatus}
-              idleLabel={copy.status.idleNatal}
-              labels={copy.status}
-            />
+            <div className="report-stream-control">
+              <StatusPill
+                status={natalStatus}
+                idleLabel={copy.status.idleNatal}
+                labels={copy.status}
+              />
+              {natalStatus === "error" ? (
+                <button
+                  type="button"
+                  onClick={() =>
+                    void streamEndpoint(
+                      "/api/generate-natal",
+                      setNatalRaw,
+                      setNatalStatus,
+                      fallbackNatalRaw,
+                      natalSections.map((section) => section.marker),
+                    )
+                  }
+                >
+                  <RefreshCw size={13} aria-hidden="true" />
+                  {actionCopy.retry}
+                </button>
+              ) : null}
+            </div>
           </div>
 
           <EnergyStylePanel context={context} />
@@ -1178,11 +1263,30 @@ export default function ReportExperience({
               <span>{copy.transitPanel.eyebrow}</span>
               <h2>{copy.transitPanel.title}</h2>
             </div>
-            <StatusPill
-              status={transitStatus}
-              idleLabel={copy.status.idleTransit}
-              labels={copy.status}
-            />
+            <div className="report-stream-control">
+              <StatusPill
+                status={transitStatus}
+                idleLabel={copy.status.idleTransit}
+                labels={copy.status}
+              />
+              {transitStatus === "error" ? (
+                <button
+                  type="button"
+                  onClick={() =>
+                    void streamEndpoint(
+                      "/api/generate-transit",
+                      setTransitRaw,
+                      setTransitStatus,
+                      fallbackTransitRaw,
+                      [...transitPromptMarkers],
+                    )
+                  }
+                >
+                  <RefreshCw size={13} aria-hidden="true" />
+                  {actionCopy.retry}
+                </button>
+              ) : null}
+            </div>
           </div>
 
           {luck ? (
