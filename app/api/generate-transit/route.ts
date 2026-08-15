@@ -4,6 +4,7 @@ import {
   streamDeepSeekText,
   type ReportGenerationContext,
 } from "@/lib/ai/streaming";
+import { transitPromptMarkers } from "@/lib/report-timing";
 
 export const runtime = "edge";
 export const maxDuration = 60;
@@ -13,6 +14,7 @@ export async function POST(request: Request) {
   const stream = await streamDeepSeekText({
     messages: buildTransitMessages(context),
     fallbackText: fallbackTransitText(context),
+    requiredMarkers: [...transitPromptMarkers],
   });
 
   return new Response(stream, {

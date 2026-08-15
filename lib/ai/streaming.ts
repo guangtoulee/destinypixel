@@ -123,7 +123,7 @@ const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 type ChatMessage = { role: "system" | "user"; content: string };
 
 function shortContext(context: ReportGenerationContext) {
-  const nonChineseContext = context.locale !== "zh";
+  const nonChineseContext = context.locale === "en" || context.locale === "ru";
 
   return JSON.stringify({
     outputLanguage: outputLanguageNames[context.locale],
@@ -153,7 +153,7 @@ function shortContext(context: ReportGenerationContext) {
       : context.bazi,
     astrology: {
       sunSign:
-        context.locale === "zh"
+        context.locale === "zh" || context.locale === "zh-TW"
           ? `${context.astrology.sunSignCn}/${context.astrology.sunSign}`
           : context.astrology.sunSign,
       placements: context.astrology.placements.map((placement) => ({
@@ -172,7 +172,7 @@ function shortContext(context: ReportGenerationContext) {
         title: display.title,
         range: display.range,
         note:
-          context.locale === "zh"
+          context.locale === "zh" || context.locale === "zh-TW"
             ? "按中国节气月令理解这个时间窗。"
             : context.locale === "ru"
               ? "Используй это как примерное григорианское временное окно."
@@ -246,22 +246,47 @@ export function buildTransitMessages(
 }
 
 export function fallbackNatalText(context: ReportGenerationContext) {
-  if (context.locale === "zh") {
+  if (context.locale === "zh" || context.locale === "zh-TW") {
+    const totems = Object.values(context.bazi.pillarsDisplay)
+      .map((pillar) => pillar.totemName)
+      .join("、");
+    const elementBalance = Object.entries(context.bazi.elementBalance)
+      .sort((left, right) => right[1] - left[1])
+      .map(([element, value]) => `${element} ${value}`)
+      .join("、");
+    const missingElements = context.bazi.missingElements.length
+      ? context.bazi.missingElements.join("、")
+      : "没有完全缺位的元素";
+    const aspectSummary = context.astrology.majorAspects
+      .slice(0, 4)
+      .map(
+        (aspect) =>
+          `${aspect.bodies[0]}-${aspect.bodies[1]} ${aspect.type}（容许度 ${aspect.orb.toFixed(1)}°）`,
+      )
+      .join("；");
+
     return [
       "[DAY_MASTER]",
-      `${context.profile.displayName} 是这张内在地图的核心动物画像。结论很简单：你的反应系统偏敏锐、吸收快，但也容易把外界情绪当成自己的任务。太阳星座为 ${context.astrology.sunSignCn}，会放大这种共情和想象力。优势是洞察人心，短板是容易拖延边界。`,
+      `${context.profile.displayName} 是这份内在地图的核心动物画像。直接说结论：你对气氛、关系变化和别人没说出口的部分反应很快，通常比周围人更早察觉问题，但也容易把“看见问题”误当成“必须由我解决”。太阳落在 ${context.astrology.sunSignCn}，映射星体是 ${context.bazi.mappedPlanetDisplay}，两套信号叠加后，直觉、想象和心理穿透力会变强，现实压力大时却可能先在脑中反复推演，而不是马上切断无效选择。`,
+      `五行分布为 ${elementBalance}，${missingElements}。这意味着你的优势不是平均用力，而是把最强的感受力变成判断标准，再用偏弱元素补执行结构。你真正的盲点是容易为复杂的人和关系寻找解释，迟迟不肯承认某件事已经不值得投入。实操上，任何重要决定都写下三个可验证事实、一个截止时间和一条退出条件；如果事实连续两次不支持期待，就停止替别人补故事。`,
       "[OUTER_PERSONA]",
-      `别人第一眼感受到的不是单纯温和，而是一种带着观察和试探的气场。映射星体为 ${context.bazi.mappedPlanetDisplay}，说明你的表达往往有深度，但也可能给人“想太多、不够直接”的印象。建议重要关系和工作合作里少绕弯，越关键越要把需求说清楚。`,
+      `你的外在形象不是单纯温和，而是“先观察、再靠近、确认安全后才真正投入”。四个出生坐标 ${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.pillarLabel).join("、")} 让别人同时感到细腻、克制和一定距离感；${context.bazi.mappedPlanetDisplay} 的影响又会让你的表达带有深度和保留。熟悉你的人觉得这是分寸感，不熟悉的人却可能把它误读成犹豫、难以表态，甚至认为你心里另有打算。`,
+      `你在社交和工作中最大的损耗，是为了保持体面而把真正要求说得太晚。重要合作不要只说方向，要明确交付物、价格、责任人和时间；亲密关系也不要靠暗示测试对方。你的第一印象不需要变得热闹，只需要更清楚。警惕一种模式：表面答应配合，内心已经不舒服，最后用拖延或突然退出表达拒绝。早一点说“不”，反而更可靠。`,
       "[DEEP_SELF]",
-      `深层自我来自四个动物场域：${Object.values(context.bazi.pillarsDisplay).map((pillar) => pillar.totemName).join("、")}。这些图腾显示你并不适合长期待在粗糙、压迫、只讲效率的环境里；但负面是，你也容易用“我还没准备好”来逃避真正的竞争和交付。`,
+      `你的深层自我由 ${totems} 四个动物场域共同组成。它们不是四种互相矛盾的人格，而是你在家庭、社会、自我和未来压力下切换的本能反应。你需要先确认环境是否可信，才会释放真正的创造力；一旦长期处在粗糙、强压、只讲结果却不给边界的环境里，你会先过度适应，随后突然失去热情。${aspectSummary || "主要相位共同强调了感受、行动与边界之间的拉扯"}，说明这种内耗并非单纯懒惰，而是你对风险和关系后果评估过多。`,
+      `问题在于，你有时会把谨慎包装成“还没准备好”，把害怕被评价包装成“我想再完善一点”。这会让真正重要的作品、报价和表达迟迟不落地。给自己设一个七成完成线：达到七成就先交付、先测试、先让现实反馈进来；剩下三成根据真实反馈修改。不要再用持续准备换取虚假的安全感，也不要期待别人主动理解你没有说出口的需求。`,
       "[CAREER]",
-      `事业上适合建立可复利的专业位置，把 ${context.bazi.mappedPlanetDisplay} 的深度变成稳定输出。不要只做灵感型工作，否则容易忙很多却沉淀很少。你需要明确产品、流程、报价和交付边界。`,
+      `事业上，你适合做需要洞察、审美、研究、整合和长期信任的工作，不适合长期被困在只拼速度、只靠重复消耗的岗位。${context.bazi.mappedPlanetDisplay} 与 ${context.astrology.sunSignCn} 的组合，能让你看到别人忽略的细节并把不同体系连起来；这对咨询、内容、设计、教育、策略、品牌、心理服务或复杂产品很有价值。真正能赚钱的不是灵感本身，而是你把洞察整理成方法、产品和稳定交付的能力。`,
+      `你的职业风险也很明确：容易同时开太多方向，前期投入大量情绪和创意，却没有报价、流程、复购和归档，最后看起来很忙，资产却没有留下。未来三个月只保留一个主产品、一个获客渠道和一个可量化指标；每次交付都沉淀模板、案例和客户反馈。不要因为怕失去机会而接下边界模糊的合作，也不要以“关系不错”为理由长期低价。善意可以赠送一次，商业规则必须从第二次开始。`,
       "[LOVE]",
-      "感情里最大的优势是感受力，最大的风险也是感受力。你容易提前替对方解释、替关系找理由，最后把不清楚的关系拖成内耗。建议用事实确认爱意，用边界保护心软。",
+      `感情里最大的优势是感受力，最大的风险也是感受力。你能迅速捕捉对方的情绪、需求和脆弱处，因此很容易形成深度连接；但当关系不够稳定时，你也会提前替对方解释，甚至把对方偶尔的热情当成长期承诺。${context.astrology.sunSignCn} 的太阳节律会强化浪漫投射，而动物场域中的依恋本能又让你不愿轻易承认投入落空，于是模糊关系可能被你维持得比必要时间更久。`,
+      `判断一段关系，不看对方说得多动人，只看三个事实：是否持续投入时间、是否愿意承担现实责任、发生冲突后是否真正修正。你需要的伴侣不是最会制造情绪高潮的人，而是能说清楚、做得到、尊重独处和边界的人。警惕“我再理解一点，对方就会变好”的想法；理解不能替代责任。表达需求时不要绕成测试题，直接说明底线和期待，给对方选择，也给自己离开的权利。`,
       "[GROWTH]",
-      "成长重点是训练五行里偏弱的心理肌肉：缺火就练决定速度，缺金就练边界和复盘，缺土就练稳定作息，缺木就练长期计划，缺水就练真实表达。不要把直觉停留在感觉里，要变成行动节奏。",
+      `你的成长重点不是继续增加感受，而是让感受进入秩序。五行里偏弱的部分，可以当作需要训练的心理肌肉：火对应决定和曝光，金对应边界和复盘，土对应稳定与完成，木对应长期规划，水对应信息流动与真实表达。当前分布 ${elementBalance} 已经说明，你不缺看见可能性的能力，真正需要补的是把可能性筛选成少数选择，并承受选择之后必然失去其他可能。`,
+      `建议建立三个固定动作：每周砍掉一件不再重要的事；每月完成一个可以公开展示的成果；每季度检查一次人际和财务边界。成长不是把自己变成更“正能量”的人，而是减少自我欺骗。警惕用学习、研究、疗愈和寻找新体系逃避执行，当一个答案已经足以行动时，继续收集答案就是拖延。你需要的不是更多启发，而是更少、更稳定、更可重复的动作。`,
       "[HEALTH]",
-      "健康侧重作息、恢复力与情绪节律；任何身体问题都应以专业医疗建议为准。",
+      `健康层面更值得关注的是作息、恢复力和情绪节律，而不是追求短期高强度。你对环境和关系压力的吸收较快，连续应付人群、信息和多任务后，身体可能先表现为睡眠变浅、注意力涣散、胃口或肌肉紧张等普通压力信号。这里不是医学诊断，但这些信号不应被解释成“我再坚持一下就好”；它们更像系统在提醒你，恢复已经被透支。`,
+      `最有效的保养不是复杂仪式，而是固定睡眠窗口、规律饮水和进食、每周数次低到中等强度运动，以及每天一段没有信息输入的安静时间。情绪很满时先走路、洗澡、呼吸或写下来，再处理重要对话。若任何不适持续、加重或影响生活，应及时咨询合格医生。警惕把身心疲惫浪漫化成敏感天赋；真正的敏锐必须建立在身体有余量的基础上。`,
     ].join("\n\n");
   }
 
@@ -309,7 +334,7 @@ export function fallbackTransitText(context: ReportGenerationContext) {
   const previousYear = luck?.previousYear ?? targetYear - 1;
   const activeLuck = luck?.activeTenYearLuck;
 
-  if (context.locale === "zh") {
+  if (context.locale === "zh" || context.locale === "zh-TW") {
     const currentPillar = luck?.currentYearPillarDisplay ?? "当前流年";
     const previousPillar = luck?.previousYearPillarDisplay ?? "去年流年";
     const decade = activeLuck
@@ -405,12 +430,50 @@ function fallbackStream(text: string) {
   });
 }
 
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildStreamRecovery(
+  emittedText: string,
+  fallbackText: string,
+  requiredMarkers: string[],
+) {
+  const visibleText = emittedText.trim();
+
+  if (visibleText.length < 120) {
+    return fallbackText;
+  }
+
+  const missingMarkers = requiredMarkers.filter(
+    (marker) => !visibleText.includes(`[${marker}]`),
+  );
+
+  if (missingMarkers.length === 0) {
+    return "";
+  }
+
+  return missingMarkers
+    .map((marker) => {
+      const pattern = new RegExp(
+        `\\[${escapeRegExp(marker)}\\]\\s*([\\s\\S]*?)(?=\\n\\s*\\[[A-Z0-9_]+\\]|$)`,
+      );
+      const section = fallbackText.match(pattern)?.[1]?.trim();
+
+      return section ? `[${marker}]\n\n${section}` : "";
+    })
+    .filter(Boolean)
+    .join("\n\n");
+}
+
 export async function streamDeepSeekText({
   messages,
   fallbackText,
+  requiredMarkers = [],
 }: {
   messages: ChatMessage[];
   fallbackText: string;
+  requiredMarkers?: string[];
 }) {
   const apiKey = process.env.DEEPSEEK_API_KEY;
 
@@ -420,6 +483,12 @@ export async function streamDeepSeekText({
 
   try {
     const upstreamController = new AbortController();
+    const configuredTimeout = Number(process.env.DEEPSEEK_TIMEOUT_MS ?? 50000);
+    const timeoutMs = Math.min(
+      52000,
+      Math.max(35000, Number.isFinite(configuredTimeout) ? configuredTimeout : 50000),
+    );
+    const timeout = setTimeout(() => upstreamController.abort(), timeoutMs);
     const response = await fetch(DEEPSEEK_API_URL, {
       method: "POST",
       headers: {
@@ -428,6 +497,7 @@ export async function streamDeepSeekText({
       },
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
+        thinking: { type: "disabled" },
         temperature: 0.42,
         max_tokens: Number(process.env.DEEPSEEK_STREAM_MAX_TOKENS ?? 5200),
         stream: true,
@@ -438,6 +508,7 @@ export async function streamDeepSeekText({
     });
 
     if (!response.ok || !response.body) {
+      clearTimeout(timeout);
       return fallbackStream(fallbackText);
     }
 
@@ -449,6 +520,32 @@ export async function streamDeepSeekText({
     return new ReadableStream<Uint8Array>({
       async start(controller) {
         let buffer = "";
+        let emittedText = "";
+
+        const emitContent = (content: string) => {
+          emittedText += content;
+          controller.enqueue(encoder.encode(content));
+        };
+
+        const processLine = (line: string) => {
+          const trimmed = line.trim();
+
+          if (!trimmed.startsWith("data:")) return;
+
+          const data = trimmed.slice(5).trim();
+          if (!data || data === "[DONE]") return;
+
+          try {
+            const payload = JSON.parse(data) as {
+              choices?: Array<{ delta?: { content?: string } }>;
+            };
+            const content = payload.choices?.[0]?.delta?.content;
+
+            if (content) emitContent(content);
+          } catch {
+            // Ignore malformed heartbeat lines while keeping the stream alive.
+          }
+        };
 
         try {
           while (true) {
@@ -461,40 +558,37 @@ export async function streamDeepSeekText({
             buffer = lines.pop() ?? "";
 
             for (const line of lines) {
-              const trimmed = line.trim();
-
-              if (!trimmed.startsWith("data:")) continue;
-
-              const data = trimmed.slice(5).trim();
-              if (data === "[DONE]") continue;
-
-              try {
-                const payload = JSON.parse(data) as {
-                  choices?: Array<{ delta?: { content?: string } }>;
-                };
-                const content = payload.choices?.[0]?.delta?.content;
-
-                if (content) {
-                  controller.enqueue(encoder.encode(content));
-                }
-              } catch {
-                continue;
-              }
+              processLine(line);
             }
           }
+          buffer += decoder.decode();
+          if (buffer.trim()) processLine(buffer);
         } catch {
-          if (!isCancelled) {
-            controller.enqueue(encoder.encode(`\n\n${fallbackText}`));
-          }
+          // A timeout or upstream disconnect is recovered below section by section.
         } finally {
+          clearTimeout(timeout);
           if (!isCancelled) {
+            const recovery = buildStreamRecovery(
+              emittedText,
+              fallbackText,
+              requiredMarkers,
+            );
+
+            if (recovery) {
+              emitContent(`${emittedText.trim() ? "\n\n" : ""}${recovery}`);
+            }
             controller.close();
           }
-          reader.releaseLock();
+          try {
+            reader.releaseLock();
+          } catch {
+            // The reader can already be released when the client disconnects.
+          }
         }
       },
       async cancel() {
         isCancelled = true;
+        clearTimeout(timeout);
         upstreamController.abort();
 
         try {

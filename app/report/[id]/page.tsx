@@ -19,7 +19,11 @@ import {
   type Gender,
   type NatalBookSections,
 } from "@/lib/ai/report";
-import type { ReportGenerationContext } from "@/lib/ai/streaming";
+import {
+  fallbackNatalText,
+  fallbackTransitText,
+  type ReportGenerationContext,
+} from "@/lib/ai/streaming";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
 import { getReportRecord, type ReportRecord } from "@/lib/db/repository";
@@ -182,12 +186,12 @@ function ReportLanguageLinks({
           data-active={locale === option.value}
         >
           {option.value === "zh"
-            ? locale === "zh"
-              ? "中文"
-              : "ZH"
-            : option.value === "ru"
-              ? "RU"
-              : "EN"}
+            ? "简"
+            : option.value === "zh-TW"
+              ? "繁"
+              : option.value === "ru"
+                ? "RU"
+                : "EN"}
         </Link>
       ))}
     </div>
@@ -203,7 +207,7 @@ function buildLuckDisplay(
   }
 
   const directionLabel =
-    locale === "zh"
+    contentLocale(locale) === "zh"
       ? luck.direction === "forward"
         ? "顺行"
         : "逆行"
@@ -254,12 +258,12 @@ function buildInitialNatalShell({
 }): NatalBookSections {
   const pillarNames = pillarOrder
     .map((key) => getPillarDisplay(bazi.pillars[key], locale).pillarLabel)
-    .join(locale === "zh" ? "、" : ", ");
+    .join(contentLocale(locale) === "zh" ? "、" : ", ");
   const branchNames = pillarOrder
     .map((key) => getPillarDisplay(bazi.pillars[key], locale).branchLabel)
-    .join(locale === "zh" ? "、" : ", ");
+    .join(contentLocale(locale) === "zh" ? "、" : ", ");
 
-  if (locale === "zh") {
+  if (contentLocale(locale) === "zh") {
     return {
       dayMaster: `${profile.name.cn} 是这份内在地图的核心动物画像。它先判断你的底层反应方式：你如何吸收环境、如何保护自己、压力大时会变得更清醒还是更逃避。太阳节律落在 ${sunSign}，完整指引会继续流式生成。`,
       outerPersona: `外在层从四重出生坐标展开：${pillarNames}。对应行星为 ${mappedPlanetName}，它描述别人第一眼感受到的气场、压力感和行动速度，也会指出你容易被误读的地方。`,
@@ -439,7 +443,13 @@ export default async function ReportPage({
       data-report-title={headline}
     >
       <div className="report-backdrop" aria-hidden="true">
-        <Image src="/destinypixel-deep-space.png" alt="" fill priority />
+        <Image
+          src="/destinypixel-deep-space.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
         <span />
       </div>
 
@@ -561,6 +571,8 @@ export default async function ReportPage({
         <ReportExperience
           context={generationContext}
           initialNatal={initialNatal}
+          fallbackNatalRaw={fallbackNatalText(generationContext)}
+          fallbackTransitRaw={fallbackTransitText(generationContext)}
         />
       </section>
     </main>

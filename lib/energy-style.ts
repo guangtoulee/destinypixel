@@ -24,6 +24,9 @@ export const energyElements: EnergyElement[] = [
 
 export const elementStyle = {
   Wood: {
+    accent: "#3f7f66",
+    soft: "#e5f1ea",
+    swatches: ["#a8c7ae", "#3f7f66", "#7e9256", "#4d9892"],
     label: { en: "Wood", zh: "木", ru: "Дерево" },
     tone: { en: "growth", zh: "生长", ru: "рост" },
     colors: {
@@ -43,6 +46,9 @@ export const elementStyle = {
     },
   },
   Fire: {
+    accent: "#c75749",
+    soft: "#fae6df",
+    swatches: ["#ed806e", "#bf4e5b", "#e48643", "#d3a13e"],
     label: { en: "Fire", zh: "火", ru: "Огонь" },
     tone: { en: "visibility", zh: "显化", ru: "видимость" },
     colors: {
@@ -62,6 +68,9 @@ export const elementStyle = {
     },
   },
   Earth: {
+    accent: "#a47a46",
+    soft: "#f3eadc",
+    swatches: ["#d7c39f", "#c49b67", "#a67c50", "#928b7f"],
     label: { en: "Earth", zh: "土", ru: "Земля" },
     tone: { en: "stability", zh: "稳定", ru: "стабильность" },
     colors: {
@@ -81,6 +90,9 @@ export const elementStyle = {
     },
   },
   Metal: {
+    accent: "#687984",
+    soft: "#edf1f2",
+    swatches: ["#f0ede4", "#a9b4bc", "#d2b171", "#707c83"],
     label: { en: "Metal", zh: "金", ru: "Металл" },
     tone: { en: "precision", zh: "决断", ru: "точность" },
     colors: {
@@ -100,6 +112,9 @@ export const elementStyle = {
     },
   },
   Water: {
+    accent: "#285d7a",
+    soft: "#e1eef3",
+    swatches: ["#234f72", "#1b1d24", "#365b7e", "#9bcbdc"],
     label: { en: "Water", zh: "水", ru: "Вода" },
     tone: { en: "flow", zh: "流动", ru: "поток" },
     colors: {
@@ -121,6 +136,9 @@ export const elementStyle = {
 } satisfies Record<
   EnergyElement,
   {
+    accent: string;
+    soft: string;
+    swatches: string[];
     label: Record<ContentLocale, string>;
     tone: Record<ContentLocale, string>;
     colors: Record<ContentLocale, string[]>;

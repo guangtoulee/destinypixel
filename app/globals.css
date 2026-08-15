@@ -5205,6 +5205,146 @@ a {
   background: rgba(189, 201, 184, 0.2);
 }
 
+.report-shell .stream-status-pill[data-status="error"] {
+  border-color: rgba(176, 116, 82, 0.26);
+  color: #9b624d;
+  background: rgba(235, 211, 195, 0.3);
+}
+
+.report-stream-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.report-stream-control > button {
+  display: inline-flex;
+  min-height: 32px;
+  cursor: pointer;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(176, 146, 96, 0.24);
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: #8d6a3d;
+  background: rgba(255, 255, 255, 0.66);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.report-shell .energy-style-panel {
+  border-color: color-mix(in srgb, var(--energy-accent) 26%, transparent);
+  background:
+    radial-gradient(circle at 8% 8%, var(--energy-soft), transparent 38%),
+    radial-gradient(circle at 92% 12%, rgba(201, 220, 231, 0.42), transparent 36%),
+    rgba(255, 255, 255, 0.76);
+  box-shadow:
+    0 24px 58px rgba(112, 99, 88, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.report-shell .energy-style-panel__header span {
+  color: var(--energy-accent);
+}
+
+.report-shell .energy-style-panel__header h2,
+.report-shell .energy-style-grid h3,
+.report-shell .energy-stone-list strong {
+  color: #302a27;
+}
+
+.report-shell .energy-style-panel__header p {
+  color: #6f6863;
+}
+
+.report-shell .energy-style-panel__header a {
+  border-color: color-mix(in srgb, var(--energy-accent) 28%, transparent);
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--energy-accent),
+    color-mix(in srgb, var(--energy-accent) 72%, #c9a76e)
+  );
+  box-shadow: 0 12px 26px color-mix(in srgb, var(--energy-accent) 18%, transparent);
+}
+
+.report-shell .energy-style-summary > div {
+  position: relative;
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--energy-accent) 22%, transparent);
+  background: linear-gradient(145deg, var(--energy-soft), rgba(255, 255, 255, 0.96) 72%);
+}
+
+.report-shell .energy-style-summary > div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  content: "";
+  background: var(--energy-accent);
+}
+
+.report-shell .energy-style-summary small {
+  color: color-mix(in srgb, var(--energy-accent) 74%, #534a44);
+}
+
+.report-shell .energy-style-summary strong {
+  color: var(--energy-accent);
+  font-size: 20px;
+}
+
+.report-shell .energy-style-summary p {
+  color: #625b56;
+  line-height: 1.55;
+}
+
+.report-shell .energy-style-grid > section,
+.report-shell .energy-style-footer {
+  border-color: rgba(91, 80, 73, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
+}
+
+.report-shell .energy-style-grid p,
+.report-shell .energy-scene-list p,
+.report-shell .energy-stone-list span {
+  color: #625b56;
+}
+
+.report-shell .energy-color-row span {
+  border-color: rgba(91, 80, 73, 0.12);
+  color: #4f4945;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 5px 14px rgba(112, 99, 88, 0.06);
+}
+
+.report-shell .energy-color-row i {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 1px rgba(75, 67, 62, 0.16);
+}
+
+.report-shell .energy-scene-list p::before {
+  background: var(--energy-accent);
+}
+
+.report-shell .energy-bars-mini span {
+  color: #736b66;
+}
+
+.report-shell .energy-bars-mini i {
+  background: rgba(91, 80, 73, 0.08);
+}
+
+.report-shell .energy-bars-mini b {
+  box-shadow: 0 8px 18px rgba(91, 80, 73, 0.12);
+}
+
 .pillar-chart-card,
 .pillar-symbol-row > div,
 .pillar-table > div {
