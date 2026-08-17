@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-17T02:42:41.990Z",
+  "updatedAt": "2026-08-17T08:07:23.882Z",
   "sourceSummary": {
     "community": 670,
-    "publicX": 300,
-    "total": 970
+    "publicX": 303,
+    "total": 973
   },
   "items": [
     {
@@ -999,6 +999,51 @@
       "rawText": "Claude Fable running ComfyUI workflows through the Comfy MCP is a cheat code. → Claude pulled the shot from the web, auto-detected the scene cuts + trimmed it → ran my saved depthanything v3 + openpose workflow to build the driving reference video → scrubbed every frame for the sharpest one, then character swapped me in with gpt-image-2 exactly how I directed it: wearing a tuxedo, liminal space environment, no background characters → wrote the seedance 2.0 prompts + ran the gens → stitched together the 3-panel comparison you're watching The preprocessing + prompt writing is usually most of the work on a clip like this. With the MCP I didn't touch any of it. Didn't need to look at a single node lol."
     },
     {
+      "id": "x-public-2087359288649949620",
+      "title": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-s",
+      "description": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-second ultra-realistic candid home-video sequence of an elderly Korean man in his mid-70s living an ordinary late morning in ",
+      "prompt": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-second ultra-realistic candid home-video sequence of an elderly Korean man in his mid-70s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Elderly Korean man, natural everyday appearance, realistic weathered skin texture, deep smile lines and age spots, short thinning grey hair neatly combed back, slightly stooped but sturdy posture. Loose beige button-up short-sleeve shirt, dark grey slacks worn slightly high on the waist, brown leather sandals over thin grey socks, simple metal wristwatch. Warm, unhurried personality. Keep his face, body, hairstyle, clothing, and appearance perfectly consistent throughout. SETTING: Authentic Korean residential neighborhood — narrow concrete alleys, low-rise homes, small terraces, potted plants, laundry lines, bicycles, utility poles, overhead wires and mature trees. Quiet, lived-in atmosphere. No shops, advertisements, crowds, cafés, or commercial activity. VISUAL STYLE: Ultra-realistic documentary home-video footage from an early-2000s consumer DV camcorder. Imperfect handheld operation, natural camera shake, awkward framing, occasional reframing, autofocus hunting, slight lens breathing, exposure pumping between sunlight and shade, subtle motion blur, mild rolling shutter, faded colors, soft contrast, slight digital compression and sensor noise. No stabilization, no cinematic camera moves, no modern color grading. Everything must feel genuinely captured, not AI-generated. TIMELINE: 00:00–00:05 — Outside his small house, he sits on a low concrete wall slowly fanning himself with a folded newspaper. Wind moves the leaves above him. He squints slightly into the light and gives a small easy smile while the camera struggles to lock focus. 00:05–00:10 — He walks into a narrow residential alley with slow, deliberate steps, hands loosely clasped behind his back. A stray cat approaches. He stops, bends down carefully with one hand braced on his knee, and gently scratches its head. Autofocus shifts imperfectly between his face and the cat. 00:10–00:15 — In a small front yard, he waters a row of potted plants with a dented metal watering can, pausing to pick off a dead leaf. Water drips naturally while sunlight and cloud shadows subtly change the exposure. 00:15–00:20 — He sits on a quiet terrace with a small ceramic cup of barley tea, casually watching the neighborhood, one hand resting on his knee. He exhales slowly, content. Handheld side angle with natural camera drift. 00:20–00:25 — Close side profile. Someone off-camera casually greets him. He turns unhurriedly, smiles warmly with deep creases around his eyes, raises his hand slightly and naturally says, \"어, 안녕하세요.\" The camera reacts slightly late. 00:25–00:30 — He walks slowly down a tree-lined residential lane, hands behind his back, newspaper tucked under one arm. He notices the camera, gives a small amused nod, then looks away and continues walking. The recording abruptly cuts to black mid-motion like an old camcorder being switched off. AUDIO: Only authentic location sound: birds, distant motorcycles, light wind, rustling leaves, faint neighborhood chatter, cat sounds, slow footsteps on concrete, water trickling from the can and subtle residential ambience. Natural Korean speech only. No music, narration, cinematic sound effects, or artificial sound design. GOAL: Make it feel like a forgotten personal home video from the early 2000s — intimate, spontaneous, imperfect, warm, mundane and deeply believable. Prioritize realistic human motion, natural facial expressions, physical interaction, environmental detail and consistent identity over cinematic beauty.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/beechinour/status/2087359288649949620",
+      "sourceType": "x",
+      "authorName": "beech",
+      "authorHandle": "@beechinour",
+      "createdAt": "2026-08-12T02:03:30.000Z",
+      "importedAt": "2026-08-17T08:07:23.863Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 516,
+        "reposts": 66,
+        "replies": 9,
+        "quotes": 7,
+        "bookmarks": 734,
+        "views": 56635,
+        "score": 3641
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-second ultra-realistic candid home-video sequence of an elderly Korean man in his mid-70s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Elderly Korean man, natural everyday appearance, realistic weathered skin texture, deep smile lines and age spots, short thinning grey hair neatly combed back, slightly stooped but sturdy posture. Loose beige button-up short-sleeve shirt, dark grey slacks worn slightly high on the waist, brown leather sandals over thin grey socks, simple metal wristwatch. Warm, unhurried personality. Keep his face, body, hairstyle, clothing, and appearance perfectly consistent throughout. SETTING: Authentic Korean residential neighborhood — narrow concrete alleys, low-rise homes, small terraces, potted plants, laundry lines, bicycles, utility poles, overhead wires and mature trees. Quiet, lived-in atmosphere. No shops, advertisements, crowds, cafés, or commercial activity. VISUAL STYLE: Ultra-realistic documentary home-video footage from an early-2000s consumer DV camcorder. Imperfect handheld operation, natural camera shake, awkward framing, occasional reframing, autofocus hunting, slight lens breathing, exposure pumping between sunlight and shade, subtle motion blur, mild rolling shutter, faded colors, soft contrast, slight digital compression and sensor noise. No stabilization, no cinematic camera moves, no modern color grading. Everything must feel genuinely captured, not AI-generated. TIMELINE: 00:00–00:05 — Outside his small house, he sits on a low concrete wall slowly fanning himself with a folded newspaper. Wind moves the leaves above him. He squints slightly into the light and gives a small easy smile while the camera struggles to lock focus. 00:05–00:10 — He walks into a narrow residential alley with slow, deliberate steps, hands loosely clasped behind his back. A stray cat approaches. He stops, bends down carefully with one hand braced on his knee, and gently scratches its head. Autofocus shifts imperfectly between his face and the cat. 00:10–00:15 — In a small front yard, he waters a row of potted plants with a dented metal watering can, pausing to pick off a dead leaf. Water drips naturally while sunlight and cloud shadows subtly change the exposure. 00:15–00:20 — He sits on a quiet terrace with a small ceramic cup of barley tea, casually watching the neighborhood, one hand resting on his knee. He exhales slowly, content. Handheld side angle with natural camera drift. 00:20–00:25 — Close side profile. Someone off-camera casually greets him. He turns unhurriedly, smiles warmly with deep creases around his eyes, raises his hand slightly and naturally says, \"어, 안녕하세요.\" The camera reacts slightly late. 00:25–00:30 — He walks slowly down a tree-lined residential lane, hands behind his back, newspaper tucked under one arm. He notices the camera, gives a small amused nod, then looks away and continues walking. The recording abruptly cuts to black mid-motion like an old camcorder being switched off. AUDIO: Only authentic location sound: birds, distant motorcycles, light wind, rustling leaves, faint neighborhood chatter, cat sounds, slow footsteps on concrete, water trickling from the can and subtle residential ambience. Natural Korean speech only. No music, narration, cinematic sound effects, or artificial sound design. GOAL: Make it feel like a forgotten personal home video from the early 2000s — intimate, spontaneous, imperfect, warm, mundane and deeply believable. Prioritize realistic human motion, natural facial expressions, physical interaction, environmental detail and consistent identity over cinematic beauty."
+    },
+    {
       "id": "x-public-2086806078105551218",
       "title": "Seedance 2.5 Prompt: Create a 30-second ultra-realistic candid home-video sequence of a young Ko",
       "description": "Seedance 2.5 Prompt: Create a 30-second ultra-realistic candid home-video sequence of a young Korean woman in her early 20s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Young Korea",
@@ -1942,6 +1987,49 @@
       "rawText": "She walked through the Country while everyone else accidentally became the background instantly. GPT Image 2 + Seedance 2.0 on @Sjolt_ai prompt A 15-second hyper-realistic cinematic fashion campaign video. European woman, fair glowing skin, sharp features, wavy blonde hair in sleek high ponytail, small dark rectangular sunglasses, pearl drop earring, oversized light blue black-red graphic streetwear jersey, sage green wide-leg trousers, black pointed-toe heels, babypink smooth leather hobo shoulder bag with gold dome studs hanging naturally on arm throughout all scenes. Scene 1 · 3 sec Full body wide shot. She stands alone on Paris cobblestone street corner, adjusting sunglasses with one hand, babypink bag hanging naturally on arm, warm golden hour light, real people and city chaos blurring around her, classic Haussmann buildings background. Scene 2 · 3 sec Full body shot. She strides boldly across Paris zebra crossing on Champs-Elysees, iced coffee cup in one hand, babypink bag with gold studs swinging on other arm, mouth slightly open as if singing, bold confident walk, cars and city blurring behind her. Scene 3 · 3 sec Full cinematic wide establishing shot. She is tiny in center of frame walking down grand Paris boulevard, Arc de Triomphe massive in background, real crowd of people around her, babypink bag clearly visible as burgundy detail on her arm. Scene 4 · 3 sec Medium shot. She stops on a sunlit Paris cobblestone street, spontaneous small carefree dance move, arms slightly out, babypink bag swinging naturally, street musician blurred in background, joyful open expression, warm golden light on face. Scene 5 · 3 sec Medium close-up. She stands inside Paris Metro carriage holding pole, slowly pushes sunglasses up with one finger, slight smirk, babypink bag with gold dome studs clearly visible on arm, moody warm metro overhead lighting, other passengers naturally blurred in background. Smooth seamless transitions between all 5 scenes. Overall mood: Candid chaotic Parisian city energy, luxury streetwear editorial, golden hour warmth, shot on Canon EOS R5 35mm f/1.4, Kodak Portra 400 film tone, natural film grain, handheld camera movement, real people in background every scene, hyper-realistic photography feel, no plastic skin, no robotic movement, no stiff poses, no AI artifacts. AVOID: cartoon, CGI, plastic skin, robotic movement, stiff poses, blurry face, overexposed, watermark, text overlay, logo, AI generated look, jerky motion, empty streets, studio background, fake crowd, extra fingers, deformed"
     },
     {
+      "id": "x-public-2087007818721423855",
+      "title": "Seedance 2.5 on @openartai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photoreal",
+      "description": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individua",
+      "prompt": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/frametheory058/status/2087007818721423855",
+      "sourceType": "x",
+      "authorName": "Nexora",
+      "authorHandle": "@frametheory058",
+      "createdAt": "2026-08-11T02:46:53.000Z",
+      "importedAt": "2026-08-17T08:07:23.862Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 345,
+        "reposts": 36,
+        "replies": 70,
+        "quotes": 6,
+        "bookmarks": 256,
+        "views": 47991,
+        "score": 1786
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark."
+    },
+    {
       "id": "x-public-2085614605720752171",
       "title": "AI video creation is moving fast. One update I’m watching is Wizstar’s upcoming integration with",
       "description": "AI video creation is moving fast. One update I’m watching is Wizstar’s upcoming integration with Seedance 2.5. From what I’ve seen so far, the video results look promising, especially in visual quality and motion consist",
@@ -2155,49 +2243,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Can't get enough of Seedance 2.5. The best part is it can generate 30s video in one single prompt, and the result is so realistic! So, here's another one that I made using @capcutapp. Prompt: [STYLE + CAMERA + ATMOSPHERE] Gritty, raw handheld 35mm film aesthetic with natural film grain. Harsh direct sunlight creating high-contrast shadows over a dramatic coastal cliff and open ocean. Continuous single-take handheld tracking shot (3rd-person / over-the-shoulder) with no cuts. Atmosphere: high-altitude wind, realistic coastal cliff and ocean physics, sudden wingsuit deployment. Audio: heavy rhythmic breathing, intense wind howl, fabric snap of wingsuit opening, high-speed air rush over open water, near-miss whooshes past yachts, soft landing roll on sand, distant ocean waves and beach ambient noise, final bite sounds. [IMAGE REFERENCES] Use the provided Hoshino character sheet as the single strict visual reference for the male character. Exact face, black hair, dark brown eyes, lean athletic build (178 cm), gold earrings, and overall facial structure locked from the reference. Outfit: modern high-performance cliff-jumping wingsuit — sleek, form-fitting design in matte charcoal black with sharp white paneling and subtle gold zipper accents (matching his minimalist aesthetic). The wingsuit is worn from the start with a matching technical backpack. Body proportions, posture, and face remain fully locked to the Hoshino reference. [TIMELINE SECOND BY SECOND] 0-3s: [Handheld medium] Hoshino stands on the edge of a high rocky cliff overlooking the open ocean, wearing his charcoal-and-white wingsuit and technical backpack. He looks straight into the camera with calm, confident intensity, then turns and launches into a clear, controlled forward somersault in slow motion as he leaves the cliff edge. 3-5s: [Continuous freefall] He completes the somersault and falls head-first toward the sea. At exactly 1.5 seconds into the fall he fully deploys the wingsuit with a sharp snap. The wing membranes inflate and he levels out into a smooth glide. 5-12s: [High-speed tracking] Camera stays locked behind him as he rockets at full speed just above the ocean surface along the coastline. He weaves tightly past sheer cliff faces, banking hard left and right, turquoise water and rocky walls streaking past at extreme velocity. 12-18s: [Low-level chaos] He drops lower, flying just above the water. He almost collides with a large luxury yacht that suddenly turns, banks hard to avoid it, then narrowly misses a smaller motor yacht. He dips under a yacht’s outstretched boom and threads between two more vessels. 18-23s: [Water-level action] Still flying extremely low over the sea, he dodges a startled seabird that dives across his path, skims past a group of people on a nearby yacht who scatter in surprise, and banks sharply to avoid an open yacht swim platform. The camera stays locked behind him through every near-miss. 23-26s: [Landing] He flares the wingsuit hard, touches down with both feet on the soft beach sand and immediately rolls forward to kill the speed. He stands up, peels off the wingsuit in one fluid motion and drops it on the sand beside him, revealing a clean fitted white undershirt underneath. 26-28s: [Beach level] He walks a few steps still wearing the backpack and stops right in front of a classic beachside hot-dog cart. The vendor hands him a steaming hot dog fresh off the grill. 28-30s: [Close continuous] He turns, looks directly into the camera, takes a big bite of the hot dog and chews with a calm, satisfied expression as the shot holds. [STYLE & QUALITY BOOSTERS] Photorealistic 8K, ultra-detailed textures, cinematic lighting, perfect motion blur, high dynamic range, coherent physics (fabric, air, wingsuit membranes, impact, roll, near-misses with yachts, water spray), stable character locked to the Hoshino reference, realistic ocean reflections, cliff rock textures and wind, no artifacts, movie-level stability, pure single continuous take."
-    },
-    {
-      "id": "x-public-2087007818721423855",
-      "title": "Seedance 2.5 on @openartai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photoreal",
-      "description": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individua",
-      "prompt": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/frametheory058/status/2087007818721423855",
-      "sourceType": "x",
-      "authorName": "Nexora",
-      "authorHandle": "@frametheory058",
-      "createdAt": "2026-08-11T02:46:53.000Z",
-      "importedAt": "2026-08-12T14:36:55.711Z",
-      "tags": [
-        "Seedance",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 333,
-        "reposts": 35,
-        "replies": 66,
-        "quotes": 6,
-        "bookmarks": 240,
-        "views": 45452,
-        "score": 1701
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Seedance 2.5 on @openart_ai Prompt: Create a 30-second vertical 9:16, 24fps, 8K-quality photorealistic live-action fantasy sequence from a first-person rider POV. A massive original obsidian-crimson dragon with individually detailed scales, subtle dark mottling, molten-gold eyes, volcanic-black swept-back horns, blade-like dorsal fins, burgundy-red translucent wings and faint ember-like fissures across its body. Rider wears black leather gloves, dark-green sleeves and weathered leather bracers, holding heavy chain reins from a worn brown studded saddle. Begin with the dragon calmly breathing on a wet emerald coastal cliff; it slowly turns toward camera and the rider gently pets its neck. Suddenly it lowers its body, launches across the grass and leaps from the cliff. Dive steeply toward the grey-green ocean, deploy huge wings with realistic membrane movement, then skim just above the water with spray hitting the lens. Perform a dramatic high-speed bank around a sea stack, then plunge directly underwater. Brief dark-teal underwater silence with bubbles and faint crimson glow, followed by a powerful eruption through the ocean. Finish with a calm glide above foggy water as the dragon slowly turns and looks toward the rider. Use physically accurate anatomy, weight, gravity, wing aerodynamics, water physics, scale deformation, wind and environmental interaction. Natural rider-mounted camera movement, realistic motion blur, lens droplets, focus breathing, subtle handheld vibration, cinematic depth of field, soft overcast lighting, HDR, restrained film grain and natural cinematic color grading. Audio: atmospheric drone → intimate cello → rising orchestral tension → massive launch/flight score → intense percussion during the bank → muffled underwater audio → epic orchestral return during emergence → soft cello/piano ending. Layer detailed ASMR/SFX: dragon breathing, scales, leather, reins, claws scraping soil, wind, wingbeats, water spray, bubbles, ocean impact and a deep natural dragon roar. Make it indistinguishable from expensive real live-action cinema. No AI look, cartoon, anime, game CGI, plastic textures, fake physics, neon glow, oversaturation, distorted anatomy, extra limbs, text or watermark."
     },
     {
       "id": "x-public-2073498982731718929",
@@ -3870,6 +3915,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Simple Blender animation → Seedance 2.0 → stylized AI video. This workflow uses basic 3D motion as a guide, then applies the look and detail from a reference image. To try this workflow, link below 👇"
+    },
+    {
+      "id": "x-public-2086958485741441240",
+      "title": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生",
+      "description": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生成的图片，生成一分钟左右的电影预告片视频，图生视频，用的是turbo LoRA ，生视频效果还不错。 Seedance prompt 非常简单，就是把图片上的元素怎么动起来怎么运镜描述一下就行。",
+      "prompt": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生成的图片，生成一分钟左右的电影预告片视频，图生视频，用的是turbo LoRA ，生视频效果还不错。 Seedance prompt 非常简单，就是把图片上的元素怎么动起来怎么运镜描述一下就行。",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/PixelAigc/status/2086958485741441240",
+      "sourceType": "x",
+      "authorName": "PixelAIGC",
+      "authorHandle": "@PixelAigc",
+      "createdAt": "2026-08-10T23:30:51.000Z",
+      "importedAt": "2026-08-17T08:07:23.862Z",
+      "tags": [
+        "Midjourney",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 259,
+        "reposts": 21,
+        "replies": 30,
+        "quotes": 4,
+        "bookmarks": 164,
+        "views": 21870,
+        "score": 1180
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生成的图片，生成一分钟左右的电影预告片视频，图生视频，用的是turbo LoRA ，生视频效果还不错。 Seedance prompt 非常简单，就是把图片上的元素怎么动起来怎么运镜描述一下就行。"
     },
     {
       "id": "x-public-2085001649550995541",
@@ -5803,6 +5891,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.0 on @nadou_pro Prompt: { \"video_prompt\": \"A first-person POV shot of a hand holding a black marker, pointing it at real-world objects in an urban city setting. The video uses a creative 'doodle overlay' effect. As the hand waves the marker with a swift motion, real-world objects instantly transform into cute, 2D cartoon animations with clean blue and white outlines. 1. A real subway train passing on an elevated track transforms into a playful, minimalist blue and white cartoon train. 2. A real pigeon on a paved sidewalk transforms into a stylized white cartoon bird flying away, leaving small hand-drawn dust clouds. 3. A real green bus driving on a city street transforms into a giant, adorable 2D animated orange tabby cat walking casually. 4. A real woman sitting at a bus stop transforms into a classic 2D anime-style girl waving happily. The final shot shows the hand tossing an object into the sky, transforming the entire city sky into a bright, vibrant anime sunset with fluffy white clouds and a smiling cartoon sun. Smooth transitions, playful and whimsical energy, high-contrast mix of live-action and 2D cel animation.\" } Frame-by-Frame Generation Prompts If you want to generate the specific static assets or concepts individually, you can use these tailored image prompts: * The Cartoon Train: > A crisp first-person POV photograph of a hand holding a black marker aimed at an elevated city train track. Overlaid on the real scene is a bright 2D vector doodle of a minimalist blue and white cartoon subway train passing by. Playful, mixed media, urban street style. > * The Pigeon Transformation: > First-person perspective looking down at a paved city sidewalk. A hand holds a black marker, pointing at a stylized, hand-drawn 2D white cartoon dove that is mid-flight, bursting out from where a real bird just stood. Whimsical line art overlay. > * The Giant Cat Bus: > A wide POV shot of a city street next to a sidewalk. A hand with a marker is tracking a giant, cute 2D animated orange tabby cat with green eyes as it walks down the vehicle lane where a bus should be. High contrast between the realistic asphalt and the bright, solid-colored character art. > * The Anime Sky: > A low-angle POV shot looking up past city high-rise apartments into the sky. The realistic sky transitions instantly into a beautiful, vibrant 2D anime-style pastel sunset filled with soft, puffy white clouds and a simple, cheerful cartoon sun illustration. >"
+    },
+    {
+      "id": "x-public-2088622806347227287",
+      "title": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！",
+      "description": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！！ 以前我得开五六个客户端，Claude 写完复制到 Midjourney 出图，再切到 Codex 写代码，脑子都要炸了 现在 dethink 直接把这些全塞进来了 一个界面切遍所有模型——Claude、Grok、Gemini、DeepSeek、",
+      "prompt": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！！ 以前我得开五六个客户端，Claude 写完复制到 Midjourney 出图，再切到 Codex 写代码，脑子都要炸了 现在 dethink 直接把这些全塞进来了 一个界面切遍所有模型——Claude、Grok、Gemini、DeepSeek、Kimi、GLM 关键是 Claude Code 和 Codex 也在里面，编码、写作、生图，一个工作台全干了 更爽的是什么？微信、支付宝直接付款 不需要外币卡，不需要找代充，不需要担心封号 $20 / $100 / $200 三档套餐，按 token 计费，用多少算多少 以前想用多个模型，要么分别订阅（每个月固定扣费，用不用都得付），要么来回切账号 dethink 按 token 计费，$20 / $100 / $200 三档，用多少算多少 对我这种有时候用得多、有时候用得少的人来说，这种灵活性才是真正省钱的地方 而且所有模型在一个工作台里，Claude 写文案、Grok 出图、Gemini 做分析，切换无缝 省下的不只是钱，是那种\"终于不用管支付问题、不用来回切工具“的心智负担 还有三个让我意外的点： 1. 数据聚合直接内置 想查抖音、小红书、YouTube、X 的热点？直接在 dethink 里搜 以前我得开 Semrush、飞瓜、新榜好几个工具，现在一个地方全搞定 做选题、找热点、SEO 分析，效率直接翻倍 2. 图像生成的组合玩法 你可以用 Claude 理解需求、优化提示词，然后调用 GPT Image 2 或 Grok Image 出图 相当于把“最会理解人话的模型”和“最会画图的模型”组合起来用 以前我得在 Claude 和 Midjourney 之间来回复制粘贴，现在一句话搞定 3. 桌面端真的好用 Windows 和 macOS 都支持，本地文件直接拖进去就能让 AI 处理 做 Agent 任务、跑工作流，比网页版丝滑太多 现在 dethink 8月15日刚上线，前 500 名注册直接送 $5 使用额度 给大家申请了8折优惠码，限量500个！先到先得了：DETHINK2026 如果你也在用多个 AI 工具，每个月为订阅费头疼 或者你想用海外模型但支付一直是个坎，真的可以试试 dethink 链接：",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/yaohui12138/status/2088622806347227287",
+      "sourceType": "x",
+      "authorName": "超级个体｜柿子",
+      "authorHandle": "@yaohui12138",
+      "createdAt": "2026-08-15T13:44:16.000Z",
+      "importedAt": "2026-08-17T08:07:23.860Z",
+      "tags": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Midjourney"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Midjourney"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "工具工作流",
+      "metrics": {
+        "likes": 80,
+        "reposts": 18,
+        "replies": 65,
+        "quotes": 15,
+        "bookmarks": 106,
+        "views": 83767,
+        "score": 828
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！！ 以前我得开五六个客户端，Claude 写完复制到 Midjourney 出图，再切到 Codex 写代码，脑子都要炸了 现在 dethink 直接把这些全塞进来了 一个界面切遍所有模型——Claude、Grok、Gemini、DeepSeek、Kimi、GLM 关键是 Claude Code 和 Codex 也在里面，编码、写作、生图，一个工作台全干了 更爽的是什么？微信、支付宝直接付款 不需要外币卡，不需要找代充，不需要担心封号 $20 / $100 / $200 三档套餐，按 token 计费，用多少算多少 以前想用多个模型，要么分别订阅（每个月固定扣费，用不用都得付），要么来回切账号 dethink 按 token 计费，$20 / $100 / $200 三档，用多少算多少 对我这种有时候用得多、有时候用得少的人来说，这种灵活性才是真正省钱的地方 而且所有模型在一个工作台里，Claude 写文案、Grok 出图、Gemini 做分析，切换无缝 省下的不只是钱，是那种\"终于不用管支付问题、不用来回切工具“的心智负担 还有三个让我意外的点： 1. 数据聚合直接内置 想查抖音、小红书、YouTube、X 的热点？直接在 dethink 里搜 以前我得开 Semrush、飞瓜、新榜好几个工具，现在一个地方全搞定 做选题、找热点、SEO 分析，效率直接翻倍 2. 图像生成的组合玩法 你可以用 Claude 理解需求、优化提示词，然后调用 GPT Image 2 或 Grok Image 出图 相当于把“最会理解人话的模型”和“最会画图的模型”组合起来用 以前我得在 Claude 和 Midjourney 之间来回复制粘贴，现在一句话搞定 3. 桌面端真的好用 Windows 和 macOS 都支持，本地文件直接拖进去就能让 AI 处理 做 Agent 任务、跑工作流，比网页版丝滑太多 现在 dethink 8月15日刚上线，前 500 名注册直接送 $5 使用额度 给大家申请了8折优惠码，限量500个！先到先得了：DETHINK2026 如果你也在用多个 AI 工具，每个月为订阅费头疼 或者你想用海外模型但支付一直是个坎，真的可以试试 dethink 链接："
     },
     {
       "id": "x-public-2083637656676860168",
@@ -12262,7 +12394,7 @@
       "authorName": "まゆひらa",
       "authorHandle": "@riddi0908",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.580Z",
+      "importedAt": "2026-08-17T08:07:20.615Z",
       "tags": [
         "Kling"
       ],
@@ -12305,7 +12437,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.581Z",
+      "importedAt": "2026-08-17T08:07:20.615Z",
       "tags": [
         "人像",
         "摄影"
@@ -12347,7 +12479,7 @@
       "authorName": "河合聖人🩷",
       "authorHandle": "@LorraineTu7cq0",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.581Z",
+      "importedAt": "2026-08-17T08:07:20.616Z",
       "tags": [
         "人像"
       ],
@@ -12388,7 +12520,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.582Z",
+      "importedAt": "2026-08-17T08:07:20.616Z",
       "tags": [
         "人像",
         "摄影"
@@ -12430,7 +12562,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.582Z",
+      "importedAt": "2026-08-17T08:07:20.616Z",
       "tags": [
         "人像",
         "摄影"
@@ -12472,7 +12604,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.582Z",
+      "importedAt": "2026-08-17T08:07:20.616Z",
       "tags": [
         "人像",
         "摄影"
@@ -12514,7 +12646,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.619Z",
       "tags": [
         "人像",
         "摄影"
@@ -12556,7 +12688,7 @@
       "authorName": "ρ:ɡeon",
       "authorHandle": "@pigeon__s",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.585Z",
+      "importedAt": "2026-08-17T08:07:20.619Z",
       "tags": [
         "摄影"
       ],
@@ -12597,7 +12729,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.585Z",
+      "importedAt": "2026-08-17T08:07:20.619Z",
       "tags": [
         "人像",
         "摄影"
@@ -12639,7 +12771,7 @@
       "authorName": "AIVideoHub 🕊️",
       "authorHandle": "@AIVideoHub_",
       "createdAt": "2026-08-16T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.585Z",
+      "importedAt": "2026-08-17T08:07:20.619Z",
       "tags": [
         "人像",
         "视频",
@@ -12682,7 +12814,7 @@
       "authorName": "Aatif J",
       "authorHandle": "@aatif_j",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.582Z",
+      "importedAt": "2026-08-17T08:07:20.616Z",
       "tags": [
         "人像",
         "摄影"
@@ -12724,7 +12856,7 @@
       "authorName": "Aatif J",
       "authorHandle": "@aatif_j",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.582Z",
+      "importedAt": "2026-08-17T08:07:20.617Z",
       "tags": [
         "人像",
         "摄影"
@@ -12766,7 +12898,7 @@
       "authorName": "Johnn",
       "authorHandle": "@john_my07",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.617Z",
       "tags": [
         "人像",
         "摄影"
@@ -12808,7 +12940,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.617Z",
       "tags": [
         "人像",
         "摄影"
@@ -12850,7 +12982,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.617Z",
       "tags": [
         "人像",
         "摄影"
@@ -12892,7 +13024,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像",
         "摄影"
@@ -12934,7 +13066,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像",
         "摄影"
@@ -12976,7 +13108,7 @@
       "authorName": "LANDCÄSTER.EXE",
       "authorHandle": "@LANDCASTER_92",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.583Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像",
         "摄影"
@@ -13018,7 +13150,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-15T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.585Z",
+      "importedAt": "2026-08-17T08:07:20.619Z",
       "tags": [
         "人像",
         "摄影"
@@ -13312,7 +13444,7 @@
       "authorName": "青 露花",
       "authorHandle": "@aoao_roca",
       "createdAt": "2026-08-14T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -13351,7 +13483,7 @@
       "authorName": "vevrier90333",
       "authorHandle": "@vevrier9033833",
       "createdAt": "2026-08-14T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像"
       ],
@@ -13392,7 +13524,7 @@
       "authorName": "Jack",
       "authorHandle": "@j_smeaton99",
       "createdAt": "2026-08-14T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像",
         "摄影"
@@ -13434,7 +13566,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-14T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像",
         "摄影"
@@ -13476,7 +13608,7 @@
       "authorName": "lovimg_com",
       "authorHandle": "@lovimg_com",
       "createdAt": "2026-08-14T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.584Z",
+      "importedAt": "2026-08-17T08:07:20.618Z",
       "tags": [
         "人像"
       ],
@@ -40685,7 +40817,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.599Z",
+      "importedAt": "2026-08-17T08:07:20.632Z",
       "tags": [
         "产品",
         "平面设计",
@@ -40728,7 +40860,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.599Z",
+      "importedAt": "2026-08-17T08:07:20.632Z",
       "tags": [
         "平面设计"
       ],
@@ -40769,7 +40901,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-17T02:42:38.599Z",
+      "importedAt": "2026-08-17T08:07:20.632Z",
       "tags": [
         "平面设计"
       ],
