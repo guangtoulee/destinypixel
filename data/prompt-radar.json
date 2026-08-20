@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-19T14:06:56.919Z",
+  "updatedAt": "2026-08-20T02:38:42.627Z",
   "sourceSummary": {
     "community": 728,
-    "publicX": 319,
-    "total": 1047
+    "publicX": 321,
+    "total": 1049
   },
   "items": [
     {
@@ -5924,6 +5924,49 @@
       "rawText": "holy.. Claude does motion design now 🤯 you describe the video in chat and Higgsfield’s MCP handles the rest - model choice, the shots, the render, the finished file. the mechanism: one OAuth connection, 30+ video models inside Claude - Veo 3.1, Sora 2, Kling 3.0. you describe the shot, Claude picks the model and returns the finished clip. up to 4K, 15s. no key, no editor. how to set up (2 min): 1.  → Settings → Connectors → Add custom connector 2. paste  3. sign in with your Higgsfield account - OAuth, no key then just ask: “make me a 9:16 clip of…” that’s the full setup. your buddy’s still stitching renders across four browser tabs. you type one sentence and the shot comes back done."
     },
     {
+      "id": "x-public-2090048893144690755",
+      "title": "The more AI-generated footage you have, the more important precise editing becomes. Seedance 2.5",
+      "description": "The more AI-generated footage you have, the more important precise editing becomes. Seedance 2.5 is already available on CapCut, and Seedance 2.5 1080p is now live. My workflow would be: AI Image → batch-create visual as",
+      "prompt": "The more AI-generated footage you have, the more important precise editing becomes. Seedance 2.5 is already available on CapCut, and Seedance 2.5 1080p is now live. My workflow would be: AI Image → batch-create visual assets AI Video → create different scenes and variations CapCut PC → build everything on the timeline AI Edit → refine individual details AI Extend → continue scenes Edit Pilot → handle repetitive changes Multi-track editing → finish the video The interesting part isn’t just having an AI video generator. It’s having a complete path from generation to controlled post-production. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/NyamaQuarter/status/2090048893144690755",
+      "sourceType": "x",
+      "authorName": "Nyama Quarter",
+      "authorHandle": "@NyamaQuarter",
+      "createdAt": "2026-08-19T12:11:02.000Z",
+      "importedAt": "2026-08-20T02:38:42.606Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 89,
+        "reposts": 81,
+        "replies": 21,
+        "quotes": 0,
+        "bookmarks": 37,
+        "views": 117889,
+        "score": 870
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "The more AI-generated footage you have, the more important precise editing becomes. Seedance 2.5 is already available on CapCut, and Seedance 2.5 1080p is now live. My workflow would be: AI Image → batch-create visual assets AI Video → create different scenes and variations CapCut PC → build everything on the timeline AI Edit → refine individual details AI Extend → continue scenes Edit Pilot → handle repetitive changes Multi-track editing → finish the video The interesting part isn’t just having an AI video generator. It’s having a complete path from generation to controlled post-production. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
+    },
+    {
       "id": "x-public-2083884602511552627",
       "title": "Creating one AI video is easy. Keeping the character, product, scene and camera plan consistent—",
       "description": "Creating one AI video is easy. Keeping the character, product, scene and camera plan consistent—and handling client revisions—is the hard part. Seedance 2.5 launches globally first on Bytedance’s Dreamina. Backed by the ",
@@ -8348,6 +8391,48 @@
       "rawText": "Just finished a 30-second cinematic delivery story using Seedance 2.5, now available on @itsPolloAI The realistic scooter action, dynamic city shots, smooth camera movement, and consistent character really stood out. And right now, you can get Seedance 2.5 on Pollo AI for 50% OFF for a limited time. Prompt : Create an ultra-realistic cinematic delivery-rider story with a strong orange brand identity. She wears a professional orange delivery jacket, orange helmet, dark fitted cargo pants, practical sneakers, and an orange delivery backpack. Her scooter/motorbike is also orange with subtle matching details. Keep the same outfit, bike, helmet, and backpack consistent in every scene. The video opens with her relaxing at home when her phone suddenly receives a new food-delivery order. She checks the notification, quickly grabs her orange helmet and delivery bag, and heads outside with a focused but energetic expression. She starts her orange scooter, pulls onto a busy city street, and navigates through realistic traffic. Use dynamic tracking shots, helmet-mounted POV, low-angle wheel shots, side tracking shots, and close-ups of her focused face and hands controlling the bike. She checks her watch while stopped safely at a traffic signal, realizes she needs to move quickly, and continues through the city. Show her arriving at the restaurant, parking the scooter, rushing inside, and receiving a freshly packed food order from the staff. She secures the package inside her orange delivery bag and immediately rides toward the customer's location. Show fast-paced but safe city movement, changing streets, traffic, sunlight reflections, and realistic urban atmosphere. She arrives at the destination, quickly removes her helmet, grabs the delivery bag, and walks toward the customer. She hands over the food with a warm smile, checks her phone showing the completed delivery, and looks relieved and proud. Finish with a cinematic hero shot of her getting back onto the orange scooter and riding away through the glowing city street as the camera follows from behind. Style: Premium cinematic commercial, realistic delivery-rider lifestyle, energetic storytelling, strong orange-and-black visual identity, natural expressions, realistic traffic, authentic urban environments, dynamic handheld and gimbal camera movement, dramatic low angles, POV shots, shallow depth of field, realistic motion blur, physically accurate lighting, detailed fabric and vehicle textures, photorealistic 4K HDR, polished brand-film quality."
     },
     {
+      "id": "x-public-2089756041617834085",
+      "title": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch gene",
+      "description": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available",
+      "prompt": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available on CapCut, and Seedance 2.5 1080p is now live. The interesting part about Edit Pilot is the conversational editing layer. When you have a large batch of AI-generated clips, you can describe the changes you need instead of manually repeating the same editing process. Then refine individual shots with AI Edit, extend the strongest scenes, and finish captions, voiceover, color and different formats on the same timeline. That’s how AI video generation becomes an actual end-to-end workflow. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Onil_coder/status/2089756041617834085",
+      "sourceType": "x",
+      "authorName": "Onil Coder",
+      "authorHandle": "@Onil_coder",
+      "createdAt": "2026-08-18T16:47:20.000Z",
+      "importedAt": "2026-08-20T02:38:42.606Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 84,
+        "reposts": 60,
+        "replies": 32,
+        "quotes": 0,
+        "bookmarks": 18,
+        "views": 16855,
+        "score": 528
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available on CapCut, and Seedance 2.5 1080p is now live. The interesting part about Edit Pilot is the conversational editing layer. When you have a large batch of AI-generated clips, you can describe the changes you need instead of manually repeating the same editing process. Then refine individual shots with AI Edit, extend the strongest scenes, and finish captions, voiceover, color and different formats on the same timeline. That’s how AI video generation becomes an actual end-to-end workflow. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
+    },
+    {
       "id": "x-public-2086735082308657236",
       "title": "Seedance 2.5 is now available on CapCut, and AI video creation just got way more powerful. You c",
       "description": "Seedance 2.5 is now available on CapCut, and AI video creation just got way more powerful. You can now generate, control, and edit videos in one place with features like: ✅ More precise video generation & editing ✅ Times",
@@ -9125,48 +9210,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI shorts video, mixed media vibe. You can easily mix different kind of medium using Seedance 2.0 in just one prompt. Create a single character in Midjourney, no character sheets. Prompt scene by scene the camera moves and character actions. Introduce your new medium . Watercolor appearance, comic onomatopoeia, anime tornadoes… And tadaaa! 90’s vibe ☺️"
-    },
-    {
-      "id": "x-public-2089756041617834085",
-      "title": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch gene",
-      "description": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available",
-      "prompt": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available on CapCut, and Seedance 2.5 1080p is now live. The interesting part about Edit Pilot is the conversational editing layer. When you have a large batch of AI-generated clips, you can describe the changes you need instead of manually repeating the same editing process. Then refine individual shots with AI Edit, extend the strongest scenes, and finish captions, voiceover, color and different formats on the same timeline. That’s how AI video generation becomes an actual end-to-end workflow. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Onil_coder/status/2089756041617834085",
-      "sourceType": "x",
-      "authorName": "Onil Coder",
-      "authorHandle": "@Onil_coder",
-      "createdAt": "2026-08-18T16:47:20.000Z",
-      "importedAt": "2026-08-19T08:04:01.718Z",
-      "tags": [
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 70,
-        "reposts": 53,
-        "replies": 28,
-        "quotes": 0,
-        "bookmarks": 15,
-        "views": 16193,
-        "score": 457
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available on CapCut, and Seedance 2.5 1080p is now live. The interesting part about Edit Pilot is the conversational editing layer. When you have a large batch of AI-generated clips, you can describe the changes you need instead of manually repeating the same editing process. Then refine individual shots with AI Edit, extend the strongest scenes, and finish captions, voiceover, color and different formats on the same timeline. That’s how AI video generation becomes an actual end-to-end workflow. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
     },
     {
       "id": "x-public-2084833267719799061",
@@ -9947,6 +9990,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "HIS $8K SITES ARE LEVEL SEVEN CLAUDE BUILDS AND YOURS IS STILL AT LEVEL ONE someone finally ranked claude code websites on a ladder, seven rungs from \"chatbot prompt\" to \"design extraction,\" and 95% of what claude ships lands on the bottom two because nobody stacked the levels above the seven levels of a claude code website: level one, grab-and-go, one line prompt treated like a chatbot, output looks like every ai template on the timeline level two, references, feed it real screenshots from  land-book, awwwards or dribbble instead of the word \"premium\" level three, design skills, load ui ux pro max (67 ui styles, 161 palettes), shadcn ui and power design straight into claude level four, image and video, connect openart via mcp so claude generates nano banana 2 hero images and seedance 2 product motion inside the same build level five, ui sniping, paste components from  codepen, magic ui and mobbin and tell claude to integrate them verbatim level six, data, hook up firecrawl mcp and have claude scrape 10 winners vs 10 losers in the niche, score the pattern and hand back a conversion blueprint level seven, design extraction, point claude at one reference site and have it pull the typography, palette and interaction language into its own skill file by level seven the model has references, design skills, a media pipeline, sniped components, competitor data and an extracted design language sitting on top of the base intelligence, and the $100 chatbot site nobody wants to pay for lives six rungs below the stack that actually sells the local guy is still on level one, prompting \"make it look nice\" and calling that a delivery save the seven-level ladder, exact tools per level are in the guide below"
+    },
+    {
+      "id": "x-public-2089889694435754263",
+      "title": "grok imagine 2.0 prompt: 统一设定： 9:16竖屏短视频，自拍视频风格。成年女性主角 ￼ Image 1 穿 ￼ Image 2 ，长发自然披散，左手拿手机...",
+      "description": "grok imagine 2.0 prompt: ``` 统一设定： 9:16竖屏短视频，自拍视频风格。成年女性主角 ￼ Image 1 穿 ￼ Image 2 ，长发自然披散，左手拿手机对着镜子拍摄。灰色瓷砖浴室，清晨柔和冷白光，镜面干净，真实手机自拍质感，轻微手持晃动，嘴型同步准确。  整体风格： 高级晨间自信感，轻熟、松弛、优雅，像一段电影感晨间独白。主角刚醒来，但状态很稳，眼神清醒，表情温柔，动作自然克制。没有刻意挑逗，没有低俗",
+      "prompt": "grok imagine 2.0 prompt: ``` 统一设定： 9:16竖屏短视频，自拍视频风格。成年女性主角 ￼ Image 1 穿 ￼ Image 2 ，长发自然披散，左手拿手机对着镜子拍摄。灰色瓷砖浴室，清晨柔和冷白光，镜面干净，真实手机自拍质感，轻微手持晃动，嘴型同步准确。  整体风格： 高级晨间自信感，轻熟、松弛、优雅，像一段电影感晨间独白。主角刚醒来，但状态很稳，眼神清醒，表情温柔，动作自然克制。没有刻意挑逗，没有低俗动作，重点表现“自信、从容、好状态、今天会很好”。  动作姿态： 主角站在镜子前，肩膀自然放松，身体微微侧向镜子，轻轻整理头发，偶尔看向镜中的自己，再看向手机镜头。右手轻轻放在胸前表达自我确认，随后自然向外打开，像把好状态交给今天。动作幅度小，优雅、松弛、真实。背景关键词：  第1段 0:00-0:15 前景： 主角左手拿手机自拍，右手轻轻整理头发，眼神从镜中自己转向镜头，微微一笑。她语气轻柔但坚定，像刚起床给自己一句很温柔的提醒。 她说： “早上醒来第一件事，先看看自己。没关系，今天不用急着完美，只要干净、清醒、漂亮地开始。状态会慢慢回来，好运也会慢慢靠近。” 镜面边缘出现极简白色手写字，缓慢浮现又消失： ```  背景关键词： 镜面边缘出现极简白色手写字，轻轻浮现： “清醒” “漂亮” “松弛” “好运” “出发” 声音： 低沉柔软的成年女性中文声音，语速慢，带一点慵懒拖音。无音乐或极弱环境氛围音，浴室轻微回声，衣料摩擦声、手机轻微晃动声自然存在。 避免： 低俗挑逗、色情动作、裸露、夸张舔唇、过度扭腰、身体比例变形、脸部变化、服装变化、手机消失、镜中人物不一致、字幕乱码、水印、额外人物。",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/john87445528/status/2089889694435754263",
+      "sourceType": "x",
+      "authorName": "John",
+      "authorHandle": "@john87445528",
+      "createdAt": "2026-08-19T01:38:26.000Z",
+      "importedAt": "2026-08-20T02:38:42.604Z",
+      "tags": [
+        "Grok Imagine",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 52,
+        "reposts": 7,
+        "replies": 33,
+        "quotes": 1,
+        "bookmarks": 29,
+        "views": 52033,
+        "score": 359
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "grok imagine 2.0 prompt: ``` 统一设定： 9:16竖屏短视频，自拍视频风格。成年女性主角 ￼ Image 1 穿 ￼ Image 2 ，长发自然披散，左手拿手机对着镜子拍摄。灰色瓷砖浴室，清晨柔和冷白光，镜面干净，真实手机自拍质感，轻微手持晃动，嘴型同步准确。  整体风格： 高级晨间自信感，轻熟、松弛、优雅，像一段电影感晨间独白。主角刚醒来，但状态很稳，眼神清醒，表情温柔，动作自然克制。没有刻意挑逗，没有低俗动作，重点表现“自信、从容、好状态、今天会很好”。  动作姿态： 主角站在镜子前，肩膀自然放松，身体微微侧向镜子，轻轻整理头发，偶尔看向镜中的自己，再看向手机镜头。右手轻轻放在胸前表达自我确认，随后自然向外打开，像把好状态交给今天。动作幅度小，优雅、松弛、真实。背景关键词：  第1段 0:00-0:15 前景： 主角左手拿手机自拍，右手轻轻整理头发，眼神从镜中自己转向镜头，微微一笑。她语气轻柔但坚定，像刚起床给自己一句很温柔的提醒。 她说： “早上醒来第一件事，先看看自己。没关系，今天不用急着完美，只要干净、清醒、漂亮地开始。状态会慢慢回来，好运也会慢慢靠近。” 镜面边缘出现极简白色手写字，缓慢浮现又消失： ```  背景关键词： 镜面边缘出现极简白色手写字，轻轻浮现： “清醒” “漂亮” “松弛” “好运” “出发” 声音： 低沉柔软的成年女性中文声音，语速慢，带一点慵懒拖音。无音乐或极弱环境氛围音，浴室轻微回声，衣料摩擦声、手机轻微晃动声自然存在。 避免： 低俗挑逗、色情动作、裸露、夸张舔唇、过度扭腰、身体比例变形、脸部变化、服装变化、手机消失、镜中人物不一致、字幕乱码、水印、额外人物。"
     },
     {
       "id": "x-public-2088285845388505095",
@@ -13080,7 +13166,7 @@
       "authorName": "yuqi295",
       "authorHandle": "@yuqi2956820",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.673Z",
+      "importedAt": "2026-08-20T02:38:39.145Z",
       "tags": [
         "人像"
       ],
@@ -13121,7 +13207,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.674Z",
+      "importedAt": "2026-08-20T02:38:39.146Z",
       "tags": [
         "人像",
         "摄影"
@@ -13163,7 +13249,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.146Z",
       "tags": [
         "人像",
         "摄影"
@@ -13205,7 +13291,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "摄影"
@@ -13247,7 +13333,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "摄影"
       ],
@@ -13288,7 +13374,7 @@
       "authorName": "Sarah",
       "authorHandle": "@AIwithSarah_",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13330,7 +13416,7 @@
       "authorName": "Mr Gafish | 鱼哥",
       "authorHandle": "@MrGafish",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "东方美学",
@@ -13373,7 +13459,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13415,7 +13501,7 @@
       "authorName": "Compound Learning - Tech | Science",
       "authorHandle": "@SheBuildsAI_",
       "createdAt": "2026-08-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13457,7 +13543,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "平面设计",
@@ -13500,7 +13586,7 @@
       "authorName": "Harf_Done",
       "authorHandle": "@half_done_yet",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像"
       ],
@@ -13541,7 +13627,7 @@
       "authorName": "HanaUnivers",
       "authorHandle": "@Hana_tease",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "摄影"
@@ -13583,7 +13669,7 @@
       "authorName": "Ai-Milan",
       "authorHandle": "@milan_ai37766",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "摄影"
@@ -13625,7 +13711,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像"
       ],
@@ -13666,7 +13752,7 @@
       "authorName": "SaaS Junction ✦ Daily AI News & Prompts",
       "authorHandle": "@SaasJunctionHQ",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "平面设计",
@@ -13709,7 +13795,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.675Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "摄影"
@@ -13751,7 +13837,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.147Z",
       "tags": [
         "人像",
         "摄影"
@@ -13793,7 +13879,7 @@
       "authorName": "Harboris",
       "authorHandle": "@harboriis",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像"
       ],
@@ -13834,7 +13920,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13876,7 +13962,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13918,7 +14004,7 @@
       "authorName": "Jahan Zaib",
       "authorHandle": "@jzaib4269",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -13960,7 +14046,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像",
         "摄影"
@@ -14002,7 +14088,7 @@
       "authorName": "Hania Ai",
       "authorHandle": "@HaniaAi12",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像"
       ],
@@ -14043,7 +14129,7 @@
       "authorName": "抹茶オレンジ🧋🍊",
       "authorHandle": "@MATCHA_ORANGE_",
       "createdAt": "2026-08-18T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.676Z",
+      "importedAt": "2026-08-20T02:38:39.148Z",
       "tags": [
         "人像"
       ],
@@ -43931,7 +44017,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.683Z",
+      "importedAt": "2026-08-20T02:38:39.156Z",
       "tags": [
         "产品",
         "平面设计",
@@ -43974,7 +44060,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.683Z",
+      "importedAt": "2026-08-20T02:38:39.156Z",
       "tags": [
         "平面设计"
       ],
@@ -44015,7 +44101,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-19T14:06:52.683Z",
+      "importedAt": "2026-08-20T02:38:39.156Z",
       "tags": [
         "平面设计"
       ],
