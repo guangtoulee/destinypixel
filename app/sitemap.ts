@@ -21,6 +21,7 @@ const publicRoutes = [
   { path: routeSeo.prompt.path, priority: 0.78, changeFrequency: "daily" },
   { path: routeSeo.black.path, priority: 0.42, changeFrequency: "monthly" },
   { path: "/xingpan", priority: 0.86, changeFrequency: "monthly" },
+  { path: "/ultra", priority: 0.9, changeFrequency: "monthly" },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -24,6 +24,13 @@ function smoothstep(min: number, max: number, value: number) {
 
 function buildTimelineCurve(profile: DestinyProfile) {
   const points = profile.cycles.map((cycle, index) => {
+    if (
+      cycle.position?.length === 3 &&
+      cycle.position.every((coordinate) => Number.isFinite(coordinate))
+    ) {
+      return new THREE.Vector3(...cycle.position);
+    }
+
     const x = THREE.MathUtils.lerp(-3.25, 3.25, index / (profile.cycles.length - 1));
     const y = cycle.valence * 0.9 + Math.sin(index * 1.7) * 0.18;
     const z = (cycle.intensity - 0.56) * 0.78 + Math.cos(index * 1.3) * 0.12;
@@ -132,6 +139,112 @@ function TimelineParticleFlow({
     </points>
   );
 }
+
+function DataCoordinateMarkers({
+  profile,
+  transition,
+  compact,
+}: Pick<DestinyCoreProps, "profile" | "transition" | "compact">) {
+  const root = useRef<THREE.Group>(null);
+  const annualMaterial = useRef<THREE.PointsMaterial>(null);
+  const zodiacMaterial = useRef<THREE.PointsMaterial>(null);
+  const annualGeometry = useMemo(() => {
+    const coordinates = profile.cycles.flatMap((cycle) =>
+      (cycle.annualCoordinates ?? []).map((coordinate) => ({ cycle, coordinate })),
+    );
+    const geometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(coordinates.length * 3);
+    const colors = new Float32Array(coordinates.length * 3);
+    const blue = new THREE.Color(profile.palette.blue);
+    const gold = new THREE.Color(profile.palette.gold);
+    const ember = new THREE.Color(profile.palette.ember);
+
+    coordinates.forEach(({ cycle, coordinate }, index) => {
+      coordinate.position.forEach((value, axis) => {
+        positions[index * 3 + axis] = value;
+      });
+      const color = cycle.isCurrent
+        ? ember
+        : blue.clone().lerp(gold, (index % 10) / 12 + 0.12);
+      color.toArray(colors, index * 3);
+    });
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+    geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 8);
+    return geometry;
+  }, [profile.cycles, profile.palette.blue, profile.palette.ember, profile.palette.gold]);
+  const zodiacGeometry = useMemo(() => {
+    const cycles = profile.cycles.filter((cycle) => Number.isFinite(cycle.zodiacAngle));
+    const geometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(cycles.length * 3);
+    const colors = new Float32Array(cycles.length * 3);
+    const gold = new THREE.Color(profile.palette.gold);
+    const ember = new THREE.Color(profile.palette.ember);
+
+    cycles.forEach((cycle, index) => {
+      const angle = ((cycle.zodiacAngle ?? 0) * Math.PI) / 180;
+      positions[index * 3] = Math.cos(angle) * 3;
+      positions[index * 3 + 1] = Math.sin(angle) * 3;
+      positions[index * 3 + 2] = 0;
+      (cycle.isCurrent ? ember : gold).toArray(colors, index * 3);
+    });
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+    geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 4);
+    return geometry;
+  }, [profile.cycles, profile.palette.ember, profile.palette.gold]);
+
+  useEffect(() => () => {
+    annualGeometry.dispose();
+    zodiacGeometry.dispose();
+  }, [annualGeometry, zodiacGeometry]);
+
+  useFrame(() => {
+    const reveal = smoothstep(0.72, 1, transition.current);
+    if (root.current) root.current.visible = reveal > 0;
+    if (annualMaterial.current) annualMaterial.current.opacity = reveal * 0.74;
+    if (zodiacMaterial.current) zodiacMaterial.current.opacity = reveal * 0.92;
+  });
+
+  if (
+    annualGeometry.getAttribute("position").count === 0
+    && zodiacGeometry.getAttribute("position").count === 0
+  ) return null;
+
+  return (
+    <group ref={root} visible={false}>
+      <points geometry={annualGeometry} frustumCulled={false} renderOrder={6}>
+        <pointsMaterial
+          ref={annualMaterial}
+          vertexColors
+          size={compact ? 0.032 : 0.042}
+          sizeAttenuation
+          transparent
+          opacity={0}
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+          toneMapped={false}
+        />
+      </points>
+      <group rotation={[0.24, 0.42, 0.16]}>
+        <points geometry={zodiacGeometry} frustumCulled={false} renderOrder={7}>
+          <pointsMaterial
+            ref={zodiacMaterial}
+            vertexColors
+            size={compact ? 0.075 : 0.105}
+            sizeAttenuation
+            transparent
+            opacity={0}
+            depthWrite={false}
+            blending={THREE.AdditiveBlending}
+            toneMapped={false}
+          />
+        </points>
+      </group>
+    </group>
+  );
+}
+
 function createGlyphTexture(glyph: string, color: string) {
   const canvas = document.createElement("canvas");
   canvas.width = 160;
@@ -341,7 +454,10 @@ function TimelineNodes({
   const nodes = useMemo(
     () => profile.cycles.map((cycle, index) => ({
       cycle,
-      position: curve.getPointAt(index / (profile.cycles.length - 1)),
+      position: cycle.position?.length === 3
+        && cycle.position.every((coordinate) => Number.isFinite(coordinate))
+        ? new THREE.Vector3(...cycle.position)
+        : curve.getPointAt(index / Math.max(1, profile.cycles.length - 1)),
     })),
     [curve, profile.cycles],
   );
@@ -474,6 +590,12 @@ export function DestinyCore({
         curve={curve}
         transition={transition}
         count={compact ? 2400 : 5200}
+      />
+
+      <DataCoordinateMarkers
+        profile={profile}
+        transition={transition}
+        compact={compact}
       />
 
       <TimelineNodes

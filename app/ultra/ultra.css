@@ -1,0 +1,484 @@
+.ultra-experience {
+  --ultra-cyan: #6bc8ff;
+  min-height: 0;
+  background: #02050e;
+}
+
+.ultra-experience::after {
+  position: fixed;
+  z-index: 3;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 44%, transparent 0, transparent 24%, rgba(2, 4, 12, 0.11) 58%, rgba(1, 2, 7, 0.54) 100%),
+    linear-gradient(120deg, rgba(73, 112, 255, 0.025), transparent 42%, rgba(215, 168, 91, 0.018));
+}
+
+.ultra-scanline {
+  position: fixed;
+  z-index: 9;
+  top: -12%;
+  right: 0;
+  left: 0;
+  height: 18%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(180deg, transparent, rgba(79, 128, 255, 0.08), rgba(215, 168, 91, 0.16), transparent);
+  mix-blend-mode: screen;
+}
+
+.ultra-request-calculating .ultra-scanline {
+  opacity: 0.68;
+  animation: ultra-scan 2.5s cubic-bezier(0.55, 0.02, 0.4, 0.98) infinite;
+}
+
+.ultra-request-calculating .xp-canvas {
+  filter: saturate(1.25) brightness(1.08);
+}
+
+@keyframes ultra-scan {
+  from { transform: translateY(-20vh); }
+  to { transform: translateY(132vh); }
+}
+
+.ultra-birth-console {
+  width: min(620px, calc(100vw - 42px));
+  padding: 32px 40px 17px;
+  translate: -50% -48%;
+}
+
+.ultra-origin-heading > p {
+  margin-bottom: 10px;
+  color: var(--ultra-cyan);
+}
+
+.ultra-origin-heading h1 {
+  font-size: clamp(30px, 3vw, 40px);
+}
+
+.ultra-birth-console form {
+  margin-top: 25px;
+}
+
+.ultra-calibration-row {
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  gap: 26px;
+  margin-top: 18px;
+}
+
+.ultra-gender-field {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ultra-gender-field legend,
+.ultra-city-field > span {
+  margin: 0 0 9px;
+  color: rgba(203, 212, 232, 0.44);
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.ultra-gender-field > div {
+  height: 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(214, 223, 244, 0.2);
+}
+
+.ultra-birth-console .ultra-gender-field label {
+  position: relative;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(214, 223, 244, 0.12);
+  color: rgba(215, 224, 241, 0.42);
+  cursor: pointer;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.ultra-birth-console .ultra-gender-field label:last-child { border-right: 0; }
+
+.ultra-birth-console .ultra-gender-field label.active {
+  color: var(--xp-gold);
+  background: linear-gradient(90deg, transparent, rgba(215, 168, 91, 0.09), transparent);
+  text-shadow: 0 0 12px rgba(215, 168, 91, 0.35);
+}
+
+.ultra-gender-field input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.ultra-gender-field input:focus-visible + span {
+  outline: 1px solid var(--xp-gold);
+  outline-offset: 5px;
+}
+
+.ultra-city-field {
+  min-width: 0;
+}
+
+.ultra-city-field select {
+  width: 100%;
+  height: 42px;
+  padding: 0 25px 7px 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(214, 223, 244, 0.2);
+  border-radius: 0;
+  outline: 0;
+  color: rgba(245, 246, 250, 0.94);
+  background: transparent;
+  appearance: none;
+  font-family: "SF Mono", "Roboto Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.ultra-city-field select:focus {
+  border-color: var(--xp-gold);
+  box-shadow: 0 7px 14px -12px var(--xp-gold);
+}
+
+.ultra-city-field select option {
+  color: #e9edf7;
+  background: #080c18;
+}
+
+.ultra-city-field > i {
+  position: absolute;
+  right: 2px;
+  bottom: 13px;
+  color: var(--xp-gold);
+  font-size: 15px;
+  font-style: normal;
+  opacity: 0.66;
+}
+
+.ultra-birth-console input:disabled,
+.ultra-birth-console select:disabled,
+.ultra-gender-field input:disabled + span {
+  cursor: wait;
+  opacity: 0.52;
+}
+
+.ultra-generate-button {
+  height: 54px;
+  margin-top: 23px;
+}
+
+.ultra-generate-button:disabled {
+  cursor: wait;
+  filter: saturate(0.76) brightness(0.9);
+}
+
+.ultra-generate-button.loading > i {
+  animation: ultra-orbit 0.9s linear infinite;
+}
+
+@keyframes ultra-orbit {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
+.ultra-calculation-state {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  overflow: hidden;
+  color: rgba(200, 211, 234, 0.42);
+  font-family: "SF Mono", monospace;
+  font-size: 6px;
+  letter-spacing: 0.08em;
+}
+
+.ultra-calculation-state span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.ultra-calculation-state i {
+  width: 4px;
+  height: 4px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--ultra-cyan);
+  box-shadow: 0 0 9px var(--ultra-cyan);
+  animation: xp-boot-pulse 0.8s ease-in-out infinite alternate;
+}
+
+.ultra-calculation-state span:nth-child(2) i { animation-delay: 0.18s; }
+.ultra-calculation-state span:nth-child(3) i { animation-delay: 0.36s; }
+
+.ultra-cancel-button {
+  width: 100%;
+  margin: 9px 0 0;
+  padding: 7px 0 3px;
+  border: 0;
+  border-bottom: 1px solid rgba(107, 200, 255, 0.17);
+  color: rgba(192, 210, 235, 0.42);
+  background: transparent;
+  cursor: pointer;
+  font-family: "SF Mono", monospace;
+  font-size: 6px;
+  letter-spacing: 0.18em;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.ultra-cancel-button:hover {
+  color: rgba(224, 233, 248, 0.78);
+  border-color: rgba(107, 200, 255, 0.5);
+}
+
+.ultra-error-signal {
+  margin: 12px 0 0;
+  color: rgba(255, 148, 113, 0.86);
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.ultra-error-signal i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 4px;
+  border: 1px solid var(--xp-ember);
+  transform: rotate(45deg);
+}
+
+.ultra-birth-console > footer {
+  margin-top: 13px;
+}
+
+.ultra-core-heading {
+  top: 15%;
+  width: 305px;
+}
+
+.ultra-core-heading h1 {
+  font-size: clamp(36px, 3.7vw, 57px);
+}
+
+.ultra-core-index {
+  width: 240px;
+  margin-top: 17px;
+}
+
+.ultra-pillar-grid {
+  width: 272px;
+  margin-top: 17px;
+  padding: 10px 0 9px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(214, 223, 244, 0.1);
+  border-bottom: 1px solid rgba(214, 223, 244, 0.08);
+}
+
+.ultra-pillar-grid > span {
+  display: grid;
+  gap: 5px;
+  border-right: 1px solid rgba(214, 223, 244, 0.08);
+  text-align: center;
+}
+
+.ultra-pillar-grid > span:last-child { border-right: 0; }
+
+.ultra-pillar-grid small {
+  color: rgba(201, 211, 232, 0.3);
+  font-size: 6px;
+  letter-spacing: 0.14em;
+}
+
+.ultra-pillar-grid b {
+  color: rgba(228, 218, 195, 0.82);
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.ultra-overview {
+  width: 280px;
+  margin: 12px 0 0 !important;
+  color: rgba(210, 219, 238, 0.44) !important;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 10px !important;
+  line-height: 1.7;
+  letter-spacing: 0.05em !important;
+}
+
+.ultra-insight-hud {
+  width: min(370px, 31vw);
+}
+
+.ultra-element-signature {
+  bottom: 72px;
+}
+
+.ultra-cycle-rail button.current i::after {
+  position: absolute;
+  inset: -5px;
+  content: "";
+  border: 1px solid rgba(107, 200, 255, 0.34);
+  border-radius: 50%;
+  box-shadow: 0 0 13px rgba(107, 200, 255, 0.2);
+}
+
+.ultra-ai-provenance {
+  position: absolute;
+  right: 36px;
+  bottom: 111px;
+  display: grid;
+  grid-template-columns: 8px auto;
+  align-items: center;
+  gap: 4px 7px;
+  color: rgba(207, 216, 234, 0.37);
+  font-family: "SF Mono", monospace;
+  font-size: 6px;
+  letter-spacing: 0.15em;
+}
+
+.ultra-ai-provenance i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--xp-gold);
+  box-shadow: 0 0 8px var(--xp-gold);
+}
+
+.ultra-ai-provenance i.online {
+  background: var(--ultra-cyan);
+  box-shadow: 0 0 8px var(--ultra-cyan);
+}
+
+.ultra-ai-provenance small {
+  grid-column: 2;
+  max-width: 150px;
+  overflow: hidden;
+  color: rgba(207, 216, 234, 0.2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ultra-experience button:focus-visible,
+.ultra-experience input:focus-visible,
+.ultra-experience select:focus-visible {
+  outline: 1px solid var(--xp-gold);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1040px) {
+  .ultra-core-heading { top: 12%; left: 44px; }
+  .ultra-core-heading h1 { font-size: 39px; }
+  .ultra-insight-hud { right: 32px; width: 310px; }
+  .ultra-element-signature { left: 44px; }
+}
+
+@media (max-width: 760px) {
+  .ultra-birth-console {
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: calc(100% - 20px);
+    max-height: calc(100svh - 78px - env(safe-area-inset-top));
+    padding: 23px 19px 14px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .ultra-birth-console::-webkit-scrollbar { display: none; }
+  .ultra-origin-heading h1 { font-size: clamp(26px, 7.4vw, 32px); }
+  .ultra-origin-heading small { font-size: 5.5px; }
+  .ultra-birth-console form { margin-top: 19px; }
+  .ultra-calibration-row { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; margin-top: 14px; }
+  .ultra-gender-field > div,
+  .ultra-city-field select { height: 38px; }
+  .ultra-city-field select { font-size: 9px; }
+  .ultra-generate-button { height: 50px; margin-top: 18px; }
+  .ultra-calculation-state { grid-template-columns: 1fr; gap: 5px; margin-top: 9px; }
+  .ultra-calculation-state span { justify-content: center; }
+  .ultra-birth-console > footer { margin-top: 10px; }
+
+  .ultra-core-heading {
+    top: calc(68px + env(safe-area-inset-top));
+    left: 19px;
+    width: 210px;
+  }
+
+  .ultra-core-heading h1 { font-size: 30px; }
+  .ultra-core-index { width: 185px; margin-top: 10px; }
+  .ultra-pillar-grid { width: 188px; margin-top: 10px; padding: 7px 0; }
+  .ultra-pillar-grid small { font-size: 5px; }
+  .ultra-pillar-grid b { font-size: 12px; }
+  .ultra-core-heading > .ultra-overview { display: none; }
+  .ultra-insight-hud { width: auto; }
+  .ultra-cycle-rail {
+    gap: 0;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .ultra-cycle-rail::-webkit-scrollbar { display: none; }
+  .ultra-cycle-rail button { width: 40px; height: 44px; flex: 0 0 40px; }
+  .ultra-ai-provenance { display: none; }
+}
+
+@media (max-width: 380px) {
+  .ultra-birth-console { padding-right: 15px; padding-left: 15px; }
+  .ultra-calibration-row { grid-template-columns: 104px minmax(0, 1fr); gap: 11px; }
+  .ultra-gender-field legend,
+  .ultra-city-field > span { letter-spacing: 0.1em; }
+  .ultra-core-heading h1 { font-size: 28px; }
+  .ultra-pillar-grid { width: 176px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ultra-scanline,
+  .ultra-generate-button.loading > i,
+  .ultra-calculation-state i {
+    animation: none !important;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 761px) {
+  .ultra-birth-console {
+    top: 50%;
+    max-height: calc(100svh - 32px);
+    padding: 18px 32px 12px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .ultra-birth-console::-webkit-scrollbar { display: none; }
+  .ultra-origin-heading h1 { font-size: 27px; }
+  .ultra-origin-heading small { margin-top: 5px; }
+  .ultra-birth-console form { margin-top: 14px; }
+  .ultra-calibration-row { margin-top: 10px; }
+  .ultra-generate-button { height: 46px; margin-top: 12px; }
+  .ultra-birth-console > footer { margin-top: 8px; }
+  .ultra-core-heading { top: 62px; }
+  .ultra-core-heading h1 { font-size: 30px; }
+  .ultra-core-heading > .ultra-overview,
+  .ultra-element-signature { display: none; }
+  .ultra-insight-hud { max-height: calc(100svh - 118px); }
+  .ultra-cycle-rail { bottom: 15px; }
+  .ultra-ai-provenance { bottom: 67px; }
+  .ultra-experience .xp-reset-button { bottom: 20px; }
+}

@@ -2,6 +2,9 @@
   "name": "destinypixel",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "WATCHPACK_POLLING=true next dev --webpack -p 3002",
     "build": "next build --webpack",
@@ -22,11 +25,13 @@
     "lunar-javascript": "^1.7.7",
     "mammoth": "^1.12.0",
     "next": "16.2.9",
+    "openai": "^7.5.0",
     "opencc-js": "^1.4.1",
     "pdf-parse": "^1.1.1",
     "postprocessing": "^6.39.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "server-only": "^0.0.1",
     "three": "^0.185.1",
     "word-extractor": "^1.0.4"
   },

@@ -4,6 +4,7 @@ export type BirthInput = {
   birthDate: string;
   birthTime: string;
   birthplace: string;
+  gender?: "male" | "female";
 };
 
 export type DestinyPalette = {
@@ -31,6 +32,20 @@ export type DestinyCycle = {
   valence: number;
   keywords: string[];
   insight: string;
+  startYear?: number;
+  endYear?: number;
+  startDate?: string;
+  endDate?: string;
+  position?: [number, number, number];
+  zodiacAngle?: number;
+  annualCoordinates?: Array<{
+    year: number;
+    age: number;
+    stemBranch: string;
+    position: [number, number, number];
+  }>;
+  isCurrent?: boolean;
+  kind?: "prelude" | "dayun";
 };
 
 export type DestinyProfile = {
