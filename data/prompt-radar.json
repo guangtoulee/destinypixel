@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-08-23T02:46:32.495Z",
+  "updatedAt": "2026-08-23T07:56:49.122Z",
   "sourceSummary": {
     "community": 776,
-    "publicX": 331,
-    "total": 1107
+    "publicX": 332,
+    "total": 1108
   },
   "items": [
     {
@@ -4261,7 +4261,7 @@
       "authorName": "小宇Chengzi",
       "authorHandle": "@Chengzilhy",
       "createdAt": "2026-08-20T08:38:14.000Z",
-      "importedAt": "2026-08-22T13:53:04.202Z",
+      "importedAt": "2026-08-23T07:56:49.100Z",
       "tags": [
         "Seedance",
         "视频",
@@ -4282,13 +4282,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 201,
+        "likes": 206,
         "reposts": 21,
         "replies": 26,
         "quotes": 1,
         "bookmarks": 160,
-        "views": 82768,
-        "score": 1161
+        "views": 84289,
+        "score": 1174
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "万物皆可 AI 视频化。😂 「牛来」+「网络热门图片」 互联网的梗，让 AI 再玩一遍！🔥 Seedance 2.5 Prompt 🔽 参考上传视频作为唯一动作、镜头节奏与剪辑参考，参考上传人物图片与橙色牛角色图片，生成一段 15秒、4:3横屏、真实街头喜剧短视频。 【素材绑定】 参考视频： 只参考其中的完整镜头顺序、人物站位、表情变化、回头动作、反应节奏、景别切换，以及后半段滑板角色的出现时间、移动轨迹和速度。 人物图片： 用于锁定前三位真人角色。 前景红衣黑发女性 中间蓝色格纹短袖男性 右侧浅蓝背心金发女性 三人的脸部、发型、服装、身材比例和整体外形始终保持一致。 橙色牛图片： 只用于后半段踩滑板出现的角色。 保持橙色毛发、牛头造型、圆润身体、黑色墨镜和整体角色外形一致。 【场景】 保持人物图片中的真实城市步行街环境。 白天自然光，街道两侧为浅色建筑，远处有自然行人虚化。 整体采用真实街拍摄影质感，浅景深，人物表情清晰自然。 【时间轴】 0.00–2.00秒 中景开场。 红衣女性从画面前方经过。 蓝格纹男性原本与右侧金发女性站在一起，随后注意到经过的红衣女性，视线先移动，头部和上半身自然跟着转过去。 金发女性察觉男生的视线，开始露出疑惑和不满。 动作节奏严格参考上传视频。 2.00–5.00秒 快速切换人物近景。 依次表现红衣女性自然经过、男生继续回头观看，以及金发女性越来越明显的不爽反应。 重点表现眼神、头部转动、嘴角和眉头变化。 镜头保持参考视频中的短促硬切节奏。 5.00–7.50秒 继续在人男与两位女性的近景之间快速切换。 男生逐渐意识到身旁金发女性正在盯着自己，表情从自然欣赏转为轻微尴尬。 金发女性保持明显质疑、不可思议的表情。 7.50–10.20秒 男生与金发女性继续产生短暂眼神互动。 男生开始收回视线并调整表情。 镜头节奏逐渐为后面的反转做铺垫。 10.20–13.50秒 硬切到街道远处。 橙色墨镜牛第一次出现。 它双脚稳定站在一块小型滑板上，从街道远处正对镜头快速滑来。 角色最开始在画面中很小，随后随着滑板持续向镜头方向移动而自然变大。 身体保持圆润稳定，两只手自然垂在身体两侧，墨镜始终戴在脸上。 滑板轮子真实转动，角色身体随着滑行产生轻微自然重心变化。 整个移动轨迹与速度严格参考上传视频中的滑板角色。 13.50–15.00秒 滑板牛快速靠近后立即硬切回蓝格纹男性的正面近景。 男生明显注意到突然出现的滑板牛。 眼睛先看向滑板牛方向，随后头部轻微转动，表情从疑惑迅速变成惊讶和愣住。 最后保持这个反应结束视频。 【剪辑】 严格复现参考视频的： 三人关系建立 → 连续人物反应特写 → 短暂停顿 → 滑板角色突然出现 → 男生最终反应。 全部使用直接硬切。 人物表演采用自然真实速度，节奏清楚、利落、干脆。"
@@ -6265,6 +6265,50 @@
       "rawText": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product."
     },
     {
+      "id": "x-public-2091016705594274087",
+      "title": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Mad",
+      "description": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gol",
+      "prompt": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gold hoops. Hair/outfit change only by city: London low side ponytail + olive trench; Paris high bun + beige trench; Moscow loose waves + cream faux-fur coat. 0:00–0:07 LONDON: Rainy Soho selfie, clear umbrella, fish & chips, hot-chip reaction, Tower Bridge behind. Dialogue: “The rain really won't stop.” 0:07–0:10 BIG BEN: Tilt up, landmark only, 70% slow motion. “Wow, that's Big Ben.” Blue-grey torn-paper transition. 0:10–0:17 PARIS: Montmartre night, crêpe, reaction, Arc de Triomphe. “So this is what Paris feels like at night.” 0:17–0:20 EIFFEL TOWER: Lights turn gold, 70% slow motion. “Wow, the lights just came on.” Navy torn-paper transition. 0:20–0:27 MOSCOW: Snowy Arbat, blini, removes right glove, bite, Bolshoi Theatre. “It's snowing so much.” 0:27–0:30 SAINT BASIL'S: Colorful domes through snow, 70% slow motion. “Well, bye everyone!” Left gloved hand covers lens → white. STYLE: Authentic handheld 16:9 phone footage, 26mm, natural movement, realistic skin/hands, no cinematic look. STRICT: English only. No logos, text, subtitles, captions, watermarks, brands, signs, UI, maps or equipment. Same face throughout; no AI-looking features.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/noorlewisx/status/2091016705594274087",
+      "sourceType": "x",
+      "authorName": "Noor",
+      "authorHandle": "@noorlewisx",
+      "createdAt": "2026-08-22T04:16:46.000Z",
+      "importedAt": "2026-08-23T07:56:49.100Z",
+      "tags": [
+        "Seedance",
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 325,
+        "reposts": 6,
+        "replies": 82,
+        "quotes": 0,
+        "bookmarks": 22,
+        "views": 15674,
+        "score": 853
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gold hoops. Hair/outfit change only by city: London low side ponytail + olive trench; Paris high bun + beige trench; Moscow loose waves + cream faux-fur coat. 0:00–0:07 LONDON: Rainy Soho selfie, clear umbrella, fish & chips, hot-chip reaction, Tower Bridge behind. Dialogue: “The rain really won't stop.” 0:07–0:10 BIG BEN: Tilt up, landmark only, 70% slow motion. “Wow, that's Big Ben.” Blue-grey torn-paper transition. 0:10–0:17 PARIS: Montmartre night, crêpe, reaction, Arc de Triomphe. “So this is what Paris feels like at night.” 0:17–0:20 EIFFEL TOWER: Lights turn gold, 70% slow motion. “Wow, the lights just came on.” Navy torn-paper transition. 0:20–0:27 MOSCOW: Snowy Arbat, blini, removes right glove, bite, Bolshoi Theatre. “It's snowing so much.” 0:27–0:30 SAINT BASIL'S: Colorful domes through snow, 70% slow motion. “Well, bye everyone!” Left gloved hand covers lens → white. STYLE: Authentic handheld 16:9 phone footage, 26mm, natural movement, realistic skin/hands, no cinematic look. STRICT: English only. No logos, text, subtitles, captions, watermarks, brands, signs, UI, maps or equipment. Same face throughout; no AI-looking features."
+    },
+    {
       "id": "x-public-2076942151959588906",
       "title": "Built with GPT Image 2 + Omni Flash + Seedance 2.0. I wanted to see if AI could generate a clien",
       "description": "Built with GPT Image 2 + Omni Flash + Seedance 2.0. I wanted to see if AI could generate a client ready storyboard, not just a few nice looking frames. So I gave it one prompt. The result: ✅ 12-shot storyboard ✅ Realisti",
@@ -6353,50 +6397,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.0 on @nadou_pro Prompt: { \"video_prompt\": \"A first-person POV shot of a hand holding a black marker, pointing it at real-world objects in an urban city setting. The video uses a creative 'doodle overlay' effect. As the hand waves the marker with a swift motion, real-world objects instantly transform into cute, 2D cartoon animations with clean blue and white outlines. 1. A real subway train passing on an elevated track transforms into a playful, minimalist blue and white cartoon train. 2. A real pigeon on a paved sidewalk transforms into a stylized white cartoon bird flying away, leaving small hand-drawn dust clouds. 3. A real green bus driving on a city street transforms into a giant, adorable 2D animated orange tabby cat walking casually. 4. A real woman sitting at a bus stop transforms into a classic 2D anime-style girl waving happily. The final shot shows the hand tossing an object into the sky, transforming the entire city sky into a bright, vibrant anime sunset with fluffy white clouds and a smiling cartoon sun. Smooth transitions, playful and whimsical energy, high-contrast mix of live-action and 2D cel animation.\" } Frame-by-Frame Generation Prompts If you want to generate the specific static assets or concepts individually, you can use these tailored image prompts: * The Cartoon Train: > A crisp first-person POV photograph of a hand holding a black marker aimed at an elevated city train track. Overlaid on the real scene is a bright 2D vector doodle of a minimalist blue and white cartoon subway train passing by. Playful, mixed media, urban street style. > * The Pigeon Transformation: > First-person perspective looking down at a paved city sidewalk. A hand holds a black marker, pointing at a stylized, hand-drawn 2D white cartoon dove that is mid-flight, bursting out from where a real bird just stood. Whimsical line art overlay. > * The Giant Cat Bus: > A wide POV shot of a city street next to a sidewalk. A hand with a marker is tracking a giant, cute 2D animated orange tabby cat with green eyes as it walks down the vehicle lane where a bus should be. High contrast between the realistic asphalt and the bright, solid-colored character art. > * The Anime Sky: > A low-angle POV shot looking up past city high-rise apartments into the sky. The realistic sky transitions instantly into a beautiful, vibrant 2D anime-style pastel sunset filled with soft, puffy white clouds and a simple, cheerful cartoon sun illustration. >"
-    },
-    {
-      "id": "x-public-2091016705594274087",
-      "title": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Mad",
-      "description": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gol",
-      "prompt": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gold hoops. Hair/outfit change only by city: London low side ponytail + olive trench; Paris high bun + beige trench; Moscow loose waves + cream faux-fur coat. 0:00–0:07 LONDON: Rainy Soho selfie, clear umbrella, fish & chips, hot-chip reaction, Tower Bridge behind. Dialogue: “The rain really won't stop.” 0:07–0:10 BIG BEN: Tilt up, landmark only, 70% slow motion. “Wow, that's Big Ben.” Blue-grey torn-paper transition. 0:10–0:17 PARIS: Montmartre night, crêpe, reaction, Arc de Triomphe. “So this is what Paris feels like at night.” 0:17–0:20 EIFFEL TOWER: Lights turn gold, 70% slow motion. “Wow, the lights just came on.” Navy torn-paper transition. 0:20–0:27 MOSCOW: Snowy Arbat, blini, removes right glove, bite, Bolshoi Theatre. “It's snowing so much.” 0:27–0:30 SAINT BASIL'S: Colorful domes through snow, 70% slow motion. “Well, bye everyone!” Left gloved hand covers lens → white. STYLE: Authentic handheld 16:9 phone footage, 26mm, natural movement, realistic skin/hands, no cinematic look. STRICT: English only. No logos, text, subtitles, captions, watermarks, brands, signs, UI, maps or equipment. Same face throughout; no AI-looking features.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/noorlewisx/status/2091016705594274087",
-      "sourceType": "x",
-      "authorName": "Noor",
-      "authorHandle": "@noorlewisx",
-      "createdAt": "2026-08-22T04:16:46.000Z",
-      "importedAt": "2026-08-23T02:46:32.470Z",
-      "tags": [
-        "Seedance",
-        "人像",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 319,
-        "reposts": 7,
-        "replies": 80,
-        "quotes": 0,
-        "bookmarks": 21,
-        "views": 15506,
-        "score": 840
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "One Girl Three Cities One Incredible Journey From London Rain to Paris Lights to Moscow Snow Made with seedance 2.5 Prompt: 30-sec realistic phone vlog of the same Korean woman, same face/identity, natural skin, same gold hoops. Hair/outfit change only by city: London low side ponytail + olive trench; Paris high bun + beige trench; Moscow loose waves + cream faux-fur coat. 0:00–0:07 LONDON: Rainy Soho selfie, clear umbrella, fish & chips, hot-chip reaction, Tower Bridge behind. Dialogue: “The rain really won't stop.” 0:07–0:10 BIG BEN: Tilt up, landmark only, 70% slow motion. “Wow, that's Big Ben.” Blue-grey torn-paper transition. 0:10–0:17 PARIS: Montmartre night, crêpe, reaction, Arc de Triomphe. “So this is what Paris feels like at night.” 0:17–0:20 EIFFEL TOWER: Lights turn gold, 70% slow motion. “Wow, the lights just came on.” Navy torn-paper transition. 0:20–0:27 MOSCOW: Snowy Arbat, blini, removes right glove, bite, Bolshoi Theatre. “It's snowing so much.” 0:27–0:30 SAINT BASIL'S: Colorful domes through snow, 70% slow motion. “Well, bye everyone!” Left gloved hand covers lens → white. STYLE: Authentic handheld 16:9 phone footage, 26mm, natural movement, realistic skin/hands, no cinematic look. STRICT: English only. No logos, text, subtitles, captions, watermarks, brands, signs, UI, maps or equipment. Same face throughout; no AI-looking features."
     },
     {
       "id": "x-public-2089734616890360165",
@@ -7002,6 +7002,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Here's how to get 100% consistent product ads from one seedance 2.0 generation. I did it all in a single chat using the Comfy MCP. The real control here comes from calling my existing workflows (shared below) instead of the agent improvising a pipeline. I directed the agent to call my ComfyUI workflow for cinematic product ads. I specified the close-up shot of the sprite animating, the bezel turn flipping the screen, the display changing to the time 10:04. Now for the consistent variations. The driving video does the heavy lifting but you need to get it right → depthanything v3 pass blended with canny edge lines to show the fine detail... it's why the tiny debossed logo is there → the initial sprite outline lived in those edge lines too, and every gen kept inheriting it. claude suggested a sam3 mask over the screen to hide it (s/o the agent) → with the screen masked, the new star sprite is just prompting: one gpt-image-2 still to generate a reference, one extra line in the seedance 2.0 prompt, and it animates oh and the whole process is a claude skill now."
+    },
+    {
+      "id": "x-public-2089214417778987292",
+      "title": "Sun-Drenched Sakuga: Cyber-Desert Duel ⚡ @LoovaAI Two scavengers enter a sun-bleached graveyard ",
+      "description": "Sun-Drenched Sakuga: Cyber-Desert Duel ⚡ @LoovaAI Two scavengers enter a sun-bleached graveyard of satellite ruins—only one leaves with the ancient power core. As a blinding sandstorm sweeps through the canyon, Kanan’s c",
+      "prompt": "Sun-Drenched Sakuga: Cyber-Desert Duel ⚡ @LoovaAI Two scavengers enter a sun-bleached graveyard of satellite ruins—only one leaves with the ancient power core. As a blinding sandstorm sweeps through the canyon, Kanan’s cyan energy staff collides with Zephyr’s amber cyber-gauntlets in a relentless exchange of martial arts precision. ✨Generated by GPT Image 2.0 + Seedance 2.0 on Loova AI ✨Character Sheet and Storyboard below👇🏾 📌Seedance Video Prompt: Generate a 15-second horizontal 16:9 original martial arts action anime video from the provided first frame. CRITICAL ENTITY LOCK: There must be exactly 2 main characters in the entire video: KANAN (male acrobat in yellow wraps with energy staff) and ZEPHYR (female scavenger in off-white techwear with gold visor). Do not add secondary scavengers, droids, or background onlookers. Maintain strict visual consistency for Kanan's cyan staff rings, yellow wraps, goggles, and Zephyr's gold visor, off-white suit, and amber palm gauntlets throughout all cuts. Character identity: KANAN: Male dune acrobat, yellow wraps, dark vest, protective goggles, cyan energy staff, fluid martial arts movement. ZEPHYR: Female sun scavenger, off-white techwear suit, gold heat-reflective visor, amber palm energy gauntlets, fast strike martial arts style. Video style: High-budget Japanese anime feature film quality, post-apocalyptic martial arts aesthetic, high-contrast sun-drenched lighting, bright lens flares, fluid hand-to-hand animation, continuous real-time velocity. Camera and pacing: Relentless real-time martial arts action without any slow-motion pauses: 0.0s - 5.0s: High-speed tracking shot as fighters sprint across sand dunes and trade acrobatic staff deflections amidst blowing sand. 5.0s - 10.0s: Low-angle arc camera following fast martial arts maneuvers, sand sweeps, and palm strike deflections across rusted satellite ruins. 10.0s - 15.0s: High-velocity energy shockwave impact at full speed, transitioning into a clean sliding recovery and a balanced standoff freeze. Action timing: 0.0s - 2.5s: KANAN and ZEPHYR charge downhill across sand dunes. KANAN vaults off a buried satellite rim, spinning his cyan energy staff into a sand vortex. 2.5s - 5.5s: ZEPHYR leaps through the sand wave, using her amber gauntlets to deflect three fast staff strikes. She kicks hot sand upward to create a defensive distraction. 5.5s - 8.5s: KANAN sweeps his staff along the ground to displace the sand under ZEPHYR's feet. ZEPHYR vaults over the sweep and launches a flying palm strike. 8.5s - 11.5s: FULL-SPEED KINETIC IMPACT: ZEPHYR's palm gauntlet collides directly with KANAN's staff guard at full velocity. A bright shockwave of cyan and amber energy blasts sand 360 degrees outward. 11.5s - 15.0s: KANAN redirects the kinetic blast into a staff counter-pulse. ZEPHYR slides backward across the dune on her boots, coming to an instant halt in a ready stance. Final cinematic freeze frame. Motion quality: Fluid 2D animation, realistic sand particle dispersion, crisp energy shockwave rendering, seamless martial arts trajectory, zero character distortion. Environment: Sun-bleached desert canyon, half-buried rusty parabolic satellite dishes, shifting sand dunes, blinding sunlight, dust storms, intense lens flares. Final output: 15 seconds, horizontal 16:9, original high-budget martial arts anime, exactly 2 main characters, continuous high velocity, no slow motion, no subtitles, no watermarks, no logos.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/yourPlugAI/status/2089214417778987292",
+      "sourceType": "x",
+      "authorName": "Gilbert Odera | Your AI Plug",
+      "authorHandle": "@yourPlugAI",
+      "createdAt": "2026-08-17T04:55:07.000Z",
+      "importedAt": "2026-08-23T07:56:49.101Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "视频",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 162,
+        "reposts": 68,
+        "replies": 103,
+        "quotes": 1,
+        "bookmarks": 8,
+        "views": 6280,
+        "score": 739
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Sun-Drenched Sakuga: Cyber-Desert Duel ⚡ @LoovaAI Two scavengers enter a sun-bleached graveyard of satellite ruins—only one leaves with the ancient power core. As a blinding sandstorm sweeps through the canyon, Kanan’s cyan energy staff collides with Zephyr’s amber cyber-gauntlets in a relentless exchange of martial arts precision. ✨Generated by GPT Image 2.0 + Seedance 2.0 on Loova AI ✨Character Sheet and Storyboard below👇🏾 📌Seedance Video Prompt: Generate a 15-second horizontal 16:9 original martial arts action anime video from the provided first frame. CRITICAL ENTITY LOCK: There must be exactly 2 main characters in the entire video: KANAN (male acrobat in yellow wraps with energy staff) and ZEPHYR (female scavenger in off-white techwear with gold visor). Do not add secondary scavengers, droids, or background onlookers. Maintain strict visual consistency for Kanan's cyan staff rings, yellow wraps, goggles, and Zephyr's gold visor, off-white suit, and amber palm gauntlets throughout all cuts. Character identity: KANAN: Male dune acrobat, yellow wraps, dark vest, protective goggles, cyan energy staff, fluid martial arts movement. ZEPHYR: Female sun scavenger, off-white techwear suit, gold heat-reflective visor, amber palm energy gauntlets, fast strike martial arts style. Video style: High-budget Japanese anime feature film quality, post-apocalyptic martial arts aesthetic, high-contrast sun-drenched lighting, bright lens flares, fluid hand-to-hand animation, continuous real-time velocity. Camera and pacing: Relentless real-time martial arts action without any slow-motion pauses: 0.0s - 5.0s: High-speed tracking shot as fighters sprint across sand dunes and trade acrobatic staff deflections amidst blowing sand. 5.0s - 10.0s: Low-angle arc camera following fast martial arts maneuvers, sand sweeps, and palm strike deflections across rusted satellite ruins. 10.0s - 15.0s: High-velocity energy shockwave impact at full speed, transitioning into a clean sliding recovery and a balanced standoff freeze. Action timing: 0.0s - 2.5s: KANAN and ZEPHYR charge downhill across sand dunes. KANAN vaults off a buried satellite rim, spinning his cyan energy staff into a sand vortex. 2.5s - 5.5s: ZEPHYR leaps through the sand wave, using her amber gauntlets to deflect three fast staff strikes. She kicks hot sand upward to create a defensive distraction. 5.5s - 8.5s: KANAN sweeps his staff along the ground to displace the sand under ZEPHYR's feet. ZEPHYR vaults over the sweep and launches a flying palm strike. 8.5s - 11.5s: FULL-SPEED KINETIC IMPACT: ZEPHYR's palm gauntlet collides directly with KANAN's staff guard at full velocity. A bright shockwave of cyan and amber energy blasts sand 360 degrees outward. 11.5s - 15.0s: KANAN redirects the kinetic blast into a staff counter-pulse. ZEPHYR slides backward across the dune on her boots, coming to an instant halt in a ready stance. Final cinematic freeze frame. Motion quality: Fluid 2D animation, realistic sand particle dispersion, crisp energy shockwave rendering, seamless martial arts trajectory, zero character distortion. Environment: Sun-bleached desert canyon, half-buried rusty parabolic satellite dishes, shifting sand dunes, blinding sunlight, dust storms, intense lens flares. Final output: 15 seconds, horizontal 16:9, original high-budget martial arts anime, exactly 2 main characters, continuous high velocity, no slow motion, no subtitles, no watermarks, no logos."
     },
     {
       "id": "x-public-2084233506918736212",
@@ -8785,7 +8831,7 @@
       "authorName": "James AI",
       "authorHandle": "@AIwithJames",
       "createdAt": "2026-08-22T09:42:15.000Z",
-      "importedAt": "2026-08-22T13:53:04.203Z",
+      "importedAt": "2026-08-23T07:56:49.101Z",
       "tags": [
         "Seedance",
         "视频",
@@ -8806,13 +8852,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 91,
-        "reposts": 33,
-        "replies": 40,
+        "likes": 98,
+        "reposts": 26,
+        "replies": 42,
         "quotes": 2,
-        "bookmarks": 57,
-        "views": 2191,
-        "score": 535
+        "bookmarks": 61,
+        "views": 3972,
+        "score": 539
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "From AI Creator to #1 in the World 🚀🌍 | AIWITHJAMES Made with AI — Seedance 2.5 💡✅ Prompt: Create a highly realistic cinematic 9:16 vertical video, 10–15 seconds, 4K/HD quality, photorealistic live-action style. Show AIWITHJAMES as a successful AI creator and entrepreneur working with major global technology companies. Start inside a luxurious modern executive office with floor-to-ceiling windows and a futuristic city skyline. AIWITHJAMES is sitting confidently at a premium office desk wearing a sharp black suit. Multiple realistic monitors show AI projects, growth charts, creative work, and successful collaborations. The office displays professional company branding inspired by major technology companies such as Google, Microsoft, Amazon, Meta and OpenAI. Camera slowly moves toward AIWITHJAMES with a smooth cinematic dolly-in. Show close-up shots of realistic hands working on a laptop, AI dashboards, business documents, awards and certificates. On a large digital screen behind him, clearly display: “AIWITHJAMES — #1 AI CREATOR IN THE WORLD” Show a powerful upward growth chart, global map, millions of users, international collaborations and prestigious awards. AIWITHJAMES stands up and walks confidently toward the window while the city lights glow behind him. End with a dramatic cinematic shot showing AIWITHJAMES at the top of the global AI industry, surrounded by technology, success and innovation. Visual style: ultra-photorealistic, real human appearance, natural skin texture, realistic facial expressions, realistic hands, authentic office lighting, cinematic depth of field, premium corporate atmosphere, subtle lens flare, smooth camera movement, realistic reflections, high detail, professional color grading. Important: Keep the character consistent throughout the entire video. Make AIWITHJAMES clearly readable wherever text appears. No cartoon, no 3D animation, no distorted face, no extra fingers, no unrealistic body movement, no blurry frames, no artificial-looking skin. Aspect ratio: 9:16 vertical. Quality: 4K cinematic photorealism. Mood: ambitious, inspirational, powerful, futuristic, successful."
@@ -13593,7 +13639,7 @@
       "authorName": "Oogie",
       "authorHandle": "@oggii_0",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.221Z",
+      "importedAt": "2026-08-23T07:56:46.301Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -13632,7 +13678,7 @@
       "authorName": "Dilshad Hussain",
       "authorHandle": "@DilshadAI1",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.222Z",
+      "importedAt": "2026-08-23T07:56:46.302Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -13671,7 +13717,7 @@
       "authorName": "DSIV",
       "authorHandle": "@dsivmusic",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.304Z",
       "tags": [
         "GPT Image 2",
         "产品",
@@ -13718,7 +13764,7 @@
       "authorName": "Harold W. Chen 左尔文",
       "authorHandle": "@Harold_W_Chen",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.304Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -13759,7 +13805,7 @@
       "authorName": "Avelyrah",
       "authorHandle": "@AvelyrahnAI",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.304Z",
       "tags": [
         "人像",
         "摄影"
@@ -13801,7 +13847,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-08-22T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.304Z",
       "tags": [
         "摄影"
       ],
@@ -13842,7 +13888,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.302Z",
       "tags": [
         "人像",
         "摄影"
@@ -13884,7 +13930,7 @@
       "authorName": "李岳",
       "authorHandle": "@liyue_ai",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.302Z",
       "tags": [
         "人像",
         "东方美学",
@@ -13927,7 +13973,7 @@
       "authorName": "SaaS Junction ✦ Daily AI News & Prompts",
       "authorHandle": "@SaasJunctionHQ",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.302Z",
       "tags": [
         "人像",
         "摄影"
@@ -13969,7 +14015,7 @@
       "authorName": "Harf_Done",
       "authorHandle": "@half_done_yet",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.302Z",
       "tags": [
         "人像"
       ],
@@ -14010,7 +14056,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14051,7 +14097,7 @@
       "authorName": "成云杉YSC",
       "authorHandle": "@yscai101",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "平面设计"
       ],
@@ -14092,7 +14138,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "摄影"
       ],
@@ -14133,7 +14179,7 @@
       "authorName": "Siyu",
       "authorHandle": "@HayeonOuO",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.223Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像",
         "摄影"
@@ -14175,7 +14221,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14216,7 +14262,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像",
         "摄影"
@@ -14258,7 +14304,7 @@
       "authorName": "Meem",
       "authorHandle": "@mehvishs25",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像",
         "摄影"
@@ -14300,7 +14346,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14341,7 +14387,7 @@
       "authorName": "杂学大师✨",
       "authorHandle": "@Techbruneth",
       "createdAt": "2026-08-21T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像",
         "摄影"
@@ -14547,7 +14593,7 @@
       "authorName": "Kōda",
       "authorHandle": "@aimikoda",
       "createdAt": "2026-08-20T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像",
         "摄影"
@@ -14589,7 +14635,7 @@
       "authorName": "Aatif J",
       "authorHandle": "@aatif_j",
       "createdAt": "2026-08-20T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14630,7 +14676,7 @@
       "authorName": "ayzalnoor",
       "authorHandle": "@ayzalnooor24521",
       "createdAt": "2026-08-20T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14671,7 +14717,7 @@
       "authorName": "🐹🐹",
       "authorHandle": "@hmst_yyyy",
       "createdAt": "2026-08-20T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -14712,7 +14758,7 @@
       "authorName": "Harf_Done",
       "authorHandle": "@half_done_yet",
       "createdAt": "2026-08-20T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.224Z",
+      "importedAt": "2026-08-23T07:56:46.303Z",
       "tags": [
         "人像"
       ],
@@ -46424,7 +46470,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.230Z",
+      "importedAt": "2026-08-23T07:56:46.310Z",
       "tags": [
         "产品",
         "平面设计",
@@ -46467,7 +46513,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.231Z",
+      "importedAt": "2026-08-23T07:56:46.311Z",
       "tags": [
         "平面设计"
       ],
@@ -46508,7 +46554,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-08-23T02:46:29.231Z",
+      "importedAt": "2026-08-23T07:56:46.311Z",
       "tags": [
         "平面设计"
       ],
