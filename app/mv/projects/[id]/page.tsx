@@ -119,8 +119,8 @@ export default function ProjectStudio() {
             <AudioClipEditor asset={selectedAudio} startSeconds={clipStart} durationSeconds={clipDuration} onStartChange={setClipStart} onDurationChange={setClipDuration} />
             <label htmlFor="shot-prompt">导演提示词</label><textarea id="shot-prompt" value={prompt} onChange={(event) => setPrompt(event.target.value)} rows={7} required />
             <div className="controlBlock dualControls">
-              <label className="rangeControl"><span><b>嘴部开合</b><em>{percent(mouthScale)}</em></span><input type="range" min="0.5" max="1.1" step="0.05" value={mouthScale} onChange={(event) => setMouthScale(Number(event.target.value))} /><small>建议 60–70% · 越低越克制</small></label>
-              <label className="rangeControl"><span><b>咬字力度</b><em>{percent(lipSyncStrength)}</em></span><input type="range" min="0.75" max="1.1" step="0.05" value={lipSyncStrength} onChange={(event) => setLipSyncStrength(Number(event.target.value))} /><small>建议 80–90% · 保持对词</small></label>
+              <label className="rangeControl"><span><b>嘴部开合</b><em>{percent(mouthScale)}</em></span><input type="range" min="0.5" max="1.1" step="0.05" value={mouthScale} onChange={(event) => setMouthScale(Number(event.target.value))} /><small>建议 55–65% · 开头略僵可提高 5% · 重做后生效</small></label>
+              <label className="rangeControl"><span><b>咬字力度</b><em>{percent(lipSyncStrength)}</em></span><input type="range" min="0.75" max="1.1" step="0.05" value={lipSyncStrength} onChange={(event) => setLipSyncStrength(Number(event.target.value))} /><small>建议 80–90% · 保持对词，强音仍会自然张嘴</small></label>
             </div>
             <div className="controlBlock dualControls">
               <label>发布画幅<select value={deliveryFormat} onChange={(event) => setDeliveryFormat(event.target.value as typeof deliveryFormat)}><option value="portrait">9:16 竖屏 · 720×1280</option><option value="landscape">16:9 横屏 · 1280×720</option><option value="square">1:1 方屏 · 720×720</option></select></label>
