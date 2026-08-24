@@ -39,6 +39,9 @@
 .mvApp .nodeNotice strong { font-size: 12px; }
 .mvApp .nodeNotice p { display: inline; color: var(--mv-muted); font-size: 11px; margin: 0 0 0 9px; }
 .mvApp .homeGrid { display: grid; grid-template-columns: minmax(330px,.8fr) minmax(420px,1.45fr); gap: 20px; }
+.mvApp .authGrid { grid-template-columns: minmax(320px, 560px); justify-content: center; }
+.mvApp .authPanel { min-height: 0; }
+.mvApp .authCopy { color: var(--mv-muted); font-size: 13px; line-height: 1.7; margin: -8px 0 22px; }
 .mvApp .panel { background: linear-gradient(145deg, rgba(23,26,32,.96), rgba(14,16,20,.98)); border: 1px solid var(--mv-line); border-radius: 3px; }
 .mvApp .createPanel, .mvApp .libraryPanel { padding: 28px; min-height: 455px; }
 .mvApp .panelHeading, .mvApp .sectionTitle { display: flex; justify-content: space-between; align-items: center; margin-bottom: 29px; }
@@ -93,6 +96,14 @@
 .mvApp .parameterStrip { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; margin-top: 14px; }
 .mvApp .parameterStrip span { padding: 8px 5px; background: #0c0e11; color: var(--mv-muted); font-size: 8px; text-align: center; }
 .mvApp .parameterStrip b { color: var(--mv-text); display: block; font-size: 11px; margin-bottom: 2px; }
+.mvApp .controlBlock { padding: 14px; margin-top: 12px; border: 1px solid #272d37; border-radius: 3px; background: linear-gradient(145deg, rgba(9,11,15,.93), rgba(18,21,27,.78)); }
+.mvApp .dualControls { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.mvApp .dualControls > label { min-width: 0; margin: 0; }
+.mvApp .rangeControl > span { display: flex; align-items: center; justify-content: space-between; }
+.mvApp .rangeControl b { color: #d8dce3; font-size: 10px; }
+.mvApp .rangeControl em { color: var(--mv-accent); font: 800 10px ui-monospace, monospace; font-style: normal; }
+.mvApp .rangeControl input[type="range"] { height: 19px; margin: 8px 0 3px; padding: 0; border: 0; background: transparent; accent-color: var(--mv-accent); }
+.mvApp .rangeControl small { display: block; color: #6d7380; font-size: 8px; line-height: 1.45; }
 .mvApp .clipEditor { margin-top: 18px; padding: 14px; background: #090b0e; border: 1px solid #2a2f38; }
 .mvApp .clipEditorEmpty { color: var(--mv-muted); font-size: 11px; text-align: center; padding: 24px 12px; }
 .mvApp .clipHeader { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
@@ -162,6 +173,7 @@
   .mvApp .nodeNotice p { display: block; margin: 3px 0 0; }
   .mvApp .studioHeader { align-items: start; flex-direction: column; }
   .mvApp .candidateGrid { grid-template-columns: 1fr; margin-left: 0; }
+  .mvApp .dualControls { grid-template-columns: 1fr; }
   .mvApp .shotTopline { grid-template-columns: 42px 1fr; }
   .mvApp .shotTopline .statusBadge { grid-column: 2; width: fit-content; }
   .mvApp .shotParameters, .mvApp .progressBlock, .mvApp .shotActions { margin-left: 0; }

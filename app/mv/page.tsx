@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { api } from "./lib/api";
+import { api, isRemoteStudio, loginStudio } from "./lib/api";
 
 type Project = {
   id: string;
@@ -21,10 +21,36 @@ export default function MvHome() {
   const [description, setDescription] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [authRequired, setAuthRequired] = useState(false);
+  const [accessCode, setAccessCode] = useState("");
+  const [remote, setRemote] = useState(false);
 
   useEffect(() => {
-    api<Project[]>("/api/projects").then(setProjects).catch((err) => setError(err.message));
+    setRemote(isRemoteStudio());
+    api<Project[]>("/api/projects")
+      .then(setProjects)
+      .catch((err) => {
+        if (err.message === "REMOTE_AUTH_REQUIRED") setAuthRequired(true);
+        else setError(err.message);
+      });
   }, []);
+
+  async function login(event: FormEvent) {
+    event.preventDefault();
+    setBusy(true);
+    setError("");
+    try {
+      await loginStudio(accessCode);
+      const data = await api<Project[]>("/api/projects");
+      setProjects(data);
+      setAuthRequired(false);
+      setAccessCode("");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "登录失败");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function createProject(event: FormEvent) {
     event.preventDefault();
@@ -57,15 +83,30 @@ export default function MvHome() {
         <div className="heroStats">
           <div><span>Provider</span><strong>Local WanGP</strong></div>
           <div><span>Queue</span><strong>1× GPU</strong></div>
-          <div><span>Storage</span><strong>Local only</strong></div>
+          <div><span>Storage</span><strong>{remote ? "Secure R2" : "Local only"}</strong></div>
         </div>
       </section>
 
       <section className="nodeNotice">
         <span className="liveDot" />
-        <div><strong>本地 GPU 安全模式</strong><p>网页已上线，模型、歌曲、视频与数据库仍只保存在这台 4090 电脑。</p></div>
+        <div><strong>{remote ? "4090 安全中继模式" : "本地 GPU 安全模式"}</strong><p>{remote ? "网页通过 Cloudflare 加密中继下发任务，4090 不开放入站端口。" : "模型、歌曲、视频与数据库保存在这台 4090 电脑。"}</p></div>
       </section>
 
+      {authRequired ? (
+        <section className="homeGrid authGrid">
+          <form className="panel createPanel authPanel" onSubmit={login}>
+            <div className="panelHeading">
+              <div><span className="stepIndex">🔒</span><h2>进入远程创作台</h2></div>
+              <span className="muted">PRIVATE ACCESS</span>
+            </div>
+            <p className="authCopy">输入这台 4090 电脑保存的访问口令。无需微软、GitHub 或 Cloudflare 账号。</p>
+            <label htmlFor="access-code">访问口令</label>
+            <input id="access-code" type="password" autoComplete="current-password" value={accessCode} onChange={(event) => setAccessCode(event.target.value)} required />
+            {error && <p className="errorBanner">{error}</p>}
+            <button className="primaryButton" disabled={busy} type="submit">{busy ? "正在验证…" : "安全登录 →"}</button>
+          </form>
+        </section>
+      ) : (
       <section className="homeGrid">
         <form className="panel createPanel" onSubmit={createProject}>
           <div className="panelHeading">
@@ -99,6 +140,7 @@ export default function MvHome() {
           )}
         </section>
       </section>
+      )}
     </main>
   );
 }

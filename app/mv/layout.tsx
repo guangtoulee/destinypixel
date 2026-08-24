@@ -4,7 +4,7 @@ import "./mv.css";
 
 export const metadata: Metadata = {
   title: "AI Singer Studio",
-  description: "RTX 4090 本地 GPU 驱动的 AI 歌手视频创作台",
+  description: "RTX 4090 安全中继驱动的 AI 歌手视频创作台",
   alternates: { canonical: "/mv" },
   robots: { index: false, follow: false },
 };
@@ -21,7 +21,7 @@ export default function MvLayout({ children }: Readonly<{ children: React.ReactN
           </span>
         </Link>
         <div className="systemPill">
-          <span className="liveDot" /> LOCAL GPU NODE
+          <span className="liveDot" /> SECURE GPU RELAY
         </div>
       </header>
       {children}
