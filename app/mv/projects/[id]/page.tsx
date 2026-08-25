@@ -19,7 +19,7 @@ type Candidate = { id: string; version: number; media_url: string; duration_seco
 type Shot = { id: string; name: string; prompt: string; status: string; resolution: string; video_length: number; audio_start_seconds: number; audio_duration_seconds: number; inference_steps: number; seed: number; mouth_scale: number; lip_sync_strength: number; filter_preset: string; filter_strength: number; delivery_format: "landscape" | "portrait" | "square"; jobs: Job[]; candidates: Candidate[]; };
 type Project = { id: string; name: string; description: string; assets: Asset[]; shots: Shot[]; };
 
-const EXAMPLE_PROMPT = "A western man stands on stage under dramatic lighting, holding a microphone close to their mouth. Wearing a vibrant red jacket with gold embroidery, the singer is speaking while smoke swirls around them, creating a dynamic and atmospheric scene.";
+const EXAMPLE_PROMPT = "严格按照上传的参考图生成。人物身份、面部比例、发型、肤色、服装、背景和所有物件保持不变；参考图中已有的物件必须保留并保持连续，参考图中没有的麦克风、乐器、耳机、支架、舞台设备或其他道具不得新增，人物若原本空手则全程保持空手。人物跟随歌曲自然、克制地表演，嘴型小而准确，下颌稳定，高音也不要大张嘴；情绪主要通过眼神、呼吸和轻微头肩动作表达。镜头连续、稳定，不切镜，不改变场景，不添加字幕或水印。";
 
 function prettyBytes(bytes: number) { return bytes < 1024 * 1024 ? `${Math.round(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`; }
 function percent(value: number) { return `${Math.round(value * 100)}%`; }
@@ -117,7 +117,7 @@ export default function ProjectStudio() {
             <label htmlFor="song-select">歌曲</label><select id="song-select" value={songId} onChange={(event) => { setSongId(event.target.value); setClipStart(0); }} required><option value="">选择歌曲</option>{songs.map((asset) => <option key={asset.id} value={asset.id}>{asset.original_name}</option>)}</select>
             <label htmlFor="stem-select">Vocal Stem（可选）</label><select id="stem-select" value={stemId} onChange={(event) => { setStemId(event.target.value); setClipStart(0); }}><option value="">使用原歌曲音频</option>{stems.map((asset) => <option key={asset.id} value={asset.id}>{asset.original_name}</option>)}</select>
             <AudioClipEditor asset={selectedAudio} startSeconds={clipStart} durationSeconds={clipDuration} onStartChange={setClipStart} onDurationChange={setClipDuration} />
-            <label htmlFor="shot-prompt">导演提示词</label><textarea id="shot-prompt" value={prompt} onChange={(event) => setPrompt(event.target.value)} rows={7} required />
+            <label htmlFor="shot-prompt">导演提示词（中文）</label><textarea id="shot-prompt" value={prompt} onChange={(event) => setPrompt(event.target.value)} rows={9} required />
             <div className="controlBlock dualControls">
               <label className="rangeControl"><span><b>嘴部开合</b><em>{percent(mouthScale)}</em></span><input type="range" min="0.5" max="1.1" step="0.05" value={mouthScale} onChange={(event) => setMouthScale(Number(event.target.value))} /><small>建议 55–65% · 开头略僵可提高 5% · 重做后生效</small></label>
               <label className="rangeControl"><span><b>咬字力度</b><em>{percent(lipSyncStrength)}</em></span><input type="range" min="0.75" max="1.1" step="0.05" value={lipSyncStrength} onChange={(event) => setLipSyncStrength(Number(event.target.value))} /><small>建议 80–90% · 保持对词，强音仍会自然张嘴</small></label>
