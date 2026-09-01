@@ -282,6 +282,7 @@ export function languageAlternates(path: string) {
   return {
     en: `${path}?locale=en`,
     zh: `${path}?locale=zh`,
+    "zh-Hant": `${path}?locale=zh-TW`,
     ru: `${path}?locale=ru`,
     "x-default": path,
   };

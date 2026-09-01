@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import {
   defaultSeoDescription,
   routeSeo,
@@ -87,6 +89,8 @@ export default function RootLayout({
       <body>
         <TraditionalChineseBridge />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

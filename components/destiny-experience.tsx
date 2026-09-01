@@ -11,6 +11,7 @@ import {
   Languages,
   Loader2,
   LockKeyhole,
+  Mail,
   Moon,
   Orbit,
   ShieldCheck,
@@ -1006,6 +1007,10 @@ export default function DestinyExperience({
           </div>
           <div className="footer-bottom">
             <span>© 2026 DestinyPixel</span>
+            <a className="footer-contact" href="mailto:anyulee@foxmail.com">
+              <Mail size={13} aria-hidden="true" />
+              anyulee@foxmail.com
+            </a>
             <span>{text.usage}</span>
           </div>
         </div>

@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   allowedDevOrigins: ["127.0.0.1"],
   serverExternalPackages: ["pdf-parse", "word-extractor"],
+  images: {
+    qualities: [75, 95],
+  },
   async rewrites() {
     return [
       {

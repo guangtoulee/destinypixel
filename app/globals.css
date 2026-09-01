@@ -1292,6 +1292,19 @@ a {
   font-size: 9px;
 }
 
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #a88b56;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.footer-contact:hover {
+  color: #d6ba7f;
+}
+
 .report-shell {
   position: relative;
   isolation: isolate;
@@ -4482,6 +4495,14 @@ a {
   color: #2e2b2a;
 }
 
+.white-footer .white-footer__contact {
+  color: #9a7643;
+}
+
+.white-footer .white-footer__contact:hover {
+  color: #57483b;
+}
+
 .seo-learn-page {
   position: relative;
   min-height: 100vh;
@@ -4924,6 +4945,16 @@ a {
 
   .white-premium__panel > a {
     width: 100%;
+  }
+
+  .white-footer .white-container {
+    justify-content: flex-start;
+    gap: 14px 20px;
+  }
+
+  .white-footer .white-footer__contact {
+    flex-basis: 100%;
+    order: 2;
   }
 }
 

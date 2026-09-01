@@ -11,6 +11,7 @@ import {
   Hand,
   Languages,
   Loader2,
+  Mail,
   MapPin,
   MessageCircle,
   Orbit,
@@ -1062,7 +1063,8 @@ export default function DestinyWhiteExperience({
                 height={1200}
                 sizes="(max-width: 720px) 70vw, 360px"
                 quality={95}
-                priority
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
             <div className="white-card-preview__body">
@@ -1403,6 +1405,14 @@ export default function DestinyWhiteExperience({
           </a>
           <a href="#blessing">
             {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
+          </a>
+          <a
+            className="white-footer__contact"
+            href="mailto:anyulee@foxmail.com"
+            aria-label={copyLocale === "zh" ? "联系 DestinyPixel" : "Contact DestinyPixel"}
+          >
+            <Mail size={13} aria-hidden="true" />
+            anyulee@foxmail.com
           </a>
           <span>
             <MapPin size={13} aria-hidden="true" />

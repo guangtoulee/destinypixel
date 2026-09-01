@@ -14,6 +14,7 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 - Question Oracle: ${absoluteUrl("/oracle")}
 - Temple Sticks Oracle: ${absoluteUrl("/sticks")}
 - Insight Studios: ${absoluteUrl("/insights")}
+- Five Elements Color and Crystal Bracelet Atelier: ${absoluteUrl("/atelier")}
 - AI Short Drama Script Studio: ${absoluteUrl("/juben")}
 - AI Prompt Radar and Chinese Prompt Studio: ${absoluteUrl("/prompt")}
 - Prompt trend article archive: ${absoluteUrl("/prompt/articles")}
@@ -24,7 +25,10 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, annual forecast, short drama script generator, director script, shot list, storyboard prompt, camera movement prompt, edit prompt, voiceover script, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, psychological, reflective, practical, and production-ready.
 
 ## Supported Languages
-English, Simplified Chinese, and Russian.
+English, Simplified Chinese, Traditional Chinese, and Russian.
+
+## Contact
+Product feedback and collaboration: anyulee@foxmail.com
 
 ## Privacy And Indexing
 Generated personal reports under /report/ are private and should not be indexed. Public search engines and AI crawlers should use the guide, homepage, and studio pages as the canonical context.

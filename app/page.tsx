@@ -18,9 +18,13 @@ export default async function Home({
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": `${absoluteUrl("/")}#website`,
       name: siteName,
       url: absoluteUrl("/"),
-      inLanguage: ["en", "zh-CN", "ru"],
+      inLanguage: ["en", "zh-CN", "zh-TW", "ru"],
+      publisher: {
+        "@id": `${absoluteUrl("/")}#organization`,
+      },
       potentialAction: {
         "@type": "ReadAction",
         target: [
@@ -33,12 +37,30 @@ export default async function Home({
     },
     {
       "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${absoluteUrl("/")}#organization`,
+      name: siteName,
+      url: absoluteUrl("/"),
+      logo: absoluteUrl("/icon.svg"),
+      email: "anyulee@foxmail.com",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "anyulee@foxmail.com",
+        availableLanguage: ["English", "Simplified Chinese", "Traditional Chinese", "Russian"],
+      },
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       name: siteName,
       applicationCategory: "LifestyleApplication",
       operatingSystem: "Web",
       url: absoluteUrl("/"),
       description: routeSeo.home.description,
+      publisher: {
+        "@id": `${absoluteUrl("/")}#organization`,
+      },
       offers: {
         "@type": "Offer",
         price: "0",

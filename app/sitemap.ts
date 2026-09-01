@@ -39,7 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             languages: {
               en: absoluteUrl(`${route.path}?locale=en`),
               zh: absoluteUrl(`${route.path}?locale=zh`),
+              "zh-Hant": absoluteUrl(`${route.path}?locale=zh-TW`),
               ru: absoluteUrl(`${route.path}?locale=ru`),
+              "x-default": absoluteUrl(route.path),
             },
           },
   }));
