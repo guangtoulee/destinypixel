@@ -2,22 +2,34 @@
 
 import {
   AudioLines,
+  BookOpen,
   BrainCircuit,
   Check,
   ChevronRight,
   CircleHelp,
+  Cloud,
   Delete,
   Headphones,
   Keyboard,
+  LogIn,
+  LogOut,
   LockKeyhole,
   RefreshCcw,
   ShieldCheck,
   Sparkles,
   Target,
+  UserRound,
   Volume2,
+  X,
   Zap,
 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import {
+  danciWordPacks,
+  getDanciPack,
+  type DanciWordItem,
+  type DanciWordPack,
+} from "@/data/danci-word-packs";
 import {
   allowedEnglishVoiceSummary,
   chooseAllowedEnglishVoice,
@@ -27,16 +39,8 @@ import styles from "./danci-experience.module.css";
 type RecallMode = "meaning" | "tiles" | "spell" | "listen" | "context";
 type TrainingMode = "briefing" | "study" | RecallMode | "correction" | "feedback" | "complete";
 
-type WordItem = {
-  id: string;
-  word: string;
-  meaning: string;
-  unit: string;
-  level: 1 | 2 | 3;
-  family: string;
-  example: string;
-  tip: string;
-};
+type WordItem = DanciWordItem;
+type DanciDifficulty = "foundation" | "standard" | "challenge";
 
 type WordRecord = {
   seen: number;
@@ -51,6 +55,9 @@ type WordRecord = {
 
 type TrainerMemory = {
   records: Record<string, WordRecord>;
+  packId: string;
+  difficulty: DanciDifficulty;
+  recentIds: string[];
   todayKey: string;
   todayAnswered: number;
   totalAnswered: number;
@@ -59,7 +66,15 @@ type TrainerMemory = {
   lastFeedback: string;
   completedMissions: number;
   todayMissions: number;
+  syncUpdatedAt: string;
 };
+
+type Member = {
+  id: string;
+  username: string;
+};
+
+type ProgressRoot = Record<string, unknown>;
 
 type Outcome = {
   correct: boolean;
@@ -87,6 +102,7 @@ type LetterTile = {
 };
 
 const storageKey = "danciTrainerMemoryV2";
+const sessionStorageKey = "danciMemberSessionV1";
 const missionSize = 6;
 const reviewIntervals = [10 * 60 * 1000, 30 * 60 * 1000, 24 * 60 * 60 * 1000, 3 * 24 * 60 * 60 * 1000, 7 * 24 * 60 * 60 * 1000];
 const recallModes: RecallMode[] = ["meaning", "tiles", "spell", "listen", "context"];
@@ -141,6 +157,26 @@ const wordBank: WordItem[] = [
   { id: "month", word: "month", meaning: "月；月份", unit: "Unit 8", level: 1, family: "time", example: "January is the first month.", tip: "th 舌尖轻咬。" },
 ];
 
+const foundationPack: DanciWordPack = {
+  id: "g7-foundation",
+  label: "七年级基础补漏",
+  shortLabel: "七基",
+  description: "小学到七年级的高频基础词，仅在基础确实不稳时使用。",
+  words: wordBank,
+};
+
+const availablePacks = [foundationPack, ...danciWordPacks];
+
+const difficultyOptions: Array<{
+  id: DanciDifficulty;
+  label: string;
+  note: string;
+}> = [
+  { id: "foundation", label: "稳基础", note: "保留一级和二级词" },
+  { id: "standard", label: "课本同步", note: "覆盖本册全部难度" },
+  { id: "challenge", label: "挑战模式", note: "二级和三级词优先" },
+];
+
 function emptyMistakes(): Record<RecallMode, number> {
   return { meaning: 0, tiles: 0, spell: 0, listen: 0, context: 0 };
 }
@@ -180,6 +216,9 @@ function todayKey() {
 function createDefaultMemory(): TrainerMemory {
   return {
     records: {},
+    packId: "g7b",
+    difficulty: "standard",
+    recentIds: [],
     todayKey: todayKey(),
     todayAnswered: 0,
     totalAnswered: 0,
@@ -188,6 +227,7 @@ function createDefaultMemory(): TrainerMemory {
     lastFeedback: "任务舱待命。",
     completedMissions: 0,
     todayMissions: 0,
+    syncUpdatedAt: new Date().toISOString(),
   };
 }
 
@@ -206,7 +246,18 @@ function normalizeMemory(input: Partial<TrainerMemory> | null): TrainerMemory {
       ];
     }),
   );
-  const memory: TrainerMemory = { ...base, ...(input ?? {}), records };
+  const memory: TrainerMemory = {
+    ...base,
+    ...(input ?? {}),
+    records,
+    packId: availablePacks.some((pack) => pack.id === input?.packId) ? String(input?.packId) : base.packId,
+    difficulty: difficultyOptions.some((option) => option.id === input?.difficulty)
+      ? (input?.difficulty as DanciDifficulty)
+      : base.difficulty,
+    recentIds: Array.isArray(input?.recentIds)
+      ? input.recentIds.filter((id): id is string => typeof id === "string").slice(-18)
+      : [],
+  };
 
   if (memory.todayKey !== todayKey()) {
     memory.todayKey = todayKey();
@@ -215,6 +266,72 @@ function normalizeMemory(input: Partial<TrainerMemory> | null): TrainerMemory {
   }
 
   return memory;
+}
+
+function getSelectedPack(packId: string) {
+  return availablePacks.find((pack) => pack.id === packId) ?? getDanciPack(packId);
+}
+
+function getTrainingWords(pack: DanciWordPack, difficulty: DanciDifficulty) {
+  if (difficulty === "foundation") {
+    const words = pack.words.filter((word) => word.level <= 2);
+    return words.length >= missionSize ? words : pack.words;
+  }
+
+  if (difficulty === "challenge") {
+    const words = pack.words.filter((word) => word.level >= 2);
+    return words.length >= missionSize ? words : pack.words;
+  }
+
+  return pack.words;
+}
+
+function mergeTrainerMemory(localMemory: TrainerMemory, remoteInput: Partial<TrainerMemory> | null) {
+  if (!remoteInput) {
+    return normalizeMemory({
+      ...localMemory,
+      syncUpdatedAt: new Date().toISOString(),
+    });
+  }
+
+  const remoteMemory = normalizeMemory(remoteInput);
+  const records = { ...localMemory.records };
+
+  Object.entries(remoteMemory.records).forEach(([id, remoteRecord]) => {
+    const localRecord = records[id];
+    if (!localRecord || remoteRecord.updatedAt > localRecord.updatedAt) {
+      records[id] = remoteRecord;
+    }
+  });
+
+  const remoteIsNewer = remoteMemory.syncUpdatedAt > localMemory.syncUpdatedAt;
+  const recentIds = [...localMemory.recentIds, ...remoteMemory.recentIds]
+    .filter((id, index, items) => items.lastIndexOf(id) === index)
+    .slice(-18);
+
+  return normalizeMemory({
+    ...(remoteIsNewer ? localMemory : remoteMemory),
+    ...(remoteIsNewer ? remoteMemory : localMemory),
+    records,
+    recentIds,
+    totalAnswered: Math.max(localMemory.totalAnswered, remoteMemory.totalAnswered),
+    bestStreak: Math.max(localMemory.bestStreak, remoteMemory.bestStreak),
+    completedMissions: Math.max(localMemory.completedMissions, remoteMemory.completedMissions),
+    syncUpdatedAt: new Date().toISOString(),
+  });
+}
+
+async function requestJson<T>(url: string, init?: RequestInit) {
+  const response = await fetch(url, {
+    ...init,
+    headers: {
+      "Content-Type": "application/json",
+      ...(init?.headers ?? {}),
+    },
+  });
+  const payload = await response.json() as T & { error?: string };
+  if (!response.ok) throw new Error(payload.error || "请求失败，请稍后再试。");
+  return payload;
 }
 
 function normalizeAnswer(value: string) {
@@ -265,8 +382,8 @@ function shuffleBySeed<T extends { id: string }>(items: T[], seed: number) {
   return shuffled;
 }
 
-function buildChoices(word: WordItem, seed: number) {
-  const peers = wordBank.filter((item) => item.id !== word.id && item.level <= Math.min(3, word.level + 1));
+function buildChoices(word: WordItem, seed: number, trainingWords: WordItem[]) {
+  const peers = trainingWords.filter((item) => item.id !== word.id && item.level <= Math.min(3, word.level + 1));
   const choices = shuffleBySeed([word, ...shuffleBySeed(peers, seed).slice(0, 3)], seed + 13);
   if (choices[0]?.id === word.id && choices.length > 1) {
     const target = 1 + (seed % (choices.length - 1));
@@ -275,38 +392,55 @@ function buildChoices(word: WordItem, seed: number) {
   return choices;
 }
 
-function buildMission(memory: TrainerMemory) {
+function buildMission(memory: TrainerMemory, trainingWords: WordItem[]) {
+  if (trainingWords.length === 0) return [];
+
   const now = Date.now();
-  const seenCount = Object.values(memory.records).filter((record) => record.seen > 0).length;
-  const due = wordBank
-    .filter((word) => memory.records[word.id]?.dueAt <= now)
+  const seed = Number(todayKey().replace(/-/g, "")) + memory.completedMissions * 97 + memory.totalAnswered * 7;
+  const recentIds = new Set(memory.recentIds);
+  const due = trainingWords
+    .filter((word) => {
+      const record = memory.records[word.id];
+      return Boolean(record?.seen && record.dueAt <= now);
+    })
     .sort((a, b) => (memory.records[a.id]?.dueAt ?? 0) - (memory.records[b.id]?.dueAt ?? 0));
-  const weak = wordBank
+  const weak = trainingWords
     .filter((word) => {
       const record = memory.records[word.id];
       return record && record.wrong > 0 && record.wrong >= Math.max(1, Math.floor(record.correct / 2));
     })
     .sort((a, b) => (memory.records[b.id]?.wrong ?? 0) - (memory.records[a.id]?.wrong ?? 0));
-  const fresh = wordBank.filter((word) => !memory.records[word.id]?.seen);
-  const freshLimit = seenCount === 0 ? missionSize : 3;
-  const learning = wordBank
+  const fresh = shuffleBySeed(
+    trainingWords.filter((word) => !memory.records[word.id]?.seen && !recentIds.has(word.id)),
+    seed,
+  );
+  const learning = trainingWords
     .filter((word) => {
       const record = memory.records[word.id];
-      return record && record.stage < 4 && record.dueAt > now;
+      return record && record.stage < 4 && !recentIds.has(word.id);
     })
-    .sort((a, b) => (memory.records[a.id]?.stage ?? 0) - (memory.records[b.id]?.stage ?? 0));
-  const fallback = [...fresh.slice(freshLimit), ...wordBank]
-    .sort((a, b) => (memory.records[a.id]?.dueAt ?? 0) - (memory.records[b.id]?.dueAt ?? 0));
-  const candidates = [...due, ...weak, ...fresh.slice(0, freshLimit), ...learning, ...fallback];
+    .sort((a, b) => (memory.records[a.id]?.seen ?? 0) - (memory.records[b.id]?.seen ?? 0));
   const selected = new Set<string>();
+  const mission: WordItem[] = [];
 
-  return candidates
-    .filter((word) => {
-      if (selected.has(word.id)) return false;
+  const addWords = (items: WordItem[], limit = missionSize) => {
+    for (const word of items) {
+      if (mission.length >= missionSize || limit <= 0) break;
+      if (selected.has(word.id)) continue;
       selected.add(word.id);
-      return true;
-    })
-    .slice(0, missionSize);
+      mission.push(word);
+      limit -= 1;
+    }
+  };
+
+  addWords(weak.filter((word) => !recentIds.has(word.id)), 2);
+  addWords(due.filter((word) => !recentIds.has(word.id)), 2);
+  addWords(fresh, Math.max(2, missionSize - mission.length));
+  addWords(learning);
+  addWords(shuffleBySeed(trainingWords.filter((word) => !recentIds.has(word.id)), seed + 29));
+  addWords(shuffleBySeed(trainingWords, seed + 61));
+
+  return shuffleBySeed(mission, seed + 101);
 }
 
 function getStartMode(word: WordItem, memory: TrainerMemory, recheck = false): TrainingMode {
@@ -373,6 +507,18 @@ function getWeakestMode(errors: Record<RecallMode, number>) {
 export default function DanciExperience() {
   const [memory, setMemory] = useState<TrainerMemory>(() => createDefaultMemory());
   const [loaded, setLoaded] = useState(false);
+  const [member, setMember] = useState<Member | null>(null);
+  const [sessionToken, setSessionToken] = useState("");
+  const [progressRoot, setProgressRoot] = useState<ProgressRoot>({});
+  const [cloudReady, setCloudReady] = useState(false);
+  const [syncState, setSyncState] = useState<"local" | "syncing" | "saved" | "error">("local");
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [authUsername, setAuthUsername] = useState("");
+  const [authPassword, setAuthPassword] = useState("");
+  const [authPasswordConfirm, setAuthPasswordConfirm] = useState("");
+  const [authMessage, setAuthMessage] = useState("");
+  const [authBusy, setAuthBusy] = useState(false);
   const [missionStarted, setMissionStarted] = useState(false);
   const [queue, setQueue] = useState<string[]>([]);
   const [missionTarget, setMissionTarget] = useState(missionSize);
@@ -390,31 +536,36 @@ export default function DanciExperience() {
   const [consolePulse, setConsolePulse] = useState<"neutral" | "success" | "fail">("neutral");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
 
-  const activeWord = wordBank.find((word) => word.id === activeId) ?? wordBank[0];
+  const activePack = getSelectedPack(memory.packId);
+  const trainingWords = useMemo(
+    () => getTrainingWords(activePack, memory.difficulty),
+    [activePack, memory.difficulty],
+  );
+  const activeWord = trainingWords.find((word) => word.id === activeId) ?? trainingWords[0] ?? activePack.words[0];
   const activeRecord: WordRecord = {
     ...getEmptyRecord(),
     ...(memory.records[activeWord.id] ?? {}),
     mistakes: { ...emptyMistakes(), ...(memory.records[activeWord.id]?.mistakes ?? {}) },
   };
   const choices = useMemo(
-    () => buildChoices(activeWord, memory.totalAnswered + activeWord.word.length + activeRecord.wrong * 7),
-    [activeRecord.wrong, activeWord, memory.totalAnswered],
+    () => buildChoices(activeWord, memory.totalAnswered + activeWord.word.length + activeRecord.wrong * 7, trainingWords),
+    [activeRecord.wrong, activeWord, memory.totalAnswered, trainingWords],
   );
   const letterTiles = useMemo(
     () => buildLetterTiles(activeWord.word, memory.totalAnswered + activeWord.word.length * 11),
     [activeWord, memory.totalAnswered],
   );
   const tileAnswer = tileSelection.map((id) => letterTiles.find((tile) => tile.id === id)?.letter ?? "").join("");
-  const preview = useMemo(() => buildMission(memory), [memory]);
+  const preview = useMemo(() => buildMission(memory, trainingWords), [memory, trainingWords]);
   const missionMix = useMemo(() => getMissionMix(preview, memory), [memory, preview]);
   const stats = useMemo(() => {
-    const records = wordBank.map((word) => memory.records[word.id] ?? getEmptyRecord());
+    const records = trainingWords.map((word) => memory.records[word.id] ?? getEmptyRecord());
     return {
       mastered: records.filter((record) => record.stage >= 4).length,
       active: records.filter((record) => record.stage > 0 && record.stage < 4).length,
       weak: records.filter((record) => record.wrong > 0 && record.wrong >= record.correct).length,
     };
-  }, [memory.records]);
+  }, [memory.records, trainingWords]);
   const missionPower = Math.min(100, Math.round((tasksDone / Math.max(1, missionTarget)) * 100));
   const baseModules = Math.min(12, memory.completedMissions + Math.floor(stats.mastered / 2));
 
@@ -422,6 +573,11 @@ export default function DanciExperience() {
     try {
       const saved = localStorage.getItem(storageKey);
       setMemory(saved ? normalizeMemory(JSON.parse(saved) as Partial<TrainerMemory>) : createDefaultMemory());
+      const savedSession = localStorage.getItem(sessionStorageKey);
+      if (savedSession) {
+        const parsed = JSON.parse(savedSession) as { token?: string };
+        if (parsed.token) setSessionToken(parsed.token);
+      }
     } catch {
       setMemory(createDefaultMemory());
     } finally {
@@ -431,8 +587,79 @@ export default function DanciExperience() {
 
   useEffect(() => {
     if (!loaded) return;
-    localStorage.setItem(storageKey, JSON.stringify(memory));
+    localStorage.setItem(
+      storageKey,
+      JSON.stringify({ ...memory, syncUpdatedAt: new Date().toISOString() }),
+    );
   }, [loaded, memory]);
+
+  useEffect(() => {
+    if (!loaded || !sessionToken) return;
+    let cancelled = false;
+
+    const loadCloudProgress = async () => {
+      setSyncState("syncing");
+      try {
+        const response = await fetch("/api/english/progress", {
+          headers: { Authorization: `Bearer ${sessionToken}` },
+          cache: "no-store",
+        });
+        const payload = await response.json() as {
+          error?: string;
+          member?: Member;
+          progress?: ProgressRoot;
+        };
+        if (!response.ok) throw new Error(payload.error || "登录已过期。");
+        if (cancelled) return;
+
+        const remoteRoot = payload.progress && typeof payload.progress === "object" ? payload.progress : {};
+        const remoteDanci = remoteRoot.danciTrainer as Partial<TrainerMemory> | undefined;
+        setProgressRoot(remoteRoot);
+        setMember(payload.member ?? null);
+        setMemory((current) => mergeTrainerMemory(current, remoteDanci ?? null));
+        setCloudReady(true);
+        setSyncState("saved");
+      } catch {
+        if (cancelled) return;
+        localStorage.removeItem(sessionStorageKey);
+        setSessionToken("");
+        setMember(null);
+        setCloudReady(false);
+        setSyncState("error");
+      }
+    };
+
+    void loadCloudProgress();
+    return () => {
+      cancelled = true;
+    };
+  }, [loaded, sessionToken]);
+
+  useEffect(() => {
+    if (!loaded || !sessionToken || !cloudReady) return;
+    const timer = window.setTimeout(async () => {
+      const nextMemory = { ...memory, syncUpdatedAt: new Date().toISOString() };
+      setSyncState("syncing");
+      try {
+        const response = await fetch("/api/english/progress", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${sessionToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            progress: { ...progressRoot, danciTrainer: nextMemory },
+          }),
+        });
+        if (!response.ok) throw new Error("save failed");
+        setSyncState("saved");
+      } catch {
+        setSyncState("error");
+      }
+    }, 900);
+
+    return () => window.clearTimeout(timer);
+  }, [cloudReady, loaded, memory, progressRoot, sessionToken]);
 
   useEffect(() => {
     if (!("speechSynthesis" in window)) return;
@@ -472,7 +699,7 @@ export default function DanciExperience() {
   }
 
   function activateWord(id: string, sourceMemory: TrainerMemory, recheck = false) {
-    const word = wordBank.find((item) => item.id === id) ?? wordBank[0];
+    const word = trainingWords.find((item) => item.id === id) ?? trainingWords[0] ?? activePack.words[0];
     setActiveId(word.id);
     setMode(getStartMode(word, sourceMemory, recheck));
     setInput("");
@@ -484,7 +711,7 @@ export default function DanciExperience() {
   }
 
   function startMission() {
-    const nextQueue = buildMission(memory).map((word) => word.id);
+    const nextQueue = buildMission(memory, trainingWords).map((word) => word.id);
     setMissionStarted(true);
     setQueue(nextQueue);
     setMissionTarget(nextQueue.length);
@@ -506,6 +733,7 @@ export default function DanciExperience() {
       ...memory,
       records: { ...memory.records, [activeWord.id]: nextRecord },
       lastFeedback: `${activeWord.word} 已进入短时记忆。`,
+      syncUpdatedAt: new Date().toISOString(),
     };
     setMemory(nextMemory);
     setMode("meaning");
@@ -545,6 +773,7 @@ export default function DanciExperience() {
       lastFeedback: correct
         ? `${activeWord.word} · ${stageLabel(nextStage)} · ${nextDueText(nextDueAt)}复习`
         : `${activeWord.word} 已进入订正与回流。`,
+      syncUpdatedAt: new Date().toISOString(),
     };
 
     setMemory(nextMemory);
@@ -589,7 +818,11 @@ export default function DanciExperience() {
     }
     setMode("tiles");
     setTileSelection([]);
-    setMemory((current) => ({ ...current, lastFeedback: "词义已确认，继续重建字母序列。" }));
+    setMemory((current) => ({
+      ...current,
+      lastFeedback: "词义已确认，继续重建字母序列。",
+      syncUpdatedAt: new Date().toISOString(),
+    }));
   }
 
   function selectTile(id: string) {
@@ -615,7 +848,11 @@ export default function DanciExperience() {
         return;
       }
       setSession((current) => ({ ...current, recovered: current.recovered + 1, xp: current.xp + 4 }));
-      setMemory((current) => ({ ...current, lastFeedback: `${activeWord.word} 已完成立即订正。` }));
+      setMemory((current) => ({
+        ...current,
+        lastFeedback: `${activeWord.word} 已完成立即订正。`,
+        syncUpdatedAt: new Date().toISOString(),
+      }));
       setOutcome({
         correct: true,
         recovered: true,
@@ -665,15 +902,17 @@ export default function DanciExperience() {
     setQueue(rest);
     setOutcome(null);
     setInput("");
+    setMemory((current) => ({
+      ...current,
+      recentIds: [...current.recentIds.filter((id) => id !== activeWord.id), activeWord.id].slice(-18),
+      completedMissions: current.completedMissions + (!rest.length ? 1 : 0),
+      todayMissions: current.todayMissions + (!rest.length ? 1 : 0),
+      lastFeedback: !rest.length ? "任务完成，长期进度已保存。" : current.lastFeedback,
+      syncUpdatedAt: new Date().toISOString(),
+    }));
 
     if (!rest.length) {
       setMode("complete");
-      setMemory((current) => ({
-        ...current,
-        completedMissions: current.completedMissions + 1,
-        todayMissions: current.todayMissions + 1,
-        lastFeedback: "任务完成，长期进度已保存。",
-      }));
       return;
     }
 
@@ -681,9 +920,106 @@ export default function DanciExperience() {
     activateWord(nextId, memory, (nextRechecks[nextId] ?? 0) > 0);
   }
 
+  function changePack(packId: string) {
+    const pack = getSelectedPack(packId);
+    setMemory((current) => ({
+      ...current,
+      packId: pack.id,
+      recentIds: [],
+      lastFeedback: `已切换到 ${pack.label}。`,
+      syncUpdatedAt: new Date().toISOString(),
+    }));
+    setMissionStarted(false);
+    setMode("briefing");
+    setQueue([]);
+  }
+
+  function changeDifficulty(difficulty: DanciDifficulty) {
+    const option = difficultyOptions.find((item) => item.id === difficulty);
+    setMemory((current) => ({
+      ...current,
+      difficulty,
+      recentIds: [],
+      lastFeedback: `训练档位：${option?.label ?? "课本同步"}。`,
+      syncUpdatedAt: new Date().toISOString(),
+    }));
+    setMissionStarted(false);
+    setMode("briefing");
+    setQueue([]);
+  }
+
+  function openAuth(modeToOpen: "login" | "register" = "login") {
+    setAuthMode(modeToOpen);
+    setAuthMessage("");
+    setAuthPassword("");
+    setAuthPasswordConfirm("");
+    setAuthOpen(true);
+  }
+
+  async function submitAuth(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (authBusy) return;
+    if (authMode === "register" && authPassword !== authPasswordConfirm) {
+      setAuthMessage("两次密码不一致。");
+      return;
+    }
+
+    setAuthBusy(true);
+    setAuthMessage("");
+    try {
+      const endpoint = authMode === "register"
+        ? "/api/english/auth/register"
+        : "/api/english/auth/login";
+      const payload = await requestJson<{
+        token: string;
+        member: Member;
+        progress?: ProgressRoot;
+      }>(endpoint, {
+        method: "POST",
+        body: JSON.stringify({
+          username: authUsername,
+          password: authPassword,
+          passwordConfirm: authPasswordConfirm,
+          progress: authMode === "register"
+            ? { ...progressRoot, danciTrainer: memory }
+            : undefined,
+        }),
+      });
+
+      const remoteRoot = payload.progress && typeof payload.progress === "object" ? payload.progress : {};
+      const remoteDanci = remoteRoot.danciTrainer as Partial<TrainerMemory> | undefined;
+      const merged = mergeTrainerMemory(memory, remoteDanci ?? null);
+      localStorage.setItem(sessionStorageKey, JSON.stringify({ token: payload.token }));
+      setSessionToken(payload.token);
+      setMember(payload.member);
+      setProgressRoot(remoteRoot);
+      setMemory(merged);
+      setCloudReady(true);
+      setSyncState("syncing");
+      setAuthOpen(false);
+    } catch (error) {
+      setAuthMessage(error instanceof Error ? error.message : "登录失败，请稍后再试。");
+    } finally {
+      setAuthBusy(false);
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem(sessionStorageKey);
+    setSessionToken("");
+    setMember(null);
+    setProgressRoot({});
+    setCloudReady(false);
+    setSyncState("local");
+  }
+
   function resetMemory() {
     if (!window.confirm("清空这个浏览器里的全部背词进度？")) return;
-    const nextMemory = createDefaultMemory();
+    const nextMemory = {
+      ...createDefaultMemory(),
+      packId: memory.packId,
+      difficulty: memory.difficulty,
+    };
     setMemory(nextMemory);
     setMissionStarted(false);
     setQueue([]);
@@ -698,7 +1034,7 @@ export default function DanciExperience() {
         <div className={styles.brand}>
           <span className={styles.brandMark}><BrainCircuit size={24} /></span>
           <div>
-            <p>GRADE 7 WORD OPS</p>
+            <p>{activePack.shortLabel.toUpperCase()} WORD OPS</p>
             <h1>Recall Base</h1>
           </div>
         </div>
@@ -707,10 +1043,43 @@ export default function DanciExperience() {
           <div><span>稳定词汇</span><strong>{stats.mastered}</strong></div>
           <div><span>连续命中</span><strong>{memory.streak}</strong></div>
         </div>
-        <button type="button" className={styles.iconButton} onClick={resetMemory} title="清空本机进度" aria-label="清空本机进度">
-          <RefreshCcw size={18} />
-        </button>
+        <div className={styles.hudActions}>
+          <button
+            type="button"
+            className={styles.accountButton}
+            onClick={() => openAuth("login")}
+            aria-label={member ? `学习账号 ${member.username}` : "登录同步"}
+            title={member ? `学习账号：${member.username}` : "登录并同步进度"}
+          >
+            {member ? <Cloud size={17} /> : <LogIn size={17} />}
+            <span>{member?.username ?? "登录同步"}</span>
+            {member ? <i className={syncState === "saved" ? styles.syncSaved : syncState === "error" ? styles.syncError : ""} /> : null}
+          </button>
+          <button type="button" className={styles.iconButton} onClick={resetMemory} title="清空学习进度" aria-label="清空学习进度">
+            <RefreshCcw size={18} />
+          </button>
+        </div>
       </header>
+
+      {authOpen ? (
+        <AccountModal
+          member={member}
+          mode={authMode}
+          username={authUsername}
+          password={authPassword}
+          passwordConfirm={authPasswordConfirm}
+          message={authMessage}
+          busy={authBusy}
+          syncState={syncState}
+          onMode={setAuthMode}
+          onUsername={setAuthUsername}
+          onPassword={setAuthPassword}
+          onPasswordConfirm={setAuthPasswordConfirm}
+          onSubmit={submitAuth}
+          onLogout={logout}
+          onClose={() => setAuthOpen(false)}
+        />
+      ) : null}
 
       {!loaded ? (
         <section className={styles.bootPanel}><BrainCircuit size={30} /><span>正在载入记忆档案</span></section>
@@ -718,8 +1087,14 @@ export default function DanciExperience() {
         <BriefingView
           words={preview}
           mix={missionMix}
+          pack={activePack}
+          packs={availablePacks}
+          difficulty={memory.difficulty}
+          trainingWordCount={trainingWords.length}
           completedMissions={memory.completedMissions}
           moduleCount={baseModules}
+          onPack={changePack}
+          onDifficulty={changeDifficulty}
           onStart={startMission}
         />
       ) : (
@@ -811,17 +1186,127 @@ export default function DanciExperience() {
   );
 }
 
+function AccountModal({
+  member,
+  mode,
+  username,
+  password,
+  passwordConfirm,
+  message,
+  busy,
+  syncState,
+  onMode,
+  onUsername,
+  onPassword,
+  onPasswordConfirm,
+  onSubmit,
+  onLogout,
+  onClose,
+}: {
+  member: Member | null;
+  mode: "login" | "register";
+  username: string;
+  password: string;
+  passwordConfirm: string;
+  message: string;
+  busy: boolean;
+  syncState: "local" | "syncing" | "saved" | "error";
+  onMode: (mode: "login" | "register") => void;
+  onUsername: (value: string) => void;
+  onPassword: (value: string) => void;
+  onPasswordConfirm: (value: string) => void;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onLogout: () => void;
+  onClose: () => void;
+}) {
+  const syncLabel = syncState === "saved"
+    ? "云端已保存"
+    : syncState === "syncing"
+      ? "正在同步"
+      : syncState === "error"
+        ? "同步失败，将保留本机进度"
+        : "仅保存在本机";
+
+  return (
+    <div className={styles.accountOverlay}>
+      <section className={styles.accountModal} role="dialog" aria-modal="true" aria-label="学习账号">
+        <div className={styles.accountModalHeader}>
+          <div>
+            <span><UserRound size={16} /> LEARNER PROFILE</span>
+            <h2>{member ? member.username : "保存背词进度"}</h2>
+          </div>
+          <button type="button" className={styles.iconButton} onClick={onClose} aria-label="关闭账号窗口" title="关闭">
+            <X size={18} />
+          </button>
+        </div>
+
+        {member ? (
+          <div className={styles.memberPanel}>
+            <div className={styles.cloudStatus}>
+              <Cloud size={24} />
+              <div><span>跨设备进度</span><strong>{syncLabel}</strong></div>
+            </div>
+            <button type="button" className={styles.secondaryButton} onClick={onLogout}>
+              <LogOut size={17} />退出账号
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className={styles.authTabs} role="tablist" aria-label="账号操作">
+              <button type="button" className={mode === "login" ? styles.authTabActive : ""} onClick={() => onMode("login")}>登录</button>
+              <button type="button" className={mode === "register" ? styles.authTabActive : ""} onClick={() => onMode("register")}>注册</button>
+            </div>
+            <form className={styles.authForm} onSubmit={onSubmit}>
+              <label>
+                <span>用户名</span>
+                <input value={username} onChange={(event) => onUsername(event.target.value)} autoComplete="username" minLength={2} maxLength={32} required />
+              </label>
+              <label>
+                <span>密码</span>
+                <input value={password} onChange={(event) => onPassword(event.target.value)} type="password" autoComplete={mode === "login" ? "current-password" : "new-password"} minLength={6} maxLength={72} required />
+              </label>
+              {mode === "register" ? (
+                <label>
+                  <span>确认密码</span>
+                  <input value={passwordConfirm} onChange={(event) => onPasswordConfirm(event.target.value)} type="password" autoComplete="new-password" minLength={6} maxLength={72} required />
+                </label>
+              ) : null}
+              {message ? <p className={styles.authMessage}>{message}</p> : null}
+              <button type="submit" className={styles.primaryButton} disabled={busy}>
+                {busy ? "正在连接" : mode === "login" ? "登录并同步" : "注册并保存"}
+                <ChevronRight size={18} />
+              </button>
+            </form>
+          </>
+        )}
+      </section>
+    </div>
+  );
+}
+
 function BriefingView({
   words,
   mix,
+  pack,
+  packs,
+  difficulty,
+  trainingWordCount,
   completedMissions,
   moduleCount,
+  onPack,
+  onDifficulty,
   onStart,
 }: {
   words: WordItem[];
   mix: { review: number; weak: number; fresh: number };
+  pack: DanciWordPack;
+  packs: DanciWordPack[];
+  difficulty: DanciDifficulty;
+  trainingWordCount: number;
   completedMissions: number;
   moduleCount: number;
+  onPack: (packId: string) => void;
+  onDifficulty: (difficulty: DanciDifficulty) => void;
   onStart: () => void;
 }) {
   return (
@@ -829,7 +1314,34 @@ function BriefingView({
       <div className={styles.briefingCopy}>
         <span className={styles.eyebrow}><Target size={16} /> DAILY MISSION</span>
         <h2>这一局，拿下 {words.length} 个词</h2>
-        <p>七年级核心词库 · 预计 6 分钟</p>
+        <p>{pack.description}</p>
+        <div className={styles.missionConfig}>
+          <label className={styles.packSelect}>
+            <span><BookOpen size={15} />教材词库</span>
+            <select value={pack.id} onChange={(event) => onPack(event.target.value)} aria-label="教材词库">
+              {packs.map((item) => (
+                <option key={item.id} value={item.id}>{item.label} · {item.words.length} 词</option>
+              ))}
+            </select>
+          </label>
+          <fieldset className={styles.difficultyFieldset}>
+            <legend>训练档位</legend>
+            <div className={styles.difficultySwitch}>
+              {difficultyOptions.map((option) => (
+                <button
+                  key={option.id}
+                  type="button"
+                  className={difficulty === option.id ? styles.difficultyActive : ""}
+                  onClick={() => onDifficulty(option.id)}
+                  title={option.note}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </fieldset>
+        </div>
+        <p className={styles.missionEstimate}>{pack.label} · 当前档位 {trainingWordCount} 词 · 每局约 6 分钟</p>
         <div className={styles.mixBar} aria-label="本轮词汇组成">
           {mix.review ? <i className={styles.reviewMix} style={{ flex: mix.review }} /> : null}
           {mix.weak ? <i className={styles.weakMix} style={{ flex: mix.weak }} /> : null}
