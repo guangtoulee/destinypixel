@@ -16,6 +16,7 @@ const publicRoutes = [
   { path: routeSeo.oracle.path, priority: 0.72, changeFrequency: "weekly" },
   { path: routeSeo.sticks.path, priority: 0.71, changeFrequency: "weekly" },
   { path: routeSeo.atelier.path, priority: 0.73, changeFrequency: "weekly" },
+  { path: routeSeo.tuteng.path, priority: 0.88, changeFrequency: "monthly" },
   { path: routeSeo.juben.path, priority: 0.76, changeFrequency: "weekly" },
   { path: routeSeo.daoyan.path, priority: 0.79, changeFrequency: "weekly" },
   { path: routeSeo.prompt.path, priority: 0.78, changeFrequency: "daily" },

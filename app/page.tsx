@@ -68,6 +68,7 @@ export default async function Home({
       },
       featureList: [
         "AI birth chart and Bazi fusion report",
+        "Deterministic interactive Birth Totem geometry",
         "Symbolic animal archetype cards",
         "Natal astrology context",
         "Palm reading studio",

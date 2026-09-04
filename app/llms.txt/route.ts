@@ -15,6 +15,7 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 - Temple Sticks Oracle: ${absoluteUrl("/sticks")}
 - Insight Studios: ${absoluteUrl("/insights")}
 - Five Elements Color and Crystal Bracelet Atelier: ${absoluteUrl("/atelier")}
+- Birth Totem / Totem Matrix interactive Bazi geometry: ${absoluteUrl("/tuteng")}
 - AI Short Drama Script Studio: ${absoluteUrl("/juben")}
 - AI Prompt Radar and Chinese Prompt Studio: ${absoluteUrl("/prompt")}
 - Prompt trend article archive: ${absoluteUrl("/prompt/articles")}
@@ -23,6 +24,8 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 
 ## Product Language
 Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, annual forecast, short drama script generator, director script, shot list, storyboard prompt, camera movement prompt, edit prompt, voiceover script, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, psychological, reflective, practical, and production-ready.
+
+Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Supported Languages
 English, Simplified Chinese, Traditional Chinese, and Russian.

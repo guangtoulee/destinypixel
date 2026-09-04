@@ -881,6 +881,9 @@ export default function DestinyWhiteExperience({
           </a>
 
           <nav className="white-nav" aria-label="Primary navigation">
+            <a href={`/tuteng?locale=${locale}`}>
+              {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
+            </a>
             <a href="#insights">{text.nav.insights}</a>
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
@@ -1051,6 +1054,15 @@ export default function DestinyWhiteExperience({
               <ShieldCheck size={14} aria-hidden="true" />
               {text.hero.privacy}
             </p>
+            <a className="white-totem-entry" href={`/tuteng?locale=${locale}`}>
+              <Orbit size={15} aria-hidden="true" />
+              {copyLocale === "zh"
+                ? "生成可交互本命图腾"
+                : locale === "ru"
+                  ? "Создать интерактивный тотем"
+                  : "Generate an interactive Birth Totem"}
+              <ArrowRight size={14} aria-hidden="true" />
+            </a>
           </div>
 
           <article className="white-card-preview">
@@ -1402,6 +1414,9 @@ export default function DestinyWhiteExperience({
           </a>
           <a href={`/sticks?locale=${locale}`}>
             {copyLocale === "zh" ? "求签" : locale === "ru" ? "Жребии" : "Sticks"}
+          </a>
+          <a href={`/tuteng?locale=${locale}`}>
+            {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
           </a>
           <a href="#blessing">
             {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}

@@ -204,6 +204,23 @@ export const routeSeo = {
       "灵石工坊",
     ],
   },
+  tuteng: {
+    path: "/tuteng",
+    title: "Birth Totem | 本命灵构 · Interactive Bazi Geometry",
+    description:
+      "Turn your Four Pillars, five elements, polarity, hidden stems, and Ten Gods into a deterministic interactive geometric Birth Totem with plain-language explanations.",
+    keywords: [
+      "Birth Totem",
+      "Totem Matrix",
+      "interactive Bazi visualization",
+      "Four Pillars geometry",
+      "five elements visualization",
+      "本命灵构",
+      "八字图腾",
+      "五行可视化",
+      "十神能力",
+    ],
+  },
   juben: {
     path: "/juben",
     title: "AI 短剧剧本生产台 | 分镜脚本、导演剧本与视频 Prompt",
