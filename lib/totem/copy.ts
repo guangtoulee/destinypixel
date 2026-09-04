@@ -529,20 +529,20 @@ export function explainTotemPart(part: TotemPart, locale: ReportLocale): PartExp
             ? `由${module || "相关功能"}与${element || "相关五行"}共同参与“${resonance}”通路。`
             : `${pillar}${part.stem ? `，天干或藏干为 ${part.stem}` : ""}${part.branch ? `，地支为 ${part.branch}` : ""}${part.tenGod ? `，十神为 ${part.tenGod}` : ""}${element ? `，五行属${element}` : ""}。`;
     const shape = part.kind === "boundary"
-      ? "外壳半径由四个地支、五行视觉权重和稳定哈希共同生成，所以不同命盘会改变轮廓，而不是只换颜色。"
+      ? "外壳先形成左右镜像的纵向纹章，再由四个地支改变冠角、肩部和尾部比例；差异来自结构，不是随意抖动坐标。"
       : part.kind === "core"
-        ? "十个日干使用十种不同的核心笔画语法；阴阳只改变曲直与虚实，不代表好坏。"
+        ? "十个日干使用十种核心笔画，并嵌进日支对应的守护兽暗纹；阴阳只改变内卷或外展，不代表好坏。"
         : part.kind === "hidden-stem"
           ? `支路数量严格对应地支藏干。${part.state === "connected" ? "这条藏干也在明干出现，因此端点更亮。" : "它未透到表层，因此停在内圈。"}`
           : part.kind === "pillar-branch"
-            ? "地支决定关节位置、容器大小与藏线槽位；月柱另形成承重环。"
+            ? "地支被转成小型守护兽暗纹：角、耳、羽、鳞或卷尾藏在宝石关节里；它只是结构隐喻，不是生肖画像。"
             : part.kind === "pillar-stem"
-              ? "天干变成主笔画；阳干更直、更外放，阴干更弯、更内收。"
+              ? "天干沿冠部、肩翼、核心或尾部的固定纹章走廊生长，并分出成对卷草；阳干外展，阴干内卷。"
               : part.kind === "element-flow"
-                ? "实线表示较顺的生扶，断续线表示制约、冲或尚未稳定接通。"
+                ? "关系不再任意穿过中心，而是沿外壳和肩环编织；双股表示生扶或回声，断续表示制约、冲或尚未稳定。"
                 : part.kind === "function-port"
-                  ? "端口大小来自该功能在明干与藏干中的聚合权重，与整体复杂度无关。"
-                  : "外部轨道是能力参与端口，连接线指回实际参与它的功能与五行结构。";
+                  ? "端口被做成发光宝石，大小来自该功能在明干与藏干中的聚合权重，与整体复杂度无关。"
+                  : "外部轨道以莲瓣与星芒收束能力端口；连接带仍指回实际参与它的功能与五行结构。";
     const fluentByModule: Record<FunctionModuleKey, string> = {
       agency: "能较早察觉自己的意愿，并把边界转成行动，不必靠持续对抗证明自己。",
       expression: "想法能被组织成语言、画面、节奏或作品，输出具有连续性。",
@@ -596,7 +596,7 @@ export function explainTotemPart(part: TotemPart, locale: ReportLocale): PartExp
         : `${pillar || "Структурный слой"}${part.stem ? `, ствол ${part.stem}` : ""}${part.branch ? `, ветвь ${part.branch}` : ""}${element ? `, элемент ${element}` : ""}.`,
       shape: part.kind === "hidden-stem"
         ? "Число внутренних линий точно следует скрытым стволам земной ветви."
-        : "Форма строится из фиксированных правил и стабильного хеша, поэтому повторный расчёт не меняет геометрию.",
+        : "Форма строится как симметричный герб с орнаментальными коридорами и знаками животных; повторный расчёт не меняет геометрию.",
       fluent: part.resonance
         ? `Несколько источников могут поддерживать маршрут «${resonance}», а не одна привычка.`
         : "Энергия переводится в наблюдаемое действие без постоянного перезапуска.",
@@ -621,14 +621,18 @@ export function explainTotemPart(part: TotemPart, locale: ReportLocale): PartExp
           ? `${resonance} draws on ${module || "several functions"} and ${element || "several elements"}.`
           : `${pillar || "Structural layer"}${part.stem ? `; stem ${part.stem}` : ""}${part.branch ? `; branch ${part.branch}` : ""}${part.tenGod ? `; Ten God ${part.tenGod}` : ""}${element ? `; ${element}` : ""}.`,
     shape: part.kind === "boundary"
-      ? "The shell radius combines four branch indices, visual element weights, and a stable keyed hash—so charts change silhouette, not merely color."
+      ? "The shell begins as a bilateral vertical crest. The four branches alter its crown, shoulders, and tail, so difference comes from structure rather than coordinate noise."
       : part.kind === "core"
-        ? "Each Day Stem uses a distinct core-stroke grammar. Yin and Yang change curvature and direction, not worth."
+        ? "Each Day Stem uses a distinct core stroke inside the Day Branch guardian motif. Yin and Yang change inward or outward movement, not worth."
         : part.kind === "hidden-stem"
           ? "The number of inner routes exactly matches the branch’s hidden stems; visible correspondence makes a terminal brighter."
+          : part.kind === "pillar-branch"
+            ? "Each branch becomes a restrained guardian-animal trace—horn, ear, feather, scale, or curling tail—set inside a jewel joint."
+          : part.kind === "pillar-stem"
+            ? "The stem follows a fixed crest corridor and grows paired flourishes; Yang opens outward while Yin turns inward."
           : part.kind === "element-flow"
-            ? "Continuous routes show support; interrupted routes show constraint, clash, or energy that has not stabilized."
-            : "Its size and position come from explicit structural weights and the deterministic fingerprint."
+            ? "Relations weave along the shell and shoulder rails. Double strands show support or echo; interrupted strands show constraint or unsettled flow."
+            : "Its jewel, rosette, and orbital position come from explicit structural weights and the deterministic fingerprint."
     ,
     fluent: part.resonance
       ? `${resonance} can recruit several sources instead of relying on one habit under pressure.`

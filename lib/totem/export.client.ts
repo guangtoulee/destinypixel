@@ -9,7 +9,10 @@ function cleanClone(svg: SVGSVGElement) {
   clone.querySelectorAll('[data-ui-only="true"]').forEach((node) => node.remove());
   clone.querySelectorAll("[tabindex]").forEach((node) => node.removeAttribute("tabindex"));
   clone.querySelectorAll<SVGElement>("[data-base-opacity]").forEach((node) => {
-    node.style.opacity = node.dataset.baseOpacity ?? "1";
+    // Export the composed overview rather than restoring every low-priority
+    // route to its raw model opacity. This keeps the ornamental hierarchy in
+    // PNG/SVG identical to the on-screen unselected state.
+    node.style.opacity = node.dataset.exportOpacity ?? node.style.opacity;
     if (node.dataset.selected && node.dataset.kind !== "core") {
       node.removeAttribute("filter");
     }

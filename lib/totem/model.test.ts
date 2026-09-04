@@ -11,6 +11,11 @@ import {
 } from "@/lib/totem/model";
 import { decodeTotemSnapshot, encodeTotemSnapshot } from "@/lib/totem/share";
 import type { TotemCalibration, TotemSource } from "@/lib/totem/types";
+import {
+  buildCrestBoundaryPoints,
+  buildGuardianMotifPath,
+  buildTotemVisualGrammar,
+} from "@/lib/totem/visual-grammar";
 
 const simpleSource: TotemSource = {
   pillars: {
@@ -272,4 +277,42 @@ test("Ten Gods are translated into the five public function modules", () => {
   assert.equal(mapTenGodToFunction("偏财"), "exchange");
   assert.equal(mapTenGodToFunction("七杀"), "structure");
   assert.equal(mapTenGodToFunction("正印"), "insight");
+});
+
+test("the macro silhouette is a bilateral crest instead of independently jittered points", () => {
+  const points = buildCrestBoundaryPoints(simpleSource.pillars);
+  assert.equal(points.length, 12);
+  assert.equal(points[0].x, 500);
+  assert.equal(points[6].x, 500);
+
+  for (let index = 1; index <= 5; index += 1) {
+    const mirrored = points[12 - index];
+    assert.equal(points[index].x + mirrored.x, 1000);
+    assert.equal(points[index].y, mirrored.y);
+  }
+});
+
+test("all twelve branches have distinct deterministic guardian motifs", () => {
+  const branches = [..."子丑寅卯辰巳午未申酉戌亥"];
+  const first = branches.map(buildGuardianMotifPath);
+  const second = branches.map(buildGuardianMotifPath);
+
+  assert.deepEqual(second, first);
+  assert.equal(new Set(first).size, 12);
+  first.forEach((path) => {
+    assert.match(path, /^M /);
+    assert.doesNotMatch(path, /NaN|Infinity/);
+  });
+});
+
+test("ornamental grammar remains reproducible while different pillars change the crest", () => {
+  const simple = buildTotemModel(simpleSource);
+  const complex = buildTotemModel(complexSource);
+  const first = buildTotemVisualGrammar(simple);
+  const repeated = buildTotemVisualGrammar(simple);
+  const different = buildTotemVisualGrammar(complex);
+
+  assert.deepEqual(repeated, first);
+  assert.notEqual(different.framePath, first.framePath);
+  assert.notEqual(different.guardians.map((guardian) => guardian.motifPath).join("|"), first.guardians.map((guardian) => guardian.motifPath).join("|"));
 });

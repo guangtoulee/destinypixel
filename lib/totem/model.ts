@@ -24,6 +24,13 @@ import {
   type TotemPoint,
   type TotemSource,
 } from "@/lib/totem/types";
+import {
+  buildCrestBoundaryPoints,
+  buildPillarFlourishPath,
+  buildPracticeRailPath,
+  buildRelationRailPath,
+  getPillarCorridor,
+} from "@/lib/totem/visual-grammar";
 
 const CENTER = 500;
 const elements: ElementName[] = ["Wood", "Fire", "Earth", "Metal", "Water"];
@@ -76,20 +83,6 @@ const canonicalPairs = (pairs: string[]) =>
 const stemCombinations = canonicalPairs(["甲己", "乙庚", "丙辛", "丁壬", "戊癸"]);
 const branchHarmonies = canonicalPairs(["子丑", "寅亥", "卯戌", "辰酉", "巳申", "午未"]);
 const branchClashes = canonicalPairs(["子午", "丑未", "寅申", "卯酉", "辰戌", "巳亥"]);
-
-const pillarBaseAngles: Record<PillarKey, number> = {
-  year: 210,
-  month: 300,
-  day: 30,
-  hour: 120,
-};
-
-const pillarReach: Record<PillarKey, number> = {
-  year: 350,
-  month: 255,
-  day: 205,
-  hour: 390,
-};
 
 const pillarWeight: Record<PillarKey, number> = {
   year: 0.95,
@@ -561,19 +554,7 @@ export function buildTotemModel(
   const anchors = {} as Record<PillarKey, TotemPoint>;
   let order = 0;
 
-  const boundaryPoints = Array.from({ length: 12 }, (_, index) => {
-    const record = records[index % records.length];
-    const element = elements[index % elements.length];
-    const branchIndex = branches.indexOf(record.branch);
-    const angularJitter = (stableUnit(seedKey, `boundary:${index}:angle`) - 0.5) * 7;
-    const radialJitter = (stableUnit(seedKey, `boundary:${index}:radius`) - 0.5) * 26;
-    const radius =
-      338 +
-      (branchIndex - 5.5) * 2.2 +
-      (elementWeights[element] - 20) * 0.45 +
-      radialJitter;
-    return polar(-90 + index * 30 + angularJitter, radius);
-  });
+  const boundaryPoints = buildCrestBoundaryPoints(source.pillars);
 
   parts.push({
     id: "boundary:birth-field",
@@ -620,21 +601,12 @@ export function buildTotemModel(
 
   records.forEach((record, recordIndex) => {
     const branchIndex = branches.indexOf(record.branch);
-    const angle =
-      pillarBaseAngles[record.key] +
-      (branchIndex - 5.5) * 1.1 +
-      (stableUnit(seedKey, `pillar:${record.key}:angle`) - 0.5) * 8;
-    const inner = polar(angle, record.key === "day" ? 86 : 108);
-    const reach =
-      pillarReach[record.key] +
-      (branchIndex % 4) * 10 +
-      (stableUnit(seedKey, `pillar:${record.key}:reach`) - 0.5) * 20;
-    const outer = polar(angle, reach);
+    const corridor = getPillarCorridor(record.key);
+    const angle = corridor.angle;
+    const inner = corridor.inner;
+    const outer = corridor.outer;
+    const reach = Math.hypot(outer.x - CENTER, outer.y - CENTER);
     anchors[record.key] = outer;
-    const bendDirection = stemPolarity[record.stem] === "Yin" ? -1 : 1;
-    const bend =
-      bendDirection *
-      (16 + stableUnit(seedKey, `pillar:${record.key}:bend`) * 30);
     const stemId = `pillar:${record.key}:stem`;
     const branchId = `pillar:${record.key}:branch`;
 
@@ -644,10 +616,12 @@ export function buildTotemModel(
       layers: ["overview", "pillars", "elements", "functions"],
       geometry: {
         kind: "path",
-        d:
-          stemPolarity[record.stem] === "Yin"
-            ? curvedPath(inner, outer, bend)
-            : linePath(inner, outer),
+        d: buildPillarFlourishPath(
+          inner,
+          outer,
+          stemPolarity[record.stem] === "Yin",
+          stems.indexOf(record.stem) % 3,
+        ),
         strokeWidth: stemPolarity[record.stem] === "Yang" ? 5.2 : 3.2,
         dash: record.key === "hour" ? "18 8" : undefined,
       },
@@ -795,7 +769,6 @@ export function buildTotemModel(
     const state = relationState(relation);
     const from = anchors[fromKey];
     const to = anchors[toKey];
-    const bend = (stableUnit(seedKey, `relation:${fromKey}:${toKey}`) - 0.5) * 95;
     const id = `flow:${fromKey}:${toKey}`;
 
     parts.push({
@@ -804,7 +777,7 @@ export function buildTotemModel(
       layers: ["overview", "elements"],
       geometry: {
         kind: "path",
-        d: curvedPath(from, to, bend),
+        d: buildRelationRailPath(fromKey, toKey, from, to, relation),
         strokeWidth: relation === "echo" ? 3.5 : relation === "support" ? 2.8 : 1.9,
         dash:
           relation === "control"
@@ -834,7 +807,7 @@ export function buildTotemModel(
 
   const functionPositions = {} as Record<FunctionModuleKey, TotemPoint>;
   functions.forEach((module, index) => {
-    const angle = -90 + index * 72 + (stableUnit(seedKey, `function:${module.key}:angle`) - 0.5) * 9;
+    const angle = -90 + index * 72 + (stems.indexOf(dayMaster) % 3 - 1) * 4;
     const point = polar(angle, 184 + module.score * 0.48);
     functionPositions[module.key] = point;
     parts.push({
@@ -862,7 +835,7 @@ export function buildTotemModel(
 
   resonances.forEach((resonance, index) => {
     const angle = -112.5 + index * 45;
-    const radius = 414 + (stableUnit(seedKey, `resonance:${resonance.key}:radius`) - 0.5) * 20;
+    const radius = 408 + Math.round(resonance.currentScore / 24) * 3;
     const point = polar(angle, radius);
     const primaryModule = resonance.functionModules[0];
     const primaryElement = resonance.elements[0] ?? dominantElement;
@@ -890,11 +863,7 @@ export function buildTotemModel(
       layers: ["overview", "resonance"],
       geometry: {
         kind: "path",
-        d: curvedPath(
-          functionPoint,
-          point,
-          (stableUnit(seedKey, `practice:${resonance.key}:bend`) - 0.5) * 58,
-        ),
+        d: buildPracticeRailPath(functionPoint, point, index),
         strokeWidth: safeCalibration ? 1.4 + resonance.currentScore / 50 : 1.35,
         dash:
           resonance.state === "tension"
