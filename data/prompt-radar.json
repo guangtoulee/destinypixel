@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-06T16:23:30.511Z",
+  "updatedAt": "2026-09-07T06:30:20.617Z",
   "sourceSummary": {
     "community": 1039,
-    "publicX": 401,
-    "total": 1440
+    "publicX": 403,
+    "total": 1442
   },
   "items": [
     {
@@ -622,6 +622,49 @@
       "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
     },
     {
+      "id": "x-public-2096298105213952178",
+      "title": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it deliver",
+      "description": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater con",
+      "prompt": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/grok/status/2096298105213952178",
+      "sourceType": "x",
+      "authorName": "Grok",
+      "authorHandle": "@grok",
+      "createdAt": "2026-09-05T18:03:10.000Z",
+      "importedAt": "2026-09-07T06:30:20.588Z",
+      "tags": [
+        "Grok Imagine",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 2785,
+        "reposts": 309,
+        "replies": 255,
+        "quotes": 99,
+        "bookmarks": 316,
+        "views": 568991,
+        "score": 9444
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity."
+    },
+    {
       "id": "x-public-2074158868142194898",
       "title": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And tha",
       "description": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And that's the part nobody expects > he generated two frames with AI > turned them into a clip with Seedance 2.0 > then gave it to ",
@@ -662,49 +705,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And that's the part nobody expects > he generated two frames with AI > turned them into a clip with Seedance 2.0 > then gave it to Claude 4.8 to wrap into a full immersive scrollable experience Three effects that make the user feel like they're physically moving through a space: > see-through scrub > 3D scroll > mouse tracking None of them are actually 3D. The browser never renders a single polygon. It's a video being controlled by scroll position and cursor movement Most people assume sites like this require a creative developer who specializes in WebGL and weeks of optimization. The actual pipeline is three steps and fits in an afternoon full walkthrough in the article below. bookmark this before you need it"
-    },
-    {
-      "id": "x-public-2096298105213952178",
-      "title": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it deliver",
-      "description": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater con",
-      "prompt": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/grok/status/2096298105213952178",
-      "sourceType": "x",
-      "authorName": "Grok",
-      "authorHandle": "@grok",
-      "createdAt": "2026-09-05T18:03:10.000Z",
-      "importedAt": "2026-09-06T11:43:11.971Z",
-      "tags": [
-        "Grok Imagine",
-        "视频"
-      ],
-      "modelHints": [
-        "Grok Imagine",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 2312,
-        "reposts": 249,
-        "replies": 200,
-        "quotes": 77,
-        "bookmarks": 265,
-        "views": 406834,
-        "score": 7660
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity."
     },
     {
       "id": "x-public-2092008235075084363",
@@ -5255,6 +5255,49 @@
       "rawText": "You can now create anything with Claude. I created an Adidas video using @Vidfield MCP on claude. GPT Image 2 → cinematic storyboard Seedance 2.0 → final 15-second ad The full workflow + prompt is below 👇"
     },
     {
+      "id": "x-public-2096402117280006358",
+      "title": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a ",
+      "description": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while ke",
+      "prompt": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while keeping the storyline and visual continuity intact It understands the concept, plans the shots and connects multiple scenes together much better And underneath it, Grok is using SpaceXAI’s latest Imagine models: • Image 2.0 • Video 1.5 Soo, instead of generating a collection of unrelated clips, you now have an agent actually helping you build the whole story Grok Imagine is rapidly evolving into a full AI filmmaking agent",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/XFreeze/status/2096402117280006358",
+      "sourceType": "x",
+      "authorName": "X Freeze",
+      "authorHandle": "@XFreeze",
+      "createdAt": "2026-09-06T00:56:28.000Z",
+      "importedAt": "2026-09-07T06:30:20.587Z",
+      "tags": [
+        "Grok Imagine",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 385,
+        "reposts": 43,
+        "replies": 38,
+        "quotes": 5,
+        "bookmarks": 57,
+        "views": 15450,
+        "score": 1197
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while keeping the storyline and visual continuity intact It understands the concept, plans the shots and connects multiple scenes together much better And underneath it, Grok is using SpaceXAI’s latest Imagine models: • Image 2.0 • Video 1.5 Soo, instead of generating a collection of unrelated clips, you now have an agent actually helping you build the whole story Grok Imagine is rapidly evolving into a full AI filmmaking agent"
+    },
+    {
       "id": "x-public-2085420070952649179",
       "title": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluş",
       "description": "YENİ KIYASLAMA VİDEOSU GELDİ📽️ Aynı basit prompttan sırasıyla aşağıdaki modeller ile video oluşturdum. Sizce hangisi promptu daha iyi anlayıp daha iyi bir sonuç vermiş? 1- FLUX 3 2- SEEDANCE 2.0 3- SEEDANCE 2.5 4- MINIM",
@@ -5873,20 +5916,19 @@
       "rawText": "Every destination becomes magical when you slow down and experience it. Seedance 2.5 is live on @SJinn_Agent  prompt A cinematic 30-second tropical travel vlog montage featuring a beautiful 20-year-old East Asian woman with dark hair exploring Hawaii during a dreamy summer vacation. Shot like an authentic luxury travel diary with handheld camera movement, candid moments, soft golden-hour sunlight, dreamy 35mm film aesthetics, warm vintage color grading, shallow depth of field, natural skin texture, atmospheric lighting, and cinematic storytelling. Maintain the same woman throughout every scene: dark hair, youthful appearance, natural makeup, elegant summer outfits, relaxed happy expression. Format: 4K cinematic video, 24fps, 35mm film grain, realistic handheld camera, soft focus, warm color palette, travel documentary style. Scene 1 (0-4s) — Arrival & City Walk: A beautiful Hawaiian morning. The woman walks through a bright tropical city street wearing a flowing floral summer dress and sunglasses. Palm trees line the sidewalk, sunlight reflects off colorful buildings, people walk casually in the background. Camera follows from behind, then transitions into a close-up of her smiling face as wind moves through her hair. Scene 2 (4-8s) — Beach Discovery: She steps onto a wide sandy beach with crystal blue ocean waves behind her. She walks barefoot along the shoreline, holding her dress slightly as waves touch her feet. Low-angle cinematic shots of footsteps in wet sand, ocean reflections, distant volcanic mountains under a clear sky. Scene 3 (8-12s) — Tropical Nature Moments: A cinematic worm's-eye view looking upward through towering palm trees. Golden sunlight streams between the leaves with beautiful lens flares. Cut to a close-up of her standing near a rocky ocean cliff, wind blowing through her hair while she looks peacefully toward the sea. Scene 4 (12-16s) — Beachfront Cafe & Slow Living: She sits alone at a cozy beachfront cafe near the window, drinking a tropical drink while watching waves outside. Soft sunlight enters through the glass. Close-up shots of her hands, coffee cup, ocean view, and thoughtful expression create an intimate travel diary feeling. Scene 5 (16-20s) — Ocean Adventure: She floats peacefully on a surfboard in calm turquoise ocean water. Camera moves around her from water level, showing gentle waves, sunlight sparkling on the sea surface, tropical coastline and mountains in the distance. She laughs naturally while looking toward the camera. Scene 6 (20-24s) — Night Market Exploration: A vibrant Hawaiian night market filled with warm lights, food stalls, and colorful decorations. She walks through the crowd, trying tropical fruit skewers and local street food. Cinematic close-ups of her reaction, glowing lanterns, neon bokeh, and bustling atmosphere. Scene 7 (24-27s) — Golden Sunset Ending: Wide cinematic silhouette shot of her standing on the ocean shore during sunset. Orange and pink skies reflect on the water. Waves gently move around her feet as she watches the sun disappear behind the horizon. Emotional travel film ending. Scene 8 (27-30s) — Hotel Night Reflection: Nighttime high-rise hotel balcony overlooking sparkling tropical city lights. She wears a simple white dress, leaning against the balcony while a warm breeze moves the curtains behind her. Final intimate close-up of her lying on the hotel bed, looking warmly into the camera lens with a peaceful smile. Camera Style: Authentic travel vlog cinematography, handheld camera shake, smooth cinematic transitions, slow push-ins, natural movement, occasional POV shots, realistic autofocus adjustments, subtle motion blur. Visual Style: Dreamy Hawaii vacation film, luxury travel advertisement aesthetic, soft golden sunlight, realistic skin texture, cinematic depth of field, nostalgic 35mm film look, warm atmospheric colors, natural expressions, emotional storytelling. Avoid: cartoon style, CGI look, plastic skin, unrealistic face, inconsistent character appearance, changing hairstyle, extra fingers, distorted body, artificial lighting, oversaturated colors, blurry face, unnatural movements, duplicate people."
     },
     {
-      "id": "x-public-2095379337180594541",
-      "title": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding toge",
-      "description": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uplo",
-      "prompt": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uploaded storyboard image as the exact visual reference. Preserve the same dark futuristic workspace, laptop and smartphone positioning, purple-blue lighting, UI design, typography style, and overall premium tech aesthetic throughout the video. 0–2 seconds APP REVEAL Start with a cinematic close-up of the laptop on the modern desk. The screen displays the AI Tools platform homepage with the AI Chat, Image Generator, Video Generator, and Code Generator options clearly visible. Slowly push the camera toward the laptop screen with subtle ambient lighting and realistic reflections. 2–5 seconds AI IN ACTION Smoothly transition into the Image Generator interface. A hand types a creative prompt into the input field and clicks Generate. The interface responds instantly, with elegant UI animation as a high-quality image appears on screen. Keep the laptop, interface and branding visually consistent. 5–8 seconds MULTIPLE AI TOOLS Use fast, seamless cinematic transitions between four features: Image Generator → Video Generator → AI Chat → Code Generator. Show each tool briefly in action with smooth interface animations, dynamic screen transitions, and subtle camera movement. Make the experience feel fast, powerful and effortless. 8–10 seconds HERO SHOT Pull the camera back to reveal the laptop and smartphone together on the desk. Both screens display the AI Tools branding. Add a subtle purple glow and cinematic reflections. End with clean on-screen text: AI TOOLS Create. Generate. Elevate. Visual style: photorealistic, premium SaaS advertisement, cinematic lighting, dark modern desk setup, purple and blue ambient glow, realistic hands, sharp screen details, smooth camera movements, elegant UI animations, high-end technology commercial, no distorted text, no extra objects, no changing product design, no flickering, no warped hands, consistent branding throughout.",
+      "id": "x-public-2095091333727973734",
+      "title": "From a single AI-generated image to a cinematic world. ✨ Created the image with GPT-2, then brou",
+      "description": "From a single AI-generated image to a cinematic world. ✨ Created the image with GPT-2, then brought it to life using Seedance 2.0. It’s crazy how one simple idea can turn into an entire cinematic scene. 🎬 One image. One",
+      "prompt": "From a single AI-generated image to a cinematic world. ✨ Created the image with GPT-2, then brought it to life using Seedance 2.0. It’s crazy how one simple idea can turn into an entire cinematic scene. 🎬 One image. One idea. Endless possibilities. Prompt below ⤵️",
       "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Its_Saad_kkk/status/2095379337180594541",
+      "sourceUrl": "https://x.com/Alina_with_Ai/status/2095091333727973734",
       "sourceType": "x",
-      "authorName": "𝐒𝐊_𝐀𝐈",
-      "authorHandle": "@Its_Saad_kkk",
-      "createdAt": "2026-09-03T05:12:18.000Z",
-      "importedAt": "2026-09-06T06:22:30.962Z",
+      "authorName": "Alina Ai",
+      "authorHandle": "@Alina_with_Ai",
+      "createdAt": "2026-09-02T10:07:53.000Z",
+      "importedAt": "2026-09-07T06:30:20.590Z",
       "tags": [
-        "产品",
-        "视频",
+        "Seedance",
         "摄影"
       ],
       "modelHints": [
@@ -5904,16 +5946,16 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 239,
-        "reposts": 69,
-        "replies": 78,
-        "quotes": 3,
-        "bookmarks": 46,
-        "views": 30759,
-        "score": 1041
+        "likes": 209,
+        "reposts": 63,
+        "replies": 58,
+        "quotes": 1,
+        "bookmarks": 83,
+        "views": 23462,
+        "score": 1027
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uploaded storyboard image as the exact visual reference. Preserve the same dark futuristic workspace, laptop and smartphone positioning, purple-blue lighting, UI design, typography style, and overall premium tech aesthetic throughout the video. 0–2 seconds APP REVEAL Start with a cinematic close-up of the laptop on the modern desk. The screen displays the AI Tools platform homepage with the AI Chat, Image Generator, Video Generator, and Code Generator options clearly visible. Slowly push the camera toward the laptop screen with subtle ambient lighting and realistic reflections. 2–5 seconds AI IN ACTION Smoothly transition into the Image Generator interface. A hand types a creative prompt into the input field and clicks Generate. The interface responds instantly, with elegant UI animation as a high-quality image appears on screen. Keep the laptop, interface and branding visually consistent. 5–8 seconds MULTIPLE AI TOOLS Use fast, seamless cinematic transitions between four features: Image Generator → Video Generator → AI Chat → Code Generator. Show each tool briefly in action with smooth interface animations, dynamic screen transitions, and subtle camera movement. Make the experience feel fast, powerful and effortless. 8–10 seconds HERO SHOT Pull the camera back to reveal the laptop and smartphone together on the desk. Both screens display the AI Tools branding. Add a subtle purple glow and cinematic reflections. End with clean on-screen text: AI TOOLS Create. Generate. Elevate. Visual style: photorealistic, premium SaaS advertisement, cinematic lighting, dark modern desk setup, purple and blue ambient glow, realistic hands, sharp screen details, smooth camera movements, elegant UI animations, high-end technology commercial, no distorted text, no extra objects, no changing product design, no flickering, no warped hands, consistent branding throughout."
+      "rawText": "From a single AI-generated image to a cinematic world. ✨ Created the image with GPT-2, then brought it to life using Seedance 2.0. It’s crazy how one simple idea can turn into an entire cinematic scene. 🎬 One image. One idea. Endless possibilities. Prompt below ⤵️"
     },
     {
       "id": "x-public-2082126772737642505",
@@ -6000,6 +6042,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "THIS IS F**KING INSANE THIS 22 YEAR OLD REPORTEDLY MADE $10K THIS MONTH AND BARELY TOUCHES VIDEO EDITING SOFTWARE. She didn’t get better at keyframing. She stopped doing the manual work. Here’s the system she built: → ChatGPT = the brain → Picsart Flow + Kling 3.0 = the animator ChatGPT studies what’s performing across viral kids’ content and turns those patterns into detailed visual prompts for her original character. She feeds the prompts into Picsart Flow, sets the render parameters, and generates polished 3D clips. All from a browser. Under 5 minutes per clip. She spends roughly 30 minutes a day managing the pipeline instead of animating frame by frame. And that’s the real shift. She’s not an animator anymore. She’s orchestrating an automated content engine. The reported economics: → $1.5K–$6K per 1M YouTube views → <5 minutes per render → 2–3 videos published daily → ~$10K/month reportedly generated The character concept is hers. The AI handles everything from prompt → animation → final render. While most creators are still learning complicated 3D software, she skipped the manual production stack entirely. She’s not selling animation skill. She’s selling volume."
+    },
+    {
+      "id": "x-public-2095379337180594541",
+      "title": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding toge",
+      "description": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uplo",
+      "prompt": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uploaded storyboard image as the exact visual reference. Preserve the same dark futuristic workspace, laptop and smartphone positioning, purple-blue lighting, UI design, typography style, and overall premium tech aesthetic throughout the video. 0–2 seconds APP REVEAL Start with a cinematic close-up of the laptop on the modern desk. The screen displays the AI Tools platform homepage with the AI Chat, Image Generator, Video Generator, and Code Generator options clearly visible. Slowly push the camera toward the laptop screen with subtle ambient lighting and realistic reflections. 2–5 seconds AI IN ACTION Smoothly transition into the Image Generator interface. A hand types a creative prompt into the input field and clicks Generate. The interface responds instantly, with elegant UI animation as a high-quality image appears on screen. Keep the laptop, interface and branding visually consistent. 5–8 seconds MULTIPLE AI TOOLS Use fast, seamless cinematic transitions between four features: Image Generator → Video Generator → AI Chat → Code Generator. Show each tool briefly in action with smooth interface animations, dynamic screen transitions, and subtle camera movement. Make the experience feel fast, powerful and effortless. 8–10 seconds HERO SHOT Pull the camera back to reveal the laptop and smartphone together on the desk. Both screens display the AI Tools branding. Add a subtle purple glow and cinematic reflections. End with clean on-screen text: AI TOOLS Create. Generate. Elevate. Visual style: photorealistic, premium SaaS advertisement, cinematic lighting, dark modern desk setup, purple and blue ambient glow, realistic hands, sharp screen details, smooth camera movements, elegant UI animations, high-end technology commercial, no distorted text, no extra objects, no changing product design, no flickering, no warped hands, consistent branding throughout.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Its_Saad_kkk/status/2095379337180594541",
+      "sourceType": "x",
+      "authorName": "𝐒𝐊_𝐀𝐈",
+      "authorHandle": "@Its_Saad_kkk",
+      "createdAt": "2026-09-03T05:12:18.000Z",
+      "importedAt": "2026-09-07T06:30:20.590Z",
+      "tags": [
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 223,
+        "reposts": 69,
+        "replies": 78,
+        "quotes": 3,
+        "bookmarks": 46,
+        "views": 30922,
+        "score": 1009
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Create more. Do more. AI Tools brings image generation, video creation, AI chat, and coding together in one powerful workspace. Prompt: Create a 10-second ultra-realistic premium SaaS technology commercial using the uploaded storyboard image as the exact visual reference. Preserve the same dark futuristic workspace, laptop and smartphone positioning, purple-blue lighting, UI design, typography style, and overall premium tech aesthetic throughout the video. 0–2 seconds APP REVEAL Start with a cinematic close-up of the laptop on the modern desk. The screen displays the AI Tools platform homepage with the AI Chat, Image Generator, Video Generator, and Code Generator options clearly visible. Slowly push the camera toward the laptop screen with subtle ambient lighting and realistic reflections. 2–5 seconds AI IN ACTION Smoothly transition into the Image Generator interface. A hand types a creative prompt into the input field and clicks Generate. The interface responds instantly, with elegant UI animation as a high-quality image appears on screen. Keep the laptop, interface and branding visually consistent. 5–8 seconds MULTIPLE AI TOOLS Use fast, seamless cinematic transitions between four features: Image Generator → Video Generator → AI Chat → Code Generator. Show each tool briefly in action with smooth interface animations, dynamic screen transitions, and subtle camera movement. Make the experience feel fast, powerful and effortless. 8–10 seconds HERO SHOT Pull the camera back to reveal the laptop and smartphone together on the desk. Both screens display the AI Tools branding. Add a subtle purple glow and cinematic reflections. End with clean on-screen text: AI TOOLS Create. Generate. Elevate. Visual style: photorealistic, premium SaaS advertisement, cinematic lighting, dark modern desk setup, purple and blue ambient glow, realistic hands, sharp screen details, smooth camera movements, elegant UI animations, high-end technology commercial, no distorted text, no extra objects, no changing product design, no flickering, no warped hands, consistent branding throughout."
     },
     {
       "id": "x-public-2089171754854048251",
@@ -6359,49 +6444,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "if you still think AI video looks like AI, you haven’t seen what’s possible now. Seedance 2.5 on Arcads full prompt: CAMERA Mini-DV tape camcorder handheld aesthetic, vertical framing. A gorgeous athletic Scandinavian running influencer films herself directly by hand in selfie-cam and first-person style during a dawn run. Keep realistic hand shake amplified by her stride, slightly crooked framing, delayed autofocus hunting in low dawn light, awkward zoom-ins and zoom-outs, occasional motion blur, wind buffeting the mic, and small framing mistakes where part of her face or the horizon briefly slips out of frame. Mix handheld selfie footage with a few fixed external shots. Important: never show her placing, adjusting, or setting up a camera. When switching from handheld footage to a fixed external angle, use a clean jump cut as if the camera had already been positioned before the shot began. The camera itself must never appear on screen. LOOK: Soft digital tape camcorder look with vintage DV character. Slight blur, faint tape noise, visible highlight bloom as the sun breaks the horizon, subtle auto-exposure flicker and hunting as she turns toward and away from the light, muted contrast in the shadows, realistic skin texture with visible pores and sweat sheen, cool blue pre-dawn ambient light warming to gold, realistic skin tones, real lens flare when facing the sun. STYLE: A realistic 5am dawn run vlog with a confident athletic lifestyle vibe. The tone is breathless, upbeat, a little self-deprecating, and natural. She is clearly attractive and charismatic, but the video must feel like a believable self-recorded run vlog, not a polished Nike commercial. Fast clean jump cuts, strong continuity, natural body language, audible real breathing that gets heavier across the video, no awkward dead moments. CHARACTER: An exceptionally beautiful athletic Scandinavian woman in her mid-20s. Highly photogenic face, clear pale blue eyes, light freckles across the nose and cheeks, defined jawline, a natural full mouth, fair skin flushing pink at the cheeks from cold and effort, long thick ash-blonde hair in a low ponytail with loose strands escaping around the face. She looks like a high-end running and lifestyle influencer, not an ordinary jogger. Lean, long-limbed, athletic runner's build. Bare minimal makeup, slightly glossy skin from sweat. She wears a fitted long-sleeve technical running top in muted olive, matching high-waisted running shorts, a thin black running watch, low-profile running shoes, and small wired-look earbuds. No other jewelry. SETTING: A long empty coastal boardwalk at first light. Wooden slats underfoot, low dunes and beach grass on one side, flat grey sea and a breaking orange sunrise on the other, a single wooden railing, scattered gulls, one weathered bench, faint sea mist. Completely empty, no other runners, no dog walkers, no cars, no extra people. Cold still air with visible breath at the start. IMPORTANT CONTINUITY RULES: The same woman must remain fully consistent in every shot. No face changes, no hairstyle changes, no outfit changes, no body changes, no shoe changes. Her hair gets progressively looser and more windblown but stays the same colour and length. No extra people appearing. No duplicated limbs. No broken hands. No impossible running gait. No feet sliding or skating on the boardwalk. No changing weather or sun position beyond a natural gradual sunrise. No camera visible. No camera setup shown. Keep her beautiful, athletic, and photogenic in every shot. STORYBOARD (30 seconds total, 10 cuts): 1. (~3s, arm's-length selfie) She jogs slowly onto the boardwalk holding the camera herself, visible breath in the cold air, squinting and grinning at the lens. Dialogue: \"Five a.m. Why do I do this.\" 2. (~3s, handheld pan across the sea and back to her) The camera swings out over the water toward the orange sunrise, lens flare blooming, then swings back to her face. Dialogue: \"Okay. That's worth it.\" 3. (~3s, low first-person shot of her feet) She tilts the camera down at her own shoes striking the wooden slats, then tilts back up to the empty boardwalk ahead. No dialogue. 4. (~3s, fixed external medium shot) Jump cut to a fixed shot from the side of the boardwalk. She is already running past camera at a steady pace, hair swinging, breathing hard. No camera setup shown. No dialogue. 5. (~3s, same fixed shot, wider) She slows to a walk, hands on hips, chest heaving, and laughs at herself as she catches her breath. Dialogue: \"That hill was not on the map.\" 6. (~3s, handheld walking selfie) She picks the vlog back up in selfie mode, wiping her forehead with her wrist, cheeks bright red, walking a few steps. Dialogue: \"Three kilometres in and I'm cooked.\" 7. (~3s, tight handheld close-up) She takes a long drink from a small handheld water flask, lowers it, and exhales a satisfied laugh. Dialogue: \"Best water of my life.\" 8. (~3s, fixed external wide shot facing the sunrise) Jump cut. She stands at the railing in silhouette against the rising sun, stretches her arms overhead, then rolls her shoulders out. Dialogue: \"Little stretch so nothing snaps later.\" 9. (~3s, handheld close selfie) Loose blonde strands stuck to her damp forehead, she brushes them back, smiling in a tired and genuinely happy way, sun now warm on her face. Dialogue: \"This is the good part. Right here.\" 10. (~3s, arm's-length selfie ending) She walks slowly away down the boardwalk still filming herself, gives a tired little wave, and grins. Dialogue: \"Okay. Coffee. Bye.\" FINAL INSTRUCTION: The result must feel like a real self-recorded dawn run vlog by a genuine running influencer. Prioritize realistic handheld motion driven by her stride, strong continuity, believable pacing, audible natural breathing that intensifies, sweat and flush that build over the video, attractive appearance, and subtle imperfection. Keep it warm, real, and cinematic in a documentary way. Not artificial, not stiff, not stock-footage clean."
-    },
-    {
-      "id": "x-public-2096402117280006358",
-      "title": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a ",
-      "description": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while ke",
-      "prompt": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while keeping the storyline and visual continuity intact It understands the concept, plans the shots and connects multiple scenes together much better And underneath it, Grok is using SpaceXAI’s latest Imagine models: • Image 2.0 • Video 1.5 Soo, instead of generating a collection of unrelated clips, you now have an agent actually helping you build the whole story Grok Imagine is rapidly evolving into a full AI filmmaking agent",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/XFreeze/status/2096402117280006358",
-      "sourceType": "x",
-      "authorName": "X Freeze",
-      "authorHandle": "@XFreeze",
-      "createdAt": "2026-09-06T00:56:28.000Z",
-      "importedAt": "2026-09-06T11:43:11.970Z",
-      "tags": [
-        "Grok Imagine",
-        "视频"
-      ],
-      "modelHints": [
-        "Grok Imagine",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 314,
-        "reposts": 33,
-        "replies": 34,
-        "quotes": 5,
-        "bookmarks": 46,
-        "views": 12197,
-        "score": 971
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while keeping the storyline and visual continuity intact It understands the concept, plans the shots and connects multiple scenes together much better And underneath it, Grok is using SpaceXAI’s latest Imagine models: • Image 2.0 • Video 1.5 Soo, instead of generating a collection of unrelated clips, you now have an agent actually helping you build the whole story Grok Imagine is rapidly evolving into a full AI filmmaking agent"
     },
     {
       "id": "x-public-2091215411341930633",
@@ -7582,6 +7624,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I tried this Kling prompt with Grok Imagine, and the result is excellent. POV girlfriend video, brunette girl in cropped cream lounge top and cozy shorts holding the viewer’s hand while walking forward through a warm sunlit kitchen, then past the kitchen and into the bedroom. soft over-the-shoulder smiles, natural hair movement, realistic iphone handheld camera, slight camera shake, warm golden hour lighting, authentic TikTok vibe, realistic movement, casual intimate atmosphere, 9:16Continuous forward walking only. Do not stop. Do not turn around. Do not walk toward the camera. Natural walking speed. Subtle body movement. Realistic pacing. No slow motion. No dramatic cinematic movement. No dancing. No talking."
+    },
+    {
+      "id": "x-public-2095458733136462234",
+      "title": "The Dragon Awakens 🐉⚡ Created with Seedance 2.5 for @WizstarAI bringing cinematic AI storytelli",
+      "description": "The Dragon Awakens 🐉⚡ Created with Seedance 2.5 for @WizstarAI bringing cinematic AI storytelling, powerful action, and stunning fantasy visuals to life. #WizstarPartner Try your's here 👇  Prompt: WHITE DRAGON ASCENSIO",
+      "prompt": "The Dragon Awakens 🐉⚡ Created with Seedance 2.5 for @WizstarAI bringing cinematic AI storytelling, powerful action, and stunning fantasy visuals to life. #WizstarPartner Try your's here 👇  Prompt: WHITE DRAGON ASCENSION | 10s | 16:9 Use image1 as SANZO. Keep his exact face, hair, skin tone, physique, tattoos and outfit. Ultra-realistic live-action Hollywood action. Practical stunts, real katana combat, realistic physics, natural smoke and cinematic lighting. No CGI, anime, cartoon or game look. LOCATION: Infinite white cyclorama with glossy reflective floor, soft diffused light, no horizon or props. OUTFIT: All-white tactical shinobi outfit with hood, half-mask, layered robes, armor, belt, tabi boots and flowing fabric. WEAPON: ONE white-handled katana on LEFT WAIST, fully sheathed. SANZO draws it once. Blade and handle leave the saya together. Saya becomes EMPTY and remains visible. No duplicate weapon or handle. Katana never returns. CREATURE: Giant aggressive celestial dragon made of dense swirling white smoke, with horns, whiskers, mane and bright white eyes. 0–2s: SANZO runs through the white void as the smoke dragon chases him. FPV and low tracking shots. Jaws snap behind him. He combat-slides beneath the jaws. Slow motion, eye close-up, 2-frame freeze. 2–3.5s: During the slide, SANZO draws the katana. Empty saya stays visible. He performs cartwheel → butterfly twist → forward somersault and lands low. 3.5–8.8s: SANZO unleashes KAGE RYUJIN GIRI — CELESTIAL EXECUTION. The dragon coils, dives, bites and tail-whips. SANZO counters with flash steps, flips, twists and aerial slashes. Each slash tears through the smoke; the dragon instantly reforms. Use fast camera moves, crash zooms, speed ramps and heavy impacts. 8.8–10s: Final dive. SANZO performs an aerial corkscrew, somersault and butterfly motion, then delivers a powerful upward diagonal slash. 2-frame freeze. Dragon breaks into white smoke ribbons and disappears. SANZO lands in a strong ninja stance, katana in RIGHT hand, blade down. EMPTY saya visible on LEFT WAIST. Fade white. NEGATIVE: CGI, anime, cartoon, game graphics, glow, beams, duplicate katana, duplicate handle, sheathing, clipping, floating weapon, blur, plastic skin, watermark, logo, subtitles, text.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Xaroon_x/status/2095458733136462234",
+      "sourceType": "x",
+      "authorName": "Zar⭕on",
+      "authorHandle": "@Xaroon_x",
+      "createdAt": "2026-09-03T10:27:48.000Z",
+      "importedAt": "2026-09-07T06:30:20.589Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 285,
+        "reposts": 13,
+        "replies": 48,
+        "quotes": 2,
+        "bookmarks": 60,
+        "views": 11509,
+        "score": 879
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "The Dragon Awakens 🐉⚡ Created with Seedance 2.5 for @WizstarAI bringing cinematic AI storytelling, powerful action, and stunning fantasy visuals to life. #WizstarPartner Try your's here 👇  Prompt: WHITE DRAGON ASCENSION | 10s | 16:9 Use image1 as SANZO. Keep his exact face, hair, skin tone, physique, tattoos and outfit. Ultra-realistic live-action Hollywood action. Practical stunts, real katana combat, realistic physics, natural smoke and cinematic lighting. No CGI, anime, cartoon or game look. LOCATION: Infinite white cyclorama with glossy reflective floor, soft diffused light, no horizon or props. OUTFIT: All-white tactical shinobi outfit with hood, half-mask, layered robes, armor, belt, tabi boots and flowing fabric. WEAPON: ONE white-handled katana on LEFT WAIST, fully sheathed. SANZO draws it once. Blade and handle leave the saya together. Saya becomes EMPTY and remains visible. No duplicate weapon or handle. Katana never returns. CREATURE: Giant aggressive celestial dragon made of dense swirling white smoke, with horns, whiskers, mane and bright white eyes. 0–2s: SANZO runs through the white void as the smoke dragon chases him. FPV and low tracking shots. Jaws snap behind him. He combat-slides beneath the jaws. Slow motion, eye close-up, 2-frame freeze. 2–3.5s: During the slide, SANZO draws the katana. Empty saya stays visible. He performs cartwheel → butterfly twist → forward somersault and lands low. 3.5–8.8s: SANZO unleashes KAGE RYUJIN GIRI — CELESTIAL EXECUTION. The dragon coils, dives, bites and tail-whips. SANZO counters with flash steps, flips, twists and aerial slashes. Each slash tears through the smoke; the dragon instantly reforms. Use fast camera moves, crash zooms, speed ramps and heavy impacts. 8.8–10s: Final dive. SANZO performs an aerial corkscrew, somersault and butterfly motion, then delivers a powerful upward diagonal slash. 2-frame freeze. Dragon breaks into white smoke ribbons and disappears. SANZO lands in a strong ninja stance, katana in RIGHT hand, blade down. EMPTY saya visible on LEFT WAIST. Fade white. NEGATIVE: CGI, anime, cartoon, game graphics, glow, beams, duplicate katana, duplicate handle, sheathing, clipping, floating weapon, blur, plastic skin, watermark, logo, subtitles, text."
     },
     {
       "id": "x-public-2082872504448659483",
@@ -16664,7 +16750,7 @@
       "authorName": "Maercih",
       "authorHandle": "@Maercihh",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.516Z",
+      "importedAt": "2026-09-07T06:30:16.248Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -16707,7 +16793,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.517Z",
+      "importedAt": "2026-09-07T06:30:16.249Z",
       "tags": [
         "人像",
         "摄影"
@@ -16749,7 +16835,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.517Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [
         "人像",
         "摄影"
@@ -16791,7 +16877,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [
         "人像"
       ],
@@ -16832,7 +16918,7 @@
       "authorName": "studioあぽろん",
       "authorHandle": "@ai_studioapollo",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -16871,7 +16957,7 @@
       "authorName": "Arina Ai",
       "authorHandle": "@Arina_hoqe",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [
         "人像"
       ],
@@ -16912,7 +16998,7 @@
       "authorName": "Muhammad Jamil",
       "authorHandle": "@JamilAI55",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [
         "人像",
         "摄影"
@@ -16954,7 +17040,7 @@
       "authorName": "AIVideoHub 🕊️",
       "authorHandle": "@AIVideoHub_",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.520Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [
         "人像"
       ],
@@ -16995,7 +17081,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.520Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [
         "摄影"
       ],
@@ -17036,7 +17122,7 @@
       "authorName": "AIossansan",
       "authorHandle": "@toraaiuser2",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.520Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -17075,7 +17161,7 @@
       "authorName": "Mr. Tariq",
       "authorHandle": "@AiWithTariq",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.520Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [
         "人像"
       ],
@@ -17116,7 +17202,7 @@
       "authorName": "蘭熊才王（らんくまさいわん）",
       "authorHandle": "@j0PvbqHs6q29754",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.250Z",
       "tags": [
         "摄影"
       ],
@@ -17157,7 +17243,7 @@
       "authorName": "Solip | Model C2 Companion Unit",
       "authorHandle": "@SolipC2",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.518Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像",
         "摄影"
@@ -17199,7 +17285,7 @@
       "authorName": "H A J R A",
       "authorHandle": "@codewithhajra",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "摄影"
       ],
@@ -17240,7 +17326,7 @@
       "authorName": "Emma",
       "authorHandle": "@emma_ai6",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像",
         "摄影"
@@ -17282,7 +17368,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像",
         "摄影"
@@ -17324,7 +17410,7 @@
       "authorName": "Harboris",
       "authorHandle": "@harboriis",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像",
         "摄影"
@@ -17366,7 +17452,7 @@
       "authorName": "Harf_Done",
       "authorHandle": "@half_done_yet",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像"
       ],
@@ -17407,7 +17493,7 @@
       "authorName": "AI Qoro",
       "authorHandle": "@AIqoro",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像"
       ],
@@ -17448,7 +17534,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "摄影"
       ],
@@ -17489,7 +17575,7 @@
       "authorName": "さきすた AI artist",
       "authorHandle": "@sakisuta_",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "摄影"
       ],
@@ -17530,7 +17616,7 @@
       "authorName": "石英",
       "authorHandle": "@quartzh",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.251Z",
       "tags": [
         "人像",
         "摄影"
@@ -17572,7 +17658,7 @@
       "authorName": "万花筒♕",
       "authorHandle": "@free25925",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.519Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [
         "摄影"
       ],
@@ -17613,7 +17699,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-09-05T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.520Z",
+      "importedAt": "2026-09-07T06:30:16.252Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -60356,7 +60442,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.527Z",
+      "importedAt": "2026-09-07T06:30:16.258Z",
       "tags": [
         "产品",
         "平面设计",
@@ -60399,7 +60485,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.527Z",
+      "importedAt": "2026-09-07T06:30:16.258Z",
       "tags": [
         "平面设计"
       ],
@@ -60440,7 +60526,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-06T16:23:26.527Z",
+      "importedAt": "2026-09-07T06:30:16.258Z",
       "tags": [
         "平面设计"
       ],
