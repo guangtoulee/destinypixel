@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-08T17:21:26.455Z",
+  "updatedAt": "2026-09-09T06:28:16.502Z",
   "sourceSummary": {
     "community": 1068,
     "publicX": 406,
@@ -632,7 +632,7 @@
       "authorName": "Grok",
       "authorHandle": "@grok",
       "createdAt": "2026-09-05T18:03:10.000Z",
-      "importedAt": "2026-09-08T17:21:26.425Z",
+      "importedAt": "2026-09-09T06:28:16.471Z",
       "tags": [
         "Grok Imagine",
         "视频"
@@ -653,13 +653,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 2903,
-        "reposts": 329,
-        "replies": 315,
-        "quotes": 105,
-        "bookmarks": 331,
-        "views": 735278,
-        "score": 10216
+        "likes": 2939,
+        "reposts": 334,
+        "replies": 323,
+        "quotes": 107,
+        "bookmarks": 336,
+        "views": 776581,
+        "score": 10419
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity."
@@ -9976,6 +9976,51 @@
       "rawText": "ByteDance's official AI creation platform, Dreamina, has officially welcomed the new Dreamina Seedance 2.5.  There are two standout upgrades that really impressed me: 🎬 Up to 50 multimodal reference assets (including images, audio, and videos) supported per single generation. ⏱️ Up to 30-second continuous video generation for crafting much longer and wonderfully coherent storytelling. Together with Dreamina's native editing workflow, comprehensive multilingual support, and the entire Seedance ecosystem, this update pushes us closer to production-ready AI video. If building with Seedance is on your roadmap, Dreamina is the ideal platform I would point you to. It gathers the full Seedance family under one roof—from Seedance 2.0 Mini to Seedance 2.5—delivering creator-friendly pricing and a vastly cost-effective official framework to experiment, iterate, and scale your productions. Less time transitioning between tools. More time focusing on creation. #Dreamina #Seedance25 #AIVideo #Dreaminapartner"
     },
     {
+      "id": "x-public-2095859507700097206",
+      "title": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert ",
+      "description": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. t",
+      "prompt": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. tire tracks. a small white cloud hovers a few feet above the ground. a pair of hands holds an open plastic bag beneath it. 00:04 – the cloud drifts down. it touches the bag opening. moisture beads on the inside of the plastic. 00:07 – the hands close the bag. the cloud sits inside it. it's the size of a grapefruit. condensation drips down the sides. the bag sags with the weight of water vapor. 00:10 – the hands lift the bag. the cloud shifts inside. light refracts through the wet plastic differently on the side facing the sun. i paused on that last frame. the refraction is correct. the side of the bag facing the light is brighter. the condensation acts as a lens. the cloud's shadow sits on the sand below at the correct angle. nobody prompted \"condensation as lens.\" nobody prompted \"cloud weight sags the bag.\" the model understood that if you put water vapor in plastic, the plastic gets wet, and wet plastic bends light. The stack: -> Claude Fable 5.1 for writing the cloud capture choreography, hand positioning, and material interaction logic -> Veo 3.1 for rendering the desert environment with photorealistic sand grain texture and atmospheric haze -> Seedance 2.5 for animating the cloud descent, plastic bag deformation under vapor weight, and condensation propagation -> Kling 3.0 Omni for generating the light refraction through wet PVC and the shadow projection on sand in 4K -> ElevenLabs Spatial for desert wind, plastic crinkle, and a faint moisture hiss as the cloud contacts the bag the clip is 11 seconds long. it contains more correct physics than most VFX shots in a $150M movie. the model didn't just render a visual. it rendered what happens when you trap weather.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ridark_eth/status/2095859507700097206",
+      "sourceType": "x",
+      "authorName": "Ridark",
+      "authorHandle": "@ridark_eth",
+      "createdAt": "2026-09-04T13:00:20.000Z",
+      "importedAt": "2026-09-09T06:28:16.473Z",
+      "tags": [
+        "Seedance",
+        "Veo",
+        "Kling",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo",
+        "Kling"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 145,
+        "reposts": 6,
+        "replies": 34,
+        "quotes": 1,
+        "bookmarks": 76,
+        "views": 55390,
+        "score": 690
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. tire tracks. a small white cloud hovers a few feet above the ground. a pair of hands holds an open plastic bag beneath it. 00:04 – the cloud drifts down. it touches the bag opening. moisture beads on the inside of the plastic. 00:07 – the hands close the bag. the cloud sits inside it. it's the size of a grapefruit. condensation drips down the sides. the bag sags with the weight of water vapor. 00:10 – the hands lift the bag. the cloud shifts inside. light refracts through the wet plastic differently on the side facing the sun. i paused on that last frame. the refraction is correct. the side of the bag facing the light is brighter. the condensation acts as a lens. the cloud's shadow sits on the sand below at the correct angle. nobody prompted \"condensation as lens.\" nobody prompted \"cloud weight sags the bag.\" the model understood that if you put water vapor in plastic, the plastic gets wet, and wet plastic bends light. The stack: -> Claude Fable 5.1 for writing the cloud capture choreography, hand positioning, and material interaction logic -> Veo 3.1 for rendering the desert environment with photorealistic sand grain texture and atmospheric haze -> Seedance 2.5 for animating the cloud descent, plastic bag deformation under vapor weight, and condensation propagation -> Kling 3.0 Omni for generating the light refraction through wet PVC and the shadow projection on sand in 4K -> ElevenLabs Spatial for desert wind, plastic crinkle, and a faint moisture hiss as the cloud contacts the bag the clip is 11 seconds long. it contains more correct physics than most VFX shots in a $150M movie. the model didn't just render a visual. it rendered what happens when you trap weather."
+    },
+    {
       "id": "x-public-2074836204286345261",
       "title": "Seedance 2.0 4K on Higgsfield Prompt: @ Image1 is the master character reference. Match her iden",
       "description": "Seedance 2.0 4K on Higgsfield Prompt: @ Image_1 is the master character reference. Match her identity, facial structure, body proportions, hairstyle, wardrobe, accessories, revolver, colors, textures, silhouette, and ove",
@@ -10103,51 +10148,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video creation is getting way more controllable. ByteDance’s Seedance 2.5 has launched globally FIRST on @dreamina_ai, bringing a much more production-ready workflow for creators. You can now: → Combine up to 50 image, video & audio references → Generate 30-sec continuous scenes → Build videos up to 3 minutes with Long Video Mode → Direct scenes using timestamp-based prompts → Modify specific moments instead of regenerating everything → Create natively across 10+ languages Dreamina also gives you unlimited access to the top Seedance models under one subscription. Pricing starts at: → Seedance 2.5 — $0.097/sec → Seedance 2.0 — $0.066/sec Plus, you can save 40% with yearly membership + get an extra 32% OFF Dreamina Seedance 2.5. For me, this is where AI video starts feeling less like prompt-and-pray and more like an actual creative workflow. Sign up for free and try it:  #dreamina #dreaminapartner #seedance #dreaminaseedance25"
-    },
-    {
-      "id": "x-public-2095859507700097206",
-      "title": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert ",
-      "description": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. t",
-      "prompt": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. tire tracks. a small white cloud hovers a few feet above the ground. a pair of hands holds an open plastic bag beneath it. 00:04 – the cloud drifts down. it touches the bag opening. moisture beads on the inside of the plastic. 00:07 – the hands close the bag. the cloud sits inside it. it's the size of a grapefruit. condensation drips down the sides. the bag sags with the weight of water vapor. 00:10 – the hands lift the bag. the cloud shifts inside. light refracts through the wet plastic differently on the side facing the sun. i paused on that last frame. the refraction is correct. the side of the bag facing the light is brighter. the condensation acts as a lens. the cloud's shadow sits on the sand below at the correct angle. nobody prompted \"condensation as lens.\" nobody prompted \"cloud weight sags the bag.\" the model understood that if you put water vapor in plastic, the plastic gets wet, and wet plastic bends light. The stack: -> Claude Fable 5.1 for writing the cloud capture choreography, hand positioning, and material interaction logic -> Veo 3.1 for rendering the desert environment with photorealistic sand grain texture and atmospheric haze -> Seedance 2.5 for animating the cloud descent, plastic bag deformation under vapor weight, and condensation propagation -> Kling 3.0 Omni for generating the light refraction through wet PVC and the shadow projection on sand in 4K -> ElevenLabs Spatial for desert wind, plastic crinkle, and a faint moisture hiss as the cloud contacts the bag the clip is 11 seconds long. it contains more correct physics than most VFX shots in a $150M movie. the model didn't just render a visual. it rendered what happens when you trap weather.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/ridark_eth/status/2095859507700097206",
-      "sourceType": "x",
-      "authorName": "Ridark",
-      "authorHandle": "@ridark_eth",
-      "createdAt": "2026-09-04T13:00:20.000Z",
-      "importedAt": "2026-09-08T17:21:26.427Z",
-      "tags": [
-        "Seedance",
-        "Veo",
-        "Kling",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo",
-        "Kling"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 144,
-        "reposts": 6,
-        "replies": 34,
-        "quotes": 1,
-        "bookmarks": 75,
-        "views": 55104,
-        "score": 684
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "EVERYONE SAYS AI CANNOT INVENT A VISUAL METAPHOR i asked Seedance 2.5 for \"a person in a desert catches a small cloud in a plastic bag.\" one sentence. one generate. went to refill my water. 00:00 – a desert. flat sand. tire tracks. a small white cloud hovers a few feet above the ground. a pair of hands holds an open plastic bag beneath it. 00:04 – the cloud drifts down. it touches the bag opening. moisture beads on the inside of the plastic. 00:07 – the hands close the bag. the cloud sits inside it. it's the size of a grapefruit. condensation drips down the sides. the bag sags with the weight of water vapor. 00:10 – the hands lift the bag. the cloud shifts inside. light refracts through the wet plastic differently on the side facing the sun. i paused on that last frame. the refraction is correct. the side of the bag facing the light is brighter. the condensation acts as a lens. the cloud's shadow sits on the sand below at the correct angle. nobody prompted \"condensation as lens.\" nobody prompted \"cloud weight sags the bag.\" the model understood that if you put water vapor in plastic, the plastic gets wet, and wet plastic bends light. The stack: -> Claude Fable 5.1 for writing the cloud capture choreography, hand positioning, and material interaction logic -> Veo 3.1 for rendering the desert environment with photorealistic sand grain texture and atmospheric haze -> Seedance 2.5 for animating the cloud descent, plastic bag deformation under vapor weight, and condensation propagation -> Kling 3.0 Omni for generating the light refraction through wet PVC and the shadow projection on sand in 4K -> ElevenLabs Spatial for desert wind, plastic crinkle, and a faint moisture hiss as the cloud contacts the bag the clip is 11 seconds long. it contains more correct physics than most VFX shots in a $150M movie. the model didn't just render a visual. it rendered what happens when you trap weather."
     },
     {
       "id": "x-public-2094041533368652084",
@@ -12616,6 +12616,47 @@
       "rawText": "YOU HAVE BEEN TRAINED TO TRUST A PHOTO YOUR OWN EYES CAN NO LONGER VERIFY That queso smash on the sign outside? It was never plated, never cooked, never real. It was generated by a prompt, approved by a manager who thought nobody would notice. > menu boards, delivery apps, and social platforms are increasingly running AI-generated food photography instead of real shots - Forkable, a US catering platform, quietly swapped real restaurant photos for AI images across its entire site without telling the restaurants themselves > McDonald's Netherlands pulled a fully AI-generated Christmas ad within days of backlash, proof that even a billion-dollar brand can't out-market the moment customers spot the uncanny gloss of a synthetic image > under the FTC's \"reasonable consumer standard,\" AI food imagery can legally count as false advertising the moment it materially changes what someone expected to receive - a disclaimer buried in fine print doesn't erase that > the deception now runs both directions: some customers use AI-edited photos of \"raw\" or \"moldy\" food to fraud their way into refunds, forcing DoorDash and other platforms to build detection systems just to catch fabricated evidence > researchers call this a live regulatory blind spot - almost no jurisdiction has updated food fraud law to cover AI-generated imagery, meaning there is currently very little legal deterrent for either the restaurant or the customer How to actually spot it before you order: > look for unnaturally perfect symmetry - real melted cheese pulls unevenly, AI cheese pulls in a suspiciously smooth arc > check the shadows - AI food photos often have lighting that doesn't match the direction of any visible light source > zoom in on garnish and texture - AI still struggles with fine details like sesame seed placement, herb sprigs, or steam > search the exact dish name plus the restaurant on Reddit or Instagram - real customer photos will contradict the marketing fast You were taught to trust your eyes at the counter. Now the eyes need training too."
     },
     {
+      "id": "x-public-2095559375028900064",
+      "title": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus mag",
+      "description": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician ",
+      "prompt": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician in a tuxedo stands on a sand floor. red velvet draped over a top hat. a woman in gold beside him. audience phones glowing in the dark. 00:04 – he lifts the cloth. it rises. but instead of falling, the fabric folds upward, each fold hardening into a step. 00:08 – a full staircase. red velvet becoming red lacquer. the woman walks up it. her weight shifts on each step. the cloth at the base still pools and wrinkles like fabric. 00:12 – she reaches the top. the spotlight follows her. the audience phones tilt up in unison. the model rendered the exact transition from soft to rigid in one continuous shot. the bottom of the staircase is still cloth. the top is solid wood. the middle is somewhere between. nobody taught it material phase transitions. it just understood what a magic trick needs to feel like magic. full breakdown in the article above",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ridark_eth/status/2095559375028900064",
+      "sourceType": "x",
+      "authorName": "Ridark",
+      "authorHandle": "@ridark_eth",
+      "createdAt": "2026-09-03T17:07:43.000Z",
+      "importedAt": "2026-09-09T06:28:16.473Z",
+      "tags": [
+        "Seedance"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 102,
+        "reposts": 2,
+        "replies": 29,
+        "quotes": 1,
+        "bookmarks": 66,
+        "views": 17244,
+        "score": 476
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician in a tuxedo stands on a sand floor. red velvet draped over a top hat. a woman in gold beside him. audience phones glowing in the dark. 00:04 – he lifts the cloth. it rises. but instead of falling, the fabric folds upward, each fold hardening into a step. 00:08 – a full staircase. red velvet becoming red lacquer. the woman walks up it. her weight shifts on each step. the cloth at the base still pools and wrinkles like fabric. 00:12 – she reaches the top. the spotlight follows her. the audience phones tilt up in unison. the model rendered the exact transition from soft to rigid in one continuous shot. the bottom of the staircase is still cloth. the top is solid wood. the middle is somewhere between. nobody taught it material phase transitions. it just understood what a magic trick needs to feel like magic. full breakdown in the article above"
+    },
+    {
       "id": "x-public-2092226245501051052",
       "title": "THIS IS FKING GOLD SHE REPORTEDLY MADE $20K IN 30 DAYS FROM AI GENERATED YOUTUBE CARTOONS USING ",
       "description": "THIS IS F**KING GOLD SHE REPORTEDLY MADE $20K IN 30 DAYS FROM AI GENERATED YOUTUBE CARTOONS USING AN IPAD BY THE POOL. No camera. No drawing skills. No production team. She starts by finding children’s videos already pul",
@@ -12700,47 +12741,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI shorts video, mixed media vibe. You can easily mix different kind of medium using Seedance 2.0 in just one prompt. Create a single character in Midjourney, no character sheets. Prompt scene by scene the camera moves and character actions. Introduce your new medium . Watercolor appearance, comic onomatopoeia, anime tornadoes… And tadaaa! 90’s vibe ☺️"
-    },
-    {
-      "id": "x-public-2095559375028900064",
-      "title": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus mag",
-      "description": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician ",
-      "prompt": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician in a tuxedo stands on a sand floor. red velvet draped over a top hat. a woman in gold beside him. audience phones glowing in the dark. 00:04 – he lifts the cloth. it rises. but instead of falling, the fabric folds upward, each fold hardening into a step. 00:08 – a full staircase. red velvet becoming red lacquer. the woman walks up it. her weight shifts on each step. the cloth at the base still pools and wrinkles like fabric. 00:12 – she reaches the top. the spotlight follows her. the audience phones tilt up in unison. the model rendered the exact transition from soft to rigid in one continuous shot. the bottom of the staircase is still cloth. the top is solid wood. the middle is somewhere between. nobody taught it material phase transitions. it just understood what a magic trick needs to feel like magic. full breakdown in the article above",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/ridark_eth/status/2095559375028900064",
-      "sourceType": "x",
-      "authorName": "Ridark",
-      "authorHandle": "@ridark_eth",
-      "createdAt": "2026-09-03T17:07:43.000Z",
-      "importedAt": "2026-09-05T11:21:33.388Z",
-      "tags": [
-        "Seedance"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 97,
-        "reposts": 2,
-        "replies": 28,
-        "quotes": 1,
-        "bookmarks": 65,
-        "views": 16130,
-        "score": 460
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician in a tuxedo stands on a sand floor. red velvet draped over a top hat. a woman in gold beside him. audience phones glowing in the dark. 00:04 – he lifts the cloth. it rises. but instead of falling, the fabric folds upward, each fold hardening into a step. 00:08 – a full staircase. red velvet becoming red lacquer. the woman walks up it. her weight shifts on each step. the cloth at the base still pools and wrinkles like fabric. 00:12 – she reaches the top. the spotlight follows her. the audience phones tilt up in unison. the model rendered the exact transition from soft to rigid in one continuous shot. the bottom of the staircase is still cloth. the top is solid wood. the middle is somewhere between. nobody taught it material phase transitions. it just understood what a magic trick needs to feel like magic. full breakdown in the article above"
     },
     {
       "id": "x-public-2084833267719799061",
@@ -16876,7 +16876,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.889Z",
+      "importedAt": "2026-09-09T06:28:12.998Z",
       "tags": [
         "人像",
         "摄影"
@@ -16918,7 +16918,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "摄影"
       ],
@@ -16959,7 +16959,7 @@
       "authorName": "Faymas",
       "authorHandle": "@Faymas_ai",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像",
         "摄影"
@@ -17001,7 +17001,7 @@
       "authorName": "ZorviaLux",
       "authorHandle": "@ZorviaLux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像",
         "摄影"
@@ -17043,7 +17043,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像"
       ],
@@ -17084,7 +17084,7 @@
       "authorName": "Harboris",
       "authorHandle": "@harboriis",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "摄影"
       ],
@@ -17125,7 +17125,7 @@
       "authorName": "AI Guide-Note - 実務で使えるAI活用メディア",
       "authorHandle": "@AIGuideNote",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "GPT Image 2",
         "产品",
@@ -17168,7 +17168,7 @@
       "authorName": "liana",
       "authorHandle": "@Lianaalane",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像"
       ],
@@ -17209,7 +17209,7 @@
       "authorName": "Adnan",
       "authorHandle": "@Adnan_Ai4",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.891Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "视频"
       ],
@@ -17251,7 +17251,7 @@
       "authorName": "MISA",
       "authorHandle": "@banana_ai_club1",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像",
         "摄影"
@@ -17293,7 +17293,7 @@
       "authorName": "SkillDential 🇳🇬",
       "authorHandle": "@Skilldential",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像",
         "摄影"
@@ -17335,7 +17335,7 @@
       "authorName": "社長",
       "authorHandle": "@narikin321",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:12.999Z",
       "tags": [
         "人像"
       ],
@@ -17376,7 +17376,7 @@
       "authorName": "𝗦𝗮𝗻𝗶𝗮",
       "authorHandle": "@saniaspeaks_",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -17418,7 +17418,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "摄影"
       ],
@@ -17459,7 +17459,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -17501,7 +17501,7 @@
       "authorName": "ayzalnoor",
       "authorHandle": "@ayzalnooor24521",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -17543,7 +17543,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像"
       ],
@@ -17584,7 +17584,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-07T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像"
       ],
@@ -17912,7 +17912,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -17954,7 +17954,7 @@
       "authorName": "IKOI☺︎︎AIお姉さん",
       "authorHandle": "@Ikoi9280",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -17996,7 +17996,7 @@
       "authorName": "Talia",
       "authorHandle": "@TaliaAariz",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -18038,7 +18038,7 @@
       "authorName": "Maercih",
       "authorHandle": "@Maercihh",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18081,7 +18081,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -18123,7 +18123,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-06T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.890Z",
+      "importedAt": "2026-09-09T06:28:13.000Z",
       "tags": [
         "人像",
         "摄影"
@@ -61769,7 +61769,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.893Z",
+      "importedAt": "2026-09-09T06:28:13.004Z",
       "tags": [
         "产品",
         "平面设计",
@@ -61812,7 +61812,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.893Z",
+      "importedAt": "2026-09-09T06:28:13.004Z",
       "tags": [
         "平面设计"
       ],
@@ -61853,7 +61853,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-08T17:21:22.893Z",
+      "importedAt": "2026-09-09T06:28:13.004Z",
       "tags": [
         "平面设计"
       ],
