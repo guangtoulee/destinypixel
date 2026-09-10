@@ -7,6 +7,23 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 95],
   },
+  async headers() {
+    const securityHeaders = [
+      { key: "Cache-Control", value: "private, no-store, max-age=0" },
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "X-Frame-Options", value: "DENY" },
+      { key: "Referrer-Policy", value: "same-origin" },
+      {
+        key: "Permissions-Policy",
+        value: "camera=(), microphone=(), geolocation=(self)",
+      },
+    ];
+
+    return [
+      { source: "/xiaoshou/:path*", headers: securityHeaders },
+      { source: "/api/xiaoshou/:path*", headers: securityHeaders },
+    ];
+  },
   async rewrites() {
     return [
       {
