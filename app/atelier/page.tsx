@@ -4,7 +4,14 @@ import { energyElements, type EnergyElement } from "@/lib/energy-style";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { makePageMetadata, routeSeo } from "@/lib/seo";
 
-export const metadata: Metadata = makePageMetadata(routeSeo.atelier);
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  return makePageMetadata({ ...routeSeo.atelier, locale: params?.locale });
+}
 
 function normalizeFocus(value?: string): EnergyElement {
   const normalized = energyElements.find(

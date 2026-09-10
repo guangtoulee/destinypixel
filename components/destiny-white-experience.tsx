@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import {
   ArrowRight,
   CalendarDays,
   Check,
   Gem,
+  Grid2X2,
   Hand,
   Languages,
   Loader2,
@@ -22,9 +23,9 @@ import {
   SunMoon,
   X,
 } from "lucide-react";
-import { Solar } from "lunar-javascript";
 import { createFusionReportAction } from "@/app/actions";
 import { DeityPortrait } from "@/components/deity-portraits";
+import { HomeToolPaths } from "@/components/home-tool-paths";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay } from "@/lib/bazi-totems";
 import { cities } from "@/lib/geo/cities";
@@ -798,6 +799,8 @@ export default function DestinyWhiteExperience({
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
+  const birthDateRef = useRef("");
+  const birthDateInputRef = useRef<HTMLInputElement>(null);
   const [pillar, setPillar] = useState("癸卯");
   const [litBlessings, setLitBlessings] = useState<Record<string, boolean>>({});
   const [selectedDeityKey, setSelectedDeityKey] = useState("guanyin");
@@ -823,6 +826,13 @@ export default function DestinyWhiteExperience({
   const display = useMemo(() => getPillarDisplay(pillar, locale), [locale, pillar]);
   const cardName = profileName(profile, pillar, locale);
   const essence = profileEssence(profile, pillar, locale);
+
+  useEffect(() => {
+    const now = new Date();
+    if (birthDateInputRef.current) {
+      birthDateInputRef.current.max = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    }
+  }, []);
 
   useEffect(() => {
     setDocumentLocale(locale);
@@ -854,18 +864,18 @@ export default function DestinyWhiteExperience({
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
-  function updatePreviewFromDate(value: string) {
+  async function updatePreviewFromDate(value: string) {
     setBirthDate(value);
-
-    if (!value) return;
-
-    const [year, month, day] = value.split("-").map(Number);
-    const result = Solar.fromYmdHms(year, month, day, 12, 0, 0)
-      .getLunar()
-      .getDayInGanZhi();
-
-    if (result in pillarsDB) {
-      setPillar(result);
+    birthDateRef.current = value;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return;
+    try {
+      const { Solar } = await import("lunar-javascript");
+      if (birthDateRef.current !== value) return;
+      const [year, month, day] = value.split("-").map(Number);
+      const result = Solar.fromYmdHms(year, month, day, 12, 0, 0).getLunar().getDayInGanZhi();
+      if (result in pillarsDB) setPillar(result);
+    } catch {
+      // The decorative preview must not prevent submitting a valid birth form.
     }
   }
 
@@ -885,8 +895,10 @@ export default function DestinyWhiteExperience({
               {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
             </a>
             <a href="#insights">{text.nav.insights}</a>
-            <a href="#method">{text.nav.method}</a>
-            <a href="#archetypes">{text.nav.archetypes}</a>
+            <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
+              {copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Все инструменты" : "All tools"}
+            </a>
+            <a href="/prompt">{copyLocale === "zh" ? "AI 创作" : locale === "ru" ? "AI-творчество" : "AI creation"}</a>
             <a href="#report">{text.nav.report}</a>
           </nav>
 
@@ -930,9 +942,9 @@ export default function DestinyWhiteExperience({
           <Stars size={18} aria-hidden="true" />
           <span>{mobileNavLabels.sticks}</span>
         </a>
-        <a href="#blessing">
-          <Orbit size={18} aria-hidden="true" />
-          <span>{mobileNavLabels.blessing}</span>
+        <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
+          <Grid2X2 size={18} aria-hidden="true" />
+          <span>{copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Ещё" : "All tools"}</span>
         </a>
       </nav>
 
@@ -974,7 +986,7 @@ export default function DestinyWhiteExperience({
               </div>
             </div>
 
-            <form action={createFusionReportAction}>
+            <form action={createFusionReportAction} data-analytics-form="birth_report">
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
@@ -997,7 +1009,7 @@ export default function DestinyWhiteExperience({
                   name="birthDate"
                   type="date"
                   value={birthDate}
-                  max="2026-06-25"
+                    ref={birthDateInputRef}
                   onChange={(event) => updatePreviewFromDate(event.target.value)}
                   onInput={(event) => updatePreviewFromDate(event.currentTarget.value)}
                   required
@@ -1094,6 +1106,8 @@ export default function DestinyWhiteExperience({
           </article>
         </div>
       </section>
+
+      <HomeToolPaths locale={copyLocale} />
 
       <section className="white-insights white-insights--priority" id="insights">
         <div className="white-container">
@@ -1400,8 +1414,12 @@ export default function DestinyWhiteExperience({
       <footer className="white-footer">
         <div className="white-container">
           <span>DestinyPixel · Multidimensional Birth Map</span>
-          <a href={`/learn?locale=${locale}`}>
-            {copyLocale === "zh" ? "搜索指南" : locale === "ru" ? "Гид" : "Guide"}
+          <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
+            {copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Все инструменты" : "All tools"}
+          </a>
+          <a href="/prompt">AI Prompt</a>
+          <a href="/learn">
+            {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
           </a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { normalizeReportLocale, type ReportLocale } from "@/lib/report-i18n";
+import { hasLocalizedSeo, localizedSeoCopy } from "@/lib/seo-locales";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
@@ -100,9 +102,9 @@ export const routeSeo = {
   },
   learn: {
     path: "/learn",
-    title: "DestinyPixel Guide | Birth Charts, Tarot, Palm Reading & Bazi Timing",
+    title: "DestinyPixel Beginner Guide | Choose a Tool & Get Started",
     description:
-      "A plain-language guide to the DestinyPixel system and the most searched paths in astrology, Bazi, Tarot, palm reading, face reading, and question-based oracle readings.",
+      "Find the right DestinyPixel tool, what to prepare, how to use it, and what each result can and cannot tell you. Includes birth maps, totems, creative tools and English practice.",
     keywords: [
       "astrology guide",
       "tarot guide",
@@ -112,11 +114,18 @@ export const routeSeo = {
       "AI命理解读",
     ],
   },
+  tools: {
+    path: "/tools",
+    title: "DestinyPixel Tools | Self-Discovery, AI Creation & Learning",
+    description:
+      "Find the right DestinyPixel tool: birth charts and symbolic self-discovery, AI image and storytelling workspaces, or English vocabulary practice.",
+    keywords: ["DestinyPixel tools", "AI creative tools", "birth chart tools", "English vocabulary practice"],
+  },
   palm: {
     path: "/palm",
     title: "AI Palm Reading Online | DestinyPixel Palm Studio",
     description:
-      "Upload or take a palm photo for a direct, conversational palm reading focused on life rhythm, relationships, work patterns, and practical next steps.",
+      "Get a symbolic palm reading from the details you confirm; an optional photo stays in your browser as a visual reference.",
     keywords: [
       "AI palm reading",
       "palmistry online",
@@ -130,7 +139,7 @@ export const routeSeo = {
     path: "/face",
     title: "AI Face Reading Online | DestinyPixel Face Studio",
     description:
-      "A symbolic face reading studio for expression, facial zones, social signals, pressure patterns, and grounded self-reflection.",
+      "Reflect on the facial features and expressions you describe; an optional photo stays in your browser and is not analyzed by AI.",
     keywords: [
       "AI face reading",
       "face reading online",
@@ -179,7 +188,7 @@ export const routeSeo = {
     path: "/insights",
     title: "DestinyPixel Insight Studios | Palm, Face & Question Readings",
     description:
-      "Open a focused insight studio when you need a smaller mirror: palm reading, face reading, or a one-question Tarot and Liuyao-inspired oracle.",
+      "Choose symbolic palm or face reflection based on details you describe, or explore one question with a Tarot and Liuyao-inspired oracle.",
     keywords: [
       "AI fortune reading",
       "spiritual insight tools",
@@ -223,6 +232,7 @@ export const routeSeo = {
   },
   juben: {
     path: "/juben",
+    locale: "zh",
     title: "AI 短剧剧本生产台 | 分镜脚本、导演剧本与视频 Prompt",
     description:
       "把一个创意拆成短剧故事圣经、分集大纲、导演剧本、镜头表、分镜 prompt、运镜 prompt、剪辑 prompt 和配音脚本，适合接 Lovart 与 Grok 视频生成。",
@@ -242,6 +252,7 @@ export const routeSeo = {
   },
   daoyan: {
     path: "/daoyan",
+    locale: "zh",
     title: "AI 导演工作台 | 连续短剧剧本、资产锁定与视频生产包",
     description:
       "从故事立项、人物场景资产锁定和分集因果，到完整单集导演本、连续视频单元、首末帧 Prompt 与生产看板，面向 Lovart、Grok 和 AI 短剧制作。",
@@ -260,6 +271,7 @@ export const routeSeo = {
   },
   prompt: {
     path: "/prompt",
+    locale: "zh",
     title: "AI Prompt 雷达 | 图片视频提示词、中文扩写与案例拆解",
     description:
       "面向中文创作者的 AI Prompt 工作台与案例库：智能扩写简单描述，图片反推 Prompt，按主题浏览热门图片、视频与工作流，并查看中文拆解和原始来源。",
@@ -296,13 +308,22 @@ export function absoluteUrl(path = "/") {
 }
 
 export function languageAlternates(path: string) {
+  if (!hasLocalizedSeo(path)) return undefined;
+  const hasRussian = "ru" in localizedSeoCopy[path];
   return {
-    en: `${path}?locale=en`,
-    zh: `${path}?locale=zh`,
-    "zh-Hant": `${path}?locale=zh-TW`,
-    ru: `${path}?locale=ru`,
+    en: path,
+    "zh-Hans": `${path}?locale=zh`,
+    ...(hasRussian ? { ru: `${path}?locale=ru` } : {}),
     "x-default": path,
   };
+}
+
+export function canonicalPagePath(path: string, locale = "en") {
+  if (!hasLocalizedSeo(path)) return path;
+  const normalized = normalizeReportLocale(locale);
+  return normalized !== "en" && normalized in localizedSeoCopy[path]
+    ? `${path}?locale=${normalized}`
+    : path;
 }
 
 export function makePageMetadata({
@@ -311,27 +332,40 @@ export function makePageMetadata({
   description,
   keywords = [],
   noindex = false,
+  locale = "en",
 }: {
   path: string;
   title: string;
   description: string;
   keywords?: string[];
   noindex?: boolean;
+  locale?: string;
 }): Metadata {
+  const normalizedLocale = normalizeReportLocale(locale);
+  const localized = hasLocalizedSeo(path)
+    ? (localizedSeoCopy[path] as Partial<Record<ReportLocale, readonly [string, string]>>)[normalizedLocale]
+    : undefined;
+  const pageTitle = localized?.[0] ?? title;
+  const pageDescription = localized?.[1] ?? description;
+  const brandedTitle = pageTitle.includes(siteName) ? pageTitle : `${pageTitle} | ${siteName}`;
+  const canonical = canonicalPagePath(path, locale);
+  const language = localized ? normalizedLocale : hasLocalizedSeo(path) ? "en" : normalizedLocale;
+
   return {
-    title,
-    description,
-    keywords: [...seoKeywordClusters, ...keywords],
+    title: { absolute: brandedTitle },
+    description: pageDescription,
+    keywords: [siteName, ...keywords],
     alternates: {
-      canonical: path,
-      languages: languageAlternates(path),
+      canonical,
+      languages: normalizedLocale === "zh-TW" || noindex ? undefined : languageAlternates(path),
     },
     openGraph: {
       type: "website",
-      url: path,
-      title,
-      description,
+      url: canonical,
+      title: brandedTitle,
+      description: pageDescription,
       siteName,
+      locale: language === "zh" ? "zh_CN" : language === "zh-TW" ? "zh_TW" : language === "ru" ? "ru_RU" : "en_US",
       images: [
         {
           url: "/opengraph-image",
@@ -343,8 +377,8 @@ export function makePageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: brandedTitle,
+      description: pageDescription,
       images: ["/opengraph-image"],
     },
     robots: noindex

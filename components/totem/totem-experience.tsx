@@ -30,6 +30,7 @@ import {
   type PointerEvent,
 } from "react";
 import BrandSymbol from "@/components/brand-symbol";
+import { trackToolEvent } from "@/lib/analytics";
 import { calculateBaziEngine } from "@/lib/engines/bazi";
 import { cities } from "@/lib/geo/cities";
 import {
@@ -375,6 +376,7 @@ export default function TotemExperience({
       return;
     }
 
+    trackToolEvent("tool_start", "totem");
     try {
       const result = calculateBaziEngine({
         name: form.name.trim() || "Guest",
@@ -398,6 +400,7 @@ export default function TotemExperience({
         );
       }
       setBazi(result);
+      trackToolEvent("tool_success", "totem");
       setDisplayName(form.name.trim());
       setPhase("natal");
       setActiveLayer("overview");
@@ -422,6 +425,7 @@ export default function TotemExperience({
       });
     } catch {
       setFormError(copy.form.errors.calculate);
+      trackToolEvent("tool_error", "totem");
     }
   }
 
@@ -497,6 +501,7 @@ export default function TotemExperience({
               : undefined,
         },
       );
+      if (result === "shared" || result === "copied") trackToolEvent("tool_share", "totem");
       setActionStatus(
         result === "shared"
           ? copy.toolbar.shared

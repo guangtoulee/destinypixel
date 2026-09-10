@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, routeSeo } from "@/lib/seo";
+import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
 import {
   getIndexablePromptItems,
   promptCategoryProfiles,
@@ -9,6 +9,7 @@ import {
 
 const publicRoutes = [
   { path: routeSeo.home.path, priority: 1, changeFrequency: "weekly" },
+  { path: routeSeo.tools.path, priority: 0.9, changeFrequency: "monthly" },
   { path: routeSeo.learn.path, priority: 0.82, changeFrequency: "weekly" },
   { path: routeSeo.insights.path, priority: 0.74, changeFrequency: "weekly" },
   { path: routeSeo.palm.path, priority: 0.7, changeFrequency: "weekly" },
@@ -23,29 +24,31 @@ const publicRoutes = [
   { path: routeSeo.black.path, priority: 0.42, changeFrequency: "monthly" },
   { path: "/xingpan", priority: 0.86, changeFrequency: "monthly" },
   { path: "/ultra", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/english", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/danci", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/image", priority: 0.6, changeFrequency: "monthly" },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const primaryRoutes: MetadataRoute.Sitemap = publicRoutes.flatMap((route) => {
+    const languages = languageAlternates(route.path);
+    const variants = languages
+      ? [...new Set(Object.values(languages))]
+      : [route.path];
 
-  const primaryRoutes: MetadataRoute.Sitemap = publicRoutes.map((route) => ({
-    url: absoluteUrl(route.path),
-    lastModified,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-    alternates:
-      route.path === routeSeo.prompt.path || route.path === routeSeo.juben.path
-        ? undefined
-        : {
-            languages: {
-              en: absoluteUrl(`${route.path}?locale=en`),
-              zh: absoluteUrl(`${route.path}?locale=zh`),
-              "zh-Hant": absoluteUrl(`${route.path}?locale=zh-TW`),
-              ru: absoluteUrl(`${route.path}?locale=ru`),
-              "x-default": absoluteUrl(route.path),
-            },
-          },
-  }));
+    return variants.map((path) => ({
+      url: absoluteUrl(path),
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+      alternates: languages
+        ? {
+            languages: Object.fromEntries(
+              Object.entries(languages).map(([language, href]) => [language, absoluteUrl(href)]),
+            ),
+          }
+        : undefined,
+    }));
+  });
 
   const promptHubs: MetadataRoute.Sitemap = [
     "/prompt/articles",
@@ -57,7 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .map((profile) => `/prompt/category/${profile.slug}`),
   ].map((path) => ({
     url: absoluteUrl(path),
-    lastModified,
     changeFrequency: path.includes("category") || path.endsWith("articles") ? "daily" : "monthly",
     priority: path.includes("category") ? 0.72 : path.endsWith("articles") ? 0.74 : 0.4,
   }));

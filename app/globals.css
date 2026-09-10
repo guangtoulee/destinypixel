@@ -3757,7 +3757,8 @@ a {
 }
 
 .white-eyebrow {
-  margin-top: 30px;
+  display: flex;
+  margin-top: 14px;
   color: #8d9990;
 }
 

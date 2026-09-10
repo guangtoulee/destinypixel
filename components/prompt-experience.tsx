@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import styles from "./prompt-experience.module.css";
 import { promptCategoryLink, promptItemLink } from "@/lib/prompt-links";
+import { trackToolEvent } from "@/lib/analytics";
 import {
   curatePromptArticles,
   isHighQualityPromptArticle,
@@ -217,6 +218,7 @@ function formatDate(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "刚刚";
   return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai",
     month: "2-digit",
     day: "2-digit",
     hour: "2-digit",
@@ -316,17 +318,28 @@ function buildFeedCopy(item: PromptFeedItem) {
     .join("\n");
 }
 
-export default function PromptExperience() {
-  const [items, setItems] = useState<PromptFeedItem[]>([]);
-  const [feedStatus, setFeedStatus] = useState<Status>("loading");
+export default function PromptExperience({
+  initialItems = [],
+  initialUpdatedAt = "",
+}: {
+  initialItems?: PromptFeedItem[];
+  initialUpdatedAt?: string;
+}) {
+  const [items, setItems] = useState<PromptFeedItem[]>(initialItems);
+  const [feedStatus, setFeedStatus] = useState<Status>(initialItems.length ? "ready" : "loading");
   const [feedError, setFeedError] = useState("");
   const [feedNotice, setFeedNotice] = useState("");
-  const [updatedAt, setUpdatedAt] = useState("");
+  const [updatedAt, setUpdatedAt] = useState(initialUpdatedAt);
+  const [fullFeedLoaded, setFullFeedLoaded] = useState(false);
+  const [fullFeedMode, setFullFeedMode] = useState(false);
+  const feedRequestId = useRef(0);
+  const fullFeedRequested = useRef(false);
   const [sourcePlan, setSourcePlan] = useState<FeedResponse["sourcePlan"]>();
   const [sourceSummary, setSourceSummary] = useState<FeedResponse["sourceSummary"]>();
   const [activeFilter, setActiveFilter] = useState<FeedFilter>("all");
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const shouldLoadFullFeed = fullFeedMode || fullFeedLoaded || Boolean(searchTerm.trim()) || activeFilter !== "all" || activeCategory !== "all";
   const [activeTool, setActiveTool] = useState<ActiveTool>("expand");
 
   const [language, setLanguage] = useState<PromptLanguage>("zh");
@@ -437,17 +450,26 @@ export default function PromptExperience() {
     [filteredItems],
   );
 
-  async function loadFeed(refresh = false) {
+  const loadFeed = useCallback(async (
+    refresh = false,
+    full = false,
+  ) => {
+    const requestId = ++feedRequestId.current;
+    if (full) fullFeedRequested.current = true;
+    setFullFeedMode(full);
     setFeedStatus("loading");
     setFeedError("");
     setFeedNotice("");
     try {
       const params = new URLSearchParams({ limit: "2000" });
+      if (!full) params.set("scope", "featured");
       if (refresh) params.set("refresh", "1");
       const response = await fetch(`/api/prompt/feed?${params}`, { cache: "no-store" });
       const data = (await response.json()) as FeedResponse;
+      if (requestId !== feedRequestId.current) return;
       if (!response.ok) throw new Error(data.error || "读取信号失败。");
       setItems(data.items || []);
+      setFullFeedLoaded(full);
       setUpdatedAt(data.updatedAt || "");
       setSourcePlan(data.sourcePlan);
       setSourceSummary(data.sourceSummary);
@@ -460,14 +482,22 @@ export default function PromptExperience() {
       }
       setFeedStatus("ready");
     } catch (error) {
+      if (requestId !== feedRequestId.current) return;
+      if (full) fullFeedRequested.current = false;
       setFeedStatus("error");
       setFeedError(error instanceof Error ? error.message : "读取信号失败。");
     }
-  }
+  }, []);
 
   useEffect(() => {
-    void loadFeed(false);
-  }, []);
+    void loadFeed(false, false);
+  }, [loadFeed]);
+
+  useEffect(() => {
+    if (fullFeedRequested.current || !(searchTerm.trim() || activeFilter !== "all" || activeCategory !== "all")) return;
+    const timeout = window.setTimeout(() => void loadFeed(false, true), 250);
+    return () => window.clearTimeout(timeout);
+  }, [searchTerm, activeFilter, activeCategory, loadFeed]);
 
   useEffect(() => {
     const ids = items
@@ -517,6 +547,7 @@ export default function PromptExperience() {
     if (!value) return;
     try {
       await navigator.clipboard.writeText(value);
+      trackToolEvent("copy_success", "prompt_copy");
       setCopied(key);
       window.setTimeout(() => setCopied(""), 1400);
     } catch {
@@ -531,6 +562,7 @@ export default function PromptExperience() {
       setExpandError("先写一个画面想法。");
       return;
     }
+    trackToolEvent("tool_start", "prompt_expand");
     setExpandStatus("loading");
     setExpandError("");
     try {
@@ -555,15 +587,20 @@ export default function PromptExperience() {
       setExpanded(data);
       setExpandStatus("ready");
       if (data.provider === "local-fallback") {
+        trackToolEvent("tool_fallback", "prompt_expand");
         setExpandError("智能服务暂时不可用，当前仅保留原始设定，请稍后重试。");
+      } else {
+        trackToolEvent("tool_success", "prompt_expand");
       }
     } catch (error) {
+      trackToolEvent("tool_error", "prompt_expand");
       setExpandStatus("error");
       setExpandError(error instanceof Error ? error.message : "扩写失败。");
     }
   }
 
   async function analyzeImage(file: File) {
+    trackToolEvent("tool_start", "prompt_image");
     setImageStatus("loading");
     setImageError("");
     setImageResult(null);
@@ -581,7 +618,9 @@ export default function PromptExperience() {
       if (!response.ok) throw new Error(data.error || "图片分析失败。");
       setImageResult(data);
       setImageStatus("ready");
+      trackToolEvent(data.provider === "local-fallback" ? "tool_fallback" : "tool_success", "prompt_image");
     } catch (error) {
+      trackToolEvent("tool_error", "prompt_image");
       setImageStatus("error");
       setImageError(error instanceof Error ? error.message : "图片分析失败。");
     }
@@ -606,7 +645,7 @@ export default function PromptExperience() {
       setImportText("");
       setFeedNotice(`已导入 ${data.saved || data.items?.length || 0} 条线索。`);
       setImportStatus("ready");
-      await loadFeed(false);
+      await loadFeed(false, true);
     } catch (error) {
       setImportStatus("error");
       setImportError(error instanceof Error ? error.message : "导入失败。");
@@ -673,7 +712,7 @@ export default function PromptExperience() {
       });
       const data = (await response.json()) as { ok?: boolean; error?: string };
       if (!response.ok || !data.ok) throw new Error(data.error || "管理操作失败。");
-      await loadFeed(false);
+      await loadFeed(false, shouldLoadFullFeed);
       setFeedNotice(
         action === "delete"
           ? "案例已删除，后续定时抓取不会把它重新放回来。"
@@ -775,6 +814,7 @@ export default function PromptExperience() {
         </div>
       </div>
 
+
       <section className={styles.studio} id="studio">
         <div className={styles.studioHeading}>
           <div>
@@ -814,7 +854,7 @@ export default function PromptExperience() {
             </div>
 
             {activeTool === "expand" ? (
-              <form className={styles.composerForm} onSubmit={submitExpand}>
+              <form className={styles.composerForm} data-analytics-form="prompt_expand" onSubmit={submitExpand}>
                 <label className={styles.ideaField}>
                   <span>你的画面</span>
                   <textarea
@@ -1033,6 +1073,20 @@ export default function PromptExperience() {
         </div>
       </section>
 
+      <nav className={styles.libraryDirectory} aria-label="Prompt 专题与文章">
+        <div>
+          <strong>按主题找案例</strong>
+          <p>选择创作方向，查看完整提示词、画面拆解与原始来源。</p>
+        </div>
+        <div className={styles.libraryDirectoryLinks}>
+          {categoryOrder.map((category) => (
+            <Link href={promptCategoryLink(category)} key={category}>{category}</Link>
+          ))}
+          <Link href="/prompt/articles">文章档案 <ArrowRight aria-hidden="true" /></Link>
+          <Link href="/prompt/about">编辑说明</Link>
+        </div>
+      </nav>
+
       <section className={styles.radarSection} id="signals">
         <div className={styles.sectionHeading}>
           <div>
@@ -1042,7 +1096,7 @@ export default function PromptExperience() {
           <div className={styles.radarStats}>
             <span><b>{sourceSummary?.publicX ?? signalItems.length}</b> X 信号</span>
             <span><b>{sourceSummary?.community ?? visualItems.length}</b> 图像案例</span>
-            <span><b>{sourceSummary?.total ?? items.length}</b> 当前收录</span>
+            <span><b>{sourceSummary?.total ?? items.length}</b> {sourceSummary ? "全站收录" : "首屏精选"}</span>
           </div>
         </div>
 
@@ -1070,13 +1124,24 @@ export default function PromptExperience() {
           <button
             className={styles.refreshButton}
             disabled={feedStatus === "loading"}
-            onClick={() => void loadFeed(false)}
+            onClick={() => void loadFeed(false, shouldLoadFullFeed)}
             title="刷新当前快照"
             type="button"
           >
             <RefreshCw aria-hidden="true" className={feedStatus === "loading" ? styles.spin : ""} />
           </button>
         </div>
+
+        {!fullFeedLoaded ? (
+          <div className={styles.feedScope} aria-live="polite">
+            <span>{fullFeedMode && feedStatus === "loading"
+              ? "正在载入全库，搜索和筛选将在全部公开条目中完成。"
+              : "先看编辑精选；搜索或筛选时会载入全库。"}</span>
+            <button disabled={feedStatus === "loading"} onClick={() => void loadFeed(false, true)} type="button">
+              浏览全部案例 <ArrowRight aria-hidden="true" />
+            </button>
+          </div>
+        ) : null}
 
         <div className={styles.categoryRail} aria-label="内容分类筛选">
           <span>按主题浏览</span>

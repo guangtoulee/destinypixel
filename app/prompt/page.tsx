@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import PromptExperience from "@/components/prompt-experience";
 import { absoluteUrl, makePageMetadata, routeSeo, siteName } from "@/lib/seo";
-import { promptCategoryProfiles, promptSnapshotItems } from "@/lib/prompt-library";
+import { getIndexablePromptItems, promptCategoryProfiles, promptSnapshotInfo, selectFeaturedPromptItems } from "@/lib/prompt-library";
+import { applyPromptModeration, readPromptModeration } from "@/lib/prompt-moderation";
 
 export const maxDuration = 60;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   ...makePageMetadata(routeSeo.prompt),
   alternates: { canonical: routeSeo.prompt.path },
 };
 
-export default function PromptPage() {
+export default async function PromptPage() {
+  const initialItems = selectFeaturedPromptItems(
+    applyPromptModeration(getIndexablePromptItems(), await readPromptModeration()),
+  );
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -31,7 +36,7 @@ export default function PromptPage() {
         url: absoluteUrl("/prompt"),
         isPartOf: { "@type": "WebSite", name: siteName, url: absoluteUrl("/") },
         about: promptCategoryProfiles.map((profile) => profile.name),
-        numberOfItems: promptSnapshotItems.length,
+        numberOfItems: initialItems.length,
       },
     ],
   };
@@ -39,7 +44,7 @@ export default function PromptPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-      <PromptExperience />
+      <PromptExperience initialItems={initialItems} initialUpdatedAt={promptSnapshotInfo.updatedAt} />
     </>
   );
 }

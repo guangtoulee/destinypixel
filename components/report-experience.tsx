@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import type { NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
+import { trackToolEvent } from "@/lib/analytics";
 import {
   elementPercentages,
   elementStyle,
@@ -652,6 +653,8 @@ export default function ReportExperience({
     ) => {
       setStatus("loading");
       setRaw("");
+      const analyticsTool = endpoint === "/api/generate-natal" ? "birth_report" : "birth_transits";
+      trackToolEvent("tool_start", analyticsTool);
       const controller = new AbortController();
       const timeout = window.setTimeout(() => controller.abort(), 55000);
 
@@ -689,13 +692,16 @@ export default function ReportExperience({
         if (!hasCompleteStream(completeText, requiredMarkers)) {
           setRaw(fallbackRaw);
           setStatus("error");
+          trackToolEvent("tool_fallback", analyticsTool);
           return;
         }
 
         setStatus("ready");
+        trackToolEvent("tool_success", analyticsTool);
       } catch {
         setRaw(fallbackRaw);
         setStatus("error");
+        trackToolEvent("tool_error", analyticsTool);
       } finally {
         window.clearTimeout(timeout);
       }

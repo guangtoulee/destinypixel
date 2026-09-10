@@ -5,7 +5,14 @@ import { makePageMetadata, routeSeo } from "@/lib/seo";
 
 export const maxDuration = 60;
 
-export const metadata: Metadata = makePageMetadata(routeSeo.black);
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  return makePageMetadata({ ...routeSeo.black, locale: params?.locale });
+}
 
 export default async function BlackHome({
   searchParams,

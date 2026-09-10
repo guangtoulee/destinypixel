@@ -6,7 +6,14 @@ import { stickTypeOrder, type StickType } from "@/lib/sticks/catalog";
 
 export const maxDuration = 60;
 
-export const metadata: Metadata = makePageMetadata(routeSeo.sticks);
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  return makePageMetadata({ ...routeSeo.sticks, locale: params?.locale });
+}
 
 function normalizeStickType(value?: string): StickType {
   if (stickTypeOrder.includes(value as StickType)) return value as StickType;

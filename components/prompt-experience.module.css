@@ -207,11 +207,88 @@
 }
 
 .studio,
+.libraryDirectory,
 .radarSection,
 .caseSection,
 .dataFooter {
   width: min(1640px, calc(100% - 56px));
   margin: 0 auto;
+}
+
+.libraryDirectory {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 2fr);
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.libraryDirectory strong {
+  font-size: 16px;
+}
+
+.libraryDirectory p {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.libraryDirectoryLinks,
+.feedScope,
+.feedScope button {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.libraryDirectoryLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.libraryDirectoryLinks a:hover,
+.libraryDirectoryLinks a:focus-visible {
+  background: var(--acid);
+}
+
+.libraryDirectoryLinks svg,
+.feedScope svg {
+  width: 14px;
+  height: 14px;
+}
+
+.feedScope {
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.feedScope button {
+  border: 1px solid var(--ink);
+  padding: 7px 10px;
+  background: var(--paper-bright);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.feedScope button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 640px) {
+  .libraryDirectory {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
 
 .studio {

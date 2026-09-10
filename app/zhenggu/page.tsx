@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { makePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makePageMetadata({
+  path: "/zhenggu",
   title: "正骨三维解剖科普 | DestinyPixel",
   description:
     "骨骼、肌肉、肌腱、韧带与典型正骨部位的中文三维交互科普体验。",
-};
+});
 
 export default function ZhengguPage() {
   return (

@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SiteAnalytics } from "@/components/site-analytics";
 import {
   defaultSeoDescription,
   routeSeo,
@@ -27,16 +26,6 @@ export const metadata: Metadata = {
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined,
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "/?locale=en",
-      zh: "/?locale=zh",
-      "zh-Hant": "/?locale=zh-TW",
-      ru: "/?locale=ru",
-      "x-default": "/",
-    },
-  },
   openGraph: {
     type: "website",
     url: "/",
@@ -89,8 +78,7 @@ export default function RootLayout({
       <body>
         <TraditionalChineseBridge />
         {children}
-        <Analytics />
-        <SpeedInsights />
+        <SiteAnalytics />
       </body>
     </html>
   );

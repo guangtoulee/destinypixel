@@ -4,10 +4,11 @@ export const runtime = "edge";
 
 const content = `# DestinyPixel
 
-DestinyPixel is a multilingual web product for self-understanding and symbolic guidance. It combines a Bazi-inspired birth energy model, Western natal astrology, symbolic animal archetype cards, palm reading, face reading, Tarot cards, and Liuyao-inspired question readings.
+DestinyPixel offers tools for symbolic self-discovery, AI-assisted creative work, and English practice. The tool directory explains the inputs, outputs, and interface languages of each tool.
 
 ## Primary URLs
 - Homepage: ${absoluteUrl("/")}
+- Tool directory: ${absoluteUrl("/tools")}
 - Guide: ${absoluteUrl("/learn")}
 - Palm Studio: ${absoluteUrl("/palm")}
 - Face Studio: ${absoluteUrl("/face")}
@@ -17,6 +18,9 @@ DestinyPixel is a multilingual web product for self-understanding and symbolic g
 - Five Elements Color and Crystal Bracelet Atelier: ${absoluteUrl("/atelier")}
 - Birth Totem / Totem Matrix interactive Bazi geometry: ${absoluteUrl("/tuteng")}
 - AI Short Drama Script Studio: ${absoluteUrl("/juben")}
+- AI Director Workspace: ${absoluteUrl("/daoyan")}
+- Bright Steps English: ${absoluteUrl("/english")}
+- Recall Base Vocabulary Practice: ${absoluteUrl("/danci")}
 - AI Prompt Radar and Chinese Prompt Studio: ${absoluteUrl("/prompt")}
 - Prompt trend article archive: ${absoluteUrl("/prompt/articles")}
 - Prompt editorial and source policy: ${absoluteUrl("/prompt/about")}
@@ -28,7 +32,7 @@ Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four 
 Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Supported Languages
-English, Simplified Chinese, Traditional Chinese, and Russian.
+Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The tool directory is available in English and Simplified Chinese. The beginner guide is English-only. Creative and English-learning tools use Chinese interfaces; do not assume that every page is translated.
 
 ## Contact
 Product feedback and collaboration: anyulee@foxmail.com

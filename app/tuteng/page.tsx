@@ -3,7 +3,14 @@ import TotemExperience from "@/components/totem/totem-experience";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { absoluteUrl, makePageMetadata, routeSeo, siteName } from "@/lib/seo";
 
-export const metadata: Metadata = makePageMetadata(routeSeo.tuteng);
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  return makePageMetadata({ ...routeSeo.tuteng, locale: params?.locale });
+}
 
 export default async function TutengPage({
   searchParams,

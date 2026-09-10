@@ -98,6 +98,11 @@ export const promptSnapshotItems = promptRadarSnapshot.items.map((item) =>
   normalizePromptFeedItem(item as Omit<Partial<PromptFeedItem>, "metrics">),
 );
 
+export const promptSnapshotInfo = {
+  updatedAt: promptRadarSnapshot.updatedAt,
+  sourceSummary: promptRadarSnapshot.sourceSummary,
+};
+
 export function isPromptArticle(item: PromptFeedItem) {
   return item.sourceType === "x" && !item.imageUrl && !item.videoUrl;
 }
@@ -144,6 +149,22 @@ export function isIndexablePromptItem(item: PromptFeedItem) {
 
 export function getIndexablePromptItems() {
   return promptSnapshotItems.filter((item) => indexablePromptIds.has(item.id));
+}
+
+export const featuredPromptLimit = 40;
+
+/** Pass moderated items in display order; exclusions must precede the payload cap. */
+export function selectFeaturedPromptItems(
+  items: PromptFeedItem[],
+  limit = featuredPromptLimit,
+) {
+  const boundedLimit = Number.isFinite(limit)
+    ? Math.max(0, Math.min(featuredPromptLimit, Math.trunc(limit)))
+    : featuredPromptLimit;
+  return items
+    .filter(isIndexablePromptItem)
+    .slice(0, boundedLimit)
+    .map(({ rawText: _rawText, ...item }) => item);
 }
 
 export function getPromptSeoTitle(item: PromptFeedItem) {
