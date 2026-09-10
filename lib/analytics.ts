@@ -14,6 +14,15 @@ const publicPaths = new Set([
   "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra",
 ]);
 
+const mainSitePaths = new Set([
+  "/", "/white", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face",
+  "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra",
+]);
+
+export function isMainSitePath(pathname: string): boolean {
+  return mainSitePaths.has(pathname) || pathname.startsWith("/report/");
+}
+
 /** Only fixed product identifiers are sent, never field values or generated content. */
 export function trackToolEvent(event: ToolEvent, tool: AnalyticsTool) {
   try {
@@ -28,7 +37,7 @@ export function trackToolEvent(event: ToolEvent, tool: AnalyticsTool) {
         return url ? { ...pending, url } : null;
       });
     }
-    track(event, { tool });
+    track(event, { tool, area: tool.startsWith("prompt_") ? "prompt" : "main" });
   } catch {
     // A blocked analytics script must never interrupt a user's work.
   }

@@ -21,9 +21,9 @@
 .mapOrbit::before { content: ""; position: absolute; inset: 30px; border: 1px dashed #d9cfea; border-radius: 50%; }
 .mapCore { display: flex; align-items: center; justify-content: center; color: #7c5ca8; width: 88px; height: 88px; background: #fff; border: 1px solid #e9e2f2; box-shadow: 0 12px 32px #7c5ca810; border-radius: 24px; position: absolute; top: 96px; left: 50%; transform: translateX(-50%) rotate(-8deg); }
 .mapLabel { position: absolute; display: flex; gap: 10px; align-items: center; padding: 15px 18px; font-size: 12px; color: #625178; border: 1px solid #e9e3f2; background: #ffffffed; border-radius: 12px; box-shadow: 0 7px 24px #6a458108; white-space: nowrap; }
-.mapLabel[data-group="discovery"] { top: 2px; left: 8%; }
-.mapLabel[data-group="creation"] { top: 110px; right: 0; }
-.mapLabel[data-group="learning"] { bottom: 0; left: 14%; }
+.mapLabel[data-group="birth"] { top: 2px; left: 8%; }
+.mapLabel[data-group="insight"] { top: 110px; right: 0; }
+.mapLabel[data-group="elements"] { bottom: 0; left: 14%; }
 .content { width: min(1180px, calc(100% - 64px)); margin: auto; padding-bottom: 76px; scroll-margin-top: 25px; }
 .groupNavigation { display: flex; flex-wrap: wrap; gap: 10px; border-top: 1px solid #e8e7ef; padding-top: 26px; margin-bottom: 57px; }
 .groupNavigation a { display: flex; gap: 10px; align-items: center; background: #fff; border: 1px solid #e9e7ef; border-radius: 30px; padding: 10px 16px; font-size: 12px; color: #5b596d; }
@@ -34,7 +34,8 @@
 .groupNumber { font-size: 11px; color: #8c789e; border: 1px solid #e4dbed; padding: 9px 10px; border-radius: 8px; margin-top: 2px; }
 .groupHeading h2 { margin: 0 0 9px; font-size: 26px; letter-spacing: -.7px; font-weight: 500; }
 .groupHeading p { max-width: 775px; font-size: 13px; line-height: 1.8; color: #6f7080; margin: 0; }
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.group[data-group="elements"] .grid { grid-template-columns: minmax(0, 1fr); max-width: 600px; }
 .card { display: flex; flex-direction: column; background: #fff; border: 1px solid #e8e6ee; padding: 26px; border-radius: 15px; transition: border-color .15s, box-shadow .15s; min-width: 0; }
 .card:hover { border-color: #bca6d5; box-shadow: 0 8px 25px #6040770a; }
 .cardTop { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 19px; }
@@ -59,7 +60,7 @@
 @media (max-width: 900px) {
   .hero { gap: 24px; grid-template-columns: 1.4fr 1fr; padding: 65px 0; }
   .heroMap { transform: scale(.87); transform-origin: center; }
-  .mapLabel[data-group="creation"] { right: -20px; }
+  .mapLabel[data-group="insight"] { right: -20px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .header { gap: 22px; }
   .navigation { gap: 18px; }

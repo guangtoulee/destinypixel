@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 const content = `# DestinyPixel
 
-DestinyPixel offers tools for symbolic self-discovery, AI-assisted creative work, and English practice. The tool directory explains the inputs, outputs, and interface languages of each tool.
+DestinyPixel is a metaphysics and symbolic self-discovery website. Its seven tools cover birth maps, Birth Totems, palm reflection, face reflection, question oracles, temple sticks, and five-element crystal bracelet design. The tool directory explains what to prepare and what each tool produces.
 
 ## Primary URLs
 - Homepage: ${absoluteUrl("/")}
@@ -17,31 +17,21 @@ DestinyPixel offers tools for symbolic self-discovery, AI-assisted creative work
 - Insight Studios: ${absoluteUrl("/insights")}
 - Five Elements Color and Crystal Bracelet Atelier: ${absoluteUrl("/atelier")}
 - Birth Totem / Totem Matrix interactive Bazi geometry: ${absoluteUrl("/tuteng")}
-- AI Short Drama Script Studio: ${absoluteUrl("/juben")}
-- AI Director Workspace: ${absoluteUrl("/daoyan")}
-- Bright Steps English: ${absoluteUrl("/english")}
-- Recall Base Vocabulary Practice: ${absoluteUrl("/danci")}
-- AI Prompt Radar and Chinese Prompt Studio: ${absoluteUrl("/prompt")}
-- Prompt trend article archive: ${absoluteUrl("/prompt/articles")}
-- Prompt editorial and source policy: ${absoluteUrl("/prompt/about")}
 - Dark visual version: ${absoluteUrl("/black")}
 
 ## Product Language
-Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, annual forecast, short drama script generator, director script, shot list, storyboard prompt, camera movement prompt, edit prompt, voiceover script, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, psychological, reflective, practical, and production-ready.
+Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, five-element colors, crystal bracelet design, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, reflective, and practical.
 
 Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Supported Languages
-Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The tool directory is available in English and Simplified Chinese. The beginner guide is English-only. Creative and English-learning tools use Chinese interfaces; do not assume that every page is translated.
+Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. Traditional Chinese body text currently uses a browser-side conversion. The tool directory is available in English and Simplified Chinese. The beginner guide is English-only; do not assume that every page is translated.
 
 ## Contact
 Product feedback and collaboration: anyulee@foxmail.com
 
 ## Privacy And Indexing
 Generated personal reports under /report/ are private and should not be indexed. Public search engines and AI crawlers should use the guide, homepage, and studio pages as the canonical context.
-
-## Prompt Radar
-Prompt Radar is a Chinese-language creative research tool. It indexes public AI image and video discussions, keeps original source attribution, and adds structured editorial notes, model guidance, prompt breakdowns, and replication advice. Category hubs under /prompt/category/ and selected case or article detail pages are the preferred citation targets. Public source excerpts remain attributed to their original authors; DestinyPixel's editorial interpretation is separately labeled.
 
 ## Safety Boundary
 DestinyPixel is for reflection, culture, and entertainment-informed self-guidance. It does not replace medical, legal, financial, psychological, or emergency advice.

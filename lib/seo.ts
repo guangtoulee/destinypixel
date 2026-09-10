@@ -9,7 +9,7 @@ export const siteUrl =
 export const siteName = "DestinyPixel";
 
 export const defaultSeoDescription =
-  "A multidimensional birth map for self-understanding: symbolic animal archetypes, natal astrology, palm reading, face reading, Tarot, and Liuyao-inspired question guidance.";
+  "Explore birth maps, Bazi, symbolic palm and face readings, Tarot, temple sticks, and five-element crystal bracelet design for personal reflection.";
 
 export const seoKeywordClusters = [
   "birth chart reading",
@@ -39,10 +39,6 @@ export const seoKeywordClusters = [
   "crystal bracelet",
   "gemstone bracelet",
   "energy bracelet",
-  "AI short drama script",
-  "storyboard prompt generator",
-  "shot list generator",
-  "director script generator",
   "2026 astrology forecast",
   "2026 fortune reading",
   "compatibility reading",
@@ -57,12 +53,6 @@ export const seoKeywordClusters = [
   "五行颜色",
   "水晶手串",
   "能量手串",
-  "AI短剧剧本",
-  "短剧分镜",
-  "分镜脚本",
-  "导演剧本",
-  "运镜提示词",
-  "剪辑脚本",
   "星盘",
   "星座运势",
   "塔罗占卜",
@@ -104,7 +94,7 @@ export const routeSeo = {
     path: "/learn",
     title: "DestinyPixel Beginner Guide | Choose a Tool & Get Started",
     description:
-      "Find the right DestinyPixel tool, what to prepare, how to use it, and what each result can and cannot tell you. Includes birth maps, totems, creative tools and English practice.",
+      "Learn how to use birth maps, Birth Totems, palm and face reflection, question oracles, temple sticks, and five-element crystal bracelet design.",
     keywords: [
       "astrology guide",
       "tarot guide",
@@ -116,10 +106,10 @@ export const routeSeo = {
   },
   tools: {
     path: "/tools",
-    title: "DestinyPixel Tools | Self-Discovery, AI Creation & Learning",
+    title: "DestinyPixel Tools | Birth Maps, Oracles & Crystal Bracelets",
     description:
-      "Find the right DestinyPixel tool: birth charts and symbolic self-discovery, AI image and storytelling workspaces, or English vocabulary practice.",
-    keywords: ["DestinyPixel tools", "AI creative tools", "birth chart tools", "English vocabulary practice"],
+      "Explore birth maps, Birth Totems, palm and face reflection, question oracles, temple sticks, and five-element crystal bracelet design.",
+    keywords: ["DestinyPixel tools", "birth chart tools", "Birth Totem", "temple sticks", "crystal bracelet design"],
   },
   palm: {
     path: "/palm",

@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
+import promptSitemap from "@/app/prompt/sitemap";
+import { getIndexablePromptItems, promptItemHref } from "@/lib/prompt-library";
 import { absoluteUrl, canonicalPagePath, languageAlternates, makePageMetadata, routeSeo } from "@/lib/seo";
 
 test("translated landing pages keep their own canonical and translated search text", () => {
@@ -58,17 +60,33 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
     }
   }
   assert.ok(byUrl.has(absoluteUrl("/tools?locale=zh")));
-  assert.ok(byUrl.has(absoluteUrl("/english")));
+  assert.ok(byUrl.has(absoluteUrl("/atelier")));
   assert.ok(!entries.some((entry) => entry.url.includes("locale=zh-TW")));
 });
 
 test("sitemap modification dates describe content rather than request time", () => {
   const entries = sitemap();
+  const promptEntries = promptSitemap();
   assert.equal(entries.find((entry) => entry.url === absoluteUrl("/"))?.lastModified, undefined);
-  assert.equal(entries.find((entry) => entry.url === absoluteUrl("/prompt/about"))?.lastModified, undefined);
-  for (const entry of entries.filter((entry) => /\/prompt\/(case|article)\//.test(entry.url))) {
+  assert.equal(promptEntries.find((entry) => entry.url === absoluteUrl("/prompt/about"))?.lastModified, undefined);
+  for (const entry of promptEntries.filter((entry) => /\/prompt\/(case|article)\//.test(entry.url))) {
     assert.ok(entry.lastModified instanceof Date);
     assert.ok(Number.isFinite(entry.lastModified.getTime()));
   }
   assert.deepEqual(sitemap(), entries);
+});
+
+test("the metaphysics sitemap excludes experiments while Prompt keeps its own inventory", () => {
+  const unrelated = ["/prompt", "/juben", "/daoyan", "/image", "/english", "/danci"];
+  for (const entry of sitemap()) {
+    const path = new URL(entry.url).pathname;
+    assert.ok(!unrelated.some((prefix) => path === prefix || path.startsWith(`${prefix}/`)), path);
+  }
+  const promptUrls = new Set(promptSitemap().map((entry) => entry.url));
+  assert.ok(promptUrls.has(absoluteUrl("/prompt")));
+  assert.ok(promptUrls.has(absoluteUrl("/prompt/articles")));
+  assert.ok([...promptUrls].every((url) => new URL(url).pathname.startsWith("/prompt")));
+  for (const item of getIndexablePromptItems()) {
+    assert.ok(promptUrls.has(absoluteUrl(promptItemHref(item))), item.id);
+  }
 });

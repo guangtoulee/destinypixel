@@ -8,7 +8,6 @@ import {
   CalendarDays,
   Check,
   Gem,
-  Grid2X2,
   Hand,
   Languages,
   Loader2,
@@ -25,7 +24,6 @@ import {
 } from "lucide-react";
 import { createFusionReportAction } from "@/app/actions";
 import { DeityPortrait } from "@/components/deity-portraits";
-import { HomeToolPaths } from "@/components/home-tool-paths";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay } from "@/lib/bazi-totems";
 import { cities } from "@/lib/geo/cities";
@@ -895,10 +893,8 @@ export default function DestinyWhiteExperience({
               {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
             </a>
             <a href="#insights">{text.nav.insights}</a>
-            <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
-              {copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Все инструменты" : "All tools"}
-            </a>
-            <a href="/prompt">{copyLocale === "zh" ? "AI 创作" : locale === "ru" ? "AI-творчество" : "AI creation"}</a>
+            <a href="#method">{text.nav.method}</a>
+            <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
           </nav>
 
@@ -942,9 +938,9 @@ export default function DestinyWhiteExperience({
           <Stars size={18} aria-hidden="true" />
           <span>{mobileNavLabels.sticks}</span>
         </a>
-        <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
-          <Grid2X2 size={18} aria-hidden="true" />
-          <span>{copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Ещё" : "All tools"}</span>
+        <a href="#blessing">
+          <Orbit size={18} aria-hidden="true" />
+          <span>{mobileNavLabels.blessing}</span>
         </a>
       </nav>
 
@@ -1009,7 +1005,7 @@ export default function DestinyWhiteExperience({
                   name="birthDate"
                   type="date"
                   value={birthDate}
-                    ref={birthDateInputRef}
+                  ref={birthDateInputRef}
                   onChange={(event) => updatePreviewFromDate(event.target.value)}
                   onInput={(event) => updatePreviewFromDate(event.currentTarget.value)}
                   required
@@ -1106,8 +1102,6 @@ export default function DestinyWhiteExperience({
           </article>
         </div>
       </section>
-
-      <HomeToolPaths locale={copyLocale} />
 
       <section className="white-insights white-insights--priority" id="insights">
         <div className="white-container">
@@ -1415,9 +1409,8 @@ export default function DestinyWhiteExperience({
         <div className="white-container">
           <span>DestinyPixel · Multidimensional Birth Map</span>
           <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
-            {copyLocale === "zh" ? "全部工具" : locale === "ru" ? "Все инструменты" : "All tools"}
+            {copyLocale === "zh" ? "探索入口" : locale === "ru" ? "Практики" : "Explore the practices"}
           </a>
-          <a href="/prompt">AI Prompt</a>
           <a href="/learn">
             {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
           </a>

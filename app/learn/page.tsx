@@ -42,23 +42,12 @@ const guides = [
     limit: "Printed temple editions can differ. Check against the edition you received if the wording differs. A symbolic draw cannot confirm outcomes or replace practical judgment.",
   },
   {
-    id: "prompt", number: "05", title: "Move from an idea to production text", tool: "Prompt Radar", href: "/prompt",
-    intro: "The creative tools have Chinese interfaces. Begin with Prompt Radar for examples; choose the script or director workspace for narrative development.",
-    prepare: "For a prompt, bring an idea or reference image. For a story, prepare the premise or source text, intended audience, episode count, duration and format.",
-    steps: ["In Prompt Radar, find a relevant example and inspect its prompt. Adjust subject, action and composition for your project before copying it.", "In the script studio, paste or import source material, review the extracted text and set the episode requirements before generating.", "In the director workspace, build the project, review and lock asset descriptions, then develop individual episodes. Inspect continuity and dialogue before exporting the production text."],
-    result: "Prompts, episode material, scene descriptions and production plans that you can copy or export for further work.",
-    limit: "These outputs are drafts. Check facts, source permissions and story continuity. A script or video prompt is not a rendered video; run and review it in your chosen generation tool.",
-    related: { href: "/juben", label: "Open the script studio", key: "juben" },
-    extra: { href: "/daoyan", label: "Open the director workspace", key: "daoyan" },
-  },
-  {
-    id: "english", number: "06", title: "Choose a small English practice session", tool: "Bright Steps English", href: "/english",
-    intro: "Bright Steps offers an initial assessment and textbook practice. Recall Base focuses on middle-school vocabulary. Both use Chinese instructions.",
-    prepare: "Choose a textbook level or begin the initial assessment. For listening practice, turn on sound and select an available English voice if needed.",
-    steps: ["Begin with a level you can attempt independently. Use the starting assessment to find a practice entry point, or choose your current textbook and unit.", "Try to recall the word or spelling before revealing the answer. Read the correction and try again when you miss it.", "Return to review previously practiced words. In Bright Steps, use the learning settings to export your learning record before moving to another browser."],
-    result: "Practice feedback, vocabulary review and a learning record. Bright Steps saves its practice record in the current browser and offers export and import.",
-    limit: "A successful same-session answer is not proof of long-term recall. Browser records can be lost if site data is cleared, and the starting assessment is not a formal proficiency diagnosis.",
-    related: { href: "/danci", label: "Open Recall Base", key: "danci" },
+    id: "atelier", number: "05", title: "Design a five-element bracelet", tool: "Crystal bracelet atelier", href: "/atelier",
+    intro: "Translate a five-element color preference into a bracelet you arrange bead by bead. You can explore the workshop without generating a birth report first.",
+    prepare: "Choose an element focus or browse all stones. Decide on a bead size and wrist style, then select one of the suggested bead counts.",
+    steps: ["Set the bead size, wrist style and target count before arranging the bracelet. The available counts change with the size and style.", "Choose gemstones from the library. Each selection adds one bead to the preview; select a placed bead to remove it. When the bracelet is full, remove a bead before adding another.", "Review the colors, selected bead sequence and symbolic balance summary. Use Download image to keep a visual reference for your design."],
+    result: "An on-screen bead arrangement, a symbolic color analysis and a downloadable PNG design image.",
+    limit: "The workshop produces a design reference. Gemstone colors and five-element associations are aesthetic and symbolic; they do not establish health effects. Confirm actual bead dimensions and wrist fit with the maker if you use the design for a physical bracelet.",
   },
 ];
 
@@ -71,8 +60,8 @@ export default function LearnPage() {
       </header>
       <section className={styles.hero}>
         <p className={styles.eyebrow}><BookOpen size={15} aria-hidden="true" />The beginner guide</p>
-        <h1>A useful first visit starts with one thing.</h1>
-        <p className={styles.intro}>Choose a task, prepare the right input and know what to expect from the result. Here is how to get started with DestinyPixel.</p>
+        <h1>Begin with your birth map, a question or a bracelet.</h1>
+        <p className={styles.intro}>Explore DestinyPixel’s birth charts, symbolic readings and five-element bracelet workshop. Learn what to prepare and how to use each result for personal reflection.</p>
         <Link className={styles.directoryLink} href="/tools">Browse all tools<ArrowRight size={16} aria-hidden="true" /></Link>
       </section>
       <div className={styles.layout}>
@@ -94,14 +83,13 @@ export default function LearnPage() {
               <div className={styles.toolLinks}>
                 <Link href={guide.href} data-analytics-tool={guide.id} data-analytics-location="learn">Open {guide.tool}<ArrowRight size={15} aria-hidden="true" /></Link>
                 {guide.related && <Link href={guide.related.href} data-analytics-tool={guide.related.key} data-analytics-location="learn">{guide.related.label}<ArrowRight size={15} aria-hidden="true" /></Link>}
-                {guide.extra && <Link href={guide.extra.href} data-analytics-tool={guide.extra.key} data-analytics-location="learn">{guide.extra.label}<ArrowRight size={15} aria-hidden="true" /></Link>}
               </div>
             </section>
           ))}
           <section className={styles.help} aria-labelledby="need-help-title">
             <h2 id="need-help-title">If a result does not appear</h2>
-            <p>Check that the required fields are filled and look for an error near the form. AI-powered text and image analysis need a working online service. If generation fails, keep a copy of your input and retry later; an error message is not a completed result.</p>
-            <p>For a page problem, <a href="mailto:anyulee@foxmail.com">contact DestinyPixel</a> with the tool name and the error you saw. Avoid sending private birth details, photographs or source material unless they are needed to explain the issue.</p>
+            <p>Check that the required fields are filled and look for an error near the form. AI-powered interpretations need a working online service. If generation fails, keep a copy of your input and retry later; an error message is not a completed result.</p>
+            <p>For a page problem, <a href="mailto:anyulee@foxmail.com">contact DestinyPixel</a> with the tool name and the error you saw. Avoid sending private birth details or photographs unless they are needed to explain the issue.</p>
           </section>
         </div>
       </div>

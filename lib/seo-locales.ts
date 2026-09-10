@@ -3,7 +3,7 @@
 // stays accessible without being advertised as a server-rendered translation.
 export const localizedSeoCopy = {
   "/tools": {
-    zh: ["工具导航｜自我探索、AI 创作与英语学习", "按使用目的找到 DestinyPixel 工具：八字星盘与本命灵构、AI 图片和短剧创作工作台，以及英语词汇与练习工具。"],
+    zh: ["玄学工具导航｜八字图谱、灵签与五行手串", "探索 DestinyPixel 七项工具：出生图谱、本命灵构、手相、面相、塔罗问事、灵签，以及五行水晶手串搭配。"],
   },
   "/": {
     zh: ["八字排盘与本命星盘｜看见你的出生图谱", "输入出生日期、时间和地点，查看四柱八字、五行分布、本命星盘与动物原型，生成易读的个人出生报告，探索本命灵构、灵签与塔罗问事。"],

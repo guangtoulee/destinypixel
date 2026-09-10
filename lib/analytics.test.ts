@@ -1,6 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { analyticsPage, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "./analytics";
+import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "./analytics";
+
+test("the metaphysics funnel includes bracelets and excludes standalone experiments", () => {
+  for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/tools", "/learn", "/report/example"]) {
+    assert.equal(isMainSitePath(path), true, path);
+  }
+  for (const path of ["/prompt", "/prompt/case/example", "/juben", "/daoyan", "/image", "/english", "/danci", "/candy", "/jake"]) {
+    assert.equal(isMainSitePath(path), false, path);
+  }
+});
 
 test("analytics never receives report ids, birth data, questions, or totem fragments", () => {
   const raw = "https://www.destinypixel.com/report/private-id?name=Alice&birthDate=1990-01-01&city=Shanghai&question=private&locale=zh#totem=secret";
@@ -31,7 +40,7 @@ test("events before the SDK mounts are queued after URL redaction is configured"
     trackToolEvent("tool_start", "birth_report");
     assert.equal(fakeWindow.vaq?.[0][0], "beforeSend");
     assert.equal(fakeWindow.vaq?.[1][0], "event");
-    assert.deepEqual(fakeWindow.vaq?.[1][1], { name: "tool_start", data: { tool: "birth_report" }, options: undefined });
+    assert.deepEqual(fakeWindow.vaq?.[1][1], { name: "tool_start", data: { tool: "birth_report", area: "main" }, options: undefined });
   } finally {
     if (previous) Object.defineProperty(globalThis, "window", previous);
     else Reflect.deleteProperty(globalThis, "window");

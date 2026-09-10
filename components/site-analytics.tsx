@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { track } from "@vercel/analytics";
-import { analyticsPage, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
+import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
 
 export function SiteAnalytics() {
   useEffect(() => {
@@ -14,11 +14,13 @@ export function SiteAnalytics() {
       if (!anchor || anchor.hasAttribute("download")) return;
       const destination = new URL(anchor.href, window.location.href);
       if (destination.origin !== window.location.origin) return;
+      if (!isMainSitePath(window.location.pathname) || !isMainSitePath(destination.pathname)) return;
       const target = analyticsPage(destination.pathname);
       if (target === "other" || target === "/report/[id]") return;
       if (destination.pathname === window.location.pathname && destination.hash !== "#report") return;
       try {
         track("tool_open", {
+          area: "main",
           target: destination.hash === "#report" ? "birth_report" : target,
           source: analyticsPage(window.location.pathname),
           location: anchor.closest("header") ? "header" : anchor.closest("footer") ? "footer" : "content",

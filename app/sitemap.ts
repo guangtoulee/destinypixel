@@ -1,11 +1,5 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
-import {
-  getIndexablePromptItems,
-  promptCategoryProfiles,
-  promptItemHref,
-  promptSnapshotItems,
-} from "@/lib/prompt-library";
 
 const publicRoutes = [
   { path: routeSeo.home.path, priority: 1, changeFrequency: "weekly" },
@@ -18,15 +12,9 @@ const publicRoutes = [
   { path: routeSeo.sticks.path, priority: 0.71, changeFrequency: "weekly" },
   { path: routeSeo.atelier.path, priority: 0.73, changeFrequency: "weekly" },
   { path: routeSeo.tuteng.path, priority: 0.88, changeFrequency: "monthly" },
-  { path: routeSeo.juben.path, priority: 0.76, changeFrequency: "weekly" },
-  { path: routeSeo.daoyan.path, priority: 0.79, changeFrequency: "weekly" },
-  { path: routeSeo.prompt.path, priority: 0.78, changeFrequency: "daily" },
   { path: routeSeo.black.path, priority: 0.42, changeFrequency: "monthly" },
   { path: "/xingpan", priority: 0.86, changeFrequency: "monthly" },
   { path: "/ultra", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/english", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/danci", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/image", priority: 0.6, changeFrequency: "monthly" },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -50,26 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  const promptHubs: MetadataRoute.Sitemap = [
-    "/prompt/articles",
-    "/prompt/about",
-    "/prompt/privacy",
-    "/prompt/terms",
-    ...promptCategoryProfiles
-      .filter((profile) => promptSnapshotItems.some((item) => item.category === profile.name))
-      .map((profile) => `/prompt/category/${profile.slug}`),
-  ].map((path) => ({
-    url: absoluteUrl(path),
-    changeFrequency: path.includes("category") || path.endsWith("articles") ? "daily" : "monthly",
-    priority: path.includes("category") ? 0.72 : path.endsWith("articles") ? 0.74 : 0.4,
-  }));
-
-  const promptDetails: MetadataRoute.Sitemap = getIndexablePromptItems().map((item) => ({
-    url: absoluteUrl(promptItemHref(item)),
-    lastModified: new Date(item.importedAt || item.createdAt),
-    changeFrequency: "monthly",
-    priority: item.imageUrl || item.videoUrl ? 0.68 : 0.62,
-  }));
-
-  return [...primaryRoutes, ...promptHubs, ...promptDetails];
+  return primaryRoutes;
 }
