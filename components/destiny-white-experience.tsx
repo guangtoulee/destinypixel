@@ -1,6 +1,6 @@
 "use client";
 
-import { destinySupportEmail, destinySupportHref } from "@/lib/support-contact";
+import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/lib/support-contact";
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -18,6 +18,7 @@ import {
   MessageCircle,
   Orbit,
   ScanFace,
+  Send,
   ShieldCheck,
   Sparkles,
   Stars,
@@ -1464,6 +1465,15 @@ export default function DestinyWhiteExperience({
             <Mail size={13} aria-hidden="true" />
             {destinySupportEmail}
           </a>
+          <a
+            className="white-footer__contact"
+            href={destinyTelegramHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Send size={13} aria-hidden="true" />
+            {copyLocale === "zh" ? "Telegram 咨询" : locale === "ru" ? "Telegram" : "Chat on Telegram"}
+          </a>
           <span>
             <MapPin size={13} aria-hidden="true" />
             /
@@ -1474,6 +1484,16 @@ export default function DestinyWhiteExperience({
           </span>
         </div>
       </footer>
+      <a
+        className="telegram-contact"
+        href={destinyTelegramHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={copyLocale === "zh" ? "在 Telegram 联系 DestinyPixel" : "Contact DestinyPixel on Telegram"}
+      >
+        <Send size={17} aria-hidden="true" />
+        <span>{copyLocale === "zh" ? "Telegram 咨询" : locale === "ru" ? "Telegram" : "Telegram chat"}</span>
+      </a>
     </main>
   );
 }
