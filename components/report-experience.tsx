@@ -60,11 +60,6 @@ type MemberSummary = {
 
 type SavedReportSummary = {
   id: string;
-  reportId: string;
-  title: string;
-  locale: string;
-  createdAt: string;
-  updatedAt: string;
 };
 
 type SectionConfig<Key extends string> = {
@@ -137,6 +132,7 @@ const transitSections: Array<SectionConfig<TransitKey>> = [
 const reportActionCopy = {
   en: {
     save: "Save to account",
+    savedLabel: "Saved to account",
     saved: "Report saved to your account.",
     saveBusy: "Saving...",
     image: "Save long PNG",
@@ -165,6 +161,7 @@ const reportActionCopy = {
   },
   zh: {
     save: "保存到账号",
+    savedLabel: "已保存到账号",
     saved: "报告已保存到你的账号。",
     saveBusy: "正在保存...",
     image: "保存长图 PNG",
@@ -192,6 +189,7 @@ const reportActionCopy = {
   },
   ru: {
     save: "Сохранить в аккаунт",
+    savedLabel: "Сохранено в аккаунте",
     saved: "Отчет сохранен в аккаунте.",
     saveBusy: "Сохранение...",
     image: "Сохранить PNG",
@@ -603,12 +601,16 @@ export default function ReportExperience({
   fallbackNatalRaw,
   fallbackTransitRaw,
   requireGeneratedContent,
+  initialMember,
+  initiallySaved,
 }: {
   context: ReportGenerationContext;
   initialNatal: NatalBookSections | null;
   fallbackNatalRaw: string;
   fallbackTransitRaw: string;
   requireGeneratedContent: boolean;
+  initialMember: MemberSummary | null;
+  initiallySaved: boolean;
 }) {
   const copyLocale = contentLocale(context.locale);
   const copy = reportCopy[copyLocale];
@@ -632,8 +634,10 @@ export default function ReportExperience({
   const canExport = !requireGeneratedContent || (natalStatus === "ready" && transitStatus === "ready");
   const [exportMode, setExportMode] = useState(false);
   const [exportBusy, setExportBusy] = useState<"idle" | "image" | "pdf">("idle");
-  const [member, setMember] = useState<MemberSummary | null>(null);
-  const [savedReports, setSavedReports] = useState<SavedReportSummary[]>([]);
+  const [member, setMember] = useState<MemberSummary | null>(initialMember);
+  const [savedReports, setSavedReports] = useState<SavedReportSummary[] | null>(null);
+  const [savedForMemberId, setSavedForMemberId] = useState<string | null>(initiallySaved ? initialMember?.id ?? null : null);
+  const reportSaved = Boolean(member && (savedForMemberId === member.id || savedReports?.some(report => report.id === context.reportId)));
   const [saveBusy, setSaveBusy] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<AuthMode>("login");
@@ -718,12 +722,12 @@ export default function ReportExperience({
   useEffect(() => {
     let isMounted = true;
 
-    void fetch("/api/members/me", {
+    void fetch("/api/account", {
       cache: "no-store",
       credentials: "include",
     })
       .then(async (response) => {
-        if (!isMounted || !response.ok) return;
+        if (!isMounted || (!response.ok && response.status !== 401)) return;
 
         const result = (await response.json()) as {
           member?: MemberSummary | null;
@@ -732,6 +736,9 @@ export default function ReportExperience({
 
         setMember(result.member ?? null);
         setSavedReports(result.reports ?? []);
+        // The account list is paginated; a server-confirmed owner remains saved
+        // even when this older report is outside its most recent results.
+        setSavedForMemberId(current => result.member && (current === result.member.id || result.reports?.some(report => report.id === context.reportId)) ? result.member.id : null);
       })
       .catch(() => {
         // Silent by design: account entry is optional at this stage.
@@ -740,7 +747,7 @@ export default function ReportExperience({
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [context.reportId, member?.id]);
 
   useEffect(() => {
     void streamEndpoint(
@@ -812,6 +819,8 @@ export default function ReportExperience({
       }
 
       setMember(result.member);
+      setSavedReports(null);
+      setSavedForMemberId(null);
       trackToolEvent(authMode === "register" ? "account_created" : "login_success", "member_account");
       setAuthOpen(false);
       setAuthPassword("");
@@ -832,11 +841,12 @@ export default function ReportExperience({
       credentials: "include",
     }).catch(() => undefined);
     setMember(null);
-    setSavedReports([]);
+    setSavedReports(null);
+    setSavedForMemberId(null);
   }
 
   async function saveReport() {
-    if (saveBusy) return;
+    if (saveBusy || reportSaved) return;
 
     if (!member) {
       setAuthOpen(true);
@@ -850,7 +860,7 @@ export default function ReportExperience({
     setSaveBusy(true);
 
     try {
-      const response = await fetch("/api/members/saved-reports", {
+      const response = await fetch("/api/reports/claim", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -858,24 +868,21 @@ export default function ReportExperience({
         credentials: "include",
         body: JSON.stringify({
           reportId: context.reportId,
-          title: reportTitle,
-          locale: context.locale,
         }),
       });
       const result = (await response.json()) as {
-        report?: SavedReportSummary;
+        reportId?: string;
+        saved?: boolean;
         error?: string;
       };
 
-      if (!response.ok || !result.report) {
+      if (!response.ok || result.saved !== true || result.reportId !== context.reportId) {
         if (response.status === 401) setAuthOpen(true);
         throw new Error(result.error ?? actionCopy.loginNeeded);
       }
 
-      setSavedReports((current) => [
-        result.report!,
-        ...current.filter((report) => report.reportId !== result.report!.reportId),
-      ]);
+      setSavedForMemberId(member.id);
+      setSavedReports((current) => current ? [{ id: context.reportId }, ...current.filter(report => report.id !== context.reportId)] : null);
       setActionTone("success");
       setActionMessage(actionCopy.saved);
     } catch (error) {
@@ -1018,9 +1025,9 @@ export default function ReportExperience({
               <span>
                 {actionCopy.signedIn} · {member.email}
               </span>
-              <small>
+              {savedReports && <small>
                 {actionCopy.savedCount}: {savedReports.length}
-              </small>
+              </small>}
               <button type="button" onClick={logoutMember}>
                 {actionCopy.logout}
               </button>
@@ -1035,13 +1042,13 @@ export default function ReportExperience({
 
         <div className="report-action-buttons">
           <Link href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} className="report-back-link">{copyLocale === "zh" ? "我的账号" : context.locale === "ru" ? "Аккаунт" : "Your account"}</Link>
-          <button type="button" onClick={saveReport} disabled={saveBusy}>
+          <button type="button" onClick={saveReport} disabled={saveBusy || reportSaved}>
             {saveBusy ? (
               <Loader2 size={15} className="loading-icon" aria-hidden="true" />
             ) : (
-              <Save size={15} aria-hidden="true" />
+              reportSaved ? <Check size={15} aria-hidden="true" /> : <Save size={15} aria-hidden="true" />
             )}
-            {saveBusy ? actionCopy.saveBusy : actionCopy.save}
+            {saveBusy ? actionCopy.saveBusy : reportSaved ? actionCopy.savedLabel : actionCopy.save}
           </button>
           <button
             type="button"

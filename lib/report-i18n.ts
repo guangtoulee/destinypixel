@@ -40,9 +40,9 @@ export const languagePromptRules: Record<ReportLocale, string> = {
 export const reportCopy = {
   en: {
     back: "Back",
-    heroEyebrow: "Inner map ready · AI guidance streams after first paint",
+    heroEyebrow: "Your birth chart is ready",
     heroLede:
-      "Your report loads like a calm reflective product: the birth-time energy model and sky resonance model finish first, then the guidance book streams into modular panels. Annual timing is generated only when you ask for it.",
+      "Start with your free Four Pillars, five-element balance and planetary positions. The full report explores your personality, career, relationships and growth in seven chapters, with an annual overview and monthly timing when you open that section.",
     identity: {
       dayPillar: "Core Animal Portrait",
       solar: "Solar Rhythm",
@@ -70,7 +70,7 @@ export const reportCopy = {
     },
     natalPanel: {
       eyebrow: "Guidance Book",
-      title: "Your foundational inner map",
+      title: "Your full natal interpretation",
     },
     transitPanel: {
       eyebrow: "Timing Book",
@@ -84,7 +84,7 @@ export const reportCopy = {
       starts: "Starts",
     },
     status: {
-      idleNatal: "Preparing stream",
+      idleNatal: "Preparing your interpretation",
       idleTransit: "Open tab to generate",
       loading: "Streaming insights...",
       ready: "Insight ready",
@@ -122,9 +122,9 @@ export const reportCopy = {
   },
   zh: {
     back: "返回",
-    heroEyebrow: "内在地图已生成 · AI 指引将在首屏后流式加载",
+    heroEyebrow: "你的出生图谱已生成",
     heroLede:
-      "报告采用更像心理产品的加载方式：出生时间能量模型与天空共振模型先完成基础地图，随后引导之书进入模块化流式输出。年度节奏只在你主动打开时生成。",
+      "先免费查看四柱、五行分布与行星位置。完整报告以七个篇章解读你的性格、事业、关系与成长；打开年运月令，还可查看年度概览和十二个月的节奏。",
     identity: {
       dayPillar: "核心动物画像",
       solar: "太阳节律",
@@ -152,7 +152,7 @@ export const reportCopy = {
     },
     natalPanel: {
       eyebrow: "指引之书",
-      title: "你的基础内在地图",
+      title: "你的完整本命解读",
     },
     transitPanel: {
       eyebrow: "时机之书",
@@ -166,7 +166,7 @@ export const reportCopy = {
       starts: "起运",
     },
     status: {
-      idleNatal: "准备流式生成",
+      idleNatal: "正在准备解读",
       idleTransit: "打开后开始生成",
       loading: "正在流式生成...",
       ready: "洞察已生成",
@@ -204,9 +204,9 @@ export const reportCopy = {
   },
   ru: {
     back: "Назад",
-    heroEyebrow: "Внутренняя карта готова · AI-гид загружается потоково",
+    heroEyebrow: "Ваша карта рождения готова",
     heroLede:
-      "Отчет загружается как спокойный продукт для рефлексии: модель энергии рождения и модель небесного резонанса сначала строят карту, затем книга внутреннего ориентира появляется в модульных панелях. Годовой ритм создается только по запросу.",
+      "Бесплатная карта показывает четыре столпа, баланс пяти стихий и положения планет. Полный отчет раскрывает личность, карьеру, отношения и развитие в семи главах. Откройте раздел годового прогноза, чтобы увидеть обзор года и ритм каждого месяца.",
     identity: {
       dayPillar: "Главный животный портрет",
       solar: "Солнечный ритм",
@@ -234,7 +234,7 @@ export const reportCopy = {
     },
     natalPanel: {
       eyebrow: "Книга внутреннего ориентира",
-      title: "Ваша базовая внутренняя карта",
+      title: "Полная интерпретация вашей натальной карты",
     },
     transitPanel: {
       eyebrow: "Книга времени",
@@ -248,7 +248,7 @@ export const reportCopy = {
       starts: "Старт",
     },
     status: {
-      idleNatal: "Подготовка потока",
+      idleNatal: "Подготовка интерпретации",
       idleTransit: "Откройте вкладку для генерации",
       loading: "Идет потоковая генерация...",
       ready: "Инсайт готов",

@@ -437,6 +437,8 @@ export default async function ReportPage({
           fallbackNatalRaw={access.commerceEnabled ? "" : fallbackNatalText(fullReport.context)}
           fallbackTransitRaw={access.commerceEnabled ? "" : fallbackTransitText(fullReport.context)}
           requireGeneratedContent={access.commerceEnabled}
+          initialMember={access.member ? { id: access.member.id, email: access.member.email, name: access.member.name, plan: access.member.plan } : null}
+          initiallySaved={Boolean(access.member && !access.claimable)}
         /> : <div className="report-workspace">
           <section className={unlockStyles.basic}>
             <p className={unlockStyles.eyebrow}><Sparkles size={14} aria-hidden="true" />{basicText.kicker}</p>
