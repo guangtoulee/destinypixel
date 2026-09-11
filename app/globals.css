@@ -1305,6 +1305,39 @@ a {
   color: #d6ba7f;
 }
 
+.telegram-contact {
+  position: fixed;
+  z-index: 30;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 17px;
+  border: 1px solid rgba(107, 186, 225, 0.32);
+  border-radius: 999px;
+  color: #f3f8fb;
+  background: rgba(20, 111, 156, 0.9);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.28);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(14px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.telegram-contact:hover {
+  transform: translateY(-2px);
+  border-color: rgba(142, 213, 244, 0.58);
+  background: rgba(24, 134, 188, 0.96);
+}
+
+.telegram-contact:focus-visible {
+  outline: 2px solid #9edcf7;
+  outline-offset: 3px;
+}
+
 .report-shell {
   position: relative;
   isolation: isolate;
@@ -3298,6 +3331,13 @@ a {
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .telegram-contact {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    min-height: 42px;
+    padding-inline: 14px;
   }
 
   .report-header {

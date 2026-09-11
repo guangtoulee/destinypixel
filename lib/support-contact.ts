@@ -9,3 +9,7 @@ export const destinySupportEmail = configuredSupportEmail
   ? configuredSupportEmail
   : defaultSupportEmail;
 export const destinySupportHref = `mailto:${destinySupportEmail}`;
+
+// Public support channel requested by the site owner. A phone-number Telegram
+// link works only when the account's privacy settings allow phone discovery.
+export const destinyTelegramHref = "https://t.me/+19402374906";
