@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-11T12:18:32.057Z",
+  "updatedAt": "2026-09-11T17:05:36.817Z",
   "sourceSummary": {
-    "community": 1092,
+    "community": 1096,
     "publicX": 410,
-    "total": 1502
+    "total": 1506
   },
   "items": [
     {
@@ -591,7 +591,7 @@
       "authorName": "Grok",
       "authorHandle": "@grok",
       "createdAt": "2026-09-05T18:03:10.000Z",
-      "importedAt": "2026-09-11T06:29:26.603Z",
+      "importedAt": "2026-09-11T17:05:36.784Z",
       "tags": [
         "Grok Imagine",
         "视频"
@@ -612,13 +612,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 2992,
+        "likes": 3002,
         "reposts": 342,
-        "replies": 337,
+        "replies": 339,
         "quotes": 108,
-        "bookmarks": 339,
-        "views": 856237,
-        "score": 10742
+        "bookmarks": 341,
+        "views": 872351,
+        "score": 10803
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Grok Imagine Video 1.5 agent is now available. Powered by our newest Image 2.0 model, it delivers higher quality, better storytelling from a smarter agent and excels at connecting multiple shots together with greater continuity."
@@ -5387,7 +5387,7 @@
       "authorName": "X Freeze",
       "authorHandle": "@XFreeze",
       "createdAt": "2026-09-06T00:56:28.000Z",
-      "importedAt": "2026-09-11T06:29:26.602Z",
+      "importedAt": "2026-09-11T17:05:36.783Z",
       "tags": [
         "Grok Imagine",
         "视频"
@@ -5408,13 +5408,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 387,
-        "reposts": 43,
+        "likes": 388,
+        "reposts": 42,
         "replies": 38,
         "quotes": 5,
         "bookmarks": 57,
-        "views": 16337,
-        "score": 1203
+        "views": 16361,
+        "score": 1201
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Grok Imagine Video 1.5 Agent is now LIVE This is a massive upgrade You can give it an idea or a story and the agent understands what you’re trying to create.....then generates both images and video clips for you while keeping the storyline and visual continuity intact It understands the concept, plans the shots and connects multiple scenes together much better And underneath it, Grok is using SpaceXAI’s latest Imagine models: • Image 2.0 • Video 1.5 Soo, instead of generating a collection of unrelated clips, you now have an agent actually helping you build the whole story Grok Imagine is rapidly evolving into a full AI filmmaking agent"
@@ -17038,6 +17038,47 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2098252202582372525",
+      "title": "社交媒体帖子 - 阳光下的车内抓拍自拍",
+      "description": "一个超写实的提示词，用于生成年轻女性在明亮直射阳光下于车内拍摄的手机抓拍自拍，呈现自然的皮肤纹理和头发细节。",
+      "prompt": "超写实的抓拍自拍，主角是一位坐在 {argument name=\"location\" default=\"车内\"} 的 {argument name=\"subject\" default=\"年轻女性\"}，由智能手机从略微低角度的前置摄像头拍摄。她留着一头柔顺的深棕色长直发，自然地垂在双肩上，脸颊旁有几缕细碎的发丝，五官精致年轻，皮肤白皙自然，深棕色眼眸，妆容清淡，带着俏皮可爱的抿嘴微笑。她穿着一件超大款白色印花 T 恤，戴着精致的银色手链。她的一只手臂抬向镜头，用拇指和食指在眼睛周围比出一个俏皮的手势，其余手指向上伸展。她透过手势微微眯起一只眼睛，自然地微笑着，展现出一种有趣、无忧无虑的表情。明亮的直射阳光透过车窗射入，照亮了她的脸庞，并在她的头发和皮肤上形成了强烈的金色高光。她周围是深色的车内环境，可以看到黑色真皮座椅和车窗边框。透过敞开的侧窗，可以看到湛蓝的天空和柔软的白云。自然的阳光与深邃的室内阴影形成了强烈的对比。真实的手机摄影，休闲社交媒体自拍美学，自然的皮肤纹理，逼真的发丝，写实的手部和手指，温暖的阳光，高动态范围，细微的镜头瑕疵，青春抓拍氛围，照片级真实感，高度细节，面部清晰，比例自然，垂直 4:5 构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789113116191_5c9d69_HR59QMFaYAAMRoo.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Aqsahere_/status/2098252202582372525",
+      "sourceType": "community",
+      "authorName": "Aqsa",
+      "authorHandle": "@Aqsahere_",
+      "createdAt": "2026-09-11T12:00:00.000Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34316",
+      "rawText": "超写实的抓拍自拍，主角是一位坐在 {argument name=\"location\" default=\"车内\"} 的 {argument name=\"subject\" default=\"年轻女性\"}，由智能手机从略微低角度的前置摄像头拍摄。她留着一头柔顺的深棕色长直发，自然地垂在双肩上，脸颊旁有几缕细碎的发丝，五官精致年轻，皮肤白皙自然，深棕色眼眸，妆容清淡，带着俏皮可爱的抿嘴微笑。她穿着一件超大款白色印花 T 恤，戴着精致的银色手链。她的一只手臂抬向镜头，用拇指和食指在眼睛周围比出一个俏皮的手势，其余手指向上伸展。她透过手势微微眯起一只眼睛，自然地微笑着，展现出一种有趣、无忧无虑的表情。明亮的直射阳光透过车窗射入，照亮了她的脸庞，并在她的头发和皮肤上形成了强烈的金色高光。她周围是深色的车内环境，可以看到黑色真皮座椅和车窗边框。透过敞开的侧窗，可以看到湛蓝的天空和柔软的白云。自然的阳光与深邃的室内阴影形成了强烈的对比。真实的手机摄影，休闲社交媒体自拍美学，自然的皮肤纹理，逼真的发丝，写实的手部和手指，温暖的阳光，高动态范围，细微的镜头瑕疵，青春抓拍氛围，照片级真实感，高度细节，面部清晰，比例自然，垂直 4:5 构图。"
+    },
+    {
       "id": "community-2097883811053031584",
       "title": "个人资料 / 头像 - 黄金时刻剪影肖像",
       "description": "南亚男性的电影感日落肖像，严格保持身份特征。",
@@ -17049,7 +17090,7 @@
       "authorName": "Muhammad Jamil",
       "authorHandle": "@JamilAI55",
       "createdAt": "2026-09-10T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.351Z",
+      "importedAt": "2026-09-11T17:05:32.446Z",
       "tags": [
         "人像",
         "摄影"
@@ -17080,6 +17121,131 @@
       "rawText": "超写实电影感特写，右侧面侧影肖像，拍摄对象为 {argument name=\"subject\" default=\"年轻南亚男性\"}，场景位于户外，时间为 {argument name=\"time of day\" default=\"温暖的黄金时刻日落\"}。请使用我上传的面部参考图作为严格的身份匹配参考，100% 还原我的真实面容、面部比例、胡须、八字胡、皮肤纹理和发型，禁止美颜、禁止美白、禁止重塑脸型。仅复制总统参考图中的姿势和构图。画面包含上胸部及肩部以上，身体完全侧向右方，头部保持平直，下巴微抬，双眼轻闭，嘴唇放松，表情平和。{argument name=\"clothing\" default=\"纯色超大款哑光黑色圆领 T 恤\"}。背景为极简的开阔日落天空，呈现自然的桃橙色与暖琥珀色渐变，地平线微弱模糊。强烈的日落逆光营造出深沉的剪影效果；面部必须保持暗色，不可过亮或进行正面补光。纤细的暖金色轮廓光勾勒出头发、额头、鼻子、嘴唇、胡须、下颌线和肩部轮廓。85mm 单反镜头，f/1.8 光圈，浅景深，低调曝光，深邃阴影，细腻胶片颗粒感，电影级调色，超写实 12k 分辨率，自然摄影风格，3:4 竖构图肖像。"
     },
     {
+      "id": "community-2098193807120716198",
+      "title": "社交媒体帖子 - 微笑便当店招牌人像",
+      "description": "一张写实风格的街头人像，一位年轻女性站在一家日式便当店外，手中拿着一块手写亚克力鼓励标牌。",
+      "prompt": "创作一张高度写实的竖屏手机照片，拍摄一位面带微笑的年轻日本女性，她站在阳光明媚的中午，身处繁忙的便当店外。她留着黑色亮泽的短波波头，妆容柔和，脸颊红润，涂着粉色口红，眼神友好地直视镜头。她身穿一件带有荷叶边肩带和腰间蝴蝶结的粉色系挂脖围裙式连衣裙。她双手在胸前拿着一块半透明磨砂亚克力标牌，标牌四角有明显的螺丝孔，正面有手写马克笔绘图。标牌包含 4 个主要的绘制元素：1 行粉色名字文本 {argument name=\"character name text\" default=\"ANRIさん\"}，1 行蓝色鼓励短语 {argument name=\"message text\" default=\"今日も頑張ってください!\"}，2 个粉色爱心涂鸦，以及 1 个色彩鲜艳的小型卡通便当盒插画，内含米饭、配菜和蔬菜。背景：店面玻璃窗反射着街道，店内陈列着货架和商品，入口周围挂着日式便当海报和菜单项目，左侧有一条粉白相间的竖幅横幅，上面写着醒目的黑色日文“便当”字样。使用浅景深效果，但要确保人物和标牌清晰。光线应自然、明亮、愉悦且略带光泽，呈现真实的皮肤质感、亚克力项目上的反光，以及社交媒体照片般的抓拍构图。不要添加额外的人物、前景中的额外标牌、水印或无关文本。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789113123964_lfxvge_HR5II11bIAEPjMg.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/vevrier9033833/status/2098193807120716198#reversed-0",
+      "sourceType": "community",
+      "authorName": "vevrier90333",
+      "authorHandle": "@vevrier9033833",
+      "createdAt": "2026-09-10T12:00:00.000Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
+      "tags": [
+        "人像",
+        "平面设计"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34330",
+      "rawText": "创作一张高度写实的竖屏手机照片，拍摄一位面带微笑的年轻日本女性，她站在阳光明媚的中午，身处繁忙的便当店外。她留着黑色亮泽的短波波头，妆容柔和，脸颊红润，涂着粉色口红，眼神友好地直视镜头。她身穿一件带有荷叶边肩带和腰间蝴蝶结的粉色系挂脖围裙式连衣裙。她双手在胸前拿着一块半透明磨砂亚克力标牌，标牌四角有明显的螺丝孔，正面有手写马克笔绘图。标牌包含 4 个主要的绘制元素：1 行粉色名字文本 {argument name=\"character name text\" default=\"ANRIさん\"}，1 行蓝色鼓励短语 {argument name=\"message text\" default=\"今日も頑張ってください!\"}，2 个粉色爱心涂鸦，以及 1 个色彩鲜艳的小型卡通便当盒插画，内含米饭、配菜和蔬菜。背景：店面玻璃窗反射着街道，店内陈列着货架和商品，入口周围挂着日式便当海报和菜单项目，左侧有一条粉白相间的竖幅横幅，上面写着醒目的黑色日文“便当”字样。使用浅景深效果，但要确保人物和标牌清晰。光线应自然、明亮、愉悦且略带光泽，呈现真实的皮肤质感、亚克力项目上的反光，以及社交媒体照片般的抓拍构图。不要添加额外的人物、前景中的额外标牌、水印或无关文本。"
+    },
+    {
+      "id": "community-2098125338484342869",
+      "title": "社交媒体帖子 - 金鹿晨曦羊毛毡艺术转化",
+      "description": "创建一个分屏场景，对比一张雾气缭绕的金色森林鹿群照片与一幅极简主义羊毛毡插画。",
+      "prompt": "目标：创建一个双面板水平对比图像，展示从写实自然照片到极简主义羊毛毡插画的转化。\n\n画布：16:9 宽屏画布，垂直平分为左右两等份，中间有清晰的直线分割。\n\n左侧面板：一张写实的黄金时刻森林草地照片。前景中准确展示 5 只鹿：最左侧 1 只正在行走，左中 1 只正在吃草，正中 1 只正在吃草，中右侧 1 只小鹿直立，最右侧 1 只较大的鹿站立。草地上覆盖着带露水的绿草，伴有温暖的黄色阳光和柔和的晨雾。背景中，深色的常绿树木形成浓密的森林剪影，右上角有额外的枝叶。强烈的阳光从右上角斜射穿过树林，营造出宁静的电影感氛围。\n\n右侧面板：同一场景的柔和手工羊毛毡重新演绎，背景为温暖的米白色纹理纸，留有充足的空白。将羊毛毡场景水平居中于中上方区域。展示 5 只与左侧面板布局完全对应的小羊毛毡鹿：最左侧 1 只站立的鹿，左中 1 只吃草的鹿，正中 1 只橙棕色吃草的鹿，中右侧 1 只直立的小鹿，以及最右侧 1 只较大的站立鹿。将它们放置在一条细长的浅绿色毛毡草地上。在它们上方，加入一个简单的圆形毛毡太阳和 2 片柔和的水平毛毡云朵。在毛毡草地下方，添加手写文字 {argument name=\"caption text\" default=\"A kinder morning ♡\"}，字体采用精致的灰褐色手写体。\n\n视觉风格：结合温暖治愈的美学、充足的留白、舒适的羊毛毡质感、柔和的边缘、柔和的大地色调以及宁静诗意的氛围。左侧应呈现摄影感和氛围感；右侧应呈现带有可见纤维和极简构图的手工毛毡插画感。\n\n约束条件：保持分屏布局，每侧恰好 5 只鹿，不得有额外动物，无边框，无水印，除标题外不得添加任何额外文字。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789113125214_ig0i2n_HR4JccraIAAUu8D.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/xiaoxiaodong01/status/2098125338484342869#reversed-0",
+      "sourceType": "community",
+      "authorName": "小小东",
+      "authorHandle": "@xiaoxiaodong01",
+      "createdAt": "2026-09-10T12:00:00.000Z",
+      "importedAt": "2026-09-11T17:05:32.450Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34333",
+      "rawText": "目标：创建一个双面板水平对比图像，展示从写实自然照片到极简主义羊毛毡插画的转化。\n\n画布：16:9 宽屏画布，垂直平分为左右两等份，中间有清晰的直线分割。\n\n左侧面板：一张写实的黄金时刻森林草地照片。前景中准确展示 5 只鹿：最左侧 1 只正在行走，左中 1 只正在吃草，正中 1 只正在吃草，中右侧 1 只小鹿直立，最右侧 1 只较大的鹿站立。草地上覆盖着带露水的绿草，伴有温暖的黄色阳光和柔和的晨雾。背景中，深色的常绿树木形成浓密的森林剪影，右上角有额外的枝叶。强烈的阳光从右上角斜射穿过树林，营造出宁静的电影感氛围。\n\n右侧面板：同一场景的柔和手工羊毛毡重新演绎，背景为温暖的米白色纹理纸，留有充足的空白。将羊毛毡场景水平居中于中上方区域。展示 5 只与左侧面板布局完全对应的小羊毛毡鹿：最左侧 1 只站立的鹿，左中 1 只吃草的鹿，正中 1 只橙棕色吃草的鹿，中右侧 1 只直立的小鹿，以及最右侧 1 只较大的站立鹿。将它们放置在一条细长的浅绿色毛毡草地上。在它们上方，加入一个简单的圆形毛毡太阳和 2 片柔和的水平毛毡云朵。在毛毡草地下方，添加手写文字 {argument name=\"caption text\" default=\"A kinder morning ♡\"}，字体采用精致的灰褐色手写体。\n\n视觉风格：结合温暖治愈的美学、充足的留白、舒适的羊毛毡质感、柔和的边缘、柔和的大地色调以及宁静诗意的氛围。左侧应呈现摄影感和氛围感；右侧应呈现带有可见纤维和极简构图的手工毛毡插画感。\n\n约束条件：保持分屏布局，每侧恰好 5 只鹿，不得有额外动物，无边框，无水印，除标题外不得添加任何额外文字。"
+    },
+    {
+      "id": "community-2098034850599240044",
+      "title": "社交媒体帖子 - 韩系夏日生活感人像",
+      "description": "一份详细的提示词，用于创作一张在夏日街道上的年轻女性抓拍生活感人像，展现韩系极简时尚与柔和阳光。",
+      "prompt": "超写实户外生活感人像，主角为 {argument name=\"subject\" default=\"站在安静林荫道上的年轻女性\"}，背景是明媚的夏日。她留着一头丝滑的深棕色长发，带有自然的柔和波浪卷，配有轻薄的八字刘海，几缕发丝垂在脸颊旁。她五官精致年轻，皮肤清透自然，棕色眼眸柔和，妆容淡雅，表情俏皮可爱，嘴唇轻抿。\n她穿着 {argument name=\"clothing\" default=\"一件修身的白色无袖方领连衣裙，风格简约干净\"}。手臂上随意搭着一件米色针织开衫。她挎着一个小巧优雅的白色菱格纹手提包，配有金色链条和五金件。佩戴着精致的吊坠项链和简约戒指。\n她双手捧着 {argument name=\"drink\" default=\"一杯装有淡绿色冰抹茶的透明塑料杯\"} 靠近嘴边，仿佛正准备饮用。杯子上贴着简约的手写风格咖啡馆标签。\n背景是茂密的绿树、安静的铺装路面、优雅的石材与金属围栏，透过枝叶隐约可见柔和的建筑细节。明亮的自然光穿过树木，在场景中投下斑驳的光影和柔和的阴影。\n韩系极简时尚摄影，抓拍街拍美学，柔和夏日氛围，自然光，真实的皮肤质感，细腻的发丝，逼真的布料与手提包质感，微妙的暖色调，浅景深，柔和的背景虚化，真实的手机摄影感，照片级真实，高分辨率，自然的身材比例，竖向 4:5 构图。\n卡通，动漫，CGI，塑料感皮肤，浓妆，扭曲的面部，不对称的眼睛，畸形的手，多余的手指，扭曲的饮料杯，变形的手提包，不真实的发型，不自然的身材比例，色彩过饱和，生硬的阴影，主体模糊，过度修图，文字伪影，水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789113112913_g5rhtg_HR23kg9asAAQJtT.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Aqsahere_/status/2098034850599240044",
+      "sourceType": "community",
+      "authorName": "Aqsa",
+      "authorHandle": "@Aqsahere_",
+      "createdAt": "2026-09-10T12:00:00.000Z",
+      "importedAt": "2026-09-11T17:05:32.450Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34310",
+      "rawText": "超写实户外生活感人像，主角为 {argument name=\"subject\" default=\"站在安静林荫道上的年轻女性\"}，背景是明媚的夏日。她留着一头丝滑的深棕色长发，带有自然的柔和波浪卷，配有轻薄的八字刘海，几缕发丝垂在脸颊旁。她五官精致年轻，皮肤清透自然，棕色眼眸柔和，妆容淡雅，表情俏皮可爱，嘴唇轻抿。\n她穿着 {argument name=\"clothing\" default=\"一件修身的白色无袖方领连衣裙，风格简约干净\"}。手臂上随意搭着一件米色针织开衫。她挎着一个小巧优雅的白色菱格纹手提包，配有金色链条和五金件。佩戴着精致的吊坠项链和简约戒指。\n她双手捧着 {argument name=\"drink\" default=\"一杯装有淡绿色冰抹茶的透明塑料杯\"} 靠近嘴边，仿佛正准备饮用。杯子上贴着简约的手写风格咖啡馆标签。\n背景是茂密的绿树、安静的铺装路面、优雅的石材与金属围栏，透过枝叶隐约可见柔和的建筑细节。明亮的自然光穿过树木，在场景中投下斑驳的光影和柔和的阴影。\n韩系极简时尚摄影，抓拍街拍美学，柔和夏日氛围，自然光，真实的皮肤质感，细腻的发丝，逼真的布料与手提包质感，微妙的暖色调，浅景深，柔和的背景虚化，真实的手机摄影感，照片级真实，高分辨率，自然的身材比例，竖向 4:5 构图。\n卡通，动漫，CGI，塑料感皮肤，浓妆，扭曲的面部，不对称的眼睛，畸形的手，多余的手指，扭曲的饮料杯，变形的手提包，不真实的发型，不自然的身材比例，色彩过饱和，生硬的阴影，主体模糊，过度修图，文字伪影，水印。"
+    },
+    {
       "id": "community-2097590534760219066",
       "title": "个人资料 / 头像 - 精致都市时尚人像",
       "description": "一个用于生成逼真电影感人像的高保真提示词，描绘了一位身着定制西装的男士，背景为黄昏时分的豪华屋顶，带有都市天际线虚化效果。",
@@ -17091,7 +17257,7 @@
       "authorName": "Aegon",
       "authorHandle": "@Fujimoto_hina",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.352Z",
+      "importedAt": "2026-09-11T17:05:32.447Z",
       "tags": [
         "人像",
         "摄影"
@@ -17133,7 +17299,7 @@
       "authorName": "Nataly Che",
       "authorHandle": "@creatoroff",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.352Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像",
         "平面设计"
@@ -17175,7 +17341,7 @@
       "authorName": "Ace",
       "authorHandle": "@Acemation_",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.352Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像"
       ],
@@ -17216,7 +17382,7 @@
       "authorName": "藍澤 ミライ",
       "authorHandle": "@mirai_ai2050",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.352Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像"
       ],
@@ -17257,7 +17423,7 @@
       "authorName": "海趣社",
       "authorHandle": "@haiqushe",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像",
         "东方美学"
@@ -17299,7 +17465,7 @@
       "authorName": "simeon-sanai",
       "authorHandle": "@Naiknelofar788",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像"
       ],
@@ -17340,7 +17506,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [
         "人像",
         "摄影"
@@ -17382,7 +17548,7 @@
       "authorName": "荒井健一 AK",
       "authorHandle": "@aarai666",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.448Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -17421,7 +17587,7 @@
       "authorName": "Chris",
       "authorHandle": "@everestchris6",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -17463,7 +17629,7 @@
       "authorName": "黄小木",
       "authorHandle": "@ai_xiaomu",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像"
       ],
@@ -17504,7 +17670,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -17878,7 +18044,7 @@
       "authorName": "Light Sekkuchi",
       "authorHandle": "@LightSkkh",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "GPT Image 2",
         "平面设计"
@@ -17920,7 +18086,7 @@
       "authorName": "SimplyDera ◻",
       "authorHandle": "@Simply_Dera1",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -17962,7 +18128,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -18004,7 +18170,7 @@
       "authorName": "Benjamin Peng",
       "authorHandle": "@BinPeng22",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像"
       ],
@@ -18045,7 +18211,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -18087,7 +18253,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "摄影"
       ],
@@ -18128,7 +18294,7 @@
       "authorName": "Faymas",
       "authorHandle": "@Faymas_ai",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.353Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -18170,7 +18336,7 @@
       "authorName": "ZorviaLux",
       "authorHandle": "@ZorviaLux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.354Z",
+      "importedAt": "2026-09-11T17:05:32.449Z",
       "tags": [
         "人像",
         "摄影"
@@ -62938,7 +63104,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.359Z",
+      "importedAt": "2026-09-11T17:05:32.457Z",
       "tags": [
         "产品",
         "平面设计",
@@ -62981,7 +63147,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.359Z",
+      "importedAt": "2026-09-11T17:05:32.457Z",
       "tags": [
         "平面设计"
       ],
@@ -63022,7 +63188,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-11T12:18:28.359Z",
+      "importedAt": "2026-09-11T17:05:32.457Z",
       "tags": [
         "平面设计"
       ],
