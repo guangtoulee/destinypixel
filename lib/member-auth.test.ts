@@ -18,6 +18,7 @@ test("member auth preserves legacy users while enforcing durable sessions and on
     NODE_ENV: "test", VERCEL: "", SUPABASE_URL: "", NEXT_PUBLIC_SUPABASE_URL: "", SUPABASE_SERVICE_ROLE_KEY: "",
     DESTINY_MEMBER_LOCAL_STORE_ENABLED: "true", DESTINY_MEMBER_STORE_FILE: file,
     RESEND_API_KEY: "", DESTINY_AUTH_EMAIL_FROM: "", NEXT_PUBLIC_SITE_URL: "https://example.test",
+    NEXT_PUBLIC_DESTINY_SUPPORT_EMAIL: "support@example.test",
   });
   const originalFetch = globalThis.fetch;
   const originalWarn = console.warn;
@@ -66,6 +67,9 @@ test("member auth preserves legacy users while enforcing durable sessions and on
     const unknownResult = await auth.requestDestinyPasswordReset("missing@example.test");
     assert.deepEqual(knownResult, unknownResult);
     assert.equal(calls.length, 1);
+    assert.equal(calls[0].body.from, "DestinyPixel <noreply@example.test>", "sender must remain explicitly configured");
+    assert.equal(calls[0].body.reply_to, "support@example.test", "replies go to the public support mailbox");
+    assert.match(String(calls[0].body.text), /contact support@example\.test/);
     const url = new URL(String(calls[0].body.text).split("\n")[1]);
     const resetToken = url.searchParams.get("reset")!;
     assert.equal(url.origin, "https://example.test");

@@ -1,3 +1,4 @@
+import { destinySupportHref } from "@/lib/support-contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowDown, ArrowRight, BookOpen, Compass, Gem, Sparkles, SunMoon } from "lucide-react";
@@ -80,7 +81,7 @@ export default async function ToolsPage({ searchParams }: PageProps) {
         </section>)}
         <aside className={styles.startNote}><BookOpen size={26} aria-hidden="true" /><div><h2>{text.noteTitle}</h2><p>{text.note}</p><Link href="/learn" hrefLang="en">{text.noteCta}<ArrowRight size={15} aria-hidden="true" /></Link></div></aside>
       </div>
-      <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><nav aria-label={locale === "zh" ? "页脚导航" : "Footer navigation"}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><Link href={locale === "zh" ? "/journal?locale=zh" : "/journal"}>{locale === "zh" ? "原创文章" : "Journal"}</Link><a href="mailto:anyulee@foxmail.com">{text.contact}</a></nav></footer>
+      <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><nav aria-label={locale === "zh" ? "页脚导航" : "Footer navigation"}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><Link href={locale === "zh" ? "/journal?locale=zh" : "/journal"}>{locale === "zh" ? "原创文章" : "Journal"}</Link><a href={destinySupportHref}>{text.contact}</a></nav></footer>
     </main>
   );
 }

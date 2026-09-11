@@ -1,5 +1,7 @@
 "use client";
 
+import { destinySupportHref } from "@/lib/support-contact";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, type FormEvent, type PointerEvent } from "react";
@@ -127,6 +129,6 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       {shareLink && <div className={styles.shareBox}><p role="status"><Check size={14} aria-hidden="true" />{shareMessage}</p><label htmlFor="day-card-share">{text.shareLabel}</label><input id="day-card-share" readOnly value={shareLink} onFocus={(event) => event.target.select()} /><small>{text.shareNote}</small></div>}
     </section>
     <section className={styles.nextStep}><div><p className={styles.eyebrow}>{text.next}</p><h2>{text.nextTitle}</h2><p>{text.nextBody}</p><p className={styles.nextNote}>{text.nextNote}</p></div><div className={styles.nextActions}><Link className={styles.primary} href={`${home}#report`} onClick={() => trackToolEvent("tool_start", "day_pillar")}>{text.nextAction}<MoveUpRight size={17} aria-hidden="true" /></Link><Link className={styles.atelier} href={locale === "zh" ? "/atelier?locale=zh" : "/atelier"}><Gem size={16} aria-hidden="true" />{text.atelier}<ArrowRight size={14} aria-hidden="true" /></Link></div></section>
-    <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><Link href={home}>{text.home}</Link><a href="mailto:anyulee@foxmail.com">{text.contact}</a></footer>
+    <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><Link href={home}>{text.home}</Link><a href={destinySupportHref}>{text.contact}</a></footer>
   </main>;
 }

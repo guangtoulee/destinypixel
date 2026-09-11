@@ -18,8 +18,8 @@ export function paypalConfigured() { return paypalMode() !== "disabled" && Boole
 export function isAdminMember(member: { id: string; email: string; email_verified_at?: string | null } | null) {
   if (!member) return false;
   const ids = (process.env.DESTINY_ADMIN_MEMBER_IDS || "").split(",").map(v => v.trim()).filter(Boolean);
-  const emails = (process.env.DESTINY_ADMIN_EMAILS || "").split(",").map(v => v.trim().toLowerCase()).filter(Boolean);
-  return ids.includes(member.id) || Boolean(member.email_verified_at && emails.includes(member.email.toLowerCase()));
+  // Bind administration to an existing account, independently of its email or plan.
+  return ids.includes(member.id);
 }
 
 export function checkoutOffer(member: Parameters<typeof isAdminMember>[0] = null) {

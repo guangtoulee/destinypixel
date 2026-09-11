@@ -1,3 +1,4 @@
+import { destinySupportEmail } from "@/lib/support-contact";
 import { absoluteUrl } from "@/lib/seo";
 
 export const runtime = "edge";
@@ -28,7 +29,7 @@ Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It ma
 Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. Traditional Chinese body text currently uses a browser-side conversion. The tool directory is available in English and Simplified Chinese. The beginner guide is English-only; do not assume that every page is translated.
 
 ## Contact
-Product feedback and collaboration: anyulee@foxmail.com
+Product feedback and collaboration: ${destinySupportEmail}
 
 ## Privacy And Indexing
 Generated personal reports under /report/ are private and should not be indexed. Public search engines and AI crawlers should use the guide, homepage, and studio pages as the canonical context.

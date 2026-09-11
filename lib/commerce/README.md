@@ -30,8 +30,8 @@ Never put secrets in `NEXT_PUBLIC_*`, source files, screenshots or logs. The fol
 | `DEEPSEEK_API_KEY` | Real server-side report generation; paid delivery never falls back to a template |
 | `DEEPSEEK_MODEL`, `DEEPSEEK_API_URL` | Optional provider settings, otherwise existing documented defaults |
 | `DESTINY_ADMIN_MEMBER_IDS` | Explicitly bound existing member IDs, comma-separated |
-| `DESTINY_ADMIN_EMAILS` | Alternative allowlist; an email is accepted only after verified recovery ownership |
-| `RESEND_API_KEY`, `DESTINY_AUTH_EMAIL_FROM` | Recovery email delivery, unavailable until configured |
+| `RESEND_API_KEY`, `DESTINY_AUTH_EMAIL_FROM` | Recovery email delivery from a verified sending domain, unavailable until configured |
+| `NEXT_PUBLIC_DESTINY_SUPPORT_EMAIL` | Public contact and recovery-email Reply-To; defaults to `liyu321@gmail.com` |
 | `AUTH_RATE_LIMIT_SECRET` | Optional stable HMAC secret; otherwise uses server database key |
 
 `DESTINY_MEMBER_LOCAL_STORE_ENABLED=true` is development/test only and is rejected as a production fallback. It does not provide a real report or payment database.
@@ -44,6 +44,7 @@ Never put secrets in `NEXT_PUBLIC_*`, source files, screenshots or logs. The fol
 - `/api/webhooks/paypal` verifies PayPal's signature, checks order/capture identity and amount, and deduplicates event IDs. Subscribe to `PAYMENT.CAPTURE.COMPLETED`, `.PENDING`, `.DENIED`, `.REFUNDED`, and `.REVERSED`.
 - Refund/reversal is terminal for that order. A delayed completed notification cannot restore access. Partial refunds currently revoke access too; review this product rule before making partial refunds.
 - Guest credentials expire after seven days. Claiming requires the original browser credential plus a valid signed-in account. Knowing a report UUID is insufficient.
+- Administrators are explicitly bound by `DESTINY_ADMIN_MEMBER_IDS`, never by an email address or membership plan. They receive free complete access only to their own reports. A guest report must be claimed successfully before administrator testing applies; knowing another report ID grants no access.
 - Full generation endpoints reconstruct context from the owned server report. A database lease prevents duplicate generation; complete content is persisted before delivery. Partial chapters and failed generations do not count as complete paid content.
 - Historical `saved_reports` browser snapshots are retained as historical records. They are not trustworthy proof of ownership of an original report. Old original report access requires an explicit recovery/migration decision; do not auto-assign it from a submitted report ID or snapshot.
 
@@ -54,3 +55,7 @@ Run the engine, journal, analytics, authentication, commerce service, SQL and re
 ## Follow-up channels
 
 WeChat Pay is not integrated or advertised as available. It requires its own merchant configuration, currency/settlement decisions, signature verification and callback/refund tests. Traffic analytics and financial order records are separate: browser conversion events are not proof of revenue, and unrelated app traffic must not be counted as main-site growth.
+
+## Initial operating configuration
+
+The approved launch price is USD 6.99 per complete report, configured on the server via `DESTINY_REPORT_PRICE_USD`. Customer replies go to `liyu321@gmail.com`; the recovery-email sender remains an independently verified domain address. PayPal stays disabled until real sandbox/provider verification is complete. Administrator account credentials and identity bindings are not stored in source.

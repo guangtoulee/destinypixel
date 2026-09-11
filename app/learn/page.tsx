@@ -1,3 +1,4 @@
+import { destinySupportHref } from "@/lib/support-contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Check, Compass } from "lucide-react";
@@ -89,11 +90,11 @@ export default function LearnPage() {
           <section className={styles.help} aria-labelledby="need-help-title">
             <h2 id="need-help-title">If a result does not appear</h2>
             <p>Check that the required fields are filled and look for an error near the form. AI-powered interpretations need a working online service. If generation fails, keep a copy of your input and retry later; an error message is not a completed result.</p>
-            <p>For a page problem, <a href="mailto:anyulee@foxmail.com">contact DestinyPixel</a> with the tool name and the error you saw. Avoid sending private birth details or photographs unless they are needed to explain the issue.</p>
+            <p>For a page problem, <a href={destinySupportHref}>contact DestinyPixel</a> with the tool name and the error you saw. Avoid sending private birth details or photographs unless they are needed to explain the issue.</p>
           </section>
         </div>
       </div>
-      <footer className={styles.footer}><strong>DestinyPixel</strong><nav aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/tools">Tool directory</Link><Link href="/journal">Journal</Link><a href="mailto:anyulee@foxmail.com">Contact</a></nav></footer>
+      <footer className={styles.footer}><strong>DestinyPixel</strong><nav aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/tools">Tool directory</Link><Link href="/journal">Journal</Link><a href={destinySupportHref}>Contact</a></nav></footer>
     </main>
   );
 }

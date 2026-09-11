@@ -28,7 +28,8 @@ export async function getReportAccess(id: string) {
   if (!row) return base;
   const token = (await cookies()).get(guestCookieName(id))?.value ?? "";
   const claimable = validGuestProof(row, token);
-  if (!(member && row.member_id === member.id) && !claimable) return base;
+  const ownsReport = Boolean(member && row.member_id === member.id);
+  if (!ownsReport && !claimable) return base;
   const [raw] = await databaseRequest<Array<Omit<ReportRecord, "user" | "birth_record">>>(`reports?id=eq.${id}&limit=1`);
   if (!raw) return base;
   const [[user], [birth_record]] = await Promise.all([
@@ -40,7 +41,8 @@ export async function getReportAccess(id: string) {
   birth_record.birth_time = birth_record.birth_time.slice(0, 5);
   const orders = member ? await databaseRequest<Array<{ mode: string }>>(`destiny_report_orders?report_id=eq.${id}&member_id=eq.${member.id}&status=eq.completed&select=mode`) : [];
   const purchased = orders.some(order => order.mode === "live" || (order.mode === "sandbox" && paypalMode() === "sandbox" && (process.env.VERCEL_ENV !== "production" || isAdminMember(member))));
-  return { ...base, report: { ...raw, user, birth_record }, canRead: true, claimable, isFull: !paidReportsEnabled() || purchased };
+  const adminTestAccess = ownsReport && isAdminMember(member);
+  return { ...base, report: { ...raw, user, birth_record }, canRead: true, claimable, isFull: !paidReportsEnabled() || purchased || adminTestAccess };
 }
 export async function claimReportForMember(id: string) {
   const access = await getReportAccess(id);
@@ -49,6 +51,8 @@ export async function claimReportForMember(id: string) {
     const token = (await cookies()).get(guestCookieName(id))?.value ?? "";
     const claimed = await databaseRequest<boolean>("rpc/destiny_claim_report", { method: "POST", body: { p_report: id, p_member: access.member.id, p_guest_hash: guestHash(token) } });
     if (!claimed) return null;
+    // Re-read ownership before returning account-specific entitlements.
+    return getReportAccess(id);
   }
   return access;
 }

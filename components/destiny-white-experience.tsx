@@ -1,5 +1,7 @@
 "use client";
 
+import { destinySupportEmail, destinySupportHref } from "@/lib/support-contact";
+
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
@@ -1456,11 +1458,11 @@ export default function DestinyWhiteExperience({
           </a>
           <a
             className="white-footer__contact"
-            href="mailto:anyulee@foxmail.com"
+            href={destinySupportHref}
             aria-label={copyLocale === "zh" ? "联系 DestinyPixel" : "Contact DestinyPixel"}
           >
             <Mail size={13} aria-hidden="true" />
-            anyulee@foxmail.com
+            {destinySupportEmail}
           </a>
           <span>
             <MapPin size={13} aria-hidden="true" />

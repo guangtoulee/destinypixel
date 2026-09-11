@@ -3,6 +3,7 @@ import { promisify } from "node:util";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import type { ReportLocale } from "@/lib/report-i18n";
+import { destinySupportEmail } from "@/lib/support-contact";
 import {
   assertMemberStoreAvailable, getMemberDatabaseConfig, MemberAuthError,
   memberAuthDatabaseRequest, normalizeMemberEmail, validateMemberName, validateMemberPassword,
@@ -467,8 +468,8 @@ export async function requestDestinyPasswordReset(email: string) {
       method: "POST",
       headers: { Authorization: `Bearer ${config.apiKey}`, "Content-Type": "application/json", "Idempotency-Key": `member-reset-${record.token_hash}` },
       body: JSON.stringify({
-        from: config.from, to: [member.email], subject: "Reset your DestinyPixel password / 重置密码",
-        text: `Use this link within 30 minutes to reset your password:\n${resetUrl.toString()}\n\n此链接 30 分钟内有效，且只能使用一次。若不是你本人操作，请忽略此邮件。`,
+        from: config.from, reply_to: destinySupportEmail, to: [member.email], subject: "Reset your DestinyPixel password / 重置密码",
+        text: `Use this link within 30 minutes to reset your password:\n${resetUrl.toString()}\n\n此链接 30 分钟内有效，且只能使用一次。若不是你本人操作，请忽略此邮件。\n\nNeed help? Reply to this email or contact ${destinySupportEmail}. Do not send your password.\n需要帮助可直接回复此邮件，或联系 ${destinySupportEmail}，请勿发送密码。`,
       }),
       signal: AbortSignal.timeout(10_000),
     });

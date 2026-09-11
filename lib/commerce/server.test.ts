@@ -39,7 +39,7 @@ test("commerce server routes authorize persisted reports and verified provider e
   const otherToken = randomBytes(32).toString("base64url");
   const guestToken = randomBytes(32).toString("base64url");
   const hash = (value: string) => createHash("sha256").update(value).digest("hex");
-  const members = [memberId, otherMemberId].map((id, i) => ({ id, email: `synthetic-${i}@example.test`, email_normalized: `synthetic-${i}@example.test`, name: "Synthetic member", password_salt: "s".repeat(22), password_hash: "p".repeat(43), session_token_hash: hash(i ? otherToken : memberToken), session_expires_at: new Date(Date.now() + 86400000).toISOString(), plan: "free", created_at: new Date().toISOString(), updated_at: new Date().toISOString() }));
+  const members = [memberId, otherMemberId].map((id, i) => ({ id, email: `synthetic-${i}@example.test`, email_normalized: `synthetic-${i}@example.test`, email_verified_at: null as string | null, name: "Synthetic member", password_salt: "s".repeat(22), password_hash: "p".repeat(43), session_token_hash: hash(i ? otherToken : memberToken), session_expires_at: new Date(Date.now() + 86400000).toISOString(), plan: "free", created_at: new Date().toISOString(), updated_at: new Date().toISOString() }));
   const rawReport = { id: reportId, user_id: userId, birth_record_id: birthId, created_at: new Date().toISOString(), status: "ai_pending", bazi_data: {}, astro_data: { sunSign: "aries", sunSignCn: "白羊座", placements: [], majorAspects: [] }, ai_content: { meta: { provider: "initial", gender: "female" } } };
   const birth = { id: birthId, user_id: userId, name: "Persisted Synthetic Birth", gender: "female", locale: "zh", birth_date: "1990-01-01", birth_time: "12:00:00", birth_place: "Synthetic City", latitude: 30, longitude: 120, timezone: "Asia/Shanghai", true_solar_time: "12:00" };
   const baseOrder: ReportOrder = { id: orderId, report_id: reportId, member_id: memberId, paypal_order_id: "PAYPAL123", capture_id: null, amount_cents: 199, currency: "USD", mode: "sandbox", status: "created", created_at: new Date().toISOString() };
@@ -66,6 +66,7 @@ test("commerce server routes authorize persisted reports and verified provider e
   const generationContent = ["DAY_MASTER", "OUTER_PERSONA", "DEEP_SELF", "CAREER", "LOVE", "GROWTH", "HEALTH"].map(marker => `[${marker}] ${"Synthetic interpretation. ".repeat(4)}`).join("\n").trim();
   function reset() {
     Object.assign(process.env, testEnv);
+    members.forEach(member => { member.plan = "free"; member.email_verified_at = null; });
     cookieJar.clear();
     calls.length = 0;
     accessRow = { report_id: reportId, member_id: memberId, guest_token_hash: null, guest_expires_at: null };
@@ -125,6 +126,7 @@ test("commerce server routes authorize persisted reports and verified provider e
         return Response.json(claimSucceeds);
       }
       if (resource === "rpc/destiny_auth_consume_rate_limit") return Response.json([{ allowed: true, retry_after: 1 }]);
+      if (resource === "rpc/destiny_admin_counts") return Response.json({ members: 2, reports: 1, paidOrders: 0, pendingOrders: 0, revenue: [] });
       if (resource === "rpc/destiny_begin_checkout") return Response.json(orders[0] || { ...baseOrder, paypal_order_id: null });
       if (resource === "rpc/destiny_replace_voided_checkout") return replacementSucceeds ? Response.json(replacementOrder) : Response.json({ message: "checkout replacement denied" }, { status: 400 });
       if (resource === "rpc/destiny_prepare_capture") {
@@ -166,6 +168,9 @@ test("commerce server routes authorize persisted reports and verified provider e
 
   try {
     const access = require("./access.ts") as typeof import("./access");
+    const config = require("./config.ts") as typeof import("./config");
+    const accountRoute = require("../../app/api/account/route.ts") as typeof import("../../app/api/account/route");
+    const adminRoute = require("../../app/api/admin/overview/route.ts") as typeof import("../../app/api/admin/overview/route");
     const generation = require("./generation.ts") as typeof import("./generation");
     const orderService = require("./orders.ts") as typeof import("./orders");
     const checkout = require("../../app/api/checkout/paypal/route.ts") as typeof import("../../app/api/checkout/paypal/route");
@@ -226,12 +231,96 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal((await access.getReportAccess(reportId)).offer.available, false);
       process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
       assert.equal((await access.getReportAccess(reportId)).isFull, true);
+      process.env.DESTINY_ADMIN_MEMBER_IDS = "";
       process.env.PAYPAL_MODE = "live";
       assert.equal((await access.getReportAccess(reportId)).isFull, false);
       unlock("live");
       assert.equal((await access.getReportAccess(reportId)).isFull, true);
       orders = [{ ...baseOrder, status: "refunded", mode: "live" }];
       assert.equal((await access.getReportAccess(reportId)).isFull, false);
+    });
+
+    await scenario("email, verification and membership plan cannot grant administrator privileges", async () => {
+      signIn();
+      process.env.VERCEL_ENV = "production";
+      process.env.DESTINY_ADMIN_EMAILS = members[0].email;
+      members[0].plan = "vip";
+      for (const verified of [null, new Date().toISOString()]) {
+        members[0].email_verified_at = verified;
+        assert.equal(config.isAdminMember(members[0]), false);
+        assert.equal((await access.getReportAccess(reportId)).isFull, false);
+        const account = await (await accountRoute.GET()).json();
+        assert.equal(account.member.isAdmin, false);
+        assert.equal(account.reports[0].access, "basic");
+        assert.equal((await adminRoute.GET()).status, 403);
+        assert.equal((await generation.generateReport(request("/api/generate-natal", { reportId }), "natal")).status, 402);
+      }
+      assert.equal(calls.some(call => call.url.pathname.endsWith("/rpc/destiny_admin_counts")), false);
+      assert.equal(modelCalls().length, 0);
+    });
+
+    await scenario("an explicitly bound administrator can read and generate owned reports without payment", async () => {
+      signIn();
+      process.env.VERCEL_ENV = "production";
+      process.env.DESTINY_ADMIN_MEMBER_IDS = ` ${memberId} `;
+      for (const mode of ["disabled", "sandbox", "live"]) {
+        process.env.PAYPAL_MODE = mode;
+        const result = await access.getReportAccess(reportId);
+        assert.equal(result.canRead, true);
+        assert.equal(result.isFull, true);
+        const account = await (await accountRoute.GET()).json();
+        assert.equal(account.member.isAdmin, true);
+        assert.equal(account.reports[0].access, "full");
+        assert.deepEqual(account.orders, []);
+      }
+      assert.equal((await adminRoute.GET()).status, 200);
+      const response = await generation.generateReport(request("/api/generate-natal", { reportId }), "natal");
+      assert.equal(response.status, 200);
+      assert.equal(await response.text(), generationContent);
+      const checkoutResponse = await checkout.POST(request("/api/checkout/paypal", { reportId }));
+      assert.equal(checkoutResponse.status, 409);
+      assert.equal((await checkoutResponse.json()).alreadyUnlocked, true);
+      assert.equal(modelCalls().length, 1);
+      assert.equal(paymentCalls().length, 0);
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com") || call.url.pathname.endsWith("/rpc/destiny_begin_checkout")), false);
+    });
+
+    await scenario("administrator testing never bypasses another report owner's private access", async () => {
+      signIn(true);
+      process.env.DESTINY_ADMIN_MEMBER_IDS = otherMemberId;
+      assert.equal(config.isAdminMember(members[1]), true);
+      const result = await access.getReportAccess(reportId);
+      assert.equal(result.canRead, false);
+      assert.equal(result.isFull, false);
+      assert.equal(result.report, null);
+      assert.deepEqual((await (await accountRoute.GET()).json()).reports, []);
+      assert.equal((await generation.generateReport(request("/api/generate-natal", { reportId }), "natal")).status, 403);
+      assert.equal(privateReads().length, 0);
+      assert.equal(modelCalls().length, 0);
+    });
+
+    await scenario("administrator guest reports require a successful atomic ownership claim before free testing", async () => {
+      setGuest(); signIn();
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      assert.equal((await access.getReportAccess(reportId)).isFull, false);
+      claimSucceeds = false;
+      assert.equal(await access.claimReportForMember(reportId), null);
+      assert.equal((await access.getReportAccess(reportId)).isFull, false);
+      claimSucceeds = true;
+      const result = await access.claimReportForMember(reportId);
+      assert.equal(result?.isFull, true);
+      assert.equal(result?.claimable, false);
+      assert.equal(accessRow.member_id, memberId);
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com") || call.url.pathname.endsWith("/rpc/destiny_begin_checkout")), false);
+    });
+
+    await scenario("administrator access revoked during generation cannot persist unlocked content", async () => {
+      signIn();
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      onModelCall = () => { process.env.DESTINY_ADMIN_MEMBER_IDS = ""; };
+      const response = await generation.generateReport(request("/api/generate-natal", { reportId }), "natal");
+      assert.equal(response.status, 503);
+      assert.equal(calls.some(call => call.body.status === "ready"), false);
     });
 
     await scenario("generation rejects unpaid reports and arbitrary client-only context", async () => {

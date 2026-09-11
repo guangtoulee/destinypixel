@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { trackToolEvent } from "@/lib/analytics";
+import { destinySupportHref } from "@/lib/support-contact";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { ArrowRight, BookOpen, Check, ChevronLeft, CreditCard, KeyRound, Loader2, LogOut, Mail, Sparkles, UserRound } from "lucide-react";
 import styles from "./account-shell.module.css";
@@ -10,7 +11,7 @@ type Locale = "en" | "zh";
 type AccountReport = { id: string; title: string; locale: string; createdAt: string; access: "basic" | "full"; status: string };
 type AccountOrder = { id: string; reportId: string; status: string; amount: string; currency: string; createdAt: string; mode?: "sandbox" | "live" };
 type AccountData = {
-  member: { id: string; email: string; name: string | null; plan: string } | null;
+  member: { id: string; email: string; name: string | null; plan: string; isAdmin: boolean } | null;
   reports: AccountReport[];
   orders: AccountOrder[];
   checkout: { available: boolean; price: string | null; currency: "USD"; mode: "disabled" | "sandbox" | "live" };
@@ -21,6 +22,7 @@ const emptyData: AccountData = { member: null, reports: [], orders: [], checkout
 
 const copy = {
   en: {
+    admin: "Administration", adminTesting: "Administrator · free report testing", adminTestingDetail: "Full reports created or saved to this account are available without payment. Start a report while logged in, or save an existing guest report to this account first.",
     home: "Home", tools: "Explore", account: "Your account", localeLabel: "Account language", signIn: "Log in", register: "Create account", logout: "Log out",
     eyebrow: "YOUR DESTINYPIXEL", title: "Keep your inner maps close.", intro: "Return to your reports, see what you have unlocked and keep your purchases in one place.",
     guestTitle: "A home for your reports", guestIntro: "Start with a free basic report. Create an account to keep your reports and purchase a full interpretation when you choose.",
@@ -28,6 +30,7 @@ const copy = {
     loading: "Loading your account…", loadError: "Your account could not be loaded. Please try again.", retry: "Try again", reports: "Your reports", reportsIntro: "Open a basic report to explore it or unlock its full interpretation.", noReports: "Your first map starts here.", noReportsBody: "Create a basic birth report and return here to find the reports linked to your account.", createReport: "Create a free basic report", open: "View report", basic: "Basic", full: "Full report", orders: "Purchases", noOrders: "No purchases yet.", noOrdersBody: "Full reports are a one-time purchase for each report. You can choose to unlock one from its report page.", date: "Date", purchase: "Purchase", amount: "Amount", status: "Status", orderId: "Order", accessTitle: "Free to begin. Go deeper when ready.", basicDetail: "Basic birth maps remain free.", fullDetail: "Unlock the full interpretation and timing for one report with a single payment.", perReport: "per report · one-time payment", noSubscription: "No subscription.", checkoutOff: "Purchases are not available yet. You can continue exploring basic reports.", sandbox: "Test checkout is enabled. These are sandbox purchases.", viewReportHint: "Choose a report to see its full-report offer.", signedIn: "Signed in as", contact: "Contact support", returnReport: "Return to your report", security: "Your purchases are confirmed by the payment service. Returning from checkout does not by itself unlock a report.",
   },
   zh: {
+    admin: "管理后台", adminTesting: "管理员 · 免费测试报告", adminTestingDetail: "此账号创建或保存的报告可免费阅读完整内容。请登录后创建报告；已有游客报告请先保存到此账号。",
     home: "首页", tools: "探索工具", account: "我的账号", localeLabel: "账号页面语言", signIn: "登录", register: "注册账号", logout: "退出登录",
     eyebrow: "我的 DESTINYPIXEL", title: "把你的内在图谱，留在身边。", intro: "随时回来阅读报告，查看已解锁的内容与购买记录。",
     guestTitle: "为你的报告安一个家", guestIntro: "从免费基础报告开始。注册账号保存报告，在需要时选择购买完整解读。",
@@ -171,6 +174,7 @@ export default function AccountExperience({ locale: initialLocale, returnTo, ini
             {message && <p className={styles.message} data-error={messageError} role={messageError ? "alert" : "status"}>{message}</p>}
           </section> : <>
             <section className={styles.identity}><div><span className={styles.eyebrow}>{text.signedIn}</span><strong>{data.member.name || data.member.email}</strong>{data.member.name && <span>{data.member.email}</span>}</div><button className={styles.linkButton} type="button" onClick={logout} disabled={busy}><LogOut size={15} aria-hidden="true" />{text.logout}</button></section>
+            {data.member.isAdmin && <section className={styles.panel}><h2>{text.adminTesting}</h2><p>{text.adminTestingDetail}</p><Link href={locale === "zh" ? "/admin?locale=zh" : "/admin"} className={styles.textLink}>{text.admin}<ArrowRight size={15} aria-hidden="true" /></Link></section>}
             {message && <p className={styles.message} data-error={messageError} role={messageError ? "alert" : "status"}>{message}</p>}
             <section className={styles.section}><div className={styles.sectionHeading}><div><h2>{text.reports}</h2><p>{text.reportsIntro}</p></div><span className={styles.count}>{data.reports.length}</span></div>
               {data.reports.length ? <div className={styles.reportList}>{data.reports.map((report) => <article key={report.id} className={styles.reportCard}><div className={styles.reportTop}><span className={styles.iconTile}><BookOpen size={19} aria-hidden="true" /></span><span className={styles.badge} data-full={report.access === "full"}>{report.access === "full" ? text.full : text.basic}</span></div><h3>{report.title}</h3><p className={styles.reportMeta}>{formatAccountDate(report.createdAt, locale)} · {report.locale.toUpperCase()}</p>{report.status && <p className={styles.reportMeta}>{accountStatus(report.status, locale)}</p>}<Link href={reportHref(report)} className={styles.textLink}>{text.open}<ArrowRight size={15} aria-hidden="true" /></Link></article>)}</div> : <div className={styles.empty}><BookOpen size={25} aria-hidden="true" /><h3>{text.noReports}</h3><p>{text.noReportsBody}</p><Link href={`${home}#report`} className={styles.primaryButton}>{text.createReport}<ArrowRight size={15} aria-hidden="true" /></Link></div>}
@@ -178,9 +182,9 @@ export default function AccountExperience({ locale: initialLocale, returnTo, ini
             <section className={styles.section}><div className={styles.sectionHeading}><h2>{text.orders}</h2><CreditCard size={19} aria-hidden="true" /></div>{data.orders.length ? <div className={styles.orderList}>{data.orders.map((order) => <article className={styles.order} key={order.id}><div><strong>{text.full}</strong>{order.mode === "sandbox" && <span className={styles.badge}>{locale === "zh" ? "沙盒测试订单" : "Sandbox order"}</span>}<span>{formatAccountDate(order.createdAt, locale)} · {text.orderId} {order.id.slice(0, 12)}</span>{order.reportId && <Link href={`/report/${encodeURIComponent(order.reportId)}?locale=${locale}`}>{text.open}<ArrowRight size={12} aria-hidden="true" /></Link>}</div><div><strong>{formatAccountMoney(order.amount, order.currency, locale)}</strong><span className={styles.badge} data-status={order.status}>{accountStatus(order.status, locale)}</span></div></article>)}</div> : <div className={styles.emptyCompact}><p>{text.noOrders}</p><span>{text.noOrdersBody}</span></div>}</section>
           </>}
         </div>
-        <aside className={styles.sideColumn}><section className={styles.accessCard}><span className={styles.iconTile}><Sparkles size={22} aria-hidden="true" /></span><h2>{text.accessTitle}</h2><p><Check size={15} aria-hidden="true" />{text.basicDetail}</p><p><Check size={15} aria-hidden="true" />{text.fullDetail}</p>{data.checkout.available && data.checkout.price ? <div className={styles.price}><strong>{formatAccountMoney(data.checkout.price, data.checkout.currency, locale)}</strong><span>{text.perReport}</span><small>{text.noSubscription}</small></div> : <p className={styles.availability}>{text.checkoutOff}</p>}{data.checkout.mode === "sandbox" && <p className={styles.availability}>{text.sandbox}</p>}<p className={styles.smallNote}>{text.viewReportHint}</p></section><a className={styles.support} href="mailto:anyulee@foxmail.com"><Mail size={16} aria-hidden="true" />{text.contact}<ArrowRight size={14} aria-hidden="true" /></a></aside>
+        <aside className={styles.sideColumn}><section className={styles.accessCard}><span className={styles.iconTile}><Sparkles size={22} aria-hidden="true" /></span><h2>{data.member?.isAdmin ? text.adminTesting : text.accessTitle}</h2>{data.member?.isAdmin ? <p>{text.adminTestingDetail}</p> : <><p><Check size={15} aria-hidden="true" />{text.basicDetail}</p><p><Check size={15} aria-hidden="true" />{text.fullDetail}</p>{data.checkout.available && data.checkout.price ? <div className={styles.price}><strong>{formatAccountMoney(data.checkout.price, data.checkout.currency, locale)}</strong><span>{text.perReport}</span><small>{text.noSubscription}</small></div> : <p className={styles.availability}>{text.checkoutOff}</p>}{data.checkout.mode === "sandbox" && <p className={styles.availability}>{text.sandbox}</p>}<p className={styles.smallNote}>{text.viewReportHint}</p></>}</section><a className={styles.support} href={destinySupportHref}><Mail size={16} aria-hidden="true" />{text.contact}<ArrowRight size={14} aria-hidden="true" /></a></aside>
       </div>}
     </div>
-    <footer className={styles.footer}><span>DestinyPixel</span><Link href={home}>{text.home}</Link><Link href={locale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{locale === "zh" ? "隐私说明" : "Privacy"}</Link><Link href={locale === "zh" ? "/service?locale=zh" : "/service"}>{locale === "zh" ? "服务说明" : "Service terms"}</Link><a href="mailto:anyulee@foxmail.com">{text.contact}</a></footer>
+    <footer className={styles.footer}><span>DestinyPixel</span><Link href={home}>{text.home}</Link><Link href={locale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{locale === "zh" ? "隐私说明" : "Privacy"}</Link><Link href={locale === "zh" ? "/service?locale=zh" : "/service"}>{locale === "zh" ? "服务说明" : "Service terms"}</Link><a href={destinySupportHref}>{text.contact}</a></footer>
   </main>;
 }

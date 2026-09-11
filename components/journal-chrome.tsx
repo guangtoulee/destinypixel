@@ -1,3 +1,4 @@
+import { destinySupportHref } from "@/lib/support-contact";
 import Link from "next/link";
 import { journalHref, type JournalLocale } from "@/lib/journal";
 import styles from "@/app/journal/journal.module.css";
@@ -24,7 +25,7 @@ export function JournalFooter({ locale }: { locale: JournalLocale }) {
   return (
     <footer className={styles.footer}>
       <div><strong>DestinyPixel</strong><p>{zh ? "把象征、计算与个人判断分清楚。" : "Clear distinctions between symbols, calculations and personal judgment."}</p></div>
-      <nav aria-label={zh ? "页脚导航" : "Footer navigation"}><Link href={journalHref(locale)}>{zh ? "全部文章" : "All articles"}</Link><Link href={zh ? "/tools?locale=zh" : "/tools"}>{zh ? "工具目录" : "Tool directory"}</Link><a href="mailto:anyulee@foxmail.com">{zh ? "联系反馈" : "Contact"}</a></nav>
+      <nav aria-label={zh ? "页脚导航" : "Footer navigation"}><Link href={journalHref(locale)}>{zh ? "全部文章" : "All articles"}</Link><Link href={zh ? "/tools?locale=zh" : "/tools"}>{zh ? "工具目录" : "Tool directory"}</Link><a href={destinySupportHref}>{zh ? "联系反馈" : "Contact"}</a></nav>
     </footer>
   );
 }

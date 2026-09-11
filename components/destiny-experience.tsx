@@ -1,5 +1,7 @@
 "use client";
 
+import { destinySupportEmail, destinySupportHref } from "@/lib/support-contact";
+
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
@@ -1024,9 +1026,9 @@ export default function DestinyExperience({
             <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
               {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
             </a>
-            <a className="footer-contact" href="mailto:anyulee@foxmail.com">
+            <a className="footer-contact" href={destinySupportHref}>
               <Mail size={13} aria-hidden="true" />
-              anyulee@foxmail.com
+              {destinySupportEmail}
             </a>
             <span>{text.usage}</span>
           </div>

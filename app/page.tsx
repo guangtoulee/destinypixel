@@ -1,3 +1,4 @@
+import { destinySupportEmail } from "@/lib/support-contact";
 import type { Metadata } from "next";
 import DestinyWhiteExperience from "@/components/destiny-white-experience";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
@@ -50,11 +51,11 @@ export default async function Home({
       name: siteName,
       url: absoluteUrl("/"),
       logo: absoluteUrl("/icon.svg"),
-      email: "anyulee@foxmail.com",
+      email: destinySupportEmail,
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
-        email: "anyulee@foxmail.com",
+        email: destinySupportEmail,
         availableLanguage: ["English", "Simplified Chinese", "Traditional Chinese", "Russian"],
       },
     },
