@@ -1,4 +1,4 @@
--- Apply after schema.sql and membership-auth.sql. No existing report content is removed.
+-- Apply after main-site-baseline.sql and membership-auth.sql. No existing report content is removed.
 begin;
 create table if not exists public.destiny_report_access (
   report_id uuid primary key references public.reports(id) on delete cascade,

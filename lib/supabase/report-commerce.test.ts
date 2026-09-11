@@ -58,12 +58,27 @@ test("membership and report commerce migrations enforce durable private state", 
 
   try {
     await db.exec("create role anon nologin; create role authenticated nologin; create role service_role nologin bypassrls; grant usage on schema public to anon, authenticated, service_role;");
-    const migrations = await Promise.all(["schema.sql", "membership-auth.sql", "report-commerce.sql"].map(name => readFile(new URL(name, import.meta.url), "utf8")));
+    const migrations = await Promise.all(["main-site-baseline.sql", "membership-auth.sql", "report-commerce.sql"].map(name => readFile(new URL(name, import.meta.url), "utf8")));
     await t.test("all migrations execute unchanged and rerun without removing existing data", async () => {
       for (const migration of migrations) await db.exec(migration);
       await db.query("insert into destiny_members(id,email,email_normalized,password_salt,password_hash) values($1,'first@example.test','first@example.test',$3,$4),($2,'second@example.test','second@example.test',$3,$4)", [firstMember, secondMember, "s".repeat(22), "h".repeat(43)]);
       for (const migration of migrations) await db.exec(migration);
       assert.equal(await scalar<number>("select count(*)::integer as value from destiny_members"), 2);
+    });
+
+    await t.test("main-site migrations neither create nor change independent application tables", async () => {
+      assert.equal(await scalar<string | null>("select to_regclass('public.english_members')::text as value"), null);
+      assert.equal(await scalar<string | null>("select to_regclass('public.prompt_items')::text as value"), null);
+      // Deliberately different synthetic schemas prove the main-site baseline
+      // does not assume ownership of another application's tables or policies.
+      await db.exec("create table public.english_members(id integer primary key, sentinel text); create table public.prompt_items(id integer primary key, sentinel text); insert into public.english_members values(1,'preserved'); insert into public.prompt_items values(2,'preserved'); alter table public.english_members enable row level security; create policy preserve_independent_policy on public.english_members for select to anon using(true); grant select on public.english_members to anon;");
+      const metadata = () => db.query("select relname,relrowsecurity,relacl::text from pg_class where oid in ('public.english_members'::regclass,'public.prompt_items'::regclass) order by relname");
+      const before = await metadata();
+      for (const migration of migrations) await db.exec(migration);
+      assert.deepEqual((await metadata()).rows, before.rows);
+      assert.equal(await scalar<number>("select count(*)::integer as value from pg_policies where policyname='preserve_independent_policy'"), 1);
+      assert.equal(await scalar<string>("select sentinel as value from public.english_members where id=1"), "preserved");
+      assert.equal(await scalar<string>("select sentinel as value from public.prompt_items where id=2"), "preserved");
     });
 
     await t.test("RLS and explicit table/function privileges isolate browser roles", async () => {
