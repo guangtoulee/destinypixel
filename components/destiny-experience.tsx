@@ -162,7 +162,7 @@ const copy: Record<ContentLocale, Copy> = {
       premiumLabel: "Your sky layer",
       premiumTitle: "Add time and place to complete the picture",
       premiumDescription:
-        "See how your Sun, Moon, ten planetary drives, houses, and aspects amplify or challenge this core archetype.",
+        "See how your Sun, Moon, ten planetary drives, and aspects amplify or challenge this core archetype.",
       premiumButton: "Explore the full fusion",
     },
     method: {
@@ -175,7 +175,7 @@ const copy: Record<ContentLocale, Copy> = {
         "Ten Heavenly Stems become ten approachable modes of energy; the twelve Earthly Branches become memorable animal fields.",
       skyTitle: "Planetary drives",
       skyCopy:
-        "The Sun, Moon, planets, signs, houses, and aspects show how that core seeks, feels, acts, bonds, and matures.",
+        "The Sun, Moon, planets, signs, and aspects show how that core seeks, feels, acts, bonds, and matures.",
       synthesisTitle: "Resonance",
       synthesisCopy:
         "Shared signals become the headline. Contradictions become the most useful part of the reading.",
@@ -205,7 +205,7 @@ const copy: Record<ContentLocale, Copy> = {
         "Your premium report combines the full Four Pillars with a precise natal chart, then translates both into one coherent personality and timing narrative.",
       items: [
         "Four Pillars, ten gods, and elemental balance",
-        "Sun, Moon, planets, houses, and major aspects",
+        "Sun, Moon, planets, and major aspects",
         "Repeated traits, inner contradictions, and timing windows",
       ],
       button: "Build my full profile",
@@ -258,7 +258,7 @@ const copy: Record<ContentLocale, Copy> = {
       premiumLabel: "你的星空层",
       premiumTitle: "加入时间与地点，补全人格图景",
       premiumDescription:
-        "太阳、月亮、十大行星驱力、宫位与相位，会如何放大、修饰或挑战你的核心原型。",
+        "太阳、月亮、十大行星驱力与相位，会如何放大、修饰或挑战你的核心原型。",
       premiumButton: "探索完整融合报告",
     },
     method: {
@@ -271,7 +271,7 @@ const copy: Record<ContentLocale, Copy> = {
         "十天干被翻译为十种易于理解的能量模式，十二地支则成为十二个有记忆点的动物场域。",
       skyTitle: "行星驱力",
       skyCopy:
-        "太阳、月亮、行星、星座、宫位与相位，描述核心人格如何追求、感受、行动、连接与成熟。",
+        "太阳、月亮、行星、星座与相位，描述核心人格如何追求、感受、行动、连接与成熟。",
       synthesisTitle: "共振关系",
       synthesisCopy:
         "重复出现的信号成为人格主线；彼此矛盾的部分，则成为最有价值的洞察。",
@@ -301,7 +301,7 @@ const copy: Record<ContentLocale, Copy> = {
         "高级报告融合完整四柱与精确出生星盘，再把两者翻译为一套连贯的人格、关系与时间叙事。",
       items: [
         "四柱、十神与五行能量平衡",
-        "太阳、月亮、行星、宫位与主要相位",
+        "太阳、月亮、行星与主要相位",
         "重复特质、内在矛盾与重要时间窗口",
       ],
       button: "生成完整个人图谱",
@@ -355,7 +355,7 @@ const copy: Record<ContentLocale, Copy> = {
       premiumLabel: "Ваш небесный слой",
       premiumTitle: "Добавьте время и место, чтобы завершить картину",
       premiumDescription:
-        "Солнце, Луна, десять планетарных импульсов, дома и аспекты показывают, как небо усиливает или проверяет ваш базовый архетип.",
+        "Солнце, Луна, десять планетарных импульсов и аспекты показывают, как небо усиливает или проверяет ваш базовый архетип.",
       premiumButton: "Открыть полный синтез",
     },
     method: {
@@ -368,7 +368,7 @@ const copy: Record<ContentLocale, Copy> = {
         "Десять небесных стволов становятся понятными режимами энергии, а двенадцать земных ветвей — запоминающимися животными полями.",
       skyTitle: "Планетарные импульсы",
       skyCopy:
-        "Солнце, Луна, планеты, знаки, дома и аспекты показывают, как ядро ищет, чувствует, действует, соединяется и взрослеет.",
+        "Солнце, Луна, планеты, знаки и аспекты показывают, как ядро ищет, чувствует, действует, соединяется и взрослеет.",
       synthesisTitle: "Резонанс",
       synthesisCopy:
         "Повторяющиеся сигналы становятся главной линией. Противоречия превращаются в самую полезную часть чтения.",
@@ -398,7 +398,7 @@ const copy: Record<ContentLocale, Copy> = {
         "Премиальный отчет объединяет все четыре столпа с точной натальной картой и переводит их в цельную историю личности и времени.",
       items: [
         "Четыре столпа, десять богов и баланс стихий",
-        "Солнце, Луна, планеты, дома и главные аспекты",
+        "Солнце, Луна, планеты и главные аспекты",
         "Повторяющиеся черты, внутренние противоречия и окна времени",
       ],
       button: "Построить полный профиль",

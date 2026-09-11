@@ -19,8 +19,9 @@ async function paypalRequest<T>(path: string, method: "GET" | "POST", body?: unk
   } catch { throw new PaymentUnavailableError(); }
 }
 
-export function createPaypalOrder(input: { localId: string; amount: string; origin: string }) {
-  return paypalRequest<PaypalOrder>("/v2/checkout/orders", "POST", { intent: "CAPTURE", purchase_units: [{ reference_id: "full_report", custom_id: input.localId, description: "DestinyPixel full birth report", amount: { currency_code: "USD", value: input.amount } }], payment_source: { paypal: { experience_context: { brand_name: "DestinyPixel", shipping_preference: "NO_SHIPPING", user_action: "PAY_NOW", return_url: `${input.origin}/checkout/paypal/return?order=${input.localId}`, cancel_url: `${input.origin}/checkout/paypal/cancel?order=${input.localId}` } } } }, `create-${input.localId}`);
+export function createPaypalOrder(input: { localId: string; amount: string; origin: string; locale?: "en" | "zh" }) {
+  const language = input.locale === "zh" ? "&locale=zh" : "";
+  return paypalRequest<PaypalOrder>("/v2/checkout/orders", "POST", { intent: "CAPTURE", purchase_units: [{ reference_id: "full_report", custom_id: input.localId, description: "DestinyPixel full birth report", amount: { currency_code: "USD", value: input.amount } }], payment_source: { paypal: { experience_context: { brand_name: "DestinyPixel", shipping_preference: "NO_SHIPPING", user_action: "PAY_NOW", return_url: `${input.origin}/checkout/paypal/return?order=${input.localId}${language}`, cancel_url: `${input.origin}/checkout/paypal/cancel?order=${input.localId}${language}` } } } }, `create-${input.localId}`);
 }
 export const fetchPaypalOrder = (id: string) => paypalRequest<PaypalOrder>(`/v2/checkout/orders/${encodeURIComponent(id)}`, "GET");
 export const capturePaypalOrder = (id: string, localId: string) => paypalRequest<PaypalOrder>(`/v2/checkout/orders/${encodeURIComponent(id)}/capture`, "POST", {}, `capture-${localId}`);

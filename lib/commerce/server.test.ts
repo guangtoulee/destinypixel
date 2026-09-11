@@ -478,6 +478,20 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com")), false);
     });
 
+    await scenario("checkout preserves Chinese return and cancel pages without accepting arbitrary redirect input", async () => {
+      for (const locale of ["zh", "en", undefined, "zh&return_url=https://evil.example", { locale: "zh" }]) {
+        reset(); signIn(); providerOrder.status = "CREATED"; providerOrder.purchase_units![0].payments = undefined;
+        const response = await checkout.POST(request("/api/checkout/paypal", { reportId, locale, returnUrl: "https://evil.example" }));
+        assert.equal(response.status, 200);
+        const create = calls.find(call => call.url.pathname === "/v2/checkout/orders" && call.method === "POST")!;
+        const context = (create.body.payment_source as { paypal: { experience_context: { return_url: string; cancel_url: string } } }).paypal.experience_context;
+        const suffix = locale === "zh" ? "&locale=zh" : "";
+        assert.equal(context.return_url, `https://site.example.test/checkout/paypal/return?order=${orderId}${suffix}`);
+        assert.equal(context.cancel_url, `https://site.example.test/checkout/paypal/cancel?order=${orderId}${suffix}`);
+        assert.equal(create.headers.get("paypal-request-id"), `create-${orderId}`);
+      }
+    });
+
     await scenario("capture requires the order's member and repeated requests use the same capture key", async () => {
       orders = [{ ...baseOrder }];
       let response = await captureRoute.POST(request("/api/checkout/paypal/capture", { orderId }));

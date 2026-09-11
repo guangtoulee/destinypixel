@@ -11,6 +11,7 @@ export const maxDuration=60;
 export async function POST(request:Request){
   try {
     assertMutation(request); const body=await readBody(request);
+    const locale=body.locale==="zh" ? "zh" : "en";
     if(!isReportId(body.reportId))return privateJson({error:"Invalid report."},400);
     const access=await claimReportForMember(body.reportId);
     if(!access?.member)return privateJson({error:"Sign in with access to this report."},401);
@@ -26,7 +27,7 @@ export async function POST(request:Request){
     }
     let row=await databaseRequest<ReportOrder>("rpc/destiny_begin_checkout",{method:"POST",body:{p_report:body.reportId,p_member:access.member.id,p_amount:reportPriceCents(),p_currency:"USD",p_mode:offer.mode}});
     const origin=new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.destinypixel.com").origin;
-    let order=row.paypal_order_id ? await fetchPaypalOrder(row.paypal_order_id) : await createPaypalOrder({localId:row.id,amount:(row.amount_cents/100).toFixed(2),origin});
+    let order=row.paypal_order_id ? await fetchPaypalOrder(row.paypal_order_id) : await createPaypalOrder({localId:row.id,amount:(row.amount_cents/100).toFixed(2),origin,locale});
     // A missing provider resource or network error is never evidence of nonpayment.
     // Only explicitly VOIDED old, uncaptured orders can be atomically replaced.
     if(order.status==="VOIDED"){
@@ -34,7 +35,7 @@ export async function POST(request:Request){
       if(!row.paypal_order_id || row.status!=="created" || row.capture_id || order.purchase_units?.some(unit=>unit.payments?.captures?.length) || !Number.isFinite(created) || Date.now()-created<3*60*60*1000
         || !validateOrderIdentity(order,{localId:row.id,paypalId:row.paypal_order_id,amountCents:row.amount_cents,currency:row.currency,merchantId:process.env.PAYPAL_MERCHANT_ID}))throw new PaymentUnavailableError();
       row=await databaseRequest<ReportOrder>("rpc/destiny_replace_voided_checkout",{method:"POST",body:{p_order:row.id,p_member:access.member.id,p_paypal_order:row.paypal_order_id,p_amount:reportPriceCents(),p_currency:"USD",p_mode:offer.mode}});
-      order=row.paypal_order_id ? await fetchPaypalOrder(row.paypal_order_id) : await createPaypalOrder({localId:row.id,amount:(row.amount_cents/100).toFixed(2),origin});
+      order=row.paypal_order_id ? await fetchPaypalOrder(row.paypal_order_id) : await createPaypalOrder({localId:row.id,amount:(row.amount_cents/100).toFixed(2),origin,locale});
       if(order.status==="VOIDED")throw new PaymentUnavailableError();
     }
     if(!order.id)throw new PaymentUnavailableError();

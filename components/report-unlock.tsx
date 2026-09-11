@@ -47,7 +47,7 @@ export default function ReportUnlock({ reportId, locale, isMember, claimable, of
     setBusy(true); setError("");
     trackToolEvent("checkout_start", "report_checkout");
     try {
-      const response = await fetch("/api/checkout/paypal", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ reportId }) });
+      const response = await fetch("/api/checkout/paypal", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ reportId, locale: contentLocale(locale) === "zh" ? "zh" : "en" }) });
       const body = await response.json();
       if (response.status === 401) { router.push(accountPath); return; }
       if (response.status === 409 && body.alreadyUnlocked === true) { router.refresh(); return; }

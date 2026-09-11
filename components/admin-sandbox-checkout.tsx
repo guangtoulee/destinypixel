@@ -36,7 +36,7 @@ export default function AdminSandboxCheckout({ locale, isAdmin, offer, reports }
     if (!enabled || busy || !reports.some(report => report.id === reportId)) return;
     setBusy(true); setMessage("");
     try {
-      const response = await fetch("/api/checkout/paypal", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ reportId, sandboxTest: true }) });
+      const response = await fetch("/api/checkout/paypal", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ reportId, sandboxTest: true, locale }) });
       const result = await response.json();
       if (response.status === 409 && result.alreadyUnlocked === true) { setMessage(text.done); return; }
       if (!response.ok) throw new Error("sandbox_unavailable");
