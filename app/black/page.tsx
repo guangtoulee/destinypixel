@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DestinyExperience from "@/components/destiny-experience";
+import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { makePageMetadata, routeSeo } from "@/lib/seo";
 
@@ -17,10 +18,10 @@ export async function generateMetadata({
 export default async function BlackHome({
   searchParams,
 }: {
-  searchParams?: Promise<{ locale?: string }>;
+  searchParams?: Promise<{ locale?: string; error?: string }>;
 }) {
   const params = await searchParams;
   const initialLocale = normalizeReportLocale(params?.locale ?? "en");
 
-  return <DestinyExperience initialLocale={initialLocale} />;
+  return <DestinyExperience initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} />;
 }

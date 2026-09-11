@@ -26,6 +26,12 @@ test("only controlled campaign labels survive URL sanitization", () => {
   assert.equal(sanitizeAnalyticsUrl("invalid"), null);
 });
 
+test("account and checkout analytics remove credentials and payment identifiers",()=>{
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/account?reset=PRIVATE&returnTo=%2Freport%2FPRIVATE&email=PRIVATE&locale=zh"),"https://www.destinypixel.com/account?locale=zh");
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/checkout/paypal/return?order=PRIVATE&token=PRIVATE&PayerID=PRIVATE"),"https://www.destinypixel.com/checkout/paypal/return");
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/admin"),null);
+});
+
 test("form event names are from the product allowlist", () => {
   assert.equal(toolForForm("totem"), "totem");
   assert.equal(toolForForm("prompt_expand"), "prompt_expand");

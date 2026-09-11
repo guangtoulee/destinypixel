@@ -15,11 +15,13 @@ import { resolveCity } from "@/lib/geo/cities";
 import {
   type BirthInput,
   calculateTrueSolarTime,
+  resolveBirthInstant,
   trueSolarTimeToParts,
 } from "@/lib/engines/time";
 
 export type BaziData = {
   engine: "bazi";
+  calculationConvention?: typeof baziCalculationConvention;
   trueSolarTime: ReturnType<typeof calculateTrueSolarTime>;
   pillars: {
     year: string;
@@ -38,6 +40,16 @@ export type BaziData = {
   };
   luck: BaziLuckData;
 };
+
+export const baziCalculationConvention = {
+  yearBoundary: "Exact LiChun instant",
+  monthBoundary: "Exact 12 Jie instants, not the intervening Qi",
+  termClock: "lunar-javascript ephemeris at fixed UTC+08:00; compare actual instants",
+  dayClock: "Local apparent solar clock using the documented approximate equation of time",
+  dayBoundary: "Midnight, lunar-javascript EightChar sect 2 (late Zi retains the current day pillar)",
+  hourPillar: "lunar-javascript EightChar.getTime on the local solar clock",
+  luckStart: "Elapsed UTC days to the directional Jie divided by 3; ages rounded to 0.1 year and calendar years approximate",
+} as const;
 
 const elements = ["Wood", "Fire", "Earth", "Metal", "Water"] as const;
 const pillarKeys = ["year", "month", "day", "hour"] as const;
@@ -204,7 +216,10 @@ type LunarDate = ReturnType<ReturnType<typeof Solar.fromYmdHms>["getLunar"]> & {
   getPrevJie(wholeDay: boolean): JieQiDate;
 };
 
-function solarToUtcMs(solar: SolarDate) {
+function ephemerisSolarToUtcMs(solar: SolarDate) {
+  // lunar-javascript ShouXingUtil.qiAccurate adds ONE_THIRD (=8 hours)
+  // to its UT ephemeris. Its Solar term labels are fixed UTC+08, including
+  // historical years, not the birthplace's civil zone or its solar clock.
   return Date.UTC(
     solar.getYear(),
     solar.getMonth() - 1,
@@ -212,7 +227,7 @@ function solarToUtcMs(solar: SolarDate) {
     solar.getHour(),
     solar.getMinute(),
     solar.getSecond(),
-  );
+  ) - 8 * 60 * 60 * 1000;
 }
 
 function movePillar(pillar: string, offset: number) {
@@ -252,19 +267,11 @@ function calculateLuckData(
   const referenceJieQi =
     direction === "forward" ? lunar.getNextJie(false) : lunar.getPrevJie(false);
   const referenceSolar = referenceJieQi.getSolar();
-  const trueSolarParts = trueSolarTimeToParts(trueSolarTime);
-  const birthSolar = Solar.fromYmdHms(
-    trueSolarParts.year,
-    trueSolarParts.month,
-    trueSolarParts.day,
-    trueSolarParts.hour,
-    trueSolarParts.minute,
-    0,
-  ) as unknown as SolarDate;
+  const birthUtcMs = Date.parse(trueSolarTime.utcIso ?? resolveBirthInstant(input).utcIso);
   const deltaDays =
-    Math.abs(solarToUtcMs(referenceSolar) - solarToUtcMs(birthSolar)) /
+    Math.abs(ephemerisSolarToUtcMs(referenceSolar) - birthUtcMs) /
     86_400_000;
-  const startAge = Math.max(1, roundToOneDecimal(deltaDays / 3));
+  const startAge = roundToOneDecimal(deltaDays / 3);
   const birthYear = Number(input.birthDate.slice(0, 4));
   const startYear = Math.round(birthYear + startAge);
   const step = direction === "forward" ? 1 : -1;
@@ -292,7 +299,7 @@ function calculateLuckData(
     direction,
     startAge,
     startYear,
-    calculationNote: `${direction} luck cycle from solar term boundary ${referenceJieQi.getName()} at ${referenceSolar.toYmdHms()}; one day is treated as roughly four months.`,
+    calculationNote: `${direction} luck cycle measured in UTC to ${referenceJieQi.getName()} at ${new Date(ephemerisSolarToUtcMs(referenceSolar)).toISOString()}; three elapsed days represent one year. Displayed ages are rounded to 0.1 year; cycle calendar years are approximate, not exact handover dates.`,
     tenYearLuck,
     activeTenYearLuck: tenYearLuck.find(
       (cycle) => targetYear >= cycle.startYear && targetYear <= cycle.endYear,
@@ -304,12 +311,24 @@ export function calculateBaziEngine(input: BirthInput): BaziData {
   const trueSolarTime = calculateTrueSolarTime(input);
   const { year, month, day, hour, minute } =
     trueSolarTimeToParts(trueSolarTime);
-  const lunar = Solar.fromYmdHms(year, month, day, hour, minute, 0).getLunar();
+  const solarClockEightChar = Solar.fromYmdHms(year, month, day, hour, minute, 0).getLunar().getEightChar();
+  solarClockEightChar.setSect(2);
+
+  // Year/month boundaries are global solar-term instants. Comparing the local
+  // solar-clock label to Beijing ephemeris labels incorrectly moves boundaries
+  // by hours for overseas births (and by the EoT even within China).
+  // Official API semantics: https://6tail.cn/calendar/lunar.ganzhi.html
+  const birthUtcMs = Date.parse(trueSolarTime.utcIso ?? resolveBirthInstant(input).utcIso);
+  const termClock = new Date(birthUtcMs + 8 * 60 * 60 * 1000);
+  const termLunar = Solar.fromYmdHms(
+    termClock.getUTCFullYear(), termClock.getUTCMonth() + 1, termClock.getUTCDate(),
+    termClock.getUTCHours(), termClock.getUTCMinutes(), termClock.getUTCSeconds(),
+  ).getLunar();
   const pillars = {
-    year: lunar.getYearInGanZhi(),
-    month: lunar.getMonthInGanZhi(),
-    day: lunar.getDayInGanZhi(),
-    hour: lunar.getTimeInGanZhi(),
+    year: termLunar.getYearInGanZhiExact(),
+    month: termLunar.getMonthInGanZhiExact(),
+    day: solarClockEightChar.getDay(),
+    hour: solarClockEightChar.getTime(),
   };
   const balance = emptyBalance();
 
@@ -317,10 +336,11 @@ export function calculateBaziEngine(input: BirthInput): BaziData {
 
   const dayMaster = pillars.day[0] as HeavenlyStem;
   const tenGods = calculateTenGods(pillars, dayMaster);
-  const luck = calculateLuckData(input, lunar as LunarDate, pillars, trueSolarTime);
+  const luck = calculateLuckData(input, termLunar as LunarDate, pillars, trueSolarTime);
 
   return {
     engine: "bazi",
+    calculationConvention: baziCalculationConvention,
     trueSolarTime,
     pillars,
     dayMaster,

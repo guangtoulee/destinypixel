@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
+import { journalArticles, journalHref } from "@/lib/journal";
 
 const publicRoutes = [
   { path: routeSeo.home.path, priority: 1, changeFrequency: "weekly" },
@@ -38,5 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
   });
 
-  return primaryRoutes;
+  const journalRoutes: MetadataRoute.Sitemap = [undefined, ...journalArticles].flatMap((article) => {
+    const languages = {
+      en: absoluteUrl(journalHref("en", article?.slug)),
+      "zh-Hans": absoluteUrl(journalHref("zh", article?.slug)),
+      "x-default": absoluteUrl(journalHref("en", article?.slug)),
+    };
+    return (["en", "zh"] as const).map((locale) => ({
+      url: absoluteUrl(journalHref(locale, article?.slug)),
+      lastModified: article?.updatedAt ?? journalArticles.map((item) => item.updatedAt).sort().at(-1),
+      changeFrequency: article ? "monthly" : "weekly",
+      priority: article ? 0.7 : 0.75,
+      alternates: { languages },
+    }));
+  });
+  return [...primaryRoutes, ...journalRoutes];
 }

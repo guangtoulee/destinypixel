@@ -792,8 +792,10 @@ function setDocumentLocale(locale: ReportLocale) {
 
 export default function DestinyWhiteExperience({
   initialLocale = "en",
+  initialError,
 }: {
   initialLocale?: ReportLocale;
+  initialError?: string;
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
@@ -828,7 +830,7 @@ export default function DestinyWhiteExperience({
   useEffect(() => {
     const now = new Date();
     if (birthDateInputRef.current) {
-      birthDateInputRef.current.max = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+      birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     }
   }, []);
 
@@ -881,7 +883,7 @@ export default function DestinyWhiteExperience({
 
   return (
     <main className="white-site">
-      <header className="white-header">
+      <header className="white-header membership-header">
         <div className="white-container white-header__inner">
           <a className="white-brand" href="/">
             <span aria-hidden="true" />
@@ -896,9 +898,13 @@ export default function DestinyWhiteExperience({
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
+            <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
+              {copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+            </a>
           </nav>
 
           <div className="white-actions">
+            <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? "我的账号" : "Account"}</a>
             <a href={`/black?locale=${locale}`} className="white-black-link">
               {text.nav.black}
             </a>
@@ -983,6 +989,7 @@ export default function DestinyWhiteExperience({
             </div>
 
             <form action={createFusionReportAction} data-analytics-form="birth_report">
+              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError}</p>}
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
@@ -1004,6 +1011,8 @@ export default function DestinyWhiteExperience({
                 <input
                   name="birthDate"
                   type="date"
+                  min="1800-01-01"
+                  max="2100-12-31"
                   value={birthDate}
                   ref={birthDateInputRef}
                   onChange={(event) => updatePreviewFromDate(event.target.value)}
@@ -1060,7 +1069,7 @@ export default function DestinyWhiteExperience({
 
             <p className="white-form-note">
               <ShieldCheck size={14} aria-hidden="true" />
-              {text.hero.privacy}
+              {text.hero.privacy} <a href={copyLocale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{copyLocale === "zh" ? "数据说明" : "Data use"}</a> · <a href={copyLocale === "zh" ? "/service?locale=zh" : "/service"}>{copyLocale === "zh" ? "报告说明" : "Report guide"}</a>
             </p>
             <a className="white-totem-entry" href={`/tuteng?locale=${locale}`}>
               <Orbit size={15} aria-hidden="true" />
@@ -1413,6 +1422,9 @@ export default function DestinyWhiteExperience({
           </a>
           <a href="/learn">
             {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
+          </a>
+          <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
+            {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
           </a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}

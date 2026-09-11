@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 95],
   },
+  async headers() {
+    return ["/report/:path*", "/account/:path*", "/admin/:path*", "/checkout/:path*"].map(source => ({
+      source,
+      headers: [{ key: "Referrer-Policy", value: "no-referrer" }, { key: "X-Robots-Tag", value: "noindex, nofollow" }],
+    }));
+  },
   async rewrites() {
     return [
       {

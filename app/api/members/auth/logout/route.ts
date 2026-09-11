@@ -1,12 +1,17 @@
 import { cookies } from "next/headers";
-import { destinyMemberSessionCookie } from "@/lib/member-store";
+import { destinyMemberSessionCookie, revokeDestinyMemberSession } from "@/lib/member-store";
+import { assertSameOriginMemberMutation, memberAuthErrorResponse, memberAuthJson } from "@/lib/member-auth-security";
 
 export const runtime = "nodejs";
 
-export async function POST() {
-  const cookieStore = await cookies();
-
-  cookieStore.delete(destinyMemberSessionCookie);
-
-  return Response.json({ ok: true });
+export async function POST(request: Request) {
+  try {
+    assertSameOriginMemberMutation(request);
+    const cookieStore = await cookies();
+    await revokeDestinyMemberSession(cookieStore.get(destinyMemberSessionCookie)?.value ?? "");
+    cookieStore.delete(destinyMemberSessionCookie);
+    return memberAuthJson({ ok: true });
+  } catch (error) {
+    return memberAuthErrorResponse(error);
+  }
 }

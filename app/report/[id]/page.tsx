@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import {
   ArrowLeft,
   CalendarDays,
@@ -10,31 +9,25 @@ import {
   MapPin,
   Orbit,
   Sparkles,
+  Gem,
+  LockKeyhole,
+  ArrowRight,
   UserRound,
 } from "lucide-react";
 import PillarImageLightbox from "@/components/pillar-image-lightbox";
 import ReportExperience from "@/components/report-experience";
 import {
-  createInitialAIReportContent,
   type Gender,
   type NatalBookSections,
 } from "@/lib/ai/report";
 import {
   fallbackNatalText,
   fallbackTransitText,
-  type ReportGenerationContext,
 } from "@/lib/ai/streaming";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
-import { getReportRecord, type ReportRecord } from "@/lib/db/repository";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
-import { calculateBaziEngine, type BaziData } from "@/lib/engines/bazi";
-import { calculateAstrologyEngine } from "@/lib/engines/astrology";
-import {
-  decodeReportDraft,
-  getReportDraftCookieName,
-  type DraftReportInput,
-} from "@/lib/report-draft";
+import type { BaziData } from "@/lib/engines/bazi";
 import {
   contentLocale,
   elementLabels,
@@ -45,6 +38,12 @@ import {
   zodiacLabels,
   type ReportLocale,
 } from "@/lib/report-i18n";
+
+import { getReportAccess } from "@/lib/commerce/access";
+import { buildReportGenerationContext, calculateReportBazi } from "@/lib/commerce/report-context";
+import { elementStyle, getGemstonesForElement, targetElement } from "@/lib/energy-style";
+import ReportUnlock from "@/components/report-unlock";
+import unlockStyles from "@/components/report-unlock.module.css";
 
 export const maxDuration = 60;
 
@@ -61,60 +60,11 @@ export const metadata: Metadata = {
   },
 };
 
-function createDraftReportRecord(
-  id: string,
-  input: DraftReportInput,
-): ReportRecord {
-  const bazi = calculateBaziEngine(input);
-  const astro = calculateAstrologyEngine(input, bazi.trueSolarTime);
-  const profile = (pillarsDB as Record<string, PillarProfile>)[
-    bazi.pillars.day
-  ];
-  const now = new Date().toISOString();
-  const birthRecordId = `draft-${id}`;
-  const aiContent = createInitialAIReportContent({
-    bazi,
-    astro,
-    profile,
-    gender: input.gender,
-    locale: input.locale,
-  });
-
-  return {
-    id,
-    user_id: "draft-user",
-    birth_record_id: birthRecordId,
-    status: "ai_pending",
-    created_at: now,
-    bazi_data: bazi,
-    astro_data: astro,
-    ai_content: aiContent,
-    user: {
-      id: "draft-user",
-      name: input.name,
-      email: null,
-    },
-    birth_record: {
-      id: birthRecordId,
-      name: input.name,
-      gender: input.gender,
-      locale: input.locale,
-      birth_date: input.birthDate,
-      birth_time: input.birthTime,
-      birth_place: input.city.label,
-      latitude: input.city.latitude,
-      longitude: input.city.longitude,
-      timezone: input.city.timezone,
-      true_solar_time: bazi.trueSolarTime.isoLike,
-    },
-  };
-}
-
 function BaziChart({
   pillars,
   locale,
 }: {
-  pillars: ReportGenerationContext["bazi"]["pillars"];
+  pillars: BaziData["pillars"];
   locale: ReportLocale;
 }) {
   const copy = reportCopy[contentLocale(locale)];
@@ -168,11 +118,9 @@ function BaziChart({
 function ReportLanguageLinks({
   reportId,
   locale,
-  draft,
 }: {
   reportId: string;
   locale: ReportLocale;
-  draft?: string;
 }) {
   return (
     <div className="language-switch report-language-switch" aria-label="Language selector">
@@ -180,9 +128,7 @@ function ReportLanguageLinks({
       {reportLanguageOptions.map((option) => (
         <Link
           key={option.value}
-          href={`/report/${reportId}?locale=${option.value}${
-            draft ? `&draft=${encodeURIComponent(draft)}` : ""
-          }`}
+          href={`/report/${encodeURIComponent(reportId)}?locale=${option.value}`}
           data-active={locale === option.value}
         >
           {option.value === "zh"
@@ -196,49 +142,6 @@ function ReportLanguageLinks({
       ))}
     </div>
   );
-}
-
-function buildLuckDisplay(
-  luck: BaziData["luck"] | undefined,
-  locale: ReportLocale,
-): ReportGenerationContext["bazi"]["luck"] | undefined {
-  if (!luck) {
-    return undefined;
-  }
-
-  const directionLabel =
-    contentLocale(locale) === "zh"
-      ? luck.direction === "forward"
-        ? "顺行"
-        : "逆行"
-      : locale === "ru"
-        ? luck.direction === "forward"
-          ? "прямое движение"
-          : "обратное движение"
-        : luck.direction === "forward"
-          ? "Forward"
-          : "Reverse";
-  const withDisplay = (cycle: (typeof luck.tenYearLuck)[number]) => ({
-    ...cycle,
-    pillarDisplay: getPillarDisplay(cycle.pillar, locale).pillarLabel,
-  });
-
-  return {
-    ...luck,
-    currentYearPillarDisplay: getPillarDisplay(
-      luck.currentYearPillar,
-      locale,
-    ).pillarLabel,
-    previousYearPillarDisplay: getPillarDisplay(
-      luck.previousYearPillar,
-      locale,
-    ).pillarLabel,
-    directionLabel,
-    tenYearLuck: luck.tenYearLuck.map(withDisplay),
-    activeTenYearLuck: luck.activeTenYearLuck
-      ? withDisplay(luck.activeTenYearLuck)
-      : undefined,
-  };
 }
 
 function buildInitialNatalShell({
@@ -307,37 +210,28 @@ export default async function ReportPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams?: Promise<{ locale?: string; draft?: string }>;
+  searchParams?: Promise<{ locale?: string }>;
 }) {
   const { id } = await params;
   const query = await searchParams;
-  const storedReport = await getReportRecord(id);
-  const cookieStore = await cookies();
-  const draft =
-    query?.draft ?? cookieStore.get(getReportDraftCookieName(id))?.value;
-  const draftInput = decodeReportDraft(draft);
-  const report =
-    storedReport ?? (draftInput ? createDraftReportRecord(id, draftInput) : null);
-
+  const access = await getReportAccess(id);
+  const requestedLocale = normalizeReportLocale(query?.locale ?? "en");
+  if (!access.canRead) {
+    const isChinese = contentLocale(requestedLocale) === "zh";
+    const destination = `/report/${encodeURIComponent(id)}?locale=${requestedLocale}`;
+    const accountLink = `/account?${isChinese ? "locale=zh&" : ""}returnTo=${encodeURIComponent(destination)}`;
+    return <main className={unlockStyles.privatePage} lang={isChinese ? "zh-Hans" : "en"}>
+      <section className={unlockStyles.privateCard}>
+        <LockKeyhole size={28} aria-hidden="true" />
+        <h1>{isChinese ? "这是一份私人报告。" : "This is a private report."}</h1>
+        <p>{isChinese ? "请登录创建或保存这份报告的账号。报告内容只向具有访问权限的账号或原浏览器开放。" : "Log in with the account that created or saved this report. Its contents are available only to an authorized account or the original browser."}</p>
+        <div className={unlockStyles.actions}><Link className={unlockStyles.primary} href={accountLink}>{isChinese ? "登录或注册" : "Log in or create an account"}<ArrowRight size={15} aria-hidden="true" /></Link><Link className={unlockStyles.textLink} href={isChinese ? "/?locale=zh" : "/"}>{isChinese ? "返回首页" : "Back home"}</Link></div>
+      </section>
+    </main>;
+  }
+  const report = access.report;
   if (!report) notFound();
-
-  const recalculatedBazi = calculateBaziEngine({
-    name: report.birth_record.name,
-    gender: report.birth_record.gender ?? "female",
-    locale: normalizeReportLocale(report.birth_record.locale ?? "en"),
-    birthDate: report.birth_record.birth_date,
-    birthTime: report.birth_record.birth_time,
-    city: {
-      id: report.birth_record.id,
-      label: report.birth_record.birth_place,
-      country: "",
-      latitude: report.birth_record.latitude,
-      longitude: report.birth_record.longitude,
-      timezone: report.birth_record.timezone || "Asia/Shanghai",
-      aliases: [report.birth_record.birth_place],
-    },
-  });
-  const baziData = recalculatedBazi;
+  const baziData = calculateReportBazi(report);
   const dayPillar = baziData.pillars.day;
   const profile = (pillarsDB as Record<string, PillarProfile>)[dayPillar];
   const sun = report.astro_data.placements.find(
@@ -373,72 +267,40 @@ export default async function ReportPage({
     copyLocale === "zh"
       ? `${profileName} × ${sunSign}`
       : `${profileName} × ${sunSign}`;
-  const pillarDisplays = Object.fromEntries(
-    pillarOrder.map((key) => [
-      key,
-      {
-        ...getPillarDisplay(baziData.pillars[key], locale),
-        roleTitle: copy.pillarRoles[key].title,
-        roleMicroBadge: copy.pillarRoles[key].microBadge,
-      },
-    ]),
-  ) as unknown as ReportGenerationContext["bazi"]["pillarsDisplay"];
-  const initialNatal: NatalBookSections = buildInitialNatalShell({
-    locale,
-    profile,
-    bazi: baziData,
-    dayDisplay,
-    sunSign,
-    mappedPlanetName,
-  });
-  const generationContext = {
-    reportId: report.id,
-    locale,
-    gender,
-    birth: {
-      name: report.birth_record.name,
-      birthDate: report.birth_record.birth_date,
-      birthTime: report.birth_record.birth_time,
-      birthPlace: report.birth_record.birth_place,
-      trueSolarTime: baziData.trueSolarTime.time,
-    },
-    profile: {
-      pillar: dayPillar,
-      pillarDisplay: dayDisplay.pillarLabel,
-      nameEn: profile.name.en,
-      nameCn: profile.name.cn,
-      displayName: profileName,
-      essenceEn: profile.essence.en,
-      careerStyleEn: profile.career.style.en,
-      wealthEn: profile.career.wealth.en,
-      loveModeEn: profile.love.mode.en,
-      growthEn: profile.growth.en,
-      healthEn: profile.health?.en,
-    },
-    bazi: {
-      dayMaster: baziData.dayMaster,
-      dayMasterDisplay: dayDisplay.stemLabel,
-      mappedPlanet: baziData.mappedPlanet,
-      mappedPlanetCn: baziData.mappedPlanetCn,
-      mappedPlanetDisplay: mappedPlanetName,
-      pillars: baziData.pillars,
-      pillarsDisplay: pillarDisplays,
-      elementBalance: baziData.elementBalance,
-      missingElements: baziData.missingElements,
-      tenGods: baziData.tenGods,
-      luck: buildLuckDisplay(baziData.luck, locale),
-    },
-    astrology: {
-      sunSign,
-      sunSignCn: report.astro_data.sunSignCn,
-      placements: report.astro_data.placements,
-      majorAspects: report.astro_data.majorAspects,
-    },
-  } satisfies ReportGenerationContext;
+  const fullReport = access.isFull ? {
+    context: buildReportGenerationContext(report, locale),
+    initialNatal: access.commerceEnabled ? null : buildInitialNatalShell({ locale, profile, bazi: baziData, dayDisplay, sunSign, mappedPlanetName }),
+  } : null;
+  const elementFocus = targetElement(baziData.elementBalance, baziData.missingElements);
+  const colorGuide = elementStyle[elementFocus];
+  const braceletStones = getGemstonesForElement(elementFocus).slice(0, 3);
+  const basicText = copyLocale === "zh" ? {
+    kicker: "免费基础报告", title: "你的出生图谱，一眼看懂。",
+    summary: `你的日柱意象是${profileName}，日干对应${dayDisplay.stemMeaning}，太阳星座落在${sunSign}。左侧四柱与五行分布来自你填写的出生资料，可用作观察自己的起点。`,
+    reflection: "先选一个与你日常经验有关的特点，想想它最近在什么情境下出现。把这份图谱当作象征性的自我观察，而不是确定的命运判断。",
+    colors: "从五行配色，到日常手串", focus: `配色可以从「${colorGuide.label[copyLocale]}」的意象出发：`,
+    stones: "可参考的宝石：", atelier: "打开灵石手串工坊", totem: "探索本命灵构",
+    note: "配色与宝石建议用于审美和象征表达，不代表健康或运势效果。",
+  } : locale === "ru" ? {
+    kicker: "БЕСПЛАТНЫЙ БАЗОВЫЙ ОТЧЕТ", title: "Ваша карта рождения с первого взгляда.",
+    summary: `Образ вашего столпа дня — ${profileName}; качество небесного ствола — ${dayDisplay.stemMeaning}, а Солнце находится в знаке ${sunSign}. Четыре столпа и баланс стихий рассчитаны по вашим данным рождения.`,
+    reflection: "Выберите одну тему, связанную с вашим опытом, и вспомните конкретную ситуацию. Это символический повод для размышления, а не определение вашей судьбы.",
+    colors: "Цвета стихий и браслет", focus: `Начните с цветового образа стихии ${colorGuide.label[copyLocale]}:`,
+    stones: "Камни для вдохновения: ", atelier: "Открыть мастерскую браслетов", totem: "Изучить тотем рождения",
+    note: "Цвета и камни служат эстетике и символике, а не обещают влияние на здоровье или удачу.",
+  } : {
+    kicker: "FREE BASIC REPORT", title: "Your birth map at a glance.",
+    summary: `Your day-pillar image is ${profileName}, the stem expresses ${dayDisplay.stemMeaning}, and your Sun is in ${sunSign}. The Four Pillars and element balance beside this reading are calculated from the birth details you entered.`,
+    reflection: "Choose one theme that connects to your experience and recall a specific recent situation. Use the map as a symbolic starting point for self-observation, rather than a prediction of your future.",
+    colors: "From five-element colors to your bracelet", focus: `Begin with the color symbolism of ${colorGuide.label[copyLocale]}:`,
+    stones: "Gemstones to explore: ", atelier: "Open the bracelet workshop", totem: "Explore Birth Totem",
+    note: "Color and gemstone suggestions are aesthetic and symbolic; they do not promise health or luck effects.",
+  };
 
   return (
     <main
       className="report-shell"
+      lang={locale === "zh-TW" ? "zh-Hant" : locale === "zh" ? "zh-Hans" : locale}
       data-report-export
       data-report-title={headline}
     >
@@ -466,10 +328,10 @@ export default async function ReportPage({
             </span>
             <span>DestinyPixel</span>
           </div>
+          <Link href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} className="report-back-link">{copyLocale === "zh" ? "我的账号" : locale === "ru" ? "Аккаунт" : "Your account"}</Link>
           <ReportLanguageLinks
             reportId={report.id}
             locale={locale}
-            draft={draft}
           />
         </div>
       </header>
@@ -568,12 +430,26 @@ export default async function ReportPage({
           </div>
         </aside>
 
-        <ReportExperience
-          context={generationContext}
-          initialNatal={initialNatal}
-          fallbackNatalRaw={fallbackNatalText(generationContext)}
-          fallbackTransitRaw={fallbackTransitText(generationContext)}
-        />
+        {fullReport ? <ReportExperience
+          key={`${report.id}:${locale}`}
+          context={fullReport.context}
+          initialNatal={fullReport.initialNatal}
+          fallbackNatalRaw={access.commerceEnabled ? "" : fallbackNatalText(fullReport.context)}
+          fallbackTransitRaw={access.commerceEnabled ? "" : fallbackTransitText(fullReport.context)}
+          requireGeneratedContent={access.commerceEnabled}
+        /> : <div className="report-workspace">
+          <section className={unlockStyles.basic}>
+            <p className={unlockStyles.eyebrow}><Sparkles size={14} aria-hidden="true" />{basicText.kicker}</p>
+            <h2>{basicText.title}</h2><p>{basicText.summary}</p><p>{basicText.reflection}</p>
+            <h3>{basicText.colors}</h3><p>{basicText.focus}</p>
+            <div className={unlockStyles.colors}>{colorGuide.colors[copyLocale].map((color, index) => <span key={color}><i style={{ background: colorGuide.swatches[index] }} />{color}</span>)}</div>
+            <p>{colorGuide.wardrobe[copyLocale]}</p>
+            <p>{basicText.stones}{braceletStones.map((stone) => stone.name[copyLocale]).join(copyLocale === "zh" ? "、" : ", ")}</p>
+            <p className={unlockStyles.small}>{basicText.note}</p>
+            <div className={unlockStyles.basicActions}><Link className={unlockStyles.textLink} href={`/atelier?locale=${locale}&focus=${elementFocus}`}><Gem size={15} aria-hidden="true" />{basicText.atelier}<ArrowRight size={14} aria-hidden="true" /></Link><Link className={unlockStyles.textLink} href={`/tuteng?locale=${locale}`}>{basicText.totem}<ArrowRight size={14} aria-hidden="true" /></Link></div>
+          </section>
+          <ReportUnlock key={`${report.id}:${locale}`} reportId={report.id} locale={locale} isMember={Boolean(access.member)} claimable={access.claimable} offer={access.offer} />
+        </div>}
       </section>
     </main>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { CSSProperties, Dispatch, FormEvent, SetStateAction } from "react";
 import {
@@ -13,7 +14,6 @@ import {
   Gem,
   LogIn,
   Loader2,
-  Orbit,
   Palette,
   RefreshCw,
   Save,
@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import type { NatalBookSections } from "@/lib/ai/report";
 import type { ReportGenerationContext } from "@/lib/ai/streaming";
+import { requestReportGeneration } from "@/app/report/[id]/generation-client";
 import { trackToolEvent } from "@/lib/analytics";
 import {
   elementPercentages,
@@ -147,7 +148,7 @@ const reportActionCopy = {
     savedCount: "Saved reports",
     logout: "Log out",
     authTitle: "Save this report",
-    authSubtitle: "Create a private test account now. Social login can be added later.",
+    authSubtitle: "Log in or create an account to keep this report with your purchases.",
     login: "Log in",
     register: "Create account",
     name: "Name",
@@ -175,7 +176,7 @@ const reportActionCopy = {
     savedCount: "已保存报告",
     logout: "退出",
     authTitle: "保存这份报告",
-    authSubtitle: "先用邮箱搭建测试账号；微信、Google 登录后面可以继续接。",
+    authSubtitle: "使用邮箱登录或注册，在账号中查看你的报告与购买记录。",
     login: "登录",
     register: "注册账号",
     name: "姓名",
@@ -203,7 +204,7 @@ const reportActionCopy = {
     logout: "Выйти",
     authTitle: "Сохранить отчет",
     authSubtitle:
-      "Пока это тестовый аккаунт по email; Google и WeChat можно добавить позже.",
+      "Войдите или создайте аккаунт, чтобы хранить отчеты и покупки вместе.",
     login: "Войти",
     register: "Создать аккаунт",
     name: "Имя",
@@ -373,7 +374,7 @@ function StatusPill({
 }: {
   status: StreamStatus;
   idleLabel: string;
-  labels: (typeof reportCopy)[keyof typeof reportCopy]["status"];
+  labels: { loading: string; ready: string; error: string };
 }) {
   const label =
     status === "loading"
@@ -438,6 +439,7 @@ function AccordionSection({
   isLoading,
   loadingLabel,
   queuedLabel,
+  errorLabel,
   onToggle,
 }: {
   title: string;
@@ -447,6 +449,7 @@ function AccordionSection({
   isLoading?: boolean;
   loadingLabel: string;
   queuedLabel: string;
+  errorLabel?: string;
   onToggle: () => void;
 }) {
   return (
@@ -462,6 +465,8 @@ function AccordionSection({
         <div className="report-accordion-card__body">
           {content ? (
             <InsightText content={content} />
+          ) : errorLabel ? (
+            <p role="status">{errorLabel}</p>
           ) : (
             <div className="insight-skeleton">
               <span>{isLoading ? loadingLabel : queuedLabel}</span>
@@ -597,15 +602,19 @@ export default function ReportExperience({
   initialNatal,
   fallbackNatalRaw,
   fallbackTransitRaw,
+  requireGeneratedContent,
 }: {
   context: ReportGenerationContext;
-  initialNatal: NatalBookSections;
+  initialNatal: NatalBookSections | null;
   fallbackNatalRaw: string;
   fallbackTransitRaw: string;
+  requireGeneratedContent: boolean;
 }) {
   const copyLocale = contentLocale(context.locale);
   const copy = reportCopy[copyLocale];
   const actionCopy = reportActionCopy[copyLocale];
+  const unavailableLabel = copyLocale === "zh" ? "解读暂不可用，请稍后重试。" : context.locale === "ru" ? "Интерпретация временно недоступна. Повторите попытку." : "Interpretation unavailable. Please retry shortly.";
+  const statusLabels = { ...copy.status, loading: copy.status.generating, error: requireGeneratedContent ? unavailableLabel : copy.status.error };
   const reportTitle = useMemo(() => buildReportTitle(context), [context]);
   const luck = context.bazi.luck;
   const startAgeDisplay = luck
@@ -620,6 +629,7 @@ export default function ReportExperience({
   const [transitRaw, setTransitRaw] = useState("");
   const [natalStatus, setNatalStatus] = useState<StreamStatus>("idle");
   const [transitStatus, setTransitStatus] = useState<StreamStatus>("idle");
+  const canExport = !requireGeneratedContent || (natalStatus === "ready" && transitStatus === "ready");
   const [exportMode, setExportMode] = useState(false);
   const [exportBusy, setExportBusy] = useState<"idle" | "image" | "pdf">("idle");
   const [member, setMember] = useState<MemberSummary | null>(null);
@@ -656,21 +666,17 @@ export default function ReportExperience({
       const analyticsTool = endpoint === "/api/generate-natal" ? "birth_report" : "birth_transits";
       trackToolEvent("tool_start", analyticsTool);
       const controller = new AbortController();
-      const timeout = window.setTimeout(() => controller.abort(), 55000);
+      // Allow another tab's lease to finish, followed by the server's generation timeout.
+      const timeout = window.setTimeout(() => controller.abort(), 145000);
 
       try {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(context),
-          signal: controller.signal,
-        });
+        const response = await requestReportGeneration(endpoint, context.reportId, context.locale, controller.signal);
 
         if (!response.ok || !response.body) {
           throw new Error(`Stream failed: ${response.status}`);
         }
+        const isFallback = response.headers.get("X-Report-Content") === "fallback";
+        if (requireGeneratedContent && isFallback) throw new Error("Generated report content is unavailable.");
 
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
@@ -690,23 +696,23 @@ export default function ReportExperience({
         setRaw(completeText);
 
         if (!hasCompleteStream(completeText, requiredMarkers)) {
-          setRaw(fallbackRaw);
+          setRaw(requireGeneratedContent ? "" : fallbackRaw);
           setStatus("error");
-          trackToolEvent("tool_fallback", analyticsTool);
+          trackToolEvent(requireGeneratedContent ? "tool_error" : "tool_fallback", analyticsTool);
           return;
         }
 
-        setStatus("ready");
-        trackToolEvent("tool_success", analyticsTool);
+        setStatus(isFallback ? "error" : "ready");
+        trackToolEvent(isFallback ? "tool_fallback" : "tool_success", analyticsTool);
       } catch {
-        setRaw(fallbackRaw);
+        setRaw(requireGeneratedContent ? "" : fallbackRaw);
         setStatus("error");
         trackToolEvent("tool_error", analyticsTool);
       } finally {
         window.clearTimeout(timeout);
       }
     },
-    [context],
+    [context, requireGeneratedContent],
   );
 
   useEffect(() => {
@@ -747,22 +753,24 @@ export default function ReportExperience({
   }, [fallbackNatalRaw, streamEndpoint]);
 
   const natalContent = useMemo(() => {
+    if (requireGeneratedContent) return parseMarkedSections(natalStatus === "ready" ? natalRaw : "", natalSections);
     const parsed = parseMarkedSections(natalRaw, natalSections);
     const fallback = parseMarkedSections(fallbackNatalRaw, natalSections);
 
     return {
-      dayMaster: parsed.dayMaster || fallback.dayMaster || initialNatal.dayMaster,
+      dayMaster: parsed.dayMaster || fallback.dayMaster || initialNatal?.dayMaster || "",
       outerPersona:
-        parsed.outerPersona || fallback.outerPersona || initialNatal.outerPersona,
-      deepSelf: parsed.deepSelf || fallback.deepSelf || initialNatal.deepSelf,
-      career: parsed.career || fallback.career || initialNatal.career,
-      love: parsed.love || fallback.love || initialNatal.love,
-      growth: parsed.growth || fallback.growth || initialNatal.growth,
-      health: parsed.health || fallback.health || initialNatal.health,
+        parsed.outerPersona || fallback.outerPersona || initialNatal?.outerPersona || "",
+      deepSelf: parsed.deepSelf || fallback.deepSelf || initialNatal?.deepSelf || "",
+      career: parsed.career || fallback.career || initialNatal?.career || "",
+      love: parsed.love || fallback.love || initialNatal?.love || "",
+      growth: parsed.growth || fallback.growth || initialNatal?.growth || "",
+      health: parsed.health || fallback.health || initialNatal?.health || "",
     };
-  }, [fallbackNatalRaw, initialNatal, natalRaw]);
+  }, [fallbackNatalRaw, initialNatal, natalRaw, natalStatus, requireGeneratedContent]);
 
   const transitContent = useMemo(() => {
+    if (requireGeneratedContent) return parseMarkedSections(transitStatus === "ready" ? transitRaw : "", transitSections);
     const parsed = parseMarkedSections(transitRaw, transitSections);
     const fallback = parseMarkedSections(fallbackTransitRaw, transitSections);
 
@@ -772,25 +780,8 @@ export default function ReportExperience({
         parsed[section.key] || fallback[section.key],
       ]),
     ) as Record<TransitKey, string>;
-  }, [fallbackTransitRaw, transitRaw]);
+  }, [fallbackTransitRaw, transitRaw, transitStatus, requireGeneratedContent]);
   const transitOverview = getTransitOverviewDisplay(context.locale);
-
-  function buildReportSnapshot() {
-    return {
-      context,
-      natal: natalContent,
-      transits: transitContent,
-      raw: {
-        natal: natalRaw,
-        transits: transitRaw,
-      },
-      statuses: {
-        natal: natalStatus,
-        transits: transitStatus,
-      },
-      savedFrom: "report-page",
-    };
-  }
 
   async function submitAuth(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -821,6 +812,7 @@ export default function ReportExperience({
       }
 
       setMember(result.member);
+      trackToolEvent(authMode === "register" ? "account_created" : "login_success", "member_account");
       setAuthOpen(false);
       setAuthPassword("");
       setAuthPasswordConfirm("");
@@ -868,7 +860,6 @@ export default function ReportExperience({
           reportId: context.reportId,
           title: reportTitle,
           locale: context.locale,
-          snapshot: buildReportSnapshot(),
         }),
       });
       const result = (await response.json()) as {
@@ -928,7 +919,7 @@ export default function ReportExperience({
   }
 
   async function downloadLongImage() {
-    if (exportBusy !== "idle") return;
+    if (exportBusy !== "idle" || !canExport) return;
 
     setExportBusy("image");
     setActionTone("neutral");
@@ -955,7 +946,7 @@ export default function ReportExperience({
   }
 
   async function downloadPdf() {
-    if (exportBusy !== "idle") return;
+    if (exportBusy !== "idle" || !canExport) return;
 
     setExportBusy("pdf");
     setActionTone("neutral");
@@ -1043,6 +1034,7 @@ export default function ReportExperience({
         </div>
 
         <div className="report-action-buttons">
+          <Link href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} className="report-back-link">{copyLocale === "zh" ? "我的账号" : context.locale === "ru" ? "Аккаунт" : "Your account"}</Link>
           <button type="button" onClick={saveReport} disabled={saveBusy}>
             {saveBusy ? (
               <Loader2 size={15} className="loading-icon" aria-hidden="true" />
@@ -1054,7 +1046,7 @@ export default function ReportExperience({
           <button
             type="button"
             onClick={downloadLongImage}
-            disabled={exportBusy !== "idle"}
+            disabled={exportBusy !== "idle" || !canExport}
           >
             {exportBusy === "image" ? (
               <Loader2 size={15} className="loading-icon" aria-hidden="true" />
@@ -1066,7 +1058,7 @@ export default function ReportExperience({
           <button
             type="button"
             onClick={downloadPdf}
-            disabled={exportBusy !== "idle"}
+            disabled={exportBusy !== "idle" || !canExport}
           >
             {exportBusy === "pdf" ? (
               <Loader2 size={15} className="loading-icon" aria-hidden="true" />
@@ -1077,6 +1069,8 @@ export default function ReportExperience({
           </button>
         </div>
       </div>
+
+      {!canExport ? <p className="report-action-message" data-export-hide>{actionCopy.exportHint}</p> : null}
 
       {authOpen ? (
         <form className="member-auth-panel" onSubmit={submitAuth} data-export-hide>
@@ -1162,6 +1156,7 @@ export default function ReportExperience({
                 ? actionCopy.register
                 : actionCopy.login}
           </button>
+          {authMode === "register" ? <p className="report-action-message"><Link href={copyLocale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{copyLocale === "zh" ? "隐私说明" : "Privacy notice"}</Link><span aria-hidden="true"> · </span><Link href={copyLocale === "zh" ? "/service?locale=zh" : "/service"}>{copyLocale === "zh" ? "服务说明" : "Service terms"}</Link></p> : null}
         </form>
       ) : null}
 
@@ -1215,7 +1210,7 @@ export default function ReportExperience({
               <StatusPill
                 status={natalStatus}
                 idleLabel={copy.status.idleNatal}
-                labels={copy.status}
+                labels={statusLabels}
               />
               {natalStatus === "error" ? (
                 <button
@@ -1250,6 +1245,7 @@ export default function ReportExperience({
                 isLoading={natalStatus === "loading"}
                 loadingLabel={copy.status.generating}
                 queuedLabel={copy.status.queued}
+                errorLabel={requireGeneratedContent && natalStatus === "error" ? unavailableLabel : undefined}
                 onToggle={() =>
                   setOpenNatal((current) => ({
                     ...current,
@@ -1273,7 +1269,7 @@ export default function ReportExperience({
               <StatusPill
                 status={transitStatus}
                 idleLabel={copy.status.idleTransit}
-                labels={copy.status}
+                labels={statusLabels}
               />
               {transitStatus === "error" ? (
                 <button
@@ -1333,6 +1329,8 @@ export default function ReportExperience({
             </div>
             {transitContent.overview ? (
               <InsightText content={transitContent.overview} />
+            ) : requireGeneratedContent && transitStatus === "error" ? (
+              <p role="status">{unavailableLabel}</p>
             ) : (
               <div className="insight-skeleton">
                 <span>{copy.status.generating}</span>
@@ -1360,6 +1358,8 @@ export default function ReportExperience({
                   </div>
                   {content ? (
                     <InsightText content={content} />
+                  ) : requireGeneratedContent && transitStatus === "error" ? (
+                    <p role="status">{unavailableLabel}</p>
                   ) : (
                     <div className="insight-skeleton">
                       <span>{copy.status.generating}</span>
@@ -1373,18 +1373,6 @@ export default function ReportExperience({
             })}
           </div>
 
-          <div className="vip-panel">
-            <div>
-              <span>
-                <Orbit size={17} aria-hidden="true" />
-              </span>
-              <div>
-                <h2>{copy.vip.title}</h2>
-                <p>{copy.vip.description}</p>
-              </div>
-            </div>
-            <a href="#vip">{copy.vip.action}</a>
-          </div>
         </div>
       ) : null}
     </section>

@@ -5005,6 +5005,28 @@ a {
   }
 }
 
+@media (max-width: 640px) {
+  .membership-header .header-inner,
+  .membership-header .white-header__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-block: 14px;
+  }
+
+  .membership-header .header-actions,
+  .membership-header .white-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .membership-header .header-actions > a[href^="/account"],
+  .membership-header .white-actions > a[href^="/account"] {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 @keyframes white-page-breath {
   0% {
     background-position: 0% 0%, 100% 0%, 76% 58%, 0 0;

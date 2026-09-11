@@ -4,6 +4,7 @@ import {
   destinyMemberSessionDays,
   registerDestinyMember,
 } from "@/lib/member-store";
+import { assertSameOriginMemberMutation, enforceMemberAuthRateLimit, memberAuthErrorResponse, memberAuthJson, normalizeMemberEmail, readMemberAuthBody, validateMemberName, validateMemberPassword } from "@/lib/member-auth-security";
 
 export const runtime = "nodejs";
 
@@ -21,26 +22,21 @@ async function setSessionCookie(token: string) {
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as {
-      email?: string;
-      password?: string;
-      passwordConfirm?: string;
-      name?: string;
-    };
+    assertSameOriginMemberMutation(request);
+    const body = await readMemberAuthBody(request);
+    const email = normalizeMemberEmail(body.email);
+    await enforceMemberAuthRateLimit(request, "register", email);
     const result = await registerDestinyMember({
-      email: body.email ?? "",
-      password: body.password ?? "",
-      passwordConfirm: body.passwordConfirm,
-      name: body.name,
+      email,
+      password: validateMemberPassword(body.password, true),
+      passwordConfirm: body.passwordConfirm === undefined ? undefined : validateMemberPassword(body.passwordConfirm, true),
+      name: validateMemberName(body.name),
     });
 
     await setSessionCookie(result.token);
 
-    return Response.json({ member: result.member });
+    return memberAuthJson({ member: result.member });
   } catch (error) {
-    return Response.json(
-      { error: error instanceof Error ? error.message : "注册失败。" },
-      { status: 400 },
-    );
+    return memberAuthErrorResponse(error);
   }
 }

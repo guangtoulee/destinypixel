@@ -1,7 +1,12 @@
-import { createHash, pbkdf2Sync, randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
+import { createHash, pbkdf2, randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
+import { promisify } from "node:util";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import type { ReportLocale } from "@/lib/report-i18n";
+import {
+  assertMemberStoreAvailable, getMemberDatabaseConfig, MemberAuthError,
+  memberAuthDatabaseRequest, normalizeMemberEmail, validateMemberName, validateMemberPassword,
+} from "@/lib/member-auth-security";
 
 export const destinyMemberSessionCookie = "dp_member_session";
 export const destinyMemberSessionDays = 45;
@@ -10,6 +15,7 @@ export type DestinyMemberRecord = {
   id: string;
   email: string;
   email_normalized: string;
+  email_verified_at?: string | null;
   name: string | null;
   password_salt: string;
   password_hash: string;
@@ -50,7 +56,23 @@ export type SavedReportSummary = {
 type LocalMemberStore = {
   members: DestinyMemberRecord[];
   saved_reports: SavedReportRecord[];
+  password_resets?: PasswordResetRecord[];
 };
+
+type PasswordResetRecord = { member_id: string; token_hash: string; expires_at: string; used_at: string | null };
+const hashPasswordAsync = promisify(pbkdf2);
+let localAuthMutation: Promise<unknown> = Promise.resolve();
+
+function mutateLocalAuthStore<T>(mutate: (store: LocalMemberStore) => T | Promise<T>): Promise<T> {
+  const operation = localAuthMutation.then(async () => {
+    const store = await readLocalStore();
+    const result = await mutate(store);
+    await writeLocalStore(store);
+    return result;
+  });
+  localAuthMutation = operation.catch(() => undefined);
+  return operation;
+}
 
 const localMemberStorePath =
   process.env.DESTINY_MEMBER_STORE_FILE ??
@@ -59,14 +81,10 @@ const localMemberStorePath =
     : join(process.cwd(), "work", "destiny-members.json"));
 
 function getSupabaseConfig() {
-  const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!url || !key) return null;
-  if (!/^https?:\/\//.test(url) || !/^[\x21-\x7E]+$/.test(key)) return null;
-
-  return { url, key };
+  return getMemberDatabaseConfig();
 }
+
+export function isMemberStorePersistent() { return Boolean(getSupabaseConfig()); }
 
 async function supabaseRequest<T>({
   table,
@@ -75,35 +93,21 @@ async function supabaseRequest<T>({
   body,
   prefer = "return=representation",
 }: {
-  table: "destiny_members" | "saved_reports";
+  table: "destiny_members" | "saved_reports" | "destiny_member_password_resets";
   method: "GET" | "POST" | "PATCH";
   query?: string;
   body?: unknown;
   prefer?: string;
 }): Promise<T> {
-  const config = getSupabaseConfig();
-  if (!config) throw new Error("会员存储还没有配置。");
-
-  const response = await fetch(`${config.url}/rest/v1/${table}${query}`, {
+  return memberAuthDatabaseRequest<T>(`${table}${query}`, {
     method,
-    headers: {
-      apikey: config.key,
-      Authorization: `Bearer ${config.key}`,
-      "Content-Type": "application/json",
-      Prefer: prefer,
-    },
+    headers: { Prefer: prefer },
     body: body ? JSON.stringify(body) : undefined,
-    cache: "no-store",
   });
-
-  if (!response.ok) {
-    throw new Error(`Member store ${table} ${method} failed: ${await response.text()}`);
-  }
-
-  return (await response.json()) as T;
 }
 
 async function readLocalStore(): Promise<LocalMemberStore> {
+  assertMemberStoreAvailable();
   try {
     const text = await readFile(localMemberStorePath, "utf8");
     const parsed = JSON.parse(text) as Partial<LocalMemberStore>;
@@ -111,6 +115,7 @@ async function readLocalStore(): Promise<LocalMemberStore> {
     return {
       members: Array.isArray(parsed.members) ? parsed.members : [],
       saved_reports: Array.isArray(parsed.saved_reports) ? parsed.saved_reports : [],
+      password_resets: Array.isArray(parsed.password_resets) ? parsed.password_resets : [],
     };
   } catch (error) {
     if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") {
@@ -122,9 +127,10 @@ async function readLocalStore(): Promise<LocalMemberStore> {
 }
 
 async function writeLocalStore(store: LocalMemberStore) {
+  assertMemberStoreAvailable();
   await mkdir(dirname(localMemberStorePath), { recursive: true });
   const temporaryPath = `${localMemberStorePath}.${process.pid}.${Date.now()}.tmp`;
-  await writeFile(temporaryPath, JSON.stringify(store, null, 2), "utf8");
+  await writeFile(temporaryPath, JSON.stringify(store, null, 2), { encoding: "utf8", mode: 0o600 });
   await rename(temporaryPath, localMemberStorePath);
 }
 
@@ -145,8 +151,8 @@ function createSession() {
   };
 }
 
-function createPasswordHash(password: string, salt: string) {
-  return pbkdf2Sync(password, salt, 120000, 32, "sha256").toString("base64url");
+async function createPasswordHash(password: string, salt: string) {
+  return (await hashPasswordAsync(password, salt, 120000, 32, "sha256")).toString("base64url");
 }
 
 function normalizeEmail(email: string) {
@@ -154,19 +160,11 @@ function normalizeEmail(email: string) {
 }
 
 function assertEmail(email: string) {
-  const normalized = normalizeEmail(email);
-
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
-    throw new Error("请输入有效邮箱。");
-  }
-
-  return normalized;
+  return normalizeMemberEmail(email);
 }
 
 function assertPassword(password: string) {
-  if (password.length < 6) {
-    throw new Error("密码至少需要 6 位。");
-  }
+  validateMemberPassword(password, true);
 }
 
 function toMemberSummary(member: DestinyMemberRecord): DestinyMemberSummary {
@@ -217,19 +215,13 @@ async function insertLocalMember(member: DestinyMemberRecord) {
   return member;
 }
 
-async function updateLocalMember(id: string, updates: Partial<DestinyMemberRecord>) {
-  const store = await readLocalStore();
-  const index = store.members.findIndex((member) => member.id === id);
-  if (index === -1) return null;
-
-  store.members[index] = {
-    ...store.members[index],
-    ...updates,
-    updated_at: updates.updated_at ?? new Date().toISOString(),
-  };
-  await writeLocalStore(store);
-
-  return store.members[index];
+async function updateLocalMember(id: string, updates: Partial<DestinyMemberRecord>, expectedPasswordHash?: string) {
+  return mutateLocalAuthStore((store) => {
+    const index = store.members.findIndex((member) => member.id === id);
+    if (index === -1 || (expectedPasswordHash && store.members[index].password_hash !== expectedPasswordHash)) return null;
+    store.members[index] = { ...store.members[index], ...updates, updated_at: updates.updated_at ?? new Date().toISOString() };
+    return store.members[index];
+  });
 }
 
 async function upsertLocalSavedReport(report: Omit<SavedReportRecord, "id" | "created_at">) {
@@ -262,6 +254,7 @@ async function upsertLocalSavedReport(report: Omit<SavedReportRecord, "id" | "cr
 }
 
 export async function findDestinyMemberByEmail(email: string) {
+  assertMemberStoreAvailable();
   const normalized = normalizeEmail(email);
 
   if (!getSupabaseConfig()) {
@@ -277,15 +270,16 @@ export async function findDestinyMemberByEmail(email: string) {
   return rows[0] ?? null;
 }
 
-export function validateDestinyCredentials({
+export async function validateDestinyCredentials({
   password,
   member,
 }: {
   password: string;
   member: DestinyMemberRecord;
 }) {
+  validateMemberPassword(password);
   const expected = Buffer.from(member.password_hash);
-  const actual = Buffer.from(createPasswordHash(password, member.password_salt));
+  const actual = Buffer.from(await createPasswordHash(password, member.password_salt));
 
   return expected.length === actual.length && timingSafeEqual(expected, actual);
 }
@@ -301,15 +295,17 @@ export async function registerDestinyMember({
   passwordConfirm?: string;
   name?: string;
 }) {
+  assertMemberStoreAvailable();
   const normalized = assertEmail(email);
   assertPassword(password);
+  const safeName = validateMemberName(name);
 
   if (passwordConfirm !== undefined && password !== passwordConfirm) {
-    throw new Error("两次密码不一致。");
+    throw new MemberAuthError("PASSWORD_MISMATCH", "两次密码不一致。");
   }
 
   const existing = await findDestinyMemberByEmail(normalized);
-  if (existing) throw new Error("这个邮箱已经注册。");
+  if (existing) throw new MemberAuthError("EMAIL_EXISTS", "这个邮箱无法注册，请尝试登录或找回密码。", 409);
 
   const salt = randomBytes(16).toString("base64url");
   const session = createSession();
@@ -317,9 +313,9 @@ export async function registerDestinyMember({
   const baseMember = {
     email: normalized,
     email_normalized: normalized,
-    name: name?.trim() || null,
+    name: safeName || null,
     password_salt: salt,
-    password_hash: createPasswordHash(password, salt),
+    password_hash: await createPasswordHash(password, salt),
     session_token_hash: session.tokenHash,
     session_expires_at: session.expires,
     plan: "free" as const,
@@ -352,11 +348,16 @@ export async function loginDestinyMember({
   email: string;
   password: string;
 }) {
+  assertMemberStoreAvailable();
+  validateMemberPassword(password);
   const normalized = assertEmail(email);
   const member = await findDestinyMemberByEmail(normalized);
 
-  if (!member || !validateDestinyCredentials({ password, member })) {
-    throw new Error("邮箱或密码不对。");
+  const valid = member
+    ? await validateDestinyCredentials({ password, member })
+    : (await createPasswordHash(password, "destinypixel-dummy-salt"), false);
+  if (!member || !valid) {
+    throw new MemberAuthError("LOGIN_INVALID", "邮箱或密码不对。", 401);
   }
 
   const session = createSession();
@@ -370,12 +371,13 @@ export async function loginDestinyMember({
         await supabaseRequest<DestinyMemberRecord[]>({
           table: "destiny_members",
           method: "PATCH",
-          query: `?id=eq.${member.id}`,
+          query: `?id=eq.${member.id}&password_hash=eq.${encodeURIComponent(member.password_hash)}`,
           body: updates,
         })
       )[0]
-    : await updateLocalMember(member.id, updates);
+    : await updateLocalMember(member.id, updates, member.password_hash);
 
+  if (!updated) throw new MemberAuthError("AUTH_STORE_UNAVAILABLE", "登录未完成，请重试。", 503);
   return {
     token: session.token,
     member: toMemberSummary(updated ?? member),
@@ -383,7 +385,8 @@ export async function loginDestinyMember({
 }
 
 export async function getDestinyMemberByToken(token: string) {
-  if (!token) return null;
+  if (!token || !/^[A-Za-z0-9_-]{43}$/.test(token)) return null;
+  assertMemberStoreAvailable();
 
   const member = getSupabaseConfig()
     ? (
@@ -396,9 +399,112 @@ export async function getDestinyMemberByToken(token: string) {
     : await findLocalMemberByToken(token);
 
   if (!member || !member.session_expires_at) return null;
-  if (new Date(member.session_expires_at).getTime() < Date.now()) return null;
+  const expires = new Date(member.session_expires_at).getTime();
+  if (!Number.isFinite(expires) || expires <= Date.now()) return null;
 
   return member;
+}
+
+export async function revokeDestinyMemberSession(token: string) {
+  if (!token || !/^[A-Za-z0-9_-]{43}$/.test(token)) return;
+  assertMemberStoreAvailable();
+  const tokenHash = hashToken(token);
+  const updates = { session_token_hash: null, session_expires_at: null, updated_at: new Date().toISOString() };
+  if (getSupabaseConfig()) {
+    await supabaseRequest({ table: "destiny_members", method: "PATCH", query: `?session_token_hash=eq.${tokenHash}`, body: updates });
+  } else {
+    await mutateLocalAuthStore((store) => {
+      const member = store.members.find((candidate) => candidate.session_token_hash === tokenHash);
+      if (member) Object.assign(member, updates);
+    });
+  }
+}
+
+function passwordResetMailConfig() {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.DESTINY_AUTH_EMAIL_FROM;
+  if (!apiKey || !from || !/^[\x21-\x7E]+$/.test(apiKey) || from.length > 200 || /[\r\n]/.test(from)) return null;
+  try {
+    const site = new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.destinypixel.com");
+    if (site.protocol !== "https:" && process.env.NODE_ENV === "production") return null;
+    if (site.protocol !== "https:" && site.protocol !== "http:") return null;
+    return { apiKey, from, origin: site.origin };
+  } catch {
+    return null;
+  }
+}
+
+export function getMemberAuthReadiness() {
+  let storeReady = true;
+  try { assertMemberStoreAvailable(); } catch { storeReady = false; }
+  return { persistent: isMemberStorePersistent(), passwordResetAvailable: storeReady && Boolean(passwordResetMailConfig()) };
+}
+
+export async function requestDestinyPasswordReset(email: string) {
+  const normalized = assertEmail(email);
+  const config = passwordResetMailConfig();
+  if (!config || !getMemberAuthReadiness().passwordResetAvailable) {
+    throw new MemberAuthError("PASSWORD_RESET_UNAVAILABLE", "密码找回邮件服务暂未配置。", 503);
+  }
+  const accepted = { ok: true as const, message: "If this email belongs to an account and delivery is available, a reset link will arrive shortly." };
+  // Same response for missing accounts and delivery errors; never say an email was sent.
+  try {
+    const member = await findDestinyMemberByEmail(normalized);
+    if (!member) return accepted;
+    const token = randomBytes(32).toString("base64url");
+    const record: PasswordResetRecord = {
+      member_id: member.id, token_hash: hashToken(token),
+      expires_at: new Date(Date.now() + 30 * 60 * 1000).toISOString(), used_at: null,
+    };
+    if (getSupabaseConfig()) {
+      await supabaseRequest({ table: "destiny_member_password_resets", method: "POST", body: record });
+    } else {
+      await mutateLocalAuthStore((store) => { (store.password_resets ??= []).push(record); });
+    }
+    const resetUrl = new URL("/account", config.origin);
+    resetUrl.searchParams.set("reset", token);
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${config.apiKey}`, "Content-Type": "application/json", "Idempotency-Key": `member-reset-${record.token_hash}` },
+      body: JSON.stringify({
+        from: config.from, to: [member.email], subject: "Reset your DestinyPixel password / 重置密码",
+        text: `Use this link within 30 minutes to reset your password:\n${resetUrl.toString()}\n\n此链接 30 分钟内有效，且只能使用一次。若不是你本人操作，请忽略此邮件。`,
+      }),
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!response.ok) console.warn("Member password-reset delivery did not complete.");
+  } catch {
+    console.warn("Member password-reset request could not be delivered.");
+  }
+  return accepted;
+}
+
+export async function resetDestinyMemberPassword({ token, password, passwordConfirm }: { token: string; password: string; passwordConfirm?: string }) {
+  assertMemberStoreAvailable();
+  validateMemberPassword(password, true);
+  if (passwordConfirm !== undefined && passwordConfirm !== password) throw new MemberAuthError("PASSWORD_MISMATCH", "两次密码不一致。");
+  if (typeof token !== "string" || !/^[A-Za-z0-9_-]{43}$/.test(token)) throw new MemberAuthError("INVALID_RESET_TOKEN", "重置链接无效或已过期，请重新申请。");
+  const tokenHash = hashToken(token);
+  const salt = randomBytes(16).toString("base64url");
+  const passwordHash = await createPasswordHash(password, salt);
+  let changed = false;
+  if (getSupabaseConfig()) {
+    changed = await memberAuthDatabaseRequest<boolean>("rpc/destiny_auth_reset_password", {
+      method: "POST", body: JSON.stringify({ p_token_hash: tokenHash, p_password_salt: salt, p_password_hash: passwordHash }),
+    });
+  } else {
+    changed = await mutateLocalAuthStore((store) => {
+      const reset = store.password_resets?.find((candidate) => candidate.token_hash === tokenHash && !candidate.used_at && new Date(candidate.expires_at).getTime() > Date.now());
+      const member = reset && store.members.find((candidate) => candidate.id === reset.member_id);
+      if (!reset || !member) return false;
+      const now = new Date().toISOString();
+      Object.assign(member, { password_salt: salt, password_hash: passwordHash, session_token_hash: null, session_expires_at: null, email_verified_at: now, updated_at: now });
+      for (const candidate of store.password_resets ?? []) if (candidate.member_id === member.id && !candidate.used_at) candidate.used_at = now;
+      return true;
+    });
+  }
+  if (!changed) throw new MemberAuthError("INVALID_RESET_TOKEN", "重置链接无效或已过期，请重新申请。");
+  return { ok: true as const };
 }
 
 export async function saveDestinyReportForToken({

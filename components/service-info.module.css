@@ -1,0 +1,9 @@
+.shell { min-height:100vh; padding:38px 0 70px; background:#fbfaff; color:#292535; }
+.container { width:min(800px,calc(100% - 40px)); margin:auto; }
+.container a { color:#714f92; text-decoration:underline; text-underline-offset:4px; }
+.hero { margin:55px 0 36px; }
+.hero h1 { font-size:clamp(30px,6vw,46px); line-height:1.2; letter-spacing:-1px; font-weight:500; }
+.hero p { color:#786b82; font-size:12px; letter-spacing:.04em; }
+.card { background:#fff; border:1px solid #e7e1ed; border-radius:14px; margin:15px 0; padding:26px; }
+.card h2 { font-size:20px; margin:0 0 12px; font-weight:500; }
+.card p { color:#675e70; font-size:14px; line-height:1.9; margin:0; overflow-wrap:anywhere; }

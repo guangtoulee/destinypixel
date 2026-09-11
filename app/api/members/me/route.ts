@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { privateJson, commerceError } from "@/lib/commerce/http";
 import {
   destinyMemberSessionCookie,
   getDestinyMemberByToken,
@@ -13,21 +14,18 @@ export async function GET() {
     const token = cookieStore.get(destinyMemberSessionCookie)?.value ?? "";
 
     if (!token) {
-      return Response.json({ member: null, reports: [] });
+      return privateJson({ member: null, reports: [] });
     }
 
     const member = await getDestinyMemberByToken(token);
     if (!member) {
-      return Response.json({ member: null, reports: [] }, { status: 401 });
+      return privateJson({ member: null, reports: [] }, 401);
     }
 
     const saved = await listSavedReportsForToken(token);
 
-    return Response.json(saved);
+    return privateJson(saved);
   } catch (error) {
-    return Response.json(
-      { error: error instanceof Error ? error.message : "读取会员信息失败。" },
-      { status: 400 },
-    );
+    return commerceError(error);
   }
 }

@@ -56,7 +56,7 @@ export default function LearnPage() {
     <main className={styles.page} lang="en">
       <header className={styles.header}>
         <Link className={styles.brand} href="/"><span aria-hidden="true" />DestinyPixel</Link>
-        <nav aria-label="Main navigation"><Link href="/">Home</Link><Link href="/tools">All tools</Link><Link href="/learn" aria-current="page">Getting started</Link></nav>
+        <nav aria-label="Main navigation"><Link href="/">Home</Link><Link href="/tools">All tools</Link><Link href="/learn" aria-current="page">Getting started</Link><Link href="/journal">Journal</Link></nav>
       </header>
       <section className={styles.hero}>
         <p className={styles.eyebrow}><BookOpen size={15} aria-hidden="true" />The beginner guide</p>
@@ -93,7 +93,7 @@ export default function LearnPage() {
           </section>
         </div>
       </div>
-      <footer className={styles.footer}><strong>DestinyPixel</strong><nav aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/tools">Tool directory</Link><a href="mailto:anyulee@foxmail.com">Contact</a></nav></footer>
+      <footer className={styles.footer}><strong>DestinyPixel</strong><nav aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/tools">Tool directory</Link><Link href="/journal">Journal</Link><a href="mailto:anyulee@foxmail.com">Contact</a></nav></footer>
     </main>
   );
 }

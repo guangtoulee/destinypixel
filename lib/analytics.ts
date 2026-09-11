@@ -1,12 +1,12 @@
 import { track } from "@vercel/analytics";
 
 export const analyticsTools = [
-  "birth_report", "birth_transits", "totem", "prompt_expand", "prompt_image", "prompt_copy",
+  "birth_report", "birth_transits", "totem", "prompt_expand", "prompt_image", "prompt_copy", "member_account", "report_checkout",
 ] as const;
 export type AnalyticsTool = (typeof analyticsTools)[number];
 export type ToolEvent =
   | "form_submit" | "tool_start" | "tool_success" | "tool_error" | "tool_fallback"
-  | "tool_export" | "tool_share" | "copy_success";
+  | "tool_export" | "tool_share" | "copy_success" | "account_created" | "login_success" | "checkout_start" | "payment_confirmed";
 
 const publicPaths = new Set([
   "/", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
@@ -20,7 +20,7 @@ const mainSitePaths = new Set([
 ]);
 
 export function isMainSitePath(pathname: string): boolean {
-  return mainSitePaths.has(pathname) || pathname.startsWith("/report/");
+  return mainSitePaths.has(pathname) || pathname.startsWith("/report/") || pathname === "/journal" || pathname.startsWith("/journal/");
 }
 
 /** Only fixed product identifiers are sent, never field values or generated content. */
@@ -45,6 +45,8 @@ export function trackToolEvent(event: ToolEvent, tool: AnalyticsTool) {
 
 export function analyticsPage(pathname: string): string {
   if (publicPaths.has(pathname)) return pathname;
+  if (["/journal", "/account", "/service", "/privacy", "/checkout/paypal/return", "/checkout/paypal/cancel"].includes(pathname)) return pathname;
+  if (pathname.startsWith("/journal/")) return "/journal/[slug]";
   if (pathname.startsWith("/report/")) return "/report/[id]";
   if (pathname.startsWith("/prompt/case/")) return "/prompt/case/[id]";
   if (pathname.startsWith("/prompt/article/")) return "/prompt/article/[id]";
@@ -60,7 +62,7 @@ export function toolForForm(value: string | undefined): AnalyticsTool | null {
 export function sanitizeAnalyticsUrl(raw: string): string | null {
   try {
     const url = new URL(raw);
-    if (/^\/(api|work)(\/|$)/.test(url.pathname)) return null;
+    if (/^\/(api|work|admin)(\/|$)/.test(url.pathname)) return null;
     if (url.pathname.startsWith("/report/")) url.pathname = "/report/[id]";
     url.hash = "";
     const allowed: Record<string, readonly string[]> = {

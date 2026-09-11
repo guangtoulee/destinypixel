@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DestinyWhiteExperience from "@/components/destiny-white-experience";
+import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { absoluteUrl, makePageMetadata, routeSeo, siteName } from "@/lib/seo";
 
@@ -17,7 +18,7 @@ export async function generateMetadata({
 export default async function Home({
   searchParams,
 }: {
-  searchParams?: Promise<{ locale?: string }>;
+  searchParams?: Promise<{ locale?: string; error?: string }>;
 }) {
   const params = await searchParams;
   const initialLocale = normalizeReportLocale(params?.locale ?? "en");
@@ -92,7 +93,7 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <DestinyWhiteExperience initialLocale={initialLocale} />
+      <DestinyWhiteExperience initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} />
     </>
   );
 }

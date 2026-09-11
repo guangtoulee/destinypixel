@@ -62,7 +62,7 @@ export default async function ToolsPage({ searchParams }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
       <header className={styles.header}>
         <Link className={styles.brand} href={homeHref}><span aria-hidden="true" />DestinyPixel</Link>
-        <nav className={styles.navigation} aria-label={text.navigation}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link></nav>
+        <nav className={styles.navigation} aria-label={text.navigation}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><Link href={locale === "zh" ? "/journal?locale=zh" : "/journal"}>{locale === "zh" ? "原创文章" : "Journal"}</Link></nav>
         <nav className={styles.languages} aria-label={text.language}><Link href="/tools" hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</Link><Link href="/tools?locale=zh" hrefLang="zh-Hans" lang="zh-Hans" aria-current={locale === "zh" ? "page" : undefined}>中文</Link></nav>
       </header>
       <section className={styles.hero}>
@@ -80,7 +80,7 @@ export default async function ToolsPage({ searchParams }: PageProps) {
         </section>)}
         <aside className={styles.startNote}><BookOpen size={26} aria-hidden="true" /><div><h2>{text.noteTitle}</h2><p>{text.note}</p><Link href="/learn" hrefLang="en">{text.noteCta}<ArrowRight size={15} aria-hidden="true" /></Link></div></aside>
       </div>
-      <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><nav aria-label={locale === "zh" ? "页脚导航" : "Footer navigation"}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><a href="mailto:anyulee@foxmail.com">{text.contact}</a></nav></footer>
+      <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><nav aria-label={locale === "zh" ? "页脚导航" : "Footer navigation"}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><Link href={locale === "zh" ? "/journal?locale=zh" : "/journal"}>{locale === "zh" ? "原创文章" : "Journal"}</Link><a href="mailto:anyulee@foxmail.com">{text.contact}</a></nav></footer>
     </main>
   );
 }
