@@ -1079,6 +1079,13 @@ export default function DestinyWhiteExperience({
                   : "Generate an interactive Birth Totem"}
               <ArrowRight size={14} aria-hidden="true" />
             </a>
+            <a className="white-totem-entry" href={copyLocale === "zh" ? "/day-pillar?locale=zh" : "/day-pillar"}>
+              <CalendarDays size={15} aria-hidden="true" />
+              {copyLocale === "zh"
+                ? "只记得生日？先免费测日柱卡"
+                : "Only know your birthday? Get a free Day Pillar card"}
+              <ArrowRight size={14} aria-hidden="true" />
+            </a>
           </div>
 
           <article className="white-card-preview">
@@ -1439,6 +1446,9 @@ export default function DestinyWhiteExperience({
           </a>
           <a href={`/tuteng?locale=${locale}`}>
             {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
+          </a>
+          <a href={copyLocale === "zh" ? "/day-pillar?locale=zh" : "/day-pillar"}>
+            {copyLocale === "zh" ? "免费日柱卡" : "Free Day Pillar card"}
           </a>
           <a href="#blessing">
             {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}

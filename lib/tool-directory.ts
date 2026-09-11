@@ -13,6 +13,10 @@ export const directoryTools: DirectoryTool[] = [
     en: { name: "Birth Totem", description: "Turn Four Pillars and five-element relationships into an interactive geometric design.", prepare: "Birth date, time, a listed city and gender option", result: "An explorable totem with PNG and SVG export" },
     zh: { name: "本命灵构", description: "把四柱与五行关系转成可点选、可查看解释的几何图腾。", prepare: "出生日期、时间、列表中的城市及性别选项", result: "交互图腾，可导出 PNG 和 SVG" },
   } },
+  { key: "day-pillar", path: "/day-pillar", group: "birth", localized: true, copy: {
+    en: { name: "Free Day Pillar card", description: "Explore a symbolic card from your birthday, without creating an account.", prepare: "Gregorian birth date only; no login needed", result: "A provisional day pillar using a midnight day boundary; add birth time and city for a full birth map" },
+    zh: { name: "免费日柱卡", description: "只用公历生日，先认识一张日柱意象卡，无需注册登录。", prepare: "仅需公历生日，无需登录", result: "按公历日期、午夜换日初算的日柱；补充出生时间与城市后，可校准完整出生图谱" },
+  } },
   { key: "oracle", path: "/oracle", group: "insight", localized: true, copy: {
     en: { name: "Question Oracle", description: "Use Tarot and hexagram-inspired imagery to reflect on one situation.", prepare: "One specific question, its time and topic", result: "A symbolic reading focused on that question" },
     zh: { name: "一事一问", description: "用塔罗与卦象启发的意象，为眼前的一件事提供另一种观察角度。", prepare: "一个具体问题、提问时间和主题", result: "围绕这件事的象征性解读" },

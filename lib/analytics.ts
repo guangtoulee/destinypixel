@@ -1,7 +1,7 @@
 import { track } from "@vercel/analytics";
 
 export const analyticsTools = [
-  "birth_report", "birth_transits", "totem", "prompt_expand", "prompt_image", "prompt_copy",
+  "birth_report", "birth_transits", "totem", "day_pillar", "prompt_expand", "prompt_image", "prompt_copy",
 ] as const;
 export type AnalyticsTool = (typeof analyticsTools)[number];
 export type ToolEvent =
@@ -11,16 +11,16 @@ export type ToolEvent =
 const publicPaths = new Set([
   "/", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
   "/sticks", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
-  "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra",
+  "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/journal",
 ]);
 
 const mainSitePaths = new Set([
   "/", "/white", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face",
-  "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra",
+  "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/journal",
 ]);
 
 export function isMainSitePath(pathname: string): boolean {
-  return mainSitePaths.has(pathname) || pathname.startsWith("/report/");
+  return mainSitePaths.has(pathname) || pathname.startsWith("/report/") || pathname.startsWith("/journal/");
 }
 
 /** Only fixed product identifiers are sent, never field values or generated content. */
@@ -46,6 +46,7 @@ export function trackToolEvent(event: ToolEvent, tool: AnalyticsTool) {
 export function analyticsPage(pathname: string): string {
   if (publicPaths.has(pathname)) return pathname;
   if (pathname.startsWith("/report/")) return "/report/[id]";
+  if (pathname.startsWith("/journal/")) return "/journal/[slug]";
   if (pathname.startsWith("/prompt/case/")) return "/prompt/case/[id]";
   if (pathname.startsWith("/prompt/article/")) return "/prompt/article/[id]";
   if (pathname.startsWith("/prompt/category/")) return "/prompt/category/[slug]";
@@ -67,7 +68,7 @@ export function sanitizeAnalyticsUrl(raw: string): string | null {
       locale: ["en", "zh", "zh-TW", "ru"],
       utm_source: ["xiaohongshu", "bilibili", "douyin", "wechat", "x", "youtube", "newsletter"],
       utm_medium: ["social", "video", "email", "referral"],
-      utm_campaign: ["totem_demo", "prompt_tutorial", "creator_tools"],
+      utm_campaign: ["totem_demo", "prompt_tutorial", "creator_tools", "day_card"],
     };
     const clean = new URLSearchParams();
     for (const [key, values] of Object.entries(allowed)) {
