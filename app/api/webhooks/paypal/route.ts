@@ -16,7 +16,7 @@ export async function POST(request:Request){
     try{event=JSON.parse(Buffer.concat(chunks).toString("utf8"));}catch{return privateJson({error:"Invalid JSON."},400);}
     if(!await verifyPaypalWebhook(request,event))return privateJson({error:"Invalid signature."},400);
     if(!event.id || event.id.length>200 || !event.event_type)return privateJson({error:"Invalid event."},400);
-    if(!["PAYMENT.CAPTURE.COMPLETED","PAYMENT.CAPTURE.PENDING","PAYMENT.CAPTURE.DENIED","PAYMENT.CAPTURE.REFUNDED","PAYMENT.CAPTURE.REVERSED"].includes(event.event_type))return privateJson({received:true});
+    if(!["PAYMENT.CAPTURE.COMPLETED","PAYMENT.CAPTURE.PENDING","PAYMENT.CAPTURE.DECLINED","PAYMENT.CAPTURE.DENIED","PAYMENT.CAPTURE.REFUNDED","PAYMENT.CAPTURE.REVERSED"].includes(event.event_type))return privateJson({received:true});
     let captureId=event.event_type==="PAYMENT.CAPTURE.REFUNDED" ? event.resource?.supplementary_data?.related_ids?.capture_id : event.resource?.id;
     if(!captureId){const up=event.resource?.links?.find(l=>l.rel==="up");if(up){const url=new URL(up.href);if(["api-m.paypal.com","api-m.sandbox.paypal.com","api.paypal.com","api.sandbox.paypal.com"].includes(url.hostname)&&url.protocol==="https:")captureId=url.pathname.match(/^\/v2\/payments\/captures\/([A-Za-z0-9]+)$/)?.[1];}}
     if(!captureId || !/^[A-Za-z0-9]{1,100}$/.test(captureId))throw new PaymentUnavailableError();

@@ -1,5 +1,5 @@
 import { claimReportForMember, isReportId } from "@/lib/commerce/access";
-import { checkoutOffer, reportPriceCents } from "@/lib/commerce/config";
+import { checkoutOffer, isAdminMember, reportPriceCents } from "@/lib/commerce/config";
 import { databaseRequest } from "@/lib/commerce/database";
 import { assertMutation, readBody, privateJson, commerceError } from "@/lib/commerce/http";
 import { createPaypalOrder, fetchPaypalOrder, PaymentUnavailableError } from "@/lib/commerce/paypal";
@@ -15,9 +15,15 @@ export async function POST(request:Request){
     const access=await claimReportForMember(body.reportId);
     if(!access?.member)return privateJson({error:"Sign in with access to this report."},401);
     const offer=checkoutOffer(access.member);
+    const sandboxTest=body.sandboxTest===true && offer.mode==="sandbox" && isAdminMember(access.member);
+    if(body.sandboxTest===true && !sandboxTest)return privateJson({error:"Sandbox testing requires an authorized administrator and sandbox mode."},403);
     if(!offer.available)return privateJson({error:"Paid reports are not available yet."},503);
-    if(access.isFull)return privateJson({error:"This report is already unlocked.",alreadyUnlocked:true,reportId:body.reportId},409);
+    if(access.isFull && !sandboxTest)return privateJson({error:"This report is already unlocked.",alreadyUnlocked:true,reportId:body.reportId},409);
     await limitCommerceAction("checkout",access.member.id,20);
+    if(sandboxTest){
+      const [completed]=await databaseRequest<Array<{id:string}>>(`destiny_report_orders?report_id=eq.${body.reportId}&member_id=eq.${access.member.id}&mode=eq.sandbox&status=eq.completed&select=id&limit=1`);
+      if(completed)return privateJson({resumeOrderId:completed.id});
+    }
     let row=await databaseRequest<ReportOrder>("rpc/destiny_begin_checkout",{method:"POST",body:{p_report:body.reportId,p_member:access.member.id,p_amount:reportPriceCents(),p_currency:"USD",p_mode:offer.mode}});
     const origin=new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.destinypixel.com").origin;
     let order=row.paypal_order_id ? await fetchPaypalOrder(row.paypal_order_id) : await createPaypalOrder({localId:row.id,amount:(row.amount_cents/100).toFixed(2),origin});

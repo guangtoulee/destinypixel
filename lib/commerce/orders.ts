@@ -20,7 +20,7 @@ export async function applyCapture(row:ReportOrder,order:PaypalOrder,capture:Pay
   let state:string;
   if(event?.type==="PAYMENT.CAPTURE.REFUNDED" || capture.status==="REFUNDED" || capture.status==="PARTIALLY_REFUNDED")state="refunded";
   else if(event?.type==="PAYMENT.CAPTURE.REVERSED")state="reversed";
-  else if(event?.type==="PAYMENT.CAPTURE.DENIED" || capture.status==="DENIED" || capture.status==="DECLINED" || capture.status==="FAILED")state="denied";
+  else if(event?.type==="PAYMENT.CAPTURE.DECLINED" || event?.type==="PAYMENT.CAPTURE.DENIED" || capture.status==="DENIED" || capture.status==="DECLINED" || capture.status==="FAILED")state="denied";
   else if(capture.status==="PENDING")state="pending";
   else if(capture.status==="COMPLETED") {
     const checked=validateCompletedOrder(order,{localId:row.id,paypalId:row.paypal_order_id!,amountCents:row.amount_cents,currency:row.currency,merchantId:process.env.PAYPAL_MERCHANT_ID});

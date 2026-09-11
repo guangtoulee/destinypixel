@@ -25,9 +25,10 @@ export function isAdminMember(member: { id: string; email: string; email_verifie
 export function checkoutOffer(member: Parameters<typeof isAdminMember>[0] = null) {
   const cents = reportPriceCents();
   const mode = paypalMode();
+  const adminSandbox = mode === "sandbox" && isAdminMember(member);
   const sandboxAllowed = mode !== "sandbox" || process.env.VERCEL_ENV !== "production" || isAdminMember(member);
   return {
-    available: Boolean(paidReportsEnabled() && paypalConfigured() && databaseConfigured() && process.env.DEEPSEEK_API_KEY && cents && sandboxAllowed),
+    available: Boolean((paidReportsEnabled() || adminSandbox) && paypalConfigured() && databaseConfigured() && process.env.DEEPSEEK_API_KEY && cents && sandboxAllowed),
     price: cents === null ? null : (cents / 100).toFixed(2), currency: "USD" as const, mode,
   };
 }

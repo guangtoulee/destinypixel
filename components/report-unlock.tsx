@@ -68,7 +68,7 @@ export default function ReportUnlock({ reportId, locale, isMember, claimable, of
     {offer.available && price ? <div className={styles.offer}><strong>{price}</strong><span>{text.price}</span></div> : null}
     <p className={styles.note}>{text.once}</p>
     {!offer.available && <p className={styles.notice}>{text.unavailable}</p>}
-    {offer.mode === "sandbox" && <p className={styles.notice}>{text.sandbox}</p>}
+    {offer.available && offer.mode === "sandbox" && <p className={styles.notice}>{text.sandbox}</p>}
     <div className={styles.actions}>{!isMember ? <Link className={styles.primary} href={accountPath}>{text.login}<ArrowRight size={16} aria-hidden="true" /></Link> : <button type="button" className={styles.primary} onClick={openCheckout} disabled={!offer.available || busy}>{busy ? <Loader2 className={styles.spin} size={16} aria-hidden="true" /> : <LockKeyhole size={16} aria-hidden="true" />}{busy ? text.busy : text.action}</button>}<Link className={styles.textLink} href={accountPath}>{text.account}<ArrowRight size={14} aria-hidden="true" /></Link></div>
     <p className={styles.policies}><Link href={contentLocale(locale) === "zh" ? "/privacy?locale=zh" : "/privacy"}>{contentLocale(locale) === "zh" ? "隐私说明" : locale === "ru" ? "Конфиденциальность (EN)" : "Privacy notice"}</Link><span aria-hidden="true">·</span><Link href={contentLocale(locale) === "zh" ? "/service?locale=zh" : "/service"}>{contentLocale(locale) === "zh" ? "服务说明" : locale === "ru" ? "Условия сервиса (EN)" : "Service terms"}</Link></p>
     {error && <p className={styles.error} role="alert">{error}</p>}<p className={styles.assurance}><ShieldCheck size={14} aria-hidden="true" />{text.assurance}</p>

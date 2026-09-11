@@ -323,6 +323,70 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(calls.some(call => call.body.status === "ready"), false);
     });
 
+    await scenario("production sandbox checkout is explicit and administrator-only while public paid reports stay off", async () => {
+      process.env.VERCEL_ENV = "production";
+      process.env.DESTINY_PAID_REPORTS_ENABLED = "false";
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      assert.equal(config.checkoutOffer(null).available, false);
+      assert.equal(config.checkoutOffer(members[1]).available, false);
+      assert.equal(config.checkoutOffer(members[0]).available, true);
+      signIn();
+      assert.equal((await access.getReportAccess(reportId)).isFull, true);
+      assert.equal((await checkout.POST(request("/api/checkout/paypal", { reportId }))).status, 409);
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com")), false);
+      providerOrder.status = "CREATED";
+      providerOrder.purchase_units![0].payments = undefined;
+      const response = await checkout.POST(request("/api/checkout/paypal", { reportId, sandboxTest: true, amount: "0.01", mode: "live" }));
+      assert.equal(response.status, 200);
+      assert.match((await response.json()).approvalUrl, /^https:\/\/www\.sandbox\.paypal\.com\//);
+      const begin = calls.find(call => call.url.pathname.endsWith("/rpc/destiny_begin_checkout"));
+      assert.equal(begin?.body.p_mode, "sandbox");
+      assert.equal(begin?.body.p_amount, 199);
+      assert.equal(calls.some(call => call.url.hostname === "api-m.paypal.com"), false);
+    });
+
+    await scenario("sandbox-test requests cannot bypass regular members, live mode or report ownership", async () => {
+      signIn(); process.env.VERCEL_ENV = "production";
+      assert.equal((await checkout.POST(request("/api/checkout/paypal", { reportId, sandboxTest: true }))).status, 403);
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      for (const paid of ["false", "true"]) {
+        process.env.DESTINY_PAID_REPORTS_ENABLED = paid;
+        process.env.PAYPAL_MODE = "live";
+        assert.equal((await checkout.POST(request("/api/checkout/paypal", { reportId, sandboxTest: true }))).status, 403);
+      }
+      process.env.PAYPAL_MODE = "sandbox";
+      process.env.DESTINY_ADMIN_MEMBER_IDS = otherMemberId;
+      signIn(true);
+      assert.equal((await checkout.POST(request("/api/checkout/paypal", { reportId, sandboxTest: true }))).status, 401);
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com") || call.url.pathname.endsWith("/rpc/destiny_begin_checkout")), false);
+    });
+
+    await scenario("completed administrator sandbox tests resume the same order without another provider creation", async () => {
+      signIn(); unlock();
+      process.env.VERCEL_ENV = "production";
+      process.env.DESTINY_PAID_REPORTS_ENABLED = "false";
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      const response = await checkout.POST(request("/api/checkout/paypal", { reportId, sandboxTest: true }));
+      assert.equal(response.status, 200);
+      assert.deepEqual(await response.json(), { resumeOrderId: orderId });
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com") || call.url.pathname.endsWith("/rpc/destiny_begin_checkout")), false);
+    });
+
+    await scenario("production sandbox capture requires the bound administrator as well as the order owner", async () => {
+      signIn(); orders = [{ ...baseOrder }];
+      process.env.VERCEL_ENV = "production";
+      process.env.DESTINY_PAID_REPORTS_ENABLED = "false";
+      assert.equal((await captureRoute.POST(request("/api/checkout/paypal/capture", { orderId }))).status, 403);
+      assert.equal(calls.some(call => call.url.hostname.endsWith("paypal.com") || call.url.pathname.endsWith("/rpc/destiny_prepare_capture")), false);
+      process.env.DESTINY_ADMIN_MEMBER_IDS = memberId;
+      providerOrder.status = "APPROVED";
+      providerOrder.purchase_units![0].payments = undefined;
+      const response = await captureRoute.POST(request("/api/checkout/paypal/capture", { orderId }));
+      assert.equal(response.status, 200);
+      assert.equal((await response.json()).status, "completed");
+      assert.equal(paymentCalls()[0].body.p_order, orderId);
+    });
+
     await scenario("generation rejects unpaid reports and arbitrary client-only context", async () => {
       signIn();
       const arbitrary = await generation.generateReport(request("/api/generate-natal", { context: { reportId, birth: { name: "INJECTED" } } }), "natal");
@@ -562,6 +626,55 @@ test("commerce server routes authorize persisted reports and verified provider e
       const verification = calls.find(call => call.url.pathname.endsWith("verify-webhook-signature"))!;
       assert.equal(verification.body.webhook_id, "synthetic-webhook");
       assert.deepEqual(verification.body.webhook_event, event);
+    });
+
+    await scenario("a signed v2 capture-declined event overrides stale completed provider evidence", async () => {
+      orders = [{ ...baseOrder, status: "completed", capture_id: "CAPTURE123" }];
+      paymentResult = false;
+      const event = { id: "SYNTHETICDECLINE", event_type: "PAYMENT.CAPTURE.DECLINED", resource: { id: "CAPTURE123" } };
+      const response = await webhook.POST(new Request("https://site.example.test/api/webhooks/paypal", { method: "POST", headers: { "content-type": "application/json", "paypal-transmission-id": "synthetic-transmission", "paypal-transmission-time": "2026-01-01T00:00:00Z", "paypal-transmission-sig": "synthetic-signature", "paypal-cert-url": "https://api-m.sandbox.paypal.com/cert/synthetic", "paypal-auth-algo": "SHA256withRSA" }, body: JSON.stringify(event) }));
+      assert.equal(response.status, 200);
+      assert.equal(providerCapture.status, "COMPLETED", "the authenticated event must override a stale capture snapshot");
+      assert.equal(paymentCalls().length, 1);
+      assert.equal(paymentCalls()[0].body.p_state, "denied");
+      assert.equal(paymentCalls()[0].body.p_event_type, "PAYMENT.CAPTURE.DECLINED");
+      assert.equal(paymentCalls()[0].body.p_event_id, event.id);
+    });
+
+    await scenario("a refund resource resolves its original capture from a PayPal up link", async () => {
+      orders = [{ ...baseOrder, status: "completed", capture_id: "CAPTURE123" }];
+      paymentResult = false;
+      const event = { id: "SYNTHETICREFUNDUP", event_type: "PAYMENT.CAPTURE.REFUNDED", resource_type: "refund", resource: { id: "REFUND123", status: "COMPLETED", links: [{ rel: "self", href: "https://api.sandbox.paypal.com/v2/payments/refunds/REFUND123", method: "GET" }, { rel: "up", href: "https://api.sandbox.paypal.com/v2/payments/captures/CAPTURE123", method: "GET" }] } };
+      const response = await webhook.POST(new Request("https://site.example.test/api/webhooks/paypal", { method: "POST", headers: { "content-type": "application/json", "paypal-transmission-id": "synthetic-transmission", "paypal-transmission-time": "2026-01-01T00:00:00Z", "paypal-transmission-sig": "synthetic-signature", "paypal-cert-url": "https://api-m.sandbox.paypal.com/cert/synthetic", "paypal-auth-algo": "SHA256withRSA" }, body: JSON.stringify(event) }));
+      assert.equal(response.status, 200);
+      assert.equal(calls.filter(call => call.url.pathname === "/v2/payments/captures/CAPTURE123").length, 1);
+      assert.equal(calls.some(call => call.url.pathname.endsWith("/REFUND123")), false, "a refund ID must never be queried as a capture ID");
+      assert.equal(paymentCalls().length, 1);
+      assert.equal(paymentCalls()[0].body.p_capture, "CAPTURE123");
+      assert.equal(paymentCalls()[0].body.p_state, "refunded");
+      assert.equal(paymentCalls()[0].body.p_event_id, event.id);
+    });
+
+    await scenario("refund up links outside authenticated PayPal HTTPS origins cannot reach private or payment records", async () => {
+      for (const href of ["https://attacker.example.test/v2/payments/captures/CAPTURE123", "https://api.sandbox.paypal.com.attacker.example.test/v2/payments/captures/CAPTURE123", "http://api.sandbox.paypal.com/v2/payments/captures/CAPTURE123"]) {
+        reset();
+        const event = { id: "SYNTHETICUNTRUSTEDREFUND", event_type: "PAYMENT.CAPTURE.REFUNDED", resource_type: "refund", resource: { id: "REFUND123", links: [{ rel: "up", href, method: "GET" }] } };
+        const response = await webhook.POST(new Request("https://site.example.test/api/webhooks/paypal", { method: "POST", headers: { "content-type": "application/json", "paypal-transmission-id": "synthetic-transmission", "paypal-transmission-time": "2026-01-01T00:00:00Z", "paypal-transmission-sig": "synthetic-signature", "paypal-cert-url": "https://api-m.sandbox.paypal.com/cert/synthetic", "paypal-auth-algo": "SHA256withRSA" }, body: JSON.stringify(event) }));
+        assert.equal(response.status, 503);
+        assert.equal(calls.filter(call => call.url.pathname.endsWith("verify-webhook-signature")).length, 1);
+        assert.equal(calls.some(call => call.url.hostname === "database.example.test" || call.url.pathname.startsWith("/v2/payments/")), false);
+        assert.equal(paymentCalls().length, 0);
+      }
+    });
+
+    await scenario("direct capture reconciliation recognizes the v2 DECLINED status without a webhook", async () => {
+      paymentResult = false;
+      providerCapture.status = "DECLINED";
+      assert.equal(await orderService.applyCapture(baseOrder, providerOrder, providerCapture), "denied");
+      assert.equal(paymentCalls().length, 1);
+      assert.equal(paymentCalls()[0].body.p_state, "denied");
+      assert.equal(paymentCalls()[0].body.p_event_id, null);
+      assert.equal(paymentCalls()[0].body.p_event_type, null);
     });
 
     await scenario("all browser mutations reject cross-origin requests before private reads", async () => {

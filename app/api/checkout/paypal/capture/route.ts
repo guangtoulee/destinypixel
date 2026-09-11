@@ -3,7 +3,7 @@ import { assertMutation, readBody, privateJson, commerceError } from "@/lib/comm
 import { findOwnedOrder, reconcileOrder, type ReportOrder } from "@/lib/commerce/orders";
 import { limitCommerceAction } from "@/lib/commerce/rate-limit";
 import { databaseRequest } from "@/lib/commerce/database";
-import { paypalMode } from "@/lib/commerce/config";
+import { isAdminMember, paypalMode } from "@/lib/commerce/config";
 export const runtime="nodejs";
 export const maxDuration=120;
 export async function POST(request:Request){
@@ -11,6 +11,7 @@ export async function POST(request:Request){
     assertMutation(request); const body=await readBody(request);
     const member=await currentMember();
     if(!member)return privateJson({error:"Please sign in to confirm your payment."},401);
+    if(paypalMode()==="sandbox" && process.env.VERCEL_ENV==="production" && !isAdminMember(member))return privateJson({error:"Sandbox testing requires administrator access."},403);
     if(!isReportId(body.orderId))return privateJson({error:"Invalid order."},400);
     let row=await findOwnedOrder(body.orderId,member.id);
     if(!row)return privateJson({error:"Order unavailable."},404);

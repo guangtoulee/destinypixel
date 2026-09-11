@@ -41,7 +41,7 @@ Never put secrets in `NEXT_PUBLIC_*`, source files, screenshots or logs. The fol
 - `/api/checkout/paypal` accepts only a report identifier. Price, USD currency, owner and application mode come from server state.
 - PayPal return/cancel URLs contain our opaque order UUID, never birth details. Returning from PayPal is not proof of payment.
 - `/api/checkout/paypal/capture` authenticates the owner, checks the actual PayPal order/capture and applies a database transaction. Capture uses a stable `PayPal-Request-Id`.
-- `/api/webhooks/paypal` verifies PayPal's signature, checks order/capture identity and amount, and deduplicates event IDs. Subscribe to `PAYMENT.CAPTURE.COMPLETED`, `.PENDING`, `.DENIED`, `.REFUNDED`, and `.REVERSED`.
+- `/api/webhooks/paypal` verifies PayPal's signature, checks order/capture identity and amount, and deduplicates event IDs. Subscribe to `PAYMENT.CAPTURE.COMPLETED`, `.PENDING`, `.DECLINED`, `.DENIED`, `.REFUNDED`, and `.REVERSED`.
 - Refund/reversal is terminal for that order. A delayed completed notification cannot restore access. Partial refunds currently revoke access too; review this product rule before making partial refunds.
 - Guest credentials expire after seven days. Claiming requires the original browser credential plus a valid signed-in account. Knowing a report UUID is insufficient.
 - Administrators are explicitly bound by `DESTINY_ADMIN_MEMBER_IDS`, never by an email address or membership plan. They receive free complete access only to their own reports. A guest report must be claimed successfully before administrator testing applies; knowing another report ID grants no access.
@@ -59,3 +59,11 @@ WeChat Pay is not integrated or advertised as available. It requires its own mer
 ## Initial operating configuration
 
 The approved launch price is USD 6.99 per complete report, configured on the server via `DESTINY_REPORT_PRICE_USD`. Customer replies go to `liyu321@gmail.com`; the recovery-email sender remains an independently verified domain address. PayPal stays disabled until real sandbox/provider verification is complete. Administrator account credentials and identity bindings are not stored in source.
+
+## Administrator sandbox verification on production
+
+Keep `DESTINY_PAID_REPORTS_ENABLED=false` to preserve current public access. Configure `PAYPAL_MODE=sandbox` with the matching sandbox app credentials, webhook ID and merchant ID. Only a member explicitly bound in `DESTINY_ADMIN_MEMBER_IDS` receives an available sandbox offer on production. No live checkout is enabled by this exception.
+
+Log into that account, open **Your account**, and use **PayPal sandbox test · no real charge**. Choose an owned report and approve using a PayPal sandbox buyer account. This form sends `sandboxTest: true`; the server accepts that exception only for the bound administrator in sandbox mode, while ordinary checkout still treats administrator reports as already unlocked. Production sandbox capture is administrator-only too. A completed test resumes its existing order confirmation instead of creating another charge.
+
+Register `https://www.destinypixel.com/api/webhooks/paypal` for `PAYMENT.CAPTURE.COMPLETED`, `.PENDING`, `.DECLINED`, `.DENIED`, `.REFUNDED` and `.REVERSED`. Return and cancel URLs are generated from `NEXT_PUBLIC_SITE_URL` with the local order UUID. Verify actual approval/capture, event delivery/replay and refund state before considering live mode. Sandbox records remain clearly marked and excluded from live revenue; keep the existing administrator account and reports when cleaning specifically identified test orders.
