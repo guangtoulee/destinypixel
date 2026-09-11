@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import {
   ArrowRight,
@@ -513,16 +513,26 @@ function FusionOrbit({ locked = false }: { locked?: boolean }) {
 
 export default function DestinyExperience({
   initialLocale = "en",
+  initialError,
 }: {
   initialLocale?: ReportLocale;
+  initialError?: string;
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
+  const birthDateInputRef = useRef<HTMLInputElement>(null);
   const [pillar, setPillar] = useState("癸卯");
   const [isSample, setIsSample] = useState(true);
   const [isWeChatBrowser, setIsWeChatBrowser] = useState(false);
   const copyLocale = contentLocale(locale);
   const text = copy[copyLocale];
+
+  useEffect(() => {
+    const now = new Date();
+    if (birthDateInputRef.current) {
+      birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    }
+  }, []);
 
   const profile = useMemo(
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
@@ -650,6 +660,7 @@ export default function DestinyExperience({
             <p className="hero-description">{text.hero.description}</p>
 
             <form className="birth-form advanced-birth-form" action={createFusionReportAction}>
+              {initialError && <p role="alert" style={{ color: "#ffaca9", lineHeight: 1.7 }}>{initialError}</p>}
               <input type="hidden" name="locale" value={locale} />
               <div className="birth-form__grid">
                 <label className="form-field form-field--name">
@@ -674,7 +685,9 @@ export default function DestinyExperience({
                     name="birthDate"
                     type="date"
                     value={birthDate}
-                    max="2026-06-25"
+                    ref={birthDateInputRef}
+                    min="1800-01-01"
+                    max="2100-12-31"
                     onChange={(event) => updatePreviewFromDate(event.target.value)}
                     onInput={(event) =>
                       updatePreviewFromDate(event.currentTarget.value)
@@ -1007,6 +1020,9 @@ export default function DestinyExperience({
           </div>
           <div className="footer-bottom">
             <span>© 2026 DestinyPixel</span>
+            <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
+              {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+            </a>
             <a className="footer-contact" href="mailto:anyulee@foxmail.com">
               <Mail size={13} aria-hidden="true" />
               anyulee@foxmail.com

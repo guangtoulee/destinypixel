@@ -10,9 +10,18 @@ declare module "lunar-javascript" {
     ): {
       getLunar(): {
         getYearInGanZhi(): string;
+        getYearInGanZhiExact(): string;
         getMonthInGanZhi(): string;
+        getMonthInGanZhiExact(): string;
         getDayInGanZhi(): string;
         getTimeInGanZhi(): string;
+        getEightChar(): {
+          setSect(sect: 1 | 2): void;
+          getYear(): string;
+          getMonth(): string;
+          getDay(): string;
+          getTime(): string;
+        };
       };
     };
   };

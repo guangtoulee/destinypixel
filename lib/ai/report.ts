@@ -362,7 +362,7 @@ function fallbackSections({
               `${aspect.bodies.join("-")} ${aspect.type} orb ${aspect.orb}`,
           )
           .join("；")
-      : "当前近似星历没有抓到强相位，解读会更重视太阳星座、十大星体落座与日主映射星体。";
+      : "本次计算未出现容许度内的主要相位，解读会更重视太阳星座、十大星体落座与日主映射星体。";
   const mappedSignal = mappedPlacement
     ? `${mappedPlacement.bodyCn}${mappedPlacement.body}落在${mappedPlacement.signCn}${mappedPlacement.degreeInSign}度`
     : `${bazi.mappedPlanetCn}暂无精确落座`;

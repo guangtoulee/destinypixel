@@ -13,11 +13,13 @@
     "test:totem": "tsx --test lib/totem/model.test.ts"
   },
   "dependencies": {
+    "@js-temporal/polyfill": "0.5.1",
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.7.0",
     "@react-three/postprocessing": "^3.0.5",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "astronomy-engine": "2.1.19",
     "docx": "^9.7.1",
     "exceljs": "^4.4.0",
     "framer-motion": "^13.1.1",

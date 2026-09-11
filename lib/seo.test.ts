@@ -4,6 +4,7 @@ import sitemap from "@/app/sitemap";
 import promptSitemap from "@/app/prompt/sitemap";
 import { getIndexablePromptItems, promptItemHref } from "@/lib/prompt-library";
 import { absoluteUrl, canonicalPagePath, languageAlternates, makePageMetadata, routeSeo } from "@/lib/seo";
+import { getJournalArticle, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
 
 test("translated landing pages keep their own canonical and translated search text", () => {
   const zh = makePageMetadata({ ...routeSeo.home, locale: "zh" });
@@ -56,7 +57,10 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
       assert.ok(target, `${variant} needs its own sitemap entry`);
       assert.deepEqual(target.alternates, entry.alternates);
       const url = new URL(variant);
-      assert.equal(absoluteUrl(canonicalPagePath(url.pathname, url.searchParams.get("locale") ?? "en")), variant);
+      const canonical = url.pathname === "/journal" || url.pathname.startsWith("/journal/")
+        ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
+        : canonicalPagePath(url.pathname, url.searchParams.get("locale") ?? "en");
+      assert.equal(absoluteUrl(String(canonical)), variant);
     }
   }
   assert.ok(byUrl.has(absoluteUrl("/tools?locale=zh")));

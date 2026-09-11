@@ -8,6 +8,7 @@ import {
   calculateBaziEngine,
 } from "@/lib/engines/bazi";
 import { calculateAstrologyEngine } from "@/lib/engines/astrology";
+import { BirthTimeValidationError } from "@/lib/engines/time";
 import { resolveCity } from "@/lib/geo/cities";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import {
@@ -37,7 +38,7 @@ export async function createFusionReportAction(formData: FormData) {
   const city = resolveCity(place);
 
   if (!birthDate || !birthTime || !city) {
-    redirect(`/?locale=${locale}&error=missing-birth-data#birth`);
+    redirect(`/?locale=${locale}&error=missing-birth-data#report`);
   }
 
   const input = {
@@ -48,8 +49,17 @@ export async function createFusionReportAction(formData: FormData) {
     birthTime,
     city,
   };
-  const bazi = calculateBaziEngine(input);
-  const astro = calculateAstrologyEngine(input, bazi.trueSolarTime);
+  let bazi: ReturnType<typeof calculateBaziEngine>;
+  let astro: ReturnType<typeof calculateAstrologyEngine>;
+  try {
+    bazi = calculateBaziEngine(input);
+    astro = calculateAstrologyEngine(input, bazi.trueSolarTime);
+  } catch (error) {
+    if (error instanceof BirthTimeValidationError) {
+      redirect(`/?locale=${locale}&error=${error.code}#report`);
+    }
+    throw error;
+  }
   const profile = (pillarsDB as Record<string, PillarProfile>)[
     bazi.pillars.day
   ];

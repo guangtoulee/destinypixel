@@ -41,7 +41,7 @@ const zh = {
     cityNote: "首版使用站内已校准城市；接近时辰边界的海外出生记录应谨慎解释。",
     errors: {
       missing: "请完整填写日期、时间、性别和城市。",
-      range: "请输入 1900 年至今的有效日期与时间。",
+      range: "请输入 1800 年至今的有效日期与时间（计算范围上限为 2100 年）。",
       future: "出生日期不能晚于今天。",
       city: "请选择列表中的城市。",
       calculate: "这组出生信息暂时无法排盘，请检查后重试。",
@@ -158,7 +158,7 @@ const en: typeof zh = {
     cityNote: "Version one uses calibrated cities in our index. Treat overseas records near an hour boundary cautiously.",
     errors: {
       missing: "Complete the date, time, sex, and city fields.",
-      range: "Enter a valid date and time from 1900 through today.",
+      range: "Enter a valid date and time from 1800 through today (supported through 2100).",
       future: "Birth date cannot be in the future.",
       city: "Select a city from the list.",
       calculate: "This birth record could not be calculated. Check the fields and try again.",
@@ -276,7 +276,7 @@ const ru: typeof zh = {
     cityNote: "Первая версия использует проверенные города из внутреннего списка.",
     errors: {
       missing: "Заполните дату, время, пол и город.",
-      range: "Введите корректные дату и время, начиная с 1900 года.",
+      range: "Введите корректные дату и время с 1800 года по сегодняшний день (расчёт поддерживается до 2100 года).",
       future: "Дата рождения не может быть в будущем.",
       city: "Выберите город из списка.",
       calculate: "Не удалось рассчитать данные. Проверьте поля и повторите.",

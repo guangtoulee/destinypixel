@@ -792,8 +792,10 @@ function setDocumentLocale(locale: ReportLocale) {
 
 export default function DestinyWhiteExperience({
   initialLocale = "en",
+  initialError,
 }: {
   initialLocale?: ReportLocale;
+  initialError?: string;
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
   const [birthDate, setBirthDate] = useState("");
@@ -828,7 +830,7 @@ export default function DestinyWhiteExperience({
   useEffect(() => {
     const now = new Date();
     if (birthDateInputRef.current) {
-      birthDateInputRef.current.max = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+      birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     }
   }, []);
 
@@ -896,6 +898,9 @@ export default function DestinyWhiteExperience({
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
+            <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
+              {copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+            </a>
           </nav>
 
           <div className="white-actions">
@@ -983,6 +988,7 @@ export default function DestinyWhiteExperience({
             </div>
 
             <form action={createFusionReportAction} data-analytics-form="birth_report">
+              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError}</p>}
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
@@ -1004,6 +1010,8 @@ export default function DestinyWhiteExperience({
                 <input
                   name="birthDate"
                   type="date"
+                  min="1800-01-01"
+                  max="2100-12-31"
                   value={birthDate}
                   ref={birthDateInputRef}
                   onChange={(event) => updatePreviewFromDate(event.target.value)}
@@ -1413,6 +1421,9 @@ export default function DestinyWhiteExperience({
           </a>
           <a href="/learn">
             {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
+          </a>
+          <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
+            {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
           </a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}

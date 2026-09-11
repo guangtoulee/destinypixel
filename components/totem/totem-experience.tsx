@@ -32,6 +32,7 @@ import {
 import BrandSymbol from "@/components/brand-symbol";
 import { trackToolEvent } from "@/lib/analytics";
 import { calculateBaziEngine } from "@/lib/engines/bazi";
+import { BirthTimeValidationError } from "@/lib/engines/time";
 import { cities } from "@/lib/geo/cities";
 import {
   contentLocale,
@@ -172,7 +173,7 @@ function validBirthDate(value: string) {
   const day = Number(match[3]);
   const date = new Date(Date.UTC(year, month - 1, day));
   return (
-    year >= 1900 &&
+    year >= 1800 && year <= 2100 &&
     date.getUTCFullYear() === year &&
     date.getUTCMonth() === month - 1 &&
     date.getUTCDate() === day
@@ -423,8 +424,8 @@ export default function TotemExperience({
           block: "start",
         });
       });
-    } catch {
-      setFormError(copy.form.errors.calculate);
+    } catch (error) {
+      setFormError(error instanceof BirthTimeValidationError ? error.message : copy.form.errors.calculate);
       trackToolEvent("tool_error", "totem");
     }
   }
@@ -616,8 +617,8 @@ export default function TotemExperience({
             <input
               type="date"
               value={form.birthDate}
-              min="1900-01-01"
-              max={maxBirthDate}
+              min="1800-01-01"
+              max={maxBirthDate > "2100-12-31" ? "2100-12-31" : maxBirthDate}
               onChange={(event) =>
                 setForm((current) => ({
                   ...current,
