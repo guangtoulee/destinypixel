@@ -53,5 +53,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages },
     }));
   });
-  return [...primaryRoutes, ...journalRoutes];
+  const dayPillarLanguages = {
+    en: absoluteUrl("/day-pillar"),
+    "zh-Hans": absoluteUrl("/day-pillar?locale=zh"),
+    "x-default": absoluteUrl("/day-pillar"),
+  };
+  const dayPillarRoutes: MetadataRoute.Sitemap = [dayPillarLanguages.en, dayPillarLanguages["zh-Hans"]].map((url) => ({
+    url,
+    changeFrequency: "monthly",
+    priority: 0.85,
+    alternates: { languages: dayPillarLanguages },
+  }));
+  return [...primaryRoutes, ...journalRoutes, ...dayPillarRoutes];
 }

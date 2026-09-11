@@ -3,10 +3,10 @@ import test from "node:test";
 import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "./analytics";
 
 test("the metaphysics funnel includes bracelets and excludes standalone experiments", () => {
-  for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/tools", "/learn", "/report/example"]) {
+  for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/tools", "/learn", "/report/example", "/day-pillar", "/journal", "/journal/prepare-birth-date-time-place"]) {
     assert.equal(isMainSitePath(path), true, path);
   }
-  for (const path of ["/prompt", "/prompt/case/example", "/juben", "/daoyan", "/image", "/english", "/danci", "/candy", "/jake"]) {
+  for (const path of ["/prompt", "/prompt/case/example", "/juben", "/daoyan", "/image", "/english", "/danci", "/candy", "/jake", "/journalism", "/day-pillar-extra"]) {
     assert.equal(isMainSitePath(path), false, path);
   }
 });
@@ -34,8 +34,31 @@ test("account and checkout analytics remove credentials and payment identifiers"
 
 test("form event names are from the product allowlist", () => {
   assert.equal(toolForForm("totem"), "totem");
+  assert.equal(toolForForm("day_pillar"), "day_pillar");
   assert.equal(toolForForm("prompt_expand"), "prompt_expand");
   assert.equal(toolForForm("user supplied text"), null);
+});
+
+test("day cards keep campaign attribution without birth dates, names or shared archetypes", () => {
+  const raw = "https://www.destinypixel.com/day-pillar?locale=zh&utm_source=wechat&utm_medium=social&utm_campaign=day_card&date=1990-01-01&birthDate=1990-01-01&name=Alice&pillar=jia-yin&cardType=tiger#birthday=1990-01-01";
+  assert.equal(sanitizeAnalyticsUrl(raw), "https://www.destinypixel.com/day-pillar?locale=zh&utm_source=wechat&utm_medium=social&utm_campaign=day_card");
+  assert.equal(analyticsPage("/day-pillar"), "/day-pillar");
+  assert.equal(analyticsPage("/journal"), "/journal");
+  assert.equal(analyticsPage("/journal/prepare-birth-date-time-place"), "/journal/[slug]");
+  assert.equal(analyticsPage("/prompt/case/example"), "/prompt/case/[id]");
+});
+
+test("day pillar events contain only the fixed tool and main-site area", () => {
+  const previous = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const fakeWindow = {} as Window;
+  Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  try {
+    trackToolEvent("tool_success", "day_pillar");
+    assert.deepEqual(fakeWindow.vaq?.[1][1], { name: "tool_success", data: { tool: "day_pillar", area: "main" }, options: undefined });
+  } finally {
+    if (previous) Object.defineProperty(globalThis, "window", previous);
+    else Reflect.deleteProperty(globalThis, "window");
+  }
 });
 
 test("events before the SDK mounts are queued after URL redaction is configured", () => {

@@ -59,6 +59,8 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
       const url = new URL(variant);
       const canonical = url.pathname === "/journal" || url.pathname.startsWith("/journal/")
         ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
+        : url.pathname === "/day-pillar"
+          ? `/day-pillar${url.searchParams.get("locale") === "zh" ? "?locale=zh" : ""}`
         : canonicalPagePath(url.pathname, url.searchParams.get("locale") ?? "en");
       assert.equal(absoluteUrl(String(canonical)), variant);
     }
@@ -66,6 +68,20 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/tools?locale=zh")));
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   assert.ok(!entries.some((entry) => entry.url.includes("locale=zh-TW")));
+});
+
+test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {
+  const entries = sitemap().filter((entry) => new URL(entry.url).pathname === "/day-pillar");
+  const expected = {
+    en: absoluteUrl("/day-pillar"),
+    "zh-Hans": absoluteUrl("/day-pillar?locale=zh"),
+    "x-default": absoluteUrl("/day-pillar"),
+  };
+  assert.deepEqual(entries.map((entry) => entry.url).sort(), [expected.en, expected["zh-Hans"]].sort());
+  for (const entry of entries) {
+    assert.deepEqual(entry.alternates?.languages, expected);
+    assert.deepEqual([...new URL(entry.url).searchParams.keys()].filter((key) => key !== "locale"), []);
+  }
 });
 
 test("sitemap modification dates describe content rather than request time", () => {
