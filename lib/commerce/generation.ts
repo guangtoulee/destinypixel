@@ -7,7 +7,7 @@ import { buildNatalMessages, buildTransitMessages, fallbackNatalText, fallbackTr
 import { transitPromptMarkers } from "@/lib/report-timing";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { limitCommerceAction } from "./rate-limit";
-import { completeReportContent } from "./report-content";
+import { completeReportContent, normalizeReportContent } from "./report-content";
 
 const natalMarkers=["DAY_MASTER","OUTER_PERSONA","DEEP_SELF","CAREER","LOVE","GROWTH","HEALTH"];
 type Lease={state:"ready"|"claimed"|"running"|"exhausted";id?:string;leaseToken?:string;content?:string};
@@ -37,8 +37,8 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
     const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:process.env.DEEPSEEK_MODEL||"deepseek-v4-flash",thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
     if(!response.ok)throw new Error("Generation unavailable");
     const result=await response.json() as {choices?:Array<{finish_reason?:string;message?:{content?:string}}>};
-    const content=result.choices?.[0]?.message?.content?.trim() || "";
     const markers=kind==="natal"?natalMarkers:[...transitPromptMarkers];
+    const content=normalizeReportContent(result.choices?.[0]?.message?.content || "",markers);
     if(result.choices?.[0]?.finish_reason!=="stop" || !completeReportContent(content,markers))throw new Error("Incomplete generation");
     const latest=await getReportAccess(body.reportId);
     if(!latest.canRead || !latest.isFull)throw new Error("Access changed");

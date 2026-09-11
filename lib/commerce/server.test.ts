@@ -385,6 +385,18 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(calls.some(call => call.body.status === "ready"), false);
     });
 
+    await scenario("complete provider prose with redundant end labels is normalized before private persistence", async () => {
+      signIn(); unlock();
+      modelContent = ["DAY_MASTER", "OUTER_PERSONA", "DEEP_SELF", "CAREER", "LOVE", "GROWTH", "HEALTH"].map(marker => `[${marker}] ${"Synthetic interpretation. ".repeat(4)}\n[${marker}] 结束。`).join("\n");
+      const response = await generation.generateReport(request("/api/generate-natal", { reportId }), "natal");
+      assert.equal(response.status, 200);
+      const content = await response.text();
+      assert.equal(content.includes("结束。"), false);
+      assert.equal((content.match(/\[CAREER\]/g) || []).length, 1);
+      const saved = calls.find(call => call.body.status === "ready");
+      assert.equal(saved?.body.content, content);
+    });
+
     await scenario("checkout derives price and identity on the server and preserves provider idempotency", async () => {
       signIn(); providerOrder.status = "CREATED"; providerOrder.purchase_units![0].payments = undefined;
       const response = await checkout.POST(request("/api/checkout/paypal", { reportId, amount: "0.01", currency: "EUR", memberId: otherMemberId, mode: "live" }));
