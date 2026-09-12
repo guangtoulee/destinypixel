@@ -8,10 +8,65 @@ const nextConfig: NextConfig = {
     qualities: [75, 95],
   },
   async headers() {
-    return ["/report/:path*", "/account/:path*", "/admin/:path*", "/checkout/:path*"].map(source => ({
+    const noindex = [
+      "/report/:path*",
+      "/account/:path*",
+      "/admin/:path*",
+      "/checkout/:path*",
+      "/english",
+      "/english/:path*",
+      "/danci",
+      "/danci/:path*",
+      "/xiaoshou",
+      "/xiaoshou/:path*",
+      "/prompt",
+      "/prompt/:path*",
+      "/juben",
+      "/juben/:path*",
+      "/daoyan",
+      "/daoyan/:path*",
+      "/black",
+      "/black/:path*",
+      "/zhenggu",
+      "/zhenggu/:path*",
+      "/mazu",
+      "/mazu/:path*",
+      "/meizhouma",
+      "/meizhouma/:path*",
+      "/mv",
+      "/mv/:path*",
+    ];
+    return noindex.map((source) => ({
       source,
-      headers: [{ key: "Referrer-Policy", value: "no-referrer" }, { key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      headers: [
+        { key: "Referrer-Policy", value: "no-referrer" },
+        { key: "X-Robots-Tag", value: "noindex, nofollow" },
+      ],
     }));
+  },
+  async redirects() {
+    return [
+      {
+        source: "/candy",
+        destination: "https://www.packom.store/whole",
+        permanent: true,
+      },
+      {
+        source: "/candy/:path*",
+        destination: "https://www.packom.store/whole",
+        permanent: true,
+      },
+      {
+        source: "/jake",
+        destination: "https://www.packom.store/jake",
+        permanent: true,
+      },
+      {
+        source: "/jake/:path*",
+        destination: "https://www.packom.store/jake/:path*",
+        permanent: true,
+      },
+    ];
   },
   async rewrites() {
     return [
