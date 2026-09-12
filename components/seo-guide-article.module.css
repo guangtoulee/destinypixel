@@ -1,0 +1,85 @@
+.page {
+  min-height: 100vh;
+  background: #0c0b0a;
+  color: #f5f0e8;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Segoe UI", sans-serif;
+}
+.article {
+  width: min(720px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+  display: grid;
+  gap: 1.1rem;
+}
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: #a89f94;
+}
+.crumb a { color: inherit; text-decoration: none; }
+.crumb a:hover { color: #f5f0e8; }
+.article h1 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.article p {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(245, 240, 232, 0.88);
+  font-size: 1.05rem;
+}
+.faq {
+  margin-top: 0.6rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(245, 240, 232, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+.faq h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+.faq dl { margin: 0; display: grid; gap: 0.85rem; }
+.faqItem dt {
+  font-weight: 650;
+  margin-bottom: 0.25rem;
+}
+.faqItem dd {
+  margin: 0;
+  color: rgba(245, 240, 232, 0.78);
+  line-height: 1.6;
+}
+.cta a {
+  display: inline-flex;
+  margin-top: 0.4rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  background: #f5f0e8;
+  color: #0c0b0a;
+  text-decoration: none;
+  font-weight: 650;
+}
+.related {
+  display: grid;
+  gap: 0.45rem;
+  color: #a89f94;
+  font-size: 0.95rem;
+}
+.related ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+.related a { color: #f5f0e8; }
+.back {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #a89f94;
+}
+.back a { color: inherit; }
+.muted { opacity: 0.7; }

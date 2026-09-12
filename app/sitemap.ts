@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
 import { journalArticles, journalHref } from "@/lib/journal";
+import { seoGuidePath, seoGuides } from "@/lib/seo-guides";
 
 /** Main-site product + content only. Test/side apps stay out of the index. */
 const publicRoutes = [
@@ -81,7 +82,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: dayPillarLanguages },
     }));
 
-    return [...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes];
+    const guideRoutes: MetadataRoute.Sitemap = seoGuides.map((guide) => ({
+      url: absoluteUrl(seoGuidePath(guide)),
+      changeFrequency: "monthly",
+      priority: 0.78,
+    }));
+    return [...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...guideRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only
     return [
