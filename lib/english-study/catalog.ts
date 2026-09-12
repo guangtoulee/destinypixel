@@ -1,0 +1,84 @@
+import type { Grade, WordItem } from "./types";
+
+type Seed = [
+  word: string, phonetic: string, meaning: string, topic: string,
+  example: string, translation: string, tip: string,
+  sentence: string, options: string[], explanation: string, variants?: string[],
+];
+
+function group(grade: Grade, seeds: Seed[]): WordItem[] {
+  return seeds.map(([word, phonetic, meaning, topic, example, translation, tip, sentence, options, explanation, variants = []]) => ({
+    id: `${grade}-${word}`, word, phonetic, meaning, grade, topic, example, translation, tip, variants,
+    cloze: { sentence, answer: word, options, explanation },
+  }));
+}
+
+/** A curated starter sample, not a textbook edition or a complete exam syllabus. */
+export const WORD_CATALOG: WordItem[] = [
+  ...group("7", [
+    ["borrow", "/ˈbɒrəʊ/", "v. 借入；借用", "校园生活", "Can I borrow your dictionary?", "我能借用你的词典吗？", "borrow sth from sb = 向某人借入；lend sth to sb = 把东西借给某人。", "I forgot my pen. Can I ___ one from you?", ["lend", "borrow", "keep", "bring"], "from you 表示向你借入，用 borrow；lend 是借出。"],
+    ["return", "/rɪˈtɜːn/", "v. 归还；返回", "校园生活", "Please return the book by Friday.", "请在周五之前归还这本书。", "return the book 已经表示归还，不再加 back；return to school 表示回校。", "This is a library book. Please ___ it when you finish reading it.（表达“归还”）", ["buy", "lose", "return", "make"], "图书馆的书读完需要归还，用 return。"],
+    ["arrive", "/əˈraɪv/", "v. 到达", "出行", "We usually arrive at school before eight.", "我们通常在八点前到校。", "arrive at + 小地点；arrive in + 城市/国家；arrive home 不加介词。", "The train will ___ at the station in ten minutes.（表达“到达车站”）", ["leave", "arrive", "wait", "travel"], "arrive at the station 表示到达车站；leave 后不接 at 表示离开车站。"],
+    ["practice", "/ˈpræktɪs/", "v. 练习", "学习方法", "I practice speaking English for ten minutes a day.", "我每天练习说英语十分钟。", "practice doing sth，不用 practice to do；英式英语的动词也拼作 practise。", "To speak more clearly, you should ___ reading aloud every day.", ["agree", "decide", "hope", "practice"], "practice 后接 doing；agree、decide、hope 表示这里的动作时通常接 to do。", ["practise"]],
+    ["library", "/ˈlaɪbrəri/", "n. 图书馆", "校园生活", "We can read quietly in the library.", "我们可以在图书馆里安静地阅读。", "library 的复数是 libraries；注意中间有 r，别拼成 libary。", "You can borrow books from the school ___.", ["kitchen", "library", "playground", "hospital"], "可以借阅书籍的地方是 library。"],
+    ["healthy", "/ˈhelθi/", "adj. 健康的", "日常生活", "Enough sleep helps us stay healthy.", "充足的睡眠帮助我们保持健康。", "healthy 是形容词；health 是名词。keep/stay healthy 表示保持健康。", "Fruit, exercise and enough sleep help us stay ___.", ["late", "hungry", "healthy", "noisy"], "饮食、运动和睡眠帮助保持健康；stay 后用形容词 healthy。"],
+    ["finish", "/ˈfɪnɪʃ/", "v. 完成；结束", "学习方法", "I need to finish doing my homework first.", "我需要先完成作业。", "finish doing sth，不用 finish to do sth。", "The film starts at seven, so let's ___ doing our homework before then.", ["finish", "decide", "hope", "offer"], "finish 后接 doing；decide、hope、offer 表示这里的动作时通常接 to do。"],
+    ["important", "/ɪmˈpɔːtənt/", "adj. 重要的", "学习方法", "It is important to check your answers.", "检查答案很重要。", "It is important to do sth；importance 是名词“重要性”。", "Please listen carefully. I have something ___ to tell you.", ["empty", "important", "tired", "absent"], "something important 表示重要的事情，形容词放在 something 后。"],
+    ["remember", "/rɪˈmembə/", "v. 记住；想起", "日常生活", "Remember to bring your umbrella tomorrow.", "记得明天带伞。", "remember to do = 记得去做；remember doing = 记得做过。", "It may rain this afternoon. Please ___ to take an umbrella.", ["forget", "refuse", "remember", "stop"], "有可能下雨，所以提醒记得带伞，用 remember to take。"],
+    ["usually", "/ˈjuːʒuəli/", "adv. 通常", "日常生活", "I usually walk to school, but today I took the bus.", "我通常步行上学，但今天乘了公交车。", "usually 常放在实义动词前、be 动词后：usually walk / is usually。", "I ___ walk to school, but I take the bus when it rains.（表达“通常步行”）", ["never", "already", "only", "usually"], "前半句描述通常的习惯，后半句说明下雨时的例外。"],
+    ["enough", "/ɪˈnʌf/", "adj./adv. 足够的；足够地", "日常生活", "Do we have enough time to catch the bus?", "我们有足够的时间赶上公交车吗？", "enough + 名词（enough time）；形容词 + enough（old enough）。", "We need ten chairs but have only six. We don't have ___ chairs.", ["heavy", "enough", "empty", "comfortable"], "需要十把、只有六把，数量不够，用 enough 修饰 chairs。"],
+    ["favourite", "/ˈfeɪvərɪt/", "adj. 最喜欢的", "兴趣爱好", "Science is my favourite subject.", "科学是我最喜欢的学科。", "英式 favourite = 美式 favorite；本身含“最喜欢”，不用 most favourite。", "Of all the school subjects, English is my ___.", ["different", "difficult", "favourite", "careful"], "这里表示所有学科中最喜欢的一门；favourite 也可作名词。", ["favorite"]],
+  ]),
+  ...group("8", [
+    ["improve", "/ɪmˈpruːv/", "v. 改进；提高", "学习方法", "Reading every day can improve your vocabulary.", "每天阅读能够增加你的词汇量。", "improve your English 表示提高英语水平；improvement 是名词。", "I read English stories every day to ___ my reading skills.", ["lose", "improve", "hide", "waste"], "每天阅读是为了提高阅读技能，用 improve。"],
+    ["prepare", "/prɪˈpeə/", "v. 准备", "校园生活", "We need to prepare for the English test.", "我们需要为英语考试做准备。", "prepare for sth = 为……做准备；prepare to do sth = 准备做某事。", "The exam is next week. We still have time to ___ for it.（表达“为考试做准备”）", ["prepare", "arrive", "ask", "leave"], "prepare for the exam 是“为考试做准备”的常用搭配。"],
+    ["although", "/ɔːlˈðəʊ/", "conj. 虽然；尽管", "句子连接", "Although the task was difficult, we finished it.", "虽然任务很难，我们还是完成了。", "although 引导让步从句，通常不与 but 在同一句连接这两部分。", "___ it was raining, the players continued the game.", ["Despite", "Because of", "although", "In spite of"], "空后是完整的主谓从句，用连词 although；despite、because of、in spite of 后通常接名词或 doing，不能直接接这个从句。句首应大写。"],
+    ["experience", "/ɪkˈspɪəriəns/", "n. 经验；经历", "成长经历", "Working with others was a useful experience.", "与别人合作是一次有益的经历。", "“经验”通常不可数：much experience；“一次经历”可数：an experience。", "She has ten years of teaching ___, so she knows how to help beginners.", ["weather", "information", "experience", "journey"], "十年的教学经验用 teaching experience，此处 experience 不可数。"],
+    ["decide", "/dɪˈsaɪd/", "v. 决定", "计划选择", "We need to decide which route to take.", "我们需要决定走哪条路线。", "decide to do sth；make a decision 中 decision 是名词。", "We can go by bus or train. Let's ___ which is better.", ["borrow", "repair", "return", "decide"], "比较两种出行方式后做决定，用 decide。"],
+    ["encourage", "/ɪnˈkʌrɪdʒ/", "v. 鼓励", "人际相处", "Our teacher encourages us to ask questions.", "老师鼓励我们提问。", "encourage sb to do sth = 鼓励某人做某事。", "My friends always ___ me to try again when I fail.", ["prevent", "encourage", "avoid", "refuse"], "失败后支持再次尝试，是 encourage sb to try again。"],
+    ["offer", "/ˈɒfə/", "v. 主动提出；提供", "人际相处", "I can offer to help with the posters.", "我可以主动提出帮忙做海报。", "offer to do sth；offer sb sth = offer sth to sb。", "When you see someone carrying heavy bags, you can ___ to help.", ["offer", "enjoy", "mind", "finish"], "offer to help 表示主动提出帮忙；其余选项不接 to help 形成此义。"],
+    ["compare", "/kəmˈpeə/", "v. 比较", "学习方法", "Compare your first draft with your final version.", "把初稿和终稿比较一下。", "compare A with B = 把 A 与 B 比较；comparison 是名词。", "Before buying a bike, ___ the prices in different shops.（表达“比较价格”）", ["forget", "invent", "compare", "break"], "买车前比较不同商店的价格，用 compare。"],
+    ["allow", "/əˈlaʊ/", "v. 允许", "规则", "The teacher will allow us to work in pairs.", "老师会允许我们两人一组合作。", "allow sb to do sth；be allowed to do sth 表示被允许做某事。", "The museum does not ___ visitors to touch the paintings.", ["enjoy", "allow", "finish", "mind"], "allow visitors to touch 是“允许游客触碰”的结构，前面 does not 表示禁止。"],
+    ["instead", "/ɪnˈsted/", "adv. 代替；反而", "计划选择", "The library was closed, so we studied at home instead.", "图书馆关门了，所以我们改在家里学习。", "instead 可置于句末；instead of 后接名词或 doing：instead of driving。", "We didn't take the bus. We walked home ___.（表达“改为步行回家”）", ["instead of", "together", "suddenly", "instead"], "题目要求表达替代原计划，用 instead；together 是“一起”，suddenly 是“突然”，均不表示“改为”；instead of 后还需要名词或 doing。"],
+    ["environment", "/ɪnˈvaɪrənmənt/", "n. 环境", "环境保护", "We should protect the environment by reducing waste.", "我们应当通过减少垃圾来保护环境。", "protect the environment 是常用搭配；注意拼写中的 n：environ-ment。", "Using less plastic helps protect the ___.", ["environment", "invitation", "instrument", "competition"], "少用塑料有助于保护环境，用 environment。"],
+    ["careful", "/ˈkeəfl/", "adj. 小心的；认真的", "学习方法", "Be careful when you read the question.", "读题时要认真。", "careful 是形容词；carefully 是副词：read carefully；careless 表示粗心的。", "Be ___ with this glass. It breaks easily.", ["carefully", "carefulness", "careful", "care"], "be 后需要表示“小心的”的形容词 careful；carefully 是副词，carefulness 和这里的 care 是名词。"],
+  ]),
+  ...group("9", [
+    ["achieve", "/əˈtʃiːv/", "v. 实现；达到", "成长目标", "Small daily steps can help you achieve your goal.", "每天的一点进步能够帮助你实现目标。", "achieve a goal = 实现目标；不能说 achieve to do；achievement 是名词。", "With a clear plan and regular practice, you can ___ your goal.（表达“实现目标”）", ["miss", "borrow", "achieve", "invent"], "achieve your goal 表示实现目标。"],
+    ["consider", "/kənˈsɪdə/", "v. 考虑；认为", "计划选择", "We should consider taking an earlier train.", "我们应当考虑乘坐更早的火车。", "consider doing sth，不用 consider to do sth。", "The road is very busy. We should ___ taking the subway instead.", ["consider", "decide", "hope", "offer"], "consider 后接 doing；decide/hope/offer 通常接 to do。"],
+    ["suggest", "/səˈdʒest/", "v. 建议；表明", "人际相处", "I suggest reading the question twice.", "我建议把题目读两遍。", "suggest doing sth；也可 suggest that…；不用 suggest sb to do。", "If you often miss key words, I ___ underlining them while reading.", ["hope", "decide", "offer", "suggest"], "suggest underlining 表示建议画出关键词；suggest 后可接 doing。"],
+    ["require", "/rɪˈkwaɪə/", "v. 需要；要求", "规则", "Some questions require a complete sentence.", "有些题目要求用完整的句子回答。", "require sth；require sb to do sth；be required to do sth。", "These jobs ___ good communication skills; they are essential for the work.", ["refuse", "require", "avoid", "waste"], "后句说沟通技能必不可少，说明工作需要这些技能。"],
+    ["protect", "/prəˈtekt/", "v. 保护", "环境保护", "A helmet can protect your head from injury.", "头盔能够保护你的头部免受伤害。", "protect sb/sth from… = 保护……免受……。", "Wear sunglasses to ___ your eyes from strong sunlight.", ["protect", "prevent", "provide", "produce"], "protect your eyes from… 表示保护眼睛免受……伤害。"],
+    ["avoid", "/əˈvɔɪd/", "v. 避免；回避", "学习方法", "Check your work to avoid making the same mistake.", "检查作业，避免犯同样的错误。", "avoid doing sth，不用 avoid to do sth。", "Leave early to ___ getting stuck in traffic.（表达“避免堵车”）", ["enjoy", "keep", "avoid", "finish"], "早出发是为了避免堵车，用 avoid getting stuck。"],
+    ["develop", "/dɪˈveləp/", "v. 发展；养成", "成长目标", "It takes time to develop a good study habit.", "养成良好的学习习惯需要时间。", "develop a habit = 养成习惯；development 是名词。", "Reading at a fixed time each day can help you ___ a reading habit.（表达“养成习惯”）", ["lose", "develop", "break", "forget"], "每天固定时间阅读能帮助养成习惯，用 develop。"],
+    ["influence", "/ˈɪnfluəns/", "v./n. 影响", "人际相处", "Your friends can influence the choices you make.", "朋友可能会影响你作出的选择。", "influence sb/sth 可作动词；have an influence on… 中 influence 是名词。", "The people around us can ___ how we think and act.", ["arrive", "belong", "happen", "influence"], "周围的人能够影响我们的想法和行为，influence 后可接 how 从句。"],
+    ["increase", "/ɪnˈkriːs/", "v. 增加；增长", "数量变化", "Reading widely can increase your vocabulary.", "广泛阅读可以增加你的词汇量。", "increase by 20% = 增加了20%；increase to 20 = 增加到20。", "To read more, I plan to ___ my daily reading time from ten to twenty minutes.", ["reduce", "cancel", "increase", "divide"], "从十分钟到二十分钟表示增加，用 increase。"],
+    ["succeed", "/səkˈsiːd/", "v. 成功", "成长目标", "If we keep trying, we can succeed in solving the problem.", "如果继续尝试，我们就能成功解决问题。", "succeed in doing sth；success 是名词；successful 是形容词。", "Keep working on the project, and you may ___ in finishing it on time.", ["success", "succeed", "successful", "successfully"], "may 后接动词原形；succeed in doing 表示成功做成某事。"],
+    ["responsible", "/rɪˈspɒnsəbl/", "adj. 负责的；有责任的", "校园生活", "I am responsible for collecting our group's ideas.", "我负责收集小组的意见。", "be responsible for + 名词/doing；responsibility 是名词。", "As the team leader, she is ___ for checking everyone's work.", ["responsible", "popular", "similar", "afraid"], "be responsible for 表示对……负责；其余词不能与 for 组成这里的搭配。"],
+    ["discover", "/dɪˈskʌvə/", "v. 发现", "科学探索", "You may discover new interests by trying different activities.", "尝试不同活动，你可能会发现新的兴趣。", "discover = 发现原本存在但未知的事物；invent = 发明新事物。", "Scientists hope to ___ more about life in the deep ocean.（表达“发现更多未知信息”）", ["invent", "borrow", "return", "discover"], "探索已有但未知的深海生命信息用 discover，invent 表示发明。"],
+  ]),
+  ...group("general", [
+    ["evaluate", "/ɪˈvæljueɪt/", "v. 评估；评价", "思考与表达", "We need to evaluate the results before changing the plan.", "修改计划之前，我们需要评估结果。", "evaluate evidence/results 表示评估证据/结果；evaluation 是名词。", "Before choosing a course, ___ its cost, quality and usefulness.（表达“评估”）", ["ignore", "evaluate", "invent", "borrow"], "选择前权衡成本、质量和用途，是 evaluate。"],
+    ["evidence", "/ˈevɪdəns/", "n. 证据；根据", "思考与表达", "There is not enough evidence to support this claim.", "没有足够的证据支持这一说法。", "evidence 通常不可数：a piece of evidence；不用 an evidence。", "A strong argument should be supported by clear ___.（表达“有证据支持”，不是仅凭意见或猜测）", ["rumours", "opinions", "evidence", "guesses"], "有力的论证应由证据支撑；意见、猜测和传闻不能替代证据。"],
+    ["efficient", "/ɪˈfɪʃnt/", "adj. 高效的", "学习与工作", "Grouping similar tasks can make your work more efficient.", "把类似任务集中处理可以让工作更高效。", "efficient 强调少浪费时间/资源；effective 强调能产生预期效果。", "This method saves both time and energy, so it is more ___.（评价“效率更高”）", ["efficient", "expensive", "careless", "complicated"], "节省时间和精力体现高效率，用 efficient。"],
+    ["essential", "/ɪˈsenʃl/", "adj. 必不可少的", "学习与工作", "Sleep is essential for learning and memory.", "睡眠对于学习和记忆必不可少。", "be essential for/to…；It is essential to do… 表示做……至关重要。", "Clean drinking water is ___ for human life.", ["optional", "harmful", "unusual", "essential"], "人类生存离不开清洁饮用水，因此是 essential。"],
+    ["approach", "/əˈprəʊtʃ/", "n. 方法；v. 接近", "学习方法", "Let's try a different approach to learning new words.", "我们试试另一种学习新词的方法。", "an approach to doing sth 中 to 是介词，后面用 doing。", "If memorising lists does not help, try a different ___ to learning vocabulary.", ["arrival", "approach", "permission", "distance"], "an approach to learning 表示学习的方法。"],
+    ["assume", "/əˈsjuːm/", "v. 假定；认为", "思考与表达", "Don't assume that one good score means you know everything.", "不要以为一次高分就意味着你全都会了。", "assume that… 表示未经完全证实而假定；assumption 是名词。", "We should check the facts rather than ___ that the story is true.（表达“未经核实就假定为真”）", ["prove", "confirm", "assume", "remember"], "先查事实，不未经核实就假定故事属实，用 assume。"],
+    ["maintain", "/meɪnˈteɪn/", "v. 保持；维护", "学习与工作", "Short daily practice helps you maintain your skills.", "每天短时间练习有助于保持技能。", "maintain a habit/balance/relationship；maintenance 表示维护。", "Regular exercise helps you ___ a healthy level of fitness.", ["maintain", "destroy", "interrupt", "postpone"], "规律锻炼有助于保持健康的体能水平，用 maintain。"],
+    ["consequence", "/ˈkɒnsɪkwəns/", "n. 结果；后果", "思考与表达", "Lack of sleep can be a consequence of working too late.", "睡眠不足可能是工作太晚的结果。", "as a consequence = 因此；as a consequence of… = 由于……。", "One possible ___ of missing breakfast is feeling hungry before lunch.", ["advantage", "permission", "instruction", "consequence"], "午饭前饥饿是没吃早饭可能导致的后果，用 consequence。"],
+    ["perspective", "/pəˈspektɪv/", "n. 视角；观点", "思考与表达", "Try to see the problem from another person's perspective.", "试着从另一个人的角度看这个问题。", "from sb's perspective = 从某人的视角；a different perspective on… = 对……的不同看法。", "Listening to both sides gives us a broader ___ on the issue.", ["temperature", "perspective", "instruction", "permission"], "听取双方意见能让我们更全面地看待问题，即获得 broader perspective。"],
+    ["significant", "/sɪɡˈnɪfɪkənt/", "adj. 显著的；重要的", "数量变化", "Daily practice led to a significant improvement in her reading.", "每天练习使她的阅读水平有了显著提高。", "a significant difference/improvement；significantly 是副词。", "Her score rose from 45 to 85, which was a ___ improvement.", ["tiny", "negative", "significant", "nonexistent"], "分数从45到85提升幅度很大，significant 表示显著的。"],
+    ["consistent", "/kənˈsɪstənt/", "adj. 持续稳定的；一致的", "学习方法", "Consistent practice is more useful than one long session.", "持续稳定的练习比偶尔一次长时间学习更有用。", "be consistent with… = 与……一致；consistent effort = 持续的努力。", "She studies a little every day; her effort is ___ rather than irregular.", ["consistent", "consistency", "consistently", "consist"], "is 后需要形容词 consistent，表示持续稳定；consistency 是名词，consistently 是副词，consist 是动词。"],
+    ["prioritize", "/praɪˈɒrətaɪz/", "v. 优先处理；按重要性排列", "学习与工作", "Prioritize the words you often forget.", "优先学习你经常忘记的词。", "英式英语也拼作 prioritise；prioritize A over B = 优先考虑 A。", "With only twenty minutes left, we need to ___ the most urgent tasks.（表达“优先处理”）", ["postpone", "ignore", "repeat", "prioritize"], "时间有限时先处理最紧急的任务，用 prioritize。", ["prioritise"]],
+  ]),
+];
+
+const byId = new Map(WORD_CATALOG.map((word) => [word.id, word]));
+
+export function getWord(id: string): WordItem | undefined {
+  return byId.get(id);
+}
+
+export function getWordsForGrade(grade: Grade): WordItem[] {
+  return grade === "general" ? [...WORD_CATALOG] : WORD_CATALOG.filter((word) => word.grade === grade);
+}
