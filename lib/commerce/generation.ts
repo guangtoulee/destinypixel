@@ -1,8 +1,10 @@
 import "server-only";
 import { getReportAccess, isReportId } from "./access";
 import { databaseRequest } from "./database";
+import { MemberAuthError } from "@/lib/member-auth-security";
 import { assertMutation, readBody, privateJson, commerceError } from "./http";
 import { buildReportGenerationContext } from "./report-context";
+import { deepSeekReportModel } from "@/lib/ai/deepseek-report-model";
 import { buildNatalMessages, buildTransitMessages, fallbackNatalText, fallbackTransitText } from "@/lib/ai/streaming";
 import { transitPromptMarkers } from "@/lib/report-timing";
 import { normalizeReportLocale } from "@/lib/report-i18n";
@@ -26,7 +28,10 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
     lease=await databaseRequest<Lease>("rpc/destiny_claim_generation",{method:"POST",body:{p_report:body.reportId,p_kind:kind,p_locale:locale,p_year:year}});
     if(lease.state==="ready"&&lease.content)return textResponse(lease.content);
     if(lease.state==="running")return privateJson({error:"This report is already being prepared.",code:"GENERATION_RUNNING"},409,{"Retry-After":"3"});
-    if(lease.state!=="claimed"||!lease.id||!lease.leaseToken)return privateJson({error:"Generation is temporarily unavailable. Contact support with your order number.",code:"GENERATION_UNAVAILABLE"},503);
+    if(lease.state!=="claimed"||!lease.id||!lease.leaseToken){
+      console.error("[destiny-report-generation]",{kind,stage:"lease",state:lease.state});
+      return privateJson({error:"Generation is temporarily unavailable. Contact support with your order number.",code:"GENERATION_UNAVAILABLE"},503);
+    }
     await limitCommerceAction("generate",access.member?.id||body.reportId,30);
     const apiKey=process.env.DEEPSEEK_API_KEY;
     if(!apiKey){
@@ -34,12 +39,22 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
       await finishLease(lease,"error",null);
       return textResponse(kind==="natal"?fallbackNatalText(context):fallbackTransitText(context),true);
     }
-    const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:process.env.DEEPSEEK_MODEL||"deepseek-v4-flash",thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
-    if(!response.ok)throw new Error("Generation unavailable");
+    const model=deepSeekReportModel();
+    const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model,thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
+    if(!response.ok){
+      const detail=await response.text().catch(()=>"");
+      console.error("[destiny-report-generation]",{kind,stage:"provider-http",model,status:response.status,detail:detail.slice(0,400)});
+      throw new Error("Generation unavailable");
+    }
     const result=await response.json() as {choices?:Array<{finish_reason?:string;message?:{content?:string}}>};
     const markers=kind==="natal"?natalMarkers:[...transitPromptMarkers];
     const content=normalizeReportContent(result.choices?.[0]?.message?.content || "",markers);
-    if(result.choices?.[0]?.finish_reason!=="stop" || !completeReportContent(content,markers))throw new Error("Incomplete generation");
+    const finishReason=result.choices?.[0]?.finish_reason;
+    const complete=completeReportContent(content,markers);
+    if(finishReason!=="stop" || !complete){
+      console.error("[destiny-report-generation]",{kind,stage:"incomplete-content",model,finishReason:finishReason??null,complete,contentLength:content.length});
+      throw new Error("Incomplete generation");
+    }
     const latest=await getReportAccess(body.reportId);
     if(!latest.canRead || !latest.isFull)throw new Error("Access changed");
     if(!await finishLease(lease,"ready",content))throw new Error("Generation lease expired");
@@ -47,6 +62,7 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
     return textResponse(content);
   }catch(error){
     if(lease?.state==="claimed")try{await finishLease(lease,"error",null);}catch{/* Expiry remains a bounded recovery path. */}
+    if(!(error instanceof MemberAuthError)) console.error("[destiny-report-generation]",{kind,stage:"failed",message:error instanceof Error?error.message:"unknown"});
     return commerceError(error);
   }
 }
