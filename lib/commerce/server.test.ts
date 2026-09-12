@@ -449,6 +449,20 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(calls.some(call => call.body.status === "ready"), false);
     });
 
+    await scenario("one format repair recovers provider headings before persistence", async () => {
+      signIn(); unlock();
+      let modelCalls=0;
+      onModelCall=()=>{ modelCalls++; modelContent=modelCalls===1 ? "Unrecognized translated headings with real prose. ".repeat(20) : generationContent; };
+      const response=await generation.generateReport(request("/api/generate-natal",{reportId}),"natal");
+      assert.equal(response.status,200);
+      assert.equal(modelCalls,2);
+      assert.equal(await response.text(),generationContent);
+      const requests=calls.filter(call=>call.url.hostname==="model.example.test");
+      assert.equal(requests.length,2);
+      assert.equal((requests[1].body.messages as Array<{content:string}>).at(-1)?.content.includes("Preserve the prose"),true);
+      assert.equal(calls.filter(call=>call.body.status==="ready").length,1);
+    });
+
     await scenario("complete provider prose with redundant end labels is normalized before private persistence", async () => {
       signIn(); unlock();
       modelContent = ["DAY_MASTER", "OUTER_PERSONA", "DEEP_SELF", "CAREER", "LOVE", "GROWTH", "HEALTH"].map(marker => `[${marker}] ${"Synthetic interpretation. ".repeat(4)}\n[${marker}] 结束。`).join("\n");

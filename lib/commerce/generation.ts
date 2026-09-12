@@ -37,17 +37,26 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
       await finishLease(lease,"error",null);
       return textResponse(kind==="natal"?fallbackNatalText(context):fallbackTransitText(context),true);
     }
-    const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:reportModel,thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
-    if(!response.ok){
-      console.error("Report provider request failed", { kind, status: response.status, model: reportModel });
-      throw new Error("Generation unavailable");
-    }
-    const result=await response.json() as {choices?:Array<{finish_reason?:string;message?:{content?:string}}>};
     const markers=kind==="natal"?natalMarkers:[...transitPromptMarkers];
-    const content=normalizeReportContent(result.choices?.[0]?.message?.content || "",markers);
-    if(result.choices?.[0]?.finish_reason!=="stop" || !completeReportContent(content,markers)){
-      console.error("Report provider content incomplete", { kind, model: reportModel, finishReason: result.choices?.[0]?.finish_reason, characters: content.length, validChapters: markers.filter(marker => completeReportContent(content, [marker])).length, expectedChapters: markers.length });
-      throw new Error("Incomplete generation");
+    const messages: Array<{role:"system"|"user"|"assistant";content:string}>=kind==="natal"?buildNatalMessages(context):buildTransitMessages(context);
+    // Both calls share one deadline, leaving time to verify ownership and save.
+    const signal=AbortSignal.timeout(85_000);
+    let content="";
+    for(let attempt=0;attempt<2;attempt++){
+      const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal,headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:reportModel,thinking:{type:"disabled"},temperature:attempt?0:0.42,max_tokens:6200,stream:false,messages})});
+      if(!response.ok){
+        console.error("Report provider request failed", { kind, status: response.status, model: reportModel });
+        throw new Error("Generation unavailable");
+      }
+      const result=await response.json() as {choices?:Array<{finish_reason?:string;message?:{content?:string}}>};
+      const raw=result.choices?.[0]?.message?.content || "";
+      content=normalizeReportContent(raw,markers);
+      if(result.choices?.[0]?.finish_reason==="stop" && completeReportContent(content,markers))break;
+      console.error("Report provider content incomplete", { kind, model: reportModel, attempt: attempt+1, finishReason: result.choices?.[0]?.finish_reason, characters: content.length, validChapters: markers.filter(marker => completeReportContent(content, [marker])).length, expectedChapters: markers.length });
+      // A stopped response can have translated identifiers. Repair its format
+      // once, but never repair truncated output or bypass the complete-chapter check.
+      if(attempt || result.choices?.[0]?.finish_reason!=="stop" || raw.length<300 || raw.length>80_000)throw new Error("Incomplete generation");
+      messages.push({role:"assistant",content:raw},{role:"user",content:`Repair only the section headings in your previous response. Preserve the prose and its language. Return the entire report with exactly these ASCII identifiers, each once on its own line, in order: ${markers.map(marker=>`[${marker}]`).join(", ")}. Do not translate, abbreviate, decorate, or close these identifiers. Do not invent missing content. 只修正章节标记，正文原样保留。章节标记必须逐字使用以上英文标记，禁止翻译标记，禁止使用中文方括号。`});
     }
     const latest=await getReportAccess(body.reportId);
     if(!latest.canRead || !latest.isFull)throw new Error("Access changed");
