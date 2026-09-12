@@ -48,7 +48,7 @@ npm run build
 
 ## 发布边界
 
-改动限于英语页面、新模块和专用检查命令。没有改数据库、会员计费或全站 DeepSeek 配置。先通过预览检查再决定是否切换生产入口。已有独立保存的数据不要未经归属校验自动迁移。
+改动限于英语页面、新模块和专用检查命令。没有改数据库、会员计费或全站 DeepSeek 配置。沿用既有发布流程：完成检查后合入 GitHub main，由 Vercel 自动发布到公开域名。已有独立保存的数据不要未经归属校验自动迁移。
 
 ## 本地交付
 
@@ -60,8 +60,8 @@ node_modules/.bin/next start --hostname 127.0.0.1 --port 3003
 
 浏览器须使用上述 `localhost` 地址：Next 本地生产服务使用该请求源，`127.0.0.1` 的别名会被生产同源检查拒绝。Vercel 预览仍需使用其实际部署域名做一次端到端检查。
 
-代码位于 `codex/english-learning-first` 分支，已于 2026-09-12 推送至 GitHub 并触发 Vercel 预览。生产站尚未切换。
+开发分支为 `codex/english-learning-first`，通过 PR #1 合入 main 后自动发布。对外入口为 `https://www.destinypixel.com/english`，沿用网站已有公开访问方式。
 
 连接排查记录：旧仓库使用已配置的 SSH，当前新副本起初使用未关联凭证的 HTTPS；GitHub 连接器另有写入 403。已验证原 SSH 仍能登录，并将当前仓库的 origin 也切回同一套 SSH 配置；GitHub CLI 的 HTTPS 凭证也已关联。后续新副本应优先检查和复用现有 Git 连接。
 
-预览 PR：[guangtoulee/destinypixel#1](https://github.com/guangtoulee/destinypixel/pull/1)。Vercel 分支预览启用了登录保护；未登录浏览器会跳转到 Vercel 登录页。
+代码 PR：[guangtoulee/destinypixel#1](https://github.com/guangtoulee/destinypixel/pull/1)。Vercel 分支预览启用了登录保护，不能作为面向用户的交付地址；应通过 main 发布到公开业务域名，并从未登录浏览器验证页面和 DeepSeek 回答。
