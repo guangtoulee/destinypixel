@@ -7,7 +7,7 @@ import { birthFormFeedback } from "@/lib/birth-form-feedback";
 
 test("journal advertises exactly its real English and Chinese hub/article URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, 6);
+  assert.equal(entries.length, (journalArticles.length + 1) * 2);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
     for (const locale of ["en", "zh"] as const) {
@@ -22,7 +22,7 @@ test("journal advertises exactly its real English and Chinese hub/article URLs",
 });
 
 test("articles have translated sections, truthful free Article schema and useful original length", () => {
-  assert.equal(journalArticles.length, 2);
+  assert.equal(new Set(journalArticles.map((article) => article.slug)).size, journalArticles.length);
   for (const article of journalArticles) {
     assert.deepEqual(article.translations.en.sections.map((section) => section.id), article.translations.zh.sections.map((section) => section.id));
     for (const locale of ["en", "zh"] as const) {

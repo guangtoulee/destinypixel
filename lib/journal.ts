@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteName } from "@/lib/seo";
+import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
 
 export type JournalLocale = "en" | "zh";
 export type JournalSection = {
@@ -27,6 +28,7 @@ export type JournalArticle = {
 };
 
 export const journalArticles: JournalArticle[] = [
+  dayPillarIntroduction,
   {
     slug: "prepare-birth-date-time-place",
     publishedAt: "2026-09-11",
