@@ -62,4 +62,6 @@ node_modules/.bin/next start --hostname 127.0.0.1 --port 3003
 
 代码位于 `codex/english-learning-first` 分支，已于 2026-09-12 推送至 GitHub 并触发 Vercel 预览。生产站尚未切换。
 
-连接排查记录：旧仓库使用已配置的 SSH，当前新副本起初使用未关联凭证的 HTTPS；GitHub 连接器另有写入 403。已验证原 SSH 仍能登录，并通过 GitHub CLI 将当前 HTTPS 仓库接到有效凭证。后续新副本应优先检查和复用现有 Git 连接。
+连接排查记录：旧仓库使用已配置的 SSH，当前新副本起初使用未关联凭证的 HTTPS；GitHub 连接器另有写入 403。已验证原 SSH 仍能登录，并将当前仓库的 origin 也切回同一套 SSH 配置；GitHub CLI 的 HTTPS 凭证也已关联。后续新副本应优先检查和复用现有 Git 连接。
+
+预览 PR：[guangtoulee/destinypixel#1](https://github.com/guangtoulee/destinypixel/pull/1)。Vercel 分支预览启用了登录保护；未登录浏览器会跳转到 Vercel 登录页。
