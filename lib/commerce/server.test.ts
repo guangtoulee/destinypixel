@@ -22,7 +22,9 @@ test("commerce server routes authorize persisted reports and verified provider e
     DESTINY_ADMIN_MEMBER_IDS: "", DESTINY_ADMIN_EMAILS: "", AUTH_RATE_LIMIT_SECRET: "synthetic-rate-secret",
   };
   const oldEnv = Object.fromEntries(Object.keys(testEnv).map(key => [key, process.env[key]]));
+  const previousDeepSeekModel = process.env.DEEPSEEK_MODEL;
   Object.assign(process.env, testEnv);
+  delete process.env.DEEPSEEK_MODEL;
   const cookieJar = new Map<string, string>();
   runtimeModule._load = (name, parent, isMain) => {
     if (name === "server-only") return {};
@@ -64,8 +66,9 @@ test("commerce server routes authorize persisted reports and verified provider e
   const calls: Call[] = [];
   const unexpected: string[] = [];
   const generationContent = ["DAY_MASTER", "OUTER_PERSONA", "DEEP_SELF", "CAREER", "LOVE", "GROWTH", "HEALTH"].map(marker => `[${marker}] ${"Synthetic interpretation. ".repeat(4)}`).join("\n").trim();
-  function reset() {
+    function reset() {
     Object.assign(process.env, testEnv);
+    delete process.env.DEEPSEEK_MODEL;
     members.forEach(member => { member.plan = "free"; member.email_verified_at = null; });
     cookieJar.clear();
     calls.length = 0;
@@ -405,6 +408,7 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(await response.text(), generationContent);
       assert.equal(response.headers.get("cache-control"), "private, no-store");
       const submitted = JSON.stringify(modelCalls()[0].body);
+      assert.equal(modelCalls()[0].body.model, "deepseek-flash");
       assert.equal(submitted.includes("INJECTED-CONTEXT"), false);
       assert.equal(submitted.includes(birth.name), true);
       const write = calls.find(call => call.url.pathname.endsWith("/destiny_report_generations") && call.body.status === "ready")!;
@@ -437,6 +441,17 @@ test("commerce server routes authorize persisted reports and verified provider e
       assert.equal(stale.status, 503);
       assert.equal((await stale.text()).includes(generationContent), false);
       assert.equal(calls.some(call => call.url.pathname.endsWith("/reports") && call.method === "PATCH"), false);
+    });
+
+    await scenario("paid generation uses the current DeepSeek flash model unless DEEPSEEK_MODEL overrides it", async () => {
+      signIn(); unlock();
+      let response = await generation.generateReport(request("/api/generate-natal", { reportId }), "natal");
+      assert.equal(response.status, 200);
+      assert.equal(modelCalls()[0].body.model, "deepseek-flash");
+      process.env.DEEPSEEK_MODEL = "deepseek-flash-override";
+      response = await generation.generateReport(request("/api/generate-natal", { reportId }), "natal");
+      assert.equal(response.status, 200);
+      assert.equal(modelCalls()[1].body.model, "deepseek-flash-override");
     });
 
     await scenario("incomplete model output is never saved as a paid report", async () => {
@@ -704,5 +719,7 @@ test("commerce server routes authorize persisted reports and verified provider e
       if (value === undefined) delete process.env[key];
       else process.env[key] = value;
     }
+    if (previousDeepSeekModel === undefined) delete process.env.DEEPSEEK_MODEL;
+    else process.env.DEEPSEEK_MODEL = previousDeepSeekModel;
   }
 });

@@ -1,3 +1,4 @@
+import { deepSeekReportModel } from "@/lib/ai/deepseek-report-model";
 import type { Gender } from "@/lib/ai/report";
 import {
   languagePromptRules,
@@ -118,7 +119,6 @@ export type ReportGenerationContext = {
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ??
   "https://api.deepseek.com/v1/chat/completions";
-const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL ?? "deepseek-v4-flash";
 
 type ChatMessage = { role: "system" | "user"; content: string };
 
@@ -498,7 +498,7 @@ export async function streamDeepSeekText({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: DEEPSEEK_MODEL,
+        model: deepSeekReportModel(),
         thinking: { type: "disabled" },
         temperature: 0.42,
         max_tokens: Number(process.env.DEEPSEEK_STREAM_MAX_TOKENS ?? 5200),

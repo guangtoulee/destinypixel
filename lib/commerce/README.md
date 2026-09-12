@@ -28,7 +28,7 @@ Never put secrets in `NEXT_PUBLIC_*`, source files, screenshots or logs. The fol
 | `PAYPAL_WEBHOOK_ID` | Matching app's webhook identifier |
 | `PAYPAL_MERCHANT_ID` | Optional additional recipient check; set for the chosen merchant |
 | `DEEPSEEK_API_KEY` | Real server-side report generation; paid delivery never falls back to a template |
-| `DEEPSEEK_MODEL`, `DEEPSEEK_API_URL` | Optional provider settings, otherwise existing documented defaults |
+| `DEEPSEEK_MODEL`, `DEEPSEEK_API_URL` | Optional provider settings; default model is `deepseek-flash`. If Vercel still overrides `DEEPSEEK_MODEL` to a retired `deepseek-v4-*` id, set it to `deepseek-flash` after deploy. |
 | `DESTINY_ADMIN_MEMBER_IDS` | Explicitly bound existing member IDs, comma-separated |
 | `RESEND_API_KEY`, `DESTINY_AUTH_EMAIL_FROM` | Recovery email delivery from a verified sending domain, unavailable until configured |
 | `NEXT_PUBLIC_DESTINY_SUPPORT_EMAIL` | Public contact and recovery-email Reply-To; defaults to `liyu321@gmail.com` |
