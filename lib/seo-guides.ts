@@ -55,7 +55,7 @@ export const seoGuides: SeoGuide[] = [
     slug: "i-ching-vs-tarot",
     title: "I Ching vs Tarot: Which to Use for One Question?",
     description:
-      "I Ching (and liuyao) vs tarot for one clear question—timing and structure versus imagery. When to use each, and what neither can promise.",
+      "I Ching (and liuyao) vs tarot for one clear question—timing and structure versus imagery. When to use each, and what neither can promise. Explore Destiny Pixel oracle.",
     h1: "I Ching vs Tarot: Which to Use for One Question?",
     paragraphs: [
       "For one clear question, people often reach for tarot or the I Ching. Destiny Pixel’s oracle lane sits closer to the I Ching / liuyao tradition: hexagrams, changing lines, and how a situation is structured in time—not a deck of picture archetypes.",
@@ -91,7 +91,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "chinese-palm-reading-vs-western",
-    title: "Chinese Palm Reading vs Western Palmistry",
+    title: "Chinese Palm Reading vs Western Palmistry (AI Guide)",
     description:
       "Chinese palm reading and Western palmistry both study the hand—but not the same way. What AI palm scans can help with, and what they should never claim.",
     h1: "Chinese Palm Reading vs Western Palmistry",
