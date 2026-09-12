@@ -60,4 +60,6 @@ node_modules/.bin/next start --hostname 127.0.0.1 --port 3003
 
 浏览器须使用上述 `localhost` 地址：Next 本地生产服务使用该请求源，`127.0.0.1` 的别名会被生产同源检查拒绝。Vercel 预览仍需使用其实际部署域名做一次端到端检查。
 
-代码位于 `codex/english-learning-first` 本地分支。2026-09-12 发布尝试：GitHub 连接器写入返回 403（integration 无写入权限），本机 Git 没有登录，暂未建立远程分支、PR 或 Vercel 预览；生产站尚未切换。
+代码位于 `codex/english-learning-first` 分支，已于 2026-09-12 推送至 GitHub 并触发 Vercel 预览。生产站尚未切换。
+
+连接排查记录：旧仓库使用已配置的 SSH，当前新副本起初使用未关联凭证的 HTTPS；GitHub 连接器另有写入 403。已验证原 SSH 仍能登录，并通过 GitHub CLI 将当前 HTTPS 仓库接到有效凭证。后续新副本应优先检查和复用现有 Git 连接。
