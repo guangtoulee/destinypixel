@@ -11,10 +11,10 @@ import {
   zodiacLabels,
 } from "@/lib/report-i18n";
 import { getPillarDisplay, pillarOrder } from "@/lib/bazi-totems";
+import { deepSeekReportModel } from "./deepseek-report-model";
 
 const DEEPSEEK_API_URL =
   process.env.DEEPSEEK_API_URL ?? "https://api.deepseek.com/v1/chat/completions";
-const DEEPSEEK_MODEL = "deepseek-v4-flash";
 const DEFAULT_TIMEOUT_MS = 18_000;
 const MIN_SECTION_CHARACTERS = 80;
 const TARGET_SECTION_CHARACTERS = "250-300";
@@ -240,7 +240,7 @@ async function callDeepSeek({
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: DEEPSEEK_MODEL,
+      model: deepSeekReportModel(),
       temperature: retryReason ? 0.35 : 0.45,
       max_tokens: 1500,
       response_format: { type: "json_object" },
@@ -506,7 +506,7 @@ export async function generateAIReportInsight({
       ...sections,
       meta: {
         provider: "deepseek",
-        model: DEEPSEEK_MODEL,
+        model: deepSeekReportModel(),
         generatedAt,
         gender,
         locale,
