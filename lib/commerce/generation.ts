@@ -9,6 +9,9 @@ import { normalizeReportLocale } from "@/lib/report-i18n";
 import { limitCommerceAction } from "./rate-limit";
 import { completeReportContent, normalizeReportContent } from "./report-content";
 
+const configuredModel = process.env.DEEPSEEK_MODEL?.trim();
+const reportModel = !configuredModel || configuredModel === "deepseek-v4-flash" ? "deepseek-flash" : configuredModel;
+
 const natalMarkers=["DAY_MASTER","OUTER_PERSONA","DEEP_SELF","CAREER","LOVE","GROWTH","HEALTH"];
 type Lease={state:"ready"|"claimed"|"running"|"exhausted";id?:string;leaseToken?:string;content?:string};
 function textResponse(content:string,fallback=false){return new Response(content,{headers:{"Content-Type":"text/plain; charset=utf-8","Cache-Control":"private, no-store","X-Report-Content":fallback?"fallback":"generated"}});}
@@ -34,12 +37,18 @@ export async function generateReport(request:Request,kind:"natal"|"transit"){
       await finishLease(lease,"error",null);
       return textResponse(kind==="natal"?fallbackNatalText(context):fallbackTransitText(context),true);
     }
-    const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:process.env.DEEPSEEK_MODEL||"deepseek-v4-flash",thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
-    if(!response.ok)throw new Error("Generation unavailable");
+    const response=await fetch(process.env.DEEPSEEK_API_URL||"https://api.deepseek.com/v1/chat/completions",{method:"POST",cache:"no-store",signal:AbortSignal.timeout(70_000),headers:{Authorization:`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({model:reportModel,thinking:{type:"disabled"},temperature:0.42,max_tokens:6200,stream:false,messages:kind==="natal"?buildNatalMessages(context):buildTransitMessages(context)})});
+    if(!response.ok){
+      console.error("Report provider request failed", { kind, status: response.status, model: reportModel });
+      throw new Error("Generation unavailable");
+    }
     const result=await response.json() as {choices?:Array<{finish_reason?:string;message?:{content?:string}}>};
     const markers=kind==="natal"?natalMarkers:[...transitPromptMarkers];
     const content=normalizeReportContent(result.choices?.[0]?.message?.content || "",markers);
-    if(result.choices?.[0]?.finish_reason!=="stop" || !completeReportContent(content,markers))throw new Error("Incomplete generation");
+    if(result.choices?.[0]?.finish_reason!=="stop" || !completeReportContent(content,markers)){
+      console.error("Report provider content incomplete", { kind, model: reportModel, finishReason: result.choices?.[0]?.finish_reason, characters: content.length, validChapters: markers.filter(marker => completeReportContent(content, [marker])).length, expectedChapters: markers.length });
+      throw new Error("Incomplete generation");
+    }
     const latest=await getReportAccess(body.reportId);
     if(!latest.canRead || !latest.isFull)throw new Error("Access changed");
     if(!await finishLease(lease,"ready",content))throw new Error("Generation lease expired");

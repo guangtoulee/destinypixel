@@ -1,9 +1,24 @@
-/** Remove only a provider's standalone, redundant end label after a real chapter. */
+// Provider upgrades may translate headings despite the ASCII-marker instruction.
+// Only exact, standalone headings are mapped; prose is never rewritten.
+const chapterAliases: Record<string, string> = {
+  日主: "DAY_MASTER", 内在核心: "DAY_MASTER", 內在核心: "DAY_MASTER", 核心模式: "DAY_MASTER",
+  外在形象: "OUTER_PERSONA", 社会面具: "OUTER_PERSONA", 社會面具: "OUTER_PERSONA",
+  深层自我: "DEEP_SELF", 深層自我: "DEEP_SELF", 内核心理: "DEEP_SELF", 內核心理: "DEEP_SELF",
+  事业: "CAREER", 事業: "CAREER", 爱情: "LOVE", 愛情: "LOVE", 感情: "LOVE",
+  成长: "GROWTH", 成長: "GROWTH", 健康: "HEALTH",
+  年度概览: "OVERVIEW", 年度概覽: "OVERVIEW", 总览: "OVERVIEW", 總覽: "OVERVIEW",
+};
+
+/** Normalize known headings and redundant end labels, retaining completeness checks. */
 export function normalizeReportContent(content: string, markers: readonly string[]) {
   const allowed = new Set(markers);
   let activeMarker: string | null = null;
   let chapterCharacters = 0;
-  return content.split(/\r?\n/).filter(line => {
+  return content.split(/\r?\n/).map(line => {
+    const heading = /^\s*\[([^\[\]]+)\]\s*$/.exec(line);
+    const canonical = heading && chapterAliases[heading[1]];
+    return canonical && allowed.has(canonical) ? `[${canonical}]` : line;
+  }).filter(line => {
     const ending = /^\s*\[([A-Z0-9_]+)\]\s*(?:结束[。.!]?|[Ee][Nn][Dd][.!]?)\s*$/.exec(line);
     if (ending && ending[1] === activeMarker && chapterCharacters >= 30) return false;
     const heading = /^\s*\[([A-Z0-9_]+)\](.*)$/.exec(line);
