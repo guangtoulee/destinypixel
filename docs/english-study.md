@@ -1,0 +1,67 @@
+# Bright Steps：词汇与理解优先的英语学习
+
+## 用户流程
+
+`/english` 的主动作是每日短练习：6 个核心词回忆 → 3 道语境题 → 最多 3 个错词延后重试 → 1 次自主造句 → 学习小结。DeepSeek 用于错因解释、换情境补练、自由表达反馈、追问和学习建议。游戏不占主线。
+
+`/english/assessment` 是面向不同年龄的 12 词识义快测，显示实际样本正确数和错词，不推算总词汇量、CEFR 或考试分数。`/english/classic` 保留旧版练习入口与旧本地存档，并说明旧测评和词包的适用边界。原 `/danci` 未迁移。
+
+本轮词库为 48 个审校主题词：七、八、九年级各 12 词，通用进阶 12 词。通用学习可选择整个样本池。它是可用的首批精选内容，尚不等于任何完整教材或考试大纲；扩大覆盖须先确认目标教材版本并审校题目。
+
+## 学习记录
+
+- 回忆、选择语境、句子表达分别记录。刚展示答案或使用提示后答对，不算独立回忆。
+- 同日重复、刚跨午夜、选择题答对不升级成延迟记忆。回忆到期后，至少间隔 20 小时、跨学习日、独立答对才产生相应延迟证据；复习间隔为可调整规则，不宣称最优。
+- 当前词条、错题解释、AI 提示、词本可见词条都记录曝光。当前原型用最近 30 分钟的设备曝光辅助提示归因。
+- 合理同义句可以被认可；未出现目标词时不伪造该词的使用证据，也不记为该词用错。
+- 学习计划、输入草稿、每题结果、造句反馈、小结和按学习内容切换的暂停进度保存在独立 localStorage 键。不会自动导入或混并旧账号记录。
+- 这是同设备、单学习者的存档版本，尚无跨设备云同步。公用设备的多人档案与旧账号迁移另行开发，不能直接复用旧 `/danci` 的合并行为。
+
+## DeepSeek
+
+仅服务端使用以下环境变量：
+
+```text
+DEEPSEEK_API_KEY=<existing server key>
+ENGLISH_DEEPSEEK_MODEL=deepseek-flash
+DEEPSEEK_API_URL=https://api.deepseek.com/chat/completions
+```
+
+`ENGLISH_DEEPSEEK_MODEL` 可省略，默认 `deepseek-flash`。英语配置不更改其他产品模型。调用明确关闭思考，支持足量 JSON 输出；简短学生文案用于减轻阅读负担。客户端只调用 `/api/english/study/tutor`。
+
+服务端核验模式、年级、词条 ID、题型和输入长度。固定标准答案从词表获取，回忆题不会把尚未展示的语境题发给模型。有限重试后返回明确可恢复错误，绝不把备用固定回复伪装成 DeepSeek 成功结果。显示 token 用量仅用于开发验证，不显示给学生。当前速率限制为进程内突发保护，不是持久用户配额；大规模公开使用前需接入部署平台的全局访问防护。
+
+## 开发与验证
+
+```sh
+npm ci
+npm run dev -- --hostname 127.0.0.1
+npm run test:english
+npm run lint:english
+npx tsc --noEmit --incremental false
+npm run build
+```
+
+开发模式在 `http://127.0.0.1:3002/english` 检查手机竖屏学习、错误恢复、英美拼写、打开提示后的归因、刷新续学、切年级保留进度、小结回看、词本搜索和快测。单元测试覆盖重复回合、跨日复习、提示与词形证据、API 校验及故障恢复。
+
+真实模型样本与时延见 [验证记录](english-study-validation.md)。没有做学生试验或证明成绩提升；后续以无提示延迟回忆、语境题正确率和同难度测试为观察指标。
+
+## 发布边界
+
+改动限于英语页面、新模块和专用检查命令。没有改数据库、会员计费或全站 DeepSeek 配置。沿用既有发布流程：完成检查后合入 GitHub main，由 Vercel 自动发布到公开域名。已有独立保存的数据不要未经归属校验自动迁移。
+
+## 本地交付
+
+生产构建试用地址：`http://localhost:3003/english`。重新启动：
+
+```sh
+node_modules/.bin/next start --hostname 127.0.0.1 --port 3003
+```
+
+浏览器须使用上述 `localhost` 地址：Next 本地生产服务使用该请求源，`127.0.0.1` 的别名会被生产同源检查拒绝。Vercel 预览仍需使用其实际部署域名做一次端到端检查。
+
+开发分支为 `codex/english-learning-first`，通过 PR #1 合入 main 后自动发布。对外入口为 `https://www.destinypixel.com/english`，沿用网站已有公开访问方式。
+
+连接排查记录：旧仓库使用已配置的 SSH，当前新副本起初使用未关联凭证的 HTTPS；GitHub 连接器另有写入 403。已验证原 SSH 仍能登录，并将当前仓库的 origin 也切回同一套 SSH 配置；GitHub CLI 的 HTTPS 凭证也已关联。后续新副本应优先检查和复用现有 Git 连接。
+
+代码 PR：[guangtoulee/destinypixel#1](https://github.com/guangtoulee/destinypixel/pull/1)。Vercel 分支预览启用了登录保护，不能作为面向用户的交付地址；应通过 main 发布到公开业务域名，并从未登录浏览器验证页面和 DeepSeek 回答。

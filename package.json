@@ -10,7 +10,9 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
-    "test:totem": "tsx --test lib/totem/model.test.ts"
+    "test:totem": "tsx --test lib/totem/model.test.ts",
+    "test:english": "tsx --test lib/english-study/*.test.ts",
+    "lint:english": "eslint --config eslint.english.config.mjs components/english-study lib/english-study app/english app/api/english/study"
   },
   "dependencies": {
     "@js-temporal/polyfill": "0.5.1",
