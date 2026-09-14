@@ -3,6 +3,7 @@
 import { destinySupportHref } from "@/lib/support-contact";
 
 import Image from "next/image";
+import DayPillarReading from "./day-pillar-reading";
 import Link from "next/link";
 import { useRef, useState, type FormEvent, type PointerEvent } from "react";
 import { ArrowRight, CalendarDays, Check, Compass, Copy, Download, Gem, Loader2, MoveUpRight, Rotate3D, ShieldCheck, Sparkles } from "lucide-react";
@@ -14,7 +15,7 @@ import styles from "./day-pillar-experience.module.css";
 const copy = {
   en: {
     home: "Home", tools: "Explore", language: "Language", eyebrow: "A FREE FIRST GLIMPSE", title: "One birthday.\nA symbolic companion.",
-    intro: "Discover one of sixty birthday characters, from the Oceanic Sequoia to the Dewy Rabbit. Meet your strengths and a direction for growth, free and without an account.",
+    intro: "Discover one of sixty birthday characters, from the Oceanic Sequoia to the Dewy Rabbit. Explore personality, relationship patterns and work strengths, free and without an account.",
     date: "Your Gregorian birth date", reveal: "Reveal my character", busy: "Finding your card…", privacy: "Calculated in this page. Your date is not uploaded or saved.",
     conventionTitle: "A date preview, with room to refine.", convention: "Your first card comes from your calendar birth date. A full birth map also considers time and place, which can change a result close to midnight.",
     invalid: "Enter a valid Gregorian date, including the year.", range: "Choose a birth date from 1800 to 2100.", future: "Your birth date cannot be in the future.", unavailable: "The card calculator could not load. Please try again.",
@@ -26,7 +27,7 @@ const copy = {
   },
   zh: {
     home: "首页", tools: "探索工具", language: "语言", eyebrow: "从一张免费意象卡开始", title: "一个生日，\n一位意象同伴。",
-    intro: "从六十甲子中，遇见一张与你生日相连的意象卡。留一点时间观察自己，无需注册，也无需付费。",
+    intro: "从六十甲子中，遇见一张与你生日相连的意象卡。看看性格里的反差、感情中的习惯与事业发力点，无需注册，也无需付费。",
     date: "你的公历出生日期", reveal: "看看我的日柱卡", busy: "正在寻找你的卡片…", privacy: "仅在当前页面计算，出生日期不上传、不保存。",
     conventionTitle: "先看日期意象，再补齐出生坐标。", convention: "初算采用公历日期，以午夜零点换日，尚未按出生时间与地点校准。这是一张暂定日柱卡，不是完整命盘。",
     invalid: "请输入有效的公历日期，包含完整年份。", range: "请选择 1800 至 2100 年之间的出生日期。", future: "出生日期不能晚于今天。", unavailable: "计算组件暂时未能加载，请再试一次。",
@@ -124,7 +125,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
     </div>
     <section className={styles.reading} aria-labelledby="day-card-title">
       <div className={styles.readingTitle}>{locale === "zh" && <span className={styles.pillarSeal}>{card.pillar}</span>}<div><p className={styles.eyebrow}>{text.collection}</p><h2 id="day-card-title">{card.name}</h2></div><button type="button" className={styles.shareButton} onClick={() => void copyLink()}><Copy size={15} aria-hidden="true" />{text.share}</button></div>
-      <div className={styles.readingGrid}><article><span className={styles.sectionNumber}>01</span><h3>{text.portrait}</h3><p>{card.essence}</p></article><article><span className={styles.sectionNumber}>02</span><h3>{text.reflection}</h3><p>{card.growth}</p><p className={styles.prompt}>{text.reflectionNote}</p></article></div>
+      <DayPillarReading insight={card.insight} locale={locale} growth={card.growth}/>
       <p className={styles.cultural}>{text.cultural}</p>
       {card.pillar === "甲子" && <a className={styles.journalLink} href={locale === "zh" ? "/journal/jia-zi-day-pillar?locale=zh" : "/journal/jia-zi-day-pillar"}>{locale === "zh" ? "甲子详解：性格、感情、事业与同日柱名人" : "The Oceanic Sequoia: personality, love & famous birthdays"}<ArrowRight size={16} aria-hidden="true" /></a>}
       {shareLink && <div className={styles.shareBox}><p role="status"><Check size={14} aria-hidden="true" />{shareMessage}</p><label htmlFor="day-card-share">{text.shareLabel}</label><input id="day-card-share" readOnly value={shareLink} onFocus={(event) => event.target.select()} /><small>{text.shareNote}</small></div>}

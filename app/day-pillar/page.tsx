@@ -9,7 +9,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const params = await searchParams;
   const zh = params?.locale === "zh";
   const title = zh ? "免费日柱意象卡｜60甲子与自我观察 | DestinyPixel" : "Free Birthday Character Card | DestinyPixel";
-  const description = zh ? "用公历生日探索一张免费的日柱意象卡，无需登录。按公历日期、午夜换日初算；补充出生时间和地点后，可在主站校准完整出生图谱。" : "Meet your free birthday character, from the Oceanic Sequoia to the Dewy Rabbit. No login needed. This midnight-based date preview can be calibrated with your birth time and city in a full birth map.";
+  const description = zh ? "输入公历生日，免费探索六十甲子日柱的性格反差、感情模式与事业发力点，找到你的意象卡。无需登录；出生时间和地点可进一步校准图谱。" : "Find your free birthday character and explore personality, relationship patterns and work strengths. Meet the Oceanic Sequoia, Dewy Rabbit and more. No login needed.";
   const url = zh ? "/day-pillar?locale=zh" : "/day-pillar";
   return {
     title: { absolute: title }, description,

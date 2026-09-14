@@ -1,0 +1,21 @@
+.reading { container-type: inline-size; min-width: 0; color: #202e4a; }
+.intro { padding: 26px 0 24px; }
+.eyebrow { display: flex; gap: 8px; align-items: center; margin: 0 0 14px; color: #5267c3; font-size: 11px; font-weight: 650; letter-spacing: .1em; line-height: 1.6; }
+.intro h2 { font-family: var(--font-geist-sans), Arial, sans-serif; font-size: clamp(25px, 4.5cqi, 36px); line-height: 1.4; letter-spacing: -.035em; font-weight: 650; margin: 0; max-width: 24em; text-wrap: balance; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.topic { min-width: 0; padding: 23px; border: 1px solid #dfe6f4; background: linear-gradient(150deg, #fff, #f2f6ff); border-radius: 19px; }
+.topic[data-topic="career"] { background: linear-gradient(150deg, #fff, #eefafa); border-color: #d9ecec; }
+.topic[data-topic="love"] { background: linear-gradient(150deg, #fff, #faf1ff); border-color: #ebdff3; }
+.topicHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.icon { display: grid; place-items: center; width: 37px; height: 37px; background: #e8edff; border-radius: 12px; color: #5369da; }
+[data-topic="career"] .icon { background: #def5f0; color: #187e79; }
+[data-topic="love"] .icon { background: #f0e5fa; color: #9251bb; }
+.number { color: #8894ae; font-size: 12px; font-variant-numeric: tabular-nums; }
+.topic h3 { font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 17px; line-height: 1.45; font-weight: 650; letter-spacing: -.02em; margin: 0 0 11px; }
+.topic p { font-size: 14px; line-height: 1.95; margin: 0; color: #53617a; overflow-wrap: anywhere; }
+.growth { padding: 22px 24px; border-left: 3px solid #8094ee; background: #f6f8ff; border-radius: 0 13px 13px 0; margin-top: 18px; }
+.growth span { color: #485caf; font-size: 12px; font-weight: 650; }
+.growth p { margin: 8px 0 0; font-size: 14px; line-height: 1.9; color: #53617a; }
+.note { font-size: 11px; color: #69758b; line-height: 1.85; margin: 19px 0 0; }
+@container (max-width: 680px) { .grid { grid-template-columns: minmax(0, 1fr); } .topic { padding: 21px; } .topicHeader { margin-bottom: 10px; } }
+@media (max-width: 480px) { .intro { padding-top: 20px; } .intro h2 { font-size: 25px; } }

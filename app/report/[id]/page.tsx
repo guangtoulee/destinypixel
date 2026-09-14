@@ -44,6 +44,10 @@ import { buildReportGenerationContext, calculateReportBazi } from "@/lib/commerc
 import { elementStyle, getGemstonesForElement, targetElement } from "@/lib/energy-style";
 import ReportUnlock from "@/components/report-unlock";
 import unlockStyles from "@/components/report-unlock.module.css";
+import previewStyles from "@/components/report-preview.module.css";
+import DayPillarReading from "@/components/day-pillar-reading";
+import { getLocalizedDayPillarInsight } from "@/lib/day-pillar-insights-localized";
+import { toTraditional } from "@/lib/journal-locales";
 
 export const maxDuration = 60;
 
@@ -267,6 +271,8 @@ export default async function ReportPage({
     copyLocale === "zh"
       ? `${profileName} × ${sunSign}`
       : `${profileName} × ${sunSign}`;
+  const publicInsight = getLocalizedDayPillarInsight(dayPillar, locale);
+  const localText = (value: string) => locale === "zh-TW" ? toTraditional(value) : value;
   const fullReport = access.isFull ? {
     context: buildReportGenerationContext(report, locale),
     initialNatal: access.commerceEnabled ? null : buildInitialNatalShell({ locale, profile, bazi: baziData, dayDisplay, sunSign, mappedPlanetName }),
@@ -276,7 +282,7 @@ export default async function ReportPage({
   const braceletStones = getGemstonesForElement(elementFocus).slice(0, 3);
   const basicText = copyLocale === "zh" ? {
     kicker: "免费基础报告", title: "你的出生图谱，一眼看懂。",
-    summary: `你的日柱意象是${profileName}，日干对应${dayDisplay.stemMeaning}，太阳星座落在${sunSign}。左侧四柱与五行分布来自你填写的出生资料，可用作观察自己的起点。`,
+    summary: `你的日柱意象是${profileName}，日干对应${dayDisplay.stemMeaning}，太阳星座落在${sunSign}。图谱中的四柱与五行分布来自你填写的出生资料，可用作观察自己的起点。`,
     reflection: "先选一个与你日常经验有关的特点，想想它最近在什么情境下出现。把这份图谱当作象征性的自我观察，而不是确定的命运判断。",
     colors: "从五行配色，到日常手串", focus: `配色可以从「${colorGuide.label[copyLocale]}」的意象出发：`,
     stones: "可参考的宝石：", atelier: "打开灵石手串工坊", totem: "探索本命灵构",
@@ -290,7 +296,7 @@ export default async function ReportPage({
     note: "Цвета и камни служат эстетике и символике, а не обещают влияние на здоровье или удачу.",
   } : {
     kicker: "FREE BASIC REPORT", title: "Your birth map at a glance.",
-    summary: `Your day-pillar image is ${profileName}, the stem expresses ${dayDisplay.stemMeaning}, and your Sun is in ${sunSign}. The Four Pillars and element balance beside this reading are calculated from the birth details you entered.`,
+    summary: `Your day-pillar image is ${profileName}, the stem expresses ${dayDisplay.stemMeaning}, and your Sun is in ${sunSign}. The Four Pillars and element balance in this map are calculated from the birth details you entered.`,
     reflection: "Choose one theme that connects to your experience and recall a specific recent situation. Use the map as a symbolic starting point for self-observation, rather than a prediction of your future.",
     colors: "From five-element colors to your bracelet", focus: `Begin with the color symbolism of ${colorGuide.label[copyLocale]}:`,
     stones: "Gemstones to explore: ", atelier: "Open the bracelet workshop", totem: "Explore Birth Totem",
@@ -299,7 +305,7 @@ export default async function ReportPage({
 
   return (
     <main
-      className="report-shell"
+      className={`report-shell ${previewStyles.page}`}
       lang={locale === "zh-TW" ? "zh-Hant" : locale === "zh" ? "zh-Hans" : locale}
       data-report-export
       data-report-title={headline}
@@ -439,18 +445,22 @@ export default async function ReportPage({
           requireGeneratedContent={access.commerceEnabled}
           initialMember={access.member ? { id: access.member.id, email: access.member.email, name: access.member.name, plan: access.member.plan } : null}
           initiallySaved={Boolean(access.member && !access.claimable)}
-        /> : <div className="report-workspace">
-          <section className={unlockStyles.basic}>
+        /> : <div className={`report-workspace ${previewStyles.freeWorkspace}`}>
+          <section className={previewStyles.free}>
             <p className={unlockStyles.eyebrow}><Sparkles size={14} aria-hidden="true" />{basicText.kicker}</p>
-            <h2>{basicText.title}</h2><p>{basicText.summary}</p><p>{basicText.reflection}</p>
-            <h3>{basicText.colors}</h3><p>{basicText.focus}</p>
+            <p>{localText(basicText.summary)}</p>
+            {publicInsight && <DayPillarReading insight={publicInsight} locale={locale} growth={copyLocale === "zh" ? localText(profile.growth.cn) : locale === "en" ? profile.growth.en : undefined}/>}
+            <a className={previewStyles.jump} href="#unlock-full-report">{locale === "ru" ? "Что добавит полная карта?" : copyLocale === "zh" ? localText("完整图谱还能告诉我什么？") : "What does my full map add?"}<ArrowRight size={16} aria-hidden="true"/></a>
+          </section>
+          <ReportUnlock key={`${report.id}:${locale}`} reportId={report.id} locale={locale} isMember={Boolean(access.member)} claimable={access.claimable} offer={access.offer} />
+          <section className={unlockStyles.basic}>
+            <h3>{localText(basicText.colors)}</h3><p>{localText(basicText.focus)}</p>
             <div className={unlockStyles.colors}>{colorGuide.colors[copyLocale].map((color, index) => <span key={color}><i style={{ background: colorGuide.swatches[index] }} />{color}</span>)}</div>
             <p>{colorGuide.wardrobe[copyLocale]}</p>
             <p>{basicText.stones}{braceletStones.map((stone) => stone.name[copyLocale]).join(copyLocale === "zh" ? "、" : ", ")}</p>
             <p className={unlockStyles.small}>{basicText.note}</p>
             <div className={unlockStyles.basicActions}><Link className={unlockStyles.textLink} href={`/atelier?locale=${locale}&focus=${elementFocus}`}><Gem size={15} aria-hidden="true" />{basicText.atelier}<ArrowRight size={14} aria-hidden="true" /></Link><Link className={unlockStyles.textLink} href={`/tuteng?locale=${locale}`}>{basicText.totem}<ArrowRight size={14} aria-hidden="true" /></Link></div>
           </section>
-          <ReportUnlock key={`${report.id}:${locale}`} reportId={report.id} locale={locale} isMember={Boolean(access.member)} claimable={access.claimable} offer={access.offer} />
         </div>}
       </section>
     </main>

@@ -54,7 +54,7 @@ test("a complete cycle resolves to all sixty available bilingual cards and exist
     for (const card of cards) {
       assert.ok(card.name && card.essence && card.growth);
       assert.ok(existsSync(path.join(process.cwd(), "public", new URL(card.image, "https://www.destinypixel.com").pathname)), card.image);
-      assert.deepEqual(Object.keys(card).sort(), ["essence", "growth", "image", "name", "pillar", "slug"]);
+      assert.deepEqual(Object.keys(card).sort(), ["essence", "growth", "image", "insight", "name", "pillar", "slug"]);
     }
   }
 });

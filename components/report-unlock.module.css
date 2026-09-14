@@ -49,3 +49,22 @@
 .saveButton:disabled { opacity: .6; cursor: wait; }
 .saveBar a:focus-visible, .saveButton:focus-visible { outline: 3px solid #a176b9; outline-offset: 4px; }
 @media (max-width: 480px) { .saveBar { flex-direction: column; align-items: flex-start; gap: 13px; padding: 20px 22px; } }
+
+/* A readable preview of the paid scope; no generated text is sent or blurred. */
+.unlock { background: linear-gradient(135deg, #f1f5ff, #f7f1ff); border-color: #dbe2fa; color: #293b63; border-radius: 22px; scroll-margin-top: 24px; }
+.unlock h2 { font-family: var(--font-geist-sans), Arial, sans-serif; color: #293b63; font-size: 29px; font-weight: 650; }
+.lead, .benefits li, .offer span, .note, .assurance { color: #5d6b89; }
+.eyebrow, .benefits svg, .textLink { color: #5266bd; }
+.primary { background: linear-gradient(110deg, #496bfa, #7955e5); border-radius: 11px; font-size: 14px; min-height: 47px; }
+.primary:hover { background: linear-gradient(110deg, #3d5cdc, #6942d6); }
+.chapterPreview { display: grid; gap: 12px; margin: 22px 0 26px; }
+.chapterPreview article { padding: 19px 21px; border: 1px solid #dde4f4; border-radius: 14px; background: #ffffffb5; }
+.chapterPreview article > span { display: flex; align-items: center; gap: 8px; font-size: 10px; color: #7684b0; }
+.chapterPreview h3 { font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 16px; line-height: 1.55; margin: 10px 0 6px; font-weight: 650; color: #314367; }
+.chapterPreview p { font-size: 12px; line-height: 1.9; color: #61718e; margin: 0; }
+.basic { margin-top: 24px; background: #fff; border-color: #dfe6f4; color: #435572; border-radius: 19px; }
+.basic h3 { font-family: var(--font-geist-sans), Arial, sans-serif; margin-top: 0; }
+.basic p, .basic .small, .colors > span { color: #63718a; }
+.saveBar { border-color: #e0e7f5; color: #65728b; }
+.saveButton { background: #f0f4ff; color: #536bc0; border-color: #dde5f8; }
+@media (max-width: 480px) { .unlock { padding: 25px 20px; } .unlock h2 { font-size: 26px; } .chapterPreview article { padding: 18px; } }
