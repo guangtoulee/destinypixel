@@ -31,8 +31,6 @@ export default function robots(): MetadataRoute.Robots {
           "/juben/",
           "/daoyan",
           "/daoyan/",
-          "/black",
-          "/black/",
           "/zhenggu",
           "/zhenggu/",
           "/mazu",

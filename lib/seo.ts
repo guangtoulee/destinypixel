@@ -284,13 +284,6 @@ export const routeSeo = {
       "AI视频运镜提示词",
     ],
   },
-  black: {
-    path: "/black",
-    title: "DestinyPixel Black | Cosmic Birth Map Interface",
-    description:
-      "The dark cosmic version of DestinyPixel for users who prefer a deep-space birth map and high-contrast mystical interface.",
-    keywords: ["dark astrology app", "cosmic birth map", "deep space UI"],
-  },
 };
 
 export function absoluteUrl(path = "/") {

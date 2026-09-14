@@ -46,7 +46,6 @@ type WhiteCopy = {
     archetypes: string;
     report: string;
     insights: string;
-    black: string;
   };
   hero: {
     version: string;
@@ -147,8 +146,7 @@ const whiteCopy: Record<ContentLocale, WhiteCopy> = {
       "method": "How it works",
       "archetypes": "The collection",
       "report": "Birth map",
-      "insights": "Explore",
-      "black": "Dark mode"
+      "insights": "Explore"
     },
     "hero": {
       "version": "THE DESTINYPIXEL COLLECTION",
@@ -341,8 +339,7 @@ const whiteCopy: Record<ContentLocale, WhiteCopy> = {
       "method": "如何开始",
       "archetypes": "意象卡集",
       "report": "出生图谱",
-      "insights": "探索",
-      "black": "深色模式"
+      "insights": "探索"
     },
     "hero": {
       "version": "DESTINYPIXEL · 认识自己的另一种方式",
@@ -535,8 +532,7 @@ const whiteCopy: Record<ContentLocale, WhiteCopy> = {
       "method": "Как начать",
       "archetypes": "Коллекция",
       "report": "Карта рождения",
-      "insights": "Исследовать",
-      "black": "Темный режим"
+      "insights": "Исследовать"
     },
     "hero": {
       "version": "КОЛЛЕКЦИЯ DESTINYPIXEL",
@@ -885,9 +881,6 @@ export default function DestinyWhiteExperience({
           <div className="white-actions">
             <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
             <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? "我的账号" : "Account"}</a>
-            <a href={`/black?locale=${locale}`} className="white-black-link">
-              {text.nav.black}
-            </a>
             <div className="white-language" aria-label="Language selector">
               <Languages size={14} aria-hidden="true" />
               {reportLanguageOptions.map((option) => (
@@ -953,14 +946,14 @@ export default function DestinyWhiteExperience({
       </section>
 
       <section className="white-archetypes" id="archetypes">
-        <div className="white-container white-archetypes__grid">
-          <div className="white-section-heading">
+        <div className="white-container editorial-collection">
+          <div className="editorial-collection-heading">
             <p>{text.archetypes.eyebrow}</p>
             <h2>{text.archetypes.title}</h2>
             <span>{text.archetypes.description}</span>
           </div>
 
-          <div className="white-card-row">
+          <div className="editorial-collection-cards">
             {featuredPillars.map((featuredPillar) => {
               const itemProfile = (pillarsDB as Record<string, PillarProfile>)[
                 featuredPillar
@@ -969,20 +962,20 @@ export default function DestinyWhiteExperience({
               const itemName = profileName(itemProfile, featuredPillar, locale);
 
               return (
-                <article key={featuredPillar}>
+                <a key={featuredPillar} href={freeHref} className="editorial-collection-card">
                   <Image
                     src={getPillarImagePath(featuredPillar)}
                     alt={itemName}
                     width={896}
                     height={1200}
-                    sizes="(max-width: 720px) 58vw, 240px"
+                    sizes="(max-width: 650px) 44vw, 280px"
                     quality={95}
                   />
                   <div>
                     <span>{copyLocale === "zh" ? itemDisplay.pillarLabel : text.card.core}</span>
                     <strong>{itemName}</strong>
                   </div>
-                </article>
+                </a>
               );
             })}
           </div>

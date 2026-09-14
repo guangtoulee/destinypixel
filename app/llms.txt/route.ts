@@ -22,7 +22,6 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its seven too
 - Insight Studios: ${absoluteUrl("/insights")}
 - Five Elements Color and Crystal Bracelet Atelier: ${absoluteUrl("/atelier")}
 - Birth Totem / Totem Matrix interactive Bazi geometry: ${absoluteUrl("/tuteng")}
-- Dark visual version: ${absoluteUrl("/black")}
 
 ## Product Language
 Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four Pillars, five elements, day pillar animal, Tarot reading, temple sticks, Guanyin sticks, Guandi sticks, Yuelao love oracle, Wong Tai Sin sticks, AI stick interpretation, palm reading, face reading, Liuyao oracle, five-element colors, crystal bracelet design, and inner guidance. The public voice should avoid fear-based fortune telling. It frames readings as symbolic, reflective, and practical.

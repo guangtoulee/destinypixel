@@ -48,7 +48,6 @@ type Option = {
 type InsightCopy = {
   nav: {
     home: string;
-    black: string;
   };
   hero: {
     eyebrow: string;
@@ -132,7 +131,6 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
   en: {
     nav: {
       home: "Birth Map",
-      black: "Dark mode",
     },
     hero: {
       eyebrow: "Palm · Face · Question Oracle",
@@ -247,7 +245,6 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
   zh: {
     nav: {
       home: "出生地图",
-      black: "深色模式",
     },
     hero: {
       eyebrow: "手相 · 面相 · 一事一问",
@@ -362,7 +359,6 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
   ru: {
     nav: {
       home: "Карта рождения",
-      black: "Темный режим",
     },
     hero: {
       eyebrow: "Ладонь · Лицо · Один вопрос",
@@ -1195,7 +1191,6 @@ export default function SymbolicInsightExperience({
           </a>
           <nav className="white-nav" aria-label="Insight navigation">
             <a href="/">{copy.nav.home}</a>
-            <a href={`/black?locale=${locale}`}>{copy.nav.black}</a>
           </nav>
           <div className="white-language" aria-label="Language selector">
             {reportLanguageOptions.map((option) => (

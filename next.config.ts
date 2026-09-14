@@ -25,8 +25,6 @@ const nextConfig: NextConfig = {
       "/juben/:path*",
       "/daoyan",
       "/daoyan/:path*",
-      "/black",
-      "/black/:path*",
       "/zhenggu",
       "/zhenggu/:path*",
       "/mazu",
@@ -46,6 +44,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/black", destination: "/", permanent: true },
       {
         source: "/candy",
         destination: "https://www.packom.store/whole",

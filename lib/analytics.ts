@@ -9,13 +9,13 @@ export type ToolEvent =
   | "tool_export" | "tool_share" | "copy_success" | "account_created" | "login_success" | "checkout_start" | "payment_confirmed";
 
 const publicPaths = new Set([
-  "/", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
+  "/", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
   "/sticks", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
   "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 const mainSitePaths = new Set([
-  "/", "/white", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face",
+  "/", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
   "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
