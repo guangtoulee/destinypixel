@@ -31,7 +31,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "title": "2. Personality: easy to talk to, harder to truly know",
           "paragraphs": [
             "The appealing side of this portrait is quick understanding without constant self-advertising. Jia Zi listens, spots connections and remembers the question everyone else has overlooked. There is a principled streak, too: a wish to do work worth respecting and a reluctance to cheapen an idea simply to win approval. In a group, this can make the person feel like a quiet source of direction.",
-            "The difficult side appears when discernment turns into endless qualification. Every promising route has a flaw; every first draft falls short of the world imagined in private. Someone who seems calm outside may be rehearsing ten possible futures inside. The original card material captures this sharply: a giant in thought who can become a beginner in action. The blind spot is expecting the first attempt to deserve the reputation you hope to earn."
+            "The difficult side appears when discernment turns into endless qualification. Every promising route has a flaw; every first draft falls short of the world imagined in private. Someone who seems calm outside may be rehearsing ten possible futures inside. The tension is sharp: a giant in thought who can become a beginner in action. The blind spot is expecting the first attempt to deserve the reputation you hope to earn."
           ],
           "table": {
             "headings": [
@@ -78,7 +78,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "career",
           "title": "5. Career: get paid for what you can make clear",
           "paragraphs": [
-            "The strongest career image in the source material is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
+            "The strongest career image for Jia Zi is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
             "At work, the danger is becoming indispensable in discussions but invisible in delivery. A brilliant strategy that never meets a customer, student or colleague cannot build a track record. The Jia Zi breakthrough is often a repeatable output: a course, a working prototype, a published body of work or a service with a clear result. A collaborator who is good at schedules and implementation can help turn breadth of vision into momentum."
           ]
         },
@@ -86,7 +86,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "money",
           "title": "6. Money patterns: let credibility become an asset",
           "paragraphs": [
-            "The original material calls this “wealth through reputation.” In everyday terms, people return because they trust your judgment, and recommend you because your work has helped them. Expertise can support a livelihood through teaching, advisory work, creative services or products built from accumulated knowledge. Visibility is useful when there is something solid behind it.",
+            "Call this “wealth through reputation.” In everyday terms, people return because they trust your judgment, and recommend you because your work has helped them. Expertise can support a livelihood through teaching, advisory work, creative services or products built from accumulated knowledge. Visibility is useful when there is something solid behind it.",
             "The weak point is mistaking preparation for progress: another qualification, another redesign, another month before the offer is ready. Another is giving away so much thinking that the actual work has no boundary or price. A clearer scope, a deliverable and a finished case study give talent a commercial shape. This describes a work-and-income theme, not a promise of wealth or a reason to take investment risks."
           ]
         },
@@ -175,7 +175,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "title": "2. 性格：看起来好相处，真正走近却不容易",
           "paragraphs": [
             "甲子画像里最吸引人的，是理解力快，却未必急着表现。你听得出话里的弦外之音，能把别人觉得无关的事串起来，也容易记住一场讨论里被忽略的问题。内心还有一股清高：事情可以做慢一点，但不想做得太难看；可以不出风头，却希望自己的判断值得尊重。所以在群体里，你常像一个安静的主意来源。",
-            "难处在于，判断力一旦过头，就会变成不断推翻自己。每条路都能看出问题，每个初稿都配不上脑海里的成品。外表没什么动静，心里已经演了十个版本。原稿那句「思想的巨人，行动的矮子」戳中的正是这里：不是没能力，而是太早拿未来想拥有的声望，审判眼下还不成熟的第一步。"
+            "难处在于，判断力一旦过头，就会变成不断推翻自己。每条路都能看出问题，每个初稿都配不上脑海里的成品。外表没什么动静，心里已经演了十个版本。「思想的巨人，行动的矮子」这句话戳中的正是这里：不是没能力，而是太早拿未来想拥有的声望，审判眼下还不成熟的第一步。"
           ],
           "table": {
             "headings": [
@@ -222,7 +222,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "career",
           "title": "5. 事业：靠认知吃饭，把复杂的事讲明白",
           "paragraphs": [
-            "原始资料里的事业关键词，是知识、思想、规划和体系。教育、研究、写作、设计策略、咨询、系统构建，都能承接这类能力：钻进去学深一点，把零散信息连成结构，再把别人还没看见的东西讲清楚。行业可以不同，共同点是你有空间形成自己的理解，并把它交给别人使用。",
+            "甲子的事业关键词，是知识、思想、规划和体系。教育、研究、写作、设计策略、咨询、系统构建，都能承接这类能力：钻进去学深一点，把零散信息连成结构，再把别人还没看见的东西讲清楚。行业可以不同，共同点是你有空间形成自己的理解，并把它交给别人使用。",
             "事业上的卡点，是讨论时不可或缺，交付时却没留下作品。再漂亮的方案，没有遇到真实的学生、客户或同事，就积累不出履历。甲子的突破口往往是一种持续产出：一门课、一个能运行的原型、一组发表的作品，或一项结果明确的服务。找一个擅长排期与执行的搭档，也能让远见慢慢长出脚来。"
           ]
         },
@@ -230,7 +230,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "money",
           "title": "6. 财运：声望怎样变成收入？",
           "paragraphs": [
-            "原稿把这条路叫作「声望之财」。讲得落地一些，就是别人认可你的判断，愿意再次找你，也愿意因为你的成果向朋友推荐你。教学、顾问服务、创意工作，或者把长期积累的知识做成产品，都可能承接这种收入路径。名气要有东西托住，作品与信誉才是可以慢慢积累的部分。",
+            "这条路，可以用「声望之财」来概括。讲得落地一些，就是别人认可你的判断，愿意再次找你，也愿意因为你的成果向朋友推荐你。教学、顾问服务、创意工作，或者把长期积累的知识做成产品，都可能承接这种收入路径。名气要有东西托住，作品与信誉才是可以慢慢积累的部分。",
             "容易漏掉的地方，是把准备当成进展：再学一个证、再改一版、再等一个月才敢把服务拿出来。还有一种情况，是建议给得太多，真正的工作反而没有边界和报价。说清服务范围、交付物，并完成一个拿得出手的案例，才能让能力有商业上的形状。这里讲的是职业收入的主题，不是保证发财，更不能据此决定投资。"
           ]
         },
