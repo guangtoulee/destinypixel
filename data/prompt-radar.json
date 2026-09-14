@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-13T17:01:40.440Z",
+  "updatedAt": "2026-09-14T06:49:16.557Z",
   "sourceSummary": {
     "community": 1101,
-    "publicX": 417,
-    "total": 1518
+    "publicX": 422,
+    "total": 1523
   },
   "items": [
     {
@@ -877,6 +877,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "iPhone camera control for Seedance 2.0 the app for 3D camera and AI motion transfer is now in test flight, link below. You stage the scene and can walk around it and capture real camera movement in 3D space, then Seedance brings the scene to life. Handheld camera motion and realistic shake is hard to describe or prompt to Al. The iphone's ARKit is super precise with motion tracking and you can record complex scenes as a one man studio. The characters can move and I am working on motion capture. Here is the Al filmmaking workflow: 1. Set the scene in 3D space 2. Record camera motion 3. Generate a starting image 4. Feed image and video to Seedance This was a quick build with claude code but now it is in test flight. Happy if it helps others."
+    },
+    {
+      "id": "x-public-2098929162735997071",
+      "title": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthro",
+      "description": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847",
+      "prompt": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/CharlieDFilm/status/2098929162735997071",
+      "sourceType": "x",
+      "authorName": "Charlie Driscoll",
+      "authorHandle": "@CharlieDFilm",
+      "createdAt": "2026-09-13T00:18:03.000Z",
+      "importedAt": "2026-09-14T06:49:16.529Z",
+      "tags": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1341,
+        "reposts": 178,
+        "replies": 130,
+        "quotes": 42,
+        "bookmarks": 990,
+        "views": 70773,
+        "score": 6762
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
     },
     {
       "id": "x-public-2079944555718435124",
@@ -3542,6 +3588,49 @@
       "rawText": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile responsive, built in one session by describing what you want. No agency, no code, no months of work. Here's the workflow, start to finish: 1. Find a look on Pinterest. Grab an image with the vibe you want (3D, animation, depth). 2. Turn it into a video. Use an AI image-to-video tool (Higgsfield, Kling) to animate it. Tell it to move but not zoom or reposition. 3. Build the hero with Fable 5. In Claude Code, describe the hero section, drop your video in as the background, set your colors. 4. Build section by section. Ask for the next sections in the same style. Once Fable has your fonts, colors, and layout locked, it reuses them and avoids generic AI-slop pages. 5. Refine with references. Screenshot a background, blur it in Figma to grab the average color, and tell Fable to match it. 6. Post it to grow. Screen-record the site, post the clip, and tag the tools you used. Companies repost work that shows off their platform. The people building real things with Fable now are going to be way ahead when everyone else catches up. Bookmark this."
     },
     {
+      "id": "x-public-2098496937787850883",
+      "title": "AI video generation is only half of the commercial workflow. For this one, I used GPT-6 Astra to",
+      "description": "AI video generation is only half of the commercial workflow. For this one, I used GPT-6 Astra to create a 3D white model, then brought it into CapCut PC and generated the scene with Seedance 2.5. The visual direction was",
+      "prompt": "AI video generation is only half of the commercial workflow. For this one, I used GPT-6 Astra to create a 3D white model, then brought it into CapCut PC and generated the scene with Seedance 2.5. The visual direction was a bullet-time product commercial: a sudden collision, objects suspended in midair and the camera moving around the frozen action. After generation, I used CapCut PC to refine the timing and speed changes and build the final effect. And if the shot wasn't quite right, I could continue editing with tools like Edit Pilot and AI Extend. The first generation doesn't have to be the final cut. #GPT6Astra #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/SirGlavan_/status/2098496937787850883",
+      "sourceType": "x",
+      "authorName": "JAYDEN™",
+      "authorHandle": "@SirGlavan_",
+      "createdAt": "2026-09-11T19:40:32.000Z",
+      "importedAt": "2026-09-14T06:49:16.530Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 195,
+        "reposts": 155,
+        "replies": 195,
+        "quotes": 0,
+        "bookmarks": 132,
+        "views": 33774,
+        "score": 1669
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI video generation is only half of the commercial workflow. For this one, I used GPT-6 Astra to create a 3D white model, then brought it into CapCut PC and generated the scene with Seedance 2.5. The visual direction was a bullet-time product commercial: a sudden collision, objects suspended in midair and the camera moving around the frozen action. After generation, I used CapCut PC to refine the timing and speed changes and build the final effect. And if the shot wasn't quite right, I could continue editing with tools like Edit Pilot and AI Extend. The first generation doesn't have to be the final cut. #GPT6Astra #CapCutPC #AIVideo #Seedance25"
+    },
+    {
       "id": "x-public-2095763998524182581",
       "title": "This looks like a $10M Hollywood shot. It’s not. Made with @ItsPolloAI using Seedance 2.5. A sam",
       "description": "This looks like a $10M Hollywood shot. It’s not. Made with @ItsPolloAI using Seedance 2.5. A samurai. A colossal Oni. One phone toss. Pure chaos. 🔥 Seedance 2.5 is currently 60% OFF on Pollo AI. If you’ve been waiting t",
@@ -5900,6 +5989,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人都想找一个好用又便宜的生成式模型API平台， 说实话，真的很不好找！！ 大大小小的AI平台用了不少，要么贵的要死，要么可用模型少的可怜， 要么就是个黑盒子，花钱用的啥模型都不知道！ 今天看到Pika @pika_labs上线了Pika API Club，我就知道这事稳了！！ 果不其然，Pika还是太懂AI视频创作者了！ 基本上能用到的模型都包圆了，定价也特别香， 应该都是从厂商拿的“集采价”，而且还让利给了用户！ Pika API定价比Runway、Fal等等都要便宜不少， Seedance 2.0的价格相对Runway，最高能便宜87%，相当于打1.3折！！ 关键是，每月才10美金，可以用70多个生成式模型， 不光是视频，主流模型都有，1个API能接住所有的模型需求！！ 所以搞了一个创意工作台，把原创的一些提示词做成预设， 一键套用成片，效率直接拉满！！"
+    },
+    {
+      "id": "x-public-2098064627603300568",
+      "title": "Cinematic reconstruction. Immersive camera movement. All generated with GPT-6 Astra. 🔭✨ Made by",
+      "description": "Cinematic reconstruction. Immersive camera movement. All generated with GPT-6 Astra. 🔭✨ Made by @PixVerse. Available on PixVerse and in ChatGPT via the PixVerse Plugin. Prompt ↓ Create an original GTA-inspired cartoon c",
+      "prompt": "Cinematic reconstruction. Immersive camera movement. All generated with GPT-6 Astra. 🔭✨ Made by @PixVerse. Available on PixVerse and in ChatGPT via the PixVerse Plugin. Prompt ↓ Create an original GTA-inspired cartoon car chase using this workflow: Design: Define one main driver, one getaway car, one pursuing car, and one urban environment. Keep their designs consistent. Plan three 4-second shots: rear tracking pursuit, side tracking through a sharp turn, and a wide exit shot. Build in Blender: Create clean gray models and functional character and vehicle rigs. No textures or UV unwrapping are required. Animate and test: Animate the driver, steering, wheel rotation, vehicles, and cameras. Maintain coherent travel direction and vehicle order. Fix clipping, floating wheels, sliding tires, broken poses, and hands losing contact with the steering wheel. Render in Blender: Render frames 1–288 at 1280×720, 24 fps. Assemble actual Blender-rendered frames into a complete 12-second gray-model master. Export each shot separately and render matching gray stills as shape and composition references. Finish with PixVerse Plugin: Use Seedance 2.5 at 720p, processing each shot separately. Use the Blender clips as motion references and the gray stills as shape references. Define a consistent cartoon color palette in the generation prompt. Preserve camera movement, action timing, character and vehicle designs, and vehicle count. Review and deliver: Inspect both complete videos for visual defects and continuity. Repair Blender issues and regenerate only failed Seedance shots, with at most two retries per shot. Deliver the editable .blend, the native 720p Blender gray-model video, the separately labeled 720p Seedance version, and a brief assessment of remaining limitations.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/sean_wallace_/status/2098064627603300568",
+      "sourceType": "x",
+      "authorName": "Sean Wallace",
+      "authorHandle": "@sean_wallace_",
+      "createdAt": "2026-09-10T15:02:42.000Z",
+      "importedAt": "2026-09-14T06:49:16.530Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 184,
+        "reposts": 69,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 85,
+        "views": 77230,
+        "score": 1065
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Cinematic reconstruction. Immersive camera movement. All generated with GPT-6 Astra. 🔭✨ Made by @PixVerse. Available on PixVerse and in ChatGPT via the PixVerse Plugin. Prompt ↓ Create an original GTA-inspired cartoon car chase using this workflow: Design: Define one main driver, one getaway car, one pursuing car, and one urban environment. Keep their designs consistent. Plan three 4-second shots: rear tracking pursuit, side tracking through a sharp turn, and a wide exit shot. Build in Blender: Create clean gray models and functional character and vehicle rigs. No textures or UV unwrapping are required. Animate and test: Animate the driver, steering, wheel rotation, vehicles, and cameras. Maintain coherent travel direction and vehicle order. Fix clipping, floating wheels, sliding tires, broken poses, and hands losing contact with the steering wheel. Render in Blender: Render frames 1–288 at 1280×720, 24 fps. Assemble actual Blender-rendered frames into a complete 12-second gray-model master. Export each shot separately and render matching gray stills as shape and composition references. Finish with PixVerse Plugin: Use Seedance 2.5 at 720p, processing each shot separately. Use the Blender clips as motion references and the gray stills as shape references. Define a consistent cartoon color palette in the generation prompt. Preserve camera movement, action timing, character and vehicle designs, and vehicle count. Review and deliver: Inspect both complete videos for visual defects and continuity. Repair Blender issues and regenerate only failed Seedance shots, with at most two retries per shot. Deliver the editable .blend, the native 720p Blender gray-model video, the separately labeled 720p Seedance version, and a brief assessment of remaining limitations."
     },
     {
       "id": "x-public-2081976392712118780",
@@ -9183,6 +9315,50 @@
       "rawText": "THE BEST AI VIDEO WORKFLOW IS NOT JUST ABOUT GENERATION. Seedance 2.5 is now live globally on CapCut, giving creators a connected path from the first idea to the final delivery. Coming next: crisper 1080p output for an even stronger visual finish."
     },
     {
+      "id": "x-public-2099002797027135750",
+      "title": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits.",
+      "description": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on ",
+      "prompt": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: > Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing > Kling 3.0 generated the fluid body physics and night lighting on the roof > Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact > ElevenLabs produced the ambient stadium atmosphere and crowd noise > CapCut handled speed ramps, color grade, and final export A traditional production house would need a stadium rental at $150K, a stunt coordinator, a medical team on standby, and 6 months of liability clearance. This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ArafatMd93059/status/2099002797027135750",
+      "sourceType": "x",
+      "authorName": "Arafat",
+      "authorHandle": "@ArafatMd93059",
+      "createdAt": "2026-09-13T05:10:39.000Z",
+      "importedAt": "2026-09-14T06:49:16.529Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 117,
+        "reposts": 58,
+        "replies": 30,
+        "quotes": 1,
+        "bookmarks": 19,
+        "views": 98481,
+        "score": 753
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: > Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing > Kling 3.0 generated the fluid body physics and night lighting on the roof > Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact > ElevenLabs produced the ambient stadium atmosphere and crowd noise > CapCut handled speed ramps, color grade, and final export A traditional production house would need a stadium rental at $150K, a stunt coordinator, a medical team on standby, and 6 months of liability clearance. This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking."
+    },
+    {
       "id": "x-public-2079133044145848581",
       "title": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm post",
       "description": "\"Don't post this\" A creator with early Seedance 2.0 access sent me his render privately I'm posting it Two women fighting in a flooded bathroom. Same face, same dress, same reflection in the mirror through every cut. Ful",
@@ -12002,6 +12178,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "From AI Creator to #1 in the World 🚀🌍 | AIWITHJAMES Made with AI — Seedance 2.5 💡✅ Prompt: Create a highly realistic cinematic 9:16 vertical video, 10–15 seconds, 4K/HD quality, photorealistic live-action style. Show AIWITHJAMES as a successful AI creator and entrepreneur working with major global technology companies. Start inside a luxurious modern executive office with floor-to-ceiling windows and a futuristic city skyline. AIWITHJAMES is sitting confidently at a premium office desk wearing a sharp black suit. Multiple realistic monitors show AI projects, growth charts, creative work, and successful collaborations. The office displays professional company branding inspired by major technology companies such as Google, Microsoft, Amazon, Meta and OpenAI. Camera slowly moves toward AIWITHJAMES with a smooth cinematic dolly-in. Show close-up shots of realistic hands working on a laptop, AI dashboards, business documents, awards and certificates. On a large digital screen behind him, clearly display: “AIWITHJAMES — #1 AI CREATOR IN THE WORLD” Show a powerful upward growth chart, global map, millions of users, international collaborations and prestigious awards. AIWITHJAMES stands up and walks confidently toward the window while the city lights glow behind him. End with a dramatic cinematic shot showing AIWITHJAMES at the top of the global AI industry, surrounded by technology, success and innovation. Visual style: ultra-photorealistic, real human appearance, natural skin texture, realistic facial expressions, realistic hands, authentic office lighting, cinematic depth of field, premium corporate atmosphere, subtle lens flare, smooth camera movement, realistic reflections, high detail, professional color grading. Important: Keep the character consistent throughout the entire video. Make AIWITHJAMES clearly readable wherever text appears. No cartoon, no 3D animation, no distorted face, no extra fingers, no unrealistic body movement, no blurry frames, no artificial-looking skin. Aspect ratio: 9:16 vertical. Quality: 4K cinematic photorealism. Mood: ambitious, inspirational, powerful, futuristic, successful."
+    },
+    {
+      "id": "x-public-2098483368220676510",
+      "title": "One thing I’ve learned from AI video: The better you define the visual direction, the less rando",
+      "description": "One thing I’ve learned from AI video: The better you define the visual direction, the less random the final result feels. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. I used",
+      "prompt": "One thing I’ve learned from AI video: The better you define the visual direction, the less random the final result feels. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. I used it to develop an iPhone Duo commercial storyboard before moving into video generation. Then CapCut PC + Seedance 2.5 brought those planned shots into motion. The final step is editing: adjust the pacing, change scenes, add sound and keep refining with AI Edit. That feels much closer to an actual production workflow. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AbretuPotencial/status/2098483368220676510",
+      "sourceType": "x",
+      "authorName": "Álvaro | IA",
+      "authorHandle": "@AbretuPotencial",
+      "createdAt": "2026-09-11T18:46:37.000Z",
+      "importedAt": "2026-09-14T06:49:16.530Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 80,
+        "reposts": 22,
+        "replies": 5,
+        "quotes": 0,
+        "bookmarks": 37,
+        "views": 82966,
+        "score": 530
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One thing I’ve learned from AI video: The better you define the visual direction, the less random the final result feels. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. I used it to develop an iPhone Duo commercial storyboard before moving into video generation. Then CapCut PC + Seedance 2.5 brought those planned shots into motion. The final step is editing: adjust the pacing, change scenes, add sound and keep refining with AI Edit. That feels much closer to an actual production workflow. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2086735082308657236",
@@ -17355,7 +17576,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-12T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像",
         "摄影"
@@ -17397,7 +17618,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-12T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -17436,7 +17657,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-09-12T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像",
         "摄影"
@@ -17478,7 +17699,7 @@
       "authorName": "Saira",
       "authorHandle": "@AiWithSaira",
       "createdAt": "2026-09-12T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像",
         "摄影"
@@ -17520,7 +17741,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-11T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.271Z",
+      "importedAt": "2026-09-14T06:49:13.407Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -17604,7 +17825,7 @@
       "authorName": "Muhammad Jamil",
       "authorHandle": "@JamilAI55",
       "createdAt": "2026-09-10T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.272Z",
+      "importedAt": "2026-09-14T06:49:13.409Z",
       "tags": [
         "人像",
         "摄影"
@@ -17771,7 +17992,7 @@
       "authorName": "Aegon",
       "authorHandle": "@Fujimoto_hina",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像",
         "摄影"
@@ -17813,7 +18034,7 @@
       "authorName": "Nataly Che",
       "authorHandle": "@creatoroff",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像",
         "平面设计"
@@ -17855,7 +18076,7 @@
       "authorName": "Ace",
       "authorHandle": "@Acemation_",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像"
       ],
@@ -17896,7 +18117,7 @@
       "authorName": "藍澤 ミライ",
       "authorHandle": "@mirai_ai2050",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像"
       ],
@@ -17937,7 +18158,7 @@
       "authorName": "海趣社",
       "authorHandle": "@haiqushe",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像",
         "东方美学"
@@ -17979,7 +18200,7 @@
       "authorName": "simeon-sanai",
       "authorHandle": "@Naiknelofar788",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.410Z",
       "tags": [
         "人像"
       ],
@@ -18020,7 +18241,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像",
         "摄影"
@@ -18062,7 +18283,7 @@
       "authorName": "荒井健一 AK",
       "authorHandle": "@aarai666",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -18101,7 +18322,7 @@
       "authorName": "Chris",
       "authorHandle": "@everestchris6",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像",
         "摄影"
@@ -18143,7 +18364,7 @@
       "authorName": "黄小木",
       "authorHandle": "@ai_xiaomu",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像"
       ],
@@ -18184,7 +18405,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像",
         "摄影"
@@ -18558,7 +18779,7 @@
       "authorName": "Light Sekkuchi",
       "authorHandle": "@LightSkkh",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "GPT Image 2",
         "平面设计"
@@ -18600,7 +18821,7 @@
       "authorName": "SimplyDera ◻",
       "authorHandle": "@Simply_Dera1",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.273Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像",
         "摄影"
@@ -18642,7 +18863,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.411Z",
       "tags": [
         "人像",
         "摄影"
@@ -18684,7 +18905,7 @@
       "authorName": "Benjamin Peng",
       "authorHandle": "@BinPeng22",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像"
       ],
@@ -18725,7 +18946,7 @@
       "authorName": "Abkr Sadiq",
       "authorHandle": "@abs_uiux",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像",
         "摄影"
@@ -18767,7 +18988,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "摄影"
       ],
@@ -18808,7 +19029,7 @@
       "authorName": "Faymas",
       "authorHandle": "@Faymas_ai",
       "createdAt": "2026-09-08T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.274Z",
+      "importedAt": "2026-09-14T06:49:13.412Z",
       "tags": [
         "人像",
         "摄影"
@@ -63618,7 +63839,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.278Z",
+      "importedAt": "2026-09-14T06:49:13.420Z",
       "tags": [
         "产品",
         "平面设计",
@@ -63661,7 +63882,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.278Z",
+      "importedAt": "2026-09-14T06:49:13.420Z",
       "tags": [
         "平面设计"
       ],
@@ -63702,7 +63923,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-13T17:01:29.278Z",
+      "importedAt": "2026-09-14T06:49:13.420Z",
       "tags": [
         "平面设计"
       ],
