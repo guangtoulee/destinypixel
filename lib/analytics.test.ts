@@ -75,3 +75,10 @@ test("events before the SDK mounts are queued after URL redaction is configured"
     else Reflect.deleteProperty(globalThis, "window");
   }
 });
+
+
+test("discovery campaigns stay measurable without private birthday fields", () => {
+  assert.equal(isMainSitePath("/discover"), true);
+  assert.equal(analyticsPage("/discover"), "/discover");
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/discover?utm_source=instagram&utm_medium=social&utm_campaign=day_card&birthday=2003-02-20&email=private"), "https://www.destinypixel.com/discover?utm_source=instagram&utm_medium=social&utm_campaign=day_card");
+});

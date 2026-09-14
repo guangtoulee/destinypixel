@@ -7,8 +7,8 @@ type Props = { searchParams?: Promise<{ locale?: string; pillar?: string }> };
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const params = await searchParams;
   const zh = params?.locale === "zh";
-  const title = zh ? "免费日柱意象卡｜60甲子与自我观察 | DestinyPixel" : "Free Day Pillar Card | 60 Bazi Archetypes | DestinyPixel";
-  const description = zh ? "用公历生日探索一张免费的日柱意象卡，无需登录。按公历日期、午夜换日初算；补充出生时间和地点后，可在主站校准完整出生图谱。" : "Explore a free symbolic day pillar card from your Gregorian birth date. No login needed. This midnight-based date preview can be calibrated with your birth time and city in a full birth map.";
+  const title = zh ? "免费日柱意象卡｜60甲子与自我观察 | DestinyPixel" : "Free Birthday Character Card | DestinyPixel";
+  const description = zh ? "用公历生日探索一张免费的日柱意象卡，无需登录。按公历日期、午夜换日初算；补充出生时间和地点后，可在主站校准完整出生图谱。" : "Meet your free birthday character, from the Oceanic Sequoia to the Dewy Rabbit. No login needed. This midnight-based date preview can be calibrated with your birth time and city in a full birth map.";
   const url = zh ? "/day-pillar?locale=zh" : "/day-pillar";
   return {
     title: { absolute: title }, description,

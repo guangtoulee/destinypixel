@@ -3,6 +3,7 @@
 import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/lib/support-contact";
 
 import Image from "next/image";
+import "./destiny-editorial.css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import {
@@ -141,599 +142,591 @@ type WhiteCopy = {
 };
 
 const whiteCopy: Record<ContentLocale, WhiteCopy> = {
-  en: {
-    nav: {
-      method: "The System",
-      archetypes: "Energy Cards",
-      report: "Start Reading",
-      insights: "Insight Studios",
-      black: "Dark mode",
+  "en": {
+    "nav": {
+      "method": "How it works",
+      "archetypes": "The collection",
+      "report": "Birth map",
+      "insights": "Explore",
+      "black": "Dark mode"
     },
-    hero: {
-      version: "Multidimensional birth map",
-      eyebrow: "Birth energy · Planetary rhythm · Inner guidance",
-      title: "Meet the pattern your birthday remembers.",
-      lead:
-        "DestinyPixel translates your birth moment into a gentle psychological mirror: symbolic animals, planetary rhythms, and AI-guided reflection for clarity, healing, and self-trust.",
-      name: "Name",
-      date: "Date of birth",
-      time: "Birth time",
-      gender: "Gender",
-      female: "Female",
-      male: "Male",
-      city: "Birth city",
-      cityPlaceholder: "Search city, e.g. Shijiazhuang",
-      submit: "Reveal my inner map",
-      pending: "Reading your energy field, this may take a moment...",
-      privacy: "Your birth data stays private and is used only for this reading",
+    "hero": {
+      "version": "THE DESTINYPIXEL COLLECTION",
+      "eyebrow": "PERSONALITY · LOVE · DIRECTION",
+      "title": "A little wonder.\nA clearer sense of you.",
+      "lead": "Meet the character behind your birthday. Discover your strengths, your way of loving and the possibilities waiting to take shape.",
+      "name": "Name",
+      "date": "Date of birth",
+      "time": "Birth time",
+      "gender": "Gender",
+      "female": "Female",
+      "male": "Male",
+      "city": "Birth city",
+      "cityPlaceholder": "Search your birth city",
+      "submit": "Create my birth map",
+      "pending": "Preparing your birth map…",
+      "privacy": "Your report is private. See how we use your birth details."
     },
-    card: {
-      sample: "Energy sample",
-      core: "Core Pattern",
-      sky: "Sky Rhythm",
-      resonance: "Inner Echo",
+    "card": {
+      "sample": "Your personal birth map",
+      "core": "Core Pattern",
+      "sky": "Sky Rhythm",
+      "resonance": "Inner Echo"
     },
-    stats: {
-      portraits: "energy portraits",
-      signals: "planetary signals",
-      paths: "guidance paths",
+    "stats": {
+      "portraits": "energy portraits",
+      "signals": "planetary signals",
+      "paths": "guidance paths"
     },
-    method: {
-      eyebrow: "A guided mirror for the self",
-      title: "Your birth moment as a multidimensional field.",
-      description:
-        "Instead of asking you to decode ancient symbols, DestinyPixel turns them into a calm visual language for emotional patterning, timing, and self-understanding.",
-      items: [
+    "method": {
+      "eyebrow": "GO A LITTLE DEEPER",
+      "title": "Your story has more than one layer.",
+      "description": "Add your birth time and place to explore your personality, relationships and life direction in a personal reading.",
+      "items": [
         {
-          title: "Energy signature",
-          body: "Your birth day becomes a symbolic animal portrait: a memorable doorway into temperament, needs, and natural rhythm.",
+          "title": "Your character",
+          "body": "Meet the strengths, habits and possibilities behind your birth portrait."
         },
         {
-          title: "Sky resonance",
-          body: "Planetary positions add a second layer, revealing where your inner pattern seeks expression, protection, and growth.",
+          "title": "Your relationships",
+          "body": "Explore what draws you close, what creates friction and what helps you feel understood."
         },
         {
-          title: "Healing guidance",
-          body: "The reading becomes practical prompts for self-trust, relationships, work, recovery, and the next season of your life.",
+          "title": "Your direction",
+          "body": "Connect the wider birth chart with questions about work, growth and the year ahead."
+        }
+      ]
+    },
+    "archetypes": {
+      "eyebrow": "SIXTY CHARACTERS. WHICH ONE IS YOURS?",
+      "title": "Meet a few of the collection.",
+      "description": "The Dewy Rabbit. The Oceanic Sequoia. The Solar Stallion. Every character brings a different story of strength, connection and growth."
+    },
+    "fusion": {
+      "eyebrow": "Field reading",
+      "title": "The Dewy Rabbit meets a Pisces Sun.",
+      "description": "The Dewy Rabbit suggests sensitivity, social grace, and quiet perception. A Pisces Sun echoes imagination, permeability, and a soul that heals through beauty.",
+      "chips": [
+        "Gentle sensitivity",
+        "Social intuition",
+        "Pisces Sun",
+        "Emotional healing"
+      ]
+    },
+    "insights": {
+      "eyebrow": "FOLLOW YOUR CURIOSITY",
+      "title": "What is on your mind?",
+      "description": "Start with a question, explore a symbolic reading or create something personal.",
+      "items": [
+        {
+          "title": "Palm Studio",
+          "body": "Describe the lines you see in your palm and explore their traditional meanings.",
+          "href": "/palm",
+          "cta": "Read palm"
         },
+        {
+          "title": "Face Studio",
+          "body": "Explore the traditional symbolism of the features and expressions you describe.",
+          "href": "/face",
+          "cta": "Read face"
+        },
+        {
+          "title": "Question Oracle",
+          "body": "Bring one question about love, work or a choice. Explore it through Tarot and a symbolic hexagram.",
+          "href": "/oracle",
+          "cta": "Ask now"
+        },
+        {
+          "title": "Celestial Atelier",
+          "body": "Turn five-element color guidance into a crystal bracelet concept with gemstone balance and wearable intention.",
+          "href": "/atelier",
+          "cta": "Build bracelet"
+        }
+      ]
+    },
+    "sticks": {
+      "eyebrow": "Temple oracle",
+      "title": "Draw one stick for the question in your hands.",
+      "description": "A lighter ritual for moments that need a clear sign: choose a tradition, name the topic, and receive a concise modern reading.",
+      "items": [
+        {
+          "title": "Guanyin Sticks",
+          "body": "A gentle all-purpose oracle for protection, family, recovery, travel, and emotional uncertainty.",
+          "href": "/sticks?type=guanyin",
+          "cta": "Ask Guanyin"
+        },
+        {
+          "title": "Guandi Sticks",
+          "body": "A decisive oracle for career, authority, contracts, exams, promotion, and public reputation.",
+          "href": "/sticks?type=guandi",
+          "cta": "Ask Guandi"
+        },
+        {
+          "title": "Yuelao Sticks",
+          "body": "A relationship oracle for love timing, attachment, reconciliation, dating, and marriage questions.",
+          "href": "/sticks?type=yuelao",
+          "cta": "Ask Yuelao"
+        },
+        {
+          "title": "Five Wealth Gods",
+          "body": "A wealth-focused oracle for cash flow, business direction, side income, and money discipline.",
+          "href": "/sticks?type=wealth",
+          "cta": "Ask wealth"
+        },
+        {
+          "title": "Wong Tai Sin Sticks",
+          "body": "A timing-focused oracle for turning points, exams, travel, public affairs, and practical omens.",
+          "href": "/sticks?type=huangdaxian",
+          "cta": "Ask timing"
+        }
+      ]
+    },
+    "blessing": {
+      "eyebrow": "Quiet blessing",
+      "title": "Light incense for the direction you want to protect.",
+      "description": "Take a quiet moment for someone you love, a hope you carry or a new beginning. Choose a tradition and light a symbolic offering.",
+      "action": "Light incense",
+      "activeAction": "Incense lit",
+      "modalTitle": "Incense offered",
+      "modalBody": "Take this intention with you as you return to your day.",
+      "modalClose": "Return",
+      "note": "Blessing is symbolic and reflective; real choices still belong to you.",
+      "deities": [
+        {
+          "key": "guanyin",
+          "name": "Guanyin",
+          "domain": "Compassion · Protection",
+          "body": "For emotional safety, family care, recovery, and a softer way through difficulty."
+        },
+        {
+          "key": "wuye",
+          "name": "Wutai Wuye",
+          "domain": "Vows · Courage",
+          "body": "The Fifth Dragon King of Wutai: for keeping promises, carrying pressure, and moving through a hard gate with steadiness."
+        },
+        {
+          "key": "wen-caishen",
+          "name": "Civil Wealth God",
+          "domain": "Order · Long money",
+          "body": "For planning, accounts, study, professional skills, and stable accumulation."
+        },
+        {
+          "key": "wu-caishen",
+          "name": "Martial Wealth God",
+          "domain": "Action · Opportunity",
+          "body": "For business courage, negotiations, decisive moves, and protecting earned value."
+        },
+        {
+          "key": "mazu",
+          "name": "Mazu",
+          "domain": "Travel · Safe passage",
+          "body": "For journeys, distance, relocation, sea-like uncertainty, and being carried safely home."
+        }
+      ]
+    },
+    "premium": {
+      "eyebrow": "START WITH YOUR BIRTHDAY",
+      "title": "Your character is waiting.",
+      "description": "One date, one free card. Take a first look, then decide whether to explore a full birth map.",
+      "items": [
+        "Free birthday card",
+        "No account required",
+        "A fuller reading when you are ready"
       ],
-    },
-    archetypes: {
-      eyebrow: "60 symbolic companions",
-      title: "A soft oracle deck for your inner landscape.",
-      description:
-        "Each card acts like a visual anchor for a different emotional climate, helping overseas users feel the system before they try to analyze it.",
-    },
-    fusion: {
-      eyebrow: "Field reading",
-      title: "The Dewy Rabbit meets a Pisces Sun.",
-      description:
-        "The Dewy Rabbit suggests sensitivity, social grace, and quiet perception. A Pisces Sun echoes imagination, permeability, and a soul that heals through beauty.",
-      chips: ["Gentle sensitivity", "Social intuition", "Pisces Sun", "Emotional healing"],
-    },
-    insights: {
-      eyebrow: "Beyond the birth map",
-      title: "Four focused doors into the moment you are living now.",
-      description:
-        "Read a visible pattern, ask one precise question, or turn your energy palette into something wearable. Each studio starts with a different kind of evidence.",
-      items: [
-        {
-          title: "Palm Studio",
-          body: "Guided photo alignment plus confirmed lines and mounts, translated into direct rhythm, relationship, and work advice.",
-          href: "/palm",
-          cta: "Read palm",
-        },
-        {
-          title: "Face Studio",
-          body: "A careful symbolic reading of expression, facial zones, and social signal without identity or beauty scoring.",
-          href: "/face",
-          cta: "Read face",
-        },
-        {
-          title: "Question Oracle",
-          body: "One issue at a time: time-cast Liuyao lines meet a three-card Tarot mirror for a practical next step.",
-          href: "/oracle",
-          cta: "Ask now",
-        },
-        {
-          title: "Celestial Atelier",
-          body: "Turn five-element color guidance into a crystal bracelet concept with gemstone balance and wearable intention.",
-          href: "/atelier",
-          cta: "Build bracelet",
-        },
-      ],
-    },
-    sticks: {
-      eyebrow: "Temple oracle",
-      title: "Draw one stick for the question in your hands.",
-      description:
-        "A lighter ritual for moments that need a clear sign: choose a tradition, name the topic, and receive a concise modern reading.",
-      items: [
-        {
-          title: "Guanyin Sticks",
-          body: "A gentle all-purpose oracle for protection, family, recovery, travel, and emotional uncertainty.",
-          href: "/sticks?type=guanyin",
-          cta: "Ask Guanyin",
-        },
-        {
-          title: "Guandi Sticks",
-          body: "A decisive oracle for career, authority, contracts, exams, promotion, and public reputation.",
-          href: "/sticks?type=guandi",
-          cta: "Ask Guandi",
-        },
-        {
-          title: "Yuelao Sticks",
-          body: "A relationship oracle for love timing, attachment, reconciliation, dating, and marriage questions.",
-          href: "/sticks?type=yuelao",
-          cta: "Ask Yuelao",
-        },
-        {
-          title: "Five Wealth Gods",
-          body: "A wealth-focused oracle for cash flow, business direction, side income, and money discipline.",
-          href: "/sticks?type=wealth",
-          cta: "Ask wealth",
-        },
-        {
-          title: "Wong Tai Sin Sticks",
-          body: "A timing-focused oracle for turning points, exams, travel, public affairs, and practical omens.",
-          href: "/sticks?type=huangdaxian",
-          cta: "Ask timing",
-        },
-      ],
-    },
-    blessing: {
-      eyebrow: "Quiet blessing",
-      title: "Light incense for the direction you want to protect.",
-      description:
-        "A small digital ritual for focus. Choose a deity archetype, make one clean wish, and let the page mark the intention for this visit.",
-      action: "Light incense",
-      activeAction: "Incense lit",
-      modalTitle: "Incense offered",
-      modalBody:
-        "Hold one clean intention for this direction. The ritual is quiet, but the next action should be concrete.",
-      modalClose: "Return",
-      note: "Blessing is symbolic and reflective; real choices still belong to you.",
-      deities: [
-        {
-          key: "guanyin",
-          name: "Guanyin",
-          domain: "Compassion · Protection",
-          body: "For emotional safety, family care, recovery, and a softer way through difficulty.",
-        },
-        {
-          key: "wuye",
-          name: "Wutai Wuye",
-          domain: "Vows · Courage",
-          body: "The Fifth Dragon King of Wutai: for keeping promises, carrying pressure, and moving through a hard gate with steadiness.",
-        },
-        {
-          key: "wen-caishen",
-          name: "Civil Wealth God",
-          domain: "Order · Long money",
-          body: "For planning, accounts, study, professional skills, and stable accumulation.",
-        },
-        {
-          key: "wu-caishen",
-          name: "Martial Wealth God",
-          domain: "Action · Opportunity",
-          body: "For business courage, negotiations, decisive moves, and protecting earned value.",
-        },
-        {
-          key: "mazu",
-          name: "Mazu",
-          domain: "Travel · Safe passage",
-          body: "For journeys, distance, relocation, sea-like uncertainty, and being carried safely home.",
-        },
-      ],
-    },
-    premium: {
-      eyebrow: "From a free glimpse to deeper guidance",
-      title: "A reading that feels like being understood.",
-      description:
-        "Start with your birth-day portrait, then open the full map: personality patterns, love language, work rhythm, growth edge, wellbeing, and annual timing.",
-      items: [
-        "Birth-time energy calibration",
-        "Planetary resonance mapping",
-        "Streaming reflective guidance",
-      ],
-      cta: "Begin my reading",
-    },
+      "cta": "Find my free card"
+    }
   },
-  zh: {
-    nav: {
-      method: "系统",
-      archetypes: "能量卡",
-      report: "开始解读",
-      insights: "洞察专区",
-      black: "深色模式",
+  "zh": {
+    "nav": {
+      "method": "如何开始",
+      "archetypes": "意象卡集",
+      "report": "出生图谱",
+      "insights": "探索",
+      "black": "深色模式"
     },
-    hero: {
-      version: "多维出生能量图",
-      eyebrow: "出生能量 · 行星节律 · 内在指引",
-      title: "看见你出生那天留下的能量纹理。",
-      lead:
-        "DestinyPixel 将你的出生时刻转译成一张柔和的心理地图：动物象征、行星节律与 AI 引导式洞察，共同帮助你理解自己、修复关系、找回内在秩序。",
-      name: "姓名",
-      date: "出生日期",
-      time: "出生时间",
-      gender: "性别",
-      female: "女性",
-      male: "男性",
-      city: "出生城市",
-      cityPlaceholder: "搜索城市，例如：石家庄",
-      submit: "开启我的内在地图",
-      pending: "正在读取你的能量场，这需要一点时间...",
-      privacy: "出生资料仅用于本次解读，并保持私密",
+    "hero": {
+      "version": "DESTINYPIXEL · 认识自己的另一种方式",
+      "eyebrow": "性格 · 感情 · 人生方向",
+      "title": "遇见你的天赋，\n也读懂你的心事。",
+      "lead": "从生日找到属于你的意象卡。看看自己的长处、感情里的习惯，以及那些值得认真探索的可能。",
+      "name": "姓名",
+      "date": "出生日期",
+      "time": "出生时间",
+      "gender": "性别",
+      "female": "女性",
+      "male": "男性",
+      "city": "出生城市",
+      "cityPlaceholder": "搜索城市，例如：石家庄",
+      "submit": "生成我的出生图谱",
+      "pending": "正在准备你的出生图谱…",
+      "privacy": "你的报告保持私密，出生资料的使用方式见隐私说明。"
     },
-    card: {
-      sample: "能量样本",
-      core: "核心模式",
-      sky: "天空节律",
-      resonance: "内在回声",
+    "card": {
+      "sample": "你的个人出生图谱",
+      "core": "核心模式",
+      "sky": "天空节律",
+      "resonance": "内在回声"
     },
-    stats: {
-      portraits: "能量画像",
-      signals: "行星信号",
-      paths: "指引路径",
+    "stats": {
+      "portraits": "能量画像",
+      "signals": "行星信号",
+      "paths": "指引路径"
     },
-    method: {
-      eyebrow: "一面温柔的自我镜子",
-      title: "把出生时刻，看作一个多维能量场。",
-      description:
-        "我们不要求用户理解古老术语，而是把符号翻译成现代心理语言：看见情绪模式、关系节奏、生命阶段与自我疗愈方向。",
-      items: [
+    "method": {
+      "eyebrow": "再认识自己多一点",
+      "title": "一张卡之后，还有更完整的你。",
+      "description": "补充出生时间和城市，结合完整出生图谱，探索性格、亲密关系与人生方向。",
+      "items": [
         {
-          title: "能量签名",
-          body: "你的出生之日会生成一个动物画像，成为理解气质、需求与自然节奏的入口。",
+          "title": "性格与天赋",
+          "body": "读懂自己的长处、惯性和内在需求，找到更适合发挥的方式。"
         },
         {
-          title: "星空共振",
-          body: "行星位置提供第二层信息，帮助看见你的表达方式、防御机制、亲密需求与成长方向。",
+          "title": "感情与相处",
+          "body": "看见心动的原因、关系里的摩擦，以及让彼此更靠近的可能。"
         },
         {
-          title: "疗愈指引",
-          body: "解读会落到具体生活：自我信任、关系边界、工作节奏、身心恢复与接下来一年的选择。",
+          "title": "事业与成长",
+          "body": "结合完整图谱，整理工作、成长与未来一年的关注方向。"
+        }
+      ]
+    },
+    "archetypes": {
+      "eyebrow": "六十种意象，哪一张属于你？",
+      "title": "先认识几位老朋友。",
+      "description": "雨露灵兔、海中神木、烈日天马……每一种意象，都有自己的天赋、心事与成长故事。"
+    },
+    "fusion": {
+      "eyebrow": "场域解读",
+      "title": "雨露灵兔，遇见双鱼座太阳。",
+      "description": "雨露灵兔象征敏感、柔软、善于感知关系中的细微波动；双鱼座太阳进一步放大想象力、共情力与通过美来疗愈自己的能力。",
+      "chips": [
+        "细腻感受力",
+        "社交直觉",
+        "太阳双鱼",
+        "情绪疗愈"
+      ]
+    },
+    "insights": {
+      "eyebrow": "顺着你的好奇心",
+      "title": "此刻，你最想了解什么？",
+      "description": "问一件在意的事，探索一种传统解读，或亲手设计一件属于自己的小物。",
+      "items": [
+        {
+          "title": "手相专区",
+          "body": "描述你观察到的掌纹，探索传统手相中关于性格与生活节奏的解读。",
+          "href": "/palm",
+          "cta": "看手相"
         },
+        {
+          "title": "面相专区",
+          "body": "从你描述的五官与神态出发，探索传统面相的象征解读。",
+          "href": "/face",
+          "cta": "看面相"
+        },
+        {
+          "title": "问事专区",
+          "body": "带着一个感情、工作或选择上的问题，通过塔罗与卦象整理思路。",
+          "href": "/oracle",
+          "cta": "马上问"
+        },
+        {
+          "title": "灵石工坊",
+          "body": "把五行补色转换成手串设计：选水晶、珠径、颗数，并生成一份可佩戴的能量解析。",
+          "href": "/atelier",
+          "cta": "定制手串"
+        }
+      ]
+    },
+    "sticks": {
+      "eyebrow": "灵签小殿",
+      "title": "为手里的这件事，抽一支更直接的签。",
+      "description": "选择签种，写下你在意的问题，阅读签文与现代白话解读。",
+      "items": [
+        {
+          "title": "观音灵签",
+          "body": "流传最广，适合问平安、家宅、身体恢复、出行、关系缓和与整体方向。",
+          "href": "/sticks?type=guanyin",
+          "cta": "求观音签"
+        },
+        {
+          "title": "关帝灵签",
+          "body": "偏重事业、官运、考试、合同、名誉与需要决断的事情。",
+          "href": "/sticks?type=guandi",
+          "cta": "求关帝签"
+        },
+        {
+          "title": "月老灵签",
+          "body": "专看姻缘爱情，适合问暧昧、复合、婚恋时机与关系走向。",
+          "href": "/sticks?type=yuelao",
+          "cta": "求月老签"
+        },
+        {
+          "title": "五路财神灵签",
+          "body": "专问财运，适合看现金流、生意机会、副业、投资心态与守财能力。",
+          "href": "/sticks?type=wealth",
+          "cta": "求财神签"
+        },
+        {
+          "title": "黄大仙灵签",
+          "body": "适合问时机、转折、考试、出行、公众事务和需要看趋势的事情。",
+          "href": "/sticks?type=huangdaxian",
+          "cta": "求黄大仙签"
+        }
+      ]
+    },
+    "blessing": {
+      "eyebrow": "祈福小殿",
+      "title": "为在意的人和事，点一炷清香。",
+      "description": "为家人、愿望或新的开始，留一刻安静的祝福。选择神明意象，点香祈愿。",
+      "action": "点香祈福",
+      "activeAction": "已点香",
+      "modalTitle": "清香已燃",
+      "modalBody": "把愿望收成一句最清楚的话，留给这一刻。仪式负责定心，真正改变局面的，仍是你接下来要做的那一步。",
+      "modalClose": "回到页面",
+      "note": "祈福是象征性的定心仪式，真正的选择与行动仍然在你手里。",
+      "deities": [
+        {
+          "key": "guanyin",
+          "name": "观音",
+          "domain": "慈悲 · 平安",
+          "body": "适合为家人、健康、关系修复、情绪安稳与渡过难关而祈愿。"
+        },
+        {
+          "key": "wuye",
+          "name": "五爷（五龙王）",
+          "domain": "愿力 · 贵人",
+          "body": "五台山五龙王意象，适合为承诺、事业关口、压力突破、贵人助力和心中所愿而祈愿。"
+        },
+        {
+          "key": "wen-caishen",
+          "name": "文财神",
+          "domain": "规划 · 正财",
+          "body": "适合为长期积累、账目清明、专业技能、学业证书与稳定收入而祈愿。"
+        },
+        {
+          "key": "wu-caishen",
+          "name": "武财神",
+          "domain": "行动 · 机会",
+          "body": "适合为生意胆识、谈判成交、项目推进、守住价值与开拓机会而祈愿。"
+        },
+        {
+          "key": "mazu",
+          "name": "妈祖",
+          "domain": "远行 · 护航",
+          "body": "适合为出行、迁移、远方亲友、跨海跨城的变化与平安归来而祈愿。"
+        }
+      ]
+    },
+    "premium": {
+      "eyebrow": "就从一个生日开始",
+      "title": "你的那张卡，正在等你。",
+      "description": "只需生日，免费认识你的意象。喜欢的话，再继续探索完整的出生图谱。",
+      "items": [
+        "免费生日意象卡",
+        "无需注册账号",
+        "随时继续深入解读"
       ],
-    },
-    archetypes: {
-      eyebrow: "60 位象征伙伴",
-      title: "一套描绘内在风景的柔光卡牌。",
-      description:
-        "每张卡都代表一种情绪气候和生命质地，让海外用户先感受到这套系统，再进入更深入的分析。",
-    },
-    fusion: {
-      eyebrow: "场域解读",
-      title: "雨露灵兔，遇见双鱼座太阳。",
-      description:
-        "雨露灵兔象征敏感、柔软、善于感知关系中的细微波动；双鱼座太阳进一步放大想象力、共情力与通过美来疗愈自己的能力。",
-      chips: ["细腻感受力", "社交直觉", "太阳双鱼", "情绪疗愈"],
-    },
-    insights: {
-      eyebrow: "出生地图之外",
-      title: "四种更聚焦的入口，照见你正在经历的此刻。",
-      description:
-        "看清可见的身体信号、问一件具体的事，或把能量配色变成可以佩戴的物件。每个专区都从不同证据开始，而不是重复一套泛泛话术。",
-      items: [
-        {
-          title: "手相专区",
-          body: "用定位线拍摄或上传手掌，确认掌纹与掌丘，再生成更直接的关系、工作、节奏建议。",
-          href: "/palm",
-          cta: "看手相",
-        },
-        {
-          title: "面相专区",
-          body: "观察神态、三庭与眉眼鼻口下颌，把外在呈现翻译成心理、社交和压力反应。",
-          href: "/face",
-          cta: "看面相",
-        },
-        {
-          title: "问事专区",
-          body: "一事一问，用起问时间起六爻，再配合塔罗三牌，得到更清楚的下一步。",
-          href: "/oracle",
-          cta: "马上问",
-        },
-        {
-          title: "灵石工坊",
-          body: "把五行补色转换成手串设计：选水晶、珠径、颗数，并生成一份可佩戴的能量解析。",
-          href: "/atelier",
-          cta: "定制手串",
-        },
-      ],
-    },
-    sticks: {
-      eyebrow: "灵签小殿",
-      title: "为手里的这件事，抽一支更直接的签。",
-      description:
-        "比完整命盘更轻，也比泛泛鸡汤更清楚。选择签种、写下问题，得到一段现代白话签意。",
-      items: [
-        {
-          title: "观音灵签",
-          body: "流传最广，适合问平安、家宅、身体恢复、出行、关系缓和与整体方向。",
-          href: "/sticks?type=guanyin",
-          cta: "求观音签",
-        },
-        {
-          title: "关帝灵签",
-          body: "偏重事业、官运、考试、合同、名誉与需要决断的事情。",
-          href: "/sticks?type=guandi",
-          cta: "求关帝签",
-        },
-        {
-          title: "月老灵签",
-          body: "专看姻缘爱情，适合问暧昧、复合、婚恋时机与关系走向。",
-          href: "/sticks?type=yuelao",
-          cta: "求月老签",
-        },
-        {
-          title: "五路财神灵签",
-          body: "专问财运，适合看现金流、生意机会、副业、投资心态与守财能力。",
-          href: "/sticks?type=wealth",
-          cta: "求财神签",
-        },
-        {
-          title: "黄大仙灵签",
-          body: "适合问时机、转折、考试、出行、公众事务和需要看趋势的事情。",
-          href: "/sticks?type=huangdaxian",
-          cta: "求黄大仙签",
-        },
-      ],
-    },
-    blessing: {
-      eyebrow: "祈福小殿",
-      title: "给想守护的方向，点一炷电子清香。",
-      description:
-        "这不是替你决定命运，而是帮你把愿望说清楚。选择一位神明意象，点香、定心、把今天最重要的愿望留下。",
-      action: "点香祈福",
-      activeAction: "已点香",
-      modalTitle: "清香已燃",
-      modalBody:
-        "把愿望收成一句最清楚的话，留给这一刻。仪式负责定心，真正改变局面的，仍是你接下来要做的那一步。",
-      modalClose: "回到页面",
-      note: "祈福是象征性的定心仪式，真正的选择与行动仍然在你手里。",
-      deities: [
-        {
-          key: "guanyin",
-          name: "观音",
-          domain: "慈悲 · 平安",
-          body: "适合为家人、健康、关系修复、情绪安稳与渡过难关而祈愿。",
-        },
-        {
-          key: "wuye",
-          name: "五爷（五龙王）",
-          domain: "愿力 · 贵人",
-          body: "五台山五龙王意象，适合为承诺、事业关口、压力突破、贵人助力和心中所愿而祈愿。",
-        },
-        {
-          key: "wen-caishen",
-          name: "文财神",
-          domain: "规划 · 正财",
-          body: "适合为长期积累、账目清明、专业技能、学业证书与稳定收入而祈愿。",
-        },
-        {
-          key: "wu-caishen",
-          name: "武财神",
-          domain: "行动 · 机会",
-          body: "适合为生意胆识、谈判成交、项目推进、守住价值与开拓机会而祈愿。",
-        },
-        {
-          key: "mazu",
-          name: "妈祖",
-          domain: "远行 · 护航",
-          body: "适合为出行、迁移、远方亲友、跨海跨城的变化与平安归来而祈愿。",
-        },
-      ],
-    },
-    premium: {
-      eyebrow: "从免费一瞥，到完整指引",
-      title: "一份像被理解一样的阅读体验。",
-      description:
-        "从出生之日的动物画像开始，继续展开人格模式、亲密关系、事业节奏、成长课题、身心恢复和年度时机。",
-      items: ["出生时间能量校准", "行星共振图谱", "流式心理指引模块"],
-      cta: "开始我的解读",
-    },
+      "cta": "免费测测我的卡片"
+    }
   },
-  ru: {
-    nav: {
-      method: "Система",
-      archetypes: "Карты энергии",
-      report: "Начать",
-      insights: "Студии",
-      black: "Темный режим",
+  "ru": {
+    "nav": {
+      "method": "Как начать",
+      "archetypes": "Коллекция",
+      "report": "Карта рождения",
+      "insights": "Исследовать",
+      "black": "Темный режим"
     },
-    hero: {
-      version: "Многомерная карта рождения",
-      eyebrow: "Энергия рождения · Ритм планет · Внутренний ориентир",
-      title: "Увидьте узор, который помнит день вашего рождения.",
-      lead:
-        "DestinyPixel переводит момент рождения в мягкое психологическое зеркало: символические животные, планетарные ритмы и AI-инсайты для ясности, восстановления и доверия к себе.",
-      name: "Имя",
-      date: "Дата рождения",
-      time: "Время рождения",
-      gender: "Пол",
-      female: "Женский",
-      male: "Мужской",
-      city: "Город рождения",
-      cityPlaceholder: "Найдите город, например Shijiazhuang",
-      submit: "Открыть мою внутреннюю карту",
-      pending: "Считываем ваше энергетическое поле...",
-      privacy: "Данные рождения используются только для этого чтения",
+    "hero": {
+      "version": "КОЛЛЕКЦИЯ DESTINYPIXEL",
+      "eyebrow": "ХАРАКТЕР · ЛЮБОВЬ · НАПРАВЛЕНИЕ",
+      "title": "Немного чуда.\nБольше понимания себя.",
+      "lead": "Познакомьтесь с образом своего дня рождения: сильными сторонами, привычками в любви и возможностями для роста.",
+      "name": "Имя",
+      "date": "Дата рождения",
+      "time": "Время рождения",
+      "gender": "Пол",
+      "female": "Женский",
+      "male": "Мужской",
+      "city": "Город рождения",
+      "cityPlaceholder": "Найдите город рождения",
+      "submit": "Создать мою карту рождения",
+      "pending": "Готовим вашу карту рождения…",
+      "privacy": "Ваш отчёт личный. Подробнее об использовании данных — в политике конфиденциальности."
     },
-    card: {
-      sample: "Образец энергии",
-      core: "Ядро паттерна",
-      sky: "Ритм неба",
-      resonance: "Внутренний отклик",
+    "card": {
+      "sample": "Ваша личная карта рождения",
+      "core": "Ядро паттерна",
+      "sky": "Ритм неба",
+      "resonance": "Внутренний отклик"
     },
-    stats: {
-      portraits: "портретов энергии",
-      signals: "планетарных сигналов",
-      paths: "маршрутов",
+    "stats": {
+      "portraits": "портретов энергии",
+      "signals": "планетарных сигналов",
+      "paths": "маршрутов"
     },
-    method: {
-      eyebrow: "Мягкое зеркало для самопонимания",
-      title: "Момент рождения как многомерное поле.",
-      description:
-        "Мы не заставляем пользователя разбирать древние термины. Система переводит символы в современный язык эмоций, ритма, отношений и внутреннего восстановления.",
-      items: [
+    "method": {
+      "eyebrow": "УЗНАЙТЕ СЕБЯ ГЛУБЖЕ",
+      "title": "В вашей истории больше одного слоя.",
+      "description": "Добавьте время и место рождения, чтобы изучить характер, отношения и жизненное направление в личном разборе.",
+      "items": [
         {
-          title: "Энергетическая подпись",
-          body: "День рождения становится образом животного: входом в темперамент, потребности и естественный ритм.",
+          "title": "Ваш характер",
+          "body": "Познакомьтесь со своими сильными сторонами, привычками и возможностями."
         },
         {
-          title: "Небесный резонанс",
-          body: "Планетарные позиции добавляют второй слой: как внутренний узор ищет выражение, защиту и рост.",
+          "title": "Ваши отношения",
+          "body": "Исследуйте притяжение, трудности в общении и то, что помогает чувствовать близость."
         },
         {
-          title: "Восстанавливающее руководство",
-          body: "Чтение превращается в практичные подсказки для доверия к себе, отношений, работы, восстановления и следующего сезона жизни.",
+          "title": "Ваш путь",
+          "body": "Свяжите карту рождения с вопросами работы, роста и предстоящего года."
+        }
+      ]
+    },
+    "archetypes": {
+      "eyebrow": "ШЕСТЬДЕСЯТ ОБРАЗОВ. КАКОЙ ВАШ?",
+      "title": "Знакомство с коллекцией.",
+      "description": "Кролик росы, Секвойя в океане, Солнечный скакун — у каждого образа своя история силы, близости и роста."
+    },
+    "fusion": {
+      "eyebrow": "Чтение поля",
+      "title": "Роса Кролика встречает Солнце в Рыбах.",
+      "description": "Роса Кролика указывает на тонкость, социальную интуицию и мягкое восприятие. Солнце в Рыбах усиливает воображение, эмпатию и исцеление через красоту.",
+      "chips": [
+        "Тонкая чувствительность",
+        "Социальная интуиция",
+        "Солнце в Рыбах",
+        "Эмоциональное исцеление"
+      ]
+    },
+    "insights": {
+      "eyebrow": "СЛЕДУЙТЕ СВОЕМУ ИНТЕРЕСУ",
+      "title": "Что вас сейчас занимает?",
+      "description": "Задайте вопрос, познакомьтесь с символическим чтением или создайте что-то личное.",
+      "items": [
+        {
+          "title": "Ладонь",
+          "body": "Опишите линии своей ладони и познакомьтесь с их традиционными значениями.",
+          "href": "/palm",
+          "cta": "Читать ладонь"
         },
+        {
+          "title": "Лицо",
+          "body": "Исследуйте традиционные толкования описанных вами черт и выражений лица.",
+          "href": "/face",
+          "cta": "Читать лицо"
+        },
+        {
+          "title": "Оракул вопроса",
+          "body": "Задайте вопрос о любви, работе или выборе и рассмотрите его через Таро и символическую гексаграмму.",
+          "href": "/oracle",
+          "cta": "Задать вопрос"
+        },
+        {
+          "title": "Celestial Atelier",
+          "body": "Цвет пяти стихий превращается в концепт браслета: камни, размер бусин и символический анализ.",
+          "href": "/atelier",
+          "cta": "Собрать браслет"
+        }
+      ]
+    },
+    "sticks": {
+      "eyebrow": "Храмовый оракул",
+      "title": "Один жребий для вопроса, который сейчас в руках.",
+      "description": "Легкий ритуал для момента, когда нужен ясный знак: выберите традицию, назовите тему и получите современное толкование.",
+      "items": [
+        {
+          "title": "Жребии Гуаньинь",
+          "body": "Мягкий универсальный оракул для защиты, семьи, восстановления, дороги и эмоциональной неопределенности.",
+          "href": "/sticks?type=guanyin",
+          "cta": "Спросить"
+        },
+        {
+          "title": "Жребии Гуаньди",
+          "body": "Решительный оракул для карьеры, власти, договоров, экзаменов, повышения и репутации.",
+          "href": "/sticks?type=guandi",
+          "cta": "Спросить"
+        },
+        {
+          "title": "Жребии Юэлао",
+          "body": "Оракул отношений для любви, примирения, свиданий, брака и выбора в близости.",
+          "href": "/sticks?type=yuelao",
+          "cta": "Спросить"
+        },
+        {
+          "title": "Пять богов богатства",
+          "body": "Фокус на деньгах: поток средств, бизнес, дополнительный доход и финансовая дисциплина.",
+          "href": "/sticks?type=wealth",
+          "cta": "Спросить"
+        },
+        {
+          "title": "Жребии Вонг Тай Сина",
+          "body": "Оракул сроков, поворотных моментов, дороги, экзаменов и практических предзнаменований.",
+          "href": "/sticks?type=huangdaxian",
+          "cta": "Спросить"
+        }
+      ]
+    },
+    "blessing": {
+      "eyebrow": "Тихое благословение",
+      "title": "Зажгите благовоние для того, что хотите защитить.",
+      "description": "Небольшой цифровой ритуал для фокуса: выберите образ божества, сформулируйте желание и отметьте намерение на этот визит.",
+      "action": "Зажечь",
+      "activeAction": "Зажжено",
+      "modalTitle": "Благовоние зажжено",
+      "modalBody": "Сформулируйте намерение одной ясной фразой. Ритуал собирает внимание, а следующий реальный шаг остается за вами.",
+      "modalClose": "Вернуться",
+      "note": "Благословение символично; реальные решения все равно остаются за вами.",
+      "deities": [
+        {
+          "key": "guanyin",
+          "name": "Гуаньинь",
+          "domain": "Сострадание · Защита",
+          "body": "Для эмоциональной безопасности, заботы о семье, восстановления и мягкого пути через трудность."
+        },
+        {
+          "key": "wuye",
+          "name": "Утайский У Е",
+          "domain": "Обет · Смелость",
+          "body": "Пятый Царь Драконов Утая: для обещаний, давления, важного порога и устойчивости перед сложной задачей."
+        },
+        {
+          "key": "wen-caishen",
+          "name": "Гражданский бог богатства",
+          "domain": "Порядок · Долгие деньги",
+          "body": "Для планирования, счетов, учебы, профессиональных навыков и стабильного накопления."
+        },
+        {
+          "key": "wu-caishen",
+          "name": "Воинственный бог богатства",
+          "domain": "Действие · Возможность",
+          "body": "Для деловой смелости, переговоров, быстрых решений и защиты заработанной ценности."
+        },
+        {
+          "key": "mazu",
+          "name": "Мацзу",
+          "domain": "Путь · Безопасность",
+          "body": "Для поездок, переезда, дальних близких, неопределенности и возвращения домой."
+        }
+      ]
+    },
+    "premium": {
+      "eyebrow": "НАЧНИТЕ С ДНЯ РОЖДЕНИЯ",
+      "title": "Ваш образ ждёт вас.",
+      "description": "Одна дата — одна бесплатная карточка. Начните с неё, а затем решите, хотите ли узнать больше.",
+      "items": [
+        "Бесплатная карточка",
+        "Без регистрации",
+        "Полный разбор по желанию"
       ],
-    },
-    archetypes: {
-      eyebrow: "60 символических спутников",
-      title: "Мягкая колода для внутреннего ландшафта.",
-      description:
-        "Каждая карта работает как визуальный якорь для эмоционального климата, чтобы пользователь сначала почувствовал систему, а затем углубился в анализ.",
-    },
-    fusion: {
-      eyebrow: "Чтение поля",
-      title: "Роса Кролика встречает Солнце в Рыбах.",
-      description:
-        "Роса Кролика указывает на тонкость, социальную интуицию и мягкое восприятие. Солнце в Рыбах усиливает воображение, эмпатию и исцеление через красоту.",
-      chips: ["Тонкая чувствительность", "Социальная интуиция", "Солнце в Рыбах", "Эмоциональное исцеление"],
-    },
-    insights: {
-      eyebrow: "За пределами карты рождения",
-      title: "Четыре точных входа в тот момент, который вы проживаете.",
-      description:
-        "Считайте видимый сигнал, задайте один точный вопрос или превратите палитру энергии в носимый предмет. Каждая студия начинает с другого типа данных.",
-      items: [
-        {
-          title: "Ладонь",
-          body: "Выравнивание фото, линии и холмы ладони превращаются в прямые советы о ритме, работе и отношениях.",
-          href: "/palm",
-          cta: "Читать ладонь",
-        },
-        {
-          title: "Лицо",
-          body: "Символическое чтение выражения, зон лица и социального сигнала без оценок личности или красоты.",
-          href: "/face",
-          cta: "Читать лицо",
-        },
-        {
-          title: "Оракул вопроса",
-          body: "Один вопрос: линии Лю Яо по времени плюс три карты Таро для практического следующего шага.",
-          href: "/oracle",
-          cta: "Задать вопрос",
-        },
-        {
-          title: "Celestial Atelier",
-          body: "Цвет пяти стихий превращается в концепт браслета: камни, размер бусин и символический анализ.",
-          href: "/atelier",
-          cta: "Собрать браслет",
-        },
-      ],
-    },
-    sticks: {
-      eyebrow: "Храмовый оракул",
-      title: "Один жребий для вопроса, который сейчас в руках.",
-      description:
-        "Легкий ритуал для момента, когда нужен ясный знак: выберите традицию, назовите тему и получите современное толкование.",
-      items: [
-        {
-          title: "Жребии Гуаньинь",
-          body: "Мягкий универсальный оракул для защиты, семьи, восстановления, дороги и эмоциональной неопределенности.",
-          href: "/sticks?type=guanyin",
-          cta: "Спросить",
-        },
-        {
-          title: "Жребии Гуаньди",
-          body: "Решительный оракул для карьеры, власти, договоров, экзаменов, повышения и репутации.",
-          href: "/sticks?type=guandi",
-          cta: "Спросить",
-        },
-        {
-          title: "Жребии Юэлао",
-          body: "Оракул отношений для любви, примирения, свиданий, брака и выбора в близости.",
-          href: "/sticks?type=yuelao",
-          cta: "Спросить",
-        },
-        {
-          title: "Пять богов богатства",
-          body: "Фокус на деньгах: поток средств, бизнес, дополнительный доход и финансовая дисциплина.",
-          href: "/sticks?type=wealth",
-          cta: "Спросить",
-        },
-        {
-          title: "Жребии Вонг Тай Сина",
-          body: "Оракул сроков, поворотных моментов, дороги, экзаменов и практических предзнаменований.",
-          href: "/sticks?type=huangdaxian",
-          cta: "Спросить",
-        },
-      ],
-    },
-    blessing: {
-      eyebrow: "Тихое благословение",
-      title: "Зажгите благовоние для того, что хотите защитить.",
-      description:
-        "Небольшой цифровой ритуал для фокуса: выберите образ божества, сформулируйте желание и отметьте намерение на этот визит.",
-      action: "Зажечь",
-      activeAction: "Зажжено",
-      modalTitle: "Благовоние зажжено",
-      modalBody:
-        "Сформулируйте намерение одной ясной фразой. Ритуал собирает внимание, а следующий реальный шаг остается за вами.",
-      modalClose: "Вернуться",
-      note: "Благословение символично; реальные решения все равно остаются за вами.",
-      deities: [
-        {
-          key: "guanyin",
-          name: "Гуаньинь",
-          domain: "Сострадание · Защита",
-          body: "Для эмоциональной безопасности, заботы о семье, восстановления и мягкого пути через трудность.",
-        },
-        {
-          key: "wuye",
-          name: "Утайский У Е",
-          domain: "Обет · Смелость",
-          body: "Пятый Царь Драконов Утая: для обещаний, давления, важного порога и устойчивости перед сложной задачей.",
-        },
-        {
-          key: "wen-caishen",
-          name: "Гражданский бог богатства",
-          domain: "Порядок · Долгие деньги",
-          body: "Для планирования, счетов, учебы, профессиональных навыков и стабильного накопления.",
-        },
-        {
-          key: "wu-caishen",
-          name: "Воинственный бог богатства",
-          domain: "Действие · Возможность",
-          body: "Для деловой смелости, переговоров, быстрых решений и защиты заработанной ценности.",
-        },
-        {
-          key: "mazu",
-          name: "Мацзу",
-          domain: "Путь · Безопасность",
-          body: "Для поездок, переезда, дальних близких, неопределенности и возвращения домой.",
-        },
-      ],
-    },
-    premium: {
-      eyebrow: "От первого образа к глубокому руководству",
-      title: "Чтение, в котором вас действительно понимают.",
-      description:
-        "Начните с образа дня рождения, затем откройте полную карту: личные паттерны, язык любви, рабочий ритм, рост, восстановление и годовой тайминг.",
-      items: [
-        "Калибровка энергии рождения",
-        "Карта планетарного резонанса",
-        "Потоковое психологическое руководство",
-      ],
-      cta: "Начать мое чтение",
-    },
-  },
+      "cta": "Найти свою карточку"
+    }
+  }
 };
 
-const featuredPillars = ["癸卯", "乙丑", "丁酉", "辛巳"];
+const featuredPillars = ["癸卯", "丙午", "乙丑", "辛巳"];
 
 function WhiteSubmitButton({
   label,
@@ -800,7 +793,7 @@ export default function DestinyWhiteExperience({
   initialLocale?: ReportLocale;
   initialError?: string;
 }) {
-  const [locale, setLocale] = useState<ReportLocale>(initialLocale);
+  const locale = initialLocale;
   const [birthDate, setBirthDate] = useState("");
   const birthDateRef = useRef("");
   const birthDateInputRef = useRef<HTMLInputElement>(null);
@@ -826,9 +819,7 @@ export default function DestinyWhiteExperience({
     () => (pillarsDB as Record<string, PillarProfile>)[pillar],
     [pillar],
   );
-  const display = useMemo(() => getPillarDisplay(pillar, locale), [locale, pillar]);
   const cardName = profileName(profile, pillar, locale);
-  const essence = profileEssence(profile, pillar, locale);
 
   useEffect(() => {
     const now = new Date();
@@ -843,28 +834,15 @@ export default function DestinyWhiteExperience({
   }, [locale]);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlLocale = params.get("locale");
-
-    if (urlLocale) return;
-
-    const storedLocale = normalizeReportLocale(
-      window.localStorage.getItem("destinypixel-locale") ?? initialLocale,
-    );
-
-    if (storedLocale !== locale) {
-      setLocale(storedLocale);
-    }
-  }, [initialLocale, locale]);
+    if (initialError) document.getElementById("report")?.scrollIntoView({ block: "start" });
+  }, [initialError]);
 
   function changeLocale(nextLocale: ReportLocale) {
-    setLocale(nextLocale);
-    setDocumentLocale(nextLocale);
     window.localStorage.setItem("destinypixel-locale", nextLocale);
-
     const url = new URL(window.location.href);
-    url.searchParams.set("locale", nextLocale);
-    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    if (nextLocale === "en") url.searchParams.delete("locale");
+    else url.searchParams.set("locale", nextLocale);
+    window.location.assign(`${url.pathname}${url.search}${url.hash}`);
   }
 
   async function updatePreviewFromDate(value: string) {
@@ -883,9 +861,13 @@ export default function DestinyWhiteExperience({
   }
 
   const insightIcons = [Hand, ScanFace, MessageCircle, Gem] as const;
+  const freeHref = locale === "en" ? "/discover" : `/discover?locale=${locale}`;
+  const freeLabel = copyLocale === "zh" ? "免费测我的意象卡" : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
+  const freeNote = copyLocale === "zh" ? "只需生日 · 无需注册 · 即刻查看" : locale === "ru" ? "Только дата · Без регистрации · Мгновенный результат" : "Just your birthday · No account · Instant result";
+
 
   return (
-    <main className="white-site">
+    <main className="white-site editorial-home">
       <header className="white-header membership-header">
         <div className="white-container white-header__inner">
           <a className="white-brand" href="/">
@@ -893,20 +875,15 @@ export default function DestinyWhiteExperience({
             DestinyPixel
           </a>
 
-          <nav className="white-nav" aria-label="Primary navigation">
-            <a href={`/tuteng?locale=${locale}`}>
-              {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
-            </a>
-            <a href="#insights">{text.nav.insights}</a>
-            <a href="#method">{text.nav.method}</a>
+          <nav className="white-nav" aria-label={copyLocale === "zh" ? "主导航" : "Main navigation"}>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
-            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
-              {copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}
-            </a>
+            <a href="#insights">{text.nav.insights}</a>
+            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>{copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}</a>
           </nav>
 
           <div className="white-actions">
+            <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
             <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? "我的账号" : "Account"}</a>
             <a href={`/black?locale=${locale}`} className="white-black-link">
               {text.nav.black}
@@ -935,9 +912,9 @@ export default function DestinyWhiteExperience({
       </header>
 
       <nav className="white-mobile-dock" aria-label="Mobile navigation">
-        <a href="#report">
-          <SunMoon size={18} aria-hidden="true" />
-          <span>{mobileNavLabels.report}</span>
+        <a href={freeHref} className="editorial-dock-free">
+          <Sparkles size={18} aria-hidden="true" />
+          <span>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Карточка" : "Free card"}</span>
         </a>
         <a href="#insights">
           <Sparkles size={18} aria-hidden="true" />
@@ -953,41 +930,75 @@ export default function DestinyWhiteExperience({
         </a>
       </nav>
 
-      <section className="white-hero">
-        <div className="white-ambient" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </div>
-
-        <div className="white-container white-hero__grid">
+      <section className="white-hero" aria-labelledby="home-title">
+        <div className="white-container editorial-hero-grid">
           <div className="white-hero__copy">
-            <p className="white-kicker">
-              <Sparkles size={14} aria-hidden="true" />
-              {text.hero.version}
-            </p>
-            <p className="white-eyebrow">{text.hero.eyebrow}</p>
-            <h1>{text.hero.title}</h1>
+            <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{text.hero.version}</p>
+            <h1 id="home-title">{text.hero.title}</h1>
             <p className="white-lead">{text.hero.lead}</p>
+            <div className="editorial-hero-actions"><a className="editorial-primary" href={freeHref}>{freeLabel}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href="#report">{text.nav.report}<ArrowRight size={15} aria-hidden="true" /></a></div>
+            <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{freeNote}</p>
+            <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? "一种生日，一段独特故事。" : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
+          </div>
+          <div className="editorial-card-stage" aria-label={text.archetypes.title}>
+            <div className="editorial-orbit" aria-hidden="true" />
+            {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><a href={freeHref} key={key} className={`editorial-display-card editorial-display-card--${index}`}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={896} height={1200} sizes="(max-width: 650px) 48vw, 230px" priority={index===2} /><span>{profileName(pillarsDB[key],key,locale)}</span></a>)}
+            <span className="editorial-stage-label">{copyLocale === "zh" ? "你的故事，会是哪一种？" : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
+          </div>
+        </div>
+      </section>
 
-            <div className="white-stats" aria-label="DestinyPixel metrics">
-              <span>60</span>
-              <p>{text.stats.portraits}</p>
-              <span>10</span>
-              <p>{text.stats.signals}</p>
-              <span>7</span>
-              <p>{text.stats.paths}</p>
-            </div>
+      <section className="editorial-start-strip white-container" aria-label={text.method.title}>
+        {[copyLocale === "zh" ? "输入生日" : locale === "ru" ? "Ваша дата" : "Your birthday", copyLocale === "zh" ? "遇见你的意象" : locale === "ru" ? "Ваш образ" : "Your character", copyLocale === "zh" ? "探索性格与感情" : locale === "ru" ? "Ваша история" : "Your story"].map((label,i)=><div key={label}><span>0{i+1}</span><p>{label}</p>{i<2&&<ArrowRight size={16} aria-hidden="true" />}</div>)}
+      </section>
+
+      <section className="white-archetypes" id="archetypes">
+        <div className="white-container white-archetypes__grid">
+          <div className="white-section-heading">
+            <p>{text.archetypes.eyebrow}</p>
+            <h2>{text.archetypes.title}</h2>
+            <span>{text.archetypes.description}</span>
           </div>
 
-          <div className="white-form-panel" id="report">
+          <div className="white-card-row">
+            {featuredPillars.map((featuredPillar) => {
+              const itemProfile = (pillarsDB as Record<string, PillarProfile>)[
+                featuredPillar
+              ];
+              const itemDisplay = getPillarDisplay(featuredPillar, locale);
+              const itemName = profileName(itemProfile, featuredPillar, locale);
+
+              return (
+                <article key={featuredPillar}>
+                  <Image
+                    src={getPillarImagePath(featuredPillar)}
+                    alt={itemName}
+                    width={896}
+                    height={1200}
+                    sizes="(max-width: 720px) 58vw, 240px"
+                    quality={95}
+                  />
+                  <div>
+                    <span>{copyLocale === "zh" ? itemDisplay.pillarLabel : text.card.core}</span>
+                    <strong>{itemName}</strong>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="editorial-report white-container" id="report">
+        <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? "也可以探索你的本命灵构" : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
+          <div className="white-form-panel">
             <div className="white-form-panel__header">
               <span>
                 <SunMoon size={16} aria-hidden="true" />
               </span>
               <div>
                 <strong>{text.card.sample}</strong>
-                <p>{display.totemName}</p>
+                <p>{birthDate ? cardName : copyLocale === "zh" ? "填写出生日期、时间与城市" : locale === "ru" ? "Дата, время и город рождения" : "Your birth date, time and place"}</p>
               </div>
             </div>
 
@@ -1083,43 +1094,15 @@ export default function DestinyWhiteExperience({
                   : "Generate an interactive Birth Totem"}
               <ArrowRight size={14} aria-hidden="true" />
             </a>
-            <a className="white-totem-entry" href={copyLocale === "zh" ? "/day-pillar?locale=zh" : "/day-pillar"}>
+            <a className="white-totem-entry" href={freeHref}>
               <CalendarDays size={15} aria-hidden="true" />
               {copyLocale === "zh"
                 ? "只记得生日？先免费测日柱卡"
-                : "Only know your birthday? Get a free Day Pillar card"}
+                : "Only know your birthday? Find your free character card"}
               <ArrowRight size={14} aria-hidden="true" />
             </a>
           </div>
 
-          <article className="white-card-preview">
-            <div className="white-card-preview__image">
-              <Image
-                key={pillar}
-                src={getPillarImagePath(pillar)}
-                alt={cardName}
-                width={896}
-                height={1200}
-                sizes="(max-width: 720px) 70vw, 360px"
-                quality={95}
-                loading="eager"
-                fetchPriority="high"
-              />
-            </div>
-            <div className="white-card-preview__body">
-              <span>{display.pillarLabel}</span>
-              <h2>{cardName}</h2>
-              <p>{essence}</p>
-            </div>
-            <div className="white-signal-strip">
-              <span>{text.card.core}</span>
-              <i />
-              <span>{text.card.sky}</span>
-              <i />
-              <span>{text.card.resonance}</span>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section className="white-insights white-insights--priority" id="insights">
@@ -1153,127 +1136,6 @@ export default function DestinyWhiteExperience({
                 </a>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="white-method" id="method">
-        <div className="white-container">
-          <div className="white-method-intro">
-            <div className="white-geometry-panel" aria-hidden="true">
-              <svg viewBox="0 0 560 380" focusable="false">
-                <defs>
-                  <linearGradient id="white-line-gradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#c9dce7" />
-                    <stop offset="48%" stopColor="#d9c3d7" />
-                    <stop offset="100%" stopColor="#d0b476" />
-                  </linearGradient>
-                </defs>
-                <path d="M78 284 C158 166 264 224 342 102 S488 116 510 58" />
-                <path d="M64 138 L188 82 L324 162 L462 112" />
-                <circle cx="188" cy="82" r="48" />
-                <circle cx="324" cy="162" r="76" />
-                <circle cx="462" cy="112" r="34" />
-                <circle cx="78" cy="284" r="10" />
-                <circle cx="188" cy="82" r="10" />
-                <circle cx="324" cy="162" r="10" />
-                <circle cx="462" cy="112" r="10" />
-                <circle cx="510" cy="58" r="10" />
-              </svg>
-              <div className="white-geometry-node white-geometry-node--one">
-                <SunMoon size={18} aria-hidden="true" />
-                <span>Birth</span>
-              </div>
-              <div className="white-geometry-node white-geometry-node--two">
-                <Orbit size={18} aria-hidden="true" />
-                <span>Sky</span>
-              </div>
-              <div className="white-geometry-node white-geometry-node--three">
-                <Sparkles size={18} aria-hidden="true" />
-                <span>AI</span>
-              </div>
-            </div>
-
-            <div className="white-section-heading white-section-heading--method">
-              <p>{text.method.eyebrow}</p>
-              <h2>{text.method.title}</h2>
-              <span>{text.method.description}</span>
-            </div>
-          </div>
-
-          <div className="white-method-grid">
-            {text.method.items.map((item, index) => (
-              <article key={item.title}>
-                <small>{String(index + 1).padStart(2, "0")}</small>
-                <strong>{item.title}</strong>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="white-archetypes" id="archetypes">
-        <div className="white-container white-archetypes__grid">
-          <div className="white-section-heading">
-            <p>{text.archetypes.eyebrow}</p>
-            <h2>{text.archetypes.title}</h2>
-            <span>{text.archetypes.description}</span>
-          </div>
-
-          <div className="white-card-row">
-            {featuredPillars.map((featuredPillar) => {
-              const itemProfile = (pillarsDB as Record<string, PillarProfile>)[
-                featuredPillar
-              ];
-              const itemDisplay = getPillarDisplay(featuredPillar, locale);
-              const itemName = profileName(itemProfile, featuredPillar, locale);
-
-              return (
-                <article key={featuredPillar}>
-                  <Image
-                    src={getPillarImagePath(featuredPillar)}
-                    alt={itemName}
-                    width={896}
-                    height={1200}
-                    sizes="(max-width: 720px) 58vw, 240px"
-                    quality={95}
-                  />
-                  <div>
-                    <span>{itemDisplay.pillarLabel}</span>
-                    <strong>{itemName}</strong>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="white-fusion">
-        <div className="white-container white-fusion__grid">
-          <div className="white-orbit-card">
-            <div className="white-orbit-card__ring" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <div>
-              <Stars size={23} aria-hidden="true" />
-              <strong>{text.fusion.eyebrow}</strong>
-              <p>{text.fusion.description}</p>
-            </div>
-          </div>
-
-          <div className="white-fusion__copy">
-            <p>{text.fusion.eyebrow}</p>
-            <h2>{text.fusion.title}</h2>
-            <span>{text.fusion.description}</span>
-            <div>
-              {text.fusion.chips.map((chip) => (
-                <em key={chip}>{chip}</em>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -1417,7 +1279,7 @@ export default function DestinyWhiteExperience({
               </li>
             ))}
           </ul>
-          <a href="#report">
+          <a href={freeHref}>
             {text.premium.cta}
             <ArrowRight size={17} aria-hidden="true" />
           </a>
@@ -1426,7 +1288,7 @@ export default function DestinyWhiteExperience({
 
       <footer className="white-footer">
         <div className="white-container">
-          <span>DestinyPixel · Multidimensional Birth Map</span>
+          <span>DestinyPixel · Birthday characters & personal readings</span>
           <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
             {copyLocale === "zh" ? "探索入口" : locale === "ru" ? "Практики" : "Explore the practices"}
           </a>
@@ -1451,8 +1313,8 @@ export default function DestinyWhiteExperience({
           <a href={`/tuteng?locale=${locale}`}>
             {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
           </a>
-          <a href={copyLocale === "zh" ? "/day-pillar?locale=zh" : "/day-pillar"}>
-            {copyLocale === "zh" ? "免费日柱卡" : "Free Day Pillar card"}
+          <a href={freeHref}>
+            {copyLocale === "zh" ? "免费日柱卡" : "Free character card"}
           </a>
           <a href="#blessing">
             {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
@@ -1474,10 +1336,7 @@ export default function DestinyWhiteExperience({
             <Send size={13} aria-hidden="true" />
             {copyLocale === "zh" ? "Telegram 咨询" : locale === "ru" ? "Telegram" : "Chat on Telegram"}
           </a>
-          <span>
-            <MapPin size={13} aria-hidden="true" />
-            /
-          </span>
+
           <span>
             <CalendarDays size={13} aria-hidden="true" />
             2026

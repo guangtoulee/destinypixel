@@ -11,6 +11,7 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its seven too
 - Homepage: ${absoluteUrl("/")}
 - Tool directory: ${absoluteUrl("/tools")}
 - Guide: ${absoluteUrl("/learn")}
+- Free birthday character finder: ${absoluteUrl("/discover")}
 - Journal (four language editions): ${absoluteUrl("/journal")}
 - Day Pillar introduction: ${absoluteUrl("/journal/what-is-a-day-pillar")}
 - Jia Zi Day Pillar: ${absoluteUrl("/journal/jia-zi-day-pillar")}

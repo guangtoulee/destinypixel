@@ -6,18 +6,18 @@ export const jiaZiArticle: JournalSourceArticle = {
   "updatedAt": "2026-09-14",
   "translations": {
     "en": {
-      "title": "Jia Zi Day Pillar: personality, love, career & famous birthdays",
-      "description": "Meet Jia Zi (甲子): the thoughtful pioneer with a private heart. Explore personality, relationships, career, money patterns and famous birthdays checked by date.",
-      "topic": "Jia Zi · 甲子",
-      "introduction": "They can see the whole future of a project before anyone else has opened a notebook. Ask how they feel, though, and the answer may take much longer. Jia Zi is the thinker with a crowded inner world: generous with ideas, selective about intimacy and quietly determined to build something that matters. What happens when that brilliant mind becomes its own bottleneck—and what kind of love can reach it?",
-      "takeaway": "The Jia Zi tension: a mind that wants to lead, a heart that wants to be understood, and a life that needs an anchor. Its most compelling story is turning insight into something other people can feel, use and trust.",
+      "title": "The Oceanic Sequoia: personality, love, career & famous birthdays",
+      "description": "Meet The Oceanic Sequoia: a visionary mind with a private heart. Explore love, career and the birthday connection to Olivia Rodrigo and Red Cross founder Henry Dunant.",
+      "topic": "The Oceanic Sequoia",
+      "introduction": "They can see the whole future of a project before anyone else has opened a notebook. Ask how they feel, though, and the answer may take much longer. The Oceanic Sequoia is the thinker with a crowded inner world: generous with ideas, selective about intimacy and quietly determined to build something that matters. What happens when that brilliant mind becomes its own bottleneck—and what kind of love can reach it?",
+      "takeaway": "The Oceanic Sequoia tension: a mind that wants to lead, a heart that wants to be understood, and a life that needs an anchor. Its most compelling story is turning insight into something other people can feel, use and trust.",
       "sections": [
         {
           "id": "pair-and-image",
           "title": "1. The Oceanic Sequoia: a mind with deep roots",
           "paragraphs": [
-            "Jia Zi opens the traditional cycle of 60 stem–branch pairs. Jia is Yang Wood, pictured as a tall tree; Zi is the Rat branch, associated with Water. In the Five Elements relationship, Water nourishes Wood. DestinyPixel translates that image into The Oceanic Sequoia: a great tree surrounded by water, with a vast horizon and a constant need for somewhere to take root.",
-            "In Bazi, Zi contains Gui Water, which is called Direct Resource in relation to Jia. Think of this term as the nourishment of learning, guidance and knowledge—not a literal resource account. Our personality portrait develops this traditional symbolism alongside our original card story. It is an archetypal reading, rather than a scientifically established personality test; the other three pillars and a person’s life still matter."
+            "A great tree surrounded by open water: the Oceanic Sequoia has a wide horizon, a deep inner life and a constant need for somewhere to take root. In DestinyPixel’s collection of 60 birthday characters, this is the thoughtful pioneer—the person who can see the shape of an idea before anyone else knows where to begin.",
+            "The image brings together two qualities: the upward reach of a tree and the curiosity of water that keeps moving. Learning, imagination and guidance nourish this character. The challenge is giving that abundance a direction. Our collection develops traditional symbolism into original character portraits; these are cultural interpretations, not scientifically established personality types."
           ],
           "sources": [
             {
@@ -30,7 +30,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "personality",
           "title": "2. Personality: easy to talk to, harder to truly know",
           "paragraphs": [
-            "The appealing side of this portrait is quick understanding without constant self-advertising. Jia Zi listens, spots connections and remembers the question everyone else has overlooked. There is a principled streak, too: a wish to do work worth respecting and a reluctance to cheapen an idea simply to win approval. In a group, this can make the person feel like a quiet source of direction.",
+            "The appealing side of this portrait is quick understanding without constant self-advertising. the Oceanic Sequoia listens, spots connections and remembers the question everyone else has overlooked. There is a principled streak, too: a wish to do work worth respecting and a reluctance to cheapen an idea simply to win approval. In a group, this can make the person feel like a quiet source of direction.",
             "The difficult side appears when discernment turns into endless qualification. Every promising route has a flaw; every first draft falls short of the world imagined in private. Someone who seems calm outside may be rehearsing ten possible futures inside. The tension is sharp: a giant in thought who can become a beginner in action. The blind spot is expecting the first attempt to deserve the reputation you hope to earn."
           ],
           "table": {
@@ -62,7 +62,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "love",
           "title": "3. Love: the conversation is part of the attraction",
           "paragraphs": [
-            "For the Jia Zi character, attraction often begins with a mind: a surprising question, a person who has their own interests, a conversation that continues long after the restaurant closes. Admiration needs substance. Someone who can disagree thoughtfully may be more compelling than someone who agrees with everything. Shared curiosity keeps the relationship alive after the novelty fades.",
+            "For the Oceanic Sequoia character, attraction often begins with a mind: a surprising question, a person who has their own interests, a conversation that continues long after the restaurant closes. Admiration needs substance. Someone who can disagree thoughtfully may be more compelling than someone who agrees with everything. Shared curiosity keeps the relationship alive after the novelty fades.",
             "Affection can look practical and attentive: remembering an obscure interest, finding a book you mentioned months ago, helping untangle a problem. The longing underneath is intimate—to be understood without having to explain every layer. That longing can also set an impossible test. A partner should not have to read silence as proof of love or guess which unspoken expectation they have failed."
           ]
         },
@@ -70,7 +70,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "relationship-friction",
           "title": "4. The emotional island—and the way back",
           "paragraphs": [
-            "Here is the familiar scene: a partner says, “I had an awful day.” Jia Zi starts mapping solutions. The partner wanted comfort; the thinker believes they have offered care. After an argument, the same pattern can turn into retreat: “I need to work this out alone.” Without a clear return, that private processing starts to feel like a closed door.",
+            "Here is the familiar scene: a partner says, “I had an awful day.” the Oceanic Sequoia starts mapping solutions. The partner wanted comfort; the thinker believes they have offered care. After an argument, the same pattern can turn into retreat: “I need to work this out alone.” Without a clear return, that private processing starts to feel like a closed door.",
             "A fitting relationship dynamic combines mental companionship with warmth and reliability. Space works when it has a bridge back: “I need an hour; then I want to hear the rest.” Before solving a problem, ask whether the other person wants advice or company. Someone who respects independence while asking for clear, consistent contact gives this archetype room to become both thoughtful and emotionally present."
           ]
         },
@@ -78,8 +78,8 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "career",
           "title": "5. Career: get paid for what you can make clear",
           "paragraphs": [
-            "The strongest career image for Jia Zi is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
-            "At work, the danger is becoming indispensable in discussions but invisible in delivery. A brilliant strategy that never meets a customer, student or colleague cannot build a track record. The Jia Zi breakthrough is often a repeatable output: a course, a working prototype, a published body of work or a service with a clear result. A collaborator who is good at schedules and implementation can help turn breadth of vision into momentum."
+            "The strongest career image for the Oceanic Sequoia is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
+            "At work, the danger is becoming indispensable in discussions but invisible in delivery. A brilliant strategy that never meets a customer, student or colleague cannot build a track record. The the Oceanic Sequoia breakthrough is often a repeatable output: a course, a working prototype, a published body of work or a service with a clear result. A collaborator who is good at schedules and implementation can help turn breadth of vision into momentum."
           ]
         },
         {
@@ -95,43 +95,43 @@ export const jiaZiArticle: JournalSourceArticle = {
           "title": "7. Career and relationship luck: what can one pillar tell you?",
           "paragraphs": [
             "In this portrait, a promising season looks like insight finding an audience: a mentor takes an interest, a body of work becomes visible or a relationship makes it easier to speak openly. A stuck season looks like too much input with too little expression—learning without producing, thinking without deciding, caring without communicating. Those are recognizable story patterns, not dated forecasts.",
-            "A claim such as “you will marry this year” or “your earnings will rise at 35” needs far more than the words Jia Zi. Traditional timing readings consider the full birth chart, its broader cycles and the year in question. Even within Bazi, Water is not automatically beneficial just because it nourishes Wood; the whole balance matters. A useful full reading should explain its reasoning and uncertainties rather than attach a lucky date to everyone with the same birthday pair."
+            "Specific timing—such as a likely turning point in love or work—calls for a wider reading of the birth chart, its longer cycles and the year in question. The balance between the elements matters too; more of a nourishing element is not always better. A full reading should explain its reasoning and uncertainties, rather than attach the same lucky date to everyone who shares a birthday character."
           ]
         },
         {
           "id": "famous-birthdays",
-          "title": "8. Famous birthdays: Vivian Hsu and Soong Ching-ling",
+          "title": "8. Famous birthdays: Olivia Rodrigo and Henry Dunant",
           "paragraphs": [
-            "Vivian Hsu’s career offers a vivid creative example. The Taiwanese singer and actor moved between television, film and music, developed a career in Japan and also wrote lyrics for other artists. Her official Avex biography describes that continuing pull toward songwriting even during a busy performing career. Beside the Jia Zi story, it suggests an interesting question: which ideas do you still want to make your own, even when other work already keeps you busy?",
-            "Soong Ching-ling offers a very different life to explore. Her public work included support for social welfare and women and children, with sustained attention to maternal and child health and children’s education. Alongside the card’s themes of knowledge and service, her story shifts the focus from having a principle to building work around it. These are ways to read the stories together; a calendar match cannot explain either person’s character or achievements."
+            "Olivia Rodrigo turns private feeling into songs that other people recognize themselves in. Her songwriting offers a vivid companion to the Oceanic Sequoia story: a crowded inner world becomes something shareable. The interesting question is what happens between feeling everything and finding the words that make someone else say, “I know exactly what you mean.” Her published birthday, 20 February 2003, maps to this character in our date-based collection.",
+            "Henry Dunant, a founder of the Red Cross and a recipient of the first Nobel Peace Prize, gives the portrait a different scale. After witnessing the aftermath of the Battle of Solferino, he pressed for organized help for wounded soldiers. Here, an idea grew into work that outlasted its originator. His published birthday, 8 May 1828, also maps to the Oceanic Sequoia. The shared calendar pattern is a point of connection; their lives and achievements have their own explanations."
           ],
           "table": {
             "headings": [
               "Person",
-              "Published Gregorian birthday",
-              "Date-only result"
+              "Published birthday",
+              "DestinyPixel character"
             ],
             "rows": [
               [
-                "Vivian Hsu · 徐若瑄",
-                "1975-03-19",
-                "Jia Zi · 甲子"
+                "Olivia Rodrigo",
+                "2003-02-20",
+                "The Oceanic Sequoia"
               ],
               [
-                "Soong Ching-ling · 宋庆龄",
-                "1893-01-27",
-                "Jia Zi · 甲子"
+                "Henry Dunant · Red Cross founder",
+                "1828-05-08",
+                "The Oceanic Sequoia"
               ]
             ]
           },
           "sources": [
             {
-              "label": "Avex: Vivian Hsu’s official profile and birthday",
-              "href": "https://www.avex.com.tw/vivian/profile_t.htm"
+              "label": "Encyclopaedia Britannica: Olivia Rodrigo’s biography and birthday",
+              "href": "https://www.britannica.com/biography/Olivia-Rodrigo"
             },
             {
-              "label": "Official commemoration: Soong Ching-ling’s life and birthday",
-              "href": "https://www.gdtzb.gov.cn/ddhz/xw/content/post_86719.html"
+              "label": "Nobel Prize: Henry Dunant’s birthday and humanitarian work",
+              "href": "https://www.nobelprize.org/prizes/peace/1901/dunant/speedread/"
             }
           ]
         },
@@ -139,14 +139,14 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "next-step",
           "title": "9. Find your own place in the story",
           "paragraphs": [
-            "The celebrity examples use published Gregorian dates and the same civil-date convention as our free tool. They do not certify birth times or complete Bazi charts. A birth near a day boundary can require closer attention to time and place. Try your own date to meet the card first; use fuller birth details when exploring the wider chart.",
-            "If Jia Zi is your result, start with the part that feels most familiar: the unfinished idea, the high standard that protects you, or the affection that stays in your head. The growth of The Oceanic Sequoia is finding a shore: work someone can use, love someone can recognize, and a direction that becomes real because you keep showing up."
+            "Behind the artwork, this character corresponds to the traditional calendar pair Jia Zi (甲子). The examples above use published Gregorian birthdays and the same civil-date convention as our free finder. Birth times and places can matter near a day boundary. Start with your birthday to meet the character; add fuller details when you want to explore the wider birth map.",
+            "If the Oceanic Sequoia is your result, start with the part that feels most familiar: the unfinished idea, the high standard that protects you, or the affection that stays in your head. The growth of The Oceanic Sequoia is finding a shore: work someone can use, love someone can recognize, and a direction that becomes real because you keep showing up."
           ]
         }
       ],
       "action": {
-        "label": "Find your free Day Pillar card",
-        "href": "/day-pillar"
+        "label": "Find my free birthday character",
+        "href": "/discover"
       }
     },
     "zh": {

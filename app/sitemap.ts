@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { discoveryLocales, discoveryHref, discoveryAlternates } from "@/lib/discovery";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
 import { journalArticles, journalHref, journalLocales, journalAlternates } from "@/lib/journal";
 import { seoGuidePath, seoGuides } from "@/lib/seo-guides";
@@ -83,7 +84,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.78,
     }));
-    return [...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...guideRoutes];
+    const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
+    const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
+    return [...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only
     return [

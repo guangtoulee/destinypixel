@@ -9,7 +9,7 @@ export const siteUrl =
 export const siteName = "DestinyPixel";
 
 export const defaultSeoDescription =
-  "Explore birth maps, Bazi, symbolic palm and face readings, Tarot, temple sticks, and five-element crystal bracelet design for personal reflection.";
+  "Find your free birthday character, explore personality and relationships, and go deeper with a personal birth map, Tarot or five-element bracelet design.";
 
 export const seoKeywordClusters = [
   "birth chart reading",
@@ -78,7 +78,7 @@ export const seoKeywordClusters = [
 export const routeSeo = {
   home: {
     path: "/",
-    title: "DestinyPixel | AI Birth Chart, Bazi Archetypes & Inner Guidance",
+    title: "DestinyPixel | Free Birthday Characters & Personal Birth Maps",
     description: defaultSeoDescription,
     keywords: [
       "multidimensional birth map",

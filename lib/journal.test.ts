@@ -15,7 +15,7 @@ test("published famous birthdays reproduce the featured day pillar in every edit
     assert.equal(section.sources?.length, 2);
     for (const [, date, result] of section.table!.rows) {
       assert.deepEqual(calculateDateDayPillar(date), { ok: true, pillar: "甲子" });
-      assert.match(result, /甲子/);
+      assert.match(result, locale === "en" ? /Oceanic Sequoia/ : /甲子/);
     }
   }
 });
@@ -76,4 +76,13 @@ test("birth form feedback renders only known localized errors", () => {
   assert.match(birthFormFeedback("rate-limited", "en") ?? "", /wait/);
   assert.equal(birthFormFeedback("unknown-query-string", "en"), undefined);
   assert.equal(birthFormFeedback("__proto__", "en"), undefined);
+});
+
+
+test("English leads with the established character and uses a single calendar reference", () => {
+  const copy = journalArticles.find(item => item.slug === "jia-zi-day-pillar")!.translations.en;
+  assert.match(copy.title, /^The Oceanic Sequoia/);
+  assert.equal((JSON.stringify(copy).match(/Jia Zi/g) ?? []).length, 1);
+  const names = copy.sections.find(s => s.id === "famous-birthdays")!.table!.rows.map(row => row[0]);
+  assert.deepEqual(names, ["Olivia Rodrigo", "Henry Dunant · Red Cross founder"]);
 });

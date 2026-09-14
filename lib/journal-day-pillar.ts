@@ -6,10 +6,10 @@ export const dayPillarIntroduction: JournalSourceArticle = {
   "updatedAt": "2026-09-12",
   "translations": {
     "en": {
-      "title": "What is a Day Pillar? A plain-English guide to the 60 Bazi pairs",
-      "description": "Understand your Bazi Day Pillar, how it differs from the Day Master and zodiac animal, and how to read a Jia Zi archetype without getting lost in terminology.",
+      "title": "Your birthday character: a guide to the 60 DestinyPixel archetypes",
+      "description": "Discover the stories behind DestinyPixel’s 60 birthday characters, from the Oceanic Sequoia to the Dewy Rabbit, and learn how to find your free card.",
       "topic": "The 60 Day Pillars",
-      "introduction": "You enter your birthday and receive two Chinese characters: 甲子, Jia Zi. Beside them sits an illustrated card with a name such as The Oceanic Sequoia. Where does the calendar end and the story begin? Understanding that distinction makes your first reading much more enjoyable. Here is a simple way into the 60 Day Pillars, with enough vocabulary to explore further and a practical example you can bring back to everyday life.",
+      "introduction": "The Oceanic Sequoia. The Dewy Rabbit. The Solar Stallion. A birthday can open the door to a character you remember, with its own strengths, relationship patterns and possibilities for growth. Here is how to find your card, read its story and understand the traditional calendar behind the collection.",
       "takeaway": "Your Day Pillar is a pair of calendar symbols assigned to your birth day. DestinyPixel adds an imaginative card interpretation. Use the story to notice patterns and ask better questions about yourself.",
       "sections": [
         {
@@ -67,9 +67,9 @@ export const dayPillarIntroduction: JournalSourceArticle = {
         },
         {
           "id": "jia-zi-example",
-          "title": "4. Jia Zi: an idea looking for its first step",
+          "title": "4. Meet the Oceanic Sequoia",
           "paragraphs": [
-            "Our current Jia Zi card is called The Oceanic Sequoia: an imagined tree amid open water. We use that image to explore a tension between expansive thinking and steady action. It is a storytelling choice, rather than a historical English translation of 甲子.",
+            "Our Oceanic Sequoia card is called The Oceanic Sequoia: an imagined tree amid open water. We use that image to explore a tension between expansive thinking and steady action. It is a storytelling choice, rather than a historical English translation of 甲子.",
             "Picture someone who can see an entire project before it exists. They connect ideas quickly, enjoy working independently and keep refining the plan. The difficult moment arrives when planning needs to become a first attempt. A useful reading asks: “Does preparing sometimes become my way of postponing?”",
             "In a relationship, the same story might open a conversation about needing thinking space while staying emotionally present. Try saying, “I need some time to work this through; let’s talk after dinner.” That gives another person something clearer than silence. If this pattern does not fit your experience, leave it behind."
           ]
@@ -96,8 +96,8 @@ export const dayPillarIntroduction: JournalSourceArticle = {
         }
       ],
       "action": {
-        "label": "Find my free Day Pillar",
-        "href": "/day-pillar"
+        "label": "Find my free character card",
+        "href": "/discover"
       }
     },
     "zh": {

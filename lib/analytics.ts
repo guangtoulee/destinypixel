@@ -11,12 +11,12 @@ export type ToolEvent =
 const publicPaths = new Set([
   "/", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
   "/sticks", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
-  "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/journal",
+  "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 const mainSitePaths = new Set([
   "/", "/white", "/black", "/tools", "/learn", "/tuteng", "/palm", "/face",
-  "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/journal",
+  "/oracle", "/sticks", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 export function isMainSitePath(pathname: string): boolean {
@@ -67,7 +67,7 @@ export function sanitizeAnalyticsUrl(raw: string): string | null {
     url.hash = "";
     const allowed: Record<string, readonly string[]> = {
       locale: ["en", "zh", "zh-TW", "ru"],
-      utm_source: ["xiaohongshu", "bilibili", "douyin", "wechat", "x", "youtube", "newsletter"],
+      utm_source: ["xiaohongshu", "bilibili", "douyin", "wechat", "x", "youtube", "newsletter", "instagram", "tiktok", "facebook", "pinterest"],
       utm_medium: ["social", "video", "email", "referral"],
       utm_campaign: ["totem_demo", "prompt_tutorial", "creator_tools", "day_card"],
     };

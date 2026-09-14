@@ -37,7 +37,7 @@ export default async function Home({
       potentialAction: {
         "@type": "ReadAction",
         target: [
-          absoluteUrl("/"),
+          absoluteUrl("/discover"),
           absoluteUrl("/palm"),
           absoluteUrl("/oracle"),
           absoluteUrl("/sticks"),
