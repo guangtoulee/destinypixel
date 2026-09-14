@@ -1024,8 +1024,8 @@ export default function DestinyExperience({
           </div>
           <div className="footer-bottom">
             <span>© 2026 DestinyPixel</span>
-            <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
-              {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
+              {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи" : "Journal"}
             </a>
             <a className="footer-contact" href={destinySupportHref}>
               <Mail size={13} aria-hidden="true" />

@@ -67,7 +67,9 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   }
   assert.ok(byUrl.has(absoluteUrl("/tools?locale=zh")));
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
-  assert.ok(!entries.some((entry) => entry.url.includes("locale=zh-TW")));
+  const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
+  assert.ok(traditionalEntries.length > 0);
+  assert.ok(traditionalEntries.every((entry) => new URL(entry.url).pathname.startsWith("/journal")));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {

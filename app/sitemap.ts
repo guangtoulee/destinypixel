@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
-import { journalArticles, journalHref } from "@/lib/journal";
+import { journalArticles, journalHref, journalLocales, journalAlternates } from "@/lib/journal";
 import { seoGuidePath, seoGuides } from "@/lib/seo-guides";
 
 /** Main-site product + content only. Test/side apps stay out of the index. */
@@ -22,12 +22,8 @@ const publicRoutes = [
 function safeJournalRoutes(): MetadataRoute.Sitemap {
   try {
     return [undefined, ...journalArticles].flatMap((article) => {
-      const languages = {
-        en: absoluteUrl(journalHref("en", article?.slug)),
-        "zh-Hans": absoluteUrl(journalHref("zh", article?.slug)),
-        "x-default": absoluteUrl(journalHref("en", article?.slug)),
-      };
-      return (["en", "zh"] as const).map((locale) => ({
+      const languages = Object.fromEntries(Object.entries(journalAlternates(article?.slug)).map(([language, href]) => [language, absoluteUrl(href)]));
+      return journalLocales.map((locale) => ({
         url: absoluteUrl(journalHref(locale, article?.slug)),
         lastModified:
           article?.updatedAt ??

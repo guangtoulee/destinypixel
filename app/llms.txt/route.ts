@@ -11,6 +11,9 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its seven too
 - Homepage: ${absoluteUrl("/")}
 - Tool directory: ${absoluteUrl("/tools")}
 - Guide: ${absoluteUrl("/learn")}
+- Journal (four language editions): ${absoluteUrl("/journal")}
+- Day Pillar introduction: ${absoluteUrl("/journal/what-is-a-day-pillar")}
+- Jia Zi Day Pillar: ${absoluteUrl("/journal/jia-zi-day-pillar")}
 - Palm Studio: ${absoluteUrl("/palm")}
 - Face Studio: ${absoluteUrl("/face")}
 - Question Oracle: ${absoluteUrl("/oracle")}
@@ -26,7 +29,7 @@ Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four 
 Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Supported Languages
-Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. Traditional Chinese body text currently uses a browser-side conversion. The tool directory is available in English and Simplified Chinese. The beginner guide is English-only; do not assume that every page is translated.
+Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The Journal and each of its articles provide complete server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. Journal language alternates and the sitemap list these editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
 
 ## Contact
 Product feedback and collaboration: ${destinySupportEmail}

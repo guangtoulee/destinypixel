@@ -901,8 +901,8 @@ export default function DestinyWhiteExperience({
             <a href="#method">{text.nav.method}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
-            <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
-              {copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
+              {copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}
             </a>
           </nav>
 
@@ -1433,8 +1433,8 @@ export default function DestinyWhiteExperience({
           <a href="/learn">
             {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
           </a>
-          <a href={copyLocale === "zh" ? "/journal?locale=zh" : "/journal"}>
-            {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи (EN)" : "Journal"}
+          <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
+            {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи" : "Journal"}
           </a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}

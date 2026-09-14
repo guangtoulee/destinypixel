@@ -1,6 +1,6 @@
-import type { JournalArticle } from "@/lib/journal";
+import type { JournalSourceArticle } from "@/lib/journal";
 
-export const dayPillarIntroduction: JournalArticle = {
+export const dayPillarIntroduction: JournalSourceArticle = {
   "slug": "what-is-a-day-pillar",
   "publishedAt": "2026-09-12",
   "updatedAt": "2026-09-12",

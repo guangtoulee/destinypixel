@@ -1,31 +1,32 @@
 import { destinySupportHref } from "@/lib/support-contact";
-import Link from "next/link";
 import { journalHref, type JournalLocale } from "@/lib/journal";
+import { journalLocales, journalLanguageLabels, journalLanguageTags, journalUi, journalHomeHref, journalToolsHref } from "@/lib/journal-locales";
 import styles from "@/app/journal/journal.module.css";
 
+// Document navigation keeps query-based language metadata in sync with the body.
+// Client-prefetched metadata can otherwise retain the English canonical.
 export function JournalHeader({ locale, slug }: { locale: JournalLocale; slug?: string }) {
-  const zh = locale === "zh";
+  const ui = journalUi[locale];
   return (
     <header className={styles.header}>
-      <Link className={styles.brand} href={zh ? "/?locale=zh" : "/"}><span aria-hidden="true" />DestinyPixel</Link>
-      <nav className={styles.navigation} aria-label={zh ? "主导航" : "Main navigation"}>
-        <Link href={zh ? "/tools?locale=zh" : "/tools"}>{zh ? "玄学工具" : "Tools"}</Link>
-        <Link href={journalHref(locale)} aria-current={!slug ? "page" : undefined}>{zh ? "文章" : "Journal"}</Link>
+      <a className={styles.brand} href={journalHomeHref(locale)}><span aria-hidden="true" />DestinyPixel</a>
+      <nav className={styles.navigation} aria-label={ui.mainNav}>
+        <a href={journalToolsHref(locale)}>{ui.tools}</a>
+        <a href={journalHref(locale)} aria-current={!slug ? "page" : undefined}>{ui.journal}</a>
       </nav>
-      <nav className={styles.languages} aria-label={zh ? "文章语言" : "Article language"}>
-        <Link href={journalHref("en", slug)} hrefLang="en" lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</Link>
-        <Link href={journalHref("zh", slug)} hrefLang="zh-Hans" lang="zh-Hans" aria-current={locale === "zh" ? "page" : undefined}>中文</Link>
+      <nav className={styles.languages} aria-label={ui.language}>
+        {journalLocales.map((language) => <a key={language} href={journalHref(language, slug)} hrefLang={journalLanguageTags[language]} lang={journalLanguageTags[language]} aria-current={locale === language ? "page" : undefined}>{journalLanguageLabels[language]}</a>)}
       </nav>
     </header>
   );
 }
 
 export function JournalFooter({ locale }: { locale: JournalLocale }) {
-  const zh = locale === "zh";
+  const ui = journalUi[locale];
   return (
     <footer className={styles.footer}>
-      <div><strong>DestinyPixel</strong><p>{zh ? "把象征、计算与个人判断分清楚。" : "Clear distinctions between symbols, calculations and personal judgment."}</p></div>
-      <nav aria-label={zh ? "页脚导航" : "Footer navigation"}><Link href={journalHref(locale)}>{zh ? "全部文章" : "All articles"}</Link><Link href={zh ? "/tools?locale=zh" : "/tools"}>{zh ? "工具目录" : "Tool directory"}</Link><a href={destinySupportHref}>{zh ? "联系反馈" : "Contact"}</a></nav>
+      <div><strong>DestinyPixel</strong><p>{ui.footer}</p></div>
+      <nav aria-label={ui.footerNav}><a href={journalHref(locale)}>{ui.all}</a><a href={journalToolsHref(locale)}>{ui.toolDirectory}</a><a href={destinySupportHref}>{ui.contact}</a></nav>
     </footer>
   );
 }

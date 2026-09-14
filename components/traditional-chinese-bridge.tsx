@@ -9,6 +9,7 @@ const convertibleAttributes = ["aria-label", "placeholder", "title"] as const;
 function convertNode(root: Node, converter: Converter) {
   const convertTextNode = (node: Node) => {
     if (node.nodeType !== Node.TEXT_NODE || !node.nodeValue) return;
+    if (node.parentElement?.closest("[data-server-localized]")) return;
 
     const parent = node.parentElement?.tagName;
     if (parent === "SCRIPT" || parent === "STYLE" || parent === "NOSCRIPT") return;
@@ -19,7 +20,7 @@ function convertNode(root: Node, converter: Converter) {
 
   convertTextNode(root);
 
-  if (root instanceof Element) {
+  if (root instanceof Element && !root.closest("[data-server-localized]")) {
     for (const attribute of convertibleAttributes) {
       const value = root.getAttribute(attribute);
       if (!value) continue;
@@ -38,6 +39,7 @@ function convertNode(root: Node, converter: Converter) {
 
   if (root instanceof Element) {
     for (const element of root.querySelectorAll("[aria-label], [placeholder], [title]")) {
+      if (element.closest("[data-server-localized]")) continue;
       for (const attribute of convertibleAttributes) {
         const value = element.getAttribute(attribute);
         if (!value) continue;

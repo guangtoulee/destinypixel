@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
+import { jiaZiArticle } from "@/lib/journal-jia-zi";
+import { journalRussian } from "@/lib/journal-ru";
+import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
+export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
+export type { JournalLocale } from "@/lib/journal-locales";
 
-export type JournalLocale = "en" | "zh";
 export type JournalSection = {
   id: string;
   title: string;
@@ -26,8 +30,10 @@ export type JournalArticle = {
   updatedAt: string;
   translations: Record<JournalLocale, JournalTranslation>;
 };
+export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
-export const journalArticles: JournalArticle[] = [
+const journalSources: JournalSourceArticle[] = [
+  jiaZiArticle,
   dayPillarIntroduction,
   {
     slug: "prepare-birth-date-time-place",
@@ -229,12 +235,44 @@ export const journalArticles: JournalArticle[] = [
 ];
 
 export function normalizeJournalLocale(value?: string): JournalLocale {
-  return value === "zh" ? "zh" : "en";
+  if (value === "zh-TW" || value === "zh-Hant") return "zh-TW";
+  if (value === "zh" || value === "zh-Hans" || value === "cn") return "zh";
+  return value === "ru" ? "ru" : "en";
 }
 
 export function journalHref(locale: JournalLocale, slug?: string) {
   const path = slug ? `/journal/${slug}` : "/journal";
-  return locale === "zh" ? `${path}?locale=zh` : path;
+  return locale === "en" ? path : `${path}?locale=${locale}`;
+}
+
+function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
+  const text = toTraditional;
+  return {
+    title: text(copy.title), description: text(copy.description), topic: text(copy.topic),
+    introduction: text(copy.introduction), takeaway: text(copy.takeaway),
+    sections: copy.sections.map((section) => ({
+      ...section, title: text(section.title), paragraphs: section.paragraphs.map(text),
+      ...(section.steps ? { steps: section.steps.map(text) } : {}),
+      ...(section.table ? { table: { headings: section.table.headings.map(text), rows: section.table.rows.map((row) => row.map(text)) } } : {}),
+      ...(section.sources ? { sources: section.sources.map((source) => ({ ...source, label: text(source.label) })) } : {}),
+    })),
+    action: copy.action.href.startsWith("/day-pillar")
+      ? { label: `${text(copy.action.label)}（簡體中文）`, href: copy.action.href }
+      : { label: text(copy.action.label), href: copy.action.href.replace("locale=zh", "locale=zh-TW") },
+  };
+}
+
+export const journalArticles: JournalArticle[] = journalSources.map((article) => {
+  const ru = journalRussian[article.slug];
+  if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
+  return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
+});
+
+export function journalAlternates(slug?: string): Record<string, string> {
+  return Object.fromEntries([
+    ...journalLocales.map((locale) => [journalLanguageTags[locale], journalHref(locale, slug)]),
+    ["x-default", journalHref("en", slug)],
+  ]);
 }
 
 export function getJournalArticle(slug: string) {
@@ -243,14 +281,14 @@ export function getJournalArticle(slug: string) {
 
 export function journalMetadata(locale: JournalLocale, article?: JournalArticle): Metadata {
   const copy = article?.translations[locale];
-  const title = copy?.title ?? (locale === "zh" ? "玄学与日常：出生图谱、五行与手串指南" : "Journal: Birth Charts, Five Elements & Everyday Practice");
-  const description = copy?.description ?? (locale === "zh" ? "阅读 DestinyPixel 原创中英文指南，核对出生资料、理解工具边界，把五行象征转化为可以动手尝试的设计。" : "Original DestinyPixel guides to preparing birth details, understanding symbolic tools and exploring five-element bracelet design.");
+  const title = copy?.title ?? journalUi[locale].title;
+  const description = copy?.description ?? journalUi[locale].description;
   const canonical = journalHref(locale, article?.slug);
   return {
     title: { absolute: `${title} | ${siteName}` },
     description,
-    alternates: { canonical, languages: { en: journalHref("en", article?.slug), "zh-Hans": journalHref("zh", article?.slug), "x-default": journalHref("en", article?.slug) } },
-    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images: ["/opengraph-image"], locale: locale === "zh" ? "zh_CN" : "en_US", ...(article ? { publishedTime: article.publishedAt, modifiedTime: article.updatedAt } : {}) },
+    alternates: { canonical, languages: journalAlternates(article?.slug) },
+    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images: ["/opengraph-image"], locale: journalOgLocales[locale], alternateLocale: journalLocales.filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: article.updatedAt } : {}) },
     twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] },
     robots: { index: true, follow: true },
   };
@@ -259,9 +297,9 @@ export function journalMetadata(locale: JournalLocale, article?: JournalArticle)
 export function journalArticleSchema(article: JournalArticle, locale: JournalLocale) {
   const copy = article.translations[locale];
   const url = absoluteUrl(journalHref(locale, article.slug));
-  const home = absoluteUrl(locale === "zh" ? "/?locale=zh" : "/");
+  const home = absoluteUrl(journalHomeHref(locale));
   return [
-    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: locale === "zh" ? "zh-Hans" : "en", datePublished: article.publishedAt, dateModified: article.updatedAt, author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href) ?? []), isAccessibleForFree: true },
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: locale === "zh" ? "首页" : "Home", item: home }, { "@type": "ListItem", position: 2, name: locale === "zh" ? "文章" : "Journal", item: absoluteUrl(journalHref(locale)) }, { "@type": "ListItem", position: 3, name: copy.title, item: url }] },
+    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: article.updatedAt, author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href) ?? []), isAccessibleForFree: true },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: journalUi[locale].home, item: home }, { "@type": "ListItem", position: 2, name: journalUi[locale].journal, item: absoluteUrl(journalHref(locale)) }, { "@type": "ListItem", position: 3, name: copy.title, item: url }] },
   ];
 }

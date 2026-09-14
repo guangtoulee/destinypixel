@@ -2,31 +2,44 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
 import { absoluteUrl } from "@/lib/seo";
-import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale } from "@/lib/journal";
+import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags } from "@/lib/journal";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
+import { toTraditional } from "@/lib/journal-locales";
 
-test("journal advertises exactly its real English and Chinese hub/article URLs", () => {
+test("Traditional Chinese preserves prose meaning instead of applying software terminology", () => {
+  assert.equal(toTraditional("真实例子支持这个观点。香港天文台的资料与读者反馈。"), "真實例子支持這個觀點。香港天文台的資料與讀者回饋。");
+});
+
+test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 1) * 2);
+  assert.equal(entries.length, (journalArticles.length + 1) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
-    for (const locale of ["en", "zh"] as const) {
+    for (const locale of journalLocales) {
       const metadata = journalMetadata(locale, article);
       assert.equal(metadata.alternates?.canonical, journalHref(locale, article?.slug));
       assert.ok(urls.has(absoluteUrl(String(metadata.alternates?.canonical))));
       for (const href of Object.values(metadata.alternates?.languages ?? {})) assert.ok(urls.has(absoluteUrl(String(href))));
     }
   }
-  assert.equal(normalizeJournalLocale("ru"), "en");
-  assert.equal(normalizeJournalLocale("zh-TW"), "en");
+  assert.equal(normalizeJournalLocale("ru"), "ru");
+  assert.equal(normalizeJournalLocale("zh-TW"), "zh-TW");
+  assert.equal(normalizeJournalLocale("zh-Hant"), "zh-TW");
+  assert.equal(normalizeJournalLocale("zh-Hans"), "zh");
+  assert.equal(normalizeJournalLocale("unknown"), "en");
 });
 
 test("articles have translated sections, truthful free Article schema and useful original length", () => {
   assert.equal(new Set(journalArticles.map((article) => article.slug)).size, journalArticles.length);
   for (const article of journalArticles) {
     assert.deepEqual(article.translations.en.sections.map((section) => section.id), article.translations.zh.sections.map((section) => section.id));
-    for (const locale of ["en", "zh"] as const) {
+    for (const locale of journalLocales) {
+      const translation = article.translations[locale];
+      assert.deepEqual(translation.sections.map((section) => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]), article.translations.en.sections.map((section) => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]));
+      if (locale === "ru") assert.match(translation.title, /[А-Яа-яЁё]/);
+      if (locale === "zh-TW") assert.notEqual(translation.introduction, article.translations.zh.introduction);
       const schema = journalArticleSchema(article, locale)[0];
+      assert.equal(schema.inLanguage, journalLanguageTags[locale]);
       assert.equal(schema["@type"], "Article");
       assert.equal(schema.isAccessibleForFree, true);
       assert.equal(schema.author?.["@type"], "Organization");

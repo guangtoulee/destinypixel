@@ -68,8 +68,8 @@
 .footer strong { font-size: 14px; font-weight: 600; }
 .footer p { font-size: 11px; line-height: 1.7; color: #8b8093; margin: 10px 0 0; }
 .footer nav { display: flex; flex-wrap: wrap; gap: 23px; font-size: 12px; color: #786782; }
-.page[lang="zh-Hans"] h1 { letter-spacing: -.5px; line-height: 1.4; }
-.page[lang="zh-Hans"] .section h2 { letter-spacing: 0; font-size: 25px; }
+.page[lang^="zh-"] h1 { letter-spacing: -.5px; line-height: 1.4; }
+.page[lang^="zh-"] .section h2 { letter-spacing: 0; font-size: 25px; }
 @media (max-width: 900px) { .readingLayout { grid-template-columns: 180px minmax(0, 1fr); gap: 35px; } .articleCard { padding: 27px; } .articleCard h2 { font-size: 24px; } }
 @media (max-width: 650px) {
   .header, .footer, .indexHero, .articleGrid, .editorialNote, .articleHero, .readingLayout { width: calc(100% - 40px); }
@@ -99,3 +99,5 @@
   .footer { flex-direction: column; gap: 24px; }
   .related a { font-size: 18px; }
 }
+
+@media (max-width: 650px) { .languages { order: 2; margin-left: 0; max-width: 100%; flex-wrap: wrap; } .header { column-gap: 20px; } }
