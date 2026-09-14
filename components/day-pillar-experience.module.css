@@ -43,6 +43,10 @@
 .cardTools button, .cardTools a { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 35px; color: #59586c; border: 0; background: transparent; padding: 3px 0; font-size: 10px; cursor: pointer; font-family: inherit; }
 .resultNote { font-size: 11px; color: #767183; line-height: 1.8; text-align: center; max-width: 350px; margin: 8px auto 0; }
 .reading { padding: 42px 0 0; border-top: 1px solid #dedde4; }
+.journalLink { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 18px 20px; margin-top: 24px; border: 1px solid #d9cfe5; border-radius: 10px; background: #f1ebf6; color: #59406f; font-size: 14px; line-height: 1.8; }
+.journalLink svg { flex-shrink: 0; }
+.journalLink:hover { background: #e9dff0; }
+.journalLink:focus-visible { outline: 2px solid #73568c; outline-offset: 4px; }
 .readingTitle { display: flex; align-items: center; gap: 19px; margin-bottom: 31px; }
 .pillarSeal { display: grid; flex-shrink: 0; place-content: center; width: 58px; height: 65px; border: 1px solid #d9cfc0; border-radius: 7px; color: #97845e; font-family: Georgia, serif; font-size: 18px; letter-spacing: .12em; background: #f4eee4; }
 .readingTitle .eyebrow { margin: 0 0 5px; font-size: 9px; }
