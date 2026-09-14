@@ -1,3 +1,4 @@
+import { getPillarImagePath } from "@/lib/archetype-assets";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
@@ -9,7 +10,7 @@ import {journalLanguageTags,toTraditional} from "@/lib/journal-locales";
 import {absoluteUrl} from "@/lib/seo";
 import styles from "@/components/discovery.module.css";
 type Props={searchParams?:Promise<{locale?:string}>};
-export async function generateMetadata({searchParams}:Props):Promise<Metadata>{const locale=normalizeReportLocale((await searchParams)?.locale??"en"),copy=getDiscoveryCopy(locale);return {title:{absolute:copy.title},description:copy.description,alternates:{canonical:discoveryHref(locale),languages:discoveryAlternates()},openGraph:{type:"website",title:copy.title,description:copy.description,url:discoveryHref(locale),images:["/archetypes/gui_mao.jpg"]},twitter:{card:"summary_large_image",title:copy.title,description:copy.description,images:["/archetypes/gui_mao.jpg"]}};}
+export async function generateMetadata({searchParams}:Props):Promise<Metadata>{const locale=normalizeReportLocale((await searchParams)?.locale??"en"),copy=getDiscoveryCopy(locale);return {title:{absolute:copy.title},description:copy.description,alternates:{canonical:discoveryHref(locale),languages:discoveryAlternates()},openGraph:{type:"website",title:copy.title,description:copy.description,url:discoveryHref(locale),images:[getPillarImagePath("癸卯")]},twitter:{card:"summary_large_image",title:copy.title,description:copy.description,images:[getPillarImagePath("癸卯")]}};}
 export default async function Discover({searchParams}:Props){
  const locale=normalizeReportLocale((await searchParams)?.locale??"en"),copy=getDiscoveryCopy(locale),home=locale==="en"?"/":`/?locale=${locale}`;
  const cards=getDayPillarCards(locale==="zh"||locale==="zh-TW"?"zh":"en").map(card=>locale==="zh-TW"?{...card,name:toTraditional(card.name),essence:toTraditional(card.essence),growth:toTraditional(card.growth)}:card);

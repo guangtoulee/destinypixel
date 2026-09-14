@@ -1,3 +1,4 @@
+import { getPillarImagePath } from "@/lib/archetype-assets";
 import type { Metadata } from "next";
 import DayPillarExperience from "@/components/day-pillar-experience";
 import { getDayPillarCards, type DayPillarLocale } from "@/lib/day-pillar-cards";
@@ -13,8 +14,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return {
     title: { absolute: title }, description,
     alternates: { canonical: url, languages: { en: "/day-pillar", "zh-Hans": "/day-pillar?locale=zh", "x-default": "/day-pillar" } },
-    openGraph: { title, description, url, type: "website", locale: zh ? "zh_CN" : "en_US", alternateLocale: [zh ? "en_US" : "zh_CN"], images: [{ url: "/archetypes/gui_mao.jpg", width: 896, height: 1200, alt: zh ? "癸卯 · 雨露灵兔" : "Gui Mao · The Dewy Rabbit" }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/archetypes/gui_mao.jpg"] },
+    openGraph: { title, description, url, type: "website", locale: zh ? "zh_CN" : "en_US", alternateLocale: [zh ? "en_US" : "zh_CN"], images: [{ url: getPillarImagePath("癸卯"), width: 1200, height: 1600, alt: zh ? "癸卯 · 雨露灵兔" : "Gui Mao · The Dewy Rabbit" }] },
+    twitter: { card: "summary_large_image", title, description, images: [getPillarImagePath("癸卯")] },
   };
 }
 

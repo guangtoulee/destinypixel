@@ -31,5 +31,5 @@ export function getPillarSlug(pillar: string) {
 }
 
 export function getPillarImagePath(pillar: string) {
-  return `/archetypes/${getPillarSlug(pillar)}.jpg`;
+  return `/archetypes/${getPillarSlug(pillar)}.jpg?v=20260914-new`;
 }

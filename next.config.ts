@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1"],
   serverExternalPackages: ["pdf-parse", "word-extractor"],
   images: {
+    localPatterns: [
+      { pathname: "/**", search: "" },
+      { pathname: "/archetypes/*.jpg", search: "?v=20260914-new" },
+    ],
     qualities: [75, 95],
   },
   async headers() {

@@ -4,6 +4,9 @@ import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/
 
 import Image from "next/image";
 import "./destiny-editorial.css";
+import ArchetypeMotionGallery from "./archetype-motion-gallery";
+import ArchetypeMotionPlayer from "./archetype-motion-player";
+import { archetypePosterPath, archetypeVideoPath } from "@/lib/archetype-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import {
@@ -935,7 +938,10 @@ export default function DestinyWhiteExperience({
           </div>
           <div className="editorial-card-stage" aria-label={text.archetypes.title}>
             <div className="editorial-orbit" aria-hidden="true" />
-            {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><a href={freeHref} key={key} className={`editorial-display-card editorial-display-card--${index}`}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={896} height={1200} sizes="(max-width: 650px) 48vw, 230px" priority={index===2} /><span>{profileName(pillarsDB[key],key,locale)}</span></a>)}
+            {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><div key={key} className={`editorial-display-card editorial-display-card--${index}`}>
+              {index===2 ? <ArchetypeMotionPlayer className="editorial-hero-motion" src={archetypeVideoPath("gui_mao")} poster={archetypePosterPath("gui_mao")} label={profileName(pillarsDB[key],key,locale)} playLabel={copyLocale === "zh" ? "播放卡片动画" : locale === "ru" ? "Включить анимацию" : "Play card animation"} pauseLabel={copyLocale === "zh" ? "暂停卡片动画" : locale === "ru" ? "Приостановить анимацию" : "Pause card animation"}/> : <a href={freeHref}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={1200} height={1600} sizes="(max-width: 650px) 48vw, 230px" /></a>}
+              <a href={freeHref}><span>{profileName(pillarsDB[key],key,locale)}</span></a>
+            </div>)}
             <span className="editorial-stage-label">{copyLocale === "zh" ? "你的故事，会是哪一种？" : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
           </div>
         </div>
@@ -966,8 +972,8 @@ export default function DestinyWhiteExperience({
                   <Image
                     src={getPillarImagePath(featuredPillar)}
                     alt={itemName}
-                    width={896}
-                    height={1200}
+                    width={1200}
+                    height={1600}
                     sizes="(max-width: 650px) 44vw, 280px"
                     quality={95}
                   />
@@ -981,6 +987,8 @@ export default function DestinyWhiteExperience({
           </div>
         </div>
       </section>
+
+      <ArchetypeMotionGallery locale={locale} />
 
       <section className="editorial-report white-container" id="report">
         <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? "也可以探索你的本命灵构" : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
