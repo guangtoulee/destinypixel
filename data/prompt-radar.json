@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-15T12:49:56.707Z",
+  "updatedAt": "2026-09-15T17:43:41.399Z",
   "sourceSummary": {
-    "community": 1113,
-    "publicX": 432,
-    "total": 1545
+    "community": 1121,
+    "publicX": 437,
+    "total": 1558
   },
   "items": [
     {
@@ -1994,6 +1994,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "From a single AI-generated image to a cinematic world. ✨ Created the image with GPT-2, then brought it to life using Seedance 2.0. It’s crazy how one simple idea can turn into an entire cinematic scene. 🎬 One image. One idea. Endless possibilities. Prompt below ⤵️"
+    },
+    {
+      "id": "x-public-2098073111937634751",
+      "title": "Cirque du Soleil drops $165,000,000 on a single stage show Last night, a college dropout spent $",
+      "description": "Cirque du Soleil drops $165,000,000 on a single stage show Last night, a college dropout spent $34 on an AI pipeline His 16-second clip hit 2,830,000 views before morning: > A house cat sits in front of an empty gilded m",
+      "prompt": "Cirque du Soleil drops $165,000,000 on a single stage show Last night, a college dropout spent $34 on an AI pipeline His 16-second clip hit 2,830,000 views before morning: > A house cat sits in front of an empty gilded mirror. > A full-size lion slowly materializes inside the glass. > The magician throws a blue velvet cloth over the entire frame. > The cloth drops: the mirror has vanished, and the lion is standing onstage. > Final frame: the lion calmly lies down beside the cat. Viewers replayed it frame by frame, searching for cuts, warped edges, or a broken reflection. Nobody found the trick because the mirror, the lion, and the theater never existed. The anatomy of the clip that broke the algorithm: - Google Sheets: Prompt rules, 9:16 aspect ratio, hard 17-second limit. - Google Drive: Theater lighting, lion anatomy, cat movement, and velvet references. - Seedance: One continuous audience-perspective render with a locked camera. - GPT-6 Astra: Automated QC - 1080×1920, 16.2s duration, transformation continuity, and audio sync. - Slack + Calendar: Auto-approved, scheduled, and published autonomously. A live illusion like this would demand animal trainers, hidden machinery, stage permits, and months of rehearsal. He simply described an impossible transformation to a chain of APIs. Cirque du Soleil books a multi-million-dollar theater. He generated the theater, the magician, and the lion before dinner. The full system blueprint is broken down below 👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/0x_auren/status/2098073111937634751",
+      "sourceType": "x",
+      "authorName": "Auren",
+      "authorHandle": "@0x_auren",
+      "createdAt": "2026-09-10T15:36:24.000Z",
+      "importedAt": "2026-09-15T17:43:41.370Z",
+      "tags": [
+        "Seedance"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 481,
+        "reposts": 24,
+        "replies": 21,
+        "quotes": 0,
+        "bookmarks": 235,
+        "views": 480643,
+        "score": 2745
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Cirque du Soleil drops $165,000,000 on a single stage show Last night, a college dropout spent $34 on an AI pipeline His 16-second clip hit 2,830,000 views before morning: > A house cat sits in front of an empty gilded mirror. > A full-size lion slowly materializes inside the glass. > The magician throws a blue velvet cloth over the entire frame. > The cloth drops: the mirror has vanished, and the lion is standing onstage. > Final frame: the lion calmly lies down beside the cat. Viewers replayed it frame by frame, searching for cuts, warped edges, or a broken reflection. Nobody found the trick because the mirror, the lion, and the theater never existed. The anatomy of the clip that broke the algorithm: - Google Sheets: Prompt rules, 9:16 aspect ratio, hard 17-second limit. - Google Drive: Theater lighting, lion anatomy, cat movement, and velvet references. - Seedance: One continuous audience-perspective render with a locked camera. - GPT-6 Astra: Automated QC - 1080×1920, 16.2s duration, transformation continuity, and audio sync. - Slack + Calendar: Auto-approved, scheduled, and published autonomously. A live illusion like this would demand animal trainers, hidden machinery, stage permits, and months of rehearsal. He simply described an impossible transformation to a chain of APIs. Cirque du Soleil books a multi-million-dollar theater. He generated the theater, the magician, and the lion before dinner. The full system blueprint is broken down below 👇"
     },
     {
       "id": "x-public-2094075012709851239",
@@ -4392,6 +4433,49 @@
       "rawText": "Grok Imagine has added a ridiculous amount of new creative tools in just one week Recent update include: • Auto-Segmentation / Layers • Colors Panel for instant recoloring • Precise Edit + Magic Wand • Remove Background • New Aspect Ratios + Auto • Multi-reference editing with up to 5 images • 15 ready-made templates • Download individual layers as transparent PNGs • Sharper text and typography In one week, Grok Imagine went from a powerful image generator to something much closer to a full creative editing suite"
     },
     {
+      "id": "x-public-2098773927111877067",
+      "title": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant se",
+      "description": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one contin",
+      "prompt": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one continuous sequence Full prompt below:",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/azed_ai/status/2098773927111877067",
+      "sourceType": "x",
+      "authorName": "Amira Zairi",
+      "authorHandle": "@azed_ai",
+      "createdAt": "2026-09-12T14:01:12.000Z",
+      "importedAt": "2026-09-15T17:43:41.370Z",
+      "tags": [
+        "Seedance",
+        "Runway"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Runway",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 307,
+        "reposts": 18,
+        "replies": 45,
+        "quotes": 3,
+        "bookmarks": 227,
+        "views": 21222,
+        "score": 1463
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one continuous sequence Full prompt below:"
+    },
+    {
       "id": "x-public-2073799429816250428",
       "title": "Seedance 2.0 Walking Home in the Rain, created using Seedance 2.0 Prompt: Main Subject: Young Ko",
       "description": "Seedance 2.0 Walking Home in the Rain, created using Seedance 2.0 Prompt: Main Subject: Young Korean woman, early 20s. Natural appearance. Black wavy hair loosely tied into a slightly messy ponytail with wispy bangs. Lig",
@@ -4435,24 +4519,26 @@
       "rawText": "Seedance 2.0 Walking Home in the Rain, created using Seedance 2.0 Prompt: Main Subject: Young Korean woman, early 20s. Natural appearance. Black wavy hair loosely tied into a slightly messy ponytail with wispy bangs. Light grey zip hoodie worn open over a faded white tank top. Relaxed blue jeans. Black canvas sneakers. Natural skin texture, minimal makeup, ordinary everyday look. Consistent appearance throughout the video. Location: Authentic Korean residential neighborhood during a light summer rain shower. Narrow concrete alleys, low-rise houses, small gardens, potted plants, bicycles, utility poles, overhead cables, wet pavement, puddles, rain-darkened walls, leafy trees. Camera Style Early-2000s consumer DV camcorder. Friend casually filming. Heavy handheld shake. Imperfect framing. Subject frequently drifts toward frame edges. Late reframing. Autofocus hunting. Lens breathing. Exposure pumping. Motion blur. Rolling shutter. Digital compression artifacts. Slight sensor noise. Soft detail. Faded colors. Low contrast. Occasional blown highlights. No stabilization. No cinematic movements. No modern color grading. The camera operator behaves like a real friend with no filmmaking experience. 00:00–00:02 Standing beneath a small apartment awning while rain falls across the street. She leans forward and extends her hand into the rain to test how heavy it is. A passing vehicle somewhere off-frame splashes water nearby. She immediately laughs and pulls her hand back. The camera misses part of the reaction because the operator reframes too slowly. Rain droplets briefly appear on the lens. Autofocus hunts between her face and the rainy street. 00:02–00:04 She steps into the drizzle and starts walking down the narrow alley. The camera follows unevenly from behind. Her sneakers splash through shallow puddles. Wet strands of hair begin sticking to her cheek and neck. Wind moves her hoodie slightly. The operator almost loses her from frame while turning a corner. 00:04–00:06 Passing a row of potted plants outside a house. She casually brushes rainwater from a large leaf. The camera unexpectedly focuses on the leaf instead of her face. Exposure shifts as the scene moves from open sky into tree shade. She continues walking before camera catches up. 00:06–00:08 A neighborhood cat shelters beneath a parked bicycle. She crouches down briefly and says a few friendly words. The cat sniffs her hand. Camera focus repeatedly jumps between the bicycle wheel, the cat, and her face. One moment is partially blocked by the operator's movement. 00:08–00:10 Walking again. Rainwater drips from overhead branches onto her shoulder. She reacts naturally and laughs to herself. The camera is slightly too close and awkwardly reframes. A gust of wind moves nearby leaves and loose hair strands. 00:10–00:12 Near a small intersection. She pauses while waiting for a scooter to pass in the distance. The camera drifts toward the wet road before finding her again. She wipes rain from her forehead using her sleeve. Her clothing shows subtle dampness from the weather. 00:12–00:15 Walking away down the rain-darkened street. The camera trails several steps behind. She suddenly realizes she is still being filmed. She glances back over her shoulder. A small genuine smile appears. She looks away again and keeps walking. The operator lowers the camcorder slightly. Recording abruptly cuts to black mid-motion as if the camera was accidentally switched off. Audio (Natural only) Light rainfall. Water dripping from roofs and leaves. Footsteps on wet concrete. Distant neighborhood traffic. Occasional scooter passing far away. Birds sheltering in trees. Rustling leaves. Faint residential chatter. Cat sounds. Subtle wind. No music. No narration. No sound design. No added effects. Generation Priority Authenticity > Beauty Believability > Cinematics Natural Imperfections > Technical Perfection The final result should look indistinguishable from a real early-2000s camcorder scene."
     },
     {
-      "id": "x-public-2098773927111877067",
-      "title": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant se",
-      "description": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one contin",
-      "prompt": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one continuous sequence Full prompt below:",
+      "id": "x-public-2099537390415269907",
+      "title": "This feels like a much more practical way to use AI image generation for brands. Generate two pr",
+      "description": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut ",
+      "prompt": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
       "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/azed_ai/status/2098773927111877067",
+      "sourceUrl": "https://x.com/LearnWithSubhan/status/2099537390415269907",
       "sourceType": "x",
-      "authorName": "Amira Zairi",
-      "authorHandle": "@azed_ai",
-      "createdAt": "2026-09-12T14:01:12.000Z",
-      "importedAt": "2026-09-15T12:49:56.677Z",
+      "authorName": "Subhan Qureshi",
+      "authorHandle": "@LearnWithSubhan",
+      "createdAt": "2026-09-14T16:34:56.000Z",
+      "importedAt": "2026-09-15T17:43:41.371Z",
       "tags": [
+        "GPT Image 2",
         "Seedance",
-        "Runway"
+        "产品",
+        "视频"
       ],
       "modelHints": [
+        "GPT Image 2",
         "Seedance",
-        "Runway",
         "Veo"
       ],
       "style": "实时 AI 视频案例",
@@ -4466,16 +4552,16 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 305,
-        "reposts": 18,
-        "replies": 45,
-        "quotes": 3,
-        "bookmarks": 224,
-        "views": 21034,
-        "score": 1450
+        "likes": 180,
+        "reposts": 155,
+        "replies": 23,
+        "quotes": 0,
+        "bookmarks": 123,
+        "views": 44035,
+        "score": 1460
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "One prompt directed this entire chase. Seedance 2.5 on @runwayml handled the character, giant serpent, changing camera perspectives, environmental destruction, and escalating action while keeping it all inside one continuous sequence Full prompt below:"
+      "rawText": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2076868123232510030",
@@ -5946,6 +6032,49 @@
       "rawText": "Simple Blender animation → Seedance 2.0 → stylized AI video. This workflow uses basic 3D motion as a guide, then applies the look and detail from a reference image. To try this workflow, link below 👇"
     },
     {
+      "id": "x-public-2099340937684258828",
+      "title": "Taking X by \" STORM \" Made this viral video using Seedance 2.5 Prompt : Use the uploaded image a",
+      "description": "Taking X by \" STORM \" Made this viral video using Seedance 2.5 Prompt : Use the uploaded image as the exact visual reference for the characters, wardrobe, composition, lighting, and overall cinematic look. Create a photo",
+      "prompt": "Taking X by \" STORM \" Made this viral video using Seedance 2.5 Prompt : Use the uploaded image as the exact visual reference for the characters, wardrobe, composition, lighting, and overall cinematic look. Create a photorealistic live-action video, A young woman wearing a long, fully closed ivory-white tailored coat, black sunglasses, and black pointed heels walks slowly and confidently straight toward the large crowd. Her posture is elegant and controlled, her arms relaxed naturally at her sides, and her expression remains serious and calm. Start with a medium-wide frontal shot. The woman walks directly toward the camera and toward the center of the crowd. The camera smoothly tracks backward at the same pace, keeping her perfectly centered. The crowd remains completely still, watching forward. She reaches the front-center position of the crowd and comes to a complete stop. Her feet settle naturally, arms remain at her sides, shoulders relaxed. She looks directly into the camera through her black sunglasses. The woman remains 100% completely still. Then, precisely behind her, the entire crowd suddenly begins moving in perfect synchronized rhythm. Their movement should be sharp and unsettling: heads jerk quickly to one side shoulders snap upward upper bodies briefly lean forward they suddenly snap upright again repeat the movement together like a perfectly synchronized group The movement happens across the entire crowd, from the closest people to the deepest background rows. The woman does absolutely nothing. No head movement. No body movement. No hand movement. No walking. No reaction. She simply stands motionless while everyone behind her moves aggressively in synchronization. The camera slowly pushes closer toward the woman while the crowd continues its synchronized movements behind her. Keep her face and white coat sharply focused while the moving crowd has subtle cinematic depth-of-field blur. End with a powerful centered close/medium shot. The woman is completely motionless in the foreground while the crowd performs one final synchronized head-and-shoulder snap behind her. Hold on her still expression for the final moment. Visual Direction Dark, cold, high-end cinematic fashion aesthetic. Raw concrete environment, deep shadows, soft overhead lighting, realistic skin and fabric, natural hair physics, realistic human movement. The central visual contrast is extremely important: ONE perfectly still woman in white + a large crowd in black moving violently in perfect synchronization behind her. No duplicate lead. No additional white outfits. No men. No cartoon or animation. No CGI appearance. No exaggerated camera shake. No text. No subtitles. No logos. No sudden scene changes. No extra characters appearing or disappearing.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AIwithSynthia/status/2099340937684258828",
+      "sourceType": "x",
+      "authorName": "Synthia",
+      "authorHandle": "@AIwithSynthia",
+      "createdAt": "2026-09-14T03:34:18.000Z",
+      "importedAt": "2026-09-15T17:43:41.370Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 227,
+        "reposts": 25,
+        "replies": 66,
+        "quotes": 1,
+        "bookmarks": 177,
+        "views": 14223,
+        "score": 1182
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Taking X by \" STORM \" Made this viral video using Seedance 2.5 Prompt : Use the uploaded image as the exact visual reference for the characters, wardrobe, composition, lighting, and overall cinematic look. Create a photorealistic live-action video, A young woman wearing a long, fully closed ivory-white tailored coat, black sunglasses, and black pointed heels walks slowly and confidently straight toward the large crowd. Her posture is elegant and controlled, her arms relaxed naturally at her sides, and her expression remains serious and calm. Start with a medium-wide frontal shot. The woman walks directly toward the camera and toward the center of the crowd. The camera smoothly tracks backward at the same pace, keeping her perfectly centered. The crowd remains completely still, watching forward. She reaches the front-center position of the crowd and comes to a complete stop. Her feet settle naturally, arms remain at her sides, shoulders relaxed. She looks directly into the camera through her black sunglasses. The woman remains 100% completely still. Then, precisely behind her, the entire crowd suddenly begins moving in perfect synchronized rhythm. Their movement should be sharp and unsettling: heads jerk quickly to one side shoulders snap upward upper bodies briefly lean forward they suddenly snap upright again repeat the movement together like a perfectly synchronized group The movement happens across the entire crowd, from the closest people to the deepest background rows. The woman does absolutely nothing. No head movement. No body movement. No hand movement. No walking. No reaction. She simply stands motionless while everyone behind her moves aggressively in synchronization. The camera slowly pushes closer toward the woman while the crowd continues its synchronized movements behind her. Keep her face and white coat sharply focused while the moving crowd has subtle cinematic depth-of-field blur. End with a powerful centered close/medium shot. The woman is completely motionless in the foreground while the crowd performs one final synchronized head-and-shoulder snap behind her. Hold on her still expression for the final moment. Visual Direction Dark, cold, high-end cinematic fashion aesthetic. Raw concrete environment, deep shadows, soft overhead lighting, realistic skin and fabric, natural hair physics, realistic human movement. The central visual contrast is extremely important: ONE perfectly still woman in white + a large crowd in black moving violently in perfect synchronization behind her. No duplicate lead. No additional white outfits. No men. No cartoon or animation. No CGI appearance. No exaggerated camera shake. No text. No subtitles. No logos. No sudden scene changes. No extra characters appearing or disappearing."
+    },
+    {
       "id": "x-public-2086958485741441240",
       "title": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生",
       "description": "好莱坞完蛋了！ AI视频的平权时代来了！ Seedance 2.5能做的，Minimax H3 一样可以做到，我昨天晚上用一台老电脑，24G内存，12G的3060显卡，用一批2024年初MJ生成的图片，生成一分钟左右的电影预告片视频，图生视频，用的是turbo LoRA ，生视频效果还不错。 Seedance prompt 非常简单，就是把图片上的元素怎么动起来怎么运镜描述一下就行。",
@@ -6425,6 +6554,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I used to think the hardest part of AI video was getting the first generation right. Now I think the harder problem is making the first generation useful. That’s where this workflow gets interesting. GPT Image 2.5 is coming to CapCut, with access through Design Studio and AI Image. Start by turning the idea into a storyboard. Bring that visual plan into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to create the first full version. Then use AI Edit to work on what actually needs changing. You don’t need to rebuild the entire concept because one moment feels wrong. Keep the direction. Change the details. That’s a much more practical way to work with AI video. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2099563375957360974",
+      "title": "AI video feels very different when you approach it like a director instead of a prompt writer. S",
+      "description": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studi",
+      "prompt": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/dee_naliaks/status/2099563375957360974",
+      "sourceType": "x",
+      "authorName": "Doreen",
+      "authorHandle": "@dee_naliaks",
+      "createdAt": "2026-09-14T18:18:11.000Z",
+      "importedAt": "2026-09-15T17:43:41.370Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 148,
+        "reposts": 89,
+        "replies": 18,
+        "quotes": 0,
+        "bookmarks": 62,
+        "views": 103174,
+        "score": 1062
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2081976392712118780",
@@ -8228,6 +8402,50 @@
       "rawText": "\"Luxury Bags Collection with AI influencer \" This influencer doesn’t exist. None of this is real. Every shot, every angle, every detail of the luxury bag you’re seeing was created with AI. This is what AI looks like now. Not cartoons. Not obvious filters. But hyper-real, scroll-stopping humans built with advanced prompting, reference control, and visual consistency. No camera. No photoshoot. No real models. This is how creators are building AI influencers, luxury product showcases, viral content, and brand-ready visuals without the cost of traditional production. Tools used: • ChatGPT 2 – Character + product reference images • Seedance 2.0 – Video generation • CapCut – Editing"
     },
     {
+      "id": "x-public-2098177696572575933",
+      "title": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This w",
+      "description": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing th",
+      "prompt": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing that makes it easy for me to create these videos is months of structure, teaching Claude camera and cinematography as a whole and also proper voice acting and time stamps for every single action. My Claude skill is in my community….",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/heizzai/status/2098177696572575933",
+      "sourceType": "x",
+      "authorName": "Heizzai | AI AUTEUR",
+      "authorHandle": "@heizzai",
+      "createdAt": "2026-09-10T22:31:59.000Z",
+      "importedAt": "2026-09-15T17:43:41.370Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 186,
+        "reposts": 16,
+        "replies": 14,
+        "quotes": 4,
+        "bookmarks": 136,
+        "views": 16023,
+        "score": 902
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing that makes it easy for me to create these videos is months of structure, teaching Claude camera and cinematography as a whole and also proper voice acting and time stamps for every single action. My Claude skill is in my community…."
+    },
+    {
       "id": "x-public-2082347525315653664",
       "title": "🚨 The generative space is leveling up. ByteDance's official AI creation platform Dreamina will ",
       "description": "🚨 The generative space is leveling up. ByteDance's official AI creation platform **Dreamina** will soon launch **Dreamina Seedance 2.5** to the world. Check the official launch capabilities:  This drops far more than a ",
@@ -8748,50 +8966,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This guy built an AI pipeline that generates full beach photoshoots without a camera and now fashion brands pay him $1,600 per video. He got tired of watching brands spend $8,000 flying a model and a crew to a coastline for 15 seconds of walking footage, so he built a 7-node system that renders the entire shoot from a text prompt, sand, waves, wet skin, wind in the hair, all of it. Here's the exact breakdown: → Claude writes the full scene brief first, time of day, wave height, wind direction, tattoo placement, locked before a single render fires → Flux 1.1 Pro generates the base model with one consistent face and body, tattoos included, so nothing shifts between frames → Gemini 3 runs a realism pass on skin only, adds sun reflection on wet areas, visible pores on the shoulders, and uneven tan lines a studio render never thinks to include → Kling 2.6 turns the still into a walking video with camera tracking, matched to natural stride speed so the movement never floats → A 32-line exclusion prompt kills every synthetic tell in the frame, no even lighting on an outdoor scene, no flawless symmetry, no skin that looks like it has never seen the sun → Color grading runs matched to real golden hour reference photos so the light never looks like a default preset → Final export adds handheld micro shake and drops resolution to 1080p on purpose so the footage reads as shot on a phone, not rendered The key move 91% of people skip: you do not generate the model and then drop her into a beach scene, you generate the environment first and place her inside lighting that already exists. Skip that order and the shadows fall wrong, the water reflection misses her legs, and the whole thing reads as composited in three seconds. Get it right and the footage looks like someone followed her down the shoreline with an iPhone. Brands now pay him $1,600 per finished video plus $350 a month to keep the same model available for seasonal campaigns. Product pages running his beach footage convert 31% higher than pages using traditional studio shots because the setting sells the lifestyle, not just the product."
-    },
-    {
-      "id": "x-public-2098177696572575933",
-      "title": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This w",
-      "description": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing th",
-      "prompt": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing that makes it easy for me to create these videos is months of structure, teaching Claude camera and cinematography as a whole and also proper voice acting and time stamps for every single action. My Claude skill is in my community….",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/heizzai/status/2098177696572575933",
-      "sourceType": "x",
-      "authorName": "Heizzai | AI AUTEUR",
-      "authorHandle": "@heizzai",
-      "createdAt": "2026-09-10T22:31:59.000Z",
-      "importedAt": "2026-09-13T12:48:19.304Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 177,
-        "reposts": 16,
-        "replies": 13,
-        "quotes": 4,
-        "bookmarks": 129,
-        "views": 11685,
-        "score": 853
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "DAY 02 of posting my AI videos here. GPT image 2 character sheet and Seedance 2.0 prompt. This was done before the release of Seedance 2.5. A creator by the name Stopithasan inspired this specific video. The one thing that makes it easy for me to create these videos is months of structure, teaching Claude camera and cinematography as a whole and also proper voice acting and time stamps for every single action. My Claude skill is in my community…."
     },
     {
       "id": "x-public-2091016705594274087",
@@ -11487,6 +11661,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Made this video with GPT IMAGE 2 + seedance 2.5 via @higgsfield Prompt ⤵️ DURATION: 30 seconds ASPECT RATIO: 16:9 DURATION: 30 SECONDS Create an ultra-photorealistic cinematic professional female teacher lifestyle vlog. REFERENCE PRIORITY: @IMG1 = MAIN FEMALE TEACHER @IMG2 = SCHOOL EXTERIOR @IMG3 = CLASSROOM @IMG4 = TEACHING ACTION @IMG5 = NOTEBOOK CHECKING @IMG6 = SCHOOL EXIT CHARACTER CONSISTENCY: The EXACT SAME woman from @IMG1 must appear throughout the entire video. Preserve her exact face, facial features, hairstyle, skin tone, body proportions, age appearance and overall identity. She remains the SAME teacher throughout every scene. Keep her professional teacher outfit consistent after she gets dressed. -------------------------------------------------- 0–4 SECONDS — LEAVING HOME The teacher prepares for her school day at home. She picks up her professional tote bag containing notebooks and teaching materials. She checks her phone briefly. She puts on her shoes, picks up her bag and leaves home. CAMERA: Quick cinematic morning lifestyle shots. Close-up of the bag and notebooks. Medium shot as she walks out the door. Natural morning light. -------------------------------------------------- 4–8 SECONDS — SCHOOL ARRIVAL Use @IMG2. The teacher arrives at the school. She walks through the main entrance carrying her tote bag. She walks across the school courtyard toward the building. She enters the school. CAMERA: Wide establishing shot of the school exterior. Smooth tracking shot following her toward the entrance. -------------------------------------------------- 8–12 SECONDS — CLASSROOM PREPARATION Use @IMG3. The teacher enters her classroom. She places her tote bag on the teacher's desk. She organizes her notebooks and teaching materials. She picks up a marker. She briefly checks the whiteboard and prepares the lesson. Students gradually settle into their desks. CAMERA: Medium classroom shot. Brief close-ups of notebooks, marker and teaching materials. -------------------------------------------------- 12–20 SECONDS — TEACHING Use @IMG4. The teacher stands at the front of the classroom. She writes a simple lesson heading or diagram on the whiteboard. She turns toward the students. She explains the lesson using natural hand gestures. She points toward the board. One student raises a hand. The teacher acknowledges the student and responds with a natural smile. Students remain attentive. CAMERA: Wide classroom shot. Medium shot of teacher. Brief close-up of her writing. Over-the-shoulder shot from the students' perspective. Natural classroom interaction. -------------------------------------------------- 20–25 SECONDS — NOTEBOOK CHECKING Use @IMG5. The lesson has finished. The teacher sits at her desk. She picks up a student's notebook. She reads the work. She turns a page. She makes a few simple corrections with a pen. She sees a well-completed answer and gives a small approving smile. She places the notebook on a neat stack of checked work. CAMERA: Medium shot. Brief close-up of notebook and hand. Close-up of her satisfied expression. -------------------------------------------------- 25–30 SECONDS — SCHOOL EXIT Use @IMG6. The school day is finished. The teacher organizes her papers into her tote bag. She leaves the classroom. She walks through the school corridor toward the main entrance. She exits the school building. The camera follows her from behind as she walks away. Finish with a wide cinematic shot of the school exterior and the teacher walking toward the exit. She gives a subtle relaxed smile. CUT TO BLACK. -------------------------------------------------- CAMERA STYLE: Premium cinematic educational lifestyle vlog. Smooth professional tracking. Natural handheld feel. Wide establishing shots. Medium lifestyle shots. Close-ups for important details. Over-the-shoulder classroom shots. Gentle cinematic pull-back at the ending. No excessive camera shake. No unnecessary fast camera movement. -------------------------------------------------- REALISM: Natural walking. Natural classroom interaction. Realistic writing. Realistic notebook handling. Realistic teacher gestures. Natural student reactions. Realistic school environment. Natural facial expressions. Realistic hands and fingers. No exaggerated acting. No distorted hands. No extra fingers. No face morphing. No identity changes. -------------------------------------------------- CONTINUITY: Same female teacher throughout. Same face. Same hairstyle. Same professional outfit. Same school environment. Same classroom. Same teaching materials. No different teacher. No random outfit changes. No cartoon. No anime. No futuristic school. No text overlays. No logos. No watermark. FINAL FEELING: A realistic cinematic glimpse into a professional teacher's normal school day. HOME → SCHOOL → CLASSROOM PREPARATION → TEACHING → NOTEBOOK CHECKING → SCHOOL EXIT."
+    },
+    {
+      "id": "x-public-2099569524370448662",
+      "title": "A surprisingly big part of AI creation is just moving things between tools. Generate here. Downl",
+      "description": "A surprisingly big part of AI creation is just moving things between tools. Generate here. Download. Upload somewhere else. Generate again. Then move everything into an editor. This workflow feels more connected. GPT Ima",
+      "prompt": "A surprisingly big part of AI creation is just moving things between tools. Generate here. Download. Upload somewhere else. Generate again. Then move everything into an editor. This workflow feels more connected. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard. Then move into CapCut PC’s Video Studio and use Seedance 2.5 for the video generation. After that, stay in CapCut for the AI editing and refinement. The fewer breaks between creative stages, the easier it is to stay focused on the actual idea. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Karen_Moroe/status/2099569524370448662",
+      "sourceType": "x",
+      "authorName": "Karen",
+      "authorHandle": "@Karen_Moroe",
+      "createdAt": "2026-09-14T18:42:37.000Z",
+      "importedAt": "2026-09-15T17:43:41.371Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 95,
+        "reposts": 59,
+        "replies": 11,
+        "quotes": 0,
+        "bookmarks": 8,
+        "views": 81935,
+        "score": 625
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "A surprisingly big part of AI creation is just moving things between tools. Generate here. Download. Upload somewhere else. Generate again. Then move everything into an editor. This workflow feels more connected. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard. Then move into CapCut PC’s Video Studio and use Seedance 2.5 for the video generation. After that, stay in CapCut for the AI editing and refinement. The fewer breaks between creative stages, the easier it is to stay focused on the actual idea. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2087879660952846503",
@@ -18001,6 +18219,341 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2099758539665490371",
+      "title": "个人资料 / 头像 - 写实专业头像提示词",
+      "description": "为 GPT Image 2（即 GPT2/ChatGPT 网页版）设计的高度详细提示词，用于生成具有特定光照、背景和纹理指令的逼真自然的专业头像。",
+      "prompt": "基于输入照片生成一个真实、自然且亲切的专业头像，高度保持身份一致性、面部比例、脸型、发际线、年龄感及原始性别表达，不改变外貌特征。采用 1:1 正方形构图，取景于胸部以上，运用非对称视觉平衡：人物略微偏右，头顶保留约 18% 的画面高度，左侧和左上方形成主要负空间，避免证件照式的居中构图和紧凑裁剪。肩部线条自然，头部轻微倾斜，直视镜头，表情放松、自信、友好，可带有自然的微笑或露齿笑容。\n\n服装采用简单的深色圆领或极简风格上衣，根据人物原有风格自然适配；女性保留自然发型、妆容和适度饰品，男性保留胡茬、发型等真实特征，避免刻板印象化的性别造型。背景为真实的暖色调墙面：顶部为低亮度的红棕色/焦糖色暖灰，中部为灰米色杏子色，底部为奶油米白色，通过自然的光线衰减、墙面反射和轻微暗角形成非线性垂直渐变；添加细微、低振幅的高频随机颗粒，在暗部区域更为明显，模拟早期数字传感器和轻微的 JPEG 纹理质感。\n\n使用大面积柔和窗光，低光比，低局部对比度，无轮廓光或商业影棚布光效果。肤色保持真实的色调差异和自然血色，女性避免瓷白磨皮效果，男性避免过度强调粗糙纹理；减少高频皮肤细节和清晰度，保留中低频面部结构，使皮肤柔软但真实。整体呈现低饱和度暖调，高光柔和，黑色略微提升，蓝青色减少，展现 2000s–2010s 年代早期数字头像的质感：聪明、可信、放松、自然、亲切，而非现代高端商业肖像风格。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458724142_5nejfp_HSPWs47bYAArT_M.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/xiaoxiaodong01/status/2099758539665490371",
+      "sourceType": "community",
+      "authorName": "小小东",
+      "authorHandle": "@xiaoxiaodong01",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.703Z",
+      "tags": [
+        "GPT Image 2",
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34675",
+      "rawText": "基于输入照片生成一个真实、自然且亲切的专业头像，高度保持身份一致性、面部比例、脸型、发际线、年龄感及原始性别表达，不改变外貌特征。采用 1:1 正方形构图，取景于胸部以上，运用非对称视觉平衡：人物略微偏右，头顶保留约 18% 的画面高度，左侧和左上方形成主要负空间，避免证件照式的居中构图和紧凑裁剪。肩部线条自然，头部轻微倾斜，直视镜头，表情放松、自信、友好，可带有自然的微笑或露齿笑容。\n\n服装采用简单的深色圆领或极简风格上衣，根据人物原有风格自然适配；女性保留自然发型、妆容和适度饰品，男性保留胡茬、发型等真实特征，避免刻板印象化的性别造型。背景为真实的暖色调墙面：顶部为低亮度的红棕色/焦糖色暖灰，中部为灰米色杏子色，底部为奶油米白色，通过自然的光线衰减、墙面反射和轻微暗角形成非线性垂直渐变；添加细微、低振幅的高频随机颗粒，在暗部区域更为明显，模拟早期数字传感器和轻微的 JPEG 纹理质感。\n\n使用大面积柔和窗光，低光比，低局部对比度，无轮廓光或商业影棚布光效果。肤色保持真实的色调差异和自然血色，女性避免瓷白磨皮效果，男性避免过度强调粗糙纹理；减少高频皮肤细节和清晰度，保留中低频面部结构，使皮肤柔软但真实。整体呈现低饱和度暖调，高光柔和，黑色略微提升，蓝青色减少，展现 2000s–2010s 年代早期数字头像的质感：聪明、可信、放松、自然、亲切，而非现代高端商业肖像风格。"
+    },
+    {
+      "id": "community-2099716764380869037",
+      "title": "个人资料 / 头像 - 帅气男士电影感肖像提示词",
+      "description": "用于生成一位年轻帅气男士超写实特写肖像的提示词，他留着黑色波浪卷发，身穿炭灰色衬衫并佩戴耳机，采用戏剧性的侧光照明。",
+      "prompt": "超写实电影感特写肖像：一位二十岁出头、英俊非凡的年轻男子，拥有一头浓密自然的乌黑波浪卷发，造型蓬松柔和，略带凌乱的侧分刘海；眉毛浓密轮廓分明，深棕色双眸深邃迷人，鼻梁挺直如雕塑，颧骨突出，下颌线锋利阳刚，留有淡淡的自然胡茬。他目光略微向上并向侧面凝视，神情平静、自信且神秘。\n他身穿极简风格的深炭灰色圆领衬衫，一只耳朵佩戴着时尚的单边无线耳机。四分之三侧面视角，头部微微上扬，肩膀放松。戏剧性的单光源侧光在他的额头、颧骨、鼻子和下颌处形成强烈高光，同时让部分面部处于深沉的电影感阴影中。微妙的暖色调肤色与深海军蓝黑色的纹理摄影棚背景形成对比。\n精致阳刚的编辑类摄影风格，情绪化奢华美学，逼真的皮肤质感和毛孔，自然的面部瑕疵，细节丰富的发丝，电影级对比度，柔和的氛围阴影，浅景深，85mm 人像镜头，f/1.8，专业摄影棚拍摄，细微胶片颗粒，HDR，超高细节，照片级真实感，8K 画质，高端时尚大片美学，无文字，无水印，无标志，无夸张肌肉，无塑料感皮肤，无 AI 生成感面孔。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458727808_d47swy_HSOxQ5RaMAApz2H.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/MohdAdnanA86218/status/2099716764380869037",
+      "sourceType": "community",
+      "authorName": "HeisenLegacy",
+      "authorHandle": "@MohdAdnanA86218",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.704Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34679",
+      "rawText": "超写实电影感特写肖像：一位二十岁出头、英俊非凡的年轻男子，拥有一头浓密自然的乌黑波浪卷发，造型蓬松柔和，略带凌乱的侧分刘海；眉毛浓密轮廓分明，深棕色双眸深邃迷人，鼻梁挺直如雕塑，颧骨突出，下颌线锋利阳刚，留有淡淡的自然胡茬。他目光略微向上并向侧面凝视，神情平静、自信且神秘。\n他身穿极简风格的深炭灰色圆领衬衫，一只耳朵佩戴着时尚的单边无线耳机。四分之三侧面视角，头部微微上扬，肩膀放松。戏剧性的单光源侧光在他的额头、颧骨、鼻子和下颌处形成强烈高光，同时让部分面部处于深沉的电影感阴影中。微妙的暖色调肤色与深海军蓝黑色的纹理摄影棚背景形成对比。\n精致阳刚的编辑类摄影风格，情绪化奢华美学，逼真的皮肤质感和毛孔，自然的面部瑕疵，细节丰富的发丝，电影级对比度，柔和的氛围阴影，浅景深，85mm 人像镜头，f/1.8，专业摄影棚拍摄，细微胶片颗粒，HDR，超高细节，照片级真实感，8K 画质，高端时尚大片美学，无文字，无水印，无标志，无夸张肌肉，无塑料感皮肤，无 AI 生成感面孔。"
+    },
+    {
+      "id": "community-2099700561805197675",
+      "title": "个人资料 / 头像 - 电影感男性人像参考",
+      "description": "用于生成逼真电影感男性特写人像的提示词，利用参考图像保持面部一致性，具有戏剧性布光和情绪化氛围。",
+      "prompt": "逼真的电影感年轻成年男性特写人像，使用图像作为面部参考以保持自然皮肤质感。他身穿纯色黑色圆领 T 恤和白色无线耳机。低角度拍摄视角，头部和肩部充满画面，眼神略微向上并看向镜头外，表情严肃自信。来自右上方的戏剧性定向光在面部形成强烈高光，并在另一侧投下深邃阴影。深炭蓝色摄影棚背景，情绪化的高对比度氛围，真实的毛孔和胡须细节，眼睛和面部清晰对焦，浅景深，专业编辑级摄影，85mm 人像镜头，f/2 光圈，自然肤色，电影级色彩分级，超精细，照片级真实感，4:5 竖构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458730735_rskbzz_HSOihz6a4AAvM_j.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/iamsofiaijaz/status/2099700561805197675",
+      "sourceType": "community",
+      "authorName": "Aijaz",
+      "authorHandle": "@iamsofiaijaz",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.704Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34684",
+      "rawText": "逼真的电影感年轻成年男性特写人像，使用图像作为面部参考以保持自然皮肤质感。他身穿纯色黑色圆领 T 恤和白色无线耳机。低角度拍摄视角，头部和肩部充满画面，眼神略微向上并看向镜头外，表情严肃自信。来自右上方的戏剧性定向光在面部形成强烈高光，并在另一侧投下深邃阴影。深炭蓝色摄影棚背景，情绪化的高对比度氛围，真实的毛孔和胡须细节，眼睛和面部清晰对焦，浅景深，专业编辑级摄影，85mm 人像镜头，f/2 光圈，自然肤色，电影级色彩分级，超精细，照片级真实感，4:5 竖构图。"
+    },
+    {
+      "id": "community-2099695088435888248",
+      "title": "个人资料 / 头像 - 雨天咖啡馆人像提示词",
+      "description": "使用 GPT Image 2 生成一张写实风格的抓拍人像，描绘一位女性在雨后的下午站在咖啡馆外的场景。",
+      "prompt": "一张写实风格的户外抓拍人像，画面中一位年轻女性站在雨后温馨的城市咖啡馆外。她留着深棕色长发，随意地扎成低马尾，几缕柔和的发丝自然地垂落在脸庞两侧。她目光温柔地望向一侧，神情平静而梦幻。\n\n她身穿一件温暖的米色宽松针织毛衣，内搭精致的白色衬衫，下身搭配一条深棕色长款百褶裙。一个深酒红色的单肩包自然地挂在她的肩上。她一手撑着透明雨伞，另一只手轻轻整理着脸颊旁的发丝。\n\n她站在被雨水打湿的咖啡馆步道旁，周围是湿润的路面、翠绿的小植物、透着暖光的咖啡馆窗户、隐约可见的城市建筑以及背景中柔和发光的路灯。雨伞上清晰可见细小的雨滴，温暖灯光的倒影在湿漉漉的地面上闪烁着美丽的光泽。\n\n自然智能手机摄影风格，生活化抓拍美学，柔和的雨日氛围，真实的皮肤质感，细致的发丝纹理，逼真的针织与面料细节，自然的反射效果，浅景深，电影感环境光效，轻微的复古胶片颗粒感，以大地色系为主的柔和色调并点缀咖啡馆暖光，柔和的大气对比度，宁静浪漫的氛围，高度写实，4:5 竖构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458722601_rz9w51_HSOdjGKa4AAbTSR.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/selinatasnim1/status/2099695088435888248",
+      "sourceType": "community",
+      "authorName": "Selina",
+      "authorHandle": "@selinatasnim1",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.704Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34673",
+      "rawText": "一张写实风格的户外抓拍人像，画面中一位年轻女性站在雨后温馨的城市咖啡馆外。她留着深棕色长发，随意地扎成低马尾，几缕柔和的发丝自然地垂落在脸庞两侧。她目光温柔地望向一侧，神情平静而梦幻。\n\n她身穿一件温暖的米色宽松针织毛衣，内搭精致的白色衬衫，下身搭配一条深棕色长款百褶裙。一个深酒红色的单肩包自然地挂在她的肩上。她一手撑着透明雨伞，另一只手轻轻整理着脸颊旁的发丝。\n\n她站在被雨水打湿的咖啡馆步道旁，周围是湿润的路面、翠绿的小植物、透着暖光的咖啡馆窗户、隐约可见的城市建筑以及背景中柔和发光的路灯。雨伞上清晰可见细小的雨滴，温暖灯光的倒影在湿漉漉的地面上闪烁着美丽的光泽。\n\n自然智能手机摄影风格，生活化抓拍美学，柔和的雨日氛围，真实的皮肤质感，细致的发丝纹理，逼真的针织与面料细节，自然的反射效果，浅景深，电影感环境光效，轻微的复古胶片颗粒感，以大地色系为主的柔和色调并点缀咖啡馆暖光，柔和的大气对比度，宁静浪漫的氛围，高度写实，4:5 竖构图。"
+    },
+    {
+      "id": "community-2099733908011282670",
+      "title": "社交媒体帖子 - 黄金时刻人像拼贴提示词",
+      "description": "一个结构化的 JSON 风格提示词，用于生成 3x3 网格的黄金时刻人像拼贴图，包含多种姿势，重点在于自然表情、暖色调光线以及一致的身份保留。",
+      "prompt": "image_generation\": {\n\"face\": {\n\"preserve_original\": true,\n\"reference_match\": true,\n\"description\": \"在所有画面中保持相同的面部结构、肤色、眼型和自然表情，确保每个姿势中的身份一致性。\"\n},\n\n\"photo_style\": {\n\"type\": \"golden hour portrait collage\",\n\"camera_angle\": \"多样的特写和中景人像角度\",\n\"lighting\": \"温暖的黄金时刻阳光投射出柔和的窗影\",\n\"mood\": \"柔和、平静、亲密、具有美感\",\n\"texture\": \"自然的皮肤质感、柔和的高光、温和的对比度\",\n\"focus\": \"面部清晰对焦，背景平滑虚化\"\n},\n\n\"subject\": {\n\"poses\": [\n\"抬头望向光源\",\n\"面向镜头露出温柔微笑\",\n\"侧脸低头凝视\",\n\"回眸一瞥\",\n\"放松嘴唇的直接特写\",\n\"手抚头发的休闲姿势\",\n\"头部后仰朝向光线\",\n\"干净的侧面肖像\",\n\"手托下巴的思考姿态\"\n],\n\"expression\": \"自然、极简、放松、情感细腻\",\n\"hair\": {\n\"style\": \"长直发自然披散\",\n\"color\": \"浅棕色至中棕色\",\n\"details\": \"自然光泽带有柔和的光线高光\"\n},\n\"clothing\": {\n\"type\": \"休闲极简服装\",\n\"details\": \"简单的深色 T 恤，无可见品牌标识\"\n}\n},\n\n\"composition\": {\n\"layout\": \"3x3 网格拼贴\",\n\"consistency\": \"所有画面中统一的光线和背景\",\n\"framing\": \"干净的人像构图，带有轻微的姿势变化\"\n},\n\n\"environment\": {\n\"setting\": \"靠近窗户的室内空间\",\n\"background\": \"带有温暖阳光和阴影图案的素色墙壁\",\n\"atmosphere\": \"安静、极简、艺术感的室内氛围\"\n},\n\n\"aesthetic\": {\n\"style\": \"Instagram 美学人像系列\",\n\"features\": [\n\"黄金时刻光线\",\n\"窗户阴影图案\",\n\"极简妆容\",\n\"自然表情\",\n\"干净的编辑风格人像外观\"\n]\n}\n\n}\n}",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458728161_2vc8se_HSPAzm0aYAAEg4W.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AiwithLariab/status/2099733908011282670",
+      "sourceType": "community",
+      "authorName": "Laraib Fatima‎",
+      "authorHandle": "@AiwithLariab",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.706Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34680",
+      "rawText": "image_generation\": {\n\"face\": {\n\"preserve_original\": true,\n\"reference_match\": true,\n\"description\": \"在所有画面中保持相同的面部结构、肤色、眼型和自然表情，确保每个姿势中的身份一致性。\"\n},\n\n\"photo_style\": {\n\"type\": \"golden hour portrait collage\",\n\"camera_angle\": \"多样的特写和中景人像角度\",\n\"lighting\": \"温暖的黄金时刻阳光投射出柔和的窗影\",\n\"mood\": \"柔和、平静、亲密、具有美感\",\n\"texture\": \"自然的皮肤质感、柔和的高光、温和的对比度\",\n\"focus\": \"面部清晰对焦，背景平滑虚化\"\n},\n\n\"subject\": {\n\"poses\": [\n\"抬头望向光源\",\n\"面向镜头露出温柔微笑\",\n\"侧脸低头凝视\",\n\"回眸一瞥\",\n\"放松嘴唇的直接特写\",\n\"手抚头发的休闲姿势\",\n\"头部后仰朝向光线\",\n\"干净的侧面肖像\",\n\"手托下巴的思考姿态\"\n],\n\"expression\": \"自然、极简、放松、情感细腻\",\n\"hair\": {\n\"style\": \"长直发自然披散\",\n\"color\": \"浅棕色至中棕色\",\n\"details\": \"自然光泽带有柔和的光线高光\"\n},\n\"clothing\": {\n\"type\": \"休闲极简服装\",\n\"details\": \"简单的深色 T 恤，无可见品牌标识\"\n}\n},\n\n\"composition\": {\n\"layout\": \"3x3 网格拼贴\",\n\"consistency\": \"所有画面中统一的光线和背景\",\n\"framing\": \"干净的人像构图，带有轻微的姿势变化\"\n},\n\n\"environment\": {\n\"setting\": \"靠近窗户的室内空间\",\n\"background\": \"带有温暖阳光和阴影图案的素色墙壁\",\n\"atmosphere\": \"安静、极简、艺术感的室内氛围\"\n},\n\n\"aesthetic\": {\n\"style\": \"Instagram 美学人像系列\",\n\"features\": [\n\"黄金时刻光线\",\n\"窗户阴影图案\",\n\"极简妆容\",\n\"自然表情\",\n\"干净的编辑风格人像外观\"\n]\n}\n\n}\n}"
+    },
+    {
+      "id": "community-2099716835998384295",
+      "title": "社交媒体帖子 - 奢华时尚人像提示词",
+      "description": "使用 GPT Image 2 生成优雅女性高级时装影棚肖像的详细提示词。",
+      "prompt": "一张高级时装影棚肖像，描绘了一位优雅的金发女性，在黄昏时分站在一座法国城堡装饰华丽的石制阳台上。她身穿一件精致的无袖深蓝色礼服，上身采用复杂的透明薄纱设计，镶嵌着闪烁的水晶、珠子和水钻。她戴着深酒红色缎面长款歌剧手套，一只手优雅地放在锁骨附近，另一只手搭在装饰性的黑色铁艺栏杆上。她的头发梳成光滑的低侧发髻，佩戴着泪滴形耳环。柔和的散景暖光照亮了背景中的庄园花园，营造出具有浅景深的电影感高细节奢华编辑美学，8k 分辨率照片级真实光照，使用 85mm 镜头拍摄。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458723922_zrkjcv_HSOxUzwasAA0HR_.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/laviniavelle/status/2099716835998384295",
+      "sourceType": "community",
+      "authorName": "Lavinia",
+      "authorHandle": "@laviniavelle",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.706Z",
+      "tags": [
+        "GPT Image 2",
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34674",
+      "rawText": "一张高级时装影棚肖像，描绘了一位优雅的金发女性，在黄昏时分站在一座法国城堡装饰华丽的石制阳台上。她身穿一件精致的无袖深蓝色礼服，上身采用复杂的透明薄纱设计，镶嵌着闪烁的水晶、珠子和水钻。她戴着深酒红色缎面长款歌剧手套，一只手优雅地放在锁骨附近，另一只手搭在装饰性的黑色铁艺栏杆上。她的头发梳成光滑的低侧发髻，佩戴着泪滴形耳环。柔和的散景暖光照亮了背景中的庄园花园，营造出具有浅景深的电影感高细节奢华编辑美学，8k 分辨率照片级真实光照，使用 85mm 镜头拍摄。"
+    },
+    {
+      "id": "community-2099684987511648391",
+      "title": "社交媒体帖子 - 巴黎咖啡馆复古人像",
+      "description": "用于生成写实图像的提示词：一位时尚女性坐在复古巴黎咖啡馆中，身穿米色开衫和格纹裙，桌上摆放着干花，营造出怀旧氛围。",
+      "prompt": "一张垂直构图的全景照片，展示了一位时尚的年轻东亚女性坐在复古户外咖啡馆的桌旁，低头看着一本打开的杂志，面带柔和的微笑。她身穿一件米色长袖罗纹开衫和一条长款多色棕色格纹百褶裙。她的棕色长卷发半扎起，系着一个米色蝴蝶结。圆形木桌上放着一束用报纸包裹的铁锈橙色干花。她脚穿米色高跟鞋，坐在一把木椅上。背景是深色巴黎风格咖啡馆的外立面，温暖的室内灯光透过玻璃散发出来，柔和的自然日光，怀旧氛围，细节丰富，写实风格，8k 分辨率。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458729544_pvewiy_HSOUWudWoAAMXde.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/juliaevee/status/2099684987511648391",
+      "sourceType": "community",
+      "authorName": "Julia",
+      "authorHandle": "@juliaevee",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.706Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34682",
+      "rawText": "一张垂直构图的全景照片，展示了一位时尚的年轻东亚女性坐在复古户外咖啡馆的桌旁，低头看着一本打开的杂志，面带柔和的微笑。她身穿一件米色长袖罗纹开衫和一条长款多色棕色格纹百褶裙。她的棕色长卷发半扎起，系着一个米色蝴蝶结。圆形木桌上放着一束用报纸包裹的铁锈橙色干花。她脚穿米色高跟鞋，坐在一把木椅上。背景是深色巴黎风格咖啡馆的外立面，温暖的室内灯光透过玻璃散发出来，柔和的自然日光，怀旧氛围，细节丰富，写实风格，8k 分辨率。"
+    },
+    {
+      "id": "community-2099654540102652111",
+      "title": "社交媒体帖子 - GPT Image 2 提示词：时尚杂志剪贴簿",
+      "description": "一个用于创建软木板拼贴画的提示词，其中包含特定人物的照片，风格模仿日本女性时尚杂志的剪贴簿。",
+      "prompt": "创建一个软木板，上面贴满附件图片中人物的多张照片，按照日本女性时尚杂志剪贴簿的风格进行排列。\n让软木板填满整个屏幕。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458731824_az7oix_HSN4rMZbEAA0TGJ.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/nyapan_mohy/status/2099654540102652111",
+      "sourceType": "community",
+      "authorName": "モヒにゃぱん",
+      "authorHandle": "@nyapan_mohy",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-15T17:43:37.706Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34685",
+      "rawText": "创建一个软木板，上面贴满附件图片中人物的多张照片，按照日本女性时尚杂志剪贴簿的风格进行排列。\n让软木板填满整个屏幕。"
+    },
+    {
       "id": "community-2099470719235318149",
       "title": "个人资料 / 头像 - 绿墙光影人像",
       "description": "专为 GPT Image 2 设计的详细提示词，描绘一位身着嫩绿色连衣裙的女子倚靠在斑驳的蓝绿色墙壁旁，重点呈现光影效果。包含精确的构图与纹理指令。",
@@ -18012,7 +18565,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.947Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18049,13 +18602,13 @@
       "description": "一个用于 GPT Image 2 的写实风格提示词，描绘了一位东亚年轻女性在黄金时刻坐在温馨质朴的巴黎咖啡馆中的场景。",
       "prompt": "一位美丽的东亚年轻女性坐在户外一家温馨、质朴的巴黎咖啡馆桌旁。她留着长长的波浪状棕色头发，梳成半扎发型，并用一个大号米色缎带蝴蝶结系住。她用手托着下巴，带着柔和自然的妆容，若有所思地望向远方。她身穿一件奶油色罗纹针织开衫毛衣和一条棕色格纹复古半身裙。深色圆形木桌上放着一束用新闻纸包裹的赤陶橙色菊花和一本打开的杂志。温暖的午后黄金时刻阳光在背景中营造出柔和的光晕和散景效果。电影感摄影，浅景深，暖色调，美学风格，高分辨率，8k。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789388947722_ds8tjv_HSKS_zAXsAQd8ZM.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458722637_p8tryy_HSKS_zAXsAQd8ZM.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/juliaevee/status/2099402030057951331",
       "sourceType": "community",
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.948Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18098,7 +18651,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.948Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -18139,7 +18692,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.948Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18182,7 +18735,7 @@
       "authorName": "Sarmad Tahir",
       "authorHandle": "@itxsarmadd",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -18389,7 +18942,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-13T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -18430,7 +18983,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-09-13T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -18471,7 +19024,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-13T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -18677,7 +19230,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-11T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18761,7 +19314,7 @@
       "authorName": "Muhammad Jamil",
       "authorHandle": "@JamilAI55",
       "createdAt": "2026-09-10T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像",
         "摄影"
@@ -18928,7 +19481,7 @@
       "authorName": "Aegon",
       "authorHandle": "@Fujimoto_hina",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像",
         "摄影"
@@ -18970,7 +19523,7 @@
       "authorName": "Nataly Che",
       "authorHandle": "@creatoroff",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像",
         "平面设计"
@@ -19012,7 +19565,7 @@
       "authorName": "Ace",
       "authorHandle": "@Acemation_",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -19053,7 +19606,7 @@
       "authorName": "藍澤 ミライ",
       "authorHandle": "@mirai_ai2050",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -19094,7 +19647,7 @@
       "authorName": "海趣社",
       "authorHandle": "@haiqushe",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像",
         "东方美学"
@@ -19136,7 +19689,7 @@
       "authorName": "simeon-sanai",
       "authorHandle": "@Naiknelofar788",
       "createdAt": "2026-09-09T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.949Z",
+      "importedAt": "2026-09-15T17:43:37.705Z",
       "tags": [
         "人像"
       ],
@@ -64775,7 +65328,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.953Z",
+      "importedAt": "2026-09-15T17:43:37.710Z",
       "tags": [
         "产品",
         "平面设计",
@@ -64818,7 +65371,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.953Z",
+      "importedAt": "2026-09-15T17:43:37.710Z",
       "tags": [
         "平面设计"
       ],
@@ -64859,7 +65412,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-15T12:49:52.953Z",
+      "importedAt": "2026-09-15T17:43:37.710Z",
       "tags": [
         "平面设计"
       ],
