@@ -5,6 +5,10 @@ export type DirectoryTool = { key: string; path: string; group: ToolGroup; local
 
 // DestinyPixel core: birth symbolism, divination, observation and five-element design.
 export const directoryTools: DirectoryTool[] = [
+  { key: "compatibility", path: "/compatibility", group: "birth", localized: true, copy: {
+    en: { name: "Love compatibility", description: "Compare Bazi and birth charts to explore communication, affection and everyday rhythm.", prepare: "Both birth dates, known local birth times and supported cities", result: "Free 60–100 symbolic scores, side-by-side comparisons and a short AI reading" },
+    zh: { name: "感情适配", description: "结合两人的八字与星盘，探索性格、沟通、感情表达与日常节奏。", prepare: "双方公历生日、已知的当地出生时间及支持的城市", result: "免费的 60–100 分象征性评分、双方对比与简短 AI 解读" },
+  } },
   { key: "birth-map", path: "/", group: "birth", localized: true, copy: {
     en: { name: "Birth map", description: "Explore a symbolic reading combining Bazi, five elements and astrology.", prepare: "Name, birth date, time, city and gender option", result: "A personal reading with archetypes and reflection prompts" },
     zh: { name: "出生能量图", description: "把八字、五行与占星放在一起，阅读一份象征性的个人解读。", prepare: "姓名、出生日期、时间、城市及性别选项", result: "包含原型意象与自我观察提示的个人报告" },

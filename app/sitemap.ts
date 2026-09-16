@@ -1,3 +1,4 @@
+import { compatibilityLocales, compatibilityHref, compatibilityAlternates } from "@/lib/compatibility/copy";
 import type { MetadataRoute } from "next";
 import { discoveryLocales, discoveryHref, discoveryAlternates } from "@/lib/discovery";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
@@ -86,7 +87,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
     const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
-    return [...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
+    const compatibilityLanguages = Object.fromEntries(Object.entries(compatibilityAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
+    const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
+    return [...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only
     return [

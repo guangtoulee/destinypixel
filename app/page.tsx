@@ -38,6 +38,7 @@ export default async function Home({
         "@type": "ReadAction",
         target: [
           absoluteUrl("/discover"),
+          absoluteUrl("/compatibility"),
           absoluteUrl("/palm"),
           absoluteUrl("/oracle"),
           absoluteUrl("/sticks"),
@@ -77,6 +78,7 @@ export default async function Home({
       },
       featureList: [
         "AI birth chart and Bazi fusion report",
+        "Free relationship compatibility with Bazi and tropical birth charts",
         "Deterministic interactive Birth Totem geometry",
         "Symbolic animal archetype cards",
         "Natal astrology context",

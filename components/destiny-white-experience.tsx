@@ -3,6 +3,8 @@
 import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/lib/support-contact";
 
 import Image from "next/image";
+import CompatibilityHome from "./compatibility-home";
+import { compatibilityCopy } from "@/lib/compatibility/copy";
 import "./destiny-editorial.css";
 import ArchetypeMotionGallery from "./archetype-motion-gallery";
 import ArchetypeMotionPlayer from "./archetype-motion-player";
@@ -875,6 +877,7 @@ export default function DestinyWhiteExperience({
           </a>
 
           <nav className="white-nav" aria-label={copyLocale === "zh" ? "主导航" : "Main navigation"}>
+            <a href="#compatibility">{compatibilityCopy(locale).nav}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
             <a href="#insights">{text.nav.insights}</a>
@@ -912,9 +915,9 @@ export default function DestinyWhiteExperience({
           <Sparkles size={18} aria-hidden="true" />
           <span>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Карточка" : "Free card"}</span>
         </a>
-        <a href="#insights">
+        <a href="#compatibility">
           <Sparkles size={18} aria-hidden="true" />
-          <span>{mobileNavLabels.insights}</span>
+          <span>{compatibilityCopy(locale).nav}</span>
         </a>
         <a href={`/sticks?locale=${locale}`}>
           <Stars size={18} aria-hidden="true" />
@@ -950,6 +953,8 @@ export default function DestinyWhiteExperience({
       <section className="editorial-start-strip white-container" aria-label={text.method.title}>
         {[copyLocale === "zh" ? "输入生日" : locale === "ru" ? "Ваша дата" : "Your birthday", copyLocale === "zh" ? "遇见你的意象" : locale === "ru" ? "Ваш образ" : "Your character", copyLocale === "zh" ? "探索性格与感情" : locale === "ru" ? "Ваша история" : "Your story"].map((label,i)=><div key={label}><span>0{i+1}</span><p>{label}</p>{i<2&&<ArrowRight size={16} aria-hidden="true" />}</div>)}
       </section>
+
+      <CompatibilityHome locale={locale} />
 
       <section className="white-archetypes" id="archetypes">
         <div className="white-container editorial-collection">
