@@ -6,7 +6,7 @@ function request(value: unknown = body, origin = "https://example.test") { retur
 test("calculation is private, rejects cross-site, oversized and invalid input", async () => {
   const good = await POST(request());
   assert.equal(good.status, 200); assert.equal(good.headers.get("cache-control"), "private, no-store");
-  assert.equal((await good.json()).result.version, "relationship-v1");
+  assert.equal((await good.json()).result.version, "relationship-v2");
   assert.equal((await POST(request(body, "https://other.test"))).status, 403);
   assert.equal((await POST(request({ ...body, payload: "x".repeat(9000) }))).status, 413);
   assert.equal((await POST(request({ ...body, consent: false }))).status, 400);

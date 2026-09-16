@@ -1,4 +1,4 @@
-# Relationship compatibility v1
+# Relationship compatibility v2
 
 - Public landing page `/compatibility` in EN, zh, zh-TW and RU; prominent homepage section and tool-directory listing.
 - `POST /api/compatibility`, same-origin JSON, <=8 KiB. Requires two valid local birth records, known cities and permission confirmation. Future/invalid/ambiguous DST dates are rejected by shared birth-time validation.
@@ -13,3 +13,5 @@ Validation:
 `tsx --test lib/compatibility/model.test.ts lib/engines/astrology.test.ts lib/engines/time.test.ts`
 `NODE_OPTIONS=--conditions=react-server tsx --test lib/compatibility/route.test.ts`
 `npm run build`
+
+Love edition: 60 animal names follow the new artwork (Chinese source manifest and English text read from cards); existing localized Day Pillar personality/love passages are projected into free results. A directional five-element panel and visible stem/branch distribution are deterministic. AI requires separate animalStory and elementStory before the four complementary sections. The score formula remains unchanged.

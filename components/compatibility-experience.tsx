@@ -9,6 +9,8 @@ import { signName, type CompatibilityCopy } from "@/lib/compatibility/copy";
 import type { CompatibilityResult, PersonInput } from "@/lib/compatibility/model";
 import type { PairReading } from "@/lib/compatibility/ai";
 import { destinySupportHref } from "@/lib/support-contact";
+import CompatibilityBazi from "./compatibility-bazi";
+import { baziCopy } from "@/lib/compatibility/bazi-copy";
 import styles from "./compatibility.module.css";
 
 export default function CompatibilityExperience({ locale, copy: c }: { locale: ReportLocale; copy: CompatibilityCopy }) {
@@ -52,6 +54,7 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
     } finally { if (latest.current === revision) setBusy(false); }
   }
   function reset() { ++latest.current; requestRef.current?.abort(); setResult(null); setReading(null); setAiState("idle"); setBusy(false); formRef.current?.scrollIntoView({ behavior: "smooth" }); }
+  const b = baziCopy(locale);
   const sign = (p: { sign: string; signCn: string }) => signName(p.sign, p.signCn, locale);
   const element = (name: string) => c.elements[name as keyof typeof c.elements] || name;
   return <>
@@ -66,9 +69,16 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
     </form>
     {result && <section ref={resultRef} className={styles.results} aria-labelledby="connection-result"><div className={styles.scorePanel}><div><span className={styles.eyebrow}>{c.result}</span><h2 id="connection-result">{c.score}</h2><p>{c.scoreNote}</p></div><div className={styles.scoreCircle}><strong>{result.score}</strong><span>/ 100</span></div></div>
       <div className={styles.dimensions}>{result.dimensions.map((d, i) => <div key={d.id}><span>{c.dimensions[i]}</span><strong>{d.score}</strong><div className={styles.bar}><i style={{ width: `${d.score}%` }} /></div></div>)}</div>
-      <div className={styles.portraits}>{result.people.map((p, i) => <article key={i}><Image src={getPillarImagePath(p.pillars.day)} alt={`${c.people[i]} · ${p.pillars.day}`} width={120} height={160} sizes="120px" /><div><span className={styles.eyebrow}>{c.people[i]}</span><h3>{sign(p.planets.find(x => x.body === "Sun")!)} <span>× {element(p.dayElement)}</span></h3><p>{c.day} · {element(p.dayElement)}</p><dl className={styles.pillars}>{Object.values(p.pillars).map((v, n) => <div key={n}><dt>{c.pillars[n]}</dt><dd>{v}</dd></div>)}</dl></div></article>)}</div>
-      <section className={styles.aiPanel} aria-labelledby="pair-ai-title"><span className={styles.eyebrow}><Sparkles size={15} />{c.aiReady}</span><h2 id="pair-ai-title">{c.aiTitle}</h2><p role="status" className={styles.aiStatus}>{aiState === "loading" ? c.aiLoading : aiState === "unavailable" ? c.aiFallback : c.notDiagnosis}</p>{reading && <div className={styles.aiGrid}>{(["attraction", "friction", "practice", "question"] as const).map((key, i) => <article key={key}><span>0{i + 1}</span><h3>{c.aiSections[i]}</h3><p>{reading[key]}</p></article>)}</div>}</section>
-      <h2 className={styles.compareTitle}>{c.comparisons}</h2><div className={styles.comparisons}>{result.dimensions.map((d, i) => { const body = ["Sun", "Mercury", "Venus", "Moon"][i]; return <article key={d.id}><header><h3>{c.dimensions[i]}</h3><span>{c.tones[d.tone]}</span></header><div className={styles.compareColumns}>{result.people.map((p, n) => { const placement = p.planets.find(x => x.body === body)!; return <div key={n}><span className={styles.personTag}>{c.people[n]}</span><h4>{c.bodies[body as keyof typeof c.bodies]} · {sign(placement)}</h4><p>{c.traits[placement.element][i]}</p></div>; })}</div><p className={styles.action}><Heart size={16} />{c.actions[i]}</p></article>; })}</div>
+      <div className={styles.animalHeading}><span className={styles.eyebrow}>{b.character}</span><h2>{b.heading}</h2><p>{b.intro}</p></div>
+      <div className={styles.animalPair}>{result.people.map((p, i) => <article key={i}>
+        <header><span className={styles.personTag}>{c.people[i]}</span><span>{p.pillars.day} · {element(p.dayElement)}</span></header>
+        <div className={styles.animalIdentity}><Image src={getPillarImagePath(p.pillars.day)} alt={p.animal.name} width={180} height={240} sizes="(max-width:760px) 125px, 155px" /><div><span className={styles.animalNo}>0{i + 1}</span><h3>{p.animal.name}</h3><p>{p.animal.headline}</p><span className={styles.animalSky}>{c.bodies.Sun} · {sign(p.planets.find(x => x.body === "Sun")!)}</span></div></div>
+        <div className={styles.animalStory}><h4>{b.personality}</h4><p>{p.animal.personality}</p><h4><Heart size={14} />{b.love}</h4><p>{p.animal.love}</p></div>
+        <details className={styles.animalPillars}><summary>{c.bazi}</summary><dl className={styles.pillars}>{Object.values(p.pillars).map((v, n) => <div key={n}><dt>{c.pillars[n]}</dt><dd>{v}</dd></div>)}</dl></details>
+      </article>)}</div>
+      <CompatibilityBazi result={result} locale={locale} copy={c} />
+      <section className={styles.aiPanel} aria-labelledby="pair-ai-title"><span className={styles.eyebrow}><Sparkles size={15} />{c.aiReady}</span><h2 id="pair-ai-title">{c.aiTitle}</h2><p role="status" className={styles.aiStatus}>{aiState === "loading" ? c.aiLoading : aiState === "unavailable" ? c.aiFallback : c.notDiagnosis}</p>{reading && <div className={styles.aiGrid}>{(["animalStory", "elementStory", "attraction", "friction", "practice", "question"] as const).map((key, i) => <article key={key}><span>0{i + 1}</span><h3>{[b.animalAI, b.elementAI, ...c.aiSections][i]}</h3><p>{reading[key]}</p></article>)}</div>}</section>
+      <h2 className={styles.compareTitle}>{b.sky}</h2><div className={styles.comparisons}>{result.dimensions.map((d, i) => { const body = ["Sun", "Mercury", "Venus", "Moon"][i]; return <article key={d.id}><header><h3>{c.dimensions[i]}</h3><span>{c.tones[d.tone]}</span></header><div className={styles.compareColumns}>{result.people.map((p, n) => { const placement = p.planets.find(x => x.body === body)!; return <div key={n}><span className={styles.personTag}>{c.people[n]}</span><h4>{c.bodies[body as keyof typeof c.bodies]} · {sign(placement)}</h4><p>{c.traits[placement.element][i]}</p></div>; })}</div><p className={styles.action}><Heart size={16} />{c.actions[i]}</p></article>; })}</div>
       <div className={styles.resultActions}><button type="button" onClick={reset}>{c.reset}</button><a href={`/?locale=${locale}#report`}>{c.more}<ArrowRight size={16} /></a></div>
     </section>}
   </>;
