@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-16T12:45:03.451Z",
+  "updatedAt": "2026-09-16T17:41:20.311Z",
   "sourceSummary": {
-    "community": 1121,
-    "publicX": 442,
-    "total": 1563
+    "community": 1136,
+    "publicX": 444,
+    "total": 1580
   },
   "items": [
     {
@@ -792,6 +792,52 @@
       "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
     },
     {
+      "id": "x-public-2098929162735997071",
+      "title": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthro",
+      "description": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847",
+      "prompt": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/CharlieDFilm/status/2098929162735997071",
+      "sourceType": "x",
+      "authorName": "Charlie Driscoll",
+      "authorHandle": "@CharlieDFilm",
+      "createdAt": "2026-09-13T00:18:03.000Z",
+      "importedAt": "2026-09-16T17:41:20.287Z",
+      "tags": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1827,
+        "reposts": 250,
+        "replies": 188,
+        "quotes": 57,
+        "bookmarks": 1331,
+        "views": 124671,
+        "score": 9255
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
+    },
+    {
       "id": "x-public-2074158868142194898",
       "title": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And tha",
       "description": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And that's the part nobody expects > he generated two frames with AI > turned them into a clip with Seedance 2.0 > then gave it to ",
@@ -920,52 +966,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "iPhone camera control for Seedance 2.0 the app for 3D camera and AI motion transfer is now in test flight, link below. You stage the scene and can walk around it and capture real camera movement in 3D space, then Seedance brings the scene to life. Handheld camera motion and realistic shake is hard to describe or prompt to Al. The iphone's ARKit is super precise with motion tracking and you can record complex scenes as a one man studio. The characters can move and I am working on motion capture. Here is the Al filmmaking workflow: 1. Set the scene in 3D space 2. Record camera motion 3. Generate a starting image 4. Feed image and video to Seedance This was a quick build with claude code but now it is in test flight. Happy if it helps others."
-    },
-    {
-      "id": "x-public-2098929162735997071",
-      "title": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthro",
-      "description": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847",
-      "prompt": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/CharlieDFilm/status/2098929162735997071",
-      "sourceType": "x",
-      "authorName": "Charlie Driscoll",
-      "authorHandle": "@CharlieDFilm",
-      "createdAt": "2026-09-13T00:18:03.000Z",
-      "importedAt": "2026-09-14T06:49:16.529Z",
-      "tags": [
-        "GPT Image 2",
-        "Midjourney",
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Midjourney",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 1341,
-        "reposts": 178,
-        "replies": 130,
-        "quotes": 42,
-        "bookmarks": 990,
-        "views": 70773,
-        "score": 6762
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
     },
     {
       "id": "x-public-2079944555718435124",
@@ -2641,6 +2641,49 @@
       "rawText": "save this post to get the most out of unlimited Seedance 2.5 for up to 33 days on Higgsfield i'm going to show you how to use loops to produce ANY video format: ads, cinema, vlogs, UGC, music videos... with one system idea > vault > agent > references > images > script > video > montage > upscaling Seedance 2.5 one-shots a full 30 second video, audio generated in the same pass, carrying up to 30 image, 10 video and 10 audio references into a single generation here's a full breakdown of the setup: > idea: steal taste from work that already worked: - frameset․app and shotdeck․com for film stills - savee․com and cosmos․so for boards - eyecannndy․com for transitions then have a vision model name the lens, light, palette and grain of your picks in one locked paragraph you paste into every prompt > vault: an obsidian folder as your reference bible, one page per asset (idea, locked style, character sheets, reference images, the exact prompts that worked) plus one index page, reviewed after every session so it never rots into dead files > agent: three commands make every model callable from Claude Code: - npm install -g @ higgsfield/cli - higgsfield auth login - npx skills add higgsfield-ai/skills and your agent now submits, polls, retries and logs every job > references: build reference images by hand first, midjourney for cinema and stylized shots, nanobanana pro or gpt images 2 for realism use one locked style across the whole project, recurring characters turned into full sheets (front, side, back, blank background), and once locked you never regenerate them, you fix the motion prompt instead > images: frames before motion, always, a frame costs seconds and a clip costs minutes, so exploration happens at the cheap layer and only winners get animated > script: every shot gets the same six details, subject, action, place, camera, style, rules, and the 30 seconds splits into four timed beats inside one prompt, 0-6 set the scene, 6-14 build it out, 14-24 the turn, 24-30 the end > video: every reference gets a job and a boundary, \"@video 1 defines motion and pacing\" is half the instruction, \"do not use the person's identity, clothing or scene\" is the half that stops one reference leaking into shots it was never meant to touch > montage: the cut is a text file, one line per clip with its duration and an audio flag, ffmpeg renders the film from it, so the whole edit reruns in seconds > upscaling: once, at the end, on the finished cut, 720p while exploring, 1080p for keepers, 4K only for the master (use Topaz) for UGC ads, the same loop with two changes render the hook clip alone first, approve the face and the voice before anything else inherits them, then anchor every later clip with the approved hook's audio so one voice carries the whole ad and the script math is fixed, about 3.5 words per second, a 30 second ad is roughly 105 words, counted before anything renders unlimited means every loop above costs nothing to run... start one tonight"
     },
     {
+      "id": "x-public-2099607916789563863",
+      "title": "OMG, what a strike 😭 Nobody expected her to pull THAT off. This is AI. And the crazy part is, y",
+      "description": "OMG, what a strike 😭 Nobody expected her to pull THAT off. This is AI. And the crazy part is, you don’t need advanced skills, a pile of references, or some complicated workflow to make something like this. Made with See",
+      "prompt": "OMG, what a strike 😭 Nobody expected her to pull THAT off. This is AI. And the crazy part is, you don’t need advanced skills, a pile of references, or some complicated workflow to make something like this. Made with Seedance 2.5 on @makeugc I’d recommend unlimited Seedance 2.5 because a result like this can take a few attempts. You can try it for just $1. After that, use promo code ALEX20 for a permanent 20% discount on all future payments. Made with this prompt: ⬇️ ultra-realistic viral smartphone video in one continuous handheld shot. Sunny public park beside a real soccer field in warm late-afternoon light. Visible grass, trees, sidewalk, full-size goal, and a few guys casually playing soccer in the background. A stunning glamorous blonde woman in her 20s walks alone along the sidewalk. She has long voluminous blonde hair, a beautiful feminine face, a narrow waist, large full bust, curvy hips, and long toned legs. She wears a fitted top, a very short stylish skirt, elegant high heels, and a small shoulder bag. She is calmly looking at her phone while walking. Camera: normal handheld phone footage by another person, natural slight shake, mild motion blur, small autofocus/exposure shifts, realistic imperfect framing, no cinematic moves. 00:00–00:04 She walks beside the field, focused on her phone. In the background, one guy accidentally kicks the ball too hard and it rolls/bounces out toward her. She does not notice. 00:04–00:06 The ball lightly bumps into her lower leg/ankle and stops near her. She looks down, slightly surprised. One guy calls out naturally: “Hey! Can you kick it back?” 00:06–00:10 She turns slightly toward the field and casually kicks the same ball back with her right foot while still wearing high heels. The kick is unexpectedly clean, strong, and skillful. The camera follows the ball. 00:10–00:13 The ball flies in a nice arc and goes straight into the top corner of the goal. Clean spectacular goal. The guys react with surprise and excitement. One shouts: “Thanks! Have a good day!” 00:13–00:15 The camera returns to her. She barely reacts, gives a tiny casual glance, then keeps walking away still looking at her phone like nothing special happened. Important: same ball only, it must touch her leg first, no cuts, no duplicated ball, no body distortions, she stays in high heels, realistic reactions, no cartoon comedy. Audio: natural park ambience, distant voices, ball impact, footsteps #AIVideo",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Alexneyef/status/2099607916789563863",
+      "sourceType": "x",
+      "authorName": "Alex Neyef",
+      "authorHandle": "@Alexneyef",
+      "createdAt": "2026-09-14T21:15:10.000Z",
+      "importedAt": "2026-09-16T17:41:20.288Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 466,
+        "reposts": 16,
+        "replies": 5,
+        "quotes": 1,
+        "bookmarks": 379,
+        "views": 63527,
+        "score": 2268
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "OMG, what a strike 😭 Nobody expected her to pull THAT off. This is AI. And the crazy part is, you don’t need advanced skills, a pile of references, or some complicated workflow to make something like this. Made with Seedance 2.5 on @makeugc I’d recommend unlimited Seedance 2.5 because a result like this can take a few attempts. You can try it for just $1. After that, use promo code ALEX20 for a permanent 20% discount on all future payments. Made with this prompt: ⬇️ ultra-realistic viral smartphone video in one continuous handheld shot. Sunny public park beside a real soccer field in warm late-afternoon light. Visible grass, trees, sidewalk, full-size goal, and a few guys casually playing soccer in the background. A stunning glamorous blonde woman in her 20s walks alone along the sidewalk. She has long voluminous blonde hair, a beautiful feminine face, a narrow waist, large full bust, curvy hips, and long toned legs. She wears a fitted top, a very short stylish skirt, elegant high heels, and a small shoulder bag. She is calmly looking at her phone while walking. Camera: normal handheld phone footage by another person, natural slight shake, mild motion blur, small autofocus/exposure shifts, realistic imperfect framing, no cinematic moves. 00:00–00:04 She walks beside the field, focused on her phone. In the background, one guy accidentally kicks the ball too hard and it rolls/bounces out toward her. She does not notice. 00:04–00:06 The ball lightly bumps into her lower leg/ankle and stops near her. She looks down, slightly surprised. One guy calls out naturally: “Hey! Can you kick it back?” 00:06–00:10 She turns slightly toward the field and casually kicks the same ball back with her right foot while still wearing high heels. The kick is unexpectedly clean, strong, and skillful. The camera follows the ball. 00:10–00:13 The ball flies in a nice arc and goes straight into the top corner of the goal. Clean spectacular goal. The guys react with surprise and excitement. One shouts: “Thanks! Have a good day!” 00:13–00:15 The camera returns to her. She barely reacts, gives a tiny casual glance, then keeps walking away still looking at her phone like nothing special happened. Important: same ball only, it must touch her leg first, no cuts, no duplicated ball, no body distortions, she stays in high heels, realistic reactions, no cartoon comedy. Audio: natural park ambience, distant voices, ball impact, footsteps #AIVideo"
+    },
+    {
       "id": "x-public-2085932238349148365",
       "title": "BREAKING: SpaceXAI just released Grok Imagine Image 2.0, its latest model for professional image",
       "description": "BREAKING: SpaceXAI just released Grok Imagine Image 2.0, its latest model for professional image generation and editing. • Improved prompt accuracy, typography and layouts • Precise edits using Magic Wand and segmentatio",
@@ -4051,6 +4094,50 @@
       "rawText": "Made this cinematic sequence using Seedance 2.5 The realism, camera movements, water physics, explosions, and intense atmosphere are on another level. AI video generation is getting seriously cinematic. Prompt ⤵️ Create a 30-second ultra-realistic cinematic disaster sequence with a dark, intense, Hollywood-blockbuster atmosphere. Main character: A young woman with short, messy dark hair, wearing a soaked white T-shirt and light-colored shorts. Keep her appearance consistent throughout the entire video. Her face should remain realistic and expressive, showing fear, shock, exhaustion, and determination. Scene 1 — 0–5 seconds: Open with an extreme close-up of the woman running toward the camera through a dark industrial shipping yard at night. Heavy rain is falling, her hair and clothes are completely wet, and she is breathing heavily. Behind her, bright industrial lights glow through thick smoke and mist. The camera moves backward smoothly while maintaining focus on her face. Add realistic rain droplets on the camera lens, dramatic backlighting, atmospheric fog, and handheld cinematic movement. Scene 2 — 5–10 seconds: Cut to a wider shot as she runs through the flooded container yard. Large shipping containers surround her, emergency lights flash in the distance, and explosions/fire erupt behind her. She looks over her shoulder in panic while continuing to run. Water splashes dramatically around her legs with every step. Use realistic fire, smoke, debris, rain, and volumetric lighting. Scene 3 — 10–15 seconds: She suddenly loses her balance and falls into the flooded ground. Show the impact in slow motion for a moment, with water splashing around her. She quickly pushes herself back up while terrified people run in the background. A massive wave of smoke, debris, and water moves through the shipping yard behind them. Use a low-angle camera close to the ground for a powerful disaster-movie perspective. Scene 4 — 15–21 seconds: She gets back on her feet and starts sprinting toward safety. The camera tracks alongside her at high speed. Containers shake, debris flies through the air, vehicles and objects are pushed around by the powerful force behind her. Keep her face and body consistent. Alternate between close-ups of her frightened expression and wide shots showing the enormous scale of destruction. Scene 5 — 21–25 seconds: She reaches a large modern building filled with terrified people. The camera follows her inside as everyone rushes toward safety. People are falling, crawling, and helping each other while water and debris can be seen outside through the entrance. The lighting changes from cold blue-gray exterior lighting to dramatic warm interior lighting. Scene 6 — 25–30 seconds: Suddenly transition to a massive luxury yacht in the middle of a violent ocean. Huge dark waves surround the vessel under a stormy sky. The camera starts behind the yacht and slowly reveals an enormous shark-like sea creature emerging from the ocean directly behind it, creating a terrifying final reveal. The creature rises through the waves with water cascading from its body. End with a gigantic wave crashing toward the yacht. Visual style: photorealistic Hollywood disaster film, cinematic color grading, realistic skin texture, physically accurate water and rain, volumetric fog, dramatic practical lighting, realistic fire and smoke, detailed environments, natural motion blur, shallow depth of field, dynamic camera movement, high contrast, atmospheric storm clouds, extremely detailed CGI, 4K cinematic quality. Camera: mixture of handheld close-ups, smooth tracking shots, wide establishing shots, low-angle disaster shots, slow-motion impact moments, and dramatic aerial/wide shots. Sound design: heavy rainfall, thunder, distant explosions, sirens, screaming crowds, footsteps splashing through water, crashing metal, deep cinematic bass, roaring waves, and an intense rising orchestral score that builds toward the final creature reveal."
     },
     {
+      "id": "x-public-2099190755336376688",
+      "title": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits.",
+      "description": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on ",
+      "prompt": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: - Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing - Kling 3.0 generated the fluid body physics and night lighting on the roof - Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact - ElevenLabs produced the ambient stadium atmosphere and crowd noise - CapCut handled speed ramps, color grade, and final export A traditional production house would need: - a stadium rental at $150K - a stunt coordinator - a medical team on standby - 6 months of liability clearance This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AiwithZoaina/status/2099190755336376688",
+      "sourceType": "x",
+      "authorName": "ZoAina",
+      "authorHandle": "@AiwithZoaina",
+      "createdAt": "2026-09-13T17:37:31.000Z",
+      "importedAt": "2026-09-16T17:41:20.288Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 188,
+        "reposts": 99,
+        "replies": 23,
+        "quotes": 1,
+        "bookmarks": 91,
+        "views": 235592,
+        "score": 1542
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: - Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing - Kling 3.0 generated the fluid body physics and night lighting on the roof - Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact - ElevenLabs produced the ambient stadium atmosphere and crowd noise - CapCut handled speed ramps, color grade, and final export A traditional production house would need: - a stadium rental at $150K - a stunt coordinator - a medical team on standby - 6 months of liability clearance This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking."
+    },
+    {
       "id": "x-public-2085028368102412588",
       "title": "Every second matters when telling a story. 🎞 With Seedance 2.5 on CapCut, you can control your ",
       "description": "Every second matters when telling a story. 🎞 With Seedance 2.5 on CapCut, you can control your video timeline and guide AI through each key moment. From opening scenes to final shots, create videos that follow your visi",
@@ -4176,50 +4263,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Day 10/20 in creating AI videos for my portfolio Today's video is for Orchid&Ash, a US-based skincare brand. How I did it: • Fed my idea to Claude and created the prompt for a 7-scene storyboard for the Restorative Face cream • Created the storyboard image with ChatGPT • Turned the frames into 4-second videos using Google flow (used the 9:16 framing) • Produced the voice-over in Eleven Labs, using an American female voice. • Edited the pacing and sound in CapCut What do you think about it? If your brand or product needs AI-generated content like this, DM me. I'm open to collabs, freelance work, and full-time roles."
-    },
-    {
-      "id": "x-public-2099190755336376688",
-      "title": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits.",
-      "description": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on ",
-      "prompt": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: - Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing - Kling 3.0 generated the fluid body physics and night lighting on the roof - Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact - ElevenLabs produced the ambient stadium atmosphere and crowd noise - CapCut handled speed ramps, color grade, and final export A traditional production house would need: - a stadium rental at $150K - a stunt coordinator - a medical team on standby - 6 months of liability clearance This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/AiwithZoaina/status/2099190755336376688",
-      "sourceType": "x",
-      "authorName": "ZoAina",
-      "authorHandle": "@AiwithZoaina",
-      "createdAt": "2026-09-13T17:37:31.000Z",
-      "importedAt": "2026-09-15T12:49:56.677Z",
-      "tags": [
-        "Seedance",
-        "Kling",
-        "产品"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Kling",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 186,
-        "reposts": 97,
-        "replies": 19,
-        "quotes": 1,
-        "bookmarks": 90,
-        "views": 232372,
-        "score": 1517
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: - Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing - Kling 3.0 generated the fluid body physics and night lighting on the roof - Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact - ElevenLabs produced the ambient stadium atmosphere and crowd noise - CapCut handled speed ramps, color grade, and final export A traditional production house would need: - a stadium rental at $150K - a stunt coordinator - a medical team on standby - 6 months of liability clearance This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking."
     },
     {
       "id": "x-public-2074441553469116470",
@@ -5337,51 +5380,6 @@
       "rawText": "Made with GPT Image 2 and Seedance on @thankyouai_hq A hand slams the counter, and the tension breaks instantly. She walks in without a word, calm and unshaken, and closes the distance before he even reacts. Pure cinematic action shot in one continuous take with zero cuts. 🎁 Give it a try yourself? Grab my invite code LVEKVO →  and unlock 100 FREE credits to start making your own AI videos, first 99 people only, so don't sleep on it.  Full prompt is dropped in the comments 👇"
     },
     {
-      "id": "x-public-2098592593768558687",
-      "title": "What if the storyboard was already your first step toward the final film? Instead of jumping str",
-      "description": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can est",
-      "prompt": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can establish the scenes, mood, characters, and overall direction before moving into production. GPT Image 2.5 is coming to CapCut, where you’ll be able to access the model through Design Studio and AI Image, bringing that early creative stage closer to the rest of the workflow. Start with a story idea. Build the storyboard. Bring it into CapCut PC’s multi-track timeline. Generate with AI Video using Seedance 2.5. Then refine the result with AI Edit. That makes the process feel less like random generation and more like directing. You’re not just asking AI to make a video. You’re giving it a story to follow. Idea → Storyboard → Full Film. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/nijokestu/status/2098592593768558687",
-      "sourceType": "x",
-      "authorName": "Ace",
-      "authorHandle": "@nijokestu",
-      "createdAt": "2026-09-12T02:00:38.000Z",
-      "importedAt": "2026-09-15T12:49:56.677Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 217,
-        "reposts": 154,
-        "replies": 30,
-        "quotes": 0,
-        "bookmarks": 22,
-        "views": 101492,
-        "score": 1349
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can establish the scenes, mood, characters, and overall direction before moving into production. GPT Image 2.5 is coming to CapCut, where you’ll be able to access the model through Design Studio and AI Image, bringing that early creative stage closer to the rest of the workflow. Start with a story idea. Build the storyboard. Bring it into CapCut PC’s multi-track timeline. Generate with AI Video using Seedance 2.5. Then refine the result with AI Edit. That makes the process feel less like random generation and more like directing. You’re not just asking AI to make a video. You’re giving it a story to follow. Idea → Storyboard → Full Film. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
-    },
-    {
       "id": "x-public-2083172413810843804",
       "title": "3D character artists should be more worried about Kimi K3 than Midjourney. Image generators can ",
       "description": "3D character artists should be more worried about Kimi K3 than Midjourney. Image generators can fake one pretty frame. The real threat is AI taking a dead base mesh and handling the painful middle: hair, clothes, materia",
@@ -5421,6 +5419,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "3D character artists should be more worried about Kimi K3 than Midjourney. Image generators can fake one pretty frame. The real threat is AI taking a dead base mesh and handling the painful middle: hair, clothes, materials, lighting, posing, camera work, and fifty tiny fixes nobody posts online. That is exactly where workflows around Kimi K3 are heading. Not “generate an anime girl,” but keep refining the same editable 3D scene until it stops looking like a mannequin and starts looking marketable. When that works reliably, clients will stop paying for hours of technical suffering. They will pay for taste. And a lot of portfolios are not going to survive that distinction."
+    },
+    {
+      "id": "x-public-2098592593768558687",
+      "title": "What if the storyboard was already your first step toward the final film? Instead of jumping str",
+      "description": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can est",
+      "prompt": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can establish the scenes, mood, characters, and overall direction before moving into production. GPT Image 2.5 is coming to CapCut, where you’ll be able to access the model through Design Studio and AI Image, bringing that early creative stage closer to the rest of the workflow. Start with a story idea. Build the storyboard. Bring it into CapCut PC’s multi-track timeline. Generate with AI Video using Seedance 2.5. Then refine the result with AI Edit. That makes the process feel less like random generation and more like directing. You’re not just asking AI to make a video. You’re giving it a story to follow. Idea → Storyboard → Full Film. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/nijokestu/status/2098592593768558687",
+      "sourceType": "x",
+      "authorName": "Ace",
+      "authorHandle": "@nijokestu",
+      "createdAt": "2026-09-12T02:00:38.000Z",
+      "importedAt": "2026-09-16T17:41:20.289Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 208,
+        "reposts": 153,
+        "replies": 30,
+        "quotes": 0,
+        "bookmarks": 13,
+        "views": 101521,
+        "score": 1300
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can establish the scenes, mood, characters, and overall direction before moving into production. GPT Image 2.5 is coming to CapCut, where you’ll be able to access the model through Design Studio and AI Image, bringing that early creative stage closer to the rest of the workflow. Start with a story idea. Build the storyboard. Bring it into CapCut PC’s multi-track timeline. Generate with AI Video using Seedance 2.5. Then refine the result with AI Edit. That makes the process feel less like random generation and more like directing. You’re not just asking AI to make a video. You’re giving it a story to follow. Idea → Storyboard → Full Film. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2074327891651842107",
@@ -8175,6 +8218,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "One image. One prompt. And this came out 🤍✨ Made this on my phone with Pollo AI's Image to Video — Seedance 2.0 4K. → Skin application looks completely natural → Lighting and tones stay true to the original shot → Looks like a real UGC skincare ad, not AI output Honestly, high-end content just got a lot easier to make — anywhere, anytime."
+    },
+    {
+      "id": "x-public-2099039379381456930",
+      "title": "I don’t want AI deciding what my video should be. I want it to execute what I already decided. T",
+      "description": "I don’t want AI deciding what my video should be. I want it to execute what I already decided. That’s why this workflow makes sense to me. GPT Image 2.5 is coming to CapCut through Design Studio and AI Image. I can first",
+      "prompt": "I don’t want AI deciding what my video should be. I want it to execute what I already decided. That’s why this workflow makes sense to me. GPT Image 2.5 is coming to CapCut through Design Studio and AI Image. I can first establish the story visually instead of leaving everything to a single video prompt. Then I can bring that direction into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to generate the footage. Once it’s generated, AI Edit gives me another layer of control over the result. The model can handle the heavy lifting. But the creative decisions can still stay with me. That’s the balance I want from AI filmmaking. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/EnzoSanchezIA/status/2099039379381456930",
+      "sourceType": "x",
+      "authorName": "Enzo Sanchez | IA",
+      "authorHandle": "@EnzoSanchezIA",
+      "createdAt": "2026-09-13T07:36:00.000Z",
+      "importedAt": "2026-09-16T17:41:20.289Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 117,
+        "reposts": 51,
+        "replies": 19,
+        "quotes": 0,
+        "bookmarks": 123,
+        "views": 51623,
+        "score": 929
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "I don’t want AI deciding what my video should be. I want it to execute what I already decided. That’s why this workflow makes sense to me. GPT Image 2.5 is coming to CapCut through Design Studio and AI Image. I can first establish the story visually instead of leaving everything to a single video prompt. Then I can bring that direction into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to generate the footage. Once it’s generated, AI Edit gives me another layer of control over the result. The model can handle the heavy lifting. But the creative decisions can still stay with me. That’s the balance I want from AI filmmaking. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2077389944016801958",
@@ -14176,6 +14263,54 @@
       "rawText": "AI shorts video, mixed media vibe. You can easily mix different kind of medium using Seedance 2.0 in just one prompt. Create a single character in Midjourney, no character sheets. Prompt scene by scene the camera moves and character actions. Introduce your new medium . Watercolor appearance, comic onomatopoeia, anime tornadoes… And tadaaa! 90’s vibe ☺️"
     },
     {
+      "id": "x-public-2097972827991298162",
+      "title": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator genera",
+      "description": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unre",
+      "prompt": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unreleased film teaser or pure AI. The algorithm-breaking blueprint: > The Hook: Dark cinematic depth with high-contrast studio lighting. > The Twist: Unbroken 24-second tracking shot with natural camera shake and zero distortion. > The Payoff: Story-driven visual density that locks viewer retention to the final frame. The precise toolchain under the hood: 1. Claude 3.5 Sonnet structured the 7-term physics prompt and 8-second beat intervals. 2. Midjourney v6.1 established the hyper-consistent character and lighting style. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 24-second continuous camera motion and physics. 4. ElevenLabs spatialized the raw low-frequency ambient sound and environment foley. 5. CapCut Pro finalized the vertical crop, cinematic motion blur, and rapid export. Legacy film studios need 60-person crews, location permits, and months of post-production. He rendered 100% pure viral engagement before his morning coffee got cold. Save this breakdown. The complete 7-term prompt formula and guide are pinned below.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/mojeskoqq/status/2097972827991298162",
+      "sourceType": "x",
+      "authorName": "mojesko",
+      "authorHandle": "@mojeskoqq",
+      "createdAt": "2026-09-10T08:57:55.000Z",
+      "importedAt": "2026-09-16T17:41:20.288Z",
+      "tags": [
+        "Midjourney",
+        "Seedance",
+        "Kling",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Midjourney",
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 96,
+        "reposts": 4,
+        "replies": 5,
+        "quotes": 1,
+        "bookmarks": 66,
+        "views": 25805,
+        "score": 466
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unreleased film teaser or pure AI. The algorithm-breaking blueprint: > The Hook: Dark cinematic depth with high-contrast studio lighting. > The Twist: Unbroken 24-second tracking shot with natural camera shake and zero distortion. > The Payoff: Story-driven visual density that locks viewer retention to the final frame. The precise toolchain under the hood: 1. Claude 3.5 Sonnet structured the 7-term physics prompt and 8-second beat intervals. 2. Midjourney v6.1 established the hyper-consistent character and lighting style. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 24-second continuous camera motion and physics. 4. ElevenLabs spatialized the raw low-frequency ambient sound and environment foley. 5. CapCut Pro finalized the vertical crop, cinematic motion blur, and rapid export. Legacy film studios need 60-person crews, location permits, and months of post-production. He rendered 100% pure viral engagement before his morning coffee got cold. Save this breakdown. The complete 7-term prompt formula and guide are pinned below."
+    },
+    {
       "id": "x-public-2098477568681029895",
       "title": "AI video generation used to feel like: prompt → generate → notice something wrong → generate aga",
       "description": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and wil",
@@ -14218,54 +14353,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Build the visual direction first, then use CapCut PC + Seedance 2.5 to turn it into the commercial. And when something feels off, AI Edit gives you another way to shape the result without throwing everything away. The generation gets you started. The editing keeps the creative direction yours. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
-    },
-    {
-      "id": "x-public-2097972827991298162",
-      "title": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator genera",
-      "description": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unre",
-      "prompt": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unreleased film teaser or pure AI. The algorithm-breaking blueprint: > The Hook: Dark cinematic depth with high-contrast studio lighting. > The Twist: Unbroken 24-second tracking shot with natural camera shake and zero distortion. > The Payoff: Story-driven visual density that locks viewer retention to the final frame. The precise toolchain under the hood: 1. Claude 3.5 Sonnet structured the 7-term physics prompt and 8-second beat intervals. 2. Midjourney v6.1 established the hyper-consistent character and lighting style. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 24-second continuous camera motion and physics. 4. ElevenLabs spatialized the raw low-frequency ambient sound and environment foley. 5. CapCut Pro finalized the vertical crop, cinematic motion blur, and rapid export. Legacy film studios need 60-person crews, location permits, and months of post-production. He rendered 100% pure viral engagement before his morning coffee got cold. Save this breakdown. The complete 7-term prompt formula and guide are pinned below.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/mojeskoqq/status/2097972827991298162",
-      "sourceType": "x",
-      "authorName": "mojesko",
-      "authorHandle": "@mojeskoqq",
-      "createdAt": "2026-09-10T08:57:55.000Z",
-      "importedAt": "2026-09-16T12:45:03.419Z",
-      "tags": [
-        "Midjourney",
-        "Seedance",
-        "Kling",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Midjourney",
-        "Seedance",
-        "Kling",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 96,
-        "reposts": 4,
-        "replies": 5,
-        "quotes": 1,
-        "bookmarks": 66,
-        "views": 25679,
-        "score": 465
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unreleased film teaser or pure AI. The algorithm-breaking blueprint: > The Hook: Dark cinematic depth with high-contrast studio lighting. > The Twist: Unbroken 24-second tracking shot with natural camera shake and zero distortion. > The Payoff: Story-driven visual density that locks viewer retention to the final frame. The precise toolchain under the hood: 1. Claude 3.5 Sonnet structured the 7-term physics prompt and 8-second beat intervals. 2. Midjourney v6.1 established the hyper-consistent character and lighting style. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 24-second continuous camera motion and physics. 4. ElevenLabs spatialized the raw low-frequency ambient sound and environment foley. 5. CapCut Pro finalized the vertical crop, cinematic motion blur, and rapid export. Legacy film studios need 60-person crews, location permits, and months of post-production. He rendered 100% pure viral engagement before his morning coffee got cold. Save this breakdown. The complete 7-term prompt formula and guide are pinned below."
     },
     {
       "id": "x-public-2084833267719799061",
@@ -15191,7 +15278,7 @@
       "authorName": "mojesko",
       "authorHandle": "@mojeskoqq",
       "createdAt": "2026-09-09T10:52:30.000Z",
-      "importedAt": "2026-09-16T06:29:56.547Z",
+      "importedAt": "2026-09-16T17:41:20.288Z",
       "tags": [
         "Midjourney",
         "Seedance",
@@ -15217,13 +15304,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 77,
+        "likes": 76,
         "reposts": 2,
         "replies": 11,
         "quotes": 0,
         "bookmarks": 36,
-        "views": 42724,
-        "score": 366
+        "views": 42826,
+        "score": 365
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "HBO AND APPLE SPEND $15,000,000 ON A SINGLE 15-SECOND CINEMATIC TRAILER SHOT. A solo creator generated this 14-second scene for $25 on a laptop. 21.5M views in 18 hours. 110,000+ comments debating if this is $100M CGI or AI. The algorithm-breaking blueprint: > The Hook: Ultra-realistic cinematic lighting and atmospheric depth. > The Twist: Flawless camera motion, natural lens physics, zero distortion. > The Payoff: Studio-grade visual density that tricks the human eye. The precise toolchain under the hood: 1. Claude 3.5 Sonnet mapped the 7-term physics prompt and lighting parameters. 2. Midjourney v6.1 created the hyper-consistent style reference. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 14-second take and lens physics. 4. ElevenLabs generated the spatial audio environment and foley sound FX. 5. CapCut Pro finalized the cinematic color grade, motion blur, and export. Legacy studios need 50-person crews, expensive camera rigs, and weeks of post-production. He rendered 100% viral engagement before his morning coffee got cold. Save this breakdown. The complete prompt formula and guide are linked below."
@@ -18438,18 +18525,470 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2100124589452087593",
+      "title": "个人资料 / 头像 - 双重曝光山峦晨曦人像",
+      "description": "将标准人像转化为融合山间日出与星座飞鸟的艺术双重曝光合成作品。",
+      "prompt": "使用提供的参考图像，将主体人像转化为高分辨率的双重曝光艺术作品。保持女性的面部、表情和姿势与原图一致，但将其服装和背景替换为黎明时分的壮丽山脉。山脉应覆盖着白雪，沐浴在穿透云层的温暖金色阳光中。在右上方天空中叠加一个由星星组成的发光星座鸟（类似凤凰）作为次要元素。添加微妙的颗粒质感和电影级布光，使两张图像无缝融合。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545107548_7qs10m_HSUkLdvbAAAcyqO.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/TiyashiAI/status/2100124589452087593#reversed-0",
+      "sourceType": "community",
+      "authorName": "Tiyashi",
+      "authorHandle": "@TiyashiAI",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.801Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34776",
+      "rawText": "使用提供的参考图像，将主体人像转化为高分辨率的双重曝光艺术作品。保持女性的面部、表情和姿势与原图一致，但将其服装和背景替换为黎明时分的壮丽山脉。山脉应覆盖着白雪，沐浴在穿透云层的温暖金色阳光中。在右上方天空中叠加一个由星星组成的发光星座鸟（类似凤凰）作为次要元素。添加微妙的颗粒质感和电影级布光，使两张图像无缝融合。"
+    },
+    {
+      "id": "community-2100121758799974473",
+      "title": "个人资料 / 头像 - 黄裙镜前自拍",
+      "description": "生成酒店浴室中身穿黄裙女子镜前自拍场景的提示词，重点表现镜面反射、面料质感及暖色顶光。",
+      "prompt": "主题：\n镜中的黄裙\n\n主要主体：\n画面中央，一位年轻女子在铺有大块米色瓷砖的酒店洗手间内，对着大镜子拍摄全身自拍。底部是黑色台面和白色椭圆形洗手盆；左侧是一扇敞开的木门；顶部可见宽阔的天花板和镜框边缘。\n\n人物与表情：\n深棕色卷发自然垂至胸前以下，半扎发型，额前有薄刘海，鬓角有碎发。大眼睛呈棕色，画着细眼线，脸颊透着柔和玫瑰红晕，嘴唇呈光泽粉色。面部正对镜子，神情平静，右手持智能手机遮挡住右半张脸。\n\n服装与姿势：\n身着鲜艳的淡黄色抹胸迷你连衣裙。水平领口设计，从躯干到腰部有细腻褶皱，左胯处有深斜开衩，长布料下摆自然垂落。右手持银色智能手机置于脸前，左手轻捏大腿旁的裙摆，右膝微微向内收拢。\n\n背景与光线：\n现代风格洗手间背景，由中央光泽米色瓷砖、左侧深色木材和前景黑色石质洗手盆组成。上方筒灯作为主光源，柔和暖光均匀洒落，在肩部和黄色面料上形成平滑高光。\n\n构图与相机：\n3:4 竖幅构图，相机水平放置于镜子正前方，以标准手机角度从头顶到大腿中部居中取景。人物周围保留宽阔的瓷砖墙面留白，底部边缘裁切洗手盆。焦点清晰对准镜中人物，景深较深，背景细节可辨。\n\n纹理与风格：\n照片级写实真人摄影。展现酒店内自然的镜前自拍，细致描绘柔软肌肤、卷发、黄色弹力面料上的细微皱纹与褶皱、镜面及瓷砖反射，以及金属水龙头的细节。\n\n负面提示：\n改变裙子颜色、肩带或开衩；用手机完全遮挡面部。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545101231_smhqcy_HSBw2e8aYAAeSYU.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2100121758799974473",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34764",
+      "rawText": "主题：\n镜中的黄裙\n\n主要主体：\n画面中央，一位年轻女子在铺有大块米色瓷砖的酒店洗手间内，对着大镜子拍摄全身自拍。底部是黑色台面和白色椭圆形洗手盆；左侧是一扇敞开的木门；顶部可见宽阔的天花板和镜框边缘。\n\n人物与表情：\n深棕色卷发自然垂至胸前以下，半扎发型，额前有薄刘海，鬓角有碎发。大眼睛呈棕色，画着细眼线，脸颊透着柔和玫瑰红晕，嘴唇呈光泽粉色。面部正对镜子，神情平静，右手持智能手机遮挡住右半张脸。\n\n服装与姿势：\n身着鲜艳的淡黄色抹胸迷你连衣裙。水平领口设计，从躯干到腰部有细腻褶皱，左胯处有深斜开衩，长布料下摆自然垂落。右手持银色智能手机置于脸前，左手轻捏大腿旁的裙摆，右膝微微向内收拢。\n\n背景与光线：\n现代风格洗手间背景，由中央光泽米色瓷砖、左侧深色木材和前景黑色石质洗手盆组成。上方筒灯作为主光源，柔和暖光均匀洒落，在肩部和黄色面料上形成平滑高光。\n\n构图与相机：\n3:4 竖幅构图，相机水平放置于镜子正前方，以标准手机角度从头顶到大腿中部居中取景。人物周围保留宽阔的瓷砖墙面留白，底部边缘裁切洗手盆。焦点清晰对准镜中人物，景深较深，背景细节可辨。\n\n纹理与风格：\n照片级写实真人摄影。展现酒店内自然的镜前自拍，细致描绘柔软肌肤、卷发、黄色弹力面料上的细微皱纹与褶皱、镜面及瓷砖反射，以及金属水龙头的细节。\n\n负面提示：\n改变裙子颜色、肩带或开衩；用手机完全遮挡面部。"
+    },
+    {
+      "id": "community-2100089744646668403",
+      "title": "个人资料 / 头像 - 温馨居家肖像提示词",
+      "description": "一个高度细节化的写实提示词，用于生成一位女性在沙发上放松的亲密生活方式肖像，重点在于织物纹理、自然光线和休闲优雅感。",
+      "prompt": "一幅柔和亲密的写实生活方式肖像，描绘了一位成年东亚女性放松地坐在浅米色布艺沙发上，采用垂直 2:3 画幅构图。相机位置略高于她的视线水平并靠近沙发，营造出自然的四分之三侧面肖像，包含头部、上半身、手臂、腰部以及部分大腿上部。\n\n她拥有精致柔和的椭圆形脸庞，窄而自然的下颌线，光滑白皙的皮肤带有温和的暖粉色调，深色的杏眼，细而自然的直眉，小巧精致的鼻子，以及轮廓柔和的珊瑚粉色嘴唇。她的妆容清新低调：轻薄的肤色底妆，眼下淡淡的桃色腮红，柔和勾勒的上睫毛，隐约的棕色眼线，以及薄薄一层自然唇蜜。她直视镜头，神情平静略带羞涩，嘴角带着含蓄的抿嘴微笑。\n\n她光泽感的蓝黑色头发扎成松散的低马尾，垂在左肩后方。长直的刘海掠过眉毛，部分框住眼睛，两缕较长的修饰脸型的发丝自然地搭在脸颊上。头顶和太阳穴周围可见细微的碎发和婴儿毛发。头发具有真实的重量感、轻微的凌乱感，单根发丝捕捉着柔和的室内光线。\n\n她身穿一件宽松挺括的燕麦色亚麻纽扣衬衫，风格随意休闲。敞开的领口轻轻滑落双肩，露出锁骨，同时衬衫自然垂坠覆盖躯干。袖子较长且略显褶皱，肘部和袖口处有逼真的折痕。衬衫下隐约可见柔软的奶油色修身居家短裤。一只手腕上戴着简约抛光的银色手镯；指甲短小整洁，涂有半透明的自然粉色。\n\n她的身体斜倚在沙发上。一只肘部靠在隆起的沙发垫上，手松弛地弯曲在脸颊和下颌旁。另一只前臂水平横放在身前的垫子上，手指自然放松。一条弯曲的大腿进入右下角前景，强化了近距离、非正式的坐姿。她的肩膀保持放松，头部微微向支撑的手倾斜。\n\n前景主要是一个巨大的圆形米色沙发垫，可见编织面料纹理和她手臂下方的轻微压缩痕迹。身后随意摆放着蓝白相间的靠垫：一个带有窄海军蓝条纹，另一个带有靛蓝色植物和几何图案。背景是一面简单的淡薰衣草白色墙壁，画面顶部边缘隐约可见一幅温暖木质画框艺术作品的下缘。公寓环境感觉安静、整洁、舒适，充满自然的生活气息。\n\n柔和漫射的室内日光从相机左侧射入，产生明亮奶油般的曝光效果，下巴和头发下方形成细腻的阴影，白墙上投射出淡淡的粉紫色光晕。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545100730_livlvg_HSUDZc-bUAAGLc_.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Andy4aicreate/status/2100089744646668403",
+      "sourceType": "community",
+      "authorName": "Andy",
+      "authorHandle": "@Andy4aicreate",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34766",
+      "rawText": "一幅柔和亲密的写实生活方式肖像，描绘了一位成年东亚女性放松地坐在浅米色布艺沙发上，采用垂直 2:3 画幅构图。相机位置略高于她的视线水平并靠近沙发，营造出自然的四分之三侧面肖像，包含头部、上半身、手臂、腰部以及部分大腿上部。\n\n她拥有精致柔和的椭圆形脸庞，窄而自然的下颌线，光滑白皙的皮肤带有温和的暖粉色调，深色的杏眼，细而自然的直眉，小巧精致的鼻子，以及轮廓柔和的珊瑚粉色嘴唇。她的妆容清新低调：轻薄的肤色底妆，眼下淡淡的桃色腮红，柔和勾勒的上睫毛，隐约的棕色眼线，以及薄薄一层自然唇蜜。她直视镜头，神情平静略带羞涩，嘴角带着含蓄的抿嘴微笑。\n\n她光泽感的蓝黑色头发扎成松散的低马尾，垂在左肩后方。长直的刘海掠过眉毛，部分框住眼睛，两缕较长的修饰脸型的发丝自然地搭在脸颊上。头顶和太阳穴周围可见细微的碎发和婴儿毛发。头发具有真实的重量感、轻微的凌乱感，单根发丝捕捉着柔和的室内光线。\n\n她身穿一件宽松挺括的燕麦色亚麻纽扣衬衫，风格随意休闲。敞开的领口轻轻滑落双肩，露出锁骨，同时衬衫自然垂坠覆盖躯干。袖子较长且略显褶皱，肘部和袖口处有逼真的折痕。衬衫下隐约可见柔软的奶油色修身居家短裤。一只手腕上戴着简约抛光的银色手镯；指甲短小整洁，涂有半透明的自然粉色。\n\n她的身体斜倚在沙发上。一只肘部靠在隆起的沙发垫上，手松弛地弯曲在脸颊和下颌旁。另一只前臂水平横放在身前的垫子上，手指自然放松。一条弯曲的大腿进入右下角前景，强化了近距离、非正式的坐姿。她的肩膀保持放松，头部微微向支撑的手倾斜。\n\n前景主要是一个巨大的圆形米色沙发垫，可见编织面料纹理和她手臂下方的轻微压缩痕迹。身后随意摆放着蓝白相间的靠垫：一个带有窄海军蓝条纹，另一个带有靛蓝色植物和几何图案。背景是一面简单的淡薰衣草白色墙壁，画面顶部边缘隐约可见一幅温暖木质画框艺术作品的下缘。公寓环境感觉安静、整洁、舒适，充满自然的生活气息。\n\n柔和漫射的室内日光从相机左侧射入，产生明亮奶油般的曝光效果，下巴和头发下方形成细腻的阴影，白墙上投射出淡淡的粉紫色光晕。"
+    },
+    {
+      "id": "community-2100064633839030572",
+      "title": "个人资料 / 头像 - 黑发窗边白椅人像摄影",
+      "description": "一个用于生成写实图像的结构化提示词，描绘了一位年轻女子坐在窗边的白色椅子上，重点突出黑色波波头、灰色吊带背心以及柔和的自然光线。",
+      "prompt": "主题：\n白椅上的黑发\n\n主体描述：\n画面中央，一位年轻女子坐在白色木质扶手椅上，双膝蜷起抱于胸前。左侧有一张铺着蕾丝桌布的小桌子，上面放着一盆绿植；右后方是一个白色柜子，摆放着插有白色和淡粉色花朵的花瓶，以及一幅装裱好的照片，营造出宁静的室内氛围。\n\n人物与表情：\n光泽感十足的黑色波波头，发梢在下巴高度向外微翘，厚重的齐刘海位于眼睛上方，深棕色眼眸略带锐利感，眼妆淡雅，脸颊呈淡淡的玫瑰色，嘴唇湿润粉嫩。面部朝前，略微向右倾斜，以平静、沉稳的神情注视着镜头。\n\n服装与姿态：\n身穿灰色罗纹吊带背心，配有细黑色肩带和饰边，胸前有黑色小纽扣，下身穿着黑色背带裤，一件白色长袖衬衫松垮地挂在肩上垂至手臂，脚穿细黑带高跟鞋。双膝高高叠起，左手搭在上方的膝盖上。\n\n背景与光线：\n浅色调的卧室风格空间，配有白色和灰色家具、柔软织物及花卉。柔和的自然日光从左侧窗户斜射进来，明亮地照亮面部和腿部，在右侧投下淡淡的阴影。背景中的花卉和家具呈现微妙的虚化效果。\n\n构图与相机：\n3:4 竖幅构图，从略高于正面的视角捕捉包括椅子在内的全身画面。将人物置于中心并占据较大比例，使膝盖成为主要的前景形状，画面中包含椅子的扶手和椅脚。焦点集中在眼睛和面部，背景采用浅景深处理。\n\n质感与风格：\n写实风格的真人摄影作品。高清展现黑发的光泽、自然的皮肤质感、罗纹面料、白衬衫上的细微褶皱，以及椅子的漆面和坐垫细节，整体色调为静谧的浅灰色。\n\n负面提示：\n改变发型或抱膝坐姿；将白衬衫穿戴整齐。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545101051_49vuqw_HSBtPgLawAANkSX.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2100064633839030572",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34763",
+      "rawText": "主题：\n白椅上的黑发\n\n主体描述：\n画面中央，一位年轻女子坐在白色木质扶手椅上，双膝蜷起抱于胸前。左侧有一张铺着蕾丝桌布的小桌子，上面放着一盆绿植；右后方是一个白色柜子，摆放着插有白色和淡粉色花朵的花瓶，以及一幅装裱好的照片，营造出宁静的室内氛围。\n\n人物与表情：\n光泽感十足的黑色波波头，发梢在下巴高度向外微翘，厚重的齐刘海位于眼睛上方，深棕色眼眸略带锐利感，眼妆淡雅，脸颊呈淡淡的玫瑰色，嘴唇湿润粉嫩。面部朝前，略微向右倾斜，以平静、沉稳的神情注视着镜头。\n\n服装与姿态：\n身穿灰色罗纹吊带背心，配有细黑色肩带和饰边，胸前有黑色小纽扣，下身穿着黑色背带裤，一件白色长袖衬衫松垮地挂在肩上垂至手臂，脚穿细黑带高跟鞋。双膝高高叠起，左手搭在上方的膝盖上。\n\n背景与光线：\n浅色调的卧室风格空间，配有白色和灰色家具、柔软织物及花卉。柔和的自然日光从左侧窗户斜射进来，明亮地照亮面部和腿部，在右侧投下淡淡的阴影。背景中的花卉和家具呈现微妙的虚化效果。\n\n构图与相机：\n3:4 竖幅构图，从略高于正面的视角捕捉包括椅子在内的全身画面。将人物置于中心并占据较大比例，使膝盖成为主要的前景形状，画面中包含椅子的扶手和椅脚。焦点集中在眼睛和面部，背景采用浅景深处理。\n\n质感与风格：\n写实风格的真人摄影作品。高清展现黑发的光泽、自然的皮肤质感、罗纹面料、白衬衫上的细微褶皱，以及椅子的漆面和坐垫细节，整体色调为静谧的浅灰色。\n\n负面提示：\n改变发型或抱膝坐姿；将白衬衫穿戴整齐。"
+    },
+    {
+      "id": "community-2100126303534072187",
+      "title": "社交媒体帖子 - 复古胶片摄影：奔跑的女性",
+      "description": "生成一张复古风格照片的提示词，画面中一位亚洲女性手持玫瑰在田野中奔跑，具有特定的服装搭配和胶片颗粒美学。",
+      "prompt": "一位年轻的亚洲女性以侧影姿态优雅地穿过开阔的草地，手中握着一束长茎红玫瑰。她身穿复古风格的服装，包括一件亮黄色长袖纽扣衬衫、一条深红色及膝 A 字裙、配套的红色高筒袜、黄色圆头高跟鞋，长发呈深色波浪状飘逸，头上系着黄色头巾/方巾，并佩戴醒目的黄色圆形夸张耳环。图像呈现出 1980 年代或 1990 年代的复古胶片摄影美学，色彩对比丰富，户外自然光线柔和，背景为情绪化的深绿色田野，并带有细腻的胶片颗粒感。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545095146_2qrnmy_HSUlvEDbYAE4OOK.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/chatgptpaglu/status/2100126303534072187",
+      "sourceType": "community",
+      "authorName": "yusra.",
+      "authorHandle": "@chatgptpaglu",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34754",
+      "rawText": "一位年轻的亚洲女性以侧影姿态优雅地穿过开阔的草地，手中握着一束长茎红玫瑰。她身穿复古风格的服装，包括一件亮黄色长袖纽扣衬衫、一条深红色及膝 A 字裙、配套的红色高筒袜、黄色圆头高跟鞋，长发呈深色波浪状飘逸，头上系着黄色头巾/方巾，并佩戴醒目的黄色圆形夸张耳环。图像呈现出 1980 年代或 1990 年代的复古胶片摄影美学，色彩对比丰富，户外自然光线柔和，背景为情绪化的深绿色田野，并带有细腻的胶片颗粒感。"
+    },
+    {
+      "id": "community-2100088791751135719",
+      "title": "社交媒体帖子 - GPT Image 2 海边咖啡馆人像提示词",
+      "description": "用于生成年轻女性在海边咖啡馆中逼真肖像的详细提示词，具有自然光线和夏日氛围。",
+      "prompt": "主题：\n海边咖啡馆的阳光\n\n主体：\n画面中央，一位年轻女性位于面向大海的质朴木质咖啡馆露台上，双手放在前景的木长椅上，上半身向镜头前倾。左侧远景是波光粼粼的蓝色大海和沙滩；头顶上方有竹制茅草屋顶和藤编灯具；右侧远景是木质柜台和椅子。\n\n人物与表情：\n浅棕色头发垂至右肩并延伸至胸前，稀疏的刘海轻触眼睛，大而明亮的棕色眼睛，长睫毛，淡桃色脸颊，丰满光泽的粉色嘴唇。脸部微微向左倾斜，以柔和的表情注视镜头，同时抬起右肩。\n\n服装与姿势：\n天然色罗纹针织上衣，配有细肩带和前扣，从左侧胸部到下摆呈不对称开口设计。搭配天然色系抽绳短裤。臀部向后推，上半身前倾，双臂伸直支撑在长椅上。\n\n背景与光线：\n背景右侧为深色木质家具和白色灰泥墙，左侧连接热带植物和蓝色大海，构成海边咖啡馆场景。正午强烈的自然光从左后方海面方向射入作为主光源，在头发和肩膀上形成明亮的轮廓光，面部有柔和的反射光，地面投下清晰的阴影。\n\n构图与相机：\n3:4 竖幅构图，广角相机位于接近胸部高度，捕捉从头部到大腿的上半身。人物居中，左侧远景保留大海，右侧远景保留咖啡馆，形成对角线布局，手部在底部边缘被裁剪。面部清晰对焦，背景采用中等景深。\n\n纹理与风格：\n逼真的写实照片风格。细致渲染海风中飘动的发丝、受阳光照射的皮肤、天然罗纹针织质感、陈旧木材纹理、海面强烈反光，以及蓝色与暖色调交织的鲜明夏日色彩。\n\n负面提示：\n改为无海的室内场景；改变前开式天然色上衣及前倾姿势",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545099597_c31ynk_HSBvHmra0AEpnmM.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2100088791751135719",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "GPT Image 2",
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34761",
+      "rawText": "主题：\n海边咖啡馆的阳光\n\n主体：\n画面中央，一位年轻女性位于面向大海的质朴木质咖啡馆露台上，双手放在前景的木长椅上，上半身向镜头前倾。左侧远景是波光粼粼的蓝色大海和沙滩；头顶上方有竹制茅草屋顶和藤编灯具；右侧远景是木质柜台和椅子。\n\n人物与表情：\n浅棕色头发垂至右肩并延伸至胸前，稀疏的刘海轻触眼睛，大而明亮的棕色眼睛，长睫毛，淡桃色脸颊，丰满光泽的粉色嘴唇。脸部微微向左倾斜，以柔和的表情注视镜头，同时抬起右肩。\n\n服装与姿势：\n天然色罗纹针织上衣，配有细肩带和前扣，从左侧胸部到下摆呈不对称开口设计。搭配天然色系抽绳短裤。臀部向后推，上半身前倾，双臂伸直支撑在长椅上。\n\n背景与光线：\n背景右侧为深色木质家具和白色灰泥墙，左侧连接热带植物和蓝色大海，构成海边咖啡馆场景。正午强烈的自然光从左后方海面方向射入作为主光源，在头发和肩膀上形成明亮的轮廓光，面部有柔和的反射光，地面投下清晰的阴影。\n\n构图与相机：\n3:4 竖幅构图，广角相机位于接近胸部高度，捕捉从头部到大腿的上半身。人物居中，左侧远景保留大海，右侧远景保留咖啡馆，形成对角线布局，手部在底部边缘被裁剪。面部清晰对焦，背景采用中等景深。\n\n纹理与风格：\n逼真的写实照片风格。细致渲染海风中飘动的发丝、受阳光照射的皮肤、天然罗纹针织质感、陈旧木材纹理、海面强烈反光，以及蓝色与暖色调交织的鲜明夏日色彩。\n\n负面提示：\n改为无海的室内场景；改变前开式天然色上衣及前倾姿势"
+    },
+    {
+      "id": "community-2100082691375071525",
+      "title": "社交媒体帖子 - 夜间闪光灯牡丹花束",
+      "description": "一个用于生成夜间抓拍照片的提示词，画面中女孩手持巨大牡丹花束站在汽车旁，采用直射闪光灯拍摄。",
+      "prompt": "保持 100% 相似度：不要改变面部特征、比例、鼻子/嘴唇/眼睛的形状，或头发的颜色和质感。面部必须保持可识别。\n\n一张自发的夜间抓拍，捕捉运动中的瞬间。使用 iPhone 在夜间以直射闪光灯拍摄。呈现随性夜景美学。\n\n姿势：女孩位于画面的右下方。她的头部急剧转向一侧，倾向巨大的花束——由于头部运动导致面部和头发出现运动模糊，目光投向花朵，同时面部仍保持清晰可辨。一只手拿着巨大的 XXL 白色和粉色牡丹花束，另一只手臂向侧面伸展，触碰汽车。\n\n发型：随意盘起，脸颊周围的散发因运动而模糊。\n\n服装：一件宽松的白色 T 恤，穿着随意。\n\n环境：夜间的汽车旁。广阔的黑色夜空占据画面上部的大部分区域。直射内置闪光灯强烈照亮女孩和花束，周围环绕着深邃的阴影，背景陷入黑暗。白色 T 恤和牡丹花瓣上有过曝的闪光灯高光。\n\n复古胶片感：明显的模拟颗粒感，色彩略微褪色，微妙的暗角，温暖的肤色。图像填满整个画面边缘，无白色边框，全出血效果。手持拍摄，构图略有不完美。原始未修图的照片，无润色处理。\n\n--ar 9:16 --raw --style motion 50",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545098487_m933dm_HST-EfBbUAEmjIk.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2100082691375071525",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "9:16",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34759",
+      "rawText": "保持 100% 相似度：不要改变面部特征、比例、鼻子/嘴唇/眼睛的形状，或头发的颜色和质感。面部必须保持可识别。\n\n一张自发的夜间抓拍，捕捉运动中的瞬间。使用 iPhone 在夜间以直射闪光灯拍摄。呈现随性夜景美学。\n\n姿势：女孩位于画面的右下方。她的头部急剧转向一侧，倾向巨大的花束——由于头部运动导致面部和头发出现运动模糊，目光投向花朵，同时面部仍保持清晰可辨。一只手拿着巨大的 XXL 白色和粉色牡丹花束，另一只手臂向侧面伸展，触碰汽车。\n\n发型：随意盘起，脸颊周围的散发因运动而模糊。\n\n服装：一件宽松的白色 T 恤，穿着随意。\n\n环境：夜间的汽车旁。广阔的黑色夜空占据画面上部的大部分区域。直射内置闪光灯强烈照亮女孩和花束，周围环绕着深邃的阴影，背景陷入黑暗。白色 T 恤和牡丹花瓣上有过曝的闪光灯高光。\n\n复古胶片感：明显的模拟颗粒感，色彩略微褪色，微妙的暗角，温暖的肤色。图像填满整个画面边缘，无白色边框，全出血效果。手持拍摄，构图略有不完美。原始未修图的照片，无润色处理。\n\n--ar 9:16 --raw --style motion 50"
+    },
+    {
+      "id": "community-2100037462932475947",
+      "title": "社交媒体帖子 - 迷你猕猴桃岛屿度假村",
+      "description": "一个充满奇思妙想的提示词，将照片转化为主体在巨型猕猴桃内部奢华度假村中放松的场景。",
+      "prompt": "创建一个高度细节化的电影感奇幻微缩世界，构建在一个巨大的半切猕猴桃内部。猕猴桃变成了一座被波光粼粼的水面环绕的微型热带岛屿度假村。顶部有一座美丽的乡村风格竹制茅草屋，挂着写有 \"Kiwi Relax Resort\" 的木牌。一位身穿米色服装的女士正躺在系于小屋的吊床上放松，手中拿着一杯绿色饮品。在她身旁的小木平台上坐着一只杰克罗素梗犬。小屋左侧有一根高大的木制指示牌，列出了五个打勾项：\"Good Day ✓\", \"Good Food ✓\", \"Less Stress ✓\", \"More Sleep ✓\", \"Happy Me ✓\"。在猕猴桃表面的右侧，有一个由猕猴桃汁制成的小游泳池，一把条纹躺椅置于提基伞下，还有一块写着 \"Good Night ♡\" 的黑板标牌。一座木桥连接着各个区域。猕猴桃切片被放置在周围作为桌子或装饰。一道绿色的猕猴桃汁瀑布从猕猴桃边缘倾泻入周围的水中。在前景左下角，有一盏灯笼和一块写着 \"Small Moments Big Happiness ♡\" 的木牌。右下角漂浮着一艘小木船，上面写着 \"Tiny Adventures\"。背景是海面上的日落景象，远处有岛屿点缀。光线温暖，呈现黄金时刻的氛围。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545105687_z2298r_HSTUu-MbIAEU1yN.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Arzoo12sh/status/2100037462932475947#reversed-1",
+      "sourceType": "community",
+      "authorName": "Arzoo Ai",
+      "authorHandle": "@Arzoo12sh",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34771",
+      "rawText": "创建一个高度细节化的电影感奇幻微缩世界，构建在一个巨大的半切猕猴桃内部。猕猴桃变成了一座被波光粼粼的水面环绕的微型热带岛屿度假村。顶部有一座美丽的乡村风格竹制茅草屋，挂着写有 \"Kiwi Relax Resort\" 的木牌。一位身穿米色服装的女士正躺在系于小屋的吊床上放松，手中拿着一杯绿色饮品。在她身旁的小木平台上坐着一只杰克罗素梗犬。小屋左侧有一根高大的木制指示牌，列出了五个打勾项：\"Good Day ✓\", \"Good Food ✓\", \"Less Stress ✓\", \"More Sleep ✓\", \"Happy Me ✓\"。在猕猴桃表面的右侧，有一个由猕猴桃汁制成的小游泳池，一把条纹躺椅置于提基伞下，还有一块写着 \"Good Night ♡\" 的黑板标牌。一座木桥连接着各个区域。猕猴桃切片被放置在周围作为桌子或装饰。一道绿色的猕猴桃汁瀑布从猕猴桃边缘倾泻入周围的水中。在前景左下角，有一盏灯笼和一块写着 \"Small Moments Big Happiness ♡\" 的木牌。右下角漂浮着一艘小木船，上面写着 \"Tiny Adventures\"。背景是海面上的日落景象，远处有岛屿点缀。光线温暖，呈现黄金时刻的氛围。"
+    },
+    {
+      "id": "community-2099887480526823929",
+      "title": "个人资料 / 头像 - 手工纸插画",
+      "description": "一个用于将上传的照片转换为极简高端手工纸插画的提示词，具有严格的格式要求和身份保留功能。",
+      "prompt": "生成前请上传一张或多张照片。\n\n主提示词\n将每张上传的照片转换为极简高端手工纸插画，仅将其作为身份、姿势、比例、服装、配饰、颜色和可识别细节的唯一参考。\n仅创建插画。不包含原始照片或摄影部分。\n\n格式锁定 — 不可协商\n严格垂直 3:4 比例。\n单幅全画幅极简编辑风格艺术作品。\n主体小、居中且克制，占据画布的 10–20%，留有大量负空间。\n\n身份与参考锁定\n保留：\n面部身份和结构、脸型与发型、肤色、身体比例、服装与配饰、姿势或手势、重要物体、主导颜色、整体视觉特征\n保持主体立即 recognizable（可识别）。不要改变身份、解剖结构、发型、服装，或添加无关元素。\n\n下半部分 — 极简手绘纸插画\n创建一个小型、居中、高度可识别的手工插画。\n在保留基本特征的同时进行激进简化。\n使用精致不完美的线条、极简的表现性线条、少量丙烯风格的平涂色块、可见的笔触痕迹、不规则的有机边缘、微妙的颜料变化、触觉纸张纤维以及自然的手工瑕疵。\n它必须看起来像是在纹理纸上物理绘制和绘画而成，而非数字生成。\n\n背景\n极简粗糙白色、温暖米白色或带有微妙纤维和颗粒感的浅色天然纸张。\n保持极度空旷。仅允许少量极简线条或形状暗示原始环境。\n无详细或装饰性背景。\n\n色彩系统\n从照片中提取颜色。\n最多使用四种主色。\n保持调色板克制、精致、和谐，并与照片紧密相连。\n使用带有纸张纹理、干刷质感和颜料变化的平涂丙烯风格色块。\n\n构图与负空间\n将插画精确居中，比例为 10–20%。\n周围留有大量负空间。\n氛围：安静、诗意、精致、奢华、编辑风格、深思熟虑、优雅、极简、高端。\n\n排版 — 严格禁止\n零文本。\n无单词、字母、数字、标题、说明、标签、日期、标志、签名、水印或可读符号。\n视觉语言\n安静、诗意、精致、极简、纯真、放松、艺术、深思熟虑、优雅、可识别、高端。\n\n输出风格\n高端当代编辑风格 / 现代艺术书籍插画。\n触觉手工纸、手绘艺术作品、精致的视觉叙事。\n无数字矢量美学。\n\n最终结果\n仅有一张小型、居中、高度可识别的手工纸插画，源自上传的照片，周围环绕着大量纹理纸张负空间。\n最多四种颜色。无照片。无摄影部分。无文本。\n\n负面提示词\n无照片、摄影部分、分屏、上半部分、拼贴、多张图片、sec",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545096162_2iz1s9_HSRMhM9XgAA5NKa.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/visualaiclub/status/2099887480526823929",
+      "sourceType": "community",
+      "authorName": "Visual AI Club",
+      "authorHandle": "@visualaiclub",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34757",
+      "rawText": "生成前请上传一张或多张照片。\n\n主提示词\n将每张上传的照片转换为极简高端手工纸插画，仅将其作为身份、姿势、比例、服装、配饰、颜色和可识别细节的唯一参考。\n仅创建插画。不包含原始照片或摄影部分。\n\n格式锁定 — 不可协商\n严格垂直 3:4 比例。\n单幅全画幅极简编辑风格艺术作品。\n主体小、居中且克制，占据画布的 10–20%，留有大量负空间。\n\n身份与参考锁定\n保留：\n面部身份和结构、脸型与发型、肤色、身体比例、服装与配饰、姿势或手势、重要物体、主导颜色、整体视觉特征\n保持主体立即 recognizable（可识别）。不要改变身份、解剖结构、发型、服装，或添加无关元素。\n\n下半部分 — 极简手绘纸插画\n创建一个小型、居中、高度可识别的手工插画。\n在保留基本特征的同时进行激进简化。\n使用精致不完美的线条、极简的表现性线条、少量丙烯风格的平涂色块、可见的笔触痕迹、不规则的有机边缘、微妙的颜料变化、触觉纸张纤维以及自然的手工瑕疵。\n它必须看起来像是在纹理纸上物理绘制和绘画而成，而非数字生成。\n\n背景\n极简粗糙白色、温暖米白色或带有微妙纤维和颗粒感的浅色天然纸张。\n保持极度空旷。仅允许少量极简线条或形状暗示原始环境。\n无详细或装饰性背景。\n\n色彩系统\n从照片中提取颜色。\n最多使用四种主色。\n保持调色板克制、精致、和谐，并与照片紧密相连。\n使用带有纸张纹理、干刷质感和颜料变化的平涂丙烯风格色块。\n\n构图与负空间\n将插画精确居中，比例为 10–20%。\n周围留有大量负空间。\n氛围：安静、诗意、精致、奢华、编辑风格、深思熟虑、优雅、极简、高端。\n\n排版 — 严格禁止\n零文本。\n无单词、字母、数字、标题、说明、标签、日期、标志、签名、水印或可读符号。\n视觉语言\n安静、诗意、精致、极简、纯真、放松、艺术、深思熟虑、优雅、可识别、高端。\n\n输出风格\n高端当代编辑风格 / 现代艺术书籍插画。\n触觉手工纸、手绘艺术作品、精致的视觉叙事。\n无数字矢量美学。\n\n最终结果\n仅有一张小型、居中、高度可识别的手工纸插画，源自上传的照片，周围环绕着大量纹理纸张负空间。\n最多四种颜色。无照片。无摄影部分。无文本。\n\n负面提示词\n无照片、摄影部分、分屏、上半部分、拼贴、多张图片、sec"
+    },
+    {
+      "id": "community-2099887409257177093",
+      "title": "个人资料 / 头像 - 蒙马特漫画肖像",
+      "description": "用于生成电影级写实肖像的提示词，描绘一个人在蒙马特手持画板，画板上是其夸张的漫画像。",
+      "prompt": "使用上传的人像照片作为主要身份参考。尽可能准确地保留人物可识别的面部特征，包括脸型、显性年龄、发际线或发型、眉毛、眼型、鼻子、嘴巴、下颌线、花白胡须图案、肤色、表情以及整体个性特征。\n\n在巴黎蒙马特一个安静迷人的角落，创建一个电影级、写实的 4:3 比例肖像场景。展示与上传照片中相同的人物，坐在或站在一条宁静旅游街道上的经典巴黎咖啡馆外。场景应呈现出真实的蒙马特氛围，包含鹅卵石街道、古老的奶油色建筑、咖啡椅、红色咖啡遮阳篷、柔和的日光、艺术街头气息，以及背景中隐约可见的圣心大教堂（Sacré-Cœur）。\n\n人物应在画面中清晰可见，并以写实风格拍摄，穿着简单的深色衬衫或夹克。他身旁拿着一块大的白色画板，面向镜头。\n\n纸上绘有同一人物的夸张法国街头漫画，采用蒙马特旅游艺术家经典的旧式风格绘制。漫画应呈现为在白纸上使用黑色墨水或钢笔线条手绘的效果。它应当被戏剧性地夸张和幽默化，同时保持清晰可辨为同一个人物。\n\n戏剧性地突出面部特征：过大或形状奇特的鼻子、夸张的下颌线、放大的耳朵、富有表现力的眉毛、扭曲的面部比例、宽阔顽皮的微笑、强烈强调的胡须形状，以及俏皮、极致的表情。保持漫画迷人、有趣且具有艺术感，而非怪诞。\n\n重要提示：在单张图片中清晰展示两个版本：\n\n真实、写实的人物\n纸上同一人物的漫画绘图\n\n使用逼真的光照、干净的构图、高细节、自然的皮肤纹理、可信的手持纸张动作、平静的背景，以及俏皮的复古巴黎旅游纪念品氛围。\n\n宽高比：4:3。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545094907_gtbdav_HSRMcsRWsAA2RVh.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Shinebynous/status/2099887409257177093",
+      "sourceType": "community",
+      "authorName": "Shine by Nous ✨",
+      "authorHandle": "@Shinebynous",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34753",
+      "rawText": "使用上传的人像照片作为主要身份参考。尽可能准确地保留人物可识别的面部特征，包括脸型、显性年龄、发际线或发型、眉毛、眼型、鼻子、嘴巴、下颌线、花白胡须图案、肤色、表情以及整体个性特征。\n\n在巴黎蒙马特一个安静迷人的角落，创建一个电影级、写实的 4:3 比例肖像场景。展示与上传照片中相同的人物，坐在或站在一条宁静旅游街道上的经典巴黎咖啡馆外。场景应呈现出真实的蒙马特氛围，包含鹅卵石街道、古老的奶油色建筑、咖啡椅、红色咖啡遮阳篷、柔和的日光、艺术街头气息，以及背景中隐约可见的圣心大教堂（Sacré-Cœur）。\n\n人物应在画面中清晰可见，并以写实风格拍摄，穿着简单的深色衬衫或夹克。他身旁拿着一块大的白色画板，面向镜头。\n\n纸上绘有同一人物的夸张法国街头漫画，采用蒙马特旅游艺术家经典的旧式风格绘制。漫画应呈现为在白纸上使用黑色墨水或钢笔线条手绘的效果。它应当被戏剧性地夸张和幽默化，同时保持清晰可辨为同一个人物。\n\n戏剧性地突出面部特征：过大或形状奇特的鼻子、夸张的下颌线、放大的耳朵、富有表现力的眉毛、扭曲的面部比例、宽阔顽皮的微笑、强烈强调的胡须形状，以及俏皮、极致的表情。保持漫画迷人、有趣且具有艺术感，而非怪诞。\n\n重要提示：在单张图片中清晰展示两个版本：\n\n真实、写实的人物\n纸上同一人物的漫画绘图\n\n使用逼真的光照、干净的构图、高细节、自然的皮肤纹理、可信的手持纸张动作、平静的背景，以及俏皮的复古巴黎旅游纪念品氛围。\n\n宽高比：4:3。"
+    },
+    {
+      "id": "community-2099860408752599328",
+      "title": "个人资料 / 头像 - 双联肖像画",
+      "description": "一个将单张照片转化为时尚双联画的提示词，通过装饰性植物边框展现“柔和”与“大胆”两种对比情绪。",
+      "prompt": "使用提供的参考图像作为角色基础，生成一幅横向双联肖像画。请严格保留主体的身份、面部特征以及标志性的银色 jhumka 耳环，确保其与参考图像完全一致。\n\n布局：采用分割构图，中间有一条细垂直分隔线区分两个面板。整个画布背景为纹理米色纸张，边缘饰有手绘黑色墨水植物藤蔓插图，环绕在两个面板的外侧。\n\n左侧面板（柔和情绪）：描绘主体身穿带有精致蓝色花卉刺绣的白色 kurta。她用手托着下巴，目光向右上方凝视。背景是一面温暖的尘粉色墙壁，左侧有柔和的窗光射入。\n\n右侧面板（大胆情绪）：描绘主体身穿结构感强的黑色西装外套，内搭黑色上衣。她神情自信，目光向右上方凝视。背景为冷色调的石板蓝摄影棚设置，头部后方有一个大型柔和的圆形聚光灯效果。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545104724_1cvtje_HSQz6FGaEAAURpy.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/b0BRude/status/2099860408752599328#reversed-0",
+      "sourceType": "community",
+      "authorName": "boB",
+      "authorHandle": "@b0BRude",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34769",
+      "rawText": "使用提供的参考图像作为角色基础，生成一幅横向双联肖像画。请严格保留主体的身份、面部特征以及标志性的银色 jhumka 耳环，确保其与参考图像完全一致。\n\n布局：采用分割构图，中间有一条细垂直分隔线区分两个面板。整个画布背景为纹理米色纸张，边缘饰有手绘黑色墨水植物藤蔓插图，环绕在两个面板的外侧。\n\n左侧面板（柔和情绪）：描绘主体身穿带有精致蓝色花卉刺绣的白色 kurta。她用手托着下巴，目光向右上方凝视。背景是一面温暖的尘粉色墙壁，左侧有柔和的窗光射入。\n\n右侧面板（大胆情绪）：描绘主体身穿结构感强的黑色西装外套，内搭黑色上衣。她神情自信，目光向右上方凝视。背景为冷色调的石板蓝摄影棚设置，头部后方有一个大型柔和的圆形聚光灯效果。"
+    },
+    {
       "id": "community-2099758539665490371",
       "title": "个人资料 / 头像 - 写实专业头像提示词",
       "description": "为 GPT Image 2（即 GPT2/ChatGPT 网页版）设计的高度详细提示词，用于生成具有特定光照、背景和纹理指令的逼真自然的专业头像。",
       "prompt": "基于输入照片生成一个真实、自然且亲切的专业头像，高度保持身份一致性、面部比例、脸型、发际线、年龄感及原始性别表达，不改变外貌特征。采用 1:1 正方形构图，取景于胸部以上，运用非对称视觉平衡：人物略微偏右，头顶保留约 18% 的画面高度，左侧和左上方形成主要负空间，避免证件照式的居中构图和紧凑裁剪。肩部线条自然，头部轻微倾斜，直视镜头，表情放松、自信、友好，可带有自然的微笑或露齿笑容。\n\n服装采用简单的深色圆领或极简风格上衣，根据人物原有风格自然适配；女性保留自然发型、妆容和适度饰品，男性保留胡茬、发型等真实特征，避免刻板印象化的性别造型。背景为真实的暖色调墙面：顶部为低亮度的红棕色/焦糖色暖灰，中部为灰米色杏子色，底部为奶油米白色，通过自然的光线衰减、墙面反射和轻微暗角形成非线性垂直渐变；添加细微、低振幅的高频随机颗粒，在暗部区域更为明显，模拟早期数字传感器和轻微的 JPEG 纹理质感。\n\n使用大面积柔和窗光，低光比，低局部对比度，无轮廓光或商业影棚布光效果。肤色保持真实的色调差异和自然血色，女性避免瓷白磨皮效果，男性避免过度强调粗糙纹理；减少高频皮肤细节和清晰度，保留中低频面部结构，使皮肤柔软但真实。整体呈现低饱和度暖调，高光柔和，黑色略微提升，蓝青色减少，展现 2000s–2010s 年代早期数字头像的质感：聪明、可信、放松、自然、亲切，而非现代高端商业肖像风格。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458724142_5nejfp_HSPWs47bYAArT_M.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545099940_jstsvo_HSPWs47bYAArT_M.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/xiaoxiaodong01/status/2099758539665490371",
       "sourceType": "community",
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.283Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -18485,13 +19024,13 @@
       "description": "用于生成一位年轻帅气男士超写实特写肖像的提示词，他留着黑色波浪卷发，身穿炭灰色衬衫并佩戴耳机，采用戏剧性的侧光照明。",
       "prompt": "超写实电影感特写肖像：一位二十岁出头、英俊非凡的年轻男子，拥有一头浓密自然的乌黑波浪卷发，造型蓬松柔和，略带凌乱的侧分刘海；眉毛浓密轮廓分明，深棕色双眸深邃迷人，鼻梁挺直如雕塑，颧骨突出，下颌线锋利阳刚，留有淡淡的自然胡茬。他目光略微向上并向侧面凝视，神情平静、自信且神秘。\n他身穿极简风格的深炭灰色圆领衬衫，一只耳朵佩戴着时尚的单边无线耳机。四分之三侧面视角，头部微微上扬，肩膀放松。戏剧性的单光源侧光在他的额头、颧骨、鼻子和下颌处形成强烈高光，同时让部分面部处于深沉的电影感阴影中。微妙的暖色调肤色与深海军蓝黑色的纹理摄影棚背景形成对比。\n精致阳刚的编辑类摄影风格，情绪化奢华美学，逼真的皮肤质感和毛孔，自然的面部瑕疵，细节丰富的发丝，电影级对比度，柔和的氛围阴影，浅景深，85mm 人像镜头，f/1.8，专业摄影棚拍摄，细微胶片颗粒，HDR，超高细节，照片级真实感，8K 画质，高端时尚大片美学，无文字，无水印，无标志，无夸张肌肉，无塑料感皮肤，无 AI 生成感面孔。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458727808_d47swy_HSOxQ5RaMAApz2H.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545103604_j08z7n_HSOxQ5RaMAApz2H.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/MohdAdnanA86218/status/2099716764380869037",
       "sourceType": "community",
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.284Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "人像",
         "摄影"
@@ -18527,13 +19066,13 @@
       "description": "用于生成逼真电影感男性特写人像的提示词，利用参考图像保持面部一致性，具有戏剧性布光和情绪化氛围。",
       "prompt": "逼真的电影感年轻成年男性特写人像，使用图像作为面部参考以保持自然皮肤质感。他身穿纯色黑色圆领 T 恤和白色无线耳机。低角度拍摄视角，头部和肩部充满画面，眼神略微向上并看向镜头外，表情严肃自信。来自右上方的戏剧性定向光在面部形成强烈高光，并在另一侧投下深邃阴影。深炭蓝色摄影棚背景，情绪化的高对比度氛围，真实的毛孔和胡须细节，眼睛和面部清晰对焦，浅景深，专业编辑级摄影，85mm 人像镜头，f/2 光圈，自然肤色，电影级色彩分级，超精细，照片级真实感，4:5 竖构图。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789458730735_rskbzz_HSOihz6a4AAvM_j.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545103240_774ct1_HSOihz6a4AAvM_j.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/iamsofiaijaz/status/2099700561805197675",
       "sourceType": "community",
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.284Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "人像",
         "摄影"
@@ -18564,6 +19103,47 @@
       "rawText": "逼真的电影感年轻成年男性特写人像，使用图像作为面部参考以保持自然皮肤质感。他身穿纯色黑色圆领 T 恤和白色无线耳机。低角度拍摄视角，头部和肩部充满画面，眼神略微向上并看向镜头外，表情严肃自信。来自右上方的戏剧性定向光在面部形成强烈高光，并在另一侧投下深邃阴影。深炭蓝色摄影棚背景，情绪化的高对比度氛围，真实的毛孔和胡须细节，眼睛和面部清晰对焦，浅景深，专业编辑级摄影，85mm 人像镜头，f/2 光圈，自然肤色，电影级色彩分级，超精细，照片级真实感，4:5 竖构图。"
     },
     {
+      "id": "community-2099698218107883829",
+      "title": "个人资料 / 头像 - 斜射光黑色罗纹人像提示词",
+      "description": "用于生成一位身穿黑色罗纹上衣、在戏剧性斜射光下呈现电影感人像的提示词。",
+      "prompt": "主题：\n斜射光下的黑色罗纹\n\n主要主体：\n垂直构图，成年女性身穿黑色深 V 领罗纹上衣，处于昏暗简洁的室内环境中。人物位于画面中心相对位置。\n\n人物与表情：\n浅棕色直发波波头及肩，配薄刘海。脸型为纤细椭圆轮廓，下巴小巧，棕色眼睛向下看，眉毛自然，鼻梁细挺，嘴唇丰满且带有桃色光泽。脸部转向左下方。神情平静。\n\n服装与姿态：\n黑色细罗纹长袖上衣，胸前呈极深 V 形。细金链上挂有小圆形吊坠。身体略微向屏幕右侧扭转，站立时双肩放松下沉。\n\n背景与光线：\n深茶黑色墙壁。狭窄的暖色调硬斜射光从左侧进入，照射在面部、颈部和胸部，在墙面和脸侧形成大面积浓重阴影。背景主光源为来自屏幕左侧的柔光。\n\n构图与相机：\n2:3 垂直构图，相机以正面斜角拍摄胸部以下的人像。人物位于中右部，阴影向左延伸，取景范围大致从头顶至胸部以下。焦点集中在眼睛、嘴唇、头发和罗纹纹理上。人物占据较大画幅，聚焦于主体，背景轻微虚化。\n\n质感与风格：\n照片级真实感的电影人像。精细渲染自然皮肤纹理、细微发丝、黑色罗纹、金色吊坠、硬斜射光及深邃阴影。\n\n负面提示：\n不要削弱来自左侧的狭窄硬斜射光和深 V 领造型",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545099865_xgc6eg_HR1k9Q9a4AAbRbt.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2099698218107883829",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34762",
+      "rawText": "主题：\n斜射光下的黑色罗纹\n\n主要主体：\n垂直构图，成年女性身穿黑色深 V 领罗纹上衣，处于昏暗简洁的室内环境中。人物位于画面中心相对位置。\n\n人物与表情：\n浅棕色直发波波头及肩，配薄刘海。脸型为纤细椭圆轮廓，下巴小巧，棕色眼睛向下看，眉毛自然，鼻梁细挺，嘴唇丰满且带有桃色光泽。脸部转向左下方。神情平静。\n\n服装与姿态：\n黑色细罗纹长袖上衣，胸前呈极深 V 形。细金链上挂有小圆形吊坠。身体略微向屏幕右侧扭转，站立时双肩放松下沉。\n\n背景与光线：\n深茶黑色墙壁。狭窄的暖色调硬斜射光从左侧进入，照射在面部、颈部和胸部，在墙面和脸侧形成大面积浓重阴影。背景主光源为来自屏幕左侧的柔光。\n\n构图与相机：\n2:3 垂直构图，相机以正面斜角拍摄胸部以下的人像。人物位于中右部，阴影向左延伸，取景范围大致从头顶至胸部以下。焦点集中在眼睛、嘴唇、头发和罗纹纹理上。人物占据较大画幅，聚焦于主体，背景轻微虚化。\n\n质感与风格：\n照片级真实感的电影人像。精细渲染自然皮肤纹理、细微发丝、黑色罗纹、金色吊坠、硬斜射光及深邃阴影。\n\n负面提示：\n不要削弱来自左侧的狭窄硬斜射光和深 V 领造型"
+    },
+    {
       "id": "community-2099695088435888248",
       "title": "个人资料 / 头像 - 雨天咖啡馆人像提示词",
       "description": "使用 GPT Image 2 生成一张写实风格的抓拍人像，描绘一位女性在雨后的下午站在咖啡馆外的场景。",
@@ -18575,7 +19155,7 @@
       "authorName": "Selina",
       "authorHandle": "@selinatasnim1",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.284Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18605,6 +19185,86 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34673",
       "rawText": "一张写实风格的户外抓拍人像，画面中一位年轻女性站在雨后温馨的城市咖啡馆外。她留着深棕色长发，随意地扎成低马尾，几缕柔和的发丝自然地垂落在脸庞两侧。她目光温柔地望向一侧，神情平静而梦幻。\n\n她身穿一件温暖的米色宽松针织毛衣，内搭精致的白色衬衫，下身搭配一条深棕色长款百褶裙。一个深酒红色的单肩包自然地挂在她的肩上。她一手撑着透明雨伞，另一只手轻轻整理着脸颊旁的发丝。\n\n她站在被雨水打湿的咖啡馆步道旁，周围是湿润的路面、翠绿的小植物、透着暖光的咖啡馆窗户、隐约可见的城市建筑以及背景中柔和发光的路灯。雨伞上清晰可见细小的雨滴，温暖灯光的倒影在湿漉漉的地面上闪烁着美丽的光泽。\n\n自然智能手机摄影风格，生活化抓拍美学，柔和的雨日氛围，真实的皮肤质感，细致的发丝纹理，逼真的针织与面料细节，自然的反射效果，浅景深，电影感环境光效，轻微的复古胶片颗粒感，以大地色系为主的柔和色调并点缀咖啡馆暖光，柔和的大气对比度，宁静浪漫的氛围，高度写实，4:5 竖构图。"
+    },
+    {
+      "id": "community-2099682348090417178",
+      "title": "个人资料 / 头像 - 九角度风格化男性头像网格",
+      "description": "生成一张 3x3 的风格化男性侧面头像表，展示不同的头部角度和视线方向，非常适合用作角色参考表或头像集。",
+      "prompt": "在干净的白色背景上创建一个 3x3 的九宫格风格化数字肖像头像，所有头像均描绘同一位年轻男性：深棕色卷发、修剪整齐的胡须和八字胡，以及下唇下方的一撮山羊胡。他身穿炭灰色西装外套，内搭挺括的白色翻领衬衫。艺术风格为平滑、半写实的 3D 渲染，类似于现代应用中的个人资料图片，采用柔和的影棚灯光和细腻的皮肤阴影处理。将九个头像排列成三行以展示不同的视线方向：顶行向上看（左、中、右），中行平视前方或略微侧视，底行向下看。保持所有九个面板中的面部特征一致，仅改变头部角度和眼睛方向。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545105098_g6nt7u_HSOR44kXwAA2Cal.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ninjaswebcom/status/2099682348090417178#reversed-0",
+      "sourceType": "community",
+      "authorName": "Ali Rivera",
+      "authorHandle": "@ninjaswebcom",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34770",
+      "rawText": "在干净的白色背景上创建一个 3x3 的九宫格风格化数字肖像头像，所有头像均描绘同一位年轻男性：深棕色卷发、修剪整齐的胡须和八字胡，以及下唇下方的一撮山羊胡。他身穿炭灰色西装外套，内搭挺括的白色翻领衬衫。艺术风格为平滑、半写实的 3D 渲染，类似于现代应用中的个人资料图片，采用柔和的影棚灯光和细腻的皮肤阴影处理。将九个头像排列成三行以展示不同的视线方向：顶行向上看（左、中、右），中行平视前方或略微侧视，底行向下看。保持所有九个面板中的面部特征一致，仅改变头部角度和眼睛方向。"
+    },
+    {
+      "id": "community-2099675069383344323",
+      "title": "个人资料 / 头像 - 弥敦道上的可爱水彩女孩",
+      "description": "一幅迷人的水彩插画，描绘了一位时尚女孩在充满红色出租车和霓虹灯招牌的香港街头角落摆姿势。",
+      "prompt": "创作一幅垂直构图的水彩与墨水插画，描绘一位年轻女子站在繁忙的城市街道角落。风格应可爱、手绘且轻盈，采用柔和的粉彩色调和松散的黑色轮廓线。\n\n主体细节：一位留着长波浪棕发的女孩站在前景中央，回头带着温柔的微笑看向观众。她身穿黑色无袖上衣、高腰白色阔腿裤和白色运动鞋。她背着一款带有金色链条肩带的黑色菱格纹香奈儿风格包包。她的头部附近漂浮着粉色小爱心和黄色闪光。\n\n场景设定：一个让人联想到香港的繁华城市十字路口。左侧是一根灰色的交通信号灯杆，红灯亮起。杆上挂着两个标志：上方是一个白色标志，写着“Nathan Road”及中文字符；下方是一个粉色矩形标志，写着“Sasa”及中文字符。\n\n背景元素：\n1. 可以看到两辆标志性的红色出租车——一辆在左侧驶离（车牌号 740），另一辆在右侧停放或缓慢行驶（车牌号 TX 5037）。\n2. 街道背景中排列着高楼大厦，以淡蓝色、奶油色和灰色渲染。\n3. 右侧建筑立面上有一个大型白色广告牌，上面有红色文字“AD HERE”及中文字符，其下方是一个绿色商店招牌，写着“LUKFOOK”及中文字符。\n4. 远处隐约可见其他行人的剪影草图。\n\n视觉风格：使用素描般的艺术美感，保留可见的铅笔线条和水彩晕染效果，使颜色略微溢出轮廓线之外。光线明亮且欢快。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545107093_tvkjbz_HSOLVJZX0AAZWz4.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/aihua_art/status/2099675069383344323#reversed-0",
+      "sourceType": "community",
+      "authorName": "AiHua",
+      "authorHandle": "@aihua_art",
+      "createdAt": "2026-09-15T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34775",
+      "rawText": "创作一幅垂直构图的水彩与墨水插画，描绘一位年轻女子站在繁忙的城市街道角落。风格应可爱、手绘且轻盈，采用柔和的粉彩色调和松散的黑色轮廓线。\n\n主体细节：一位留着长波浪棕发的女孩站在前景中央，回头带着温柔的微笑看向观众。她身穿黑色无袖上衣、高腰白色阔腿裤和白色运动鞋。她背着一款带有金色链条肩带的黑色菱格纹香奈儿风格包包。她的头部附近漂浮着粉色小爱心和黄色闪光。\n\n场景设定：一个让人联想到香港的繁华城市十字路口。左侧是一根灰色的交通信号灯杆，红灯亮起。杆上挂着两个标志：上方是一个白色标志，写着“Nathan Road”及中文字符；下方是一个粉色矩形标志，写着“Sasa”及中文字符。\n\n背景元素：\n1. 可以看到两辆标志性的红色出租车——一辆在左侧驶离（车牌号 740），另一辆在右侧停放或缓慢行驶（车牌号 TX 5037）。\n2. 街道背景中排列着高楼大厦，以淡蓝色、奶油色和灰色渲染。\n3. 右侧建筑立面上有一个大型白色广告牌，上面有红色文字“AD HERE”及中文字符，其下方是一个绿色商店招牌，写着“LUKFOOK”及中文字符。\n4. 远处隐约可见其他行人的剪影草图。\n\n视觉风格：使用素描般的艺术美感，保留可见的铅笔线条和水彩晕染效果，使颜色略微溢出轮廓线之外。光线明亮且欢快。"
     },
     {
       "id": "community-2099733908011282670",
@@ -18773,6 +19433,48 @@
       "rawText": "创建一个软木板，上面贴满附件图片中人物的多张照片，按照日本女性时尚杂志剪贴簿的风格进行排列。\n让软木板填满整个屏幕。"
     },
     {
+      "id": "community-2099634726416101620",
+      "title": "个人资料 / 头像 - 写实冬季人像提示词",
+      "description": "用于生成一张超写实智能手机风格照片的提示词，画面中一位年轻女性坐在雪堆中，身着冬装，拥有自然光线和抓拍般的表情。",
+      "prompt": "超写实自然智能手机摄影，竖屏 3:4，一位年轻东亚女性在现代山城建筑外的巨大雪堆中舒适坐着的冬季旅行抓拍肖像。\n她留着中长深棕色头发，扎成两个松散的低马尾，柔和的发丝修饰着脸庞。她戴着一顶蓬松的奶油白冬季帽子，内衬为柔和粉色，脖子上围着一条厚实的超大号粉白条纹围巾，温暖包裹。她拥有自然青春的面部特征，因寒冷而脸颊红润，正对着镜头发出明亮真诚的笑声。\n她身穿温暖的象牙白羽绒服和宽松的奶油白阔腿冬季长裤。手上戴着厚实的棕色针织手套，脚穿舒适的棕褐色冬季雪地靴，靴口有奶油色绒毛装饰。她坐在雪中，双手自然地合拢在膝盖之间，双腿向前伸展。\n新鲜深厚的积雪完全覆盖地面，在她周围形成巨大的柔软雪堆。雪花在空中轻轻飘落，在她的衣物和背景中可见细小的雪花。\n她身后是一栋被部分积雪覆盖的现代多层建筑，具有深色金属外部楼梯、大窗户、绿色店面遮阳篷、户外自动售货机、栏杆、光秃的冬季树木，以及沿着物业边缘堆积的厚雪。\n柔和的阴天冬季日光，寒冷的雪景氛围，逼真的雪的纹理，微妙的阴影，自然的环境照明，宁静的雪度假场景。\nRAW 格式智能手机摄影美学，超写实的皮肤纹理，自然的面部细节，逼真的发丝，真实的冬季服装质感，物理准确的雪，真实的人体比例，自然的抓拍姿势，轻微的智能手机镜头柔焦效果，无美颜滤镜，无塑料感皮肤，无 CGI 外观，高度详细的环境，真实的冬季旅行摄影，竖屏 3:4 构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545093686_it4ip5_HSNmoA9b0AAFXSc.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Aqsahere_/status/2099634726416101620",
+      "sourceType": "community",
+      "authorName": "Aqsa",
+      "authorHandle": "@Aqsahere_",
+      "createdAt": "2026-09-14T12:00:00.000Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34678",
+      "rawText": "超写实自然智能手机摄影，竖屏 3:4，一位年轻东亚女性在现代山城建筑外的巨大雪堆中舒适坐着的冬季旅行抓拍肖像。\n她留着中长深棕色头发，扎成两个松散的低马尾，柔和的发丝修饰着脸庞。她戴着一顶蓬松的奶油白冬季帽子，内衬为柔和粉色，脖子上围着一条厚实的超大号粉白条纹围巾，温暖包裹。她拥有自然青春的面部特征，因寒冷而脸颊红润，正对着镜头发出明亮真诚的笑声。\n她身穿温暖的象牙白羽绒服和宽松的奶油白阔腿冬季长裤。手上戴着厚实的棕色针织手套，脚穿舒适的棕褐色冬季雪地靴，靴口有奶油色绒毛装饰。她坐在雪中，双手自然地合拢在膝盖之间，双腿向前伸展。\n新鲜深厚的积雪完全覆盖地面，在她周围形成巨大的柔软雪堆。雪花在空中轻轻飘落，在她的衣物和背景中可见细小的雪花。\n她身后是一栋被部分积雪覆盖的现代多层建筑，具有深色金属外部楼梯、大窗户、绿色店面遮阳篷、户外自动售货机、栏杆、光秃的冬季树木，以及沿着物业边缘堆积的厚雪。\n柔和的阴天冬季日光，寒冷的雪景氛围，逼真的雪的纹理，微妙的阴影，自然的环境照明，宁静的雪度假场景。\nRAW 格式智能手机摄影美学，超写实的皮肤纹理，自然的面部细节，逼真的发丝，真实的冬季服装质感，物理准确的雪，真实的人体比例，自然的抓拍姿势，轻微的智能手机镜头柔焦效果，无美颜滤镜，无塑料感皮肤，无 CGI 外观，高度详细的环境，真实的冬季旅行摄影，竖屏 3:4 构图。"
+    },
+    {
       "id": "community-2099470719235318149",
       "title": "个人资料 / 头像 - 绿墙光影人像",
       "description": "专为 GPT Image 2 设计的详细提示词，描绘一位身着嫩绿色连衣裙的女子倚靠在斑驳的蓝绿色墙壁旁，重点呈现光影效果。包含精确的构图与纹理指令。",
@@ -18784,7 +19486,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.285Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18827,7 +19529,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.285Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18870,7 +19572,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.285Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "人像"
       ],
@@ -18911,7 +19613,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.285Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18954,7 +19656,7 @@
       "authorName": "Sarmad Tahir",
       "authorHandle": "@itxsarmadd",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.285Z",
+      "importedAt": "2026-09-16T17:41:16.802Z",
       "tags": [
         "人像"
       ],
@@ -65547,7 +66249,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.289Z",
+      "importedAt": "2026-09-16T17:41:16.805Z",
       "tags": [
         "产品",
         "平面设计",
@@ -65590,7 +66292,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.290Z",
+      "importedAt": "2026-09-16T17:41:16.805Z",
       "tags": [
         "平面设计"
       ],
@@ -65631,7 +66333,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-16T12:44:59.290Z",
+      "importedAt": "2026-09-16T17:41:16.805Z",
       "tags": [
         "平面设计"
       ],
