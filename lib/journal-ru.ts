@@ -1,7 +1,9 @@
 import { jiaZiRussian } from "@/lib/journal-jia-zi-ru";
+import { crystalCareRussian } from "@/lib/journal-crystal-care";
 import type { JournalTranslation } from "@/lib/journal";
 
 export const journalRussian: Record<string, JournalTranslation> = {
+  "crystal-bracelet-care": crystalCareRussian,
   "what-is-a-day-pillar": {
     "title": "Что такое столп дня? 60 сочетаний Ба-цзы простыми словами",
     "description": "Разберитесь, чем столп дня отличается от Господина дня и знака китайского зодиака, на примере Цзя-цзы и авторской карточки DestinyPixel.",

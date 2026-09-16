@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
 import { jiaZiArticle } from "@/lib/journal-jia-zi";
+import { crystalCareArticle } from "@/lib/journal-crystal-care";
 import { journalRussian } from "@/lib/journal-ru";
 import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
 export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
@@ -26,6 +27,7 @@ export type JournalTranslation = {
 };
 export type JournalArticle = {
   slug: string;
+  relatedSlug?: string;
   publishedAt: string;
   updatedAt: string;
   translations: Record<JournalLocale, JournalTranslation>;
@@ -33,6 +35,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
 const journalSources: JournalSourceArticle[] = [
+  crystalCareArticle,
   jiaZiArticle,
   dayPillarIntroduction,
   {
@@ -131,8 +134,9 @@ const journalSources: JournalSourceArticle[] = [
   },
   {
     slug: "five-element-bracelet-design",
+    relatedSlug: "crystal-bracelet-care",
     publishedAt: "2026-09-11",
-    updatedAt: "2026-09-11",
+    updatedAt: "2026-09-16",
     translations: {
       en: {
         title: "Design a five-element bracelet: a practical color-and-bead walkthrough",

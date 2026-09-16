@@ -26,7 +26,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const locale = normalizeJournalLocale((await searchParams)?.locale);
   const ui = journalUi[locale];
   const copy = article.translations[locale];
-  const related = journalArticles.find((candidate) => candidate.slug !== article.slug);
+  const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
+    ?? journalArticles.find((candidate) => candidate.slug !== article.slug);
   return (
     <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
