@@ -10,8 +10,10 @@
 - No payment, database schema, private report storage or external sharing is introduced. Page/results do not put birth details into URLs/localStorage. The first version requires supported city + known birth time; no guessed hour, houses, ascendants or marriage forecasts.
 
 Validation:
-`tsx --test lib/compatibility/model.test.ts lib/engines/astrology.test.ts lib/engines/time.test.ts`
+`tsx --test lib/compatibility/model.test.ts lib/compatibility/request.test.ts lib/engines/astrology.test.ts lib/engines/time.test.ts`
 `NODE_OPTIONS=--conditions=react-server tsx --test lib/compatibility/route.test.ts`
 `npm run build`
 
 Love edition: 60 animal names follow the new artwork (Chinese source manifest and English text read from cards); existing localized Day Pillar personality/love passages are projected into free results. A directional five-element panel and visible stem/branch distribution are deterministic. AI requires separate animalStory and elementStory before the four complementary sections. The score formula remains unchanged.
+
+Browser transport: the read-only `calculate` request has a 15-second deadline per attempt and one automatic retry after 600 ms for a network/body failure or HTTP 408/500/502/503/504. Invalid input, origin rejection and rate limits are not retried. Cancellation stops both the request and backoff. The AI request is sent once after a successful calculation; it is never replayed by this retry helper. Persistent failures use localized copy and keep the input in the form (no browser storage). A synchronous submit guard blocks overlapping clicks while the calculation is pending.

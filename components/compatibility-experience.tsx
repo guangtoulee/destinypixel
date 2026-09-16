@@ -11,6 +11,7 @@ import type { PairReading } from "@/lib/compatibility/ai";
 import { destinySupportHref } from "@/lib/support-contact";
 import CompatibilityBazi from "./compatibility-bazi";
 import { baziCopy } from "@/lib/compatibility/bazi-copy";
+import { CompatibilityRequestError, requestCompatibilityCalculation } from "@/lib/compatibility/request";
 import styles from "./compatibility.module.css";
 
 export default function CompatibilityExperience({ locale, copy: c }: { locale: ReportLocale; copy: CompatibilityCopy }) {
@@ -23,11 +24,13 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
   const resultRef = useRef<HTMLElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const latest = useRef(0);
+  const submitting = useRef(false);
   const [today, setToday] = useState("2100-12-31");
   useEffect(() => { setToday(new Date().toISOString().slice(0, 10)); return () => requestRef.current?.abort(); }, []);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (busy) return;
+    if (submitting.current) return;
+    submitting.current = true;
     requestRef.current?.abort();
     const controller = new AbortController(); requestRef.current = controller;
     const revision = ++latest.current;
@@ -36,11 +39,9 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
     const payload = { people, locale, consent: data.get("consent") === "on" };
     setBusy(true); setError(""); setResult(null); setReading(null); setAiState("idle");
     try {
-      const response = await fetch("/api/compatibility", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...payload, mode: "calculate" }), signal: controller.signal });
-      const body = await response.json();
-      if (!response.ok) throw new Error(response.status === 429 ? c.limit : body.error || c.invalid);
+      const calculated = await requestCompatibilityCalculation(payload, controller.signal);
       if (latest.current !== revision) return;
-      setResult(body.result); setBusy(false); setAiState("loading");
+      setResult(calculated); submitting.current = false; setBusy(false); setAiState("loading");
       requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
       try {
         const aiResponse = await fetch("/api/compatibility", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...payload, mode: "interpret" }), signal: AbortSignal.any([controller.signal, AbortSignal.timeout(55_000)]) });
@@ -50,10 +51,13 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
         else setAiState("unavailable");
       } catch { if (latest.current === revision) setAiState("unavailable"); }
     } catch (e) {
-      if (latest.current === revision && !controller.signal.aborted) setError(e instanceof Error ? e.message : c.failed);
-    } finally { if (latest.current === revision) setBusy(false); }
+      if (latest.current === revision && !controller.signal.aborted) {
+        setError(e instanceof CompatibilityRequestError && e.code === "limited" ? c.limit
+          : e instanceof CompatibilityRequestError && e.code === "invalid" ? e.detail || c.invalid : c.failed);
+      }
+    } finally { if (latest.current === revision) { submitting.current = false; setBusy(false); } }
   }
-  function reset() { ++latest.current; requestRef.current?.abort(); setResult(null); setReading(null); setAiState("idle"); setBusy(false); formRef.current?.scrollIntoView({ behavior: "smooth" }); }
+  function reset() { ++latest.current; requestRef.current?.abort(); submitting.current = false; setResult(null); setReading(null); setAiState("idle"); setBusy(false); formRef.current?.scrollIntoView({ behavior: "smooth" }); }
   const b = baziCopy(locale);
   const sign = (p: { sign: string; signCn: string }) => signName(p.sign, p.signCn, locale);
   const element = (name: string) => c.elements[name as keyof typeof c.elements] || name;
