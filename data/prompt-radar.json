@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-17T06:30:01.316Z",
+  "updatedAt": "2026-09-17T12:43:28.376Z",
   "sourceSummary": {
     "community": 1136,
-    "publicX": 445,
-    "total": 1581
+    "publicX": 450,
+    "total": 1586
   },
   "items": [
     {
@@ -542,7 +542,7 @@
       "authorName": "Smiling Khan",
       "authorHandle": "@AIwithkhan",
       "createdAt": "2026-09-15T03:50:23.000Z",
-      "importedAt": "2026-09-17T06:30:01.286Z",
+      "importedAt": "2026-09-17T12:43:28.341Z",
       "tags": [
         "Seedance",
         "视频",
@@ -565,11 +565,11 @@
       "metrics": {
         "likes": 2078,
         "reposts": 251,
-        "replies": 133,
-        "quotes": 28,
-        "bookmarks": 2504,
-        "views": 241323,
-        "score": 13372
+        "replies": 135,
+        "quotes": 30,
+        "bookmarks": 2511,
+        "views": 244529,
+        "score": 13407
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I came like a STORM Seedance 2.5 Prompt 👇: Create a ultra-realistic cinematic fashion video using the uploaded images as exact visual references for the woman, crowd, wardrobe, framing, and atmosphere. A young woman with the same short dark bob wears a fitted black turtleneck, black trousers, and black shoes, standing confidently at the center of a large crowd. Start with her walking slowly toward the middle of the crowd, calm and expressionless, with a lit cigarette naturally held between her lips. She reaches the center, stops, and faces directly into the camera. She takes one slow drag from the cigarette, then removes it from her mouth. She slowly exhales a visible stream of smoke toward the camera, with the smoke naturally drifting across her face. She lowers her hand and becomes completely still, staring directly into the lens. The entire crowd behind her remains frozen for a brief moment. Suddenly, everyone behind her begins moving in perfect synchronization — sharp head turns, shoulder jerks, folding forward and snapping upright. The movement should feel rhythmic, strange, powerful, and physically realistic. The woman does not move at all while the entire crowd moves behind her. Slowly push the camera closer to her, keeping her sharply focused while the crowd has subtle depth-of-field blur. Dark, cold, mysterious lighting with deep shadows, realistic skin, hair, clothing, cigarette ember, and physically accurate smoke. Photorealistic live-action quality, cinematic composition, natural human movement; no animation, CGI look, duplicated woman, distorted bodies, excessive smoke, text, subtitles, or logos."
@@ -1223,6 +1223,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "it's insane what seedance 2.5 is capable of here's another example full prompt: CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her holding the camera at arm's length in selfie mode while stepping outside her apartment building with her dog. The first 20–30 seconds are entirely handheld. Later she occasionally places the camera on a park bench, low stone wall, picnic table, or the ground for wider shots. Keep subtle handheld shake, drifting composition, autofocus hunting, rushed reframing, uneven zooms, exposure breathing, brief accidental face cropping, and imperfect framing throughout. The camera itself is never visible. LOOK: Warm analog tape texture with gentle film grain, slightly softened sharpness, subtle halation around sunlight, realistic skin tones, low contrast, tiny exposure shifts, and natural motion blur. It should feel like authentic footage from someone's everyday life rather than a polished commercial. STYLE: A relaxed morning lifestyle vlog. Quiet, cozy, and spontaneous. She occasionally laughs at her dog, pauses to look around, adjusts the leash, brushes hair away from her face, and speaks naturally in short sentences with comfortable pauses. CHARACTER: EMMA — a beautiful white woman in her mid-20s. Long light brown hair in a messy ponytail, green eyes, minimal makeup, oversized gray hoodie, black biker shorts, white sneakers, and a small crossbody bag. She is walking a happy golden retriever. SETTING: A peaceful suburban neighborhood on a sunny morning. Tree-lined sidewalks, quiet residential streets, birds singing, a small park with benches, green grass, and soft golden morning light. Very few people are around. SCENES: The vlog opens in selfie mode. Emma holds the camera while leaving her apartment building with the golden retriever excitedly pulling on the leash. \"Good morning.\" She smiles. \"Someone couldn't wait.\" The dog eagerly sniffs everything as they walk down the sidewalk. She laughs quietly. \"He has to inspect every single tree.\" Still holding the camera, she walks into a small neighborhood park. The dog suddenly stops and stares at a squirrel. \"Oh... there we go.\" She smiles and gently shakes her head. She places the camera on a nearby bench for a wider angle while throwing a tennis ball. The dog happily chases after it. \"Worth waking up early.\" She picks the camera back up. Walking slowly through the park, she looks up at the trees for a moment. \"It's actually really peaceful out here.\" The dog returns with the ball but drops it halfway. She laughs. \"Close enough.\" She sits on the bench while the dog lies beside her. She scratches behind his ears. \"I think he's happier than I am.\" She stands up and continues walking. The camera stays in selfie mode as they head toward home. \"Coffee is definitely next.\" She smiles into the lens. \"See you later.\" She gives a small wave and ends the recording."
+    },
+    {
+      "id": "x-public-2098683503822917900",
+      "title": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits.",
+      "description": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on ",
+      "prompt": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: > Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing > Kling 3.0 generated the fluid body physics and night lighting on the roof > Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact > ElevenLabs produced the ambient stadium atmosphere and crowd noise > CapCut handled speed ramps, color grade, and final export A traditional production house would need a stadium rental at $150K, a stunt coordinator, a medical team on standby, and 6 months of liability clearance. This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Aiwithkumail/status/2098683503822917900",
+      "sourceType": "x",
+      "authorName": "Kumail Sikandar",
+      "authorHandle": "@Aiwithkumail",
+      "createdAt": "2026-09-12T08:01:53.000Z",
+      "importedAt": "2026-09-17T12:43:28.341Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 588,
+        "reposts": 87,
+        "replies": 58,
+        "quotes": 5,
+        "bookmarks": 230,
+        "views": 1431131,
+        "score": 5149
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Nike spends $2M on a stadium shoot for a 10-second hero shot. 40-person crew. 3 days of permits. 2 weeks in post. Stunt doubles. Insurance paperwork thicker than the script. This creator generated the entire sequence on a laptop for under $80. A guy sprints across a stadium roof at night, leaps off the edge, free-falls into a sold-out arena, and lands on a giant football in the center of the pitch. One continuous shot. No crane. No drone operator. No safety harness review board. The toolchain behind this clip: > Kimi K3 wrote the full shot sequence: rooftop sprint, jump arc, mid-air hang, landing impact, crowd reaction timing > Kling 3.0 generated the fluid body physics and night lighting on the roof > Seedance 2.5 rendered the free-fall, wind on the shirt, and the ball deformation on impact > ElevenLabs produced the ambient stadium atmosphere and crowd noise > CapCut handled speed ramps, color grade, and final export A traditional production house would need a stadium rental at $150K, a stunt coordinator, a medical team on standby, and 6 months of liability clearance. This entire sequence was prompted, rendered, and exported between dinner and sleep. AI didn't replace the stunt double. It replaced the entire stadium booking."
     },
     {
       "id": "x-public-2089053598068212030",
@@ -2508,6 +2552,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🚨 Donnie Yen's Ip Man cost $52,000,000 to shoot one film a 23-year-old made a 9-minute martial-arts short on a laptop and won $1,000,000 at an AI film festival. she shot none of it, the pipeline built every frame. > Claude write the script and every shot prompt: 1 day > Midjourney lock the fighter from every angle: 2 hours > Kling animate the dojo brawl shot by shot: 2 days > ElevenLabs voice the cast with real direction: 1 hour > DaVinci score it and cut the clips into a film: 1 day Ip Man booked a fight choreographer, a stunt team and a period set for one scene. she booked a $60 pipeline and a laptop. the full fight pipeline is in the article above👇"
+    },
+    {
+      "id": "x-public-2099872759866380704",
+      "title": "Seedance 2.5 Prompt: Create a 30-second Pixar-quality 3D animated ASMR comedy short aboard a war",
+      "description": "Seedance 2.5 Prompt: Create a 30-second Pixar-quality 3D animated ASMR comedy short aboard a warm, lantern-lit pirate ship galley. STYLE: Premium cinematic 3D animation, expressive characters, polished feature-film quali",
+      "prompt": "Seedance 2.5 Prompt: Create a 30-second Pixar-quality 3D animated ASMR comedy short aboard a warm, lantern-lit pirate ship galley. STYLE: Premium cinematic 3D animation, expressive characters, polished feature-film quality, warm amber lighting, realistic food textures, cinematic depth of field, playful slapstick humor, gentle ship movement and crisp immersive food ASMR. Characters: A large, burly, bearded pirate chef wearing a worn apron, and a mischievous bright-green parrot constantly trying to steal ingredients. Keep both characters visually consistent throughout. 0–4s Extreme close-up of the parrot stealing a garlic bulb. The pirate's hand suddenly slams beside it. They freeze and stare at each other. Brief record-scratch silence. The pirate flicks the parrot away; it spins through the air and lands on a pot rack pretending nothing happened. 4–8s The pirate rapidly chops garlic with crisp ASMR. The parrot tiptoes toward a tomato. Garlic hits hot oil with a huge sizzle, startling the parrot and sending it tumbling off the rack. Metal cups clang. 8–14s Fast cinematic cooking montage: tomatoes sizzling, herbs being torn, olive oil pouring in golden slow motion, sauce bubbling and the pirate confidently stirring the skillet. Layer detailed chopping, sizzling, pouring and bubbling ASMR. 14–19s The parrot spots the food and secretly tries to drag the skillet away. Its tiny body strains comically across the wooden floor. The pirate slowly turns around and stares. The parrot freezes while still holding the handle, then innocently whistles and lets go. 19–24s The pirate finishes cooking with a dramatic skillet toss. Steam rises as the glossy dish is plated. The parrot watches hungrily, trying to look innocent. 24–30s Instead of scolding the parrot, the pirate prepares a tiny plate of sauce and bread and slides it across the table. The parrot happily bounces and eats beside him. They exchange a satisfied look as the ship gently sways. End with a wide cinematic shot of the cozy galley glowing under amber lanterns, subtle ocean sounds and wooden ship creaks, with one soft playful accordion note fading out. No dialogue, no subtitles, no text. Maintain strong character consistency, natural physics, smooth animation, cinematic framing and detailed food ASMR throughout.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AiwithNomi/status/2099872759866380704",
+      "sourceType": "x",
+      "authorName": "Nomi AI",
+      "authorHandle": "@AiwithNomi",
+      "createdAt": "2026-09-15T14:47:34.000Z",
+      "importedAt": "2026-09-17T12:43:28.340Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 468,
+        "reposts": 56,
+        "replies": 24,
+        "quotes": 5,
+        "bookmarks": 399,
+        "views": 28138,
+        "score": 2452
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Seedance 2.5 Prompt: Create a 30-second Pixar-quality 3D animated ASMR comedy short aboard a warm, lantern-lit pirate ship galley. STYLE: Premium cinematic 3D animation, expressive characters, polished feature-film quality, warm amber lighting, realistic food textures, cinematic depth of field, playful slapstick humor, gentle ship movement and crisp immersive food ASMR. Characters: A large, burly, bearded pirate chef wearing a worn apron, and a mischievous bright-green parrot constantly trying to steal ingredients. Keep both characters visually consistent throughout. 0–4s Extreme close-up of the parrot stealing a garlic bulb. The pirate's hand suddenly slams beside it. They freeze and stare at each other. Brief record-scratch silence. The pirate flicks the parrot away; it spins through the air and lands on a pot rack pretending nothing happened. 4–8s The pirate rapidly chops garlic with crisp ASMR. The parrot tiptoes toward a tomato. Garlic hits hot oil with a huge sizzle, startling the parrot and sending it tumbling off the rack. Metal cups clang. 8–14s Fast cinematic cooking montage: tomatoes sizzling, herbs being torn, olive oil pouring in golden slow motion, sauce bubbling and the pirate confidently stirring the skillet. Layer detailed chopping, sizzling, pouring and bubbling ASMR. 14–19s The parrot spots the food and secretly tries to drag the skillet away. Its tiny body strains comically across the wooden floor. The pirate slowly turns around and stares. The parrot freezes while still holding the handle, then innocently whistles and lets go. 19–24s The pirate finishes cooking with a dramatic skillet toss. Steam rises as the glossy dish is plated. The parrot watches hungrily, trying to look innocent. 24–30s Instead of scolding the parrot, the pirate prepares a tiny plate of sauce and bread and slides it across the table. The parrot happily bounces and eats beside him. They exchange a satisfied look as the ship gently sways. End with a wide cinematic shot of the cozy galley glowing under amber lanterns, subtle ocean sounds and wooden ship creaks, with one soft playful accordion note fading out. No dialogue, no subtitles, no text. Maintain strong character consistency, natural physics, smooth animation, cinematic framing and detailed food ASMR throughout."
     },
     {
       "id": "x-public-2095907009774125410",
@@ -3841,6 +3929,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video generation is only half of the commercial workflow. For this one, I used GPT-6 Astra to create a 3D white model, then brought it into CapCut PC and generated the scene with Seedance 2.5. The visual direction was a bullet-time product commercial: a sudden collision, objects suspended in midair and the camera moving around the frozen action. After generation, I used CapCut PC to refine the timing and speed changes and build the final effect. And if the shot wasn't quite right, I could continue editing with tools like Edit Pilot and AI Extend. The first generation doesn't have to be the final cut. #GPT6Astra #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2100177204382777534",
+      "title": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge cr",
+      "description": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the",
+      "prompt": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the full sequence on a laptop for less than $80. A runner bolts across a stadium roof at night, launches off the edge, free-falls into a packed arena, and slams onto a giant football in the middle of the pitch. One unbroken shot. No crane. No drone pilot. No safety board signing off. How it was made: → Kimi K3 planned the entire sequence — rooftop sprint, jump path, hang time, impact, crowd timing → Kling 3.0 handled body physics and night lighting on the roof → Seedance 2.5 rendered the fall, shirt catching wind, and the ball deforming on landing → ElevenLabs created the stadium atmosphere and crowd roar → CapCut finished the speed ramps, grade, and export A traditional production would rent the stadium for $150K, hire a stunt coordinator, keep medics on standby, and spend months clearing liability. This whole clip was prompted, generated, and exported between dinner and sleep. AI didn’t replace the stunt double. It replaced the stadium booking.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Arcane_Aii/status/2100177204382777534",
+      "sourceType": "x",
+      "authorName": "Arcane | Artificial Intelligence",
+      "authorHandle": "@Arcane_Aii",
+      "createdAt": "2026-09-16T10:57:19.000Z",
+      "importedAt": "2026-09-17T12:43:28.341Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 160,
+        "reposts": 52,
+        "replies": 18,
+        "quotes": 0,
+        "bookmarks": 65,
+        "views": 457616,
+        "score": 1656
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the full sequence on a laptop for less than $80. A runner bolts across a stadium roof at night, launches off the edge, free-falls into a packed arena, and slams onto a giant football in the middle of the pitch. One unbroken shot. No crane. No drone pilot. No safety board signing off. How it was made: → Kimi K3 planned the entire sequence — rooftop sprint, jump path, hang time, impact, crowd timing → Kling 3.0 handled body physics and night lighting on the roof → Seedance 2.5 rendered the fall, shirt catching wind, and the ball deforming on landing → ElevenLabs created the stadium atmosphere and crowd roar → CapCut finished the speed ramps, grade, and export A traditional production would rent the stadium for $150K, hire a stunt coordinator, keep medics on standby, and spend months clearing liability. This whole clip was prompted, generated, and exported between dinner and sleep. AI didn’t replace the stunt double. It replaced the stadium booking."
     },
     {
       "id": "x-public-2095763998524182581",
@@ -9362,51 +9494,6 @@
       "rawText": "Making a video file longer is easy. Creating meaningful new content after the final frame is the difficult part. CapCut Seedance 2.5 1080p is now live. Start with AI Image for batch-generated references and AI Video for the core scene. A loop only repeats information, and interpolation only creates frames between existing moments. AI Extend in CapCut PC can generate what happens next—or what should have happened before—with prompt control. Use AI Edit for a local flaw, Edit Pilot for repeated adjustments, and the multi-track timeline for dialogue, captions, music and export. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
     },
     {
-      "id": "x-public-2099537390415269907",
-      "title": "This feels like a much more practical way to use AI image generation for brands. Generate two pr",
-      "description": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut ",
-      "prompt": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/LearnWithSubhan/status/2099537390415269907",
-      "sourceType": "x",
-      "authorName": "Subhan Qureshi",
-      "authorHandle": "@LearnWithSubhan",
-      "createdAt": "2026-09-14T16:34:56.000Z",
-      "importedAt": "2026-09-16T12:45:03.419Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 84,
-        "reposts": 56,
-        "replies": 23,
-        "quotes": 0,
-        "bookmarks": 109,
-        "views": 44205,
-        "score": 830
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
-    },
-    {
       "id": "x-public-2088622806347227287",
       "title": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！",
       "description": "终于，终于有人把所有模型缝合到一起了😭 Claude Code 编码、codex生图、检索抖音，小红书，youtube x的热点信息……全在一个工作台里 这就是我一直在等的“缝合怪max”！！ 以前我得开五六个客户端，Claude 写完复制到 Midjourney 出图，再切到 Codex 写代码，脑子都要炸了 现在 dethink 直接把这些全塞进来了 一个界面切遍所有模型——Claude、Grok、Gemini、DeepSeek、",
@@ -9804,6 +9891,49 @@
       "rawText": "Imagine turning your fashion collection into luxury commercial-style videos with cinematic visuals, premium models, realistic fabric movement, and a high-end brand look that grabs attention within seconds. This commercial for the fictional luxury fashion brand \"Maison Luxe\" was created using Seedance 2.0, featuring seamless outfit transitions and cinematic-quality visuals without a traditional production crew. While others are posting ordinary content, your brand could be creating an experience people remember. Attention leads to engagement. Engagement leads to customers. Customers lead to growth. The future belongs to fashion brands that embrace Video-First Marketing. Prompt in the comments"
     },
     {
+      "id": "x-public-2099351753439543492",
+      "title": "AI VIDEO PROMPTING might be DEAD. 👀 Pippit just launched 3D Director Studio. And this gives you",
+      "description": "AI VIDEO PROMPTING might be DEAD. 👀 Pippit just launched 3D Director Studio. And this gives you PRECISE CONTROL over how your AI video should actually play out. I didn’t start with a prompt. I started by DIRECTING the e",
+      "prompt": "AI VIDEO PROMPTING might be DEAD. 👀 Pippit just launched 3D Director Studio. And this gives you PRECISE CONTROL over how your AI video should actually play out. I didn’t start with a prompt. I started by DIRECTING the entire 3D scene. For my test, I created a cinematic scene in an ancient Chinese garden. I could literally place the: 1️⃣ Character 2️⃣ Environment & props 3️⃣ Camera 4️⃣ Character positioning exactly where I wanted them. I could then control the scene on a timeline, adjust the timing, position the character, and plan exactly how the camera should move through the environment. In my case, I staged the character sitting in the garden while the camera slowly pulls back to reveal more of the scene. So instead of writing a MASSIVE prompt and hoping the AI understands what you mean… You can literally SHOW IT. BUILD the scene → DIRECT the composition → GENERATE the video. And then Seedance 2.5 takes that 3D direction and turns it into the final AI video. That’s a completely different level of control. 🔥 It feels less like prompting an AI… And more like directing a MOVIE. 🎬 TRY NOW:  @pippitofficial #3DDirectorStudio #PippitAI #Seedance25 #PippitPartner",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/SarahAnnabels/status/2099351753439543492",
+      "sourceType": "x",
+      "authorName": "SARAH",
+      "authorHandle": "@SarahAnnabels",
+      "createdAt": "2026-09-14T04:17:16.000Z",
+      "importedAt": "2026-09-17T12:43:28.342Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 94,
+        "reposts": 82,
+        "replies": 25,
+        "quotes": 0,
+        "bookmarks": 29,
+        "views": 85917,
+        "score": 800
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI VIDEO PROMPTING might be DEAD. 👀 Pippit just launched 3D Director Studio. And this gives you PRECISE CONTROL over how your AI video should actually play out. I didn’t start with a prompt. I started by DIRECTING the entire 3D scene. For my test, I created a cinematic scene in an ancient Chinese garden. I could literally place the: 1️⃣ Character 2️⃣ Environment & props 3️⃣ Camera 4️⃣ Character positioning exactly where I wanted them. I could then control the scene on a timeline, adjust the timing, position the character, and plan exactly how the camera should move through the environment. In my case, I staged the character sitting in the garden while the camera slowly pulls back to reveal more of the scene. So instead of writing a MASSIVE prompt and hoping the AI understands what you mean… You can literally SHOW IT. BUILD the scene → DIRECT the composition → GENERATE the video. And then Seedance 2.5 takes that 3D direction and turns it into the final AI video. That’s a completely different level of control. 🔥 It feels less like prompting an AI… And more like directing a MOVIE. 🎬 TRY NOW:  @pippitofficial #3DDirectorStudio #PippitAI #Seedance25 #PippitPartner"
+    },
+    {
       "id": "x-public-2086691779202740252",
       "title": "When Newtake’s East Asian character generation meets Seedance 2.5, the results are insane. 🔥 Th",
       "description": "When Newtake’s East Asian character generation meets Seedance 2.5, the results are insane. 🔥 This is one of the most immersive AI videos I’ve seen recently. At this point, it’s getting harder and harder to tell what’s A",
@@ -10060,6 +10190,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Most guides on how to make AI videos stop at Prompt → Generate. That is where a real production workflow begins. CapCut Seedance 2.5 1080p is now live. Use AI Image to batch-create characters, products, locations or shot references. Turn them into scenes with AI Video, then use AI Extend in CapCut PC when the story, demonstration or CTA needs more time. Continue forward for the next beat or backward for missing context. AI Edit handles a specific flaw, Edit Pilot helps with repeated edits, and the multi-track timeline completes captions, audio, transitions, pacing and delivery. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
+    },
+    {
+      "id": "x-public-2099537390415269907",
+      "title": "This feels like a much more practical way to use AI image generation for brands. Generate two pr",
+      "description": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut ",
+      "prompt": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/LearnWithSubhan/status/2099537390415269907",
+      "sourceType": "x",
+      "authorName": "Subhan Qureshi",
+      "authorHandle": "@LearnWithSubhan",
+      "createdAt": "2026-09-14T16:34:56.000Z",
+      "importedAt": "2026-09-17T12:43:28.342Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 187,
+        "reposts": 63,
+        "replies": 23,
+        "quotes": 0,
+        "bookmarks": 11,
+        "views": 44405,
+        "score": 771
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This feels like a much more practical way to use AI image generation for brands. Generate two product visuals with GPT Image 2.5. Then use those visuals as the starting point for a commercial with Seedance 2.5 in CapCut PC. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Instead of creating an image and figuring out what to do with it afterward, the image is already part of the production pipeline. Product → Visual → Video → Edit. That's the workflow that makes AI-generated content feel useful for marketing. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2088855031864832096",
@@ -10667,6 +10842,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Riding into a kingdom where dragons guard the skies and magic fills the air. Created with seedance 2.0 on @Lart_AI Give it a try here 👇  Prompt: A breathtaking cinematic fantasy scene of a beautiful princess wearing an elegant white and gold royal gown riding a majestic white horse through a magical kingdom. The camera starts with a low-angle close-up of the horse's hooves galloping over a glowing cobblestone path, then smoothly pulls back to reveal the princess as her long hair and flowing cape move gracefully in the wind. Colorful flowers bloom along the roadside, butterflies flutter through the air, and sparkling magical particles float around her. In the distance stands a magnificent golden castle surrounded by waterfalls and lush green hills. Two enormous dragons soar gracefully above the castle, their wings casting dramatic shadows as they circle the towers. The princess looks up with a gentle smile while sunlight streams through the clouds, creating god rays and a dreamy atmosphere. The camera performs a slow cinematic orbit before ending on a wide aerial shot of the magical kingdom. Ultra-realistic, fantasy epic, volumetric lighting, soft fog, HDR, highly detailed, cinematic color grading, smooth camera movement, 4K, 24fps, shallow depth of field, masterpiece. Negative Prompt: Low quality, blurry, cartoon, anime, low resolution, flickering, jittery motion, extra limbs, deformed face, bad anatomy, duplicate horse, distorted castle, text, watermark, logo, oversaturated colors, camera shake, motion artifacts. #Seedance2 #LartAI #AIVideo #AIAnimation #ContentCreator"
+    },
+    {
+      "id": "x-public-2099921459238113483",
+      "title": "AI filmmaking is getting completely out of hand. 🤯 I just finished THE BROKEN COMPANY — an almo",
+      "description": "AI filmmaking is getting completely out of hand. 🤯 I just finished THE BROKEN COMPANY — an almost 4-MINUTE cinematic fantasy trailer. Multiple characters. Massive environments. Creatures. Dialogue. Epic battles. One con",
+      "prompt": "AI filmmaking is getting completely out of hand. 🤯 I just finished THE BROKEN COMPANY — an almost 4-MINUTE cinematic fantasy trailer. Multiple characters. Massive environments. Creatures. Dialogue. Epic battles. One connected story. I built the entire project hand in hand with Agent Two in @invideoOfficial , from the script and visual development to every sequence. Then I took everything into invideo Editor to cut, refine, add transitions, effects, color grading and finish the entire film. Almost 4 minutes. One complete creative workflow. Turn the sound ON. 🔊🔥 📌 Bookmark this thread — I’ll show you exactly how I made it 👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/CharaspowerAI/status/2099921459238113483",
+      "sourceType": "x",
+      "authorName": "Pierrick Chevallier | IA",
+      "authorHandle": "@CharaspowerAI",
+      "createdAt": "2026-09-15T18:01:05.000Z",
+      "importedAt": "2026-09-17T12:43:28.342Z",
+      "tags": [
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 106,
+        "reposts": 14,
+        "replies": 17,
+        "quotes": 1,
+        "bookmarks": 96,
+        "views": 70730,
+        "score": 717
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI filmmaking is getting completely out of hand. 🤯 I just finished THE BROKEN COMPANY — an almost 4-MINUTE cinematic fantasy trailer. Multiple characters. Massive environments. Creatures. Dialogue. Epic battles. One connected story. I built the entire project hand in hand with Agent Two in @invideoOfficial , from the script and visual development to every sequence. Then I took everything into invideo Editor to cut, refine, add transitions, effects, color grading and finish the entire film. Almost 4 minutes. One complete creative workflow. Turn the sound ON. 🔊🔥 📌 Bookmark this thread — I’ll show you exactly how I made it 👇"
     },
     {
       "id": "x-public-2099153847876727293",
@@ -14316,7 +14533,7 @@
       "authorName": "mojesko",
       "authorHandle": "@mojeskoqq",
       "createdAt": "2026-09-10T08:57:55.000Z",
-      "importedAt": "2026-09-17T06:30:01.288Z",
+      "importedAt": "2026-09-17T12:43:28.341Z",
       "tags": [
         "Midjourney",
         "Seedance",
@@ -14347,7 +14564,7 @@
         "replies": 5,
         "quotes": 1,
         "bookmarks": 66,
-        "views": 26020,
+        "views": 26145,
         "score": 466
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -18579,7 +18796,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.203Z",
+      "importedAt": "2026-09-17T12:43:22.639Z",
       "tags": [
         "人像"
       ],
@@ -18620,7 +18837,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.640Z",
       "tags": [
         "摄影"
       ],
@@ -18661,7 +18878,7 @@
       "authorName": "Andy",
       "authorHandle": "@Andy4aicreate",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -18702,7 +18919,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像",
         "摄影"
@@ -18744,7 +18961,7 @@
       "authorName": "yusra.",
       "authorHandle": "@chatgptpaglu",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.642Z",
       "tags": [
         "摄影"
       ],
@@ -18785,7 +19002,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.642Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -18827,7 +19044,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.642Z",
       "tags": [
         "视频"
       ],
@@ -18868,7 +19085,7 @@
       "authorName": "Arzoo Ai",
       "authorHandle": "@Arzoo12sh",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.642Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -18907,7 +19124,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "摄影"
       ],
@@ -18948,7 +19165,7 @@
       "authorName": "Shine by Nous ✨",
       "authorHandle": "@Shinebynous",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -18989,7 +19206,7 @@
       "authorName": "boB",
       "authorHandle": "@b0BRude",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像",
         "摄影"
@@ -19031,7 +19248,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19073,7 +19290,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像",
         "摄影"
@@ -19115,7 +19332,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.204Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像",
         "摄影"
@@ -19157,7 +19374,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -19198,7 +19415,7 @@
       "authorName": "Selina",
       "authorHandle": "@selinatasnim1",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19241,7 +19458,7 @@
       "authorName": "Ali Rivera",
       "authorHandle": "@ninjaswebcom",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -19282,7 +19499,7 @@
       "authorName": "AiHua",
       "authorHandle": "@aihua_art",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -19487,7 +19704,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像",
         "摄影"
@@ -19529,7 +19746,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19572,7 +19789,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19615,7 +19832,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -19656,7 +19873,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19699,7 +19916,7 @@
       "authorName": "Sarmad Tahir",
       "authorHandle": "@itxsarmadd",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.205Z",
+      "importedAt": "2026-09-17T12:43:22.641Z",
       "tags": [
         "人像"
       ],
@@ -66292,7 +66509,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.209Z",
+      "importedAt": "2026-09-17T12:43:22.646Z",
       "tags": [
         "产品",
         "平面设计",
@@ -66335,7 +66552,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.209Z",
+      "importedAt": "2026-09-17T12:43:22.646Z",
       "tags": [
         "平面设计"
       ],
@@ -66376,7 +66593,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T06:29:58.209Z",
+      "importedAt": "2026-09-17T12:43:22.646Z",
       "tags": [
         "平面设计"
       ],
