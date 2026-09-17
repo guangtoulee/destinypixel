@@ -4,6 +4,7 @@ import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/
 
 import Image from "next/image";
 import CompatibilityHome from "./compatibility-home";
+import { OracleHome } from "./oracle-sanctuary";
 import { compatibilityCopy } from "@/lib/compatibility/copy";
 import "./destiny-editorial.css";
 import ArchetypeMotionGallery from "./archetype-motion-gallery";
@@ -1146,40 +1147,7 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
-      <section className="white-sticks" id="sticks">
-        <div className="white-container white-sticks__layout">
-          <div className="white-section-heading white-section-heading--sticks">
-            <p>{text.sticks.eyebrow}</p>
-            <h2>{text.sticks.title}</h2>
-            <span>{text.sticks.description}</span>
-            <a href={`/sticks?locale=${locale}`}>
-              {copyLocale === "zh" ? "进入求签小殿" : locale === "ru" ? "Открыть храм жребиев" : "Enter the oracle hall"}
-              <ArrowRight size={16} aria-hidden="true" />
-            </a>
-            <div className="white-sticks__art" aria-hidden="true">
-              <Image src="/shrine/oracle-vessel-20260917.webp" width={960} height={1280} alt="" sizes="(max-width:760px) 70vw, 340px" />
-            </div>
-          </div>
-
-          <div className="white-stick-index">
-            {text.sticks.items.map((item, index) => (
-              <a
-                href={`${item.href}${item.href.includes("?") ? "&" : "?"}locale=${locale}`}
-                key={item.href}
-              >
-                <span className="white-stick-seal" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <strong>{item.title}</strong>
-                  <p>{item.body}</p>
-                </div>
-                <ArrowRight size={17} aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OracleHome locale={locale} />
 
       <section className="white-blessing" id="blessing">
         <div className="white-container">

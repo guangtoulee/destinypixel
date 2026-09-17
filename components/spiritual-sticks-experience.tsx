@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import Image from "next/image";
-import "./shrine-art.css";
-import { ArrowRight, Languages, Loader2, Search, Sparkles, WandSparkles } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { OracleStage, oracleSymbols } from "./oracle-sanctuary";
+import styles from "./oracle-sanctuary.module.css";
+import { ArrowRight, Languages, Loader2, Search, WandSparkles } from "lucide-react";
 import {
   contentLocale,
   reportLanguageOptions,
@@ -51,6 +51,7 @@ type StickCopy = {
 };
 
 const stickTypes = stickTypeOrder;
+const defaultTopicIndex: Record<StickType, number> = { guanyin: 3, guandi: 0, yuelao: 1, wealth: 2, huangdaxian: 4 };
 
 const systems: Record<
   ContentLocale,
@@ -182,9 +183,9 @@ const copy: Record<ContentLocale, StickCopy> = {
   en: {
     navHome: "Home",
     heroEyebrow: "Temple sticks · One question · One sign",
-    heroTitle: "Draw a stick before you decide.",
+    heroTitle: "A quiet moment for your question.",
     heroLead:
-      "Choose the tradition that matches your question. The result is a concise symbolic reading, designed to be direct rather than vague.",
+      "Choose a tradition, hold one question in mind, and draw a stick. Read its verse and discover a different perspective.",
     questionLabel: "Your question",
     questionPlaceholder: "Write one clear question. Example: Should I accept this offer?",
     topicLabel: "Topic",
@@ -202,7 +203,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     aiTitle: "AI interpretation",
     aiAction: "Interpret with my question",
     aiLoading: "Reading the sign with DeepSeek...",
-    aiEmpty: "Draw or search a stick first, then generate a question-specific interpretation.",
+    aiEmpty: "Explore how this sign relates to your question, with a personalized interpretation.",
     result: "Your stick",
     adviceLabel: "Practical advice",
     empty: "Keep the question concrete. One stick works best for one issue.",
@@ -232,10 +233,10 @@ const copy: Record<ContentLocale, StickCopy> = {
   },
   zh: {
     navHome: "返回首页",
-    heroEyebrow: "灵签 · 一事一问 · 一签一断",
-    heroTitle: "决定之前，先为这件事抽一支签。",
+    heroEyebrow: "求签小殿 · 一念一签",
+    heroTitle: "静心一刻，为心事求一签。",
     heroLead:
-      "选择与你问题最贴近的签种。这里先给一段现代白话签意，重点是直接、可执行，少一点玄乎其玄的废话。",
+      "选一处心意相合的签堂，想一件牵挂的事。轻摇签筒，在签诗与解意中，寻一个新的方向。",
     questionLabel: "你想问的事",
     questionPlaceholder: "写一个具体问题，例如：这个合作要不要继续推进？",
     topicLabel: "问题类型",
@@ -253,7 +254,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     aiTitle: "AI 合参解读",
     aiAction: "结合问题解读",
     aiLoading: "正在结合签文和问题解读...",
-    aiEmpty: "先抽签或查签号，再让 AI 结合你的具体问题解读。",
+    aiEmpty: "让这支签与你的心事相连，结合具体问题，读出更贴近当下的启发。",
     result: "你的签",
     adviceLabel: "行动建议",
     empty: "问题越具体，签意越有用。一支签最好只问一件事。",
@@ -284,9 +285,9 @@ const copy: Record<ContentLocale, StickCopy> = {
   ru: {
     navHome: "На главную",
     heroEyebrow: "Храмовые жребии · Один вопрос · Один знак",
-    heroTitle: "Вытяните жребий перед решением.",
+    heroTitle: "Момент тишины для вашего вопроса.",
     heroLead:
-      "Выберите традицию под ваш вопрос. Ответ короткий, символический и практичный: меньше тумана, больше направления.",
+      "Выберите традицию, подумайте об одном вопросе и вытяните жребий. Прочтите стих и взгляните на ситуацию по-новому.",
     questionLabel: "Ваш вопрос",
     questionPlaceholder: "Напишите один конкретный вопрос. Например: стоит ли принимать это предложение?",
     topicLabel: "Тема",
@@ -304,7 +305,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     aiTitle: "AI-толкование",
     aiAction: "Толковать мой вопрос",
     aiLoading: "DeepSeek читает знак...",
-    aiEmpty: "Сначала вытяните или найдите жребий, затем получите толкование под вопрос.",
+    aiEmpty: "Узнайте, как этот знак связан с вашим вопросом, в персональном толковании.",
     result: "Ваш жребий",
     adviceLabel: "Практический совет",
     empty: "Чем конкретнее вопрос, тем полезнее знак. Один жребий лучше работает для одного вопроса.",
@@ -353,14 +354,31 @@ export default function SpiritualSticksExperience({
   initialType?: StickType;
 }) {
   const [locale, setLocale] = useState<ReportLocale>(initialLocale);
+  useEffect(() => {
+    document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
+  }, [locale]);
   const [selectedType, setSelectedType] = useState<StickType>(initialType);
-  const [topic, setTopic] = useState(copy[contentLocale(initialLocale)].topics[0]);
+  const [topic, setTopic] = useState(copy[contentLocale(initialLocale)].topics[defaultTopicIndex[initialType]]);
   const [question, setQuestion] = useState("");
   const [reading, setReading] = useState<StickSign | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lookupNumber, setLookupNumber] = useState("33");
   const [aiText, setAiText] = useState("");
   const [isInterpreting, setIsInterpreting] = useState(false);
+  const drawTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const interpretation = useRef<AbortController | null>(null);
+  useEffect(() => () => {
+    if (drawTimer.current) clearTimeout(drawTimer.current);
+    interpretation.current?.abort();
+  }, []);
+  const busy = isDrawing || isInterpreting;
+  const ui = locale === "zh" || locale === "zh-TW" ? {
+    select: "01 · 选择签堂", question: "02 · 安放心事", title: "此刻，心中所问", optional: "可以写下问题，也可以静静默念。", read: "查看这支签的解意", footnote: "签意是一种文化体验，也是一份自我思考的邀请。",
+  } : locale === "ru" ? {
+    select: "01 · Выберите традицию", question: "02 · Ваш вопрос", title: "Что у вас на душе?", optional: "Запишите вопрос или просто подумайте о нём.", read: "Прочитать толкование", footnote: "Символический ритуал и приглашение к размышлению.",
+  } : {
+    select: "01 · Choose your tradition", question: "02 · Hold your question", title: "What’s on your mind?", optional: "Write it here, or simply hold it in your thoughts.", read: "Read your sign", footnote: "A symbolic ritual. A little space for reflection.",
+  };
   const copyLocale = contentLocale(locale);
   const text = copy[copyLocale];
   const selectedSystem = systems[copyLocale][selectedType];
@@ -371,8 +389,9 @@ export default function SpiritualSticksExperience({
   }, [text.topics, topic]);
 
   function changeLocale(nextLocale: ReportLocale) {
+    if (busy) return;
     setLocale(nextLocale);
-    setTopic(copy[contentLocale(nextLocale)].topics[0]);
+    setTopic(copy[contentLocale(nextLocale)].topics[Math.max(0, text.topics.indexOf(selectedTopic))]);
     setAiText("");
     setReading((current) =>
       current ? getStickSign(current.type, current.number, nextLocale) : current,
@@ -386,7 +405,9 @@ export default function SpiritualSticksExperience({
   }
 
   function chooseType(nextType: StickType) {
+    if (busy) return;
     setSelectedType(nextType);
+    setTopic(text.topics[defaultTopicIndex[nextType]]);
     setReading(null);
     setAiText("");
     setIsDrawing(false);
@@ -398,34 +419,45 @@ export default function SpiritualSticksExperience({
   }
 
   function drawStick() {
-    if (isDrawing) return;
+    if (busy) return;
 
     setReading(null);
     setIsDrawing(true);
-    window.setTimeout(() => {
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      document.getElementById("oracle-vessel")?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+        block: "start",
+      });
+    }
+    drawTimer.current = setTimeout(() => {
       setReading(createReading(locale, selectedType));
       setAiText("");
       setIsDrawing(false);
-    }, 950);
+      drawTimer.current = null;
+    }, 1250);
   }
 
   function lookupStick() {
+    if (busy || !lookupNumber.trim()) return;
     const number = Number(lookupNumber);
-    if (!Number.isFinite(number)) return;
+    if (!Number.isInteger(number) || number < 1 || number > selectedSystem.count) return;
 
     setReading(getStickSign(selectedType, number, locale));
     setAiText("");
   }
 
   async function interpretReading() {
-    if (!reading || isInterpreting) return;
+    if (!reading || busy) return;
 
     setAiText("");
     setIsInterpreting(true);
+    const controller = new AbortController();
+    interpretation.current = controller;
 
     try {
       const response = await fetch("/api/sticks/interpret", {
         method: "POST",
+        signal: controller.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           type: selectedType,
@@ -453,227 +485,95 @@ export default function SpiritualSticksExperience({
         setAiText(nextText);
       }
     } catch {
-      setAiText(reading.plain);
+      if (!controller.signal.aborted) setAiText(reading.plain);
     } finally {
-      setIsInterpreting(false);
+      if (!controller.signal.aborted) setIsInterpreting(false);
     }
   }
 
   return (
-    <main className="stick-site">
+    <main className={styles.page}>
       <header className="white-header stick-header">
         <div className="white-container white-header__inner">
-          <a className="white-brand" href={`/?locale=${locale}`}>
-            <span aria-hidden="true" />
-            DestinyPixel
-          </a>
-          <a className="white-black-link" href={`/?locale=${locale}`}>
-            {text.navHome}
-          </a>
+          <a className="white-brand" href={`/?locale=${locale}`}><span aria-hidden="true" />DestinyPixel</a>
+          <a className="white-black-link" href={`/?locale=${locale}`}>{text.navHome}</a>
           <div className="white-language" aria-label="Language selector">
             <Languages size={14} aria-hidden="true" />
-            {reportLanguageOptions.map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                data-active={locale === option.value}
-                onClick={() => changeLocale(option.value)}
-              >
-                {option.value === "zh"
-                  ? "简"
-                  : option.value === "zh-TW"
-                    ? "繁"
-                  : option.value === "ru"
-                    ? "RU"
-                    : "EN"}
-              </button>
-            ))}
+            {reportLanguageOptions.map((option) => <button key={option.value} type="button" disabled={busy} data-active={locale === option.value} onClick={() => changeLocale(option.value)}>{option.value === "zh" ? "简" : option.value === "zh-TW" ? "繁" : option.value === "ru" ? "RU" : "EN"}</button>)}
           </div>
         </div>
       </header>
-
-      <section className="stick-hero">
-        <div className="white-container stick-hero__grid">
-          <div className="stick-hero__copy">
-            <p className="white-kicker">
-              <Sparkles size={14} aria-hidden="true" />
-              {text.heroEyebrow}
-            </p>
-            <h1>{text.heroTitle}</h1>
-            <span>{text.heroLead}</span>
+      <div className={styles.container}>
+        <div className={styles.intro}>
+          <p className={styles.eyebrow}>{text.heroEyebrow}</p>
+          <h1>{text.heroTitle}</h1>
+          <p>{text.heroLead}</p>
+        </div>
+        <section className={styles.ritual} aria-label={text.heroEyebrow}>
+          <div className={styles.traditions} role="group" aria-label={ui.select}>
+            {stickTypes.map((type) => {
+              const system = systems[copyLocale][type];
+              const Icon = oracleSymbols[type];
+              return <button key={type} type="button" disabled={busy} data-tradition={type} aria-pressed={selectedType === type} onClick={() => chooseType(type)}>
+                <span className={styles.symbol}><Icon size={22} strokeWidth={1.4} aria-hidden="true" /></span>
+                <span><strong>{system.name}</strong><small>{system.domains.slice(0, 2).join(" · ")}</small></span>
+              </button>;
+            })}
           </div>
-
-          <div className="stick-draw-panel">
-            <div className="stick-type-grid">
-              {stickTypes.map((type) => {
-                const system = systems[copyLocale][type];
-
-                return (
-                  <button
-                    key={type}
-                    type="button"
-                    data-active={selectedType === type}
-                    onClick={() => chooseType(type)}
-                  >
-                    <strong>{system.name}</strong>
-                    <span>{system.subtitle}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            <div
-              className="stick-ritual-visual stick-ritual-visual--art"
-              data-drawing={isDrawing}
-              data-revealed={Boolean(reading)}
-              aria-hidden="true"
-            >
-              <Image className="stick-vessel-art" src="/shrine/oracle-vessel-20260917.webp" width={960} height={1280} alt="" sizes="(max-width:760px) 220px, 270px" />
-              <div className="stick-reveal-slip">
-                <small>{selectedSystem.name}</small>
-                <strong>{reading ? reading.number : "?"}</strong>
-                <em>{reading ? reading.level : selectedSystem.count}</em>
+          <div className={styles.ritualBody}>
+            <OracleStage name={selectedSystem.name} count={selectedSystem.count} caption={isDrawing ? text.drawing : reading ? text.reveal : text.ritualIdle} drawing={isDrawing} number={reading?.number} level={reading?.level} readLabel={ui.read} />
+            <div className={styles.form}>
+              <p className={styles.eyebrow}>{ui.question}</p>
+              <h2>{ui.title}</h2>
+              <p className={styles.systemNote}>{selectedSystem.body}</p>
+              <div className={styles.field}>
+                <span id="oracle-topic-label">{text.topicLabel}</span>
+                <div className={styles.topicChoices} role="group" aria-labelledby="oracle-topic-label">
+                  {text.topics.map((item) => <button key={item} type="button" disabled={busy} aria-pressed={selectedTopic === item} onClick={() => setTopic(item)}>{item}</button>)}
+                </div>
               </div>
-            </div>
-
-            <p className="stick-ritual-caption" aria-live="polite">
-              {isDrawing ? text.drawing : reading ? text.reveal : text.ritualIdle}
-            </p>
-
-            <label className="stick-field">
-              <span>{text.topicLabel}</span>
-              <select
-                value={selectedTopic}
-                onChange={(event) => setTopic(event.target.value)}
-              >
-                {text.topics.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="stick-field">
-              <span>{text.questionLabel}</span>
-              <textarea
-                value={question}
-                placeholder={text.questionPlaceholder}
-                onChange={(event) => setQuestion(event.target.value)}
-              />
-            </label>
-
-            <button
-              className="stick-draw-button"
-              type="button"
-              data-drawing={isDrawing}
-              disabled={isDrawing}
-              onClick={drawStick}
-            >
-              {isDrawing ? text.drawing : reading ? text.redraw : text.draw}
-              <ArrowRight size={16} aria-hidden="true" />
-            </button>
-
-            <div className="stick-lookup">
-              <div>
-                <strong>{text.lookupTitle}</strong>
-                <span>{selectedSystem.name}</span>
-              </div>
-              <label>
-                <span>{text.lookupLabel}</span>
-                <input
-                  type="number"
-                  min={1}
-                  max={selectedSystem.count}
-                  value={lookupNumber}
-                  onChange={(event) => setLookupNumber(event.target.value)}
-                />
+              <label className={styles.field}>
+                <span>{text.questionLabel}</span>
+                <textarea value={question} disabled={busy} maxLength={1500} placeholder={text.questionPlaceholder} onChange={(event) => setQuestion(event.target.value)} />
               </label>
-              <button type="button" onClick={lookupStick}>
-                <Search size={15} aria-hidden="true" />
-                {text.lookupAction}
+              <button className={styles.primary} type="button" disabled={busy} onClick={drawStick}>
+                {isDrawing ? text.drawing : reading ? text.redraw : text.draw}
+                {isDrawing ? <Loader2 className="loading-icon" size={17} aria-hidden="true" /> : <ArrowRight size={17} aria-hidden="true" />}
               </button>
+              <p className={styles.formFootnote}>{ui.optional}</p>
+              {reading && <a className={styles.readLink} href="#oracle-reading">{ui.read}<ArrowRight size={14} aria-hidden="true" /></a>}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="stick-result-section">
-        <div className="white-container stick-result-grid">
-          <article className="stick-system-card">
-            <small>{selectedSystem.subtitle}</small>
-            <h2>{selectedSystem.name}</h2>
-            <p>{selectedSystem.body}</p>
-            <div>
-              {selectedSystem.domains.map((domain) => (
-                <em key={domain}>{domain}</em>
-              ))}
-            </div>
-          </article>
-
-          <article className="stick-result-card" data-empty={!reading}>
-            {reading ? (
-              <>
-                <small>{text.result}</small>
-                <div className="stick-number">
-                  <span>{reading.number}</span>
-                  <em>
-                    / {selectedSystem.count} · {reading.level}
-                  </em>
-                </div>
-                <div className="stick-result-ticket" aria-hidden="true">
-                  <div className="stick-result-slip">
-                    <small>{selectedSystem.name}</small>
-                    <strong>{reading.number}</strong>
-                    <em>{reading.level}</em>
-                  </div>
-                </div>
-                <h2>{reading.title}</h2>
-                <div className="stick-poem-block">
-                  <small>{text.poemLabel}</small>
-                  <p>{reading.poem}</p>
-                </div>
-                <div className="stick-poem-block">
-                  <small>{text.plainLabel}</small>
-                  <p>{reading.plain}</p>
-                </div>
-                <div className="stick-advice">
-                  <strong>{text.adviceLabel}</strong>
-                  <span>{reading.advice}</span>
-                </div>
-                <p className="stick-source-note">
-                  <strong>{text.sourceLabel}</strong>
-                  {reading.sourceNote}
-                </p>
-                <div className="stick-ai-panel">
-                  <div>
-                    <strong>{text.aiTitle}</strong>
-                    <p>{aiText || text.aiEmpty}</p>
-                  </div>
-                  <button
-                    type="button"
-                    disabled={isInterpreting}
-                    onClick={interpretReading}
-                  >
-                    {isInterpreting ? (
-                      <Loader2 className="loading-icon" size={15} aria-hidden="true" />
-                    ) : (
-                      <WandSparkles size={15} aria-hidden="true" />
-                    )}
-                    {isInterpreting ? text.aiLoading : text.aiAction}
-                  </button>
-                </div>
-              </>
-            ) : (
-              <>
-                <small>{selectedSystem.name}</small>
-                <h2>{text.empty}</h2>
-                <p>{selectedSystem.body}</p>
-              </>
-            )}
-          </article>
-        </div>
-      </section>
+          <details className={styles.lookup}>
+            <summary>{text.lookupTitle} · {text.lookupAction}</summary>
+            <form className={styles.lookupFields} onSubmit={(event) => { event.preventDefault(); lookupStick(); }}>
+              <label><span>{text.lookupLabel} · 1–{selectedSystem.count}</span><input type="number" required step={1} min={1} max={selectedSystem.count} value={lookupNumber} disabled={busy} onChange={(event) => setLookupNumber(event.target.value)} /></label>
+              <button className={styles.secondary} disabled={busy} type="submit"><Search size={15} aria-hidden="true" />{text.lookupAction}</button>
+            </form>
+          </details>
+        </section>
+        <p className={styles.formFootnote}>{ui.footnote}</p>
+        {reading && <section className={styles.result} id="oracle-reading" aria-label={text.result}>
+          <div className={styles.resultHeading}>
+            <div className={styles.resultSeal}><strong>{String(reading.number).padStart(2, "0")}</strong><small>{reading.level}</small></div>
+            <div><p>{selectedSystem.name} · {text.result} {reading.number} / {selectedSystem.count}</p><h2>{reading.title}</h2></div>
+          </div>
+          <div className={styles.readingColumns}>
+            <div className={styles.poem}><small>{text.poemLabel}</small><p>{reading.poem}</p></div>
+            <div className={styles.plain}><small>{text.plainLabel}</small><p>{reading.plain}</p></div>
+          </div>
+          <div className={styles.advice}><strong>{text.adviceLabel}</strong><span>{reading.advice}</span></div>
+          <div className={styles.ai}>
+            <strong>{text.aiTitle}</strong>
+            <p aria-live="polite" aria-busy={isInterpreting}>{aiText || text.aiEmpty}</p>
+            <button className={styles.secondary} type="button" disabled={busy} onClick={interpretReading}>
+              {isInterpreting ? <Loader2 className="loading-icon" size={15} aria-hidden="true" /> : <WandSparkles size={15} aria-hidden="true" />}
+              {isInterpreting ? text.aiLoading : text.aiAction}
+            </button>
+          </div>
+          <p className={styles.source}><strong>{text.sourceLabel}</strong>{reading.sourceNote}</p>
+        </section>}
+      </div>
     </main>
   );
 }
