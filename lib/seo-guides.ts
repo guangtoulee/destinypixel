@@ -99,30 +99,58 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "insights",
     slug: "i-ching-vs-tarot",
-    title: "I Ching vs Tarot: Which to Use for One Question?",
+    title: "I Ching vs Tarot: Which to Use for One Question? | DestinyPixel",
     description:
-      "I Ching (and liuyao) vs tarot for one clear question—timing and structure versus imagery. When to use each, and what neither can promise. Explore Destiny Pixel oracle.",
+      "Tarot names feelings and motives; I Ching / liuyao frames tendency, obstacle, and timing. Pick one sincere question—then try DestinyPixel’s Question Oracle.",
     h1: "I Ching vs Tarot: Which to Use for One Question?",
     paragraphs: [
       "For one clear question, people often reach for tarot or the I Ching. Destiny Pixel’s oracle lane sits closer to the I Ching / liuyao tradition: hexagrams, changing lines, and how a situation is structured in time—not a deck of picture archetypes.",
       "Tarot shines when you need language for feelings, motives, and the story you are telling yourself. I Ching / liuyao shines when you care about tendency, obstacle, and rough timing (“push now / wait”). Both work best as one sincere question; neither should be treated as a courtroom verdict or a medical order.",
       "If you already know the emotion and need a decision frame, start with I Ching. If you need to name what you feel before you choose, start with tarot. Asking the same question twice in one hour usually adds noise, not clarity.",
     ],
+    faqAsH2: true,
     faqs: [
+      {
+        question: "What’s the difference between I Ching and tarot for one question?",
+        answer:
+          "Tarot names feelings, motives, and the story you are telling yourself. I Ching / liuyao frames tendency, obstacle, and rough timing.",
+      },
       {
         question: "What is liuyao?",
         answer: "A six-line I Ching method used for concrete situations.",
+      },
+      {
+        question: "When should I start with tarot vs I Ching?",
+        answer:
+          "Start with tarot if you need to name what you feel before you choose. Start with I Ching if you already know the emotion and need a decision frame.",
       },
       {
         question: "Can I ask yes/no?",
         answer: "Better to ask “what supports / blocks this path?”",
       },
       {
-        question: "Same question twice?",
+        question: "Should I ask the same question twice?",
         answer: "Wait; change the angle only if the situation changed.",
       },
+      {
+        question:
+          "How does DestinyPixel’s Question Oracle fit (Tarot + hexagram-inspired / liuyao-adjacent)?",
+        answer:
+          "DestinyPixel’s Question Oracle is Tarot plus a hexagram-inspired, liuyao-adjacent time reading. Ask one sincere question; the page casts six lines from the question time and pairs them with a three-card Tarot mirror.",
+      },
     ],
-    cta: { label: "Ask one question in the oracle studio", href: "/oracle" },
+    cta: { label: "Ask one question in the Oracle", href: "/oracle" },
+    ctas: [
+      { label: "Ask one question in the Oracle", href: "/oracle" },
+      {
+        label: "Temple sticks",
+        href: "/sticks",
+        note: "A different ritual lane.",
+      },
+      { label: "Insight studios", href: "/insights" },
+    ],
+    disclaimer:
+      "Neither I Ching nor tarot should be treated as a courtroom verdict or a medical order. They are symbolic and reflective, not medical, legal, or financial advice, and they do not guarantee an outcome.",
     related: [
       {
         label: "What is a BaZi birth chart",
