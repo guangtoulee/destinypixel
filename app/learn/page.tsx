@@ -37,7 +37,10 @@ const guides = [
     steps: ["If you add a photo, use a clear palm image or a front-facing portrait in even light. Keep the relevant area visible.", "Review the selected descriptions instead of submitting the defaults unchanged. Add notes about what you want to reflect on.", "Generate the text reading. Consider which observations resonate and which do not; the text does not validate them."],
     result: "A written symbolic interpretation of your selected details and notes. The photo is a local preview; this reading does not send it to the model for visual analysis.",
     limit: "Appearance does not establish a person's character, intelligence, health or future. These readings are not diagnoses or validated personality assessments. Only upload photos you have permission to use.",
-    related: [{ href: "/face", label: "Open Face studio", key: "face" }],
+    related: [
+      { href: "/face", label: "Open Face studio", key: "face" },
+      { href: "/learn/chinese-palm-reading-vs-western", label: "Chinese vs Western palmistry", key: "palm-guide" },
+    ],
   },
   {
     id: "sticks", number: "04", title: "Draw a stick, or look one up", tool: "Temple sticks", href: "/sticks",

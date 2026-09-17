@@ -21,7 +21,7 @@ const copy = {
     browse: "Explore the tools", guideCta: "Read the beginner guide", prepare: "Bring", result: "Get", open: "Open tool",
     noteTitle: "New here? Start with one small task.",
     note: "Try a Birth Totem with your birth details, bring one specific question to the Oracle, or explore colors in the bracelet atelier.",
-    noteCta: "See the steps and limitations", sticksGuide: "Guanyin fortune sticks", compatibilityGuide: "BaZi love compatibility", oracleGuide: "I Ching vs Tarot",
+    noteCta: "See the steps and limitations", sticksGuide: "Guanyin fortune sticks", compatibilityGuide: "BaZi love compatibility", oracleGuide: "I Ching vs Tarot", palmGuide: "Chinese vs Western palmistry",
     contact: "Contact", footer: "Birth symbolism, personal reflection and five-element inspiration.",
     groups: {
       birth: { title: "Birth maps & totems", number: "01", description: "Begin with your birth details. Explore a symbolic reading or the geometry of Four Pillars and five-element relationships." },
@@ -36,7 +36,7 @@ const copy = {
     browse: "浏览全部工具", guideCta: "阅读入门指南（英文）", prepare: "需要准备", result: "可以得到", open: "打开工具",
     noteTitle: "第一次来，从一件小事开始。",
     note: "有出生资料，可以试试本命灵构；有具体问题，可以进入一事一问；想把五行配色融入日常，可以从灵石手串工坊开始。",
-    noteCta: "查看步骤与使用边界（英文）", sticksGuide: "Guanyin fortune sticks", compatibilityGuide: "BaZi love compatibility", oracleGuide: "I Ching vs Tarot", contact: "联系反馈", footer: "从出生意象、自我观察到五行生活灵感。",
+    noteCta: "查看步骤与使用边界（英文）", sticksGuide: "Guanyin fortune sticks", compatibilityGuide: "BaZi love compatibility", oracleGuide: "I Ching vs Tarot", palmGuide: "Chinese vs Western palmistry", contact: "联系反馈", footer: "从出生意象、自我观察到五行生活灵感。",
     groups: {
       birth: { title: "命理图谱", number: "01", description: "从出生资料出发，阅读象征性的个人解读，或探索四柱、五行关系构成的几何图腾。" },
       insight: { title: "问事与观相", number: "02", description: "带着具体问题抽签问事，或从自己确认的手相、面部细节出发，获得另一种观察角度。" },
@@ -80,7 +80,7 @@ export default async function ToolsPage({ searchParams }: PageProps) {
             return <Link className={styles.card} href={directoryToolHref(tool, locale)} key={tool.key} data-analytics-tool={tool.key} data-analytics-location="tools"><div className={styles.cardTop}><span className={styles.toolIcon}><Icon size={19} aria-hidden="true" /></span></div><h3>{item.name}</h3><p className={styles.description}>{item.description}</p><dl className={styles.toolDetails}><div><dt>{text.prepare}</dt><dd>{item.prepare}</dd></div><div><dt>{text.result}</dt><dd>{item.result}</dd></div></dl><span className={styles.cardAction}>{text.open}<ArrowRight size={16} aria-hidden="true" /></span></Link>;
           })}</div>
         </section>)}
-        <aside className={styles.startNote}><BookOpen size={26} aria-hidden="true" /><div><h2>{text.noteTitle}</h2><p>{text.note}</p><div className={styles.startNoteLinks}><Link href="/learn" hrefLang="en">{text.noteCta}<ArrowRight size={15} aria-hidden="true" /></Link>{locale === "en" ? <Link href="/learn/guanyin-fortune-sticks" hrefLang="en">{text.sticksGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}{locale === "en" ? <Link href="/learn/bazi-love-compatibility" hrefLang="en">{text.compatibilityGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}{locale === "en" ? <Link href="/insights/i-ching-vs-tarot" hrefLang="en">{text.oracleGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}</div></div></aside>
+        <aside className={styles.startNote}><BookOpen size={26} aria-hidden="true" /><div><h2>{text.noteTitle}</h2><p>{text.note}</p><div className={styles.startNoteLinks}><Link href="/learn" hrefLang="en">{text.noteCta}<ArrowRight size={15} aria-hidden="true" /></Link>{locale === "en" ? <Link href="/learn/guanyin-fortune-sticks" hrefLang="en">{text.sticksGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}{locale === "en" ? <Link href="/learn/bazi-love-compatibility" hrefLang="en">{text.compatibilityGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}{locale === "en" ? <Link href="/insights/i-ching-vs-tarot" hrefLang="en">{text.oracleGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}{locale === "en" ? <Link href="/learn/chinese-palm-reading-vs-western" hrefLang="en">{text.palmGuide}<ArrowRight size={15} aria-hidden="true" /></Link> : null}</div></div></aside>
       </div>
       <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><nav aria-label={locale === "zh" ? "页脚导航" : "Footer navigation"}><Link href={homeHref}>{text.home}</Link><Link href="/learn" hrefLang="en">{text.guide}</Link><Link href={locale === "zh" ? "/journal?locale=zh" : "/journal"}>{locale === "zh" ? "原创文章" : "Journal"}</Link><a href={destinySupportHref}>{text.contact}</a></nav></footer>
     </main>
