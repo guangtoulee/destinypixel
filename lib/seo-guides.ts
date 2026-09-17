@@ -1,4 +1,10 @@
-export type SeoGuideFaq = { question: string; answer: string };
+export type SeoGuideLink = { label: string; href: string; note?: string };
+
+export type SeoGuideFaq = {
+  question: string;
+  answer: string;
+  link?: SeoGuideLink;
+};
 
 export type SeoGuide = {
   section: "learn" | "insights";
@@ -8,8 +14,12 @@ export type SeoGuide = {
   h1: string;
   paragraphs: string[];
   faqs: SeoGuideFaq[];
-  cta: { label: string; href: string };
-  related: { label: string; href: string }[];
+  /** Render each FAQ as an H2 + answer (AEO), instead of a single FAQ list. */
+  faqAsH2?: boolean;
+  cta: SeoGuideLink;
+  ctas?: SeoGuideLink[];
+  disclaimer?: string;
+  related: SeoGuideLink[];
 };
 
 export const seoGuides: SeoGuide[] = [
@@ -18,30 +28,62 @@ export const seoGuides: SeoGuide[] = [
     slug: "what-is-bazi-birth-chart",
     title: "What Is a BaZi Birth Chart? Four Pillars Explained",
     description:
-      "A BaZi birth chart (Four Pillars of Destiny) maps year, month, day, and hour. Learn what a Day Master is—and what BaZi cannot promise.",
-    h1: "What Is a BaZi Birth Chart?",
+      "BaZi (Four Pillars of Destiny) is a Chinese birth chart from year, month, day and hour. Learn what each pillar means—and try a free Day Pillar card or deeper tools.",
+    h1: "What is a BaZi birth chart?",
     paragraphs: [
       "A BaZi birth chart—also called the Four Pillars of Destiny—is a classical Chinese way of reading time of birth. It is often labeled “Chinese astrology,” but it does not work like a Western sun-sign horoscope. BaZi builds four pillars from the calendar: year, month, day, and hour. Each pillar pairs a Heavenly Stem and an Earthly Branch.",
       "The day pillar’s stem is your Day Master—the reference point for strength, useful elements, and how other pillars relate to you. A full reading usually needs birth date and birth time; without the hour, the day pillar still helps, but the hour pillar and some timing calls stay incomplete.",
       "BaZi is better at patterns over years—work seasons, relationship themes, pressure cycles—than at naming a single “lucky number.” It cannot replace medical, legal, or financial advice, and it should not be sold as a fixed fate stamp.",
     ],
+    faqAsH2: true,
     faqs: [
       {
-        question: "Is BaZi Chinese astrology?",
+        question: "What is BaZi / Four Pillars of Destiny?",
         answer:
-          "Closest English label, yes—but the method is Four Pillars, not sun-sign traits alone.",
+          "A BaZi birth chart—also called the Four Pillars of Destiny—is a classical Chinese way of reading time of birth. BaZi builds four pillars from the calendar: year, month, day, and hour.",
+      },
+      {
+        question: "What is the day pillar?",
+        answer:
+          "The day pillar’s stem is your Day Master—the reference point for strength, useful elements, and how other pillars relate to you.",
       },
       {
         question: "Do I need birth time?",
-        answer: "Strongly preferred for a full chart.",
+        answer:
+          "Strongly preferred for a full chart. Without the hour, the day pillar still helps, but the hour pillar and some timing calls stay incomplete.",
+      },
+      {
+        question: "What is true solar time?",
+        answer:
+          "True solar time is a birth-place clock correction, not the civil time on a birth record.",
+        link: {
+          label: "Prepare birth date, time and place",
+          href: "/journal/prepare-birth-date-time-place",
+        },
       },
       {
         question: "BaZi vs Western natal chart?",
         answer:
-          "BaZi uses Chinese calendar pillars; Western charts use planets and houses.",
+          "BaZi uses Chinese calendar pillars; Western charts use planets and houses. It does not work like a Western sun-sign horoscope.",
+      },
+      {
+        question: "How do I try DestinyPixel free?",
+        answer:
+          "Start with a free Day Pillar card. Open Birth Totem for a visual chart, or love compatibility when two people both have birth times.",
       },
     ],
-    cta: { label: "Try a BaZi / day-pillar reading", href: "/day-pillar" },
+    cta: { label: "Free Day Pillar card", href: "/day-pillar" },
+    ctas: [
+      { label: "Free Day Pillar card", href: "/day-pillar" },
+      { label: "Birth Totem", href: "/tuteng" },
+      {
+        label: "Love compatibility",
+        href: "/compatibility",
+        note: "Both people need birth times.",
+      },
+    ],
+    disclaimer:
+      "It cannot replace medical, legal, or financial advice, and it should not be sold as a fixed fate stamp.",
     related: [
       { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
       {
@@ -137,6 +179,14 @@ export function seoGuidePath(guide: SeoGuide) {
   return `/${guide.section}/${guide.slug}`;
 }
 
+export function seoGuideCtas(guide: SeoGuide) {
+  return guide.ctas ?? [guide.cta];
+}
+
+export function seoGuideFaqAnswerText(faq: SeoGuideFaq) {
+  return faq.link ? `${faq.answer} ${faq.link.href}` : faq.answer;
+}
+
 export function seoGuideFaqSchema(guide: SeoGuide) {
   return {
     "@context": "https://schema.org",
@@ -146,7 +196,7 @@ export function seoGuideFaqSchema(guide: SeoGuide) {
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.answer,
+        text: seoGuideFaqAnswerText(faq),
       },
     })),
   };
