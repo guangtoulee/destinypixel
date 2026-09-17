@@ -28,6 +28,7 @@ const guides = [
     steps: ["Describe the situation and the choice you are considering. For example: “What should I clarify before accepting this new role?”", "Check the question time, select the relevant topic and generate the reading.", "Read the Tarot and hexagram-inspired interpretation, then write down one practical question to ask or fact to check."],
     result: "A visual symbolic spread and a written interpretation focused on the submitted question.",
     limit: "The symbols are not evidence about another person or a forecast you can rely on. Use actual information when making a consequential decision.",
+    related: [{ href: "/insights/i-ching-vs-tarot", label: "I Ching vs Tarot", key: "i-ching-vs-tarot" }],
   },
   {
     id: "palm", number: "03", title: "Explore palm and face symbols", tool: "Palm studio", href: "/palm",
@@ -57,7 +58,7 @@ const guides = [
   },
 ];
 
-const articles = seoGuidesFor("learn");
+const articles = [...seoGuidesFor("learn"), ...seoGuidesFor("insights")];
 
 export default function LearnPage() {
   return (

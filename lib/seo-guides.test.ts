@@ -173,3 +173,65 @@ test("BaZi love compatibility learn page is structure/meta/CTAs only, with no Ul
     sitemap().some((entry) => entry.url === absoluteUrl("/learn/bazi-love-compatibility")),
   );
 });
+
+test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and no Ultra links", () => {
+  const guide = getSeoGuide("insights", "i-ching-vs-tarot");
+  assert.ok(guide);
+  assert.equal(
+    guide.title,
+    "I Ching vs Tarot: Which to Use for One Question? | DestinyPixel",
+  );
+  assert.equal(
+    guide.description,
+    "Tarot names feelings and motives; I Ching / liuyao frames tendency, obstacle, and timing. Pick one sincere question—then try DestinyPixel’s Question Oracle.",
+  );
+  assert.equal(guide.h1, "I Ching vs Tarot: Which to Use for One Question?");
+  assert.equal(guide.faqAsH2, true);
+  assert.equal(guide.paragraphs.length, 3);
+  assert.match(guide.paragraphs[0]!, /Destiny Pixel’s oracle lane sits closer to the I Ching/);
+  assert.match(guide.paragraphs[1]!, /courtroom verdict or a medical order/);
+  assert.match(guide.paragraphs[2]!, /Asking the same question twice in one hour/);
+  assert.deepEqual(
+    guide.faqs.map((faq) => faq.question),
+    [
+      "What’s the difference between I Ching and tarot for one question?",
+      "What is liuyao?",
+      "When should I start with tarot vs I Ching?",
+      "Can I ask yes/no?",
+      "Should I ask the same question twice?",
+      "How does DestinyPixel’s Question Oracle fit (Tarot + hexagram-inspired / liuyao-adjacent)?",
+    ],
+  );
+  assert.equal(guide.faqs[1]?.answer, "A six-line I Ching method used for concrete situations.");
+  assert.equal(guide.faqs[3]?.answer, "Better to ask “what supports / blocks this path?”");
+  assert.equal(guide.faqs[4]?.answer, "Wait; change the angle only if the situation changed.");
+  for (const faq of guide.faqs) {
+    assert.ok(faq.answer.length > 0);
+    assert.ok(faq.answer.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 2);
+  }
+  assert.match(guide.faqs[5]!.answer, /Tarot/i);
+  assert.match(guide.faqs[5]!.answer, /hexagram-inspired/i);
+  assert.match(guide.faqs[5]!.answer, /liuyao-adjacent/i);
+  assert.match(guide.faqs[5]!.answer, /three-card Tarot mirror/i);
+  const ctas = seoGuideCtas(guide);
+  assert.equal(ctas[0]?.label, "Ask one question in the Oracle");
+  assert.equal(ctas[0]?.href, "/oracle");
+  assert.deepEqual(
+    ctas.map((cta) => cta.href),
+    ["/oracle", "/sticks", "/insights"],
+  );
+  assert.match(ctas[1]?.note ?? "", /different ritual lane/i);
+  assert.ok(guide.disclaimer);
+  assert.match(guide.disclaimer, /courtroom|medical/i);
+  assert.match(guide.disclaimer, /symbolic|reflective/i);
+  assert.match(guide.disclaimer, /not medical, legal, or financial/i);
+  assert.match(guide.disclaimer, /do not guarantee/i);
+  const blob = JSON.stringify(guide);
+  assert.doesNotMatch(blob, /\/ultra/i);
+  assert.doesNotMatch(blob, /accuracy|success rate|\d+%/i);
+  assert.ok(guideHrefs(guide).every((href) => !href.toLowerCase().includes("ultra")));
+  assert.equal(seoGuideFaqSchema(guide).mainEntity.length, 6);
+  assert.ok(
+    sitemap().some((entry) => entry.url === absoluteUrl("/insights/i-ching-vs-tarot")),
+  );
+});
