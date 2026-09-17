@@ -16,7 +16,10 @@ const guides = [
     steps: ["Check the date, time and city before generating. A guessed birth time changes the assumptions behind the result.", "Read the report as a set of themes to consider. Compare each theme with concrete examples from your own life.", "For a visual version, open Birth Totem with the same birth details. Select its layers to inspect the pillars, elements and explanations. Export the design as PNG or SVG if you want to keep it."],
     result: "The birth map produces a personal reading. Birth Totem produces an interactive geometric design derived from your input; it is an original visualization system.",
     limit: "Birth charts and totems are symbolic tools. They do not measure ability or establish what will happen. If you do not know your birth time, begin with a question-based tool instead of treating a guessed chart as precise.",
-    related: { href: "/tuteng", label: "Explore Birth Totem", key: "tuteng" },
+    related: [
+      { href: "/tuteng", label: "Explore Birth Totem", key: "tuteng" },
+      { href: "/learn/bazi-love-compatibility", label: "BaZi love compatibility guide", key: "compatibility" },
+    ],
   },
   {
     id: "oracle", number: "02", title: "Bring one question into focus", tool: "Question Oracle", href: "/oracle",
@@ -33,7 +36,7 @@ const guides = [
     steps: ["If you add a photo, use a clear palm image or a front-facing portrait in even light. Keep the relevant area visible.", "Review the selected descriptions instead of submitting the defaults unchanged. Add notes about what you want to reflect on.", "Generate the text reading. Consider which observations resonate and which do not; the text does not validate them."],
     result: "A written symbolic interpretation of your selected details and notes. The photo is a local preview; this reading does not send it to the model for visual analysis.",
     limit: "Appearance does not establish a person's character, intelligence, health or future. These readings are not diagnoses or validated personality assessments. Only upload photos you have permission to use.",
-    related: { href: "/face", label: "Open Face studio", key: "face" },
+    related: [{ href: "/face", label: "Open Face studio", key: "face" }],
   },
   {
     id: "sticks", number: "04", title: "Draw a stick, or look one up", tool: "Temple sticks", href: "/sticks",
@@ -42,7 +45,7 @@ const guides = [
     steps: ["Select a tradition before drawing or searching. A number belongs to a particular collection; the same number in another collection can have different text.", "Draw a stick, or enter your existing number in the lookup field and search.", "Read the displayed stick text. For a question-specific interpretation, enter your question and use the separate AI interpretation action."],
     result: "A stick number and text, with an optional AI interpretation of your question.",
     limit: "Printed temple editions can differ. Check against the edition you received if the wording differs. A symbolic draw cannot confirm outcomes or replace practical judgment.",
-    related: { href: "/learn/guanyin-fortune-sticks", label: "Guanyin fortune sticks guide", key: "sticks" },
+    related: [{ href: "/learn/guanyin-fortune-sticks", label: "Guanyin fortune sticks guide", key: "sticks" }],
   },
   {
     id: "atelier", number: "05", title: "Design a five-element bracelet", tool: "Crystal bracelet atelier", href: "/atelier",
@@ -89,7 +92,7 @@ export default function LearnPage() {
               <dl className={styles.outcome}><div><dt>What you get</dt><dd>{guide.result}</dd></div><div><dt>Keep in mind</dt><dd>{guide.limit}</dd></div></dl>
               <div className={styles.toolLinks}>
                 <Link href={guide.href} data-analytics-tool={guide.id} data-analytics-location="learn">Open {guide.tool}<ArrowRight size={15} aria-hidden="true" /></Link>
-                {guide.related && <Link href={guide.related.href} data-analytics-tool={guide.related.key} data-analytics-location="learn">{guide.related.label}<ArrowRight size={15} aria-hidden="true" /></Link>}
+                {guide.related?.map((item) => <Link href={item.href} key={item.key} data-analytics-tool={item.key} data-analytics-location="learn">{item.label}<ArrowRight size={15} aria-hidden="true" /></Link>)}
               </div>
             </section>
           ))}

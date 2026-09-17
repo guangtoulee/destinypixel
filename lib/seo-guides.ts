@@ -85,6 +85,10 @@ export const seoGuides: SeoGuide[] = [
     disclaimer:
       "It cannot replace medical, legal, or financial advice, and it should not be sold as a fixed fate stamp.",
     related: [
+      {
+        label: "BaZi love compatibility",
+        href: "/learn/bazi-love-compatibility",
+      },
       { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
       {
         label: "Chinese vs Western palmistry",
@@ -199,6 +203,78 @@ export const seoGuides: SeoGuide[] = [
     related: [
       { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
       { label: "Temple sticks beginner steps", href: "/learn#sticks" },
+    ],
+  },
+  {
+    section: "learn",
+    slug: "bazi-love-compatibility",
+    title: "BaZi Love Compatibility: How Four Pillars Compare Two People | DestinyPixel",
+    description:
+      "What BaZi love compatibility means, why birth times matter, and how DestinyPixel mixes BaZi with birth-chart dimensions—then try the free compare tool.",
+    h1: "BaZi love compatibility: how two Four Pillars charts compare",
+    paragraphs: [
+      "BaZi love compatibility compares two people’s Four Pillars—year, month, day, hour—and their elements as symbolic relating themes, not a breakup verdict. DestinyPixel’s free tool also folds tropical birth-chart dimensions into that comparison.",
+    ],
+    faqAsH2: true,
+    faqs: [
+      {
+        question: "What is BaZi love compatibility?",
+        answer:
+          "It compares two Four Pillars charts—and the five-element relationships between them—as symbolic themes for relating. It is not a fate stamp or a reason to stay or leave.",
+      },
+      {
+        question:
+          "What does DestinyPixel compare (personality / communication / affection / everyday rhythm)?",
+        answer:
+          "The free tool scores personality, communication, affection, and everyday rhythm. Each dimension mixes BaZi with tropical chart placements.",
+      },
+      {
+        question: "Why do both people need known birth times?",
+        answer:
+          "This edition needs a known local birth time and a supported city for each person; it will not invent a missing hour. Guessing can move the Moon and the hour pillar.",
+        link: {
+          label: "Prepare birth date, time and place",
+          href: "/journal/prepare-birth-date-time-place",
+        },
+      },
+      {
+        question: "How should you read a 60–100 score?",
+        answer:
+          "The 60–100 figure is DestinyPixel’s deliberately positive editorial index, not validated relationship statistics. A lower score is not an instruction to separate.",
+      },
+      {
+        question: "BaZi vs Western synastry—how this page’s tool mixes them",
+        answer:
+          "Western synastry compares tropical charts; BaZi compares Four Pillars. This tool weights BaZi at 30% and tropical placements at 70% on each dimension.",
+      },
+      {
+        question: "What the tool does not do",
+        answer:
+          "This edition does not compare rising signs or houses, and it does not time marriage. Optional AI notes are fair-use reflection; birth details are used for calculation and not saved as a report.",
+      },
+    ],
+    cta: { label: "Compare two charts free", href: "/compatibility" },
+    ctas: [
+      { label: "Compare two charts free", href: "/compatibility" },
+      { label: "Learn BaZi basics", href: "/learn/what-is-bazi-birth-chart" },
+      {
+        label: "Free Day Pillar card",
+        href: "/day-pillar",
+        note: "One person, date only; compare still needs two birth times.",
+      },
+    ],
+    disclaimer:
+      "These scores are symbolic and reflective. They are not medical, legal, or financial advice, and they do not guarantee an outcome.",
+    related: [
+      {
+        label: "What is a BaZi birth chart",
+        href: "/learn/what-is-bazi-birth-chart",
+      },
+      {
+        label: "Prepare birth date, time and place",
+        href: "/journal/prepare-birth-date-time-place",
+      },
+      { label: "Tool directory", href: "/tools" },
     ],
   },
   {
