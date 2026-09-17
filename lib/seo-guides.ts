@@ -4,6 +4,8 @@ export type SeoGuideFaq = {
   question: string;
   answer: string;
   link?: SeoGuideLink;
+  /** Extra answer-first lines, each linking out (AEO stubs). */
+  links?: SeoGuideLink[];
 };
 
 export type SeoGuide = {
@@ -308,30 +310,61 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "chinese-palm-reading-vs-western",
-    title: "Chinese Palm Reading vs Western Palmistry (AI Guide)",
+    title: "Chinese Palm Reading vs Western Palmistry (AI Guide) | DestinyPixel",
     description:
-      "Chinese palm reading and Western palmistry both study the hand—but not the same way. What AI palm scans can help with, and what they should never claim.",
+      "How Chinese hand reading differs from Western palmistry—and how to use DestinyPixel’s Palm Studio as a reflective AI guide, not a fate verdict.",
     h1: "Chinese Palm Reading vs Western Palmistry",
     paragraphs: [
       "Chinese palm reading and Western palmistry both look at the hand, yet they grew from different libraries. Western palmistry often emphasizes major lines and mounts as character and life-theme symbols. Chinese hand reading more often folds palm shape, color, and line changes into a broader “look at the person in time” habit—closer to physiognomy than to a single fate script.",
       "An AI palm scan is useful for describing visible structure and comparing trends under decent light. It is not a license to scare anyone with “broken life line” myths. Hands change with labor, health, and age; which hand you upload matters less than honest lighting and a clear question.",
       "Use palm reading as a mirror for habits and tendencies. Pair it with BaZi when you want calendar timing, or with I Ching when you have one decision on the table.",
     ],
+    faqAsH2: true,
     faqs: [
       {
-        question: "Left or right hand?",
+        question: "What’s the difference between Chinese palm reading and Western palmistry?",
+        answer:
+          "Western palmistry often emphasizes major lines and mounts as character and life-theme symbols. Chinese hand reading more often folds palm shape, color, and line changes into a broader “person in time” / physiognomy habit.",
+      },
+      {
+        question: "What does an AI palm reading actually do (and not do)?",
+        answer:
+          "Palm Studio writes reflective text from the details you confirm; an optional photo stays local as a visual reference. It describes visible structure under good light—it does not diagnose health or seal a fate.",
+      },
+      {
+        question: "Left or right hand—which to use?",
         answer: "Either can work; be consistent and note dominant hand.",
       },
       {
-        question: "Does the palm change?",
+        question: "Do palm lines change?",
         answer: "Yes—lines and tone are not frozen.",
       },
       {
-        question: "Is it fortune-telling?",
+        question: "Is palm reading fortune-telling?",
         answer: "Treat it as pattern talk, not a sealed destiny.",
       },
+      {
+        question: "When to pair palm with BaZi or I Ching?",
+        answer:
+          "Pair with BaZi when you want calendar timing. Pair with I Ching when you have one decision on the table.",
+        links: [
+          {
+            label: "What is a BaZi birth chart",
+            href: "/learn/what-is-bazi-birth-chart",
+          },
+          { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
+          { label: "Question Oracle", href: "/oracle" },
+        ],
+      },
     ],
-    cta: { label: "Try Chinese palm reading in the palm studio", href: "/palm" },
+    cta: { label: "Open Palm Studio", href: "/palm" },
+    ctas: [
+      { label: "Open Palm Studio", href: "/palm" },
+      { label: "Open Face studio", href: "/face" },
+      { label: "Getting started", href: "/learn" },
+    ],
+    disclaimer:
+      "Palm reading here is pattern talk, not a sealed destiny or a diagnosis. Hands change with labor, health, and age. These readings are symbolic and reflective, not medical, legal, or financial advice, and they do not guarantee an outcome.",
     related: [
       {
         label: "What is a BaZi birth chart",
@@ -358,8 +391,15 @@ export function seoGuideCtas(guide: SeoGuide) {
   return guide.ctas ?? [guide.cta];
 }
 
+export function seoGuideFaqLinks(faq: SeoGuideFaq) {
+  return [...(faq.link ? [faq.link] : []), ...(faq.links ?? [])];
+}
+
 export function seoGuideFaqAnswerText(faq: SeoGuideFaq) {
-  return faq.link ? `${faq.answer} ${faq.link.href}` : faq.answer;
+  const extras = seoGuideFaqLinks(faq);
+  return extras.length
+    ? [faq.answer, ...extras.map((item) => item.href)].join(" ")
+    : faq.answer;
 }
 
 export function seoGuideFaqSchema(guide: SeoGuide) {

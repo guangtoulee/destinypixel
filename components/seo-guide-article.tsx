@@ -13,6 +13,17 @@ function FaqAnswer({ faq }: { faq: SeoGuideFaq }) {
   );
 }
 
+function FaqLinkLines({ faq }: { faq: SeoGuideFaq }) {
+  const extras = faq.links ?? [];
+  if (!extras.length) return null;
+  return extras.map((item) => (
+    <p key={item.href}>
+      <Link href={item.href}>{item.label}</Link>
+      {item.note ? ` ${item.note}` : null}
+    </p>
+  ));
+}
+
 function CtaLinks({ items }: { items: SeoGuideLink[] }) {
   return (
     <div className={items.length > 1 ? styles.ctaRow : styles.cta}>
@@ -62,6 +73,7 @@ export function SeoGuideArticle({ guide }: { guide: SeoGuide }) {
                 <p>
                   <FaqAnswer faq={faq} />
                 </p>
+                <FaqLinkLines faq={faq} />
               </section>
             ))}
           </div>
@@ -74,6 +86,7 @@ export function SeoGuideArticle({ guide }: { guide: SeoGuide }) {
                   <dt>{faq.question}</dt>
                   <dd>
                     <FaqAnswer faq={faq} />
+                    <FaqLinkLines faq={faq} />
                   </dd>
                 </div>
               ))}

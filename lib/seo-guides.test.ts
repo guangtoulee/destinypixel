@@ -6,6 +6,7 @@ import {
   getSeoGuide,
   seoGuideCtas,
   seoGuideFaqAnswerText,
+  seoGuideFaqLinks,
   seoGuideFaqSchema,
   seoGuidePath,
 } from "@/lib/seo-guides";
@@ -16,7 +17,7 @@ function guideHrefs(guide: NonNullable<ReturnType<typeof getSeoGuide>>) {
     guide.cta.href,
     ...seoGuideCtas(guide).map((cta) => cta.href),
     ...guide.related.map((item) => item.href),
-    ...guide.faqs.flatMap((faq) => (faq.link ? [faq.link.href] : [])),
+    ...guide.faqs.flatMap((faq) => seoGuideFaqLinks(faq).map((item) => item.href)),
     ...guide.paragraphs,
     guide.disclaimer ?? "",
   ];
@@ -233,5 +234,86 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   assert.equal(seoGuideFaqSchema(guide).mainEntity.length, 6);
   assert.ok(
     sitemap().some((entry) => entry.url === absoluteUrl("/insights/i-ching-vs-tarot")),
+  );
+});
+
+test("Chinese vs Western palmistry learn page keeps Codex body, AEO structure, CTAs, and no Ultra links", () => {
+  const guide = getSeoGuide("learn", "chinese-palm-reading-vs-western");
+  assert.ok(guide);
+  assert.equal(
+    guide.title,
+    "Chinese Palm Reading vs Western Palmistry (AI Guide) | DestinyPixel",
+  );
+  assert.equal(
+    guide.description,
+    "How Chinese hand reading differs from Western palmistry—and how to use DestinyPixel’s Palm Studio as a reflective AI guide, not a fate verdict.",
+  );
+  assert.equal(guide.h1, "Chinese Palm Reading vs Western Palmistry");
+  assert.equal(guide.faqAsH2, true);
+  assert.equal(guide.paragraphs.length, 3);
+  assert.match(guide.paragraphs[0]!, /Western palmistry often emphasizes major lines and mounts/);
+  assert.match(guide.paragraphs[0]!, /closer to physiognomy than to a single fate script/);
+  assert.match(guide.paragraphs[1]!, /broken life line/);
+  assert.match(guide.paragraphs[1]!, /Hands change with labor, health, and age/);
+  assert.match(guide.paragraphs[2]!, /Pair it with BaZi when you want calendar timing/);
+  assert.deepEqual(
+    guide.faqs.map((faq) => faq.question),
+    [
+      "What’s the difference between Chinese palm reading and Western palmistry?",
+      "What does an AI palm reading actually do (and not do)?",
+      "Left or right hand—which to use?",
+      "Do palm lines change?",
+      "Is palm reading fortune-telling?",
+      "When to pair palm with BaZi or I Ching?",
+    ],
+  );
+  assert.equal(guide.faqs[2]?.answer, "Either can work; be consistent and note dominant hand.");
+  assert.equal(guide.faqs[3]?.answer, "Yes—lines and tone are not frozen.");
+  assert.equal(guide.faqs[4]?.answer, "Treat it as pattern talk, not a sealed destiny.");
+  for (const faq of guide.faqs) {
+    assert.ok(faq.answer.length > 0);
+    assert.ok(faq.answer.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 2);
+  }
+  assert.match(guide.faqs[1]!.answer, /reflective text from the details you confirm/i);
+  assert.match(guide.faqs[1]!.answer, /does not diagnose/i);
+  assert.deepEqual(
+    seoGuideFaqLinks(guide.faqs[5]!).map((item) => item.href),
+    [
+      "/learn/what-is-bazi-birth-chart",
+      "/insights/i-ching-vs-tarot",
+      "/oracle",
+    ],
+  );
+  const ctas = seoGuideCtas(guide);
+  assert.equal(ctas[0]?.label, "Open Palm Studio");
+  assert.equal(ctas[0]?.href, "/palm");
+  assert.deepEqual(
+    ctas.map((cta) => cta.href),
+    ["/palm", "/face", "/learn"],
+  );
+  assert.equal(ctas[1]?.label, "Open Face studio");
+  assert.ok(guide.disclaimer);
+  assert.match(guide.disclaimer, /not a sealed destiny/i);
+  assert.match(guide.disclaimer, /not a diagnosis|not diagnoses/i);
+  assert.match(guide.disclaimer, /Hands change/i);
+  assert.match(guide.disclaimer, /symbolic|reflective/i);
+  assert.match(guide.disclaimer, /not medical, legal, or financial/i);
+  assert.match(guide.disclaimer, /do not guarantee/i);
+  const blob = JSON.stringify(guide);
+  assert.doesNotMatch(blob, /\/ultra/i);
+  assert.doesNotMatch(blob, /accuracy|success rate|\d+%/i);
+  assert.ok(guide.related.some((item) => item.href === "/learn/what-is-bazi-birth-chart"));
+  assert.ok(guide.related.some((item) => item.href === "/insights/i-ching-vs-tarot"));
+  const baziBasics = getSeoGuide("learn", "what-is-bazi-birth-chart");
+  assert.ok(baziBasics?.related.some((item) => item.href === "/learn/chinese-palm-reading-vs-western"));
+  const iChing = getSeoGuide("insights", "i-ching-vs-tarot");
+  assert.ok(iChing?.related.some((item) => item.href === "/learn/chinese-palm-reading-vs-western"));
+  assert.ok(guideHrefs(guide).every((href) => !href.toLowerCase().includes("ultra")));
+  assert.equal(seoGuideFaqSchema(guide).mainEntity.length, 6);
+  assert.match(seoGuideFaqAnswerText(guide.faqs[5]!), /what-is-bazi-birth-chart/);
+  assert.match(seoGuideFaqAnswerText(guide.faqs[5]!), /i-ching-vs-tarot/);
+  assert.match(seoGuideFaqAnswerText(guide.faqs[5]!), /\/oracle/);
+  assert.ok(
+    sitemap().some((entry) => entry.url === absoluteUrl("/learn/chinese-palm-reading-vs-western")),
   );
 });
