@@ -14,6 +14,7 @@
 .contents { position: sticky; top: 30px; align-self: start; }
 .contents > p { margin: 0 0 20px; color: #80758b; font-size: 11px; }
 .contents nav { display: flex; flex-direction: column; gap: 5px; }
+.contents nav + p { margin-top: 28px; }
 .contents nav a { display: flex; gap: 12px; align-items: baseline; color: #666172; font-size: 12px; line-height: 1.5; border-radius: 6px; padding: 9px 0; }
 .contents nav a:hover { color: #785393; }
 .contents nav span { font-size: 10px; color: #9785a7; }

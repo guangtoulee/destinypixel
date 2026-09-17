@@ -125,9 +125,80 @@ export const seoGuides: SeoGuide[] = [
         href: "/learn/what-is-bazi-birth-chart",
       },
       {
+        label: "Guanyin fortune sticks",
+        href: "/learn/guanyin-fortune-sticks",
+      },
+      {
         label: "Chinese vs Western palmistry",
         href: "/learn/chinese-palm-reading-vs-western",
       },
+    ],
+  },
+  {
+    section: "learn",
+    slug: "guanyin-fortune-sticks",
+    title: "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
+    description:
+      "What Guanyin fortune sticks are, which questions they suit, and how to draw or look up a stick online—then open DestinyPixel’s temple sticks tool.",
+    h1: "Guanyin fortune sticks online: how to draw and read one",
+    paragraphs: [
+      "Guanyin fortune sticks (Kau Cim–style) are a traditional 100-stick temple oracle. Online you can draw one stick or look up a number you already received—best with one concrete question.",
+    ],
+    faqAsH2: true,
+    faqs: [
+      {
+        question: "What are Guanyin fortune sticks?",
+        answer:
+          "A Kau Cim–style temple draw of one numbered stick from a 100-stick Guanyin set, then a verse and a plain-language note. DestinyPixel lets you draw or look up that number online.",
+      },
+      {
+        question:
+          "What questions suit Guanyin (vs Guandi / Yuelao / Wealth / Wong Tai Sin)?",
+        answer:
+          "Guanyin suits protection, family, recovery, travel, and emotionally tangled questions. Use Guandi for career, Yuelao for love, Wealth for money, and Wong Tai Sin for timing—match the tradition to the question.",
+      },
+      {
+        question: "How do you draw one stick online?",
+        answer:
+          "Choose Guanyin, hold one concrete question, then draw a single stick. Do not redraw the same question immediately; sit with the first result.",
+      },
+      {
+        question: "How should you read the result?",
+        answer:
+          "Read the number, verse, and plain note as a symbolic mirror for that question—not a verdict. Optional AI interpretation is extra reflection, not a promise.",
+      },
+      {
+        question: "Already drew a stick at a temple—can I look up the number?",
+        answer:
+          "Yes: choose Guanyin (or the matching tradition), enter the number, and compare the verse. Temple editions can differ in wording; treat this as a lookup, not every shrine’s booklet.",
+      },
+      {
+        question: "Is an online stick “the same” as a temple draw?",
+        answer:
+          "The process is parallel: one tradition, one question, one stick (or a known number). An online draw copies that sequence; it does not claim the setting or result is identical.",
+      },
+    ],
+    cta: {
+      label: "Draw Guanyin sticks",
+      href: "/sticks?locale=en&type=guanyin",
+    },
+    ctas: [
+      {
+        label: "Draw Guanyin sticks",
+        href: "/sticks?locale=en&type=guanyin",
+      },
+      { label: "Browse all tools", href: "/tools" },
+      {
+        label: "One-question oracle",
+        href: "/oracle",
+        note: "A different tool for one situation, not temple sticks.",
+      },
+    ],
+    disclaimer:
+      "Temple sticks here are symbolic and reflective. They are not medical, legal, or financial advice, and they do not guarantee an outcome.",
+    related: [
+      { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
+      { label: "Temple sticks beginner steps", href: "/learn#sticks" },
     ],
   },
   {
