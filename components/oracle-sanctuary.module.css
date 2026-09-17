@@ -183,3 +183,8 @@
   .stage[data-drawing="true"] .vessel, .stage[data-drawing="true"] .stageHalo, .revealSlip { animation: none; }
   .stage[data-revealed="true"] .vessel, .primary { transition: none; }
 }
+@media (max-width: 360px) {
+  .traditions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .traditions button:last-child { grid-column: 1 / -1; justify-content: center; }
+  .traditions strong { overflow-wrap: normal; }
+}
