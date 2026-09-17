@@ -1156,6 +1156,9 @@ export default function DestinyWhiteExperience({
               {copyLocale === "zh" ? "进入求签小殿" : locale === "ru" ? "Открыть храм жребиев" : "Enter the oracle hall"}
               <ArrowRight size={16} aria-hidden="true" />
             </a>
+            <div className="white-sticks__art" aria-hidden="true">
+              <Image src="/shrine/oracle-vessel-20260917.webp" width={960} height={1280} alt="" sizes="(max-width:760px) 70vw, 340px" />
+            </div>
           </div>
 
           <div className="white-stick-index">

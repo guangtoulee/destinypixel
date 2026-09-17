@@ -1,0 +1,27 @@
+/* Generated artwork: keep the entire figure visible and reserve its layout space. */
+.deity-portrait--art { width: min(420px, 100%); isolation: isolate; }
+.deity-portrait__art { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; border-radius: 22px; mix-blend-mode: multiply; }
+.deity-portrait--art[data-active="true"] { filter: drop-shadow(0 10px 25px #d4b37425); }
+.deity-portrait--art .deity-portrait__incense { right: 6%; bottom: 4%; }
+.deity-portrait--art.deity-portrait--ritual { width: min(285px, 64vw); }
+.editorial-home .white-shrine { background: linear-gradient(135deg, #fffdf8, #f3f7f2); border-color: #e1e7dc; padding: clamp(22px, 3.2vw, 46px); }
+.editorial-home .white-shrine::before, .editorial-home .white-shrine::after { display: none; }
+.editorial-home .white-shrine__copy h3 { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.3; }
+.white-sticks__art { margin: 28px 0 0; max-width: 340px; overflow: hidden; border-radius: 24px; background: #f9faf5; }
+.white-sticks__art img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; mix-blend-mode: multiply; }
+.stick-ritual-visual.stick-ritual-visual--art { min-height: 340px; background: linear-gradient(120deg, #fffdf8, #f5f8f3); border-color: #dfe7dd; }
+.stick-vessel-art { display: block; width: 250px; max-width: 70%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; mix-blend-mode: multiply; transform-origin: 50% 86%; }
+.stick-ritual-visual--art[data-drawing="true"] .stick-vessel-art { animation: shrine-vessel-sway .7s ease-in-out infinite; }
+.stick-ritual-visual--art .stick-reveal-slip { z-index: 2; top: 75px; right: 9%; }
+@keyframes shrine-vessel-sway { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@media (max-width:760px) {
+  .editorial-home .white-shrine { padding: 18px 18px 28px; }
+  .deity-portrait--art { max-width: 330px; }
+  .white-sticks__art { width: min(260px, 85%); margin: 24px auto 0; }
+  .stick-ritual-visual.stick-ritual-visual--art { min-height: 290px; }
+  .stick-vessel-art { width: 215px; }
+  .stick-ritual-visual--art .stick-reveal-slip { top: 63px; right: 7%; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .stick-ritual-visual--art[data-drawing="true"] .stick-vessel-art, .deity-portrait--art .deity-portrait__incense i { animation: none; }
+}

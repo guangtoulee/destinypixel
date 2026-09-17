@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
+import "./shrine-art.css";
 import { ArrowRight, Languages, Loader2, Search, Sparkles, WandSparkles } from "lucide-react";
 import {
   contentLocale,
@@ -521,16 +523,12 @@ export default function SpiritualSticksExperience({
             </div>
 
             <div
-              className="stick-ritual-visual"
+              className="stick-ritual-visual stick-ritual-visual--art"
               data-drawing={isDrawing}
               data-revealed={Boolean(reading)}
               aria-hidden="true"
             >
-              <div className="stick-cup">
-                {Array.from({ length: 9 }).map((_, index) => (
-                  <span key={index} />
-                ))}
-              </div>
+              <Image className="stick-vessel-art" src="/shrine/oracle-vessel-20260917.webp" width={960} height={1280} alt="" sizes="(max-width:760px) 220px, 270px" />
               <div className="stick-reveal-slip">
                 <small>{selectedSystem.name}</small>
                 <strong>{reading ? reading.number : "?"}</strong>
