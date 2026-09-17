@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Check, Compass } from "lucide-react";
 import { makePageMetadata, routeSeo } from "@/lib/seo";
+import { seoGuidePath, seoGuidesFor } from "@/lib/seo-guides";
 import styles from "./learn.module.css";
 
 export const metadata: Metadata = makePageMetadata(routeSeo.learn);
@@ -41,6 +42,7 @@ const guides = [
     steps: ["Select a tradition before drawing or searching. A number belongs to a particular collection; the same number in another collection can have different text.", "Draw a stick, or enter your existing number in the lookup field and search.", "Read the displayed stick text. For a question-specific interpretation, enter your question and use the separate AI interpretation action."],
     result: "A stick number and text, with an optional AI interpretation of your question.",
     limit: "Printed temple editions can differ. Check against the edition you received if the wording differs. A symbolic draw cannot confirm outcomes or replace practical judgment.",
+    related: { href: "/learn/guanyin-fortune-sticks", label: "Guanyin fortune sticks guide", key: "sticks" },
   },
   {
     id: "atelier", number: "05", title: "Design a five-element bracelet", tool: "Crystal bracelet atelier", href: "/atelier",
@@ -51,6 +53,8 @@ const guides = [
     limit: "The workshop produces a design reference. Gemstone colors and five-element associations are aesthetic and symbolic; they do not establish health effects. Confirm actual bead dimensions and wrist fit with the maker if you use the design for a physical bracelet.",
   },
 ];
+
+const articles = seoGuidesFor("learn");
 
 export default function LearnPage() {
   return (
@@ -69,6 +73,8 @@ export default function LearnPage() {
         <aside className={styles.contents}>
           <p>Choose your task</p>
           <nav aria-label="Guide contents">{guides.map((guide) => <a href={`#${guide.id}`} key={guide.id}><span>{guide.number}</span>{guide.tool}</a>)}</nav>
+          <p>Guides</p>
+          <nav aria-label="Learn articles">{articles.map((article) => <Link href={seoGuidePath(article)} key={article.slug}>{article.h1}</Link>)}</nav>
           <div className={styles.sideNote}><Compass size={20} aria-hidden="true" /><p>Unsure where to begin? The <Link href="/tools">tool directory</Link> compares the input and result for each tool.</p></div>
         </aside>
         <div>

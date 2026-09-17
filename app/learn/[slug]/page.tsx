@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoGuideArticle } from "@/components/seo-guide-article";
-import { absoluteUrl } from "@/lib/seo";
+import { absoluteUrl, siteName } from "@/lib/seo";
 import { getSeoGuide, seoGuidesFor, seoGuidePath } from "@/lib/seo-guides";
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!guide) return { robots: { index: false, follow: false } };
   const path = seoGuidePath(guide);
   return {
-    title: guide.title,
+    title: guide.title.includes(siteName) ? { absolute: guide.title } : guide.title,
     description: guide.description,
     alternates: { canonical: absoluteUrl(path) },
     openGraph: {
