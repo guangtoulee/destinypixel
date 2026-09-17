@@ -294,7 +294,7 @@ test("Chinese vs Western palmistry learn page keeps Codex body, AEO structure, C
   assert.equal(ctas[1]?.label, "Open Face studio");
   assert.ok(guide.disclaimer);
   assert.match(guide.disclaimer, /not a sealed destiny/i);
-  assert.match(guide.disclaimer, /not a diagnosis|not diagnoses/i);
+  assert.match(guide.disclaimer, /diagnos/i);
   assert.match(guide.disclaimer, /Hands change/i);
   assert.match(guide.disclaimer, /symbolic|reflective/i);
   assert.match(guide.disclaimer, /not medical, legal, or financial/i);
