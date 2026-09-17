@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-17T12:43:28.376Z",
+  "updatedAt": "2026-09-17T17:42:19.444Z",
   "sourceSummary": {
-    "community": 1136,
+    "community": 1139,
     "publicX": 450,
-    "total": 1586
+    "total": 1589
   },
   "items": [
     {
@@ -186,6 +186,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "STEP 2: Open ChatGPT and upload the Character Image alone. Add the below prompt and run it. Create a professional AI Video Production — Character Reference Sheet for the provided character image. Create a polished 4:5 portrait continuity sheet focused exclusively on the character: 1. CHARACTER PROFILE — name, role, approximate age, height, body type, personality, distinctive traits, and signature colors. 2. FULL-BODY TURNAROUND — front, 3/4, side, and back views of the exact same character at matching scale, with identical facial features, hairstyle, body proportions, costume, colors, and accessories. 3. FACE AND IDENTITY DETAILS — front, profile, and 3/4 head-and-shoulder close-ups showing facial structure, eyes, eyebrows, nose, lips, hairstyle, skin tone, makeup, scars, tattoos, and other defining features. 4. EXPRESSION SHEET — neutral, happy, angry, sad, surprised, worried, confident, and determined expressions. Preserve the exact same facial structure and identity in every expression. 5. POSE AND BODY LANGUAGE — neutral standing, walking, sitting, relaxed, tense, and action-ready poses. Maintain consistent anatomy, proportions, posture, and silhouette. 6. COSTUME DETAILS — close-ups of clothing layers, fabrics, seams, fasteners, footwear, jewelry, eyewear, markings, logos, and other character-defining wardrobe elements. 7. COLOR AND MATERIAL PALETTE — include 4–6 key colors with HEX codes, plus references for skin, hair, fabric, leather, metal, plastic, armor, or other visible materials. 8. DO NOT CHANGE — lock the character’s face, identity, skin tone, age, hair, eye color, body shape, proportions, costume, accessories, markings, colors, and defining features. Do not redesign, beautify, age, stylize, simplify, or create alternate versions. Use a clean white or neutral studio background, soft controlled lighting, realistic materials, sharp details, subtle shadows, clean typography, thin dividers, balanced spacing, and a sophisticated editorial production-design grid. Every panel must depict the exact same character with absolute visual consistency. Focus only on the character. Do not include props, additional characters, environments, unrelated objects, or alternate outfits.\""
+    },
+    {
+      "id": "x-public-2098929162735997071",
+      "title": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthro",
+      "description": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847",
+      "prompt": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/CharlieDFilm/status/2098929162735997071",
+      "sourceType": "x",
+      "authorName": "Charlie Driscoll",
+      "authorHandle": "@CharlieDFilm",
+      "createdAt": "2026-09-13T00:18:03.000Z",
+      "importedAt": "2026-09-17T17:42:19.416Z",
+      "tags": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Midjourney",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 4034,
+        "reposts": 444,
+        "replies": 340,
+        "quotes": 123,
+        "bookmarks": 4202,
+        "views": 764848,
+        "score": 24689
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
     },
     {
       "id": "x-public-2095060344322273510",
@@ -790,52 +836,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Video editing has nowadays become a conversation.. you drop raw footage in a folder, tell Claude Code what you want, and get final.mp4 back. its free, open source, 17,000 stars on Github.. it's called video-use. and the reason it's different from every \"AI video editor\" is how it actually works under the hood.. it doesn't guess. it transcribes every word you said first, then edits off the actual transcript. what it does once your footage is in the folder: - cuts every umm, uh, and false start automatically - kills the dead space between takes - color grades each segment.. warm cinematic, neutral punch, or a custom ffmpeg chain - builds the cut with editor sub-agents, runs the animations in parallel - renders a preview, grades its own work, and iterates until it's clean and yeah.. it asks before it cuts. it shows you the plan in plain english and waits for your yes. it's not a black box that spits out a mystery edit.. you stay the director, it does the labor. ▫️ how to start install the skill in claude code (repo below)  drop your raw clips in a folder tell it \"cut the filler, tighten the pauses, warm cinematic grade\" and let it work And yes, it's a tool, not a taste replacement. it'll hand you a clean, tight cut, but the creative calls, the hook, the pacing, the story.. that's still you. it does the 80% that's grunt work so you spend your time on the 20% that matters. editing stopped being a skill you grind for years. it's a prompt now. repo:"
-    },
-    {
-      "id": "x-public-2098929162735997071",
-      "title": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthro",
-      "description": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847",
-      "prompt": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/CharlieDFilm/status/2098929162735997071",
-      "sourceType": "x",
-      "authorName": "Charlie Driscoll",
-      "authorHandle": "@CharlieDFilm",
-      "createdAt": "2026-09-13T00:18:03.000Z",
-      "importedAt": "2026-09-16T17:41:20.287Z",
-      "tags": [
-        "GPT Image 2",
-        "Midjourney",
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Midjourney",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 1827,
-        "reposts": 250,
-        "replies": 188,
-        "quotes": 57,
-        "bookmarks": 1331,
-        "views": 124671,
-        "score": 9255
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
     },
     {
       "id": "x-public-2074158868142194898",
@@ -18785,6 +18785,90 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2100456702823030825",
+      "title": "个人资料 / 头像 - 电影感牛仔夹克人像",
+      "description": "为 GPT Image 2 优化的超写实电影感人像提示词，展示身穿黑色牛仔夹克和牛仔裤的女性。",
+      "prompt": "创作一张超写实的电影感人像摄影作品，画面中是一位美丽的年轻女性，拥有一头浓密、自然卷曲的深棕色长发，中分发型，脸颊两侧有柔和的发丝修饰脸型。她五官精致柔美，皮肤白皙透亮，嘴唇呈自然的粉色，眉毛自然，眼神深邃动人（深棕色）。她直视镜头，表情平静、温柔且略带严肃。\n她身穿一件时尚黑色牛仔夹克，内搭修身黑色上衣，下身搭配黑色牛仔裤，腰间系着一条带有银色矩形扣环的黑色皮带。脖子上佩戴着一条精致的银色项链，挂着一个小吊坠。抬起的手腕上戴着一款经典黑色皮表带手表，表盘为银色。\n姿势：特写至半身人像，站在室内豪华现代走廊中。一只手轻轻触碰并撩起头部一侧的头发，另一只手臂自然下垂。身体面向镜头，姿态放松而自信。\n背景：优雅高档的酒店或豪华公寓走廊，墙壁呈暖米色，地面抛光反光，天花板灯光柔和，远处呈现奶油般的金色散景效果。背景虚化柔和，营造出高端电影氛围。\n光线：柔和温暖的室内照明，面部受自然漫射光照射，发丝上有微妙的高光，皮肤纹理真实，阴影柔和，整体色调温暖奢华。\n摄影风格：超写实专业时尚摄影，电影感人像，时尚杂志编辑风格，85mm 镜头，f/1.8 光圈，浅景深，发丝细节逼真，皮肤毛孔自然，黑色牛仔布料纹理清晰，高动态范围，柔和散景，专业色彩分级。\n构图：垂直 2:3 人像比例，平视相机角度，主体居中，突出头部和上半身，细节丰富，照片级真实感，8K 画质。\n负面提示词：卡通，动漫，插画，CGI，塑料质感皮肤，过度磨皮的脸部，模糊的眼睛，扭曲的手部，多余的手指，变形的脸部，不自然的头发，过饱和的颜色，刺眼的光线，低分辨率，水印，文字。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789631451411_2xjqd2_HSZSO4Ra8AAw3Si.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ZorviaLux/status/2100456702823030825",
+      "sourceType": "community",
+      "authorName": "Zorvia",
+      "authorHandle": "@ZorviaLux",
+      "createdAt": "2026-09-17T12:00:00.000Z",
+      "importedAt": "2026-09-17T17:42:09.696Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34844",
+      "rawText": "创作一张超写实的电影感人像摄影作品，画面中是一位美丽的年轻女性，拥有一头浓密、自然卷曲的深棕色长发，中分发型，脸颊两侧有柔和的发丝修饰脸型。她五官精致柔美，皮肤白皙透亮，嘴唇呈自然的粉色，眉毛自然，眼神深邃动人（深棕色）。她直视镜头，表情平静、温柔且略带严肃。\n她身穿一件时尚黑色牛仔夹克，内搭修身黑色上衣，下身搭配黑色牛仔裤，腰间系着一条带有银色矩形扣环的黑色皮带。脖子上佩戴着一条精致的银色项链，挂着一个小吊坠。抬起的手腕上戴着一款经典黑色皮表带手表，表盘为银色。\n姿势：特写至半身人像，站在室内豪华现代走廊中。一只手轻轻触碰并撩起头部一侧的头发，另一只手臂自然下垂。身体面向镜头，姿态放松而自信。\n背景：优雅高档的酒店或豪华公寓走廊，墙壁呈暖米色，地面抛光反光，天花板灯光柔和，远处呈现奶油般的金色散景效果。背景虚化柔和，营造出高端电影氛围。\n光线：柔和温暖的室内照明，面部受自然漫射光照射，发丝上有微妙的高光，皮肤纹理真实，阴影柔和，整体色调温暖奢华。\n摄影风格：超写实专业时尚摄影，电影感人像，时尚杂志编辑风格，85mm 镜头，f/1.8 光圈，浅景深，发丝细节逼真，皮肤毛孔自然，黑色牛仔布料纹理清晰，高动态范围，柔和散景，专业色彩分级。\n构图：垂直 2:3 人像比例，平视相机角度，主体居中，突出头部和上半身，细节丰富，照片级真实感，8K 画质。\n负面提示词：卡通，动漫，插画，CGI，塑料质感皮肤，过度磨皮的脸部，模糊的眼睛，扭曲的手部，多余的手指，变形的脸部，不自然的头发，过饱和的颜色，刺眼的光线，低分辨率，水印，文字。"
+    },
+    {
+      "id": "community-2100382476413583422",
+      "title": "社交媒体帖子 - 玫瑰园中接水的女子",
+      "description": "一张逼真的 AI 生成图像，展示了一位女子在阳光明媚的玫瑰园中俏皮地接住水管喷出的水花。",
+      "prompt": "这是一张逼真的高分辨率人像照片，画面中一位年轻女子站在郁郁葱葱的花园里，周围盛开着粉色和白色的玫瑰花。她留着长长的湿黑发，发丝紧贴在皮肤上，身穿一件奶油色罗纹针织纽扣背心和白色短裤。她仰着头，闭着眼睛，神情愉悦，正俏皮地伸出舌头去接右手拿着的黑色花园水管喷嘴喷出的水花。光线温暖而金黄，暗示着午后阳光透过树叶洒下，营造出一种梦幻般的氛围，空气中悬浮着清晰可见的水滴。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789631458731_5egfhq_HSWTM_JaAAE-nxe.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/OneBreath00/status/2100382476413583422#reversed-0",
+      "sourceType": "community",
+      "authorName": "One Breath｜AI Portrait",
+      "authorHandle": "@OneBreath00",
+      "createdAt": "2026-09-17T12:00:00.000Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34851",
+      "rawText": "这是一张逼真的高分辨率人像照片，画面中一位年轻女子站在郁郁葱葱的花园里，周围盛开着粉色和白色的玫瑰花。她留着长长的湿黑发，发丝紧贴在皮肤上，身穿一件奶油色罗纹针织纽扣背心和白色短裤。她仰着头，闭着眼睛，神情愉悦，正俏皮地伸出舌头去接右手拿着的黑色花园水管喷嘴喷出的水花。光线温暖而金黄，暗示着午后阳光透过树叶洒下，营造出一种梦幻般的氛围，空气中悬浮着清晰可见的水滴。"
+    },
+    {
       "id": "community-2100124589452087593",
       "title": "个人资料 / 头像 - 双重曝光山峦晨曦人像",
       "description": "将标准人像转化为融合山间日出与星座飞鸟的艺术双重曝光合成作品。",
@@ -18796,7 +18880,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.639Z",
+      "importedAt": "2026-09-17T17:42:09.697Z",
       "tags": [
         "人像"
       ],
@@ -18837,7 +18921,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.640Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "摄影"
       ],
@@ -18878,7 +18962,7 @@
       "authorName": "Andy",
       "authorHandle": "@Andy4aicreate",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像"
       ],
@@ -18919,7 +19003,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像",
         "摄影"
@@ -18950,18 +19034,61 @@
       "rawText": "主题：\n白椅上的黑发\n\n主体描述：\n画面中央，一位年轻女子坐在白色木质扶手椅上，双膝蜷起抱于胸前。左侧有一张铺着蕾丝桌布的小桌子，上面放着一盆绿植；右后方是一个白色柜子，摆放着插有白色和淡粉色花朵的花瓶，以及一幅装裱好的照片，营造出宁静的室内氛围。\n\n人物与表情：\n光泽感十足的黑色波波头，发梢在下巴高度向外微翘，厚重的齐刘海位于眼睛上方，深棕色眼眸略带锐利感，眼妆淡雅，脸颊呈淡淡的玫瑰色，嘴唇湿润粉嫩。面部朝前，略微向右倾斜，以平静、沉稳的神情注视着镜头。\n\n服装与姿态：\n身穿灰色罗纹吊带背心，配有细黑色肩带和饰边，胸前有黑色小纽扣，下身穿着黑色背带裤，一件白色长袖衬衫松垮地挂在肩上垂至手臂，脚穿细黑带高跟鞋。双膝高高叠起，左手搭在上方的膝盖上。\n\n背景与光线：\n浅色调的卧室风格空间，配有白色和灰色家具、柔软织物及花卉。柔和的自然日光从左侧窗户斜射进来，明亮地照亮面部和腿部，在右侧投下淡淡的阴影。背景中的花卉和家具呈现微妙的虚化效果。\n\n构图与相机：\n3:4 竖幅构图，从略高于正面的视角捕捉包括椅子在内的全身画面。将人物置于中心并占据较大比例，使膝盖成为主要的前景形状，画面中包含椅子的扶手和椅脚。焦点集中在眼睛和面部，背景采用浅景深处理。\n\n质感与风格：\n写实风格的真人摄影作品。高清展现黑发的光泽、自然的皮肤质感、罗纹面料、白衬衫上的细微褶皱，以及椅子的漆面和坐垫细节，整体色调为静谧的浅灰色。\n\n负面提示：\n改变发型或抱膝坐姿；将白衬衫穿戴整齐。"
     },
     {
+      "id": "community-2100222128834703614",
+      "title": "社交媒体帖子 - 紫发时尚人像",
+      "description": "专为 GPT Image 2 设计的超写实低角度时尚人像提示词，展现一位留着紫色头发、身穿橙色西装外套的女性。",
+      "prompt": "创建一张超写实的低角度全身时尚人像，主体为参考图中的同一位年轻女性。保留她鲜艳的 {argument name=\"hair color\" default=\"violet-purple\"} 齐下巴波波头及直刘海、白皙如瓷的肌肤、自然的雀斑、淡褐色/浅棕色眼睛、精致的五官、光泽感的嘴唇以及纤细的身材。\n她随意地坐在石阶上，双膝弯曲并分开，双手放在大腿附近，头部微微后仰，目光看向镜头之外。她身穿一件宽松的鲜艳 {argument name=\"jacket color\" default=\"orange\"} 西装外套，内搭修身白色罗纹背心，下身穿着脚踝处卷起的宽松白色阔腿裤，搭配白袜和厚底白色运动鞋，并佩戴圆形 {argument name=\"glasses tint\" default=\"orange-tinted\"} 墨镜。\n背景使用带有清晰网格线的大型棕色纹理石墙。强烈的黄金时刻阳光营造出戏剧性的对角线阴影和高对比度。温暖的电影色调，真实的皮肤和织物质感，细节锐利，具有编辑风格的街头时尚摄影感，照片级真实，8K 分辨率。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789631453805_szoqwf_HSV85EobAAA77Yj.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Wareenaa/status/2100222128834703614",
+      "sourceType": "community",
+      "authorName": "Wareen AI 💟",
+      "authorHandle": "@Wareenaa",
+      "createdAt": "2026-09-16T12:00:00.000Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=34845",
+      "rawText": "创建一张超写实的低角度全身时尚人像，主体为参考图中的同一位年轻女性。保留她鲜艳的 {argument name=\"hair color\" default=\"violet-purple\"} 齐下巴波波头及直刘海、白皙如瓷的肌肤、自然的雀斑、淡褐色/浅棕色眼睛、精致的五官、光泽感的嘴唇以及纤细的身材。\n她随意地坐在石阶上，双膝弯曲并分开，双手放在大腿附近，头部微微后仰，目光看向镜头之外。她身穿一件宽松的鲜艳 {argument name=\"jacket color\" default=\"orange\"} 西装外套，内搭修身白色罗纹背心，下身穿着脚踝处卷起的宽松白色阔腿裤，搭配白袜和厚底白色运动鞋，并佩戴圆形 {argument name=\"glasses tint\" default=\"orange-tinted\"} 墨镜。\n背景使用带有清晰网格线的大型棕色纹理石墙。强烈的黄金时刻阳光营造出戏剧性的对角线阴影和高对比度。温暖的电影色调，真实的皮肤和织物质感，细节锐利，具有编辑风格的街头时尚摄影感，照片级真实，8K 分辨率。"
+    },
+    {
       "id": "community-2100126303534072187",
       "title": "社交媒体帖子 - 复古胶片摄影：奔跑的女性",
       "description": "生成一张复古风格照片的提示词，画面中一位亚洲女性手持玫瑰在田野中奔跑，具有特定的服装搭配和胶片颗粒美学。",
       "prompt": "一位年轻的亚洲女性以侧影姿态优雅地穿过开阔的草地，手中握着一束长茎红玫瑰。她身穿复古风格的服装，包括一件亮黄色长袖纽扣衬衫、一条深红色及膝 A 字裙、配套的红色高筒袜、黄色圆头高跟鞋，长发呈深色波浪状飘逸，头上系着黄色头巾/方巾，并佩戴醒目的黄色圆形夸张耳环。图像呈现出 1980 年代或 1990 年代的复古胶片摄影美学，色彩对比丰富，户外自然光线柔和，背景为情绪化的深绿色田野，并带有细腻的胶片颗粒感。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789545095146_2qrnmy_HSUlvEDbYAE4OOK.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789631455394_rvwtrr_HSUlvEDbYAE4OOK.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/chatgptpaglu/status/2100126303534072187",
       "sourceType": "community",
       "authorName": "yusra.",
       "authorHandle": "@chatgptpaglu",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.642Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "摄影"
       ],
@@ -19002,7 +19129,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.642Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19124,7 +19251,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "摄影"
       ],
@@ -19165,7 +19292,7 @@
       "authorName": "Shine by Nous ✨",
       "authorHandle": "@Shinebynous",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像"
       ],
@@ -19206,7 +19333,7 @@
       "authorName": "boB",
       "authorHandle": "@b0BRude",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像",
         "摄影"
@@ -19248,7 +19375,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19290,7 +19417,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像",
         "摄影"
@@ -19332,7 +19459,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像",
         "摄影"
@@ -19374,7 +19501,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像"
       ],
@@ -19415,7 +19542,7 @@
       "authorName": "Selina",
       "authorHandle": "@selinatasnim1",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19458,7 +19585,7 @@
       "authorName": "Ali Rivera",
       "authorHandle": "@ninjaswebcom",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像"
       ],
@@ -19499,7 +19626,7 @@
       "authorName": "AiHua",
       "authorHandle": "@aihua_art",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -19704,7 +19831,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.698Z",
       "tags": [
         "人像",
         "摄影"
@@ -19746,7 +19873,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19789,7 +19916,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19832,7 +19959,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "人像"
       ],
@@ -19873,7 +20000,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.641Z",
+      "importedAt": "2026-09-17T17:42:09.699Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -66509,7 +66636,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.646Z",
+      "importedAt": "2026-09-17T17:42:09.703Z",
       "tags": [
         "产品",
         "平面设计",
@@ -66552,7 +66679,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.646Z",
+      "importedAt": "2026-09-17T17:42:09.703Z",
       "tags": [
         "平面设计"
       ],
@@ -66593,7 +66720,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T12:43:22.646Z",
+      "importedAt": "2026-09-17T17:42:09.703Z",
       "tags": [
         "平面设计"
       ],
