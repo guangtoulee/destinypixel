@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-17T17:42:19.444Z",
+  "updatedAt": "2026-09-18T06:24:40.822Z",
   "sourceSummary": {
     "community": 1139,
-    "publicX": 450,
-    "total": 1589
+    "publicX": 453,
+    "total": 1592
   },
   "items": [
     {
@@ -1913,6 +1913,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "牛逼！打死我都不敢信，有公司愿意把这种东西开源！ AI 视频圈最没用的就是“只放成片”，但 Higgsfield 把花了 200 万美元做的 110 分钟的 AI 长片《The Cully Hill Boys》完全开源了，每条提示词、每份素材，全部公开。 另外，这也是AI电影行业非常大的突破，它是全球首部由名人形象授权主演的 AI 长片，并且上周刚在纽约办完全球首映。 然后老规矩，整个项目全开源：提示词、参考图、资产，全都摆在项目页里随便翻。 我翻了一圈，最惊到我的是这几个点： 1、真人授权比想象中轻太多：N3on 本人就录了 2 分钟语音、给了几张照片，片子里那个活灵活现的他就是这么来的 2、全片拆成约 1000 个资产、100+ 个场景分开推进，所以 28 个人 4 周就扛下了 110 分钟这个体量 3、每个场景的提示词和参考资产都能点开看，等于一部办过首映的长片制作全程，摆在你面前随便抄作业 4、prompt 别写短句碎片，人家平均一条 3000 个词，等于把分镜脚本直接写成 prompt 5、抽卡这件事，一定要放平心态，就算对于专业团队，64 抽 1 也无法避免 这就是最好的学习“AI 视频”的方法，真建议每个做内容的人都去研究一遍，冲！！！ Made with Seedance 2.5 on Higgsfield."
+    },
+    {
+      "id": "x-public-2098451477308067875",
+      "title": "Create with Runway inside ChatGPT using Astra. From one product image to a finished animation: s",
+      "description": "Create with Runway inside ChatGPT using Astra. From one product image to a finished animation: style frame in Runway, animation in Blender, final render with Seedance 2.5. Watch below.",
+      "prompt": "Create with Runway inside ChatGPT using Astra. From one product image to a finished animation: style frame in Runway, animation in Blender, final render with Seedance 2.5. Watch below.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/runwayml/status/2098451477308067875",
+      "sourceType": "x",
+      "authorName": "Runway",
+      "authorHandle": "@runwayml",
+      "createdAt": "2026-09-11T16:39:54.000Z",
+      "importedAt": "2026-09-18T06:24:40.791Z",
+      "tags": [
+        "Seedance",
+        "Runway",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Runway",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 542,
+        "reposts": 49,
+        "replies": 42,
+        "quotes": 17,
+        "bookmarks": 536,
+        "views": 98895,
+        "score": 3179
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Create with Runway inside ChatGPT using Astra. From one product image to a finished animation: style frame in Runway, animation in Blender, final render with Seedance 2.5. Watch below."
     },
     {
       "id": "x-public-2094002725952589853",
@@ -5596,6 +5640,52 @@
       "rawText": "3D character artists should be more worried about Kimi K3 than Midjourney. Image generators can fake one pretty frame. The real threat is AI taking a dead base mesh and handling the painful middle: hair, clothes, materials, lighting, posing, camera work, and fifty tiny fixes nobody posts online. That is exactly where workflows around Kimi K3 are heading. Not “generate an anime girl,” but keep refining the same editable 3D scene until it stops looking like a mannequin and starts looking marketable. When that works reliably, clients will stop paying for hours of technical suffering. They will pay for taste. And a lot of portfolios are not going to survive that distinction."
     },
     {
+      "id": "x-public-2099941049800315216",
+      "title": "here’s how I make DISGUSTINGLY REALISTIC looking AI UGC the biggest difference between a good AI",
+      "description": "here’s how I make DISGUSTINGLY REALISTIC looking AI UGC the biggest difference between a good AI UGC video and a shit one is the reference don’t start from some random ass prompt and hope the model generates a believable",
+      "prompt": "here’s how I make DISGUSTINGLY REALISTIC looking AI UGC the biggest difference between a good AI UGC video and a shit one is the reference don’t start from some random ass prompt and hope the model generates a believable creator instead find a real UGC video in your niche that already has the look you want. screenshot a frame and use it as a reference for the framing, lighting, camera quality, makeup, room, etc. then rebuild your own creator from that. I usually do something like: 1. make the reference image use GPT Image / Nano Banana and keep it really normal. nothing cinematic or too clean , the imperfections is what makes it feel realistic the more “generated” the starting image looks, the worse the video gets 2. write the script from stuff that's already converting this is where Claude is useful give it your product, then feed it UGC from competitors that already performed well have it pull out the hook, angle, pacing and CTA, then rewrite it around your app don’t ask : > “write me a viral UGC ad” give it an actual reference and something to work from. 3. animate it Seedance / Omni / whatever video model is looking best for the shot keep the prompt simple \"creator talking directly to camera, natural gestures, full eye contact, one take, no random camera movement, no unnecessary objects flying around\" the goal is for it to look like someone opened TikTok and recorded a video in 30 seconds. 4. add the product screen recordings, app shots, captions, whatever the original format needs. then edit the footage in CapCut and post that’s basically the loop: → find a UGC format already working → rebuild it with your own AI creator → write the script around your product → generate → make variations. and once one version starts performing, don’t abandon it. you can get a stupid amount of tests out of one good creative. I made a FREEA Claude/GPT skill for that exact part btw. (First link in comments) give it one UGC ad and it helps turn it into a bunch of new hooks, scripts and variations without starting from scratch every time:",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/brainextends/status/2099941049800315216",
+      "sourceType": "x",
+      "authorName": "Brain",
+      "authorHandle": "@brainextends",
+      "createdAt": "2026-09-15T19:18:55.000Z",
+      "importedAt": "2026-09-18T06:24:40.791Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 146,
+        "reposts": 22,
+        "replies": 6,
+        "quotes": 0,
+        "bookmarks": 301,
+        "views": 15275,
+        "score": 1320
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "here’s how I make DISGUSTINGLY REALISTIC looking AI UGC the biggest difference between a good AI UGC video and a shit one is the reference don’t start from some random ass prompt and hope the model generates a believable creator instead find a real UGC video in your niche that already has the look you want. screenshot a frame and use it as a reference for the framing, lighting, camera quality, makeup, room, etc. then rebuild your own creator from that. I usually do something like: 1. make the reference image use GPT Image / Nano Banana and keep it really normal. nothing cinematic or too clean , the imperfections is what makes it feel realistic the more “generated” the starting image looks, the worse the video gets 2. write the script from stuff that's already converting this is where Claude is useful give it your product, then feed it UGC from competitors that already performed well have it pull out the hook, angle, pacing and CTA, then rewrite it around your app don’t ask : > “write me a viral UGC ad” give it an actual reference and something to work from. 3. animate it Seedance / Omni / whatever video model is looking best for the shot keep the prompt simple \"creator talking directly to camera, natural gestures, full eye contact, one take, no random camera movement, no unnecessary objects flying around\" the goal is for it to look like someone opened TikTok and recorded a video in 30 seconds. 4. add the product screen recordings, app shots, captions, whatever the original format needs. then edit the footage in CapCut and post that’s basically the loop: → find a UGC format already working → rebuild it with your own AI creator → write the script around your product → generate → make variations. and once one version starts performing, don’t abandon it. you can get a stupid amount of tests out of one good creative. I made a FREEA Claude/GPT skill for that exact part btw. (First link in comments) give it one UGC ad and it helps turn it into a bunch of new hooks, scripts and variations without starting from scratch every time:"
+    },
+    {
       "id": "x-public-2098592593768558687",
       "title": "What if the storyboard was already your first step toward the final film? Instead of jumping str",
       "description": "What if the storyboard was already your first step toward the final film? Instead of jumping straight from a story idea to a generated video, GPT Image 2.5 can help turn that idea into a complete visual plan. You can est",
@@ -8056,7 +8146,7 @@
       "authorName": "Dipti Sharma",
       "authorHandle": "@Diptish09",
       "createdAt": "2026-09-11T18:26:33.000Z",
-      "importedAt": "2026-09-16T06:29:56.547Z",
+      "importedAt": "2026-09-18T06:24:40.792Z",
       "tags": [
         "GPT Image 2",
         "Seedance",
@@ -8079,13 +8169,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 163,
+        "likes": 161,
         "reposts": 25,
         "replies": 7,
         "quotes": 0,
-        "bookmarks": 125,
-        "views": 68348,
-        "score": 945
+        "bookmarks": 126,
+        "views": 68440,
+        "score": 944
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "The gap between “I have a product idea” and “I have a finished ad” is getting smaller. GPT Image 2.5 is coming to CapCut, where it will be available through Design Studio and AI Image. The workflow I’m interested in is: Product Idea → Ad Storyboard → Commercial → Refinement GPT Image 2.5 helps establish the visual direction. CapCut PC + Seedance 2.5 turns that direction into a commercial. AI Edit lets you keep shaping the result. The goal isn’t just to generate a video. It’s to keep control of the creative direction from the first idea to the final cut. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
@@ -11884,6 +11974,51 @@
       "rawText": "Dreamina Seedance 2.5 is almost here! 🔥— today — while US rollout begins August 7.  Graduating from \"prompt-based guessing\" to **\"reference-driven creation\"** — this brings the magnificent upgrade creators have been waiting for. ✅ The entire integrated Seedance suite (2.5, 2.0, and upcoming generation models) lands exactly at its lowest-ever tier ✅ Dreamina goes beyond simply being the ideal platform for Seedance 2.5 — it truly is the most affordable way to run it, full-capacity, devoid of annoying add-ons What makes this release revolutionary? First video model to accept 50 multimodal references — funnel in characters, scenes, reference shots, and audio layers easily in one go. Cut out the endless prompt writing. 🎬 30-second native clips — visualize complete stories, never just rough fragments. Utilizing 2 extensions smoothly available in post-editing, plus a fascinating ultra-long mode scaling up to 3 minutes. ✂️ Professional editing — crisp 3D white model preview, solid green screen workflow, completely with Blender/Maya plugin support. 🌏 10+ languages — precise lip-sync and subtitles align perfectly. There are zero translation tools needed. Dreamina Seedance 2.5 is launching globally first on Dreamina — firmly holding the 2026 title as best AI video model for creators. Coming soon. Make magic with Seedance 2.0 today and dominate the workflow! #dreamina #dreaminapartner #seedance #dreaminaseedance25"
     },
     {
+      "id": "x-public-2100560832320909725",
+      "title": "一个 30 天营收 3,724 美元、挂牌 8 万美元想卖掉的宠物 AI 视频 App「Pawz AI」，把 AI 套壳产品玩得明明白白。 产品逻辑简单：上传一张猫狗照片，一键生成宠物跳太空步",
+      "description": "一个 30 天营收 3,724 美元、挂牌 8 万美元想卖掉的宠物 AI 视频 App「Pawz AI」，把 AI 套壳产品玩得明明白白。 产品逻辑简单：上传一张猫狗照片，一键生成宠物跳太空步、下厨炒菜、打 DJ 的魔性短视频。 技术栈是纯原生 SwiftUI 前端 + Supabase 后端，模型层调用 Kling 和 Veo 的 API，支付走 RevenueCat。 这么简单的功能设计，凭什么拿到 3K+的月营收？有 3 点值得注",
+      "prompt": "一个 30 天营收 3,724 美元、挂牌 8 万美元想卖掉的宠物 AI 视频 App「Pawz AI」，把 AI 套壳产品玩得明明白白。 产品逻辑简单：上传一张猫狗照片，一键生成宠物跳太空步、下厨炒菜、打 DJ 的魔性短视频。 技术栈是纯原生 SwiftUI 前端 + Supabase 后端，模型层调用 Kling 和 Veo 的 API，支付走 RevenueCat。 这么简单的功能设计，凭什么拿到 3K+的月营收？有 3 点值得注意： 1️⃣工程上讨巧：Server-driven 动态模板 做这类热点 App 最怕等苹果审核。它把 100+ 种动作特效全做成服务端动态配置。TikTok 上刚火什么舞步，比如 Macarena，后台几分钟配好提示词和预设，前端无需更新 App 就能实时上新，抢热点毫无时差。 2️⃣顶级漏斗指标 vs 15% 净利润率的矛盾 它的漏斗表现极高，初始转化 33%，试用到付费转化 13%，全在行业前 10%，29 天就能跑正广告回本周期，做完视频的用户有 35% 会主动转发。 但即便如此，净利润率却只有 15%。为什么？ 因为它的定价是极其激进的12.99 美元/周 + 积分包，全靠 Meta Ads 投流洗冲动消费的用户，留存是个大问题。评论区很多骂试用期扣费过快和积分见底。大头利润全分给了 Meta 和模型 API，项目变现本质上成了投流套利与供应链差价。 3️⃣背后真正的玩法是做套壳矩阵​ 扒一下开发者账号会发现，他们同时还跑着 AI ASMR、推文生成器、食品配料扫描等好几款 App。这种轻量架构跑通一套，换个提示词和壳子就能批量复制。 用户根本不在乎你底层是不是模型套壳，他们只为具体的情绪买单。像老车改装漂移、宝宝成长搞怪、二次元手办动效……找准一个能激发 35% 分享欲的微小情绪切口，做一个自动化的现金流小生意，比宏大叙事要性感得多。",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/FanShifu/status/2100560832320909725",
+      "sourceType": "x",
+      "authorName": "范师傅",
+      "authorHandle": "@FanShifu",
+      "createdAt": "2026-09-17T12:21:43.000Z",
+      "importedAt": "2026-09-18T06:24:40.791Z",
+      "tags": [
+        "Veo",
+        "Kling",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Veo",
+        "Kling",
+        "Seedance"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 85,
+        "reposts": 17,
+        "replies": 3,
+        "quotes": 0,
+        "bookmarks": 136,
+        "views": 10362,
+        "score": 670
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "一个 30 天营收 3,724 美元、挂牌 8 万美元想卖掉的宠物 AI 视频 App「Pawz AI」，把 AI 套壳产品玩得明明白白。 产品逻辑简单：上传一张猫狗照片，一键生成宠物跳太空步、下厨炒菜、打 DJ 的魔性短视频。 技术栈是纯原生 SwiftUI 前端 + Supabase 后端，模型层调用 Kling 和 Veo 的 API，支付走 RevenueCat。 这么简单的功能设计，凭什么拿到 3K+的月营收？有 3 点值得注意： 1️⃣工程上讨巧：Server-driven 动态模板 做这类热点 App 最怕等苹果审核。它把 100+ 种动作特效全做成服务端动态配置。TikTok 上刚火什么舞步，比如 Macarena，后台几分钟配好提示词和预设，前端无需更新 App 就能实时上新，抢热点毫无时差。 2️⃣顶级漏斗指标 vs 15% 净利润率的矛盾 它的漏斗表现极高，初始转化 33%，试用到付费转化 13%，全在行业前 10%，29 天就能跑正广告回本周期，做完视频的用户有 35% 会主动转发。 但即便如此，净利润率却只有 15%。为什么？ 因为它的定价是极其激进的12.99 美元/周 + 积分包，全靠 Meta Ads 投流洗冲动消费的用户，留存是个大问题。评论区很多骂试用期扣费过快和积分见底。大头利润全分给了 Meta 和模型 API，项目变现本质上成了投流套利与供应链差价。 3️⃣背后真正的玩法是做套壳矩阵​ 扒一下开发者账号会发现，他们同时还跑着 AI ASMR、推文生成器、食品配料扫描等好几款 App。这种轻量架构跑通一套，换个提示词和壳子就能批量复制。 用户根本不在乎你底层是不是模型套壳，他们只为具体的情绪买单。像老车改装漂移、宝宝成长搞怪、二次元手办动效……找准一个能激发 35% 分享欲的微小情绪切口，做一个自动化的现金流小生意，比宏大叙事要性感得多。"
+    },
+    {
       "id": "x-public-2085960986218070500",
       "title": "The biggest change with AI video is how much control you have. Seedance 2.5 on Magnific lets you",
       "description": "The biggest change with AI video is how much control you have. Seedance 2.5 on Magnific lets you: → Control camera movement with 3D Motion Control → Keep characters consistent using up to 50 references → Build longer sce",
@@ -14571,50 +14706,6 @@
       "rawText": "HBO and A24 spend $20,000,000 to shoot a single 24-second cinematic scene. A solo creator generated this 24-second unbroken take for $25 on a laptop. 23.1M views in 16 hours. 140,000+ comments debating if this is an unreleased film teaser or pure AI. The algorithm-breaking blueprint: > The Hook: Dark cinematic depth with high-contrast studio lighting. > The Twist: Unbroken 24-second tracking shot with natural camera shake and zero distortion. > The Payoff: Story-driven visual density that locks viewer retention to the final frame. The precise toolchain under the hood: 1. Claude 3.5 Sonnet structured the 7-term physics prompt and 8-second beat intervals. 2. Midjourney v6.1 established the hyper-consistent character and lighting style. 3. Seedance 2.5 and Kling 3.0 Pro rendered the 24-second continuous camera motion and physics. 4. ElevenLabs spatialized the raw low-frequency ambient sound and environment foley. 5. CapCut Pro finalized the vertical crop, cinematic motion blur, and rapid export. Legacy film studios need 60-person crews, location permits, and months of post-production. He rendered 100% pure viral engagement before his morning coffee got cold. Save this breakdown. The complete 7-term prompt formula and guide are pinned below."
     },
     {
-      "id": "x-public-2098477568681029895",
-      "title": "AI video generation used to feel like: prompt → generate → notice something wrong → generate aga",
-      "description": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and wil",
-      "prompt": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Build the visual direction first, then use CapCut PC + Seedance 2.5 to turn it into the commercial. And when something feels off, AI Edit gives you another way to shape the result without throwing everything away. The generation gets you started. The editing keeps the creative direction yours. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/Grow_withAI/status/2098477568681029895",
-      "sourceType": "x",
-      "authorName": "Ryan Carter",
-      "authorHandle": "@Grow_withAI",
-      "createdAt": "2026-09-11T18:23:34.000Z",
-      "importedAt": "2026-09-16T12:45:03.420Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 66,
-        "reposts": 36,
-        "replies": 15,
-        "quotes": 0,
-        "bookmarks": 20,
-        "views": 56755,
-        "score": 465
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Build the visual direction first, then use CapCut PC + Seedance 2.5 to turn it into the commercial. And when something feels off, AI Edit gives you another way to shape the result without throwing everything away. The generation gets you started. The editing keeps the creative direction yours. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
-    },
-    {
       "id": "x-public-2084833267719799061",
       "title": "MiniMax H3 × Midjourney V8.2 I just made a Hollywood-style space movie scene on @itsPolloAI and ",
       "description": "MiniMax H3 × Midjourney V8.2 I just made a Hollywood-style space movie scene on @itsPolloAI and the result is insane. Midjourney V8.2 created the cinematic reference image. Then MiniMax H3 turned it into a full sci-fi se",
@@ -14742,6 +14833,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Made with Seedance 2.0 + GPT image 2 Prompt: Cinematic photorealistic viral \"epic entrance\" video, 15 seconds, single continuous story beat with 4 distinct camera angles, high-energy surreal-but-grounded style, shot for 9:16 vertical. Reference: SUBJECT (@img1), matching his exact face, build, and white suit throughout. (0:00–0:04) — The Run: He sprints confidently across a rooftop at night toward its edge, a dense glowing city skyline behind him, his white three-piece suit and white fedora catching cool ambient city light, dark hair moving with his stride. Camera: a low three-quarter rear tracking shot, positioned just behind and slightly below him, matching his sprint pace, building kinetic energy. Shallow depth of field, cinematic contrast, fine film grain. Audio: driving bass-and-drum build, footsteps on concrete, distant city hum. (0:04–0:06) — The Leap: He reaches the rooftop edge and launches off into open air, arms beginning to spread, the city skyline sprawling dramatically below him. Camera: a wide shot from behind, holding on the suspended mid-air moment just after the jump. Audio: music drops to near silence, wind beginning to rush in. (0:06–0:11) — The Fall: He free-falls facing straight down in a controlled, confident superhero-style pose, arms spread wide, white suit and fedora staying crisp and controlled against the wind (fedora does not blow off), plunging past a dizzying canyon of illuminated skyscraper windows rushing by on both sides. A glowing neon-blue square portal frame grows rapidly larger, centered directly below him. Camera: a vertical top-down POV chase-cam, diving straight down in perfect sync with his fall, creating a vertigo-inducing straight-down perspective the entire beat. Audio: rushing wind, a rising synth swell, a heartbeat-like bass pulse building tension toward the portal. (0:11–0:15) — The Landing: He drops through the glowing neon square portal and lands in a perfect crouched landing pose on a rooftop party space, instantly rising to full height with arms thrown open wide, confident triumphant expression. A crowd of stylish friends surrounding him erupts — cheering, clapping, some recording on phones, several rushing in to hug and swarm him. Camera: a static wide shot at ground level, the neon portal frame centered in the background, holding steady to let the crowd's energy and his landing read clearly with no camera movement — a deliberate stillness payoff after the vertiginous fall. Audio: music hits its full drop, crowd cheering and laughing, celebratory energy, quick overlapping voices. Overall: photorealistic, premium viral-commercial quality, a deliberately different camera angle per beat (low rear tracking → wide suspended shot → vertical POV dive → static landing wide), consistent cinematic color grade and film grain throughout, high contrast night lighting with neon accents, 9:16 vertical, no on-screen text, no watermark, no logos."
+    },
+    {
+      "id": "x-public-2098477568681029895",
+      "title": "AI video generation used to feel like: prompt → generate → notice something wrong → generate aga",
+      "description": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and wil",
+      "prompt": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Build the visual direction first, then use CapCut PC + Seedance 2.5 to turn it into the commercial. And when something feels off, AI Edit gives you another way to shape the result without throwing everything away. The generation gets you started. The editing keeps the creative direction yours. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Grow_withAI/status/2098477568681029895",
+      "sourceType": "x",
+      "authorName": "Ryan Carter",
+      "authorHandle": "@Grow_withAI",
+      "createdAt": "2026-09-11T18:23:34.000Z",
+      "importedAt": "2026-09-18T06:24:40.792Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 63,
+        "reposts": 34,
+        "replies": 16,
+        "quotes": 0,
+        "bookmarks": 20,
+        "views": 56852,
+        "score": 452
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI video generation used to feel like: prompt → generate → notice something wrong → generate again. I think the more interesting workflow is: idea → storyboard → generate → edit. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. Build the visual direction first, then use CapCut PC + Seedance 2.5 to turn it into the commercial. And when something feels off, AI Edit gives you another way to shape the result without throwing everything away. The generation gets you started. The editing keeps the creative direction yours. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2078816283035046174",
@@ -18796,7 +18931,7 @@
       "authorName": "Zorvia",
       "authorHandle": "@ZorviaLux",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.696Z",
+      "importedAt": "2026-09-18T06:24:37.489Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -18839,7 +18974,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "人像"
       ],
@@ -18880,7 +19015,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.697Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像"
       ],
@@ -18921,7 +19056,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "摄影"
       ],
@@ -18962,7 +19097,7 @@
       "authorName": "Andy",
       "authorHandle": "@Andy4aicreate",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像"
       ],
@@ -19003,7 +19138,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像",
         "摄影"
@@ -19045,7 +19180,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19088,7 +19223,7 @@
       "authorName": "yusra.",
       "authorHandle": "@chatgptpaglu",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "摄影"
       ],
@@ -19129,7 +19264,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19251,7 +19386,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "摄影"
       ],
@@ -19292,7 +19427,7 @@
       "authorName": "Shine by Nous ✨",
       "authorHandle": "@Shinebynous",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像"
       ],
@@ -19333,7 +19468,7 @@
       "authorName": "boB",
       "authorHandle": "@b0BRude",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像",
         "摄影"
@@ -19375,7 +19510,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19417,7 +19552,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像",
         "摄影"
@@ -19459,7 +19594,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.490Z",
       "tags": [
         "人像",
         "摄影"
@@ -19501,7 +19636,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "人像"
       ],
@@ -19542,7 +19677,7 @@
       "authorName": "Selina",
       "authorHandle": "@selinatasnim1",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19585,7 +19720,7 @@
       "authorName": "Ali Rivera",
       "authorHandle": "@ninjaswebcom",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "人像"
       ],
@@ -19626,7 +19761,7 @@
       "authorName": "AiHua",
       "authorHandle": "@aihua_art",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -19831,7 +19966,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.698Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "人像",
         "摄影"
@@ -19873,7 +20008,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19916,7 +20051,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19959,7 +20094,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "人像"
       ],
@@ -20000,7 +20135,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-14T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.699Z",
+      "importedAt": "2026-09-18T06:24:37.491Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -66636,7 +66771,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.703Z",
+      "importedAt": "2026-09-18T06:24:37.495Z",
       "tags": [
         "产品",
         "平面设计",
@@ -66679,7 +66814,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.703Z",
+      "importedAt": "2026-09-18T06:24:37.495Z",
       "tags": [
         "平面设计"
       ],
@@ -66720,7 +66855,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-17T17:42:09.703Z",
+      "importedAt": "2026-09-18T06:24:37.495Z",
       "tags": [
         "平面设计"
       ],
