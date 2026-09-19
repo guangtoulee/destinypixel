@@ -23,9 +23,15 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   category: "Lifestyle",
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  verification: {
+    // Public ownership token; keep it published to retain Search Console access.
+    google: [
+      "SsYxZaeoaR_5wiEsMJGN1AMLSRBP2bhORlhuhlgWoDQ",
+      ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+        ? [process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION]
+        : []),
+    ],
+  },
   openGraph: {
     type: "website",
     url: "/",
