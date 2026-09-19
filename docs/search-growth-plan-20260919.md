@@ -4,10 +4,20 @@
 
 ## 现状与证据边界
 
-- 本轮公开搜索中，精确查询 `"destinypixel.com"` 仅返回第三方域名目录；`site:destinypixel.com` 没有返回本站页面。这说明本次样本中的公开能见度弱，不能证明零收录或零自然流。
-- 没有取得 Search Console、Bing Webmaster 或站内分析的实际流量导出。主代理检查的 Chrome 当前 Google 账号没有本站 Search Console 资源，Vercel CLI 处于未登录状态；这些是本次访问条件，不代表网站没有流量或没有其他管理员。先取得正确账号下最近 28 天的数据建立基线，不猜测访客数、搜索量或转化率。
+- 本轮公开搜索中，精确查询 `"destinypixel.com"` 仅返回第三方域名目录，`site:destinypixel.com` 没有返回本站页面；但随后 Search Console URL 检查确认首页 `/`、`/sticks`、`/compatibility` **均已收录到 Google、网页已编入索引，HTTPS 有效**。此前公开搜索样本没有反映实际索引状态，不能用它断言未收录或零自然流。
+- 已取得 Vercel Web Analytics 实际访问基线，筛选为 Production、hostname `destinypixel.com`。数据来源：[Vercel 项目分析](https://vercel.com/destinypixel/destinypixel/analytics)（需授权登录）。下表时间按后台界面记录，未另作时区换算。
+- 已通过 HTML meta 验证 Search Console 的 `https://www.destinypixel.com/` 资源，并提交 sitemap。Google 显示 Success、69 个已发现 URL；**已发现不等于已收录**，已单独确认收录的是上述三个核心 URL。效果页面当前提示“正在处理数据，请过 1 天左右再来查看”，Google 曝光、点击及非品牌查询基线仍待处理完成。
 - 英文 `free bazi compatibility calculator` 样本出现直接输入两人生日的工具；`Guanyin fortune sticks online` 样本出现在线抽签和按号码查签的页面。中文样本同样以工具和签文查询为主。这支持把工具页当作搜索入口，不证明这些词比所有其他关键词流量大。
 - 搜索样本：[TryBazi](https://trybazi.com/bazi-compatibility-calculator)、[Bazi.sg](https://www.bazi.sg/bazi-compatibility)、[Guanyitang 英文抽签](https://guanyitang.com/en/qiuqian/guanyin)、[Guanyitang 中文抽签](https://guanyitang.com/qiuqian/guanyin)。这些是竞争页面与意图样本，不是命理有效性的证据，也不是流量数据源。
+
+| Vercel 观察窗口 | 访客数 | 页面浏览量 | 跳出率 |
+| --- | ---: | ---: | ---: |
+| 2026-09-12 14:00 至 2026-09-19 14:59 | 130 | 357 | 40% |
+| 2026-08-20 14:00 至 2026-09-19 14:59 | 155 | 451 | 44% |
+
+7 天窗口里，`/sticks` 为 10 位访客，`/compatibility` 为 4 位访客，移动端占 67%。后台可见引荐来源为 ChatGPT 2 位访客／3 次浏览、Bing 1／1、Google Android 搜索应用 1／1、Telegram 1／1；30 天窗口另外显示 PayPal 与 Sandbox PayPal 各 1 位访客。引荐来源只是来源信号，不能把未归因访问直接算为自然搜索，也不能据此区分真实用户与开发自测。
+
+可以确认网站已有访问、可识别的搜索与 AI 引荐很少；目前不能给出可靠的自然搜索总人数。现有 Vercel 账号未启用 Web Analytics Plus，UTM 报表需要该功能，尚不能按素材参数在此后台核验推广转化。
 
 ## 本轮实际改动与验收
 
@@ -18,9 +28,11 @@
 - 更新两个工具的搜索标题与描述、抽签分享图和 WebApplication 数据。抽签来源说明、合婚模型范围与掌纹指南同步纠正；俄语签文不再混入英文拼接句。
 - 修正情感匹配漏统计，补两个工具开始、成功、失败或 AI 回退事件；生日、姓名、城市、问题和报告内容不进入事件属性。新指标从发布后累计，不能补回历史事件。
 - 为未隔离的图片工具及健康宝路径补 noindex。独立实验应用不加入主站目录与 sitemap。已经被 robots 阻止的旧侧站 URL 若仍被搜索收录，需要取得 GSC 证据后安排定向清理；noindex 不是即时删除服务。
-- 本地验收：生产构建通过，SEO／签库／统计测试通过；两重点页的四语言 HTML 均有正确 canonical、5 个语言 alternate（含 x-default）和可解析结构化数据。320px 下抽签与匹配无横向溢出，首次操作可出结果，1280px 俄语首页导航可用。
+- 本地验收：生产构建及 36 项测试通过；两重点页的四语言 HTML 均有正确 canonical、5 个语言 alternate（含 x-default）和可解析结构化数据。320px 下抽签与匹配无横向溢出，首次操作可出结果，1280px 俄语首页导航可用。
+- 已上线搜索优化提交 `3829c36` 与站点验证提交 `51507b2`；Search Console 验证、sitemap 成功状态已在后台确认。
+- Search Console 分别检查首页、抽签页与情感匹配页，三者均已编入 Google 索引且 HTTPS 有效。无需对已收录 URL 重复申请索引；已提交的 sitemap 状态成功，后续观察更新抓取与搜索表现。
 
-技术基础已改善，但流量判断仍待取得本站后台。当前账号的 Search Console 未显示 DestinyPixel；Vercel CLI 已保存的登录不可用。优先补齐本站访问后，检查过去 28 天的非品牌曝光、点击、来源和入口页，不从公开搜索样本推算人数。
+技术改动、三个核心 URL 的收录状态与 Vercel 访问基线已核实。接下来等 Search Console 效果数据处理完成，再观察查询、曝光与点击；不要把已收录、sitemap 成功或 69 个已发现 URL 当成已经取得搜索流量。
 
 ## 关键词与页面职责
 
@@ -39,9 +51,9 @@
 
 `/sticks` 不宣称所有签系都有完整、逐字、已核对的庙本。现有签库混合部分传统来源与本站现代象征解读，且某些语言版本不是原文逐句翻译。新增查签详情页前，应核对来源、版本和译文，不能把模板补充内容包装成古籍原文。
 
-## 本轮可落地的内容结构
+## 已上线的内容结构
 
-两个工具保留主要操作区，在下方添加能被服务器直接输出的简短说明、方法、真正有用的问答及相关内链。
+两个工具保留主要操作区，下方已添加能被服务器直接输出的简短说明、方法、真正有用的问答及相关内链。
 
 - 抽签：是什么、五种签系及本站签号范围、抽签与查号步骤、具体提问例子、传统文本和现代解释的区别。
 - 情感匹配：四柱与日干五行、60 动物、四种相处维度、实际计算范围与输入要求。补充问答避免重复已有的免费、分数和出生时间三问。
@@ -84,9 +96,9 @@ Reddit 可留作后续少量反馈实验：先读社区规则，公开开发者�
 
 | 时间 | 交付 | 判断方式 |
 | --- | --- | --- |
-| 第 1–3 天 | 最近 28 天基线、重点 URL 索引检查、来源与工具转化事件检查 | 能区分自然搜索、AI 来源、社交来源；看到开始与完成的差距 |
-| 第 4–10 天 | 两个工具的导航、可见说明、元数据、语言关系、来源说明；修复影响收录的问题 | 验证响应、canonical、语言、索引资格、移动端操作，不用“已提交”代替“已收录” |
-| 第 11–20 天 | 4 篇不同意图的指南；8–12 张 Pin；4–6 条 TikTok；2 条搜索型 YouTube 教程 | 独立 UTM，记录制作工时、出站点击、到站与完成结果人数 |
+| 第 1–3 天 | Vercel 7／30 天基线、GSC 验证和三个核心 URL 收录已确认；等待 Google 效果数据处理完成，再核验查询及新工具事件 | 分开观察已识别来源和未归因访问，核验开始与成功事件，不把来源不明当自然流 |
+| 第 4–10 天 | 两工具的导航、说明、元数据与语言关系已上线；继续处理索引检查发现的问题 | 验证响应、canonical、语言、索引资格、移动端操作，不用“已提交”代替“已收录” |
+| 第 11–20 天 | 4 篇不同意图的指南；8–12 张 Pin；4–6 条 TikTok；2 条搜索型 YouTube 教程 | 先记录平台出站点击、工时与站内工具事件；UTM 精细归因需具备实际可用报表后核验 |
 | 第 21–30 天 | 复盘获曝光的查询、有点击的页面、真正带来测算的内容 | 只扩表现最好的主题；样本不足时继续观察，不凭几次访问宣布胜负 |
 
 首批四篇指南选题：
@@ -96,7 +108,7 @@ Reddit 可留作后续少量反馈实验：先读社区规则，公开开发者�
 3. How to ask a useful fortune-stick question：给事业、关系、变化三个具体问题及改写。
 4. A temple number is not a universal verse：说明签系、版本、译文的差别，教读者核对来源。
 
-工具事件按当前实际名称观察：`tool_start → tool_success`；异常分别用 `tool_error`、`tool_fallback`。不要查询并不存在的 `tool_complete`。后续购买转化如需纳入，先核对实际已有事件及后台是否能收到数据。属性只包括工具类型、语言、来源和成功/失败，不记录姓名、生日、城市、完整问题或解读正文。当前尚未取得后台事件数据，不能把代码接入等同于已经验证到站与完成量。
+工具事件按当前实际名称观察：`tool_start → tool_success`；异常分别用 `tool_error`、`tool_fallback`。不要查询并不存在的 `tool_complete`。后续购买转化如需纳入，先核对实际已有事件及后台是否能收到数据。属性只包括工具类型、语言、来源和成功/失败，不记录姓名、生日、城市、完整问题或解读正文。当前已核实的是访问、页面与引荐数据，新工具事件的实际完成量仍需后续核验，不能由页面浏览量推算。
 
 每周看：
 
@@ -115,4 +127,4 @@ Google 当前已提供 Generative AI 专项报告；不要再沿用“所有 AI 
 - TikTok → 情感匹配：<https://www.destinypixel.com/compatibility?utm_source=tiktok&utm_medium=video&utm_campaign=love_compatibility>
 - YouTube → 情感匹配：<https://www.destinypixel.com/compatibility?utm_source=youtube&utm_medium=video&utm_campaign=love_compatibility>
 
-这些参数已进入隐私白名单。Vercel 是否能按 UTM 展示需核对实际 Analytics 套餐；未取得后台前，不承诺现有账户已具备某个付费报表。精确到每条素材的归因需另加受控素材编号，不能随意塞入姓名、生日或自由文本。
+这些参数已进入隐私白名单，可保留为后续归因约定。已核实当前未启用 Web Analytics Plus，Vercel 的 UTM 报表需要该功能；目前使用这些链接不等于能在现有后台按活动查看结果。精确到每条素材的归因还需受控素材编号及可用分析工具，不能随意塞入姓名、生日或自由文本。本次没有升级分析套餐。
