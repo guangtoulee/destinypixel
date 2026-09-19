@@ -7,6 +7,7 @@ export const metadata: Metadata = makePageMetadata({
   title: "Image Studio | DestinyPixel",
   description:
     "Generate 1K and 2K visual assets with Grok Imagine, with optional prompt refinement.",
+  noindex: true,
 });
 
 export const maxDuration = 60;

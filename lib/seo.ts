@@ -156,9 +156,9 @@ export const routeSeo = {
   },
   sticks: {
     path: "/sticks",
-    title: "Temple Sticks Oracle | Guanyin, Guandi, Yuelao, Wealth & Wong Tai Sin",
+    title: "Free Chinese Fortune Sticks Online | Guanyin & Kau Cim",
     description:
-      "Draw one temple stick or search an offline stick number: Guanyin for protection, Guandi for career, Yuelao for love, Five Wealth Gods for money, and Wong Tai Sin for timing.",
+      "Draw a free Chinese fortune stick, explore five oracle traditions, and read its meaning. Guanyin, Guandi, Yuelao and more, with optional AI interpretation.",
     keywords: [
       "temple sticks oracle",
       "Guanyin sticks",
@@ -290,12 +290,16 @@ export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }
 
+// Only advertise Traditional Chinese where the initial HTML is translated.
+const traditionalServerPaths = new Set(["/sticks"]);
+
 export function languageAlternates(path: string) {
   if (!hasLocalizedSeo(path)) return undefined;
   const hasRussian = "ru" in localizedSeoCopy[path];
   return {
     en: path,
     "zh-Hans": `${path}?locale=zh`,
+    ...(traditionalServerPaths.has(path) ? { "zh-Hant": `${path}?locale=zh-TW` } : {}),
     ...(hasRussian ? { ru: `${path}?locale=ru` } : {}),
     "x-default": path,
   };
@@ -340,7 +344,7 @@ export function makePageMetadata({
     keywords: [siteName, ...keywords],
     alternates: {
       canonical,
-      languages: normalizedLocale === "zh-TW" || noindex ? undefined : languageAlternates(path),
+      languages: (normalizedLocale === "zh-TW" && !traditionalServerPaths.has(path)) || noindex ? undefined : languageAlternates(path),
     },
     openGraph: {
       type: "website",

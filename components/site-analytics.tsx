@@ -23,7 +23,7 @@ export function SiteAnalytics() {
           area: "main",
           target: destination.hash === "#report" ? "birth_report" : target,
           source: analyticsPage(window.location.pathname),
-          location: anchor.closest("header") ? "header" : anchor.closest("footer") ? "footer" : "content",
+          location: anchor.closest("header") ? "header" : anchor.closest("footer") ? "footer" : anchor.closest("nav") ? "navigation" : "content",
         });
       } catch {
         // Navigation is independent of analytics availability.

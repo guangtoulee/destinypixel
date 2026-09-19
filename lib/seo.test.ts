@@ -74,7 +74,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
   assert.ok(traditionalEntries.length > 0);
-  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || new URL(entry.url).pathname === "/discover" || new URL(entry.url).pathname === "/compatibility")));
+  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || new URL(entry.url).pathname === "/discover" || new URL(entry.url).pathname === "/compatibility" || new URL(entry.url).pathname === "/sticks")));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {
@@ -116,4 +116,15 @@ test("the metaphysics sitemap excludes experiments while Prompt keeps its own in
   for (const item of getIndexablePromptItems()) {
     assert.ok(promptUrls.has(absoluteUrl(promptItemHref(item))), item.id);
   }
+});
+
+
+test("fortune sticks advertises four reciprocal server-rendered languages", () => {
+  const languages = languageAlternates("/sticks");
+  assert.equal(languages?.["zh-Hant"], "/sticks?locale=zh-TW");
+  for (const locale of ["en", "zh", "zh-TW", "ru"]) {
+    const metadata = makePageMetadata({ ...routeSeo.sticks, locale });
+    assert.deepEqual(metadata.alternates?.languages, languages);
+  }
+  assert.equal(sitemap().filter(entry => new URL(entry.url).pathname === "/sticks").length, 4);
 });

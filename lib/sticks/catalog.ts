@@ -450,12 +450,12 @@ function generatedSignText(type: StickType, number: number, locale: ReportLocale
   if (locale === "ru") {
     return {
       level,
-      title: `${theme.title} · Stick ${number}`,
-      poem: `${theme.image} First see: ${theme.focus}. Then guard against: ${theme.warning}. If you can ${theme.action.toLowerCase()}, the matter has room to turn.`,
-      plain: `${theme.focus}. This sign is less about simple luck and more about separating conditions, timing, the other side's behavior, and your own capacity. Layer ${phase} of the sign leans toward stabilizing first, then acting.`,
-      advice: `${theme.action}. Also watch this risk: ${theme.warning}. If the question involves a person or cooperation, trust clear action more than attitude.`,
+      title: `${theme.title} · Жребий ${number}`,
+      poem: `${theme.image} Главная тема: ${theme.focus} Обратите внимание: ${theme.warning} Возможный следующий шаг: ${theme.action}`,
+      plain: `${theme.focus} Этот образ предлагает рассмотреть условия, время, поступки другого человека и собственные возможности, а не сводить всё к удаче или неудаче. Сначала укрепите то, на что можете повлиять, затем решайте, стоит ли действовать шире.`,
+      advice: `${theme.action} Также учитывайте следующее: ${theme.warning} Если вопрос касается человека или сотрудничества, обращайте внимание на конкретные поступки, а не только на обещания.`,
       sourceNote:
-        "DestinyPixel full-number normalized sign text; exact temple verses will continue to be manually verified and replaced.",
+        "Авторское современное символическое толкование DestinyPixel; это не дословный традиционный храмовый текст для данного номера.",
     };
   }
 

@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "./analytics";
+import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent, type AnalyticsTool, type ToolEvent } from "./analytics";
 
 test("the metaphysics funnel includes bracelets and excludes standalone experiments", () => {
-  for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/tools", "/learn", "/report/example", "/day-pillar", "/journal", "/journal/prepare-birth-date-time-place"]) {
+  for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/compatibility", "/tools", "/learn", "/learn/what-is-bazi-birth-chart", "/insights/bazi-love-compatibility", "/report/example", "/day-pillar", "/journal", "/journal/prepare-birth-date-time-place"]) {
     assert.equal(isMainSitePath(path), true, path);
   }
-  for (const path of ["/prompt", "/prompt/case/example", "/juben", "/daoyan", "/image", "/english", "/danci", "/candy", "/jake", "/journalism", "/day-pillar-extra"]) {
+  for (const path of ["/prompt", "/prompt/case/example", "/juben", "/daoyan", "/image", "/english", "/danci", "/candy", "/jake", "/journalism", "/day-pillar-extra", "/compatibility-private", "/learning", "/insights-private"]) {
     assert.equal(isMainSitePath(path), false, path);
   }
 });
@@ -35,6 +35,8 @@ test("account and checkout analytics remove credentials and payment identifiers"
 test("form event names are from the product allowlist", () => {
   assert.equal(toolForForm("totem"), "totem");
   assert.equal(toolForForm("day_pillar"), "day_pillar");
+  assert.equal(toolForForm("compatibility"), "compatibility");
+  assert.equal(toolForForm("temple_sticks"), "temple_sticks");
   assert.equal(toolForForm("prompt_expand"), "prompt_expand");
   assert.equal(toolForForm("user supplied text"), null);
 });
@@ -81,4 +83,41 @@ test("discovery campaigns stay measurable without private birthday fields", () =
   assert.equal(isMainSitePath("/discover"), true);
   assert.equal(analyticsPage("/discover"), "/discover");
   assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/discover?utm_source=instagram&utm_medium=social&utm_campaign=day_card&birthday=2003-02-20&email=private"), "https://www.destinypixel.com/discover?utm_source=instagram&utm_medium=social&utm_campaign=day_card");
+});
+
+test("relationship and oracle campaigns preserve attribution without either person's data or question", () => {
+  const privateFields = "&name=Alice&partnerName=Bob&birthDate=1990-01-01&partnerBirthDate=1991-02-02&birthTime=09%3A30&birthCity=Shanghai&question=Will+we+stay+together&topic=love&score=87#result=PRIVATE";
+  for (const [path, campaign] of [["/compatibility", "love_compatibility"], ["/sticks", "temple_sticks"]]) {
+    for (const source of ["reddit", "quora", "threads", "pinterest", "tiktok"]) {
+      const clean = `https://www.destinypixel.com${path}?locale=zh-TW&utm_source=${source}&utm_medium=social&utm_campaign=${campaign}`;
+      assert.equal(sanitizeAnalyticsUrl(clean + privateFields), clean);
+    }
+    assert.equal(analyticsPage(path), path);
+  }
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/sticks?utm_source=Alice&utm_campaign=Will+we+stay+together&utm_content=1990-01-01&question=PRIVATE"), "https://www.destinypixel.com/sticks");
+});
+
+test("public educational pages are grouped separately from tools and private reports", () => {
+  assert.equal(analyticsPage("/learn/what-is-bazi-birth-chart"), "/learn/[slug]");
+  assert.equal(analyticsPage("/insights/bazi-love-compatibility"), "/insights/[slug]");
+  assert.equal(analyticsPage("/insights/guanyin-fortune-sticks"), "/insights/[slug]");
+  assert.equal(analyticsPage("/insights-private"), "other");
+});
+
+test("relationship and oracle events contain only controlled identifiers, with no runtime escape hatch", () => {
+  const previous = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const fakeWindow = {} as Window;
+  Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  try {
+    trackToolEvent("tool_start", "compatibility");
+    trackToolEvent("tool_success", "temple_sticks");
+    trackToolEvent("Alice 1990-01-01" as ToolEvent, "compatibility");
+    trackToolEvent("tool_error", "Will we stay together?" as AnalyticsTool);
+    assert.equal(fakeWindow.vaq?.length, 3);
+    assert.deepEqual(fakeWindow.vaq?.[1][1], { name: "tool_start", data: { tool: "compatibility", area: "main" }, options: undefined });
+    assert.deepEqual(fakeWindow.vaq?.[2][1], { name: "tool_success", data: { tool: "temple_sticks", area: "main" }, options: undefined });
+  } finally {
+    if (previous) Object.defineProperty(globalThis, "window", previous);
+    else Reflect.deleteProperty(globalThis, "window");
+  }
 });

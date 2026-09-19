@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { OracleStage, oracleSymbols } from "./oracle-sanctuary";
 import styles from "./oracle-sanctuary.module.css";
+import { journalLanguageTags, toTraditional } from "@/lib/journal-locales";
+import { trackToolEvent } from "@/lib/analytics";
 import { ArrowRight, Languages, Loader2, Search, WandSparkles } from "lucide-react";
 import {
   contentLocale,
@@ -182,7 +185,7 @@ const systems: Record<
 const copy: Record<ContentLocale, StickCopy> = {
   en: {
     navHome: "Home",
-    heroEyebrow: "Temple sticks · One question · One sign",
+    heroEyebrow: "Free Chinese fortune sticks · Kau Cim online",
     heroTitle: "A quiet moment for your question.",
     heroLead:
       "Choose a tradition, hold one question in mind, and draw a stick. Read its verse and discover a different perspective.",
@@ -198,7 +201,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     lookupLabel: "Stick number",
     lookupAction: "Find this stick",
     sourceLabel: "Source note",
-    poemLabel: "Traditional verse",
+    poemLabel: "Sign text",
     plainLabel: "Plain reading",
     aiTitle: "AI interpretation",
     aiAction: "Interpret with my question",
@@ -233,7 +236,7 @@ const copy: Record<ContentLocale, StickCopy> = {
   },
   zh: {
     navHome: "返回首页",
-    heroEyebrow: "求签小殿 · 一念一签",
+    heroEyebrow: "免费在线抽签 · 求签小殿",
     heroTitle: "静心一刻，为心事求一签。",
     heroLead:
       "选一处心意相合的签堂，想一件牵挂的事。轻摇签筒，在签诗与解意中，寻一个新的方向。",
@@ -249,7 +252,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     lookupLabel: "签号",
     lookupAction: "查这支签",
     sourceLabel: "签文来源",
-    poemLabel: "传统签文",
+    poemLabel: "本签签文",
     plainLabel: "白话签意",
     aiTitle: "AI 合参解读",
     aiAction: "结合问题解读",
@@ -300,7 +303,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     lookupLabel: "Номер жребия",
     lookupAction: "Найти жребий",
     sourceLabel: "Источник",
-    poemLabel: "Традиционный стих",
+    poemLabel: "Текст жребия",
     plainLabel: "Простое толкование",
     aiTitle: "AI-толкование",
     aiAction: "Толковать мой вопрос",
@@ -349,30 +352,38 @@ function createReading(locale: ReportLocale, type: StickType): StickSign {
 export default function SpiritualSticksExperience({
   initialLocale = "en",
   initialType = "guanyin",
+  children,
 }: {
   initialLocale?: ReportLocale;
   initialType?: StickType;
+  children?: ReactNode;
 }) {
-  const [locale, setLocale] = useState<ReportLocale>(initialLocale);
-  useEffect(() => {
-    document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
-  }, [locale]);
+  const router = useRouter();
+  const [changingLanguage, startLanguageChange] = useTransition();
+  const locale = initialLocale;
+  const localized = <T,>(value: T): T => locale === "zh-TW" ? JSON.parse(toTraditional(JSON.stringify(value))) : value;
   const [selectedType, setSelectedType] = useState<StickType>(initialType);
-  const [topic, setTopic] = useState(copy[contentLocale(initialLocale)].topics[defaultTopicIndex[initialType]]);
+  const [topicIndex, setTopicIndex] = useState(defaultTopicIndex[initialType]);
   const [question, setQuestion] = useState("");
-  const [reading, setReading] = useState<StickSign | null>(null);
+  const [rawReading, setReading] = useState<StickSign | null>(null);
+  const reading = localized(rawReading);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lookupNumber, setLookupNumber] = useState("33");
   const [aiText, setAiText] = useState("");
   const [isInterpreting, setIsInterpreting] = useState(false);
+  useEffect(() => {
+    document.documentElement.lang = journalLanguageTags[locale];
+    setReading(current => current ? getStickSign(current.type, current.number, locale) : null);
+    setAiText("");
+  }, [locale]);
   const drawTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const interpretation = useRef<AbortController | null>(null);
   useEffect(() => () => {
     if (drawTimer.current) clearTimeout(drawTimer.current);
     interpretation.current?.abort();
   }, []);
-  const busy = isDrawing || isInterpreting;
-  const ui = locale === "zh" || locale === "zh-TW" ? {
+  const busy = isDrawing || isInterpreting || changingLanguage;
+  const rawUi = locale === "zh" || locale === "zh-TW" ? {
     select: "01 · 选择签堂", question: "02 · 安放心事", title: "此刻，心中所问", optional: "可以写下问题，也可以静静默念。", read: "查看这支签的解意", footnote: "签意是一种文化体验，也是一份自我思考的邀请。",
   } : locale === "ru" ? {
     select: "01 · Выберите традицию", question: "02 · Ваш вопрос", title: "Что у вас на душе?", optional: "Запишите вопрос или просто подумайте о нём.", read: "Прочитать толкование", footnote: "Символический ритуал и приглашение к размышлению.",
@@ -380,34 +391,17 @@ export default function SpiritualSticksExperience({
     select: "01 · Choose your tradition", question: "02 · Hold your question", title: "What’s on your mind?", optional: "Write it here, or simply hold it in your thoughts.", read: "Read your sign", footnote: "A symbolic ritual. A little space for reflection.",
   };
   const copyLocale = contentLocale(locale);
-  const text = copy[copyLocale];
-  const selectedSystem = systems[copyLocale][selectedType];
+  const ui = localized(rawUi);
+  const text = localized(copy[copyLocale]);
+  const localizedSystems = localized(systems[copyLocale]);
+  const selectedSystem = localizedSystems[selectedType];
 
-  const selectedTopic = useMemo(() => {
-    if (text.topics.includes(topic)) return topic;
-    return text.topics[0];
-  }, [text.topics, topic]);
-
-  function changeLocale(nextLocale: ReportLocale) {
-    if (busy) return;
-    setLocale(nextLocale);
-    setTopic(copy[contentLocale(nextLocale)].topics[Math.max(0, text.topics.indexOf(selectedTopic))]);
-    setAiText("");
-    setReading((current) =>
-      current ? getStickSign(current.type, current.number, nextLocale) : current,
-    );
-    window.localStorage.setItem("destinypixel-locale", nextLocale);
-
-    const url = new URL(window.location.href);
-    url.searchParams.set("locale", nextLocale);
-    url.searchParams.set("type", selectedType);
-    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
-  }
+  const selectedTopic = text.topics[topicIndex];
 
   function chooseType(nextType: StickType) {
     if (busy) return;
     setSelectedType(nextType);
-    setTopic(text.topics[defaultTopicIndex[nextType]]);
+    setTopicIndex(defaultTopicIndex[nextType]);
     setReading(null);
     setAiText("");
     setIsDrawing(false);
@@ -421,6 +415,7 @@ export default function SpiritualSticksExperience({
   function drawStick() {
     if (busy) return;
 
+    trackToolEvent("tool_start", "temple_sticks");
     setReading(null);
     setIsDrawing(true);
     if (window.matchMedia("(max-width: 640px)").matches) {
@@ -431,6 +426,7 @@ export default function SpiritualSticksExperience({
     }
     drawTimer.current = setTimeout(() => {
       setReading(createReading(locale, selectedType));
+      trackToolEvent("tool_success", "temple_sticks");
       setAiText("");
       setIsDrawing(false);
       drawTimer.current = null;
@@ -442,7 +438,9 @@ export default function SpiritualSticksExperience({
     const number = Number(lookupNumber);
     if (!Number.isInteger(number) || number < 1 || number > selectedSystem.count) return;
 
+    trackToolEvent("tool_start", "temple_sticks");
     setReading(getStickSign(selectedType, number, locale));
+    trackToolEvent("tool_success", "temple_sticks");
     setAiText("");
   }
 
@@ -485,21 +483,32 @@ export default function SpiritualSticksExperience({
         setAiText(nextText);
       }
     } catch {
-      if (!controller.signal.aborted) setAiText(reading.plain);
+      if (!controller.signal.aborted) {
+        setAiText(reading.plain);
+        trackToolEvent("tool_fallback", "temple_sticks");
+      }
     } finally {
       if (!controller.signal.aborted) setIsInterpreting(false);
     }
   }
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
       <header className="white-header stick-header">
         <div className="white-container white-header__inner">
           <a className="white-brand" href={`/?locale=${locale}`}><span aria-hidden="true" />DestinyPixel</a>
           <a className="white-black-link" href={`/?locale=${locale}`}>{text.navHome}</a>
           <div className="white-language" aria-label="Language selector">
             <Languages size={14} aria-hidden="true" />
-            {reportLanguageOptions.map((option) => <button key={option.value} type="button" disabled={busy} data-active={locale === option.value} onClick={() => changeLocale(option.value)}>{option.value === "zh" ? "简" : option.value === "zh-TW" ? "繁" : option.value === "ru" ? "RU" : "EN"}</button>)}
+            {reportLanguageOptions.map((option) => <a key={option.value} className={styles.languageLink} href={`/sticks?locale=${option.value}&type=${selectedType}`} aria-current={locale === option.value ? "page" : undefined} aria-disabled={busy || undefined} onClick={(event) => {
+              if (busy) { event.preventDefault(); return; }
+              if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+              event.preventDefault();
+              window.localStorage.setItem("destinypixel-locale", option.value);
+              // Next navigation refreshes the translated server content and metadata,
+              // while this mounted tool keeps the question and the drawn sign in memory.
+              startLanguageChange(() => router.push(event.currentTarget.href, { scroll: false }));
+            }}>{option.value === "zh" ? "简" : option.value === "zh-TW" ? "繁" : option.value === "ru" ? "RU" : "EN"}</a>)}
           </div>
         </div>
       </header>
@@ -512,7 +521,7 @@ export default function SpiritualSticksExperience({
         <section className={styles.ritual} aria-label={text.heroEyebrow}>
           <div className={styles.traditions} role="group" aria-label={ui.select}>
             {stickTypes.map((type) => {
-              const system = systems[copyLocale][type];
+              const system = localizedSystems[type];
               const Icon = oracleSymbols[type];
               return <button key={type} type="button" disabled={busy} data-tradition={type} aria-pressed={selectedType === type} onClick={() => chooseType(type)}>
                 <span className={styles.symbol}><Icon size={22} strokeWidth={1.4} aria-hidden="true" /></span>
@@ -529,7 +538,7 @@ export default function SpiritualSticksExperience({
               <div className={styles.field}>
                 <span id="oracle-topic-label">{text.topicLabel}</span>
                 <div className={styles.topicChoices} role="group" aria-labelledby="oracle-topic-label">
-                  {text.topics.map((item) => <button key={item} type="button" disabled={busy} aria-pressed={selectedTopic === item} onClick={() => setTopic(item)}>{item}</button>)}
+                  {text.topics.map((item, index) => <button key={item} type="button" disabled={busy} aria-pressed={selectedTopic === item} onClick={() => setTopicIndex(index)}>{item}</button>)}
                 </div>
               </div>
               <label className={styles.field}>
@@ -565,7 +574,7 @@ export default function SpiritualSticksExperience({
           <div className={styles.advice}><strong>{text.adviceLabel}</strong><span>{reading.advice}</span></div>
           <div className={styles.ai}>
             <strong>{text.aiTitle}</strong>
-            <p aria-live="polite" aria-busy={isInterpreting}>{aiText || text.aiEmpty}</p>
+            <p aria-live="polite" aria-busy={isInterpreting}>{localized(aiText) || text.aiEmpty}</p>
             <button className={styles.secondary} type="button" disabled={busy} onClick={interpretReading}>
               {isInterpreting ? <Loader2 className="loading-icon" size={15} aria-hidden="true" /> : <WandSparkles size={15} aria-hidden="true" />}
               {isInterpreting ? text.aiLoading : text.aiAction}
@@ -573,6 +582,7 @@ export default function SpiritualSticksExperience({
           </div>
           <p className={styles.source}><strong>{text.sourceLabel}</strong>{reading.sourceNote}</p>
         </section>}
+        {children}
       </div>
     </main>
   );

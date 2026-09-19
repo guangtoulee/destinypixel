@@ -173,23 +173,24 @@ export const seoGuides: SeoGuide[] = [
     slug: "guanyin-fortune-sticks",
     title: "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
     description:
-      "What Guanyin fortune sticks are, which questions they suit, and how to draw or look up a stick online—then open DestinyPixel’s temple sticks tool.",
+      "Try an online Guanyin-inspired fortune-stick draw. Learn how to ask a question, read the source label and distinguish traditional verses from modern reflections.",
     h1: "Guanyin fortune sticks online: how to draw and read one",
     paragraphs: [
-      "Guanyin fortune sticks (Kau Cim–style) are a traditional 100-stick temple oracle. Online you can draw one stick or look up a number you already received—best with one concrete question.",
+      "Guanyin fortune sticks are a form of Chinese temple divination in which a numbered stick points to a verse. DestinyPixel offers a 100-number Guanyin-inspired draw: bring one concrete question, receive a result, and read its source note before interpreting it.",
+      "The current collection mixes selected traditional entries with DestinyPixel’s original modern reflections. It is not a complete transcription of any temple’s 100-stick book, and a translated interface does not always contain a translation of the corresponding Chinese verse. A matching number alone does not establish that two texts belong to the same edition.",
     ],
     faqAsH2: true,
     faqs: [
       {
         question: "What are Guanyin fortune sticks?",
         answer:
-          "A Kau Cim–style temple draw of one numbered stick from a 100-stick Guanyin set, then a verse and a plain-language note. DestinyPixel lets you draw or look up that number online.",
+          "In a Guanyin fortune-stick tradition, a numbered draw leads to a verse and interpretation; wording and numbering can vary by edition. DestinyPixel provides a 100-number online experience containing both selected traditional entries and original modern reflections, identified in the result’s source note.",
       },
       {
         question:
           "What questions suit Guanyin (vs Guandi / Yuelao / Wealth / Wong Tai Sin)?",
         answer:
-          "Guanyin suits protection, family, recovery, travel, and emotionally tangled questions. Use Guandi for career, Yuelao for love, Wealth for money, and Wong Tai Sin for timing—match the tradition to the question.",
+          "On this site, Guanyin is the general reflection option for family, travel and uncertainty; Guandi emphasizes work, Yuelao relationships, Wealth money habits, and Wong Tai Sin timing. These are editorial starting points for choosing an experience, not fixed rules shared by every temple.",
       },
       {
         question: "How do you draw one stick online?",
@@ -199,17 +200,17 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "How should you read the result?",
         answer:
-          "Read the number, verse, and plain note as a symbolic mirror for that question—not a verdict. Optional AI interpretation is extra reflection, not a promise.",
+          "Check whether the source note identifies a traditional entry or an original modern reflection, then read the text in relation to your question. Optional AI interpretation adds reflection; it does not authenticate a verse or guarantee an outcome.",
       },
       {
         question: "Already drew a stick at a temple—can I look up the number?",
         answer:
-          "Yes: choose Guanyin (or the matching tradition), enter the number, and compare the verse. Temple editions can differ in wording; treat this as a lookup, not every shrine’s booklet.",
+          "You can open this site’s entry for a number, but it may be an original modern reflection rather than your temple’s verse. For an offline draw, compare the actual poem and named edition; use the temple’s own booklet when they do not match.",
       },
       {
         question: "Is an online stick “the same” as a temple draw?",
         answer:
-          "The process is parallel: one tradition, one question, one stick (or a known number). An online draw copies that sequence; it does not claim the setting or result is identical.",
+          "No: this is a digital symbolic experience inspired by the sequence of choosing a tradition, focusing on one question and drawing a numbered result. It does not reproduce a temple’s setting, confirmation ritual or complete authoritative text.",
       },
     ],
     cta: {
@@ -243,20 +244,21 @@ export const seoGuides: SeoGuide[] = [
       "What BaZi love compatibility means, why birth times matter, and how DestinyPixel mixes BaZi with birth-chart dimensions—then try the free compare tool.",
     h1: "BaZi love compatibility: how two Four Pillars charts compare",
     paragraphs: [
-      "BaZi love compatibility compares two people’s Four Pillars—year, month, day, hour—and their elements as symbolic relating themes, not a breakup verdict. DestinyPixel’s free tool also folds tropical birth-chart dimensions into that comparison.",
+      "BaZi love compatibility traditionally considers relationships between two birth charts. DestinyPixel offers a focused, free comparison: Day Pillar animal portraits, the relationship between the two day elements, the five-element distribution across the Four Pillars, and selected tropical astrology placements.",
+      "The result is a conversation starter about personality, communication, affection and daily habits. It is not a complete traditional marriage assessment: the 60–100 connection index uses this site’s editorial weights, while the 60 animal portraits are original DestinyPixel interpretations rather than traditional compatibility classifications.",
     ],
     faqAsH2: true,
     faqs: [
       {
         question: "What is BaZi love compatibility?",
         answer:
-          "It compares two Four Pillars charts—and the five-element relationships between them—as symbolic themes for relating. It is not a fate stamp or a reason to stay or leave.",
+          "BaZi compatibility explores relationships between two Four Pillars charts through traditional symbolism. This tool uses a limited subset—the day elements and visible five-element distribution—alongside its own animal portraits and selected astrology placements, rather than a complete traditional marriage assessment.",
       },
       {
         question:
           "What does DestinyPixel compare (personality / communication / affection / everyday rhythm)?",
         answer:
-          "The free tool scores personality, communication, affection, and everyday rhythm. Each dimension mixes BaZi with tropical chart placements.",
+          "The free tool scores personality, communication, affection and everyday rhythm using day-element relationships, the visible five-element distribution and selected Sun, Moon, Mercury, Venus and Mars placements. It also compares two original animal portraits and, when available, adds a short AI reflection without letting AI set the scores.",
       },
       {
         question: "Why do both people need known birth times?",
@@ -275,12 +277,12 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "BaZi vs Western synastry—how this page’s tool mixes them",
         answer:
-          "Western synastry compares tropical charts; BaZi compares Four Pillars. This tool weights BaZi at 30% and tropical placements at 70% on each dimension.",
+          "This tool gives BaZi signals 30% and selected tropical placements 70% of each dimension: day-element affinity informs the first three dimensions, and similarity in visible five-element distribution informs everyday rhythm. The animal stories and directional element explanation add context; they are not extra numeric scoring factors.",
       },
       {
         question: "What the tool does not do",
         answer:
-          "This edition does not compare rising signs or houses, and it does not time marriage. Optional AI notes are fair-use reflection; birth details are used for calculation and not saved as a report.",
+          "This edition does not compare rising signs or houses, assess useful elements or Day Master strength, or predict marriage dates. Birth details are used for calculation without saving a report; AI receives calculated chart data rather than names, birth dates or cities, and its free reflection is subject to availability and rate limits.",
       },
     ],
     cta: { label: "Compare two charts free", href: "/compatibility" },
@@ -316,7 +318,7 @@ export const seoGuides: SeoGuide[] = [
     h1: "Chinese Palm Reading vs Western Palmistry",
     paragraphs: [
       "Chinese palm reading and Western palmistry both look at the hand, yet they grew from different libraries. Western palmistry often emphasizes major lines and mounts as character and life-theme symbols. Chinese hand reading more often folds palm shape, color, and line changes into a broader “look at the person in time” habit—closer to physiognomy than to a single fate script.",
-      "An AI palm scan is useful for describing visible structure and comparing trends under decent light. It is not a license to scare anyone with “broken life line” myths. Hands change with labor, health, and age; which hand you upload matters less than honest lighting and a clear question.",
+      "DestinyPixel’s Palm Studio generates reflective text from palm details you select and confirm. An optional photo stays in your browser as a reference for your own observations; the AI does not receive or inspect the image. Use clear lighting to help yourself describe the lines, and avoid treating a “broken life line” as evidence of illness or a predicted lifespan.",
       "Use palm reading as a mirror for habits and tendencies. Pair it with BaZi when you want calendar timing, or with I Ching when you have one decision on the table.",
     ],
     faqAsH2: true,
@@ -329,7 +331,7 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "What does an AI palm reading actually do (and not do)?",
         answer:
-          "Palm Studio writes reflective text from the details you confirm; an optional photo stays local as a visual reference. It describes visible structure under good light—it does not diagnose health or seal a fate.",
+          "Palm Studio writes reflective text from the details you confirm; an optional photo stays local as a visual reference. The AI does not see the photo, detect lines or diagnose health; it interprets the observations you enter.",
       },
       {
         question: "Left or right hand—which to use?",

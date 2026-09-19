@@ -7,8 +7,9 @@
 .editorial-home::before, .editorial-home::after { display: none; }
 .editorial-home .white-container { width: min(1200px, calc(100% - 64px)); }
 .editorial-home .white-header { background: #ffffffec; border-color: #e1e8fa; backdrop-filter: blur(16px); }
-.editorial-home .white-header__inner { min-height: 80px; gap: 24px; }
-.editorial-home .white-nav { gap: 23px; }
+.editorial-home .white-header__inner { min-height: 80px; gap: 18px; }
+.editorial-home .white-nav { gap: 16px; flex-wrap: wrap; justify-content: center; padding-block: 12px; }
+.editorial-home .white-nav a { white-space: nowrap; line-height: 1.5; }
 .editorial-home .white-nav a, .editorial-home .white-actions { color: #475977; }
 .editorial-home .white-actions { gap: 15px; }
 .editorial-home .white-brand { font-family: inherit; font-size: 19px; letter-spacing: -.6px; color: #1f2f53; }

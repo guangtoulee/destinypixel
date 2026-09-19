@@ -12,6 +12,7 @@ import { destinySupportHref } from "@/lib/support-contact";
 import CompatibilityBazi from "./compatibility-bazi";
 import { baziCopy } from "@/lib/compatibility/bazi-copy";
 import { CompatibilityRequestError, requestCompatibilityCalculation } from "@/lib/compatibility/request";
+import { trackToolEvent } from "@/lib/analytics";
 import styles from "./compatibility.module.css";
 
 export default function CompatibilityExperience({ locale, copy: c }: { locale: ReportLocale; copy: CompatibilityCopy }) {
@@ -31,6 +32,7 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
     event.preventDefault();
     if (submitting.current) return;
     submitting.current = true;
+    trackToolEvent("form_submit", "compatibility");
     requestRef.current?.abort();
     const controller = new AbortController(); requestRef.current = controller;
     const revision = ++latest.current;
@@ -38,20 +40,27 @@ export default function CompatibilityExperience({ locale, copy: c }: { locale: R
     const people = [0, 1].map(i => ({ birthDate: String(data.get(`date${i}`) || ""), birthTime: String(data.get(`time${i}`) || ""), cityId: String(data.get(`city${i}`) || "") })) as [PersonInput, PersonInput];
     const payload = { people, locale, consent: data.get("consent") === "on" };
     setBusy(true); setError(""); setResult(null); setReading(null); setAiState("idle");
+    trackToolEvent("tool_start", "compatibility");
     try {
       const calculated = await requestCompatibilityCalculation(payload, controller.signal);
-      if (latest.current !== revision) return;
+      if (latest.current !== revision || controller.signal.aborted) return;
       setResult(calculated); submitting.current = false; setBusy(false); setAiState("loading");
+      trackToolEvent("tool_success", "compatibility");
       requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
       try {
         const aiResponse = await fetch("/api/compatibility", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...payload, mode: "interpret" }), signal: AbortSignal.any([controller.signal, AbortSignal.timeout(55_000)]) });
         const ai = await aiResponse.json();
-        if (latest.current !== revision) return;
+        if (latest.current !== revision || controller.signal.aborted) return;
         if (aiResponse.ok && ai.status === "ready" && ai.reading) { setReading(ai.reading); setAiState("ready"); }
-        else setAiState("unavailable");
-      } catch { if (latest.current === revision) setAiState("unavailable"); }
+        else { setAiState("unavailable"); trackToolEvent("tool_fallback", "compatibility"); }
+      } catch {
+        if (latest.current === revision && !controller.signal.aborted) {
+          setAiState("unavailable"); trackToolEvent("tool_fallback", "compatibility");
+        }
+      }
     } catch (e) {
       if (latest.current === revision && !controller.signal.aborted) {
+        trackToolEvent("tool_error", "compatibility");
         setError(e instanceof CompatibilityRequestError && e.code === "limited" ? c.limit
           : e instanceof CompatibilityRequestError && e.code === "invalid" ? e.detail || c.invalid : c.failed);
       }

@@ -812,8 +812,10 @@ export default function DestinyWhiteExperience({
     text.blessing.deities[0];
   const selectedBlessingActive = Boolean(litBlessings[selectedDeity.key]);
   const mobileNavLabels =
-    copyLocale === "zh"
-      ? { report: "排盘", insights: "洞察", sticks: "求签", blessing: "祈福" }
+    locale === "zh-TW"
+      ? { report: "排盤", insights: "洞察", sticks: "抽籤", blessing: "祈福" }
+      : copyLocale === "zh"
+      ? { report: "排盘", insights: "洞察", sticks: "抽签", blessing: "祈福" }
       : locale === "ru"
         ? { report: "Карта", insights: "Студии", sticks: "Жребий", blessing: "Обряд" }
         : { report: "Map", insights: "Studios", sticks: "Sticks", blessing: "Blessing" };
@@ -864,6 +866,8 @@ export default function DestinyWhiteExperience({
 
   const insightIcons = [Hand, ScanFace, MessageCircle, Gem] as const;
   const freeHref = locale === "en" ? "/discover" : `/discover?locale=${locale}`;
+  const sticksHref = locale === "en" ? "/sticks" : `/sticks?locale=${locale}`;
+  const compatibilityHref = locale === "en" ? "/compatibility" : `/compatibility?locale=${locale}`;
   const freeLabel = copyLocale === "zh" ? "免费测我的意象卡" : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
   const freeNote = copyLocale === "zh" ? "只需生日 · 无需注册 · 即刻查看" : locale === "ru" ? "Только дата · Без регистрации · Мгновенный результат" : "Just your birthday · No account · Instant result";
 
@@ -877,8 +881,9 @@ export default function DestinyWhiteExperience({
             DestinyPixel
           </a>
 
-          <nav className="white-nav" aria-label={copyLocale === "zh" ? "主导航" : "Main navigation"}>
-            <a href="#compatibility">{compatibilityCopy(locale).nav}</a>
+          <nav className="white-nav" aria-label={locale === "zh-TW" ? "主導覽" : copyLocale === "zh" ? "主导航" : locale === "ru" ? "Основная навигация" : "Main navigation"}>
+            <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
+            <a href={sticksHref}>{locale === "en" ? "Draw a stick" : mobileNavLabels.sticks}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
             <a href="#insights">{text.nav.insights}</a>
@@ -911,16 +916,16 @@ export default function DestinyWhiteExperience({
         </div>
       </header>
 
-      <nav className="white-mobile-dock" aria-label="Mobile navigation">
+      <nav className="white-mobile-dock" aria-label={locale === "zh-TW" ? "行動導覽" : copyLocale === "zh" ? "移动导航" : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
         <a href={freeHref} className="editorial-dock-free">
           <Sparkles size={18} aria-hidden="true" />
           <span>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Карточка" : "Free card"}</span>
         </a>
-        <a href="#compatibility">
+        <a href={compatibilityHref}>
           <Sparkles size={18} aria-hidden="true" />
           <span>{compatibilityCopy(locale).nav}</span>
         </a>
-        <a href={`/sticks?locale=${locale}`}>
+        <a href={sticksHref}>
           <Stars size={18} aria-hidden="true" />
           <span>{mobileNavLabels.sticks}</span>
         </a>

@@ -59,7 +59,7 @@ test("BaZi learn page keeps AEO structure, tool CTAs, and no Ultra links", () =>
   assert.match(seoGuideFaqAnswerText(guide.faqs[3]!), /prepare-birth-date-time-place/);
 });
 
-test("Guanyin fortune sticks learn page is structure/meta/CTAs only, with no Ultra links", () => {
+test("Guanyin guide distinguishes the mixed source collection from a temple lookup", () => {
   const guide = getSeoGuide("learn", "guanyin-fortune-sticks");
   assert.ok(guide);
   assert.equal(
@@ -68,12 +68,12 @@ test("Guanyin fortune sticks learn page is structure/meta/CTAs only, with no Ult
   );
   assert.equal(
     guide.description,
-    "What Guanyin fortune sticks are, which questions they suit, and how to draw or look up a stick online—then open DestinyPixel’s temple sticks tool.",
+    "Try an online Guanyin-inspired fortune-stick draw. Learn how to ask a question, read the source label and distinguish traditional verses from modern reflections.",
   );
   assert.equal(guide.h1, "Guanyin fortune sticks online: how to draw and read one");
   assert.equal(guide.faqAsH2, true);
-  assert.equal(guide.paragraphs.length, 1);
-  assert.ok(guide.paragraphs[0]!.split(/\s+/).length <= 60);
+  assert.match(guide.paragraphs.join(" "), /not a complete transcription/i);
+  assert.match(guide.paragraphs.join(" "), /does not always contain a translation/i);
   assert.deepEqual(
     guide.faqs.map((faq) => faq.question),
     [
@@ -101,6 +101,8 @@ test("Guanyin fortune sticks learn page is structure/meta/CTAs only, with no Ult
   assert.match(guide.disclaimer, /symbolic|reflective/i);
   assert.match(guide.disclaimer, /not medical, legal, or financial/i);
   assert.match(guide.disclaimer, /do not guarantee/i);
+  assert.match(guide.faqs[4]!.answer, /original modern reflection/i);
+  assert.match(guide.faqs[4]!.answer, /actual poem and named edition/i);
   const blob = JSON.stringify(guide);
   assert.doesNotMatch(blob, /\/ultra/i);
   assert.doesNotMatch(blob, /\$|USD|price|pricing/i);
@@ -111,7 +113,7 @@ test("Guanyin fortune sticks learn page is structure/meta/CTAs only, with no Ult
   );
 });
 
-test("BaZi love compatibility learn page is structure/meta/CTAs only, with no Ultra links", () => {
+test("BaZi compatibility guide states the implemented scope and editorial scoring", () => {
   const guide = getSeoGuide("learn", "bazi-love-compatibility");
   assert.ok(guide);
   assert.equal(
@@ -124,8 +126,8 @@ test("BaZi love compatibility learn page is structure/meta/CTAs only, with no Ul
   );
   assert.equal(guide.h1, "BaZi love compatibility: how two Four Pillars charts compare");
   assert.equal(guide.faqAsH2, true);
-  assert.equal(guide.paragraphs.length, 1);
-  assert.ok(guide.paragraphs[0]!.split(/\s+/).length <= 60);
+  assert.match(guide.paragraphs.join(" "), /not a complete traditional marriage assessment/i);
+  assert.match(guide.paragraphs.join(" "), /original DestinyPixel interpretations/i);
   assert.deepEqual(
     guide.faqs.map((faq) => faq.question),
     [
@@ -154,6 +156,8 @@ test("BaZi love compatibility learn page is structure/meta/CTAs only, with no Ul
   assert.match(guide.faqs[3]!.answer, /not validated/i);
   assert.match(guide.faqs[4]!.answer, /30%/);
   assert.match(guide.faqs[4]!.answer, /70%/);
+  assert.match(guide.faqs[4]!.answer, /not extra numeric scoring factors/i);
+  assert.match(guide.faqs[1]!.answer, /without letting AI set the scores/i);
   assert.match(guide.faqs[5]!.answer, /rising|houses|marriage/i);
   assert.ok(guide.disclaimer);
   assert.match(guide.disclaimer, /symbolic|reflective/i);
@@ -254,7 +258,8 @@ test("Chinese vs Western palmistry learn page keeps Codex body, AEO structure, C
   assert.match(guide.paragraphs[0]!, /Western palmistry often emphasizes major lines and mounts/);
   assert.match(guide.paragraphs[0]!, /closer to physiognomy than to a single fate script/);
   assert.match(guide.paragraphs[1]!, /broken life line/);
-  assert.match(guide.paragraphs[1]!, /Hands change with labor, health, and age/);
+  assert.match(guide.paragraphs[1]!, /AI does not receive or inspect the image/);
+  assert.doesNotMatch(guide.paragraphs[1]!, /AI palm scan|hand you upload/i);
   assert.match(guide.paragraphs[2]!, /Pair it with BaZi when you want calendar timing/);
   assert.deepEqual(
     guide.faqs.map((faq) => faq.question),
@@ -275,7 +280,7 @@ test("Chinese vs Western palmistry learn page keeps Codex body, AEO structure, C
     assert.ok(faq.answer.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 2);
   }
   assert.match(guide.faqs[1]!.answer, /reflective text from the details you confirm/i);
-  assert.match(guide.faqs[1]!.answer, /does not diagnose/i);
+  assert.match(guide.faqs[1]!.answer, /does not see the photo, detect lines or diagnose/i);
   assert.deepEqual(
     seoGuideFaqLinks(guide.faqs[5]!).map((item) => item.href),
     [
