@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-19T16:41:05.821Z",
+  "updatedAt": "2026-09-20T06:45:38.272Z",
   "sourceSummary": {
     "community": 1154,
-    "publicX": 464,
-    "total": 1618
+    "publicX": 467,
+    "total": 1621
   },
   "items": [
     {
@@ -978,7 +978,7 @@
       "authorName": "Nicolas Neubert",
       "authorHandle": "@iamneubert",
       "createdAt": "2026-09-13T18:13:50.000Z",
-      "importedAt": "2026-09-19T16:41:05.793Z",
+      "importedAt": "2026-09-20T06:45:38.241Z",
       "tags": [
         "Seedance",
         "Runway",
@@ -1001,13 +1001,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 894,
+        "likes": 896,
         "reposts": 67,
-        "replies": 55,
+        "replies": 56,
         "quotes": 9,
-        "bookmarks": 1573,
-        "views": 61793,
-        "score": 6981
+        "bookmarks": 1575,
+        "views": 62267,
+        "score": 6993
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Full Breakdown: How I Created a Viral Ad This will be a very long post as I will provide you with the exact way I achieved the original ad, as well as a prompt that get's you straight to the result in case you want to speed-run it. How I created the original: I made the ad collaborating with an agent. You can do this on the Runway platform, via the ChatGPT Runway Plugin or using Runway MCP. I asked the Agent the following: \"Can you make a 30 second seedance 2.5 optimised prompt where the story is someone on vacation (beach/zipline/kayaking/hotairballoon/etc.) gets texted by his boss for one final change ASAP. They then look slightly concerned followed by the camera zooming out to reveal a vast landscape. Make sure to end on a super wide shot so that taglines can be added.\" It ran some thoughts by me, and as I genuinely didn't expect this to blow up, I just blindly let it do its thing and told the agent to start the video generation. The result is the one that you saw a few days ago. Keep in mind that results may vary, as many agents create personalized profiles of you based on their previous conversations. Once you have a prompt/result you like, you can go back to the agent and ask something like the following to get more variations: \"What are other funny situations we can do that use the exact same structure?\" ------------------------------ You can also skip all that, as I am sharing the exact prompt I used below. I used Seedance 2.5 set to 30 sec duration for my ads. 720p gives you that $9 ad, however you can also run it at 1080p for a more final production spec asset. You can also give the prompt to an LLM and ask it to make new narrative scenarios, using the exact same prompt structure. 🧵 Prompt is in the thread below! 🧵 Thank you for all the love on the ad. I've already seen a bunch of spin-offs, and can't wait to see even more."
@@ -1968,7 +1968,7 @@
       "authorName": "Parul Gautam",
       "authorHandle": "@Parul_Gautam7",
       "createdAt": "2026-09-16T10:33:16.000Z",
-      "importedAt": "2026-09-19T16:41:05.795Z",
+      "importedAt": "2026-09-20T06:45:38.241Z",
       "tags": [
         "视频"
       ],
@@ -1987,13 +1987,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 1473,
+        "likes": 1474,
         "reposts": 40,
         "replies": 22,
         "quotes": 0,
         "bookmarks": 30,
-        "views": 83438,
-        "score": 3385
+        "views": 83523,
+        "score": 3387
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video generation is usually a loop of generate → find what’s wrong → rewrite the prompt → regenerate. Vidu S2 changes that workflow with real-time video generation and editing. Change the style, outfit, character, or background while the video is being generated, without starting over. Powered by Backbone–Refiner architecture for high-quality 720P real-time output, timestamp-aligned reference injection for seamless changes during generation, and an upgraded VLM Agent that watches the video and plans what comes next. Vidu S2 also applies causal-model RL to directly optimize the final deployed model, improving real-time generation quality. For incoming video, it supports real-time style, outfit, character, and background editing, while preserving the original motion and timing. It also enables interactive 720P avatars at 25–42 FPS, with expressive full-body motion and dynamic reference-image changes for outfits, objects, and scenes. From e-commerce and gaming to live streaming and immersive VR, Vidu S2 brings real-time creative control to new types of content and interaction. Less regeneration. More real-time creative control. Try Vidu S2: : Get 300 credits with the exclusive invite link: The entire Vidu S series is currently available for a free trial. Try it #ViduAI #ViduS #ViduS2 @ViduAI_official"
@@ -2423,6 +2423,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "the people who master AI video will be insanely valuable with how good some models already are, mastering AI video means being a great prompt engineer, director, architect, designer, and cinematographer... all at once i'll help you with the first one, here's prompt template for creating highly detailed videos like this:: CAMERA: [Describe the camera type, lens, aspect ratio, framing, movement, and shooting style.] The video should [describe how the camera starts and what happens visually at the beginning]. Maintain [camera/framing behavior] throughout the scene. Camera movement should feel [smooth / handheld / shaky / static / cinematic / improvised / etc.]. Include natural imperfections such as [focus hunting, exposure shifts, imperfect framing, motion blur, reframing, zoom behavior, camera shake, etc.] where appropriate. The camera should [describe whether the camera is visible, mounted, handheld, operated by another person, etc.]. LOOK: [Describe the visual texture, color treatment, lighting response, sharpness, contrast, grain, realism, and overall image quality.] The footage should feel [authentic / cinematic / documentary / polished / raw / nostalgic / futuristic / etc.] and visually consistent with [reference, era, medium, or aesthetic]. STYLE: [Describe the overall creative style and tone of the video.] The scene should feel [natural / spontaneous / dramatic / intimate / energetic / comedic / luxurious / unsettling / etc.]. Characters should behave naturally rather than feeling like they are performing for the camera. Include appropriate [pauses, reactions, gestures, facial expressions, environmental interactions, imperfections, etc.]. CHARACTERS: [Describe each important character.] Character 1: - Age: [age] - Appearance: [appearance] - Hair: [hair] - Clothing: [clothing] - Body type: [body type] - Distinctive features: [features] - Personality / energy: [personality] Character 2: [Repeat structure if needed.] SETTING: [Describe the location, environment, time of day, weather, architecture, objects, background activity, and atmosphere.] The environment should contain [important objects / background elements / environmental details]. Background activity should be [empty / busy / subtle / blurred / chaotic / etc.], while keeping the main subject visually dominant. AUDIO / DIALOGUE: [Describe the sound design, ambient noise, music, dialogue style, and pacing.] Dialogue should sound [natural / conversational / emotional / spontaneous / professional / etc.]. Characters should speak [slowly / quickly / with pauses / casually / confidently / etc.]. Do not make the dialogue sound overly scripted or theatrical unless specifically required. SCENE / ACTION: [Describe the sequence of events in chronological order.] The video begins with: [Opening action / visual hook / first shot.] Then: [Action or beat 1.] [Dialogue or reaction if applicable.] Next: [Action or beat 2.] [Dialogue or reaction if applicable.] Then: [Action or beat 3.] [Dialogue or reaction if applicable.] The scene continues with: [Additional actions, interactions, transitions, or visual beats.] The video ends with: [Final action / visual / dialogue / transition.] --- paste it into an LLM along with your script and ask it to adapt the prompt to your scene"
+    },
+    {
+      "id": "x-public-2100157958730498538",
+      "title": "Most AI video tools are still focused on one workflow: enter a prompt, generate a video, then st",
+      "description": "Most AI video tools are still focused on one workflow: enter a prompt, generate a video, then start over whenever something needs to change. But @ViduAI_official is already pushing beyond basic generation with Vidu S2—to",
+      "prompt": "Most AI video tools are still focused on one workflow: enter a prompt, generate a video, then start over whenever something needs to change. But @ViduAI_official is already pushing beyond basic generation with Vidu S2—toward a real-time interactive video ecosystem where the content can change while the video is being generated. There are five technical upgrades making this possible: 1.Backbone–Refiner architecture produces structure and motion with parallel refinement for real-time 720P output. 2.Timestamp-aligned positional encoding enables seamless integration of reference images into motion and lighting. 3. An upgraded VLM Agent monitors video progress and plans subsequent actions. 4. Reinforcement learning applied to the causal model maintains training improvements during deployment. 5. Real-time editing of style, outfit, character and background avoids full regeneration. This could unlock entirely new experiences across live streaming, gaming, entertainment, and e-commerce. Imagine viewers using comments to change a streamer’s outfit, character, or environment in real time; a person moving continuously between anime, gaming and cinematic worlds; or fashion models trying on different branded outfits live while the campaign style changes around them. That feels less like simply generating a video and more like interacting with—and directing—a living video world as it unfolds. You can try Vidu S2 here:  And if you use the exclusive invite link, you can get 300 credits to explore the platform and its features:  Right now, the entire Vidu S series is available for free trial, so don’t miss the chance to try it out. You can also get 300 credits when exploring other features. Take this opportunity to experience Vidu S2 and see what you can create. #ViduAI #ViduS #ViduS2",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/The_Kremlinn/status/2100157958730498538",
+      "sourceType": "x",
+      "authorName": "Aaliyah | AI",
+      "authorHandle": "@The_Kremlinn",
+      "createdAt": "2026-09-16T09:40:51.000Z",
+      "importedAt": "2026-09-20T06:45:38.241Z",
+      "tags": [
+        "Grok Imagine",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 656,
+        "reposts": 169,
+        "replies": 210,
+        "quotes": 0,
+        "bookmarks": 127,
+        "views": 58800,
+        "score": 2697
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Most AI video tools are still focused on one workflow: enter a prompt, generate a video, then start over whenever something needs to change. But @ViduAI_official is already pushing beyond basic generation with Vidu S2—toward a real-time interactive video ecosystem where the content can change while the video is being generated. There are five technical upgrades making this possible: 1.Backbone–Refiner architecture produces structure and motion with parallel refinement for real-time 720P output. 2.Timestamp-aligned positional encoding enables seamless integration of reference images into motion and lighting. 3. An upgraded VLM Agent monitors video progress and plans subsequent actions. 4. Reinforcement learning applied to the causal model maintains training improvements during deployment. 5. Real-time editing of style, outfit, character and background avoids full regeneration. This could unlock entirely new experiences across live streaming, gaming, entertainment, and e-commerce. Imagine viewers using comments to change a streamer’s outfit, character, or environment in real time; a person moving continuously between anime, gaming and cinematic worlds; or fashion models trying on different branded outfits live while the campaign style changes around them. That feels less like simply generating a video and more like interacting with—and directing—a living video world as it unfolds. You can try Vidu S2 here:  And if you use the exclusive invite link, you can get 300 credits to explore the platform and its features:  Right now, the entire Vidu S series is available for free trial, so don’t miss the chance to try it out. You can also get 300 credits when exploring other features. Take this opportunity to experience Vidu S2 and see what you can create. #ViduAI #ViduS #ViduS2"
     },
     {
       "id": "x-public-2091535222752108960",
@@ -7168,6 +7212,48 @@
       "rawText": "POV: The kiss that broke the internet, recreated with AI on the tip of Tokyo Tower. A viral cinematic moment, reimagined with seamless camera movement, perfect character consistency, and a breathtaking skyline that never leaves the frame. Every shot stays locked to the very top of Tokyo Tower for a romance that feels straight out of a blockbuster. Made with GPT Image 2 and Seedance on @itsPolloAI for the Peak Moment Challenge. Prompt: PART 1 • 0:00–0:15 — THE REVEAL & THE KISS (9:16) 0:00–0:03 — Arrival Continuous crane arc already in motion around the couple on the tip of Tokyo Tower's antenna mast. Only one Tokyo Tower visible. Wind moves Jessy's hair and trench dress. He wears the yellow kawaii mascot helmet. Jessy: \"You're seriously wearing that up here?\" Man: \"Only for you.\" 0:03–0:06 — Reveal Camera continues the same arc. He removes the helmet, revealing tousled brown hair and blue eyes. 0:06–0:09 — Pull Continuous crane widens. He pulls Jessy close by the waist, she grabs his jacket collar. The Polloai flag becomes visible above. 0:09–0:12 — Kiss Camera keeps pulling back with a subtle Dutch roll. They kiss on the tip of Tokyo Tower as the grade transitions from hazy news footage to warm cinematic. 0:12–0:15 — Sway Wide shot. They slowly turn while kissing. Tokyo Tower and the Polloai flag remain clearly visible. PART 2 • 0:15–0:25 — THE SPIN & THE VIEW (9:16) Continuity: First frame must exactly match the last frame of Part 1. 0:15–0:18 — Spin Continue the identical crane arc and orbit. He spins Jessy once on the tower tip. Dress, jewelry and blue-streaked hair flow naturally. Jessy: \"Don't drop me from up here!\" 0:18–0:21 — Second Kiss Orbit tightens into a close two-shot. They share another soft kiss, foreheads touching between kisses. 0:21–0:23 — View Camera cranes upward and pulls back. They face the glowing Tokyo skyline together with the Polloai flag above. 0:23–0:25 — Hold Slow push-in. They remain embracing on the tip of Tokyo Tower until fade to black. Strict: Maintain the exact reference camera movement throughout. All actions happen only on the tip of Tokyo Tower, with only one Tokyo Tower visible in every shot. #PolloAI #PolloPeakMoment"
     },
     {
+      "id": "x-public-2100638803392397494",
+      "title": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. ",
+      "description": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different",
+      "prompt": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/tec_aryan/status/2100638803392397494",
+      "sourceType": "x",
+      "authorName": "Aryan Rakib",
+      "authorHandle": "@tec_aryan",
+      "createdAt": "2026-09-17T17:31:33.000Z",
+      "importedAt": "2026-09-20T06:45:38.242Z",
+      "tags": [
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 190,
+        "reposts": 80,
+        "replies": 35,
+        "quotes": 0,
+        "bookmarks": 69,
+        "views": 63092,
+        "score": 1068
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬"
+    },
+    {
       "id": "x-public-2084822856106651994",
       "title": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人",
       "description": "最适合做AI视频的API平台终于被我找到了！! 成本比预期低很多！ 爽用Seedance 2.0的感觉也太夯了！！ 赶紧用Codex把很早就想做的“个人视觉创意工作台”安排上了！ 我相信很多人都想找一个好用又便宜的生成式模型API平台， 说实话，真的很不好找！！ 大大小小的AI平台用了不少，要么贵的要死，要么可用模型少的可怜， 要么就是个黑盒子，花钱用的啥模型都不知道！ 今天看到Pika @pika_labs上线了Pika API Cl",
@@ -7429,48 +7515,6 @@
       "rawText": "I used to think the hardest part of AI video was getting the first generation right. Now I think the harder problem is making the first generation useful. That’s where this workflow gets interesting. GPT Image 2.5 is coming to CapCut, with access through Design Studio and AI Image. Start by turning the idea into a storyboard. Bring that visual plan into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to create the first full version. Then use AI Edit to work on what actually needs changing. You don’t need to rebuild the entire concept because one moment feels wrong. Keep the direction. Change the details. That’s a much more practical way to work with AI video. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
-      "id": "x-public-2100638803392397494",
-      "title": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. ",
-      "description": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different",
-      "prompt": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/tec_aryan/status/2100638803392397494",
-      "sourceType": "x",
-      "authorName": "Aryan Rakib",
-      "authorHandle": "@tec_aryan",
-      "createdAt": "2026-09-17T17:31:33.000Z",
-      "importedAt": "2026-09-19T12:00:24.501Z",
-      "tags": [
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 184,
-        "reposts": 81,
-        "replies": 34,
-        "quotes": 0,
-        "bookmarks": 68,
-        "views": 62865,
-        "score": 1056
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬"
-    },
-    {
       "id": "x-public-2091483398972080172",
       "title": "Made this video with GPT IMAGE 2 + seedance 2.5 Prompt ⤵️ DURATION: 30 seconds ASPECT RATIO: Use",
       "description": "Made this video with GPT IMAGE 2 + seedance 2.5 Prompt ⤵️ DURATION: 30 seconds ASPECT RATIO: Use the video's available landscape/cinematic ratio. STYLE: Ultra-photorealistic live-action cooking and lifestyle vlog, premiu",
@@ -7648,6 +7692,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I think the biggest change here is where the filmmaking process starts. Instead of opening a video generator with a blank prompt, start by building the visual language of the story first. GPT Image 2.5 is coming to CapCut, where it will be available through Design Studio and AI Image. Use it to turn an idea into a visual storyboard. Then bring that storyboard into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to generate the first full version. Once the video exists, AI Edit lets you keep working on it. Change a scene. Adjust the pacing. Improve the audio. Refine the details. The first generation gives you the film. The editing gives you control over what the film becomes. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2100462233990082661",
+      "title": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-",
+      "description": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT:",
+      "prompt": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/HeyRu0by/status/2100462233990082661",
+      "sourceType": "x",
+      "authorName": "Ruby Ai",
+      "authorHandle": "@HeyRu0by",
+      "createdAt": "2026-09-17T05:49:55.000Z",
+      "importedAt": "2026-09-20T06:45:38.242Z",
+      "tags": [
+        "Kling",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 199,
+        "reposts": 42,
+        "replies": 43,
+        "quotes": 1,
+        "bookmarks": 72,
+        "views": 102706,
+        "score": 1033
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon."
     },
     {
       "id": "x-public-2095091333727973734",
@@ -8961,6 +9050,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "GPT image 2.0 combined with Seedance 2.0 is changing how animated videos are created. With a single prompt like the one below , AI can generate an entire storyboard and turn it into a cinematic 2D animation, complete with expressive characters, smooth motion, realistic physics, comedy, and perfectly timed action."
+    },
+    {
+      "id": "x-public-2099567420432056522",
+      "title": "One of the hardest parts of having a good creative idea is explaining what it looks like. That’s",
+      "description": "One of the hardest parts of having a good creative idea is explaining what it looks like. That’s where the workflow starts getting interesting. GPT Image 2.5 is coming to CapCut PC through Design Studio and AI Image. Tak",
+      "prompt": "One of the hardest parts of having a good creative idea is explaining what it looks like. That’s where the workflow starts getting interesting. GPT Image 2.5 is coming to CapCut PC through Design Studio and AI Image. Take the abstract idea and turn it into a visual storyboard. Now the idea is no longer just a sentence. You can actually look at it, change it, and build from it. Then bring it into CapCut PC’s Video Studio and use Seedance 2.5 to create the video. After that, refine the result with CapCut’s AI editing tools. The workflow is basically: Imagine → Visualize → Generate → Refine. Full link in the first comment. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Diana_Osire/status/2099567420432056522",
+      "sourceType": "x",
+      "authorName": "Diana Osire",
+      "authorHandle": "@Diana_Osire",
+      "createdAt": "2026-09-14T18:34:15.000Z",
+      "importedAt": "2026-09-20T06:45:38.242Z",
+      "tags": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 131,
+        "reposts": 133,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 60251,
+        "score": 927
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "One of the hardest parts of having a good creative idea is explaining what it looks like. That’s where the workflow starts getting interesting. GPT Image 2.5 is coming to CapCut PC through Design Studio and AI Image. Take the abstract idea and turn it into a visual storyboard. Now the idea is no longer just a sentence. You can actually look at it, change it, and build from it. Then bring it into CapCut PC’s Video Studio and use Seedance 2.5 to create the video. After that, refine the result with CapCut’s AI editing tools. The workflow is basically: Imagine → Visualize → Generate → Refine. Full link in the first comment. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2078746929874252221",
@@ -19408,7 +19543,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像"
       ],
@@ -19449,7 +19584,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.363Z",
+      "importedAt": "2026-09-20T06:45:34.708Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -19490,7 +19625,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.708Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19533,7 +19668,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19576,7 +19711,7 @@
       "authorName": "LBan",
       "authorHandle": "@LBan2049",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "人像"
       ],
@@ -19617,7 +19752,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -19659,7 +19794,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "人像"
       ],
@@ -19700,7 +19835,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -19742,7 +19877,7 @@
       "authorName": "Marcos",
       "authorHandle": "@arsalannazir07",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19785,7 +19920,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "摄影"
       ],
@@ -19826,7 +19961,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -19867,7 +20002,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.364Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "摄影"
       ],
@@ -19908,7 +20043,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -19950,7 +20085,7 @@
       "authorName": "Zorvia",
       "authorHandle": "@ZorviaLux",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.709Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19993,7 +20128,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -20036,7 +20171,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20116,7 +20251,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像"
       ],
@@ -20157,7 +20292,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "摄影"
       ],
@@ -20198,7 +20333,7 @@
       "authorName": "Andy",
       "authorHandle": "@Andy4aicreate",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像"
       ],
@@ -20239,7 +20374,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像",
         "摄影"
@@ -20487,7 +20622,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "摄影"
       ],
@@ -20528,7 +20663,7 @@
       "authorName": "Shine by Nous ✨",
       "authorHandle": "@Shinebynous",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像"
       ],
@@ -20569,7 +20704,7 @@
       "authorName": "boB",
       "authorHandle": "@b0BRude",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "人像",
         "摄影"
@@ -20611,7 +20746,7 @@
       "authorName": "小小东",
       "authorHandle": "@xiaoxiaodong01",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.365Z",
+      "importedAt": "2026-09-20T06:45:34.710Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -67872,7 +68007,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.370Z",
+      "importedAt": "2026-09-20T06:45:34.714Z",
       "tags": [
         "产品",
         "平面设计",
@@ -67915,7 +68050,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.370Z",
+      "importedAt": "2026-09-20T06:45:34.714Z",
       "tags": [
         "平面设计"
       ],
@@ -67956,7 +68091,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-19T16:41:02.370Z",
+      "importedAt": "2026-09-20T06:45:34.714Z",
       "tags": [
         "平面设计"
       ],
