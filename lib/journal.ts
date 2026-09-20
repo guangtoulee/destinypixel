@@ -4,6 +4,7 @@ import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
 import { jiaZiArticle } from "@/lib/journal-jia-zi";
 import { crystalCareArticle } from "@/lib/journal-crystal-care";
 import { journalRussian } from "@/lib/journal-ru";
+import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-growth";
 import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
 export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
 export type { JournalLocale } from "@/lib/journal-locales";
@@ -35,6 +36,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
 const journalSources: JournalSourceArticle[] = [
+  ...searchGrowthArticles,
   crystalCareArticle,
   jiaZiArticle,
   dayPillarIntroduction,
@@ -258,7 +260,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
       ...section, title: text(section.title), paragraphs: section.paragraphs.map(text),
       ...(section.steps ? { steps: section.steps.map(text) } : {}),
       ...(section.table ? { table: { headings: section.table.headings.map(text), rows: section.table.rows.map((row) => row.map(text)) } } : {}),
-      ...(section.sources ? { sources: section.sources.map((source) => ({ ...source, label: text(source.label) })) } : {}),
+      ...(section.sources ? { sources: section.sources.map((source) => ({ ...source, label: text(source.label), href: source.href.startsWith("/") ? source.href.replace("locale=zh", "locale=zh-TW") : source.href })) } : {}),
     })),
     action: copy.action.href.startsWith("/day-pillar")
       ? { label: `${text(copy.action.label)}（簡體中文）`, href: copy.action.href }
@@ -267,7 +269,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
 }
 
 export const journalArticles: JournalArticle[] = journalSources.map((article) => {
-  const ru = journalRussian[article.slug];
+  const ru = searchGrowthRussian[article.slug] ?? journalRussian[article.slug];
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
 });

@@ -20,6 +20,10 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its tools inc
 - Question Oracle: ${absoluteUrl("/oracle")}
 - Free Bazi and birth-chart compatibility: ${absoluteUrl("/compatibility")}
 - Bazi compatibility guide: ${absoluteUrl("/learn/bazi-love-compatibility")}
+- BaZi vs zodiac compatibility: ${absoluteUrl("/journal/bazi-vs-chinese-zodiac-compatibility")}
+- Unknown birth time: ${absoluteUrl("/journal/compatibility-without-birth-time")}
+- How to ask a fortune-stick question: ${absoluteUrl("/journal/how-to-ask-fortune-sticks")}
+- Fortune-stick numbers and editions: ${absoluteUrl("/journal/fortune-stick-number-and-edition")}
 - Guanyin fortune sticks guide: ${absoluteUrl("/learn/guanyin-fortune-sticks")}
 - Temple Sticks Oracle: ${absoluteUrl("/sticks")}
 - Insight Studios: ${absoluteUrl("/insights")}

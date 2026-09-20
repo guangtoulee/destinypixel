@@ -1,6 +1,7 @@
 import { getProductSearchContent, type SearchProduct } from "@/lib/product-search-content";
 import type { ReportLocale } from "@/lib/report-i18n";
 import styles from "./product-search-content.module.css";
+import { journalArticles, journalHref } from "@/lib/journal";
 
 export type ProductSearchContentProps = {
   product: SearchProduct;
@@ -10,6 +11,13 @@ export type ProductSearchContentProps = {
 export function ProductSearchContent({ product, locale }: ProductSearchContentProps) {
   const content = getProductSearchContent(product, locale);
   const headingId = `${product}-reading-guide`;
+  const articleSlugs = product === "compatibility"
+    ? ["bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
+    : ["how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
+  const readingLinks = articleSlugs.flatMap(slug => {
+    const article = journalArticles.find(item => item.slug === slug);
+    return article ? [{ title: article.translations[locale].title, description: article.translations[locale].description, href: journalHref(locale, slug) }] : [];
+  });
 
   return (
     <section className={styles.guide} data-product={product} aria-labelledby={headingId}>
@@ -55,7 +63,7 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
           </section>
           <nav className={styles.related} aria-labelledby={`${headingId}-related`}>
             <h3 id={`${headingId}-related`}>{content.relatedTitle}</h3>
-            {content.related.map((link) => (
+            {[...readingLinks, ...content.related].map((link) => (
               <a href={link.href} key={link.href}>
                 <span><strong>{link.title}</strong><small>{link.description}</small></span>
                 <span className={styles.arrow} aria-hidden="true">↗</span>
