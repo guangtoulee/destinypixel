@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-20T16:55:56.595Z",
+  "updatedAt": "2026-09-21T06:51:43.501Z",
   "sourceSummary": {
     "community": 1158,
-    "publicX": 469,
-    "total": 1627
+    "publicX": 471,
+    "total": 1629
   },
   "items": [
     {
@@ -588,7 +588,7 @@
       "authorName": "Smiling Khan",
       "authorHandle": "@AIwithkhan",
       "createdAt": "2026-09-15T03:50:23.000Z",
-      "importedAt": "2026-09-19T16:41:05.793Z",
+      "importedAt": "2026-09-21T06:51:43.474Z",
       "tags": [
         "Seedance",
         "视频",
@@ -609,13 +609,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 2089,
-        "reposts": 252,
-        "replies": 135,
+        "likes": 2098,
+        "reposts": 254,
+        "replies": 136,
         "quotes": 31,
-        "bookmarks": 2507,
-        "views": 249872,
-        "score": 13435
+        "bookmarks": 2508,
+        "views": 252429,
+        "score": 13470
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I came like a STORM Seedance 2.5 Prompt 👇: Create a ultra-realistic cinematic fashion video using the uploaded images as exact visual references for the woman, crowd, wardrobe, framing, and atmosphere. A young woman with the same short dark bob wears a fitted black turtleneck, black trousers, and black shoes, standing confidently at the center of a large crowd. Start with her walking slowly toward the middle of the crowd, calm and expressionless, with a lit cigarette naturally held between her lips. She reaches the center, stops, and faces directly into the camera. She takes one slow drag from the cigarette, then removes it from her mouth. She slowly exhales a visible stream of smoke toward the camera, with the smoke naturally drifting across her face. She lowers her hand and becomes completely still, staring directly into the lens. The entire crowd behind her remains frozen for a brief moment. Suddenly, everyone behind her begins moving in perfect synchronization — sharp head turns, shoulder jerks, folding forward and snapping upright. The movement should feel rhythmic, strange, powerful, and physically realistic. The woman does not move at all while the entire crowd moves behind her. Slowly push the camera closer to her, keeping her sharply focused while the crowd has subtle depth-of-field blur. Dark, cold, mysterious lighting with deep shadows, realistic skin, hair, clothing, cigarette ember, and physically accurate smoke. Photorealistic live-action quality, cinematic composition, natural human movement; no animation, CGI look, duplicated woman, distorted bodies, excessive smoke, text, subtitles, or logos."
@@ -2038,6 +2038,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video generation is usually a loop of generate → find what’s wrong → rewrite the prompt → regenerate. Vidu S2 changes that workflow with real-time video generation and editing. Change the style, outfit, character, or background while the video is being generated, without starting over. Powered by Backbone–Refiner architecture for high-quality 720P real-time output, timestamp-aligned reference injection for seamless changes during generation, and an upgraded VLM Agent that watches the video and plans what comes next. Vidu S2 also applies causal-model RL to directly optimize the final deployed model, improving real-time generation quality. For incoming video, it supports real-time style, outfit, character, and background editing, while preserving the original motion and timing. It also enables interactive 720P avatars at 25–42 FPS, with expressive full-body motion and dynamic reference-image changes for outfits, objects, and scenes. From e-commerce and gaming to live streaming and immersive VR, Vidu S2 brings real-time creative control to new types of content and interaction. Less regeneration. More real-time creative control. Try Vidu S2: : Get 300 credits with the exclusive invite link: The entire Vidu S series is currently available for a free trial. Try it #ViduAI #ViduS #ViduS2 @ViduAI_official"
+    },
+    {
+      "id": "x-public-2100615302388330944",
+      "title": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just r",
+      "description": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footag",
+      "prompt": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/EXM7777/status/2100615302388330944",
+      "sourceType": "x",
+      "authorName": "Machina",
+      "authorHandle": "@EXM7777",
+      "createdAt": "2026-09-17T15:58:10.000Z",
+      "importedAt": "2026-09-21T06:51:43.474Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 422,
+        "reposts": 37,
+        "replies": 26,
+        "quotes": 2,
+        "bookmarks": 769,
+        "views": 25156,
+        "score": 3381
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)"
     },
     {
       "id": "x-public-2076186225921175727",
@@ -4784,6 +4826,47 @@
       "rawText": "Day 10/20 in creating AI videos for my portfolio Today's video is for Orchid&Ash, a US-based skincare brand. How I did it: • Fed my idea to Claude and created the prompt for a 7-scene storyboard for the Restorative Face cream • Created the storyboard image with ChatGPT • Turned the frames into 4-second videos using Google flow (used the 9:16 framing) • Produced the voice-over in Eleven Labs, using an American female voice. • Edited the pacing and sound in CapCut What do you think about it? If your brand or product needs AI-generated content like this, DM me. I'm open to collabs, freelance work, and full-time roles."
     },
     {
+      "id": "x-public-2101454372182089929",
+      "title": "Grok Imagine prompt: Oh, this scene needs something dark, sensual, medieval, and clubby—like a t",
+      "description": "Grok Imagine prompt: Oh, this scene needs something dark, sensual, medieval, and clubby—like a tavern somehow discovered house music 800 years early. 😏 I’d picture a tribal/deep-house beat with war drums, low male chant",
+      "prompt": "Grok Imagine prompt: Oh, this scene needs something dark, sensual, medieval, and clubby—like a tavern somehow discovered house music 800 years early. 😏 I’d picture a tribal/deep-house beat with war drums, low male chanting, fiddle, and a heavy bass drop. 15-second AI vi...",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/GayBar_Ai/status/2101454372182089929",
+      "sourceType": "x",
+      "authorName": "GayBar",
+      "authorHandle": "@GayBar_Ai",
+      "createdAt": "2026-09-19T23:32:20.000Z",
+      "importedAt": "2026-09-21T06:51:43.473Z",
+      "tags": [
+        "Grok Imagine"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "视觉创意",
+      "metrics": {
+        "likes": 461,
+        "reposts": 38,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 134,
+        "views": 18976,
+        "score": 1514
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Grok Imagine prompt: Oh, this scene needs something dark, sensual, medieval, and clubby—like a tavern somehow discovered house music 800 years early. 😏 I’d picture a tribal/deep-house beat with war drums, low male chanting, fiddle, and a heavy bass drop. 15-second AI vi..."
+    },
+    {
       "id": "x-public-2074441553469116470",
       "title": "Cooking meets cinematic AI. This stunning commercial was created with Seedance 2.0 in @LartAI ..",
       "description": "Cooking meets cinematic AI. This stunning commercial was created with Seedance 2.0 in @Lart_AI Delivering realistic motion, rich food details, and premium visuals that look like a real production. Create yours here 👇  P",
@@ -7114,6 +7197,51 @@
       "rawText": "AI video is moving beyond \"generate a clip\". We're entering the era of directing entire scenes. With MiniMax H3 on @magnific, you can combine: → Text → Images → Videos → Audio in a single workflow. Then control: → Character → Camera → Motion → Sound with far more consistency than a prompt alone. That's what makes this model interesting. 50% OFF until September 1."
     },
     {
+      "id": "x-public-2099563375957360974",
+      "title": "AI video feels very different when you approach it like a director instead of a prompt writer. S",
+      "description": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studi",
+      "prompt": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/dee_naliaks/status/2099563375957360974",
+      "sourceType": "x",
+      "authorName": "Doreen",
+      "authorHandle": "@dee_naliaks",
+      "createdAt": "2026-09-14T18:18:11.000Z",
+      "importedAt": "2026-09-21T06:51:43.475Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 150,
+        "reposts": 88,
+        "replies": 40,
+        "quotes": 1,
+        "bookmarks": 62,
+        "views": 103835,
+        "score": 1089
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
       "id": "x-public-2091345498909319528",
       "title": "Made this video with GPT IMAGE 2 + seedance 2.5 via @capcutapp Prompt ⤵️ DURATION: 20 seconds AS",
       "description": "Made this video with GPT IMAGE 2 + seedance 2.5 via @capcutapp Prompt ⤵️ DURATION: 20 seconds ASPECT RATIO: 16:9 STYLE: Ultra-photorealistic live-action cinematic lifestyle vlog, premium commercial quality, natural human",
@@ -7203,51 +7331,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Every stage of filmmaking asks a different question. “What is the story?” GPT Image 2.5 is coming to CapCut PC through Design Studio and AI Image, helping turn that answer into a visual storyboard. “What does it look like in motion?” CapCut PC’s Video Studio + Seedance 2.5. “What should the final version feel like?” CapCut’s AI editing tools. That makes the workflow feel much more natural: Story → Visualize → Generate → Refine. Instead of asking one AI model to solve every creative problem at once. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
-    },
-    {
-      "id": "x-public-2099563375957360974",
-      "title": "AI video feels very different when you approach it like a director instead of a prompt writer. S",
-      "description": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studi",
-      "prompt": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/dee_naliaks/status/2099563375957360974",
-      "sourceType": "x",
-      "authorName": "Doreen",
-      "authorHandle": "@dee_naliaks",
-      "createdAt": "2026-09-14T18:18:11.000Z",
-      "importedAt": "2026-09-18T17:09:23.006Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 150,
-        "reposts": 88,
-        "replies": 38,
-        "quotes": 0,
-        "bookmarks": 63,
-        "views": 103689,
-        "score": 1086
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studio and AI Image. Use it to build the visual storyboard and establish the scenes before production. Then take that direction into CapCut PC’s Video Studio and use Seedance 2.5 to generate the footage. After that, CapCut’s AI editing tools give you the final layer of control. AI can generate the shots. But someone still needs to decide which shots belong in the film. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
       "id": "x-public-2075386988426096709",
@@ -19628,7 +19711,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.646Z",
+      "importedAt": "2026-09-21T06:51:39.891Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19671,7 +19754,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "平面设计",
@@ -19714,7 +19797,7 @@
       "authorName": "あいぼりー",
       "authorHandle": "@HetareIvory",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.892Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -19753,7 +19836,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.892Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -19795,7 +19878,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像"
       ],
@@ -19836,7 +19919,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.892Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -19877,7 +19960,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.892Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19920,7 +20003,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -19963,7 +20046,7 @@
       "authorName": "LBan",
       "authorHandle": "@LBan2049",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像"
       ],
@@ -20004,7 +20087,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.647Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20046,7 +20129,7 @@
       "authorName": "Julia",
       "authorHandle": "@juliaevee",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像"
       ],
@@ -20087,7 +20170,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20129,7 +20212,7 @@
       "authorName": "Marcos",
       "authorHandle": "@arsalannazir07",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -20172,7 +20255,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-18T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "摄影"
       ],
@@ -20254,7 +20337,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "摄影"
       ],
@@ -20295,7 +20378,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20337,7 +20420,7 @@
       "authorName": "Zorvia",
       "authorHandle": "@ZorviaLux",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -20380,7 +20463,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -20423,7 +20506,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-17T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20503,7 +20586,7 @@
       "authorName": "Tiyashi",
       "authorHandle": "@TiyashiAI",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像"
       ],
@@ -20544,7 +20627,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "摄影"
       ],
@@ -20585,7 +20668,7 @@
       "authorName": "Andy",
       "authorHandle": "@Andy4aicreate",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像"
       ],
@@ -20626,7 +20709,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-16T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "人像",
         "摄影"
@@ -20874,7 +20957,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-09-15T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.648Z",
+      "importedAt": "2026-09-21T06:51:39.893Z",
       "tags": [
         "摄影"
       ],
@@ -68259,7 +68342,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.652Z",
+      "importedAt": "2026-09-21T06:51:39.897Z",
       "tags": [
         "产品",
         "平面设计",
@@ -68302,7 +68385,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.652Z",
+      "importedAt": "2026-09-21T06:51:39.897Z",
       "tags": [
         "平面设计"
       ],
@@ -68343,7 +68426,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-20T16:55:52.652Z",
+      "importedAt": "2026-09-21T06:51:39.897Z",
       "tags": [
         "平面设计"
       ],
