@@ -4,6 +4,7 @@ import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/
 
 import Image from "next/image";
 import CompatibilityHome from "./compatibility-home";
+import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
 import { OracleHome } from "./oracle-sanctuary";
 import { compatibilityCopy } from "@/lib/compatibility/copy";
 import "./destiny-editorial.css";
@@ -807,6 +808,7 @@ export default function DestinyWhiteExperience({
   >(null);
   const copyLocale = contentLocale(locale);
   const text = whiteCopy[copyLocale];
+  const introduction = homeIntroductionCopy(locale);
   const selectedDeity =
     text.blessing.deities.find((deity) => deity.key === selectedDeityKey) ??
     text.blessing.deities[0];
@@ -869,7 +871,6 @@ export default function DestinyWhiteExperience({
   const sticksHref = locale === "en" ? "/sticks" : `/sticks?locale=${locale}`;
   const compatibilityHref = locale === "en" ? "/compatibility" : `/compatibility?locale=${locale}`;
   const freeLabel = copyLocale === "zh" ? "免费测我的意象卡" : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
-  const freeNote = copyLocale === "zh" ? "只需生日 · 无需注册 · 即刻查看" : locale === "ru" ? "Только дата · Без регистрации · Мгновенный результат" : "Just your birthday · No account · Instant result";
 
 
   return (
@@ -938,11 +939,11 @@ export default function DestinyWhiteExperience({
       <section className="white-hero" aria-labelledby="home-title">
         <div className="white-container editorial-hero-grid">
           <div className="white-hero__copy">
-            <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{text.hero.version}</p>
-            <h1 id="home-title">{text.hero.title}</h1>
-            <p className="white-lead">{text.hero.lead}</p>
-            <div className="editorial-hero-actions"><a className="editorial-primary" href={freeHref}>{freeLabel}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href="#report">{text.nav.report}<ArrowRight size={15} aria-hidden="true" /></a></div>
-            <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{freeNote}</p>
+            <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{introduction.eyebrow}</p>
+            <h1 id="home-title" data-server-localized>{introduction.title}</h1>
+            <p className="white-lead">{introduction.lead}</p>
+            <div className="editorial-hero-actions"><a className="editorial-primary" href="#start-here">{introduction.start}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href={freeHref}>{introduction.free}<ArrowRight size={15} aria-hidden="true" /></a></div>
+            <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{introduction.note}</p>
             <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? "一种生日，一段独特故事。" : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
           </div>
           <div className="editorial-card-stage" aria-label={text.archetypes.title}>
@@ -956,9 +957,7 @@ export default function DestinyWhiteExperience({
         </div>
       </section>
 
-      <section className="editorial-start-strip white-container" aria-label={text.method.title}>
-        {[copyLocale === "zh" ? "输入生日" : locale === "ru" ? "Ваша дата" : "Your birthday", copyLocale === "zh" ? "遇见你的意象" : locale === "ru" ? "Ваш образ" : "Your character", copyLocale === "zh" ? "探索性格与感情" : locale === "ru" ? "Ваша история" : "Your story"].map((label,i)=><div key={label}><span>0{i+1}</span><p>{label}</p>{i<2&&<ArrowRight size={16} aria-hidden="true" />}</div>)}
-      </section>
+      <HomeIntroduction locale={locale} />
 
       <CompatibilityHome locale={locale} />
 

@@ -188,7 +188,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     heroEyebrow: "Free Chinese fortune sticks · Kau Cim online",
     heroTitle: "A quiet moment for your question.",
     heroLead:
-      "Choose a tradition, hold one question in mind, and draw a stick. Read its verse and discover a different perspective.",
+      "A relationship, a difficult choice, a change at work. Bring one question to this Chinese fortune-stick ritual, read the selected verse and its meaning, then consider what deserves your attention. AI interpretation is optional.",
     questionLabel: "Your question",
     questionPlaceholder: "Write one clear question. Example: Should I accept this offer?",
     topicLabel: "Topic",
@@ -239,7 +239,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     heroEyebrow: "免费在线抽签 · 求签小殿",
     heroTitle: "静心一刻，为心事求一签。",
     heroLead:
-      "选一处心意相合的签堂，想一件牵挂的事。轻摇签筒，在签诗与解意中，寻一个新的方向。",
+      "一段关系、一个难下的决定，或工作里的变化。带着一件具体的心事，静心求签，读签文与解意，再想想此刻值得留意的是什么。也可选择 AI 结合问题进一步解读。",
     questionLabel: "你想问的事",
     questionPlaceholder: "写一个具体问题，例如：这个合作要不要继续推进？",
     topicLabel: "问题类型",
@@ -290,7 +290,7 @@ const copy: Record<ContentLocale, StickCopy> = {
     heroEyebrow: "Храмовые жребии · Один вопрос · Один знак",
     heroTitle: "Момент тишины для вашего вопроса.",
     heroLead:
-      "Выберите традицию, подумайте об одном вопросе и вытяните жребий. Прочтите стих и взгляните на ситуацию по-новому.",
+      "Отношения, сложный выбор или перемены на работе. Задайте один конкретный вопрос, вытяните китайский храмовый жребий и прочтите его толкование. Подумайте, что заслуживает внимания; при желании добавьте разбор ИИ.",
     questionLabel: "Ваш вопрос",
     questionPlaceholder: "Напишите один конкретный вопрос. Например: стоит ли принимать это предложение?",
     topicLabel: "Тема",
