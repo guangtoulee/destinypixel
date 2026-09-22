@@ -13,7 +13,7 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
   const headingId = `${product}-reading-guide`;
   const articleSlugs = product === "compatibility"
     ? ["bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
-    : ["how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
+    : ["yuelao-love-fortune-conversation", "how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
   const readingLinks = articleSlugs.flatMap(slug => {
     const article = journalArticles.find(item => item.slug === slug);
     return article ? [{ title: article.translations[locale].title, description: article.translations[locale].description, href: journalHref(locale, slug) }] : [];
