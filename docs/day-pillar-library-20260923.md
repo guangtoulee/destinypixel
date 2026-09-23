@@ -54,4 +54,11 @@ git diff --check
 - 额外核验4个目录语言版本、60个文章入口、查询页入口及60张实际JPEG图片与image sitemap。
 - 浏览器检查桌面1280px及手机320px/390px，目录与文章无横向溢出；繁体与俄语可读；使用合成日期1990-05-15，查询结果庚辰与文章、卡面一致。
 
-线上发布记录与最终校验结果在发布确认后补充。禁止把HTTP200说成已被搜索引擎收录。
+## 线上发布记录（2026-09-23）
+
+- 代码commit：`a7ef970b678dd68e87c9148a7b507e7edfe90c83`；从 `4718f54` 安全快进推送到 origin/main。
+- Vercel部署：`CEa3AYAgkjkqbopZbTo4k9UM1sRv`，GitHub部署状态确认success。
+- 生产 https://www.destinypixel.com 上280个文章语言版本全部通过正文、metadata、canonical、hreflang、Article与sitemap校验。
+- 4个目录语言版本、60个文章入口、查询页入口和60张JPEG及image sitemap全部通过线上HTTP检查。
+- 浏览器确认中文目录显示60个唯一文章URL，并能进入保留网址的甲子文章；新卡图与新动物名称一致。
+- 本轮没有取得这些新页面的Search Console索引状态；以上上线与HTTP结果不代表已收录或已有自然流量。
