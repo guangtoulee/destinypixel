@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-23T12:56:01.418Z",
+  "updatedAt": "2026-09-23T17:54:44.558Z",
   "sourceSummary": {
-    "community": 1183,
-    "publicX": 486,
-    "total": 1669
+    "community": 1193,
+    "publicX": 487,
+    "total": 1680
   },
   "items": [
     {
@@ -2042,6 +2042,48 @@
       "rawText": "Wow. Open source AI video just had its Seedance 2 moment. H3 runs locally on consumer grade PCs, has almost NO restrictions, and is insanely high quality. I made this in just a few minutes on my PC."
     },
     {
+      "id": "x-public-2100615302388330944",
+      "title": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just r",
+      "description": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footag",
+      "prompt": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/EXM7777/status/2100615302388330944",
+      "sourceType": "x",
+      "authorName": "Machina",
+      "authorHandle": "@EXM7777",
+      "createdAt": "2026-09-17T15:58:10.000Z",
+      "importedAt": "2026-09-23T17:54:44.523Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 429,
+        "reposts": 38,
+        "replies": 26,
+        "quotes": 2,
+        "bookmarks": 781,
+        "views": 26417,
+        "score": 3438
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)"
+    },
+    {
       "id": "x-public-2100171153713266688",
       "title": "AI video generation is usually a loop of generate → find what’s wrong → rewrite the prompt → reg",
       "description": "AI video generation is usually a loop of generate → find what’s wrong → rewrite the prompt → regenerate. Vidu S2 changes that workflow with real-time video generation and editing. Change the style, outfit, character, or ",
@@ -2081,48 +2123,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video generation is usually a loop of generate → find what’s wrong → rewrite the prompt → regenerate. Vidu S2 changes that workflow with real-time video generation and editing. Change the style, outfit, character, or background while the video is being generated, without starting over. Powered by Backbone–Refiner architecture for high-quality 720P real-time output, timestamp-aligned reference injection for seamless changes during generation, and an upgraded VLM Agent that watches the video and plans what comes next. Vidu S2 also applies causal-model RL to directly optimize the final deployed model, improving real-time generation quality. For incoming video, it supports real-time style, outfit, character, and background editing, while preserving the original motion and timing. It also enables interactive 720P avatars at 25–42 FPS, with expressive full-body motion and dynamic reference-image changes for outfits, objects, and scenes. From e-commerce and gaming to live streaming and immersive VR, Vidu S2 brings real-time creative control to new types of content and interaction. Less regeneration. More real-time creative control. Try Vidu S2: : Get 300 credits with the exclusive invite link: The entire Vidu S series is currently available for a free trial. Try it #ViduAI #ViduS #ViduS2 @ViduAI_official"
-    },
-    {
-      "id": "x-public-2100615302388330944",
-      "title": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just r",
-      "description": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footag",
-      "prompt": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/EXM7777/status/2100615302388330944",
-      "sourceType": "x",
-      "authorName": "Machina",
-      "authorHandle": "@EXM7777",
-      "createdAt": "2026-09-17T15:58:10.000Z",
-      "importedAt": "2026-09-21T06:51:43.474Z",
-      "tags": [
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 422,
-        "reposts": 37,
-        "replies": 26,
-        "quotes": 2,
-        "bookmarks": 769,
-        "views": 25156,
-        "score": 3381
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)"
     },
     {
       "id": "x-public-2076186225921175727",
@@ -7731,7 +7731,7 @@
       "authorName": "Aryan Rakib",
       "authorHandle": "@tec_aryan",
       "createdAt": "2026-09-17T17:31:33.000Z",
-      "importedAt": "2026-09-22T17:42:11.174Z",
+      "importedAt": "2026-09-23T17:54:44.524Z",
       "tags": [
         "产品",
         "视频"
@@ -7756,7 +7756,7 @@
         "replies": 35,
         "quotes": 0,
         "bookmarks": 70,
-        "views": 63484,
+        "views": 63552,
         "score": 1078
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -11005,6 +11005,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Made with Seedance 2.5 + Gpt image 2 Prompt: Seedance 2.5-30-Second Ultra-Photorealistic Travel Vlog Prompt Create a 30-second ultra-photorealistic travel vlog that looks exactly like genuine footage spontaneously recorded by a real European travel creator on a high-quality handheld vlog camera. The same young European woman must remain visually identical throughout the entire video: identical face, facial proportions, hairstyle, hair color, skin tone, body proportions, age, wardrobe, accessories, and overall appearance. Maintain strict character consistency across every shot and camera angle. The woman should have natural skin pores, subtle facial imperfections, realistic eyes, individual hair strands, authentic hair movement, natural body proportions, realistic hands, and spontaneous human expressions. No beauty filter, no plastic skin, no excessive makeup, no perfect symmetry. The entire video must feel like real documentary/travel-vlog footage, not a commercial, music video, cinematic film, 3D render, or AI-generated sequence. CONTINUITY / CHARACTER LOCK Same woman in every shot. Young European woman, approximately mid-20s, naturally attractive but completely realistic. Natural complexion with visible pores and tiny imperfections, realistic eyes and eyelashes, natural eyebrows, slightly imperfect hair strands moving independently in the breeze. Same hairstyle and clothing throughout. Authentic posture and walking rhythm. No facial identity drift, no changes in age, hairstyle, clothing, accessories, body shape, or skin tone. She carries a small compact vlog camera, held naturally at arm's length during selfie shots. Her grip, fingers, hands, and camera position must remain anatomically realistic. LOCATION / ATMOSPHERE A beautiful European historic old-town district in the morning. Narrow stone-paved street, textured centuries-old buildings, colorful but realistic façades, wooden shutters, small cafés, outdoor tables, bicycles, bakery storefront, pedestrians, subtle street activity. Soft morning sunlight with realistic shadows. Natural atmospheric perspective. Authentic European street ambience. Background people behave independently and naturally, without staring at the camera. No duplicated pedestrians or repeated background characters. SHOT 1 — 0–5 SECONDS Selfie-style handheld vlog footage. The woman walks naturally down the old-town street while holding a small vlog camera at arm's length. She looks directly into the lens with a subtle, genuine smile. Camera has realistic handheld movement: slight walking bounce, tiny wrist movements, occasional micro-shake, natural framing imperfections, subtle breathing-related movement. Do NOT stabilize the footage perfectly. Her hair moves naturally as she walks through a light morning breeze. Her expression remains relaxed and spontaneous. She occasionally blinks naturally. Behind her: pedestrians walking casually, parked bicycles, café entrances, historic textured buildings and morning activity. Natural sunlight falls across her face as she moves between partial shade and sunlight. Preserve realistic exposure and skin tones. SHOT 2 — 5–10 SECONDS She naturally turns the camera away from herself toward the street. Create an imperfect handheld pan, as if a real travel creator casually redirected their vlog camera. Reveal: - detailed historic European architecture - stone façades and windows - outdoor café tables - people drinking coffee - bicycles moving through the street - a small neighborhood bakery - subtle morning street activity The pan should NOT be perfectly smooth. Include realistic wrist acceleration, tiny framing corrections and slight motion blur. As the camera moves from a darker section of the street into direct morning sunlight, produce a subtle automatic exposure adjustment. Highlights and shadows react naturally like a real camera sensor. No cinematic transition. No artificial camera glide. SHOT 3 — 10–15 SECONDS Cut naturally back to selfie footage. The same woman continues walking toward the café. She briefly says something casual and conversational to the camera, such as: “This little street is so beautiful.” Her lip movement must synchronize naturally with the words. Facial expressions are relaxed and understated. No exaggerated acting. She briefly glances toward something in the street and then back at the lens. She blinks naturally. A light breeze moves several individual strands of hair. Pedestrians pass naturally in the background without acknowledging the camera. Maintain realistic handheld shake, authentic walking bounce, natural breathing, realistic depth of field and believable street ambience. SHOT 4 — 15–21 SECONDS Transition naturally into POV footage from her camera. She approaches and enters a small independent local café. The camera moves through the doorway at normal human walking speed. Slight vertical bounce and subtle wrist movement remain visible. Inside: - warm natural café lighting - wooden tables - textured walls - realistic glass reflections - small background conversations - customers moving naturally - barista activity in the distance - subtle environmental shadows The camera approaches a wooden table containing a freshly prepared coffee and a small pastry. Show subtle realistic steam rising from the coffee. Reflections on the cup and nearby glass should obey real-world lighting. No exaggerated steam. No floating objects. No artificial-looking food. SHOT 5 — 21–26 SECONDS Cut back to selfie footage. The same woman is now sitting outside the café at a small table. She naturally picks up the coffee, takes a small casual sip, lowers the cup and looks into the camera. Her expression changes into a subtle authentic smile. Avoid influencer-style posing or exaggerated happiness. Maintain exact facial identity and wardrobe continuity. Background remains alive: pedestrians walking, bicycles passing, café customers talking, subtle movement of chairs and clothing in the breeze. Camera remains handheld and slightly imperfect, with realistic micro-shake. SHOT 6 — 26–30 SECONDS Continue the selfie shot for a natural ending. She keeps a relaxed smile for a moment, then her attention subtly shifts toward the street. The camera performs a small natural focus shift from her face toward the street behind her. Her face gradually becomes slightly softer while the background becomes clearer, like realistic autofocus behavior from a modern vlog camera. End spontaneously rather than dramatically. No cinematic fade, no artificial transition, no title card. CAMERA / PHYSICS Authentic handheld vlog-camera behavior throughout. Use: - realistic walking bounce - subtle wrist shake - natural micro-jitter - imperfect framing - physically accurate motion blur - realistic autofocus behavior - realistic exposure adaptation - natural depth of field - physically correct reflections - realistic shadows - natural skin response to sunlight - believable hair physics - realistic fabric movement - authentic pedestrian movement Camera should occasionally make tiny human corrections rather than moving perfectly smoothly. AUDIO / AMBIENCE Natural location sound only. Include subtle: - footsteps on stone pavement - distant conversations - café chatter - bicycle movement - light street noise - birds in the distance - door opening - subtle café interior ambience - faint cup movement - natural breathing Her spoken sentence should sound like a real casual vlog recording, with natural voice volume and slight environmental background noise. No dramatic soundtrack. No cinematic sound effects. ABSOLUTE REALISM REQUIREMENTS Prioritize photographic realism over visual perfection. The footage should contain the tiny imperfections normally found in genuine handheld travel footage. Avoid: - CGI appearance - AI-generated look - plastic skin - beauty filters - excessive skin smoothing - perfect facial symmetry - exaggerated expressions - overly cinematic lighting - perfect gimbal movement - impossible camera movement - warped hands - malformed fingers - distorted faces - inconsistent facial identity - changing clothing - changing hairstyle - duplicated pedestrians - frozen background people - unnatural walking - floating objects - impossible reflections - incorrect shadows - artificial depth-of-field - excessive bokeh - oversaturated colors - hyper-sharp artificial textures - dramatic transitions - commercial/ad-style posing Final target: The finished 30-second video must be indistinguishable from a genuine, spontaneously filmed European travel vlog captured by a real person on a premium handheld vlog camera. Every person, object, reflection, shadow, movement, facial expression, hair strand, exposure change and camera motion should obey real-world physics."
+    },
+    {
+      "id": "x-public-2102058144566218889",
+      "title": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student b",
+      "description": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropp",
+      "prompt": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ridark_eth/status/2102058144566218889",
+      "sourceType": "x",
+      "authorName": "Ridark",
+      "authorHandle": "@ridark_eth",
+      "createdAt": "2026-09-21T15:31:30.000Z",
+      "importedAt": "2026-09-23T17:54:44.523Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 216,
+        "reposts": 16,
+        "replies": 32,
+        "quotes": 0,
+        "bookmarks": 76,
+        "views": 25847,
+        "score": 808
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free"
     },
     {
       "id": "x-public-2089538609858875714",
@@ -20340,18 +20384,264 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2102608261904323059",
+      "title": "社交媒体帖子 - AI 写实缩略图：提灯笼的女孩",
+      "description": "一张垂直社交媒体缩略图，对比了两名提灯笼女孩的 impressionist 油画与其 photorealistic AI 生成复刻版。",
+      "prompt": "创建一张垂直 9:16 比例的社交媒体缩略图。背景是一张超写实、高分辨率的照片，画面中两名留着棕色卷发的小女孩身穿复古白色蕾丝边连衣裙，站在暮色中的郁郁葱葱的花园里。她们手持并装饰着发光的粉色纸灯笼。周围环绕着大型白色百合花和柔焦粉色玫瑰。在中心位置叠加粗体无衬线文字：“AI Made This Painting”为白色，下一行“Real”为黄色。在文字下方，放置一个较小的矩形插图，展示原始的印象派油画（两名提灯笼的女孩），配有金色画框，并有一个手绘黄色箭头从画作指向写实的场景。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150024233_00ki5y_HS33DZ9aQAAZaBs.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ProcVideo/status/2102608261904323059#reversed-0",
+      "sourceType": "community",
+      "authorName": "VideoProc AI",
+      "authorHandle": "@ProcVideo",
+      "createdAt": "2026-09-23T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35234",
+      "rawText": "创建一张垂直 9:16 比例的社交媒体缩略图。背景是一张超写实、高分辨率的照片，画面中两名留着棕色卷发的小女孩身穿复古白色蕾丝边连衣裙，站在暮色中的郁郁葱葱的花园里。她们手持并装饰着发光的粉色纸灯笼。周围环绕着大型白色百合花和柔焦粉色玫瑰。在中心位置叠加粗体无衬线文字：“AI Made This Painting”为白色，下一行“Real”为黄色。在文字下方，放置一个较小的矩形插图，展示原始的印象派油画（两名提灯笼的女孩），配有金色画框，并有一个手绘黄色箭头从画作指向写实的场景。"
+    },
+    {
+      "id": "community-2102533983292793075",
+      "title": "个人资料 / 头像 - 晨间厨房围裙人像",
+      "description": "一张写实风格的人像照片，展示了一位年轻女子在阳光明媚的厨房里系着头发，身穿格纹围裙，周围摆放着新鲜食材。",
+      "prompt": "这是一张写实风格的中景照片，展现了一位年轻的亚洲女性站在明亮温馨的厨房中，正值清晨时分。她留着带刘海的黑色长发，双臂举至脑后，正在将头发扎成马尾。她身穿一件黑白格纹围裙，白色肩带露出光洁的肩膀，佩戴着精致的金色项链和小巧耳环。她的神情平静，目光直视镜头。前景的木质台面上摆放着新鲜食材，包括一把绿叶蔬菜、三颗藤上红番茄、一把厨师刀和一个不锈钢搅拌碗。背景是温暖的木质橱柜、一台白色冰箱，以及一扇透入柔和自然阳光的窗户，照亮了整个场景。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150026668_6ry2za_HS2zg2EaYAAFQsn.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/OneBreath00/status/2102533983292793075#reversed-0",
+      "sourceType": "community",
+      "authorName": "One Breath｜AI Portrait",
+      "authorHandle": "@OneBreath00",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.865Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35238",
+      "rawText": "这是一张写实风格的中景照片，展现了一位年轻的亚洲女性站在明亮温馨的厨房中，正值清晨时分。她留着带刘海的黑色长发，双臂举至脑后，正在将头发扎成马尾。她身穿一件黑白格纹围裙，白色肩带露出光洁的肩膀，佩戴着精致的金色项链和小巧耳环。她的神情平静，目光直视镜头。前景的木质台面上摆放着新鲜食材，包括一把绿叶蔬菜、三颗藤上红番茄、一把厨师刀和一个不锈钢搅拌碗。背景是温暖的木质橱柜、一台白色冰箱，以及一扇透入柔和自然阳光的窗户，照亮了整个场景。"
+    },
+    {
+      "id": "community-2102520565219180953",
+      "title": "个人资料 / 头像 - GPT Image 2 提示词：晨间厨房围裙",
+      "description": "用于生成一张写实照片的提示词，画面中一位女性在厨房里系头发，身穿格纹围裙。",
+      "prompt": "主题：\n穿着格纹围裙系头发的场景。\n\n主要主体：\n年轻女性在明亮的厨房中央抬起双臂系头发。关键元素包括：黑白小方格挂脖式围裙、腰部前方打的大结、前景中的蔬菜。\n\n人物与表情：\n小巧的椭圆形脸庞，下巴纤细，深棕色大眼睛，眉毛稀疏整齐，鼻子精致，光泽粉嫩的嘴唇微微张开。脸部略微向右转，目光平静地直视镜头。深棕色头发带有细碎刘海和松散发丝，双手在脑后扎成低马尾。\n\n服装与姿势：\n黑白小方格图案，粗白色挂脖带，褶皱围裙连衣裙平整覆盖胸部，腰部前方有同材质大蝴蝶结。佩戴小金耳环和细吊坠。站立时手肘大幅向上向外弯曲，双手在脑后拢起头发。\n\n背景与光线：\n前景为木质台面，上有金属碗装的绿叶蔬菜、红番茄、刀具和胡椒研磨器。背景左侧是冰箱和木架，中间是水槽，右侧是大窗户和绿植。清晨强烈的阳光从右上方窗户射入，照亮面部、手臂和胸部，在台面上投下明亮阴影。\n\n构图与相机：\n3:4 竖幅构图，相机位于台面对面的胸部高度，捕捉从头部到腰部以下的人物上半身。人物居中且占比大，抬起的手臂构成顶部框架，蔬菜位于底部边缘。手肘在侧边被裁切，焦点集中在眼睛/面部，厨房景深略微虚化。\n\n纹理与风格：\n写实摄影风格。高清自然肤质，细腻格纹布料，头发，金属碗，蔬菜，木质台面。色彩：白色、黑色、木色调加上温暖的晨光。\n\n负面提示：\n改变手臂/系头发的姿势；省略格纹围裙或蔬菜。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150022718_cotvzv_HScB3Shb0AA3kZH.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CyberTotal2026/status/2102520565219180953",
+      "sourceType": "community",
+      "authorName": "Prompt アトリエ｜AI画像プロンプト",
+      "authorHandle": "@CyberTotal2026",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
+      "tags": [
+        "GPT Image 2",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35232",
+      "rawText": "主题：\n穿着格纹围裙系头发的场景。\n\n主要主体：\n年轻女性在明亮的厨房中央抬起双臂系头发。关键元素包括：黑白小方格挂脖式围裙、腰部前方打的大结、前景中的蔬菜。\n\n人物与表情：\n小巧的椭圆形脸庞，下巴纤细，深棕色大眼睛，眉毛稀疏整齐，鼻子精致，光泽粉嫩的嘴唇微微张开。脸部略微向右转，目光平静地直视镜头。深棕色头发带有细碎刘海和松散发丝，双手在脑后扎成低马尾。\n\n服装与姿势：\n黑白小方格图案，粗白色挂脖带，褶皱围裙连衣裙平整覆盖胸部，腰部前方有同材质大蝴蝶结。佩戴小金耳环和细吊坠。站立时手肘大幅向上向外弯曲，双手在脑后拢起头发。\n\n背景与光线：\n前景为木质台面，上有金属碗装的绿叶蔬菜、红番茄、刀具和胡椒研磨器。背景左侧是冰箱和木架，中间是水槽，右侧是大窗户和绿植。清晨强烈的阳光从右上方窗户射入，照亮面部、手臂和胸部，在台面上投下明亮阴影。\n\n构图与相机：\n3:4 竖幅构图，相机位于台面对面的胸部高度，捕捉从头部到腰部以下的人物上半身。人物居中且占比大，抬起的手臂构成顶部框架，蔬菜位于底部边缘。手肘在侧边被裁切，焦点集中在眼睛/面部，厨房景深略微虚化。\n\n纹理与风格：\n写实摄影风格。高清自然肤质，细腻格纹布料，头发，金属碗，蔬菜，木质台面。色彩：白色、黑色、木色调加上温暖的晨光。\n\n负面提示：\n改变手臂/系头发的姿势；省略格纹围裙或蔬菜。"
+    },
+    {
+      "id": "community-2102375406011830423",
+      "title": "个人资料 / 头像 - 可爱对话气泡吉祥物头像图标",
+      "description": "生成一个极简风格头像，包含一个脸红的白色对话气泡角色和一个在黑色背景上微笑的小型设备伙伴。",
+      "prompt": "一幅极简主义扁平设计插画，描绘了两个可爱的吉祥物，背景为纯黑色。主要主体位于左侧，是一个大型白色对话气泡角色，拥有两个垂直椭圆形黑眼睛和脸颊上柔和的粉色腮红。右下角部分重叠在主形象上的是一个较小的灰色圆角矩形，类似手持设备或智能手机，配有白色屏幕；屏幕上显示着一张简单的脸，有两个黑点眼睛和微笑的嘴巴。整体风格简洁、矢量感强，适合作为个人头像图标。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150026701_ohp2z3_HS0jSeZagAAbC-B.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ryoutag_/status/2102375406011830423#reversed-0",
+      "sourceType": "community",
+      "authorName": "りょうたぐ/ryoutag.@愛しのsense9破損で泣く",
+      "authorHandle": "@ryoutag_",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35237",
+      "rawText": "一幅极简主义扁平设计插画，描绘了两个可爱的吉祥物，背景为纯黑色。主要主体位于左侧，是一个大型白色对话气泡角色，拥有两个垂直椭圆形黑眼睛和脸颊上柔和的粉色腮红。右下角部分重叠在主形象上的是一个较小的灰色圆角矩形，类似手持设备或智能手机，配有白色屏幕；屏幕上显示着一张简单的脸，有两个黑点眼睛和微笑的嘴巴。整体风格简洁、矢量感强，适合作为个人头像图标。"
+    },
+    {
+      "id": "community-2102283904560566600",
+      "title": "个人资料 / 头像 - GPT Image 2 怀旧编辑风剪贴簿转换",
+      "description": "将上传的照片转换为垂直 3:4 的编辑风格剪贴簿布局。上半部分保留原始照片的真实感，下半部分则在纹理纸上呈现同一场景的微缩手绘故事书版本，并配有微妙的手写文字。",
+      "prompt": "使用上传的照片作为精确的视觉参考，将其转换为具有怀旧感的编辑风格剪贴簿艺术作品。保留原始照片中的人物主体、构图、服装、姿势、物体及整体场景。\n\n创建垂直 3:4 的构图，采用精致、极简且受日本美学启发的照片转插画风格。\n\n最终设计应分为两个相等的水平区域：\n\n上半部分 — 原始照片\n• 将上传的原始照片放置在画布的上半部分（50%）。\n• 保持其真实感且完全不做修改。\n• 保留确切的面部特征、身体比例、服装、发型、姿势、光照、环境、家具、食物、毯子、窗户以及所有其他可识别的细节。\n• 不要裁剪重要的主体。\n• 自然地使用原始图像，边缘干净，无人工边框。\n\n下半部分 — 微缩故事书版本\n• 将照片中的确切场景重新创作为一幅小巧精致的手绘插画，位于下半部分的中心附近。\n• 保持相同的人物主体、姿势、服装、物体、透视和可识别的构图，但使整个场景看起来像是放置在纸上的微小怀旧插画。\n• 使用柔和的水彩 + 彩色铅笔 + 微妙的水粉画美学。\n• 细腻不完美的笔触、轻微纹理的边缘、柔和的阴影、柔和的自然色彩、略微褪色的复古外观。\n• 微缩场景应仅占据下半部分约 25–35% 的空间，周围留有充足的负空间。\n• 使其感觉像是捕捉在纸上的微小记忆，而非常规的全框插画。\n• 在微缩场景下方添加非常微妙的手绘阴影，以使其感觉自然地放置在纸上。\n\n背景\n• 用温暖的米白色/象牙色手工纸覆盖整个下半部分。\n• 可见细微的纸张纤维和颗粒感。\n• 略有不均匀的有机纹理，类似于优质水彩纸。\n• 极简、温暖、平静且优雅。\n• 无边框、无装饰图案、无不必要的元素。\n\n文字\n• 在微缩插画下方，添加一行非常小的手写短语：\n“{argument name=\"phrase\" default=\"sunny days\"}”\n• 使用纤细、精致的小写手写体。\n• 浅灰色/灰褐色墨水。\n• 保持文字微妙且不显眼，居中置于艺术作品下方。\n\n光照与色彩\n• 温暖的自然日光。\n• 柔和的奶油色、米色、淡蓝色、柔和的牛仔蓝和暖棕色调。\n• 温和的高光和柔和的阴影。\n• 略带怀旧感的胶片风格调色。\n• 避免过度饱和。\n• 整体氛围：安静、舒适、感性、宁静的家庭记忆。\n\n重要提示\n• 保持参考照片中人物的身份和视觉特征。\n• 不要发明额外的人物或物体。\n• 不要改变服装或姿势。\n• 不要扭曲解剖结构。\n• 微缩插画必须清晰地描绘与原始照片完全相同的时刻和场景。\n• 干净的高端编辑式构图。\n• 高细节、精致的艺术指导、写实",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150020908_dj537c_HSzQDcuaYAAOrZ0.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AiwithLariab/status/2102283904560566600",
+      "sourceType": "community",
+      "authorName": "Laraib Fatima‎",
+      "authorHandle": "@AiwithLariab",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35230",
+      "rawText": "使用上传的照片作为精确的视觉参考，将其转换为具有怀旧感的编辑风格剪贴簿艺术作品。保留原始照片中的人物主体、构图、服装、姿势、物体及整体场景。\n\n创建垂直 3:4 的构图，采用精致、极简且受日本美学启发的照片转插画风格。\n\n最终设计应分为两个相等的水平区域：\n\n上半部分 — 原始照片\n• 将上传的原始照片放置在画布的上半部分（50%）。\n• 保持其真实感且完全不做修改。\n• 保留确切的面部特征、身体比例、服装、发型、姿势、光照、环境、家具、食物、毯子、窗户以及所有其他可识别的细节。\n• 不要裁剪重要的主体。\n• 自然地使用原始图像，边缘干净，无人工边框。\n\n下半部分 — 微缩故事书版本\n• 将照片中的确切场景重新创作为一幅小巧精致的手绘插画，位于下半部分的中心附近。\n• 保持相同的人物主体、姿势、服装、物体、透视和可识别的构图，但使整个场景看起来像是放置在纸上的微小怀旧插画。\n• 使用柔和的水彩 + 彩色铅笔 + 微妙的水粉画美学。\n• 细腻不完美的笔触、轻微纹理的边缘、柔和的阴影、柔和的自然色彩、略微褪色的复古外观。\n• 微缩场景应仅占据下半部分约 25–35% 的空间，周围留有充足的负空间。\n• 使其感觉像是捕捉在纸上的微小记忆，而非常规的全框插画。\n• 在微缩场景下方添加非常微妙的手绘阴影，以使其感觉自然地放置在纸上。\n\n背景\n• 用温暖的米白色/象牙色手工纸覆盖整个下半部分。\n• 可见细微的纸张纤维和颗粒感。\n• 略有不均匀的有机纹理，类似于优质水彩纸。\n• 极简、温暖、平静且优雅。\n• 无边框、无装饰图案、无不必要的元素。\n\n文字\n• 在微缩插画下方，添加一行非常小的手写短语：\n“{argument name=\"phrase\" default=\"sunny days\"}”\n• 使用纤细、精致的小写手写体。\n• 浅灰色/灰褐色墨水。\n• 保持文字微妙且不显眼，居中置于艺术作品下方。\n\n光照与色彩\n• 温暖的自然日光。\n• 柔和的奶油色、米色、淡蓝色、柔和的牛仔蓝和暖棕色调。\n• 温和的高光和柔和的阴影。\n• 略带怀旧感的胶片风格调色。\n• 避免过度饱和。\n• 整体氛围：安静、舒适、感性、宁静的家庭记忆。\n\n重要提示\n• 保持参考照片中人物的身份和视觉特征。\n• 不要发明额外的人物或物体。\n• 不要改变服装或姿势。\n• 不要扭曲解剖结构。\n• 微缩插画必须清晰地描绘与原始照片完全相同的时刻和场景。\n• 干净的高端编辑式构图。\n• 高细节、精致的艺术指导、写实"
+    },
+    {
+      "id": "community-2102283876294918510",
+      "title": "个人资料 / 头像 - 迪拜天际线黄金时刻人像",
+      "description": "用于生成一位女性在黄金时刻于俯瞰迪拜市中心天际线的阳台上自拍的超写实竖版人像的提示词。",
+      "prompt": "创建一张超写实的 9:16 竖版人像，保留参考图像中同一位女性的确切面部特征、脸型、眼睛、眉毛、鼻子、嘴唇、下颌线、自然肤色及可识别的特征。她留着长而浓密的黑发，梳成高马尾，其余头发以柔和波浪状自然垂落在单侧肩上。她身穿一件优雅的象牙白修身长袖服装，带有柔软的堆堆领和微妙的毛绒袖口。\n她在黄金时刻于一个阳台上拍摄自然的自拍，背景是迪拜市中心天际线和停泊着船只的水滨。背景中可见高耸的现代摩天大楼，通过真实的景深效果呈现柔和模糊状态。温暖的夕阳余晖轻轻照亮她的脸庞，营造出自然的高光和柔和的阴影。\n自然放松的微笑，直视镜头，真实的面部表情，逼真的皮肤质感，可见细微细节和毛孔，微妙的瑕疵，真实的发丝，专业智能手机摄影，浅景深，电影般的自然光线，逼真的色彩，高细节，照片级真实感，高端生活方式摄影。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150021286_krpxxh_HSzQCfpXIAA93oG.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ZarnishNael/status/2102283876294918510",
+      "sourceType": "community",
+      "authorName": "Zarnish",
+      "authorHandle": "@ZarnishNael",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35231",
+      "rawText": "创建一张超写实的 9:16 竖版人像，保留参考图像中同一位女性的确切面部特征、脸型、眼睛、眉毛、鼻子、嘴唇、下颌线、自然肤色及可识别的特征。她留着长而浓密的黑发，梳成高马尾，其余头发以柔和波浪状自然垂落在单侧肩上。她身穿一件优雅的象牙白修身长袖服装，带有柔软的堆堆领和微妙的毛绒袖口。\n她在黄金时刻于一个阳台上拍摄自然的自拍，背景是迪拜市中心天际线和停泊着船只的水滨。背景中可见高耸的现代摩天大楼，通过真实的景深效果呈现柔和模糊状态。温暖的夕阳余晖轻轻照亮她的脸庞，营造出自然的高光和柔和的阴影。\n自然放松的微笑，直视镜头，真实的面部表情，逼真的皮肤质感，可见细微细节和毛孔，微妙的瑕疵，真实的发丝，专业智能手机摄影，浅景深，电影般的自然光线，逼真的色彩，高细节，照片级真实感，高端生活方式摄影。"
+    },
+    {
       "id": "community-2102236497948897434",
       "title": "个人资料 / 头像 - 电影感蓝色背光人像",
       "description": "用于生成具有青色蓝色背光和未来主义氛围的忧郁、高对比度电影感人像的提示词。",
       "prompt": "电影感高对比度人像，年轻男子侧脸特写，佩戴深色墨镜，中等长度凌乱头发被风吹向后方，下颌线条分明且面部纹理自然，戏剧性剪影效果，强烈的青色蓝色背光从身后照射，明亮过曝的白蓝色光晕环绕发丝，面部和颈部呈现深邃阴影，微妙的轮廓光勾勒出发丝和肩部线条，忧郁的未来主义氛围，极简背景，浅景深，柔和的大气雾霭，照片级逼真的皮肤和头发细节，时尚杂志摄影风格，使用 85mm 人像镜头拍摄，光圈 f/1.8，高动态范围，胶片颗粒感，青蓝单色调色，超精细细节，8K 分辨率，垂直构图，3:4 宽高比。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790063420310_pjle3d_HSyk80baAAAEBne.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150022327_vqyz70_HSyk80baAAAEBne.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/iamsofiaijaz/status/2102236497948897434",
       "sourceType": "community",
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.074Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
       "tags": [
         "人像",
         "摄影"
@@ -20380,6 +20670,127 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35157",
       "rawText": "电影感高对比度人像，年轻男子侧脸特写，佩戴深色墨镜，中等长度凌乱头发被风吹向后方，下颌线条分明且面部纹理自然，戏剧性剪影效果，强烈的青色蓝色背光从身后照射，明亮过曝的白蓝色光晕环绕发丝，面部和颈部呈现深邃阴影，微妙的轮廓光勾勒出发丝和肩部线条，忧郁的未来主义氛围，极简背景，浅景深，柔和的大气雾霭，照片级逼真的皮肤和头发细节，时尚杂志摄影风格，使用 85mm 人像镜头拍摄，光圈 f/1.8，高动态范围，胶片颗粒感，青蓝单色调色，超精细细节，8K 分辨率，垂直构图，3:4 宽高比。"
+    },
+    {
+      "id": "community-2102513577437315328",
+      "title": "社交媒体帖子 - 纸艺揭秘海报",
+      "description": "一款采用分栏布局的设计海报，上半部分为原始照片，下半部分呈现选择性配色的纸艺揭秘效果。",
+      "prompt": "基于此照片创作一张高端设计海报。整体采用 3:4 竖版构图，分为上下两个等大的部分，高度比例为严格的 1:1，各占画面的 50%。\n\n上半部分：保留原始照片，确保主体的身份及所有细节与原图完全一致。\n\n下半部分：在带有纹理的米白色背景上制作逼真的纸艺效果。画面中心应有一个撕裂的纸张破洞，露出上方同一城市场景的黑白版本。关键在于，该黑白场景中的特定元素需以原本鲜艳的彩色（红色、品红、黄色）高亮显示，从而与单色背景形成强烈对比。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150024211_aoqtzb_HS2g9KzXUAACRFc.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/icreatelife/status/2102513577437315328#reversed-0",
+      "sourceType": "community",
+      "authorName": "Kris Kashtanova",
+      "authorHandle": "@icreatelife",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [
+        "平面设计"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35233",
+      "rawText": "基于此照片创作一张高端设计海报。整体采用 3:4 竖版构图，分为上下两个等大的部分，高度比例为严格的 1:1，各占画面的 50%。\n\n上半部分：保留原始照片，确保主体的身份及所有细节与原图完全一致。\n\n下半部分：在带有纹理的米白色背景上制作逼真的纸艺效果。画面中心应有一个撕裂的纸张破洞，露出上方同一城市场景的黑白版本。关键在于，该黑白场景中的特定元素需以原本鲜艳的彩色（红色、品红、黄色）高亮显示，从而与单色背景形成强烈对比。"
+    },
+    {
+      "id": "community-2102452382345085279",
+      "title": "社交媒体帖子 - 喧闹的捕虾人闯入酒馆",
+      "description": "一幅幽默的漫画风格插图，描绘了醉醺醺的渔民冲进酒馆的场景，并配有一首关于他们到来的俳句。",
+      "prompt": "这是一幅横向的数字插画，采用粗犷的漫画风格，描绘了一群喧闹的渔民进入酒馆的场景。画面分为两部分：左侧是艺术作品，右侧是一个包含文字的黑色面板。在艺术作品中，五名表情夸张、满脸通红且醉意盎然的男子正破门而入。他们身穿厚重的蓝色针织毛衣、黄色雨衣和渔夫帽。中间的一名男子手持深色酒瓶，而他右侧的另一人则拿着一个金属酒杯。前景中，两名男子坐在木桌旁抬头看着新来者；左边那位鼻子很大，手里拿着一杯啤酒，右边那位秃顶，穿着蓝色外套。背景展示了灯光昏暗的酒馆内部，挂着灯笼，墙上的框牌写着“THE DRIFTING COD”和“RUM GIN BITTERS & BAD LANGUAGE”。在右侧纯黑背景上，白色衬线字体展示了一首俳句：“the shrimpers / stinking of shrimp and brine / enter the pub / already drunk on bitters / boisterous as stuck pigs”。诗歌下方是较小的署名文字：“AI image created by Michael H. Lester in collaboration with GPT Image 2 Low on @Nightcafestudio twitter: ™mhlester”，随后是两个 URL。右上角有一个二维码。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150027817_zn9mso_HS1pTCAbAAAzpq6.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/mhlester/status/2102452382345085279#reversed-0",
+      "sourceType": "community",
+      "authorName": "Michael H. Lester",
+      "authorHandle": "@mhlester",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35239",
+      "rawText": "这是一幅横向的数字插画，采用粗犷的漫画风格，描绘了一群喧闹的渔民进入酒馆的场景。画面分为两部分：左侧是艺术作品，右侧是一个包含文字的黑色面板。在艺术作品中，五名表情夸张、满脸通红且醉意盎然的男子正破门而入。他们身穿厚重的蓝色针织毛衣、黄色雨衣和渔夫帽。中间的一名男子手持深色酒瓶，而他右侧的另一人则拿着一个金属酒杯。前景中，两名男子坐在木桌旁抬头看着新来者；左边那位鼻子很大，手里拿着一杯啤酒，右边那位秃顶，穿着蓝色外套。背景展示了灯光昏暗的酒馆内部，挂着灯笼，墙上的框牌写着“THE DRIFTING COD”和“RUM GIN BITTERS & BAD LANGUAGE”。在右侧纯黑背景上，白色衬线字体展示了一首俳句：“the shrimpers / stinking of shrimp and brine / enter the pub / already drunk on bitters / boisterous as stuck pigs”。诗歌下方是较小的署名文字：“AI image created by Michael H. Lester in collaboration with GPT Image 2 Low on @Nightcafestudio twitter: ™mhlester”，随后是两个 URL。右上角有一个二维码。"
+    },
+    {
+      "id": "community-2102401817682293027",
+      "title": "社交媒体帖子 - 雨窗畔阅读的男子",
+      "description": "电影感镜头：一名身穿深色大衣的男子站在窗前，手持文件专注阅读，窗外雨痕斑驳，城市灯光朦胧。",
+      "prompt": "中景镜头从后方略偏侧的角度捕捉到一名男子站在室内，面向一扇大窗户。他留着灰白的短发，身穿一件深海军蓝色的长款大衣或长袍。他双手捧着一份打开的白色文件或书籍，神情专注地阅读着。窗玻璃上布满了垂直的雨痕，将窗外的景色扭曲成一片抽象的模糊影像，呈现出深邃的蓝色、鲜艳的金黄色以及隐约的红色，暗示着夜晚的城市景象和发光的招牌（其中一个部分可辨认为“...BARBATES...”）。画面左侧，一部分抛光的深色木质镶板构成了场景的边框。底部沿窗台设有一排深蓝色天鹅绒长椅或座位区。整体光线充满情绪感和氛围感，窗外夜晚的冷色调与湿润玻璃上温暖的金色反光形成鲜明对比。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150024476_e6wj8m_HS07TqYXwAACF_K.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/jjarangoes/status/2102401817682293027#reversed-0",
+      "sourceType": "community",
+      "authorName": "Juan José Arango E.",
+      "authorHandle": "@jjarangoes",
+      "createdAt": "2026-09-22T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "建筑空间",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35235",
+      "rawText": "中景镜头从后方略偏侧的角度捕捉到一名男子站在室内，面向一扇大窗户。他留着灰白的短发，身穿一件深海军蓝色的长款大衣或长袍。他双手捧着一份打开的白色文件或书籍，神情专注地阅读着。窗玻璃上布满了垂直的雨痕，将窗外的景色扭曲成一片抽象的模糊影像，呈现出深邃的蓝色、鲜艳的金黄色以及隐约的红色，暗示着夜晚的城市景象和发光的招牌（其中一个部分可辨认为“...BARBATES...”）。画面左侧，一部分抛光的深色木质镶板构成了场景的边框。底部沿窗台设有一排深蓝色天鹅绒长椅或座位区。整体光线充满情绪感和氛围感，窗外夜晚的冷色调与湿润玻璃上温暖的金色反光形成鲜明对比。"
     },
     {
       "id": "community-2102298619735138672",
@@ -20554,7 +20965,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.075Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
       "tags": [
         "人像",
         "摄影"
@@ -20596,7 +21007,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.075Z",
+      "importedAt": "2026-09-23T17:54:40.866Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20625,6 +21036,91 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35118",
       "rawText": "主题：\n白色花园中的斑驳阳光\n\n主体：\n画面中央，一位年轻女性坐在水莲池的石质边缘。象牙色细带迷你连衣裙、系至脚踝的白色凉鞋、手抚脸颊的动作以及洒满斑驳阳光的庭院是主要特征。\n\n人物/面部：\n瘦长的鹅蛋脸，小巧的下巴，淡棕色的大眼睛，纤细的眉毛，挺直的鼻梁，光泽感的淡粉色嘴唇。脸部微微向右倾斜，对着正面镜头露出温柔的微笑。明亮的灰棕色长发带有稀疏的空气刘海和柔和的面部波浪卷，自然垂落至肩部和背部。\n\n服装/姿势：\n短款喇叭形象牙色迷你连衣裙，配有细肩带、侧边系带和细微褶皱。白色细带凉鞋从脚趾交叉缠绕至脚踝上方，搭配低细跟。双膝并拢并在石质边缘处向左弯曲，双腿交叉，左臂伸展搭在膝盖上，右肘靠在左臂上，右手手指轻触脸颊。\n\n背景/光线：\n左下角是点缀着水莲和白花的池塘，后方有植被和巨大的树冠，白色的墙壁和深色木梁，带有大型格子窗的房屋，右侧背景中有一张绿色长椅。阳光从左上方柔和地透过树叶形成斑驳光影，照亮头发、肩膀、膝盖和石质边缘，在背景中营造出圆形叶片散景效果。\n\n构图/相机：\n2:3 竖幅构图，正面相机位于坐姿高度，拍摄范围从头顶到凉鞋脚趾全身。人物占据中心偏左位置，修长的双腿呈对角线延伸至右下角，池塘位于左下角，房屋位于右上角。脚趾靠近底部边缘，焦点集中在面部和服装上，花园和房屋呈现柔和虚化效果。\n\n纹理/风格：\n写实真人摄影风格。高清柔顺的发丝，自然的皮肤质感，连衣裙上的细微褶皱，细皮革鞋带，石头，树叶，水面；象牙色与绿色的清晰日光色调。\n\n负面提示：\n改变坐姿和系带鞋样式；省略花园和水莲池塘"
+    },
+    {
+      "id": "community-2101872495544648189",
+      "title": "个人资料 / 头像 - 电影感男性肖像提示词",
+      "description": "使用 GPT Image 2 生成的超写实电影感特写肖像提示词，展现身着西装的男士与戏剧性光影效果。",
+      "prompt": "超写实电影感特写肖像，一位英俊的年轻男子身着精致的黑色定制西装和挺括的白色正装衬衫，浓密的深棕色波浪发向后梳理，呈现自然蓬松感，面部轮廓清晰阳刚，留有淡淡的胡茬，下颌线分明，目光坚定自信地直视镜头，采用四分之三侧面姿势，神情优雅而神秘。戏剧性的影棚布光，左侧带有温暖的琥珀色/橙色轮廓光，背景为深邃的冷调海军蓝，对比强烈，面部高光与阴影层次丰富且立体，浅景深，奢华时尚杂志美学，高端电影级调色，皮肤纹理高度细腻，发丝真实可见，毛孔自然，眼神锐利，专业摄影，85mm 人像镜头，f/1.8，柔和散景，HDR，照片级真实感，超高细节，8K，竖构图，精致的好莱坞风格肖像。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1790150023082_vpxiv3_HStZ5D3boAEtI0F.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/sahilvermaai/status/2101872495544648189",
+      "sourceType": "community",
+      "authorName": "Sahil Verma",
+      "authorHandle": "@sahilvermaai",
+      "createdAt": "2026-09-21T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35108",
+      "rawText": "超写实电影感特写肖像，一位英俊的年轻男子身着精致的黑色定制西装和挺括的白色正装衬衫，浓密的深棕色波浪发向后梳理，呈现自然蓬松感，面部轮廓清晰阳刚，留有淡淡的胡茬，下颌线分明，目光坚定自信地直视镜头，采用四分之三侧面姿势，神情优雅而神秘。戏剧性的影棚布光，左侧带有温暖的琥珀色/橙色轮廓光，背景为深邃的冷调海军蓝，对比强烈，面部高光与阴影层次丰富且立体，浅景深，奢华时尚杂志美学，高端电影级调色，皮肤纹理高度细腻，发丝真实可见，毛孔自然，眼神锐利，专业摄影，85mm 人像镜头，f/1.8，柔和散景，HDR，照片级真实感，超高细节，8K，竖构图，精致的好莱坞风格肖像。"
+    },
+    {
+      "id": "community-2101861630657359924",
+      "title": "个人资料 / 头像 - 柑橘园自然抓拍人像提示词",
+      "description": "用于生成女性在柑橘园中户外自然抓拍人像的提示词，强调自然光线与质朴纹理。",
+      "prompt": "一张写实风格的户外自然抓拍人像，画面中一位年轻女性坐在郁郁葱葱的柑橘园里的质朴木质平台上。她留着深棕色长卷发，发丝自然地垂落在肩头和背部，几缕精致的碎发轻拂脸颊。她头上松松地裹着一条柔和的米色头巾或宽布发带。\n她抬头望向镜头，神情俏皮欢快，一只眼睛眨着，涂着柔和珊瑚红唇膏的嘴唇绽放出灿烂笑容。她的姿态放松而随性，一只手臂弯曲置于身侧，一只手轻轻搭在腰间附近。\n她身穿一件修身的白色无袖纹理上衣，带有精致细节，搭配高腰蓝色牛仔短裤。手腕上戴着一根简单的黑色发圈。\n她身旁放着一个大编织柳条篮，其弯曲的手柄和天然稻草纹理清晰可见。她身下的木质平台呈现出温暖的天然木纹和质朴质感。\n她周围环绕着茂密的绿色花园，长满青草、绿叶植物，还有一棵成熟的柑橘树，树上挂满了无数小巧成熟的橙色果实。粗壮的枝干和鲜绿的叶片填满了背景上方，形成美丽的天然华盖。\n构图：垂直 4:5 人像比例，略微俯视的高角度视角，主体位于画面下方中央，面部清晰可见，篮子在她身旁部分可见，柑橘树填满背景，呈现自然的抓拍框架。\n光线：柔和温暖的自然日光，头发和面部有轻柔的高光，阴影真实，绿植新鲜充满活力，色调略带暖色。\n摄影风格：超写实智能手机摄影，韩式/亚洲生活方式美学，自然皮肤质感，逼真的发丝，详细的柳条和木材纹理，真实的户外色彩，轻微的广角透视，微妙的景深，柔和的胶片颗粒感，高细节，4K。\n负面提示词：动漫，卡通，插画，CGI，3D 渲染，塑料皮肤，过度美颜滤镜，不真实的面部，解剖结构扭曲，畸形手部，多余手指，缺失手指，融合手指，多余肢体，不自然姿势，变形篮子，人造头发，过饱和色彩，刺眼演播室灯光，模糊面部，低分辨率，文字，水印，标志。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789977643868_qz26gy_HStP_xWbQAAun3Z.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Aqsahere_/status/2101861630657359924",
+      "sourceType": "community",
+      "authorName": "Aqsa",
+      "authorHandle": "@Aqsahere_",
+      "createdAt": "2026-09-21T12:00:00.000Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35114",
+      "rawText": "一张写实风格的户外自然抓拍人像，画面中一位年轻女性坐在郁郁葱葱的柑橘园里的质朴木质平台上。她留着深棕色长卷发，发丝自然地垂落在肩头和背部，几缕精致的碎发轻拂脸颊。她头上松松地裹着一条柔和的米色头巾或宽布发带。\n她抬头望向镜头，神情俏皮欢快，一只眼睛眨着，涂着柔和珊瑚红唇膏的嘴唇绽放出灿烂笑容。她的姿态放松而随性，一只手臂弯曲置于身侧，一只手轻轻搭在腰间附近。\n她身穿一件修身的白色无袖纹理上衣，带有精致细节，搭配高腰蓝色牛仔短裤。手腕上戴着一根简单的黑色发圈。\n她身旁放着一个大编织柳条篮，其弯曲的手柄和天然稻草纹理清晰可见。她身下的木质平台呈现出温暖的天然木纹和质朴质感。\n她周围环绕着茂密的绿色花园，长满青草、绿叶植物，还有一棵成熟的柑橘树，树上挂满了无数小巧成熟的橙色果实。粗壮的枝干和鲜绿的叶片填满了背景上方，形成美丽的天然华盖。\n构图：垂直 4:5 人像比例，略微俯视的高角度视角，主体位于画面下方中央，面部清晰可见，篮子在她身旁部分可见，柑橘树填满背景，呈现自然的抓拍框架。\n光线：柔和温暖的自然日光，头发和面部有轻柔的高光，阴影真实，绿植新鲜充满活力，色调略带暖色。\n摄影风格：超写实智能手机摄影，韩式/亚洲生活方式美学，自然皮肤质感，逼真的发丝，详细的柳条和木材纹理，真实的户外色彩，轻微的广角透视，微妙的景深，柔和的胶片颗粒感，高细节，4K。\n负面提示词：动漫，卡通，插画，CGI，3D 渲染，塑料皮肤，过度美颜滤镜，不真实的面部，解剖结构扭曲，畸形手部，多余手指，缺失手指，融合手指，多余肢体，不自然姿势，变形篮子，人造头发，过饱和色彩，刺眼演播室灯光，模糊面部，低分辨率，文字，水印，标志。"
     },
     {
       "id": "community-2101872495544648189",
@@ -20668,48 +21164,6 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35108",
       "rawText": "超写实电影感特写肖像，一位英俊的年轻男子身着精致的黑色定制西装和挺括的白色正装衬衫，浓密的深棕色波浪发向后梳理，呈现自然蓬松感，面部轮廓清晰阳刚，留有淡淡的胡茬，下颌线分明，目光坚定自信地直视镜头，采用四分之三侧面姿势，神情优雅而神秘。戏剧性的影棚布光，左侧带有温暖的琥珀色/橙色轮廓光，背景为深邃的冷调海军蓝，对比强烈，面部高光与阴影层次丰富且立体，浅景深，奢华时尚杂志美学，高端电影级调色，皮肤纹理高度细腻，发丝真实可见，毛孔自然，眼神锐利，专业摄影，85mm 人像镜头，f/1.8，柔和散景，HDR，照片级真实感，超高细节，8K，竖构图，精致的好莱坞风格肖像。"
-    },
-    {
-      "id": "community-2101861630657359924",
-      "title": "个人资料 / 头像 - 柑橘园自然抓拍人像提示词",
-      "description": "用于生成女性在柑橘园中户外自然抓拍人像的提示词，强调自然光线与质朴纹理。",
-      "prompt": "一张写实风格的户外自然抓拍人像，画面中一位年轻女性坐在郁郁葱葱的柑橘园里的质朴木质平台上。她留着深棕色长卷发，发丝自然地垂落在肩头和背部，几缕精致的碎发轻拂脸颊。她头上松松地裹着一条柔和的米色头巾或宽布发带。\n她抬头望向镜头，神情俏皮欢快，一只眼睛眨着，涂着柔和珊瑚红唇膏的嘴唇绽放出灿烂笑容。她的姿态放松而随性，一只手臂弯曲置于身侧，一只手轻轻搭在腰间附近。\n她身穿一件修身的白色无袖纹理上衣，带有精致细节，搭配高腰蓝色牛仔短裤。手腕上戴着一根简单的黑色发圈。\n她身旁放着一个大编织柳条篮，其弯曲的手柄和天然稻草纹理清晰可见。她身下的木质平台呈现出温暖的天然木纹和质朴质感。\n她周围环绕着茂密的绿色花园，长满青草、绿叶植物，还有一棵成熟的柑橘树，树上挂满了无数小巧成熟的橙色果实。粗壮的枝干和鲜绿的叶片填满了背景上方，形成美丽的天然华盖。\n构图：垂直 4:5 人像比例，略微俯视的高角度视角，主体位于画面下方中央，面部清晰可见，篮子在她身旁部分可见，柑橘树填满背景，呈现自然的抓拍框架。\n光线：柔和温暖的自然日光，头发和面部有轻柔的高光，阴影真实，绿植新鲜充满活力，色调略带暖色。\n摄影风格：超写实智能手机摄影，韩式/亚洲生活方式美学，自然皮肤质感，逼真的发丝，详细的柳条和木材纹理，真实的户外色彩，轻微的广角透视，微妙的景深，柔和的胶片颗粒感，高细节，4K。\n负面提示词：动漫，卡通，插画，CGI，3D 渲染，塑料皮肤，过度美颜滤镜，不真实的面部，解剖结构扭曲，畸形手部，多余手指，缺失手指，融合手指，多余肢体，不自然姿势，变形篮子，人造头发，过饱和色彩，刺眼演播室灯光，模糊面部，低分辨率，文字，水印，标志。",
-      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1789977643868_qz26gy_HStP_xWbQAAun3Z.jpg&w=1400&output=webp",
-      "sourceUrl": "https://x.com/Aqsahere_/status/2101861630657359924",
-      "sourceType": "community",
-      "authorName": "Aqsa",
-      "authorHandle": "@Aqsahere_",
-      "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.075Z",
-      "tags": [
-        "人像",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2"
-      ],
-      "style": "社区实测摄影提示词",
-      "lighting": "按原提示词的光线描述执行",
-      "camera": "按原提示词的镜头与景别执行",
-      "palette": "按原提示词的配色关系执行",
-      "mood": "按原提示词的情绪目标执行",
-      "composition": "按原提示词的构图与画幅执行",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "prompt",
-      "category": "平面设计",
-      "metrics": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "bookmarks": 0,
-        "views": 0,
-        "score": 0
-      },
-      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=35114",
-      "rawText": "一张写实风格的户外自然抓拍人像，画面中一位年轻女性坐在郁郁葱葱的柑橘园里的质朴木质平台上。她留着深棕色长卷发，发丝自然地垂落在肩头和背部，几缕精致的碎发轻拂脸颊。她头上松松地裹着一条柔和的米色头巾或宽布发带。\n她抬头望向镜头，神情俏皮欢快，一只眼睛眨着，涂着柔和珊瑚红唇膏的嘴唇绽放出灿烂笑容。她的姿态放松而随性，一只手臂弯曲置于身侧，一只手轻轻搭在腰间附近。\n她身穿一件修身的白色无袖纹理上衣，带有精致细节，搭配高腰蓝色牛仔短裤。手腕上戴着一根简单的黑色发圈。\n她身旁放着一个大编织柳条篮，其弯曲的手柄和天然稻草纹理清晰可见。她身下的木质平台呈现出温暖的天然木纹和质朴质感。\n她周围环绕着茂密的绿色花园，长满青草、绿叶植物，还有一棵成熟的柑橘树，树上挂满了无数小巧成熟的橙色果实。粗壮的枝干和鲜绿的叶片填满了背景上方，形成美丽的天然华盖。\n构图：垂直 4:5 人像比例，略微俯视的高角度视角，主体位于画面下方中央，面部清晰可见，篮子在她身旁部分可见，柑橘树填满背景，呈现自然的抓拍框架。\n光线：柔和温暖的自然日光，头发和面部有轻柔的高光，阴影真实，绿植新鲜充满活力，色调略带暖色。\n摄影风格：超写实智能手机摄影，韩式/亚洲生活方式美学，自然皮肤质感，逼真的发丝，详细的柳条和木材纹理，真实的户外色彩，轻微的广角透视，微妙的景深，柔和的胶片颗粒感，高细节，4K。\n负面提示词：动漫，卡通，插画，CGI，3D 渲染，塑料皮肤，过度美颜滤镜，不真实的面部，解剖结构扭曲，畸形手部，多余手指，缺失手指，融合手指，多余肢体，不自然姿势，变形篮子，人造头发，过饱和色彩，刺眼演播室灯光，模糊面部，低分辨率，文字，水印，标志。"
     },
     {
       "id": "community-2102087832332632517",
@@ -20891,7 +21345,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.075Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20930,7 +21384,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -20971,7 +21425,7 @@
       "authorName": "Maha",
       "authorHandle": "@Aiwithmaha",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21014,7 +21468,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21056,7 +21510,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21099,7 +21553,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21351,7 +21805,7 @@
       "authorName": "あいぼりー",
       "authorHandle": "@HetareIvory",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21390,7 +21844,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21433,7 +21887,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21475,7 +21929,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.076Z",
+      "importedAt": "2026-09-23T17:54:40.867Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -70022,7 +70476,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.080Z",
+      "importedAt": "2026-09-23T17:54:40.871Z",
       "tags": [
         "产品",
         "平面设计",
@@ -70065,7 +70519,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.081Z",
+      "importedAt": "2026-09-23T17:54:40.871Z",
       "tags": [
         "平面设计"
       ],
@@ -70106,7 +70560,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T12:55:58.081Z",
+      "importedAt": "2026-09-23T17:54:40.871Z",
       "tags": [
         "平面设计"
       ],
