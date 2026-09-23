@@ -2,21 +2,22 @@ import type { JournalSourceArticle } from "@/lib/journal";
 
 export const jiaZiArticle: JournalSourceArticle = {
   "slug": "jia-zi-day-pillar",
+  pillar: "甲子",
   "publishedAt": "2026-09-14",
-  "updatedAt": "2026-09-14",
+  "updatedAt": "2026-09-23",
   "translations": {
     "en": {
-      "title": "The Oceanic Sequoia: personality, love, career & famous birthdays",
-      "description": "Meet The Oceanic Sequoia: a visionary mind with a private heart. Explore love, career and the birthday connection to Olivia Rodrigo and Red Cross founder Henry Dunant.",
-      "topic": "The Oceanic Sequoia",
-      "introduction": "They can see the whole future of a project before anyone else has opened a notebook. Ask how they feel, though, and the answer may take much longer. The Oceanic Sequoia is the thinker with a crowded inner world: generous with ideas, selective about intimacy and quietly determined to build something that matters. What happens when that brilliant mind becomes its own bottleneck—and what kind of love can reach it?",
-      "takeaway": "The Oceanic Sequoia tension: a mind that wants to lead, a heart that wants to be understood, and a life that needs an anchor. Its most compelling story is turning insight into something other people can feel, use and trust.",
+      "title": "Jia Zi Day Pillar (甲子): The Azure Rat, Love & Personality",
+      "description": "Meet The Azure Rat: a visionary mind with a private heart. Explore love, career and the birthday connection to Olivia Rodrigo and Red Cross founder Henry Dunant.",
+      "topic": "The Azure Rat",
+      "introduction": "They can see the whole future of a project before anyone else has opened a notebook. Ask how they feel, though, and the answer may take much longer. The Azure Rat is the thinker with a crowded inner world: generous with ideas, selective about intimacy and quietly determined to build something that matters. What happens when that brilliant mind becomes its own bottleneck—and what kind of love can reach it?",
+      "takeaway": "The Azure Rat tension: a mind that wants to lead, a heart that wants to be understood, and a life that needs an anchor. Its most compelling story is turning insight into something other people can feel, use and trust.",
       "sections": [
         {
           "id": "pair-and-image",
-          "title": "1. The Oceanic Sequoia: a mind with deep roots",
+          "title": "1. The Azure Rat: a mind with deep roots",
           "paragraphs": [
-            "A great tree surrounded by open water: the Oceanic Sequoia has a wide horizon, a deep inner life and a constant need for somewhere to take root. In DestinyPixel’s collection of 60 birthday characters, this is the thoughtful pioneer—the person who can see the shape of an idea before anyone else knows where to begin.",
+            "Jia Zi combines Yang Wood with the Rat branch of Water. Our current animal card is The Azure Rat; earlier editions called this pair the Oceanic Sequoia. The tree-and-water metaphor still describes the traditional elements, while the new artwork makes the day animal visible. In DestinyPixel’s collection of 60 birthday characters, this is the thoughtful pioneer—the person who can see the shape of an idea before anyone else knows where to begin.",
             "The image brings together two qualities: the upward reach of a tree and the curiosity of water that keeps moving. Learning, imagination and guidance nourish this character. The challenge is giving that abundance a direction. Our collection develops traditional symbolism into original character portraits; these are cultural interpretations, not scientifically established personality types."
           ],
           "sources": [
@@ -30,7 +31,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "personality",
           "title": "2. Personality: easy to talk to, harder to truly know",
           "paragraphs": [
-            "The appealing side of this portrait is quick understanding without constant self-advertising. the Oceanic Sequoia listens, spots connections and remembers the question everyone else has overlooked. There is a principled streak, too: a wish to do work worth respecting and a reluctance to cheapen an idea simply to win approval. In a group, this can make the person feel like a quiet source of direction.",
+            "The appealing side of this portrait is quick understanding without constant self-advertising. the Azure Rat listens, spots connections and remembers the question everyone else has overlooked. There is a principled streak, too: a wish to do work worth respecting and a reluctance to cheapen an idea simply to win approval. In a group, this can make the person feel like a quiet source of direction.",
             "The difficult side appears when discernment turns into endless qualification. Every promising route has a flaw; every first draft falls short of the world imagined in private. Someone who seems calm outside may be rehearsing ten possible futures inside. The tension is sharp: a giant in thought who can become a beginner in action. The blind spot is expecting the first attempt to deserve the reputation you hope to earn."
           ],
           "table": {
@@ -62,7 +63,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "love",
           "title": "3. Love: the conversation is part of the attraction",
           "paragraphs": [
-            "For the Oceanic Sequoia character, attraction often begins with a mind: a surprising question, a person who has their own interests, a conversation that continues long after the restaurant closes. Admiration needs substance. Someone who can disagree thoughtfully may be more compelling than someone who agrees with everything. Shared curiosity keeps the relationship alive after the novelty fades.",
+            "For the Azure Rat character, attraction often begins with a mind: a surprising question, a person who has their own interests, a conversation that continues long after the restaurant closes. Admiration needs substance. Someone who can disagree thoughtfully may be more compelling than someone who agrees with everything. Shared curiosity keeps the relationship alive after the novelty fades.",
             "Affection can look practical and attentive: remembering an obscure interest, finding a book you mentioned months ago, helping untangle a problem. The longing underneath is intimate—to be understood without having to explain every layer. That longing can also set an impossible test. A partner should not have to read silence as proof of love or guess which unspoken expectation they have failed."
           ]
         },
@@ -70,7 +71,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "relationship-friction",
           "title": "4. The emotional island—and the way back",
           "paragraphs": [
-            "Here is the familiar scene: a partner says, “I had an awful day.” the Oceanic Sequoia starts mapping solutions. The partner wanted comfort; the thinker believes they have offered care. After an argument, the same pattern can turn into retreat: “I need to work this out alone.” Without a clear return, that private processing starts to feel like a closed door.",
+            "Here is the familiar scene: a partner says, “I had an awful day.” the Azure Rat starts mapping solutions. The partner wanted comfort; the thinker believes they have offered care. After an argument, the same pattern can turn into retreat: “I need to work this out alone.” Without a clear return, that private processing starts to feel like a closed door.",
             "A fitting relationship dynamic combines mental companionship with warmth and reliability. Space works when it has a bridge back: “I need an hour; then I want to hear the rest.” Before solving a problem, ask whether the other person wants advice or company. Someone who respects independence while asking for clear, consistent contact gives this archetype room to become both thoughtful and emotionally present."
           ]
         },
@@ -78,8 +79,8 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "career",
           "title": "5. Career: get paid for what you can make clear",
           "paragraphs": [
-            "The strongest career image for the Oceanic Sequoia is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
-            "At work, the danger is becoming indispensable in discussions but invisible in delivery. A brilliant strategy that never meets a customer, student or colleague cannot build a track record. The the Oceanic Sequoia breakthrough is often a repeatable output: a course, a working prototype, a published body of work or a service with a clear result. A collaborator who is good at schedules and implementation can help turn breadth of vision into momentum."
+            "The strongest career image for the Azure Rat is the creator of ideas, frameworks and understanding. Education, research, writing, design strategy, consulting and system-building offer different ways to turn a crowded inner world into useful work. The common thread is the chance to learn deeply, connect scattered information and explain something others could not yet see.",
+            "At work, the danger is becoming indispensable in discussions but invisible in delivery. A brilliant strategy that never meets a customer, student or colleague cannot build a track record. The the Azure Rat breakthrough is often a repeatable output: a course, a working prototype, a published body of work or a service with a clear result. A collaborator who is good at schedules and implementation can help turn breadth of vision into momentum."
           ]
         },
         {
@@ -102,8 +103,8 @@ export const jiaZiArticle: JournalSourceArticle = {
           "id": "famous-birthdays",
           "title": "8. Famous birthdays: Olivia Rodrigo and Henry Dunant",
           "paragraphs": [
-            "Olivia Rodrigo turns private feeling into songs that other people recognize themselves in. Her songwriting offers a vivid companion to the Oceanic Sequoia story: a crowded inner world becomes something shareable. The interesting question is what happens between feeling everything and finding the words that make someone else say, “I know exactly what you mean.” Her published birthday, 20 February 2003, maps to this character in our date-based collection.",
-            "Henry Dunant, a founder of the Red Cross and a recipient of the first Nobel Peace Prize, gives the portrait a different scale. After witnessing the aftermath of the Battle of Solferino, he pressed for organized help for wounded soldiers. Here, an idea grew into work that outlasted its originator. His published birthday, 8 May 1828, also maps to the Oceanic Sequoia. The shared calendar pattern is a point of connection; their lives and achievements have their own explanations."
+            "Olivia Rodrigo turns private feeling into songs that other people recognize themselves in. Her songwriting offers a vivid companion to the Azure Rat story: a crowded inner world becomes something shareable. The interesting question is what happens between feeling everything and finding the words that make someone else say, “I know exactly what you mean.” Her published birthday, 20 February 2003, maps to this character in our date-based collection.",
+            "Henry Dunant, a founder of the Red Cross and a recipient of the first Nobel Peace Prize, gives the portrait a different scale. After witnessing the aftermath of the Battle of Solferino, he pressed for organized help for wounded soldiers. Here, an idea grew into work that outlasted its originator. His published birthday, 8 May 1828, also maps to the Azure Rat. The shared calendar pattern is a point of connection; their lives and achievements have their own explanations."
           ],
           "table": {
             "headings": [
@@ -115,12 +116,12 @@ export const jiaZiArticle: JournalSourceArticle = {
               [
                 "Olivia Rodrigo",
                 "2003-02-20",
-                "The Oceanic Sequoia"
+                "The Azure Rat"
               ],
               [
                 "Henry Dunant · Red Cross founder",
                 "1828-05-08",
-                "The Oceanic Sequoia"
+                "The Azure Rat"
               ]
             ]
           },
@@ -140,7 +141,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "title": "9. Find your own place in the story",
           "paragraphs": [
             "Behind the artwork, this character corresponds to the traditional calendar pair Jia Zi (甲子). The examples above use published Gregorian birthdays and the same civil-date convention as our free finder. Birth times and places can matter near a day boundary. Start with your birthday to meet the character; add fuller details when you want to explore the wider birth map.",
-            "If the Oceanic Sequoia is your result, start with the part that feels most familiar: the unfinished idea, the high standard that protects you, or the affection that stays in your head. The growth of The Oceanic Sequoia is finding a shore: work someone can use, love someone can recognize, and a direction that becomes real because you keep showing up."
+            "If the Azure Rat is your result, start with the part that feels most familiar: the unfinished idea, the high standard that protects you, or the affection that stays in your head. The growth of The Azure Rat is finding a shore: work someone can use, love someone can recognize, and a direction that becomes real because you keep showing up."
           ]
         }
       ],
@@ -150,17 +151,17 @@ export const jiaZiArticle: JournalSourceArticle = {
       }
     },
     "zh": {
-      "title": "甲子日柱：聪明、清高、容易内耗？性格、感情、事业与名人解析",
-      "description": "甲子日柱的人有什么性格？为什么重视精神共鸣，却容易成为感情里的孤岛？结合海中神木卡片解读事业财运，并核对徐若瑄、宋庆龄的公开生日。",
+      "title": "甲子日柱：深蓝灵鼠的性格、感情、事业与名人解析",
+      "description": "甲子日柱的人有什么性格？为什么重视精神共鸣，却容易成为感情里的孤岛？结合深蓝灵鼠卡片解读事业财运，并核对徐若瑄、宋庆龄的公开生日。",
       "topic": "甲子 · Jia Zi",
       "introduction": "别人还没打开笔记本，你已经把一个项目的未来想了一遍。可轮到别人问「你到底怎么想我」，你反而很难给出一句简单的答案。甲子最迷人的地方，是脑子里有一个辽阔的世界；最让人心疼的地方，是常常独自困在那个世界里。这样的聪明怎样变成事业？什么样的感情，才能真正走进这座岛？",
-      "takeaway": "甲子的核心张力：脑子想走在前面，感情希望被人读懂，生活却需要一个落得下来的支点。「海中神木」的成长，是让自己的智慧变成别人用得上、感受得到、愿意相信的东西。",
+      "takeaway": "甲子的核心张力：脑子想走在前面，感情希望被人读懂，生活却需要一个落得下来的支点。「深蓝灵鼠」的成长，是让自己的智慧变成别人用得上、感受得到、愿意相信的东西。",
       "sections": [
         {
           "id": "pair-and-image",
-          "title": "1. 海中神木：有远见，也需要扎根",
+          "title": "1. 深蓝灵鼠：有远见，也需要扎根",
           "paragraphs": [
-            "甲子是六十干支循环的第一组。甲属阳木，常用向上生长的大树比喻；子对应鼠与水，在五行关系里，水能生木。DestinyPixel 把它画成「海中神木」：眼前是辽阔的海，心里有不断生长的力量，却也一直在寻找能让自己扎根的地方。",
+            "甲子是六十干支循环的第一组。甲属阳木，常用向上生长的大树比喻；子对应鼠与水，在五行关系里，水能生木。DestinyPixel 现在用「深蓝灵鼠」表现这个组合，早期曾称「海中神木」。大树与水的比喻保留五行关系，新卡面则让日支的鼠直接出现。动物名称与画面是本站原创，并非古籍中的固定称号。",
             "按八字的十神关系，子中所藏的癸水，对甲木而言是「正印」。把这个词讲得直白些，就是学习、知识、师长与滋养自己的支持。下面的性格画像结合了这套传统象征与我们的原创卡片故事，属于命理文化中的原型解读，不是经过科学验证的人格测试；其余三柱和真实人生经历，仍然会改变一个人的样子。"
           ],
           "sources": [
@@ -284,7 +285,7 @@ export const jiaZiArticle: JournalSourceArticle = {
           "title": "9. 找到属于你的那张卡，再看完整的你",
           "paragraphs": [
             "上面的名人例子使用公开公历生日，采用与免费工具一致的民用日期换日规则；没有把未知的出生时刻当成已知，也不代表核实了完整八字。接近日界的出生情况，还需要进一步核对时间与地点。你可以先用自己的生日找到卡片，再用更完整的出生资料继续探索。",
-            "如果你测出来也是甲子，不妨先认领最有共鸣的那一部分：一个还没动手的想法，一套保护自己的高标准，或一份留在脑海里、还没被对方感受到的喜欢。「海中神木」找到岸的那一天，或许就是你的智慧有人用，你的爱有人懂，你想去的方向，也终于留下了持续往前走的脚印。"
+            "如果你测出来也是甲子，不妨先认领最有共鸣的那一部分：一个还没动手的想法，一套保护自己的高标准，或一份留在脑海里、还没被对方感受到的喜欢。「深蓝灵鼠」找到岸的那一天，或许就是你的智慧有人用，你的爱有人懂，你想去的方向，也终于留下了持续往前走的脚印。"
           ]
         }
       ],

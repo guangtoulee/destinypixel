@@ -1,4 +1,5 @@
 "use client";
+import { pillarArticleHref, pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
 
 import { destinySupportHref } from "@/lib/support-contact";
 
@@ -15,7 +16,7 @@ import styles from "./day-pillar-experience.module.css";
 const copy = {
   en: {
     home: "Home", tools: "Explore", language: "Language", eyebrow: "A FREE FIRST GLIMPSE", title: "One birthday.\nA symbolic companion.",
-    intro: "Discover one of sixty birthday characters, from the Oceanic Sequoia to the Dewy Rabbit. Explore personality, relationship patterns and work strengths, free and without an account.",
+    intro: "Discover one of sixty birthday characters, from the Azure Rat to the Dew Rabbit. Explore personality, relationship patterns and work strengths, free and without an account.",
     date: "Your Gregorian birth date", reveal: "Reveal my character", busy: "Finding your card…", privacy: "Calculated in this page. Your date is not uploaded or saved.",
     conventionTitle: "A date preview, with room to refine.", convention: "Your first card comes from your calendar birth date. A full birth map also considers time and place, which can change a result close to midnight.",
     invalid: "Enter a valid Gregorian date, including the year.", range: "Choose a birth date from 1800 to 2100.", future: "Your birth date cannot be in the future.", unavailable: "The card calculator could not load. Please try again.",
@@ -127,7 +128,8 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       <div className={styles.readingTitle}>{locale === "zh" && <span className={styles.pillarSeal}>{card.pillar}</span>}<div><p className={styles.eyebrow}>{text.collection}</p><h2 id="day-card-title">{card.name}</h2></div><button type="button" className={styles.shareButton} onClick={() => void copyLink()}><Copy size={15} aria-hidden="true" />{text.share}</button></div>
       <DayPillarReading insight={card.insight} locale={locale} growth={card.growth}/>
       <p className={styles.cultural}>{text.cultural}</p>
-      {card.pillar === "甲子" && <a className={styles.journalLink} href={locale === "zh" ? "/journal/jia-zi-day-pillar?locale=zh" : "/journal/jia-zi-day-pillar"}>{locale === "zh" ? "甲子详解：性格、感情、事业与同日柱名人" : "The Oceanic Sequoia: personality, love & famous birthdays"}<ArrowRight size={16} aria-hidden="true" /></a>}
+      <a className={styles.journalLink} href={pillarArticleHref(card.pillar, locale)}>{locale === "zh" ? `${card.pillar}日柱详解：性格、感情与事业` : "Read this Day Pillar portrait"}<ArrowRight size={16} aria-hidden="true" /></a>
+      <a className={styles.journalLink} href={pillarLibraryHref(locale)}>{pillarLibraryCopy(locale).browse}</a>
       {shareLink && <div className={styles.shareBox}><p role="status"><Check size={14} aria-hidden="true" />{shareMessage}</p><label htmlFor="day-card-share">{text.shareLabel}</label><input id="day-card-share" readOnly value={shareLink} onFocus={(event) => event.target.select()} /><small>{text.shareNote}</small></div>}
     </section>
     <section className={styles.nextStep}><div><p className={styles.eyebrow}>{text.next}</p><h2>{text.nextTitle}</h2><p>{text.nextBody}</p><p className={styles.nextNote}>{text.nextNote}</p></div><div className={styles.nextActions}><Link className={styles.primary} href={`${home}#report`} onClick={() => trackToolEvent("tool_start", "day_pillar")}>{text.nextAction}<MoveUpRight size={17} aria-hidden="true" /></Link><Link className={styles.atelier} href={locale === "zh" ? "/atelier?locale=zh" : "/atelier"}><Gem size={16} aria-hidden="true" />{text.atelier}<ArrowRight size={14} aria-hidden="true" /></Link></div></section>

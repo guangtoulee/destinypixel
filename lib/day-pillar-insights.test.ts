@@ -29,9 +29,9 @@ test("a complete calendar cycle has distinct public readings in all four edition
   }
 });
 
-test("workbook identities map by stem-branch, without renaming the established English brand", () => {
+test("public identities follow the current animal artwork by stem-branch", () => {
   const cards = getDayPillarCards("en");
-  assert.equal(cards.find(card => card.pillar === "甲子")?.name, "The Oceanic Sequoia");
+  assert.equal(cards.find(card => card.pillar === "甲子")?.name, "The Azure Rat");
   assert.match(getDayPillarInsight("戊寅", "zh")!.headline, /扛事/);
   assert.match(getDayPillarInsight("癸卯", "en")!.headline, /Gentleness/);
   assert.equal(getDayPillarInsight("甲丑", "en"), null);

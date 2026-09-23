@@ -7,6 +7,9 @@ import { journalRussian } from "@/lib/journal-ru";
 import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-growth";
 import { loveFortuneArticle, loveFortuneRussian } from "@/lib/journal-love-fortune";
 import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-elements";
+import { pillarProfileArticles, pillarProfileRussian } from "@/lib/journal-pillar-profiles";
+import { getPillarImagePath } from "@/lib/archetype-assets";
+import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
 import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
 export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
 export type { JournalLocale } from "@/lib/journal-locales";
@@ -30,6 +33,8 @@ export type JournalTranslation = {
 };
 export type JournalArticle = {
   slug: string;
+  pillar?: string;
+  kind?: "portrait";
   relatedSlug?: string;
   publishedAt: string;
   updatedAt: string;
@@ -43,6 +48,7 @@ const journalSources: JournalSourceArticle[] = [
   ...searchGrowthArticles,
   crystalCareArticle,
   jiaZiArticle,
+  ...pillarProfileArticles,
   dayPillarIntroduction,
   {
     slug: "prepare-birth-date-time-place",
@@ -273,7 +279,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
 }
 
 export const journalArticles: JournalArticle[] = journalSources.map((article) => {
-  const ru = article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug];
+  const ru = pillarProfileRussian[article.slug] ?? (article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
 });
@@ -294,14 +300,20 @@ export function journalMetadata(locale: JournalLocale, article?: JournalArticle)
   const title = copy?.title ?? journalUi[locale].title;
   const description = copy?.description ?? journalUi[locale].description;
   const canonical = journalHref(locale, article?.slug);
+  const images = [article?.pillar ? getPillarImagePath(article.pillar) : "/opengraph-image"];
   return {
     title: { absolute: `${title} | ${siteName}` },
     description,
     alternates: { canonical, languages: journalAlternates(article?.slug) },
-    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images: ["/opengraph-image"], locale: journalOgLocales[locale], alternateLocale: journalLocales.filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: article.updatedAt } : {}) },
-    twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] },
+    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images, locale: journalOgLocales[locale], alternateLocale: journalLocales.filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: article.updatedAt } : {}) },
+    twitter: { card: "summary_large_image", title, description, images },
     robots: { index: true, follow: true },
   };
+}
+
+export function dayPillarLibraryMetadata(locale: JournalLocale): Metadata {
+  const copy = pillarLibraryCopy(locale);
+  return { title: { absolute: `${copy.title} | ${siteName}` }, description: copy.description, alternates: { canonical: pillarLibraryHref(locale), languages: journalAlternates("day-pillars") }, openGraph: { type: "website", title: copy.title, description: copy.description, url: pillarLibraryHref(locale), locale: journalOgLocales[locale], images: [getPillarImagePath("甲子")] }, twitter: { card: "summary_large_image", title: copy.title, description: copy.description, images: [getPillarImagePath("甲子")] }, robots: { index: true, follow: true } };
 }
 
 export function journalArticleSchema(article: JournalArticle, locale: JournalLocale) {
@@ -309,7 +321,7 @@ export function journalArticleSchema(article: JournalArticle, locale: JournalLoc
   const url = absoluteUrl(journalHref(locale, article.slug));
   const home = absoluteUrl(journalHomeHref(locale));
   return [
-    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: article.updatedAt, author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href) ?? []), isAccessibleForFree: true },
+    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: article.updatedAt, ...(article.pillar ? { image: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}), author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href.startsWith("/") ? absoluteUrl(source.href) : source.href) ?? []), isAccessibleForFree: true },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: journalUi[locale].home, item: home }, { "@type": "ListItem", position: 2, name: journalUi[locale].journal, item: absoluteUrl(journalHref(locale)) }, { "@type": "ListItem", position: 3, name: copy.title, item: url }] },
-  ];
+  ] as const;
 }

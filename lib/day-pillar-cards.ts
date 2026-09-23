@@ -1,5 +1,6 @@
 import { getPillarImagePath, getPillarSlug } from "@/lib/archetype-assets";
-import { pillarsDB } from "@/lib/pillars";
+import { dayPillarCycle, pillarName } from "./day-pillar-library";
+import { pillarPractices } from "./day-pillar-practices";
 import { getLocalizedDayPillarInsight } from "./day-pillar-insights-localized";
 import type { DayPillarInsight } from "./day-pillar-insights";
 import type { ReportLocale } from "./report-i18n";
@@ -18,14 +19,14 @@ export type DayPillarCard = {
 
 /** Public editorial fields only. Purchased/generated report data never enters this projection. */
 export function getDayPillarCards(locale: ReportLocale): DayPillarCard[] {
-  const language = locale === "zh" || locale === "zh-TW" ? "cn" : "en";
+  const language = locale === "zh" || locale === "zh-TW" ? 1 : locale === "ru" ? 2 : 0;
   const localize = (text: string) => locale === "zh-TW" ? toTraditional(text) : text;
-  return Object.entries(pillarsDB).map(([pillar, profile]) => {
+  return dayPillarCycle.map((pillar) => {
     const insight = getLocalizedDayPillarInsight(pillar, locale);
     if (!insight) throw new Error(`Missing public day-pillar reading: ${pillar}`);
     return {
     pillar, slug: getPillarSlug(pillar), image: getPillarImagePath(pillar),
-    name: localize(profile.name[language]), essence: locale === "ru" ? insight.personality : localize(profile.essence[language]), growth: locale === "ru" ? "" : localize(profile.growth[language]), insight,
+    name: pillarName(pillar, locale), essence: insight.personality, growth: localize(pillarPractices[pillar][language]), insight,
     };
   });
 }

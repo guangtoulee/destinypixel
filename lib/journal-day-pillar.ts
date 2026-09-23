@@ -3,13 +3,13 @@ import type { JournalSourceArticle } from "@/lib/journal";
 export const dayPillarIntroduction: JournalSourceArticle = {
   "slug": "what-is-a-day-pillar",
   "publishedAt": "2026-09-12",
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-23",
   "translations": {
     "en": {
       "title": "Your birthday character: a guide to the 60 DestinyPixel archetypes",
-      "description": "Discover the stories behind DestinyPixel’s 60 birthday characters, from the Oceanic Sequoia to the Dewy Rabbit, and learn how to find your free card.",
+      "description": "Discover the stories behind DestinyPixel’s 60 birthday characters, from the Azure Rat to the Dew Rabbit, and learn how to find your free card.",
       "topic": "The 60 Day Pillars",
-      "introduction": "The Oceanic Sequoia. The Dewy Rabbit. The Solar Stallion. A birthday can open the door to a character you remember, with its own strengths, relationship patterns and possibilities for growth. Here is how to find your card, read its story and understand the traditional calendar behind the collection.",
+      "introduction": "The Azure Rat. The Dew Rabbit. The Sun Horse. A birthday can open the door to a character you remember, with its own strengths, relationship patterns and possibilities for growth. Here is how to find your card, read its story and understand the traditional calendar behind the collection.",
       "takeaway": "Your Day Pillar is a pair of calendar symbols assigned to your birth day. DestinyPixel adds an imaginative card interpretation. Use the story to notice patterns and ask better questions about yourself.",
       "sections": [
         {
@@ -67,9 +67,9 @@ export const dayPillarIntroduction: JournalSourceArticle = {
         },
         {
           "id": "jia-zi-example",
-          "title": "4. Meet the Oceanic Sequoia",
+          "title": "4. Meet the Azure Rat",
           "paragraphs": [
-            "Our Oceanic Sequoia card is called The Oceanic Sequoia: an imagined tree amid open water. We use that image to explore a tension between expansive thinking and steady action. It is a storytelling choice, rather than a historical English translation of 甲子.",
+            "Our Jia Zi card is The Azure Rat, bringing the Rat branch into view. Earlier artwork used the name Oceanic Sequoia to emphasize Wood supported by Water. The current portrait explores the same tension between expansive thinking and steady action. It is a storytelling choice, rather than a historical English translation of 甲子.",
             "Picture someone who can see an entire project before it exists. They connect ideas quickly, enjoy working independently and keep refining the plan. The difficult moment arrives when planning needs to become a first attempt. A useful reading asks: “Does preparing sometimes become my way of postponing?”",
             "In a relationship, the same story might open a conversation about needing thinking space while staying emotionally present. Try saying, “I need some time to work this through; let’s talk after dinner.” That gives another person something clearer than silence. If this pattern does not fit your experience, leave it behind."
           ]
@@ -102,9 +102,9 @@ export const dayPillarIntroduction: JournalSourceArticle = {
     },
     "zh": {
       "title": "日柱是什么？用六十甲子读懂你的第一张卡片",
-      "description": "分清日柱、日主和生肖，以甲子「海中神木」为例，了解六十甲子的历法结构、卡片意象和可以实际尝试的自我观察方法。",
+      "description": "分清日柱、日主和生肖，以甲子「深蓝灵鼠」为例，了解六十甲子的历法结构、卡片意象和可以实际尝试的自我观察方法。",
       "topic": "六十日柱",
-      "introduction": "输入生日后，你得到两个字：甲子。旁边是一张名为「海中神木」的卡片。哪部分来自历法，哪部分是围绕它展开的故事？把这两件事弄清楚，第一次读日柱就容易多了。这篇文章用少量必要术语和一个具体例子，带你进入六十甲子，也让卡片上的文字与日常经历产生联系。",
+      "introduction": "输入生日后，你得到两个字：甲子。旁边是一张名为「深蓝灵鼠」的卡片。哪部分来自历法，哪部分是围绕它展开的故事？把这两件事弄清楚，第一次读日柱就容易多了。这篇文章用少量必要术语和一个具体例子，带你进入六十甲子，也让卡片上的文字与日常经历产生联系。",
       "takeaway": "日柱是出生那一天对应的干支组合。DestinyPixel 在此基础上创作了卡片意象，可以用来观察自己的习惯、提出更具体的问题。",
       "sections": [
         {
@@ -164,7 +164,7 @@ export const dayPillarIntroduction: JournalSourceArticle = {
           "id": "jia-zi-example",
           "title": "4. 甲子：让想法迈出第一步",
           "paragraphs": [
-            "我们目前的甲子卡片叫「海中神木」，英文是 The Oceanic Sequoia。水面上的树是一种创作意象，用来讨论开阔思考与踏实行动之间的张力；它不是「甲子」这个词的历史译名。",
+            "我们目前的甲子卡片叫「深蓝灵鼠」，英文是 The Azure Rat。甲木与子水提供了大树与水的比喻，用来讨论开阔思考与踏实行动之间的张力；它不是「甲子」这个词的历史译名。",
             "想象这样一个人：项目还没开始，他已经看到了整个轮廓。他善于联系不同想法，喜欢独立思考，也不断打磨计划。真正困难的时刻，是把准备转化为第一次尝试。可以由此问自己：「我有没有把继续准备，当成推迟行动的方法？」",
             "放到关系里，这个故事可以引出另一个具体话题：需要独处思考时，怎样让对方仍然感受到回应？试着说「我需要一点时间想清楚，晚饭后我们再聊」，比直接沉默更清楚。如果这些情境与你的经验不符，就不用勉强对号入座。"
           ]

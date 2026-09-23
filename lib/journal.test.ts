@@ -15,7 +15,7 @@ test("published famous birthdays reproduce the featured day pillar in every edit
     assert.equal(section.sources?.length, 2);
     for (const [, date, result] of section.table!.rows) {
       assert.deepEqual(calculateDateDayPillar(date), { ok: true, pillar: "甲子" });
-      assert.match(result, locale === "en" ? /Oceanic Sequoia/ : /甲子/);
+      assert.match(result, locale === "en" ? /Azure Rat/ : /甲子/);
     }
   }
 });
@@ -26,7 +26,7 @@ test("Traditional Chinese preserves prose meaning instead of applying software t
 
 test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 1) * journalLocales.length);
+  assert.equal(entries.length, (journalArticles.length + 2) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
     for (const locale of journalLocales) {
@@ -65,7 +65,7 @@ test("articles have translated sections, truthful free Article schema and useful
     const copy = article.translations.en;
     const body = [copy.introduction, copy.takeaway, ...copy.sections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.steps ?? []), ...(section.table ? [...section.table.headings, ...section.table.rows.flat()] : [])])].join(" ");
     const words = body.trim().split(/\s+/).length;
-    assert.ok(words >= 600, `${article.slug}: ${words} words`);
+    assert.ok(words >= (article.kind === "portrait" ? 280 : 600), `${article.slug}: ${words} words`);
   }
 });
 
@@ -79,10 +79,10 @@ test("birth form feedback renders only known localized errors", () => {
 });
 
 
-test("English leads with the established character and uses a single calendar reference", () => {
+test("English identifies the searchable calendar pair and current animal card", () => {
   const copy = journalArticles.find(item => item.slug === "jia-zi-day-pillar")!.translations.en;
-  assert.match(copy.title, /^The Oceanic Sequoia/);
-  assert.equal((JSON.stringify(copy).match(/Jia Zi/g) ?? []).length, 1);
+  assert.match(copy.title, /^Jia Zi Day Pillar \(甲子\): The Azure Rat/);
+
   const names = copy.sections.find(s => s.id === "famous-birthdays")!.table!.rows.map(row => row[0]);
   assert.deepEqual(names, ["Olivia Rodrigo", "Henry Dunant · Red Cross founder"]);
 });

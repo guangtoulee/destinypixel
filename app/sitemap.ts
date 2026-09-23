@@ -1,3 +1,4 @@
+import { getPillarImagePath } from "@/lib/archetype-assets";
 import { compatibilityLocales, compatibilityHref, compatibilityAlternates } from "@/lib/compatibility/copy";
 import type { MetadataRoute } from "next";
 import { discoveryLocales, discoveryHref, discoveryAlternates } from "@/lib/discovery";
@@ -23,7 +24,7 @@ const publicRoutes = [
 
 function safeJournalRoutes(): MetadataRoute.Sitemap {
   try {
-    return [undefined, ...journalArticles].flatMap((article) => {
+    return [undefined, { slug: "day-pillars", updatedAt: "2026-09-23" }, ...journalArticles].flatMap((article) => {
       const languages = Object.fromEntries(Object.entries(journalAlternates(article?.slug)).map(([language, href]) => [language, absoluteUrl(href)]));
       return journalLocales.map((locale) => ({
         url: absoluteUrl(journalHref(locale, article?.slug)),
@@ -32,6 +33,7 @@ function safeJournalRoutes(): MetadataRoute.Sitemap {
           journalArticles.map((item) => item.updatedAt).sort().at(-1),
         changeFrequency: article ? ("monthly" as const) : ("weekly" as const),
         priority: article ? 0.7 : 0.75,
+        ...(article && "pillar" in article && article.pillar ? { images: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}),
         alternates: { languages },
       }));
     });

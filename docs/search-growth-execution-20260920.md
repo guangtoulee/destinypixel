@@ -70,3 +70,7 @@ git diff --check
 HTTP检查脚本只读，可将首个参数替换为正式域名。末尾日期可省略以检查全体文章；它验证状态码、单一H1、语言标题、canonical、Article、hreflang、sitemap和新增工具内链，不宣称能证明Google已收录。浏览器另查320px与桌面排版。
 
 Google建议优先解决人的实际问题，不为搜索制造大批薄页，也不靠虚改日期制造新鲜感；本次任务因此采用每次一项实质更新。[Google有用内容指南](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+
+## 2026-09-23 用户专项：六十日柱图文库
+
+用户直接授权把已有60个日柱资料和卡图整理为完整独立文章库。本轮新增59篇参考画像并修订既有甲子长文，提供四语言，总目录 `/journal/day-pillars`。这次专项不改周二/周五每次一项实质更新的日常节奏，也不需要未来再次逐日首发相同60篇。后续应根据实际查询和用户问题补充现有页。资料边界、外部团队任务单、验证及上线记录见 [六十日柱发布记录](day-pillar-library-20260923.md)。

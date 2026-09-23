@@ -1279,6 +1279,7 @@ export default function DestinyWhiteExperience({
           <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
             {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи" : "Journal"}
           </a>
+          <a href={locale === "en" ? "/journal/day-pillars" : `/journal/day-pillars?locale=${locale}`}>{copyLocale === "zh" ? "六十日柱图文" : locale === "ru" ? "60 столпов дня" : "60 Day Pillar portraits"}</a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}
           </a>

@@ -7,7 +7,7 @@ import { normalizeReportLocale } from "@/lib/report-i18n";
 import promptSitemap from "@/app/prompt/sitemap";
 import { getIndexablePromptItems, promptItemHref } from "@/lib/prompt-library";
 import { absoluteUrl, canonicalPagePath, languageAlternates, makePageMetadata, routeSeo } from "@/lib/seo";
-import { getJournalArticle, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
+import { getJournalArticle, journalMetadata, dayPillarLibraryMetadata, normalizeJournalLocale } from "@/lib/journal";
 
 test("translated landing pages keep their own canonical and translated search text", () => {
   const zh = makePageMetadata({ ...routeSeo.home, locale: "zh" });
@@ -60,7 +60,9 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
       assert.ok(target, `${variant} needs its own sitemap entry`);
       assert.deepEqual(target.alternates, entry.alternates);
       const url = new URL(variant);
-      const canonical = url.pathname === "/journal" || url.pathname.startsWith("/journal/")
+      const canonical = url.pathname === "/journal/day-pillars"
+        ? dayPillarLibraryMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined)).alternates?.canonical
+        : url.pathname === "/journal" || url.pathname.startsWith("/journal/")
         ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
         : url.pathname === "/day-pillar"
           ? `/day-pillar${url.searchParams.get("locale") === "zh" ? "?locale=zh" : ""}`
