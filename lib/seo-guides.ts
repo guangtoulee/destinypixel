@@ -106,7 +106,7 @@ export const seoGuides: SeoGuide[] = [
       "Tarot names feelings and motives; I Ching / liuyao frames tendency, obstacle, and timing. Pick one sincere question—then try DestinyPixel’s Question Oracle.",
     h1: "I Ching vs Tarot: Which to Use for One Question?",
     paragraphs: [
-      "For one clear question, people often reach for tarot or the I Ching. Destiny Pixel’s oracle lane sits closer to the I Ching / liuyao tradition: hexagrams, changing lines, and how a situation is structured in time—not a deck of picture archetypes.",
+      "For one clear question, people often reach for Tarot cards or an I Ching hexagram. These are distinct traditions. DestinyPixel’s Question Oracle combines three Tarot cards with a six-line, hexagram-inspired reading derived from the question time. It is a modern combination, rather than a conventional coin-cast or yarrow-stalk I Ching consultation.",
       "Tarot shines when you need language for feelings, motives, and the story you are telling yourself. I Ching / liuyao shines when you care about tendency, obstacle, and rough timing (“push now / wait”). Both work best as one sincere question; neither should be treated as a courtroom verdict or a medical order.",
       "If you already know the emotion and need a decision frame, start with I Ching. If you need to name what you feel before you choose, start with tarot. Asking the same question twice in one hour usually adds noise, not clarity.",
     ],

@@ -13,6 +13,8 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
   const headingId = `${product}-reading-guide`;
   const articleSlugs = product === "compatibility"
     ? ["bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
+    : product === "discovery"
+      ? ["what-is-a-day-pillar", "prepare-birth-date-time-place", "jia-zi-day-pillar"]
     : ["yuelao-love-fortune-conversation", "how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
   const readingLinks = articleSlugs.flatMap(slug => {
     const article = journalArticles.find(item => item.slug === slug);
@@ -49,7 +51,7 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
           ))}
         </div>
 
-        <p className={styles.note}>{content.note}</p>
+        <div className={styles.note}><p>{content.note}</p>{content.sources?.map(source => <a key={source.href} href={source.href}>{source.title} ↗</a>)}</div>
 
         <div className={styles.bottom}>
           <section className={styles.faqs} aria-labelledby={`${headingId}-questions`}>

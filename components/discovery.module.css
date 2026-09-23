@@ -1,3 +1,5 @@
+/* Let this standalone entry fit narrow viewports, including reserved scrollbars. */
+:global(body):has(.page) { min-width:0; }
 .page { background:radial-gradient(ellipse at 80% 12%,#c9f1ff70,transparent 45%),radial-gradient(ellipse at 15% 0%,#e4ddff66,transparent 40%),#f8faff; color:#24385b; min-height:100vh; font-family:var(--font-sans); padding:0 32px; }
 .page * { box-sizing:border-box; }
 .header,.hero,.steps,.faq,.footer { width:min(1110px,100%); margin-inline:auto; }
@@ -63,3 +65,10 @@
 @media(max-width:850px){ .hero { gap:30px; }.intro h1 {font-size:40px;}.revealed {grid-template-columns:110px 1fr;gap:14px;}.form,.result {padding:22px;}.faq {gap:30px;} }
 @media(max-width:650px){ .page{padding:0 20px;}.header{flex-wrap:wrap;gap:15px;padding:20px 0;}.hero{display:flex;flex-direction:column;padding:33px 0 38px;gap:25px;}.intro h1{font-size:36px;letter-spacing:-.8px;}.lead{font-size:14px;margin:20px 0;}.preview{display:none;}.finder{width:100%;}.form{padding:22px;}.result{padding:22px;}.empty{padding:18px 5px;}.revealed{grid-template-columns:120px 1fr;gap:18px;}.revealed h2{font-size:23px;}.steps{padding:34px 0;}.steps > div{grid-template-columns:1fr;gap:13px;}.steps article{border-bottom:1px solid #dce5f8;}.steps p{max-width:none;}.steps h2,.faq h2{font-size:27px;}.faq{display:block;padding:30px 0;}.faq h2{margin-bottom:10px;}.footer{flex-wrap:wrap;}.features{gap:12px;}.resultActions{align-items:flex-start;flex-direction:column;} }
 @media(prefers-reduced-motion:reduce){.spin{animation:none;}}
+
+.calendarFacts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:24px 0 8px; padding:16px 0; border-block:1px solid #dce5f8; }
+.calendarFacts > div { min-width:0; }
+.calendarFacts dt { font-size:11px; color:#5c708e; line-height:1.5; }
+.calendarFacts dd { margin:7px 0 0; font-size:18px; line-height:1.5; color:#24385b; overflow-wrap:anywhere; }
+.calendarFacts small { display:block; font-size:12px; color:#5c708e; line-height:1.6; }
+@media(max-width:380px) { .revealed { grid-template-columns:1fr; }.revealed img { width:140px; }.calendarFacts { grid-template-columns:1fr; gap:14px; }.calendarFacts > div { display:grid; grid-template-columns:1fr 1fr; gap:10px; align-items:baseline; }.calendarFacts dd { margin:0; } }

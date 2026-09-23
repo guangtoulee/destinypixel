@@ -193,7 +193,8 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   assert.equal(guide.h1, "I Ching vs Tarot: Which to Use for One Question?");
   assert.equal(guide.faqAsH2, true);
   assert.equal(guide.paragraphs.length, 3);
-  assert.match(guide.paragraphs[0]!, /Destiny Pixel’s oracle lane sits closer to the I Ching/);
+  assert.match(guide.paragraphs[0]!, /combines three Tarot cards with a six-line, hexagram-inspired reading/);
+  assert.doesNotMatch(guide.paragraphs[0]!, /not a deck of picture archetypes/);
   assert.match(guide.paragraphs[1]!, /courtroom verdict or a medical order/);
   assert.match(guide.paragraphs[2]!, /Asking the same question twice in one hour/);
   assert.deepEqual(

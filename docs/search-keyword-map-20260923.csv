@@ -1,0 +1,25 @@
+locale,cluster,primary_phrase,supporting_phrase,target_path,intent,basis,status
+en,day_pillar,Day Pillar calculator,Day Master calculator,/discover,Find a calendar day stem and element,SERP sample; function verified,Deployed in this release
+zh,day_pillar,日柱查询,日主五行,/discover?locale=zh,按公历生日查日干支与五行,Product intent; localized candidate,Deployed in this release
+zh-TW,day_pillar,日柱查詢,日主五行,/discover?locale=zh-TW,按公曆生日查日干支與五行,Product intent; localized candidate,Deployed in this release
+ru,day_pillar,столп дня Бацзы,элемент личности калькулятор,/discover?locale=ru,Узнать столп дня и элемент личности,SERP sample; function verified,Deployed in this release
+en,compatibility,BaZi compatibility calculator,birth chart compatibility,/compatibility,Compare two birth profiles,SERP sample; function verified,Existing target with improved links
+zh,compatibility,八字配对,八字合婚 五行,/compatibility?locale=zh,比较性格与感情表达,SERP sample; function verified,Existing target with improved links
+zh-TW,compatibility,八字合婚,五行配對,/compatibility?locale=zh-TW,比較性格與感情表達,Product intent; localized candidate,Existing target with improved links
+ru,compatibility,совместимость по Бацзы,калькулятор совместимости,/compatibility?locale=ru,Сравнить две карты рождения,SERP sample; function verified,Title and links improved
+en,sticks,Guanyin fortune sticks online,Chinese fortune sticks meaning,/sticks,Draw or interpret a fortune stick,SERP sample; function verified,Existing target with improved links
+zh,sticks,观音灵签,在线抽签 解签,/sticks?locale=zh,抽签或按签系查签号,Product intent; localized candidate,Existing target with improved links
+zh-TW,sticks,觀音靈籤,線上求籤 解籤,/sticks?locale=zh-TW,求籤或按籤系查籤號,SERP sample; function verified,Existing target with improved links
+ru,sticks,гадание Гуаньинь онлайн,китайские палочки гадание,/sticks?locale=ru,Выбрать традицию и получить жребий,SERP sample; function verified,Title and links improved
+en,day_pillar_explainer,what is a Day Pillar,Day Pillar vs Day Master,/journal/what-is-a-day-pillar,Understand before or after calculating,Existing article; related question candidate,Linked from calculator
+zh,day_pillar_explainer,日柱是什么意思,日柱和日主区别,/journal/what-is-a-day-pillar?locale=zh,解释概念,Existing article; related question candidate,Linked from calculator
+zh-TW,day_pillar_explainer,日柱是什麼意思,日柱和日主區別,/journal/what-is-a-day-pillar?locale=zh-TW,解釋概念,Existing article; related question candidate,Linked from calculator
+ru,day_pillar_explainer,что такое столп дня,Господин дня Бацзы,/journal/what-is-a-day-pillar?locale=ru,Разобраться в понятиях,Existing article; related question candidate,Linked from calculator
+en,unknown_time,compatibility without birth time,unknown birth time BaZi,/journal/compatibility-without-birth-time,Check what can be calculated,Existing article; product constraint,Maintain existing page
+zh,unknown_time,不知道出生时间能合婚吗,缺少出生时辰,/journal/compatibility-without-birth-time?locale=zh,核对输入要求,Existing article; product constraint,Maintain existing page
+zh-TW,unknown_time,不知道出生時間能合婚嗎,缺少出生時辰,/journal/compatibility-without-birth-time?locale=zh-TW,核對輸入要求,Existing article; product constraint,Maintain existing page
+ru,unknown_time,совместимость без времени рождения,неизвестно время рождения,/journal/compatibility-without-birth-time?locale=ru,Понять ограничения расчёта,Existing article; product constraint,Maintain existing page
+en,fortune_question,how to ask fortune sticks,Guanyin question examples,/journal/how-to-ask-fortune-sticks,Formulate one useful question,Existing article; related question candidate,Maintain existing page
+zh,fortune_question,求签怎么问问题,观音灵签问感情,/journal/how-to-ask-fortune-sticks?locale=zh,把心事写成清楚的问题,Existing article; related question candidate,Maintain existing page
+zh-TW,fortune_question,求籤怎麼問問題,觀音靈籤問感情,/journal/how-to-ask-fortune-sticks?locale=zh-TW,把心事寫成清楚的問題,Existing article; related question candidate,Maintain existing page
+ru,fortune_question,как задать вопрос оракулу,вопрос Гуаньинь отношения,/journal/how-to-ask-fortune-sticks?locale=ru,Сформулировать конкретный вопрос,Existing article; related question candidate,Maintain existing page

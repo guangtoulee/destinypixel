@@ -1,7 +1,8 @@
+import { discoverySearchContent } from "./discovery-search-content";
 import { toTraditional } from "@/lib/journal-locales";
 import type { ContentLocale, ReportLocale } from "@/lib/report-i18n";
 
-export type SearchProduct = "sticks" | "compatibility";
+export type SearchProduct = "sticks" | "compatibility" | "discovery";
 
 export type ProductSearchCopy = {
   eyebrow: string;
@@ -14,6 +15,7 @@ export type ProductSearchCopy = {
     ordered?: boolean;
   }[];
   note: string;
+  sources?: { title: string; href: string }[];
   faqTitle: string;
   faqs: { question: string; answer: string }[];
   relatedTitle: string;
@@ -70,7 +72,7 @@ const sticks: Record<ContentLocale, ProductSearchCopy> = {
     relatedTitle: "Another way to explore",
     related: [
       { title: "Compare your relationship", description: "See two birth charts through BaZi and astrology.", href: "/compatibility" },
-      { title: "Find your day-pillar animal", description: "A free birthday card from the 60-character collection.", href: "/day-pillar" },
+      { title: "Find your day-pillar animal", description: "A free birthday card from the 60-character collection.", href: "/discover" },
       { title: "A guide to Guanyin fortune sticks", description: "Learn how to ask a question and read the source behind a lot.", href: "/learn/guanyin-fortune-sticks" },
     ],
   },
@@ -123,7 +125,7 @@ const sticks: Record<ContentLocale, ProductSearchCopy> = {
     relatedTitle: "换个角度，继续了解",
     related: [
       { title: "看看你们的情感匹配", description: "结合八字与星盘，比较两个人的相处方式。", href: "/compatibility" },
-      { title: "免费测你的日柱动物", description: "从公历生日找到六十种动物意象中的一张卡。", href: "/day-pillar" },
+      { title: "免费测你的日柱动物", description: "从公历生日找到六十种动物意象中的一张卡。", href: "/discover" },
       { title: "读读五行与意象故事", description: "在专栏里了解出生图谱与性格意象。", href: "/journal" },
     ],
   },
@@ -176,7 +178,7 @@ const sticks: Record<ContentLocale, ProductSearchCopy> = {
     relatedTitle: "Посмотрите с другой стороны",
     related: [
       { title: "Сравнить отношения", description: "Две карты рождения через Ба-цзы и астрологию.", href: "/compatibility" },
-      { title: "Найти животное своего дня", description: "Бесплатная карточка из коллекции 60 образов.", href: "/day-pillar" },
+      { title: "Найти животное своего дня", description: "Бесплатная карточка из коллекции 60 образов.", href: "/discover" },
       { title: "Читать журнал DestinyPixel", description: "Пять элементов, карта рождения и истории образов.", href: "/journal" },
     ],
   },
@@ -214,7 +216,7 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     related: [
       { title: "A guide to BaZi love compatibility", description: "Understand what five-element relationships can bring to a conversation.", href: "/learn/bazi-love-compatibility" },
       { title: "Prepare your birth details", description: "A practical guide to date, time, place and time zones.", href: "/journal/prepare-birth-date-time-place" },
-      { title: "Meet your day-pillar animal", description: "Explore your own personality and relationship themes first.", href: "/day-pillar" },
+      { title: "Meet your day-pillar animal", description: "Explore your own personality and relationship themes first.", href: "/discover" },
       { title: "Draw a relationship fortune stick", description: "Try the Yuelao collection with one question on your mind.", href: "/sticks?type=yuelao" },
     ],
   },
@@ -248,7 +250,7 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     relatedTitle: "准备资料，再多了解一点",
     related: [
       { title: "出生日期、时间与地点怎么填", description: "了解出生资料、时区与校准的实用指南。", href: "/journal/prepare-birth-date-time-place" },
-      { title: "先认识自己的日柱动物", description: "免费了解性格底色与感情里的习惯。", href: "/day-pillar" },
+      { title: "先认识自己的日柱动物", description: "免费了解性格底色与感情里的习惯。", href: "/discover" },
       { title: "为心里的事求一支姻缘签", description: "进入月老签系，把注意力放在一个具体问题上。", href: "/sticks?type=yuelao" },
     ],
   },
@@ -282,13 +284,13 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     relatedTitle: "Подготовьтесь и продолжите знакомство",
     related: [
       { title: "Подготовить данные рождения", description: "Практическое руководство по дате, времени, месту и часовым поясам.", href: "/journal/prepare-birth-date-time-place" },
-      { title: "Найти животное своего дня", description: "Сначала изучите собственный характер и привычки в любви.", href: "/day-pillar" },
+      { title: "Найти животное своего дня", description: "Сначала изучите собственный характер и привычки в любви.", href: "/discover" },
       { title: "Вытянуть палочку об отношениях", description: "Задайте один конкретный вопрос коллекции Юэлао.", href: "/sticks?type=yuelao" },
     ],
   },
 };
 
-const productCopy: Record<SearchProduct, Record<ContentLocale, ProductSearchCopy>> = { sticks, compatibility };
+const productCopy: Record<SearchProduct, Record<ContentLocale, ProductSearchCopy>> = { sticks, compatibility, discovery: discoverySearchContent };
 
 export function getProductSearchContent(product: SearchProduct, locale: ReportLocale): ProductSearchCopy {
   const source = productCopy[product][locale === "zh-TW" ? "zh" : locale];
@@ -298,20 +300,11 @@ export function getProductSearchContent(product: SearchProduct, locale: ReportLo
 
   return {
     ...localized,
-    related: localized.related.map((link) => {
-      const isDayPillar = link.href === "/day-pillar";
-      const linkLocale = isDayPillar
-        ? locale === "zh" || locale === "zh-TW" ? "zh" : "en"
-        : locale;
-      const languageNote = isDayPillar && locale === "ru" ? " (English)"
-        : isDayPillar && locale === "zh-TW" ? "（簡體中文）" : "";
-
-      return {
-        ...link,
-        title: `${link.title}${languageNote}`,
-        href: link.href.startsWith("/learn/") ? link.href
-          : `${link.href}${link.href.includes("?") ? "&" : "?"}locale=${linkLocale}`,
-      };
-    }),
+    related: localized.related.map((link) => ({
+      ...link,
+      href: !link.href.startsWith("/") || link.href.startsWith("/learn/") || locale === "en"
+        ? link.href
+        : `${link.href}${link.href.includes("?") ? "&" : "?"}locale=${locale}`,
+    })),
   };
 }

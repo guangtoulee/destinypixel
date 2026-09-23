@@ -86,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.78,
     }));
     const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
-    const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
+    const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-23",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
     const compatibilityLanguages = Object.fromEntries(Object.entries(compatibilityAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
     return [...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];

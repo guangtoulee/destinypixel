@@ -71,3 +71,7 @@
   .bottom { grid-template-columns: 1fr; gap: 30px; margin-top: 28px; }
   .note { padding: 12px 14px; }
 }
+
+.guide[data-product="discovery"] { --guide-ink:#24385b; --guide-muted:#5c708e; --guide-accent:#6556da; --guide-line:#dce5f8; --guide-tint:#edf0ff; background:linear-gradient(180deg,#f8faff,#f0f3ff); border-radius:22px; }
+.note p { margin:0; }
+.note a { display:inline-block; margin-top:10px; text-decoration:underline; text-underline-offset:3px; }
