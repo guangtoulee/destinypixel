@@ -6,6 +6,7 @@ import { crystalCareArticle } from "@/lib/journal-crystal-care";
 import { journalRussian } from "@/lib/journal-ru";
 import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-growth";
 import { loveFortuneArticle, loveFortuneRussian } from "@/lib/journal-love-fortune";
+import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-elements";
 import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
 export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
 export type { JournalLocale } from "@/lib/journal-locales";
@@ -37,6 +38,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
 const journalSources: JournalSourceArticle[] = [
+  fiveElementsArticle,
   loveFortuneArticle,
   ...searchGrowthArticles,
   crystalCareArticle,
@@ -271,7 +273,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
 }
 
 export const journalArticles: JournalArticle[] = journalSources.map((article) => {
-  const ru = article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug];
+  const ru = article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug];
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
 });

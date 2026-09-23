@@ -12,7 +12,7 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
   const content = getProductSearchContent(product, locale);
   const headingId = `${product}-reading-guide`;
   const articleSlugs = product === "compatibility"
-    ? ["bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
+    ? ["five-elements-relationship-compatibility", "bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
     : product === "discovery"
       ? ["what-is-a-day-pillar", "prepare-birth-date-time-place", "jia-zi-day-pillar"]
     : ["yuelao-love-fortune-conversation", "how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];

@@ -28,6 +28,7 @@ async function main() {
       for (const other of journalLocales) {
         assert.ok(alternates.some(l => l.hrefLang === journalLanguageTags[other] && l.href === origin + journalHref(other,article.slug)), `${path}: missing language ${other}`);
       }
+      assert.ok(alternates.some(l => l.hrefLang === "x-default" && l.href === origin + journalHref("en",article.slug)), `${path}: missing x-default`);
       assert.ok(decode(sitemap).includes(`<loc>${origin + path}</loc>`), `${path}: sitemap missing`);
       const schemas = [...page.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => JSON.parse(m[1]));
       assert.ok(schemas.some(s => s["@type"] === "Article" && s.inLanguage === journalLanguageTags[locale]), `${path}: Article schema`);
@@ -36,7 +37,7 @@ async function main() {
     }));
   }
   for (const product of ["compatibility","sticks"]) {
-    const target = selected.filter(a => product === "compatibility" ? /bazi-vs|without-birth/.test(a.slug) : /fortune/.test(a.slug));
+    const target = selected.filter(a => product === "compatibility" ? /bazi-vs|without-birth|five-elements-relationship/.test(a.slug) : /fortune/.test(a.slug));
     for (const locale of journalLocales) {
       const page = await html(`/${product}?locale=${locale}`);
       for (const article of target) assert.ok(decode(page).includes(`href="${journalHref(locale,article.slug)}"`), `${product}/${locale}: article link missing`);
