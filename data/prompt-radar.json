@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-23T17:54:44.558Z",
+  "updatedAt": "2026-09-24T06:33:28.588Z",
   "sourceSummary": {
     "community": 1193,
-    "publicX": 487,
-    "total": 1680
+    "publicX": 488,
+    "total": 1681
   },
   "items": [
     {
@@ -2052,7 +2052,7 @@
       "authorName": "Machina",
       "authorHandle": "@EXM7777",
       "createdAt": "2026-09-17T15:58:10.000Z",
-      "importedAt": "2026-09-23T17:54:44.523Z",
+      "importedAt": "2026-09-24T06:33:28.557Z",
       "tags": [
         "Seedance",
         "视频"
@@ -2072,13 +2072,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 429,
+        "likes": 428,
         "reposts": 38,
         "replies": 26,
         "quotes": 2,
         "bookmarks": 781,
-        "views": 26417,
-        "score": 3438
+        "views": 26558,
+        "score": 3436
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)"
@@ -3414,6 +3414,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Made with Grok Imagine Prompt: Ultra-realistic cinematic vertical video, 10 seconds. A beautiful young Korean woman relaxes in her cozy bedroom at night, wearing the same oversized white T-shirt. Warm bedside lamp lighting creates a soft, intimate atmosphere while photo prints decorate the wall behind her. The video consists of multiple natural handheld selfie shots, as if filmed on a phone for a personal vlog. Shot 1 (0–2s): Front selfie shot. She smiles warmly at the camera while maintaining eye contact, then gives a playful wink. A few loose strands of hair fall naturally across her face. Shot 2 (2–4s): Extreme close-up from a slightly lower angle. She gently brushes the hair away from her face, smiles softly, and blinks naturally as the camera subtly moves closer. Shot 3 (4–6s): Three-quarter side selfie. She slowly turns her head toward the warm bedside lamp, smiles to herself, then looks back at the camera. Her hair moves naturally with the motion. Shot 4 (6–8s): Over-the-shoulder selfie. She briefly glances toward the photo wall behind her, then laughs quietly before turning back toward the camera. The handheld movement feels natural and authentic. Shot 5 (8–10s): Close-up selfie. She leans slightly closer to the camera, gives another playful wink followed by a soft smile, then gently tilts her head as the camera slowly pulls back, ending with a cozy bedroom ambiance. Style: Ultra-photorealistic, natural facial expressions, realistic blinking, subtle breathing, lifelike hair physics, authentic smartphone handheld movement, warm ambient lighting, shallow depth of field, premium cinematic color grading, 24 fps, 8K, cozy Korean bedroom aesthetic."
+    },
+    {
+      "id": "x-public-2101304743003930694",
+      "title": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the",
+      "description": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's",
+      "prompt": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/0xZenad/status/2101304743003930694",
+      "sourceType": "x",
+      "authorName": "Zenad",
+      "authorHandle": "@0xZenad",
+      "createdAt": "2026-09-19T13:37:45.000Z",
+      "importedAt": "2026-09-24T06:33:28.557Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 354,
+        "reposts": 34,
+        "replies": 13,
+        "quotes": 1,
+        "bookmarks": 422,
+        "views": 43899,
+        "score": 2214
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart"
     },
     {
       "id": "x-public-2093929508868960397",
@@ -7451,51 +7492,6 @@
       "rawText": "AI video is moving beyond \"generate a clip\". We're entering the era of directing entire scenes. With MiniMax H3 on @magnific, you can combine: → Text → Images → Videos → Audio in a single workflow. Then control: → Character → Camera → Motion → Sound with far more consistency than a prompt alone. That's what makes this model interesting. 50% OFF until September 1."
     },
     {
-      "id": "x-public-2100462233990082661",
-      "title": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-",
-      "description": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT:",
-      "prompt": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/HeyRu0by/status/2100462233990082661",
-      "sourceType": "x",
-      "authorName": "Ruby Ai",
-      "authorHandle": "@HeyRu0by",
-      "createdAt": "2026-09-17T05:49:55.000Z",
-      "importedAt": "2026-09-23T12:56:01.388Z",
-      "tags": [
-        "Kling",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Kling",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 207,
-        "reposts": 44,
-        "replies": 43,
-        "quotes": 1,
-        "bookmarks": 82,
-        "views": 103425,
-        "score": 1089
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon."
-    },
-    {
       "id": "x-public-2099563375957360974",
       "title": "AI video feels very different when you approach it like a director instead of a prompt writer. S",
       "description": "AI video feels very different when you approach it like a director instead of a prompt writer. Start by deciding what the story needs. GPT Image 2.5 is coming to CapCut PC, where it will be available through Design Studi",
@@ -8243,6 +8239,51 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I think the biggest change here is where the filmmaking process starts. Instead of opening a video generator with a blank prompt, start by building the visual language of the story first. GPT Image 2.5 is coming to CapCut, where it will be available through Design Studio and AI Image. Use it to turn an idea into a visual storyboard. Then bring that storyboard into CapCut PC’s multi-track timeline and use AI Video with Seedance 2.5 to generate the first full version. Once the video exists, AI Edit lets you keep working on it. Change a scene. Adjust the pacing. Improve the audio. Refine the details. The first generation gives you the film. The editing gives you control over what the film becomes. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2100462233990082661",
+      "title": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-",
+      "description": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT:",
+      "prompt": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/HeyRu0by/status/2100462233990082661",
+      "sourceType": "x",
+      "authorName": "Ruby Ai",
+      "authorHandle": "@HeyRu0by",
+      "createdAt": "2026-09-17T05:49:55.000Z",
+      "importedAt": "2026-09-24T06:33:28.558Z",
+      "tags": [
+        "Kling",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Kling",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 196,
+        "reposts": 38,
+        "replies": 43,
+        "quotes": 1,
+        "bookmarks": 80,
+        "views": 103538,
+        "score": 1037
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Prompt: Create a premium 10-second vertical 9:16 Coca-Cola commercial, photorealistic 8K, ultra-detailed high-speed beverage cinematography, dramatic red cinematic lighting, refreshing ice-and-splash atmosphere. CONCEPT: ICE → SPLASH → CAN REVEAL → LIQUID IMPACT → MULTI-CAN HERO 01 | 0–1.2s — ICE IMPACT Extreme macro shot of crystal-clear ice cubes exploding through a glossy Coca-Cola red environment. Cold water droplets and tiny ice particles fly toward the camera in dramatic slow motion. Strong backlight creates sparkling highlights. 02 | 1.2–2.4s — CAN REVEAL A chilled Coca-Cola can emerges through the water and ice, rotating naturally in mid-air. The iconic red can, white Coca-Cola script, silver top and realistic condensation remain perfectly sharp and accurate. 03 | 2.4–3.6s — FRESH SPLASH A powerful wave of Coca-Cola liquid crashes around the can. Macro droplets surround the product while the camera rapidly pushes through the splash. 04 | 3.6–4.8s — OPEN & FIZZ Extreme close-up of the aluminum can top and pull tab. The can opens with a realistic burst of carbonation, creating tiny fizzy bubbles and refreshing mist. 05 | 4.8–6.0s — LIQUID MOTION Dark Coca-Cola liquid forms an elegant flowing wave around the can, creating a dynamic sculptural splash. Ice cubes and droplets move naturally through the frame. 06 | 6.0–7.2s — CAN CHASE Multiple Coca-Cola cans appear at different depths, floating and rotating through the red environment. Water trails and ice particles follow their movement, creating an energetic premium advertising look. 07 | 7.2–8.6s — HERO FORMATION Three Coca-Cola cans smoothly converge into a strong product composition. One can remains dominant in the foreground while the others sit behind it. Heavy condensation, realistic reflections and water droplets emphasize cold refreshment. 08 | 8.6–10s — FINAL HERO Clean cinematic hero shot: ice-covered Coca-Cola cans surrounded by suspended water droplets and subtle Coca-Cola liquid splash. Deep vibrant red background, glossy studio reflections, dramatic rim lighting. Camera settles into a subtle push-in. PRODUCT LOCK: Preserve the exact Coca-Cola can proportions, red color, white Coca-Cola logo/script, typography, silver top, pull tab and overall packaging identity. No redesign, no distorted logo, no misspelled text, no duplicate labels, no warped cans. VISUAL STYLE: photorealistic, ultra-premium beverage commercial, 8K detail, high-speed macro photography, realistic liquid physics, crisp condensation, sparkling ice, cinematic depth of field, dramatic studio lighting, realistic reflections, rich red atmosphere, smooth camera motion. NEGATIVE PROMPT: blurry logo, distorted can, warped typography, incorrect branding, extra logos, deformed products, unrealistic liquid physics, duplicate cans merging together, low resolution, cartoon look, plastic-looking liquid, watermark, text artifacts.Agar aap chaho to isi video ke first frame jaisi ek premium AI image prompt bhi bana sakta hoon."
     },
     {
       "id": "x-public-2095091333727973734",
@@ -13058,7 +13099,7 @@
       "authorName": "Prajwal Tomar",
       "authorHandle": "@PrajwalTomar_",
       "createdAt": "2026-09-18T14:09:21.000Z",
-      "importedAt": "2026-09-23T06:26:07.284Z",
+      "importedAt": "2026-09-24T06:33:28.557Z",
       "tags": [
         "视频"
       ],
@@ -13082,7 +13123,7 @@
         "replies": 9,
         "quotes": 1,
         "bookmarks": 139,
-        "views": 15774,
+        "views": 15831,
         "score": 679
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -20395,7 +20436,7 @@
       "authorName": "VideoProc AI",
       "authorHandle": "@ProcVideo",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [
         "摄影"
       ],
@@ -20436,7 +20477,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.865Z",
+      "importedAt": "2026-09-24T06:33:24.689Z",
       "tags": [
         "人像"
       ],
@@ -20477,7 +20518,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.690Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20519,7 +20560,7 @@
       "authorName": "りょうたぐ/ryoutag.@愛しのsense9破損で泣く",
       "authorHandle": "@ryoutag_",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20558,7 +20599,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -20599,7 +20640,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [
         "人像",
         "摄影"
@@ -20641,7 +20682,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [
         "人像",
         "摄影"
@@ -20683,7 +20724,7 @@
       "authorName": "Kris Kashtanova",
       "authorHandle": "@icreatelife",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [
         "平面设计"
       ],
@@ -20724,7 +20765,7 @@
       "authorName": "Michael H. Lester",
       "authorHandle": "@mhlester",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -20765,7 +20806,7 @@
       "authorName": "Juan José Arango E.",
       "authorHandle": "@jjarangoes",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20965,7 +21006,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [
         "人像",
         "摄影"
@@ -21007,7 +21048,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.866Z",
+      "importedAt": "2026-09-24T06:33:24.691Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21049,7 +21090,7 @@
       "authorName": "Sahil Verma",
       "authorHandle": "@sahilvermaai",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21092,7 +21133,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "人像",
         "摄影"
@@ -21345,7 +21386,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21384,7 +21425,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -21425,7 +21466,7 @@
       "authorName": "Maha",
       "authorHandle": "@Aiwithmaha",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21468,7 +21509,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21510,7 +21551,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21553,7 +21594,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21805,7 +21846,7 @@
       "authorName": "あいぼりー",
       "authorHandle": "@HetareIvory",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21844,7 +21885,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.692Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21887,7 +21928,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21929,7 +21970,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.867Z",
+      "importedAt": "2026-09-24T06:33:24.693Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -70476,7 +70517,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.871Z",
+      "importedAt": "2026-09-24T06:33:24.701Z",
       "tags": [
         "产品",
         "平面设计",
@@ -70519,7 +70560,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.871Z",
+      "importedAt": "2026-09-24T06:33:24.701Z",
       "tags": [
         "平面设计"
       ],
@@ -70560,7 +70601,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-23T17:54:40.871Z",
+      "importedAt": "2026-09-24T06:33:24.701Z",
       "tags": [
         "平面设计"
       ],
