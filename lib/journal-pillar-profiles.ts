@@ -2,6 +2,7 @@ import type { JournalSourceArticle, JournalTranslation } from "./journal";
 import { dayPillarCycle, pillarFacts, pillarName, pillarArticleSlug, elementNames } from "./day-pillar-library";
 import { getDayPillarInsight } from "./day-pillar-insights";
 import { pillarPractices } from "./day-pillar-practices";
+import { fullPillarProfiles } from "./journal-pillar-depth";
 
 type Language = "en" | "zh" | "ru";
 const labels = {
@@ -26,6 +27,7 @@ function elementReading(pillar: string, locale: Language) {
 }
 
 function profile(pillar: string, locale: Language): JournalTranslation {
+  if (fullPillarProfiles[pillar]) return fullPillarProfiles[pillar][locale];
   const f = pillarFacts(pillar, locale), name = pillarName(pillar, locale), reading = getDayPillarInsight(pillar, locale)!;
   const copy = labels[locale], scenario = pillarPractices[pillar][locale === "en" ? 0 : locale === "zh" ? 1 : 2];
   const title = locale === "en" ? `${f.pinyin} Day Pillar (${pillar}): ${name}, Love & Personality` : locale === "zh" ? `${pillar}日柱详解：${name}的性格、感情与事业` : `${f.russian} (${pillar}): характер, любовь и работа — ${name}`;
@@ -62,7 +64,7 @@ function profile(pillar: string, locale: Language): JournalTranslation {
 
 // The existing Jia Zi long-form guide keeps its URL and verified birthday sources.
 export const pillarProfileArticles: JournalSourceArticle[] = dayPillarCycle.filter(p => p !== "甲子").map(pillar => ({
-  slug: pillarArticleSlug(pillar), pillar, kind: "portrait", relatedSlug: "what-is-a-day-pillar", publishedAt: "2026-09-23", updatedAt: "2026-09-23",
+  slug: pillarArticleSlug(pillar), pillar, kind: "portrait", ...(fullPillarProfiles[pillar] ? { portraitDepth: "full" as const } : {}), relatedSlug: "what-is-a-day-pillar", publishedAt: "2026-09-23", updatedAt: fullPillarProfiles[pillar] ? "2026-09-24" : "2026-09-23",
   translations: { en: profile(pillar, "en"), zh: profile(pillar, "zh") },
 }));
 export const pillarProfileRussian: Record<string, JournalTranslation> = Object.fromEntries(dayPillarCycle.filter(p => p !== "甲子").map(p => [pillarArticleSlug(p), profile(p, "ru")]));

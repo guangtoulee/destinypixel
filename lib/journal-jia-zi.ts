@@ -3,6 +3,7 @@ import type { JournalSourceArticle } from "@/lib/journal";
 export const jiaZiArticle: JournalSourceArticle = {
   "slug": "jia-zi-day-pillar",
   pillar: "甲子",
+  portraitDepth: "full",
   "publishedAt": "2026-09-14",
   "updatedAt": "2026-09-23",
   "translations": {

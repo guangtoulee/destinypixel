@@ -52,3 +52,8 @@ const ru: typeof en = {
 export function pillarLibraryCopy(locale: JournalLocale): typeof en {
   return locale === "zh-TW" ? Object.fromEntries(Object.entries(zh).map(([k,v]) => [k,toTraditional(v)])) as typeof en : locale === "zh" ? zh : locale === "ru" ? ru : en;
 }
+
+export function pillarEditionLabel(locale: JournalLocale, full: boolean) {
+  const labels = { en: ["Quick portrait", "In-depth portrait"], zh: ["简明画像", "深度解析"], "zh-TW": ["簡明畫像", "深度解析"], ru: ["Краткий портрет", "Подробный портрет"] };
+  return labels[locale][full ? 1 : 0];
+}

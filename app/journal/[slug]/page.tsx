@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getPillarImagePath } from "@/lib/archetype-assets";
-import { dayPillarCycle, pillarName, pillarArticleHref, pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
+import { dayPillarCycle, pillarName, pillarArticleHref, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
@@ -40,6 +40,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
         <header className={styles.articleHero}>
           <nav className={styles.breadcrumb} aria-label={ui.breadcrumb}><a href={journalHomeHref(locale)}>{ui.home}</a><span aria-hidden="true">/</span><a href={journalHref(locale)}>{ui.journal}</a><span aria-hidden="true">/</span><span>{copy.topic}</span></nav>
           <p className={styles.eyebrow}>{copy.topic}</p>
+          {article.pillar && <p className={styles.portraitEdition}>{pillarEditionLabel(locale, article.portraitDepth === "full")}</p>}
           <div className={article.pillar ? styles.portraitHero : undefined}>
           <div>
           <h1>{copy.title}</h1>

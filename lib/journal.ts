@@ -35,6 +35,7 @@ export type JournalArticle = {
   slug: string;
   pillar?: string;
   kind?: "portrait";
+  portraitDepth?: "full";
   relatedSlug?: string;
   publishedAt: string;
   updatedAt: string;

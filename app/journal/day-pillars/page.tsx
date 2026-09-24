@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { JournalHeader, JournalFooter } from "@/components/journal-chrome";
-import { normalizeJournalLocale, dayPillarLibraryMetadata } from "@/lib/journal";
+import { normalizeJournalLocale, dayPillarLibraryMetadata, journalArticles } from "@/lib/journal";
 import { journalLanguageTags } from "@/lib/journal-locales";
-import { dayPillarCycle, pillarArticleHref, pillarFacts, pillarName, pillarLibraryCopy, pillarLibraryHref, stems } from "@/lib/day-pillar-library";
+import { dayPillarCycle, pillarArticleHref, pillarFacts, pillarName, pillarLibraryCopy, pillarLibraryHref, pillarEditionLabel, stems } from "@/lib/day-pillar-library";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getLocalizedDayPillarInsight } from "@/lib/day-pillar-insights-localized";
 import { absoluteUrl } from "@/lib/seo";
@@ -31,7 +31,7 @@ export default async function DayPillarLibrary({ searchParams }: Props) {
         <header><span>{stem}</span><h2>{pillarFacts(family[0], locale).master}</h2><p>{copy.same}</p></header>
         <div className={styles.pillarGrid}>{family.map(pillar => { const facts = pillarFacts(pillar, locale), name = pillarName(pillar, locale); return <article className={styles.pillarTile} key={pillar}>
           <a href={pillarArticleHref(pillar, locale)} className={styles.pillarTileArt} tabIndex={-1} aria-hidden="true"><Image src={getPillarImagePath(pillar)} alt="" width={480} height={640} sizes="(max-width:650px) 43vw, (max-width:1000px) 29vw, 250px" /></a>
-          <div className={styles.pillarTileCopy}><p className={styles.pillarCode}>{String(facts.number).padStart(2,"0")} · {pillar} · {locale === "ru" ? facts.russian : facts.pinyin}</p><h3><a href={pillarArticleHref(pillar, locale)}>{name}</a></h3><p>{getLocalizedDayPillarInsight(pillar, locale)?.headline}</p><a className={styles.pillarRead} href={pillarArticleHref(pillar, locale)} aria-label={`${copy.read}: ${pillar} · ${name}`}>{copy.read}<ArrowRight size={14} aria-hidden="true" /></a></div>
+          <div className={styles.pillarTileCopy}><span className={styles.portraitEdition}>{pillarEditionLabel(locale, journalArticles.some(a => a.pillar === pillar && a.portraitDepth === "full"))}</span><p className={styles.pillarCode}>{String(facts.number).padStart(2,"0")} · {pillar} · {locale === "ru" ? facts.russian : facts.pinyin}</p><h3><a href={pillarArticleHref(pillar, locale)}>{name}</a></h3><p>{getLocalizedDayPillarInsight(pillar, locale)?.headline}</p><a className={styles.pillarRead} href={pillarArticleHref(pillar, locale)} aria-label={`${copy.read}: ${pillar} · ${name}`}>{copy.read}<ArrowRight size={14} aria-hidden="true" /></a></div>
         </article>; })}</div>
       </section>; })}
     </div>
