@@ -4,7 +4,7 @@ type Edition = {
   title: string; description: string; topic: string; introduction: string; takeaway: string;
   sections: [string, string][]; action: { label: string; href: string };
 };
-type Entry = { slug: string; relatedSlug: string; sources: { label: string; href: string }[]; en: Edition; zh: Edition; ru: Edition };
+type Entry = { slug: string; relatedSlug: string; publishedAt?: string; updatedAt?: string; sources: { label: string; href: string }[]; en: Edition; zh: Edition; ru: Edition };
 
 // Original, task-focused guides. Section order is shared across complete editions.
 const entries: Entry[] = [
@@ -193,6 +193,66 @@ const entries: Entry[] = [
       ], action: { label: "Открыть коллекции и пояснения источников", href: "/sticks?locale=ru" },
     },
   },
+  {
+    slug: "unfavorable-fortune-stick-reading", relatedSlug: "how-to-ask-fortune-sticks", publishedAt: "2026-09-23", updatedAt: "2026-09-23",
+    sources: [
+      { label: "Taiwan Temple Culture Network: fortune-stick ritual and a bad omen as a warning", href: "https://taiwantemple.org/language/en/chinese-fortune-sticks-guide-how-to-ask-for-divine-guidance-the-8-step-ritual/" },
+      { label: "JinBodhi: moon blocks, and how many sacred throws a temple requires", href: "https://www.jinbodhi.org/en/how-to-properly-ask-questions-with-moon-blocks/" },
+      { label: "Baidu Baike: Sheng, laugh, and yin as terms", href: "https://baike.baidu.com/item/%E6%8E%B7%E6%9D%AF%E7%AD%8A/3690017" },
+      { label: "DestinyPixel fortune sticks", href: "/sticks" },
+      { label: "How to ask a fortune-stick question", href: "/journal/how-to-ask-fortune-sticks" },
+      { label: "Same stick number, different edition", href: "/journal/fortune-stick-number-and-edition" },
+      { label: "Yuelao: what to say after a love reading", href: "/journal/yuelao-love-fortune-conversation" },
+    ],
+    en: {
+      title: "What to do after an unfavorable fortune-stick reading",
+      description: "An unfavorable or lower lot is a caution to pause and check observable facts, not a guarantee of failure. See what another draw does on DestinyPixel, then read the source note.",
+      topic: "After an unfavorable lot",
+      introduction: "An unfavorable, cautionary, or lower lot is a symbolic reminder to slow down, take care, or wait. It is not a destined failure. This guide is about a result you dislike: how to separate the layers, whether to draw again, and what to check next. A temple ritual and DestinyPixel are different procedures.",
+      takeaway: "On DestinyPixel you can draw again. A new number is not more reliable. Pause, note what the text brings to mind, and return if the situation changes. Do not use a lot for a medical, financial, or major relationship decision. For a health question, seek medical care first.",
+      sections: [
+        ["After a disliked result, pause before you redraw or change the plan", "On /sticks the button reads “Draw my stick,” then “Draw again.” Simplified Chinese uses 「再求一签」. The product lets you draw again. The sticks FAQ says a new number does not make the answer more reliable: keep one reading, note what it brings to mind, and return when the situation changes. The asking guide adds one pause: separate the image from a fact, then note the question and one check. Some people redraw in folk practice for comfort. That is not a rule that you may keep drawing until an upper or good lot. After a stick is confirmed, a common admonition is one matter, one lot: do not redraw only because you dislike it. Rephrase when the question was vague, the subject was wrong, or the situation has materially changed. Do not change the question or the plan from emotion alone. Blocked, Wait, 小阻, and 待时 are cautionary labels. They do not mean you must quit, cancel a trip, or end a relationship."],
+        ["Moon blocks, a lower lot, and what varies by temple", "A common sequence is to shake a stick, confirm it with moon blocks, and only then read the poem. A Taiwan Temple Culture Network guide describes that order. On that page a laugh or yin block does not confirm the stick: put it back and draw again. Repeated laugh blocks there can mean an unclear question, that you already know the answer, or that the timing is not ready. The page calls a bad omen a warning, not a sentence, and says it can be better to hold. It also says not to ask the same question twice, and to seek medical care before a health question; the sticks are not a diagnosis. Burning a bad slip appears there as a local custom, not a rule for every temple or for DestinyPixel. JinBodhi defines Sheng as one curved face and one flat face, read as yes; a laugh block, both flat, as no clear answer; and yin, both curved, as no. That page says some temples want three Sheng throws in a row and some accept one. Ask the temple. Baidu Baike is listed only for those three names. These accounts are not one law for every temple."],
+        ["DestinyPixel does not repeat the temple ritual", "This site has no cylinder and no moon blocks. The draw is a program-assisted symbolic selection in one of five collections: Guanyin, Guandi, Yuelao, the Five Wealth Gods, and Wong Tai Sin. Guanyin, Guandi, and Wong Tai Sin use 1–100. Yuelao and the Five Wealth Gods use 1–60. Those ranges belong to this product. The page chooses an integer in the selected range with crypto.getRandomValues. The question does not choose the number. You may type it or leave it blank. “Already drew offline?” opens this library’s entry in that range and does not certify a temple slip. “Draw again” repeats the same selection. A random number does not prove that temple oracles are empty, and it does not by itself make the number a divinatory verdict. The card may mix traditional material and a modern symbolic reading. Check the source note."],
+        ["Read the source note, then use the other guides for the rest", "English and Russian text here is not a line-by-line ancient poem. Many Guandi and Wong Tai Sin numbers keep classic Chinese in the Chinese edition; the other language notes say so. Seeds may mark a traditional theme and say the wording can differ. Generated entries are modern symbolic readings with catalog labels. Wealth notes say that set is not one canonical temple book. This library is not a verbatim archive, and the same number can differ by collection or edition. How to ask, how editions differ, and what to say after a Yuelao love reading are the three guides linked at the end."],
+        ["Optional AI discusses the entry already on screen", "“Interpret with my question” posts the collection, number, on-screen sign, topic, and question to /api/sticks/interpret. The question may be blank. The model discusses that displayed entry against your question. It does not choose a new number, authenticate a temple slip, or predict an outcome. It cannot read another person’s mind. If the request fails, the page shows the plain reading already on the card. Use the result, including any AI paragraph, for culture and reflection only."],
+        ["Original scenario: a new offer with unclear terms", "Original scenario — work. Editorial example only. A new offer is in front of you, the contract details are unclear, and the lot is cautionary or lower. That result is not a reason to refuse the offer. Before you sign, ask the hiring contact to clarify two or three facts, such as the duties, the hours, and how the role is reviewed. Drawing again for a kinder label is not more reliable."],
+        ["Original scenario: a weekend trip still unsettled", "Original scenario — travel. Editorial example only. You are planning a weekend trip, and the weather or the tickets are still unsettled. A cautionary or lower lot is not a reason to cancel. Check the official travel notice and the official weather forecast. Decide in advance: if the ticket or the forecast fails, reschedule. If you draw again later, ask about that new fact."],
+      ], action: { label: "Open a stick and read its source note", href: "/sticks" },
+    },
+    zh: {
+      title: "抽到不顺签或下签，要不要重抽、要不要改计划？",
+      description: "不顺签、谨慎签和下签是放慢、小心或等待的提醒，不是注定失败。先看再抽和来源说明，再核对可以观察的事实。",
+      topic: "不顺签与下签",
+      introduction: "不顺签、谨慎签或下签，是放慢、小心或等待的象征提醒，不是注定的失败。这篇指南谈的是你不喜欢的结果：怎样分开几层阅读、要不要再抽，以及下一步核对什么。寺庙仪式和 DestinyPixel 是两种不同的做法。",
+      takeaway: "在 DestinyPixel 可以再抽。新的号码不会更可靠。先停一下，记下文字让你想到的事，等处境有变化再回看。不要用签做医疗、财务或重大感情决定。健康问题请先就医。",
+      sections: [
+        ["不喜欢这支签时，先停一下再决定", "在 /sticks，按钮先是“开始求签”，出结果后变成“再求一签”。产品允许再抽。抽签页的说明是：可以重新抽，但换一个签号不会让答案更可靠；不妨留住一支签，写下它让你注意到的事，等现实情况有了变化再回看。提问指南补的是一次停顿：把意象和事实分开，记下问题和一件可以核对的事。民间有人为了心里踏实会再抽。这不是一条普遍规矩，让人一直抽到上签或好签为止。签一旦确认，常见劝告是一事一签：不要只因为不喜欢就重抽。问题太笼统、问错了对象，或处境已经实质改变时，可以改写再问。确认之后，不要只凭情绪改问题或改计划。Blocked、Wait、小阻、待时是谨慎类目录标签。它们不是必须放弃、取消行程或结束关系。"],
+        ["筊杯、下签，以及各处并不相同的规矩", "常见顺序是摇出一支签，用筊杯确认，然后才读签诗。台湾庙宇文化网的一篇指南写的是这个顺序。在那一页，笑杯或阴杯不算确认：把签放回再摇。那一页把连着出现的笑杯读成问题不清楚、你其实已经知道答案，或时机还没到。它把坏兆头写成提醒而不是判决，并说不妨先停住。它也写不要把同一个问题问第二次；健康问题要先看专业医疗，签不是诊断。烧掉不顺的签纸，在那一页被写成某些地方的习俗，不是每座庙的规定，DestinyPixel 也不要求这样做。金菩提对掷筊的名称是：圣杯为一凸一平，读作可以；笑杯为两面都平，读作没有明确回答；阴杯为两面都凸，读作不可以。那一页写，有的庙要连续三个圣杯，有的庙一个圣杯就够，请问你所在的那座庙。百度百科在这里只用来对照圣杯、笑杯、阴杯这三个名称。这些记述不是每座庙共用的一条法令。"],
+        ["DestinyPixel 并不重复寺庙那一套", "本站没有签筒，也没有筊杯。抽取是在五个签系里由程序协助完成的象征选择：观音、关帝、月老、五路财神、黄大仙。观音、关帝、黄大仙是 1 到 100，月老和五路财神是 1 到 60。这是本产品的范围。页面用 crypto.getRandomValues 在所选范围内取一个整数。问题不参与选号，可以写下或留空。“线下已经抽到签？”打开的是本库里该范围内的条目，不能认证寺庙纸签。“再求一签”是把同一次选择再做一遍。随机号码不能证明寺庙求签没有意义，它本身也不构成占卜判决。卡片上的文字可能混有传统材料和现代象征阅读。请看来源说明。"],
+        ["先读来源说明，其余看文末三篇", "这里的英文和俄文不是逐句的古代签诗。许多关帝号和黄大仙号在中文版保留传统中文，英俄文的来源说明会写明这一点。手工录入的样本可能标明传统主题，并写文字可能不同。生成条目是带目录标签的现代象征阅读。财神签的说明写明它不是一套唯一的庙本。本库不是逐字的寺庙档案，同一个号码也会因签系或版本而不同。怎样提问、版本为何不同、月老感情签看完怎么说，都在文末三篇指南里，这里不展开。"],
+        ["可选 AI 只讨论屏幕上已经显示的条目", "“结合问题解读”把签系、号码、屏幕上的签、主题和问题发到 /api/sticks/interpret。问题可以留空。模型只对照你的问题讨论已经显示的这一条。它不另选号码，不认证寺庙纸签，也不预测结果。它不能读出别人的心思。请求失败时，页面显示卡片上已有的白话。包括 AI 在内的结果，只用于文化体验和自我反思。"],
+        ["原创情境：合同细节还不清楚的新邀请", "原创情境：工作。只是编辑示例。一份新的工作邀请在面前，合同细节不清楚，签是谨慎或下签。这个结果不是拒绝邀请的理由。签字前，请招聘联系人说清两三件可以核对的事，例如职责、工时，以及这个职位怎样考核。为了换一个更好听的标签而再抽，并不会更可靠。"],
+        ["原创情境：天气或车票还没定的周末出行", "原创情境：出行。只是编辑示例。你在计划一次周末出行，天气或车票还没定。谨慎签或下签不是取消行程的理由。请查官方出行通知和官方天气预报。事先定好：如果车票或预报不成立，就改期。若以后再抽，那一次问的是这个新事实。"],
+      ], action: { label: "打开签堂，先读来源说明", href: "/sticks?locale=zh" },
+    },
+    ru: {
+      title: "Неблагоприятный жребий: осторожность, повтор и смена плана",
+      description: "Неблагоприятный или нижний жребий — напоминание замедлиться, проявить осторожность или подождать, а не гарантия неудачи. Посмотрите, что делает повтор на DestinyPixel, и прочитайте примечание об источнике.",
+      topic: "Неблагоприятный жребий",
+      introduction: "Неблагоприятный, предостерегающий или нижний жребий — символическое напоминание замедлиться, проявить осторожность или подождать. Это не предопределённая неудача. Речь о результате, который вам не понравился: как разделить слои чтения, тянуть ли снова и что проверить дальше. Храмовый ритуал и DestinyPixel — разные процедуры.",
+      takeaway: "На DestinyPixel можно вытянуть жребий снова. Новый номер не делает ответ достовернее. Остановитесь, запишите, какие ассоциации вызывает текст, и вернитесь, если ситуация изменится. Не используйте жребий для медицинского, финансового или важного решения об отношениях. По вопросу здоровья сначала обратитесь к врачу.",
+      sections: [
+        ["После нежелательного результата сначала остановитесь", "На /sticks кнопка сначала называется «Вытянуть жребий», затем «Вытянуть снова». По-английски это Draw again, по-китайски — 「再求一签」. В продукте повтор разрешён. В вопросах на странице палочек сказано: повторить можно, но другой номер не делает ответ достовернее; оставьте одно чтение, запишите, что оно напомнило, и вернитесь, когда ситуация изменится. Руководство о вопросе добавляет паузу: отделите образ от факта и запишите вопрос и одну проверку. В народной практике некоторые тянут снова ради спокойствия. Это не общее правило тянуть, пока не выпадет верхний или хороший жребий. После подтверждения обычное наставление — одно дело, один жребий: не тяните заново только потому, что текст не понравился. Переформулируйте вопрос, если он был туманным, предмет был неверным или ситуация существенно изменилась. Не меняйте вопрос или план только из-за чувства. Blocked, Wait, 小阻 и 待时 — предостерегающие метки каталога. Они не значат, что нужно бросить дело, отменить поездку или закончить отношения."],
+        ["Блоки, нижний жребий и правила конкретного храма", "Обычная последовательность: вытряхнуть палочку, подтвердить её лунными блоками и только потом читать стих. Так описывает порядок руководство Taiwan Temple Culture Network. На той странице смеющийся или инь-блок не подтверждает палочку: её возвращают и тянут снова. Повторные смеющиеся блоки там могут значить неясный вопрос, что ответ вам уже известен, или что время ещё не пришло. Страница называет дурной знак предупреждением, а не приговором, и говорит, что лучше повременить. Там же сказано не задавать один вопрос дважды и по вопросу здоровья сначала обратиться к врачу: палочки — не диагноз. Сожжение неблагоприятного листка названо местным обычаем, а не правилом каждого храма; DestinyPixel этого не требует. JinBodhi определяет броски так: шэн — одна выпуклая и одна плоская сторона, читается как «да»; смеющийся блок — обе плоские, ясного ответа нет; инь — обе выпуклые, «нет». На той странице одни храмы ждут три шэна подряд, другим достаточно одного. Спросите в храме. Baidu Baike указана здесь только для трёх названий: шэн, смех и инь. Эти описания — не единый закон для всех храмов."],
+        ["DestinyPixel не повторяет храмовый ритуал", "На сайте нет цилиндра и нет лунных блоков. Выбор — программный символический отбор в одной из пяти коллекций: Гуаньинь, Гуаньди, Юэлао, Пять богов богатства и Вонг Тай Син. У Гуаньинь, Гуаньди и Вонг Тай Сина номера 1–100, у Юэлао и Пяти богов богатства — 1–60. Это диапазоны продукта. Страница берёт целое число в выбранном диапазоне функцией crypto.getRandomValues. Вопрос номер не выбирает; его можно записать или оставить пустым. «Уже вытянули офлайн?» открывает запись этой библиотеки в том диапазоне и не удостоверяет храмовый листок. «Вытянуть снова» повторяет тот же отбор. Случайное число не доказывает, что храмовые оракулы пусты, и само по себе не делает номер гадательным приговором. На карточке могут смешиваться традиционный материал и современное символическое чтение. Смотрите примечание об источнике."],
+        ["Сначала примечание, остальное — в трёх руководствах", "Английский и русский текст здесь — не построчное древнее стихотворение. Многие номера Гуаньди и Вонг Тай Сина сохраняют классический китайский текст в китайской версии; примечания на других языках об этом говорят. Ручные образцы могут помечать традиционную тему и предупреждать, что формулировки различаются. Сгенерированные записи — современное символическое чтение с метками каталога. Примечания коллекции богатства говорят, что это не единый канонический храмовый набор. Библиотека — не дословный архив, и один номер может различаться по коллекции или изданию. Как задать вопрос, почему издания расходятся и что сказать после любовного жребия Юэлао — в трёх руководствах в конце."],
+        ["Необязательный ИИ обсуждает уже показанную запись", "«Толковать мой вопрос» отправляет коллекцию, номер, знак на экране, тему и вопрос на /api/sticks/interpret. Вопрос может быть пустым. Модель обсуждает показанную запись относительно вашего вопроса. Она не выбирает новый номер, не удостоверяет храмовый листок и не предсказывает исход. Она не читает чужие мысли. Если запрос не удался, страница показывает простое чтение уже на карточке. Результат, включая абзац ИИ, — только культура и размышление."],
+        ["Авторский сценарий: новое предложение с неясными условиями", "Авторский сценарий — работа. Только редакционный пример. Перед вами новое предложение, условия договора неясны, жребий предостерегающий или нижний. Это не причина отказываться от предложения. До подписания попросите контакт по найму прояснить два или три факта: обязанности, часы и то, как оценивают эту роль. Новый жребий ради более мягкой метки не достовернее."],
+        ["Авторский сценарий: поездка на выходные ещё не решена", "Авторский сценарий — поездка. Только редакционный пример. Вы планируете поездку на выходные, а погода или билеты ещё не ясны. Предостерегающий или нижний жребий — не причина отменять поездку. Проверьте официальное уведомление для путешественников и официальный прогноз погоды. Заранее решите: если билет или прогноз не сойдётся, перенесите поездку. Если позже потянете снова, спрашивайте об этом новом факте."],
+      ], action: { label: "Открыть жребий и прочитать источник", href: "/sticks?locale=ru" },
+    },
+  },
 ];
 
 function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslation {
@@ -203,6 +263,12 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
     "/compatibility": { en: "DestinyPixel: current comparison method", zh: "DestinyPixel：当前配对方法", ru: "DestinyPixel: метод сравнения" },
     "/sticks": { en: "DestinyPixel: collections and source notes", zh: "DestinyPixel：签系与来源说明", ru: "DestinyPixel: коллекции и источники" },
     "/learn/guanyin-fortune-sticks": { en: "Guanyin collection guide", zh: "观音签资料范围（英文）", ru: "Коллекция Гуаньинь (на английском)" },
+    "https://taiwantemple.org/language/en/chinese-fortune-sticks-guide-how-to-ask-for-divine-guidance-the-8-step-ritual/": { en: "Taiwan Temple Culture Network: fortune-stick ritual and a bad omen as a warning", zh: "台湾庙宇文化网：求签步骤，以及下签是提醒", ru: "Taiwan Temple Culture Network: ритуал палочек и дурной знак как предупреждение" },
+    "https://www.jinbodhi.org/en/how-to-properly-ask-questions-with-moon-blocks/": { en: "JinBodhi: moon blocks, and how many sacred throws a temple requires", zh: "金菩提：掷筊要几圣杯，请问该庙", ru: "JinBodhi: блоки и сколько священных бросков требует храм" },
+    "https://baike.baidu.com/item/%E6%8E%B7%E6%9D%AF%E7%AD%8A/3690017": { en: "Baidu Baike: Sheng, laugh, and yin as terms", zh: "百度百科：圣杯、笑杯、阴杯的名称", ru: "Байду Байкэ: термины шэн, смех и инь" },
+    "/journal/how-to-ask-fortune-sticks": { en: "How to ask a fortune-stick question", zh: "求签怎么问问题", ru: "Как задать вопрос оракулу палочек" },
+    "/journal/fortune-stick-number-and-edition": { en: "Same number, different edition", zh: "同一个签号，为什么签文不同", ru: "Один номер, разные тексты" },
+    "/journal/yuelao-love-fortune-conversation": { en: "Yuelao: what to say after a love reading", zh: "月老签：看完以后怎么说", ru: "Юэлао: что сказать после любовного жребия" },
     "/journal/prepare-birth-date-time-place": { en: "Prepare your birth details", zh: "准备出生日期、时间与地点", ru: "Подготовка данных рождения" },
   };
   return { ...copy, sections: copy.sections.map(([title, paragraph], index) => ({
@@ -212,7 +278,7 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
 }
 
 export const searchGrowthArticles: JournalSourceArticle[] = entries.map(entry => ({
-  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: "2026-09-20",
+  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: entry.publishedAt ?? "2026-09-20", updatedAt: entry.updatedAt ?? "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
 }));
 export const searchGrowthRussian: Record<string, JournalTranslation> = Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")]));

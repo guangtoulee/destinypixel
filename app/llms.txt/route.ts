@@ -24,6 +24,7 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its tools inc
 - Unknown birth time: ${absoluteUrl("/journal/compatibility-without-birth-time")}
 - How to ask a fortune-stick question: ${absoluteUrl("/journal/how-to-ask-fortune-sticks")}
 - Fortune-stick numbers and editions: ${absoluteUrl("/journal/fortune-stick-number-and-edition")}
+- After an unfavorable fortune-stick reading: ${absoluteUrl("/journal/unfavorable-fortune-stick-reading")}
 - Guanyin fortune sticks guide: ${absoluteUrl("/learn/guanyin-fortune-sticks")}
 - Temple Sticks Oracle: ${absoluteUrl("/sticks")}
 - Insight Studios: ${absoluteUrl("/insights")}
