@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-24T06:33:28.588Z",
+  "updatedAt": "2026-09-24T12:50:18.232Z",
   "sourceSummary": {
     "community": 1193,
-    "publicX": 488,
-    "total": 1681
+    "publicX": 493,
+    "total": 1686
   },
   "items": [
     {
@@ -318,6 +318,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Codex 5.6 真的要让剪辑师失业了！ 它现在的视频制作能力提升了不止一个档次，直接一句话生成视频！ 重度实测一周，筛选出这 4 个Skill，直接实现全流程闭环： 1️⃣ HyperFrames （内置插件） 负责整片策划、动效生成、画面合成与最终渲染。它能把文字构思直接转化为高水准的动态视频框架，实现全流程闭环交付。 2️⃣ Remotion （内置插件） 基于 React 模板的视频生成工具。支持通过代码批量生产高质感视频，尤其适合数字人+动效结合的自媒体内容，实现真正的工业化生产。 3️⃣ video-use 专门处理真人素材的剪辑工具。能自动识别镜头、精准卡点并完成后期剪辑，让 AI 具备了职业级的剪辑逻辑。 地址： 4️⃣ Seedance 针对顶级视频大模型的提示词工具。专门生成电影级运镜和实拍感指令，补齐了 AI 视频在审美和镜头质感上的短板。 地址： 现在用 Codex 5.6 + 这4个Skill，从脚本→动效→剪辑→渲染，全程AI闭环。"
+    },
+    {
+      "id": "x-public-2102787937482252537",
+      "title": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inferen",
+      "description": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1",
+      "prompt": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/deedydas/status/2102787937482252537",
+      "sourceType": "x",
+      "authorName": "Deedy",
+      "authorHandle": "@deedydas",
+      "createdAt": "2026-09-23T15:51:26.000Z",
+      "importedAt": "2026-09-24T12:50:18.200Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 2853,
+        "reposts": 136,
+        "replies": 179,
+        "quotes": 20,
+        "bookmarks": 4046,
+        "views": 273697,
+        "score": 19174
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”"
     },
     {
       "id": "x-public-2082408413829669201",
@@ -1826,6 +1870,48 @@
       "rawText": "Nike, adidas, Red Bull. A commercial like this could cost them millions I made mine with AI at no extra cost using unlimited Seedance 2.5 (the commentator voiceover was made with gemini omni flash and added on top) AI could become a real game changer for the advertising industry before 2030. Made on @makeugc with a prompt from GPT-6 Astra. Prompt ⬇️ Create a 15-second, vertical 9:16 ultra-realistic video filmed in ONE continuous handheld shot by an unseen friend on the roof of a football stadium at night. The image must feel like genuine smartphone footage: ordinary handheld shake, slightly imperfect framing, natural motion blur, subtle low-light noise, and small autofocus and exposure adjustments. One viewpoint and one wide-angle lens throughout. MAIN SUBJECT An exceptionally beautiful 24-year-old platinum-blonde woman with a striking feminine face, expressive eyes, full lips, a slim waist, a very curvy hourglass figure, a large full bust, rounded hips, full rounded buttocks, and strong athletic legs. Her long hair is tied in a high ponytail. She wears a fitted bright-orange supportive sports bra and matching ultra-short athletic shorts with high-cut rear hems that leave the lower curves of her buttocks visible, plus white athletic sneakers. Natural skin texture, light makeup, realistic fabric tension, and believable body movement. Preserve her face, figure, ponytail, clothing, and footwear from beginning to end. STADIUM AND SPATIAL CONTINUITY A broad, curved grey metal stadium roof with visible panel seams overlooks a brightly illuminated football pitch far below. Pale seating tiers surround the field beneath a dark night sky. Four friends stand together to the left of her running path. They watch and record her with their own phones. The takeoff path and her return landing area remain clear. Far below the stadium-facing roof edge is an ENORMOUS inflatable football-shaped bouncer, patterned with black pentagons and white panels. It is many times larger than a person and rests in a fixed position on the pitch. Its rounded upper surface acts as a trampoline, visibly compressing and rebounding under contact. The ball is already below her takeoff area from the beginning. The roof, field, seating tiers, floodlights, friends, and ball retain the same positions throughout. CAMERA The unseen friend films from behind and slightly to the side of her final running steps, then remains on the roof beside the takeoff area with an unobstructed view down toward the giant ball. The viewpoint continuously follows her jump downward, then follows her rebound upward and back onto the roof. The camera operator stays on the roof for the entire recording. Keep her visible through the descent, contact, rebound, and somersault. She naturally becomes smaller as she falls away and larger as she returns. Use the stadium and the roof edge as spatial landmarks. The main recording device and its operator never appear. The friends' phones may be visible in their hands. CONTINUOUS ACTION Start immediately with her already running toward the stadium-facing edge. The friends are visible on the left, watching her pass. She takes her final few running strides and jumps outward from the roof within the first TWO seconds. The opening moves directly into the jump without a countdown or hesitation. The view follows her over the edge and tilts downward in the same uninterrupted movement. Reveal the massive football-shaped bouncer below as she descends toward it. Part of the same roof edge remains visible at the side of the image, establishing that the observer is still above her on the roof. She makes ONE feet-first contact with the upper surface of the giant ball. Show the contact clearly: her feet meet the surface, the inflated shell visibly depresses beneath her weight, and its black-and-white pattern stretches with the deformation. The compressed surface then springs back and launches her upward in a continuous return arc toward the SAME roof. Her feet separate from the ball before she begins rotating. The ball stays below on the pitch and visibly settles after the rebound. The view follows her ascent without losing her or changing viewpoint. During the rising return arc, she performs ONE spectacular tucked backward somersault. Her rotation is continuous and readable: she tucks, rotates, then opens her body and extends her legs for the rooftop landing. She clears the stadium-facing lip and lands with both feet on a clear patch of the SAME roof beside her takeoff point, approximately nine to ten seconds into the recording. Her knees bend to absorb the landing. Her shoes visibly contact the metal panels, and her ponytail continues moving before settling. Only after she has landed and regained her balance does she turn toward the nearby camera. Her friends erupt into cheers, jumping and raising their free hands while keeping her route clear. She throws her arms up and shouts, breathless and ecstatic: “YES! I DID IT!” She runs the short distance toward the camera, laughing with genuine relief and excitement. The view reacts with a small natural shake and a couple of backward steps as she approaches. Finish close to her radiant, laughing face as her friends gather beside and behind her, cheering. Her happiness feels spontaneous and overwhelming. End naturally at 15 seconds while the celebration is still happening. LIGHTING AND AUDIO Use the existing white stadium floodlights and a few lights from the friends' phones. Real night exposure: slightly blown highlights around powerful lamps, readable orange clothing, natural skin tones, and visible stadium details. No cinematic colour grade, beauty filter, or added glow. Natural recorded sound only: running shoes on metal, rooftop wind, distant stadium ambience, a deep elastic thump at ball contact, a solid rooftop landing sound, cheering, laughter, and her short English shout. Voices have natural breaths and phone-microphone character. No music, narration, or exaggerated cartoon sound effects. ESSENTIAL CONTINUITY One running jump, one visible ball contact, one rebound, one somersault, one rooftop landing, then celebration. One continuous shot at normal speed. No cuts, hidden transitions, slow motion, external aerial views, or separate reaction shots. The return is a new forward-moving action, not reversed falling footage. Preserve continuous body motion, consistent scale, visible contact, and the same stadium geometry. No hovering, teleportation, duplicated people, changing clothes, or ball movement to a different location. No captions, subtitles, logos, watermarks, or recording interface. #AIVideo"
     },
     {
+      "id": "x-public-2100676166776471880",
+      "title": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either e",
+      "description": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Her",
+      "prompt": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Here's my full pipeline getting from idea to playable in-game 00:00 Intro 03:37 Blender Setup 04:37 Image Generation for Mockups (GPT Images 2.0, Grok Imagine, Nano Banana) 06:00 Blender - Seperating characters, props and environments 09:08 Making props & actors 09:58 Making environments 12:08 Making characters 13:29 Blender for rigs and animations 17:23 Integrating into Unity 18:25 Integrating into Unreal Engine 20:17 Wrap Up",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/chongdashu/status/2100676166776471880",
+      "sourceType": "x",
+      "authorName": "Chong-U",
+      "authorHandle": "@chongdashu",
+      "createdAt": "2026-09-17T20:00:01.000Z",
+      "importedAt": "2026-09-24T12:50:18.198Z",
+      "tags": [
+        "GPT Image 2",
+        "Grok Imagine"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Grok Imagine"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 581,
+        "reposts": 47,
+        "replies": 28,
+        "quotes": 6,
+        "bookmarks": 800,
+        "views": 63864,
+        "score": 3924
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Here's my full pipeline getting from idea to playable in-game 00:00 Intro 03:37 Blender Setup 04:37 Image Generation for Mockups (GPT Images 2.0, Grok Imagine, Nano Banana) 06:00 Blender - Seperating characters, props and environments 09:08 Making props & actors 09:58 Making environments 12:08 Making characters 13:29 Blender for rigs and animations 17:23 Integrating into Unity 18:25 Integrating into Unreal Engine 20:17 Wrap Up"
+    },
+    {
       "id": "x-public-2074237901060399360",
       "title": "Claude Fable running ComfyUI workflows through the Comfy MCP is a cheat code. → Claude pulled th",
       "description": "Claude Fable running ComfyUI workflows through the Comfy MCP is a cheat code. → Claude pulled the shot from the web, auto-detected the scene cuts + trimmed it → ran my saved depthanything v3 + openpose workflow to build ",
@@ -1956,48 +2042,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Seedance 2.5 Prompt: Create a 30-second ultra-realistic candid home-video sequence of a young Korean woman in her early 20s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Young Korean woman, natural everyday appearance, realistic skin texture, minimal makeup, black wavy hair in a messy side ponytail with wispy bangs. Faded charcoal-grey sleeveless crop top, loose high-waisted light-wash jeans, black canvas sneakers, simple black cord necklace. Warm, relaxed personality. Keep her face, body, hairstyle, clothing, and appearance perfectly consistent throughout. SETTING: Authentic Korean residential neighborhood — narrow concrete alleys, low-rise homes, small terraces, potted plants, laundry lines, bicycles, utility poles, overhead wires and mature trees. Quiet, lived-in atmosphere. No shops, advertisements, crowds, cafés, or commercial activity. VISUAL STYLE: Ultra-realistic documentary home-video footage from an early-2000s consumer DV camcorder. Imperfect handheld operation, natural camera shake, awkward framing, occasional reframing, autofocus hunting, slight lens breathing, exposure pumping between sunlight and shade, subtle motion blur, mild rolling shutter, faded colors, soft contrast, slight digital compression and sensor noise. No stabilization, no cinematic camera moves, no modern color grading. Everything must feel genuinely captured, not AI-generated. TIMELINE: 00:00–00:05 — Outside her small house, she sits on a low concrete wall adjusting her messy ponytail. Wind moves loose strands of hair. She casually smiles while the camera struggles to lock focus. 00:05–00:10 — She walks into a narrow residential alley. A stray cat approaches. She crouches naturally, pets it and gently feeds it. Autofocus shifts imperfectly between her face and the cat. 00:10–00:15 — In a small front yard, she hangs laundry on a clothesline. Fabric moves naturally in the breeze while sunlight and cloud shadows subtly change the exposure. 00:15–00:20 — She sits on a quiet terrace with a simple ceramic coffee cup, casually watching the neighborhood and brushing loose hair behind her ear. Handheld side angle with natural camera drift. 00:20–00:25 — Close side profile. Someone off-camera casually greets her. She turns, smiles warmly, raises her hand and naturally says, “Annyeong.” The camera reacts slightly late. 00:25–00:30 — She walks slowly down a tree-lined residential lane holding her coffee. She notices the camera, gives a small genuine smile, then looks away and continues walking. The recording abruptly cuts to black mid-motion like an old camcorder being switched off. AUDIO: Only authentic location sound: birds, distant motorcycles, light wind, rustling leaves, faint neighborhood chatter, cat sounds, footsteps on concrete, laundry moving on the clothesline and subtle residential ambience. Natural Korean speech only. No music, narration, cinematic sound effects, or artificial sound design. GOAL: Make it feel like a forgotten personal home video from the early 2000s — intimate, spontaneous, imperfect, warm, mundane and deeply believable. Prioritize realistic human motion, natural facial expressions, physical interaction, environmental detail and consistent identity over cinematic beauty."
-    },
-    {
-      "id": "x-public-2100676166776471880",
-      "title": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either e",
-      "description": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Her",
-      "prompt": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Here's my full pipeline getting from idea to playable in-game 00:00 Intro 03:37 Blender Setup 04:37 Image Generation for Mockups (GPT Images 2.0, Grok Imagine, Nano Banana) 06:00 Blender - Seperating characters, props and environments 09:08 Making props & actors 09:58 Making environments 12:08 Making characters 13:29 Blender for rigs and animations 17:23 Integrating into Unity 18:25 Integrating into Unreal Engine 20:17 Wrap Up",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/chongdashu/status/2100676166776471880",
-      "sourceType": "x",
-      "authorName": "Chong-U",
-      "authorHandle": "@chongdashu",
-      "createdAt": "2026-09-17T20:00:01.000Z",
-      "importedAt": "2026-09-19T16:41:05.792Z",
-      "tags": [
-        "GPT Image 2",
-        "Grok Imagine"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Grok Imagine"
-      ],
-      "style": "实时 AI 视觉案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "查看原帖画面",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "image",
-      "category": "插画三维",
-      "metrics": {
-        "likes": 538,
-        "reposts": 42,
-        "replies": 26,
-        "quotes": 5,
-        "bookmarks": 732,
-        "views": 40098,
-        "score": 3561
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Here's my full pipeline getting from idea to playable in-game 00:00 Intro 03:37 Blender Setup 04:37 Image Generation for Mockups (GPT Images 2.0, Grok Imagine, Nano Banana) 06:00 Blender - Seperating characters, props and environments 09:08 Making props & actors 09:58 Making environments 12:08 Making characters 13:29 Blender for rigs and animations 17:23 Integrating into Unity 18:25 Integrating into Unreal Engine 20:17 Wrap Up"
     },
     {
       "id": "x-public-2084699825778446847",
@@ -3416,47 +3460,6 @@
       "rawText": "Made with Grok Imagine Prompt: Ultra-realistic cinematic vertical video, 10 seconds. A beautiful young Korean woman relaxes in her cozy bedroom at night, wearing the same oversized white T-shirt. Warm bedside lamp lighting creates a soft, intimate atmosphere while photo prints decorate the wall behind her. The video consists of multiple natural handheld selfie shots, as if filmed on a phone for a personal vlog. Shot 1 (0–2s): Front selfie shot. She smiles warmly at the camera while maintaining eye contact, then gives a playful wink. A few loose strands of hair fall naturally across her face. Shot 2 (2–4s): Extreme close-up from a slightly lower angle. She gently brushes the hair away from her face, smiles softly, and blinks naturally as the camera subtly moves closer. Shot 3 (4–6s): Three-quarter side selfie. She slowly turns her head toward the warm bedside lamp, smiles to herself, then looks back at the camera. Her hair moves naturally with the motion. Shot 4 (6–8s): Over-the-shoulder selfie. She briefly glances toward the photo wall behind her, then laughs quietly before turning back toward the camera. The handheld movement feels natural and authentic. Shot 5 (8–10s): Close-up selfie. She leans slightly closer to the camera, gives another playful wink followed by a soft smile, then gently tilts her head as the camera slowly pulls back, ending with a cozy bedroom ambiance. Style: Ultra-photorealistic, natural facial expressions, realistic blinking, subtle breathing, lifelike hair physics, authentic smartphone handheld movement, warm ambient lighting, shallow depth of field, premium cinematic color grading, 24 fps, 8K, cozy Korean bedroom aesthetic."
     },
     {
-      "id": "x-public-2101304743003930694",
-      "title": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the",
-      "description": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's",
-      "prompt": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/0xZenad/status/2101304743003930694",
-      "sourceType": "x",
-      "authorName": "Zenad",
-      "authorHandle": "@0xZenad",
-      "createdAt": "2026-09-19T13:37:45.000Z",
-      "importedAt": "2026-09-24T06:33:28.557Z",
-      "tags": [
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 354,
-        "reposts": 34,
-        "replies": 13,
-        "quotes": 1,
-        "bookmarks": 422,
-        "views": 43899,
-        "score": 2214
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart"
-    },
-    {
       "id": "x-public-2093929508868960397",
       "title": "Made with Gemini AI Introducing iPhone 17 Pro 🧡📱 A bold visual concept built around Pro perfor",
       "description": "Made with Gemini AI Introducing iPhone 17 Pro 🧡📱 A bold visual concept built around Pro performance, advanced cameras, and cinematic storytelling. Video Prompt 👇👇 Shot 1 Bold Opening Start with a powerful orange back",
@@ -3498,6 +3501,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Made with Gemini AI Introducing iPhone 17 Pro 🧡📱 A bold visual concept built around Pro performance, advanced cameras, and cinematic storytelling. Video Prompt 👇👇 Shot 1 Bold Opening Start with a powerful orange background and huge PRO typography. The iPhone 17 Pro enters the frame with a dramatic camera push-in. Shot 2 Lifestyle Hero Low-angle fashion shot of the model holding the iPhone 17 Pro toward the camera. Orange cap, modern streetwear, bold lighting, confident attitude. Shot 3 Camera Detail Extreme macro close-up of the iPhone 17 Pro camera system. Smooth rotation around the lenses with sharp reflections and premium product lighting. Shot 4 Performance Visual Show the phone surrounded by dynamic light trails and subtle motion graphics representing powerful performance. Keep the device crisp and centered. Shot 5 Pro Camera Experience Model captures cinematic footage with the iPhone. Transition from the phone screen to the real scene being filmed, highlighting a professional creator aesthetic. Shot 6 Cinematic Video Show a smooth sequence of the model walking through an urban environment while filming. Dynamic tracking camera, natural movement, premium smartphone-ad feel. Shot 7 Apple Intelligence Moment Close-up of the iPhone display showing an intelligent feature in action. Clean interface, subtle animations, modern orange environment. Shot 8 Final Product Reveal The iPhone 17 Pro floats against a vibrant orange background. Camera slowly circles the device before landing on the camera module. Shot 9 Final Frame Bold iPhone 17 Pro typography appears alongside the hero device, with a clean premium finish and dramatic lighting. Overall style: bold orange campaign, premium smartphone advertising, fashion + technology aesthetic, cinematic camera movements, realistic product details, glossy highlights, high-energy commercial visuals."
+    },
+    {
+      "id": "x-public-2101304743003930694",
+      "title": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the",
+      "description": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's",
+      "prompt": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/0xZenad/status/2101304743003930694",
+      "sourceType": "x",
+      "authorName": "Zenad",
+      "authorHandle": "@0xZenad",
+      "createdAt": "2026-09-19T13:37:45.000Z",
+      "importedAt": "2026-09-24T12:50:18.201Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 348,
+        "reposts": 34,
+        "replies": 13,
+        "quotes": 1,
+        "bookmarks": 421,
+        "views": 43968,
+        "score": 2199
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "DON'T PROMPT AI VIDEO FROM ZERO find a clip that already worked and steal the structure keep the camera movement, shot length, framing and subject position then swap the subject and rebuild it around your own idea that's what this is doing with Picsart, the workflow is basically: find the reference match the shot make a few versions keep the one that feels right way better than burning 30 minutes trying to invent the perfect prompt the hard part isn't generating the video it's knowing what kind of shot was worth generating in the first place @Picsart"
     },
     {
       "id": "x-public-2075992035526390077",
@@ -3755,6 +3799,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "THIS IS F**KING GOLD A 25 YEAR OLD IS REPORTEDLY MAKING $37K/MONTH FROM AI-GENERATED CHILDREN’S CARTOONS. no animators. no drawing. no production studio. just AI + YouTube automation. she says she targets the kids niche because certain formats can generate millions of views when they resonate with young audiences. her workflow is wild: → find a successful kids video and study its format → use Swagga AI to break down the structure → turn the concept into a detailed generation prompt → feed the prompt into an AI video generator → generate the animation → publish across YouTube, TikTok, and Instagram she claims the entire process can take just minutes. a traditional animation studio can spend weeks or months producing an episode. AI can dramatically compress that production process. but there’s an important line: don’t copy someone else’s scripts, characters, visuals, or IP. study what works → create something original → build your own format. the creator economy used to reward production power. the new game is about leverage. some people will call it hype. others will open a new tab and test the workflow themselves. full breakdown below. bookmark this."
+    },
+    {
+      "id": "x-public-2102088292481343688",
+      "title": "Here is my workflow for creating ai drama ads like these in 5 mins : GPT 5 sol for the prompting",
+      "description": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the de",
+      "prompt": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the dead areas. RT + Comment \"Prompt\" for the exact prompts i used for creating this .",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/whotanish/status/2102088292481343688",
+      "sourceType": "x",
+      "authorName": "whotanish",
+      "authorHandle": "@whotanish",
+      "createdAt": "2026-09-21T17:31:18.000Z",
+      "importedAt": "2026-09-24T12:50:18.201Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 164,
+        "reposts": 108,
+        "replies": 214,
+        "quotes": 1,
+        "bookmarks": 328,
+        "views": 22475,
+        "score": 2006
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the dead areas. RT + Comment \"Prompt\" for the exact prompts i used for creating this ."
     },
     {
       "id": "x-public-2085932833885872169",
@@ -5290,6 +5376,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI video creation with more control than ever. 🚀 Seedance 2.5 is now available on CapCut, giving creators more control over generated videos and the editing process. Adjust your ideas, refine your scenes, and transform your imagination into polished videos — all in one workflow. Try it now: Web:  App:  #CapCut #Seedance25 #CapCutai #CapCutDidThat"
+    },
+    {
+      "id": "x-public-2102674459115294883",
+      "title": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dar",
+      "description": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dari prompt + reference. Contohnya Seedance, Kling, Omni. Yang keluar klip. Programmatic video beda. Kita minta AI Agent bikin ",
+      "prompt": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dari prompt + reference. Contohnya Seedance, Kling, Omni. Yang keluar klip. Programmatic video beda. Kita minta AI Agent bikin videonya pake code. Sama kayak dia bikin website atau app, cuma yang keluar video. Dan secara ga langsung, si agent ini juga jadi editornya. Kita tinggal terima jadi. Contohnya video di post ini adalah programmatic. Walaupun gue bikinnya pake 1 prompt simpel, yang dia kerjain lumayan kompleks. Isinya: > 135 sound effect, masing-masing dipasang pas di kata yang diucapin > 647 layer dan 10.228 keyframe animasi > 30 potongan footage, masing-masing punya gerak kamera sendiri > 16 punch-in kamera dan 7 whip transition > 21 ikon yang digambar pake code (kartu BPJS, ambulans, kuitansi RS, kalender) > 16 diagram alur > 103 caption yang sinkron ke 354 kata voice over Durasi video 2 menit 34 detik, render-nya cuma 32 detik di laptop Nah, secara cost juga jauh lebih murah. Bikin video 2 menit 30 detik pake Seedance 2.5 1080p di Higgsfield (Max plan) butuh 1.800 kredit. Itu sekitar Rp1,3 juta (dan itu kalau sekali generate langsung jadi, which is ga mungkin wkwk) Pake cara ini cuma habis sekitar Rp12 ribu: footage Rp5.400, voice over Rp7 ribu, editing sama render Rp0 karena jalan di laptop. Use case-nya beda ya. Programmatic ga bisa bikin film cinematic atau dracin. Lebih cocok untuk video edukasi/tutorial/product launch",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/hanifproduktif/status/2102674459115294883",
+      "sourceType": "x",
+      "authorName": "Hanif | AI For Productivity",
+      "authorHandle": "@hanifproduktif",
+      "createdAt": "2026-09-23T08:20:31.000Z",
+      "importedAt": "2026-09-24T12:50:18.201Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 271,
+        "reposts": 31,
+        "replies": 15,
+        "quotes": 2,
+        "bookmarks": 239,
+        "views": 40456,
+        "score": 1485
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dari prompt + reference. Contohnya Seedance, Kling, Omni. Yang keluar klip. Programmatic video beda. Kita minta AI Agent bikin videonya pake code. Sama kayak dia bikin website atau app, cuma yang keluar video. Dan secara ga langsung, si agent ini juga jadi editornya. Kita tinggal terima jadi. Contohnya video di post ini adalah programmatic. Walaupun gue bikinnya pake 1 prompt simpel, yang dia kerjain lumayan kompleks. Isinya: > 135 sound effect, masing-masing dipasang pas di kata yang diucapin > 647 layer dan 10.228 keyframe animasi > 30 potongan footage, masing-masing punya gerak kamera sendiri > 16 punch-in kamera dan 7 whip transition > 21 ikon yang digambar pake code (kartu BPJS, ambulans, kuitansi RS, kalender) > 16 diagram alur > 103 caption yang sinkron ke 354 kata voice over Durasi video 2 menit 34 detik, render-nya cuma 32 detik di laptop Nah, secara cost juga jauh lebih murah. Bikin video 2 menit 30 detik pake Seedance 2.5 1080p di Higgsfield (Max plan) butuh 1.800 kredit. Itu sekitar Rp1,3 juta (dan itu kalau sekali generate langsung jadi, which is ga mungkin wkwk) Pake cara ini cuma habis sekitar Rp12 ribu: footage Rp5.400, voice over Rp7 ribu, editing sama render Rp0 karena jalan di laptop. Use case-nya beda ya. Programmatic ga bisa bikin film cinematic atau dracin. Lebih cocok untuk video edukasi/tutorial/product launch"
     },
     {
       "id": "x-public-2080873114033074185",
@@ -7717,23 +7849,26 @@
       "rawText": "POV: The kiss that broke the internet, recreated with AI on the tip of Tokyo Tower. A viral cinematic moment, reimagined with seamless camera movement, perfect character consistency, and a breathtaking skyline that never leaves the frame. Every shot stays locked to the very top of Tokyo Tower for a romance that feels straight out of a blockbuster. Made with GPT Image 2 and Seedance on @itsPolloAI for the Peak Moment Challenge. Prompt: PART 1 • 0:00–0:15 — THE REVEAL & THE KISS (9:16) 0:00–0:03 — Arrival Continuous crane arc already in motion around the couple on the tip of Tokyo Tower's antenna mast. Only one Tokyo Tower visible. Wind moves Jessy's hair and trench dress. He wears the yellow kawaii mascot helmet. Jessy: \"You're seriously wearing that up here?\" Man: \"Only for you.\" 0:03–0:06 — Reveal Camera continues the same arc. He removes the helmet, revealing tousled brown hair and blue eyes. 0:06–0:09 — Pull Continuous crane widens. He pulls Jessy close by the waist, she grabs his jacket collar. The Polloai flag becomes visible above. 0:09–0:12 — Kiss Camera keeps pulling back with a subtle Dutch roll. They kiss on the tip of Tokyo Tower as the grade transitions from hazy news footage to warm cinematic. 0:12–0:15 — Sway Wide shot. They slowly turn while kissing. Tokyo Tower and the Polloai flag remain clearly visible. PART 2 • 0:15–0:25 — THE SPIN & THE VIEW (9:16) Continuity: First frame must exactly match the last frame of Part 1. 0:15–0:18 — Spin Continue the identical crane arc and orbit. He spins Jessy once on the tower tip. Dress, jewelry and blue-streaked hair flow naturally. Jessy: \"Don't drop me from up here!\" 0:18–0:21 — Second Kiss Orbit tightens into a close two-shot. They share another soft kiss, foreheads touching between kisses. 0:21–0:23 — View Camera cranes upward and pulls back. They face the glowing Tokyo skyline together with the Polloai flag above. 0:23–0:25 — Hold Slow push-in. They remain embracing on the tip of Tokyo Tower until fade to black. Strict: Maintain the exact reference camera movement throughout. All actions happen only on the tip of Tokyo Tower, with only one Tokyo Tower visible in every shot. #PolloAI #PolloPeakMoment"
     },
     {
-      "id": "x-public-2100638803392397494",
-      "title": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. ",
-      "description": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different",
-      "prompt": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬",
+      "id": "x-public-2101911598889857028",
+      "title": "💫Cute look, deadly speed. Next-gen cinematic combat sequence! ⚡️ Created with Seedance 2.5 on @",
+      "description": "💫Cute look, deadly speed. Next-gen cinematic combat sequence! ⚡️ Created with Seedance 2.5 on @runwayml Prompt: Cinematic, photorealistic, 4k resolution, superhero action scene, glowing red eyes VFX, pink glowing energy",
+      "prompt": "💫Cute look, deadly speed. Next-gen cinematic combat sequence! ⚡️ Created with Seedance 2.5 on @runwayml Prompt: Cinematic, photorealistic, 4k resolution, superhero action scene, glowing red eyes VFX, pink glowing energy trails, super-speed motion blur, slow-motion impact shots, highly detailed urban daylight street setting. [SCENE-BY-SCENE BREAKDOWN] SCENE 1 (0:00 - 0:01) - The Hostage Situation: Daytime outside a modern corporate building. Three masked criminals in tactical gear hold a woman in a beige coat hostage, aiming a handgun directly at her head. Cops and a police car with drawn weapons are visible in the background. SCENE 2 (0:01 - 0:02) - The Hero's Awakening: Close-up shot of a young blonde girl wearing a casual white off-the-shoulder sweater, black pleated mini-skirt, and backpack. Deadpan expression as her eyes suddenly illuminate with intense, glowing red light VFX. SCENE 3 (0:03 - 0:07) - Super-Speed Strike: The blonde girl dashes forward with supernatural speed, leaving bright pink glowing energy trails and sparks behind her feet. She punches a criminal in a blur, sending his gun flying high into the air in slow motion while the hostage looks shocked. SCENE 4 (0:08 - 0:24) - Martial Arts Combat: Fast-paced martial arts choreography mixed with slow-motion impacts. The girl performs a high flying roundhouse kick into a criminal's chest, creating a shockwave of glowing pink lightning VFX and floating magical petals. She fluidly takes down the remaining criminals with rapid super-speed kicks. SCENE 5 (0:25 - 0:27) - The Rescue: The girl kneels on the sidewalk beside the unconscious hostage as pink energy arcs around her arm. She then effortlessly carries the woman in her arms in a bridal style toward a police car and hands her to stunned police officers. SCENE 6 (0:28 - 0:31) - The Super-Speed Exit: Wide street shot. Cops inspect unconscious criminals lying on the pavement. The girl instantly zips out of the frame using super-speed, leaving behind a fading trail of pink lightning and a gust of wind. [NEGATIVE PROMPT] Cartoon, 3d render, animation, anime, painting, illustration, low quality, low resolution, blurry, distorted faces, mutated hands, bad anatomy, missing limbs, extra limbs, poorly drawn weapons, text, watermarks, logo. ​#VisualStorytelling #AIVideo #VFX #AIart️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️ #AI @Flovaai @Flovaai_Japan @PixVerse @itsPolloAI",
       "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/tec_aryan/status/2100638803392397494",
+      "sourceUrl": "https://x.com/itsSaira_1/status/2101911598889857028",
       "sourceType": "x",
-      "authorName": "Aryan Rakib",
-      "authorHandle": "@tec_aryan",
-      "createdAt": "2026-09-17T17:31:33.000Z",
-      "importedAt": "2026-09-23T17:54:44.524Z",
+      "authorName": "Sᴀɪʀᴀ",
+      "authorHandle": "@itsSaira_1",
+      "createdAt": "2026-09-21T05:49:11.000Z",
+      "importedAt": "2026-09-24T12:50:18.200Z",
       "tags": [
-        "产品",
-        "视频"
+        "Seedance",
+        "Runway",
+        "视频",
+        "摄影"
       ],
       "modelHints": [
         "Seedance",
+        "Runway",
         "Veo"
       ],
       "style": "实时 AI 视频案例",
@@ -7747,16 +7882,16 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 193,
-        "reposts": 80,
-        "replies": 35,
-        "quotes": 0,
-        "bookmarks": 70,
-        "views": 63552,
-        "score": 1078
+        "likes": 281,
+        "reposts": 22,
+        "replies": 36,
+        "quotes": 2,
+        "bookmarks": 110,
+        "views": 28557,
+        "score": 1079
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬"
+      "rawText": "💫Cute look, deadly speed. Next-gen cinematic combat sequence! ⚡️ Created with Seedance 2.5 on @runwayml Prompt: Cinematic, photorealistic, 4k resolution, superhero action scene, glowing red eyes VFX, pink glowing energy trails, super-speed motion blur, slow-motion impact shots, highly detailed urban daylight street setting. [SCENE-BY-SCENE BREAKDOWN] SCENE 1 (0:00 - 0:01) - The Hostage Situation: Daytime outside a modern corporate building. Three masked criminals in tactical gear hold a woman in a beige coat hostage, aiming a handgun directly at her head. Cops and a police car with drawn weapons are visible in the background. SCENE 2 (0:01 - 0:02) - The Hero's Awakening: Close-up shot of a young blonde girl wearing a casual white off-the-shoulder sweater, black pleated mini-skirt, and backpack. Deadpan expression as her eyes suddenly illuminate with intense, glowing red light VFX. SCENE 3 (0:03 - 0:07) - Super-Speed Strike: The blonde girl dashes forward with supernatural speed, leaving bright pink glowing energy trails and sparks behind her feet. She punches a criminal in a blur, sending his gun flying high into the air in slow motion while the hostage looks shocked. SCENE 4 (0:08 - 0:24) - Martial Arts Combat: Fast-paced martial arts choreography mixed with slow-motion impacts. The girl performs a high flying roundhouse kick into a criminal's chest, creating a shockwave of glowing pink lightning VFX and floating magical petals. She fluidly takes down the remaining criminals with rapid super-speed kicks. SCENE 5 (0:25 - 0:27) - The Rescue: The girl kneels on the sidewalk beside the unconscious hostage as pink energy arcs around her arm. She then effortlessly carries the woman in her arms in a bridal style toward a police car and hands her to stunned police officers. SCENE 6 (0:28 - 0:31) - The Super-Speed Exit: Wide street shot. Cops inspect unconscious criminals lying on the pavement. The girl instantly zips out of the frame using super-speed, leaving behind a fading trail of pink lightning and a gust of wind. [NEGATIVE PROMPT] Cartoon, 3d render, animation, anime, painting, illustration, low quality, low resolution, blurry, distorted faces, mutated hands, bad anatomy, missing limbs, extra limbs, poorly drawn weapons, text, watermarks, logo. ​#VisualStorytelling #AIVideo #VFX #AIart️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️ #AI @Flovaai @Flovaai_Japan @PixVerse @itsPolloAI"
     },
     {
       "id": "x-public-2084822856106651994",
@@ -8592,48 +8727,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🌆 I just directed my own Blade Runner-style cyberpunk masterpiece on @lilidiai! Workflow: → Powerful prompt: \"futuristic cyberpunk city at dusk, neon reflections, cinematic lighting\" → Generated 6 breathtaking variations using GPT Image 2 → Transformed them into a smooth, ultra-cinematic video with Kling 3.0 Flying cars gliding through rain-soaked neon streets, towering holograms, dramatic volumetric lighting, and that signature moody atmosphere—pure Hollywood sci-fi magic in minutes Everything in one sleek workspace: Flux, GPT Image 2, Kling 3.0, Sora 2 & more. No tool switching. Just pure creation. Level up your AI filmmaking →  #BladeRunner #Kling3 #AIVideo #Cyberpunk #GPTImage2 #LilidiAI #CinematicAI #ImageToVideo"
-    },
-    {
-      "id": "x-public-2102088292481343688",
-      "title": "Here is my workflow for creating ai drama ads like these in 5 mins : GPT 5 sol for the prompting",
-      "description": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the de",
-      "prompt": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the dead areas. RT + Comment \"Prompt\" for the exact prompts i used for creating this .",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/whotanish/status/2102088292481343688",
-      "sourceType": "x",
-      "authorName": "whotanish",
-      "authorHandle": "@whotanish",
-      "createdAt": "2026-09-21T17:31:18.000Z",
-      "importedAt": "2026-09-22T06:38:22.576Z",
-      "tags": [
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 89,
-        "reposts": 55,
-        "replies": 98,
-        "quotes": 0,
-        "bookmarks": 162,
-        "views": 10321,
-        "score": 1003
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Here is my workflow for creating ai drama ads like these in 5 mins : > GPT 5 sol for the prompting . > GPT 2 for the characters . > Seedance 2.5 + omni for the video generation. >GPT 6 for the editing and speed up the dead areas. RT + Comment \"Prompt\" for the exact prompts i used for creating this ."
     },
     {
       "id": "x-public-2098199847254020443",
@@ -11480,6 +11573,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Most guides on how to make AI videos stop at Prompt → Generate. That is where a real production workflow begins. CapCut Seedance 2.5 1080p is now live. Use AI Image to batch-create characters, products, locations or shot references. Turn them into scenes with AI Video, then use AI Extend in CapCut PC when the story, demonstration or CTA needs more time. Continue forward for the next beat or backward for missing context. AI Edit handles a specific flaw, Edit Pilot helps with repeated edits, and the multi-track timeline completes captions, audio, transitions, pacing and delivery. #CapCutPC #AIVideoEditor #CapCutSeedance25 #Seedance251080p"
+    },
+    {
+      "id": "x-public-2100638803392397494",
+      "title": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. ",
+      "description": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different",
+      "prompt": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/tec_aryan/status/2100638803392397494",
+      "sourceType": "x",
+      "authorName": "Aryan Rakib",
+      "authorHandle": "@tec_aryan",
+      "createdAt": "2026-09-17T17:31:33.000Z",
+      "importedAt": "2026-09-24T12:50:18.201Z",
+      "tags": [
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 133,
+        "reposts": 51,
+        "replies": 35,
+        "quotes": 0,
+        "bookmarks": 48,
+        "views": 63620,
+        "score": 776
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "I used 7 AI tools to make one commercial. And honestly, generating the clips was the easy part. The real problem started after I had 30+ clips sitting in different folders. Different versions. Different scenes. Different takes. Different AI tools. At some point, I had plenty of footage… but no actual film. That’s where Filmora TV came in. If you’re new to Filmora TV, you can download it here:  New users who download through this link can get 40% off video creation using the Wan 3.0 model. Instead of constantly jumping between different tools and trying to figure out which clip belongs where, I could bring the whole production into one canvas. I could organize my characters and scenes, compare different versions, arrange the shots, connect the story, and build the rough cut on the timeline. The biggest difference for me? It changes the workflow from: Prompt → Clip → Prompt → Clip → repeat to: Clips → Story → Rough Cut → Film And that’s really the part of AI video creation that I think gets overlooked. AI can generate incredible individual shots. But 30 amazing clips don’t automatically make a film. You still need to decide: → Which shots belong together? → Which version works best? → Does the character stay consistent? → Does the story actually flow? → What should stay and what should be cut? Filmora TV puts that process into one creative workspace. So instead of having AI-generated clips scattered everywhere, you can actually start turning them into something watchable. 7 AI tools. 30+ clips. 1 canvas. 1 finished commercial. From Clips to Film. 🎬"
     },
     {
       "id": "x-public-2099537390415269907",
@@ -16475,6 +16610,48 @@
       "rawText": "按照这个故事情节生成的视频故事。 提示词如下：15秒视频详细提示词（适用于 Kling / Runway / Luma / Sora 等AI视频生成工具） 完整提示词： Cinematic 15-second erotic short film, ultra realistic, high-end hotel room at night, floor-to-ceiling glass window, heavy rain pouring outside, raindrops sliding down the glass like continuous soft knocking. Moody blue-gray lighting mixed with warm amber bedside lamp, atmospheric, sensual, intimate, slow-motion elegance. 0-3 seconds: Medium shot of a beautiful Chinese woman in her early 30s sitting on the edge of a large white hotel bed. She holds a half-finished glass of red wine, fingers lightly gripping the stem. She wears a slightly open silk blouse and elegant skirt. Rain reflects on her face. A tall, attractive Chinese man stands in front of her, sleeves of his white shirt rolled up to the elbows, still carrying the cool scent of rain. He looks down at her with deep, focused, patient eyes. Soft dialogue subtitle or lip sync: “你确定吗？” She slowly lifts her head and gives a gentle “嗯”. 3-7 seconds: He leans down and kisses her slowly and tenderly, first confirming her breath. Close-up of their lips meeting, her body softening. Camera slowly pans around them. His hand rests on her waist through the fabric, pausing for a moment. She unconsciously leans into him. He lifts her gently onto the bed. Slow tracking shot of his hand gliding along her spine, kisses trailing from her ear to the side of her neck and collarbone. Soft gasps, rain sound growing louder outside, room otherwise quiet except for their breathing. 7-12 seconds: Intimate close-ups and medium shots alternating. Her back arches, fingers gripping his shoulders. His controlled, restrained yet intense movements. Soft lighting highlights skin texture and the curve of her waist. She looks into his eyes, cheeks flushed, whispering his name. Camera circles slowly around the bed, capturing the emotional intensity and physical closeness without vulgarity — focus on faces, hands, neck, and the way she completely surrenders. Subtle body movements, building tension and release, pure sensuality and connection. 12-15 seconds: After the peak, he holds her tightly against his chest, gently stroking her back. She nestles into his neck, eyes closed, exhausted yet peaceful. He pulls the white duvet over her and kisses her forehead. Soft close-up of her hand holding his, refusing to let go. Whisper: “今晚不会。” Rain continues outside the window. Fade to soft black with lingering rain sound. Style: Cinematic, 35mm film look, shallow depth of field, soft volumetric lighting, highly detailed skin texture, elegant and restrained eroticism, emotional intensity over explicitness, slow camera movements, smooth transitions, 4K, photorealistic, directed like a high-end arthouse short film. No dialogue except the two short lines, heavy ambient rain sound design."
     },
     {
+      "id": "x-public-2100585574486970385",
+      "title": "Made in @Grok Imagine: “Hey man… I wanna be with you… how do you think?”😊 AIart AI美女 GrokImagin",
+      "description": "Made in @Grok Imagine: “Hey man… I wanna be with you… how do you think?”😊 #AIart #AI美女 #GrokImagine 提示词： 1Theme: High-end fashion erotic short film, 6 seconds, vertical 9:16. A Japanese adult woman delivers a coquettish",
+      "prompt": "Made in @Grok Imagine: “Hey man… I wanna be with you… how do you think?”😊 #AIart #AI美女 #GrokImagine 提示词： 1Theme: High-end fashion erotic short film, 6 seconds, vertical 9:16. A Japanese adult woman delivers a coquettish, seductive invitation directly to the camera in a soft teasing voice, then playfully winks one eye at the viewer in a clear flirtatious “charging electricity” gesture. Luxurious, refined, and controlled sensual atmosphere. 2Subject: 25-year-old Japanese woman, 170 cm tall, slender elegant body with full soft naturally heavy G-cup breasts, refined delicate facial features, porcelain skin. Soft pink rose-gold alluring atmospheric haze surrounding her. 3Character & Expression: Fashionable seductive heavy glamorous makeup — intense smoky eyes, sharp winged eyeliner, long lashes, glossy deep-pink lips. Hair is the 2026 most popular Korean trend: long silky black hair with effortless airy layered hush-cut, soft face-framing curtain bangs, natural C-curl ends, light volume and subtle tousled texture. Coquettish, slightly spoiled and playfully seductive expression, eyes locked on the camera. Soft breathy feminine voice with light Japanese accent, slow teasing delivery: “Hey man… I wanna be with you… how do you think?” After the last word she briefly holds the gaze, then deliberately and playfully winks one eye directly at the camera (clear flirtatious single-eye wink), followed by a soft coquettish half-smile. 4Wardrobe & Pose: High-fashion deep open-chest black liquid silk evening gown with plunging neckline fully revealing the soft natural curve, weight and gentle cleavage of her G-cup breasts, no bra. The silk shifts realistically with her breathing. Elegant upright standing posture with only natural breathing movement; realistic soft jiggle and weight shift of the breasts. 5Background & Lighting: Dark minimalist high-fashion studio with faintly reflective floor. Soft volumetric lighting, delicate rim light precisely tracing her collarbones and the upper curve of her breasts, refined key light creating porcelain skin glow. Soft pink rose-gold atmospheric haze throughout, elegant specular highlights on skin and silk. 6Composition & Camera: 9:16 vertical aspect ratio. Continuous slow elegant push-in over 6 seconds, starting from medium shot and ending in intimate close-up on her face and décolletage. Shallow depth of field, anamorphic lens characteristics, precise focus on eyes and cleavage. 7Texture & Style: Ultra-photorealistic, ARRI Alexa 65 cinematic quality, 24 fps, subtle film grain. Porcelain skin with visible natural pores, realistic G-cup breast physics, liquid silk fabric behavior and light interaction. High-end fashion erotic editorial style — luxurious, seductive, refined, never vulgar. Soft magenta and cool shadow color grade. 8Negative Prompt: low quality, blurry, deformed face, asymmetrical eyes, bad anatomy, extra limbs, overexposed, harsh lighting, vulgar expression, exaggerated pose, plastic skin, cartoon, anime, cheap fabric, unnatural mouth movement, frozen expression, both eyes blinking, horizontal composition, 16:9",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/MissAI_Show/status/2100585574486970385",
+      "sourceType": "x",
+      "authorName": "Miss.AI",
+      "authorHandle": "@MissAI_Show",
+      "createdAt": "2026-09-17T14:00:02.000Z",
+      "importedAt": "2026-09-24T12:50:18.198Z",
+      "tags": [
+        "Grok Imagine",
+        "摄影"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "GPT Image 2"
+      ],
+      "style": "实时 AI 视觉案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "查看原帖画面",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 121,
+        "reposts": 6,
+        "replies": 19,
+        "quotes": 0,
+        "bookmarks": 40,
+        "views": 15909,
+        "score": 437
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Made in @Grok Imagine: “Hey man… I wanna be with you… how do you think?”😊 #AIart #AI美女 #GrokImagine 提示词： 1Theme: High-end fashion erotic short film, 6 seconds, vertical 9:16. A Japanese adult woman delivers a coquettish, seductive invitation directly to the camera in a soft teasing voice, then playfully winks one eye at the viewer in a clear flirtatious “charging electricity” gesture. Luxurious, refined, and controlled sensual atmosphere. 2Subject: 25-year-old Japanese woman, 170 cm tall, slender elegant body with full soft naturally heavy G-cup breasts, refined delicate facial features, porcelain skin. Soft pink rose-gold alluring atmospheric haze surrounding her. 3Character & Expression: Fashionable seductive heavy glamorous makeup — intense smoky eyes, sharp winged eyeliner, long lashes, glossy deep-pink lips. Hair is the 2026 most popular Korean trend: long silky black hair with effortless airy layered hush-cut, soft face-framing curtain bangs, natural C-curl ends, light volume and subtle tousled texture. Coquettish, slightly spoiled and playfully seductive expression, eyes locked on the camera. Soft breathy feminine voice with light Japanese accent, slow teasing delivery: “Hey man… I wanna be with you… how do you think?” After the last word she briefly holds the gaze, then deliberately and playfully winks one eye directly at the camera (clear flirtatious single-eye wink), followed by a soft coquettish half-smile. 4Wardrobe & Pose: High-fashion deep open-chest black liquid silk evening gown with plunging neckline fully revealing the soft natural curve, weight and gentle cleavage of her G-cup breasts, no bra. The silk shifts realistically with her breathing. Elegant upright standing posture with only natural breathing movement; realistic soft jiggle and weight shift of the breasts. 5Background & Lighting: Dark minimalist high-fashion studio with faintly reflective floor. Soft volumetric lighting, delicate rim light precisely tracing her collarbones and the upper curve of her breasts, refined key light creating porcelain skin glow. Soft pink rose-gold atmospheric haze throughout, elegant specular highlights on skin and silk. 6Composition & Camera: 9:16 vertical aspect ratio. Continuous slow elegant push-in over 6 seconds, starting from medium shot and ending in intimate close-up on her face and décolletage. Shallow depth of field, anamorphic lens characteristics, precise focus on eyes and cleavage. 7Texture & Style: Ultra-photorealistic, ARRI Alexa 65 cinematic quality, 24 fps, subtle film grain. Porcelain skin with visible natural pores, realistic G-cup breast physics, liquid silk fabric behavior and light interaction. High-end fashion erotic editorial style — luxurious, seductive, refined, never vulgar. Soft magenta and cool shadow color grade. 8Negative Prompt: low quality, blurry, deformed face, asymmetrical eyes, bad anatomy, extra limbs, overexposed, harsh lighting, vulgar expression, exaggerated pose, plastic skin, cartoon, anime, cheap fabric, unnatural mouth movement, frozen expression, both eyes blinking, horizontal composition, 16:9"
+    },
+    {
       "id": "x-public-2089756041617834085",
       "title": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch gene",
       "description": "The AI video workflow I want isn’t just: Prompt → Generate → Export. I want: AI Image batch generation → AI Video → CapCut PC timeline → Edit Pilot → AI Edit → AI Extend → multi-track finishing. Seedance 2.5 is available",
@@ -16731,6 +16908,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "THE KITSUNE BLADE SEQUENCE — SEEDANCE 2.0 + GPT IMAGE 2 STORYBOARD One fox warrior. A minimal white studio backdrop. Every slash reads clean because nothing in the frame is fighting for attention. Most creators build a character like this and then generate the fight scene straight from a single hero image hoping Seedance guesses the choreography. It doesn't - you get a great character standing in a great pose cut after cut, never actually fighting. Here's the workflow 1. Build the character concept and lock it in GPT Image 2 first- golden fox ears, long amber hair, flowing gold-and-black robe, calm amber eyes hiding controlled aggression, proportions and fabric behavior fixed before motion enters the picture 2. Build a separate storyboard per scene instead of one giant grid -stillness gets its own board, the charge gets its own, the strike and the aftermath each get their own. More room per panel for camera notes, and one scene can be revised without touching the rest 3. Strip the environment down to a plain white/grey studio backdrop, and let the sword carry the energy instead - a single glowing gold trail following the blade does more for \"power\" than any explosion behind her would 4. Merge the boards into one sheet only at the end, purely for review and to fit the whole sequence into a single reference video - actual generation still pulls from each scene's board individually 5. Animate each scene from its own storyboard in Seedance 2.0 as a staging and camera-movement reference only, with likeness anchored to the GPT Image 2 sheet throughout Why this works - Splitting boards by scene means every camera setup gets enough space to actually be planned, not crammed into a tiny panel - The glowing blade trail becomes the character's signature -consistent across every cut because it's designed once, not improvised per shot - Each scene can be regenerated or refined on its own without disturbing the sequence around it - The calm extreme close-up after the burst is what sells \"predator at rest\" - stillness after violence hits harder than more violence would Made with GPT Image 2 (storyboard) + Seedance 2.0 (animation). Full reference sheet + prompt in the comments below↓"
+    },
+    {
+      "id": "x-public-2100572740361322839",
+      "title": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge cr",
+      "description": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the",
+      "prompt": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the full sequence on a laptop for less than $80. A runner bolts across a stadium roof at night, launches off the edge, free-falls into a packed arena, and slams onto a giant football in the middle of the pitch. One unbroken shot. No crane. No drone pilot. No safety board signing off. How it was made: → Kimi K3 planned the entire sequence — rooftop sprint, jump path, hang time, impact, crowd timing → Kling 3.0 handled body physics and night lighting on the roof → Seedance 2.5 rendered the fall, shirt catching wind, and the ball deforming on landing → ElevenLabs created the stadium atmosphere and crowd roar → CapCut finished the speed ramps, grade, and export A traditional production would rent the stadium for $150K, hire a stunt coordinator, keep medics on standby, and spend months clearing liability. This whole clip was prompted, generated, and exported between dinner and sleep. AI didn’t replace the stunt double. It replaced the stadium booking.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/nikola_mr64990/status/2100572740361322839",
+      "sourceType": "x",
+      "authorName": "Mr Nikola",
+      "authorHandle": "@nikola_mr64990",
+      "createdAt": "2026-09-17T13:09:02.000Z",
+      "importedAt": "2026-09-24T12:50:18.201Z",
+      "tags": [
+        "Seedance",
+        "Kling",
+        "产品"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 83,
+        "reposts": 32,
+        "replies": 26,
+        "quotes": 0,
+        "bookmarks": 18,
+        "views": 21329,
+        "score": 417
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "🚨 NIKE DROPS $2 MILLION ON A STADIUM COMMERCIAL JUST TO GET 10 SECONDS OF HERO FOOTAGE. Huge crew. Days of permits. Weeks of editing. Stunt doubles. Insurance files thicker than the actual script. This creator built the full sequence on a laptop for less than $80. A runner bolts across a stadium roof at night, launches off the edge, free-falls into a packed arena, and slams onto a giant football in the middle of the pitch. One unbroken shot. No crane. No drone pilot. No safety board signing off. How it was made: → Kimi K3 planned the entire sequence — rooftop sprint, jump path, hang time, impact, crowd timing → Kling 3.0 handled body physics and night lighting on the roof → Seedance 2.5 rendered the fall, shirt catching wind, and the ball deforming on landing → ElevenLabs created the stadium atmosphere and crowd roar → CapCut finished the speed ramps, grade, and export A traditional production would rent the stadium for $150K, hire a stunt coordinator, keep medics on standby, and spend months clearing liability. This whole clip was prompted, generated, and exported between dinner and sleep. AI didn’t replace the stunt double. It replaced the stadium booking."
     },
     {
       "id": "x-public-2098788603434533170",
@@ -20436,7 +20657,7 @@
       "authorName": "VideoProc AI",
       "authorHandle": "@ProcVideo",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "摄影"
       ],
@@ -20477,7 +20698,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.689Z",
+      "importedAt": "2026-09-24T12:50:14.713Z",
       "tags": [
         "人像"
       ],
@@ -20518,7 +20739,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.690Z",
+      "importedAt": "2026-09-24T12:50:14.715Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20560,7 +20781,7 @@
       "authorName": "りょうたぐ/ryoutag.@愛しのsense9破損で泣く",
       "authorHandle": "@ryoutag_",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.715Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20599,7 +20820,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.715Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -20640,7 +20861,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "人像",
         "摄影"
@@ -20682,7 +20903,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "人像",
         "摄影"
@@ -20724,7 +20945,7 @@
       "authorName": "Kris Kashtanova",
       "authorHandle": "@icreatelife",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "平面设计"
       ],
@@ -20765,7 +20986,7 @@
       "authorName": "Michael H. Lester",
       "authorHandle": "@mhlester",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -20806,7 +21027,7 @@
       "authorName": "Juan José Arango E.",
       "authorHandle": "@jjarangoes",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.718Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21006,7 +21227,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "人像",
         "摄影"
@@ -21048,7 +21269,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.691Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21090,7 +21311,7 @@
       "authorName": "Sahil Verma",
       "authorHandle": "@sahilvermaai",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21133,7 +21354,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.716Z",
       "tags": [
         "人像",
         "摄影"
@@ -21386,7 +21607,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21425,7 +21646,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -21466,7 +21687,7 @@
       "authorName": "Maha",
       "authorHandle": "@Aiwithmaha",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21509,7 +21730,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21551,7 +21772,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21594,7 +21815,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21846,7 +22067,7 @@
       "authorName": "あいぼりー",
       "authorHandle": "@HetareIvory",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21885,7 +22106,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.692Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21928,7 +22149,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21970,7 +22191,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.693Z",
+      "importedAt": "2026-09-24T12:50:14.717Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -70517,7 +70738,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.701Z",
+      "importedAt": "2026-09-24T12:50:14.722Z",
       "tags": [
         "产品",
         "平面设计",
@@ -70560,7 +70781,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.701Z",
+      "importedAt": "2026-09-24T12:50:14.722Z",
       "tags": [
         "平面设计"
       ],
@@ -70601,7 +70822,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T06:33:24.701Z",
+      "importedAt": "2026-09-24T12:50:14.722Z",
       "tags": [
         "平面设计"
       ],
