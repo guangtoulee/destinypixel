@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-09-24T17:54:41.337Z",
+  "updatedAt": "2026-09-25T06:27:30.950Z",
   "sourceSummary": {
     "community": 1203,
     "publicX": 494,
@@ -278,6 +278,50 @@
       "rawText": "Bro to Bro : Make I cast this update fast fast. This guy swapped his face to any celebrity but didn’t share the tool Here is the tool , steps and prompt : Site : openart.)ai Steps : •Sign Up •Go to Video Mode: On the main dashboard, click the Video tab (highlighted in green in your screenshot). •Step 2: Set Up Your Project >Select \"Modify Video\": Make sure the green button labeled Modify Video is active. This is the mode that keeps the original video's motion while changing the details. >Pick the Model: In the dropdown menu, ensure Kling 01 is selected. This is currently the best model for keeping movements \"exactly\" the same. •Step 3: Upload Your video 1. Upload the \"your\" Video: Click box #1 (Upload Video to Edit) and select the video of the person talking. • Tip: Keep the video between 3 and 10 seconds. 2. Upload the \"New Face\": Click box #2 (Reference Image) and upload a clear photo of the face you want to use. • Tip: Use an image where the face is looking forward and well-lit Replace the face in this video with the person This is the prompt he used though : \"Face swap the input photo of a young Black man in a beige cap and black t-shirt onto Keanu Reeves: long dark hair, beard, serious expression, gray shirt, indoor setting. High detail, realistic lighting, seamless blend. For Tyla: Swap to South African singer Tyla, braided hair, light blue top, expressive pose. For Billie Eilish: Green-black hair, casual black shirt, pouting expression.\""
     },
     {
+      "id": "x-public-2102787937482252537",
+      "title": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inferen",
+      "description": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1",
+      "prompt": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/deedydas/status/2102787937482252537",
+      "sourceType": "x",
+      "authorName": "Deedy",
+      "authorHandle": "@deedydas",
+      "createdAt": "2026-09-23T15:51:26.000Z",
+      "importedAt": "2026-09-25T06:27:30.920Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 3189,
+        "reposts": 147,
+        "replies": 200,
+        "quotes": 25,
+        "bookmarks": 4626,
+        "views": 326330,
+        "score": 21772
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”"
+    },
+    {
       "id": "x-public-2079864598866415927",
       "title": "Codex 5.6 真的要让剪辑师失业了！ 它现在的视频制作能力提升了不止一个档次，直接一句话生成视频！ 重度实测一周，筛选出这 4 个Skill，直接实现全流程闭环： 1️⃣ HyperFr",
       "description": "Codex 5.6 真的要让剪辑师失业了！ 它现在的视频制作能力提升了不止一个档次，直接一句话生成视频！ 重度实测一周，筛选出这 4 个Skill，直接实现全流程闭环： 1️⃣ HyperFrames （内置插件） 负责整片策划、动效生成、画面合成与最终渲染。它能把文字构思直接转化为高水准的动态视频框架，实现全流程闭环交付。 2️⃣ Remotion （内置插件） 基于 React 模板的视频生成工具。支持通过代码批量生产高质感视频，尤",
@@ -318,50 +362,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Codex 5.6 真的要让剪辑师失业了！ 它现在的视频制作能力提升了不止一个档次，直接一句话生成视频！ 重度实测一周，筛选出这 4 个Skill，直接实现全流程闭环： 1️⃣ HyperFrames （内置插件） 负责整片策划、动效生成、画面合成与最终渲染。它能把文字构思直接转化为高水准的动态视频框架，实现全流程闭环交付。 2️⃣ Remotion （内置插件） 基于 React 模板的视频生成工具。支持通过代码批量生产高质感视频，尤其适合数字人+动效结合的自媒体内容，实现真正的工业化生产。 3️⃣ video-use 专门处理真人素材的剪辑工具。能自动识别镜头、精准卡点并完成后期剪辑，让 AI 具备了职业级的剪辑逻辑。 地址： 4️⃣ Seedance 针对顶级视频大模型的提示词工具。专门生成电影级运镜和实拍感指令，补齐了 AI 视频在审美和镜头质感上的短板。 地址： 现在用 Codex 5.6 + 这4个Skill，从脚本→动效→剪辑→渲染，全程AI闭环。"
-    },
-    {
-      "id": "x-public-2102787937482252537",
-      "title": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inferen",
-      "description": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1",
-      "prompt": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/deedydas/status/2102787937482252537",
-      "sourceType": "x",
-      "authorName": "Deedy",
-      "authorHandle": "@deedydas",
-      "createdAt": "2026-09-23T15:51:26.000Z",
-      "importedAt": "2026-09-24T12:50:18.200Z",
-      "tags": [
-        "Seedance",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 2853,
-        "reposts": 136,
-        "replies": 179,
-        "quotes": 20,
-        "bookmarks": 4046,
-        "views": 273697,
-        "score": 19174
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2. Videos like these used to take weeks if not months and a lot of coordination with agencies and 1000x the costs. Humans broadly prefer video to text. This changes the substrate of communication. These videos actually help communicate technical ideas in seconds (photorealistic video gen like Seedance is not very useful here). - changes how often marketing should be talking about products and launches - change how sales people can talk about technical products to their customers - allow technical people to easily explain concepts internally without long docs And thats just scratching the surface within startups. Prompt: “make a modern slick and punchy video for a modern startup that works on inference”"
     },
     {
       "id": "x-public-2082408413829669201",
@@ -3513,7 +3513,7 @@
       "authorName": "Zenad",
       "authorHandle": "@0xZenad",
       "createdAt": "2026-09-19T13:37:45.000Z",
-      "importedAt": "2026-09-24T12:50:18.201Z",
+      "importedAt": "2026-09-25T06:27:30.922Z",
       "tags": [
         "视频"
       ],
@@ -3537,7 +3537,7 @@
         "replies": 13,
         "quotes": 1,
         "bookmarks": 421,
-        "views": 43968,
+        "views": 44168,
         "score": 2199
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -11225,50 +11225,6 @@
       "rawText": "Made with Seedance 2.5 + Gpt image 2 Prompt: Seedance 2.5-30-Second Ultra-Photorealistic Travel Vlog Prompt Create a 30-second ultra-photorealistic travel vlog that looks exactly like genuine footage spontaneously recorded by a real European travel creator on a high-quality handheld vlog camera. The same young European woman must remain visually identical throughout the entire video: identical face, facial proportions, hairstyle, hair color, skin tone, body proportions, age, wardrobe, accessories, and overall appearance. Maintain strict character consistency across every shot and camera angle. The woman should have natural skin pores, subtle facial imperfections, realistic eyes, individual hair strands, authentic hair movement, natural body proportions, realistic hands, and spontaneous human expressions. No beauty filter, no plastic skin, no excessive makeup, no perfect symmetry. The entire video must feel like real documentary/travel-vlog footage, not a commercial, music video, cinematic film, 3D render, or AI-generated sequence. CONTINUITY / CHARACTER LOCK Same woman in every shot. Young European woman, approximately mid-20s, naturally attractive but completely realistic. Natural complexion with visible pores and tiny imperfections, realistic eyes and eyelashes, natural eyebrows, slightly imperfect hair strands moving independently in the breeze. Same hairstyle and clothing throughout. Authentic posture and walking rhythm. No facial identity drift, no changes in age, hairstyle, clothing, accessories, body shape, or skin tone. She carries a small compact vlog camera, held naturally at arm's length during selfie shots. Her grip, fingers, hands, and camera position must remain anatomically realistic. LOCATION / ATMOSPHERE A beautiful European historic old-town district in the morning. Narrow stone-paved street, textured centuries-old buildings, colorful but realistic façades, wooden shutters, small cafés, outdoor tables, bicycles, bakery storefront, pedestrians, subtle street activity. Soft morning sunlight with realistic shadows. Natural atmospheric perspective. Authentic European street ambience. Background people behave independently and naturally, without staring at the camera. No duplicated pedestrians or repeated background characters. SHOT 1 — 0–5 SECONDS Selfie-style handheld vlog footage. The woman walks naturally down the old-town street while holding a small vlog camera at arm's length. She looks directly into the lens with a subtle, genuine smile. Camera has realistic handheld movement: slight walking bounce, tiny wrist movements, occasional micro-shake, natural framing imperfections, subtle breathing-related movement. Do NOT stabilize the footage perfectly. Her hair moves naturally as she walks through a light morning breeze. Her expression remains relaxed and spontaneous. She occasionally blinks naturally. Behind her: pedestrians walking casually, parked bicycles, café entrances, historic textured buildings and morning activity. Natural sunlight falls across her face as she moves between partial shade and sunlight. Preserve realistic exposure and skin tones. SHOT 2 — 5–10 SECONDS She naturally turns the camera away from herself toward the street. Create an imperfect handheld pan, as if a real travel creator casually redirected their vlog camera. Reveal: - detailed historic European architecture - stone façades and windows - outdoor café tables - people drinking coffee - bicycles moving through the street - a small neighborhood bakery - subtle morning street activity The pan should NOT be perfectly smooth. Include realistic wrist acceleration, tiny framing corrections and slight motion blur. As the camera moves from a darker section of the street into direct morning sunlight, produce a subtle automatic exposure adjustment. Highlights and shadows react naturally like a real camera sensor. No cinematic transition. No artificial camera glide. SHOT 3 — 10–15 SECONDS Cut naturally back to selfie footage. The same woman continues walking toward the café. She briefly says something casual and conversational to the camera, such as: “This little street is so beautiful.” Her lip movement must synchronize naturally with the words. Facial expressions are relaxed and understated. No exaggerated acting. She briefly glances toward something in the street and then back at the lens. She blinks naturally. A light breeze moves several individual strands of hair. Pedestrians pass naturally in the background without acknowledging the camera. Maintain realistic handheld shake, authentic walking bounce, natural breathing, realistic depth of field and believable street ambience. SHOT 4 — 15–21 SECONDS Transition naturally into POV footage from her camera. She approaches and enters a small independent local café. The camera moves through the doorway at normal human walking speed. Slight vertical bounce and subtle wrist movement remain visible. Inside: - warm natural café lighting - wooden tables - textured walls - realistic glass reflections - small background conversations - customers moving naturally - barista activity in the distance - subtle environmental shadows The camera approaches a wooden table containing a freshly prepared coffee and a small pastry. Show subtle realistic steam rising from the coffee. Reflections on the cup and nearby glass should obey real-world lighting. No exaggerated steam. No floating objects. No artificial-looking food. SHOT 5 — 21–26 SECONDS Cut back to selfie footage. The same woman is now sitting outside the café at a small table. She naturally picks up the coffee, takes a small casual sip, lowers the cup and looks into the camera. Her expression changes into a subtle authentic smile. Avoid influencer-style posing or exaggerated happiness. Maintain exact facial identity and wardrobe continuity. Background remains alive: pedestrians walking, bicycles passing, café customers talking, subtle movement of chairs and clothing in the breeze. Camera remains handheld and slightly imperfect, with realistic micro-shake. SHOT 6 — 26–30 SECONDS Continue the selfie shot for a natural ending. She keeps a relaxed smile for a moment, then her attention subtly shifts toward the street. The camera performs a small natural focus shift from her face toward the street behind her. Her face gradually becomes slightly softer while the background becomes clearer, like realistic autofocus behavior from a modern vlog camera. End spontaneously rather than dramatically. No cinematic fade, no artificial transition, no title card. CAMERA / PHYSICS Authentic handheld vlog-camera behavior throughout. Use: - realistic walking bounce - subtle wrist shake - natural micro-jitter - imperfect framing - physically accurate motion blur - realistic autofocus behavior - realistic exposure adaptation - natural depth of field - physically correct reflections - realistic shadows - natural skin response to sunlight - believable hair physics - realistic fabric movement - authentic pedestrian movement Camera should occasionally make tiny human corrections rather than moving perfectly smoothly. AUDIO / AMBIENCE Natural location sound only. Include subtle: - footsteps on stone pavement - distant conversations - café chatter - bicycle movement - light street noise - birds in the distance - door opening - subtle café interior ambience - faint cup movement - natural breathing Her spoken sentence should sound like a real casual vlog recording, with natural voice volume and slight environmental background noise. No dramatic soundtrack. No cinematic sound effects. ABSOLUTE REALISM REQUIREMENTS Prioritize photographic realism over visual perfection. The footage should contain the tiny imperfections normally found in genuine handheld travel footage. Avoid: - CGI appearance - AI-generated look - plastic skin - beauty filters - excessive skin smoothing - perfect facial symmetry - exaggerated expressions - overly cinematic lighting - perfect gimbal movement - impossible camera movement - warped hands - malformed fingers - distorted faces - inconsistent facial identity - changing clothing - changing hairstyle - duplicated pedestrians - frozen background people - unnatural walking - floating objects - impossible reflections - incorrect shadows - artificial depth-of-field - excessive bokeh - oversaturated colors - hyper-sharp artificial textures - dramatic transitions - commercial/ad-style posing Final target: The finished 30-second video must be indistinguishable from a genuine, spontaneously filmed European travel vlog captured by a real person on a premium handheld vlog camera. Every person, object, reflection, shadow, movement, facial expression, hair strand, exposure change and camera motion should obey real-world physics."
     },
     {
-      "id": "x-public-2102058144566218889",
-      "title": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student b",
-      "description": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropp",
-      "prompt": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/ridark_eth/status/2102058144566218889",
-      "sourceType": "x",
-      "authorName": "Ridark",
-      "authorHandle": "@ridark_eth",
-      "createdAt": "2026-09-21T15:31:30.000Z",
-      "importedAt": "2026-09-23T17:54:44.523Z",
-      "tags": [
-        "Seedance",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 216,
-        "reposts": 16,
-        "replies": 32,
-        "quotes": 0,
-        "bookmarks": 76,
-        "views": 25847,
-        "score": 808
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free"
-    },
-    {
       "id": "x-public-2089538609858875714",
       "title": "Seedance 2.5 1080P is now live on @itsPolloAI — and it's 50% off right now. I put it to the test",
       "description": "Seedance 2.5 1080P is now live on @itsPolloAI — and it's 50% off right now. I put it to the test on this cinematic sci-fi sequence, and honestly? The detail, motion fluidity, and overall realism are genuinely next-level.",
@@ -12393,6 +12349,50 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Riding into a kingdom where dragons guard the skies and magic fills the air. Created with seedance 2.0 on @Lart_AI Give it a try here 👇  Prompt: A breathtaking cinematic fantasy scene of a beautiful princess wearing an elegant white and gold royal gown riding a majestic white horse through a magical kingdom. The camera starts with a low-angle close-up of the horse's hooves galloping over a glowing cobblestone path, then smoothly pulls back to reveal the princess as her long hair and flowing cape move gracefully in the wind. Colorful flowers bloom along the roadside, butterflies flutter through the air, and sparkling magical particles float around her. In the distance stands a magnificent golden castle surrounded by waterfalls and lush green hills. Two enormous dragons soar gracefully above the castle, their wings casting dramatic shadows as they circle the towers. The princess looks up with a gentle smile while sunlight streams through the clouds, creating god rays and a dreamy atmosphere. The camera performs a slow cinematic orbit before ending on a wide aerial shot of the magical kingdom. Ultra-realistic, fantasy epic, volumetric lighting, soft fog, HDR, highly detailed, cinematic color grading, smooth camera movement, 4K, 24fps, shallow depth of field, masterpiece. Negative Prompt: Low quality, blurry, cartoon, anime, low resolution, flickering, jittery motion, extra limbs, deformed face, bad anatomy, duplicate horse, distorted castle, text, watermark, logo, oversaturated colors, camera shake, motion artifacts. #Seedance2 #LartAI #AIVideo #AIAnimation #ContentCreator"
+    },
+    {
+      "id": "x-public-2102058144566218889",
+      "title": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student b",
+      "description": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropp",
+      "prompt": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ridark_eth/status/2102058144566218889",
+      "sourceType": "x",
+      "authorName": "Ridark",
+      "authorHandle": "@ridark_eth",
+      "createdAt": "2026-09-21T15:31:30.000Z",
+      "importedAt": "2026-09-25T06:27:30.921Z",
+      "tags": [
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 177,
+        "reposts": 12,
+        "replies": 34,
+        "quotes": 0,
+        "bookmarks": 76,
+        "views": 26740,
+        "score": 717
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "A 10-SECOND TITAN CGI SHOT PULLED 51,000,000 VIEWS IN UNDER 24 HOURS a 19-year-old VFX student built a blockbuster-grade shot of a titan walking along a coastline for $42. keeping the scale of a $356M Marvel movie, dropping the production crew the rebuild is where Picsart sits. the stack: 1. Picsart Agents: you hire ai staff to break down reference concepts. Aura builds the environment prompt, Nora fine-tunes the lighting, Reeva cuts the final 10-second sequence 2. AI Playground: runs Seedream and Seedance 2.5 on the same prompt in parallel. two readings of giant-scale movement side by side, you keep the one with correct shadow physics 3. Picsart Flow: takes one real aerial coastline photo to a finished video with giant water displacement. no keyframes, no 3D rendering pipelines 4. Picsart Pro is $15 a month. that’s the whole $356M VFX department on a $42 setup budget 5. Cartesia & CapCut integration: maps footstep impacts and stitches 11 dynamic takes into one razor-sharp clip before your morning coffee gets cold the catch: scale collapses only work when the shadows match the sun angle. check the physics before you hit export the VFX studio was the expensive part. the format was always free"
     },
     {
       "id": "x-public-2099153847876727293",
@@ -20699,7 +20699,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-24T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.722Z",
+      "importedAt": "2026-09-25T06:27:27.646Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -20741,7 +20741,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-24T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -20783,7 +20783,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-24T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "摄影"
       ],
@@ -20824,7 +20824,7 @@
       "authorName": "HeisenLegacy",
       "authorHandle": "@MohdAdnanA86218",
       "createdAt": "2026-09-24T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -20866,7 +20866,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-09-24T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "人像",
         "摄影"
@@ -20908,7 +20908,7 @@
       "authorName": "AvelixVale",
       "authorHandle": "@afeerah64",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -20947,7 +20947,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "人像",
         "摄影"
@@ -20989,7 +20989,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21028,7 +21028,7 @@
       "authorName": "Kiran Ai",
       "authorHandle": "@Kiran_AI1",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -21070,7 +21070,7 @@
       "authorName": "Flutterwhat",
       "authorHandle": "@flutterwhat",
       "createdAt": "2026-09-23T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21150,7 +21150,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "人像"
       ],
@@ -21191,7 +21191,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.723Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21233,7 +21233,7 @@
       "authorName": "りょうたぐ/ryoutag.@愛しのsense9破損で泣く",
       "authorHandle": "@ryoutag_",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -21272,7 +21272,7 @@
       "authorName": "Laraib Fatima‎",
       "authorHandle": "@AiwithLariab",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -21313,7 +21313,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "人像",
         "摄影"
@@ -21355,7 +21355,7 @@
       "authorName": "Aijaz",
       "authorHandle": "@iamsofiaijaz",
       "createdAt": "2026-09-22T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "人像",
         "摄影"
@@ -21679,7 +21679,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.647Z",
       "tags": [
         "人像",
         "摄影"
@@ -21721,7 +21721,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -21763,7 +21763,7 @@
       "authorName": "Sahil Verma",
       "authorHandle": "@sahilvermaai",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -21806,7 +21806,7 @@
       "authorName": "Aqsa",
       "authorHandle": "@Aqsahere_",
       "createdAt": "2026-09-21T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "人像",
         "摄影"
@@ -22059,7 +22059,7 @@
       "authorName": "One Breath｜AI Portrait",
       "authorHandle": "@OneBreath00",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -22098,7 +22098,7 @@
       "authorName": "Eesha",
       "authorHandle": "@MissDelulu9",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -22139,7 +22139,7 @@
       "authorName": "Maha",
       "authorHandle": "@Aiwithmaha",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -22182,7 +22182,7 @@
       "authorName": "Lavinia",
       "authorHandle": "@laviniavelle",
       "createdAt": "2026-09-20T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.724Z",
+      "importedAt": "2026-09-25T06:27:27.648Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -71190,7 +71190,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.728Z",
+      "importedAt": "2026-09-25T06:27:27.651Z",
       "tags": [
         "产品",
         "平面设计",
@@ -71233,7 +71233,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.728Z",
+      "importedAt": "2026-09-25T06:27:27.651Z",
       "tags": [
         "平面设计"
       ],
@@ -71274,7 +71274,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-09-24T17:54:36.728Z",
+      "importedAt": "2026-09-25T06:27:27.651Z",
       "tags": [
         "平面设计"
       ],
