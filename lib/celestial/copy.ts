@@ -83,6 +83,11 @@ const en = {
   orb: "Orb",
   noAspects: "No major aspects within the selected six-degree orb.",
   planetHint: "Choose a planet in the chart or list to explore its role.",
+  wheelExplore: "EXPLORE YOUR CHART",
+  wheelPreview: "HOVER PREVIEW",
+  wheelPinned: "SELECTION PINNED",
+  wheelClear: "Show full chart",
+  wheelHelp: "Hover over a planet or aspect line to preview its meaning. Click to pin it; on a phone, simply tap. Tap again, tap an empty area, or use Show full chart to clear the highlight.",
   houseHint:
     "One full zodiac sign per house. The rising sign begins House 1; the Midheaven is shown separately and may fall outside House 10.",
   aspectHint:
@@ -361,6 +366,11 @@ const zh: CelestialCopy = {
   orb: "容许度",
   noAspects: "六度容许范围内暂无主要相位。",
   planetHint: "点选图上的星体，或从列表中选择，看看它代表生活中的哪一面。",
+  wheelExplore: "探索你的星盘",
+  wheelPreview: "悬停预览",
+  wheelPinned: "已固定选中",
+  wheelClear: "查看全盘",
+  wheelHelp: "鼠标滑过星体或相位线，即可预览；点击后固定高亮。手机直接点选即可，再点一次、点空白处，或点「查看全盘」取消。",
   houseHint:
     "采用整宫制：上升所在星座为第一宫，每个星座占一整宫。天顶单独标记，不一定落在第十宫。",
   aspectHint:
@@ -634,6 +644,11 @@ const ru: CelestialCopy = {
   noAspects: "Основных аспектов с орбисом до шести градусов нет.",
   planetHint:
     "Выберите планету на карте или в списке, чтобы узнать её символическую роль.",
+  wheelExplore: "ИССЛЕДУЙТЕ КАРТУ",
+  wheelPreview: "ПРЕДПРОСМОТР",
+  wheelPinned: "ВЫБОР ЗАКРЕПЛЁН",
+  wheelClear: "Вся карта",
+  wheelHelp: "Наведите курсор на планету или линию аспекта для подсказки; нажмите, чтобы закрепить. На телефоне коснитесь элемента. Повторное нажатие, касание пустого места или кнопка «Вся карта» снимает выделение.",
   houseHint:
     "Каждому дому соответствует целый знак. Знак асцендента — первый дом. Середина неба отмечена отдельно и может находиться вне десятого дома.",
   aspectHint:

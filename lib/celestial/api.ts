@@ -4,11 +4,13 @@ import { privateJson } from "@/lib/commerce/http";
 import { limitCommerceAction } from "@/lib/commerce/rate-limit";
 import { MemberAuthError } from "@/lib/member-auth-security";
 import { generateCelestialReading, type CelestialReading } from "./ai";
+import { generateNatalReading, type NatalReadingPayload } from "./natal-reading-ai";
+import type { NatalReading } from "./natal-reading";
 import type { ReportLocale } from "@/lib/report-i18n";
 const buckets = new Map<string, { count: number; expires: number }>();
 const readings = new Map<
   string,
-  { value: Promise<CelestialReading>; expires: number }
+  { value: Promise<CelestialReading | NatalReading>; expires: number }
 >();
 export function celestialGuard(request: Request) {
   const ip = (
@@ -43,7 +45,7 @@ export async function celestialInterpret(
     let value = readings.get(key)?.value;
     if (!value) {
       await limitCommerceAction("celestial-ai-global", "daily", 300, 86400);
-      value = generateCelestialReading(kind, data, locale);
+      value = kind === "astrology" ? generateNatalReading(data as NatalReadingPayload, locale) : generateCelestialReading(kind, data, locale);
       if (readings.size >= 128) readings.delete(readings.keys().next().value!);
       readings.set(key, { value, expires: now + 600000 });
     }

@@ -8,11 +8,11 @@ import {
   type NatalChart,
 } from "@/lib/celestial/astrology";
 import type { CelestialCopy } from "@/lib/celestial/copy";
-import type { CelestialReading } from "@/lib/celestial/ai";
+import type { NatalReading } from "@/lib/celestial/natal-reading";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { trackToolEvent } from "@/lib/analytics";
-import { ChartWheel } from "./chart-wheel";
-import { ReadingPanel } from "./reading-panel";
+import { ChartWheel, type ChartSelection } from "./chart-wheel";
+import { NatalReadingPanel } from "./natal-reading-panel";
 export default function AstrologyExperience({
   locale,
   copy: c,
@@ -31,7 +31,9 @@ export default function AstrologyExperience({
     [tab, setTab] = useState("planets"),
     [house, setHouse] = useState(0),
     [aspect, setAspect] = useState(0),
-    [reading, setReading] = useState<CelestialReading | null>(null),
+    [pinned, setPinned] = useState<ChartSelection>(null),
+    [preview, setPreview] = useState<ChartSelection>(null),
+    [reading, setReading] = useState<NatalReading | null>(null),
     [aiBusy, setAiBusy] = useState(false),
     [aiStatus, setAiStatus] = useState("");
   const input = useRef<Record<string, unknown> | null>(null),
@@ -87,6 +89,8 @@ export default function AstrologyExperience({
       input.current = payload;
       setSelected("Sun");
       setAspect(0);
+      setPinned(null);
+      setPreview(null);
       trackToolEvent("tool_success", "astrology");
       results.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (e) {
@@ -113,7 +117,7 @@ export default function AstrologyExperience({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...input.current, mode: "interpret" }),
-        signal: AbortSignal.any([abort.signal, AbortSignal.timeout(50000)]),
+        signal: AbortSignal.any([abort.signal, AbortSignal.timeout(150000)]),
       });
       const b = await r.json();
       if (rev !== revision.current) return;
@@ -134,6 +138,15 @@ export default function AstrologyExperience({
     a = chart.aspects[aspect];
   const planetName = (body: string) =>
     c.planetNames[chart.placements.findIndex((p) => p.body === body)];
+  const wheelTarget = preview || pinned;
+  const wheelPlanet = wheelTarget?.kind === "planet" ? chart.placements.find(p => p.body === wheelTarget.body) : undefined;
+  const wheelAspect = wheelTarget?.kind === "aspect" ? chart.aspects[wheelTarget.index] : undefined;
+  function selectWheel(target: ChartSelection, toggle = true) {
+    setPreview(null);
+    setPinned(toggle && JSON.stringify(target) === JSON.stringify(pinned) ? null : target);
+    if (target?.kind === "planet") { setSelected(target.body); setTab("planets"); }
+    if (target?.kind === "aspect") { setAspect(target.index); setTab("aspects"); }
+  }
   return (
     <>
       <div className="cel-astro-layout" id="create">
@@ -236,13 +249,32 @@ export default function AstrologyExperience({
           <ChartWheel
             chart={chart}
             copy={c}
-            selected={selected}
-            onSelect={(body) => {
-              setSelected(body);
-              setTab("planets");
-            }}
-            selectedAspect={tab === "aspects" ? aspect : undefined}
+            selection={wheelTarget}
+            pinned={pinned}
+            onSelect={selectWheel}
+            onPreview={setPreview}
           />
+          <div className="cel-wheel-legend" aria-label={c.aspects}>
+            <span><i style={{ background: "#507fa9" }} />{c.aspectNames.trine} / {c.aspectNames.sextile}</span>
+            <span><i style={{ background: "#b96373" }} />{c.aspectNames.square} / {c.aspectNames.opposition}</span>
+            <span><i style={{ background: "#ae8545" }} />{c.aspectNames.conjunction}</span>
+          </div>
+          <div className="cel-wheel-inspector">
+            <div className="cel-wheel-inspector-head">
+              <p className="cel-kicker">{preview ? c.wheelPreview : pinned ? c.wheelPinned : c.wheelExplore}</p>
+              {wheelTarget && <button className="cel-button-text" onClick={() => selectWheel(null)}>{c.wheelClear} ×</button>}
+            </div>
+            {wheelPlanet ? <>
+              <h3>{planetSymbols[wheelPlanet.body]} {planetName(wheelPlanet.body)} · {position(wheelPlanet.longitude)} · {c.house} {wheelPlanet.house}</h3>
+              <p>{c.planetRoles[chart.placements.indexOf(wheelPlanet)]} {c.signStyles[Math.floor(wheelPlanet.longitude / 30)]}</p>
+              <div className="cel-wheel-relations">{chart.aspects.map((item, i) => item.bodies.includes(wheelPlanet.body) &&
+                <button key={i} onClick={() => selectWheel({kind:"aspect", index:i}, false)}>{item.bodies.map(planetName).join(" · ")} · {c.aspectNames[item.type]}</button>)}</div>
+            </> : wheelAspect ? <>
+              <h3>{wheelAspect.bodies.map(planetName).join(" · ")} · {c.aspectNames[wheelAspect.type]}</h3>
+              <p>{c.aspectMeanings[wheelAspect.type]}</p>
+              <small>{c.orb} {wheelAspect.orb.toFixed(2)}° · {c.aspectHint}</small>
+            </> : <p>{c.wheelHelp}</p>}
+          </div>
           <div className="cel-big-three">
             {[
               [c.sun, chart.placements[0].longitude, "☉"],
@@ -269,7 +301,7 @@ export default function AstrologyExperience({
               aria-controls="chart-panel"
               aria-selected={tab === t}
               key={t}
-              onClick={() => setTab(t)}
+              onClick={() => { setTab(t); setPreview(null); setPinned(t === "planets" ? {kind:"planet",body:selected} : t === "aspects" && a ? {kind:"aspect",index:aspect} : null); }}
             >
               {c[t as "planets"]}
             </button>
@@ -286,7 +318,7 @@ export default function AstrologyExperience({
               chart.placements.map((p, i) => (
                 <button
                   key={p.body}
-                  onClick={() => setSelected(p.body)}
+                  onClick={() => selectWheel({kind:"planet",body:p.body}, false)}
                   className={p.body === selected ? "is-active" : ""}
                 >
                   <span className="cel-glyph">{planetSymbols[p.body]}</span>
@@ -320,7 +352,7 @@ export default function AstrologyExperience({
                 chart.aspects.map((a, i) => (
                   <button
                     key={i}
-                    onClick={() => setAspect(i)}
+                    onClick={() => selectWheel({kind:"aspect",index:i}, false)}
                     className={i === aspect ? "is-active" : ""}
                   >
                     <span className="cel-glyph">
@@ -431,7 +463,10 @@ export default function AstrologyExperience({
         </div>
       </section>
       {!isDemo && (
-        <ReadingPanel
+        <NatalReadingPanel
+          key={chart.utc + chart.latitude + chart.longitude}
+          chart={chart}
+          locale={locale}
           copy={c}
           reading={reading}
           busy={aiBusy}

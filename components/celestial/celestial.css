@@ -289,13 +289,29 @@
   overflow: visible;
   filter: drop-shadow(0 20px 35px #9c88b01a);
 }
-.cel-planet-hit {
+.cel-planet-hit, .cel-aspect-hit {
   cursor: pointer;
   outline: none;
 }
-.cel-planet-hit:focus-visible circle {
+.cel-planet-hit:focus-visible .cel-planet-disc {
   stroke: #625185;
   stroke-width: 3;
+}
+.cel-aspect-hit:focus-visible .cel-aspect-line { stroke-width: 4px; }
+.cel-aspect-line, .cel-planet-disc { transition: opacity .16s, stroke-width .16s, fill .16s; }
+.cel-wheel-legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 16px; color: #887992; font-size: 10px; margin: 5px 0 14px; }
+.cel-wheel-legend span { display: flex; gap: 6px; align-items: center; }
+.cel-wheel-legend i { width: 17px; height: 2px; border-radius: 2px; }
+.cel-wheel-inspector { margin: 12px 12px 24px; padding: 18px 20px; border: 1px solid #e7deee; border-radius: 18px; background: #fffdfcdb; min-height: 132px; }
+.cel-wheel-inspector-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cel-wheel-inspector-head button { font-size: 11px; min-height: 44px; flex-shrink: 0; }
+.cel-wheel-inspector h3 { font-size: 15px; color: #665174; font-weight: 600; margin: 7px 0; }
+.cel-wheel-inspector p:not(.cel-kicker), .cel-wheel-inspector small { font-size: 12px; line-height: 1.8; color: #887992; }
+.cel-wheel-relations { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.cel-wheel-relations button { padding: 8px 12px; min-height: 44px; border: 1px solid #e5dceb; background: #f7f2fa; border-radius: 12px; font-size: 11px; color: #796189; }
+@media (max-width: 740px) {
+  .cel-wheel-inspector { margin-inline: 0; padding: 14px; }
+  .cel-planet-target { r: 28px; }
 }
 .cel-big-three {
   display: grid;
@@ -548,6 +564,43 @@
   border-left: 2px solid #be9e75;
   color: #846d92;
   font-size: 17px;
+}
+.cel-natal-reading > .cel-muted { margin: 12px 0; }
+.cel-natal-reading .cel-reading-head { flex-wrap: wrap; }
+.cel-natal-reading .cel-reading-head .cel-button { white-space: normal; }
+.cel-natal-guide { margin-top: 24px; padding: 22px; border-radius: 18px; background: #fffdfacc; border: 1px solid #e9e0eb; }
+.cel-natal-guide > h3 { font-size: 17px; color: #675371; margin-bottom: 13px; }
+.cel-natal-guide details + details { border-top: 1px solid #eee6ef; }
+.cel-natal-guide summary, .cel-natal-entry summary { display: flex; align-items: center; justify-content: space-between; gap: 14px; cursor: pointer; list-style: none; }
+.cel-natal-guide summary::-webkit-details-marker, .cel-natal-entry summary::-webkit-details-marker { display: none; }
+.cel-natal-guide summary { padding: 13px 0; color: #7d688b; font-size: 13px; font-weight: 600; }
+.cel-natal-guide p { font-size: 13px; line-height: 1.95; color: #88788f; padding-bottom: 18px; }
+.cel-natal-guide svg, .cel-natal-entry summary > svg { flex-shrink: 0; transition: transform .18s; }
+.cel-natal-guide details[open] summary svg, .cel-natal-entry[open] summary > svg { transform: rotate(180deg); }
+.cel-natal-contents { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 10px; margin: 25px 0; }
+.cel-natal-contents a { display: flex; gap: 9px; align-items: center; min-height: 60px; font-size: 12px; padding: 12px; border: 1px solid #e3d8ea; border-radius: 12px; background: #fffdfb; color: #725887; }
+.cel-natal-contents a span, .cel-natal-chapter > h3 span { color: #b49769; font-family: Georgia,serif; font-weight: 400; }
+.cel-natal-expand { display: flex; justify-content: flex-end; }
+.cel-natal-chapter { margin: 35px 0; scroll-margin-top: 20px; }
+.cel-natal-chapter > h3 { font-size: 23px; font-family: Georgia,"Songti SC",serif; font-weight: 400; color: #695075; margin-bottom: 15px; }
+.cel-natal-chapter > h3 span { margin-right: 12px; }
+.cel-natal-entry { border: 1px solid #e6dcea; border-radius: 16px; background: #fffcfccc; margin: 12px 0; overflow: hidden; }
+.cel-natal-entry summary { padding: 19px 23px; color: #80638e; }
+.cel-natal-entry strong { display: block; font-size: 17px; font-weight: 600; color: #624e72; }
+.cel-natal-entry small { display: block; font-size: 11px; font-weight: 400; color: #a68a63; line-height: 1.7; margin-top: 6px; }
+.cel-natal-entry-body { border-top: 1px solid #ece5ef; padding: 22px 28px; max-width: 960px; }
+.cel-natal-entry-body h4 { font-size: 11px; color: #a083a9; font-weight: 600; margin-bottom: 8px; }
+.cel-natal-entry-body p { font-size: 15px; color: #77677e; line-height: 2; white-space: pre-line; }
+.cel-natal-entry-body > div + div { margin-top: 20px; }
+.cel-natal-entry-body aside { margin-top: 20px; padding: 15px 18px; background: #f4edf5; border-left: 2px solid #bda2c5; border-radius: 0 10px 10px 0; }
+@media (max-width: 740px) {
+  .cel-natal-guide { padding: 16px; }
+  .cel-natal-entry summary { padding: 16px; }
+  .cel-natal-entry-body { padding: 18px 16px; }
+  .cel-natal-entry-body p { font-size: 14px; }
+  .cel-natal-contents { grid-template-columns: 1fr 1fr; }
+  .cel-natal-chapter > h3 { font-size: 21px; }
+  .cel-natal-reading .cel-reading-head .cel-button { width: 100%; margin: 4px 0 0; }
 }
 .cel-skeleton {
   padding: 30px 0;

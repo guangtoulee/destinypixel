@@ -4,19 +4,25 @@ import type { NatalChart } from "@/lib/celestial/astrology";
 import { planetSymbols, signSymbols } from "@/lib/celestial/astrology";
 import type { CelestialCopy } from "@/lib/celestial/copy";
 const colors = ["#c77865", "#769981", "#8c84b6", "#659fae"];
+export type ChartSelection = { kind: "planet"; body: string } | { kind: "aspect"; index: number } | null;
 export function ChartWheel({
   chart,
   copy,
-  selected = "Sun",
+  selection,
+  pinned,
   onSelect,
-  selectedAspect,
+  onPreview,
 }: {
   chart: NatalChart;
   copy: CelestialCopy;
-  selected?: string;
-  onSelect?: (body: string) => void;
-  selectedAspect?: number;
+  selection: ChartSelection;
+  pinned: ChartSelection;
+  onSelect: (selection: ChartSelection) => void;
+  onPreview: (selection: ChartSelection) => void;
 }) {
+  const selected = selection?.kind === "planet" ? selection.body : undefined;
+  const selectedAspect = selection?.kind === "aspect" ? selection.index : undefined;
+  const activeBodies = selected ? [selected] : selectedAspect !== undefined ? chart.aspects[selectedAspect]?.bodies || [] : [];
   const uid = useId().replace(/:/g, ""),
     point = (longitude: number, r: number) => {
       const a = ((180 + longitude - chart.ascendant) * Math.PI) / 180;
@@ -49,6 +55,9 @@ export function ChartWheel({
       viewBox="0 0 600 600"
       role="group"
       aria-label={copy.astrology}
+      onClick={() => onSelect(null)}
+      onPointerLeave={() => onPreview(null)}
+      onKeyDown={(e) => { if (e.key === "Escape") { onPreview(null); onSelect(null); } }}
     >
       <defs>
         <radialGradient id={`${uid}paper`}>
@@ -168,23 +177,36 @@ export function ChartWheel({
           active =
             selectedAspect !== undefined
               ? i === selectedAspect
-              : a.bodies.includes(selected);
+              : Boolean(selected && a.bodies.includes(selected)),
+          color = a.type === "square" || a.type === "opposition" ? "#b96373" : a.type === "conjunction" ? "#ae8545" : "#507fa9";
+        const target: ChartSelection = { kind: "aspect", index: i };
         return (
-          <line
-            key={i}
+          <g key={i} className="cel-aspect-hit" role="button" tabIndex={0}
+            aria-label={`${a.bodies.map(body => copy.planetNames[chart.placements.findIndex(p => p.body === body)]).join(" · ")} · ${copy.aspectNames[a.type]} · ${copy.orb} ${a.orb.toFixed(2)}°`}
+            aria-pressed={pinned?.kind === "aspect" && pinned.index === i}
+            onPointerEnter={(e) => { if (e.pointerType === "mouse") onPreview(target); }}
+            onPointerLeave={() => onPreview(null)}
+            onFocus={(e) => { if (e.currentTarget.matches(":focus-visible")) onPreview(target); }}
+            onBlur={() => onPreview(null)}
+            onClick={(e) => { e.stopPropagation(); onSelect(target); }}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(target); } }}>
+          <line x1={x[0]} y1={x[1]} x2={y[0]} y2={y[1]} stroke={color}
+            strokeWidth="8" opacity={active ? .14 : 0} vectorEffect="non-scaling-stroke" pointerEvents="none" />
+          <line className="cel-aspect-line"
             x1={x[0]}
             y1={x[1]}
             x2={y[0]}
             y2={y[1]}
-            stroke={
-              a.type === "square" || a.type === "opposition"
-                ? "#bc7e83"
-                : "#7c97b5"
-            }
-            opacity={active ? 0.7 : 0.14}
-            strokeWidth={active ? 1.4 : 0.8}
-            strokeDasharray={a.type === "sextile" ? "3 3" : undefined}
+            stroke={color}
+            opacity={active ? 1 : selection ? .2 : .68}
+            strokeWidth={active ? 3.2 : 1.8}
+            strokeDasharray={a.type === "sextile" ? "5 4" : undefined}
+            vectorEffect="non-scaling-stroke" pointerEvents="none"
           />
+          <line x1={x[0]} y1={x[1]} x2={y[0]} y2={y[1]} stroke="transparent"
+            strokeWidth="18" vectorEffect="non-scaling-stroke" pointerEvents="stroke" />
+          {active && <g fill={color} pointerEvents="none"><circle cx={x[0]} cy={x[1]} r="3"/><circle cx={y[0]} cy={y[1]} r="3"/></g>}
+          </g>
         );
       })}
       {[
@@ -220,25 +242,32 @@ export function ChartWheel({
       {chart.placements.map((p, i) => {
         const [x, y] = point(p.longitude, radius.get(p.body) || 171),
           a = point(p.longitude, 205),
-          b = point(p.longitude, 186),
           color = colors[Math.floor(p.longitude / 30) % 4],
-          active = p.body === selected;
+          active = activeBodies.includes(p.body);
+        const target: ChartSelection = { kind: "planet", body: p.body };
         return (
           <g
             key={p.body}
             className="cel-planet-hit"
-            role={onSelect ? "button" : undefined}
-            tabIndex={onSelect ? 0 : undefined}
+            role="button"
+            tabIndex={0}
+            aria-pressed={pinned?.kind === "planet" && pinned.body === p.body}
             aria-label={`${copy.planetNames[i]} · ${copy.signs[Math.floor(p.longitude / 30)]} · ${copy.house} ${p.house}`}
-            onClick={() => onSelect?.(p.body)}
+            onPointerEnter={(e) => { if (e.pointerType === "mouse") onPreview(target); }}
+            onPointerLeave={() => onPreview(null)}
+            onFocus={(e) => { if (e.currentTarget.matches(":focus-visible")) onPreview(target); }}
+            onBlur={() => onPreview(null)}
+            onClick={(e) => { e.stopPropagation(); onSelect(target); }}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
-                onSelect?.(p.body);
+                onSelect(target);
               }
             }}
           >
             <title>{`${copy.planetNames[i]} · ${copy.signs[Math.floor(p.longitude / 30)]} ${p.degreeInSign.toFixed(2)}°`}</title>
+            {active && <line x1={point(p.longitude, 104)[0]} y1={point(p.longitude, 104)[1]} x2={x} y2={y}
+              stroke={color} strokeWidth="1.5" strokeDasharray="3 4" opacity=".7" pointerEvents="none" vectorEffect="non-scaling-stroke" />}
             <line
               x1={a[0]}
               y1={a[1]}
@@ -251,7 +280,8 @@ export function ChartWheel({
             <circle
               cx={x}
               cy={y}
-              r={active ? 19 : 16}
+              className="cel-planet-disc"
+              r={active ? 20 : 17}
               fill={active ? color : "#fffefb"}
               stroke={active ? color : "#e7e0ea"}
               filter={`url(#${uid}shadow)`}
@@ -270,12 +300,12 @@ export function ChartWheel({
                 R
               </text>
             )}
-            <circle cx={x} cy={y} r="21" fill="transparent" />
+            <circle className="cel-planet-target" cx={x} cy={y} r="23" fill="transparent" />
           </g>
         );
       })}
-      <circle cx="300" cy="300" r="24" fill="#fffdfa" fillOpacity=".86" />
-      <text x="300" y="310" textAnchor="middle" fontSize="30" fill="#b59765">
+      <circle cx="300" cy="300" r="14" fill="#fffdfa" fillOpacity=".86" pointerEvents="none" />
+      <text x="300" y="307" textAnchor="middle" fontSize="23" fill="#b59765" pointerEvents="none">
         ✧
       </text>
     </svg>

@@ -1,4 +1,4 @@
-import { celestialCopy } from "@/lib/celestial/copy";
+import { natalReadingPayload } from "@/lib/celestial/natal-reading-ai";
 import { assertMutation, readBody, privateJson } from "@/lib/commerce/http";
 import { BirthTimeValidationError } from "@/lib/engines/time";
 import {
@@ -11,7 +11,7 @@ import {
   celestialInterpret,
 } from "@/lib/celestial/api";
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 180;
 export async function POST(request: Request) {
   try {
     assertMutation(request);
@@ -20,22 +20,9 @@ export async function POST(request: Request) {
       { input, locale, mode } = parseNatalInput(raw),
       chart = calculateNatalChart(input);
     if (mode === "calculate") return privateJson({ chart });
-    const { placements, ascendant, midheaven, houses, aspects, houseSystem } =
-      chart;
-    const angle = (longitude: number) => ({
-      longitude,
-      sign: celestialCopy("en").signs[Math.floor(longitude / 30)],
-    });
     return celestialInterpret(
       "astrology",
-      {
-        placements,
-        ascendant: angle(ascendant),
-        midheaven: angle(midheaven),
-        houses,
-        aspects,
-        houseSystem,
-      },
+      natalReadingPayload(chart),
       locale,
       ip,
     );

@@ -27,6 +27,8 @@ import {
 import { tarotCards } from "./tarot-meanings";
 import { parseCelestialReading, generateCelestialReading } from "./ai";
 import { celestialCopy, celestialAlternates } from "./copy";
+import { natalReadingTargets, natalReadingCopy } from "./natal-reading";
+import { natalReadingPayload, parseNatalReading, generateNatalReading } from "./natal-reading-ai";
 const fixture = {
   birthDate: "2024-03-20",
   birthTime: "03:06",
@@ -298,5 +300,55 @@ test("AI JSON is bounded plain text and the provider receives only the supplied 
   } finally {
     if (original === undefined) delete process.env.DEEPSEEK_API_KEY;
     else process.env.DEEPSEEK_API_KEY = original;
+  }
+});
+
+test("Detailed natal reading covers every planet and house, prioritizes tight aspects and excludes birth identifiers", () => {
+  const chart = calculateNatalChart(parseNatalInput(fixture).input);
+  for (const locale of ["en", "zh", "zh-TW", "ru"] as const) {
+    const targets = natalReadingTargets(chart, celestialCopy(locale), locale);
+    assert.equal(targets.filter(t=>t.id.startsWith("planet-")).length, 10);
+    assert.equal(targets.filter(t=>t.group==="houses").length, 12);
+    assert.equal(targets.filter(t=>t.group==="core").length, 3);
+    assert.equal(new Set(targets.map(t=>t.id)).size, targets.length);
+    const aspectIds = targets.filter(t=>t.group==="aspects").map(t=>Number(t.id.replace("aspect-","")));
+    assert.equal(aspectIds.length, Math.min(12,chart.aspects.length));
+    assert.ok(aspectIds.every((id,i)=>i===0 || chart.aspects[id].orb>=chart.aspects[aspectIds[i-1]].orb));
+    assert.equal(natalReadingCopy(locale).glossary.length, 5);
+  }
+  const data = natalReadingPayload(chart);
+  const json = JSON.stringify(data);
+  for (const field of ['birthDate','birthTime','latitude','timezone','utc','name']) {
+    assert.ok(!json.includes(`"${field}"`));
+  }
+  assert.equal(data.version,"natal-depth-v2");
+});
+
+test("Detailed AI output rejects missing/duplicate chapters and truncated answers", async () => {
+  const data = natalReadingPayload(calculateNatalChart(parseNatalInput(fixture).input));
+  const valid = {
+    summary: "A chart-specific summary explaining several distinct symbolic themes and how they relate.",
+    entries: data.targets.map(t=>({id:t.id,meaning:"This symbol describes one specific part of experience.", reading:"This is a sufficiently detailed interpretation of the supplied placement, with concrete context and a distinction between observation and symbolic meaning. It connects the function, sign and house without claiming that a chart fixes a person's future.",practice:"Notice one everyday example before drawing a conclusion."})),
+    reflection:"Which description matches an actual recent experience?",
+  };
+  const ids = data.targets.map(t=>t.id);
+  assert.deepEqual(parseNatalReading(JSON.stringify(valid),ids,"en"),valid);
+  assert.throws(()=>parseNatalReading(JSON.stringify({...valid,entries:valid.entries.slice(1)}),ids,"en"));
+  assert.throws(()=>parseNatalReading(JSON.stringify({...valid,entries:[valid.entries[0],...valid.entries.slice(0,-1)]}),ids,"en"));
+  assert.throws(()=>parseNatalReading(JSON.stringify({...valid,entries:valid.entries.map(e=>({...e,reading:"Too brief."}))}),ids,"en"));
+  const original = process.env.DEEPSEEK_API_KEY;
+  process.env.DEEPSEEK_API_KEY = "test-only";
+  try {
+    const result = await generateNatalReading(data,"en",(async (_url,options)=>{
+      const body=JSON.parse(String(options?.body));
+      assert.equal(body.max_tokens,18000);
+      assert.equal(JSON.parse(body.messages[1].content).targets.length,ids.length);
+      assert.ok(!body.messages[1].content.includes(fixture.birthDate));
+      return Response.json({choices:[{finish_reason:"stop",message:{content:JSON.stringify(valid)}}]});
+    }) as typeof fetch);
+    assert.equal(result.entries.length,ids.length);
+    await assert.rejects(generateNatalReading(data,"en",(async ()=>Response.json({choices:[{finish_reason:"length",message:{content:JSON.stringify(valid)}}]})) as typeof fetch));
+  } finally {
+    if(original===undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY=original;
   }
 });
