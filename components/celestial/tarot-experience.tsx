@@ -24,6 +24,7 @@ import {
 } from "@/lib/celestial/tarot";
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
+import { DeckRibbon } from "./deck-ribbon";
 import { ReadingPanel } from "./reading-panel";
 export default function TarotExperience({
   locale,
@@ -540,20 +541,13 @@ export default function TarotExperience({
           </span>
         </div>
         <p className="cel-muted cel-small">{c.deckHelp}</p>
-        <div className="tarot-deck-grid">
-          {table.deck.map((_, i) => (
-            <button
-              key={`${mixes}-${i}`}
-              disabled={!mixes}
-              onClick={() => draw(i)}
-              aria-label={`${c.cardBack} ${i + 1}`}
-              className="tarot-deck-card"
-            >
-              <CardBack />
-              <span>{i + 1}</span>
-            </button>
-          ))}
-        </div>
+        <DeckRibbon
+          key={`${mixes}-${table.mode}-${table.spread}-${table.deck.map((card) => card.id).join(",")}`}
+          count={table.deck.length}
+          disabled={!mixes}
+          copy={c}
+          onDraw={draw}
+        />
       </div>
       {focused?.revealed && info && (
         <section className="tarot-card-focus">
