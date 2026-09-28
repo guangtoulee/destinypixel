@@ -63,7 +63,7 @@ const en = {
     "Use the time on your birth record. The rising sign and houses depend on it. If the time is unknown, don't treat a guessed chart as exact.",
   formTitle: "Begin with your birth details",
   privacy:
-    "Calculated on our server. Your birth details are not saved as a report or placed in a shareable URL.",
+    "Calculated on our server. Your chart is stored in your account only when you choose to save it; birth details are never placed in the URL.",
   calculate: "Reveal my chart",
   example: "EXAMPLE CHART · NOT YOUR RESULTS",
   result: "YOUR NATAL CHART",
@@ -346,7 +346,7 @@ const zh: CelestialCopy = {
   exactTime:
     "请尽量使用出生记录上的时间，上升与宫位会随时间变化。不知道时刻时，猜测的结果不能当作准确星盘。",
   formTitle: "从你的出生信息开始",
-  privacy: "资料通过服务器计算，不保存为报告，也不会放入可分享的网址。",
+  privacy: "资料通过服务器计算。只有你点击保存时，星盘才会存入账号；出生资料不会放入网址。",
   calculate: "展开我的星盘",
   example: "示例星盘 · 并非你的测算结果",
   result: "你的出生星盘",
@@ -623,7 +623,7 @@ const ru: CelestialCopy = {
     "Используйте время из записи о рождении: от него зависят асцендент и дома. Если время неизвестно, предположение не даст точную карту.",
   formTitle: "Начните с данных рождения",
   privacy:
-    "Расчёт выполняется на сервере. Данные не сохраняются как отчёт и не включаются в адрес страницы.",
+    "Расчёт выполняется на сервере. Карта сохраняется в аккаунте только по вашему выбору; данные рождения не включаются в адрес страницы.",
   calculate: "Открыть мою карту",
   example: "ПРИМЕР КАРТЫ · НЕ ВАШ РЕЗУЛЬТАТ",
   result: "ВАША НАТАЛЬНАЯ КАРТА",

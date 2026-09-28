@@ -591,10 +591,10 @@ export async function listSavedReportsForToken(token: string) {
     ? await supabaseRequest<SavedReportRecord[]>({
         table: "saved_reports",
         method: "GET",
-        query: `?member_id=eq.${member.id}&order=updated_at.desc&limit=50`,
+        query: `?member_id=eq.${member.id}&report_id=not.like.celestial-v1:*&order=updated_at.desc&limit=50`,
       })
     : (await readLocalStore()).saved_reports
-        .filter((report) => report.member_id === member.id)
+        .filter((report) => report.member_id === member.id && !report.report_id.startsWith("celestial-v1:"))
         .sort((a, b) => b.updated_at.localeCompare(a.updated_at))
         .slice(0, 50);
 

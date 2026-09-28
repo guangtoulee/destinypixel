@@ -1836,3 +1836,8 @@
     overflow-wrap: break-word;
   }
 }
+
+/* Private member reading replay; no calculation or AI request on open. */
+.cel-saved-chart{max-width:780px;margin:0 auto 24px}.cel-saved-placements{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}.cel-saved-placements button{font-size:13px}.cel-saved-card-guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:20px;margin:30px 0}.cel-saved-card-guide article{border:1px solid #e7deed;border-radius:18px;padding:22px;background:#fffafc}.cel-saved-card-guide h3{font-size:16px}.cel-saved-card-guide p{font-size:14px;line-height:1.8}.cel-saved-free{--saved-card-width:clamp(65px,12vw,140px);--saved-card-height:calc(var(--saved-card-width) * 1.72);position:relative;height:640px;border-radius:24px;border:1px solid #e5dbec;background:radial-gradient(ellipse,#fffaf7,#f1eaf6);overflow:hidden}.cel-saved-free-card{position:absolute;width:var(--saved-card-width);min-width:0}.cel-saved-free-card .tarot-slot-card{width:100%}.cel-saved-free-card p{font-size:10px;line-height:1.4;text-shadow:0 1px white}.cel-saved-free-card:focus-within{z-index:100}.cel-saved-free-card img{width:100%;height:100%;object-fit:cover}
+@media(max-width:600px){.cel-saved-free{height:480px}.cel-header-right{flex-wrap:wrap;justify-content:flex-end}}
+.cel-saved-spread{margin-top:26px;margin-bottom:34px}.cel-saved-spread img{width:100%;height:100%;object-fit:cover;border-radius:10px}.cel-saved-spread .cel-small{font-size:11px;line-height:1.6;color:#7e6d8c}.cel-saved-spread .tarot-slot-card:focus-visible{outline:3px solid #b59ccc;outline-offset:3px}

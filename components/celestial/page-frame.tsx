@@ -5,6 +5,7 @@ import {
   celestialHref,
   celestialLocales,
 } from "@/lib/celestial/copy";
+import { recordCopy, memberAccountHref } from "@/lib/celestial/record-copy";
 import { absoluteUrl } from "@/lib/seo";
 import { journalLanguageTags } from "@/lib/journal-locales";
 import "./celestial.css";
@@ -51,6 +52,7 @@ export function CelestialPageFrame({
             <span>✧</span>DestinyPixel
           </a>
           <div className="cel-header-right">
+            <a href={memberAccountHref(locale)}>{recordCopy(locale).account}</a>
             <a href={celestialHref(astro ? "/tarot" : "/astrology", locale)}>
               {astro ? c.tarot : c.astrology} ↗
             </a>

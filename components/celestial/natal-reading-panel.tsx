@@ -6,9 +6,9 @@ import type { CelestialCopy } from "@/lib/celestial/copy";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { natalGroups, natalReadingCopy, natalReadingTargets, type NatalReading } from "@/lib/celestial/natal-reading";
 
-export function NatalReadingPanel({ chart, copy: c, locale, reading, busy, status, disabled, onRead }: {
+export function NatalReadingPanel({ chart, copy: c, locale, reading, busy, status, disabled, savedView=false, onRead }: {
   chart: NatalChart; copy: CelestialCopy; locale: ReportLocale; reading: NatalReading | null;
-  busy: boolean; status: string; disabled?: boolean; onRead: () => void;
+  busy: boolean; status: string; disabled?: boolean; savedView?: boolean; onRead: () => void;
 }) {
   const d = natalReadingCopy(locale);
   const targets = natalReadingTargets(chart, c, locale);
@@ -18,12 +18,12 @@ export function NatalReadingPanel({ chart, copy: c, locale, reading, busy, statu
     <div className="cel-reading-head">
       <span className="cel-orb"><Sparkles size={25} /></span>
       <div><p className="cel-kicker">DEEPSEEK · AI</p><h2>{d.title}</h2></div>
-      <button type="button" className="cel-button" disabled={busy || disabled || Boolean(reading)} onClick={onRead}>
+      {!savedView && <button type="button" className="cel-button" disabled={busy || disabled || Boolean(reading)} onClick={onRead}>
         {busy ? d.busy : reading ? c.aiReady : status ? c.retry : d.cta}<Sparkles size={16} />
-      </button>
+      </button>}
     </div>
     <p className="cel-muted">{d.intro}</p>
-    <p className="cel-muted cel-small">{c.aiNote}</p>
+    {!savedView && <p className="cel-muted cel-small">{c.aiNote}</p>}
     <div role="status" aria-live="polite">
       {busy && <><p className="cel-notice">{d.wait}</p><div className="cel-skeleton"><i/><i/><i/></div></>}
       {status && <p className="cel-notice">{status === "limited" ? c.aiLimited : c.aiUnavailable}</p>}

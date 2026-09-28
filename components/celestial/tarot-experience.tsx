@@ -25,6 +25,7 @@ import {
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
 import { DeckRibbon } from "./deck-ribbon";
+import { SaveCelestialRecord } from "./save-record";
 import { ReadingPanel } from "./reading-panel";
 export default function TarotExperience({
   locale,
@@ -37,6 +38,7 @@ export default function TarotExperience({
 }) {
   const [table, setTable] = useState<TableState>(() => initialTable()),
     [mixes, setMixes] = useState(0),
+    [recordSession,setRecordSession] = useState(0),
     [reversals, setReversals] = useState(true),
     [selected, setSelected] = useState(0),
     [question, setQuestion] = useState(""),
@@ -81,6 +83,7 @@ export default function TarotExperience({
     if (table.cards.length && !window.confirm(c.resetCheck)) return;
     invalidate();
     setTable(initialTable(mode, spread));
+    setRecordSession(n=>n+1);
     setMixes(0);
     setSelected(0);
   }
@@ -622,6 +625,7 @@ export default function TarotExperience({
       <p className="cel-small cel-muted">
         {ready ? c.allRevealed : c.readyHint}
       </p>
+      {table.cards.length > 0 && <SaveCelestialRecord key={recordSession} snapshot={{version:1,kind:"tarot",locale,table,question,reading}} disabled={busy}/>}
       <ReadingPanel
         copy={c}
         reading={reading}

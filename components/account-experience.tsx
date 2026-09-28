@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CelestialRecordList } from "./celestial/record-list";
 import { trackToolEvent } from "@/lib/analytics";
 import { destinySupportHref } from "@/lib/support-contact";
 import AdminSandboxCheckout from "./admin-sandbox-checkout";
@@ -176,6 +177,7 @@ export default function AccountExperience({ locale: initialLocale, returnTo, ini
           </section> : <>
             <section className={styles.identity}><div><span className={styles.eyebrow}>{text.signedIn}</span><strong>{data.member.name || data.member.email}</strong>{data.member.name && <span>{data.member.email}</span>}</div><button className={styles.linkButton} type="button" onClick={logout} disabled={busy}><LogOut size={15} aria-hidden="true" />{text.logout}</button></section>
             {data.member.isAdmin && <section className={styles.panel}><h2>{text.adminTesting}</h2><p>{text.adminTestingDetail}</p><Link href={locale === "zh" ? "/admin?locale=zh" : "/admin"} className={styles.textLink}>{text.admin}<ArrowRight size={15} aria-hidden="true" /></Link></section>}
+            <CelestialRecordList key={data.member.id} locale={locale} />
             <AdminSandboxCheckout locale={locale} isAdmin={data.member.isAdmin} offer={data.checkout} reports={data.reports} />
             {message && <p className={styles.message} data-error={messageError} role={messageError ? "alert" : "status"}>{message}</p>}
             <section className={styles.section}><div className={styles.sectionHeading}><div><h2>{text.reports}</h2><p>{text.reportsIntro}</p></div><span className={styles.count}>{data.reports.length}</span></div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CelestialRecordList } from "./celestial/record-list";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight, CheckCircle2, CircleAlert, FileText, Loader2, RefreshCw, ShieldCheck } from "lucide-react";
 import { accountStatus, formatAccountDate, formatAccountMoney } from "./account-experience";
@@ -73,6 +74,7 @@ export default function AdminExperience({ locale }: { locale: Locale }) {
       {state === "loading" ? <div className={styles.state} role="status"><Loader2 size={23} className={styles.spin} aria-hidden="true" /><p>{text.loading}</p></div> : state === "denied" ? <section className={styles.state}><ShieldCheck size={31} aria-hidden="true" /><h2>{text.denied}</h2><p>{text.deniedBody}</p><Link href={account} className={styles.primaryButton}>{text.login}<ArrowRight size={15} aria-hidden="true" /></Link></section> : state === "error" || !data ? <section className={styles.state} role="alert"><CircleAlert size={25} aria-hidden="true" /><p>{text.error}</p><button className={styles.secondaryButton} onClick={() => void loadOverview()} disabled={refreshing}>{text.refresh}</button></section> : <>
         <section className={styles.panel}><p>{text.testNote}</p><Link href={`${home}#report`} className={styles.textLink}>{text.testReport}<ArrowRight size={15} aria-hidden="true" /></Link></section>
         <div className={styles.metrics}>{counts.map(({ key, label }) => <article className={styles.metric} key={key}><span>{label}</span><strong>{typeof data.counts[key] === "number" && Number.isFinite(data.counts[key]) ? data.counts[key].toLocaleString(locale === "zh" ? "zh-CN" : "en-US") : text.unavailable}</strong></article>)}</div>
+        <CelestialRecordList locale={locale} admin />
         <div className={styles.adminSplit}>
           <section className={styles.panel}><div className={styles.sectionHeading}><h2>{text.revenue}</h2></div>{data.revenue.length ? <div className={styles.revenueList}>{data.revenue.map((item) => <div key={item.currency}><span>{item.currency}</span><strong>{formatAccountMoney(item.amount, item.currency, locale)}</strong></div>)}</div> : <p className={styles.emptyCopy}>{text.noRevenue}</p>}<p className={styles.smallNote}>{text.revenueNote}</p></section>
           <section className={styles.panel}><div className={styles.sectionHeading}><h2>{text.readiness}</h2></div><dl className={styles.readiness}>{(["database", "paypal", "emailRecovery", "paidReportsEnabled"] as const).map((key) => <div key={key}><dt>{text[key]}</dt><dd data-ready={data.readiness[key]}>{data.readiness[key] ? <CheckCircle2 size={14} aria-hidden="true" /> : <CircleAlert size={14} aria-hidden="true" />}{key === "paidReportsEnabled" ? data.readiness[key] ? text.enabled : text.disabled : data.readiness[key] ? text.ready : text.missing}</dd></div>)}<div><dt>{text.mode}</dt><dd>{data.readiness.paypalMode === "live" ? text.live : data.readiness.paypalMode === "sandbox" ? text.sandbox : text.disabled}</dd></div></dl></section>

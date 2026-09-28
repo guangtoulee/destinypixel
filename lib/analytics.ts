@@ -66,7 +66,7 @@ export function toolForForm(value: string | undefined): AnalyticsTool | null {
 export function sanitizeAnalyticsUrl(raw: string): string | null {
   try {
     const url = new URL(raw);
-    if (/^\/(api|work|admin)(\/|$)/.test(url.pathname)) return null;
+    if (/^\/(api|work|admin)(\/|$)/.test(url.pathname) || url.pathname.startsWith("/account/readings/")) return null;
     if (url.pathname.startsWith("/report/")) url.pathname = "/report/[id]";
     url.hash = "";
     const allowed: Record<string, readonly string[]> = {

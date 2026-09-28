@@ -8,6 +8,7 @@ export function ReadingPanel({
   busy,
   status,
   disabled,
+  savedView=false,
   onRead,
 }: {
   copy: CelestialCopy;
@@ -15,6 +16,7 @@ export function ReadingPanel({
   busy: boolean;
   status: string;
   disabled?: boolean;
+  savedView?: boolean;
   onRead: () => void;
 }) {
   return (
@@ -27,7 +29,7 @@ export function ReadingPanel({
           <p className="cel-kicker">DEEPSEEK · AI</p>
           <h2>{copy.ai}</h2>
         </div>
-        <button
+        {!savedView && <button
           type="button"
           className="cel-button"
           disabled={busy || disabled || Boolean(reading)}
@@ -41,7 +43,7 @@ export function ReadingPanel({
                 ? copy.retry
                 : copy.ai}{" "}
           <Sparkles size={16} />
-        </button>
+        </button>}
       </div>
       <p className="cel-muted cel-small">{copy.aiNote}</p>
       <div aria-live="polite">

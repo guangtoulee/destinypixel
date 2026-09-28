@@ -12,6 +12,7 @@ import type { NatalReading } from "@/lib/celestial/natal-reading";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { trackToolEvent } from "@/lib/analytics";
 import { ChartWheel, type ChartSelection } from "./chart-wheel";
+import { SaveCelestialRecord } from "./save-record";
 import { NatalReadingPanel } from "./natal-reading-panel";
 export default function AstrologyExperience({
   locale,
@@ -462,6 +463,9 @@ export default function AstrologyExperience({
           </span>
         </div>
       </section>
+      {!isDemo && <>
+        <SaveCelestialRecord key={chart.utc + chart.latitude + chart.longitude} snapshot={{version:1,kind:"astrology",locale,chart,reading}} disabled={busy||aiBusy}/>
+      </>}
       {!isDemo && (
         <NatalReadingPanel
           key={chart.utc + chart.latitude + chart.longitude}
