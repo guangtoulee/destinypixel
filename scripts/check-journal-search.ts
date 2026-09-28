@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { journalArticles, journalHref, journalLocales, journalLanguageTags } from "../lib/journal";
+import { journalArticleIndexable, journalArticles, journalHref, journalLocales, journalLanguageTags } from "../lib/journal";
 
 // Read-only HTTP smoke check; accepts localhost for a production-build preview.
 const base = process.argv[2] ?? "https://www.destinypixel.com";
@@ -29,10 +29,20 @@ async function main() {
         assert.ok(alternates.some(l => l.hrefLang === journalLanguageTags[other] && l.href === origin + journalHref(other,article.slug)), `${path}: missing language ${other}`);
       }
       assert.ok(alternates.some(l => l.hrefLang === "x-default" && l.href === origin + journalHref("en",article.slug)), `${path}: missing x-default`);
-      assert.ok(decode(sitemap).includes(`<loc>${origin + path}</loc>`), `${path}: sitemap missing`);
+      const indexable = journalArticleIndexable(article);
+      const listed = decode(sitemap).includes(`<loc>${origin + path}</loc>`);
+      assert.equal(listed, indexable, `${path}: sitemap`);
       const schemas = [...page.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => JSON.parse(m[1]));
       assert.ok(schemas.some(s => s["@type"] === "Article" && s.inLanguage === journalLanguageTags[locale]), `${path}: Article schema`);
-      assert.doesNotMatch(page.match(/<meta name="robots"[^>]*>/)?.[0] ?? "", /noindex/, `${path}: noindex`);
+      const robots = [...page.matchAll(/<meta\b[^>]*>/g)].map(m => attrs(m[0])).filter(tag => tag.name === "robots" || tag.name === "googlebot");
+      assert.ok(robots.some(tag => tag.name === "robots"), `${path}: robots meta`);
+      for (const tag of robots) {
+        if (indexable) assert.doesNotMatch(tag.content ?? "", /noindex/i, `${path}: ${tag.name}`);
+        else {
+          assert.match(tag.content ?? "", /noindex/i, `${path}: ${tag.name}`);
+          assert.match(tag.content ?? "", /(?<!no)follow/i, `${path}: ${tag.name} should follow`);
+        }
+      }
       console.log(`PASS ${path}`);
     }));
   }
