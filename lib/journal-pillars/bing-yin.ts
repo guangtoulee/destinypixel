@@ -2,7 +2,7 @@ import type { JournalTranslation } from "../journal";
 import { bingYinRussian } from "./bing-yin-ru";
 
 const en: JournalTranslation = {
-  title: "Bing Yin Day Pillar (丙寅): The Sunrise Tiger, Love, Career & Famous Birthdays",
+  title: "Bing Yin Day Pillar (丙寅): The Sunrise Tiger",
   description: "Warmth, initiative and the urge to lead: meet the Sunrise Tiger. Explore Bing Yin in love and work, with verified birthdays of Mandela and Alice Munro.",
   topic: "The Sunrise Tiger",
   introduction: "The room has gone quiet, the plan is stuck, and somebody finally says: 'Come on. We can do this.' That is the entrance of the Sunrise Tiger. It brings momentum, encouragement and a reason to look forward. The complication arrives when the person beside it wants to be heard—and receives a motivational speech instead.",

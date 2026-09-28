@@ -9,6 +9,7 @@ import { getPillarImagePath } from "./archetype-assets";
 import { calculateDateDayPillar } from "./day-pillar";
 import { stemDetails, branchTotems } from "./bazi-totems";
 import { toTraditional } from "./journal-locales";
+import { siteName } from "./seo";
 
 test("all 60 calculated results have one searchable article and a real JPEG card", () => {
   const portraits = journalArticles.filter(a => a.pillar);
@@ -53,12 +54,22 @@ test("reference facts match the site's chart labels and reject impossible pairs"
 });
 
 test("expanded portraits retain their URLs and reproduce every sourced public birthday", () => {
-  for (const pillar of ["乙丑", "丙寅"]) {
+  const fullUpdatedAt: Record<string, string> = {
+    "甲子": "2026-09-24",
+    "乙丑": "2026-09-24",
+    "丙寅": "2026-09-24",
+    "乙亥": "2026-09-28",
+    "甲辰": "2026-09-28",
+  };
+  for (const [pillar, updatedAt] of Object.entries(fullUpdatedAt)) {
     const article = journalArticles.find(a => a.pillar === pillar)!;
     assert.equal(article.slug, pillarArticleSlug(pillar));
-    assert.equal(article.publishedAt, "2026-09-23");
-    assert.equal(article.updatedAt, "2026-09-24");
+    assert.equal(article.publishedAt, pillar === "甲子" ? "2026-09-14" : "2026-09-23");
+    assert.equal(article.updatedAt, updatedAt);
     assert.equal(article.portraitDepth, "full");
+  }
+  for (const pillar of ["乙丑", "丙寅", "乙亥", "甲辰"]) {
+    const article = journalArticles.find(a => a.pillar === pillar)!;
     const prose = article.translations.en.sections.flatMap(s => s.paragraphs).join(" ");
     assert.ok(prose.split(/\s+/).length > 1000, `${pillar}: expanded prose missing`);
     for (const locale of journalLocales) {
@@ -66,6 +77,7 @@ test("expanded portraits retain their URLs and reproduce every sourced public bi
       assert.equal(section.table?.rows.length, 2);
       assert.equal(section.sources?.length, 2);
       assert.ok(section.sources!.every(s => /^https:\/\/(www\.)?(nobelprize\.org|obamalibrary\.gov)\//.test(s.href)));
+      assert.ok(!section.sources!.some(s => s.href.startsWith("/")));
       for (const [, date, result] of section.table!.rows) {
         assert.deepEqual(calculateDateDayPillar(date), { ok: true, pillar });
         assert.ok(result.includes(pillar));
@@ -75,6 +87,49 @@ test("expanded portraits retain their URLs and reproduce every sourced public bi
   // A substantive rewrite must not silently freshen all other portraits.
   for (const a of journalArticles.filter(a => a.kind === "portrait" && a.portraitDepth !== "full")) {
     assert.equal(a.updatedAt, "2026-09-23");
+  }
+});
+
+test("full day-pillar rendered titles stay within 60 characters", () => {
+  const suffix = ` | ${siteName}`;
+  const full = journalArticles.filter(a => a.portraitDepth === "full");
+  assert.deepEqual(new Set(full.map(a => a.pillar)), new Set(["甲子", "乙丑", "丙寅", "乙亥", "甲辰"]));
+  for (const article of full) {
+    for (const locale of journalLocales) {
+      const rendered = `${article.translations[locale].title}${suffix}`;
+      assert.ok(rendered.length <= 60, `${article.slug}/${locale}: ${rendered.length} ${rendered}`);
+    }
+  }
+});
+
+test("celebrity birthdays named in the Yi Hai and Jia Chen articles match calculateDateDayPillar", () => {
+  const expected = [
+    ["1934-03-05", "乙亥"],
+    ["1940-06-01", "乙亥"],
+    ["1931-02-18", "甲辰"],
+    ["1891-11-14", "甲辰"],
+  ] as const;
+  for (const [date, pillar] of expected) assert.deepEqual(calculateDateDayPillar(date), { ok: true, pillar });
+  for (const slug of ["yi-hai-day-pillar", "jia-chen-day-pillar"]) {
+    const article = journalArticles.find(a => a.slug === slug)!;
+    for (const locale of journalLocales) {
+      const birthdays = article.translations[locale].sections.find(s => s.id === "famous-birthdays")!;
+      assert.deepEqual(birthdays.table!.rows.map(row => row[1]), slug === "yi-hai-day-pillar" ? ["1934-03-05", "1940-06-01"] : ["1931-02-18", "1891-11-14"]);
+      const datesInCopy = JSON.stringify(article.translations[locale]).match(/\d{4}-\d{2}-\d{2}/g) ?? [];
+      const birthdayDates = new Set(birthdays.table!.rows.map(row => row[1]));
+      for (const date of datesInCopy) assert.ok(birthdayDates.has(date), `${slug}/${locale}: unexpected date ${date}`);
+    }
+  }
+});
+
+test("full Yi Hai and Jia Chen pages do not reuse legacy pillar names or health lines", () => {
+  const banned = ["The Mystic Driftwood", "深海浮木", "Liver & Feet", "肝脏", "足部", "Kidneys & Circulation", "肾脏", "The Azure Dragon", "苍龙出海"];
+  for (const slug of ["yi-hai-day-pillar", "jia-chen-day-pillar"]) {
+    const article = journalArticles.find(a => a.slug === slug)!;
+    for (const locale of journalLocales) {
+      const blob = JSON.stringify(article.translations[locale]);
+      for (const term of banned) assert.equal(blob.includes(term), false, `${slug}/${locale} contains ${term}`);
+    }
   }
 });
 
