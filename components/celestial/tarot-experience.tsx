@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
+  ArrowUp,
   RotateCcw,
   RotateCw,
   Shuffle,
@@ -24,7 +25,7 @@ import {
 } from "@/lib/celestial/tarot";
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
-import { DeckRibbon } from "./deck-ribbon";
+import { DeckRibbon, type DeckDropPoint } from "./deck-ribbon";
 import { SaveCelestialRecord } from "./save-record";
 import { ReadingPanel } from "./reading-panel";
 export default function TarotExperience({
@@ -38,6 +39,7 @@ export default function TarotExperience({
 }) {
   const [table, setTable] = useState<TableState>(() => initialTable()),
     [mixes, setMixes] = useState(0),
+    [incoming, setIncoming] = useState<number | null>(null),
     [recordSession,setRecordSession] = useState(0),
     [reversals, setReversals] = useState(true),
     [selected, setSelected] = useState(0),
@@ -87,18 +89,44 @@ export default function TarotExperience({
     setMixes(0);
     setSelected(0);
   }
-  function draw(index: number) {
+  function slotAt(point?: DeckDropPoint) {
+    if (!point || table.mode === "free") return selected;
+    const slots = board.current?.querySelectorAll<HTMLElement>("[data-drop-slot]");
+    const hit = Array.from(slots || []).find(el => {
+      const r = el.getBoundingClientRect();
+      return point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom;
+    });
+    return hit ? Number(hit.dataset.dropSlot) : selected;
+  }
+  function draw(index: number, point?: DeckDropPoint) {
     if (!mixes) return;
     invalidate();
     const slot =
       table.mode === "spread"
-        ? selected
+        ? slotAt(point)
         : Array.from({ length: 78 }, (_, i) => i).find(
             (i) => !table.cards.some((c) => c.slot === i),
           );
     if (slot === undefined) return;
     const next = takeCard(table, index, slot);
+    if (point && table.mode === "free" && board.current) {
+      const r = board.current.getBoundingClientRect();
+      if (point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom) {
+        const width = parseFloat(getComputedStyle(board.current).getPropertyValue("--free-card-width")) || 82;
+        next.cards = next.cards.map(card => card.slot === slot ? { ...card,
+          x: Math.max(0, Math.min(100 - width / r.width * 100, (point.x - r.left - width / 2) / r.width * 100)),
+          y: Math.max(0, Math.min(100 - width * 1.72 / r.height * 100, (point.y - r.top - width * .86) / r.height * 100)),
+        } : card);
+      }
+    }
     setTable(next);
+    // Keep the selected card and nearby deck visible after a phone draw.
+    if (window.matchMedia("(max-width: 740px)").matches) {
+      requestAnimationFrame(() => {
+        const target = table.mode === "spread" ? board.current?.querySelector(`[data-drop-slot="${slot}"]`) : board.current;
+        if (target && target.getBoundingClientRect().top < 0) target.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    }
     if (table.mode === "spread") {
       const empty = Array.from(
         { length: spreadSizes[table.spread] },
@@ -302,8 +330,9 @@ export default function TarotExperience({
       <p className="tarot-instructions">
         {table.mode === "free" ? c.freeHelp : c.spreadHelp}
       </p>
+      <div className="tarot-play-surface">
       <div
-        className={`tarot-table ${table.mode === "free" ? "tarot-free" : ""} tarot-spread-${table.spread}`}
+        className={`tarot-table ${incoming !== null ? "is-receiving" : ""} ${table.mode === "free" ? "tarot-free" : ""} tarot-spread-${table.spread}`}
         ref={board}
         id="tarot-board"
       >
@@ -321,11 +350,12 @@ export default function TarotExperience({
                 meta = cards.find((c) => c.id === card?.id);
               return (
                 <div
-                  className={`tarot-slot tarot-slot-${i} ${selected === i ? "is-selected" : ""}`}
+                  className={`tarot-slot tarot-slot-${i} ${selected === i ? "is-selected" : ""} ${incoming === i ? "is-drop-target" : ""}`}
                   key={i}
                 >
                   <button
                     className="tarot-slot-card"
+                    data-drop-slot={i}
                     aria-label={
                       card
                         ? card.revealed
@@ -470,6 +500,11 @@ export default function TarotExperience({
         </div>
       </div>
       <div className="tarot-deck-zone">
+        <div className="tarot-deck-compact">
+          <div><h2>{c.deckShortTitle}</h2><span>{table.deck.length} {c.remaining}</span></div>
+          <button className="cel-button" onClick={mix} disabled={!table.deck.length}><Shuffle size={16}/>{c.shuffleShort}</button>
+        </div>
+        <div className="tarot-draw-cue"><ArrowUp size={16}/><span>{c.dropHint}</span></div>
         <div className="tarot-deck-head">
           <div
             className="tarot-shuffle-object"
@@ -543,14 +578,16 @@ export default function TarotExperience({
             {c.remaining}
           </span>
         </div>
-        <p className="cel-muted cel-small">{c.deckHelp}</p>
+        <p className="cel-muted cel-small tarot-deck-long-help">{c.deckHelp}</p>
         <DeckRibbon
           key={`${mixes}-${table.mode}-${table.spread}-${table.deck.map((card) => card.id).join(",")}`}
           count={table.deck.length}
           disabled={!mixes}
           copy={c}
           onDraw={draw}
+          onPull={point => setIncoming(point ? slotAt(point) : null)}
         />
+      </div>
       </div>
       {focused?.revealed && info && (
         <section className="tarot-card-focus">
