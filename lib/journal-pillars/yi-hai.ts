@@ -79,7 +79,7 @@ const en: JournalTranslation = {
     },
     {
       id: "famous-birthdays", title: "8. Kahneman and Kip Thorne: same Day Pillar, different instruments", paragraphs: [
-        "The Nobel Foundation records Daniel Kahneman's birth on 5 March 1934 in Tel Aviv and his 2002 prize in economic sciences for integrating insights from psychological research into economics, especially concerning judgment and decision-making under uncertainty. The twist: this portrait leans on intuition, while his work examined how human judgments are actually formed. If anything, a hunch deserves testing before trust; this is no evidence that Yi Hai intuition is strong.",
+        "The Nobel Foundation records Daniel Kahneman's birth on 5 March 1934 in Tel Aviv and his 2002 prize in economic sciences for integrating insights from psychological research into economics, especially concerning judgment and decision-making under uncertainty. This portrait talks about intuition, and his work examined how human judgments are actually formed. The only lesson to draw is that a hunch deserves testing before trust; this is no evidence that Yi Hai intuition is strong.",
         "The same source records Kip Thorne's birth on 1 June 1940 in Logan, Utah, and his share of the 2017 physics prize for decisive contributions to the LIGO detector and the observation of gravitational waves. One studied the mind's shortcuts; the other helped make gravitational waves observable.",
         "Run through the civil-date method our free finder uses, both dates land on Yi Hai. Anyone can reproduce that match, but it stops there: their birth hours are unknown here, neither man speaks for BaZi, and their work owes nothing to this pair.",
       ],
@@ -105,7 +105,7 @@ const en: JournalTranslation = {
     },
     {
       id: "calculation-and-context", title: "10. A Yi Hai day is not the 1995 Wood Pig year", paragraphs: [
-        "Many people meet the words \"Wood Pig\" through 1995, whose year pillar was Yi Hai from around Lichun in early February; 1935 was another, and everyone born in such a stretch shares that year pillar. The day pillar comes from your own Gregorian birth date, so a 1995 baby can land on any of the sixty days. Our free finder reads the civil date. The day after Yi Hai is Bing Zi. If you were born between 11 p.m. and midnight, some schools already count the next day (Bing Zi). Check a full chart with the real time and place rather than keeping whichever result sounds nicer.",
+        "Many people meet the words \"Wood Pig\" through 1995, whose year pillar was Yi Hai from around Lichun in early February; 1935 was another, and everyone born in such a stretch shares that year pillar. The day pillar comes from your own Gregorian birth date, so a 1995 baby can land on any of the sixty days. Our free finder reads the civil date. If you were born between 11 p.m. and midnight, some schools already count the next day, because they change days at the Zi hour: Bing Zi instead of Yi Hai, or Yi Hai instead of Jia Xu if your civil date was the day before. Check a full chart with your real birth time and place rather than keeping whichever result sounds nicer.",
         "This portrait expands DestinyPixel's original Chinese and English card notes for Yi Hai. Its scenes illustrate a pattern, the two birthdays come from separately cited Nobel records, and none of it proves the portrait describes you. Use it as a psychological mirror: the useful parts are the ones that start a real conversation.",
       ],
       sources: [
@@ -164,7 +164,7 @@ const zh: JournalTranslation = {
     {
       id: "love-friction", title: "4. 那条一直想回、却没回的消息", paragraphs: [
         "下面是为这幅画像编写的示例，不是谁的真实经历：伴侣发来一件很现实的事，房租要涨了，或者父母想定个日子见你。你一下子被压得喘不过气，消息点开了，却放了两天没回。对你来说，这是在透口气；对对方来说，是人不见了，问题也还悬在那里。",
-        "修复要赶在“消失”之前。先回一句带时间的占位话：“我今晚需要缓一缓，明早九点前给你答复。”然后九点前真的回来。泥沼清莲牛是人还坐在那里，不吭声，心里默默记一笔；深海灵猪更可能直接离场。两种都不是诊断。一个具体的时间点，就能让“离开”变成对方信得过的“暂停”。",
+        "修复要赶在“消失”之前。先回一句带时间的占位话：“我今晚需要缓一缓，明早九点前给你答复。”然后九点前真的回来。泥沼清莲牛往往是人还坐在那里，不吭声，心里默默记一笔；深海灵猪更可能直接离场。两种都不是诊断。一个具体的时间点，就能让“离开”变成对方信得过的“暂停”。",
       ],
       sources: [
         { label: "五行相生相克在感情里怎样看", href: "/journal/five-elements-relationship-compatibility?locale=zh" },
@@ -195,7 +195,7 @@ const zh: JournalTranslation = {
     },
     {
       id: "famous-birthdays", title: "8. 卡尼曼与基普·索恩：同为乙亥，走向完全不同", paragraphs: [
-        "诺贝尔奖官方资料记载，丹尼尔·卡尼曼1934年3月5日生于特拉维夫，2002年获经济学奖，获奖理由是把心理学研究的洞见引入经济学，尤其是关于不确定条件下人如何判断与决策。耐人寻味的是：这幅画像常谈直觉，他的研究关心的恰恰是判断怎样形成。若有启发，也只是直觉值得检验、不值得盲信，绝不能读成“他证明了乙亥直觉强”。",
+        "诺贝尔奖官方资料记载，丹尼尔·卡尼曼1934年3月5日生于特拉维夫，2002年获经济学奖，获奖理由是把心理学研究的洞见引入经济学，尤其是关于不确定条件下人如何判断与决策。这幅画像常谈直觉，而他的研究关心的是判断怎样形成；能从中得到的，只是直觉值得检验、不值得盲信，绝不能读成“他证明了乙亥直觉强”。",
         "同一来源记载，基普·索恩1940年6月1日生于美国犹他州洛根，因对 LIGO 探测器和引力波观测的决定性贡献，与他人共享2017年物理学奖。一位研究人心的捷径，一位参与让引力波变得可以观测，两条路几乎没有交集。",
         "把1934年3月5日和1940年6月1日放进本站免费查询所用的民用日期算法，两天都落在乙亥。这个巧合谁都能复算，但也仅此而已：本文没有核实两人的出生时刻，他们不替八字代言，成就也与这对干支无关。",
       ],
@@ -221,7 +221,7 @@ const zh: JournalTranslation = {
     },
     {
       id: "calculation-and-context", title: "10. 乙亥日柱，不是1995年的“木猪年”", paragraphs: [
-        "很多人第一次听说“木猪”，是因为1995年：那一年大约从立春起，年柱是乙亥，1935年也是。年柱由那一整段时间出生的人共用；日柱却由你自己的公历生日决定，1995年出生的人，六十种日柱都可能碰到。本站免费查询按民用日期计算。乙亥的后一天是丙子。如果在晚上 11 点到零点之间出生，有的流派会算作下一天（丙子）。最好带上真实的出生时间和地点排完整图谱，而不是挑一个听起来更顺耳的结果。",
+        "很多人第一次听说“木猪”，是因为1995年：那一年大约从立春起，年柱是乙亥，1935年也是。年柱由那一整段时间出生的人共用；日柱却由你自己的公历生日决定，1995年出生的人，六十种日柱都可能碰到。本站免费查询按民用日期计算。如果在晚上11点到零点之间出生，有的流派从子时起就换日，会算作下一天：乙亥日的这个时段记为丙子，前一天（甲戌日）的这个时段则记为乙亥。所以最好带上真实的出生时间和地点排完整图谱，而不是挑一个听起来更顺耳的结果。",
         "本篇依据 DestinyPixel 乙亥卡片的中英文原创底稿扩写。文中场景是为说明模式而写的示例，两位名人的生日另附诺贝尔奖来源，这些都不能证明这幅画像说中了你。把它当作一面心理镜像，照出能拿去开启一次真实对话的那部分，就够了。",
       ],
       sources: [

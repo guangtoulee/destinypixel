@@ -11,7 +11,7 @@ const en: JournalTranslation = {
     {
       id: "stem-branch", title: "1. A forest that grows over stone", paragraphs: [
         "In BaZi, Jia Chen pairs Yang Wood with the Dragon branch, whose principal element is Earth. Yang Wood is the tall, load-bearing tree, and Wood controls Earth (the ke 克 cycle): roots break up soil and slowly give it form. As an energy portrait, that becomes a character who changes ground by staying on it for years. Chen is damp earth that holds water; tradition places a little Yi Wood and Gui Water inside it, undergrowth and moisture, so this ground can feed a forest. Our card shows a moss-covered emerald dragon on jungle-swallowed stone ruins, waterfalls beside it and light slanting through the canopy; its subtitle is The Primordial Root.",
-        "The pair also has a nayin, a separate traditional naming system: Lamp Fire (覆灯火), a flame under a shade. It adds an image, not an element; you are not \"really Fire.\" We return to that shaded light later.",
+        "The pair also has a nayin, a separate traditional naming system: Lamp Fire (覆灯火), a flame protected by a shade, which old texts say can light places the sun and moon do not reach. It adds an image, not an element; you are not \"really Fire.\" This page borrows the shade for a metaphor of its own: light guarded so well that others cannot see your reasoning. We return to it later.",
       ],
       table: { headings: ["Part","Jia Chen"], rows: [
         ["Cycle position","41 / 60"],
@@ -100,7 +100,7 @@ const en: JournalTranslation = {
     },
     {
       id: "calculation-and-context", title: "10. A Jia Chen day is not the 2024 Wood Dragon year", paragraphs: [
-        "\"Wood Dragon\" usually means a year: from around Lichun in early February 2024 until early February 2025, and likewise in 1964, the year pillar was Jia Chen. Most 2024 babies share that year pillar, yet their day pillars spread across all sixty combinations; only the Gregorian birth date sets the day. Our free finder works from the civil date. The neighbouring days are Gui Mao and Yi Si. If you were born between 11 p.m. and midnight, some schools already count the next day (Yi Si). A full chart with the actual time and place is a better check than a guess.",
+        "\"Wood Dragon\" usually means a year: from around Lichun in early February 2024 until early February 2025, and likewise in 1964, the year pillar was Jia Chen. Most 2024 babies share that year pillar, yet their day pillars spread across all sixty combinations; only the Gregorian birth date sets the day. Our free finder works from the civil date. If you were born between 11 p.m. and midnight, some schools already count the next day, because they change days at the Zi hour: Yi Si instead of Jia Chen, or Jia Chen instead of Gui Mao if your civil date was the day before. A full chart with your real birth time and place is a better check than a guess.",
         "Everything above grows out of the Jia Chen entry in DestinyPixel's own bilingual card notes. The family chat, the house plan and the frozen evening are illustrations, not case histories; the Nobel birthdays are cited separately; neither the calendar nor the examples prove the portrait. If it works as a psychological mirror, let it reflect the one decision you have been holding alone.",
       ],
       sources: [
@@ -122,7 +122,7 @@ const zh: JournalTranslation = {
     {
       id: "stem-branch", title: "1. 长在古石上的森林", paragraphs: [
         "在八字里，甲辰由阳木甲与地支辰组成，辰的本气属土。甲木是参天、能做梁柱的大树；木克土，换成出生能量画像的说法，就是根系一点点塑造土地：靠多年站在同一个地方，把一片地变成可以栖身的样子。辰是湿润、能蓄水的土，传统说里面还藏着乙木和癸水，好比林下的草木和湿气，所以这片地养得住一整片森林。卡面上，一条长满苔藓的翠绿巨龙伏在被丛林吞没的古石遗迹上，瀑布从旁流过，光束穿过树冠落下来，英文副标是 The Primordial Root。",
-        "甲辰的纳音叫“覆灯火”，这是另一套传统命名，指有罩护着的灯火，古书形容它能照到日月照不到的地方。本篇借“灯罩”做个引申：光护得太好，别人反而看不清你的思路。这个别名不会把甲木改成火，也不等于说你其实属火；后文还会回到这盏灯。",
+        "甲辰的纳音叫“覆灯火”，这是另一套传统命名，指有罩护着的灯火，古书形容它能照到日月照不到的地方。本篇借“灯罩”做个引申：光护得太好，别人反而看不清你的思路。这个别名只添一层意象，不会把甲木改成火，也不等于说你其实属火；后文还会回到这盏灯。",
       ],
       table: { headings: ["组成","甲辰"], rows: [
         ["六十甲子序号","41 / 60"],
@@ -211,7 +211,7 @@ const zh: JournalTranslation = {
     },
     {
       id: "calculation-and-context", title: "10. 甲辰日柱，不是2024年的“木龙年”", paragraphs: [
-        "“木龙”多半指年份：大约从2024年立春到2025年立春前，年柱是甲辰，1964年同理。所以2024年出生的孩子大多共用甲辰年柱，日柱却分散在全部六十种组合里，只有公历生日才能定下日柱。本站免费查询认的是民用日期。前后两天分别是癸卯和乙巳。如果在晚上 11 点到零点之间出生，有的流派会算作下一天（乙巳）。用准确的时刻和出生地排一张完整图谱来核对，比凭感觉猜更可靠。",
+        "“木龙”多半指年份：大约从2024年立春到2025年立春前，年柱是甲辰，1964年同理。所以2024年出生的孩子大多共用甲辰年柱，日柱却分散在全部六十种组合里，只有公历生日才能定下日柱。本站免费查询认的是民用日期。如果在晚上11点到零点之间出生，有的流派从子时起就换日，会算作下一天：甲辰日的这个时段记为乙巳，前一天（癸卯日）的这个时段则记为甲辰。所以用准确的出生时刻和出生地排一张完整图谱来核对，比凭感觉猜更可靠。",
         "以上内容，是从 DestinyPixel 自己的甲辰双语卡片笔记里生长出来的。家族群、买房计划和冻住的那几天都是示例，不是个案记录；两位诺奖得主的生日另附来源；历法结构和这些例子都不能证明画像说中了你。如果它能当一面心理镜像，就让它照一照那个你一直独自扛着的决定。",
       ],
       sources: [
