@@ -4,7 +4,7 @@ import { compatibilityLocales, compatibilityHref, compatibilityAlternates } from
 import type { MetadataRoute } from "next";
 import { discoveryLocales, discoveryHref, discoveryAlternates } from "@/lib/discovery";
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
-import { journalArticles, journalHref, journalLocales, journalAlternates } from "@/lib/journal";
+import { journalArticles, journalHref, journalLocales, journalAlternates, journalArticleIndexable } from "@/lib/journal";
 import { seoGuidePath, seoGuides } from "@/lib/seo-guides";
 
 /** Main-site product + content only. Test/side apps stay out of the index. */
@@ -25,7 +25,8 @@ const publicRoutes = [
 
 function safeJournalRoutes(): MetadataRoute.Sitemap {
   try {
-    return [undefined, { slug: "day-pillars", updatedAt: "2026-09-23" }, ...journalArticles].flatMap((article) => {
+    // Same predicate as page metadata: a day-pillar portrait re-enters the sitemap when portraitDepth becomes "full".
+    return [undefined, { slug: "day-pillars", updatedAt: "2026-09-23" }, ...journalArticles].filter((article) => journalArticleIndexable(article)).flatMap((article) => {
       const languages = Object.fromEntries(Object.entries(journalAlternates(article?.slug)).map(([language, href]) => [language, absoluteUrl(href)]));
       return journalLocales.map((locale) => ({
         url: absoluteUrl(journalHref(locale, article?.slug)),

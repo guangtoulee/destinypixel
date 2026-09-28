@@ -296,19 +296,27 @@ export function getJournalArticle(slug: string) {
   return journalArticles.find((article) => article.slug === slug);
 }
 
+/** Day-pillar pages stay out of the index until `portraitDepth` is `"full"`. Other journal pages stay indexable. */
+export function journalArticleIndexable(article?: object | null) {
+  const pillar = article && "pillar" in article ? article.pillar : undefined;
+  const depth = article && "portraitDepth" in article ? article.portraitDepth : undefined;
+  return typeof pillar !== "string" || pillar.length === 0 || depth === "full";
+}
+
 export function journalMetadata(locale: JournalLocale, article?: JournalArticle): Metadata {
   const copy = article?.translations[locale];
   const title = copy?.title ?? journalUi[locale].title;
   const description = copy?.description ?? journalUi[locale].description;
   const canonical = journalHref(locale, article?.slug);
   const images = [article?.pillar ? getPillarImagePath(article.pillar) : "/opengraph-image"];
+  const indexable = journalArticleIndexable(article);
   return {
     title: { absolute: `${title} | ${siteName}` },
     description,
     alternates: { canonical, languages: journalAlternates(article?.slug) },
     openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images, locale: journalOgLocales[locale], alternateLocale: journalLocales.filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: article.updatedAt } : {}) },
     twitter: { card: "summary_large_image", title, description, images },
-    robots: { index: true, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true, googleBot: { index: false, follow: true } },
   };
 }
 

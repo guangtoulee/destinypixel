@@ -2,10 +2,67 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
 import { absoluteUrl } from "@/lib/seo";
-import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags } from "@/lib/journal";
+import { journalArticles, journalHref, journalMetadata, journalArticleSchema, journalArticleIndexable, getJournalArticle, normalizeJournalLocale, journalLocales, journalLanguageTags } from "@/lib/journal";
+import { dayPillarCycle, pillarArticleSlug } from "@/lib/day-pillar-library";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { toTraditional } from "@/lib/journal-locales";
 import { calculateDateDayPillar } from "@/lib/day-pillar";
+
+test("incomplete day-pillar portraits are noindex,follow and absent from the sitemap", () => {
+  const entries = sitemap();
+  const urls = new Set(entries.map((entry) => entry.url));
+  const portraits = journalArticles.filter((article) => article.pillar);
+  assert.equal(portraits.length, dayPillarCycle.length);
+  for (const pillar of ["甲子", "乙丑", "丙寅"]) {
+    const article = portraits.find((item) => item.pillar === pillar);
+    assert.ok(article, pillar);
+    assert.equal(article.portraitDepth, "full");
+    assert.equal(article.slug, pillarArticleSlug(pillar));
+    assert.equal(journalArticleIndexable(article), true);
+  }
+  const excluded = new Set<string>();
+  for (const article of portraits) {
+    const indexable = journalArticleIndexable(article);
+    assert.equal(indexable, article.portraitDepth === "full", article.slug);
+    for (const locale of journalLocales) {
+      const metadata = journalMetadata(locale, article);
+      const url = absoluteUrl(journalHref(locale, article.slug));
+      assert.equal(metadata.alternates?.canonical, journalHref(locale, article.slug));
+      const robots = metadata.robots;
+      assert.ok(robots && typeof robots !== "string");
+      const languages = metadata.alternates?.languages ?? {};
+      assert.equal(languages["x-default"], journalHref("en", article.slug));
+      for (const edition of journalLocales) assert.equal(languages[journalLanguageTags[edition]], journalHref(edition, article.slug));
+      if (indexable) {
+        assert.equal(robots.index, true);
+        assert.equal(robots.follow, true);
+        assert.equal(urls.has(url), true, article.slug);
+        for (const href of Object.values(languages)) {
+          assert.equal(urls.has(absoluteUrl(String(href))), true, String(href));
+          const target = getJournalArticle(new URL(String(href), "https://www.destinypixel.com").pathname.split("/")[2] ?? "");
+          assert.equal(journalArticleIndexable(target), true, String(href));
+        }
+      } else {
+        assert.equal(robots.index, false);
+        assert.equal(robots.follow, true);
+        const googleBot = robots.googleBot;
+        assert.ok(googleBot && typeof googleBot !== "string");
+        assert.equal(googleBot.index, false);
+        assert.equal(googleBot.follow, true);
+        assert.equal(urls.has(url), false, article.slug);
+        excluded.add(url);
+        for (const href of Object.values(languages)) assert.equal(urls.has(absoluteUrl(String(href))), false, String(href));
+      }
+    }
+  }
+  for (const entry of entries) {
+    assert.equal(excluded.has(entry.url), false, entry.url);
+    for (const href of Object.values(entry.alternates?.languages ?? {})) assert.equal(excluded.has(String(href)), false, String(href));
+  }
+  assert.equal(journalArticleIndexable({ pillar: "丁卯", portraitDepth: "full" }), true);
+  assert.equal(journalArticleIndexable({ pillar: "丁卯" }), false);
+  assert.equal(journalArticleIndexable(undefined), true);
+});
 
 test("published famous birthdays reproduce the featured day pillar in every edition", () => {
   const article = journalArticles.find((item) => item.slug === "jia-zi-day-pillar")!;
@@ -26,14 +83,20 @@ test("Traditional Chinese preserves prose meaning instead of applying software t
 
 test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 2) * journalLocales.length);
+  const indexable = journalArticles.filter((article) => journalArticleIndexable(article));
+  assert.equal(entries.length, (indexable.length + 2) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
     for (const locale of journalLocales) {
       const metadata = journalMetadata(locale, article);
       assert.equal(metadata.alternates?.canonical, journalHref(locale, article?.slug));
-      assert.ok(urls.has(absoluteUrl(String(metadata.alternates?.canonical))));
-      for (const href of Object.values(metadata.alternates?.languages ?? {})) assert.ok(urls.has(absoluteUrl(String(href))));
+      const listed = urls.has(absoluteUrl(String(metadata.alternates?.canonical)));
+      if (journalArticleIndexable(article)) {
+        assert.equal(listed, true);
+        for (const href of Object.values(metadata.alternates?.languages ?? {})) assert.ok(urls.has(absoluteUrl(String(href))));
+      } else {
+        assert.equal(listed, false);
+      }
     }
   }
   assert.equal(normalizeJournalLocale("ru"), "ru");
