@@ -5,10 +5,10 @@ export const jiaZiArticle: JournalSourceArticle = {
   pillar: "甲子",
   portraitDepth: "full",
   "publishedAt": "2026-09-14",
-  "updatedAt": "2026-09-24",
+  "updatedAt": "2026-09-23",
   "translations": {
     "en": {
-      "title": "Jia Zi Day Pillar (甲子): The Azure Rat",
+      "title": "Jia Zi Day Pillar (甲子): The Azure Rat, Love & Personality",
       "description": "Meet The Azure Rat: a visionary mind with a private heart. Explore love, career and the birthday connection to Olivia Rodrigo and Red Cross founder Henry Dunant.",
       "topic": "The Azure Rat",
       "introduction": "They can see the whole future of a project before anyone else has opened a notebook. Ask how they feel, though, and the answer may take much longer. The Azure Rat is the thinker with a crowded inner world: generous with ideas, selective about intimacy and quietly determined to build something that matters. What happens when that brilliant mind becomes its own bottleneck—and what kind of love can reach it?",

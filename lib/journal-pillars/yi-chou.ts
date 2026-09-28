@@ -2,7 +2,7 @@ import type { JournalTranslation } from "../journal";
 import { yiChouRussian } from "./yi-chou-ru";
 
 const en: JournalTranslation = {
-  title: "Yi Chou Day Pillar (乙丑): The Lotus Ox",
+  title: "Yi Chou Day Pillar (乙丑): The Lotus Ox, Love, Career & Famous Birthdays",
   description: "The Lotus Ox is quietly ambitious: dependable in love, strategic at work, sometimes too silent. Explore Yi Chou and verified same-day-pillar birthdays.",
   topic: "The Lotus Ox",
   introduction: "Everyone else is announcing their next big move. The Lotus Ox is checking whether the foundations will hold. This is the quiet person who remembers the deadline, notices the hidden cost and keeps going after the excitement has worn off. Being underestimated can feel useful—until the people closest to you start mistaking your silence for having no wishes of your own.",
