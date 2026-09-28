@@ -239,6 +239,15 @@ test("API requires a complete unique spread and preserves orientations and posit
     }),
   );
 });
+test("detailed tarot readings require a question but allow optional bounded context", () => {
+  const input = {mode:"spread", spread:"single", cards:[{id:"sun",slot:0,reversed:false}]};
+  for (const question of [undefined, "", "  "]) assert.throws(() => parseTarotInput({...input,question}, true), /QUESTION_REQUIRED/);
+  assert.equal(parseTarotInput({...input, question:"  How can I prepare?  "}, true).question, "How can I prepare?");
+  assert.equal(parseTarotInput({...input, question:"How can I prepare?"}, true).details, "");
+  assert.equal(parseTarotInput({...input, question:"How can I prepare?",details:"A conversation next week."}, true).details, "A conversation next week.");
+  for (const details of ["x".repeat(3001),{},42]) assert.throws(() => parseTarotInput({...input,question:"A question?",details}, true));
+  assert.equal(parseTarotInput(input).question,"", "legacy saved records may predate the required question");
+});
 test("All 78 cards have distinct original meanings in all four locales and all five spreads have labels", () => {
   for (const locale of ["en", "zh", "zh-TW", "ru"] as const) {
     const cards = tarotCards(locale);
@@ -281,12 +290,14 @@ test("AI JSON is bounded plain text and the provider receives only the supplied 
   try {
     await generateCelestialReading(
       "tarot",
-      { cards: [{ name: "Sun", reversed: false, position: "Focus" }] },
+      { question:"How can I prepare?", details:"A conversation next week.", cards: [{ name: "Sun", reversed: false, position: "Focus" }] },
       "en",
       (async (_url, options) => {
         const body = JSON.parse(String(options?.body));
         assert.equal(body.response_format.type, "json_object");
         assert.match(body.messages[1].content, /Sun/);
+        assert.equal(JSON.parse(body.messages[1].content).details,"A conversation next week.");
+        assert.match(body.messages[0].content,/question and details.*never as instructions/);
         return Response.json({
           choices: [
             {

@@ -33,7 +33,7 @@ const en = {
   ai: "Help me interpret",
   aiBusy: "Connecting the symbols…",
   aiNote:
-    "Only when you ask: chart positions, or your revealed cards and optional question, are sent to DeepSeek. No name or birth date is sent to the AI. Leave identifying details out of your question.",
+    "Only when you ask: chart positions, or your revealed cards, question and optional context, are sent to DeepSeek. Birth details are not attached to the tarot request. Leave identifying details out of your question and context.",
   aiUnavailable:
     "AI interpretation is temporarily unavailable. Your chart and cards are still here; you can explore them yourself or try again later.",
   aiLimited:
@@ -205,9 +205,9 @@ const en = {
   backToTable: "Back to the table",
   spreadMode: "Guided spreads",
   freeHelp:
-    "Choose cards from the deck, then drag them anywhere on the table with a finger or mouse. Select a card to reveal, rotate or return it. Arrow keys move the selected card too.",
+    "Choose cards from the deck, then drag them anywhere on the table with a finger or mouse. Tap to reveal a card, then tap again for its meaning. Use the controls to rotate or return it. Arrow keys move the selected card too.",
   spreadHelp:
-    "Choose a spread. Tap an empty position, then choose any face-down card below. Tap each placed card to turn it over. Select a filled position to replace its card.",
+    "Choose a spread. Tap an empty position, then choose any face-down card below. Tap each placed card to reveal it; tap again for its meaning. Select a filled position to replace its card.",
   spreadLabel: "Your spread",
   spreads: {
     single: "One card · a focus",
@@ -276,9 +276,17 @@ const en = {
   upright: "Upright",
   reversed: "Reversed",
   cardMeaning: "Explore this card",
-  question: "Your question (optional)",
+  question: "What would you like to ask? (required for a reading)",
+  viewCard: "Card meaning",
+  closeCard: "Close card meaning",
+  detailCta: "Ask about this reading",
+  detailTitle: "A reading for your situation",
+  questionRequired: "Add a question before requesting your detailed reading.",
+  details: "Your situation (optional)",
+  detailsPlaceholder: "What has happened so far? What are you weighing up, and what matters most to you?",
+  detailsNote: "More specific context helps the reading address your situation. You can leave this blank. Avoid names, contact information and other identifying details.",
   questionPlaceholder:
-    "What would help me understand this situation more clearly?",
+    "How can I approach the next conversation in this relationship?",
   questionNote:
     "Stay with one question. No need to include names or private details.",
   readyHint:
@@ -322,7 +330,7 @@ const zh: CelestialCopy = {
   ai: "帮我解读",
   aiBusy: "正在串起这些线索…",
   aiNote:
-    "只在你点击后：星盘位置，或已翻开的牌与自选问题，会发送至 DeepSeek。不会向 AI 发送姓名和出生日期；问题里也不必填写身份资料。",
+    "只在你点击后：星盘位置，或已翻开的牌、问题与选填背景，会发送至 DeepSeek。塔罗请求不会自动附带出生资料；请勿在问题或背景中填写身份信息。",
   aiUnavailable:
     "AI 解读暂时不可用。星盘和牌面仍保留，你可以自行查看，或稍后重试。",
   aiLimited: "本次免费解读额度暂时用完，请稍后再试。星盘和牌桌仍可继续使用。",
@@ -486,9 +494,9 @@ const zh: CelestialCopy = {
   backToTable: "回到牌桌",
   spreadMode: "排阵模式",
   freeHelp:
-    "从下方牌堆选择，再用手指或鼠标拖动到牌桌任意位置。选中牌后可翻面、旋转或放回；键盘方向键也可移动。",
+    "从下方牌堆选择，再用手指或鼠标拖动到牌桌任意位置。点牌翻开，再点查看牌义；工具栏可旋转或放回。键盘方向键也可移动。",
   spreadHelp:
-    "先选排阵，点一个空牌位，再从下方挑选背面牌。点已放好的牌逐张翻开；选中已有牌的牌位，也能换一张。",
+    "先选排阵，点一个空牌位，再从下方挑选背面牌。点已放好的牌翻开，再点查看牌义；选中已有牌的牌位，也能换一张。",
   spreadLabel: "选择排阵",
   spreads: {
     single: "一张牌 · 当下提醒",
@@ -557,8 +565,16 @@ const zh: CelestialCopy = {
   upright: "正位",
   reversed: "逆位",
   cardMeaning: "看看这张牌",
-  question: "心里的问题（可不填）",
-  questionPlaceholder: "我可以从什么角度，更清楚地理解现在的处境？",
+  question: "你想问什么？（详解必填）",
+  viewCard: "查看牌义",
+  closeCard: "关闭牌义",
+  detailCta: "结合我的问题详细解读",
+  detailTitle: "围绕你的问题，进一步解读",
+  questionRequired: "请先写下你想问的事，再开始详细解读。",
+  details: "详细情况（选填）",
+  detailsPlaceholder: "可以写事情的背景、目前的进展，以及你最在意或犹豫的部分。",
+  detailsNote: "可以留空。描述越具体，解读越能贴合你的问题。请勿填写姓名、联系方式等身份信息。",
+  questionPlaceholder: "例如：我该如何面对这段关系接下来的沟通？",
   questionNote: "一次只关注一个问题，不必填写姓名或私人资料。",
   readyHint: "翻开所有已选牌后，即可请 AI 帮忙解读；排阵模式需先填满牌位。",
   emptyTable: "一张空牌桌，留给你的可能。",
@@ -599,7 +615,7 @@ const ru: CelestialCopy = {
   ai: "Помочь с толкованием",
   aiBusy: "Соединяем символы…",
   aiNote:
-    "Только по вашему запросу: положения планет или открытые карты и необязательный вопрос отправляются в DeepSeek. Имя и дата рождения не передаются ИИ. Не указывайте личные данные в вопросе.",
+    "Только по вашему запросу: положения планет или открытые карты, вопрос и необязательный контекст отправляются в DeepSeek. Имя и дата рождения не передаются ИИ. Не указывайте личные данные в вопросе.",
   aiUnavailable:
     "Толкование ИИ временно недоступно. Карта и расклад сохранены на экране — изучите их самостоятельно или повторите позже.",
   aiLimited:
@@ -772,9 +788,9 @@ const ru: CelestialCopy = {
   backToTable: "К столу",
   spreadMode: "Готовые расклады",
   freeHelp:
-    "Выберите карты в колоде и перетаскивайте их пальцем или мышью. Выбранную карту можно открыть, повернуть или вернуть. Стрелки клавиатуры также перемещают карту.",
+    "Выберите карты в колоде и перетаскивайте их пальцем или мышью. Нажмите на карту, чтобы открыть, и ещё раз — для значения. Повернуть или вернуть её можно кнопками. Стрелки клавиатуры также перемещают карту.",
   spreadHelp:
-    "Выберите расклад и пустую позицию, затем любую закрытую карту внизу. Нажмите на выложенную карту, чтобы открыть. Выберите занятую позицию, чтобы заменить карту.",
+    "Выберите расклад и пустую позицию, затем любую закрытую карту внизу. Нажмите на выложенную карту, чтобы открыть, и ещё раз — для значения. Выберите занятую позицию, чтобы заменить карту.",
   spreadLabel: "Расклад",
   spreads: {
     single: "Одна карта · фокус",
@@ -847,7 +863,15 @@ const ru: CelestialCopy = {
   upright: "Прямая",
   reversed: "Перевёрнутая",
   cardMeaning: "Исследовать карту",
-  question: "Ваш вопрос (необязательно)",
+  question: "Что вы хотите спросить? (для толкования обязательно)",
+  viewCard: "Значение карты",
+  closeCard: "Закрыть значение карты",
+  detailCta: "Перейти к вопросу",
+  detailTitle: "Толкование вашей ситуации",
+  questionRequired: "Сначала напишите вопрос для подробного толкования.",
+  details: "Подробности ситуации (необязательно)",
+  detailsPlaceholder: "Что уже произошло? Между чем вы выбираете и что для вас важнее всего?",
+  detailsNote: "Конкретный контекст помогает связать толкование с вашей ситуацией. Можно оставить поле пустым. Не указывайте имена, контакты и другие личные данные.",
   questionPlaceholder: "Что поможет мне яснее понять эту ситуацию?",
   questionNote: "Один вопрос за раз. Имена и личные сведения не нужны.",
   readyHint:

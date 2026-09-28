@@ -17,6 +17,10 @@ test("bounded snapshots preserve every planet, house, card and supplied interpre
   assert.equal(value.kind,"astrology");if(value.kind!=="astrology")return;
   assert.deepEqual(value.chart,chart);assert.deepEqual(value.reading,reading);assert.equal("member_id" in value,false);assert.equal("access" in value,false);
   const t=parseCelestialSnapshot(tarot);assert.deepEqual(t,tarot);
+  const contextual={...tarot,details:"Synthetic context.\nA follow-up detail."};
+  assert.deepEqual(parseCelestialSnapshot(contextual),contextual);
+  assert.throws(()=>parseCelestialSnapshot({...tarot,details:"x".repeat(3001)}));
+  assert.throws(()=>parseCelestialSnapshot({...tarot,details:{}}));
   assert.throws(()=>parseCelestialSnapshot({...astro,reading:{...reading,entries:reading.entries.slice(1)}}));
 });
 test("invalid snapshots cannot contain duplicate cards, broken houses, oversized questions or fake AI targets",()=>{
@@ -72,7 +76,12 @@ test("member and administrator routes enforce ownership, origin, namespace, pagi
     assert.equal((await adminDelete.DELETE(request("DELETE",undefined,"https://evil.test",`/${id}?memberId=${members[0].id}`),context)).status,403);
     assert.equal((await adminDelete.DELETE(request("DELETE",undefined,"https://site.test",`/${id}?memberId=${members[0].id}`),context)).status,200);assert.equal(rows.length,0);
     token=tokens[0];assert.equal((await detail.GET(request(),context)).status,404);
-    await list.POST(request("POST",{id:randomUUID(),snapshot:tarot}));assert.equal(rows.length,1);
+    const tarotId=randomUUID(), snapshot={...tarot,details:"Synthetic private context."};
+    await list.POST(request("POST",{id:tarotId,snapshot}));assert.equal(rows.length,1);
+    const restored=await(await detail.GET(request(),{params:Promise.resolve({id:tarotId})})).json();
+    assert.deepEqual(parseCelestialSnapshot(restored.record.snapshot),snapshot);
+    const privateList=await(await list.GET(request())).json();
+    assert.equal(JSON.stringify(privateList).includes(snapshot.details),false);
     for(let i=0;i<21;i++)await list.POST(request("POST",{id:randomUUID(),snapshot:astro}));
     const page=await(await list.GET(request())).json();assert.equal(page.records.length,20);assert.equal(page.nextOffset,20);
     const page2=await(await list.GET(request("GET",undefined,"https://site.test","?offset=20"))).json();assert.equal(page2.records.length,2);assert.equal(page2.nextOffset,null);

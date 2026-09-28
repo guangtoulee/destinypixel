@@ -15,7 +15,7 @@ export function DeckRibbon({ count, disabled, copy: c, onDraw, onPull }: {
   onDraw: (index: number, point?: DeckDropPoint) => void;
   onPull: (point: DeckDropPoint | null) => void;
 }) {
-  const [peek, setPeek] = useState<number | null>(count ? Math.floor(count / 4) : null);
+  const [peek, setPeek] = useState<number | null>(null);
   const [pull, setPull] = useState({ x: 0, y: 0 });
   const ribbon = useRef<HTMLDivElement>(null);
   const gesture = useRef<{
@@ -45,11 +45,11 @@ export function DeckRibbon({ count, disabled, copy: c, onDraw, onPull }: {
     }
     const card = root.querySelector<HTMLButtonElement>(".tarot-deck-card")!;
     const cardWidth = card.offsetWidth;
-    // A lifted card stays a full-size tap/drag target. Horizontal scrubbing
-    // ignores that overlay so adjacent cards remain easy to reach.
+    // Only the protruding top edge is exposed; the body stays under its
+    // neighbours. Do not let its hidden rectangle steal adjacent taps.
     if (useLifted && peek !== null) {
       const lifted = cardAt(peek)!.getBoundingClientRect();
-      if (clientY >= lifted.top && clientY <= lifted.bottom &&
+      if (clientY >= lifted.top && clientY <= lifted.top + 18 &&
           clientX >= lifted.left && clientX <= lifted.right) return peek;
     }
     const step = (bounds.width - cardWidth) / Math.max(1, rowCount - 1);
@@ -158,8 +158,8 @@ export function DeckRibbon({ count, disabled, copy: c, onDraw, onPull }: {
                 "--mobile-position": `${mobileP * 100}%`,
                 "--mobile-offset": `${-mobileP * 100}%`,
                 "--pull-x": `${active ? pull.x : 0}px`,
-                "--pull-y": `${active ? -26 + pull.y : 0}px`,
-                zIndex: active ? 100 : i + 1,
+                "--pull-y": `${active ? -18 + pull.y : 0}px`,
+                zIndex: active && pull.y < 0 ? 100 : i + 1,
               } as CSSProperties}
               onFocus={() => setPeek(i)}
               onClick={(e) => { if (e.detail === 0) choose(i); }}

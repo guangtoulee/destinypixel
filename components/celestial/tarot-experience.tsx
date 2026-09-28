@@ -27,6 +27,7 @@ import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
 import { DeckRibbon, type DeckDropPoint } from "./deck-ribbon";
 import { SaveCelestialRecord } from "./save-record";
+import { TarotCardDialog } from "./tarot-card-dialog";
 import { ReadingPanel } from "./reading-panel";
 export default function TarotExperience({
   locale,
@@ -44,12 +45,17 @@ export default function TarotExperience({
     [reversals, setReversals] = useState(true),
     [selected, setSelected] = useState(0),
     [question, setQuestion] = useState(""),
+    [details, setDetails] = useState(""),
+    [questionError, setQuestionError] = useState(false),
+    [dialogSlot, setDialogSlot] = useState<number | null>(null),
     [reading, setReading] = useState<CelestialReading | null>(null),
     [busy, setBusy] = useState(false),
     [status, setStatus] = useState("");
   const controller = useRef<AbortController | null>(null),
     revision = useRef(0),
     board = useRef<HTMLDivElement>(null),
+    questionInput = useRef<HTMLInputElement>(null),
+    suppressCardClick = useRef(false),
     drag = useRef<{
       slot: number;
       startX: number;
@@ -146,9 +152,10 @@ export default function TarotExperience({
       ),
     }));
   }
-  function flip(slot: number) {
+  function openCard(slot: number) {
     const card = table.cards.find((c) => c.slot === slot);
-    if (card) edit(slot, { revealed: !card.revealed });
+    if (card?.revealed) setDialogSlot(slot);
+    else if (card) edit(slot, { revealed: true });
     setSelected(slot);
   }
   function putBack() {
@@ -159,7 +166,7 @@ export default function TarotExperience({
   }
   const positions = c.positions[table.spread],
     focused = table.cards.find((card) => card.slot === selected),
-    info = cards.find((c) => c.id === focused?.id),
+    dialogCard = table.cards.find((card) => card.slot === dialogSlot),
     ready =
       table.cards.length > 0 &&
       table.cards.every((c) => c.revealed) &&
@@ -173,6 +180,12 @@ export default function TarotExperience({
   }, [ready]);
   async function interpret() {
     if (!ready) return;
+    if (!question.trim()) {
+      setQuestionError(true);
+      questionInput.current?.focus();
+      questionInput.current?.scrollIntoView({behavior: "smooth", block: "center"});
+      return;
+    }
     controller.current?.abort();
     const abort = new AbortController();
     controller.current = abort;
@@ -188,6 +201,7 @@ export default function TarotExperience({
           mode: table.mode,
           spread: table.spread,
           question,
+          details,
           cards: table.cards.map(({ id, reversed, slot }) => ({
             id,
             reversed,
@@ -217,6 +231,7 @@ export default function TarotExperience({
     const b = board.current?.getBoundingClientRect();
     if (!b) return;
     setSelected(card.slot);
+    suppressCardClick.current = false;
     const r = e.currentTarget.getBoundingClientRect();
     e.currentTarget.setPointerCapture(e.pointerId);
     drag.current = {
@@ -237,7 +252,8 @@ export default function TarotExperience({
     if (!d) return;
     const dx = e.clientX - d.startX,
       dy = e.clientY - d.startY;
-    if (Math.abs(dx) + Math.abs(dy) > 3) d.moved = true;
+    if (Math.abs(dx) + Math.abs(dy) > 7) { d.moved = true; suppressCardClick.current = true; }
+    if (!d.moved) return;
     const x = Math.max(
         0,
         Math.min(
@@ -359,11 +375,11 @@ export default function TarotExperience({
                     aria-label={
                       card
                         ? card.revealed
-                          ? `${meta?.name} · ${c.conceal}`
+                          ? `${meta?.name} · ${c.viewCard}`
                           : `${c.reveal} · ${label}`
                         : `${c.pick} · ${label}`
                     }
-                    onClick={() => (card ? flip(i) : setSelected(i))}
+                    onClick={() => (card ? openCard(i) : setSelected(i))}
                   >
                     {card ? (
                       face(card)
@@ -416,8 +432,10 @@ export default function TarotExperience({
                 onPointerCancel={() => {
                   drag.current = null;
                 }}
-                onClick={() => setSelected(card.slot)}
-                onDoubleClick={() => flip(card.slot)}
+                onClick={(e) => {
+                  if (e.detail === 0 || !suppressCardClick.current) openCard(card.slot);
+                  suppressCardClick.current = false;
+                }}
                 onKeyDown={(e) => {
                   if (
                     [
@@ -476,9 +494,9 @@ export default function TarotExperience({
             <>
               <button
                 className="cel-button-soft"
-                onClick={() => flip(selected)}
+                onClick={() => openCard(selected)}
               >
-                {focused.revealed ? c.conceal : c.reveal}
+                {focused.revealed ? c.viewCard : c.reveal}
               </button>
               {table.mode === "free" && (
                 <button
@@ -589,31 +607,6 @@ export default function TarotExperience({
         />
       </div>
       </div>
-      {focused?.revealed && info && (
-        <section className="tarot-card-focus">
-          <img
-            src={info.image}
-            width={560}
-            height={960}
-            alt={info.name}
-            style={{
-              transform: focused.reversed ? "rotate(180deg)" : undefined,
-            }}
-          />
-          <div>
-            <p className="cel-kicker">
-              {c.cardMeaning} · {focused.reversed ? c.reversed : c.upright}
-            </p>
-            <h2>{info.name}</h2>
-            <p>{focused.reversed ? info.reversed : info.upright}</p>
-            <span className="cel-muted">
-              {table.mode === "spread"
-                ? positions[focused.slot]
-                : `${c.position} ${focused.slot + 1}`}
-            </span>
-          </div>
-        </section>
-      )}
       {table.cards.some((card) => card.revealed) && (
         <div className="tarot-reading-list">
           {table.cards
@@ -623,7 +616,7 @@ export default function TarotExperience({
               return (
                 <button
                   key={card.id}
-                  onClick={() => setSelected(card.slot)}
+                  onClick={() => openCard(card.slot)}
                   className={selected === card.slot ? "is-active" : ""}
                 >
                   <span className="cel-kicker">
@@ -636,33 +629,31 @@ export default function TarotExperience({
                     {info.name}{" "}
                     <small>{card.reversed ? c.reversed : c.upright}</small>
                   </strong>
-                  <p>{card.reversed ? info.reversed : info.upright}</p>
+                  <span className="tarot-card-link">{c.viewCard} ↗</span>
                 </button>
               );
             })}
         </div>
       )}
-      <div className="tarot-question">
-        <label>
-          {c.question}
-          <textarea
-            maxLength={500}
-            value={question}
-            onChange={(e) => {
-              invalidate();
-              setQuestion(e.target.value);
-            }}
-            placeholder={c.questionPlaceholder}
-          />
-        </label>
-        <p className="cel-small cel-muted">
-          {c.questionNote} <span>{question.length}/500</span>
-        </p>
-      </div>
+      <section className="tarot-question" id="tarot-question">
+        <h2>{c.detailTitle}</h2>
+        <label htmlFor="tarot-question-title">{c.question}</label>
+        <input id="tarot-question-title" ref={questionInput} required maxLength={500} value={question}
+          aria-invalid={questionError || undefined} aria-describedby={questionError ? "tarot-question-error" : "tarot-question-note"}
+          onChange={(e) => {invalidate(); setQuestion(e.target.value); setQuestionError(false);}}
+          placeholder={c.questionPlaceholder}/>
+        {questionError && <p id="tarot-question-error" className="tarot-question-error" role="alert">{c.questionRequired}</p>}
+        <p id="tarot-question-note" className="cel-small cel-muted">{c.questionNote}</p>
+        <label htmlFor="tarot-question-details">{c.details}</label>
+        <textarea id="tarot-question-details" maxLength={3000} rows={4} value={details}
+          aria-describedby="tarot-details-note" onChange={(e) => {invalidate(); setDetails(e.target.value);}}
+          placeholder={c.detailsPlaceholder}/>
+        <p id="tarot-details-note" className="cel-small cel-muted">{c.detailsNote}</p>
+      </section>
       <p className="cel-small cel-muted">
         {ready ? c.allRevealed : c.readyHint}
       </p>
-      {table.cards.length > 0 && <SaveCelestialRecord key={recordSession} snapshot={{version:1,kind:"tarot",locale,table,question,reading}} disabled={busy}/>}
+      {table.cards.length > 0 && <SaveCelestialRecord key={recordSession} snapshot={{version:1,kind:"tarot",locale,table,question,details,reading}} disabled={busy}/>}
       <ReadingPanel
         copy={c}
         reading={reading}
@@ -671,6 +662,11 @@ export default function TarotExperience({
         onRead={interpret}
         disabled={!ready}
       />
+      <TarotCardDialog card={dialogCard ? cards.find(c => c.id === dialogCard.id) || null : null}
+        reversed={dialogCard?.reversed || false}
+        position={dialogCard ? (table.mode === "spread" ? positions[dialogCard.slot] : `${c.position} ${dialogCard.slot + 1}`) : ""}
+        copy={c} onClose={() => setDialogSlot(null)}
+        onDetailed={() => {questionInput.current?.focus({preventScroll:true}); questionInput.current?.scrollIntoView({behavior:"smooth",block:"center"});}}/>
     </section>
   );
 }

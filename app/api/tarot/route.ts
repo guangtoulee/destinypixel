@@ -1,6 +1,7 @@
 import { assertMutation, readBody } from "@/lib/commerce/http";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import { parseTarotInput } from "@/lib/celestial/tarot";
+import { tarotCards } from "@/lib/celestial/tarot-meanings";
 import { celestialCopy } from "@/lib/celestial/copy";
 import {
   celestialError,
@@ -14,17 +15,18 @@ export async function POST(request: Request) {
     assertMutation(request);
     const ip = celestialGuard(request),
       raw = await readBody(request),
-      draw = parseTarotInput(raw),
+      draw = parseTarotInput(raw, true),
       locale = normalizeReportLocale(
         typeof raw.locale === "string" ? raw.locale : "en",
       );
-    const copy = celestialCopy(locale);
+    const copy = celestialCopy(locale), meanings = tarotCards(locale);
     return celestialInterpret(
       "tarot",
       {
         ...draw,
         cards: draw.cards.map((c) => ({
           ...c,
+          name: meanings.find(card => card.id === c.id)?.name || c.name,
           position:
             draw.mode === "free"
               ? `Draw ${c.slot + 1}`

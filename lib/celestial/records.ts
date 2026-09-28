@@ -11,7 +11,7 @@ export const recordLimitBytes = 256_000;
 export const validRecordId = (id: unknown): id is string => typeof id === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id);
 export type CelestialSnapshot = { version: 1; locale: ReportLocale } & (
   { kind: "astrology"; chart: NatalChart; reading: NatalReading | null } |
-  { kind: "tarot"; table: TableState; question: string; reading: CelestialReading | null }
+  { kind: "tarot"; table: TableState; question: string; details?: string; reading: CelestialReading | null }
 );
 export type CelestialRecordSummary = { id: string; kind: "astrology" | "tarot"; locale: ReportLocale; createdAt: string; updatedAt: string; hasReading: boolean; memberId?: string };
 function invalid(): never { throw new Error("INVALID_RECORD"); }
@@ -52,9 +52,10 @@ export function parseCelestialSnapshot(raw: unknown): CelestialSnapshot {
   const card = (raw: unknown) => { const c = obj(raw), id = str(c.id, 40); if (!ids.has(id) || seen.has(id)) return invalid(); seen.add(id); return { id, reversed: bool(c.reversed) }; };
   const deck = v.deck.map(card), cards = v.cards.map(raw => { const c = obj(raw), base = card(c), slot = integer(c.slot, mode === "free" ? 77 : spreadSizes[spread] - 1); if (slots.has(slot)) return invalid(); slots.add(slot); return { ...base, slot, revealed: bool(c.revealed), x: num(c.x, 0, 100), y: num(c.y, 0, 100), rotation: num(c.rotation, -360, 360) }; }).sort((a,b)=>a.slot-b.slot);
   const table: TableState = { mode, spread, deck, cards }, question = str(s.question, 500);
+  const details = s.details === undefined ? undefined : str(s.details, 3000);
   const reading = s.reading === null ? null : parseCelestialReading(JSON.stringify(s.reading));
   if (reading) { if (cards.some(c => !c.revealed)) return invalid(); parseTarotInput({ mode, spread, cards, question }); }
-  return { version: 1, kind: "tarot", locale, table, question, reading };
+  return { version: 1, kind: "tarot", locale, table, question, ...(details === undefined ? {} : {details}), reading };
 }
 export async function readRecordBody(request: Request) {
   if (!request.headers.get("content-type")?.includes("application/json")) return invalid();

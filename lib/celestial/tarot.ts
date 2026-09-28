@@ -96,7 +96,7 @@ export function returnCard(state: TableState, slot: number): TableState {
     cards: state.cards.filter((c) => c.slot !== slot),
   };
 }
-export function parseTarotInput(raw: Record<string, unknown>) {
+export function parseTarotInput(raw: Record<string, unknown>, requireQuestion = false) {
   if (raw.mode !== "free" && raw.mode !== "spread")
     throw new Error("INVALID_INPUT");
   if (typeof raw.spread !== "string" || !Object.hasOwn(spreadSizes, raw.spread))
@@ -142,10 +142,15 @@ export function parseTarotInput(raw: Record<string, unknown>) {
     (typeof raw.question !== "string" || raw.question.length > 500)
   )
     throw new Error("INVALID_INPUT");
+  if (raw.details !== undefined && (typeof raw.details !== "string" || raw.details.length > 3000))
+    throw new Error("INVALID_INPUT");
+  if (requireQuestion && (typeof raw.question !== "string" || !raw.question.trim()))
+    throw new Error("QUESTION_REQUIRED");
   return {
     mode: raw.mode as "free" | "spread",
     spread,
     cards,
     question: typeof raw.question === "string" ? raw.question.trim() : "",
+    details: typeof raw.details === "string" ? raw.details.trim() : "",
   };
 }
