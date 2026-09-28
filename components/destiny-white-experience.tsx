@@ -1,5 +1,6 @@
 "use client";
 
+import { HomePortals } from "@/components/celestial/home-portals";
 import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/lib/support-contact";
 
 import Image from "next/image";
@@ -882,12 +883,14 @@ export default function DestinyWhiteExperience({
             DestinyPixel
           </a>
 
-          <nav className="white-nav" aria-label={locale === "zh-TW" ? "主導覽" : copyLocale === "zh" ? "主导航" : locale === "ru" ? "Основная навигация" : "Main navigation"}>
+          <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? "主導覽" : copyLocale === "zh" ? "主导航" : locale === "ru" ? "Основная навигация" : "Main navigation"}>
             <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
             <a href={sticksHref}>{locale === "en" ? "Draw a stick" : mobileNavLabels.sticks}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
             <a href="#report">{text.nav.report}</a>
             <a href="#insights">{text.nav.insights}</a>
+            <a href={locale === "en" ? "/astrology" : `/astrology?locale=${locale}`}>{locale === "zh-TW" ? "星盤" : copyLocale === "zh" ? "星盘" : locale === "ru" ? "Натальная карта" : "Birth chart"}</a>
+            <a href={locale === "en" ? "/tarot" : `/tarot?locale=${locale}`}>{locale === "zh-TW" ? "塔羅" : copyLocale === "zh" ? "塔罗" : locale === "ru" ? "Таро" : "Tarot"}</a>
             <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>{copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}</a>
           </nav>
 
@@ -917,7 +920,7 @@ export default function DestinyWhiteExperience({
         </div>
       </header>
 
-      <nav className="white-mobile-dock" aria-label={locale === "zh-TW" ? "行動導覽" : copyLocale === "zh" ? "移动导航" : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
+      <nav className="white-mobile-dock celestial-mobile-dock" aria-label={locale === "zh-TW" ? "行動導覽" : copyLocale === "zh" ? "移动导航" : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
         <a href={freeHref} className="editorial-dock-free">
           <Sparkles size={18} aria-hidden="true" />
           <span>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Карточка" : "Free card"}</span>
@@ -930,10 +933,9 @@ export default function DestinyWhiteExperience({
           <Stars size={18} aria-hidden="true" />
           <span>{mobileNavLabels.sticks}</span>
         </a>
-        <a href="#blessing">
-          <Orbit size={18} aria-hidden="true" />
-          <span>{mobileNavLabels.blessing}</span>
-        </a>
+        <a href={locale === "en" ? "/astrology" : `/astrology?locale=${locale}`}><Orbit size={18} aria-hidden="true" /><span>{locale === "zh-TW" ? "星盤" : copyLocale === "zh" ? "星盘" : locale === "ru" ? "Карта" : "Birth chart"}</span></a>
+        <a href={locale === "en" ? "/tarot" : `/tarot?locale=${locale}`}><Stars size={18} aria-hidden="true" /><span>{locale === "zh-TW" ? "塔羅" : copyLocale === "zh" ? "塔罗" : locale === "ru" ? "Таро" : "Tarot"}</span></a>
+        <a href="#blessing"><Gem size={18} aria-hidden="true" /><span>{mobileNavLabels.blessing}</span></a>
       </nav>
 
       <section className="white-hero" aria-labelledby="home-title">
@@ -960,6 +962,8 @@ export default function DestinyWhiteExperience({
       <HomeIntroduction locale={locale} />
 
       <CompatibilityHome locale={locale} />
+
+      <HomePortals locale={locale} />
 
       <section className="white-archetypes" id="archetypes">
         <div className="white-container editorial-collection">

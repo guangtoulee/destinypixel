@@ -1,7 +1,7 @@
 import { track } from "@vercel/analytics";
 
 export const analyticsTools = [
-  "birth_report", "birth_transits", "totem", "day_pillar", "compatibility", "temple_sticks", "prompt_expand", "prompt_image", "prompt_copy", "member_account", "report_checkout",
+  "birth_report", "birth_transits", "totem", "day_pillar", "compatibility", "temple_sticks", "astrology", "tarot", "prompt_expand", "prompt_image", "prompt_copy", "member_account", "report_checkout",
 ] as const;
 export type AnalyticsTool = (typeof analyticsTools)[number];
 const toolEvents = [
@@ -12,13 +12,13 @@ export type ToolEvent = (typeof toolEvents)[number];
 
 const publicPaths = new Set([
   "/", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
-  "/sticks", "/compatibility", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
+  "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
   "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 const mainSitePaths = new Set([
   "/", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
-  "/oracle", "/sticks", "/compatibility", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
+  "/oracle", "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 export function isMainSitePath(pathname: string): boolean {
@@ -73,7 +73,7 @@ export function sanitizeAnalyticsUrl(raw: string): string | null {
       locale: ["en", "zh", "zh-TW", "ru"],
       utm_source: ["xiaohongshu", "bilibili", "douyin", "wechat", "x", "youtube", "newsletter", "instagram", "tiktok", "facebook", "pinterest", "reddit", "quora", "threads"],
       utm_medium: ["social", "video", "email", "referral"],
-      utm_campaign: ["totem_demo", "prompt_tutorial", "creator_tools", "day_card", "love_compatibility", "temple_sticks"],
+      utm_campaign: ["totem_demo", "prompt_tutorial", "creator_tools", "day_card", "love_compatibility", "temple_sticks", "birth_chart", "tarot"],
     };
     const clean = new URLSearchParams();
     for (const [key, values] of Object.entries(allowed)) {

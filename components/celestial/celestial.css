@@ -1,0 +1,1737 @@
+.cel-page {
+  --cel-ink: #39364e;
+  --cel-muted: #7b768c;
+  --cel-violet: #78618e;
+  --cel-line: #e5dfe9;
+  --cel-paper: #fffdfa;
+  min-height: 100vh;
+  color: var(--cel-ink);
+  background:
+    radial-gradient(ellipse at 3% 8%, #f5e6de90, transparent 34%),
+    radial-gradient(ellipse at 96% 18%, #e7e4f799, transparent 35%), #fbfaf8;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  padding: 0 32px 50px;
+  line-height: 1.65;
+  isolation: isolate;
+}
+.cel-page * {
+  box-sizing: border-box;
+}
+.cel-page h1,
+.cel-page h2,
+.cel-page h3,
+.cel-page p {
+  margin: 0;
+}
+.cel-page button,
+.cel-page input,
+.cel-page select,
+.cel-page textarea {
+  font: inherit;
+}
+.cel-page button,
+.cel-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+.cel-page button {
+  cursor: pointer;
+}
+.cel-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.cel-page button:focus-visible,
+.cel-page a:focus-visible,
+.cel-page input:focus-visible,
+.cel-page textarea:focus-visible,
+.cel-page select:focus-visible {
+  outline: 3px solid #b0a0c7;
+  outline-offset: 4px;
+}
+.cel-page a {
+  text-decoration: none;
+  color: inherit;
+}
+.cel-shell {
+  max-width: 1220px;
+  margin: auto;
+}
+.cel-header {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--cel-line);
+}
+.cel-brand {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: -0.7px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cel-brand span {
+  color: #b49771;
+  font-size: 29px;
+}
+.cel-header-right,
+.cel-header nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+}
+.cel-header nav a[aria-current="page"] {
+  color: var(--cel-violet);
+  border-bottom: 1px solid;
+  padding-bottom: 3px;
+}
+.cel-header-right > a {
+  font-size: 13px;
+  color: var(--cel-muted);
+}
+.cel-hero {
+  padding: 58px 0 36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+.cel-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: #a08768;
+  line-height: 1.8;
+}
+.cel-hero h1 {
+  font-family: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 3.4vw, 50px);
+  line-height: 1.22;
+  white-space: pre-line;
+  letter-spacing: -1.7px;
+  margin: 15px 0 19px;
+}
+.cel-hero-intro {
+  max-width: 590px;
+  color: var(--cel-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.cel-hero-aside {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  color: #8f7b67;
+  font-size: 11px;
+}
+.cel-hero-aside:before {
+  content: "✦";
+  font-size: 22px;
+  color: #b89c75;
+}
+.cel-muted {
+  color: var(--cel-muted);
+}
+.cel-small {
+  font-size: 12px;
+  line-height: 1.85;
+}
+.cel-button,
+.cel-button-soft,
+.cel-button-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  line-height: 1.4;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.cel-button {
+  padding: 15px 21px;
+  border-radius: 13px;
+  background: var(--cel-violet);
+  color: #fff;
+  box-shadow: 0 7px 20px #78618e15;
+}
+.cel-button:hover:not(:disabled) {
+  background: #67517e;
+  transform: translateY(-1px);
+}
+.cel-button-soft {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #eee8f2;
+  color: #6f5a83;
+}
+.cel-button-text {
+  background: transparent;
+  color: #827486;
+  padding: 8px 0;
+}
+.cel-orb {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ece3f4, #fbf0e2);
+  display: grid;
+  place-items: center;
+  color: #9778ac;
+  flex-shrink: 0;
+}
+.cel-page label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.cel-page input:not([type="checkbox"]),
+.cel-page select,
+.cel-page textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e1dbe5;
+  border-radius: 11px;
+  padding: 12px 13px;
+  background: #fffefd;
+  color: #484355;
+  outline-offset: 2px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.cel-page input::placeholder,
+.cel-page textarea::placeholder {
+  color: #a19aaa;
+}
+.cel-field-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.cel-field-pair > * {
+  min-width: 0;
+}
+.cel-astro-layout {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.cel-form {
+  margin-top: 20px;
+  border: 1px solid #e7e0e6;
+  border-radius: 24px;
+  background: #fffdfbbd;
+  padding: 30px 26px;
+  box-shadow: 0 10px 45px #79617e05;
+  display: grid;
+  gap: 20px;
+}
+.cel-form h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+}
+.cel-form-icon {
+  width: 46px;
+  height: 46px;
+  background: #efe9f1;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  color: #8e73a2;
+}
+.cel-custom-location {
+  display: grid;
+  gap: 13px;
+}
+.cel-chart-stage {
+  position: relative;
+  scroll-margin-top: 20px;
+  background: radial-gradient(ellipse, #f8f6fc70, transparent 70%);
+  border-radius: 30px;
+  min-width: 0;
+}
+.cel-stage-label {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #928697;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding-top: 8px;
+}
+.cel-status-dot {
+  width: 5px;
+  height: 5px;
+  background: #b29674;
+  border-radius: 50%;
+}
+.cel-wheel {
+  width: 100%;
+  max-width: 665px;
+  display: block;
+  margin: auto;
+  overflow: visible;
+  filter: drop-shadow(0 20px 35px #9c88b01a);
+}
+.cel-planet-hit {
+  cursor: pointer;
+  outline: none;
+}
+.cel-planet-hit:focus-visible circle {
+  stroke: #625185;
+  stroke-width: 3;
+}
+.cel-big-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: -1px 35px 0;
+  border-top: 1px solid var(--cel-line);
+  padding-top: 17px;
+  text-align: center;
+}
+.cel-big-three div + div {
+  border-left: 1px solid var(--cel-line);
+}
+.cel-big-three span {
+  display: block;
+  color: var(--cel-muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.cel-big-three strong {
+  display: block;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.cel-big-three small {
+  font-size: 11px;
+  color: #a68c69;
+}
+.cel-chart-detail {
+  margin: 45px 0 25px;
+  border: 1px solid var(--cel-line);
+  border-radius: 24px;
+  background: #fffefa;
+  overflow: hidden;
+}
+.cel-tabs {
+  display: flex;
+  gap: 4px;
+  background: #ede8f0;
+  padding: 5px;
+  border-radius: 13px;
+  width: max-content;
+  max-width: 100%;
+}
+.cel-tabs button {
+  border: 0;
+  background: transparent;
+  padding: 10px 24px;
+  border-radius: 9px;
+  color: #8a7d94;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.cel-tabs button[aria-selected="true"] {
+  background: #fffefa;
+  color: #645075;
+  box-shadow: 0 3px 8px #6450750d;
+}
+.cel-chart-detail > .cel-tabs {
+  margin: 22px 26px;
+}
+.cel-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.cel-detail-list {
+  padding: 0 24px 24px;
+  max-height: 470px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.cel-detail-list button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px 1fr 1fr auto;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 9px;
+  border: 0;
+  border-bottom: 1px solid #f0ebf0;
+  background: transparent;
+  text-align: left;
+  font-size: 11px;
+  color: #817687;
+  border-radius: 8px;
+}
+.cel-detail-list button strong {
+  color: #51495d;
+  font-size: 12px;
+}
+.cel-detail-list button.is-active {
+  background: #f0eaf5;
+}
+.cel-detail-list button small {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.cel-glyph {
+  font-size: 21px;
+  color: #927ca6;
+  text-align: center;
+}
+.cel-detail-story {
+  padding: 22px 42px 30px;
+  border-left: 1px solid var(--cel-line);
+  background: radial-gradient(ellipse at 80% 4%, #f0e7f36b, transparent 70%);
+}
+.cel-story-symbol {
+  display: block;
+  font-size: 49px;
+  line-height: 1.2;
+  color: #ab8a74;
+  margin-bottom: 20px;
+}
+.cel-detail-story h2 {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 29px;
+  font-weight: 400;
+  margin: 8px 0 19px;
+}
+.cel-detail-story > p:not(.cel-kicker) {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #796f82;
+  margin-top: 9px;
+}
+.cel-story-note {
+  padding: 18px 0 0;
+  margin-top: 22px;
+  border-top: 1px solid var(--cel-line);
+  color: #a38a70;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.cel-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 27px 30px;
+  background: #f3eff2;
+  border-radius: 21px;
+  margin: 25px 0;
+}
+.cel-elements h2 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.cel-element-bars {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  max-width: 380px;
+}
+.cel-element-bars > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+}
+.cel-element-bars span {
+  min-width: 40px;
+}
+.cel-element-bars i {
+  display: block;
+  flex: 1;
+  height: 5px;
+  background: #dfd9e4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cel-element-bars b {
+  display: block;
+  height: 100%;
+  background: var(--element-color);
+}
+.cel-element-bars strong {
+  font-weight: 400;
+}
+.cel-mc {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #a08768;
+  font-size: 11px;
+}
+.cel-mc strong {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  color: #64586e;
+}
+.cel-reading {
+  padding: 30px;
+  border: 1px solid var(--cel-line);
+  border-radius: 24px;
+  background: linear-gradient(120deg, #fffcf8, #f5f0fa);
+  margin-top: 27px;
+}
+.cel-reading-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.cel-reading-head h2 {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+.cel-reading-head .cel-button {
+  margin-left: auto;
+}
+.cel-reading-content {
+  margin-top: 30px;
+}
+.cel-reading-summary {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 21px;
+  line-height: 1.8;
+  max-width: 850px;
+}
+.cel-reading-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
+}
+.cel-reading-grid article {
+  padding: 24px;
+  background: #ffffff9e;
+  border: 1px solid #e9e2ed;
+  border-radius: 15px;
+}
+.cel-reading-grid h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 9px 0 12px;
+}
+.cel-reading-grid p {
+  font-size: 14px;
+  color: #796d83;
+  line-height: 1.95;
+}
+.cel-reading blockquote {
+  margin: 24px 0;
+  padding: 5px 20px;
+  border-left: 2px solid #be9e75;
+  color: #846d92;
+  font-size: 17px;
+}
+.cel-skeleton {
+  padding: 30px 0;
+}
+.cel-skeleton i {
+  display: block;
+  height: 14px;
+  background: #e5ddeb;
+  border-radius: 4px;
+  margin: 13px 0;
+  animation: cel-pulse 1.6s ease-in-out infinite alternate;
+}
+.cel-skeleton i:nth-child(2) {
+  width: 86%;
+}
+.cel-skeleton i:last-child {
+  width: 65%;
+}
+.cel-error,
+.cel-notice {
+  color: #9c576a;
+  font-size: 13px;
+  padding: 12px 0;
+}
+.cel-method {
+  margin: 38px 0;
+  border-block: 1px solid var(--cel-line);
+  padding: 20px 0;
+}
+.cel-method summary,
+.cel-faq summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+.cel-method p {
+  font-size: 13px;
+  color: var(--cel-muted);
+  line-height: 1.9;
+  max-width: 960px;
+  margin-top: 15px;
+}
+.cel-faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  padding-bottom: 35px;
+}
+.cel-faq p {
+  font-size: 13px;
+  color: var(--cel-muted);
+  line-height: 1.9;
+  margin-top: 15px;
+}
+.cel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--cel-line);
+  padding-top: 22px;
+  color: var(--cel-muted);
+  font-size: 11px;
+}
+.cel-footer nav {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+.cel-footer > a {
+  font-family: Georgia, serif;
+  font-size: 19px;
+}
+.cel-footer a:hover {
+  text-decoration: underline;
+}
+/* A cream and lilac physical table, with card-sized controls and no opaque backdrop. */
+.cel-tarot-page {
+  background:
+    radial-gradient(ellipse at 85% 10%, #eadff58a, transparent 40%),
+    radial-gradient(ellipse at 3% 3%, #f3e7dabb, transparent 30%), #fcfaf7;
+}
+.tarot-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tarot-settings {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.cel-page .tarot-select {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  color: var(--cel-muted);
+}
+.cel-page .tarot-select > span {
+  display: none;
+}
+.cel-page .tarot-select select {
+  width: 220px;
+  background: #fffaf8;
+  font-size: 12px;
+  padding: 11px;
+}
+.cel-page .tarot-check {
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #86778e;
+}
+.tarot-check input {
+  accent-color: #8c73a2;
+  width: 15px;
+  height: 15px;
+}
+.tarot-instructions {
+  font-size: 12px;
+  color: #8d8095;
+  padding: 20px 2px;
+  max-width: 950px;
+  line-height: 1.9;
+}
+.tarot-table {
+  position: relative;
+  min-height: 360px;
+  border: 1px solid #e4dbe9;
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse at 50% 70%, #e6d9ef99, transparent 75%),
+    linear-gradient(150deg, #f7f1f8, #efe7f2 55%, #f8f2ed);
+  box-shadow:
+    inset 0 0 60px #ffffff91,
+    0 12px 34px #8c73920a;
+  padding: 58px 32px 35px;
+  overflow: hidden;
+}
+.tarot-table:after {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #bea17c44;
+  border-radius: 17px;
+  content: "";
+  pointer-events: none;
+}
+.tarot-table-caption {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 20px;
+  color: #a58fa7;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-align: center;
+  z-index: 0;
+}
+.tarot-table-caption span {
+  padding: 0 12px;
+  color: #b69a71;
+}
+.tarot-table-ornament {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 370px;
+  height: 370px;
+  border: 1px solid #c4adce38;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+.tarot-table-ornament:before,
+.tarot-table-ornament:after {
+  content: "";
+  position: absolute;
+  inset: 23px;
+  border: 1px solid #c4adce30;
+  transform: rotate(45deg);
+}
+.tarot-table-ornament:after {
+  transform: rotate(0);
+}
+.tarot-table-ornament > span {
+  color: #c0a7cc29;
+  font-size: 240px;
+  line-height: 1;
+}
+.tarot-slots {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  gap: 27px;
+  z-index: 1;
+  max-width: 1050px;
+  margin: auto;
+}
+.tarot-slots-single {
+  grid-template-columns: 150px;
+}
+.tarot-slots-three {
+  grid-template-columns: repeat(3, minmax(0, 150px));
+  gap: 45px;
+}
+.tarot-slots-relationship,
+.tarot-slots-choice {
+  grid-template-columns: repeat(5, minmax(0, 145px));
+  gap: 25px;
+}
+.tarot-slot {
+  min-width: 0;
+  position: relative;
+  transition: filter 0.2s;
+}
+.tarot-slot-card {
+  display: block;
+  width: 100%;
+  aspect-ratio: 180/310;
+  border: 0;
+  border-radius: 11px;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  perspective: 900px;
+  box-shadow: 0 7px 14px #80638c0d;
+}
+.tarot-slot.is-selected .tarot-slot-card {
+  outline: 2px solid #b291b7;
+  outline-offset: 5px;
+}
+.tarot-empty-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  border: 1px dashed #bdabc9;
+  border-radius: 10px;
+  color: #aa97b8;
+  background: #ffffff35;
+}
+.tarot-empty-slot b {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #ba9c7a;
+}
+.tarot-empty-slot > span {
+  font-size: 37px;
+  line-height: 1.2;
+  color: #baa4c4;
+}
+.tarot-empty-slot small {
+  font-size: 10px;
+  padding: 0 10px;
+  color: #a08fa9;
+  max-width: 95px;
+}
+.tarot-slot-label {
+  margin-top: 17px;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: #8d7b97;
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 0 2px;
+  min-height: 32px;
+}
+.tarot-slot-label > span {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #cbbbcc;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  color: #9c849d;
+  font-size: 9px;
+}
+.tarot-slot-label[aria-pressed="true"] {
+  color: #69477a;
+}
+.tarot-slots-celtic {
+  grid-template-columns: repeat(5, minmax(0, 110px));
+  grid-template-rows: repeat(4, auto);
+  gap: 56px 36px;
+  max-width: 700px;
+}
+.tarot-slots-celtic .tarot-slot-0 {
+  grid-area: 2/2/3/3;
+}
+.tarot-slots-celtic .tarot-slot-1 {
+  grid-area: 2/2/3/3;
+  transform: translate(28px, 36px);
+  z-index: 2;
+  pointer-events: none;
+}
+.tarot-slots-celtic .tarot-slot-1 .tarot-slot-card {
+  transform: rotate(90deg) scale(0.82);
+  pointer-events: auto;
+}
+.tarot-slots-celtic .tarot-slot-1 .tarot-empty-slot {
+  background: #f3ecf6;
+}
+.tarot-slots-celtic .tarot-slot-1 .tarot-slot-label {
+  pointer-events: auto;
+  transform: translateY(9px);
+}
+.tarot-slots-celtic .tarot-slot-2 {
+  grid-area: 3/2/4/3;
+}
+.tarot-slots-celtic .tarot-slot-3 {
+  grid-area: 2/1/3/2;
+}
+.tarot-slots-celtic .tarot-slot-4 {
+  grid-area: 1/2/2/3;
+}
+.tarot-slots-celtic .tarot-slot-5 {
+  grid-area: 2/3/3/4;
+}
+.tarot-slots-celtic .tarot-slot-6 {
+  grid-area: 4/5/5/6;
+}
+.tarot-slots-celtic .tarot-slot-7 {
+  grid-area: 3/5/4/6;
+}
+.tarot-slots-celtic .tarot-slot-8 {
+  grid-area: 2/5/3/6;
+}
+.tarot-slots-celtic .tarot-slot-9 {
+  grid-area: 1/5/2/6;
+}
+.tarot-free {
+  height: 650px;
+  padding: 0;
+  touch-action: pan-y;
+}
+.tarot-blank {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #aa91b2;
+  padding: 30px;
+}
+.tarot-blank h2 {
+  font:
+    400 26px/1.5 Georgia,
+    "Songti SC",
+    serif;
+  color: #9f86a6;
+}
+.tarot-blank p {
+  font-size: 13px;
+  color: #a695ac;
+}
+.tarot-free-card {
+  --free-card-width: 100px;
+  --free-card-height: 172px;
+  position: absolute;
+  width: var(--free-card-width);
+  height: var(--free-card-height);
+  border: 0;
+  padding: 0;
+  border-radius: 8px;
+  background: transparent;
+  touch-action: none;
+  cursor: grab !important;
+  user-select: none;
+  box-shadow: 0 6px 17px #5d426f22;
+}
+.tarot-free-card:active {
+  cursor: grabbing !important;
+}
+.tarot-free-card.is-selected {
+  outline: 2px solid #b89db9;
+  outline-offset: 5px;
+}
+.tarot-free-number {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 9px;
+  line-height: 16px;
+  min-width: 16px;
+  border-radius: 50%;
+  background: #fffcf1d9;
+  color: #927ca1;
+}
+.tarot-flipper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.tarot-flipper.is-revealed {
+  transform: rotateY(180deg);
+}
+.tarot-side {
+  display: block;
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tarot-back svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tarot-face {
+  transform: rotateY(180deg);
+  background: #f8f0d4;
+}
+.tarot-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+.tarot-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  min-height: 70px;
+  padding: 12px 4px;
+  color: #8a7a93;
+  font-size: 12px;
+}
+.tarot-table-toolbar > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tarot-table-toolbar > span strong {
+  padding: 0 6px;
+}
+.tarot-deck-zone {
+  border: 1px solid #e6dfeb;
+  background: #fffdfbcc;
+  border-radius: 22px;
+  padding: 27px;
+  margin-top: 8px;
+}
+.tarot-deck-head {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 19px;
+}
+.tarot-deck-head h2 {
+  font:
+    400 25px/1.4 Georgia,
+    "Songti SC",
+    serif;
+  margin: 6px 0 7px;
+  color: #685777;
+}
+.tarot-deck-head .cel-button {
+  margin-top: 13px;
+}
+.tarot-shuffle-object {
+  width: 110px;
+  height: 170px;
+  flex-shrink: 0;
+  touch-action: none;
+  cursor: grab;
+  position: relative;
+  outline-offset: 8px;
+  user-select: none;
+}
+.tarot-shuffle-object > div {
+  width: 100%;
+  height: 100%;
+}
+.tarot-shuffle-object svg {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 92px;
+  height: 159px;
+  border-radius: 8px;
+  box-shadow: 0 5px 12px #75618422;
+  transform: rotate(-12deg);
+}
+.tarot-shuffle-object svg:nth-child(2) {
+  transform: rotate(1deg);
+}
+.tarot-shuffle-object svg:nth-child(3) {
+  transform: rotate(13deg);
+}
+.tarot-shuffling svg:nth-child(1) {
+  animation: tarot-mix-left 0.55s ease;
+}
+.tarot-shuffling svg:nth-child(3) {
+  animation: tarot-mix-right 0.55s ease;
+}
+.tarot-mix-count {
+  font-size: 10px;
+  color: #a695af;
+  margin-left: 13px;
+}
+.tarot-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  font-size: 10px;
+  color: #ac9cb4;
+  min-width: 55px;
+}
+.tarot-count strong {
+  font:
+    400 42px/1.2 Georgia,
+    serif;
+  color: #b298bb;
+}
+.tarot-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  gap: 9px;
+  margin-top: 25px;
+  max-height: 420px;
+  overflow: auto;
+  padding: 7px 4px 9px;
+  scrollbar-width: thin;
+}
+.tarot-deck-card {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  min-width: 0;
+  position: relative;
+  border-radius: 5px;
+  transition: transform 0.18s;
+  box-shadow: 0 2px 5px #6b4f7920;
+}
+.tarot-deck-card:disabled {
+  opacity: 0.55;
+  filter: saturate(0.3);
+}
+.tarot-deck-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+.tarot-deck-card:not(:disabled):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 13px #8f729441;
+}
+.tarot-deck-card > span {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  font-size: 7px;
+  color: #8f779b;
+  text-align: center;
+}
+.tarot-card-focus {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  padding: 30px;
+  margin-top: 28px;
+  border: 1px solid #e9dfec;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #f6eef4, #f9f2e7);
+  max-width: 780px;
+}
+.tarot-card-focus > img {
+  width: 100px;
+  height: 172px;
+  object-fit: fill;
+  border-radius: 8px;
+  box-shadow: 0 7px 20px #75628422;
+}
+.tarot-card-focus h2 {
+  font:
+    400 29px/1.3 Georgia,
+    "Songti SC",
+    serif;
+  margin: 8px 0 13px;
+}
+.tarot-card-focus p:not(.cel-kicker) {
+  font-size: 15px;
+  color: #84718f;
+  line-height: 1.9;
+}
+.tarot-card-focus .cel-muted {
+  font-size: 12px;
+  display: block;
+  margin-top: 13px;
+}
+.tarot-reading-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 13px;
+  margin: 24px 0;
+}
+.tarot-reading-list button {
+  background: #fffcf9;
+  border: 1px solid #e8dfe9;
+  border-radius: 16px;
+  text-align: left;
+  padding: 19px;
+}
+.tarot-reading-list button.is-active {
+  border-color: #b8a0c4;
+  background: #f7f0fb;
+}
+.tarot-reading-list strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: #756080;
+  display: block;
+  margin-top: 8px;
+}
+.tarot-reading-list small {
+  font-size: 10px;
+  font-weight: 400;
+  color: #a88b9c;
+}
+.tarot-reading-list p {
+  color: #93829d;
+  font-size: 12px;
+  margin-top: 9px;
+  line-height: 1.8;
+}
+.tarot-question {
+  margin-top: 30px;
+}
+.tarot-question textarea {
+  margin-top: 5px;
+  min-height: 110px;
+  resize: vertical;
+}
+.tarot-question > p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.tarot-workspace > .cel-small {
+  margin-top: 18px;
+}
+.cel-art-credit {
+  font-size: 11px;
+  color: #9b8ca4;
+  margin: 22px 0;
+}
+.cel-art-credit a {
+  border-bottom: 1px solid #d0c0d7;
+}
+@keyframes tarot-mix-left {
+  50% {
+    transform: translateX(-40px) rotate(-23deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes tarot-mix-right {
+  50% {
+    transform: translateX(38px) rotate(26deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+@keyframes cel-pulse {
+  to {
+    opacity: 0.35;
+  }
+}
+@media (min-width: 1450px) {
+  .cel-hero {
+    padding-top: 65px;
+  }
+  .cel-astro-layout {
+    grid-template-columns: 360px minmax(0, 1fr);
+  }
+  .cel-form {
+    margin-top: 45px;
+  }
+}
+@media (max-width: 1000px) {
+  .cel-astro-layout {
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 15px;
+  }
+  .cel-form {
+    padding: 22px 19px;
+  }
+  .cel-big-three {
+    margin: 0 15px;
+  }
+  .cel-big-three strong {
+    font-size: 19px;
+  }
+  .cel-field-pair {
+    grid-template-columns: 1fr;
+  }
+  .cel-form .cel-field-pair {
+    gap: 18px;
+  }
+  .cel-detail-layout {
+    grid-template-columns: 1.15fr 1fr;
+  }
+  .cel-detail-story {
+    padding: 25px;
+  }
+  .cel-elements {
+    flex-wrap: wrap;
+  }
+  .tarot-slots-relationship,
+  .tarot-slots-choice {
+    gap: 18px;
+  }
+  .tarot-settings {
+    gap: 13px;
+  }
+  .cel-hero-aside {
+    white-space: normal;
+    min-width: 110px;
+  }
+  .cel-faq {
+    gap: 20px;
+  }
+}
+@media (max-width: 740px) {
+  .cel-page {
+    padding: 0 20px 30px;
+  }
+  .cel-header {
+    height: 75px;
+    gap: 10px;
+  }
+  .cel-brand {
+    font-size: 21px;
+    gap: 7px;
+  }
+  .cel-header-right {
+    gap: 14px;
+  }
+  .cel-header-right > a {
+    display: none;
+  }
+  .cel-header nav {
+    gap: 14px;
+    font-size: 10px;
+  }
+  .cel-hero {
+    padding: 35px 0 27px;
+    gap: 15px;
+    align-items: start;
+    flex-direction: column;
+  }
+  .cel-hero h1 {
+    font-size: 37px;
+    letter-spacing: -1px;
+    margin: 12px 0 15px;
+  }
+  .cel-hero-intro {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .cel-hero-aside {
+    font-size: 10px;
+    padding: 0;
+  }
+  .cel-kicker {
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+  .cel-astro-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .cel-form {
+    margin: 0;
+    padding: 23px;
+    border-radius: 20px;
+    gap: 17px;
+  }
+  .cel-form .cel-field-pair {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .cel-form-icon {
+    display: none;
+  }
+  .cel-form h2 {
+    font-size: 18px;
+  }
+  .cel-form .cel-small {
+    font-size: 11px;
+  }
+  .cel-chart-stage {
+    padding-top: 12px;
+  }
+  .cel-big-three {
+    margin: 0 8px;
+    padding-top: 18px;
+  }
+  .cel-big-three strong {
+    font-size: 22px;
+  }
+  .cel-chart-detail {
+    margin-top: 32px;
+    border-radius: 20px;
+  }
+  .cel-chart-detail > .cel-tabs {
+    margin: 16px;
+  }
+  .cel-tabs button {
+    padding: 10px 19px;
+    font-size: 12px;
+  }
+  .cel-detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .cel-detail-list {
+    padding: 0 12px 17px;
+    max-height: 330px;
+  }
+  .cel-detail-story {
+    border-left: 0;
+    border-top: 1px solid var(--cel-line);
+    padding: 24px;
+  }
+  .cel-story-symbol {
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  .cel-detail-story h2 {
+    font-size: 26px;
+  }
+  .cel-elements {
+    gap: 20px;
+    padding: 23px;
+  }
+  .cel-elements > div:first-child {
+    width: 100%;
+  }
+  .cel-elements h2 {
+    font-size: 22px;
+  }
+  .cel-element-bars {
+    width: 100%;
+    max-width: none;
+    flex: unset;
+  }
+  .cel-reading {
+    padding: 23px;
+    border-radius: 20px;
+  }
+  .cel-reading-head {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  .cel-reading-head .cel-button {
+    width: 100%;
+    margin-top: 4px;
+  }
+  .cel-reading-head h2 {
+    font-size: 23px;
+  }
+  .cel-orb {
+    width: 45px;
+    height: 45px;
+  }
+  .cel-reading-grid {
+    grid-template-columns: 1fr;
+  }
+  .cel-reading-grid article {
+    padding: 20px;
+  }
+  .cel-reading-summary {
+    font-size: 18px;
+  }
+  .cel-faq {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cel-faq details {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--cel-line);
+  }
+  .cel-footer {
+    flex-wrap: wrap;
+  }
+  .cel-footer nav {
+    gap: 14px;
+  }
+  .tarot-controls {
+    gap: 14px;
+  }
+  .tarot-settings {
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .cel-page .tarot-select {
+    width: 100%;
+  }
+  .cel-page .tarot-select select {
+    width: 100%;
+  }
+  .tarot-instructions {
+    font-size: 11px;
+    padding: 17px 0;
+  }
+  .tarot-table {
+    padding: 52px 18px 23px;
+    border-radius: 21px;
+    min-height: 290px;
+  }
+  .tarot-table:after {
+    inset: 8px;
+    border-radius: 14px;
+  }
+  .tarot-slots-three {
+    gap: 17px;
+    grid-template-columns: repeat(3, minmax(0, 130px));
+  }
+  .tarot-slots-single {
+    grid-template-columns: 135px;
+  }
+  .tarot-slots-relationship,
+  .tarot-slots-choice {
+    grid-template-columns: repeat(3, minmax(0, 120px));
+    gap: 24px 17px;
+  }
+  .tarot-slot-label {
+    font-size: 9px;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  .tarot-slot-label > span {
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+    margin-right: 3px;
+  }
+  .tarot-slot.is-selected .tarot-slot-card {
+    outline-offset: 3px;
+  }
+  .tarot-empty-slot {
+    gap: 8px;
+  }
+  .tarot-empty-slot b {
+    font-size: 19px;
+  }
+  .tarot-empty-slot > span {
+    font-size: 28px;
+  }
+  .tarot-empty-slot small {
+    font-size: 8px;
+    padding: 0 3px;
+  }
+  .tarot-table-toolbar {
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+    font-size: 11px;
+    min-height: 50px;
+  }
+  .tarot-table-toolbar .cel-button-soft {
+    font-size: 11px;
+    padding: 8px 11px;
+  }
+  .tarot-deck-zone {
+    padding: 20px 17px;
+    border-radius: 18px;
+  }
+  .tarot-deck-head {
+    gap: 23px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .tarot-shuffle-object {
+    width: 70px;
+    height: 121px;
+  }
+  .tarot-shuffle-object svg {
+    width: 65px;
+    height: 112px;
+    left: 2px;
+  }
+  .tarot-deck-head h2 {
+    font-size: 21px;
+  }
+  .tarot-deck-head .cel-button {
+    font-size: 11px;
+    padding: 12px 15px;
+  }
+  .tarot-deck-head .cel-small {
+    font-size: 10px;
+  }
+  .tarot-count {
+    display: none;
+  }
+  .tarot-mix-count {
+    display: block;
+    margin: 8px 0 0;
+    font-size: 9px;
+    min-height: 14px;
+  }
+  .tarot-deck-grid {
+    grid-template-columns: repeat(auto-fill, minmax(41px, 1fr));
+    gap: 8px;
+    max-height: 400px;
+    margin-top: 17px;
+  }
+  .tarot-deck-card > span {
+    font-size: 6px;
+  }
+  .tarot-free {
+    height: 530px;
+    padding: 0;
+  }
+  .tarot-free-card {
+    --free-card-width: 73px;
+    --free-card-height: 126px;
+  }
+  .tarot-blank h2 {
+    font-size: 22px;
+  }
+  .tarot-blank p {
+    font-size: 12px;
+  }
+  .tarot-table-ornament {
+    width: 270px;
+    height: 270px;
+  }
+  .tarot-table-caption {
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+  .tarot-card-focus {
+    padding: 21px 17px;
+    gap: 19px;
+  }
+  .tarot-card-focus > img {
+    width: 78px;
+    height: 135px;
+  }
+  .tarot-card-focus h2 {
+    font-size: 23px;
+  }
+  .tarot-card-focus p:not(.cel-kicker) {
+    font-size: 13px;
+  }
+  .tarot-reading-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+  }
+  .tarot-reading-list button {
+    padding: 15px;
+  }
+  .tarot-reading-list strong {
+    font-size: 13px;
+  }
+  .tarot-reading-list small {
+    display: block;
+    margin-top: 3px;
+  }
+  .tarot-reading-list .cel-kicker {
+    font-size: 8px;
+    letter-spacing: 0.6px;
+  }
+  .tarot-slots-celtic {
+    grid-template-columns: repeat(2, minmax(0, 120px));
+    gap: 25px 30px;
+    max-width: 300px;
+  }
+  .tarot-slots-celtic .tarot-slot {
+    grid-area: auto;
+    transform: none;
+    pointer-events: auto;
+  }
+  .tarot-slots-celtic .tarot-slot-1 .tarot-slot-card {
+    transform: none;
+  }
+  .tarot-slots-celtic .tarot-slot-1 .tarot-slot-label {
+    transform: none;
+  }
+}
+@media (max-width: 360px) {
+  .cel-page {
+    padding: 0 14px 25px;
+  }
+  .cel-brand {
+    font-size: 18px;
+  }
+  .cel-brand span {
+    font-size: 22px;
+  }
+  .cel-header nav {
+    gap: 11px;
+  }
+  .cel-hero h1 {
+    font-size: 31px;
+  }
+  .cel-form {
+    padding: 19px;
+  }
+  .cel-form .cel-field-pair {
+    grid-template-columns: 1fr;
+  }
+  .cel-tabs button {
+    padding: 9px 16px;
+  }
+  .cel-detail-list button {
+    grid-template-columns: 25px 1fr 1fr;
+    gap: 5px;
+    font-size: 10px;
+  }
+  .cel-detail-list button small {
+    grid-column: 2/4;
+  }
+  .cel-big-three strong {
+    font-size: 19px;
+  }
+  .tarot-slots-three {
+    gap: 11px;
+  }
+  .tarot-deck-head {
+    gap: 15px;
+  }
+  .tarot-deck-head h2 {
+    font-size: 19px;
+  }
+  .tarot-reading-list {
+    grid-template-columns: 1fr;
+  }
+  .tarot-free-card {
+    --free-card-width: 63px;
+    --free-card-height: 109px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cel-page * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+.tarot-return-table {
+  margin-left: 15px;
+  font-size: 11px;
+}
+.cel-wheel text {
+  font-family: "Arial", "Helvetica Neue", sans-serif;
+  font-variant-emoji: text;
+}
+@media (max-width: 740px) {
+  .tarot-return-table {
+    margin: 10px 0 0;
+    display: flex;
+  }
+  .cel-hero h1 {
+    overflow-wrap: break-word;
+  }
+}

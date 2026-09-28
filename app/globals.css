@@ -10185,3 +10185,11 @@ body.report-exporting .report-header {
     background: linear-gradient(135deg, rgba(244, 226, 196, 0.72), rgba(220, 232, 225, 0.7));
   }
 }
+
+/* Preserve existing entries while adding the two celestial tools. */
+.white-nav.celestial-home-nav { flex-wrap: wrap; justify-content: center; gap: 8px 16px; padding-block: 12px; }
+.white-nav.celestial-home-nav a { white-space: nowrap; }
+@media(max-width: 900px) {
+  .white-mobile-dock.celestial-mobile-dock { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .white-mobile-dock.celestial-mobile-dock a { font-size: 9px; min-width: 0; }
+}
