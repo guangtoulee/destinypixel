@@ -1961,3 +1961,37 @@
   .tarot-dialog-head img { width: 86px; }
   .tarot-dialog-head .cel-kicker { letter-spacing: .06em; }
 }
+
+/* Public reading guide: same light palette, readable independently of results. */
+body:has(.cel-page) {min-width:0;}
+.cel-breadcrumb {display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--cel-muted);padding-top:22px;}
+.cel-breadcrumb a:hover {text-decoration:underline;}
+.cel-guide {margin-top:72px;border-top:1px solid var(--cel-line);padding-top:48px;}
+.cel-guide-heading {max-width:800px;margin-bottom:32px;}
+.cel-guide-heading > span {font-size:32px;color:#b49771;}
+.cel-guide h2 {font-size:clamp(23px,2.4vw,32px);line-height:1.35;font-family:Georgia,"Songti SC",serif;}
+.cel-guide-heading p {margin-top:18px;color:var(--cel-muted);font-size:16px;line-height:1.85;}
+.cel-guide h3 {font-size:18px;line-height:1.5;}
+.cel-guide-steps {border:1px solid var(--cel-line);border-radius:24px;padding:28px;background:linear-gradient(110deg,#f1ecf7aa,#fffaf5);}
+.cel-guide-steps ol {padding-left:24px;margin-bottom:0;}
+.cel-guide-steps li {padding:9px 0 9px 8px;line-height:1.8;}
+.cel-guide-steps li::marker {color:var(--cel-violet);font-weight:700;}
+.cel-guide-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:32px 0;}
+.cel-guide-grid article {min-width:0;padding:24px 0;border-top:1px solid var(--cel-line);}
+.cel-guide-grid h3 {margin:12px 0;}
+.cel-guide-grid p {color:var(--cel-muted);font-size:15px;line-height:1.9;}
+.cel-guide .cel-faq h2 {grid-column:1/-1;margin-bottom:20px;}
+.cel-guide-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:36px 0;}
+.cel-guide-links h2 {grid-column:1/-1;margin-bottom:8px;}
+.cel-guide-links a {display:flex;justify-content:space-between;align-items:center;gap:16px;min-width:0;min-height:56px;border:1px solid var(--cel-line);border-radius:16px;padding:18px;background:#fffafc;font-size:15px;transition:border-color .2s,background .2s;}
+.cel-guide-links a:hover {border-color:#b5a1c7;background:#f0ebf5;}
+.cel-guide-links a span {flex-shrink:0;color:var(--cel-violet);}
+@media(max-width:740px) {
+ .cel-guide {margin-top:40px;padding-top:30px;}
+ .cel-guide-heading p {font-size:15px;}
+ .cel-guide-steps {padding:20px 16px;border-radius:18px;}
+ .cel-guide-grid {grid-template-columns:1fr;gap:0;margin:20px 0;}
+ .cel-guide-grid article {padding:22px 0;}
+ .cel-guide-links {grid-template-columns:1fr;}
+ .cel-guide-links a {padding:15px;font-size:14px;}
+}

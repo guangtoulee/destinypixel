@@ -1,3 +1,4 @@
+import { celestialContentUpdatedAt } from "@/lib/celestial/search-content";
 import { celestialLocales, celestialHref, celestialAlternates } from "@/lib/celestial/copy";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { compatibilityLocales, compatibilityHref, compatibilityAlternates } from "@/lib/compatibility/copy";
@@ -85,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const guideRoutes: MetadataRoute.Sitemap = seoGuides.map((guide) => ({
       url: absoluteUrl(seoGuidePath(guide)),
+      ...(guide.updatedAt ? { lastModified: guide.updatedAt } : {}),
       changeFrequency: "monthly",
       priority: 0.78,
     }));
@@ -92,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-23",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
     const compatibilityLanguages = Object.fromEntries(Object.entries(compatibilityAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
-    const celestialRoutes: MetadataRoute.Sitemap = ["/astrology", "/tarot"].flatMap(path => celestialLocales.map(locale => ({url:absoluteUrl(celestialHref(path,locale)),lastModified:"2026-09-28",priority:0.87,changeFrequency:"monthly",alternates:{languages:Object.fromEntries(Object.entries(celestialAlternates(path)).map(([l,href])=>[l,absoluteUrl(href)]))}})));
+    const celestialRoutes: MetadataRoute.Sitemap = ["/astrology", "/tarot"].flatMap(path => celestialLocales.map(locale => ({url:absoluteUrl(celestialHref(path,locale)),lastModified:celestialContentUpdatedAt,priority:0.87,changeFrequency:"monthly",alternates:{languages:Object.fromEntries(Object.entries(celestialAlternates(path)).map(([l,href])=>[l,absoluteUrl(href)]))}})));
     return [...celestialRoutes, ...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only

@@ -17,6 +17,8 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its tools inc
 - Jia Zi Day Pillar: ${absoluteUrl("/journal/jia-zi-day-pillar")}
 - Palm Studio: ${absoluteUrl("/palm")}
 - Face Studio: ${absoluteUrl("/face")}
+- Free natal birth chart calculator: ${absoluteUrl("/astrology")}
+- Free online tarot and spreads: ${absoluteUrl("/tarot")}
 - Question Oracle: ${absoluteUrl("/oracle")}
 - Free Bazi and birth-chart compatibility: ${absoluteUrl("/compatibility")}
 - Bazi compatibility guide: ${absoluteUrl("/learn/bazi-love-compatibility")}
@@ -36,6 +38,10 @@ Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four 
 Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Product Methods
+The natal chart calculator uses a tropical zodiac and Whole Sign houses, with Sun, Moon, Ascendant, ten celestial bodies and major aspects within a six-degree orb. Birth time and place are required. AI does not calculate positions; an optional detailed reading interprets them.
+
+The tarot studio offers a complete 78-card Rider–Waite–Smith deck, one-card, three-card, five-card relationship, five-card choice and ten-card Celtic Cross spreads, plus a free table. Visitors shuffle, choose, place and reveal their own cards. Local card meanings need no AI. Optional AI uses the revealed cards and the visitor’s question and context. Both tools are free to explore, with AI usage limits; login is needed to save private readings, not to try the tools.
+
 The free compatibility tool compares two people using their local birth dates, times and supported cities. Its deterministic connection index blends a Bazi element comparison (30%) with planetary comparisons (70%), on a 60–100 symbolic scale. The number is not a probability of relationship success. Four Pillars, five-element interaction and the original 60 animal portraits accompany the result. Optional DeepSeek prose does not set the score. Calculations do not include houses or rising signs.
 
 The fortune-stick tool offers five traditions and number lookup within the site. Its library combines selected traditional material with modern symbolic verses and explanations, identified by the source note. It is not a complete transcription of every temple's numbered collection, and different language editions may use adapted readings rather than line-by-line translations. Guanyin, Guandi and Wong Tai Sin collections contain 100 entries each; Yuelao and Wealth Gods contain 60 each.
@@ -43,7 +49,7 @@ The fortune-stick tool offers five traditions and number lookup within the site.
 Palm and face photos are optional local visual references. AI interprets the features the visitor describes, not the image.
 
 ## Supported Languages
-Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The compatibility and fortune-stick pages, the Journal and each of its articles provide server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. Journal language alternates and the sitemap list these editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
+Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The astrology, tarot, compatibility and fortune-stick pages, the Journal and each of its articles provide server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. Journal language alternates and the sitemap list these editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
 
 ## Contact
 Product feedback and collaboration: ${destinySupportEmail}

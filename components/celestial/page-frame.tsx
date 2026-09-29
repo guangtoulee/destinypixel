@@ -8,6 +8,8 @@ import {
 import { recordCopy, memberAccountHref } from "@/lib/celestial/record-copy";
 import { absoluteUrl } from "@/lib/seo";
 import { journalLanguageTags } from "@/lib/journal-locales";
+import { CelestialSearchContent } from "./search-content";
+import { celestialContentUpdatedAt } from "@/lib/celestial/search-content";
 import "./celestial.css";
 export function CelestialPageFrame({
   kind,
@@ -23,9 +25,12 @@ export function CelestialPageFrame({
     path = `/${kind}`,
     title = astro ? c.astroTitle : c.tarotTitle,
     description = astro ? c.astroDescription : c.tarotDescription;
+  const url = absoluteUrl(celestialHref(path, locale));
   const schema = {
     "@context": "https://schema.org",
+    "@graph": [{
     "@type": "WebApplication",
+    "@id": `${url}#tool`,
     name: title,
     description,
     url: absoluteUrl(celestialHref(path, locale)),
@@ -33,6 +38,17 @@ export function CelestialPageFrame({
     applicationCategory: "LifestyleApplication",
     operatingSystem: "Web",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    }, {
+      "@type": "WebPage", "@id": `${url}#page`, url, name: title, description,
+      inLanguage: journalLanguageTags[locale], dateModified: celestialContentUpdatedAt,
+      mainEntity: { "@id": `${url}#tool` }, breadcrumb: { "@id": `${url}#breadcrumb` },
+    }, {
+      "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: c.home, item: absoluteUrl(celestialHref("/", locale)) },
+        { "@type": "ListItem", position: 2, name: astro ? c.astrology : c.tarot, item: url },
+      ],
+    }],
   };
   return (
     <main
@@ -69,6 +85,7 @@ export function CelestialPageFrame({
             </nav>
           </div>
         </header>
+        <nav className="cel-breadcrumb"><a href={celestialHref("/", locale)}>{c.home}</a><span aria-hidden="true">/</span><span aria-current="page">{astro ? c.astrology : c.tarot}</span></nav>
         <section className="cel-hero">
           <div>
             <p className="cel-kicker">
@@ -82,6 +99,7 @@ export function CelestialPageFrame({
           <div className="cel-hero-aside">{c.free}</div>
         </section>
         {children}
+        <CelestialSearchContent kind={kind} locale={locale} />
         <section className="cel-method">
           <details>
             <summary>{c.method}</summary>

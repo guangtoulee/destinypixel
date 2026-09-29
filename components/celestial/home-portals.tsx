@@ -7,53 +7,53 @@ const copy = {
   en: {
     eyebrow: "TWO MORE WAYS TO EXPLORE",
     title: "Read the sky. Follow a question.",
-    astro: "Your whole birth chart",
+    astro: "Free birth chart calculator",
     astroBody:
       "Sun, Moon, rising sign and the patterns between them. A personal sky, made clear.",
-    astroCta: "Explore my birth chart",
-    tarot: "A table, a question, a possibility.",
+    astroCta: "Calculate my birth chart",
+    tarot: "Free online tarot reading",
     tarotBody:
       "Shuffle 78 cards, choose your own, and turn them over. Follow a spread or find your own way.",
-    tarotCta: "Take a seat at the tarot table",
+    tarotCta: "Shuffle and choose tarot cards",
     tag: "Free · no account needed",
   },
   zh: {
     eyebrow: "从另一种角度，认识自己",
     title: "一片星空，一个问题。",
-    astro: "你的星座，不止太阳。",
+    astro: "免费星盘查询与解读",
     astroBody:
       "月亮、上升、十颗星体与它们的联系，组成一张可以逐层探索的出生星盘。",
-    astroCta: "展开我的星盘",
-    tarot: "洗一副牌，留一点可能。",
+    astroCta: "查询太阳、月亮与上升",
+    tarot: "免费在线塔罗牌",
     tarotBody:
       "78张经典塔罗牌，亲手洗牌、挑选、摆放、翻开。跟随排阵，也可以随心摆一桌。",
-    tarotCta: "坐到塔罗牌桌前",
+    tarotCta: "选牌阵，亲手抽牌",
     tag: "免费体验 · 无需注册",
   },
   "zh-TW": {
     eyebrow: "從另一種角度，認識自己",
     title: "一片星空，一個問題。",
-    astro: "你的星座，不止太陽。",
+    astro: "免費星盤查詢與解讀",
     astroBody:
       "月亮、上升、十顆星體與它們的聯繫，組成一張可以逐層探索的出生星盤。",
-    astroCta: "展開我的星盤",
-    tarot: "洗一副牌，留一點可能。",
+    astroCta: "查詢太陽、月亮與上升",
+    tarot: "免費線上塔羅牌",
     tarotBody:
       "78張經典塔羅牌，親手洗牌、挑選、擺放、翻開。跟隨排陣，也可以隨心擺一桌。",
-    tarotCta: "坐到塔羅牌桌前",
+    tarotCta: "選牌陣，親手抽牌",
     tag: "免費體驗 · 無需註冊",
   },
   ru: {
     eyebrow: "ЕЩЁ ДВА СПОСОБА ИССЛЕДОВАТЬ",
     title: "Взгляд на небо. Место для вопроса.",
-    astro: "Ваша натальная карта целиком",
+    astro: "Натальная карта бесплатно",
     astroBody:
       "Солнце, Луна, асцендент и связи между планетами. Личное небо, шаг за шагом.",
-    astroCta: "Исследовать мою карту",
-    tarot: "Стол, вопрос и возможность.",
+    astroCta: "Рассчитать натальную карту",
+    tarot: "Таро онлайн бесплатно",
     tarotBody:
       "Перемешайте 78 карт, выберите и откройте их сами. Готовые расклады или свободный стол.",
-    tarotCta: "Открыть стол Таро",
+    tarotCta: "Выбрать расклад Таро",
     tag: "Бесплатно · без регистрации",
   },
 };

@@ -41,13 +41,13 @@ const en = {
   reflection:
     "Symbolic reflection, not a scientific personality assessment or a prediction. Keep important decisions grounded in your circumstances.",
   astroTitle:
-    "Free Natal Birth Chart Calculator & AI Interpretation | DestinyPixel",
+    "Free Birth Chart Calculator: Sun, Moon & Rising | DestinyPixel",
   astroDescription:
-    "Calculate a detailed tropical natal chart with ten planets, rising sign, whole-sign houses, retrograde motion and aspects. Explore an interactive chart and optional AI interpretation.",
+    "Calculate your free natal chart from birth date, time and place. Explore Sun, Moon, rising sign, houses and aspects, with optional detailed AI interpretation.",
   astroEyebrow: "YOUR MOMENT IN THE SKY",
-  astroHeading: "A sky full of details.\nA new way to see yourself.",
+  astroHeading: "Free birth chart.\nSun, Moon & rising.",
   astroIntro:
-    "Your Sun is only the beginning. Explore the Moon, your rising sign and the connections between ten planets in one personal birth chart.",
+    "Enter your birth date, time and place to calculate your natal chart. Explore your Sun, Moon, rising sign, houses and aspects, then read a detailed interpretation if you wish.",
   astroCta: "Create my birth chart",
   date: "Birth date",
   time: "Local birth time",
@@ -194,13 +194,13 @@ const en = {
       "Two poles invite balance. Make space for both instead of treating one as the whole story.",
   },
   tarotTitle:
-    "Free Interactive Tarot: Shuffle, Pick Cards & Choose Spreads | DestinyPixel",
+    "Free Online Tarot Reading & Card Spreads | DestinyPixel",
   tarotDescription:
-    "Shuffle a complete 78-card tarot deck, choose your own cards and turn them over. Explore free placement, one-card, three-card, relationship and Celtic Cross spreads with optional AI readings.",
+    "Free online tarot reading with 78 cards. Choose a three-card, love or Celtic Cross spread, explore upright and reversed meanings, and request an optional AI reading.",
   tarotEyebrow: "A LITTLE SPACE FOR A DIFFERENT PERSPECTIVE",
-  tarotHeading: "Your question.\nYour hands. Your cards.",
+  tarotHeading: "Free online tarot.\nYour question. Your cards.",
   tarotIntro:
-    "Take a breath, mix the deck and choose what calls to you. Lay out a familiar spread or make the whole table your own.",
+    "Shuffle 78 cards and choose your own one-card, three-card or relationship spread. Explore card meanings, or ask for an AI reading of your question.",
   freeMode: "Free table",
   backToTable: "Back to the table",
   spreadMode: "Guided spreads",
@@ -336,13 +336,13 @@ const zh: CelestialCopy = {
   aiLimited: "本次免费解读额度暂时用完，请稍后再试。星盘和牌桌仍可继续使用。",
   reflection:
     "用于象征性探索与自我观察，不是科学人格测评，也不保证未来事件。重要决定请结合现实情况。",
-  astroTitle: "免费星盘查询：上升星座、行星宫位与 AI 解读 | DestinyPixel",
+  astroTitle: "免费星盘查询与解读：太阳、月亮、上升星座 | DestinyPixel",
   astroDescription:
     "输入出生日期、时间和地点，生成十颗星体、上升星座、整宫制宫位、逆行与相位的详细星盘。点选星体探索，也可获取 AI 解读。",
   astroEyebrow: "从出生那一刻，认识更完整的自己",
-  astroHeading: "不止一个星座。\n看见你的整个星空。",
+  astroHeading: "免费星盘查询。\n太阳、月亮与上升。",
   astroIntro:
-    "太阳代表的只是其中一面。让月亮、上升与十颗星体之间的联系，组成一张可以慢慢探索的出生星盘。",
+    "输入出生日期、时间和地点，查询自己的太阳、月亮、上升星座，逐层查看十二宫与行星相位，也可按需生成详细星盘解读。",
   astroCta: "绘制我的星盘",
   date: "出生日期",
   time: "当地出生时间",
@@ -483,13 +483,13 @@ const zh: CelestialCopy = {
     trine: "相对顺畅的连接可以成为优势，也值得留意哪些长处被你当成理所当然。",
     opposition: "两个方向都需要空间，试着找到平衡，而不是只选择其中一面。",
   },
-  tarotTitle: "免费在线塔罗：自由洗牌、选牌、排阵与 AI 解读 | DestinyPixel",
+  tarotTitle: "免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel",
   tarotDescription:
     "完整78张经典塔罗牌，支持手指或鼠标洗牌、自选牌、自由摆放和逐张翻牌。单张、三张、感情、选择与凯尔特十字排阵，可选 AI 解读。",
   tarotEyebrow: "为眼前的问题，留一点安静的空间",
-  tarotHeading: "心里一个问题。\n手里一副可能。",
+  tarotHeading: "免费在线塔罗。\n亲手抽牌，读懂牌意。",
   tarotIntro:
-    "慢下来，洗一洗牌，选择此刻想拿起的那张。跟随熟悉的排阵，也可以把整张牌桌留给自己。",
+    "洗好完整78张牌，亲手挑选单张、三张或感情牌阵。翻开查看正逆位牌义，需要时再结合自己的问题获取 AI 详解。",
   freeMode: "自由牌桌",
   backToTable: "回到牌桌",
   spreadMode: "排阵模式",
@@ -627,9 +627,9 @@ const ru: CelestialCopy = {
   astroDescription:
     "Рассчитайте тропическую натальную карту с десятью планетами, асцендентом, полнознаковыми домами, ретроградностью и аспектами. Интерактивная карта и необязательное толкование ИИ.",
   astroEyebrow: "НЕБО В МОМЕНТ ВАШЕГО РОЖДЕНИЯ",
-  astroHeading: "Больше, чем знак Солнца.\nВаша карта целиком.",
+  astroHeading: "Натальная карта онлайн.\nСолнце, Луна и асцендент.",
   astroIntro:
-    "Исследуйте Луну, асцендент и связи между десятью планетами — шаг за шагом, в одной личной карте рождения.",
+    "Укажите дату, время и место рождения, чтобы бесплатно рассчитать натальную карту: Солнце, Луну, асцендент, дома и аспекты. Подробное толкование доступно по желанию.",
   astroCta: "Построить мою карту",
   date: "Дата рождения",
   time: "Местное время рождения",
@@ -781,9 +781,9 @@ const ru: CelestialCopy = {
   tarotDescription:
     "Полная колода из 78 карт. Выбирайте, перемещайте и открывайте карты самостоятельно. Свободный стол, расклады на одну и три карты, отношения и Кельтский крест с толкованием ИИ по желанию.",
   tarotEyebrow: "ПРОСТРАНСТВО ДЛЯ ДРУГОГО ВЗГЛЯДА",
-  tarotHeading: "Ваш вопрос.\nВаши руки. Ваши карты.",
+  tarotHeading: "Таро онлайн бесплатно.\nВыберите свои карты.",
   tarotIntro:
-    "Сделайте вдох, перемешайте колоду и выберите карту. Попробуйте знакомый расклад или устройте стол по-своему.",
+    "Перемешайте 78 карт и выберите расклад на одну или три карты, на отношения или свободный стол. Читайте значения карт и при желании задайте вопрос для толкования ИИ.",
   freeMode: "Свободный стол",
   backToTable: "К столу",
   spreadMode: "Готовые расклады",

@@ -188,11 +188,11 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   );
   assert.equal(
     guide.description,
-    "Tarot names feelings and motives; I Ching / liuyao frames tendency, obstacle, and timing. Pick one sincere question—then try DestinyPixel’s Question Oracle.",
+    "Compare tarot cards and I Ching traditions for a focused question. Choose your own cards in the free tarot studio, or explore our separate symbolic Question Oracle.",
   );
   assert.equal(guide.h1, "I Ching vs Tarot: Which to Use for One Question?");
   assert.equal(guide.faqAsH2, true);
-  assert.equal(guide.paragraphs.length, 3);
+  assert.equal(guide.paragraphs.length, 4);
   assert.match(guide.paragraphs[0]!, /combines three Tarot cards with a six-line, hexagram-inspired reading/);
   assert.doesNotMatch(guide.paragraphs[0]!, /not a deck of picture archetypes/);
   assert.match(guide.paragraphs[1]!, /courtroom verdict or a medical order/);
@@ -220,13 +220,13 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   assert.match(guide.faqs[5]!.answer, /liuyao-adjacent/i);
   assert.match(guide.faqs[5]!.answer, /three-card Tarot mirror/i);
   const ctas = seoGuideCtas(guide);
-  assert.equal(ctas[0]?.label, "Ask one question in the Oracle");
-  assert.equal(ctas[0]?.href, "/oracle");
+  assert.equal(ctas[0]?.label, "Choose your cards: free online tarot");
+  assert.equal(ctas[0]?.href, "/tarot");
   assert.deepEqual(
     ctas.map((cta) => cta.href),
-    ["/oracle", "/sticks", "/insights"],
+    ["/tarot", "/oracle", "/sticks", "/insights"],
   );
-  assert.match(ctas[1]?.note ?? "", /different ritual lane/i);
+  assert.match(ctas[2]?.note ?? "", /different ritual lane/i);
   assert.ok(guide.disclaimer);
   assert.match(guide.disclaimer, /courtroom|medical/i);
   assert.match(guide.disclaimer, /symbolic|reflective/i);

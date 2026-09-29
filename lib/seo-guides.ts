@@ -12,6 +12,7 @@ export type SeoGuide = {
   section: "learn" | "insights";
   slug: string;
   title: string;
+  updatedAt?: string;
   description: string;
   h1: string;
   paragraphs: string[];
@@ -28,6 +29,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "what-is-bazi-birth-chart",
+    updatedAt: "2026-09-29",
     title: "What Is a BaZi Birth Chart? Four Pillars Explained",
     description:
       "BaZi (Four Pillars of Destiny) is a Chinese birth chart from year, month, day and hour. Learn what each pillar means—and try a free Day Pillar card or deeper tools.",
@@ -66,7 +68,8 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "BaZi vs Western natal chart?",
         answer:
-          "BaZi uses Chinese calendar pillars; Western charts use planets and houses. It does not work like a Western sun-sign horoscope.",
+          "BaZi uses Chinese calendar pillars; a Western natal chart maps celestial positions, zodiac signs and houses for a birth time and place. Our separate free calculator uses the tropical zodiac and Whole Sign houses.",
+        link: { label: "Calculate a free Western birth chart", href: "/astrology" },
       },
       {
         question: "How do I try DestinyPixel free?",
@@ -101,14 +104,16 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "insights",
     slug: "i-ching-vs-tarot",
+    updatedAt: "2026-09-29",
     title: "I Ching vs Tarot: Which to Use for One Question? | DestinyPixel",
     description:
-      "Tarot names feelings and motives; I Ching / liuyao frames tendency, obstacle, and timing. Pick one sincere question—then try DestinyPixel’s Question Oracle.",
+      "Compare tarot cards and I Ching traditions for a focused question. Choose your own cards in the free tarot studio, or explore our separate symbolic Question Oracle.",
     h1: "I Ching vs Tarot: Which to Use for One Question?",
     paragraphs: [
       "For one clear question, people often reach for Tarot cards or an I Ching hexagram. These are distinct traditions. DestinyPixel’s Question Oracle combines three Tarot cards with a six-line, hexagram-inspired reading derived from the question time. It is a modern combination, rather than a conventional coin-cast or yarrow-stalk I Ching consultation.",
       "Tarot shines when you need language for feelings, motives, and the story you are telling yourself. I Ching / liuyao shines when you care about tendency, obstacle, and rough timing (“push now / wait”). Both work best as one sincere question; neither should be treated as a courtroom verdict or a medical order.",
       "If you already know the emotion and need a decision frame, start with I Ching. If you need to name what you feel before you choose, start with tarot. Asking the same question twice in one hour usually adds noise, not clarity.",
+      "To choose your own cards, use the separate Tarot studio: shuffle a 78-card deck, select a spread and reveal the cards yourself. It supports one-card, three-card, relationship, two-paths and Celtic Cross layouts, with optional AI interpretation. This differs from the automatic Tarot-and-hexagram combination in the Question Oracle.",
     ],
     faqAsH2: true,
     faqs: [
@@ -141,8 +146,9 @@ export const seoGuides: SeoGuide[] = [
           "DestinyPixel’s Question Oracle is Tarot plus a hexagram-inspired, liuyao-adjacent time reading. Ask one sincere question; the page casts six lines from the question time and pairs them with a three-card Tarot mirror.",
       },
     ],
-    cta: { label: "Ask one question in the Oracle", href: "/oracle" },
+    cta: { label: "Choose your cards: free online tarot", href: "/tarot" },
     ctas: [
+      { label: "Choose your cards: free online tarot", href: "/tarot" },
       { label: "Ask one question in the Oracle", href: "/oracle" },
       {
         label: "Temple sticks",
