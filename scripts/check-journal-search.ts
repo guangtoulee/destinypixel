@@ -3,8 +3,9 @@ import { journalArticles, journalHref, journalLocales, journalLanguageTags } fro
 
 // Read-only HTTP smoke check; accepts localhost for a production-build preview.
 const base = process.argv[2] ?? "https://www.destinypixel.com";
-const selected = process.argv[3] ? journalArticles.filter(a => a.publishedAt === process.argv[3]) : journalArticles;
-assert.ok(selected.length, "No articles matched the requested publication date");
+// An existing article rewrite can be checked by slug without crawling unrelated pages.
+const selected = process.argv[3] ? journalArticles.filter(a => a.publishedAt === process.argv[3] || a.slug === process.argv[3]) : journalArticles;
+assert.ok(selected.length, "No articles matched the requested publication date or slug");
 const origin = "https://www.destinypixel.com";
 const decode = (s: string) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 const attrs = (tag: string) => Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(m => [m[1], decode(m[2])]));
@@ -22,6 +23,11 @@ async function main() {
       const page = await html(path);
       assert.equal((page.match(/<h1[ >]/g) ?? []).length, 1, `${path}: expected one H1`);
       assert.ok(decode(page).includes(article.translations[locale].title), `${path}: translated title missing`);
+      const renderedArticle = decode((page.match(/<article>[\s\S]*?<\/article>/)?.[0] ?? "").replace(/<[^>]+>/g, ""));
+      const copy = article.translations[locale];
+      for (const paragraph of [copy.introduction, copy.takeaway, ...copy.sections.flatMap(section => section.paragraphs)]) {
+        assert.ok(renderedArticle.includes(paragraph), `${path}: rendered paragraph missing: ${paragraph.slice(0, 55)}`);
+      }
       const links = [...page.matchAll(/<link\b[^>]*>/g)].map(m => attrs(m[0]));
       assert.equal(links.find(l => l.rel === "canonical")?.href, origin + path, `${path}: canonical`);
       const alternates = links.filter(l => l.rel === "alternate" && l.hrefLang);
@@ -31,7 +37,12 @@ async function main() {
       assert.ok(alternates.some(l => l.hrefLang === "x-default" && l.href === origin + journalHref("en",article.slug)), `${path}: missing x-default`);
       assert.ok(decode(sitemap).includes(`<loc>${origin + path}</loc>`), `${path}: sitemap missing`);
       const schemas = [...page.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => JSON.parse(m[1]));
-      assert.ok(schemas.some(s => s["@type"] === "Article" && s.inLanguage === journalLanguageTags[locale]), `${path}: Article schema`);
+      const schema = schemas.find(s => s["@type"] === "Article" && s.inLanguage === journalLanguageTags[locale]);
+      assert.ok(schema, `${path}: Article schema`);
+      assert.equal(schema.datePublished, article.publishedAt, `${path}: original publication date`);
+      assert.equal(schema.dateModified, article.updatedAt, `${path}: actual revision date`);
+      const sitemapEntry = [...decode(sitemap).matchAll(/<url>([\s\S]*?)<\/url>/g)].find(m => m[1].includes(`<loc>${origin + path}</loc>`))?.[1];
+      assert.ok(sitemapEntry?.includes(`<lastmod>${article.updatedAt}`), `${path}: sitemap revision date`);
       assert.doesNotMatch(page.match(/<meta name="robots"[^>]*>/)?.[0] ?? "", /noindex/, `${path}: noindex`);
       console.log(`PASS ${path}`);
     }));

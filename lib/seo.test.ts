@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
 import { discoveryHref } from "@/lib/discovery";
+import { celestialHref } from "@/lib/celestial/copy";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import promptSitemap from "@/app/prompt/sitemap";
 import { getIndexablePromptItems, promptItemHref } from "@/lib/prompt-library";
@@ -68,6 +69,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
           ? `/day-pillar${url.searchParams.get("locale") === "zh" ? "?locale=zh" : ""}`
         : url.pathname === "/compatibility" ? compatibilityHref(normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
         : url.pathname === "/discover" ? discoveryHref(normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
+        : url.pathname === "/astrology" || url.pathname === "/tarot" ? celestialHref(url.pathname, normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
         : canonicalPagePath(url.pathname, url.searchParams.get("locale") ?? "en");
       assert.equal(absoluteUrl(String(canonical)), variant);
     }
@@ -76,7 +78,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
   assert.ok(traditionalEntries.length > 0);
-  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || new URL(entry.url).pathname === "/discover" || new URL(entry.url).pathname === "/compatibility" || new URL(entry.url).pathname === "/sticks")));
+  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/discover", "/compatibility", "/sticks", "/astrology", "/tarot"].includes(new URL(entry.url).pathname))));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {

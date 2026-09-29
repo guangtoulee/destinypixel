@@ -53,11 +53,11 @@ test("reference facts match the site's chart labels and reject impossible pairs"
 });
 
 test("expanded portraits retain their URLs and reproduce every sourced public birthday", () => {
-  for (const pillar of ["乙丑", "丙寅"]) {
+  for (const pillar of ["乙丑", "丙寅", "丁卯"]) {
     const article = journalArticles.find(a => a.pillar === pillar)!;
     assert.equal(article.slug, pillarArticleSlug(pillar));
     assert.equal(article.publishedAt, "2026-09-23");
-    assert.equal(article.updatedAt, "2026-09-24");
+    assert.equal(article.updatedAt, pillar === "丁卯" ? "2026-09-29" : "2026-09-24");
     assert.equal(article.portraitDepth, "full");
     const prose = article.translations.en.sections.flatMap(s => s.paragraphs).join(" ");
     assert.ok(prose.split(/\s+/).length > 1000, `${pillar}: expanded prose missing`);
