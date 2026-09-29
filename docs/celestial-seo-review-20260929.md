@@ -59,4 +59,6 @@ GitHub 只读 API 与分支源码核对：
 - 25 项 celestial/SEO/guide 测试通过；生产 webpack 构建通过，TypeScript 与 diff 空白检查通过。
 - `scripts/check-celestial-search.ts http://localhost:3045`：8个语言工具页的200、完整SSR正文、单H1、title/description、canonical、互返语言、WebApplication/WebPage/BreadcrumbList、真实lastmod及相关内链通过；首页四语入口、两篇旧指南反向链接与 llms 入口通过。
 - 1280px 桌面星盘/塔罗指南、320px 繁体星盘和俄语塔罗显示正常；俄语问答可点击展开。发现并局部修复原有 body 最小 320px 在占宽滚动条环境造成的 15px 横向溢出，两页实际 scrollWidth 与 clientWidth 一致。无浏览器控制台错误。属于浏览器视口检查，不是实体手机测试。
-- 线上发布结果在核实后补记。
+- 内容提交 `c85812801adce6f03a2c0c6142125ce30084811f` 已正常推送到 main；Vercel 部署 `5YiJtrEfV5YFejx1NaQ6kD6jPEqG` 状态 success。
+- 生产域名的8个语言工具页检查全部通过：HTTP 200、初始 HTML 完整正文、单 H1、语言化标题描述、canonical/hreflang、结构化数据、lastmod和内链；首页四语入口、旧指南入口及 llms 链接通过。
+- 生产中文塔罗指南与繁体星盘页面已在浏览器核对。本次没有读取新的 Search Console 或访问统计，以上仅确认发布和可抓取内容，不能当作已经收录、排名提升或流量增长。
