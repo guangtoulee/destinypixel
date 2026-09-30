@@ -29,7 +29,7 @@ export const discoverySearchContent: Record<ContentLocale, ProductSearchCopy> = 
     ],
     relatedTitle: "Take the next step",
     related: [
-      { title: "Compare two birth charts", description: "Use known times and cities for our BaZi and astrology relationship comparison.", href: "/compatibility" },
+      { title: "Compare two birth charts", description: "Start with two birthdays and cities; birth times are optional. Known times add planetary comparisons.", href: "/compatibility" },
       { title: "Ask a question with fortune sticks", description: "A different experience when you have a question rather than birth details.", href: "/sticks" },
     ],
   },
@@ -59,7 +59,7 @@ export const discoverySearchContent: Record<ContentLocale, ProductSearchCopy> = 
     ],
     relatedTitle: "带着结果，继续探索",
     related: [
-      { title: "八字五行与星盘感情配对", description: "双方出生时间与城市已知时，比较沟通与爱的表达方式。", href: "/compatibility" },
+      { title: "八字五行与星盘感情配对", description: "填写双方生日与城市，时辰可选未知；时间齐全时再加入星盘比较。", href: "/compatibility" },
       { title: "在线抽签与解签", description: "如果眼前有具体心事，也可以从一个问题开始，不需要出生资料。", href: "/sticks" },
     ],
   },
@@ -89,7 +89,7 @@ export const discoverySearchContent: Record<ContentLocale, ProductSearchCopy> = 
     ],
     relatedTitle: "Продолжить знакомство",
     related: [
-      { title: "Совместимость по Бацзы и натальным картам", description: "Сравните общение и выражение чувств, если известны время и города рождения обоих.", href: "/compatibility" },
+      { title: "Совместимость по Бацзы и натальным картам", description: "Укажите две даты и города; время может быть неизвестно. Известное время добавляет сравнение планет.", href: "/compatibility" },
       { title: "Гадание Гуаньинь и другие храмовые жребии", description: "Другой способ рассмотреть конкретный вопрос без данных рождения.", href: "/sticks" },
     ],
   },

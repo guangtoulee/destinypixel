@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toTraditional } from "@/lib/journal-locales";
 import { ArrowRight, Sparkles } from "lucide-react";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { archetypeMotion, archetypePosterPath, archetypeVideoPath } from "@/lib/archetype-motion";
@@ -14,18 +15,19 @@ const copy={
 };
 export default function ArchetypeMotionGallery({locale}:{locale:ReportLocale}) {
  const lang=locale==="ru"?"ru":locale==="en"?"en":"zh";
- const text=copy[lang];const [selected,setSelected]=useState(0);const item=archetypeMotion[selected];
+ const localText=(value:string)=>locale==="zh-TW"?toTraditional(value):value;
+ const text=locale==="zh-TW"?JSON.parse(toTraditional(JSON.stringify(copy.zh))) as typeof copy.zh:copy[lang];const [selected,setSelected]=useState(0);const item=archetypeMotion[selected];
  return <section id="motion" className={styles.gallery} aria-labelledby="motion-title">
    <div className="white-container">
      <div className={styles.stage}>
        <img className={styles.ambience} src={archetypePosterPath(item.slug)} alt="" aria-hidden="true" loading="lazy" width={720} height={960}/>
        <div className={styles.intro}><p className={styles.eyebrow}><Sparkles size={14}/>{text.eyebrow}</p><h2 id="motion-title">{text.title}</h2><p className={styles.body}>{text.body}</p><a className={styles.action} href={locale==="en"?"/discover":`/discover?locale=${locale}`}>{text.action}<ArrowRight size={16}/></a></div>
        <div className={styles.showcase} data-landscape={item.landscape}>
-         <ArchetypeMotionPlayer key={item.slug} src={archetypeVideoPath(item.slug)} poster={archetypePosterPath(item.slug)} label={item.name[lang]} playLabel={text.play} pauseLabel={text.pause}/>
-         <p className={styles.caption} aria-live="polite">{item.name[lang]}</p>
+         <ArchetypeMotionPlayer key={item.slug} src={archetypeVideoPath(item.slug)} poster={archetypePosterPath(item.slug)} label={localText(item.name[lang])} playLabel={text.play} pauseLabel={text.pause}/>
+         <p className={styles.caption} aria-live="polite">{localText(item.name[lang])}</p>
        </div>
      </div>
-     <div className={styles.selector} role="group" aria-label={text.hint}>{archetypeMotion.map((clip,i)=><button key={clip.slug} type="button" aria-pressed={selected===i} onClick={()=>setSelected(i)}><img src={archetypePosterPath(clip.slug)} alt="" loading="lazy" width={72} height={96}/><span>{clip.name[lang]}</span><span className={styles.index}>0{i+1}</span></button>)}</div>
+     <div className={styles.selector} role="group" aria-label={text.hint}>{archetypeMotion.map((clip,i)=><button key={clip.slug} type="button" aria-pressed={selected===i} onClick={()=>setSelected(i)}><img src={archetypePosterPath(clip.slug)} alt="" loading="lazy" width={72} height={96}/><span>{localText(clip.name[lang])}</span><span className={styles.index}>0{i+1}</span></button>)}</div>
    </div>
  </section>;
 }

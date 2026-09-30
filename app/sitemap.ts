@@ -22,7 +22,6 @@ const publicRoutes = [
   { path: routeSeo.atelier.path, priority: 0.73, changeFrequency: "weekly" as const },
   { path: routeSeo.tuteng.path, priority: 0.88, changeFrequency: "monthly" as const },
   { path: "/xingpan", priority: 0.86, changeFrequency: "monthly" as const },
-  { path: "/ultra", priority: 0.9, changeFrequency: "monthly" as const },
 ];
 
 function safeJournalRoutes(): MetadataRoute.Sitemap {
@@ -92,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.78,
     }));
     const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
-    const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-23",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
+    const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-30",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
     const compatibilityLanguages = Object.fromEntries(Object.entries(compatibilityAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), lastModified: productFactsUpdatedAt, priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
     const celestialRoutes: MetadataRoute.Sitemap = ["/astrology", "/tarot"].flatMap(path => celestialLocales.map(locale => ({url:absoluteUrl(celestialHref(path,locale)),lastModified:celestialContentUpdatedAt,priority:0.87,changeFrequency:"monthly",alternates:{languages:Object.fromEntries(Object.entries(celestialAlternates(path)).map(([l,href])=>[l,absoluteUrl(href)]))}})));

@@ -4,6 +4,8 @@ import { HomePortals } from "@/components/celestial/home-portals";
 import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/lib/support-contact";
 
 import Image from "next/image";
+import { homeOfferCopy, type HomeReportOffer } from "@/lib/home-offer";
+import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
 import CompatibilityHome from "./compatibility-home";
 import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
 import { OracleHome } from "./oracle-sanctuary";
@@ -759,7 +761,7 @@ function WhiteSubmitButton({
 }
 
 function profileName(profile: PillarProfile, pillar: string, locale: ReportLocale) {
-  if (contentLocale(locale) === "zh") return profile.name.cn;
+  if (contentLocale(locale) === "zh") return locale === "zh-TW" ? toTraditional(profile.name.cn) : profile.name.cn;
   if (locale === "ru") return getPillarDisplay(pillar, "ru").totemName;
 
   return profile.name.en;
@@ -770,7 +772,7 @@ function profileEssence(
   pillar: string,
   locale: ReportLocale,
 ) {
-  if (contentLocale(locale) === "zh") return profile.essence.cn;
+  if (contentLocale(locale) === "zh") return locale === "zh-TW" ? toTraditional(profile.essence.cn) : profile.essence.cn;
   if (locale === "ru") {
     const display = getPillarDisplay(pillar, "ru");
     return `${display.totemName} соединяет ${display.stemMeaning.toLowerCase()} и ${display.branchMeaning.toLowerCase()} в мягкий, наблюдательный архетип.`;
@@ -790,12 +792,16 @@ function setDocumentLocale(locale: ReportLocale) {
           : "en";
 }
 
+const traditionalWhiteCopy = JSON.parse(toTraditional(JSON.stringify(whiteCopy.zh))) as WhiteCopy;
+
 export default function DestinyWhiteExperience({
   initialLocale = "en",
   initialError,
+  reportOffer,
 }: {
   initialLocale?: ReportLocale;
   initialError?: string;
+  reportOffer: HomeReportOffer;
 }) {
   const locale = initialLocale;
   const [birthDate, setBirthDate] = useState("");
@@ -808,8 +814,10 @@ export default function DestinyWhiteExperience({
     WhiteCopy["blessing"]["deities"][number] | null
   >(null);
   const copyLocale = contentLocale(locale);
-  const text = whiteCopy[copyLocale];
+  const text = locale === "zh-TW" ? traditionalWhiteCopy : whiteCopy[copyLocale];
+  const localText = (value: string) => locale === "zh-TW" ? toTraditional(value) : value;
   const introduction = homeIntroductionCopy(locale);
+  const offerText = homeOfferCopy(locale);
   const selectedDeity =
     text.blessing.deities.find((deity) => deity.key === selectedDeityKey) ??
     text.blessing.deities[0];
@@ -871,11 +879,11 @@ export default function DestinyWhiteExperience({
   const freeHref = locale === "en" ? "/discover" : `/discover?locale=${locale}`;
   const sticksHref = locale === "en" ? "/sticks" : `/sticks?locale=${locale}`;
   const compatibilityHref = locale === "en" ? "/compatibility" : `/compatibility?locale=${locale}`;
-  const freeLabel = copyLocale === "zh" ? "免费测我的意象卡" : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
+  const freeLabel = copyLocale === "zh" ? localText("免费测我的意象卡") : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
 
 
   return (
-    <main className="white-site editorial-home">
+    <main className="white-site editorial-home" lang={journalLanguageTags[locale]} data-server-localized>
       <header className="white-header membership-header">
         <div className="white-container white-header__inner">
           <a className="white-brand" href="/">
@@ -883,7 +891,7 @@ export default function DestinyWhiteExperience({
             DestinyPixel
           </a>
 
-          <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? "主導覽" : copyLocale === "zh" ? "主导航" : locale === "ru" ? "Основная навигация" : "Main navigation"}>
+          <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? localText("主導覽") : copyLocale === "zh" ? localText("主导航") : locale === "ru" ? "Основная навигация" : "Main navigation"}>
             <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
             <a href={sticksHref}>{locale === "en" ? "Draw a stick" : mobileNavLabels.sticks}</a>
             <a href="#archetypes">{text.nav.archetypes}</a>
@@ -895,8 +903,8 @@ export default function DestinyWhiteExperience({
           </nav>
 
           <div className="white-actions">
-            <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
-            <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? "我的账号" : "Account"}</a>
+            <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
+            <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? localText("我的账号") : "Account"}</a>
             <div className="white-language" aria-label="Language selector">
               <Languages size={14} aria-hidden="true" />
               {reportLanguageOptions.map((option) => (
@@ -920,10 +928,10 @@ export default function DestinyWhiteExperience({
         </div>
       </header>
 
-      <nav className="white-mobile-dock celestial-mobile-dock" aria-label={locale === "zh-TW" ? "行動導覽" : copyLocale === "zh" ? "移动导航" : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
+      <nav className="white-mobile-dock celestial-mobile-dock" aria-label={locale === "zh-TW" ? localText("行動導覽") : copyLocale === "zh" ? localText("移动导航") : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
         <a href={freeHref} className="editorial-dock-free">
           <Sparkles size={18} aria-hidden="true" />
-          <span>{copyLocale === "zh" ? "免费测试" : locale === "ru" ? "Карточка" : "Free card"}</span>
+          <span>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Карточка" : "Free card"}</span>
         </a>
         <a href={compatibilityHref}>
           <Sparkles size={18} aria-hidden="true" />
@@ -946,15 +954,15 @@ export default function DestinyWhiteExperience({
             <p className="white-lead">{introduction.lead}</p>
             <div className="editorial-hero-actions"><a className="editorial-primary" href="#start-here">{introduction.start}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href={freeHref}>{introduction.free}<ArrowRight size={15} aria-hidden="true" /></a></div>
             <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{introduction.note}</p>
-            <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? "一种生日，一段独特故事。" : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
+            <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? localText("一种生日，一段独特故事。") : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
           </div>
           <div className="editorial-card-stage" aria-label={text.archetypes.title}>
             <div className="editorial-orbit" aria-hidden="true" />
             {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><div key={key} className={`editorial-display-card editorial-display-card--${index}`}>
-              {index===2 ? <ArchetypeMotionPlayer className="editorial-hero-motion" src={archetypeVideoPath("gui_mao")} poster={archetypePosterPath("gui_mao")} label={profileName(pillarsDB[key],key,locale)} playLabel={copyLocale === "zh" ? "播放卡片动画" : locale === "ru" ? "Включить анимацию" : "Play card animation"} pauseLabel={copyLocale === "zh" ? "暂停卡片动画" : locale === "ru" ? "Приостановить анимацию" : "Pause card animation"}/> : <a href={freeHref}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={1200} height={1600} sizes="(max-width: 650px) 48vw, 230px" /></a>}
+              {index===2 ? <ArchetypeMotionPlayer className="editorial-hero-motion" src={archetypeVideoPath("gui_mao")} poster={archetypePosterPath("gui_mao")} label={profileName(pillarsDB[key],key,locale)} playLabel={copyLocale === "zh" ? localText("播放卡片动画") : locale === "ru" ? "Включить анимацию" : "Play card animation"} pauseLabel={copyLocale === "zh" ? localText("暂停卡片动画") : locale === "ru" ? "Приостановить анимацию" : "Pause card animation"}/> : <a href={freeHref}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={1200} height={1600} sizes="(max-width: 650px) 48vw, 230px" /></a>}
               <a href={freeHref}><span>{profileName(pillarsDB[key],key,locale)}</span></a>
             </div>)}
-            <span className="editorial-stage-label">{copyLocale === "zh" ? "你的故事，会是哪一种？" : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
+            <span className="editorial-stage-label">{copyLocale === "zh" ? localText("你的故事，会是哪一种？") : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
           </div>
         </div>
       </section>
@@ -992,7 +1000,7 @@ export default function DestinyWhiteExperience({
                     quality={95}
                   />
                   <div>
-                    <span>{copyLocale === "zh" ? itemDisplay.pillarLabel : text.card.core}</span>
+                    <span>{copyLocale === "zh" ? localText(itemDisplay.pillarLabel) : text.card.core}</span>
                     <strong>{itemName}</strong>
                   </div>
                 </a>
@@ -1005,7 +1013,7 @@ export default function DestinyWhiteExperience({
       <ArchetypeMotionGallery locale={locale} />
 
       <section className="editorial-report white-container" id="report">
-        <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? "也可以探索你的本命灵构" : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
+        <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? localText("也可以探索你的本命灵构") : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
           <div className="white-form-panel">
             <div className="white-form-panel__header">
               <span>
@@ -1013,12 +1021,12 @@ export default function DestinyWhiteExperience({
               </span>
               <div>
                 <strong>{text.card.sample}</strong>
-                <p>{birthDate ? cardName : copyLocale === "zh" ? "填写出生日期、时间与城市" : locale === "ru" ? "Дата, время и город рождения" : "Your birth date, time and place"}</p>
+                <p>{birthDate ? cardName : copyLocale === "zh" ? localText("填写出生日期、时间与城市") : locale === "ru" ? "Дата, время и город рождения" : "Your birth date, time and place"}</p>
               </div>
             </div>
 
             <form action={createFusionReportAction} data-analytics-form="birth_report">
-              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError}</p>}
+              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError ? localText(initialError) : initialError}</p>}
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
@@ -1027,7 +1035,7 @@ export default function DestinyWhiteExperience({
                   type="text"
                   placeholder={
                     copyLocale === "zh"
-                      ? "你的名字"
+                      ? localText("你的名字")
                       : locale === "ru"
                         ? "Ваше имя"
                         : "Your name"
@@ -1087,7 +1095,7 @@ export default function DestinyWhiteExperience({
 
                   return (
                     <option key={city.id} value={city.label}>
-                      {[city.label, ...aliases].join(" / ")}
+                      {localText([city.label, ...aliases].join(" / "))}
                     </option>
                   );
                 })}
@@ -1096,14 +1104,15 @@ export default function DestinyWhiteExperience({
               <WhiteSubmitButton label={text.hero.submit} pendingLabel={text.hero.pending} />
             </form>
 
+            <p className="white-form-note" style={{ display: "block" }}>{reportOffer.available && reportOffer.amount ? offerText.note.replace("{price}", reportOffer.amount) : offerText.unavailable} <a href={locale === "en" ? "/product-facts" : `/product-facts?locale=${locale}`}>{offerText.details}</a></p>
             <p className="white-form-note">
               <ShieldCheck size={14} aria-hidden="true" />
-              {text.hero.privacy} <a href={copyLocale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{copyLocale === "zh" ? "数据说明" : "Data use"}</a> · <a href={copyLocale === "zh" ? "/service?locale=zh" : "/service"}>{copyLocale === "zh" ? "报告说明" : "Report guide"}</a>
+              {text.hero.privacy} <a href={copyLocale === "zh" ? "/privacy?locale=zh" : "/privacy"}>{copyLocale === "zh" ? localText("数据说明") : "Data use"}</a> · <a href={copyLocale === "zh" ? "/service?locale=zh" : "/service"}>{copyLocale === "zh" ? localText("报告说明") : "Report guide"}</a>
             </p>
             <a className="white-totem-entry" href={`/tuteng?locale=${locale}`}>
               <Orbit size={15} aria-hidden="true" />
               {copyLocale === "zh"
-                ? "生成可交互本命图腾"
+                ? localText("生成可交互本命图腾")
                 : locale === "ru"
                   ? "Создать интерактивный тотем"
                   : "Generate an interactive Birth Totem"}
@@ -1112,7 +1121,7 @@ export default function DestinyWhiteExperience({
             <a className="white-totem-entry" href={freeHref}>
               <CalendarDays size={15} aria-hidden="true" />
               {copyLocale === "zh"
-                ? "只记得生日？先免费测日柱卡"
+                ? localText("只记得生日？先免费测日柱卡")
                 : "Only know your birthday? Find your free character card"}
               <ArrowRight size={14} aria-hidden="true" />
             </a>
@@ -1275,15 +1284,15 @@ export default function DestinyWhiteExperience({
         <div className="white-container">
           <span>DestinyPixel · Birthday characters & personal readings</span>
           <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>
-            {copyLocale === "zh" ? "探索入口" : locale === "ru" ? "Практики" : "Explore the practices"}
+            {copyLocale === "zh" ? localText("探索入口") : locale === "ru" ? "Практики" : "Explore the practices"}
           </a>
           <a href="/learn">
-            {copyLocale === "zh" ? "使用指南（英文）" : locale === "ru" ? "Гид (EN)" : "Guide"}
+            {copyLocale === "zh" ? localText("使用指南（英文）") : locale === "ru" ? "Гид (EN)" : "Guide"}
           </a>
           <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>
-            {copyLocale === "zh" ? "原创文章" : locale === "ru" ? "Статьи" : "Journal"}
+            {copyLocale === "zh" ? localText("原创文章") : locale === "ru" ? "Статьи" : "Journal"}
           </a>
-          <a href={locale === "en" ? "/journal/day-pillars" : `/journal/day-pillars?locale=${locale}`}>{copyLocale === "zh" ? "六十日柱图文" : locale === "ru" ? "60 столпов дня" : "60 Day Pillar portraits"}</a>
+          <a href={locale === "en" ? "/journal/day-pillars" : `/journal/day-pillars?locale=${locale}`}>{copyLocale === "zh" ? localText("六十日柱图文") : locale === "ru" ? "60 столпов дня" : "60 Day Pillar portraits"}</a>
           <a href={`/palm?locale=${locale}`}>
             {copyLocale === "zh" ? "手相" : locale === "ru" ? "Ладонь" : "Palm"}
           </a>
@@ -1291,16 +1300,16 @@ export default function DestinyWhiteExperience({
             {copyLocale === "zh" ? "面相" : locale === "ru" ? "Лицо" : "Face"}
           </a>
           <a href={`/oracle?locale=${locale}`}>
-            {copyLocale === "zh" ? "问事" : locale === "ru" ? "Оракул" : "Oracle"}
+            {copyLocale === "zh" ? localText("问事") : locale === "ru" ? "Оракул" : "Oracle"}
           </a>
           <a href={`/sticks?locale=${locale}`}>
-            {copyLocale === "zh" ? "求签" : locale === "ru" ? "Жребии" : "Sticks"}
+            {copyLocale === "zh" ? localText("求签") : locale === "ru" ? "Жребии" : "Sticks"}
           </a>
           <a href={`/tuteng?locale=${locale}`}>
-            {copyLocale === "zh" ? "本命灵构" : locale === "ru" ? "Тотем" : "Birth Totem"}
+            {copyLocale === "zh" ? localText("本命灵构") : locale === "ru" ? "Тотем" : "Birth Totem"}
           </a>
           <a href={freeHref}>
-            {copyLocale === "zh" ? "免费日柱卡" : "Free character card"}
+            {copyLocale === "zh" ? localText("免费日柱卡") : "Free character card"}
           </a>
           <a href="#blessing">
             {copyLocale === "zh" ? "祈福" : locale === "ru" ? "Благословение" : "Blessing"}
@@ -1308,7 +1317,7 @@ export default function DestinyWhiteExperience({
           <a
             className="white-footer__contact"
             href={destinySupportHref}
-            aria-label={copyLocale === "zh" ? "联系 DestinyPixel" : "Contact DestinyPixel"}
+            aria-label={copyLocale === "zh" ? localText("联系 DestinyPixel") : "Contact DestinyPixel"}
           >
             <Mail size={13} aria-hidden="true" />
             {destinySupportEmail}
@@ -1320,7 +1329,7 @@ export default function DestinyWhiteExperience({
             rel="noopener noreferrer"
           >
             <Send size={13} aria-hidden="true" />
-            {copyLocale === "zh" ? "Telegram 咨询" : locale === "ru" ? "Telegram" : "Chat on Telegram"}
+            {copyLocale === "zh" ? localText("Telegram 咨询") : locale === "ru" ? "Telegram" : "Chat on Telegram"}
           </a>
 
           <span>
@@ -1334,10 +1343,10 @@ export default function DestinyWhiteExperience({
         href={destinyTelegramHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={copyLocale === "zh" ? "在 Telegram 联系 DestinyPixel" : "Contact DestinyPixel on Telegram"}
+        aria-label={copyLocale === "zh" ? localText("在 Telegram 联系 DestinyPixel") : "Contact DestinyPixel on Telegram"}
       >
         <Send size={17} aria-hidden="true" />
-        <span>{copyLocale === "zh" ? "Telegram 咨询" : locale === "ru" ? "Telegram" : "Telegram chat"}</span>
+        <span>{copyLocale === "zh" ? localText("Telegram 咨询") : locale === "ru" ? "Telegram" : "Telegram chat"}</span>
       </a>
     </main>
   );

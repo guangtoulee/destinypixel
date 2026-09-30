@@ -291,7 +291,7 @@ export function absoluteUrl(path = "/") {
 }
 
 // Only advertise Traditional Chinese where the initial HTML is translated.
-const traditionalServerPaths = new Set(["/sticks"]);
+const traditionalServerPaths = new Set(["/", "/sticks"]);
 
 export function languageAlternates(path: string) {
   if (!hasLocalizedSeo(path)) return undefined;

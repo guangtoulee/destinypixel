@@ -1,6 +1,6 @@
 // Only pages with translated initial HTML belong in the language cluster.
-// Traditional Chinese currently uses a browser-side conversion bridge, so it
-// stays accessible without being advertised as a server-rendered translation.
+// The home and sticks pages render Traditional Chinese directly; other legacy
+// pages retain their conversion bridge until their initial HTML is localized.
 export const localizedSeoCopy = {
   "/tools": {
     zh: ["玄学工具导航｜八字图谱、灵签与五行手串", "探索 DestinyPixel 七项工具：出生图谱、本命灵构、手相、面相、塔罗问事、灵签，以及五行水晶手串搭配。"],

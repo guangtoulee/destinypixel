@@ -40,7 +40,7 @@ test("language alternates only claim translations that exist in initial HTML", (
   });
   const traditional = makePageMetadata({ ...routeSeo.home, locale: "zh-TW" });
   assert.equal(traditional.alternates?.canonical, "/?locale=zh-TW");
-  assert.equal(traditional.alternates?.languages, undefined);
+  assert.equal(traditional.alternates?.languages?.["zh-Hant"], "/?locale=zh-TW");
 });
 
 test("standalone tools never inherit a homepage canonical or unrelated keywords", () => {
@@ -80,7 +80,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
   assert.ok(traditionalEntries.length > 0);
-  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/discover", "/compatibility", "/sticks", "/astrology", "/tarot", "/product-facts"].includes(new URL(entry.url).pathname))));
+  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/", "/discover", "/compatibility", "/sticks", "/astrology", "/tarot", "/product-facts"].includes(new URL(entry.url).pathname))));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {
@@ -110,7 +110,7 @@ test("sitemap modification dates describe content rather than request time", () 
 });
 
 test("the metaphysics sitemap excludes experiments while Prompt keeps its own inventory", () => {
-  const unrelated = ["/prompt", "/juben", "/daoyan", "/image", "/english", "/danci"];
+  const unrelated = ["/ultra", "/prompt", "/juben", "/daoyan", "/image", "/english", "/danci"];
   for (const entry of sitemap()) {
     const path = new URL(entry.url).pathname;
     assert.ok(!unrelated.some((prefix) => path === prefix || path.startsWith(`${prefix}/`)), path);

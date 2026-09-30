@@ -1,3 +1,5 @@
+import { currentHomeReportOffer } from "@/lib/product-facts-server";
+import { homeOffers } from "@/lib/home-offer";
 import { destinySupportEmail } from "@/lib/support-contact";
 import type { Metadata } from "next";
 import DestinyWhiteExperience from "@/components/destiny-white-experience";
@@ -23,6 +25,7 @@ export default async function Home({
 }) {
   const params = await searchParams;
   const initialLocale = normalizeReportLocale(params?.locale ?? "en");
+  const reportOffer = currentHomeReportOffer();
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -71,11 +74,7 @@ export default async function Home({
       publisher: {
         "@id": `${absoluteUrl("/")}#organization`,
       },
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-      },
+      offers: homeOffers(reportOffer, initialLocale, absoluteUrl(initialLocale === "en" ? "/#report" : `/?locale=${initialLocale}#report`)),
       featureList: [
         "AI birth chart and Bazi fusion report",
         "Free relationship compatibility with Bazi and tropical birth charts",
@@ -94,9 +93,9 @@ export default async function Home({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <DestinyWhiteExperience initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} />
+      <DestinyWhiteExperience reportOffer={reportOffer} initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} />
     </>
   );
 }

@@ -22,7 +22,7 @@ export default async function ProductFactsPage({ searchParams }: Props) {
       {offer ? <aside>{offer.available ? <><strong>{c.offer}: {offer.amount} {offer.currency}</strong><p>{c.priceNote}</p></> : c.unavailable}</aside> : null}
       <a className={styles.cta} href={t.url}>{c.open} →</a>
     </article>; })}</div>
-    <section className={styles.notes}><h2>{c.sources}</h2><p>{c.sourceNote}</p><a href={`/journal/fortune-stick-number-and-edition${locale === "en" ? "" : `?locale=${locale}`}`}>{locale === "zh" || locale === "zh-TW" ? "签号与版本说明" : locale === "ru" ? "Номера и версии жребиев" : "Stick numbers and editions"} →</a><h2>{c.limits}</h2><p>{c.boundary}</p><p>{c.privacy}</p></section>
+    <section className={styles.notes}><h2>{c.sources}</h2><p>{c.sourceNote}</p><a href={`/journal/fortune-stick-number-and-edition${locale === "en" ? "" : `?locale=${locale}`}`}>{locale === "zh-TW" ? "籤號與版本說明" : locale === "zh" ? "签号与版本说明" : locale === "ru" ? "Номера и версии жребиев" : "Stick numbers and editions"} →</a><h2>{c.limits}</h2><p>{c.boundary}</p><p>{c.privacy}</p></section>
     <footer className={styles.footer}><p>{c.scope}</p><nav aria-label="Machine-readable facts"><a href="/api/products.json">products.json</a><a href="/api/ai-profile.json">ai-profile.json</a><a href="/.well-known/agent-products.json">agent-products.json</a><a href="/llms.txt">llms.txt</a></nav></footer>
   </main>;
 }

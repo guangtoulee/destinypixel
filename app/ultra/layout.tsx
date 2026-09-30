@@ -3,6 +3,8 @@ import "../xingpan/xingpan.css";
 import "./ultra.css";
 
 export const metadata: Metadata = {
+  // Legacy client-only experiment remains usable, outside the search inventory.
+  robots: { index: false, follow: true },
   title: "ULTRA 命运意识｜真实八字算法 × DeepSeek AI",
   description:
     "DestinyPixel Ultra：以真太阳时、四柱八字、大运坐标与 DeepSeek 心理解析驱动的 3D 命运意识系统。",

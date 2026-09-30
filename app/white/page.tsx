@@ -1,3 +1,4 @@
+import { currentHomeReportOffer } from "@/lib/product-facts-server";
 import type { Metadata } from "next";
 import DestinyWhiteExperience from "@/components/destiny-white-experience";
 import { normalizeReportLocale } from "@/lib/report-i18n";
@@ -20,5 +21,5 @@ export default async function WhiteHome({
   const params = await searchParams;
   const initialLocale = normalizeReportLocale(params?.locale ?? "en");
 
-  return <DestinyWhiteExperience initialLocale={initialLocale} />;
+  return <DestinyWhiteExperience reportOffer={currentHomeReportOffer()} initialLocale={initialLocale} />;
 }

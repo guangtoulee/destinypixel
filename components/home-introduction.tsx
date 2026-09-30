@@ -10,7 +10,7 @@ const en = {
   choose: "What would you like to understand?", chooseLead: "No astrology knowledge needed. Choose a question and see what each experience offers.",
   cards: [
     { title: "My patterns and strengths", question: "Why do I keep reacting this way?", body: "Turn your birth date into one of 60 animal portraits, inspired by the BaZi Day Pillar. Read about personality, relationships and work, then see what fits your experience.", input: "Your birth date", action: "Find my Day Pillar & card", href: "/discover" },
-    { title: "The way we connect", question: "I want reassurance. They offer solutions. Sound familiar?", body: "Compare two birth charts through five-element symbolism and astrology. Get a free comparison of communication, affection and everyday rhythm, plus prompts to discuss together.", input: "Both birth dates, known times and cities", action: "Compare our BaZi & birth charts", href: "/compatibility" },
+    { title: "The way we connect", question: "I want reassurance. They offer solutions. Sound familiar?", body: "Start with a free comparison of day-pillar animals and five elements. If both birth times are known, add planetary perspectives on communication, affection and everyday rhythm.", input: "Both birth dates and cities · Birth times optional", action: "Compare our BaZi & birth charts", href: "/compatibility" },
     { title: "A question I can't put down", question: "What am I overlooking in this decision?", body: "Pause with a Chinese fortune-stick ritual. Draw a verse, read its meaning and consider what it brings to your question. Choose AI interpretation for more context.", input: "One question · No birth details needed", action: "Try Chinese fortune sticks", href: "/sticks" },
   ],
   perspective: "Ancient symbols. Room for your own judgment.",
@@ -30,7 +30,7 @@ const zh: typeof en = {
   choose: "此刻，你想多懂一点什么？", chooseLead: "不用先学会玄学术语。带着一个与你有关的问题，选一种适合的探索方式。",
   cards: [
     { title: "更了解自己", question: "为什么一遇到这类事情，我就会这样？", body: "用生日找到六十动物中对应的日柱意象，阅读性格、感情与事业中的不同侧面，再与你真实的经历对照。", input: "只需公历生日", action: "免费查日柱与五行", href: "/discover" },
-    { title: "更懂彼此", question: "我想要安慰，TA 却一直在讲道理？", body: "结合两人的八字五行与星盘，比较沟通、感情表达和日常节奏。免费查看相处图谱，也找到一个可以一起聊的话题。", input: "双方生日、已知出生时间与城市", action: "免费八字五行与星盘配对", href: "/compatibility" },
+    { title: "更懂彼此", question: "我想要安慰，TA 却一直在讲道理？", body: "先免费比较两人的日柱动物与五行；双方时辰已知时，再结合星盘看沟通、感情表达和日常节奏，找到可以一起聊的话题。", input: "双方生日与城市 · 时辰可选未知", action: "免费八字五行与星盘配对", href: "/compatibility" },
     { title: "给心事一个新角度", question: "这个决定里，有什么是我还没看见的？", body: "静下心，为挂念的事求一支签。读签文、看解意，再留意哪句话让你想到自己的处境；也可选择 AI 进一步解读。", input: "一个具体问题 · 不需要出生资料", action: "在线抽签，看看签意", href: "/sticks" },
   ],
   perspective: "让古老的象征，走进真实的生活。",
@@ -50,7 +50,7 @@ const ru: typeof en = {
   choose: "Что вы хотите понять лучше?", chooseLead: "Знание астрологии не требуется. Выберите близкий вам вопрос и узнайте, что предлагает каждый инструмент.",
   cards: [
     { title: "Мои привычки и сильные стороны", question: "Почему в таких ситуациях я реагирую именно так?", body: "Найдите один из 60 образов животных по столпу дня Ба-цзы. Прочтите о характере, отношениях и работе, а затем сравните со своим опытом.", input: "Только дата рождения", action: "Узнать свой образ", href: "/discover" },
-    { title: "Как мы понимаем друг друга", question: "Мне нужна поддержка, а мне предлагают решение?", body: "Сравните две карты рождения через пять элементов и астрологию. Получите бесплатное сопоставление общения, выражения чувств и повседневного ритма, а также темы для разговора.", input: "Даты, известное время и города рождения обоих", action: "Узнать о наших отношениях", href: "/compatibility" },
+    { title: "Как мы понимаем друг друга", question: "Мне нужна поддержка, а мне предлагают решение?", body: "Начните с бесплатного сравнения животных дня и пяти элементов. Если известны оба времени рождения, добавьте планетарный взгляд на общение, чувства и повседневный ритм.", input: "Даты и города рождения обоих · Время можно не знать", action: "Узнать о наших отношениях", href: "/compatibility" },
     { title: "Вопрос, который не отпускает", question: "Что я упускаю, принимая это решение?", body: "Остановитесь на минуту и вытяните китайский храмовый жребий. Прочтите текст и толкование, соотнесите их со своим вопросом. При желании добавьте разбор ИИ.", input: "Один вопрос · Данные рождения не нужны", action: "Обратиться к жребию", href: "/sticks" },
   ],
   perspective: "Древние символы. Место для вашего суждения.",
