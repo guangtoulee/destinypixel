@@ -3,6 +3,15 @@ import assert from "node:assert/strict";
 import { POST } from "@/app/api/compatibility/route";
 const body = { people: [{ birthDate: "1991-03-21", birthTime: "10:35", cityId: "new-york-us" }, { birthDate: "1993-10-04", birthTime: "17:20", cityId: "shanghai-cn" }], locale: "en", consent: true, mode: "calculate" };
 function request(value: unknown = body, origin = "https://example.test") { return new Request("https://example.test/api/compatibility", { method: "POST", headers: { origin, "Content-Type": "application/json", "x-forwarded-for": "192.0.2.8" }, body: JSON.stringify(value) }); }
+test("unknown-time API returns a private partial chart with no invented hour", async () => {
+  const response = await POST(request({...body,people:body.people.map(p=>({...p,timeKnown:false,birthTime:""}))}));
+  assert.equal(response.status,200);
+  assert.equal(response.headers.get("cache-control"),"private, no-store");
+  const {result}=await response.json();
+  assert.equal(result.mode,"date-only");
+  assert.equal(result.dimensions.length,2);
+  assert.ok(result.people.every((p:{pillars:{hour:unknown};planets:unknown[]})=>p.pillars.hour===null && p.planets.length===0));
+});
 test("calculation is private, rejects cross-site, oversized and invalid input", async () => {
   const good = await POST(request());
   assert.equal(good.status, 200); assert.equal(good.headers.get("cache-control"), "private, no-store");

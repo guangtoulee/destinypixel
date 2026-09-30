@@ -48,13 +48,15 @@ export async function requestCompatibilityCalculation(
         throw new CompatibilityRequestError(response.status >= 500 ? "unavailable" : "invalid", detail);
       }
       const data = await response.json();
-      if (data?.result?.version !== "relationship-v2" || !Number.isFinite(data.result.score)
+      const dateOnly = data?.result?.version === "relationship-v3-date" && data.result.mode === "date-only";
+      const full = data?.result?.version === "relationship-v2" && (data.result.mode === undefined || data.result.mode === "full");
+      if ((!dateOnly && !full) || !Number.isFinite(data.result.score)
         || !Array.isArray(data.result.people) || data.result.people.length !== 2
-        || !Array.isArray(data.result.dimensions) || data.result.dimensions.length !== 4
+        || !Array.isArray(data.result.dimensions) || data.result.dimensions.length !== (dateOnly ? 2 : 4)
         || !data.result.baziConnection || !data.result.people.every((person: CompatibilityResult["people"][number]) => person?.animal?.name)) {
         throw new TransientFailure();
       }
-      return data.result;
+      return { ...data.result, mode: dateOnly ? "date-only" : "full" };
     } catch (error) {
       if (signal.aborted) throw signal.reason;
       if (error instanceof CompatibilityRequestError) throw error;

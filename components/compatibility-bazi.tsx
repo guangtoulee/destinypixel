@@ -1,3 +1,4 @@
+import { compatibilityTimeCopy } from "@/lib/compatibility/time-copy";
 import { Heart, Sprout } from "lucide-react";
 import type { CompatibilityResult } from "@/lib/compatibility/model";
 import { fiveElements } from "@/lib/compatibility/elements";
@@ -22,6 +23,6 @@ export default function CompatibilityBazi({ result, locale, copy }: { result: Co
     <details className={styles.elementDetails}><summary>{c.balance}</summary><div className={styles.elementChart}>
       <div className={styles.elementChartLegend}><span>{copy.people[0]}</span><span>{copy.people[1]}</span></div>
       {fiveElements.map(element => <div className={styles.elementRow} key={element}><strong>{copy.elements[element]}</strong>{result.people.map((p, i) => { const percent = Math.round(p.elements[element] / Object.values(p.elements).reduce((a, b) => a + b, 0) * 1000) / 10; return <div key={i}><div><i data-element={element} style={{ width: `${percent}%` }} /></div><span>{percent}%</span></div>; })}</div>)}
-      <p>{c.balanceNote}</p></div></details><p className={styles.baziNote}>{c.boundary}</p>
+      <p>{result.mode === "date-only" ? compatibilityTimeCopy(locale).balanceNote : c.balanceNote}</p></div></details><p className={styles.baziNote}>{c.boundary}</p>
   </section>;
 }

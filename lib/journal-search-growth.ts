@@ -1,3 +1,4 @@
+import { birthTimeArticle } from "./compatibility/birth-time-article";
 import type { JournalSourceArticle, JournalTranslation } from "./journal";
 
 type Edition = {
@@ -58,48 +59,7 @@ const entries: Entry[] = [
   {
     slug: "compatibility-without-birth-time", relatedSlug: "bazi-vs-chinese-zodiac-compatibility",
     sources: [{ label: "IANA · Time Zone Database / 时区资料 / База часовых поясов", href: "https://www.iana.org/time-zones" }, { label: "DestinyPixel · Birth details / 出生资料 / Данные рождения", href: "/journal/prepare-birth-date-time-place" }],
-    en: {
-      title: "Can you check BaZi compatibility without a birth time?",
-      description: "No birth time? Learn what a birthday-only reading can show, why guessing noon changes the chart, and which free DestinyPixel tools you can use instead.",
-      topic: "Before you compare", introduction: "You know both birthdays, but only one birth time. It is tempting to enter noon and get on with the reading, especially when the form will not continue without it. The problem is that a convenient placeholder can produce a very confident-looking answer. Here is how to explore what you do know, keep missing information visible and avoid presenting an estimate as something you found in a birth record.",
-      takeaway: "The current compatibility form needs both recorded birth times and supported birth cities. A birthday-only card is a narrower starting point, not a substitute for the missing hour.",
-      sections: [
-        ["What changes when the hour is missing?", "The hour is one of the four BaZi pillars. An unknown time therefore leaves part of the calendar structure unresolved. Planetary positions also depend on the instant being calculated; their sensitivity is not identical, and a birthday is not a complete instant without time and place. More importantly, you cannot recover missing information just by reading a persuasive paragraph. A chart that feels familiar is not proof that the selected hour was right. Separate the question of which input is recorded from the question of whether an interpretation is interesting, and do not let the second question answer the first."],
-        ["Why not simply enter 12:00?", "Noon is a convention some people use for an explicitly limited exploration. It is not a recovered birth time, and the current DestinyPixel couple form does not offer a dedicated unknown-time mode. Filling noon into its required field would calculate a chart for that assumed time. The interface would not make the missing information disappear. If you are comparing possibilities privately, label every assumption and avoid saving a guessed chart as an accurate personal record. Do not choose the time that gives the most flattering score, since that changes the question from understanding the input to selecting the answer you wanted."],
-        ["Where can you look for a better record?", "If available, start with a birth certificate, a contemporaneous hospital record or a family note made around the birth. You do not need to upload private documents to DestinyPixel. Copy the local clock time and write down its source separately. If a relative remembers a range, keep the range: between seven and eight is different from an exact seven thirty. Also confirm whether the written date is Gregorian or lunar and whether an AM or PM label was omitted. A time that looks precise may still have been rounded, so keep uncertainty visible instead of adding invented minutes."],
-        ["Keep time attached to its original place", "Use the birth city and its local recorded time, not your current city or the time displayed on your phone today. Historical clock rules and daylight saving can change the conversion into a single instant. The IANA Time Zone Database documents time-zone histories; it does not certify an individual birth record. DestinyPixel applies its supported city’s time zone and separate solar-time correction internally, so do not pre-convert the input to Beijing time or adjust it a second time yourself. If the form reports a repeated or nonexistent clock time, investigate that record rather than changing the hour to silence the message."],
-        ["What can you explore with only a date?", "The free Day Pillar card accepts a birthday and offers a date-based calendar character. It provides a smaller introduction to the sixty portraits without pretending to supply the missing hour or a complete couple comparison. Treat that as a date-only starting point; a birth close to a day boundary needs extra care when comparing systems that use different clock or solar-time conventions. You can also use the question-based fortune-stick experience without either partner’s birth data. For a relationship question, focus on something you can discuss or observe rather than asking the tool to reveal your partner’s private thoughts."],
-        ["A practical choice for two people", "Make a short note for each person: verified date, verified time or remembered range, birthplace and unresolved questions. If both records are clear and the cities are supported, use the free compatibility form. If an hour remains unknown, read your date-based cards separately and compare actual habits: how do you ask for help, show affection or ask for space? Those questions are available immediately and do not depend on a missing certificate. Return to the fuller comparison when the input improves. A smaller honest reading is more useful than a precise-looking result whose most important assumptions have been forgotten."],
-      ], action: { label: "Start with a free birthday card", href: "/day-pillar" },
-    },
-    zh: {
-      title: "不知道出生时间，能做八字合婚吗？先分清可查与不可猜的部分",
-      description: "只有生日、没有时辰怎么办？解释八字配对的输入要求、为什么不能随便填中午，以及日柱卡和抽签能提供哪些免费替代体验。",
-      topic: "配对前的准备", introduction: "两个人的生日都知道，却只有一个人记得出生时间。看到表单必须填时辰，很容易想：先写中午十二点看看吧。问题是，一个随手填入的时间，也可能得到一份看起来非常肯定的结果。先分清哪些资料有记录、哪些仍然不确定，才能知道自己看到的究竟是什么。",
-      takeaway: "当前情感匹配需要双方记录中的出生时间及支持的出生城市。只有生日时，可以从日柱卡开始，但不能把它当成完整合婚。",
-      sections: [
-        ["缺少时辰，会少掉什么？", "时柱是八字四柱的一部分，缺少出生时间就有一部分历法结构无法确定。行星位置也与具体时刻有关，各行星对时间的敏感程度并不相同。更关键的是，一段读起来很像你的文字，不能倒过来证明某个时辰正确。要把“输入来自什么记录”和“解释是否有启发”分开，不能让后者替前者作答。"],
-        ["为什么不建议直接填12:00？", "中午可以被明确标记为一种探索假设，却不是找回的出生时间。当前本站双人匹配没有独立的“未知时间”模式，填入中午就会按中午计算，缺失的信息并不会因此消失。即使私下比较几种可能，也应注明假设，不要把猜测存成准确出生记录。尤其不要挑分数最高的那个时间，那是在选择想要的答案，而不是核实资料。"],
-        ["可以去哪里找更可靠的时间？", "如果能找到，先看出生证明、当时的医院记录或同期家庭笔记，不必把私人文件上传到本站。抄下原记录中的当地时间，另外记住来源。亲属只记得七点到八点，就保留这个范围，不要补成精确的七点半。同时确认日期用的是公历还是农历，以及有没有漏掉上午、下午。精确到分钟的数字也可能经过取整，不要人为增加确定性。"],
-        ["出生时间必须和出生地一起保留", "填写出生地当时的本地钟表时间，不是现在居住城市的时间。历史时区和夏令时会影响具体时刻的换算；IANA时区数据库记录地区时区历史，但不为某个人的出生证明作认证。本站会根据支持的城市处理时区并单独进行太阳时修正，不要先转北京时间或自行重复校时。遇到重复或不存在的钟表时刻提示，应核查记录，不要随意改小时绕过提示。"],
-        ["只有日期，现在可以玩什么？", "免费日柱卡接受生日，给出按日期得到的历法意象，是认识六十种动物角色的较小入口，不会补出缺失的时柱，也不等于双人合婚。出生在换日边界附近时，还要注意不同系统的钟表时间和太阳时约定。也可以使用不要求生日的抽签体验，把感情问题放在自己能观察、能沟通的事情上，而不是让工具猜测对方没说出口的想法。"],
-        ["两个人可以这样安排下一步", "分别写清楚：已核实的生日、准确时间或记忆范围、出生地，以及还不确定的地方。双方记录清楚且城市受支持，再使用匹配表单；时间仍未知，就先各自读日柱卡，讨论怎样求助、怎样表达关心、怎样需要独处。这些对话不需要等一张证明。资料更完整后再看完整比较，通常比忘记假设、只记住分数更有帮助。"],
-      ], action: { label: "先领取免费日柱卡", href: "/day-pillar?locale=zh" },
-    },
-    ru: {
-      title: "Можно ли сравнить бацзы, если время рождения неизвестно?",
-      description: "Что доступно по одной дате, почему полдень не заменяет неизвестное время и с каких бесплатных инструментов DestinyPixel начать.",
-      topic: "Подготовка к сравнению", introduction: "Вы знаете обе даты рождения, но время известно лишь для одного человека. Хочется вписать полдень и продолжить. Однако удобная заглушка способна дать очень уверенно выглядящий результат. Разберём, что можно исследовать сейчас, как сохранить неизвестное неизвестным и не выдать предположение за запись из документа.",
-      takeaway: "Нынешняя форма совместимости требует время рождения обоих людей и поддерживаемые города. Карта по дате — более узкое знакомство с системой, а не замена неизвестному часу.",
-      sections: [
-        ["Что теряется без часа?", "Час — один из четырёх столпов бацзы, поэтому часть структуры остаётся неопределённой. Положения планет тоже зависят от момента расчёта, хотя чувствительность у них различается. Убедительный текст не восстанавливает недостающие сведения. Даже если описание кажется знакомым, это не доказывает правильность выбранного часа. Отделяйте происхождение исходных данных от интереса к интерпретации."],
-        ["Почему нельзя просто поставить 12:00?", "Полдень может быть явно обозначенным предположением для ограниченного исследования, но не найденным временем рождения. У текущей формы DestinyPixel нет специального режима неизвестного времени: введённый полдень будет использован как время расчёта. При личном сравнении вариантов отмечайте каждую гипотезу и не сохраняйте её как точную запись. Не выбирайте час по самому приятному баллу: так вы подбираете желаемый ответ, а не проверяете данные."],
-        ["Где искать более надёжную запись?", "Если доступны, проверьте свидетельство, больничную запись или семейную заметку того времени. Загружать личные документы на сайт не требуется. Сохраните местное время и отдельно его источник. Воспоминание «между семью и восемью» не превращайте в точные семь тридцать. Уточните календарь, утро или вечер и возможное округление: наличие минут в записи ещё не гарантирует точности."],
-        ["Сохраняйте связь времени с местом", "Используйте местное время в городе рождения, а не нынешнее место жительства. Исторические часовые пояса и летнее время влияют на перевод в конкретный момент. База IANA описывает историю часовых поясов, но не удостоверяет личный документ. Сайт сам применяет правила поддерживаемого города и отдельную поправку солнечного времени. Не переводите данные заранее в пекинское время. При сообщении о повторяющемся или несуществующем времени исследуйте запись, а не меняйте час ради прохождения формы."],
-        ["Что доступно по одной дате?", "Бесплатная карта столпа дня принимает дату и даёт календарный образ, знакомя с шестьюдесятью персонажами. Она не восстанавливает час и не заменяет сравнение пары. При рождении около границы суток особенно важны различия между календарными и солнечными правилами разных систем. Оракул палочек вообще не требует данных рождения: вопрос об отношениях можно связать с наблюдаемой ситуацией, а не с попыткой узнать тайные мысли партнёра."],
-        ["Как выбрать следующий шаг вдвоём?", "Запишите для каждого подтверждённую дату, время или известный диапазон, место и оставшиеся вопросы. Если данные ясны и города поддерживаются, переходите к сравнению. Если час неизвестен, прочитайте карты дня отдельно и обсудите реальные привычки: как просите помощи, проявляете заботу и обозначаете потребность в тишине. Такой разговор возможен уже сейчас. К подробному расчёту вернитесь, когда появятся более полные сведения."],
-      ], action: { label: "Карта по дате рождения (на английском)", href: "/day-pillar" },
-    },
+    ...birthTimeArticle,
   },
   {
     slug: "how-to-ask-fortune-sticks", relatedSlug: "fortune-stick-number-and-edition",
@@ -212,7 +172,7 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
 }
 
 export const searchGrowthArticles: JournalSourceArticle[] = entries.map(entry => ({
-  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: "2026-09-20",
+  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-09-30" : "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
 }));
 export const searchGrowthRussian: Record<string, JournalTranslation> = Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")]));

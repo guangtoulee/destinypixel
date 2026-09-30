@@ -1,3 +1,4 @@
+import { productFactsLocales, productFactsHref, productFactsAlternates, productFactsUpdatedAt } from "@/lib/product-facts";
 import { celestialContentUpdatedAt } from "@/lib/celestial/search-content";
 import { celestialLocales, celestialHref, celestialAlternates } from "@/lib/celestial/copy";
 import { getPillarImagePath } from "@/lib/archetype-assets";
@@ -93,9 +94,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-23",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
     const compatibilityLanguages = Object.fromEntries(Object.entries(compatibilityAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
-    const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
+    const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), lastModified: productFactsUpdatedAt, priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
     const celestialRoutes: MetadataRoute.Sitemap = ["/astrology", "/tarot"].flatMap(path => celestialLocales.map(locale => ({url:absoluteUrl(celestialHref(path,locale)),lastModified:celestialContentUpdatedAt,priority:0.87,changeFrequency:"monthly",alternates:{languages:Object.fromEntries(Object.entries(celestialAlternates(path)).map(([l,href])=>[l,absoluteUrl(href)]))}})));
-    return [...celestialRoutes, ...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
+    const factsRoutes: MetadataRoute.Sitemap = productFactsLocales.map(locale => ({ url: absoluteUrl(productFactsHref(locale)), lastModified: productFactsUpdatedAt, priority: 0.5, changeFrequency: "monthly", alternates: { languages: productFactsAlternates() } }));
+    return [...factsRoutes, ...celestialRoutes, ...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only
     return [

@@ -1,7 +1,9 @@
 import { destinySupportEmail } from "@/lib/support-contact";
 import { absoluteUrl } from "@/lib/seo";
 
-export const runtime = "edge";
+import { currentProductCatalog } from "@/lib/product-facts-server";
+import { compatibilityTimeCopy } from "@/lib/compatibility/time-copy";
+export const dynamic = "force-dynamic";
 
 const content = `# DestinyPixel
 
@@ -38,15 +40,7 @@ Use plain terms such as birth chart reading, natal chart, Bazi calculator, Four 
 Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It maps existing Bazi outputs into deterministic interactive geometry and ability-resonance routes. It is not an established traditional totem doctrine, a scientific ability test, or a fixed career classification.
 
 ## Product Methods
-The natal chart calculator uses a tropical zodiac and Whole Sign houses, with Sun, Moon, Ascendant, ten celestial bodies and major aspects within a six-degree orb. Birth time and place are required. AI does not calculate positions; an optional detailed reading interprets them.
-
-The tarot studio offers a complete 78-card Rider–Waite–Smith deck, one-card, three-card, five-card relationship, five-card choice and ten-card Celtic Cross spreads, plus a free table. Visitors shuffle, choose, place and reveal their own cards. Local card meanings need no AI. Optional AI uses the revealed cards and the visitor’s question and context. Both tools are free to explore, with AI usage limits; login is needed to save private readings, not to try the tools.
-
-The free compatibility tool compares two people using their local birth dates, times and supported cities. Its deterministic connection index blends a Bazi element comparison (30%) with planetary comparisons (70%), on a 60–100 symbolic scale. The number is not a probability of relationship success. Four Pillars, five-element interaction and the original 60 animal portraits accompany the result. Optional DeepSeek prose does not set the score. Calculations do not include houses or rising signs.
-
-The fortune-stick tool offers five traditions and number lookup within the site. Its library combines selected traditional material with modern symbolic verses and explanations, identified by the source note. It is not a complete transcription of every temple's numbered collection, and different language editions may use adapted readings rather than line-by-line translations. Guanyin, Guandi and Wong Tai Sin collections contain 100 entries each; Yuelao and Wealth Gods contain 60 each.
-
-Palm and face photos are optional local visual references. AI interprets the features the visitor describes, not the image.
+PRODUCT_FACTS
 
 ## Supported Languages
 Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The astrology, tarot, compatibility and fortune-stick pages, the Journal and each of its articles provide server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. Journal language alternates and the sitemap list these editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
@@ -62,10 +56,22 @@ DestinyPixel is for reflection, culture, and entertainment-informed self-guidanc
 `;
 
 export async function GET() {
-  return new Response(content, {
+  const catalog = currentProductCatalog();
+  const methods = [
+    `Public product facts: ${catalog.documentationUrl}`,
+    `JSON catalog: ${catalog.catalogUrl}`,
+    `AI profile: ${absoluteUrl("/api/ai-profile.json")}`,
+    `Read-only agent catalog: ${absoluteUrl("/.well-known/agent-products.json")}`,
+    ...catalog.products.map(p => { const t = p.translations.en, offer = "completeReport" in p.pricing ? p.pricing.completeReport : undefined; return `### ${t.name}\n${t.url}\n${t.purpose}\nInputs: ${t.inputs}\nAI: ${t.ai}\nSaving: ${t.saving}\nPricing: ${offer ? offer.available ? `Free preview; optional complete personal report ${offer.amount} USD, one-time.` : "Free preview; public complete-report checkout currently unavailable." : "Free, with usage limits where stated."}`; }),
+    compatibilityTimeCopy("en").method,
+    "With both times known, the compatibility index blends BaZi (30%) and planetary comparisons (70%) across four dimensions. It does not compare houses or rising signs.",
+    catalog.fortuneSticks.sourceNotes.en,
+    catalog.policies.en.catalogScope,
+  ].join("\n\n");
+  return new Response(content.replace("PRODUCT_FACTS", methods), {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, s-maxage=86400",
+      "Cache-Control": "public, max-age=60, s-maxage=300",
     },
   });
 }

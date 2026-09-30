@@ -29,7 +29,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "what-is-bazi-birth-chart",
-    updatedAt: "2026-09-29",
+    updatedAt: "2026-09-30",
     title: "What Is a BaZi Birth Chart? Four Pillars Explained",
     description:
       "BaZi (Four Pillars of Destiny) is a Chinese birth chart from year, month, day and hour. Learn what each pillar means—and try a free Day Pillar card or deeper tools.",
@@ -74,7 +74,7 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "How do I try DestinyPixel free?",
         answer:
-          "Start with a free Day Pillar card. Open Birth Totem for a visual chart, or love compatibility when two people both have birth times.",
+          "Start with a free Day Pillar card. Open Birth Totem for a visual chart, or love compatibility with either known or unknown birth times.",
       },
     ],
     cta: { label: "Free Day Pillar card", href: "/day-pillar" },
@@ -84,7 +84,7 @@ export const seoGuides: SeoGuide[] = [
       {
         label: "Love compatibility",
         href: "/compatibility",
-        note: "Both people need birth times.",
+        note: "Birth times are optional; unknown times use a limited date-based comparison.",
       },
     ],
     disclaimer:
@@ -245,6 +245,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "bazi-love-compatibility",
+    updatedAt: "2026-09-30",
     title: "BaZi Love Compatibility: How Four Pillars Compare Two People | DestinyPixel",
     description:
       "What BaZi love compatibility means, why birth times matter, and how DestinyPixel mixes BaZi with birth-chart dimensions—then try the free compare tool.",
@@ -264,12 +265,12 @@ export const seoGuides: SeoGuide[] = [
         question:
           "What does DestinyPixel compare (personality / communication / affection / everyday rhythm)?",
         answer:
-          "The free tool scores personality, communication, affection and everyday rhythm using day-element relationships, the visible five-element distribution and selected Sun, Moon, Mercury, Venus and Mars placements. It also compares two original animal portraits and, when available, adds a short AI reflection without letting AI set the scores.",
+          "With both birth times supplied, the free tool scores personality, communication, affection and everyday rhythm using day-element relationships, the visible five-element distribution and selected Sun, Moon, Mercury, Venus and Mars placements. It also compares two original animal portraits and, when available, adds a short AI reflection without letting AI set the scores.",
       },
       {
-        question: "Why do both people need known birth times?",
+        question: "Can we compare without birth times?",
         answer:
-          "This edition needs a known local birth time and a supported city for each person; it will not invent a missing hour. Guessing can move the Moon and the hour pillar.",
+          "Yes. Each person can mark their time unknown; a supported birth city is still required. Missing hour pillars and uncertain solar-term pillars are omitted. Date-based scoring uses only available BaZi information; sampled possible planetary signs are shown separately, not used for aspects. Both known times enable the full comparison.",
         link: {
           label: "Prepare birth date, time and place",
           href: "/journal/prepare-birth-date-time-place",
@@ -283,7 +284,7 @@ export const seoGuides: SeoGuide[] = [
       {
         question: "BaZi vs Western synastry—how this page’s tool mixes them",
         answer:
-          "This tool gives BaZi signals 30% and selected tropical placements 70% of each dimension: day-element affinity informs the first three dimensions, and similarity in visible five-element distribution informs everyday rhythm. The animal stories and directional element explanation add context; they are not extra numeric scoring factors.",
+          "With both times supplied, this tool gives BaZi signals 30% and selected tropical placements 70% of each dimension: day-element affinity informs the first three dimensions, and similarity in visible five-element distribution informs everyday rhythm. The animal stories and directional element explanation add context; they are not extra numeric scoring factors.",
       },
       {
         question: "What the tool does not do",
@@ -298,7 +299,7 @@ export const seoGuides: SeoGuide[] = [
       {
         label: "Free Day Pillar card",
         href: "/day-pillar",
-        note: "One person, date only; compare still needs two birth times.",
+        note: "One person, date only; the couple tool also supports explicitly unknown birth times.",
       },
     ],
     disclaimer:

@@ -1,3 +1,4 @@
+import { compatibilityTimeCopy } from "@/lib/compatibility/time-copy";
 import { discoverySearchContent } from "./discovery-search-content";
 import { toTraditional } from "@/lib/journal-locales";
 import type { ContentLocale, ReportLocale } from "@/lib/report-i18n";
@@ -195,7 +196,7 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     sections: [
       {
         title: "Start with your two animals",
-        body: "Each day pillar maps to one of DestinyPixel’s 60 original animal portraits. The BaZi comparison looks at the two day-stem elements and their symbolic nourishing, controlling or shared relationship. The four-pillar chart also shows the relative distribution of its eight visible elements—not a full Day Master strength or useful-element assessment.",
+        body: "Each day pillar maps to one of DestinyPixel’s 60 original animal portraits. The BaZi comparison looks at the two day-stem elements and their symbolic nourishing, controlling or shared relationship. With both times known, the four-pillar chart also shows the relative distribution of its eight visible elements—not a full Day Master strength or useful-element assessment.",
       },
       {
         title: "Then compare four themes",
@@ -230,7 +231,7 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     sections: [
       {
         title: "先认识你们的日柱动物",
-        body: "每个日柱对应 DestinyPixel 六十种原创动物意象之一。八字部分比较双方日干五行的相生、相克或同气关系，再展示四个天干与四个地支本气的相对分布。这不是完整的日主强弱、喜用神判断，也不能用五行数量直接判定婚姻好坏。",
+        body: "每个日柱对应 DestinyPixel 六十种原创动物意象之一。八字部分比较双方日干五行的相生、相克或同气关系，时间齐全时展示四个天干与四个地支本气的相对分布。这不是完整的日主强弱、喜用神判断，也不能用五行数量直接判定婚姻好坏。",
       },
       {
         title: "再看四种相处维度",
@@ -264,7 +265,7 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     sections: [
       {
         title: "Сначала — ваши два животных",
-        body: "Каждому столпу дня соответствует один из 60 авторских образов DestinyPixel. Сравнение Ба-цзы рассматривает элементы стволов дня: их символическую поддержку, сдерживание или совпадение. Также показано относительное распределение восьми видимых элементов четырёх столпов. Это не полный анализ силы карты или полезных элементов.",
+        body: "Каждому столпу дня соответствует один из 60 авторских образов DestinyPixel. Сравнение Ба-цзы рассматривает элементы стволов дня: их символическую поддержку, сдерживание или совпадение. При известных временах показано распределение восьми видимых элементов четырёх столпов. Это не полный анализ силы карты или полезных элементов.",
       },
       {
         title: "Затем — четыре темы отношений",
@@ -289,6 +290,15 @@ const compatibility: Record<ContentLocale, ProductSearchCopy> = {
     ],
   },
 };
+
+for (const locale of ["en", "zh", "ru"] as const) {
+  const c = compatibility[locale], t = compatibilityTimeCopy(locale);
+  c.intro[0] = t.intro;
+  c.intro[1] = t.note;
+  c.sections[0].body += " " + t.balanceNote;
+  c.sections[1].body = t.method + " " + c.sections[1].body;
+  c.sections[2].body = t.timeNote + " " + t.basis;
+}
 
 const productCopy: Record<SearchProduct, Record<ContentLocale, ProductSearchCopy>> = { sticks, compatibility, discovery: discoverySearchContent };
 

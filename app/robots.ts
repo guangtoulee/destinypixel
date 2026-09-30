@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
+        // Public GET catalogs only; personal, AI and commerce APIs stay blocked.
+        allow: ["/", "/api/products.json$", "/api/ai-profile.json$"],
         disallow: [
           "/api/",
           "/report/",

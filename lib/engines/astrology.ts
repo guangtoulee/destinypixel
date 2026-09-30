@@ -79,6 +79,11 @@ function placementFor(
   };
 }
 
+/** UTC ephemerides only; an interval sample is not a recovered birth instant. */
+export function planetaryPositionsAt(utc: Date, selected?: readonly string[]): PlanetPlacement[] {
+  return bodies.filter(([body]) => !selected || selected.includes(body)).map(body => placementFor(body, utc));
+}
+
 function aspectBetween(a: PlanetPlacement, b: PlanetPlacement) {
   const diff = Math.abs(a.longitude - b.longitude);
   const angle = Math.min(diff, 360 - diff);

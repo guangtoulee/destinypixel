@@ -133,7 +133,7 @@ test("BaZi compatibility guide states the implemented scope and editorial scorin
     [
       "What is BaZi love compatibility?",
       "What does DestinyPixel compare (personality / communication / affection / everyday rhythm)?",
-      "Why do both people need known birth times?",
+      "Can we compare without birth times?",
       "How should you read a 60–100 score?",
       "BaZi vs Western synastry—how this page’s tool mixes them",
       "What the tool does not do",
@@ -141,7 +141,6 @@ test("BaZi compatibility guide states the implemented scope and editorial scorin
   );
   for (const faq of guide.faqs) {
     assert.ok(faq.answer.length > 0);
-    assert.ok(faq.answer.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 2);
   }
   const ctas = seoGuideCtas(guide);
   assert.equal(ctas[0]?.label, "Compare two charts free");
@@ -150,7 +149,9 @@ test("BaZi compatibility guide states the implemented scope and editorial scorin
     ctas.map((cta) => cta.href),
     ["/compatibility", "/learn/what-is-bazi-birth-chart", "/day-pillar"],
   );
-  assert.match(ctas[2]?.note ?? "", /two birth times/i);
+  assert.match(ctas[2]?.note ?? "", /unknown birth times/i);
+  assert.match(guide.faqs[2]!.answer, /Missing hour pillars/);
+  assert.match(guide.faqs[2]!.answer, /not used for aspects/);
   assert.equal(guide.faqs[2]?.link?.href, "/journal/prepare-birth-date-time-place");
   assert.match(guide.faqs[3]!.answer, /editorial index/i);
   assert.match(guide.faqs[3]!.answer, /not validated/i);

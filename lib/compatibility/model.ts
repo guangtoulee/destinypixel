@@ -1,3 +1,4 @@
+import { dateOnlyChart, type DateSky } from "./date-window";
 import { animalPortrait } from "./animals";
 import { elementConnection, type ElementConnection } from "./elements";
 import { calculateBaziEngine } from "@/lib/engines/bazi";
@@ -9,34 +10,39 @@ import { normalizeReportLocale, type ReportLocale } from "@/lib/report-i18n";
 
 export const dimensionIds = ["personality", "communication", "affection", "rhythm"] as const;
 export type Dimension = typeof dimensionIds[number];
-export type PersonInput = { birthDate: string; birthTime: string; cityId: string };
+export type PersonInput = { birthDate: string; birthTime: string; cityId: string; timeKnown?: boolean };
 export type CompatibilityInput = { people: [PersonInput, PersonInput]; locale: ReportLocale; consent: true; mode: "calculate" | "interpret" };
 export type SkyElement = "fire" | "earth" | "air" | "water";
 export type Placement = { body: string; sign: string; signCn: string; longitude: number; element: SkyElement };
-export type Portrait = { animal: ReturnType<typeof animalPortrait>; pillars: { year: string; month: string; day: string; hour: string }; dayElement: string; elements: Record<string, number>; planets: Placement[] };
+export type Portrait = { animal: ReturnType<typeof animalPortrait>; pillars: { year: string | null; month: string | null; day: string; hour: string | null }; dayElement: string; elements: Record<string, number>; planets: Placement[]; timeKnown?: boolean; dateSky?: DateSky[] };
 export type DimensionResult = { id: Dimension; score: number; tone: "flow" | "contrast" | "mixed"; bazi: number; sky: number };
-export type CompatibilityResult = { version: "relationship-v2"; baziConnection: ElementConnection; score: number; people: [Portrait, Portrait]; dimensions: DimensionResult[] };
+export type CompatibilityResult = { version: "relationship-v2" | "relationship-v3-date"; mode: "full" | "date-only"; baziConnection: ElementConnection; score: number; people: [Portrait, Portrait]; dimensions: DimensionResult[] };
 
 export function parseCompatibilityInput(value: Record<string, unknown>): CompatibilityInput {
   const locale = normalizeReportLocale(typeof value.locale === "string" ? value.locale : "en");
   if (value.consent !== true || !Array.isArray(value.people) || value.people.length !== 2 || !["calculate", "interpret"].includes(String(value.mode))) throw new Error("INVALID_INPUT");
   const people = value.people.map((p: unknown) => {
     if (!p || typeof p !== "object") throw new Error("INVALID_INPUT");
-    const { birthDate, birthTime, cityId } = p as Record<string, unknown>;
-    if (typeof birthDate !== "string" || typeof birthTime !== "string" || typeof cityId !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(birthDate) || !/^\d{2}:\d{2}$/.test(birthTime) || !cities.some(c => c.id === cityId)) throw new Error("INVALID_INPUT");
+    const { birthDate, birthTime, cityId, timeKnown } = p as Record<string, unknown>;
+    if (timeKnown !== undefined && typeof timeKnown !== "boolean") throw new Error("INVALID_INPUT");
+    if (typeof birthDate !== "string" || typeof cityId !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(birthDate) || (timeKnown !== false && (typeof birthTime !== "string" || !/^\d{2}:\d{2}$/.test(birthTime))) || !cities.some(c => c.id === cityId)) throw new Error("INVALID_INPUT");
     if (birthDate > new Date().toISOString().slice(0, 10)) throw new BirthTimeValidationError("invalid-date-time", locale);
-    return { birthDate, birthTime, cityId };
+    return { birthDate, birthTime: timeKnown === false ? "" : birthTime as string, cityId, timeKnown: timeKnown !== false };
   }) as [PersonInput, PersonInput];
   return { people, locale, consent: true, mode: value.mode as CompatibilityInput["mode"] };
 }
 
 const skyElements: SkyElement[] = ["fire", "earth", "air", "water"];
 function portrait(person: PersonInput, locale: ReportLocale): Portrait {
+  if (person.timeKnown === false) {
+    const chart = dateOnlyChart(person.birthDate, person.cityId, locale);
+    return { ...chart, animal: animalPortrait(chart.pillars.day, locale), planets: [], timeKnown: false };
+  }
   // Gender affects luck-cycle direction only. No luck-cycle or gender inference is used here.
   const input: BirthInput = { ...person, name: "", gender: "female", locale, city: cities.find(c => c.id === person.cityId)! };
   const bazi = calculateBaziEngine(input);
   const astro = calculateAstrologyEngine(input, bazi.trueSolarTime);
-  return { animal: animalPortrait(bazi.pillars.day, locale), pillars: bazi.pillars, dayElement: stemElements[bazi.dayMaster], elements: bazi.elementBalance,
+  return { timeKnown: true, animal: animalPortrait(bazi.pillars.day, locale), pillars: bazi.pillars, dayElement: stemElements[bazi.dayMaster], elements: bazi.elementBalance,
     planets: astro.placements.filter(p => ["Sun", "Moon", "Mercury", "Venus", "Mars"].includes(p.body)).map(p => ({ body: p.body, sign: p.sign, signCn: p.signCn, longitude: p.longitude, element: skyElements[Math.floor(p.longitude / 30) % 4] })) };
 }
 export function planet(p: Portrait, body: string) { return p.planets.find(x => x.body === body)!; }
@@ -62,6 +68,10 @@ export function combinePortraits(a: Portrait, b: Portrait): CompatibilityResult 
   const totalA = Object.values(a.elements).reduce((x, y) => x + y, 0);
   const totalB = Object.values(b.elements).reduce((x, y) => x + y, 0);
   const balance = 1 - keys.reduce((sum, k) => sum + Math.abs(a.elements[k] / totalA - b.elements[k] / totalB), 0) / 2;
+  if (a.timeKnown === false || b.timeKnown === false) {
+    const dimensions: DimensionResult[] = ([['personality', day], ['rhythm', balance]] as const).map(([id, affinity]) => ({ id, score: Math.max(60, Math.min(100, Math.round(60 + 40 * affinity))), tone: affinity >= .74 ? 'flow' : affinity < .52 ? 'contrast' : 'mixed', bazi: Math.round(affinity * 100), sky: 0 }));
+    return { version: "relationship-v3-date", mode: "date-only", baziConnection: elementConnection(a.dayElement, b.dayElement), people: [a, b], score: Math.round(dimensions.reduce((s, d) => s + d.score, 0) / dimensions.length), dimensions };
+  }
   const same = (body: string) => skyAffinity(planet(a, body), planet(b, body));
   const cross = (x: string, y: string) => (skyAffinity(planet(a, x), planet(b, y)) + skyAffinity(planet(a, y), planet(b, x))) / 2;
   const signals = [same("Sun"), same("Mercury"), (same("Venus") + cross("Venus", "Moon")) / 2, (same("Moon") + same("Mars")) / 2];
@@ -70,6 +80,6 @@ export function combinePortraits(a: Portrait, b: Portrait): CompatibilityResult 
     const affinity = .3 * bazi + .7 * signals[i];
     return { id, score: Math.max(60, Math.min(100, Math.round(60 + 40 * affinity))), tone: affinity >= .74 ? "flow" : affinity < .52 ? "contrast" : "mixed", bazi: Math.round(bazi * 100), sky: Math.round(signals[i] * 100) };
   });
-  return { version: "relationship-v2", baziConnection: elementConnection(a.dayElement, b.dayElement), people: [a, b], score: Math.round(dimensions.reduce((sum, d) => sum + d.score, 0) / 4), dimensions };
+  return { version: "relationship-v2", mode: "full", baziConnection: elementConnection(a.dayElement, b.dayElement), people: [a, b], score: Math.round(dimensions.reduce((sum, d) => sum + d.score, 0) / 4), dimensions };
 }
 export function calculateCompatibility(input: CompatibilityInput) { return combinePortraits(portrait(input.people[0], input.locale), portrait(input.people[1], input.locale)); }
