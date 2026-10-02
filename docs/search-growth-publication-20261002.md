@@ -32,7 +32,13 @@
 
 ## 发布状态
 
-本条记录写于发布前，尚不代表生产已完成。发布后补充实际提交、部署及线上检查结果。页面可抓取不代表已收录、获AI引用或已增加访问量。
+内容提交 `281afb7c4b65d52fa7828e1de6fb2897c82d89c5` 已推送 main；Vercel 部署 `RUVcxUn3szVWn7cdiK4XLVNdp7Fr` 返回 success。
+
+生产检查四语文章全部通过：HTTP 200、逐段SSR正文、单H1、canonical、hreflang/x-default、Article首发/修改日期、sitemap日期和塔罗回链均与源文件一致；星盘/塔罗8个语言版SEO复查也通过。浏览器确认正式中文页完整内容、2026-10-02首发日期和桌面样式已经显示。
+
+发布前安全快进到当时最新 `origin/main` 的 `fd9b888`，新增远端提交仅为Prompt Radar数据更新；保留该更新，本次提交未修改该文件。原 `/Users/lee/destinypixel` 仍为干净的 `backup/dirty-pre-tuteng-20260904` 分支、HEAD `6c117d3`，未改动。当前使用的隔离分支为 `codex/journal-tarot-20261002`。
+
+这证明已发布与可访问，不代表搜索引擎已收录、获AI引用或已增加访问量。没有提交重复索引请求，也没有把本次浏览器验收访问计为增长证据。
 
 复查命令：
 
