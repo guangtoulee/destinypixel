@@ -7,6 +7,7 @@ import { journalRussian } from "@/lib/journal-ru";
 import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-growth";
 import { loveFortuneArticle, loveFortuneRussian } from "@/lib/journal-love-fortune";
 import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-elements";
+import { threeCardTarotArticle, threeCardTarotRussian } from "@/lib/journal-three-card-tarot";
 import { pillarProfileArticles, pillarProfileRussian } from "@/lib/journal-pillar-profiles";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
@@ -44,6 +45,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
 const journalSources: JournalSourceArticle[] = [
+  threeCardTarotArticle,
   fiveElementsArticle,
   loveFortuneArticle,
   ...searchGrowthArticles,
@@ -280,7 +282,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
 }
 
 export const journalArticles: JournalArticle[] = journalSources.map((article) => {
-  const ru = pillarProfileRussian[article.slug] ?? (article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
+  const ru = pillarProfileRussian[article.slug] ?? (article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
 });

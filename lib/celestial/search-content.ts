@@ -64,7 +64,7 @@ const en: Record<CelestialKind, SearchContent> = {
       { label: "Free natal chart: Sun, Moon and rising sign", path: "/astrology" },
       { label: "BaZi and planetary relationship compatibility", path: "/compatibility" },
       { label: "Chinese fortune sticks and number lookup", path: "/sticks" },
-      { label: "How to ask a clear oracle question", path: "/journal/how-to-ask-fortune-sticks" },
+      { label: "How to read three tarot cards: a worked example", path: "/journal/how-to-read-three-card-tarot" },
     ],
   },
 };
@@ -105,7 +105,7 @@ const zh: Record<CelestialKind, SearchContent> = {
       { q: "塔罗能直接判断是或否、会不会复合吗？", a: "本工具不计算可靠的事件概率，不能读取另一人的想法，也不能保证未来结果。牌阵可以作为探索担忧和选择的象征性提示；感情问题仍需要结合实际交流与可观察的行为，不把牌面当成对另一人的定论。" },
     ],
     relatedTitle: "换一个角度，继续探索",
-    related: [{ label: "免费星盘：太阳、月亮与上升查询", path: "/astrology" }, { label: "八字五行与行星情感匹配", path: "/compatibility" }, { label: "在线求签与签号查询", path: "/sticks" }, { label: "如何把求问写成一个清楚的问题", path: "/journal/how-to-ask-fortune-sticks" }],
+    related: [{ label: "免费星盘：太阳、月亮与上升查询", path: "/astrology" }, { label: "八字五行与行星情感匹配", path: "/compatibility" }, { label: "在线求签与签号查询", path: "/sticks" }, { label: "三张塔罗牌怎么读：一个完整示例", path: "/journal/how-to-read-three-card-tarot" }],
   },
 };
 const ru: Record<CelestialKind, SearchContent> = {
@@ -145,7 +145,7 @@ const ru: Record<CelestialKind, SearchContent> = {
       { q: "Может ли расклад точно ответить «да/нет» или предсказать примирение?", a: "Инструмент не рассчитывает надёжную вероятность, не читает чужие мысли и не гарантирует будущие события. Расклад предлагает символические темы для размышления о заботах и выборе. В отношениях сопоставляйте его с реальными разговорами и наблюдаемым поведением, а не считайте вердиктом о другом человеке." },
     ],
     relatedTitle: "Попробовать другой взгляд",
-    related: [{ label: "Натальная карта: Солнце, Луна и асцендент", path: "/astrology" }, { label: "Совместимость по Ба-цзы и планетам", path: "/compatibility" }, { label: "Китайский жребий и поиск по номеру", path: "/sticks" }, { label: "Как задать оракулу ясный вопрос", path: "/journal/how-to-ask-fortune-sticks" }],
+    related: [{ label: "Натальная карта: Солнце, Луна и асцендент", path: "/astrology" }, { label: "Совместимость по Ба-цзы и планетам", path: "/compatibility" }, { label: "Китайский жребий и поиск по номеру", path: "/sticks" }, { label: "Как читать три карты Таро: подробный пример", path: "/journal/how-to-read-three-card-tarot" }],
   },
 };
 

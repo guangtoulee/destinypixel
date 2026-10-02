@@ -47,8 +47,8 @@ async function main() {
       console.log(`PASS ${path}`);
     }));
   }
-  for (const product of ["compatibility","sticks"]) {
-    const target = selected.filter(a => product === "compatibility" ? /bazi-vs|without-birth|five-elements-relationship/.test(a.slug) : /fortune/.test(a.slug));
+  for (const product of ["compatibility","sticks","tarot"]) {
+    const target = selected.filter(a => product === "compatibility" ? /bazi-vs|without-birth|five-elements-relationship/.test(a.slug) : product === "tarot" ? a.slug === "how-to-read-three-card-tarot" : /fortune/.test(a.slug));
     for (const locale of journalLocales) {
       const page = await html(`/${product}?locale=${locale}`);
       for (const article of target) assert.ok(decode(page).includes(`href="${journalHref(locale,article.slug)}"`), `${product}/${locale}: article link missing`);
