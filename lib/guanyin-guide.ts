@@ -140,7 +140,7 @@ const ru: GuideCopy = {
   ],
   related: [ { label: "Как задать ясный вопрос перед жребием", slug: "how-to-ask-fortune-sticks" }, { label: "Зачем сверять и номер, и издание", slug: "fortune-stick-number-and-edition" } ],
 };
-const traditionalText = (value: string) => toTraditional(value).replaceAll("簽", "籤").replaceAll("壽山岩", "壽山巖");
+const traditionalText = (value: string) => toTraditional(value).replaceAll("簽", "籤").replaceAll("壽山岩", "壽山巖").replaceAll("複合", "復合");
 // Convert prose only: preserve stable IDs, slugs and source keys.
 const traditional: GuideCopy = {
   ...Object.fromEntries(Object.entries(zh).filter(([, value]) => typeof value === "string").map(([key, value]) => [key, traditionalText(value as string)])) as Omit<GuideCopy, "sections" | "related">,

@@ -33,7 +33,8 @@ export default async function GuanyinGuidePage({ searchParams }: Props) {
     <header className={styles.header}>
       <Link href={journalHomeHref(locale)} aria-label={`DestinyPixel · ${ui.home}`} className={styles.brand}>DestinyPixel</Link>
       <nav aria-label={ui.language} className={styles.languages}>
-        {journalLocales.map(l => <Link key={l} href={guanyinHref(l)} hrefLang={journalLanguageTags[l]} lang={journalLanguageTags[l]} aria-current={l === locale ? "page" : undefined}>{journalLanguageLabels[l]}</Link>)}
+        {/* Load locale editions as complete documents so head metadata and body stay together. */}
+        {journalLocales.map(l => <a key={l} href={guanyinHref(l)} hrefLang={journalLanguageTags[l]} lang={journalLanguageTags[l]} aria-current={l === locale ? "page" : undefined}>{journalLanguageLabels[l]}</a>)}
       </nav>
     </header>
     <article className={styles.article}>

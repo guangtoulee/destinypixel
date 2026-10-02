@@ -48,5 +48,7 @@ test("all editions include provenance, a reading method, labeled original exampl
     assert.ok(guide.related.every(link => !link.slug.includes("pillar")));
   }
   assert.equal(getSeoGuide("learn", "guanyin-fortune-sticks")?.title, guanyinGuideCopy.en.title);
+  assert.match(guanyinGuideCopy["zh-TW"].sections.find(s => s.id === "examples")!.paragraphs[2], /不預告復合/);
+  assert.doesNotMatch(JSON.stringify(guanyinGuideCopy["zh-TW"]), /複合/);
   assert.doesNotMatch(JSON.stringify(guanyinGuideCopy["zh-TW"]), /求签|签诗|线上|关系|确认/);
 });
