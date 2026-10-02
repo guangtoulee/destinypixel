@@ -318,6 +318,8 @@ export default function TarotExperience({
               <span>{c.spreadLabel}</span>
               <select
                 aria-label={c.spreadLabel}
+                // History must not restore the select independently of the table state.
+                autoComplete="off"
                 value={table.spread}
                 onChange={(e) => reset("spread", e.target.value as SpreadId)}
               >
