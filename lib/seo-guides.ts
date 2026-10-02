@@ -1,3 +1,5 @@
+import { guanyinSeoGuide } from "./guanyin-guide";
+
 export type SeoGuideLink = { label: string; href: string; note?: string };
 
 export type SeoGuideFaq = {
@@ -174,74 +176,7 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
   },
-  {
-    section: "learn",
-    slug: "guanyin-fortune-sticks",
-    title: "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
-    description:
-      "Try an online Guanyin-inspired fortune-stick draw. Learn how to ask a question, read the source label and distinguish traditional verses from modern reflections.",
-    h1: "Guanyin fortune sticks online: how to draw and read one",
-    paragraphs: [
-      "Guanyin fortune sticks are a form of Chinese temple divination in which a numbered stick points to a verse. DestinyPixel offers a 100-number Guanyin-inspired draw: bring one concrete question, receive a result, and read its source note before interpreting it.",
-      "The current collection mixes selected traditional entries with DestinyPixel’s original modern reflections. It is not a complete transcription of any temple’s 100-stick book, and a translated interface does not always contain a translation of the corresponding Chinese verse. A matching number alone does not establish that two texts belong to the same edition.",
-    ],
-    faqAsH2: true,
-    faqs: [
-      {
-        question: "What are Guanyin fortune sticks?",
-        answer:
-          "In a Guanyin fortune-stick tradition, a numbered draw leads to a verse and interpretation; wording and numbering can vary by edition. DestinyPixel provides a 100-number online experience containing both selected traditional entries and original modern reflections, identified in the result’s source note.",
-      },
-      {
-        question:
-          "What questions suit Guanyin (vs Guandi / Yuelao / Wealth / Wong Tai Sin)?",
-        answer:
-          "On this site, Guanyin is the general reflection option for family, travel and uncertainty; Guandi emphasizes work, Yuelao relationships, Wealth money habits, and Wong Tai Sin timing. These are editorial starting points for choosing an experience, not fixed rules shared by every temple.",
-      },
-      {
-        question: "How do you draw one stick online?",
-        answer:
-          "Choose Guanyin, hold one concrete question, then draw a single stick. Do not redraw the same question immediately; sit with the first result.",
-      },
-      {
-        question: "How should you read the result?",
-        answer:
-          "Check whether the source note identifies a traditional entry or an original modern reflection, then read the text in relation to your question. Optional AI interpretation adds reflection; it does not authenticate a verse or guarantee an outcome.",
-      },
-      {
-        question: "Already drew a stick at a temple—can I look up the number?",
-        answer:
-          "You can open this site’s entry for a number, but it may be an original modern reflection rather than your temple’s verse. For an offline draw, compare the actual poem and named edition; use the temple’s own booklet when they do not match.",
-      },
-      {
-        question: "Is an online stick “the same” as a temple draw?",
-        answer:
-          "No: this is a digital symbolic experience inspired by the sequence of choosing a tradition, focusing on one question and drawing a numbered result. It does not reproduce a temple’s setting, confirmation ritual or complete authoritative text.",
-      },
-    ],
-    cta: {
-      label: "Draw Guanyin sticks",
-      href: "/sticks?locale=en&type=guanyin",
-    },
-    ctas: [
-      {
-        label: "Draw Guanyin sticks",
-        href: "/sticks?locale=en&type=guanyin",
-      },
-      { label: "Browse all tools", href: "/tools" },
-      {
-        label: "One-question oracle",
-        href: "/oracle",
-        note: "A different tool for one situation, not temple sticks.",
-      },
-    ],
-    disclaimer:
-      "Temple sticks here are symbolic and reflective. They are not medical, legal, or financial advice, and they do not guarantee an outcome.",
-    related: [
-      { label: "I Ching vs Tarot", href: "/insights/i-ching-vs-tarot" },
-      { label: "Temple sticks beginner steps", href: "/learn#sticks" },
-    ],
-  },
+  guanyinSeoGuide,
   {
     section: "learn",
     slug: "bazi-love-compatibility",

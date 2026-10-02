@@ -7,7 +7,7 @@ import { getSeoGuide, seoGuidesFor, seoGuidePath } from "@/lib/seo-guides";
 type PageProps = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return seoGuidesFor("learn").map((guide) => ({ slug: guide.slug }));
+  return seoGuidesFor("learn").filter((guide) => guide.slug !== "guanyin-fortune-sticks").map((guide) => ({ slug: guide.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
