@@ -7,6 +7,7 @@ import Image from "next/image";
 import { homeOfferCopy, type HomeReportOffer } from "@/lib/home-offer";
 import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
 import CardArtwork from "./card-artwork";
+import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { resumeBirthDate, updateBirthDateDraft, clearBirthDateDraft } from "@/lib/birth-date-handoff";
 import { mobileFlowCopy } from "@/lib/mobile-flow-copy";
 import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
@@ -807,6 +808,7 @@ export default function DestinyWhiteExperience({
 }) {
   const locale = initialLocale;
   const [birthDate, setBirthDate] = useState("");
+  const [formError, setFormError] = useState("");
   const [carriedBirthday, setCarriedBirthday] = useState(false);
   const [birthPlace, setBirthPlace] = useState("");
   const [cityTouched, setCityTouched] = useState(false);
@@ -1042,17 +1044,32 @@ export default function DestinyWhiteExperience({
               </div>
             </div>
 
-            <form action={createFusionReportAction} data-analytics-form="birth_report" onSubmit={event => {
-              if (!resolveCity(birthPlace)) { event.preventDefault(); setCityTouched(true); (event.currentTarget.elements.namedItem("birthPlace") as HTMLInputElement)?.focus(); return; }
+            <form action={createFusionReportAction} data-analytics-form="birth_report" noValidate onInput={() => setFormError("")} onSubmit={event => {
+              const form = event.currentTarget;
+              const reject = (field: string, code: string) => {
+                event.preventDefault();
+                setFormError(birthFormFeedback(code, locale) ?? flow.cityError);
+                const input = form.elements.namedItem(field) as HTMLInputElement;
+                input.focus();
+                requestAnimationFrame(() => input.scrollIntoView({ block: "center", behavior: "instant" }));
+              };
+              const name = form.elements.namedItem("name") as HTMLInputElement;
+              const date = form.elements.namedItem("birthDate") as HTMLInputElement;
+              const time = form.elements.namedItem("birthTime") as HTMLInputElement;
+              if (!name.value.trim()) { reject("name", "missing-birth-name"); return; }
+              if (!date.value || !date.checkValidity()) { reject("birthDate", "missing-birth-date"); return; }
+              if (!time.value || !time.checkValidity()) { reject("birthTime", "missing-birth-time"); return; }
+              if (!resolveCity(birthPlace)) { setCityTouched(true); reject("birthPlace", "unsupported-birth-city"); return; }
               try { clearBirthDateDraft(window.sessionStorage); } catch { /* Clear before a valid report submission leaves this flow. */ }
             }}>
+              {(formError || initialError) && <p id="report-form-error" role="alert" className="editorial-form-error">{formError || initialError}</p>}
               {carriedBirthday && <p className="white-field white-field--full editorial-carried-date" role="status">{flow.carried}</p>}
-              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError ? localText(initialError) : initialError}</p>}
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
                 <input
                   name="name"
+                  maxLength={100}
                   type="text"
                   placeholder={
                     copyLocale === "zh"
@@ -1106,6 +1123,7 @@ export default function DestinyWhiteExperience({
                   onChange={event => {
                     const value = event.currentTarget.value;
                     setBirthPlace(value);
+                    setCityTouched(true);
                     event.currentTarget.setCustomValidity(value.trim() && !resolveCity(value) ? flow.cityError : "");
                   }}
                   onBlur={() => setCityTouched(true)}

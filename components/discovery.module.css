@@ -80,3 +80,11 @@
 .result { scroll-margin-top: 24px; }
 .handoffNote { font-size: 12px; line-height: 1.7; color: #5c708e; }
 @media(max-width:650px) { .page { padding-inline: 16px; } .form, .result { padding: 18px; } .revealed { grid-template-columns: minmax(0,1fr); } .revealed img { width:100%; } .resultActions a { font-size: 14px; min-height: 44px; } }
+
+@media(max-width:650px) {
+ .page { padding-inline:12px; }
+ .result { padding:10px; }
+ .revealed > button { width:100%; max-width:none; }
+ .revealed h2 { font-size:27px; }
+ .revealed p { font-size:14px; }
+}

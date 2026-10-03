@@ -220,6 +220,24 @@
 }
 
 /* Leave the keyboard and active field unobstructed on mobile. */
-.editorial-home:has(.white-form-panel:focus-within) .white-mobile-dock { visibility: hidden; pointer-events: none; }
+.editorial-home:has(.white-form-panel:focus-within) .white-mobile-dock,
+.editorial-home:has(.white-form-panel:focus-within) .telegram-contact { visibility: hidden; pointer-events: none; }
 
 @media(max-width:760px) { .editorial-report .white-form-panel { order: -1; } }
+
+/* Show the artwork at reading size on a phone, before opening the optional viewer. */
+@media(max-width:650px) {
+ .editorial-card-stage { height:auto; max-width:none; padding:0; }
+ .editorial-orbit, .editorial-display-card--0, .editorial-display-card--1 { display:none; }
+ .editorial-display-card--2 { position:relative; inset:auto; width:100%; max-width:none; transform:none; }
+ .editorial-display-card--2:hover { transform:none; }
+ .editorial-display-card span { font-size:16px; }
+ .editorial-stage-label { position:static; display:block; margin-top:16px; }
+ .editorial-collection-cards { display:grid; grid-template-columns:minmax(0,1fr); overflow:visible; padding:0; gap:24px; }
+ .editorial-collection-card { padding:6px; width:100%; }
+ .editorial-collection-card img { aspect-ratio:auto; }
+ .editorial-home .white-form-panel { padding:14px; }
+ .editorial-home .white-form-note { flex-wrap:wrap; }
+ .editorial-home .white-form-note a { display:inline-block; white-space:nowrap; }
+}
+.editorial-home .editorial-form-error { grid-column:1 / -1; display:block; min-width:0; margin:0; padding:12px; border:1px solid #e6b7b7; border-radius:10px; background:#fff5f5; color:#9e3434; font-size:14px; line-height:1.7; overflow-wrap:anywhere; }

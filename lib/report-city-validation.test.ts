@@ -18,6 +18,6 @@ test("unrecognized report cities redirect before any network or persistence",asy
  globalThis.fetch=async()=>{calls++;throw new Error("No network allowed in this regression");};
  try { for(const city of ["深圳","杭州","乌鲁木齐",""]) {
   const data=new FormData();for(const [key,value] of Object.entries({name:"Fixture",gender:"female",locale:"zh",birthDate:"1990-05-12",birthTime:"09:30",birthPlace:city}))data.set(key,value);
-  await assert.rejects(createFusionReportAction(data),(error:unknown)=> Boolean(error&&typeof error==="object"&&"digest" in error&&String(error.digest).includes("missing-birth-data")));
+  await assert.rejects(createFusionReportAction(data),(error:unknown)=> Boolean(error&&typeof error==="object"&&"digest" in error&&String(error.digest).includes("unsupported-birth-city")));
  }assert.equal(calls,0); }finally{globalThis.fetch=originalFetch;}
 });
