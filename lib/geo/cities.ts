@@ -121,6 +121,7 @@ export const cities: City[] = [
 
 export function resolveCity(value: string) {
   const normalized = value.trim().toLowerCase();
+  if (!normalized) return undefined;
 
   return (
     cities.find((city) => city.id === normalized) ??
