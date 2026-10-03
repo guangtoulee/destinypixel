@@ -7,7 +7,7 @@ import Image from "next/image";
 import { homeOfferCopy, type HomeReportOffer } from "@/lib/home-offer";
 import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
 import CardArtwork from "./card-artwork";
-import { takeBirthDate } from "@/lib/birth-date-handoff";
+import { resumeBirthDate, updateBirthDateDraft, clearBirthDateDraft } from "@/lib/birth-date-handoff";
 import { mobileFlowCopy } from "@/lib/mobile-flow-copy";
 import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
 import { OracleHome } from "./oracle-sanctuary";
@@ -845,14 +845,37 @@ export default function DestinyWhiteExperience({
   const cardName = profileName(profile, pillar, locale);
 
   useEffect(() => {
-    try {
-      const carried = takeBirthDate(window.sessionStorage);
-      if (carried) { void updatePreviewFromDate(carried); setCarriedBirthday(true); }
-    } catch { /* Disabled storage must not block the form. */ }
+    let expiryTimer: ReturnType<typeof setTimeout> | undefined;
+    let resumed = false;
+    function restoreBirthday() {
+      clearTimeout(expiryTimer);
+      try {
+        const draft = resumeBirthDate(window.sessionStorage);
+        if (draft) {
+          resumed = true;
+          window.history.replaceState({ ...window.history.state, destinyBirthdayFlow: true }, "", window.location.href);
+          void updatePreviewFromDate(draft.birthDate);
+          setCarriedBirthday(true);
+          expiryTimer = setTimeout(() => { resumeBirthDate(window.sessionStorage); }, Math.max(0, draft.expiresAt - Date.now()));
+        } else if (resumed || window.history.state?.destinyBirthdayFlow) {
+          void updatePreviewFromDate("");
+          setCarriedBirthday(false);
+        }
+        if (draft || resumed || window.history.state?.destinyBirthdayFlow) {
+          // Browsers can restore native form values after pageshow, independently of React state.
+          requestAnimationFrame(() => {
+            if (birthDateInputRef.current) birthDateInputRef.current.value = draft?.birthDate ?? "";
+          });
+        }
+      } catch { /* Disabled storage must not block the form. */ }
+    }
+    restoreBirthday();
+    window.addEventListener("pageshow", restoreBirthday);
     const now = new Date();
     if (birthDateInputRef.current) {
       birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     }
+    return () => { clearTimeout(expiryTimer); window.removeEventListener("pageshow", restoreBirthday); };
   }, []);
 
   useEffect(() => {
@@ -875,6 +898,7 @@ export default function DestinyWhiteExperience({
   async function updatePreviewFromDate(value: string) {
     setBirthDate(value);
     birthDateRef.current = value;
+    try { updateBirthDateDraft(window.sessionStorage, value); } catch { /* Optional storage. */ }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return;
     try {
       const { Solar } = await import("lunar-javascript");
@@ -1019,7 +1043,8 @@ export default function DestinyWhiteExperience({
             </div>
 
             <form action={createFusionReportAction} data-analytics-form="birth_report" onSubmit={event => {
-              if (!resolveCity(birthPlace)) { event.preventDefault(); setCityTouched(true); (event.currentTarget.elements.namedItem("birthPlace") as HTMLInputElement)?.focus(); }
+              if (!resolveCity(birthPlace)) { event.preventDefault(); setCityTouched(true); (event.currentTarget.elements.namedItem("birthPlace") as HTMLInputElement)?.focus(); return; }
+              try { clearBirthDateDraft(window.sessionStorage); } catch { /* Clear before a valid report submission leaves this flow. */ }
             }}>
               {carriedBirthday && <p className="white-field white-field--full editorial-carried-date" role="status">{flow.carried}</p>}
               {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError ? localText(initialError) : initialError}</p>}
