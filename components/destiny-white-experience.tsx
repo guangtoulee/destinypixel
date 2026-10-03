@@ -6,7 +6,10 @@ import { destinySupportEmail, destinySupportHref, destinyTelegramHref } from "@/
 import Image from "next/image";
 import { homeOfferCopy, type HomeReportOffer } from "@/lib/home-offer";
 import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
-import CompatibilityHome from "./compatibility-home";
+import CardArtwork from "./card-artwork";
+import { birthFormFeedback } from "@/lib/birth-form-feedback";
+import { resumeBirthDate, updateBirthDateDraft, clearBirthDateDraft } from "@/lib/birth-date-handoff";
+import { mobileFlowCopy } from "@/lib/mobile-flow-copy";
 import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
 import { OracleHome } from "./oracle-sanctuary";
 import { compatibilityCopy } from "@/lib/compatibility/copy";
@@ -40,7 +43,7 @@ import { createFusionReportAction } from "@/app/actions";
 import { DeityPortrait } from "@/components/deity-portraits";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay } from "@/lib/bazi-totems";
-import { cities } from "@/lib/geo/cities";
+import { cities, resolveCity } from "@/lib/geo/cities";
 import { pillarsDB, type PillarProfile } from "@/lib/pillars";
 import {
   contentLocale,
@@ -805,6 +808,13 @@ export default function DestinyWhiteExperience({
 }) {
   const locale = initialLocale;
   const [birthDate, setBirthDate] = useState("");
+  const [formError, setFormError] = useState("");
+  const [carriedBirthday, setCarriedBirthday] = useState(false);
+  const [birthPlace, setBirthPlace] = useState("");
+  const [cityTouched, setCityTouched] = useState(false);
+  const flow = mobileFlowCopy[locale];
+  const matchedCity = birthPlace.trim() ? resolveCity(birthPlace) : undefined;
+  const cityInvalid = cityTouched && Boolean(birthPlace.trim()) && !matchedCity;
   const birthDateRef = useRef("");
   const birthDateInputRef = useRef<HTMLInputElement>(null);
   const [pillar, setPillar] = useState("癸卯");
@@ -837,10 +847,37 @@ export default function DestinyWhiteExperience({
   const cardName = profileName(profile, pillar, locale);
 
   useEffect(() => {
+    let expiryTimer: ReturnType<typeof setTimeout> | undefined;
+    let resumed = false;
+    function restoreBirthday() {
+      clearTimeout(expiryTimer);
+      try {
+        const draft = resumeBirthDate(window.sessionStorage);
+        if (draft) {
+          resumed = true;
+          window.history.replaceState({ ...window.history.state, destinyBirthdayFlow: true }, "", window.location.href);
+          void updatePreviewFromDate(draft.birthDate);
+          setCarriedBirthday(true);
+          expiryTimer = setTimeout(() => { resumeBirthDate(window.sessionStorage); }, Math.max(0, draft.expiresAt - Date.now()));
+        } else if (resumed || window.history.state?.destinyBirthdayFlow) {
+          void updatePreviewFromDate("");
+          setCarriedBirthday(false);
+        }
+        if (draft || resumed || window.history.state?.destinyBirthdayFlow) {
+          // Browsers can restore native form values after pageshow, independently of React state.
+          requestAnimationFrame(() => {
+            if (birthDateInputRef.current) birthDateInputRef.current.value = draft?.birthDate ?? "";
+          });
+        }
+      } catch { /* Disabled storage must not block the form. */ }
+    }
+    restoreBirthday();
+    window.addEventListener("pageshow", restoreBirthday);
     const now = new Date();
     if (birthDateInputRef.current) {
       birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     }
+    return () => { clearTimeout(expiryTimer); window.removeEventListener("pageshow", restoreBirthday); };
   }, []);
 
   useEffect(() => {
@@ -863,6 +900,7 @@ export default function DestinyWhiteExperience({
   async function updatePreviewFromDate(value: string) {
     setBirthDate(value);
     birthDateRef.current = value;
+    try { updateBirthDateDraft(window.sessionStorage, value); } catch { /* Optional storage. */ }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return;
     try {
       const { Solar } = await import("lunar-javascript");
@@ -892,13 +930,10 @@ export default function DestinyWhiteExperience({
           </a>
 
           <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? localText("主導覽") : copyLocale === "zh" ? localText("主导航") : locale === "ru" ? "Основная навигация" : "Main navigation"}>
-            <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
-            <a href={sticksHref}>{locale === "en" ? "Draw a stick" : mobileNavLabels.sticks}</a>
-            <a href="#archetypes">{text.nav.archetypes}</a>
+            <a href={freeHref}>{copyLocale === "zh" ? localText("意象卡") : locale === "ru" ? "Карточка" : "Free card"}</a>
             <a href="#report">{text.nav.report}</a>
-            <a href="#insights">{text.nav.insights}</a>
-            <a href={locale === "en" ? "/astrology" : `/astrology?locale=${locale}`}>{locale === "zh-TW" ? "星盤" : copyLocale === "zh" ? "星盘" : locale === "ru" ? "Натальная карта" : "Birth chart"}</a>
-            <a href={locale === "en" ? "/tarot" : `/tarot?locale=${locale}`}>{locale === "zh-TW" ? "塔羅" : copyLocale === "zh" ? "塔罗" : locale === "ru" ? "Таро" : "Tarot"}</a>
+            <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
+            <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>{flow.tools}</a>
             <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>{copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}</a>
           </nav>
 
@@ -937,13 +972,8 @@ export default function DestinyWhiteExperience({
           <Sparkles size={18} aria-hidden="true" />
           <span>{compatibilityCopy(locale).nav}</span>
         </a>
-        <a href={sticksHref}>
-          <Stars size={18} aria-hidden="true" />
-          <span>{mobileNavLabels.sticks}</span>
-        </a>
-        <a href={locale === "en" ? "/astrology" : `/astrology?locale=${locale}`}><Orbit size={18} aria-hidden="true" /><span>{locale === "zh-TW" ? "星盤" : copyLocale === "zh" ? "星盘" : locale === "ru" ? "Карта" : "Birth chart"}</span></a>
-        <a href={locale === "en" ? "/tarot" : `/tarot?locale=${locale}`}><Stars size={18} aria-hidden="true" /><span>{locale === "zh-TW" ? "塔羅" : copyLocale === "zh" ? "塔罗" : locale === "ru" ? "Таро" : "Tarot"}</span></a>
-        <a href="#blessing"><Gem size={18} aria-hidden="true" /><span>{mobileNavLabels.blessing}</span></a>
+        <a href="#report"><SunMoon size={18} aria-hidden="true" /><span>{mobileNavLabels.report}</span></a>
+        <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}><Gem size={18} aria-hidden="true" /><span>{flow.tools}</span></a>
       </nav>
 
       <section className="white-hero" aria-labelledby="home-title">
@@ -952,7 +982,7 @@ export default function DestinyWhiteExperience({
             <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{introduction.eyebrow}</p>
             <h1 id="home-title" data-server-localized>{introduction.title}</h1>
             <p className="white-lead">{introduction.lead}</p>
-            <div className="editorial-hero-actions"><a className="editorial-primary" href="#start-here">{introduction.start}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href={freeHref}>{introduction.free}<ArrowRight size={15} aria-hidden="true" /></a></div>
+            <div className="editorial-hero-actions"><a className="editorial-primary" href={freeHref}>{introduction.free}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href="#start-here">{introduction.start}<ArrowRight size={15} aria-hidden="true" /></a></div>
             <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{introduction.note}</p>
             <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? localText("一种生日，一段独特故事。") : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
           </div>
@@ -968,10 +998,6 @@ export default function DestinyWhiteExperience({
       </section>
 
       <HomeIntroduction locale={locale} />
-
-      <CompatibilityHome locale={locale} />
-
-      <HomePortals locale={locale} />
 
       <section className="white-archetypes" id="archetypes">
         <div className="white-container editorial-collection">
@@ -990,27 +1016,20 @@ export default function DestinyWhiteExperience({
               const itemName = profileName(itemProfile, featuredPillar, locale);
 
               return (
-                <a key={featuredPillar} href={freeHref} className="editorial-collection-card">
-                  <Image
-                    src={getPillarImagePath(featuredPillar)}
-                    alt={itemName}
-                    width={1200}
-                    height={1600}
-                    sizes="(max-width: 650px) 44vw, 280px"
-                    quality={95}
-                  />
+                <article key={featuredPillar} className="editorial-collection-card">
+                  <CardArtwork src={getPillarImagePath(featuredPillar)} name={itemName} locale={locale} sizes="(max-width:650px) 65vw, 240px" />
                   <div>
                     <span>{copyLocale === "zh" ? localText(itemDisplay.pillarLabel) : text.card.core}</span>
                     <strong>{itemName}</strong>
                   </div>
-                </a>
+                </article>
               );
             })}
           </div>
         </div>
       </section>
 
-      <ArchetypeMotionGallery locale={locale} />
+      <details className="editorial-more-art white-container"><summary>{flow.moreArt}</summary><ArchetypeMotionGallery locale={locale} /></details>
 
       <section className="editorial-report white-container" id="report">
         <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? localText("也可以探索你的本命灵构") : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
@@ -1025,13 +1044,32 @@ export default function DestinyWhiteExperience({
               </div>
             </div>
 
-            <form action={createFusionReportAction} data-analytics-form="birth_report">
-              {initialError && <p role="alert" className="white-field white-field--full" style={{ color: "#9e3434", lineHeight: 1.7 }}>{initialError ? localText(initialError) : initialError}</p>}
+            <form action={createFusionReportAction} data-analytics-form="birth_report" noValidate onInput={() => setFormError("")} onSubmit={event => {
+              const form = event.currentTarget;
+              const reject = (field: string, code: string) => {
+                event.preventDefault();
+                setFormError(birthFormFeedback(code, locale) ?? flow.cityError);
+                const input = form.elements.namedItem(field) as HTMLInputElement;
+                input.focus();
+                requestAnimationFrame(() => input.scrollIntoView({ block: "center", behavior: "instant" }));
+              };
+              const name = form.elements.namedItem("name") as HTMLInputElement;
+              const date = form.elements.namedItem("birthDate") as HTMLInputElement;
+              const time = form.elements.namedItem("birthTime") as HTMLInputElement;
+              if (!name.value.trim()) { reject("name", "missing-birth-name"); return; }
+              if (!date.value || !date.checkValidity()) { reject("birthDate", "missing-birth-date"); return; }
+              if (!time.value || !time.checkValidity()) { reject("birthTime", "missing-birth-time"); return; }
+              if (!resolveCity(birthPlace)) { setCityTouched(true); reject("birthPlace", "unsupported-birth-city"); return; }
+              try { clearBirthDateDraft(window.sessionStorage); } catch { /* Clear before a valid report submission leaves this flow. */ }
+            }}>
+              {(formError || initialError) && <p id="report-form-error" role="alert" className="editorial-form-error">{formError || initialError}</p>}
+              {carriedBirthday && <p className="white-field white-field--full editorial-carried-date" role="status">{flow.carried}</p>}
               <input type="hidden" name="locale" value={locale} />
               <label className="white-field white-field--full">
                 <span>{text.hero.name}</span>
                 <input
                   name="name"
+                  maxLength={100}
                   type="text"
                   placeholder={
                     copyLocale === "zh"
@@ -1081,11 +1119,26 @@ export default function DestinyWhiteExperience({
                 <input
                   name="birthPlace"
                   type="search"
+                  value={birthPlace}
+                  onChange={event => {
+                    const value = event.currentTarget.value;
+                    setBirthPlace(value);
+                    setCityTouched(true);
+                    event.currentTarget.setCustomValidity(value.trim() && !resolveCity(value) ? flow.cityError : "");
+                  }}
+                  onBlur={() => setCityTouched(true)}
+                  aria-invalid={cityInvalid}
+                  aria-describedby={cityInvalid ? "report-city-help report-city-error" : "report-city-help"}
                   list="white-city-options"
                   placeholder={text.hero.cityPlaceholder}
                   required
                 />
               </label>
+              <div className="white-field white-field--full editorial-city-feedback">
+                <p id="report-city-help">{flow.cityHelp}</p>
+                {cityInvalid && <p id="report-city-error" role="alert">{flow.cityError}</p>}
+                {matchedCity && <p role="status">{flow.cityMatched} {locale.startsWith("zh") ? localText(matchedCity.aliases[0]) : matchedCity.label}</p>}
+              </div>
               <datalist id="white-city-options">
                 {cities.map((city) => {
                   const aliases =
@@ -1122,13 +1175,16 @@ export default function DestinyWhiteExperience({
               <CalendarDays size={15} aria-hidden="true" />
               {copyLocale === "zh"
                 ? localText("只记得生日？先免费测日柱卡")
-                : "Only know your birthday? Find your free character card"}
+                : locale === "ru" ? "Знаете только дату рождения? Найдите бесплатную карточку" : "Only know your birthday? Find your free character card"}
               <ArrowRight size={14} aria-hidden="true" />
             </a>
           </div>
 
       </section>
 
+      <HomePortals locale={locale} />
+
+      <details className="editorial-more-practices"><summary className="white-container">{flow.morePractices}</summary>
       <section className="white-insights white-insights--priority" id="insights">
         <div className="white-container">
           <div className="white-section-heading">
@@ -1258,27 +1314,7 @@ export default function DestinyWhiteExperience({
         </div>
       ) : null}
 
-      <section className="white-premium">
-        <div className="white-container white-premium__panel">
-          <div>
-            <p>{text.premium.eyebrow}</p>
-            <h2>{text.premium.title}</h2>
-            <span>{text.premium.description}</span>
-          </div>
-          <ul>
-            {text.premium.items.map((item) => (
-              <li key={item}>
-                <Check size={15} aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <a href={freeHref}>
-            {text.premium.cta}
-            <ArrowRight size={17} aria-hidden="true" />
-          </a>
-        </div>
-      </section>
+      </details>
 
       <footer className="white-footer">
         <div className="white-container">

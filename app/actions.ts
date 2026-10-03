@@ -34,7 +34,10 @@ export async function createFusionReportAction(formData: FormData) {
   const place = readString(formData, "birthPlace");
   const city = resolveCity(place);
 
-  if (!birthDate || !birthTime || !city || name.length > 100 || birthDate.length > 10 || birthTime.length > 5) {
+  if (!birthDate) redirect(`/?locale=${locale}&error=missing-birth-date#report`);
+  if (!birthTime) redirect(`/?locale=${locale}&error=missing-birth-time#report`);
+  if (!city) redirect(`/?locale=${locale}&error=unsupported-birth-city#report`);
+  if (name.length > 100 || birthDate.length > 10 || birthTime.length > 5) {
     redirect(`/?locale=${locale}&error=missing-birth-data#report`);
   }
 

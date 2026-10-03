@@ -72,3 +72,19 @@
 .calendarFacts dd { margin:7px 0 0; font-size:18px; line-height:1.5; color:#24385b; overflow-wrap:anywhere; }
 .calendarFacts small { display:block; font-size:12px; color:#5c708e; line-height:1.6; }
 @media(max-width:380px) { .revealed { grid-template-columns:1fr; }.revealed img { width:140px; }.calendarFacts { grid-template-columns:1fr; gap:14px; }.calendarFacts > div { display:grid; grid-template-columns:1fr 1fr; gap:10px; align-items:baseline; }.calendarFacts dd { margin:0; } }
+
+/* Give the result artwork the width it needs; interpretation follows instead of competing beside it. */
+.revealed { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.revealed > button { width: min(100%, 330px); justify-self: center; }
+.revealed img { width: 100%; }
+.result { scroll-margin-top: 24px; }
+.handoffNote { font-size: 12px; line-height: 1.7; color: #5c708e; }
+@media(max-width:650px) { .page { padding-inline: 16px; } .form, .result { padding: 18px; } .revealed { grid-template-columns: minmax(0,1fr); } .revealed img { width:100%; } .resultActions a { font-size: 14px; min-height: 44px; } }
+
+@media(max-width:650px) {
+ .page { padding-inline:12px; }
+ .result { padding:10px; }
+ .revealed > button { width:100%; max-width:none; }
+ .revealed h2 { font-size:27px; }
+ .revealed p { font-size:14px; }
+}
