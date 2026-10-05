@@ -34,9 +34,16 @@ async function main() {
     const c = homeOfferCopy(locale);
     assert.ok(text.includes(offer.available ? c.note.replace("{price}", offer.amount) : c.unavailable));
     if (locale === "zh-TW") {
-      for (const s of ["免費測試", "原創文章", "讓意象，鮮活起來", "填寫出生日期、時間與城市", "問事", "求籤"]) assert.ok(text.includes(s), s);
+      for (const s of ["免費測我的意象卡", "原創文章", "六十日柱", "填寫出生日期、時間與城市", "求籤問事", "手串工坊"]) assert.ok(text.includes(s), s);
       for (const s of ["问事", "求签"]) assert.ok(!text.includes(s), `Unexpected Simplified copy: ${s}`);
     }
+    for (const route of ["discover", "sticks", "compatibility", "atelier"]) {
+      assert.ok(html.includes(`data-home-path="${route}"`), `Missing primary path ${route}`);
+      const href = `/${route}${locale === "en" ? "" : `?locale=${locale}`}`;
+      assert.ok(html.includes(`href="${href}"`), `Wrong language section path ${href}`);
+    }
+    assert.equal((html.match(/<h1[ >]/g) ?? []).length, 1);
+    assert.ok(html.includes('id="report"'), "Preserved report handoff");
     const discover = decode(await get(`/discover${locale === "en" ? "" : `?locale=${locale}`}`));
     assert.ok(discover.includes(["birth times are optional", "时辰可选未知", "時辰可選未知", "время может быть неизвестно"][i]));
     console.log(`PASS ${locale}: home initial text, offers, canonical/languages, sitemap and discover handoff`);

@@ -15,8 +15,8 @@ test("translated landing pages keep their own canonical and translated search te
   const zh = makePageMetadata({ ...routeSeo.home, locale: "zh" });
   const ru = makePageMetadata({ ...routeSeo.tuteng, locale: "ru" });
   assert.equal(zh.alternates?.canonical, "/?locale=zh");
-  assert.match(JSON.stringify(zh.title), /八字、感情配对与在线抽签/);
-  assert.match(zh.description ?? "", /八字五行与星盘配对/);
+  assert.match(JSON.stringify(zh.title), /六十日柱、求签、关系合盘与手串工坊/);
+  assert.match(zh.description ?? "", /六十篇完整画像/);
   assert.equal(ru.alternates?.canonical, "/tuteng?locale=ru");
   assert.match(JSON.stringify(ru.title), /Тотем/);
   assert.equal(zh.openGraph?.url, "/?locale=zh");
@@ -80,7 +80,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
   assert.ok(traditionalEntries.length > 0);
-  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/", "/discover", "/compatibility", "/sticks", "/astrology", "/tarot", "/product-facts"].includes(new URL(entry.url).pathname))));
+  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/", "/discover", "/compatibility", "/sticks", "/atelier", "/astrology", "/tarot", "/product-facts"].includes(new URL(entry.url).pathname))));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {

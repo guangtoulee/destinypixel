@@ -241,3 +241,10 @@
  .editorial-home .white-form-note a { display:inline-block; white-space:nowrap; }
 }
 .editorial-home .editorial-form-error { grid-column:1 / -1; display:block; min-width:0; margin:0; padding:12px; border:1px solid #e6b7b7; border-radius:10px; background:#fff5f5; color:#9e3434; font-size:14px; line-height:1.7; overflow-wrap:anywhere; }
+
+/* Compact gateway: preserve the existing report form and its #report handoff. */
+.gateway-report { min-height:0 !important; background:transparent !important; padding:0 !important; }
+.gateway-report>details { max-width:1120px; margin:0 auto; border:1px solid #e4ddec; border-radius:14px; background:#fff9; }
+.gateway-report>details>summary { cursor:pointer; padding:22px; color:#62477c; font-size:16px; }
+.gateway-report .editorial-report { margin:0 auto; padding:24px; }
+@media(max-width:650px){.gateway-report .editorial-report{padding:14px}}

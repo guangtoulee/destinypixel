@@ -9,7 +9,7 @@ export const siteUrl =
 export const siteName = "DestinyPixel";
 
 export const defaultSeoDescription =
-  "Explore everyday questions about yourself, relationships and choices through BaZi, birth charts and Chinese fortune sticks. Start with a free reading on DestinyPixel.";
+  "Explore 60 Day Pillar portraits, Chinese fortune sticks, relationship compatibility and a five-element bracelet atelier. Choose your next step on DestinyPixel.";
 
 export const seoKeywordClusters = [
   "birth chart reading",
@@ -78,7 +78,7 @@ export const seoKeywordClusters = [
 export const routeSeo = {
   home: {
     path: "/",
-    title: "DestinyPixel | BaZi, Relationship Compatibility & Fortune Sticks",
+    title: "DestinyPixel | Day Pillars, Fortune Sticks, Relationships & Bracelets",
     description: defaultSeoDescription,
     keywords: [
       "multidimensional birth map",
@@ -291,7 +291,7 @@ export function absoluteUrl(path = "/") {
 }
 
 // Only advertise Traditional Chinese where the initial HTML is translated.
-const traditionalServerPaths = new Set(["/", "/sticks"]);
+const traditionalServerPaths = new Set(["/", "/sticks", "/atelier"]);
 
 export function languageAlternates(path: string) {
   if (!hasLocalizedSeo(path)) return undefined;
