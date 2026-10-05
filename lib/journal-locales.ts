@@ -9,7 +9,15 @@ export const journalOgLocales = { en: "en_US", zh: "zh_CN", "zh-TW": "zh_TW", ru
 // ordinary prose (for example, 真实例子 becomes 真例項子).
 const traditionalCharacters = OpenCC.Converter({ from: "cn", to: "tw" });
 export function toTraditional(value: string) {
-  return traditionalCharacters(value).replaceAll("反饋", "回饋").replaceAll("香港天文臺", "香港天文台");
+  // 丑 is unchanged in calendar terminology; 醜 is only the aesthetic meaning.
+  // Keep this contextual so ordinary words such as 美醜 remain Traditional.
+  if (value === "丑") return value;
+  return traditionalCharacters(value)
+    .replace(/([甲乙丙丁戊己庚辛壬癸])醜/g, "$1丑")
+    .replace(/地支醜/g, "地支丑")
+    .replace(/醜(?=\s*·\s*牛|牛|支|土|為牛|的本氣|還有內部天干)/g, "丑")
+    .replaceAll("子醜寅卯辰巳午未申酉戌亥", "子丑寅卯辰巳午未申酉戌亥")
+    .replaceAll("反饋", "回饋").replaceAll("香港天文臺", "香港天文台");
 }
 const en = {"home":"Home","tools":"Tools","journal":"Journal","mainNav":"Main navigation","language":"Article language","footer":"Clear distinctions between symbols, calculations and personal judgment.","footerNav":"Footer navigation","all":"All articles","toolDirectory":"Tool directory","contact":"Contact","breadcrumb":"Breadcrumb","published":"Published","updated":"Updated","contents":"IN THIS GUIDE","sections":"Article sections","takeaway":"START HERE","sources":"SOURCES & FURTHER READING","try":"Try it with a clear idea of what to expect.","related":"CONTINUE READING","eyebrow":"THE DESTINYPIXEL JOURNAL","heading":"Meet the character.\nExplore the story.","intro":"What draws you to someone? Where does your talent meet its opportunity? Explore personality, love and career through the Day Pillars, through all 60 illustrated portraits, alongside birth-chart guides and five-element design. Read in English, Chinese or Russian.","list":"Original articles","read":"Read the guide","editorial":"HOW THESE GUIDES ARE MADE","editorialBody":"Day Pillar portraits draw on traditional symbolism and our original card material, with real situations in love and work. Famous birthdays are checked against published sources and our date calculator. Calendar facts and practical instructions are kept distinct from interpretation.","title":"Journal: Birthday Characters, Love & Life Direction","description":"Explore Bazi Day Pillar personality, love and career stories, with all 60 illustrated animal portraits, plus verified famous birthdays, birth-chart guides and five-element design."};
 const zh = {"home":"首页","tools":"玄学工具","journal":"文章","mainNav":"主导航","language":"文章语言","footer":"把象征、计算与个人判断分清楚。","footerNav":"页脚导航","all":"全部文章","toolDirectory":"工具目录","contact":"联系反馈","breadcrumb":"面包屑导航","published":"发布于","updated":"更新于","contents":"文章目录","sections":"文章章节","takeaway":"先记住这一点","sources":"来源与延伸阅读","try":"带着清楚的预期，动手试一次。","related":"继续阅读","eyebrow":"DESTINYPIXEL 原创文章","heading":"你的性格，有故事。\n你的日柱，有看点。","intro":"你为什么会被一个人吸引？什么样的工作能发挥你的长处？从甲子到癸亥，读日柱里的性格、感情、事业与名人故事，也探索出生图谱和五行配色。提供英语、简体中文、繁体中文与俄语版本。","list":"原创文章列表","read":"阅读文章","editorial":"我们怎样写这些文章","editorialBody":"日柱人物画像结合传统象征与原创卡片资料，写出感情和事业中的具体情境。名人生日核对公开来源，并按日期复算；历法与操作步骤另行核实，让读者知道故事从哪里来。","title":"玄学与日常：六十日柱、出生图谱与五行指南","description":"从甲子到癸亥，阅读六十甲子日柱的性格、感情与事业故事，了解核对过生日的名人案例，探索出生图谱与五行设计。"};

@@ -1,0 +1,1162 @@
+[
+  {
+    "cycle": 1,
+    "pillar": "甲子",
+    "slug": "jia-zi-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-14",
+    "updatedAt": "2026-09-23",
+    "source": "lib/journal-jia-zi.ts",
+    "sha256": "3654416ce3e5237505e39b5ad8d360bffc7d55302637210a61493a9cf34d810c",
+    "image": "/archetypes/jia_zi.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": [
+      {
+        "path": "lib/journal-jia-zi-ru.ts",
+        "sha256": "5108c31be8ffae20140f94450a11af6062733bd6b063df9e9220081f6a816321"
+      }
+    ]
+  },
+  {
+    "cycle": 2,
+    "pillar": "乙丑",
+    "slug": "yi-chou-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
+    "source": "lib/journal-pillars/yi-chou.ts",
+    "sha256": "92174ff87fd46022e8e7d8d976e4b06312ab239c49f75fe39ec7a1f0dd2389c8",
+    "image": "/archetypes/yi_chou.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": [
+      {
+        "path": "lib/journal-pillars/yi-chou-ru.ts",
+        "sha256": "632bb936dccfc00669f1a0d1d06630b993807cdf90aa9d0f86de347be01fd4f3"
+      }
+    ]
+  },
+  {
+    "cycle": 3,
+    "pillar": "丙寅",
+    "slug": "bing-yin-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
+    "source": "lib/journal-pillars/bing-yin.ts",
+    "sha256": "c55811e317438bda1b548f06b85ab36769197fd863218e1fcd6279991461d1c8",
+    "image": "/archetypes/bing_yin.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": [
+      {
+        "path": "lib/journal-pillars/bing-yin-ru.ts",
+        "sha256": "2e4a8d89f7ccf2506686a516d3b75e7e7e5dac4d756b95412b78213b8365050e"
+      }
+    ]
+  },
+  {
+    "cycle": 4,
+    "pillar": "丁卯",
+    "slug": "ding-mao-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-09-29",
+    "source": "lib/journal-pillars/ding-mao.ts",
+    "sha256": "4fd073d44f5ffe50e26997aab0106f7d5ae194b0fd7004bd8b305320780402bf",
+    "image": "/archetypes/ding_mao.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": [
+      {
+        "path": "lib/journal-pillars/ding-mao-ru.ts",
+        "sha256": "102546451e310405023606cc39128d2099e86ac065505bfc6af584545e04ff00"
+      }
+    ]
+  },
+  {
+    "cycle": 5,
+    "pillar": "戊辰",
+    "slug": "wu-chen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-chen.ts",
+    "sha256": "116e0e2aeb0d69b49ebdcf8bae69c8a76d8f363a654c36dfa68b22f5b0f9d3c1",
+    "image": "/archetypes/wu_chen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 6,
+    "pillar": "己巳",
+    "slug": "ji-si-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-si.ts",
+    "sha256": "f22cc22df813e672765a510524a1836fc303f8a76e3d7890ca2d435aa5e8a1dc",
+    "image": "/archetypes/ji_si.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 7,
+    "pillar": "庚午",
+    "slug": "geng-wu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-wu.ts",
+    "sha256": "77f14e2bc02465716659cc5479a917836f79eb08b533577571dc5d99e3439d26",
+    "image": "/archetypes/geng_wu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 8,
+    "pillar": "辛未",
+    "slug": "xin-wei-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-wei.ts",
+    "sha256": "45bec06c445e780da1b88f563f19aeac0d753f45b11fef07648acd24e8e5f12c",
+    "image": "/archetypes/xin_wei.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 9,
+    "pillar": "壬申",
+    "slug": "ren-shen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-shen.ts",
+    "sha256": "762c165f3b9d8e8f0a7d74f479e7d6794fe4ca4032f1730c86b033e7cabd1445",
+    "image": "/archetypes/ren_shen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 10,
+    "pillar": "癸酉",
+    "slug": "gui-you-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-you.ts",
+    "sha256": "0d2579b1deb2415efdbf82d8b6420a23c078e830d4c09dda766b167221551e5f",
+    "image": "/archetypes/gui_you.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 11,
+    "pillar": "甲戌",
+    "slug": "jia-xu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/jia-xu.ts",
+    "sha256": "02725df4d5e7921cf9eee3627173937d2b1c366d79e159c3db633eaca733a150",
+    "image": "/archetypes/jia_xu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 12,
+    "pillar": "乙亥",
+    "slug": "yi-hai-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/yi-hai.ts",
+    "sha256": "b0bc22d3fb844b81589c8406e70fe7daa49b924947187c3fa0045655aa436c82",
+    "image": "/archetypes/yi_hai.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 13,
+    "pillar": "丙子",
+    "slug": "bing-zi-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/bing-zi.ts",
+    "sha256": "d65e1bcf23f51f84edb87cb4437a95b7ba0c136ad2545667b4fe046bcc6e04f3",
+    "image": "/archetypes/bing_zi.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 14,
+    "pillar": "丁丑",
+    "slug": "ding-chou-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ding-chou.ts",
+    "sha256": "47de3d419d7c4d391cec1ea34e78d3c140a242dc53448616cbb840bc79b18db1",
+    "image": "/archetypes/ding_chou.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 15,
+    "pillar": "戊寅",
+    "slug": "wu-yin-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-yin.ts",
+    "sha256": "4c827a60b4a0ed08f1a9ff7b58b509c45cf40d80802d92b1073bac360ff9dae0",
+    "image": "/archetypes/wu_yin.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 16,
+    "pillar": "己卯",
+    "slug": "ji-mao-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-mao.ts",
+    "sha256": "e1cd7a19e603979ab72ac458eddb2876691daabf78f5e29caac19f39c68da9fe",
+    "image": "/archetypes/ji_mao.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 17,
+    "pillar": "庚辰",
+    "slug": "geng-chen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-chen.ts",
+    "sha256": "4296b70e695288f5b4671e8db7cd985c0e6381abca9ed5385ef49ca20154ac1a",
+    "image": "/archetypes/geng_chen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 18,
+    "pillar": "辛巳",
+    "slug": "xin-si-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-si.ts",
+    "sha256": "03adf8ca88ca00d62e2402fca7a6e6f0c6d1d711c7f0aa5c897eedcd07bed319",
+    "image": "/archetypes/xin_si.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 19,
+    "pillar": "壬午",
+    "slug": "ren-wu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-wu.ts",
+    "sha256": "3622c20a123dc783d56db256402c0d1571c0f44b4b4c83e10bf932b41bf34724",
+    "image": "/archetypes/ren_wu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 20,
+    "pillar": "癸未",
+    "slug": "gui-wei-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-wei.ts",
+    "sha256": "2c3cd74b29b81d91d3e8bf4262ece5ba19b25710ab0ee221aaa02355f4d03ea8",
+    "image": "/archetypes/gui_wei.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 21,
+    "pillar": "甲申",
+    "slug": "jia-shen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/jia-shen.ts",
+    "sha256": "d84b496f6934df4cfa029295fb88b415830dac1d7447ba697a3146d6572409a8",
+    "image": "/archetypes/jia_shen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 22,
+    "pillar": "乙酉",
+    "slug": "yi-you-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/yi-you.ts",
+    "sha256": "984aa8c7f9ac935e6f74ee518dab0f91e1f7690c1b0cba18b1ac3b52e895d8ea",
+    "image": "/archetypes/yi_you.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 23,
+    "pillar": "丙戌",
+    "slug": "bing-xu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/bing-xu.ts",
+    "sha256": "55c801ee964b1e4a34a1215a2079b2d912394718253978a12ac4478cb1043cf9",
+    "image": "/archetypes/bing_xu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 24,
+    "pillar": "丁亥",
+    "slug": "ding-hai-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ding-hai.ts",
+    "sha256": "412712658f1f60b874046ea58a8a04c140f7aba00b91c615f041f1fe4d2ab1a7",
+    "image": "/archetypes/ding_hai.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 25,
+    "pillar": "戊子",
+    "slug": "wu-zi-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-zi.ts",
+    "sha256": "ef74ee898d1ceb2c7e6c23a0afba7619d84601a185d16cc3d89bcf14b9afb5bc",
+    "image": "/archetypes/wu_zi.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 26,
+    "pillar": "己丑",
+    "slug": "ji-chou-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-chou.ts",
+    "sha256": "a62dc3d844667e36071f101ff81573ea7fb9f4fa2c8cf694bde7d775a63ca96b",
+    "image": "/archetypes/ji_chou.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 27,
+    "pillar": "庚寅",
+    "slug": "geng-yin-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-yin.ts",
+    "sha256": "eed63bdc32a87aca9daf5e7aa708928822798fae62317c4c627a3abec87b7cc4",
+    "image": "/archetypes/geng_yin.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 28,
+    "pillar": "辛卯",
+    "slug": "xin-mao-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-mao.ts",
+    "sha256": "47a9cd32e464635c5064c62363b4c447dca525fdaa89a7e721bc6bef50f63a79",
+    "image": "/archetypes/xin_mao.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 29,
+    "pillar": "壬辰",
+    "slug": "ren-chen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-chen.ts",
+    "sha256": "872c17b1802425b19b7a007f5e30a7a947aa22a1ba4dd6a31e6abdf78a3cd54c",
+    "image": "/archetypes/ren_chen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 30,
+    "pillar": "癸巳",
+    "slug": "gui-si-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-si.ts",
+    "sha256": "6fe9b293dc293c6b46885774e4236a605868ea63b0e6534843d73c559abefd4d",
+    "image": "/archetypes/gui_si.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 31,
+    "pillar": "甲午",
+    "slug": "jia-wu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/jia-wu.ts",
+    "sha256": "02b4379d2bde45b86113f074c333752f330650f20b30a1338708cad5f0dc3cb7",
+    "image": "/archetypes/jia_wu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 32,
+    "pillar": "乙未",
+    "slug": "yi-wei-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/yi-wei.ts",
+    "sha256": "039c72658ceeddfb44a927559d123e2a495187e6d5ef52106017d27169166174",
+    "image": "/archetypes/yi_wei.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 33,
+    "pillar": "丙申",
+    "slug": "bing-shen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/bing-shen.ts",
+    "sha256": "d8c973c8b109b5be8b0e10d385dc23965b5cce31ee54a729525fe47c15120fe4",
+    "image": "/archetypes/bing_shen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 34,
+    "pillar": "丁酉",
+    "slug": "ding-you-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ding-you.ts",
+    "sha256": "58abb15d4bccc05a5e6a3ceefb5910916503c15a925f2da65160e4e37cb7ad4e",
+    "image": "/archetypes/ding_you.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 35,
+    "pillar": "戊戌",
+    "slug": "wu-xu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-xu.ts",
+    "sha256": "e30c3463bf129a0eea7c64dab664898c0adb086c0c58c5b08fe866fa5143950a",
+    "image": "/archetypes/wu_xu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 36,
+    "pillar": "己亥",
+    "slug": "ji-hai-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-hai.ts",
+    "sha256": "510509c56fe0a91e10509d6d15fb7fb4e6107dbce93f29d6285fddc53b8f55bb",
+    "image": "/archetypes/ji_hai.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 37,
+    "pillar": "庚子",
+    "slug": "geng-zi-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-zi.ts",
+    "sha256": "ee208ae93320ef74bab89c3b136bebb9d098d6efeaa6b6eaeea8bbc7335eac19",
+    "image": "/archetypes/geng_zi.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 38,
+    "pillar": "辛丑",
+    "slug": "xin-chou-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-chou.ts",
+    "sha256": "5fab0cd692017afdfca546ce6baacde604957fc9b87409c300ea9e4f308842a5",
+    "image": "/archetypes/xin_chou.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 39,
+    "pillar": "壬寅",
+    "slug": "ren-yin-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-yin.ts",
+    "sha256": "01ebf6be6a3f219c342cf3f06986dac1d7a8cae663104779bdd847243c0e4871",
+    "image": "/archetypes/ren_yin.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 40,
+    "pillar": "癸卯",
+    "slug": "gui-mao-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-mao.ts",
+    "sha256": "827132978953ff4c58baff9e0b50dbe8cc6994cdbccbb2107e9bb26eecb06bfa",
+    "image": "/archetypes/gui_mao.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 41,
+    "pillar": "甲辰",
+    "slug": "jia-chen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/jia-chen.ts",
+    "sha256": "3875a26eb21fb7a19eb474d1c49c8bf5b80e2105bc2724ce31a9a8b9745414ca",
+    "image": "/archetypes/jia_chen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 42,
+    "pillar": "乙巳",
+    "slug": "yi-si-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/yi-si.ts",
+    "sha256": "1175e96ac6bebb1c960ec6cbdbe30cad62fe802d9880fea4e5f0bccac79ac1e9",
+    "image": "/archetypes/yi_si.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 43,
+    "pillar": "丙午",
+    "slug": "bing-wu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/bing-wu.ts",
+    "sha256": "4ccb1ab786b5752d776dab5337618ecad403b0de38ba675e9dfc8f79d369af76",
+    "image": "/archetypes/bing_wu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 44,
+    "pillar": "丁未",
+    "slug": "ding-wei-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ding-wei.ts",
+    "sha256": "5b2163bd06b880eb3bd275404ed36e1db4c4f425e764ccca687a183d92d3a489",
+    "image": "/archetypes/ding_wei.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 45,
+    "pillar": "戊申",
+    "slug": "wu-shen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-shen.ts",
+    "sha256": "a491c80e2412e0efb432f2c2272f11dc94b11e64e4b87a634c1efa4802ea8740",
+    "image": "/archetypes/wu_shen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 46,
+    "pillar": "己酉",
+    "slug": "ji-you-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-you.ts",
+    "sha256": "6f43269bd7ec5254f2ebfc9f9935b5cf055d9baf6451025bf55a9dec861e2a40",
+    "image": "/archetypes/ji_you.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 47,
+    "pillar": "庚戌",
+    "slug": "geng-xu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-xu.ts",
+    "sha256": "4cccc5122cc6a3e70b5867f44aeaf99f6baaa4760c5a00bc6fea78687ad30be3",
+    "image": "/archetypes/geng_xu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 48,
+    "pillar": "辛亥",
+    "slug": "xin-hai-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-hai.ts",
+    "sha256": "00e20bbe307c6dde1096ca4eebdd981d694ed6a0c7645e17c8776a5632b8907c",
+    "image": "/archetypes/xin_hai.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 49,
+    "pillar": "壬子",
+    "slug": "ren-zi-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-zi.ts",
+    "sha256": "5aaaebbd680faeb30e35f8b5b403289882bd40d9c02accfad7d52cba722e8bc5",
+    "image": "/archetypes/ren_zi.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 50,
+    "pillar": "癸丑",
+    "slug": "gui-chou-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-chou.ts",
+    "sha256": "6cfa720d8fd12a686ffaffeb7b193eff632af6f490f2c602b113e429f09a69fc",
+    "image": "/archetypes/gui_chou.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 51,
+    "pillar": "甲寅",
+    "slug": "jia-yin-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/jia-yin.ts",
+    "sha256": "6d3aff0cdb88f7093f647bf75091430381318e701f76fa3f630043fd5ed8f8f2",
+    "image": "/archetypes/jia_yin.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 52,
+    "pillar": "乙卯",
+    "slug": "yi-mao-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/yi-mao.ts",
+    "sha256": "1caf9a267b9d21bc3030cae62be1b28ea50f068876c047d5cdad3e7a9aae8028",
+    "image": "/archetypes/yi_mao.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 53,
+    "pillar": "丙辰",
+    "slug": "bing-chen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/bing-chen.ts",
+    "sha256": "a467a1654eed3691c6a4150acf7a17605361e2f70882f461d0a837b1edd748a9",
+    "image": "/archetypes/bing_chen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 54,
+    "pillar": "丁巳",
+    "slug": "ding-si-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ding-si.ts",
+    "sha256": "87fef661776da44c233c42878e286d2109226706b51536b7bfcf68fa3c51abb1",
+    "image": "/archetypes/ding_si.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 55,
+    "pillar": "戊午",
+    "slug": "wu-wu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/wu-wu.ts",
+    "sha256": "c92052b2379186b058d8cb7660e18a95b9eda513b211b3ee42c439451cc13505",
+    "image": "/archetypes/wu_wu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 56,
+    "pillar": "己未",
+    "slug": "ji-wei-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ji-wei.ts",
+    "sha256": "9ea8f81f006fc47dd2c7172e9a742e7f8dc87b30ade31c10b430190319461c2c",
+    "image": "/archetypes/ji_wei.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 57,
+    "pillar": "庚申",
+    "slug": "geng-shen-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/geng-shen.ts",
+    "sha256": "1c8a74c6a24bedb56f1d55200863ea55cf3efdd8bec2f2831ebb07305b716abe",
+    "image": "/archetypes/geng_shen.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 58,
+    "pillar": "辛酉",
+    "slug": "xin-you-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/xin-you.ts",
+    "sha256": "3928f3316d8507c5b01aed83219c57d6647e81fa24ac6fe60a223a0b7fd2f2fa",
+    "image": "/archetypes/xin_you.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 59,
+    "pillar": "壬戌",
+    "slug": "ren-xu-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/ren-xu.ts",
+    "sha256": "2fe50b1bbd10d26fde0a52305b22e2016b074af95e8fd72eaf979b794112dfb0",
+    "image": "/archetypes/ren_xu.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  },
+  {
+    "cycle": 60,
+    "pillar": "癸亥",
+    "slug": "gui-hai-day-pillar",
+    "depth": "full",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-10-05",
+    "source": "lib/journal-pillars/gui-hai.ts",
+    "sha256": "8433768f32ab244ad4b8e56a1a71b5b252b71d6dfc2858ed8b7f78ce0a0351c1",
+    "image": "/archetypes/gui_hai.jpg?v=20260914-new",
+    "locales": [
+      "en",
+      "zh",
+      "zh-TW",
+      "ru"
+    ],
+    "translationMethod": "English, Simplified Chinese and Russian source; Traditional Chinese via toTraditional",
+    "additionalSources": []
+  }
+]
