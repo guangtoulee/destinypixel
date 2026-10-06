@@ -1,3 +1,4 @@
+import { guanyinAlternates, guanyinGuidePath, guanyinHref, guanyinUpdatedAt } from "@/lib/guanyin-guide";
 import { productFactsLocales, productFactsHref, productFactsAlternates, productFactsUpdatedAt } from "@/lib/product-facts";
 import { celestialContentUpdatedAt } from "@/lib/celestial/search-content";
 import { celestialLocales, celestialHref, celestialAlternates } from "@/lib/celestial/copy";
@@ -84,11 +85,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: dayPillarLanguages },
     }));
 
-    const guideRoutes: MetadataRoute.Sitemap = seoGuides.map((guide) => ({
+    const guideRoutes: MetadataRoute.Sitemap = seoGuides.filter(guide => seoGuidePath(guide) !== guanyinGuidePath).map((guide) => ({
       url: absoluteUrl(seoGuidePath(guide)),
       ...(guide.updatedAt ? { lastModified: guide.updatedAt } : {}),
       changeFrequency: "monthly",
       priority: 0.78,
+    }));
+    const guanyinRoutes: MetadataRoute.Sitemap = journalLocales.map(locale => ({
+      url: absoluteUrl(guanyinHref(locale)), lastModified: guanyinUpdatedAt,
+      changeFrequency: "monthly", priority: 0.78, alternates: { languages: guanyinAlternates() },
     }));
     const discoveryLanguages = Object.fromEntries(Object.entries(discoveryAlternates()).map(([l, href]) => [l, absoluteUrl(href)]));
     const discoveryRoutes: MetadataRoute.Sitemap = discoveryLocales.map(locale => ({url:absoluteUrl(discoveryHref(locale)),lastModified:"2026-09-30",priority:0.9,changeFrequency:"monthly",alternates:{languages:discoveryLanguages}}));
@@ -96,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const compatibilityRoutes: MetadataRoute.Sitemap = compatibilityLocales.map(locale => ({ url: absoluteUrl(compatibilityHref(locale)), lastModified: productFactsUpdatedAt, priority: 0.92, changeFrequency: "monthly", alternates: { languages: compatibilityLanguages } }));
     const celestialRoutes: MetadataRoute.Sitemap = ["/astrology", "/tarot"].flatMap(path => celestialLocales.map(locale => ({url:absoluteUrl(celestialHref(path,locale)),lastModified:celestialContentUpdatedAt,priority:0.87,changeFrequency:"monthly",alternates:{languages:Object.fromEntries(Object.entries(celestialAlternates(path)).map(([l,href])=>[l,absoluteUrl(href)]))}})));
     const factsRoutes: MetadataRoute.Sitemap = productFactsLocales.map(locale => ({ url: absoluteUrl(productFactsHref(locale)), lastModified: productFactsUpdatedAt, priority: 0.5, changeFrequency: "monthly", alternates: { languages: productFactsAlternates() } }));
-    return [...factsRoutes, ...celestialRoutes, ...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes];
+    return [...factsRoutes, ...celestialRoutes, ...compatibilityRoutes, ...primaryRoutes, ...safeJournalRoutes(), ...dayPillarRoutes, ...discoveryRoutes, ...guideRoutes, ...guanyinRoutes];
   } catch {
     // Never 500 the sitemap — fall back to homepage only
     return [
