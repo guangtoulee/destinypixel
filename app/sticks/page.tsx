@@ -1,3 +1,4 @@
+import SectionReading from "@/components/section-reading";
 import type { Metadata } from "next";
 import { ProductSearchContent } from "@/components/product-search-content";
 import { journalLanguageTags } from "@/lib/journal-locales";
@@ -46,7 +47,7 @@ export default async function SticksPage({
     <SpiritualSticksExperience
       initialLocale={locale}
       initialType={normalizeStickType(params?.type)}
-    ><ProductSearchContent product="sticks" locale={locale} /></SpiritualSticksExperience>
+    ><SectionReading section="sticks" locale={locale}/><ProductSearchContent product="sticks" locale={locale} /></SpiritualSticksExperience>
     </>
   );
 }

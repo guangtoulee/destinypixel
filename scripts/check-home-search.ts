@@ -21,6 +21,14 @@ async function main() {
     assert.ok(new RegExp(`<main[^>]+lang="${tag}"`).test(html));
     assert.ok(text.includes(["Birth times optional", "时辰可选未知", "時辰可選未知", "Время можно не знать"][i]));
     assert.ok(!["Both birth dates, known times and cities", "双方生日、已知出生时间与城市", "雙方生日、已知出生時間與城市", "Даты, известное время и города рождения обоих"].some(s => text.includes(s)));
+    const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0] || "";
+    const contactLabel = { en: "Contact", zh: "联系", "zh-TW": "聯絡", ru: "Связаться с нами" }[locale];
+    const contact = footer.match(new RegExp(`<a href="(mailto:[^"]+)">${contactLabel}</a>`));
+    assert.ok(contact, `${locale}: footer contact must use the existing support mailbox`);
+    assert.doesNotMatch(footer, /href="\/contact(?:[?"#])/);
+    const organization = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .flatMap(m => JSON.parse(m[1])).find(s => s["@type"] === "Organization");
+    assert.equal(contact[1], `mailto:${organization.contactPoint.email}`, "Footer agrees with existing support metadata");
     const links = [...html.matchAll(/<link\b[^>]*>/g)].map(m => Object.fromEntries([...m[0].matchAll(/([\w-]+)="([^"]*)"/g)].map(a => [a[1], a[2]])));
     assert.equal(new URL(links.find(a => a.rel === "canonical")!.href).href, new URL(path, origin).href);
     for (const l of locales) {
@@ -34,12 +42,19 @@ async function main() {
     const c = homeOfferCopy(locale);
     assert.ok(text.includes(offer.available ? c.note.replace("{price}", offer.amount) : c.unavailable));
     if (locale === "zh-TW") {
-      for (const s of ["免費測試", "原創文章", "讓意象，鮮活起來", "填寫出生日期、時間與城市", "問事", "求籤"]) assert.ok(text.includes(s), s);
+      for (const s of ["免費測我的意象卡", "原創文章", "六十日柱", "填寫出生日期、時間與城市", "求籤問事", "手串工坊"]) assert.ok(text.includes(s), s);
       for (const s of ["问事", "求签"]) assert.ok(!text.includes(s), `Unexpected Simplified copy: ${s}`);
     }
+    for (const route of ["discover", "sticks", "compatibility", "atelier"]) {
+      assert.ok(html.includes(`data-home-path="${route}"`), `Missing primary path ${route}`);
+      const href = `/${route}${locale === "en" ? "" : `?locale=${locale}`}`;
+      assert.ok(html.includes(`href="${href}"`), `Wrong language section path ${href}`);
+    }
+    assert.equal((html.match(/<h1[ >]/g) ?? []).length, 1);
+    assert.ok(html.includes('id="report"'), "Preserved report handoff");
     const discover = decode(await get(`/discover${locale === "en" ? "" : `?locale=${locale}`}`));
     assert.ok(discover.includes(["birth times are optional", "时辰可选未知", "時辰可選未知", "время может быть неизвестно"][i]));
-    console.log(`PASS ${locale}: home initial text, offers, canonical/languages, sitemap and discover handoff`);
+    console.log(`PASS ${locale}: home initial text, offers, canonical/languages, sitemap, discover handoff and localized support contact`);
   }
   const ultra = await get("/ultra");
   assert.match(ultra, /<meta name="robots" content="noindex, follow"/);

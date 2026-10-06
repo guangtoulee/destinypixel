@@ -2,6 +2,7 @@ import { currentHomeReportOffer } from "@/lib/product-facts-server";
 import { homeOffers } from "@/lib/home-offer";
 import { destinySupportEmail } from "@/lib/support-contact";
 import type { Metadata } from "next";
+import HomeGateway from "@/components/home-gateway";
 import DestinyWhiteExperience from "@/components/destiny-white-experience";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { normalizeReportLocale } from "@/lib/report-i18n";
@@ -42,8 +43,7 @@ export default async function Home({
         target: [
           absoluteUrl("/discover"),
           absoluteUrl("/compatibility"),
-          absoluteUrl("/palm"),
-          absoluteUrl("/oracle"),
+          absoluteUrl("/atelier"),
           absoluteUrl("/sticks"),
         ],
       },
@@ -95,7 +95,7 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <DestinyWhiteExperience reportOffer={reportOffer} initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} />
+      <HomeGateway locale={initialLocale} reportOffer={reportOffer}><DestinyWhiteExperience reportOnly reportOffer={reportOffer} initialLocale={initialLocale} initialError={birthFormFeedback(params?.error, initialLocale)} /></HomeGateway>
     </>
   );
 }

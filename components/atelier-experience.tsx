@@ -1,6 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import type { ReactNode } from "react";
+import SectionNavigation from "./section-navigation";
+import { journeyCopy, sectionHref } from "@/lib/section-journeys";
+import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import {
@@ -266,11 +271,15 @@ function downloadBlob(blob: Blob, fileName: string) {
 export default function AtelierExperience({
   initialLocale = "en",
   initialFocus = "Water",
+  children,
 }: {
   initialLocale?: ReportLocale;
   initialFocus?: EnergyElement;
+  children?: ReactNode;
 }) {
-  const [locale, setLocale] = useState<ReportLocale>(initialLocale);
+  const locale = initialLocale;
+  const router = useRouter();
+  const localText = (value:string) => locale === "zh-TW" ? toTraditional(value) : value;
   const [focus, setFocus] = useState<FocusFilter>(initialFocus);
   const [gender, setGender] = useState<GenderStyle>("female");
   const [beadSize, setBeadSize] = useState(10);
@@ -279,7 +288,7 @@ export default function AtelierExperience({
   const [downloadBusy, setDownloadBusy] = useState(false);
   const previewRef = useRef<HTMLElement | null>(null);
   const copyLocale = contentLocale(locale);
-  const copy = atelierCopy[copyLocale];
+  const copy = locale === "zh-TW" ? JSON.parse(toTraditional(JSON.stringify(atelierCopy.zh))) as typeof atelierCopy.en : atelierCopy[copyLocale];
   const fitOptions = useMemo(() => getFitOptions(gender, beadSize), [beadSize, gender]);
   const currentBeads = useMemo(
     () =>
@@ -316,13 +325,10 @@ export default function AtelierExperience({
   }, [beadCount]);
 
   function changeLocale(nextLocale: ReportLocale) {
-    setLocale(nextLocale);
-    setDocumentLocale(nextLocale);
-    window.localStorage.setItem("destinypixel-locale", nextLocale);
-
     const url = new URL(window.location.href);
-    url.searchParams.set("locale", nextLocale);
-    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    if (nextLocale === "en") url.searchParams.delete("locale");
+    else url.searchParams.set("locale", nextLocale);
+    router.push(`${url.pathname}${url.search}${url.hash}`, { scroll: false });
   }
 
   function addStone(stone: Gemstone) {
@@ -365,7 +371,7 @@ export default function AtelierExperience({
   }
 
   return (
-    <main className="atelier-site">
+    <main className="atelier-site" lang={journalLanguageTags[locale]} data-server-localized>
       <header className="atelier-header">
         <Link href={`/?locale=${locale}`}>
           <ArrowLeft size={16} aria-hidden="true" />
@@ -374,11 +380,12 @@ export default function AtelierExperience({
         <div className="white-language" aria-label="Language selector">
           <Languages size={14} aria-hidden="true" />
           {reportLanguageOptions.map((option) => (
-            <button
+            <a
               key={option.value}
-              type="button"
+              href={`${sectionHref("/atelier",option.value)}${option.value === "en" ? "?" : "&"}focus=${initialFocus}`}
+              aria-current={locale === option.value ? "page" : undefined}
               data-active={locale === option.value}
-              onClick={() => changeLocale(option.value)}
+              onClick={event => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return; event.preventDefault(); changeLocale(option.value); }}
             >
               {option.value === "zh"
                 ? "简"
@@ -387,12 +394,13 @@ export default function AtelierExperience({
                 : option.value === "ru"
                   ? "RU"
                   : "EN"}
-            </button>
+            </a>
           ))}
         </div>
       </header>
+      <SectionNavigation locale={locale} current="atelier"/>
 
-      <section className="atelier-workbench">
+      <section id="design-bracelet" className="atelier-workbench">
         <aside className="atelier-preview-card" ref={previewRef} data-atelier-export>
           <div className="atelier-preview-card__copy">
             <p>
@@ -401,6 +409,7 @@ export default function AtelierExperience({
             </p>
             <h1>{copy.title}</h1>
             <span>{copy.lead}</span>
+            <a className="atelier-start" href="#choose-stones">{journeyCopy(locale).sections.atelier.action} ↓</a>
           </div>
 
           <div className="atelier-aura atelier-aura--board" aria-label={copy.creation}>
@@ -429,7 +438,7 @@ export default function AtelierExperience({
                       "--bead": `${previewBeadPixels}px`,
                       "--stone-bg": stoneBackground(stone),
                     } as CSSProperties}
-                    title={`${copy.removeBead}: ${stone.name[copyLocale]}`}
+                    title={`${copy.removeBead}: ${localText(stone.name[copyLocale])}`}
                     onClick={() => removeBead(index)}
                   >
                     <Minus size={10} aria-hidden="true" />
@@ -470,7 +479,7 @@ export default function AtelierExperience({
                     type="button"
                     key={`${stone.id}-strip-${index}`}
                     onClick={() => removeBead(index)}
-                    title={`${copy.removeBead}: ${stone.name[copyLocale]}`}
+                    title={`${copy.removeBead}: ${localText(stone.name[copyLocale])}`}
                   >
                     <i style={{ background: stoneBackground(stone) }} />
                     {index + 1}
@@ -488,13 +497,13 @@ export default function AtelierExperience({
               <Gem size={15} aria-hidden="true" />
               {copy.analysis}
             </span>
-            <p>{analysis}</p>
+            <p>{localText(analysis)}</p>
 
             <div className="atelier-energy-bars">
               <strong>{copy.balance}</strong>
               {percentages.map(({ element, percent }) => (
                 <label key={element}>
-                  <span>{elementStyle[element].label[copyLocale]}</span>
+                  <span>{localText(elementStyle[element].label[copyLocale])}</span>
                   <i>
                     <b style={{ width: `${Math.max(4, percent)}%` }} />
                   </i>
@@ -509,14 +518,11 @@ export default function AtelierExperience({
               <RotateCcw size={15} aria-hidden="true" />
               {copy.reset}
             </button>
-            <button type="button" onClick={downloadImage} disabled={downloadBusy}>
+            <button type="button" onClick={downloadImage} disabled={downloadBusy || !beadIds.length} data-primary>
               <Download size={15} aria-hidden="true" />
               {downloadBusy ? copy.downloading : copy.download}
             </button>
-            <button type="button" data-primary>
-              {copy.finish}
-              <ArrowRight size={15} aria-hidden="true" />
-            </button>
+
           </div>
         </aside>
 
@@ -572,7 +578,7 @@ export default function AtelierExperience({
             </div>
           </div>
 
-          <div className="atelier-library atelier-library--tray">
+          <div id="choose-stones" className="atelier-library atelier-library--tray">
             <div className="atelier-library__heading">
               <div>
                 <p>{copy.archive}</p>
@@ -593,7 +599,7 @@ export default function AtelierExperience({
                     data-active={focus === element}
                     onClick={() => setFocus(element)}
                   >
-                    {elementStyle[element].label[copyLocale]}
+                    {localText(elementStyle[element].label[copyLocale])}
                   </button>
                 ))}
               </div>
@@ -610,10 +616,10 @@ export default function AtelierExperience({
                 >
                   <span style={{ background: stoneBackground(stone) }} />
                   <small>
-                    {elementStyle[stone.element].label[copyLocale]} · {stone.aura[copyLocale]}
+                    {localText(elementStyle[stone.element].label[copyLocale])} · {localText(stone.aura[copyLocale])}
                   </small>
-                  <strong>{stone.name[copyLocale]}</strong>
-                  <p>{stone.meaning[copyLocale]}</p>
+                  <strong>{localText(stone.name[copyLocale])}</strong>
+                  <p>{localText(stone.meaning[copyLocale])}</p>
                   <em>
                     {isFull ? <Check size={14} /> : <Plus size={14} />}
                     <span>{copy.addStone}</span>
@@ -624,6 +630,8 @@ export default function AtelierExperience({
           </div>
         </section>
       </section>
+      <p className="atelier-journey-note">{journeyCopy(locale).sections.atelier.next}</p>
+      {children}
     </main>
   );
 }

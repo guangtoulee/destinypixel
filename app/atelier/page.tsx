@@ -1,3 +1,4 @@
+import SectionReading from "@/components/section-reading";
 import type { Metadata } from "next";
 import AtelierExperience from "@/components/atelier-experience";
 import { energyElements, type EnergyElement } from "@/lib/energy-style";
@@ -27,11 +28,11 @@ export default async function AtelierPage({
   searchParams?: Promise<{ locale?: string; focus?: string }>;
 }) {
   const params = await searchParams;
-
+  const locale = normalizeReportLocale(params?.locale ?? "en");
   return (
     <AtelierExperience
-      initialLocale={normalizeReportLocale(params?.locale ?? "en")}
+      initialLocale={locale}
       initialFocus={normalizeFocus(params?.focus)}
-    />
+    ><SectionReading section="atelier" locale={locale}/></AtelierExperience>
   );
 }

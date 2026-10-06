@@ -10,6 +10,10 @@ import { absoluteUrl } from "@/lib/seo";
 import { journalLanguageTags } from "@/lib/journal-locales";
 import { CelestialSearchContent } from "./search-content";
 import { celestialContentUpdatedAt } from "@/lib/celestial/search-content";
+import SectionNavigation from "@/components/section-navigation";
+import SectionReading from "@/components/section-reading";
+import SiteFunctionLinks from "@/components/site-function-links";
+import { topicCopy } from "@/lib/topic-journeys";
 import "./celestial.css";
 export function CelestialPageFrame({
   kind,
@@ -86,6 +90,7 @@ export function CelestialPageFrame({
           </div>
         </header>
         <nav className="cel-breadcrumb"><a href={celestialHref("/", locale)}>{c.home}</a><span aria-hidden="true">/</span><span aria-current="page">{astro ? c.astrology : c.tarot}</span></nav>
+        <SectionNavigation locale={locale} current={kind} />
         <section className="cel-hero">
           <div>
             <p className="cel-kicker">
@@ -95,10 +100,11 @@ export function CelestialPageFrame({
             <p className="cel-hero-intro">
               {astro ? c.astroIntro : c.tarotIntro}
             </p>
+            <a className="cel-button cel-topic-action" href="#topic-tool">{topicCopy(locale).sections[kind].action}<span aria-hidden="true">↓</span></a>
           </div>
           <div className="cel-hero-aside">{c.free}</div>
         </section>
-        {children}
+        <div id="topic-tool" className="cel-topic-tool" tabIndex={-1}>{children}</div>
         <CelestialSearchContent kind={kind} locale={locale} />
         <section className="cel-method">
           <details>
@@ -134,6 +140,8 @@ export function CelestialPageFrame({
             </details>
           ))}
         </section>
+        <SectionReading section={kind} locale={locale} />
+        <SiteFunctionLinks current={kind} locale={locale} />
         <footer className="cel-footer">
           <a href={celestialHref("/", locale)}>DestinyPixel</a>
           <nav>

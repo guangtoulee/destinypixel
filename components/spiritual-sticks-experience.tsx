@@ -1,4 +1,5 @@
 "use client";
+import SectionNavigation from "./section-navigation";
 
 import { useEffect, useRef, useState, useTransition, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
@@ -513,12 +514,13 @@ export default function SpiritualSticksExperience({
         </div>
       </header>
       <div className={styles.container}>
+        <SectionNavigation locale={locale} current="sticks"/>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>{text.heroEyebrow}</p>
           <h1>{text.heroTitle}</h1>
           <p>{text.heroLead}</p>
         </div>
-        <section className={styles.ritual} aria-label={text.heroEyebrow}>
+        <section id="draw-a-sign" className={styles.ritual} aria-label={text.heroEyebrow}>
           <div className={styles.traditions} role="group" aria-label={ui.select}>
             {stickTypes.map((type) => {
               const system = localizedSystems[type];

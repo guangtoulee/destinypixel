@@ -24,6 +24,24 @@ test("Traditional Chinese preserves prose meaning instead of applying software t
   assert.equal(toTraditional("真实例子支持这个观点。香港天文台的资料与读者反馈。"), "真實例子支持這個觀點。香港天文台的資料與讀者回饋。");
 });
 
+test("Traditional Chinese preserves every calendar stem and branch without changing aesthetic Chou", () => {
+  const stems = "甲乙丙丁戊己庚辛壬癸", branches = "子丑寅卯辰巳午未申酉戌亥";
+  for (const character of stems + branches) assert.equal(toTraditional(character), character);
+  assert.equal(toTraditional(branches), branches);
+  for (let index = 0; index < 60; index++) {
+    const pillar = stems[index % 10] + branches[index % 12];
+    assert.equal(toTraditional(pillar), pillar);
+    const copy = journalArticles.find((article) => article.pillar === pillar)!.translations["zh-TW"];
+    assert.ok(copy.title.includes(pillar), pillar);
+    const branchRows = copy.sections.flatMap((section) => section.table?.rows ?? []).filter(([label]) => /日支/.test(label) && !/本氣/.test(label));
+    // The original Jia Zi essay predates the shared fact-table layout.
+    if (pillar !== "甲子") assert.ok(branchRows.length > 0, pillar);
+    for (const row of branchRows) assert.ok(row.slice(1).some((value) => value.includes(pillar[1])), `${pillar}: ${row}`);
+  }
+  assert.equal(toTraditional("地支丑组成，丑的本气属土。但丑还有内部天干。丑 · 牛，丑支、丑土、丑为牛。"), "地支丑組成，丑的本氣屬土。但丑還有內部天干。丑 · 牛，丑支、丑土、丑為牛。");
+  assert.equal(toTraditional("不以美丑评人，也不嘲笑丑陋。"), "不以美醜評人，也不嘲笑醜陋。");
+});
+
 test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
   assert.equal(entries.length, (journalArticles.length + 2) * journalLocales.length);

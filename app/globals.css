@@ -10193,3 +10193,14 @@ body.report-exporting .report-header {
   .white-mobile-dock.celestial-mobile-dock { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .white-mobile-dock.celestial-mobile-dock a { font-size: 9px; min-width: 0; }
 }
+
+/* Four-section atelier navigation and localized actions. */
+.atelier-journey-note { max-width:1100px; margin:30px auto; padding:0 20px; color:#766879; line-height:1.8; }
+.atelier-header .white-language a { display:inline-flex; padding:10px; min-height:40px; align-items:center; font-size:12px; }
+.atelier-header .white-language a[aria-current=page] { background:#eee5f5; border-radius:8px; }
+
+@media(max-width:650px){.atelier-site{min-width:0}.atelier-site>nav{width:calc(100% - 32px)}}
+
+.atelier-start { display:inline-flex; align-items:center; min-height:44px; margin-top:14px; padding:10px 16px; border-radius:10px; background:#705170; color:white; font-size:14px; }
+#choose-stones { scroll-margin-top:20px; }
+.atelier-site [data-section-reading] { width:min(1120px,calc(100% - 32px)); }

@@ -41,6 +41,7 @@ import {
 } from "lucide-react";
 import { createFusionReportAction } from "@/app/actions";
 import { DeityPortrait } from "@/components/deity-portraits";
+import { pillarName } from "@/lib/day-pillar-library";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { getPillarDisplay } from "@/lib/bazi-totems";
 import { cities, resolveCity } from "@/lib/geo/cities";
@@ -763,11 +764,8 @@ function WhiteSubmitButton({
   );
 }
 
-function profileName(profile: PillarProfile, pillar: string, locale: ReportLocale) {
-  if (contentLocale(locale) === "zh") return locale === "zh-TW" ? toTraditional(profile.name.cn) : profile.name.cn;
-  if (locale === "ru") return getPillarDisplay(pillar, "ru").totemName;
-
-  return profile.name.en;
+function profileName(_profile: PillarProfile, pillar: string, locale: ReportLocale) {
+  return pillarName(pillar, locale);
 }
 
 function profileEssence(
@@ -801,10 +799,12 @@ export default function DestinyWhiteExperience({
   initialLocale = "en",
   initialError,
   reportOffer,
+  reportOnly = false,
 }: {
   initialLocale?: ReportLocale;
   initialError?: string;
   reportOffer: HomeReportOffer;
+  reportOnly?: boolean;
 }) {
   const locale = initialLocale;
   const [birthDate, setBirthDate] = useState("");
@@ -920,118 +920,14 @@ export default function DestinyWhiteExperience({
   const freeLabel = copyLocale === "zh" ? localText("免费测我的意象卡") : locale === "ru" ? "Моя бесплатная карточка" : "Find my free card";
 
 
-  return (
-    <main className="white-site editorial-home" lang={journalLanguageTags[locale]} data-server-localized>
-      <header className="white-header membership-header">
-        <div className="white-container white-header__inner">
-          <a className="white-brand" href="/">
-            <span aria-hidden="true" />
-            DestinyPixel
-          </a>
-
-          <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? localText("主導覽") : copyLocale === "zh" ? localText("主导航") : locale === "ru" ? "Основная навигация" : "Main navigation"}>
-            <a href={freeHref}>{copyLocale === "zh" ? localText("意象卡") : locale === "ru" ? "Карточка" : "Free card"}</a>
-            <a href="#report">{text.nav.report}</a>
-            <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
-            <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>{flow.tools}</a>
-            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>{copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}</a>
-          </nav>
-
-          <div className="white-actions">
-            <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
-            <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? localText("我的账号") : "Account"}</a>
-            <div className="white-language" aria-label="Language selector">
-              <Languages size={14} aria-hidden="true" />
-              {reportLanguageOptions.map((option) => (
-                <button
-                  key={option.value}
-                  type="button"
-                  data-active={locale === option.value}
-                  onClick={() => changeLocale(option.value)}
-                >
-                  {option.value === "zh"
-                    ? "简"
-                    : option.value === "zh-TW"
-                      ? "繁"
-                    : option.value === "ru"
-                      ? "RU"
-                      : "EN"}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <nav className="white-mobile-dock celestial-mobile-dock" aria-label={locale === "zh-TW" ? localText("行動導覽") : copyLocale === "zh" ? localText("移动导航") : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
-        <a href={freeHref} className="editorial-dock-free">
-          <Sparkles size={18} aria-hidden="true" />
-          <span>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Карточка" : "Free card"}</span>
-        </a>
-        <a href={compatibilityHref}>
-          <Sparkles size={18} aria-hidden="true" />
-          <span>{compatibilityCopy(locale).nav}</span>
-        </a>
-        <a href="#report"><SunMoon size={18} aria-hidden="true" /><span>{mobileNavLabels.report}</span></a>
-        <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}><Gem size={18} aria-hidden="true" /><span>{flow.tools}</span></a>
-      </nav>
-
-      <section className="white-hero" aria-labelledby="home-title">
-        <div className="white-container editorial-hero-grid">
-          <div className="white-hero__copy">
-            <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{introduction.eyebrow}</p>
-            <h1 id="home-title" data-server-localized>{introduction.title}</h1>
-            <p className="white-lead">{introduction.lead}</p>
-            <div className="editorial-hero-actions"><a className="editorial-primary" href={freeHref}>{introduction.free}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href="#start-here">{introduction.start}<ArrowRight size={15} aria-hidden="true" /></a></div>
-            <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{introduction.note}</p>
-            <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? localText("一种生日，一段独特故事。") : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
-          </div>
-          <div className="editorial-card-stage" aria-label={text.archetypes.title}>
-            <div className="editorial-orbit" aria-hidden="true" />
-            {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><div key={key} className={`editorial-display-card editorial-display-card--${index}`}>
-              {index===2 ? <ArchetypeMotionPlayer className="editorial-hero-motion" src={archetypeVideoPath("gui_mao")} poster={archetypePosterPath("gui_mao")} label={profileName(pillarsDB[key],key,locale)} playLabel={copyLocale === "zh" ? localText("播放卡片动画") : locale === "ru" ? "Включить анимацию" : "Play card animation"} pauseLabel={copyLocale === "zh" ? localText("暂停卡片动画") : locale === "ru" ? "Приостановить анимацию" : "Pause card animation"}/> : <a href={freeHref}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={1200} height={1600} sizes="(max-width: 650px) 48vw, 230px" /></a>}
-              <a href={freeHref}><span>{profileName(pillarsDB[key],key,locale)}</span></a>
-            </div>)}
-            <span className="editorial-stage-label">{copyLocale === "zh" ? localText("你的故事，会是哪一种？") : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
-          </div>
-        </div>
-      </section>
-
-      <HomeIntroduction locale={locale} />
-
-      <section className="white-archetypes" id="archetypes">
-        <div className="white-container editorial-collection">
-          <div className="editorial-collection-heading">
-            <p>{text.archetypes.eyebrow}</p>
-            <h2>{text.archetypes.title}</h2>
-            <span>{text.archetypes.description}</span>
-          </div>
-
-          <div className="editorial-collection-cards">
-            {featuredPillars.map((featuredPillar) => {
-              const itemProfile = (pillarsDB as Record<string, PillarProfile>)[
-                featuredPillar
-              ];
-              const itemDisplay = getPillarDisplay(featuredPillar, locale);
-              const itemName = profileName(itemProfile, featuredPillar, locale);
-
-              return (
-                <article key={featuredPillar} className="editorial-collection-card">
-                  <CardArtwork src={getPillarImagePath(featuredPillar)} name={itemName} locale={locale} sizes="(max-width:650px) 65vw, 240px" />
-                  <div>
-                    <span>{copyLocale === "zh" ? localText(itemDisplay.pillarLabel) : text.card.core}</span>
-                    <strong>{itemName}</strong>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <details className="editorial-more-art white-container"><summary>{flow.moreArt}</summary><ArchetypeMotionGallery locale={locale} /></details>
-
-      <section className="editorial-report white-container" id="report">
+  const reportDetails = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    const openReport = () => { if (reportDetails.current && (window.location.hash === "#report" || initialError)) reportDetails.current.open = true; };
+    openReport(); window.addEventListener("hashchange", openReport);
+    return () => window.removeEventListener("hashchange", openReport);
+  }, [initialError]);
+  const reportPanel = (
+<section className="editorial-report white-container" id={reportOnly ? "report-form" : "report"}>
         <div className="editorial-report-copy"><p className="white-kicker">{text.method.eyebrow}</p><h2>{text.method.title}</h2><p>{text.method.description}</p><div className="editorial-report-benefits">{text.method.items.map((item,i)=><article key={item.title}><span>0{i+1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div><a className="editorial-text-link" href={`/tuteng?locale=${locale}`}>{copyLocale === "zh" ? localText("也可以探索你的本命灵构") : locale === "ru" ? "Исследовать тотем рождения" : "Explore your interactive Birth Totem"}<ArrowRight size={16} aria-hidden="true" /></a></div>
           <div className="white-form-panel">
             <div className="white-form-panel__header">
@@ -1181,6 +1077,120 @@ export default function DestinyWhiteExperience({
           </div>
 
       </section>
+  );
+  if (reportOnly) return <div className="white-site editorial-home gateway-report"><details ref={reportDetails} id="report" open={initialError ? true : undefined}><summary>{text.method.title}</summary>{reportPanel}</details></div>;
+  return (
+    <main className="white-site editorial-home" lang={journalLanguageTags[locale]} data-server-localized>
+      <header className="white-header membership-header">
+        <div className="white-container white-header__inner">
+          <a className="white-brand" href="/">
+            <span aria-hidden="true" />
+            DestinyPixel
+          </a>
+
+          <nav className="white-nav celestial-home-nav" aria-label={locale === "zh-TW" ? localText("主導覽") : copyLocale === "zh" ? localText("主导航") : locale === "ru" ? "Основная навигация" : "Main navigation"}>
+            <a href={freeHref}>{copyLocale === "zh" ? localText("意象卡") : locale === "ru" ? "Карточка" : "Free card"}</a>
+            <a href="#report">{text.nav.report}</a>
+            <a href={compatibilityHref}>{compatibilityCopy(locale).nav}</a>
+            <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}>{flow.tools}</a>
+            <a href={locale === "en" ? "/journal" : `/journal?locale=${locale}`}>{copyLocale === "zh" ? "文章" : locale === "ru" ? "Статьи" : "Journal"}</a>
+          </nav>
+
+          <div className="white-actions">
+            <a className="editorial-nav-free" href={freeHref}>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Бесплатно" : "Try it free"}<ArrowRight size={13} aria-hidden="true" /></a>
+            <a href={copyLocale === "zh" ? "/account?locale=zh" : "/account"} style={{ fontSize: 12, whiteSpace: "nowrap" }}>{copyLocale === "zh" ? localText("我的账号") : "Account"}</a>
+            <div className="white-language" aria-label="Language selector">
+              <Languages size={14} aria-hidden="true" />
+              {reportLanguageOptions.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  data-active={locale === option.value}
+                  onClick={() => changeLocale(option.value)}
+                >
+                  {option.value === "zh"
+                    ? "简"
+                    : option.value === "zh-TW"
+                      ? "繁"
+                    : option.value === "ru"
+                      ? "RU"
+                      : "EN"}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav className="white-mobile-dock celestial-mobile-dock" aria-label={locale === "zh-TW" ? localText("行動導覽") : copyLocale === "zh" ? localText("移动导航") : locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
+        <a href={freeHref} className="editorial-dock-free">
+          <Sparkles size={18} aria-hidden="true" />
+          <span>{copyLocale === "zh" ? localText("免费测试") : locale === "ru" ? "Карточка" : "Free card"}</span>
+        </a>
+        <a href={compatibilityHref}>
+          <Sparkles size={18} aria-hidden="true" />
+          <span>{compatibilityCopy(locale).nav}</span>
+        </a>
+        <a href="#report"><SunMoon size={18} aria-hidden="true" /><span>{mobileNavLabels.report}</span></a>
+        <a href={copyLocale === "zh" ? "/tools?locale=zh" : "/tools"}><Gem size={18} aria-hidden="true" /><span>{flow.tools}</span></a>
+      </nav>
+
+      <section className="white-hero" aria-labelledby="home-title">
+        <div className="white-container editorial-hero-grid">
+          <div className="white-hero__copy">
+            <p className="white-kicker"><Sparkles size={14} aria-hidden="true" />{introduction.eyebrow}</p>
+            <h1 id="home-title" data-server-localized>{introduction.title}</h1>
+            <p className="white-lead">{introduction.lead}</p>
+            <div className="editorial-hero-actions"><a className="editorial-primary" href={freeHref}>{introduction.free}<ArrowRight size={18} aria-hidden="true" /></a><a className="editorial-secondary" href="#start-here">{introduction.start}<ArrowRight size={15} aria-hidden="true" /></a></div>
+            <p className="editorial-free-note"><ShieldCheck size={14} aria-hidden="true" />{introduction.note}</p>
+            <div className="editorial-collection-note"><span>60</span><p>{copyLocale === "zh" ? localText("一种生日，一段独特故事。") : locale === "ru" ? "Образы, в которых можно узнать себя." : "Distinct characters. A story to call your own."}</p></div>
+          </div>
+          <div className="editorial-card-stage" aria-label={text.archetypes.title}>
+            <div className="editorial-orbit" aria-hidden="true" />
+            {(["乙丑", "丙午", "癸卯"] as const).map((key,index)=><div key={key} className={`editorial-display-card editorial-display-card--${index}`}>
+              {index===2 ? <ArchetypeMotionPlayer className="editorial-hero-motion" src={archetypeVideoPath("gui_mao")} poster={archetypePosterPath("gui_mao")} label={profileName(pillarsDB[key],key,locale)} playLabel={copyLocale === "zh" ? localText("播放卡片动画") : locale === "ru" ? "Включить анимацию" : "Play card animation"} pauseLabel={copyLocale === "zh" ? localText("暂停卡片动画") : locale === "ru" ? "Приостановить анимацию" : "Pause card animation"}/> : <a href={freeHref}><Image src={getPillarImagePath(key)} alt={profileName(pillarsDB[key],key,locale)} width={1200} height={1600} sizes="(max-width: 650px) 48vw, 230px" /></a>}
+              <a href={freeHref}><span>{profileName(pillarsDB[key],key,locale)}</span></a>
+            </div>)}
+            <span className="editorial-stage-label">{copyLocale === "zh" ? localText("你的故事，会是哪一种？") : locale === "ru" ? "Какой образ — ваш?" : "Which story feels like you?"}</span>
+          </div>
+        </div>
+      </section>
+
+      <HomeIntroduction locale={locale} />
+
+      <section className="white-archetypes" id="archetypes">
+        <div className="white-container editorial-collection">
+          <div className="editorial-collection-heading">
+            <p>{text.archetypes.eyebrow}</p>
+            <h2>{text.archetypes.title}</h2>
+            <span>{text.archetypes.description}</span>
+          </div>
+
+          <div className="editorial-collection-cards">
+            {featuredPillars.map((featuredPillar) => {
+              const itemProfile = (pillarsDB as Record<string, PillarProfile>)[
+                featuredPillar
+              ];
+              const itemDisplay = getPillarDisplay(featuredPillar, locale);
+              const itemName = profileName(itemProfile, featuredPillar, locale);
+
+              return (
+                <article key={featuredPillar} className="editorial-collection-card">
+                  <CardArtwork src={getPillarImagePath(featuredPillar)} name={itemName} locale={locale} sizes="(max-width:650px) 65vw, 240px" />
+                  <div>
+                    <span>{copyLocale === "zh" ? localText(itemDisplay.pillarLabel) : text.card.core}</span>
+                    <strong>{itemName}</strong>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <details className="editorial-more-art white-container"><summary>{flow.moreArt}</summary><ArchetypeMotionGallery locale={locale} /></details>
+
+      {reportPanel}
 
       <HomePortals locale={locale} />
 
