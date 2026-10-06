@@ -46,3 +46,12 @@
 .home a:focus-visible,.sectionNav a:focus-visible,.reading a:focus-visible { outline:3px solid #9673c8;outline-offset:4px; }
 @media(max-width:800px){.hero{gap:32px}.pathCard{grid-template-columns:95px 1fr;padding:20px;gap:18px}.bracelet{transform:scale(.75);transform-origin:left center}.guideGrid{grid-template-columns:1fr}.reportIntro{display:block}}
 @media(max-width:650px){.home{padding:0 20px}.header{flex-wrap:wrap;gap:16px;padding:20px 0}.sectionNav{gap:3px;font-size:12px}.sectionNav a{padding:10px 8px}.sectionNav a:last-child{margin-left:0}.hero{grid-template-columns:1fr;padding:36px 0;gap:24px}.hero h1{font-size:39px;letter-spacing:-1.3px}.heroCard{width:min(310px,100%);transform:none}.lead{font-size:15px}.pathGrid{grid-template-columns:1fr}.pathCard{grid-template-columns:85px 1fr;padding:18px;gap:18px}.pathCard h3{font-size:20px}.paths h2{font-size:26px}.reading{padding:30px 0}.reportIntro{padding:22px 0}.guideGrid>a{padding:20px}.bracelet{transform:scale(.65)}.footerLinks{gap:16px}}
+.functionLinks { width:min(1120px,100%);margin:0 auto;padding:36px 0 48px;border-top:1px solid #e5deed;color:#302a40; }
+.functionLinks h2 { font-size:clamp(23px,2.4vw,29px);font-weight:550;line-height:1.4; }
+.functionLinks .functionIntro { color:#70677c;font-size:14px;line-height:1.8;margin:14px 0 22px;max-width:700px; }
+.functionLinks nav { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px; }
+.functionLinks a { display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:14px 18px;background:#faf7ff;border:1px solid #e4ddef;border-radius:12px;font-size:14px;line-height:1.5;overflow-wrap:anywhere; }
+.functionLinks a:hover { background:#eee6f7; }.functionLinks a:focus-visible { outline:3px solid #9673c8;outline-offset:4px; }
+.functionLinks span { color:#775591;flex-shrink:0; }
+@media(max-width:800px){.functionLinks nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.functionLinks nav{grid-template-columns:1fr}.functionLinks{padding:28px 0}}

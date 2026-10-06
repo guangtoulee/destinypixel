@@ -1995,3 +1995,6 @@ body:has(.cel-page) {min-width:0;}
  .cel-guide-links {grid-template-columns:1fr;}
  .cel-guide-links a {padding:15px;font-size:14px;}
 }
+.cel-page .cel-topic-action { margin-top:24px;width:fit-content;text-decoration:none;color:#fff; }
+.cel-topic-tool { scroll-margin-top:24px; }
+.cel-topic-tool:focus-visible { outline:3px solid var(--cel-violet);outline-offset:6px; }

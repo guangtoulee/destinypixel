@@ -1,0 +1,93 @@
+Unit/content/security tests
+1..176
+# tests 221
+# suites 0
+# pass 221
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23417.992787
+
+Link fixture recheck
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 932.624388
+
+Browser matrix
+PASS tarot/en/320: navigation, guides, functions, workflow, overflow
+PASS astrology/en/320: navigation, guides, functions, workflow, overflow
+PASS tarot/en/390: navigation, guides, functions, workflow, overflow
+PASS astrology/en/390: navigation, guides, functions, workflow, overflow
+PASS tarot/en/430: navigation, guides, functions, workflow, overflow
+PASS astrology/en/430: navigation, guides, functions, workflow, overflow
+PASS tarot/en/1440: navigation, guides, functions, workflow, overflow
+PASS astrology/en/1440: navigation, guides, functions, workflow, overflow
+PASS tarot/zh/320: navigation, guides, functions, workflow, overflow
+PASS astrology/zh/320: navigation, guides, functions, workflow, overflow
+PASS tarot/zh/390: navigation, guides, functions, workflow, overflow
+PASS astrology/zh/390: navigation, guides, functions, workflow, overflow
+PASS tarot/zh/430: navigation, guides, functions, workflow, overflow
+PASS astrology/zh/430: navigation, guides, functions, workflow, overflow
+PASS tarot/zh/1440: navigation, guides, functions, workflow, overflow
+PASS astrology/zh/1440: navigation, guides, functions, workflow, overflow
+PASS tarot/zh-TW/320: navigation, guides, functions, workflow, overflow
+PASS astrology/zh-TW/320: navigation, guides, functions, workflow, overflow
+PASS tarot/zh-TW/390: navigation, guides, functions, workflow, overflow
+PASS astrology/zh-TW/390: navigation, guides, functions, workflow, overflow
+PASS tarot/zh-TW/430: navigation, guides, functions, workflow, overflow
+PASS astrology/zh-TW/430: navigation, guides, functions, workflow, overflow
+PASS tarot/zh-TW/1440: navigation, guides, functions, workflow, overflow
+PASS astrology/zh-TW/1440: navigation, guides, functions, workflow, overflow
+PASS tarot/ru/320: navigation, guides, functions, workflow, overflow
+PASS astrology/ru/320: navigation, guides, functions, workflow, overflow
+PASS tarot/ru/390: navigation, guides, functions, workflow, overflow
+PASS astrology/ru/390: navigation, guides, functions, workflow, overflow
+PASS tarot/ru/430: navigation, guides, functions, workflow, overflow
+PASS astrology/ru/430: navigation, guides, functions, workflow, overflow
+PASS tarot/ru/1440: navigation, guides, functions, workflow, overflow
+PASS astrology/ru/1440: navigation, guides, functions, workflow, overflow
+PASS 32 topic/locale/viewport cases; 16 focused-homepage checks; 84 unique linked destinations
+
+Final layout
+PASS 32 final layout checks: contrast, spacing, responsive width; 48 screenshots
+
+Tarot history
+PASS 1280px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
+PASS 390px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
+PASS 320px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
+
+Celestial SEO
+PASS /astrology: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
+Verified 8 tool editions and homepage/guide entry links. This does not establish search indexing or traffic.
+
+Home SEO
+PASS en: home initial text, offers, canonical/languages, sitemap and discover handoff
+PASS zh: home initial text, offers, canonical/languages, sitemap and discover handoff
+PASS zh-TW: home initial text, offers, canonical/languages, sitemap and discover handoff
+PASS ru: home initial text, offers, canonical/languages, sitemap and discover handoff
+PASS ultra remains accessible but excluded from indexing; Traditional facts link is localized.
+
+Articles
+Verified 284 article editions, sitemap/metadata and product links.
+
+Day Pillar collection
+PASS: four localized collections, all 60 article links, calculator entry links, sitemap images and 60 live JPEG cards.
+
+Final build
+✓ Compiled successfully in 18.7s
+  Finished TypeScript in 4.8s ...
+✓ Generating static pages using 4 workers (259/259) in 5.6s
