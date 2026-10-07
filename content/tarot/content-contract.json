@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "recordKey": [
+    "cardId",
+    "locale"
+  ],
+  "cardCount": 78,
+  "locales": [
+    "zh-CN",
+    "en",
+    "zh-TW",
+    "ru"
+  ],
+  "articleCount": 312,
+  "textContract": {
+    "articleMarkdown": "Full final article, never a summary or outline; equal to cards/{locale}/{cardId}.md",
+    "sections": "Complete ordered semantic sections with stable IDs/roles, titles and full bodyMarkdown; section counts legitimately vary by original batch",
+    "quickTake": "upright then reversed before hook",
+    "sourceRecord": "Original Chinese batch-level authoring record preserved where present; not target-language display text",
+    "translationInputMetadata": "Original translator extra metadata; raw full input files retained in provenance/translation-inputs",
+    "image": "Canonical observation provenance and hashes retained; image bytes omitted, observedAsset.packagePath=null",
+    "numbers": "deckOrder0–77; majorNumber0–21; number string; StrengthVIII,JusticeXI; canonical wheel/judgement IDs",
+    "publication": "Manuscripts only, no page routes registered, no repo/site mutations",
+    "normalization": "Add canonical v3 identity and review fields; canonical image provenance includes portable no-bundle flags; target full article text is byte-unchanged from approved translator output"
+  },
+  "imagePolicy": "Reuse existing application assets after checking current repository mapping. Do not replace them with external scans solely because a source URL is listed.",
+  "reviewLimit": "Independent model editorial review, not native-human or specialist certification."
+}

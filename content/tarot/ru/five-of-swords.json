@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "cardId": "five-of-swords",
+  "deckOrder": 54,
+  "majorNumber": null,
+  "number": "V",
+  "roman": null,
+  "rank": "five",
+  "rankOrder": 5,
+  "suit": "swords",
+  "arcana": "minor",
+  "nameZh": "宝剑五",
+  "nameEn": "Five of Swords",
+  "locale": "ru",
+  "deckSystem": "RWS",
+  "title": "Пятёрка Мечей: Что остаётся после выигранного спора",
+  "plainLanguageSummary": "Оцените цену победы и решите, стоит ли продолжать этот конфликт.",
+  "keywords": [
+    "Соперничество",
+    "Цена победы",
+    "Уход"
+  ],
+  "quickTake": {
+    "upright": "Кто-то получил преимущество, но сотрудничество и доверие могут исчезать.",
+    "reversed": "Последствия конфликта сохраняются; восстановление отношений или выход требуют действий."
+  },
+  "hook": "Спор закончился, все замолчали. Проблема действительно решена или за вами просто осталось последнее слово?",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "Тот, кто держит мечи, остаётся на переднем плане",
+      "bodyMarkdown": "На переднем плане человек в зелёном верхнем одеянии с красными рукавами и красных штанах поворачивается влево; уголки рта подняты. В одной руке два меча, направленных вверх, в другой — меч остриём к земле. Ещё два лежат у ног. Двое других, спиной к зрителю, уходят к воде; дальний подносит руку к голове.\n\nПо небу тянутся длинные косые облака, вода и дальний берег создают холодный фон. Мечи собираются у одного человека, а остальные уходят. Соседство приобретённых вещей и потерянных спутников интереснее для размышления, чем простое распределение ролей хорошего и плохого человека. [Посмотреть изображение, рассмотренное в статье](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Уэйт не описывает радостную победу",
+      "bodyMarkdown": "В транскрипции с пометкой 1911 года Уэйт пишет, что человек на переднем плане владеет полем, а уходящие подавлены. При этом значения сосредоточены на потере, отмене и ущербе репутации. Перевёрнутое положение у него не означает автоматического примирения и сохраняет сходную тяжесть.\n\nПроверка цены победы и попытка восстановить отношения — современные способы размышления в этой статье, а не предсказание успешного примирения из исходного текста. Изображение позволяет обсуждать конфликт, но не выносить приговор характеру отсутствующего человека. [Свериться с исходным текстом Уэйта](https://original.sacred-texts.com/tarot/pkt/pktsw05.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "Прямая карта: Посчитать цену способа победить",
+      "bodyMarkdown": "Карта помогает заметить, не ушёл ли спор от первоначальной цели. Можно хотеть сотрудничества, но добиваться молчания унижением, придирками или перебиванием. Краткосрочное преимущество тогда оплачивается потерей информации, доверия и желания работать вместе.\n\nПри неравном положении выход из бесполезного спора тоже способен защитить границы. Чтобы иметь право остановиться, не нужно доказывать, что вы спорите лучше. Главное — понять, может ли дальнейшее участие улучшить реальное положение дел."
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "Перевёрнутая карта: После перемирия остаётся работа",
+      "bodyMarkdown": "Карта предлагает рассмотреть остаточную злость, возвращение к старым обидам или готовность признать собственное участие в причинённом вреде. Извинение должно касаться конкретного поступка, а восстановление зависит и от ответа другого человека. Если разговоры продолжают ранить, меньше контакта или ясные письменные договорённости могут быть уместнее."
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "Вместо победы в споре заняться самой проблемой",
+      "bodyMarkdown": "На обсуждении вы публично указали коллеге на ошибку, после чего проект перестал получать своевременную обратную связь. Можно признать последствия своего тона, затем перенести технический вопрос в разговор, где проверяются факты.\n\nВ семейной ссоре напоминание о прежних неудачах собеседника часто мешает решить нынешний вопрос. Перед новым ответом в интернете спросите: прибавит ли он фактов или только зрителей? Выйти из разрастающейся перепалки не значит согласиться с другой стороной."
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "Практика: Одна строка перед возражением",
+      "bodyMarkdown": "Напишите: «В этом разговоре я хочу получить ___». Сравните подготовленный ответ с целью и удалите фразы, которые только унизят человека, не приблизив результат. Если цель уже недостижима, подумайте, как ясно завершить обмен репликами."
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "Эта карта не ставит клеймо плохого человека",
+      "bodyMarkdown": "Пятёрка Мечей не доказывает злого умысла и не советует побеждать любой ценой. Но и стирать реальные разногласия ради видимости мира не стоит. Рассмотрите способ обращения с разногласиями и последствия, которые он уже создаёт."
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "Что читать дальше",
+      "bodyMarkdown": "Семёрка Мечей: Продолжить проверять связь стратегии с ответственностью; Пятёрка Жезлов: Отличить конструктивное соперничество от истощения после борьбы за победу."
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "Источники статьи",
+      "bodyMarkdown": "- [Памела Колман Смит: «Пятёрка Мечей», фактическое изображение RWS из фиксированного коммита](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Пятёрка Мечей»](https://original.sacred-texts.com/tarot/pkt/pktsw05.htm)\n- [Commons Swords05.jpg: страница файла и история загрузок](https://commons.wikimedia.org/wiki/File:Swords05.jpg)\n\nПримечание о версии: каждое фактическое изображение RWS в формате WebP из фиксированного коммита репозитория рассмотрено отдельно. Страницы файлов Pam-A на Commons использованы для сверки происхождения и версий; попиксельное совпадение файлов не заявляется. Текст Уэйта приведён по английской транскрипции с пометкой 1911 года. Современные ситуации, вопросы и упражнения созданы специально для DestinyPixel без заимствования платных описаний значений карт."
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "seven-of-swords",
+      "name": "Семёрка Мечей",
+      "nameZh": "宝剑七",
+      "reason": "Продолжить проверять связь стратегии с ответственностью"
+    },
+    {
+      "cardId": "five-of-wands",
+      "name": "Пятёрка Жезлов",
+      "nameZh": "权杖五",
+      "reason": "Отличить конструктивное соперничество от истощения после борьбы за победу"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "five-of-swords-image",
+      "type": "Непосредственное рассмотрение изображения",
+      "title": "Памела Колман Смит: «Пятёрка Мечей», фактическое изображение RWS из фиксированного коммита",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "five-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑五，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "five-of-swords-waite",
+      "type": "Исходный текст Уэйта",
+      "title": "A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Пятёрка Мечей»",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktsw05.htm",
+      "edition": "Английская транскрипция на Sacred Texts с пометкой [1911]; печатное первое издание 1910 года не проверялось",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "five-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑五",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw05.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "five-of-swords-commons",
+      "type": "Сопоставление источников и версий",
+      "title": "Commons Swords05.jpg: страница файла и история загрузок",
+      "url": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "five-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords05.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+    "creator": "Pamela Colman Smith",
+    "observationBasis": "repository_webp",
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "61bbfeb3d945f9c0b2e82bcab11a7377d8794728687d72b7b809b61f5ada24dc",
+      "widthPx": 560,
+      "heightPx": 970,
+      "bytes": 182808,
+      "basis": "repository_webp",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/five-of-swords.webp",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "sha256": "61bbfeb3d945f9c0b2e82bcab11a7377d8794728687d72b7b809b61f5ada24dc",
+    "widthPx": 560,
+    "heightPx": 970,
+    "checkedOn": "2026-10-07",
+    "repositoryAssetInspected": true,
+    "sourceMetadata": {
+      "rank": "five",
+      "gitBlobSha": "b10cbe3a3d16b75a373585a90870a76a3507829d",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+      "sha256": "61bbfeb3d945f9c0b2e82bcab11a7377d8794728687d72b7b809b61f5ada24dc",
+      "localFile": "images/05-five.webp",
+      "bytes": 182808,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/five-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:17:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1109,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  "articleMarkdown": "# Пятёрка Мечей: Что остаётся после выигранного спора\n\nОдной фразой: Оцените цену победы и решите, стоит ли продолжать этот конфликт.\n\nКлючевые слова: Соперничество · Цена победы · Уход\n\nПрямая карта — кратко: Кто-то получил преимущество, но сотрудничество и доверие могут исчезать.\n\nПеревёрнутая карта — кратко: Последствия конфликта сохраняются; восстановление отношений или выход требуют действий.\n\nСпор закончился, все замолчали. Проблема действительно решена или за вами просто осталось последнее слово?\n\n## Тот, кто держит мечи, остаётся на переднем плане\n\nНа переднем плане человек в зелёном верхнем одеянии с красными рукавами и красных штанах поворачивается влево; уголки рта подняты. В одной руке два меча, направленных вверх, в другой — меч остриём к земле. Ещё два лежат у ног. Двое других, спиной к зрителю, уходят к воде; дальний подносит руку к голове.\n\nПо небу тянутся длинные косые облака, вода и дальний берег создают холодный фон. Мечи собираются у одного человека, а остальные уходят. Соседство приобретённых вещей и потерянных спутников интереснее для размышления, чем простое распределение ролей хорошего и плохого человека. [Посмотреть изображение, рассмотренное в статье](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp)\n\n## Уэйт не описывает радостную победу\n\nВ транскрипции с пометкой 1911 года Уэйт пишет, что человек на переднем плане владеет полем, а уходящие подавлены. При этом значения сосредоточены на потере, отмене и ущербе репутации. Перевёрнутое положение у него не означает автоматического примирения и сохраняет сходную тяжесть.\n\nПроверка цены победы и попытка восстановить отношения — современные способы размышления в этой статье, а не предсказание успешного примирения из исходного текста. Изображение позволяет обсуждать конфликт, но не выносить приговор характеру отсутствующего человека. [Свериться с исходным текстом Уэйта](https://original.sacred-texts.com/tarot/pkt/pktsw05.htm)\n\n## Прямая карта: Посчитать цену способа победить\n\nКарта помогает заметить, не ушёл ли спор от первоначальной цели. Можно хотеть сотрудничества, но добиваться молчания унижением, придирками или перебиванием. Краткосрочное преимущество тогда оплачивается потерей информации, доверия и желания работать вместе.\n\nПри неравном положении выход из бесполезного спора тоже способен защитить границы. Чтобы иметь право остановиться, не нужно доказывать, что вы спорите лучше. Главное — понять, может ли дальнейшее участие улучшить реальное положение дел.\n\n## Перевёрнутая карта: После перемирия остаётся работа\n\nКарта предлагает рассмотреть остаточную злость, возвращение к старым обидам или готовность признать собственное участие в причинённом вреде. Извинение должно касаться конкретного поступка, а восстановление зависит и от ответа другого человека. Если разговоры продолжают ранить, меньше контакта или ясные письменные договорённости могут быть уместнее.\n\n## Вместо победы в споре заняться самой проблемой\n\nНа обсуждении вы публично указали коллеге на ошибку, после чего проект перестал получать своевременную обратную связь. Можно признать последствия своего тона, затем перенести технический вопрос в разговор, где проверяются факты.\n\nВ семейной ссоре напоминание о прежних неудачах собеседника часто мешает решить нынешний вопрос. Перед новым ответом в интернете спросите: прибавит ли он фактов или только зрителей? Выйти из разрастающейся перепалки не значит согласиться с другой стороной.\n\n## Практика: Одна строка перед возражением\n\nНапишите: «В этом разговоре я хочу получить ___». Сравните подготовленный ответ с целью и удалите фразы, которые только унизят человека, не приблизив результат. Если цель уже недостижима, подумайте, как ясно завершить обмен репликами.\n\n## Эта карта не ставит клеймо плохого человека\n\nПятёрка Мечей не доказывает злого умысла и не советует побеждать любой ценой. Но и стирать реальные разногласия ради видимости мира не стоит. Рассмотрите способ обращения с разногласиями и последствия, которые он уже создаёт.\n\n## Что читать дальше\n\nСемёрка Мечей: Продолжить проверять связь стратегии с ответственностью; Пятёрка Жезлов: Отличить конструктивное соперничество от истощения после борьбы за победу.\n\n## Источники статьи\n\n- [Памела Колман Смит: «Пятёрка Мечей», фактическое изображение RWS из фиксированного коммита](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Пятёрка Мечей»](https://original.sacred-texts.com/tarot/pkt/pktsw05.htm)\n- [Commons Swords05.jpg: страница файла и история загрузок](https://commons.wikimedia.org/wiki/File:Swords05.jpg)\n\nПримечание о версии: каждое фактическое изображение RWS в формате WebP из фиксированного коммита репозитория рассмотрено отдельно. Страницы файлов Pam-A на Commons использованы для сверки происхождения и версий; попиксельное совпадение файлов не заявляется. Текст Уэйта приведён по английской транскрипции с пометкой 1911 года. Современные ситуации, вопросы и упражнения созданы специально для DestinyPixel без заимствования платных описаний значений карт.\n\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "sourceRecord": {
+    "cardId": "five-of-swords",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": "V",
+    "rank": "five",
+    "suit": "swords",
+    "arcana": "minor",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "宝剑五",
+    "nameEn": "Five of Swords",
+    "title": "宝剑五牌义 赢下一句话以后还剩什么",
+    "plainLanguageSummary": "看清争胜的代价，决定这场冲突是否还值得继续。",
+    "hook": "争论结束了，所有人都安静下来。你是真的把问题解决了，还是只剩下最后发言？",
+    "keywords": [
+      "争胜",
+      "代价",
+      "撤离"
+    ],
+    "uprightQuickTake": "有人占了上风，但合作与信任可能正在流失。",
+    "reversedQuickTake": "冲突余波仍在，修复或退出都需要实际行动。",
+    "articleSlug": "tarot-five-of-swords-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "拿着剑的人留在前景",
+        "paragraphs": [
+          "前景人物穿绿色上衣和红色衣裤，转头望向画面左侧，嘴角上扬。一只手抱着两柄向上伸出的剑，另一只手握着剑尖朝地的长剑；还有两柄剑散落在脚旁。两个人背对观看者，朝水边离去，其中较远的一位抬手靠近头部。",
+          "天空里是斜向拖长的云，水面和远岸构成冷清背景。画面把剑集中到一个人手里，同时让其他人离开。这种「获得东西却失去同伴」的并置，比简单决定谁是好人、谁是坏人更值得观察。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "Waite 没把它写成愉快的胜利",
+        "paragraphs": [
+          "Waite 在1911年标注转录中说，前景人物占有场地，离开者显得沮丧；牌义却集中在损失、撤销和名誉受损等后果上。逆位并未被他定义为自动和解，仍保留相近的沉重含义。",
+          "本文所说的「检查争胜成本」与「尝试修复」，是现代反思路径，不是宣称原文预告了修复结果。图像允许我们讨论冲突，不能提供未在场者的品格判决。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw05.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 计算赢法的成本",
+        "paragraphs": [
+          "正位可提示你留意一场争论是否偏离原本目标。你希望获得合作，却可能靠羞辱、挑错或抢话让别人闭嘴。短期占上风之后，信息、信任和继续合作的意愿都可能减少。",
+          "如果自己处在不对等的位置，退出无效争执也可以保护边界。无需证明自己比对方更能争论，才有资格停止参与。关键是辨认继续投入是否还会改善现实。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 停战之后还有工作",
+        "paragraphs": [
+          "逆位可以用来观察余怒、重新翻旧账，或愿意承认自己也造成了伤害。道歉需要指向具体行为，修复需要得到对方回应。若对话仍在反复伤人，减少接触、改用清楚的书面约定，也可能更合适。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "把辩赢改成把事情处理好",
+        "paragraphs": [
+          "团队讨论方案时，你当众指出同事失误，项目却从此拿不到及时反馈。可以先承认表达方式造成的影响，再把技术问题移到有证据、能核对的讨论中。",
+          "家庭争执里，拿对方以前的失败来证明自己正确，常让当前议题更难解决。网络争论则可先问：再回复一次会增加事实，还是只增加围观？退出一条不断升级的评论链，并不等于接受对方观点。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 在下一次反驳前停一行",
+        "paragraphs": [
+          "写下「我想通过这段对话得到＿＿」。把准备发送的话与这个目标对照，删去只能让对方难堪、却不能推进目标的句子。若目标已经无法实现，考虑明确结束对话的方式。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "这张牌不给人贴坏人标签",
+        "paragraphs": [
+          "宝剑五不能证明某人恶意，也不是鼓励不惜代价取胜。避免为了保持表面和气而抹去真实分歧；要审视的是处理分歧的方法，以及它正在造成的后果。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "seven-of-swords",
+        "nameZh": "宝剑七",
+        "reason": "继续检查策略和责任的关系"
+      },
+      {
+        "cardId": "five-of-wands",
+        "nameZh": "权杖五",
+        "reason": "区分磨合式竞争与争胜后的损耗"
+      }
+    ],
+    "sources": [
+      {
+        "id": "five-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑五，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "five-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑五",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw05.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "five-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords05.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "rank": "five",
+      "gitBlobSha": "b10cbe3a3d16b75a373585a90870a76a3507829d",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/five-of-swords.webp",
+      "sha256": "61bbfeb3d945f9c0b2e82bcab11a7377d8794728687d72b7b809b61f5ada24dc",
+      "localFile": "images/05-five.webp",
+      "bytes": 182808,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/five-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords05.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:17:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1109,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    },
+    "chineseCharacterCount": 1119,
+    "bodyChineseCharacterCount": 754
+  },
+  "sourceBatch": "swords",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 0,
+    "words": 448,
+    "articleUtf8Bytes": 9068
+  },
+  "sourceLocale": "zh-CN",
+  "name": "Пятёрка Мечей",
+  "translationProvenance": {
+    "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+    "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+    "sourceCardId": "five-of-swords",
+    "sourceArticleSha256": "37d41c7d1125686448a5faae54f65cf8915c93fae114e93f9b1bac710c9db5ed",
+    "sourceLocale": "zh-CN",
+    "targetLocale": "ru",
+    "chineseSourceModified": false,
+    "humanNativeReviewClaimed": false,
+    "translatedOn": "2026-10-07"
+  },
+  "nameLocalized": "Пятёрка Мечей",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {
+    "sourceLocale": "zh-CN",
+    "translationProvenance": {
+      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+      "sourceCardId": "five-of-swords",
+      "sourceArticleSha256": "37d41c7d1125686448a5faae54f65cf8915c93fae114e93f9b1bac710c9db5ed",
+      "sourceLocale": "zh-CN",
+      "targetLocale": "ru",
+      "chineseSourceModified": false,
+      "humanNativeReviewClaimed": false,
+      "translatedOn": "2026-10-07"
+    }
+  },
+  "countsOriginal": {
+    "sections": 9,
+    "mainTextWords": 504,
+    "mainTextChineseCharacters": 0,
+    "completeArticleCharacters": 5202
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "37d41c7d1125686448a5faae54f65cf8915c93fae114e93f9b1bac710c9db5ed",
+    "articleSha256": "759153bb28ff01374208d57f945291fdb48a01fd90562c46095bcb24e48682e8",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

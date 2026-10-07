@@ -10,6 +10,8 @@ import promptSitemap from "@/app/prompt/sitemap";
 import { getIndexablePromptItems, promptItemHref } from "@/lib/prompt-library";
 import { absoluteUrl, canonicalPagePath, languageAlternates, makePageMetadata, routeSeo } from "@/lib/seo";
 import { getJournalArticle, journalMetadata, dayPillarLibraryMetadata, normalizeJournalLocale } from "@/lib/journal";
+import { tarotLearningId } from "@/lib/tarot-learning/paths";
+import { tarotLearningMetadata } from "@/lib/tarot-learning/metadata";
 
 test("translated landing pages keep their own canonical and translated search text", () => {
   const zh = makePageMetadata({ ...routeSeo.home, locale: "zh" });
@@ -64,6 +66,8 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
       const url = new URL(variant);
       const canonical = url.pathname === "/journal/day-pillars"
         ? dayPillarLibraryMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined)).alternates?.canonical
+        : url.pathname === "/journal/tarot-cards" || tarotLearningId(url.pathname.split("/")[2] ?? "")
+        ? tarotLearningMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), tarotLearningId(url.pathname.split("/")[2] ?? "")).alternates?.canonical
         : url.pathname === "/journal" || url.pathname.startsWith("/journal/")
         ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
         : url.pathname === "/day-pillar"

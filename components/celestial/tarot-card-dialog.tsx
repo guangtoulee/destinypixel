@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useEffectEvent, useId, useRef, useState } from "react";
+import { tarotLearningHref } from "@/lib/tarot-learning/paths";
+import { tarotLearningCopy } from "@/lib/tarot-learning/copy";
 import { ArrowDown, X } from "lucide-react";
 import { artworkEditionsForCard } from "@/lib/celestial/tarot-decks";
 import type { ReportLocale } from "@/lib/report-i18n";
@@ -59,6 +61,7 @@ export function TarotCardDialog({ card, reversed, position, locale, copy: c, onC
       </div>
       {art && <img className="tarot-dialog-art" src={card.image} alt={card.name} width={560} height={960} style={{transform: reversed ? "rotate(180deg)" : undefined}}/>}
       <div hidden={art} className="tarot-dialog-meaning"><h3>{c.cardMeaning}</h3><p id={description}>{reversed ? card.reversed : card.upright}</p></div>
+      {tarotLearningHref(card.id,locale) && <a className="tarot-learning-link" href={tarotLearningHref(card.id,locale)} target="_blank" rel="noopener noreferrer" aria-label={`${tarotLearningCopy(locale).read} (${tarotLearningCopy(locale).newTab})`}>{tarotLearningCopy(locale).read} ↗</a>}
       <p className="tarot-dialog-source">{edition ? `${edition.name[locale]} · ${edition.credits}` : c.cardSource}
         {edition && <> · <a href={edition.attribution} target="_blank" rel="noreferrer">{c.artSource} ↗</a></>}
       </p>

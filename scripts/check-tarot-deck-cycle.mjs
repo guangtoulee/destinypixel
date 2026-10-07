@@ -5,7 +5,9 @@ const {chromium,expect}=createRequire(import.meta.url)("playwright/test");
 const base=process.argv[2] || "http://127.0.0.1:3015";
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || "/usr/bin/chromium",args:["--no-sandbox"]});
 try {
- await Promise.all(["en","zh","zh-TW","ru"].map(async locale=>{
+ // These cases assert window focus. Opening another page in parallel can
+ // dispatch blur and intentionally cancel the active deck animation.
+ for (const locale of ["en","zh","zh-TW","ru"]) {
   for(const reducedMotion of ["reduce","no-preference"]){
    const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion});
    const errors=[];page.on("pageerror",e=>errors.push(e.message));page.on("dialog",d=>d.accept());
@@ -92,5 +94,5 @@ try {
    await expect(page.locator("[data-drop-slot='0'] img")).toHaveAttribute("src",`/tarot/rws/${selected}.webp`);
    assert.deepEqual(errors,[]);console.log(`PASS ${locale}/${reducedMotion}: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI`);await page.close();
   }
- }));
+ }
 }finally{await browser.close();}
