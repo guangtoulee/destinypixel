@@ -52,10 +52,8 @@ try {
   const before=await card.getAttribute("style"),id=await card.getAttribute("data-card-id"),remaining=await page.locator(".tarot-deck-label span").innerText();
   await card.press("Enter");
   await expect(page.locator("dialog[open]")).toHaveCount(1);
-  await page.locator(".tarot-art-versions summary").click();
-  await expect(page.locator(".tarot-only-edition")).toBeVisible();
-  await expect(page.locator(".tarot-art-version-options button")).toHaveCount(0);
-  await expect(page.locator(".tarot-art-versions a")).toHaveAttribute("href","/tarot/attribution.json");
+  await expect(page.locator(".tarot-art-versions, .tarot-art-version-options")).toHaveCount(0);
+  await expect(page.locator(".tarot-dialog-source a")).toHaveAttribute("href","/tarot/attribution.json");
   await page.locator(".tarot-dialog-tabs button").last().click();
   const src=await page.locator(".tarot-dialog-art").getAttribute("src");assert.ok(src.endsWith(`${id}.webp`));
   await page.keyboard.press("Escape");await expect(page.locator("dialog[open]")).toHaveCount(0);
@@ -65,7 +63,7 @@ try {
   const links=await page.locator('a[href^="/account"]').evaluateAll(es=>es.map(e=>e.getAttribute("href")));
   assert.ok(links.length>=2);assert.ok(links.every(href=>href===expected),JSON.stringify(links));
   assert.deepEqual(errors,[]);
-  console.log(`PASS ${locale}: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale`);
+  console.log(`PASS ${locale}: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, art/source viewer preserves reading, account locale`);
   await page.close();
  }));
 } finally {await browser.close();}

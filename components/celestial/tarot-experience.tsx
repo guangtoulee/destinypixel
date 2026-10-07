@@ -16,6 +16,7 @@ import type { CelestialReading } from "@/lib/celestial/ai";
 import {
   initialTable,
   shuffleDeck,
+  cycleDeck,
   spreadSizes,
   takeCard,
   returnCard,
@@ -545,6 +546,7 @@ export default function TarotExperience({
       {table.mode === "free" && focused && <p className="tarot-orientation-status" aria-live="polite">{focused.reversed ? c.reversed : c.upright} · {c.placementAngle} {focused.rotation}°</p>}
       <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={c}
         onDraw={draw} onShuffle={mix}
+        topCardId={table.deck[0]?.id} onCycle={() => setTable(cycleDeck)}
         contains={point => {
           const r = board.current?.getBoundingClientRect();
           return Boolean(r && point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom);

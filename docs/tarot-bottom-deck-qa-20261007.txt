@@ -1,102 +1,79 @@
-tarot-final-browser.log
+PR17 validation: deck lift/return queue + compact source. Main integration: ef4ef44dc9260a89edb5860c83e77e2b7c1f245c.
+No paid AI or account/payment writes. New reading-state check uses an intercepted local fixture.
+
+
+Deck cycle / four locales / both motion settings
+PASS zh/reduce: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS ru/reduce: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS zh-TW/reduce: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS en/reduce: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS zh/no-preference: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS ru/no-preference: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS zh-TW/no-preference: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+PASS en/no-preference: real deck order, tuck layers, keyboard/touch, repeated/cancelled drops, reading preservation, structured deal, no version UI
+
+
+Tarot workflow matrix
+PASS zh-TW 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS ru 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS en 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS zh 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS ru 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh-TW 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS en 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS zh-TW 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS ru 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS zh 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS zh-TW 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS ru 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS en 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS zh 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS zh-TW 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS ru 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS en 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
+PASS zh 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
 PASS 32/32 mode/locale/viewport cases
 
-tarot-topics.log
-PASS tarot/en/320: navigation, guides, functions, workflow, overflow
-PASS astrology/en/320: navigation, guides, functions, workflow, overflow
-PASS tarot/en/390: navigation, guides, functions, workflow, overflow
-PASS astrology/en/390: navigation, guides, functions, workflow, overflow
-PASS tarot/en/430: navigation, guides, functions, workflow, overflow
-PASS astrology/en/430: navigation, guides, functions, workflow, overflow
-PASS tarot/en/1440: navigation, guides, functions, workflow, overflow
-PASS astrology/en/1440: navigation, guides, functions, workflow, overflow
-PASS tarot/zh/320: navigation, guides, functions, workflow, overflow
-PASS astrology/zh/320: navigation, guides, functions, workflow, overflow
-PASS tarot/zh/390: navigation, guides, functions, workflow, overflow
-PASS astrology/zh/390: navigation, guides, functions, workflow, overflow
-PASS tarot/zh/430: navigation, guides, functions, workflow, overflow
-PASS astrology/zh/430: navigation, guides, functions, workflow, overflow
-PASS tarot/zh/1440: navigation, guides, functions, workflow, overflow
-PASS astrology/zh/1440: navigation, guides, functions, workflow, overflow
-PASS tarot/zh-TW/320: navigation, guides, functions, workflow, overflow
-PASS astrology/zh-TW/320: navigation, guides, functions, workflow, overflow
-PASS tarot/zh-TW/390: navigation, guides, functions, workflow, overflow
-PASS astrology/zh-TW/390: navigation, guides, functions, workflow, overflow
-PASS tarot/zh-TW/430: navigation, guides, functions, workflow, overflow
-PASS astrology/zh-TW/430: navigation, guides, functions, workflow, overflow
-PASS tarot/zh-TW/1440: navigation, guides, functions, workflow, overflow
-PASS astrology/zh-TW/1440: navigation, guides, functions, workflow, overflow
-PASS tarot/ru/320: navigation, guides, functions, workflow, overflow
-PASS astrology/ru/320: navigation, guides, functions, workflow, overflow
-PASS tarot/ru/390: navigation, guides, functions, workflow, overflow
-PASS astrology/ru/390: navigation, guides, functions, workflow, overflow
-PASS tarot/ru/430: navigation, guides, functions, workflow, overflow
-PASS astrology/ru/430: navigation, guides, functions, workflow, overflow
-PASS tarot/ru/1440: navigation, guides, functions, workflow, overflow
-PASS astrology/ru/1440: navigation, guides, functions, workflow, overflow
-PASS 32 topic/locale/viewport cases; 16 focused-homepage checks; 84 unique linked destinations
 
-tarot-history.log
+Workspace, rotation and viewer checks
+PASS ru: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, art/source viewer preserves reading, account locale
+PASS en: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, art/source viewer preserves reading, account locale
+PASS zh: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, art/source viewer preserves reading, account locale
+PASS zh-TW: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, art/source viewer preserves reading, account locale
+
+
+Native document history
 PASS 1280px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
 PASS 390px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
 PASS 320px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
 
-tarot-seo.log
-PASS /astrology: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /astrology?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /astrology?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /astrology?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /tarot: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /tarot?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /tarot?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
-PASS /tarot?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
+
+Server-runtime test totals
+  ...
+1..186
+# tests 231
+# suites 0
+# pass 231
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25379.181161
+
+Client-render test totals
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 912.433529
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+Final build after PR19 integration: Node 22.23.3, exit 0, 260 generated pages.
+
+Final tool SEO
 Verified 8 tool editions and homepage/guide entry links. This does not establish search indexing or traffic.
 
-tarot-journal.log
-Verified 284 article editions, sitemap/metadata and product links.
-
-tarot-profile.log
-{"environment":"Headless Chromium, cloud Linux, 390x844; rAF intervals during one 90-step drag, not a device FPS guarantee","frames":98,"medianMs":16.699999999999818,"p95Ms":16.799999999999272,"maxMs":16.800000000000182,"over50ms":0}
-PASS ru: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
-PASS en: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
-PASS zh: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
-PASS zh-TW: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
-
-External-review production regression on runtime 27f2a5f
-PASS zh 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh-TW 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS ru 320: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS ru 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh-TW 390: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS ru 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh-TW 430: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS zh-TW 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS ru 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS en 1440: free + five spreads, details/back, cancellation, reset, rotation, orientation
-PASS 8/8 mode/locale/viewport cases
-Combined: 32/32 mode/locale/viewport cases. Desktop touch-cancel assertion waits for Chromium event delivery; no runtime change in this evidence commit.
-PASS 1280px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
-PASS 390px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
-PASS 320px: select, draw/reveal/return/reset, Back/Forward, title and slot count agree
+Final article preservation
+Verified 288 article editions, sitemap/metadata and product links.

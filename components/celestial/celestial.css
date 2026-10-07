@@ -1743,16 +1743,6 @@ body:has(.cel-page) {min-width:0;}
   .tarot-flipper { transition: none; }
 }
 
-.tarot-art-versions { margin: 16px 0; border: 1px solid var(--cel-line); border-radius: 14px; padding: 0 14px; }
-.tarot-art-versions summary { min-height: 44px; padding: 12px 0; cursor: pointer; font-size: 13px; }
-.tarot-art-versions summary span { display: block; margin: 5px 0 0 17px; color: var(--cel-muted); font-size: 12px; overflow-wrap: anywhere; }
-.tarot-art-versions p { margin: 10px 0 14px; font-size: 12px; line-height: 1.7; }
-.tarot-art-versions a { color: var(--cel-violet); text-decoration: underline; }
-.tarot-only-edition { color: var(--cel-muted); }
-.tarot-art-version-options { display: grid; gap: 8px; }
-.tarot-art-version-options button { min-height: 44px; padding: 10px; border: 1px solid var(--cel-line); border-radius: 10px; background: transparent; text-align: left; }
-.tarot-art-version-options button[aria-pressed="true"] { background: #e9dff1; border-color: #aa8cbc; }
-
 /* Free mode is one viewport-sized workbench, not a tall offscreen table. */
 .tarot-workbench.is-free-workbench { height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px); height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px); min-height: 0; max-height: 900px; display: flex; flex-direction: column; scroll-margin-top: 10px; }
 .is-free-workbench .tarot-controls { flex-shrink: 0; gap: 10px; margin-bottom: 0; }
@@ -1791,3 +1781,27 @@ body:has(.cel-page) {min-width:0;}
   .is-free-workbench .tarot-settings .cel-button-text { min-width: 44px; min-height: 44px; justify-content: center; }
   .is-free-workbench .tarot-settings .cel-button-text span { display: none; }
 }
+
+/* The departing card passes beneath the remaining stack, never over its front. */
+.tarot-deck-stack { isolation: isolate; }
+.tarot-stack-layers { z-index: 1; }
+.tarot-deck-top { z-index: 2; }
+.is-lifting .tarot-deck-top { opacity: 0; }
+.tarot-deck-stack.is-return-target { outline: 2px solid #a57cbc; outline-offset: 5px; border-radius: 8px; }
+.tarot-tucking-card { position: absolute; inset: 0; z-index: 0; transform-origin: top left; animation: tarot-tuck-under 240ms ease-out both; }
+.tarot-drag-ghost { transform-origin: top left; }
+.is-cycling .tarot-deck-top { animation: tarot-next-card 390ms ease-out both; }
+@keyframes tarot-tuck-under {
+  from { transform: translate(28px,-24px) rotate(-12deg); }
+  to { transform: translate(6px,-2px) rotate(3deg); }
+}
+@keyframes tarot-next-card {
+  from { transform: translate(4px,-3px) rotate(3deg); }
+  to { transform: none; }
+}
+.tarot-deck-key-help { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media(prefers-reduced-motion:reduce) {
+  .tarot-tucking-card, .is-cycling .tarot-deck-top { animation: none; }
+}
+/* A cycle announcement must not shift the pile during its return animation. */
+.tarot-deck-status { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
