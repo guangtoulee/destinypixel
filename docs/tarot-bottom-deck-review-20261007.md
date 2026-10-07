@@ -18,7 +18,24 @@ Node 22.23.3. Production build and TypeScript pass, with 259 generated pages. Ex
 
 228 repository tests pass when separated by runtime: 227 under `NODE_OPTIONS=--conditions=react-server`, plus the existing client-render test without that condition. The initial all-in-one command incorrectly applied the server condition to `react-dom/server`; rerunning that file in its required client runtime passed. Two new tests verify complete attributed artwork coverage and that custom artwork cannot change stable IDs or meanings.
 
-Browser evidence and final deployment status are recorded below after final verification. Browser checks allow local calculations only; no paid AI, account, payment or analytics writes are needed.
+Final production-build browser results:
+
+- **32/32** Tarot mode/locale/viewport cases: free plus all five structured spreads, EN/ZH/ZH-TW/RU at 320/390/430/1440. Covers actual pointer dragging, real Chromium touch cancellation, outside release, repeated unique draws, flip/details/artwork/Back/Escape, return/redraw, 15-degree rotation, rejected/accepted reset and orientation changes. No browser runtime errors or horizontal overflow.
+- **32/32** Tarot/Astrology topic cases, **16** focused-homepage cases and **84** unique linked destinations. Astrology uses synthetic inputs and the real local calculation API.
+- **3/3** history sizes (320/390/1280), including native Back/Forward and synchronized spread/select labels.
+- **8/8** celestial SEO editions, original canonical/hreflang/schema/sitemap; **284/284** journal article editions, including the 240 Day Pillar editions.
+- Explicit detailed-reading CTA check: dialog closes and the question field receives focus. Original assets, article sources, homepage, page metadata and lockfile have no diff against the base.
+- One final production-build headless Chromium 390×844 drag sample: 98 rAF intervals, median 16.7 ms, p95/max 16.8 ms, zero above 50 ms. This is a cloud-browser observation, not native-device performance certification.
+
+Browser checks allow local calculations only; no paid AI, account, payment or analytics writes were made. The initial history harness exposed controls available before hydration; the final implementation fixes this and all history checks pass. Celtic Cross crossed positions are exercised through their visible labels and toolbar rather than forcing clicks through an overlapping card.
+
+[Before](qa/tarot-bottom-deck-20261007/before-390.png) · [After](qa/tarot-bottom-deck-20261007/after-390.png) · [Free table](qa/tarot-bottom-deck-20261007/free-390.png) · [Shuffle](qa/tarot-bottom-deck-20261007/shuffle-390.png) · [Meaning](qa/tarot-bottom-deck-20261007/meaning-390.png) · [Artwork](qa/tarot-bottom-deck-20261007/artwork-390.png)
+
+Draft PR: https://github.com/guangtoulee/destinypixel/pull/17
+
+Preview: https://destinypixel-git-codex-tarot-bottom-deck-20261007-destinypixel.vercel.app/tarot?locale=zh
+
+The Vercel GitHub status confirms successful deployment of implementation commit `a272e7d0f6ac138502f2126ca9f233f31d75f026` to the existing `destinypixel/destinypixel` project. This validation-note commit changes no runtime code. External authenticated Preview QA is blocked here: the protected-fetch connector returns 403 `forbidden` at `read_protection_bypass` because it lacks project/team authorization. The parent can use its authorized Vercel session. No protection setting was changed.
 
 Reproduce with Playwright installed separately:
 
