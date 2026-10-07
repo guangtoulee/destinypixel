@@ -1,5 +1,7 @@
 import { hexagramHref } from "@/lib/hexagram-learning/paths";
 import { hexagramCopy } from "@/lib/hexagram-learning/copy";
+import { tarotLearningHref } from "@/lib/tarot-learning/paths";
+import { tarotLearningCopy } from "@/lib/tarot-learning/copy";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
@@ -24,7 +26,7 @@ export default async function JournalPage({ searchParams }: PageProps) {
   const guides = journalArticles.filter(article => !article.pillar);
   const schema = {
     "@context": "https://schema.org", "@type": "CollectionPage", name: `${siteName} · ${ui.journal}`, url: absoluteUrl(journalHref(locale)), inLanguage: journalLanguageTags[locale],
-    mainEntity: { "@type": "ItemList", numberOfItems: guides.length + 2, itemListElement: [{ "@type": "ListItem", position: 1, name: library.title, url: absoluteUrl(pillarLibraryHref(locale)) }, { "@type":"ListItem",position:2,name:hexagramCopy(locale).title,url:absoluteUrl(hexagramHref(undefined,locale)!) }, ...guides.map((article, index) => ({ "@type": "ListItem", position: index + 3, name: article.translations[locale].title, url: absoluteUrl(journalHref(locale, article.slug)) }))] },
+    mainEntity: { "@type": "ItemList", numberOfItems: guides.length + 3, itemListElement: [{ "@type": "ListItem", position: 1, name: library.title, url: absoluteUrl(pillarLibraryHref(locale)) }, { "@type":"ListItem",position:2,name:tarotLearningCopy(locale).title,url:absoluteUrl(tarotLearningHref(undefined,locale)!) }, { "@type":"ListItem",position:3,name:hexagramCopy(locale).title,url:absoluteUrl(hexagramHref(undefined,locale)!) }, ...guides.map((article, index) => ({ "@type": "ListItem", position: index + 4, name: article.translations[locale].title, url: absoluteUrl(journalHref(locale, article.slug)) }))] },
   };
   return (
     <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
@@ -36,6 +38,7 @@ export default async function JournalPage({ searchParams }: PageProps) {
         <p className={styles.introduction}>{ui.intro}</p>
       </section>
       <a href={pillarLibraryHref(locale)} className={styles.libraryBanner}><div className={styles.bannerArt}>{["甲子","癸卯","丙午"].map(p => <Image key={p} src={getPillarImagePath(p)} alt="" width={120} height={160} sizes="90px" />)}</div><div><p>{library.count}</p><h2>{library.browse}</h2><ArrowRight size={23} aria-hidden="true" /></div></a>
+      <a href={tarotLearningHref(undefined,locale)} className={styles.libraryBanner}><div className={styles.bannerArt}>{["fool","high-priestess","sun"].map(id=><Image key={id} src={`/tarot/rws/${id}.webp`} alt="" width={120} height={206} sizes="90px"/>)}</div><div><p>RWS · 78</p><h2>{tarotLearningCopy(locale).title}</h2><ArrowRight size={23} aria-hidden="true"/></div></a>
       <a href={hexagramHref(undefined,locale)} className={styles.libraryBanner}><div className={styles.bannerArt} aria-hidden="true" style={{fontSize:48}}>䷀ ䷊ ䷿</div><div><p>64</p><h2>{hexagramCopy(locale).title}</h2><ArrowRight size={23} aria-hidden="true"/></div></a>
       <section className={styles.articleGrid} aria-label={ui.list}>
         {guides.map((article, index) => {

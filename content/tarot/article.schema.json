@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DestinyPixel complete multilingual Tarot article v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "deckOrder",
+    "number",
+    "arcana",
+    "locale",
+    "title",
+    "quickTake",
+    "hook",
+    "sections",
+    "articleMarkdown",
+    "sources",
+    "image",
+    "publicationStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "destinypixel.tarot.article.v3"
+    },
+    "cardId": {
+      "type": "string",
+      "enum": [
+        "fool",
+        "magician",
+        "high-priestess",
+        "empress",
+        "emperor",
+        "hierophant",
+        "lovers",
+        "chariot",
+        "strength",
+        "hermit",
+        "wheel",
+        "justice",
+        "hanged-man",
+        "death",
+        "temperance",
+        "devil",
+        "tower",
+        "star",
+        "moon",
+        "sun",
+        "judgement",
+        "world",
+        "ace-of-wands",
+        "two-of-wands",
+        "three-of-wands",
+        "four-of-wands",
+        "five-of-wands",
+        "six-of-wands",
+        "seven-of-wands",
+        "eight-of-wands",
+        "nine-of-wands",
+        "ten-of-wands",
+        "page-of-wands",
+        "knight-of-wands",
+        "queen-of-wands",
+        "king-of-wands",
+        "ace-of-cups",
+        "two-of-cups",
+        "three-of-cups",
+        "four-of-cups",
+        "five-of-cups",
+        "six-of-cups",
+        "seven-of-cups",
+        "eight-of-cups",
+        "nine-of-cups",
+        "ten-of-cups",
+        "page-of-cups",
+        "knight-of-cups",
+        "queen-of-cups",
+        "king-of-cups",
+        "ace-of-swords",
+        "two-of-swords",
+        "three-of-swords",
+        "four-of-swords",
+        "five-of-swords",
+        "six-of-swords",
+        "seven-of-swords",
+        "eight-of-swords",
+        "nine-of-swords",
+        "ten-of-swords",
+        "page-of-swords",
+        "knight-of-swords",
+        "queen-of-swords",
+        "king-of-swords",
+        "ace-of-pentacles",
+        "two-of-pentacles",
+        "three-of-pentacles",
+        "four-of-pentacles",
+        "five-of-pentacles",
+        "six-of-pentacles",
+        "seven-of-pentacles",
+        "eight-of-pentacles",
+        "nine-of-pentacles",
+        "ten-of-pentacles",
+        "page-of-pentacles",
+        "knight-of-pentacles",
+        "queen-of-pentacles",
+        "king-of-pentacles"
+      ]
+    },
+    "deckOrder": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 77
+    },
+    "number": {
+      "type": "string"
+    },
+    "arcana": {
+      "enum": [
+        "major",
+        "minor"
+      ]
+    },
+    "locale": {
+      "enum": [
+        "zh-CN",
+        "en",
+        "zh-TW",
+        "ru"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quickTake": {
+      "type": "object",
+      "required": [
+        "upright",
+        "reversed"
+      ],
+      "properties": {
+        "upright": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reversed": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "hook": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "role",
+          "title",
+          "bodyMarkdown"
+        ],
+        "properties": {
+          "bodyMarkdown": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "articleMarkdown": {
+      "type": "string",
+      "minLength": 1500
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 2
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "observedAsset",
+        "sourcePageUrl",
+        "observationBasis"
+      ]
+    },
+    "publicationStatus": {
+      "const": "reviewed_multilingual_manuscript_not_published"
+    }
+  }
+}

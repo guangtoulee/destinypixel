@@ -3,7 +3,7 @@
 Branch: `codex/hexagram-learning-library-20261007`.
 Base: `08a43050400818ea9e33622dd6cd7137fc4673c9`, latest main when work started. The only main change since the Pamela release was `data/prompt-radar.json`, with no overlap.
 
-This PR is independent of Tarot draft PR21. Neither PR21 nor production has been merged or modified. Both libraries use the established journal shell and the same pinned `react-markdown` dependency; this branch contains no Tarot library records or reader imports. A future authorized integration must retain both libraries in their shared journal page, dynamic slug router, sitemap and associated tests. `package.json` and lockfile dependency additions are identical.
+This PR is now explicitly stacked on Tarot draft PR21 at `425593a043139a3b1d079f5ad055b9017fdbac8d`. A history-preserving merge combines that branch with the original hexagram head `a28ec5fc5e1548ce9cd4e868ca1b11e87c2ada72`; latest main `08a4305` and its existing bot data remain present. All seven shared files are resolved with both route families, directories, sitemap entries and tests retained. PR21 remains unchanged and both PRs remain drafts. See `docs/qa/combined-learning-20261007.md` for the combined validation and exact dependency. The standalone validation below records the original hexagram implementation.
 
 ## Delivered
 

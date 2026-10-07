@@ -1805,3 +1805,6 @@ body:has(.cel-page) {min-width:0;}
 }
 /* A cycle announcement must not shift the pile during its return animation. */
 .tarot-deck-status { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.tarot-learning-link { display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--cel-violet);font-size:14px;text-decoration:underline;text-underline-offset:3px; }
+.tarot-learning-link:focus-visible { outline:3px solid #9874af;outline-offset:3px;border-radius:4px; }

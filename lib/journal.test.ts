@@ -1,3 +1,4 @@
+import { tarotLearningIds } from "@/lib/tarot-learning/paths";
 import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
@@ -44,7 +45,7 @@ test("Traditional Chinese preserves every calendar stem and branch without chang
 
 test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 2 + 65) * journalLocales.length);
+  assert.equal(entries.length, (journalArticles.length + 2 + 65 + tarotLearningIds.length + 1) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
     for (const locale of journalLocales) {

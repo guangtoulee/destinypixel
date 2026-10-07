@@ -1,3 +1,5 @@
+import { tarotLearningHref } from "@/lib/tarot-learning/paths";
+import { tarotLearningCopy } from "@/lib/tarot-learning/copy";
 import type { ReactNode } from "react";
 import type { ReportLocale } from "@/lib/report-i18n";
 import {
@@ -105,6 +107,7 @@ export function CelestialPageFrame({
           <div className="cel-hero-aside">{c.free}</div>
         </section>
         <div id="topic-tool" className="cel-topic-tool" tabIndex={-1}>{children}</div>
+        {!astro && <section className="cel-method"><a className="cel-button" href={tarotLearningHref(undefined,locale)}>{tarotLearningCopy(locale).title} →</a><p>{tarotLearningCopy(locale).intro}</p></section>}
         <CelestialSearchContent kind={kind} locale={locale} />
         <section className="cel-method">
           <details>

@@ -1,0 +1,371 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "cardId": "knight-of-swords",
+  "deckOrder": 61,
+  "majorNumber": null,
+  "number": "N",
+  "roman": null,
+  "rank": "knight",
+  "rankOrder": 12,
+  "suit": "swords",
+  "arcana": "minor",
+  "nameZh": "宝剑骑士",
+  "nameEn": "Knight of Swords",
+  "locale": "zh-CN",
+  "deckSystem": "RWS",
+  "title": "宝剑骑士牌义 速度要跟得上判断",
+  "plainLanguageSummary": "目标清楚时可以迅速推进，也要留出校正方向的余地。",
+  "keywords": [
+    "迅速",
+    "直进",
+    "校正"
+  ],
+  "quickTake": {
+    "upright": "集中注意力处理关键问题，果断推进已核实的行动。",
+    "reversed": "急着证明或赶完，忽略条件变化和别人的反馈。"
+  },
+  "hook": "回信写得很快，发送按钮就在眼前。你是在解决紧急问题，还是被自己的急迫感追着走？",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "人和马几乎向同一个方向倾去",
+      "bodyMarkdown": "白马朝画面左侧疾驰，前腿向前伸展。骑士身穿盔甲，上身前倾，一手握缰，另一手把剑举向左上方；红色披风和头盔上的红饰向后扬起。马颈带上有黄色小图案，地面起伏，背景的树木倾斜，云层被拉成长条。\n\n斜线贯穿马身、剑和云，让画面显得很快。但画里没有清楚画出终点，也没有出现等待援助或正在交战的人。动作的强度可见，行动是否适当仍需情境来回答；宫廷称号也不限定现实中的性别。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Waite 同时写勇气和鲁莽的风险",
+      "bodyMarkdown": "Waite 在1911年标注转录中把骑士放进浪漫骑士精神的背景，提到勇敢、能力与防卫，也列出愤怒和对抗带来的破坏面。逆位明确涉及不审慎与能力运用失当。\n\n本文借此讨论行动速度和判断，是现代反思用法。原文中的冲突语言属于历史占断背景，不能据此预测现实战争、死亡或暴力，也不能把激烈态度直接当成正义。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswkn.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "正位 把快用在最需要的地方",
+      "bodyMarkdown": "正位可表示你已经抓住核心，需要迅速表达、作出回应或完成一项明确任务。它适合短而清楚的行动：谁来做、做到什么程度、何时确认结果。\n\n果断不意味着同时处理所有事情。把干扰移开，先完成关键步骤，并设置一个回看点。当新信息出现时，能够调整方向，才不会让速度变成惯性。"
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "逆位 检查急迫感来自哪里",
+      "bodyMarkdown": "逆位可能是话说得太满、先行动后确认，或为了赶上别人而不断提速。也可能是准备不足，结果越忙越返工。先分清真正的截止时间与自己设想的压力，确认权限、依赖条件和可接受的完成标准。"
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "冲得快也要知道何时停",
+      "bodyMarkdown": "团队遇到紧急故障，可以先明确负责人、影响范围和下一次更新时间，再集中处理。未经核实就连续改动多个地方，反而可能让问题更难定位。\n\n争论中想到一个有力反驳，先等对方把话说完；你也许是在反驳尚未说完的半句话。准备面试时，用限时练习提升反应速度，同时保留复盘，避免把熟练说辞当成真实理解。"
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "练习 为一次快行动装上刹车",
+      "bodyMarkdown": "选一件你想立刻推进的事，写下行动前必须确认的两项事实，以及出现什么信号时暂停。再给行动设一个短回看点，届时检查结果，而不是只检查自己有没有一直在忙。"
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "气势不替代能力和同意",
+      "bodyMarkdown": "宝剑骑士不等于脾气暴躁的男性，也不保证快速发展一定值得追随。主动表达、强行推进和越过别人边界，是需要清楚区分的三件事。"
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "接着读什么",
+      "bodyMarkdown": "权杖八：比较外部推进速度与主动加速；宝剑国王：把果断行动放进有责任的判断。"
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "本篇资料",
+      "bodyMarkdown": "- [Pamela Colman Smith：宝剑骑士，站内固定提交的实际 RWS 图像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp)\n- [A. E. Waite《塔罗图解》第三部 第二节 宝剑骑士](https://original.sacred-texts.com/tarot/pkt/pktswkn.htm)\n- [Commons Swords12.jpg 文件页与上传历史](https://commons.wikimedia.org/wiki/File:Swords12.jpg)\n\n版本说明：逐图观察站内固定提交的实际 RWS WebP 资产；Commons 的 Pam-A 文件页用于来源与版本对照，未宣称两份文件逐像素一致。Waite 依据网页标注1911年的英文转录。现代情境、提问与练习由 DestinyPixel 原创编写，未借用付费牌义内容。"
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "eight-of-wands",
+      "nameZh": "权杖八",
+      "reason": "比较外部推进速度与主动加速"
+    },
+    {
+      "cardId": "king-of-swords",
+      "nameZh": "宝剑国王",
+      "reason": "把果断行动放进有责任的判断"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "knight-of-swords-image",
+      "type": "画面观察",
+      "title": "Pamela Colman Smith：宝剑骑士，站内固定提交的实际 RWS 图像",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "knight-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑骑士，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "knight-of-swords-waite",
+      "type": "Waite 原文",
+      "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑骑士",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktswkn.htm",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "knight-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑骑士",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswkn.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "knight-of-swords-commons",
+      "type": "版本与来源对照",
+      "title": "Commons Swords12.jpg 文件页与上传历史",
+      "url": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "knight-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords12.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+    "creator": "Pamela Colman Smith",
+    "observationBasis": "repository_webp",
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "7ba58ef54384cc15cf6449dfca573f7e621fd9775cc9b8de410b5da54d6bfcc1",
+      "widthPx": 560,
+      "heightPx": 967,
+      "bytes": 174920,
+      "basis": "repository_webp",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/knight-of-swords.webp",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "sha256": "7ba58ef54384cc15cf6449dfca573f7e621fd9775cc9b8de410b5da54d6bfcc1",
+    "widthPx": 560,
+    "heightPx": 967,
+    "checkedOn": "2026-10-07",
+    "repositoryAssetInspected": true,
+    "sourceMetadata": {
+      "rank": "knight",
+      "gitBlobSha": "212ab65de362ebc53f05f28705fffbecebe1ddad",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+      "sha256": "7ba58ef54384cc15cf6449dfca573f7e621fd9775cc9b8de410b5da54d6bfcc1",
+      "localFile": "images/12-knight.webp",
+      "bytes": 174920,
+      "dimensions": [
+        560,
+        967
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/knight-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:21:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1112,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  "articleMarkdown": "# 宝剑骑士牌义 速度要跟得上判断\n\n一句话：目标清楚时可以迅速推进，也要留出校正方向的余地。\n\n关键词：迅速、直进、校正\n\n正位速读：集中注意力处理关键问题，果断推进已核实的行动。\n\n逆位速读：急着证明或赶完，忽略条件变化和别人的反馈。\n\n回信写得很快，发送按钮就在眼前。你是在解决紧急问题，还是被自己的急迫感追着走？\n\n## 人和马几乎向同一个方向倾去\n\n白马朝画面左侧疾驰，前腿向前伸展。骑士身穿盔甲，上身前倾，一手握缰，另一手把剑举向左上方；红色披风和头盔上的红饰向后扬起。马颈带上有黄色小图案，地面起伏，背景的树木倾斜，云层被拉成长条。\n\n斜线贯穿马身、剑和云，让画面显得很快。但画里没有清楚画出终点，也没有出现等待援助或正在交战的人。动作的强度可见，行动是否适当仍需情境来回答；宫廷称号也不限定现实中的性别。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp)\n\n## Waite 同时写勇气和鲁莽的风险\n\nWaite 在1911年标注转录中把骑士放进浪漫骑士精神的背景，提到勇敢、能力与防卫，也列出愤怒和对抗带来的破坏面。逆位明确涉及不审慎与能力运用失当。\n\n本文借此讨论行动速度和判断，是现代反思用法。原文中的冲突语言属于历史占断背景，不能据此预测现实战争、死亡或暴力，也不能把激烈态度直接当成正义。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswkn.htm)\n\n## 正位 把快用在最需要的地方\n\n正位可表示你已经抓住核心，需要迅速表达、作出回应或完成一项明确任务。它适合短而清楚的行动：谁来做、做到什么程度、何时确认结果。\n\n果断不意味着同时处理所有事情。把干扰移开，先完成关键步骤，并设置一个回看点。当新信息出现时，能够调整方向，才不会让速度变成惯性。\n\n## 逆位 检查急迫感来自哪里\n\n逆位可能是话说得太满、先行动后确认，或为了赶上别人而不断提速。也可能是准备不足，结果越忙越返工。先分清真正的截止时间与自己设想的压力，确认权限、依赖条件和可接受的完成标准。\n\n## 冲得快也要知道何时停\n\n团队遇到紧急故障，可以先明确负责人、影响范围和下一次更新时间，再集中处理。未经核实就连续改动多个地方，反而可能让问题更难定位。\n\n争论中想到一个有力反驳，先等对方把话说完；你也许是在反驳尚未说完的半句话。准备面试时，用限时练习提升反应速度，同时保留复盘，避免把熟练说辞当成真实理解。\n\n## 练习 为一次快行动装上刹车\n\n选一件你想立刻推进的事，写下行动前必须确认的两项事实，以及出现什么信号时暂停。再给行动设一个短回看点，届时检查结果，而不是只检查自己有没有一直在忙。\n\n## 气势不替代能力和同意\n\n宝剑骑士不等于脾气暴躁的男性，也不保证快速发展一定值得追随。主动表达、强行推进和越过别人边界，是需要清楚区分的三件事。\n\n## 接着读什么\n\n权杖八：比较外部推进速度与主动加速；宝剑国王：把果断行动放进有责任的判断。\n\n## 本篇资料\n\n- [Pamela Colman Smith：宝剑骑士，站内固定提交的实际 RWS 图像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp)\n- [A. E. Waite《塔罗图解》第三部 第二节 宝剑骑士](https://original.sacred-texts.com/tarot/pkt/pktswkn.htm)\n- [Commons Swords12.jpg 文件页与上传历史](https://commons.wikimedia.org/wiki/File:Swords12.jpg)\n\n版本说明：逐图观察站内固定提交的实际 RWS WebP 资产；Commons 的 Pam-A 文件页用于来源与版本对照，未宣称两份文件逐像素一致。Waite 依据网页标注1911年的英文转录。现代情境、提问与练习由 DestinyPixel 原创编写，未借用付费牌义内容。\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "sourceRecord": {
+    "cardId": "knight-of-swords",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": "N",
+    "rank": "knight",
+    "suit": "swords",
+    "arcana": "minor",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "宝剑骑士",
+    "nameEn": "Knight of Swords",
+    "title": "宝剑骑士牌义 速度要跟得上判断",
+    "plainLanguageSummary": "目标清楚时可以迅速推进，也要留出校正方向的余地。",
+    "hook": "回信写得很快，发送按钮就在眼前。你是在解决紧急问题，还是被自己的急迫感追着走？",
+    "keywords": [
+      "迅速",
+      "直进",
+      "校正"
+    ],
+    "uprightQuickTake": "集中注意力处理关键问题，果断推进已核实的行动。",
+    "reversedQuickTake": "急着证明或赶完，忽略条件变化和别人的反馈。",
+    "articleSlug": "tarot-knight-of-swords-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "人和马几乎向同一个方向倾去",
+        "paragraphs": [
+          "白马朝画面左侧疾驰，前腿向前伸展。骑士身穿盔甲，上身前倾，一手握缰，另一手把剑举向左上方；红色披风和头盔上的红饰向后扬起。马颈带上有黄色小图案，地面起伏，背景的树木倾斜，云层被拉成长条。",
+          "斜线贯穿马身、剑和云，让画面显得很快。但画里没有清楚画出终点，也没有出现等待援助或正在交战的人。动作的强度可见，行动是否适当仍需情境来回答；宫廷称号也不限定现实中的性别。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "Waite 同时写勇气和鲁莽的风险",
+        "paragraphs": [
+          "Waite 在1911年标注转录中把骑士放进浪漫骑士精神的背景，提到勇敢、能力与防卫，也列出愤怒和对抗带来的破坏面。逆位明确涉及不审慎与能力运用失当。",
+          "本文借此讨论行动速度和判断，是现代反思用法。原文中的冲突语言属于历史占断背景，不能据此预测现实战争、死亡或暴力，也不能把激烈态度直接当成正义。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswkn.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 把快用在最需要的地方",
+        "paragraphs": [
+          "正位可表示你已经抓住核心，需要迅速表达、作出回应或完成一项明确任务。它适合短而清楚的行动：谁来做、做到什么程度、何时确认结果。",
+          "果断不意味着同时处理所有事情。把干扰移开，先完成关键步骤，并设置一个回看点。当新信息出现时，能够调整方向，才不会让速度变成惯性。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 检查急迫感来自哪里",
+        "paragraphs": [
+          "逆位可能是话说得太满、先行动后确认，或为了赶上别人而不断提速。也可能是准备不足，结果越忙越返工。先分清真正的截止时间与自己设想的压力，确认权限、依赖条件和可接受的完成标准。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "冲得快也要知道何时停",
+        "paragraphs": [
+          "团队遇到紧急故障，可以先明确负责人、影响范围和下一次更新时间，再集中处理。未经核实就连续改动多个地方，反而可能让问题更难定位。",
+          "争论中想到一个有力反驳，先等对方把话说完；你也许是在反驳尚未说完的半句话。准备面试时，用限时练习提升反应速度，同时保留复盘，避免把熟练说辞当成真实理解。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 为一次快行动装上刹车",
+        "paragraphs": [
+          "选一件你想立刻推进的事，写下行动前必须确认的两项事实，以及出现什么信号时暂停。再给行动设一个短回看点，届时检查结果，而不是只检查自己有没有一直在忙。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "气势不替代能力和同意",
+        "paragraphs": [
+          "宝剑骑士不等于脾气暴躁的男性，也不保证快速发展一定值得追随。主动表达、强行推进和越过别人边界，是需要清楚区分的三件事。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "eight-of-wands",
+        "nameZh": "权杖八",
+        "reason": "比较外部推进速度与主动加速"
+      },
+      {
+        "cardId": "king-of-swords",
+        "nameZh": "宝剑国王",
+        "reason": "把果断行动放进有责任的判断"
+      }
+    ],
+    "sources": [
+      {
+        "id": "knight-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑骑士，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "knight-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑骑士",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswkn.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "knight-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords12.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "rank": "knight",
+      "gitBlobSha": "212ab65de362ebc53f05f28705fffbecebe1ddad",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/knight-of-swords.webp",
+      "sha256": "7ba58ef54384cc15cf6449dfca573f7e621fd9775cc9b8de410b5da54d6bfcc1",
+      "localFile": "images/12-knight.webp",
+      "bytes": 174920,
+      "dimensions": [
+        560,
+        967
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/knight-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords12.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:21:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1112,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    },
+    "chineseCharacterCount": 1105,
+    "bodyChineseCharacterCount": 723
+  },
+  "sourceBatch": "swords",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 834,
+    "words": 2,
+    "articleUtf8Bytes": 4307
+  },
+  "nameLocalized": "宝剑骑士",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {},
+  "countsOriginal": {
+    "mainTextChineseCharacters": 933,
+    "completeArticleChineseCharacters": 1105
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "40e7240f2c6154e4cda6613b4f495c2309fcbd35068765244b2e0e4a82a7c274",
+    "articleSha256": "40e7240f2c6154e4cda6613b4f495c2309fcbd35068765244b2e0e4a82a7c274",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}
