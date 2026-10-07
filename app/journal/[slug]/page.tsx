@@ -1,17 +1,38 @@
 import type { Metadata } from "next";
+import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { dayPillarCycle, pillarName, pillarArticleHref, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
-import { getJournalArticle, journalArticles, journalArticleSchema, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
+import { type JournalSection, getJournalArticle, journalArticles, journalArticleSchema, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
 import { journalUi, journalLanguageTags, journalHomeHref } from "@/lib/journal-locales";
 import styles from "../journal.module.css";
 
 type PageProps = { params: Promise<{ slug: string }>; searchParams?: Promise<{ locale?: string }> };
 
 export const dynamicParams = false;
+
+type ArticleFigureData = NonNullable<JournalSection["figures"]>[number];
+
+function ArticleFigure({ figure }: { figure: ArticleFigureData }) {
+  return <figure className={styles.articleFigure}><Image src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width:650px) 92vw, 640px" /><figcaption>{figure.caption}</figcaption></figure>;
+}
+
+// Wraps the first occurrence of each link text; the paragraph text itself is unchanged.
+function withLinks(paragraph: string, links?: JournalSection["links"]): ReactNode {
+  if (!links?.length) return paragraph;
+  let parts: ReactNode[] = [paragraph];
+  for (const link of links) {
+    parts = parts.flatMap((part, index): ReactNode[] => {
+      if (typeof part !== "string" || !part.includes(link.text)) return [part];
+      const at = part.indexOf(link.text);
+      return [part.slice(0, at), <a key={`${link.href}-${index}`} href={link.href}>{link.text}</a>, part.slice(at + link.text.length)];
+    });
+  }
+  return parts;
+}
 
 export function generateStaticParams() {
   return journalArticles.map((article) => ({ slug: article.slug }));
@@ -57,7 +78,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
             <div className={styles.takeaway}><span>{ui.takeaway}</span><p>{copy.takeaway}</p></div>
             {copy.sections.map((section) => <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
               <h2 id={`${section.id}-title`}>{section.title}</h2>
-              {section.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              {section.figures?.filter((figure) => figure.afterParagraph < 0).map((figure) => <ArticleFigure figure={figure} key={figure.src} />)}
+              {section.paragraphs.map((paragraph, index) => <Fragment key={index}><p>{withLinks(paragraph, section.links)}</p>{section.figures?.filter((figure) => figure.afterParagraph === index).map((figure) => <ArticleFigure figure={figure} key={figure.src} />)}</Fragment>)}
               {section.steps && <ol>{section.steps.map((step, index) => <li key={index}>{step}</li>)}</ol>}
               {section.table && <div className={styles.tableWrap} role="region" aria-label={section.title} tabIndex={0}><table><thead><tr>{section.table.headings.map((heading) => <th key={heading} scope="col">{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
               {section.sources && <div className={styles.sources}><span>{ui.sources}</span>{section.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}
