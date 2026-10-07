@@ -3,7 +3,7 @@ import type { JournalSourceArticle, JournalTranslation } from "@/lib/journal";
 // Pamela Colman Smith biography. Images are public domain; credits are rendered as figure captions.
 const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
   "en": {
-    "title": "Pamela Colman Smith, the Artist of Tarot",
+    "title": "Who Drew Rider-Waite? Pamela Colman Smith",
     "description": "Who drew the Rider-Waite tarot? Meet Pamela Colman Smith: theatre artist, painter of music, creator of 78 story cards and the PCS monogram in the corner.",
     "topic": "Tarot history",
     "introduction": "You probably know her pictures even if you don't know her name. A young traveller steps toward a cliff edge. A man stoops under a bundle of ten heavy staves. A red heart hangs in the rain, pierced by three swords. Most people call this the \"Rider-Waite\" deck. Ask who drew the Rider Waite deck, though, and the answer isn't Rider, the publisher, or Arthur Edward Waite, the occultist who planned it. It was Pamela Colman Smith, an artist whom Ellen Terry nicknamed Pixie.",
@@ -17,12 +17,20 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ],
         "figures": [
           {
+            "src": "/journal/pamela-colman-smith/pcs-portrait-c1912.webp",
+            "width": 406,
+            "height": 640,
+            "alt": "Portrait of Pamela Colman Smith, c. 1912",
+            "caption": "Pamela Colman Smith, c. 1912. Photographer unknown; published in The Craftsman, vol. 23, no. 1 (October 1912). Wikimedia Commons (File:Pamela_Colman_Smith_circa_1912.jpg), public domain.",
+            "afterParagraph": -1
+          },
+          {
             "src": "/journal/pamela-colman-smith/rws-ace-of-cups-pam-a.webp",
             "width": 927,
             "height": 1600,
             "alt": "Ace of Cups, Rider–Waite–Smith Pam-A edition (1909)",
             "caption": "Pamela Colman Smith, Ace of Cups, Rider–Waite–Smith tarot, Pam-A edition, 1909. Scan: TaionWC / Wikimedia Commons (File:Cups01.jpg), public domain.",
-            "afterParagraph": -1
+            "afterParagraph": 0
           }
         ]
       },
@@ -150,19 +158,68 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
           "The deck came to be called \"Rider-Waite,\" after a publisher and a writer, with no mention of the woman who drew it. For a long time people knew her pictures better than her name. That is changing. The 2009 centennial edition is called the Smith-Waite Centennial, and in January 2026 The New York Times gave her an obituary in its \"Overlooked\" series. Her name is now being remembered alongside the pictures that made it worth remembering.",
           "Next time you lay out a spread, look in the corners for those three letters. They are her way of saying: I drew this."
         ]
+      },
+      {
+        "id": "sources",
+        "title": "Sources",
+        "paragraphs": [],
+        "sources": [
+          {
+            "label": "V&A: Ellen Terry as Mistress Page (PCS monogram described)",
+            "href": "https://collections.vam.ac.uk/item/O1254384/"
+          },
+          {
+            "label": "Smithsonian American Art Museum: Overture. \"Egmont\" Beethoven, 1984.24",
+            "href": "https://americanart.si.edu/artwork/overture-egmont-beethoven-22585"
+          },
+          {
+            "label": "Library of Congress: Buy a bulldog on June 16th… (1915)",
+            "href": "https://www.loc.gov/item/2005691250/"
+          },
+          {
+            "label": "Yale Beinecke Library: letter to Alfred Stieglitz, 19 November 1909",
+            "href": "https://collections.library.yale.edu/catalog/10257471"
+          },
+          {
+            "label": "The Craftsman, vol. 23 (October 1912), Internet Archive",
+            "href": "https://archive.org/details/craftsman23newyuoft"
+          },
+          {
+            "label": "Arthur Ransome, Bohemia in London (1907), Internet Archive",
+            "href": "https://archive.org/details/bohemiainlondon00ransiala"
+          },
+          {
+            "label": "A. E. Waite, The Pictorial Key to the Tarot, Wikisource",
+            "href": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot"
+          },
+          {
+            "label": "Wikimedia Commons: Rider–Waite–Smith Pam-A scans (TaionWC)",
+            "href": "https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)"
+          },
+          {
+            "label": "Wikimedia Commons: Pamela Colman Smith circa 1912 (portrait)",
+            "href": "https://commons.wikimedia.org/wiki/File:Pamela_Colman_Smith_circa_1912.jpg"
+          },
+          {
+            "label": "Wikimedia Commons: The Green Sheaf, hand-coloured page",
+            "href": "https://commons.wikimedia.org/wiki/File:Green_Sheaf_05C.jpg"
+          }
+        ]
       }
     ],
     "action": {
       "label": "Draw a card on the tarot table",
       "href": "/tarot"
-    }
+    },
+    "subtitle": "Pamela Colman Smith, the Artist of Tarot",
+    "answer": "Pamela Colman Smith drew the Rider-Waite tarot. In 1909 she drew all 78 cards for Arthur Edward Waite, and Rider published the deck that December. Many of the cards bear her small PCS monogram."
   },
   "zh": {
-    "title": "帕梅拉·科尔曼·史密斯：那个把塔罗画成故事的人",
-    "description": "谁画了伟特塔罗？认识帕梅拉·科尔曼·史密斯：剧场画家、“看见”音乐的人，把 78 张牌画成一幕幕故事，还在角落留下 PCS 花押。",
+    "title": "韦特塔罗是谁画的？帕梅拉·科尔曼·史密斯生平",
+    "description": "谁画了韦特塔罗？认识帕梅拉·科尔曼·史密斯：剧场画家、“看见”音乐的人，把 78 张牌画成一幕幕故事，还在角落留下 PCS 花押。",
     "topic": "塔罗历史",
-    "introduction": "你手里那副最常见的塔罗牌，愚人站在悬崖边，权杖十的人弯腰扛着一捆木棍，宝剑三是一颗被刺穿的心。很多人叫它“伟特塔罗”，以为伟特塔罗作者就是画它的人。其实一笔一笔把这些画面画出来的，是一位女画家，帕梅拉·科尔曼·史密斯。Ellen Terry 给她起了个昵称，叫 Pixie。",
-    "takeaway": "大多数人叫它“伟特塔罗”的这副牌，是帕梅拉·科尔曼·史密斯画的；她的 PCS 花押至今还藏在牌的角落里。",
+    "introduction": "你手里那副最常见的塔罗牌，愚人站在悬崖边，权杖十的人弯腰扛着一捆木棍，宝剑三是一颗被刺穿的心。很多人叫它“韦特塔罗”，以为韦特塔罗作者就是画它的人。其实一笔一笔把这些画面画出来的，是一位女画家，帕梅拉·科尔曼·史密斯。Ellen Terry 给她起了个昵称，叫 Pixie。",
+    "takeaway": "大多数人叫它“韦特塔罗”的这副牌，是帕梅拉·科尔曼·史密斯画的；她的 PCS 花押至今还藏在牌的角落里。",
     "sections": [
       {
         "id": "london-jamaica-new-york",
@@ -172,12 +229,20 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ],
         "figures": [
           {
+            "src": "/journal/pamela-colman-smith/pcs-portrait-c1912.webp",
+            "width": 406,
+            "height": 640,
+            "alt": "帕梅拉·科尔曼·史密斯肖像，约 1912 年",
+            "caption": "帕梅拉·科尔曼·史密斯，约 1912 年。摄影师不详；刊于《The Craftsman》第 23 卷第 1 期（1912 年 10 月）。Wikimedia Commons（File:Pamela_Colman_Smith_circa_1912.jpg），公有领域。",
+            "afterParagraph": -1
+          },
+          {
             "src": "/journal/pamela-colman-smith/rws-ace-of-cups-pam-a.webp",
             "width": 927,
             "height": 1600,
             "alt": "韦特塔罗圣杯一，1909 年 Pam-A 版",
             "caption": "Pamela Colman Smith，《圣杯一》，韦特塔罗 Pam-A 版，1909。扫描：TaionWC / Wikimedia Commons（File:Cups01.jpg），公有领域。",
-            "afterParagraph": -1
+            "afterParagraph": 0
           }
         ]
       },
@@ -234,7 +299,8 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "id": "eighty-designs",
         "title": "一封信：80 幅，钱很少",
         "paragraphs": [
-          "1909 年 11 月 19 日，她给 Stieglitz 写了封信，现在收在耶鲁大学 Beinecke 图书馆。她随口提了一句：刚做完一个大活，钱很少，“very little cash”，是一副塔罗牌，80 幅设计。她说想把几张原画寄去纽约，因为“some people may like them”，也许有人想买；印好的牌会给他寄一副，大概 12 月 1 日前后，还自嘲“probably very badly”，多半印得很糟。那年 12 月，这副牌由 Rider 出版。第二年，Waite 写的小册子《Key to the Tarot》随牌发行，后来又出了扩充版《Pictorial Key》。她到底拿了多少钱，没有记录。而那副她自嘲“多半印得很糟”的牌，后来陪了一代又一代读牌的人。"
+          "1909 年 11 月 19 日，她给 Stieglitz 写了封信，现在收在耶鲁大学 Beinecke 图书馆。她随口提了一句：刚做完一个大活，钱很少，“very little cash”，是一副塔罗牌，80 幅设计。她说想把几张原画寄去纽约，因为“some people may like them”，也许有人想买；印好的牌会给他寄一副，大概 12 月 1 日前后，还自嘲“probably very badly”，多半印得很糟。",
+          "那年 12 月，这副牌由 Rider 出版。第二年，Waite 写的小册子《Key to the Tarot》随牌发行，后来又出了扩充版《Pictorial Key》。她到底拿了多少钱，没有记录。而那副她自嘲“多半印得很糟”的牌，后来陪了一代又一代读牌的人。"
         ]
       },
       {
@@ -304,15 +370,64 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
           "这副牌后来叫“Rider-Waite”，一个是出版社，一个是 Waite，名字里没有画它的人。有很长一段时间，人们记住的是她的画，而不是她的名字。如今，提起她的人越来越多，2009 年出的百年纪念版就叫 Smith-Waite Centennial。2026 年 1 月，《纽约时报》在“Overlooked”栏目给她补了一篇讣告。这位韦特塔罗画者的名字，正和她的画一起被人记住。",
           "下次翻牌，不妨找找角落里的 PCS。那是她留下的一句话：这是我画的。"
         ]
+      },
+      {
+        "id": "sources",
+        "title": "资料来源",
+        "paragraphs": [],
+        "sources": [
+          {
+            "label": "V&A 博物馆：《Ellen Terry as Mistress Page》（花押描述）",
+            "href": "https://collections.vam.ac.uk/item/O1254384/"
+          },
+          {
+            "label": "史密森尼美国艺术博物馆：《Overture. \"Egmont\" Beethoven》，1984.24",
+            "href": "https://americanart.si.edu/artwork/overture-egmont-beethoven-22585"
+          },
+          {
+            "label": "美国国会图书馆：《Buy a bulldog on June 16th…》（1915）",
+            "href": "https://www.loc.gov/item/2005691250/"
+          },
+          {
+            "label": "耶鲁大学 Beinecke 图书馆：致 Stieglitz 信，1909 年 11 月 19 日",
+            "href": "https://collections.library.yale.edu/catalog/10257471"
+          },
+          {
+            "label": "《The Craftsman》第 23 卷（1912 年 10 月），Internet Archive",
+            "href": "https://archive.org/details/craftsman23newyuoft"
+          },
+          {
+            "label": "Arthur Ransome，《Bohemia in London》（1907），Internet Archive",
+            "href": "https://archive.org/details/bohemiainlondon00ransiala"
+          },
+          {
+            "label": "A. E. Waite，《The Pictorial Key to the Tarot》，Wikisource",
+            "href": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot"
+          },
+          {
+            "label": "Wikimedia Commons：韦特塔罗 Pam-A 扫描（TaionWC）",
+            "href": "https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)"
+          },
+          {
+            "label": "Wikimedia Commons：帕梅拉·科尔曼·史密斯约 1912 年肖像",
+            "href": "https://commons.wikimedia.org/wiki/File:Pamela_Colman_Smith_circa_1912.jpg"
+          },
+          {
+            "label": "Wikimedia Commons：《The Green Sheaf》手工上色页",
+            "href": "https://commons.wikimedia.org/wiki/File:Green_Sheaf_05C.jpg"
+          }
+        ]
       }
     ],
     "action": {
       "label": "去塔罗牌桌抽一张",
       "href": "/tarot?locale=zh"
-    }
+    },
+    "subtitle": "帕梅拉·科尔曼·史密斯：那个把塔罗画成故事的人",
+    "answer": "韦特塔罗是帕梅拉·科尔曼·史密斯画的。1909 年，她为 Arthur Edward Waite 画完了全部 78 张牌，同年 12 月由 Rider 出版。许多牌上都留有她小小的 PCS 花押。"
   },
   "ru": {
-    "title": "Памела Колман Смит — художница Таро",
+    "title": "Кто нарисовал Таро Уэйта? Памела Колман Смит",
     "description": "Кто нарисовал колоду Райдера — Уэйта? Памела Колман Смит: театр, «музыкальные» картины, 78 сюжетных карт и монограмма PCS в углу.",
     "topic": "История Таро",
     "introduction": "Вы почти наверняка знаете её рисунки, даже если не знаете её имени. Юный странник шагает к краю обрыва. Человек сгибается под связкой из десяти тяжёлых жезлов. Красное сердце, пронзённое тремя мечами, висит под дождём. Большинство называет эту колоду «Райдер — Уэйт». Но если спросить, кто её нарисовал, ответом будет не издатель Райдер и не оккультист Артур Эдвард Уэйт, который её задумал. Её нарисовала Памела Колман Смит — художница, которую Эллен Терри прозвала Пикси.",
@@ -326,12 +441,20 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ],
         "figures": [
           {
+            "src": "/journal/pamela-colman-smith/pcs-portrait-c1912.webp",
+            "width": 406,
+            "height": 640,
+            "alt": "Портрет Памелы Колман Смит, около 1912 года",
+            "caption": "Памела Колман Смит, около 1912 года. Фотограф неизвестен; опубликовано в The Craftsman, т. 23, № 1 (октябрь 1912). Wikimedia Commons (File:Pamela_Colman_Smith_circa_1912.jpg), общественное достояние.",
+            "afterParagraph": -1
+          },
+          {
             "src": "/journal/pamela-colman-smith/rws-ace-of-cups-pam-a.webp",
             "width": 927,
             "height": 1600,
             "alt": "Туз Кубков из Таро Райдера — Уэйта — Смит, издание Pam-A (1909)",
             "caption": "Памела Колман Смит, Туз Кубков, Таро Райдера — Уэйта — Смит, издание Pam-A, 1909. Скан: TaionWC / Wikimedia Commons (File:Cups01.jpg), общественное достояние.",
-            "afterParagraph": -1
+            "afterParagraph": 0
           }
         ]
       },
@@ -459,19 +582,77 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
           "Колоду стали называть «Райдер — Уэйт» — по издателю и автору, — не упоминая женщину, которая её нарисовала. Долгое время её рисунки знали лучше, чем её имя. Теперь это меняется. Юбилейное издание 2009 года называется Smith-Waite Centennial, а в январе 2026 года The New York Times посвятила ей некролог в рубрике «Overlooked» («Незамеченные»). Её имя наконец вспоминают рядом с картинами, благодаря которым его стоит помнить.",
           "В следующий раз, раскладывая карты, поищите в уголках эти три буквы. Так она говорит нам: это нарисовала я."
         ]
+      },
+      {
+        "id": "sources",
+        "title": "Источники",
+        "paragraphs": [],
+        "sources": [
+          {
+            "label": "Музей Виктории и Альберта: Ellen Terry as Mistress Page (описание монограммы)",
+            "href": "https://collections.vam.ac.uk/item/O1254384/"
+          },
+          {
+            "label": "Смитсоновский музей американского искусства: Overture. \"Egmont\" Beethoven, 1984.24",
+            "href": "https://americanart.si.edu/artwork/overture-egmont-beethoven-22585"
+          },
+          {
+            "label": "Библиотека Конгресса: Buy a bulldog on June 16th… (1915)",
+            "href": "https://www.loc.gov/item/2005691250/"
+          },
+          {
+            "label": "Бейнекская библиотека Йеля: письмо Альфреду Стиглицу, 19 ноября 1909",
+            "href": "https://collections.library.yale.edu/catalog/10257471"
+          },
+          {
+            "label": "The Craftsman, т. 23 (октябрь 1912), Internet Archive",
+            "href": "https://archive.org/details/craftsman23newyuoft"
+          },
+          {
+            "label": "Артур Рэнсом, Bohemia in London (1907), Internet Archive",
+            "href": "https://archive.org/details/bohemiainlondon00ransiala"
+          },
+          {
+            "label": "А. Э. Уэйт, The Pictorial Key to the Tarot, Викитека",
+            "href": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot"
+          },
+          {
+            "label": "Wikimedia Commons: сканы Pam-A (TaionWC)",
+            "href": "https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)"
+          },
+          {
+            "label": "Wikimedia Commons: портрет Памелы Колман Смит, около 1912",
+            "href": "https://commons.wikimedia.org/wiki/File:Pamela_Colman_Smith_circa_1912.jpg"
+          },
+          {
+            "label": "Wikimedia Commons: страница The Green Sheaf",
+            "href": "https://commons.wikimedia.org/wiki/File:Green_Sheaf_05C.jpg"
+          }
+        ]
       }
     ],
     "action": {
       "label": "Вытянуть карту за столом Таро",
       "href": "/tarot?locale=ru"
-    }
+    },
+    "subtitle": "Памела Колман Смит — художница Таро",
+    "answer": "Колоду Райдера — Уэйта нарисовала Памела Колман Смит. В 1909 году она создала для Артура Эдварда Уэйта все 78 карт, и в декабре того же года колоду выпустило издательство Райдер. На многих картах стоит её небольшая монограмма PCS."
   }
 };
 
 export const pamelaColmanSmithArticle: JournalSourceArticle = {
   slug: "pamela-colman-smith-tarot-artist",
   relatedSlug: "how-to-read-three-card-tarot",
-  zhTwReplacements: [["大多隻是", "大多只是"], ["杯五里", "杯五裡"], ["意大利", "義大利"]],
+  image: { src: "/journal/pamela-colman-smith/rws-ace-of-cups-pam-a.webp", width: 927, height: 1600 },
+  about: {
+    "@type": "Person",
+    name: "Pamela Colman Smith",
+    birthDate: "1878-02-16",
+    deathDate: "1951-09-18",
+    image: "/journal/pamela-colman-smith/pcs-portrait-c1912.webp",
+    sameAs: ["https://en.wikipedia.org/wiki/Pamela_Colman_Smith", "https://www.wikidata.org/wiki/Q515745", "https://americanart.si.edu/artist/pamela-colman-smith-4514"],
+  },
+  zhTwReplacements: [["大多隻是", "大多只是"], ["杯五里", "杯五裡"], ["意大利", "義大利"], ["韋特", "偉特"]],
   publishedAt: "2026-10-07",
   updatedAt: "2026-10-07",
   translations: { en: editions.en, zh: editions.zh },

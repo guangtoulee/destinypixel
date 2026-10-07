@@ -28,7 +28,7 @@ export function topicCopy(locale: ReportLocale) {
 }
 export const topicGuides: Record<TopicKey, string[]> = {
   ...sectionGuides,
-  tarot: ["how-to-read-three-card-tarot", "how-to-ask-fortune-sticks", "yuelao-love-fortune-conversation"],
+  tarot: ["how-to-read-three-card-tarot", "how-to-ask-fortune-sticks", "yuelao-love-fortune-conversation", "pamela-colman-smith-tarot-artist"],
   astrology: ["prepare-birth-date-time-place", "compatibility-without-birth-time", "bazi-vs-chinese-zodiac-compatibility"],
 };
 const russianNames: Record<string, string> = {
