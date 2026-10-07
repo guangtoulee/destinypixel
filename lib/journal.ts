@@ -8,6 +8,7 @@ import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-
 import { loveFortuneArticle, loveFortuneRussian } from "@/lib/journal-love-fortune";
 import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-elements";
 import { threeCardTarotArticle, threeCardTarotRussian } from "@/lib/journal-three-card-tarot";
+import { pamelaColmanSmithArticle, pamelaColmanSmithRussian } from "@/lib/journal-pamela-colman-smith";
 import { pillarProfileArticles, pillarProfileRussian } from "@/lib/journal-pillar-profiles";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
@@ -22,6 +23,8 @@ export type JournalSection = {
   steps?: string[];
   table?: { headings: string[]; rows: string[][] };
   sources?: { label: string; href: string }[];
+  figures?: { src: string; width: number; height: number; alt: string; caption: string; afterParagraph: number }[];
+  links?: { text: string; href: string }[];
 };
 export type JournalTranslation = {
   title: string;
@@ -38,6 +41,8 @@ export type JournalArticle = {
   kind?: "portrait";
   portraitDepth?: "full";
   relatedSlug?: string;
+  /** Article-specific Traditional Chinese wording fixes applied after automatic conversion. */
+  zhTwReplacements?: [string, string][];
   publishedAt: string;
   updatedAt: string;
   translations: Record<JournalLocale, JournalTranslation>;
@@ -45,6 +50,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation> };
 
 const journalSources: JournalSourceArticle[] = [
+  pamelaColmanSmithArticle,
   threeCardTarotArticle,
   fiveElementsArticle,
   loveFortuneArticle,
@@ -273,6 +279,8 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
       ...section, title: text(section.title), paragraphs: section.paragraphs.map(text),
       ...(section.steps ? { steps: section.steps.map(text) } : {}),
       ...(section.table ? { table: { headings: section.table.headings.map(text), rows: section.table.rows.map((row) => row.map(text)) } } : {}),
+      ...(section.figures ? { figures: section.figures.map((figure) => ({ ...figure, alt: text(figure.alt), caption: text(figure.caption) })) } : {}),
+      ...(section.links ? { links: section.links.map((link) => ({ text: text(link.text), href: link.href.replace("locale=zh", "locale=zh-TW") })) } : {}),
       ...(section.sources ? { sources: section.sources.map((source) => ({ ...source, label: text(source.label), href: source.href.startsWith("/") ? source.href.replace("locale=zh", "locale=zh-TW") : source.href })) } : {}),
     })),
     action: copy.action.href.startsWith("/day-pillar")
@@ -281,10 +289,15 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
   };
 }
 
+function applyReplacements(copy: JournalTranslation, replacements?: [string, string][]): JournalTranslation {
+  if (!replacements?.length) return copy;
+  return JSON.parse(replacements.reduce((json, [from, to]) => json.replaceAll(from, to), JSON.stringify(copy)));
+}
+
 export const journalArticles: JournalArticle[] = journalSources.map((article) => {
-  const ru = pillarProfileRussian[article.slug] ?? (article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
+  const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
-  return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": traditionalTranslation(article.translations.zh), ru } };
+  return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru } };
 });
 
 export function journalAlternates(slug?: string): Record<string, string> {
