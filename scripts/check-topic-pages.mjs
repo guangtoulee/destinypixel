@@ -53,8 +53,9 @@ try {
           const board = page.locator("#tarot-board");
           await select.selectOption("single");
           await expect(board.locator("[data-drop-slot]")).toHaveCount(1);
-          await page.locator(".tarot-deck-zone button.cel-button:visible").first().click();
-          await page.locator('[data-card-index="0"]').press("Enter");
+          await page.locator(".tarot-bottom-deck button.cel-button").first().click();
+          await expect(page.locator(".tarot-deck-top")).toBeEnabled();
+          await page.locator(".tarot-deck-top").press("Enter");
           await page.locator(".tarot-table-toolbar button").first().click();
           await expect(board.locator("img")).toHaveCount(1);
           await page.locator(".tarot-table-toolbar button").first().click();

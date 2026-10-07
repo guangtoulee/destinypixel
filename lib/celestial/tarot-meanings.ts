@@ -1,3 +1,4 @@
+import { defaultTarotDeck } from "./tarot-decks";
 import { tarotDeck } from "@/lib/oracle/cast";
 import { toTraditional } from "@/lib/journal-locales";
 import type { ReportLocale } from "@/lib/report-i18n";
@@ -94,7 +95,7 @@ export type CardInfo = {
   reversed: string;
   image: string;
 };
-export function tarotCards(locale: ReportLocale): CardInfo[] {
+export function tarotCards(locale: ReportLocale, artwork = defaultTarotDeck): CardInfo[] {
   if (rows.length !== 78) throw new Error("TAROT_CONTENT_INCOMPLETE");
   const index = locale === "en" ? 0 : locale === "ru" ? 2 : 1;
   return tarotDeck.map((card, i) => {
@@ -105,7 +106,7 @@ export function tarotCards(locale: ReportLocale): CardInfo[] {
       number: card.number,
       upright,
       reversed,
-      image: `/tarot/rws/${card.id}.webp`,
+      image: artwork.faces[card.id] || defaultTarotDeck.faces[card.id],
     };
     return locale === "zh-TW"
       ? {

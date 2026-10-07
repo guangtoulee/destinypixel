@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import {
   ArrowDown,
-  ArrowUp,
+  Eye,
+  FlipVertical2,
   RotateCcw,
   RotateCw,
-  Shuffle,
   Sparkles,
   Undo2,
 } from "lucide-react";
@@ -16,6 +16,7 @@ import type { CelestialReading } from "@/lib/celestial/ai";
 import {
   initialTable,
   shuffleDeck,
+  cycleDeck,
   spreadSizes,
   takeCard,
   returnCard,
@@ -23,12 +24,18 @@ import {
   type SpreadId,
   type DrawnCard,
 } from "@/lib/celestial/tarot";
+import { constrainCard, freeCardWidth } from "@/lib/celestial/tarot-layout";
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
-import { DeckRibbon, type DeckDropPoint } from "./deck-ribbon";
+import { BottomDeck, type DeckDropPoint } from "./bottom-deck";
 import { SaveCelestialRecord } from "./save-record";
 import { TarotCardDialog } from "./tarot-card-dialog";
 import { ReadingPanel } from "./reading-panel";
+const subscribeToHydration = () => () => {};
+const clientReady = () => true;
+const serverReady = () => false;
+const readingScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" as const : "smooth" as const;
+
 export default function TarotExperience({
   locale,
   copy: c,
@@ -38,6 +45,8 @@ export default function TarotExperience({
   copy: CelestialCopy;
   cards: CardInfo[];
 }) {
+  const interactive = useSyncExternalStore(subscribeToHydration, clientReady, serverReady);
+  const [boardSize, setBoardSize] = useState({width: 500, height: 350});
   const [table, setTable] = useState<TableState>(() => initialTable()),
     [mixes, setMixes] = useState(0),
     [incoming, setIncoming] = useState<number | null>(null),
@@ -54,9 +63,15 @@ export default function TarotExperience({
   const controller = useRef<AbortController | null>(null),
     revision = useRef(0),
     board = useRef<HTMLDivElement>(null),
+    workbench = useRef<HTMLDivElement>(null),
     questionInput = useRef<HTMLInputElement>(null),
     suppressCardClick = useRef(false),
     drag = useRef<{
+      pointer: number;
+      element: HTMLButtonElement;
+      rotation: number;
+      nextX: number;
+      nextY: number;
       slot: number;
       startX: number;
       startY: number;
@@ -68,10 +83,20 @@ export default function TarotExperience({
       cardHeight: number;
       moved: boolean;
     } | null>(null),
-    mixGesture = useRef<number | null>(null),
+    dragFrame = useRef(0),
     lastMix = useRef(0),
     completed = useRef(false);
   useEffect(() => () => controller.current?.abort(), []);
+  useEffect(() => {
+    const element = board.current;
+    if (!element) return;
+    const observer = new ResizeObserver(() => {
+      const width = element.clientWidth, height = element.clientHeight;
+      if (width && height) setBoardSize(previous => previous.width === width && previous.height === height ? previous : {width, height});
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   function invalidate() {
     revision.current++;
     controller.current?.abort();
@@ -94,6 +119,7 @@ export default function TarotExperience({
     setRecordSession(n=>n+1);
     setMixes(0);
     setSelected(0);
+    if (mode === "free") requestAnimationFrame(() => workbench.current?.scrollIntoView({block: "start", behavior: "instant"}));
   }
   function slotAt(point?: DeckDropPoint) {
     if (!point || table.mode === "free") return selected;
@@ -118,7 +144,7 @@ export default function TarotExperience({
     if (point && table.mode === "free" && board.current) {
       const r = board.current.getBoundingClientRect();
       if (point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom) {
-        const width = parseFloat(getComputedStyle(board.current).getPropertyValue("--free-card-width")) || 82;
+        const width = freeCardWidth(boardSize);
         next.cards = next.cards.map(card => card.slot === slot ? { ...card,
           x: Math.max(0, Math.min(100 - width / r.width * 100, (point.x - r.left - width / 2) / r.width * 100)),
           y: Math.max(0, Math.min(100 - width * 1.72 / r.height * 100, (point.y - r.top - width * .86) / r.height * 100)),
@@ -130,7 +156,7 @@ export default function TarotExperience({
     if (window.matchMedia("(max-width: 740px)").matches) {
       requestAnimationFrame(() => {
         const target = table.mode === "spread" ? board.current?.querySelector(`[data-drop-slot="${slot}"]`) : board.current;
-        if (target && target.getBoundingClientRect().top < 0) target.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (target && target.getBoundingClientRect().top < 0) target.scrollIntoView({ behavior: readingScrollBehavior(), block: "center" });
       });
     }
     if (table.mode === "spread") {
@@ -140,7 +166,7 @@ export default function TarotExperience({
       ).find((i) => !next.cards.some((c) => c.slot === i));
       setSelected(empty ?? slot);
       if (empty === undefined)
-        board.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        board.current?.scrollIntoView({ behavior: readingScrollBehavior(), block: "center" });
     } else setSelected(slot);
   }
   function edit(slot: number, patch: Partial<DrawnCard>) {
@@ -148,7 +174,7 @@ export default function TarotExperience({
     setTable((s) => ({
       ...s,
       cards: s.cards.map((card) =>
-        card.slot === slot ? { ...card, ...patch } : card,
+        card.slot === slot ? { ...card, ...patch, ...(s.mode === "free" ? constrainCard(patch.x ?? card.x, patch.y ?? card.y, patch.rotation ?? card.rotation, boardSize) : {}) } : card,
       ),
     }));
   }
@@ -183,7 +209,7 @@ export default function TarotExperience({
     if (!question.trim()) {
       setQuestionError(true);
       questionInput.current?.focus();
-      questionInput.current?.scrollIntoView({behavior: "smooth", block: "center"});
+      questionInput.current?.scrollIntoView({behavior: readingScrollBehavior(), block: "center"});
       return;
     }
     controller.current?.abort();
@@ -227,52 +253,65 @@ export default function TarotExperience({
     e: React.PointerEvent<HTMLButtonElement>,
     card: DrawnCard,
   ) {
-    if (table.mode !== "free" || e.button !== 0) return;
+    if (!e.isPrimary) { endDrag(false); suppressCardClick.current = true; return; }
+    if (table.mode !== "free" || e.button !== 0 || drag.current) return;
     const b = board.current?.getBoundingClientRect();
     if (!b) return;
     setSelected(card.slot);
     suppressCardClick.current = false;
-    const r = e.currentTarget.getBoundingClientRect();
     e.currentTarget.setPointerCapture(e.pointerId);
     drag.current = {
+      pointer: e.pointerId,
+      element: e.currentTarget,
+      rotation: card.rotation,
+      nextX: (e.currentTarget.offsetLeft / board.current!.clientWidth) * 100,
+      nextY: (e.currentTarget.offsetTop / board.current!.clientHeight) * 100,
       slot: card.slot,
       startX: e.clientX,
       startY: e.clientY,
-      x: (e.currentTarget.offsetLeft / b.width) * 100,
-      y: (e.currentTarget.offsetTop / b.height) * 100,
-      width: b.width,
-      height: b.height,
-      cardWidth: r.width,
-      cardHeight: r.height,
+      x: (e.currentTarget.offsetLeft / board.current!.clientWidth) * 100,
+      y: (e.currentTarget.offsetTop / board.current!.clientHeight) * 100,
+      width: board.current!.clientWidth,
+      height: board.current!.clientHeight,
+      cardWidth: e.currentTarget.offsetWidth,
+      cardHeight: e.currentTarget.offsetHeight,
       moved: false,
     };
   }
   function dragMove(e: React.PointerEvent<HTMLButtonElement>) {
     const d = drag.current;
-    if (!d) return;
+    if (!d || d.pointer !== e.pointerId) return;
     const dx = e.clientX - d.startX,
       dy = e.clientY - d.startY;
     if (Math.abs(dx) + Math.abs(dy) > 7) { d.moved = true; suppressCardClick.current = true; }
     if (!d.moved) return;
-    const x = Math.max(
-        0,
-        Math.min(
-          100 - (d.cardWidth / d.width) * 100,
-          d.x + (dx / d.width) * 100,
-        ),
-      ),
-      y = Math.max(
-        0,
-        Math.min(
-          100 - (d.cardHeight / d.height) * 100,
-          d.y + (dy / d.height) * 100,
-        ),
-      );
-    setTable((s) => ({
-      ...s,
-      cards: s.cards.map((c) => (c.slot === d.slot ? { ...c, x, y } : c)),
-    }));
+    const {x, y} = constrainCard(d.x + dx / d.width * 100, d.y + dy / d.height * 100, d.rotation,
+      {width: d.width, height: d.height}, d.cardWidth, d.cardHeight);
+    d.nextX = x;
+    d.nextY = y;
+    cancelAnimationFrame(dragFrame.current);
+    dragFrame.current = requestAnimationFrame(() => {
+      if (drag.current !== d) return;
+      d.element.style.transform = `translate3d(${(d.nextX - d.x) * d.width / 100}px, ${(d.nextY - d.y) * d.height / 100}px, 0) rotate(${d.rotation}deg)`;
+    });
   }
+  function endDrag(commit: boolean) {
+    const d = drag.current;
+    drag.current = null;
+    cancelAnimationFrame(dragFrame.current);
+    if (!d) return;
+    d.element.style.transform = `rotate(${d.rotation}deg)`;
+    if (d.moved) {
+      suppressCardClick.current = true;
+      if (commit) setTable(s => ({...s, cards: s.cards.map(card => card.slot === d.slot ? {...card, x: d.nextX, y: d.nextY} : card)}));
+    }
+  }
+  useEffect(() => {
+    const cancel = () => endDrag(false);
+    window.addEventListener("resize", cancel);
+    window.addEventListener("blur", cancel);
+    return () => { window.removeEventListener("resize", cancel); window.removeEventListener("blur", cancel); cancelAnimationFrame(dragFrame.current); };
+  }, []);
   const face = (card: DrawnCard) => {
     const meta = cards.find((c) => c.id === card.id)!;
     return (
@@ -298,12 +337,14 @@ export default function TarotExperience({
     );
   };
   return (
-    <section className="tarot-workspace" id="table">
+    <section className="tarot-workspace" id="table" aria-busy={!interactive}>
+      <div ref={workbench} className={`tarot-workbench ${table.mode === "free" ? "is-free-workbench" : ""}`}>
       <div className="tarot-controls">
         <div className="cel-tabs" role="tablist" aria-label={c.tarot}>
           {(["spread", "free"] as const).map((mode) => (
             <button
               role="tab"
+              disabled={!interactive}
               aria-selected={table.mode === mode}
               key={mode}
               onClick={() => mode !== table.mode && reset(mode)}
@@ -318,6 +359,7 @@ export default function TarotExperience({
               <span>{c.spreadLabel}</span>
               <select
                 aria-label={c.spreadLabel}
+                disabled={!interactive}
                 // History must not restore the select independently of the table state.
                 autoComplete="off"
                 value={table.spread}
@@ -334,24 +376,24 @@ export default function TarotExperience({
           <label className="tarot-check">
             <input
               type="checkbox"
+              disabled={!interactive}
               checked={reversals}
               onChange={(e) => setReversals(e.target.checked)}
             />
             {c.reversals}
           </label>
-          <button className="cel-button-text" onClick={() => reset()}>
+          <button className="cel-button-text" aria-label={c.reset} title={c.reset} disabled={!interactive} onClick={() => reset()}>
             <RotateCcw size={15} />
-            {c.reset}
+            <span>{c.reset}</span>
           </button>
         </div>
       </div>
-      <p className="tarot-instructions">
-        {table.mode === "free" ? c.freeHelp : c.spreadHelp}
-      </p>
+      {table.mode === "free" ? <details className="tarot-free-help"><summary>{c.tableHelp}</summary><p>{c.freeHelp} {c.rotationHelp}</p></details> : <p className="tarot-instructions">{c.spreadHelp}</p>}
       <div className="tarot-play-surface">
       <div
         className={`tarot-table ${incoming !== null ? "is-receiving" : ""} ${table.mode === "free" ? "tarot-free" : ""} tarot-spread-${table.spread}`}
         ref={board}
+        style={{"--table-card-width": `${freeCardWidth(boardSize)}px`} as CSSProperties}
         id="tarot-board"
       >
         <div className="tarot-table-ornament" aria-hidden="true">
@@ -418,22 +460,20 @@ export default function TarotExperience({
             {table.cards.map((card) => (
               <button
                 key={card.id}
+                data-card-id={card.id}
                 className={`tarot-free-card ${selected === card.slot ? "is-selected" : ""}`}
                 style={{
-                  left: `min(${card.x}%, calc(100% - var(--free-card-width)))`,
-                  top: `min(${card.y}%, calc(100% - var(--free-card-height)))`,
+                  left: `${constrainCard(card.x, card.y, card.rotation, boardSize).x}%`,
+                  top: `${constrainCard(card.x, card.y, card.rotation, boardSize).y}%`,
                   transform: `rotate(${card.rotation}deg)`,
                   zIndex: selected === card.slot ? 100 : card.slot + 1,
                 }}
                 aria-label={`${c.position} ${card.slot + 1} · ${card.revealed ? cards.find((c) => c.id === card.id)?.name : c.cardBack}`}
                 onPointerDown={(e) => dragStart(e, card)}
                 onPointerMove={dragMove}
-                onPointerUp={() => {
-                  drag.current = null;
-                }}
-                onPointerCancel={() => {
-                  drag.current = null;
-                }}
+                onPointerUp={e => { if (drag.current?.pointer === e.pointerId) endDrag(true); }}
+                onPointerCancel={() => endDrag(false)}
+                onLostPointerCapture={() => endDrag(false)}
                 onClick={(e) => {
                   if (e.detail === 0 || !suppressCardClick.current) openCard(card.slot);
                   suppressCardClick.current = false;
@@ -448,33 +488,10 @@ export default function TarotExperience({
                     ].includes(e.key)
                   ) {
                     e.preventDefault();
-                    const width = board.current?.clientWidth || 500,
-                      height = board.current?.clientHeight || 600;
+                    const position = constrainCard(card.x, card.y, card.rotation, boardSize);
                     edit(card.slot, {
-                      x: Math.max(
-                        0,
-                        Math.min(
-                          100 - (e.currentTarget.offsetWidth / width) * 100,
-                          card.x +
-                            (e.key === "ArrowLeft"
-                              ? -2
-                              : e.key === "ArrowRight"
-                                ? 2
-                                : 0),
-                        ),
-                      ),
-                      y: Math.max(
-                        0,
-                        Math.min(
-                          100 - (e.currentTarget.offsetHeight / height) * 100,
-                          card.y +
-                            (e.key === "ArrowUp"
-                              ? -2
-                              : e.key === "ArrowDown"
-                                ? 2
-                                : 0),
-                        ),
-                      ),
+                      x: position.x + (e.key === "ArrowLeft" ? -2 : e.key === "ArrowRight" ? 2 : 0),
+                      y: position.y + (e.key === "ArrowUp" ? -2 : e.key === "ArrowDown" ? 2 : 0),
                     });
                   }
                 }}
@@ -496,117 +513,45 @@ export default function TarotExperience({
             <>
               <button
                 className="cel-button-soft"
+                aria-label={focused.revealed ? c.viewCard : c.reveal}
+                title={focused.revealed ? c.viewCard : c.reveal}
                 onClick={() => openCard(selected)}
               >
-                {focused.revealed ? c.viewCard : c.reveal}
+                <Eye size={15}/><span>{focused.revealed ? c.viewCard : c.reveal}</span>
               </button>
               {table.mode === "free" && (
+                <>
                 <button
                   className="cel-button-soft"
+                  aria-label={c.rotatePlacement} title={c.rotationHelp}
                   onClick={() =>
                     edit(selected, { rotation: (focused.rotation + 15) % 360 })
                   }
                 >
                   <RotateCw size={15} />
-                  {c.rotate}
+                  <span>{c.rotatePlacement}</span>
                 </button>
+                <button className="cel-button-soft tarot-orientation-toggle" aria-label={c.reverseCard} title={c.reverseCard}
+                  onClick={() => edit(selected, {reversed: !focused.reversed})}><FlipVertical2 size={15}/><span>{c.reverseCard}</span></button>
+                </>
               )}
-              <button className="cel-button-soft" onClick={putBack}>
+              <button className="cel-button-soft" aria-label={c.returnCard} title={c.returnCard} onClick={putBack}>
                 <Undo2 size={15} />
-                {c.returnCard}
+                <span>{c.returnCard}</span>
               </button>
             </>
           )}
         </div>
       </div>
-      <div className="tarot-deck-zone">
-        <div className="tarot-deck-compact">
-          <div><h2>{c.deckShortTitle}</h2><span>{table.deck.length} {c.remaining}</span></div>
-          <button className="cel-button" onClick={mix} disabled={!table.deck.length}><Shuffle size={16}/>{c.shuffleShort}</button>
-        </div>
-        <div className="tarot-draw-cue"><ArrowUp size={16}/><span>{c.dropHint}</span></div>
-        <div className="tarot-deck-head">
-          <div
-            className="tarot-shuffle-object"
-            role="button"
-            tabIndex={0}
-            aria-label={c.shuffle}
-            onPointerDown={(e) => {
-              mixGesture.current = e.clientX;
-              e.currentTarget.setPointerCapture(e.pointerId);
-            }}
-            onPointerMove={(e) => {
-              if (
-                mixGesture.current !== null &&
-                Math.abs(e.clientX - mixGesture.current) > 35
-              ) {
-                mix();
-                mixGesture.current = e.clientX;
-              }
-            }}
-            onPointerUp={() => {
-              mixGesture.current = null;
-            }}
-            onPointerCancel={() => {
-              mixGesture.current = null;
-            }}
-            onClick={mix}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                mix();
-              }
-            }}
-          >
-            <div key={mixes} className={mixes ? "tarot-shuffling" : ""}>
-              <CardBack />
-              <CardBack />
-              <CardBack />
-            </div>
-          </div>
-          <div>
-            <p className="cel-kicker">{c.free} · 78</p>
-            <h2>{c.deckTitle}</h2>
-            <p className="cel-muted cel-small">{c.shuffleTouch}</p>
-            <button
-              className="cel-button"
-              onClick={mix}
-              disabled={table.deck.length === 0}
-            >
-              <Shuffle size={17} />
-              {c.shuffle}
-            </button>
-            {table.cards.length > 0 && (
-              <button
-                className="cel-button-text tarot-return-table"
-                onClick={() =>
-                  board.current?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  })
-                }
-              >
-                {c.backToTable} · {table.cards.length} ↑
-              </button>
-            )}
-            <span className="tarot-mix-count" aria-live="polite">
-              {mixes ? `${c.shuffled} · ${mixes}` : ""}
-            </span>
-          </div>
-          <span className="tarot-count">
-            <strong>{table.deck.length}</strong>
-            {c.remaining}
-          </span>
-        </div>
-        <p className="cel-muted cel-small tarot-deck-long-help">{c.deckHelp}</p>
-        <DeckRibbon
-          key={`${mixes}-${table.mode}-${table.spread}-${table.deck.map((card) => card.id).join(",")}`}
-          count={table.deck.length}
-          disabled={!mixes}
-          copy={c}
-          onDraw={draw}
-          onPull={point => setIncoming(point ? slotAt(point) : null)}
-        />
+      {table.mode === "free" && focused && <p className="tarot-orientation-status" aria-live="polite">{focused.reversed ? c.reversed : c.upright} · {c.placementAngle} {focused.rotation}°</p>}
+      <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={c}
+        onDraw={draw} onShuffle={mix}
+        topCardId={table.deck[0]?.id} onCycle={() => setTable(cycleDeck)}
+        contains={point => {
+          const r = board.current?.getBoundingClientRect();
+          return Boolean(r && point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom);
+        }}
+        onPull={point => setIncoming(point ? slotAt(point) : null)} />
       </div>
       </div>
       {table.cards.some((card) => card.revealed) && (
@@ -664,11 +609,11 @@ export default function TarotExperience({
         onRead={interpret}
         disabled={!ready}
       />
-      <TarotCardDialog card={dialogCard ? cards.find(c => c.id === dialogCard.id) || null : null}
+      <TarotCardDialog locale={locale} card={dialogCard ? cards.find(c => c.id === dialogCard.id) || null : null}
         reversed={dialogCard?.reversed || false}
         position={dialogCard ? (table.mode === "spread" ? positions[dialogCard.slot] : `${c.position} ${dialogCard.slot + 1}`) : ""}
         copy={c} onClose={() => setDialogSlot(null)}
-        onDetailed={() => {questionInput.current?.focus({preventScroll:true}); questionInput.current?.scrollIntoView({behavior:"smooth",block:"center"});}}/>
+        onDetailed={() => {questionInput.current?.focus({preventScroll:true}); questionInput.current?.scrollIntoView({behavior:readingScrollBehavior(),block:"center"});}}/>
     </section>
   );
 }

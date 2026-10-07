@@ -59,6 +59,13 @@ export function initialTable(
     spread,
   };
 }
+/** A deliberate lift-and-return moves the next card beneath the remaining deck.
+ * Preserve card orientation, dealt cards and all other reading state. */
+export function cycleDeck(state: TableState): TableState {
+  if (state.deck.length < 2) return state;
+  return {...state, deck: [...state.deck.slice(1), state.deck[0]]};
+}
+
 export function takeCard(
   state: TableState,
   index: number,
