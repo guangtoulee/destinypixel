@@ -24,7 +24,7 @@ The supplied translations have model editorial review, not native-human certific
 
 - Node 22 production build passed: 339 generated pages, including 78 new article routes and one directory. Query-localized editions are not counted as separate route paths.
 - TypeScript `tsc --noEmit` passed.
-- Repository unit suite: 235 server tests plus one separately run client test. The initial server run had one stale journal-only metadata assertion; after teaching it the new route family, all 13 SEO/learning tests pass (including the previously failing test). The other 234 server tests and client test passed on the full run.
+- Repository unit suite: final full run passed all 235 server tests, plus one separately run client test (236 total). The metadata assertion recognizes the new Tarot route family.
 - Full HTTP rendered-text comparisons: **312/312** article editions; all four directory editions; complete sections and opening text, schema, citations, canonical/hreflang, sitemap, image credits and invalid-ID 404 checks.
 - Existing journal preservation: **288/288** article editions, including all 240 day-pillar editions and the four Pamela editions.
 - Existing tool discovery/SEO: **8/8** Tarot/Astrology editions and homepage/guide links.
@@ -50,3 +50,13 @@ node --import tsx scripts/check-celestial-search.ts http://127.0.0.1:3022
 ```
 
 Python JSON Schema and Playwright/Chromium are QA environment dependencies. Browser scripts block external writes and use local mock AI fixtures. Production publication requires separate owner approval; this branch is for a draft PR and the existing project's protected Vercel Preview only.
+
+## Narrow quality follow-up
+
+Parent authenticated Preview QA confirmed all 78 localized directory links, Magician full articles and canonical/five hreflang links in all four locales, plus a Russian tool → full Five of Pentacles article → preserved 77-card spread workflow, without desktop overflow.
+
+Browser titles now follow the existing journal convention: `<localized title> | DestinyPixel`, exactly once. H1, Open Graph/Twitter titles and manuscript text remain unchanged. Rendered HTTP and browser checks assert the final title against H1.
+
+The article hero already declares `sizes="(max-width:650px) 220px, 280px"`, matching CSS. At a 1440px desktop viewport, actual Chromium network requests/currentSrc are `w=384` for DPR1 and `w=640` for DPR2, with a 280px rendered width. Next Image's fallback `src` is `w=3840`, but that is not the selected request in these browsers. No asset or image configuration change is needed. The responsive browser check now verifies the rendered width and selected currentSrc to catch oversized-image regressions.
+
+Follow-up validation passed: fresh Node 22 production build (339 pages and TypeScript), 13 SEO/learning unit tests, all 312 full-text/title HTTP checks plus four directories, and all 48 responsive views plus four tool/navigation workflows with the new title/image-size assertions.

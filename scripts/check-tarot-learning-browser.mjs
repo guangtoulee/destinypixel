@@ -14,9 +14,11 @@ try{for(const locale of ['en','zh','zh-TW','ru']){
   await page.setViewportSize({width,height});
   for(const slug of ['tarot-cards','tarot-fool','tarot-king-of-pentacles']){
    const response=await page.goto(`${base}/journal/${slug}${suffix}`);assert.equal(response.status(),200);
-   await expect(page.locator('h1')).toBeVisible();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${locale}/${slug}/${width}: overflow`);
+   await expect(page.locator('h1')).toBeVisible();await expect(page).toHaveTitle(`${await page.locator('h1').innerText()} | DestinyPixel`);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${locale}/${slug}/${width}: overflow`);
    if(slug!=='tarot-cards'){
     const image=page.locator('article figure img');await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
+    const sizing=await image.evaluate(e=>({width:e.getBoundingClientRect().width,selected:Number(new URL(e.currentSrc).searchParams.get('w')),dpr:devicePixelRatio}));
+    assert.equal(sizing.width,width<=650?220:280);assert.ok(sizing.selected<=sizing.width*sizing.dpr*1.5,`oversized selected image: ${JSON.stringify(sizing)}`);
     const labels=await page.locator('article dl dt').allTextContents();assert.equal(labels.length,2);
     const order=await page.locator('article dl, [data-learning-hook]').evaluateAll(es=>es.map(e=>e.tagName));assert.deepEqual(order,['DL','P']);
     assert.ok(await page.locator('[data-learning-section]').count()>=7);

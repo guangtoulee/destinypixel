@@ -14,6 +14,6 @@ export function tarotLearningMetadata(locale:ReportLocale,id?:string):Metadata {
  if(id&&!entry)return {robots:{index:false,follow:false}};
  const c=tarotLearningCopy(locale),title=entry?.title??c.title,description=entry?.hook??c.intro,url=tarotLearningHref(id,locale)!;
  const images=id?[{url:`/tarot/rws/${id}.webp`,width:560,height:960,alt:entry!.nameLocalized}]:["/tarot/opengraph-image"];
- return {title:{absolute:title},description,alternates:{canonical:url,languages:tarotLearningAlternates(id)},openGraph:{type:id?"article":"website",title,description,url,siteName,locale:journalOgLocales[locale],images},twitter:{card:"summary_large_image",title,description,images}};
+ return {title:{absolute:`${title} | ${siteName}`},description,alternates:{canonical:url,languages:tarotLearningAlternates(id)},openGraph:{type:id?"article":"website",title,description,url,siteName,locale:journalOgLocales[locale],images},twitter:{card:"summary_large_image",title,description,images}};
 }
 export function tarotLearningSitemap(){return [undefined,...tarotLearningIds].flatMap(id=>journalLocales.map(locale=>({url:absoluteUrl(tarotLearningHref(id,locale)!),lastModified:tarotLearningUpdatedAt,changeFrequency:"monthly" as const,priority:id?0.7:0.8,alternates:{languages:tarotLearningAlternates(id)},...(id?{images:[absoluteUrl(`/tarot/rws/${id}.webp`)]}:{})})));}

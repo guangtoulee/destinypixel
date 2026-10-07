@@ -18,6 +18,8 @@ function metadata(page:string,id:string|undefined,locale:typeof locales[number],
  assert.ok(links.some(a=>a.hrefLang==="x-default"&&a.href===origin+href(id,"en")));
  assert.ok(decode(sitemap).includes(`<loc>${origin+href(id,locale)}</loc>`));
  assert.equal((page.match(/<h1[ >]/g)??[]).length,1);
+ const headline=text(page.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]??'');
+ assert.equal(text(page.match(/<title>([\s\S]*?)<\/title>/)?.[1]??''),`${headline} | DestinyPixel`);
  return [...page.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1]));
 }
 async function main(){
