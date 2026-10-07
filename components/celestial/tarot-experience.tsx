@@ -1,11 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   ArrowDown,
-  ArrowUp,
   RotateCcw,
   RotateCw,
-  Shuffle,
   Sparkles,
   Undo2,
 } from "lucide-react";
@@ -25,10 +23,14 @@ import {
 } from "@/lib/celestial/tarot";
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
-import { DeckRibbon, type DeckDropPoint } from "./deck-ribbon";
+import { BottomDeck, type DeckDropPoint } from "./bottom-deck";
 import { SaveCelestialRecord } from "./save-record";
 import { TarotCardDialog } from "./tarot-card-dialog";
 import { ReadingPanel } from "./reading-panel";
+const subscribeToHydration = () => () => {};
+const clientReady = () => true;
+const serverReady = () => false;
+
 export default function TarotExperience({
   locale,
   copy: c,
@@ -38,6 +40,7 @@ export default function TarotExperience({
   copy: CelestialCopy;
   cards: CardInfo[];
 }) {
+  const interactive = useSyncExternalStore(subscribeToHydration, clientReady, serverReady);
   const [table, setTable] = useState<TableState>(() => initialTable()),
     [mixes, setMixes] = useState(0),
     [incoming, setIncoming] = useState<number | null>(null),
@@ -57,6 +60,11 @@ export default function TarotExperience({
     questionInput = useRef<HTMLInputElement>(null),
     suppressCardClick = useRef(false),
     drag = useRef<{
+      pointer: number;
+      element: HTMLButtonElement;
+      rotation: number;
+      nextX: number;
+      nextY: number;
       slot: number;
       startX: number;
       startY: number;
@@ -68,7 +76,7 @@ export default function TarotExperience({
       cardHeight: number;
       moved: boolean;
     } | null>(null),
-    mixGesture = useRef<number | null>(null),
+    dragFrame = useRef(0),
     lastMix = useRef(0),
     completed = useRef(false);
   useEffect(() => () => controller.current?.abort(), []);
@@ -227,14 +235,19 @@ export default function TarotExperience({
     e: React.PointerEvent<HTMLButtonElement>,
     card: DrawnCard,
   ) {
-    if (table.mode !== "free" || e.button !== 0) return;
+    if (!e.isPrimary) { endDrag(false); suppressCardClick.current = true; return; }
+    if (table.mode !== "free" || e.button !== 0 || drag.current) return;
     const b = board.current?.getBoundingClientRect();
     if (!b) return;
     setSelected(card.slot);
     suppressCardClick.current = false;
-    const r = e.currentTarget.getBoundingClientRect();
     e.currentTarget.setPointerCapture(e.pointerId);
     drag.current = {
+      pointer: e.pointerId,
+      element: e.currentTarget,
+      rotation: card.rotation,
+      nextX: (e.currentTarget.offsetLeft / b.width) * 100,
+      nextY: (e.currentTarget.offsetTop / b.height) * 100,
       slot: card.slot,
       startX: e.clientX,
       startY: e.clientY,
@@ -242,14 +255,14 @@ export default function TarotExperience({
       y: (e.currentTarget.offsetTop / b.height) * 100,
       width: b.width,
       height: b.height,
-      cardWidth: r.width,
-      cardHeight: r.height,
+      cardWidth: e.currentTarget.offsetWidth,
+      cardHeight: e.currentTarget.offsetHeight,
       moved: false,
     };
   }
   function dragMove(e: React.PointerEvent<HTMLButtonElement>) {
     const d = drag.current;
-    if (!d) return;
+    if (!d || d.pointer !== e.pointerId) return;
     const dx = e.clientX - d.startX,
       dy = e.clientY - d.startY;
     if (Math.abs(dx) + Math.abs(dy) > 7) { d.moved = true; suppressCardClick.current = true; }
@@ -268,11 +281,31 @@ export default function TarotExperience({
           d.y + (dy / d.height) * 100,
         ),
       );
-    setTable((s) => ({
-      ...s,
-      cards: s.cards.map((c) => (c.slot === d.slot ? { ...c, x, y } : c)),
-    }));
+    d.nextX = x;
+    d.nextY = y;
+    cancelAnimationFrame(dragFrame.current);
+    dragFrame.current = requestAnimationFrame(() => {
+      if (drag.current !== d) return;
+      d.element.style.transform = `translate3d(${(d.nextX - d.x) * d.width / 100}px, ${(d.nextY - d.y) * d.height / 100}px, 0) rotate(${d.rotation}deg)`;
+    });
   }
+  function endDrag(commit: boolean) {
+    const d = drag.current;
+    drag.current = null;
+    cancelAnimationFrame(dragFrame.current);
+    if (!d) return;
+    d.element.style.transform = `rotate(${d.rotation}deg)`;
+    if (d.moved) {
+      suppressCardClick.current = true;
+      if (commit) setTable(s => ({...s, cards: s.cards.map(card => card.slot === d.slot ? {...card, x: d.nextX, y: d.nextY} : card)}));
+    }
+  }
+  useEffect(() => {
+    const cancel = () => endDrag(false);
+    window.addEventListener("resize", cancel);
+    window.addEventListener("blur", cancel);
+    return () => { window.removeEventListener("resize", cancel); window.removeEventListener("blur", cancel); cancelAnimationFrame(dragFrame.current); };
+  }, []);
   const face = (card: DrawnCard) => {
     const meta = cards.find((c) => c.id === card.id)!;
     return (
@@ -298,12 +331,13 @@ export default function TarotExperience({
     );
   };
   return (
-    <section className="tarot-workspace" id="table">
+    <section className="tarot-workspace" id="table" aria-busy={!interactive}>
       <div className="tarot-controls">
         <div className="cel-tabs" role="tablist" aria-label={c.tarot}>
           {(["spread", "free"] as const).map((mode) => (
             <button
               role="tab"
+              disabled={!interactive}
               aria-selected={table.mode === mode}
               key={mode}
               onClick={() => mode !== table.mode && reset(mode)}
@@ -318,6 +352,7 @@ export default function TarotExperience({
               <span>{c.spreadLabel}</span>
               <select
                 aria-label={c.spreadLabel}
+                disabled={!interactive}
                 // History must not restore the select independently of the table state.
                 autoComplete="off"
                 value={table.spread}
@@ -334,12 +369,13 @@ export default function TarotExperience({
           <label className="tarot-check">
             <input
               type="checkbox"
+              disabled={!interactive}
               checked={reversals}
               onChange={(e) => setReversals(e.target.checked)}
             />
             {c.reversals}
           </label>
-          <button className="cel-button-text" onClick={() => reset()}>
+          <button className="cel-button-text" disabled={!interactive} onClick={() => reset()}>
             <RotateCcw size={15} />
             {c.reset}
           </button>
@@ -418,6 +454,7 @@ export default function TarotExperience({
             {table.cards.map((card) => (
               <button
                 key={card.id}
+                data-card-id={card.id}
                 className={`tarot-free-card ${selected === card.slot ? "is-selected" : ""}`}
                 style={{
                   left: `min(${card.x}%, calc(100% - var(--free-card-width)))`,
@@ -428,12 +465,9 @@ export default function TarotExperience({
                 aria-label={`${c.position} ${card.slot + 1} · ${card.revealed ? cards.find((c) => c.id === card.id)?.name : c.cardBack}`}
                 onPointerDown={(e) => dragStart(e, card)}
                 onPointerMove={dragMove}
-                onPointerUp={() => {
-                  drag.current = null;
-                }}
-                onPointerCancel={() => {
-                  drag.current = null;
-                }}
+                onPointerUp={e => { if (drag.current?.pointer === e.pointerId) endDrag(true); }}
+                onPointerCancel={() => endDrag(false)}
+                onLostPointerCapture={() => endDrag(false)}
                 onClick={(e) => {
                   if (e.detail === 0 || !suppressCardClick.current) openCard(card.slot);
                   suppressCardClick.current = false;
@@ -519,95 +553,13 @@ export default function TarotExperience({
           )}
         </div>
       </div>
-      <div className="tarot-deck-zone">
-        <div className="tarot-deck-compact">
-          <div><h2>{c.deckShortTitle}</h2><span>{table.deck.length} {c.remaining}</span></div>
-          <button className="cel-button" onClick={mix} disabled={!table.deck.length}><Shuffle size={16}/>{c.shuffleShort}</button>
-        </div>
-        <div className="tarot-draw-cue"><ArrowUp size={16}/><span>{c.dropHint}</span></div>
-        <div className="tarot-deck-head">
-          <div
-            className="tarot-shuffle-object"
-            role="button"
-            tabIndex={0}
-            aria-label={c.shuffle}
-            onPointerDown={(e) => {
-              mixGesture.current = e.clientX;
-              e.currentTarget.setPointerCapture(e.pointerId);
-            }}
-            onPointerMove={(e) => {
-              if (
-                mixGesture.current !== null &&
-                Math.abs(e.clientX - mixGesture.current) > 35
-              ) {
-                mix();
-                mixGesture.current = e.clientX;
-              }
-            }}
-            onPointerUp={() => {
-              mixGesture.current = null;
-            }}
-            onPointerCancel={() => {
-              mixGesture.current = null;
-            }}
-            onClick={mix}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                mix();
-              }
-            }}
-          >
-            <div key={mixes} className={mixes ? "tarot-shuffling" : ""}>
-              <CardBack />
-              <CardBack />
-              <CardBack />
-            </div>
-          </div>
-          <div>
-            <p className="cel-kicker">{c.free} · 78</p>
-            <h2>{c.deckTitle}</h2>
-            <p className="cel-muted cel-small">{c.shuffleTouch}</p>
-            <button
-              className="cel-button"
-              onClick={mix}
-              disabled={table.deck.length === 0}
-            >
-              <Shuffle size={17} />
-              {c.shuffle}
-            </button>
-            {table.cards.length > 0 && (
-              <button
-                className="cel-button-text tarot-return-table"
-                onClick={() =>
-                  board.current?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  })
-                }
-              >
-                {c.backToTable} · {table.cards.length} ↑
-              </button>
-            )}
-            <span className="tarot-mix-count" aria-live="polite">
-              {mixes ? `${c.shuffled} · ${mixes}` : ""}
-            </span>
-          </div>
-          <span className="tarot-count">
-            <strong>{table.deck.length}</strong>
-            {c.remaining}
-          </span>
-        </div>
-        <p className="cel-muted cel-small tarot-deck-long-help">{c.deckHelp}</p>
-        <DeckRibbon
-          key={`${mixes}-${table.mode}-${table.spread}-${table.deck.map((card) => card.id).join(",")}`}
-          count={table.deck.length}
-          disabled={!mixes}
-          copy={c}
-          onDraw={draw}
-          onPull={point => setIncoming(point ? slotAt(point) : null)}
-        />
-      </div>
+      <BottomDeck key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={c}
+        onDraw={draw} onShuffle={mix}
+        contains={point => {
+          const r = board.current?.getBoundingClientRect();
+          return Boolean(r && point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom);
+        }}
+        onPull={point => setIncoming(point ? slotAt(point) : null)} />
       </div>
       {table.cards.some((card) => card.revealed) && (
         <div className="tarot-reading-list">

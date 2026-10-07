@@ -33,8 +33,9 @@ try {
     await page.goto(new URL("/tarot", base).href);
     await select.selectOption("single");
     await expect(board).toHaveClass(/tarot-spread-single/);
-    await page.locator(".tarot-deck-zone button.cel-button:visible").first().click();
-    await page.locator('[data-card-index="0"]').press("Enter");
+    await page.locator(".tarot-bottom-deck button.cel-button").first().click();
+    await expect(page.locator(".tarot-deck-top")).toBeEnabled();
+    await page.locator(".tarot-deck-top").press("Enter");
     await page.locator(".tarot-table-toolbar").getByRole("button", { name: "Turn over", exact: true }).click();
     await expect(board.locator("img")).toHaveCount(1);
     await page.getByRole("button", { name: "Return to deck", exact: true }).click();
