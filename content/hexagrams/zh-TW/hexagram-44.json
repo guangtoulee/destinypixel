@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-44",
+  "locale": "zh-TW",
+  "kingWenNumber": 44,
+  "name": "姤",
+  "pinyin": "Gòu",
+  "englishName": "Gòu — Encounter",
+  "unicode": "䷫",
+  "codePoint": "U+4DEB",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "title": "姤卦學習：意外相遇時，怎麼看清影響與界線",
+  "plainSummary": "新的機會或關係突然出現時，先了解會帶來什麼，再決定接受多少、怎麼接受。",
+  "introduction": [
+    "突然認識一個人、收到合作邀請，可能開啟新的可能，也可能打亂原本的安排。姤卦談相遇，卦辭卻採用了強勢女性不宜婚娶的古代判斷。學習時必須指出這項歷史偏見，不能把它變成評價現代女性或交往對象的標準。"
+  ],
+  "identityText": "姤是傳統文王序第44卦，卦符䷫，下卦巽☴、上卦乾☰，傳統取象分別為風與天。爻從最下方數起，依次為初六、九二、九三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "姤：女壯，勿用取女。",
+    "paragraphs": [
+      "Legge 保留了原句中女性強而不宜娶的判斷，又把一陰初生解釋為不合宜影響開始進入政治秩序。這是其歷史解釋框架，不是被本文認可的性別規範。",
+      "本文的現代學習角度，只借相遇提出問題：新出現的事情是什麼，它與現有目標是否相合，條件與界限是否清楚？強勢、主動或具有吸引力，本身都不能證明一個人危險或不值得尊重。"
+    ],
+    "sourceRefs": [
+      "zhouyi-44",
+      "legge1882-44"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》直接以遇解釋姤，也談天地相遇使萬物顯現；《象傳》以天下有風取象，涉及告命四方。傳文中的相遇比私人婚娶更廣。",
+      "今天可以允許新事物被瞭解，同時保留核實與選擇。開放與邊界可以同時存在，既不必一見就拒絕，也不必因新鮮而立刻投入全部資源。"
+    ],
+    "sourceRefs": [
+      "zhouyi-44",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "系于金柅，貞吉，有攸往，見凶，羸豕孚蹢躅。",
+      "focus": "初起時先看清會怎樣移動",
+      "paragraphs": [
+        "金柅在 Legge 讀法中與約束車的金屬裝置相聯，羸豕又表現躁動。這裡是古代控制與動物圖像，不是現實控制人的辦法。",
+        "現代可以先為新事項設一個小範圍，明確不涉及哪些資料、時間與承諾。界限用來保護自主選擇，不能拿來限制另一個人的自由。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "包有魚，无咎，不利賓。",
+      "focus": "有了內容，不一定適合立即擴大",
+      "paragraphs": [
+        "包中有魚，且不利於賓，Legge 沿相遇後如何安置與擴散解釋。爻辭沒有要求遇到一件事就馬上向所有人推廣。",
+        "收到新資訊時，可以先核實來源與適用範圍，再決定是否分享。特別涉及別人隱私時，不能因自己感到有趣便公開傳播。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "臀无膚，其行次且，厲，无大咎。",
+      "focus": "行動不順時，先尊重實際限度",
+      "paragraphs": [
+        "身體受損而行走艱難的意象，與夬九四相似；Legge 將其放在接近受阻的處境裡解釋。",
+        "如果新安排使自己無法兼顧已有責任，可以暫停繼續擴展，說明實際條件。這裡不是健康或傷害預測，也不意味著應靠硬撐跨過去。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "包无魚，起凶。",
+      "focus": "檢查是否只有期待，沒有實際內容",
+      "paragraphs": [
+        "與九二相對，這裡包中無魚。Legge 將其聯繫到缺少相應關係的處境。",
+        "一個看似誘人的機會，可能尚無清楚任務、資源或承諾。先問明白實際能夠發生什麼，不要讓想像填滿所有空白；也不能據卦斷定別人欺騙。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "以杞包瓜，含章，有隕自天。",
+      "focus": "保持內在條件，不急著全部顯露",
+      "paragraphs": [
+        "Legge 用樹木覆護瓜的圖像解釋含章，並保留從天而來的傳統表達。文字與物象的解釋有歷史差異，不能變成確定的成功方法。",
+        "現代可以先完善自己的準備，適度分享尚在發展的想法。保留不是神秘化，也不保證只要等待就會有好事從外界降臨。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "姤其角，吝，无咎。",
+      "focus": "相遇時過於尖銳，也可能留下遺憾",
+      "paragraphs": [
+        "角在 Legge 的譯解裡表現以突出的硬角迎人。它使相遇中的姿態成為問題，而非只判斷來者好壞。",
+        "面對不熟悉的邀請，可以清楚詢問或拒絕，不必以羞辱來證明自己有邊界。謹慎與基本尊重能夠並行。"
+      ],
+      "sourceRefs": [
+        "zhouyi-44",
+        "legge1882-44"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "判斷突然出現的合作邀請",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位創作者收到陌生人的合作邀請，對方很熱情，卻還沒說明工作內容與時間。她先詢問具體目標、雙方責任、資料用途及預期安排，不因對方主動就認定有問題，也不因受到讚美就馬上答應。",
+      "資訊逐漸清楚後，她決定先試一個可以回顧的小任務。如果實際條件仍不合適，就說明原因，不再推進；若涉及既有合作夥伴的資訊，也先確認能不能分享。",
+      "姤在這裡幫助我們把新鮮感轉成知情的選擇。相遇本身可以珍惜，但要不要合作，仍要看事實與意願。"
+    ]
+  },
+  "misreadings": [
+    "女壯與勿用取女屬於古代性別判斷，本文不據此評價當代女性、婚姻對象或任何主動接近的人。",
+    "姤不能確認外遇、誘惑、惡意或命定緣分，也不能成為控制別人、洩露隱私或限制選擇的依據。"
+  ],
+  "practice": [
+    "寫下新相遇中已經明確的內容與仍然只是期待的部分。",
+    "列出投入前必須確認的一項條件，以及可以先嘗試的小範圍。",
+    "檢查自己的接納或拒絕是否尊重雙方意願，而不是由性別、氣場或卦象決定。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-43",
+      "name": "夬",
+      "paragraph": "夬討論需要明確處理的事，姤討論突然進入的新影響。兩者都可幫助設定範圍，但不能把實際人物簡化成必須排除或必須追隨的符號。"
+    }
+  ],
+  "closing": "讀姤卦時，不妨問自己：我看見的是眼前真實的人與條件，還是已經替這次相遇寫好了一個故事？",
+  "sourceIds": [
+    "zhouyi-44",
+    "legge1882-44",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1636,
+    "nonWhitespaceCharacterCount": 1865,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "姤",
+  "sourceLocale": "zh",
+  "sourceContentHash": "4942abf8a86780bde612bc6f61d95e5ee2002c05e81922a61543fe3ac902e365",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 姤卦學習：意外相遇時，怎麼看清影響與界線\n\n新的機會或關係突然出現時，先了解會帶來什麼，再決定接受多少、怎麼接受。\n\n突然認識一個人、收到合作邀請，可能開啟新的可能，也可能打亂原本的安排。姤卦談相遇，卦辭卻採用了強勢女性不宜婚娶的古代判斷。學習時必須指出這項歷史偏見，不能把它變成評價現代女性或交往對象的標準。\n\n## 卦的身分與爻序\n\n姤是傳統文王序第44卦，卦符䷫，下卦巽☴、上卦乾☰，傳統取象分別為風與天。爻從最下方數起，依次為初六、九二、九三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n姤：女壯，勿用取女。\n\nLegge 保留了原句中女性強而不宜娶的判斷，又把一陰初生解釋為不合宜影響開始進入政治秩序。這是其歷史解釋框架，不是被本文認可的性別規範。\n\n本文的現代學習角度，只借相遇提出問題：新出現的事情是什麼，它與現有目標是否相合，條件與界限是否清楚？強勢、主動或具有吸引力，本身都不能證明一個人危險或不值得尊重。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》直接以遇解釋姤，也談天地相遇使萬物顯現；《象傳》以天下有風取象，涉及告命四方。傳文中的相遇比私人婚娶更廣。\n\n今天可以允許新事物被瞭解，同時保留核實與選擇。開放與邊界可以同時存在，既不必一見就拒絕，也不必因新鮮而立刻投入全部資源。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 初起時先看清會怎樣移動\n\n系于金柅，貞吉，有攸往，見凶，羸豕孚蹢躅。\n\n金柅在 Legge 讀法中與約束車的金屬裝置相聯，羸豕又表現躁動。這裡是古代控制與動物圖像，不是現實控制人的辦法。\n\n現代可以先為新事項設一個小範圍，明確不涉及哪些資料、時間與承諾。界限用來保護自主選擇，不能拿來限制另一個人的自由。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九二 · 有了內容，不一定適合立即擴大\n\n包有魚，无咎，不利賓。\n\n包中有魚，且不利於賓，Legge 沿相遇後如何安置與擴散解釋。爻辭沒有要求遇到一件事就馬上向所有人推廣。\n\n收到新資訊時，可以先核實來源與適用範圍，再決定是否分享。特別涉及別人隱私時，不能因自己感到有趣便公開傳播。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 行動不順時，先尊重實際限度\n\n臀无膚，其行次且，厲，无大咎。\n\n身體受損而行走艱難的意象，與夬九四相似；Legge 將其放在接近受阻的處境裡解釋。\n\n如果新安排使自己無法兼顧已有責任，可以暫停繼續擴展，說明實際條件。這裡不是健康或傷害預測，也不意味著應靠硬撐跨過去。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · 檢查是否只有期待，沒有實際內容\n\n包无魚，起凶。\n\n與九二相對，這裡包中無魚。Legge 將其聯繫到缺少相應關係的處境。\n\n一個看似誘人的機會，可能尚無清楚任務、資源或承諾。先問明白實際能夠發生什麼，不要讓想像填滿所有空白；也不能據卦斷定別人欺騙。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 保持內在條件，不急著全部顯露\n\n以杞包瓜，含章，有隕自天。\n\nLegge 用樹木覆護瓜的圖像解釋含章，並保留從天而來的傳統表達。文字與物象的解釋有歷史差異，不能變成確定的成功方法。\n\n現代可以先完善自己的準備，適度分享尚在發展的想法。保留不是神秘化，也不保證只要等待就會有好事從外界降臨。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 相遇時過於尖銳，也可能留下遺憾\n\n姤其角，吝，无咎。\n\n角在 Legge 的譯解裡表現以突出的硬角迎人。它使相遇中的姿態成為問題，而非只判斷來者好壞。\n\n面對不熟悉的邀請，可以清楚詢問或拒絕，不必以羞辱來證明自己有邊界。謹慎與基本尊重能夠並行。\n\n引文來源：[zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826), [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 判斷突然出現的合作邀請\n\n原創現代情境\n\n一位創作者收到陌生人的合作邀請，對方很熱情，卻還沒說明工作內容與時間。她先詢問具體目標、雙方責任、資料用途及預期安排，不因對方主動就認定有問題，也不因受到讚美就馬上答應。\n\n資訊逐漸清楚後，她決定先試一個可以回顧的小任務。如果實際條件仍不合適，就說明原因，不再推進；若涉及既有合作夥伴的資訊，也先確認能不能分享。\n\n姤在這裡幫助我們把新鮮感轉成知情的選擇。相遇本身可以珍惜，但要不要合作，仍要看事實與意願。\n\n## 避免誤讀\n\n- 女壯與勿用取女屬於古代性別判斷，本文不據此評價當代女性、婚姻對象或任何主動接近的人。\n\n- 姤不能確認外遇、誘惑、惡意或命定緣分，也不能成為控制別人、洩露隱私或限制選擇的依據。\n\n## 三個練習\n\n1. 寫下新相遇中已經明確的內容與仍然只是期待的部分。\n\n2. 列出投入前必須確認的一項條件，以及可以先嘗試的小範圍。\n\n3. 檢查自己的接納或拒絕是否尊重雙方意願，而不是由性別、氣場或卦象決定。\n\n## 延伸閱讀\n\n### 夬 (hexagram-43)\n\n夬討論需要明確處理的事，姤討論突然進入的新影響。兩者都可幫助設定範圍，但不能把實際人物簡化成必須排除或必須追隨的符號。\n\n## 結語\n\n讀姤卦時，不妨問自己：我看見的是眼前真實的人與條件，還是已經替這次相遇寫好了一個故事？\n\n## 資料來源\n\n- [zhouyi-44](https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826)\n\n- [legge1882-44](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

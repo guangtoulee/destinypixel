@@ -1,0 +1,4362 @@
+{
+  "en": [
+    {
+      "id": "hexagram-01",
+      "kingWenNumber": 1,
+      "name": "乾",
+      "displayName": "Qian · The Creative",
+      "unicode": "䷀",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Qian (The Creative): strength also needs the right moment",
+      "plainSummary": "When you have energy, prepare carefully and act when the conditions fit; when they do not, know when to ease back."
+    },
+    {
+      "id": "hexagram-02",
+      "kingWenNumber": 2,
+      "name": "坤",
+      "displayName": "Kun · The Receptive",
+      "unicode": "䷁",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Kun (The Receptive): supporting the work while keeping your own judgment",
+      "plainSummary": "First understand what is needed and provide steady support; while helping others, be clear about your capacity and boundaries."
+    },
+    {
+      "id": "hexagram-03",
+      "kingWenNumber": 3,
+      "name": "屯",
+      "displayName": "Zhun · Difficulty at the Beginning",
+      "unicode": "䷂",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Zhun (Difficulty at the Beginning): bring order to a difficult start",
+      "plainSummary": "When a new undertaking meets resistance, identify the problem and the help available before deciding how to move forward."
+    },
+    {
+      "id": "hexagram-04",
+      "kingWenNumber": 4,
+      "name": "蒙",
+      "displayName": "Meng · Youthful Inexperience",
+      "unicode": "䷃",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Meng (Youthful Inexperience): asking a clearer question",
+      "plainSummary": "Acknowledge what you do not yet understand, ask a specific question and use the explanation in a real exercise."
+    },
+    {
+      "id": "hexagram-05",
+      "kingWenNumber": 5,
+      "name": "需",
+      "displayName": "Xu · Waiting",
+      "unicode": "䷄",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Xu (Waiting): prepare while the conditions develop",
+      "plainSummary": "When waiting is appropriate, keep a steady pace, prepare what you can and decide which change would make it time to act."
+    },
+    {
+      "id": "hexagram-06",
+      "kingWenNumber": 6,
+      "name": "讼",
+      "displayName": "Song · Conflict",
+      "unicode": "䷅",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Song (Conflict): establish what the disagreement needs to resolve",
+      "plainSummary": "Even when you believe you are right, distinguish the facts, your purpose and the cost of the dispute before deciding how to respond."
+    },
+    {
+      "id": "hexagram-07",
+      "kingWenNumber": 7,
+      "name": "师",
+      "displayName": "Shi · The Army",
+      "unicode": "䷆",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Shi (The Army): make responsibility clearer as the group grows",
+      "plainSummary": "When people need to work together, clarify the purpose, responsibilities and who is accountable, while leaving room to adjust or withdraw."
+    },
+    {
+      "id": "hexagram-08",
+      "kingWenNumber": 8,
+      "name": "比",
+      "displayName": "Bi · Holding Together",
+      "unicode": "䷇",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Bi (Holding Together): choosing companions and building trust",
+      "plainSummary": "Before drawing close to a person or group, consider trustworthiness and fit, while keeping room for your own choice."
+    },
+    {
+      "id": "hexagram-09",
+      "kingWenNumber": 9,
+      "name": "小畜",
+      "displayName": "Xiao Xu · Small Restraint",
+      "unicode": "䷈",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Xiao Xu (Small Restraint): making useful progress with limited strength",
+      "plainSummary": "When you cannot yet bring about a large change, attend to the small things you can influence and notice when to continue or stop."
+    },
+    {
+      "id": "hexagram-10",
+      "kingWenNumber": 10,
+      "name": "履",
+      "displayName": "Lü · Treading",
+      "unicode": "䷉",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Lü (Treading): take a considered step where risk is present",
+      "plainSummary": "Before entering a situation with rules and risks, understand your position and capacity, then take the next step carefully."
+    },
+    {
+      "id": "hexagram-11",
+      "kingWenNumber": 11,
+      "name": "泰",
+      "displayName": "Tai · Peace",
+      "unicode": "䷊",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Tai (Peace): care for the connections that make things go well",
+      "plainSummary": "When things are going well, value the opportunity to cooperate without assuming that favourable conditions will remain unchanged."
+    },
+    {
+      "id": "hexagram-12",
+      "kingWenNumber": 12,
+      "name": "否",
+      "displayName": "Pi · Standstill",
+      "unicode": "䷋",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Pi (Standstill): find the point where communication is blocked",
+      "plainSummary": "When things are stuck, locate the obstruction to communication or action, keep your boundaries and look for a grounded small change."
+    },
+    {
+      "id": "hexagram-13",
+      "kingWenNumber": 13,
+      "name": "同人",
+      "displayName": "Fellowship",
+      "unicode": "䷌",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Studying Fellowship: taking a shared purpose beyond a small circle",
+      "plainSummary": "To accomplish something together, first make the shared purpose clear and leave room for people from different backgrounds to participate."
+    },
+    {
+      "id": "hexagram-14",
+      "kingWenNumber": 14,
+      "name": "大有",
+      "displayName": "Great Possession",
+      "unicode": "䷍",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Studying Great Possession: bearing the responsibilities that come with more",
+      "plainSummary": "As your resources grow, first consider how to use them well, how to share them, and which responsibilities grow alongside them."
+    },
+    {
+      "id": "hexagram-15",
+      "kingWenNumber": 15,
+      "name": "谦",
+      "displayName": "Modesty",
+      "unicode": "䷎",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Studying Modesty: seeing yourself accurately and making room for others",
+      "plainSummary": "Acknowledge what you do well and recognize what still needs work. Modesty means keeping a sense of proportion, not describing yourself as worthless."
+    },
+    {
+      "id": "hexagram-16",
+      "kingWenNumber": 16,
+      "name": "豫",
+      "displayName": "Enthusiasm",
+      "unicode": "䷏",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Studying Enthusiasm: making sure action follows excitement",
+      "plainSummary": "When the atmosphere is lively and people are eager to contribute, turn excitement into concrete arrangements and watch for the point at which judgment begins to slip."
+    },
+    {
+      "id": "hexagram-17",
+      "kingWenNumber": 17,
+      "name": "随",
+      "displayName": "Following",
+      "unicode": "䷐",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Studying Following: choosing to follow and knowing why",
+      "plainSummary": "When following a person or method, keep your grounds for judgment. If circumstances change, allow yourself to choose again."
+    },
+    {
+      "id": "hexagram-18",
+      "kingWenNumber": 18,
+      "name": "蛊",
+      "displayName": "Work on What Has Decayed",
+      "unicode": "䷑",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Work on What Has Decayed: repairing inherited problems",
+      "plainSummary": "When an old problem comes to light, first establish how it developed and what it affects now, then plan the repair and continuing care."
+    },
+    {
+      "id": "hexagram-19",
+      "kingWenNumber": 19,
+      "name": "临",
+      "displayName": "Approach",
+      "unicode": "䷒",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Studying Approach: coming closer to the situation and its real needs",
+      "plainSummary": "When you have a chance to approach, help, or take responsibility, learn the actual circumstances before deciding how to become involved."
+    },
+    {
+      "id": "hexagram-20",
+      "kingWenNumber": 20,
+      "name": "观",
+      "displayName": "Contemplation",
+      "unicode": "䷓",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Studying Contemplation: seeing what is before you and how others see you",
+      "plainSummary": "Broaden your observation and check its grounds before deciding whether to advance or withdraw. Also notice what your own behavior brings to others."
+    },
+    {
+      "id": "hexagram-21",
+      "kingWenNumber": 21,
+      "name": "噬嗑",
+      "displayName": "Biting Through",
+      "unicode": "䷔",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Studying Biting Through: seeing an obstacle clearly and addressing it appropriately",
+      "plainSummary": "When a real problem blocks progress, establish the facts and rules before addressing it. Do not let emotion replace judgment."
+    },
+    {
+      "id": "hexagram-22",
+      "kingWenNumber": 22,
+      "name": "贲",
+      "displayName": "Grace",
+      "unicode": "䷕",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Grace: making presentation attractive and substance sound",
+      "plainSummary": "Express important things clearly and present them appropriately, without allowing decoration to hide what you actually need to say."
+    },
+    {
+      "id": "hexagram-23",
+      "kingWenNumber": 23,
+      "name": "剥",
+      "displayName": "Splitting Apart",
+      "unicode": "䷖",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Splitting Apart: protecting what matters as the foundations weaken",
+      "plainSummary": "When support is weakening, first reduce the drain on it, care for the foundations, and assess what is still worth preserving."
+    },
+    {
+      "id": "hexagram-24",
+      "kingWenNumber": 24,
+      "name": "复",
+      "displayName": "Return",
+      "unicode": "䷗",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Studying Return: finding your way back after drifting off course",
+      "plainSummary": "When you notice a departure from an important direction, begin with one possible correction. You need not wait to start everything over."
+    },
+    {
+      "id": "hexagram-25",
+      "kingWenNumber": 25,
+      "name": "无妄",
+      "displayName": "Innocence",
+      "unicode": "䷘",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Studying Innocence: acting honestly while accepting that results are not entirely yours to decide",
+      "plainSummary": "Act from facts and your responsibilities, with fewer unsupported guesses. When the unexpected happens, do not blame yourself for every outcome."
+    },
+    {
+      "id": "hexagram-26",
+      "kingWenNumber": 26,
+      "name": "大畜",
+      "displayName": "Great Accumulation",
+      "unicode": "䷙",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Great Accumulation: turning stored strength into real capacity",
+      "plainSummary": "When you have strength, first learn restraint and practice, so that accumulation becomes the ability to take things on."
+    },
+    {
+      "id": "hexagram-27",
+      "kingWenNumber": 27,
+      "name": "颐",
+      "displayName": "Nourishment",
+      "unicode": "䷚",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Nourishment: what sustains you, and what you supply to others",
+      "plainSummary": "Notice what you take in and say each day, and whether the support you rely on or provide is appropriate."
+    },
+    {
+      "id": "hexagram-28",
+      "kingWenNumber": 28,
+      "name": "大过",
+      "displayName": "Great Preponderance",
+      "unicode": "䷛",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Studying Great Preponderance: adjusting when the load exceeds its support",
+      "plainSummary": "When a burden strains its supports, first assess capacity, then reduce the load, add help, or change the arrangement promptly."
+    },
+    {
+      "id": "hexagram-29",
+      "kingWenNumber": 29,
+      "name": "坎",
+      "displayName": "Kǎn — Repeated Water",
+      "unicode": "䷜",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Studying Kǎn (Repeated Water): responding step by step when difficulties keep returning",
+      "plainSummary": "When difficulties recur, start with facts you can verify and look for a way forward through small steps available now."
+    },
+    {
+      "id": "hexagram-30",
+      "kingWenNumber": 30,
+      "name": "离",
+      "displayName": "Lí — The Clinging Fire",
+      "unicode": "䷝",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Studying Lí (The Clinging Fire): what sustains clear judgment?",
+      "plainSummary": "To see a situation clearly, check what your judgment rests on and preserve the conditions for clear expression and ongoing correction."
+    },
+    {
+      "id": "hexagram-31",
+      "kingWenNumber": 31,
+      "name": "咸",
+      "displayName": "Xián — Influence",
+      "unicode": "䷞",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Studying Xián (Influence): keeping your response genuine when you are influenced",
+      "plainSummary": "Notice what moves you, while leaving room for thought, listening, and a choice of your own."
+    },
+    {
+      "id": "hexagram-32",
+      "kingWenNumber": 32,
+      "name": "恒",
+      "displayName": "Héng — Duration",
+      "unicode": "䷟",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Studying Héng (Duration): making worthwhile commitments sustainable",
+      "plainSummary": "First check that the direction remains worthwhile, then continue at an appropriate pace; lasting does not mean never adjusting."
+    },
+    {
+      "id": "hexagram-33",
+      "kingWenNumber": 33,
+      "name": "遁",
+      "displayName": "Dùn — Retreat",
+      "unicode": "䷠",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Studying Dùn (Retreat): making a clear and responsible withdrawal",
+      "plainSummary": "When conditions no longer support continued involvement, understand them and bring things to a proper close instead of proving yourself through sheer endurance."
+    },
+    {
+      "id": "hexagram-34",
+      "kingWenNumber": 34,
+      "name": "大壮",
+      "displayName": "Dà Zhuàng — Great Power",
+      "unicode": "䷡",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Studying Dà Zhuàng (Great Power): greater strength requires care in how it is used",
+      "plainSummary": "When you have the ability to advance, check whether the approach is appropriate; real strength should leave room to turn or stop."
+    },
+    {
+      "id": "hexagram-35",
+      "kingWenNumber": 35,
+      "name": "晋",
+      "displayName": "Jìn — Progress",
+      "unicode": "䷢",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Studying Jìn (Progress): moving steadily when opportunity arrives",
+      "plainSummary": "When opportunity and recognition arrive, do the work steadily and avoid letting anxiety over gains and losses pull you off course."
+    },
+    {
+      "id": "hexagram-36",
+      "kingWenNumber": 36,
+      "name": "明夷",
+      "displayName": "Míng Yí — Darkening of the Light",
+      "unicode": "䷣",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Studying Míng Yí (Darkening of the Light): protecting clear judgment and room to act in adverse conditions",
+      "plainSummary": "When exposure or advance is unsuitable, first protect important people, information, and judgment, then seek an appropriate way to act."
+    },
+    {
+      "id": "hexagram-37",
+      "kingWenNumber": 37,
+      "name": "家人",
+      "displayName": "Jiā Rén — The Family",
+      "unicode": "䷤",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Studying Jiā Rén (The Family): close relationships also need clear responsibilities",
+      "plainSummary": "When living together, make needs, responsibilities, and boundaries explicit so that care becomes dependable daily practice."
+    },
+    {
+      "id": "hexagram-38",
+      "kingWenNumber": 38,
+      "name": "睽",
+      "displayName": "Kuí — Opposition",
+      "unicode": "䷥",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Studying Kuí (Opposition): finding limited cooperation when views differ",
+      "plainSummary": "When views diverge, identify the real differences and begin communication with small matters both sides can verify."
+    },
+    {
+      "id": "hexagram-39",
+      "kingWenNumber": 39,
+      "name": "蹇",
+      "displayName": "Jiǎn — Obstruction",
+      "unicode": "䷦",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Studying Jiǎn (Obstruction): finding a workable path when the way is blocked",
+      "plainSummary": "When a route will not work, identify the obstacle, adjust the approach, and seek help that can supply what is actually missing."
+    },
+    {
+      "id": "hexagram-40",
+      "kingWenNumber": 40,
+      "name": "解",
+      "displayName": "Jiě — Deliverance",
+      "unicode": "䷧",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Studying Jiě (Deliverance): completing the work after a problem loosens",
+      "plainSummary": "When an obstacle eases, identify what can end and promptly complete the follow-up that is still needed."
+    },
+    {
+      "id": "hexagram-41",
+      "kingWenNumber": 41,
+      "name": "损",
+      "displayName": "Sǔn — Decrease",
+      "unicode": "䷨",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Studying Sǔn (Decrease): what can be reduced to care for what really matters?",
+      "plainSummary": "When something must be reduced, first ask who bears the cost and why; unlimited giving is not the only form of goodwill."
+    },
+    {
+      "id": "hexagram-42",
+      "kingWenNumber": 42,
+      "name": "益",
+      "displayName": "Yì — Increase",
+      "unicode": "䷩",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Studying Yì (Increase): turning an increase into real help",
+      "plainSummary": "When resources or opportunities increase, identify whose situation they can improve and turn the benefit into action."
+    },
+    {
+      "id": "hexagram-43",
+      "kingWenNumber": 43,
+      "name": "夬",
+      "displayName": "Guài — Resolution",
+      "unicode": "䷪",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Studying Guài (Resolution): making the grounds and limits of a decision clear",
+      "plainSummary": "When an issue needs a definite response, state the facts and your position clearly; decisiveness does not need impulse or coercion to prove itself."
+    },
+    {
+      "id": "hexagram-44",
+      "kingWenNumber": 44,
+      "name": "姤",
+      "displayName": "Gòu — Encounter",
+      "unicode": "䷫",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Studying Gòu (Encounter): recognizing influence and boundaries in an unexpected encounter",
+      "plainSummary": "When an opportunity or relationship appears suddenly, learn what it brings before deciding how much to accept and on what terms."
+    },
+    {
+      "id": "hexagram-45",
+      "kingWenNumber": 45,
+      "name": "萃",
+      "displayName": "Cuì — Gathering Together",
+      "unicode": "䷬",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Learning from Gathering Together (Cuì): what a gathering needs after people arrive",
+      "plainSummary": "Bringing people together is only the beginning; a shared purpose, ways to participate, and mutual trust still need to take shape."
+    },
+    {
+      "id": "hexagram-46",
+      "kingWenNumber": 46,
+      "name": "升",
+      "displayName": "Shēng — Pushing Upward",
+      "unicode": "䷭",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Learning from Pushing Upward (Shēng): turn the wish to rise into steps you can stand on",
+      "plainSummary": "Growth can be built a little at a time, but it also matters to notice when further ascent has lost its direction."
+    },
+    {
+      "id": "hexagram-47",
+      "kingWenNumber": 47,
+      "name": "困",
+      "displayName": "Kùn — Oppression",
+      "unicode": "䷮",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Learning from Oppression (Kùn): keep room for judgment and action under constraint",
+      "plainSummary": "When circumstances restrict you, identify the real obstacles and available support; you need not prove yourself by acting tough or explaining yourself repeatedly."
+    },
+    {
+      "id": "hexagram-48",
+      "kingWenNumber": 48,
+      "name": "井",
+      "displayName": "Jǐng — The Well",
+      "unicode": "䷯",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Learning from The Well (Jǐng): make valuable resources genuinely usable",
+      "plainSummary": "Having resources is not enough: they need maintenance, a way to be found, and practical access for the people who need them."
+    },
+    {
+      "id": "hexagram-49",
+      "kingWenNumber": 49,
+      "name": "革",
+      "displayName": "Gé — Revolution",
+      "unicode": "䷰",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Learning from Revolution (Gé): what makes a change worthy of trust",
+      "plainSummary": "Change needs a real reason, appropriate timing, and methods people can examine; announcing a new beginning is not enough."
+    },
+    {
+      "id": "hexagram-50",
+      "kingWenNumber": 50,
+      "name": "鼎",
+      "displayName": "Dǐng — The Cauldron",
+      "unicode": "䷱",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Learning from The Cauldron (Dǐng): align the contents, their support, and their use",
+      "plainSummary": "Good contents need sound support, appropriate preparation, and reliable delivery before they can genuinely help others."
+    },
+    {
+      "id": "hexagram-51",
+      "kingWenNumber": 51,
+      "name": "震",
+      "displayName": "Zhèn — The Arousing",
+      "unicode": "䷲",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Learning from The Arousing (Zhèn): finding an appropriate rhythm after a sudden shock",
+      "plainSummary": "An unexpected event can leave you flustered; first establish what is happening, then return your attention to what most needs care."
+    },
+    {
+      "id": "hexagram-52",
+      "kingWenNumber": 52,
+      "name": "艮",
+      "displayName": "Gèn — Keeping Still",
+      "unicode": "䷳",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Learning from Keeping Still (Gèn): stop at the right time and in the right way",
+      "plainSummary": "Know when to stop and gather your attention, and also when it is time to act again."
+    },
+    {
+      "id": "hexagram-53",
+      "kingWenNumber": 53,
+      "name": "渐",
+      "displayName": "Jiàn — Development",
+      "unicode": "䷴",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Learning from Development (Jiàn): give progress a sequence and suitable places to land",
+      "plainSummary": "Important work can move forward gradually, but every step needs real support; delay alone is not gradual development."
+    },
+    {
+      "id": "hexagram-54",
+      "kingWenNumber": 54,
+      "name": "归妹",
+      "displayName": "Guī Mèi — The Marrying Maiden",
+      "unicode": "䷵",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Learning from The Marrying Maiden (Guī Mèi): understand your position and choices within an arrangement",
+      "plainSummary": "Before entering a relationship or collaboration, clarify roles, commitments, and room for choice rather than being carried along by the excitement of beginning."
+    },
+    {
+      "id": "hexagram-55",
+      "kingWenNumber": 55,
+      "name": "丰",
+      "displayName": "Fēng — Abundance",
+      "unicode": "䷶",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Learning from Abundance (Fēng): keep seeing clearly when things flourish",
+      "plainSummary": "The more resources and attention there are, the more important it is to check that essential information, real cooperation, and people’s needs remain visible."
+    },
+    {
+      "id": "hexagram-56",
+      "kingWenNumber": 56,
+      "name": "旅",
+      "displayName": "Lǚ — The Wanderer",
+      "unicode": "䷷",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Learning from The Wanderer (Lǚ): find your footing and a sense of proportion in unfamiliar surroundings",
+      "plainSummary": "In an unfamiliar place, first find dependable footing and learn the rules, then decide what you can take on."
+    },
+    {
+      "id": "hexagram-57",
+      "kingWenNumber": 57,
+      "name": "巽",
+      "displayName": "Xùn — The Gentle",
+      "unicode": "䷸",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Learning from The Gentle (Xùn): advance gently while keeping clear judgment",
+      "plainSummary": "A gentle approach can help things progress gradually, but yielding should not cost you direction, boundaries, or the ability to decide."
+    },
+    {
+      "id": "hexagram-58",
+      "kingWenNumber": 58,
+      "name": "兑",
+      "displayName": "Duì — The Joyous",
+      "unicode": "䷹",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Learning from The Joyous (Duì): keep pleasant exchanges sincere",
+      "plainSummary": "Enjoying one another’s company matters; also ask whether that enjoyment is honest, respects boundaries, and helps people truly understand each other."
+    },
+    {
+      "id": "hexagram-59",
+      "kingWenNumber": 59,
+      "name": "涣",
+      "displayName": "Huàn — Dispersion",
+      "unicode": "䷺",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Learning from Dispersion (Huàn): loosen obstructions so connection can flow again",
+      "plainSummary": "Some things need gathering and some barriers need loosening; first distinguish what deserves preservation from what is obstructing cooperation."
+    },
+    {
+      "id": "hexagram-60",
+      "kingWenNumber": 60,
+      "name": "节",
+      "displayName": "Jié — Limitation",
+      "unicode": "䷻",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Learning from Limitation (Jié): set limits people can sustain",
+      "plainSummary": "Appropriate boundaries help an undertaking continue; excessively harsh restrictions also need timely revision."
+    },
+    {
+      "id": "hexagram-61",
+      "kingWenNumber": 61,
+      "name": "中孚",
+      "displayName": "Zhōng Fú — Inner Truth",
+      "unicode": "䷼",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Learning from Inner Truth (Zhōng Fú): let trust grow from genuine consistency",
+      "plainSummary": "To become trustworthy, align your words, actions, and realistic commitments as closely as possible, and allow trust to develop gradually."
+    },
+    {
+      "id": "hexagram-62",
+      "kingWenNumber": 62,
+      "name": "小过",
+      "displayName": "Xiǎo Guò — Small Preponderance",
+      "unicode": "䷽",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Learning from Small Preponderance (Xiǎo Guò): attend carefully to small things without exceeding the right scope",
+      "plainSummary": "When conditions support only small steps, take good care of the details before you; a larger action is not needed to prove yourself."
+    },
+    {
+      "id": "hexagram-63",
+      "kingWenNumber": 63,
+      "name": "既济",
+      "displayName": "Jì Jì — After Completion",
+      "unicode": "䷾",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Learning from After Completion (Jì Jì): look after what has been accomplished",
+      "plainSummary": "After something is completed, it still needs handover, maintenance, and checks; completion does not mean it will never need attention again."
+    },
+    {
+      "id": "hexagram-64",
+      "kingWenNumber": 64,
+      "name": "未济",
+      "displayName": "Wèi Jì — Before Completion",
+      "unicode": "䷿",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Learning from Before Completion (Wèi Jì): finish the work when one step remains",
+      "plainSummary": "While work is unfinished, identify the real gap and necessary conditions; nearing the finish is no reason to skip the final judgment."
+    }
+  ],
+  "zh": [
+    {
+      "id": "hexagram-01",
+      "kingWenNumber": 1,
+      "name": "乾",
+      "displayName": "乾",
+      "unicode": "䷀",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "乾卦学习：有力量，也要看时机",
+      "plainSummary": "有劲头就认真准备、把握时机去做；条件不合适时，也要知道收一收。"
+    },
+    {
+      "id": "hexagram-02",
+      "kingWenNumber": 2,
+      "name": "坤",
+      "displayName": "坤",
+      "unicode": "䷁",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "坤卦学习：把事情托住，也保留自己的判断",
+      "plainSummary": "先看清需要、稳稳把事情做好；支持别人时，也要说清自己的能力和边界。"
+    },
+    {
+      "id": "hexagram-03",
+      "kingWenNumber": 3,
+      "name": "屯",
+      "displayName": "屯",
+      "unicode": "䷂",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "屯卦学习：开头很乱，先把条件理顺",
+      "plainSummary": "刚开始遇到阻力时，先找清问题和帮手，再决定怎样往前走。"
+    },
+    {
+      "id": "hexagram-04",
+      "kingWenNumber": 4,
+      "name": "蒙",
+      "displayName": "蒙",
+      "unicode": "䷃",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "蒙卦学习：不懂的时候，怎样把问题问明白",
+      "plainSummary": "承认还不懂，带着具体问题求教，并把得到的解释用到一次真实练习里。"
+    },
+    {
+      "id": "hexagram-05",
+      "kingWenNumber": 5,
+      "name": "需",
+      "displayName": "需",
+      "unicode": "䷄",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "需卦学习：等条件成熟，也照顾眼前能做的事",
+      "plainSummary": "该等的时候稳住节奏，把准备做好，并明确什么变化会让你开始行动。"
+    },
+    {
+      "id": "hexagram-06",
+      "kingWenNumber": 6,
+      "name": "讼",
+      "displayName": "讼",
+      "unicode": "䷅",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "讼卦学习：有分歧时，先弄清要解决什么",
+      "plainSummary": "觉得自己有理时，也先分清事实、目标和争执的代价，再决定怎样回应。"
+    },
+    {
+      "id": "hexagram-07",
+      "kingWenNumber": 7,
+      "name": "师",
+      "displayName": "师",
+      "unicode": "䷆",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "师卦学习：人多起来以后，责任要更清楚",
+      "plainSummary": "需要大家一起做事时，先说清目标、分工和负责的人，也给调整与退出留出位置。"
+    },
+    {
+      "id": "hexagram-08",
+      "kingWenNumber": 8,
+      "name": "比",
+      "displayName": "比",
+      "unicode": "䷇",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "比卦学习：与谁同行，怎样建立可信的联系",
+      "plainSummary": "靠近一个人或群体之前，先看是否可信、是否合适，也保留自己选择的余地。"
+    },
+    {
+      "id": "hexagram-09",
+      "kingWenNumber": 9,
+      "name": "小畜",
+      "displayName": "小畜",
+      "unicode": "䷈",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "小畜卦学习：力量有限时，怎样做出真正的积累",
+      "plainSummary": "暂时推动不了大变化，就先把能控制的小事做好，留意什么时候该继续、什么时候该停。"
+    },
+    {
+      "id": "hexagram-10",
+      "kingWenNumber": 10,
+      "name": "履",
+      "displayName": "履",
+      "unicode": "䷉",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "履卦学习：知道有风险，怎样走得更合宜",
+      "plainSummary": "进入有规则和风险的场合，先看清自己的位置与能力，再谨慎地迈出下一步。"
+    },
+    {
+      "id": "hexagram-11",
+      "kingWenNumber": 11,
+      "name": "泰",
+      "displayName": "泰",
+      "unicode": "䷊",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "泰卦学习：顺利的时候，把相通的条件照顾好",
+      "plainSummary": "事情正在顺起来时，珍惜彼此配合的机会，也别把顺利当成永远不会变。"
+    },
+    {
+      "id": "hexagram-12",
+      "kingWenNumber": 12,
+      "name": "否",
+      "displayName": "否",
+      "unicode": "䷋",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "否卦学习：沟通不通时，先看清卡在哪里",
+      "plainSummary": "事情卡住时，先找出沟通和行动受阻的地方，守住底线，再寻找能做的小步改变。"
+    },
+    {
+      "id": "hexagram-13",
+      "kingWenNumber": 13,
+      "name": "同人",
+      "displayName": "同人",
+      "unicode": "䷌",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "同人卦学习：共同目标怎样走出小圈子",
+      "plainSummary": "想和别人一起做成一件事，先把共同目标说清，也给不同背景的人留下参与的位置。"
+    },
+    {
+      "id": "hexagram-14",
+      "kingWenNumber": 14,
+      "name": "大有",
+      "displayName": "大有",
+      "unicode": "䷍",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "大有卦学习：拥有更多之后，怎样承担得住",
+      "plainSummary": "手上资源多起来时，先想清怎样用好、怎样共享，以及哪些责任也随之增加。"
+    },
+    {
+      "id": "hexagram-15",
+      "kingWenNumber": 15,
+      "name": "谦",
+      "displayName": "谦",
+      "unicode": "䷎",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "谦卦学习：准确看待自己，也给别人留出空间",
+      "plainSummary": "做得好可以承认，尚有不足也看清；谦逊是保持分寸，而不是把自己说得一无是处。"
+    },
+    {
+      "id": "hexagram-16",
+      "kingWenNumber": 16,
+      "name": "豫",
+      "displayName": "豫",
+      "unicode": "䷏",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "豫卦学习：有了热情，还要让行动跟得上",
+      "plainSummary": "气氛热烈、大家愿意投入时，把兴奋化成具体安排，并留意什么时候开始失去判断。"
+    },
+    {
+      "id": "hexagram-17",
+      "kingWenNumber": 17,
+      "name": "随",
+      "displayName": "随",
+      "unicode": "䷐",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "随卦学习：愿意跟随，也知道自己为什么选择",
+      "plainSummary": "跟着人或方法往前走时，保留判断依据；情况变了，也允许自己重新选择。"
+    },
+    {
+      "id": "hexagram-18",
+      "kingWenNumber": 18,
+      "name": "蛊",
+      "displayName": "蛊",
+      "unicode": "䷑",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "蛊卦学习：把留下来的问题修好",
+      "plainSummary": "发现旧问题时，先查清怎么形成、现在影响什么，再安排修复和后续照料。"
+    },
+    {
+      "id": "hexagram-19",
+      "kingWenNumber": 19,
+      "name": "临",
+      "displayName": "临",
+      "unicode": "䷒",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "临卦学习：走近事情，也走近实际需要",
+      "plainSummary": "有机会靠近、帮助或负责时，先了解实际情况，再决定怎样介入。"
+    },
+    {
+      "id": "hexagram-20",
+      "kingWenNumber": 20,
+      "name": "观",
+      "displayName": "观",
+      "unicode": "䷓",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "观卦学习：看清眼前，也看清自己怎样被看见",
+      "plainSummary": "先扩大观察、核对依据，再决定进退；同时留意自己的行为给别人带来了什么。"
+    },
+    {
+      "id": "hexagram-21",
+      "kingWenNumber": 21,
+      "name": "噬嗑",
+      "displayName": "噬嗑",
+      "unicode": "䷔",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "噬嗑卦学习：看清阻碍，再用合宜的方式处理",
+      "plainSummary": "遇到真正挡住事情的问题，先弄清事实和规则，再处理它，别让情绪代替判断。"
+    },
+    {
+      "id": "hexagram-22",
+      "kingWenNumber": 22,
+      "name": "贲",
+      "displayName": "贲",
+      "unicode": "䷕",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "贲卦学习：让表达好看，也让内容站得住",
+      "plainSummary": "把重要的东西表达清楚、呈现妥当，但别让装饰盖住真正要说的内容。"
+    },
+    {
+      "id": "hexagram-23",
+      "kingWenNumber": 23,
+      "name": "剥",
+      "displayName": "剥",
+      "unicode": "䷖",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "剥卦学习：基础在减损时，先守住要紧的部分",
+      "plainSummary": "发现支撑正在变弱时，先减轻消耗、照顾基础，再判断还有什么值得保留。"
+    },
+    {
+      "id": "hexagram-24",
+      "kingWenNumber": 24,
+      "name": "复",
+      "displayName": "复",
+      "unicode": "䷗",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "复卦学习：发现偏离以后，怎样重新回来",
+      "plainSummary": "发现自己偏离了重要的方向，就从一个能做到的修正开始，不必等到一切都重来。"
+    },
+    {
+      "id": "hexagram-25",
+      "kingWenNumber": 25,
+      "name": "无妄",
+      "displayName": "无妄",
+      "unicode": "䷘",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "无妄卦学习：诚实做事，也承认结果不全由自己决定",
+      "plainSummary": "按事实与本分行动，少一点无根据的猜想；遇到意外，也别把所有结果都归罪于自己。"
+    },
+    {
+      "id": "hexagram-26",
+      "kingWenNumber": 26,
+      "name": "大畜",
+      "displayName": "大畜",
+      "unicode": "䷙",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "大畜卦学习：把力量蓄成能够承担的能力",
+      "plainSummary": "有力量时先学会约束和练习，让积累真正变成能够承担事情的本领。"
+    },
+    {
+      "id": "hexagram-27",
+      "kingWenNumber": 27,
+      "name": "颐",
+      "displayName": "颐",
+      "unicode": "䷚",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "颐卦学习：什么在滋养自己，又在供给别人",
+      "plainSummary": "留意每天接收什么、说出什么，以及你依靠或提供的支持是否合宜。"
+    },
+    {
+      "id": "hexagram-28",
+      "kingWenNumber": 28,
+      "name": "大过",
+      "displayName": "大过",
+      "unicode": "䷛",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "大过卦学习：负担超过支撑时，怎样作出调整",
+      "plainSummary": "担子已经压得支撑吃力时，先看清承载能力，及时减量、补位或改变安排。"
+    },
+    {
+      "id": "hexagram-29",
+      "kingWenNumber": 29,
+      "name": "坎",
+      "displayName": "坎",
+      "unicode": "䷜",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "坎卦学习：困难反复出现时，怎样一步步应对",
+      "plainSummary": "面对反复的困难，先稳住能核实的事实，从眼下可做的小步寻找出口。"
+    },
+    {
+      "id": "hexagram-30",
+      "kingWenNumber": 30,
+      "name": "离",
+      "displayName": "离",
+      "unicode": "䷝",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "离卦学习：明亮的判断，靠什么维持",
+      "plainSummary": "想把事情看清楚，先确认判断依靠什么，也给清楚表达和持续修正留下条件。"
+    },
+    {
+      "id": "hexagram-31",
+      "kingWenNumber": 31,
+      "name": "咸",
+      "displayName": "咸",
+      "unicode": "䷞",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "咸卦学习：受到影响时，怎样保留真实回应",
+      "plainSummary": "留意是什么打动了自己，也给思考、倾听和自主选择留一点空间。"
+    },
+    {
+      "id": "hexagram-32",
+      "kingWenNumber": 32,
+      "name": "恒",
+      "displayName": "恒",
+      "unicode": "䷟",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "恒卦学习：把值得坚持的事做得可持续",
+      "plainSummary": "先确认方向仍然值得，再用合适的节奏坚持；持久不等于永远不许调整。"
+    },
+    {
+      "id": "hexagram-33",
+      "kingWenNumber": 33,
+      "name": "遁",
+      "displayName": "遁",
+      "unicode": "䷠",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "遁卦学习：需要退一步时，怎样退得清楚",
+      "plainSummary": "处境不再适合继续投入时，先看清条件，妥善收束，而不是只靠硬撑证明自己。"
+    },
+    {
+      "id": "hexagram-34",
+      "kingWenNumber": 34,
+      "name": "大壮",
+      "displayName": "大壮",
+      "unicode": "䷡",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "大壮卦学习：力量大了，更要看怎样使用",
+      "plainSummary": "有能力推进时，也检查方式是否合宜；真正的力量应当保留转向和停下的余地。"
+    },
+    {
+      "id": "hexagram-35",
+      "kingWenNumber": 35,
+      "name": "晋",
+      "displayName": "晋",
+      "unicode": "䷢",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "晋卦学习：获得机会之后，怎样踏实向前",
+      "plainSummary": "机会与认可到来时，稳稳完成该做的事，也别让对得失的担心带着自己乱走。"
+    },
+    {
+      "id": "hexagram-36",
+      "kingWenNumber": 36,
+      "name": "明夷",
+      "displayName": "明夷",
+      "unicode": "䷣",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "明夷卦学习：处境不利时，怎样保护清醒与行动空间",
+      "plainSummary": "不适合显露或推进时，先保护重要的人、信息和判断，再寻找合宜的行动方式。"
+    },
+    {
+      "id": "hexagram-37",
+      "kingWenNumber": 37,
+      "name": "家人",
+      "displayName": "家人",
+      "unicode": "䷤",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "家人卦学习：亲近的关系，也需要清楚的责任",
+      "plainSummary": "一起生活时，把需要、分工和边界说清，让关心能够落实为可靠的日常。"
+    },
+    {
+      "id": "hexagram-38",
+      "kingWenNumber": 38,
+      "name": "睽",
+      "displayName": "睽",
+      "unicode": "䷥",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "睽卦学习：意见不同，也可以找到小范围的合作",
+      "plainSummary": "看法不一致时，先分清真正的差别，从双方仍能确认的小事开始沟通。"
+    },
+    {
+      "id": "hexagram-39",
+      "kingWenNumber": 39,
+      "name": "蹇",
+      "displayName": "蹇",
+      "unicode": "䷦",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "蹇卦学习：前路受阻时，怎样寻找可行的路",
+      "plainSummary": "路走不通时，先看清障碍、调整方式，并找到真正能补足条件的帮助。"
+    },
+    {
+      "id": "hexagram-40",
+      "kingWenNumber": 40,
+      "name": "解",
+      "displayName": "解",
+      "unicode": "䷧",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "解卦学习：问题松开以后，怎样收好尾",
+      "plainSummary": "阻碍缓解后，确认该结束的事，也及时完成仍有必要的后续。"
+    },
+    {
+      "id": "hexagram-41",
+      "kingWenNumber": 41,
+      "name": "损",
+      "displayName": "损",
+      "unicode": "䷨",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "损卦学习：减少什么，才能照顾真正重要的事",
+      "plainSummary": "需要有所减少时，先看清由谁承担、为了什么，也别把无限付出当成唯一的好意。"
+    },
+    {
+      "id": "hexagram-42",
+      "kingWenNumber": 42,
+      "name": "益",
+      "displayName": "益",
+      "unicode": "䷩",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "益卦学习：得到更多以后，让帮助真正发生",
+      "plainSummary": "有资源或机会增加时，确认它能改善谁的处境，并用行动把好处落实。"
+    },
+    {
+      "id": "hexagram-43",
+      "kingWenNumber": 43,
+      "name": "夬",
+      "displayName": "夬",
+      "unicode": "䷪",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "夬卦学习：需要决断时，把依据与分寸讲清楚",
+      "plainSummary": "该明确处理的问题，就把事实和立场说清；决断不需要靠冲动或强迫来证明。"
+    },
+    {
+      "id": "hexagram-44",
+      "kingWenNumber": 44,
+      "name": "姤",
+      "displayName": "姤",
+      "unicode": "䷫",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "姤卦学习：意外相遇时，怎样看清影响与边界",
+      "plainSummary": "新的机会或关系突然出现时，先了解它会带来什么，再决定接纳多少、怎样接纳。"
+    },
+    {
+      "id": "hexagram-45",
+      "kingWenNumber": 45,
+      "name": "萃",
+      "displayName": "萃",
+      "unicode": "䷬",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "萃卦学习：人聚在一起以后，还需要什么",
+      "plainSummary": "把人召集起来只是开始，还要让共同目的、参与方式和彼此的信任真正成立。"
+    },
+    {
+      "id": "hexagram-46",
+      "kingWenNumber": 46,
+      "name": "升",
+      "displayName": "升",
+      "unicode": "䷭",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "升卦学习：把向上的愿望变成能踩稳的台阶",
+      "plainSummary": "想要成长，可以一点点积累条件，也要知道什么时候继续向上已经失去方向。"
+    },
+    {
+      "id": "hexagram-47",
+      "kingWenNumber": 47,
+      "name": "困",
+      "displayName": "困",
+      "unicode": "䷮",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "困卦学习：受限制时，怎样保留判断和行动的空间",
+      "plainSummary": "处境受限时，先看清真正的阻碍和可用支持，不必靠逞强或反复解释证明自己。"
+    },
+    {
+      "id": "hexagram-48",
+      "kingWenNumber": 48,
+      "name": "井",
+      "displayName": "井",
+      "unicode": "䷯",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "井卦学习：让有价值的资源真正被用到",
+      "plainSummary": "有资源还不够，还要维护它、找到它，并让需要的人能够实际使用。"
+    },
+    {
+      "id": "hexagram-49",
+      "kingWenNumber": 49,
+      "name": "革",
+      "displayName": "革",
+      "unicode": "䷰",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "革卦学习：什么样的改变值得被相信",
+      "plainSummary": "改变需要真实理由、合适时机和可检查的做法，不能只靠宣布一个新开始。"
+    },
+    {
+      "id": "hexagram-50",
+      "kingWenNumber": 50,
+      "name": "鼎",
+      "displayName": "鼎",
+      "unicode": "䷱",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "鼎卦学习：让内容、承载和使用配得上彼此",
+      "plainSummary": "好的内容需要稳固的承载、合适的处理和可靠的交付，才能真正帮助别人。"
+    },
+    {
+      "id": "hexagram-51",
+      "kingWenNumber": 51,
+      "name": "震",
+      "displayName": "震",
+      "unicode": "䷲",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "震卦学习：突然受惊以后，怎样找回合适的节奏",
+      "plainSummary": "意外会让人慌乱，先确认眼前情况，再把注意力放回最需要照顾的事情。"
+    },
+    {
+      "id": "hexagram-52",
+      "kingWenNumber": 52,
+      "name": "艮",
+      "displayName": "艮",
+      "unicode": "䷳",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "艮卦学习：停下来，也要停得合时合宜",
+      "plainSummary": "知道什么时候该停、该收住注意力，也要知道什么时候应该重新行动。"
+    },
+    {
+      "id": "hexagram-53",
+      "kingWenNumber": 53,
+      "name": "渐",
+      "displayName": "渐",
+      "unicode": "䷴",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "渐卦学习：让进展有次序，也有合适的落脚处",
+      "plainSummary": "重要的事可以逐步推进，但每一步都要有真实支撑，不能把拖延当成循序渐进。"
+    },
+    {
+      "id": "hexagram-54",
+      "kingWenNumber": 54,
+      "name": "归妹",
+      "displayName": "归妹",
+      "unicode": "䷵",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "归妹卦学习：在关系和安排中，看清自己的位置与选择",
+      "plainSummary": "进入一项关系或合作前，先看清角色、承诺和选择空间，不要只被开始时的热烈推动。"
+    },
+    {
+      "id": "hexagram-55",
+      "kingWenNumber": 55,
+      "name": "丰",
+      "displayName": "丰",
+      "unicode": "䷶",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "丰卦学习：事情兴盛时，怎样仍然看得清楚",
+      "plainSummary": "资源和声势越多，越要确认重要的信息、真实的合作和人的需要没有被遮住。"
+    },
+    {
+      "id": "hexagram-56",
+      "kingWenNumber": 56,
+      "name": "旅",
+      "displayName": "旅",
+      "unicode": "䷷",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "旅卦学习：身处陌生环境，怎样安顿并保持分寸",
+      "plainSummary": "来到不熟悉的地方，先找到可靠的落脚点、了解规则，再决定能承担什么。"
+    },
+    {
+      "id": "hexagram-57",
+      "kingWenNumber": 57,
+      "name": "巽",
+      "displayName": "巽",
+      "unicode": "䷸",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "巽卦学习：温和地推进，也保留清楚的判断",
+      "plainSummary": "柔和的方式可以让事情逐渐推进，但不能柔顺到失去方向、边界和决定能力。"
+    },
+    {
+      "id": "hexagram-58",
+      "kingWenNumber": 58,
+      "name": "兑",
+      "displayName": "兑",
+      "unicode": "䷹",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "兑卦学习：让愉快的交流也保持真诚",
+      "plainSummary": "相处愉快很有价值，也要看这种愉快是否诚实、尊重边界，并帮助彼此真正理解。"
+    },
+    {
+      "id": "hexagram-59",
+      "kingWenNumber": 59,
+      "name": "涣",
+      "displayName": "涣",
+      "unicode": "䷺",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "涣卦学习：松开阻隔，让联系重新流动",
+      "plainSummary": "有些东西需要聚拢，有些隔阂需要松开，先分清什么值得保留、什么正在阻碍合作。"
+    },
+    {
+      "id": "hexagram-60",
+      "kingWenNumber": 60,
+      "name": "节",
+      "displayName": "节",
+      "unicode": "䷻",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "节卦学习：设定让人能够持续的限度",
+      "plainSummary": "合适的界限能帮助事情持续，过分严苛的限制也需要及时调整。"
+    },
+    {
+      "id": "hexagram-61",
+      "kingWenNumber": 61,
+      "name": "中孚",
+      "displayName": "中孚",
+      "unicode": "䷼",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "中孚卦学习：让信任从真实的一致中形成",
+      "plainSummary": "想让人信任自己，就让表达、行动和能承担的承诺尽量一致，也允许信任逐步建立。"
+    },
+    {
+      "id": "hexagram-62",
+      "kingWenNumber": 62,
+      "name": "小过",
+      "displayName": "小过",
+      "unicode": "䷽",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "小过卦学习：把小事做细，也避免越过合适的范围",
+      "plainSummary": "条件只适合小步时，就把眼前细节照顾好，不必靠更大的动作证明自己。"
+    },
+    {
+      "id": "hexagram-63",
+      "kingWenNumber": 63,
+      "name": "既济",
+      "displayName": "既济",
+      "unicode": "䷾",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "既济卦学习：完成以后，怎样照顾已经做成的事",
+      "plainSummary": "事情做成以后，还要交接、维护和检查，完成并不意味着可以永远不再照看。"
+    },
+    {
+      "id": "hexagram-64",
+      "kingWenNumber": 64,
+      "name": "未济",
+      "displayName": "未济",
+      "unicode": "䷿",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "未济卦学习：还差一步时，怎样把事情真正做完",
+      "plainSummary": "尚未完成时，先找准缺口和条件，别因为已经接近终点就省略最后的判断。"
+    }
+  ],
+  "zh-TW": [
+    {
+      "id": "hexagram-01",
+      "kingWenNumber": 1,
+      "name": "乾",
+      "displayName": "乾",
+      "unicode": "䷀",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "乾卦學習：有力量，也要看時機",
+      "plainSummary": "有幹勁就認真準備，在合適的時機行動；條件不適合時，也要知道收斂一下。"
+    },
+    {
+      "id": "hexagram-02",
+      "kingWenNumber": 2,
+      "name": "坤",
+      "displayName": "坤",
+      "unicode": "䷁",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "坤卦學習：承接事情，也保留自己的判斷",
+      "plainSummary": "先看清需要，穩穩把事情做好；支持別人時，也要說清自己的能力與界線。"
+    },
+    {
+      "id": "hexagram-03",
+      "kingWenNumber": 3,
+      "name": "屯",
+      "displayName": "屯",
+      "unicode": "䷂",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "屯卦學習：開頭很亂，先理清條件",
+      "plainSummary": "剛開始遇到阻力時，先找出問題與可用的協助，再決定怎樣往前走。"
+    },
+    {
+      "id": "hexagram-04",
+      "kingWenNumber": 4,
+      "name": "蒙",
+      "displayName": "蒙",
+      "unicode": "䷃",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "蒙卦學習：不懂的時候，怎樣把問題問清楚",
+      "plainSummary": "承認自己還不懂，帶著具體問題請教，並把得到的解釋用在一次實際練習裡。"
+    },
+    {
+      "id": "hexagram-05",
+      "kingWenNumber": 5,
+      "name": "需",
+      "displayName": "需",
+      "unicode": "䷄",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "需卦學習：等待條件成熟，也照顧眼前能做的事",
+      "plainSummary": "該等的時候穩住節奏，做好準備，並說清哪些變化會讓你開始行動。"
+    },
+    {
+      "id": "hexagram-06",
+      "kingWenNumber": 6,
+      "name": "讼",
+      "displayName": "訟",
+      "unicode": "䷅",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "訟卦學習：意見不同時，先弄清要解決什麼",
+      "plainSummary": "即使覺得自己有理，也先分清事實、目標與爭執的代價，再決定怎樣回應。"
+    },
+    {
+      "id": "hexagram-07",
+      "kingWenNumber": 7,
+      "name": "师",
+      "displayName": "師",
+      "unicode": "䷆",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "師卦學習：人多起來，責任就要更清楚",
+      "plainSummary": "需要一起做事時，先說清目標、分工與負責的人，也為調整和退出留下空間。"
+    },
+    {
+      "id": "hexagram-08",
+      "kingWenNumber": 8,
+      "name": "比",
+      "displayName": "比",
+      "unicode": "䷇",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "比卦學習：與誰同行，怎樣建立可信的聯繫",
+      "plainSummary": "靠近一個人或群體之前，先看是否可信、是否合適，也保留自己選擇的空間。"
+    },
+    {
+      "id": "hexagram-09",
+      "kingWenNumber": 9,
+      "name": "小畜",
+      "displayName": "小畜",
+      "unicode": "䷈",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "小畜卦學習：力量有限時，怎樣形成真正的累積",
+      "plainSummary": "暫時推動不了大變化，就先做好能掌握的小事，留意何時該繼續、何時該停。"
+    },
+    {
+      "id": "hexagram-10",
+      "kingWenNumber": 10,
+      "name": "履",
+      "displayName": "履",
+      "unicode": "䷉",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "履卦學習：知道有風險，怎樣走得更合宜",
+      "plainSummary": "進入有規則與風險的場合，先看清自己的位置和能力，再謹慎踏出下一步。"
+    },
+    {
+      "id": "hexagram-11",
+      "kingWenNumber": 11,
+      "name": "泰",
+      "displayName": "泰",
+      "unicode": "䷊",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "泰卦學習：順利的時候，照顧好彼此相通的條件",
+      "plainSummary": "事情漸漸順利時，珍惜彼此配合的機會，也別以為順利的狀態永遠不會變。"
+    },
+    {
+      "id": "hexagram-12",
+      "kingWenNumber": 12,
+      "name": "否",
+      "displayName": "否",
+      "unicode": "䷋",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "否卦學習：溝通不順，先看清卡在哪裡",
+      "plainSummary": "事情卡住時，先找出溝通與行動受阻之處，守住底線，再尋找能做的小步調整。"
+    },
+    {
+      "id": "hexagram-13",
+      "kingWenNumber": 13,
+      "name": "同人",
+      "displayName": "同人",
+      "unicode": "䷌",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "同人卦導讀：讓共同目標走出熟人圈",
+      "plainSummary": "想和別人一起把事情做好，先說清楚共同目標，也讓不同背景的人有機會參與。"
+    },
+    {
+      "id": "hexagram-14",
+      "kingWenNumber": 14,
+      "name": "大有",
+      "displayName": "大有",
+      "unicode": "䷍",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "大有卦導讀：資源增加後，怎樣承擔相應責任",
+      "plainSummary": "資源變多時，先想清楚如何善用、如何共享，以及哪些責任也跟著增加。"
+    },
+    {
+      "id": "hexagram-15",
+      "kingWenNumber": 15,
+      "name": "谦",
+      "displayName": "謙",
+      "unicode": "䷎",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "謙卦導讀：準確看待自己，也為別人留出空間",
+      "plainSummary": "做得好，可以坦然承認；還有不足，也要看清楚。謙遜是掌握分寸，不是把自己說得一無是處。"
+    },
+    {
+      "id": "hexagram-16",
+      "kingWenNumber": 16,
+      "name": "豫",
+      "displayName": "豫",
+      "unicode": "䷏",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "豫卦導讀：有了熱情，也要有跟得上的行動",
+      "plainSummary": "氣氛熱烈、大家願意投入時，把興奮化成具體安排，也留意熱情何時開始影響判斷。"
+    },
+    {
+      "id": "hexagram-17",
+      "kingWenNumber": 17,
+      "name": "随",
+      "displayName": "隨",
+      "unicode": "䷐",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "隨卦導讀：願意跟隨，也清楚自己的選擇",
+      "plainSummary": "跟著某個人或方法前進時，保留自己的判斷依據；情況改變，也可以重新選擇。"
+    },
+    {
+      "id": "hexagram-18",
+      "kingWenNumber": 18,
+      "name": "蛊",
+      "displayName": "蠱",
+      "unicode": "䷑",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "蠱卦導讀：把承接下來的問題修復好",
+      "plainSummary": "發現舊問題時，先查清成因和目前的影響，再安排修復與後續維護。"
+    },
+    {
+      "id": "hexagram-19",
+      "kingWenNumber": 19,
+      "name": "临",
+      "displayName": "臨",
+      "unicode": "䷒",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "臨卦導讀：走近事情，也了解真正的需要",
+      "plainSummary": "有機會接近、幫忙或負責時，先了解實際情況，再決定如何介入。"
+    },
+    {
+      "id": "hexagram-20",
+      "kingWenNumber": 20,
+      "name": "观",
+      "displayName": "觀",
+      "unicode": "䷓",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "觀卦導讀：看清眼前，也看見自己的影響",
+      "plainSummary": "先擴大觀察、核對依據，再決定進退；同時留意自己的行為帶給別人什麼影響。"
+    },
+    {
+      "id": "hexagram-21",
+      "kingWenNumber": 21,
+      "name": "噬嗑",
+      "displayName": "噬嗑",
+      "unicode": "䷔",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "噬嗑卦導讀：先釐清阻礙，再合宜地處理",
+      "plainSummary": "真正的問題擋住事情時，先釐清事實和規則，再著手處理，別讓情緒取代判斷。"
+    },
+    {
+      "id": "hexagram-22",
+      "kingWenNumber": 22,
+      "name": "贲",
+      "displayName": "賁",
+      "unicode": "䷕",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "賁卦導讀：呈現得好看，內容也要站得住腳",
+      "plainSummary": "把重要內容說清楚、呈現妥當，別讓裝飾遮住真正要表達的意思。"
+    },
+    {
+      "id": "hexagram-23",
+      "kingWenNumber": 23,
+      "name": "剥",
+      "displayName": "剝",
+      "unicode": "䷖",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "剝卦導讀：基礎逐漸減損時，先保住重要的部分",
+      "plainSummary": "發現支撐正在變弱，先減少消耗、照顧基礎，再判斷哪些部分值得保留。"
+    },
+    {
+      "id": "hexagram-24",
+      "kingWenNumber": 24,
+      "name": "复",
+      "displayName": "復",
+      "unicode": "䷗",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "復卦導讀：偏離方向之後，如何重新回來",
+      "plainSummary": "發現自己偏離重要方向，就從一個做得到的修正開始，不必等到一切重新來過。"
+    },
+    {
+      "id": "hexagram-25",
+      "kingWenNumber": 25,
+      "name": "无妄",
+      "displayName": "無妄",
+      "unicode": "䷘",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "無妄卦導讀：誠實做事，也承認結果不全由自己決定",
+      "plainSummary": "依事實和自己的責任行動，少一些沒有根據的猜想；遇到意外，也別把所有結果都怪在自己身上。"
+    },
+    {
+      "id": "hexagram-26",
+      "kingWenNumber": 26,
+      "name": "大畜",
+      "displayName": "大畜",
+      "unicode": "䷙",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "大畜卦導讀：讓累積的力量成為能承擔的本領",
+      "plainSummary": "有力量時，先學會約束與練習，讓累積真正成為承擔事情的能力。"
+    },
+    {
+      "id": "hexagram-27",
+      "kingWenNumber": 27,
+      "name": "颐",
+      "displayName": "頤",
+      "unicode": "䷚",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "頤卦導讀：什麼滋養自己，又供給了別人什麼",
+      "plainSummary": "留意每天接收什麼、說出什麼，以及自己依靠或提供的支持是否合宜。"
+    },
+    {
+      "id": "hexagram-28",
+      "kingWenNumber": 28,
+      "name": "大过",
+      "displayName": "大過",
+      "unicode": "䷛",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "大過卦導讀：負擔超出支撐時，如何調整",
+      "plainSummary": "負擔已讓支撐吃力時，先看清承擔能力，及時減量、補足人力或調整安排。"
+    },
+    {
+      "id": "hexagram-29",
+      "kingWenNumber": 29,
+      "name": "坎",
+      "displayName": "坎",
+      "unicode": "䷜",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "坎卦學習：困難一再出現時，怎麼一步步應對",
+      "plainSummary": "困難反覆出現時，先掌握能查證的事實，再從眼前做得到的小步驟找出口。"
+    },
+    {
+      "id": "hexagram-30",
+      "kingWenNumber": 30,
+      "name": "离",
+      "displayName": "離",
+      "unicode": "䷝",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "離卦學習：清楚的判斷，靠什麼維持",
+      "plainSummary": "想把事情看清楚，先確認判斷的依據，也保留清楚表達與持續修正的條件。"
+    },
+    {
+      "id": "hexagram-31",
+      "kingWenNumber": 31,
+      "name": "咸",
+      "displayName": "咸",
+      "unicode": "䷞",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "咸卦學習：受到影響時，怎麼保留真實的回應",
+      "plainSummary": "留意自己被什麼打動，也替思考、傾聽與自主選擇留些空間。"
+    },
+    {
+      "id": "hexagram-32",
+      "kingWenNumber": 32,
+      "name": "恒",
+      "displayName": "恆",
+      "unicode": "䷟",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "恆卦學習：讓值得堅持的事走得長久",
+      "plainSummary": "先確認方向仍值得繼續，再用合適的步調堅持；長久不代表永遠不能調整。"
+    },
+    {
+      "id": "hexagram-33",
+      "kingWenNumber": 33,
+      "name": "遁",
+      "displayName": "遁",
+      "unicode": "䷠",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "遁卦學習：需要退一步時，怎麼退得清楚",
+      "plainSummary": "當情況已不適合繼續投入，先看清條件、妥善收尾，不必只靠硬撐證明自己。"
+    },
+    {
+      "id": "hexagram-34",
+      "kingWenNumber": 34,
+      "name": "大壮",
+      "displayName": "大壯",
+      "unicode": "䷡",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "大壯卦學習：力量越大，越要想清楚怎麼用",
+      "plainSummary": "有能力推進時，也要確認方式合宜；真正的力量應該保留轉向與停下的餘地。"
+    },
+    {
+      "id": "hexagram-35",
+      "kingWenNumber": 35,
+      "name": "晋",
+      "displayName": "晉",
+      "unicode": "䷢",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "晉卦學習：機會來了以後，怎麼踏實向前",
+      "plainSummary": "機會與肯定來臨時，穩穩做好該做的事，別讓對得失的擔心打亂方向。"
+    },
+    {
+      "id": "hexagram-36",
+      "kingWenNumber": 36,
+      "name": "明夷",
+      "displayName": "明夷",
+      "unicode": "䷣",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "明夷卦學習：處境不利時，怎麼保護清醒與行動空間",
+      "plainSummary": "當下不適合顯露或推進時，先保護重要的人、資訊與判斷，再找合宜的行動方式。"
+    },
+    {
+      "id": "hexagram-37",
+      "kingWenNumber": 37,
+      "name": "家人",
+      "displayName": "家人",
+      "unicode": "䷤",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "家人卦學習：關係親近，也需要清楚的責任",
+      "plainSummary": "一起生活時，把需要、分工與界線說清楚，讓關心落實成可靠的日常。"
+    },
+    {
+      "id": "hexagram-38",
+      "kingWenNumber": 38,
+      "name": "睽",
+      "displayName": "睽",
+      "unicode": "䷥",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "睽卦學習：看法不同，也能找出小範圍的合作",
+      "plainSummary": "意見不一致時，先釐清真正的差異，從雙方還能確認的小事開始溝通。"
+    },
+    {
+      "id": "hexagram-39",
+      "kingWenNumber": 39,
+      "name": "蹇",
+      "displayName": "蹇",
+      "unicode": "䷦",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "蹇卦學習：前路受阻時，怎麼找可行的路",
+      "plainSummary": "路走不通時，先看清障礙、調整方法，再找能真正補足條件的幫助。"
+    },
+    {
+      "id": "hexagram-40",
+      "kingWenNumber": 40,
+      "name": "解",
+      "displayName": "解",
+      "unicode": "䷧",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "解卦學習：問題鬆開以後，怎麼把事情收好尾",
+      "plainSummary": "障礙緩解後，確認哪些事可以結束，也及時完成仍有必要的後續。"
+    },
+    {
+      "id": "hexagram-41",
+      "kingWenNumber": 41,
+      "name": "损",
+      "displayName": "損",
+      "unicode": "䷨",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "損卦學習：減少什麼，才能照顧真正重要的事",
+      "plainSummary": "需要減少時，先弄清楚由誰承擔、為了什麼，別把無限付出當成唯一的善意。"
+    },
+    {
+      "id": "hexagram-42",
+      "kingWenNumber": 42,
+      "name": "益",
+      "displayName": "益",
+      "unicode": "䷩",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "益卦學習：得到更多以後，讓幫助真正發生",
+      "plainSummary": "資源或機會增加時，確認能改善誰的處境，再用行動把好處落實。"
+    },
+    {
+      "id": "hexagram-43",
+      "kingWenNumber": 43,
+      "name": "夬",
+      "displayName": "夬",
+      "unicode": "䷪",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "夬卦學習：需要決斷時，把依據與分寸說清楚",
+      "plainSummary": "該明確處理的問題，就說清楚事實與立場；不必靠衝動或強迫證明決心。"
+    },
+    {
+      "id": "hexagram-44",
+      "kingWenNumber": 44,
+      "name": "姤",
+      "displayName": "姤",
+      "unicode": "䷫",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "姤卦學習：意外相遇時，怎麼看清影響與界線",
+      "plainSummary": "新的機會或關係突然出現時，先了解會帶來什麼，再決定接受多少、怎麼接受。"
+    },
+    {
+      "id": "hexagram-45",
+      "kingWenNumber": 45,
+      "name": "萃",
+      "displayName": "萃",
+      "unicode": "䷬",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "萃卦學習：人聚在一起之後，還需要什麼",
+      "plainSummary": "把人召集起來只是第一步，還要建立共同目的、清楚的參與方式，以及彼此的信任。"
+    },
+    {
+      "id": "hexagram-46",
+      "kingWenNumber": 46,
+      "name": "升",
+      "displayName": "升",
+      "unicode": "䷭",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "升卦學習：把成長的願望化成踩得穩的階梯",
+      "plainSummary": "想要成長，可以逐步累積條件；也要留意，繼續向上是否已經失去方向。"
+    },
+    {
+      "id": "hexagram-47",
+      "kingWenNumber": 47,
+      "name": "困",
+      "displayName": "困",
+      "unicode": "䷮",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "困卦學習：受限之中，如何保留判斷與行動的空間",
+      "plainSummary": "處境受限時，先看清真正的阻礙和可用的支持，不必靠逞強或一再解釋來證明自己。"
+    },
+    {
+      "id": "hexagram-48",
+      "kingWenNumber": 48,
+      "name": "井",
+      "displayName": "井",
+      "unicode": "䷯",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "井卦學習：讓有價值的資源真正派上用場",
+      "plainSummary": "有資源還不夠，也要持續維護、提供清楚的取得管道，讓需要的人確實用得上。"
+    },
+    {
+      "id": "hexagram-49",
+      "kingWenNumber": 49,
+      "name": "革",
+      "displayName": "革",
+      "unicode": "䷰",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "革卦學習：什麼樣的改變值得信任",
+      "plainSummary": "改變需要真實的理由、合適的時機和可以檢驗的做法，不能只靠宣布重新開始。"
+    },
+    {
+      "id": "hexagram-50",
+      "kingWenNumber": 50,
+      "name": "鼎",
+      "displayName": "鼎",
+      "unicode": "䷱",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "鼎卦學習：讓內容、承載與使用彼此配合",
+      "plainSummary": "好的內容需要穩固的支撐、妥善的處理和可靠的交付，才能真正幫助別人。"
+    },
+    {
+      "id": "hexagram-51",
+      "kingWenNumber": 51,
+      "name": "震",
+      "displayName": "震",
+      "unicode": "䷲",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "震卦學習：突然受驚後，如何找回合適的步調",
+      "plainSummary": "突如其來的變化會讓人慌亂。先確認眼前的狀況，再把注意力放回最需要照顧的事。"
+    },
+    {
+      "id": "hexagram-52",
+      "kingWenNumber": 52,
+      "name": "艮",
+      "displayName": "艮",
+      "unicode": "䷳",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "艮卦學習：停下來，也要停得合時合宜",
+      "plainSummary": "知道何時該停、該收回注意力，也要知道何時適合重新行動。"
+    },
+    {
+      "id": "hexagram-53",
+      "kingWenNumber": 53,
+      "name": "渐",
+      "displayName": "漸",
+      "unicode": "䷴",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "漸卦學習：讓進展有次序，每一步也有落腳處",
+      "plainSummary": "重要的事可以逐步推進，但每一步都要有實際支撐；拖延本身並不等於循序漸進。"
+    },
+    {
+      "id": "hexagram-54",
+      "kingWenNumber": 54,
+      "name": "归妹",
+      "displayName": "歸妹",
+      "unicode": "䷵",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "歸妹卦學習：看清關係中的位置、條件與選擇",
+      "plainSummary": "進入一段關係或合作之前，先釐清角色、承諾和選擇空間，不要只被一開始的熱情推著走。"
+    },
+    {
+      "id": "hexagram-55",
+      "kingWenNumber": 55,
+      "name": "丰",
+      "displayName": "豐",
+      "unicode": "䷶",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "豐卦學習：事情興盛時，依然看得清楚",
+      "plainSummary": "資源越多、聲勢越大，越要確認重要資訊、實際合作和人的需要沒有被遮住。"
+    },
+    {
+      "id": "hexagram-56",
+      "kingWenNumber": 56,
+      "name": "旅",
+      "displayName": "旅",
+      "unicode": "䷷",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "旅卦學習：身處陌生環境，如何安頓並拿捏分寸",
+      "plainSummary": "來到不熟悉的地方，先找到可靠的落腳處、瞭解規則，再決定自己能承擔什麼。"
+    },
+    {
+      "id": "hexagram-57",
+      "kingWenNumber": 57,
+      "name": "巽",
+      "displayName": "巽",
+      "unicode": "䷸",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "巽卦學習：溫和推進，也保留清楚的判斷",
+      "plainSummary": "柔和的做法能讓事情逐步推進，但不能退讓到失去方向、界線與作決定的能力。"
+    },
+    {
+      "id": "hexagram-58",
+      "kingWenNumber": 58,
+      "name": "兑",
+      "displayName": "兌",
+      "unicode": "䷹",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "兌卦學習：交流愉快，也保持真誠",
+      "plainSummary": "相處愉快很重要，也要看這份愉快是否誠實、尊重界線，並幫助彼此真正理解。"
+    },
+    {
+      "id": "hexagram-59",
+      "kingWenNumber": 59,
+      "name": "涣",
+      "displayName": "渙",
+      "unicode": "䷺",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "渙卦學習：鬆開阻隔，讓聯繫重新流動",
+      "plainSummary": "有些事需要凝聚，有些隔閡需要鬆開。先分清哪些值得保留，哪些正在妨礙合作。"
+    },
+    {
+      "id": "hexagram-60",
+      "kingWenNumber": 60,
+      "name": "节",
+      "displayName": "節",
+      "unicode": "䷻",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "節卦學習：訂下能夠持續的適當限度",
+      "plainSummary": "合適的界線能幫助事情持續；限制若過度嚴苛，也需要及時調整。"
+    },
+    {
+      "id": "hexagram-61",
+      "kingWenNumber": 61,
+      "name": "中孚",
+      "displayName": "中孚",
+      "unicode": "䷼",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "中孚卦學習：讓信任從表裡一致中形成",
+      "plainSummary": "想讓人信任自己，就讓說法、行動和能力所及的承諾盡量一致，也給信任逐步建立的時間。"
+    },
+    {
+      "id": "hexagram-62",
+      "kingWenNumber": 62,
+      "name": "小过",
+      "displayName": "小過",
+      "unicode": "䷽",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "小過卦學習：小事做細，也守住合適的範圍",
+      "plainSummary": "條件只適合小步前進時，就把眼前的細節照顧好，不必靠更大的動作證明自己。"
+    },
+    {
+      "id": "hexagram-63",
+      "kingWenNumber": 63,
+      "name": "既济",
+      "displayName": "既濟",
+      "unicode": "䷾",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "既濟卦學習：完成以後，如何照顧已經做成的事",
+      "plainSummary": "事情完成後，還有交接、維護與檢查；完成不表示從此可以不再照看。"
+    },
+    {
+      "id": "hexagram-64",
+      "kingWenNumber": 64,
+      "name": "未济",
+      "displayName": "未濟",
+      "unicode": "䷿",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "未濟卦學習：還差一步時，如何真正完成",
+      "plainSummary": "事情尚未完成時，先找出缺口與必要條件，別因為接近終點就省略最後的判斷。"
+    }
+  ],
+  "ru": [
+    {
+      "id": "hexagram-01",
+      "kingWenNumber": 1,
+      "name": "乾",
+      "displayName": "Цянь · Творческое начало",
+      "unicode": "䷀",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Цянь — Творческое начало: силе тоже нужен подходящий момент",
+      "plainSummary": "Если есть силы, готовьтесь и действуйте при подходящих условиях; если условия не подходят, умейте вовремя сдержать усилие."
+    },
+    {
+      "id": "hexagram-02",
+      "kingWenNumber": 2,
+      "name": "坤",
+      "displayName": "Кунь · Восприимчивость",
+      "unicode": "䷁",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Кунь — Восприимчивость: поддерживать дело и сохранять своё суждение",
+      "plainSummary": "Сначала выясните, что нужно, и обеспечьте надёжную поддержку; помогая другим, ясно обозначайте свои возможности и границы."
+    },
+    {
+      "id": "hexagram-03",
+      "kingWenNumber": 3,
+      "name": "屯",
+      "displayName": "Чжунь · Трудное начало",
+      "unicode": "䷂",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Чжунь — Трудное начало: сначала создать необходимые условия",
+      "plainSummary": "Встречая сопротивление в начале, выясните, в чём проблема и кто может помочь, прежде чем выбирать дальнейший шаг."
+    },
+    {
+      "id": "hexagram-04",
+      "kingWenNumber": 4,
+      "name": "蒙",
+      "displayName": "Мэн · Неопытность",
+      "unicode": "䷃",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Мэн — Неопытность: как яснее спросить о непонятном",
+      "plainSummary": "Признайте, чего ещё не понимаете, задайте конкретный вопрос и примените объяснение в конкретном упражнении."
+    },
+    {
+      "id": "hexagram-05",
+      "kingWenNumber": 5,
+      "name": "需",
+      "displayName": "Сюй · Ожидание",
+      "unicode": "䷄",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Сюй — Ожидание: готовиться, пока складываются условия",
+      "plainSummary": "Когда нужно ждать, сохраняйте разумный ритм, готовьте то, что уже можно подготовить, и определите, какая перемена станет основанием для действия."
+    },
+    {
+      "id": "hexagram-06",
+      "kingWenNumber": 6,
+      "name": "讼",
+      "displayName": "Сун · Спор",
+      "unicode": "䷅",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Сун — Спор: понять, что именно нужно разрешить",
+      "plainSummary": "Даже считая себя правым, сначала различите факты, цель и цену спора, затем выбирайте ответ."
+    },
+    {
+      "id": "hexagram-07",
+      "kingWenNumber": 7,
+      "name": "师",
+      "displayName": "Ши · Войско",
+      "unicode": "䷆",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Ши — Войско: чем больше участников, тем яснее нужно распределять ответственность",
+      "plainSummary": "Для общего дела проясните цель, обязанности и ответственных, сохраняя возможность менять план или прекращать участие."
+    },
+    {
+      "id": "hexagram-08",
+      "kingWenNumber": 8,
+      "name": "比",
+      "displayName": "Би · Единение",
+      "unicode": "䷇",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Би — Единение: выбирать спутников и строить доверие",
+      "plainSummary": "Прежде чем сближаться с человеком или группой, проверьте надёжность и соответствие своим потребностям, сохраняя возможность выбора."
+    },
+    {
+      "id": "hexagram-09",
+      "kingWenNumber": 9,
+      "name": "小畜",
+      "displayName": "Сяо Сюй · Малое сдерживание",
+      "unicode": "䷈",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Сяо Сюй — Малое сдерживание: полезное накопление при ограниченных силах",
+      "plainSummary": "Если крупная перемена пока недоступна, делайте посильное и замечайте, когда стоит продолжить, а когда остановиться."
+    },
+    {
+      "id": "hexagram-10",
+      "kingWenNumber": 10,
+      "name": "履",
+      "displayName": "Люй · Поступь",
+      "unicode": "䷉",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Люй — Поступь: сделать обдуманный шаг при наличии риска",
+      "plainSummary": "В ситуации с правилами и риском сначала поймите своё положение и возможности, затем осторожно выбирайте следующий шаг."
+    },
+    {
+      "id": "hexagram-11",
+      "kingWenNumber": 11,
+      "name": "泰",
+      "displayName": "Тай · Согласие",
+      "unicode": "䷊",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Тай — Согласие: заботиться о связях, благодаря которым всё ладится",
+      "plainSummary": "Когда дела идут хорошо, цените возможность сотрудничать, не считая благоприятные условия неизменными."
+    },
+    {
+      "id": "hexagram-12",
+      "kingWenNumber": 12,
+      "name": "否",
+      "displayName": "Пи · Застой",
+      "unicode": "䷋",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Пи — Застой: найти место, где прервалось понимание",
+      "plainSummary": "Когда дело застряло, найдите препятствие в общении или действии, сохраняйте границы и ищите небольшой обоснованный шаг."
+    },
+    {
+      "id": "hexagram-13",
+      "kingWenNumber": 13,
+      "name": "同人",
+      "displayName": "Содружество",
+      "unicode": "䷌",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Изучаем Содружество: как вывести общую цель за пределы тесного круга",
+      "plainSummary": "Чтобы сделать что-то вместе, сначала ясно сформулируйте общую цель и оставьте возможность участвовать людям с разным опытом."
+    },
+    {
+      "id": "hexagram-14",
+      "kingWenNumber": 14,
+      "name": "大有",
+      "displayName": "Великое обладание",
+      "unicode": "䷍",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Изучаем Великое обладание: как нести ответственность, когда имеешь больше",
+      "plainSummary": "Когда ресурсов становится больше, сначала подумайте, как хорошо ими распорядиться, чем делиться и какие обязанности тоже возрастают."
+    },
+    {
+      "id": "hexagram-15",
+      "kingWenNumber": 15,
+      "name": "谦",
+      "displayName": "Скромность",
+      "unicode": "䷎",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Изучаем Скромность: видеть себя точно и оставлять место другим",
+      "plainSummary": "Можно признавать свои успехи и ясно видеть недостатки. Скромность — это чувство меры, а не объявление себя ни на что не годным."
+    },
+    {
+      "id": "hexagram-16",
+      "kingWenNumber": 16,
+      "name": "豫",
+      "displayName": "Воодушевление",
+      "unicode": "䷏",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Изучаем Воодушевление: вслед за увлечением нужны действия",
+      "plainSummary": "Когда все полны энтузиазма и готовы участвовать, превращайте подъём в конкретные договорённости и замечайте, когда он начинает мешать трезвой оценке."
+    },
+    {
+      "id": "hexagram-17",
+      "kingWenNumber": 17,
+      "name": "随",
+      "displayName": "Следование",
+      "unicode": "䷐",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Изучаем Следование: идти за кем-то и понимать свой выбор",
+      "plainSummary": "Следуя за человеком или методом, сохраняйте основания собственного суждения. Если обстоятельства изменились, разрешите себе выбрать заново."
+    },
+    {
+      "id": "hexagram-18",
+      "kingWenNumber": 18,
+      "name": "蛊",
+      "displayName": "Исправление порчи",
+      "unicode": "䷑",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Исправление порчи: как привести в порядок унаследованные проблемы",
+      "plainSummary": "Обнаружив старую проблему, сначала выясните, как она возникла и на что влияет сейчас, затем наметьте исправление и дальнейший уход."
+    },
+    {
+      "id": "hexagram-19",
+      "kingWenNumber": 19,
+      "name": "临",
+      "displayName": "Приближение",
+      "unicode": "䷒",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Изучаем Приближение: к делу и к действительным потребностям",
+      "plainSummary": "Получив возможность приблизиться, помочь или взять ответственность, сначала узнайте реальные обстоятельства и только потом решайте, как вмешаться."
+    },
+    {
+      "id": "hexagram-20",
+      "kingWenNumber": 20,
+      "name": "观",
+      "displayName": "Созерцание",
+      "unicode": "䷓",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Изучаем Созерцание: видеть происходящее и то, как видят вас",
+      "plainSummary": "Расширяйте наблюдение и проверяйте основания, прежде чем двигаться вперёд или отступать. Замечайте также, что ваши поступки приносят другим."
+    },
+    {
+      "id": "hexagram-21",
+      "kingWenNumber": 21,
+      "name": "噬嗑",
+      "displayName": "Разгрызание преграды",
+      "unicode": "䷔",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Изучаем Разгрызание преграды: увидеть помеху и действовать соразмерно",
+      "plainSummary": "Если настоящая проблема мешает делу, сначала выясните факты и правила, затем решайте её. Не позволяйте эмоциям подменить суждение."
+    },
+    {
+      "id": "hexagram-22",
+      "kingWenNumber": 22,
+      "name": "贲",
+      "displayName": "Убранство",
+      "unicode": "䷕",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Убранство: красивая подача и состоятельное содержание",
+      "plainSummary": "Выражайте важное ясно и представляйте уместно, не позволяя украшению заслонять то, что действительно нужно сказать."
+    },
+    {
+      "id": "hexagram-23",
+      "kingWenNumber": 23,
+      "name": "剥",
+      "displayName": "Разрушение",
+      "unicode": "䷖",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Разрушение: сохранить главное при ослаблении основы",
+      "plainSummary": "Если опора слабеет, сначала сократите расход сил, позаботьтесь об основании и определите, что ещё стоит сохранить."
+    },
+    {
+      "id": "hexagram-24",
+      "kingWenNumber": 24,
+      "name": "复",
+      "displayName": "Возвращение",
+      "unicode": "䷗",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "title": "Изучаем Возвращение: как вернуться после отклонения от пути",
+      "plainSummary": "Заметив, что отошли от важного направления, начните с одного посильного исправления. Необязательно ждать полного начала заново."
+    },
+    {
+      "id": "hexagram-25",
+      "kingWenNumber": 25,
+      "name": "无妄",
+      "displayName": "Непреднамеренность",
+      "unicode": "䷘",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "title": "Изучаем Непреднамеренность: действовать честно и признавать пределы контроля",
+      "plainSummary": "Опирайтесь на факты и свои обязанности, сокращая необоснованные догадки. При неожиданности не обвиняйте себя за любой исход."
+    },
+    {
+      "id": "hexagram-26",
+      "kingWenNumber": 26,
+      "name": "大畜",
+      "displayName": "Великое накопление",
+      "unicode": "䷙",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Великое накопление: превращать запас сил в способность действовать",
+      "plainSummary": "Располагая силой, сначала учитесь сдержанности и практике, чтобы накопленное стало умением брать на себя дело."
+    },
+    {
+      "id": "hexagram-27",
+      "kingWenNumber": 27,
+      "name": "颐",
+      "displayName": "Питание",
+      "unicode": "䷚",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Питание: что поддерживает вас и что вы даёте другим",
+      "plainSummary": "Замечайте, что ежедневно принимаете и говорите и насколько уместна поддержка, которой пользуетесь или которую оказываете."
+    },
+    {
+      "id": "hexagram-28",
+      "kingWenNumber": 28,
+      "name": "大过",
+      "displayName": "Великий перевес",
+      "unicode": "䷛",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Изучаем Великий перевес: менять устройство, когда нагрузка превышает опору",
+      "plainSummary": "Если ноша перегружает опоры, сначала оцените возможности и вовремя уменьшите объём, добавьте помощь или измените порядок."
+    },
+    {
+      "id": "hexagram-29",
+      "kingWenNumber": 29,
+      "name": "坎",
+      "displayName": "Кань — Повторяющаяся вода",
+      "unicode": "䷜",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Изучаем Кань («Повторяющаяся вода»): как шаг за шагом отвечать на повторяющиеся трудности",
+      "plainSummary": "Когда трудности повторяются, начните с проверяемых фактов и ищите выход через небольшие шаги, доступные сейчас."
+    },
+    {
+      "id": "hexagram-30",
+      "kingWenNumber": 30,
+      "name": "离",
+      "displayName": "Ли — Сияние и опора",
+      "unicode": "䷝",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Изучаем Ли («Сияние и опора»): на чём держится ясность суждения",
+      "plainSummary": "Чтобы разобраться в происходящем, проверьте опоры своего суждения и сохраните условия для ясного объяснения и дальнейших уточнений."
+    },
+    {
+      "id": "hexagram-31",
+      "kingWenNumber": 31,
+      "name": "咸",
+      "displayName": "Сянь — Взаимное влияние",
+      "unicode": "䷞",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Изучаем Сянь («Взаимное влияние»): как сохранить подлинность отклика под влиянием других",
+      "plainSummary": "Замечайте, что вас тронуло, и оставляйте место размышлению, слушанию и самостоятельному выбору."
+    },
+    {
+      "id": "hexagram-32",
+      "kingWenNumber": 32,
+      "name": "恒",
+      "displayName": "Хэн — Длительность",
+      "unicode": "䷟",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Изучаем Хэн («Длительность»): как поддерживать то, что стоит продолжать",
+      "plainSummary": "Сначала убедитесь, что направление по-прежнему ценно, затем продолжайте в подходящем ритме: длительность не запрещает изменения."
+    },
+    {
+      "id": "hexagram-33",
+      "kingWenNumber": 33,
+      "name": "遁",
+      "displayName": "Дунь — Отступление",
+      "unicode": "䷠",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Изучаем Дунь («Отступление»): как ясно и ответственно отступить",
+      "plainSummary": "Когда условия больше не позволяют продолжать участие, разберитесь в них и завершите дела, вместо того чтобы доказывать свою стойкость одним терпением."
+    },
+    {
+      "id": "hexagram-34",
+      "kingWenNumber": 34,
+      "name": "大壮",
+      "displayName": "Да-чжуан — Великая сила",
+      "unicode": "䷡",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Изучаем Да-чжуан («Великая сила»): чем больше силы, тем важнее способ её применения",
+      "plainSummary": "Даже имея возможность продвигаться, проверяйте уместность способа; настоящая сила оставляет возможность повернуть или остановиться."
+    },
+    {
+      "id": "hexagram-35",
+      "kingWenNumber": 35,
+      "name": "晋",
+      "displayName": "Цзинь — Продвижение",
+      "unicode": "䷢",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Изучаем Цзинь («Продвижение»): как уверенно двигаться после появления возможности",
+      "plainSummary": "Когда приходят возможность и признание, спокойно выполняйте нужную работу и не позволяйте тревоге о приобретениях и потерях сбивать вас с пути."
+    },
+    {
+      "id": "hexagram-36",
+      "kingWenNumber": 36,
+      "name": "明夷",
+      "displayName": "Мин-и — Помрачение света",
+      "unicode": "䷣",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Изучаем Мин-и («Помрачение света»): как беречь ясность и возможность действовать в неблагоприятных условиях",
+      "plainSummary": "Если проявляться или продвигаться сейчас неуместно, сначала защитите важных людей, сведения и ясность суждения, затем ищите подходящее действие."
+    },
+    {
+      "id": "hexagram-37",
+      "kingWenNumber": 37,
+      "name": "家人",
+      "displayName": "Цзя-жэнь — Дом и семья",
+      "unicode": "䷤",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Изучаем Цзя-жэнь («Дом и семья»): близким отношениям тоже нужна ясность в обязанностях",
+      "plainSummary": "В совместной жизни ясно обсуждайте потребности, обязанности и границы, чтобы забота становилась надёжной повседневной практикой."
+    },
+    {
+      "id": "hexagram-38",
+      "kingWenNumber": 38,
+      "name": "睽",
+      "displayName": "Куй — Расхождение",
+      "unicode": "䷥",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Изучаем Куй («Расхождение»): ограниченное сотрудничество при разных взглядах",
+      "plainSummary": "При несовпадении взглядов сначала различите настоящие разногласия и начните разговор с небольших вещей, которые обе стороны могут проверить."
+    },
+    {
+      "id": "hexagram-39",
+      "kingWenNumber": 39,
+      "name": "蹇",
+      "displayName": "Цзянь — Препятствие",
+      "unicode": "䷦",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Изучаем Цзянь («Препятствие»): как найти проходимый путь перед препятствием",
+      "plainSummary": "Если выбранный путь не позволяет продвинуться, разберитесь в препятствии, измените способ действий и найдите помощь, которая даст то, чего не хватает."
+    },
+    {
+      "id": "hexagram-40",
+      "kingWenNumber": 40,
+      "name": "解",
+      "displayName": "Се — Освобождение",
+      "unicode": "䷧",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Изучаем Се («Освобождение»): как завершить дела после ослабления проблемы",
+      "plainSummary": "Когда препятствие ослабевает, определите, что можно закончить, и своевременно выполните оставшиеся необходимые действия."
+    },
+    {
+      "id": "hexagram-41",
+      "kingWenNumber": 41,
+      "name": "损",
+      "displayName": "Сунь — Уменьшение",
+      "unicode": "䷨",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "title": "Изучаем Сунь («Уменьшение»): что уменьшить ради заботы о действительно важном",
+      "plainSummary": "Если нужно что-то сократить, выясните, кто несёт потери и ради чего; безграничная отдача — не единственная форма доброй воли."
+    },
+    {
+      "id": "hexagram-42",
+      "kingWenNumber": 42,
+      "name": "益",
+      "displayName": "И — Прибавление",
+      "unicode": "䷩",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Изучаем И («Прибавление»): как превратить прибавление в настоящую помощь",
+      "plainSummary": "Когда ресурсов или возможностей становится больше, выясните, чьё положение они улучшат, и воплотите пользу в действиях."
+    },
+    {
+      "id": "hexagram-43",
+      "kingWenNumber": 43,
+      "name": "夬",
+      "displayName": "Гуай — Решимость",
+      "unicode": "䷪",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Изучаем Гуай («Решимость»): как ясно объяснить основания и пределы решения",
+      "plainSummary": "Когда вопрос требует определённого ответа, ясно изложите факты и позицию: решимость не нужно доказывать порывом или принуждением."
+    },
+    {
+      "id": "hexagram-44",
+      "kingWenNumber": 44,
+      "name": "姤",
+      "displayName": "Гоу — Встреча",
+      "unicode": "䷫",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": "Изучаем Гоу («Встреча»): как различать влияние и границы при неожиданной встрече",
+      "plainSummary": "Если возможность или новые отношения возникают внезапно, сначала выясните, что они принесут, а затем решите, насколько и на каких условиях вы готовы включиться."
+    },
+    {
+      "id": "hexagram-45",
+      "kingWenNumber": 45,
+      "name": "萃",
+      "displayName": "Цуй — Собирание",
+      "unicode": "䷬",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Собирание: что нужно после того, как люди собрались",
+      "plainSummary": "Собрать людей — лишь начало: ещё нужны общая цель, понятный способ участия и взаимное доверие."
+    },
+    {
+      "id": "hexagram-46",
+      "kingWenNumber": 46,
+      "name": "升",
+      "displayName": "Шэн — Подъём",
+      "unicode": "䷭",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "title": "Гексаграмма Подъём: превратить стремление расти в устойчивые ступени",
+      "plainSummary": "Условия для роста можно накапливать понемногу; важно также замечать, когда дальнейший подъём теряет смысл."
+    },
+    {
+      "id": "hexagram-47",
+      "kingWenNumber": 47,
+      "name": "困",
+      "displayName": "Кунь — Стеснение",
+      "unicode": "䷮",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Стеснение: сохранить пространство для суждения и действия",
+      "plainSummary": "При ограничениях сначала выясните настоящие препятствия и доступную помощь; не нужно доказывать себя бравадой или бесконечными объяснениями."
+    },
+    {
+      "id": "hexagram-48",
+      "kingWenNumber": 48,
+      "name": "井",
+      "displayName": "Цзин — Колодец",
+      "unicode": "䷯",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Колодец: сделать ценные ресурсы действительно доступными",
+      "plainSummary": "Недостаточно иметь ресурс: нужно его поддерживать, помогать находить и обеспечивать реальное использование."
+    },
+    {
+      "id": "hexagram-49",
+      "kingWenNumber": 49,
+      "name": "革",
+      "displayName": "Гэ — Перемена",
+      "unicode": "䷰",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Перемена: какое изменение заслуживает доверия",
+      "plainSummary": "Перемене нужны реальные причины, подходящий момент и проверяемый способ действий: объявить новое начало недостаточно."
+    },
+    {
+      "id": "hexagram-50",
+      "kingWenNumber": 50,
+      "name": "鼎",
+      "displayName": "Дин — Треножник",
+      "unicode": "䷱",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Гексаграмма Треножник: согласовать содержание, опору и использование",
+      "plainSummary": "Хорошему содержанию нужны прочная опора, надлежащая подготовка и надёжная передача, чтобы помогать людям."
+    },
+    {
+      "id": "hexagram-51",
+      "kingWenNumber": 51,
+      "name": "震",
+      "displayName": "Чжэнь — Гром",
+      "unicode": "䷲",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Гексаграмма Гром: вернуть подходящий ритм после внезапного испуга",
+      "plainSummary": "Неожиданность вызывает растерянность. Сначала установите происходящее, затем верните внимание тому, что больше всего нуждается в заботе."
+    },
+    {
+      "id": "hexagram-52",
+      "kingWenNumber": 52,
+      "name": "艮",
+      "displayName": "Гэнь — Остановка",
+      "unicode": "䷳",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "title": "Гексаграмма Остановка: остановиться вовремя и надлежащим образом",
+      "plainSummary": "Знайте, когда остановиться и собрать внимание, но также когда пора вновь действовать."
+    },
+    {
+      "id": "hexagram-53",
+      "kingWenNumber": 53,
+      "name": "渐",
+      "displayName": "Цзянь — Постепенное развитие",
+      "unicode": "䷴",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Гексаграмма Постепенное развитие: порядок движения и подходящие опоры",
+      "plainSummary": "Важное дело можно вести постепенно, но каждому шагу нужна реальная опора: промедление само по себе не последовательное развитие."
+    },
+    {
+      "id": "hexagram-54",
+      "kingWenNumber": 54,
+      "name": "归妹",
+      "displayName": "Гуй-мэй — Выдача младшей сестры замуж",
+      "unicode": "䷵",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "title": "Гексаграмма Гуй-мэй: увидеть своё положение и выбор в отношениях",
+      "plainSummary": "До вступления в отношения или сотрудничество проясните роли, обещания и свободу выбора, не полагаясь лишь на первоначальный восторг."
+    },
+    {
+      "id": "hexagram-55",
+      "kingWenNumber": 55,
+      "name": "丰",
+      "displayName": "Фэн — Изобилие",
+      "unicode": "䷶",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Гексаграмма Изобилие: сохранить ясность, когда дела процветают",
+      "plainSummary": "Чем больше ресурсов и внимания, тем важнее проверить, не скрыты ли существенные сведения, настоящее сотрудничество и нужды людей."
+    },
+    {
+      "id": "hexagram-56",
+      "kingWenNumber": 56,
+      "name": "旅",
+      "displayName": "Люй — Странник",
+      "unicode": "䷷",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "title": "Гексаграмма Странник: устроиться в незнакомом месте и сохранять меру",
+      "plainSummary": "В незнакомой среде сначала найдите надёжную опору и узнайте правила, затем решайте, что можете взять на себя."
+    },
+    {
+      "id": "hexagram-57",
+      "kingWenNumber": 57,
+      "name": "巽",
+      "displayName": "Сюнь — Мягкое проникновение",
+      "unicode": "䷸",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "title": "Гексаграмма Сюнь: продвигаться мягко и сохранять ясное суждение",
+      "plainSummary": "Мягкий подход помогает постепенному продвижению, но уступчивость не должна лишать направления, границ и способности решать."
+    },
+    {
+      "id": "hexagram-58",
+      "kingWenNumber": 58,
+      "name": "兑",
+      "displayName": "Дуй — Радость",
+      "unicode": "䷹",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Радость: приятное общение с сохранением искренности",
+      "plainSummary": "Приятно быть вместе — это ценно. Важно и то, честна ли эта радость, уважает ли границы и помогает ли понимать друг друга."
+    },
+    {
+      "id": "hexagram-59",
+      "kingWenNumber": 59,
+      "name": "涣",
+      "displayName": "Хуань — Рассеяние",
+      "unicode": "䷺",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Гексаграмма Рассеяние: ослабить преграды и восстановить движение связей",
+      "plainSummary": "Одно нужно собирать, другое размыкать: сначала различите ценное и то, что мешает сотрудничеству."
+    },
+    {
+      "id": "hexagram-60",
+      "kingWenNumber": 60,
+      "name": "节",
+      "displayName": "Цзе — Ограничение",
+      "unicode": "䷻",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "title": "Гексаграмма Ограничение: установить посильные пределы",
+      "plainSummary": "Подходящие границы помогают делу продолжаться; чрезмерно суровые ограничения тоже нужно своевременно менять."
+    },
+    {
+      "id": "hexagram-61",
+      "kingWenNumber": 61,
+      "name": "中孚",
+      "displayName": "Чжун-фу — Внутренняя искренность",
+      "unicode": "䷼",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "title": "Гексаграмма Чжун-фу: доверие через действительную согласованность",
+      "plainSummary": "Чтобы вызывать доверие, согласуйте слова, действия и посильные обещания и дайте доверию время вырасти."
+    },
+    {
+      "id": "hexagram-62",
+      "kingWenNumber": 62,
+      "name": "小过",
+      "displayName": "Сяо-го — Малое превышение",
+      "unicode": "䷽",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "title": "Гексаграмма Малое превышение: тщательность в малом и уместный размах",
+      "plainSummary": "Если условия годятся лишь для небольшого шага, позаботьтесь о ближайших деталях: крупный жест для доказательства себя не нужен."
+    },
+    {
+      "id": "hexagram-63",
+      "kingWenNumber": 63,
+      "name": "既济",
+      "displayName": "Цзи-цзи — После завершения",
+      "unicode": "䷾",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "title": "Гексаграмма После завершения: забота об уже сделанном",
+      "plainSummary": "После окончания нужны передача, поддержка и проверка: завершение не означает, что о результате можно больше никогда не заботиться."
+    },
+    {
+      "id": "hexagram-64",
+      "kingWenNumber": 64,
+      "name": "未济",
+      "displayName": "Вэй-цзи — До завершения",
+      "unicode": "䷿",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "title": "Гексаграмма До завершения: действительно закончить, когда остался один шаг",
+      "plainSummary": "Пока дело не завершено, найдите точный пробел и необходимые условия; близость конца не отменяет последней проверки."
+    }
+  ]
+}

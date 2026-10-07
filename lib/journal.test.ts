@@ -44,7 +44,7 @@ test("Traditional Chinese preserves every calendar stem and branch without chang
 
 test("journal advertises all four complete language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 2) * journalLocales.length);
+  assert.equal(entries.length, (journalArticles.length + 2 + 65) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
     for (const locale of journalLocales) {

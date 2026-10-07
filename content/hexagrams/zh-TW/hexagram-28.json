@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-28",
+  "locale": "zh-TW",
+  "kingWenNumber": 28,
+  "name": "大过",
+  "pinyin": "Dà Guò",
+  "englishName": "Dà Guò — Great Preponderance",
+  "unicode": "䷛",
+  "codePoint": "U+4DDB",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "title": "大過卦導讀：負擔超出支撐時，如何調整",
+  "plainSummary": "負擔已讓支撐吃力時，先看清承擔能力，及時減量、補足人力或調整安排。",
+  "introduction": [
+    "有時不是計畫突然變差，而是任務越疊越多，原有的支撐已無法負荷。大過卦用彎曲的屋梁、枯楊再生、涉水沒頂等圖像，討論過重的負擔與非常處境。它可以幫助人承認壓力，卻不能把危險包裝成越勇敢就越該硬撐的英雄故事。"
+  ],
+  "identityText": "大過是傳統文王序第28卦，卦符䷛，下卦巽☴、上卦兌☱，傳統取象分別為風與澤。爻從最下方數起，依次為初六、九二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "大過：棟橈，利有攸往，亨。",
+    "paragraphs": [
+      "棟是屋梁，橈是彎曲。Legge 由中間四條陽爻、上下陰爻的結構讀出大梁支撐不足的意象，並把大過放在異常艱難的情境中解釋。",
+      "卦辭有利於行動的表達，不等於在任何超負荷情況下都繼續加碼。現代學習可以先問：需要的是增加力量，還是減輕負擔、重分責任，甚至退出不合宜的安排？具體選擇仍靠現實證據。"
+    ],
+    "sourceRefs": [
+      "zhouyi-28",
+      "legge1882-28"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》說本末弱；《象傳》以澤水淹木取象，談獨立不懼、遁世無悶。傳文把非常處境中的自持也納入討論。",
+      "今天可以保留不因外界期待而失去判斷的方向。能夠承認自己負擔過重、與人協商改變，並不比繼續忍耐更缺乏責任感；獨立也不等於拒絕一切幫助。"
+    ],
+    "sourceRefs": [
+      "zhouyi-28",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "藉用白茅，无咎。",
+      "focus": "給脆弱的支撐多一點照料",
+      "paragraphs": [
+        "將白茅墊在物下，是 Legge 保留的謹慎圖像。起步的重點在承托，而不只是物品本身。",
+        "準備承擔一項額外工作前，可以先留下必要時間、確認交接條件。細心的前置安排有其價值，不需要等到明顯失誤才補救。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "枯楊生稊，老夫得其女妻，无不利。",
+      "focus": "看見重新生長的可能與歷史比喻",
+      "paragraphs": [
+        "枯楊長出新芽，旁邊並列老夫與年輕妻子的古代婚配意象。Legge 借此讀出生機恢復的可能。",
+        "現代可觀察一件舊事是否真的出現了新的支持條件，而不是只靠懷念重啟。婚配的年齡與性別敘述不能變成評價現實伴侶或生育能力的標準。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "棟橈，凶。",
+      "focus": "確認支撐已不足，就別只靠意志",
+      "paragraphs": [
+        "梁彎的畫面再次出現，Legge 讀為承載遇到嚴重困難。它要求看見實際限度，而非只是情緒上覺得任務很重。",
+        "若一個人連續承擔多份本應分開的工作，可以重新分配或減少範圍。這裡不是建築安全評估，現實梁柱異常需要相應專業處理。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "棟隆，吉。有它吝。",
+      "focus": "恢復支撐以後仍避免旁生負擔",
+      "paragraphs": [
+        "棟隆與棟橈形成對照，Legge 將其讀為梁得到向上的支撐，同時保留有它的警告。其具體爻間解釋不宜直接換成管理公式。",
+        "現代聯想是已經補上關鍵的人手後，先讓新安排穩定，不要立刻加入更多目標。一次緩解還需檢查能否持續。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "枯楊生華，老婦得其士夫，无咎无譽。",
+      "focus": "外在開花未必等於長期恢復",
+      "paragraphs": [
+        "同是枯楊，這裡長的是花，與九二的新芽不同。Legge 保留短暫表現與持續能力之間的區別，也帶有其時代的婚配評價。",
+        "本文不沿用對老年女性的貶低。現代只借樹木形象提醒：眼前看起來熱鬧，是否真的增加了承載條件？需要觀察持續效果，而非憑外觀慶祝。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "過涉滅頂，凶，无咎。",
+      "focus": "勇於承擔不能讓危險消失",
+      "paragraphs": [
+        "涉水超過限度以至沒頂，凶與無咎並列。Legge 也保留結果危險卻未歸責的區別，不能將無咎譯成行動安全。",
+        "現代閱讀應承認，意圖值得理解與結果不可承受可以同時成立。不能用這句勸人冒生命危險、自我犧牲或靠硬撐證明責任；真實危險要以現實保護為先。"
+      ],
+      "sourceRefs": [
+        "zhouyi-28",
+        "legge1882-28"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把超載的志工安排調回可承擔的範圍",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個志工原本負責每月一次活動，後來不斷接受額外請求，報名、宣傳和收尾都集中到他手裡。他終於把實際任務列出來，發現問題並非時間管理不夠努力，而是工作量超過了可用時間。",
+      "小組據此刪減工作項目、重新分工，並約定新增任務需要先確認資源。有人擔心這樣顯得不夠熱心，他仍用事實說明為什麼舊安排無法持續。",
+      "幾週後，小組檢查新的分工是否真的有效。大過在這裡幫助承認並改變承載關係，而不是為長期透支尋找讚美。"
+    ]
+  },
+  "misreadings": [
+    "大過不預測事故、婚姻或生育結果。枯楊與婚配的古代比喻應明確分開，不能用來評判現實人物。",
+    "棟梁和涉水不是工程或戶外安全指南。“無咎”從來不能由本篇轉換成可以忽略生命安全的許可。"
+  ],
+  "practice": [
+    "把一項重負拆成具體任務，比較它需要和實際擁有的時間與支持。",
+    "分別提出減量、補位和改變方式三種可能，檢查哪種真能改善承載。",
+    "寫出一條應當停止繼續加碼的依據，並向有關人說明。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-26",
+      "name": "大畜",
+      "paragraph": "大畜幫助形成能承擔的能力，大過檢查承擔是否已經超過支撐。準備得再認真，也不意味著能夠無上限接下更多事情。"
+    }
+  ],
+  "closing": "讀大過卦時，可以問：需要改變的究竟是我的意志，還是這個安排本身已經不再合理？",
+  "sourceIds": [
+    "zhouyi-28",
+    "legge1882-28",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1811,
+    "nonWhitespaceCharacterCount": 2051,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "大過",
+  "sourceLocale": "zh",
+  "sourceContentHash": "dfd9f3011b99c500b6e465fb3983d0cdbfcf2b3f60cf8e84c5f4b97c072fb0c4",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 大過卦導讀：負擔超出支撐時，如何調整\n\n負擔已讓支撐吃力時，先看清承擔能力，及時減量、補足人力或調整安排。\n\n有時不是計畫突然變差，而是任務越疊越多，原有的支撐已無法負荷。大過卦用彎曲的屋梁、枯楊再生、涉水沒頂等圖像，討論過重的負擔與非常處境。它可以幫助人承認壓力，卻不能把危險包裝成越勇敢就越該硬撐的英雄故事。\n\n## 先認識這一卦\n\n大過是傳統文王序第28卦，卦符䷛，下卦巽☴、上卦兌☱，傳統取象分別為風與澤。爻從最下方數起，依次為初六、九二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━  ━━  上六\n━━━━━━  九五\n━━━━━━  九四\n━━━━━━  九三\n━━━━━━  九二\n━━  ━━  初六\n```\n\n## 卦辭\n\n> 大過：棟橈，利有攸往，亨。\n\n棟是屋梁，橈是彎曲。Legge 由中間四條陽爻、上下陰爻的結構讀出大梁支撐不足的意象，並把大過放在異常艱難的情境中解釋。\n\n卦辭有利於行動的表達，不等於在任何超負荷情況下都繼續加碼。現代學習可以先問：需要的是增加力量，還是減輕負擔、重分責任，甚至退出不合宜的安排？具體選擇仍靠現實證據。\n\n[zhouyi-28; legge1882-28]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》說本末弱；《象傳》以澤水淹木取象，談獨立不懼、遁世無悶。傳文把非常處境中的自持也納入討論。\n\n今天可以保留不因外界期待而失去判斷的方向。能夠承認自己負擔過重、與人協商改變，並不比繼續忍耐更缺乏責任感；獨立也不等於拒絕一切幫助。\n\n[zhouyi-28; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初六 · 給脆弱的支撐多一點照料\n\n> 藉用白茅，无咎。\n\n將白茅墊在物下，是 Legge 保留的謹慎圖像。起步的重點在承托，而不只是物品本身。\n\n準備承擔一項額外工作前，可以先留下必要時間、確認交接條件。細心的前置安排有其價值，不需要等到明顯失誤才補救。\n\n[zhouyi-28; legge1882-28]\n\n### 九二 · 看見重新生長的可能與歷史比喻\n\n> 枯楊生稊，老夫得其女妻，无不利。\n\n枯楊長出新芽，旁邊並列老夫與年輕妻子的古代婚配意象。Legge 借此讀出生機恢復的可能。\n\n現代可觀察一件舊事是否真的出現了新的支持條件，而不是只靠懷念重啟。婚配的年齡與性別敘述不能變成評價現實伴侶或生育能力的標準。\n\n[zhouyi-28; legge1882-28]\n\n### 九三 · 確認支撐已不足，就別只靠意志\n\n> 棟橈，凶。\n\n梁彎的畫面再次出現，Legge 讀為承載遇到嚴重困難。它要求看見實際限度，而非只是情緒上覺得任務很重。\n\n若一個人連續承擔多份本應分開的工作，可以重新分配或減少範圍。這裡不是建築安全評估，現實梁柱異常需要相應專業處理。\n\n[zhouyi-28; legge1882-28]\n\n### 九四 · 恢復支撐以後仍避免旁生負擔\n\n> 棟隆，吉。有它吝。\n\n棟隆與棟橈形成對照，Legge 將其讀為梁得到向上的支撐，同時保留有它的警告。其具體爻間解釋不宜直接換成管理公式。\n\n現代聯想是已經補上關鍵的人手後，先讓新安排穩定，不要立刻加入更多目標。一次緩解還需檢查能否持續。\n\n[zhouyi-28; legge1882-28]\n\n### 九五 · 外在開花未必等於長期恢復\n\n> 枯楊生華，老婦得其士夫，无咎无譽。\n\n同是枯楊，這裡長的是花，與九二的新芽不同。Legge 保留短暫表現與持續能力之間的區別，也帶有其時代的婚配評價。\n\n本文不沿用對老年女性的貶低。現代只借樹木形象提醒：眼前看起來熱鬧，是否真的增加了承載條件？需要觀察持續效果，而非憑外觀慶祝。\n\n[zhouyi-28; legge1882-28]\n\n### 上六 · 勇於承擔不能讓危險消失\n\n> 過涉滅頂，凶，无咎。\n\n涉水超過限度以至沒頂，凶與無咎並列。Legge 也保留結果危險卻未歸責的區別，不能將無咎譯成行動安全。\n\n現代閱讀應承認，意圖值得理解與結果不可承受可以同時成立。不能用這句勸人冒生命危險、自我犧牲或靠硬撐證明責任；真實危險要以現實保護為先。\n\n[zhouyi-28; legge1882-28]\n\n## 把超載的志工安排調回可承擔的範圍\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一個志工原本負責每月一次活動，後來不斷接受額外請求，報名、宣傳和收尾都集中到他手裡。他終於把實際任務列出來，發現問題並非時間管理不夠努力，而是工作量超過了可用時間。\n\n小組據此刪減工作項目、重新分工，並約定新增任務需要先確認資源。有人擔心這樣顯得不夠熱心，他仍用事實說明為什麼舊安排無法持續。\n\n幾週後，小組檢查新的分工是否真的有效。大過在這裡幫助承認並改變承載關係，而不是為長期透支尋找讚美。\n\n## 常見誤讀\n\n1. 大過不預測事故、婚姻或生育結果。枯楊與婚配的古代比喻應明確分開，不能用來評判現實人物。\n\n2. 棟梁和涉水不是工程或戶外安全指南。“無咎”從來不能由本篇轉換成可以忽略生命安全的許可。\n\n## 三個練習\n\n1. 把一項重負拆成具體任務，比較它需要和實際擁有的時間與支持。\n\n2. 分別提出減量、補位和改變方式三種可能，檢查哪種真能改善承載。\n\n3. 寫出一條應當停止繼續加碼的依據，並向有關人說明。\n\n## 延伸閱讀\n\n### 大畜 (hexagram-26)\n\n大畜幫助形成能承擔的能力，大過檢查承擔是否已經超過支撐。準備得再認真，也不意味著能夠無上限接下更多事情。\n\n## 結語\n\n讀大過卦時，可以問：需要改變的究竟是我的意志，還是這個安排本身已經不再合理？\n\n## 資料來源\n\n- [zhouyi-28: 周易·大過](https://zh.wikisource.org/w/index.php?title=周易/大過&oldid=10645184)\n\n- [legge1882-28: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 28, chapter XXVIII, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

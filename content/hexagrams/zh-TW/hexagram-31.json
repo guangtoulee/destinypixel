@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-31",
+  "locale": "zh-TW",
+  "kingWenNumber": 31,
+  "name": "咸",
+  "pinyin": "Xián",
+  "englishName": "Xián — Influence",
+  "unicode": "䷞",
+  "codePoint": "U+4DDE",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+  ],
+  "title": "咸卦學習：受到影響時，怎麼保留真實的回應",
+  "plainSummary": "留意自己被什麼打動，也替思考、傾聽與自主選擇留些空間。",
+  "introduction": [
+    "一句話、一個人的態度，或現場熱烈的氣氛，都可能改變我們的行動。咸卦把影響寫成不同層次，從腳趾、腿部，一直到心思與言語。它有傳統的婚姻脈絡，但不只用於感情占問，更不能拿來證明對方與你心意相通。"
+  ],
+  "identityText": "咸是傳統文王序第31卦，卦符䷞，下卦艮☶、上卦兌☱，傳統取象分別為山與澤。爻從最下方數起，依次為初六、六二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "咸：亨。利貞。取女吉。",
+    "paragraphs": [
+      "Legge 以相互影響理解咸，同時保留婚娶的歷史表達。利貞讓感應仍受合宜條件約束，不能因為被打動就略過事實與對方意願。",
+      "現代學習可先問：我感受到的是什麼，準備採取的行動是否與理解相稱？影響是真實體驗，但對方在想什麼仍需溝通，不能靠自己的感動替別人回答。"
+    ],
+    "sourceRefs": [
+      "zhouyi-31",
+      "legge1882-31"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》以感解釋咸，討論相應；《象傳》以山上有澤取象，提出“虛受人”。讓自己留出接受他人意見的空間，是傳文的一個方向。",
+      "今天傾聽可以包含暫緩反駁、確認理解，也包含保留不同意見。接受影響不等於必須同意，願意回應也不等於放棄邊界。"
+    ],
+    "sourceRefs": [
+      "zhouyi-31",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "咸其拇。",
+      "focus": "先覺察微小的反應",
+      "paragraphs": [
+        "拇在這裡是足的大趾，Legge 從微小身體動作理解影響的開端。爻辭尚未給出一套完整行動。",
+        "收到一則令人激動的消息時，可以先注意自己的第一反應，而不立刻將它變成承諾。感覺值得聽見，但還需要更多資訊。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "咸其腓，凶，居吉。",
+      "focus": "衝動出現時，可以先安住",
+      "paragraphs": [
+        "腓是小腿部位。Legge 將此讀為隨動作而動，安處則有不同判斷。身體意象不是醫療診斷。",
+        "如果氣氛使你想馬上跟進，可以先確認是否真的瞭解內容。稍作停留不一定是在拒絕別人，也可能讓回應更誠實。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "咸其股，執其隨，往吝。",
+      "focus": "別把跟著別人當成自己的判斷",
+      "paragraphs": [
+        "股與執其隨讓影響變得更明顯，Legge 聯繫到緊跟自己所隨之人。文本警惕的是這種行進的侷限。",
+        "當別人換方向你也立刻改變時，可以問自己的目標是否仍清楚。陪伴和合作可以發生，但不必每一步都失去獨立依據。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "貞吉悔亡，憧憧往來，朋從爾思。",
+      "focus": "心思往返時，擴大理解的範圍",
+      "paragraphs": [
+        "Legge 將這一爻聯繫到心思與意向，認為反覆不定的影響容易只停在朋友的圈子中。",
+        "表達一個想法時，可以聽聽不同背景的人怎樣理解。一直只找贊同自己的人，可能使回應越來越熱烈，依據卻沒有增加。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "咸其脢，无悔。",
+      "focus": "有些影響並不需要強烈表現",
+      "paragraphs": [
+        "脢是背部的肉，Legge 指向背後、心上附近的身體圖像，並將之解釋為較少私心卻影響有限的狀態。",
+        "現代可以保留一個樸素問題：是否一定要用很強的表達證明自己在意？有時穩定而具體的行動，比不斷展示感受更清楚。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "咸其輔，頰，舌。",
+      "focus": "分辨真實回應與只剩口舌",
+      "paragraphs": [
+        "輔、頰與舌把影響帶到言語。Legge 的註釋警惕多話與奉承，不能因此否定所有善意表達。",
+        "可以檢查自己說的話是否與行動相符，是否只是為了讓別人按自己的想法回應。誠實溝通需要留給對方說不與解釋的空間。"
+      ],
+      "sourceRefs": [
+        "zhouyi-31",
+        "legge1882-31"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "在熱烈討論中，作出自己的回應",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "幾位朋友討論要一起參加課程，大家都很興奮，一位成員也差點立刻報名。她先說明，自己想了解課程安排與需要投入的時間，再決定是否參加。",
+      "她認真聽朋友分享喜歡這門課的理由，也查看實際內容，發現只有部分符合自己的目標。最後，她選擇參加其中一場公開活動，沒有承諾報名整個系列。",
+      "這樣的回應尊重朋友，也保留自己的條件。學習咸卦，是看見影響如何發生，不是消除所有被打動的可能。"
+    ]
+  },
+  "misreadings": [
+    "咸不能確認命定愛情、他人暗中喜歡你或必然結婚。關係的意願需要當事人表達。",
+    "身體部位是古文意象，不對應疾病診斷；感應也不能被用來合理化操控、說服施壓或忽略同意。"
+  ],
+  "practice": [
+    "回想一次被打動的時刻，分開寫感受、已知事實和準備採取的行動。",
+    "找一個值得認真聽取、卻不完全贊同你的視角。",
+    "檢查一句重要表達是否給對方保留了真實選擇。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-32",
+      "name": "恆",
+      "paragraph": "咸關注影響與回應怎樣開始，恆關注某種關係或做法怎樣持續。最初被打動的強度，不能單獨證明長期適合。"
+    }
+  ],
+  "closing": "讀咸卦時，不妨問自己：我正在真實地回應，還是只是跟著現場氣氛走？",
+  "sourceIds": [
+    "zhouyi-31",
+    "legge1882-31",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1477,
+    "nonWhitespaceCharacterCount": 1695,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "咸",
+  "sourceLocale": "zh",
+  "sourceContentHash": "6c31f3f4bd65fd34450e01bd253475a416f306e9738b7200794410f749cf2440",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 咸卦學習：受到影響時，怎麼保留真實的回應\n\n留意自己被什麼打動，也替思考、傾聽與自主選擇留些空間。\n\n一句話、一個人的態度，或現場熱烈的氣氛，都可能改變我們的行動。咸卦把影響寫成不同層次，從腳趾、腿部，一直到心思與言語。它有傳統的婚姻脈絡，但不只用於感情占問，更不能拿來證明對方與你心意相通。\n\n## 卦的身分與爻序\n\n咸是傳統文王序第31卦，卦符䷞，下卦艮☶、上卦兌☱，傳統取象分別為山與澤。爻從最下方數起，依次為初六、六二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n咸：亨。利貞。取女吉。\n\nLegge 以相互影響理解咸，同時保留婚娶的歷史表達。利貞讓感應仍受合宜條件約束，不能因為被打動就略過事實與對方意願。\n\n現代學習可先問：我感受到的是什麼，準備採取的行動是否與理解相稱？影響是真實體驗，但對方在想什麼仍需溝通，不能靠自己的感動替別人回答。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》以感解釋咸，討論相應；《象傳》以山上有澤取象，提出“虛受人”。讓自己留出接受他人意見的空間，是傳文的一個方向。\n\n今天傾聽可以包含暫緩反駁、確認理解，也包含保留不同意見。接受影響不等於必須同意，願意回應也不等於放棄邊界。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 先覺察微小的反應\n\n咸其拇。\n\n拇在這裡是足的大趾，Legge 從微小身體動作理解影響的開端。爻辭尚未給出一套完整行動。\n\n收到一則令人激動的消息時，可以先注意自己的第一反應，而不立刻將它變成承諾。感覺值得聽見，但還需要更多資訊。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 衝動出現時，可以先安住\n\n咸其腓，凶，居吉。\n\n腓是小腿部位。Legge 將此讀為隨動作而動，安處則有不同判斷。身體意象不是醫療診斷。\n\n如果氣氛使你想馬上跟進，可以先確認是否真的瞭解內容。稍作停留不一定是在拒絕別人，也可能讓回應更誠實。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 別把跟著別人當成自己的判斷\n\n咸其股，執其隨，往吝。\n\n股與執其隨讓影響變得更明顯，Legge 聯繫到緊跟自己所隨之人。文本警惕的是這種行進的侷限。\n\n當別人換方向你也立刻改變時，可以問自己的目標是否仍清楚。陪伴和合作可以發生，但不必每一步都失去獨立依據。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · 心思往返時，擴大理解的範圍\n\n貞吉悔亡，憧憧往來，朋從爾思。\n\nLegge 將這一爻聯繫到心思與意向，認為反覆不定的影響容易只停在朋友的圈子中。\n\n表達一個想法時，可以聽聽不同背景的人怎樣理解。一直只找贊同自己的人，可能使回應越來越熱烈，依據卻沒有增加。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 有些影響並不需要強烈表現\n\n咸其脢，无悔。\n\n脢是背部的肉，Legge 指向背後、心上附近的身體圖像，並將之解釋為較少私心卻影響有限的狀態。\n\n現代可以保留一個樸素問題：是否一定要用很強的表達證明自己在意？有時穩定而具體的行動，比不斷展示感受更清楚。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上六 · 分辨真實回應與只剩口舌\n\n咸其輔，頰，舌。\n\n輔、頰與舌把影響帶到言語。Legge 的註釋警惕多話與奉承，不能因此否定所有善意表達。\n\n可以檢查自己說的話是否與行動相符，是否只是為了讓別人按自己的想法回應。誠實溝通需要留給對方說不與解釋的空間。\n\n引文來源：[zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450), [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 在熱烈討論中，作出自己的回應\n\n原創現代情境\n\n幾位朋友討論要一起參加課程，大家都很興奮，一位成員也差點立刻報名。她先說明，自己想了解課程安排與需要投入的時間，再決定是否參加。\n\n她認真聽朋友分享喜歡這門課的理由，也查看實際內容，發現只有部分符合自己的目標。最後，她選擇參加其中一場公開活動，沒有承諾報名整個系列。\n\n這樣的回應尊重朋友，也保留自己的條件。學習咸卦，是看見影響如何發生，不是消除所有被打動的可能。\n\n## 避免誤讀\n\n- 咸不能確認命定愛情、他人暗中喜歡你或必然結婚。關係的意願需要當事人表達。\n\n- 身體部位是古文意象，不對應疾病診斷；感應也不能被用來合理化操控、說服施壓或忽略同意。\n\n## 三個練習\n\n1. 回想一次被打動的時刻，分開寫感受、已知事實和準備採取的行動。\n\n2. 找一個值得認真聽取、卻不完全贊同你的視角。\n\n3. 檢查一句重要表達是否給對方保留了真實選擇。\n\n## 延伸閱讀\n\n### 恆 (hexagram-32)\n\n咸關注影響與回應怎樣開始，恆關注某種關係或做法怎樣持續。最初被打動的強度，不能單獨證明長期適合。\n\n## 結語\n\n讀咸卦時，不妨問自己：我正在真實地回應，還是只是跟著現場氣氛走？\n\n## 資料來源\n\n- [zhouyi-31](https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450)\n\n- [legge1882-31](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

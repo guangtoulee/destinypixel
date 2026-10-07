@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-32",
+  "locale": "zh",
+  "kingWenNumber": 32,
+  "name": "恒",
+  "pinyin": "Héng",
+  "englishName": "Héng — Duration",
+  "unicode": "䷟",
+  "codePoint": "U+4DDF",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "title": "恒卦学习：把值得坚持的事做得可持续",
+  "plainSummary": "先确认方向仍然值得，再用合适的节奏坚持；持久不等于永远不许调整。",
+  "introduction": [
+    "一开始很用力，并不一定能够走得长久。恒卦既谈持续，也写过早求深、固守无获与用力震动。它帮助读者区分稳定的承诺和僵硬的重复：坚持的对象、方式与条件，都值得检查。"
+  ],
+  "identityText": "恒是传统文王序第32卦，卦符䷟，下卦巽☴、上卦震☳，传统取象分别为风与雷。爻从最下方数起，依次为初六、九二、九三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "恆：亨，无咎。利貞，利有攸往。",
+    "paragraphs": [
+      "Legge 将恒理解为持续行于合宜之道。利有攸往说明持续不必是停在原地；能够长久，仍需正当的方向与行动。",
+      "现代学习可以先问：我真正想保留的是某个价值、关系承诺，还是一个早已不合适的做法？改变方式未必背离初衷，有时恰是使它能继续的条件。"
+    ],
+    "sourceRefs": [
+      "zhouyi-32",
+      "legge1882-32"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》以久解释恒，谈四时变化与终而有始；《象传》以雷风取象，又说立不易方。方向与变化在传统叙述中并不简单排斥。",
+      "今天可以把目标写清楚，允许安排随现实修正。稳定不是每一天都做同样多，而是经过检查仍能诚实地维持必要行动。"
+    ],
+    "sourceRefs": [
+      "zhouyi-32",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "浚恆，貞凶，无攸利。",
+      "focus": "一开始就要求太深，可能难以持续",
+      "paragraphs": [
+        "浚有深的意味，Legge 读到起始便过度追求长久。持续不是靠第一天将强度开到最大来保证。",
+        "恢复写作习惯时，先选可完成的范围。过早要求天天写出最好作品，反而可能使实际练习无法形成。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "悔亡。",
+      "focus": "稳当的做法不一定戏剧化",
+      "paragraphs": [
+        "这一爻极短，《象传》以能久中解释；Legge 也从中位与持续合宜的角度展开。",
+        "如果一项安排正在稳定运转，不必为了显得有进步就不断换方法。可以定期检查实际效果，让有效的部分有时间发挥作用。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "不恆其德，或承之羞，貞吝。",
+      "focus": "反复失去原则，会影响信任",
+      "paragraphs": [
+        "Legge 将此读为不能持续维持德行，可能受到责难。重点是行为的一贯性，不是要求人永不承认错误。",
+        "时而答应、时而否认相同的约定，会让别人难以配合。若条件确实改变，应及时解释并重新协商，而不是让别人猜。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "田无禽。",
+      "focus": "坚持在不合适的地方，可能没有收获",
+      "paragraphs": [
+        "田中没有猎物，是简洁的无获图像。Legge 结合位置解释其不得，并非说时间投入得越久就越正确。",
+        "如果一种方法长期不回应目标，可以检查是否选错对象或缺少必要条件。调整不一定是没有毅力，继续也不能只因已经投入很多。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "恆其德，貞，婦人吉，夫子凶。",
+      "focus": "看见历史角色差别，保留现代自主",
+      "paragraphs": [
+        "这条按古代妇人、夫子角色给出不同判断，Legge 也沿夫妇秩序解释。不能删掉性别差异后声称原文就是现代平等观点。",
+        "本文不沿用女性应服从、男性应主导的规范。所有人在长期关系里，都可以讨论什么值得坚持、何时需要独立判断和重新协商。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "震恆，凶。",
+      "focus": "靠不断加力维持，未必是真正稳定",
+      "paragraphs": [
+        "震恒的图像带有动摇与激烈动作，Legge 将之读为用强烈努力强求持续。",
+        "若一个安排只有在不断催促、牺牲休息时才能维持，值得重新设计。真正的持续需要与能力相称，而不只是一次又一次撑过去。"
+      ],
+      "sourceRefs": [
+        "zhouyi-32",
+        "legge1882-32"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "让一项共同约定走得长久",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "两位朋友约定定期交流读书心得，最初想每周讨论整本书，后来发现准备时间不足。她们保留认真阅读与交流的目标，将安排改为隔一段时间讨论一个章节。",
+      "忙碌时，她们提前说明，重新约定时间；若连续几次都无法完成，就检查方式是否还适合，而不是只责怪谁不够坚持。",
+      "恒的现代学习价值在于让承诺有清楚而可持续的形式。修改安排不一定削弱关系，也可能让它更真实。"
+    ]
+  },
+  "misreadings": [
+    "恒不要求维持伤害、不公平或已经不合适的关系，也不保证坚持一定获得成功。",
+    "六五的历史性别规则需要说明，不能用来限制当代任何人的选择。卦象也不预测婚姻期限或事业寿命。"
+  ],
+  "practice": [
+    "写下真正想长期保留的目标，和当前用来实现它的具体方式。",
+    "检查这个方式是否与现有时间、能力和相关人的意愿相称。",
+    "约一个合理的回顾节点，决定哪些需保持、哪些可调整。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-31",
+      "name": "咸",
+      "paragraph": "咸讨论被打动与相互回应，恒讨论怎样继续。强烈的开始可以珍惜，持续的条件仍要另外建立。"
+    }
+  ],
+  "closing": "读恒卦时，可以问：我正在持续做有价值的事，还是只是在持续重复一个不再合适的办法？",
+  "sourceIds": [
+    "zhouyi-32",
+    "legge1882-32",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "页面路径用“恒”，经文保留“恆”；上六采用底本正文“震”，页面另列“振”异文。",
+  "counts": {
+    "chineseCharacterCount": 1437,
+    "nonWhitespaceCharacterCount": 1652,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "恒",
+  "sourceLocale": "zh",
+  "sourceContentHash": "f4b15e9e5d2b582554a82582de920b0bdf8da1e38abe6a989587201dce05d2df",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 恒卦学习：把值得坚持的事做得可持续\n\n一句话：先确认方向仍然值得，再用合适的节奏坚持；持久不等于永远不许调整。\n\n一开始很用力，并不一定能够走得长久。恒卦既谈持续，也写过早求深、固守无获与用力震动。它帮助读者区分稳定的承诺和僵硬的重复：坚持的对象、方式与条件，都值得检查。\n\n## 先认清这是什么卦\n\n恒是传统文王序第32卦，卦符䷟，下卦巽☴、上卦震☳，传统取象分别为风与雷。爻从最下方数起，依次为初六、九二、九三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷟　上卦：震☳　下卦：巽☴\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辞说了什么\n\n经文：“恆：亨，无咎。利貞，利有攸往。”\n\nLegge 将恒理解为持续行于合宜之道。利有攸往说明持续不必是停在原地；能够长久，仍需正当的方向与行动。\n\n现代学习可以先问：我真正想保留的是某个价值、关系承诺，还是一个早已不合适的做法？改变方式未必背离初衷，有时恰是使它能继续的条件。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》以久解释恒，谈四时变化与终而有始；《象传》以雷风取象，又说立不易方。方向与变化在传统叙述中并不简单排斥。\n\n今天可以把目标写清楚，允许安排随现实修正。稳定不是每一天都做同样多，而是经过检查仍能诚实地维持必要行动。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初六：一开始就要求太深，可能难以持续\n\n经文：“浚恆，貞凶，无攸利。”\n\n浚有深的意味，Legge 读到起始便过度追求长久。持续不是靠第一天将强度开到最大来保证。\n\n恢复写作习惯时，先选可完成的范围。过早要求天天写出最好作品，反而可能使实际练习无法形成。\n\n### 九二：稳当的做法不一定戏剧化\n\n经文：“悔亡。”\n\n这一爻极短，《象传》以能久中解释；Legge 也从中位与持续合宜的角度展开。\n\n如果一项安排正在稳定运转，不必为了显得有进步就不断换方法。可以定期检查实际效果，让有效的部分有时间发挥作用。\n\n### 九三：反复失去原则，会影响信任\n\n经文：“不恆其德，或承之羞，貞吝。”\n\nLegge 将此读为不能持续维持德行，可能受到责难。重点是行为的一贯性，不是要求人永不承认错误。\n\n时而答应、时而否认相同的约定，会让别人难以配合。若条件确实改变，应及时解释并重新协商，而不是让别人猜。\n\n### 九四：坚持在不合适的地方，可能没有收获\n\n经文：“田无禽。”\n\n田中没有猎物，是简洁的无获图像。Legge 结合位置解释其不得，并非说时间投入得越久就越正确。\n\n如果一种方法长期不回应目标，可以检查是否选错对象或缺少必要条件。调整不一定是没有毅力，继续也不能只因已经投入很多。\n\n### 六五：看见历史角色差别，保留现代自主\n\n经文：“恆其德，貞，婦人吉，夫子凶。”\n\n这条按古代妇人、夫子角色给出不同判断，Legge 也沿夫妇秩序解释。不能删掉性别差异后声称原文就是现代平等观点。\n\n本文不沿用女性应服从、男性应主导的规范。所有人在长期关系里，都可以讨论什么值得坚持、何时需要独立判断和重新协商。\n\n### 上六：靠不断加力维持，未必是真正稳定\n\n经文：“震恆，凶。”\n\n震恒的图像带有动摇与激烈动作，Legge 将之读为用强烈努力强求持续。\n\n若一个安排只有在不断催促、牺牲休息时才能维持，值得重新设计。真正的持续需要与能力相称，而不只是一次又一次撑过去。\n\n## 让一项共同约定走得长久\n\n以下是为学习而设的现代情境。\n\n两位朋友约定定期交流读书心得，最初想每周讨论整本书，后来发现准备时间不足。她们保留认真阅读与交流的目标，将安排改为隔一段时间讨论一个章节。\n\n忙碌时，她们提前说明，重新约定时间；若连续几次都无法完成，就检查方式是否还适合，而不是只责怪谁不够坚持。\n\n恒的现代学习价值在于让承诺有清楚而可持续的形式。修改安排不一定削弱关系，也可能让它更真实。\n\n## 几个容易误读的地方\n\n恒不要求维持伤害、不公平或已经不合适的关系，也不保证坚持一定获得成功。\n\n六五的历史性别规则需要说明，不能用来限制当代任何人的选择。卦象也不预测婚姻期限或事业寿命。\n\n## 做一个小练习\n\n1. 写下真正想长期保留的目标，和当前用来实现它的具体方式。\n2. 检查这个方式是否与现有时间、能力和相关人的意愿相称。\n3. 约一个合理的回顾节点，决定哪些需保持、哪些可调整。\n\n## 和咸卦一起读\n\n咸讨论被打动与相互回应，恒讨论怎样继续。强烈的开始可以珍惜，持续的条件仍要另外建立。\n\n读恒卦时，可以问：我正在持续做有价值的事，还是只是在持续重复一个不再合适的办法？\n\n## 阅读依据\n\n- [周易·恒](https://zh.wikisource.org/w/index.php?title=周易/恒&oldid=10646486)。Received text; Wikisource revision 10646486。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 32, chapter XXXII, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n\n文字说明：页面路径用“恒”，经文保留“恆”；上六采用底本正文“震”，页面另列“振”异文。\n"
+}

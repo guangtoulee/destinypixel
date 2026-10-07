@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-21",
+  "locale": "en",
+  "kingWenNumber": 21,
+  "name": "噬嗑",
+  "pinyin": "Shì Kè",
+  "englishName": "Shì Kè — Biting Through",
+  "unicode": "䷔",
+  "codePoint": "U+4DD4",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+  ],
+  "title": "Studying Biting Through: seeing an obstacle clearly and addressing it appropriately",
+  "plainSummary": "When a real problem blocks progress, establish the facts and rules before addressing it. Do not let emotion replace judgment.",
+  "introduction": [
+    "Some situations cannot continue on goodwill alone: an agreement is repeatedly ignored, or a key problem remains unaddressed. Biting Through uses biting through an obstruction to discuss restoring passage, and directly concerns ancient punishment and justice. Understanding this historical background prevents rewriting it as “solving problems requires harsh punishment of others.”"
+  ],
+  "identityText": "Shì Kè is hexagram 21 in the traditional King Wen sequence, with the symbol ䷔. Its lower trigram is Zhen ☳ and its upper trigram is Li ☲; their traditional images are thunder and fire, respectively. Count the lines from the bottom: 初九, 六二, 六三, 九四, 六五, 上九. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "噬嗑：亨。利用獄。",
+    "paragraphs": [
+      "Legge explains Biting Through as something between the jaws that must be removed, connecting it with legal restraint in political life. Yu here concerns cases and penal justice; it cannot be understood only as a modern prison building.",
+      "Contemporary learning can retain the aim of identifying and handling problems, but specific rules, powers, and procedures require independent grounds. This article does not use a hexagram to determine anyone’s guilt or advise on litigation outcomes or forms of punishment."
+    ],
+    "sourceRefs": [
+      "zhouyi-21",
+      "legge1882-21"
+    ],
+    "classicalTranslation": "Editorial rendering: Biting Through: favorable progress. It is beneficial to deal with judicial matters."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.",
+      "The Commentary on the Judgment describes something between the jaws and favorable progress through biting it apart. The Commentary on the Images takes thunder and lightning and speaks of making penalties clear and enforcing laws. These commentaries emphasize rules and discernment while retaining the limits of ancient institutions.",
+      "In ordinary collaboration, first explain which agreement has not been fulfilled and what effects this has had, then seek an appropriate correction. The aim should be to restore an understandable order, not to vent anger through dealing with a problem."
+    ],
+    "sourceRefs": [
+      "zhouyi-21",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "屨校滅趾，无咎。",
+      "focus": "Face the real context of ancient punishment",
+      "paragraphs": [
+        "This line describes a punishment device at the feet and the toes. Legge’s note also examines whether mie means restraint or actual injury; it must not be casually turned into gentle advice.",
+        "The contemporary analogy concerns only making rules clear early and correcting problems promptly. No corporal punishment, humiliation, or privately inflicted penalty can derive legitimacy from this ancient text."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: A restraint fitted at the feet covers or injures the toes; the sense of mie is disputed. No blame."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "噬膚滅鼻，无咎。",
+      "focus": "Even relatively easy problems require proportionate handling",
+      "paragraphs": [
+        "The image of biting into soft flesh and the nose appears in this line. Legge retains the picture of forceful penetration. It still belongs to this hexagram’s system of penal metaphors.",
+        "Even when an error is easy to see, the response needs clarity and proportion. Checking facts and allowing those involved to explain helps more than continually hardening your tone because you feel justified."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: Biting into soft flesh, the nose disappears into it. No blame."
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "噬臘肉，遇毒，小吝，无咎。",
+      "focus": "Difficulty may bring unpleasant feedback",
+      "paragraphs": [
+        "Dried meat and encountering poison make biting through the obstacle difficult. Legge interprets the poison as something disagreeable and hard to handle; readers need not infer that someone is being poisoned in real life.",
+        "Pointing out a longstanding problem may meet resistance. First distinguish what information the resistance provides and what misunderstandings need clarification. An unpleasant response does not by itself prove that you are right."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: Biting dried meat, one encounters poison. A little cause for regret; no blame."
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "噬乾胏，得金矢，利艱貞，吉。",
+      "focus": "Hard problems make solid grounds more important",
+      "paragraphs": [
+        "Zi concerns dried meat with bone. Legge places metal and arrows in the context of pledges or deposits in ancient hearings as he explains them. The wording does not promise an unexpected financial windfall.",
+        "In everyday affairs, keep clear records and check what was originally agreed. The greater the difficulty, the less you can base a decision only on impressions or personal likes and dislikes."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: Biting dried meat on the bone, one obtains metal arrows. Difficulty joined with right constancy is beneficial. Good fortune."
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "噬乾肉，得黃金，貞厲，无咎。",
+      "focus": "Stay alert when you hold the power to judge",
+      "paragraphs": [
+        "Dried meat, yellow metal, and constancy amid danger appear together. Legge develops the judge’s balance, right conduct, and caution; finding “metal” does not remove the warning of danger.",
+        "If you coordinate a disagreement, explain the grounds and limits of your judgment and listen to information not yet included. Neither your position nor majority support makes a judgment automatically correct."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: Biting dried meat, one obtains yellow metal. Right constancy amid danger; no blame."
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "何校滅耳，凶。",
+      "focus": "Do not wait until only serious consequences remain",
+      "paragraphs": [
+        "The last line returns to a punishment device at the neck and the image of ears. Legge connects this with the grave situation of refusing to hear advice. Harsh historical punishments should not be romanticized.",
+        "A contemporary lesson is to ask whether you keep refusing to check clear feedback. Responding and correcting early leaves more room than waiting until a relationship or undertaking suffers greater damage."
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": "Editorial rendering: Bearing a wooden restraint at the neck, the ears are covered or harmed. Misfortune."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Repeatedly ignoring shared-space rules",
+    "label": "Original contemporary scenario",
+    "paragraphs": [
+      "A shared studio has agreed that people will clear the communal table before leaving, but someone repeatedly fails to do so. Instead of humiliating the person in the group chat, the coordinator verifies the specific occasions, effects, and clarity of the original instructions, then speaks directly with them.",
+      "If the problem continues, the group needs to act under its mutually accepted rules, explaining how they will be applied and how objections can be raised. The coordinator also checks practical causes such as insufficient equipment or an unreasonable schedule.",
+      "Biting Through here helps identify the real obstruction. It cannot replace a legitimate basis for rules, still less place anyone in a self-appointed position of judgment."
+    ]
+  },
+  "misreadings": [
+    "This hexagram contains punishment. Historical violence must neither be minimized nor used to authorize present-day punishment, revenge, or accusations.",
+    "Images of poison, flesh, and metal arrows are not predictions of illness, poisoning, or financial fortune. Legal and safety matters require real evidence and appropriate help."
+  ],
+  "practice": [
+    "Write the problem as specific facts and effects, removing judgments about anyone’s character.",
+    "Confirm whether the applicable rule is clear, whether those involved know it, and who has authority to act.",
+    "Propose a correction aimed at restoring order, while leaving room to hear new information."
+  ],
+  "related": [
+    {
+      "id": "hexagram-06",
+      "name": "Conflict",
+      "paragraph": "Conflict examines how disagreement forms and escalates; Biting Through examines how an existing obstruction is handled. Neither replaces facts or fair procedures, and neither treats winning the dispute itself as resolution."
+    }
+  ],
+  "closing": "When reading Biting Through, ask: am I handling a specific problem, or do I simply want someone to feel they have lost?",
+  "sourceIds": [
+    "zhouyi-21",
+    "legge1882-21",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "The third six uses the variant 臘 explicitly listed on the source page; its main text has 昔.",
+  "counts": {
+    "chineseCharacterCount": 78,
+    "nonWhitespaceCharacterCount": 7425,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "Biting Through",
+  "sourceLocale": "zh",
+  "sourceContentHash": "f51ea5fc18522ea30e480e8bc0d40ca54572b6f0e76d684921639b28b630656e",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Biting Through: seeing an obstacle clearly and addressing it appropriately\n\nWhen a real problem blocks progress, establish the facts and rules before addressing it. Do not let emotion replace judgment.\n\nSome situations cannot continue on goodwill alone: an agreement is repeatedly ignored, or a key problem remains unaddressed. Biting Through uses biting through an obstruction to discuss restoring passage, and directly concerns ancient punishment and justice. Understanding this historical background prevents rewriting it as “solving problems requires harsh punishment of others.”\n\n## Identifying the hexagram\n\nShì Kè is hexagram 21 in the traditional King Wen sequence, with the symbol ䷔. Its lower trigram is Zhen ☳ and its upper trigram is Li ☲; their traditional images are thunder and fire, respectively. Count the lines from the bottom: 初九, 六二, 六三, 九四, 六五, 上九. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.\n\nThe six lines are numbered from the bottom upward; the figure below displays their actual positions from top to bottom.\n\n```text\n━━━━━━  上九\n━━  ━━  六五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## Hexagram statement\n\n> 噬嗑：亨。利用獄。\n\nEditorial rendering: Biting Through: favorable progress. It is beneficial to deal with judicial matters.\n\nLegge explains Biting Through as something between the jaws that must be removed, connecting it with legal restraint in political life. Yu here concerns cases and penal justice; it cannot be understood only as a modern prison building.\n\nContemporary learning can retain the aim of identifying and handling problems, but specific rules, powers, and procedures require independent grounds. This article does not use a hexagram to determine anyone’s guilt or advise on litigation outcomes or forms of punishment.\n\n[zhouyi-21; legge1882-21]\n\n## Interpretation in the Ten Wings\n\nThe Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.\n\nThe Commentary on the Judgment describes something between the jaws and favorable progress through biting it apart. The Commentary on the Images takes thunder and lightning and speaks of making penalties clear and enforcing laws. These commentaries emphasize rules and discernment while retaining the limits of ancient institutions.\n\nIn ordinary collaboration, first explain which agreement has not been fulfilled and what effects this has had, then seek an appropriate correction. The aim should be to restore an understandable order, not to vent anger through dealing with a problem.\n\n[zhouyi-21; hon-sep]\n\n## Six lines, from bottom to top\n\nThe quotations below are line statements; the explanations that follow are original learning commentary. Good fortune, no blame, and regret belong to ancient divinatory language and cannot be turned directly into guarantees about an individual’s future.\n\n### 初九 · Face the real context of ancient punishment\n\n> 屨校滅趾，无咎。\n\nEditorial rendering: A restraint fitted at the feet covers or injures the toes; the sense of mie is disputed. No blame.\n\nThis line describes a punishment device at the feet and the toes. Legge’s note also examines whether mie means restraint or actual injury; it must not be casually turned into gentle advice.\n\nThe contemporary analogy concerns only making rules clear early and correcting problems promptly. No corporal punishment, humiliation, or privately inflicted penalty can derive legitimacy from this ancient text.\n\n[zhouyi-21; legge1882-21]\n\n### 六二 · Even relatively easy problems require proportionate handling\n\n> 噬膚滅鼻，无咎。\n\nEditorial rendering: Biting into soft flesh, the nose disappears into it. No blame.\n\nThe image of biting into soft flesh and the nose appears in this line. Legge retains the picture of forceful penetration. It still belongs to this hexagram’s system of penal metaphors.\n\nEven when an error is easy to see, the response needs clarity and proportion. Checking facts and allowing those involved to explain helps more than continually hardening your tone because you feel justified.\n\n[zhouyi-21; legge1882-21]\n\n### 六三 · Difficulty may bring unpleasant feedback\n\n> 噬臘肉，遇毒，小吝，无咎。\n\nEditorial rendering: Biting dried meat, one encounters poison. A little cause for regret; no blame.\n\nDried meat and encountering poison make biting through the obstacle difficult. Legge interprets the poison as something disagreeable and hard to handle; readers need not infer that someone is being poisoned in real life.\n\nPointing out a longstanding problem may meet resistance. First distinguish what information the resistance provides and what misunderstandings need clarification. An unpleasant response does not by itself prove that you are right.\n\n[zhouyi-21; legge1882-21]\n\n### 九四 · Hard problems make solid grounds more important\n\n> 噬乾胏，得金矢，利艱貞，吉。\n\nEditorial rendering: Biting dried meat on the bone, one obtains metal arrows. Difficulty joined with right constancy is beneficial. Good fortune.\n\nZi concerns dried meat with bone. Legge places metal and arrows in the context of pledges or deposits in ancient hearings as he explains them. The wording does not promise an unexpected financial windfall.\n\nIn everyday affairs, keep clear records and check what was originally agreed. The greater the difficulty, the less you can base a decision only on impressions or personal likes and dislikes.\n\n[zhouyi-21; legge1882-21]\n\n### 六五 · Stay alert when you hold the power to judge\n\n> 噬乾肉，得黃金，貞厲，无咎。\n\nEditorial rendering: Biting dried meat, one obtains yellow metal. Right constancy amid danger; no blame.\n\nDried meat, yellow metal, and constancy amid danger appear together. Legge develops the judge’s balance, right conduct, and caution; finding “metal” does not remove the warning of danger.\n\nIf you coordinate a disagreement, explain the grounds and limits of your judgment and listen to information not yet included. Neither your position nor majority support makes a judgment automatically correct.\n\n[zhouyi-21; legge1882-21]\n\n### 上九 · Do not wait until only serious consequences remain\n\n> 何校滅耳，凶。\n\nEditorial rendering: Bearing a wooden restraint at the neck, the ears are covered or harmed. Misfortune.\n\nThe last line returns to a punishment device at the neck and the image of ears. Legge connects this with the grave situation of refusing to hear advice. Harsh historical punishments should not be romanticized.\n\nA contemporary lesson is to ask whether you keep refusing to check clear feedback. Responding and correcting early leaves more room than waiting until a relationship or undertaking suffers greater damage.\n\n[zhouyi-21; legge1882-21]\n\n## Repeatedly ignoring shared-space rules\n\nOriginal contemporary scenario\n\nThe following contemporary scenario was created for learning.\n\nA shared studio has agreed that people will clear the communal table before leaving, but someone repeatedly fails to do so. Instead of humiliating the person in the group chat, the coordinator verifies the specific occasions, effects, and clarity of the original instructions, then speaks directly with them.\n\nIf the problem continues, the group needs to act under its mutually accepted rules, explaining how they will be applied and how objections can be raised. The coordinator also checks practical causes such as insufficient equipment or an unreasonable schedule.\n\nBiting Through here helps identify the real obstruction. It cannot replace a legitimate basis for rules, still less place anyone in a self-appointed position of judgment.\n\n## Common misreadings\n\n1. This hexagram contains punishment. Historical violence must neither be minimized nor used to authorize present-day punishment, revenge, or accusations.\n\n2. Images of poison, flesh, and metal arrows are not predictions of illness, poisoning, or financial fortune. Legal and safety matters require real evidence and appropriate help.\n\n## Three practices\n\n1. Write the problem as specific facts and effects, removing judgments about anyone’s character.\n\n2. Confirm whether the applicable rule is clear, whether those involved know it, and who has authority to act.\n\n3. Propose a correction aimed at restoring order, while leaving room to hear new information.\n\n## Related reading\n\n### Conflict (hexagram-06)\n\nConflict examines how disagreement forms and escalates; Biting Through examines how an existing obstruction is handled. Neither replaces facts or fair procedures, and neither treats winning the dispute itself as resolution.\n\n## Closing question\n\nWhen reading Biting Through, ask: am I handling a specific problem, or do I simply want someone to feel they have lost?\n\n## Textual note\n\nThe third six uses the variant 臘 explicitly listed on the source page; its main text has 昔.\n\n## Sources\n\n- [zhouyi-21: 周易·噬嗑](https://zh.wikisource.org/w/index.php?title=周易/噬嗑&oldid=10645753)\n\n- [legge1882-21: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 21, chapter XXI, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nClassical quotations retain the Chinese source’s character forms and modern punctuation. The commentary is translated from original Simplified Chinese learning prose. The historical English source and received Chinese text are used together, and interpretations by later translators are attributed in the article. This article is not a basis for medical, investment, or other professional decisions.\n"
+}

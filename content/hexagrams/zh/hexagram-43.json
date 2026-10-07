@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-43",
+  "locale": "zh",
+  "kingWenNumber": 43,
+  "name": "夬",
+  "pinyin": "Guài",
+  "englishName": "Guài — Resolution",
+  "unicode": "䷪",
+  "codePoint": "U+4DEA",
+  "lowerTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "title": "夬卦学习：需要决断时，把依据与分寸讲清楚",
+  "plainSummary": "该明确处理的问题，就把事实和立场说清；决断不需要靠冲动或强迫来证明。",
+  "introduction": [
+    "长期模糊的事情，有时确实需要作出决定。夬卦讨论公开说明、呼告与排除阻碍，但卦辞也直接说不利即戎。它不把坚决等同于动武或羞辱别人，反而要求读者看见行动的风险与方式。"
+  ],
+  "identityText": "夬是传统文王序第43卦，卦符䷪，下卦乾☰、上卦兑☱，传统取象分别为天与泽。爻从最下方数起，依次为初九、九二、九三、九四、九五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "夬：揚于王庭，孚號，有厲，告自邑，不利即戎，利有攸往。",
+    "paragraphs": [
+      "Legge 按古代王庭公开处理有罪权臣的政治场景解释，同时保留诚恳呼告、认识危险与不立即诉诸武力的限制。这个历史解读不能替现代人裁定谁是罪人。",
+      "现代可以借它思考，如何把事实、需要处理的问题和决定范围说清。公开表达的影响越大，越需要证据与合适程序，不能用一张卦来支持未经核实的指控。"
+    ],
+    "sourceRefs": [
+      "zhouyi-43",
+      "legge1882-43"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》以决解释夬，并将决与和相连；《象传》以泽上于天取象，谈施禄及下。传文的决断并非只有强硬的一面。",
+      "今天可以把坚定和尊重并行：决定可以清楚，解释也应让相关人理解。能够听取新证据，不会自动使立场变得软弱。"
+    ],
+    "sourceRefs": [
+      "zhouyi-43",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "壯于前趾，往不勝為咎。",
+      "focus": "想先冲出去，也要看是否具备条件",
+      "paragraphs": [
+        "Legge 将足趾的强劲读作自恃力量而抢先推进，结果却不能完成。它区分想动与能够合宜地行动。",
+        "发表重要结论前，可以先核实事实与受影响范围。情绪强烈并不能补上信息缺口。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "惕號，莫夜有戎，勿恤。",
+      "focus": "警觉与求助需要具体内容",
+      "paragraphs": [
+        "警惕呼号、夜间可能有戎，属于古代不安的行动场景。Legge 保留准备与呼援的意味。",
+        "现代可提前说明需要谁确认、发生变化怎样联系。它不预言有人会在夜里袭击，也不应让人因卦象而怀疑周围人的动机。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "壯于頄，有凶。君子夬夬，獨行遇雨，若濡有慍，无咎。",
+      "focus": "坚定不必表现为盛气凌人",
+      "paragraphs": [
+        "頄涉及面部，Legge 将其读作强硬的神色；后面又写独行、遇雨与受怨。古文不把表现得凶猛作为稳妥的决断。",
+        "可以用清楚的事实表达不同意，而不是靠音量或姿态压住别人。遭到不满也不自动证明自己正确，仍要回看依据。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "臀无膚，其行次且。牽羊悔亡，聞言不信。",
+      "focus": "受困时，别连有用的话也听不进",
+      "paragraphs": [
+        "身体受损与行走迟缓是严酷的古代图像，Legge 又讨论不愿接受合宜引导的处境。不能将其用作现实身体预测。",
+        "如果自己的办法已经明显失效，可以听取有依据的建议。接受某一步帮助不等于把所有判断交给别人，也不必为了维护面子拒绝调整。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "莧陸夬夬，中行无咎。",
+      "focus": "处理问题时仍保留中正的尺度",
+      "paragraphs": [
+        "Legge 将莧陸按植物意象解释，并将决断与中位联系起来，同时承认象征不易安排。植物所指不宜假装毫无争议。",
+        "现代类比是针对清楚的问题作有限处理，而不把所有相关人或相似事物一起否定。明确范围能让决断更负责任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "无號，終有凶。",
+      "focus": "失去回应渠道也是需要注意的处境",
+      "paragraphs": [
+        "末爻无号，在 Legge 的读法中是无人可呼求相助的孤立。它不是对读者必将被抛弃的预言。",
+        "作决定时，可以保持必要的说明与沟通渠道。若已陷入孤立，也可以寻找可信的外部帮助，而不是把一条凶辞当成无路可走。"
+      ],
+      "sourceRefs": [
+        "zhouyi-43",
+        "legge1882-43"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "明确一项不能继续含糊的合作安排",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一个合作项目反复增加未约定的任务，负责人决定重新划定范围。她先列出原先约定、后来变化与可用资源，再与相关人讨论哪些必须保留、哪些需要另行安排。",
+      "她没有在公开群聊中猜测谁故意占便宜，也没有因准备明确边界就拒绝所有补充信息。最终决定有清楚依据与执行方式，未解决部分仍被记录。",
+      "夬在这里帮助结束模糊，而不是把合作关系变成清算谁的战场。"
+    ]
+  },
+  "misreadings": [
+    "夬不能授权未经核实的公开指控、报复或武力。古代除罪的政治场景不等于个人可自行审判。",
+    "决断也不保证成功，更不支持通过制造孤立、威胁或羞辱迫使人同意。"
+  ],
+  "practice": [
+    "将准备明确处理的事项写成可以核实的事实与范围。",
+    "列出仍需听取的一条相关信息，避免把决断变成拒绝事实。",
+    "选择适合的说明对象和方式，减少不必要的公开伤害。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-44",
+      "name": "姤",
+      "paragraph": "夬关注已经明确需要处理的局面，姤关注新的相遇进入之后怎样辨认与设定边界。决定与接纳都需要实际依据。"
+    }
+  ],
+  "closing": "读夬卦时，可以问：我能否清楚说明要处理什么，而不靠把某个人描绘成敌人来支持决定？",
+  "sourceIds": [
+    "zhouyi-43",
+    "legge1882-43",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1501,
+    "nonWhitespaceCharacterCount": 1710,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "夬",
+  "sourceLocale": "zh",
+  "sourceContentHash": "e9b6697143aff18a088a717f78efdea04f781a867e8ca6f8e84ebe9baf4da834",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 夬卦学习：需要决断时，把依据与分寸讲清楚\n\n一句话：该明确处理的问题，就把事实和立场说清；决断不需要靠冲动或强迫来证明。\n\n长期模糊的事情，有时确实需要作出决定。夬卦讨论公开说明、呼告与排除阻碍，但卦辞也直接说不利即戎。它不把坚决等同于动武或羞辱别人，反而要求读者看见行动的风险与方式。\n\n## 先认清这是什么卦\n\n夬是传统文王序第43卦，卦符䷪，下卦乾☰、上卦兑☱，传统取象分别为天与泽。爻从最下方数起，依次为初九、九二、九三、九四、九五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷪　上卦：兑☱　下卦：乾☰\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辞说了什么\n\n经文：“夬：揚于王庭，孚號，有厲，告自邑，不利即戎，利有攸往。”\n\nLegge 按古代王庭公开处理有罪权臣的政治场景解释，同时保留诚恳呼告、认识危险与不立即诉诸武力的限制。这个历史解读不能替现代人裁定谁是罪人。\n\n现代可以借它思考，如何把事实、需要处理的问题和决定范围说清。公开表达的影响越大，越需要证据与合适程序，不能用一张卦来支持未经核实的指控。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》以决解释夬，并将决与和相连；《象传》以泽上于天取象，谈施禄及下。传文的决断并非只有强硬的一面。\n\n今天可以把坚定和尊重并行：决定可以清楚，解释也应让相关人理解。能够听取新证据，不会自动使立场变得软弱。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初九：想先冲出去，也要看是否具备条件\n\n经文：“壯于前趾，往不勝為咎。”\n\nLegge 将足趾的强劲读作自恃力量而抢先推进，结果却不能完成。它区分想动与能够合宜地行动。\n\n发表重要结论前，可以先核实事实与受影响范围。情绪强烈并不能补上信息缺口。\n\n### 九二：警觉与求助需要具体内容\n\n经文：“惕號，莫夜有戎，勿恤。”\n\n警惕呼号、夜间可能有戎，属于古代不安的行动场景。Legge 保留准备与呼援的意味。\n\n现代可提前说明需要谁确认、发生变化怎样联系。它不预言有人会在夜里袭击，也不应让人因卦象而怀疑周围人的动机。\n\n### 九三：坚定不必表现为盛气凌人\n\n经文：“壯于頄，有凶。君子夬夬，獨行遇雨，若濡有慍，无咎。”\n\n頄涉及面部，Legge 将其读作强硬的神色；后面又写独行、遇雨与受怨。古文不把表现得凶猛作为稳妥的决断。\n\n可以用清楚的事实表达不同意，而不是靠音量或姿态压住别人。遭到不满也不自动证明自己正确，仍要回看依据。\n\n### 九四：受困时，别连有用的话也听不进\n\n经文：“臀无膚，其行次且。牽羊悔亡，聞言不信。”\n\n身体受损与行走迟缓是严酷的古代图像，Legge 又讨论不愿接受合宜引导的处境。不能将其用作现实身体预测。\n\n如果自己的办法已经明显失效，可以听取有依据的建议。接受某一步帮助不等于把所有判断交给别人，也不必为了维护面子拒绝调整。\n\n### 九五：处理问题时仍保留中正的尺度\n\n经文：“莧陸夬夬，中行无咎。”\n\nLegge 将莧陸按植物意象解释，并将决断与中位联系起来，同时承认象征不易安排。植物所指不宜假装毫无争议。\n\n现代类比是针对清楚的问题作有限处理，而不把所有相关人或相似事物一起否定。明确范围能让决断更负责任。\n\n### 上六：失去回应渠道也是需要注意的处境\n\n经文：“无號，終有凶。”\n\n末爻无号，在 Legge 的读法中是无人可呼求相助的孤立。它不是对读者必将被抛弃的预言。\n\n作决定时，可以保持必要的说明与沟通渠道。若已陷入孤立，也可以寻找可信的外部帮助，而不是把一条凶辞当成无路可走。\n\n## 明确一项不能继续含糊的合作安排\n\n以下是为学习而设的现代情境。\n\n一个合作项目反复增加未约定的任务，负责人决定重新划定范围。她先列出原先约定、后来变化与可用资源，再与相关人讨论哪些必须保留、哪些需要另行安排。\n\n她没有在公开群聊中猜测谁故意占便宜，也没有因准备明确边界就拒绝所有补充信息。最终决定有清楚依据与执行方式，未解决部分仍被记录。\n\n夬在这里帮助结束模糊，而不是把合作关系变成清算谁的战场。\n\n## 几个容易误读的地方\n\n夬不能授权未经核实的公开指控、报复或武力。古代除罪的政治场景不等于个人可自行审判。\n\n决断也不保证成功，更不支持通过制造孤立、威胁或羞辱迫使人同意。\n\n## 做一个小练习\n\n1. 将准备明确处理的事项写成可以核实的事实与范围。\n2. 列出仍需听取的一条相关信息，避免把决断变成拒绝事实。\n3. 选择适合的说明对象和方式，减少不必要的公开伤害。\n\n## 和姤卦一起读\n\n夬关注已经明确需要处理的局面，姤关注新的相遇进入之后怎样辨认与设定边界。决定与接纳都需要实际依据。\n\n读夬卦时，可以问：我能否清楚说明要处理什么，而不靠把某个人描绘成敌人来支持决定？\n\n## 阅读依据\n\n- [周易·夬](https://zh.wikisource.org/w/index.php?title=周易/夬&oldid=2405003)。Received text; Wikisource revision 2405003。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 43, chapter XLIII, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-49",
+  "locale": "zh-TW",
+  "kingWenNumber": 49,
+  "name": "革",
+  "pinyin": "Gé",
+  "englishName": "Gé — Revolution",
+  "unicode": "䷰",
+  "codePoint": "U+4DF0",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "離",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兌",
+    "image": "澤",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0
+  ],
+  "title": "革卦學習：什麼樣的改變值得信任",
+  "plainSummary": "改變需要真實的理由、合適的時機和可以檢驗的做法，不能只靠宣布重新開始。",
+  "introduction": [
+    "革卦中的革既有皮革意象，也被用於變更與改革。六爻從用牛皮束住寫到虎變、豹變、革面，提醒讀者改變有不同深度。它不把任何激烈動作都叫作進步，也不要求為了保持穩定而永遠拒絕變化。"
+  ],
+  "identityText": "革是傳統文王序第49卦，卦符䷰，下卦離☲、上卦兌☱，傳統取象分別為火與澤。爻從最下方往上數，依次為初九、六二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "革：已日乃孚，元亨。利貞。悔亡。",
+    "paragraphs": [
+      "所據古文作“已日乃孚”，Legge 將之解釋為改變之後，信任才逐漸成立。其他斷讀與用字傳統存在差異，本文不據此推算某個具體日期。",
+      "現代學習可從中提出一個實際問題：人們為何應相信這次改變？理由、過程和實際效果都要能被理解。宣佈換名稱、改口號，不等於問題已經被處理；謹慎也不等於只要有人不安就不能改變。"
+    ],
+    "sourceRefs": [
+      "zhouyi-49",
+      "legge1882-49"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》以水火相息等語解釋革，又把天地四時與湯武革命並舉。這是傳文擴展出的政治歷史論述，需要與簡短卦辭分層閱讀。",
+      "《象傳》說澤中有火，並談治曆明時。本文在日常事務中取其辨認時機、使安排清楚的方向，不把古代政治正當性論述用來為現實暴力或奪權背書。"
+    ],
+    "sourceRefs": [
+      "zhouyi-49",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "鞏用黃牛之革。",
+      "focus": "尚未具備條件時，先約束衝動",
+      "paragraphs": [
+        "黃色牛皮被用作牢固束縛，Legge 認為初位還不適合貿然發動變更。它不是叫人把其他人強行控制起來。",
+        "剛發現問題時，可以先收集實例、瞭解原因，避免把第一種想到的做法立刻強加給所有人。約束的是急於行動的衝動，而非壓住他人的意見。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "已日乃革之，征吉，无咎。",
+      "focus": "行動應有充分準備與時機",
+      "paragraphs": [
+        "此爻再次出現已日，Legge 讀作經過適當時間之後實施改變。關鍵是條件成熟，而非任何固定等候天數。",
+        "如果原安排確有問題，替代方法也經過討論，就可以清楚說明何時切換、如何過渡、誰會受到影響。準備不能無限拖延，但也不應被省略。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "征凶，貞厲，革言三就，有孚。",
+      "focus": "重要變化需要反覆核實",
+      "paragraphs": [
+        "貿然前往有凶，即使自認持正也需警覺；革言三就呈現反覆討論而後獲得信任。Legge 同樣突出審慎商議。",
+        "對影響多人的改動，可以讓不同使用者實際檢查。三不是必須召開三次會議的機械規定，反覆也應帶來新資訊，而不是只讓同一句話被重複贊同。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "悔亡，有孚改命，吉。",
+      "focus": "把改變落到真實而可信的安排",
+      "paragraphs": [
+        "改命在古代有更改命令、制度或政治安排的意味。Legge 將信任與更改規定聯繫起來，不能直接套作個人命運已被改寫。",
+        "一項新規則若要成立，應說明為何改、適用於誰、如何執行。負責人願意接受同樣的檢查，往往比要求別人先無條件相信更重要。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "大人虎變，未占有孚。",
+      "focus": "深刻改變應能被看見",
+      "paragraphs": [
+        "虎的紋理鮮明，Legge 借此解釋重大變更具有清楚可見的效果，信任不必僅依賴占問。",
+        "如果協作方式真的改善，人們應能看到等待減少、說明更清楚或問題得到回應。可觀察的變化，比不斷宣稱自己已經完成改革更有說服力。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "君子豹變，小人革面，征凶，居貞吉。",
+      "focus": "分辨改變的深度，也知道何時安定",
+      "paragraphs": [
+        "豹變與革面有內外、深淺的對照，Legge 保留了古代君子小人的分類。末句又警告繼續推進的風險。",
+        "現代不能憑一次表情判斷誰只是裝樣子。可以用持續行為檢查改變，也給新安排穩定運行的時間，避免剛完成一次調整又為追求新鮮而全部推倒。"
+      ],
+      "sourceRefs": [
+        "zhouyi-49",
+        "legge1882-49"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "重新安排一個公共預約流程",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個工作室的預約方式常使成員重複登記。負責人先收集具體衝突，確認問題出在記錄分散，而不是簡單認定大家不配合。她提出統一入口，並讓不同使用習慣的人試用。",
+      "切換之前，小組說明舊預約如何保留、誰負責處理疑問，並給不熟悉新方式的人提供幫助。試用發現的新問題被記錄下來，沒有為了證明做法正確而隱藏。",
+      "流程穩定以後，負責人停止頻繁更換工具，轉而觀察效果。革卦在這裡關心改變是否可信、是否解決問題，以及何時該讓變化落定。"
+    ]
+  },
+  "misreadings": [
+    "革不預言政局，也不為現實暴力、脅迫或破壞提供正當理由。",
+    "虎變、豹變和革面不是識別人品的測驗；已日也不提供個人轉運日期。"
+  ],
+  "practice": [
+    "寫出改變要解決的一個具體問題，並記錄可觀察的依據。",
+    "列出受影響的人，確認他們需要哪些說明和過渡安排。",
+    "為新做法確定檢查效果的方式，也說明什麼情況下應繼續修正或停止改動。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-50",
+      "name": "鼎",
+      "paragraph": "革關注舊安排如何改變，鼎關注新的承載與秩序如何發揮作用。改變之後還要有人維護新的日常，不能讓改革永遠停留在宣佈的時刻。"
+    }
+  ],
+  "closing": "讀革卦時，可以問：別人能從什麼實際變化中相信這次調整，而不只是聽見我的決心？",
+  "sourceIds": [
+    "zhouyi-49",
+    "legge1882-49",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "卦辭與六二保留所據頁面的“已日”；不擅改為“己日”，也不據該字建立日期算法。",
+  "counts": {
+    "chineseCharacterCount": 1652,
+    "nonWhitespaceCharacterCount": 1887,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "革",
+  "sourceLocale": "zh",
+  "sourceContentHash": "e5c554ae730f9846c3f747893d910fe2aa6afad92068045e928ba2ecccd150f1",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 革卦學習：什麼樣的改變值得信任\n\n改變需要真實的理由、合適的時機和可以檢驗的做法，不能只靠宣布重新開始。\n\n革卦中的革既有皮革意象，也被用於變更與改革。六爻從用牛皮束住寫到虎變、豹變、革面，提醒讀者改變有不同深度。它不把任何激烈動作都叫作進步，也不要求為了保持穩定而永遠拒絕變化。\n\n革是傳統文王序第49卦，卦符䷰，下卦離☲、上卦兌☱，傳統取象分別為火與澤。爻從最下方往上數，依次為初九、六二、九三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 1 0 1 1 1 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n革：已日乃孚，元亨。利貞。悔亡。\n\n所據古文作“已日乃孚”，Legge 將之解釋為改變之後，信任才逐漸成立。其他斷讀與用字傳統存在差異，本文不據此推算某個具體日期。\n\n現代學習可從中提出一個實際問題：人們為何應相信這次改變？理由、過程和實際效果都要能被理解。宣佈換名稱、改口號，不等於問題已經被處理；謹慎也不等於只要有人不安就不能改變。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》以水火相息等語解釋革，又把天地四時與湯武革命並舉。這是傳文擴展出的政治歷史論述，需要與簡短卦辭分層閱讀。\n\n《象傳》說澤中有火，並談治曆明時。本文在日常事務中取其辨認時機、使安排清楚的方向，不把古代政治正當性論述用來為現實暴力或奪權背書。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初九 · 尚未具備條件時，先約束衝動\n\n鞏用黃牛之革。\n\n黃色牛皮被用作牢固束縛，Legge 認為初位還不適合貿然發動變更。它不是叫人把其他人強行控制起來。\n\n剛發現問題時，可以先收集實例、瞭解原因，避免把第一種想到的做法立刻強加給所有人。約束的是急於行動的衝動，而非壓住他人的意見。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 行動應有充分準備與時機\n\n已日乃革之，征吉，无咎。\n\n此爻再次出現已日，Legge 讀作經過適當時間之後實施改變。關鍵是條件成熟，而非任何固定等候天數。\n\n如果原安排確有問題，替代方法也經過討論，就可以清楚說明何時切換、如何過渡、誰會受到影響。準備不能無限拖延，但也不應被省略。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 重要變化需要反覆核實\n\n征凶，貞厲，革言三就，有孚。\n\n貿然前往有凶，即使自認持正也需警覺；革言三就呈現反覆討論而後獲得信任。Legge 同樣突出審慎商議。\n\n對影響多人的改動，可以讓不同使用者實際檢查。三不是必須召開三次會議的機械規定，反覆也應帶來新資訊，而不是只讓同一句話被重複贊同。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 把改變落到真實而可信的安排\n\n悔亡，有孚改命，吉。\n\n改命在古代有更改命令、制度或政治安排的意味。Legge 將信任與更改規定聯繫起來，不能直接套作個人命運已被改寫。\n\n一項新規則若要成立，應說明為何改、適用於誰、如何執行。負責人願意接受同樣的檢查，往往比要求別人先無條件相信更重要。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 深刻改變應能被看見\n\n大人虎變，未占有孚。\n\n虎的紋理鮮明，Legge 借此解釋重大變更具有清楚可見的效果，信任不必僅依賴占問。\n\n如果協作方式真的改善，人們應能看到等待減少、說明更清楚或問題得到回應。可觀察的變化，比不斷宣稱自己已經完成改革更有說服力。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 分辨改變的深度，也知道何時安定\n\n君子豹變，小人革面，征凶，居貞吉。\n\n豹變與革面有內外、深淺的對照，Legge 保留了古代君子小人的分類。末句又警告繼續推進的風險。\n\n現代不能憑一次表情判斷誰只是裝樣子。可以用持續行為檢查改變，也給新安排穩定運行的時間，避免剛完成一次調整又為追求新鮮而全部推倒。\n\n參考來源: [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173), [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 重新安排一個公共預約流程\n\n原創現代情境\n\n一個工作室的預約方式常使成員重複登記。負責人先收集具體衝突，確認問題出在記錄分散，而不是簡單認定大家不配合。她提出統一入口，並讓不同使用習慣的人試用。\n\n切換之前，小組說明舊預約如何保留、誰負責處理疑問，並給不熟悉新方式的人提供幫助。試用發現的新問題被記錄下來，沒有為了證明做法正確而隱藏。\n\n流程穩定以後，負責人停止頻繁更換工具，轉而觀察效果。革卦在這裡關心改變是否可信、是否解決問題，以及何時該讓變化落定。\n\n## 避免誤讀\n\n- 革不預言政局，也不為現實暴力、脅迫或破壞提供正當理由。\n\n- 虎變、豹變和革面不是識別人品的測驗；已日也不提供個人轉運日期。\n\n## 三個練習\n\n1. 寫出改變要解決的一個具體問題，並記錄可觀察的依據。\n\n2. 列出受影響的人，確認他們需要哪些說明和過渡安排。\n\n3. 為新做法確定檢查效果的方式，也說明什麼情況下應繼續修正或停止改動。\n\n## 延伸閱讀\n\n鼎 (hexagram-50): 革關注舊安排如何改變，鼎關注新的承載與秩序如何發揮作用。改變之後還要有人維護新的日常，不能讓改革永遠停留在宣佈的時刻。\n\n讀革卦時，可以問：別人能從什麼實際變化中相信這次調整，而不只是聽見我的決心？\n\n## 版本說明\n\n卦辭與六二保留所據頁面的“已日”；不擅改為“己日”，也不據該字建立日期算法。\n\n## 參考來源\n\n- [zhouyi-49](https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173)\n\n- [legge1882-49](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-49 · SHA256 e5c554ae730f9846c3f747893d910fe2aa6afad92068045e928ba2ecccd150f1\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

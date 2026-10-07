@@ -1,3 +1,5 @@
+import { hexagramNumber } from "@/lib/hexagram-learning/identity";
+import { hexagramMetadata } from "@/lib/hexagram-learning/metadata";
 import { productFactsHref } from "./product-facts";
 import { compatibilityHref } from "./compatibility/copy";
 import assert from "node:assert/strict";
@@ -64,6 +66,8 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
       const url = new URL(variant);
       const canonical = url.pathname === "/journal/day-pillars"
         ? dayPillarLibraryMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined)).alternates?.canonical
+        : url.pathname === "/journal/hexagrams" || hexagramNumber(url.pathname.split("/")[2] ?? "")
+        ? hexagramMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined),hexagramNumber(url.pathname.split("/")[2] ?? "")).alternates?.canonical
         : url.pathname === "/journal" || url.pathname.startsWith("/journal/")
         ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
         : url.pathname === "/day-pillar"

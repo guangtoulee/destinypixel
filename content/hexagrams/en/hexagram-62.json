@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-62",
+  "locale": "en",
+  "kingWenNumber": 62,
+  "name": "小过",
+  "pinyin": "Xiǎo Guò",
+  "englishName": "Xiǎo Guò — Small Preponderance",
+  "unicode": "䷽",
+  "codePoint": "U+4DFD",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "mountain",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "thunder",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+  ],
+  "title": "Learning from Small Preponderance (Xiǎo Guò): attend carefully to small things without exceeding the right scope",
+  "plainSummary": "When conditions support only small steps, take good care of the details before you; a larger action is not needed to prove yourself.",
+  "introduction": [
+    "Xiaoguo does not mean “a small mistake is therefore harmless.” The judgment explicitly distinguishes small and great matters and uses the image of a flying bird leaving its call, with descent preferable to ascent. The lines repeatedly discuss exceeding, meeting, guarding, and caution, revealing the importance of scope, proportion, and timely adjustment."
+  ],
+  "identityText": "小过 is hexagram 62 in the traditional King Wen sequence, with the symbol ䷽. Its lower trigram is 艮☶ and its upper trigram is 震☳, traditionally associated with mountain and thunder respectively. Count the lines from the bottom: 初六, 六二, 九三, 九四, 六五, 上六. A solid line is yang; a broken line is yin. Nine and six identify yang and yin in the line labels; they do not add extra lines.",
+  "guaci": {
+    "label": "The judgment",
+    "classical": "小過：亨。利貞。可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。",
+    "paragraphs": [
+      "Legge interprets Xiaoguo as exceeding in small matters, especially appropriate adjustments in ceremony and nonessential matters. He does not understand it as permission to break principles at will.",
+      "For modern study, first verify the information, time, and support available. If conditions suit a limited task, complete it carefully rather than expanding rashly because the aim looks insufficiently grand. Descent is a direction in the classical bird image, not advice about the floor on which to live or a route to travel."
+    ],
+    "sourceRefs": [
+      "zhouyi-62",
+      "legge1882-62"
+    ],
+    "classicalTranslation": "Original editorial rendering, not a quotation from Legge: Small exceeding: favorable progress. Constancy is beneficial. Small matters are possible; great matters are not. A flying bird leaves its call. Ascent is unsuitable; descent is suitable. Great good fortune."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment and the Commentary on the Images belong to the Yi Zhuan, the commentaries usually called the “Ten Wings.” Here their explanations are kept distinct from the judgment and line texts, before turning to modern applications for study.",
+      "The Commentary on the Judgment explains the meaning through the small exceeding and action in accord with the time. The Commentary on the Images depicts thunder above a mountain and lists going somewhat beyond in respect, mourning, and frugality. Its modest excess is situated in specific contexts.",
+      "Today, this may be understood as careful attention to details, without requiring excessive self-suppression, forced grief, or deprivation of basic needs. What counts as an appropriate little extra still depends on the actual object, cultural setting, and the feelings of those involved."
+    ],
+    "sourceRefs": [
+      "zhouyi-62",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "飛鳥以凶。",
+      "focus": "Rushing upward at the beginning may leave no foothold",
+      "paragraphs": [
+        "The bird appears already in the first line. Legge interprets it as excessive ascent producing an unfavorable result. The line does not point to a particular real-world aviation accident.",
+        "In a task where you lack experience, first complete a verifiable portion before deciding whether to expand. Promising the entire result too early may leave no time even to establish basic conditions."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: The flying bird brings an unfavorable outcome."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "過其祖，遇其妣；不及其君，遇其臣；无咎。",
+      "focus": "Finding the appropriate contact matters more than dramatic escalation",
+      "paragraphs": [
+        "Grandfather and grandmother, ruler and minister form an ancient relational order. Legge explains meeting a suitable counterpart in the corresponding position, avoiding a hostile or overreaching approach to the ruler.",
+        "A modern analogy is taking a problem to someone who can actually handle it while respecting clearly assigned responsibilities. This does not mean that every hierarchy is beyond question, or prohibit necessary appeals or requests for help."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: Passing the grandfather, meeting the grandmother; not reaching the ruler, meeting the minister. No blame."
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "弗過防之，從或戕之，凶。",
+      "focus": "When an extra check is called for, do not rely on luck",
+      "paragraphs": [
+        "This line concerns injury following insufficient precaution. Legge emphasizes the need for additional care. An ancient warning cannot justify blaming real people who have been harmed.",
+        "For ordinary affairs, check a readily overlooked point once more, such as the version or recipient of a handover. Caution should correspond to a specific risk, not turn everyone into a potential aggressor."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: Not taking extra precautions, one may be followed and harmed. Unfavorable."
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "无咎，弗過遇之。往厲必戒，勿用永貞。",
+      "focus": "Caution also needs adjustment as circumstances change",
+      "paragraphs": [
+        "The line combines no blame, danger in proceeding, and a warning against permanent constancy. Legge notes that a particular form of firmness need not be maintained forever.",
+        "If the reason for a temporary restriction has disappeared, reassess it. Good proportion is not perpetual hesitation: it means knowing why you are holding back now and under which conditions you can move forward again."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: No blame: not exceeding, but meeting what is appropriate. Going brings danger; be sure to take care. Do not maintain this unchanging forever."
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "密雲不雨，自我西郊，公弋取彼在穴。",
+      "focus": "The appearance of readiness may precede an actual supply",
+      "paragraphs": [
+        "Dense clouds without rain appear beside shooting something in a cave with a corded arrow. Legge speculates about the clouds and a historical political background; this article does not treat that speculation as an established fact about the text’s composition.",
+        "Ask whether help that is actually needed has arrived, even when preparation looks extensive. Deal first with a small problem within reach rather than waiting only for a vague major opportunity."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: Dense clouds, but no rain, from our western outskirts. The lord shoots with a corded arrow and takes what is in the cave."
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "弗遇過之，飛鳥離之，凶，是謂災眚。",
+      "focus": "Exceeding the appropriate range can miss the original landing place",
+      "paragraphs": [
+        "The final line returns to the bird. Legge reads a failure to adapt to circumstances, flying too high. This distinguishes a little extra in small matters from a loss of proportion.",
+        "If a task keeps expanding, return to its original purpose and check which additions are truly necessary. Acknowledging the need to reduce scope does not deny the effort already completed."
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": "Original editorial rendering, not a quotation from Legge: Not meeting it, but going beyond it: the flying bird goes too far. Unfavorable; this is called calamity and error."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Revising an event guide with limited time",
+    "label": "Original modern scenario",
+    "paragraphs": [
+      "A volunteer has only one afternoon to organize an event guide. She first confirms the time, place, registration procedure, and working contact details rather than immediately redesigning all the visuals, historical background, and promotional language.",
+      "Before release, she asks someone else to follow the instructions in practice. They discover an easily misunderstood access point, which she corrects promptly. She schedules additional material for later instead of inserting unverified information to create an appearance of completeness.",
+      "Learning from Xiaoguo means attention to scope and detail: make the current task reliable and acknowledge present resource limits. Small steps do not lower responsibility; they make commitments proportionate to conditions."
+    ]
+  },
+  "misreadings": [
+    "Xiaoguo does not predict accidents, injury, or weather. Its language of precaution cannot justify inventing malicious intentions in others.",
+    "Respect, grief, and frugality should not be mechanically turned into demands for self-degradation, forced mourning, or harm to basic living needs."
+  ],
+  "practice": [
+    "Define the smallest scope you can reliably complete now.",
+    "Choose one detail with a real reason for another check, and explain the specific problem that check can prevent.",
+    "Identify a signal to stop expanding scope while retaining conditions for reassessment later."
+  ],
+  "related": [
+    {
+      "id": "hexagram-28",
+      "name": "Daguo — Great Exceeding",
+      "paragraph": "Daguo emphasizes excessive load and major exceptional conditions; Xiaoguo emphasizes proportion and caution within a small scope. Great and small do not rank people’s worth. They describe scales of action to be assessed according to circumstances."
+    }
+  ],
+  "closing": "When reading Xiaoguo, ask: would one more large undertaking really help more right now than making this small one reliable?",
+  "sourceIds": [
+    "zhouyi-62",
+    "legge1882-62",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 121,
+    "nonWhitespaceCharacterCount": 7070,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Xiǎo Guò — Small Preponderance",
+  "sourceLocale": "zh",
+  "sourceContentHash": "2a41576261e65e404b473cb64b351c2f09f51ade9d0aa14fff3e7111cf29d0f3",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Learning from Small Preponderance (Xiǎo Guò): attend carefully to small things without exceeding the right scope\n\nWhen conditions support only small steps, take good care of the details before you; a larger action is not needed to prove yourself.\n\nXiaoguo does not mean “a small mistake is therefore harmless.” The judgment explicitly distinguishes small and great matters and uses the image of a flying bird leaving its call, with descent preferable to ascent. The lines repeatedly discuss exceeding, meeting, guarding, and caution, revealing the importance of scope, proportion, and timely adjustment.\n\n小过 is hexagram 62 in the traditional King Wen sequence, with the symbol ䷽. Its lower trigram is 艮☶ and its upper trigram is 震☳, traditionally associated with mountain and thunder respectively. Count the lines from the bottom: 初六, 六二, 九三, 九四, 六五, 上六. A solid line is yang; a broken line is yin. Nine and six identify yang and yin in the line labels; they do not add extra lines.\n\nLine structure (bottom to top): 0 0 1 1 0 0\n\nSix-line figure, displayed top to bottom; line numbering starts at the bottom.\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## The judgment\n\n小過：亨。利貞。可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。\n\nOriginal editorial rendering, not a quotation from Legge: Small exceeding: favorable progress. Constancy is beneficial. Small matters are possible; great matters are not. A flying bird leaves its call. Ascent is unsuitable; descent is suitable. Great good fortune.\n\nLegge interprets Xiaoguo as exceeding in small matters, especially appropriate adjustments in ceremony and nonessential matters. He does not understand it as permission to break principles at will.\n\nFor modern study, first verify the information, time, and support available. If conditions suit a limited task, complete it carefully rather than expanding rashly because the aim looks insufficiently grand. Descent is a direction in the classical bird image, not advice about the floor on which to live or a route to travel.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## Interpretation in the Ten Wings\n\nThe Commentary on the Judgment and the Commentary on the Images belong to the Yi Zhuan, the commentaries usually called the “Ten Wings.” Here their explanations are kept distinct from the judgment and line texts, before turning to modern applications for study.\n\nThe Commentary on the Judgment explains the meaning through the small exceeding and action in accord with the time. The Commentary on the Images depicts thunder above a mountain and lists going somewhat beyond in respect, mourning, and frugality. Its modest excess is situated in specific contexts.\n\nToday, this may be understood as careful attention to details, without requiring excessive self-suppression, forced grief, or deprivation of basic needs. What counts as an appropriate little extra still depends on the actual object, cultural setting, and the feelings of those involved.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · Rushing upward at the beginning may leave no foothold\n\n飛鳥以凶。\n\nOriginal editorial rendering, not a quotation from Legge: The flying bird brings an unfavorable outcome.\n\nThe bird appears already in the first line. Legge interprets it as excessive ascent producing an unfavorable result. The line does not point to a particular real-world aviation accident.\n\nIn a task where you lack experience, first complete a verifiable portion before deciding whether to expand. Promising the entire result too early may leave no time even to establish basic conditions.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · Finding the appropriate contact matters more than dramatic escalation\n\n過其祖，遇其妣；不及其君，遇其臣；无咎。\n\nOriginal editorial rendering, not a quotation from Legge: Passing the grandfather, meeting the grandmother; not reaching the ruler, meeting the minister. No blame.\n\nGrandfather and grandmother, ruler and minister form an ancient relational order. Legge explains meeting a suitable counterpart in the corresponding position, avoiding a hostile or overreaching approach to the ruler.\n\nA modern analogy is taking a problem to someone who can actually handle it while respecting clearly assigned responsibilities. This does not mean that every hierarchy is beyond question, or prohibit necessary appeals or requests for help.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · When an extra check is called for, do not rely on luck\n\n弗過防之，從或戕之，凶。\n\nOriginal editorial rendering, not a quotation from Legge: Not taking extra precautions, one may be followed and harmed. Unfavorable.\n\nThis line concerns injury following insufficient precaution. Legge emphasizes the need for additional care. An ancient warning cannot justify blaming real people who have been harmed.\n\nFor ordinary affairs, check a readily overlooked point once more, such as the version or recipient of a handover. Caution should correspond to a specific risk, not turn everyone into a potential aggressor.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · Caution also needs adjustment as circumstances change\n\n无咎，弗過遇之。往厲必戒，勿用永貞。\n\nOriginal editorial rendering, not a quotation from Legge: No blame: not exceeding, but meeting what is appropriate. Going brings danger; be sure to take care. Do not maintain this unchanging forever.\n\nThe line combines no blame, danger in proceeding, and a warning against permanent constancy. Legge notes that a particular form of firmness need not be maintained forever.\n\nIf the reason for a temporary restriction has disappeared, reassess it. Good proportion is not perpetual hesitation: it means knowing why you are holding back now and under which conditions you can move forward again.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · The appearance of readiness may precede an actual supply\n\n密雲不雨，自我西郊，公弋取彼在穴。\n\nOriginal editorial rendering, not a quotation from Legge: Dense clouds, but no rain, from our western outskirts. The lord shoots with a corded arrow and takes what is in the cave.\n\nDense clouds without rain appear beside shooting something in a cave with a corded arrow. Legge speculates about the clouds and a historical political background; this article does not treat that speculation as an established fact about the text’s composition.\n\nAsk whether help that is actually needed has arrived, even when preparation looks extensive. Deal first with a small problem within reach rather than waiting only for a vague major opportunity.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · Exceeding the appropriate range can miss the original landing place\n\n弗遇過之，飛鳥離之，凶，是謂災眚。\n\nOriginal editorial rendering, not a quotation from Legge: Not meeting it, but going beyond it: the flying bird goes too far. Unfavorable; this is called calamity and error.\n\nThe final line returns to the bird. Legge reads a failure to adapt to circumstances, flying too high. This distinguishes a little extra in small matters from a loss of proportion.\n\nIf a task keeps expanding, return to its original purpose and check which additions are truly necessary. Acknowledging the need to reduce scope does not deny the effort already completed.\n\nSources: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## Revising an event guide with limited time\n\nOriginal modern scenario\n\nA volunteer has only one afternoon to organize an event guide. She first confirms the time, place, registration procedure, and working contact details rather than immediately redesigning all the visuals, historical background, and promotional language.\n\nBefore release, she asks someone else to follow the instructions in practice. They discover an easily misunderstood access point, which she corrects promptly. She schedules additional material for later instead of inserting unverified information to create an appearance of completeness.\n\nLearning from Xiaoguo means attention to scope and detail: make the current task reliable and acknowledge present resource limits. Small steps do not lower responsibility; they make commitments proportionate to conditions.\n\n## Avoiding misreadings\n\n- Xiaoguo does not predict accidents, injury, or weather. Its language of precaution cannot justify inventing malicious intentions in others.\n\n- Respect, grief, and frugality should not be mechanically turned into demands for self-degradation, forced mourning, or harm to basic living needs.\n\n## Three exercises\n\n1. Define the smallest scope you can reliably complete now.\n\n2. Choose one detail with a real reason for another check, and explain the specific problem that check can prevent.\n\n3. Identify a signal to stop expanding scope while retaining conditions for reassessment later.\n\n## Related reading\n\nDaguo — Great Exceeding (hexagram-28): Daguo emphasizes excessive load and major exceptional conditions; Xiaoguo emphasizes proportion and caution within a small scope. Great and small do not rank people’s worth. They describe scales of action to be assessed according to circumstances.\n\nWhen reading Xiaoguo, ask: would one more large undertaking really help more right now than making this small one reliable?\n\n## Sources\n\n- [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238)\n\n- [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-62 · SHA256 2a41576261e65e404b473cb64b351c2f09f51ade9d0aa14fff3e7111cf29d0f3\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

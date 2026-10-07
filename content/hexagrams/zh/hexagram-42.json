@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-42",
+  "locale": "zh",
+  "kingWenNumber": 42,
+  "name": "益",
+  "pinyin": "Yì",
+  "englishName": "Yì — Increase",
+  "unicode": "䷩",
+  "codePoint": "U+4DE9",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    1
+  ],
+  "title": "益卦学习：得到更多以后，让帮助真正发生",
+  "plainSummary": "有资源或机会增加时，确认它能改善谁的处境，并用行动把好处落实。",
+  "introduction": [
+    "增加不只可能是自己得到更多，也可以是帮助更容易到达需要它的人。益卦讨论行动、受助与施惠，末爻又提醒只求自益可能失去支持。它适合用来检查好处如何分配，而不是承诺财富会继续增长。"
+  ],
+  "identityText": "益是传统文王序第42卦，卦符䷩，下卦震☳、上卦巽☴，传统取象分别为雷与风。爻从最下方数起，依次为初九、六二、六三、六四、九五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "益：利有攸往。利涉大川。",
+    "paragraphs": [
+      "Legge 将益解释为增加，并从治理者使人民受益的角度理解卦义。涉川保留承担重大行程的图像；有利并不是免去准备和判断。",
+      "现代学习可以先说清增加的究竟是什么：时间、信息、能力还是资源？它怎样转化为实际改善，需要哪些人参与，是否产生新的负担？这些问题比只看数量更具体。"
+    ],
+    "sourceRefs": [
+      "zhouyi-42",
+      "legge1882-42"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》谈损上益下、随时而行；《象传》以风雷取象，说见善则迁、有过则改。增益也可以发生在行为得到修正时。",
+      "今天可以学习已经证明有用的做法，也坦诚改掉自己的错误。改正有时比再添加一个新项目更有益，不必以新鲜或规模来衡量所有进展。"
+    ],
+    "sourceRefs": [
+      "zhouyi-42",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "利用為大作，元吉，无咎。",
+      "focus": "更大的行动需要与能力相称",
+      "paragraphs": [
+        "Legge 读到在相应位置上开展重大工作，仍将结果与条件联系起来。大作不等于鼓励任何人立即扩张。",
+        "得到额外支持后，可以确认范围与能力，选择值得承担的一件事。资源增加也可能需要维护，不应只计算新机会。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "或益之，十朋之龜弗克違，永貞吉。王用享于帝，吉。",
+      "focus": "接受支持时保留长期的要求",
+      "paragraphs": [
+        "龟、祭献与王者使这一爻具有古代占筮礼仪背景，Legge 也保留它们。永贞说明得到支持后仍需维持合宜。",
+        "现代可以把新资源的用途与责任讲清楚，避免因有人愿意给予便忽略附带条件。古代龟数和吉辞不保证某笔收入必定到来。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "益之用凶事，无咎。有孚中行，告公用圭。",
+      "focus": "困难中的改善，需要诚实说明",
+      "paragraphs": [
+        "Legge 将这一爻理解为经不利之事而导向改善，并以圭象征向上报告的正式身份。文本没有让苦难本身变成必需品。",
+        "现实发生问题后，可以诚实说明影响并修正流程，但不应为了成长制造伤害，或要求受损者感谢遭遇。改善来自后续行动，而非伤害天然有益。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "中行，告公從。利用為依遷國。",
+      "focus": "重大改变需要可信的承接",
+      "paragraphs": [
+        "迁国和告公属于古代政治行动，Legge 从建议得到采纳、能作为依靠来解释。",
+        "普通组织有较大变化时，需要让相关人知道依据、职责和过渡安排。不能只宣布更好的方向，却将实施负担留给未被询问的人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "有孚惠心，勿問元吉。有孚惠我德。",
+      "focus": "善意要在真实效果中被理解",
+      "paragraphs": [
+        "Legge 将惠心读作真诚使他人受益，并有信任回应。勿问不意味着现实中的帮助不必征询或检验。",
+        "你认为有帮助的东西，对方可能并不需要。先了解需要，再看效果，能让善意与实际利益更接近，而不只是满足给予者的自我形象。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "莫益之，或擊之，立心勿恆，凶。",
+      "focus": "只求自己增加，可能破坏支持",
+      "paragraphs": [
+        "Legge 将末爻读为只集中力量求自益、忽略他人，因此失去支持。或击之是古文的警告，不能当作现实报复的正当理由。",
+        "现代可以检查是否总把新增好处留给自己，却把成本转给别人。对不公的安排应通过合适方式沟通和处理，不由卦象替人定罪。"
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "一份新资源怎样成为真正的帮助",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一个社团得到更多共享材料，最初想立即增加活动次数。成员后来发现，现有问题是说明不清和维护不足，于是先把资源用于改善使用指南与轮值安排。",
+      "他们向实际使用者询问哪些变化最有帮助，也记录仍然存在的困难。对暂时无力维护的新项目，则选择不急着开展。",
+      "益在这里不是单纯变多，而是让已有条件产生实际好处。是否有益，需要让受影响的人可以表达。"
+    ]
+  },
+  "misreadings": [
+    "益不保证收益增长或幸运馈赠，也不要求资源增加后马上扩大承诺。",
+    "凶事不是值得制造的成长机会；改善不能成为忽略伤害、牺牲他人或合理化剥削的借口。"
+  ],
+  "practice": [
+    "说明最近增加的一项资源，和希望它具体改善的问题。",
+    "询问实际使用者或受影响者，确认是否真的有帮助。",
+    "找一项通过改错而非继续增加就能改善的做法。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-41",
+      "name": "损",
+      "paragraph": "损与益使人同时注意来源、代价与受益者。有时适当减少才能增益，有时增加也会带来新的负担。"
+    }
+  ],
+  "closing": "读益卦时，可以问：这项增加，是否已经让真正需要它的人得到可以感受到的改善？",
+  "sourceIds": [
+    "zhouyi-42",
+    "legge1882-42",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1515,
+    "nonWhitespaceCharacterCount": 1731,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "益",
+  "sourceLocale": "zh",
+  "sourceContentHash": "7077b6aaa7c10b4822bcf41f5aced80cb478e243d5e081c30cadf710b24c85b0",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 益卦学习：得到更多以后，让帮助真正发生\n\n一句话：有资源或机会增加时，确认它能改善谁的处境，并用行动把好处落实。\n\n增加不只可能是自己得到更多，也可以是帮助更容易到达需要它的人。益卦讨论行动、受助与施惠，末爻又提醒只求自益可能失去支持。它适合用来检查好处如何分配，而不是承诺财富会继续增长。\n\n## 先认清这是什么卦\n\n益是传统文王序第42卦，卦符䷩，下卦震☳、上卦巽☴，传统取象分别为雷与风。爻从最下方数起，依次为初九、六二、六三、六四、九五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷩　上卦：巽☴　下卦：震☳\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辞说了什么\n\n经文：“益：利有攸往。利涉大川。”\n\nLegge 将益解释为增加，并从治理者使人民受益的角度理解卦义。涉川保留承担重大行程的图像；有利并不是免去准备和判断。\n\n现代学习可以先说清增加的究竟是什么：时间、信息、能力还是资源？它怎样转化为实际改善，需要哪些人参与，是否产生新的负担？这些问题比只看数量更具体。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》谈损上益下、随时而行；《象传》以风雷取象，说见善则迁、有过则改。增益也可以发生在行为得到修正时。\n\n今天可以学习已经证明有用的做法，也坦诚改掉自己的错误。改正有时比再添加一个新项目更有益，不必以新鲜或规模来衡量所有进展。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初九：更大的行动需要与能力相称\n\n经文：“利用為大作，元吉，无咎。”\n\nLegge 读到在相应位置上开展重大工作，仍将结果与条件联系起来。大作不等于鼓励任何人立即扩张。\n\n得到额外支持后，可以确认范围与能力，选择值得承担的一件事。资源增加也可能需要维护，不应只计算新机会。\n\n### 六二：接受支持时保留长期的要求\n\n经文：“或益之，十朋之龜弗克違，永貞吉。王用享于帝，吉。”\n\n龟、祭献与王者使这一爻具有古代占筮礼仪背景，Legge 也保留它们。永贞说明得到支持后仍需维持合宜。\n\n现代可以把新资源的用途与责任讲清楚，避免因有人愿意给予便忽略附带条件。古代龟数和吉辞不保证某笔收入必定到来。\n\n### 六三：困难中的改善，需要诚实说明\n\n经文：“益之用凶事，无咎。有孚中行，告公用圭。”\n\nLegge 将这一爻理解为经不利之事而导向改善，并以圭象征向上报告的正式身份。文本没有让苦难本身变成必需品。\n\n现实发生问题后，可以诚实说明影响并修正流程，但不应为了成长制造伤害，或要求受损者感谢遭遇。改善来自后续行动，而非伤害天然有益。\n\n### 六四：重大改变需要可信的承接\n\n经文：“中行，告公從。利用為依遷國。”\n\n迁国和告公属于古代政治行动，Legge 从建议得到采纳、能作为依靠来解释。\n\n普通组织有较大变化时，需要让相关人知道依据、职责和过渡安排。不能只宣布更好的方向，却将实施负担留给未被询问的人。\n\n### 九五：善意要在真实效果中被理解\n\n经文：“有孚惠心，勿問元吉。有孚惠我德。”\n\nLegge 将惠心读作真诚使他人受益，并有信任回应。勿问不意味着现实中的帮助不必征询或检验。\n\n你认为有帮助的东西，对方可能并不需要。先了解需要，再看效果，能让善意与实际利益更接近，而不只是满足给予者的自我形象。\n\n### 上九：只求自己增加，可能破坏支持\n\n经文：“莫益之，或擊之，立心勿恆，凶。”\n\nLegge 将末爻读为只集中力量求自益、忽略他人，因此失去支持。或击之是古文的警告，不能当作现实报复的正当理由。\n\n现代可以检查是否总把新增好处留给自己，却把成本转给别人。对不公的安排应通过合适方式沟通和处理，不由卦象替人定罪。\n\n## 一份新资源怎样成为真正的帮助\n\n以下是为学习而设的现代情境。\n\n一个社团得到更多共享材料，最初想立即增加活动次数。成员后来发现，现有问题是说明不清和维护不足，于是先把资源用于改善使用指南与轮值安排。\n\n他们向实际使用者询问哪些变化最有帮助，也记录仍然存在的困难。对暂时无力维护的新项目，则选择不急着开展。\n\n益在这里不是单纯变多，而是让已有条件产生实际好处。是否有益，需要让受影响的人可以表达。\n\n## 几个容易误读的地方\n\n益不保证收益增长或幸运馈赠，也不要求资源增加后马上扩大承诺。\n\n凶事不是值得制造的成长机会；改善不能成为忽略伤害、牺牲他人或合理化剥削的借口。\n\n## 做一个小练习\n\n1. 说明最近增加的一项资源，和希望它具体改善的问题。\n2. 询问实际使用者或受影响者，确认是否真的有帮助。\n3. 找一项通过改错而非继续增加就能改善的做法。\n\n## 和损卦一起读\n\n损与益使人同时注意来源、代价与受益者。有时适当减少才能增益，有时增加也会带来新的负担。\n\n读益卦时，可以问：这项增加，是否已经让真正需要它的人得到可以感受到的改善？\n\n## 阅读依据\n\n- [周易·益](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726)。Received text; Wikisource revision 10646726。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 42, chapter XLII, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

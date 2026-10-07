@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-22",
+  "locale": "zh-TW",
+  "kingWenNumber": 22,
+  "name": "贲",
+  "pinyin": "Bì",
+  "englishName": "Bì — Grace",
+  "unicode": "䷕",
+  "codePoint": "U+4DD5",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "title": "賁卦導讀：呈現得好看，內容也要站得住腳",
+  "plainSummary": "把重要內容說清楚、呈現妥當，別讓裝飾遮住真正要表達的意思。",
+  "introduction": [
+    "一份介紹排版精美，讀者卻可能仍找不到重點；一份樸素的禮物，也能把心意表達完整。賁卦圍繞文飾、形象與實質，從足、鬚、白馬、束帛一路寫到白賁，讓人看見美在不同情境中的分量。"
+  ],
+  "identityText": "賁是傳統文王序第22卦，卦符䷕，下卦離☲、上卦艮☶，傳統取象分別為火與山。爻從最下方數起，依次為初九、六二、九三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "賁：亨。小利有攸往。",
+    "paragraphs": [
+      "“賁”在這裡讀 bì，涉及文飾。Legge 認為裝飾應輔助實質，而不宜讓它佔據主導，所以對向前推進保留“小利”的限定。",
+      "現代學習並不因此否定美感。可以問形式是否幫助別人理解、使用與感受內容；如果只讓作者顯得厲害，卻遮住問題，文飾就偏離了作用。"
+    ],
+    "sourceRefs": [
+      "zhouyi-22",
+      "legge1882-22"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》談剛柔交錯與人文；《象傳》以山下有火取象，又說可以明庶政，卻不敢據此折獄。它給文飾與明察之間留下了界限。",
+      "今天可由此提醒自己：清楚漂亮的呈現有價值，但重要事實判斷不能只靠外觀和感染力。讓證據可檢查，比用設計把不確定性隱藏起來更負責。"
+    ],
+    "sourceRefs": [
+      "zhouyi-22",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "賁其趾，舍車而徒。",
+      "focus": "從自己真實的步伐開始",
+      "paragraphs": [
+        "裝飾足部，卻捨車步行。Legge 將其放在自我修養與必要時放下奢飾的關係中解釋。",
+        "準備一份介紹時，可以先用準確的文字講清楚，再決定是否需要更多視覺效果。不必為了顯得專業，使用自己都解釋不清的詞句。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "賁其須。",
+      "focus": "裝飾要依附真正的內容",
+      "paragraphs": [
+        "爻辭只說修飾鬚，Legge 借鬚與下顎的關係說明附屬之物與主體相連。它並不是一條儀容規範。",
+        "標題、圖像和排版可以突出內容，卻不能替不存在的論據站台。修改外觀前，先確認讀者究竟需要理解什麼。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "賁如濡如，永貞吉。",
+      "focus": "得到潤飾時也守住真實",
+      "paragraphs": [
+        "濡如帶有潤澤的畫面。Legge 讀到裝飾與恩惠，並強調持守合宜，避免僅因位置或外在幫助而滿足。",
+        "當一項作品受到讚賞，可以繼續檢查是否準確。漂亮的語言和積極回饋，不會讓遺漏的事實自動變得不重要。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "賁如皤如，白馬翰如，匪寇婚媾。",
+      "focus": "不要只憑外觀誤認來意",
+      "paragraphs": [
+        "白色、白馬與婚媾構成這一爻。Legge 的讀法保留了素白的裝飾和辨認來者的過程；它不只是華麗的形容。",
+        "現代可以提醒自己，陌生的表達方式未必代表惡意，熟悉漂亮的方式也不證明可靠。判斷來意要靠溝通與行為，不能靠卦象看穿人心。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "賁於丘園，束帛戔戔，吝，終吉。",
+      "focus": "有限的禮物也能有完整的心意",
+      "paragraphs": [
+        "丘園與少量束帛呈現樸素的饋贈，文字承認可能有難為情，卻沒有只按豐厚程度評價。Legge 同樣強調節制禮儀。",
+        "準備感謝或介紹時，可以讓內容與能力相稱。清楚寫出真正的感謝，比為了體面而許下無法兌現的回報更有意義。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "白賁，无咎。",
+      "focus": "回到樸素，並不等於草率",
+      "paragraphs": [
+        "Legge 將白賁讀作裝飾走過之後返回純白與簡樸，重視實質。這裡的白不能直接當作某人的幸運色。",
+        "刪掉多餘效果之後，仍應留下完整資訊、可讀結構和必要的用心。樸素是一種有意識的選擇，不是省略讀者真正需要的內容。"
+      ],
+      "sourceRefs": [
+        "zhouyi-22",
+        "legge1882-22"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "重新整理一頁活動介紹",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "組織者做了一頁視覺效果華麗的活動介紹，讀者卻找不到時間、地點和適合誰參加。她先把這些資訊整理清楚，再選擇能幫助閱讀的字級、留白與圖像。",
+      "寫到活動成果時，她保留尚未確定的內容，沒有為了吸引人而把計畫寫成承諾。圖片很美，也標明哪些只是示意。",
+      "頁面最終較為簡潔，表達卻更完整。賁的現代應用由此落在形式怎樣服務內容，而不是任何一種固定的審美風格。"
+    ]
+  },
+  "misreadings": [
+    "賁不把重視外表的人判作膚淺，也不把樸素外觀當成品德證明。形式與實質需要一起檢查。",
+    "本卦不用於判斷婚姻對象、外貌價值或他人是否真誠；重大判斷不能由賞心悅目的呈現代替證據。"
+  ],
+  "practice": [
+    "選一份正在使用的介紹，寫清它最需要讓讀者知道什麼。",
+    "檢查每個視覺或語言裝飾是否幫助這個目的，刪除一項只製造聲勢的東西。",
+    "請一個不瞭解背景的人閱讀，問其實際理解到了什麼。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-21",
+      "name": "噬嗑",
+      "paragraph": "噬嗑討論如何處理實質阻隔，賁討論如何給予合宜表達。若問題仍未處理，換一種更漂亮的說法不能代替處理本身。"
+    }
+  ],
+  "closing": "讀賁卦時，可以問：拿掉最引人注意的裝飾以後，真正重要的內容還清楚地站在那裡嗎？",
+  "sourceIds": [
+    "zhouyi-22",
+    "legge1882-22",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1669,
+    "nonWhitespaceCharacterCount": 1905,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "賁",
+  "sourceLocale": "zh",
+  "sourceContentHash": "adf0cb1dcc0e2a15bed3db459c676de90f6410f6be2282022ff7f97d7d16b431",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 賁卦導讀：呈現得好看，內容也要站得住腳\n\n把重要內容說清楚、呈現妥當，別讓裝飾遮住真正要表達的意思。\n\n一份介紹排版精美，讀者卻可能仍找不到重點；一份樸素的禮物，也能把心意表達完整。賁卦圍繞文飾、形象與實質，從足、鬚、白馬、束帛一路寫到白賁，讓人看見美在不同情境中的分量。\n\n## 先認識這一卦\n\n賁是傳統文王序第22卦，卦符䷕，下卦離☲、上卦艮☶，傳統取象分別為火與山。爻從最下方數起，依次為初九、六二、九三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━━━━━  上九\n━━  ━━  六五\n━━  ━━  六四\n━━━━━━  九三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 賁：亨。小利有攸往。\n\n“賁”在這裡讀 bì，涉及文飾。Legge 認為裝飾應輔助實質，而不宜讓它佔據主導，所以對向前推進保留“小利”的限定。\n\n現代學習並不因此否定美感。可以問形式是否幫助別人理解、使用與感受內容；如果只讓作者顯得厲害，卻遮住問題，文飾就偏離了作用。\n\n[zhouyi-22; legge1882-22]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》談剛柔交錯與人文；《象傳》以山下有火取象，又說可以明庶政，卻不敢據此折獄。它給文飾與明察之間留下了界限。\n\n今天可由此提醒自己：清楚漂亮的呈現有價值，但重要事實判斷不能只靠外觀和感染力。讓證據可檢查，比用設計把不確定性隱藏起來更負責。\n\n[zhouyi-22; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 從自己真實的步伐開始\n\n> 賁其趾，舍車而徒。\n\n裝飾足部，卻捨車步行。Legge 將其放在自我修養與必要時放下奢飾的關係中解釋。\n\n準備一份介紹時，可以先用準確的文字講清楚，再決定是否需要更多視覺效果。不必為了顯得專業，使用自己都解釋不清的詞句。\n\n[zhouyi-22; legge1882-22]\n\n### 六二 · 裝飾要依附真正的內容\n\n> 賁其須。\n\n爻辭只說修飾鬚，Legge 借鬚與下顎的關係說明附屬之物與主體相連。它並不是一條儀容規範。\n\n標題、圖像和排版可以突出內容，卻不能替不存在的論據站台。修改外觀前，先確認讀者究竟需要理解什麼。\n\n[zhouyi-22; legge1882-22]\n\n### 九三 · 得到潤飾時也守住真實\n\n> 賁如濡如，永貞吉。\n\n濡如帶有潤澤的畫面。Legge 讀到裝飾與恩惠，並強調持守合宜，避免僅因位置或外在幫助而滿足。\n\n當一項作品受到讚賞，可以繼續檢查是否準確。漂亮的語言和積極回饋，不會讓遺漏的事實自動變得不重要。\n\n[zhouyi-22; legge1882-22]\n\n### 六四 · 不要只憑外觀誤認來意\n\n> 賁如皤如，白馬翰如，匪寇婚媾。\n\n白色、白馬與婚媾構成這一爻。Legge 的讀法保留了素白的裝飾和辨認來者的過程；它不只是華麗的形容。\n\n現代可以提醒自己，陌生的表達方式未必代表惡意，熟悉漂亮的方式也不證明可靠。判斷來意要靠溝通與行為，不能靠卦象看穿人心。\n\n[zhouyi-22; legge1882-22]\n\n### 六五 · 有限的禮物也能有完整的心意\n\n> 賁於丘園，束帛戔戔，吝，終吉。\n\n丘園與少量束帛呈現樸素的饋贈，文字承認可能有難為情，卻沒有只按豐厚程度評價。Legge 同樣強調節制禮儀。\n\n準備感謝或介紹時，可以讓內容與能力相稱。清楚寫出真正的感謝，比為了體面而許下無法兌現的回報更有意義。\n\n[zhouyi-22; legge1882-22]\n\n### 上九 · 回到樸素，並不等於草率\n\n> 白賁，无咎。\n\nLegge 將白賁讀作裝飾走過之後返回純白與簡樸，重視實質。這裡的白不能直接當作某人的幸運色。\n\n刪掉多餘效果之後，仍應留下完整資訊、可讀結構和必要的用心。樸素是一種有意識的選擇，不是省略讀者真正需要的內容。\n\n[zhouyi-22; legge1882-22]\n\n## 重新整理一頁活動介紹\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n組織者做了一頁視覺效果華麗的活動介紹，讀者卻找不到時間、地點和適合誰參加。她先把這些資訊整理清楚，再選擇能幫助閱讀的字級、留白與圖像。\n\n寫到活動成果時，她保留尚未確定的內容，沒有為了吸引人而把計畫寫成承諾。圖片很美，也標明哪些只是示意。\n\n頁面最終較為簡潔，表達卻更完整。賁的現代應用由此落在形式怎樣服務內容，而不是任何一種固定的審美風格。\n\n## 常見誤讀\n\n1. 賁不把重視外表的人判作膚淺，也不把樸素外觀當成品德證明。形式與實質需要一起檢查。\n\n2. 本卦不用於判斷婚姻對象、外貌價值或他人是否真誠；重大判斷不能由賞心悅目的呈現代替證據。\n\n## 三個練習\n\n1. 選一份正在使用的介紹，寫清它最需要讓讀者知道什麼。\n\n2. 檢查每個視覺或語言裝飾是否幫助這個目的，刪除一項只製造聲勢的東西。\n\n3. 請一個不瞭解背景的人閱讀，問其實際理解到了什麼。\n\n## 延伸閱讀\n\n### 噬嗑 (hexagram-21)\n\n噬嗑討論如何處理實質阻隔，賁討論如何給予合宜表達。若問題仍未處理，換一種更漂亮的說法不能代替處理本身。\n\n## 結語\n\n讀賁卦時，可以問：拿掉最引人注意的裝飾以後，真正重要的內容還清楚地站在那裡嗎？\n\n## 資料來源\n\n- [zhouyi-22: 周易·賁](https://zh.wikisource.org/w/index.php?title=周易/賁&oldid=2405035)\n\n- [legge1882-22: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 22, chapter XXII, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

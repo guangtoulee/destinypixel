@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-34",
+  "locale": "en",
+  "kingWenNumber": 34,
+  "name": "大壮",
+  "pinyin": "Dà Zhuàng",
+  "englishName": "Dà Zhuàng — Great Power",
+  "unicode": "䷡",
+  "codePoint": "U+4DE1",
+  "lowerTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "heaven",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "thunder",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "title": "Studying Dà Zhuàng (Great Power): greater strength requires care in how it is used",
+  "plainSummary": "When you have the ability to advance, check whether the approach is appropriate; real strength should leave room to turn or stop.",
+  "introduction": [
+    "Being able to decide, persuade, or advance faster does not mean always using your full strength. Dà Zhuàng repeatedly pictures a ram striking a fence, showing how forcing a way forward can leave the forceful one stuck. It considers strength and the ways direction and proportion should govern it."
+  ],
+  "identityText": "Dà Zhuàng is hexagram 34 in the traditional King Wen sequence, with symbol ䷡. The lower trigram is Qián ☰ and the upper trigram is Zhèn ☳; their traditional images are heaven and thunder, respectively. Count the lines from the bottom: 初九、九二、九三、九四、六五、上六. A solid line is yang and a broken line is yin. Nine and six in the line labels designate yang and yin; they are not additional line numbers.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "大壯：利貞。",
+    "paragraphs": [
+      "The statement does not promise that greater strength is always better; it says only that steadfastness is beneficial. Legge explicitly understands this as strength subject to sound principles and used appropriately.",
+      "For a modern reflection, ask: because I can do this, do I also have reason to do it? Those with more resources, a louder voice, or a higher position need to hear how decisions affect others. The ability to proceed does not remove the need to explain."
+    ],
+    "sourceRefs": [
+      "zhouyi-34",
+      "legge1882-34"
+    ],
+    "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Great strength: steadfastness is beneficial."
+  },
+  "tenWings": {
+    "label": "Interpretations in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment and the Commentary on the Images belong to the commentarial collection known as the Yìzhuàn, usually called the Ten Wings. Below, these commentaries are kept separate from the hexagram and line statements, followed by modern learning applications.",
+      "The Commentary on the Judgment connects firmness with movement. The Commentary on the Images pictures thunder above heaven and advises taking no step contrary to ritual propriety. Traditional propriety had a historical institutional setting; today it cannot simply be equated with obedience to existing authority.",
+      "This article retains the idea of giving conduct boundaries that can be explained. Respect for consent, checking conditions, and avoiding unnecessary pressure must stand independently as requirements of modern cooperation."
+    ],
+    "sourceRefs": [
+      "zhouyi-34",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "壯于趾，征凶，有孚。",
+      "focus": "When strength first arrives, do not rush ahead at full speed",
+      "paragraphs": [
+        "Strength concentrated in the toes suggests movement about to begin. Legge sees the danger of advancing too early; momentum alone cannot determine the right moment.",
+        "On gaining a tool or permission, first understand its limits and try a small task. Knowing how to press a button does not mean understanding its effects on everyone concerned."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Strength in the toes: setting forth brings misfortune. This is certain."
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "貞吉。",
+      "focus": "Even a brief reminder concerns the basis of conduct",
+      "paragraphs": [
+        "The second line says only that steadfastness brings good fortune. The Commentary on the Images explains this through centrality, and Legge likewise reads it as measured, appropriate use of strength.",
+        "When things are going smoothly, continue following tested rules rather than repeatedly changing them to demonstrate control. Stability can itself be a way of using strength."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Steadfastness brings good fortune."
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。",
+      "focus": "Using all your force can leave you more trapped",
+      "paragraphs": [
+        "Legge interprets this as some people using all their force while the noble person does not. The ram striking a fence and entangling its horns makes the consequence concrete. The phrase yòng wǎng is difficult to interpret, so the adopted reading must remain explicit.",
+        "In an ordinary dispute, if more pressure makes the other person more defensive, return to facts and shared needs. Sorting people into noble and petty categories does not help verify the problem, and increasing force may not resolve it."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: The petty person uses strength; the noble person does not do so. Even steadfast correctness is perilous. A ram strikes the fence and entangles its horns."
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "貞吉悔亡，藩決不羸，壯于大輿之輹。",
+      "focus": "When a path opens, use strength to support it",
+      "paragraphs": [
+        "The fence opens without trapping the ram, followed by the image of a large cart's load-bearing structure. Legge reads this as strong support following careful movement.",
+        "Once a clear process is found, put strength into making it reliable instead of continually seeking another confrontation. Effectiveness need not look dramatic."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Steadfastness brings good fortune and regret disappears. The fence opens without entanglement; strength lies in the great cart's axle support."
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "喪羊于易，无悔。",
+      "focus": "Letting go of a display of strength need not be a loss",
+      "paragraphs": [
+        "Legge connects losing the ram with relinquishing a ram-like show of force, noting that the hexagram guides strength rather than forbidding it.",
+        "An argument can move on without your having the last word. One less attempt to prove yourself stronger may leave room for actual cooperation. This does not require abandoning legitimate rights."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Losing the ram with ease. No regret."
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "羝羊觸藩，不能退，不能遂，无攸利，艱則吉。",
+      "focus": "When stuck, acknowledge the actual difficulty",
+      "paragraphs": [
+        "The ram strikes the fence again, this time unable to move either way. Legge connects a change for the better with recognizing difficulty, reflecting, and stopping unwise exertion.",
+        "In a deadlock, invite those concerned to examine the original assumptions and seek a way back or another approach. Difficulty does not mean you must suffer more to deserve a good result."
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: A ram strikes the fence, unable to retreat or advance. Nothing is beneficial; recognizing the difficulty brings good fortune."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Moving work forward after gaining stronger tools",
+    "label": "Original modern scenario",
+    "paragraphs": [
+      "A team member learns a new bulk-editing tool and wants to change everyone's materials immediately. She first demonstrates it on a small selection, lets users check whether it meets their actual needs, and makes clear which changes require separate confirmation.",
+      "Someone explains that the old structure serves an important purpose. Rather than dismissing that view because the tool is more powerful, she adjusts the plan and preserves necessary information. The tool reduces work instead of creating new conflict.",
+      "Dà Zhuàng here reminds us that growing ability requires matching judgment about scope and effects. Speed alone cannot establish that an approach is appropriate."
+    ]
+  },
+  "misreadings": [
+    "Dà Zhuàng does not reward domination, violence, or coercion, nor prove that the side with more supporters is right.",
+    "The ram and cart are not instructions for handling animals or engineering operations. The hexagram is not a means of predicting accidents, returns, or physical ability."
+  ],
+  "practice": [
+    "Write down an ability or permission you have recently gained and the people it may affect.",
+    "Identify one boundary that must be confirmed before using it.",
+    "If already in a deadlock, propose a way to verify or negotiate that does not rely on applying more force."
+  ],
+  "related": [
+    {
+      "id": "hexagram-33",
+      "name": "Dùn — Retreat",
+      "paragraph": "Dà Zhuàng asks how to use strength; Dùn asks how to bring involvement to a close. Being able to stop does not mean lacking strength. Appropriate strength also changes its actions with the conditions."
+    }
+  ],
+  "closing": "While reading Dà Zhuàng, ask: is my effort solving the problem, or making it harder for everyone to step back?",
+  "sourceIds": [
+    "zhouyi-34",
+    "legge1882-34",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "The fourth line adopts the “輿” and “輹” variants explicitly listed in the base edition; the page's main text has “轝” and “腹”, respectively.",
+  "counts": {
+    "chineseCharacterCount": 95,
+    "nonWhitespaceCharacterCount": 6468,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "Dà Zhuàng — Great Power",
+  "sourceLocale": "zh",
+  "sourceContentHash": "a4d09bff1c1526b9805bdf7dff7da7d6b31c9371f1c086fe321b92674fa49369",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Dà Zhuàng (Great Power): greater strength requires care in how it is used\n\nWhen you have the ability to advance, check whether the approach is appropriate; real strength should leave room to turn or stop.\n\nBeing able to decide, persuade, or advance faster does not mean always using your full strength. Dà Zhuàng repeatedly pictures a ram striking a fence, showing how forcing a way forward can leave the forceful one stuck. It considers strength and the ways direction and proportion should govern it.\n\n## Identity and line order\n\nDà Zhuàng is hexagram 34 in the traditional King Wen sequence, with symbol ䷡. The lower trigram is Qián ☰ and the upper trigram is Zhèn ☳; their traditional images are heaven and thunder, respectively. Count the lines from the bottom: 初九、九二、九三、九四、六五、上六. A solid line is yang and a broken line is yin. Nine and six in the line labels designate yang and yin; they are not additional line numbers.\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## Hexagram statement\n\n大壯：利貞。\n\nOriginal editorial rendering; not a quotation from Legge: Great strength: steadfastness is beneficial.\n\nThe statement does not promise that greater strength is always better; it says only that steadfastness is beneficial. Legge explicitly understands this as strength subject to sound principles and used appropriately.\n\nFor a modern reflection, ask: because I can do this, do I also have reason to do it? Those with more resources, a louder voice, or a higher position need to hear how decisions affect others. The ability to proceed does not remove the need to explain.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## Interpretations in the Ten Wings\n\nThe Commentary on the Judgment and the Commentary on the Images belong to the commentarial collection known as the Yìzhuàn, usually called the Ten Wings. Below, these commentaries are kept separate from the hexagram and line statements, followed by modern learning applications.\n\nThe Commentary on the Judgment connects firmness with movement. The Commentary on the Images pictures thunder above heaven and advises taking no step contrary to ritual propriety. Traditional propriety had a historical institutional setting; today it cannot simply be equated with obedience to existing authority.\n\nThis article retains the idea of giving conduct boundaries that can be explained. Respect for consent, checking conditions, and avoiding unnecessary pressure must stand independently as requirements of modern cooperation.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## The six lines, from bottom to top\n\n### 初九 · When strength first arrives, do not rush ahead at full speed\n\n壯于趾，征凶，有孚。\n\nOriginal editorial rendering; not a quotation from Legge: Strength in the toes: setting forth brings misfortune. This is certain.\n\nStrength concentrated in the toes suggests movement about to begin. Legge sees the danger of advancing too early; momentum alone cannot determine the right moment.\n\nOn gaining a tool or permission, first understand its limits and try a small task. Knowing how to press a button does not mean understanding its effects on everyone concerned.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九二 · Even a brief reminder concerns the basis of conduct\n\n貞吉。\n\nOriginal editorial rendering; not a quotation from Legge: Steadfastness brings good fortune.\n\nThe second line says only that steadfastness brings good fortune. The Commentary on the Images explains this through centrality, and Legge likewise reads it as measured, appropriate use of strength.\n\nWhen things are going smoothly, continue following tested rules rather than repeatedly changing them to demonstrate control. Stability can itself be a way of using strength.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · Using all your force can leave you more trapped\n\n小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。\n\nOriginal editorial rendering; not a quotation from Legge: The petty person uses strength; the noble person does not do so. Even steadfast correctness is perilous. A ram strikes the fence and entangles its horns.\n\nLegge interprets this as some people using all their force while the noble person does not. The ram striking a fence and entangling its horns makes the consequence concrete. The phrase yòng wǎng is difficult to interpret, so the adopted reading must remain explicit.\n\nIn an ordinary dispute, if more pressure makes the other person more defensive, return to facts and shared needs. Sorting people into noble and petty categories does not help verify the problem, and increasing force may not resolve it.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · When a path opens, use strength to support it\n\n貞吉悔亡，藩決不羸，壯于大輿之輹。\n\nOriginal editorial rendering; not a quotation from Legge: Steadfastness brings good fortune and regret disappears. The fence opens without entanglement; strength lies in the great cart's axle support.\n\nThe fence opens without trapping the ram, followed by the image of a large cart's load-bearing structure. Legge reads this as strong support following careful movement.\n\nOnce a clear process is found, put strength into making it reliable instead of continually seeking another confrontation. Effectiveness need not look dramatic.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六五 · Letting go of a display of strength need not be a loss\n\n喪羊于易，无悔。\n\nOriginal editorial rendering; not a quotation from Legge: Losing the ram with ease. No regret.\n\nLegge connects losing the ram with relinquishing a ram-like show of force, noting that the hexagram guides strength rather than forbidding it.\n\nAn argument can move on without your having the last word. One less attempt to prove yourself stronger may leave room for actual cooperation. This does not require abandoning legitimate rights.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上六 · When stuck, acknowledge the actual difficulty\n\n羝羊觸藩，不能退，不能遂，无攸利，艱則吉。\n\nOriginal editorial rendering; not a quotation from Legge: A ram strikes the fence, unable to retreat or advance. Nothing is beneficial; recognizing the difficulty brings good fortune.\n\nThe ram strikes the fence again, this time unable to move either way. Legge connects a change for the better with recognizing difficulty, reflecting, and stopping unwise exertion.\n\nIn a deadlock, invite those concerned to examine the original assumptions and seek a way back or another approach. Difficulty does not mean you must suffer more to deserve a good result.\n\nReferences: [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529), [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## Moving work forward after gaining stronger tools\n\nOriginal modern scenario\n\nA team member learns a new bulk-editing tool and wants to change everyone's materials immediately. She first demonstrates it on a small selection, lets users check whether it meets their actual needs, and makes clear which changes require separate confirmation.\n\nSomeone explains that the old structure serves an important purpose. Rather than dismissing that view because the tool is more powerful, she adjusts the plan and preserves necessary information. The tool reduces work instead of creating new conflict.\n\nDà Zhuàng here reminds us that growing ability requires matching judgment about scope and effects. Speed alone cannot establish that an approach is appropriate.\n\n## Misreadings to avoid\n\n- Dà Zhuàng does not reward domination, violence, or coercion, nor prove that the side with more supporters is right.\n\n- The ram and cart are not instructions for handling animals or engineering operations. The hexagram is not a means of predicting accidents, returns, or physical ability.\n\n## Three practices\n\n1. Write down an ability or permission you have recently gained and the people it may affect.\n\n2. Identify one boundary that must be confirmed before using it.\n\n3. If already in a deadlock, propose a way to verify or negotiate that does not rely on applying more force.\n\n## Related hexagram\n\n### Dùn — Retreat (hexagram-33)\n\nDà Zhuàng asks how to use strength; Dùn asks how to bring involvement to a close. Being able to stop does not mean lacking strength. Appropriate strength also changes its actions with the conditions.\n\n## A closing question\n\nWhile reading Dà Zhuàng, ask: is my effort solving the problem, or making it harder for everyone to step back?\n\n## Textual note\n\nThe fourth line adopts the “輿” and “輹” variants explicitly listed in the base edition; the page's main text has “轝” and “腹”, respectively.\n\n## Sources\n\n- [zhouyi-34](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529)\n\n- [legge1882-34](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

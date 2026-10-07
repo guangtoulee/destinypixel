@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-24",
+  "locale": "en",
+  "kingWenNumber": 24,
+  "name": "复",
+  "pinyin": "Fù",
+  "englishName": "Fù — Return",
+  "unicode": "䷗",
+  "codePoint": "U+4DD7",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "title": "Studying Return: finding your way back after drifting off course",
+  "plainSummary": "When you notice a departure from an important direction, begin with one possible correction. You need not wait to start everything over.",
+  "introduction": [
+    "Some adjustments do not require overturning your whole life, only returning promptly to a principle you knew but did not follow. Return moves from coming back after a short distance through repeated returns to losing the way back, showing that restarting takes different forms. It does not promise that everything lost will return after a few days of waiting."
+  ],
+  "identityText": "Fù is hexagram 24 in the traditional King Wen sequence, with the symbol ䷗. Its lower trigram is Zhen ☳ and its upper trigram is Kun ☷; their traditional images are thunder and earth, respectively. Count the lines from the bottom: 初九, 六二, 六三, 六四, 六五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "復：亨。出入无疾，朋來无咎。反復其道，七日來復，利有攸往。",
+    "paragraphs": [
+      "Legge reads Return as coming back or coming again and connects the single yang line returning at the bottom with cycles of change. “Return in seven days” is a cyclical expression in the text, not a personal forecast for seven days from now.",
+      "A contemporary approach first identifies what you want to return to: a healthy boundary around work, an honest way of communicating, or a plan that still fits. Returning to an old habit is not always good; the direction worth returning to requires your own fact-based judgment."
+    ],
+    "sourceRefs": [
+      "zhouyi-24",
+      "legge1882-24"
+    ],
+    "classicalTranslation": "Editorial rendering: Return: favorable progress. Coming and going without illness; friends arrive without blame. The course turns back upon itself; return comes in seven days. It is favorable to have somewhere to go."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.",
+      "The Commentary on the Judgment discusses the firm returning and movement joined with responsiveness. The Commentary on the Images uses thunder within the earth and mentions the ancient practice of closing passes at the solstice and temporarily stopping merchants’ journeys. Return thus also suggests quietly protecting a newly emerging change.",
+      "This article draws on that to discuss making suitable space for an initial correction. When a habit has just resumed, you need not immediately double the goal. Sustainability matters more than rushing to prove that you have changed completely."
+    ],
+    "sourceRefs": [
+      "zhouyi-24",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "不遠復，无祇悔，元吉。",
+      "focus": "Adjust while the departure is still small",
+      "paragraphs": [
+        "Legge reads returning from no great distance as coming back before a deviation grows large, avoiding greater regret. The focus is timely recognition, not never making mistakes.",
+        "If you discover that an explanation in a message could cause misunderstanding, clarify it early. A small correction deserves care; you need not wait for someone to point out serious consequences."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: Return before going far. No great regret; great good fortune."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "休復，吉。",
+      "focus": "A good return can have support",
+      "paragraphs": [
+        "Legge translates xiu fu as a commendable return and connects it in his notes with being close to a suitable person. Not every adjustment has to be made alone.",
+        "If a companion can remind you of your original purpose, agree how to check in with each other. Support should help you form your own judgment, not become monitoring or humiliation."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: A fine return. Good fortune."
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "頻復，厲无咎。",
+      "focus": "When the pattern repeats, examine causes rather than only blaming yourself",
+      "paragraphs": [
+        "Repeated return portrays coming back many times, with both danger and no blame retained. Legge likewise sees value in recognizing danger and responding carefully.",
+        "If you keep stumbling at the same point, check whether the goal is too large or necessary conditions are missing. Repetition is not automatically harmless, but self-reproach cannot replace changes to the causes."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: Repeated return. Danger, but no blame."
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "中行獨復。",
+      "focus": "You can change direction even within a group",
+      "paragraphs": [
+        "Returning alone while among companions is the distinctive feature here. Legge uses relationships among the lines to explain a course different from that of those around it.",
+        "If everyone is following an unsuitable practice, first explain the problem you see, then adjust the part for which you can take responsibility. Independent choice need not become moral superiority over others."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: Walking among others, one returns alone."
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "敦復，无悔。",
+      "focus": "Give your return steady, substantial practices",
+      "paragraphs": [
+        "Legge reads dun fu as a sincere and substantial return, rather than a moment of intense determination.",
+        "Turn the correction into clear arrangements, such as reducing unnecessary commitments and allowing preparation time. The more concrete the action, the less the change depends on repeated vows."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: A sincere, substantial return. No remorse."
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。",
+      "focus": "When direction is lost, stop enlarging the cost",
+      "paragraphs": [
+        "The final line describes missing the return and grave consequences including military defeat. Legge treats ten years as a round number for a long period, not an exact timetable for an individual’s future.",
+        "A contemporary analogy is seeing the problem yet continuing to invest more to prove the original decision right. Seeking new facts and help promptly can be more responsible than expanding commitments. Ancient military defeat does not become a prophecy of real-world disaster."
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": "Editorial rendering: Losing the way of return: misfortune and calamity. Sending out an army ends in great defeat, reaching even its ruler: misfortune. For ten years, no successful campaign."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Restoring a sustainable note-taking habit",
+    "label": "Original contemporary scenario",
+    "paragraphs": [
+      "A writer once organized weekly observations in short notes. Later, she raised the target to a long piece every day and soon stopped. On restarting, she returns to one entry a week, limited to one specific question, and no longer treats missing one entry as total failure.",
+      "Two weeks later, she finds that the arrangement still conflicts with her available time, so she chooses a better slot and asks a peer for occasional exchanges. She adjusts from actual completion rather than relying on a declaration that this time she will change completely.",
+      "Return helps her recover a practice that still has value. Its usefulness is tested by real records and life circumstances, not guaranteed by classical numbers such as seven days or ten years."
+    ]
+  },
+  "misreadings": [
+    "Return does not mean every old relationship should resume or every old plan restart. Whether returning fits depends on current conditions and the wishes of those involved.",
+    "Freedom from illness, seven days, and ten years cannot directly predict health, reunion, or the timing of fortune. The ancient text’s cyclical meanings must be distinguished from real-world time."
+  ],
+  "practice": [
+    "Choose one principle still worth returning to and explain why it remains relevant now.",
+    "Reduce the correction to one achievable action and write down the conditions it needs.",
+    "If you drift again, plan in advance how to investigate the cause, instead of responding only with blame or larger promises."
+  ],
+  "related": [
+    {
+      "id": "hexagram-23",
+      "name": "Splitting Apart",
+      "paragraph": "Splitting Apart reminds us to protect weakening foundations; Return asks us to recognize possibilities for coming back. First seeing what is still worth preserving keeps return from being merely mechanical repetition of old practices."
+    }
+  ],
+  "closing": "When reading Return, ask: what small correction today would bring me closer to the direction I genuinely want to maintain?",
+  "sourceIds": [
+    "zhouyi-24",
+    "legge1882-24",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 95,
+    "nonWhitespaceCharacterCount": 7163,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Return",
+  "sourceLocale": "zh",
+  "sourceContentHash": "02e013a67d01f2466d56804d8b782ee82c46755ac684d0cb84869a4200d44de4",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Return: finding your way back after drifting off course\n\nWhen you notice a departure from an important direction, begin with one possible correction. You need not wait to start everything over.\n\nSome adjustments do not require overturning your whole life, only returning promptly to a principle you knew but did not follow. Return moves from coming back after a short distance through repeated returns to losing the way back, showing that restarting takes different forms. It does not promise that everything lost will return after a few days of waiting.\n\n## Identifying the hexagram\n\nFù is hexagram 24 in the traditional King Wen sequence, with the symbol ䷗. Its lower trigram is Zhen ☳ and its upper trigram is Kun ☷; their traditional images are thunder and earth, respectively. Count the lines from the bottom: 初九, 六二, 六三, 六四, 六五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.\n\nThe six lines are numbered from the bottom upward; the figure below displays their actual positions from top to bottom.\n\n```text\n━━  ━━  上六\n━━  ━━  六五\n━━  ━━  六四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## Hexagram statement\n\n> 復：亨。出入无疾，朋來无咎。反復其道，七日來復，利有攸往。\n\nEditorial rendering: Return: favorable progress. Coming and going without illness; friends arrive without blame. The course turns back upon itself; return comes in seven days. It is favorable to have somewhere to go.\n\nLegge reads Return as coming back or coming again and connects the single yang line returning at the bottom with cycles of change. “Return in seven days” is a cyclical expression in the text, not a personal forecast for seven days from now.\n\nA contemporary approach first identifies what you want to return to: a healthy boundary around work, an honest way of communicating, or a plan that still fits. Returning to an old habit is not always good; the direction worth returning to requires your own fact-based judgment.\n\n[zhouyi-24; legge1882-24]\n\n## Interpretation in the Ten Wings\n\nThe Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.\n\nThe Commentary on the Judgment discusses the firm returning and movement joined with responsiveness. The Commentary on the Images uses thunder within the earth and mentions the ancient practice of closing passes at the solstice and temporarily stopping merchants’ journeys. Return thus also suggests quietly protecting a newly emerging change.\n\nThis article draws on that to discuss making suitable space for an initial correction. When a habit has just resumed, you need not immediately double the goal. Sustainability matters more than rushing to prove that you have changed completely.\n\n[zhouyi-24; hon-sep]\n\n## Six lines, from bottom to top\n\nThe quotations below are line statements; the explanations that follow are original learning commentary. Good fortune, no blame, and regret belong to ancient divinatory language and cannot be turned directly into guarantees about an individual’s future.\n\n### 初九 · Adjust while the departure is still small\n\n> 不遠復，无祇悔，元吉。\n\nEditorial rendering: Return before going far. No great regret; great good fortune.\n\nLegge reads returning from no great distance as coming back before a deviation grows large, avoiding greater regret. The focus is timely recognition, not never making mistakes.\n\nIf you discover that an explanation in a message could cause misunderstanding, clarify it early. A small correction deserves care; you need not wait for someone to point out serious consequences.\n\n[zhouyi-24; legge1882-24]\n\n### 六二 · A good return can have support\n\n> 休復，吉。\n\nEditorial rendering: A fine return. Good fortune.\n\nLegge translates xiu fu as a commendable return and connects it in his notes with being close to a suitable person. Not every adjustment has to be made alone.\n\nIf a companion can remind you of your original purpose, agree how to check in with each other. Support should help you form your own judgment, not become monitoring or humiliation.\n\n[zhouyi-24; legge1882-24]\n\n### 六三 · When the pattern repeats, examine causes rather than only blaming yourself\n\n> 頻復，厲无咎。\n\nEditorial rendering: Repeated return. Danger, but no blame.\n\nRepeated return portrays coming back many times, with both danger and no blame retained. Legge likewise sees value in recognizing danger and responding carefully.\n\nIf you keep stumbling at the same point, check whether the goal is too large or necessary conditions are missing. Repetition is not automatically harmless, but self-reproach cannot replace changes to the causes.\n\n[zhouyi-24; legge1882-24]\n\n### 六四 · You can change direction even within a group\n\n> 中行獨復。\n\nEditorial rendering: Walking among others, one returns alone.\n\nReturning alone while among companions is the distinctive feature here. Legge uses relationships among the lines to explain a course different from that of those around it.\n\nIf everyone is following an unsuitable practice, first explain the problem you see, then adjust the part for which you can take responsibility. Independent choice need not become moral superiority over others.\n\n[zhouyi-24; legge1882-24]\n\n### 六五 · Give your return steady, substantial practices\n\n> 敦復，无悔。\n\nEditorial rendering: A sincere, substantial return. No remorse.\n\nLegge reads dun fu as a sincere and substantial return, rather than a moment of intense determination.\n\nTurn the correction into clear arrangements, such as reducing unnecessary commitments and allowing preparation time. The more concrete the action, the less the change depends on repeated vows.\n\n[zhouyi-24; legge1882-24]\n\n### 上六 · When direction is lost, stop enlarging the cost\n\n> 迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。\n\nEditorial rendering: Losing the way of return: misfortune and calamity. Sending out an army ends in great defeat, reaching even its ruler: misfortune. For ten years, no successful campaign.\n\nThe final line describes missing the return and grave consequences including military defeat. Legge treats ten years as a round number for a long period, not an exact timetable for an individual’s future.\n\nA contemporary analogy is seeing the problem yet continuing to invest more to prove the original decision right. Seeking new facts and help promptly can be more responsible than expanding commitments. Ancient military defeat does not become a prophecy of real-world disaster.\n\n[zhouyi-24; legge1882-24]\n\n## Restoring a sustainable note-taking habit\n\nOriginal contemporary scenario\n\nThe following contemporary scenario was created for learning.\n\nA writer once organized weekly observations in short notes. Later, she raised the target to a long piece every day and soon stopped. On restarting, she returns to one entry a week, limited to one specific question, and no longer treats missing one entry as total failure.\n\nTwo weeks later, she finds that the arrangement still conflicts with her available time, so she chooses a better slot and asks a peer for occasional exchanges. She adjusts from actual completion rather than relying on a declaration that this time she will change completely.\n\nReturn helps her recover a practice that still has value. Its usefulness is tested by real records and life circumstances, not guaranteed by classical numbers such as seven days or ten years.\n\n## Common misreadings\n\n1. Return does not mean every old relationship should resume or every old plan restart. Whether returning fits depends on current conditions and the wishes of those involved.\n\n2. Freedom from illness, seven days, and ten years cannot directly predict health, reunion, or the timing of fortune. The ancient text’s cyclical meanings must be distinguished from real-world time.\n\n## Three practices\n\n1. Choose one principle still worth returning to and explain why it remains relevant now.\n\n2. Reduce the correction to one achievable action and write down the conditions it needs.\n\n3. If you drift again, plan in advance how to investigate the cause, instead of responding only with blame or larger promises.\n\n## Related reading\n\n### Splitting Apart (hexagram-23)\n\nSplitting Apart reminds us to protect weakening foundations; Return asks us to recognize possibilities for coming back. First seeing what is still worth preserving keeps return from being merely mechanical repetition of old practices.\n\n## Closing question\n\nWhen reading Return, ask: what small correction today would bring me closer to the direction I genuinely want to maintain?\n\n## Sources\n\n- [zhouyi-24: 周易·復](https://zh.wikisource.org/w/index.php?title=周易/復&oldid=10643037)\n\n- [legge1882-24: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 24, chapter XXIV, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nClassical quotations retain the Chinese source’s character forms and modern punctuation. The commentary is translated from original Simplified Chinese learning prose. The historical English source and received Chinese text are used together, and interpretations by later translators are attributed in the article. This article is not a basis for medical, investment, or other professional decisions.\n"
+}

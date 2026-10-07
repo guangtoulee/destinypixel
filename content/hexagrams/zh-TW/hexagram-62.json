@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-62",
+  "locale": "zh-TW",
+  "kingWenNumber": 62,
+  "name": "小过",
+  "pinyin": "Xiǎo Guò",
+  "englishName": "Xiǎo Guò — Small Preponderance",
+  "unicode": "䷽",
+  "codePoint": "U+4DFD",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+  ],
+  "title": "小過卦學習：小事做細，也守住合適的範圍",
+  "plainSummary": "條件只適合小步前進時，就把眼前的細節照顧好，不必靠更大的動作證明自己。",
+  "introduction": [
+    "小過不是“小小犯錯所以沒關係”。卦辭直接區分小事與大事，並以飛鳥留下聲音、宜下不宜上取象。六爻不斷討論過、遇、防和戒，使人看見範圍、分寸與適時調整的重要。"
+  ],
+  "identityText": "小過是傳統文王序第62卦，卦符䷽，下卦艮☶、上卦震☳，傳統取象分別為山與雷。爻從最下方往上數，依次為初六、六二、九三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "小過：亨。利貞。可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。",
+    "paragraphs": [
+      "Legge 將小過解釋為在小處有所超過，尤其關注禮儀和非根本事項中可以適度調整的分寸。他並不把它解釋成可以隨意突破原則。",
+      "現代學習可以先核實當前具備多少資訊、時間和支持。適合完成一個小範圍任務時，就認真完成它；不宜因目標看起來不夠宏大而貿然擴大。宜下是古典飛鳥圖像中的方向，不是個人居住樓層或出行路線的建議。"
+    ],
+    "sourceRefs": [
+      "zhouyi-62",
+      "legge1882-62"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》以小者過、與時行解釋卦義；《象傳》說山上有雷，並列行過乎恭、喪過乎哀、用過乎儉。傳文把稍過之處放在恭敬、哀悼與節用等具體情境。",
+      "今天可從認真照顧細節理解，但不要求過度自抑、勉強悲傷或剝奪基本需要。什麼算合宜的多一點，仍要看實際對象、文化背景與當事人的感受。"
+    ],
+    "sourceRefs": [
+      "zhouyi-62",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "飛鳥以凶。",
+      "focus": "剛開始就向高處衝，可能缺少落腳點",
+      "paragraphs": [
+        "飛鳥的圖像在初爻便出現，Legge 將之解釋為過度上升而導致不利。爻辭沒有指向某種現實飛行事故。",
+        "在經驗不足的任務中，可以先完成一段可驗證的工作，再決定是否擴大。過早承諾全部成果，可能使自己連基本條件都來不及確認。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "過其祖，遇其妣；不及其君，遇其臣；无咎。",
+      "focus": "找到合適的接洽位置，比越級聲勢更重要",
+      "paragraphs": [
+        "祖妣、君臣構成古代關係次序。Legge 將其解釋為在相應位置上遇到合適對象，避免以敵對或越位方式接近統治者。",
+        "現代類比是把問題交給能實際處理的人，尊重清楚的職責分工。但這不意味著任何層級都不可質疑，也不能禁止必要的申訴或尋求幫助。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "弗過防之，從或戕之，凶。",
+      "focus": "該多做一點檢查時，不要只憑僥倖",
+      "paragraphs": [
+        "這一爻談未充分防備而受到傷害，Legge 強調額外謹慎的必要。古代警告不能用來責怪實際生活中遭受傷害的人。",
+        "日常事務中，可以在容易遺漏的地方多核實一次，例如確認版本和交接對象。謹慎應對應具體風險，而不是把所有人都當成潛在加害者。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "无咎，弗過遇之。往厲必戒，勿用永貞。",
+      "focus": "謹慎也要隨處境調整",
+      "paragraphs": [
+        "爻辭同時說無咎、前往有危和勿用永貞，Legge 提醒不必把一種堅定方式永久堅持下去。",
+        "一項臨時限制如果原有原因已經消失，就可以重新評估。好的分寸並非永遠縮手，而是知道眼下為什麼收住、什麼條件下可以再向前。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "密雲不雨，自我西郊，公弋取彼在穴。",
+      "focus": "聲勢已成，實際供給仍可能未到",
+      "paragraphs": [
+        "密雲無雨與弋取穴中之物並列。Legge 對雲與歷史政治背景作出推測，本文不把該推測當作已經證實的成書事實。",
+        "現代可問：準備看似充分，真正需要的幫助是否已經到位？不妨先處理能夠實際接觸的小範圍問題，而不是只等待一個籠統的大機會。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "弗遇過之，飛鳥離之，凶，是謂災眚。",
+      "focus": "越過適當範圍，會錯失原本的著陸點",
+      "paragraphs": [
+        "末爻再次寫飛鳥，Legge 讀為未能適應處境而飛得過高。它把小處可以稍過與失去分寸區分開來。",
+        "如果任務不斷膨脹，可以回到最初目的，確認哪些新增部分確實必要。承認需要縮減範圍，不等於否定已經完成的努力。"
+      ],
+      "sourceRefs": [
+        "zhouyi-62",
+        "legge1882-62"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "用有限時間修訂一份活動說明",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位志願者只有一個下午整理活動說明。她先確認時間、地點、報名辦法和可用聯繫方式，而不是立刻重做全部視覺設計、歷史介紹與宣傳語言。",
+      "在發佈前，她請另一人實際按說明操作，發現一處容易誤解的入口，於是及時修正。對暫時無法完成的延伸內容，她列入後續，而沒有為了完整外觀填入未經核實的資訊。",
+      "小過的學習由此著重於範圍與細緻：把現有任務做可靠，也承認當前資源的限度。小步不是降低責任，而是讓承諾與條件相稱。"
+    ]
+  },
+  "misreadings": [
+    "小過不預測事故、傷害或天氣，防之也不能用於臆測他人的惡意。",
+    "恭、哀、儉不應被機械地推成自我貶低、強迫悲傷或損害基本生活的要求。"
+  ],
+  "practice": [
+    "明確一件事眼下能夠可靠完成的最小範圍。",
+    "選擇一個有實際理由的細節多檢查一次，說明它能避免什麼具體問題。",
+    "列出一個需要停止擴大範圍的信號，同時保留以後重新評估的條件。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-28",
+      "name": "大過",
+      "paragraph": "大過突出承載過重與重大超常處境，小過突出小範圍內的分寸和謹慎。大小不是人的價值高低，而是需要按情境辨認的行動尺度。"
+    }
+  ],
+  "closing": "讀小過卦時，可以問：此刻多做一件大事，真的比把眼前這一件小事做可靠更有幫助嗎？",
+  "sourceIds": [
+    "zhouyi-62",
+    "legge1882-62",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1659,
+    "nonWhitespaceCharacterCount": 1893,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "小過",
+  "sourceLocale": "zh",
+  "sourceContentHash": "2a41576261e65e404b473cb64b351c2f09f51ade9d0aa14fff3e7111cf29d0f3",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 小過卦學習：小事做細，也守住合適的範圍\n\n條件只適合小步前進時，就把眼前的細節照顧好，不必靠更大的動作證明自己。\n\n小過不是“小小犯錯所以沒關係”。卦辭直接區分小事與大事，並以飛鳥留下聲音、宜下不宜上取象。六爻不斷討論過、遇、防和戒，使人看見範圍、分寸與適時調整的重要。\n\n小過是傳統文王序第62卦，卦符䷽，下卦艮☶、上卦震☳，傳統取象分別為山與雷。爻從最下方往上數，依次為初六、六二、九三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 0 1 1 0 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n小過：亨。利貞。可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。\n\nLegge 將小過解釋為在小處有所超過，尤其關注禮儀和非根本事項中可以適度調整的分寸。他並不把它解釋成可以隨意突破原則。\n\n現代學習可以先核實當前具備多少資訊、時間和支持。適合完成一個小範圍任務時，就認真完成它；不宜因目標看起來不夠宏大而貿然擴大。宜下是古典飛鳥圖像中的方向，不是個人居住樓層或出行路線的建議。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》以小者過、與時行解釋卦義；《象傳》說山上有雷，並列行過乎恭、喪過乎哀、用過乎儉。傳文把稍過之處放在恭敬、哀悼與節用等具體情境。\n\n今天可從認真照顧細節理解，但不要求過度自抑、勉強悲傷或剝奪基本需要。什麼算合宜的多一點，仍要看實際對象、文化背景與當事人的感受。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 剛開始就向高處衝，可能缺少落腳點\n\n飛鳥以凶。\n\n飛鳥的圖像在初爻便出現，Legge 將之解釋為過度上升而導致不利。爻辭沒有指向某種現實飛行事故。\n\n在經驗不足的任務中，可以先完成一段可驗證的工作，再決定是否擴大。過早承諾全部成果，可能使自己連基本條件都來不及確認。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 找到合適的接洽位置，比越級聲勢更重要\n\n過其祖，遇其妣；不及其君，遇其臣；无咎。\n\n祖妣、君臣構成古代關係次序。Legge 將其解釋為在相應位置上遇到合適對象，避免以敵對或越位方式接近統治者。\n\n現代類比是把問題交給能實際處理的人，尊重清楚的職責分工。但這不意味著任何層級都不可質疑，也不能禁止必要的申訴或尋求幫助。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 該多做一點檢查時，不要只憑僥倖\n\n弗過防之，從或戕之，凶。\n\n這一爻談未充分防備而受到傷害，Legge 強調額外謹慎的必要。古代警告不能用來責怪實際生活中遭受傷害的人。\n\n日常事務中，可以在容易遺漏的地方多核實一次，例如確認版本和交接對象。謹慎應對應具體風險，而不是把所有人都當成潛在加害者。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 謹慎也要隨處境調整\n\n无咎，弗過遇之。往厲必戒，勿用永貞。\n\n爻辭同時說無咎、前往有危和勿用永貞，Legge 提醒不必把一種堅定方式永久堅持下去。\n\n一項臨時限制如果原有原因已經消失，就可以重新評估。好的分寸並非永遠縮手，而是知道眼下為什麼收住、什麼條件下可以再向前。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 聲勢已成，實際供給仍可能未到\n\n密雲不雨，自我西郊，公弋取彼在穴。\n\n密雲無雨與弋取穴中之物並列。Legge 對雲與歷史政治背景作出推測，本文不把該推測當作已經證實的成書事實。\n\n現代可問：準備看似充分，真正需要的幫助是否已經到位？不妨先處理能夠實際接觸的小範圍問題，而不是只等待一個籠統的大機會。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 越過適當範圍，會錯失原本的著陸點\n\n弗遇過之，飛鳥離之，凶，是謂災眚。\n\n末爻再次寫飛鳥，Legge 讀為未能適應處境而飛得過高。它把小處可以稍過與失去分寸區分開來。\n\n如果任務不斷膨脹，可以回到最初目的，確認哪些新增部分確實必要。承認需要縮減範圍，不等於否定已經完成的努力。\n\n參考來源: [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238), [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 用有限時間修訂一份活動說明\n\n原創現代情境\n\n一位志願者只有一個下午整理活動說明。她先確認時間、地點、報名辦法和可用聯繫方式，而不是立刻重做全部視覺設計、歷史介紹與宣傳語言。\n\n在發佈前，她請另一人實際按說明操作，發現一處容易誤解的入口，於是及時修正。對暫時無法完成的延伸內容，她列入後續，而沒有為了完整外觀填入未經核實的資訊。\n\n小過的學習由此著重於範圍與細緻：把現有任務做可靠，也承認當前資源的限度。小步不是降低責任，而是讓承諾與條件相稱。\n\n## 避免誤讀\n\n- 小過不預測事故、傷害或天氣，防之也不能用於臆測他人的惡意。\n\n- 恭、哀、儉不應被機械地推成自我貶低、強迫悲傷或損害基本生活的要求。\n\n## 三個練習\n\n1. 明確一件事眼下能夠可靠完成的最小範圍。\n\n2. 選擇一個有實際理由的細節多檢查一次，說明它能避免什麼具體問題。\n\n3. 列出一個需要停止擴大範圍的信號，同時保留以後重新評估的條件。\n\n## 延伸閱讀\n\n大過 (hexagram-28): 大過突出承載過重與重大超常處境，小過突出小範圍內的分寸和謹慎。大小不是人的價值高低，而是需要按情境辨認的行動尺度。\n\n讀小過卦時，可以問：此刻多做一件大事，真的比把眼前這一件小事做可靠更有幫助嗎？\n\n## 參考來源\n\n- [zhouyi-62](https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238)\n\n- [legge1882-62](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-62 · SHA256 2a41576261e65e404b473cb64b351c2f09f51ade9d0aa14fff3e7111cf29d0f3\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

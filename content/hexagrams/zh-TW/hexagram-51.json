@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-51",
+  "locale": "zh-TW",
+  "kingWenNumber": 51,
+  "name": "震",
+  "pinyin": "Zhèn",
+  "englishName": "Zhèn — The Arousing",
+  "unicode": "䷲",
+  "codePoint": "U+4DF2",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "title": "震卦學習：突然受驚後，如何找回合適的步調",
+  "plainSummary": "突如其來的變化會讓人慌亂。先確認眼前的狀況，再把注意力放回最需要照顧的事。",
+  "introduction": [
+    "雷聲突然響起，人會先驚，再逐漸恢復談笑。震卦承認這種變化，也寫有人陷在泥中、來回不安、聽到鄰近震動便警醒。它關心受驚之後的反應，不提供地震、事故或其他災難發生的預報。"
+  ],
+  "identityText": "震是傳統文王序第51卦，卦符䷲，下卦震☳、上卦震☳，傳統取象分別為雷與雷。爻從最下方往上數，依次為初九、六二、六三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "震：亨。震來虩虩，笑言啞啞。震驚百里，不喪匕鬯。",
+    "paragraphs": [
+      "虩虩寫驚懼，啞啞寫笑語。匕鬯涉及祭祀時使用的匙與香酒，Legge 將“不喪”讀為面對震動仍未失去所守的禮儀職責。這裡有具體的古代儀式背景。",
+      "現代學習可以借此思考，突發變化之後什麼是當前最重要的責任。但職責不能成為忽略安全或壓抑正常驚慌的理由。人有驚懼並不說明軟弱，是否能繼續做事也要看實際條件。"
+    ],
+    "sourceRefs": [
+      "zhouyi-51",
+      "legge1882-51"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》談恐懼與後來恢復常則；《象傳》以連續雷聲取象，說恐懼修省。傳文把震動聯繫到反省，而非僅僅讚美若無其事。",
+      "本文的日常類比是，在情緒稍穩後檢查發生了什麼、準備哪裡不足，以及如何減少相同混亂。反省不應變成責怪自己為什麼會害怕，更不意味著所有意外都由個人過失造成。"
+    ],
+    "sourceRefs": [
+      "zhouyi-51",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "震來虩虩，後笑言啞啞，吉。",
+      "focus": "允許從驚懼到恢復有一個過程",
+      "paragraphs": [
+        "初爻重現卦辭的先驚後笑。Legge 保留了反應隨處境變化而轉變的次序，不要求從第一刻就鎮定。",
+        "遇到出乎意料的消息，可以先確認資訊，不急著立刻作出完整決定。後來恢復交流，也不等於先前的驚慌是多餘或可笑的。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "震來厲，億喪貝，躋于九陵，勿逐，七日得。",
+      "focus": "不要讓追回損失的急切遮住眼前判斷",
+      "paragraphs": [
+        "古文寫受震有危、失貝、登高，又說勿逐、七日得。Legge 同樣讀到暫失財物而不急追的畫面。",
+        "現代只取在慌亂時重新排定輕重的提醒，不把九陵變成通用避險路線，也不保證七天找回財物。現實緊急情況應按當地適用的安全資訊行動。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "震蘇蘇，震行无眚。",
+      "focus": "從發怔轉向有根據的行動",
+      "paragraphs": [
+        "蘇蘇呈現受驚不安，後半句又保留行動可以免於災眚的可能。Legge 將之理解為震動之後採取行動。",
+        "稍微恢復注意力後，可以做一件已確認有用的小事，例如聯繫相關人核實情況。行動的依據來自事實，不是為了擺脫不安而隨便忙起來。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "震遂泥。",
+      "focus": "認出自己是否陷在混亂裡",
+      "paragraphs": [
+        "泥使行動滯住，Legge 保留了震動之中陷於泥的圖像。它沒有直接給出一個輕鬆的解決結尾。",
+        "如果反覆刷新消息卻越來越無法判斷，可以暫停無效重複，尋找清楚可靠的資訊。承認自己暫時需要幫助，比假裝仍能同時處理所有事情更實際。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "震往來厲，億无喪，有事。",
+      "focus": "反覆波動時，重新確認要守住的事",
+      "paragraphs": [
+        "往來都帶危險，而爻辭仍說無喪、有事。Legge 將之聯繫到在變化中保有所負責的事務。",
+        "連續調整的專案中，可以先確認不可遺漏的交接和照顧人的安排。守住要緊的事，不等於其他任務都必須照舊完成。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "震索索，視矍矍，征凶。震不于其躬，于其鄰，无咎。婚媾有言。",
+      "focus": "從周圍的變化獲得提醒，不替人預測災禍",
+      "paragraphs": [
+        "索索與矍矍寫驚懼不定，隨後把震動從自身移到鄰近，並提及婚媾議論。Legge 讀出在鄰近事件中得到警醒的可能。",
+        "可以從他人的經歷檢查自己的準備，但不能認定災禍會轉到鄰居身上。關係中的不同反應也需要溝通，不應把古文當作某人會責怪或背叛自己的證據。"
+      ],
+      "sourceRefs": [
+        "zhouyi-51",
+        "legge1882-51"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "活動開始前，原定場地突然不能使用",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "主持人在活動前收到場地臨時關閉的消息，先確認通知來源和實際影響，再聯繫協作者。她承認自己有些慌，沒有為了表現鎮定而發佈尚未核實的替代地點。",
+      "小組先通知參與者暫停出發，再檢查是否有合適的其他安排；如果條件不夠，就清楚說明延期。原定節目表暫時讓位於參與者需要知道的資訊。",
+      "事情結束後，他們補充了聯絡名單和變更說明方式。震卦的學習著重於從驚慌到有根據的行動，並不把突發變化浪漫化成必有好處的考驗。"
+    ]
+  },
+  "misreadings": [
+    "震不預測地震、事故或損失，也不提供七日復得的現實保證。",
+    "古代登高與守祭器的場景不是通用應急指南；現實安全應優先使用可靠的當地資訊和專業幫助。"
+  ],
+  "practice": [
+    "回想一次突發變化，區分當時已確認的事實與自己補出的猜測。",
+    "寫下一件最需要及時告知他人的事，以及可靠的聯絡方式。",
+    "在事情平穩後補齊一個準備缺口，避免把回顧檢討只變成責備。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-52",
+      "name": "艮",
+      "paragraph": "震關注受到觸動後的反應，艮關注何時適當地停止。行動和停頓不是互相排斥的性格，而是需要按處境調整的兩種能力。"
+    }
+  ],
+  "closing": "讀震卦時，可以問：眼下哪一件經過確認的小事，比繼續在驚慌裡猜測更有幫助？",
+  "sourceIds": [
+    "zhouyi-51",
+    "legge1882-51",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1646,
+    "nonWhitespaceCharacterCount": 1872,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "震",
+  "sourceLocale": "zh",
+  "sourceContentHash": "70a85f11a29cb34571aa829c2f6510c9e2bb4d38f8889a7ba1aa5e1e68737bfe",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 震卦學習：突然受驚後，如何找回合適的步調\n\n突如其來的變化會讓人慌亂。先確認眼前的狀況，再把注意力放回最需要照顧的事。\n\n雷聲突然響起，人會先驚，再逐漸恢復談笑。震卦承認這種變化，也寫有人陷在泥中、來回不安、聽到鄰近震動便警醒。它關心受驚之後的反應，不提供地震、事故或其他災難發生的預報。\n\n震是傳統文王序第51卦，卦符䷲，下卦震☳、上卦震☳，傳統取象分別為雷與雷。爻從最下方往上數，依次為初九、六二、六三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 1 0 0 1 0 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n震：亨。震來虩虩，笑言啞啞。震驚百里，不喪匕鬯。\n\n虩虩寫驚懼，啞啞寫笑語。匕鬯涉及祭祀時使用的匙與香酒，Legge 將“不喪”讀為面對震動仍未失去所守的禮儀職責。這裡有具體的古代儀式背景。\n\n現代學習可以借此思考，突發變化之後什麼是當前最重要的責任。但職責不能成為忽略安全或壓抑正常驚慌的理由。人有驚懼並不說明軟弱，是否能繼續做事也要看實際條件。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》談恐懼與後來恢復常則；《象傳》以連續雷聲取象，說恐懼修省。傳文把震動聯繫到反省，而非僅僅讚美若無其事。\n\n本文的日常類比是，在情緒稍穩後檢查發生了什麼、準備哪裡不足，以及如何減少相同混亂。反省不應變成責怪自己為什麼會害怕，更不意味著所有意外都由個人過失造成。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初九 · 允許從驚懼到恢復有一個過程\n\n震來虩虩，後笑言啞啞，吉。\n\n初爻重現卦辭的先驚後笑。Legge 保留了反應隨處境變化而轉變的次序，不要求從第一刻就鎮定。\n\n遇到出乎意料的消息，可以先確認資訊，不急著立刻作出完整決定。後來恢復交流，也不等於先前的驚慌是多餘或可笑的。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 不要讓追回損失的急切遮住眼前判斷\n\n震來厲，億喪貝，躋于九陵，勿逐，七日得。\n\n古文寫受震有危、失貝、登高，又說勿逐、七日得。Legge 同樣讀到暫失財物而不急追的畫面。\n\n現代只取在慌亂時重新排定輕重的提醒，不把九陵變成通用避險路線，也不保證七天找回財物。現實緊急情況應按當地適用的安全資訊行動。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六三 · 從發怔轉向有根據的行動\n\n震蘇蘇，震行无眚。\n\n蘇蘇呈現受驚不安，後半句又保留行動可以免於災眚的可能。Legge 將之理解為震動之後採取行動。\n\n稍微恢復注意力後，可以做一件已確認有用的小事，例如聯繫相關人核實情況。行動的依據來自事實，不是為了擺脫不安而隨便忙起來。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 認出自己是否陷在混亂裡\n\n震遂泥。\n\n泥使行動滯住，Legge 保留了震動之中陷於泥的圖像。它沒有直接給出一個輕鬆的解決結尾。\n\n如果反覆刷新消息卻越來越無法判斷，可以暫停無效重複，尋找清楚可靠的資訊。承認自己暫時需要幫助，比假裝仍能同時處理所有事情更實際。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 反覆波動時，重新確認要守住的事\n\n震往來厲，億无喪，有事。\n\n往來都帶危險，而爻辭仍說無喪、有事。Legge 將之聯繫到在變化中保有所負責的事務。\n\n連續調整的專案中，可以先確認不可遺漏的交接和照顧人的安排。守住要緊的事，不等於其他任務都必須照舊完成。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 從周圍的變化獲得提醒，不替人預測災禍\n\n震索索，視矍矍，征凶。震不于其躬，于其鄰，无咎。婚媾有言。\n\n索索與矍矍寫驚懼不定，隨後把震動從自身移到鄰近，並提及婚媾議論。Legge 讀出在鄰近事件中得到警醒的可能。\n\n可以從他人的經歷檢查自己的準備，但不能認定災禍會轉到鄰居身上。關係中的不同反應也需要溝通，不應把古文當作某人會責怪或背叛自己的證據。\n\n參考來源: [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930), [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 活動開始前，原定場地突然不能使用\n\n原創現代情境\n\n主持人在活動前收到場地臨時關閉的消息，先確認通知來源和實際影響，再聯繫協作者。她承認自己有些慌，沒有為了表現鎮定而發佈尚未核實的替代地點。\n\n小組先通知參與者暫停出發，再檢查是否有合適的其他安排；如果條件不夠，就清楚說明延期。原定節目表暫時讓位於參與者需要知道的資訊。\n\n事情結束後，他們補充了聯絡名單和變更說明方式。震卦的學習著重於從驚慌到有根據的行動，並不把突發變化浪漫化成必有好處的考驗。\n\n## 避免誤讀\n\n- 震不預測地震、事故或損失，也不提供七日復得的現實保證。\n\n- 古代登高與守祭器的場景不是通用應急指南；現實安全應優先使用可靠的當地資訊和專業幫助。\n\n## 三個練習\n\n1. 回想一次突發變化，區分當時已確認的事實與自己補出的猜測。\n\n2. 寫下一件最需要及時告知他人的事，以及可靠的聯絡方式。\n\n3. 在事情平穩後補齊一個準備缺口，避免把回顧檢討只變成責備。\n\n## 延伸閱讀\n\n艮 (hexagram-52): 震關注受到觸動後的反應，艮關注何時適當地停止。行動和停頓不是互相排斥的性格，而是需要按處境調整的兩種能力。\n\n讀震卦時，可以問：眼下哪一件經過確認的小事，比繼續在驚慌裡猜測更有幫助？\n\n## 參考來源\n\n- [zhouyi-51](https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930)\n\n- [legge1882-51](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-51 · SHA256 70a85f11a29cb34571aa829c2f6510c9e2bb4d38f8889a7ba1aa5e1e68737bfe\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

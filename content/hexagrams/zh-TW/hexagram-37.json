@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-37",
+  "locale": "zh-TW",
+  "kingWenNumber": 37,
+  "name": "家人",
+  "pinyin": "Jiā Rén",
+  "englishName": "Jiā Rén — The Family",
+  "unicode": "䷤",
+  "codePoint": "U+4DE4",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    1
+  ],
+  "title": "家人卦學習：關係親近，也需要清楚的責任",
+  "plainSummary": "一起生活時，把需要、分工與界線說清楚，讓關心落實成可靠的日常。",
+  "introduction": [
+    "關係越親近，越容易以為對方應該知道自己的需要。家人卦討論共同生活的秩序，文字也明確保留男外女內、嚴肅家長等古代觀念。學習時不能抹去這些歷史限制，也不能拿它們規定今天誰必須做家事、誰應該服從。"
+  ],
+  "identityText": "家人是傳統文王序第37卦，卦符䷤，下卦離☲、上卦巽☴，傳統取象分別為火與風。爻從最下方數起，依次為初九、六二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "家人：利女貞。",
+    "paragraphs": [
+      "Legge 按古代家庭結構，把這句讀為妻子保持合宜、堅定有利於家事。這是所選歷史譯本的理解，不等於現代家庭應按性別固定分工。",
+      "今天可從一個更普遍的問題學習：共同生活依靠哪些持續的勞動與承諾，誰在做，誰的需要還沒有被看見？分工應由有關人按實際情況和意願討論，而不是由卦象規定身分。"
+    ],
+    "sourceRefs": [
+      "zhouyi-37",
+      "legge1882-37"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》明確討論家庭角色秩序；《象傳》以風自火出取象，提出言有物、行有恆。後者可以幫助我們注意語言是否具體、行動是否可靠。",
+      "一句我會幫忙，不如說明願意承擔哪一件事。可靠也包括條件改變時及時溝通，不能把家人之間的感情當作無需解釋的無限義務。"
+    ],
+    "sourceRefs": [
+      "zhouyi-37",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "閑有家，悔亡。",
+      "focus": "一開始就說明共同約定",
+      "paragraphs": [
+        "閑在這裡涉及防閒、界限，Legge 將初爻讀為建立家中的規則。規則不是越嚴越好，還需要正當與可理解。",
+        "開始共同生活時，可以談清公共空間、費用和日常安排。每個人都應有表達的機會，不宜只由較強勢的一方宣佈。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "无攸遂，在中饋，貞吉。",
+      "focus": "看見維持日常的勞動",
+      "paragraphs": [
+        "中饋指向家中飲食供給，Legge 將之放在妻子的傳統角色內解釋。它使不顯眼的日常工作進入文本。",
+        "現代讀者可以重視這些勞動，卻不把它限定給某種性別。做飯、清理和照料都需要真實時間，應當被承認並合理分擔。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "家人嗃嗃，悔厲吉；婦子嘻嘻，終吝。",
+      "focus": "有規則與有尊重需要同時成立",
+      "paragraphs": [
+        "古文在嚴肅與嬉笑間作出評價，Legge 的解釋也傾向嚴治。這種歷史觀念不能成為羞辱、恐嚇或傷害家庭成員的理由。",
+        "現代可以把清楚的要求與溫和表達結合。問題需要處理，人的尊嚴也需要保留；不能用家裡都是為你好來取消不同意見。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "富家，大吉。",
+      "focus": "共同生活的充實不只屬於一人",
+      "paragraphs": [
+        "Legge 將富家讀為使家庭充足，在其傳統分工裡仍著重妻子的作用。本文不將它當成未來收入預測。",
+        "今天可以問怎樣使用已有資源，讓共同需要得到照顧。支配資源的人不因此擁有替所有成員作決定的無限權力。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "王假有家，勿恤，吉。",
+      "focus": "公共責任也會在日常裡顯現",
+      "paragraphs": [
+        "王者與家相連，Legge 將其讀作影響延及家中的場景。文本不能直接當作當代家庭需要一位國王的理由。",
+        "一個人在外如何表達價值，也應接受日常行為的檢查。尊重與負責要在小事中可見，而不是只在公開場合說得動聽。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "有孚威如，終吉。",
+      "focus": "可靠與邊界不靠令人害怕建立",
+      "paragraphs": [
+        "孚與威並列，Legge 強調誠實、自我修養與適當威儀；《象傳》又說反身。",
+        "現代可以先要求自己履行約定，再與別人討論責任。明確邊界有意義，但威不應被解釋為讓人害怕、不能反駁或必須順從。"
+      ],
+      "sourceRefs": [
+        "zhouyi-37",
+        "legge1882-37"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "重新談清楚共同生活的分工",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "兩位同住者常為公共空間的整理不滿。一人覺得總是自己在做，另一人卻以為對方比較在意，所以願意包辦。他們先列出實際工作，不再把分歧直接歸結為誰不關心誰。",
+      "雙方依時間與能力重新分工，說明做到什麼程度算完成，也同意安排不合適時可以再調整。沒有人因性別或個性，就被預設永遠要做同一件事。",
+      "家人的現代學習價值，在於讓關心化為具體行動，而不是把親近當成提出任何要求的通行證。"
+    ]
+  },
+  "misreadings": [
+    "古代性別與家長權威必須置於歷史背景；本文不支持任何家庭控制、羞辱或暴力。",
+    "家人卦不決定誰適合結婚、生育或承擔某種角色，也不能判斷家庭關係必然順利。"
+  ],
+  "practice": [
+    "列出一項維持共同生活、卻常被忽略的勞動。",
+    "把一句含糊期待改寫成可討論的具體請求。",
+    "檢查現有約定是否給每個人保留了尊重、隱私與合理邊界。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-38",
+      "name": "睽",
+      "paragraph": "家人關注共同生活如何運作，睽幫助處理親近之中仍存在的差異。關係近，不意味著看法、需求和表達方式必須一樣。"
+    }
+  ],
+  "closing": "讀家人卦時，不妨問自己：我們口中的關心，是否已成為彼此都理解、也能承擔的日常？",
+  "sourceIds": [
+    "zhouyi-37",
+    "legge1882-37",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1520,
+    "nonWhitespaceCharacterCount": 1732,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "家人",
+  "sourceLocale": "zh",
+  "sourceContentHash": "0d3e32618990c04dac3a2694bd71178c90c11552d1b281b205d6ada844b17d47",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 家人卦學習：關係親近，也需要清楚的責任\n\n一起生活時，把需要、分工與界線說清楚，讓關心落實成可靠的日常。\n\n關係越親近，越容易以為對方應該知道自己的需要。家人卦討論共同生活的秩序，文字也明確保留男外女內、嚴肅家長等古代觀念。學習時不能抹去這些歷史限制，也不能拿它們規定今天誰必須做家事、誰應該服從。\n\n## 卦的身分與爻序\n\n家人是傳統文王序第37卦，卦符䷤，下卦離☲、上卦巽☴，傳統取象分別為火與風。爻從最下方數起，依次為初九、六二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n家人：利女貞。\n\nLegge 按古代家庭結構，把這句讀為妻子保持合宜、堅定有利於家事。這是所選歷史譯本的理解，不等於現代家庭應按性別固定分工。\n\n今天可從一個更普遍的問題學習：共同生活依靠哪些持續的勞動與承諾，誰在做，誰的需要還沒有被看見？分工應由有關人按實際情況和意願討論，而不是由卦象規定身分。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》明確討論家庭角色秩序；《象傳》以風自火出取象，提出言有物、行有恆。後者可以幫助我們注意語言是否具體、行動是否可靠。\n\n一句我會幫忙，不如說明願意承擔哪一件事。可靠也包括條件改變時及時溝通，不能把家人之間的感情當作無需解釋的無限義務。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初九 · 一開始就說明共同約定\n\n閑有家，悔亡。\n\n閑在這裡涉及防閒、界限，Legge 將初爻讀為建立家中的規則。規則不是越嚴越好，還需要正當與可理解。\n\n開始共同生活時，可以談清公共空間、費用和日常安排。每個人都應有表達的機會，不宜只由較強勢的一方宣佈。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 看見維持日常的勞動\n\n无攸遂，在中饋，貞吉。\n\n中饋指向家中飲食供給，Legge 將之放在妻子的傳統角色內解釋。它使不顯眼的日常工作進入文本。\n\n現代讀者可以重視這些勞動，卻不把它限定給某種性別。做飯、清理和照料都需要真實時間，應當被承認並合理分擔。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 有規則與有尊重需要同時成立\n\n家人嗃嗃，悔厲吉；婦子嘻嘻，終吝。\n\n古文在嚴肅與嬉笑間作出評價，Legge 的解釋也傾向嚴治。這種歷史觀念不能成為羞辱、恐嚇或傷害家庭成員的理由。\n\n現代可以把清楚的要求與溫和表達結合。問題需要處理，人的尊嚴也需要保留；不能用家裡都是為你好來取消不同意見。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · 共同生活的充實不只屬於一人\n\n富家，大吉。\n\nLegge 將富家讀為使家庭充足，在其傳統分工裡仍著重妻子的作用。本文不將它當成未來收入預測。\n\n今天可以問怎樣使用已有資源，讓共同需要得到照顧。支配資源的人不因此擁有替所有成員作決定的無限權力。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 公共責任也會在日常裡顯現\n\n王假有家，勿恤，吉。\n\n王者與家相連，Legge 將其讀作影響延及家中的場景。文本不能直接當作當代家庭需要一位國王的理由。\n\n一個人在外如何表達價值，也應接受日常行為的檢查。尊重與負責要在小事中可見，而不是只在公開場合說得動聽。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 可靠與邊界不靠令人害怕建立\n\n有孚威如，終吉。\n\n孚與威並列，Legge 強調誠實、自我修養與適當威儀；《象傳》又說反身。\n\n現代可以先要求自己履行約定，再與別人討論責任。明確邊界有意義，但威不應被解釋為讓人害怕、不能反駁或必須順從。\n\n引文來源：[zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005), [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 重新談清楚共同生活的分工\n\n原創現代情境\n\n兩位同住者常為公共空間的整理不滿。一人覺得總是自己在做，另一人卻以為對方比較在意，所以願意包辦。他們先列出實際工作，不再把分歧直接歸結為誰不關心誰。\n\n雙方依時間與能力重新分工，說明做到什麼程度算完成，也同意安排不合適時可以再調整。沒有人因性別或個性，就被預設永遠要做同一件事。\n\n家人的現代學習價值，在於讓關心化為具體行動，而不是把親近當成提出任何要求的通行證。\n\n## 避免誤讀\n\n- 古代性別與家長權威必須置於歷史背景；本文不支持任何家庭控制、羞辱或暴力。\n\n- 家人卦不決定誰適合結婚、生育或承擔某種角色，也不能判斷家庭關係必然順利。\n\n## 三個練習\n\n1. 列出一項維持共同生活、卻常被忽略的勞動。\n\n2. 把一句含糊期待改寫成可討論的具體請求。\n\n3. 檢查現有約定是否給每個人保留了尊重、隱私與合理邊界。\n\n## 延伸閱讀\n\n### 睽 (hexagram-38)\n\n家人關注共同生活如何運作，睽幫助處理親近之中仍存在的差異。關係近，不意味著看法、需求和表達方式必須一樣。\n\n## 結語\n\n讀家人卦時，不妨問自己：我們口中的關心，是否已成為彼此都理解、也能承擔的日常？\n\n## 資料來源\n\n- [zhouyi-37](https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005)\n\n- [legge1882-37](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

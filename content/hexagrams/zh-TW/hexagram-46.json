@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-46",
+  "locale": "zh-TW",
+  "kingWenNumber": 46,
+  "name": "升",
+  "pinyin": "Shēng",
+  "englishName": "Shēng — Pushing Upward",
+  "unicode": "䷭",
+  "codePoint": "U+4DED",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "title": "升卦學習：把成長的願望化成踩得穩的階梯",
+  "plainSummary": "想要成長，可以逐步累積條件；也要留意，繼續向上是否已經失去方向。",
+  "introduction": [
+    "升卦容易被讀成升職或一路上揚的好消息，但六爻最後寫的是冥升：走到高處，仍可能盲目地繼續。它討論增長的過程，也討論增長所依靠的支持、步驟和限度。比起問會不會升，不如問這一層台階如何形成。"
+  ],
+  "identityText": "升是傳統文王序第46卦，卦符䷭，下卦巽☴、上卦坤☷，傳統取象分別為風與地。爻從最下方往上數，依次為初六、九二、九三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "升：元亨，用見大人，勿恤，南征吉。",
+    "paragraphs": [
+      "Legge 將升理解為向上進展，說明尋求有能力者的幫助以及適時推進。“南征”保留古代方位與行動的表達，不能直接製成今天旅行、搬遷或求職的方向指南。",
+      "現代學習可以把它理解為：成長並非只靠個人用力，還需要合適條件、被看見的成果和有用的指導。是否值得繼續，仍應由現實的目的與承受能力決定，不能由卦名替人保證職位或收入。"
+    ],
+    "sourceRefs": [
+      "zhouyi-46",
+      "legge1882-46"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》從柔以時升、巽而順等方面解釋卦形；《象傳》寫地中生木，提出積小以高大。樹木從地下生長是取象，不是所有事情都只要等候便會變好的證據。",
+      "本文把積小理解為有方向的日常積累：逐步補齊知識、練習、回饋與合作。零散忙碌未必形成成長，因此還要定期檢查這些小動作是否確實支持想做的事。"
+    ],
+    "sourceRefs": [
+      "zhouyi-46",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "允升，大吉。",
+      "focus": "起步時先確認可依靠的條件",
+      "paragraphs": [
+        "允升在 Legge 的讀法中帶有被認可、能夠前進的意味，注釋又把它聯繫到相鄰爻的支持。",
+        "初學一項技能時，可以找一個難度合適的起點，也確認有人或資料能幫助糾錯。有支持並不損害獨立，反而能減少一開始就走偏的成本。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "孚乃利用禴，无咎。",
+      "focus": "以真誠和實際內容建立聯繫",
+      "paragraphs": [
+        "這一爻與萃六二同樣出現禴。Legge 以簡約祭禮說明，真實的誠意可以比豐盛形式更關鍵。",
+        "向前輩請教時，清楚呈現已經嘗試的內容與卡住的問題，通常比誇大熱情更有幫助。求助應尊重對方的時間，也不意味著把決定權完全交出去。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "升虛邑。",
+      "focus": "沒有阻礙時也要看清將去哪裡",
+      "paragraphs": [
+        "升入空邑，在 Legge 的譯解中呈現順利推進、少有阻礙的畫面。爻辭沒有詳細說明進入以後如何經營。",
+        "一項機會看似容易取得時，可以進一步問：是否有真實需求，進入後需要承擔什麼？門開著，並不自動說明每個人都適合進去。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "王用享于岐山，吉无咎。",
+      "focus": "發展有時依靠共同承認的秩序",
+      "paragraphs": [
+        "岐山與王的祭享具有具體歷史文化意味。Legge 又把它聯繫到周人先祖的政治地位，這是他的歷史化解釋，不是爻辭逐字寫明的全部內容。",
+        "現代類比可討論在清楚的授權和協作範圍內成長。獲得支持時也說明自己負責什麼，避免把一時認可理解為可以無限擴張。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "貞吉，升階。",
+      "focus": "用台階讓前進有可檢查的步驟",
+      "paragraphs": [
+        "升階使向上的過程有了可落腳的位置。Legge 提到循階而上的從容與合宜，並保留貞的要求。",
+        "把一個較大的學習目標拆成能檢驗的階段：先理解，再嘗試，再回顧檢討。完成一層後檢查掌握程度，比僅僅不斷提高目標數字更穩妥。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "冥升，利于不息之貞。",
+      "focus": "警惕不知道為什麼還在攀升",
+      "paragraphs": [
+        "Legge 把冥升解釋為盲目的繼續向上：即使已經得到想要的，仍只想更多。末句的堅持不能脫離這一警示。",
+        "若增加的任務只帶來更大負擔，可以重新確認目的。值得持續的是合宜的方向與修養，不是任何規模、頭銜和速度都必須永遠增加。"
+      ],
+      "sourceRefs": [
+        "zhouyi-46",
+        "legge1882-46"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把興趣練習發展成長久的能力",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位學習木刻的人希望完成複雜作品，先練習基本刻線，再請教如何觀察版面。她保存試印，逐次發現容易出錯的位置，沒有一開始就按最複雜作品要求自己。",
+      "得到參加小型展覽的機會後，她確認作品數量、完成時間和呈現條件，而不是因為被邀請就立刻答應更大的計畫。每一個新步驟都與實際能力相連。",
+      "後來邀約增加，她減少了不適合的活動，保留練習時間。這仍可算成長：升卦的提醒不只在於往上，還在於讓前進始終服務真正想培養的能力。"
+    ]
+  },
+  "misreadings": [
+    "升不承諾升職、財富增加或考試成功；實際結果取決於許多具體條件。",
+    "南征不是個人的幸運方位，冥升也不是對努力者的指責。是否繼續，需要結合目的、回饋和負擔。"
+  ],
+  "practice": [
+    "把一個成長目標寫成具體能力，避免只寫更高、更多或更出名。",
+    "為它安排一個可以檢查成果的小台階，並確定回饋從哪裡來。",
+    "列出一個應該停下來重新考慮的信號，以免只剩下慣性前進。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-53",
+      "name": "漸",
+      "paragraph": "升突出向上積累和台階，漸突出發展的次序與漸進。兩者都值得追問實際條件，但不應被合併成一條保證成功的成長公式。"
+    }
+  ],
+  "closing": "讀升卦時，可以問：下一步讓我更接近真正的目標，還是只是比現在站得更高？",
+  "sourceIds": [
+    "zhouyi-46",
+    "legge1882-46",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六四採用底本正文“享”，頁面另列“亨”異文。",
+  "counts": {
+    "chineseCharacterCount": 1641,
+    "nonWhitespaceCharacterCount": 1869,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "升",
+  "sourceLocale": "zh",
+  "sourceContentHash": "ec2f1962964902319f9516b084e8f388e421536be06df3aea691db414b6f03c1",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 升卦學習：把成長的願望化成踩得穩的階梯\n\n想要成長，可以逐步累積條件；也要留意，繼續向上是否已經失去方向。\n\n升卦容易被讀成升職或一路上揚的好消息，但六爻最後寫的是冥升：走到高處，仍可能盲目地繼續。它討論增長的過程，也討論增長所依靠的支持、步驟和限度。比起問會不會升，不如問這一層台階如何形成。\n\n升是傳統文王序第46卦，卦符䷭，下卦巽☴、上卦坤☷，傳統取象分別為風與地。爻從最下方往上數，依次為初六、九二、九三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 1 1 0 0 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n升：元亨，用見大人，勿恤，南征吉。\n\nLegge 將升理解為向上進展，說明尋求有能力者的幫助以及適時推進。“南征”保留古代方位與行動的表達，不能直接製成今天旅行、搬遷或求職的方向指南。\n\n現代學習可以把它理解為：成長並非只靠個人用力，還需要合適條件、被看見的成果和有用的指導。是否值得繼續，仍應由現實的目的與承受能力決定，不能由卦名替人保證職位或收入。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》從柔以時升、巽而順等方面解釋卦形；《象傳》寫地中生木，提出積小以高大。樹木從地下生長是取象，不是所有事情都只要等候便會變好的證據。\n\n本文把積小理解為有方向的日常積累：逐步補齊知識、練習、回饋與合作。零散忙碌未必形成成長，因此還要定期檢查這些小動作是否確實支持想做的事。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 起步時先確認可依靠的條件\n\n允升，大吉。\n\n允升在 Legge 的讀法中帶有被認可、能夠前進的意味，注釋又把它聯繫到相鄰爻的支持。\n\n初學一項技能時，可以找一個難度合適的起點，也確認有人或資料能幫助糾錯。有支持並不損害獨立，反而能減少一開始就走偏的成本。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 以真誠和實際內容建立聯繫\n\n孚乃利用禴，无咎。\n\n這一爻與萃六二同樣出現禴。Legge 以簡約祭禮說明，真實的誠意可以比豐盛形式更關鍵。\n\n向前輩請教時，清楚呈現已經嘗試的內容與卡住的問題，通常比誇大熱情更有幫助。求助應尊重對方的時間，也不意味著把決定權完全交出去。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 沒有阻礙時也要看清將去哪裡\n\n升虛邑。\n\n升入空邑，在 Legge 的譯解中呈現順利推進、少有阻礙的畫面。爻辭沒有詳細說明進入以後如何經營。\n\n一項機會看似容易取得時，可以進一步問：是否有真實需求，進入後需要承擔什麼？門開著，並不自動說明每個人都適合進去。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 發展有時依靠共同承認的秩序\n\n王用享于岐山，吉无咎。\n\n岐山與王的祭享具有具體歷史文化意味。Legge 又把它聯繫到周人先祖的政治地位，這是他的歷史化解釋，不是爻辭逐字寫明的全部內容。\n\n現代類比可討論在清楚的授權和協作範圍內成長。獲得支持時也說明自己負責什麼，避免把一時認可理解為可以無限擴張。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 用台階讓前進有可檢查的步驟\n\n貞吉，升階。\n\n升階使向上的過程有了可落腳的位置。Legge 提到循階而上的從容與合宜，並保留貞的要求。\n\n把一個較大的學習目標拆成能檢驗的階段：先理解，再嘗試，再回顧檢討。完成一層後檢查掌握程度，比僅僅不斷提高目標數字更穩妥。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 警惕不知道為什麼還在攀升\n\n冥升，利于不息之貞。\n\nLegge 把冥升解釋為盲目的繼續向上：即使已經得到想要的，仍只想更多。末句的堅持不能脫離這一警示。\n\n若增加的任務只帶來更大負擔，可以重新確認目的。值得持續的是合宜的方向與修養，不是任何規模、頭銜和速度都必須永遠增加。\n\n參考來源: [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879), [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 把興趣練習發展成長久的能力\n\n原創現代情境\n\n一位學習木刻的人希望完成複雜作品，先練習基本刻線，再請教如何觀察版面。她保存試印，逐次發現容易出錯的位置，沒有一開始就按最複雜作品要求自己。\n\n得到參加小型展覽的機會後，她確認作品數量、完成時間和呈現條件，而不是因為被邀請就立刻答應更大的計畫。每一個新步驟都與實際能力相連。\n\n後來邀約增加，她減少了不適合的活動，保留練習時間。這仍可算成長：升卦的提醒不只在於往上，還在於讓前進始終服務真正想培養的能力。\n\n## 避免誤讀\n\n- 升不承諾升職、財富增加或考試成功；實際結果取決於許多具體條件。\n\n- 南征不是個人的幸運方位，冥升也不是對努力者的指責。是否繼續，需要結合目的、回饋和負擔。\n\n## 三個練習\n\n1. 把一個成長目標寫成具體能力，避免只寫更高、更多或更出名。\n\n2. 為它安排一個可以檢查成果的小台階，並確定回饋從哪裡來。\n\n3. 列出一個應該停下來重新考慮的信號，以免只剩下慣性前進。\n\n## 延伸閱讀\n\n漸 (hexagram-53): 升突出向上積累和台階，漸突出發展的次序與漸進。兩者都值得追問實際條件，但不應被合併成一條保證成功的成長公式。\n\n讀升卦時，可以問：下一步讓我更接近真正的目標，還是只是比現在站得更高？\n\n## 版本說明\n\n六四採用底本正文“享”，頁面另列“亨”異文。\n\n## 參考來源\n\n- [zhouyi-46](https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879)\n\n- [legge1882-46](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-46 · SHA256 ec2f1962964902319f9516b084e8f388e421536be06df3aea691db414b6f03c1\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

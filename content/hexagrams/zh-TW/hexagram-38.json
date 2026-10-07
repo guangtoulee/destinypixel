@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-38",
+  "locale": "zh-TW",
+  "kingWenNumber": 38,
+  "name": "睽",
+  "pinyin": "Kuí",
+  "englishName": "Kuí — Opposition",
+  "unicode": "䷥",
+  "codePoint": "U+4DE5",
+  "lowerTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "title": "睽卦學習：看法不同，也能找出小範圍的合作",
+  "plainSummary": "意見不一致時，先釐清真正的差異，從雙方還能確認的小事開始溝通。",
+  "introduction": [
+    "兩個人可能都想把事情做好，卻希望採取不同方法。睽卦討論分離、相背與誤認，也寫到相遇和疑慮解除。它不要求消除所有差異，而是提醒讀者分辨：哪些差異應保留，哪些只是資訊不足造成的誤會。"
+  ],
+  "identityText": "睽是傳統文王序第38卦，卦符䷥，下卦兌☱、上卦離☲，傳統取象分別為澤與火。爻從最下方數起，依次為初九、九二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "睽：小事吉。",
+    "paragraphs": [
+      "Legge 將睽理解為分歧和疏離的狀態，認為小範圍的事情仍可得到推進。小事的限定很重要，不能直接跳成所有重大分歧都會化解。",
+      "現代可先尋找一個雙方確實能確認的問題，例如時間、資料或一個小步驟。建立有限合作，並不等於已經解決價值觀、利益或長期目標的全部差異。"
+    ],
+    "sourceRefs": [
+      "zhouyi-38",
+      "legge1882-38"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》以火向上、澤向下等圖像說明相背，也說不同之中仍可能有相通；《象傳》提出同而異。這裡允許共同處與差別並存。",
+      "今天可以停止把不同意見自動理解為敵意。與此同時，真正的利益衝突也需要承認，不能只用大家本來都一樣來掩蓋。"
+    ],
+    "sourceRefs": [
+      "zhouyi-38",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "悔亡，喪馬勿逐，自復；見惡人无咎。",
+      "focus": "先別被失去與厭惡牽著走",
+      "paragraphs": [
+        "Legge 保留失馬不追、後來復歸以及與不喜歡的人相見的畫面。它不是現實失物會自動回來的保證。",
+        "普通分歧中，可以先停止情緒化追問，讓事實有機會補齊。必要接觸應注意實際條件，不能因古文說無咎就忽略對方確有傷害的行為。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "遇主于巷，无咎。",
+      "focus": "非正式的相遇也可能有作用",
+      "paragraphs": [
+        "在巷中遇到主，是一條較小、較私近的相見路徑。Legge 沿古代上下關係解釋，不把它等同於投機逢迎。",
+        "如果正式討論總在重複立場，可以嘗試一次範圍清楚的澄清對話。但相關人應知情，不能用私下溝通繞過重要的共同約定。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "見輿曳，其牛掣，其人天且劓，无初有終。",
+      "focus": "受阻的圖像不能被美化",
+      "paragraphs": [
+        "車被拖住、牛受牽制，又有古代刑罰的身體意象。Legge 保留嚴酷的受阻場景和後來有終的表達。",
+        "現代學習可承認溝通過程確實可能艱難，但不能因此合理化羞辱或傷害。無初有終也不保證任何不良關係最終會圓滿。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "睽孤，遇元夫，交孚，厲无咎。",
+      "focus": "孤立之中，信任仍需要具體建立",
+      "paragraphs": [
+        "Legge 讀到孤立中的相遇與誠意相交，且保留厲的警覺。一個新的聯繫並不使所有風險自動消失。",
+        "可以透過一項小約定了解對方是否可靠。別因為終於有人贊同自己，就跳過核實或立刻交出全部信任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "悔亡，厥宗噬膚，往何咎。",
+      "focus": "合適的聯絡能幫助鬆開隔閡",
+      "paragraphs": [
+        "宗親和噬膚在 Legge 的解釋中表示相近者使聯合較容易達成。它仍有古代政治與親族語境。",
+        "現代可以請雙方認可的人幫助說明誤會，但不應讓熟悉關係代替事實。真正有幫助的是使各方聽懂，而非只讓某一方佔優勢。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "睽孤，見豕負涂，載鬼一車，先張之弧，後說之弧，匪寇婚媾，往遇雨則吉。",
+      "focus": "認真檢查自己最初的誤認",
+      "paragraphs": [
+        "泥豬、鬼車、張弓又弛弓，最後辨認為婚媾而非寇，構成從猜疑到認出的過程。Legge 明確把這些形象與疏離的眼光相連。",
+        "今天可問某個判斷是否建立在未經核實的想像上。文本不證明現實有鬼，也不證明所有警覺都是誤會；需要新的事實來決定是否修正。"
+      ],
+      "sourceRefs": [
+        "zhouyi-38",
+        "legge1882-38"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "兩種不同的活動規劃",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "兩位組織者對活動安排有不同看法：一人重視自由交流，另一人擔心參與者不知道如何開始。他們先確認共同目標，再試行一個先簡短引導、接著自由討論的環節。",
+      "試行後，雙方蒐集參與者的具體回饋，發現原先部分爭論，來自對聽眾經驗的不同假設。有些偏好仍不一致，他們就清楚保留，不勉強統一。",
+      "睽在這裡幫助他們拆解分歧、查證誤會。能合作到什麼程度，由實際結果決定，不是一句吉辭就能保證。"
+    ]
+  },
+  "misreadings": [
+    "睽不等於必須和解，也不能認定對方惡意或自己所有懷疑都錯誤。風險與差異都要按事實檢查。",
+    "古代刑罰、鬼車與婚媾意象不用於健康、超自然或感情預測，更不為傷害行為辯護。"
+  ],
+  "practice": [
+    "分別寫下實際分歧與自己對對方動機的猜測。",
+    "找一件雙方仍可共同核實的小事。",
+    "獲得新資訊後，明確哪項理解改變、哪項差異仍存在。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-37",
+      "name": "家人",
+      "paragraph": "家人重視可靠的共同生活，睽提醒共同體裡也會存在不同。清楚分工與允許差異，都能比要求完全一致更接近實際。"
+    }
+  ],
+  "closing": "讀睽卦時，不妨問自己：我們到底不同在哪裡？又有哪些部分，其實還沒真正聽懂彼此？",
+  "sourceIds": [
+    "zhouyi-38",
+    "legge1882-38",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六三採用底本明列的「掣」異文；頁面正文另用古字「𧤊」。",
+  "counts": {
+    "chineseCharacterCount": 1569,
+    "nonWhitespaceCharacterCount": 1794,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "睽",
+  "sourceLocale": "zh",
+  "sourceContentHash": "76c38935173616031d6c6535d5a34b878e8f548a894fda9571d9cde0000bc8f1",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 睽卦學習：看法不同，也能找出小範圍的合作\n\n意見不一致時，先釐清真正的差異，從雙方還能確認的小事開始溝通。\n\n兩個人可能都想把事情做好，卻希望採取不同方法。睽卦討論分離、相背與誤認，也寫到相遇和疑慮解除。它不要求消除所有差異，而是提醒讀者分辨：哪些差異應保留，哪些只是資訊不足造成的誤會。\n\n## 卦的身分與爻序\n\n睽是傳統文王序第38卦，卦符䷥，下卦兌☱、上卦離☲，傳統取象分別為澤與火。爻從最下方數起，依次為初九、九二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n睽：小事吉。\n\nLegge 將睽理解為分歧和疏離的狀態，認為小範圍的事情仍可得到推進。小事的限定很重要，不能直接跳成所有重大分歧都會化解。\n\n現代可先尋找一個雙方確實能確認的問題，例如時間、資料或一個小步驟。建立有限合作，並不等於已經解決價值觀、利益或長期目標的全部差異。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》以火向上、澤向下等圖像說明相背，也說不同之中仍可能有相通；《象傳》提出同而異。這裡允許共同處與差別並存。\n\n今天可以停止把不同意見自動理解為敵意。與此同時，真正的利益衝突也需要承認，不能只用大家本來都一樣來掩蓋。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初九 · 先別被失去與厭惡牽著走\n\n悔亡，喪馬勿逐，自復；見惡人无咎。\n\nLegge 保留失馬不追、後來復歸以及與不喜歡的人相見的畫面。它不是現實失物會自動回來的保證。\n\n普通分歧中，可以先停止情緒化追問，讓事實有機會補齊。必要接觸應注意實際條件，不能因古文說無咎就忽略對方確有傷害的行為。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九二 · 非正式的相遇也可能有作用\n\n遇主于巷，无咎。\n\n在巷中遇到主，是一條較小、較私近的相見路徑。Legge 沿古代上下關係解釋，不把它等同於投機逢迎。\n\n如果正式討論總在重複立場，可以嘗試一次範圍清楚的澄清對話。但相關人應知情，不能用私下溝通繞過重要的共同約定。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六三 · 受阻的圖像不能被美化\n\n見輿曳，其牛掣，其人天且劓，无初有終。\n\n車被拖住、牛受牽制，又有古代刑罰的身體意象。Legge 保留嚴酷的受阻場景和後來有終的表達。\n\n現代學習可承認溝通過程確實可能艱難，但不能因此合理化羞辱或傷害。無初有終也不保證任何不良關係最終會圓滿。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · 孤立之中，信任仍需要具體建立\n\n睽孤，遇元夫，交孚，厲无咎。\n\nLegge 讀到孤立中的相遇與誠意相交，且保留厲的警覺。一個新的聯繫並不使所有風險自動消失。\n\n可以透過一項小約定了解對方是否可靠。別因為終於有人贊同自己，就跳過核實或立刻交出全部信任。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六五 · 合適的聯絡能幫助鬆開隔閡\n\n悔亡，厥宗噬膚，往何咎。\n\n宗親和噬膚在 Legge 的解釋中表示相近者使聯合較容易達成。它仍有古代政治與親族語境。\n\n現代可以請雙方認可的人幫助說明誤會，但不應讓熟悉關係代替事實。真正有幫助的是使各方聽懂，而非只讓某一方佔優勢。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 認真檢查自己最初的誤認\n\n睽孤，見豕負涂，載鬼一車，先張之弧，後說之弧，匪寇婚媾，往遇雨則吉。\n\n泥豬、鬼車、張弓又弛弓，最後辨認為婚媾而非寇，構成從猜疑到認出的過程。Legge 明確把這些形象與疏離的眼光相連。\n\n今天可問某個判斷是否建立在未經核實的想像上。文本不證明現實有鬼，也不證明所有警覺都是誤會；需要新的事實來決定是否修正。\n\n引文來源：[zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622), [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 兩種不同的活動規劃\n\n原創現代情境\n\n兩位組織者對活動安排有不同看法：一人重視自由交流，另一人擔心參與者不知道如何開始。他們先確認共同目標，再試行一個先簡短引導、接著自由討論的環節。\n\n試行後，雙方蒐集參與者的具體回饋，發現原先部分爭論，來自對聽眾經驗的不同假設。有些偏好仍不一致，他們就清楚保留，不勉強統一。\n\n睽在這裡幫助他們拆解分歧、查證誤會。能合作到什麼程度，由實際結果決定，不是一句吉辭就能保證。\n\n## 避免誤讀\n\n- 睽不等於必須和解，也不能認定對方惡意或自己所有懷疑都錯誤。風險與差異都要按事實檢查。\n\n- 古代刑罰、鬼車與婚媾意象不用於健康、超自然或感情預測，更不為傷害行為辯護。\n\n## 三個練習\n\n1. 分別寫下實際分歧與自己對對方動機的猜測。\n\n2. 找一件雙方仍可共同核實的小事。\n\n3. 獲得新資訊後，明確哪項理解改變、哪項差異仍存在。\n\n## 延伸閱讀\n\n### 家人 (hexagram-37)\n\n家人重視可靠的共同生活，睽提醒共同體裡也會存在不同。清楚分工與允許差異，都能比要求完全一致更接近實際。\n\n## 結語\n\n讀睽卦時，不妨問自己：我們到底不同在哪裡？又有哪些部分，其實還沒真正聽懂彼此？\n\n## 版本說明\n\n六三採用底本明列的「掣」異文；頁面正文另用古字「𧤊」。\n\n## 資料來源\n\n- [zhouyi-38](https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622)\n\n- [legge1882-38](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

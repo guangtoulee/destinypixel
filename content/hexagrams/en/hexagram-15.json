@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-15",
+  "locale": "en",
+  "kingWenNumber": 15,
+  "name": "谦",
+  "pinyin": "Qiān",
+  "englishName": "Qiān — Modesty",
+  "unicode": "䷎",
+  "codePoint": "U+4DCE",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "title": "Studying Modesty: seeing yourself accurately and making room for others",
+  "plainSummary": "Acknowledge what you do well and recognize what still needs work. Modesty means keeping a sense of proportion, not describing yourself as worthless.",
+  "introduction": [
+    "Quickly denying praise is not necessarily more accurate than boasting. Modesty is worth studying for how it places ability, credit, and action. It includes modesty recognized by others and genuine achievement, as well as scenes of ancient military campaigns, so it cannot be reduced to meekness or yielding."
+  ],
+  "identityText": "Qiān is hexagram 15 in the traditional King Wen sequence, with the symbol ䷎. Its lower trigram is Gen ☶ and its upper trigram is Kun ☷; their traditional images are mountain and earth, respectively. Count the lines from the bottom: 初六, 六二, 九三, 六四, 六五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "謙：亨，君子有終。",
+    "paragraphs": [
+      "Legge understands qian as modesty and connects “having an ending” with bringing action to a good conclusion. This is not merely an instruction to sound polite: it connects modesty with how things continue and how they end.",
+      "A contemporary application begins with accuracy: neither inflate nor erase your contribution, and acknowledge the people and conditions that made completion possible. This is a way of observing and behaving, not a promise that humility will make everyone like you."
+    ],
+    "sourceRefs": [
+      "zhouyi-15",
+      "legge1882-15"
+    ],
+    "classicalTranslation": "Editorial rendering: Modesty: favorable progress. An exemplary person brings matters to completion."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.",
+      "The Commentary on the Images uses a mountain within the earth and speaks of “裒多益寡，称物平施”: reducing excess, supplementing shortage, and distributing in due measure. Height, depth, and adjustment of distribution enter the same picture. The Commentary on the Judgment develops modesty through heaven, earth, human affairs, and other perspectives.",
+      "This article draws on that to discuss assessment and proportion: can those with spare capacity support a weaker part, and does recognition match actual contributions? Such contemporary discussion does not treat any ancient cosmology as a testable formula of reward and punishment."
+    ],
+    "sourceRefs": [
+      "zhouyi-15",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "謙謙君子，用涉大川，吉。",
+      "focus": "Modesty can support taking responsibility",
+      "paragraphs": [
+        "The repetition in “modest, modest” intensifies humility, yet stands alongside the major undertaking of crossing a great river. Legge likewise retains the reading that a carefully modest person can still face a significant journey.",
+        "With an unfamiliar task, acknowledging the need to learn and seek help can provide a basis for taking responsibility. Modesty does not require you always to stay in the smallest role or underestimate abilities you already possess."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: A deeply modest exemplary person may cross the great river. Good fortune."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "鳴謙，貞吉。",
+      "focus": "Modesty can be visible",
+      "paragraphs": [
+        "Legge understands “voiced modesty” as humility that is recognized and expressed. It need not be hidden so completely that nobody knows of it.",
+        "When reporting on work, clearly state what you did and what your colleagues contributed. Stating facts is not automatically boasting; what matters is accuracy and respect for the parts accomplished together."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: Modesty finds expression. Right constancy brings good fortune."
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "勞謙君子，有終吉。",
+      "focus": "Keep completing the work when you have earned credit",
+      "paragraphs": [
+        "“Modesty in achievement” joins meritorious work with humility. Legge’s interpretation acknowledges existing accomplishments rather than requiring them to be removed from the account.",
+        "After receiving recognition, still complete the handover and address omissions instead of treating applause as the end of the work. At the same time, modesty should not erase appropriate credit or payment."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: An exemplary person with achievement and modesty brings things to completion. Good fortune."
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "无不利，撝謙。",
+      "focus": "Put your sense of proportion into action",
+      "paragraphs": [
+        "Hui qian concerns showing modesty through action; Legge reads it as further cultivating the practice of modesty. The concern extends beyond one’s inward self-assessment.",
+        "Giving others time to finish speaking and asking directly when you do not understand are observable actions. They are more concrete than repeatedly saying you are no good."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: Nothing is unfavorable: show modesty in action."
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "不富，以其鄰，利用侵伐，无不利。",
+      "focus": "Modesty does not mean avoiding every conflict",
+      "paragraphs": [
+        "The line speaks of connecting with neighbors without relying on wealth and explicitly uses the language of invasion and attack. Legge explains it within an ancient framework of upholding legitimate order; the military content must not be quietly erased.",
+        "The contemporary lesson is only that principled firmness and humility can coexist. The line authorizes no actual violence, revenge, or bullying; disputes still require appropriate facts, procedures, and help."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: Without wealth, yet joined with neighbors. It is favorable to invade and attack; nothing is unfavorable."
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "鳴謙，利用行師，征邑國。",
+      "focus": "First consider the area for which you can take responsibility",
+      "paragraphs": [
+        "The final line again combines voiced modesty with military action, now directed toward towns and territory. Legge emphasizes an interpretation in which the action remains within one’s own sphere of responsibility.",
+        "In everyday affairs, first correct arrangements you are responsible for rather than constantly prescribing changes for others. Accepting responsibility also needs boundaries; you need not take every problem upon yourself."
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": "Editorial rendering: Modesty finds expression. It is favorable to deploy an army against towns and territory."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Presenting a team’s achievements",
+    "label": "Original contemporary scenario",
+    "paragraphs": [
+      "A team has completed an exhibition and is preparing to present the results to participants. The speaker neither claims all the achievement for herself nor dismisses her own organizing work as insignificant. She lists what each person actually completed and identifies support that came from outside the team.",
+      "After the event, she discovers an error in the materials, corrects it, and informs those affected. Having already received praise does not make her treat a new problem as an embarrassment. When a new task exceeds the original agreement, she also clearly explains that it requires fresh arrangements.",
+      "Here, modesty means accurate communication, continued responsibility, and maintained boundaries. It does not require anyone to be quietly taken advantage of."
+    ]
+  },
+  "misreadings": [
+    "Modesty is not proof that good people always receive good rewards, and it does not require putting yourself down to earn approval.",
+    "Invasion and military deployment in this hexagram belong to an ancient context. A modern learning analogy cannot turn them into a justification for violence or controlling others."
+  ],
+  "practice": [
+    "Describe a recent achievement, accurately including both your contribution and other people’s help.",
+    "Identify one unfinished closing task so that recognition does not take the place of completion.",
+    "Write down one reasonable boundary worth maintaining and try expressing it clearly and respectfully."
+  ],
+  "related": [
+    {
+      "id": "hexagram-14",
+      "name": "Great Possession",
+      "paragraph": "Great Possession shows what one has; Modesty asks how to place it in proportion. Reading the two together allows you to acknowledge achievements while continuing to learn, without choosing between boasting and self-denial."
+    }
+  ],
+  "closing": "When reading Modesty, ask: how can I speak and act without exaggerating myself or dismissing the effort I have genuinely made?",
+  "sourceIds": [
+    "zhouyi-15",
+    "legge1882-15",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 84,
+    "nonWhitespaceCharacterCount": 7259,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Modesty",
+  "sourceLocale": "zh",
+  "sourceContentHash": "125f17e6df91e772d66b0d5b823fb34d20ce1aba61e5f2510ebe31b715ac56e7",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Modesty: seeing yourself accurately and making room for others\n\nAcknowledge what you do well and recognize what still needs work. Modesty means keeping a sense of proportion, not describing yourself as worthless.\n\nQuickly denying praise is not necessarily more accurate than boasting. Modesty is worth studying for how it places ability, credit, and action. It includes modesty recognized by others and genuine achievement, as well as scenes of ancient military campaigns, so it cannot be reduced to meekness or yielding.\n\n## Identifying the hexagram\n\nQiān is hexagram 15 in the traditional King Wen sequence, with the symbol ䷎. Its lower trigram is Gen ☶ and its upper trigram is Kun ☷; their traditional images are mountain and earth, respectively. Count the lines from the bottom: 初六, 六二, 九三, 六四, 六五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.\n\nThe six lines are numbered from the bottom upward; the figure below displays their actual positions from top to bottom.\n\n```text\n━━  ━━  上六\n━━  ━━  六五\n━━  ━━  六四\n━━━━━━  九三\n━━  ━━  六二\n━━  ━━  初六\n```\n\n## Hexagram statement\n\n> 謙：亨，君子有終。\n\nEditorial rendering: Modesty: favorable progress. An exemplary person brings matters to completion.\n\nLegge understands qian as modesty and connects “having an ending” with bringing action to a good conclusion. This is not merely an instruction to sound polite: it connects modesty with how things continue and how they end.\n\nA contemporary application begins with accuracy: neither inflate nor erase your contribution, and acknowledge the people and conditions that made completion possible. This is a way of observing and behaving, not a promise that humility will make everyone like you.\n\n[zhouyi-15; legge1882-15]\n\n## Interpretation in the Ten Wings\n\nThe Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.\n\nThe Commentary on the Images uses a mountain within the earth and speaks of “裒多益寡，称物平施”: reducing excess, supplementing shortage, and distributing in due measure. Height, depth, and adjustment of distribution enter the same picture. The Commentary on the Judgment develops modesty through heaven, earth, human affairs, and other perspectives.\n\nThis article draws on that to discuss assessment and proportion: can those with spare capacity support a weaker part, and does recognition match actual contributions? Such contemporary discussion does not treat any ancient cosmology as a testable formula of reward and punishment.\n\n[zhouyi-15; hon-sep]\n\n## Six lines, from bottom to top\n\nThe quotations below are line statements; the explanations that follow are original learning commentary. Good fortune, no blame, and regret belong to ancient divinatory language and cannot be turned directly into guarantees about an individual’s future.\n\n### 初六 · Modesty can support taking responsibility\n\n> 謙謙君子，用涉大川，吉。\n\nEditorial rendering: A deeply modest exemplary person may cross the great river. Good fortune.\n\nThe repetition in “modest, modest” intensifies humility, yet stands alongside the major undertaking of crossing a great river. Legge likewise retains the reading that a carefully modest person can still face a significant journey.\n\nWith an unfamiliar task, acknowledging the need to learn and seek help can provide a basis for taking responsibility. Modesty does not require you always to stay in the smallest role or underestimate abilities you already possess.\n\n[zhouyi-15; legge1882-15]\n\n### 六二 · Modesty can be visible\n\n> 鳴謙，貞吉。\n\nEditorial rendering: Modesty finds expression. Right constancy brings good fortune.\n\nLegge understands “voiced modesty” as humility that is recognized and expressed. It need not be hidden so completely that nobody knows of it.\n\nWhen reporting on work, clearly state what you did and what your colleagues contributed. Stating facts is not automatically boasting; what matters is accuracy and respect for the parts accomplished together.\n\n[zhouyi-15; legge1882-15]\n\n### 九三 · Keep completing the work when you have earned credit\n\n> 勞謙君子，有終吉。\n\nEditorial rendering: An exemplary person with achievement and modesty brings things to completion. Good fortune.\n\n“Modesty in achievement” joins meritorious work with humility. Legge’s interpretation acknowledges existing accomplishments rather than requiring them to be removed from the account.\n\nAfter receiving recognition, still complete the handover and address omissions instead of treating applause as the end of the work. At the same time, modesty should not erase appropriate credit or payment.\n\n[zhouyi-15; legge1882-15]\n\n### 六四 · Put your sense of proportion into action\n\n> 无不利，撝謙。\n\nEditorial rendering: Nothing is unfavorable: show modesty in action.\n\nHui qian concerns showing modesty through action; Legge reads it as further cultivating the practice of modesty. The concern extends beyond one’s inward self-assessment.\n\nGiving others time to finish speaking and asking directly when you do not understand are observable actions. They are more concrete than repeatedly saying you are no good.\n\n[zhouyi-15; legge1882-15]\n\n### 六五 · Modesty does not mean avoiding every conflict\n\n> 不富，以其鄰，利用侵伐，无不利。\n\nEditorial rendering: Without wealth, yet joined with neighbors. It is favorable to invade and attack; nothing is unfavorable.\n\nThe line speaks of connecting with neighbors without relying on wealth and explicitly uses the language of invasion and attack. Legge explains it within an ancient framework of upholding legitimate order; the military content must not be quietly erased.\n\nThe contemporary lesson is only that principled firmness and humility can coexist. The line authorizes no actual violence, revenge, or bullying; disputes still require appropriate facts, procedures, and help.\n\n[zhouyi-15; legge1882-15]\n\n### 上六 · First consider the area for which you can take responsibility\n\n> 鳴謙，利用行師，征邑國。\n\nEditorial rendering: Modesty finds expression. It is favorable to deploy an army against towns and territory.\n\nThe final line again combines voiced modesty with military action, now directed toward towns and territory. Legge emphasizes an interpretation in which the action remains within one’s own sphere of responsibility.\n\nIn everyday affairs, first correct arrangements you are responsible for rather than constantly prescribing changes for others. Accepting responsibility also needs boundaries; you need not take every problem upon yourself.\n\n[zhouyi-15; legge1882-15]\n\n## Presenting a team’s achievements\n\nOriginal contemporary scenario\n\nThe following contemporary scenario was created for learning.\n\nA team has completed an exhibition and is preparing to present the results to participants. The speaker neither claims all the achievement for herself nor dismisses her own organizing work as insignificant. She lists what each person actually completed and identifies support that came from outside the team.\n\nAfter the event, she discovers an error in the materials, corrects it, and informs those affected. Having already received praise does not make her treat a new problem as an embarrassment. When a new task exceeds the original agreement, she also clearly explains that it requires fresh arrangements.\n\nHere, modesty means accurate communication, continued responsibility, and maintained boundaries. It does not require anyone to be quietly taken advantage of.\n\n## Common misreadings\n\n1. Modesty is not proof that good people always receive good rewards, and it does not require putting yourself down to earn approval.\n\n2. Invasion and military deployment in this hexagram belong to an ancient context. A modern learning analogy cannot turn them into a justification for violence or controlling others.\n\n## Three practices\n\n1. Describe a recent achievement, accurately including both your contribution and other people’s help.\n\n2. Identify one unfinished closing task so that recognition does not take the place of completion.\n\n3. Write down one reasonable boundary worth maintaining and try expressing it clearly and respectfully.\n\n## Related reading\n\n### Great Possession (hexagram-14)\n\nGreat Possession shows what one has; Modesty asks how to place it in proportion. Reading the two together allows you to acknowledge achievements while continuing to learn, without choosing between boasting and self-denial.\n\n## Closing question\n\nWhen reading Modesty, ask: how can I speak and act without exaggerating myself or dismissing the effort I have genuinely made?\n\n## Sources\n\n- [zhouyi-15: 周易·謙](https://zh.wikisource.org/w/index.php?title=周易/謙&oldid=2106142)\n\n- [legge1882-15: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 15, chapter XV, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nClassical quotations retain the Chinese source’s character forms and modern punctuation. The commentary is translated from original Simplified Chinese learning prose. The historical English source and received Chinese text are used together, and interpretations by later translators are attributed in the article. This article is not a basis for medical, investment, or other professional decisions.\n"
+}

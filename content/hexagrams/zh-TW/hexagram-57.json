@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-57",
+  "locale": "zh-TW",
+  "kingWenNumber": 57,
+  "name": "巽",
+  "pinyin": "Xùn",
+  "englishName": "Xùn — The Gentle",
+  "unicode": "䷸",
+  "codePoint": "U+4DF8",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    1
+  ],
+  "title": "巽卦學習：溫和推進，也保留清楚的判斷",
+  "plainSummary": "柔和的做法能讓事情逐步推進，但不能退讓到失去方向、界線與作決定的能力。",
+  "introduction": [
+    "風可以進入細處，持續影響周圍，卻不總以猛烈衝撞的方式出現。巽卦常被聯想到柔順、進入與漸進影響，但六爻也寫反覆猶疑、過度屈身和丟失資斧。溫和的價值，需要與清楚而適度的行動放在一起看。"
+  ],
+  "identityText": "巽是傳統文王序第57卦，卦符䷸，下卦巽☴、上卦巽☴，傳統取象分別為風與風。爻從最下方往上數，依次為初六、九二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "巽：小亨。利有攸往。利見大人。",
+    "paragraphs": [
+      "Legge 以柔韌與深入解釋巽，並把它聯繫到逐步修正和施行教令。小亨不意味著溫和者只能成就小事，而是本卦表述中保留了程度與條件。",
+      "現代學習可以從傾聽、說明和持續的小調整開始，也可請有經驗的人幫助看清問題。但利見大人不是要求依附權威，更不能用“順”取消提出異議和拒絕不合理要求的權利。"
+    ],
+    "sourceRefs": [
+      "zhouyi-57",
+      "legge1882-57"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》說重巽以申命；《象傳》以相隨的風取象，提出申命行事。它不只關心態度柔和，也關心意思是否傳達、事情是否落實。",
+      "本文將其用於一般協作：重要說明需要清楚、適當重複，並確認對方理解。清楚說明既不是反覆催促，也不是含混暗示；讓人知道怎麼做，比僅僅希望別人察言觀色更有效。"
+    ],
+    "sourceRefs": [
+      "zhouyi-57",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "進退，利武人之貞。",
+      "focus": "猶疑時需要明確行動依據",
+      "paragraphs": [
+        "進退反覆，後接武人之貞，形成柔順與果斷的對照。Legge 把它理解為需要勇健而堅定的判斷，不是要求訴諸武力。",
+        "如果不斷改變一個小決定，可以先寫清選擇標準和缺少的資訊。該核實時核實，已有充分依據時就行動，不必等待所有人都表達完全相同的意見。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "巽在牀下，用史巫紛若，吉无咎。",
+      "focus": "承認古代求索方式與現代核實不同",
+      "paragraphs": [
+        "床下與史巫紛若，保留了古代占問和宗教活動的場景。Legge 採用尋求隱藏之物、借史巫幫助判斷的解釋，這是他的注釋路徑。",
+        "現代類比可以是認真查找不顯眼的問題，並向合適的人求證。但古代史巫不構成現實驅邪或超自然診斷的依據，疑問仍需可核實的資訊支持。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "頻巽，吝。",
+      "focus": "反覆用力未必等於真正深入",
+      "paragraphs": [
+        "頻巽在 Legge 的讀法中是躁急而重複地求入，努力很多，效果卻不相稱。",
+        "一封電子郵件反覆改措辭，卻始終不說清核心請求，可能只增加焦慮。可以停下來確認究竟要表達什麼，避免把更多重複誤認為已經解決溝通問題。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "悔亡，田獲三品。",
+      "focus": "行動要帶來能夠使用的結果",
+      "paragraphs": [
+        "田獵得三品，Legge 按祭祀、待客與庖廚等用途解釋所獲。它不等於讀者將獲得三筆收入或三種獎賞。",
+        "一般協作中，可以檢查努力是否產生明確而合用的成果，例如問題得到說明、責任被確認、下一步有人能做。結果需要適合目的，不只是數量看起來更多。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "貞吉悔亡，无不利。无初有終，先庚三日，後庚三日，吉。",
+      "focus": "改變前後都需要認真照看",
+      "paragraphs": [
+        "Legge 將庚前後之日解釋為改變前告知、改變後再檢查。古文的日期結構提示前後照應，不宜機械地變成統一六天執行表。",
+        "調整一項日常規則時，先說明原因與影響，再觀察使用中出現的問題。起初不夠好仍可以修正，但“有終”需要具體的後續工作來支撐。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "巽在牀下，喪其資斧，貞凶。",
+      "focus": "過度退讓可能使行動能力流失",
+      "paragraphs": [
+        "床下圖像再次出現，卻加上丟失資斧，結局轉為凶。Legge 用失去作決定的斧來解釋柔順過度的風險，並說明自己採用了舊注中的文字調整。",
+        "現代可以檢查是否因怕讓人不高興，就始終不說真實限制。尊重別人和保留自己的判斷能夠同時成立，不能把沒有邊界稱為最好的合作態度。"
+      ],
+      "sourceRefs": [
+        "zhouyi-57",
+        "legge1882-57"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把一項新的協作約定真正講清楚",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個小組希望提交材料時統一註明來源。負責人先解釋這能減少哪些重複查詢，並給出簡單示例，讓成員指出現有流程中不方便的地方。",
+      "開始實行後，她觀察漏填的原因，發現有人不知道如何記錄口頭資料，於是補充說明。對於明確需要的資訊，她仍堅持要求，沒有為了維持和氣而取消標準。",
+      "這項改變靠清楚說明、回饋和適當堅持逐步成立。巽卦的學習不是讓人暗中影響別人，而是溫和地把意思說清並落實。"
+    ]
+  },
+  "misreadings": [
+    "巽不支持操縱、討好或無限服從，也不把史巫場景當作超自然診斷依據。",
+    "先庚後庚不是個人幸運日期算法；柔順是否合適要看實際邊界和後果。"
+  ],
+  "practice": [
+    "把一個含混請求改寫成別人能夠理解並執行的一句話。",
+    "確認對方遇到的是不願意、不瞭解，還是實際條件做不到。",
+    "寫出一條自己需要明確表達的邊界，讓溫和不等於無條件答應。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-58",
+      "name": "兌",
+      "paragraph": "巽重視柔和地傳達與落實，兌重視交流中的喜悅與真誠。兩者都不該只剩讓人舒服，還需要真實內容與適當分寸。"
+    }
+  ],
+  "closing": "讀巽卦時，可以問：我的溫和使事情更清楚了，還是讓真正需要說的話一直沒有說出來？",
+  "sourceIds": [
+    "zhouyi-57",
+    "legge1882-57",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1653,
+    "nonWhitespaceCharacterCount": 1881,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "巽",
+  "sourceLocale": "zh",
+  "sourceContentHash": "7a13e144feedaff3fce284c8395e338ca1eaab12d5861e3e27c8df08b6f705f2",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 巽卦學習：溫和推進，也保留清楚的判斷\n\n柔和的做法能讓事情逐步推進，但不能退讓到失去方向、界線與作決定的能力。\n\n風可以進入細處，持續影響周圍，卻不總以猛烈衝撞的方式出現。巽卦常被聯想到柔順、進入與漸進影響，但六爻也寫反覆猶疑、過度屈身和丟失資斧。溫和的價值，需要與清楚而適度的行動放在一起看。\n\n巽是傳統文王序第57卦，卦符䷸，下卦巽☴、上卦巽☴，傳統取象分別為風與風。爻從最下方往上數，依次為初六、九二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 1 1 0 1 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n巽：小亨。利有攸往。利見大人。\n\nLegge 以柔韌與深入解釋巽，並把它聯繫到逐步修正和施行教令。小亨不意味著溫和者只能成就小事，而是本卦表述中保留了程度與條件。\n\n現代學習可以從傾聽、說明和持續的小調整開始，也可請有經驗的人幫助看清問題。但利見大人不是要求依附權威，更不能用“順”取消提出異議和拒絕不合理要求的權利。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》說重巽以申命；《象傳》以相隨的風取象，提出申命行事。它不只關心態度柔和，也關心意思是否傳達、事情是否落實。\n\n本文將其用於一般協作：重要說明需要清楚、適當重複，並確認對方理解。清楚說明既不是反覆催促，也不是含混暗示；讓人知道怎麼做，比僅僅希望別人察言觀色更有效。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 猶疑時需要明確行動依據\n\n進退，利武人之貞。\n\n進退反覆，後接武人之貞，形成柔順與果斷的對照。Legge 把它理解為需要勇健而堅定的判斷，不是要求訴諸武力。\n\n如果不斷改變一個小決定，可以先寫清選擇標準和缺少的資訊。該核實時核實，已有充分依據時就行動，不必等待所有人都表達完全相同的意見。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 承認古代求索方式與現代核實不同\n\n巽在牀下，用史巫紛若，吉无咎。\n\n床下與史巫紛若，保留了古代占問和宗教活動的場景。Legge 採用尋求隱藏之物、借史巫幫助判斷的解釋，這是他的注釋路徑。\n\n現代類比可以是認真查找不顯眼的問題，並向合適的人求證。但古代史巫不構成現實驅邪或超自然診斷的依據，疑問仍需可核實的資訊支持。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 反覆用力未必等於真正深入\n\n頻巽，吝。\n\n頻巽在 Legge 的讀法中是躁急而重複地求入，努力很多，效果卻不相稱。\n\n一封電子郵件反覆改措辭，卻始終不說清核心請求，可能只增加焦慮。可以停下來確認究竟要表達什麼，避免把更多重複誤認為已經解決溝通問題。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 行動要帶來能夠使用的結果\n\n悔亡，田獲三品。\n\n田獵得三品，Legge 按祭祀、待客與庖廚等用途解釋所獲。它不等於讀者將獲得三筆收入或三種獎賞。\n\n一般協作中，可以檢查努力是否產生明確而合用的成果，例如問題得到說明、責任被確認、下一步有人能做。結果需要適合目的，不只是數量看起來更多。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 改變前後都需要認真照看\n\n貞吉悔亡，无不利。无初有終，先庚三日，後庚三日，吉。\n\nLegge 將庚前後之日解釋為改變前告知、改變後再檢查。古文的日期結構提示前後照應，不宜機械地變成統一六天執行表。\n\n調整一項日常規則時，先說明原因與影響，再觀察使用中出現的問題。起初不夠好仍可以修正，但“有終”需要具體的後續工作來支撐。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 過度退讓可能使行動能力流失\n\n巽在牀下，喪其資斧，貞凶。\n\n床下圖像再次出現，卻加上丟失資斧，結局轉為凶。Legge 用失去作決定的斧來解釋柔順過度的風險，並說明自己採用了舊注中的文字調整。\n\n現代可以檢查是否因怕讓人不高興，就始終不說真實限制。尊重別人和保留自己的判斷能夠同時成立，不能把沒有邊界稱為最好的合作態度。\n\n參考來源: [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966), [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 把一項新的協作約定真正講清楚\n\n原創現代情境\n\n一個小組希望提交材料時統一註明來源。負責人先解釋這能減少哪些重複查詢，並給出簡單示例，讓成員指出現有流程中不方便的地方。\n\n開始實行後，她觀察漏填的原因，發現有人不知道如何記錄口頭資料，於是補充說明。對於明確需要的資訊，她仍堅持要求，沒有為了維持和氣而取消標準。\n\n這項改變靠清楚說明、回饋和適當堅持逐步成立。巽卦的學習不是讓人暗中影響別人，而是溫和地把意思說清並落實。\n\n## 避免誤讀\n\n- 巽不支持操縱、討好或無限服從，也不把史巫場景當作超自然診斷依據。\n\n- 先庚後庚不是個人幸運日期算法；柔順是否合適要看實際邊界和後果。\n\n## 三個練習\n\n1. 把一個含混請求改寫成別人能夠理解並執行的一句話。\n\n2. 確認對方遇到的是不願意、不瞭解，還是實際條件做不到。\n\n3. 寫出一條自己需要明確表達的邊界，讓溫和不等於無條件答應。\n\n## 延伸閱讀\n\n兌 (hexagram-58): 巽重視柔和地傳達與落實，兌重視交流中的喜悅與真誠。兩者都不該只剩讓人舒服，還需要真實內容與適當分寸。\n\n讀巽卦時，可以問：我的溫和使事情更清楚了，還是讓真正需要說的話一直沒有說出來？\n\n## 參考來源\n\n- [zhouyi-57](https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966)\n\n- [legge1882-57](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-57 · SHA256 7a13e144feedaff3fce284c8395e338ca1eaab12d5861e3e27c8df08b6f705f2\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-21",
+  "locale": "zh-TW",
+  "kingWenNumber": 21,
+  "name": "噬嗑",
+  "pinyin": "Shì Kè",
+  "englishName": "Shì Kè — Biting Through",
+  "unicode": "䷔",
+  "codePoint": "U+4DD4",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+  ],
+  "title": "噬嗑卦導讀：先釐清阻礙，再合宜地處理",
+  "plainSummary": "真正的問題擋住事情時，先釐清事實和規則，再著手處理，別讓情緒取代判斷。",
+  "introduction": [
+    "有些事情無法只靠良好氣氛繼續下去：可能是一項約定反覆被忽略，也可能是關鍵問題一直沒處理。噬嗑以咬開阻隔的意象討論通達，也直接涉及古代刑罰與司法。先理解這層歷史背景，才不會把它改寫成「想解決問題，就該強硬懲罰別人」。"
+  ],
+  "identityText": "噬嗑是傳統文王序第21卦，卦符䷔，下卦震☳、上卦離☲，傳統取象分別為雷與火。爻從最下方數起，依次為初九、六二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "噬嗑：亨。利用獄。",
+    "paragraphs": [
+      "Legge 將噬嗑解釋為咬合之間有物，需要去除阻隔，並在政治生活中聯繫法律約束。這裡的獄涉及案件與刑獄，不能只按現代監獄建築理解。",
+      "現代學習可保留辨認並處理問題的方向，但具體規則、權力與程序需要獨立依據。本文不據卦象判斷任何人有罪，也不提供訴訟結果或懲罰方式的建議。"
+    ],
+    "sourceRefs": [
+      "zhouyi-21",
+      "legge1882-21"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》說頤中有物、噬嗑而亨；《象傳》以雷電取象，談明罰敕法。這些傳文強調規則與明察，也保留古代制度的限制。",
+      "用於普通協作，可以先說明哪項約定沒有落實、造成什麼影響，再尋找合宜的修正。目標應是使事情恢復可理解的次序，而非借處理問題發洩憤怒。"
+    ],
+    "sourceRefs": [
+      "zhouyi-21",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "屨校滅趾，无咎。",
+      "focus": "正視古代懲戒的真實語境",
+      "paragraphs": [
+        "這一爻寫足部刑具與趾。Legge 在註釋中也辨析“滅”究竟指約束，還是實際傷損，不能把它輕率改成一句溫和的勸告。",
+        "現代類比只討論早期明確規則與及時糾正。任何肢體懲罰、羞辱或私自施刑，都不能由這條古文獲得正當性。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "噬膚滅鼻，无咎。",
+      "focus": "處理相對容易的問題也要留意尺度",
+      "paragraphs": [
+        "咬入柔軟的肉與鼻的意象出現在這一爻，Legge 保留了用力深入的畫面。它仍屬於本卦的刑罰比喻系統。",
+        "即使錯誤容易看見，處理方式也需要清楚、適度。核實事實、給相關人解釋機會，比因為自覺有理就不斷加重語氣更有幫助。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "噬臘肉，遇毒，小吝，无咎。",
+      "focus": "困難可能帶來令人不快的回饋",
+      "paragraphs": [
+        "乾肉與遇毒，使咬開阻礙不再輕易。Legge 將毒譯解為不快、難處理的東西，讀者不必因此猜測現實中有人下毒。",
+        "指出一個長期問題時，可能會遇到抵觸。先分辨抵觸提供了什麼資訊，哪些是仍需澄清的誤解，而不是只因回應難聽就認定自己必然正確。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "噬乾胏，得金矢，利艱貞，吉。",
+      "focus": "難以處理時更需要穩固依據",
+      "paragraphs": [
+        "胏涉及帶骨的乾肉。Legge 將金與矢放在他解釋的古代聽訟憑信或交納物語境中理解，文字並非許諾意外得財。",
+        "普通事務中，可以留下清楚記錄，核對當初怎樣約定。困難越大，越不能只憑印象或對人的好惡決定。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "噬乾肉，得黃金，貞厲，无咎。",
+      "focus": "掌握判斷權時仍要警覺",
+      "paragraphs": [
+        "乾肉、黃金與貞厲並置。Legge 以判斷者的中正與謹慎展開，不因找到“金”就撤去險的提醒。",
+        "若由你協調分歧，應把依據和限制說明白，也聽取尚未納入的資訊。職位或多數支持，都不會使一次判斷自動無誤。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "何校滅耳，凶。",
+      "focus": "不要等到問題只剩嚴重後果",
+      "paragraphs": [
+        "末爻回到頸部刑具與耳的形象，Legge 將之聯繫到拒絕聽取勸告的嚴重處境。歷史上的苛刻刑罰不應被美化。",
+        "現代學習可以提醒自己：收到明確回饋後是否始終拒絕核實？及早回應和修正，比等關係或事務受到更大損傷後才處理更有空間。"
+      ],
+      "sourceRefs": [
+        "zhouyi-21",
+        "legge1882-21"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "共享空間的規則一再被忽略",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個共享工作室約定離開前收拾公共桌面，但有人多次沒有完成。協調者沒有先在群組裡羞辱對方，而是確認具體次數、影響與原先說明是否清楚，再直接溝通。",
+      "如果問題繼續，大家需要按共同認可的規則處理，並說明執行方式和可提出異議的管道。協調者也檢查是否有設備不足、時間安排不合理等實際原因。",
+      "噬嗑在這裡幫助辨認真正的阻隔。它不能替代規則的正當來源，更不能把任何人自行放到審判者的位置上。"
+    ]
+  },
+  "misreadings": [
+    "本卦包含刑罰，不應淡化歷史暴力，也不能拿來為現實懲罰、報復或指控尋找授權。",
+    "毒、血肉、金矢等意象不用於疾病、投毒或財運預測。法律和安全問題需要現實證據與相應幫助。"
+  ],
+  "practice": [
+    "把需要處理的問題寫成具體事實與影響，刪去對人格的評價。",
+    "確認適用規則是否清楚、相關人是否知情，以及誰有權處理。",
+    "提出一個以恢復秩序為目標的修正方式，並保留聽取新資訊的空間。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-06",
+      "name": "訟",
+      "paragraph": "訟關注分歧如何形成與升級，噬嗑關注已經出現的阻隔怎樣被處理。兩者都不能替代事實或公正程序，也不把爭勝本身當作解決。"
+    }
+  ],
+  "closing": "讀噬嗑卦時，可以問：我是在處理一個具體問題，還是只想讓某個人感到自己輸了？",
+  "sourceIds": [
+    "zhouyi-21",
+    "legge1882-21",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六三採用所據頁面明確列出的“臘”異文；該頁正文作“昔”。",
+  "counts": {
+    "chineseCharacterCount": 1785,
+    "nonWhitespaceCharacterCount": 2034,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "噬嗑",
+  "sourceLocale": "zh",
+  "sourceContentHash": "f51ea5fc18522ea30e480e8bc0d40ca54572b6f0e76d684921639b28b630656e",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 噬嗑卦導讀：先釐清阻礙，再合宜地處理\n\n真正的問題擋住事情時，先釐清事實和規則，再著手處理，別讓情緒取代判斷。\n\n有些事情無法只靠良好氣氛繼續下去：可能是一項約定反覆被忽略，也可能是關鍵問題一直沒處理。噬嗑以咬開阻隔的意象討論通達，也直接涉及古代刑罰與司法。先理解這層歷史背景，才不會把它改寫成「想解決問題，就該強硬懲罰別人」。\n\n## 先認識這一卦\n\n噬嗑是傳統文王序第21卦，卦符䷔，下卦震☳、上卦離☲，傳統取象分別為雷與火。爻從最下方數起，依次為初九、六二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━━━━━  上九\n━━  ━━  六五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 噬嗑：亨。利用獄。\n\nLegge 將噬嗑解釋為咬合之間有物，需要去除阻隔，並在政治生活中聯繫法律約束。這裡的獄涉及案件與刑獄，不能只按現代監獄建築理解。\n\n現代學習可保留辨認並處理問題的方向，但具體規則、權力與程序需要獨立依據。本文不據卦象判斷任何人有罪，也不提供訴訟結果或懲罰方式的建議。\n\n[zhouyi-21; legge1882-21]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》說頤中有物、噬嗑而亨；《象傳》以雷電取象，談明罰敕法。這些傳文強調規則與明察，也保留古代制度的限制。\n\n用於普通協作，可以先說明哪項約定沒有落實、造成什麼影響，再尋找合宜的修正。目標應是使事情恢復可理解的次序，而非借處理問題發洩憤怒。\n\n[zhouyi-21; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 正視古代懲戒的真實語境\n\n> 屨校滅趾，无咎。\n\n這一爻寫足部刑具與趾。Legge 在註釋中也辨析“滅”究竟指約束，還是實際傷損，不能把它輕率改成一句溫和的勸告。\n\n現代類比只討論早期明確規則與及時糾正。任何肢體懲罰、羞辱或私自施刑，都不能由這條古文獲得正當性。\n\n[zhouyi-21; legge1882-21]\n\n### 六二 · 處理相對容易的問題也要留意尺度\n\n> 噬膚滅鼻，无咎。\n\n咬入柔軟的肉與鼻的意象出現在這一爻，Legge 保留了用力深入的畫面。它仍屬於本卦的刑罰比喻系統。\n\n即使錯誤容易看見，處理方式也需要清楚、適度。核實事實、給相關人解釋機會，比因為自覺有理就不斷加重語氣更有幫助。\n\n[zhouyi-21; legge1882-21]\n\n### 六三 · 困難可能帶來令人不快的回饋\n\n> 噬臘肉，遇毒，小吝，无咎。\n\n乾肉與遇毒，使咬開阻礙不再輕易。Legge 將毒譯解為不快、難處理的東西，讀者不必因此猜測現實中有人下毒。\n\n指出一個長期問題時，可能會遇到抵觸。先分辨抵觸提供了什麼資訊，哪些是仍需澄清的誤解，而不是只因回應難聽就認定自己必然正確。\n\n[zhouyi-21; legge1882-21]\n\n### 九四 · 難以處理時更需要穩固依據\n\n> 噬乾胏，得金矢，利艱貞，吉。\n\n胏涉及帶骨的乾肉。Legge 將金與矢放在他解釋的古代聽訟憑信或交納物語境中理解，文字並非許諾意外得財。\n\n普通事務中，可以留下清楚記錄，核對當初怎樣約定。困難越大，越不能只憑印象或對人的好惡決定。\n\n[zhouyi-21; legge1882-21]\n\n### 六五 · 掌握判斷權時仍要警覺\n\n> 噬乾肉，得黃金，貞厲，无咎。\n\n乾肉、黃金與貞厲並置。Legge 以判斷者的中正與謹慎展開，不因找到“金”就撤去險的提醒。\n\n若由你協調分歧，應把依據和限制說明白，也聽取尚未納入的資訊。職位或多數支持，都不會使一次判斷自動無誤。\n\n[zhouyi-21; legge1882-21]\n\n### 上九 · 不要等到問題只剩嚴重後果\n\n> 何校滅耳，凶。\n\n末爻回到頸部刑具與耳的形象，Legge 將之聯繫到拒絕聽取勸告的嚴重處境。歷史上的苛刻刑罰不應被美化。\n\n現代學習可以提醒自己：收到明確回饋後是否始終拒絕核實？及早回應和修正，比等關係或事務受到更大損傷後才處理更有空間。\n\n[zhouyi-21; legge1882-21]\n\n## 共享空間的規則一再被忽略\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一個共享工作室約定離開前收拾公共桌面，但有人多次沒有完成。協調者沒有先在群組裡羞辱對方，而是確認具體次數、影響與原先說明是否清楚，再直接溝通。\n\n如果問題繼續，大家需要按共同認可的規則處理，並說明執行方式和可提出異議的管道。協調者也檢查是否有設備不足、時間安排不合理等實際原因。\n\n噬嗑在這裡幫助辨認真正的阻隔。它不能替代規則的正當來源，更不能把任何人自行放到審判者的位置上。\n\n## 常見誤讀\n\n1. 本卦包含刑罰，不應淡化歷史暴力，也不能拿來為現實懲罰、報復或指控尋找授權。\n\n2. 毒、血肉、金矢等意象不用於疾病、投毒或財運預測。法律和安全問題需要現實證據與相應幫助。\n\n## 三個練習\n\n1. 把需要處理的問題寫成具體事實與影響，刪去對人格的評價。\n\n2. 確認適用規則是否清楚、相關人是否知情，以及誰有權處理。\n\n3. 提出一個以恢復秩序為目標的修正方式，並保留聽取新資訊的空間。\n\n## 延伸閱讀\n\n### 訟 (hexagram-06)\n\n訟關注分歧如何形成與升級，噬嗑關注已經出現的阻隔怎樣被處理。兩者都不能替代事實或公正程序，也不把爭勝本身當作解決。\n\n## 結語\n\n讀噬嗑卦時，可以問：我是在處理一個具體問題，還是只想讓某個人感到自己輸了？\n\n## 版本說明\n\n六三採用所據頁面明確列出的“臘”異文；該頁正文作“昔”。\n\n## 資料來源\n\n- [zhouyi-21: 周易·噬嗑](https://zh.wikisource.org/w/index.php?title=周易/噬嗑&oldid=10645753)\n\n- [legge1882-21: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 21, chapter XXI, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

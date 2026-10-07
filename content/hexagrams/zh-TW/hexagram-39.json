@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-39",
+  "locale": "zh-TW",
+  "kingWenNumber": 39,
+  "name": "蹇",
+  "pinyin": "Jiǎn",
+  "englishName": "Jiǎn — Obstruction",
+  "unicode": "䷦",
+  "codePoint": "U+4DE6",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "title": "蹇卦學習：前路受阻時，怎麼找可行的路",
+  "plainSummary": "路走不通時，先看清障礙、調整方法，再找能真正補足條件的幫助。",
+  "introduction": [
+    "繼續向前，不一定就更接近目標。蹇卦反覆描寫往與來，在受阻、返回、連結與朋友來助之間展開。它幫助我們把堅持與路徑分開：即使目標仍有價值，方法也可能需要改變。"
+  ],
+  "identityText": "蹇是傳統文王序第39卦，卦符䷦，下卦艮☶、上卦坎☵，傳統取象分別為山與水。爻從最下方數起，依次為初六、六二、九三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "蹇：利西南，不利東北；利見大人，貞吉。",
+    "paragraphs": [
+      "Legge 將蹇解釋為艱難行進，並將卦辭的應對分為處所、相助者和持正等條件。西南、東北屬於傳統取象及解釋，不能直接變成讀者旅行、搬家或選擇方位的指令。",
+      "現代可以問：困難究竟在哪個環節，誰具備相關經驗，什麼條件改變後才適合行動？這比單純要求自己更努力更具體。"
+    ],
+    "sourceRefs": [
+      "zhouyi-39",
+      "legge1882-39"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》明確說險在前，並稱能見險而止為知；《象傳》以山上有水取象，談反身修德。停止與自察在這裡並非沒有行動力。",
+      "今天自察可以檢查自己的假設與做法，但不應把所有外部障礙歸成品格問題。承認資源或制度限制，同樣屬於看清處境。"
+    ],
+    "sourceRefs": [
+      "zhouyi-39",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "往蹇，來譽。",
+      "focus": "原路受阻時，可以先等一等",
+      "paragraphs": [
+        "Legge 將初爻讀為前進增加困難、暫留得到認可。這裡的評價依據是處境，不是一般地讚美退縮。",
+        "必要資訊還沒取得時，先澄清問題，可能比重複提交或硬闖更有效。等待應指向補足條件，而不是沒有期限地懸置。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "王臣蹇蹇，匪躬之故。",
+      "focus": "承擔共同事務，也看見責任的限度",
+      "paragraphs": [
+        "王臣面對重重困難，並非只為自己，Legge 保留了公共職責的意味。古代君臣關係不能直接要求現代人無限犧牲。",
+        "如果你為共同目標承擔額外工作，可以說明所需支持與範圍。動機不自私，並不會自動使超負荷安排變得合理。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "往蹇來反。",
+      "focus": "返回可以用來重新建立聯繫",
+      "paragraphs": [
+        "Legge 將來反讀為停下前行、回到原先同伴身邊。它不是要抹去所有已經取得的進展。",
+        "嘗試失敗後，可以回到實際使用者或合作者那裡，詢問哪裡不合需要。返回的價值在獲得新資訊，而非只是回到熟悉感。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "往蹇來連。",
+      "focus": "把孤立的努力變成可配合的行動",
+      "paragraphs": [
+        "來連比單純回來多了聯結的意味。Legge 將其置於相助與古代職責關係中理解。",
+        "如果一項事必須多人配合，可以先說明相互依賴的部分。求助越具體，越容易知道需要什麼，而不只是籠統地希望別人替自己解決。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "大蹇朋來。",
+      "focus": "大困難不必只由一個人扛",
+      "paragraphs": [
+        "重大的艱難與朋友來助同時出現，Legge 沿共同應對解釋。它不保證現實中幫助必定自動來到。",
+        "可以主動向可信且有能力的人說清困難，核實他們能提供哪一部分。關係好不等於資源無限，幫助也需與對方的能力和意願相稱。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "往蹇來碩，吉；利見大人。",
+      "focus": "重新安排以後，也可能有更大的所得",
+      "paragraphs": [
+        "Legge 將來碩讀作不繼續冒進而產生較大成效，並再次強調見大人。所得來自所選傳統解釋，不是財富預告。",
+        "調整路徑後，可以檢驗是否確實減少障礙、增加理解。合適的指導應有可檢查的依據，不能因為被稱作高手就免於詢問。"
+      ],
+      "sourceRefs": [
+        "zhouyi-39",
+        "legge1882-39"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "替不熟悉的任務找合適的幫助",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位組織者接手整理資料，幾次依自己的理解分類，其他人卻還是找不到內容。她先暫停重排，詢問實際使用者怎麼搜尋，再找熟悉資料的人一起辨認關鍵欄位。",
+      "得到回饋後，她縮小測試範圍，先讓一部分資料真正好用，再決定如何擴大。遇到暫時沒有人能解釋的內容，就保留待查證的標記。",
+      "蹇在這裡讓困難成為調整方法的線索。暫時卡關不等於能力不足，求助也不代表把自己的責任交出去。"
+    ]
+  },
+  "misreadings": [
+    "蹇的行路困難不用於評價身體障礙者，也不預測個人長期受困。方位與吉凶不能替代實際規劃。",
+    "求助不要求無條件聽從權威；重要的健康、法律、財務或安全判斷需要相關事實與專業支持。"
+  ],
+  "practice": [
+    "把障礙寫成具體缺少的條件，不只寫自己做不到。",
+    "指出一位可能補足其中一項條件的人，準備一個明確問題。",
+    "設定檢驗新路徑是否更有效的觀察標準。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-40",
+      "name": "解",
+      "paragraph": "蹇關注受阻時怎樣調整，解關注阻礙鬆開後還需怎樣行動。找到出口之後，也要確認哪些工作已經可以結束，哪些仍需完成。"
+    }
+  ],
+  "closing": "讀蹇卦時，不妨問自己：值得堅持的是目標本身，還是那條我已經不願重新檢查的路？",
+  "sourceIds": [
+    "zhouyi-39",
+    "legge1882-39",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1497,
+    "nonWhitespaceCharacterCount": 1709,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "蹇",
+  "sourceLocale": "zh",
+  "sourceContentHash": "b281160b497113ad822ca05b441a50d3c83df8c85b5c14a0364ec4f4776fb18c",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 蹇卦學習：前路受阻時，怎麼找可行的路\n\n路走不通時，先看清障礙、調整方法，再找能真正補足條件的幫助。\n\n繼續向前，不一定就更接近目標。蹇卦反覆描寫往與來，在受阻、返回、連結與朋友來助之間展開。它幫助我們把堅持與路徑分開：即使目標仍有價值，方法也可能需要改變。\n\n## 卦的身分與爻序\n\n蹇是傳統文王序第39卦，卦符䷦，下卦艮☶、上卦坎☵，傳統取象分別為山與水。爻從最下方數起，依次為初六、六二、九三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n蹇：利西南，不利東北；利見大人，貞吉。\n\nLegge 將蹇解釋為艱難行進，並將卦辭的應對分為處所、相助者和持正等條件。西南、東北屬於傳統取象及解釋，不能直接變成讀者旅行、搬家或選擇方位的指令。\n\n現代可以問：困難究竟在哪個環節，誰具備相關經驗，什麼條件改變後才適合行動？這比單純要求自己更努力更具體。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》明確說險在前，並稱能見險而止為知；《象傳》以山上有水取象，談反身修德。停止與自察在這裡並非沒有行動力。\n\n今天自察可以檢查自己的假設與做法，但不應把所有外部障礙歸成品格問題。承認資源或制度限制，同樣屬於看清處境。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 原路受阻時，可以先等一等\n\n往蹇，來譽。\n\nLegge 將初爻讀為前進增加困難、暫留得到認可。這裡的評價依據是處境，不是一般地讚美退縮。\n\n必要資訊還沒取得時，先澄清問題，可能比重複提交或硬闖更有效。等待應指向補足條件，而不是沒有期限地懸置。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 承擔共同事務，也看見責任的限度\n\n王臣蹇蹇，匪躬之故。\n\n王臣面對重重困難，並非只為自己，Legge 保留了公共職責的意味。古代君臣關係不能直接要求現代人無限犧牲。\n\n如果你為共同目標承擔額外工作，可以說明所需支持與範圍。動機不自私，並不會自動使超負荷安排變得合理。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 返回可以用來重新建立聯繫\n\n往蹇來反。\n\nLegge 將來反讀為停下前行、回到原先同伴身邊。它不是要抹去所有已經取得的進展。\n\n嘗試失敗後，可以回到實際使用者或合作者那裡，詢問哪裡不合需要。返回的價值在獲得新資訊，而非只是回到熟悉感。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · 把孤立的努力變成可配合的行動\n\n往蹇來連。\n\n來連比單純回來多了聯結的意味。Legge 將其置於相助與古代職責關係中理解。\n\n如果一項事必須多人配合，可以先說明相互依賴的部分。求助越具體，越容易知道需要什麼，而不只是籠統地希望別人替自己解決。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 大困難不必只由一個人扛\n\n大蹇朋來。\n\n重大的艱難與朋友來助同時出現，Legge 沿共同應對解釋。它不保證現實中幫助必定自動來到。\n\n可以主動向可信且有能力的人說清困難，核實他們能提供哪一部分。關係好不等於資源無限，幫助也需與對方的能力和意願相稱。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上六 · 重新安排以後，也可能有更大的所得\n\n往蹇來碩，吉；利見大人。\n\nLegge 將來碩讀作不繼續冒進而產生較大成效，並再次強調見大人。所得來自所選傳統解釋，不是財富預告。\n\n調整路徑後，可以檢驗是否確實減少障礙、增加理解。合適的指導應有可檢查的依據，不能因為被稱作高手就免於詢問。\n\n引文來源：[zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036), [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 替不熟悉的任務找合適的幫助\n\n原創現代情境\n\n一位組織者接手整理資料，幾次依自己的理解分類，其他人卻還是找不到內容。她先暫停重排，詢問實際使用者怎麼搜尋，再找熟悉資料的人一起辨認關鍵欄位。\n\n得到回饋後，她縮小測試範圍，先讓一部分資料真正好用，再決定如何擴大。遇到暫時沒有人能解釋的內容，就保留待查證的標記。\n\n蹇在這裡讓困難成為調整方法的線索。暫時卡關不等於能力不足，求助也不代表把自己的責任交出去。\n\n## 避免誤讀\n\n- 蹇的行路困難不用於評價身體障礙者，也不預測個人長期受困。方位與吉凶不能替代實際規劃。\n\n- 求助不要求無條件聽從權威；重要的健康、法律、財務或安全判斷需要相關事實與專業支持。\n\n## 三個練習\n\n1. 把障礙寫成具體缺少的條件，不只寫自己做不到。\n\n2. 指出一位可能補足其中一項條件的人，準備一個明確問題。\n\n3. 設定檢驗新路徑是否更有效的觀察標準。\n\n## 延伸閱讀\n\n### 解 (hexagram-40)\n\n蹇關注受阻時怎樣調整，解關注阻礙鬆開後還需怎樣行動。找到出口之後，也要確認哪些工作已經可以結束，哪些仍需完成。\n\n## 結語\n\n讀蹇卦時，不妨問自己：值得堅持的是目標本身，還是那條我已經不願重新檢查的路？\n\n## 資料來源\n\n- [zhouyi-39](https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036)\n\n- [legge1882-39](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

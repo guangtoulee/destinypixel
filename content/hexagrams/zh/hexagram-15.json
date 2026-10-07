@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-15",
+  "locale": "zh",
+  "kingWenNumber": 15,
+  "name": "谦",
+  "pinyin": "Qiān",
+  "englishName": "Qiān — Modesty",
+  "unicode": "䷎",
+  "codePoint": "U+4DCE",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "title": "谦卦学习：准确看待自己，也给别人留出空间",
+  "plainSummary": "做得好可以承认，尚有不足也看清；谦逊是保持分寸，而不是把自己说得一无是处。",
+  "introduction": [
+    "被表扬时急着否认，未必比夸耀自己更准确。谦卦值得学习的地方，在于怎样安放能力、功劳与行动。它有受人认可的谦，也有实际劳绩，更包含古代征伐的场景，因此不能只被简化为温顺或退让。"
+  ],
+  "identityText": "谦是传统文王序第15卦，卦符䷎，下卦艮☶、上卦坤☷，传统取象分别为山与地。爻从最下方数起，依次为初六、六二、九三、六四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "謙：亨，君子有終。",
+    "paragraphs": [
+      "Legge 将谦理解为谦逊，并把“有终”联系到行动能够有好的收束。这里并不是教人只在讲话时显得客气，而是把谦与事情怎样持续、怎样结束联系起来。",
+      "现代应用可以从准确开始：对自己的贡献不夸大、不抹去，也承认完成一件事所依靠的人与条件。它是一种观察和行为方式，不保证保持谦虚就能得到所有人的喜欢。"
+    ],
+    "sourceRefs": [
+      "zhouyi-15",
+      "legge1882-15"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《象传》以地中有山取象，又谈“裒多益寡，称物平施”。它使高下与调节分配进入同一幅画面；《彖传》则从天、地、人等方面展开谦的意义。",
+      "本文借此讨论衡量与分寸：有余力的一方能否帮助不足的环节，评价是否与实际贡献相称。这样的现代讨论不把任何古代宇宙观当作可验证的奖惩公式。"
+    ],
+    "sourceRefs": [
+      "zhouyi-15",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "謙謙君子，用涉大川，吉。",
+      "focus": "谦逊可以支持承担",
+      "paragraphs": [
+        "“谦谦”重复谦的意味，却与涉大川这样的大行动并列。Legge 也保留了谨谦者仍可面对重大行程的读法。",
+        "面对陌生任务，承认需要学习与求助，可以成为承担的基础。谦逊不要求你永远留在最小的位置，也不支持低估已经具备的能力。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "鳴謙，貞吉。",
+      "focus": "谦逊可以被人看见",
+      "paragraphs": [
+        "Legge 将鸣谦理解为谦已被认识、得到表达。它提示谦不一定要隐藏到无人知晓。",
+        "汇报工作时，可以清楚说明自己做了什么，也说明同伴的贡献。讲出事实并不自动构成自夸；关键在是否准确、是否尊重共同完成的部分。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "勞謙君子，有終吉。",
+      "focus": "有功劳时仍把事情完成",
+      "paragraphs": [
+        "“劳谦”将劳绩与谦相连。Legge 的译解承认已有功绩，而不是要求把成绩从叙述中删除。",
+        "获得认可后，仍要完成交接、回应遗漏，而不把掌声当成工作已经结束。与此同时，合理的署名和报酬也不应因谦逊而被抹去。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "无不利，撝謙。",
+      "focus": "让分寸落实到动作",
+      "paragraphs": [
+        "撝谦涉及将谦表现于行动，Legge 将其读作进一步振作谦的做法。这里关注的不只是内心自我评价。",
+        "在讨论里给别人完整说话的时间，遇到不懂的地方直接询问，都是可以观察的动作。它们比重复说自己不行更具体。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "不富，以其鄰，利用侵伐，无不利。",
+      "focus": "谦并不等于回避一切冲突",
+      "paragraphs": [
+        "爻辞谈不凭富有而与邻相连，也明确使用侵伐的语言。Legge 在古代维护正当秩序的框架中解释，不能把军事内容悄悄抹掉。",
+        "现代学习只借此提醒：有边界的坚定与谦逊可以并存。它不授权现实中的暴力、报复或欺压；遇到争议仍需要合适的事实、程序与帮助。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "鳴謙，利用行師，征邑國。",
+      "focus": "先看自己能够负责的范围",
+      "paragraphs": [
+        "末爻再次出现鸣谦与军事行动，范围指向邑国。Legge 强调其行动在自身职责范围内的解释。",
+        "普通事务中，可以先修正自己能负责的安排，而不是总替别人规定怎样改。承认责任也需要边界，不必把所有问题都揽到自己身上。"
+      ],
+      "sourceRefs": [
+        "zhouyi-15",
+        "legge1882-15"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "一次团队成果介绍",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一个团队完成展览，准备向参与者介绍成果。主讲人既没有把全部成绩写成自己的，也没有把自己的组织工作说成不值一提。她列出每个人实际完成的部分，并说明哪些支持来自团队之外。",
+      "活动后发现资料有一处错误，她主动改正并告诉受影响的人，没有因为已经被表扬就认为再提问题会丢脸。对于超出原约定的新任务，她也清楚说明需要重新安排。",
+      "在这个例子里，谦逊是准确表达、继续负责和保留界限。它没有要求任何人默默被占便宜。"
+    ]
+  },
+  "misreadings": [
+    "谦卦不能用作好人必得好报的证明，也不要求通过贬低自己换取认可。",
+    "本卦中的侵伐、行师属于古代语境，不能由现代学习类比变成暴力或控制他人的正当理由。"
+  ],
+  "practice": [
+    "写一段对最近成果的说明，同时准确包含自己的贡献和他人的帮助。",
+    "找出一个尚未完成的收尾动作，避免让认可替代完成。",
+    "写下一条应当坚持的合理边界，试着用清楚而尊重的语言表达。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-14",
+      "name": "大有",
+      "paragraph": "大有让人看见拥有，谦让人衡量怎样安放拥有。两者并读，可以同时承认成绩与继续学习，不必在自夸和自我否定之间二选一。"
+    }
+  ],
+  "closing": "读谦卦时，可以问：怎样说、怎样做，才既不夸大自己，也不辜负自己的实际付出？",
+  "sourceIds": [
+    "zhouyi-15",
+    "legge1882-15",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1545,
+    "nonWhitespaceCharacterCount": 1771,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "谦",
+  "sourceLocale": "zh",
+  "sourceContentHash": "125f17e6df91e772d66b0d5b823fb34d20ce1aba61e5f2510ebe31b715ac56e7",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 谦卦学习：准确看待自己，也给别人留出空间\n\n一句话：做得好可以承认，尚有不足也看清；谦逊是保持分寸，而不是把自己说得一无是处。\n\n被表扬时急着否认，未必比夸耀自己更准确。谦卦值得学习的地方，在于怎样安放能力、功劳与行动。它有受人认可的谦，也有实际劳绩，更包含古代征伐的场景，因此不能只被简化为温顺或退让。\n\n## 先认清这是什么卦\n\n谦是传统文王序第15卦，卦符䷎，下卦艮☶、上卦坤☷，传统取象分别为山与地。爻从最下方数起，依次为初六、六二、九三、六四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷎　上卦：坤☷　下卦：艮☶\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辞说了什么\n\n经文：“謙：亨，君子有終。”\n\nLegge 将谦理解为谦逊，并把“有终”联系到行动能够有好的收束。这里并不是教人只在讲话时显得客气，而是把谦与事情怎样持续、怎样结束联系起来。\n\n现代应用可以从准确开始：对自己的贡献不夸大、不抹去，也承认完成一件事所依靠的人与条件。它是一种观察和行为方式，不保证保持谦虚就能得到所有人的喜欢。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《象传》以地中有山取象，又谈“裒多益寡，称物平施”。它使高下与调节分配进入同一幅画面；《彖传》则从天、地、人等方面展开谦的意义。\n\n本文借此讨论衡量与分寸：有余力的一方能否帮助不足的环节，评价是否与实际贡献相称。这样的现代讨论不把任何古代宇宙观当作可验证的奖惩公式。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初六：谦逊可以支持承担\n\n经文：“謙謙君子，用涉大川，吉。”\n\n“谦谦”重复谦的意味，却与涉大川这样的大行动并列。Legge 也保留了谨谦者仍可面对重大行程的读法。\n\n面对陌生任务，承认需要学习与求助，可以成为承担的基础。谦逊不要求你永远留在最小的位置，也不支持低估已经具备的能力。\n\n### 六二：谦逊可以被人看见\n\n经文：“鳴謙，貞吉。”\n\nLegge 将鸣谦理解为谦已被认识、得到表达。它提示谦不一定要隐藏到无人知晓。\n\n汇报工作时，可以清楚说明自己做了什么，也说明同伴的贡献。讲出事实并不自动构成自夸；关键在是否准确、是否尊重共同完成的部分。\n\n### 九三：有功劳时仍把事情完成\n\n经文：“勞謙君子，有終吉。”\n\n“劳谦”将劳绩与谦相连。Legge 的译解承认已有功绩，而不是要求把成绩从叙述中删除。\n\n获得认可后，仍要完成交接、回应遗漏，而不把掌声当成工作已经结束。与此同时，合理的署名和报酬也不应因谦逊而被抹去。\n\n### 六四：让分寸落实到动作\n\n经文：“无不利，撝謙。”\n\n撝谦涉及将谦表现于行动，Legge 将其读作进一步振作谦的做法。这里关注的不只是内心自我评价。\n\n在讨论里给别人完整说话的时间，遇到不懂的地方直接询问，都是可以观察的动作。它们比重复说自己不行更具体。\n\n### 六五：谦并不等于回避一切冲突\n\n经文：“不富，以其鄰，利用侵伐，无不利。”\n\n爻辞谈不凭富有而与邻相连，也明确使用侵伐的语言。Legge 在古代维护正当秩序的框架中解释，不能把军事内容悄悄抹掉。\n\n现代学习只借此提醒：有边界的坚定与谦逊可以并存。它不授权现实中的暴力、报复或欺压；遇到争议仍需要合适的事实、程序与帮助。\n\n### 上六：先看自己能够负责的范围\n\n经文：“鳴謙，利用行師，征邑國。”\n\n末爻再次出现鸣谦与军事行动，范围指向邑国。Legge 强调其行动在自身职责范围内的解释。\n\n普通事务中，可以先修正自己能负责的安排，而不是总替别人规定怎样改。承认责任也需要边界，不必把所有问题都揽到自己身上。\n\n## 一次团队成果介绍\n\n以下是为学习而设的现代情境。\n\n一个团队完成展览，准备向参与者介绍成果。主讲人既没有把全部成绩写成自己的，也没有把自己的组织工作说成不值一提。她列出每个人实际完成的部分，并说明哪些支持来自团队之外。\n\n活动后发现资料有一处错误，她主动改正并告诉受影响的人，没有因为已经被表扬就认为再提问题会丢脸。对于超出原约定的新任务，她也清楚说明需要重新安排。\n\n在这个例子里，谦逊是准确表达、继续负责和保留界限。它没有要求任何人默默被占便宜。\n\n## 几个容易误读的地方\n\n谦卦不能用作好人必得好报的证明，也不要求通过贬低自己换取认可。\n\n本卦中的侵伐、行师属于古代语境，不能由现代学习类比变成暴力或控制他人的正当理由。\n\n## 做一个小练习\n\n1. 写一段对最近成果的说明，同时准确包含自己的贡献和他人的帮助。\n2. 找出一个尚未完成的收尾动作，避免让认可替代完成。\n3. 写下一条应当坚持的合理边界，试着用清楚而尊重的语言表达。\n\n## 和大有卦一起读\n\n大有让人看见拥有，谦让人衡量怎样安放拥有。两者并读，可以同时承认成绩与继续学习，不必在自夸和自我否定之间二选一。\n\n读谦卦时，可以问：怎样说、怎样做，才既不夸大自己，也不辜负自己的实际付出？\n\n## 阅读依据\n\n- [周易·謙](https://zh.wikisource.org/w/index.php?title=周易/謙&oldid=2106142)。Received Chinese text; Wikisource revision 2106142。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 15, chapter XV, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

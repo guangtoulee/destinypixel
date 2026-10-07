@@ -1,3 +1,6 @@
+import HexagramLearningArticle from "@/components/hexagram-learning-article";
+import { hexagramNumber,hexagramIds } from "@/lib/hexagram-learning/identity";
+import { hexagramMetadata } from "@/lib/hexagram-learning/metadata";
 import type { Metadata } from "next";
 import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
@@ -35,17 +38,22 @@ function withLinks(paragraph: string, links?: JournalSection["links"]): ReactNod
 }
 
 export function generateStaticParams() {
-  return journalArticles.map((article) => ({ slug: article.slug }));
+  return [...journalArticles.map((article) => ({ slug: article.slug })), ...hexagramIds.map(slug => ({slug}))];
 }
 
 export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
-  const article = getJournalArticle((await params).slug);
+  const slug=(await params).slug, number=hexagramNumber(slug);
+  const locale=normalizeJournalLocale((await searchParams)?.locale);
+  if(number) return hexagramMetadata(locale,number);
+  const article = getJournalArticle(slug);
   if (!article) return { robots: { index: false, follow: false } };
   return journalMetadata(normalizeJournalLocale((await searchParams)?.locale), article);
 }
 
 export default async function JournalArticlePage({ params, searchParams }: PageProps) {
-  const article = getJournalArticle((await params).slug);
+  const slug=(await params).slug, number=hexagramNumber(slug);
+  if(number) return <HexagramLearningArticle number={number} locale={normalizeJournalLocale((await searchParams)?.locale)}/>;
+  const article = getJournalArticle(slug);
   if (!article) notFound();
   const locale = normalizeJournalLocale((await searchParams)?.locale);
   const ui = journalUi[locale];
