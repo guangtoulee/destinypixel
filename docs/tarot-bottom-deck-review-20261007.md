@@ -52,3 +52,19 @@ Use `NODE_PATH` if Playwright is installed outside the repo. Set `QA_EVIDENCE_DI
 ## Deliberate limits
 
 Double-tap dealing/revealing and two-finger rotation are staged; explicit tap/drag/rotation controls avoid gesture conflicts. There is no new deck-selection UI; the manifest is the extension point. Native iOS/Safari, Android WebView and WeChat packaging are not validated by Chromium. No production release, main push, protection change or unrelated app/algorithm/automation change is included.
+
+## External QA corrections and artwork versions
+
+The free table, bottom deck and essential controls now form one workbench sized to the available dynamic viewport, including safe-area space. This fixes the previous 650px desktop table pushing its deck offscreen. Phone reset controls and short-landscape deck instructions are compact; full instructions remain in a disclosure. The public topic/SEO content stays outside this workbench.
+
+Card placement clamps the actual rotated rectangle with an 8px margin, including drag, keyboard movement, rotation and viewport changes. Card size adapts to the table's dimensions. A pure geometry test checks all corners for every 15-degree step at multiple table sizes and out-of-range positions.
+
+Placement angle deliberately remains independent of reading orientation. The toolbar explicitly labels the angle, displays the current upright/reversed state, and provides a separate localized **Switch upright / reversed** action that updates the displayed face and meaning. A small tilt does not change interpretation; users can deliberately reverse the selected card without changing its ID or drawing again.
+
+The enlarged viewer now has an **Artwork versions / 牌面版本** disclosure backed by the artwork manifest. It shows the current TaionWC historical RWS scan and its attribution. Only one sourced edition is currently registered; no commercial aliases, unavailable choices, recolored duplicates or advertising placeholders are presented. The component's artwork choice is local to the viewer and does not change the drawing deck or table. A second historical 1909 scan set remains deferred until all 78 individual sources and mappings are verified. No modern U.S. Games, Before/After/New Vision imagery was imported, and no historical articles were added.
+
+The shared account-link helper now preserves `zh-TW` and `ru` rather than reducing them to `zh`/English. The saved-record viewer receives its actual locale too; no account operations were performed.
+
+Additional QA script: `scripts/check-tarot-review-fixes.mjs`. It checks all four languages at 1165×747, 320×568, 390×844, 430×932 and 844×390; actual rotated bounds at all 24 steps; keyboard/drag containment; explicit reversal; artwork-view state preservation; and lower account-link locales.
+
+Production-build correction checks passed in four languages: **20 viewport cases**, **480 actual rotation steps**, keyboard/drag bounds, selected-card reversal, single-edition viewer state preservation and account locales. The full repository test count is now **230** (229 server-runtime tests plus the separate client-render test). Updated evidence: [desktop workspace](qa/tarot-bottom-deck-20261007/workspace-1165.png), [phone workspace](qa/tarot-bottom-deck-20261007/workspace-390.png), [small phone](qa/tarot-bottom-deck-20261007/workspace-320.png), [edition/source disclosure](qa/tarot-bottom-deck-20261007/artwork-versions-390.png). Programmatic reading scrolls also honor reduced-motion preferences.

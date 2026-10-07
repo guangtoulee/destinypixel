@@ -7,10 +7,11 @@ import { CardBack } from "./card-back";
 
 export type DeckDropPoint = { x: number; y: number };
 /** Only transient transforms change while dragging; the deck changes on release. */
-export function BottomDeck({ count, disabled, interactive, copy: c, onDraw, onPull, onShuffle, contains }: {
+export function BottomDeck({ count, disabled, interactive, compact = false, copy: c, onDraw, onPull, onShuffle, contains }: {
   count: number;
   disabled: boolean;
   interactive: boolean;
+  compact?: boolean;
   copy: CelestialCopy;
   onDraw: (index: number, point?: DeckDropPoint) => void;
   onPull: (point: DeckDropPoint | null) => void;
@@ -95,7 +96,7 @@ export function BottomDeck({ count, disabled, interactive, copy: c, onDraw, onPu
     <div className="tarot-deck-actions">
       <div className="tarot-deck-label"><h2>{c.deckShortTitle}</h2><span aria-live="polite">{count} {c.remaining}</span></div>
       <button type="button" className="cel-button" onClick={shuffle} disabled={!interactive || shuffling || !count}><Shuffle size={16}/>{c.shuffleShort}</button>
-      <p id={helpId}>{disabled ? c.ribbonStart : c.ribbonHelp}</p>
+      <p id={helpId}>{disabled ? c.ribbonStart : compact ? c.dropHint : c.ribbonHelp}</p>
       <span className="tarot-deck-status" role="status">{shuffling ? c.shuffle : disabled ? "" : c.shuffled}</span>
     </div>
     <div ref={ghost} className="tarot-drag-ghost" aria-hidden="true"><CardBack/></div>

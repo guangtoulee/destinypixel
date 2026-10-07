@@ -43,7 +43,7 @@ export function SavedCelestialRecord({id,locale:initialLocale}: {id:string;local
       <div className="cel-saved-card-guide">{s.table.cards.map(card=>{const info=tarotCards(locale).find(c=>c.id===card.id)!;return (card.revealed||flipped.has(card.id))&&<article key={card.id}><h3>{card.slot+1}. {info.name} · {card.reversed?copy.reversed:copy.upright}</h3><p>{card.reversed?info.reversed:info.upright}</p></article>;})}</div>
       {s.reading?<ReadingPanel copy={copy} reading={s.reading} busy={false} status="" disabled savedView onRead={()=>{}}/>:<p className="cel-notice">{c.noReading}</p>}
     </>}
-    <TarotCardDialog card={dialogCard?tarotCards(locale).find(c=>c.id===dialogCard.id)||null:null} reversed={dialogCard?.reversed||false} position={dialogCard&&s?.kind==="tarot"?(s.table.mode==="spread"?copy.positions[s.table.spread][dialogCard.slot]:`${copy.position} ${dialogCard.slot+1}`):""} copy={copy} onClose={()=>setDialogSlot(null)}/>
+    <TarotCardDialog locale={locale} card={dialogCard?tarotCards(locale).find(c=>c.id===dialogCard.id)||null:null} reversed={dialogCard?.reversed||false} position={dialogCard&&s?.kind==="tarot"?(s.table.mode==="spread"?copy.positions[s.table.spread][dialogCard.slot]:`${copy.position} ${dialogCard.slot+1}`):""} copy={copy} onClose={()=>setDialogSlot(null)}/>
     <RecordAuthDialog locale={locale} open={auth} onClose={()=>setAuth(false)} onAuthenticated={()=>load()} saving={false}/>
   </div></main>;
 }

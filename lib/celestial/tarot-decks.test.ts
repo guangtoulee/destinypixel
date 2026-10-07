@@ -23,3 +23,14 @@ test("changing artwork leaves every localized meaning and stable identity intact
     assert.deepEqual(custom.map(({image: _image, ...card}) => card), original.map(({image: _image, ...card}) => card));
   }
 });
+
+test("artwork comparison offers only actual faces and never substitutes another edition", async () => {
+  const { artworkEditionsForCard, tarotArtworkEditions } = await import("./tarot-decks");
+  const id = tarotCards("en")[0].id;
+  assert.equal(tarotArtworkEditions.length, 1);
+  assert.equal(artworkEditionsForCard(id)[0].id, defaultTarotDeck.id);
+  assert.deepEqual(artworkEditionsForCard("unknown-card"), []);
+  const alternate = {...tarotArtworkEditions[0], id: "test-art-only", faces: {[id]: "/fixture.webp"}};
+  assert.equal(artworkEditionsForCard(id, [...tarotArtworkEditions, alternate]).length, 2);
+  assert.equal(artworkEditionsForCard(tarotCards("en")[1].id, [...tarotArtworkEditions, alternate]).length, 1);
+});

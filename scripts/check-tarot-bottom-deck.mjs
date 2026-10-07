@@ -100,9 +100,17 @@ try {
       await shuffle.click(); await expect(top).toBeEnabled();
       for (let i=0;i<size;i++) await top.press("Enter");
       await expect(board.locator(".tarot-flipper")).toHaveCount(size);
+      // A completed spread may scroll into view. Wait for that movement before pointer actions.
+      await page.evaluate(() => new Promise(resolve => {
+        let previous = scrollY, stable = 0;
+        const frame = () => { stable = Math.abs(scrollY - previous) < .5 ? stable + 1 : 0; previous = scrollY; if (stable >= 4) resolve(); else requestAnimationFrame(frame); };
+        requestAnimationFrame(frame);
+      }));
       for (let i=0;i<size;i++) {
         await board.locator(".tarot-slot-label").nth(i).click();
+        await expect(board.locator(".tarot-slot-label").nth(i)).toHaveAttribute("aria-pressed", "true");
         await page.locator(".tarot-table-toolbar button").first().click();
+        await expect(board.locator("[data-drop-slot]").nth(i).locator("img")).toHaveCount(1);
       }
       await expect(board.locator("img")).toHaveCount(size);
       assert.equal(new Set(await board.locator("img").evaluateAll(imgs=>imgs.map(i=>i.src))).size,size);

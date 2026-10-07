@@ -73,3 +73,7 @@ Verified 284 article editions, sitemap/metadata and product links.
 
 tarot-profile.log
 {"environment":"Headless Chromium, cloud Linux, 390x844; rAF intervals during one 90-step drag, not a device FPS guarantee","frames":98,"medianMs":16.699999999999818,"p95Ms":16.799999999999272,"maxMs":16.800000000000182,"over50ms":0}
+PASS ru: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
+PASS en: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
+PASS zh: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
+PASS zh-TW: five viewport fits, 120 rotation steps, keyboard/drag bounds, explicit reversal, current-edition viewer preserves reading, account locale
