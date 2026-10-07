@@ -21,6 +21,7 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its tools inc
 - Face Studio: ${absoluteUrl("/face")}
 - Free natal birth chart calculator: ${absoluteUrl("/astrology")}
 - Free online tarot and spreads: ${absoluteUrl("/tarot")}
+- Who drew the Rider–Waite–Smith tarot (Pamela Colman Smith): ${absoluteUrl("/journal/pamela-colman-smith-tarot-artist")}
 - Question Oracle: ${absoluteUrl("/oracle")}
 - Free Bazi and birth-chart compatibility: ${absoluteUrl("/compatibility")}
 - Bazi compatibility guide: ${absoluteUrl("/learn/bazi-love-compatibility")}

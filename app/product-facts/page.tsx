@@ -20,6 +20,7 @@ export default async function ProductFactsPage({ searchParams }: Props) {
       <p className={styles.tag}>{p.pricing.model === "free" ? c.free : c.paid}</p><h2><a href={t.url}>{t.name} <span aria-hidden="true">↗</span></a></h2><p>{t.purpose}</p>
       <dl><dt>{c.input}</dt><dd>{t.inputs}</dd><dt>{c.ai}</dt><dd>{t.ai}</dd><dt>{c.saving}</dt><dd>{t.saving}</dd></dl>
       {offer ? <aside>{offer.available ? <><strong>{c.offer}: {offer.amount} {offer.currency}</strong><p>{c.priceNote}</p></> : c.unavailable}</aside> : null}
+      {"guide" in t && t.guide ? <p><a href={t.guide.url}>{t.guide.label} →</a></p> : null}
       <a className={styles.cta} href={t.url}>{c.open} →</a>
     </article>; })}</div>
     <section className={styles.notes}><h2>{c.sources}</h2><p>{c.sourceNote}</p><a href={`/journal/fortune-stick-number-and-edition${locale === "en" ? "" : `?locale=${locale}`}`}>{locale === "zh-TW" ? "籤號與版本說明" : locale === "zh" ? "签号与版本说明" : locale === "ru" ? "Номера и версии жребиев" : "Stick numbers and editions"} →</a><h2>{c.limits}</h2><p>{c.boundary}</p><p>{c.privacy}</p></section>

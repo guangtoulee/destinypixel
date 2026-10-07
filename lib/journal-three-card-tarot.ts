@@ -74,6 +74,7 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
+        "links": [{ "text": "Rider–Waite–Smith", "href": "/journal/pamela-colman-smith-tarot-artist" }],
         "title": "6. Try the three-card spread on the free table",
         "paragraphs": [
           "The guided mode handles the three positions for you. You do not need a birth date, a BaZi chart or an account to shuffle, choose cards and read their short meanings. The deck uses all 78 Rider–Waite–Smith cards; the example above is not a preset draw and you are unlikely to get that exact combination.",
@@ -201,6 +202,7 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
+        "links": [{ "text": "韦特体系", "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh" }],
         "title": "6. 在免费牌桌上自己抽一次",
         "paragraphs": [
           "排阵模式会帮你安排好三个位置。洗牌、选牌、看简明牌义不需要生日、八字资料或账号。牌堆包含完整的 78 张韦特体系牌，上面的例子不是预设抽牌结果，你不需要抽出完全一样的组合。",
@@ -328,6 +330,7 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
+        "links": [{ "text": "Райдера–Уэйта–Смит", "href": "/journal/pamela-colman-smith-tarot-artist?locale=ru" }],
         "title": "6. Попробуйте бесплатный расклад самостоятельно",
         "paragraphs": [
           "Режим готового расклада задаёт три позиции. Для перемешивания, выбора и кратких значений не нужны дата рождения, карта Ба-цзы или аккаунт. Используются все 78 карт Райдера–Уэйта–Смит. Комбинация из примера не является заранее заданным результатом; вам не нужно вытянуть именно её.",

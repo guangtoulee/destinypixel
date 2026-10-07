@@ -28,6 +28,10 @@ export type JournalSection = {
 };
 export type JournalTranslation = {
   title: string;
+  /** Optional narrative subtitle shown under the H1. */
+  subtitle?: string;
+  /** Optional short direct answer shown under the H1. */
+  answer?: string;
   description: string;
   topic: string;
   introduction: string;
@@ -43,6 +47,10 @@ export type JournalArticle = {
   relatedSlug?: string;
   /** Article-specific Traditional Chinese wording fixes applied after automatic conversion. */
   zhTwReplacements?: [string, string][];
+  /** Dedicated social/schema image. */
+  image?: { src: string; width: number; height: number };
+  /** schema.org entity the article is about. */
+  about?: { "@type": "Person"; name: string; birthDate: string; deathDate: string; image?: string; sameAs: string[] };
   publishedAt: string;
   updatedAt: string;
   translations: Record<JournalLocale, JournalTranslation>;
@@ -274,6 +282,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
   const text = toTraditional;
   return {
     title: text(copy.title), description: text(copy.description), topic: text(copy.topic),
+    ...(copy.subtitle ? { subtitle: text(copy.subtitle) } : {}), ...(copy.answer ? { answer: text(copy.answer) } : {}),
     introduction: text(copy.introduction), takeaway: text(copy.takeaway),
     sections: copy.sections.map((section) => ({
       ...section, title: text(section.title), paragraphs: section.paragraphs.map(text),
@@ -316,7 +325,7 @@ export function journalMetadata(locale: JournalLocale, article?: JournalArticle)
   const title = copy?.title ?? journalUi[locale].title;
   const description = copy?.description ?? journalUi[locale].description;
   const canonical = journalHref(locale, article?.slug);
-  const images = [article?.pillar ? getPillarImagePath(article.pillar) : "/opengraph-image"];
+  const images = [article?.image ? { url: article.image.src, width: article.image.width, height: article.image.height, alt: title } : article?.pillar ? getPillarImagePath(article.pillar) : "/opengraph-image"];
   return {
     title: { absolute: `${title} | ${siteName}` },
     description,
@@ -337,7 +346,7 @@ export function journalArticleSchema(article: JournalArticle, locale: JournalLoc
   const url = absoluteUrl(journalHref(locale, article.slug));
   const home = absoluteUrl(journalHomeHref(locale));
   return [
-    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: article.updatedAt, ...(article.pillar ? { image: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}), author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href.startsWith("/") ? absoluteUrl(source.href) : source.href) ?? []), isAccessibleForFree: true },
+    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: article.updatedAt, ...(article.image ? { image: [absoluteUrl(article.image.src)] } : article.pillar ? { image: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}), ...(article.about ? { about: { ...article.about, ...(article.about.image ? { image: absoluteUrl(article.about.image) } : {}) } } : {}), author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href.startsWith("/") ? absoluteUrl(source.href) : source.href) ?? []), isAccessibleForFree: true },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: journalUi[locale].home, item: home }, { "@type": "ListItem", position: 2, name: journalUi[locale].journal, item: absoluteUrl(journalHref(locale)) }, { "@type": "ListItem", position: 3, name: copy.title, item: url }] },
   ] as const;
 }
