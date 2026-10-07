@@ -7,10 +7,11 @@ const base = process.argv[2] || "http://127.0.0.1:3010";
 const evidence = process.env.QA_EVIDENCE_DIR;
 if (evidence) await mkdir(evidence, {recursive: true});
 const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium", args: ["--no-sandbox"]});
+const widths = process.env.QA_WIDTHS ? process.env.QA_WIDTHS.split(",").map(Number) : [320, 390, 430, 1440];
 let cases = 0;
 try {
   await Promise.all(["en", "zh", "zh-TW", "ru"].map(async locale => {
-  for (const width of [320, 390, 430, 1440]) {
+  for (const width of widths) {
     const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: width === 390 ? "no-preference" : "reduce"});
     const errors = [];
     let acceptDialogs = true;
@@ -71,7 +72,7 @@ try {
     await cdp.send("Input.dispatchTouchEvent", {type:"touchStart",touchPoints:[{x:touch.x+touch.width/2,y:touch.y+touch.height/2}]});
     await cdp.send("Input.dispatchTouchEvent", {type:"touchMove",touchPoints:[{x:touch.x+touch.width/2+35,y:touch.y+touch.height/2+30}]});
     await cdp.send("Input.dispatchTouchEvent", {type:"touchCancel",touchPoints:[]});
-    assert.equal(await first.getAttribute("style"),committed);
+    await expect(first).toHaveAttribute("style", committed);
     await first.press("Enter"); await first.press("Enter");
     await expect(page.locator("dialog[open]")).toHaveCount(1);
     await page.locator(".tarot-dialog-tabs button").last().click();
@@ -130,5 +131,5 @@ try {
     await page.close();
   }
   }));
-  console.log(`PASS ${cases}/32 mode/locale/viewport cases`);
+  console.log(`PASS ${cases}/${widths.length * 8} mode/locale/viewport cases`);
 } finally { await browser.close(); }
