@@ -65,6 +65,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           <div className={article.pillar ? styles.portraitHero : undefined}>
           <div>
           <h1>{copy.title}</h1>
+          {copy.subtitle && <p className={styles.subtitle}>{copy.subtitle}</p>}
+          {copy.answer && <p className={styles.directAnswer}>{copy.answer}</p>}
           <p className={styles.introduction}>{copy.introduction}</p>
           <div className={styles.byline}><span>DestinyPixel</span><span aria-hidden="true">·</span><span>{ui.published} <time dateTime={article.publishedAt}>{article.publishedAt}</time></span>{article.updatedAt !== article.publishedAt && <span>{ui.updated} <time dateTime={article.updatedAt}>{article.updatedAt}</time></span>}</div>
           {article.pillar && <a className={styles.libraryTextLink} href={pillarLibraryHref(locale)}>{library.browse}<ArrowRight size={16} aria-hidden="true" /></a>}
