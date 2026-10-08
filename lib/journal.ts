@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { tarotEducationArticles } from "@/lib/journal-tarot-editorial";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
 import { jiaZiArticle } from "@/lib/journal-jia-zi";
@@ -20,6 +21,8 @@ export type JournalSection = {
   id: string;
   title: string;
   paragraphs: string[];
+  /** Complete authored Markdown; never a summary of the section. */
+  bodyMarkdown?: string;
   steps?: string[];
   table?: { headings: string[]; rows: string[][] };
   sources?: { label: string; href: string }[];
@@ -35,14 +38,15 @@ export type JournalTranslation = {
   description: string;
   topic: string;
   introduction: string;
-  takeaway: string;
+  openingParagraphs?: string[];
+  takeaway?: string;
   sections: JournalSection[];
   action: { label: string; href: string };
 };
 export type JournalArticle = {
   slug: string;
   pillar?: string;
-  kind?: "portrait";
+  kind?: "portrait" | "education";
   portraitDepth?: "full";
   relatedSlug?: string;
   /** Article-specific Traditional Chinese wording fixes applied after automatic conversion. */
@@ -283,7 +287,7 @@ function traditionalTranslation(copy: JournalTranslation): JournalTranslation {
   return {
     title: text(copy.title), description: text(copy.description), topic: text(copy.topic),
     ...(copy.subtitle ? { subtitle: text(copy.subtitle) } : {}), ...(copy.answer ? { answer: text(copy.answer) } : {}),
-    introduction: text(copy.introduction), takeaway: text(copy.takeaway),
+    introduction: text(copy.introduction), ...(copy.takeaway ? { takeaway: text(copy.takeaway) } : {}),
     sections: copy.sections.map((section) => ({
       ...section, title: text(section.title), paragraphs: section.paragraphs.map(text),
       ...(section.steps ? { steps: section.steps.map(text) } : {}),
@@ -303,11 +307,11 @@ function applyReplacements(copy: JournalTranslation, replacements?: [string, str
   return JSON.parse(replacements.reduce((json, [from, to]) => json.replaceAll(from, to), JSON.stringify(copy)));
 }
 
-export const journalArticles: JournalArticle[] = journalSources.map((article) => {
+export const journalArticles: JournalArticle[] = [...tarotEducationArticles, ...journalSources.map((article) => {
   const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru } };
-});
+})];
 
 export function journalAlternates(slug?: string): Record<string, string> {
   return Object.fromEntries([

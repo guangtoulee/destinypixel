@@ -7,65 +7,53 @@
   "locale": "zh-CN",
   "arcana": "major",
   "deckSystem": "RWS",
-  "title": "太阳 让好的东西真正被看见",
+  "title": "太阳牌的明亮与分寸",
   "keywords": [
     "明朗",
     "活力",
     "喜悦"
   ],
   "quickTake": {
-    "upright": "事情明朗了，有劲了，好的进展可以大方承认",
-    "reversed": "好的一面还在，只是热情不足，或开心得有点过头"
+    "upright": "有进展就大方承认，该展示展示，该高兴高兴。",
+    "reversed": "是笑不出来，还是高兴过头？先看清自己卡在哪一边。"
   },
-  "hook": "孩子来到墙的前面，张开手臂，仿佛终于不用躲着表达高兴。",
+  "hook": "想象你把做了很久的模型搬到窗边：颜色亮了，接缝也看清了。太阳牌就有这种诚实的亮度。它让人振奋，也让检查变得容易。",
   "sections": [
     {
-      "id": "section-01",
+      "id": "sun-section-1",
       "role": "image",
-      "title": "阳光把人物推到前景",
-      "bodyMarkdown": "巨大的金色太阳占据上半张牌，正面的脸望向外面，直线和波浪形光芒向四周展开。下方的孩子裸身坐在白马上，头上戴着花冠和一根红色羽毛，双臂向两侧伸开；右侧的大红旗卷起波浪般的弧线。白马的头朝向观者，画面看不到缰绳或马鞍。\n\n孩子与马身后是一道灰色砖墙，四朵向日葵从墙后探出头来。墙还存在，却没有挡在人物与我们之间。太阳、鲜红旗帜、向外伸的手臂，让视线不断从背景回到前景。裸体在这里可以引出坦然与无遮掩的阅读，但“毫无防备一定安全”并不是图画能证明的事。[查看太阳牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg)。"
+      "title": "先看谁站到了光里",
+      "bodyMarkdown": "看牌时，先别急着背“成功”。从上方的太阳一路看到墙前的孩子，你会发现：画面把生命力画得很外向，却没有把所有边界抹掉。\n\n**太阳和向日葵：光落在哪里。** 巨大的太阳带着人脸，直线与波浪状光芒交替伸出；向日葵从墙后露出。太阳占据天空，花朵把视线接回地面。由此可以作一种现代联想：抽象的“我感觉不错”，最好落成看得见的进展，比如一个终于讲明白的概念。花朵的数量和朝向值得观察，但不必硬套成唯一的神秘密码。\n\n**孩子和白马：力量怎样被使用。** 孩子伸展手臂，裸身坐在白马上；画面看不到缰绳。这个组合既有小孩的开放，也有大动物的力量。Waite 从孩子谈到简单与纯真，也谈到更新后的意识和动物本性的协调。顺着画面，可以把它读成一种不必随时紧绷的自信：有能力承载行动，才比较容易放开手。现实中的坦诚仍需判断对象与边界。\n\n**墙和红旗：走出来之后如何表达。** 灰墙横在背后，人物却位于墙前；大片红旗向上展开。墙让“出来”有了位置，红旗让喜悦有了动作。这里可以这样读：允许成果被看见，同时承认它仍有范围。你可以说“这一步做成了”，不必马上把整段未来也宣布成功。旗帜很醒目，也提醒我们检查：表达自己的时候，还有没有给别人留空间？"
     },
     {
-      "id": "section-02",
+      "id": "sun-section-2",
       "role": "tradition",
-      "title": "直接的光与孩子的简单",
-      "bodyMarkdown": "Waite 第二部把太阳的直接之光，与反射的光作对比；他从孩子的形象谈到简单、天真和更新后的意识。这套解释带有明确的精神性语境，不能全压缩成“成功运”。[Waite 的太阳篇](https://original.sacred-texts.com/tarot/pkt/pktar19.htm)。\n\n第三部的正位占辞包括物质幸福和满足，逆位则写成相同意义的较弱程度。这提供了一个很实用的学习提醒：逆位不必把正位完全推翻，光亮也可能只是暂时被削弱。[Waite 的原占辞](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)。"
+      "title": "传统里的太阳比好心情更深",
+      "bodyMarkdown": "在《The Pictorial Key to the Tarot》第二部，Waite 把太阳联系到精神意识的直接之光，并以孩子说明一种带着智慧的纯真。这是他的神秘主义解释，不能当成已经证实的心理机制。[读英文原文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_2)\n\n第三部的占辞更简短：正位涉及物质幸福、美满婚姻与满足；逆位保留同类含义，只是程度较弱。这条原文很有用，因为它提醒初学者：翻转牌面不必把意义整个翻成反面。[核对正逆位占辞](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)"
     },
     {
-      "id": "section-03",
+      "id": "sun-section-3",
       "role": "interpretation",
-      "title": "承认进展，也看清它的边界",
-      "bodyMarkdown": "DestinyPixel 把正位读作更清楚、更愿意参与生活的状态。事情说开了，努力得到反馈，或你终于肯承认自己做成了一件事。此时可以分享成果、坦白需求，享受已经存在的快乐。画面的明亮鼓励充分看见，不要求你把仍有问题的部分也涂成金色。\n\n逆位可以是疲惫使快乐变淡，担心被评价而不敢展示，也可以是自信过满、太急着宣布胜利。两种情况需要相反的动作：前者允许自己慢一点领会好消息，后者多看一次细节和他人的反馈。辨认实际处境，比把它背成“太阳变坏了”有用。"
+      "title": "正位与逆位都要问一句为什么",
+      "bodyMarkdown": "太阳正位可以帮助我们观察三类状态：信息变清楚了、行动有了积极反馈、快乐可以被坦然承认。读到这里，最好接着问：“哪件事实支持这个判断？”关系中，对方明确表达意愿，比你感觉气氛很好更有分量；学习中，能独立讲解一道题，比听课时觉得全懂了更可靠。\n\n逆位可以尝试两条阅读路径。它们是现代应用，不是 Waite 原句的翻译。\n\n- **光不容易接进来。** 有真实进展，却习惯否认自己；或事情不错，人已经很疲惫。可以先减少比较，承认一个小成果，给感受留下时间。\n- **光太抢眼。** 只愿听赞美，把热情当成完成度，别人提出困难就嫌扫兴。可以请一位愿意说真话的人检查细节。\n\n分辨两者，要听当事人的经历、看实际反馈。若好消息明确而本人难以相信，更接近第一条；若批评不断却被一概忽略，第二条才值得考虑。证据不足时，保留两种可能，比急着选一个吓人或好听的答案更诚实。"
     },
     {
-      "id": "section-04",
-      "role": "situations",
-      "title": "放进具体生活里",
-      "bodyMarkdown": "**学习。** 一次展示终于讲清了原来卡住的内容。可以庆祝，也记下究竟是哪种练习奏效，让这份进步以后还能用得上。\n\n**关系。** 双方把先前的误会说开，你不再靠猜测了解对方。轻松值得享受，同时把新的约定落实到往后的相处里。\n\n**团队。** 成果受到好评，但有人仍不理解如何使用。逆位可提醒你放慢庆功，检查说明是否清楚；也别因为一处待改，就否认大家已经完成的工作。"
+      "id": "sun-section-4",
+      "role": "comparison",
+      "title": "换一副牌以后重点会移动",
+      "bodyMarkdown": "RWS 的孩子骑在马背上，容易让人注意到个人的开放与力量协调。比较其他版本时，先找人物关系，再决定自己的解释怎样调整。\n\n马赛式太阳常见两个人物相互接近、身后有墙的构图。这里可以多问一句：“光是否照到了双方？”由此引出互助与共同成长，是本文的读图提问，并非所有马赛牌的统一定论。Waite 第一部也记录了旧式太阳牌中双子与围墙的母题。[传统图式的英文记录](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_1)\n\n摩根图书馆所藏 Visconti-Sforza 太阳，则是云上带翼的裸身少年，双手举着有光芒的人面。这里没有 RWS 的白马和向日葵，不能把那六处细节的解释整套搬来。馆藏记录将这张牌列入较晚的一组；它也不能代表所有早期意大利太阳牌。[查看馆藏实物说明](https://ica.themorgan.org/manuscript/page/13/158525)\n\n遇到现代改绘牌，也可以用这个办法：先找出画面增减了什么，再问它把你的注意力带向哪里。若只保留了太阳，却换掉人物、动物与场景，就应重新观察这些关系；牌名相同，不代表每一处细节都能照搬解释。"
     },
     {
-      "id": "section-05",
+      "id": "sun-section-5",
+      "role": "example",
+      "title": "一次完整的阅读示范",
+      "bodyMarkdown": "**原创虚构案例。** 小岚准备参加作品评审。她问：“我该怎样展示这组作品？”建议位抽到太阳正位。\n\n先确定问题：她问的是展示方式。太阳的开阔姿态可以启发她让作品更容易被理解，却不能据此断定她会获选。\n\n再把画面接到事实：小岚已有两件完成度较高的作品，却在介绍时反复说“其实也没什么”。于是，孩子的坦然与红旗的外放，可以转成一个建议：开头直接展示最能代表能力的作品，用具体过程说明自己做了什么。\n\n然后检查过度乐观：第三件作品的细节仍未收尾。墙的边界感在这里成为提醒，介绍时清楚区分完成品与进行中的尝试，避免用自信掩盖缺口。\n\n最后给出可执行动作：请朋友听一次三分钟介绍，再请对方复述“作品解决了什么问题”。如果复述偏了，就调整表达。太阳的“明亮”在此成为可以检查的清晰度。\n\n如果同一位置抽到逆位，先追问她的困难。她若已有好反馈却不敢展示，可从小范围试讲开始；她若认为不需准备，则更适合一次直截了当的模拟评审。同一张逆位牌，行动可能朝两个方向走。"
+    },
+    {
+      "id": "sun-section-6",
       "role": "practice",
-      "title": "试着做一次",
-      "bodyMarkdown": "记录一件今天确实变好的事，写明证据，再补一句“帮助它发生的是……”。可以向相关的人表达感谢，让高兴有具体的对象，也让有效的方法留下来。"
-    },
-    {
-      "id": "section-06",
-      "role": "common_misread",
-      "title": "容易读偏的地方",
-      "bodyMarkdown": "孩子不等于怀孕信号，太阳也不保证考试、婚姻或项目一定成功。快乐不必预支未来；把这张牌用来照亮已有的进展，就已经足够。"
-    },
-    {
-      "id": "section-07",
-      "role": "related",
-      "title": "放在一起比较",
-      "bodyMarkdown": "- 月亮：对照不清楚时的猜测，与信息和表达变得明朗。\n- 星星：区分慢慢养回希望，与把活力和喜悦向外表达。\n- 世界：比较一段明亮的进展，与有明确边界的阶段完成。"
-    },
-    {
-      "id": "section-08",
-      "role": "sources",
-      "title": "阅读来源",
-      "bodyMarkdown": "- A. E. Waite，《The Pictorial Key to the Tarot》，第二部 XIX 篇：[英文原文](https://original.sacred-texts.com/tarot/pkt/pktar19.htm)\n- 同书第三部第三节，第 19 条：[正逆位原占辞](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n- Pamela Colman Smith，RWS 牌面：[Commons 图像及版本记录](https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg)\n\n英文转录页面标注 1911；图像页标记 Pam-A、1910。本篇画面按实际下载的 Commons JPG 观察，现代速读与练习为本站原创解读。来源核验日期：2026-10-07。"
+      "title": "带着一个问题离开",
+      "bodyMarkdown": "今天挑一件让你高兴的事，写下它的证据，再补一句：“我还需要看清什么？”这样既不会轻易抹掉快乐，也给下一步留下了位置。\n\n塔罗适合用来整理思路；健康与怀孕等问题应依据检查和专业意见，现实结果仍要靠实际信息判断。"
     }
   ],
   "relatedCards": [
@@ -87,106 +75,20 @@
   ],
   "sources": [
     {
-      "sourceId": "sun-waite-symbolism",
-      "type": "历史作者原文",
-      "title": "The Pictorial Key to the Tarot",
-      "url": "https://original.sacred-texts.com/tarot/pkt/pktar19.htm",
-      "edition": "本次直接阅读 Sacred Texts 英文转录，页面标注 [1911]；未声称核过 1910 实体初版页码",
-      "checkedOn": "2026-10-07",
-      "sourceMetadata": {
-        "sourceId": "sun-waite-symbolism",
-        "layer": "历史作者原文",
-        "author": "A. E. Waite",
-        "title": "The Pictorial Key to the Tarot",
-        "edition": "本次直接阅读 Sacred Texts 英文转录，页面标注 [1911]；未声称核过 1910 实体初版页码",
-        "section": "Part II, Section 2, XIX. The Sun",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktar19.htm",
-        "supports": "直接之光、孩子的简单与更新意识；第三部逆位仍是正位意义的减弱。",
-        "use": "以中文概述相关观点，无现代译本复制；原文摘录限必要短语",
-        "checkedOn": "2026-10-07",
-        "snapshotPath": "research/waite-19.html"
-      }
+      "title": "读英文原文",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_2"
     },
     {
-      "sourceId": "sun-waite-divination",
-      "type": "历史占辞",
-      "title": "The Pictorial Key to the Tarot",
-      "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
-      "edition": "Sacred Texts 英文转录，标注 [1911]",
-      "checkedOn": "2026-10-07",
-      "sourceMetadata": {
-        "sourceId": "sun-waite-divination",
-        "layer": "历史占辞",
-        "author": "A. E. Waite",
-        "title": "The Pictorial Key to the Tarot",
-        "edition": "Sacred Texts 英文转录，标注 [1911]",
-        "section": "Part III, Section 3, entry 19",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
-        "supports": "原文正逆位占辞的明确归属及现代解读不应冒充原文",
-        "use": "中文选择性概述，不作已验证预测",
-        "checkedOn": "2026-10-07",
-        "snapshotPath": "research/waite-divination.html"
-      }
+      "title": "核对正逆位占辞",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
     },
     {
-      "sourceId": "sun-image",
-      "type": "直接画面观察",
-      "title": "RWS Tarot 19 Sun.jpg",
-      "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
-      "edition": null,
-      "checkedOn": "2026-10-07",
-      "sourceMetadata": {
-        "sourceId": "sun-image",
-        "layer": "直接画面观察",
-        "author": "Pamela Colman Smith",
-        "title": "RWS Tarot 19 Sun.jpg",
-        "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
-        "supports": "太阳面孔、直／波浪光芒、白马、裸身孩子、花冠红羽毛、红旗、砖墙和四朵向日葵。",
-        "imageMetadata": {
-          "number": 19,
-          "name": "Sun",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
-          "localPath": "/workspace/shared/major-arcana/batch-15-21/images/19-sun.jpg",
-          "sha256": "6c21ef99fef3807bafb26cd467464c8efc59e7312a688ae66285968e364c6450",
-          "bytes": 935619,
-          "creator": "Pamela Colman Smith",
-          "deck": "Rider–Waite–Smith",
-          "versionLabel": "Commons 文件说明标记为 Pam-A，日期 1910；2026-04-18 恢复到 2024-04-04 上传版本",
-          "commonsFilePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
-          "commonsPageRevision": "1199317667",
-          "commonsPageRevisionUrl": "https://commons.wikimedia.org/w/index.php?title=File:RWS_Tarot_19_Sun.jpg&oldid=1199317667",
-          "fileHistoryCurrentRow": "current 02:24, 18 April 2026 1,114 × 1,919 (914 KB) Nosferattus ( talk | contribs ) Reverted to version as of 06:27, 4 April 2024 (UTC) per Commons:Overwriting existing files . Different versions should be uploaded as different files.",
-          "creditedScanSource": "http://muzendo.jp/blog/（Commons 文件页所列来源，本次未独立核验该原站）",
-          "rightsStatementObserved": "Commons 文件页显示 public domain / Public Domain Mark 1.0；这是对当前文件页的记录，不是全球版权保证",
-          "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-          "inspectedPixels": true,
-          "checkedOn": "2026-10-07",
-          "productionImagePath": "/tarot/rws/sun.webp",
-          "productionImagePixelMatch": "本次未下载生产 WebP，未核验逐像素一致；接入前应与实际生产图核对",
-          "publicationStatus": "仅供稿件学习核验，未新增或替换站点图片"
-        },
-        "use": "下载当前原始 JPG 并经 view_image 逐张观看；Markdown 未内嵌或发布这批下载文件",
-        "checkedOn": "2026-10-07",
-        "snapshotPath": "research/commons-19.html"
-      }
+      "title": "传统图式的英文记录",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_1"
     },
     {
-      "sourceId": "sun-destinypixel",
-      "type": "本站原创现代解读",
-      "title": "太阳 让好的东西真正被看见",
-      "url": null,
-      "edition": null,
-      "checkedOn": "2026-10-07",
-      "sourceMetadata": {
-        "sourceId": "sun-destinypixel",
-        "layer": "本站原创现代解读",
-        "author": "DestinyPixel 编辑稿",
-        "title": "太阳 让好的东西真正被看见",
-        "url": null,
-        "supports": "认可现有进展与表达喜悦；逆位区分喜悦不易感到和过分乐观。",
-        "use": "原创速读、生活情境、练习、误读提醒；不称为 Waite 原义或普遍唯一牌义",
-        "checkedOn": "2026-10-07"
-      }
+      "title": "查看馆藏实物说明",
+      "url": "https://ica.themorgan.org/manuscript/page/13/158525"
     }
   ],
   "image": {
@@ -236,134 +138,11 @@
     "observationBasis": "commons_original_jpeg",
     "repositoryAssetInspected": false
   },
-  "articleMarkdown": "# XIX 太阳 让好的东西真正被看见\n\n**正位速读：** 事情明朗了，有劲了，好的进展可以大方承认\n\n**逆位速读：** 好的一面还在，只是热情不足，或开心得有点过头\n\n关键词：明朗 · 活力 · 喜悦\n\n孩子来到墙的前面，张开手臂，仿佛终于不用躲着表达高兴。\n\n## 阳光把人物推到前景\n\n巨大的金色太阳占据上半张牌，正面的脸望向外面，直线和波浪形光芒向四周展开。下方的孩子裸身坐在白马上，头上戴着花冠和一根红色羽毛，双臂向两侧伸开；右侧的大红旗卷起波浪般的弧线。白马的头朝向观者，画面看不到缰绳或马鞍。\n\n孩子与马身后是一道灰色砖墙，四朵向日葵从墙后探出头来。墙还存在，却没有挡在人物与我们之间。太阳、鲜红旗帜、向外伸的手臂，让视线不断从背景回到前景。裸体在这里可以引出坦然与无遮掩的阅读，但“毫无防备一定安全”并不是图画能证明的事。[查看太阳牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg)。\n\n## 直接的光与孩子的简单\n\nWaite 第二部把太阳的直接之光，与反射的光作对比；他从孩子的形象谈到简单、天真和更新后的意识。这套解释带有明确的精神性语境，不能全压缩成“成功运”。[Waite 的太阳篇](https://original.sacred-texts.com/tarot/pkt/pktar19.htm)。\n\n第三部的正位占辞包括物质幸福和满足，逆位则写成相同意义的较弱程度。这提供了一个很实用的学习提醒：逆位不必把正位完全推翻，光亮也可能只是暂时被削弱。[Waite 的原占辞](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)。\n\n## 承认进展，也看清它的边界\n\nDestinyPixel 把正位读作更清楚、更愿意参与生活的状态。事情说开了，努力得到反馈，或你终于肯承认自己做成了一件事。此时可以分享成果、坦白需求，享受已经存在的快乐。画面的明亮鼓励充分看见，不要求你把仍有问题的部分也涂成金色。\n\n逆位可以是疲惫使快乐变淡，担心被评价而不敢展示，也可以是自信过满、太急着宣布胜利。两种情况需要相反的动作：前者允许自己慢一点领会好消息，后者多看一次细节和他人的反馈。辨认实际处境，比把它背成“太阳变坏了”有用。\n\n## 放进具体生活里\n\n**学习。** 一次展示终于讲清了原来卡住的内容。可以庆祝，也记下究竟是哪种练习奏效，让这份进步以后还能用得上。\n\n**关系。** 双方把先前的误会说开，你不再靠猜测了解对方。轻松值得享受，同时把新的约定落实到往后的相处里。\n\n**团队。** 成果受到好评，但有人仍不理解如何使用。逆位可提醒你放慢庆功，检查说明是否清楚；也别因为一处待改，就否认大家已经完成的工作。\n\n## 试着做一次\n\n记录一件今天确实变好的事，写明证据，再补一句“帮助它发生的是……”。可以向相关的人表达感谢，让高兴有具体的对象，也让有效的方法留下来。\n\n## 容易读偏的地方\n\n孩子不等于怀孕信号，太阳也不保证考试、婚姻或项目一定成功。快乐不必预支未来；把这张牌用来照亮已有的进展，就已经足够。\n\n## 放在一起比较\n\n- 月亮：对照不清楚时的猜测，与信息和表达变得明朗。\n- 星星：区分慢慢养回希望，与把活力和喜悦向外表达。\n- 世界：比较一段明亮的进展，与有明确边界的阶段完成。\n\n## 阅读来源\n\n- A. E. Waite，《The Pictorial Key to the Tarot》，第二部 XIX 篇：[英文原文](https://original.sacred-texts.com/tarot/pkt/pktar19.htm)\n- 同书第三部第三节，第 19 条：[正逆位原占辞](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n- Pamela Colman Smith，RWS 牌面：[Commons 图像及版本记录](https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg)\n\n英文转录页面标注 1911；图像页标记 Pam-A、1910。本篇画面按实际下载的 Commons JPG 观察，现代速读与练习为本站原创解读。来源核验日期：2026-10-07。\n",
+  "articleMarkdown": "# 太阳牌的明亮与分寸\n\n正位先读一句：有进展就大方承认，该展示展示，该高兴高兴。\n\n逆位先读一句：是笑不出来，还是高兴过头？先看清自己卡在哪一边。\n\n想象你把做了很久的模型搬到窗边：颜色亮了，接缝也看清了。太阳牌就有这种诚实的亮度。它让人振奋，也让检查变得容易。\n\n本文以莱德—韦特—史密斯牌系（RWS）的 XIX 太阳为主。下面从画面出发，区分 Waite 的传统解释与本文的现代应用。\n\n## 先看谁站到了光里\n\n看牌时，先别急着背“成功”。从上方的太阳一路看到墙前的孩子，你会发现：画面把生命力画得很外向，却没有把所有边界抹掉。\n\n**太阳和向日葵：光落在哪里。** 巨大的太阳带着人脸，直线与波浪状光芒交替伸出；向日葵从墙后露出。太阳占据天空，花朵把视线接回地面。由此可以作一种现代联想：抽象的“我感觉不错”，最好落成看得见的进展，比如一个终于讲明白的概念。花朵的数量和朝向值得观察，但不必硬套成唯一的神秘密码。\n\n**孩子和白马：力量怎样被使用。** 孩子伸展手臂，裸身坐在白马上；画面看不到缰绳。这个组合既有小孩的开放，也有大动物的力量。Waite 从孩子谈到简单与纯真，也谈到更新后的意识和动物本性的协调。顺着画面，可以把它读成一种不必随时紧绷的自信：有能力承载行动，才比较容易放开手。现实中的坦诚仍需判断对象与边界。\n\n**墙和红旗：走出来之后如何表达。** 灰墙横在背后，人物却位于墙前；大片红旗向上展开。墙让“出来”有了位置，红旗让喜悦有了动作。这里可以这样读：允许成果被看见，同时承认它仍有范围。你可以说“这一步做成了”，不必马上把整段未来也宣布成功。旗帜很醒目，也提醒我们检查：表达自己的时候，还有没有给别人留空间？\n\n## 传统里的太阳比好心情更深\n\n在《The Pictorial Key to the Tarot》第二部，Waite 把太阳联系到精神意识的直接之光，并以孩子说明一种带着智慧的纯真。这是他的神秘主义解释，不能当成已经证实的心理机制。[读英文原文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_2)\n\n第三部的占辞更简短：正位涉及物质幸福、美满婚姻与满足；逆位保留同类含义，只是程度较弱。这条原文很有用，因为它提醒初学者：翻转牌面不必把意义整个翻成反面。[核对正逆位占辞](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)\n\n## 正位与逆位都要问一句为什么\n\n太阳正位可以帮助我们观察三类状态：信息变清楚了、行动有了积极反馈、快乐可以被坦然承认。读到这里，最好接着问：“哪件事实支持这个判断？”关系中，对方明确表达意愿，比你感觉气氛很好更有分量；学习中，能独立讲解一道题，比听课时觉得全懂了更可靠。\n\n逆位可以尝试两条阅读路径。它们是现代应用，不是 Waite 原句的翻译。\n\n- **光不容易接进来。** 有真实进展，却习惯否认自己；或事情不错，人已经很疲惫。可以先减少比较，承认一个小成果，给感受留下时间。\n- **光太抢眼。** 只愿听赞美，把热情当成完成度，别人提出困难就嫌扫兴。可以请一位愿意说真话的人检查细节。\n\n分辨两者，要听当事人的经历、看实际反馈。若好消息明确而本人难以相信，更接近第一条；若批评不断却被一概忽略，第二条才值得考虑。证据不足时，保留两种可能，比急着选一个吓人或好听的答案更诚实。\n\n## 换一副牌以后重点会移动\n\nRWS 的孩子骑在马背上，容易让人注意到个人的开放与力量协调。比较其他版本时，先找人物关系，再决定自己的解释怎样调整。\n\n马赛式太阳常见两个人物相互接近、身后有墙的构图。这里可以多问一句：“光是否照到了双方？”由此引出互助与共同成长，是本文的读图提问，并非所有马赛牌的统一定论。Waite 第一部也记录了旧式太阳牌中双子与围墙的母题。[传统图式的英文记录](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_1)\n\n摩根图书馆所藏 Visconti-Sforza 太阳，则是云上带翼的裸身少年，双手举着有光芒的人面。这里没有 RWS 的白马和向日葵，不能把那六处细节的解释整套搬来。馆藏记录将这张牌列入较晚的一组；它也不能代表所有早期意大利太阳牌。[查看馆藏实物说明](https://ica.themorgan.org/manuscript/page/13/158525)\n\n遇到现代改绘牌，也可以用这个办法：先找出画面增减了什么，再问它把你的注意力带向哪里。若只保留了太阳，却换掉人物、动物与场景，就应重新观察这些关系；牌名相同，不代表每一处细节都能照搬解释。\n\n## 一次完整的阅读示范\n\n**原创虚构案例。** 小岚准备参加作品评审。她问：“我该怎样展示这组作品？”建议位抽到太阳正位。\n\n先确定问题：她问的是展示方式。太阳的开阔姿态可以启发她让作品更容易被理解，却不能据此断定她会获选。\n\n再把画面接到事实：小岚已有两件完成度较高的作品，却在介绍时反复说“其实也没什么”。于是，孩子的坦然与红旗的外放，可以转成一个建议：开头直接展示最能代表能力的作品，用具体过程说明自己做了什么。\n\n然后检查过度乐观：第三件作品的细节仍未收尾。墙的边界感在这里成为提醒，介绍时清楚区分完成品与进行中的尝试，避免用自信掩盖缺口。\n\n最后给出可执行动作：请朋友听一次三分钟介绍，再请对方复述“作品解决了什么问题”。如果复述偏了，就调整表达。太阳的“明亮”在此成为可以检查的清晰度。\n\n如果同一位置抽到逆位，先追问她的困难。她若已有好反馈却不敢展示，可从小范围试讲开始；她若认为不需准备，则更适合一次直截了当的模拟评审。同一张逆位牌，行动可能朝两个方向走。\n\n## 带着一个问题离开\n\n今天挑一件让你高兴的事，写下它的证据，再补一句：“我还需要看清什么？”这样既不会轻易抹掉快乐，也给下一步留下了位置。\n\n塔罗适合用来整理思路；健康与怀孕等问题应依据检查和专业意见，现实结果仍要靠实际信息判断。\n",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 849,
-    "words": 4,
-    "articleUtf8Bytes": 4265
-  },
-  "sourceRecord": {
-    "cardId": "sun",
-    "number": 19,
-    "roman": "XIX",
-    "nameZh": "太阳",
-    "nameEn": "The Sun",
-    "locale": "zh",
-    "title": "太阳 让好的东西真正被看见",
-    "hook": "孩子来到墙的前面，张开手臂，仿佛终于不用躲着表达高兴。",
-    "keywords": [
-      "明朗",
-      "活力",
-      "喜悦"
-    ],
-    "quickTake": {
-      "upright": "事情明朗了，有劲了，好的进展可以大方承认",
-      "reversed": "好的一面还在，只是热情不足，或开心得有点过头"
-    },
-    "sections": [
-      {
-        "id": "image",
-        "title": "阳光把人物推到前景",
-        "paragraphs": [
-          "巨大的金色太阳占据上半张牌，正面的脸望向外面，直线和波浪形光芒向四周展开。下方的孩子裸身坐在白马上，头上戴着花冠和一根红色羽毛，双臂向两侧伸开；右侧的大红旗卷起波浪般的弧线。白马的头朝向观者，画面看不到缰绳或马鞍。",
-          "孩子与马身后是一道灰色砖墙，四朵向日葵从墙后探出头来。墙还存在，却没有挡在人物与我们之间。太阳、鲜红旗帜、向外伸的手臂，让视线不断从背景回到前景。裸体在这里可以引出坦然与无遮掩的阅读，但“毫无防备一定安全”并不是图画能证明的事。[查看太阳牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg)。"
-        ]
-      },
-      {
-        "id": "tradition",
-        "title": "直接的光与孩子的简单",
-        "paragraphs": [
-          "Waite 第二部把太阳的直接之光，与反射的光作对比；他从孩子的形象谈到简单、天真和更新后的意识。这套解释带有明确的精神性语境，不能全压缩成“成功运”。[Waite 的太阳篇](https://original.sacred-texts.com/tarot/pkt/pktar19.htm)。",
-          "第三部的正位占辞包括物质幸福和满足，逆位则写成相同意义的较弱程度。这提供了一个很实用的学习提醒：逆位不必把正位完全推翻，光亮也可能只是暂时被削弱。[Waite 的原占辞](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)。"
-        ]
-      },
-      {
-        "id": "reading",
-        "title": "承认进展，也看清它的边界",
-        "paragraphs": [
-          "DestinyPixel 把正位读作更清楚、更愿意参与生活的状态。事情说开了，努力得到反馈，或你终于肯承认自己做成了一件事。此时可以分享成果、坦白需求，享受已经存在的快乐。画面的明亮鼓励充分看见，不要求你把仍有问题的部分也涂成金色。",
-          "逆位可以是疲惫使快乐变淡，担心被评价而不敢展示，也可以是自信过满、太急着宣布胜利。两种情况需要相反的动作：前者允许自己慢一点领会好消息，后者多看一次细节和他人的反馈。辨认实际处境，比把它背成“太阳变坏了”有用。"
-        ]
-      }
-    ],
-    "situations": [
-      {
-        "title": "学习",
-        "text": "一次展示终于讲清了原来卡住的内容。可以庆祝，也记下究竟是哪种练习奏效，让这份进步以后还能用得上。"
-      },
-      {
-        "title": "关系",
-        "text": "双方把先前的误会说开，你不再靠猜测了解对方。轻松值得享受，同时把新的约定落实到往后的相处里。"
-      },
-      {
-        "title": "团队",
-        "text": "成果受到好评，但有人仍不理解如何使用。逆位可提醒你放慢庆功，检查说明是否清楚；也别因为一处待改，就否认大家已经完成的工作。"
-      }
-    ],
-    "practice": "记录一件今天确实变好的事，写明证据，再补一句“帮助它发生的是……”。可以向相关的人表达感谢，让高兴有具体的对象，也让有效的方法留下来。",
-    "commonMisread": "孩子不等于怀孕信号，太阳也不保证考试、婚姻或项目一定成功。快乐不必预支未来；把这张牌用来照亮已有的进展，就已经足够。",
-    "relatedCards": [
-      {
-        "cardId": "moon",
-        "reason": "对照不清楚时的猜测，与信息和表达变得明朗。",
-        "nameZh": "月亮"
-      },
-      {
-        "cardId": "star",
-        "reason": "区分慢慢养回希望，与把活力和喜悦向外表达。",
-        "nameZh": "星星"
-      },
-      {
-        "cardId": "world",
-        "reason": "比较一段明亮的进展，与有明确边界的阶段完成。",
-        "nameZh": "世界"
-      }
-    ],
-    "image": {
-      "number": 19,
-      "name": "Sun",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
-      "localPath": "/workspace/shared/major-arcana/batch-15-21/images/19-sun.jpg",
-      "sha256": "6c21ef99fef3807bafb26cd467464c8efc59e7312a688ae66285968e364c6450",
-      "bytes": 935619,
-      "creator": "Pamela Colman Smith",
-      "deck": "Rider–Waite–Smith",
-      "versionLabel": "Commons 文件说明标记为 Pam-A，日期 1910；2026-04-18 恢复到 2024-04-04 上传版本",
-      "commonsFilePage": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
-      "commonsPageRevision": "1199317667",
-      "commonsPageRevisionUrl": "https://commons.wikimedia.org/w/index.php?title=File:RWS_Tarot_19_Sun.jpg&oldid=1199317667",
-      "fileHistoryCurrentRow": "current 02:24, 18 April 2026 1,114 × 1,919 (914 KB) Nosferattus ( talk | contribs ) Reverted to version as of 06:27, 4 April 2024 (UTC) per Commons:Overwriting existing files . Different versions should be uploaded as different files.",
-      "creditedScanSource": "http://muzendo.jp/blog/（Commons 文件页所列来源，本次未独立核验该原站）",
-      "rightsStatementObserved": "Commons 文件页显示 public domain / Public Domain Mark 1.0；这是对当前文件页的记录，不是全球版权保证",
-      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "inspectedPixels": true,
-      "checkedOn": "2026-10-07",
-      "productionImagePath": "/tarot/rws/sun.webp",
-      "productionImagePixelMatch": "本次未下载生产 WebP，未核验逐像素一致；接入前应与实际生产图核对",
-      "publicationStatus": "仅供稿件学习核验，未新增或替换站点图片"
-    },
-    "status": "complete_zh_editorial_draft_not_published",
-    "checkedOn": "2026-10-07",
-    "cardIdVerification": {
-      "status": "verified",
-      "source": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-      "verifiedBy": "同批次只读工程核验",
-      "baselineSha": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "articleSlug": "未建立，不把建议路由当成线上页面"
-    },
-    "sourceIds": [
-      "sun-waite-symbolism",
-      "sun-waite-divination",
-      "sun-image",
-      "sun-destinypixel"
-    ],
-    "chineseCharacterCount": 843
-  },
-  "sourceBatch": "batch-15-21",
+  "sourceBatch": "editorial-20261008",
   "deckOrder": 19,
   "majorNumber": 19,
   "suit": null,
@@ -373,21 +152,21 @@
   "schemaVersion": "destinypixel.tarot.article.v3",
   "nameLocalized": "太阳",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "source_author_review_and_model_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 916,
-    "completeArticleChineseCharacters": 1079
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "b816562ee8ee06930feb08b4af7fb6f15fc3dfb33e2dc3fd2eed44529fb63629",
-    "articleSha256": "b816562ee8ee06930feb08b4af7fb6f15fc3dfb33e2dc3fd2eed44529fb63629",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceArticleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+    "articleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+    "sourceBundleSha256": "9bffeb2c3b6eb876cf89706a3a4ae34246e95111c7bb011e8d2255f75b640feb",
+    "previousRecord": "content/tarot/revisions/2026-10-07/sun.zh.json"
+  },
+  "openingParagraphs": [
+    "本文以莱德—韦特—史密斯牌系（RWS）的 XIX 太阳为主。下面从画面出发，区分 Waite 的传统解释与本文的现代应用。"
+  ],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

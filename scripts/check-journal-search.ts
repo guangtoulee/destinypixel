@@ -25,7 +25,7 @@ async function main() {
       assert.ok(decode(page).includes(article.translations[locale].title), `${path}: translated title missing`);
       const renderedArticle = decode((page.match(/<article>[\s\S]*?<\/article>/)?.[0] ?? "").replace(/<[^>]+>/g, ""));
       const copy = article.translations[locale];
-      for (const paragraph of [copy.introduction, copy.takeaway, ...copy.sections.flatMap(section => section.paragraphs)]) {
+      for (const paragraph of [copy.introduction, ...(copy.openingParagraphs ?? []), ...(copy.takeaway ? [copy.takeaway] : []), ...copy.sections.flatMap(section => section.paragraphs)]) {
         assert.ok(renderedArticle.includes(paragraph), `${path}: rendered paragraph missing: ${paragraph.slice(0, 55)}`);
       }
       const links = [...page.matchAll(/<link\b[^>]*>/g)].map(m => attrs(m[0]));

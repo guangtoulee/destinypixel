@@ -7,6 +7,9 @@ import { tarotLearningMetadata } from "@/lib/tarot-learning/metadata";
 import type { Metadata } from "next";
 import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
+import Markdown from "react-markdown";
+import TarotEditorialCards from "@/components/tarot-editorial-cards";
+import TarotEditorialLinks from "@/components/tarot-editorial-links";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { dayPillarCycle, pillarName, pillarArticleHref, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
 import { notFound } from "next/navigation";
@@ -66,7 +69,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const copy = article.translations[locale];
   const library = pillarLibraryCopy(locale);
   const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
-    ?? journalArticles.find((candidate) => candidate.slug !== article.slug);
+    ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.kind !== "education");
   return (
     <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
@@ -82,6 +85,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           {copy.subtitle && <p className={styles.subtitle}>{copy.subtitle}</p>}
           {copy.answer && <p className={styles.directAnswer}>{copy.answer}</p>}
           <p className={styles.introduction}>{copy.introduction}</p>
+          {copy.openingParagraphs?.map((paragraph, index) => <p key={index} className={styles.introduction}>{paragraph}</p>)}
           <div className={styles.byline}><span>DestinyPixel</span><span aria-hidden="true">·</span><span>{ui.published} <time dateTime={article.publishedAt}>{article.publishedAt}</time></span>{article.updatedAt !== article.publishedAt && <span>{ui.updated} <time dateTime={article.updatedAt}>{article.updatedAt}</time></span>}</div>
           {article.pillar && <a className={styles.libraryTextLink} href={pillarLibraryHref(locale)}>{library.browse}<ArrowRight size={16} aria-hidden="true" /></a>}
           </div>
@@ -91,18 +95,21 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
         <div className={styles.readingLayout}>
           <aside className={styles.contents}><p>{ui.contents}</p><nav aria-label={ui.sections}>{copy.sections.map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}</nav></aside>
           <div className={styles.articleBody}>
-            <div className={styles.takeaway}><span>{ui.takeaway}</span><p>{copy.takeaway}</p></div>
+            {article.kind === "education" && <TarotEditorialCards slug={article.slug} locale={locale} />}
+            {copy.takeaway && <div className={styles.takeaway}><span>{ui.takeaway}</span><p>{copy.takeaway}</p></div>}
             {copy.sections.map((section) => <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
               <h2 id={`${section.id}-title`}>{section.title}</h2>
+              {section.bodyMarkdown && <div className={styles.markdown} data-editorial-section={section.id}><Markdown skipHtml>{section.bodyMarkdown}</Markdown></div>}
               {section.figures?.filter((figure) => figure.afterParagraph < 0).map((figure) => <ArticleFigure figure={figure} key={figure.src} />)}
               {section.paragraphs.map((paragraph, index) => <Fragment key={index}><p>{withLinks(paragraph, section.links)}</p>{section.figures?.filter((figure) => figure.afterParagraph === index).map((figure) => <ArticleFigure figure={figure} key={figure.src} />)}</Fragment>)}
               {section.steps && <ol>{section.steps.map((step, index) => <li key={index}>{step}</li>)}</ol>}
               {section.table && <div className={styles.tableWrap} role="region" aria-label={section.title} tabIndex={0}><table><thead><tr>{section.table.headings.map((heading) => <th key={heading} scope="col">{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
-              {section.sources && <div className={styles.sources}><span>{ui.sources}</span>{section.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}
+              {!section.bodyMarkdown && section.sources && <div className={styles.sources}><span>{ui.sources}</span>{section.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}
             </section>)}
             <div className={styles.articleAction}><p>{ui.try}</p><a href={copy.action.href}>{copy.action.label}<ArrowRight size={17} aria-hidden="true" /></a></div>
             {article.pillar && <nav className={styles.pillarRelated} aria-label={library.related}><h2>{library.same}</h2>{dayPillarCycle.filter(p => p[0] === article.pillar![0] && p !== article.pillar).map(p => <a key={p} href={pillarArticleHref(p, locale)}>{p} · {pillarName(p, locale)}<ArrowRight size={14} aria-hidden="true" /></a>)}<a href={pillarLibraryHref(locale)}>{library.browse}</a></nav>}
-            {related && <aside className={styles.related}><span>{ui.related}</span><a href={journalHref(locale, related.slug)}>{related.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a></aside>}
+            <TarotEditorialLinks slug={article.slug} locale={locale} />
+            {article.kind !== "education" && related && <aside className={styles.related}><span>{ui.related}</span><a href={journalHref(locale, related.slug)}>{related.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a></aside>}
           </div>
         </div>
       </article>

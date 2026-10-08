@@ -12,6 +12,7 @@ import styles from "./journal.module.css";
 import Image from "next/image";
 import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
 import { getPillarImagePath } from "@/lib/archetype-assets";
+import { tarotEducationCopy, tarotEducationSlugs, tarotEditorialCatalog } from "@/lib/tarot-editorial/navigation";
 
 type PageProps = { searchParams?: Promise<{ locale?: string }> };
 
@@ -24,6 +25,8 @@ export default async function JournalPage({ searchParams }: PageProps) {
   const ui = journalUi[locale];
   const library = pillarLibraryCopy(locale);
   const guides = journalArticles.filter(article => !article.pillar);
+  const education = tarotEducationCopy[locale];
+  const editorial = tarotEditorialCatalog(locale);
   const schema = {
     "@context": "https://schema.org", "@type": "CollectionPage", name: `${siteName} · ${ui.journal}`, url: absoluteUrl(journalHref(locale)), inLanguage: journalLanguageTags[locale],
     mainEntity: { "@type": "ItemList", numberOfItems: guides.length + 3, itemListElement: [{ "@type": "ListItem", position: 1, name: library.title, url: absoluteUrl(pillarLibraryHref(locale)) }, { "@type":"ListItem",position:2,name:tarotLearningCopy(locale).title,url:absoluteUrl(tarotLearningHref(undefined,locale)!) }, { "@type":"ListItem",position:3,name:hexagramCopy(locale).title,url:absoluteUrl(hexagramHref(undefined,locale)!) }, ...guides.map((article, index) => ({ "@type": "ListItem", position: index + 4, name: article.translations[locale].title, url: absoluteUrl(journalHref(locale, article.slug)) }))] },
@@ -37,11 +40,21 @@ export default async function JournalPage({ searchParams }: PageProps) {
         <h1>{ui.heading}</h1>
         <p className={styles.introduction}>{ui.intro}</p>
       </section>
+      <section id="tarot-education" className={styles.education} aria-labelledby="tarot-education-title">
+        <header><h2 id="tarot-education-title">{education.title}</h2><p>{education.intro}</p></header>
+        <div className={styles.educationGrid}>{tarotEducationSlugs.map(slug => <article className={styles.articleCard} key={slug}>
+          <p className={styles.eyebrow}>{editorial[slug].topic}</p>
+          <h3><a href={journalHref(locale, slug)}>{editorial[slug].title}</a></h3>
+          <p className={styles.cardDescription}>{editorial[slug].description}</p>
+          <a className={styles.libraryTextLink} href={journalHref(locale, slug)}>{ui.read}<ArrowRight size={16} aria-hidden="true" /></a>
+        </article>)}</div>
+        <a className={styles.libraryTextLink} href={tarotLearningHref("sun", locale)}>{education.sun}<ArrowRight size={16} aria-hidden="true" /></a>
+      </section>
       <a href={pillarLibraryHref(locale)} className={styles.libraryBanner}><div className={styles.bannerArt}>{["甲子","癸卯","丙午"].map(p => <Image key={p} src={getPillarImagePath(p)} alt="" width={120} height={160} sizes="90px" />)}</div><div><p>{library.count}</p><h2>{library.browse}</h2><ArrowRight size={23} aria-hidden="true" /></div></a>
       <a href={tarotLearningHref(undefined,locale)} className={styles.libraryBanner}><div className={styles.bannerArt}>{["fool","high-priestess","sun"].map(id=><Image key={id} src={`/tarot/rws/${id}.webp`} alt="" width={120} height={206} sizes="90px"/>)}</div><div><p>RWS · 78</p><h2>{tarotLearningCopy(locale).title}</h2><ArrowRight size={23} aria-hidden="true"/></div></a>
       <a href={hexagramHref(undefined,locale)} className={styles.libraryBanner}><div className={styles.bannerArt} aria-hidden="true" style={{fontSize:48}}>䷀ ䷊ ䷿</div><div><p>64</p><h2>{hexagramCopy(locale).title}</h2><ArrowRight size={23} aria-hidden="true"/></div></a>
       <section className={styles.articleGrid} aria-label={ui.list}>
-        {guides.map((article, index) => {
+        {guides.filter(article => article.kind !== "education").map((article, index) => {
           const copy = article.translations[locale];
           return <article className={styles.articleCard} key={article.slug}>
             <div className={styles.cardTop}><span>{String(index + 1).padStart(2, "0")}</span><p>{copy.topic}</p></div>
