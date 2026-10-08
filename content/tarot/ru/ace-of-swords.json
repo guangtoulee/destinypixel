@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "cardId": "ace-of-swords",
+  "deckOrder": 50,
+  "majorNumber": null,
+  "number": "A",
+  "roman": null,
+  "rank": "ace",
+  "rankOrder": 1,
+  "suit": "swords",
+  "arcana": "minor",
+  "nameZh": "宝剑王牌",
+  "nameEn": "Ace of Swords",
+  "locale": "ru",
+  "deckSystem": "RWS",
+  "title": "Туз Мечей: Одной ясной фразой открыть путь",
+  "plainLanguageSummary": "Разделите факты, суждения и решения, чтобы понять, куда направить острие.",
+  "keywords": [
+    "Ясность",
+    "Решительность",
+    "Различение"
+  ],
+  "quickTake": {
+    "upright": "Найдите главный вопрос и сделайте следующий шаг, опираясь на обоснованное суждение.",
+    "reversed": "Возможно, вывод сделан слишком быстро, либо долгие размышления так и не обрели ясной формы."
+  },
+  "hook": "Иногда дело сдвигается, когда наконец удаётся одной фразой сказать, что именно сейчас нужно решить.",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "Корона на острие меча",
+      "bodyMarkdown": "Слева из облака появляется рука, держащая длинный меч вертикально. Его острие проходит сквозь золотую корону. По её сторонам свисают две зелёные ветви разной формы; среди листьев одной видны маленькие красные точки. По обе стороны клинка расположены шесть жёлтых знаков, похожих на листья, а вокруг руки расходятся короткие лучи. Внизу видны лишь неровные горные хребты, без людей, ожидающих приговора.\n\nКомпозиция ведёт взгляд вверх по клинку к короне. Острое лезвие способно разделить то, что смешалось, а корона придаёт этой силе вес. Это ассоциации, возникающие при рассмотрении изображения. Сам рисунок не содержит вашего ответа и не доказывает, что держащий меч непременно прав. [Посмотреть изображение, рассмотренное в статье](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Уэйт прежде всего говорит о силе",
+      "bodyMarkdown": "В английской транскрипции «Иллюстрированного ключа к Таро» с пометкой 1911 года Уэйт связывает Туз Мечей с торжеством, завоеванием и полным проявлением силы, допуская разные последствия такой интенсивности. Перевёрнутая карта означает не только отсутствие вдохновения: речь также идёт о неблагоприятных результатах применения силы.\n\nИспользовать карту для уточнения формулировок и оценки доказательств — современное рефлексивное продолжение, предложенное в этой статье. Ясность помогает действовать, но не освобождает от ответственности за действие. Это существенно отличается от обещания победы. [Свериться с исходным текстом Уэйта](https://original.sacred-texts.com/tarot/pkt/pktswac.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "Прямая карта: Найти утверждение, которое можно проверить",
+      "bodyMarkdown": "В прямом положении карта помогает выделить главную мысль из спутанных идей. Возможно, нужно определить проблему, предложить решение или выразить потребность, которая прежде оставалась туманной. Обоснованное суждение не просто звучит уверенно: оно объясняет свои основания и допускает проверку фактами.\n\nТуз обозначает начало, а не завершённый план. После постановки цели нужно уточнить, кого или чего она касается, каковы её границы и следующий шаг. Даже точная мысль приносит пользу лишь благодаря дальнейшей работе."
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "Перевёрнутая карта: Проверить, куда направлена острота",
+      "bodyMarkdown": "Перевёрнутая карта предлагает проверить две возможности: поспешный вывод при недостатке данных или бесконечное переформулирование мыслей без готовности принять хотя бы предварительное решение. Возможно и другое: слова настолько резки, что собеседник слышит нападение, а не проблему, которую вы хотите решить. Сначала уточните факты и формулировки, затем решайте, как продолжать."
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "На совещании, в отношениях и при работе с текстом",
+      "bodyMarkdown": "Если обсуждение расползается, спросите: «Сегодня мы выбираем дату запуска или определяем состав первой версии?» Разделение этих вопросов часто полезнее ещё одной сложной схемы.\n\nЕсли медленные ответы близкого человека тревожат, сначала опишите наблюдаемую ситуацию, затем попросите: «Когда ты занят, можешь примерно сообщать, когда освободишься?» Не превращайте задержку в доказательство безразличия. При работе над статьёй сформулируйте одним предложением вывод для читателя и уберите абзацы, которые его не поддерживают."
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "Практика: Добавить к выводу основания",
+      "bodyMarkdown": "Выберите вопрос, к которому постоянно возвращаетесь. Напишите три строки: какие факты я точно знаю; какой вывод делаю из них; какая новая информация изменила бы моё мнение. Если третья строка не получается, замените «наверняка» условием, которое можно проверить."
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "Ясность не означает непогрешимость",
+      "bodyMarkdown": "Не читайте Туз Мечей как «я прав, поэтому могу говорить что угодно». Он также не требует немедленного необратимого решения. Польза ясности в точных словах и готовности оставить место для пока неизвестных сведений."
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "Что читать дальше",
+      "bodyMarkdown": "Король Мечей: Перейти от формирования суждения к ответственности за него; Двойка Мечей: Сравнить ясную постановку вопроса с временным сохранением вариантов."
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "Источники статьи",
+      "bodyMarkdown": "- [Памела Колман Смит: «Туз Мечей», фактическое изображение RWS из фиксированного коммита](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Туз Мечей»](https://original.sacred-texts.com/tarot/pkt/pktswac.htm)\n- [Commons Swords01.jpg: страница файла и история загрузок](https://commons.wikimedia.org/wiki/File:Swords01.jpg)\n\nПримечание о версии: каждое фактическое изображение RWS в формате WebP из фиксированного коммита репозитория рассмотрено отдельно. Страницы файлов Pam-A на Commons использованы для сверки происхождения и версий; попиксельное совпадение файлов не заявляется. Текст Уэйта приведён по английской транскрипции с пометкой 1911 года. Современные ситуации, вопросы и упражнения созданы специально для DestinyPixel без заимствования платных описаний значений карт."
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "king-of-swords",
+      "name": "Король Мечей",
+      "nameZh": "宝剑国王",
+      "reason": "Перейти от формирования суждения к ответственности за него"
+    },
+    {
+      "cardId": "two-of-swords",
+      "name": "Двойка Мечей",
+      "nameZh": "宝剑二",
+      "reason": "Сравнить ясную постановку вопроса с временным сохранением вариантов"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "ace-of-swords-image",
+      "type": "Непосредственное рассмотрение изображения",
+      "title": "Памела Колман Смит: «Туз Мечей», фактическое изображение RWS из фиксированного коммита",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ace-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑王牌，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "ace-of-swords-waite",
+      "type": "Исходный текст Уэйта",
+      "title": "A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Туз Мечей»",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktswac.htm",
+      "edition": "Английская транскрипция на Sacred Texts с пометкой [1911]; печатное первое издание 1910 года не проверялось",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ace-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑王牌",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswac.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "ace-of-swords-commons",
+      "type": "Сопоставление источников и версий",
+      "title": "Commons Swords01.jpg: страница файла и история загрузок",
+      "url": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ace-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords01.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+    "creator": "Pamela Colman Smith",
+    "observationBasis": "repository_webp",
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "5a901c0edfac7d8dc82caa9c251b9dc3cc0db22fc5c8b9a3978c2dd74421c293",
+      "widthPx": 560,
+      "heightPx": 970,
+      "bytes": 173936,
+      "basis": "repository_webp",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/ace-of-swords.webp",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "sha256": "5a901c0edfac7d8dc82caa9c251b9dc3cc0db22fc5c8b9a3978c2dd74421c293",
+    "widthPx": 560,
+    "heightPx": 970,
+    "checkedOn": "2026-10-07",
+    "repositoryAssetInspected": true,
+    "sourceMetadata": {
+      "rank": "ace",
+      "gitBlobSha": "560e7c8a85d484a3f799d3917ba90496c8b298b2",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+      "sha256": "5a901c0edfac7d8dc82caa9c251b9dc3cc0db22fc5c8b9a3978c2dd74421c293",
+      "localFile": "images/01-ace.webp",
+      "bytes": 173936,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/ace-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:13:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1109,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  "articleMarkdown": "# Туз Мечей: Одной ясной фразой открыть путь\n\nОдной фразой: Разделите факты, суждения и решения, чтобы понять, куда направить острие.\n\nКлючевые слова: Ясность · Решительность · Различение\n\nПрямая карта — кратко: Найдите главный вопрос и сделайте следующий шаг, опираясь на обоснованное суждение.\n\nПеревёрнутая карта — кратко: Возможно, вывод сделан слишком быстро, либо долгие размышления так и не обрели ясной формы.\n\nИногда дело сдвигается, когда наконец удаётся одной фразой сказать, что именно сейчас нужно решить.\n\n## Корона на острие меча\n\nСлева из облака появляется рука, держащая длинный меч вертикально. Его острие проходит сквозь золотую корону. По её сторонам свисают две зелёные ветви разной формы; среди листьев одной видны маленькие красные точки. По обе стороны клинка расположены шесть жёлтых знаков, похожих на листья, а вокруг руки расходятся короткие лучи. Внизу видны лишь неровные горные хребты, без людей, ожидающих приговора.\n\nКомпозиция ведёт взгляд вверх по клинку к короне. Острое лезвие способно разделить то, что смешалось, а корона придаёт этой силе вес. Это ассоциации, возникающие при рассмотрении изображения. Сам рисунок не содержит вашего ответа и не доказывает, что держащий меч непременно прав. [Посмотреть изображение, рассмотренное в статье](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp)\n\n## Уэйт прежде всего говорит о силе\n\nВ английской транскрипции «Иллюстрированного ключа к Таро» с пометкой 1911 года Уэйт связывает Туз Мечей с торжеством, завоеванием и полным проявлением силы, допуская разные последствия такой интенсивности. Перевёрнутая карта означает не только отсутствие вдохновения: речь также идёт о неблагоприятных результатах применения силы.\n\nИспользовать карту для уточнения формулировок и оценки доказательств — современное рефлексивное продолжение, предложенное в этой статье. Ясность помогает действовать, но не освобождает от ответственности за действие. Это существенно отличается от обещания победы. [Свериться с исходным текстом Уэйта](https://original.sacred-texts.com/tarot/pkt/pktswac.htm)\n\n## Прямая карта: Найти утверждение, которое можно проверить\n\nВ прямом положении карта помогает выделить главную мысль из спутанных идей. Возможно, нужно определить проблему, предложить решение или выразить потребность, которая прежде оставалась туманной. Обоснованное суждение не просто звучит уверенно: оно объясняет свои основания и допускает проверку фактами.\n\nТуз обозначает начало, а не завершённый план. После постановки цели нужно уточнить, кого или чего она касается, каковы её границы и следующий шаг. Даже точная мысль приносит пользу лишь благодаря дальнейшей работе.\n\n## Перевёрнутая карта: Проверить, куда направлена острота\n\nПеревёрнутая карта предлагает проверить две возможности: поспешный вывод при недостатке данных или бесконечное переформулирование мыслей без готовности принять хотя бы предварительное решение. Возможно и другое: слова настолько резки, что собеседник слышит нападение, а не проблему, которую вы хотите решить. Сначала уточните факты и формулировки, затем решайте, как продолжать.\n\n## На совещании, в отношениях и при работе с текстом\n\nЕсли обсуждение расползается, спросите: «Сегодня мы выбираем дату запуска или определяем состав первой версии?» Разделение этих вопросов часто полезнее ещё одной сложной схемы.\n\nЕсли медленные ответы близкого человека тревожат, сначала опишите наблюдаемую ситуацию, затем попросите: «Когда ты занят, можешь примерно сообщать, когда освободишься?» Не превращайте задержку в доказательство безразличия. При работе над статьёй сформулируйте одним предложением вывод для читателя и уберите абзацы, которые его не поддерживают.\n\n## Практика: Добавить к выводу основания\n\nВыберите вопрос, к которому постоянно возвращаетесь. Напишите три строки: какие факты я точно знаю; какой вывод делаю из них; какая новая информация изменила бы моё мнение. Если третья строка не получается, замените «наверняка» условием, которое можно проверить.\n\n## Ясность не означает непогрешимость\n\nНе читайте Туз Мечей как «я прав, поэтому могу говорить что угодно». Он также не требует немедленного необратимого решения. Польза ясности в точных словах и готовности оставить место для пока неизвестных сведений.\n\n## Что читать дальше\n\nКороль Мечей: Перейти от формирования суждения к ответственности за него; Двойка Мечей: Сравнить ясную постановку вопроса с временным сохранением вариантов.\n\n## Источники статьи\n\n- [Памела Колман Смит: «Туз Мечей», фактическое изображение RWS из фиксированного коммита](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, часть III, раздел 2, «Туз Мечей»](https://original.sacred-texts.com/tarot/pkt/pktswac.htm)\n- [Commons Swords01.jpg: страница файла и история загрузок](https://commons.wikimedia.org/wiki/File:Swords01.jpg)\n\nПримечание о версии: каждое фактическое изображение RWS в формате WebP из фиксированного коммита репозитория рассмотрено отдельно. Страницы файлов Pam-A на Commons использованы для сверки происхождения и версий; попиксельное совпадение файлов не заявляется. Текст Уэйта приведён по английской транскрипции с пометкой 1911 года. Современные ситуации, вопросы и упражнения созданы специально для DestinyPixel без заимствования платных описаний значений карт.\n\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "sourceRecord": {
+    "cardId": "ace-of-swords",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": "A",
+    "rank": "ace",
+    "suit": "swords",
+    "arcana": "minor",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "宝剑王牌",
+    "nameEn": "Ace of Swords",
+    "title": "宝剑王牌牌义 让一句清楚的话打开局面",
+    "plainLanguageSummary": "把事实、判断和决定分开，才知道这一剑该落在哪里。",
+    "hook": "有时让事情开始的，是你终于能用一句话说出：现在真正要解决什么。",
+    "keywords": [
+      "清晰",
+      "决断",
+      "分辨"
+    ],
+    "uprightQuickTake": "抓住关键问题，用有依据的判断开启下一步。",
+    "reversedQuickTake": "结论下得太快，或想得很多却始终说不清楚。",
+    "articleSlug": "tarot-ace-of-swords-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "剑尖上还有一顶冠",
+        "paragraphs": [
+          "一只手从画面左侧的云团伸出，握住竖直的长剑。剑尖穿过金色王冠，冠的两侧垂着形状不同的绿枝，一侧叶片间带有红色小点。六枚黄色叶形小标记散在剑身两边，手的周围有放射状短线。下方只有起伏的山脊，没有等待宣判的人群。",
+          "这张牌让视线沿剑身直上，最后停在王冠。利刃可以分开混杂的东西，冠则让这份力量显得有分量；这是从构图出发的联想。画面本身没有写出你的答案，也没有说明举剑者的判断一定正确。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "Waite 强调的首先是力量",
+        "paragraphs": [
+          "在《塔罗图解》网页标注为1911年的英文转录中，Waite 把宝剑王牌与胜利、征服及力量的充分发挥相连，也提醒这种强度可以走向不同结果。逆位并非单纯的「没有灵感」，还涉及力量使用后的不良后果。",
+          "本文把它用于澄清语言、辨别证据，是现代反思式延伸。清晰可以帮助你行动，却不能替行动免去责任；这与把牌当成胜利保证有很大差别。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswac.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 找到能够检验的主张",
+        "paragraphs": [
+          "正位适合从一团想法里提炼主线。你可能需要定义问题、提出方案，或把一直含糊的需要说出来。好的判断不只听起来有气势，还能解释依据，并容许事实来检验。",
+          "王牌表示一种开端，不等于整套计划已经完成。说清目标后，还要把它落到对象、范围和下一步；一个锐利的观点，也需要后续工作才能产生价值。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 先看锋利用在了哪里",
+        "paragraphs": [
+          "逆位可提醒你检查两种情况：证据不足就急于定论，或不断改写想法，迟迟不肯作暂时决定。也可能是话语过于尖锐，别人听到攻击，却听不到你真正要解决的问题。先修正事实和表达，再决定是否继续推进。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "在会议 关系和写作里使用它",
+        "paragraphs": [
+          "会议讨论越来越散，可以先问：「今天是决定上线日期，还是确定首版范围？」把两个问题分开，往往比增加一张复杂图表更有用。",
+          "关系里，对方回复慢让你不安。先说可观察的情况，再提出「忙的时候能否告诉我大概何时方便」，不要直接把迟回复判成不在乎。写文章时，用一句话写出你想让读者理解的结论，再删去不能支持它的段落。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 给一句结论补上依据",
+        "paragraphs": [
+          "选择一个最近反复想的问题，写三行：我确定知道的事实；我据此作出的判断；什么新信息会让我改主意。如果第三行写不出来，试着把「一定」换成一个可以核实的条件。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "清楚不等于永远正确",
+        "paragraphs": [
+          "不要把宝剑王牌理解成「我占理，所以可以随便说」。它也不要求你当场做不可逆的决定。先把话说准，给尚未掌握的信息留位置，才是清晰真正有用的部分。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "king-of-swords",
+        "nameZh": "宝剑国王",
+        "reason": "从形成判断走向为判断负责"
+      },
+      {
+        "cardId": "two-of-swords",
+        "nameZh": "宝剑二",
+        "reason": "比较明确问题与暂时保留选择"
+      }
+    ],
+    "sources": [
+      {
+        "id": "ace-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑王牌，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "ace-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑王牌",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswac.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "ace-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords01.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "rank": "ace",
+      "gitBlobSha": "560e7c8a85d484a3f799d3917ba90496c8b298b2",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ace-of-swords.webp",
+      "sha256": "5a901c0edfac7d8dc82caa9c251b9dc3cc0db22fc5c8b9a3978c2dd74421c293",
+      "localFile": "images/01-ace.webp",
+      "bytes": 173936,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/ace-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords01.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:13:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1109,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    },
+    "chineseCharacterCount": 1134,
+    "bodyChineseCharacterCount": 771
+  },
+  "sourceBatch": "swords",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 0,
+    "words": 483,
+    "articleUtf8Bytes": 9473
+  },
+  "sourceLocale": "zh-CN",
+  "name": "Туз Мечей",
+  "translationProvenance": {
+    "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+    "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+    "sourceCardId": "ace-of-swords",
+    "sourceArticleSha256": "ea09fd2fb42fd9a5944e485963e1654551b47e269cb18566f2ccc06992839b99",
+    "sourceLocale": "zh-CN",
+    "targetLocale": "ru",
+    "chineseSourceModified": false,
+    "humanNativeReviewClaimed": false,
+    "translatedOn": "2026-10-07"
+  },
+  "nameLocalized": "Туз Мечей",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {
+    "sourceLocale": "zh-CN",
+    "translationProvenance": {
+      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+      "sourceCardId": "ace-of-swords",
+      "sourceArticleSha256": "ea09fd2fb42fd9a5944e485963e1654551b47e269cb18566f2ccc06992839b99",
+      "sourceLocale": "zh-CN",
+      "targetLocale": "ru",
+      "chineseSourceModified": false,
+      "humanNativeReviewClaimed": false,
+      "translatedOn": "2026-10-07"
+    }
+  },
+  "countsOriginal": {
+    "sections": 9,
+    "mainTextWords": 535,
+    "mainTextChineseCharacters": 0,
+    "completeArticleCharacters": 5425
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "ea09fd2fb42fd9a5944e485963e1654551b47e269cb18566f2ccc06992839b99",
+    "articleSha256": "8ceaf1cc40b1316744f4c080a7dea933b8c6faab08fb68957140deefc1b8d2b5",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

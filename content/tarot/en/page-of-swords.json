@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "cardId": "page-of-swords",
+  "deckOrder": 60,
+  "majorNumber": null,
+  "number": "P",
+  "roman": null,
+  "rank": "page",
+  "rankOrder": 11,
+  "suit": "swords",
+  "arcana": "minor",
+  "nameZh": "宝剑侍从",
+  "nameEn": "Page of Swords",
+  "locale": "en",
+  "deckSystem": "RWS",
+  "title": "Page of Swords Meaning: Teach Curiosity to Check Its Sources",
+  "plainLanguageSummary": "Ask one more question about the source so sharp observation becomes reliable understanding.",
+  "keywords": [
+    "Curiosity",
+    "Alertness",
+    "Verification"
+  ],
+  "quickTake": {
+    "upright": "Stay observant and learn through specific questions and careful checking.",
+    "reversed": "News may be travelling faster than evidence, or alertness may be turning into suspicion of everything."
+  },
+  "hook": "You have spotted something that seems wrong. Will you forward the guess, or first ask where the information came from?",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "Feet on the ground with the head turned away",
+      "bodyMarkdown": "The figure stands on uneven green ground, wearing a purple-red tunic, pale yellow trousers and red boots. Both hands grip a sword extending toward the upper right, while the head turns left. Hair lifts, distant trees lean and large clouds gather around the body. Small birds are visible in the upper left.\n\nThe posture suggests attention to the surroundings, but no actual opponent is shown. Uneven ground adds instability to the readiness. The image can help us think about a beginner’s alertness and tension, but the figure’s appearance cannot establish the reader’s age, gender or maturity. [View the image examined for this article](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Waite emphasises observation and examination",
+      "bodyMarkdown": "In the transcription labelled 1911, Waite stresses vigilance, supervision and examination, describing someone continually looking around. Reversal concerns the unfavourable side of those traits and a lack of preparation. This article does not adopt the old list’s health-related predictions.\n\nUnderstanding the Page as learning through questions and trying to express ideas is a modern reflective extension. It describes an approach anyone can practise, not a fixed young male identity, and cannot establish that someone is watching you. [Check Waite’s original entry](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "Upright: Become a good questioner first",
+      "bodyMarkdown": "Upright, the card can encourage you to notice details, seek information and make vague questions specific. Beginners do not need complete answers. Checking a concept is more useful than pretending you already understand.\n\nSharp observation also needs a way to keep records. Distinguish what you saw yourself, what someone told you and what you inferred, retaining the source and time. The finer your observation, the more carefully you should judge how much the evidence supports. One inconsistency need not become an entire story."
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "Reversed: Notice how information is being processed",
+      "bodyMarkdown": "Reversed, the card may prompt you to check for missing context, speaking too soon or turning questions into interrogation. You may also be unprepared for a new task and hiding uncertainty behind vigilance. Slow down before passing information on, restore its context and let other people give a complete explanation."
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "Ask questions that someone can actually answer",
+      "bodyMarkdown": "When joining a team, take a real task and ask a colleague who confirms each step rather than asking only “What is the process?” Record the answer. Next time, consult it first and ask about what is genuinely new.\n\nWith surprising news, find the original publisher and date; a screenshot is not the whole context. If someone’s tone changes in a relationship, ask, “Is there something on your mind today?” rather than using tests and repeated questions to make them prove their innocence."
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "Practice: Label a message in three ways",
+      "bodyMarkdown": "Choose something you plan to pass on and mark each part “Verified,” “Reported by someone else” or “My guess.” Find the source for its most important claim and reread the context. If it is unverified, say so when sharing it instead of making your tone sound more certain."
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "Curiosity does not grant access to everything",
+      "bodyMarkdown": "The Page of Swords cannot prove that someone is snooping, lying or secretly paying attention to you. Verification must respect privacy and permission. Wanting to know something does not automatically entitle you to inspect another person’s device or private messages."
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "Read next",
+      "bodyMarkdown": "Ace of Swords: Organise checked information into a clear judgment; Seven of Swords: Distinguish reasonable verification from intrusive investigation."
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "Sources for this article",
+      "bodyMarkdown": "- [Pamela Colman Smith: Page of Swords, actual RWS image at the fixed repository commit](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Page of Swords](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n- [Commons Swords11.jpg file page and upload history](https://commons.wikimedia.org/wiki/File:Swords11.jpg)\n\nVersion note: The actual RWS WebP assets from a fixed repository commit were inspected individually. The Commons Pam-A file pages were used to check provenance and versions; no claim of pixel-for-pixel identity between the files is made. Waite is cited from an English transcription labelled 1911. The modern situations, questions and exercises were written originally for DestinyPixel, without borrowing paid card-meaning content."
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "ace-of-swords",
+      "name": "Ace of Swords",
+      "nameZh": "宝剑王牌",
+      "reason": "Organise checked information into a clear judgment"
+    },
+    {
+      "cardId": "seven-of-swords",
+      "name": "Seven of Swords",
+      "nameZh": "宝剑七",
+      "reason": "Distinguish reasonable verification from intrusive investigation"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "page-of-swords-image",
+      "type": "Direct image observation",
+      "title": "Pamela Colman Smith: Page of Swords, actual RWS image at the fixed repository commit",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "page-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑侍从，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "page-of-swords-waite",
+      "type": "Waite’s original text",
+      "title": "A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Page of Swords",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
+      "edition": "English transcription at Sacred Texts labelled [1911]; the physical 1910 first edition was not checked",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "page-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑侍从",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "page-of-swords-commons",
+      "type": "Source and version comparison",
+      "title": "Commons Swords11.jpg file page and upload history",
+      "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "page-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords11.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+    "creator": "Pamela Colman Smith",
+    "observationBasis": "repository_webp",
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "c357b63c3415074741bc1b457747fd9be62f3233c27d8e33b885e997c2f82aa7",
+      "widthPx": 560,
+      "heightPx": 970,
+      "bytes": 177624,
+      "basis": "repository_webp",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/page-of-swords.webp",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "sha256": "c357b63c3415074741bc1b457747fd9be62f3233c27d8e33b885e997c2f82aa7",
+    "widthPx": 560,
+    "heightPx": 970,
+    "checkedOn": "2026-10-07",
+    "repositoryAssetInspected": true,
+    "sourceMetadata": {
+      "rank": "page",
+      "gitBlobSha": "0cc7ae4020db77309f03e8c47ae8b171e68d8aff",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+      "sha256": "c357b63c3415074741bc1b457747fd9be62f3233c27d8e33b885e997c2f82aa7",
+      "localFile": "images/11-page.webp",
+      "bytes": 177624,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/page-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:21:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1108,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  "articleMarkdown": "# Page of Swords Meaning: Teach Curiosity to Check Its Sources\n\nIn one sentence: Ask one more question about the source so sharp observation becomes reliable understanding.\n\nKeywords: Curiosity · Alertness · Verification\n\nUpright at a glance: Stay observant and learn through specific questions and careful checking.\n\nReversed at a glance: News may be travelling faster than evidence, or alertness may be turning into suspicion of everything.\n\nYou have spotted something that seems wrong. Will you forward the guess, or first ask where the information came from?\n\n## Feet on the ground with the head turned away\n\nThe figure stands on uneven green ground, wearing a purple-red tunic, pale yellow trousers and red boots. Both hands grip a sword extending toward the upper right, while the head turns left. Hair lifts, distant trees lean and large clouds gather around the body. Small birds are visible in the upper left.\n\nThe posture suggests attention to the surroundings, but no actual opponent is shown. Uneven ground adds instability to the readiness. The image can help us think about a beginner’s alertness and tension, but the figure’s appearance cannot establish the reader’s age, gender or maturity. [View the image examined for this article](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n\n## Waite emphasises observation and examination\n\nIn the transcription labelled 1911, Waite stresses vigilance, supervision and examination, describing someone continually looking around. Reversal concerns the unfavourable side of those traits and a lack of preparation. This article does not adopt the old list’s health-related predictions.\n\nUnderstanding the Page as learning through questions and trying to express ideas is a modern reflective extension. It describes an approach anyone can practise, not a fixed young male identity, and cannot establish that someone is watching you. [Check Waite’s original entry](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n\n## Upright: Become a good questioner first\n\nUpright, the card can encourage you to notice details, seek information and make vague questions specific. Beginners do not need complete answers. Checking a concept is more useful than pretending you already understand.\n\nSharp observation also needs a way to keep records. Distinguish what you saw yourself, what someone told you and what you inferred, retaining the source and time. The finer your observation, the more carefully you should judge how much the evidence supports. One inconsistency need not become an entire story.\n\n## Reversed: Notice how information is being processed\n\nReversed, the card may prompt you to check for missing context, speaking too soon or turning questions into interrogation. You may also be unprepared for a new task and hiding uncertainty behind vigilance. Slow down before passing information on, restore its context and let other people give a complete explanation.\n\n## Ask questions that someone can actually answer\n\nWhen joining a team, take a real task and ask a colleague who confirms each step rather than asking only “What is the process?” Record the answer. Next time, consult it first and ask about what is genuinely new.\n\nWith surprising news, find the original publisher and date; a screenshot is not the whole context. If someone’s tone changes in a relationship, ask, “Is there something on your mind today?” rather than using tests and repeated questions to make them prove their innocence.\n\n## Practice: Label a message in three ways\n\nChoose something you plan to pass on and mark each part “Verified,” “Reported by someone else” or “My guess.” Find the source for its most important claim and reread the context. If it is unverified, say so when sharing it instead of making your tone sound more certain.\n\n## Curiosity does not grant access to everything\n\nThe Page of Swords cannot prove that someone is snooping, lying or secretly paying attention to you. Verification must respect privacy and permission. Wanting to know something does not automatically entitle you to inspect another person’s device or private messages.\n\n## Read next\n\nAce of Swords: Organise checked information into a clear judgment; Seven of Swords: Distinguish reasonable verification from intrusive investigation.\n\n## Sources for this article\n\n- [Pamela Colman Smith: Page of Swords, actual RWS image at the fixed repository commit](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Page of Swords](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n- [Commons Swords11.jpg file page and upload history](https://commons.wikimedia.org/wiki/File:Swords11.jpg)\n\nVersion note: The actual RWS WebP assets from a fixed repository commit were inspected individually. The Commons Pam-A file pages were used to check provenance and versions; no claim of pixel-for-pixel identity between the files is made. Waite is cited from an English transcription labelled 1911. The modern situations, questions and exercises were written originally for DestinyPixel, without borrowing paid card-meaning content.\n\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "sourceRecord": {
+    "cardId": "page-of-swords",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": "P",
+    "rank": "page",
+    "suit": "swords",
+    "arcana": "minor",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "宝剑侍从",
+    "nameEn": "Page of Swords",
+    "title": "宝剑侍从牌义 让好奇心先学会核实",
+    "plainLanguageSummary": "多问一句来源，把敏锐观察变成可靠理解。",
+    "hook": "你发现了一处不对劲。接下来是把猜想转发出去，还是先问一句「这个消息从哪里来」？",
+    "keywords": [
+      "好奇",
+      "警觉",
+      "查证"
+    ],
+    "uprightQuickTake": "保持敏锐，带着具体问题学习和核对信息。",
+    "reversedQuickTake": "消息跑得比证据快，或警觉过头而处处怀疑。",
+    "articleSlug": "tarot-page-of-swords-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "脚在地上 头却转向另一边",
+        "paragraphs": [
+          "人物站在起伏的绿色地面，穿着紫红色短衣、浅黄色裤子和红靴。双手握剑，剑身向画面右上方伸出，头却转向左侧。发梢被带起，远处树木倾斜，大团云层绕在身体四周；左上方还能看到一群小鸟。",
+          "姿态像在留意周围动静，却没有画出实际对手。脚下并非平地，也让「随时准备」带着不稳定感。我们可以用它思考初学者的敏锐与紧张，但无法从人物外表推出抽牌者的年龄、性别或成熟程度。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "Waite 的关键词偏向观察与检查",
+        "paragraphs": [
+          "Waite 在1911年标注转录中强调警觉、监督和检查，把人物写成随时观察四周的人。逆位涉及这些特质的不利面与准备不足。本文不采用旧词表中健康相关的占断。",
+          "将侍从理解为带着问题学习、尝试表达，是现代反思延伸；它描述可由任何人练习的姿态，并不固定代表年轻男性，也不能据此认定有人正在监视你。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 先做一个好的提问者",
+        "paragraphs": [
+          "正位可以鼓励你留意细节、主动查资料，并把模糊疑问问得具体。初学时尚无完整答案很正常，愿意确认概念，比装作已经理解更有力量。",
+          "敏锐还需要记录方法。区分亲眼看到、听别人转述与自己推测，保存来源和时间。观察越细，越要知道证据能支持多大的结论，不必发现一个疑点就写出整个故事。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 留意信息怎样被加工",
+        "paragraphs": [
+          "逆位可提醒你检查断章取义、抢先发言，或把提问变成盘问。也可能是面对新任务时缺少准备，靠警惕掩盖不确定。先放慢转述速度，补上上下文，并允许别人用完整的话说明。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "把问题问到能得到答案",
+        "paragraphs": [
+          "进入新团队时，与其笼统问「流程是什么」，不如拿一个真实任务，请同事说明每一步由谁确认。把答案记下来，下一次自己先查，再问新的部分。",
+          "收到令人吃惊的消息，先找原始发布者与发布时间；截图不等于完整背景。关系中若发现对方语气变了，可以问「你今天是不是有事想说」，而不是以试探和连环追问逼对方证明清白。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 给一条消息标三种颜色",
+        "paragraphs": [
+          "选一条你准备转述的信息，用文字标出「已核实」「来自转述」「个人猜测」。找到其中最关键的一处来源，重新读上下文。若尚未核实，转述时明确说明不确定，而不是用语气增加可信度。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "好奇不等于有权查看一切",
+        "paragraphs": [
+          "宝剑侍从不能证明有人偷看、说谎或暗中关注你。查证需要尊重隐私与权限；想知道一件事，不自动等于可以翻阅别人的设备和私信。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "ace-of-swords",
+        "nameZh": "宝剑王牌",
+        "reason": "把查到的信息组织成清楚判断"
+      },
+      {
+        "cardId": "seven-of-swords",
+        "nameZh": "宝剑七",
+        "reason": "分辨合理核查与越界窥探"
+      }
+    ],
+    "sources": [
+      {
+        "id": "page-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑侍从，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "page-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑侍从",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "page-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords11.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "rank": "page",
+      "gitBlobSha": "0cc7ae4020db77309f03e8c47ae8b171e68d8aff",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
+      "sha256": "c357b63c3415074741bc1b457747fd9be62f3233c27d8e33b885e997c2f82aa7",
+      "localFile": "images/11-page.webp",
+      "bytes": 177624,
+      "dimensions": [
+        560,
+        970
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/page-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:21:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1108,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    },
+    "chineseCharacterCount": 1089,
+    "bodyChineseCharacterCount": 721
+  },
+  "sourceBatch": "swords",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 0,
+    "words": 546,
+    "articleUtf8Bytes": 5310
+  },
+  "sourceLocale": "zh-CN",
+  "name": "Page of Swords",
+  "translationProvenance": {
+    "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+    "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+    "sourceCardId": "page-of-swords",
+    "sourceArticleSha256": "90caa521471485e4b85e0e1bdb773d3d9c6ac07ea7376c7f6d024a6c33297582",
+    "sourceLocale": "zh-CN",
+    "targetLocale": "en",
+    "chineseSourceModified": false,
+    "humanNativeReviewClaimed": false,
+    "translatedOn": "2026-10-07"
+  },
+  "nameLocalized": "Page of Swords",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {
+    "sourceLocale": "zh-CN",
+    "translationProvenance": {
+      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+      "sourceCardId": "page-of-swords",
+      "sourceArticleSha256": "90caa521471485e4b85e0e1bdb773d3d9c6ac07ea7376c7f6d024a6c33297582",
+      "sourceLocale": "zh-CN",
+      "targetLocale": "en",
+      "chineseSourceModified": false,
+      "humanNativeReviewClaimed": false,
+      "translatedOn": "2026-10-07"
+    }
+  },
+  "countsOriginal": {
+    "sections": 9,
+    "mainTextWords": 608,
+    "mainTextChineseCharacters": 0,
+    "completeArticleCharacters": 5274
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "90caa521471485e4b85e0e1bdb773d3d9c6ac07ea7376c7f6d024a6c33297582",
+    "articleSha256": "bd67694b3c2da12b79bdf1aec586ab898de0f88dff16f4a6ac47ba7a1f4ea7b2",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

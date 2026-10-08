@@ -1,0 +1,4378 @@
+{
+  "en": [
+    {
+      "cardId": "fool",
+      "deckOrder": 0,
+      "number": "0",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Fool",
+      "title": "The Fool — Beginning without all the answers",
+      "quickTake": {
+        "upright": "A fresh start. Give it a try, and check your footing first.",
+        "reversed": "Rushing ahead, or never quite daring to begin."
+      },
+      "hook": "Look at the difference between the Fool’s gaze and his footing: his face turns toward the distance, while his feet have reached a cliff edge. Anticipation and risk share the same moment."
+    },
+    {
+      "cardId": "magician",
+      "deckOrder": 1,
+      "number": "I",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Magician",
+      "title": "The Magician — Put the tools you have to work",
+      "quickTake": {
+        "upright": "You have skills and resources. Put them to use.",
+        "reversed": "Plenty of thinking, too little follow-through, or effort going astray."
+      },
+      "hook": "The Magician’s table is already set. Before looking for a mysterious source of power, notice what is ready to hand and consider how the person behind the table might use it."
+    },
+    {
+      "cardId": "high-priestess",
+      "deckOrder": 2,
+      "number": "II",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The High Priestess",
+      "title": "The High Priestess — Notice what has not yet been said",
+      "quickTake": {
+        "upright": "Be still and observe. Some information has yet to emerge.",
+        "reversed": "Feelings and guesses blur together, or something remains unsaid."
+      },
+      "hook": "The High Priestess holds a scroll without fully revealing it. She draws attention to an easily overlooked fact: information can be right in front of us and still be incomplete."
+    },
+    {
+      "cardId": "empress",
+      "deckOrder": 3,
+      "number": "III",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Empress",
+      "title": "The Empress — Create the conditions for growth",
+      "quickTake": {
+        "upright": "Things need space and care to grow.",
+        "reversed": "Care is out of balance: giving too much, or neglecting your own needs."
+      },
+      "hook": "The Empress is not busy harvesting the field. She sits on soft cushions, while water, plants, and grain surround her. Growth needs a supportive environment, not simply more urging."
+    },
+    {
+      "cardId": "emperor",
+      "deckOrder": 4,
+      "number": "IV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Emperor",
+      "title": "The Emperor — Give responsibility and boundaries a firm footing",
+      "quickTake": {
+        "upright": "Clear rules and responsibilities make things steadier.",
+        "reversed": "Control is too rigid, or no one is taking responsibility."
+      },
+      "hook": "Metal armour shows beneath the Emperor’s red robe. Even on the throne, he has not put aside all protection. Stability can keep people safe, but it can also make it hard to relax."
+    },
+    {
+      "cardId": "hierophant",
+      "deckOrder": 5,
+      "number": "V",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Hierophant",
+      "title": "The Hierophant — Learn a method and understand where it comes from",
+      "quickTake": {
+        "upright": "Learn from an established method or someone with experience.",
+        "reversed": "An inherited approach may not fit. Understand it before deciding what to change."
+      },
+      "hook": "Two listeners kneel before the Hierophant. Knowledge here is more than an individual insight: a community receives it through ritual, recognized roles, and a shared language."
+    },
+    {
+      "cardId": "lovers",
+      "deckOrder": 6,
+      "number": "VI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Lovers",
+      "title": "The Lovers — Let attraction become a shared choice",
+      "quickTake": {
+        "upright": "Attraction is present, along with a willingness to choose the connection.",
+        "reversed": "There may be feelings, but important choices and expectations remain unclear."
+      },
+      "hook": "The two people on the Lovers stand on the same patch of grass without holding hands. There is still space between them, and a winged figure opens its arms above. A relationship is pictured; how to move toward one another remains a human task."
+    },
+    {
+      "cardId": "chariot",
+      "deckOrder": 7,
+      "number": "VII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Chariot",
+      "title": "The Chariot — Bring different forces into a shared direction",
+      "quickTake": {
+        "upright": "Choose your direction, hold a steady pace, and keep moving.",
+        "reversed": "Effort is taking you off course. Recheck direction and coordination."
+      },
+      "hook": "The Chariot looks commanding, but the two sphinxes in front are reclining, and no reins are drawn in the driver’s hands. What does it take to move a vehicle forward besides force?"
+    },
+    {
+      "cardId": "strength",
+      "deckOrder": 8,
+      "number": "VIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Strength",
+      "title": "Strength Meaning: Put Your Energy into Staying Steady",
+      "quickTake": {
+        "upright": "Keep your composure and act with courage. A gentle approach can still get things done.",
+        "reversed": "Pushing harder is making things worse. Are you forcing yourself to keep going, or trying to overpower someone else?"
+      },
+      "hook": "Strength can have a light touch. Under pressure, this card asks how you use the energy you have."
+    },
+    {
+      "cardId": "hermit",
+      "deckOrder": 9,
+      "number": "IX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Hermit",
+      "title": "The Hermit Meaning: Make Room for Quiet and Look More Closely",
+      "quickTake": {
+        "upright": "Find some quiet, check the facts and think it through before taking the next step.",
+        "reversed": "You may have been thinking alone for too long. Is the quiet helping, or shutting you off?"
+      },
+      "hook": "More information does not automatically produce better judgement. The Hermit lowers the volume so you can see the one question that needs your attention."
+    },
+    {
+      "cardId": "wheel",
+      "deckOrder": 10,
+      "number": "X",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Wheel of Fortune",
+      "title": "Wheel of Fortune Meaning: Adjust as Circumstances Change",
+      "quickTake": {
+        "upright": "Things are moving. Opportunities and uncertainties are arriving together, so adjust as you go.",
+        "reversed": "Change is not following your timetable. Steady yourself, then see which step you can adjust."
+      },
+      "hook": "Some changes move faster than your plans. The Wheel of Fortune draws attention to timing, cycles and the response you can still choose."
+    },
+    {
+      "cardId": "justice",
+      "deckOrder": 11,
+      "number": "XI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Justice",
+      "title": "Justice Meaning: Lay Out the Facts Before You Decide",
+      "quickTake": {
+        "upright": "Make the facts and standards clear, and use the same measure when deciding.",
+        "reversed": "Judgement may be skewed. Check for missing evidence, double standards and responsibilities left unowned."
+      },
+      "hook": "When something feels unfair, pause before labelling a person. Justice puts evidence, standards and each person’s responsibilities on the same table."
+    },
+    {
+      "cardId": "hanged-man",
+      "deckOrder": 12,
+      "number": "XII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Hanged Man",
+      "title": "The Hanged Man Meaning: Pause and Look from Another Angle",
+      "quickTake": {
+        "upright": "Pause, change your angle and see what is worth the cost.",
+        "reversed": "You have been stuck for a while. Are you waiting for a real condition, or wearing yourself out without changing anything?"
+      },
+      "hook": "The harder you rush to break free, the easier it is to repeat the same move. The Hanged Man turns the question around and makes pausing part of the observation."
+    },
+    {
+      "cardId": "death",
+      "deckOrder": 13,
+      "number": "XIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Death",
+      "title": "Death Meaning: Bring What Has Ended to a Close",
+      "quickTake": {
+        "upright": "This stage is ready to close. Finish the old business and make room for what comes next.",
+        "reversed": "You know something needs to change, but letting go is hard. Start with one old tie you can loosen."
+      },
+      "hook": "Some changes need more than another small repair. Death puts an ending in view, making room both to acknowledge loss and to deal with the next stage."
+    },
+    {
+      "cardId": "temperance",
+      "deckOrder": 14,
+      "number": "XIV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Temperance",
+      "title": "Temperance Meaning: Find a Balance That Lets Different Needs Work Together",
+      "quickTake": {
+        "upright": "Ease off the all-out effort. Adjust the balance and pace so things can work more smoothly.",
+        "reversed": "The mix is off and the rhythm is uneven. Find what is getting too much and what is not getting enough."
+      },
+      "hook": "Water is still flowing between the cups. Temperance is about continual adjustment: combining time, energy and needs in a way you can sustain."
+    },
+    {
+      "cardId": "devil",
+      "deckOrder": 15,
+      "number": "XV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Devil",
+      "title": "The Devil: See what keeps you hooked",
+      "quickTake": {
+        "upright": "You’re hooked, it’s hard to stop, and the cost keeps growing.",
+        "reversed": "You want to break an old habit, but may still be making excuses for it."
+      },
+      "hook": "The thing you can’t seem to leave alone: what does it give you, and what does it take away?"
+    },
+    {
+      "cardId": "tower",
+      "deckOrder": 16,
+      "number": "XVI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Tower",
+      "title": "The Tower: When the old arrangement can’t hold",
+      "quickTake": {
+        "upright": "Your plans are disrupted, and the problem can no longer be covered up.",
+        "reversed": "You may be putting off a needed change, or reducing its impact and clearing up slowly."
+      },
+      "hook": "The crown has been knocked from the tower, and the people beside it have lost their footing."
+    },
+    {
+      "cardId": "star",
+      "deckOrder": 17,
+      "number": "XVII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Star",
+      "title": "The Star: Make real room for recovery",
+      "quickTake": {
+        "upright": "You’re finding your feet again, and hope is returning. Rebuild a little at a time.",
+        "reversed": "Hope feels faint. You’re still giving, but may be running dry."
+      },
+      "hook": "The figure beneath the stars is not looking up to make a wish. She lowers her head and carefully pours water onto the ground before her."
+    },
+    {
+      "cardId": "moon",
+      "deckOrder": 18,
+      "number": "XVIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Moon",
+      "title": "The Moon: Leave room for uncertainty",
+      "quickTake": {
+        "upright": "You can’t see clearly and feel uneasy. Don’t turn guesses into facts.",
+        "reversed": "The fog may be lifting, or your thoughts may be tangling further. Check one thing at a time."
+      },
+      "hook": "The path runs all the way to the distant mountains, but moonlight cannot reveal every bend."
+    },
+    {
+      "cardId": "sun",
+      "deckOrder": 19,
+      "number": "XIX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The Sun",
+      "title": "The Sun: Let what is good be seen",
+      "quickTake": {
+        "upright": "Things are clearer and your energy is back. Give real progress its due.",
+        "reversed": "The good is still there, but your spark may be low, or optimism may be running ahead of you."
+      },
+      "hook": "The child is in front of the wall, arms spread, as though happiness no longer needs to be hidden."
+    },
+    {
+      "cardId": "judgement",
+      "deckOrder": 20,
+      "number": "XX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Judgement",
+      "title": "Judgement: Hear what needs an answer",
+      "quickTake": {
+        "upright": "Some things can’t stay vague. Look back clearly, then make a decision.",
+        "reversed": "You may be avoiding a response, or blaming yourself so much that deciding feels impossible."
+      },
+      "hook": "The trumpet sounds and everyone looks up. This time, the question is how you will respond."
+    },
+    {
+      "cardId": "world",
+      "deckOrder": 21,
+      "number": "XXI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "The World",
+      "title": "The World: Bring a stage to a proper close",
+      "quickTake": {
+        "upright": "This stage has come together. Finish, hand it over, and move on.",
+        "reversed": "The final tasks may be unfinished, or the work is done and you’re struggling to let go."
+      },
+      "hook": "The wreath forms a complete circle, yet the figure inside keeps dancing. Completion can still be a fluid movement."
+    },
+    {
+      "cardId": "ace-of-wands",
+      "deckOrder": 22,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Ace of Wands",
+      "title": "Ace of Wands: Give an idea a first try",
+      "quickTake": {
+        "upright": "Something has caught your interest. Take one small step and try it",
+        "reversed": "You cannot find the energy, or you have plenty of ideas but never start"
+      },
+      "hook": "A hand grips a wand that is still growing leaves, but the picture offers no life plan for using it. The Ace of Wands holds us at the moment interest first appears: you have some energy for this. What will you do with it?"
+    },
+    {
+      "cardId": "two-of-wands",
+      "deckOrder": 23,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Two of Wands",
+      "title": "Two of Wands: Choose a direction from where you stand",
+      "quickTake": {
+        "upright": "You want to go further. First clarify the direction and what it would take",
+        "reversed": "Indecision is holding up the plan, or distant possibilities are eclipsing present conditions"
+      },
+      "hook": "The Two of Wands fits the whole world into a globe held in one hand, while the figure’s feet remain on the battlements. Your vision of the distance can be vast; the real decision still takes place where you are standing."
+    },
+    {
+      "cardId": "three-of-wands",
+      "deckOrder": 24,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Three of Wands",
+      "title": "Three of Wands: Notice how the world responds",
+      "quickTake": {
+        "upright": "Things are moving out into the world. Watch for progress and new openings",
+        "reversed": "The response is slow to arrive. Check where the process has stalled"
+      },
+      "hook": "The figure in the Three of Wands turns away from us to watch ships on the water. Compared with the globe held in the Two, attention is now on something already taking place beyond the figure’s immediate reach."
+    },
+    {
+      "cardId": "four-of-wands",
+      "deckOrder": 25,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Four of Wands",
+      "title": "Four of Wands: Make room for completion and belonging",
+      "quickTake": {
+        "upright": "There is somewhere to settle, feel at ease and celebrate together",
+        "reversed": "The scene may be lively without feeling secure or welcoming to everyone"
+      },
+      "hook": "The garlanded structure in the Four of Wands does not enclose the people. Four poles mark out a place to gather while leaving the front open, bringing celebration and welcome into the same picture."
+    },
+    {
+      "cardId": "five-of-wands",
+      "deckOrder": 26,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Five of Wands",
+      "title": "Five of Wands: Give different efforts shared rules",
+      "quickTake": {
+        "upright": "Everyone is putting in effort. First find out what the disagreement is about",
+        "reversed": "Differences may be getting avoided, or the argument may be growing more confused"
+      },
+      "hook": "Five people each hold a wand and make large movements, yet there is no clear shared direction. The most useful question in the Five of Wands is not who will win, but whether all this effort is serving the same purpose."
+    },
+    {
+      "cardId": "six-of-wands",
+      "deckOrder": 27,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Six of Wands",
+      "title": "Six of Wands: Let achievements be seen and understood",
+      "quickTake": {
+        "upright": "Your effort has been recognized. You can receive the appreciation",
+        "reversed": "The recognition you wanted is missing, or other people’s judgments matter too much"
+      },
+      "hook": "The laurel appears twice in the Six of Wands: on the rider’s head and on the wand. An achievement is no longer known only to the person who made it; it has entered public view."
+    },
+    {
+      "cardId": "seven-of-wands",
+      "deckOrder": 28,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Seven of Wands",
+      "title": "Seven of Wands: Name what you need to protect",
+      "quickTake": {
+        "upright": "Stand your ground under pressure and explain what needs protecting",
+        "reversed": "You may be answering every challenge, or yielding because you cannot keep it up"
+      },
+      "hook": "Only one person is visible in the Seven of Wands, yet six wands reach towards that figure. First identify the pressure that genuinely requires a response rather than imagining an enemy behind every pole."
+    },
+    {
+      "cardId": "eight-of-wands",
+      "deckOrder": 29,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Eight of Wands",
+      "title": "Eight of Wands: Stay clear when things speed up",
+      "quickTake": {
+        "upright": "Progress is picking up. Keep messages and actions connected",
+        "reversed": "There is urgency without progress, or more messages than you can handle"
+      },
+      "hook": "No person stands at the centre of the Eight of Wands. Eight poles draw the eye diagonally downward together, as though events have already left someone’s hands and found a pace of their own."
+    },
+    {
+      "cardId": "nine-of-wands",
+      "deckOrder": 30,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Nine of Wands",
+      "title": "Nine of Wands: Leave room to recover while you persist",
+      "quickTake": {
+        "upright": "You have already endured a stretch. Protect what matters and allow a breather",
+        "reversed": "You are too tired to keep going, or too guarded to relax"
+      },
+      "hook": "The figure in the Nine of Wands is still standing, yet has begun to lean on the wand. In this image, persistence and the need for support are not mutually exclusive."
+    },
+    {
+      "cardId": "ten-of-wands",
+      "deckOrder": 31,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Ten of Wands",
+      "title": "Ten of Wands: Examine how responsibility and workload are shared",
+      "quickTake": {
+        "upright": "Too much is resting on you. It is time to redistribute the load",
+        "reversed": "You want to put something down. First arrange where it goes and how to hand it over"
+      },
+      "hook": "Ten long wands gather in one person’s arms, and the body bends with them. The Ten of Wands shows that each task may have value while their combined weight still needs to be counted."
+    },
+    {
+      "cardId": "page-of-wands",
+      "deckOrder": 32,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Page of Wands",
+      "title": "Page of Wands: Learn to express what sparks your curiosity",
+      "quickTake": {
+        "upright": "Something new interests you. You are willing to ask questions and try",
+        "reversed": "The ideas sound exciting, but practice and action have not caught up"
+      },
+      "hook": "The Page of Wands is not swinging the staff, but looking up at it carefully. Curiosity has not yet turned into a large action. Observing and asking questions are already part of learning."
+    },
+    {
+      "cardId": "knight-of-wands",
+      "deckOrder": 33,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Knight of Wands",
+      "title": "Knight of Wands: Give your momentum a direction",
+      "quickTake": {
+        "upright": "You have drive and are willing to take the initiative and try",
+        "reversed": "You rush or keep changing direction, leaving things unfinished"
+      },
+      "hook": "The horse in the Knight of Wands raises its forelegs, and the red plume on the helmet streams behind. The strong movement catches the eye before a practical question follows: where is all that drive meant to take the rider?"
+    },
+    {
+      "cardId": "queen-of-wands",
+      "deckOrder": 34,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Queen of Wands",
+      "title": "Queen of Wands: Express your enthusiasm with ease",
+      "quickTake": {
+        "upright": "You feel grounded in yourself and help others relax and engage",
+        "reversed": "You work too hard for approval, or make yourself smaller and smaller"
+      },
+      "hook": "The Queen of Wands holds a staff in one hand and a sunflower in the other, with a black cat looking directly at us below. A striking presence and a settled seated posture share the picture. Confidence does not need large gestures alone."
+    },
+    {
+      "cardId": "king-of-wands",
+      "deckOrder": 35,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "King of Wands",
+      "title": "King of Wands: Take responsibility for the direction",
+      "quickTake": {
+        "upright": "You see a direction, take the lead and are willing to answer for your choices",
+        "reversed": "You push people to keep up without enough room for discussion or adjustment"
+      },
+      "hook": "The King of Wands has reached the throne, but the wand in hand still grows leaves. Position has not removed the theme of action. It takes the question further: when your decisions affect others, how does enthusiasm become responsibility?"
+    },
+    {
+      "cardId": "ace-of-cups",
+      "deckOrder": 36,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Ace of Cups",
+      "title": "Ace of Cups Meaning: Make room for a new feeling",
+      "quickTake": {
+        "upright": "Accepting care and expressing yourself honestly can give a new connection its start.",
+        "reversed": "Feelings may be held back or spilling over. Find a suitable way to express them."
+      },
+      "hook": "A thoughtful word or a song you have not heard in years can suddenly move you. The Ace of Cups pauses at that first moment of feeling; the outcome is still unwritten."
+    },
+    {
+      "cardId": "two-of-cups",
+      "deckOrder": 37,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Two of Cups",
+      "title": "Two of Cups Meaning: Connection takes two willing responses",
+      "quickTake": {
+        "upright": "Both people are willing to listen and respond. There is room to discuss a next step.",
+        "reversed": "Responses may be uneven or expectations unclear. Put the differences into words first."
+      },
+      "hook": "After an easy conversation, a relationship is only beginning to be tested. The Two of Cups asks whether that moment of rapport can become an exchange both people want to take part in."
+    },
+    {
+      "cardId": "three-of-cups",
+      "deckOrder": 38,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Three of Cups",
+      "title": "Three of Cups Meaning: Give joy someone to share it with",
+      "quickTake": {
+        "upright": "Gather with people who support one another, and name the achievement and your thanks.",
+        "reversed": "Socialising or obligations may be draining you. Adjust how much and how you take part."
+      },
+      "hook": "Some joys are enough simply to know for yourself. Others gain another layer when shared with the people who were there along the way. The Three of Cups brings that group into view."
+    },
+    {
+      "cardId": "four-of-cups",
+      "deckOrder": 39,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Four of Cups",
+      "title": "Four of Cups Meaning: Understand why nothing appeals",
+      "quickTake": {
+        "upright": "You may not want anything new for now. Allow time to observe and identify your needs.",
+        "reversed": "Interest in the outside world may be returning. Try taking part in one small thing."
+      },
+      "hook": "Even when someone offers an opportunity, you may want to say, “Another time.” The Four of Cups does not hurry you into saying yes. It asks what your refusal is protecting right now."
+    },
+    {
+      "cardId": "five-of-cups",
+      "deckOrder": 40,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Five of Cups",
+      "title": "Five of Cups Meaning: Acknowledge the loss and what remains",
+      "quickTake": {
+        "upright": "Acknowledge a real loss first. You do not have to turn sadness into a positive story.",
+        "reversed": "You may be reconnecting with life, or discovering that regret still needs more time."
+      },
+      "hook": "Comfort offered too quickly can feel like pressure to stop being sad. The Five of Cups places the overturned cups in front of us while keeping two others in the picture."
+    },
+    {
+      "cardId": "six-of-cups",
+      "deckOrder": 41,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Six of Cups",
+      "title": "Six of Cups Meaning: Bring old warmth into the present",
+      "quickTake": {
+        "upright": "Find support in good past experiences and value simple, specific acts of care.",
+        "reversed": "Loosen old roles a little to make space for new relationships and ways of living."
+      },
+      "hook": "An old object can take you back to an afternoon when someone treated you kindly. The Six of Cups values that familiarity while reminding you that people keep changing even when a memory stands still."
+    },
+    {
+      "cardId": "seven-of-cups",
+      "deckOrder": 42,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Seven of Cups",
+      "title": "Seven of Cups Meaning: Understand the wish and test one option",
+      "quickTake": {
+        "upright": "Many options look appealing. Separate what you wish for from what you actually know.",
+        "reversed": "Your focus may be narrowing. Let one idea meet a real-world test."
+      },
+      "hook": "The most exciting future in your mind often has no schedule, cost or first step yet. The Seven of Cups allows dreaming while asking which parts exist only in the dream."
+    },
+    {
+      "cardId": "eight-of-cups",
+      "deckOrder": 43,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Eight of Cups",
+      "title": "Eight of Cups Meaning: Know what you are seeking before you leave",
+      "quickTake": {
+        "upright": "An earlier goal may no longer satisfy you. A change of direction deserves consideration.",
+        "reversed": "If you keep moving between staying and leaving, check both your reasons and practical conditions."
+      },
+      "hook": "Sometimes the hardest place to leave is not the worst one. It is the place where you have invested a great deal but find it increasingly hard to explain why. The Eight of Cups gives that uncertainty the shape of a retreating figure."
+    },
+    {
+      "cardId": "nine-of-cups",
+      "deckOrder": 44,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Nine of Cups",
+      "title": "Nine of Cups Meaning: Enjoy the satisfaction already here",
+      "quickTake": {
+        "upright": "You have reasons to feel pleased with what you have achieved. Let yourself enjoy the moment.",
+        "reversed": "Things may look good yet leave an inner gap. Reconsider where satisfaction comes from."
+      },
+      "hook": "After reaching a goal, do you sit down and enjoy it, or immediately raise the standard? The Nine of Cups brings you face to face with the result and makes satisfaction itself worth noticing."
+    },
+    {
+      "cardId": "ten-of-cups",
+      "deckOrder": 45,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Ten of Cups",
+      "title": "Ten of Cups Meaning: Belonging needs shared care",
+      "quickTake": {
+        "upright": "Support exists among people who matter to you. Value and maintain that everyday security.",
+        "reversed": "An ideal of harmony may differ from lived experience. Listen for needs that have been held back."
+      },
+      "hook": "A happy photograph can record a good moment, but it cannot do all the relating required in the days that follow. The Ten of Cups is a way to discuss shared happiness and ask what sustains it."
+    },
+    {
+      "cardId": "page-of-cups",
+      "deckOrder": 46,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Page of Cups",
+      "title": "Page of Cups Meaning: Meet unexpected inspiration with curiosity",
+      "quickTake": {
+        "upright": "Learn about your feelings and give a new inspiration words or form.",
+        "reversed": "Inspiration may be mixed with assumptions. Check facts and proportion before expressing it."
+      },
+      "hook": "Some good ideas first arrive looking strange; some honest words sound clumsy on their first attempt. The Page of Cups makes room for that awkwardness. What matters is your willingness to keep learning."
+    },
+    {
+      "cardId": "knight-of-cups",
+      "deckOrder": 47,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Knight of Cups",
+      "title": "Knight of Cups Meaning: Make a moving idea into a reliable invitation",
+      "quickTake": {
+        "upright": "Make a sincere invitation so a promising idea has a chance to become real.",
+        "reversed": "A proposal may sound lovely but lack follow-through. Compare promises with actions."
+      },
+      "hook": "Some words can move you at once, but trust depends on what happens next. The Knight of Cups leaves imagination behind and enters the part of the journey that calls for a response."
+    },
+    {
+      "cardId": "queen-of-cups",
+      "deckOrder": 48,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Queen of Cups",
+      "title": "Queen of Cups Meaning: Understand feelings and keep caring boundaries",
+      "quickTake": {
+        "upright": "Listen patiently to feelings and turn understanding into suitable care.",
+        "reversed": "Care may be crossing boundaries or exhausting you. Separate each person’s responsibilities."
+      },
+      "hook": "Someone says they are fine, yet you notice a change in their voice. The Queen of Cups values that sensitivity while reminding you to ask what it means before deciding for them."
+    },
+    {
+      "cardId": "king-of-cups",
+      "deckOrder": 49,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "King of Cups",
+      "title": "King of Cups Meaning: Stay clear and responsible amid change",
+      "quickTake": {
+        "upright": "Listen to feelings while preserving judgement, and make care reliable in practice.",
+        "reversed": "Emotion or power may be distorting judgement. Check avoidance, favouritism and control."
+      },
+      "hook": "The more tense a situation becomes, the more it needs someone who can understand different people’s fears without changing principles to suit the loudest voice. The King of Cups concerns this combination of feeling, proportion and responsibility."
+    },
+    {
+      "cardId": "ace-of-swords",
+      "deckOrder": 50,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Ace of Swords",
+      "title": "Ace of Swords Meaning: Let One Clear Sentence Open the Way",
+      "quickTake": {
+        "upright": "Identify the central question and use a well-supported judgment to take the next step.",
+        "reversed": "You may be reaching a conclusion too quickly, or thinking at length without finding clear words."
+      },
+      "hook": "Sometimes things begin to move when you can finally say, in one sentence, what actually needs solving."
+    },
+    {
+      "cardId": "two-of-swords",
+      "deckOrder": 51,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Two of Swords",
+      "title": "Two of Swords Meaning: A Pause Still Needs Contact with Reality",
+      "quickTake": {
+        "upright": "Steady the pressure from both sides and find the missing information before choosing.",
+        "reversed": "The balance is becoming harder to hold, and avoided questions are pressing in."
+      },
+      "hook": "When you say “Let me think about it,” are you missing a piece of information, or hoping the choice will disappear?"
+    },
+    {
+      "cardId": "three-of-swords",
+      "deckOrder": 52,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Three of Swords",
+      "title": "Three of Swords Meaning: Give Disappointment an Accurate Name",
+      "quickTake": {
+        "upright": "Recognise the hurt and disagreement, and face what has actually happened.",
+        "reversed": "The hurt may still be tangled, or you may be finding ways to express it and loosen its hold."
+      },
+      "hook": "A sentence has stayed with you and hurt for a long time. “I’m fine” may not be what needs saying."
+    },
+    {
+      "cardId": "four-of-swords",
+      "deckOrder": 53,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Four of Swords",
+      "title": "Four of Swords Meaning: Make the Pause a Real Rest",
+      "quickTake": {
+        "upright": "Reduce stimulation and make time to recover and organise your thoughts.",
+        "reversed": "Rest may still feel unsettled, or it may be time to adjust your rhythm again."
+      },
+      "hook": "The laptop is closed, but the meeting is still running in your head. A real pause may require switching off another layer of pressure."
+    },
+    {
+      "cardId": "five-of-swords",
+      "deckOrder": 54,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Five of Swords",
+      "title": "Five of Swords Meaning: What Is Left After Winning the Argument",
+      "quickTake": {
+        "upright": "Someone has gained the upper hand, but cooperation and trust may be slipping away.",
+        "reversed": "The effects of conflict remain; repairing things or leaving requires real action."
+      },
+      "hook": "The argument is over and everyone is quiet. Was the problem solved, or did you simply get the last word?"
+    },
+    {
+      "cardId": "six-of-swords",
+      "deckOrder": 55,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Six of Swords",
+      "title": "Six of Swords Meaning: Carry Unfinished Things Toward the Next Shore",
+      "quickTake": {
+        "upright": "Use a route and practical support to move gradually away from an unsustainable situation.",
+        "reversed": "The handover or direction is still unclear; address the point that is blocking movement."
+      },
+      "hook": "The moving boxes are packed, but your feelings are still in the old place. Sometimes action changes first and emotion follows more slowly."
+    },
+    {
+      "cardId": "seven-of-swords",
+      "deckOrder": 56,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Seven of Swords",
+      "title": "Seven of Swords Meaning: A Clever Plan Should Withstand Explanation",
+      "quickTake": {
+        "upright": "A different approach may help, but check its costs, responsibilities and omissions.",
+        "reversed": "Re-examine the plan, accept advice or explain what has been left unclear."
+      },
+      "hook": "If a method only works while other people remain unaware, are you willing to look closely at what keeps it working?"
+    },
+    {
+      "cardId": "eight-of-swords",
+      "deckOrder": 57,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Eight of Swords",
+      "title": "Eight of Swords Meaning: Break ‘No Way Out’ into Specific Limits",
+      "quickTake": {
+        "upright": "Identify what is blocking action and distinguish unknowns from confirmed obstacles.",
+        "reversed": "Some restrictions may be easing, or you may need more help before you can act."
+      },
+      "hook": "“There’s nothing I can do” can contain several different problems: no authority, no resources, no information or no one willing to help yet."
+    },
+    {
+      "cardId": "nine-of-swords",
+      "deckOrder": 58,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Nine of Swords",
+      "title": "Nine of Swords Meaning: Do Not Let the Worst Guess Fill the Night",
+      "quickTake": {
+        "upright": "Notice recurring worries and separate facts from what you imagine.",
+        "reversed": "You may be starting to speak about your worries, or still circling through the same fears."
+      },
+      "hook": "At night, an unanswered email can grow into ten imagined consequences. The loudest thought may not be the closest to the facts."
+    },
+    {
+      "cardId": "ten-of-swords",
+      "deckOrder": 59,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Ten of Swords",
+      "title": "Ten of Swords Meaning: Acknowledge Where This Road Ends",
+      "quickTake": {
+        "upright": "A way of doing things may no longer be sustainable; acknowledge the damage and attend to closure.",
+        "reversed": "Relief or a chance to regain your footing may appear, while a return to the old pattern remains worth watching."
+      },
+      "hook": "Sometimes the hardest part is not making one more effort, but admitting that the old approach can no longer rescue the situation."
+    },
+    {
+      "cardId": "page-of-swords",
+      "deckOrder": 60,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Page of Swords",
+      "title": "Page of Swords Meaning: Teach Curiosity to Check Its Sources",
+      "quickTake": {
+        "upright": "Stay observant and learn through specific questions and careful checking.",
+        "reversed": "News may be travelling faster than evidence, or alertness may be turning into suspicion of everything."
+      },
+      "hook": "You have spotted something that seems wrong. Will you forward the guess, or first ask where the information came from?"
+    },
+    {
+      "cardId": "knight-of-swords",
+      "deckOrder": 61,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Knight of Swords",
+      "title": "Knight of Swords Meaning: Let Judgment Keep Up with Speed",
+      "quickTake": {
+        "upright": "Focus on the central problem and act decisively on what has been checked.",
+        "reversed": "The rush to finish or prove yourself may be drowning out changed conditions and other people’s feedback."
+      },
+      "hook": "The reply came together quickly and the send button is right there. Are you solving an urgent problem, or being chased by your own urgency?"
+    },
+    {
+      "cardId": "queen-of-swords",
+      "deckOrder": 62,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Queen of Swords",
+      "title": "Queen of Swords Meaning: Speak Clearly and Leave Room for a Reply",
+      "quickTake": {
+        "upright": "Use experience to judge clearly and state your needs and acceptable limits.",
+        "reversed": "Defensiveness may be becoming prejudice, or sharp words may be shutting communication out."
+      },
+      "hook": "You can say no gently, and you can listen carefully and still say no. A clear boundary does not need cruelty to prove itself."
+    },
+    {
+      "cardId": "king-of-swords",
+      "deckOrder": 63,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "King of Swords",
+      "title": "King of Swords Meaning: Give Reasons for Your Judgment",
+      "quickTake": {
+        "upright": "Decide using consistent standards and reliable facts, and take responsibility for the consequences.",
+        "reversed": "Authority may be overruling evidence, or rules may be concealing prejudice and control."
+      },
+      "hook": "“Just do what I say” can end a discussion without producing a decision anyone has reason to trust."
+    },
+    {
+      "cardId": "ace-of-pentacles",
+      "deckOrder": 64,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Ace of Pentacles",
+      "title": "Ace of Pentacles: Making Room for an Opportunity",
+      "quickTake": {
+        "upright": "Something practical is available. Arrange a first step.",
+        "reversed": "The conditions look promising, but you are not yet ready to make use of them."
+      },
+      "hook": "The Ace's palm is open, with a pentacle resting on it. The coin has neither been locked in a safe nor turned into a result. A path through the garden leaves the phrase “an opportunity arrives” waiting for its next sentence."
+    },
+    {
+      "cardId": "two-of-pentacles",
+      "deckOrder": 65,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Two of Pentacles",
+      "title": "Two of Pentacles: Knowing What Comes First When Life Gets Busy",
+      "quickTake": {
+        "upright": "Adjust your priorities as things change, leaving room for what matters.",
+        "reversed": "Keeping up an appearance of ease may be hiding a workload with no room left."
+      },
+      "hook": "The Two of Pentacles joins two discs with a single ribbon. Lift one side and the other is affected. Many everyday arrangements are connected in exactly this way."
+    },
+    {
+      "cardId": "three-of-pentacles",
+      "deckOrder": 66,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Three of Pentacles",
+      "title": "Three of Pentacles: Bringing Different Skills into One Piece of Work",
+      "quickTake": {
+        "upright": "Useful skills and clear coordination help the work take solid shape.",
+        "reversed": "Roles or standards are out of alignment; everyone is busy but the pieces do not connect."
+      },
+      "hook": "The Three of Pentacles shows three people doing different things: one stands on a work platform while two look toward that person from below. Finishing something together sometimes requires different positions."
+    },
+    {
+      "cardId": "four-of-pentacles",
+      "deckOrder": 67,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Four of Pentacles",
+      "title": "Four of Pentacles: Keeping What Matters Without Losing Room to Move",
+      "quickTake": {
+        "upright": "Identify what is worth keeping and set boundaries that help you feel secure.",
+        "reversed": "Holding too tightly can stop life moving; loosening a boundary abruptly can also make it hard to restore."
+      },
+      "hook": "The Four of Pentacles places all four discs against the body: one above the head, one at the chest and two underfoot. Everything seems safe. But what would this person have to do before standing up?"
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "deckOrder": 68,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Five of Pentacles",
+      "title": "Five of Pentacles: Meeting Difficulty with Support",
+      "quickTake": {
+        "upright": "Acknowledge the difficulty you are carrying and name what you need.",
+        "reversed": "You can look for support again, while checking whether conditions have actually improved."
+      },
+      "hook": "The sharpest contrast in the Five of Pentacles is between the light in the window and the cold outside. Light nearby is not the same as shelter received. Seeing a resource and being able to use it can be very different things."
+    },
+    {
+      "cardId": "six-of-pentacles",
+      "deckOrder": 69,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Six of Pentacles",
+      "title": "Six of Pentacles: Giving with Clear Terms",
+      "quickTake": {
+        "upright": "Offer or accept practical support, with its purpose and limits made clear.",
+        "reversed": "Help may carry hidden conditions, or contributions and decision-making power may remain unequal."
+      },
+      "hook": "The Six of Pentacles contains outstretched hands and a set of scales held by someone else. It shows generosity alongside differences in position: someone gives, someone waits, and the rules of distribution are not written down."
+    },
+    {
+      "cardId": "seven-of-pentacles",
+      "deckOrder": 70,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Seven of Pentacles",
+      "title": "Seven of Pentacles: Pausing to See What Your Effort Has Produced",
+      "quickTake": {
+        "upright": "Use the changes you can see to decide whether to continue, adjust or pause.",
+        "reversed": "Impatience may demand results, or past effort may make you afraid to change course."
+      },
+      "hook": "The person in the Seven of Pentacles is no longer swinging a tool. Hands rest on its handle as the figure looks down at the plants. A pause is not necessarily idleness; sometimes the work has reached the point where observation is needed."
+    },
+    {
+      "cardId": "eight-of-pentacles",
+      "deckOrder": 71,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Eight of Pentacles",
+      "title": "Eight of Pentacles: Making Each Repetition a Little Better",
+      "quickTake": {
+        "upright": "Attend to a specific action and gradually improve the quality of the result.",
+        "reversed": "Repetition may have lost its feedback, or proving your ability may be obscuring the work's purpose."
+      },
+      "hook": "The Eight of Pentacles displays completed discs beside the worker, whose attention stays on the one being made. Accumulated skill is visible, but the task in hand still deserves fresh care."
+    },
+    {
+      "cardId": "nine-of-pentacles",
+      "deckOrder": 72,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Nine of Pentacles",
+      "title": "Nine of Pentacles: Living the Life You Have Built",
+      "quickTake": {
+        "upright": "Value the abilities and conditions already in place, and allow yourself to use them.",
+        "reversed": "A polished appearance can hide how pressure and comparison have crowded out your ease."
+      },
+      "hook": "The vines have borne fruit, yet the figure is not hurrying to harvest the grapes. The Nine of Pentacles asks how you live after something has been established. When some conditions are already sufficient, do you let yourself experience them?"
+    },
+    {
+      "cardId": "ten-of-pentacles",
+      "deckOrder": 73,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Ten of Pentacles",
+      "title": "Ten of Pentacles: Making What You Build Usable by Others",
+      "quickTake": {
+        "upright": "Organise an established foundation so that others can carry it forward.",
+        "reversed": "An appearance of stability may cover disagreement; an old arrangement needs fresh discussion."
+      },
+      "hook": "The Ten of Pentacles does not show one person clutching ten coins. Discs lie across the whole scene, among an older person, adults, a child and dogs. Much of what accumulates belongs to an entire way of living together."
+    },
+    {
+      "cardId": "page-of-pentacles",
+      "deckOrder": 74,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Page of Pentacles",
+      "title": "Page of Pentacles: Learning One Thing Clearly",
+      "quickTake": {
+        "upright": "Be willing to start with the basics and give your interest a specific focus.",
+        "reversed": "You may be collecting more than you absorb, or repeatedly following the next novelty."
+      },
+      "hook": "The Page of Pentacles looks so intently at one disc that it seems to fill the whole sky. Learning sometimes begins with this gesture: ask one serious question about one specific thing."
+    },
+    {
+      "cardId": "knight-of-pentacles",
+      "deckOrder": 75,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Knight of Pentacles",
+      "title": "Knight of Pentacles: Making Reliability Repeatable",
+      "quickTake": {
+        "upright": "Follow clear steps consistently so others know what they can rely on.",
+        "reversed": "Routine may have become stagnation, or fear of mistakes may be preventing action."
+      },
+      "hook": "Other knights readily draw attention to speed. The Knight of Pentacles sits on a horse with barely a leg raised. The card poses a quiet question: tomorrow, can you do again what you promised today?"
+    },
+    {
+      "cardId": "queen-of-pentacles",
+      "deckOrder": 76,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Queen of Pentacles",
+      "title": "Queen of Pentacles: Making Care Practical",
+      "quickTake": {
+        "upright": "Support daily life with attention and practical care, including your own needs.",
+        "reversed": "Care may become taking over, or continual giving may leave your own needs behind."
+      },
+      "hook": "The Queen of Pentacles does not raise the disc for an audience. She lowers her gaze toward it in her lap. Her attention moves down toward everyday things: has care reached a place where it can actually be felt?"
+    },
+    {
+      "cardId": "king-of-pentacles",
+      "deckOrder": 77,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "King of Pentacles",
+      "title": "King of Pentacles: Managing Resources for Long-Term Use",
+      "quickTake": {
+        "upright": "Manage resources with experience and clear rules, taking responsibility for practical results.",
+        "reversed": "Status or control may displace usefulness, or past success may be repeated without fresh checks."
+      },
+      "hook": "The King of Pentacles is almost surrounded by vine patterns, on the robe and beside the throne. Abundance here is not one isolated coin. It is an entire environment requiring upkeep, organisation and responsibility."
+    }
+  ],
+  "zh": [
+    {
+      "cardId": "fool",
+      "deckOrder": 0,
+      "number": "0",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "愚者",
+      "title": "愚者 从还不知道开始",
+      "quickTake": {
+        "upright": "新开始，可以试试，先看清脚下再迈步",
+        "reversed": "可能冲得太快，也可能一直不敢开始"
+      },
+      "hook": "愚者最值得看的地方，是他的脸和脚朝向不同的关注点：脸抬向远方，脚已经来到崖边。期待与风险，同时出现在这一刻。"
+    },
+    {
+      "cardId": "magician",
+      "deckOrder": 1,
+      "number": "I",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "魔术师",
+      "title": "魔术师 让手边的工具真正派上用场",
+      "quickTake": {
+        "upright": "有招、有资源，能把事办起来",
+        "reversed": "想得多、落地少，劲儿没使对地方"
+      },
+      "hook": "魔术师的桌子已经摆好了。读这张牌时，先别急着寻找神秘力量，看看桌上现成的东西，以及站在桌后的人准备怎样使用它们。"
+    },
+    {
+      "cardId": "high-priestess",
+      "deckOrder": 2,
+      "number": "II",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "女祭司",
+      "title": "女祭司 看见还没有说出的部分",
+      "quickTake": {
+        "upright": "先静下来观察，有些信息还没浮出来",
+        "reversed": "感觉和猜测混在一起，或有话一直没说"
+      },
+      "hook": "女祭司把卷轴拿在手里，却没有完全展开。她让人注意到一个容易忽略的事实：信息就在眼前，也可能仍不完整。"
+    },
+    {
+      "cardId": "empress",
+      "deckOrder": 3,
+      "number": "III",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "皇后",
+      "title": "皇后 给生长准备好条件",
+      "quickTake": {
+        "upright": "有空间、有照料，事情才长得起来",
+        "reversed": "照顾失了分寸，可能给太多，也可能没顾上自己"
+      },
+      "hook": "皇后并没有在麦田里忙着收割。她坐在柔软的垫子上，周围的水、植物与谷物却都在提醒我们：生长需要环境，不只需要催促。"
+    },
+    {
+      "cardId": "emperor",
+      "deckOrder": 4,
+      "number": "IV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "皇帝",
+      "title": "皇帝 让责任和边界站得住",
+      "quickTake": {
+        "upright": "把规矩和分工定清楚，事情更稳",
+        "reversed": "管得太死，或该负责的地方没人负责"
+      },
+      "hook": "皇帝的红袍下露出金属护甲。即使已经坐上王座，他也没有完全卸下防护。稳定可以保护人，也可能让人难以放松。"
+    },
+    {
+      "cardId": "hierophant",
+      "deckOrder": 5,
+      "number": "V",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "教皇",
+      "title": "教皇 学会一套方法也看清它的来处",
+      "quickTake": {
+        "upright": "有成熟方法可借鉴，也适合向懂行的人请教",
+        "reversed": "老办法未必合适，先弄懂再决定改不改"
+      },
+      "hook": "教皇面前有两位听讲的人。知识在这里不只是一个人的领悟，而是通过仪式、身份和共同语言，被一群人接住。"
+    },
+    {
+      "cardId": "lovers",
+      "deckOrder": 6,
+      "number": "VI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "恋人",
+      "title": "恋人 让吸引走向彼此认同",
+      "quickTake": {
+        "upright": "彼此吸引，也愿意认真选择这段连接",
+        "reversed": "有感觉却没对齐，重要的选择还没说清"
+      },
+      "hook": "恋人的两个人站在同一片草地上，却没有牵手。他们之间仍有空间，上方还有一位张开双臂的有翼人物。关系在画里出现了，怎样走近彼此，仍留给人去完成。"
+    },
+    {
+      "cardId": "chariot",
+      "deckOrder": 7,
+      "number": "VII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "战车",
+      "title": "战车 让不同的力量朝同一方向走",
+      "quickTake": {
+        "upright": "方向定了，把节奏稳住，继续往前推",
+        "reversed": "使劲却走偏，先把方向和步调重新对齐"
+      },
+      "hook": "战车看起来很有气势，车前的两只斯芬克斯却卧着，车手手中也没有画出缰绳。问题随之而来：让一辆车前进的，除了用力，还需要什么？"
+    },
+    {
+      "cardId": "strength",
+      "deckOrder": 8,
+      "number": "VIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "力量",
+      "title": "力量牌义 把劲儿用在稳住自己上",
+      "quickTake": {
+        "upright": "稳得住脾气，也拿得出勇气，柔和一点照样能把事做好。",
+        "reversed": "越使劲越拧巴，看看自己是在硬撑，还是想把别人压住。"
+      },
+      "hook": "有力量的人，也能把动作放轻。遇到压力时，这张牌关心你怎样使用那股劲。"
+    },
+    {
+      "cardId": "hermit",
+      "deckOrder": 9,
+      "number": "IX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "隐士",
+      "title": "隐士牌义 给自己一点安静，把问题看深",
+      "quickTake": {
+        "upright": "先静下来，查清楚、想透一点，再走下一步。",
+        "reversed": "一个人想得太久了，分清是在沉淀，还是把自己关住。"
+      },
+      "hook": "消息再多，也不会自动变成判断。隐士先把声音放低，让你看清真正要解决的那一件事。"
+    },
+    {
+      "cardId": "wheel",
+      "deckOrder": 10,
+      "number": "X",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "命运之轮",
+      "title": "命运之轮牌义 局面在变，跟着现实调整",
+      "quickTake": {
+        "upright": "局面开始转动，机会和变数都来了，及时调整更有用。",
+        "reversed": "变化不按你的节奏来，先稳住，再看哪一步能改。"
+      },
+      "hook": "有些变化来得比计划快。命运之轮把你的注意力带到时机、循环，以及此刻还能选择的回应。"
+    },
+    {
+      "cardId": "justice",
+      "deckOrder": 11,
+      "number": "XI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "正义",
+      "title": "正义牌义 先把事实摆齐，再作决定",
+      "quickTake": {
+        "upright": "把事实和标准摆明，按同一把尺子作决定。",
+        "reversed": "判断可能偏了，查查漏掉的证据、双重标准和没承担的责任。"
+      },
+      "hook": "觉得不公平时，先别急着给人定性。正义让你把证据、标准和各自承担的责任放到同一张桌上。"
+    },
+    {
+      "cardId": "hanged-man",
+      "deckOrder": 12,
+      "number": "XII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "倒吊人",
+      "title": "倒吊人牌义 暂停一下，换个角度再看",
+      "quickTake": {
+        "upright": "先停一停，换个角度看，弄清楚什么值得付出。",
+        "reversed": "卡太久了，看看是在等条件，还是白白耗着不肯变。"
+      },
+      "hook": "越急着挣脱，越可能只重复原来的动作。倒吊人把问题倒过来，让暂停也成为观察的一部分。"
+    },
+    {
+      "cardId": "death",
+      "deckOrder": 13,
+      "number": "XIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "死神",
+      "title": "死神牌义 让已经结束的事真正收尾",
+      "quickTake": {
+        "upright": "这一段该结束了，把旧事收好，给下一步腾位置。",
+        "reversed": "心里知道该变，却还舍不得放；先找一件能松开的旧事。"
+      },
+      "hook": "有些改变不能只靠修修补补。死神把「结束」摆到眼前，让你承认失去，也腾出处理下一阶段的空间。"
+    },
+    {
+      "cardId": "temperance",
+      "deckOrder": 14,
+      "number": "XIV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "节制",
+      "title": "节制牌义 把分寸调好，让不同需要一起运作",
+      "quickTake": {
+        "upright": "别一口气用太猛，调好比例和节奏，事情会更顺。",
+        "reversed": "搭配失衡、节奏乱了，先找出哪一头太多、哪一头不够。"
+      },
+      "hook": "两只杯子之间，水还在流。节制关心的是持续调整：怎样搭配时间、精力与需求，才能做得长久。"
+    },
+    {
+      "cardId": "devil",
+      "deckOrder": 15,
+      "number": "XV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "恶魔",
+      "title": "恶魔 看清让你停不下来的交换",
+      "quickTake": {
+        "upright": "很上头，停不下来，代价却越来越大",
+        "reversed": "想挣脱旧习惯了，也可能还在替它找理由"
+      },
+      "hook": "那件让你离不开的事，究竟给了你什么，又拿走了什么？"
+    },
+    {
+      "cardId": "tower",
+      "deckOrder": 16,
+      "number": "XVI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "高塔",
+      "title": "高塔 当原来的办法撑不住了",
+      "quickTake": {
+        "upright": "原来的安排被打断，问题没法再遮过去",
+        "reversed": "知道该改却一直拖，也可能正缩小冲击、慢慢收拾"
+      },
+      "hook": "塔顶的皇冠被掀开，塔边的人也失去了立足处。"
+    },
+    {
+      "cardId": "star",
+      "deckOrder": 17,
+      "number": "XVII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "星星",
+      "title": "星星 给恢复留一点真实的空间",
+      "quickTake": {
+        "upright": "缓过来了，重新有盼头，适合一点点养回来",
+        "reversed": "盼头变淡了，付出还在，自己却有点干"
+      },
+      "hook": "星星下面的人没有仰头许愿，她低下头，认真把水倒进眼前的土地。"
+    },
+    {
+      "cardId": "moon",
+      "deckOrder": 18,
+      "number": "XVIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "月亮",
+      "title": "月亮 在看不清时保留判断",
+      "quickTake": {
+        "upright": "看不清，心里没底，先别把猜测当成事实",
+        "reversed": "迷雾可能在散，也可能越想越乱，需要逐项确认"
+      },
+      "hook": "路一直通向远山，但月光照不出它经过的每一个转弯。"
+    },
+    {
+      "cardId": "sun",
+      "deckOrder": 19,
+      "number": "XIX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "太阳",
+      "title": "太阳 让好的东西真正被看见",
+      "quickTake": {
+        "upright": "事情明朗了，有劲了，好的进展可以大方承认",
+        "reversed": "好的一面还在，只是热情不足，或开心得有点过头"
+      },
+      "hook": "孩子来到墙的前面，张开手臂，仿佛终于不用躲着表达高兴。"
+    },
+    {
+      "cardId": "judgement",
+      "deckOrder": 20,
+      "number": "XX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "审判",
+      "title": "审判 听清该回应的事",
+      "quickTake": {
+        "upright": "有些事不能再含糊，该回头看清，再作决定了",
+        "reversed": "迟迟不肯回应，或反复责怪自己，卡在决定之前"
+      },
+      "hook": "号角响起，所有人都抬起头；这次，问题是你准备怎样回应。"
+    },
+    {
+      "cardId": "world",
+      "deckOrder": 21,
+      "number": "XXI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "世界",
+      "title": "世界 把一个阶段完整地收好",
+      "quickTake": {
+        "upright": "这一段做完整了，可以收尾、交付，进入下一程",
+        "reversed": "就差收尾这一截，或明明完成了却迟迟不肯放手"
+      },
+      "hook": "花环围成一圈，里面的人却还在跳舞：完成，也可以是流畅的动作。"
+    },
+    {
+      "cardId": "ace-of-wands",
+      "deckOrder": 22,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖王牌",
+      "title": "权杖王牌 把想做的事试一下",
+      "quickTake": {
+        "upright": "有了想做的事，先动手试一小步",
+        "reversed": "提不起劲，或点子很多却迟迟没开始"
+      },
+      "hook": "一只手握住还在长叶子的木杖，画面却没有出现使用它的人生计划。权杖王牌让我们停在兴趣刚刚冒出来的瞬间：有了动力，接下来拿它做什么？"
+    },
+    {
+      "cardId": "two-of-wands",
+      "deckOrder": 23,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖二",
+      "title": "权杖二 站稳之后再选方向",
+      "quickTake": {
+        "upright": "想走得更远，先选清方向和条件",
+        "reversed": "计划卡在犹豫里，或想得太远没看眼前"
+      },
+      "hook": "权杖二把整个世界缩成掌心的一颗球，人物的脚却还留在城墙上。远方可以想得很大，真正要做的决定仍发生在自己所站的位置。"
+    },
+    {
+      "cardId": "three-of-wands",
+      "deckOrder": 24,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖三",
+      "title": "权杖三 留意行动怎样得到回应",
+      "quickTake": {
+        "upright": "事情已经往外走，留意进展和新的机会",
+        "reversed": "迟迟没等到回应，先查卡在哪个环节"
+      },
+      "hook": "权杖三的人物背对我们，看着水面上的船。和掌中握着地球仪的权杖二相比，这一次，注意力已经放到正在外面发生的事上。"
+    },
+    {
+      "cardId": "four-of-wands",
+      "deckOrder": 25,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖四",
+      "title": "权杖四 让完成与相聚有一个位置",
+      "quickTake": {
+        "upright": "有了可以安心停留、一起庆祝的地方",
+        "reversed": "表面很热闹，心里未必安稳或有归属感"
+      },
+      "hook": "权杖四的花环架没有把人关在里面。四根杖围出一处可以相聚的空间，前方依然敞开，让庆祝与欢迎同时进入画面。"
+    },
+    {
+      "cardId": "five-of-wands",
+      "deckOrder": 26,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖五",
+      "title": "权杖五 让不同的力气有规则可用",
+      "quickTake": {
+        "upright": "大家都在使劲，先弄清争的是什么",
+        "reversed": "可能在回避分歧，也可能越争越乱"
+      },
+      "hook": "五个人各拿一根杖，动作都很大，却看不出共同指向哪里。权杖五最有用的问题不是“谁会赢”，而是这些力气正在做同一件事吗？"
+    },
+    {
+      "cardId": "six-of-wands",
+      "deckOrder": 27,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖六",
+      "title": "权杖六 让成果被看见也被说明白",
+      "quickTake": {
+        "upright": "努力得到了认可，可以大方接住这份肯定",
+        "reversed": "没得到想要的肯定，或太在意别人怎么评价"
+      },
+      "hook": "权杖六的桂冠出现了两次：一次戴在骑者头上，一次挂在木杖上。成果不仅被自己知道，还进入了人群的视线。"
+    },
+    {
+      "cardId": "seven-of-wands",
+      "deckOrder": 28,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖七",
+      "title": "权杖七 说清你要守住什么",
+      "quickTake": {
+        "upright": "有压力也要站稳，把需要守住的事说清楚",
+        "reversed": "忙着应付所有质疑，或撑不住想让步"
+      },
+      "hook": "权杖七里能看见的人只有一个，伸向他的木杖却有六根。读这张牌，先辨认真正需要回应的压力，别急着把每根杖都想成一个敌人。"
+    },
+    {
+      "cardId": "eight-of-wands",
+      "deckOrder": 29,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖八",
+      "title": "权杖八 在加快的时候保持清楚",
+      "quickTake": {
+        "upright": "进展快了，消息和行动需要及时接上",
+        "reversed": "催得很急却没推进，或消息多到接不过来"
+      },
+      "hook": "权杖八没有站在中央的人物。八根杖把视线一起带向斜下方，事情仿佛已经离手，在空中形成自己的节奏。"
+    },
+    {
+      "cardId": "nine-of-wands",
+      "deckOrder": 30,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖九",
+      "title": "权杖九 让坚持有恢复的余地",
+      "quickTake": {
+        "upright": "已经撑过一段，守住重点也给自己喘口气",
+        "reversed": "累得难以继续，或一直绷着不敢放松"
+      },
+      "hook": "权杖九的人物还站着，却已经把身体靠向木杖。坚持的姿态与需要支撑的姿态，在这张牌里并没有互相排斥。"
+    },
+    {
+      "cardId": "ten-of-wands",
+      "deckOrder": 31,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖十",
+      "title": "权杖十 看清责任与负荷的分配",
+      "quickTake": {
+        "upright": "事情都压在身上，该重新分配了",
+        "reversed": "想放下负担，先把交接和去向安排好"
+      },
+      "hook": "十根长杖在同一个人怀里聚拢，身体也跟着弯下去。权杖十让人看见的，是事情各自可能有价值，承担它们的总量却仍需要计算。"
+    },
+    {
+      "cardId": "page-of-wands",
+      "deckOrder": 32,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖侍从",
+      "title": "权杖侍从 带着好奇学会表达",
+      "quickTake": {
+        "upright": "对新东西感兴趣，愿意问、愿意试",
+        "reversed": "点子说得很热闹，练习和行动还没跟上"
+      },
+      "hook": "权杖侍从没有挥动手里的杖，而是抬头仔细看着它。好奇心尚未变成大动作，这个观察和发问的阶段，本身就是学习的一部分。"
+    },
+    {
+      "cardId": "knight-of-wands",
+      "deckOrder": 33,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖骑士",
+      "title": "权杖骑士 让冲劲跟得上方向",
+      "quickTake": {
+        "upright": "有冲劲，愿意主动推进和尝试",
+        "reversed": "冲得太快、方向老变，事情容易断在半路"
+      },
+      "hook": "权杖骑士的马抬起前腿，头盔上的红色羽饰也向后扬起。强烈的动势先吸引了目光，随后才轮到一个实际问题：这股冲劲准备带人去哪里？"
+    },
+    {
+      "cardId": "queen-of-wands",
+      "deckOrder": 34,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖王后",
+      "title": "权杖王后 自在表达自己的热情",
+      "quickTake": {
+        "upright": "对自己有底气，也能让周围的人放松投入",
+        "reversed": "为了被认可太用力，或把自己越缩越小"
+      },
+      "hook": "权杖王后一手握杖，一手拿着向日葵，脚前还有一只直视观者的黑猫。画面把醒目的存在感与安稳坐着的姿态放在一起，自信并不只靠大动作表达。"
+    },
+    {
+      "cardId": "king-of-wands",
+      "deckOrder": 35,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "权杖国王",
+      "title": "权杖国王 为方向承担责任",
+      "quickTake": {
+        "upright": "看准方向，能带头行动也愿意负责",
+        "reversed": "急着让别人跟上，却没留出讨论和调整空间"
+      },
+      "hook": "权杖国王已经坐上王座，手里的木杖仍然长着叶子。地位没有让行动的主题消失，只是把问题推得更远：当别人受到你的决定影响，热情怎样变成责任？"
+    },
+    {
+      "cardId": "ace-of-cups",
+      "deckOrder": 36,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯王牌",
+      "title": "圣杯王牌牌义 给新的感受留一点空间",
+      "quickTake": {
+        "upright": "愿意接受关心，也愿意真诚表达，新的连接有了起点。",
+        "reversed": "感受被压住或一下涌得太满，先找合适的表达方式。"
+      },
+      "hook": "一句体贴的话、一首久未听到的歌，都可能让你突然有了感觉。圣杯王牌停在这个刚被触动的时刻，结果还没有写好。"
+    },
+    {
+      "cardId": "two-of-cups",
+      "deckOrder": 37,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯二",
+      "title": "圣杯二牌义 连接需要双方都伸出手",
+      "quickTake": {
+        "upright": "愿意听彼此，也愿意给出回应，可以商量下一步。",
+        "reversed": "回应不对等或期待没说清，先把差异摆到桌面上。"
+      },
+      "hook": "聊得投机之后，关系才刚开始接受检验。圣杯二关心的，是你们能否把那一刻的默契变成双方都愿意参与的交往。"
+    },
+    {
+      "cardId": "three-of-cups",
+      "deckOrder": 38,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯三",
+      "title": "圣杯三牌义 让喜悦有人分享",
+      "quickTake": {
+        "upright": "和能彼此支持的人相聚，把成果与感谢说出来。",
+        "reversed": "聚会或人情开始耗人，调整参与方式与分寸。"
+      },
+      "hook": "有些高兴，自己知道就很好；有些高兴，说给一起走过来的人听，会多一层分量。圣杯三把视线带到这群人中间。"
+    },
+    {
+      "cardId": "four-of-cups",
+      "deckOrder": 39,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯四",
+      "title": "圣杯四牌义 没有兴趣时先分清原因",
+      "quickTake": {
+        "upright": "暂时不想接新东西，给自己一点观察与辨认需要的时间。",
+        "reversed": "对外界重新有了兴趣，可以从一件小事试着参与。"
+      },
+      "hook": "明明有人递来机会，你却只想说改天吧。圣杯四不催你马上点头，它让你看一看：此刻的拒绝，究竟在保护什么。"
+    },
+    {
+      "cardId": "five-of-cups",
+      "deckOrder": 40,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯五",
+      "title": "圣杯五牌义 承认失去，也看清仍然拥有的",
+      "quickTake": {
+        "upright": "先承认真实的损失，不必急着把难过改写成好事。",
+        "reversed": "开始重新连接生活，或发现自己还需要时间处理遗憾。"
+      },
+      "hook": "安慰来得太快，有时像在催人停止难过。圣杯五把已经倾倒的杯子摆在眼前，同时让另外两只留在画面里。"
+    },
+    {
+      "cardId": "six-of-cups",
+      "deckOrder": 41,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯六",
+      "title": "圣杯六牌义 把旧时的温暖带到今天",
+      "quickTake": {
+        "upright": "从过去的好经验中找支持，珍惜朴素而具体的关心。",
+        "reversed": "让旧角色松动一点，给新的关系与生活方式留位置。"
+      },
+      "hook": "一件旧物可能把你带回某个被善待的下午。圣杯六关心这份熟悉感，也提醒你，回忆停住的时候，人还在继续变化。"
+    },
+    {
+      "cardId": "seven-of-cups",
+      "deckOrder": 42,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯七",
+      "title": "圣杯七牌义 先看清愿望，再挑一个去验证",
+      "quickTake": {
+        "upright": "选项看起来都很有吸引力，先分开愿望与已知事实。",
+        "reversed": "开始收拢目标，让一个想法接受现实检验。"
+      },
+      "hook": "脑中最精彩的未来，往往还没有日程、成本和第一步。圣杯七允许你做梦，也邀请你看一看，哪些只是梦里的摆设。"
+    },
+    {
+      "cardId": "eight-of-cups",
+      "deckOrder": 43,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯八",
+      "title": "圣杯八牌义 离开之前先说清自己在寻找什么",
+      "quickTake": {
+        "upright": "原先的目标不再满足你，可以认真考虑转向。",
+        "reversed": "在留下与离开间反复，先核对原因与实际条件。"
+      },
+      "hook": "最难离开的，有时不是最坏的处境，而是那个投入很多、却越来越说不出意义的地方。圣杯八把这个犹疑画成一个背影。"
+    },
+    {
+      "cardId": "nine-of-cups",
+      "deckOrder": 44,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯九",
+      "title": "圣杯九牌义 认真享受已经得到的满足",
+      "quickTake": {
+        "upright": "有理由为已有成果高兴，让自己踏实享受这一刻。",
+        "reversed": "表面已经够好，内心仍有缺口，需要重新辨认满足来自哪里。"
+      },
+      "hook": "目标完成后，你会坐下来开心一会儿，还是立刻把标准往上移？圣杯九把你带到成果面前，让满足本身成为值得留意的事。"
+    },
+    {
+      "cardId": "ten-of-cups",
+      "deckOrder": 45,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯十",
+      "title": "圣杯十牌义 归属感需要一起维护",
+      "quickTake": {
+        "upright": "与重要的人建立了支持，珍惜并维护这份日常安稳。",
+        "reversed": "理想中的和睦与实际体验有落差，听见被压住的需求。"
+      },
+      "hook": "一张幸福合照可以记录一个好时刻，却不能完成之后所有日子的相处。圣杯十适合谈共同的幸福，也适合问它靠什么维持。"
+    },
+    {
+      "cardId": "page-of-cups",
+      "deckOrder": 46,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯侍从",
+      "title": "圣杯侍从牌义 用好奇接住意外的灵感",
+      "quickTake": {
+        "upright": "愿意学习自己的感受，把新灵感说出来或做出来。",
+        "reversed": "灵感与猜想混在一起，表达前先核对事实和分寸。"
+      },
+      "hook": "有的好点子刚出现时很古怪，有的真心话刚开口时很笨拙。圣杯侍从给这份生涩留了位置，重点是你愿不愿意继续学习。"
+    },
+    {
+      "cardId": "knight-of-cups",
+      "deckOrder": 47,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯骑士",
+      "title": "圣杯骑士牌义 把动人的想法变成可靠的邀请",
+      "quickTake": {
+        "upright": "可以提出真诚的邀请，让美好的想法有机会落地。",
+        "reversed": "提议很动人却缺少落实，先核对承诺与实际行动。"
+      },
+      "hook": "有些话能让人立刻心动，真正建立信任的却是接下来怎样做。圣杯骑士从想象中出发，走到需要回应的路上。"
+    },
+    {
+      "cardId": "queen-of-cups",
+      "deckOrder": 48,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯王后",
+      "title": "圣杯王后牌义 理解感受，也守住照顾的边界",
+      "quickTake": {
+        "upright": "耐心听见感受，并把理解落实成合适的照顾。",
+        "reversed": "照顾开始越界或耗尽自己，需要分清谁该承担什么。"
+      },
+      "hook": "有人说我没事，你仍察觉到语气变了。圣杯王后珍惜这种细腻，也提醒你，察觉之后最好先问，而不是直接替别人决定。"
+    },
+    {
+      "cardId": "king-of-cups",
+      "deckOrder": 49,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "圣杯国王",
+      "title": "圣杯国王牌义 在起伏中保持清楚和负责",
+      "quickTake": {
+        "upright": "听得进感受，也守得住判断，把关心落实到可靠行动。",
+        "reversed": "情绪或权力开始影响判断，检查回避、偏袒与控制。"
+      },
+      "hook": "场面越紧张，越需要有人听懂各方的不安，又不随最强烈的声音改变原则。圣杯国王关注的，是这种有感受也有分寸的责任。"
+    },
+    {
+      "cardId": "ace-of-swords",
+      "deckOrder": 50,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑王牌",
+      "title": "宝剑王牌牌义 让一句清楚的话打开局面",
+      "quickTake": {
+        "upright": "抓住关键问题，用有依据的判断开启下一步。",
+        "reversed": "结论下得太快，或想得很多却始终说不清楚。"
+      },
+      "hook": "有时让事情开始的，是你终于能用一句话说出：现在真正要解决什么。"
+    },
+    {
+      "cardId": "two-of-swords",
+      "deckOrder": 51,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑二",
+      "title": "宝剑二牌义 暂停决定也需要看见现实",
+      "quickTake": {
+        "upright": "稳住两边的压力，查清缺少的信息再作选择。",
+        "reversed": "维持平衡越来越吃力，回避的问题开始挤进来。"
+      },
+      "hook": "你说「让我再想想」的时候，是还缺一条信息，还是希望选择自己消失？"
+    },
+    {
+      "cardId": "three-of-swords",
+      "deckOrder": 52,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑三",
+      "title": "宝剑三牌义 给失望一个准确的名字",
+      "quickTake": {
+        "upright": "看见痛处和分歧，诚实面对已经发生的事。",
+        "reversed": "伤感仍未理清，也可能开始找到表达与松动的空间。"
+      },
+      "hook": "一句话让你难受了很久。真正需要被说出来的，也许不是「我没事」。"
+    },
+    {
+      "cardId": "four-of-swords",
+      "deckOrder": 53,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑四",
+      "title": "宝剑四牌义 把暂停真正留给恢复",
+      "quickTake": {
+        "upright": "减少刺激，留出恢复和整理思路的时间。",
+        "reversed": "休息仍不踏实，或到了重新安排节奏的时候。"
+      },
+      "hook": "电脑合上了，脑子里的会议却还没散。真正的暂停，往往还要再关掉一层催促。"
+    },
+    {
+      "cardId": "five-of-swords",
+      "deckOrder": 54,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑五",
+      "title": "宝剑五牌义 赢下一句话以后还剩什么",
+      "quickTake": {
+        "upright": "有人占了上风，但合作与信任可能正在流失。",
+        "reversed": "冲突余波仍在，修复或退出都需要实际行动。"
+      },
+      "hook": "争论结束了，所有人都安静下来。你是真的把问题解决了，还是只剩下最后发言？"
+    },
+    {
+      "cardId": "six-of-swords",
+      "deckOrder": 55,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑六",
+      "title": "宝剑六牌义 带着未完的事走向下一岸",
+      "quickTake": {
+        "upright": "借助路线和支持，逐步离开难以继续的处境。",
+        "reversed": "交接或方向仍未理顺，先处理卡住移动的环节。"
+      },
+      "hook": "搬走的箱子已经打包，心情却还留在原地。改变有时先发生在行动上，感受会慢一些。"
+    },
+    {
+      "cardId": "seven-of-swords",
+      "deckOrder": 56,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑七",
+      "title": "宝剑七牌义 聪明的办法也要经得起说明",
+      "quickTake": {
+        "upright": "换个方法可能有用，但要核对代价、责任和遗漏。",
+        "reversed": "计划需要重新审视，接受建议或把未说清的事讲明白。"
+      },
+      "hook": "如果这个办法只能在别人不知情时成立，你愿意认真看看它靠什么运作吗？"
+    },
+    {
+      "cardId": "eight-of-swords",
+      "deckOrder": 57,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑八",
+      "title": "宝剑八牌义 把无路可走拆成具体限制",
+      "quickTake": {
+        "upright": "看清哪些条件挡住行动，区分未知与已经确认的障碍。",
+        "reversed": "有些限制开始松动，也可能需要更多帮助才能行动。"
+      },
+      "hook": "「我没有办法」有时藏着好几件不同的事：没权限、没资源、没信息，或还没有人愿意帮忙。"
+    },
+    {
+      "cardId": "nine-of-swords",
+      "deckOrder": 58,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑九",
+      "title": "宝剑九牌义 别让最坏的猜想独自占满夜晚",
+      "quickTake": {
+        "upright": "留意反复盘旋的担心，把事实和想象分开看。",
+        "reversed": "愿意说出忧虑，或发现自己仍在同一轮担心里打转。"
+      },
+      "hook": "夜里的一封未回邮件，可能在脑海里长成十种后果。此刻最响亮的想法，未必最接近事实。"
+    },
+    {
+      "cardId": "ten-of-swords",
+      "deckOrder": 59,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑十",
+      "title": "宝剑十牌义 承认这条路已经走到尽头",
+      "quickTake": {
+        "upright": "某种做法已难以继续，需要承认损耗并处理收尾。",
+        "reversed": "可能出现缓解或重新站稳的机会，也要防止反复拖回旧局面。"
+      },
+      "hook": "最难的有时不是再努力一次，而是承认：继续用原来的办法，已经不能把事情救回来。"
+    },
+    {
+      "cardId": "page-of-swords",
+      "deckOrder": 60,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑侍从",
+      "title": "宝剑侍从牌义 让好奇心先学会核实",
+      "quickTake": {
+        "upright": "保持敏锐，带着具体问题学习和核对信息。",
+        "reversed": "消息跑得比证据快，或警觉过头而处处怀疑。"
+      },
+      "hook": "你发现了一处不对劲。接下来是把猜想转发出去，还是先问一句「这个消息从哪里来」？"
+    },
+    {
+      "cardId": "knight-of-swords",
+      "deckOrder": 61,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑骑士",
+      "title": "宝剑骑士牌义 速度要跟得上判断",
+      "quickTake": {
+        "upright": "集中注意力处理关键问题，果断推进已核实的行动。",
+        "reversed": "急着证明或赶完，忽略条件变化和别人的反馈。"
+      },
+      "hook": "回信写得很快，发送按钮就在眼前。你是在解决紧急问题，还是被自己的急迫感追着走？"
+    },
+    {
+      "cardId": "queen-of-swords",
+      "deckOrder": 62,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑王后",
+      "title": "宝剑王后牌义 清楚表达也给回应留位置",
+      "quickTake": {
+        "upright": "有经验地判断，清楚表达需要与可以接受的范围。",
+        "reversed": "防备变成先入为主，或用尖锐语言把沟通挡在外面。"
+      },
+      "hook": "你可以温和地说不，也可以认真听完之后仍然说不。清楚的边界不需要靠冷酷来证明。"
+    },
+    {
+      "cardId": "king-of-swords",
+      "deckOrder": 63,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "宝剑国王",
+      "title": "宝剑国王牌义 为你的判断给出理由",
+      "quickTake": {
+        "upright": "用一致的标准和可靠事实作决定，并承担后果。",
+        "reversed": "权威压过证据，或用规则掩盖偏见和控制。"
+      },
+      "hook": "「就按我说的做」可以结束一次讨论，却未必构成一个值得信任的决定。"
+    },
+    {
+      "cardId": "ace-of-pentacles",
+      "deckOrder": 64,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币王牌",
+      "title": "星币王牌 让机会有地方落下",
+      "quickTake": {
+        "upright": "出现可着手的条件，先把第一步安排好。",
+        "reversed": "条件看起来不错，实际承接它的办法还没准备好。"
+      },
+      "hook": "王牌的手心摊开，星币放在上面。它没有被藏进保险箱，也没有变成结果；一条穿过花园的小路，替“得到机会”留下了后半句话。"
+    },
+    {
+      "cardId": "two-of-pentacles",
+      "deckOrder": 65,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币二",
+      "title": "星币二 忙的时候也要知道先做哪件",
+      "quickTake": {
+        "upright": "在变化中调整轻重，给重要的事留下位置。",
+        "reversed": "忙着维持表面的从容，实际负荷已经超出余量。"
+      },
+      "hook": "星币二把两个圆盘连在同一条带子上。你抬起一边，另一边也会受影响；许多日常安排，恰好具有这种牵动关系。"
+    },
+    {
+      "cardId": "three-of-pentacles",
+      "deckOrder": 66,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币三",
+      "title": "星币三 把各自的本事接成同一件作品",
+      "quickTake": {
+        "upright": "用得上的本事遇到清楚的配合，作品才能扎实。",
+        "reversed": "分工或标准没对齐，大家都忙却很难接上。"
+      },
+      "hook": "星币三的三个人没有做同一个动作：一个站上工作台，两个在下方看向他。共同完成一件事，有时正需要大家站在不同的位置。"
+    },
+    {
+      "cardId": "four-of-pentacles",
+      "deckOrder": 67,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币四",
+      "title": "星币四 守住需要的也留一点活动空间",
+      "quickTake": {
+        "upright": "明确什么值得保留，建立让自己安心的边界。",
+        "reversed": "握得过紧让生活停住，或边界一松就难以收回。"
+      },
+      "hook": "星币四的人把四枚圆盘都安排到身体上：头顶一枚，胸前一枚，脚下两枚。东西似乎很安全，可是他若想起身，要先做什么？"
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "deckOrder": 68,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币五",
+      "title": "星币五 困难需要被接住",
+      "quickTake": {
+        "upright": "承认正在承受的困难，把需要说具体。",
+        "reversed": "可以重新找支持，也要核实困难是否真的缓解。"
+      },
+      "hook": "星币五最刺眼的对比，是窗里的亮与窗外的冷。光就在身边，却不等于人已经得到庇护；看见资源和用得上资源，常常隔着一段距离。"
+    },
+    {
+      "cardId": "six-of-pentacles",
+      "deckOrder": 69,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币六",
+      "title": "星币六 给予也需要清楚的尺度",
+      "quickTake": {
+        "upright": "可提供或接受实际支持，把用途与边界说清。",
+        "reversed": "帮助附带隐形条件，或付出与决定权长期失衡。"
+      },
+      "hook": "星币六有两只伸出的手，也有一架握在另一人手中的秤。它让我们同时看见善意和位置差异：有人在给，有人在等，分配的规则却未写出来。"
+    },
+    {
+      "cardId": "seven-of-pentacles",
+      "deckOrder": 70,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币七",
+      "title": "星币七 停下来看看努力长成了什么",
+      "quickTake": {
+        "upright": "依据已有变化决定继续、调整还是暂停。",
+        "reversed": "心急催着要成果，或只因投入太多而不敢改变。"
+      },
+      "hook": "星币七的人没有继续挥动工具，他把手搭在柄上，低头看向眼前的植物。暂停不一定是偷懒，有时工作到了需要观察的那一步。"
+    },
+    {
+      "cardId": "eight-of-pentacles",
+      "deckOrder": 71,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币八",
+      "title": "星币八 让每一次重复都有一点改进",
+      "quickTake": {
+        "upright": "把注意力放在具体动作上，逐步提高完成质量。",
+        "reversed": "重复失去反馈，或只顾证明能力而忽略真正用途。"
+      },
+      "hook": "星币八把已经完成的圆盘排在旁边，人物却低头看着正在做的这一枚。熟练的积累很显眼，当下这一手仍需要重新认真。"
+    },
+    {
+      "cardId": "nine-of-pentacles",
+      "deckOrder": 72,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币九",
+      "title": "星币九 把已经建立的生活真正过进去",
+      "quickTake": {
+        "upright": "珍惜已经形成的能力与条件，安心使用它们。",
+        "reversed": "外表维持得很好，真实的自在却被比较和压力挤走。"
+      },
+      "hook": "葡萄已经结实，人物没有忙着采摘。星币九把“拥有以后怎样生活”摆到我们面前：当一些条件已经够用，你是否允许自己感受它们？"
+    },
+    {
+      "cardId": "ten-of-pentacles",
+      "deckOrder": 73,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币十",
+      "title": "星币十 让积累有人接得住",
+      "quickTake": {
+        "upright": "把已经形成的基础整理好，让更多人能够接续。",
+        "reversed": "表面的稳固盖住了分歧，旧安排需要重新商量。"
+      },
+      "hook": "星币十不是一个人抱着十枚钱币。圆盘散落在整个场景上，老人、成年人、孩子和狗都在其中，提醒我们：许多积累属于一套共同生活。"
+    },
+    {
+      "cardId": "page-of-pentacles",
+      "deckOrder": 74,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币侍从",
+      "title": "星币侍从 先把一个问题学明白",
+      "quickTake": {
+        "upright": "愿意从基础学起，让兴趣有一个具体对象。",
+        "reversed": "收集得很多却没消化，或被新鲜感不断带走。"
+      },
+      "hook": "星币侍从看得如此专注，仿佛手中的一枚圆盘就足以占满整个天空。学习有时从这个动作开始：先对一件具体的东西，提出一个认真问题。"
+    },
+    {
+      "cardId": "knight-of-pentacles",
+      "deckOrder": 75,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币骑士",
+      "title": "星币骑士 把可靠做成可以重复的动作",
+      "quickTake": {
+        "upright": "按清楚的步骤持续推进，让别人知道可以依靠什么。",
+        "reversed": "惯例变成停滞，或因为怕出错而迟迟不动。"
+      },
+      "hook": "其他骑士容易让人注意速度，星币骑士却骑在一匹几乎没有抬腿的马背上。这张牌提出一个安静的问题：明天，你还能把今天答应的事做一遍吗？"
+    },
+    {
+      "cardId": "queen-of-pentacles",
+      "deckOrder": 76,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币王后",
+      "title": "星币王后 把照顾落到真实需要上",
+      "quickTake": {
+        "upright": "用细心与实际安排支持生活，也把自己算在其中。",
+        "reversed": "照顾变成包办，或一直付出到自己的需要被忽略。"
+      },
+      "hook": "星币王后没有把圆盘高举给人看，而是低头将它放在膝间。她的注意力向下，靠近日常事物：一份关心究竟有没有落到可以感受的地方？"
+    },
+    {
+      "cardId": "king-of-pentacles",
+      "deckOrder": 77,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星币国王",
+      "title": "星币国王 让资源经得起长期使用",
+      "quickTake": {
+        "upright": "用经验与清楚规则管理资源，对实际结果负责。",
+        "reversed": "地位和控制压过了用途，或沿用成功经验却不再核查。"
+      },
+      "hook": "星币国王几乎被葡萄藤的图案包围：衣袍上有，王座旁也有。丰盛在这里不是孤立的一枚币，而是一整片需要维护、安排和负责的环境。"
+    }
+  ],
+  "zh-TW": [
+    {
+      "cardId": "fool",
+      "deckOrder": 0,
+      "number": "0",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "愚者",
+      "title": "愚者 從還不知道開始",
+      "quickTake": {
+        "upright": "新開始，可以試試，先看清腳下再邁步",
+        "reversed": "可能衝得太快，也可能一直不敢開始"
+      },
+      "hook": "愚者最值得看的地方，是他的臉和腳朝向不同的關注點：臉抬向遠方，腳已經來到崖邊。期待與風險，同時出現在這一刻。"
+    },
+    {
+      "cardId": "magician",
+      "deckOrder": 1,
+      "number": "I",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "魔術師",
+      "title": "魔術師 讓手邊的工具真正派上用場",
+      "quickTake": {
+        "upright": "有方法、有資源，能把事情做起來",
+        "reversed": "想得多、做得少，力氣沒用對地方"
+      },
+      "hook": "魔術師的桌子已經擺好了。讀這張牌時，先別急著尋找神祕力量，看看桌上現成的東西，以及站在桌後的人準備怎樣使用它們。"
+    },
+    {
+      "cardId": "high-priestess",
+      "deckOrder": 2,
+      "number": "II",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "女祭司",
+      "title": "女祭司 看見還沒有說出的部分",
+      "quickTake": {
+        "upright": "先靜下來觀察，有些資訊還沒浮出來",
+        "reversed": "感覺和猜測混在一起，或有話一直沒說"
+      },
+      "hook": "女祭司把卷軸拿在手中，卻沒有完全展開。她讓人注意到一個容易忽略的事實：資訊就在眼前，也可能仍不完整。"
+    },
+    {
+      "cardId": "empress",
+      "deckOrder": 3,
+      "number": "III",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "皇后",
+      "title": "皇后 給生長準備好條件",
+      "quickTake": {
+        "upright": "有空間、有照料，事情才長得起來",
+        "reversed": "照顧失了分寸，可能給太多，也可能沒顧上自己"
+      },
+      "hook": "皇后並沒有在麥田裡忙著收割。她坐在柔軟的墊子上，周圍的水、植物與穀物卻都在提醒我們：生長需要環境，不只需要催促。"
+    },
+    {
+      "cardId": "emperor",
+      "deckOrder": 4,
+      "number": "IV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "皇帝",
+      "title": "皇帝 讓責任和邊界站得住",
+      "quickTake": {
+        "upright": "把規矩和分工定清楚，事情更穩",
+        "reversed": "管得太死，或該負責的地方沒人負責"
+      },
+      "hook": "皇帝的紅袍下露出金屬護甲。即使已經坐上王座，他也沒有完全卸下防護。穩定可以保護人，也可能讓人難以放鬆。"
+    },
+    {
+      "cardId": "hierophant",
+      "deckOrder": 5,
+      "number": "V",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "教皇",
+      "title": "教皇 學會一套方法也看清它的來處",
+      "quickTake": {
+        "upright": "有成熟方法可借鑑，也適合向懂行的人請教",
+        "reversed": "老辦法未必合適，先弄懂再決定改不改"
+      },
+      "hook": "教皇面前有兩位聽講的人。知識在這裡不只是一個人的領悟，而是通過儀式、身分和共同語言，被一群人接住。"
+    },
+    {
+      "cardId": "lovers",
+      "deckOrder": 6,
+      "number": "VI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "戀人",
+      "title": "戀人 讓吸引走向彼此認同",
+      "quickTake": {
+        "upright": "彼此吸引，也願意認真選擇這段連結",
+        "reversed": "有感覺卻還沒達成共識，重要的選擇仍未說清"
+      },
+      "hook": "戀人的兩個人站在同一片草地上，卻沒有牽手。他們之間仍有空間，上方還有一位張開雙臂的有翼人物。關係在畫裡出現了，怎樣走近彼此，仍留給人去完成。"
+    },
+    {
+      "cardId": "chariot",
+      "deckOrder": 7,
+      "number": "VII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "戰車",
+      "title": "戰車 讓不同的力量朝同一方向走",
+      "quickTake": {
+        "upright": "方向定了，把節奏穩住，繼續往前推",
+        "reversed": "使勁卻走偏，先重新確認方向與步調"
+      },
+      "hook": "戰車看起來很有氣勢，車前的兩隻斯芬克斯卻臥著，車手手中也沒有畫出韁繩。問題隨之而來：讓一輛車前進的，除了用力，還需要什麼？"
+    },
+    {
+      "cardId": "strength",
+      "deckOrder": 8,
+      "number": "VIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "力量",
+      "title": "力量牌義 把力氣用在穩住自己上",
+      "quickTake": {
+        "upright": "穩住情緒，也拿得出勇氣，溫和一點照樣能把事做好。",
+        "reversed": "越用力越卡，看看自己是在硬撐，還是想壓過別人。"
+      },
+      "hook": "有力量的人，也能把動作放輕。面對壓力時，這張牌關心你怎麼運用那股力氣。"
+    },
+    {
+      "cardId": "hermit",
+      "deckOrder": 9,
+      "number": "IX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "隱士",
+      "title": "隱士牌義 留一點安靜，把問題看深",
+      "quickTake": {
+        "upright": "先靜下來，查清楚、想透一點，再走下一步。",
+        "reversed": "一個人想得太久了，分清楚是在沉澱，還是把自己關起來。"
+      },
+      "hook": "消息再多，也不會自動變成判斷。隱士先把聲音放低，讓你看清真正要解決的那一件事。"
+    },
+    {
+      "cardId": "wheel",
+      "deckOrder": 10,
+      "number": "X",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "命運之輪",
+      "title": "命運之輪牌義 局面在變，跟著現實調整",
+      "quickTake": {
+        "upright": "局面開始轉動，機會和變數都來了，及時調整更有用。",
+        "reversed": "變化不照你的步調走，先穩住，再看哪一步能調整。"
+      },
+      "hook": "有些變化來得比計畫快。命運之輪把你的注意力帶到時機、循環，以及此刻還能選擇的回應。"
+    },
+    {
+      "cardId": "justice",
+      "deckOrder": 11,
+      "number": "XI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "正義",
+      "title": "正義牌義 先把事實擺齊，再做決定",
+      "quickTake": {
+        "upright": "把事實和標準說清楚，用同一把尺做決定。",
+        "reversed": "判斷可能偏了，查查漏掉的證據、雙重標準，以及沒承擔的責任。"
+      },
+      "hook": "覺得不公平時，先別急著給人定性。正義讓你把證據、標準和各自承擔的責任放到同一張桌上。"
+    },
+    {
+      "cardId": "hanged-man",
+      "deckOrder": 12,
+      "number": "XII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "倒吊人",
+      "title": "倒吊人牌義 暫停一下，換個角度再看",
+      "quickTake": {
+        "upright": "先停一停，換個角度看，弄清楚什麼值得付出。",
+        "reversed": "卡太久了，看看是在等條件，還是一直消耗卻不肯改變。"
+      },
+      "hook": "越急著掙脫，越可能只重複原來的動作。倒吊人把問題倒過來，讓暫停也成為觀察的一部分。"
+    },
+    {
+      "cardId": "death",
+      "deckOrder": 13,
+      "number": "XIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "死神",
+      "title": "死神牌義 讓已經結束的事真正收尾",
+      "quickTake": {
+        "upright": "這一段該結束了，把舊事收好，替下一步騰出空間。",
+        "reversed": "心裡知道該改變，卻還捨不得放手；先找一件能鬆開的舊事。"
+      },
+      "hook": "有些改變不能只靠修修補補。死神把「結束」擺到眼前，讓你承認失去，也騰出處理下一階段的空間。"
+    },
+    {
+      "cardId": "temperance",
+      "deckOrder": 14,
+      "number": "XIV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "節制",
+      "title": "節制牌義 調好分寸，讓不同需要一起運作",
+      "quickTake": {
+        "upright": "別一口氣用太猛，調好比例和步調，事情會更順。",
+        "reversed": "搭配失衡、步調亂了，先找出哪一邊太多、哪一邊不夠。"
+      },
+      "hook": "兩隻杯子之間，水還在流。節制關心的是持續調整：怎樣搭配時間、精力與需求，才能做得長久。"
+    },
+    {
+      "cardId": "devil",
+      "deckOrder": 15,
+      "number": "XV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "惡魔",
+      "title": "惡魔 看清讓你停不下來的交換",
+      "quickTake": {
+        "upright": "很著迷，停不下來，代價卻越來越大",
+        "reversed": "想掙脫舊習慣了，也可能還在替它找理由"
+      },
+      "hook": "那件讓你離不開的事，究竟給了你什麼，又拿走了什麼？"
+    },
+    {
+      "cardId": "tower",
+      "deckOrder": 16,
+      "number": "XVI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "高塔",
+      "title": "高塔 當原來的辦法撐不住了",
+      "quickTake": {
+        "upright": "原來的安排被打斷，問題沒法再遮過去",
+        "reversed": "知道該改卻一直拖，也可能正縮小衝擊、慢慢收拾"
+      },
+      "hook": "塔頂的皇冠被掀開，塔邊的人也失去了立足處。"
+    },
+    {
+      "cardId": "star",
+      "deckOrder": 17,
+      "number": "XVII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "星星",
+      "title": "星星 給恢復留一點真實的空間",
+      "quickTake": {
+        "upright": "緩過來了，重新有盼頭，適合一點點養回來",
+        "reversed": "盼頭變淡了，付出還在，自己卻有點乾"
+      },
+      "hook": "星星下面的人沒有仰頭許願，她低下頭，認真把水倒進眼前的土地。"
+    },
+    {
+      "cardId": "moon",
+      "deckOrder": 18,
+      "number": "XVIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "月亮",
+      "title": "月亮 在看不清時保留判斷",
+      "quickTake": {
+        "upright": "看不清，心裡沒底，先別把猜測當成事實",
+        "reversed": "迷霧可能在散，也可能越想越亂，需要逐項確認"
+      },
+      "hook": "路一直通向遠山，但月光照不出它經過的每一個轉彎。"
+    },
+    {
+      "cardId": "sun",
+      "deckOrder": 19,
+      "number": "XIX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "太陽",
+      "title": "太陽 讓好的東西真正被看見",
+      "quickTake": {
+        "upright": "事情明朗了，有勁了，好的進展可以大方承認",
+        "reversed": "好的一面還在，只是熱情不足，或開心得有點過頭"
+      },
+      "hook": "孩子來到牆的前面，張開手臂，彷彿終於不用躲著表達高興。"
+    },
+    {
+      "cardId": "judgement",
+      "deckOrder": 20,
+      "number": "XX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "審判",
+      "title": "審判 聽清該回應的事",
+      "quickTake": {
+        "upright": "有些事不能再含糊，該回頭看清，再作決定了",
+        "reversed": "遲遲不肯回應，或反覆責怪自己，卡在決定之前"
+      },
+      "hook": "號角響起，所有人都抬起頭；這次，問題是你準備怎樣回應。"
+    },
+    {
+      "cardId": "world",
+      "deckOrder": 21,
+      "number": "XXI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "世界",
+      "title": "世界 把一個階段完整地收好",
+      "quickTake": {
+        "upright": "這一段做完整了，可以收尾、交付，進入下一程",
+        "reversed": "就差收尾這一截，或明明完成了卻遲遲不肯放手"
+      },
+      "hook": "花環圍成一圈，裡面的人卻還在跳舞：完成，也可以是流暢的動作。"
+    },
+    {
+      "cardId": "ace-of-wands",
+      "deckOrder": 22,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖王牌",
+      "title": "權杖王牌 把想做的事試一下",
+      "quickTake": {
+        "upright": "有了想做的事，先動手試一小步",
+        "reversed": "提不起勁，或點子很多卻遲遲沒開始"
+      },
+      "hook": "一隻手握住還在長葉子的木杖，畫面卻沒有出現使用它的人生計畫。權杖王牌讓我們停在興趣剛剛冒出來的瞬間：有了動力，接下來拿它做什麼？"
+    },
+    {
+      "cardId": "two-of-wands",
+      "deckOrder": 23,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖二",
+      "title": "權杖二 站穩之後再選方向",
+      "quickTake": {
+        "upright": "想走得更遠，先選清方向和條件",
+        "reversed": "計畫卡在猶豫裡，或想得太遠沒看眼前"
+      },
+      "hook": "權杖二把整個世界縮成掌心的一顆球，人物的腳卻還留在城牆上。遠方可以想得很大，真正要做的決定仍發生在自己所站的位置。"
+    },
+    {
+      "cardId": "three-of-wands",
+      "deckOrder": 24,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖三",
+      "title": "權杖三 留意行動怎樣得到回應",
+      "quickTake": {
+        "upright": "事情已經往外走，留意進展和新的機會",
+        "reversed": "遲遲沒等到回應，先查卡在哪個環節"
+      },
+      "hook": "權杖三的人物背對我們，看著水面上的船。和掌中握著地球儀的權杖二相比，這一次，注意力已經放到正在外面發生的事上。"
+    },
+    {
+      "cardId": "four-of-wands",
+      "deckOrder": 25,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖四",
+      "title": "權杖四 讓完成與相聚有一個位置",
+      "quickTake": {
+        "upright": "有了可以安心停留、一起慶祝的地方",
+        "reversed": "表面很熱鬧，心裡未必安穩或有歸屬感"
+      },
+      "hook": "權杖四的花環架沒有把人關在裡面。四根杖圍出一處可以相聚的空間，前方依然敞開，讓慶祝與歡迎同時進入畫面。"
+    },
+    {
+      "cardId": "five-of-wands",
+      "deckOrder": 26,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖五",
+      "title": "權杖五 讓不同的力氣有規則可用",
+      "quickTake": {
+        "upright": "大家都在使勁，先弄清爭的是什麼",
+        "reversed": "可能在回避分歧，也可能越爭越亂"
+      },
+      "hook": "五個人各拿一根杖，動作都很大，卻看不出共同指向哪裡。權杖五最有用的問題不是「誰會贏」，而是這些力氣正在做同一件事嗎？"
+    },
+    {
+      "cardId": "six-of-wands",
+      "deckOrder": 27,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖六",
+      "title": "權杖六 讓成果被看見也被說明白",
+      "quickTake": {
+        "upright": "努力得到了認可，可以大方接住這份肯定",
+        "reversed": "沒得到想要的肯定，或太在意別人怎麼評價"
+      },
+      "hook": "權杖六的桂冠出現了兩次：一次戴在騎者頭上，一次掛在木杖上。成果不僅被自己知道，還進入了人群的視線。"
+    },
+    {
+      "cardId": "seven-of-wands",
+      "deckOrder": 28,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖七",
+      "title": "權杖七 說清你要守住什麼",
+      "quickTake": {
+        "upright": "有壓力也要站穩，把需要守住的事說清楚",
+        "reversed": "忙著應付所有質疑，或撐不住想讓步"
+      },
+      "hook": "權杖七裡能看見的人只有一個，伸向他的木杖卻有六根。讀這張牌，先辨認真正需要回應的壓力，別急著把每根杖都想成一個敵人。"
+    },
+    {
+      "cardId": "eight-of-wands",
+      "deckOrder": 29,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖八",
+      "title": "權杖八 在加快的時候保持清楚",
+      "quickTake": {
+        "upright": "進展快了，消息和行動需要及時接上",
+        "reversed": "催得很急卻沒推進，或消息多到接不過來"
+      },
+      "hook": "權杖八沒有站在中央的人物。八根杖把視線一起帶向斜下方，事情彷彿已經離手，在空中形成自己的節奏。"
+    },
+    {
+      "cardId": "nine-of-wands",
+      "deckOrder": 30,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖九",
+      "title": "權杖九 讓堅持有恢復的餘地",
+      "quickTake": {
+        "upright": "已經撐過一段，守住重點也給自己喘口氣",
+        "reversed": "累得難以繼續，或一直繃著不敢放鬆"
+      },
+      "hook": "權杖九的人物還站著，卻已經把身體靠向木杖。堅持的姿態與需要支撐的姿態，在這張牌裡並沒有互相排斥。"
+    },
+    {
+      "cardId": "ten-of-wands",
+      "deckOrder": 31,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖十",
+      "title": "權杖十 看清責任與負荷的分配",
+      "quickTake": {
+        "upright": "事情都壓在身上，該重新分配了",
+        "reversed": "想放下負擔，先把交接和去向安排好"
+      },
+      "hook": "十根長杖在同一個人懷裡聚攏，身體也跟著彎下去。權杖十讓人看見的，是事情各自可能有價值，承擔它們的總量卻仍需要計算。"
+    },
+    {
+      "cardId": "page-of-wands",
+      "deckOrder": 32,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖侍從",
+      "title": "權杖侍從 帶著好奇學會表達",
+      "quickTake": {
+        "upright": "對新東西感興趣，願意問、願意試",
+        "reversed": "點子說得很熱鬧，練習和行動還沒跟上"
+      },
+      "hook": "權杖侍從沒有揮動手裡的杖，而是抬頭仔細看著它。好奇心尚未變成大動作，這個觀察和發問的階段，本身就是學習的一部分。"
+    },
+    {
+      "cardId": "knight-of-wands",
+      "deckOrder": 33,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖騎士",
+      "title": "權杖騎士 讓衝勁跟得上方向",
+      "quickTake": {
+        "upright": "有衝勁，願意主動推進和嘗試",
+        "reversed": "衝得太快、方向老變，事情容易斷在半路"
+      },
+      "hook": "權杖騎士的馬抬起前腿，頭盔上的紅色羽飾也向後揚起。強烈的動勢先吸引了目光，隨後才輪到一個實際問題：這股衝勁準備帶人去哪裡？"
+    },
+    {
+      "cardId": "queen-of-wands",
+      "deckOrder": 34,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖王后",
+      "title": "權杖王后 自在表達自己的熱情",
+      "quickTake": {
+        "upright": "對自己有信心，也能讓周圍的人放鬆投入",
+        "reversed": "為了被認可太用力，或把自己越縮越小"
+      },
+      "hook": "權杖王后一手握杖，一手拿著向日葵，腳前還有一隻直視觀者的黑貓。畫面把醒目的存在感與安穩坐著的姿態放在一起，自信並不只靠大動作表達。"
+    },
+    {
+      "cardId": "king-of-wands",
+      "deckOrder": 35,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "權杖國王",
+      "title": "權杖國王 為方向承擔責任",
+      "quickTake": {
+        "upright": "看準方向，能帶頭行動也願意負責",
+        "reversed": "急著讓別人跟上，卻沒留出討論和調整空間"
+      },
+      "hook": "權杖國王已經坐上王座，手裡的木杖仍然長著葉子。地位沒有讓行動的主題消失，只是把問題推得更遠：當別人受到你的決定影響，熱情怎樣變成責任？"
+    },
+    {
+      "cardId": "ace-of-cups",
+      "deckOrder": 36,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯王牌",
+      "title": "聖杯王牌牌義 給新的感受留一點空間",
+      "quickTake": {
+        "upright": "願意接受關心，也願意真誠表達，新的連結有了起點。",
+        "reversed": "感受被壓住或一下湧得太滿，先找合適的表達方式。"
+      },
+      "hook": "一句體貼的話、一首久未聽到的歌，都可能讓你突然有了感覺。聖杯王牌停在這個剛被觸動的時刻，結果還沒有寫好。"
+    },
+    {
+      "cardId": "two-of-cups",
+      "deckOrder": 37,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯二",
+      "title": "聖杯二牌義 連結需要雙方都伸出手",
+      "quickTake": {
+        "upright": "願意聽彼此，也願意給出回應，可以商量下一步。",
+        "reversed": "回應不對等或期待沒說清，先把差異擺到桌面上。"
+      },
+      "hook": "聊得投機之後，關係才剛開始接受檢驗。聖杯二關心的，是你們能否把那一刻的默契變成雙方都願意參與的交往。"
+    },
+    {
+      "cardId": "three-of-cups",
+      "deckOrder": 38,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯三",
+      "title": "聖杯三牌義 讓喜悅有人分享",
+      "quickTake": {
+        "upright": "和能彼此支持的人相聚，把成果與感謝說出來。",
+        "reversed": "聚會或人情開始耗人，調整參與方式與分寸。"
+      },
+      "hook": "有些高興，自己知道就很好；有些高興，說給一起走過來的人聽，會多一層分量。聖杯三把視線帶到這群人中間。"
+    },
+    {
+      "cardId": "four-of-cups",
+      "deckOrder": 39,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯四",
+      "title": "聖杯四牌義 沒有興趣時先分清原因",
+      "quickTake": {
+        "upright": "暫時不想接新東西，給自己一點觀察與辨認需要的時間。",
+        "reversed": "對外界重新有了興趣，可以從一件小事試著參與。"
+      },
+      "hook": "明明有人遞來機會，你卻只想說改天吧。聖杯四不催你馬上點頭，它讓你看一看：此刻的拒絕，究竟在保護什麼。"
+    },
+    {
+      "cardId": "five-of-cups",
+      "deckOrder": 40,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯五",
+      "title": "聖杯五牌義 承認失去，也看清仍然擁有的",
+      "quickTake": {
+        "upright": "先承認真實的損失，不必急著把難過改寫成好事。",
+        "reversed": "開始重新連結生活，或發現自己還需要時間處理遺憾。"
+      },
+      "hook": "安慰來得太快，有時像在催人停止難過。聖杯五把已經傾倒的杯子擺在眼前，同時讓另外兩隻留在畫面裡。"
+    },
+    {
+      "cardId": "six-of-cups",
+      "deckOrder": 41,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯六",
+      "title": "聖杯六牌義 把舊時的溫暖帶到今天",
+      "quickTake": {
+        "upright": "從過去的好經驗中找支持，珍惜樸素而具體的關心。",
+        "reversed": "讓舊角色鬆動一點，給新的關係與生活方式留位置。"
+      },
+      "hook": "一件舊物可能把你帶回某個被善待的下午。聖杯六關心這份熟悉感，也提醒你，回憶停住的時候，人還在繼續變化。"
+    },
+    {
+      "cardId": "seven-of-cups",
+      "deckOrder": 42,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯七",
+      "title": "聖杯七牌義 先看清願望，再挑一個去驗證",
+      "quickTake": {
+        "upright": "選項看起來都很有吸引力，先分開願望與已知事實。",
+        "reversed": "開始收攏目標，讓一個想法接受現實檢驗。"
+      },
+      "hook": "腦中最精彩的未來，往往還沒有日程、成本和第一步。聖杯七允許你做夢，也邀請你看一看，哪些只是夢裡的擺設。"
+    },
+    {
+      "cardId": "eight-of-cups",
+      "deckOrder": 43,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯八",
+      "title": "聖杯八牌義 離開之前先說清自己在尋找什麼",
+      "quickTake": {
+        "upright": "原先的目標不再滿足你，可以認真考慮轉向。",
+        "reversed": "在留下與離開間反覆，先核對原因與實際條件。"
+      },
+      "hook": "最難離開的，有時不是最壞的處境，而是那個投入很多、卻越來越說不出意義的地方。聖杯八把這個猶疑畫成一個背影。"
+    },
+    {
+      "cardId": "nine-of-cups",
+      "deckOrder": 44,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯九",
+      "title": "聖杯九牌義 認真享受已經得到的滿足",
+      "quickTake": {
+        "upright": "有理由為已有成果高興，讓自己踏實享受這一刻。",
+        "reversed": "表面已經夠好，內心仍有缺口，需要重新辨認滿足來自哪裡。"
+      },
+      "hook": "目標完成後，你會坐下來開心一會兒，還是立刻把標準往上移？聖杯九把你帶到成果面前，讓滿足本身成為值得留意的事。"
+    },
+    {
+      "cardId": "ten-of-cups",
+      "deckOrder": 45,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯十",
+      "title": "聖杯十牌義 歸屬感需要一起維護",
+      "quickTake": {
+        "upright": "與重要的人建立了支持，珍惜並維護這份日常安穩。",
+        "reversed": "理想中的和睦與實際體驗有落差，聽見被壓住的需求。"
+      },
+      "hook": "一張幸福合照可以記錄一個好時刻，卻不能完成之後所有日子的相處。聖杯十適合談共同的幸福，也適合問它靠什麼維持。"
+    },
+    {
+      "cardId": "page-of-cups",
+      "deckOrder": 46,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯侍從",
+      "title": "聖杯侍從牌義 用好奇接住意外的靈感",
+      "quickTake": {
+        "upright": "願意學習自己的感受，把新靈感說出來或做出來。",
+        "reversed": "靈感與猜想混在一起，表達前先核對事實和分寸。"
+      },
+      "hook": "有的好點子剛出現時很古怪，有的真心話剛開口時很笨拙。聖杯侍從給這份生澀留了位置，重點是你願不願意繼續學習。"
+    },
+    {
+      "cardId": "knight-of-cups",
+      "deckOrder": 47,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯騎士",
+      "title": "聖杯騎士牌義 把動人的想法變成可靠的邀請",
+      "quickTake": {
+        "upright": "可以提出真誠的邀請，讓美好的想法有機會落地。",
+        "reversed": "提議很動人卻缺少落實，先核對承諾與實際行動。"
+      },
+      "hook": "有些話能讓人立刻心動，真正建立信任的卻是接下來怎樣做。聖杯騎士從想像中出發，走到需要回應的路上。"
+    },
+    {
+      "cardId": "queen-of-cups",
+      "deckOrder": 48,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯王后",
+      "title": "聖杯王后牌義 理解感受，也守住照顧的邊界",
+      "quickTake": {
+        "upright": "耐心聽見感受，並把理解落實成合適的照顧。",
+        "reversed": "照顧開始越界或耗盡自己，需要分清誰該承擔什麼。"
+      },
+      "hook": "有人說我沒事，你仍察覺到語氣變了。聖杯王后珍惜這種細膩，也提醒你，察覺之後最好先問，而不是直接替別人決定。"
+    },
+    {
+      "cardId": "king-of-cups",
+      "deckOrder": 49,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "聖杯國王",
+      "title": "聖杯國王牌義 在起伏中保持清楚和負責",
+      "quickTake": {
+        "upright": "聽得進感受，也守得住判斷，把關心落實到可靠行動。",
+        "reversed": "情緒或權力開始影響判斷，檢查回避、偏袒與控制。"
+      },
+      "hook": "場面越緊張，越需要有人聽懂各方的不安，又不隨最強烈的聲音改變原則。聖杯國王關注的，是這種有感受也有分寸的責任。"
+    },
+    {
+      "cardId": "ace-of-swords",
+      "deckOrder": 50,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍王牌",
+      "title": "寶劍王牌牌義 讓一句清楚的話打開局面",
+      "quickTake": {
+        "upright": "抓住關鍵問題，用有依據的判斷開啓下一步。",
+        "reversed": "結論下得太快，或想得很多卻始終說不清楚。"
+      },
+      "hook": "有時讓事情開始的，是你終於能用一句話說出：現在真正要解決什麼。"
+    },
+    {
+      "cardId": "two-of-swords",
+      "deckOrder": 51,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍二",
+      "title": "寶劍二牌義 暫停決定也需要看見現實",
+      "quickTake": {
+        "upright": "穩住兩邊的壓力，查清缺少的資訊再作選擇。",
+        "reversed": "維持平衡越來越吃力，回避的問題開始擠進來。"
+      },
+      "hook": "你說「讓我再想想」的時候，是還缺一項資訊，還是希望選擇自己消失？"
+    },
+    {
+      "cardId": "three-of-swords",
+      "deckOrder": 52,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍三",
+      "title": "寶劍三牌義 給失望一個準確的名字",
+      "quickTake": {
+        "upright": "看見痛處和分歧，誠實面對已經發生的事。",
+        "reversed": "傷感仍未理清，也可能開始找到表達與鬆動的空間。"
+      },
+      "hook": "一句話讓你難受了很久。真正需要被說出來的，也許不是「我沒事」。"
+    },
+    {
+      "cardId": "four-of-swords",
+      "deckOrder": 53,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍四",
+      "title": "寶劍四牌義 把暫停真正留給恢復",
+      "quickTake": {
+        "upright": "減少刺激，留出恢復和整理思路的時間。",
+        "reversed": "休息仍不踏實，或到了重新安排節奏的時候。"
+      },
+      "hook": "電腦合上了，腦子裡的會議卻還沒散。真正的暫停，往往還要再關掉一層催促。"
+    },
+    {
+      "cardId": "five-of-swords",
+      "deckOrder": 54,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍五",
+      "title": "寶劍五牌義 贏下一句話以後還剩什麼",
+      "quickTake": {
+        "upright": "有人佔了上風，但合作與信任可能正在流失。",
+        "reversed": "衝突餘波仍在，修復或退出都需要實際行動。"
+      },
+      "hook": "爭論結束了，所有人都安靜下來。你是真的把問題解決了，還是只剩下最後發言？"
+    },
+    {
+      "cardId": "six-of-swords",
+      "deckOrder": 55,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍六",
+      "title": "寶劍六牌義 帶著未完的事走向下一岸",
+      "quickTake": {
+        "upright": "借助路線和支持，逐步離開難以繼續的處境。",
+        "reversed": "交接或方向仍未理順，先處理卡住移動的環節。"
+      },
+      "hook": "搬走的箱子已經打包，心情卻還留在原地。改變有時先發生在行動上，感受會慢一些。"
+    },
+    {
+      "cardId": "seven-of-swords",
+      "deckOrder": 56,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍七",
+      "title": "寶劍七牌義 聰明的辦法也要經得起說明",
+      "quickTake": {
+        "upright": "換個方法可能有用，但要核對代價、責任和遺漏。",
+        "reversed": "計畫需要重新審視，接受建議或把未說清的事講明白。"
+      },
+      "hook": "如果這個辦法只能在別人不知情時成立，你願意認真看看它靠什麼運作嗎？"
+    },
+    {
+      "cardId": "eight-of-swords",
+      "deckOrder": 57,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍八",
+      "title": "寶劍八牌義 把無路可走拆成具體限制",
+      "quickTake": {
+        "upright": "看清哪些條件擋住行動，區分未知與已經確認的障礙。",
+        "reversed": "有些限制開始鬆動，也可能需要更多幫助才能行動。"
+      },
+      "hook": "「我沒有辦法」有時藏著好幾件不同的事：沒權限、沒資源、沒資訊，或還沒有人願意幫忙。"
+    },
+    {
+      "cardId": "nine-of-swords",
+      "deckOrder": 58,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍九",
+      "title": "寶劍九牌義 別讓最壞的猜想獨自佔滿夜晚",
+      "quickTake": {
+        "upright": "留意反覆盤旋的擔心，把事實和想像分開看。",
+        "reversed": "願意說出憂慮，或發現自己仍在同一輪擔心裡打轉。"
+      },
+      "hook": "夜裡一封沒有回音的電子郵件，可能在腦海裡長成十種後果。此刻最響亮的想法，未必最接近事實。"
+    },
+    {
+      "cardId": "ten-of-swords",
+      "deckOrder": 59,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍十",
+      "title": "寶劍十牌義 承認這條路已經走到盡頭",
+      "quickTake": {
+        "upright": "某種做法已難以繼續，需要承認損耗並處理收尾。",
+        "reversed": "可能出現緩解或重新站穩的機會，也要防止反覆拖回舊局面。"
+      },
+      "hook": "最難的有時不是再努力一次，而是承認：繼續用原來的辦法，已經不能把事情救回來。"
+    },
+    {
+      "cardId": "page-of-swords",
+      "deckOrder": 60,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍侍從",
+      "title": "寶劍侍從牌義 讓好奇心先學會核實",
+      "quickTake": {
+        "upright": "保持敏銳，帶著具體問題學習和核對資訊。",
+        "reversed": "消息跑得比證據快，或警覺過頭而處處懷疑。"
+      },
+      "hook": "你發現了一處不對勁。接下來是把猜想轉發出去，還是先問一句「這個消息從哪裡來」？"
+    },
+    {
+      "cardId": "knight-of-swords",
+      "deckOrder": 61,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍騎士",
+      "title": "寶劍騎士牌義 速度要跟得上判斷",
+      "quickTake": {
+        "upright": "集中注意力處理關鍵問題，果斷推進已核實的行動。",
+        "reversed": "急著證明或趕完，忽略條件變化和別人的回饋。"
+      },
+      "hook": "回信寫得很快，傳送按鈕就在眼前。你是在解決緊急問題，還是被自己的急迫感追著走？"
+    },
+    {
+      "cardId": "queen-of-swords",
+      "deckOrder": 62,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍王后",
+      "title": "寶劍王后牌義 清楚表達也給回應留位置",
+      "quickTake": {
+        "upright": "有經驗地判斷，清楚表達需要與可以接受的範圍。",
+        "reversed": "防備變成先入為主，或用尖銳語言把溝通擋在外面。"
+      },
+      "hook": "你可以溫和地說不，也可以認真聽完之後仍然說不。清楚的邊界不需要靠冷酷來證明。"
+    },
+    {
+      "cardId": "king-of-swords",
+      "deckOrder": 63,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "寶劍國王",
+      "title": "寶劍國王牌義 為你的判斷給出理由",
+      "quickTake": {
+        "upright": "用一致的標準和可靠事實作決定，並承擔後果。",
+        "reversed": "權威壓過證據，或用規則掩蓋偏見和控制。"
+      },
+      "hook": "「就按我說的做」可以結束一次討論，卻未必構成一個值得信任的決定。"
+    },
+    {
+      "cardId": "ace-of-pentacles",
+      "deckOrder": 64,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣王牌",
+      "title": "星幣王牌 讓機會有地方落下",
+      "quickTake": {
+        "upright": "出現可著手的條件，先把第一步安排好。",
+        "reversed": "條件看起來不錯，實際承接它的辦法還沒準備好。"
+      },
+      "hook": "王牌的手心攤開，星幣放在上面。它沒有被藏進保險箱，也沒有變成結果；一條穿過花園的小路，替「得到機會」留下了後半句話。"
+    },
+    {
+      "cardId": "two-of-pentacles",
+      "deckOrder": 65,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣二",
+      "title": "星幣二 忙的時候也要知道先做哪件",
+      "quickTake": {
+        "upright": "在變化中調整輕重，給重要的事留下位置。",
+        "reversed": "忙著維持表面的從容，實際負荷已經超出餘量。"
+      },
+      "hook": "星幣二把兩個圓盤連在同一條帶子上。你抬起一邊，另一邊也會受影響；許多日常安排，恰好具有這種牽動關係。"
+    },
+    {
+      "cardId": "three-of-pentacles",
+      "deckOrder": 66,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣三",
+      "title": "星幣三 把各自的本事接成同一件作品",
+      "quickTake": {
+        "upright": "用得上的本事遇到清楚的配合，作品才能扎實。",
+        "reversed": "分工或標準沒對齊，大家都忙卻很難接上。"
+      },
+      "hook": "星幣三的三個人沒有做同一個動作：一個站上工作台，兩個在下方看向他。共同完成一件事，有時正需要大家站在不同的位置。"
+    },
+    {
+      "cardId": "four-of-pentacles",
+      "deckOrder": 67,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣四",
+      "title": "星幣四 守住需要的也留一點活動空間",
+      "quickTake": {
+        "upright": "明確什麼值得保留，建立讓自己安心的邊界。",
+        "reversed": "握得過緊讓生活停住，或邊界一松就難以收回。"
+      },
+      "hook": "星幣四的人把四枚圓盤都安排到身體上：頭頂一枚，胸前一枚，腳下兩枚。東西似乎很安全，可是他若想起身，要先做什麼？"
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "deckOrder": 68,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣五",
+      "title": "星幣五 困難需要被接住",
+      "quickTake": {
+        "upright": "承認正在承受的困難，把需要說具體。",
+        "reversed": "可以重新找支持，也要核實困難是否真的緩解。"
+      },
+      "hook": "星幣五最刺眼的對比，是窗裡的亮與窗外的冷。光就在身邊，卻不等於人已經得到庇護；看見資源和用得上資源，常常隔著一段距離。"
+    },
+    {
+      "cardId": "six-of-pentacles",
+      "deckOrder": 69,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣六",
+      "title": "星幣六 給予也需要清楚的尺度",
+      "quickTake": {
+        "upright": "可提供或接受實際支持，把用途與邊界說清。",
+        "reversed": "幫助附帶隱形條件，或付出與決定權長期失衡。"
+      },
+      "hook": "星幣六有兩只伸出的手，也有一架握在另一人手中的秤。它讓我們同時看見善意和位置差異：有人在給，有人在等，分配的規則卻未寫出來。"
+    },
+    {
+      "cardId": "seven-of-pentacles",
+      "deckOrder": 70,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣七",
+      "title": "星幣七 停下來看看努力長成了什麼",
+      "quickTake": {
+        "upright": "依據已有變化決定繼續、調整還是暫停。",
+        "reversed": "心急催著要成果，或只因投入太多而不敢改變。"
+      },
+      "hook": "星幣七的人沒有繼續揮動工具，他把手搭在柄上，低頭看向眼前的植物。暫停不一定是偷懶，有時工作到了需要觀察的那一步。"
+    },
+    {
+      "cardId": "eight-of-pentacles",
+      "deckOrder": 71,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣八",
+      "title": "星幣八 讓每一次重復都有一點改進",
+      "quickTake": {
+        "upright": "把注意力放在具體動作上，逐步提高完成質量。",
+        "reversed": "重復失去回饋，或只顧證明能力而忽略真正用途。"
+      },
+      "hook": "星幣八把已經完成的圓盤排在旁邊，人物卻低頭看著正在做的這一枚。熟練的積累很顯眼，當下這一手仍需要重新認真。"
+    },
+    {
+      "cardId": "nine-of-pentacles",
+      "deckOrder": 72,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣九",
+      "title": "星幣九 把已經建立的生活真正過進去",
+      "quickTake": {
+        "upright": "珍惜已經形成的能力與條件，安心使用它們。",
+        "reversed": "外表維持得很好，真實的自在卻被比較和壓力擠走。"
+      },
+      "hook": "葡萄已經結實，人物沒有忙著採摘。星幣九把「擁有以後怎樣生活」擺到我們面前：當一些條件已經夠用，你是否允許自己感受它們？"
+    },
+    {
+      "cardId": "ten-of-pentacles",
+      "deckOrder": 73,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣十",
+      "title": "星幣十 讓積累有人接得住",
+      "quickTake": {
+        "upright": "把已經形成的基礎整理好，讓更多人能夠接續。",
+        "reversed": "表面的穩固蓋住了分歧，舊安排需要重新商量。"
+      },
+      "hook": "星幣十不是一個人抱著十枚錢幣。圓盤散落在整個場景上，老人、成年人、孩子和狗都在其中，提醒我們：許多積累屬於一套共同生活。"
+    },
+    {
+      "cardId": "page-of-pentacles",
+      "deckOrder": 74,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣侍從",
+      "title": "星幣侍從 先把一個問題學明白",
+      "quickTake": {
+        "upright": "願意從基礎學起，讓興趣有一個具體對象。",
+        "reversed": "收集得很多卻沒消化，或被新鮮感不斷帶走。"
+      },
+      "hook": "星幣侍從看得如此專注，彷彿手中的一枚圓盤就足以佔滿整個天空。學習有時從這個動作開始：先對一件具體的東西，提出一個認真問題。"
+    },
+    {
+      "cardId": "knight-of-pentacles",
+      "deckOrder": 75,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣騎士",
+      "title": "星幣騎士 把可靠做成可以重復的動作",
+      "quickTake": {
+        "upright": "按清楚的步驟持續推進，讓別人知道可以依靠什麼。",
+        "reversed": "慣例變成停滯，或因為怕出錯而遲遲不動。"
+      },
+      "hook": "其他騎士容易讓人注意速度，星幣騎士卻騎在一匹幾乎沒有抬腿的馬背上。這張牌提出一個安靜的問題：明天，你還能把今天答應的事做一遍嗎？"
+    },
+    {
+      "cardId": "queen-of-pentacles",
+      "deckOrder": 76,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣王后",
+      "title": "星幣王后 把照顧落到真實需要上",
+      "quickTake": {
+        "upright": "用細心與實際安排支持生活，也把自己算在其中。",
+        "reversed": "照顧變成包辦，或一直付出到自己的需要被忽略。"
+      },
+      "hook": "星幣王后沒有把圓盤高舉給人看，而是低頭將它放在膝間。她的注意力向下，靠近日常事物：一份關心究竟有沒有落到可以感受的地方？"
+    },
+    {
+      "cardId": "king-of-pentacles",
+      "deckOrder": 77,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "星幣國王",
+      "title": "星幣國王 讓資源經得起長期使用",
+      "quickTake": {
+        "upright": "用經驗與清楚規則管理資源，對實際結果負責。",
+        "reversed": "地位和控制壓過了用途，或沿用成功經驗卻不再核查。"
+      },
+      "hook": "星幣國王幾乎被葡萄藤的圖案包圍：衣袍上有，王座旁也有。豐盛在這裡不是孤立的一枚幣，而是一整片需要維護、安排和負責的環境。"
+    }
+  ],
+  "ru": [
+    {
+      "cardId": "fool",
+      "deckOrder": 0,
+      "number": "0",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Шут",
+      "title": "Шут — Начать, не зная всех ответов",
+      "quickTake": {
+        "upright": "Можно попробовать новое. Сначала посмотрите под ноги.",
+        "reversed": "Слишком быстрый шаг — или страх вообще начать."
+      },
+      "hook": "Обратите внимание, куда направлен взгляд Шута и где стоят его ноги: лицо обращено вдаль, а ступни уже у края обрыва. Предвкушение и риск присутствуют в одном мгновении."
+    },
+    {
+      "cardId": "magician",
+      "deckOrder": 1,
+      "number": "I",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Маг",
+      "title": "Маг — Найти применение тому, что уже есть",
+      "quickTake": {
+        "upright": "Умения и ресурсы есть. Пора пустить их в дело.",
+        "reversed": "Мыслей много, действий мало — или силы уходят не туда."
+      },
+      "hook": "Стол Мага уже накрыт. Прежде чем искать таинственный источник силы, посмотрите, какие инструменты лежат перед ним и как он может ими воспользоваться."
+    },
+    {
+      "cardId": "high-priestess",
+      "deckOrder": 2,
+      "number": "II",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Жрица",
+      "title": "Жрица — Заметить то, что ещё не сказано",
+      "quickTake": {
+        "upright": "Не торопитесь. Часть сведений ещё не проявилась.",
+        "reversed": "Чувства смешались с догадками — или важное остаётся невысказанным."
+      },
+      "hook": "Жрица держит свиток, не раскрывая его полностью. Она напоминает о простой вещи: сведения могут находиться прямо перед нами и всё равно быть неполными."
+    },
+    {
+      "cardId": "empress",
+      "deckOrder": 3,
+      "number": "III",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Императрица",
+      "title": "Императрица — Подготовить условия для роста",
+      "quickTake": {
+        "upright": "Для роста нужны пространство и забота.",
+        "reversed": "Забота потеряла меру: слишком много отдаёте или забываете о себе."
+      },
+      "hook": "Императрица не занята сбором урожая. Она сидит на мягких подушках, а вода, растения и зерно вокруг напоминают: росту нужна среда, а не только постоянное подгоняние."
+    },
+    {
+      "cardId": "emperor",
+      "deckOrder": 4,
+      "number": "IV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Император",
+      "title": "Император — Дать опору ответственности и границам",
+      "quickTake": {
+        "upright": "Ясные правила и обязанности делают положение устойчивее.",
+        "reversed": "Слишком жёсткий контроль — или ответственность никто не берёт."
+      },
+      "hook": "Из-под красного одеяния Императора видны металлические доспехи. Даже на троне он не снял всю защиту. Устойчивость может оберегать, но иногда мешает расслабиться."
+    },
+    {
+      "cardId": "hierophant",
+      "deckOrder": 5,
+      "number": "V",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Иерофант",
+      "title": "Иерофант — Освоить метод и понять его истоки",
+      "quickTake": {
+        "upright": "Можно опереться на проверенный метод и опыт знающего человека.",
+        "reversed": "Старый способ может не подходить. Сначала разберитесь, затем решайте, что менять."
+      },
+      "hook": "Перед Иерофантом находятся два слушателя. Знание здесь не ограничивается личным озарением: его принимает сообщество через ритуал, признанные роли и общий язык."
+    },
+    {
+      "cardId": "lovers",
+      "deckOrder": 6,
+      "number": "VI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Влюблённые",
+      "title": "Влюблённые — Превратить притяжение в общий выбор",
+      "quickTake": {
+        "upright": "Есть взаимное притяжение и готовность сознательно выбрать эту связь.",
+        "reversed": "Чувства есть, но ожидания и важные решения ещё не согласованы."
+      },
+      "hook": "Два человека на карте Влюблённых стоят на одной лужайке, но не держатся за руки. Между ними остаётся пространство, над ними раскрывает руки крылатая фигура. Отношения изображены; как приблизиться друг к другу, людям ещё предстоит решить."
+    },
+    {
+      "cardId": "chariot",
+      "deckOrder": 7,
+      "number": "VII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Колесница",
+      "title": "Колесница — Направить разные силы к общей цели",
+      "quickTake": {
+        "upright": "Курс выбран. Держите устойчивый темп и двигайтесь дальше.",
+        "reversed": "Усилия уводят в сторону. Сверьте направление и согласуйте темп."
+      },
+      "hook": "Колесница выглядит внушительно, но два сфинкса перед ней лежат, а в руках возничего не нарисованы поводья. Что ещё, кроме силы, нужно, чтобы повозка двигалась вперёд?"
+    },
+    {
+      "cardId": "strength",
+      "deckOrder": 8,
+      "number": "VIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Сила",
+      "title": "Сила: направьте энергию на внутреннюю устойчивость",
+      "quickTake": {
+        "upright": "Сохраняйте спокойствие и действуйте смело. Мягкий подход тоже помогает довести дело до конца.",
+        "reversed": "Чем сильнее давите, тем труднее становится. Вы заставляете себя терпеть или пытаетесь подавить другого?"
+      },
+      "hook": "Сила может проявляться в бережном движении. Под давлением эта карта предлагает заметить, как вы распоряжаетесь своей энергией."
+    },
+    {
+      "cardId": "hermit",
+      "deckOrder": 9,
+      "number": "IX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Отшельник",
+      "title": "Отшельник: найдите тишину и рассмотрите вопрос глубже",
+      "quickTake": {
+        "upright": "Сначала успокойтесь, проверьте факты и разберитесь в вопросе, затем делайте следующий шаг.",
+        "reversed": "Возможно, вы слишком долго размышляете в одиночестве. Тишина помогает или отгораживает вас от жизни?"
+      },
+      "hook": "Обилие информации само по себе не даёт ясного суждения. Отшельник предлагает приглушить шум и увидеть один вопрос, который действительно требует внимания."
+    },
+    {
+      "cardId": "wheel",
+      "deckOrder": 10,
+      "number": "X",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Колесо Фортуны",
+      "title": "Колесо Фортуны: меняйте план вслед за обстоятельствами",
+      "quickTake": {
+        "upright": "Ситуация пришла в движение. Возможности и перемены появляются вместе, поэтому полезно вовремя менять план.",
+        "reversed": "Перемены идут не по вашему расписанию. Сначала обретите опору, затем найдите шаг, который можно скорректировать."
+      },
+      "hook": "Некоторые перемены обгоняют планы. Колесо Фортуны обращает внимание на момент, повторяющиеся циклы и тот ответ, который вы всё ещё можете выбрать."
+    },
+    {
+      "cardId": "justice",
+      "deckOrder": 11,
+      "number": "XI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Справедливость",
+      "title": "Справедливость: соберите факты, прежде чем решать",
+      "quickTake": {
+        "upright": "Проясните факты и критерии, а затем принимайте решение по одной мерке для всех.",
+        "reversed": "Суждение может быть пристрастным. Проверьте упущенные факты, двойные стандарты и непринятую ответственность."
+      },
+      "hook": "Когда что-то кажется несправедливым, не спешите давать человеку окончательную оценку. Эта карта предлагает рассмотреть вместе факты, критерии и ответственность каждой стороны."
+    },
+    {
+      "cardId": "hanged-man",
+      "deckOrder": 12,
+      "number": "XII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Повешенный",
+      "title": "Повешенный: остановитесь и посмотрите под другим углом",
+      "quickTake": {
+        "upright": "Сделайте паузу, смените угол зрения и разберитесь, ради чего стоит чем-то поступиться.",
+        "reversed": "Вы давно застряли. Есть ли условие, которого действительно нужно дождаться, или ожидание лишь отнимает силы?"
+      },
+      "hook": "Чем поспешнее пытаешься вырваться, тем легче снова повторить прежнее движение. Повешенный переворачивает вопрос и превращает остановку в часть наблюдения."
+    },
+    {
+      "cardId": "death",
+      "deckOrder": 13,
+      "number": "XIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Смерть",
+      "title": "Смерть: завершите то, что уже подошло к концу",
+      "quickTake": {
+        "upright": "Этот этап пора закрыть. Доведите старые дела до конца и освободите место для следующего шага.",
+        "reversed": "Вы понимаете, что нужны перемены, но отпустить трудно. Начните с одной старой связи, которую можно ослабить."
+      },
+      "hook": "Некоторые изменения уже не сводятся к мелкому ремонту. Смерть выводит завершение на первый план, позволяя признать утрату и заняться следующим этапом."
+    },
+    {
+      "cardId": "temperance",
+      "deckOrder": 14,
+      "number": "XIV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Умеренность",
+      "title": "Умеренность: найдите соотношение, при котором разные потребности уживаются",
+      "quickTake": {
+        "upright": "Не расходуйте все силы одним рывком. Подберите меру и темп, чтобы дела шли ровнее.",
+        "reversed": "Сочетание не работает, ритм сбился. Найдите, чего слишком много, а чего не хватает."
+      },
+      "hook": "Вода между двумя чашами продолжает течь. Умеренность предлагает постоянно подстраивать время, силы и потребности так, чтобы выбранный ритм можно было поддерживать."
+    },
+    {
+      "cardId": "devil",
+      "deckOrder": 15,
+      "number": "XV",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Дьявол",
+      "title": "Дьявол Какую цену вы платите за то, от чего трудно отказаться",
+      "quickTake": {
+        "upright": "Сильно затягивает, остановиться трудно, а цена всё выше",
+        "reversed": "Хочется вырваться из старой привычки, но, возможно, вы всё ещё находите ей оправдания"
+      },
+      "hook": "Что даёт вам то, без чего вы не можете обойтись, и что оно у вас забирает?"
+    },
+    {
+      "cardId": "tower",
+      "deckOrder": 16,
+      "number": "XVI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Башня",
+      "title": "Башня Когда прежние способы больше не помогают",
+      "quickTake": {
+        "upright": "Привычный порядок нарушен, проблему больше не удаётся скрывать",
+        "reversed": "Вы знаете, что пора менять, но тянете; возможно, уже уменьшаете последствия и понемногу наводите порядок"
+      },
+      "hook": "Корону с вершины башни сорвало, а люди возле неё лишились опоры."
+    },
+    {
+      "cardId": "star",
+      "deckOrder": 17,
+      "number": "XVII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Звезда",
+      "title": "Звезда Оставьте место для восстановления",
+      "quickTake": {
+        "upright": "Становится легче, снова есть надежда, можно понемногу восстанавливать силы",
+        "reversed": "Надежда тускнеет, вы продолжаете отдавать, но сами немного истощены"
+      },
+      "hook": "Женщина под звёздами не поднимает голову, чтобы загадать желание. Она смотрит вниз и внимательно льёт воду на землю перед собой."
+    },
+    {
+      "cardId": "moon",
+      "deckOrder": 18,
+      "number": "XVIII",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Луна",
+      "title": "Луна Не спешите судить, пока не всё видно",
+      "quickTake": {
+        "upright": "Не всё ясно, уверенности мало; пока не принимайте догадки за факты",
+        "reversed": "Туман, возможно, рассеивается, а возможно, мысли всё больше путаются; проверяйте по одному пункту"
+      },
+      "hook": "Дорога ведёт к далёким горам, но лунный свет не освещает каждый её поворот."
+    },
+    {
+      "cardId": "sun",
+      "deckOrder": 19,
+      "number": "XIX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Солнце",
+      "title": "Солнце Позвольте хорошему стать заметным",
+      "quickTake": {
+        "upright": "Всё яснее, сил больше; хорошие сдвиги можно открыто признать",
+        "reversed": "Хорошее никуда не делось, но энтузиазма мало или радость немного вскружила голову"
+      },
+      "hook": "Ребёнок оказался перед стеной и раскинул руки, словно наконец может не прятать свою радость."
+    },
+    {
+      "cardId": "judgement",
+      "deckOrder": 20,
+      "number": "XX",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Суд",
+      "title": "Суд Услышать то, на что пора ответить",
+      "quickTake": {
+        "upright": "Некоторые вещи больше нельзя оставлять неясными; пора оглянуться, разобраться и принять решение",
+        "reversed": "Вы всё откладываете ответ или бесконечно вините себя и застреваете перед решением"
+      },
+      "hook": "Звучит труба, и все поднимают головы. Теперь вопрос в том, как вы готовы ответить."
+    },
+    {
+      "cardId": "world",
+      "deckOrder": 21,
+      "number": "XXI",
+      "arcana": "major",
+      "suit": null,
+      "nameLocalized": "Мир",
+      "title": "Мир Полностью завершить один этап",
+      "quickTake": {
+        "upright": "Этот этап пройден целиком; можно завершать, передавать результат и двигаться дальше",
+        "reversed": "Осталось довести до конца последние шаги, или всё уже готово, но вы никак не отпускаете"
+      },
+      "hook": "Венок замкнут в кольцо, но фигура внутри продолжает танцевать: завершение тоже может быть плавным движением."
+    },
+    {
+      "cardId": "ace-of-wands",
+      "deckOrder": 22,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Туз Жезлов",
+      "title": "Туз Жезлов: Первая проба нового дела",
+      "quickTake": {
+        "upright": "Появилось желание что-то сделать. Начните с небольшого шага",
+        "reversed": "Не хватает сил, или идей много, а до начала дело не доходит"
+      },
+      "hook": "Рука держит жезл, на котором ещё растут листья, но на рисунке нет жизненного плана его использования. Туз Жезлов останавливает нас в момент зарождения интереса: желание появилось — что вы с ним сделаете?"
+    },
+    {
+      "cardId": "two-of-wands",
+      "deckOrder": 23,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Двойка Жезлов",
+      "title": "Двойка Жезлов: Выбор направления с опорой на настоящее",
+      "quickTake": {
+        "upright": "Хочется пойти дальше. Сначала уточните направление и необходимые условия",
+        "reversed": "План застрял в сомнениях, или дальние возможности заслонили то, что есть сейчас"
+      },
+      "hook": "Двойка Жезлов уменьшает целый мир до шара на ладони, а ноги фигуры остаются на крепостной стене. Представления о далёком могут быть огромными, но реальное решение принимается там, где вы сейчас стоите."
+    },
+    {
+      "cardId": "three-of-wands",
+      "deckOrder": 24,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Тройка Жезлов",
+      "title": "Тройка Жезлов: Замечайте отклик на свои действия",
+      "quickTake": {
+        "upright": "Дело уже выходит во внешний мир. Следите за продвижением и новыми возможностями",
+        "reversed": "Отклика всё нет. Сначала выясните, на каком этапе возникла задержка"
+      },
+      "hook": "Фигура Тройки Жезлов стоит к нам спиной и смотрит на корабли. По сравнению с глобусом в руке на Двойке внимание теперь направлено на то, что уже происходит за пределами непосредственной досягаемости."
+    },
+    {
+      "cardId": "four-of-wands",
+      "deckOrder": 25,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Четвёрка Жезлов",
+      "title": "Четвёрка Жезлов: Найдите место для завершения и общей радости",
+      "quickTake": {
+        "upright": "Есть место, где можно устроиться спокойно и отпраздновать вместе",
+        "reversed": "Снаружи всё оживлённо, но внутри может не быть спокойствия и чувства принадлежности"
+      },
+      "hook": "Гирлянда на Четвёрке Жезлов не запирает людей внутри. Четыре шеста обозначают пространство встречи, оставляя переднюю сторону открытой. В одной сцене соединяются праздник и приглашение присоединиться."
+    },
+    {
+      "cardId": "five-of-wands",
+      "deckOrder": 26,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Пятёрка Жезлов",
+      "title": "Пятёрка Жезлов: Общие правила для разных усилий",
+      "quickTake": {
+        "upright": "Все стараются. Сначала выясните, о чём именно идёт спор",
+        "reversed": "Разногласий избегают, или спор становится всё запутаннее"
+      },
+      "hook": "Пять человек держат по жезлу и действуют с размахом, но общего направления не видно. Полезнее всего спросить у Пятёрки Жезлов не «кто победит», а «служат ли все эти усилия одной задаче»."
+    },
+    {
+      "cardId": "six-of-wands",
+      "deckOrder": 27,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Шестёрка Жезлов",
+      "title": "Шестёрка Жезлов: Сделайте достижения заметными и понятными",
+      "quickTake": {
+        "upright": "Ваши усилия получили признание. Его можно спокойно принять",
+        "reversed": "Желаемого признания нет, или чужая оценка стала слишком важной"
+      },
+      "hook": "На Шестёрке Жезлов лавровый венок появляется дважды: на голове всадника и на жезле. Достижение известно уже не только самому человеку — оно становится видимым для окружающих."
+    },
+    {
+      "cardId": "seven-of-wands",
+      "deckOrder": 28,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Семёрка Жезлов",
+      "title": "Семёрка Жезлов: Ясно обозначьте свои границы",
+      "quickTake": {
+        "upright": "Под давлением сохраняйте опору и ясно говорите, что нужно защитить",
+        "reversed": "Вы отвечаете на каждое возражение или уступаете, потому что сил уже нет"
+      },
+      "hook": "На Семёрке Жезлов виден только один человек, но к нему тянутся шесть жезлов. Сначала различите давление, на которое действительно нужно ответить, а не спешите представлять врага за каждым шестом."
+    },
+    {
+      "cardId": "eight-of-wands",
+      "deckOrder": 29,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Восьмёрка Жезлов",
+      "title": "Восьмёрка Жезлов: Сохраняйте ясность при ускорении",
+      "quickTake": {
+        "upright": "Дело ускорилось. Сообщения и действия нужно вовремя связывать между собой",
+        "reversed": "Все торопят, но продвижения нет, или сообщений больше, чем вы можете обработать"
+      },
+      "hook": "В центре Восьмёрки Жезлов нет человека. Восемь шестов вместе ведут взгляд по диагонали вниз, словно события уже вышли из чьих-то рук и приобрели собственный темп."
+    },
+    {
+      "cardId": "nine-of-wands",
+      "deckOrder": 30,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Девятка Жезлов",
+      "title": "Девятка Жезлов: Оставьте силы на восстановление",
+      "quickTake": {
+        "upright": "Вы уже многое выдержали. Берегите главное и дайте себе передышку",
+        "reversed": "Сил продолжать почти нет, или постоянное напряжение не даёт расслабиться"
+      },
+      "hook": "Человек на Девятке Жезлов всё ещё стоит, но уже опирается на жезл. В этой картине стойкость и потребность в поддержке не исключают друг друга."
+    },
+    {
+      "cardId": "ten-of-wands",
+      "deckOrder": 31,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Десятка Жезлов",
+      "title": "Десятка Жезлов: Проверьте распределение ответственности и нагрузки",
+      "quickTake": {
+        "upright": "Слишком многое легло на вас. Пора перераспределить нагрузку",
+        "reversed": "Хочется снять часть груза. Сначала определите, куда и как его передать"
+      },
+      "hook": "Десять длинных жезлов собраны в руках одного человека, и тело сгибается вместе с ними. Десятка Жезлов показывает: каждое дело может иметь ценность, но их общий вес всё равно нужно учитывать."
+    },
+    {
+      "cardId": "page-of-wands",
+      "deckOrder": 32,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Паж Жезлов",
+      "title": "Паж Жезлов: Учитесь выражать своё любопытство",
+      "quickTake": {
+        "upright": "Новое вызывает интерес. Вы готовы спрашивать и пробовать",
+        "reversed": "Об идеях говорят с воодушевлением, но практика и действия отстают"
+      },
+      "hook": "Паж Жезлов не размахивает посохом, а внимательно смотрит на него снизу вверх. Любопытство ещё не стало большим действием. Наблюдение и вопросы сами по себе уже входят в обучение."
+    },
+    {
+      "cardId": "knight-of-wands",
+      "deckOrder": 33,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Рыцарь Жезлов",
+      "title": "Рыцарь Жезлов: Соедините порыв с направлением",
+      "quickTake": {
+        "upright": "Есть напор и готовность действовать по собственной инициативе",
+        "reversed": "Слишком быстрый рывок и смена курса оставляют дела незавершёнными"
+      },
+      "hook": "Конь Рыцаря Жезлов поднимает передние ноги, красные перья на шлеме откинуты назад. Сначала взгляд захватывает движение, а следом возникает практический вопрос: куда должен привести этот порыв?"
+    },
+    {
+      "cardId": "queen-of-wands",
+      "deckOrder": 34,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Королева Жезлов",
+      "title": "Королева Жезлов: Свободно выражайте свою увлечённость",
+      "quickTake": {
+        "upright": "Вы уверены в себе и помогаете другим расслабиться и включиться в дело",
+        "reversed": "Ради одобрения приходится слишком стараться или всё сильнее прятать себя"
+      },
+      "hook": "Королева Жезлов держит в одной руке посох, в другой подсолнух, а у ног сидит чёрная кошка, смотрящая прямо на зрителя. Заметное присутствие соединяется со спокойной сидячей позой: уверенность выражается не только широкими жестами."
+    },
+    {
+      "cardId": "king-of-wands",
+      "deckOrder": 35,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "wands",
+      "nameLocalized": "Король Жезлов",
+      "title": "Король Жезлов: Возьмите ответственность за направление",
+      "quickTake": {
+        "upright": "Вы видите направление, готовы действовать первыми и отвечать за решения",
+        "reversed": "Вы торопите других следовать за вами, не оставляя места для обсуждения и изменений"
+      },
+      "hook": "Король Жезлов уже сидит на троне, но посох в руке всё ещё покрыт листьями. Положение не отменило тему действия, а углубило вопрос: когда ваши решения затрагивают других, как увлечённость превращается в ответственность?"
+    },
+    {
+      "cardId": "ace-of-cups",
+      "deckOrder": 36,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Туз Кубков",
+      "title": "Туз Кубков: Дайте место новому чувству",
+      "quickTake": {
+        "upright": "Готовность принимать заботу и искренне выражать себя может стать началом новой связи.",
+        "reversed": "Чувства сдерживаются или переполняют вас. Сначала найдите подходящий способ их выразить."
+      },
+      "hook": "Заботливое слово или давно не слышанная песня могут неожиданно тронуть вас. Туз Кубков задерживается в этом первом мгновении отклика, когда исход ещё не определён."
+    },
+    {
+      "cardId": "two-of-cups",
+      "deckOrder": 37,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Двойка Кубков",
+      "title": "Двойка Кубков: Для связи нужен ответ с обеих сторон",
+      "quickTake": {
+        "upright": "Оба готовы слушать и отвечать; можно обсудить следующий шаг.",
+        "reversed": "Отклик неравномерен или ожидания неясны. Сначала проговорите различия."
+      },
+      "hook": "После лёгкой и приятной беседы отношения только начинают проходить проверку. Двойка Кубков спрашивает, может ли минутное взаимопонимание стать общением, в котором хотят участвовать оба."
+    },
+    {
+      "cardId": "three-of-cups",
+      "deckOrder": 38,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Тройка Кубков",
+      "title": "Тройка Кубков: Разделите радость с другими",
+      "quickTake": {
+        "upright": "Соберитесь с людьми, которые поддерживают друг друга, и скажите, чему вы рады и за что благодарны.",
+        "reversed": "Встречи и социальные обязательства могут истощать. Измените меру и способ участия."
+      },
+      "hook": "Одной радостью приятно просто обладать, другая становится глубже, когда ею делятся с теми, кто прошёл путь рядом. Тройка Кубков обращает внимание на этот круг людей."
+    },
+    {
+      "cardId": "four-of-cups",
+      "deckOrder": 39,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Четвёрка Кубков",
+      "title": "Четвёрка Кубков: Разберитесь, почему ничего не хочется",
+      "quickTake": {
+        "upright": "Сейчас может не хотеться ничего нового. Дайте себе время заметить и понять потребности.",
+        "reversed": "Интерес к внешнему миру возвращается; можно попробовать небольшое участие."
+      },
+      "hook": "Даже когда вам предлагают возможность, иногда хочется ответить: «В другой раз». Четвёрка Кубков не торопит соглашаться, а предлагает понять, что ваш отказ сейчас защищает."
+    },
+    {
+      "cardId": "five-of-cups",
+      "deckOrder": 40,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Пятёрка Кубков",
+      "title": "Пятёрка Кубков: Признайте утрату и то, что осталось",
+      "quickTake": {
+        "upright": "Сначала признайте реальную потерю, не торопясь превращать боль в хорошую новость.",
+        "reversed": "Вы вновь обращаетесь к жизни или замечаете, что вам нужно больше времени, чтобы справиться с сожалением."
+      },
+      "hook": "Слишком быстрое утешение иногда звучит как требование перестать грустить. Пятёрка Кубков ставит опрокинутые чаши перед глазами, но сохраняет на рисунке две другие."
+    },
+    {
+      "cardId": "six-of-cups",
+      "deckOrder": 41,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Шестёрка Кубков",
+      "title": "Шестёрка Кубков: Перенесите тепло прошлого в сегодняшний день",
+      "quickTake": {
+        "upright": "Ищите опору в хорошем опыте прошлого и цените простую, конкретную заботу.",
+        "reversed": "Ослабьте прежние роли, оставив место новым отношениям и образу жизни."
+      },
+      "hook": "Старая вещь может вернуть вас в день, когда к вам отнеслись с теплом. Шестёрка Кубков ценит знакомое чувство и напоминает: воспоминание замирает, а люди продолжают меняться."
+    },
+    {
+      "cardId": "seven-of-cups",
+      "deckOrder": 42,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Семёрка Кубков",
+      "title": "Семёрка Кубков: Разберитесь в желании и проверьте один вариант",
+      "quickTake": {
+        "upright": "Многие варианты привлекательны. Разделите желания и уже известные факты.",
+        "reversed": "Вы начинаете сосредоточиваться на одной цели. Пусть одна идея пройдёт проверку реальностью."
+      },
+      "hook": "У самого яркого будущего в голове нередко ещё нет сроков, цены и первого шага. Семёрка Кубков разрешает мечтать и предлагает посмотреть, какие детали пока существуют только в мечте."
+    },
+    {
+      "cardId": "eight-of-cups",
+      "deckOrder": 43,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Восьмёрка Кубков",
+      "title": "Восьмёрка Кубков: Прежде чем уйти, назовите, что вы ищете",
+      "quickTake": {
+        "upright": "Прежняя цель больше не удовлетворяет; можно всерьёз обдумать смену направления.",
+        "reversed": "Если вы колеблетесь между уходом и продолжением, уточните причины и реальные условия."
+      },
+      "hook": "Иногда труднее всего уйти не из худшего места, а из того, куда вложено много сил и где всё сложнее объяснить себе смысл. Восьмёрка Кубков изображает это колебание уходящей фигурой."
+    },
+    {
+      "cardId": "nine-of-cups",
+      "deckOrder": 44,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Девятка Кубков",
+      "title": "Девятка Кубков: Позвольте себе насладиться достигнутым",
+      "quickTake": {
+        "upright": "Есть причины порадоваться уже сделанному. Дайте себе спокойно прожить этот момент.",
+        "reversed": "Внешне всё хорошо, но внутри остаётся нехватка. Уточните, откуда приходит удовлетворение."
+      },
+      "hook": "Достигнув цели, вы садитесь порадоваться или сразу поднимаете планку? Девятка Кубков ставит вас перед результатом и делает само удовлетворение предметом внимания."
+    },
+    {
+      "cardId": "ten-of-cups",
+      "deckOrder": 45,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Десятка Кубков",
+      "title": "Десятка Кубков: Поддерживайте чувство принадлежности вместе",
+      "quickTake": {
+        "upright": "В отношениях с важными для вас людьми есть поддержка. Цените и сохраняйте повседневную устойчивость.",
+        "reversed": "Идеальная гармония расходится с опытом. Услышьте потребности, о которых молчат."
+      },
+      "hook": "Счастливая фотография сохраняет хороший момент, но не выполняет всю работу общения в последующие дни. Десятка Кубков помогает говорить об общем счастье и спрашивать, на чём оно держится."
+    },
+    {
+      "cardId": "page-of-cups",
+      "deckOrder": 46,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Паж Кубков",
+      "title": "Паж Кубков: Встречайте неожиданное вдохновение с любопытством",
+      "quickTake": {
+        "upright": "Учитесь понимать чувства и придавайте вдохновению слова или форму.",
+        "reversed": "Идея может смешиваться с догадкой. Перед выражением проверьте факты и меру."
+      },
+      "hook": "Хорошая идея вначале иногда странная, а искренние слова при первой попытке неловки. Паж Кубков оставляет место этой неумелости; главное — готовы ли вы учиться дальше."
+    },
+    {
+      "cardId": "knight-of-cups",
+      "deckOrder": 47,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Рыцарь Кубков",
+      "title": "Рыцарь Кубков: Превратите красивую идею в надёжное приглашение",
+      "quickTake": {
+        "upright": "Предложите что-то искренне, чтобы хорошая идея получила шанс воплотиться.",
+        "reversed": "Предложение красиво, но исполнения не хватает. Сверьте обещания с поступками."
+      },
+      "hook": "Некоторые слова сразу трогают сердце, но доверие строится на том, что происходит потом. Рыцарь Кубков выходит из воображения на дорогу, где нужен ответ."
+    },
+    {
+      "cardId": "queen-of-cups",
+      "deckOrder": 48,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Королева Кубков",
+      "title": "Королева Кубков: Понимайте чувства и сохраняйте границы заботы",
+      "quickTake": {
+        "upright": "Терпеливо слушайте чувства и превращайте понимание в подходящую заботу.",
+        "reversed": "Забота переходит границы или истощает вас. Разделите ответственность каждого."
+      },
+      "hook": "Человек говорит, что всё хорошо, а вы замечаете перемену голоса. Королева Кубков ценит такую чуткость и напоминает: сначала спросите, а не решайте за другого."
+    },
+    {
+      "cardId": "king-of-cups",
+      "deckOrder": 49,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "cups",
+      "nameLocalized": "Король Кубков",
+      "title": "Король Кубков: Сохраняйте ясность и ответственность среди волн",
+      "quickTake": {
+        "upright": "Прислушивайтесь к чувствам, сохраняйте здравое суждение и воплощайте заботу в надёжных действиях.",
+        "reversed": "Эмоции или власть искажают решение. Проверьте избегание, фаворитизм и контроль."
+      },
+      "hook": "Чем напряжённее обстановка, тем нужнее человек, который понимает тревоги сторон, но не меняет принципы вслед за самым громким голосом. Король Кубков помогает рассмотреть, как сочетать чувства, меру и ответственность."
+    },
+    {
+      "cardId": "ace-of-swords",
+      "deckOrder": 50,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Туз Мечей",
+      "title": "Туз Мечей: Одной ясной фразой открыть путь",
+      "quickTake": {
+        "upright": "Найдите главный вопрос и сделайте следующий шаг, опираясь на обоснованное суждение.",
+        "reversed": "Возможно, вывод сделан слишком быстро, либо долгие размышления так и не обрели ясной формы."
+      },
+      "hook": "Иногда дело сдвигается, когда наконец удаётся одной фразой сказать, что именно сейчас нужно решить."
+    },
+    {
+      "cardId": "two-of-swords",
+      "deckOrder": 51,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Двойка Мечей",
+      "title": "Двойка Мечей: Пауза в выборе не отменяет реальность",
+      "quickTake": {
+        "upright": "Удержите давление с двух сторон и выясните, каких сведений не хватает для выбора.",
+        "reversed": "Равновесие всё труднее сохранять, а отложенные вопросы настойчиво возвращаются."
+      },
+      "hook": "Когда вы говорите «мне нужно ещё подумать», вам действительно не хватает сведений или хочется, чтобы выбор исчез сам?"
+    },
+    {
+      "cardId": "three-of-swords",
+      "deckOrder": 52,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Тройка Мечей",
+      "title": "Тройка Мечей: Дать разочарованию точное имя",
+      "quickTake": {
+        "upright": "Увидьте боль и разногласия и честно посмотрите на уже произошедшее.",
+        "reversed": "Боль ещё не распутана либо появляются способы выразить её и ослабить её власть."
+      },
+      "hook": "Чья-то фраза надолго задела вас. Возможно, сейчас нужно сказать не «всё нормально»."
+    },
+    {
+      "cardId": "four-of-swords",
+      "deckOrder": 53,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Четвёрка Мечей",
+      "title": "Четвёрка Мечей: Дать паузе стать настоящим отдыхом",
+      "quickTake": {
+        "upright": "Уменьшите нагрузку от внешних раздражителей и оставьте время восстановиться и упорядочить мысли.",
+        "reversed": "Отдых всё ещё неспокоен либо пора заново настроить ритм."
+      },
+      "hook": "Ноутбук закрыт, а совещание в голове продолжается. Настоящая пауза иногда требует отключить ещё один источник давления."
+    },
+    {
+      "cardId": "five-of-swords",
+      "deckOrder": 54,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Пятёрка Мечей",
+      "title": "Пятёрка Мечей: Что остаётся после выигранного спора",
+      "quickTake": {
+        "upright": "Кто-то получил преимущество, но сотрудничество и доверие могут исчезать.",
+        "reversed": "Последствия конфликта сохраняются; восстановление отношений или выход требуют действий."
+      },
+      "hook": "Спор закончился, все замолчали. Проблема действительно решена или за вами просто осталось последнее слово?"
+    },
+    {
+      "cardId": "six-of-swords",
+      "deckOrder": 55,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Шестёрка Мечей",
+      "title": "Шестёрка Мечей: Двигаться к другому берегу с незавершёнными делами",
+      "quickTake": {
+        "upright": "Найдите путь и помощь, чтобы постепенно выйти из ситуации, которую трудно продолжать.",
+        "reversed": "Передача дел или направление ещё не ясны; разберите то, что задерживает движение."
+      },
+      "hook": "Коробки для переезда собраны, а чувства всё ещё остаются на прежнем месте. Иногда сначала меняются действия, а переживания догоняют позже."
+    },
+    {
+      "cardId": "seven-of-swords",
+      "deckOrder": 56,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Семёрка Мечей",
+      "title": "Семёрка Мечей: Умный способ должен выдерживать объяснение",
+      "quickTake": {
+        "upright": "Другой подход может помочь, но проверьте его цену, ответственность и упущения.",
+        "reversed": "План стоит пересмотреть, принять совет или объяснить то, что осталось неясным."
+      },
+      "hook": "Если способ работает только пока другие ничего не знают, готовы ли вы внимательно посмотреть, на чём он держится?"
+    },
+    {
+      "cardId": "eight-of-swords",
+      "deckOrder": 57,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Восьмёрка Мечей",
+      "title": "Восьмёрка Мечей: Разобрать безвыходность на конкретные ограничения",
+      "quickTake": {
+        "upright": "Выясните, какие условия мешают действовать, и отделите неизвестное от подтверждённых препятствий.",
+        "reversed": "Некоторые ограничения ослабевают либо для действия пока нужна дополнительная помощь."
+      },
+      "hook": "За словами «я ничего не могу» иногда стоят разные вещи: нет полномочий, ресурсов, сведений или человека, готового помочь."
+    },
+    {
+      "cardId": "nine-of-swords",
+      "deckOrder": 58,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Девятка Мечей",
+      "title": "Девятка Мечей: Не отдавать всю ночь худшему предположению",
+      "quickTake": {
+        "upright": "Заметьте мысли, которые ходят по кругу, и отделите факты от воображения.",
+        "reversed": "Возможно, тревога начинает находить слова, либо вы всё ещё возвращаетесь к одному кругу опасений."
+      },
+      "hook": "Ночью письмо без ответа может превратиться в десять воображаемых последствий. Самая громкая мысль не обязательно ближе всех к фактам."
+    },
+    {
+      "cardId": "ten-of-swords",
+      "deckOrder": 59,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Десятка Мечей",
+      "title": "Десятка Мечей: Признать, где этот путь заканчивается",
+      "quickTake": {
+        "upright": "Прежний способ больше не выдерживает нагрузки: пора признать потери и заняться завершением.",
+        "reversed": "Может появиться облегчение или опора, но важно не втянуться обратно в прежний круг."
+      },
+      "hook": "Иногда труднее не сделать ещё одну попытку, а признать: прежним способом эту ситуацию уже не спасти."
+    },
+    {
+      "cardId": "page-of-swords",
+      "deckOrder": 60,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Паж Мечей",
+      "title": "Паж Мечей: Научить любопытство проверять источники",
+      "quickTake": {
+        "upright": "Будьте внимательны, учитесь через конкретные вопросы и сверку сведений.",
+        "reversed": "Сообщения могут опережать доказательства, а бдительность — превращаться в подозрительность ко всему."
+      },
+      "hook": "Вы заметили несоответствие. Дальше перешлёте догадку или сначала спросите, откуда взялась информация?"
+    },
+    {
+      "cardId": "knight-of-swords",
+      "deckOrder": 61,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Рыцарь Мечей",
+      "title": "Рыцарь Мечей: Пусть суждение успевает за скоростью",
+      "quickTake": {
+        "upright": "Сосредоточьтесь на главной проблеме и решительно действуйте там, где факты проверены.",
+        "reversed": "Стремление доказать свою правоту или скорее закончить может заглушать изменения условий и обратную связь."
+      },
+      "hook": "Ответ написан быстро, кнопка отправки совсем рядом. Вы решаете срочный вопрос или вас подгоняет собственное чувство срочности?"
+    },
+    {
+      "cardId": "queen-of-swords",
+      "deckOrder": 62,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Королева Мечей",
+      "title": "Королева Мечей: Говорить ясно и оставлять место ответу",
+      "quickTake": {
+        "upright": "Пользуйтесь опытом и ясно выражайте потребности и приемлемые условия.",
+        "reversed": "Защита может превратиться в предубеждение, а резкие слова — закрыть общение."
+      },
+      "hook": "Можно мягко сказать «нет», а можно внимательно выслушать и всё равно сказать «нет». Ясной границе не нужна жестокость для доказательства своей силы."
+    },
+    {
+      "cardId": "king-of-swords",
+      "deckOrder": 63,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "swords",
+      "nameLocalized": "Король Мечей",
+      "title": "Король Мечей: Привести основания своего решения",
+      "quickTake": {
+        "upright": "Принимайте решения по последовательным критериям и надёжным фактам, отвечая за последствия.",
+        "reversed": "Власть может подавлять доказательства, а правила — скрывать предвзятость и контроль."
+      },
+      "hook": "«Делайте, как я сказал» способно закончить обсуждение, но само по себе не создаёт решения, которому можно доверять."
+    },
+    {
+      "cardId": "ace-of-pentacles",
+      "deckOrder": 64,
+      "number": "A",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Туз Пентаклей",
+      "title": "Туз Пентаклей: Дать возможности опору",
+      "quickTake": {
+        "upright": "Появились реальные условия для начала. Подготовьте первый шаг.",
+        "reversed": "Условия выглядят удачными, но способ воспользоваться ими ещё не подготовлен."
+      },
+      "hook": "Ладонь Туза раскрыта, и на ней лежит пентакль. Его не спрятали в сейф, но и готовым результатом он ещё не стал. Дорожка через сад словно оставляет фразу «появилась возможность» незаконченной."
+    },
+    {
+      "cardId": "two-of-pentacles",
+      "deckOrder": 65,
+      "number": "II",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Двойка Пентаклей",
+      "title": "Двойка Пентаклей: Понимать, что сейчас важнее",
+      "quickTake": {
+        "upright": "Меняйте приоритеты по обстоятельствам, оставляя место важному.",
+        "reversed": "За видимой лёгкостью может скрываться нагрузка, для которой уже нет запаса сил и времени."
+      },
+      "hook": "На Двойке Пентаклей два диска соединены одной лентой. Поднимая один, вы влияете на другой. Многие повседневные договорённости связаны именно так."
+    },
+    {
+      "cardId": "three-of-pentacles",
+      "deckOrder": 66,
+      "number": "III",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Тройка Пентаклей",
+      "title": "Тройка Пентаклей: Соединить разные умения в одной работе",
+      "quickTake": {
+        "upright": "Полезные умения и ясное взаимодействие помогают создать добротную работу.",
+        "reversed": "Роли или требования не согласованы: все заняты, но части не соединяются."
+      },
+      "hook": "Три человека на Тройке Пентаклей делают разное: один стоит на рабочем помосте, двое смотрят на него снизу. Иногда общее дело именно этого и требует — разных позиций."
+    },
+    {
+      "cardId": "four-of-pentacles",
+      "deckOrder": 67,
+      "number": "IV",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Четвёрка Пентаклей",
+      "title": "Четвёрка Пентаклей: Сохранить важное и место для движения",
+      "quickTake": {
+        "upright": "Определите, что стоит беречь, и установите границы, дающие опору.",
+        "reversed": "Чрезмерная хватка останавливает жизнь, а резко ослабленную границу бывает трудно восстановить."
+      },
+      "hook": "Человек на Четвёрке Пентаклей разместил все диски на своём теле: один над головой, один у груди, два под ногами. Всё словно в безопасности. Но что ему придётся сделать, если он захочет встать?"
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "deckOrder": 68,
+      "number": "V",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Пятёрка Пентаклей",
+      "title": "Пятёрка Пентаклей: Встретить трудность с поддержкой",
+      "quickTake": {
+        "upright": "Признайте реальную тяжесть положения и конкретно назовите потребность.",
+        "reversed": "Можно снова искать поддержку, одновременно проверяя, действительно ли стало легче."
+      },
+      "hook": "Самый резкий контраст Пятёрки Пентаклей — свет окна и холод снаружи. Свет рядом ещё не означает, что человек получил укрытие. Между видимым ресурсом и возможностью им воспользоваться нередко лежит немалое расстояние."
+    },
+    {
+      "cardId": "six-of-pentacles",
+      "deckOrder": 69,
+      "number": "VI",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Шестёрка Пентаклей",
+      "title": "Шестёрка Пентаклей: Давать на понятных условиях",
+      "quickTake": {
+        "upright": "Предлагайте или принимайте практическую поддержку, ясно обозначая её цель и пределы.",
+        "reversed": "Помощь может нести скрытые условия, а вклад и право решать — оставаться неравными."
+      },
+      "hook": "На Шестёрке Пентаклей есть протянутые руки и весы, которые держит другой человек. Видны и щедрость, и разница положений: один даёт, другие ждут, но правила распределения нигде не написаны."
+    },
+    {
+      "cardId": "seven-of-pentacles",
+      "deckOrder": 70,
+      "number": "VII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Семёрка Пентаклей",
+      "title": "Семёрка Пентаклей: Посмотреть, во что превратились усилия",
+      "quickTake": {
+        "upright": "По видимым изменениям решите, продолжать, корректировать или сделать паузу.",
+        "reversed": "Нетерпение может требовать результата, а прошлые усилия — мешать сменить направление."
+      },
+      "hook": "Человек на Семёрке Пентаклей больше не размахивает инструментом. Он сложил руки на рукояти и смотрит вниз, на растения. Остановка не обязательно означает лень: иногда работа дошла до этапа, на котором нужно наблюдать."
+    },
+    {
+      "cardId": "eight-of-pentacles",
+      "deckOrder": 71,
+      "number": "VIII",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Восьмёрка Пентаклей",
+      "title": "Восьмёрка Пентаклей: Пусть каждое повторение что-то улучшает",
+      "quickTake": {
+        "upright": "Сосредоточьтесь на конкретном действии и постепенно повышайте качество результата.",
+        "reversed": "Повторение может потерять обратную связь, а доказательство своих способностей — заслонить настоящую цель."
+      },
+      "hook": "На Восьмёрке Пентаклей готовые диски выставлены рядом, но человек смотрит на тот, над которым работает сейчас. Накопленное мастерство заметно; нынешнее движение всё равно требует нового внимания."
+    },
+    {
+      "cardId": "nine-of-pentacles",
+      "deckOrder": 72,
+      "number": "IX",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Девятка Пентаклей",
+      "title": "Девятка Пентаклей: Жить, пользуясь достигнутым",
+      "quickTake": {
+        "upright": "Цените уже сложившиеся умения и условия и позволяйте себе ими пользоваться.",
+        "reversed": "За благополучным видом сравнения и давление могут вытеснять настоящее спокойствие."
+      },
+      "hook": "Лозы уже принесли плоды, но человек не торопится их собирать. Девятка Пентаклей спрашивает, как жить после приобретения и достижения. Когда чего-то уже достаточно, позволяете ли вы себе это почувствовать?"
+    },
+    {
+      "cardId": "ten-of-pentacles",
+      "deckOrder": 73,
+      "number": "X",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Десятка Пентаклей",
+      "title": "Десятка Пентаклей: Передать накопленное так, чтобы им могли пользоваться",
+      "quickTake": {
+        "upright": "Упорядочьте созданную основу, чтобы другие могли её продолжить.",
+        "reversed": "Видимая устойчивость может скрывать разногласия; старые договорённости нуждаются в обсуждении."
+      },
+      "hook": "Десятка Пентаклей не показывает одного человека с десятью монетами в объятиях. Диски распределены по всей сцене, где есть старший человек, взрослые, ребёнок и собаки. Многое накопленное принадлежит целому укладу совместной жизни."
+    },
+    {
+      "cardId": "page-of-pentacles",
+      "deckOrder": 74,
+      "number": "P",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Паж Пентаклей",
+      "title": "Паж Пентаклей: Сначала разобраться в одном вопросе",
+      "quickTake": {
+        "upright": "Будьте готовы учиться с основ и дайте интересу конкретный предмет.",
+        "reversed": "Собранного может быть больше, чем усвоенного, или внимание постоянно уводит новизна."
+      },
+      "hook": "Паж Пентаклей смотрит так сосредоточенно, словно один диск в руках способен заполнить всё небо. Иногда учёба начинается именно так: с одного серьёзного вопроса об одном конкретном предмете."
+    },
+    {
+      "cardId": "knight-of-pentacles",
+      "deckOrder": 75,
+      "number": "N",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Рыцарь Пентаклей",
+      "title": "Рыцарь Пентаклей: Сделать надёжность повторяемым действием",
+      "quickTake": {
+        "upright": "Последовательно действуйте по понятным шагам, чтобы другим было ясно, на что можно рассчитывать.",
+        "reversed": "Привычный порядок может стать застоем, а страх ошибки — задерживать начало."
+      },
+      "hook": "Другие рыцари легко привлекают внимание скоростью. Рыцарь Пентаклей сидит на коне, который почти не поднимает ног. Карта тихо спрашивает: сможете ли вы завтра снова сделать то, что обещали сегодня?"
+    },
+    {
+      "cardId": "queen-of-pentacles",
+      "deckOrder": 76,
+      "number": "Q",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Королева Пентаклей",
+      "title": "Королева Пентаклей: Превратить заботу в реальную помощь",
+      "quickTake": {
+        "upright": "Поддерживайте жизнь вниманием и практическими действиями, включая в заботу себя.",
+        "reversed": "Забота может стать стремлением всё делать за другого или оставить собственные нужды без внимания."
+      },
+      "hook": "Королева Пентаклей не поднимает диск напоказ, а смотрит вниз, держа его на коленях. Её внимание направлено к обычным вещам: дошла ли забота до того места, где её можно почувствовать?"
+    },
+    {
+      "cardId": "king-of-pentacles",
+      "deckOrder": 77,
+      "number": "K",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "nameLocalized": "Король Пентаклей",
+      "title": "Король Пентаклей: Сделать ресурсы пригодными для долгой службы",
+      "quickTake": {
+        "upright": "Используйте опыт и ясные правила, отвечая за реальные результаты.",
+        "reversed": "Положение и контроль могут вытеснять полезность, а прежние успешные методы — применяться без новой проверки."
+      },
+      "hook": "Король Пентаклей почти окружён виноградным узором: он есть на одежде и возле трона. Изобилие здесь — не отдельная монета, а целая среда, которой нужны уход, организация и ответственность."
+    }
+  ]
+}
