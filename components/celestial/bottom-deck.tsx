@@ -156,6 +156,7 @@ export function BottomDeck({ count, topCardId, disabled, interactive, compact = 
     <div className="tarot-deck-actions">
       <div className="tarot-deck-label"><h2>{c.deckShortTitle}</h2><span aria-live="polite">{count} {c.remaining}</span></div>
       <button type="button" className="cel-button" onClick={shuffle} disabled={!interactive || shuffling || cycling || !count}><Shuffle size={16}/>{c.shuffleShort}</button>
+      <button type="button" className="cel-button-soft tarot-draw-action" disabled={!interactive || disabled || shuffling || cycling || !count} onClick={() => { if (!locked.current) onDraw(0); }}>{c.drawSelected}<span aria-hidden="true">↑</span></button>
       <p id={helpId}>{disabled ? c.ribbonStart : compact ? c.dropHint : c.ribbonHelp}</p>
       <span id={cycleHelpId} className="tarot-deck-key-help">{c.cycleKeyHelp}</span>
       <span className="tarot-deck-status" role="status">{shuffling ? c.shuffle : cycles ? `${c.cycled} · ${cycles}` : disabled ? "" : c.shuffled}</span>

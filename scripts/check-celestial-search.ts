@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { celestialCopy, celestialHref, celestialLocales, celestialAlternates } from "../lib/celestial/copy";
 import { celestialSearchContent, celestialContentUpdatedAt } from "../lib/celestial/search-content";
 import { journalLanguageTags } from "../lib/journal-locales";
+import { tarotWorkspaceCopy } from "../lib/tarot-workspace-copy";
 
 const base = process.argv[2] || "http://localhost:3045";
 const origin = "https://www.destinypixel.com";
@@ -22,7 +23,7 @@ async function main() {
       const rendered = decode(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, ""));
       assert.equal((html.match(/<h1[ >]/g) || []).length, 1, `${path}: single H1`);
       assert.equal(decode(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] || ""), kind === "astrology" ? c.astroTitle : c.tarotTitle);
-      assert.ok(rendered.includes(kind === "astrology" ? c.astroHeading : c.tarotHeading), `${path}: localized H1`);
+      assert.ok(rendered.includes(kind === "astrology" ? c.astroHeading : tarotWorkspaceCopy(locale).title), `${path}: localized H1`);
       for (const text of [guide.title, guide.intro, ...guide.steps, ...guide.sections.flatMap(s => [s.title, s.text]), ...guide.faqs.flatMap(f => [f.q, f.a])]) {
         assert.ok(rendered.includes(text), `${path}: missing SSR text ${text.slice(0, 45)}`);
       }

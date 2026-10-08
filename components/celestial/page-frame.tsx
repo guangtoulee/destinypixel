@@ -17,6 +17,9 @@ import SectionReading from "@/components/section-reading";
 import SiteFunctionLinks from "@/components/site-function-links";
 import { topicCopy } from "@/lib/topic-journeys";
 import "./celestial.css";
+import "./tarot-workspace.css";
+import { TarotHeader, TarotNavigation } from "@/components/tarot-navigation";
+import { tarotWorkspaceCopy } from "@/lib/tarot-workspace-copy";
 export function CelestialPageFrame({
   kind,
   locale,
@@ -31,6 +34,7 @@ export function CelestialPageFrame({
     path = `/${kind}`,
     title = astro ? c.astroTitle : c.tarotTitle,
     description = astro ? c.astroDescription : c.tarotDescription;
+  const tableCopy = tarotWorkspaceCopy(locale);
   const url = absoluteUrl(celestialHref(path, locale));
   const schema = {
     "@context": "https://schema.org",
@@ -69,7 +73,7 @@ export function CelestialPageFrame({
         }}
       />
       <div className="cel-shell">
-        <header className="cel-header">
+        {astro ? <header className="cel-header">
           <a href={celestialHref("/", locale)} className="cel-brand">
             <span>✧</span>DestinyPixel
           </a>
@@ -90,21 +94,21 @@ export function CelestialPageFrame({
               ))}
             </nav>
           </div>
-        </header>
+        </header> : <TarotHeader locale={locale} path="/tarot"/>}
         <nav className="cel-breadcrumb"><a href={celestialHref("/", locale)}>{c.home}</a><span aria-hidden="true">/</span><span aria-current="page">{astro ? c.astrology : c.tarot}</span></nav>
-        <SectionNavigation locale={locale} current={kind} />
+        {astro ? <SectionNavigation locale={locale} current={kind} /> : <TarotNavigation locale={locale} current="table"/>}
         <section className="cel-hero">
           <div>
             <p className="cel-kicker">
-              {astro ? c.astroEyebrow : c.tarotEyebrow}
+              {astro ? c.astroEyebrow : tableCopy.eyebrow}
             </p>
-            <h1>{astro ? c.astroHeading : c.tarotHeading}</h1>
+            <h1>{astro ? c.astroHeading : tableCopy.title}</h1>
             <p className="cel-hero-intro">
-              {astro ? c.astroIntro : c.tarotIntro}
+              {astro ? c.astroIntro : tableCopy.intro}
             </p>
-            <a className="cel-button cel-topic-action" href="#topic-tool">{topicCopy(locale).sections[kind].action}<span aria-hidden="true">↓</span></a>
+            {astro && <a className="cel-button cel-topic-action" href="#topic-tool">{topicCopy(locale).sections[kind].action}<span aria-hidden="true">↓</span></a>}
           </div>
-          <div className="cel-hero-aside">{c.free}</div>
+          <div className="cel-hero-aside">{astro ? c.free : tableCopy.note}</div>
         </section>
         <div id="topic-tool" className="cel-topic-tool" tabIndex={-1}>{children}</div>
         {!astro && <section className="cel-method"><a className="cel-button" href={tarotLearningHref(undefined,locale)}>{tarotLearningCopy(locale).title} →</a><p>{tarotLearningCopy(locale).intro}</p></section>}
@@ -144,7 +148,7 @@ export function CelestialPageFrame({
           ))}
         </section>
         <SectionReading section={kind} locale={locale} />
-        <SiteFunctionLinks current={kind} locale={locale} />
+        {astro ? <SiteFunctionLinks current={kind} locale={locale} /> : <details className="tarot-other-themes"><summary>{tableCopy.others} <span aria-hidden="true">↗</span></summary><SiteFunctionLinks current={kind} locale={locale} /></details>}
         <footer className="cel-footer">
           <a href={celestialHref("/", locale)}>DestinyPixel</a>
           <nav>

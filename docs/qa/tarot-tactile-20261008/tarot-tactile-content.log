@@ -1,0 +1,33 @@
+PASS 308 revised editions (77 Chinese): full sections, openings, quick takes, two cases, complete source appendices, old anchors, dates, citations, canonical/hreflang and sitemap
+Only declared revised editions were checked; run the full learning-library regression separately for unchanged languages and cards.
+PASS en directory: 78 complete links, metadata and ItemList
+PASS en: 78 full articles; every section text, opening, metadata, sources and sitemap
+PASS zh directory: 78 complete links, metadata and ItemList
+PASS zh: 78 full articles; every section text, opening, metadata, sources and sitemap
+PASS zh-TW directory: 78 complete links, metadata and ItemList
+PASS zh-TW: 78 full articles; every section text, opening, metadata, sources and sitemap
+PASS ru directory: 78 complete links, metadata and ItemList
+PASS ru: 78 full articles; every section text, opening, metadata, sources and sitemap
+PASS 312/312 complete article editions + 4 directories; unknown card routes return 404
+PASS /journal/tarot-sun: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/why-the-four-fours-differ: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/how-to-connect-three-tarot-cards: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-from-game-to-occult-traditions: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-sun?locale=zh: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/why-the-four-fours-differ?locale=zh: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/how-to-connect-three-tarot-cards?locale=zh: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-from-game-to-occult-traditions?locale=zh: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-sun?locale=zh-TW: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/why-the-four-fours-differ?locale=zh-TW: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/how-to-connect-three-tarot-cards?locale=zh-TW: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-from-game-to-occult-traditions?locale=zh-TW: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-sun?locale=ru: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/why-the-four-fours-differ?locale=ru: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/how-to-connect-three-tarot-cards?locale=ru: full prose, metadata, reciprocal languages, dates, sources, links
+PASS /journal/tarot-from-game-to-occult-traditions?locale=ru: full prose, metadata, reciprocal languages, dates, sources, links
+PASS 16 full editions and 77 internal link destinations; old/new backlinks; V&A; old Sun anchors
+PASS en: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist
+PASS zh: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist
+PASS zh-TW: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist
+PASS ru: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist
+PASS combined journal: 868 article editions + 16 index/directory editions, all unique
