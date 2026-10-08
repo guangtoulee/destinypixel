@@ -1,0 +1,37 @@
+{
+  "batchId": "depth77-wands-01-03",
+  "sourcePackageSha256": "c6c5558bf1af32b7994a98db6ce117c27ad8f5722041dcee9371bb89ddb0d498",
+  "origin": "Parent reviewed task message, 2026-10-08, bodySha256 confirmed",
+  "records": [
+    {
+      "cardId": "ace-of-wands",
+      "route": "/journal/tarot-ace-of-wands",
+      "articleSha256": "1a81f984bc007e4fab75c1cde0e5eb98b1e5feea06960af241a6911c69da98e9",
+      "characters": 2712,
+      "sectionCount": 9
+    },
+    {
+      "cardId": "two-of-wands",
+      "route": "/journal/tarot-two-of-wands",
+      "articleSha256": "40decb83091451f24453d78727d799c9a0b395023e16df3c9bb708b1e2d0b605",
+      "characters": 2664,
+      "sectionCount": 9
+    },
+    {
+      "cardId": "three-of-wands",
+      "route": "/journal/tarot-three-of-wands",
+      "articleSha256": "bcaef562e75058e676e572da6ffec9149c859fe51294b2dc984114029d403182",
+      "characters": 2647,
+      "sectionCount": 9
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "寶劍八牌義 把無路可走拆成具體限制",
-  "plainLanguageSummary": "限制可能真實存在，先辨認它們，再尋找有支持的一小步。",
+  "plainLanguageSummary": null,
   "keywords": [
     "限制",
     "受困",
@@ -30,19 +30,25 @@
       "id": "section-01",
       "role": "image",
       "title": "眼睛和手臂受限 腳下還有空地",
-      "bodyMarkdown": "紅衣人物站在濕地上，眼部蒙著布，淺色帶子繞住軀乾和手臂。八柄劍分立兩側與後方，畫面左側三柄，右側五柄。腳前有水窪和露出的土地，身後遠處的高地上是一座建築。\n\n從觀看者的位置，能看到劍之間與前方存在空隙；人物卻沒有同樣的視野，身體也確實被束住。不能因為我們看到一點空間，就認定當事人「想走就能走」。構圖更適合提醒我們：外部視角與受困者實際能用的條件並不相同。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)"
+      "bodyMarkdown": "紅衣人物站在濕地上，眼部蒙著布，淺色帶子繞住軀幹和手臂。八柄劍分立兩側與後方，畫面左側三柄，右側五柄。腳前有水窪和露出的土地，身後遠處的高地上是一座建築。\n\n從觀看者的位置，能看到劍之間與前方存在空隙；人物卻沒有同樣的視野，身體也確實被束住。不能因為我們看到一點空間，就認定當事人「想走就能走」。構圖更適合提醒我們：外部視角與受困者實際能用的條件並不相同。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 留下了暫時性這一點",
-      "bodyMarkdown": "Waite 的1911年標註本明確區分暫時受限與不可輓回的束縛。詞表談到危機、責難和力量受到牽制；逆位也包含困難與阻力，所以不能簡單等同於自由降臨。\n\n本文把「辨認限制，尋找支持」作為現代反思讀法。不會沿用舊詞表作疾病、事故或傷害預測，也不會把資源匱乏和現實壓迫一概歸咎於當事人的想法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)"
+      "bodyMarkdown": "Waite 的 1911 年標注本明確區分暫時受限與不可輓回的束縛。詞表談到危機、責難和力量受到牽制；逆位也包含困難與阻力，所以不能簡單等同於自由降臨。\n\n本文把「辨認限制，尋找支持」作為現代反思讀法。不會沿用舊詞表作疾病、事故或傷害預測，也不會把資源匱乏和現實壓迫一概歸咎於當事人的想法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "人物身體受束、眼睛被遮，與周圍有空隙同時成立。讀到這張牌，最容易犯的錯誤是站在畫外替人物宣佈「這很簡單」。看得見路與能安全走路，本來就是兩件事。現代應用應先詢問需要什麼資訊、技能、許可或支援，才能把一個紙面選項變成真正可用的選項。\n\n寶劍二同樣蒙眼，卻坐著持劍；寶劍八的行動條件顯然不同。前者可能適合討論暫緩決定，後者更需要辨認限制。不要把兩張牌都壓縮成一句「別想太多」。\n\n用紙寫限制時，不妨在每一項後面加上「由誰或什麼控制」。自己能調整的完成標準，與需要他人批准的使用權限，應安排不同動作。若第一步也必須得到支持，就先把求助說到足夠具體，例如請求一份說明、一次演示或確認一項規則。抽在結果位時，不必把暫時受限講成永遠停滯；可以說明目前哪些條件仍未開放，何時有機會重新查看。相反，也不應因逆位就催人立即行動，尚未落實的支持不能當成已經握在手中的資源。"
     },
     {
       "id": "section-03",
       "role": "upright",
       "title": "正位 先把困難說得足夠具體",
-      "bodyMarkdown": "正位可以提示一種行動選擇變窄的經驗：資訊被擋住，資源不足，或害怕承擔某種後果。先問到底哪一步做不了、由什麼條件限制，比要求自己立刻積極更有幫助。\n\n有些障礙來自外部規則，需要協商或幫助；有些是尚未核實的假設，可以找人確認。把二者分清，並不表示任何一類都容易。它只是讓「完全沒辦法」變成可以逐項處理的問題。"
+      "bodyMarkdown": "正位可以提示一種行動選擇變窄的經驗：資訊被擋住，資源不足，或害怕承擔某種後果。先問到底哪一步做不了、由什麼條件限制，比要求自己立刻積極更有幫助。\n\n有些障礙來自外部規則，需要協商或幫助；有些是尚未確認的假設，可以找人確認。把二者分清，並不表示任何一類都容易。它只是讓「完全沒辦法」變成可以逐項處理的問題。"
     },
     {
       "id": "section-04",
@@ -51,16 +57,28 @@
       "bodyMarkdown": "逆位可用於觀察已經增加的選擇，例如獲得資料、有人願意協助，或你開始提出具體請求。另一種情況是限制未變，但自責更重。先確認可用支持，別因為抽到逆位就逼自己跨過仍存在的風險。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 想參加展覽 卻覺得自己沒有選擇",
+      "bodyMarkdown": "**原創虛構案例，現狀位，正位。** 阿璇想在社區小展裡展示攝影作品，卻覺得自己沒有列印設備，也不懂裝框，所以只能放棄。她問：「我現在卡在哪裡？」實際展覽允許電子展示，但她只看過去年的紙本海報，還未讀本次報名說明；她的時間和製作預算確實很有限。\n\n蒙眼與束帶適合將限制拆開：不瞭解本次展示方式是資訊缺口，預算和時間則是實在的條件。畫面前方的空隙可以提醒她去確認可用入口，卻不能據此保證所有困難只是想像。劍依然在周圍，找到一種選擇也不代表它完全沒有代價。\n\n她先向主辦者確認電子作品規格，整理已有三張照片做一個小版本，而不是立刻購買設備。若電子展示無需額外支出，就試著提交這一組；如果仍需現場值守，則再核對自己的空閒時間。\n\n如果本次其實只接受實體裝裱作品，行動便應轉為詢問是否能借用展示材料，或坦然跳過這次機會。那不是缺乏信心，而是資源限制仍未解決。正位幫助她把「我完全不行」還原成幾個可查的問題，最終是否參加由這些條件決定，不能由畫外一句鼓勵替她承擔成本。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 有人願意幫忙 為什麼仍然邁不出去",
+      "bodyMarkdown": "**原創虛構案例，下一步位，逆位。** 嘉禾在學習剪輯，之前因為不會整理素材，連續幾次放棄練習。最近同學答應演示流程，她卻覺得「麻煩別人很丟臉」，遲遲沒約時間。她問：「我怎樣開始下一次練習？」事實是對方明確願意用半小時幫助她，電腦和練習素材也都已準備好。\n\n逆位可作為選擇開始增加的解讀方向，因為現實裡確有一項新支持出現。束帶與蒙眼提醒她，幫助最好對準具體障礙：她需要看一次素材歸檔，而非請別人替她剪完整部片。劍之間的空間在這個案例裡有了可用的對應物，就是那半小時演示。\n\n她發消息確認時間，並提前列三步最不理解的操作。演示結束後自己重做一個小片段，把仍卡住的地方記下來，只問必要的問題。這樣接受幫助並沒有取消她的主動性，反而增加了獨立練習的條件。\n\n如果同學只是禮貌地說「有空再講」，還沒有實際時間，就不能把支持當成已經落實；可先找公開教學或換一種練習。若操作已經會做，只是覺得必須達到專業水平才可保存作品，那又是完成標準的問題。逆位不要求突然勇敢，而是讓新增的條件逐步變成實際行動。"
+    },
+    {
       "id": "section-05",
       "role": "situations",
       "title": "權限和害怕不是同一種阻礙",
-      "bodyMarkdown": "工作卡在審批上，先查清誰有權限、缺哪份材料，以及何時能回復。把責任邊界寫明，比默默加班證明自己更可能推進。\n\n想換工作卻承擔著固定開支，可以先更新履歷、瞭解崗位和準備緩衝，不必把辭職當成唯一行動。學習時覺得「我天生學不會」，試著請人觀察一個具體步驟；問題可能出在前置知識，而不是整個人沒有能力。"
+      "bodyMarkdown": "工作卡在審核上，先查清誰有權限、缺哪份材料，以及何時能回覆。把責任邊界寫明，比默默加班證明自己更可能推進。\n\n想換工作卻承擔著固定開支，可以先更新履歷、瞭解職位和準備緩衝，不必把辭職當成唯一行動。學習時覺得「我天生學不會」，試著請人觀察一個具體步驟；問題可能出在前置知識，而不是整個人沒有能力。"
     },
     {
       "id": "section-06",
       "role": "practice",
       "title": "練習 把障礙分成三欄",
-      "bodyMarkdown": "寫下「已確認的限制」「尚未確認的擔心」「可以求助的人或資源」。從第二欄選一件能核實的事，或從第三欄發出一個具體請求。練習的目標是多看見一點條件，不是證明你早該走出來。"
+      "bodyMarkdown": "寫下「已確認的限制」「尚未確認的擔心」「可以求助的人或資源」。從第二欄選一件能確認的事，或從第三欄發出一個具體請求。練習的目標是多看見一點條件，不是證明你早該走出來。"
     },
     {
       "id": "section-07",
@@ -69,16 +87,10 @@
       "bodyMarkdown": "寶劍八不是受困者自找麻煩的證據，也不要求盲目冒險。若現實中存在控制、威脅或不安全處境，優先尋找可信支持與實際安全條件，而不是按牌面逼迫自己行動。"
     },
     {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "寶劍二：比較暫緩決策與實際行動受限；寶劍六：尋找能幫助過渡的路線與同行者。"
-    },
-    {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍八](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n- [Commons Swords08.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords08.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍八](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "eight-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "eight-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑八，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍八",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktsw08.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "eight-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑八",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍八",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktsw08.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "eight-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords08.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords08.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "eight-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords08.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords08.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍八牌義 把無路可走拆成具體限制\n\n一句話：限制可能真實存在，先辨認它們，再尋找有支持的一小步。\n\n關鍵詞：限制、受困、辨路\n\n正位速讀：看清哪些條件擋住行動，區分未知與已經確認的障礙。\n\n逆位速讀：有些限制開始鬆動，也可能需要更多幫助才能行動。\n\n「我沒有辦法」有時藏著好幾件不同的事：沒權限、沒資源、沒資訊，或還沒有人願意幫忙。\n\n## 眼睛和手臂受限 腳下還有空地\n\n紅衣人物站在濕地上，眼部蒙著布，淺色帶子繞住軀乾和手臂。八柄劍分立兩側與後方，畫面左側三柄，右側五柄。腳前有水窪和露出的土地，身後遠處的高地上是一座建築。\n\n從觀看者的位置，能看到劍之間與前方存在空隙；人物卻沒有同樣的視野，身體也確實被束住。不能因為我們看到一點空間，就認定當事人「想走就能走」。構圖更適合提醒我們：外部視角與受困者實際能用的條件並不相同。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n\n## Waite 留下了暫時性這一點\n\nWaite 的1911年標註本明確區分暫時受限與不可輓回的束縛。詞表談到危機、責難和力量受到牽制；逆位也包含困難與阻力，所以不能簡單等同於自由降臨。\n\n本文把「辨認限制，尋找支持」作為現代反思讀法。不會沿用舊詞表作疾病、事故或傷害預測，也不會把資源匱乏和現實壓迫一概歸咎於當事人的想法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n\n## 正位 先把困難說得足夠具體\n\n正位可以提示一種行動選擇變窄的經驗：資訊被擋住，資源不足，或害怕承擔某種後果。先問到底哪一步做不了、由什麼條件限制，比要求自己立刻積極更有幫助。\n\n有些障礙來自外部規則，需要協商或幫助；有些是尚未核實的假設，可以找人確認。把二者分清，並不表示任何一類都容易。它只是讓「完全沒辦法」變成可以逐項處理的問題。\n\n## 逆位 鬆動也需要現實條件\n\n逆位可用於觀察已經增加的選擇，例如獲得資料、有人願意協助，或你開始提出具體請求。另一種情況是限制未變，但自責更重。先確認可用支持，別因為抽到逆位就逼自己跨過仍存在的風險。\n\n## 權限和害怕不是同一種阻礙\n\n工作卡在審批上，先查清誰有權限、缺哪份材料，以及何時能回復。把責任邊界寫明，比默默加班證明自己更可能推進。\n\n想換工作卻承擔著固定開支，可以先更新履歷、瞭解崗位和準備緩衝，不必把辭職當成唯一行動。學習時覺得「我天生學不會」，試著請人觀察一個具體步驟；問題可能出在前置知識，而不是整個人沒有能力。\n\n## 練習 把障礙分成三欄\n\n寫下「已確認的限制」「尚未確認的擔心」「可以求助的人或資源」。從第二欄選一件能核實的事，或從第三欄發出一個具體請求。練習的目標是多看見一點條件，不是證明你早該走出來。\n\n## 看到出口不等於當事人有條件離開\n\n寶劍八不是受困者自找麻煩的證據，也不要求盲目冒險。若現實中存在控制、威脅或不安全處境，優先尋找可信支持與實際安全條件，而不是按牌面逼迫自己行動。\n\n## 接著讀什麼\n\n寶劍二：比較暫緩決策與實際行動受限；寶劍六：尋找能幫助過渡的路線與同行者。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍八](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n- [Commons Swords08.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords08.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍八牌義 把無路可走拆成具體限制\n\n「我沒有辦法」有時藏著好幾件不同的事：沒權限、沒資源、沒資訊，或還沒有人願意幫忙。\n\n## 眼睛和手臂受限 腳下還有空地\n\n紅衣人物站在濕地上，眼部蒙著布，淺色帶子繞住軀幹和手臂。八柄劍分立兩側與後方，畫面左側三柄，右側五柄。腳前有水窪和露出的土地，身後遠處的高地上是一座建築。\n\n從觀看者的位置，能看到劍之間與前方存在空隙；人物卻沒有同樣的視野，身體也確實被束住。不能因為我們看到一點空間，就認定當事人「想走就能走」。構圖更適合提醒我們：外部視角與受困者實際能用的條件並不相同。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n\n## Waite 留下了暫時性這一點\n\nWaite 的 1911 年標注本明確區分暫時受限與不可輓回的束縛。詞表談到危機、責難和力量受到牽制；逆位也包含困難與阻力，所以不能簡單等同於自由降臨。\n\n本文把「辨認限制，尋找支持」作為現代反思讀法。不會沿用舊詞表作疾病、事故或傷害預測，也不會把資源匱乏和現實壓迫一概歸咎於當事人的想法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n人物身體受束、眼睛被遮，與周圍有空隙同時成立。讀到這張牌，最容易犯的錯誤是站在畫外替人物宣佈「這很簡單」。看得見路與能安全走路，本來就是兩件事。現代應用應先詢問需要什麼資訊、技能、許可或支援，才能把一個紙面選項變成真正可用的選項。\n\n寶劍二同樣蒙眼，卻坐著持劍；寶劍八的行動條件顯然不同。前者可能適合討論暫緩決定，後者更需要辨認限制。不要把兩張牌都壓縮成一句「別想太多」。\n\n用紙寫限制時，不妨在每一項後面加上「由誰或什麼控制」。自己能調整的完成標準，與需要他人批准的使用權限，應安排不同動作。若第一步也必須得到支持，就先把求助說到足夠具體，例如請求一份說明、一次演示或確認一項規則。抽在結果位時，不必把暫時受限講成永遠停滯；可以說明目前哪些條件仍未開放，何時有機會重新查看。相反，也不應因逆位就催人立即行動，尚未落實的支持不能當成已經握在手中的資源。\n\n## 正位 先把困難說得足夠具體\n\n正位可以提示一種行動選擇變窄的經驗：資訊被擋住，資源不足，或害怕承擔某種後果。先問到底哪一步做不了、由什麼條件限制，比要求自己立刻積極更有幫助。\n\n有些障礙來自外部規則，需要協商或幫助；有些是尚未確認的假設，可以找人確認。把二者分清，並不表示任何一類都容易。它只是讓「完全沒辦法」變成可以逐項處理的問題。\n\n## 逆位 鬆動也需要現實條件\n\n逆位可用於觀察已經增加的選擇，例如獲得資料、有人願意協助，或你開始提出具體請求。另一種情況是限制未變，但自責更重。先確認可用支持，別因為抽到逆位就逼自己跨過仍存在的風險。\n\n## 案例一 想參加展覽 卻覺得自己沒有選擇\n\n**原創虛構案例，現狀位，正位。** 阿璇想在社區小展裡展示攝影作品，卻覺得自己沒有列印設備，也不懂裝框，所以只能放棄。她問：「我現在卡在哪裡？」實際展覽允許電子展示，但她只看過去年的紙本海報，還未讀本次報名說明；她的時間和製作預算確實很有限。\n\n蒙眼與束帶適合將限制拆開：不瞭解本次展示方式是資訊缺口，預算和時間則是實在的條件。畫面前方的空隙可以提醒她去確認可用入口，卻不能據此保證所有困難只是想像。劍依然在周圍，找到一種選擇也不代表它完全沒有代價。\n\n她先向主辦者確認電子作品規格，整理已有三張照片做一個小版本，而不是立刻購買設備。若電子展示無需額外支出，就試著提交這一組；如果仍需現場值守，則再核對自己的空閒時間。\n\n如果本次其實只接受實體裝裱作品，行動便應轉為詢問是否能借用展示材料，或坦然跳過這次機會。那不是缺乏信心，而是資源限制仍未解決。正位幫助她把「我完全不行」還原成幾個可查的問題，最終是否參加由這些條件決定，不能由畫外一句鼓勵替她承擔成本。\n\n## 案例二 有人願意幫忙 為什麼仍然邁不出去\n\n**原創虛構案例，下一步位，逆位。** 嘉禾在學習剪輯，之前因為不會整理素材，連續幾次放棄練習。最近同學答應演示流程，她卻覺得「麻煩別人很丟臉」，遲遲沒約時間。她問：「我怎樣開始下一次練習？」事實是對方明確願意用半小時幫助她，電腦和練習素材也都已準備好。\n\n逆位可作為選擇開始增加的解讀方向，因為現實裡確有一項新支持出現。束帶與蒙眼提醒她，幫助最好對準具體障礙：她需要看一次素材歸檔，而非請別人替她剪完整部片。劍之間的空間在這個案例裡有了可用的對應物，就是那半小時演示。\n\n她發消息確認時間，並提前列三步最不理解的操作。演示結束後自己重做一個小片段，把仍卡住的地方記下來，只問必要的問題。這樣接受幫助並沒有取消她的主動性，反而增加了獨立練習的條件。\n\n如果同學只是禮貌地說「有空再講」，還沒有實際時間，就不能把支持當成已經落實；可先找公開教學或換一種練習。若操作已經會做，只是覺得必須達到專業水平才可保存作品，那又是完成標準的問題。逆位不要求突然勇敢，而是讓新增的條件逐步變成實際行動。\n\n## 權限和害怕不是同一種阻礙\n\n工作卡在審核上，先查清誰有權限、缺哪份材料，以及何時能回覆。把責任邊界寫明，比默默加班證明自己更可能推進。\n\n想換工作卻承擔著固定開支，可以先更新履歷、瞭解職位和準備緩衝，不必把辭職當成唯一行動。學習時覺得「我天生學不會」，試著請人觀察一個具體步驟；問題可能出在前置知識，而不是整個人沒有能力。\n\n## 練習 把障礙分成三欄\n\n寫下「已確認的限制」「尚未確認的擔心」「可以求助的人或資源」。從第二欄選一件能確認的事，或從第三欄發出一個具體請求。練習的目標是多看見一點條件，不是證明你早該走出來。\n\n## 看到出口不等於當事人有條件離開\n\n寶劍八不是受困者自找麻煩的證據，也不要求盲目冒險。若現實中存在控制、威脅或不安全處境，優先尋找可信支持與實際安全條件，而不是按牌面逼迫自己行動。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍八，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍八](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "eight-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "VIII",
-    "rank": "eight",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑八",
-    "nameEn": "Eight of Swords",
-    "title": "宝剑八牌义 把无路可走拆成具体限制",
-    "plainLanguageSummary": "限制可能真实存在，先辨认它们，再寻找有支持的一小步。",
-    "hook": "「我没有办法」有时藏着好几件不同的事：没权限、没资源、没信息，或还没有人愿意帮忙。",
-    "keywords": [
-      "限制",
-      "受困",
-      "辨路"
-    ],
-    "uprightQuickTake": "看清哪些条件挡住行动，区分未知与已经确认的障碍。",
-    "reversedQuickTake": "有些限制开始松动，也可能需要更多帮助才能行动。",
-    "articleSlug": "tarot-eight-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "眼睛和手臂受限 脚下还有空地",
-        "paragraphs": [
-          "红衣人物站在湿地上，眼部蒙着布，浅色带子绕住躯干和手臂。八柄剑分立两侧与后方，画面左侧三柄，右侧五柄。脚前有水洼和露出的土地，身后远处的高地上是一座建筑。",
-          "从观看者的位置，能看到剑之间与前方存在空隙；人物却没有同样的视野，身体也确实被束住。不能因为我们看到一点空间，就认定当事人「想走就能走」。构图更适合提醒我们：外部视角与受困者实际能用的条件并不相同。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 留下了暂时性这一点",
-        "paragraphs": [
-          "Waite 的1911年标注本明确区分暂时受限与不可挽回的束缚。词表谈到危机、责难和力量受到牵制；逆位也包含困难与阻力，所以不能简单等同于自由降临。",
-          "本文把「辨认限制，寻找支持」作为现代反思读法。不会沿用旧词表作疾病、事故或伤害预测，也不会把资源匮乏和现实压迫一概归咎于当事人的想法。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw08.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先把困难说得足够具体",
-        "paragraphs": [
-          "正位可以提示一种行动选择变窄的经验：信息被挡住，资源不足，或害怕承担某种后果。先问到底哪一步做不了、由什么条件限制，比要求自己立刻积极更有帮助。",
-          "有些障碍来自外部规则，需要协商或帮助；有些是尚未核实的假设，可以找人确认。把二者分清，并不表示任何一类都容易。它只是让「完全没办法」变成可以逐项处理的问题。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 松动也需要现实条件",
-        "paragraphs": [
-          "逆位可用于观察已经增加的选择，例如获得资料、有人愿意协助，或你开始提出具体请求。另一种情况是限制未变，但自责更重。先确认可用支持，别因为抽到逆位就逼自己跨过仍存在的风险。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "权限和害怕不是同一种阻碍",
-        "paragraphs": [
-          "工作卡在审批上，先查清谁有权限、缺哪份材料，以及何时能回复。把责任边界写明，比默默加班证明自己更可能推进。",
-          "想换工作却承担着固定开支，可以先更新简历、了解岗位和准备缓冲，不必把辞职当成唯一行动。学习时觉得「我天生学不会」，试着请人观察一个具体步骤；问题可能出在前置知识，而不是整个人没有能力。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 把障碍分成三栏",
-        "paragraphs": [
-          "写下「已确认的限制」「尚未确认的担心」「可以求助的人或资源」。从第二栏选一件能核实的事，或从第三栏发出一个具体请求。练习的目标是多看见一点条件，不是证明你早该走出来。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "看到出口不等于当事人有条件离开",
-        "paragraphs": [
-          "宝剑八不是受困者自找麻烦的证据，也不要求盲目冒险。若现实中存在控制、威胁或不安全处境，优先寻找可信支持与实际安全条件，而不是按牌面逼迫自己行动。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "two-of-swords",
-        "nameZh": "宝剑二",
-        "reason": "比较暂缓决策与实际行动受限"
-      },
-      {
-        "cardId": "six-of-swords",
-        "nameZh": "宝剑六",
-        "reason": "寻找能帮助过渡的路线与同行者"
-      }
-    ],
-    "sources": [
-      {
-        "id": "eight-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑八，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "eight-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑八",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw08.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "eight-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords08.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "eight",
-      "gitBlobSha": "a43eef6185eff7711d7e1f2f160e2a51f8297037",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/eight-of-swords.webp",
-      "sha256": "41cc79ef7ea41eed9ff2a43ceb499f6d64e60f84d03bdf79d0513ea2f3832da2",
-      "localFile": "images/08-eight.webp",
-      "bytes": 184972,
-      "dimensions": [
-        560,
-        965
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/eight-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords08.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:19:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1114,
-        1919
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1142,
-    "bodyChineseCharacterCount": 755
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 869,
-    "words": 2,
-    "articleUtf8Bytes": 4463
-  },
+  "sourceBatch": "depth77-swords-03",
   "sourceLocale": "zh-CN",
   "name": "寶劍八",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍八",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "eight-of-swords",
-      "sourceArticleSha256": "d7f561ed3a0c8dcf11657d542488ee10c681381749f91a93775d6a0e13d45d6c",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 972,
-    "completeArticleCharacters": 1933
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "d7f561ed3a0c8dcf11657d542488ee10c681381749f91a93775d6a0e13d45d6c",
-    "articleSha256": "ac9f722a4072e1b8a9d28b4d4babc4c42d423071d3209df2f43d322ff26dc30a",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "133ef78b829c867785cb32ea3a72a7207e88d7e91d527aaff370d2b03f36633d",
+    "sourceArticleSha256": "133ef78b829c867785cb32ea3a72a7207e88d7e91d527aaff370d2b03f36633d",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "61652bde06d2e0dad5456c3101218b8828e8b236318e54f6aad0b03efa045d6f",
+    "sourcePackageSha256": "5edf66858fd04265619439c27d7c24453417291662a1bddf97eb1c23598569c2",
+    "previousRecord": "content/tarot/revisions/2026-10-08/eight-of-swords.zh-TW.json",
+    "editionBodySha256": "788dc330cc0237105f15c8a8bfb46aec56f2b2e251b31e05eaea5fbe6e8ff7d3",
+    "translationSourceBodySha256": "133ef78b829c867785cb32ea3a72a7207e88d7e91d527aaff370d2b03f36633d",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "06be0d547c68b8828638f3bb8dfbaf0b199b1a75ebed85e2c253450a526f6350",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

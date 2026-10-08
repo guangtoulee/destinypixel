@@ -1,0 +1,37 @@
+{
+  "batchId": "depth77-major-06",
+  "sourcePackageSha256": "9b3f48ce81462bc967b2887f3f3dfe85be284383b3e17aeb5ad991e7ddc0dcea",
+  "origin": "parent thread 01a118a5-9b43-72c3-b4fe-a05e2232d0e4 full JSON manuscript message",
+  "records": [
+    {
+      "cardId": "devil",
+      "route": "/journal/tarot-devil",
+      "articleSha256": "e1eb4a374798b63a512d74f8a1b91e6f478dce63f2e1b9643e8c029a08ec8297",
+      "characters": 2381,
+      "sectionCount": 8
+    },
+    {
+      "cardId": "tower",
+      "route": "/journal/tarot-tower",
+      "articleSha256": "21a6a39d9b6002139b81538807dbe80027ac93fe2db5202f10f2167ec37f4e14",
+      "characters": 2293,
+      "sectionCount": 8
+    },
+    {
+      "cardId": "star",
+      "route": "/journal/tarot-star",
+      "articleSha256": "362c9e80344b474019103a56541781c104649065b15f59a18380269c5d1b0cdf",
+      "characters": 2323,
+      "sectionCount": 8
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

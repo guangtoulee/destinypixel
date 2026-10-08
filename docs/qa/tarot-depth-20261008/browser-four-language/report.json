@@ -1,0 +1,6328 @@
+{
+  "scope": "Local four-language integration; no external Preview or production verification",
+  "base": "http://127.0.0.1:3041",
+  "startedAt": "2026-10-08T10:28:06.403Z",
+  "cards": 77,
+  "locales": [
+    "zh",
+    "en",
+    "zh-TW",
+    "ru"
+  ],
+  "views": [
+    {
+      "locale": "zh",
+      "cardId": "fool",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "magician",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "high-priestess",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "empress",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "emperor",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hierophant",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "lovers",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "chariot",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "strength",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hermit",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "wheel",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "justice",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hanged-man",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "death",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "temperance",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "devil",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "tower",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "star",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "moon",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "judgement",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "world",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "fool",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "magician",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "high-priestess",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "empress",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "emperor",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hierophant",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "lovers",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "chariot",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "strength",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hermit",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "wheel",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "justice",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "hanged-man",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "death",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "temperance",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "devil",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "tower",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "star",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "moon",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "judgement",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "world",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ace-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "two-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "three-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "five-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "six-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "seven-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "eight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "nine-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "ten-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "knight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "queen-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "fool",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "magician",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "high-priestess",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "empress",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "emperor",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hierophant",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "lovers",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "chariot",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "strength",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hermit",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "wheel",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "justice",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hanged-man",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "death",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "temperance",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "devil",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "tower",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "star",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "moon",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "judgement",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "world",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "fool",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "magician",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "high-priestess",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "empress",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "emperor",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hierophant",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "lovers",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "chariot",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "strength",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hermit",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "wheel",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "justice",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "hanged-man",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "death",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "temperance",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "devil",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "tower",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "star",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "moon",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "judgement",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "world",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ace-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "two-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "three-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "five-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "six-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "seven-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "eight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "nine-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "ten-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "knight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "queen-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "fool",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "magician",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "high-priestess",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "empress",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "emperor",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hierophant",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "lovers",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "chariot",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "strength",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hermit",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "wheel",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "justice",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hanged-man",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "death",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "temperance",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "devil",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "tower",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "star",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "moon",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "judgement",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "world",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "fool",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "magician",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "high-priestess",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "empress",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "emperor",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hierophant",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "lovers",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "chariot",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "strength",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hermit",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "wheel",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "justice",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "hanged-man",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "death",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "temperance",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "devil",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "tower",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "star",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "moon",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "judgement",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "world",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ace-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "two-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "three-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "five-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "six-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "seven-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "eight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "nine-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "ten-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "knight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "queen-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "fool",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "magician",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "high-priestess",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "empress",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "emperor",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hierophant",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "lovers",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "chariot",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "strength",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hermit",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "wheel",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "justice",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hanged-man",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "death",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "temperance",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "devil",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "tower",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "star",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "moon",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "judgement",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "world",
+      "width": 390,
+      "height": 844,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-wands",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-cups",
+      "width": 390,
+      "height": 844,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-swords",
+      "width": 390,
+      "height": 844,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-pentacles",
+      "width": 390,
+      "height": 844,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "fool",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "magician",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "high-priestess",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "empress",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "emperor",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hierophant",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "lovers",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "chariot",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "strength",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hermit",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "wheel",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "justice",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "hanged-man",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "death",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "temperance",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "devil",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "tower",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "star",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "moon",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "judgement",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "world",
+      "width": 1440,
+      "height": 900,
+      "sections": 8,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-wands",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 9,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-cups",
+      "width": 1440,
+      "height": 900,
+      "sections": 10,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-swords",
+      "width": 1440,
+      "height": 900,
+      "sections": 11,
+      "cases": 2,
+      "legacyAnchors": 9,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ace-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "two-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "three-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "five-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "six-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "seven-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "eight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "nine-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "ten-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "knight-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "queen-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-pentacles",
+      "width": 1440,
+      "height": 900,
+      "sections": 12,
+      "cases": 2,
+      "legacyAnchors": 8,
+      "sourceAppendix": false
+    }
+  ],
+  "workflows": [
+    {
+      "locale": "zh",
+      "cardId": "fool",
+      "crossCardHref": "/journal/tarot-magician?locale=zh",
+      "backForward": true,
+      "targetLanguage": "en",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "four-of-cups",
+      "crossCardHref": "/journal/tarot-five-of-cups?locale=zh",
+      "backForward": true,
+      "targetLanguage": "en",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "page-of-cups",
+      "crossCardHref": "/journal/tarot-knight-of-cups?locale=zh",
+      "backForward": true,
+      "targetLanguage": "en",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh",
+      "cardId": "king-of-pentacles",
+      "crossCardHref": "/journal/tarot-queen-of-pentacles?locale=zh",
+      "backForward": true,
+      "targetLanguage": "en",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "en",
+      "cardId": "fool",
+      "crossCardHref": "/journal/tarot-magician",
+      "backForward": true,
+      "targetLanguage": "zh-TW",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "en",
+      "cardId": "four-of-cups",
+      "crossCardHref": "/journal/tarot-five-of-cups",
+      "backForward": true,
+      "targetLanguage": "zh-TW",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "en",
+      "cardId": "page-of-cups",
+      "crossCardHref": "/journal/tarot-knight-of-cups",
+      "backForward": true,
+      "targetLanguage": "zh-TW",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "en",
+      "cardId": "king-of-pentacles",
+      "crossCardHref": "/journal/tarot-queen-of-pentacles",
+      "backForward": true,
+      "targetLanguage": "zh-TW",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "fool",
+      "crossCardHref": "/journal/tarot-magician?locale=zh-TW",
+      "backForward": true,
+      "targetLanguage": "ru",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "four-of-cups",
+      "crossCardHref": "/journal/tarot-five-of-cups?locale=zh-TW",
+      "backForward": true,
+      "targetLanguage": "ru",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "page-of-cups",
+      "crossCardHref": "/journal/tarot-knight-of-cups?locale=zh-TW",
+      "backForward": true,
+      "targetLanguage": "ru",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardId": "king-of-pentacles",
+      "crossCardHref": "/journal/tarot-queen-of-pentacles?locale=zh-TW",
+      "backForward": true,
+      "targetLanguage": "ru",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "fool",
+      "crossCardHref": "/journal/tarot-magician?locale=ru",
+      "backForward": true,
+      "targetLanguage": "zh",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "four-of-cups",
+      "crossCardHref": "/journal/tarot-five-of-cups?locale=ru",
+      "backForward": true,
+      "targetLanguage": "zh",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "page-of-cups",
+      "crossCardHref": "/journal/tarot-knight-of-cups?locale=ru",
+      "backForward": true,
+      "targetLanguage": "zh",
+      "languageSwitchBackForward": true
+    },
+    {
+      "locale": "ru",
+      "cardId": "king-of-pentacles",
+      "crossCardHref": "/journal/tarot-queen-of-pentacles?locale=ru",
+      "backForward": true,
+      "targetLanguage": "zh",
+      "languageSwitchBackForward": true
+    }
+  ],
+  "screenshots": [
+    "zh-fool-390.png",
+    "en-fool-390.png",
+    "en-page-of-cups-case-2-390.png",
+    "en-king-of-swords-1440.png",
+    "zh-TW-fool-390.png",
+    "zh-TW-page-of-cups-case-2-390.png",
+    "zh-TW-king-of-swords-1440.png",
+    "ru-fool-390.png",
+    "ru-page-of-cups-case-2-390.png",
+    "ru-moon-source-appendix-1440.png",
+    "ru-king-of-swords-1440.png"
+  ],
+  "pageErrors": [],
+  "blockedExternalRequests": 0,
+  "status": "passed",
+  "finishedAt": "2026-10-08T10:32:32.801Z",
+  "totals": {
+    "views": 616,
+    "caseNavigations": 1232,
+    "legacyAnchorChecks": 5320,
+    "sourceAppendixViews": 168,
+    "historyWorkflows": 16
+  }
+}

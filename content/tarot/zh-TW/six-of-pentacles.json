@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "星幣六 給予也需要清楚的尺度",
-  "plainLanguageSummary": "讓資源流向需要的地方，並看清分配由誰決定。",
+  "plainLanguageSummary": null,
   "keywords": [
     "給予",
     "接受",
@@ -33,10 +33,16 @@
       "bodyMarkdown": "畫面中央的人戴紅帽、披紅色外衣，內穿藍白條紋衣袍。一手提著小天平，另一手向左下方的人撒下幾枚小錢幣。兩名披著打補丁衣物的人跪在地上，伸手朝向中央人物；左側披布偏黃，右側偏藍。\n\n六枚大星幣懸在人物上方，左邊三枚，中間一枚，右邊兩枚，和正在落下的小錢幣不是同一層次的畫法。遠處有樹木和建築。秤讓「衡量」進入場景，但它並不能獨自證明分配公平；畫面也沒有說明右邊的人下一刻會得到多少。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents06.jpg)"
     },
     {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "誰握著秤，誰能夠提要求",
+      "bodyMarkdown": "畫面中的秤和正在分發的小錢幣都由站立者掌握，兩位接收者的位置更低。這種構圖讓資源差異清楚可見，也留下需要追問的空間：尺度由誰制定，接收者能否表達不同需要，另一邊的人是否同樣獲得回應？這些是現代讀圖問題，並非畫面已經給出的指控。\n\n星幣五還在艱難前行，星幣六出現了具體的給予動作，但有幫助並不自動等於幫助合適。反過來，也不能只因雙方資源不等，就否認一切善意。解讀要回到條件、用途和接收者實際體驗，既看提供了什麼，也看誰有權說「不需要這一種」。"
+    },
+    {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 強調饋贈與善意",
-      "bodyMarkdown": "Waite 將中央人物描述為商人，認為分發錢幣反映他的成功與善心。占卜詞條包括禮物、饋贈、滿足以及當下的富足；逆位則包含欲求、貪求、嫉妒與幻象。\n\n本篇保留給予和接受的主題，同時提出規則、尊重與權力差異的現代問題。這些是對畫面關係的進一步反思，不能倒過來說 Waite 已經批判了圖中施予者的動機。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)"
+      "bodyMarkdown": "Waite 將中央人物描述為商人，認為分發錢幣反映他的成功與善心。占卜條目包括禮物、饋贈、滿足以及當下的富足；逆位則包含欲求、貪求、嫉妒與幻象。\n\n本篇保留給予和接受的主題，同時提出規則、尊重與權力差異的現代問題。這些是對畫面關係的進一步反思，不能倒過來說 Waite 已經批判了圖中施予者的動機。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)"
     },
     {
       "id": "section-03",
@@ -48,13 +54,25 @@
       "id": "section-04",
       "role": "reversed",
       "title": "逆位 檢查沒說出口的交換",
-      "bodyMarkdown": "有些失衡藏在「我都是為你好」裡：提供一點幫助，就要求對方隨時服從；或為了維持被需要的感覺，持續承擔自己已經無力承擔的事。先看實際安排，再判斷如何調整。\n\n也可能是你習慣拒絕所有支持，認為接受就等於欠下無法償還的人情。核實對方真實的期待，區分可以協商的幫助與確實附帶控制的條件，不必把兩者混在一起。"
+      "bodyMarkdown": "有些失衡藏在「我都是為你好」裡：提供一點幫助，就要求對方隨時服從；或為了維持被需要的感覺，持續承擔自己已經無力承擔的事。先看實際安排，再判斷如何調整。\n\n也可能是你習慣拒絕所有支持，認為接受就等於欠下無法償還的人情。確認對方真實的期待，區分可以協商的幫助與確實附帶控制的條件，不必把兩者混在一起。"
     },
     {
       "id": "section-05",
       "role": "situations",
       "title": "在三種日常關係中看分配",
-      "bodyMarkdown": "團隊分配設備或培訓名額時，說明標準與申請方式，免得資源只流向最會開口的人。朋友幫忙改作品，可以事先約定看哪一部分、花多長時間。\n\n共同生活中，某人暫時承擔更多事務時，約好何時回顧，而不是讓臨時安排悄悄變成永久責任。被照顧的一方也應參與討論。"
+      "bodyMarkdown": "團隊分配設備或訓練名額時，說明標準與申請方式，免得資源只流向最會開口的人。朋友幫忙改作品，可以事先約定看哪一部分、花多長時間。\n\n共同生活中，某人暫時承擔更多事務時，約好何時回顧檢討，而不是讓臨時安排悄悄變成永久責任。被照顧的一方也應參與討論。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 互助書桌需要怎樣的借用規則",
+      "bodyMarkdown": "原創虛構案例。一個社區空間有三張閒置書桌，幾位準備職業考試的成年人來詢問能否借用，管理員希望支持他們，卻不知道怎樣分配開放時間。問「怎樣把閒置書桌借給真正用得上的人？」，建議位是星幣六正位。\n\n落下的錢幣可以對應可使用的桌位，秤提醒安排需要有尺度。解讀的方向是把資源變成實際支持，而不是用抽牌替申請者排名。管理員先詢問需要安靜學習的時段，公開現有開放條件，讓使用者知道一次能預約多久、如何取消以及意見向誰反映。\n\n如果所有人只需要週末而空間週末不開門，形式上的慷慨並沒有解決問題，應討論調整開放時間是否可行；若時段互補，則輪流使用就能滿足大部分需要。先試行兩週，查看空置與候補情況，再一起修改。幫助的價值體現在書桌真的能被使用，也體現在使用者不會因提出問題而擔心失去資格。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 一次幫忙換來了無限次待命",
+      "bodyMarkdown": "原創虛構案例。小冬曾接受朋友兩次剪輯指導，後來朋友請她幫活動做字幕。她願意回報，但對方開始每晚臨時發來素材，還說「我以前幫你那麼多」。她問「我為什麼越來越不願參加朋友的計畫？」，需要看清的位置抽到星幣六逆位。\n\n這裡的線索是幫助與決定權之間的失衡：牌中同一人掌握秤和錢幣，啓發她檢查回報條件是否只有一方在制定。已有對話能支持討論隱形交換，卻還不能證明朋友從一開始就懷有算計。先分清她承諾了哪項任務，哪些要求是後來增加的。\n\n她表達感謝，同時說明本週只完成已經約定的一段字幕，新任務須另談時間。若朋友願意協商，可能只是雙方一直沒有說清範圍；若對方持續用過去的幫助壓過她的拒絕，則需要更明確地減少參與。檢驗點是邊界表達後是否得到尊重，而不是再做更多來證明自己知恩圖報。"
     },
     {
       "id": "section-06",
@@ -69,28 +87,34 @@
       "bodyMarkdown": "星幣六不保證有人送錢，也不能憑牌面斷定幫助者虛偽。它邀請你檢查支持是否合用、條件是否透明，以及接受幫助的人是否仍保有尊嚴與選擇。"
     },
     {
+      "id": "depth-reflection",
+      "role": "reflection",
+      "title": "給予與接受都可以有尊嚴",
+      "bodyMarkdown": "在人物位抽到星幣六時，可先把它看成某人在交換關係中的位置，而非「好人」或「控制者」的固定身分。一次幫助不必馬上等量回報，但長期安排應允許雙方調整。若牽涉真實借款、合約或重大資源分配，就查看約定和可承擔的責任；牌不能代替審核，也不能替他人同意附加條件。"
+    },
+    {
       "id": "section-08",
       "role": "sources",
       "title": "原文與牌面",
-      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents06.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。"
+      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents06.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。"
     }
   ],
   "relatedCards": [],
   "sources": [
     {
       "sourceId": "six-of-pentacles-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：星幣六，Commons 所標 Pam-A 牌面",
       "url": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "six-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币六，Commons 所标 Pam-A 牌面",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：星幣六，Commons 所標 Pam-A 牌面",
         "url": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
         "observedFileVersion": "05:26, 6 April 2024 1,109 × 1,920 (851 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
+        "observedRepresentation": "當前原始 JPEG 文件",
         "sha256": "d9d67638f7f4075b42b03ee80ca9bf3817d2406cda647618504140b85ab3ca6b",
         "checkedAt": "2026-10-07"
       }
@@ -100,16 +124,23 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣六",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktpe06.htm",
-      "edition": "所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。",
+      "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "six-of-pentacles-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币六",
+        "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣六",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktpe06.htm",
         "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "six-of-pentacles-waite-crosscheck",
+      "type": "Waite 英文全文复核",
+      "title": "The Pictorial Key to the Tarot Part 3",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -159,123 +190,11 @@
       "sourcePageRevisionId": "1199315087"
     }
   },
-  "articleMarkdown": "# 星幣六 給予也需要清楚的尺度\n\n讓資源流向需要的地方，並看清分配由誰決定。\n\n關鍵詞：給予、接受、分配\n\n正位速讀：可提供或接受實際支持，把用途與邊界說清。\n\n逆位速讀：幫助附帶隱形條件，或付出與決定權長期失衡。\n\n星幣六有兩只伸出的手，也有一架握在另一人手中的秤。它讓我們同時看見善意和位置差異：有人在給，有人在等，分配的規則卻未寫出來。\n\n## 秤和硬幣都在站立者手中\n\n畫面中央的人戴紅帽、披紅色外衣，內穿藍白條紋衣袍。一手提著小天平，另一手向左下方的人撒下幾枚小錢幣。兩名披著打補丁衣物的人跪在地上，伸手朝向中央人物；左側披布偏黃，右側偏藍。\n\n六枚大星幣懸在人物上方，左邊三枚，中間一枚，右邊兩枚，和正在落下的小錢幣不是同一層次的畫法。遠處有樹木和建築。秤讓「衡量」進入場景，但它並不能獨自證明分配公平；畫面也沒有說明右邊的人下一刻會得到多少。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents06.jpg)\n\n## Waite 強調饋贈與善意\n\nWaite 將中央人物描述為商人，認為分發錢幣反映他的成功與善心。占卜詞條包括禮物、饋贈、滿足以及當下的富足；逆位則包含欲求、貪求、嫉妒與幻象。\n\n本篇保留給予和接受的主題，同時提出規則、尊重與權力差異的現代問題。這些是對畫面關係的進一步反思，不能倒過來說 Waite 已經批判了圖中施予者的動機。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)\n\n## 正位 讓幫助能夠真正使用\n\n正位可以從兩個位置進入。如果你有餘力，先詢問對方實際需要什麼，再說明自己能提供多少、持續多久。如果你需要幫助，也可以接受一項邊界清楚的支持，不必立刻用等量回報消除所有不安。\n\n有效幫助允許接收者表達意見。一次性支援不應自動換來長期決定權，贈與和借用也應事先講清。討論這些條件不會讓善意變少，反而能減少之後的誤會。\n\n## 逆位 檢查沒說出口的交換\n\n有些失衡藏在「我都是為你好」裡：提供一點幫助，就要求對方隨時服從；或為了維持被需要的感覺，持續承擔自己已經無力承擔的事。先看實際安排，再判斷如何調整。\n\n也可能是你習慣拒絕所有支持，認為接受就等於欠下無法償還的人情。核實對方真實的期待，區分可以協商的幫助與確實附帶控制的條件，不必把兩者混在一起。\n\n## 在三種日常關係中看分配\n\n團隊分配設備或培訓名額時，說明標準與申請方式，免得資源只流向最會開口的人。朋友幫忙改作品，可以事先約定看哪一部分、花多長時間。\n\n共同生活中，某人暫時承擔更多事務時，約好何時回顧，而不是讓臨時安排悄悄變成永久責任。被照顧的一方也應參與討論。\n\n## 練習 看清一項幫助的條件\n\n選一項正在給予或接受的支持，寫下內容、期限、決定權和對回報的期待。若其中有一項雙方理解不同，先用一次具體對話補齊，不要靠猜測計算人情。\n\n## 容易看錯的地方\n\n星幣六不保證有人送錢，也不能憑牌面斷定幫助者虛偽。它邀請你檢查支持是否合用、條件是否透明，以及接受幫助的人是否仍保有尊嚴與選擇。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents06.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。\n",
+  "articleMarkdown": "# 星幣六 給予也需要清楚的尺度\n\n星幣六有兩只伸出的手，也有一架握在另一人手中的秤。它讓我們同時看見善意和位置差異：有人在給，有人在等，分配的規則卻未寫出來。\n\n## 秤和硬幣都在站立者手中\n\n畫面中央的人戴紅帽、披紅色外衣，內穿藍白條紋衣袍。一手提著小天平，另一手向左下方的人撒下幾枚小錢幣。兩名披著打補丁衣物的人跪在地上，伸手朝向中央人物；左側披布偏黃，右側偏藍。\n\n六枚大星幣懸在人物上方，左邊三枚，中間一枚，右邊兩枚，和正在落下的小錢幣不是同一層次的畫法。遠處有樹木和建築。秤讓「衡量」進入場景，但它並不能獨自證明分配公平；畫面也沒有說明右邊的人下一刻會得到多少。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents06.jpg)\n\n## 誰握著秤，誰能夠提要求\n\n畫面中的秤和正在分發的小錢幣都由站立者掌握，兩位接收者的位置更低。這種構圖讓資源差異清楚可見，也留下需要追問的空間：尺度由誰制定，接收者能否表達不同需要，另一邊的人是否同樣獲得回應？這些是現代讀圖問題，並非畫面已經給出的指控。\n\n星幣五還在艱難前行，星幣六出現了具體的給予動作，但有幫助並不自動等於幫助合適。反過來，也不能只因雙方資源不等，就否認一切善意。解讀要回到條件、用途和接收者實際體驗，既看提供了什麼，也看誰有權說「不需要這一種」。\n\n## Waite 強調饋贈與善意\n\nWaite 將中央人物描述為商人，認為分發錢幣反映他的成功與善心。占卜條目包括禮物、饋贈、滿足以及當下的富足；逆位則包含欲求、貪求、嫉妒與幻象。\n\n本篇保留給予和接受的主題，同時提出規則、尊重與權力差異的現代問題。這些是對畫面關係的進一步反思，不能倒過來說 Waite 已經批判了圖中施予者的動機。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)\n\n## 正位 讓幫助能夠真正使用\n\n正位可以從兩個位置進入。如果你有餘力，先詢問對方實際需要什麼，再說明自己能提供多少、持續多久。如果你需要幫助，也可以接受一項邊界清楚的支持，不必立刻用等量回報消除所有不安。\n\n有效幫助允許接收者表達意見。一次性支援不應自動換來長期決定權，贈與和借用也應事先講清。討論這些條件不會讓善意變少，反而能減少之後的誤會。\n\n## 逆位 檢查沒說出口的交換\n\n有些失衡藏在「我都是為你好」裡：提供一點幫助，就要求對方隨時服從；或為了維持被需要的感覺，持續承擔自己已經無力承擔的事。先看實際安排，再判斷如何調整。\n\n也可能是你習慣拒絕所有支持，認為接受就等於欠下無法償還的人情。確認對方真實的期待，區分可以協商的幫助與確實附帶控制的條件，不必把兩者混在一起。\n\n## 在三種日常關係中看分配\n\n團隊分配設備或訓練名額時，說明標準與申請方式，免得資源只流向最會開口的人。朋友幫忙改作品，可以事先約定看哪一部分、花多長時間。\n\n共同生活中，某人暫時承擔更多事務時，約好何時回顧檢討，而不是讓臨時安排悄悄變成永久責任。被照顧的一方也應參與討論。\n\n## 案例一 互助書桌需要怎樣的借用規則\n\n原創虛構案例。一個社區空間有三張閒置書桌，幾位準備職業考試的成年人來詢問能否借用，管理員希望支持他們，卻不知道怎樣分配開放時間。問「怎樣把閒置書桌借給真正用得上的人？」，建議位是星幣六正位。\n\n落下的錢幣可以對應可使用的桌位，秤提醒安排需要有尺度。解讀的方向是把資源變成實際支持，而不是用抽牌替申請者排名。管理員先詢問需要安靜學習的時段，公開現有開放條件，讓使用者知道一次能預約多久、如何取消以及意見向誰反映。\n\n如果所有人只需要週末而空間週末不開門，形式上的慷慨並沒有解決問題，應討論調整開放時間是否可行；若時段互補，則輪流使用就能滿足大部分需要。先試行兩週，查看空置與候補情況，再一起修改。幫助的價值體現在書桌真的能被使用，也體現在使用者不會因提出問題而擔心失去資格。\n\n## 案例二 一次幫忙換來了無限次待命\n\n原創虛構案例。小冬曾接受朋友兩次剪輯指導，後來朋友請她幫活動做字幕。她願意回報，但對方開始每晚臨時發來素材，還說「我以前幫你那麼多」。她問「我為什麼越來越不願參加朋友的計畫？」，需要看清的位置抽到星幣六逆位。\n\n這裡的線索是幫助與決定權之間的失衡：牌中同一人掌握秤和錢幣，啓發她檢查回報條件是否只有一方在制定。已有對話能支持討論隱形交換，卻還不能證明朋友從一開始就懷有算計。先分清她承諾了哪項任務，哪些要求是後來增加的。\n\n她表達感謝，同時說明本週只完成已經約定的一段字幕，新任務須另談時間。若朋友願意協商，可能只是雙方一直沒有說清範圍；若對方持續用過去的幫助壓過她的拒絕，則需要更明確地減少參與。檢驗點是邊界表達後是否得到尊重，而不是再做更多來證明自己知恩圖報。\n\n## 練習 看清一項幫助的條件\n\n選一項正在給予或接受的支持，寫下內容、期限、決定權和對回報的期待。若其中有一項雙方理解不同，先用一次具體對話補齊，不要靠猜測計算人情。\n\n## 容易看錯的地方\n\n星幣六不保證有人送錢，也不能憑牌面斷定幫助者虛偽。它邀請你檢查支持是否合用、條件是否透明，以及接受幫助的人是否仍保有尊嚴與選擇。\n\n## 給予與接受都可以有尊嚴\n\n在人物位抽到星幣六時，可先把它看成某人在交換關係中的位置，而非「好人」或「控制者」的固定身分。一次幫助不必馬上等量回報，但長期安排應允許雙方調整。若牽涉真實借款、合約或重大資源分配，就查看約定和可承擔的責任；牌不能代替審核，也不能替他人同意附加條件。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents06.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "six",
-    "nameZh": "星币六",
-    "title": "星币六 给予也需要清楚的尺度",
-    "oneLiner": "让资源流向需要的地方，并看清分配由谁决定。",
-    "keywords": [
-      "给予",
-      "接受",
-      "分配"
-    ],
-    "uprightQuickTake": "可提供或接受实际支持，把用途与边界说清。",
-    "reversedQuickTake": "帮助附带隐形条件，或付出与决定权长期失衡。",
-    "hook": "星币六有两只伸出的手，也有一架握在另一人手中的秤。它让我们同时看见善意和位置差异：有人在给，有人在等，分配的规则却未写出来。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "秤和硬币都在站立者手中",
-        "paragraphs": [
-          "画面中央的人戴红帽、披红色外衣，内穿蓝白条纹衣袍。一手提着小天平，另一手向左下方的人撒下几枚小钱币。两名披着打补丁衣物的人跪在地上，伸手朝向中央人物；左侧披布偏黄，右侧偏蓝。",
-          "六枚大星币悬在人物上方，左边三枚，中间一枚，右边两枚，和正在落下的小钱币不是同一层次的画法。远处有树木和建筑。秤让“衡量”进入场景，但它并不能独自证明分配公平；画面也没有说明右边的人下一刻会得到多少。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents06.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 强调馈赠与善意",
-        "paragraphs": [
-          "Waite 将中央人物描述为商人，认为分发钱币反映他的成功与善心。占卜词条包括礼物、馈赠、满足以及当下的富足；逆位则包含欲求、贪求、嫉妒与幻象。",
-          "本篇保留给予和接受的主题，同时提出规则、尊重与权力差异的现代问题。这些是对画面关系的进一步反思，不能倒过来说 Waite 已经批判了图中施予者的动机。 [核对 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe06.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 让帮助能够真正使用",
-        "paragraphs": [
-          "正位可以从两个位置进入。如果你有余力，先询问对方实际需要什么，再说明自己能提供多少、持续多久。如果你需要帮助，也可以接受一项边界清楚的支持，不必立刻用等量回报消除所有不安。",
-          "有效帮助允许接收者表达意见。一次性支援不应自动换来长期决定权，赠与和借用也应事先讲清。讨论这些条件不会让善意变少，反而能减少之后的误会。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 检查没说出口的交换",
-        "paragraphs": [
-          "有些失衡藏在“我都是为你好”里：提供一点帮助，就要求对方随时服从；或为了维持被需要的感觉，持续承担自己已经无力承担的事。先看实际安排，再判断如何调整。",
-          "也可能是你习惯拒绝所有支持，认为接受就等于欠下无法偿还的人情。核实对方真实的期待，区分可以协商的帮助与确实附带控制的条件，不必把两者混在一起。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "在三种日常关系中看分配",
-        "paragraphs": [
-          "团队分配设备或培训名额时，说明标准与申请方式，免得资源只流向最会开口的人。朋友帮忙改作品，可以事先约定看哪一部分、花多长时间。",
-          "共同生活中，某人暂时承担更多事务时，约好何时复盘，而不是让临时安排悄悄变成永久责任。被照顾的一方也应参与讨论。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 看清一项帮助的条件",
-        "paragraphs": [
-          "选一项正在给予或接受的支持，写下内容、期限、决定权和对回报的期待。若其中有一项双方理解不同，先用一次具体对话补齐，不要靠猜测计算人情。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "星币六不保证有人送钱，也不能凭牌面断定帮助者虚伪。它邀请你检查支持是否合用、条件是否透明，以及接受帮助的人是否仍保有尊严与选择。"
-        ]
-      }
-    ],
-    "cardId": "six-of-pentacles",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "VI",
-    "ordinal": 6,
-    "arcana": "minor",
-    "suit": "pentacles",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameEn": "Six of Pentacles",
-    "articleSlug": "tarot-six-of-pentacles-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "six-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币六，Commons 所标 Pam-A 牌面",
-        "url": "https://commons.wikimedia.org/wiki/File:Pents06.jpg",
-        "observedFileVersion": "05:26, 6 April 2024 1,109 × 1,920 (851 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
-        "sha256": "d9d67638f7f4075b42b03ee80ca9bf3817d2406cda647618504140b85ab3ca6b",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "six-of-pentacles-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币六",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktpe06.htm",
-        "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "sourceClaimBoundary": "商人衡量与分发钱币；馈赠和善意；逆位欲求等。权力差异、接收者参与及透明条件为现代反思。",
-    "chineseCharacterCount": 974
-  },
-  "sourceBatch": "pentacles",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 909,
-    "words": 3,
-    "articleUtf8Bytes": 4102
-  },
+  "sourceBatch": "depth77-pentacles-03",
   "sourceCounts": {
     "mainTextChineseCharacters": 997,
     "completeArticleChineseCharacters": 1112
@@ -292,38 +211,29 @@
     "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
   },
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceCounts": {
-      "mainTextChineseCharacters": 997,
-      "completeArticleChineseCharacters": 1112
-    },
-    "translation": {
-      "sourceLocale": "zh-CN",
-      "sourceCardId": "six-of-pentacles",
-      "sourceArticleSha256": "5afff3fd68176ee2a41ebb69332072b03a0cd3d6f0fe5060000408ff6f96f4e7",
-      "sourcePackage": "destinypixel-tarot-78-zh-CN",
-      "translatedOn": "2026-10-07",
-      "method": "ICU 76 Hans-Hant draft with editorial terminology and wording review",
-      "nativeHumanReview": false,
-      "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
-    }
-  },
-  "countsOriginal": {
-    "paragraphs": 14,
-    "sections": 8,
-    "unicodeCharacters": 1656,
-    "wordsWhitespaceSeparated": 69
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "5afff3fd68176ee2a41ebb69332072b03a0cd3d6f0fe5060000408ff6f96f4e7",
-    "articleSha256": "65edee01631b95541ad2718bec172078c8e5c393fb725ca94e7454625204cf41",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "4025c0224efa44f68b55e70715ca39f6c4e37f4aa01ebc8807b18610695da055",
+    "sourceArticleSha256": "4025c0224efa44f68b55e70715ca39f6c4e37f4aa01ebc8807b18610695da055",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "16b6b1f7f48b248318d0af7fd2eab135b5609182a66ec99d271437dc125f7330",
+    "sourcePackageSha256": "4a2a350812ba92364e66ad88dbaeb30c412b354ac14751f97f487637be1053ca",
+    "previousRecord": "content/tarot/revisions/2026-10-08/six-of-pentacles.zh-TW.json",
+    "editionBodySha256": "c406034bdd6977daa03d975aa7b1d87a46d4244326f65b1382db107e06fc2b96",
+    "translationSourceBodySha256": "4025c0224efa44f68b55e70715ca39f6c4e37f4aa01ebc8807b18610695da055",
+    "translationPackageSha256": "f738e7730a6b5ad7ba539d2ea8c51e6a72efdc1d997c6812eb6bee3b47d376ee",
+    "translationLibraryFileId": "libfile_d48a171bd06081918441c34cbc46b229",
+    "translationRecordSha256": "7188cda44fa4cd26198d54b25376a7ad3c3b654ba8bf37fe4dba23c76313b1d1",
+    "translationPackage": "destinypixel-reviewed-pentacles.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

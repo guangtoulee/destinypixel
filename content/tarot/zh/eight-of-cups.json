@@ -14,7 +14,7 @@
   "locale": "zh-CN",
   "deckSystem": "RWS",
   "title": "圣杯八牌义 离开之前先说清自己在寻找什么",
-  "plainLanguageSummary": "已经投入很多，仍可以重新判断这条路是否值得继续。",
+  "plainLanguageSummary": null,
   "keywords": [
     "离开",
     "重新衡量",
@@ -30,7 +30,7 @@
       "id": "section-01",
       "role": "image",
       "title": "杯子完整，人却背向它们",
-      "bodyMarkdown": "前景八只金杯分成上下两层：下方五只，上方三只，排列中留下空隙。杯子并未倾倒。一个披红色衣服的人背对观者，手持长杖，踏向右侧岩地，身后留着水面与层叠山岩。\n\n天空有黄色圆盘与弯月形轮廓相叠，圆面画着五官，大片蓝灰色留白让人物显得很小。画面没有第九只杯，也没有显示旅程终点。把空隙叫作某个命中注定的缺失，或给月亮指定精确天象，都超出了本篇能从像素确认的内容。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups08.jpg)"
+      "bodyMarkdown": "前景八只金杯分成上下两层：下方五只，上方三只，排列中留下空隙。杯子并未倾倒。一个披红色衣服的人背对观者，手持长杖，踏向右侧岩地，身后留着水面与层叠山岩。\n\n天空有黄色圆盘与弯月形轮廓相叠，圆面画着五官，大片蓝灰色留白让人物显得很小。画面没有第九只杯，也没有显示旅程终点。把空隙叫作某个命中注定的缺失，或给月亮指定精确天象，都超出了本篇能从像素确认的内容。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n\n完整的杯子是本牌最容易被略过的部分。人物离开，并非因为面前所有东西都坏了；由此可以讨论价值改变，而不必为退出先编出一段彻底失败的故事。长杖和岩地又把行动带回身体：有方向还需要支撑、步伐与路径。天空的复合月形可以增加不明朗感，但看不见终点，不等于终点必定更好或更坏。"
     },
     {
       "id": "section-02",
@@ -51,34 +51,46 @@
       "bodyMarkdown": "想走又留下，可能是原因没说清，也可能是现实条件暂时不允许。先把两者分开：意愿需要诚实，条件需要准备。对尚不能改变的部分，不必用勇不勇敢评价自己。\n\n也可以问是否只因一次挫折就想离开。若短暂休息、调整分工或重新谈目标便能改善处境，继续留下同样可能是主动决定。重要的是知道自己为何选择，而不是证明谁更洒脱。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "转向时怎样少留混乱",
-      "bodyMarkdown": "学了一年的课程已不符合目标，先整理已学会的技能与剩余要求，再比较完成、暂停和更换课程的成本。过去的努力仍有价值，不必靠无限续费证明它。\n\n志愿工作让你长期透支，可以提前说明减少频率并做好交接。关系里发现需求不同，先在安全前提下表达真实想法；若存在威胁或伤害，现实中的安全与帮助应放在牌义之前。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回问题和位置里",
+      "bodyMarkdown": "现状位可以检视注意力是否已离开原目标，建议位则适合比较继续、调整、暂缓与退出。逆位在这里采用现代的犹疑与回返读法，与Waite宴饮快乐的原义分开记录。反复不一定是逃避，可能因为照顾责任、资源或交接条件尚未准备好。重要决定应依照真实条件与本人选择，牌只帮助说明为什么想走、为什么仍留。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "已经学了一年还能否改变方向",
+      "bodyMarkdown": "**原创虚构案例。** 阿舟参加业余剧团一年，最初想练习表达，现在大部分时间在做商业演出的后台。他愿意帮忙，但近三个月没有得到排练机会。负责人说明未来半年安排大致不变，他每周的两个晚上都已投入其中。\n\n问题是“我怎样判断要不要继续这个剧团训练班”，选择建议位抽到圣杯八正位。\n\n完整杯子与离开的背影，让我们区分已经学到的东西和未来还要付出的时间。他确实得到朋友与后台经验，退出不必否认这些价值。现有安排已被明确告知，也支持认真考虑目标不再匹配，而不是只靠一时不愉快判断。\n\n如果他真正喜欢后台，问题只是贡献未被看见，换岗位或重新谈认可可能比离开更合适。若负责人愿意给出实际排练时段，也应重新比较。不能为了让“转身”读法成立而无视新的可行调整。\n\n列出接下来两个月可投入的时间，并与自己的表达目标对照。选择退出时，提前完成已答应的场次，交接资料；想保留联系则可改为偶尔协助。下一站先试听再承诺，离开旧安排不必同时决定完整的新人生。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "总想停更却又回去的共同项目",
+      "bodyMarkdown": "**原创虚构案例。** 小萤和两位朋友做播客，每期她花十小时剪辑，最近总想退出，第二天又因舍不得朋友而答应新选题。她仍喜欢聊天录音，但已不喜欢后期；另外两人不知道她考虑过停止。\n\n问题是“我为什么反复想退出播客，该先厘清什么”，阻碍位抽到圣杯八逆位。\n\n背向杯子的动作与尚未走远的空间，可以作为反复的比喻。已知事实更支持她想离开某项劳动，而非整个共同关系。逆位卡点在于把“停止剪辑”和“辜负友谊”绑成同一件事，导致每次决定都无法落实。\n\n若分担后期后她仍对录音毫无兴趣，就应重新讨论是否连项目也已不适合。若伙伴明确拒绝承担任何调整，留下的条件也已改变。不能因为有共同回忆，就假定继续合作永远最有价值。\n\n下一次选题前说明自己的剪辑上限，提出轮流后期、降低更新频率或暂停两期三种方案。先听伙伴真实回应，再选择愿意执行的一项。观察一次调整后的负担与参与感，决定继续或交接，而不是以口头歉意换来新一轮过量承诺。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "练习 写一份转向说明",
-      "bodyMarkdown": "用四句话写出：我原来想得到什么；目前实际得到什么；还值得尝试的一项调整；如果仍无改善，我准备怎样减少投入。为调整设一个合理的观察时间，避免把准备变成没有终点的拖延。"
+      "title": "把理解带回今天",
+      "bodyMarkdown": "用四句写清原来的期待、目前的实际收获、还愿意试的一项调整，以及调整无效后怎样缩小投入。保留“暂时还不能走”的现实理由，也给能准备的部分安排具体步骤。投入过很多，不必成为永远继续投入的唯一理由。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看错的地方",
-      "bodyMarkdown": "抽到圣杯八不等于必须马上走，也不保证离开后一定更幸福。图中杯子完整，提醒我们结束未必源于彻底失败；但未来仍然需要探索，不能靠这张牌预先确认下一站。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接着读什么",
-      "bodyMarkdown": "圣杯四：区分暂时不想参与与认真转向；圣杯五：理解离开过程中仍可能存在的遗憾。"
+      "id": "depth-comparison",
+      "role": "comparison",
+      "title": "和相近的牌放在一起看",
+      "bodyMarkdown": "圣杯八与圣杯四的差别不只是情绪程度，而是行动阶段：树下的人还在面对选项，山路上的人已经转身。若现实里还没有核对安排，就别把想走误写成已准备好走。与圣杯五相比，本牌还提醒我们，不必等东西彻底坏掉才有权重新衡量。结束可以承认原来有过价值，同时清楚交代未来不再投入的理由。"
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇资料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。"
+      "title": "本篇资料与阅读范围",
+      "bodyMarkdown": "- [Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。"
     }
   ],
   "relatedCards": [
@@ -100,7 +112,7 @@
       "title": "Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "eight-of-cups-image",
         "layer": "画面观察",
@@ -115,7 +127,7 @@
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcu08.htm",
       "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "eight-of-cups-waite",
         "layer": "历史原文",
@@ -180,180 +192,33 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 圣杯八牌义 离开之前先说清自己在寻找什么\n\n一句话：已经投入很多，仍可以重新判断这条路是否值得继续。\n\n牌名：圣杯八 Eight of Cups  \n牌序：VIII · RWS 小阿尔卡那 · 圣杯组  \n关键词：离开、重新衡量、寻找\n\n正位速读：原先的目标不再满足你，可以认真考虑转向。  \n逆位速读：在留下与离开间反复，先核对原因与实际条件。\n\n最难离开的，有时不是最坏的处境，而是那个投入很多、却越来越说不出意义的地方。圣杯八把这个犹疑画成一个背影。\n\n## 杯子完整，人却背向它们\n\n前景八只金杯分成上下两层：下方五只，上方三只，排列中留下空隙。杯子并未倾倒。一个披红色衣服的人背对观者，手持长杖，踏向右侧岩地，身后留着水面与层叠山岩。\n\n天空有黄色圆盘与弯月形轮廓相叠，圆面画着五官，大片蓝灰色留白让人物显得很小。画面没有第九只杯，也没有显示旅程终点。把空隙叫作某个命中注定的缺失，或给月亮指定精确天象，都超出了本篇能从像素确认的内容。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n\n## Waite 保留了互相矛盾的旧解\n\nWaite《塔罗图解之钥》1911 英文转录把人物写成离开曾经带来快乐、事业或关注的杯子，又指出有些旧解与此完全相反。他较常采用的方向，是一件事衰退，或其重要性低于原来的设想。逆位原文则列出大喜、快乐与宴饮。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n下文将逆位用于犹豫、回返与重新评估，是本站现代延伸，不能当作 Waite 的逆位原义。读牌时有必要看见这些分歧，而非假装从古至今只有一个答案。\n\n## 正位 区分已经付出与还值得付出\n\n过去投入的时间无法收回，但接下来投入多少仍可以选择。正位可提醒你问：若今天才知道这些条件，我还会不会开始？这个问题有助于看清惯性与真实意愿。\n\n离开也需要承担现实责任。确认交接、费用、约定和可用支持，再选择退出、缩小投入或暂时休整。牌面可以帮助整理理由，不能替你发出辞职、分手或毁约的命令。\n\n## 逆位 反复不一定是软弱\n\n想走又留下，可能是原因没说清，也可能是现实条件暂时不允许。先把两者分开：意愿需要诚实，条件需要准备。对尚不能改变的部分，不必用勇不勇敢评价自己。\n\n也可以问是否只因一次挫折就想离开。若短暂休息、调整分工或重新谈目标便能改善处境，继续留下同样可能是主动决定。重要的是知道自己为何选择，而不是证明谁更洒脱。\n\n## 转向时怎样少留混乱\n\n学了一年的课程已不符合目标，先整理已学会的技能与剩余要求，再比较完成、暂停和更换课程的成本。过去的努力仍有价值，不必靠无限续费证明它。\n\n志愿工作让你长期透支，可以提前说明减少频率并做好交接。关系里发现需求不同，先在安全前提下表达真实想法；若存在威胁或伤害，现实中的安全与帮助应放在牌义之前。\n\n## 练习 写一份转向说明\n\n用四句话写出：我原来想得到什么；目前实际得到什么；还值得尝试的一项调整；如果仍无改善，我准备怎样减少投入。为调整设一个合理的观察时间，避免把准备变成没有终点的拖延。\n\n## 容易看错的地方\n\n抽到圣杯八不等于必须马上走，也不保证离开后一定更幸福。图中杯子完整，提醒我们结束未必源于彻底失败；但未来仍然需要探索，不能靠这张牌预先确认下一站。\n\n## 接着读什么\n\n圣杯四：区分暂时不想参与与认真转向；圣杯五：理解离开过程中仍可能存在的遗憾。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。\n",
+  "articleMarkdown": "# 圣杯八牌义 离开之前先说清自己在寻找什么\n\n正位先读一句：原先的目标不再满足你，可以认真考虑转向。\n\n逆位先读一句：在留下与离开间反复，先核对原因与实际条件。\n\n最难离开的，有时不是最坏的处境，而是那个投入很多、却越来越说不出意义的地方。圣杯八把这个犹疑画成一个背影。\n\n## 杯子完整，人却背向它们\n\n前景八只金杯分成上下两层：下方五只，上方三只，排列中留下空隙。杯子并未倾倒。一个披红色衣服的人背对观者，手持长杖，踏向右侧岩地，身后留着水面与层叠山岩。\n\n天空有黄色圆盘与弯月形轮廓相叠，圆面画着五官，大片蓝灰色留白让人物显得很小。画面没有第九只杯，也没有显示旅程终点。把空隙叫作某个命中注定的缺失，或给月亮指定精确天象，都超出了本篇能从像素确认的内容。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n\n完整的杯子是本牌最容易被略过的部分。人物离开，并非因为面前所有东西都坏了；由此可以讨论价值改变，而不必为退出先编出一段彻底失败的故事。长杖和岩地又把行动带回身体：有方向还需要支撑、步伐与路径。天空的复合月形可以增加不明朗感，但看不见终点，不等于终点必定更好或更坏。\n\n## Waite 保留了互相矛盾的旧解\n\nWaite《塔罗图解之钥》1911 英文转录把人物写成离开曾经带来快乐、事业或关注的杯子，又指出有些旧解与此完全相反。他较常采用的方向，是一件事衰退，或其重要性低于原来的设想。逆位原文则列出大喜、快乐与宴饮。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n下文将逆位用于犹豫、回返与重新评估，是本站现代延伸，不能当作 Waite 的逆位原义。读牌时有必要看见这些分歧，而非假装从古至今只有一个答案。\n\n## 正位 区分已经付出与还值得付出\n\n过去投入的时间无法收回，但接下来投入多少仍可以选择。正位可提醒你问：若今天才知道这些条件，我还会不会开始？这个问题有助于看清惯性与真实意愿。\n\n离开也需要承担现实责任。确认交接、费用、约定和可用支持，再选择退出、缩小投入或暂时休整。牌面可以帮助整理理由，不能替你发出辞职、分手或毁约的命令。\n\n## 逆位 反复不一定是软弱\n\n想走又留下，可能是原因没说清，也可能是现实条件暂时不允许。先把两者分开：意愿需要诚实，条件需要准备。对尚不能改变的部分，不必用勇不勇敢评价自己。\n\n也可以问是否只因一次挫折就想离开。若短暂休息、调整分工或重新谈目标便能改善处境，继续留下同样可能是主动决定。重要的是知道自己为何选择，而不是证明谁更洒脱。\n\n## 把牌放回问题和位置里\n\n现状位可以检视注意力是否已离开原目标，建议位则适合比较继续、调整、暂缓与退出。逆位在这里采用现代的犹疑与回返读法，与Waite宴饮快乐的原义分开记录。反复不一定是逃避，可能因为照顾责任、资源或交接条件尚未准备好。重要决定应依照真实条件与本人选择，牌只帮助说明为什么想走、为什么仍留。\n\n## 已经学了一年还能否改变方向\n\n**原创虚构案例。** 阿舟参加业余剧团一年，最初想练习表达，现在大部分时间在做商业演出的后台。他愿意帮忙，但近三个月没有得到排练机会。负责人说明未来半年安排大致不变，他每周的两个晚上都已投入其中。\n\n问题是“我怎样判断要不要继续这个剧团训练班”，选择建议位抽到圣杯八正位。\n\n完整杯子与离开的背影，让我们区分已经学到的东西和未来还要付出的时间。他确实得到朋友与后台经验，退出不必否认这些价值。现有安排已被明确告知，也支持认真考虑目标不再匹配，而不是只靠一时不愉快判断。\n\n如果他真正喜欢后台，问题只是贡献未被看见，换岗位或重新谈认可可能比离开更合适。若负责人愿意给出实际排练时段，也应重新比较。不能为了让“转身”读法成立而无视新的可行调整。\n\n列出接下来两个月可投入的时间，并与自己的表达目标对照。选择退出时，提前完成已答应的场次，交接资料；想保留联系则可改为偶尔协助。下一站先试听再承诺，离开旧安排不必同时决定完整的新人生。\n\n## 总想停更却又回去的共同项目\n\n**原创虚构案例。** 小萤和两位朋友做播客，每期她花十小时剪辑，最近总想退出，第二天又因舍不得朋友而答应新选题。她仍喜欢聊天录音，但已不喜欢后期；另外两人不知道她考虑过停止。\n\n问题是“我为什么反复想退出播客，该先厘清什么”，阻碍位抽到圣杯八逆位。\n\n背向杯子的动作与尚未走远的空间，可以作为反复的比喻。已知事实更支持她想离开某项劳动，而非整个共同关系。逆位卡点在于把“停止剪辑”和“辜负友谊”绑成同一件事，导致每次决定都无法落实。\n\n若分担后期后她仍对录音毫无兴趣，就应重新讨论是否连项目也已不适合。若伙伴明确拒绝承担任何调整，留下的条件也已改变。不能因为有共同回忆，就假定继续合作永远最有价值。\n\n下一次选题前说明自己的剪辑上限，提出轮流后期、降低更新频率或暂停两期三种方案。先听伙伴真实回应，再选择愿意执行的一项。观察一次调整后的负担与参与感，决定继续或交接，而不是以口头歉意换来新一轮过量承诺。\n\n## 把理解带回今天\n\n用四句写清原来的期待、目前的实际收获、还愿意试的一项调整，以及调整无效后怎样缩小投入。保留“暂时还不能走”的现实理由，也给能准备的部分安排具体步骤。投入过很多，不必成为永远继续投入的唯一理由。\n\n## 和相近的牌放在一起看\n\n圣杯八与圣杯四的差别不只是情绪程度，而是行动阶段：树下的人还在面对选项，山路上的人已经转身。若现实里还没有核对安排，就别把想走误写成已准备好走。与圣杯五相比，本牌还提醒我们，不必等东西彻底坏掉才有权重新衡量。结束可以承认原来有过价值，同时清楚交代未来不再投入的理由。\n\n## 本篇资料与阅读范围\n\n- [Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups08.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "eight",
-    "nameZh": "圣杯八",
-    "nameEn": "Eight of Cups",
-    "number": "VIII",
-    "title": "圣杯八牌义 离开之前先说清自己在寻找什么",
-    "oneLineSummary": "已经投入很多，仍可以重新判断这条路是否值得继续。",
-    "keywords": [
-      "离开",
-      "重新衡量",
-      "寻找"
-    ],
-    "uprightQuickTake": "原先的目标不再满足你，可以认真考虑转向。",
-    "reversedQuickTake": "在留下与离开间反复，先核对原因与实际条件。",
-    "hook": "最难离开的，有时不是最坏的处境，而是那个投入很多、却越来越说不出意义的地方。圣杯八把这个犹疑画成一个背影。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "杯子完整，人却背向它们",
-        "paragraphs": [
-          "前景八只金杯分成上下两层：下方五只，上方三只，排列中留下空隙。杯子并未倾倒。一个披红色衣服的人背对观者，手持长杖，踏向右侧岩地，身后留着水面与层叠山岩。",
-          "天空有黄色圆盘与弯月形轮廓相叠，圆面画着五官，大片蓝灰色留白让人物显得很小。画面没有第九只杯，也没有显示旅程终点。把空隙叫作某个命中注定的缺失，或给月亮指定精确天象，都超出了本篇能从像素确认的内容。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups08.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 保留了互相矛盾的旧解",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录把人物写成离开曾经带来快乐、事业或关注的杯子，又指出有些旧解与此完全相反。他较常采用的方向，是一件事衰退，或其重要性低于原来的设想。逆位原文则列出大喜、快乐与宴饮。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu08.htm)",
-          "下文将逆位用于犹豫、回返与重新评估，是本站现代延伸，不能当作 Waite 的逆位原义。读牌时有必要看见这些分歧，而非假装从古至今只有一个答案。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 区分已经付出与还值得付出",
-        "paragraphs": [
-          "过去投入的时间无法收回，但接下来投入多少仍可以选择。正位可提醒你问：若今天才知道这些条件，我还会不会开始？这个问题有助于看清惯性与真实意愿。",
-          "离开也需要承担现实责任。确认交接、费用、约定和可用支持，再选择退出、缩小投入或暂时休整。牌面可以帮助整理理由，不能替你发出辞职、分手或毁约的命令。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 反复不一定是软弱",
-        "paragraphs": [
-          "想走又留下，可能是原因没说清，也可能是现实条件暂时不允许。先把两者分开：意愿需要诚实，条件需要准备。对尚不能改变的部分，不必用勇不勇敢评价自己。",
-          "也可以问是否只因一次挫折就想离开。若短暂休息、调整分工或重新谈目标便能改善处境，继续留下同样可能是主动决定。重要的是知道自己为何选择，而不是证明谁更洒脱。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "转向时怎样少留混乱",
-        "paragraphs": [
-          "学了一年的课程已不符合目标，先整理已学会的技能与剩余要求，再比较完成、暂停和更换课程的成本。过去的努力仍有价值，不必靠无限续费证明它。",
-          "志愿工作让你长期透支，可以提前说明减少频率并做好交接。关系里发现需求不同，先在安全前提下表达真实想法；若存在威胁或伤害，现实中的安全与帮助应放在牌义之前。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 写一份转向说明",
-        "paragraphs": [
-          "用四句话写出：我原来想得到什么；目前实际得到什么；还值得尝试的一项调整；如果仍无改善，我准备怎样减少投入。为调整设一个合理的观察时间，避免把准备变成没有终点的拖延。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "抽到圣杯八不等于必须马上走，也不保证离开后一定更幸福。图中杯子完整，提醒我们结束未必源于彻底失败；但未来仍然需要探索，不能靠这张牌预先确认下一站。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "four-of-cups",
-        "nameZh": "圣杯四",
-        "reason": "区分暂时不想参与与认真转向"
-      },
-      {
-        "cardId": "five-of-cups",
-        "nameZh": "圣杯五",
-        "reason": "理解离开过程中仍可能存在的遗憾"
-      }
-    ],
-    "cardId": "eight-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 8,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-eight-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "eight-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Eight of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "eight-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Eight of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcu08.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups08.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups08.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups08.jpg&oldid=1199313994",
-      "pageRevision": "1199313994",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:24:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:24, 5 April 2024 1,114 × 1,919 (810 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg",
-      "localFile": "images/Cups08.jpg",
-      "dimensions": [
-        1114,
-        1919
-      ],
-      "commonsOriginalDimensions": [
-        1114,
-        1919
-      ],
-      "bytes": 829918,
-      "sha256": "727c07c60753aa7925c9421ca3a93e80eaadd0053018e68c819b2ac5e6562312",
-      "sha1": "89419f820aa82cb855cd705c97741f439a2ef757",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1187,
-    "bodyChineseCharacterCount": 916
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 953,
-    "words": 3,
-    "articleUtf8Bytes": 4480
-  },
+  "sourceBatch": "depth77-cups-03",
   "nameLocalized": "圣杯八",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_reviewed_chinese",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 1049,
-    "completeArticleChineseCharacters": 1187
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "b2d02d1074198b0a7056a3552edaf6e9510c12234a23884d4759b435571227e4",
-    "articleSha256": "b2d02d1074198b0a7056a3552edaf6e9510c12234a23884d4759b435571227e4",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "570b59995fe92b2c4c45407adad34b435da42bebe5df366501ce2fc2a5189f78",
+    "sourceArticleSha256": "570b59995fe92b2c4c45407adad34b435da42bebe5df366501ce2fc2a5189f78",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "cf525529db4d30dacb2402e84cce1f8cdea08e658c737617c2ca6f81ef4ab6b0",
+    "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+    "previousRecord": "content/tarot/revisions/2026-10-08/eight-of-cups.zh.json",
+    "editionBodySha256": "570b59995fe92b2c4c45407adad34b435da42bebe5df366501ce2fc2a5189f78"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

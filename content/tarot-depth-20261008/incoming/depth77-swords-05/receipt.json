@@ -1,0 +1,30 @@
+{
+  "batchId": "depth77-swords-05",
+  "sourcePackageSha256": "875561c1137b35a0b20a65d46fe835b868d71898997847a3adc2a4afbd7c5f60",
+  "origin": "parent thread 01a118a5-9b43-72c3-b4fe-a05e2232d0e4 reviewed full JSON message",
+  "records": [
+    {
+      "cardId": "page-of-swords",
+      "route": "/journal/tarot-page-of-swords",
+      "articleSha256": "ab10f454c8d5f8b7dbf1a6556d0905b1ea5367a4521669de159815e418f2f98b",
+      "characters": 2868,
+      "sectionCount": 11
+    },
+    {
+      "cardId": "knight-of-swords",
+      "route": "/journal/tarot-knight-of-swords",
+      "articleSha256": "8400f891b8d8e2b7ff4deb48e6e869596da1737e53d912e63b0d48bf58d7eafa",
+      "characters": 2883,
+      "sectionCount": 11
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

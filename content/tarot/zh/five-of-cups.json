@@ -14,7 +14,7 @@
   "locale": "zh-CN",
   "deckSystem": "RWS",
   "title": "圣杯五牌义 承认失去，也看清仍然拥有的",
-  "plainLanguageSummary": "失望值得认真对待，余下的支持也可以慢慢重新看见。",
+  "plainLanguageSummary": null,
   "keywords": [
     "失落",
     "遗憾",
@@ -30,13 +30,13 @@
       "id": "section-01",
       "role": "image",
       "title": "三只倒下，两只仍然直立",
-      "bodyMarkdown": "灰色天空下，一个裹着黑色长斗篷的人低头站着，身体朝向画面左侧。脚前有三只倒下的金杯，地面留着红色与绿色的液体；身后右侧另有两只杯直立。人物没有回头去看它们。\n\n一道蓝色河流横过背景，右侧有拱桥，对岸绿地上立着带塔的小建筑。斗篷把人物包住，河流、桥与远处居所则把视线引向更远的地方。桥的存在提供了一个可观察的通路，却没有承诺走过去以后所有损失都会被补偿。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups05.jpg)"
+      "bodyMarkdown": "灰色天空下，一个裹着黑色长斗篷的人低头站着，身体朝向画面左侧。脚前有三只倒下的金杯，地面留着红色与绿色的液体；身后右侧另有两只杯直立。人物没有回头去看它们。\n\n一道蓝色河流横过背景，右侧有拱桥，对岸绿地上立着带塔的小建筑。斗篷把人物包住，河流、桥与远处居所则把视线引向更远的地方。桥的存在提供了一个可观察的通路，却没有承诺走过去以后所有损失都会被补偿。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n\n三只倒杯与两只立杯都在同一个画面里，分量并不需要互相抵消。河把人物与远处建筑分开，桥则是绕行的路线；它没有出现在人物脚下。现代阅读因此可以强调步骤：先识别损失，之后才能决定是否向仍有的资源移动。要求人马上“看开”，反而会跳过这张牌最显眼的低头姿态。"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "原文已经保留了损失之外的部分",
-      "bodyMarkdown": "Waite《塔罗图解之钥》1911 英文转录明确写到失去一些，也留下另一些，并列有未达预期的继承、传递等旧义。原文逆位出现消息、联系、亲缘与归来，也夹有落空计划，方向并不完全一致。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n本站将逆位用于重新接受支持、整理遗憾，属于现代反思式延伸。这里不从一张牌推断遗产、婚姻或任何具体事件已经发生；应当以当事人的实际经历作为讨论起点。"
+      "bodyMarkdown": "Waite《塔罗图解之钥》1911 英文转录明确写到失去一些，也留下另一些，并列有未达预期的继承、传递等旧义。原文逆位出现消息、联系、亲缘与归来，也夹有虚妄的计划，方向并不完全一致。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n本站将逆位用于重新接受支持、整理遗憾，属于现代反思式延伸。这里不从一张牌推断遗产、婚姻或任何具体事件已经发生；应当以当事人的实际经历作为讨论起点。"
     },
     {
       "id": "section-03",
@@ -51,34 +51,40 @@
       "bodyMarkdown": "逆位可用于观察是否已有一点转机：愿意回朋友消息、把搁下的日常拾起来、能谈论这件事而不只反复责怪自己。这样的变化很小，也值得被注意。\n\n另一种情况是嘴上说已经过去，行动却始终围绕弥补旧结局。此时先区分仍可修复的部分与无法改变的事实，决定哪里需要补救，哪里需要停止额外消耗。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "失去机会之后如何安排下一步",
-      "bodyMarkdown": "申请的项目没有通过，先确认是否能获得评审反馈，再决定修改哪部分材料。失败会影响心情，却不自动抹去你已经积累的经验和作品。\n\n朋友取消了期待已久的旅行，可以表达失望，并核对退改安排，不必立即用下一场旅行覆盖情绪。若正经历重要关系的告别，允许自己求助于可信任的人；实际的陪伴，比从牌里追问对方会不会回来更有用。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回问题和位置里",
+      "bodyMarkdown": "损失位的圣杯五适合把失去说具体：是一个名额、一段共同时间，还是对自己的某种期待？资源位则可能提醒检查身后仍能使用的支持。逆位有时可以读作重新联络，有时只是发现遗憾尚未处理。区别来自当事人的行动与意愿，不能用正逆位置给悲伤规定截止时间；“归来”的历史词条也不保证某个人会回来。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "落选以后怎样重新整理作品",
+      "bodyMarkdown": "**原创虚构案例。** 小岑花三个月准备摄影展，收到未入选通知。她失去了这次展示机会，也很在意朋友曾期待来看。但作品文件完整，指导老师愿意做一次复盘，另一个开放征集尚未开始。\n\n问题是“这次评审落选后，我需要先承认什么”，需要面对的部分位抽到圣杯五正位。\n\n三只倒下的杯子可以帮助她承认展示机会确实失去了，不能用“你学到很多”取消这件事。身后仍立的两杯则可对应已完成作品和可获得反馈，并非暗示有两项神秘补偿。桥在远处，说明从失落走向下一步可以有过渡，不必当天马上投递。\n\n若她真正难过的是觉得辜负家人的投入，仅讨论作品会错过问题，需要听清她给这次评审赋予了什么意义。若作品涉及无法再次使用的授权，完整文件也未必是可用资源，要先核实条件。\n\n给自己留出两天不作重大决定，再向老师索取一条构图意见和一条选片意见。把收到的反馈与自己猜测的否定分开。之后再判断是否修改后参加别的展，而不是为了消除难过立刻追逐下一个名额。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "旧友重新联系时怎样不跳过以前的伤心",
+      "bodyMarkdown": "**原创虚构案例。** 阿庭与朋友因一次旅行分工不均半年没见。朋友最近发来共同看过的电影海报，还未谈起那次争执。阿庭有些想念，也担心一回应就等于表示全部过去了。\n\n问题是“我想恢复联系，怎样开始才不会重演旧问题”，修复建议位抽到圣杯五逆位。\n\n逆位可以借传统里的消息、联系方向，讨论已经出现的联系动作。图中立杯和桥也提供一种比喻：修复有可能从可用的共同经验开始，但需要走过隔开的距离。海报是一个接触信号，不能证明道歉或问题已经解决。\n\n如果消息只是群发活动通知，双向修复的证据就更弱。若朋友之后愿意听分工问题，并承认具体行为，才有条件继续；若反复否认或施压要求翻篇，应保留距离。阿庭是否回应，也可以完全由自己的意愿决定。\n\n想回应的话，可以先谈电影，再提出希望有一次短聊，说清旅行中最困扰的一件事和未来需要的安排。第一次只以理解彼此为目标，不急着约下一次旅行。重新联系与恢复原有亲密程度，是两项可分开的决定。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "练习 分开三件事",
-      "bodyMarkdown": "在纸上写三个小标题：已经失去的、目前仍在的、今天需要的。每栏只填真实而具体的内容。最后挑一项当天能做的小事，例如处理一笔可退费用、吃一顿饭，或向朋友说明想有人陪伴。"
-    },
-    {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看错的地方",
-      "bodyMarkdown": "圣杯五不预测死亡，也不要求悲伤有固定期限。用还有两只杯催人振作，会忽略那三只杯原本的意义。它更适合练习同时容纳两件事：这确实让人难过，生活也可能还有别的支点。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接着读什么",
-      "bodyMarkdown": "圣杯八：比较面对损失与主动离开；圣杯六：观察回忆如何影响当下。"
+      "title": "把理解带回今天",
+      "bodyMarkdown": "拿一张纸分别写“确实失去了什么”“仍然可以使用什么”“现在还没准备好做什么”。不要求三栏一样长。下一步只选一个自己愿意做的动作，例如保存资料、接受陪伴或暂时停止比较。桥可以在那里等你，悲伤不必为了配合牌义马上结束。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇资料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。"
+      "title": "本篇资料与阅读范围",
+      "bodyMarkdown": "- [Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。"
     }
   ],
   "relatedCards": [
@@ -100,7 +106,7 @@
       "title": "Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "five-of-cups-image",
         "layer": "画面观察",
@@ -115,7 +121,7 @@
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcu05.htm",
       "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "five-of-cups-waite",
         "layer": "历史原文",
@@ -180,180 +186,33 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 圣杯五牌义 承认失去，也看清仍然拥有的\n\n一句话：失望值得认真对待，余下的支持也可以慢慢重新看见。\n\n牌名：圣杯五 Five of Cups  \n牌序：V · RWS 小阿尔卡那 · 圣杯组  \n关键词：失落、遗憾、余留\n\n正位速读：先承认真实的损失，不必急着把难过改写成好事。  \n逆位速读：开始重新连接生活，或发现自己还需要时间处理遗憾。\n\n安慰来得太快，有时像在催人停止难过。圣杯五把已经倾倒的杯子摆在眼前，同时让另外两只留在画面里。\n\n## 三只倒下，两只仍然直立\n\n灰色天空下，一个裹着黑色长斗篷的人低头站着，身体朝向画面左侧。脚前有三只倒下的金杯，地面留着红色与绿色的液体；身后右侧另有两只杯直立。人物没有回头去看它们。\n\n一道蓝色河流横过背景，右侧有拱桥，对岸绿地上立着带塔的小建筑。斗篷把人物包住，河流、桥与远处居所则把视线引向更远的地方。桥的存在提供了一个可观察的通路，却没有承诺走过去以后所有损失都会被补偿。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n\n## 原文已经保留了损失之外的部分\n\nWaite《塔罗图解之钥》1911 英文转录明确写到失去一些，也留下另一些，并列有未达预期的继承、传递等旧义。原文逆位出现消息、联系、亲缘与归来，也夹有落空计划，方向并不完全一致。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n本站将逆位用于重新接受支持、整理遗憾，属于现代反思式延伸。这里不从一张牌推断遗产、婚姻或任何具体事件已经发生；应当以当事人的实际经历作为讨论起点。\n\n## 正位 把失望说到具体\n\n难过的不一定只是结果失败，也可能是投入没有被看见、原先期待的未来不再成立。试着说出究竟失去了什么，比对自己说想开点更容易找到需要的帮助。\n\n承认损失不代表只能留在原地。可以一边遗憾，一边处理今天必须做的事；也可以暂时不寻找积极意义。那两只站立的杯子适合提醒你检查资源，而不是要求你立刻感恩。\n\n## 逆位 重新连接不必一步到位\n\n逆位可用于观察是否已有一点转机：愿意回朋友消息、把搁下的日常拾起来、能谈论这件事而不只反复责怪自己。这样的变化很小，也值得被注意。\n\n另一种情况是嘴上说已经过去，行动却始终围绕弥补旧结局。此时先区分仍可修复的部分与无法改变的事实，决定哪里需要补救，哪里需要停止额外消耗。\n\n## 失去机会之后如何安排下一步\n\n申请的项目没有通过，先确认是否能获得评审反馈，再决定修改哪部分材料。失败会影响心情，却不自动抹去你已经积累的经验和作品。\n\n朋友取消了期待已久的旅行，可以表达失望，并核对退改安排，不必立即用下一场旅行覆盖情绪。若正经历重要关系的告别，允许自己求助于可信任的人；实际的陪伴，比从牌里追问对方会不会回来更有用。\n\n## 练习 分开三件事\n\n在纸上写三个小标题：已经失去的、目前仍在的、今天需要的。每栏只填真实而具体的内容。最后挑一项当天能做的小事，例如处理一笔可退费用、吃一顿饭，或向朋友说明想有人陪伴。\n\n## 容易看错的地方\n\n圣杯五不预测死亡，也不要求悲伤有固定期限。用还有两只杯催人振作，会忽略那三只杯原本的意义。它更适合练习同时容纳两件事：这确实让人难过，生活也可能还有别的支点。\n\n## 接着读什么\n\n圣杯八：比较面对损失与主动离开；圣杯六：观察回忆如何影响当下。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。\n",
+  "articleMarkdown": "# 圣杯五牌义 承认失去，也看清仍然拥有的\n\n正位先读一句：先承认真实的损失，不必急着把难过改写成好事。\n\n逆位先读一句：开始重新连接生活，或发现自己还需要时间处理遗憾。\n\n安慰来得太快，有时像在催人停止难过。圣杯五把已经倾倒的杯子摆在眼前，同时让另外两只留在画面里。\n\n## 三只倒下，两只仍然直立\n\n灰色天空下，一个裹着黑色长斗篷的人低头站着，身体朝向画面左侧。脚前有三只倒下的金杯，地面留着红色与绿色的液体；身后右侧另有两只杯直立。人物没有回头去看它们。\n\n一道蓝色河流横过背景，右侧有拱桥，对岸绿地上立着带塔的小建筑。斗篷把人物包住，河流、桥与远处居所则把视线引向更远的地方。桥的存在提供了一个可观察的通路，却没有承诺走过去以后所有损失都会被补偿。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n\n三只倒杯与两只立杯都在同一个画面里，分量并不需要互相抵消。河把人物与远处建筑分开，桥则是绕行的路线；它没有出现在人物脚下。现代阅读因此可以强调步骤：先识别损失，之后才能决定是否向仍有的资源移动。要求人马上“看开”，反而会跳过这张牌最显眼的低头姿态。\n\n## 原文已经保留了损失之外的部分\n\nWaite《塔罗图解之钥》1911 英文转录明确写到失去一些，也留下另一些，并列有未达预期的继承、传递等旧义。原文逆位出现消息、联系、亲缘与归来，也夹有虚妄的计划，方向并不完全一致。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n本站将逆位用于重新接受支持、整理遗憾，属于现代反思式延伸。这里不从一张牌推断遗产、婚姻或任何具体事件已经发生；应当以当事人的实际经历作为讨论起点。\n\n## 正位 把失望说到具体\n\n难过的不一定只是结果失败，也可能是投入没有被看见、原先期待的未来不再成立。试着说出究竟失去了什么，比对自己说想开点更容易找到需要的帮助。\n\n承认损失不代表只能留在原地。可以一边遗憾，一边处理今天必须做的事；也可以暂时不寻找积极意义。那两只站立的杯子适合提醒你检查资源，而不是要求你立刻感恩。\n\n## 逆位 重新连接不必一步到位\n\n逆位可用于观察是否已有一点转机：愿意回朋友消息、把搁下的日常拾起来、能谈论这件事而不只反复责怪自己。这样的变化很小，也值得被注意。\n\n另一种情况是嘴上说已经过去，行动却始终围绕弥补旧结局。此时先区分仍可修复的部分与无法改变的事实，决定哪里需要补救，哪里需要停止额外消耗。\n\n## 把牌放回问题和位置里\n\n损失位的圣杯五适合把失去说具体：是一个名额、一段共同时间，还是对自己的某种期待？资源位则可能提醒检查身后仍能使用的支持。逆位有时可以读作重新联络，有时只是发现遗憾尚未处理。区别来自当事人的行动与意愿，不能用正逆位置给悲伤规定截止时间；“归来”的历史词条也不保证某个人会回来。\n\n## 落选以后怎样重新整理作品\n\n**原创虚构案例。** 小岑花三个月准备摄影展，收到未入选通知。她失去了这次展示机会，也很在意朋友曾期待来看。但作品文件完整，指导老师愿意做一次复盘，另一个开放征集尚未开始。\n\n问题是“这次评审落选后，我需要先承认什么”，需要面对的部分位抽到圣杯五正位。\n\n三只倒下的杯子可以帮助她承认展示机会确实失去了，不能用“你学到很多”取消这件事。身后仍立的两杯则可对应已完成作品和可获得反馈，并非暗示有两项神秘补偿。桥在远处，说明从失落走向下一步可以有过渡，不必当天马上投递。\n\n若她真正难过的是觉得辜负家人的投入，仅讨论作品会错过问题，需要听清她给这次评审赋予了什么意义。若作品涉及无法再次使用的授权，完整文件也未必是可用资源，要先核实条件。\n\n给自己留出两天不作重大决定，再向老师索取一条构图意见和一条选片意见。把收到的反馈与自己猜测的否定分开。之后再判断是否修改后参加别的展，而不是为了消除难过立刻追逐下一个名额。\n\n## 旧友重新联系时怎样不跳过以前的伤心\n\n**原创虚构案例。** 阿庭与朋友因一次旅行分工不均半年没见。朋友最近发来共同看过的电影海报，还未谈起那次争执。阿庭有些想念，也担心一回应就等于表示全部过去了。\n\n问题是“我想恢复联系，怎样开始才不会重演旧问题”，修复建议位抽到圣杯五逆位。\n\n逆位可以借传统里的消息、联系方向，讨论已经出现的联系动作。图中立杯和桥也提供一种比喻：修复有可能从可用的共同经验开始，但需要走过隔开的距离。海报是一个接触信号，不能证明道歉或问题已经解决。\n\n如果消息只是群发活动通知，双向修复的证据就更弱。若朋友之后愿意听分工问题，并承认具体行为，才有条件继续；若反复否认或施压要求翻篇，应保留距离。阿庭是否回应，也可以完全由自己的意愿决定。\n\n想回应的话，可以先谈电影，再提出希望有一次短聊，说清旅行中最困扰的一件事和未来需要的安排。第一次只以理解彼此为目标，不急着约下一次旅行。重新联系与恢复原有亲密程度，是两项可分开的决定。\n\n## 把理解带回今天\n\n拿一张纸分别写“确实失去了什么”“仍然可以使用什么”“现在还没准备好做什么”。不要求三栏一样长。下一步只选一个自己愿意做的动作，例如保存资料、接受陪伴或暂时停止比较。桥可以在那里等你，悲伤不必为了配合牌义马上结束。\n\n## 本篇资料与阅读范围\n\n- [Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups05.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "five",
-    "nameZh": "圣杯五",
-    "nameEn": "Five of Cups",
-    "number": "V",
-    "title": "圣杯五牌义 承认失去，也看清仍然拥有的",
-    "oneLineSummary": "失望值得认真对待，余下的支持也可以慢慢重新看见。",
-    "keywords": [
-      "失落",
-      "遗憾",
-      "余留"
-    ],
-    "uprightQuickTake": "先承认真实的损失，不必急着把难过改写成好事。",
-    "reversedQuickTake": "开始重新连接生活，或发现自己还需要时间处理遗憾。",
-    "hook": "安慰来得太快，有时像在催人停止难过。圣杯五把已经倾倒的杯子摆在眼前，同时让另外两只留在画面里。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "三只倒下，两只仍然直立",
-        "paragraphs": [
-          "灰色天空下，一个裹着黑色长斗篷的人低头站着，身体朝向画面左侧。脚前有三只倒下的金杯，地面留着红色与绿色的液体；身后右侧另有两只杯直立。人物没有回头去看它们。",
-          "一道蓝色河流横过背景，右侧有拱桥，对岸绿地上立着带塔的小建筑。斗篷把人物包住，河流、桥与远处居所则把视线引向更远的地方。桥的存在提供了一个可观察的通路，却没有承诺走过去以后所有损失都会被补偿。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups05.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "原文已经保留了损失之外的部分",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录明确写到失去一些，也留下另一些，并列有未达预期的继承、传递等旧义。原文逆位出现消息、联系、亲缘与归来，也夹有落空计划，方向并不完全一致。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu05.htm)",
-          "本站将逆位用于重新接受支持、整理遗憾，属于现代反思式延伸。这里不从一张牌推断遗产、婚姻或任何具体事件已经发生；应当以当事人的实际经历作为讨论起点。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 把失望说到具体",
-        "paragraphs": [
-          "难过的不一定只是结果失败，也可能是投入没有被看见、原先期待的未来不再成立。试着说出究竟失去了什么，比对自己说想开点更容易找到需要的帮助。",
-          "承认损失不代表只能留在原地。可以一边遗憾，一边处理今天必须做的事；也可以暂时不寻找积极意义。那两只站立的杯子适合提醒你检查资源，而不是要求你立刻感恩。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 重新连接不必一步到位",
-        "paragraphs": [
-          "逆位可用于观察是否已有一点转机：愿意回朋友消息、把搁下的日常拾起来、能谈论这件事而不只反复责怪自己。这样的变化很小，也值得被注意。",
-          "另一种情况是嘴上说已经过去，行动却始终围绕弥补旧结局。此时先区分仍可修复的部分与无法改变的事实，决定哪里需要补救，哪里需要停止额外消耗。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "失去机会之后如何安排下一步",
-        "paragraphs": [
-          "申请的项目没有通过，先确认是否能获得评审反馈，再决定修改哪部分材料。失败会影响心情，却不自动抹去你已经积累的经验和作品。",
-          "朋友取消了期待已久的旅行，可以表达失望，并核对退改安排，不必立即用下一场旅行覆盖情绪。若正经历重要关系的告别，允许自己求助于可信任的人；实际的陪伴，比从牌里追问对方会不会回来更有用。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 分开三件事",
-        "paragraphs": [
-          "在纸上写三个小标题：已经失去的、目前仍在的、今天需要的。每栏只填真实而具体的内容。最后挑一项当天能做的小事，例如处理一笔可退费用、吃一顿饭，或向朋友说明想有人陪伴。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "圣杯五不预测死亡，也不要求悲伤有固定期限。用还有两只杯催人振作，会忽略那三只杯原本的意义。它更适合练习同时容纳两件事：这确实让人难过，生活也可能还有别的支点。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "eight-of-cups",
-        "nameZh": "圣杯八",
-        "reason": "比较面对损失与主动离开"
-      },
-      {
-        "cardId": "six-of-cups",
-        "nameZh": "圣杯六",
-        "reason": "观察回忆如何影响当下"
-      }
-    ],
-    "cardId": "five-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 5,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-five-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "five-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Five of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "five-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Five of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcu05.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups05.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups05.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups05.jpg&oldid=1199313550",
-      "pageRevision": "1199313550",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:21:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:21, 5 April 2024 1,121 × 1,920 (686 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg",
-      "localFile": "images/Cups05.jpg",
-      "dimensions": [
-        1121,
-        1920
-      ],
-      "commonsOriginalDimensions": [
-        1121,
-        1920
-      ],
-      "bytes": 702301,
-      "sha256": "07d2354d331f8a9397c407cea0b2bcc1544b134eab526b9262ececb3d0a57166",
-      "sha1": "28d89b259fcfccce0336557e2f691244304475ae",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1175,
-    "bodyChineseCharacterCount": 907
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 949,
-    "words": 2,
-    "articleUtf8Bytes": 4410
-  },
+  "sourceBatch": "depth77-cups-02",
   "nameLocalized": "圣杯五",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_reviewed_chinese",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 1044,
-    "completeArticleChineseCharacters": 1175
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "9358403acd57929df8e23af65bbd9a77c6b914bc72058f035355251839dae44d",
-    "articleSha256": "9358403acd57929df8e23af65bbd9a77c6b914bc72058f035355251839dae44d",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "00cffd63b31053b1506b11422cb49ddf7569933f02b709abe8a30e9c60048419",
+    "sourceArticleSha256": "00cffd63b31053b1506b11422cb49ddf7569933f02b709abe8a30e9c60048419",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "ee1e6114ac79539dea7c7fd8a395dd4412b743fce4c334e2c3d22f91c3ef2a5f",
+    "sourcePackageSha256": "c7d06a3414df67fdec95243a10f377538cc51f6d51ce74a3f5ffe998af3a63a2",
+    "previousRecord": "content/tarot/revisions/2026-10-08/five-of-cups.zh.json",
+    "editionBodySha256": "00cffd63b31053b1506b11422cb49ddf7569933f02b709abe8a30e9c60048419"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

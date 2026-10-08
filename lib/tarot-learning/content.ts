@@ -6,8 +6,10 @@ export type TarotLearningArticle = {
  cardId:string; locale:string; title:string; nameLocalized:string; number:string; deckOrder:number; arcana:string;
  quickTake:{upright:string;reversed:string}; hook:string; keywords:string[]; plainLanguageSummary:string|null;
  openingParagraphs?:string[]; publishedAt?:string; updatedAt?:string;
- sections:{id:string;role:string;title:string;bodyMarkdown:string}[];
- sources:{title:string;url:string}[]; relatedCards:{cardId:string;name?:string;reason:string}[];
+ legacyIntroAnchors?:string[]; legacyRelatedAnchors?:string[];
+ sections:{id:string;role:string;title:string;bodyMarkdown:string;legacyAnchors?:string[]}[];
+ sourceAppendix?:{id:string;title:string};
+ sources:{title:string;url:string|null}[]; relatedCards:{cardId:string;name?:string;reason:string}[];
  articleMarkdown:string;
 };
 export const loadTarotLearningArticle = cache(async (id:string,locale:ReportLocale):Promise<TarotLearningArticle|undefined> => {

@@ -1,0 +1,37 @@
+{
+  "batchId": "depth77-swords-01",
+  "sourcePackageSha256": "d8034d6efb1f3c1511fa687bb4b0b3bcf4c4e0f9ad0f189f3f9b90e59646db67",
+  "origin": "parent thread 01a118a5-9b43-72c3-b4fe-a05e2232d0e4 full JSON manuscript message",
+  "records": [
+    {
+      "cardId": "ace-of-swords",
+      "route": "/journal/tarot-ace-of-swords",
+      "articleSha256": "aba175ad6c6dfb697679d1d054d5fd75d71a8724ecd42456042e7671f1e221d2",
+      "characters": 2702,
+      "sectionCount": 11
+    },
+    {
+      "cardId": "two-of-swords",
+      "route": "/journal/tarot-two-of-swords",
+      "articleSha256": "c487fa0fc6fa8fbe7077bcb292718de24de6b746690ca600bc0e37b6f54c5c41",
+      "characters": 2682,
+      "sectionCount": 11
+    },
+    {
+      "cardId": "three-of-swords",
+      "route": "/journal/tarot-three-of-swords",
+      "articleSha256": "e41306eda5743dbdd563807ef7c2c7dae3eb0814ad811f651b70596eab0cf85b",
+      "characters": 2726,
+      "sectionCount": 11
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

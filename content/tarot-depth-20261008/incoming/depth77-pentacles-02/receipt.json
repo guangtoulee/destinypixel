@@ -1,0 +1,30 @@
+{
+  "batchId": "depth77-pentacles-02",
+  "sourcePackageSha256": "ea18a69cc1f933a65c7858ce53fed9356c7a71d5adf2dd85e19dca43c7bed76a",
+  "origin": "Parent reviewed task message, 2026-10-08, bodySha256 confirmed",
+  "records": [
+    {
+      "cardId": "four-of-pentacles",
+      "route": "/journal/tarot-four-of-pentacles",
+      "articleSha256": "7c0cce9fbb34c148762c3367d94a2f57a7fb7255772b30dda257feba2351d704",
+      "characters": 2661,
+      "sectionCount": 12
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "route": "/journal/tarot-five-of-pentacles",
+      "articleSha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+      "characters": 2776,
+      "sectionCount": 12
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

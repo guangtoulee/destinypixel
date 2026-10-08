@@ -1,0 +1,37 @@
+{
+  "batchId": "depth77-cups-01",
+  "sourcePackageSha256": "5b0030800bfc7478c3b6b2b877081295a6f52369c4d435d48c3e33bb02a4cbb6",
+  "origin": "Parent reviewed task message, 2026-10-08, bodySha256 confirmed",
+  "records": [
+    {
+      "cardId": "ace-of-cups",
+      "route": "/journal/tarot-ace-of-cups",
+      "articleSha256": "247b9c6ffa553c41008da19835025d3b75db14820ccec4f371d4113071fb7f2c",
+      "characters": 2629,
+      "sectionCount": 9
+    },
+    {
+      "cardId": "two-of-cups",
+      "route": "/journal/tarot-two-of-cups",
+      "articleSha256": "766d1a3a5a2b78d6bfe00e516a80a0ec703230c36e95c3dd9b04b0913ce6b8ec",
+      "characters": 2677,
+      "sectionCount": 9
+    },
+    {
+      "cardId": "three-of-cups",
+      "route": "/journal/tarot-three-of-cups",
+      "articleSha256": "099fbf68c0d2b2a8100b1690238a2865d7c2183a30f2359ec6d9a18dee29ae7b",
+      "characters": 2473,
+      "sectionCount": 9
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

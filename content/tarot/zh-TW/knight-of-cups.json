@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "聖杯騎士牌義 把動人的想法變成可靠的邀請",
-  "plainLanguageSummary": "帶著感受主動靠近，也讓行動跟得上說出口的話。",
+  "plainLanguageSummary": null,
   "keywords": [
     "邀請",
     "理想",
@@ -30,13 +30,13 @@
       "id": "section-01",
       "role": "image",
       "title": "騎士遞出的是杯子",
-      "bodyMarkdown": "一位穿盔甲的人騎著淺色馬，面向畫面右方，一隻手將金杯舉在胸前。頭盔和靴跟有翼形裝飾，罩衣上可見紅色魚形圖案與藍色波紋。馬低著頭，一條前腿抬起，身體沒有猛烈衝刺的姿態。\n\n下方河流彎過淺黃色土地，遠處有山丘、幾棵樹與橙褐色巖壁。人物持杯而非揮劍，強調了接近與呈遞的動作；但圖像沒有告訴我們目的地是誰，也沒有證明杯中承諾已經兌現。 [檢視本篇牌面](https://commons.wikimedia.org/wiki/File:Cups12.jpg)"
+      "bodyMarkdown": "一位穿盔甲的人騎著淺色馬，面向畫面右方，一隻手將金杯舉在胸前。頭盔和靴跟有翼形裝飾，罩衣上可見紅色魚形圖案與藍色波紋。馬低著頭，一條前腿抬起，身體沒有猛烈衝刺的姿態。\n\n下方河流彎過淺黃色土地，遠處有山丘、幾棵樹與橙褐色岩壁。人物持杯而非揮劍，強調了接近與呈遞的動作；但圖像沒有告訴我們目的地是誰，也沒有證明杯中承諾已經兌現。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n\n馬在移動，手中的杯仍保持端正，這種節奏與揮劍衝刺的形象很不一樣。由此可以把主動理解成有意圖的接近，而非越快越真誠。翼飾提示想像的輕盈，腳下河流與岩地提醒行程仍有現實條件。重點不在騎士是否「很浪漫」，而是提議能否完整抵達另一個人，讓對方知道如何接受、調整或拒絕。"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 強調來訪與提議",
-      "bodyMarkdown": "Waite《塔羅圖解之鑰》1911 英文轉錄形容他優雅、安靜騎行而非好戰，也連結到想像與夢想。正位列有到來、接近、提議和邀請；逆位則聚集了詭計、欺詐與兩面性等強烈舊詞。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n本站把這些歷史詞條轉換為檢查表達與履約的反思方向，不用它們給現實中的人定性。人物可以代表一種行事方式，不限制性別、年齡，也不自動指向戀愛對象。"
+      "bodyMarkdown": "Waite《塔羅圖解之鑰》1911 英文轉錄形容他優雅、安靜騎行而非好戰，也聯繫到想像與夢想。正位列有到來、接近、提議和邀請；逆位則聚集了詭計、欺詐與兩面性等強烈舊詞。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n本站把這些歷史條目轉換為檢查表達與履約的反思方向，不用它們給現實中的人定性。人物可以代表一種行事方式，不限制性別、年齡，也不自動指向戀愛對象。"
     },
     {
       "id": "section-03",
@@ -48,37 +48,49 @@
       "id": "section-04",
       "role": "reversed",
       "title": "逆位 檢查行動是否追上了話語",
-      "bodyMarkdown": "逆位可提醒你注意只提願景、不落實細節的情況：每次說很快，卻沒有明確時間；氣氛一熱就答應，事後又無法承擔。先詢問進度與條件，不把失約自動解釋成精心欺騙。\n\n也可能是自己沉迷追求的過程，接近之後反而不願處理日常。把想被喜歡與願意承擔關係責任分開，會更容易發現該調整什麼。若有真實的欺詐疑慮，查證身分和記錄比反覆抽牌更重要。"
+      "bodyMarkdown": "逆位可提醒你注意只提願景、不落實細節的情況：每次說很快，卻沒有明確時間；氣氛一熱就答應，事後又無法承擔。先詢問進度與條件，不把失約自動解釋成精心欺騙。\n\n也可能是自己沈迷追求的過程，接近之後反而不願處理日常。把想被喜歡與願意承擔關係責任分開，會更容易發現該調整什麼。若有真實的欺詐疑慮，查證身分和記錄比反覆抽牌更重要。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "三種邀請都需要後續",
-      "bodyMarkdown": "約人見面，可以直接給出兩個方便的時段，並接受對方沒有興趣。浪漫表達如果無視明確拒絕，就失去了尊重。\n\n向客戶展示創意，除了情緒氛圍，也說明可交付項目、時程和限制。答應參加朋友的活動後，及時確認交通與到場時間；善意只有進入日程，才不容易停在口頭。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回問題和位置裡",
+      "bodyMarkdown": "邀請位可以支持一次清楚而有溫度的主動，執行風險位則應看願景與交付之間的落差。若它被放在「對方真實想法」位置，也無法讀出別人心裡未說的話，只能據已知溝通討論可能性。逆位的歷史措辭很重，現代解讀更應先核對承諾、期限和實際能力。一次延期可能是資源不足，持續編造與隱瞞需要另外的行為證據。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "把社區活動的熱情寫成可回應的邀請",
+      "bodyMarkdown": "**原創虛構案例。** 小陶想在社區辦一場週末舊物交換，已確認公共活動室可用兩小時。她準備寫「大家一起讓社區更美好」，卻尚未說明帶什麼、何時到、未換出的物品怎樣處理。她也擔心邀請太具體顯得不熱情。\n\n問題是「怎樣邀請鄰居參與舊物交換，既友好又清楚」，表達建議位抽到聖杯騎士正位。\n\n騎士把杯舉到前方，可以理解為把心意變成別人接得到的東西。溫暖的願景能說明動機，平穩的馬步則提醒邀請要有實際節奏。場地時間已確認，是正位建議可落地的基礎；其餘規則寫清楚，反而能減少鄰居參與時的顧慮。\n\n若場地仍未獲准，就不能把構想寫成確定活動。若大家真正需要的是捐贈而非交換，也應聽回饋調整形式，而不是為了維護最初靈感繼續推進。主動有價值，仍需讓現實回應改變計畫。\n\n邀請中寫明兩小時時段、物品範圍、每人自行帶回剩餘物品，並說明可只來看看。先發給幾位願意回饋的鄰居，問哪裡不清楚，再決定正式組織。好意通過可理解的安排抵達，別人也保有不參加的空間。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "動人的創意不能自動變成交付",
+      "bodyMarkdown": "**原創虛構案例。** 設計師阿澤與朋友商量做一支樂隊短片，對方不斷增加夜景、動畫和多地拍攝，說「效果一定很驚艷」。當前只有一個週末可拍，演員時間未定，誰負責剪輯也沒有確認。阿澤已經答應協助，但未同意包辦整片。\n\n問題是「面對不斷增加的創意承諾，我該先問清什麼」，執行風險位抽到聖杯騎士逆位。\n\n逆位可以檢視杯裡的美好提議能否被帶到終點。事實支持的是範圍與資源不匹配，並不足以證明朋友故意騙他。想像的翼飾很醒目，馬卻仍須一步步走，這個對照有助於把討論從氣氛拉回執行條件。\n\n如果對方能補齊時間、人員與已有素材，計畫可能比目前看到的更可行。若對方始終拒絕說明，卻反覆借交情要求無上限投入，阿澤就需要收緊承諾範圍，不必再靠牌判斷其動機。\n\n先列一個週末能完成的最小版本，確認場景數量、剪輯責任和修改次數。對尚無條件實現的部分標為備用，不在承諾裡。只有這些得到雙方確認後再推進；表達欣賞並不等於接受所有追加工作。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "練習 把願景寫成可回應的邀請",
-      "bodyMarkdown": "選一個一直想提出的計畫，用四句寫清：想一起做什麼、為什麼想到對方、需要多少投入、對方怎樣答覆。刪去自己無法保證的結果，補上一句可以拒絕或調整的空間，再檢查你是否真的有能力執行。"
+      "title": "把理解帶回今天",
+      "bodyMarkdown": "選一個準備提出的計畫，寫清想做什麼、對方需要投入什麼、你能承擔什麼，以及哪些仍未確定。再讀一遍，刪掉沒有根據的保證。聖杯侍從允許想法萌芽，聖杯騎士則要求把想法帶到可以實際回應的距離。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看錯的地方",
-      "bodyMarkdown": "聖杯騎士不是白馬王子的身分證，逆位也不是花心或出軌的證據。吸引力與可靠性應分別觀察：前者可以在片刻出現，後者需要時間、行動與尊重邊界來體現。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "聖杯侍從：比較初次表達與主動推進；聖杯國王：看錶達如何發展成持續負責。"
+      "id": "depth-comparison",
+      "role": "comparison",
+      "title": "和相近的牌放在一起看",
+      "bodyMarkdown": "聖杯侍從可以有一個未經整理的念頭，騎士則已經走向對外提議；聖杯國王進一步涉及持續的責任和判斷。把邀請說得動人，是一種能力，但它不能自動替代後續履約。若現實任務只是表達欣賞，不需要替自己加上長期承諾；若已經答應具體交付，就應從氣氛轉向時間、條件和完成情況。"
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n版本說明：文字核對 Sacred Texts 標註 [1911] 的英文轉錄，圖像為 Commons 當前標註的 Pam-A 掃描。現代情境、提問與練習由 DestinyPixel 原創編寫，歷史占卜詞僅作學習材料，不是事件預測或現實證據。"
+      "title": "本篇資料與閱讀範圍",
+      "bodyMarkdown": "- [Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n圖像按本篇 RWS 實物核對；歷史文字依據頁面標注 1911 的英文轉錄。正文中的日常應用和虛構案例為 DestinyPixel 原創，不代表 Waite 逐句釋義。"
     }
   ],
   "relatedCards": [
@@ -98,29 +110,29 @@
   "sources": [
     {
       "sourceId": "knight-of-cups-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "knight-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Knight of Cups，Commons Pam-A 扫描",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描",
         "url": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
         "checkedAt": "2026-10-07"
       }
     },
     {
       "sourceId": "knight-of-cups-waite",
-      "type": "歷史原文",
+      "type": "历史原文",
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcukn.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；未核驗 1910 實體初版或逐頁初版掃描",
-      "checkedOn": "2026-10-07",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "knight-of-cups-waite",
-        "layer": "历史原文",
+        "layer": "歷史原文",
         "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktcukn.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
@@ -182,163 +194,11 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 聖杯騎士牌義 把動人的想法變成可靠的邀請\n\n一句話: 帶著感受主動靠近，也讓行動跟得上說出口的話。\n\n牌名: 聖杯騎士  \n牌序: N · RWS 小阿爾卡那 · 聖杯組  \n關鍵詞: 邀請、理想、主動表達\n\n正位速讀: 可以提出真誠的邀請，讓美好的想法有機會落地。  \n逆位速讀: 提議很動人卻缺少落實，先核對承諾與實際行動。\n\n有些話能讓人立刻心動，真正建立信任的卻是接下來怎樣做。聖杯騎士從想像中出發，走到需要回應的路上。\n\n## 騎士遞出的是杯子\n\n一位穿盔甲的人騎著淺色馬，面向畫面右方，一隻手將金杯舉在胸前。頭盔和靴跟有翼形裝飾，罩衣上可見紅色魚形圖案與藍色波紋。馬低著頭，一條前腿抬起，身體沒有猛烈衝刺的姿態。\n\n下方河流彎過淺黃色土地，遠處有山丘、幾棵樹與橙褐色巖壁。人物持杯而非揮劍，強調了接近與呈遞的動作；但圖像沒有告訴我們目的地是誰，也沒有證明杯中承諾已經兌現。 [檢視本篇牌面](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n\n## Waite 強調來訪與提議\n\nWaite《塔羅圖解之鑰》1911 英文轉錄形容他優雅、安靜騎行而非好戰，也連結到想像與夢想。正位列有到來、接近、提議和邀請；逆位則聚集了詭計、欺詐與兩面性等強烈舊詞。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n本站把這些歷史詞條轉換為檢查表達與履約的反思方向，不用它們給現實中的人定性。人物可以代表一種行事方式，不限制性別、年齡，也不自動指向戀愛對象。\n\n## 正位 讓邀請清楚而留有餘地\n\n正位適合主動提出想做的事：邀請見面、展示創意、表達欣賞或提出一個合作方案。好的邀請能說清內容、時間和期待，也能容得下對方拒絕。\n\n感受給行動提供方向，具體安排則讓別人知道如何參與。你可以把提議說得動人，同時說清目前尚未確定的部分。誠實的未定，比為了打動人而許下過量承諾更能保護信任。\n\n## 逆位 檢查行動是否追上了話語\n\n逆位可提醒你注意只提願景、不落實細節的情況：每次說很快，卻沒有明確時間；氣氛一熱就答應，事後又無法承擔。先詢問進度與條件，不把失約自動解釋成精心欺騙。\n\n也可能是自己沉迷追求的過程，接近之後反而不願處理日常。把想被喜歡與願意承擔關係責任分開，會更容易發現該調整什麼。若有真實的欺詐疑慮，查證身分和記錄比反覆抽牌更重要。\n\n## 三種邀請都需要後續\n\n約人見面，可以直接給出兩個方便的時段，並接受對方沒有興趣。浪漫表達如果無視明確拒絕，就失去了尊重。\n\n向客戶展示創意，除了情緒氛圍，也說明可交付項目、時程和限制。答應參加朋友的活動後，及時確認交通與到場時間；善意只有進入日程，才不容易停在口頭。\n\n## 練習 把願景寫成可回應的邀請\n\n選一個一直想提出的計畫，用四句寫清：想一起做什麼、為什麼想到對方、需要多少投入、對方怎樣答覆。刪去自己無法保證的結果，補上一句可以拒絕或調整的空間，再檢查你是否真的有能力執行。\n\n## 容易看錯的地方\n\n聖杯騎士不是白馬王子的身分證，逆位也不是花心或出軌的證據。吸引力與可靠性應分別觀察：前者可以在片刻出現，後者需要時間、行動與尊重邊界來體現。\n\n## 接著讀什麼\n\n聖杯侍從：比較初次表達與主動推進；聖杯國王：看錶達如何發展成持續負責。\n\n## 本篇資料\n\n- [Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n版本說明：文字核對 Sacred Texts 標註 [1911] 的英文轉錄，圖像為 Commons 當前標註的 Pam-A 掃描。現代情境、提問與練習由 DestinyPixel 原創編寫，歷史占卜詞僅作學習材料，不是事件預測或現實證據。\n",
+  "articleMarkdown": "# 聖杯騎士牌義 把動人的想法變成可靠的邀請\n\n正位先讀一句：可以提出真誠的邀請，讓美好的想法有機會落地。\n\n逆位先讀一句：提議很動人卻缺少落實，先核對承諾與實際行動。\n\n有些話能讓人立刻心動，真正建立信任的卻是接下來怎樣做。聖杯騎士從想像中出發，走到需要回應的路上。\n\n## 騎士遞出的是杯子\n\n一位穿盔甲的人騎著淺色馬，面向畫面右方，一隻手將金杯舉在胸前。頭盔和靴跟有翼形裝飾，罩衣上可見紅色魚形圖案與藍色波紋。馬低著頭，一條前腿抬起，身體沒有猛烈衝刺的姿態。\n\n下方河流彎過淺黃色土地，遠處有山丘、幾棵樹與橙褐色岩壁。人物持杯而非揮劍，強調了接近與呈遞的動作；但圖像沒有告訴我們目的地是誰，也沒有證明杯中承諾已經兌現。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n\n馬在移動，手中的杯仍保持端正，這種節奏與揮劍衝刺的形象很不一樣。由此可以把主動理解成有意圖的接近，而非越快越真誠。翼飾提示想像的輕盈，腳下河流與岩地提醒行程仍有現實條件。重點不在騎士是否「很浪漫」，而是提議能否完整抵達另一個人，讓對方知道如何接受、調整或拒絕。\n\n## Waite 強調來訪與提議\n\nWaite《塔羅圖解之鑰》1911 英文轉錄形容他優雅、安靜騎行而非好戰，也聯繫到想像與夢想。正位列有到來、接近、提議和邀請；逆位則聚集了詭計、欺詐與兩面性等強烈舊詞。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n本站把這些歷史條目轉換為檢查表達與履約的反思方向，不用它們給現實中的人定性。人物可以代表一種行事方式，不限制性別、年齡，也不自動指向戀愛對象。\n\n## 正位 讓邀請清楚而留有餘地\n\n正位適合主動提出想做的事：邀請見面、展示創意、表達欣賞或提出一個合作方案。好的邀請能說清內容、時間和期待，也能容得下對方拒絕。\n\n感受給行動提供方向，具體安排則讓別人知道如何參與。你可以把提議說得動人，同時說清目前尚未確定的部分。誠實的未定，比為了打動人而許下過量承諾更能保護信任。\n\n## 逆位 檢查行動是否追上了話語\n\n逆位可提醒你注意只提願景、不落實細節的情況：每次說很快，卻沒有明確時間；氣氛一熱就答應，事後又無法承擔。先詢問進度與條件，不把失約自動解釋成精心欺騙。\n\n也可能是自己沈迷追求的過程，接近之後反而不願處理日常。把想被喜歡與願意承擔關係責任分開，會更容易發現該調整什麼。若有真實的欺詐疑慮，查證身分和記錄比反覆抽牌更重要。\n\n## 把牌放回問題和位置裡\n\n邀請位可以支持一次清楚而有溫度的主動，執行風險位則應看願景與交付之間的落差。若它被放在「對方真實想法」位置，也無法讀出別人心裡未說的話，只能據已知溝通討論可能性。逆位的歷史措辭很重，現代解讀更應先核對承諾、期限和實際能力。一次延期可能是資源不足，持續編造與隱瞞需要另外的行為證據。\n\n## 把社區活動的熱情寫成可回應的邀請\n\n**原創虛構案例。** 小陶想在社區辦一場週末舊物交換，已確認公共活動室可用兩小時。她準備寫「大家一起讓社區更美好」，卻尚未說明帶什麼、何時到、未換出的物品怎樣處理。她也擔心邀請太具體顯得不熱情。\n\n問題是「怎樣邀請鄰居參與舊物交換，既友好又清楚」，表達建議位抽到聖杯騎士正位。\n\n騎士把杯舉到前方，可以理解為把心意變成別人接得到的東西。溫暖的願景能說明動機，平穩的馬步則提醒邀請要有實際節奏。場地時間已確認，是正位建議可落地的基礎；其餘規則寫清楚，反而能減少鄰居參與時的顧慮。\n\n若場地仍未獲准，就不能把構想寫成確定活動。若大家真正需要的是捐贈而非交換，也應聽回饋調整形式，而不是為了維護最初靈感繼續推進。主動有價值，仍需讓現實回應改變計畫。\n\n邀請中寫明兩小時時段、物品範圍、每人自行帶回剩餘物品，並說明可只來看看。先發給幾位願意回饋的鄰居，問哪裡不清楚，再決定正式組織。好意通過可理解的安排抵達，別人也保有不參加的空間。\n\n## 動人的創意不能自動變成交付\n\n**原創虛構案例。** 設計師阿澤與朋友商量做一支樂隊短片，對方不斷增加夜景、動畫和多地拍攝，說「效果一定很驚艷」。當前只有一個週末可拍，演員時間未定，誰負責剪輯也沒有確認。阿澤已經答應協助，但未同意包辦整片。\n\n問題是「面對不斷增加的創意承諾，我該先問清什麼」，執行風險位抽到聖杯騎士逆位。\n\n逆位可以檢視杯裡的美好提議能否被帶到終點。事實支持的是範圍與資源不匹配，並不足以證明朋友故意騙他。想像的翼飾很醒目，馬卻仍須一步步走，這個對照有助於把討論從氣氛拉回執行條件。\n\n如果對方能補齊時間、人員與已有素材，計畫可能比目前看到的更可行。若對方始終拒絕說明，卻反覆借交情要求無上限投入，阿澤就需要收緊承諾範圍，不必再靠牌判斷其動機。\n\n先列一個週末能完成的最小版本，確認場景數量、剪輯責任和修改次數。對尚無條件實現的部分標為備用，不在承諾裡。只有這些得到雙方確認後再推進；表達欣賞並不等於接受所有追加工作。\n\n## 把理解帶回今天\n\n選一個準備提出的計畫，寫清想做什麼、對方需要投入什麼、你能承擔什麼，以及哪些仍未確定。再讀一遍，刪掉沒有根據的保證。聖杯侍從允許想法萌芽，聖杯騎士則要求把想法帶到可以實際回應的距離。\n\n## 和相近的牌放在一起看\n\n聖杯侍從可以有一個未經整理的念頭，騎士則已經走向對外提議；聖杯國王進一步涉及持續的責任和判斷。把邀請說得動人，是一種能力，但它不能自動替代後續履約。若現實任務只是表達欣賞，不需要替自己加上長期承諾；若已經答應具體交付，就應從氣氛轉向時間、條件和完成情況。\n\n## 本篇資料與閱讀範圍\n\n- [Pamela Colman Smith：Knight of Cups，Commons Pam-A 掃描](https://commons.wikimedia.org/wiki/File:Cups12.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)\n\n圖像按本篇 RWS 實物核對；歷史文字依據頁面標注 1911 的英文轉錄。正文中的日常應用和虛構案例為 DestinyPixel 原創，不代表 Waite 逐句釋義。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "knight",
-    "nameZh": "圣杯骑士",
-    "nameEn": "Knight of Cups",
-    "number": "N",
-    "title": "圣杯骑士牌义 把动人的想法变成可靠的邀请",
-    "oneLineSummary": "带着感受主动靠近，也让行动跟得上说出口的话。",
-    "keywords": [
-      "邀请",
-      "理想",
-      "主动表达"
-    ],
-    "uprightQuickTake": "可以提出真诚的邀请，让美好的想法有机会落地。",
-    "reversedQuickTake": "提议很动人却缺少落实，先核对承诺与实际行动。",
-    "hook": "有些话能让人立刻心动，真正建立信任的却是接下来怎样做。圣杯骑士从想象中出发，走到需要回应的路上。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "骑士递出的是杯子",
-        "paragraphs": [
-          "一位穿盔甲的人骑着浅色马，面向画面右方，一只手将金杯举在胸前。头盔和靴跟有翼形装饰，罩衣上可见红色鱼形图案与蓝色波纹。马低着头，一条前腿抬起，身体没有猛烈冲刺的姿态。",
-          "下方河流弯过浅黄色土地，远处有山丘、几棵树与橙褐色岩壁。人物持杯而非挥剑，强调了接近与呈递的动作；但图像没有告诉我们目的地是谁，也没有证明杯中承诺已经兑现。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups12.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 强调来访与提议",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录形容他优雅、安静骑行而非好战，也联系到想象与梦想。正位列有到来、接近、提议和邀请；逆位则聚集了诡计、欺诈与两面性等强烈旧词。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcukn.htm)",
-          "本站把这些历史词条转换为检查表达与履约的反思方向，不用它们给现实中的人定性。人物可以代表一种行事方式，不限制性别、年龄，也不自动指向恋爱对象。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 让邀请清楚而留有余地",
-        "paragraphs": [
-          "正位适合主动提出想做的事：邀请见面、展示创意、表达欣赏或提出一个合作方案。好的邀请能说清内容、时间和期待，也能容得下对方拒绝。",
-          "感受给行动提供方向，具体安排则让别人知道如何参与。你可以把提议说得动人，同时说清目前尚未确定的部分。诚实的未定，比为了打动人而许下过量承诺更能保护信任。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 检查行动是否追上了话语",
-        "paragraphs": [
-          "逆位可提醒你注意只提愿景、不落实细节的情况：每次说很快，却没有明确时间；气氛一热就答应，事后又无法承担。先询问进度与条件，不把失约自动解释成精心欺骗。",
-          "也可能是自己沉迷追求的过程，接近之后反而不愿处理日常。把想被喜欢与愿意承担关系责任分开，会更容易发现该调整什么。若有真实的欺诈疑虑，查证身份和记录比反复抽牌更重要。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "三种邀请都需要后续",
-        "paragraphs": [
-          "约人见面，可以直接给出两个方便的时段，并接受对方没有兴趣。浪漫表达如果无视明确拒绝，就失去了尊重。",
-          "向客户展示创意，除了情绪氛围，也说明可交付内容、排期和限制。答应参加朋友的活动后，及时确认交通与到场时间；善意只有进入日程，才不容易停在口头。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 把愿景写成可回应的邀请",
-        "paragraphs": [
-          "选一个一直想提出的计划，用四句写清：想一起做什么、为什么想到对方、需要多少投入、对方怎样答复。删去自己无法保证的结果，补上一句可以拒绝或调整的空间，再检查你是否真的有能力执行。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "圣杯骑士不是白马王子的身份证，逆位也不是花心或出轨的证据。吸引力与可靠性应分别观察：前者可以在片刻出现，后者需要时间、行动与尊重边界来体现。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "page-of-cups",
-        "nameZh": "圣杯侍从",
-        "reason": "比较初次表达与主动推进"
-      },
-      {
-        "cardId": "king-of-cups",
-        "nameZh": "圣杯国王",
-        "reason": "看表达如何发展成持续负责"
-      }
-    ],
-    "cardId": "knight-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 12,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-knight-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "knight-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Knight of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "knight-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Knight of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcukn.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups12.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups12.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups12.jpg&oldid=1199314278",
-      "pageRevision": "1199314278",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:27:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:27, 5 April 2024 1,109 × 1,920 (887 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg",
-      "localFile": "images/Cups12.jpg",
-      "dimensions": [
-        1109,
-        1920
-      ],
-      "commonsOriginalDimensions": [
-        1109,
-        1920
-      ],
-      "bytes": 908276,
-      "sha256": "99a7b7c91da744cb03a3741c4bac674ef91adbb5b22aca53404f3467d1ea8e65",
-      "sha1": "bfcbc0b7014f2041b38eb76cb7b7e253d21ad3aa",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1140,
-    "bodyChineseCharacterCount": 868
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 908,
-    "words": 2,
-    "articleUtf8Bytes": 4299
-  },
+  "sourceBatch": "depth77-cups-05",
   "sourceLocale": "zh-CN",
   "name": "聖杯騎士",
   "translationProvenance": {
@@ -354,47 +214,31 @@
   },
   "nameLocalized": "聖杯騎士",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/cards/knight-of-cups.zh-CN.json",
-      "sourceFileSha256": "4466e6f21fa46009f561f5096dcd351bfdd4d724ca087cf3fdb80949af0b985b",
-      "sourceArticleSha256": "09ca2c5ea4d3018e05cb974b6d3d8aa91bc7438b0713a31d27fc0493e61d3a3b",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "translatedOn": "2026-10-07",
-      "chineseSourceModified": false,
-      "imageProvenancePreserved": true,
-      "humanNativeReviewClaimed": false
-    }
-  },
-  "countsOriginal": {
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 927,
-    "sections": 9,
-    "sectionParagraphCounts": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      1,
-      1,
-      1,
-      2
-    ],
-    "articleCharacters": 1788
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "09ca2c5ea4d3018e05cb974b6d3d8aa91bc7438b0713a31d27fc0493e61d3a3b",
-    "articleSha256": "2d4a942ddededafb2102909f8adcd3c6c7b053dc0af18ceb0a6d9015ebaa13ef",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "681f23a18c90b8e0b5252c7dd037b0401d948a60bbb26c7324ae22cf1c8cc705",
+    "sourceArticleSha256": "681f23a18c90b8e0b5252c7dd037b0401d948a60bbb26c7324ae22cf1c8cc705",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "0b8386f52d560fefdb80cc27d5456801cd733c91a20b79c2128c6d8a213540cf",
+    "sourcePackageSha256": "957e13d34006676a1ba3cdbb1fbd59ec6024e030b1df8a6eba8ac66032341990",
+    "previousRecord": "content/tarot/revisions/2026-10-08/knight-of-cups.zh-TW.json",
+    "editionBodySha256": "5b9052925d060bbaead8c72bd08c8c72c42bdc2ff5d031d8d139d09e677ac4f1",
+    "translationSourceBodySha256": "681f23a18c90b8e0b5252c7dd037b0401d948a60bbb26c7324ae22cf1c8cc705",
+    "translationPackageSha256": "931fc8e1bfe2b80eab3a7271fcedf2a02ec62d2c759dc8841e23dba65d20b9ca",
+    "translationLibraryFileId": "libfile_0a5bdcb0f2b081918070e4a3ca0e575a",
+    "translationRecordSha256": "d8153022292f870b08214dc247d35cb53d69ce669eb5dea4b36e1a4193473395",
+    "translationPackage": "destinypixel-reviewed-cups.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

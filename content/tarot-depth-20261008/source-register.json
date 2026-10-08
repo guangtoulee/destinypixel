@@ -1,0 +1,935 @@
+{
+  "originalChineseCards": 77,
+  "sourceBatches": 31,
+  "excludedCards": [
+    "sun"
+  ],
+  "originalCaseSections": 154,
+  "allCaseSectionTextsDistinct": true,
+  "cards": {
+    "fool": {
+      "batchId": "depth77-major-01",
+      "bodySha256": "469f27c7bd5ca72081ff9c0ba12d329df12b32c24c16029a058dff00c3dccb38",
+      "sourcePackageSha256": "601d8ec3823cea603d2f7b1d6a463b442413a9fff769bce80b1b612e0e546221",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-01/source.json",
+      "characters": 2343,
+      "caseSectionSha256": [
+        "03e4148dcfb82b78fba8c2318415d12f59c3cc1275dffa2eb9fad86ef04e3109",
+        "4d5864dc9c0b8cf372c5ad1012a59c56007dcbe5049c485d50de421ab9f273c3"
+      ],
+      "quickTakeSeparate": true
+    },
+    "magician": {
+      "batchId": "depth77-major-01",
+      "bodySha256": "ba0f98b5e5ef94c76c1faffa84815a2adc7d0eae92c272188b0481dce98627a7",
+      "sourcePackageSha256": "601d8ec3823cea603d2f7b1d6a463b442413a9fff769bce80b1b612e0e546221",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-01/source.json",
+      "characters": 2362,
+      "caseSectionSha256": [
+        "334c52b6149fc32419609cb31ac336a97bda19c1a4f4fb696e01230c162d9d90",
+        "3d53a2f15fea3c4ac1b4d84f81582731296bc24871363240a1d32f164ee68a3a"
+      ],
+      "quickTakeSeparate": true
+    },
+    "high-priestess": {
+      "batchId": "depth77-major-01",
+      "bodySha256": "86d573352e8d6967388b6dee09ac0785e8df7deed69fd8b450ce43283b49fdd2",
+      "sourcePackageSha256": "601d8ec3823cea603d2f7b1d6a463b442413a9fff769bce80b1b612e0e546221",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-01/source.json",
+      "characters": 2326,
+      "caseSectionSha256": [
+        "878e3e70a6cf3df9c49e66452082ecba27d593aefcaba540d6b6bd6c0bae30fd",
+        "b8e5153cfd8a3d30e7c42775d531faf463e9a753825cac60b7aec2be404d5b1f"
+      ],
+      "quickTakeSeparate": true
+    },
+    "empress": {
+      "batchId": "depth77-major-02",
+      "bodySha256": "e18221c03031daf881b66d3cb40e8521bf76fda11d2d3825657304a8e5cce8f6",
+      "sourcePackageSha256": "e3b53b3e74c563296ea4c3911f154405411ff8103200b110d24e67dbbbe96efe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-02/source.json",
+      "characters": 2325,
+      "caseSectionSha256": [
+        "2c92dee7ba3fcb29cc58fe93c61999e78fcddaff3227b47e0286890d5255e7c5",
+        "27232c361d098cb575e2e2af75fc3e2520af3903beedb51d4ad0aaa1cece91b0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "emperor": {
+      "batchId": "depth77-major-02",
+      "bodySha256": "c036eb8c8aee1a97649a7b799a3a765a5308adf8eef744c768560130f6a28f4d",
+      "sourcePackageSha256": "e3b53b3e74c563296ea4c3911f154405411ff8103200b110d24e67dbbbe96efe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-02/source.json",
+      "characters": 2293,
+      "caseSectionSha256": [
+        "453ce9ec0a9e5fa4825c8fce6d82062e0a7f9eee8ae92c8a93f1e918674a2cc9",
+        "951f1fd3ecd6a888e3adb761246d62a2cd9c3e4d65dca635e660ba0604bac711"
+      ],
+      "quickTakeSeparate": true
+    },
+    "hierophant": {
+      "batchId": "depth77-major-02",
+      "bodySha256": "ba390cc4d677d81493e4015a7a92eb001168d10be16fb4d99821de358ffa63c5",
+      "sourcePackageSha256": "e3b53b3e74c563296ea4c3911f154405411ff8103200b110d24e67dbbbe96efe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-02/source.json",
+      "characters": 2308,
+      "caseSectionSha256": [
+        "4474878423702d9cd27eae4cf4d02c78eee302ff8ab077be4920716b4853175f",
+        "b7b2773b7a1e3e4a71531b54f8708b4ed50e55eab429d81c4a021c6ba36d0cf8"
+      ],
+      "quickTakeSeparate": true
+    },
+    "lovers": {
+      "batchId": "depth77-major-03",
+      "bodySha256": "38362c2db0d407b05744267ca66926fdde6a7956b89c7d1d7eac6be38e38e769",
+      "sourcePackageSha256": "4e73f2b6b823f3ec9aa4df6ffdef6505504ea325cf8db1cc9a06d98a1cef5859",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-03/source.json",
+      "characters": 2335,
+      "caseSectionSha256": [
+        "d5d8707458f305ef6cc7423eecc7d6a7a8e61ba077759f91c6460b9762f803cf",
+        "94d9c61c255da54608bc7b0ab09c5c2d170bb20f8f96ad9dd9caa258d3e909d4"
+      ],
+      "quickTakeSeparate": true
+    },
+    "chariot": {
+      "batchId": "depth77-major-03",
+      "bodySha256": "945c7d78e49ae7891f4ddcc18e905b704951a2fa289b4691af5dad3adda45759",
+      "sourcePackageSha256": "4e73f2b6b823f3ec9aa4df6ffdef6505504ea325cf8db1cc9a06d98a1cef5859",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-03/source.json",
+      "characters": 2352,
+      "caseSectionSha256": [
+        "c6d5d84274e30bb775acc873b13a7dc8df3f28655bf21ac10263dd3543697057",
+        "e07c516f9825de562cad2211e6846c2d5511718eb52dfd1fd63c48cb2de0a3e0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "strength": {
+      "batchId": "depth77-major-03",
+      "bodySha256": "b9d22e1812586006b6e2c16c06b07ee8ef4c08e10e27572ed3956df87ac60dbe",
+      "sourcePackageSha256": "4e73f2b6b823f3ec9aa4df6ffdef6505504ea325cf8db1cc9a06d98a1cef5859",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-03/source.json",
+      "characters": 2402,
+      "caseSectionSha256": [
+        "ef9f1c557245691a195b195ae18674cc26b903705dfaba9e2b72cf8d9b218ea4",
+        "146db11fcfd279344290a632ce06fc618fb10750372b2c6a6666cbc1afe2fae3"
+      ],
+      "quickTakeSeparate": true
+    },
+    "hermit": {
+      "batchId": "depth77-major-04",
+      "bodySha256": "5fdcc3dcaf5a9d2f0f24bb27a5559dde013d8dc9cb970cc153e813959f6b0b2c",
+      "sourcePackageSha256": "d32f9df8e603d4b66eecd6ae60cc5c801f362e1c51090215f4e374e6d7d0f6d1",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-04/source.json",
+      "characters": 2388,
+      "caseSectionSha256": [
+        "0690a97f4ca5979a5f51b070307807efdbaf1dedccf82669ab9acb7cf4efc942",
+        "5b138364b9201b87250150040150ba002b1a3ef30519a67d4ee57c75e9f0786e"
+      ],
+      "quickTakeSeparate": true
+    },
+    "wheel": {
+      "batchId": "depth77-major-04",
+      "bodySha256": "90120dfe44813ab25d88f7f49ca5548c23b9d511a166fcd9bbd2760775d96b94",
+      "sourcePackageSha256": "d32f9df8e603d4b66eecd6ae60cc5c801f362e1c51090215f4e374e6d7d0f6d1",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-04/source.json",
+      "characters": 2449,
+      "caseSectionSha256": [
+        "d1524d6a97c188c9f52bb8bc7d1884d37ff56cb2dd60e1490756a2ec991d02fe",
+        "103fa542c5f5b16155d634aa7edeca935b800017d948812167ed0fc1f92ece95"
+      ],
+      "quickTakeSeparate": true
+    },
+    "justice": {
+      "batchId": "depth77-major-04",
+      "bodySha256": "0dd49d85d000bfc0d468f4e79a2e1629b35fbf456a030a6c6bb836dcef7b0ca2",
+      "sourcePackageSha256": "d32f9df8e603d4b66eecd6ae60cc5c801f362e1c51090215f4e374e6d7d0f6d1",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-04/source.json",
+      "characters": 2420,
+      "caseSectionSha256": [
+        "03b87e4ce261ddff696e22cd4f62f4cec5508546f71c0d764ac0398fbc590203",
+        "db1945177082a47f01080b5665a7f0d050f54e0682c916bd613cd949ebe640cf"
+      ],
+      "quickTakeSeparate": true
+    },
+    "hanged-man": {
+      "batchId": "depth77-major-05",
+      "bodySha256": "0115e5c9166d55a7a2e95a542e0ce9dd3074de2107dbb10af7f03cea008a0dd1",
+      "sourcePackageSha256": "f10df392fdc3bd881d36acb84843a59f7b205f46bfd5ae8b0d16dcf58434ffbf",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-05/source.json",
+      "characters": 2381,
+      "caseSectionSha256": [
+        "f084049b5a7f127803e92fc7281184e0539624ef8d80a09dfab2578a67edafba",
+        "cd1d435110f0d5f1e6e85312034435251f1b048298949013f7712dacfc3be378"
+      ],
+      "quickTakeSeparate": true
+    },
+    "death": {
+      "batchId": "depth77-major-05",
+      "bodySha256": "ba527c24cfdc4c157a6e230457cc100f6e986ac583bf96e37c9e3d507e022998",
+      "sourcePackageSha256": "f10df392fdc3bd881d36acb84843a59f7b205f46bfd5ae8b0d16dcf58434ffbf",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-05/source.json",
+      "characters": 2518,
+      "caseSectionSha256": [
+        "35ea3bef48e480f4083ee0a361e7c44eba4ffecaf97a5c4ab9d33693dd3c25e1",
+        "2c09c004d61fcd04e0b30d55c99b0f9562dbdfaffecc56b92cd41b17357ca867"
+      ],
+      "quickTakeSeparate": true
+    },
+    "temperance": {
+      "batchId": "depth77-major-05",
+      "bodySha256": "dc379f78dbfdd94afa29917c2cf6b6260723f363e1b20f726d24337af4ccb711",
+      "sourcePackageSha256": "f10df392fdc3bd881d36acb84843a59f7b205f46bfd5ae8b0d16dcf58434ffbf",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-05/source.json",
+      "characters": 2466,
+      "caseSectionSha256": [
+        "b8c31f5c01b4d12f6eca0ad616e9f16bb30734b94b1d0aaa4fc6b6d08a0aeb16",
+        "36a49fab287e9dd412b86d91584f5b01792e63ee6b545029a7a8069cb625e22e"
+      ],
+      "quickTakeSeparate": true
+    },
+    "devil": {
+      "batchId": "depth77-major-06",
+      "bodySha256": "e1eb4a374798b63a512d74f8a1b91e6f478dce63f2e1b9643e8c029a08ec8297",
+      "sourcePackageSha256": "9b3f48ce81462bc967b2887f3f3dfe85be284383b3e17aeb5ad991e7ddc0dcea",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-06/source.json",
+      "characters": 2381,
+      "caseSectionSha256": [
+        "0ce2f95cc916d42406a39d10fca5c78c362baa2c4517a606a85ce99a79d86337",
+        "efb99574320a6f1b27a06a2b2ef912f5525b2e1164524096a7641858ed15db15"
+      ],
+      "quickTakeSeparate": true
+    },
+    "tower": {
+      "batchId": "depth77-major-06",
+      "bodySha256": "21a6a39d9b6002139b81538807dbe80027ac93fe2db5202f10f2167ec37f4e14",
+      "sourcePackageSha256": "9b3f48ce81462bc967b2887f3f3dfe85be284383b3e17aeb5ad991e7ddc0dcea",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-06/source.json",
+      "characters": 2293,
+      "caseSectionSha256": [
+        "a709b4ea2fc48ec5211260c1502e311c759562582fb09a46eaa514178dd03b7a",
+        "9508b7d993ba0c08bd9fca8c039d54ac1657c66239baf57c46f9ce3c3f94fce0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "star": {
+      "batchId": "depth77-major-06",
+      "bodySha256": "362c9e80344b474019103a56541781c104649065b15f59a18380269c5d1b0cdf",
+      "sourcePackageSha256": "9b3f48ce81462bc967b2887f3f3dfe85be284383b3e17aeb5ad991e7ddc0dcea",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-06/source.json",
+      "characters": 2323,
+      "caseSectionSha256": [
+        "e13c06e196cfea446a730a044b666640b5e3b9cfda6591714ab13b9206b02cbb",
+        "afde894180f6d757ae06af3303309affd940e87baed790184ff1395638622ae4"
+      ],
+      "quickTakeSeparate": true
+    },
+    "moon": {
+      "batchId": "depth77-major-07",
+      "bodySha256": "699fb0a1f9214a35856a0324a305f8f6b1dc2739b1973f33106433a18aebe4a0",
+      "sourcePackageSha256": "7367464151ad9d907842e3061d0b1a9dc7514f734630b1c17014efbd8457d56d",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-07/source.json",
+      "characters": 2307,
+      "caseSectionSha256": [
+        "22346a03bebe7d5b35411d85411a2d7658e4e10fbeb3dde8d8cd2880b9f8c618",
+        "098f045b8b10c43b9c19be32b324705b2522e14a6437c54812a5dcb0c5e78ed0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "judgement": {
+      "batchId": "depth77-major-07",
+      "bodySha256": "fef6a6d82affe7c07a505912d13928836a8df73f65c71502b0ff75b38e6852a9",
+      "sourcePackageSha256": "7367464151ad9d907842e3061d0b1a9dc7514f734630b1c17014efbd8457d56d",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-07/source.json",
+      "characters": 2296,
+      "caseSectionSha256": [
+        "4a1cbc211b7a76e4734249b77b0dc473ba52d490de9ebe20a5f212089231e4a5",
+        "745339ce17c24fb86bb92068cfb3d096bf9e7301351a97f79c87aeb1d9d52f2d"
+      ],
+      "quickTakeSeparate": true
+    },
+    "world": {
+      "batchId": "depth77-major-07",
+      "bodySha256": "91e2df104110e128b5357dbc12f8bb06c8fcead8b6833efcad8abdf33f8ce5c0",
+      "sourcePackageSha256": "7367464151ad9d907842e3061d0b1a9dc7514f734630b1c17014efbd8457d56d",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-major-07/source.json",
+      "characters": 2361,
+      "caseSectionSha256": [
+        "e9b862087c22b2f7df7ee3263a767c8ade615935ae73379c15f9eb3bd19bb9e0",
+        "b497696aa83843341b6a8ca3367caa4eaf44fce09b25c0bc0b62661117d33e34"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ace-of-wands": {
+      "batchId": "depth77-wands-01-03",
+      "bodySha256": "1a81f984bc007e4fab75c1cde0e5eb98b1e5feea06960af241a6911c69da98e9",
+      "sourcePackageSha256": "c6c5558bf1af32b7994a98db6ce117c27ad8f5722041dcee9371bb89ddb0d498",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-01-03/source.json",
+      "characters": 2712,
+      "caseSectionSha256": [
+        "4d4e69d9486a537b27f2be6736accd23c9f0cc20aeb068d809359e589e3dbf17",
+        "02d9b02728f0005d30ff97b8c51d7386662ff961ee5bbffc2657747e7c23b8de"
+      ],
+      "quickTakeSeparate": true
+    },
+    "two-of-wands": {
+      "batchId": "depth77-wands-01-03",
+      "bodySha256": "40decb83091451f24453d78727d799c9a0b395023e16df3c9bb708b1e2d0b605",
+      "sourcePackageSha256": "c6c5558bf1af32b7994a98db6ce117c27ad8f5722041dcee9371bb89ddb0d498",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-01-03/source.json",
+      "characters": 2664,
+      "caseSectionSha256": [
+        "e5cc662c127710339233f514b92cd637e147da26fa37bfd5a98c4820718ca4a1",
+        "d93f179280f38ec85ac203bc428181672089dda54f5d531d3b28e2304c194c68"
+      ],
+      "quickTakeSeparate": true
+    },
+    "three-of-wands": {
+      "batchId": "depth77-wands-01-03",
+      "bodySha256": "bcaef562e75058e676e572da6ffec9149c859fe51294b2dc984114029d403182",
+      "sourcePackageSha256": "c6c5558bf1af32b7994a98db6ce117c27ad8f5722041dcee9371bb89ddb0d498",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-01-03/source.json",
+      "characters": 2647,
+      "caseSectionSha256": [
+        "89aa536181dfe3c84a03c8d8c3f4f9ca31a779bd1e4847b349e78cfd9b772003",
+        "89a0d292547d4262b28b1e21413401f03727b6d017d5589e8bd93169c6f6a93a"
+      ],
+      "quickTakeSeparate": true
+    },
+    "four-of-wands": {
+      "batchId": "depth77-wands-04-05",
+      "bodySha256": "c5a2c3d6afa714595591668d80980b07e4bad9103c4f05660627e2a981bb5e14",
+      "sourcePackageSha256": "f32169d388ae2c9234d3a13d67cabbb727c470c33738489630fa4324caa2f096",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-04-05/source.json",
+      "characters": 2608,
+      "caseSectionSha256": [
+        "40ffc2b64df1e78498f0a5ab74ed4c3886ba59187285814a528b1279e4f350c0",
+        "60a1a636f598dca47c13ec0509097255d634a8e12e31988fcf0f9597ba492f74"
+      ],
+      "quickTakeSeparate": true
+    },
+    "five-of-wands": {
+      "batchId": "depth77-wands-04-05",
+      "bodySha256": "6586fbc2639ee75bc0d7b19d3db1889a048ad9252701acbf0a84a21301feb850",
+      "sourcePackageSha256": "f32169d388ae2c9234d3a13d67cabbb727c470c33738489630fa4324caa2f096",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-04-05/source.json",
+      "characters": 2668,
+      "caseSectionSha256": [
+        "d9d1cf9c5574876fe502d7d5dddb32c18cb9f3ce2e47dc4c150b7279d2e33833",
+        "1224c03b7aefc9e8572c5362a48b8cfe1325fa709263e34321886bef3d11cc9d"
+      ],
+      "quickTakeSeparate": true
+    },
+    "six-of-wands": {
+      "batchId": "depth77-wands-03",
+      "bodySha256": "fd5ac7d031d7e66d08e40470dc5045d70ce8130ae15979f439c9bd1472009c2a",
+      "sourcePackageSha256": "51d9716685b4ac2088956400a3a424dc1123299608f6eae855df8bfc8252a6c4",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-03/source.json",
+      "characters": 2629,
+      "caseSectionSha256": [
+        "4b23bafe6ce1991dc6ff15cac39d76bcbf3e899ea7af5e6b7404ec05c0a75677",
+        "b3b59514085734fd59ea8f0f08fafcef4efb1957f66ab4e8e3e1e2db245b56ed"
+      ],
+      "quickTakeSeparate": true
+    },
+    "seven-of-wands": {
+      "batchId": "depth77-wands-03",
+      "bodySha256": "43a010a0b0cbcb02357ed247347805ff3e5add6d71661d74117d09d940166222",
+      "sourcePackageSha256": "51d9716685b4ac2088956400a3a424dc1123299608f6eae855df8bfc8252a6c4",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-03/source.json",
+      "characters": 2638,
+      "caseSectionSha256": [
+        "949e1149f5962f719799de5c94db945ed222cf8f819a44eeec84b5ea5d9e0e46",
+        "43d7d096630abdb63b3c08e3e4fd1667f85fd3eb48169ac01abc0c57cbfb60cf"
+      ],
+      "quickTakeSeparate": true
+    },
+    "eight-of-wands": {
+      "batchId": "depth77-wands-03",
+      "bodySha256": "f322f390b4c09a3ef2a1eb6a93d12f66f0bb31b319827bb73b0175fdab8e2534",
+      "sourcePackageSha256": "51d9716685b4ac2088956400a3a424dc1123299608f6eae855df8bfc8252a6c4",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-03/source.json",
+      "characters": 2605,
+      "caseSectionSha256": [
+        "81c14f763ad05a194c0cf883d604d4358f816f57549720f2d06b434896f70c08",
+        "49faba88f006c51eeef12bb181aef0a6ecb607bd8acf1c02807d555a038c48cc"
+      ],
+      "quickTakeSeparate": true
+    },
+    "nine-of-wands": {
+      "batchId": "depth77-wands-04",
+      "bodySha256": "da131a23cb7ccaea4eaafd73a6d4f7c5f50d5e7522f9d89173bc9fd136f231ad",
+      "sourcePackageSha256": "1877b26a142979adfb60c926f9ffcf61ef8bff661b98f11d5fd0903a8f6c2f26",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-04/source.json",
+      "characters": 2640,
+      "caseSectionSha256": [
+        "19dc1589c7ed17458c3b08fe3ee145bab40899154b9a33f887afa94c5e1d6067",
+        "fdd08d57bd621c323e876795bbdf1d543a1587c7ee8917c17e0a52dcef32ff71"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ten-of-wands": {
+      "batchId": "depth77-wands-04",
+      "bodySha256": "4bfffcbcb4c9053541c9cc6f380b807d7a96d624361d4b9211266935240f4e33",
+      "sourcePackageSha256": "1877b26a142979adfb60c926f9ffcf61ef8bff661b98f11d5fd0903a8f6c2f26",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-04/source.json",
+      "characters": 2721,
+      "caseSectionSha256": [
+        "7fcb8a4001dfef61e0429edde326f2177cc4e88bf18b2022c04d9386251a7a92",
+        "b8585304e7c0192329bd14bb50c9bb5dded76faa8d54be96939a1b06ee1d03ea"
+      ],
+      "quickTakeSeparate": true
+    },
+    "page-of-wands": {
+      "batchId": "depth77-wands-05",
+      "bodySha256": "3bcdd9fcae4d9d7d39cac0f65331a3564573a3490d623403f45aad0297c6a207",
+      "sourcePackageSha256": "a7a8e67d325748eaad6708693141dd043ef62701eee1512024084b57ed773ec6",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-05/source.json",
+      "characters": 2784,
+      "caseSectionSha256": [
+        "75cdebae8349087338c2b5ea8c41f2544db58e4233848f790fbd562ab601da5c",
+        "9761227df75504fbc174bca1fcb2090388507a12602f888420a05e488b6135da"
+      ],
+      "quickTakeSeparate": true
+    },
+    "knight-of-wands": {
+      "batchId": "depth77-wands-05",
+      "bodySha256": "4fe1ae39a81c3737aa89317513c2e0dd4ff87076bd886cbc390cc0d3a97ce0b8",
+      "sourcePackageSha256": "a7a8e67d325748eaad6708693141dd043ef62701eee1512024084b57ed773ec6",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-05/source.json",
+      "characters": 2657,
+      "caseSectionSha256": [
+        "a9f3e1f74cea16b7040a0a30050f7e4a5d9f19b917130316d46322a25aef9621",
+        "801fa3c06042a702787695b8239492e09a7481be248ea17720665c0bddd33ca0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "queen-of-wands": {
+      "batchId": "depth77-wands-06",
+      "bodySha256": "8c11119acd6c8d9ec3c6c14b38e11cebff1114e4c7bc790b2fe8ddb161616055",
+      "sourcePackageSha256": "27e60d4e89ca8be39cd9dc68f1942f2188828f1931d80aba3c07833c23108624",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-06/source.json",
+      "characters": 2823,
+      "caseSectionSha256": [
+        "d2f2501098d9edeb8609056906f941719036f785e34d5757c12d5bbf1e51ac02",
+        "270f3bcf56b3009dbc731bb35648bbe72ebe48820b88efac2582a784e6a1f20f"
+      ],
+      "quickTakeSeparate": true
+    },
+    "king-of-wands": {
+      "batchId": "depth77-wands-06",
+      "bodySha256": "dbf4d86d95db17e839fb9f3de9479bf915a627f3bc19b17cf24af9408816b2ea",
+      "sourcePackageSha256": "27e60d4e89ca8be39cd9dc68f1942f2188828f1931d80aba3c07833c23108624",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-wands-06/source.json",
+      "characters": 2753,
+      "caseSectionSha256": [
+        "66f95e61a1c337adc2abe0ec1d4c1836d367ce3e05b22788762560d577489c6b",
+        "7dfbd8e4f61ad236c950643e5841af9d5f908868cd0dbff13257eeb9a2af48ee"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ace-of-cups": {
+      "batchId": "depth77-cups-01",
+      "bodySha256": "247b9c6ffa553c41008da19835025d3b75db14820ccec4f371d4113071fb7f2c",
+      "sourcePackageSha256": "5b0030800bfc7478c3b6b2b877081295a6f52369c4d435d48c3e33bb02a4cbb6",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-01/source.json",
+      "characters": 2629,
+      "caseSectionSha256": [
+        "87f6ed48d00289ba7d28592a6fb2800f5ef46ce05a1879a0b75a66159c0ff8c5",
+        "79fc6deacaa24e57fbcaf6a0236352ec0a4e30a62f9f5c3127b9b7cbb7478f97"
+      ],
+      "quickTakeSeparate": true
+    },
+    "two-of-cups": {
+      "batchId": "depth77-cups-01",
+      "bodySha256": "766d1a3a5a2b78d6bfe00e516a80a0ec703230c36e95c3dd9b04b0913ce6b8ec",
+      "sourcePackageSha256": "5b0030800bfc7478c3b6b2b877081295a6f52369c4d435d48c3e33bb02a4cbb6",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-01/source.json",
+      "characters": 2677,
+      "caseSectionSha256": [
+        "c01e53f80977054aa47e4a2e5d824241ce4a28ee2a8ecde958849a9bc94eb601",
+        "8e171a802a1cebc0f0b0f4eac685af09ce6661062ba00cc553503d46301a732b"
+      ],
+      "quickTakeSeparate": true
+    },
+    "three-of-cups": {
+      "batchId": "depth77-cups-01",
+      "bodySha256": "099fbf68c0d2b2a8100b1690238a2865d7c2183a30f2359ec6d9a18dee29ae7b",
+      "sourcePackageSha256": "5b0030800bfc7478c3b6b2b877081295a6f52369c4d435d48c3e33bb02a4cbb6",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-01/source.json",
+      "characters": 2473,
+      "caseSectionSha256": [
+        "eb436af2c2ead76850d56133a0c651735a134a7f03431bd4fde3b96ad4e7b07f",
+        "549c70d17254ec166bc1488c8bb3745935b00ce6aca57fd6e6b95ce829c2c1fe"
+      ],
+      "quickTakeSeparate": true
+    },
+    "four-of-cups": {
+      "batchId": "depth77-cups-02",
+      "bodySha256": "386cbfd7a10dbbcaeea8e5d3a5d198367e79578ec6fc6e0907436b7c7258f425",
+      "sourcePackageSha256": "c7d06a3414df67fdec95243a10f377538cc51f6d51ce74a3f5ffe998af3a63a2",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-02/source.json",
+      "characters": 2443,
+      "caseSectionSha256": [
+        "546d635d0ab744ab321638e97e22d538e381b2b8bbdfdfec97d86bbb748ec681",
+        "40d5c192647dda9c196186e99f9bed6fb905aea3dfb92bc03b0c7d40a9aa2af8"
+      ],
+      "quickTakeSeparate": true
+    },
+    "five-of-cups": {
+      "batchId": "depth77-cups-02",
+      "bodySha256": "00cffd63b31053b1506b11422cb49ddf7569933f02b709abe8a30e9c60048419",
+      "sourcePackageSha256": "c7d06a3414df67fdec95243a10f377538cc51f6d51ce74a3f5ffe998af3a63a2",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-02/source.json",
+      "characters": 2516,
+      "caseSectionSha256": [
+        "c59d6f458f9a8acdaf92c32b2659dfc20919581c744269e3bad9e2d644197313",
+        "6715d5ef2476467b27d6e52b2c862251bb599c84ebe0043e242e0bcf0607d535"
+      ],
+      "quickTakeSeparate": true
+    },
+    "six-of-cups": {
+      "batchId": "depth77-cups-03",
+      "bodySha256": "dcb228c40e4efa8d7627acc29fb424cfd38497258ef5555c6be28a6b436a6cbd",
+      "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-03/source.json",
+      "characters": 2691,
+      "caseSectionSha256": [
+        "8d2adb665273aaa0ffea429dc6c7b9ea8af9d17672fba58c2cc2ce14ca005040",
+        "be882046c17993fd2c38812199b4d27e5277928312270df961c6bd6435c5a7bb"
+      ],
+      "quickTakeSeparate": true
+    },
+    "seven-of-cups": {
+      "batchId": "depth77-cups-03",
+      "bodySha256": "adc63d2ee15cc53dbe55684daa88af25be795db5d202a8e88e63358b5371c996",
+      "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-03/source.json",
+      "characters": 2681,
+      "caseSectionSha256": [
+        "d9a603605e7ccb418274a99c161b95d01488af600c3aaf86c84a21e1760331fc",
+        "350edf3e102692b3bd393e7e8f5dc83e93ed519816c5ca044cb616a7495b9a3a"
+      ],
+      "quickTakeSeparate": true
+    },
+    "eight-of-cups": {
+      "batchId": "depth77-cups-03",
+      "bodySha256": "570b59995fe92b2c4c45407adad34b435da42bebe5df366501ce2fc2a5189f78",
+      "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-03/source.json",
+      "characters": 2706,
+      "caseSectionSha256": [
+        "d0e514f9cece0c8a1751b13cc9b996c2c34fc2c7e3f93bf83024db976aee0f7c",
+        "8dc01f5591ce255ea7281a82af3ffea6a693709e9da5e10b073e9ed8a957926f"
+      ],
+      "quickTakeSeparate": true
+    },
+    "nine-of-cups": {
+      "batchId": "depth77-cups-04",
+      "bodySha256": "4e0077b2601f2c992b080a5512943ee16683b3972129b9ae7a488224acd8e9a2",
+      "sourcePackageSha256": "542a9f826007339bb3916f1c10e12685b90400a43994be287718d9c9907c33bb",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-04/source.json",
+      "characters": 2671,
+      "caseSectionSha256": [
+        "2efeb0ae21c4fec99dad8a3989b0d6df7648633bf47c15ba2a8997f00b0c252e",
+        "5ecdce0569b46a0eb7d2572bf19d7eaac6406b678c37f73fd181a45ece5160ba"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ten-of-cups": {
+      "batchId": "depth77-cups-04",
+      "bodySha256": "08dd2a7bc09ff29012856706d7899a68552a530269d4dd5aa70b85c611d1310a",
+      "sourcePackageSha256": "542a9f826007339bb3916f1c10e12685b90400a43994be287718d9c9907c33bb",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-04/source.json",
+      "characters": 2857,
+      "caseSectionSha256": [
+        "4e5db361ddd106024d88524f61a319b8dbd0b1d90efcabe8cbe33771ebe07c88",
+        "55936f2b2cd13ede9225344e47458002b5973f546e659402c74372e99f06dc61"
+      ],
+      "quickTakeSeparate": true
+    },
+    "page-of-cups": {
+      "batchId": "depth77-cups-05",
+      "bodySha256": "04ec2db82de3d515fa5977d79733e4577f0239ef83231724242ac82a3231ff23",
+      "sourcePackageSha256": "957e13d34006676a1ba3cdbb1fbd59ec6024e030b1df8a6eba8ac66032341990",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-05/source.json",
+      "characters": 2687,
+      "caseSectionSha256": [
+        "909c76bac7bde820fac76eb31dc6f899bfc62caf401667e1af00e3d4f97026b8",
+        "e5f57ce6d77fd640e7106aa5911e3acb03a466e4b19d43c5408f99f37df9b36b"
+      ],
+      "quickTakeSeparate": true
+    },
+    "knight-of-cups": {
+      "batchId": "depth77-cups-05",
+      "bodySha256": "681f23a18c90b8e0b5252c7dd037b0401d948a60bbb26c7324ae22cf1c8cc705",
+      "sourcePackageSha256": "957e13d34006676a1ba3cdbb1fbd59ec6024e030b1df8a6eba8ac66032341990",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-05/source.json",
+      "characters": 2660,
+      "caseSectionSha256": [
+        "9b2f61c411a688720204eb881f974165bf396f88621ec801024a83584b9f7e19",
+        "d9e0f720781f014a419c0134311634791fa20b1f4f937bb02cec1b6938a327f3"
+      ],
+      "quickTakeSeparate": true
+    },
+    "queen-of-cups": {
+      "batchId": "depth77-cups-06",
+      "bodySha256": "8cc8822b3ff2b27b054658c5471545f99e9c0df3f5f2a84a8e68c8bbca82c839",
+      "sourcePackageSha256": "d7782317b89d8f95d315b762ee325f81b6cd4a33ad7ec56fe4238325c2a05144",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-06/source.json",
+      "characters": 2709,
+      "caseSectionSha256": [
+        "8b8a9629cef8f4a27bb60cc986b0220ff6de7d5b288716e43db3857f31d740af",
+        "418d777c65aac35944e499446f37322c46839099cd329d37dc2edf474368b8a6"
+      ],
+      "quickTakeSeparate": true
+    },
+    "king-of-cups": {
+      "batchId": "depth77-cups-06",
+      "bodySha256": "577e0d6f97ccce0253e8d93370b64edbb76a940332a29ab7996b55f798bbfc13",
+      "sourcePackageSha256": "d7782317b89d8f95d315b762ee325f81b6cd4a33ad7ec56fe4238325c2a05144",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-cups-06/source.json",
+      "characters": 2942,
+      "caseSectionSha256": [
+        "10149bd5615ae962db15c8c982c1cbbfaf8fc7ba78b4e94c8d679f20fa52b74e",
+        "ca7d502b4a7a4f58cd27e06761bc1d9aba1f9fb8e42699666fd048096832e486"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ace-of-swords": {
+      "batchId": "depth77-swords-01",
+      "bodySha256": "aba175ad6c6dfb697679d1d054d5fd75d71a8724ecd42456042e7671f1e221d2",
+      "sourcePackageSha256": "d8034d6efb1f3c1511fa687bb4b0b3bcf4c4e0f9ad0f189f3f9b90e59646db67",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-01/source.json",
+      "characters": 2702,
+      "caseSectionSha256": [
+        "2946840aad123c711c6408b8157c1e1f162d47a38656500ea4136c4a73c05cfa",
+        "51919b801bee747d5efe08384c5ce0582f47ea2c4d105fec8a72b77a634566f2"
+      ],
+      "quickTakeSeparate": true
+    },
+    "two-of-swords": {
+      "batchId": "depth77-swords-01",
+      "bodySha256": "c487fa0fc6fa8fbe7077bcb292718de24de6b746690ca600bc0e37b6f54c5c41",
+      "sourcePackageSha256": "d8034d6efb1f3c1511fa687bb4b0b3bcf4c4e0f9ad0f189f3f9b90e59646db67",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-01/source.json",
+      "characters": 2682,
+      "caseSectionSha256": [
+        "77b31c1eb63ad8703a937db4a6954f58d1bdce87bfd379d97dea8463fd6b8d48",
+        "2f78a86c70283a2b86835f59e8f71e454322e15e82b37d22b9a88131899d4f61"
+      ],
+      "quickTakeSeparate": true
+    },
+    "three-of-swords": {
+      "batchId": "depth77-swords-01",
+      "bodySha256": "e41306eda5743dbdd563807ef7c2c7dae3eb0814ad811f651b70596eab0cf85b",
+      "sourcePackageSha256": "d8034d6efb1f3c1511fa687bb4b0b3bcf4c4e0f9ad0f189f3f9b90e59646db67",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-01/source.json",
+      "characters": 2726,
+      "caseSectionSha256": [
+        "59244aa0703f737177c16f218eb7badca84f728f3760b9913efd9443d551eace",
+        "1e0cb168760e5ffba15b4b3802ae604a42a5042285a5129ffbbac503c503b660"
+      ],
+      "quickTakeSeparate": true
+    },
+    "four-of-swords": {
+      "batchId": "depth77-swords-02",
+      "bodySha256": "2552d8643d0a971f6232dba0389073177280411eb2d57a8e1fd6823abe23f3b9",
+      "sourcePackageSha256": "e0a46d308fe66ba17d85a732960c963f37dfdc136a9ec225a4f1c06f57ab288f",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-02/source.json",
+      "characters": 2701,
+      "caseSectionSha256": [
+        "3e0a74a2a14eb4d33d1112cbaf082055e6c90bbded9369eac70f79ad8cfc1c63",
+        "4b23a2a7a7292b63ca3114070043aa0323c2aff3a59803d97c6ad64209aed239"
+      ],
+      "quickTakeSeparate": true
+    },
+    "five-of-swords": {
+      "batchId": "depth77-swords-02",
+      "bodySha256": "7f79d02ca7dc7db8dffa24305fb41a1cf28ceb1952e774f2ebf6a6f0abe43170",
+      "sourcePackageSha256": "e0a46d308fe66ba17d85a732960c963f37dfdc136a9ec225a4f1c06f57ab288f",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-02/source.json",
+      "characters": 2710,
+      "caseSectionSha256": [
+        "1419232cd6703864eb7e2a09c68c3f08069108446b384be306e8355680de9e87",
+        "03e7f7960f0623325a5f6a26b381c282cc1f1b05643e5f5c3bd3a6d8c800583b"
+      ],
+      "quickTakeSeparate": true
+    },
+    "six-of-swords": {
+      "batchId": "depth77-swords-03",
+      "bodySha256": "87391f533a62bfec003e215a3b129d33789c94e5f25f7bf20a55e11c7fd85fab",
+      "sourcePackageSha256": "5edf66858fd04265619439c27d7c24453417291662a1bddf97eb1c23598569c2",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-03/source.json",
+      "characters": 2904,
+      "caseSectionSha256": [
+        "1d0642328cdba0add2d195b752f02ff5b300c65755b510f82402fdc972266a03",
+        "85b802e1115526535a4b5bbca9ed05882c07b28914acc499f9133780262ac0cf"
+      ],
+      "quickTakeSeparate": true
+    },
+    "seven-of-swords": {
+      "batchId": "depth77-swords-03",
+      "bodySha256": "a842ccc96b24aa4e68d4f930f48d5d9a7a11ca3a27ca4428df7f33d99595873b",
+      "sourcePackageSha256": "5edf66858fd04265619439c27d7c24453417291662a1bddf97eb1c23598569c2",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-03/source.json",
+      "characters": 2934,
+      "caseSectionSha256": [
+        "1eac333284f32c95e11f3db486bc2b57d8272fb7103eaae7268cab1f341d0892",
+        "c812808a42cf376a86f4873d6a4767eed22a4c23998591db4d3a99490e2f45e4"
+      ],
+      "quickTakeSeparate": true
+    },
+    "eight-of-swords": {
+      "batchId": "depth77-swords-03",
+      "bodySha256": "133ef78b829c867785cb32ea3a72a7207e88d7e91d527aaff370d2b03f36633d",
+      "sourcePackageSha256": "5edf66858fd04265619439c27d7c24453417291662a1bddf97eb1c23598569c2",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-03/source.json",
+      "characters": 2945,
+      "caseSectionSha256": [
+        "6749ae40e5ebd067fb245b874a71dde9e894c5f55fd75ecdd2371d0881453756",
+        "3a1442e33f62014380a24ec3671bce5114deacbbef8881318786ddfc2270e3a0"
+      ],
+      "quickTakeSeparate": true
+    },
+    "nine-of-swords": {
+      "batchId": "depth77-swords-04",
+      "bodySha256": "2cf8f666a2f8f48e74f79139e3c0bf0650bd04b1db61ad7ffe3213753d001339",
+      "sourcePackageSha256": "e7ac4168e63486457b391b6c7a39970053570391ce8035209408f729b24688ba",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-04/source.json",
+      "characters": 2948,
+      "caseSectionSha256": [
+        "0a29becdd090f56dcfdf3cbcc795140bda75f97d19ae4c2c7546bfaba6738542",
+        "02cf6238fe62db5731997776558e81e78c172598e8652f1383529696099089b5"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ten-of-swords": {
+      "batchId": "depth77-swords-04",
+      "bodySha256": "47f80b45a19ea9a999d895e619362d382b0885350176620d6bf1ce1319a4349e",
+      "sourcePackageSha256": "e7ac4168e63486457b391b6c7a39970053570391ce8035209408f729b24688ba",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-04/source.json",
+      "characters": 2946,
+      "caseSectionSha256": [
+        "f61b81301602c897c7aa044ec77b13b82b86c99068ce6db993431fbc9006b78e",
+        "78fcb91c48dc10a72f5afc53f959399c1f4455455c39c438a87d8aeec7eadcbd"
+      ],
+      "quickTakeSeparate": true
+    },
+    "page-of-swords": {
+      "batchId": "depth77-swords-05",
+      "bodySha256": "ab10f454c8d5f8b7dbf1a6556d0905b1ea5367a4521669de159815e418f2f98b",
+      "sourcePackageSha256": "875561c1137b35a0b20a65d46fe835b868d71898997847a3adc2a4afbd7c5f60",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-05/source.json",
+      "characters": 2868,
+      "caseSectionSha256": [
+        "f3fc487c5d045d73fb390d8d97bb20b3b35eccf60dbecf4e8e46112fcfabace1",
+        "c01571bf67809c6da7971a084fada307b958d3b9b3f5363171245baf66a20d6d"
+      ],
+      "quickTakeSeparate": true
+    },
+    "knight-of-swords": {
+      "batchId": "depth77-swords-05",
+      "bodySha256": "8400f891b8d8e2b7ff4deb48e6e869596da1737e53d912e63b0d48bf58d7eafa",
+      "sourcePackageSha256": "875561c1137b35a0b20a65d46fe835b868d71898997847a3adc2a4afbd7c5f60",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-05/source.json",
+      "characters": 2883,
+      "caseSectionSha256": [
+        "c88930ec563da066b1dddafce659fa6802eb20ba491e1e7b5e953895f6dcaf7b",
+        "a39c846b8547d6bd5bedbdda6ea941538fb15a93e4ec12b311a02496559b8e4a"
+      ],
+      "quickTakeSeparate": true
+    },
+    "queen-of-swords": {
+      "batchId": "depth77-swords-06",
+      "bodySha256": "364b7498541b594348720da2def7c9f26242f32b68a42eb2349aabe457df983d",
+      "sourcePackageSha256": "76d9d70f40f519f68a5cd88989b9ffeb604ffa14b6e5b6f6f58970e2b12545aa",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-06/source.json",
+      "characters": 2952,
+      "caseSectionSha256": [
+        "c37e86ba6cc440468e79704d767b48f30da4e46aff0c8cbc5d3dc229e948d125",
+        "daa3452b7be247eced4fafafaeee3513bfc4c9f694e0a360a6afc305d7dff61a"
+      ],
+      "quickTakeSeparate": true
+    },
+    "king-of-swords": {
+      "batchId": "depth77-swords-06",
+      "bodySha256": "940abd26be03651c614400460a3b745e8780109f0b8bae636f2d3a6ccb8f4864",
+      "sourcePackageSha256": "76d9d70f40f519f68a5cd88989b9ffeb604ffa14b6e5b6f6f58970e2b12545aa",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-swords-06/source.json",
+      "characters": 2970,
+      "caseSectionSha256": [
+        "59e0b846afb3f07e233076f3f0f32acc2164e4c6c3646c48663b4af66ac9e20f",
+        "8fddeca8f9d6c1e02e9dcf18367ab3a6ee0286ce4980e947966ab4fdc4c37d04"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ace-of-pentacles": {
+      "batchId": "depth77-pentacles-01",
+      "bodySha256": "248e8d8d9fc2a7a238078382c5e9a236ef33a3d65313d2a461812bfbcc58c1cc",
+      "sourcePackageSha256": "967d7e4e7cba043e10c0b17aad3570c38fae90686ffca62f375d0d6f6418b22e",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-01/source.json",
+      "characters": 2741,
+      "caseSectionSha256": [
+        "d9698262cf5cea1be42be89d8156b43bca04456f086b4310850b5d174535d26a",
+        "ad062794b56fc7155ac89d81f23abab2180f9935b1c6d7d33ce4c0ce6b31afbd"
+      ],
+      "quickTakeSeparate": true
+    },
+    "two-of-pentacles": {
+      "batchId": "depth77-pentacles-01",
+      "bodySha256": "36bf8674f449228ef511d49910a55811d1678b004ba04d42c467792413eeb8c7",
+      "sourcePackageSha256": "967d7e4e7cba043e10c0b17aad3570c38fae90686ffca62f375d0d6f6418b22e",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-01/source.json",
+      "characters": 2700,
+      "caseSectionSha256": [
+        "98535f963668cb0f016d89eddd59bc17e5078b2491ac479d44516dabe58c1461",
+        "c7d0b1527b2d1aff109f43a6af02dc7779ced18396afdff5d619e751d9e1045b"
+      ],
+      "quickTakeSeparate": true
+    },
+    "three-of-pentacles": {
+      "batchId": "depth77-pentacles-01",
+      "bodySha256": "059aa72470b619a86bc27727d0812ea23341a3e59a89cd118f5f54f85ad3f9db",
+      "sourcePackageSha256": "967d7e4e7cba043e10c0b17aad3570c38fae90686ffca62f375d0d6f6418b22e",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-01/source.json",
+      "characters": 2692,
+      "caseSectionSha256": [
+        "a97252ce3a81147c11174fe258906b4ec38f31f483f8b063422321142ffffc75",
+        "c26a3d5739d71159a1517c9b474c314783a9f6ba1ccb9dea2eae8ba068f4c0f9"
+      ],
+      "quickTakeSeparate": true
+    },
+    "four-of-pentacles": {
+      "batchId": "depth77-pentacles-02",
+      "bodySha256": "7c0cce9fbb34c148762c3367d94a2f57a7fb7255772b30dda257feba2351d704",
+      "sourcePackageSha256": "ea18a69cc1f933a65c7858ce53fed9356c7a71d5adf2dd85e19dca43c7bed76a",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-02/source.json",
+      "characters": 2661,
+      "caseSectionSha256": [
+        "c6af1878c9b812b1a98fa66787643f7523db537c3e18f6b81d7110a389e2d9aa",
+        "c98e112b19666fa5ba8bd4d3318298d5672be2660782dc8893d7d4093901bec7"
+      ],
+      "quickTakeSeparate": true
+    },
+    "five-of-pentacles": {
+      "batchId": "depth77-pentacles-02",
+      "bodySha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+      "sourcePackageSha256": "ea18a69cc1f933a65c7858ce53fed9356c7a71d5adf2dd85e19dca43c7bed76a",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-02/source.json",
+      "characters": 2776,
+      "caseSectionSha256": [
+        "5a1f523dc750e1b936fe141fda501615ebc249749b6f9228df0f90810421c30a",
+        "39da15bf7b3c269bfcb8548299b6362e7b91c04f0ea74ae838c801b197e84007"
+      ],
+      "quickTakeSeparate": true
+    },
+    "six-of-pentacles": {
+      "batchId": "depth77-pentacles-03",
+      "bodySha256": "4025c0224efa44f68b55e70715ca39f6c4e37f4aa01ebc8807b18610695da055",
+      "sourcePackageSha256": "4a2a350812ba92364e66ad88dbaeb30c412b354ac14751f97f487637be1053ca",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-03/source.json",
+      "characters": 2694,
+      "caseSectionSha256": [
+        "8b89e7c2084fd2212b95d603fb9bd2c8b96e92a7073d5f8c40e42c29104d4d63",
+        "2ceba6411af6e9439bf6fb02a899fd40b2a051545eb8a4fb8cb85e58a50b14d9"
+      ],
+      "quickTakeSeparate": true
+    },
+    "seven-of-pentacles": {
+      "batchId": "depth77-pentacles-03",
+      "bodySha256": "67bded15e5f7ce301be58cba7583bbea43b3eb8395b7ec78c1c852900f8bd9f0",
+      "sourcePackageSha256": "4a2a350812ba92364e66ad88dbaeb30c412b354ac14751f97f487637be1053ca",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-03/source.json",
+      "characters": 2691,
+      "caseSectionSha256": [
+        "130eacbdc5d649d6d666226c78f3401dfd789f3f043b21db851bef381294f251",
+        "e2cac0b27b596519ec98d1441f7f1f5989997b0ae815257b1ee3863272300adc"
+      ],
+      "quickTakeSeparate": true
+    },
+    "eight-of-pentacles": {
+      "batchId": "depth77-pentacles-03",
+      "bodySha256": "c1362565f580f062ee72c348d2da5cd4a41ea8c95e978242261661f0394cbd75",
+      "sourcePackageSha256": "4a2a350812ba92364e66ad88dbaeb30c412b354ac14751f97f487637be1053ca",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-03/source.json",
+      "characters": 2683,
+      "caseSectionSha256": [
+        "720b8d51dbc7860467204ad70526106b854c5ec6d542ef966043a792a826178c",
+        "20d55d16786de93c684f9862dc917ca3b86211217e7f5989cbfe15018bebe225"
+      ],
+      "quickTakeSeparate": true
+    },
+    "nine-of-pentacles": {
+      "batchId": "depth77-pentacles-04",
+      "bodySha256": "8cdb4a84d3e2636341fb83fa78091d80de34360fcf54aa84cd31f8a1f12a0cf2",
+      "sourcePackageSha256": "8bb7d6195e77a03f2e6787c787aa71a858001199023fd7ec6a58ed3e5f22f9f8",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-04/source.json",
+      "characters": 2746,
+      "caseSectionSha256": [
+        "8d641b8a960cfa67087829064954200a1f48d5ae1e72453ad0451aec6d8a9e20",
+        "92b5f7c5d33423457db29c9981a07fc5cb9138a4fc94108a183f0161ef9432b7"
+      ],
+      "quickTakeSeparate": true
+    },
+    "ten-of-pentacles": {
+      "batchId": "depth77-pentacles-04",
+      "bodySha256": "099fbac9f8dccf85f2e4ecbc0b1b5c933868db2d624b7c362ab5a4015ce77d9d",
+      "sourcePackageSha256": "8bb7d6195e77a03f2e6787c787aa71a858001199023fd7ec6a58ed3e5f22f9f8",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-04/source.json",
+      "characters": 2810,
+      "caseSectionSha256": [
+        "5fe16a678abf1197ef25e55e8fa9c87ce13c803b7a6d5e3f2168b25495d35447",
+        "b73f9272a56012175982805fb1dddd550fe5f983708aea9f2d761b6b424c2aff"
+      ],
+      "quickTakeSeparate": true
+    },
+    "page-of-pentacles": {
+      "batchId": "depth77-pentacles-05",
+      "bodySha256": "f1106b9dec9a0544a7df18ebd7d6397c772fc40da253b5c7382c03299294619d",
+      "sourcePackageSha256": "6e22d801097fcf7dcbb33ceffd6ea56c2e5d6b8476bcf5e472c5596956a7810a",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-05/source.json",
+      "characters": 2746,
+      "caseSectionSha256": [
+        "427f86ae2d3b10dca65c3a368ac37bfeec754d7256979be8488a7a0a2067b11a",
+        "2a876d5bbf910ccab0156e6906fe7edf8f58f3be999db2957eb7b91b1df498da"
+      ],
+      "quickTakeSeparate": true
+    },
+    "knight-of-pentacles": {
+      "batchId": "depth77-pentacles-05",
+      "bodySha256": "61e13287b70ecaa89c93a8ceac39002a59256a17971ceda24b1280dd105b1a1b",
+      "sourcePackageSha256": "6e22d801097fcf7dcbb33ceffd6ea56c2e5d6b8476bcf5e472c5596956a7810a",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-05/source.json",
+      "characters": 2755,
+      "caseSectionSha256": [
+        "57354916888075fee399804cd2c071a76435fe483e6a14e31d0500c1019fe32e",
+        "452961411eb4b735f4b7240262f4fd40c2f01553d6addeb8ccced8238fd59532"
+      ],
+      "quickTakeSeparate": true
+    },
+    "queen-of-pentacles": {
+      "batchId": "depth77-pentacles-06",
+      "bodySha256": "7722c3e98b2f0147bdf55cdb13cfec7efe0995a8675eac24d9fddd60d481bd24",
+      "sourcePackageSha256": "c8015f19d9901d9eaabd00dcebf5128b83a55deb73ca1abfe3184d4eee42768e",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-06/source.json",
+      "characters": 2739,
+      "caseSectionSha256": [
+        "853f2a7a7d9ff415e99ffd7aeb5146afbf4bf484501d5fa3d531223491329458",
+        "7b12e94d9a72fc989d9fc8ca9306dae93236adad68eb547eecaf4a2d523cd475"
+      ],
+      "quickTakeSeparate": true
+    },
+    "king-of-pentacles": {
+      "batchId": "depth77-pentacles-06",
+      "bodySha256": "06e8a13ad2e0d5c88879733616e390ecf67c783118f581b1246e126312cff0cf",
+      "sourcePackageSha256": "c8015f19d9901d9eaabd00dcebf5128b83a55deb73ca1abfe3184d4eee42768e",
+      "sourcePath": "content/tarot-depth-20261008/incoming/depth77-pentacles-06/source.json",
+      "characters": 2867,
+      "caseSectionSha256": [
+        "ad94e9e8209c70fccc0f1e0185a3b0955fb938a3e9e812d84a9662b275b2f3e7",
+        "dd7045176e56ba75ff72f55619c5294cfcaf3f728a6b591a475abf30e42dfad4"
+      ],
+      "quickTakeSeparate": true
+    }
+  }
+}

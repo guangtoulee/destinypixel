@@ -13,8 +13,8 @@
   "nameEn": "Page of Swords",
   "locale": "zh-TW",
   "deckSystem": "RWS",
-  "title": "寶劍侍從牌義 讓好奇心先學會核實",
-  "plainLanguageSummary": "多問一句來源，把敏銳觀察變成可靠理解。",
+  "title": "寶劍侍從牌義 讓好奇心先學會確認",
+  "plainLanguageSummary": null,
   "keywords": [
     "好奇",
     "警覺",
@@ -30,13 +30,19 @@
       "id": "section-01",
       "role": "image",
       "title": "腳在地上 頭卻轉向另一邊",
-      "bodyMarkdown": "人物站在起伏的綠色地面，穿著紫紅色短衣、淺黃色褲子和紅靴。雙手握劍，劍身向畫面右上方伸出，頭卻轉向左側。發梢被帶起，遠處樹木傾斜，大團雲層繞在身體四周；左上方還能看到一群小鳥。\n\n姿態像在留意周圍動靜，卻沒有畫出實際對手。腳下並非平地，也讓「隨時準備」帶著不穩定感。我們可以用它思考初學者的敏銳與緊張，但無法從人物外表推出抽牌者的年齡、性別或成熟程度。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)"
+      "bodyMarkdown": "人物站在起伏的綠色地面，穿著紫紅色短衣、淺黃色褲子和紅靴。雙手握劍，劍身向畫面右上方伸出，頭卻轉向左側。髮梢被帶起，遠處樹木傾斜，大團雲層繞在身體四周；左上方還能看到一群小鳥。\n\n姿態像在留意周圍動靜，卻沒有畫出實際對手。腳下並非平地，也讓「隨時準備」帶著不穩定感。我們可以用它思考初學者的敏銳與緊張，但無法從人物外表推出抽牌者的年齡、性別或成熟程度。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 的關鍵詞偏向觀察與檢查",
-      "bodyMarkdown": "Waite 在1911年標註轉錄中強調警覺、監督和檢查，把人物寫成隨時觀察四周的人。逆位涉及這些特質的不利面與準備不足。本文不採用舊詞表中健康相關的占斷。\n\n將侍從理解為帶著問題學習、嘗試表達，是現代反思延伸；它描述可由任何人練習的姿態，並不固定代表年輕男性，也不能據此認定有人正在監視你。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)"
+      "bodyMarkdown": "Waite 在 1911 年標注轉錄中強調警覺、監督和檢查，把人物寫成隨時觀察四周的人。逆位涉及這些特質的不利面與準備不足。本文不採用舊詞表中健康相關的佔斷。\n\n將侍從理解為帶著問題學習、嘗試表達，是現代反思延伸；它描述可由任何人練習的姿態，並不固定代表年輕男性，也不能據此認定有人正在監視你。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "頭與劍朝向不同方向，腳下又是起伏地面，侍從的注意力似乎同時被多件事拉住。敏銳能幫人發現問題，也會讓初學者不斷換題。所以讀到此牌，除了問「還有什麼沒查」，也可問「哪一個問題值得先查完」。\n\n侍從與國王不是年齡測試。做過很多年工作的人，面對新領域也需要侍從式的查核；新人在自己熟悉的小任務上，也能承擔清楚的判斷。把宮廷牌看成一種處事姿態，會比按外表或性別分配人物更有用。\n\n一個好問題通常能讓別人知道你已經試過什麼、卡在哪一步、希望得到哪一種幫助。把這三件事寫出來，也會減少重複搜尋。放在關係建議位時，侍從可以鼓勵直接確認對方一句話的意思，但不意味著追問所有細節都有正當性；對方有權不回答私人問題。放在結果位時，可把它視作進入學習與觀察階段的可能，接著安排記錄和複查，而非保證會收到某一條消息。資訊出現之後是否可靠，仍須核對來源和上下文。"
     },
     {
       "id": "section-03",
@@ -51,16 +57,28 @@
       "bodyMarkdown": "逆位可提醒你檢查斷章取義、搶先發言，或把提問變成盤問。也可能是面對新任務時缺少準備，靠警惕掩蓋不確定。先放慢轉述速度，補上上下文，並允許別人用完整的話說明。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 新手提問 怎樣讓別人答得上來",
+      "bodyMarkdown": "**原創虛構案例，學習建議位，正位。** 秋實第一次給社團剪音訊，匯出的聲音比編輯時小。她在群裡問「為什麼總是不好用」，收到了好幾種互不相同的建議。她問：「我接下來怎樣查清問題？」已知原始錄音能正常播放，同一段音訊在匯出後變化，但她沒有記錄設定。\n\n侍從雙手持劍又回頭觀察，適合鼓勵她保留好奇，同時把目光落在具體細節。起伏的地面提醒她基礎條件尚未穩定，不要急著把所有工具都判為故障。背景的風與雲可以聯想到不斷湧來的說法，但這只是現代類比，查錯仍要憑操作記錄。\n\n她截下匯出設定，選十秒片段做對照，寫清軟體版本、播放位置及是否開啓了自動音量處理，再把問題發給一位熟悉工具的朋友。每次只改一個選項，避免一次改五項後仍不知道哪個生效。\n\n如果原始錄音本身就忽大忽小，就需回到錄製條件，而非繼續研究匯出；如果只在某個播放器裡變小，也要比較播放設定。正位帶來的好問題會隨證據變得更窄。最後保留一次可重複的步驟，敏銳才會轉成下次能獨立使用的經驗。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 轉發之前 先看完整上下文",
+      "bodyMarkdown": "**原創虛構案例，阻礙位，逆位。** 宛川在攝影群看到一張截圖，寫著某比賽「不接受後期作品」，準備提醒大家自己的投稿都可能無效。她問：「我現在該怎樣回應這條消息？」已知截圖沒有日期，也看不到完整條款；她尚未打開主辦方說明。\n\n侍從的警覺讓她注意到潛在問題，是可用的起點；逆位則提醒準備不足時，敏銳容易變成過快轉述。頭轉向一邊、劍舉向另一邊的姿態，可以幫助她察覺資訊蒐集與公開表達尚未一致。牌不能告訴她截圖是真是假，更不能認定發圖的人故意誤導。\n\n她先找到本屆規則，核對「後期」是否僅指合成或增刪元素，並查看截圖是否屬於舊屆。然後只轉述已經確認的範圍，附原文連結；若仍有歧義，就把問題標明為待確認，而不是替所有參賽者宣佈失格。\n\n如果官方頁面確實作出全面限制，及時提醒便很有價值；若規定只針對某個組別，就需縮小提醒對象。她也可以請投稿者自己確認作品處理過程，不必追問所有私人文件。逆位在這裡要求提高轉述品質，並非壓下所有疑問，更不是讓關心規則的人因怕出錯而徹底不說話。"
+    },
+    {
       "id": "section-05",
       "role": "situations",
       "title": "把問題問到能得到答案",
-      "bodyMarkdown": "進入新團隊時，與其籠統問「流程是什麼」，不如拿一個真實任務，請同事說明每一步由誰確認。把答案記下來，下一次自己先查，再問新的部分。\n\n收到令人吃驚的消息，先找原始發布者與發布時間；截圖不等於完整背景。關係中若發現對方語氣變了，可以問「你今天是不是有事想說」，而不是以試探和連環追問逼對方證明清白。"
+      "bodyMarkdown": "進入新團隊時，與其籠統問「流程是什麼」，不如拿一個真實任務，請同事說明每一步由誰確認。把答案記下來，下一次自己先查，再問新的部分。\n\n收到令人吃驚的消息，先找原始發佈者與發佈時間；截圖不等於完整背景。關係中若發現對方語氣變了，可以問「你今天是不是有事想說」，而不是以試探和連環追問逼對方證明清白。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "練習 給一則訊息標三種顏色",
-      "bodyMarkdown": "選一則你準備轉述的資訊，用文字標出「已核實」「來自轉述」「個人猜測」。找到其中最關鍵的一處來源，重新讀上下文。若尚未核實，轉述時明確說明不確定，而不是用語氣增加可信度。"
+      "title": "練習 給一條消息標三種顏色",
+      "bodyMarkdown": "選一條你準備轉述的資訊，用文字標出「已確認」「來自轉述」「個人猜測」。找到其中最關鍵的一處來源，重新讀上下文。若尚未確認，轉述時明確說明不確定，而不是用語氣增加可信度。"
     },
     {
       "id": "section-07",
@@ -69,16 +87,10 @@
       "bodyMarkdown": "寶劍侍從不能證明有人偷看、說謊或暗中關注你。查證需要尊重隱私與權限；想知道一件事，不自動等於可以翻閱別人的設備和私信。"
     },
     {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "寶劍王牌：把查到的資訊組織成清楚判斷；寶劍七：分辨合理核查與越界窺探。"
-    },
-    {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n- [Commons Swords11.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords11.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "page-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "page-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑侍从，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "page-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑侍从",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "page-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords11.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords11.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "page-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords11.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords11.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍侍從牌義 讓好奇心先學會核實\n\n一句話：多問一句來源，把敏銳觀察變成可靠理解。\n\n關鍵詞：好奇、警覺、查證\n\n正位速讀：保持敏銳，帶著具體問題學習和核對資訊。\n\n逆位速讀：消息跑得比證據快，或警覺過頭而處處懷疑。\n\n你發現了一處不對勁。接下來是把猜想轉發出去，還是先問一句「這個消息從哪裡來」？\n\n## 腳在地上 頭卻轉向另一邊\n\n人物站在起伏的綠色地面，穿著紫紅色短衣、淺黃色褲子和紅靴。雙手握劍，劍身向畫面右上方伸出，頭卻轉向左側。發梢被帶起，遠處樹木傾斜，大團雲層繞在身體四周；左上方還能看到一群小鳥。\n\n姿態像在留意周圍動靜，卻沒有畫出實際對手。腳下並非平地，也讓「隨時準備」帶著不穩定感。我們可以用它思考初學者的敏銳與緊張，但無法從人物外表推出抽牌者的年齡、性別或成熟程度。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n\n## Waite 的關鍵詞偏向觀察與檢查\n\nWaite 在1911年標註轉錄中強調警覺、監督和檢查，把人物寫成隨時觀察四周的人。逆位涉及這些特質的不利面與準備不足。本文不採用舊詞表中健康相關的占斷。\n\n將侍從理解為帶著問題學習、嘗試表達，是現代反思延伸；它描述可由任何人練習的姿態，並不固定代表年輕男性，也不能據此認定有人正在監視你。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n\n## 正位 先做一個好的提問者\n\n正位可以鼓勵你留意細節、主動查資料，並把模糊疑問問得具體。初學時尚無完整答案很正常，願意確認概念，比裝作已經理解更有力量。\n\n敏銳還需要記錄方法。區分親眼看到、聽別人轉述與自己推測，保存來源和時間。觀察越細，越要知道證據能支持多大的結論，不必發現一個疑點就寫出整個故事。\n\n## 逆位 留意資訊怎樣被加工\n\n逆位可提醒你檢查斷章取義、搶先發言，或把提問變成盤問。也可能是面對新任務時缺少準備，靠警惕掩蓋不確定。先放慢轉述速度，補上上下文，並允許別人用完整的話說明。\n\n## 把問題問到能得到答案\n\n進入新團隊時，與其籠統問「流程是什麼」，不如拿一個真實任務，請同事說明每一步由誰確認。把答案記下來，下一次自己先查，再問新的部分。\n\n收到令人吃驚的消息，先找原始發布者與發布時間；截圖不等於完整背景。關係中若發現對方語氣變了，可以問「你今天是不是有事想說」，而不是以試探和連環追問逼對方證明清白。\n\n## 練習 給一則訊息標三種顏色\n\n選一則你準備轉述的資訊，用文字標出「已核實」「來自轉述」「個人猜測」。找到其中最關鍵的一處來源，重新讀上下文。若尚未核實，轉述時明確說明不確定，而不是用語氣增加可信度。\n\n## 好奇不等於有權查看一切\n\n寶劍侍從不能證明有人偷看、說謊或暗中關注你。查證需要尊重隱私與權限；想知道一件事，不自動等於可以翻閱別人的設備和私信。\n\n## 接著讀什麼\n\n寶劍王牌：把查到的資訊組織成清楚判斷；寶劍七：分辨合理核查與越界窺探。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n- [Commons Swords11.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords11.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍侍從牌義 讓好奇心先學會確認\n\n你發現了一處不對勁。接下來是把猜想轉發出去，還是先問一句「這個消息從哪裡來」？\n\n## 腳在地上 頭卻轉向另一邊\n\n人物站在起伏的綠色地面，穿著紫紅色短衣、淺黃色褲子和紅靴。雙手握劍，劍身向畫面右上方伸出，頭卻轉向左側。髮梢被帶起，遠處樹木傾斜，大團雲層繞在身體四周；左上方還能看到一群小鳥。\n\n姿態像在留意周圍動靜，卻沒有畫出實際對手。腳下並非平地，也讓「隨時準備」帶著不穩定感。我們可以用它思考初學者的敏銳與緊張，但無法從人物外表推出抽牌者的年齡、性別或成熟程度。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n\n## Waite 的關鍵詞偏向觀察與檢查\n\nWaite 在 1911 年標注轉錄中強調警覺、監督和檢查，把人物寫成隨時觀察四周的人。逆位涉及這些特質的不利面與準備不足。本文不採用舊詞表中健康相關的佔斷。\n\n將侍從理解為帶著問題學習、嘗試表達，是現代反思延伸；它描述可由任何人練習的姿態，並不固定代表年輕男性，也不能據此認定有人正在監視你。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n頭與劍朝向不同方向，腳下又是起伏地面，侍從的注意力似乎同時被多件事拉住。敏銳能幫人發現問題，也會讓初學者不斷換題。所以讀到此牌，除了問「還有什麼沒查」，也可問「哪一個問題值得先查完」。\n\n侍從與國王不是年齡測試。做過很多年工作的人，面對新領域也需要侍從式的查核；新人在自己熟悉的小任務上，也能承擔清楚的判斷。把宮廷牌看成一種處事姿態，會比按外表或性別分配人物更有用。\n\n一個好問題通常能讓別人知道你已經試過什麼、卡在哪一步、希望得到哪一種幫助。把這三件事寫出來，也會減少重複搜尋。放在關係建議位時，侍從可以鼓勵直接確認對方一句話的意思，但不意味著追問所有細節都有正當性；對方有權不回答私人問題。放在結果位時，可把它視作進入學習與觀察階段的可能，接著安排記錄和複查，而非保證會收到某一條消息。資訊出現之後是否可靠，仍須核對來源和上下文。\n\n## 正位 先做一個好的提問者\n\n正位可以鼓勵你留意細節、主動查資料，並把模糊疑問問得具體。初學時尚無完整答案很正常，願意確認概念，比裝作已經理解更有力量。\n\n敏銳還需要記錄方法。區分親眼看到、聽別人轉述與自己推測，保存來源和時間。觀察越細，越要知道證據能支持多大的結論，不必發現一個疑點就寫出整個故事。\n\n## 逆位 留意資訊怎樣被加工\n\n逆位可提醒你檢查斷章取義、搶先發言，或把提問變成盤問。也可能是面對新任務時缺少準備，靠警惕掩蓋不確定。先放慢轉述速度，補上上下文，並允許別人用完整的話說明。\n\n## 案例一 新手提問 怎樣讓別人答得上來\n\n**原創虛構案例，學習建議位，正位。** 秋實第一次給社團剪音訊，匯出的聲音比編輯時小。她在群裡問「為什麼總是不好用」，收到了好幾種互不相同的建議。她問：「我接下來怎樣查清問題？」已知原始錄音能正常播放，同一段音訊在匯出後變化，但她沒有記錄設定。\n\n侍從雙手持劍又回頭觀察，適合鼓勵她保留好奇，同時把目光落在具體細節。起伏的地面提醒她基礎條件尚未穩定，不要急著把所有工具都判為故障。背景的風與雲可以聯想到不斷湧來的說法，但這只是現代類比，查錯仍要憑操作記錄。\n\n她截下匯出設定，選十秒片段做對照，寫清軟體版本、播放位置及是否開啓了自動音量處理，再把問題發給一位熟悉工具的朋友。每次只改一個選項，避免一次改五項後仍不知道哪個生效。\n\n如果原始錄音本身就忽大忽小，就需回到錄製條件，而非繼續研究匯出；如果只在某個播放器裡變小，也要比較播放設定。正位帶來的好問題會隨證據變得更窄。最後保留一次可重複的步驟，敏銳才會轉成下次能獨立使用的經驗。\n\n## 案例二 轉發之前 先看完整上下文\n\n**原創虛構案例，阻礙位，逆位。** 宛川在攝影群看到一張截圖，寫著某比賽「不接受後期作品」，準備提醒大家自己的投稿都可能無效。她問：「我現在該怎樣回應這條消息？」已知截圖沒有日期，也看不到完整條款；她尚未打開主辦方說明。\n\n侍從的警覺讓她注意到潛在問題，是可用的起點；逆位則提醒準備不足時，敏銳容易變成過快轉述。頭轉向一邊、劍舉向另一邊的姿態，可以幫助她察覺資訊蒐集與公開表達尚未一致。牌不能告訴她截圖是真是假，更不能認定發圖的人故意誤導。\n\n她先找到本屆規則，核對「後期」是否僅指合成或增刪元素，並查看截圖是否屬於舊屆。然後只轉述已經確認的範圍，附原文連結；若仍有歧義，就把問題標明為待確認，而不是替所有參賽者宣佈失格。\n\n如果官方頁面確實作出全面限制，及時提醒便很有價值；若規定只針對某個組別，就需縮小提醒對象。她也可以請投稿者自己確認作品處理過程，不必追問所有私人文件。逆位在這裡要求提高轉述品質，並非壓下所有疑問，更不是讓關心規則的人因怕出錯而徹底不說話。\n\n## 把問題問到能得到答案\n\n進入新團隊時，與其籠統問「流程是什麼」，不如拿一個真實任務，請同事說明每一步由誰確認。把答案記下來，下一次自己先查，再問新的部分。\n\n收到令人吃驚的消息，先找原始發佈者與發佈時間；截圖不等於完整背景。關係中若發現對方語氣變了，可以問「你今天是不是有事想說」，而不是以試探和連環追問逼對方證明清白。\n\n## 練習 給一條消息標三種顏色\n\n選一條你準備轉述的資訊，用文字標出「已確認」「來自轉述」「個人猜測」。找到其中最關鍵的一處來源，重新讀上下文。若尚未確認，轉述時明確說明不確定，而不是用語氣增加可信度。\n\n## 好奇不等於有權查看一切\n\n寶劍侍從不能證明有人偷看、說謊或暗中關注你。查證需要尊重隱私與權限；想知道一件事，不自動等於可以翻閱別人的設備和私信。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍侍從，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍侍從](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "page-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "P",
-    "rank": "page",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑侍从",
-    "nameEn": "Page of Swords",
-    "title": "宝剑侍从牌义 让好奇心先学会核实",
-    "plainLanguageSummary": "多问一句来源，把敏锐观察变成可靠理解。",
-    "hook": "你发现了一处不对劲。接下来是把猜想转发出去，还是先问一句「这个消息从哪里来」？",
-    "keywords": [
-      "好奇",
-      "警觉",
-      "查证"
-    ],
-    "uprightQuickTake": "保持敏锐，带着具体问题学习和核对信息。",
-    "reversedQuickTake": "消息跑得比证据快，或警觉过头而处处怀疑。",
-    "articleSlug": "tarot-page-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "脚在地上 头却转向另一边",
-        "paragraphs": [
-          "人物站在起伏的绿色地面，穿着紫红色短衣、浅黄色裤子和红靴。双手握剑，剑身向画面右上方伸出，头却转向左侧。发梢被带起，远处树木倾斜，大团云层绕在身体四周；左上方还能看到一群小鸟。",
-          "姿态像在留意周围动静，却没有画出实际对手。脚下并非平地，也让「随时准备」带着不稳定感。我们可以用它思考初学者的敏锐与紧张，但无法从人物外表推出抽牌者的年龄、性别或成熟程度。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 的关键词偏向观察与检查",
-        "paragraphs": [
-          "Waite 在1911年标注转录中强调警觉、监督和检查，把人物写成随时观察四周的人。逆位涉及这些特质的不利面与准备不足。本文不采用旧词表中健康相关的占断。",
-          "将侍从理解为带着问题学习、尝试表达，是现代反思延伸；它描述可由任何人练习的姿态，并不固定代表年轻男性，也不能据此认定有人正在监视你。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswpa.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先做一个好的提问者",
-        "paragraphs": [
-          "正位可以鼓励你留意细节、主动查资料，并把模糊疑问问得具体。初学时尚无完整答案很正常，愿意确认概念，比装作已经理解更有力量。",
-          "敏锐还需要记录方法。区分亲眼看到、听别人转述与自己推测，保存来源和时间。观察越细，越要知道证据能支持多大的结论，不必发现一个疑点就写出整个故事。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 留意信息怎样被加工",
-        "paragraphs": [
-          "逆位可提醒你检查断章取义、抢先发言，或把提问变成盘问。也可能是面对新任务时缺少准备，靠警惕掩盖不确定。先放慢转述速度，补上上下文，并允许别人用完整的话说明。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "把问题问到能得到答案",
-        "paragraphs": [
-          "进入新团队时，与其笼统问「流程是什么」，不如拿一个真实任务，请同事说明每一步由谁确认。把答案记下来，下一次自己先查，再问新的部分。",
-          "收到令人吃惊的消息，先找原始发布者与发布时间；截图不等于完整背景。关系中若发现对方语气变了，可以问「你今天是不是有事想说」，而不是以试探和连环追问逼对方证明清白。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 给一条消息标三种颜色",
-        "paragraphs": [
-          "选一条你准备转述的信息，用文字标出「已核实」「来自转述」「个人猜测」。找到其中最关键的一处来源，重新读上下文。若尚未核实，转述时明确说明不确定，而不是用语气增加可信度。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "好奇不等于有权查看一切",
-        "paragraphs": [
-          "宝剑侍从不能证明有人偷看、说谎或暗中关注你。查证需要尊重隐私与权限；想知道一件事，不自动等于可以翻阅别人的设备和私信。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "ace-of-swords",
-        "nameZh": "宝剑王牌",
-        "reason": "把查到的信息组织成清楚判断"
-      },
-      {
-        "cardId": "seven-of-swords",
-        "nameZh": "宝剑七",
-        "reason": "分辨合理核查与越界窥探"
-      }
-    ],
-    "sources": [
-      {
-        "id": "page-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑侍从，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "page-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑侍从",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktswpa.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "page-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords11.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "page",
-      "gitBlobSha": "0cc7ae4020db77309f03e8c47ae8b171e68d8aff",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/page-of-swords.webp",
-      "sha256": "c357b63c3415074741bc1b457747fd9be62f3233c27d8e33b885e997c2f82aa7",
-      "localFile": "images/11-page.webp",
-      "bytes": 177624,
-      "dimensions": [
-        560,
-        970
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/page-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords11.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:21:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1108,
-        1920
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1089,
-    "bodyChineseCharacterCount": 721
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 821,
-    "words": 2,
-    "articleUtf8Bytes": 4290
-  },
+  "sourceBatch": "depth77-swords-05",
   "sourceLocale": "zh-CN",
   "name": "寶劍侍從",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍侍從",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "page-of-swords",
-      "sourceArticleSha256": "90caa521471485e4b85e0e1bdb773d3d9c6ac07ea7376c7f6d024a6c33297582",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 919,
-    "completeArticleCharacters": 1874
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "90caa521471485e4b85e0e1bdb773d3d9c6ac07ea7376c7f6d024a6c33297582",
-    "articleSha256": "2f0af631eb7328ea33fbbd094702e5795e542bec0eed64e9fcd70441ac71986b",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "ab10f454c8d5f8b7dbf1a6556d0905b1ea5367a4521669de159815e418f2f98b",
+    "sourceArticleSha256": "ab10f454c8d5f8b7dbf1a6556d0905b1ea5367a4521669de159815e418f2f98b",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "e9c1d3e32911e648b8b9b96491c527b25d5d1eb51a0c98607b0e1adfdf8a6f41",
+    "sourcePackageSha256": "875561c1137b35a0b20a65d46fe835b868d71898997847a3adc2a4afbd7c5f60",
+    "previousRecord": "content/tarot/revisions/2026-10-08/page-of-swords.zh-TW.json",
+    "editionBodySha256": "4c555680a97634ba904eb65f87f945d7eb9d32a09bf57f5e7a579ee295106167",
+    "translationSourceBodySha256": "ab10f454c8d5f8b7dbf1a6556d0905b1ea5367a4521669de159815e418f2f98b",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "6796fa87d7d825ce9c385e0ab07e0be0cc875a85b14232389dd75c92c73e00e5",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

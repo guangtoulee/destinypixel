@@ -30,7 +30,7 @@ async function main(){
   console.log(`PASS ${locale} directory: 78 complete links, metadata and ItemList`);
   for(let start=0;start<78;start+=4)await Promise.all(catalog[locale].slice(start,start+4).map(async({cardId:id}:{cardId:string})=>{
    const a=JSON.parse(readFileSync(`content/tarot/${locale}/${id}.json`,'utf8')),page=await get(href(id,locale));
-   const schema=metadata(page,id,locale,sitemap).find(s=>s['@type']==='Article');assert.equal(schema.headline,a.title);assert.equal(schema.inLanguage,tags[locale]);assert.deepEqual(schema.citation,a.sources.map((s:{url:string})=>s.url));
+   const schema=metadata(page,id,locale,sitemap).find(s=>s['@type']==='Article');assert.equal(schema.headline,a.title);assert.equal(schema.inLanguage,tags[locale]);assert.deepEqual(schema.citation,a.sources.map((s:{url:string|null;title:string})=>s.url??s.title));
    assert.ok(page.includes(`data-tarot-learning="${id}"`));
    const article=page.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0]??'';
    const articleText=text(article);for(const prose of [a.quickTake.upright,a.quickTake.reversed,a.hook,...a.plainLanguageSummary?[a.plainLanguageSummary]:[]])assert.ok(articleText.includes(text(renderToStaticMarkup(<p>{prose}</p>))),`${locale}/${id}: opening text missing`);

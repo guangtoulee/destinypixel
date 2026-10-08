@@ -13,16 +13,16 @@
   "nameEn": "Eight of Pentacles",
   "locale": "zh-TW",
   "deckSystem": "RWS",
-  "title": "星幣八 讓每一次重復都有一點改進",
-  "plainLanguageSummary": "熟練來自有回饋的練習，而不只是做得更多。",
+  "title": "星幣八 讓每一次重複都有一點改進",
+  "plainLanguageSummary": null,
   "keywords": [
     "練習",
     "工藝",
     "專注"
   ],
   "quickTake": {
-    "upright": "把注意力放在具體動作上，逐步提高完成質量。",
-    "reversed": "重復失去回饋，或只顧證明能力而忽略真正用途。"
+    "upright": "把注意力放在具體動作上，逐步提高完成品質。",
+    "reversed": "重複失去回饋，或只顧證明能力而忽略真正用途。"
   },
   "hook": "星幣八把已經完成的圓盤排在旁邊，人物卻低頭看著正在做的這一枚。熟練的積累很顯眼，當下這一手仍需要重新認真。",
   "sections": [
@@ -30,37 +30,55 @@
       "id": "section-01",
       "role": "image",
       "title": "作品排成一列，手還在工作",
-      "bodyMarkdown": "人物坐在木凳上，穿藍衣、黑色圍身衣物與紅褲。一手舉著小錘，另一手把工具靠近面前的黃色圓盤，身體向工作處俯下。右邊竪直木板上排列著六枚星幣，另有一枚在地面，一枚正在手邊，總數是八。\n\n左後方能看見遠處的房屋與樹木，近處沒有其他人物。構圖讓手上的工作佔據注意力，也留下已完成與尚在加工的區別。圓盤上的圖案相似，但圖中沒有質量評分，更沒有規定他必須永遠不停下來。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents08.jpg)"
+      "bodyMarkdown": "人物坐在木凳上，穿藍衣、黑色圍身衣物與紅褲。一手舉著小錘，另一手把工具靠近面前的黃色圓盤，身體向工作處俯下。右邊竪直木板上排列著六枚星幣，另有一枚在地面，一枚正在手邊，總數是八。\n\n左後方能看見遠處的房屋與樹木，近處沒有其他人物。構圖讓手上的工作佔據注意力，也留下已完成與尚在加工的區別。圓盤上的圖案相似，但圖中沒有品質評分，更沒有規定他必須永遠不停下來。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents08.jpg)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "排列的作品讓比較成為可能",
+      "bodyMarkdown": "右側掛起的星幣、手上正在加工的一枚和地面的一枚形成了不同位置。畫面讓人看到做過、正在做與尚可處理的區別，卻沒有自動告訴我們哪一枚最好。因此，練習的現代應用需要再加一個現實環節：用什麼標準檢查變化，誰能給出具體回饋？\n\n星幣侍從首先認真看一個對象，星幣八把注意力變成反覆操作；星幣三則讓這份能力接入共同任務。若問題卡在「我有沒有開始」，不必先談精雕細琢；若已經練了很多遍卻無改善，就需要檢查動作和標準。把三張牌的區別看清，能避免對所有問題都只說多努力。"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 寫的是技藝與工作",
-      "bodyMarkdown": "Waite 將人物稱為石作藝術工作者，列出工作、受雇、委託、工藝和技能，也提到可能處於準備階段。與星幣三相對照，學習和專業使用之間可以形成有趣的閱讀線索。\n\n逆位舊義包含虛榮、過度索取，以及將技巧用於不良目的。本篇據此重視技能的用途，同時加入回饋、節奏與改進的現代學習方法；「逆位就是沒天賦」既無必要，也無依據。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)"
+      "bodyMarkdown": "Waite 將人物稱為石作藝術工作者，列出工作、受雇、委託、工藝和技能，也提到可能處於準備階段。與星幣三相對照，學習和專業使用之間可以形成有趣的解讀線索。\n\n逆位舊義包含虛榮、過度索取，以及將技巧用於不良目的。本篇據此重視技能的用途，同時加入回饋、節奏與改進的現代學習方法；「逆位就是沒天賦」既無必要，也無依據。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)"
     },
     {
       "id": "section-03",
       "role": "upright",
       "title": "正位 縮小動作，放大回饋",
-      "bodyMarkdown": "正位適合把宏大的目標拆成可以重復練習的單元。不是籠統地「提高寫作」，而是練習寫清一個段落的中心；不是「學會攝影」，而是在同樣場景下比較不同構圖。範圍越清楚，越容易發現哪裡真的改變了。\n\n完成一次練習後，留下可對照的樣本。先修正最影響效果的一點，再增加難度。持續並不要求每天達到相同強度，休息和整理經驗也能幫助下一輪練得更準確。"
+      "bodyMarkdown": "正位適合把宏大的目標拆成可以重複練習的單元。不是籠統地「提高寫作」，而是練習寫清一個段落的中心；不是「學會攝影」，而是在同樣場景下比較不同構圖。範圍越清楚，越容易發現哪裡真的改變了。\n\n完成一次練習後，留下可對照的樣本。先修正最影響效果的一點，再增加難度。持續並不要求每天達到相同強度，休息和整理經驗也能幫助下一輪練得更準確。"
     },
     {
       "id": "section-04",
       "role": "reversed",
-      "title": "逆位 看看重復是否還有用",
+      "title": "逆位 看看重複是否還有用",
       "bodyMarkdown": "如果只是機械完成數量，熟悉感可能掩蓋了同一個錯誤。換一個回饋來源，或把步驟放慢，讓原本自動略過的細節重新可見。對自己越來越苛刻，並不一定讓作品更好。\n\n另一種問題是技巧離開了用途：為了顯得高明，把簡單事情做得難以理解；或不斷打磨不重要的地方，遲遲無法交付。回到使用者與實際要求，才能知道應該把功夫花在哪裡。"
     },
     {
       "id": "section-05",
       "role": "situations",
       "title": "練習可以有不同尺度",
-      "bodyMarkdown": "工作中，做一份常用文件範本，先請實際使用者試讀，再修正容易誤解的字段。練樂器時，只挑一小段難處放慢處理，錄音比較，而不是每次從頭硬彈到尾。\n\n日常做飯也可以是練習：固定一次材料與步驟，記下哪一步影響口感。你不必把興趣變成比賽，仍能體驗一點點更熟練的滿足。"
+      "bodyMarkdown": "工作中，做一份常用文件模板，先請實際使用者試讀，再修正容易誤解的欄位。練樂器時，只挑一小段難處放慢處理，錄音比較，而不是每次從頭硬彈到尾。\n\n日常做飯也可以是練習：固定一次材料與步驟，記下哪一步影響口感。你不必把興趣變成比賽，仍能體驗一點點更熟練的滿足。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 講解作品時總讓人聽不懂",
+      "bodyMarkdown": "原創虛構案例。阿芷有三件完成作品，但模擬面試時一緊張就從最早的靈感講起，五分鐘後仍沒說清自己解決了什麼。她問「我怎樣為下個月的作品面試做準備？」，練習建議位是星幣八正位。\n\n牌中手頭的單枚星幣可以對應一次短講，已經掛起的作品可對應可回看的錄音。重點是把說明能力拆成可以比較的小動作，而非要求她再做更多作品。她先練九十秒介紹：問題是什麼、自己做了哪一步、有什麼可展示的結果，然後請朋友複述聽到的重點。\n\n如果對方仍無法複述，就只改最含糊的一句並重錄；若內容已清楚但遇到追問會卡住，則下一輪練回答具體問題。面試資格、作品要求與時間安排仍需查看實際通知。正位支持認真準備的做法，並不預告錄用；最有用的回饋，是兩次錄音之間是否出現聽得見的改善。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 精細的筆記為什麼不能拿來複習",
+      "bodyMarkdown": "原創虛構案例。小河每天花一小時給筆記配色、畫框，頁面很漂亮，但合上筆記就答不出練習題。她也發現自己總避開最不熟悉的例題。調整位出現星幣八逆位，所問的是「怎樣讓每天整理的學習筆記真正有用？」。\n\n工匠的錘子應當作用在作品上，這裡卻像把大部分力氣花在展示架。現代讀法可以檢查技巧有沒有離開用途，也呼應 Waite 逆位中關於虛榮與技巧用途的警示，但不應因此說她愛慕虛榮。漂亮筆記可能讓她更願意學習，只是目前沒有服務理解。\n\n她保留少量配色，改用一半時間閉卷回答問題，並把錯誤原因寫在相關段落旁。若獨立答題明顯改善，說明調整有效；若她其實理解內容，只是題目措辭陌生，則應練閱讀題意，不必把整理習慣全盤推倒。一週後用同類題檢驗，不能只看筆記頁數。"
     },
     {
       "id": "section-06",
       "role": "practice",
       "title": "練習 保存前後兩個版本",
-      "bodyMarkdown": "選一個二十分鐘內能重復的動作，保留第一次的結果。只改一處，再做第二次，記錄差別。若看不出變化，就詢問一個具體問題，或換一種更清楚的比較方法。"
+      "bodyMarkdown": "選一個二十分鐘內能重複的動作，保留第一次的結果。只改一處，再做第二次，記錄差別。若看不出變化，就詢問一個具體問題，或換一種更清楚的比較方法。"
     },
     {
       "id": "section-07",
@@ -69,28 +87,34 @@
       "bodyMarkdown": "星幣八不是加班越多越值得贊美，也不保證某人會因勤奮獲得職位。它的核心練習是讓努力得到回饋、讓技巧服務真實用途，而不是把自己磨成不會停的機器。"
     },
     {
+      "id": "depth-reflection",
+      "role": "reflection",
+      "title": "熟練與耗盡不是同一件事",
+      "bodyMarkdown": "反覆操作會留下經驗，也會留下重複的錯誤。練習安排需要休息、回饋與適當難度，不能從一張勤奮的畫面推出越久越好。讀到結果位的星幣八，可以討論成果可能仍需打磨，但應先核對現實交付標準：足夠使用的作品不必無限重做，對安全有要求的技能則必須接受相應訓練和檢查。"
+    },
+    {
       "id": "section-08",
       "role": "sources",
       "title": "原文與牌面",
-      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents08.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。"
+      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents08.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。"
     }
   ],
   "relatedCards": [],
   "sources": [
     {
       "sourceId": "eight-of-pentacles-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：星幣八，Commons 所標 Pam-A 牌面",
       "url": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "eight-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币八，Commons 所标 Pam-A 牌面",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：星幣八，Commons 所標 Pam-A 牌面",
         "url": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
         "observedFileVersion": "05:28, 6 April 2024 1,117 × 1,920 (868 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
+        "observedRepresentation": "當前原始 JPEG 文件",
         "sha256": "13c82cbdec9ce101f157ee502663eb38bbd8117cec5e019b8400474056caebd9",
         "checkedAt": "2026-10-07"
       }
@@ -100,16 +124,23 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣八",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktpe08.htm",
-      "edition": "所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。",
+      "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "eight-of-pentacles-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币八",
+        "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣八",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktpe08.htm",
         "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "eight-of-pentacles-waite-crosscheck",
+      "type": "Waite 英文全文复核",
+      "title": "The Pictorial Key to the Tarot Part 3",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -159,123 +190,11 @@
       "sourcePageRevisionId": "1199315207"
     }
   },
-  "articleMarkdown": "# 星幣八 讓每一次重復都有一點改進\n\n熟練來自有回饋的練習，而不只是做得更多。\n\n關鍵詞：練習、工藝、專注\n\n正位速讀：把注意力放在具體動作上，逐步提高完成質量。\n\n逆位速讀：重復失去回饋，或只顧證明能力而忽略真正用途。\n\n星幣八把已經完成的圓盤排在旁邊，人物卻低頭看著正在做的這一枚。熟練的積累很顯眼，當下這一手仍需要重新認真。\n\n## 作品排成一列，手還在工作\n\n人物坐在木凳上，穿藍衣、黑色圍身衣物與紅褲。一手舉著小錘，另一手把工具靠近面前的黃色圓盤，身體向工作處俯下。右邊竪直木板上排列著六枚星幣，另有一枚在地面，一枚正在手邊，總數是八。\n\n左後方能看見遠處的房屋與樹木，近處沒有其他人物。構圖讓手上的工作佔據注意力，也留下已完成與尚在加工的區別。圓盤上的圖案相似，但圖中沒有質量評分，更沒有規定他必須永遠不停下來。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents08.jpg)\n\n## Waite 寫的是技藝與工作\n\nWaite 將人物稱為石作藝術工作者，列出工作、受雇、委託、工藝和技能，也提到可能處於準備階段。與星幣三相對照，學習和專業使用之間可以形成有趣的閱讀線索。\n\n逆位舊義包含虛榮、過度索取，以及將技巧用於不良目的。本篇據此重視技能的用途，同時加入回饋、節奏與改進的現代學習方法；「逆位就是沒天賦」既無必要，也無依據。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)\n\n## 正位 縮小動作，放大回饋\n\n正位適合把宏大的目標拆成可以重復練習的單元。不是籠統地「提高寫作」，而是練習寫清一個段落的中心；不是「學會攝影」，而是在同樣場景下比較不同構圖。範圍越清楚，越容易發現哪裡真的改變了。\n\n完成一次練習後，留下可對照的樣本。先修正最影響效果的一點，再增加難度。持續並不要求每天達到相同強度，休息和整理經驗也能幫助下一輪練得更準確。\n\n## 逆位 看看重復是否還有用\n\n如果只是機械完成數量，熟悉感可能掩蓋了同一個錯誤。換一個回饋來源，或把步驟放慢，讓原本自動略過的細節重新可見。對自己越來越苛刻，並不一定讓作品更好。\n\n另一種問題是技巧離開了用途：為了顯得高明，把簡單事情做得難以理解；或不斷打磨不重要的地方，遲遲無法交付。回到使用者與實際要求，才能知道應該把功夫花在哪裡。\n\n## 練習可以有不同尺度\n\n工作中，做一份常用文件範本，先請實際使用者試讀，再修正容易誤解的字段。練樂器時，只挑一小段難處放慢處理，錄音比較，而不是每次從頭硬彈到尾。\n\n日常做飯也可以是練習：固定一次材料與步驟，記下哪一步影響口感。你不必把興趣變成比賽，仍能體驗一點點更熟練的滿足。\n\n## 練習 保存前後兩個版本\n\n選一個二十分鐘內能重復的動作，保留第一次的結果。只改一處，再做第二次，記錄差別。若看不出變化，就詢問一個具體問題，或換一種更清楚的比較方法。\n\n## 容易看錯的地方\n\n星幣八不是加班越多越值得贊美，也不保證某人會因勤奮獲得職位。它的核心練習是讓努力得到回饋、讓技巧服務真實用途，而不是把自己磨成不會停的機器。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents08.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。\n",
+  "articleMarkdown": "# 星幣八 讓每一次重複都有一點改進\n\n星幣八把已經完成的圓盤排在旁邊，人物卻低頭看著正在做的這一枚。熟練的積累很顯眼，當下這一手仍需要重新認真。\n\n## 作品排成一列，手還在工作\n\n人物坐在木凳上，穿藍衣、黑色圍身衣物與紅褲。一手舉著小錘，另一手把工具靠近面前的黃色圓盤，身體向工作處俯下。右邊竪直木板上排列著六枚星幣，另有一枚在地面，一枚正在手邊，總數是八。\n\n左後方能看見遠處的房屋與樹木，近處沒有其他人物。構圖讓手上的工作佔據注意力，也留下已完成與尚在加工的區別。圓盤上的圖案相似，但圖中沒有品質評分，更沒有規定他必須永遠不停下來。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents08.jpg)\n\n## 排列的作品讓比較成為可能\n\n右側掛起的星幣、手上正在加工的一枚和地面的一枚形成了不同位置。畫面讓人看到做過、正在做與尚可處理的區別，卻沒有自動告訴我們哪一枚最好。因此，練習的現代應用需要再加一個現實環節：用什麼標準檢查變化，誰能給出具體回饋？\n\n星幣侍從首先認真看一個對象，星幣八把注意力變成反覆操作；星幣三則讓這份能力接入共同任務。若問題卡在「我有沒有開始」，不必先談精雕細琢；若已經練了很多遍卻無改善，就需要檢查動作和標準。把三張牌的區別看清，能避免對所有問題都只說多努力。\n\n## Waite 寫的是技藝與工作\n\nWaite 將人物稱為石作藝術工作者，列出工作、受雇、委託、工藝和技能，也提到可能處於準備階段。與星幣三相對照，學習和專業使用之間可以形成有趣的解讀線索。\n\n逆位舊義包含虛榮、過度索取，以及將技巧用於不良目的。本篇據此重視技能的用途，同時加入回饋、節奏與改進的現代學習方法；「逆位就是沒天賦」既無必要，也無依據。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)\n\n## 正位 縮小動作，放大回饋\n\n正位適合把宏大的目標拆成可以重複練習的單元。不是籠統地「提高寫作」，而是練習寫清一個段落的中心；不是「學會攝影」，而是在同樣場景下比較不同構圖。範圍越清楚，越容易發現哪裡真的改變了。\n\n完成一次練習後，留下可對照的樣本。先修正最影響效果的一點，再增加難度。持續並不要求每天達到相同強度，休息和整理經驗也能幫助下一輪練得更準確。\n\n## 逆位 看看重複是否還有用\n\n如果只是機械完成數量，熟悉感可能掩蓋了同一個錯誤。換一個回饋來源，或把步驟放慢，讓原本自動略過的細節重新可見。對自己越來越苛刻，並不一定讓作品更好。\n\n另一種問題是技巧離開了用途：為了顯得高明，把簡單事情做得難以理解；或不斷打磨不重要的地方，遲遲無法交付。回到使用者與實際要求，才能知道應該把功夫花在哪裡。\n\n## 練習可以有不同尺度\n\n工作中，做一份常用文件模板，先請實際使用者試讀，再修正容易誤解的欄位。練樂器時，只挑一小段難處放慢處理，錄音比較，而不是每次從頭硬彈到尾。\n\n日常做飯也可以是練習：固定一次材料與步驟，記下哪一步影響口感。你不必把興趣變成比賽，仍能體驗一點點更熟練的滿足。\n\n## 案例一 講解作品時總讓人聽不懂\n\n原創虛構案例。阿芷有三件完成作品，但模擬面試時一緊張就從最早的靈感講起，五分鐘後仍沒說清自己解決了什麼。她問「我怎樣為下個月的作品面試做準備？」，練習建議位是星幣八正位。\n\n牌中手頭的單枚星幣可以對應一次短講，已經掛起的作品可對應可回看的錄音。重點是把說明能力拆成可以比較的小動作，而非要求她再做更多作品。她先練九十秒介紹：問題是什麼、自己做了哪一步、有什麼可展示的結果，然後請朋友複述聽到的重點。\n\n如果對方仍無法複述，就只改最含糊的一句並重錄；若內容已清楚但遇到追問會卡住，則下一輪練回答具體問題。面試資格、作品要求與時間安排仍需查看實際通知。正位支持認真準備的做法，並不預告錄用；最有用的回饋，是兩次錄音之間是否出現聽得見的改善。\n\n## 案例二 精細的筆記為什麼不能拿來複習\n\n原創虛構案例。小河每天花一小時給筆記配色、畫框，頁面很漂亮，但合上筆記就答不出練習題。她也發現自己總避開最不熟悉的例題。調整位出現星幣八逆位，所問的是「怎樣讓每天整理的學習筆記真正有用？」。\n\n工匠的錘子應當作用在作品上，這裡卻像把大部分力氣花在展示架。現代讀法可以檢查技巧有沒有離開用途，也呼應 Waite 逆位中關於虛榮與技巧用途的警示，但不應因此說她愛慕虛榮。漂亮筆記可能讓她更願意學習，只是目前沒有服務理解。\n\n她保留少量配色，改用一半時間閉卷回答問題，並把錯誤原因寫在相關段落旁。若獨立答題明顯改善，說明調整有效；若她其實理解內容，只是題目措辭陌生，則應練閱讀題意，不必把整理習慣全盤推倒。一週後用同類題檢驗，不能只看筆記頁數。\n\n## 練習 保存前後兩個版本\n\n選一個二十分鐘內能重複的動作，保留第一次的結果。只改一處，再做第二次，記錄差別。若看不出變化，就詢問一個具體問題，或換一種更清楚的比較方法。\n\n## 容易看錯的地方\n\n星幣八不是加班越多越值得贊美，也不保證某人會因勤奮獲得職位。它的核心練習是讓努力得到回饋、讓技巧服務真實用途，而不是把自己磨成不會停的機器。\n\n## 熟練與耗盡不是同一件事\n\n反覆操作會留下經驗，也會留下重複的錯誤。練習安排需要休息、回饋與適當難度，不能從一張勤奮的畫面推出越久越好。讀到結果位的星幣八，可以討論成果可能仍需打磨，但應先核對現實交付標準：足夠使用的作品不必無限重做，對安全有要求的技能則必須接受相應訓練和檢查。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents08.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "eight",
-    "nameZh": "星币八",
-    "title": "星币八 让每一次重复都有一点改进",
-    "oneLiner": "熟练来自有反馈的练习，而不只是做得更多。",
-    "keywords": [
-      "练习",
-      "工艺",
-      "专注"
-    ],
-    "uprightQuickTake": "把注意力放在具体动作上，逐步提高完成质量。",
-    "reversedQuickTake": "重复失去反馈，或只顾证明能力而忽略真正用途。",
-    "hook": "星币八把已经完成的圆盘排在旁边，人物却低头看着正在做的这一枚。熟练的积累很显眼，当下这一手仍需要重新认真。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "作品排成一列，手还在工作",
-        "paragraphs": [
-          "人物坐在木凳上，穿蓝衣、黑色围身衣物与红裤。一手举着小锤，另一手把工具靠近面前的黄色圆盘，身体向工作处俯下。右边竖直木板上排列着六枚星币，另有一枚在地面，一枚正在手边，总数是八。",
-          "左后方能看见远处的房屋与树木，近处没有其他人物。构图让手上的工作占据注意力，也留下已完成与尚在加工的区别。圆盘上的图案相似，但图中没有质量评分，更没有规定他必须永远不停下来。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents08.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 写的是技艺与工作",
-        "paragraphs": [
-          "Waite 将人物称为石作艺术工作者，列出工作、受雇、委托、工艺和技能，也提到可能处于准备阶段。与星币三相对照，学习和专业使用之间可以形成有趣的阅读线索。",
-          "逆位旧义包含虚荣、过度索取，以及将技巧用于不良目的。本篇据此重视技能的用途，同时加入反馈、节奏与改进的现代学习方法；“逆位就是没天赋”既无必要，也无依据。 [核对 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe08.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 缩小动作，放大反馈",
-        "paragraphs": [
-          "正位适合把宏大的目标拆成可以重复练习的单元。不是笼统地“提高写作”，而是练习写清一个段落的中心；不是“学会摄影”，而是在同样场景下比较不同构图。范围越清楚，越容易发现哪里真的改变了。",
-          "完成一次练习后，留下可对照的样本。先修正最影响效果的一点，再增加难度。持续并不要求每天达到相同强度，休息和整理经验也能帮助下一轮练得更准确。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 看看重复是否还有用",
-        "paragraphs": [
-          "如果只是机械完成数量，熟悉感可能掩盖了同一个错误。换一个反馈来源，或把步骤放慢，让原本自动略过的细节重新可见。对自己越来越苛刻，并不一定让作品更好。",
-          "另一种问题是技巧离开了用途：为了显得高明，把简单事情做得难以理解；或不断打磨不重要的地方，迟迟无法交付。回到使用者与实际要求，才能知道应该把功夫花在哪里。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "练习可以有不同尺度",
-        "paragraphs": [
-          "工作中，做一份常用文档模板，先请实际使用者试读，再修正容易误解的字段。练乐器时，只挑一小段难处放慢处理，录音比较，而不是每次从头硬弹到尾。",
-          "日常做饭也可以是练习：固定一次材料与步骤，记下哪一步影响口感。你不必把兴趣变成比赛，仍能体验一点点更熟练的满足。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 保存前后两个版本",
-        "paragraphs": [
-          "选一个二十分钟内能重复的动作，保留第一次的结果。只改一处，再做第二次，记录差别。若看不出变化，就询问一个具体问题，或换一种更清楚的比较方法。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "星币八不是加班越多越值得赞美，也不保证某人会因勤奋获得职位。它的核心练习是让努力得到反馈、让技巧服务真实用途，而不是把自己磨成不会停的机器。"
-        ]
-      }
-    ],
-    "cardId": "eight-of-pentacles",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "VIII",
-    "ordinal": 8,
-    "arcana": "minor",
-    "suit": "pentacles",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameEn": "Eight of Pentacles",
-    "articleSlug": "tarot-eight-of-pentacles-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "eight-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币八，Commons 所标 Pam-A 牌面",
-        "url": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
-        "observedFileVersion": "05:28, 6 April 2024 1,117 × 1,920 (868 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
-        "sha256": "13c82cbdec9ce101f157ee502663eb38bbd8117cec5e019b8400474056caebd9",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "eight-of-pentacles-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币八",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktpe08.htm",
-        "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "sourceClaimBoundary": "石作艺术工作者；工作、委托与技能；逆位技巧的负面用途。反馈练习与可持续节奏为本篇现代方法。",
-    "chineseCharacterCount": 987
-  },
-  "sourceBatch": "pentacles",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 925,
-    "words": 2,
-    "articleUtf8Bytes": 4167
-  },
+  "sourceBatch": "depth77-pentacles-03",
   "sourceCounts": {
     "mainTextChineseCharacters": 1012,
     "completeArticleChineseCharacters": 1127
@@ -292,38 +211,29 @@
     "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
   },
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceCounts": {
-      "mainTextChineseCharacters": 1012,
-      "completeArticleChineseCharacters": 1127
-    },
-    "translation": {
-      "sourceLocale": "zh-CN",
-      "sourceCardId": "eight-of-pentacles",
-      "sourceArticleSha256": "ee02f8aa63a07ef6533eb247b8abea205ab805736ef16833ed61863d88a1ddc9",
-      "sourcePackage": "destinypixel-tarot-78-zh-CN",
-      "translatedOn": "2026-10-07",
-      "method": "ICU 76 Hans-Hant draft with editorial terminology and wording review",
-      "nativeHumanReview": false,
-      "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
-    }
-  },
-  "countsOriginal": {
-    "paragraphs": 14,
-    "sections": 8,
-    "unicodeCharacters": 1673,
-    "wordsWhitespaceSeparated": 67
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "ee02f8aa63a07ef6533eb247b8abea205ab805736ef16833ed61863d88a1ddc9",
-    "articleSha256": "563db8857897dbb091c90128b9e21785b6f1767ce93f75832db2916f50f61f9b",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "c1362565f580f062ee72c348d2da5cd4a41ea8c95e978242261661f0394cbd75",
+    "sourceArticleSha256": "c1362565f580f062ee72c348d2da5cd4a41ea8c95e978242261661f0394cbd75",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "ed32ba71025dab6db9a0cef3bc596649a16fba52240300ae107d15a53f9917ec",
+    "sourcePackageSha256": "4a2a350812ba92364e66ad88dbaeb30c412b354ac14751f97f487637be1053ca",
+    "previousRecord": "content/tarot/revisions/2026-10-08/eight-of-pentacles.zh-TW.json",
+    "editionBodySha256": "82ae240085856ffdac27e93498608425c6eae34b0df77aa966e95d0d85d621d3",
+    "translationSourceBodySha256": "c1362565f580f062ee72c348d2da5cd4a41ea8c95e978242261661f0394cbd75",
+    "translationPackageSha256": "f738e7730a6b5ad7ba539d2ea8c51e6a72efdc1d997c6812eb6bee3b47d376ee",
+    "translationLibraryFileId": "libfile_d48a171bd06081918441c34cbc46b229",
+    "translationRecordSha256": "77ba04581729e87b26175dc9600e139217ebad570130e34b39bee8c5f79d5549",
+    "translationPackage": "destinypixel-reviewed-pentacles.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

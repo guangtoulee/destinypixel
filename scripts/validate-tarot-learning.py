@@ -7,12 +7,16 @@ try:
 except ImportError:
  jsonschema=None
 schema=json.loads((data/'article.schema.json').read_text())
-chinese={p.stem:json.loads(p.read_text()) for p in (data/'zh').glob('*.json')}
+def original_record(path,locale):
+ archive=data/f'revisions/2026-10-08/{path.stem}.{locale}.json'
+ if path.stem=='sun':archive=data/f'revisions/2026-10-07/sun.{locale}.json'
+ return json.loads((archive if archive.exists() else path).read_text())
+chinese={p.stem:original_record(p,'zh') for p in (data/'zh').glob('*.json')}
 # Reconstruct the original approved collection using the retained Sun editions.
 # Current revised editions are validated separately by validate-tarot-editorial.py.
 chinese['sun']=json.loads((data/'revisions/2026-10-07/sun.zh.json').read_text())
 for locale in ['en','zh','zh-TW','ru']:
- records=[json.loads(p.read_text()) for p in (data/locale).glob('*.json')];records=[json.loads((data/f'revisions/2026-10-07/sun.{locale}.json').read_text()) if r['cardId']=='sun' else r for r in records];records.sort(key=lambda r:r['deckOrder'])
+ records=[original_record(p,locale) for p in (data/locale).glob('*.json')];records.sort(key=lambda r:r['deckOrder'])
  assert len(records)==78 and [r['deckOrder'] for r in records]==list(range(78))
  assert len({r['cardId'] for r in records})==78
  sourceLocale='zh-CN' if locale=='zh' else locale
@@ -44,4 +48,4 @@ for locale in ['en','zh','zh-TW','ru']:
  if base is None:base=identity
  else:assert identity==base,locale+' section/paragraph mismatch'
  print(f'PASS {locale}: 78 complete records; exact collection/text hashes, section/paragraph parity, existing assets'+('; JSON Schema' if jsonschema else ''))
-print('PASS original 312 approved records: 308 current + 4 archived Sun editions; run validate-tarot-editorial.py for the revision')
+print('PASS original 312 approved records reconstructed from unchanged live records and exact archives; revision validators check new text separately')

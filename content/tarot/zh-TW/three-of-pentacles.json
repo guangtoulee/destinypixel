@@ -14,15 +14,15 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "星幣三 把各自的本事接成同一件作品",
-  "plainLanguageSummary": "好的協作，需要專業被看見，也需要標準被說清。",
+  "plainLanguageSummary": null,
   "keywords": [
     "技藝",
     "協作",
     "標準"
   ],
   "quickTake": {
-    "upright": "用得上的本事遇到清楚的配合，作品才能扎實。",
-    "reversed": "分工或標準沒對齊，大家都忙卻很難接上。"
+    "upright": "用得上的本事遇到清楚的配合，作品才能紮實。",
+    "reversed": "分工或標準還沒達成共識，大家都忙卻很難接上。"
   },
   "hook": "星幣三的三個人沒有做同一個動作：一個站上工作台，兩個在下方看向他。共同完成一件事，有時正需要大家站在不同的位置。",
   "sections": [
@@ -31,6 +31,12 @@
       "role": "image",
       "title": "先看工作台，再看那張紙",
       "bodyMarkdown": "石造尖拱佔據畫面上方，三枚星幣嵌在拱內裝飾中，顏色接近灰白，和其他星幣牌常見的黃色圓盤不同。左側人物站在長凳或工作台上，身邊有工具，身體轉向右側兩人。\n\n右側一人穿灰色長袍，另一人披著有紅色圓點的衣物、拿著展開的紙張。紙面有線條，能聯想到圖樣，但畫面沒有標出它的內容。三個人的視線與姿勢圍繞同一個工作場景匯合，尚不能僅憑服裝確定每個人的職位與誰付錢。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents03.jpg)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "三個人是否真的在看同一件事",
+      "bodyMarkdown": "工匠站得較高，是工作位置使然；另外兩人手持資料，並不能據此確定誰比誰更重要。真正值得追蹤的是視線、工具和紙張如何圍繞建築相接。把畫面轉為現實問題，就是誰掌握操作細節，誰能說明需求，誰負責確認兩者接得上。\n\n星幣八強調一人把手藝練熟，星幣三讓技能進入他人也要使用的作品。兩張牌都談勞動，但解讀重心不同：技術動作出錯，可以回到練習；尺寸、用途或驗收標準不一致，則需要共同核對。團隊氣氛融洽並不足以替代這個步驟。"
     },
     {
       "id": "section-02",
@@ -48,13 +54,25 @@
       "id": "section-04",
       "role": "reversed",
       "title": "逆位 先檢查接縫處",
-      "bodyMarkdown": "當成果遲遲不成形，先看是不是每個人對「完成」有不同定義。有人以為已經定稿，有人還在收集想法；有人按舊尺寸製作，另一方卻已改了場地。修好這類接縫，往往比催大家更努力有效。\n\n如果技術本身尚不熟練，就把需要指導的部分指出來。承認還不會，並不等於沒有價值；把問題藏到最後，才更難得到有用的配合。"
+      "bodyMarkdown": "當成果遲遲不成形，先看是不是每個人對「完成」有不同定義。有人以為已經定稿，有人還在蒐集想法；有人按舊尺寸製作，另一方卻已改了場地。修好這類接縫，往往比催大家更努力有效。\n\n如果技術本身尚不熟練，就把需要指導的部分指出來。承認還不會，並不等於沒有價值；把問題藏到最後，才更難得到有用的配合。"
     },
     {
       "id": "section-05",
       "role": "situations",
       "title": "把協作放到可檢查的事情上",
       "bodyMarkdown": "工作評審前，帶上樣品和兩三個明確問題，比泛泛詢問「你覺得怎樣」更容易獲得有用意見。合做一份課程報告，先統一資料來源與結構，再各寫各的部分。\n\n共同佈置住處時，有人擅長量尺寸、有人負責使用需求，就讓兩種資訊一起決定方案。誰聲音大並不代表誰更瞭解每一個細節。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 社區展架先做一個角",
+      "bodyMarkdown": "原創虛構案例。社區展覽需要一組可重複使用的紙板展架。阿成會切割，小路負責文字，阿晴聯繫場地，三人都是業餘志工。行動建議位抽到星幣三正位，問題是「怎樣讓三個志工順利做出展架？」。\n\n圖中的工作者、工具與展開的紙讓解讀落到一個具體接點：先把現場尺寸、閱讀距離和製作能力放到同一張草圖上。站在凳上的人可提醒大家尊重實際操作限制，持紙者則提醒需求需要明確。不能因為人數也是三，就認定他們一定合作成功。\n\n他們先做一個展架轉角，用真實紙張試排文字，讓負責場地的人帶著尺寸照片核對通道。如果樣本穩定而文字仍看不清，就改字號和版面；若紙板承重本身不足，則請有經驗的人指導或改材料，不用「加強溝通」掩蓋技能問題。第一輪驗收只問站得穩不穩、看得清不清、能否按時裝好，分工隨著測試結果調整。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 都按要求做了為什麼仍要重做",
+      "bodyMarkdown": "原創虛構案例。一個社團準備新人手冊，排版者按舊目錄完成了大半，內容負責人卻在聊天裡新增數節；另一位校對仍拿著上週的版本。三個人都投入很多時間，也都認為別人沒有認真看要求。問題根源位出現星幣三逆位。 本次問題是：「這次團隊手冊為什麼一直改不完？」\n\n牌圖中本來相接的紙張與現場，在這裡像分成了幾個版本。優先解釋是共同標準失聯，而不是誰能力低下。逆位傳統裡有工作品質不足的詞，但不能跳過事實，把它變成對某位同伴的評價。現有證據已經足夠支持先修交接方式。\n\n他們暫停零散修改，確認一份當前版本，將「必須更正」和「以後新增」分開，並約定誰有權鎖定目錄。隨後請沒有參加編寫的人按手冊完成一次入會流程。如果流程依然難懂，說明除了版本問題，還有內容表達需要改進；若一份版本就消除了大半重做，則先前的摩擦不必再被解釋為個人不合。"
     },
     {
       "id": "section-06",
@@ -69,28 +87,34 @@
       "bodyMarkdown": "星幣三不能保證升職，也不表示人數湊到三個就會合作順利。它值得學習的，是把技能、需求和回饋真正連接起來，而不是只追求看起來像一個團隊。"
     },
     {
+      "id": "depth-reflection",
+      "role": "reflection",
+      "title": "認可應當落在工作條件裡",
+      "bodyMarkdown": "一張星幣三不替任何職業作資質證明。真實協作中，認真聽取專業意見與檢查交付品質可以同時進行。面對新人，也不要把尚未熟練當成不值得參與：可以縮小任務並安排指導。完成之後把貢獻寫清，讓幕後工作被看見，這才把牌裡的共同場景延伸成可持續的合作，而不只是一句「你們要團結」。"
+    },
+    {
       "id": "section-08",
       "role": "sources",
       "title": "原文與牌面",
-      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents03.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。"
+      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents03.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。"
     }
   ],
   "relatedCards": [],
   "sources": [
     {
       "sourceId": "three-of-pentacles-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：星幣三，Commons 所標 Pam-A 牌面",
       "url": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "three-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币三，Commons 所标 Pam-A 牌面",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：星幣三，Commons 所標 Pam-A 牌面",
         "url": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
         "observedFileVersion": "05:25, 6 April 2024 1,117 × 1,919 (869 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
+        "observedRepresentation": "當前原始 JPEG 文件",
         "sha256": "a8d826b099c0920329be52de5b96c0b2e5ddcfb45b8d109490e9ab74ae6f9eaa",
         "checkedAt": "2026-10-07"
       }
@@ -100,16 +124,23 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣三",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktpe03.htm",
-      "edition": "所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。",
+      "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "three-of-pentacles-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币三",
+        "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣三",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktpe03.htm",
         "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "three-of-pentacles-waite-crosscheck",
+      "type": "Waite 英文全文复核",
+      "title": "The Pictorial Key to the Tarot Part 3",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -159,123 +190,11 @@
       "sourcePageRevisionId": "1199314863"
     }
   },
-  "articleMarkdown": "# 星幣三 把各自的本事接成同一件作品\n\n好的協作，需要專業被看見，也需要標準被說清。\n\n關鍵詞：技藝、協作、標準\n\n正位速讀：用得上的本事遇到清楚的配合，作品才能扎實。\n\n逆位速讀：分工或標準沒對齊，大家都忙卻很難接上。\n\n星幣三的三個人沒有做同一個動作：一個站上工作台，兩個在下方看向他。共同完成一件事，有時正需要大家站在不同的位置。\n\n## 先看工作台，再看那張紙\n\n石造尖拱佔據畫面上方，三枚星幣嵌在拱內裝飾中，顏色接近灰白，和其他星幣牌常見的黃色圓盤不同。左側人物站在長凳或工作台上，身邊有工具，身體轉向右側兩人。\n\n右側一人穿灰色長袍，另一人披著有紅色圓點的衣物、拿著展開的紙張。紙面有線條，能聯想到圖樣，但畫面沒有標出它的內容。三個人的視線與姿勢圍繞同一個工作場景匯合，尚不能僅憑服裝確定每個人的職位與誰付錢。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents03.jpg)\n\n## 熟練勞動是舊義的重心\n\nWaite 將場所稱為修道院，把正在工作的人稱為雕刻師，並讓讀者與星幣八比較：學徒或業餘者已得到回報，現在認真投入。他列出的主要含義包括職業、行業與熟練勞動，也保留名聲、地位等舊說。\n\n逆位舊詞表對工作品質作出負面評價。本篇不把它變成人格判詞，而從畫面發展出溝通標準與協作流程的現代讀法；「三個人就必然是完美團隊」並非原文結論。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)\n\n## 正位 讓技能有被使用的位置\n\n正位關心的是你能貢獻什麼，以及貢獻怎樣接到共同目標上。熟練的人需要說明限制，負責安排的人需要聽懂實際操作，提出需求的人則要把期待變成可檢查的標準。\n\n認可不只是一句誇獎。給足時間、提供必要資料、允許專業判斷影響方案，才會讓能力真正發揮。協作中也應說清貢獻與責任，免得完成之後有人長期被遺漏。\n\n## 逆位 先檢查接縫處\n\n當成果遲遲不成形，先看是不是每個人對「完成」有不同定義。有人以為已經定稿，有人還在收集想法；有人按舊尺寸製作，另一方卻已改了場地。修好這類接縫，往往比催大家更努力有效。\n\n如果技術本身尚不熟練，就把需要指導的部分指出來。承認還不會，並不等於沒有價值；把問題藏到最後，才更難得到有用的配合。\n\n## 把協作放到可檢查的事情上\n\n工作評審前，帶上樣品和兩三個明確問題，比泛泛詢問「你覺得怎樣」更容易獲得有用意見。合做一份課程報告，先統一資料來源與結構，再各寫各的部分。\n\n共同佈置住處時，有人擅長量尺寸、有人負責使用需求，就讓兩種資訊一起決定方案。誰聲音大並不代表誰更瞭解每一個細節。\n\n## 練習 畫出一次交接\n\n選一個需要兩人以上完成的任務，寫下每個人提供什麼、交給誰、對方怎樣判斷能否接用。找到最模糊的一處，安排一次短確認，並留下雙方都能查到的記錄。\n\n## 容易看錯的地方\n\n星幣三不能保證升職，也不表示人數湊到三個就會合作順利。它值得學習的，是把技能、需求和回饋真正連接起來，而不是只追求看起來像一個團隊。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製。本篇實際查看的是當前原始 JPEG 文件，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents03.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。\n",
+  "articleMarkdown": "# 星幣三 把各自的本事接成同一件作品\n\n星幣三的三個人沒有做同一個動作：一個站上工作台，兩個在下方看向他。共同完成一件事，有時正需要大家站在不同的位置。\n\n## 先看工作台，再看那張紙\n\n石造尖拱佔據畫面上方，三枚星幣嵌在拱內裝飾中，顏色接近灰白，和其他星幣牌常見的黃色圓盤不同。左側人物站在長凳或工作台上，身邊有工具，身體轉向右側兩人。\n\n右側一人穿灰色長袍，另一人披著有紅色圓點的衣物、拿著展開的紙張。紙面有線條，能聯想到圖樣，但畫面沒有標出它的內容。三個人的視線與姿勢圍繞同一個工作場景匯合，尚不能僅憑服裝確定每個人的職位與誰付錢。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents03.jpg)\n\n## 三個人是否真的在看同一件事\n\n工匠站得較高，是工作位置使然；另外兩人手持資料，並不能據此確定誰比誰更重要。真正值得追蹤的是視線、工具和紙張如何圍繞建築相接。把畫面轉為現實問題，就是誰掌握操作細節，誰能說明需求，誰負責確認兩者接得上。\n\n星幣八強調一人把手藝練熟，星幣三讓技能進入他人也要使用的作品。兩張牌都談勞動，但解讀重心不同：技術動作出錯，可以回到練習；尺寸、用途或驗收標準不一致，則需要共同核對。團隊氣氛融洽並不足以替代這個步驟。\n\n## 熟練勞動是舊義的重心\n\nWaite 將場所稱為修道院，把正在工作的人稱為雕刻師，並讓讀者與星幣八比較：學徒或業餘者已得到回報，現在認真投入。他列出的主要含義包括職業、行業與熟練勞動，也保留名聲、地位等舊說。\n\n逆位舊詞表對工作品質作出負面評價。本篇不把它變成人格判詞，而從畫面發展出溝通標準與協作流程的現代讀法；「三個人就必然是完美團隊」並非原文結論。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)\n\n## 正位 讓技能有被使用的位置\n\n正位關心的是你能貢獻什麼，以及貢獻怎樣接到共同目標上。熟練的人需要說明限制，負責安排的人需要聽懂實際操作，提出需求的人則要把期待變成可檢查的標準。\n\n認可不只是一句誇獎。給足時間、提供必要資料、允許專業判斷影響方案，才會讓能力真正發揮。協作中也應說清貢獻與責任，免得完成之後有人長期被遺漏。\n\n## 逆位 先檢查接縫處\n\n當成果遲遲不成形，先看是不是每個人對「完成」有不同定義。有人以為已經定稿，有人還在蒐集想法；有人按舊尺寸製作，另一方卻已改了場地。修好這類接縫，往往比催大家更努力有效。\n\n如果技術本身尚不熟練，就把需要指導的部分指出來。承認還不會，並不等於沒有價值；把問題藏到最後，才更難得到有用的配合。\n\n## 把協作放到可檢查的事情上\n\n工作評審前，帶上樣品和兩三個明確問題，比泛泛詢問「你覺得怎樣」更容易獲得有用意見。合做一份課程報告，先統一資料來源與結構，再各寫各的部分。\n\n共同佈置住處時，有人擅長量尺寸、有人負責使用需求，就讓兩種資訊一起決定方案。誰聲音大並不代表誰更瞭解每一個細節。\n\n## 案例一 社區展架先做一個角\n\n原創虛構案例。社區展覽需要一組可重複使用的紙板展架。阿成會切割，小路負責文字，阿晴聯繫場地，三人都是業餘志工。行動建議位抽到星幣三正位，問題是「怎樣讓三個志工順利做出展架？」。\n\n圖中的工作者、工具與展開的紙讓解讀落到一個具體接點：先把現場尺寸、閱讀距離和製作能力放到同一張草圖上。站在凳上的人可提醒大家尊重實際操作限制，持紙者則提醒需求需要明確。不能因為人數也是三，就認定他們一定合作成功。\n\n他們先做一個展架轉角，用真實紙張試排文字，讓負責場地的人帶著尺寸照片核對通道。如果樣本穩定而文字仍看不清，就改字號和版面；若紙板承重本身不足，則請有經驗的人指導或改材料，不用「加強溝通」掩蓋技能問題。第一輪驗收只問站得穩不穩、看得清不清、能否按時裝好，分工隨著測試結果調整。\n\n## 案例二 都按要求做了為什麼仍要重做\n\n原創虛構案例。一個社團準備新人手冊，排版者按舊目錄完成了大半，內容負責人卻在聊天裡新增數節；另一位校對仍拿著上週的版本。三個人都投入很多時間，也都認為別人沒有認真看要求。問題根源位出現星幣三逆位。 本次問題是：「這次團隊手冊為什麼一直改不完？」\n\n牌圖中本來相接的紙張與現場，在這裡像分成了幾個版本。優先解釋是共同標準失聯，而不是誰能力低下。逆位傳統裡有工作品質不足的詞，但不能跳過事實，把它變成對某位同伴的評價。現有證據已經足夠支持先修交接方式。\n\n他們暫停零散修改，確認一份當前版本，將「必須更正」和「以後新增」分開，並約定誰有權鎖定目錄。隨後請沒有參加編寫的人按手冊完成一次入會流程。如果流程依然難懂，說明除了版本問題，還有內容表達需要改進；若一份版本就消除了大半重做，則先前的摩擦不必再被解釋為個人不合。\n\n## 練習 畫出一次交接\n\n選一個需要兩人以上完成的任務，寫下每個人提供什麼、交給誰、對方怎樣判斷能否接用。找到最模糊的一處，安排一次短確認，並留下雙方都能查到的記錄。\n\n## 容易看錯的地方\n\n星幣三不能保證升職，也不表示人數湊到三個就會合作順利。它值得學習的，是把技能、需求和回饋真正連接起來，而不是只追求看起來像一個團隊。\n\n## 認可應當落在工作條件裡\n\n一張星幣三不替任何職業作資質證明。真實協作中，認真聽取專業意見與檢查交付品質可以同時進行。面對新人，也不要把尚未熟練當成不值得參與：可以縮小任務並安排指導。完成之後把貢獻寫清，讓幕後工作被看見，這才把牌裡的共同場景延伸成可持續的合作，而不只是一句「你們要團結」。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents03.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "three",
-    "nameZh": "星币三",
-    "title": "星币三 把各自的本事接成同一件作品",
-    "oneLiner": "好的协作，需要专业被看见，也需要标准被说清。",
-    "keywords": [
-      "技艺",
-      "协作",
-      "标准"
-    ],
-    "uprightQuickTake": "用得上的本事遇到清楚的配合，作品才能扎实。",
-    "reversedQuickTake": "分工或标准没对齐，大家都忙却很难接上。",
-    "hook": "星币三的三个人没有做同一个动作：一个站上工作台，两个在下方看向他。共同完成一件事，有时正需要大家站在不同的位置。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "先看工作台，再看那张纸",
-        "paragraphs": [
-          "石造尖拱占据画面上方，三枚星币嵌在拱内装饰中，颜色接近灰白，和其他星币牌常见的黄色圆盘不同。左侧人物站在长凳或工作台上，身边有工具，身体转向右侧两人。",
-          "右侧一人穿灰色长袍，另一人披着有红色圆点的衣物、拿着展开的纸张。纸面有线条，能联想到图样，但画面没有标出它的内容。三个人的视线与姿势围绕同一个工作场景汇合，尚不能仅凭服装确定每个人的职位与谁付钱。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents03.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "熟练劳动是旧义的重心",
-        "paragraphs": [
-          "Waite 将场所称为修道院，把正在工作的人称为雕刻师，并让读者与星币八比较：学徒或业余者已得到回报，现在认真投入。他列出的主要含义包括职业、行业与熟练劳动，也保留名声、地位等旧说。",
-          "逆位旧词表对工作品质作出负面评价。本篇不把它变成人格判词，而从画面发展出沟通标准与协作流程的现代读法；“三个人就必然是完美团队”并非原文结论。 [核对 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe03.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 让技能有被使用的位置",
-        "paragraphs": [
-          "正位关心的是你能贡献什么，以及贡献怎样接到共同目标上。熟练的人需要说明限制，负责安排的人需要听懂实际操作，提出需求的人则要把期待变成可检查的标准。",
-          "认可不只是一句夸奖。给足时间、提供必要资料、允许专业判断影响方案，才会让能力真正发挥。协作中也应说清贡献与责任，免得完成之后有人长期被遗漏。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 先检查接缝处",
-        "paragraphs": [
-          "当成果迟迟不成形，先看是不是每个人对“完成”有不同定义。有人以为已经定稿，有人还在收集想法；有人按旧尺寸制作，另一方却已改了场地。修好这类接缝，往往比催大家更努力有效。",
-          "如果技术本身尚不熟练，就把需要指导的部分指出来。承认还不会，并不等于没有价值；把问题藏到最后，才更难得到有用的配合。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "把协作放到可检查的事情上",
-        "paragraphs": [
-          "工作评审前，带上样品和两三个明确问题，比泛泛询问“你觉得怎样”更容易获得有用意见。合做一份课程报告，先统一资料来源与结构，再各写各的部分。",
-          "共同布置住处时，有人擅长量尺寸、有人负责使用需求，就让两种信息一起决定方案。谁声音大并不代表谁更了解每一个细节。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 画出一次交接",
-        "paragraphs": [
-          "选一个需要两人以上完成的任务，写下每个人提供什么、交给谁、对方怎样判断能否接用。找到最模糊的一处，安排一次短确认，并留下双方都能查到的记录。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "星币三不能保证升职，也不表示人数凑到三个就会合作顺利。它值得学习的，是把技能、需求和反馈真正连接起来，而不是只追求看起来像一个团队。"
-        ]
-      }
-    ],
-    "cardId": "three-of-pentacles",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "III",
-    "ordinal": 3,
-    "arcana": "minor",
-    "suit": "pentacles",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameEn": "Three of Pentacles",
-    "articleSlug": "tarot-three-of-pentacles-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "three-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币三，Commons 所标 Pam-A 牌面",
-        "url": "https://commons.wikimedia.org/wiki/File:Pents03.jpg",
-        "observedFileVersion": "05:25, 6 April 2024 1,117 × 1,919 (869 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "当前原始 JPEG 文件",
-        "sha256": "a8d826b099c0920329be52de5b96c0b2e5ddcfb45b8d109490e9ab74ae6f9eaa",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "three-of-pentacles-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币三",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktpe03.htm",
-        "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "sourceClaimBoundary": "修道院雕刻师及与星币八的比较；熟练劳动与职业。清楚分工、交接和标准为本篇现代反思。",
-    "chineseCharacterCount": 970
-  },
-  "sourceBatch": "pentacles",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 907,
-    "words": 2,
-    "articleUtf8Bytes": 4092
-  },
+  "sourceBatch": "depth77-pentacles-01",
   "sourceCounts": {
     "mainTextChineseCharacters": 996,
     "completeArticleChineseCharacters": 1111
@@ -292,38 +211,29 @@
     "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
   },
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceCounts": {
-      "mainTextChineseCharacters": 996,
-      "completeArticleChineseCharacters": 1111
-    },
-    "translation": {
-      "sourceLocale": "zh-CN",
-      "sourceCardId": "three-of-pentacles",
-      "sourceArticleSha256": "7b31af9b69a5f0bb1a8c08ebb97245c69ca5190d3973c8b997820bad5c5cb46b",
-      "sourcePackage": "destinypixel-tarot-78-zh-CN",
-      "translatedOn": "2026-10-07",
-      "method": "ICU 76 Hans-Hant draft with editorial terminology and wording review",
-      "nativeHumanReview": false,
-      "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
-    }
-  },
-  "countsOriginal": {
-    "paragraphs": 14,
-    "sections": 8,
-    "unicodeCharacters": 1644,
-    "wordsWhitespaceSeparated": 66
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "7b31af9b69a5f0bb1a8c08ebb97245c69ca5190d3973c8b997820bad5c5cb46b",
-    "articleSha256": "64a3d1b9ddaabd8771146f1c6e67061c45e8e0fa66bbb420f62bd6213de8a0bb",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "059aa72470b619a86bc27727d0812ea23341a3e59a89cd118f5f54f85ad3f9db",
+    "sourceArticleSha256": "059aa72470b619a86bc27727d0812ea23341a3e59a89cd118f5f54f85ad3f9db",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "2c2dd69665e15cc8a59d05a6708fa413ac7257fb6f7e12aa84e7a0bccf70c64f",
+    "sourcePackageSha256": "967d7e4e7cba043e10c0b17aad3570c38fae90686ffca62f375d0d6f6418b22e",
+    "previousRecord": "content/tarot/revisions/2026-10-08/three-of-pentacles.zh-TW.json",
+    "editionBodySha256": "ca86e6fd044eeb0cca563b75851fb662343621fe29c0ed1d58f05e8781b3ac8d",
+    "translationSourceBodySha256": "059aa72470b619a86bc27727d0812ea23341a3e59a89cd118f5f54f85ad3f9db",
+    "translationPackageSha256": "f738e7730a6b5ad7ba539d2ea8c51e6a72efdc1d997c6812eb6bee3b47d376ee",
+    "translationLibraryFileId": "libfile_d48a171bd06081918441c34cbc46b229",
+    "translationRecordSha256": "f4e7d11ea3ee8b8ece94cd3992c953c9581045515e9cb0e08915243a8e994fa3",
+    "translationPackage": "destinypixel-reviewed-pentacles.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

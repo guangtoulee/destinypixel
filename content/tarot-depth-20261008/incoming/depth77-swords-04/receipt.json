@@ -1,0 +1,30 @@
+{
+  "batchId": "depth77-swords-04",
+  "sourcePackageSha256": "e7ac4168e63486457b391b6c7a39970053570391ce8035209408f729b24688ba",
+  "origin": "parent thread 01a118a5-9b43-72c3-b4fe-a05e2232d0e4 reviewed full JSON message",
+  "records": [
+    {
+      "cardId": "nine-of-swords",
+      "route": "/journal/tarot-nine-of-swords",
+      "articleSha256": "2cf8f666a2f8f48e74f79139e3c0bf0650bd04b1db61ad7ffe3213753d001339",
+      "characters": 2948,
+      "sectionCount": 11
+    },
+    {
+      "cardId": "ten-of-swords",
+      "route": "/journal/tarot-ten-of-swords",
+      "articleSha256": "47f80b45a19ea9a999d895e619362d382b0885350176620d6bf1ce1319a4349e",
+      "characters": 2946,
+      "sectionCount": 11
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}

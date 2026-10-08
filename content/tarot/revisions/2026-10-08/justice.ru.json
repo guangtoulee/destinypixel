@@ -1,0 +1,409 @@
+{
+  "cardId": "justice",
+  "number": "XI",
+  "roman": "XI",
+  "nameZh": "正义",
+  "nameEn": "Justice",
+  "locale": "ru",
+  "arcana": "major",
+  "deckSystem": "RWS",
+  "title": "Справедливость: соберите факты, прежде чем решать",
+  "keywords": [
+    "Беспристрастность",
+    "Доказательства",
+    "Ответственность"
+  ],
+  "quickTake": {
+    "upright": "Проясните факты и критерии, а затем принимайте решение по одной мерке для всех.",
+    "reversed": "Суждение может быть пристрастным. Проверьте упущенные факты, двойные стандарты и непринятую ответственность."
+  },
+  "hook": "Когда что-то кажется несправедливым, не спешите давать человеку окончательную оценку. Эта карта предлагает рассмотреть вместе факты, критерии и ответственность каждой стороны.",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "Одна рука взвешивает, другая держит меч",
+      "bodyMarkdown": "Фигура Справедливости сидит лицом к зрителю между двумя серыми колоннами. Глаза открыты, повязки нет. Золотую корону украшает синий квадрат; поверх красного одеяния лежит зелёная накидка, позади висит пурпурно-красная завеса. В правой руке фигуры, слева для зрителя, находится длинный вертикальный меч. Левая держит весы, две чаши которых свисают справа на рисунке.\n\nТело и сиденье расположены примерно по центру. Меч вытягивает вертикаль вверх, а весы разворачивают композицию в сторону. Из-под одежды виден носок ноги на ступени. Глаза, весы и меч позволяют последовательно подумать о внимательном взгляде, оценке и действии. Это современное прочтение композиции, а не три предписания, написанные на карте. [Посмотреть изображение карты](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Поступки и связанная с ними ответственность",
+      "bodyMarkdown": "Уэйт обсуждает нравственный принцип воздаяния по поступкам. Он также отличает эти колонны от колонн Жрицы: сходство композиции не требует одинакового смысла. Старый гадательный список действительно связывает Справедливость с беспристрастностью и правовыми вопросами. Но это историческая гадательная лексика, а не гарантия исхода современного дела. [Уэйт, часть II, XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm); [часть III, §3, пункт 11](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "Прямое положение: справедливость нуждается в ясных основаниях",
+      "bodyMarkdown": "Такое положение можно прочесть как повод проверить договорённости, прояснить ответственность и сделать выбор, который вы сможете объяснить. На чём основано решение? Применили бы вы тот же критерий, если бы речь шла о другом человеке?\n\nОтветственность включает исправление последствий собственных действий. Признать упущение, доделать работу или ясно извиниться полезнее, чем настаивать на хороших намерениях. Справедливость не всегда означает равные доли, но основания распределения должны быть доступны обсуждению и проверке."
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "Перевёрнутое положение: не прижимает ли кто-то чашу весов",
+      "bodyMarkdown": "Проверьте предвзятость, нехватку сведений, уход от ответственности или чрезмерно суровые правила. В перевёрнутом значении Уэйт упоминает узость взглядов, пристрастность и излишнюю строгость. Мы превращаем это историческое соответствие в проверку процедуры: услышали ли только одну сторону, не изменили ли критерии задним числом, не возложили ли на человека последствия, которыми он не мог управлять?\n\nПеревёрнутая карта не доказывает ни вашу ошибку, ни чужую несправедливость. Если вы постоянно вините себя, разделите свои реальные действия, то, что можно исправить, и результаты, которые от вас не зависели."
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "Сделайте справедливость предметом конкретного разговора",
+      "bodyMarkdown": "Соседи делят домашние дела, но кому-то всё время кажется, что он делает больше. Сначала запишите реальный объём за неделю, затем обсудите частоту, трудность и свободное время каждого, а не только громкость жалоб.\n\nПри оценке работ в команде заранее согласуйте точность, удобство и полноту как критерии, затем приводите примеры по каждому. Если сначала выбрать любимчика, а потом искать обоснования, пригодится проверка перевёрнутой карты.\n\nВ споре о возврате товара или услуге соберите заказ, переписку и условия, затем ясно сформулируйте требование. Если вопрос стал правовым, опирайтесь на доказательства и подходящую профессиональную помощь. Карта не устанавливает правонарушение и не предсказывает решение суда."
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "Практика: разложите оценку на три предложения",
+      "bodyMarkdown": "Возьмите недавнюю оценку, например «он всегда безответственный». Перепишите её так: какое конкретное поведение я заметил или заметила; к чему оно привело; чего я хочу дальше. Затем проверьте, не пропущены ли сведения, которые другая сторона может подтвердить."
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "Частая ошибка",
+      "bodyMarkdown": "Справедливость не означает, что страдающий обязательно виноват или что вселенная накажет кого-то за вас. Карта помогает прояснять ответственность и критерии. Столкнувшись с несправедливостью, вы по-прежнему можете обжаловать решение, обратиться за помощью и защищать свои права."
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "Что читать дальше",
+      "bodyMarkdown": "Император: сравните установление порядка с проверкой справедливости правил; Суд: сравните оценку ответственности с откликом на возможность начать заново."
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "Источники статьи",
+      "bodyMarkdown": "- [Памела Колман Смит: Справедливость, скан, обозначенный на Commons как Pam-A](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n- [А. Э. Уэйт, The Pictorial Key to the Tarot, часть II, §2, XI Справедливость](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)\n- [А. Э. Уэйт, The Pictorial Key to the Tarot, часть III, §3, пункт 11](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\nОб издании: описания изображений сверены с текущими сканами Pam-A на Commons. Ссылки на Уэйта относятся к английской транскрипции, обозначенной на страницах источника как [1911]. Современные ситуации, вопросы и упражнения — оригинальные учебные материалы DestinyPixel; платные базы толкований карт не использовались."
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "emperor",
+      "nameZh": "皇帝",
+      "reason": "Сравните установление порядка с проверкой справедливости правил",
+      "name": "Император"
+    },
+    {
+      "cardId": "judgement",
+      "nameZh": "审判",
+      "reason": "Сравните оценку ответственности с откликом на возможность начать заново",
+      "name": "Суд"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "justice-image",
+      "type": "image_observation",
+      "title": "Памела Колман Смит: Справедливость, скан, обозначенный на Commons как Pam-A",
+      "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描",
+        "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "justice-waite-symbolism",
+      "type": "primary_text",
+      "title": "А. Э. Уэйт, The Pictorial Key to the Tarot, часть II, §2, XI Справедливость",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+      "edition": "Английская транскрипция Sacred Texts с пометкой [1911]; физический экземпляр первого издания 1910 года для этого текста не проверялся.",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-waite-symbolism",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核到 1910 实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "justice-waite-divination",
+      "type": "primary_text",
+      "title": "А. Э. Уэйт, The Pictorial Key to the Tarot, часть III, §3, пункт 11",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+      "edition": "Английская транскрипция Sacred Texts с пометкой [1911].",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-waite-divination",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+    "creator": "Pamela Colman Smith",
+    "deckEdition": "Commons Pam-A scan",
+    "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+    "widthPx": 1114,
+    "heightPx": 1919,
+    "checkedOn": "2026-10-07",
+    "sourceMetadata": {
+      "creator": "Pamela Colman Smith",
+      "commonsFile": "RWS Tarot 11 Justice.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "versionLabel": "Commons 当前 Pam-A 扫描版，页面所标牌面年代为 1910",
+      "fileVersionUtc": "2026-04-18T02:23:00Z",
+      "versionTimestampPrecision": "minute",
+      "restoredFromUtc": "2024-04-04T06:10:00Z",
+      "dimensions": [
+        1114,
+        1919
+      ],
+      "localFile": "images/11-justice.jpg",
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "visualInspection": "已逐张打开实际 JPEG 像素核验；未把文件页说明当作图像观察",
+      "checkedAt": "2026-10-07",
+      "provenance": "Commons 当前说明链接 muzendo.jp/blog；当前文件由 Nosferattus 于 2026-04-18 回退至 TaionWC 于 2024-04-04 上传的扫描。2008 旧图的 Holly Voley 说明不可直接当作当前扫描来源。",
+      "rights": "Commons 页面当前标注 public domain / Public Domain Mark 1.0，且给出美国发表年代理由。本稿记录网站声明，不作全球版权保证；上线前按实际采用的文件、地区与平台规则复核。",
+      "productionAsset": "/tarot/rws/justice.webp",
+      "productionAssetComparison": "仅核验工程映射；未宣称站内 webp 与本次 Commons JPEG 像素一致。"
+    },
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "widthPx": 1114,
+      "heightPx": 1919,
+      "bytes": 893399,
+      "basis": "commons_original_jpeg",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/justice.jpg",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "observationBasis": "commons_original_jpeg",
+    "repositoryAssetInspected": false
+  },
+  "articleMarkdown": "# Справедливость: соберите факты, прежде чем решать\n\nКарта: Справедливость  \nНомер: XI · Старшие арканы RWS  \nКлючевые слова: Беспристрастность, Доказательства, Ответственность\n\n**Кратко о прямом положении:** Проясните факты и критерии, а затем принимайте решение по одной мерке для всех.  \n**Кратко о перевёрнутом положении:** Суждение может быть пристрастным. Проверьте упущенные факты, двойные стандарты и непринятую ответственность.\n\nКогда что-то кажется несправедливым, не спешите давать человеку окончательную оценку. Эта карта предлагает рассмотреть вместе факты, критерии и ответственность каждой стороны.\n\n## Одна рука взвешивает, другая держит меч\n\nФигура Справедливости сидит лицом к зрителю между двумя серыми колоннами. Глаза открыты, повязки нет. Золотую корону украшает синий квадрат; поверх красного одеяния лежит зелёная накидка, позади висит пурпурно-красная завеса. В правой руке фигуры, слева для зрителя, находится длинный вертикальный меч. Левая держит весы, две чаши которых свисают справа на рисунке.\n\nТело и сиденье расположены примерно по центру. Меч вытягивает вертикаль вверх, а весы разворачивают композицию в сторону. Из-под одежды виден носок ноги на ступени. Глаза, весы и меч позволяют последовательно подумать о внимательном взгляде, оценке и действии. Это современное прочтение композиции, а не три предписания, написанные на карте. [Посмотреть изображение карты](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n\n## Поступки и связанная с ними ответственность\n\nУэйт обсуждает нравственный принцип воздаяния по поступкам. Он также отличает эти колонны от колонн Жрицы: сходство композиции не требует одинакового смысла. Старый гадательный список действительно связывает Справедливость с беспристрастностью и правовыми вопросами. Но это историческая гадательная лексика, а не гарантия исхода современного дела. [Уэйт, часть II, XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm); [часть III, §3, пункт 11](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\n## Прямое положение: справедливость нуждается в ясных основаниях\n\nТакое положение можно прочесть как повод проверить договорённости, прояснить ответственность и сделать выбор, который вы сможете объяснить. На чём основано решение? Применили бы вы тот же критерий, если бы речь шла о другом человеке?\n\nОтветственность включает исправление последствий собственных действий. Признать упущение, доделать работу или ясно извиниться полезнее, чем настаивать на хороших намерениях. Справедливость не всегда означает равные доли, но основания распределения должны быть доступны обсуждению и проверке.\n\n## Перевёрнутое положение: не прижимает ли кто-то чашу весов\n\nПроверьте предвзятость, нехватку сведений, уход от ответственности или чрезмерно суровые правила. В перевёрнутом значении Уэйт упоминает узость взглядов, пристрастность и излишнюю строгость. Мы превращаем это историческое соответствие в проверку процедуры: услышали ли только одну сторону, не изменили ли критерии задним числом, не возложили ли на человека последствия, которыми он не мог управлять?\n\nПеревёрнутая карта не доказывает ни вашу ошибку, ни чужую несправедливость. Если вы постоянно вините себя, разделите свои реальные действия, то, что можно исправить, и результаты, которые от вас не зависели.\n\n## Сделайте справедливость предметом конкретного разговора\n\nСоседи делят домашние дела, но кому-то всё время кажется, что он делает больше. Сначала запишите реальный объём за неделю, затем обсудите частоту, трудность и свободное время каждого, а не только громкость жалоб.\n\nПри оценке работ в команде заранее согласуйте точность, удобство и полноту как критерии, затем приводите примеры по каждому. Если сначала выбрать любимчика, а потом искать обоснования, пригодится проверка перевёрнутой карты.\n\nВ споре о возврате товара или услуге соберите заказ, переписку и условия, затем ясно сформулируйте требование. Если вопрос стал правовым, опирайтесь на доказательства и подходящую профессиональную помощь. Карта не устанавливает правонарушение и не предсказывает решение суда.\n\n## Практика: разложите оценку на три предложения\n\nВозьмите недавнюю оценку, например «он всегда безответственный». Перепишите её так: какое конкретное поведение я заметил или заметила; к чему оно привело; чего я хочу дальше. Затем проверьте, не пропущены ли сведения, которые другая сторона может подтвердить.\n\n## Частая ошибка\n\nСправедливость не означает, что страдающий обязательно виноват или что вселенная накажет кого-то за вас. Карта помогает прояснять ответственность и критерии. Столкнувшись с несправедливостью, вы по-прежнему можете обжаловать решение, обратиться за помощью и защищать свои права.\n\n## Что читать дальше\n\nИмператор: сравните установление порядка с проверкой справедливости правил; Суд: сравните оценку ответственности с откликом на возможность начать заново.\n\n## Источники статьи\n\n- [Памела Колман Смит: Справедливость, скан, обозначенный на Commons как Pam-A](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n- [А. Э. Уэйт, The Pictorial Key to the Tarot, часть II, §2, XI Справедливость](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)\n- [А. Э. Уэйт, The Pictorial Key to the Tarot, часть III, §3, пункт 11](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\nОб издании: описания изображений сверены с текущими сканами Pam-A на Commons. Ссылки на Уэйта относятся к английской транскрипции, обозначенной на страницах источника как [1911]. Современные ситуации, вопросы и упражнения — оригинальные учебные материалы DestinyPixel; платные базы толкований карт не использовались.\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 0,
+    "words": 516,
+    "articleUtf8Bytes": 9808
+  },
+  "sourceRecord": {
+    "cardId": "justice",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": 11,
+    "roman": "XI",
+    "arcana": "major",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "正义",
+    "nameEn": "Justice",
+    "title": "正义牌义 先把事实摆齐，再作决定",
+    "hook": "觉得不公平时，先别急着给人定性。正义让你把证据、标准和各自承担的责任放到同一张桌上。",
+    "keywords": [
+      "公平",
+      "证据",
+      "责任"
+    ],
+    "uprightQuickTake": "把事实和标准摆明，按同一把尺子作决定。",
+    "reversedQuickTake": "判断可能偏了，查查漏掉的证据、双重标准和没承担的责任。",
+    "articleSlug": "tarot-justice-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "一只手衡量，一只手持剑",
+        "paragraphs": [
+          "正义正面坐在两根灰色柱子之间，眼睛睁开，没有蒙眼。头戴金色冠，冠上嵌着一块蓝色方形装饰；红袍外搭绿色披肩，背后垂着紫红色帷幕。人物的右手，也就是画面左侧，握住一把直立长剑；左手提着天平，两只秤盘悬在画面右边。",
+          "身体与座位大致居中，剑却拉出更高的竖线，秤盘则向侧面展开。脚尖从袍摆下露出，落在台阶上。眼睛、天平和剑在同一个画面里，可依次提醒读者留意「看清、衡量、执行」；这是从构图出发的现代阅读，不是牌面写出的三条律令。[查看本篇牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "这里谈的是行为与相应责任",
+        "paragraphs": [
+          "Waite 关注按照行为给予相应对待的道德原则。他还把这里的柱子与女祭司两侧的柱子作了区分，提醒读者相似构图不必拥有相同意义。旧占辞表确实把正义联系到公平及法律情境，但那是历史占卜用语，不能当成今日案件结果的保证。[Waite 第二部 XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)；[第三部 §3，第11条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 公平需要说得清的依据",
+        "paragraphs": [
+          "正位可读作适合核对约定、厘清责任、作出可解释的选择。你可以问：这项决定依据什么？同样的情况发生在另一个人身上，我还会用这套标准吗？",
+          "责任也包括修正自己造成的影响。承认遗漏、补齐交付、清楚道歉，比坚持「我的本意是好的」更接近这张牌可实践的部分。公平不一定人人分到一样多，但分配理由应能被讨论和检验。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 先检查秤有没有被手指压住",
+        "paragraphs": [
+          "逆位可提示偏见、信息缺漏、逃避责任，也可能是规则本身过于苛刻。Waite 的逆位词条提到偏狭、偏见与过度严厉，提供了历史上的对应线索。本站将它具体化为核对流程：有没有只听一方、事后改标准，或把无法控制的后果全算到某个人头上？",
+          "抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "把公平落在可讨论的安排上",
+        "paragraphs": [
+          "室友分摊家务，有人总觉得自己做得多。先记录一周真实工作量，再讨论频率、难度和各自空闲时间，别只比较谁抱怨得更大声。",
+          "团队评作品时，先约定准确性、易用性与完成度的标准，再逐项举例。若先决定喜欢谁、之后才寻找理由，逆位的检查就有用了。",
+          "退货或服务纠纷中，可整理订单、聊天记录和双方约定，清楚提出诉求。若涉及法律争议，依据证据并咨询合适的专业人士；一张牌不能认定谁违法或预测裁判。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 把判断拆成三句",
+        "paragraphs": [
+          "挑一句最近说过的评价，例如「他总是不负责」。改写为：我观察到什么具体行为；它造成什么影响；我希望接下来怎么处理。再检查有没有遗漏对方能够核实的信息。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "容易看错的地方",
+        "paragraphs": [
+          "正义不等于「受苦的人一定有错」，也不是宇宙会替你惩罚谁。它适合帮助你看清责任和标准；面对不公时，你仍可申诉、求助并保护自己的权益。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "emperor",
+        "nameZh": "皇帝",
+        "reason": "比较建立秩序与审查规则是否公平"
+      },
+      {
+        "cardId": "judgement",
+        "nameZh": "审判",
+        "reason": "比较衡量责任与回应重新开始的召唤"
+      }
+    ],
+    "sources": [
+      {
+        "id": "justice-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描",
+        "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "justice-waite-symbolism",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核到 1910 实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "justice-waite-divination",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "creator": "Pamela Colman Smith",
+      "commonsFile": "RWS Tarot 11 Justice.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "versionLabel": "Commons 当前 Pam-A 扫描版，页面所标牌面年代为 1910",
+      "fileVersionUtc": "2026-04-18T02:23:00Z",
+      "versionTimestampPrecision": "minute",
+      "restoredFromUtc": "2024-04-04T06:10:00Z",
+      "dimensions": [
+        1114,
+        1919
+      ],
+      "localFile": "images/11-justice.jpg",
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "visualInspection": "已逐张打开实际 JPEG 像素核验；未把文件页说明当作图像观察",
+      "checkedAt": "2026-10-07",
+      "provenance": "Commons 当前说明链接 muzendo.jp/blog；当前文件由 Nosferattus 于 2026-04-18 回退至 TaionWC 于 2024-04-04 上传的扫描。2008 旧图的 Holly Voley 说明不可直接当作当前扫描来源。",
+      "rights": "Commons 页面当前标注 public domain / Public Domain Mark 1.0，且给出美国发表年代理由。本稿记录网站声明，不作全球版权保证；上线前按实际采用的文件、地区与平台规则复核。",
+      "productionAsset": "/tarot/rws/justice.webp",
+      "productionAssetComparison": "仅核验工程映射；未宣称站内 webp 与本次 Commons JPEG 像素一致。"
+    },
+    "chineseCharacterCount": 1167
+  },
+  "sourceBatch": "batch-8-14",
+  "deckOrder": 11,
+  "majorNumber": 11,
+  "suit": null,
+  "rank": null,
+  "rankOrder": null,
+  "plainLanguageSummary": null,
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "name": "Справедливость",
+  "nameLocal": "Справедливость",
+  "translationSource": {
+    "locale": "zh-CN",
+    "file": "/workspace/shared/major-arcana/reviewed/major-arcana-22.zh-CN.json",
+    "fileSha256": "5a9a7c4795cd87c14f320967164af121f7092ca04922874ea4d56bb70de3a1a7",
+    "cardId": "justice",
+    "articleSha256": "f34d2f380d3feb3c5d4c4f4dd24f0e5808967d0968008dcba8fc4d2473033397",
+    "sectionIds": [
+      "section-01",
+      "section-02",
+      "section-03",
+      "section-04",
+      "section-05",
+      "section-06",
+      "section-07",
+      "section-08",
+      "section-09"
+    ],
+    "sourceUnchanged": true,
+    "translatedOn": "2026-10-07"
+  },
+  "nameLocalized": "Справедливость",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {
+    "nameLocal": "Справедливость",
+    "translationSource": {
+      "locale": "zh-CN",
+      "file": "/workspace/shared/major-arcana/reviewed/major-arcana-22.zh-CN.json",
+      "fileSha256": "5a9a7c4795cd87c14f320967164af121f7092ca04922874ea4d56bb70de3a1a7",
+      "cardId": "justice",
+      "articleSha256": "f34d2f380d3feb3c5d4c4f4dd24f0e5808967d0968008dcba8fc4d2473033397",
+      "sectionIds": [
+        "section-01",
+        "section-02",
+        "section-03",
+        "section-04",
+        "section-05",
+        "section-06",
+        "section-07",
+        "section-08",
+        "section-09"
+      ],
+      "sourceUnchanged": true,
+      "translatedOn": "2026-10-07"
+    }
+  },
+  "countsOriginal": {
+    "fullArticleCharacters": 5605,
+    "wordCount": 684,
+    "chineseCharacterCount": 0,
+    "sections": 9,
+    "paragraphBlocks": 15
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "f34d2f380d3feb3c5d4c4f4dd24f0e5808967d0968008dcba8fc4d2473033397",
+    "articleSha256": "bf543f48de6b47cb15bd2a9722454924ca574e7f8c417b19bd1cd2a2871f168d",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

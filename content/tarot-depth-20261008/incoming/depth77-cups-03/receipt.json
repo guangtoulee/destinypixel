@@ -1,0 +1,37 @@
+{
+  "batchId": "depth77-cups-03",
+  "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+  "origin": "parent thread 01a118a5-9b43-72c3-b4fe-a05e2232d0e4 reviewed full JSON message",
+  "records": [
+    {
+      "cardId": "six-of-cups",
+      "route": "/journal/tarot-six-of-cups",
+      "articleSha256": "dcb228c40e4efa8d7627acc29fb424cfd38497258ef5555c6be28a6b436a6cbd",
+      "characters": 2691,
+      "sectionCount": 10
+    },
+    {
+      "cardId": "seven-of-cups",
+      "route": "/journal/tarot-seven-of-cups",
+      "articleSha256": "adc63d2ee15cc53dbe55684daa88af25be795db5d202a8e88e63358b5371c996",
+      "characters": 2681,
+      "sectionCount": 10
+    },
+    {
+      "cardId": "eight-of-cups",
+      "route": "/journal/tarot-eight-of-cups",
+      "articleSha256": "570b59995fe92b2c4c45407adad34b435da42bebe5df366501ce2fc2a5189f78",
+      "characters": 2706,
+      "sectionCount": 10
+    }
+  ],
+  "editorialReview": "parent independently reviewed Chinese",
+  "translationReview": "parent final independent translation review; exact private Library packages",
+  "nativeHumanReview": false,
+  "integratedLocales": [
+    "zh",
+    "zh-TW",
+    "en",
+    "ru"
+  ]
+}
