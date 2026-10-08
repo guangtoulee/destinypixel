@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "destinypixel.editorial-revision.v1",
+  "reviewedAt": "2026-10-08",
+  "sourceDelivery": "Authorized task messages; Library transfer unavailable; all four manuscript and complete integration JSON hashes match source author values.",
+  "sourceBundleSha256": "9bffeb2c3b6eb876cf89706a3a4ae34246e95111c7bb011e8d2255f75b640feb",
+  "formatNormalization": "Message HTML entities restored to literal V&A; this recovers the exact source-author SHA-256.",
+  "translationReview": "Complete model-authored English and Russian translations; Traditional Chinese conversion followed by paragraph review and terminology corrections. No native-human certification.",
+  "manuscripts": {
+    "en/tarot-sun": {
+      "sha256": "a94addde0e8c92282ae94d781e8e307f7998696f7ae8cdedfcc2471d6266535d",
+      "sourceArticleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+      "sections": 6,
+      "blocks": [
+        4,
+        2,
+        4,
+        4,
+        6,
+        2
+      ]
+    },
+    "en/why-the-four-fours-differ": {
+      "sha256": "8c0a3bd12428043dace22af760b522d2cba4a6214152a3bcb55a518c0c0ba184",
+      "sourceArticleSha256": "6047e4daf0b79a2e7af530cbadb43aa548e4f0bdf6f7fa3fb4ac7764a424ff2a",
+      "sections": 5,
+      "blocks": [
+        4,
+        4,
+        3,
+        3,
+        1
+      ]
+    },
+    "en/how-to-connect-three-tarot-cards": {
+      "sha256": "e84a47cef66022edce223a7a9f96bc937117feee5aff70be9a84ab9e3af8509f",
+      "sourceArticleSha256": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+      "sections": 6,
+      "blocks": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    "en/tarot-from-game-to-occult-traditions": {
+      "sha256": "a9e30595309a9a2d9c301151c60223ff607dc2eb5d77a2e905c1ecaacc1b1d77",
+      "sourceArticleSha256": "dcc2802204549a4ecc77565e6ee134cbed432e51c687c606b8748f12c4816a08",
+      "sections": 5,
+      "blocks": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    "zh/tarot-sun": {
+      "sha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+      "sourceArticleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+      "sections": 6,
+      "blocks": [
+        4,
+        2,
+        4,
+        4,
+        6,
+        2
+      ]
+    },
+    "zh/why-the-four-fours-differ": {
+      "sha256": "6047e4daf0b79a2e7af530cbadb43aa548e4f0bdf6f7fa3fb4ac7764a424ff2a",
+      "sourceArticleSha256": "6047e4daf0b79a2e7af530cbadb43aa548e4f0bdf6f7fa3fb4ac7764a424ff2a",
+      "sections": 5,
+      "blocks": [
+        4,
+        4,
+        3,
+        3,
+        1
+      ]
+    },
+    "zh/how-to-connect-three-tarot-cards": {
+      "sha256": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+      "sourceArticleSha256": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+      "sections": 6,
+      "blocks": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    "zh/tarot-from-game-to-occult-traditions": {
+      "sha256": "dcc2802204549a4ecc77565e6ee134cbed432e51c687c606b8748f12c4816a08",
+      "sourceArticleSha256": "dcc2802204549a4ecc77565e6ee134cbed432e51c687c606b8748f12c4816a08",
+      "sections": 5,
+      "blocks": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    "zh-TW/tarot-sun": {
+      "sha256": "931adbfab5a64e82988fa51a7756de3fee429902b66b1547400c661d9853d8f3",
+      "sourceArticleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+      "sections": 6,
+      "blocks": [
+        4,
+        2,
+        4,
+        4,
+        6,
+        2
+      ]
+    },
+    "zh-TW/why-the-four-fours-differ": {
+      "sha256": "0ca0fdea72f5552afbbcaade1b3c48160b7b3dd6ccdea8124ea1f6d22ec81d05",
+      "sourceArticleSha256": "6047e4daf0b79a2e7af530cbadb43aa548e4f0bdf6f7fa3fb4ac7764a424ff2a",
+      "sections": 5,
+      "blocks": [
+        4,
+        4,
+        3,
+        3,
+        1
+      ]
+    },
+    "zh-TW/how-to-connect-three-tarot-cards": {
+      "sha256": "7582eba870d7d92c36235b192f0760fe8b5b7efb8e3f981be9912b121e261cf8",
+      "sourceArticleSha256": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+      "sections": 6,
+      "blocks": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    "zh-TW/tarot-from-game-to-occult-traditions": {
+      "sha256": "4776b7d155532c86b88eae969d7a02398d7998a443c3dc4dcf108126e314f6a7",
+      "sourceArticleSha256": "dcc2802204549a4ecc77565e6ee134cbed432e51c687c606b8748f12c4816a08",
+      "sections": 5,
+      "blocks": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    "ru/tarot-sun": {
+      "sha256": "569068a0333dbae141f392903b082e28b48f1910fbca10db6097a5961e164a7c",
+      "sourceArticleSha256": "d531476b578cc75e9ec08a4dd45025169e1a1be73a553647b4dcb124d4a53ad7",
+      "sections": 6,
+      "blocks": [
+        4,
+        2,
+        4,
+        4,
+        6,
+        2
+      ]
+    },
+    "ru/why-the-four-fours-differ": {
+      "sha256": "936f2ec8f1964ccb52492943c64d28c6c005406d4e6a2749d2c674de2cb17a84",
+      "sourceArticleSha256": "6047e4daf0b79a2e7af530cbadb43aa548e4f0bdf6f7fa3fb4ac7764a424ff2a",
+      "sections": 5,
+      "blocks": [
+        4,
+        4,
+        3,
+        3,
+        1
+      ]
+    },
+    "ru/how-to-connect-three-tarot-cards": {
+      "sha256": "1b6eaff46507e54502aaf6224c4e0aafc6d867d783225abc1ecf705faafff76d",
+      "sourceArticleSha256": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+      "sections": 6,
+      "blocks": [
+        3,
+        4,
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    "ru/tarot-from-game-to-occult-traditions": {
+      "sha256": "2e82169628de6268bad6e8e69d1b5780aae25e62d4931eb6410dca57309c960a",
+      "sourceArticleSha256": "dcc2802204549a4ecc77565e6ee134cbed432e51c687c606b8748f12c4816a08",
+      "sections": 5,
+      "blocks": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    }
+  },
+  "sunRecordSha256": {
+    "en": "7a9bfc31db907085620378e43b6afc38e7127ff537e76c1148747cfde82ca57f",
+    "zh": "1ec264f658cbb6609f73ad2d2ab1cec82aa33a967d05e27647a1638c18a454c5",
+    "zh-TW": "3a654ac2272f322bbf61250c7bc57c100d3446eab24471221c4d36f348b027c3",
+    "ru": "811fc95c3400c317b7830fe03c0f5d6390a49ee6e6d4346bd1012f2d408315b6"
+  }
+}

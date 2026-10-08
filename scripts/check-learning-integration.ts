@@ -20,7 +20,7 @@ async function main(){
   assert.ok(decode(tarot).includes(`href="/journal/tarot-cards${suffix}"`));assert.ok(decode(oracle).includes(`href="/journal/hexagrams${suffix}"`));
   console.log(`PASS ${locale}: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist`);
  }
- assert.equal(urls.filter(u=>new URL(u).pathname.startsWith('/journal')).length,872);
- console.log('PASS combined journal: 856 article editions + 16 index/directory editions, all unique');
+ assert.equal(urls.filter(u=>new URL(u).pathname.startsWith('/journal')).length,884);
+ console.log('PASS combined journal: 868 article editions + 16 index/directory editions, all unique');
 }
 main().catch(e=>{console.error(e);process.exitCode=1});

@@ -82,7 +82,7 @@ test("articles have translated sections, truthful free Article schema and useful
       assert.ok(!/\/(prompt|juben|daoyan|image|english|danci)(?:\?|\/|$)/.test(article.translations[locale].action.href));
     }
     const copy = article.translations.en;
-    const body = [copy.introduction, copy.takeaway, ...copy.sections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.steps ?? []), ...(section.table ? [...section.table.headings, ...section.table.rows.flat()] : [])])].join(" ");
+    const body = [copy.introduction, ...(copy.openingParagraphs ?? []), copy.takeaway, ...copy.sections.flatMap((section) => [section.title, section.bodyMarkdown ?? "", ...section.paragraphs, ...(section.steps ?? []), ...(section.table ? [...section.table.headings, ...section.table.rows.flat()] : [])])].join(" ");
     const words = body.trim().split(/\s+/).length;
     assert.ok(words >= (article.kind === "portrait" ? 280 : 600), `${article.slug}: ${words} words`);
   }

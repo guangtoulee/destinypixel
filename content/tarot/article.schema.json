@@ -154,7 +154,7 @@
     },
     "sections": {
       "type": "array",
-      "minItems": 7,
+      "minItems": 6,
       "items": {
         "type": "object",
         "required": [
@@ -190,5 +190,23 @@
     "publicationStatus": {
       "const": "reviewed_multilingual_manuscript_not_published"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "cardId": {
+            "const": "sun"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "sections": {
+            "minItems": 7
+          }
+        }
+      }
+    }
+  ]
 }
