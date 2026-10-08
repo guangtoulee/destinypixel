@@ -1,0 +1,360 @@
+{
+  "cardId": "justice",
+  "number": "XI",
+  "roman": "XI",
+  "nameZh": "正义",
+  "nameEn": "Justice",
+  "locale": "zh-CN",
+  "arcana": "major",
+  "deckSystem": "RWS",
+  "title": "正义牌义 先把事实摆齐，再作决定",
+  "keywords": [
+    "公平",
+    "证据",
+    "责任"
+  ],
+  "quickTake": {
+    "upright": "把事实和标准摆明，按同一把尺子作决定。",
+    "reversed": "判断可能偏了，查查漏掉的证据、双重标准和没承担的责任。"
+  },
+  "hook": "觉得不公平时，先别急着给人定性。正义让你把证据、标准和各自承担的责任放到同一张桌上。",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "一只手衡量，一只手持剑",
+      "bodyMarkdown": "正义正面坐在两根灰色柱子之间，眼睛睁开，没有蒙眼。头戴金色冠，冠上嵌着一块蓝色方形装饰；红袍外搭绿色披肩，背后垂着紫红色帷幕。人物的右手，也就是画面左侧，握住一把直立长剑；左手提着天平，两只秤盘悬在画面右边。\n\n身体与座位大致居中，剑却拉出更高的竖线，秤盘则向侧面展开。脚尖从袍摆下露出，落在台阶上。眼睛、天平和剑在同一个画面里，可依次提醒读者留意「看清、衡量、执行」；这是从构图出发的现代阅读，不是牌面写出的三条律令。[查看本篇牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "这里谈的是行为与相应责任",
+      "bodyMarkdown": "Waite 关注按照行为给予相应对待的道德原则。他还把这里的柱子与女祭司两侧的柱子作了区分，提醒读者相似构图不必拥有相同意义。旧占辞表确实把正义联系到公平及法律情境，但那是历史占卜用语，不能当成今日案件结果的保证。[Waite 第二部 XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)；[第三部 §3，第11条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "正位 公平需要说得清的依据",
+      "bodyMarkdown": "正位可读作适合核对约定、厘清责任、作出可解释的选择。你可以问：这项决定依据什么？同样的情况发生在另一个人身上，我还会用这套标准吗？\n\n责任也包括修正自己造成的影响。承认遗漏、补齐交付、清楚道歉，比坚持「我的本意是好的」更接近这张牌可实践的部分。公平不一定人人分到一样多，但分配理由应能被讨论和检验。"
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "逆位 先检查秤有没有被手指压住",
+      "bodyMarkdown": "逆位可提示偏见、信息缺漏、逃避责任，也可能是规则本身过于苛刻。Waite 的逆位词条提到偏狭、偏见与过度严厉，提供了历史上的对应线索。本站将它具体化为核对流程：有没有只听一方、事后改标准，或把无法控制的后果全算到某个人头上？\n\n抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。"
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "把公平落在可讨论的安排上",
+      "bodyMarkdown": "室友分摊家务，有人总觉得自己做得多。先记录一周真实工作量，再讨论频率、难度和各自空闲时间，别只比较谁抱怨得更大声。\n\n团队评作品时，先约定准确性、易用性与完成度的标准，再逐项举例。若先决定喜欢谁、之后才寻找理由，逆位的检查就有用了。\n\n退货或服务纠纷中，可整理订单、聊天记录和双方约定，清楚提出诉求。若涉及法律争议，依据证据并咨询合适的专业人士；一张牌不能认定谁违法或预测裁判。"
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "练习 把判断拆成三句",
+      "bodyMarkdown": "挑一句最近说过的评价，例如「他总是不负责」。改写为：我观察到什么具体行为；它造成什么影响；我希望接下来怎么处理。再检查有没有遗漏对方能够核实的信息。"
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "容易看错的地方",
+      "bodyMarkdown": "正义不等于「受苦的人一定有错」，也不是宇宙会替你惩罚谁。它适合帮助你看清责任和标准；面对不公时，你仍可申诉、求助并保护自己的权益。"
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "接着读什么",
+      "bodyMarkdown": "皇帝：比较建立秩序与审查规则是否公平；审判：比较衡量责任与回应重新开始的召唤。"
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "本篇资料",
+      "bodyMarkdown": "- [Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\n版本说明：本篇逐图观察 Commons 当前 Pam-A 扫描；Waite 引文依据网页标注 [1911] 的英文转录。现代情境、提问与练习由 DestinyPixel 原创编写，未借用付费牌义内容。"
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "emperor",
+      "nameZh": "皇帝",
+      "reason": "比较建立秩序与审查规则是否公平"
+    },
+    {
+      "cardId": "judgement",
+      "nameZh": "审判",
+      "reason": "比较衡量责任与回应重新开始的召唤"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "justice-image",
+      "type": "画面观察",
+      "title": "Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描",
+      "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描",
+        "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "justice-waite-symbolism",
+      "type": "Waite 原文",
+      "title": "A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核到 1910 实体初版",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-waite-symbolism",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核到 1910 实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "justice-waite-divination",
+      "type": "Waite 原文",
+      "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "justice-waite-divination",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+    "creator": "Pamela Colman Smith",
+    "deckEdition": "Commons Pam-A scan",
+    "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+    "widthPx": 1114,
+    "heightPx": 1919,
+    "checkedOn": "2026-10-07",
+    "sourceMetadata": {
+      "creator": "Pamela Colman Smith",
+      "commonsFile": "RWS Tarot 11 Justice.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "versionLabel": "Commons 当前 Pam-A 扫描版，页面所标牌面年代为 1910",
+      "fileVersionUtc": "2026-04-18T02:23:00Z",
+      "versionTimestampPrecision": "minute",
+      "restoredFromUtc": "2024-04-04T06:10:00Z",
+      "dimensions": [
+        1114,
+        1919
+      ],
+      "localFile": "images/11-justice.jpg",
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "visualInspection": "已逐张打开实际 JPEG 像素核验；未把文件页说明当作图像观察",
+      "checkedAt": "2026-10-07",
+      "provenance": "Commons 当前说明链接 muzendo.jp/blog；当前文件由 Nosferattus 于 2026-04-18 回退至 TaionWC 于 2024-04-04 上传的扫描。2008 旧图的 Holly Voley 说明不可直接当作当前扫描来源。",
+      "rights": "Commons 页面当前标注 public domain / Public Domain Mark 1.0，且给出美国发表年代理由。本稿记录网站声明，不作全球版权保证；上线前按实际采用的文件、地区与平台规则复核。",
+      "productionAsset": "/tarot/rws/justice.webp",
+      "productionAssetComparison": "仅核验工程映射；未宣称站内 webp 与本次 Commons JPEG 像素一致。"
+    },
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "widthPx": 1114,
+      "heightPx": 1919,
+      "bytes": 893399,
+      "basis": "commons_original_jpeg",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/justice.jpg",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "observationBasis": "commons_original_jpeg",
+    "repositoryAssetInspected": false
+  },
+  "articleMarkdown": "# 正义牌义 先把事实摆齐，再作决定\n\n牌名：正义 Justice  \n牌号：XI · RWS 大阿尔卡那  \n关键词：公平、证据、责任\n\n**正位速读：** 把事实和标准摆明，按同一把尺子作决定。  \n**逆位速读：** 判断可能偏了，查查漏掉的证据、双重标准和没承担的责任。\n\n觉得不公平时，先别急着给人定性。正义让你把证据、标准和各自承担的责任放到同一张桌上。\n\n## 一只手衡量，一只手持剑\n\n正义正面坐在两根灰色柱子之间，眼睛睁开，没有蒙眼。头戴金色冠，冠上嵌着一块蓝色方形装饰；红袍外搭绿色披肩，背后垂着紫红色帷幕。人物的右手，也就是画面左侧，握住一把直立长剑；左手提着天平，两只秤盘悬在画面右边。\n\n身体与座位大致居中，剑却拉出更高的竖线，秤盘则向侧面展开。脚尖从袍摆下露出，落在台阶上。眼睛、天平和剑在同一个画面里，可依次提醒读者留意「看清、衡量、执行」；这是从构图出发的现代阅读，不是牌面写出的三条律令。[查看本篇牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n\n## 这里谈的是行为与相应责任\n\nWaite 关注按照行为给予相应对待的道德原则。他还把这里的柱子与女祭司两侧的柱子作了区分，提醒读者相似构图不必拥有相同意义。旧占辞表确实把正义联系到公平及法律情境，但那是历史占卜用语，不能当成今日案件结果的保证。[Waite 第二部 XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)；[第三部 §3，第11条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\n## 正位 公平需要说得清的依据\n\n正位可读作适合核对约定、厘清责任、作出可解释的选择。你可以问：这项决定依据什么？同样的情况发生在另一个人身上，我还会用这套标准吗？\n\n责任也包括修正自己造成的影响。承认遗漏、补齐交付、清楚道歉，比坚持「我的本意是好的」更接近这张牌可实践的部分。公平不一定人人分到一样多，但分配理由应能被讨论和检验。\n\n## 逆位 先检查秤有没有被手指压住\n\n逆位可提示偏见、信息缺漏、逃避责任，也可能是规则本身过于苛刻。Waite 的逆位词条提到偏狭、偏见与过度严厉，提供了历史上的对应线索。本站将它具体化为核对流程：有没有只听一方、事后改标准，或把无法控制的后果全算到某个人头上？\n\n抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。\n\n## 把公平落在可讨论的安排上\n\n室友分摊家务，有人总觉得自己做得多。先记录一周真实工作量，再讨论频率、难度和各自空闲时间，别只比较谁抱怨得更大声。\n\n团队评作品时，先约定准确性、易用性与完成度的标准，再逐项举例。若先决定喜欢谁、之后才寻找理由，逆位的检查就有用了。\n\n退货或服务纠纷中，可整理订单、聊天记录和双方约定，清楚提出诉求。若涉及法律争议，依据证据并咨询合适的专业人士；一张牌不能认定谁违法或预测裁判。\n\n## 练习 把判断拆成三句\n\n挑一句最近说过的评价，例如「他总是不负责」。改写为：我观察到什么具体行为；它造成什么影响；我希望接下来怎么处理。再检查有没有遗漏对方能够核实的信息。\n\n## 容易看错的地方\n\n正义不等于「受苦的人一定有错」，也不是宇宙会替你惩罚谁。它适合帮助你看清责任和标准；面对不公时，你仍可申诉、求助并保护自己的权益。\n\n## 接着读什么\n\n皇帝：比较建立秩序与审查规则是否公平；审判：比较衡量责任与回应重新开始的召唤。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)\n\n版本说明：本篇逐图观察 Commons 当前 Pam-A 扫描；Waite 引文依据网页标注 [1911] 的英文转录。现代情境、提问与练习由 DestinyPixel 原创编写，未借用付费牌义内容。\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 941,
+    "words": 4,
+    "articleUtf8Bytes": 4639
+  },
+  "sourceRecord": {
+    "cardId": "justice",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": 11,
+    "roman": "XI",
+    "arcana": "major",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "正义",
+    "nameEn": "Justice",
+    "title": "正义牌义 先把事实摆齐，再作决定",
+    "hook": "觉得不公平时，先别急着给人定性。正义让你把证据、标准和各自承担的责任放到同一张桌上。",
+    "keywords": [
+      "公平",
+      "证据",
+      "责任"
+    ],
+    "uprightQuickTake": "把事实和标准摆明，按同一把尺子作决定。",
+    "reversedQuickTake": "判断可能偏了，查查漏掉的证据、双重标准和没承担的责任。",
+    "articleSlug": "tarot-justice-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "一只手衡量，一只手持剑",
+        "paragraphs": [
+          "正义正面坐在两根灰色柱子之间，眼睛睁开，没有蒙眼。头戴金色冠，冠上嵌着一块蓝色方形装饰；红袍外搭绿色披肩，背后垂着紫红色帷幕。人物的右手，也就是画面左侧，握住一把直立长剑；左手提着天平，两只秤盘悬在画面右边。",
+          "身体与座位大致居中，剑却拉出更高的竖线，秤盘则向侧面展开。脚尖从袍摆下露出，落在台阶上。眼睛、天平和剑在同一个画面里，可依次提醒读者留意「看清、衡量、执行」；这是从构图出发的现代阅读，不是牌面写出的三条律令。[查看本篇牌面](https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "这里谈的是行为与相应责任",
+        "paragraphs": [
+          "Waite 关注按照行为给予相应对待的道德原则。他还把这里的柱子与女祭司两侧的柱子作了区分，提醒读者相似构图不必拥有相同意义。旧占辞表确实把正义联系到公平及法律情境，但那是历史占卜用语，不能当成今日案件结果的保证。[Waite 第二部 XI](https://original.sacred-texts.com/tarot/pkt/pktar11.htm)；[第三部 §3，第11条](https://original.sacred-texts.com/tarot/pkt/pkt0303.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 公平需要说得清的依据",
+        "paragraphs": [
+          "正位可读作适合核对约定、厘清责任、作出可解释的选择。你可以问：这项决定依据什么？同样的情况发生在另一个人身上，我还会用这套标准吗？",
+          "责任也包括修正自己造成的影响。承认遗漏、补齐交付、清楚道歉，比坚持「我的本意是好的」更接近这张牌可实践的部分。公平不一定人人分到一样多，但分配理由应能被讨论和检验。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 先检查秤有没有被手指压住",
+        "paragraphs": [
+          "逆位可提示偏见、信息缺漏、逃避责任，也可能是规则本身过于苛刻。Waite 的逆位词条提到偏狭、偏见与过度严厉，提供了历史上的对应线索。本站将它具体化为核对流程：有没有只听一方、事后改标准，或把无法控制的后果全算到某个人头上？",
+          "抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "把公平落在可讨论的安排上",
+        "paragraphs": [
+          "室友分摊家务，有人总觉得自己做得多。先记录一周真实工作量，再讨论频率、难度和各自空闲时间，别只比较谁抱怨得更大声。",
+          "团队评作品时，先约定准确性、易用性与完成度的标准，再逐项举例。若先决定喜欢谁、之后才寻找理由，逆位的检查就有用了。",
+          "退货或服务纠纷中，可整理订单、聊天记录和双方约定，清楚提出诉求。若涉及法律争议，依据证据并咨询合适的专业人士；一张牌不能认定谁违法或预测裁判。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 把判断拆成三句",
+        "paragraphs": [
+          "挑一句最近说过的评价，例如「他总是不负责」。改写为：我观察到什么具体行为；它造成什么影响；我希望接下来怎么处理。再检查有没有遗漏对方能够核实的信息。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "容易看错的地方",
+        "paragraphs": [
+          "正义不等于「受苦的人一定有错」，也不是宇宙会替你惩罚谁。它适合帮助你看清责任和标准；面对不公时，你仍可申诉、求助并保护自己的权益。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "emperor",
+        "nameZh": "皇帝",
+        "reason": "比较建立秩序与审查规则是否公平"
+      },
+      {
+        "cardId": "judgement",
+        "nameZh": "审判",
+        "reason": "比较衡量责任与回应重新开始的召唤"
+      }
+    ],
+    "sources": [
+      {
+        "id": "justice-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：Justice，Commons 所标 Pam-A 牌面扫描",
+        "url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "justice-waite-symbolism",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第二部 §2，XI Justice",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktar11.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核到 1910 实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "justice-waite-divination",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §3，第 11 条",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "creator": "Pamela Colman Smith",
+      "commonsFile": "RWS Tarot 11 Justice.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_11_Justice.jpg",
+      "versionLabel": "Commons 当前 Pam-A 扫描版，页面所标牌面年代为 1910",
+      "fileVersionUtc": "2026-04-18T02:23:00Z",
+      "versionTimestampPrecision": "minute",
+      "restoredFromUtc": "2024-04-04T06:10:00Z",
+      "dimensions": [
+        1114,
+        1919
+      ],
+      "localFile": "images/11-justice.jpg",
+      "sha256": "028645f4ed40a82035c410f4b7b5b00adbdcdf1c21ffd706cddeaf9227e0151d",
+      "visualInspection": "已逐张打开实际 JPEG 像素核验；未把文件页说明当作图像观察",
+      "checkedAt": "2026-10-07",
+      "provenance": "Commons 当前说明链接 muzendo.jp/blog；当前文件由 Nosferattus 于 2026-04-18 回退至 TaionWC 于 2024-04-04 上传的扫描。2008 旧图的 Holly Voley 说明不可直接当作当前扫描来源。",
+      "rights": "Commons 页面当前标注 public domain / Public Domain Mark 1.0，且给出美国发表年代理由。本稿记录网站声明，不作全球版权保证；上线前按实际采用的文件、地区与平台规则复核。",
+      "productionAsset": "/tarot/rws/justice.webp",
+      "productionAssetComparison": "仅核验工程映射；未宣称站内 webp 与本次 Commons JPEG 像素一致。"
+    },
+    "chineseCharacterCount": 1167
+  },
+  "sourceBatch": "batch-8-14",
+  "deckOrder": 11,
+  "majorNumber": 11,
+  "suit": null,
+  "rank": null,
+  "rankOrder": null,
+  "plainLanguageSummary": null,
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "nameLocalized": "正义",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {},
+  "countsOriginal": {
+    "mainTextChineseCharacters": 1037,
+    "completeArticleChineseCharacters": 1167
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "f34d2f380d3feb3c5d4c4f4dd24f0e5808967d0968008dcba8fc4d2473033397",
+    "articleSha256": "f34d2f380d3feb3c5d4c4f4dd24f0e5808967d0968008dcba8fc4d2473033397",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

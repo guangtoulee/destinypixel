@@ -1,4 +1,4 @@
-"""Integrate one received, fully translated batch without changing other cards."""
+"""Integrate selected complete locales from one received batch; never publish."""
 import argparse
 import copy
 import hashlib
@@ -29,15 +29,17 @@ def structure(body):
 
 
 def profile(card_id):
-    # Explicitly reviewed structural profiles for the first five cards of each suit.
+    if "-of-" not in card_id:
+        if card_id in ("devil", "tower", "star", "moon", "judgement", "world"):
+            return ["image", "tradition", "interpretation", "comparison", "case-1", "case-2", "practice", "common_misread"]
+        return ["image", "tradition", "upright", "reversed", "comparison", "case-1", "case-2", "practice", "common_misread"]
     rank, suit = card_id.split("-of-")
-    assert rank in ("ace", "two", "three", "four", "five"), "Review the next source structure before extending this adapter"
     if suit == "wands":
         return ["image", "tradition", "upright", "reversed", "case-1", "case-2", "practice", "common_misread", "sources"]
     if suit == "pentacles":
         return ["image", "image-reasoning", "tradition", "upright", "reversed", "situations", "case-1", "case-2", "practice", "common_misread", "reflection", "sources"]
     if suit == "cups":
-        return ["image", "tradition", "upright", "reversed", "positions", "case-1", "case-2", "practice", "sources"]
+        return ["image", "tradition", "upright", "reversed", "positions", "case-1", "case-2", "practice", *([] if rank in ("ace", "two", "three", "four", "five") else ["comparison"]), "sources"]
     if suit == "swords":
         return ["image", "tradition", "image-reasoning", "upright", "reversed", "case-1", "case-2", "situations", "practice", "common_misread", "sources"]
     raise AssertionError("Source profile requires editorial review")
@@ -50,7 +52,8 @@ def write_json(path, data):
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("batch")
-parser.add_argument("translations", type=Path)
+parser.add_argument("translations", type=Path, nargs="?")
+parser.add_argument("--locales", nargs="+", choices=LOCALES, default=list(LOCALES))
 args = parser.parse_args()
 manifest = json.loads((DATA / "manifest.json").read_text())
 received = DATA / "incoming" / args.batch
@@ -67,11 +70,18 @@ pending = []
 for original in source["records"]:
     card_id = original["cardId"]
     assert card_id in manifest["cards"] and manifest["cards"][card_id]["sourceBatch"] == args.batch
-    assert card_id not in versions["cards"], f"Already integrated: {card_id}; review revisions explicitly"
+    assert not any(f"{locale}/{card_id}" in versions["editions"] for locale in args.locales), f"Locale already integrated: {card_id}; review replacements explicitly"
     assert digest(original["bodyMarkdown"]) == original["bodySha256"]
     roles = profile(card_id)
-    for locale in LOCALES:
-        edition = {k: original[k] for k in ("cardId", "title", "quickTake", "bodyMarkdown")} if locale == "zh" else json.loads((args.translations / locale / f"{card_id}.json").read_text())
+    approved = original
+    correction_path = DATA / "corrections" / f"{card_id}.zh.corrected.json"
+    if correction_path.exists():
+        approved = json.loads(correction_path.read_text())
+        assert approved["editorialRevision"]["originalSourceBodySha256"] == original["bodySha256"]
+        assert digest(approved["bodyMarkdown"]) == approved["bodySha256"]
+    for locale in args.locales:
+        assert locale == "zh" or args.translations is not None, "Full translation directory required"
+        edition = {k: approved[k] for k in ("cardId", "title", "quickTake", "bodyMarkdown")} if locale == "zh" else json.loads((args.translations / locale / f"{card_id}.json").read_text())
         assert edition["cardId"] == card_id and edition["title"] and all(edition["quickTake"].values())
         assert structure(edition["bodyMarkdown"]) == structure(original["bodyMarkdown"]), f"Structure/citation mismatch: {locale}/{card_id}"
         opening, body_sections = split_body(edition["bodyMarkdown"])
@@ -91,9 +101,12 @@ for original in source["records"]:
         by_role = {s["role"]: s for s in sections}
         article["legacyIntroAnchors"] = []
         article["legacyRelatedAnchors"] = []
+        article.pop("sourceAppendix", None)
+        if "sources" not in roles:
+            article["sourceAppendix"] = {"id": old_roles["sources"], "title": {"zh": "本篇资料与来源", "zh-TW": "本篇資料與來源", "en": "Sources and references", "ru": "Источники и материалы"}[locale]}
         fallback = {"situations": "case-1", "common_misread": "practice"}
         for role, anchor in old_roles.items():
-            if role in roles:
+            if role in roles or role == "sources":
                 continue
             if role == "intro":
                 article["legacyIntroAnchors"].append(anchor)
@@ -105,6 +118,8 @@ for original in source["records"]:
                 by_role[target].setdefault("legacyAnchors", []).append(anchor)
         has_quick_opening = original["bodyMarkdown"].startswith("正位先读一句：")
         assert len(opening) >= (3 if has_quick_opening else 1)
+        if has_quick_opening and locale == "zh":
+            assert all(opening[i].split("：", 1)[1].rstrip("。") == edition["quickTake"][key].rstrip("。") for i, key in enumerate(("upright", "reversed")))
         visible_opening = opening[2:] if has_quick_opening else opening
         article.update(title=edition["title"], quickTake=edition["quickTake"], hook=visible_opening[0],
             openingParagraphs=visible_opening[1:], plainLanguageSummary=None, sections=sections,
@@ -114,12 +129,16 @@ for original in source["records"]:
         for field in ("sourceRecord", "counts", "countsOriginal", "translationInputMetadata"):
             article.pop(field, None)
         archive = f"content/tarot/revisions/2026-10-08/{card_id}.{locale}.json"
-        article["review"] = {"type": "parent_reviewed_chinese_and_model_translation_review", "nativeHumanReview": False,
+        article["review"] = {"type": "parent_reviewed_chinese" if locale == "zh" else "model_translation_review_candidate", "nativeHumanReview": False,
             "checkedOn": "2026-10-08", "published": False}
         article["contentProvenance"] = {"sourceLocale": "zh-CN", "sourceBodySha256": original["bodySha256"],
             "sourceArticleSha256": original["bodySha256"], "sourceHashBasis": "exact delivered bodyMarkdown without added title",
             "articleSha256": digest(article["articleMarkdown"]), "sourcePackageSha256": receipt["sourcePackageSha256"],
             "previousRecord": archive, "editionBodySha256": digest(edition["bodyMarkdown"])}
+        if correction_path.exists():
+            article["editorialRevision"] = copy.deepcopy(approved["editorialRevision"])
+            article["editorialRevision"]["correctedBodySha256"] = approved["bodySha256"]
+            article["editorialRevision"]["status"] = "integrated locally; not published; final parent-reviewed translations pending"
         key = f"{locale}/{card_id}"
         versions["articleMarkdownSha256"][key] = digest(article["articleMarkdown"])
         versions["editions"][key] = {"bodySha256": digest(edition["bodyMarkdown"]), "recordSha256": digest(json.dumps(article, ensure_ascii=False, indent=2) + "\n"),
@@ -130,7 +149,8 @@ for original in source["records"]:
             entry[field] = article[field]
         pending.append((live_path, article, ROOT / archive, baseline_bytes, DATA / "editions" / locale / f"{card_id}.json", edition))
         manifest["cards"][card_id]["locales"][locale] = "integrated"
-    versions["cards"][card_id] = {"sourceBatch": args.batch, "publishedAt": "2026-10-07", "updatedAt": "2026-10-08"}
+    prior_locales = versions["cards"].get(card_id, {}).get("locales", [])
+    versions["cards"][card_id] = {"sourceBatch": args.batch, "publishedAt": "2026-10-07", "updatedAt": "2026-10-08", "locales": list(dict.fromkeys([*prior_locales, *args.locales]))}
 
 # All editions validated in memory before touching live records. Preserve old bytes exactly.
 for live, article, archive, old_bytes, edition_path, edition in pending:
@@ -144,6 +164,8 @@ write_json(catalog_path, catalog)
 write_json(versions_path, versions)
 write_json(DATA / "manifest.json", manifest)
 receipt["editorialReview"] = "parent independently reviewed Chinese"
-receipt["translationReview"] = "full model review and structural parity; not native-human certification"
+if any(locale != "zh" for locale in args.locales):
+    receipt["translationReview"] = "model-reviewed candidates; final parent-reviewed translations pending"
+receipt["integratedLocales"] = list(dict.fromkeys([*receipt.get("integratedLocales", []), *args.locales]))
 write_json(received / "receipt.json", receipt)
 print(f"Integrated {len(source['records'])} cards / {len(pending)} full editions from {args.batch}; original records archived; HTTP/build validation pending")

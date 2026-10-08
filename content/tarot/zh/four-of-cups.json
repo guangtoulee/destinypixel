@@ -14,7 +14,7 @@
   "locale": "zh-CN",
   "deckSystem": "RWS",
   "title": "圣杯四牌义 没有兴趣时先分清原因",
-  "plainLanguageSummary": "面对新的提议提不起劲时，先弄清自己是需要休息还是需要改变。",
+  "plainLanguageSummary": null,
   "keywords": [
     "停顿",
     "倦怠",
@@ -30,7 +30,7 @@
       "id": "section-01",
       "role": "image",
       "title": "杯子在附近，手臂却没有伸出去",
-      "bodyMarkdown": "人物坐在树下的斜坡上，双臂交抱、双腿盘起，头部微低。绿色外衣覆在红袖上，树干就在背后；面前草地上摆着三只金杯，左侧一团云伸出手，送来第四只杯。\n\n四只杯都保持直立，人物没有去拿，也没有把任何一只推倒。背景可见低矮树丛与远山。身体收拢，外界仍在提供事物，这种距离是画面可以直接观察的；他究竟在休息、犹豫还是嫌弃，仍需要解释，不能只凭姿势断定。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups04.jpg)"
+      "bodyMarkdown": "人物坐在树下的斜坡上，双臂交抱、双腿盘起，头部微低。绿色外衣覆在红袖上，树干就在背后；面前草地上摆着三只金杯，左侧一团云伸出手，送来第四只杯。\n\n四只杯都保持直立，人物没有去拿，也没有把任何一只推倒。背景可见低矮树丛与远山。身体收拢，外界仍在提供事物，这种距离是画面可以直接观察的；他究竟在休息、犹豫还是嫌弃，仍需要解释，不能只凭姿势断定。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n\n把注意力放在“没有发生”的动作也很有帮助：人物没有打翻杯子，没有起身离开，也没有接过新杯。这样的停顿可以容纳不同原因。树给了依靠，杯提供了选项；如果只看递来的手，就容易把拒绝读成错过，如果只看交叉双臂，又容易把每次停顿都浪漫化成休息。两边都要结合现实询问。"
     },
     {
       "id": "section-02",
@@ -51,34 +51,40 @@
       "bodyMarkdown": "逆位可读作愿意重新接触：接受一场短会面、试一节课、认真看一眼之前搁下的提议。新的兴趣不必一出现就变成长期计划，可以先问细节，再决定是否投入。\n\n如果只是因为怕错过而乱答应，忙起来也未必更有感觉。用可退出的小尝试了解自己，让恢复参与与透支自己保持区别。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "面对机会和邀请时怎么判断",
-      "bodyMarkdown": "同事邀请你加入新项目，先问需要多少时间、任务内容是什么。你拒绝的可能是模糊负担，而不是项目本身；掌握信息后，可以继续拒绝，也可以提出较小的参与范围。\n\n休息日不想参加聚会，直接说明想安静待一会儿。若几周后开始想念朋友，先约一次短散步。创作时看什么都觉得没意思，也可以暂时离开参考资料，记录生活里一件真实吸引注意的小事。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回问题和位置里",
+      "bodyMarkdown": "现状位可以帮助描述参与意愿降低，原因仍需另找。建议位更适合先辨认需求，再决定是否接下新事物；不要简单变成“什么也别做”。逆位若出现在转机位，可以观察具体兴趣有没有回来；若在风险位，则要检查是不是因为害怕错过而突然答应太多。身体姿态只提供观察角度，不能当作懒惰或疾病的诊断。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "课程越买越多却一节也不想开",
+      "bodyMarkdown": "**原创虚构案例。** 小陆连续报名三门线上课程，最近同学又推荐一个训练营。他每天下班后只想发呆，却仍能开心做饭和听音乐。现有课程作业已经堆了四周，他害怕不报名就落后。\n\n问题是“我对新课程提不起劲，眼前应该先处理什么”，现状位抽到圣杯四正位。\n\n眼前已有三杯、旁边又递来一杯的构图，与不断增加课程的事实很贴近。重点可以落在现有输入已经超过可使用的程度，而非判定他失去求知欲。他对其他活动仍有兴趣，也支持先检查课程负担与选择动机。\n\n如果调整作业量后他重新想学，过载的解释较合适；如果始终只对这类主题无趣，却愿意自发钻研另一科，方向不合适会更重要。若不只是课程，日常各方面都长期受影响，就需要实际支持，不能停在牌义分析。\n\n暂不新增报名，选一门现有课看清剩余任务与退出规则。本周只做一个最小练习，再问它是否服务当前目标。到周末依据体验决定继续、暂缓或结束；这让停顿成为可完成的判断，而不是无限拖延。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "开始想见朋友以后不用立刻补齐所有聚会",
+      "bodyMarkdown": "**原创虚构案例。** 阿悠忙完搬家后休息了两周，昨天主动想起很久没见的朋友。恰好三个聚会邀请一起到来，她犹豫是否全部答应，以免别人以为自己疏远大家。此前没人指责她。\n\n问题是“怎样恢复社交，同时保住刚找回的休息节奏”，下一步建议位抽到圣杯四逆位。\n\n逆位的新关系与新参与方向，可以由她主动想见朋友这一事实支持。画面上收拢的身体开始愿意回应，是一种阅读上的转向；但旁边仍只是一个杯子，没必要一下接住所有邀约。她需要恢复参与的节奏，而非证明自己足够合群。\n\n若她一想到见面就不情愿，只是担心被评价，所谓“兴趣回来”便缺少依据，应先澄清压力来自哪里。若想见的是特定朋友，也不必把这份意愿扩大成对所有活动的兴趣。\n\n选最期待的一场，提前说明只能待一小时，其他邀约诚实改期或谢绝。回家后记录是轻松、满足还是更累，再安排下一次。用实际感受调整频率，避免凭一次逆位就许下长期固定出席的承诺。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "练习 把不想要写清楚",
-      "bodyMarkdown": "选一个被你搁置的邀请或计划，分别写下：它具体要求什么；我不愿意的原因；改变哪一个条件后我会重新考虑。若没有任何条件能让你愿意，清楚拒绝也是一个完成的决定。"
-    },
-    {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看错的地方",
-      "bodyMarkdown": "不能凭圣杯四给人贴上懒惰、冷漠或心理疾病的标签，也不必把每个递来的杯子都称作珍贵机会。图像适合帮助你提问；实际身心困扰若持续影响生活，需要现实支持与合适的专业评估。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接着读什么",
-      "bodyMarkdown": "圣杯王牌：比较愿意承接与暂时无意承接；圣杯八：分清短暂停顿与决定离开。"
+      "title": "把理解带回今天",
+      "bodyMarkdown": "对一个搁置的邀请写下三个答案：我缺的是精力、兴趣，还是具体信息？改变哪个条件会让我重新考虑？如果答案是不会，也可以清楚拒绝。要离开已有方向时再对照圣杯八，它比树下的停顿多了一步实际转身。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇资料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。"
+      "title": "本篇资料与阅读范围",
+      "bodyMarkdown": "- [Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。"
     }
   ],
   "relatedCards": [
@@ -100,7 +106,7 @@
       "title": "Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "four-of-cups-image",
         "layer": "画面观察",
@@ -115,7 +121,7 @@
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcu04.htm",
       "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "four-of-cups-waite",
         "layer": "历史原文",
@@ -180,180 +186,33 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 圣杯四牌义 没有兴趣时先分清原因\n\n一句话：面对新的提议提不起劲时，先弄清自己是需要休息还是需要改变。\n\n牌名：圣杯四 Four of Cups  \n牌序：IV · RWS 小阿尔卡那 · 圣杯组  \n关键词：停顿、倦怠、重新留意\n\n正位速读：暂时不想接新东西，给自己一点观察与辨认需要的时间。  \n逆位速读：对外界重新有了兴趣，可以从一件小事试着参与。\n\n明明有人递来机会，你却只想说改天吧。圣杯四不催你马上点头，它让你看一看：此刻的拒绝，究竟在保护什么。\n\n## 杯子在附近，手臂却没有伸出去\n\n人物坐在树下的斜坡上，双臂交抱、双腿盘起，头部微低。绿色外衣覆在红袖上，树干就在背后；面前草地上摆着三只金杯，左侧一团云伸出手，送来第四只杯。\n\n四只杯都保持直立，人物没有去拿，也没有把任何一只推倒。背景可见低矮树丛与远山。身体收拢，外界仍在提供事物，这种距离是画面可以直接观察的；他究竟在休息、犹豫还是嫌弃，仍需要解释，不能只凭姿势断定。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n\n## 原文的不满与逆位的新关系\n\nWaite《塔罗图解之钥》1911 英文转录把人物描述为对环境不满，并用厌倦、反感和饱足后的无趣解释正位。他的措辞带有责备意味，不能直接拿来评价正在疲惫的人。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n原文逆位列出新事物、新教导与新关系，因此本篇以重新留意外界作为逆位主线。正位也可以用于辨认需求与保留选择，这一部分属于本站的现代延伸。\n\n## 正位 先问为什么不想要\n\n提不起兴趣可能来自负荷太大，也可能是现有选项不适合。先分清自己对所有事情都累，还是只对这一类安排没兴趣，再决定休息、拒绝或换一种尝试。\n\n暂停有价值，但最好知道暂停后要观察什么。给自己一段明确的休整时间，随后重新看选项；比不断说以后再说，更容易发现需求有没有变化。\n\n## 逆位 允许兴趣一点点回来\n\n逆位可读作愿意重新接触：接受一场短会面、试一节课、认真看一眼之前搁下的提议。新的兴趣不必一出现就变成长期计划，可以先问细节，再决定是否投入。\n\n如果只是因为怕错过而乱答应，忙起来也未必更有感觉。用可退出的小尝试了解自己，让恢复参与与透支自己保持区别。\n\n## 面对机会和邀请时怎么判断\n\n同事邀请你加入新项目，先问需要多少时间、任务内容是什么。你拒绝的可能是模糊负担，而不是项目本身；掌握信息后，可以继续拒绝，也可以提出较小的参与范围。\n\n休息日不想参加聚会，直接说明想安静待一会儿。若几周后开始想念朋友，先约一次短散步。创作时看什么都觉得没意思，也可以暂时离开参考资料，记录生活里一件真实吸引注意的小事。\n\n## 练习 把不想要写清楚\n\n选一个被你搁置的邀请或计划，分别写下：它具体要求什么；我不愿意的原因；改变哪一个条件后我会重新考虑。若没有任何条件能让你愿意，清楚拒绝也是一个完成的决定。\n\n## 容易看错的地方\n\n不能凭圣杯四给人贴上懒惰、冷漠或心理疾病的标签，也不必把每个递来的杯子都称作珍贵机会。图像适合帮助你提问；实际身心困扰若持续影响生活，需要现实支持与合适的专业评估。\n\n## 接着读什么\n\n圣杯王牌：比较愿意承接与暂时无意承接；圣杯八：分清短暂停顿与决定离开。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。\n",
+  "articleMarkdown": "# 圣杯四牌义 没有兴趣时先分清原因\n\n正位先读一句：暂时不想接新东西，给自己一点观察与辨认需要的时间。\n\n逆位先读一句：对外界重新有了兴趣，可以从一件小事试着参与。\n\n明明有人递来机会，你却只想说改天吧。圣杯四不催你马上点头，它让你看一看：此刻的拒绝，究竟在保护什么。\n\n## 杯子在附近，手臂却没有伸出去\n\n人物坐在树下的斜坡上，双臂交抱、双腿盘起，头部微低。绿色外衣覆在红袖上，树干就在背后；面前草地上摆着三只金杯，左侧一团云伸出手，送来第四只杯。\n\n四只杯都保持直立，人物没有去拿，也没有把任何一只推倒。背景可见低矮树丛与远山。身体收拢，外界仍在提供事物，这种距离是画面可以直接观察的；他究竟在休息、犹豫还是嫌弃，仍需要解释，不能只凭姿势断定。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n\n把注意力放在“没有发生”的动作也很有帮助：人物没有打翻杯子，没有起身离开，也没有接过新杯。这样的停顿可以容纳不同原因。树给了依靠，杯提供了选项；如果只看递来的手，就容易把拒绝读成错过，如果只看交叉双臂，又容易把每次停顿都浪漫化成休息。两边都要结合现实询问。\n\n## 原文的不满与逆位的新关系\n\nWaite《塔罗图解之钥》1911 英文转录把人物描述为对环境不满，并用厌倦、反感和饱足后的无趣解释正位。他的措辞带有责备意味，不能直接拿来评价正在疲惫的人。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n原文逆位列出新事物、新教导与新关系，因此本篇以重新留意外界作为逆位主线。正位也可以用于辨认需求与保留选择，这一部分属于本站的现代延伸。\n\n## 正位 先问为什么不想要\n\n提不起兴趣可能来自负荷太大，也可能是现有选项不适合。先分清自己对所有事情都累，还是只对这一类安排没兴趣，再决定休息、拒绝或换一种尝试。\n\n暂停有价值，但最好知道暂停后要观察什么。给自己一段明确的休整时间，随后重新看选项；比不断说以后再说，更容易发现需求有没有变化。\n\n## 逆位 允许兴趣一点点回来\n\n逆位可读作愿意重新接触：接受一场短会面、试一节课、认真看一眼之前搁下的提议。新的兴趣不必一出现就变成长期计划，可以先问细节，再决定是否投入。\n\n如果只是因为怕错过而乱答应，忙起来也未必更有感觉。用可退出的小尝试了解自己，让恢复参与与透支自己保持区别。\n\n## 把牌放回问题和位置里\n\n现状位可以帮助描述参与意愿降低，原因仍需另找。建议位更适合先辨认需求，再决定是否接下新事物；不要简单变成“什么也别做”。逆位若出现在转机位，可以观察具体兴趣有没有回来；若在风险位，则要检查是不是因为害怕错过而突然答应太多。身体姿态只提供观察角度，不能当作懒惰或疾病的诊断。\n\n## 课程越买越多却一节也不想开\n\n**原创虚构案例。** 小陆连续报名三门线上课程，最近同学又推荐一个训练营。他每天下班后只想发呆，却仍能开心做饭和听音乐。现有课程作业已经堆了四周，他害怕不报名就落后。\n\n问题是“我对新课程提不起劲，眼前应该先处理什么”，现状位抽到圣杯四正位。\n\n眼前已有三杯、旁边又递来一杯的构图，与不断增加课程的事实很贴近。重点可以落在现有输入已经超过可使用的程度，而非判定他失去求知欲。他对其他活动仍有兴趣，也支持先检查课程负担与选择动机。\n\n如果调整作业量后他重新想学，过载的解释较合适；如果始终只对这类主题无趣，却愿意自发钻研另一科，方向不合适会更重要。若不只是课程，日常各方面都长期受影响，就需要实际支持，不能停在牌义分析。\n\n暂不新增报名，选一门现有课看清剩余任务与退出规则。本周只做一个最小练习，再问它是否服务当前目标。到周末依据体验决定继续、暂缓或结束；这让停顿成为可完成的判断，而不是无限拖延。\n\n## 开始想见朋友以后不用立刻补齐所有聚会\n\n**原创虚构案例。** 阿悠忙完搬家后休息了两周，昨天主动想起很久没见的朋友。恰好三个聚会邀请一起到来，她犹豫是否全部答应，以免别人以为自己疏远大家。此前没人指责她。\n\n问题是“怎样恢复社交，同时保住刚找回的休息节奏”，下一步建议位抽到圣杯四逆位。\n\n逆位的新关系与新参与方向，可以由她主动想见朋友这一事实支持。画面上收拢的身体开始愿意回应，是一种阅读上的转向；但旁边仍只是一个杯子，没必要一下接住所有邀约。她需要恢复参与的节奏，而非证明自己足够合群。\n\n若她一想到见面就不情愿，只是担心被评价，所谓“兴趣回来”便缺少依据，应先澄清压力来自哪里。若想见的是特定朋友，也不必把这份意愿扩大成对所有活动的兴趣。\n\n选最期待的一场，提前说明只能待一小时，其他邀约诚实改期或谢绝。回家后记录是轻松、满足还是更累，再安排下一次。用实际感受调整频率，避免凭一次逆位就许下长期固定出席的承诺。\n\n## 把理解带回今天\n\n对一个搁置的邀请写下三个答案：我缺的是精力、兴趣，还是具体信息？改变哪个条件会让我重新考虑？如果答案是不会，也可以清楚拒绝。要离开已有方向时再对照圣杯八，它比树下的停顿多了一步实际转身。\n\n## 本篇资料与阅读范围\n\n- [Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups04.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "four",
-    "nameZh": "圣杯四",
-    "nameEn": "Four of Cups",
-    "number": "IV",
-    "title": "圣杯四牌义 没有兴趣时先分清原因",
-    "oneLineSummary": "面对新的提议提不起劲时，先弄清自己是需要休息还是需要改变。",
-    "keywords": [
-      "停顿",
-      "倦怠",
-      "重新留意"
-    ],
-    "uprightQuickTake": "暂时不想接新东西，给自己一点观察与辨认需要的时间。",
-    "reversedQuickTake": "对外界重新有了兴趣，可以从一件小事试着参与。",
-    "hook": "明明有人递来机会，你却只想说改天吧。圣杯四不催你马上点头，它让你看一看：此刻的拒绝，究竟在保护什么。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "杯子在附近，手臂却没有伸出去",
-        "paragraphs": [
-          "人物坐在树下的斜坡上，双臂交抱、双腿盘起，头部微低。绿色外衣覆在红袖上，树干就在背后；面前草地上摆着三只金杯，左侧一团云伸出手，送来第四只杯。",
-          "四只杯都保持直立，人物没有去拿，也没有把任何一只推倒。背景可见低矮树丛与远山。身体收拢，外界仍在提供事物，这种距离是画面可以直接观察的；他究竟在休息、犹豫还是嫌弃，仍需要解释，不能只凭姿势断定。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups04.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "原文的不满与逆位的新关系",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录把人物描述为对环境不满，并用厌倦、反感和饱足后的无趣解释正位。他的措辞带有责备意味，不能直接拿来评价正在疲惫的人。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu04.htm)",
-          "原文逆位列出新事物、新教导与新关系，因此本篇以重新留意外界作为逆位主线。正位也可以用于辨认需求与保留选择，这一部分属于本站的现代延伸。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先问为什么不想要",
-        "paragraphs": [
-          "提不起兴趣可能来自负荷太大，也可能是现有选项不适合。先分清自己对所有事情都累，还是只对这一类安排没兴趣，再决定休息、拒绝或换一种尝试。",
-          "暂停有价值，但最好知道暂停后要观察什么。给自己一段明确的休整时间，随后重新看选项；比不断说以后再说，更容易发现需求有没有变化。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 允许兴趣一点点回来",
-        "paragraphs": [
-          "逆位可读作愿意重新接触：接受一场短会面、试一节课、认真看一眼之前搁下的提议。新的兴趣不必一出现就变成长期计划，可以先问细节，再决定是否投入。",
-          "如果只是因为怕错过而乱答应，忙起来也未必更有感觉。用可退出的小尝试了解自己，让恢复参与与透支自己保持区别。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "面对机会和邀请时怎么判断",
-        "paragraphs": [
-          "同事邀请你加入新项目，先问需要多少时间、任务内容是什么。你拒绝的可能是模糊负担，而不是项目本身；掌握信息后，可以继续拒绝，也可以提出较小的参与范围。",
-          "休息日不想参加聚会，直接说明想安静待一会儿。若几周后开始想念朋友，先约一次短散步。创作时看什么都觉得没意思，也可以暂时离开参考资料，记录生活里一件真实吸引注意的小事。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 把不想要写清楚",
-        "paragraphs": [
-          "选一个被你搁置的邀请或计划，分别写下：它具体要求什么；我不愿意的原因；改变哪一个条件后我会重新考虑。若没有任何条件能让你愿意，清楚拒绝也是一个完成的决定。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "不能凭圣杯四给人贴上懒惰、冷漠或心理疾病的标签，也不必把每个递来的杯子都称作珍贵机会。图像适合帮助你提问；实际身心困扰若持续影响生活，需要现实支持与合适的专业评估。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "ace-of-cups",
-        "nameZh": "圣杯王牌",
-        "reason": "比较愿意承接与暂时无意承接"
-      },
-      {
-        "cardId": "eight-of-cups",
-        "nameZh": "圣杯八",
-        "reason": "分清短暂停顿与决定离开"
-      }
-    ],
-    "cardId": "four-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 4,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-four-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "four-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Four of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "four-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Four of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcu04.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups04.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups04.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups04.jpg&oldid=1199313450",
-      "pageRevision": "1199313450",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:20:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:20, 5 April 2024 1,118 × 1,920 (786 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg",
-      "localFile": "images/Cups04.jpg",
-      "dimensions": [
-        1118,
-        1920
-      ],
-      "commonsOriginalDimensions": [
-        1118,
-        1920
-      ],
-      "bytes": 804378,
-      "sha256": "92097fe69d21dd0a0c9d5ece68ed465fa4a53d5107509cde3689840b67ed3f13",
-      "sha1": "aced20aeeb9b69215ea5df106bb3ccc9710b2f8a",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1146,
-    "bodyChineseCharacterCount": 871
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 914,
-    "words": 2,
-    "articleUtf8Bytes": 4327
-  },
+  "sourceBatch": "depth77-cups-02",
   "nameLocalized": "圣杯四",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_reviewed_chinese",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 1011,
-    "completeArticleChineseCharacters": 1146
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "ceef25934633ca7b8cba5ee2953ca6bc227622a5254d34b8aac2df097166e7f4",
-    "articleSha256": "ceef25934633ca7b8cba5ee2953ca6bc227622a5254d34b8aac2df097166e7f4",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "386cbfd7a10dbbcaeea8e5d3a5d198367e79578ec6fc6e0907436b7c7258f425",
+    "sourceArticleSha256": "386cbfd7a10dbbcaeea8e5d3a5d198367e79578ec6fc6e0907436b7c7258f425",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "4f73e75fa2abe795ae0657d937885e4db8327e2c18ace609c2f7dd0a96ebe440",
+    "sourcePackageSha256": "c7d06a3414df67fdec95243a10f377538cc51f6d51ce74a3f5ffe998af3a63a2",
+    "previousRecord": "content/tarot/revisions/2026-10-08/four-of-cups.zh.json",
+    "editionBodySha256": "386cbfd7a10dbbcaeea8e5d3a5d198367e79578ec6fc6e0907436b7c7258f425"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

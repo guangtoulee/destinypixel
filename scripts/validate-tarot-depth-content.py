@@ -60,7 +60,10 @@ for batch in sorted((DATA / "incoming").glob("*")):
         assert body.count("原创虚构案例") == 2, f"Expected two complete original cases: {card}"
         sources[card] = original
 
-assert set(sources) == {card for card, state in m["cards"].items() if state["sourceBatch"]}
+assert len(m["cards"]) == 77 and "sun" not in m["cards"]
+assert set(sources) == set(m["cards"]), "All 77 source manuscripts must be received before depth validation"
+corrected_sources = {}
+correction_contracts = {}
 for contract_path in (DATA / "corrections").glob("*.contract.json"):
     for contract in read(contract_path):
         card = contract["cardId"]
@@ -78,6 +81,8 @@ for contract_path in (DATA / "corrections").glob("*.contract.json"):
             assert corrected["bodyMarkdown"] == expected and corrected["bodySha256"] == contract["correctedBodySha256"]
             assert {key: value for key, value in corrected.items() if key not in ("bodyMarkdown", "bodySha256", "editorialRevision")} == {key: value for key, value in original.items() if key not in ("bodyMarkdown", "bodySha256")}
             assert corrected["editorialRevision"]["originalSourceBodySha256"] == contract["originalSourceBodySha256"]
+            corrected_sources[card] = corrected
+            correction_contracts[card] = contract
 translated = set()
 translation_count = 0
 for review_path in sorted((DATA / "translations").glob("*/review.json")):
@@ -100,10 +105,28 @@ for review_path in sorted((DATA / "translations").glob("*/review.json")):
     assert set(report["editions"]) == {f"{locale}/{card}" for card in batch_cards for locale in ("en", "zh-TW", "ru")}
 integrated = set(v["cards"])
 assert integrated <= sources.keys()
-assert set(v["editions"]) == set(v["articleMarkdownSha256"]) == {f"{locale}/{card}" for card in integrated for locale in LOCALES}
+expected_editions = set()
+for card in integrated:
+    locales = v["cards"][card]["locales"]
+    assert locales and len(locales) == len(set(locales)) and set(locales) <= set(LOCALES), card
+    expected_editions.update(f"{locale}/{card}" for locale in locales)
+assert set(v["editions"]) == set(v["articleMarkdownSha256"]) == expected_editions
+assert {f"{path.parent.name}/{path.stem}" for path in (DATA / "editions").glob("*/*.json")} == expected_editions
+baseline_catalog = json.loads(subprocess.check_output(["git", "show", f"{m['baselineCommit']}:lib/tarot-learning/catalog.json"], cwd=ROOT))
+# A partial-language rollout must leave every inactive edition and catalog entry intact.
+for locale in LOCALES:
+    for entry, baseline_entry in zip(catalog[locale], baseline_catalog[locale]):
+        card = entry["cardId"]
+        assert card == baseline_entry["cardId"]
+        if f"{locale}/{card}" not in expected_editions:
+            path = ROOT / "content/tarot" / locale / f"{card}.json"
+            baseline = subprocess.check_output(["git", "show", f"{m['baselineCommit']}:{path.relative_to(ROOT)}"], cwd=ROOT)
+            assert path.read_bytes() == baseline, f"Inactive edition changed: {locale}/{card}"
+            assert entry == baseline_entry, f"Inactive catalog changed: {locale}/{card}"
+    assert len(catalog[locale]) == len(baseline_catalog[locale]) == 78
 for card in sorted(integrated):
     source = sources[card]
-    for locale in LOCALES:
+    for locale in v["cards"][card]["locales"]:
         key = f"{locale}/{card}"
         edition = read(DATA / "editions" / locale / f"{card}.json")
         path = ROOT / "content/tarot" / locale / f"{card}.json"
@@ -125,20 +148,41 @@ for card in sorted(integrated):
         assert sha(raw) == v["editions"][key]["recordSha256"]
         assert sha(article["articleMarkdown"]) == v["articleMarkdownSha256"][key]
         assert article["sources"] == source["sources"], f"Source metadata lost: {key}"
+        assert article["contentProvenance"]["sourceBodySha256"] == source["bodySha256"], f"Original provenance changed: {key}"
+        assert article["contentProvenance"]["sourceArticleSha256"] == source["bodySha256"]
+        assert article["contentProvenance"]["articleSha256"] == sha(article["articleMarkdown"])
         if locale == "zh":
-            assert body == source["bodyMarkdown"] and edition["title"] == source["title"] and edition["quickTake"] == source["quickTake"]
+            expected = corrected_sources.get(card, source)
+            assert body == expected["bodyMarkdown"] and edition["title"] == expected["title"] and edition["quickTake"] == expected["quickTake"]
+            if card in correction_contracts:
+                contract = correction_contracts[card]
+                assert article["editorialRevision"]["originalSourceBodySha256"] == contract["originalSourceBodySha256"]
+                assert article["editorialRevision"]["correctedBodySha256"] == contract["correctedBodySha256"]
+                assert body.count(contract["replacement"]["before"]) == 0
+                assert body.count(contract["replacement"]["after"]) == 1
         assert shape(body) == shape(source["bodyMarkdown"]), f"Incomplete translation structure: {key}"
         assert re.findall(r"\]\((https?://[^)]+)\)", body) == re.findall(r"\]\((https?://[^)]+)\)", source["bodyMarkdown"]), key
         intro, sections = parts(body)
         assert [(s["title"], s["bodyMarkdown"]) for s in article["sections"]] == sections, f"Visible sections lost or rewritten: {key}"
         visible_intro = intro[2:] if source["bodyMarkdown"].startswith("正位先读一句：") else intro
         assert [article["hook"], *article["openingParagraphs"]] == visible_intro
+        if locale == "zh" and source["bodyMarkdown"].startswith("正位先读一句："):
+            for opening, label, orientation in zip(intro[:2], ("正位先读一句：", "逆位先读一句："), ("upright", "reversed")):
+                assert opening.removeprefix(label).rstrip("。") == article["quickTake"][orientation].rstrip("。"), f"Hidden opening is not duplicated in quick take: {key}"
         cases = [s for s in article["sections"] if s["role"] in ("case-1", "case-2")]
         assert len(cases) == 2 and cases[0]["bodyMarkdown"] != cases[1]["bodyMarkdown"]
         assert all(len(s["bodyMarkdown"].split("\n\n")) >= 3 for s in cases), f"Truncated cases: {key}"
         ids = [s["id"] for s in article["sections"]]
         ids += article.get("legacyIntroAnchors", []) + article.get("legacyRelatedAnchors", [])
         ids += [anchor for s in article["sections"] for anchor in s.get("legacyAnchors", [])]
+        appendix = article.get("sourceAppendix")
+        if appendix:
+            assert appendix["title"] and appendix["id"]
+            assert not any(s["role"] == "sources" for s in article["sections"]), f"Redundant source appendix: {key}"
+            assert appendix["id"] == next(s["id"] for s in old["sections"] if s["role"] == "sources")
+            ids.append(appendix["id"])
+        else:
+            assert any(s["role"] == "sources" for s in article["sections"]), f"Missing source display: {key}"
         assert len(ids) == len(set(ids)), f"Duplicate HTML anchors: {key}"
         assert {s["id"] for s in old["sections"]} <= set(ids), f"Broken old anchors: {key}"
         entry = next(c for c in catalog[locale] if c["cardId"] == card)
@@ -147,6 +191,6 @@ for card in sorted(integrated):
         assert article["review"]["nativeHumanReview"] is False
         assert m["cards"][card]["locales"][locale] in ("integrated", "validated")
 
-print(f"PASS {len(sources)} exact received Chinese manuscripts; {len(integrated)} integrated cards / {len(integrated) * 4} full editions")
+print(f"PASS {len(sources)} exact received Chinese manuscripts; {len(integrated)} integrated cards / {len(expected_editions)} full editions")
 print(f"PASS {len(translated)} translated cards / {translation_count} retained full translations with exact hashes and structural parity")
 print("PASS full body and section parity, two complete cases, source metadata, exact archives, old anchors, catalog and dates; HTTP/build/browser checks are separate")

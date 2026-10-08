@@ -7,8 +7,11 @@ This round excludes the revised Sun, the three editorial articles and every hexa
 Complete manuscripts are archived under `incoming/`; independently retained translations
 are under `translations/`. See `checkpoint.json` for exact counts at the saved checkpoint.
 No placeholder article is installed or published.
-Release remains **Preview only** until the parent confirms the batch release scope
-and external browser QA. PR23's completed release is not permission to merge this round.
+Current authorization is **local engineering only**. Do not push, create a public PR,
+deploy a Preview or publish production. The parent is awaiting explicit public-release
+confirmation after automatic approval review rejected publishing to the public repository.
+Previously published checkpoints stay intact. A private Library recovery backup is allowed.
+PR23's completed release is not permission to publish this round.
 
 ## Receiving complete source
 
@@ -74,7 +77,12 @@ reading the first real package. Never ask the author to replace full prose with 
 
 ## Batch checkpoint and regression
 
-For each received batch: archive → review Chinese completeness/cases → fully translate
+The current checkpoint integrates and validates all 77 Chinese editions locally. The
+39 existing translated editions remain candidates, and two English drafts remain unreviewed;
+none replaces a live non-Chinese article. Final three-language manuscripts will come from
+the parent. No new translation work is authorized at this checkpoint.
+
+For the eventual complete four-language batch: archive → review Chinese completeness/cases → fully translate
 Traditional Chinese, English and Russian → compare complete text/structure/sources →
 integrate all four editions → run affected validation → commit and report card IDs and
 per-language counts. Manifest states distinguish `received`, `translated`, `reviewed`,

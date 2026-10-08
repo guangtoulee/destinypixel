@@ -8,7 +8,8 @@ export type TarotLearningArticle = {
  openingParagraphs?:string[]; publishedAt?:string; updatedAt?:string;
  legacyIntroAnchors?:string[]; legacyRelatedAnchors?:string[];
  sections:{id:string;role:string;title:string;bodyMarkdown:string;legacyAnchors?:string[]}[];
- sources:{title:string;url:string}[]; relatedCards:{cardId:string;name?:string;reason:string}[];
+ sourceAppendix?:{id:string;title:string};
+ sources:{title:string;url:string|null}[]; relatedCards:{cardId:string;name?:string;reason:string}[];
  articleMarkdown:string;
 };
 export const loadTarotLearningArticle = cache(async (id:string,locale:ReportLocale):Promise<TarotLearningArticle|undefined> => {

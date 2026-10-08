@@ -14,7 +14,7 @@
   "locale": "zh-CN",
   "deckSystem": "RWS",
   "title": "圣杯七牌义 先看清愿望，再挑一个去验证",
-  "plainLanguageSummary": "想象提供很多可能，行动需要更少而更清楚的选择。",
+  "plainLanguageSummary": null,
   "keywords": [
     "想象",
     "诱惑",
@@ -30,7 +30,7 @@
       "id": "section-01",
       "role": "image",
       "title": "七只杯子没有装着同一种东西",
-      "bodyMarkdown": "一个深色背影站在前景，手向前张开，面前云团上排列七只金杯。上方可见一张人脸、罩着白布而周围带红色放射线的形象，以及探出杯沿的蛇。下方杯中分别有高塔般的建筑、彩色珠宝、绿色花环和带翼的龙形怪兽。\n\n杯子悬在云间，没有桌面或落脚的地基，人物也尚未真正拿住任何一只。美丽、财富、荣誉与让人不安的形象并列，制造出诱惑与不确定；不能因为某个物件显眼，就断言它必然对应现实中的某个人。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups07.jpg)"
+      "bodyMarkdown": "一个深色背影站在前景，手向前张开，面前云团上排列七只金杯。上方可见一张人脸、罩着白布而周围带红色放射线的形象，以及探出杯沿的蛇。下方杯中分别有高塔般的建筑、彩色珠宝、绿色花环和带翼的龙形怪兽。\n\n杯子悬在云间，没有桌面或落脚的地基，人物也尚未真正拿住任何一只。美丽、财富、荣誉与让人不安的形象并列，制造出诱惑与不确定；不能因为某个物件显眼，就断言它必然对应现实中的某个人。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n\n七个杯中物有的令人向往，有的让人不安，它们没有按好坏整齐排队。把它们都读成理想机会，会漏掉风险；把它们都读成骗局，又会丢掉想象本身的价值。关键在前景人物与杯子之间的距离：正在看见、正在被吸引，还没有实际拿到。现代阅读可以沿着这段距离追问，接近某一项需要付出哪些步骤。"
     },
     {
       "id": "section-02",
@@ -51,34 +51,46 @@
       "bodyMarkdown": "逆位可读作从令人眼花缭乱的图景中收回注意力，愿意挑一个方向。把目标改写为本周可完成的动作，例如联系一位业内人士、做一页样稿，或查明报名条件。\n\n收拢也有风险：急着结束犹豫时，可能为了确定感而忽略不利信息。可以保留一个备选方案，并先约定什么证据出现后需要改主意。坚持的对象应是需要，而不必是最早那张漂亮想象。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "三个很容易被想象带走的时刻",
-      "bodyMarkdown": "选择课程时，别只收藏宣传页。先核对时间安排、真实作业量和是否符合现阶段水平，再挑一门可体验的课。\n\n新项目点子很多，就用同一标准选一个小样测试。认识新朋友时，对方的一句共同爱好容易被补成完整性格；多问实际经历、看持续相处，少用自己的愿望填空。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回问题和位置里",
+      "bodyMarkdown": "创意资源位可以鼓励发散，选择建议位却通常需要收拢。卡点位则检查是否把搜集图片、课程和路线当成已经行动。逆位的决心具有传统依据，但决定得快并不自动决定得好。必须允许资料推翻最初想法，尤其不能因抽到“决心”便略过实际成本、资格与时限。云中的图景适合提出愿望，现实的资料负责检验愿望。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "收藏很多课程以后怎样选择",
+      "bodyMarkdown": "**原创虚构案例。** 方圆收藏了十二门课程的宣传页，有的承诺作品集，有的强调自由接案，有的主打知名导师。她目前想学会给自己的小店做海报，每周只有三小时学习，却一直按宣传图是否好看来排序。\n\n问题是“我该用什么标准挑下一门设计课程”，决策卡点位抽到圣杯七正位。\n\n杯中内容各不相同，正好提醒这些课程也许根本解决不同问题。云层可以对应尚未核实的许诺，人物伸手却没拿到则贴近反复收藏。卡点不一定是她不够自律，而是没有用真实任务筛选，导致每种想象都显得重要。\n\n若她已经核对过作业与难度，迟迟没选只是因为预算尚未到位，那应先处理实际限制，不必继续分析幻想。若目的其实是转行，则海报技能也不足以作为唯一标准，需要重新界定目标。\n\n先选三门以内，查看一节试听与真实作业要求，用“能否完成本店一张海报”“每周时间是否容得下”两项筛选。把不清楚的条件问明白，仍不符合就暂不报名。减少选项是为了增加证据，不是逼自己当天付款。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "故事点子终于可以选一个以后",
+      "bodyMarkdown": "**原创虚构案例。** 小南列了七个故事开头，过去一个月不断增加人物设定，却没有完成一篇。昨天她发现“夜班公交司机听到乘客的梦”最让自己想继续写，也已经想好一个结尾。她打算先写两千字。\n\n问题是“我怎样把短篇小说从设想推进到初稿”，下一步行动位抽到圣杯七逆位。\n\n逆位的意志与计划方向有现实支点：偏好已出现，规模也已缩小。图中悬浮的杯子可以转化成一个任务，把其中一个移到纸面。此处值得鼓励的是完成一段可读文本，而不是再证明这个点子比另外六个更伟大。\n\n但若她只是挑了朋友赞最多的设定，自己仍不清楚主角要什么，收拢可能过早。也可能写到一半发现结尾不成立，这属于作品提供的新证据，并非逆位“失效”。可以改结构，也可以换方向，不必忠于第一天的承诺。\n\n先写司机面对一次选择的完整场景，暂不追加世界设定。写完请一位读者只回答“主角想做什么、哪里没看懂”。再用反馈决定下一场。她的判断依据从脑中的精彩感，变成读者实际能理解的故事。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "练习 给每个愿望配一条证据",
-      "bodyMarkdown": "最多写下三个选项，各列出最吸引你的地方、目前已知的事实和一个待确认条件。选最关键的未知项去查证。今天只新增证据，不再新增选项；随后决定下一步是试做、搁置还是排除。"
+      "title": "把理解带回今天",
+      "bodyMarkdown": "写三个最吸引你的选项，每个只补一条已知事实和一条关键未知。下一步只查未知，不新增选项。想象越具体，越容易产生已经拥有的感觉；用一次可退出的小测试，让美好图景与真实体验见面。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看错的地方",
-      "bodyMarkdown": "圣杯七不表示许愿就能得到，也不能用来诊断妄想或其他心理疾病。丰富的想象并非缺点，问题在于是否把想象当成已经发生的事实。它是一张适合练习辨别的牌，而不是嘲笑做梦者的牌。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接着读什么",
-      "bodyMarkdown": "圣杯骑士：看想象如何成为提议与行动；圣杯九：分清想得到的满足与已经体验到的满足。"
+      "id": "depth-comparison",
+      "role": "comparison",
+      "title": "和相近的牌放在一起看",
+      "bodyMarkdown": "圣杯七的杯子停在云间，圣杯九的杯子已经摆成可见的陈列。前者可用来辨认期待与设想，后者可以检视得到之后的实际感受；两者都不能靠数量判定拥有多少财富。若一个选择看起来很美，先问目前拥有的是宣传、计划，还是已经体验过的内容。确认处在哪一步，才能知道此刻需要查资料、试做，还是坐下来享受。"
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇资料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。"
+      "title": "本篇资料与阅读范围",
+      "bodyMarkdown": "- [Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。"
     }
   ],
   "relatedCards": [
@@ -100,7 +112,7 @@
       "title": "Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "seven-of-cups-image",
         "layer": "画面观察",
@@ -115,7 +127,7 @@
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcu07.htm",
       "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "seven-of-cups-waite",
         "layer": "历史原文",
@@ -180,180 +192,33 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 圣杯七牌义 先看清愿望，再挑一个去验证\n\n一句话：想象提供很多可能，行动需要更少而更清楚的选择。\n\n牌名：圣杯七 Seven of Cups  \n牌序：VII · RWS 小阿尔卡那 · 圣杯组  \n关键词：想象、诱惑、筛选\n\n正位速读：选项看起来都很有吸引力，先分开愿望与已知事实。  \n逆位速读：开始收拢目标，让一个想法接受现实检验。\n\n脑中最精彩的未来，往往还没有日程、成本和第一步。圣杯七允许你做梦，也邀请你看一看，哪些只是梦里的摆设。\n\n## 七只杯子没有装着同一种东西\n\n一个深色背影站在前景，手向前张开，面前云团上排列七只金杯。上方可见一张人脸、罩着白布而周围带红色放射线的形象，以及探出杯沿的蛇。下方杯中分别有高塔般的建筑、彩色珠宝、绿色花环和带翼的龙形怪兽。\n\n杯子悬在云间，没有桌面或落脚的地基，人物也尚未真正拿住任何一只。美丽、财富、荣誉与让人不安的形象并列，制造出诱惑与不确定；不能因为某个物件显眼，就断言它必然对应现实中的某个人。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n\n## 原文把想象与实质成果分开\n\nWaite《塔罗图解之钥》1911 英文转录将这些杯中景象联系到想象、映像与沉思，特意指出其中未显示永久或实质的成果。他给逆位列出的词包括欲望、意志、决心与计划。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n因此本篇的筛选与验证有历史线索，但具体的决策方法是本站原创。这里不为七个图像指定唯一人生清单，也不把它们解释成七项固定预言。\n\n## 正位 先允许发散，再停止无限加选项\n\n想象阶段有用：你可以列出想做的项目、想尝试的生活或希望建立的关系，不急着批评自己。但选项变多并不自动代表机会变多；只有资料和条件得到确认，可能性才开始落地。\n\n当你连续比较却迟迟不试，先写出决定真正依据什么。是想获得技能、更多自由，还是别人的认可？不同需要，会把同一个选项排在完全不同的位置。\n\n## 逆位 给决心一项可核对的任务\n\n逆位可读作从令人眼花缭乱的图景中收回注意力，愿意挑一个方向。把目标改写为本周可完成的动作，例如联系一位业内人士、做一页样稿，或查明报名条件。\n\n收拢也有风险：急着结束犹豫时，可能为了确定感而忽略不利信息。可以保留一个备选方案，并先约定什么证据出现后需要改主意。坚持的对象应是需要，而不必是最早那张漂亮想象。\n\n## 三个很容易被想象带走的时刻\n\n选择课程时，别只收藏宣传页。先核对时间安排、真实作业量和是否符合现阶段水平，再挑一门可体验的课。\n\n新项目点子很多，就用同一标准选一个小样测试。认识新朋友时，对方的一句共同爱好容易被补成完整性格；多问实际经历、看持续相处，少用自己的愿望填空。\n\n## 练习 给每个愿望配一条证据\n\n最多写下三个选项，各列出最吸引你的地方、目前已知的事实和一个待确认条件。选最关键的未知项去查证。今天只新增证据，不再新增选项；随后决定下一步是试做、搁置还是排除。\n\n## 容易看错的地方\n\n圣杯七不表示许愿就能得到，也不能用来诊断妄想或其他心理疾病。丰富的想象并非缺点，问题在于是否把想象当成已经发生的事实。它是一张适合练习辨别的牌，而不是嘲笑做梦者的牌。\n\n## 接着读什么\n\n圣杯骑士：看想象如何成为提议与行动；圣杯九：分清想得到的满足与已经体验到的满足。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。\n",
+  "articleMarkdown": "# 圣杯七牌义 先看清愿望，再挑一个去验证\n\n正位先读一句：选项看起来都很有吸引力，先分开愿望与已知事实。\n\n逆位先读一句：开始收拢目标，让一个想法接受现实检验。\n\n脑中最精彩的未来，往往还没有日程、成本和第一步。圣杯七允许你做梦，也邀请你看一看，哪些只是梦里的摆设。\n\n## 七只杯子没有装着同一种东西\n\n一个深色背影站在前景，手向前张开，面前云团上排列七只金杯。上方可见一张人脸、罩着白布而周围带红色放射线的形象，以及探出杯沿的蛇。下方杯中分别有高塔般的建筑、彩色珠宝、绿色花环和带翼的龙形怪兽。\n\n杯子悬在云间，没有桌面或落脚的地基，人物也尚未真正拿住任何一只。美丽、财富、荣誉与让人不安的形象并列，制造出诱惑与不确定；不能因为某个物件显眼，就断言它必然对应现实中的某个人。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n\n七个杯中物有的令人向往，有的让人不安，它们没有按好坏整齐排队。把它们都读成理想机会，会漏掉风险；把它们都读成骗局，又会丢掉想象本身的价值。关键在前景人物与杯子之间的距离：正在看见、正在被吸引，还没有实际拿到。现代阅读可以沿着这段距离追问，接近某一项需要付出哪些步骤。\n\n## 原文把想象与实质成果分开\n\nWaite《塔罗图解之钥》1911 英文转录将这些杯中景象联系到想象、映像与沉思，特意指出其中未显示永久或实质的成果。他给逆位列出的词包括欲望、意志、决心与计划。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n因此本篇的筛选与验证有历史线索，但具体的决策方法是本站原创。这里不为七个图像指定唯一人生清单，也不把它们解释成七项固定预言。\n\n## 正位 先允许发散，再停止无限加选项\n\n想象阶段有用：你可以列出想做的项目、想尝试的生活或希望建立的关系，不急着批评自己。但选项变多并不自动代表机会变多；只有资料和条件得到确认，可能性才开始落地。\n\n当你连续比较却迟迟不试，先写出决定真正依据什么。是想获得技能、更多自由，还是别人的认可？不同需要，会把同一个选项排在完全不同的位置。\n\n## 逆位 给决心一项可核对的任务\n\n逆位可读作从令人眼花缭乱的图景中收回注意力，愿意挑一个方向。把目标改写为本周可完成的动作，例如联系一位业内人士、做一页样稿，或查明报名条件。\n\n收拢也有风险：急着结束犹豫时，可能为了确定感而忽略不利信息。可以保留一个备选方案，并先约定什么证据出现后需要改主意。坚持的对象应是需要，而不必是最早那张漂亮想象。\n\n## 把牌放回问题和位置里\n\n创意资源位可以鼓励发散，选择建议位却通常需要收拢。卡点位则检查是否把搜集图片、课程和路线当成已经行动。逆位的决心具有传统依据，但决定得快并不自动决定得好。必须允许资料推翻最初想法，尤其不能因抽到“决心”便略过实际成本、资格与时限。云中的图景适合提出愿望，现实的资料负责检验愿望。\n\n## 收藏很多课程以后怎样选择\n\n**原创虚构案例。** 方圆收藏了十二门课程的宣传页，有的承诺作品集，有的强调自由接案，有的主打知名导师。她目前想学会给自己的小店做海报，每周只有三小时学习，却一直按宣传图是否好看来排序。\n\n问题是“我该用什么标准挑下一门设计课程”，决策卡点位抽到圣杯七正位。\n\n杯中内容各不相同，正好提醒这些课程也许根本解决不同问题。云层可以对应尚未核实的许诺，人物伸手却没拿到则贴近反复收藏。卡点不一定是她不够自律，而是没有用真实任务筛选，导致每种想象都显得重要。\n\n若她已经核对过作业与难度，迟迟没选只是因为预算尚未到位，那应先处理实际限制，不必继续分析幻想。若目的其实是转行，则海报技能也不足以作为唯一标准，需要重新界定目标。\n\n先选三门以内，查看一节试听与真实作业要求，用“能否完成本店一张海报”“每周时间是否容得下”两项筛选。把不清楚的条件问明白，仍不符合就暂不报名。减少选项是为了增加证据，不是逼自己当天付款。\n\n## 故事点子终于可以选一个以后\n\n**原创虚构案例。** 小南列了七个故事开头，过去一个月不断增加人物设定，却没有完成一篇。昨天她发现“夜班公交司机听到乘客的梦”最让自己想继续写，也已经想好一个结尾。她打算先写两千字。\n\n问题是“我怎样把短篇小说从设想推进到初稿”，下一步行动位抽到圣杯七逆位。\n\n逆位的意志与计划方向有现实支点：偏好已出现，规模也已缩小。图中悬浮的杯子可以转化成一个任务，把其中一个移到纸面。此处值得鼓励的是完成一段可读文本，而不是再证明这个点子比另外六个更伟大。\n\n但若她只是挑了朋友赞最多的设定，自己仍不清楚主角要什么，收拢可能过早。也可能写到一半发现结尾不成立，这属于作品提供的新证据，并非逆位“失效”。可以改结构，也可以换方向，不必忠于第一天的承诺。\n\n先写司机面对一次选择的完整场景，暂不追加世界设定。写完请一位读者只回答“主角想做什么、哪里没看懂”。再用反馈决定下一场。她的判断依据从脑中的精彩感，变成读者实际能理解的故事。\n\n## 把理解带回今天\n\n写三个最吸引你的选项，每个只补一条已知事实和一条关键未知。下一步只查未知，不新增选项。想象越具体，越容易产生已经拥有的感觉；用一次可退出的小测试，让美好图景与真实体验见面。\n\n## 和相近的牌放在一起看\n\n圣杯七的杯子停在云间，圣杯九的杯子已经摆成可见的陈列。前者可用来辨认期待与设想，后者可以检视得到之后的实际感受；两者都不能靠数量判定拥有多少财富。若一个选择看起来很美，先问目前拥有的是宣传、计划，还是已经体验过的内容。确认处在哪一步，才能知道此刻需要查资料、试做，还是坐下来享受。\n\n## 本篇资料与阅读范围\n\n- [Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups07.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "seven",
-    "nameZh": "圣杯七",
-    "nameEn": "Seven of Cups",
-    "number": "VII",
-    "title": "圣杯七牌义 先看清愿望，再挑一个去验证",
-    "oneLineSummary": "想象提供很多可能，行动需要更少而更清楚的选择。",
-    "keywords": [
-      "想象",
-      "诱惑",
-      "筛选"
-    ],
-    "uprightQuickTake": "选项看起来都很有吸引力，先分开愿望与已知事实。",
-    "reversedQuickTake": "开始收拢目标，让一个想法接受现实检验。",
-    "hook": "脑中最精彩的未来，往往还没有日程、成本和第一步。圣杯七允许你做梦，也邀请你看一看，哪些只是梦里的摆设。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "七只杯子没有装着同一种东西",
-        "paragraphs": [
-          "一个深色背影站在前景，手向前张开，面前云团上排列七只金杯。上方可见一张人脸、罩着白布而周围带红色放射线的形象，以及探出杯沿的蛇。下方杯中分别有高塔般的建筑、彩色珠宝、绿色花环和带翼的龙形怪兽。",
-          "杯子悬在云间，没有桌面或落脚的地基，人物也尚未真正拿住任何一只。美丽、财富、荣誉与让人不安的形象并列，制造出诱惑与不确定；不能因为某个物件显眼，就断言它必然对应现实中的某个人。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups07.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "原文把想象与实质成果分开",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录将这些杯中景象联系到想象、映像与沉思，特意指出其中未显示永久或实质的成果。他给逆位列出的词包括欲望、意志、决心与计划。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu07.htm)",
-          "因此本篇的筛选与验证有历史线索，但具体的决策方法是本站原创。这里不为七个图像指定唯一人生清单，也不把它们解释成七项固定预言。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先允许发散，再停止无限加选项",
-        "paragraphs": [
-          "想象阶段有用：你可以列出想做的项目、想尝试的生活或希望建立的关系，不急着批评自己。但选项变多并不自动代表机会变多；只有资料和条件得到确认，可能性才开始落地。",
-          "当你连续比较却迟迟不试，先写出决定真正依据什么。是想获得技能、更多自由，还是别人的认可？不同需要，会把同一个选项排在完全不同的位置。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 给决心一项可核对的任务",
-        "paragraphs": [
-          "逆位可读作从令人眼花缭乱的图景中收回注意力，愿意挑一个方向。把目标改写为本周可完成的动作，例如联系一位业内人士、做一页样稿，或查明报名条件。",
-          "收拢也有风险：急着结束犹豫时，可能为了确定感而忽略不利信息。可以保留一个备选方案，并先约定什么证据出现后需要改主意。坚持的对象应是需要，而不必是最早那张漂亮想象。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "三个很容易被想象带走的时刻",
-        "paragraphs": [
-          "选择课程时，别只收藏宣传页。先核对时间安排、真实作业量和是否符合现阶段水平，再挑一门可体验的课。",
-          "新项目点子很多，就用同一标准选一个小样测试。认识新朋友时，对方的一句共同爱好容易被补成完整性格；多问实际经历、看持续相处，少用自己的愿望填空。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 给每个愿望配一条证据",
-        "paragraphs": [
-          "最多写下三个选项，各列出最吸引你的地方、目前已知的事实和一个待确认条件。选最关键的未知项去查证。今天只新增证据，不再新增选项；随后决定下一步是试做、搁置还是排除。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "圣杯七不表示许愿就能得到，也不能用来诊断妄想或其他心理疾病。丰富的想象并非缺点，问题在于是否把想象当成已经发生的事实。它是一张适合练习辨别的牌，而不是嘲笑做梦者的牌。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "knight-of-cups",
-        "nameZh": "圣杯骑士",
-        "reason": "看想象如何成为提议与行动"
-      },
-      {
-        "cardId": "nine-of-cups",
-        "nameZh": "圣杯九",
-        "reason": "分清想得到的满足与已经体验到的满足"
-      }
-    ],
-    "cardId": "seven-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 7,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-seven-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "seven-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Seven of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "seven-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Seven of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcu07.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups07.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups07.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups07.jpg&oldid=1199313919",
-      "pageRevision": "1199313919",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:23:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:23, 5 April 2024 1,109 × 1,920 (789 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg",
-      "localFile": "images/Cups07.jpg",
-      "dimensions": [
-        1109,
-        1920
-      ],
-      "commonsOriginalDimensions": [
-        1109,
-        1920
-      ],
-      "bytes": 808227,
-      "sha256": "3c9d1d310ca3f4303a2e4beb872d998f7b45fbd26ee361ee48fadb366cf3b3a7",
-      "sha1": "46cddf039c6cdbb73062ec02d9b46305a1c68c7e",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1174,
-    "bodyChineseCharacterCount": 888
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 926,
-    "words": 2,
-    "articleUtf8Bytes": 4418
-  },
+  "sourceBatch": "depth77-cups-03",
   "nameLocalized": "圣杯七",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_reviewed_chinese",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 1034,
-    "completeArticleChineseCharacters": 1174
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "aa912776e9d5ac4738c4be7e7852810e5344a78e0712f299d96fddcf12be0e91",
-    "articleSha256": "aa912776e9d5ac4738c4be7e7852810e5344a78e0712f299d96fddcf12be0e91",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "adc63d2ee15cc53dbe55684daa88af25be795db5d202a8e88e63358b5371c996",
+    "sourceArticleSha256": "adc63d2ee15cc53dbe55684daa88af25be795db5d202a8e88e63358b5371c996",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "e872c006d373fd7299fb523f8b4f833c6bd617bba7a5174b0b5479c5532a3870",
+    "sourcePackageSha256": "93f7f0a1079452e85bbbe62c5e27b19d1770cf81270e6a1a14829e1239b2d4fe",
+    "previousRecord": "content/tarot/revisions/2026-10-08/seven-of-cups.zh.json",
+    "editionBodySha256": "adc63d2ee15cc53dbe55684daa88af25be795db5d202a8e88e63358b5371c996"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

@@ -14,7 +14,7 @@
   "locale": "zh-CN",
   "deckSystem": "RWS",
   "title": "圣杯九牌义 认真享受已经得到的满足",
-  "plainLanguageSummary": "承认此刻的成果与舒适，也问问这是不是自己真正想要的。",
+  "plainLanguageSummary": null,
   "keywords": [
     "满足",
     "享受",
@@ -30,7 +30,7 @@
       "id": "section-01",
       "role": "image",
       "title": "九只杯子排在身后",
-      "bodyMarkdown": "黄色背景前，一位戴红帽的人坐在简单木凳上，双臂交叉，双脚向两边落地，嘴角略扬。浅色衣服布满黑色褶纹，身后高台覆盖蓝色布幔，九只金杯沿弧线依次摆开。\n\n杯子像被陈列的成果，人物却没有拿起其中一只。凳子不华丽，现场也没有其他同伴。双臂交叉的姿势在圣杯四也出现过，但这里的环境、表情与整齐排列不同；不能只凭一个动作就把两张牌读成同一种封闭。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups09.jpg)"
+      "bodyMarkdown": "黄色背景前，一位戴红帽的人坐在简单木凳上，双臂交叉，双脚向两边落地，嘴角略扬。浅色衣服布满黑色褶纹，身后高台覆盖蓝色布幔，九只金杯沿弧线依次摆开。\n\n杯子像被陈列的成果，人物却没有拿起其中一只。凳子不华丽，现场也没有其他同伴。双臂交叉的姿势在圣杯四也出现过，但这里的环境、表情与整齐排列不同；不能只凭一个动作就把两张牌读成同一种封闭。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n\n人物坐在杯子之前，观者先看到他，再看到陈列的收获。这样的前后关系很适合追问：这些成果如何进入自己的生活？杯子整齐、布幔漂亮，可以说明有值得展示的东西，却看不到背后的全部日常。双手没有拿杯，也可以引发一个现代提问：你是在享受成果，还是忙着守住“看起来满足”的样子？这仍要由实际体验回答。"
     },
     {
       "id": "section-02",
@@ -51,34 +51,46 @@
       "bodyMarkdown": "当成果摆得很漂亮，自己却并不快乐，可以问：这件事满足的是我的需要，还是别人对我的期待？也许你得到认可，却缺少休息；达到了数量，却没有做出真正喜欢的东西。\n\n另一个方向是享受失去分寸，例如为了保持奖励自己的感觉不断加码。先看现实的时间与预算，不必用羞耻感惩罚自己。满足感有起伏，不代表你已经失去享受生活的能力。"
     },
     {
-      "id": "section-05",
-      "role": "situations",
-      "title": "庆祝之前先知道自己在庆祝什么",
-      "bodyMarkdown": "完成一门课程后，不急着再买下一门。挑一项已经会做的技能用出来，承认成果，再决定下一阶段。\n\n朋友称赞你的生活安排时，问问哪些部分你自己也喜欢。周末想奖励自己，可以选一次真正期待的活动并提前定好花费；愉快体验与透支后的压力不必捆绑在一起。"
+      "id": "depth-positions",
+      "role": "positions",
+      "title": "把牌放回问题和位置里",
+      "bodyMarkdown": "成果位可以帮助确认完成了什么，建议位可以提醒留出享受的时间；风险位则可检查舒适是否变成不愿再听反馈。逆位若用于“不满足”，应找到满足与真实需要之间的差距，不能假设每个生活不错的人都藏着空虚。本牌的一个人和圣杯十的多人不同：个人满意可以很真实，但不足以自动说明关系或团队里的其他人也满意。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "完成课程以后不急着再买下一门",
+      "bodyMarkdown": "**原创虚构案例。** 阿白完成了八周陶艺课，已经独立做出三只可以正常使用的杯子。她每天用其中一只喝茶，却一收到进阶课广告就觉得自己仍然很差。老师的反馈是基础动作稳定，装饰技巧还能继续练。\n\n问题是“这次学习结束，我该怎样好好收尾”，成果确认位抽到圣杯九正位。\n\n身后九杯的陈列与人物坐下的姿态，可以帮助承认已经获得可使用的成果。现实支点不是抽到了所谓许愿牌，而是杯子确实做成、使用体验也喜欢。老师提出提升空间，不会自动抹掉已经达到的阶段目标。\n\n若杯子尚未经过适当烧制或不能安全使用，就不能凭满意感跳过实际检查；若她本来的目标是专业生产，三只成品也不能证明已经具备产能。成果的范围需要与最初目标对齐。\n\n给三只杯子拍照，写下各自掌握的一项动作和一个想改进的地方，留一周只使用、观察成品。之后再依据真正遇到的技术问题选进阶内容。允许满意停留一会儿，会让下一次学习更有方向，而非只是被不足感推动。",
+      "legacyAnchors": [
+        "section-05"
+      ]
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "别人称赞的生活为什么自己不喜欢",
+      "bodyMarkdown": "**原创虚构案例。** 小艾每周末都去新开的店拍照，朋友称赞她生活精彩。最近她整理相片时却觉得累，真正期待的是在家读完一本小说。她仍喜欢偶尔外出，只是不想每周都安排新地点。\n\n问题是“我该怎样调整周末，才更接近自己想要的休息”，满足落差位抽到圣杯九逆位。\n\n整齐陈列的杯子与坐在前面的人，适合检视展示与体验是否脱节。逆位不必说她虚荣，更具体的事实是外界反馈正在替代自己的休息标准。她拥有别人看得见的“丰富”，却没有给自己最想做的事留位置。\n\n如果她出门时非常开心，只在整理相片时疲惫，问题可能是后期发布的劳动，未必需要减少外出。若最近时间普遍紧张，也应看工作量，而不是把疲惫全归结为追求认可。\n\n下个周末留出不拍照、不发布的半天阅读，另半天自由选择是否外出。比较结束后的感受，再决定保留哪些活动。暂时减少分享不需要向所有人解释，真正有用的标准是她是否得到想要的休息。"
     },
     {
       "id": "section-06",
       "role": "practice",
-      "title": "练习 写一份足够清单",
-      "bodyMarkdown": "列三件目前已经够用或值得满意的东西，每件写明实际带来的好处。再选一个常被比较心推高的标准，给它设一个暂时的足够线。到达后停下来体验成果，而不是马上增添新要求。"
+      "title": "把理解带回今天",
+      "bodyMarkdown": "完成“我已经满意的是……”与“我以为得到它就会满足的是……”两句话，分别举出实际体验。两者若不同，先调整一件小事，不必否定所有成果。圣杯九可以帮助练习知足，但无法保证中奖、财富或愿望按计划到来。",
+      "legacyAnchors": [
+        "section-07"
+      ]
     },
     {
-      "id": "section-07",
-      "role": "common_misread",
-      "title": "容易看错的地方",
-      "bodyMarkdown": "圣杯九不保证中奖、发财或所有愿望成真，也不表示满足的人必然自私。它可以照见个人享受，却不能代替对资源和责任的判断。你可以真诚满意，同时知道生活仍有需要照顾的部分。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接着读什么",
-      "bodyMarkdown": "圣杯七：分清想象中的得到与真实体验；圣杯十：比较个人满足与共同生活的安稳。"
+      "id": "depth-comparison",
+      "role": "comparison",
+      "title": "和相近的牌放在一起看",
+      "bodyMarkdown": "圣杯九与圣杯十的差异，不是少一只杯就少一点幸福。九把一个人的满足放在近处，十把多人不同的活动纳入同一个场景。个人成就可以成立，同时伴随共同生活中需要调整的分工。反过来，周围人很满意，也不等于你的需要已被照顾。读这两张牌时，先问正在说谁的感受，能避免把一个人的快乐扩大成所有人的共识。"
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇资料",
-      "bodyMarkdown": "- [Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。"
+      "title": "本篇资料与阅读范围",
+      "bodyMarkdown": "- [Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。"
     }
   ],
   "relatedCards": [
@@ -100,7 +112,7 @@
       "title": "Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描",
       "url": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
       "edition": null,
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "nine-of-cups-image",
         "layer": "画面观察",
@@ -115,7 +127,7 @@
       "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktcu09.htm",
       "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-      "checkedOn": "2026-10-07",
+      "checkedOn": "2026-10-08",
       "sourceMetadata": {
         "id": "nine-of-cups-waite",
         "layer": "历史原文",
@@ -180,180 +192,33 @@
       "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
     }
   },
-  "articleMarkdown": "# 圣杯九牌义 认真享受已经得到的满足\n\n一句话：承认此刻的成果与舒适，也问问这是不是自己真正想要的。\n\n牌名：圣杯九 Nine of Cups  \n牌序：IX · RWS 小阿尔卡那 · 圣杯组  \n关键词：满足、享受、自我认可\n\n正位速读：有理由为已有成果高兴，让自己踏实享受这一刻。  \n逆位速读：表面已经够好，内心仍有缺口，需要重新辨认满足来自哪里。\n\n目标完成后，你会坐下来开心一会儿，还是立刻把标准往上移？圣杯九把你带到成果面前，让满足本身成为值得留意的事。\n\n## 九只杯子排在身后\n\n黄色背景前，一位戴红帽的人坐在简单木凳上，双臂交叉，双脚向两边落地，嘴角略扬。浅色衣服布满黑色褶纹，身后高台覆盖蓝色布幔，九只金杯沿弧线依次摆开。\n\n杯子像被陈列的成果，人物却没有拿起其中一只。凳子不华丽，现场也没有其他同伴。双臂交叉的姿势在圣杯四也出现过，但这里的环境、表情与整齐排列不同；不能只凭一个动作就把两张牌读成同一种封闭。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n\n## 原文的满足有物质层面\n\nWaite《塔罗图解之钥》1911 英文转录把人物描述为尽兴宴饮后的人，指出图画展示了物质的一面，也列出满足、舒适、成功等占卜词。把本牌叫作愿望必定实现，并不是这段文字可以证明的现实结论。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n他的逆位词条包含真理、忠诚、自由，也说不同读法会涉及错误与不完善。本站以下的空虚、过度追逐认可，是用于检视满足的现代延伸，不能说成唯一传统逆位。\n\n## 正位 让满意具体一点\n\n正位可以帮助你停止一味赶路，确认已经做成什么。独立完成一件作品、把住处收拾得舒服、终于有时间享受爱好，都可以是自己的满足，不必等旁人颁奖。\n\n享受不是必须花很多钱，也不是只有盛大成就才配拥有。说清楚哪一部分让你满意，能帮助你以后继续安排类似经验，而不是在短暂兴奋过后只剩下继续购买或继续比较。\n\n## 逆位 分辨舒服与填空\n\n当成果摆得很漂亮，自己却并不快乐，可以问：这件事满足的是我的需要，还是别人对我的期待？也许你得到认可，却缺少休息；达到了数量，却没有做出真正喜欢的东西。\n\n另一个方向是享受失去分寸，例如为了保持奖励自己的感觉不断加码。先看现实的时间与预算，不必用羞耻感惩罚自己。满足感有起伏，不代表你已经失去享受生活的能力。\n\n## 庆祝之前先知道自己在庆祝什么\n\n完成一门课程后，不急着再买下一门。挑一项已经会做的技能用出来，承认成果，再决定下一阶段。\n\n朋友称赞你的生活安排时，问问哪些部分你自己也喜欢。周末想奖励自己，可以选一次真正期待的活动并提前定好花费；愉快体验与透支后的压力不必捆绑在一起。\n\n## 练习 写一份足够清单\n\n列三件目前已经够用或值得满意的东西，每件写明实际带来的好处。再选一个常被比较心推高的标准，给它设一个暂时的足够线。到达后停下来体验成果，而不是马上增添新要求。\n\n## 容易看错的地方\n\n圣杯九不保证中奖、发财或所有愿望成真，也不表示满足的人必然自私。它可以照见个人享受，却不能代替对资源和责任的判断。你可以真诚满意，同时知道生活仍有需要照顾的部分。\n\n## 接着读什么\n\n圣杯七：分清想象中的得到与真实体验；圣杯十：比较个人满足与共同生活的安稳。\n\n## 本篇资料\n\n- [Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n版本说明：文字核对 Sacred Texts 标注 [1911] 的英文转录，图像为 Commons 当前标注的 Pam-A 扫描。现代情境、提问与练习由 DestinyPixel 原创编写，历史占卜词仅作学习材料，不是事件预测或现实证据。\n",
+  "articleMarkdown": "# 圣杯九牌义 认真享受已经得到的满足\n\n正位先读一句：有理由为已有成果高兴，让自己踏实享受这一刻。\n\n逆位先读一句：表面已经够好，内心仍有缺口，需要重新辨认满足来自哪里。\n\n目标完成后，你会坐下来开心一会儿，还是立刻把标准往上移？圣杯九把你带到成果面前，让满足本身成为值得留意的事。\n\n## 九只杯子排在身后\n\n黄色背景前，一位戴红帽的人坐在简单木凳上，双臂交叉，双脚向两边落地，嘴角略扬。浅色衣服布满黑色褶纹，身后高台覆盖蓝色布幔，九只金杯沿弧线依次摆开。\n\n杯子像被陈列的成果，人物却没有拿起其中一只。凳子不华丽，现场也没有其他同伴。双臂交叉的姿势在圣杯四也出现过，但这里的环境、表情与整齐排列不同；不能只凭一个动作就把两张牌读成同一种封闭。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n\n人物坐在杯子之前，观者先看到他，再看到陈列的收获。这样的前后关系很适合追问：这些成果如何进入自己的生活？杯子整齐、布幔漂亮，可以说明有值得展示的东西，却看不到背后的全部日常。双手没有拿杯，也可以引发一个现代提问：你是在享受成果，还是忙着守住“看起来满足”的样子？这仍要由实际体验回答。\n\n## 原文的满足有物质层面\n\nWaite《塔罗图解之钥》1911 英文转录把人物描述为尽兴宴饮后的人，指出图画展示了物质的一面，也列出满足、舒适、成功等占卜词。把本牌叫作愿望必定实现，并不是这段文字可以证明的现实结论。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n他的逆位词条包含真理、忠诚、自由，也说不同读法会涉及错误与不完善。本站以下的空虚、过度追逐认可，是用于检视满足的现代延伸，不能说成唯一传统逆位。\n\n## 正位 让满意具体一点\n\n正位可以帮助你停止一味赶路，确认已经做成什么。独立完成一件作品、把住处收拾得舒服、终于有时间享受爱好，都可以是自己的满足，不必等旁人颁奖。\n\n享受不是必须花很多钱，也不是只有盛大成就才配拥有。说清楚哪一部分让你满意，能帮助你以后继续安排类似经验，而不是在短暂兴奋过后只剩下继续购买或继续比较。\n\n## 逆位 分辨舒服与填空\n\n当成果摆得很漂亮，自己却并不快乐，可以问：这件事满足的是我的需要，还是别人对我的期待？也许你得到认可，却缺少休息；达到了数量，却没有做出真正喜欢的东西。\n\n另一个方向是享受失去分寸，例如为了保持奖励自己的感觉不断加码。先看现实的时间与预算，不必用羞耻感惩罚自己。满足感有起伏，不代表你已经失去享受生活的能力。\n\n## 把牌放回问题和位置里\n\n成果位可以帮助确认完成了什么，建议位可以提醒留出享受的时间；风险位则可检查舒适是否变成不愿再听反馈。逆位若用于“不满足”，应找到满足与真实需要之间的差距，不能假设每个生活不错的人都藏着空虚。本牌的一个人和圣杯十的多人不同：个人满意可以很真实，但不足以自动说明关系或团队里的其他人也满意。\n\n## 完成课程以后不急着再买下一门\n\n**原创虚构案例。** 阿白完成了八周陶艺课，已经独立做出三只可以正常使用的杯子。她每天用其中一只喝茶，却一收到进阶课广告就觉得自己仍然很差。老师的反馈是基础动作稳定，装饰技巧还能继续练。\n\n问题是“这次学习结束，我该怎样好好收尾”，成果确认位抽到圣杯九正位。\n\n身后九杯的陈列与人物坐下的姿态，可以帮助承认已经获得可使用的成果。现实支点不是抽到了所谓许愿牌，而是杯子确实做成、使用体验也喜欢。老师提出提升空间，不会自动抹掉已经达到的阶段目标。\n\n若杯子尚未经过适当烧制或不能安全使用，就不能凭满意感跳过实际检查；若她本来的目标是专业生产，三只成品也不能证明已经具备产能。成果的范围需要与最初目标对齐。\n\n给三只杯子拍照，写下各自掌握的一项动作和一个想改进的地方，留一周只使用、观察成品。之后再依据真正遇到的技术问题选进阶内容。允许满意停留一会儿，会让下一次学习更有方向，而非只是被不足感推动。\n\n## 别人称赞的生活为什么自己不喜欢\n\n**原创虚构案例。** 小艾每周末都去新开的店拍照，朋友称赞她生活精彩。最近她整理相片时却觉得累，真正期待的是在家读完一本小说。她仍喜欢偶尔外出，只是不想每周都安排新地点。\n\n问题是“我该怎样调整周末，才更接近自己想要的休息”，满足落差位抽到圣杯九逆位。\n\n整齐陈列的杯子与坐在前面的人，适合检视展示与体验是否脱节。逆位不必说她虚荣，更具体的事实是外界反馈正在替代自己的休息标准。她拥有别人看得见的“丰富”，却没有给自己最想做的事留位置。\n\n如果她出门时非常开心，只在整理相片时疲惫，问题可能是后期发布的劳动，未必需要减少外出。若最近时间普遍紧张，也应看工作量，而不是把疲惫全归结为追求认可。\n\n下个周末留出不拍照、不发布的半天阅读，另半天自由选择是否外出。比较结束后的感受，再决定保留哪些活动。暂时减少分享不需要向所有人解释，真正有用的标准是她是否得到想要的休息。\n\n## 把理解带回今天\n\n完成“我已经满意的是……”与“我以为得到它就会满足的是……”两句话，分别举出实际体验。两者若不同，先调整一件小事，不必否定所有成果。圣杯九可以帮助练习知足，但无法保证中奖、财富或愿望按计划到来。\n\n## 和相近的牌放在一起看\n\n圣杯九与圣杯十的差异，不是少一只杯就少一点幸福。九把一个人的满足放在近处，十把多人不同的活动纳入同一个场景。个人成就可以成立，同时伴随共同生活中需要调整的分工。反过来，周围人很满意，也不等于你的需要已被照顾。读这两张牌时，先问正在说谁的感受，能避免把一个人的快乐扩大成所有人的共识。\n\n## 本篇资料与阅读范围\n\n- [Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描](https://commons.wikimedia.org/wiki/File:Cups09.jpg)\n- [A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)\n\n图像按本篇RWS实物核对；历史文字依据页面标注1911的英文转录。正文中的日常应用和虚构案例为DestinyPixel原创，不代表Waite逐句释义。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "nine",
-    "nameZh": "圣杯九",
-    "nameEn": "Nine of Cups",
-    "number": "IX",
-    "title": "圣杯九牌义 认真享受已经得到的满足",
-    "oneLineSummary": "承认此刻的成果与舒适，也问问这是不是自己真正想要的。",
-    "keywords": [
-      "满足",
-      "享受",
-      "自我认可"
-    ],
-    "uprightQuickTake": "有理由为已有成果高兴，让自己踏实享受这一刻。",
-    "reversedQuickTake": "表面已经够好，内心仍有缺口，需要重新辨认满足来自哪里。",
-    "hook": "目标完成后，你会坐下来开心一会儿，还是立刻把标准往上移？圣杯九把你带到成果面前，让满足本身成为值得留意的事。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "九只杯子排在身后",
-        "paragraphs": [
-          "黄色背景前，一位戴红帽的人坐在简单木凳上，双臂交叉，双脚向两边落地，嘴角略扬。浅色衣服布满黑色褶纹，身后高台覆盖蓝色布幔，九只金杯沿弧线依次摆开。",
-          "杯子像被陈列的成果，人物却没有拿起其中一只。凳子不华丽，现场也没有其他同伴。双臂交叉的姿势在圣杯四也出现过，但这里的环境、表情与整齐排列不同；不能只凭一个动作就把两张牌读成同一种封闭。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Cups09.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "原文的满足有物质层面",
-        "paragraphs": [
-          "Waite《塔罗图解之钥》1911 英文转录把人物描述为尽兴宴饮后的人，指出图画展示了物质的一面，也列出满足、舒适、成功等占卜词。把本牌叫作愿望必定实现，并不是这段文字可以证明的现实结论。 [Waite 本牌原文](https://original.sacred-texts.com/tarot/pkt/pktcu09.htm)",
-          "他的逆位词条包含真理、忠诚、自由，也说不同读法会涉及错误与不完善。本站以下的空虚、过度追逐认可，是用于检视满足的现代延伸，不能说成唯一传统逆位。"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 让满意具体一点",
-        "paragraphs": [
-          "正位可以帮助你停止一味赶路，确认已经做成什么。独立完成一件作品、把住处收拾得舒服、终于有时间享受爱好，都可以是自己的满足，不必等旁人颁奖。",
-          "享受不是必须花很多钱，也不是只有盛大成就才配拥有。说清楚哪一部分让你满意，能帮助你以后继续安排类似经验，而不是在短暂兴奋过后只剩下继续购买或继续比较。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 分辨舒服与填空",
-        "paragraphs": [
-          "当成果摆得很漂亮，自己却并不快乐，可以问：这件事满足的是我的需要，还是别人对我的期待？也许你得到认可，却缺少休息；达到了数量，却没有做出真正喜欢的东西。",
-          "另一个方向是享受失去分寸，例如为了保持奖励自己的感觉不断加码。先看现实的时间与预算，不必用羞耻感惩罚自己。满足感有起伏，不代表你已经失去享受生活的能力。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "庆祝之前先知道自己在庆祝什么",
-        "paragraphs": [
-          "完成一门课程后，不急着再买下一门。挑一项已经会做的技能用出来，承认成果，再决定下一阶段。",
-          "朋友称赞你的生活安排时，问问哪些部分你自己也喜欢。周末想奖励自己，可以选一次真正期待的活动并提前定好花费；愉快体验与透支后的压力不必捆绑在一起。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 写一份足够清单",
-        "paragraphs": [
-          "列三件目前已经够用或值得满意的东西，每件写明实际带来的好处。再选一个常被比较心推高的标准，给它设一个暂时的足够线。到达后停下来体验成果，而不是马上增添新要求。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "圣杯九不保证中奖、发财或所有愿望成真，也不表示满足的人必然自私。它可以照见个人享受，却不能代替对资源和责任的判断。你可以真诚满意，同时知道生活仍有需要照顾的部分。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "seven-of-cups",
-        "nameZh": "圣杯七",
-        "reason": "分清想象中的得到与真实体验"
-      },
-      {
-        "cardId": "ten-of-cups",
-        "nameZh": "圣杯十",
-        "reason": "比较个人满足与共同生活的安稳"
-      }
-    ],
-    "cardId": "nine-of-cups",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "arcana": "minor",
-    "suit": "cups",
-    "rankOrder": 9,
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "articleSlug": "tarot-nine-of-cups-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "nine-of-cups-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：Nine of Cups，Commons Pam-A 扫描",
-        "url": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "nine-of-cups-waite",
-        "layer": "历史原文",
-        "title": "A. E. Waite，The Pictorial Key to the Tarot，第三部 §2，Nine of Cups",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktcu09.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；未核验 1910 实体初版或逐页初版扫描",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "creator": "Pamela Colman Smith",
-      "commonsFile": "Cups09.jpg",
-      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Cups09.jpg",
-      "filePagePermanentUrl": "https://commons.wikimedia.org/w/index.php?title=File:Cups09.jpg&oldid=1199314066",
-      "pageRevision": "1199314066",
-      "versionLabel": "Commons 当前 Pam-A 扫描，文件页标 1910，TaionWC 于 2024-04-05 上传",
-      "fileVersionUtc": "2024-04-05T00:25:00Z",
-      "versionTimestampPrecision": "minute",
-      "fileHistoryText": "00:25, 5 April 2024 1,114 × 1,919 (805 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-      "sourceAttribution": "Commons 当前 Source 指向 http://muzendo.jp/blog/；不挪用 2008 旧版 Holly Voley 扫描来源",
-      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg",
-      "localFile": "images/Cups09.jpg",
-      "dimensions": [
-        1114,
-        1919
-      ],
-      "commonsOriginalDimensions": [
-        1114,
-        1919
-      ],
-      "bytes": 824525,
-      "sha256": "5d0704e0dc1de8ab59da38230b609a5aeeceaf61473ca5271f48049976f3cb6f",
-      "sha1": "d06b79c496232ae7a12e8c1bd034b37b5580202e",
-      "inspectedAssetType": "Commons 当前原尺寸 JPEG",
-      "originalBytesDownloaded": true,
-      "visualInspection": "已逐张调用 view_image 打开实际像素，未用文件描述替代图像观察",
-      "checkedAt": "2026-10-07",
-      "rights": "Commons 当前文件页标注 public domain 与 Public Domain Mark 1.0。本稿记录来源声明，不作全球版权保证；上线前须按实际文件、地区与平台规则复核。",
-      "productionAssetComparison": "未与站内 webp 作逐像素比对，不宣称图像版本完全一致。"
-    },
-    "chineseCharacterCount": 1164,
-    "bodyChineseCharacterCount": 893
-  },
-  "sourceBatch": "cups",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 937,
-    "words": 2,
-    "articleUtf8Bytes": 4378
-  },
+  "sourceBatch": "depth77-cups-04",
   "nameLocalized": "圣杯九",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_reviewed_chinese",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {},
-  "countsOriginal": {
-    "mainTextChineseCharacters": 1027,
-    "completeArticleChineseCharacters": 1164
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "55a3b655038801d7d70fee65628aa170d6c695ff5772a0dac1a8ce649584da03",
-    "articleSha256": "55a3b655038801d7d70fee65628aa170d6c695ff5772a0dac1a8ce649584da03",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "4e0077b2601f2c992b080a5512943ee16683b3972129b9ae7a488224acd8e9a2",
+    "sourceArticleSha256": "4e0077b2601f2c992b080a5512943ee16683b3972129b9ae7a488224acd8e9a2",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "351adc17391bb02e19d874747dcd80870687e090986ba2233c77586b4ae721bd",
+    "sourcePackageSha256": "542a9f826007339bb3916f1c10e12685b90400a43994be287718d9c9907c33bb",
+    "previousRecord": "content/tarot/revisions/2026-10-08/nine-of-cups.zh.json",
+    "editionBodySha256": "4e0077b2601f2c992b080a5512943ee16683b3972129b9ae7a488224acd8e9a2"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }
