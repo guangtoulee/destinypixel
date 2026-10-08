@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-08T09:27:43.560242+00:00",
+  "checkedAt": "2026-10-08T09:33:06.763635+00:00",
   "environment": "/workspace/destinypixel; shell/filesystem readable and writable verified",
   "branch": "codex/tarot-depth-77-20261008",
   "baselineCommit": "3656f3f0d2d66190cd0af457230e51e945683059",
-  "receivedChineseCards": 59,
-  "receivedBatchCount": 23,
+  "receivedChineseCards": 77,
+  "receivedBatchCount": 31,
   "receivedCardIds": [
     "fool",
     "magician",
@@ -46,11 +46,29 @@
     "three-of-cups",
     "four-of-cups",
     "five-of-cups",
+    "six-of-cups",
+    "seven-of-cups",
+    "eight-of-cups",
+    "nine-of-cups",
+    "ten-of-cups",
+    "page-of-cups",
+    "knight-of-cups",
+    "queen-of-cups",
+    "king-of-cups",
     "ace-of-swords",
     "two-of-swords",
     "three-of-swords",
     "four-of-swords",
     "five-of-swords",
+    "six-of-swords",
+    "seven-of-swords",
+    "eight-of-swords",
+    "nine-of-swords",
+    "ten-of-swords",
+    "page-of-swords",
+    "knight-of-swords",
+    "queen-of-swords",
+    "king-of-swords",
     "ace-of-pentacles",
     "two-of-pentacles",
     "three-of-pentacles",
@@ -105,16 +123,17 @@
   "publishedCardsThisRound": 0,
   "newTranslationWork": "paused per parent instruction",
   "checksPassed": [
-    "59 exact source body SHA-256 values and retained package hashes",
+    "77 original body SHA-256 values; 31 retained package hashes; exact 77 registered IDs excluding Sun; 154 distinct case-section texts",
     "39 complete translation body/file hashes and section/paragraph/list/citation parity",
     "protected scope unchanged",
     "original 312 tarot records and collection hashes/JSON schema",
     "6 affected unit tests",
     "TypeScript noEmit",
-    "changed TypeScript/TSX ESLint"
+    "changed TypeScript/TSX ESLint",
+    "Previously retained 46 Chinese originals, 39 complete translations and 2 English drafts unchanged byte-for-byte from a76343b",
+    "Separate page-of-cups Chinese correction matches approved new SHA-256; original source preserved"
   ],
   "pending": [
-    "Archive and verify remaining 18 Chinese manuscripts already delivered in full task messages",
     "parent-reviewed four-language packages for remaining cards",
     "integrate batches using exact source and semantic legacy anchors",
     "build and full HTTP/browser regressions",
@@ -125,9 +144,11 @@
     "fileName": "destinypixel-tarot-77-reviewed-zh-20261008.zip",
     "expectedBytes": 951326,
     "expectedSha256": "14bdb37971697be2c3cd84b32c4bb80033319a585a8d4faf4b9059979bd9f374",
-    "result": "Supported Library helper download failed; target ZIP absent. No retry. Author is supplying remaining full manuscripts through task messages."
+    "result": "Library transfer failed once; all 77 complete Chinese records subsequently received through 31 authorized full-message batches. ZIP itself not downloaded; no Chinese-source blocker remains."
   },
   "pendingEditorialCorrections": [
-    "page-of-cups: preserve original source; apply approved brief-feedback wording to separate publishing edition and all translations, verify corrected SHA-256"
-  ]
+    "page-of-cups Chinese publishing correction staged with approved hash; use this brief feedback / этот краткий отзыв / 這句簡短的回饋 in parent translations; sync runtime mirrors during integration"
+  ],
+  "originalCaseSections": 154,
+  "allChineseReceived": true
 }

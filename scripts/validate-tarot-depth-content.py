@@ -57,9 +57,27 @@ for batch in sorted((DATA / "incoming").glob("*")):
         assert m["cards"][card]["sourceBatch"] == batch.name
         assert len(body) == record_receipt["characters"] >= 1500
         assert len(parts(body)[1]) == record_receipt["sectionCount"] >= 6
+        assert body.count("原创虚构案例") == 2, f"Expected two complete original cases: {card}"
         sources[card] = original
 
 assert set(sources) == {card for card, state in m["cards"].items() if state["sourceBatch"]}
+for contract_path in (DATA / "corrections").glob("*.contract.json"):
+    for contract in read(contract_path):
+        card = contract["cardId"]
+        if card not in sources:
+            continue
+        original = sources[card]
+        assert sha(original["bodyMarkdown"]) == contract["originalSourceBodySha256"]
+        before, after = contract["replacement"]["before"], contract["replacement"]["after"]
+        assert original["bodyMarkdown"].count(before) == 1
+        expected = original["bodyMarkdown"].replace(before, after)
+        assert sha(expected) == contract["correctedBodySha256"]
+        corrected_path = DATA / "corrections" / f"{card}.zh.corrected.json"
+        if corrected_path.exists():
+            corrected = read(corrected_path)
+            assert corrected["bodyMarkdown"] == expected and corrected["bodySha256"] == contract["correctedBodySha256"]
+            assert {key: value for key, value in corrected.items() if key not in ("bodyMarkdown", "bodySha256", "editorialRevision")} == {key: value for key, value in original.items() if key not in ("bodyMarkdown", "bodySha256")}
+            assert corrected["editorialRevision"]["originalSourceBodySha256"] == contract["originalSourceBodySha256"]
 translated = set()
 translation_count = 0
 for review_path in sorted((DATA / "translations").glob("*/review.json")):
