@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-36",
+  "locale": "zh-TW",
+  "kingWenNumber": 36,
+  "name": "明夷",
+  "pinyin": "Míng Yí",
+  "englishName": "Míng Yí — Darkening of the Light",
+  "unicode": "䷣",
+  "codePoint": "U+4DE3",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "title": "明夷卦學習：處境不利時，怎麼保護清醒與行動空間",
+  "plainSummary": "當下不適合顯露或推進時，先保護重要的人、資訊與判斷，再找合宜的行動方式。",
+  "introduction": [
+    "有時把知道的一切立刻說出來，未必有助於解決問題；有時保持沉默，又會讓重要問題無人知曉。明夷描寫光明受傷、被遮蔽的處境，幫助我們思考謹慎與持正。卦象本身不能證明有人正在迫害你，也不要求人在真正受傷害時默默忍耐。"
+  ],
+  "identityText": "明夷是傳統文王序第36卦，卦符䷣，下卦離☲、上卦坤☷，傳統取象分別為火與地。爻從最下方數起，依次為初九、六二、九三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "明夷：利艱貞。",
+    "paragraphs": [
+      "Legge 將明夷讀作明智受到損傷或壓抑，並解釋在困難中保持合宜與堅定。卦辭很短，重點不在表演勇敢，而在承認處境確有艱難。",
+      "現代可以先核實需要保護什麼，以及哪些行動真正有幫助。涉及安全、權益或重要關係時，不能由一條古文獨自決定保密、揭露、留下或離開。"
+    ],
+    "sourceRefs": [
+      "zhouyi-36",
+      "legge1882-36"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》談明入地中，並以文王與箕子的傳統敘述說明處境；《象傳》提出用晦而明。這些屬於古代政治與倫理解釋。",
+      "本文藉此討論，在不利條件下保持理解和分寸。謹慎可以包括核實資料、選擇合適管道、尋求可信支持，卻不等於放棄原則或無限期容忍傷害。"
+    ],
+    "sourceRefs": [
+      "zhouyi-36",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "明夷于飛，垂其翼。君子于行，三日不食，有攸往，主人有言。",
+      "focus": "看見受損與離行的成本",
+      "paragraphs": [
+        "垂翼、行路與旁人的言語構成不輕鬆的開始，Legge 保留其奔走困頓的畫面。三日不食是文本情境，不是給讀者的行為建議。",
+        "當一項安排已經不合適，可以認真考慮調整及其實際代價。準備必要支持、說明能說明的部分，比拿忍飢或透支證明決心更重要。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "明夷，夷于左股，用拯馬壯，吉。",
+      "focus": "受損時需要實際救助條件",
+      "paragraphs": [
+        "左股受傷與強馬救援是具體的古代圖像。Legge 的讀法強調藉助力量脫離傷害。",
+        "現代可以由此想到，單靠意志未必足夠，合適的幫助和資源很重要。它不用於診斷身體傷處，也不指導現實救援方式。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "明夷于南狩，得其大首，不可疾貞。",
+      "focus": "處理根本問題，也留意推進節奏",
+      "paragraphs": [
+        "南狩、得大首屬於政治狩獵或征服的意象。Legge 特別保留不能急於一次使全部合正的提醒。",
+        "普通事務中，查到關鍵原因以後仍需安排修正與後續。不能因找到一個問題就對所有相關人一併歸罪，更不能把古代行動轉成暴力建議。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "入于左腹，獲明夷之心，于出門庭。",
+      "focus": "瞭解處境後，重新判斷可行空間",
+      "paragraphs": [
+        "這一爻以進入腹部、得其心意和出門庭表達由深入到離出的過程，Legge 按受壓環境與其主人的政治語境解釋。",
+        "現代類比可以是確認某種做法為何無法運作，再決定減少參與或轉到合適管道。不要把隱喻當作窺探他人隱私或假定知道其心思的許可。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "箕子之明夷，利貞。",
+      "focus": "保留歷史人物的語境，不強加忍耐義務",
+      "paragraphs": [
+        "箕子在爻辭中被直接點名，傳文再以其處難持正展開。Legge 也沿這一傳統敘述理解，本文不額外補寫未核實的歷史細節。",
+        "今天可以思考怎樣保有重要判斷與原則，但不能要求任何人模仿古代人物承受傷害。真實處境需要合適支持與自主選擇。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "不明晦，初登于天，後入于地。",
+      "focus": "權力與顯赫也可能失去方向",
+      "paragraphs": [
+        "明與晦、登天與入地構成強烈反差。Legge 將其讀為昏暗的權力最終失去原有位置。",
+        "現代學習可以檢查成功是否使自己拒絕事實、忽略他人。它不預言某個人必敗，也不支持為了期待他人受罰而停止處理眼前問題。"
+      ],
+      "sourceRefs": [
+        "zhouyi-36",
+        "legge1882-36"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "面對有爭議的資料，仍保持可靠",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位成員整理有不同說法的歷史介紹，發現部分內容尚未查證，卻有人希望立即發布。她先保留來源與各種版本，說明哪些事實仍待確認，並建議只發布已經證實的部分。",
+      "如果討論變得緊繃，她可以選擇合適的溝通方式，請熟悉資料的人一起查核，不必為了證明自己敢說話，就公開猜測他人的動機。",
+      "明夷在這裡支持清醒與分寸，也不把謹慎變成永遠不能表達。何時繼續推進，要看證據與實際溝通條件。"
+    ]
+  },
+  "misreadings": [
+    "明夷不能確認受迫害、算計或某人的惡意。是否存在傷害需要現實證據，必要時尋求可信幫助。",
+    "垂翼、傷股與不食是古典意象，不提供健康、禁食或安全決策依據，也不美化受苦與自我犧牲。"
+  ],
+  "practice": [
+    "列出一項需要保護的具體內容，說明保護它的現實理由。",
+    "分開記錄已經確認的事實、暫不宜公開的資訊與自己的猜測。",
+    "尋找一種既保留原則又能減少不必要傷害的溝通或求助方式。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-35",
+      "name": "晉",
+      "paragraph": "晉討論得到顯露與機會，明夷討論光受遮蔽時的行為。可見與不可見都不是價值判決，關鍵是處境中怎樣保持可靠。"
+    }
+  ],
+  "closing": "讀明夷卦時，不妨問自己：怎麼做，才能讓我在困難中保有清楚的判斷，以及真正可行的下一步？",
+  "sourceIds": [
+    "zhouyi-36",
+    "legge1882-36",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1626,
+    "nonWhitespaceCharacterCount": 1846,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "明夷",
+  "sourceLocale": "zh",
+  "sourceContentHash": "147bc829d7f1a361d1b0e587c8936ef4d9bd4dac58f7db3df27baac9976e4bbe",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 明夷卦學習：處境不利時，怎麼保護清醒與行動空間\n\n當下不適合顯露或推進時，先保護重要的人、資訊與判斷，再找合宜的行動方式。\n\n有時把知道的一切立刻說出來，未必有助於解決問題；有時保持沉默，又會讓重要問題無人知曉。明夷描寫光明受傷、被遮蔽的處境，幫助我們思考謹慎與持正。卦象本身不能證明有人正在迫害你，也不要求人在真正受傷害時默默忍耐。\n\n## 卦的身分與爻序\n\n明夷是傳統文王序第36卦，卦符䷣，下卦離☲、上卦坤☷，傳統取象分別為火與地。爻從最下方數起，依次為初九、六二、九三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n明夷：利艱貞。\n\nLegge 將明夷讀作明智受到損傷或壓抑，並解釋在困難中保持合宜與堅定。卦辭很短，重點不在表演勇敢，而在承認處境確有艱難。\n\n現代可以先核實需要保護什麼，以及哪些行動真正有幫助。涉及安全、權益或重要關係時，不能由一條古文獨自決定保密、揭露、留下或離開。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》談明入地中，並以文王與箕子的傳統敘述說明處境；《象傳》提出用晦而明。這些屬於古代政治與倫理解釋。\n\n本文藉此討論，在不利條件下保持理解和分寸。謹慎可以包括核實資料、選擇合適管道、尋求可信支持，卻不等於放棄原則或無限期容忍傷害。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初九 · 看見受損與離行的成本\n\n明夷于飛，垂其翼。君子于行，三日不食，有攸往，主人有言。\n\n垂翼、行路與旁人的言語構成不輕鬆的開始，Legge 保留其奔走困頓的畫面。三日不食是文本情境，不是給讀者的行為建議。\n\n當一項安排已經不合適，可以認真考慮調整及其實際代價。準備必要支持、說明能說明的部分，比拿忍飢或透支證明決心更重要。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 受損時需要實際救助條件\n\n明夷，夷于左股，用拯馬壯，吉。\n\n左股受傷與強馬救援是具體的古代圖像。Legge 的讀法強調藉助力量脫離傷害。\n\n現代可以由此想到，單靠意志未必足夠，合適的幫助和資源很重要。它不用於診斷身體傷處，也不指導現實救援方式。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 處理根本問題，也留意推進節奏\n\n明夷于南狩，得其大首，不可疾貞。\n\n南狩、得大首屬於政治狩獵或征服的意象。Legge 特別保留不能急於一次使全部合正的提醒。\n\n普通事務中，查到關鍵原因以後仍需安排修正與後續。不能因找到一個問題就對所有相關人一併歸罪，更不能把古代行動轉成暴力建議。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · 瞭解處境後，重新判斷可行空間\n\n入于左腹，獲明夷之心，于出門庭。\n\n這一爻以進入腹部、得其心意和出門庭表達由深入到離出的過程，Legge 按受壓環境與其主人的政治語境解釋。\n\n現代類比可以是確認某種做法為何無法運作，再決定減少參與或轉到合適管道。不要把隱喻當作窺探他人隱私或假定知道其心思的許可。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六五 · 保留歷史人物的語境，不強加忍耐義務\n\n箕子之明夷，利貞。\n\n箕子在爻辭中被直接點名，傳文再以其處難持正展開。Legge 也沿這一傳統敘述理解，本文不額外補寫未核實的歷史細節。\n\n今天可以思考怎樣保有重要判斷與原則，但不能要求任何人模仿古代人物承受傷害。真實處境需要合適支持與自主選擇。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上六 · 權力與顯赫也可能失去方向\n\n不明晦，初登于天，後入于地。\n\n明與晦、登天與入地構成強烈反差。Legge 將其讀為昏暗的權力最終失去原有位置。\n\n現代學習可以檢查成功是否使自己拒絕事實、忽略他人。它不預言某個人必敗，也不支持為了期待他人受罰而停止處理眼前問題。\n\n引文來源：[zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507), [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 面對有爭議的資料，仍保持可靠\n\n原創現代情境\n\n一位成員整理有不同說法的歷史介紹，發現部分內容尚未查證，卻有人希望立即發布。她先保留來源與各種版本，說明哪些事實仍待確認，並建議只發布已經證實的部分。\n\n如果討論變得緊繃，她可以選擇合適的溝通方式，請熟悉資料的人一起查核，不必為了證明自己敢說話，就公開猜測他人的動機。\n\n明夷在這裡支持清醒與分寸，也不把謹慎變成永遠不能表達。何時繼續推進，要看證據與實際溝通條件。\n\n## 避免誤讀\n\n- 明夷不能確認受迫害、算計或某人的惡意。是否存在傷害需要現實證據，必要時尋求可信幫助。\n\n- 垂翼、傷股與不食是古典意象，不提供健康、禁食或安全決策依據，也不美化受苦與自我犧牲。\n\n## 三個練習\n\n1. 列出一項需要保護的具體內容，說明保護它的現實理由。\n\n2. 分開記錄已經確認的事實、暫不宜公開的資訊與自己的猜測。\n\n3. 尋找一種既保留原則又能減少不必要傷害的溝通或求助方式。\n\n## 延伸閱讀\n\n### 晉 (hexagram-35)\n\n晉討論得到顯露與機會，明夷討論光受遮蔽時的行為。可見與不可見都不是價值判決，關鍵是處境中怎樣保持可靠。\n\n## 結語\n\n讀明夷卦時，不妨問自己：怎麼做，才能讓我在困難中保有清楚的判斷，以及真正可行的下一步？\n\n## 資料來源\n\n- [zhouyi-36](https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507)\n\n- [legge1882-36](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

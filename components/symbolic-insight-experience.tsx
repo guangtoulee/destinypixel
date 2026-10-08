@@ -1,5 +1,9 @@
 "use client";
 
+import { kingWenFromCast,hexagramSymbol } from "@/lib/hexagram-learning/identity";
+import { hexagramHref } from "@/lib/hexagram-learning/paths";
+import { hexagramCopy } from "@/lib/hexagram-learning/copy";
+
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 import {
   BookOpenText,
@@ -836,6 +840,7 @@ function OracleVisualBoard({
   locale: ReportLocale;
   seed: OracleSeed;
 }) {
+  const hexagramNumber=kingWenFromCast(seed.lines),learning=hexagramCopy(locale);
   const tarotRoles = [
     copy.oracle.situation,
     copy.oracle.obstacle,
@@ -879,6 +884,8 @@ function OracleVisualBoard({
         <footer>
           {copy.oracle.moving}:{" "}
           {seed.movingLines.length ? seed.movingLines.join(", ") : "0"}
+          {hexagramNumber && <p><a className="oracle-learning-link" href={hexagramHref(hexagramNumber,locale)} target="_blank" rel="noopener noreferrer" aria-label={`${learning.read} · ${hexagramNumber} (${learning.newTab})`}>{hexagramSymbol(hexagramNumber)} {hexagramNumber} · {learning.read} ↗</a></p>}
+          <p><a className="oracle-library-link" href={hexagramHref(undefined,locale)} target="_blank" rel="noopener noreferrer" aria-label={`${learning.title} (${learning.newTab})`}>{learning.title} ↗</a></p>
         </footer>
       </div>
 

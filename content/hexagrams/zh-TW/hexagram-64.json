@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-64",
+  "locale": "zh-TW",
+  "kingWenNumber": 64,
+  "name": "未济",
+  "pinyin": "Wèi Jì",
+  "englishName": "Wèi Jì — Before Completion",
+  "unicode": "䷿",
+  "codePoint": "U+4DFF",
+  "lowerTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "離",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "title": "未濟卦學習：還差一步時，如何真正完成",
+  "plainSummary": "事情尚未完成時，先找出缺口與必要條件，別因為接近終點就省略最後的判斷。",
+  "introduction": [
+    "六十四卦以未濟收尾，留下尚未渡過的處境。小狐幾乎過河卻濕了尾巴，車輪需要暫時拖住，末爻又從飲酒談到濡首。它既沒有把未完成視為絕望，也沒有把接近完成當作已經成功。"
+  ],
+  "identityText": "未濟是傳統文王序第64卦，卦符䷿，下卦坎☵、上卦離☲，傳統取象分別為水與火。爻從最下方往上數，依次為初六、九二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "未濟：亨。小狐汔濟，濡其尾，无攸利。",
+    "paragraphs": [
+      "Legge 將未濟理解為目標尚未實現，年輕狐狸的畫面提醒人在接近完成時仍可能失去謹慎。他也指出，《易》沒有在永久完滿的狀態結束，而是把變化繼續留給讀者。",
+      "現代學習可以先說清“還沒有完成”具體意味著什麼：少了一個必要條件、一個交付動作，還是目標本身仍不明確？誠實標出缺口，比用幾乎、應該、大概掩蓋它更有助於下一步。"
+    ],
+    "sourceRefs": [
+      "zhouyi-64",
+      "legge1882-64"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》指出未能續終，又說雖然爻位不當，剛柔仍有相應；《象傳》以火在水上取象，提出慎辨物居方。傳統結構解釋保留了繼續調整的可能。",
+      "本文把它用於辨清不同事項並妥善安排：哪些已經完成，哪些等待他人，哪些需要重新判斷。秩序並非靠宣稱完成而出現，而是靠實際條件逐項成立。"
+    ],
+    "sourceRefs": [
+      "zhouyi-64",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "濡其尾，吝。",
+      "focus": "起步時先看自己是否具備條件",
+      "paragraphs": [
+        "初爻重現濕尾的形象。Legge 承接卦辭的小狐來讀，也指出有注家將它理解為其他動物，說明象徵解釋並非只有一種。",
+        "準備繼續推進前，可以檢查最基本的資訊和工具是否齊備。已經開始並不意味著必須以原速度一直走，發現缺口後調整仍有價值。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "曳其輪，貞吉。",
+      "focus": "有能力前進，也能夠適時收住",
+      "paragraphs": [
+        "拖住車輪不讓它貿然向前，Legge 將其解釋為能夠自持與謹慎行動。",
+        "如果最後一項檢查尚未完成，可以清楚說明暫緩交付的理由和待辦事項。暫停應服務完成，也應避免成為沒有期限、沒有說明的擱置。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "未濟，征凶，利涉大川。",
+      "focus": "保留難解處，不把矛盾硬改成口訣",
+      "paragraphs": [
+        "這一爻一面說征凶，一面說利涉大川，表面有明顯張力。Legge 明言難解，並記錄有舊注懷疑缺少否定字；本文保留所據古文，不擅自補字。",
+        "現代學習可以把它作為辨別行動條件的提問，而不聲稱已消除全部文義困難：同樣叫前進，準備、方式與支持可能不同。具體判斷仍需事實，不能從矛盾句中任選一半為衝動背書。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "貞吉，悔亡，震用伐鬼方，三年有賞于大國。",
+      "focus": "持續承擔需要實際支持，而非只靠意志",
+      "paragraphs": [
+        "古文再現對鬼方的征伐與三年受賞，Legge 聯繫到長期而有支持的艱難行動。戰爭語境應如實保留。",
+        "普通專案可由此檢查持續工作需要哪些資源、協作和認可，但不能把戰事作為現實敵我對抗的模板，也不保證堅持三年便一定獲得獎賞。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "貞吉，无悔，君子之光，有孚，吉。",
+      "focus": "接近成熟時，讓可信的行為被看見",
+      "paragraphs": [
+        "君子之光與有孚相連，Legge 重視謙遜、支持與誠意在此處的作用。",
+        "一個接近完成的成果，可以明確呈現已核實的內容和仍存的限制。可信來自品質與誠實說明，不需要把尚待解決的小處藏起來，營造全無問題的光亮形象。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "有孚于飲酒，无咎，濡其首，有孚失是。",
+      "focus": "可以慶祝，也要保留限度",
+      "paragraphs": [
+        "飲酒而有孚先被許以無咎，隨後濡首又使判斷失當。Legge 將其讀為安享與過度之間的界線，而非單純禁止一切輕鬆。",
+        "完成一個階段後可以慶祝，但仍要確認必要交接與安全安排。本文不鼓勵以飲酒證明信任，也不把失去分寸歸結為天命。"
+      ],
+      "sourceRefs": [
+        "zhouyi-64",
+        "legge1882-64"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "在課程發佈之前處理最後一個缺口",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一套課程的大部分內容已經準備好，只剩引用核實與試聽回饋。作者把這些事項清楚列出，沒有因為頁面已經漂亮，就宣佈全部完成。",
+      "試聽發現一段說明容易誤解，她修正例子，並讓另一位讀者重新檢查。對尚不能驗證的內容，她刪去或明確限制，而不是用肯定語氣填補空白。",
+      "正式交付後，她保留後續勘誤入口，也允許自己慶祝這一階段。未濟的學習不是讓所有成果永遠不夠好，而是區分足夠完成的標準與仍然需要誠實承認的未完部分。"
+    ]
+  },
+  "misreadings": [
+    "未濟不等於永遠失敗，也不保證未來成功；它不能成為無限拖延交付的藉口。",
+    "渡河、軍事和飲酒意象不提供冒險、戰爭或飲酒行為的現實指南，三年也不是成功期限。"
+  ],
+  "practice": [
+    "把“差不多完成”改寫成已完成事項和剩餘缺口，兩者分別列清。",
+    "為最後一個必要缺口確定驗證方式，避免僅憑自己的滿意判斷。",
+    "寫清本階段如何才算完成，以及完成以後仍可接受哪些正常更新。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-63",
+      "name": "既濟",
+      "paragraph": "既濟提醒完成之後仍需維護，未濟提醒接近終點仍需辨認條件。兩卦都承認變化繼續存在，同時允許人對具體階段給出清楚而負責任的完成判斷。"
+    }
+  ],
+  "closing": "讀未濟卦時，可以問：我真正還缺的是什麼，如何確認補上之後，這一階段就可以安心交付？",
+  "sourceIds": [
+    "zhouyi-64",
+    "legge1882-64",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六三保留“征凶，利涉大川”的底本文字，並明示 Legge 記錄的解釋困難；九四採用底本正文“大國”，不改作異文“邦”。",
+  "counts": {
+    "chineseCharacterCount": 1716,
+    "nonWhitespaceCharacterCount": 1970,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "未濟",
+  "sourceLocale": "zh",
+  "sourceContentHash": "992b4ee468c11c5d34aa8d44502231ab9d6fca316af91bfe30fd18ff2c300b7d",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 未濟卦學習：還差一步時，如何真正完成\n\n事情尚未完成時，先找出缺口與必要條件，別因為接近終點就省略最後的判斷。\n\n六十四卦以未濟收尾，留下尚未渡過的處境。小狐幾乎過河卻濕了尾巴，車輪需要暫時拖住，末爻又從飲酒談到濡首。它既沒有把未完成視為絕望，也沒有把接近完成當作已經成功。\n\n未濟是傳統文王序第64卦，卦符䷿，下卦坎☵、上卦離☲，傳統取象分別為水與火。爻從最下方往上數，依次為初六、九二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 1 0 1 0 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n未濟：亨。小狐汔濟，濡其尾，无攸利。\n\nLegge 將未濟理解為目標尚未實現，年輕狐狸的畫面提醒人在接近完成時仍可能失去謹慎。他也指出，《易》沒有在永久完滿的狀態結束，而是把變化繼續留給讀者。\n\n現代學習可以先說清“還沒有完成”具體意味著什麼：少了一個必要條件、一個交付動作，還是目標本身仍不明確？誠實標出缺口，比用幾乎、應該、大概掩蓋它更有助於下一步。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》指出未能續終，又說雖然爻位不當，剛柔仍有相應；《象傳》以火在水上取象，提出慎辨物居方。傳統結構解釋保留了繼續調整的可能。\n\n本文把它用於辨清不同事項並妥善安排：哪些已經完成，哪些等待他人，哪些需要重新判斷。秩序並非靠宣稱完成而出現，而是靠實際條件逐項成立。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 起步時先看自己是否具備條件\n\n濡其尾，吝。\n\n初爻重現濕尾的形象。Legge 承接卦辭的小狐來讀，也指出有注家將它理解為其他動物，說明象徵解釋並非只有一種。\n\n準備繼續推進前，可以檢查最基本的資訊和工具是否齊備。已經開始並不意味著必須以原速度一直走，發現缺口後調整仍有價值。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 有能力前進，也能夠適時收住\n\n曳其輪，貞吉。\n\n拖住車輪不讓它貿然向前，Legge 將其解釋為能夠自持與謹慎行動。\n\n如果最後一項檢查尚未完成，可以清楚說明暫緩交付的理由和待辦事項。暫停應服務完成，也應避免成為沒有期限、沒有說明的擱置。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六三 · 保留難解處，不把矛盾硬改成口訣\n\n未濟，征凶，利涉大川。\n\n這一爻一面說征凶，一面說利涉大川，表面有明顯張力。Legge 明言難解，並記錄有舊注懷疑缺少否定字；本文保留所據古文，不擅自補字。\n\n現代學習可以把它作為辨別行動條件的提問，而不聲稱已消除全部文義困難：同樣叫前進，準備、方式與支持可能不同。具體判斷仍需事實，不能從矛盾句中任選一半為衝動背書。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 持續承擔需要實際支持，而非只靠意志\n\n貞吉，悔亡，震用伐鬼方，三年有賞于大國。\n\n古文再現對鬼方的征伐與三年受賞，Legge 聯繫到長期而有支持的艱難行動。戰爭語境應如實保留。\n\n普通專案可由此檢查持續工作需要哪些資源、協作和認可，但不能把戰事作為現實敵我對抗的模板，也不保證堅持三年便一定獲得獎賞。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 接近成熟時，讓可信的行為被看見\n\n貞吉，无悔，君子之光，有孚，吉。\n\n君子之光與有孚相連，Legge 重視謙遜、支持與誠意在此處的作用。\n\n一個接近完成的成果，可以明確呈現已核實的內容和仍存的限制。可信來自品質與誠實說明，不需要把尚待解決的小處藏起來，營造全無問題的光亮形象。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 可以慶祝，也要保留限度\n\n有孚于飲酒，无咎，濡其首，有孚失是。\n\n飲酒而有孚先被許以無咎，隨後濡首又使判斷失當。Legge 將其讀為安享與過度之間的界線，而非單純禁止一切輕鬆。\n\n完成一個階段後可以慶祝，但仍要確認必要交接與安全安排。本文不鼓勵以飲酒證明信任，也不把失去分寸歸結為天命。\n\n參考來源: [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450), [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 在課程發佈之前處理最後一個缺口\n\n原創現代情境\n\n一套課程的大部分內容已經準備好，只剩引用核實與試聽回饋。作者把這些事項清楚列出，沒有因為頁面已經漂亮，就宣佈全部完成。\n\n試聽發現一段說明容易誤解，她修正例子，並讓另一位讀者重新檢查。對尚不能驗證的內容，她刪去或明確限制，而不是用肯定語氣填補空白。\n\n正式交付後，她保留後續勘誤入口，也允許自己慶祝這一階段。未濟的學習不是讓所有成果永遠不夠好，而是區分足夠完成的標準與仍然需要誠實承認的未完部分。\n\n## 避免誤讀\n\n- 未濟不等於永遠失敗，也不保證未來成功；它不能成為無限拖延交付的藉口。\n\n- 渡河、軍事和飲酒意象不提供冒險、戰爭或飲酒行為的現實指南，三年也不是成功期限。\n\n## 三個練習\n\n1. 把“差不多完成”改寫成已完成事項和剩餘缺口，兩者分別列清。\n\n2. 為最後一個必要缺口確定驗證方式，避免僅憑自己的滿意判斷。\n\n3. 寫清本階段如何才算完成，以及完成以後仍可接受哪些正常更新。\n\n## 延伸閱讀\n\n既濟 (hexagram-63): 既濟提醒完成之後仍需維護，未濟提醒接近終點仍需辨認條件。兩卦都承認變化繼續存在，同時允許人對具體階段給出清楚而負責任的完成判斷。\n\n讀未濟卦時，可以問：我真正還缺的是什麼，如何確認補上之後，這一階段就可以安心交付？\n\n## 版本說明\n\n六三保留“征凶，利涉大川”的底本文字，並明示 Legge 記錄的解釋困難；九四採用底本正文“大國”，不改作異文“邦”。\n\n## 參考來源\n\n- [zhouyi-64](https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450)\n\n- [legge1882-64](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-64 · SHA256 992b4ee468c11c5d34aa8d44502231ab9d6fca316af91bfe30fd18ff2c300b7d\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

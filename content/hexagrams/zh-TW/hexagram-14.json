@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-14",
+  "locale": "zh-TW",
+  "kingWenNumber": 14,
+  "name": "大有",
+  "pinyin": "Dà Yǒu",
+  "englishName": "Dà Yǒu — Great Possession",
+  "unicode": "䷍",
+  "codePoint": "U+4DCD",
+  "lowerTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+  ],
+  "title": "大有卦導讀：資源增加後，怎樣承擔相應責任",
+  "plainSummary": "資源變多時，先想清楚如何善用、如何共享，以及哪些責任也跟著增加。",
+  "introduction": [
+    "有了更多時間、材料、支持或影響力，我們很容易先想到能做多少事。大有卦卻把充足的資源和承擔能力、節制、信任放在一起看。它不只是對財富的祝願，也提醒讀者：資源增加之後，如何使用它們就更重要。"
+  ],
+  "identityText": "大有是傳統文王序第14卦，卦符䷍，下卦乾☰、上卦離☲，傳統取象分別為天與火。爻從最下方數起，依次為初九、九二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "大有：元亨。",
+    "paragraphs": [
+      "Legge 將卦名讀作豐厚的擁有，把元亨理解為在相應條件下有較大的開展與順遂。卦辭很短，如何處置擁有，則在六爻與傳文中逐漸展開。",
+      "因此，不必從這兩個字猜未來收入。可以先盤點已經實際擁有的條件：哪些能使用，哪些有約定，哪些需要維護？大有的現代學習問題，是讓資源和責任相稱。"
+    ],
+    "sourceRefs": [
+      "zhouyi-14",
+      "legge1882-14"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》將剛健與文明相配，並指出柔爻居尊位而上下相應；《象傳》以天上有火取象，談遏惡揚善。這是傳統對治理與德行的展開。",
+      "現代應用可以保留明辨資源用途、扶助有益之事的方向，但判斷何為有益仍要聽取實際受影響者的意見，不能只因自己握有資源就自認永遠正確。"
+    ],
+    "sourceRefs": [
+      "zhouyi-14",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "无交害，匪咎，艱則无咎。",
+      "focus": "條件好時仍看見難處",
+      "paragraphs": [
+        "Legge 把開頭讀作尚未接近有害之事，並強調認識處境中的困難與危險。沒有眼前的問題，不等於無需留意後續。",
+        "剛得到一批設備或資料時，可以先確認保管、維護和可使用範圍。把基本條件弄清，能減少擁有帶來的無意負擔。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "大車以載，有攸往，无咎。",
+      "focus": "承載能力讓資源真正可用",
+      "paragraphs": [
+        "大車載物是很容易理解的形象。Legge 保留了車與負載，使擁有之外的運輸和承擔也進入視野。",
+        "如果收集了大量資訊，卻沒有整理方法，別人仍可能無法使用。可以先建立清楚目錄、負責人和說明，讓資源不只堆在那裡。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "公用亨于天子，小人弗克。",
+      "focus": "擁有也涉及共享與職責",
+      "paragraphs": [
+        "此爻有諸侯向天子進獻的古代政治語境，Legge 按此解釋，並討論擔當這種職責所需的德行。",
+        "現代類比可問資源是否只服務自己，還是能回應共同需要。但不應照搬君臣關係，也不能把不同意見的人稱作沒有資格的小人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "匪其彭，无咎。",
+      "focus": "有餘力也不必處處顯露",
+      "paragraphs": [
+        "這句有文字與解釋上的難點，Legge 將它讀為把豐厚資源置於節制之下。本文採用這一具名讀法，不宣稱已經排除其他訓釋。",
+        "可以有能力投入更多，卻選擇不將事情無限擴大。尤其當別人還需跟上時，適度收斂規模也可能讓已有成果更紮實。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "厥孚交如，威如，吉。",
+      "focus": "信任與清楚的邊界並行",
+      "paragraphs": [
+        "Legge 將這條讀為誠意得到回應，同時保持適當的威儀。古代治理中的威，不能直接變成讓人害怕的現代管理方式。",
+        "掌握資源的人可以溫和溝通，也清楚說明約定與責任。讓規則可理解、可討論，比用情緒讓別人猜測界限更能建立信任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "自天佑之，吉无不利。",
+      "focus": "理解祝福的傳統語言",
+      "paragraphs": [
+        "這條明確使用來自天的幫助。Legge 保留了這一信仰性表達；學習文章應承認文本如此說，而不將它包裝成已證實的自然規律。",
+        "現代讀者可以由此想到個人成果之外的支持與條件，練習感謝合作和環境的幫助。它不保證接下來每個選擇都成功，也不授權忽略風險。"
+      ],
+      "sourceRefs": [
+        "zhouyi-14",
+        "legge1882-14"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "讓共享工具室真正派得上用場",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個社區得到一批捐贈工具後，發現最大的問題不是數量不足，而是沒人知道誰借走了什麼、哪些適合新手使用。負責人先整理清單和說明，明確借用與歸還方式，並請相關人員核實需要的安全資訊。",
+      "有人希望繼續接受更多捐贈，小組先檢查是否有存放與維護能力。對於暫時無法照顧好的物品，他們選擇說明原因後不接收，而不是把數量當成唯一成績。",
+      "資源因此更容易被使用，也更容易得到照料。大有在此提供的是關於承載與責任的反思，不是物資越多就一定越成功的公式。"
+    ]
+  },
+  "misreadings": [
+    "大有不預測財富或收益；“自天佑之”是傳統文本的信仰語言，不是現實結果的擔保。",
+    "古代天子、諸侯和小人的語境需要說明，不能據此給現代人劃分高低或壟斷解釋權。"
+  ],
+  "practice": [
+    "列出已經實際可用的三項資源，並分別寫下維護或使用條件。",
+    "找出一項數量增加後反而更難管理的東西，考慮它需要什麼承載方式。",
+    "寫清一個可以共享的部分，以及一個必須保留的合理邊界。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-15",
+      "name": "謙",
+      "paragraph": "大有討論擁有與承擔，謙可幫助繼續思考有成績、有資源時如何保持分寸。謙遜不要求否認擁有，而是更準確地認識自己與他人的貢獻。"
+    }
+  ],
+  "closing": "讀大有卦時，可以先問：手上這些條件，怎樣才會真正變成有用而可持續的幫助？",
+  "sourceIds": [
+    "zhouyi-14",
+    "legge1882-14",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "九二採用底本所列“車”異文（正文作“轝”），九四採用“彭”異文（正文作“尫”）；引文的選擇在此明確記錄。",
+  "counts": {
+    "chineseCharacterCount": 1820,
+    "nonWhitespaceCharacterCount": 2071,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "大有",
+  "sourceLocale": "zh",
+  "sourceContentHash": "6776a953345b3bde5ff52cf4fc2673b210acef6e461823d6df591ac3f230ed84",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 大有卦導讀：資源增加後，怎樣承擔相應責任\n\n資源變多時，先想清楚如何善用、如何共享，以及哪些責任也跟著增加。\n\n有了更多時間、材料、支持或影響力，我們很容易先想到能做多少事。大有卦卻把充足的資源和承擔能力、節制、信任放在一起看。它不只是對財富的祝願，也提醒讀者：資源增加之後，如何使用它們就更重要。\n\n## 先認識這一卦\n\n大有是傳統文王序第14卦，卦符䷍，下卦乾☰、上卦離☲，傳統取象分別為天與火。爻從最下方數起，依次為初九、九二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━━━━━  上九\n━━  ━━  六五\n━━━━━━  九四\n━━━━━━  九三\n━━━━━━  九二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 大有：元亨。\n\nLegge 將卦名讀作豐厚的擁有，把元亨理解為在相應條件下有較大的開展與順遂。卦辭很短，如何處置擁有，則在六爻與傳文中逐漸展開。\n\n因此，不必從這兩個字猜未來收入。可以先盤點已經實際擁有的條件：哪些能使用，哪些有約定，哪些需要維護？大有的現代學習問題，是讓資源和責任相稱。\n\n[zhouyi-14; legge1882-14]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》將剛健與文明相配，並指出柔爻居尊位而上下相應；《象傳》以天上有火取象，談遏惡揚善。這是傳統對治理與德行的展開。\n\n現代應用可以保留明辨資源用途、扶助有益之事的方向，但判斷何為有益仍要聽取實際受影響者的意見，不能只因自己握有資源就自認永遠正確。\n\n[zhouyi-14; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 條件好時仍看見難處\n\n> 无交害，匪咎，艱則无咎。\n\nLegge 把開頭讀作尚未接近有害之事，並強調認識處境中的困難與危險。沒有眼前的問題，不等於無需留意後續。\n\n剛得到一批設備或資料時，可以先確認保管、維護和可使用範圍。把基本條件弄清，能減少擁有帶來的無意負擔。\n\n[zhouyi-14; legge1882-14]\n\n### 九二 · 承載能力讓資源真正可用\n\n> 大車以載，有攸往，无咎。\n\n大車載物是很容易理解的形象。Legge 保留了車與負載，使擁有之外的運輸和承擔也進入視野。\n\n如果收集了大量資訊，卻沒有整理方法，別人仍可能無法使用。可以先建立清楚目錄、負責人和說明，讓資源不只堆在那裡。\n\n[zhouyi-14; legge1882-14]\n\n### 九三 · 擁有也涉及共享與職責\n\n> 公用亨于天子，小人弗克。\n\n此爻有諸侯向天子進獻的古代政治語境，Legge 按此解釋，並討論擔當這種職責所需的德行。\n\n現代類比可問資源是否只服務自己，還是能回應共同需要。但不應照搬君臣關係，也不能把不同意見的人稱作沒有資格的小人。\n\n[zhouyi-14; legge1882-14]\n\n### 九四 · 有餘力也不必處處顯露\n\n> 匪其彭，无咎。\n\n這句有文字與解釋上的難點，Legge 將它讀為把豐厚資源置於節制之下。本文採用這一具名讀法，不宣稱已經排除其他訓釋。\n\n可以有能力投入更多，卻選擇不將事情無限擴大。尤其當別人還需跟上時，適度收斂規模也可能讓已有成果更紮實。\n\n[zhouyi-14; legge1882-14]\n\n### 六五 · 信任與清楚的邊界並行\n\n> 厥孚交如，威如，吉。\n\nLegge 將這條讀為誠意得到回應，同時保持適當的威儀。古代治理中的威，不能直接變成讓人害怕的現代管理方式。\n\n掌握資源的人可以溫和溝通，也清楚說明約定與責任。讓規則可理解、可討論，比用情緒讓別人猜測界限更能建立信任。\n\n[zhouyi-14; legge1882-14]\n\n### 上九 · 理解祝福的傳統語言\n\n> 自天佑之，吉无不利。\n\n這條明確使用來自天的幫助。Legge 保留了這一信仰性表達；學習文章應承認文本如此說，而不將它包裝成已證實的自然規律。\n\n現代讀者可以由此想到個人成果之外的支持與條件，練習感謝合作和環境的幫助。它不保證接下來每個選擇都成功，也不授權忽略風險。\n\n[zhouyi-14; legge1882-14]\n\n## 讓共享工具室真正派得上用場\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一個社區得到一批捐贈工具後，發現最大的問題不是數量不足，而是沒人知道誰借走了什麼、哪些適合新手使用。負責人先整理清單和說明，明確借用與歸還方式，並請相關人員核實需要的安全資訊。\n\n有人希望繼續接受更多捐贈，小組先檢查是否有存放與維護能力。對於暫時無法照顧好的物品，他們選擇說明原因後不接收，而不是把數量當成唯一成績。\n\n資源因此更容易被使用，也更容易得到照料。大有在此提供的是關於承載與責任的反思，不是物資越多就一定越成功的公式。\n\n## 常見誤讀\n\n1. 大有不預測財富或收益；“自天佑之”是傳統文本的信仰語言，不是現實結果的擔保。\n\n2. 古代天子、諸侯和小人的語境需要說明，不能據此給現代人劃分高低或壟斷解釋權。\n\n## 三個練習\n\n1. 列出已經實際可用的三項資源，並分別寫下維護或使用條件。\n\n2. 找出一項數量增加後反而更難管理的東西，考慮它需要什麼承載方式。\n\n3. 寫清一個可以共享的部分，以及一個必須保留的合理邊界。\n\n## 延伸閱讀\n\n### 謙 (hexagram-15)\n\n大有討論擁有與承擔，謙可幫助繼續思考有成績、有資源時如何保持分寸。謙遜不要求否認擁有，而是更準確地認識自己與他人的貢獻。\n\n## 結語\n\n讀大有卦時，可以先問：手上這些條件，怎樣才會真正變成有用而可持續的幫助？\n\n## 版本說明\n\n九二採用底本所列“車”異文（正文作“轝”），九四採用“彭”異文（正文作“尫”）；引文的選擇在此明確記錄。\n\n## 資料來源\n\n- [zhouyi-14: 周易·大有](https://zh.wikisource.org/w/index.php?title=周易/大有&oldid=10645712)\n\n- [legge1882-14: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 14, chapter XIV, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

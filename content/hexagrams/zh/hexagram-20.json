@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-20",
+  "locale": "zh",
+  "kingWenNumber": 20,
+  "name": "观",
+  "pinyin": "Guān",
+  "englishName": "Guān — Contemplation",
+  "unicode": "䷓",
+  "codePoint": "U+4DD3",
+  "lowerTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "风",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
+  ],
+  "title": "观卦学习：看清眼前，也看清自己怎样被看见",
+  "plainSummary": "先扩大观察、核对依据，再决定进退；同时留意自己的行为给别人带来了什么。",
+  "introduction": [
+    "同一件事，从门缝看、从现场看、从负责人位置看，得到的信息可能很不一样。观卦依次呈现这些观察角度，也让观察者成为被看见的人。它不是让人靠直觉看穿别人，而是提醒视野、责任与自我检查彼此相关。"
+  ],
+  "identityText": "观是传统文王序第20卦，卦符䷓，下卦坤☷、上卦巽☴，传统取象分别为地与风。爻从最下方数起，依次为初六、六二、六三、六四、九五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "觀：盥而不薦，有孚顒若。",
+    "paragraphs": [
+      "盥指祭祀前的洗手，荐是进献；卦辞停在准备完成而尚未献上的时刻。Legge 保留了祭者诚敬、庄肃而被人仰观的形象。先理解这个仪式场景，才不会把古句误读成日常清洁建议。",
+      "Legge 还区分观中的显现与观看两层意味：一方面有所展示，另一方面别人观看。现代应用可以从准备自己的行动、检查它传递的信息开始，不必假定自己拥有洞察人心的能力。"
+    ],
+    "sourceRefs": [
+      "zhouyi-20",
+      "legge1882-20"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《象传》以风行地上取象，谈先王省方、观民设教；《彖传》也联系上位者的示范。这是古代治理语境中的观察。",
+      "今天可以保留了解实际情况的要求，却不把观察变成给别人贴标签。少量见闻、表面表现和自己的推测需要分开，重要判断尤其要有可核实的依据。"
+    ],
+    "sourceRefs": [
+      "zhouyi-20",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "童觀，小人无咎，君子吝。",
+      "focus": "判断的责任要与观察相称",
+      "paragraphs": [
+        "童观呈现经验与视野尚浅的观看；古文按不同社会角色提出不同要求，Legge 也保留了这种区别。",
+        "现代可理解为承担更大判断责任的人，需要更充分地了解情况。不能据此轻视儿童、初学者或社会地位较低的人；真正要检查的是证据够不够。"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "窺觀，利女貞。",
+      "focus": "局部所见不能冒充全貌",
+      "paragraphs": [
+        "窥观像从门隙看出去。Legge 的解释将这种受限制视野与古代女性居处相联，带有明显的历史性别观念。",
+        "本文不承认女性应有更小视野的要求。对所有读者，现代学习问题都是：我只看到了哪一部分，还有哪些视角尚未接触？"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "觀我生，進退。",
+      "focus": "用已经发生的行动检查自己",
+      "paragraphs": [
+        "Legge 将观我生读为观察自己的生活行程，再决定进退。这里不是在原地猜测自己本质上是哪一种人。",
+        "可以回看最近几次行动：什么带来帮助，什么不断造成相同问题？依据实际记录调整，往往比反复评价自己优秀或失败更有用。"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "觀國之光，利用賓于王。",
+      "focus": "走近更大的现场与经验",
+      "paragraphs": [
+        "文字谈观看国家的光彩、适宜作王之宾，Legge 据古代政治场景解释接近权力与文化中心。",
+        "现代类比可以是去了解一种真正运作中的做法，向熟悉它的人提问。参访的表面印象不能替代对日常困难和限制的了解。"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "觀我生，君子无咎。",
+      "focus": "有影响力时，更要检查后果",
+      "paragraphs": [
+        "与六三同样写观我生，传统爻位却不同；《象传》补出“观民”，Legge 也强调上位者不因此免于自察。",
+        "当你的决定会影响别人，可以询问安排是否可理解、是否带来额外负担。自己的用意很好，并不足以证明实际效果也好。"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "觀其生，君子无咎。",
+      "focus": "把观察从一时表现延伸到持续行为",
+      "paragraphs": [
+        "末爻从“我”转为“其”。Legge 承认与第五爻的差别不易译出，并仍以较高位置的自我省察解释，不能强说只有一种无争议的读法。",
+        "现代可以保留一个开放问题：若从稍远的地方看这段行动，会看到怎样的持续模式？这需要事实与反馈，不是凭几次观察就给人下终身结论。"
+      ],
+      "sourceRefs": [
+        "zhouyi-20",
+        "legge1882-20"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "看一场活动如何真正运行",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一位组织者参观别人的工作坊，最初只注意到现场整齐、主持流畅。她后来询问报名、准备、无障碍安排和收尾，才发现许多工作并不在观众眼前。",
+      "回到自己的活动，她没有只模仿外观，而是比较哪些条件相似、哪些不同。活动之后，又向参与者询问是否听懂安排、哪里需要更多说明。",
+      "观在这个例子里同时指向看别人和检查自己。更宽的视野来自更多相关事实，而不是更自信的猜测。"
+    ]
+  },
+  "misreadings": [
+    "观不是识人术或读心术，不能确认别人暗中的动机、感情、健康或可信程度。",
+    "古代角色与性别差等应被指出，不能转为当代应然规范。观察需要尊重隐私，也不能替代相关人的表达。"
+  ],
+  "practice": [
+    "把一个判断拆成实际所见、他人说明和自己的推测三部分。",
+    "找一个尚未听到、却与事情直接相关的视角。",
+    "选择一项自己的行动，询问实际受影响的人是否得到预期帮助。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-19",
+      "name": "临",
+      "paragraph": "临问怎样走近，观问走近之后看见了什么，以及自己怎样成为别人的观察对象。帮助之前的了解与帮助之后的检查，同样重要。"
+    }
+  ],
+  "closing": "读观卦时，可以问：我现在确信的东西，有多少来自真正看见，又有多少只是自己补上的解释？",
+  "sourceIds": [
+    "zhouyi-20",
+    "legge1882-20",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1549,
+    "nonWhitespaceCharacterCount": 1781,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "观",
+  "sourceLocale": "zh",
+  "sourceContentHash": "61ad2eeccf8276e05e3bfb48c4ed8396e7268bf21ab2f02aea771ec5f44e3d40",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 观卦学习：看清眼前，也看清自己怎样被看见\n\n一句话：先扩大观察、核对依据，再决定进退；同时留意自己的行为给别人带来了什么。\n\n同一件事，从门缝看、从现场看、从负责人位置看，得到的信息可能很不一样。观卦依次呈现这些观察角度，也让观察者成为被看见的人。它不是让人靠直觉看穿别人，而是提醒视野、责任与自我检查彼此相关。\n\n## 先认清这是什么卦\n\n观是传统文王序第20卦，卦符䷓，下卦坤☷、上卦巽☴，传统取象分别为地与风。爻从最下方数起，依次为初六、六二、六三、六四、九五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷓　上卦：巽☴　下卦：坤☷\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辞说了什么\n\n经文：“觀：盥而不薦，有孚顒若。”\n\n盥指祭祀前的洗手，荐是进献；卦辞停在准备完成而尚未献上的时刻。Legge 保留了祭者诚敬、庄肃而被人仰观的形象。先理解这个仪式场景，才不会把古句误读成日常清洁建议。\n\nLegge 还区分观中的显现与观看两层意味：一方面有所展示，另一方面别人观看。现代应用可以从准备自己的行动、检查它传递的信息开始，不必假定自己拥有洞察人心的能力。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《象传》以风行地上取象，谈先王省方、观民设教；《彖传》也联系上位者的示范。这是古代治理语境中的观察。\n\n今天可以保留了解实际情况的要求，却不把观察变成给别人贴标签。少量见闻、表面表现和自己的推测需要分开，重要判断尤其要有可核实的依据。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初六：判断的责任要与观察相称\n\n经文：“童觀，小人无咎，君子吝。”\n\n童观呈现经验与视野尚浅的观看；古文按不同社会角色提出不同要求，Legge 也保留了这种区别。\n\n现代可理解为承担更大判断责任的人，需要更充分地了解情况。不能据此轻视儿童、初学者或社会地位较低的人；真正要检查的是证据够不够。\n\n### 六二：局部所见不能冒充全貌\n\n经文：“窺觀，利女貞。”\n\n窥观像从门隙看出去。Legge 的解释将这种受限制视野与古代女性居处相联，带有明显的历史性别观念。\n\n本文不承认女性应有更小视野的要求。对所有读者，现代学习问题都是：我只看到了哪一部分，还有哪些视角尚未接触？\n\n### 六三：用已经发生的行动检查自己\n\n经文：“觀我生，進退。”\n\nLegge 将观我生读为观察自己的生活行程，再决定进退。这里不是在原地猜测自己本质上是哪一种人。\n\n可以回看最近几次行动：什么带来帮助，什么不断造成相同问题？依据实际记录调整，往往比反复评价自己优秀或失败更有用。\n\n### 六四：走近更大的现场与经验\n\n经文：“觀國之光，利用賓于王。”\n\n文字谈观看国家的光彩、适宜作王之宾，Legge 据古代政治场景解释接近权力与文化中心。\n\n现代类比可以是去了解一种真正运作中的做法，向熟悉它的人提问。参访的表面印象不能替代对日常困难和限制的了解。\n\n### 九五：有影响力时，更要检查后果\n\n经文：“觀我生，君子无咎。”\n\n与六三同样写观我生，传统爻位却不同；《象传》补出“观民”，Legge 也强调上位者不因此免于自察。\n\n当你的决定会影响别人，可以询问安排是否可理解、是否带来额外负担。自己的用意很好，并不足以证明实际效果也好。\n\n### 上九：把观察从一时表现延伸到持续行为\n\n经文：“觀其生，君子无咎。”\n\n末爻从“我”转为“其”。Legge 承认与第五爻的差别不易译出，并仍以较高位置的自我省察解释，不能强说只有一种无争议的读法。\n\n现代可以保留一个开放问题：若从稍远的地方看这段行动，会看到怎样的持续模式？这需要事实与反馈，不是凭几次观察就给人下终身结论。\n\n## 看一场活动如何真正运行\n\n以下是为学习而设的现代情境。\n\n一位组织者参观别人的工作坊，最初只注意到现场整齐、主持流畅。她后来询问报名、准备、无障碍安排和收尾，才发现许多工作并不在观众眼前。\n\n回到自己的活动，她没有只模仿外观，而是比较哪些条件相似、哪些不同。活动之后，又向参与者询问是否听懂安排、哪里需要更多说明。\n\n观在这个例子里同时指向看别人和检查自己。更宽的视野来自更多相关事实，而不是更自信的猜测。\n\n## 几个容易误读的地方\n\n观不是识人术或读心术，不能确认别人暗中的动机、感情、健康或可信程度。\n\n古代角色与性别差等应被指出，不能转为当代应然规范。观察需要尊重隐私，也不能替代相关人的表达。\n\n## 做一个小练习\n\n1. 把一个判断拆成实际所见、他人说明和自己的推测三部分。\n2. 找一个尚未听到、却与事情直接相关的视角。\n3. 选择一项自己的行动，询问实际受影响的人是否得到预期帮助。\n\n## 和临卦一起读\n\n临问怎样走近，观问走近之后看见了什么，以及自己怎样成为别人的观察对象。帮助之前的了解与帮助之后的检查，同样重要。\n\n读观卦时，可以问：我现在确信的东西，有多少来自真正看见，又有多少只是自己补上的解释？\n\n## 阅读依据\n\n- [周易·觀](https://zh.wikisource.org/w/index.php?title=周易/觀&oldid=10645159)。Received Chinese text; Wikisource revision 10645159。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 20, chapter XX, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

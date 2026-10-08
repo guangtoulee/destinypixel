@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-24",
+  "locale": "zh-TW",
+  "kingWenNumber": 24,
+  "name": "复",
+  "pinyin": "Fù",
+  "englishName": "Fù — Return",
+  "unicode": "䷗",
+  "codePoint": "U+4DD7",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "title": "復卦導讀：偏離方向之後，如何重新回來",
+  "plainSummary": "發現自己偏離重要方向，就從一個做得到的修正開始，不必等到一切重新來過。",
+  "introduction": [
+    "有些調整不必推翻整個生活，只要及時回到原本知道、卻沒有做到的原則。復卦從走得不遠就返回、反覆往返，寫到迷失返回的方向，讓人看見重新開始也有不同方式。它不保證只要等幾天，失去的一切都會回來。"
+  ],
+  "identityText": "復是傳統文王序第24卦，卦符䷗，下卦震☳、上卦坤☷，傳統取象分別為雷與地。爻從最下方數起，依次為初九、六二、六三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "復：亨。出入无疾，朋來无咎。反復其道，七日來復，利有攸往。",
+    "paragraphs": [
+      "Legge 將復的主旨讀作返回、再來，並把一陽回到下方的卦形與變化循環相聯。“七日來復”屬於文本的週期表達，不能直接換成個人七天後的運勢預報。",
+      "現代學習可先確認究竟要返回什麼：一個健康的工作邊界、一種誠實的表達方式，還是一個仍然適合的計畫？回到舊習慣未必總是好事，值得返回的方向需要自己以事實判斷。"
+    ],
+    "sourceRefs": [
+      "zhouyi-24",
+      "legge1882-24"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》談剛反、動而順；《象傳》以雷在地中取象，提到至日閉關、商旅暫不行的古代安排。復因此也帶有安靜護持初生變化的意味。",
+      "本文借此討論，為剛開始的修正留出合適空間。一個習慣剛恢復時，不必立刻把目標翻倍；讓它可持續，比急於證明自己已經完全改變更重要。"
+    ],
+    "sourceRefs": [
+      "zhouyi-24",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "不遠復，无祇悔，元吉。",
+      "focus": "在偏離尚小時作出調整",
+      "paragraphs": [
+        "Legge 將不遠復讀作偏差尚不大便返回，避免它發展成更大的悔恨。注意力落在及時察覺，而不是從不出錯。",
+        "發現一封說明容易引起誤解，可以盡早澄清。小修正值得認真做，不需要先等別人指出嚴重後果。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "休復，吉。",
+      "focus": "好的返回可以有支持",
+      "paragraphs": [
+        "休復在 Legge 的譯文裡是可嘉的返回，註釋又聯繫到與合宜對象的相近。它不是要求所有調整都獨自完成。",
+        "如果一個同伴能提醒你原先的目標，可以約好怎樣互相檢查。支持應幫助形成自己的判斷，不能變成監視或羞辱。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "頻復，厲无咎。",
+      "focus": "反覆需要看原因，不只責怪自己",
+      "paragraphs": [
+        "頻復呈現多次返回，文字同時保留厲與無咎。Legge 也認為認清危險、謹慎應對仍有意義。",
+        "若總在同一處失手，可以檢查目標是否過大、條件是否缺失。反覆不是自動無害，但自責也不能替代對原因的調整。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "中行獨復。",
+      "focus": "身處群體時仍可改變方向",
+      "paragraphs": [
+        "在同行者中獨自返回，是這條的鮮明之處。Legge 借爻間關係解釋其不同於周圍人的行程。",
+        "發現大家都沿用一種不合適的做法，可以先說明自己看到的問題，再調整能負責的部分。獨立選擇不必變成對其他人的道德優越感。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "敦復，无悔。",
+      "focus": "讓返回有持續而厚實的做法",
+      "paragraphs": [
+        "敦復被 Legge 讀為篤厚的返回，重視的不是一時激烈的決心。",
+        "可以把修正落實為清楚安排，例如減少不必要的承諾、留出準備時間。行動越具體，越不必依靠不斷宣誓來維持改變。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。",
+      "focus": "迷失於方向時不要繼續擴大代價",
+      "paragraphs": [
+        "末爻寫錯失返回及軍事失敗等嚴重後果。Legge 將十年看作表示很長時間的整數字，不是個人未來的精確時間表。",
+        "現代類比是已經看見問題，卻為了證明原決定正確而不斷追加投入。及時尋求新的事實和幫助，可以比繼續擴大承諾更負責任。古代軍敗不變成現實災難預言。"
+      ],
+      "sourceRefs": [
+        "zhouyi-24",
+        "legge1882-24"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "重新建立可持續的記錄習慣",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位作者曾用簡短記錄整理每週觀察，後來把目標加到每天寫長篇，結果很快停了。重新開始時，她先回到每週一則，明確只記錄一個具體問題，不再把遺漏一次視為全部失敗。",
+      "兩週後，她發現安排仍與實際時間衝突，於是換到更合適的時段，也請同伴偶爾交流。她用完成情況調整方法，沒有依賴“這次一定徹底改變”的宣言。",
+      "復在這裡幫助她返回仍然有價值的做法。是否有效，由真實的記錄與生活條件驗證，而不是七天或十年這樣的古典數字替她保證。"
+    ]
+  },
+  "misreadings": [
+    "復不等於任何舊關係都應恢復、舊計畫都應重啟。是否適合返回，需要看當前條件與有關人的意願。",
+    "無疾、七日與十年都不能直接用於健康、復合或運勢期限的預測；古文的週期意義與現實時間需要區分。"
+  ],
+  "practice": [
+    "選擇一個仍然值得返回的原則，說明它為何對眼下仍然適用。",
+    "把修正縮成一個可完成的動作，並寫下需要的條件。",
+    "如果再次偏離，預先想好怎樣檢查原因，避免只有責備或更大的承諾。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-23",
+      "name": "剝",
+      "paragraph": "剝提醒人保護正在減損的基礎，復提醒人識別返回的可能。先看清什麼仍值得保留，返回才不會只是機械重複舊做法。"
+    }
+  ],
+  "closing": "讀復卦時，可以問：今天有什麼小修正，能讓我更接近真正願意堅持的方向？",
+  "sourceIds": [
+    "zhouyi-24",
+    "legge1882-24",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1776,
+    "nonWhitespaceCharacterCount": 2021,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "復",
+  "sourceLocale": "zh",
+  "sourceContentHash": "02e013a67d01f2466d56804d8b782ee82c46755ac684d0cb84869a4200d44de4",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 復卦導讀：偏離方向之後，如何重新回來\n\n發現自己偏離重要方向，就從一個做得到的修正開始，不必等到一切重新來過。\n\n有些調整不必推翻整個生活，只要及時回到原本知道、卻沒有做到的原則。復卦從走得不遠就返回、反覆往返，寫到迷失返回的方向，讓人看見重新開始也有不同方式。它不保證只要等幾天，失去的一切都會回來。\n\n## 先認識這一卦\n\n復是傳統文王序第24卦，卦符䷗，下卦震☳、上卦坤☷，傳統取象分別為雷與地。爻從最下方數起，依次為初九、六二、六三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━  ━━  上六\n━━  ━━  六五\n━━  ━━  六四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 復：亨。出入无疾，朋來无咎。反復其道，七日來復，利有攸往。\n\nLegge 將復的主旨讀作返回、再來，並把一陽回到下方的卦形與變化循環相聯。“七日來復”屬於文本的週期表達，不能直接換成個人七天後的運勢預報。\n\n現代學習可先確認究竟要返回什麼：一個健康的工作邊界、一種誠實的表達方式，還是一個仍然適合的計畫？回到舊習慣未必總是好事，值得返回的方向需要自己以事實判斷。\n\n[zhouyi-24; legge1882-24]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》談剛反、動而順；《象傳》以雷在地中取象，提到至日閉關、商旅暫不行的古代安排。復因此也帶有安靜護持初生變化的意味。\n\n本文借此討論，為剛開始的修正留出合適空間。一個習慣剛恢復時，不必立刻把目標翻倍；讓它可持續，比急於證明自己已經完全改變更重要。\n\n[zhouyi-24; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 在偏離尚小時作出調整\n\n> 不遠復，无祇悔，元吉。\n\nLegge 將不遠復讀作偏差尚不大便返回，避免它發展成更大的悔恨。注意力落在及時察覺，而不是從不出錯。\n\n發現一封說明容易引起誤解，可以盡早澄清。小修正值得認真做，不需要先等別人指出嚴重後果。\n\n[zhouyi-24; legge1882-24]\n\n### 六二 · 好的返回可以有支持\n\n> 休復，吉。\n\n休復在 Legge 的譯文裡是可嘉的返回，註釋又聯繫到與合宜對象的相近。它不是要求所有調整都獨自完成。\n\n如果一個同伴能提醒你原先的目標，可以約好怎樣互相檢查。支持應幫助形成自己的判斷，不能變成監視或羞辱。\n\n[zhouyi-24; legge1882-24]\n\n### 六三 · 反覆需要看原因，不只責怪自己\n\n> 頻復，厲无咎。\n\n頻復呈現多次返回，文字同時保留厲與無咎。Legge 也認為認清危險、謹慎應對仍有意義。\n\n若總在同一處失手，可以檢查目標是否過大、條件是否缺失。反覆不是自動無害，但自責也不能替代對原因的調整。\n\n[zhouyi-24; legge1882-24]\n\n### 六四 · 身處群體時仍可改變方向\n\n> 中行獨復。\n\n在同行者中獨自返回，是這條的鮮明之處。Legge 借爻間關係解釋其不同於周圍人的行程。\n\n發現大家都沿用一種不合適的做法，可以先說明自己看到的問題，再調整能負責的部分。獨立選擇不必變成對其他人的道德優越感。\n\n[zhouyi-24; legge1882-24]\n\n### 六五 · 讓返回有持續而厚實的做法\n\n> 敦復，无悔。\n\n敦復被 Legge 讀為篤厚的返回，重視的不是一時激烈的決心。\n\n可以把修正落實為清楚安排，例如減少不必要的承諾、留出準備時間。行動越具體，越不必依靠不斷宣誓來維持改變。\n\n[zhouyi-24; legge1882-24]\n\n### 上六 · 迷失於方向時不要繼續擴大代價\n\n> 迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。\n\n末爻寫錯失返回及軍事失敗等嚴重後果。Legge 將十年看作表示很長時間的整數字，不是個人未來的精確時間表。\n\n現代類比是已經看見問題，卻為了證明原決定正確而不斷追加投入。及時尋求新的事實和幫助，可以比繼續擴大承諾更負責任。古代軍敗不變成現實災難預言。\n\n[zhouyi-24; legge1882-24]\n\n## 重新建立可持續的記錄習慣\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一位作者曾用簡短記錄整理每週觀察，後來把目標加到每天寫長篇，結果很快停了。重新開始時，她先回到每週一則，明確只記錄一個具體問題，不再把遺漏一次視為全部失敗。\n\n兩週後，她發現安排仍與實際時間衝突，於是換到更合適的時段，也請同伴偶爾交流。她用完成情況調整方法，沒有依賴“這次一定徹底改變”的宣言。\n\n復在這裡幫助她返回仍然有價值的做法。是否有效，由真實的記錄與生活條件驗證，而不是七天或十年這樣的古典數字替她保證。\n\n## 常見誤讀\n\n1. 復不等於任何舊關係都應恢復、舊計畫都應重啟。是否適合返回，需要看當前條件與有關人的意願。\n\n2. 無疾、七日與十年都不能直接用於健康、復合或運勢期限的預測；古文的週期意義與現實時間需要區分。\n\n## 三個練習\n\n1. 選擇一個仍然值得返回的原則，說明它為何對眼下仍然適用。\n\n2. 把修正縮成一個可完成的動作，並寫下需要的條件。\n\n3. 如果再次偏離，預先想好怎樣檢查原因，避免只有責備或更大的承諾。\n\n## 延伸閱讀\n\n### 剝 (hexagram-23)\n\n剝提醒人保護正在減損的基礎，復提醒人識別返回的可能。先看清什麼仍值得保留，返回才不會只是機械重複舊做法。\n\n## 結語\n\n讀復卦時，可以問：今天有什麼小修正，能讓我更接近真正願意堅持的方向？\n\n## 資料來源\n\n- [zhouyi-24: 周易·復](https://zh.wikisource.org/w/index.php?title=周易/復&oldid=10643037)\n\n- [legge1882-24: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 24, chapter XXIV, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

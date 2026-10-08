@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-45",
+  "locale": "zh-TW",
+  "kingWenNumber": 45,
+  "name": "萃",
+  "pinyin": "Cuì",
+  "englishName": "Cuì — Gathering Together",
+  "unicode": "䷬",
+  "codePoint": "U+4DEC",
+  "lowerTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兌",
+    "image": "澤",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+  ],
+  "title": "萃卦學習：人聚在一起之後，還需要什麼",
+  "plainSummary": "把人召集起來只是第一步，還要建立共同目的、清楚的參與方式，以及彼此的信任。",
+  "introduction": [
+    "一場活動可以報名踴躍，現場卻各說各話；一個小組也可能人數不多，卻知道為什麼聚集、如何一起做事。萃卦討論聚合，包含宗廟、祭祀、位置與信任，也寫到聚會邊緣的嘆息和流淚。它因此比“人多力量大”更複雜。"
+  ],
+  "identityText": "萃是傳統文王序第45卦，卦符䷬，下卦坤☷、上卦兌☱，傳統取象分別為地與澤。爻從最下方往上數，依次為初六、六二、六三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "萃：王假有廟，利見大人，亨。利貞。用大牲吉，利有攸往。",
+    "paragraphs": [
+      "“假”在這裡涉及到達，卦辭寫王至宗廟，並說到大牲祭祀。Legge 將其放在古代宗教儀式與政治共同體的聚合中解釋。不能刪去這層歷史背景，只留下今天的社交技巧。",
+      "用於現代學習，可以思考共同目的如何被看見，誰負責組織，以及參加者是否真正認同。古代用牲的文字屬於史料，不是今天應舉行何種儀式的建議；共同體也不能僅靠身份和排場維持。"
+    ],
+    "sourceRefs": [
+      "zhouyi-45",
+      "legge1882-45"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》釋萃為聚，討論順而悅、聚以正；《象傳》用澤在地上取象，談整治兵器、戒備意外。傳文沒有把聚集天然視為毫無風險。",
+      "現代一般活動可由此聯想到評估容納人數、分工和應變，但這只是本文的類比。讓參與者知道遇到問題找誰、能否自由退出，往往比反覆強調團結更實際。"
+    ],
+    "sourceRefs": [
+      "zhouyi-45",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "有孚不終，乃亂乃萃，若號一握為笑，勿恤，往无咎。",
+      "focus": "聚合開始時，信任可能還不穩定",
+      "paragraphs": [
+        "這一爻從有孚不終寫到混亂聚集，又出現呼號轉笑的畫面。Legge 強調起初的信任未能持續，以及重新尋求相合的可能。",
+        "新小組發生誤會時，先確認彼此原先理解是否一致。不要把一次熱烈見面當作已有穩定默契，也不要因為短暫尷尬就斷定合作沒有價值。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "引吉，无咎，孚乃利用禴。",
+      "focus": "真誠比儀式的豐厚更重要",
+      "paragraphs": [
+        "禴是一種祭禮，Legge 將之解釋為較簡約的季節性祭祀。卦辭的大牲與這裡的簡祭並列，使聚合不只剩下物質規模。",
+        "邀請別人參與時，可以清楚說明理由，給出真實而適度的承諾。簡短誠實的說明，可能比鋪陳隆重卻含混的願景更能建立信任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "萃如，嗟如，无攸利，往无咎，小吝。",
+      "focus": "留意聚會裡沒有找到位置的人",
+      "paragraphs": [
+        "萃與嗟相伴，聚集之中仍有人嘆息。Legge 讀到希望靠近群體卻尚未得到合適響應的處境。",
+        "若自己在小組邊緣，可以詢問具體參與方式；若你是組織者，也應看見沉默者是否缺少入口。不能只以現場最活躍的聲音判斷所有人都滿意。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "大吉，无咎。",
+      "focus": "組織位置帶來更高的責任",
+      "paragraphs": [
+        "爻辭極短，Legge 結合九四接近領導位置而展開，認為必須有足夠好的結果與合宜行為，才能免於過失。其角色解釋屬於注釋。",
+        "承擔協調的人需要讓安排服務共同目的，而非形成只圍著自己運作的小圈子。受歡迎與做得負責，需要分別檢查。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "萃有位，无咎。匪孚，元永貞，悔亡。",
+      "focus": "有位置不等於已經獲得信任",
+      "paragraphs": [
+        "這一爻明說有位，同時保留匪孚的情況。Legge 將穩定而持續的正當行為視為回應不信任的方向。",
+        "得到負責人稱號之後，仍需說明決定、兌現約定，並接受提問。不能把別人提出疑慮解釋成不夠團結，或要求職位本身替自己作證。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "齎咨涕洟，无咎。",
+      "focus": "承認聚集也可能留下失落",
+      "paragraphs": [
+        "末爻是嘆息、淚水與鼻涕，並沒有用熱鬧的結尾覆蓋所有人的感受。Legge 保留了未能如願聚合的難受。",
+        "一個人離開活動時失望，可以認真聽聽緣由，不必強求其表現開心。聚合的品質也包括如何對待落空的期待，而不只是合影時是否整齊。"
+      ],
+      "sourceRefs": [
+        "zhouyi-45",
+        "legge1882-45"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "第一次組織社區讀書會",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "組織者公佈書目後收到很多報名，卻發現有人想深入討論，有人只想認識鄰居。她提前說明活動長度、討論方式和可以旁聽的選擇，讓大家知道這次聚集能提供什麼。",
+      "現場除了安排主持與記錄，也留出新參加者介紹疑問的時間。結束後，一位參與者說自己一直插不上話，組織者沒有用“大家都挺開心”否定這一回饋。",
+      "下一次她調整發言方式，並承認活動不可能適合所有人。萃的學習在這裡體現在共同目的和真實參與，而不是把人數與一致表情當成成功的唯一證據。"
+    ]
+  },
+  "misreadings": [
+    "萃不保證人緣、婚緣或團隊必勝，也不能據卦象認定誰值得信任。",
+    "宗廟、祭牲與兵器屬於古代文本語境；現代組織需要尊重自願參與、事實和適用的安全規則。"
+  ],
+  "practice": [
+    "寫下這次聚集希望共同完成的一件事，檢查參與者是否也這樣理解。",
+    "找到一位不常發言的人，以不施壓的方式詢問參與上是否方便。",
+    "檢查一項組織安排：它是在幫助共同目的，還是只在呈現組織者的重要？"
+  ],
+  "related": [
+    {
+      "id": "hexagram-08",
+      "name": "比",
+      "paragraph": "比偏重親附與選擇聯繫，萃更突出已經聚到一起之後的秩序與信任。關係的形成和共同活動的維持，是相連而不同的問題。"
+    }
+  ],
+  "closing": "讀萃卦時，可以問：大家是因為清楚的共同理由在一起，還是只是暫時出現在同一個地方？",
+  "sourceIds": [
+    "zhouyi-45",
+    "legge1882-45",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "上六採用底本明列的“咨”異文；頁面正文作“資”。",
+  "counts": {
+    "chineseCharacterCount": 1695,
+    "nonWhitespaceCharacterCount": 1944,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "萃",
+  "sourceLocale": "zh",
+  "sourceContentHash": "806fb1b7207a43db350d264270ce5dd002b55022f8ba419d6547431955ce6c50",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 萃卦學習：人聚在一起之後，還需要什麼\n\n把人召集起來只是第一步，還要建立共同目的、清楚的參與方式，以及彼此的信任。\n\n一場活動可以報名踴躍，現場卻各說各話；一個小組也可能人數不多，卻知道為什麼聚集、如何一起做事。萃卦討論聚合，包含宗廟、祭祀、位置與信任，也寫到聚會邊緣的嘆息和流淚。它因此比“人多力量大”更複雜。\n\n萃是傳統文王序第45卦，卦符䷬，下卦坤☷、上卦兌☱，傳統取象分別為地與澤。爻從最下方往上數，依次為初六、六二、六三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 0 0 1 1 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n萃：王假有廟，利見大人，亨。利貞。用大牲吉，利有攸往。\n\n“假”在這裡涉及到達，卦辭寫王至宗廟，並說到大牲祭祀。Legge 將其放在古代宗教儀式與政治共同體的聚合中解釋。不能刪去這層歷史背景，只留下今天的社交技巧。\n\n用於現代學習，可以思考共同目的如何被看見，誰負責組織，以及參加者是否真正認同。古代用牲的文字屬於史料，不是今天應舉行何種儀式的建議；共同體也不能僅靠身份和排場維持。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》釋萃為聚，討論順而悅、聚以正；《象傳》用澤在地上取象，談整治兵器、戒備意外。傳文沒有把聚集天然視為毫無風險。\n\n現代一般活動可由此聯想到評估容納人數、分工和應變，但這只是本文的類比。讓參與者知道遇到問題找誰、能否自由退出，往往比反覆強調團結更實際。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 聚合開始時，信任可能還不穩定\n\n有孚不終，乃亂乃萃，若號一握為笑，勿恤，往无咎。\n\n這一爻從有孚不終寫到混亂聚集，又出現呼號轉笑的畫面。Legge 強調起初的信任未能持續，以及重新尋求相合的可能。\n\n新小組發生誤會時，先確認彼此原先理解是否一致。不要把一次熱烈見面當作已有穩定默契，也不要因為短暫尷尬就斷定合作沒有價值。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 真誠比儀式的豐厚更重要\n\n引吉，无咎，孚乃利用禴。\n\n禴是一種祭禮，Legge 將之解釋為較簡約的季節性祭祀。卦辭的大牲與這裡的簡祭並列，使聚合不只剩下物質規模。\n\n邀請別人參與時，可以清楚說明理由，給出真實而適度的承諾。簡短誠實的說明，可能比鋪陳隆重卻含混的願景更能建立信任。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六三 · 留意聚會裡沒有找到位置的人\n\n萃如，嗟如，无攸利，往无咎，小吝。\n\n萃與嗟相伴，聚集之中仍有人嘆息。Legge 讀到希望靠近群體卻尚未得到合適響應的處境。\n\n若自己在小組邊緣，可以詢問具體參與方式；若你是組織者，也應看見沉默者是否缺少入口。不能只以現場最活躍的聲音判斷所有人都滿意。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 組織位置帶來更高的責任\n\n大吉，无咎。\n\n爻辭極短，Legge 結合九四接近領導位置而展開，認為必須有足夠好的結果與合宜行為，才能免於過失。其角色解釋屬於注釋。\n\n承擔協調的人需要讓安排服務共同目的，而非形成只圍著自己運作的小圈子。受歡迎與做得負責，需要分別檢查。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 有位置不等於已經獲得信任\n\n萃有位，无咎。匪孚，元永貞，悔亡。\n\n這一爻明說有位，同時保留匪孚的情況。Legge 將穩定而持續的正當行為視為回應不信任的方向。\n\n得到負責人稱號之後，仍需說明決定、兌現約定，並接受提問。不能把別人提出疑慮解釋成不夠團結，或要求職位本身替自己作證。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 承認聚集也可能留下失落\n\n齎咨涕洟，无咎。\n\n末爻是嘆息、淚水與鼻涕，並沒有用熱鬧的結尾覆蓋所有人的感受。Legge 保留了未能如願聚合的難受。\n\n一個人離開活動時失望，可以認真聽聽緣由，不必強求其表現開心。聚合的品質也包括如何對待落空的期待，而不只是合影時是否整齊。\n\n參考來源: [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546), [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 第一次組織社區讀書會\n\n原創現代情境\n\n組織者公佈書目後收到很多報名，卻發現有人想深入討論，有人只想認識鄰居。她提前說明活動長度、討論方式和可以旁聽的選擇，讓大家知道這次聚集能提供什麼。\n\n現場除了安排主持與記錄，也留出新參加者介紹疑問的時間。結束後，一位參與者說自己一直插不上話，組織者沒有用“大家都挺開心”否定這一回饋。\n\n下一次她調整發言方式，並承認活動不可能適合所有人。萃的學習在這裡體現在共同目的和真實參與，而不是把人數與一致表情當成成功的唯一證據。\n\n## 避免誤讀\n\n- 萃不保證人緣、婚緣或團隊必勝，也不能據卦象認定誰值得信任。\n\n- 宗廟、祭牲與兵器屬於古代文本語境；現代組織需要尊重自願參與、事實和適用的安全規則。\n\n## 三個練習\n\n1. 寫下這次聚集希望共同完成的一件事，檢查參與者是否也這樣理解。\n\n2. 找到一位不常發言的人，以不施壓的方式詢問參與上是否方便。\n\n3. 檢查一項組織安排：它是在幫助共同目的，還是只在呈現組織者的重要？\n\n## 延伸閱讀\n\n比 (hexagram-08): 比偏重親附與選擇聯繫，萃更突出已經聚到一起之後的秩序與信任。關係的形成和共同活動的維持，是相連而不同的問題。\n\n讀萃卦時，可以問：大家是因為清楚的共同理由在一起，還是只是暫時出現在同一個地方？\n\n## 版本說明\n\n上六採用底本明列的“咨”異文；頁面正文作“資”。\n\n## 參考來源\n\n- [zhouyi-45](https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546)\n\n- [legge1882-45](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-45 · SHA256 806fb1b7207a43db350d264270ce5dd002b55022f8ba419d6547431955ce6c50\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

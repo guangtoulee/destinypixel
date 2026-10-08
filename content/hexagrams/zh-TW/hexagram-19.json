@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-19",
+  "locale": "zh-TW",
+  "kingWenNumber": 19,
+  "name": "临",
+  "pinyin": "Lín",
+  "englishName": "Lín — Approach",
+  "unicode": "䷒",
+  "codePoint": "U+4DD2",
+  "lowerTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "title": "臨卦導讀：走近事情，也了解真正的需要",
+  "plainSummary": "有機會接近、幫忙或負責時，先了解實際情況，再決定如何介入。",
+  "introduction": [
+    "剛開始帶領一群人，或準備協助新成員時，很容易以為態度好就夠了。臨卦討論接近、臨察與負責，也提醒我們有利的條件會改變。它能幫助讀者分辨真正走近對方，和只在遠處說些好聽的話。"
+  ],
+  "identityText": "臨是傳統文王序第19卦，卦符䷒，下卦兌☱、上卦坤☷，傳統取象分別為澤與地。爻從最下方數起，依次為初九、九二、六三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "臨：元亨。利貞。至于八月有凶。",
+    "paragraphs": [
+      "Legge 將臨解釋為權威的接近，可以是察看、安撫或治理，同時以堅定合宜約束行動。末句又把變化與凶的提醒放進來，不能只讀到前面的通達。",
+      "“八月”在曆法、卦氣和傳統解釋中有具體討論。Legge 引述的解釋也把它與陰陽力量的消長聯繫起來，本文不將其換算為讀者今年八月必有壞事。現代學習可記住的是：條件會變，接近與負責也需要持續檢查。"
+    ],
+    "sourceRefs": [
+      "zhouyi-19",
+      "legge1882-19"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》討論剛漸長、悅而順；《象傳》以澤上有地取象，說到教思與容保。傳文讓接近不僅是佔據一個位置，也涉及怎樣理解和照顧所臨的人。",
+      "今天的幫助可以從傾聽與詢問開始。若還不知道對方缺什麼，就替其安排很多事，可能只是增加負擔；是否有用應讓實際接受幫助的人能夠回饋。"
+    ],
+    "sourceRefs": [
+      "zhouyi-19",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "咸臨，貞吉。",
+      "focus": "一起接近，也需要合宜的依據",
+      "paragraphs": [
+        "Legge 把前兩爻的咸臨讀為相伴前進，第一爻特別保留貞的條件。“咸”在此按其所採讀法說明，不隨意當作感情必相通。",
+        "新負責一項工作時，可以邀請熟悉現場的人同行。共同接近不等於所有人已經同意你的判斷，應繼續核實需求與權限。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "咸臨，吉无不利。",
+      "focus": "同行的力量在互相接應",
+      "paragraphs": [
+        "第二爻延續相伴接近，Legge 將其與前一爻相聯。相似的詞句仍處於不同爻位，傳統解釋因此有各自側重。",
+        "兩個人共同提供幫助時，可以明確誰傾聽、誰記錄、誰跟進。只有熱心卻互相重複指令，反而可能使被幫助的人無所適從。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "甘臨，无攸利。既憂之，无咎。",
+      "focus": "好聽的話需要接受效果檢驗",
+      "paragraphs": [
+        "甘臨帶有悅意、甜美的意味，Legge 將其讀為樂於前進，卻未必有利；意識到問題後仍可調整。",
+        "向新成員反覆說有問題找我，不如告訴對方如何聯絡、什麼時間可回應。若發現自己的鼓勵沒有幫助，可以改變方式，不必為維持好人形象辯解。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "至臨，无咎。",
+      "focus": "把接近做得切實",
+      "paragraphs": [
+        "Legge 將至臨讀作高度合宜的接近；它與只停留在表面悅意的情況形成區別。",
+        "現代類比是親自瞭解一項工作的真實流程，確認對方能否使用你提供的資料。到場不保證理解，仍要願意聽到與預想不同的情況。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "知臨，大君之宜，吉。",
+      "focus": "有判斷力，也知道借助他人",
+      "paragraphs": [
+        "知臨涉及智慧的接近，Legge 在君主使用合適人才的框架中解釋。它不等於地位較高者天然知道得更多。",
+        "負責的人可以把目標和邊界說清，同時信任真正熟悉細節的人提供判斷。認真授權不意味著甩掉責任，也不需要事事親手控制。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "敦臨，吉无咎。",
+      "focus": "讓支持保持厚實與持續",
+      "paragraphs": [
+        "敦臨有厚誠的意味，Legge 譯解為誠實和寬厚的接近。末爻將注意力帶到態度的持久品質。",
+        "幫助不一定要很多，卻需要承諾與能力相稱。能夠穩定完成一個小約定，往往比一開始熱情地包辦所有事更值得依賴。"
+      ],
+      "sourceRefs": [
+        "zhouyi-19",
+        "legge1882-19"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "迎接一位新加入的社團成員",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "社團負責人原本準備一次講完所有規則，後來先問新成員最想參與什麼、現在最不清楚哪一步。她提供一個清楚入口，安排熟悉相關事務的人介紹，並說明何時可再來問。",
+      "過了一段時間，她發現原先的說明已經過時，就和成員一起更新。她沒有因為第一天的歡迎很熱情，便認為支持工作已經完成。",
+      "臨在這裡幫助她把善意變成可以使用的幫助。對方仍可選擇怎樣參與，也能指出不需要的安排。"
+    ]
+  },
+  "misreadings": [
+    "“八月有凶”不用於現實災禍日期預測；必須保留傳統解釋與現代曆法之間的距離。",
+    "臨察與幫助不能變成監視或包辦，卦象也不替人證明自己更高明、應當替別人作決定。"
+  ],
+  "practice": [
+    "在提供幫助前，先問一個能瞭解對方實際需要的問題。",
+    "檢查一項善意承諾是否有明確方式與可兌現的範圍。",
+    "約一次適當的回饋檢查，看條件是否已經改變。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-20",
+      "name": "觀",
+      "paragraph": "臨關注怎樣走近和介入，觀關注怎樣觀察以及自己的行為怎樣被看見。先看清再介入，介入後繼續觀察，可以互相補足。"
+    }
+  ],
+  "closing": "讀臨卦時，可以問：我真的更瞭解眼前的人和事了嗎，還是只是更想替它們安排方向？",
+  "sourceIds": [
+    "zhouyi-19",
+    "legge1882-19",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1715,
+    "nonWhitespaceCharacterCount": 1958,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "臨",
+  "sourceLocale": "zh",
+  "sourceContentHash": "d8c9eaae1f38b41cc6af2862eb1b4bd6cf7cccf68816921b6a7e341f84d23d6e",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 臨卦導讀：走近事情，也了解真正的需要\n\n有機會接近、幫忙或負責時，先了解實際情況，再決定如何介入。\n\n剛開始帶領一群人，或準備協助新成員時，很容易以為態度好就夠了。臨卦討論接近、臨察與負責，也提醒我們有利的條件會改變。它能幫助讀者分辨真正走近對方，和只在遠處說些好聽的話。\n\n## 先認識這一卦\n\n臨是傳統文王序第19卦，卦符䷒，下卦兌☱、上卦坤☷，傳統取象分別為澤與地。爻從最下方數起，依次為初九、九二、六三、六四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━  ━━  上六\n━━  ━━  六五\n━━  ━━  六四\n━━  ━━  六三\n━━━━━━  九二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 臨：元亨。利貞。至于八月有凶。\n\nLegge 將臨解釋為權威的接近，可以是察看、安撫或治理，同時以堅定合宜約束行動。末句又把變化與凶的提醒放進來，不能只讀到前面的通達。\n\n“八月”在曆法、卦氣和傳統解釋中有具體討論。Legge 引述的解釋也把它與陰陽力量的消長聯繫起來，本文不將其換算為讀者今年八月必有壞事。現代學習可記住的是：條件會變，接近與負責也需要持續檢查。\n\n[zhouyi-19; legge1882-19]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》討論剛漸長、悅而順；《象傳》以澤上有地取象，說到教思與容保。傳文讓接近不僅是佔據一個位置，也涉及怎樣理解和照顧所臨的人。\n\n今天的幫助可以從傾聽與詢問開始。若還不知道對方缺什麼，就替其安排很多事，可能只是增加負擔；是否有用應讓實際接受幫助的人能夠回饋。\n\n[zhouyi-19; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 一起接近，也需要合宜的依據\n\n> 咸臨，貞吉。\n\nLegge 把前兩爻的咸臨讀為相伴前進，第一爻特別保留貞的條件。“咸”在此按其所採讀法說明，不隨意當作感情必相通。\n\n新負責一項工作時，可以邀請熟悉現場的人同行。共同接近不等於所有人已經同意你的判斷，應繼續核實需求與權限。\n\n[zhouyi-19; legge1882-19]\n\n### 九二 · 同行的力量在互相接應\n\n> 咸臨，吉无不利。\n\n第二爻延續相伴接近，Legge 將其與前一爻相聯。相似的詞句仍處於不同爻位，傳統解釋因此有各自側重。\n\n兩個人共同提供幫助時，可以明確誰傾聽、誰記錄、誰跟進。只有熱心卻互相重複指令，反而可能使被幫助的人無所適從。\n\n[zhouyi-19; legge1882-19]\n\n### 六三 · 好聽的話需要接受效果檢驗\n\n> 甘臨，无攸利。既憂之，无咎。\n\n甘臨帶有悅意、甜美的意味，Legge 將其讀為樂於前進，卻未必有利；意識到問題後仍可調整。\n\n向新成員反覆說有問題找我，不如告訴對方如何聯絡、什麼時間可回應。若發現自己的鼓勵沒有幫助，可以改變方式，不必為維持好人形象辯解。\n\n[zhouyi-19; legge1882-19]\n\n### 六四 · 把接近做得切實\n\n> 至臨，无咎。\n\nLegge 將至臨讀作高度合宜的接近；它與只停留在表面悅意的情況形成區別。\n\n現代類比是親自瞭解一項工作的真實流程，確認對方能否使用你提供的資料。到場不保證理解，仍要願意聽到與預想不同的情況。\n\n[zhouyi-19; legge1882-19]\n\n### 六五 · 有判斷力，也知道借助他人\n\n> 知臨，大君之宜，吉。\n\n知臨涉及智慧的接近，Legge 在君主使用合適人才的框架中解釋。它不等於地位較高者天然知道得更多。\n\n負責的人可以把目標和邊界說清，同時信任真正熟悉細節的人提供判斷。認真授權不意味著甩掉責任，也不需要事事親手控制。\n\n[zhouyi-19; legge1882-19]\n\n### 上六 · 讓支持保持厚實與持續\n\n> 敦臨，吉无咎。\n\n敦臨有厚誠的意味，Legge 譯解為誠實和寬厚的接近。末爻將注意力帶到態度的持久品質。\n\n幫助不一定要很多，卻需要承諾與能力相稱。能夠穩定完成一個小約定，往往比一開始熱情地包辦所有事更值得依賴。\n\n[zhouyi-19; legge1882-19]\n\n## 迎接一位新加入的社團成員\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n社團負責人原本準備一次講完所有規則，後來先問新成員最想參與什麼、現在最不清楚哪一步。她提供一個清楚入口，安排熟悉相關事務的人介紹，並說明何時可再來問。\n\n過了一段時間，她發現原先的說明已經過時，就和成員一起更新。她沒有因為第一天的歡迎很熱情，便認為支持工作已經完成。\n\n臨在這裡幫助她把善意變成可以使用的幫助。對方仍可選擇怎樣參與，也能指出不需要的安排。\n\n## 常見誤讀\n\n1. “八月有凶”不用於現實災禍日期預測；必須保留傳統解釋與現代曆法之間的距離。\n\n2. 臨察與幫助不能變成監視或包辦，卦象也不替人證明自己更高明、應當替別人作決定。\n\n## 三個練習\n\n1. 在提供幫助前，先問一個能瞭解對方實際需要的問題。\n\n2. 檢查一項善意承諾是否有明確方式與可兌現的範圍。\n\n3. 約一次適當的回饋檢查，看條件是否已經改變。\n\n## 延伸閱讀\n\n### 觀 (hexagram-20)\n\n臨關注怎樣走近和介入，觀關注怎樣觀察以及自己的行為怎樣被看見。先看清再介入，介入後繼續觀察，可以互相補足。\n\n## 結語\n\n讀臨卦時，可以問：我真的更瞭解眼前的人和事了嗎，還是只是更想替它們安排方向？\n\n## 資料來源\n\n- [zhouyi-19: 周易·臨](https://zh.wikisource.org/w/index.php?title=周易/臨&oldid=2106146)\n\n- [legge1882-19: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 19, chapter XIX, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

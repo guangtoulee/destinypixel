@@ -1,0 +1,3472 @@
+{
+  "schemaVersion": 1,
+  "order": "King Wen",
+  "lineOrder": "bottom-to-top",
+  "polarityEncoding": {
+    "1": "yang",
+    "0": "yin"
+  },
+  "warning": "Binary pattern is not King Wen number minus one; use explicit identity lookup. This file contains verified records only, not placeholder records for unwritten hexagrams.",
+  "verifiedCount": 64,
+  "verifiedKingWenNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "notYetIncluded": [],
+  "hexagrams": [
+    {
+      "id": "hexagram-01",
+      "kingWenNumber": 1,
+      "name": "乾",
+      "pinyin": "Qián",
+      "unicode": "䷀",
+      "codePoint": "U+4DC0",
+      "unicodeName": "HEXAGRAM FOR THE CREATIVE HEAVEN",
+      "englishDisplayName": "Qian — The Creative",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-qian",
+          "title": "周易·乾",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/乾&oldid=2404991"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-02",
+      "kingWenNumber": 2,
+      "name": "坤",
+      "pinyin": "Kūn",
+      "unicode": "䷁",
+      "codePoint": "U+4DC1",
+      "unicodeName": "HEXAGRAM FOR THE RECEPTIVE EARTH",
+      "englishDisplayName": "Kun — The Receptive",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-kun",
+          "title": "周易·坤",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/坤&oldid=2404999"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-03",
+      "kingWenNumber": 3,
+      "name": "屯",
+      "pinyin": "Zhūn",
+      "unicode": "䷂",
+      "codePoint": "U+4DC2",
+      "unicodeName": "HEXAGRAM FOR DIFFICULTY AT THE BEGINNING",
+      "englishDisplayName": "Zhūn — Difficulty at the Beginning",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-03",
+          "title": "周易·屯",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/屯&oldid=10643482"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-04",
+      "kingWenNumber": 4,
+      "name": "蒙",
+      "pinyin": "Méng",
+      "unicode": "䷃",
+      "codePoint": "U+4DC3",
+      "unicodeName": "HEXAGRAM FOR YOUTHFUL FOLLY",
+      "englishDisplayName": "Méng — Youthful Folly",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-04",
+          "title": "周易·蒙",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/蒙&oldid=10645379"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-05",
+      "kingWenNumber": 5,
+      "name": "需",
+      "pinyin": "Xū",
+      "unicode": "䷄",
+      "codePoint": "U+4DC4",
+      "unicodeName": "HEXAGRAM FOR WAITING",
+      "englishDisplayName": "Xū — Waiting",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-05",
+          "title": "周易·需",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/需&oldid=10643261"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-06",
+      "kingWenNumber": 6,
+      "name": "讼",
+      "pinyin": "Sòng",
+      "unicode": "䷅",
+      "codePoint": "U+4DC5",
+      "unicodeName": "HEXAGRAM FOR CONFLICT",
+      "englishDisplayName": "Sòng — Conflict",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-06",
+          "title": "周易·訟",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/訟&oldid=10645409"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-07",
+      "kingWenNumber": 7,
+      "name": "师",
+      "pinyin": "Shī",
+      "unicode": "䷆",
+      "codePoint": "U+4DC6",
+      "unicodeName": "HEXAGRAM FOR THE ARMY",
+      "englishDisplayName": "Shī — The Army",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-07",
+          "title": "周易·師",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/師&oldid=2405011"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-08",
+      "kingWenNumber": 8,
+      "name": "比",
+      "pinyin": "Bǐ",
+      "unicode": "䷇",
+      "codePoint": "U+4DC7",
+      "unicodeName": "HEXAGRAM FOR HOLDING TOGETHER",
+      "englishDisplayName": "Bǐ — Holding Together",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-08",
+          "title": "周易·比",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/比&oldid=10645543"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-09",
+      "kingWenNumber": 9,
+      "name": "小畜",
+      "pinyin": "Xiǎo Xù",
+      "unicode": "䷈",
+      "codePoint": "U+4DC8",
+      "unicodeName": "HEXAGRAM FOR SMALL TAMING",
+      "englishDisplayName": "Xiǎo Xù — Small Restraint",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-09",
+          "title": "周易·小畜",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/小畜&oldid=10645530"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-10",
+      "kingWenNumber": 10,
+      "name": "履",
+      "pinyin": "Lǚ",
+      "unicode": "䷉",
+      "codePoint": "U+4DC9",
+      "unicodeName": "HEXAGRAM FOR TREADING",
+      "englishDisplayName": "Lǚ — Treading",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-10",
+          "title": "周易·履",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/履&oldid=10647513"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-11",
+      "kingWenNumber": 11,
+      "name": "泰",
+      "pinyin": "Tài",
+      "unicode": "䷊",
+      "codePoint": "U+4DCA",
+      "unicodeName": "HEXAGRAM FOR PEACE",
+      "englishDisplayName": "Tai — Peace",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        },
+        {
+          "id": "zhouyi-tai",
+          "title": "周易·泰",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/泰&oldid=2106138"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-12",
+      "kingWenNumber": 12,
+      "name": "否",
+      "pinyin": "Pǐ",
+      "unicode": "䷋",
+      "codePoint": "U+4DCB",
+      "unicodeName": "HEXAGRAM FOR STANDSTILL",
+      "englishDisplayName": "Pi — Standstill",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        },
+        {
+          "id": "zhouyi-pi",
+          "title": "周易·否",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/否&oldid=10645603"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-13",
+      "kingWenNumber": 13,
+      "name": "同人",
+      "pinyin": "Tóng Rén",
+      "unicode": "䷌",
+      "codePoint": "U+4DCC",
+      "unicodeName": "HEXAGRAM FOR FELLOWSHIP",
+      "englishDisplayName": "Tóng Rén — Fellowship",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-13",
+          "title": "周易·同人",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/同人&oldid=10645635"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-14",
+      "kingWenNumber": 14,
+      "name": "大有",
+      "pinyin": "Dà Yǒu",
+      "unicode": "䷍",
+      "codePoint": "U+4DCD",
+      "unicodeName": "HEXAGRAM FOR GREAT POSSESSION",
+      "englishDisplayName": "Dà Yǒu — Great Possession",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-14",
+          "title": "周易·大有",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/大有&oldid=10645712"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-15",
+      "kingWenNumber": 15,
+      "name": "谦",
+      "pinyin": "Qiān",
+      "unicode": "䷎",
+      "codePoint": "U+4DCE",
+      "unicodeName": "HEXAGRAM FOR MODESTY",
+      "englishDisplayName": "Qiān — Modesty",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-15",
+          "title": "周易·謙",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/謙&oldid=2106142"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-16",
+      "kingWenNumber": 16,
+      "name": "豫",
+      "pinyin": "Yù",
+      "unicode": "䷏",
+      "codePoint": "U+4DCF",
+      "unicodeName": "HEXAGRAM FOR ENTHUSIASM",
+      "englishDisplayName": "Yù — Enthusiasm",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-16",
+          "title": "周易·豫",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/豫&oldid=10645735"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-17",
+      "kingWenNumber": 17,
+      "name": "随",
+      "pinyin": "Suí",
+      "unicode": "䷐",
+      "codePoint": "U+4DD0",
+      "unicodeName": "HEXAGRAM FOR FOLLOWING",
+      "englishDisplayName": "Suí — Following",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-17",
+          "title": "周易·隨",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/隨&oldid=10645020"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-18",
+      "kingWenNumber": 18,
+      "name": "蛊",
+      "pinyin": "Gǔ",
+      "unicode": "䷑",
+      "codePoint": "U+4DD1",
+      "unicodeName": "HEXAGRAM FOR WORK ON THE DECAYED",
+      "englishDisplayName": "Gǔ — Work on What Has Decayed",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-18",
+          "title": "周易·蠱",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/蠱&oldid=2106145"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-19",
+      "kingWenNumber": 19,
+      "name": "临",
+      "pinyin": "Lín",
+      "unicode": "䷒",
+      "codePoint": "U+4DD2",
+      "unicodeName": "HEXAGRAM FOR APPROACH",
+      "englishDisplayName": "Lín — Approach",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-19",
+          "title": "周易·臨",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/臨&oldid=2106146"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-20",
+      "kingWenNumber": 20,
+      "name": "观",
+      "pinyin": "Guān",
+      "unicode": "䷓",
+      "codePoint": "U+4DD3",
+      "unicodeName": "HEXAGRAM FOR CONTEMPLATION",
+      "englishDisplayName": "Guān — Contemplation",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-20",
+          "title": "周易·觀",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/觀&oldid=10645159"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-21",
+      "kingWenNumber": 21,
+      "name": "噬嗑",
+      "pinyin": "Shì Kè",
+      "unicode": "䷔",
+      "codePoint": "U+4DD4",
+      "unicodeName": "HEXAGRAM FOR BITING THROUGH",
+      "englishDisplayName": "Shì Kè — Biting Through",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-21",
+          "title": "周易·噬嗑",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/噬嗑&oldid=10645753"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-22",
+      "kingWenNumber": 22,
+      "name": "贲",
+      "pinyin": "Bì",
+      "unicode": "䷕",
+      "codePoint": "U+4DD5",
+      "unicodeName": "HEXAGRAM FOR GRACE",
+      "englishDisplayName": "Bì — Grace",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-22",
+          "title": "周易·賁",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/賁&oldid=2405035"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-23",
+      "kingWenNumber": 23,
+      "name": "剥",
+      "pinyin": "Bō",
+      "unicode": "䷖",
+      "codePoint": "U+4DD6",
+      "unicodeName": "HEXAGRAM FOR SPLITTING APART",
+      "englishDisplayName": "Bō — Splitting Apart",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-23",
+          "title": "周易·剝",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/剝&oldid=10645800"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-24",
+      "kingWenNumber": 24,
+      "name": "复",
+      "pinyin": "Fù",
+      "unicode": "䷗",
+      "codePoint": "U+4DD7",
+      "unicodeName": "HEXAGRAM FOR RETURN",
+      "englishDisplayName": "Fù — Return",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-24",
+          "title": "周易·復",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/復&oldid=10643037"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-25",
+      "kingWenNumber": 25,
+      "name": "无妄",
+      "pinyin": "Wú Wàng",
+      "unicode": "䷘",
+      "codePoint": "U+4DD8",
+      "unicodeName": "HEXAGRAM FOR INNOCENCE",
+      "englishDisplayName": "Wú Wàng — Innocence",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-25",
+          "title": "周易·无妄",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/无妄&oldid=10645038"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-26",
+      "kingWenNumber": 26,
+      "name": "大畜",
+      "pinyin": "Dà Xù",
+      "unicode": "䷙",
+      "codePoint": "U+4DD9",
+      "unicodeName": "HEXAGRAM FOR GREAT TAMING",
+      "englishDisplayName": "Dà Xù — Great Accumulation",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-26",
+          "title": "周易·大畜",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/大畜&oldid=10646304"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-27",
+      "kingWenNumber": 27,
+      "name": "颐",
+      "pinyin": "Yí",
+      "unicode": "䷚",
+      "codePoint": "U+4DDA",
+      "unicodeName": "HEXAGRAM FOR MOUTH CORNERS",
+      "englishDisplayName": "Yí — Nourishment",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-27",
+          "title": "周易·頤",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/頤&oldid=10643091"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-28",
+      "kingWenNumber": 28,
+      "name": "大过",
+      "pinyin": "Dà Guò",
+      "unicode": "䷛",
+      "codePoint": "U+4DDB",
+      "unicodeName": "HEXAGRAM FOR GREAT PREPONDERANCE",
+      "englishDisplayName": "Dà Guò — Great Preponderance",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-28",
+          "title": "周易·大過",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/大過&oldid=10645184"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-29",
+      "kingWenNumber": 29,
+      "name": "坎",
+      "pinyin": "Kǎn",
+      "unicode": "䷜",
+      "codePoint": "U+4DDC",
+      "unicodeName": "HEXAGRAM FOR THE ABYSMAL WATER",
+      "englishDisplayName": "Kǎn — Repeated Water",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-29",
+          "title": "周易·坎",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-30",
+      "kingWenNumber": 30,
+      "name": "离",
+      "pinyin": "Lí",
+      "unicode": "䷝",
+      "codePoint": "U+4DDD",
+      "unicodeName": "HEXAGRAM FOR THE CLINGING FIRE",
+      "englishDisplayName": "Lí — The Clinging Fire",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-30",
+          "title": "周易·離",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/離&oldid=10646424"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-31",
+      "kingWenNumber": 31,
+      "name": "咸",
+      "pinyin": "Xián",
+      "unicode": "䷞",
+      "codePoint": "U+4DDE",
+      "unicodeName": "HEXAGRAM FOR INFLUENCE",
+      "englishDisplayName": "Xián — Influence",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-31",
+          "title": "周易·咸",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/咸&oldid=10646450"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-32",
+      "kingWenNumber": 32,
+      "name": "恒",
+      "pinyin": "Héng",
+      "unicode": "䷟",
+      "codePoint": "U+4DDF",
+      "unicodeName": "HEXAGRAM FOR DURATION",
+      "englishDisplayName": "Héng — Duration",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-32",
+          "title": "周易·恒",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/恒&oldid=10646486"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-33",
+      "kingWenNumber": 33,
+      "name": "遁",
+      "pinyin": "Dùn",
+      "unicode": "䷠",
+      "codePoint": "U+4DE0",
+      "unicodeName": "HEXAGRAM FOR RETREAT",
+      "englishDisplayName": "Dùn — Retreat",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-33",
+          "title": "周易·遯",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-34",
+      "kingWenNumber": 34,
+      "name": "大壮",
+      "pinyin": "Dà Zhuàng",
+      "unicode": "䷡",
+      "codePoint": "U+4DE1",
+      "unicodeName": "HEXAGRAM FOR GREAT POWER",
+      "englishDisplayName": "Dà Zhuàng — Great Power",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-34",
+          "title": "周易·大壯",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-35",
+      "kingWenNumber": 35,
+      "name": "晋",
+      "pinyin": "Jìn",
+      "unicode": "䷢",
+      "codePoint": "U+4DE2",
+      "unicodeName": "HEXAGRAM FOR PROGRESS",
+      "englishDisplayName": "Jìn — Progress",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-35",
+          "title": "周易·晉",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-36",
+      "kingWenNumber": 36,
+      "name": "明夷",
+      "pinyin": "Míng Yí",
+      "unicode": "䷣",
+      "codePoint": "U+4DE3",
+      "unicodeName": "HEXAGRAM FOR DARKENING OF THE LIGHT",
+      "englishDisplayName": "Míng Yí — Darkening of the Light",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-36",
+          "title": "周易·明夷",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/明夷&oldid=10644507"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-37",
+      "kingWenNumber": 37,
+      "name": "家人",
+      "pinyin": "Jiā Rén",
+      "unicode": "䷤",
+      "codePoint": "U+4DE4",
+      "unicodeName": "HEXAGRAM FOR THE FAMILY",
+      "englishDisplayName": "Jiā Rén — The Family",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-37",
+          "title": "周易·家人",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/家人&oldid=2405005"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-38",
+      "kingWenNumber": 38,
+      "name": "睽",
+      "pinyin": "Kuí",
+      "unicode": "䷥",
+      "codePoint": "U+4DE5",
+      "unicodeName": "HEXAGRAM FOR OPPOSITION",
+      "englishDisplayName": "Kuí — Opposition",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-38",
+          "title": "周易·睽",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/睽&oldid=10646622"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-39",
+      "kingWenNumber": 39,
+      "name": "蹇",
+      "pinyin": "Jiǎn",
+      "unicode": "䷦",
+      "codePoint": "U+4DE6",
+      "unicodeName": "HEXAGRAM FOR OBSTRUCTION",
+      "englishDisplayName": "Jiǎn — Obstruction",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-39",
+          "title": "周易·蹇",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/蹇&oldid=2405036"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-40",
+      "kingWenNumber": 40,
+      "name": "解",
+      "pinyin": "Jiě",
+      "unicode": "䷧",
+      "codePoint": "U+4DE7",
+      "unicodeName": "HEXAGRAM FOR DELIVERANCE",
+      "englishDisplayName": "Jiě — Deliverance",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-40",
+          "title": "周易·解",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/解&oldid=10646666"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-41",
+      "kingWenNumber": 41,
+      "name": "损",
+      "pinyin": "Sǔn",
+      "unicode": "䷨",
+      "codePoint": "U+4DE8",
+      "unicodeName": "HEXAGRAM FOR DECREASE",
+      "englishDisplayName": "Sǔn — Decrease",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-41",
+          "title": "周易·損",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-42",
+      "kingWenNumber": 42,
+      "name": "益",
+      "pinyin": "Yì",
+      "unicode": "䷩",
+      "codePoint": "U+4DE9",
+      "unicodeName": "HEXAGRAM FOR INCREASE",
+      "englishDisplayName": "Yì — Increase",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-42",
+          "title": "周易·益",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-43",
+      "kingWenNumber": 43,
+      "name": "夬",
+      "pinyin": "Guài",
+      "unicode": "䷪",
+      "codePoint": "U+4DEA",
+      "unicodeName": "HEXAGRAM FOR BREAKTHROUGH",
+      "englishDisplayName": "Guài — Resolution",
+      "linesBottomUp": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-43",
+          "title": "周易·夬",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/夬&oldid=2405003"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-44",
+      "kingWenNumber": 44,
+      "name": "姤",
+      "pinyin": "Gòu",
+      "unicode": "䷫",
+      "codePoint": "U+4DEB",
+      "unicodeName": "HEXAGRAM FOR COMING TO MEET",
+      "englishDisplayName": "Gòu — Encounter",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "qian",
+        "name": "乾",
+        "image": "天",
+        "symbol": "☰",
+        "linesBottomUp": [
+          1,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-44",
+          "title": "周易·姤",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/姤&oldid=10646826"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-45",
+      "kingWenNumber": 45,
+      "name": "萃",
+      "pinyin": "Cuì",
+      "unicode": "䷬",
+      "codePoint": "U+4DEC",
+      "unicodeName": "HEXAGRAM FOR GATHERING TOGETHER",
+      "englishDisplayName": "Cuì — Gathering Together",
+      "linesBottomUp": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-45",
+          "title": "周易·萃",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/萃&oldid=10647546"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-46",
+      "kingWenNumber": 46,
+      "name": "升",
+      "pinyin": "Shēng",
+      "unicode": "䷭",
+      "codePoint": "U+4DED",
+      "unicodeName": "HEXAGRAM FOR PUSHING UPWARD",
+      "englishDisplayName": "Shēng — Pushing Upward",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kun",
+        "name": "坤",
+        "image": "地",
+        "symbol": "☷",
+        "linesBottomUp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-46",
+          "title": "周易·升",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/升&oldid=10646879"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-47",
+      "kingWenNumber": 47,
+      "name": "困",
+      "pinyin": "Kùn",
+      "unicode": "䷮",
+      "codePoint": "U+4DEE",
+      "unicodeName": "HEXAGRAM FOR OPPRESSION",
+      "englishDisplayName": "Kùn — Oppression",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-47",
+          "title": "周易·困",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/困&oldid=10647032"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-48",
+      "kingWenNumber": 48,
+      "name": "井",
+      "pinyin": "Jǐng",
+      "unicode": "䷯",
+      "codePoint": "U+4DEF",
+      "unicodeName": "HEXAGRAM FOR THE WELL",
+      "englishDisplayName": "Jǐng — The Well",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-48",
+          "title": "周易·井",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/井&oldid=10645240"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-49",
+      "kingWenNumber": 49,
+      "name": "革",
+      "pinyin": "Gé",
+      "unicode": "䷰",
+      "codePoint": "U+4DF0",
+      "unicodeName": "HEXAGRAM FOR REVOLUTION",
+      "englishDisplayName": "Gé — Revolution",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-49",
+          "title": "周易·革",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/革&oldid=10643173"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-50",
+      "kingWenNumber": 50,
+      "name": "鼎",
+      "pinyin": "Dǐng",
+      "unicode": "䷱",
+      "codePoint": "U+4DF1",
+      "unicodeName": "HEXAGRAM FOR THE CAULDRON",
+      "englishDisplayName": "Dǐng — The Cauldron",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-50",
+          "title": "周易·鼎",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-51",
+      "kingWenNumber": 51,
+      "name": "震",
+      "pinyin": "Zhèn",
+      "unicode": "䷲",
+      "codePoint": "U+4DF2",
+      "unicodeName": "HEXAGRAM FOR THE AROUSING THUNDER",
+      "englishDisplayName": "Zhèn — The Arousing",
+      "linesBottomUp": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-51",
+          "title": "周易·震",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/震&oldid=10644930"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-52",
+      "kingWenNumber": 52,
+      "name": "艮",
+      "pinyin": "Gèn",
+      "unicode": "䷳",
+      "codePoint": "U+4DF3",
+      "unicodeName": "HEXAGRAM FOR THE KEEPING STILL MOUNTAIN",
+      "englishDisplayName": "Gèn — Keeping Still",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-52",
+          "title": "周易·艮",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/艮&oldid=10647135"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-53",
+      "kingWenNumber": 53,
+      "name": "渐",
+      "pinyin": "Jiàn",
+      "unicode": "䷴",
+      "codePoint": "U+4DF4",
+      "unicodeName": "HEXAGRAM FOR DEVELOPMENT",
+      "englishDisplayName": "Jiàn — Development",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-53",
+          "title": "周易·漸",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-54",
+      "kingWenNumber": 54,
+      "name": "归妹",
+      "pinyin": "Guī Mèi",
+      "unicode": "䷵",
+      "codePoint": "U+4DF5",
+      "unicodeName": "HEXAGRAM FOR THE MARRYING MAIDEN",
+      "englishDisplayName": "Guī Mèi — The Marrying Maiden",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-54",
+          "title": "周易·歸妹",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/歸妹&oldid=10647182"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-55",
+      "kingWenNumber": 55,
+      "name": "丰",
+      "pinyin": "Fēng",
+      "unicode": "䷶",
+      "codePoint": "U+4DF6",
+      "unicodeName": "HEXAGRAM FOR ABUNDANCE",
+      "englishDisplayName": "Fēng — Abundance",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-55",
+          "title": "周易·豐",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/豐&oldid=10645290"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-56",
+      "kingWenNumber": 56,
+      "name": "旅",
+      "pinyin": "Lǚ",
+      "unicode": "䷷",
+      "codePoint": "U+4DF7",
+      "unicodeName": "HEXAGRAM FOR THE WANDERER",
+      "englishDisplayName": "Lǚ — The Wanderer",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-56",
+          "title": "周易·旅",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-57",
+      "kingWenNumber": 57,
+      "name": "巽",
+      "pinyin": "Xùn",
+      "unicode": "䷸",
+      "codePoint": "U+4DF8",
+      "unicodeName": "HEXAGRAM FOR THE GENTLE WIND",
+      "englishDisplayName": "Xùn — The Gentle",
+      "linesBottomUp": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-57",
+          "title": "周易·巽",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/巽&oldid=10644966"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-58",
+      "kingWenNumber": 58,
+      "name": "兑",
+      "pinyin": "Duì",
+      "unicode": "䷹",
+      "codePoint": "U+4DF9",
+      "unicodeName": "HEXAGRAM FOR THE JOYOUS LAKE",
+      "englishDisplayName": "Duì — The Joyous",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-58",
+          "title": "周易·兌",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/兌&oldid=2404993"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-59",
+      "kingWenNumber": 59,
+      "name": "涣",
+      "pinyin": "Huàn",
+      "unicode": "䷺",
+      "codePoint": "U+4DFA",
+      "unicodeName": "HEXAGRAM FOR DISPERSION",
+      "englishDisplayName": "Huàn — Dispersion",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-59",
+          "title": "周易·渙",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-60",
+      "kingWenNumber": 60,
+      "name": "节",
+      "pinyin": "Jié",
+      "unicode": "䷻",
+      "codePoint": "U+4DFB",
+      "unicodeName": "HEXAGRAM FOR LIMITATION",
+      "englishDisplayName": "Jié — Limitation",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-60",
+          "title": "周易·節",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-61",
+      "kingWenNumber": 61,
+      "name": "中孚",
+      "pinyin": "Zhōng Fú",
+      "unicode": "䷼",
+      "codePoint": "U+4DFC",
+      "unicodeName": "HEXAGRAM FOR INNER TRUTH",
+      "englishDisplayName": "Zhōng Fú — Inner Truth",
+      "linesBottomUp": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "dui",
+        "name": "兑",
+        "image": "泽",
+        "symbol": "☱",
+        "linesBottomUp": [
+          1,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "xun",
+        "name": "巽",
+        "image": "风",
+        "symbol": "☴",
+        "linesBottomUp": [
+          0,
+          1,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-61",
+          "title": "周易·中孚",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/中孚&oldid=10647425"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-62",
+      "kingWenNumber": 62,
+      "name": "小过",
+      "pinyin": "Xiǎo Guò",
+      "unicode": "䷽",
+      "codePoint": "U+4DFD",
+      "unicodeName": "HEXAGRAM FOR SMALL PREPONDERANCE",
+      "englishDisplayName": "Xiǎo Guò — Small Preponderance",
+      "linesBottomUp": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "gen",
+        "name": "艮",
+        "image": "山",
+        "symbol": "☶",
+        "linesBottomUp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "zhen",
+        "name": "震",
+        "image": "雷",
+        "symbol": "☳",
+        "linesBottomUp": [
+          1,
+          0,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-62",
+          "title": "周易·小過",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/小過&oldid=10643238"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-63",
+      "kingWenNumber": 63,
+      "name": "既济",
+      "pinyin": "Jì Jì",
+      "unicode": "䷾",
+      "codePoint": "U+4DFE",
+      "unicodeName": "HEXAGRAM FOR AFTER COMPLETION",
+      "englishDisplayName": "Jì Jì — After Completion",
+      "linesBottomUp": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lowerTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "upperTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-63",
+          "title": "周易·既濟",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    },
+    {
+      "id": "hexagram-64",
+      "kingWenNumber": 64,
+      "name": "未济",
+      "pinyin": "Wèi Jì",
+      "unicode": "䷿",
+      "codePoint": "U+4DFF",
+      "unicodeName": "HEXAGRAM FOR BEFORE COMPLETION",
+      "englishDisplayName": "Wèi Jì — Before Completion",
+      "linesBottomUp": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lowerTrigram": {
+        "id": "kan",
+        "name": "坎",
+        "image": "水",
+        "symbol": "☵",
+        "linesBottomUp": [
+          0,
+          1,
+          0
+        ]
+      },
+      "upperTrigram": {
+        "id": "li",
+        "name": "离",
+        "image": "火",
+        "symbol": "☲",
+        "linesBottomUp": [
+          1,
+          0,
+          1
+        ]
+      },
+      "classicalSources": [
+        {
+          "id": "zhouyi-64",
+          "title": "周易·未濟",
+          "url": "https://zh.wikisource.org/w/index.php?title=周易/未濟&oldid=10647450"
+        },
+        {
+          "id": "unicode-hexagrams",
+          "title": "Yijing Hexagram Symbols",
+          "url": "https://www.unicode.org/charts/PDF/U4DC0.pdf"
+        }
+      ],
+      "verification": "Cross-checked against the read received Chinese text and per-article line labels; included in batch structural validation"
+    }
+  ]
+}

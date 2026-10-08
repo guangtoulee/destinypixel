@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-33",
+  "locale": "zh-TW",
+  "kingWenNumber": 33,
+  "name": "遁",
+  "pinyin": "Dùn",
+  "englishName": "Dùn — Retreat",
+  "unicode": "䷠",
+  "codePoint": "U+4DE0",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1
+  ],
+  "title": "遁卦學習：需要退一步時，怎麼退得清楚",
+  "plainSummary": "當情況已不適合繼續投入，先看清條件、妥善收尾，不必只靠硬撐證明自己。",
+  "introduction": [
+    "退出一場無效的爭論，或結束一項不適合的安排，都可能讓人擔心別人的評價。遁卦談退的不同情況：延滯、牽繫、決心與從容。它不把所有退讓都當成怯懦，也不能替讀者決定是否離職、絕交，或離開重要關係。"
+  ],
+  "identityText": "遁是傳統文王序第33卦，卦符䷠，下卦艮☶、上卦乾☰，傳統取象分別為山與天。爻從最下方數起，依次為初六、六二、九三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "遯：亨。小利貞。",
+    "paragraphs": [
+      "Legge 將遯解釋為在相應處境下的退避，仍保留通達與小範圍持正的可能。退不是把所有責任丟開，也不是對每次困難的統一答案。",
+      "現代學習可以先核實：繼續的目標是否仍成立，條件是否允許，退出會影響誰？有事實依據的收束，比為了維持形象而不斷追加投入更清楚。"
+    ],
+    "sourceRefs": [
+      "zhouyi-33",
+      "legge1882-33"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》談與時行；《象傳》以天下有山取象，說遠小人而不惡、保持嚴正。這裡的小人屬於傳統倫理分類，不能憑卦給現實人物貼標籤。",
+      "今天可以藉此區分邊界與敵意：減少無益接觸，並不必靠不斷貶低對方來證明自己正確。真正存在的侵害則需要適當的現實支持，不能只用忍耐處理。"
+    ],
+    "sourceRefs": [
+      "zhouyi-33",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "遯尾，厲，勿用有攸往。",
+      "focus": "退得遲滯時，不要更慌亂",
+      "paragraphs": [
+        "遁尾像退避時落在後部，Legge 認為匆忙亂動可能加重危險。這裡關注的是所處條件，不是責備行動慢的人。",
+        "發現計畫不合適後，可以先說明不再接下新的承諾，再處理已有安排。慌忙宣佈全部結束，卻沒有必要交接，也可能增加困難。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "執之用黃牛之革，莫之勝說。",
+      "focus": "清楚自己要守住的決定",
+      "paragraphs": [
+        "黃牛革的牢固形象，在 Legge 解釋中指向退意堅定。古文的捆束意象不能成為控制別人的許可。",
+        "可以把已經考慮清楚的邊界寫明白，避免每次面對新的請求便忘記原先限制。堅定仍需接受相關事實變化，而不是拒絕一切解釋。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "係遯，有疾厲，畜臣妾吉。",
+      "focus": "牽連複雜時先辨認責任範圍",
+      "paragraphs": [
+        "這條把退避受牽繫與臣妾的古代主從關係放在一起，Legge 保留其角色背景。本文不把奴役和依附制度現代化。",
+        "普通事務中，可以區分必須完成的交接、可以協商的部分與不屬於自己的義務。不能因捨不得就無限延長，也不能因想退出就使別人無從接手。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "好遯，君子吉，小人否。",
+      "focus": "即使有所喜歡，也可以選擇收束",
+      "paragraphs": [
+        "Legge 將好遁讀作雖有喜愛仍能退出，並用傳統君子小人的區別說明這種能力。",
+        "一項活動曾經很有意義，卻未必永遠適合當前生活。可以承認喜歡，也說明時間和目標已變，不必先把過去的一切說成錯誤。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "嘉遯，貞吉。",
+      "focus": "讓退有合宜的方式",
+      "paragraphs": [
+        "嘉遁在 Legge 的譯解裡是可嘉的退，重視其正當而堅定。退的效果與方式有關，不只在於做不做。",
+        "事先通知、履行已明確承諾、給資料清楚的去向，都能讓收束更負責。重大決定仍需考慮實際風險，不能由一條吉辭代替。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "肥遯，无不利。",
+      "focus": "減少不必要的牽扯",
+      "paragraphs": [
+        "肥遁被 Legge 讀為從容、充分的退。它呈現不再受牽繫的狀態，並不等於所有人都能立即達到。",
+        "處理完必要事項後，可以允許自己停止反覆證明決定。仍需履行的責任要明確，但不必為了照顧所有人的每一種評價而無法結束。"
+      ],
+      "sourceRefs": [
+        "zhouyi-33",
+        "legge1882-33"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "退出時間已不適合的興趣活動",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位參與者一直很喜歡某個固定活動，後來工作安排改變，常常快開始時才請假。他先重新檢視自己的時間，確認已無法穩定參加，再向組織者說明，不再佔用需要提前安排的名額。",
+      "他完成已答應的小任務，整理共用資料，也感謝過去的合作。至於未來可能偶爾參加的部分，就另作明確約定，不給出模糊、無限期的承諾。",
+      "這裡的遁，是有依據地收尾，不需要製造敵人，也不否定過去的價值。"
+    ]
+  },
+  "misreadings": [
+    "遁不要求逢難必退，更不替人決定離職、離婚或其他後果重大的選擇。相關決定要看現實條件。",
+    "臣妾、小人等歷史語言不能變成當代身分評價，也不能據卦推斷有人正在傷害或阻撓自己。"
+  ],
+  "practice": [
+    "說明想減少投入的事實原因，區分它與對評價的擔心。",
+    "列出已有承諾、需要交接的內容和可以停止的新事項。",
+    "用一句清楚而尊重的話表達邊界，不加入無證據的人格指責。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-34",
+      "name": "大壯",
+      "paragraph": "遁思考何時收束，大壯思考有力量時怎樣克制。退與進並非按勇敢或軟弱簡單劃分，都要看處境與依據。"
+    }
+  ],
+  "closing": "讀遁卦時，不妨問自己：哪些事需要保護、需要完成，又有哪些牽扯已經不再必要？",
+  "sourceIds": [
+    "zhouyi-33",
+    "legge1882-33",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1534,
+    "nonWhitespaceCharacterCount": 1756,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "遁",
+  "sourceLocale": "zh",
+  "sourceContentHash": "424b3f9932670d22d5cf423740a4f8d559206d8532e375985d102580a47d744e",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 遁卦學習：需要退一步時，怎麼退得清楚\n\n當情況已不適合繼續投入，先看清條件、妥善收尾，不必只靠硬撐證明自己。\n\n退出一場無效的爭論，或結束一項不適合的安排，都可能讓人擔心別人的評價。遁卦談退的不同情況：延滯、牽繫、決心與從容。它不把所有退讓都當成怯懦，也不能替讀者決定是否離職、絕交，或離開重要關係。\n\n## 卦的身分與爻序\n\n遁是傳統文王序第33卦，卦符䷠，下卦艮☶、上卦乾☰，傳統取象分別為山與天。爻從最下方數起，依次為初六、六二、九三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n遯：亨。小利貞。\n\nLegge 將遯解釋為在相應處境下的退避，仍保留通達與小範圍持正的可能。退不是把所有責任丟開，也不是對每次困難的統一答案。\n\n現代學習可以先核實：繼續的目標是否仍成立，條件是否允許，退出會影響誰？有事實依據的收束，比為了維持形象而不斷追加投入更清楚。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》談與時行；《象傳》以天下有山取象，說遠小人而不惡、保持嚴正。這裡的小人屬於傳統倫理分類，不能憑卦給現實人物貼標籤。\n\n今天可以藉此區分邊界與敵意：減少無益接觸，並不必靠不斷貶低對方來證明自己正確。真正存在的侵害則需要適當的現實支持，不能只用忍耐處理。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 退得遲滯時，不要更慌亂\n\n遯尾，厲，勿用有攸往。\n\n遁尾像退避時落在後部，Legge 認為匆忙亂動可能加重危險。這裡關注的是所處條件，不是責備行動慢的人。\n\n發現計畫不合適後，可以先說明不再接下新的承諾，再處理已有安排。慌忙宣佈全部結束，卻沒有必要交接，也可能增加困難。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 清楚自己要守住的決定\n\n執之用黃牛之革，莫之勝說。\n\n黃牛革的牢固形象，在 Legge 解釋中指向退意堅定。古文的捆束意象不能成為控制別人的許可。\n\n可以把已經考慮清楚的邊界寫明白，避免每次面對新的請求便忘記原先限制。堅定仍需接受相關事實變化，而不是拒絕一切解釋。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九三 · 牽連複雜時先辨認責任範圍\n\n係遯，有疾厲，畜臣妾吉。\n\n這條把退避受牽繫與臣妾的古代主從關係放在一起，Legge 保留其角色背景。本文不把奴役和依附制度現代化。\n\n普通事務中，可以區分必須完成的交接、可以協商的部分與不屬於自己的義務。不能因捨不得就無限延長，也不能因想退出就使別人無從接手。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · 即使有所喜歡，也可以選擇收束\n\n好遯，君子吉，小人否。\n\nLegge 將好遁讀作雖有喜愛仍能退出，並用傳統君子小人的區別說明這種能力。\n\n一項活動曾經很有意義，卻未必永遠適合當前生活。可以承認喜歡，也說明時間和目標已變，不必先把過去的一切說成錯誤。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 讓退有合宜的方式\n\n嘉遯，貞吉。\n\n嘉遁在 Legge 的譯解裡是可嘉的退，重視其正當而堅定。退的效果與方式有關，不只在於做不做。\n\n事先通知、履行已明確承諾、給資料清楚的去向，都能讓收束更負責。重大決定仍需考慮實際風險，不能由一條吉辭代替。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 減少不必要的牽扯\n\n肥遯，无不利。\n\n肥遁被 Legge 讀為從容、充分的退。它呈現不再受牽繫的狀態，並不等於所有人都能立即達到。\n\n處理完必要事項後，可以允許自己停止反覆證明決定。仍需履行的責任要明確，但不必為了照顧所有人的每一種評價而無法結束。\n\n引文來源：[zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108), [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 退出時間已不適合的興趣活動\n\n原創現代情境\n\n一位參與者一直很喜歡某個固定活動，後來工作安排改變，常常快開始時才請假。他先重新檢視自己的時間，確認已無法穩定參加，再向組織者說明，不再佔用需要提前安排的名額。\n\n他完成已答應的小任務，整理共用資料，也感謝過去的合作。至於未來可能偶爾參加的部分，就另作明確約定，不給出模糊、無限期的承諾。\n\n這裡的遁，是有依據地收尾，不需要製造敵人，也不否定過去的價值。\n\n## 避免誤讀\n\n- 遁不要求逢難必退，更不替人決定離職、離婚或其他後果重大的選擇。相關決定要看現實條件。\n\n- 臣妾、小人等歷史語言不能變成當代身分評價，也不能據卦推斷有人正在傷害或阻撓自己。\n\n## 三個練習\n\n1. 說明想減少投入的事實原因，區分它與對評價的擔心。\n\n2. 列出已有承諾、需要交接的內容和可以停止的新事項。\n\n3. 用一句清楚而尊重的話表達邊界，不加入無證據的人格指責。\n\n## 延伸閱讀\n\n### 大壯 (hexagram-34)\n\n遁思考何時收束，大壯思考有力量時怎樣克制。退與進並非按勇敢或軟弱簡單劃分，都要看處境與依據。\n\n## 結語\n\n讀遁卦時，不妨問自己：哪些事需要保護、需要完成，又有哪些牽扯已經不再必要？\n\n## 資料來源\n\n- [zhouyi-33](https://zh.wikisource.org/w/index.php?title=周易/遯&oldid=10645108)\n\n- [legge1882-33](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-58",
+  "locale": "zh",
+  "kingWenNumber": 58,
+  "name": "兑",
+  "pinyin": "Duì",
+  "englishName": "Duì — The Joyous",
+  "unicode": "䷹",
+  "codePoint": "U+4DF9",
+  "lowerTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    0
+  ],
+  "title": "兑卦学习：让愉快的交流也保持真诚",
+  "plainSummary": "相处愉快很有价值，也要看这种愉快是否诚实、尊重边界，并帮助彼此真正理解。",
+  "introduction": [
+    "兑卦讨论喜悦，但六爻区分和悦、孚悦、求悦、商悦与引悦。它不把所有让人开心的方式都视为同样可靠。读兑，可以学习享受交流，也辨认自己是否为了好气氛而忽略不合适的内容。"
+  ],
+  "identityText": "兑是传统文王序第58卦，卦符䷹，下卦兑☱、上卦兑☱，传统取象分别为泽与泽。爻从最下方数起，依次为初九、九二、六三、九四、九五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "兌：亨。利貞。",
+    "paragraphs": [
+      "Legge 把兑解释为愉悦与满足，并强调喜悦需要正直来引导。本文不将其缩成“保持积极就会顺利”，也不把不开心的人判为不合宜。",
+      "现代学习可以问：这次交流能否容纳真实想法和不同感受？如果只能说好听的话，任何疑问都会破坏气氛，那么愉快的外表未必意味着关系稳固。"
+    ],
+    "sourceRefs": [
+      "zhouyi-58",
+      "legge1882-58"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》以刚中柔外说明悦与贞，又描述使民忘劳、忘死的动员力量。这是古代政治伦理的一部分，不能用来美化让人忽略危险或过度劳动。",
+      "《象传》以两泽相丽取象，提出朋友讲习。本文更适合从这一具体方向学习：与朋友互相讨论、练习和纠正，让喜悦来自共同理解，而非只来自互相赞美。"
+    ],
+    "sourceRefs": [
+      "zhouyi-58",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "和兌，吉。",
+      "focus": "和悦可以从不强迫的相处开始",
+      "paragraphs": [
+        "和兑在 Legge 的译解中是内在协调而生的喜悦，不需要先赢得某个人的夸赞。",
+        "一次交谈可以从认真听、清楚表达和允许停顿开始。并不需要每句话都逗笑别人，也不用逼迫性格不同的人以相同方式表现热情。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "孚兌，吉，悔亡。",
+      "focus": "真诚使好气氛更可靠",
+      "paragraphs": [
+        "孚兑把喜悦与诚信相连，Legge 强调真实内心对外在相悦的支撑。",
+        "答应一件事之前说清自己的时间和能力，即使没有立即让所有人高兴，也可能减少之后的误会。诚实并非粗暴，仍可用尊重的方式表达。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "來兌，凶。",
+      "focus": "留意自己是否只追逐让人高兴的东西",
+      "paragraphs": [
+        "Legge 采用搜集能带来快乐之物的读法，并把风险联系到过度沉迷。爻辞短，不宜据此谴责某种正常兴趣本身。",
+        "可以检查一段交流是否只剩寻求认可，而避开真实问题。如果每次不同意见都被玩笑带过，短暂轻松可能让需要处理的事情继续积累。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "商兌，未寧，介疾有喜。",
+      "focus": "愿意辨别，才可能找到更合宜的快乐",
+      "paragraphs": [
+        "商兑涉及商量、权衡，未宁表示尚未安定。Legge 将其读为分辨何种喜悦值得追求，以及与有害影响保持距离。",
+        "收到令人兴奋的邀请时，可以先看活动是否适合自己的需要。保留一点审视并不会毁掉所有快乐，反而使参与更安心和自愿。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "孚于剝，有厲。",
+      "focus": "信任也需要看它指向什么",
+      "paragraphs": [
+        "这一爻写信任于剥，Legge 将之解释为信任可能损害自己的对象。它没有给出辨认现实“坏人”的神秘方法。",
+        "可以核对对方是否兑现约定、是否尊重拒绝，而不只看说话是否好听。若出现具体问题，应谈清或调整联系；不能单凭卦象指控某人有害。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "引兌。",
+      "focus": "吸引别人时，也要承担影响的责任",
+      "paragraphs": [
+        "引兑只写引向喜悦，没有直接附上吉凶。Legge 将其与吸引他人追求快乐相联，并区别于前面自己求悦的情况。",
+        "组织活动或表达观点时，可以问自己是否真实说明内容与限制。感染力是一种影响，不能成为隐藏代价、制造压力或让人难以退出的工具。"
+      ],
+      "sourceRefs": [
+        "zhouyi-58",
+        "legge1882-58"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "朋友之间怎样给出有用的作品反馈",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "几位朋友定期交流作品，最初大家只说“很好”，作者却不知道怎样修改。后来他们约定先说自己实际读懂了什么，再指出一个清楚的问题，并说明哪些只是个人偏好。",
+      "讨论仍然可以轻松，也允许作者暂时不接受某条意见。给反馈的人不以尖刻证明诚实，听反馈的人也不必为了维持和气而立即表示同意。",
+      "愉快因此来自一起理解作品，而不只是互相认可。兑卦的现代应用让友善和真实支持彼此，不必把它们变成只能二选一的态度。"
+    ]
+  },
+  "misreadings": [
+    "兑不要求持续开心，也不能根据笑容判断一个人的诚意、品德或心理状况。",
+    "古代使人忘劳忘死的说法不应被用于鼓励危险、过度劳动或群体操纵。"
+  ],
+  "practice": [
+    "回想一次愉快交流，写下其中有没有一件真实问题得到理解。",
+    "练习用具体事实表达一个不同意见，同时保留尊重。",
+    "检查自己发出的邀请是否让对方清楚知道内容、限制和拒绝的自由。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-57",
+      "name": "巽",
+      "paragraph": "巽强调意思怎样持续传达并付诸行动，兑强调交流怎样带来真实喜悦。当温和与愉快没有遮住事实和边界时，它们更有价值。"
+    }
+  ],
+  "closing": "读兑卦时，可以问：这份愉快让我们更能说真话，还是只能继续说彼此想听的话？",
+  "sourceIds": [
+    "zhouyi-58",
+    "legge1882-58",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1515,
+    "nonWhitespaceCharacterCount": 1729,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "兑",
+  "sourceLocale": "zh",
+  "sourceContentHash": "f7ee5917fa7408107fd3a7d9d5872c3e1f73dc77062f9ac1578320e68a3ab6b6",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 兑卦学习：让愉快的交流也保持真诚\n\n一句话：相处愉快很有价值，也要看这种愉快是否诚实、尊重边界，并帮助彼此真正理解。\n\n兑卦讨论喜悦，但六爻区分和悦、孚悦、求悦、商悦与引悦。它不把所有让人开心的方式都视为同样可靠。读兑，可以学习享受交流，也辨认自己是否为了好气氛而忽略不合适的内容。\n\n## 先认清这是什么卦\n\n兑是传统文王序第58卦，卦符䷹，下卦兑☱、上卦兑☱，传统取象分别为泽与泽。爻从最下方数起，依次为初九、九二、六三、九四、九五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷹　上卦：兑☱　下卦：兑☱\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辞说了什么\n\n经文：“兌：亨。利貞。”\n\nLegge 把兑解释为愉悦与满足，并强调喜悦需要正直来引导。本文不将其缩成“保持积极就会顺利”，也不把不开心的人判为不合宜。\n\n现代学习可以问：这次交流能否容纳真实想法和不同感受？如果只能说好听的话，任何疑问都会破坏气氛，那么愉快的外表未必意味着关系稳固。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》以刚中柔外说明悦与贞，又描述使民忘劳、忘死的动员力量。这是古代政治伦理的一部分，不能用来美化让人忽略危险或过度劳动。\n\n《象传》以两泽相丽取象，提出朋友讲习。本文更适合从这一具体方向学习：与朋友互相讨论、练习和纠正，让喜悦来自共同理解，而非只来自互相赞美。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初九：和悦可以从不强迫的相处开始\n\n经文：“和兌，吉。”\n\n和兑在 Legge 的译解中是内在协调而生的喜悦，不需要先赢得某个人的夸赞。\n\n一次交谈可以从认真听、清楚表达和允许停顿开始。并不需要每句话都逗笑别人，也不用逼迫性格不同的人以相同方式表现热情。\n\n### 九二：真诚使好气氛更可靠\n\n经文：“孚兌，吉，悔亡。”\n\n孚兑把喜悦与诚信相连，Legge 强调真实内心对外在相悦的支撑。\n\n答应一件事之前说清自己的时间和能力，即使没有立即让所有人高兴，也可能减少之后的误会。诚实并非粗暴，仍可用尊重的方式表达。\n\n### 六三：留意自己是否只追逐让人高兴的东西\n\n经文：“來兌，凶。”\n\nLegge 采用搜集能带来快乐之物的读法，并把风险联系到过度沉迷。爻辞短，不宜据此谴责某种正常兴趣本身。\n\n可以检查一段交流是否只剩寻求认可，而避开真实问题。如果每次不同意见都被玩笑带过，短暂轻松可能让需要处理的事情继续积累。\n\n### 九四：愿意辨别，才可能找到更合宜的快乐\n\n经文：“商兌，未寧，介疾有喜。”\n\n商兑涉及商量、权衡，未宁表示尚未安定。Legge 将其读为分辨何种喜悦值得追求，以及与有害影响保持距离。\n\n收到令人兴奋的邀请时，可以先看活动是否适合自己的需要。保留一点审视并不会毁掉所有快乐，反而使参与更安心和自愿。\n\n### 九五：信任也需要看它指向什么\n\n经文：“孚于剝，有厲。”\n\n这一爻写信任于剥，Legge 将之解释为信任可能损害自己的对象。它没有给出辨认现实“坏人”的神秘方法。\n\n可以核对对方是否兑现约定、是否尊重拒绝，而不只看说话是否好听。若出现具体问题，应谈清或调整联系；不能单凭卦象指控某人有害。\n\n### 上六：吸引别人时，也要承担影响的责任\n\n经文：“引兌。”\n\n引兑只写引向喜悦，没有直接附上吉凶。Legge 将其与吸引他人追求快乐相联，并区别于前面自己求悦的情况。\n\n组织活动或表达观点时，可以问自己是否真实说明内容与限制。感染力是一种影响，不能成为隐藏代价、制造压力或让人难以退出的工具。\n\n## 朋友之间怎样给出有用的作品反馈\n\n以下是为学习而设的现代情境。\n\n几位朋友定期交流作品，最初大家只说“很好”，作者却不知道怎样修改。后来他们约定先说自己实际读懂了什么，再指出一个清楚的问题，并说明哪些只是个人偏好。\n\n讨论仍然可以轻松，也允许作者暂时不接受某条意见。给反馈的人不以尖刻证明诚实，听反馈的人也不必为了维持和气而立即表示同意。\n\n愉快因此来自一起理解作品，而不只是互相认可。兑卦的现代应用让友善和真实支持彼此，不必把它们变成只能二选一的态度。\n\n## 几个容易误读的地方\n\n兑不要求持续开心，也不能根据笑容判断一个人的诚意、品德或心理状况。\n\n古代使人忘劳忘死的说法不应被用于鼓励危险、过度劳动或群体操纵。\n\n## 做一个小练习\n\n1. 回想一次愉快交流，写下其中有没有一件真实问题得到理解。\n2. 练习用具体事实表达一个不同意见，同时保留尊重。\n3. 检查自己发出的邀请是否让对方清楚知道内容、限制和拒绝的自由。\n\n## 和巽卦一起读\n\n巽强调意思怎样持续传达并付诸行动，兑强调交流怎样带来真实喜悦。当温和与愉快没有遮住事实和边界时，它们更有价值。\n\n读兑卦时，可以问：这份愉快让我们更能说真话，还是只能继续说彼此想听的话？\n\n## 阅读依据\n\n- [周易·兌](https://zh.wikisource.org/w/index.php?title=周易/兌&oldid=2404993)。Received text; Wikisource revision 2404993。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 58, chapter LVIII, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

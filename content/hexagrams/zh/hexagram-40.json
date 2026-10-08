@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-40",
+  "locale": "zh",
+  "kingWenNumber": 40,
+  "name": "解",
+  "pinyin": "Jiě",
+  "englishName": "Jiě — Deliverance",
+  "unicode": "䷧",
+  "codePoint": "U+4DE7",
+  "lowerTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+  ],
+  "title": "解卦学习：问题松开以后，怎样收好尾",
+  "plainSummary": "阻碍缓解后，确认该结束的事，也及时完成仍有必要的后续。",
+  "introduction": [
+    "一场误会解释清楚，或一项拖延终于得到回应，会使人很想立刻翻篇。解卦讨论解除与松开，却也让人分辨是否还需要继续行动。它不是所有问题都消失的保证，而是重新检查任务、牵连和收尾的机会。"
+  ],
+  "identityText": "解是传统文王序第40卦，卦符䷧，下卦坎☵、上卦震☳，传统取象分别为水与雷。爻从最下方数起，依次为初六、九二、六三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "解：利西南，无所往，其來復吉。有攸往，夙吉。",
+    "paragraphs": [
+      "Legge 将解读为解结、解除复杂处境。若不再有事要做，可以回到常态；若仍有必要的行动，则宜及早处理。卦辞把两种情形分开，不能只记住尽快往前。",
+      "现代可先问：障碍究竟解除到什么程度？原先的额外安排哪些可以撤去，哪些责任仍未完成？西南的传统方位也不能直接变成现实行动路线。"
+    ],
+    "sourceRefs": [
+      "zhouyi-40",
+      "legge1882-40"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》以动而免险解释解；《象传》以雷雨作取象，谈赦过宥罪。它们保留古代治理与宽宥的背景。",
+      "今天可以在确认问题和责任后，减少不必要的反复责备。但宽宥不能强求，和解也不取消保护自己、求助或维护权益的选择。"
+    ],
+    "sourceRefs": [
+      "zhouyi-40",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "无咎。",
+      "focus": "解除之初，不必凭空制造更多问题",
+      "paragraphs": [
+        "初爻很短，《象传》从刚柔相接说明无咎；Legge 也保留简短判断。它没有给出所有现实责任都已免除的许可。",
+        "一个小误会澄清后，可以确认双方理解，再回到正常交流。无需为证明自己认真而不断重演争论，实际未解决部分则仍要说明。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "田獲三狐，得黃矢，貞吉。",
+      "focus": "辨认已经得到的结果与依据",
+      "paragraphs": [
+        "捕获三狐、得到黄矢是古代狩猎图像。Legge 把它放在去除有害因素与持正的框架里解释。",
+        "现代类比可以是核实哪些具体问题已被排除。三与黄并非个人幸运数字或颜色，也不支持把某些现实人物随意叫作狡诈狐狸。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "負且乘，致寇至，貞吝。",
+      "focus": "检查安排是否暴露了不必要的风险",
+      "paragraphs": [
+        "Legge 以负重者乘车的角色错置解释此爻，并保留招寇的历史判断。古代阶层观念需要被指出。",
+        "现代可以检查资源与责任是否匹配，却不能据此责怪受害者引来了他人的恶行。风险可以讨论，实施伤害者的责任不会被卦象转走。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "解而拇，朋至斯孚。",
+      "focus": "有些牵连需要明确解除",
+      "paragraphs": [
+        "拇是身体意象，Legge 的注释将它联系到爻与爻之间不合宜的联结，而不是现实处理身体的方法。",
+        "现代联想是取消已经无用或不合适的约束，让新的合作有清楚基础。这绝不意味着伤害身体，也不能凭一爻要求与某个人断绝关系。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "君子惟有解，吉；有孚于小人。",
+      "focus": "解除应在实际行动中被看见",
+      "paragraphs": [
+        "Legge 将这一爻解释为完成去除阻碍的职责，使他人由此信服。它仍属于古代治理的解释。",
+        "普通合作中，承认问题之后确实改变做法，比只说已经过去更能重建信任。谁应被原谅、是否继续合作，不由卦辞替相关人决定。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "公用射隼，于高墉之上，獲之，无不利。",
+      "focus": "处理仍然存在的具体阻碍",
+      "paragraphs": [
+        "高墙上的隼被射获，是最后的行动图像。Legge 沿解决有害因素解释，不能将其直接当作现代武力行为的指令。",
+        "如果一个关键尾项仍阻碍恢复，应清楚安排其处理方式。这里的目标是任务与流程，不是把某个人当作必须清除的猎物。"
+      ],
+      "sourceRefs": [
+        "zhouyi-40",
+        "legge1882-40"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "误会解释清楚以后",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "两位合作者发现争执源于一条没有同步的变更通知。核实之后，他们相互确认新安排，撤去原先为了应付冲突而增加的重复汇报。",
+      "不过，旧通知仍在公共位置，他们便安排更新，并说明以后变更怎样同步。这样，解除了误会，也处理了可能让误会重来的条件。",
+      "有人仍需要时间恢复信任，另一方没有用既然弄清了就不许再介意来施压。解的现代学习包括恢复常态，也包括尊重真实的后续需要。"
+    ]
+  },
+  "misreadings": [
+    "解不保证立即获救、疾病康复或关系修复，也不要求一律宽恕。实际情况仍需事实与有关人的选择。",
+    "拇、狐、隼和狩猎图像不能用于身体伤害、现实暴力或对人的去人化描述。"
+  ],
+  "practice": [
+    "列出已经解除的具体问题，和仍未完成的一项后续。",
+    "确认一项可以取消的临时负担，避免问题结束后约束仍一直存在。",
+    "把防止同类误会重复的方式说清楚，并征询相关人的意见。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-39",
+      "name": "蹇",
+      "paragraph": "蹇帮助寻找受阻时的路径，解帮助分辨脱困后的行动。继续努力与适时收尾都需要依据，不能把忙碌本身当作负责。"
+    }
+  ],
+  "closing": "读解卦时，可以问：现在还需要做什么，才能让这份缓解真正成为可持续的改变？",
+  "sourceIds": [
+    "zhouyi-40",
+    "legge1882-40",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights",
+    "moe-jie"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1506,
+    "nonWhitespaceCharacterCount": 1723,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "解",
+  "sourceLocale": "zh",
+  "sourceContentHash": "f9beb6f59af4ad10309e7ada49fe3dec39fc31c34380304f282ebe21b524c04a",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 解卦学习：问题松开以后，怎样收好尾\n\n一句话：阻碍缓解后，确认该结束的事，也及时完成仍有必要的后续。\n\n一场误会解释清楚，或一项拖延终于得到回应，会使人很想立刻翻篇。解卦讨论解除与松开，却也让人分辨是否还需要继续行动。它不是所有问题都消失的保证，而是重新检查任务、牵连和收尾的机会。\n\n## 先认清这是什么卦\n\n解是传统文王序第40卦，卦符䷧，下卦坎☵、上卦震☳，传统取象分别为水与雷。爻从最下方数起，依次为初六、九二、六三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷧　上卦：震☳　下卦：坎☵\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辞说了什么\n\n经文：“解：利西南，无所往，其來復吉。有攸往，夙吉。”\n\nLegge 将解读为解结、解除复杂处境。若不再有事要做，可以回到常态；若仍有必要的行动，则宜及早处理。卦辞把两种情形分开，不能只记住尽快往前。\n\n现代可先问：障碍究竟解除到什么程度？原先的额外安排哪些可以撤去，哪些责任仍未完成？西南的传统方位也不能直接变成现实行动路线。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》以动而免险解释解；《象传》以雷雨作取象，谈赦过宥罪。它们保留古代治理与宽宥的背景。\n\n今天可以在确认问题和责任后，减少不必要的反复责备。但宽宥不能强求，和解也不取消保护自己、求助或维护权益的选择。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初六：解除之初，不必凭空制造更多问题\n\n经文：“无咎。”\n\n初爻很短，《象传》从刚柔相接说明无咎；Legge 也保留简短判断。它没有给出所有现实责任都已免除的许可。\n\n一个小误会澄清后，可以确认双方理解，再回到正常交流。无需为证明自己认真而不断重演争论，实际未解决部分则仍要说明。\n\n### 九二：辨认已经得到的结果与依据\n\n经文：“田獲三狐，得黃矢，貞吉。”\n\n捕获三狐、得到黄矢是古代狩猎图像。Legge 把它放在去除有害因素与持正的框架里解释。\n\n现代类比可以是核实哪些具体问题已被排除。三与黄并非个人幸运数字或颜色，也不支持把某些现实人物随意叫作狡诈狐狸。\n\n### 六三：检查安排是否暴露了不必要的风险\n\n经文：“負且乘，致寇至，貞吝。”\n\nLegge 以负重者乘车的角色错置解释此爻，并保留招寇的历史判断。古代阶层观念需要被指出。\n\n现代可以检查资源与责任是否匹配，却不能据此责怪受害者引来了他人的恶行。风险可以讨论，实施伤害者的责任不会被卦象转走。\n\n### 九四：有些牵连需要明确解除\n\n经文：“解而拇，朋至斯孚。”\n\n拇是身体意象，Legge 的注释将它联系到爻与爻之间不合宜的联结，而不是现实处理身体的方法。\n\n现代联想是取消已经无用或不合适的约束，让新的合作有清楚基础。这绝不意味着伤害身体，也不能凭一爻要求与某个人断绝关系。\n\n### 六五：解除应在实际行动中被看见\n\n经文：“君子惟有解，吉；有孚于小人。”\n\nLegge 将这一爻解释为完成去除阻碍的职责，使他人由此信服。它仍属于古代治理的解释。\n\n普通合作中，承认问题之后确实改变做法，比只说已经过去更能重建信任。谁应被原谅、是否继续合作，不由卦辞替相关人决定。\n\n### 上六：处理仍然存在的具体阻碍\n\n经文：“公用射隼，于高墉之上，獲之，无不利。”\n\n高墙上的隼被射获，是最后的行动图像。Legge 沿解决有害因素解释，不能将其直接当作现代武力行为的指令。\n\n如果一个关键尾项仍阻碍恢复，应清楚安排其处理方式。这里的目标是任务与流程，不是把某个人当作必须清除的猎物。\n\n## 误会解释清楚以后\n\n以下是为学习而设的现代情境。\n\n两位合作者发现争执源于一条没有同步的变更通知。核实之后，他们相互确认新安排，撤去原先为了应付冲突而增加的重复汇报。\n\n不过，旧通知仍在公共位置，他们便安排更新，并说明以后变更怎样同步。这样，解除了误会，也处理了可能让误会重来的条件。\n\n有人仍需要时间恢复信任，另一方没有用既然弄清了就不许再介意来施压。解的现代学习包括恢复常态，也包括尊重真实的后续需要。\n\n## 几个容易误读的地方\n\n解不保证立即获救、疾病康复或关系修复，也不要求一律宽恕。实际情况仍需事实与有关人的选择。\n\n拇、狐、隼和狩猎图像不能用于身体伤害、现实暴力或对人的去人化描述。\n\n## 做一个小练习\n\n1. 列出已经解除的具体问题，和仍未完成的一项后续。\n2. 确认一项可以取消的临时负担，避免问题结束后约束仍一直存在。\n3. 把防止同类误会重复的方式说清楚，并征询相关人的意见。\n\n## 和蹇卦一起读\n\n蹇帮助寻找受阻时的路径，解帮助分辨脱困后的行动。继续努力与适时收尾都需要依据，不能把忙碌本身当作负责。\n\n读解卦时，可以问：现在还需要做什么，才能让这份缓解真正成为可持续的改变？\n\n## 阅读依据\n\n- [周易·解](https://zh.wikisource.org/w/index.php?title=周易/解&oldid=10646666)。Received text; Wikisource revision 10646666。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 40, chapter XL, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n- [国语辞典简编本 解](https://dict.concised.moe.edu.tw/dictView.jsp?ID=22186&la=0&powerMode=0)。教育部；Pronunciation and dictionary hexagram identification。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n"
+}

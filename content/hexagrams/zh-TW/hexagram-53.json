@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-53",
+  "locale": "zh-TW",
+  "kingWenNumber": 53,
+  "name": "渐",
+  "pinyin": "Jiàn",
+  "englishName": "Jiàn — Development",
+  "unicode": "䷴",
+  "codePoint": "U+4DF4",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1
+  ],
+  "title": "漸卦學習：讓進展有次序，每一步也有落腳處",
+  "plainSummary": "重要的事可以逐步推進，但每一步都要有實際支撐；拖延本身並不等於循序漸進。",
+  "introduction": [
+    "漸卦的六爻反覆寫鴻雁漸進，從水邊、磐石到樹木、高陵與羽儀。它不是一條整齊向上的進度表，中間也有離散、危險和找不到合適落腳處的情況。學習漸，需要同時看見過程的次序與每一步的處境。"
+  ],
+  "identityText": "漸是傳統文王序第53卦，卦符䷴，下卦艮☶、上卦巽☴，傳統取象分別為山與風。爻從最下方往上數，依次為初六、六二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "漸：女歸吉，利貞。",
+    "paragraphs": [
+      "女歸涉及古代女性的婚嫁，Legge 把它作為經過一定步驟而完成重要事情的例子，並將漸擴展到仕進與成長。婚禮制度、譯者的政治類比和本文的現代應用應當分開。",
+      "今天可以保留準備與次序的提醒，不必接受古代性別和家庭等級。逐步推進也不是要求任何人在不合適的關係中等待；一個步驟是否值得繼續，應看實際條件與當事人的意願。"
+    ],
+    "sourceRefs": [
+      "zhouyi-53",
+      "legge1882-53"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》說漸之進、進以正，又從止而巽解釋持續的行動；《象傳》用山上有木取象，聯繫居賢德、善俗。樹木長成的圖像強調積累，但不承諾每一種等待都會得到好結果。",
+      "本文的日常學習角度是，先讓一個階段具備足夠能力與支持，再承擔下一階段。必要時調整次序、暫時退回補課，也可能比按預定日期勉強向前更合理。"
+    ],
+    "sourceRefs": [
+      "zhouyi-53",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "鴻漸于干，小子厲，有言，无咎。",
+      "focus": "初到邊緣，先認識所處環境",
+      "paragraphs": [
+        "鴻雁來到水邊，小子面臨危險與議論。Legge 把小子讀成地位較低的年輕任職者，保留初到新處境時缺乏支持的情形。",
+        "初次參與一個領域，可以先瞭解規則、觀察需要和提出問題。受到評價不等於自己已經做錯，也不代表所有意見都應忽略；應具體核實內容。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "鴻漸于磐，飲食衎衎，吉。",
+      "focus": "穩固的落腳點使人能從容補充",
+      "paragraphs": [
+        "磐石與愉快飲食構成較安定的場景，Legge 讀出進展後暫時安穩的狀態。",
+        "完成一個階段後，可以整理經驗、補充資料，也享受已經做到的部分。休整不是對成長的背叛，而是讓後續行動有真實基礎。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "鴻漸于陸，夫征不復，婦孕不育，凶；利禦寇。",
+      "focus": "看見推進過程中關係與支持的斷裂",
+      "paragraphs": [
+        "這一爻寫出征不返、孕而不育等沉重畫面，又說利於御寇。Legge 將其解釋為脫離合宜聯繫的危險；他的道德化解釋也有時代限制。",
+        "現代類比只討論在前進時遺漏照顧與合作的風險。古文不能用於預測懷孕、失子或伴侶離去，也不能把現實生育困難歸咎於任何人的品德。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "鴻漸于木，或得其桷，无咎。",
+      "focus": "在不完全適合的環境中尋找可靠支點",
+      "paragraphs": [
+        "鴻雁來到樹上，或得平直可棲之處。Legge 注意到雁不善抓枝，因而強調能否找到合適落點。",
+        "進入新任務時，如果既有方法不適用，可以尋找可調整的小範圍。承認環境不完全合適，有助於作出安排，而不是逼自己立刻表現得毫不費力。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "鴻漸于陵，婦三歲不孕，終莫之勝，吉。",
+      "focus": "延遲不應被粗暴地解釋成個人失敗",
+      "paragraphs": [
+        "高陵與三年不孕並置，末句又寫阻隔終於不再佔上風。Legge 以受阻之後終能成就來解釋這一畫面。",
+        "現代可借此反思如何看待暫未達成的目標，但不能保證某段等待必有回報。尤其不應由“三歲”推算生育期限、勸人延遲檢查，或把生育當作人生必需的完成。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "鴻漸于陸，其羽可用為儀，吉。",
+      "focus": "成長的價值也在留下可用的示範",
+      "paragraphs": [
+        "所據底本上九仍作陸，Legge 譯解為更高之處，並把羽毛可作儀飾看成達到高處後仍能貢獻的圖像。",
+        "一種能力成熟之後，可以整理方法、分享經驗，讓後來者少走彎路。貢獻不必繼續擴大自己的位置，也不要求別人照搬同一條發展路線。"
+      ],
+      "sourceRefs": [
+        "zhouyi-53",
+        "legge1882-53"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "學習者逐步承擔一次展覽講解",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位志願者想負責整場展覽講解，先熟悉一個展區，跟隨資深講解者觀察，再嘗試講清幾件作品。她根據聽眾的問題修改說明，沒有只按準備了多少頁資料判斷進度。",
+      "第一次獨立講解時，有些問題超出她的知識。她記錄下來，說明需要進一步核實，並與同伴補充相關資料。一次卡住沒有使前面的學習全部失效。",
+      "經驗積累後，她整理了新人常見問題，幫助其他人開始。漸卦在這裡體現為有次序的承擔、真實的回饋和可共享的經驗，而非一條人人必須照走的成功階梯。"
+    ]
+  },
+  "misreadings": [
+    "漸不保證婚姻、生育或職業發展；古代婚育圖像不能替人作現實關係或健康判斷。",
+    "緩慢本身不等於正確，等待也應有目的、回饋和必要的調整。"
+  ],
+  "practice": [
+    "把一個目標拆成有依賴關係的步驟，說明為什麼不能任意跳過其中一項。",
+    "檢查當前階段真正缺少的是練習、資訊、支持，還是一個重新選擇方向的機會。",
+    "寫下一項已學會且可以分享的方法，不必等到自己無所不知才開始幫助別人。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-46",
+      "name": "升",
+      "paragraph": "升以向上積累和台階突出成長，漸以鴻雁不同落點突出次序與適應。並讀時可以同時檢查向何處去，以及每一步是否踩得穩。"
+    }
+  ],
+  "closing": "讀漸卦時，可以問：我現在需要的是下一步，還是先讓這一小步真正站穩？",
+  "sourceIds": [
+    "zhouyi-53",
+    "legge1882-53",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "上九保留所據底本“陸”；不靜默換成其他流傳讀法，也不把 Legge 的高處解釋說成原文字面唯一含義。",
+  "counts": {
+    "chineseCharacterCount": 1737,
+    "nonWhitespaceCharacterCount": 1982,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "漸",
+  "sourceLocale": "zh",
+  "sourceContentHash": "60c5411ed7fd106bbd8511af24bb5f9410cca27ad86ec0fc658ac0808375ac00",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 漸卦學習：讓進展有次序，每一步也有落腳處\n\n重要的事可以逐步推進，但每一步都要有實際支撐；拖延本身並不等於循序漸進。\n\n漸卦的六爻反覆寫鴻雁漸進，從水邊、磐石到樹木、高陵與羽儀。它不是一條整齊向上的進度表，中間也有離散、危險和找不到合適落腳處的情況。學習漸，需要同時看見過程的次序與每一步的處境。\n\n漸是傳統文王序第53卦，卦符䷴，下卦艮☶、上卦巽☴，傳統取象分別為山與風。爻從最下方往上數，依次為初六、六二、九三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 0 1 0 1 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n漸：女歸吉，利貞。\n\n女歸涉及古代女性的婚嫁，Legge 把它作為經過一定步驟而完成重要事情的例子，並將漸擴展到仕進與成長。婚禮制度、譯者的政治類比和本文的現代應用應當分開。\n\n今天可以保留準備與次序的提醒，不必接受古代性別和家庭等級。逐步推進也不是要求任何人在不合適的關係中等待；一個步驟是否值得繼續，應看實際條件與當事人的意願。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》說漸之進、進以正，又從止而巽解釋持續的行動；《象傳》用山上有木取象，聯繫居賢德、善俗。樹木長成的圖像強調積累，但不承諾每一種等待都會得到好結果。\n\n本文的日常學習角度是，先讓一個階段具備足夠能力與支持，再承擔下一階段。必要時調整次序、暫時退回補課，也可能比按預定日期勉強向前更合理。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 初到邊緣，先認識所處環境\n\n鴻漸于干，小子厲，有言，无咎。\n\n鴻雁來到水邊，小子面臨危險與議論。Legge 把小子讀成地位較低的年輕任職者，保留初到新處境時缺乏支持的情形。\n\n初次參與一個領域，可以先瞭解規則、觀察需要和提出問題。受到評價不等於自己已經做錯，也不代表所有意見都應忽略；應具體核實內容。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 穩固的落腳點使人能從容補充\n\n鴻漸于磐，飲食衎衎，吉。\n\n磐石與愉快飲食構成較安定的場景，Legge 讀出進展後暫時安穩的狀態。\n\n完成一個階段後，可以整理經驗、補充資料，也享受已經做到的部分。休整不是對成長的背叛，而是讓後續行動有真實基礎。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 看見推進過程中關係與支持的斷裂\n\n鴻漸于陸，夫征不復，婦孕不育，凶；利禦寇。\n\n這一爻寫出征不返、孕而不育等沉重畫面，又說利於御寇。Legge 將其解釋為脫離合宜聯繫的危險；他的道德化解釋也有時代限制。\n\n現代類比只討論在前進時遺漏照顧與合作的風險。古文不能用於預測懷孕、失子或伴侶離去，也不能把現實生育困難歸咎於任何人的品德。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 在不完全適合的環境中尋找可靠支點\n\n鴻漸于木，或得其桷，无咎。\n\n鴻雁來到樹上，或得平直可棲之處。Legge 注意到雁不善抓枝，因而強調能否找到合適落點。\n\n進入新任務時，如果既有方法不適用，可以尋找可調整的小範圍。承認環境不完全合適，有助於作出安排，而不是逼自己立刻表現得毫不費力。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 延遲不應被粗暴地解釋成個人失敗\n\n鴻漸于陵，婦三歲不孕，終莫之勝，吉。\n\n高陵與三年不孕並置，末句又寫阻隔終於不再佔上風。Legge 以受阻之後終能成就來解釋這一畫面。\n\n現代可借此反思如何看待暫未達成的目標，但不能保證某段等待必有回報。尤其不應由“三歲”推算生育期限、勸人延遲檢查，或把生育當作人生必需的完成。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 成長的價值也在留下可用的示範\n\n鴻漸于陸，其羽可用為儀，吉。\n\n所據底本上九仍作陸，Legge 譯解為更高之處，並把羽毛可作儀飾看成達到高處後仍能貢獻的圖像。\n\n一種能力成熟之後，可以整理方法、分享經驗，讓後來者少走彎路。貢獻不必繼續擴大自己的位置，也不要求別人照搬同一條發展路線。\n\n參考來源: [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535), [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 學習者逐步承擔一次展覽講解\n\n原創現代情境\n\n一位志願者想負責整場展覽講解，先熟悉一個展區，跟隨資深講解者觀察，再嘗試講清幾件作品。她根據聽眾的問題修改說明，沒有只按準備了多少頁資料判斷進度。\n\n第一次獨立講解時，有些問題超出她的知識。她記錄下來，說明需要進一步核實，並與同伴補充相關資料。一次卡住沒有使前面的學習全部失效。\n\n經驗積累後，她整理了新人常見問題，幫助其他人開始。漸卦在這裡體現為有次序的承擔、真實的回饋和可共享的經驗，而非一條人人必須照走的成功階梯。\n\n## 避免誤讀\n\n- 漸不保證婚姻、生育或職業發展；古代婚育圖像不能替人作現實關係或健康判斷。\n\n- 緩慢本身不等於正確，等待也應有目的、回饋和必要的調整。\n\n## 三個練習\n\n1. 把一個目標拆成有依賴關係的步驟，說明為什麼不能任意跳過其中一項。\n\n2. 檢查當前階段真正缺少的是練習、資訊、支持，還是一個重新選擇方向的機會。\n\n3. 寫下一項已學會且可以分享的方法，不必等到自己無所不知才開始幫助別人。\n\n## 延伸閱讀\n\n升 (hexagram-46): 升以向上積累和台階突出成長，漸以鴻雁不同落點突出次序與適應。並讀時可以同時檢查向何處去，以及每一步是否踩得穩。\n\n讀漸卦時，可以問：我現在需要的是下一步，還是先讓這一小步真正站穩？\n\n## 版本說明\n\n上九保留所據底本“陸”；不靜默換成其他流傳讀法，也不把 Legge 的高處解釋說成原文字面唯一含義。\n\n## 參考來源\n\n- [zhouyi-53](https://zh.wikisource.org/w/index.php?title=周易/漸&oldid=2560535)\n\n- [legge1882-53](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-53 · SHA256 60c5411ed7fd106bbd8511af24bb5f9410cca27ad86ec0fc658ac0808375ac00\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

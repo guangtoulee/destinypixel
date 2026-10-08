@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-41",
+  "locale": "zh-TW",
+  "kingWenNumber": 41,
+  "name": "损",
+  "pinyin": "Sǔn",
+  "englishName": "Sǔn — Decrease",
+  "unicode": "䷨",
+  "codePoint": "U+4DE8",
+  "lowerTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "title": "損卦學習：減少什麼，才能照顧真正重要的事",
+  "plainSummary": "需要減少時，先弄清楚由誰承擔、為了什麼，別把無限付出當成唯一的善意。",
+  "introduction": [
+    "時間、材料與心力有限，有時確實需要減少，但負擔未必該落在最沒有餘裕的人身上。損卦討論減與益的關係，也談祭獻可以樸素、幫助需要衡量。它不把所有失去都說成好事，更不要求讀者不斷犧牲來證明自己的價值。"
+  ],
+  "identityText": "損是傳統文王序第41卦，卦符䷨，下卦兌☱、上卦艮☶，傳統取象分別為澤與山。爻從最下方數起，依次為初九、九二、六三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "損：有孚，元吉，无咎，可貞，利有攸往。曷之用？二簋可用享。",
+    "paragraphs": [
+      "Legge 將損解釋為減損，並承認本卦解釋困難。他把二簋可用享讀作即使只有少量祭品，也可以表達誠意。古代禮儀中的尺度，不能直接轉為某項現代付款或獻金要求。",
+      "現代可以先問，削減是否回應真正需要，負擔是否合理，是否仍保留基本條件。樸素不等於敷衍，付出也不只按數量評價。"
+    ],
+    "sourceRefs": [
+      "zhouyi-41",
+      "legge1882-41"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》談損下益上，也強調與時偕行；《象傳》以山下有澤取象，提出懲忿窒欲。前者有古代分配秩序，後者涉及對憤怒與慾望的修養。",
+      "今天可以反思不必要的消耗與衝動，但不能借修養要求弱勢者無條件讓步。誰減少、誰受益，應當讓相關人能夠看見和討論。"
+    ],
+    "sourceRefs": [
+      "zhouyi-41",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "已事遄往，无咎，酌損之。",
+      "focus": "願意幫助，也要酌量",
+      "paragraphs": [
+        "Legge 將初爻讀作暫止自己的事務而趕去相助，同時明確需要考慮應貢獻多少。最後的酌損不能省掉。",
+        "答應幫忙前可以說明能提供的時間與內容。誠意與限度可以並存，過量承諾後無法兌現，也未必真正幫助了對方。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "利貞，征凶，弗損益之。",
+      "focus": "有些幫助不必傷到自己的基礎",
+      "paragraphs": [
+        "弗損益之在 Legge 的讀法中，是不減損自身而仍能增益對方。它不只是要求更多讓出資源。",
+        "分享一次已經整理好的經驗、指出一個可靠入口，都可能有幫助。先找可持續的方式，不必把自己耗盡作為善意的證明。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "三人行，則損一人；一人行，則得其友。",
+      "focus": "人數改變，不等於關係價值減少",
+      "paragraphs": [
+        "三人減一、一人得友是關於組合變化的圖像。Legge 保留其配對關係，不能機械用來決定應排除誰。",
+        "現代可以檢查一項合作到底需要怎樣的分工。人數多未必更有效，人數少也不自動更親密；選擇需有實際理由，不能用卦數淘汰成員。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "損其疾，使遄有喜，无咎。",
+      "focus": "減少問題，而不是只減少資源",
+      "paragraphs": [
+        "Legge 將疾譯作身體不適，並以不能完成事務、需要及時相助的形象解釋。經文的喜不能轉為現實疾病會康復的保證。",
+        "普通事務中，可以減少一項反覆造成負擔的流程，使人有空間做好必要工作。涉及真實身體或心理健康時，應另用合適的專業依據。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "或益之，十朋之龜弗克違，元吉。",
+      "focus": "減與受助可以出現在同一卦中",
+      "paragraphs": [
+        "龜與十朋使這一爻帶有古代珍貴物與占筮的背景，Legge 寫到得到相助。它提示損並非每一爻都只在失去。",
+        "現代可以允許自己接受合宜幫助，並說明使用與責任。不能把十朋換算成金額，更不能據此確信某次投資或饋贈必來。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "弗損益之，无咎，貞吉，利有攸往，得臣无家。",
+      "focus": "讓增益不只依靠一方受損",
+      "paragraphs": [
+        "Legge 讀到不損己而益人及得到許多支持者，同時坦承對這段意義理解仍不完全明晰。這個解釋限度值得保留。",
+        "現代可尋找減少重複勞動、共享有用資訊的辦法，使雙方都受益。不能把古代得臣當作招攬、控制或要求別人無條件投入的許可。"
+      ],
+      "sourceRefs": [
+        "zhouyi-41",
+        "legge1882-41"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把一次活動辦得輕省一點",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個小組的預算與時間都不足，卻想保留許多裝飾與活動環節。大家先確認參與者最需要什麼，再刪去不影響核心體驗的部分，把心力留給清楚說明與實際照顧。",
+      "一位成員願意多幫忙，小組請她先說明能負擔的範圍，不預設付出越多越好。對已經超出負荷的人，就調整分工，不再用「大家都在付出」施壓。",
+      "這裡的損，是有理由、有分寸的減少。成效要看共同需要是否受到更好的照顧，不是削減越多就越有德性。"
+    ]
+  },
+  "misreadings": [
+    "損不要求忍受剝削、放棄基本需要或無條件捐出資源；損下益上的歷史秩序不能直接當作現代義務。",
+    "疾、龜與數量意象不用於健康、金錢或運勢預測，也不替任何人決定重要財務承諾。"
+  ],
+  "practice": [
+    "寫下準備減少的一項內容，說明減少的實際目的。",
+    "確認是誰承擔減少、誰得到好處，以及是否需要重新協商。",
+    "找一種不損傷基本條件卻能提供幫助的方式。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-42",
+      "name": "益",
+      "paragraph": "損與益共同討論減少和增加由誰承擔、流向哪裡。不能只把損看成壞、益看成好；具體條件與影響更加重要。"
+    }
+  ],
+  "closing": "讀損卦時，不妨問自己：少了這一部分，真正重要的事是否反而受到更好的照顧？",
+  "sourceIds": [
+    "zhouyi-41",
+    "legge1882-41",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "初九採用底本明列的「已」異文；正文另作「祀」，《象傳》也寫作「已事」。",
+  "counts": {
+    "chineseCharacterCount": 1614,
+    "nonWhitespaceCharacterCount": 1857,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "損",
+  "sourceLocale": "zh",
+  "sourceContentHash": "87d839b4313e09a5e84d5ccc82ca48db8a8af9992f616afdef4c90f15b613d4c",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 損卦學習：減少什麼，才能照顧真正重要的事\n\n需要減少時，先弄清楚由誰承擔、為了什麼，別把無限付出當成唯一的善意。\n\n時間、材料與心力有限，有時確實需要減少，但負擔未必該落在最沒有餘裕的人身上。損卦討論減與益的關係，也談祭獻可以樸素、幫助需要衡量。它不把所有失去都說成好事，更不要求讀者不斷犧牲來證明自己的價值。\n\n## 卦的身分與爻序\n\n損是傳統文王序第41卦，卦符䷨，下卦兌☱、上卦艮☶，傳統取象分別為澤與山。爻從最下方數起，依次為初九、九二、六三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n損：有孚，元吉，无咎，可貞，利有攸往。曷之用？二簋可用享。\n\nLegge 將損解釋為減損，並承認本卦解釋困難。他把二簋可用享讀作即使只有少量祭品，也可以表達誠意。古代禮儀中的尺度，不能直接轉為某項現代付款或獻金要求。\n\n現代可以先問，削減是否回應真正需要，負擔是否合理，是否仍保留基本條件。樸素不等於敷衍，付出也不只按數量評價。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》談損下益上，也強調與時偕行；《象傳》以山下有澤取象，提出懲忿窒欲。前者有古代分配秩序，後者涉及對憤怒與慾望的修養。\n\n今天可以反思不必要的消耗與衝動，但不能借修養要求弱勢者無條件讓步。誰減少、誰受益，應當讓相關人能夠看見和討論。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初九 · 願意幫助，也要酌量\n\n已事遄往，无咎，酌損之。\n\nLegge 將初爻讀作暫止自己的事務而趕去相助，同時明確需要考慮應貢獻多少。最後的酌損不能省掉。\n\n答應幫忙前可以說明能提供的時間與內容。誠意與限度可以並存，過量承諾後無法兌現，也未必真正幫助了對方。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九二 · 有些幫助不必傷到自己的基礎\n\n利貞，征凶，弗損益之。\n\n弗損益之在 Legge 的讀法中，是不減損自身而仍能增益對方。它不只是要求更多讓出資源。\n\n分享一次已經整理好的經驗、指出一個可靠入口，都可能有幫助。先找可持續的方式，不必把自己耗盡作為善意的證明。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六三 · 人數改變，不等於關係價值減少\n\n三人行，則損一人；一人行，則得其友。\n\n三人減一、一人得友是關於組合變化的圖像。Legge 保留其配對關係，不能機械用來決定應排除誰。\n\n現代可以檢查一項合作到底需要怎樣的分工。人數多未必更有效，人數少也不自動更親密；選擇需有實際理由，不能用卦數淘汰成員。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · 減少問題，而不是只減少資源\n\n損其疾，使遄有喜，无咎。\n\nLegge 將疾譯作身體不適，並以不能完成事務、需要及時相助的形象解釋。經文的喜不能轉為現實疾病會康復的保證。\n\n普通事務中，可以減少一項反覆造成負擔的流程，使人有空間做好必要工作。涉及真實身體或心理健康時，應另用合適的專業依據。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六五 · 減與受助可以出現在同一卦中\n\n或益之，十朋之龜弗克違，元吉。\n\n龜與十朋使這一爻帶有古代珍貴物與占筮的背景，Legge 寫到得到相助。它提示損並非每一爻都只在失去。\n\n現代可以允許自己接受合宜幫助，並說明使用與責任。不能把十朋換算成金額，更不能據此確信某次投資或饋贈必來。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 讓增益不只依靠一方受損\n\n弗損益之，无咎，貞吉，利有攸往，得臣无家。\n\nLegge 讀到不損己而益人及得到許多支持者，同時坦承對這段意義理解仍不完全明晰。這個解釋限度值得保留。\n\n現代可尋找減少重複勞動、共享有用資訊的辦法，使雙方都受益。不能把古代得臣當作招攬、控制或要求別人無條件投入的許可。\n\n引文來源：[zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704), [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 把一次活動辦得輕省一點\n\n原創現代情境\n\n一個小組的預算與時間都不足，卻想保留許多裝飾與活動環節。大家先確認參與者最需要什麼，再刪去不影響核心體驗的部分，把心力留給清楚說明與實際照顧。\n\n一位成員願意多幫忙，小組請她先說明能負擔的範圍，不預設付出越多越好。對已經超出負荷的人，就調整分工，不再用「大家都在付出」施壓。\n\n這裡的損，是有理由、有分寸的減少。成效要看共同需要是否受到更好的照顧，不是削減越多就越有德性。\n\n## 避免誤讀\n\n- 損不要求忍受剝削、放棄基本需要或無條件捐出資源；損下益上的歷史秩序不能直接當作現代義務。\n\n- 疾、龜與數量意象不用於健康、金錢或運勢預測，也不替任何人決定重要財務承諾。\n\n## 三個練習\n\n1. 寫下準備減少的一項內容，說明減少的實際目的。\n\n2. 確認是誰承擔減少、誰得到好處，以及是否需要重新協商。\n\n3. 找一種不損傷基本條件卻能提供幫助的方式。\n\n## 延伸閱讀\n\n### 益 (hexagram-42)\n\n損與益共同討論減少和增加由誰承擔、流向哪裡。不能只把損看成壞、益看成好；具體條件與影響更加重要。\n\n## 結語\n\n讀損卦時，不妨問自己：少了這一部分，真正重要的事是否反而受到更好的照顧？\n\n## 版本說明\n\n初九採用底本明列的「已」異文；正文另作「祀」，《象傳》也寫作「已事」。\n\n## 資料來源\n\n- [zhouyi-41](https://zh.wikisource.org/w/index.php?title=周易/損&oldid=10646704)\n\n- [legge1882-41](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

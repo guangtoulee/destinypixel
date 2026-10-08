@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-59",
+  "locale": "zh-TW",
+  "kingWenNumber": 59,
+  "name": "涣",
+  "pinyin": "Huàn",
+  "englishName": "Huàn — Dispersion",
+  "unicode": "䷺",
+  "codePoint": "U+4DFA",
+  "lowerTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    1
+  ],
+  "title": "渙卦學習：鬆開阻隔，讓聯繫重新流動",
+  "plainSummary": "有些事需要凝聚，有些隔閡需要鬆開。先分清哪些值得保留，哪些正在妨礙合作。",
+  "introduction": [
+    "渙有離散、散開的意思，卻並不只講人心渙散。六爻也談拯助、奔向依靠、散去群黨、發佈號令與遠離傷害。Legge 在注釋中注意到，文字從應對離散轉向散開不該固結的東西，使值得相連的部分重新聯繫。"
+  ],
+  "identityText": "渙是傳統文王序第59卦，卦符䷺，下卦坎☵、上卦巽☴，傳統取象分別為水與風。爻從最下方往上數，依次為初六、九二、六三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "渙：亨，王假有廟，利涉大川，利貞。",
+    "paragraphs": [
+      "王至宗廟、渡大河與利貞，把宗教聚合、共同事業和合宜行動放在一起。Legge 將其放在修復古代共同體離心的背景中解釋，不宜刪去祭祀和政治的原始語境。",
+      "現代學習可以把問題說清楚：需要散開的，是誤會、僵化分組，還是過度集中在一個人身上的責任？需要保留的，又是哪些事實、約定與支持？不能簡單把所有分開都視為壞事，或把所有團結都視為好事。"
+    ],
+    "sourceRefs": [
+      "zhouyi-59",
+      "legge1882-59"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》結合爻位與乘木渡水解釋亨通；《象傳》以風行水上取象，提到享帝立廟。這是以共同祭祀維繫關係的古代方式。",
+      "本文的日常類比是重新找到可被共同理解的目的，同時讓資訊和協助流通。共同目的應容納合理分歧，不能以“恢復團結”為由要求人放棄正當邊界。"
+    ],
+    "sourceRefs": [
+      "zhouyi-59",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "用拯馬壯，吉，悔亡。",
+      "focus": "及早行動，也尋找足夠的幫助",
+      "paragraphs": [
+        "壯馬參與拯救，Legge 把它讀為早期處理離散時需要有力支持。所據中文頁面另有悔亡，英文相應句沒有單獨譯出，本文保留中文底本。",
+        "發現溝通正在斷開時，可以先聯繫能澄清情況的人。求助要說明具體問題，也確認對方有能力和意願參與，不能只把著急轉交給別人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "渙奔其机，悔亡。",
+      "focus": "混亂之中先找到可靠的憑依",
+      "paragraphs": [
+        "「机」在這裡涉及可憑依之物，Legge 用能提供安穩的安排來解釋，並結合爻的相互關係討論支持。",
+        "當資訊四散時，可以回到已經確認的記錄、共同約定或可信的聯絡渠道。這個支點應幫助核實事實，而不是只提供讓人安心但未經檢查的說法。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "渙其躬，无悔。",
+      "focus": "放鬆過度圍繞自己的計較",
+      "paragraphs": [
+        "渙其躬在 Legge 的解釋中是暫放對自身的顧念，使注意力轉向更大的事情。這種古代奉公讀法應有界限。",
+        "現代可以暫時放下“必須證明我對”的執著，認真聽別人遇到什麼問題。但這不要求自我犧牲、忽視安全或抹去合理需要。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "渙其群，元吉。渙有丘，匪夷所思。",
+      "focus": "鬆開小圈子的固結，可能形成更廣的合作",
+      "paragraphs": [
+        "散其群又有丘，表面上散與聚相反。Legge 以打破派別、重新形成較大共同體解釋這種變化。",
+        "普通專案可以讓資訊跨過固定小組，重新按任務協作。這樣做應經過清楚溝通，不能以古文為由強行拆散別人自願形成的關係。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "渙汗其大號，渙王居，无咎。",
+      "focus": "清楚發佈消息，也讓支持確實送達",
+      "paragraphs": [
+        "汗與大號相聯，Legge 以命令如汗散布、並散出王家積儲解釋這一爻。後半句有解釋空間，應保留譯者歸屬。",
+        "遇到共同變化時，說明應及時、一致、可找到，相關支持也要落實。只有一份響亮公告，卻沒有人知道如何執行，仍不能修復渙散。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "渙其血，去逖出，无咎。",
+      "focus": "遠離傷害有時也是合宜的散開",
+      "paragraphs": [
+        "血與遠去相連，《小象》解釋為遠害，Legge 同樣讀到脫離傷痛和恐懼的方向。",
+        "有些關係或安排已造成具體傷害，保持距離、尋求保護可能比強求重新聚合更合適。古文不能診斷身體狀況，也不要求為了共同體而留在有害處境裡。"
+      ],
+      "sourceRefs": [
+        "zhouyi-59",
+        "legge1882-59"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "幾個小組如何重新共享必要的資訊",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個志願專案分成不同小組後，資料各自保存，成員開始誤解彼此的進度。協調者先核實共同目標，整理已經確認的安排，再邀請各組說明最缺少哪些資訊。",
+      "他們沒有取消所有分工，而是建立一份共享進展說明，把重複任務重新協調。對只應在小範圍保留的個人資料，仍保留原有權限。",
+      "渙的類比因此是鬆開不必要的阻隔，而不是把所有邊界推倒。原本有效的分工得到保留，造成誤會的資訊隔離則被具體處理。"
+    ]
+  },
+  "misreadings": [
+    "渙不保證關係復合、組織團結或某種病痛消散；散與聚的價值要按實際情境判斷。",
+    "渙其躬不要求自我犧牲，渙其血不是醫療建議；共享資訊仍須尊重隱私和授權。"
+  ],
+  "practice": [
+    "分別寫下當前需要保留的聯繫和需要鬆開的阻隔。",
+    "找到一條可以核實的共同資訊，讓相關人知道從哪裡獲得。",
+    "檢查一次“為了大家”的要求，確認它沒有抹去個人安全、意願和合理邊界。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-45",
+      "name": "萃",
+      "paragraph": "萃強調聚集如何形成真實參與，渙強調哪些固結需要鬆開、哪些離散需要修復。兩者並不矛盾，關鍵在於具體要聚什麼、散什麼。"
+    }
+  ],
+  "closing": "讀渙卦時，可以問：我想打破的是有害阻隔，還是其實在拆掉某個人必要的邊界？",
+  "sourceIds": [
+    "zhouyi-59",
+    "legge1882-59",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "初六依所據中文頁面保留“悔亡”；Legge 對應爻句只明確譯出吉，本文不把兩版文字聲稱為完全相同。",
+  "counts": {
+    "chineseCharacterCount": 1651,
+    "nonWhitespaceCharacterCount": 1907,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "渙",
+  "sourceLocale": "zh",
+  "sourceContentHash": "c995b7047a079961020206c3441a9bccf9c5f75968a11209ee518fe28e9d2186",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 渙卦學習：鬆開阻隔，讓聯繫重新流動\n\n有些事需要凝聚，有些隔閡需要鬆開。先分清哪些值得保留，哪些正在妨礙合作。\n\n渙有離散、散開的意思，卻並不只講人心渙散。六爻也談拯助、奔向依靠、散去群黨、發佈號令與遠離傷害。Legge 在注釋中注意到，文字從應對離散轉向散開不該固結的東西，使值得相連的部分重新聯繫。\n\n渙是傳統文王序第59卦，卦符䷺，下卦坎☵、上卦巽☴，傳統取象分別為水與風。爻從最下方往上數，依次為初六、九二、六三、六四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 1 0 0 1 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n渙：亨，王假有廟，利涉大川，利貞。\n\n王至宗廟、渡大河與利貞，把宗教聚合、共同事業和合宜行動放在一起。Legge 將其放在修復古代共同體離心的背景中解釋，不宜刪去祭祀和政治的原始語境。\n\n現代學習可以把問題說清楚：需要散開的，是誤會、僵化分組，還是過度集中在一個人身上的責任？需要保留的，又是哪些事實、約定與支持？不能簡單把所有分開都視為壞事，或把所有團結都視為好事。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》結合爻位與乘木渡水解釋亨通；《象傳》以風行水上取象，提到享帝立廟。這是以共同祭祀維繫關係的古代方式。\n\n本文的日常類比是重新找到可被共同理解的目的，同時讓資訊和協助流通。共同目的應容納合理分歧，不能以“恢復團結”為由要求人放棄正當邊界。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 及早行動，也尋找足夠的幫助\n\n用拯馬壯，吉，悔亡。\n\n壯馬參與拯救，Legge 把它讀為早期處理離散時需要有力支持。所據中文頁面另有悔亡，英文相應句沒有單獨譯出，本文保留中文底本。\n\n發現溝通正在斷開時，可以先聯繫能澄清情況的人。求助要說明具體問題，也確認對方有能力和意願參與，不能只把著急轉交給別人。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 混亂之中先找到可靠的憑依\n\n渙奔其机，悔亡。\n\n「机」在這裡涉及可憑依之物，Legge 用能提供安穩的安排來解釋，並結合爻的相互關係討論支持。\n\n當資訊四散時，可以回到已經確認的記錄、共同約定或可信的聯絡渠道。這個支點應幫助核實事實，而不是只提供讓人安心但未經檢查的說法。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六三 · 放鬆過度圍繞自己的計較\n\n渙其躬，无悔。\n\n渙其躬在 Legge 的解釋中是暫放對自身的顧念，使注意力轉向更大的事情。這種古代奉公讀法應有界限。\n\n現代可以暫時放下“必須證明我對”的執著，認真聽別人遇到什麼問題。但這不要求自我犧牲、忽視安全或抹去合理需要。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 鬆開小圈子的固結，可能形成更廣的合作\n\n渙其群，元吉。渙有丘，匪夷所思。\n\n散其群又有丘，表面上散與聚相反。Legge 以打破派別、重新形成較大共同體解釋這種變化。\n\n普通專案可以讓資訊跨過固定小組，重新按任務協作。這樣做應經過清楚溝通，不能以古文為由強行拆散別人自願形成的關係。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 清楚發佈消息，也讓支持確實送達\n\n渙汗其大號，渙王居，无咎。\n\n汗與大號相聯，Legge 以命令如汗散布、並散出王家積儲解釋這一爻。後半句有解釋空間，應保留譯者歸屬。\n\n遇到共同變化時，說明應及時、一致、可找到，相關支持也要落實。只有一份響亮公告，卻沒有人知道如何執行，仍不能修復渙散。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 遠離傷害有時也是合宜的散開\n\n渙其血，去逖出，无咎。\n\n血與遠去相連，《小象》解釋為遠害，Legge 同樣讀到脫離傷痛和恐懼的方向。\n\n有些關係或安排已造成具體傷害，保持距離、尋求保護可能比強求重新聚合更合適。古文不能診斷身體狀況，也不要求為了共同體而留在有害處境裡。\n\n參考來源: [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580), [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 幾個小組如何重新共享必要的資訊\n\n原創現代情境\n\n一個志願專案分成不同小組後，資料各自保存，成員開始誤解彼此的進度。協調者先核實共同目標，整理已經確認的安排，再邀請各組說明最缺少哪些資訊。\n\n他們沒有取消所有分工，而是建立一份共享進展說明，把重複任務重新協調。對只應在小範圍保留的個人資料，仍保留原有權限。\n\n渙的類比因此是鬆開不必要的阻隔，而不是把所有邊界推倒。原本有效的分工得到保留，造成誤會的資訊隔離則被具體處理。\n\n## 避免誤讀\n\n- 渙不保證關係復合、組織團結或某種病痛消散；散與聚的價值要按實際情境判斷。\n\n- 渙其躬不要求自我犧牲，渙其血不是醫療建議；共享資訊仍須尊重隱私和授權。\n\n## 三個練習\n\n1. 分別寫下當前需要保留的聯繫和需要鬆開的阻隔。\n\n2. 找到一條可以核實的共同資訊，讓相關人知道從哪裡獲得。\n\n3. 檢查一次“為了大家”的要求，確認它沒有抹去個人安全、意願和合理邊界。\n\n## 延伸閱讀\n\n萃 (hexagram-45): 萃強調聚集如何形成真實參與，渙強調哪些固結需要鬆開、哪些離散需要修復。兩者並不矛盾，關鍵在於具體要聚什麼、散什麼。\n\n讀渙卦時，可以問：我想打破的是有害阻隔，還是其實在拆掉某個人必要的邊界？\n\n## 版本說明\n\n初六依所據中文頁面保留“悔亡”；Legge 對應爻句只明確譯出吉，本文不把兩版文字聲稱為完全相同。\n\n## 參考來源\n\n- [zhouyi-59](https://zh.wikisource.org/w/index.php?title=周易/渙&oldid=10647580)\n\n- [legge1882-59](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-59 · SHA256 c995b7047a079961020206c3441a9bccf9c5f75968a11209ee518fe28e9d2186\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-42",
+  "locale": "en",
+  "kingWenNumber": 42,
+  "name": "益",
+  "pinyin": "Yì",
+  "englishName": "Yì — Increase",
+  "unicode": "䷩",
+  "codePoint": "U+4DE9",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "thunder",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "wind",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    1
+  ],
+  "title": "Studying Yì (Increase): turning an increase into real help",
+  "plainSummary": "When resources or opportunities increase, identify whose situation they can improve and turn the benefit into action.",
+  "introduction": [
+    "Increase can mean more than gaining something for yourself: it can make help more accessible to those who need it. Yì discusses action, receiving support, and benefiting others; its final line warns that seeking only personal gain may cost support. It helps examine how benefits are distributed rather than promising continual growth in wealth."
+  ],
+  "identityText": "Yì is hexagram 42 in the traditional King Wen sequence, with symbol ䷩. The lower trigram is Zhèn ☳ and the upper trigram is Xùn ☴; their traditional images are thunder and wind, respectively. Count the lines from the bottom: 初九、六二、六三、六四、九五、上九. A solid line is yang and a broken line is yin. Nine and six in the line labels designate yang and yin; they are not additional line numbers.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "益：利有攸往。利涉大川。",
+    "paragraphs": [
+      "Legge explains Yì as increase, understanding its theme through rulers benefiting the people. Crossing a great river retains the image of undertaking a major journey. Favorability does not remove the need for preparation and judgment.",
+      "Today, specify what is increasing: time, information, ability, or resources? How does it become actual improvement, who needs to participate, and does it create new burdens? These questions are more concrete than quantity alone."
+    ],
+    "sourceRefs": [
+      "zhouyi-42",
+      "legge1882-42"
+    ],
+    "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Increase: it is beneficial to have somewhere to go; it is beneficial to cross the great river."
+  },
+  "tenWings": {
+    "label": "Interpretations in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment and the Commentary on the Images belong to the commentarial collection known as the Yìzhuàn, usually called the Ten Wings. Below, these commentaries are kept separate from the hexagram and line statements, followed by modern learning applications.",
+      "The Commentary on the Judgment speaks of decreasing above to increase below and acting with the time. The Commentary on the Images uses wind and thunder, proposing learning from the good and correcting errors. Benefit can also come from corrected conduct.",
+      "Today, learn from practices that have proved useful and candidly correct your mistakes. Correction sometimes helps more than adding another project; novelty or scale need not measure every kind of progress."
+    ],
+    "sourceRefs": [
+      "zhouyi-42",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "利用為大作，元吉，无咎。",
+      "focus": "Larger action should match capacity",
+      "paragraphs": [
+        "Legge reads the undertaking of major work from the appropriate position while keeping results connected with conditions. Great work is not encouragement for anyone to expand immediately.",
+        "After gaining support, establish scope and capacity and choose something worth undertaking. Additional resources may also require maintenance; do not count only the new opportunities."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: It is beneficial to undertake great work. Great good fortune, no blame."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "或益之，十朋之龜弗克違，永貞吉。王用享于帝，吉。",
+      "focus": "Receiving support does not remove long-term requirements",
+      "paragraphs": [
+        "Tortoise shells, offerings, and the king place this line in ancient divination and ritual; Legge preserves them. Lasting steadfastness means that receiving support still requires maintaining an appropriate course.",
+        "Explain how new resources will be used and what responsibilities come with them. Someone's willingness to give is not reason to overlook conditions. Ancient shell numbers and favorable statements do not guarantee incoming money."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Following Legge's interpretation: someone brings an increase of ten pairs of tortoise shells, whose oracles cannot be opposed. Lasting steadfast correctness brings good fortune. The king offers to the Supreme Deity: good fortune."
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "益之用凶事，无咎。有孚中行，告公用圭。",
+      "focus": "Improvement after difficulty requires an honest account",
+      "paragraphs": [
+        "Legge understands the line as improvement arising through adverse events, with the jade tablet marking formal status in reporting upward. The text does not make suffering itself necessary.",
+        "When a real problem occurs, honestly explain its effects and correct the process. Do not create harm for the sake of growth or demand gratitude from those harmed. Improvement comes from subsequent action, not from harm being inherently beneficial."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Increase through adverse affairs: no blame. With sincerity and a central course, report to the lord using a jade tablet."
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "中行，告公從。利用為依遷國。",
+      "focus": "Major change needs dependable support",
+      "paragraphs": [
+        "Moving a state and reporting to a lord are ancient political actions. Legge explains an accepted proposal and the ability to serve as a reliable support.",
+        "During substantial organizational change, people need to understand the reasons, responsibilities, and transition. Do not announce a better direction while leaving implementation burdens to people who were never consulted."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: Following a central course, report to the lord and be followed. It is beneficial to serve as support in moving the state."
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "有孚惠心，勿問元吉。有孚惠我德。",
+      "focus": "Goodwill needs to be understood through actual effects",
+      "paragraphs": [
+        "Legge reads the beneficent heart as sincerely helping others, met by trust in return. No need to ask does not mean that real-world help needs no consultation or checking.",
+        "What seems helpful to you may not be needed by the other person. Understand the need first, then assess the effects, bringing goodwill closer to real benefit rather than merely satisfying the giver's self-image."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: With sincerity and a heart that benefits others, there is no need to ask: great good fortune. Sincerity returns benefit to my virtue."
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "莫益之，或擊之，立心勿恆，凶。",
+      "focus": "Seeking increase only for yourself can damage support",
+      "paragraphs": [
+        "Legge reads the final line as concentrating on personal gain and neglecting others, thereby losing support. The ancient warning about being struck cannot justify actual retaliation.",
+        "Today, check whether you repeatedly keep new benefits while passing costs to others. Unfair arrangements need appropriate discussion and handling; a hexagram cannot convict someone on your behalf."
+      ],
+      "sourceRefs": [
+        "zhouyi-42",
+        "legge1882-42"
+      ],
+      "classicalTranslation": "Original editorial rendering; not a quotation from Legge: No one increases this one; someone may strike. The heart is not constant. Misfortune."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "How new resources become genuine help",
+    "label": "Original modern scenario",
+    "paragraphs": [
+      "A club gains more shared materials and initially plans to increase the number of activities. Members then discover that unclear instructions and inadequate maintenance are the existing problems. They first use the resources to improve the guide and duty schedule.",
+      "They ask actual users which changes help most and record remaining difficulties. They delay new projects they cannot yet maintain.",
+      "Yì here is not simply more, but existing conditions producing actual benefit. Those affected need a voice in deciding whether something is useful."
+    ]
+  },
+  "misreadings": [
+    "Yì guarantees neither increased returns nor a lucky gift, and does not require immediately expanding commitments when resources grow.",
+    "Adverse events are not growth opportunities to manufacture. Improvement must not excuse ignoring harm, sacrificing others, or rationalizing exploitation."
+  ],
+  "practice": [
+    "Describe a recently increased resource and the specific problem you hope it will improve.",
+    "Ask actual users or affected people whether it genuinely helps.",
+    "Identify a practice that can improve through correcting an error rather than adding more."
+  ],
+  "related": [
+    {
+      "id": "hexagram-41",
+      "name": "Sǔn — Decrease",
+      "paragraph": "Sǔn and Yì direct attention to sources, costs, and beneficiaries together. Appropriate reduction can sometimes create benefit, while increase can create new burdens."
+    }
+  ],
+  "closing": "While reading Yì, ask: has this increase produced a tangible improvement for those who truly need it?",
+  "sourceIds": [
+    "zhouyi-42",
+    "legge1882-42",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 112,
+    "nonWhitespaceCharacterCount": 6519,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Yì — Increase",
+  "sourceLocale": "zh",
+  "sourceContentHash": "7077b6aaa7c10b4822bcf41f5aced80cb478e243d5e081c30cadf710b24c85b0",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Yì (Increase): turning an increase into real help\n\nWhen resources or opportunities increase, identify whose situation they can improve and turn the benefit into action.\n\nIncrease can mean more than gaining something for yourself: it can make help more accessible to those who need it. Yì discusses action, receiving support, and benefiting others; its final line warns that seeking only personal gain may cost support. It helps examine how benefits are distributed rather than promising continual growth in wealth.\n\n## Identity and line order\n\nYì is hexagram 42 in the traditional King Wen sequence, with symbol ䷩. The lower trigram is Zhèn ☳ and the upper trigram is Xùn ☴; their traditional images are thunder and wind, respectively. Count the lines from the bottom: 初九、六二、六三、六四、九五、上九. A solid line is yang and a broken line is yin. Nine and six in the line labels designate yang and yin; they are not additional line numbers.\n\n```text\n━━━━━━━━━  上九\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## Hexagram statement\n\n益：利有攸往。利涉大川。\n\nOriginal editorial rendering; not a quotation from Legge: Increase: it is beneficial to have somewhere to go; it is beneficial to cross the great river.\n\nLegge explains Yì as increase, understanding its theme through rulers benefiting the people. Crossing a great river retains the image of undertaking a major journey. Favorability does not remove the need for preparation and judgment.\n\nToday, specify what is increasing: time, information, ability, or resources? How does it become actual improvement, who needs to participate, and does it create new burdens? These questions are more concrete than quantity alone.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## Interpretations in the Ten Wings\n\nThe Commentary on the Judgment and the Commentary on the Images belong to the commentarial collection known as the Yìzhuàn, usually called the Ten Wings. Below, these commentaries are kept separate from the hexagram and line statements, followed by modern learning applications.\n\nThe Commentary on the Judgment speaks of decreasing above to increase below and acting with the time. The Commentary on the Images uses wind and thunder, proposing learning from the good and correcting errors. Benefit can also come from corrected conduct.\n\nToday, learn from practices that have proved useful and candidly correct your mistakes. Correction sometimes helps more than adding another project; novelty or scale need not measure every kind of progress.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## The six lines, from bottom to top\n\n### 初九 · Larger action should match capacity\n\n利用為大作，元吉，无咎。\n\nOriginal editorial rendering; not a quotation from Legge: It is beneficial to undertake great work. Great good fortune, no blame.\n\nLegge reads the undertaking of major work from the appropriate position while keeping results connected with conditions. Great work is not encouragement for anyone to expand immediately.\n\nAfter gaining support, establish scope and capacity and choose something worth undertaking. Additional resources may also require maintenance; do not count only the new opportunities.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · Receiving support does not remove long-term requirements\n\n或益之，十朋之龜弗克違，永貞吉。王用享于帝，吉。\n\nOriginal editorial rendering; not a quotation from Legge: Following Legge's interpretation: someone brings an increase of ten pairs of tortoise shells, whose oracles cannot be opposed. Lasting steadfast correctness brings good fortune. The king offers to the Supreme Deity: good fortune.\n\nTortoise shells, offerings, and the king place this line in ancient divination and ritual; Legge preserves them. Lasting steadfastness means that receiving support still requires maintaining an appropriate course.\n\nExplain how new resources will be used and what responsibilities come with them. Someone's willingness to give is not reason to overlook conditions. Ancient shell numbers and favorable statements do not guarantee incoming money.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六三 · Improvement after difficulty requires an honest account\n\n益之用凶事，无咎。有孚中行，告公用圭。\n\nOriginal editorial rendering; not a quotation from Legge: Increase through adverse affairs: no blame. With sincerity and a central course, report to the lord using a jade tablet.\n\nLegge understands the line as improvement arising through adverse events, with the jade tablet marking formal status in reporting upward. The text does not make suffering itself necessary.\n\nWhen a real problem occurs, honestly explain its effects and correct the process. Do not create harm for the sake of growth or demand gratitude from those harmed. Improvement comes from subsequent action, not from harm being inherently beneficial.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · Major change needs dependable support\n\n中行，告公從。利用為依遷國。\n\nOriginal editorial rendering; not a quotation from Legge: Following a central course, report to the lord and be followed. It is beneficial to serve as support in moving the state.\n\nMoving a state and reporting to a lord are ancient political actions. Legge explains an accepted proposal and the ability to serve as a reliable support.\n\nDuring substantial organizational change, people need to understand the reasons, responsibilities, and transition. Do not announce a better direction while leaving implementation burdens to people who were never consulted.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · Goodwill needs to be understood through actual effects\n\n有孚惠心，勿問元吉。有孚惠我德。\n\nOriginal editorial rendering; not a quotation from Legge: With sincerity and a heart that benefits others, there is no need to ask: great good fortune. Sincerity returns benefit to my virtue.\n\nLegge reads the beneficent heart as sincerely helping others, met by trust in return. No need to ask does not mean that real-world help needs no consultation or checking.\n\nWhat seems helpful to you may not be needed by the other person. Understand the need first, then assess the effects, bringing goodwill closer to real benefit rather than merely satisfying the giver's self-image.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · Seeking increase only for yourself can damage support\n\n莫益之，或擊之，立心勿恆，凶。\n\nOriginal editorial rendering; not a quotation from Legge: No one increases this one; someone may strike. The heart is not constant. Misfortune.\n\nLegge reads the final line as concentrating on personal gain and neglecting others, thereby losing support. The ancient warning about being struck cannot justify actual retaliation.\n\nToday, check whether you repeatedly keep new benefits while passing costs to others. Unfair arrangements need appropriate discussion and handling; a hexagram cannot convict someone on your behalf.\n\nReferences: [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726), [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## How new resources become genuine help\n\nOriginal modern scenario\n\nA club gains more shared materials and initially plans to increase the number of activities. Members then discover that unclear instructions and inadequate maintenance are the existing problems. They first use the resources to improve the guide and duty schedule.\n\nThey ask actual users which changes help most and record remaining difficulties. They delay new projects they cannot yet maintain.\n\nYì here is not simply more, but existing conditions producing actual benefit. Those affected need a voice in deciding whether something is useful.\n\n## Misreadings to avoid\n\n- Yì guarantees neither increased returns nor a lucky gift, and does not require immediately expanding commitments when resources grow.\n\n- Adverse events are not growth opportunities to manufacture. Improvement must not excuse ignoring harm, sacrificing others, or rationalizing exploitation.\n\n## Three practices\n\n1. Describe a recently increased resource and the specific problem you hope it will improve.\n\n2. Ask actual users or affected people whether it genuinely helps.\n\n3. Identify a practice that can improve through correcting an error rather than adding more.\n\n## Related hexagram\n\n### Sǔn — Decrease (hexagram-41)\n\nSǔn and Yì direct attention to sources, costs, and beneficiaries together. Appropriate reduction can sometimes create benefit, while increase can create new burdens.\n\n## A closing question\n\nWhile reading Yì, ask: has this increase produced a tangible improvement for those who truly need it?\n\n## Sources\n\n- [zhouyi-42](https://zh.wikisource.org/w/index.php?title=周易/益&oldid=10646726)\n\n- [legge1882-42](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-17",
+  "locale": "zh-TW",
+  "kingWenNumber": 17,
+  "name": "随",
+  "pinyin": "Suí",
+  "englishName": "Suí — Following",
+  "unicode": "䷐",
+  "codePoint": "U+4DD0",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+  ],
+  "title": "隨卦導讀：願意跟隨，也清楚自己的選擇",
+  "plainSummary": "跟著某個人或方法前進時，保留自己的判斷依據；情況改變，也可以重新選擇。",
+  "introduction": [
+    "學技能時跟著老師，參加活動時配合安排，都是日常可見的「隨」。難的是：如何借助別人，又不把判斷全交出去？隨卦既描寫跟隨他人，也描寫有人跟隨自己的處境。跟隨因此是一種需要選擇與負責的關係，不只是聽話。"
+  ],
+  "identityText": "隨是傳統文王序第17卦，卦符䷐，下卦震☳、上卦兌☱，傳統取象分別為雷與澤。爻從最下方數起，依次為初九、六二、六三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "隨：元亨，利貞，无咎。",
+    "paragraphs": [
+      "Legge 將隨理解為跟隨，指出它同時涵蓋隨人及人隨己；但兩種情形都要受合宜、正當的原則約束。元亨與無咎在這樣的條件中理解，不能只用來證明某位領路人必然可靠。",
+      "現代讀法可以先確認：我在學習對方哪一種能力，依據是什麼，哪些決定仍需自己承擔？目標和證據越清楚，跟隨越不容易變成無邊界的依附。"
+    ],
+    "sourceRefs": [
+      "zhouyi-17",
+      "legge1882-17"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》談“動而說”與隨時；《象傳》以澤中有雷取象，卻把實踐落到向晚進入休息。隨不只有向前追趕，也有順應時節與節奏的一面。",
+      "今天可以借此分辨，是否把持續參與誤當成唯一的忠誠證明。需要休息或調整計畫時，及時說明條件，比勉強跟上而失去可靠性更有意義。"
+    ],
+    "sourceRefs": [
+      "zhouyi-17",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "官有渝，貞吉。出門交有功。",
+      "focus": "改變原先追求，也走出去瞭解",
+      "paragraphs": [
+        "Legge 將官有渝讀為追求對象的變化，隨後是出門交往。這是一條具名解釋路線，古字不應直接按現代官職變動推算。",
+        "學習方法不再適用時，可以接觸新的經驗，比較實際效果。改變不必只為新鮮，也不等於過去所學全部無用。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "係小子，失丈夫。",
+      "focus": "選擇會影響能得到的幫助",
+      "paragraphs": [
+        "爻辭用小子與丈夫構成取捨，Legge 將其解釋為依附年輕者而放開年長而有經驗的人。這裡有古代年齡與社會角色觀念。",
+        "現代不按年齡直接判斷誰值得聽。可以問一個建議是否有相關經驗與證據支持；選擇容易討好自己的答案，也可能錯過真正有用的回饋。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "係丈夫，失小子。隨有求得，利居貞。",
+      "focus": "選擇較成熟的依據仍需守住原則",
+      "paragraphs": [
+        "這一爻逆轉前一爻的取捨，並保留居貞的要求。Legge 同樣不因找到了合適對象，就刪去合宜的條件。",
+        "請有經驗的人指導以後，也應核對方法是否適合當前任務。聲望和資歷能夠提供線索，卻不能使每個意見都免於檢驗。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "隨有獲，貞凶。有孚在道，以明，何咎。",
+      "focus": "有人追隨時，更需要透明",
+      "paragraphs": [
+        "Legge 在古代君臣關係中讀出獲得追隨者的風險，並強調真誠及其公開表現。本文不把這些權力結構移植成當代規範。",
+        "若你負責帶領小組，應該讓選擇依據、利益與限制更清楚。受歡迎不是正確的證明，也不能要求別人為了信任而停止提問。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "孚于嘉，吉。",
+      "focus": "讓信任落在值得認可的事上",
+      "paragraphs": [
+        "“嘉”有美好、可嘉的意味。Legge 將它讀作誠心扶助優良之事，信並非沒有對象的相信。",
+        "可以支持一個被行動證明有益的做法，而不把全部信任固定在某個人身上。人會犯錯，認可具體做法能讓討論仍有事實基礎。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "拘係之，乃從維之。王用亨于西山。",
+      "focus": "看見強烈聯結的古代語言",
+      "paragraphs": [
+        "拘繫、維繫與王者祭獻構成末爻。Legge 以牢固持守的誠意解釋，並保留西山祭祀的場景。",
+        "現代學習可以反思自己怎樣維持長期承諾，但不能用這些詞許可捆綁、強制或不准退出。任何現實關係都不因古典聯結意象而取消個人同意。"
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "調整自己的學習方法",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位攝影初學者長期照著某個教材練習，卻發現自己拍攝的題材與教材中的示例不同。她沒有立即換遍所有課程，而是先寫下具體問題，再向有相關經驗的人求助。",
+      "新的老師說明方法適用的條件，也鼓勵她比較前後結果。她接受有用的部分，對不確定之處繼續詢問，並給自己留出消化練習的時間。",
+      "後來她向同伴分享經驗時，也說明自己的樣本有限。隨在此成為一種有依據、能回饋、可調整的學習關係，不需要把任何人奉為永遠正確的答案。"
+    ]
+  },
+  "misreadings": [
+    "隨不要求追隨權威、多數或親近的人；古代小子與丈夫的取捨不能直接變成年齡、性別的價值排名。",
+    "拘繫與祭祀屬於歷史意象，不應被用來合理化控制、強迫參與或任何無法自由退出的關係。"
+  ],
+  "practice": [
+    "寫下自己正在跟隨的人或方法，以及選擇它的實際依據。",
+    "區分對方能提供的幫助和仍須由你負責的決定。",
+    "列出一條會讓你重新檢查這種跟隨的證據，而不是只寫感覺不對。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-16",
+      "name": "豫",
+      "paragraph": "豫關注響應的動力與情緒，隨關注這種響應接下來如何變成持續關係。熱情可以是開始，長期的選擇仍需要依據和回饋。"
+    }
+  ],
+  "closing": "讀隨卦時，可以問：我仍然知道自己為什麼在跟隨嗎，還是只因為已經跟了很久？",
+  "sourceIds": [
+    "zhouyi-17",
+    "legge1882-17",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1786,
+    "nonWhitespaceCharacterCount": 2030,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "隨",
+  "sourceLocale": "zh",
+  "sourceContentHash": "92c786b61a644c1e41e8174874bd189af4fb4f16c21aa875674665488856b02c",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 隨卦導讀：願意跟隨，也清楚自己的選擇\n\n跟著某個人或方法前進時，保留自己的判斷依據；情況改變，也可以重新選擇。\n\n學技能時跟著老師，參加活動時配合安排，都是日常可見的「隨」。難的是：如何借助別人，又不把判斷全交出去？隨卦既描寫跟隨他人，也描寫有人跟隨自己的處境。跟隨因此是一種需要選擇與負責的關係，不只是聽話。\n\n## 先認識這一卦\n\n隨是傳統文王序第17卦，卦符䷐，下卦震☳、上卦兌☱，傳統取象分別為雷與澤。爻從最下方數起，依次為初九、六二、六三、九四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━  ━━  上六\n━━━━━━  九五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 隨：元亨，利貞，无咎。\n\nLegge 將隨理解為跟隨，指出它同時涵蓋隨人及人隨己；但兩種情形都要受合宜、正當的原則約束。元亨與無咎在這樣的條件中理解，不能只用來證明某位領路人必然可靠。\n\n現代讀法可以先確認：我在學習對方哪一種能力，依據是什麼，哪些決定仍需自己承擔？目標和證據越清楚，跟隨越不容易變成無邊界的依附。\n\n[zhouyi-17; legge1882-17]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》談“動而說”與隨時；《象傳》以澤中有雷取象，卻把實踐落到向晚進入休息。隨不只有向前追趕，也有順應時節與節奏的一面。\n\n今天可以借此分辨，是否把持續參與誤當成唯一的忠誠證明。需要休息或調整計畫時，及時說明條件，比勉強跟上而失去可靠性更有意義。\n\n[zhouyi-17; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 改變原先追求，也走出去瞭解\n\n> 官有渝，貞吉。出門交有功。\n\nLegge 將官有渝讀為追求對象的變化，隨後是出門交往。這是一條具名解釋路線，古字不應直接按現代官職變動推算。\n\n學習方法不再適用時，可以接觸新的經驗，比較實際效果。改變不必只為新鮮，也不等於過去所學全部無用。\n\n[zhouyi-17; legge1882-17]\n\n### 六二 · 選擇會影響能得到的幫助\n\n> 係小子，失丈夫。\n\n爻辭用小子與丈夫構成取捨，Legge 將其解釋為依附年輕者而放開年長而有經驗的人。這裡有古代年齡與社會角色觀念。\n\n現代不按年齡直接判斷誰值得聽。可以問一個建議是否有相關經驗與證據支持；選擇容易討好自己的答案，也可能錯過真正有用的回饋。\n\n[zhouyi-17; legge1882-17]\n\n### 六三 · 選擇較成熟的依據仍需守住原則\n\n> 係丈夫，失小子。隨有求得，利居貞。\n\n這一爻逆轉前一爻的取捨，並保留居貞的要求。Legge 同樣不因找到了合適對象，就刪去合宜的條件。\n\n請有經驗的人指導以後，也應核對方法是否適合當前任務。聲望和資歷能夠提供線索，卻不能使每個意見都免於檢驗。\n\n[zhouyi-17; legge1882-17]\n\n### 九四 · 有人追隨時，更需要透明\n\n> 隨有獲，貞凶。有孚在道，以明，何咎。\n\nLegge 在古代君臣關係中讀出獲得追隨者的風險，並強調真誠及其公開表現。本文不把這些權力結構移植成當代規範。\n\n若你負責帶領小組，應該讓選擇依據、利益與限制更清楚。受歡迎不是正確的證明，也不能要求別人為了信任而停止提問。\n\n[zhouyi-17; legge1882-17]\n\n### 九五 · 讓信任落在值得認可的事上\n\n> 孚于嘉，吉。\n\n“嘉”有美好、可嘉的意味。Legge 將它讀作誠心扶助優良之事，信並非沒有對象的相信。\n\n可以支持一個被行動證明有益的做法，而不把全部信任固定在某個人身上。人會犯錯，認可具體做法能讓討論仍有事實基礎。\n\n[zhouyi-17; legge1882-17]\n\n### 上六 · 看見強烈聯結的古代語言\n\n> 拘係之，乃從維之。王用亨于西山。\n\n拘繫、維繫與王者祭獻構成末爻。Legge 以牢固持守的誠意解釋，並保留西山祭祀的場景。\n\n現代學習可以反思自己怎樣維持長期承諾，但不能用這些詞許可捆綁、強制或不准退出。任何現實關係都不因古典聯結意象而取消個人同意。\n\n[zhouyi-17; legge1882-17]\n\n## 調整自己的學習方法\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一位攝影初學者長期照著某個教材練習，卻發現自己拍攝的題材與教材中的示例不同。她沒有立即換遍所有課程，而是先寫下具體問題，再向有相關經驗的人求助。\n\n新的老師說明方法適用的條件，也鼓勵她比較前後結果。她接受有用的部分，對不確定之處繼續詢問，並給自己留出消化練習的時間。\n\n後來她向同伴分享經驗時，也說明自己的樣本有限。隨在此成為一種有依據、能回饋、可調整的學習關係，不需要把任何人奉為永遠正確的答案。\n\n## 常見誤讀\n\n1. 隨不要求追隨權威、多數或親近的人；古代小子與丈夫的取捨不能直接變成年齡、性別的價值排名。\n\n2. 拘繫與祭祀屬於歷史意象，不應被用來合理化控制、強迫參與或任何無法自由退出的關係。\n\n## 三個練習\n\n1. 寫下自己正在跟隨的人或方法，以及選擇它的實際依據。\n\n2. 區分對方能提供的幫助和仍須由你負責的決定。\n\n3. 列出一條會讓你重新檢查這種跟隨的證據，而不是只寫感覺不對。\n\n## 延伸閱讀\n\n### 豫 (hexagram-16)\n\n豫關注響應的動力與情緒，隨關注這種響應接下來如何變成持續關係。熱情可以是開始，長期的選擇仍需要依據和回饋。\n\n## 結語\n\n讀隨卦時，可以問：我仍然知道自己為什麼在跟隨嗎，還是只因為已經跟了很久？\n\n## 資料來源\n\n- [zhouyi-17: 周易·隨](https://zh.wikisource.org/w/index.php?title=周易/隨&oldid=10645020)\n\n- [legge1882-17: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 17, chapter XVII, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-16",
+  "locale": "zh-TW",
+  "kingWenNumber": 16,
+  "name": "豫",
+  "pinyin": "Yù",
+  "englishName": "Yù — Enthusiasm",
+  "unicode": "䷏",
+  "codePoint": "U+4DCF",
+  "lowerTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "title": "豫卦導讀：有了熱情，也要有跟得上的行動",
+  "plainSummary": "氣氛熱烈、大家願意投入時，把興奮化成具體安排，也留意熱情何時開始影響判斷。",
+  "introduction": [
+    "聽見好點子，我們可能馬上想加入；受到肯定，也容易覺得事情已經成功。豫卦包含和樂與動員的力量，同時寫到炫耀、依賴、沉迷和改變。學習這一卦，可以幫助我們分辨熱情的價值，以及被熱情帶著走的風險。"
+  ],
+  "identityText": "豫是傳統文王序第16卦，卦符䷏，下卦坤☷、上卦震☳，傳統取象分別為地與雷。爻從最下方數起，依次為初六、六二、六三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "豫：利建侯行師。",
+    "paragraphs": [
+      "卦辭直接談建立諸侯、調動軍隊，帶有明確的古代政治場景。Legge 把它放在和諧、欣悅而眾人願意響應的狀態中理解。卦名不能讓我們忘記這些行動並不只是私人開心。",
+      "現代可借它思考，集體情緒怎樣轉為合作。先問目標、能力與安排，再決定投入什麼；支持的人多，不會自動使一項計畫變得合宜。"
+    ],
+    "sourceRefs": [
+      "zhouyi-16",
+      "legge1882-16"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》以“順以動”說明豫；《象傳》取雷出地奮之象，談先王作樂崇德。音樂與儀禮在這裡具有組織共同情感的作用。",
+      "現代應用可以是用活動或共同體驗調動參與，但應讓人知道目的並保留選擇。熱烈氛圍不能成為催人作出未想清承諾的手段。"
+    ],
+    "sourceRefs": [
+      "zhouyi-16",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "鳴豫，凶。",
+      "focus": "先別把興奮當成成績",
+      "paragraphs": [
+        "Legge 將鳴豫讀作公開宣揚自己的欣悅，甚至帶有誇耀。爻辭沒有因其開心就一概肯定。",
+        "剛得到一個機會時，可以先做好準備，再談打算。提前承諾太多，容易讓興奮變成必須維持某種形象的負擔。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "介于石，不終日，貞吉。",
+      "focus": "熱鬧中也保留穩固的判斷",
+      "paragraphs": [
+        "介於石給出如石堅定的形象，不終日又包含及時辨認、行動的意味。Legge 強調安靜而有預見的分辨。",
+        "當大家都贊成時，你仍可核實一個關鍵條件。發現計畫不合適，不必為了維持氣氛一直拖延提出問題。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "盱豫，悔。遲有悔。",
+      "focus": "別只等別人的讚許才行動",
+      "paragraphs": [
+        "Legge 將盱豫讀為抬頭求取恩惠、沈浸於滿足，若遲遲不醒悟則有悔。這是他對簡短古句的解釋路線。",
+        "如果每一步都在等待某個有影響力的人點頭，可以檢查自己是否已經知道該做什麼。需要徵詢的事應徵詢，不需要的部分則可承擔起來。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "由豫，大有得。勿疑。朋盍簪。",
+      "focus": "把帶動別人的能力用在共同目標上",
+      "paragraphs": [
+        "Legge 將九四讀作和樂由之而來的中心，朋友因此聚集。這不只是被氣氛感染，而是有人使行動得以形成。",
+        "善於鼓舞的人也需要清楚安排與兌現承諾。勿疑不能被改寫為停止質疑一切，更不要求參與者把個人判斷交給號召者。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "貞疾，恆不死。",
+      "focus": "承認表面繁榮中的持續問題",
+      "paragraphs": [
+        "這條使用持續疾病卻未死亡的形象。Legge 保留這一譬喻，並放在統治者與有力大臣的關係中討論。",
+        "本文不從中推算任何人的壽命或病情。作為非醫學的現代類比，可以檢查一項活動是否外表熱鬧，內部卻長期缺人、欠清楚安排，仍只靠勉強維持。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "冥豫，成有渝，无咎。",
+      "focus": "沈迷已久也可以改變",
+      "paragraphs": [
+        "冥豫呈現沈暗於滿足之中，後半句仍保留改變的空間。Legge 的解釋同樣沒有將末尾處境說成毫無轉機。",
+        "發現自己只顧享受關注而忽略工作，可以從一個具體修正開始。無需先證明過去所有選擇都錯了，才有資格調整現在。"
+      ],
+      "sourceRefs": [
+        "zhouyi-16",
+        "legge1882-16"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把熱烈的活動構想化成可行安排",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一次討論中，大家很興奮地想辦街區音樂分享會。發起人沒有立刻公布日期，而是先確認場地條件、參與形式和需要承擔的工作，讓願意參加的人清楚知道自己答應了什麼。",
+      "籌備中，有人發現原計畫太滿。發起人接受這條意見，縮小活動範圍，保留讓參與者自由選擇的空間；他不把提問者看成掃興的人。",
+      "活動能否做好仍要看實際準備。豫的學習意義在於讓熱情支持行動，而不是讓氣氛代替判斷。"
+    ]
+  },
+  "misreadings": [
+    "豫不保證集體熱情一定帶來好結果，也不支持以興奮氣氛施壓讓人加入、付費或做出承諾。",
+    "六五的疾病語言是需按來源解釋的古典形象，不能用於醫學判斷、壽命預測或安慰人無需就醫。"
+  ],
+  "practice": [
+    "把最近讓你興奮的想法寫成一個有範圍的行動，而非宏大口號。",
+    "找出一條仍未核實的條件，邀請能提出不同意見的人檢查。",
+    "寫明自己什麼時候願意調整或退出，避免只因已被看好而繼續。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-17",
+      "name": "隨",
+      "paragraph": "豫關注眾人響應的情緒與動力，隨繼續追問怎樣跟隨、跟隨什麼。願意響應以後，仍需保留選擇依據。"
+    }
+  ],
+  "closing": "讀豫卦時，可以問：這份熱情正在幫助我看清下一步，還是使我忽略了本來會認真檢查的條件？",
+  "sourceIds": [
+    "zhouyi-16",
+    "legge1882-16",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "九四採用底本明確列出的“簪”異文；頁面正文另作“戠”。",
+  "counts": {
+    "chineseCharacterCount": 1732,
+    "nonWhitespaceCharacterCount": 1970,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "豫",
+  "sourceLocale": "zh",
+  "sourceContentHash": "97ff18e5dac78406246246f05fc85386f500ecb7770949e47219004fdb5b01c0",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 豫卦導讀：有了熱情，也要有跟得上的行動\n\n氣氛熱烈、大家願意投入時，把興奮化成具體安排，也留意熱情何時開始影響判斷。\n\n聽見好點子，我們可能馬上想加入；受到肯定，也容易覺得事情已經成功。豫卦包含和樂與動員的力量，同時寫到炫耀、依賴、沉迷和改變。學習這一卦，可以幫助我們分辨熱情的價值，以及被熱情帶著走的風險。\n\n## 先認識這一卦\n\n豫是傳統文王序第16卦，卦符䷏，下卦坤☷、上卦震☳，傳統取象分別為地與雷。爻從最下方數起，依次為初六、六二、六三、九四、六五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━  ━━  上六\n━━  ━━  六五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━  ━━  初六\n```\n\n## 卦辭\n\n> 豫：利建侯行師。\n\n卦辭直接談建立諸侯、調動軍隊，帶有明確的古代政治場景。Legge 把它放在和諧、欣悅而眾人願意響應的狀態中理解。卦名不能讓我們忘記這些行動並不只是私人開心。\n\n現代可借它思考，集體情緒怎樣轉為合作。先問目標、能力與安排，再決定投入什麼；支持的人多，不會自動使一項計畫變得合宜。\n\n[zhouyi-16; legge1882-16]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》以“順以動”說明豫；《象傳》取雷出地奮之象，談先王作樂崇德。音樂與儀禮在這裡具有組織共同情感的作用。\n\n現代應用可以是用活動或共同體驗調動參與，但應讓人知道目的並保留選擇。熱烈氛圍不能成為催人作出未想清承諾的手段。\n\n[zhouyi-16; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初六 · 先別把興奮當成成績\n\n> 鳴豫，凶。\n\nLegge 將鳴豫讀作公開宣揚自己的欣悅，甚至帶有誇耀。爻辭沒有因其開心就一概肯定。\n\n剛得到一個機會時，可以先做好準備，再談打算。提前承諾太多，容易讓興奮變成必須維持某種形象的負擔。\n\n[zhouyi-16; legge1882-16]\n\n### 六二 · 熱鬧中也保留穩固的判斷\n\n> 介于石，不終日，貞吉。\n\n介於石給出如石堅定的形象，不終日又包含及時辨認、行動的意味。Legge 強調安靜而有預見的分辨。\n\n當大家都贊成時，你仍可核實一個關鍵條件。發現計畫不合適，不必為了維持氣氛一直拖延提出問題。\n\n[zhouyi-16; legge1882-16]\n\n### 六三 · 別只等別人的讚許才行動\n\n> 盱豫，悔。遲有悔。\n\nLegge 將盱豫讀為抬頭求取恩惠、沈浸於滿足，若遲遲不醒悟則有悔。這是他對簡短古句的解釋路線。\n\n如果每一步都在等待某個有影響力的人點頭，可以檢查自己是否已經知道該做什麼。需要徵詢的事應徵詢，不需要的部分則可承擔起來。\n\n[zhouyi-16; legge1882-16]\n\n### 九四 · 把帶動別人的能力用在共同目標上\n\n> 由豫，大有得。勿疑。朋盍簪。\n\nLegge 將九四讀作和樂由之而來的中心，朋友因此聚集。這不只是被氣氛感染，而是有人使行動得以形成。\n\n善於鼓舞的人也需要清楚安排與兌現承諾。勿疑不能被改寫為停止質疑一切，更不要求參與者把個人判斷交給號召者。\n\n[zhouyi-16; legge1882-16]\n\n### 六五 · 承認表面繁榮中的持續問題\n\n> 貞疾，恆不死。\n\n這條使用持續疾病卻未死亡的形象。Legge 保留這一譬喻，並放在統治者與有力大臣的關係中討論。\n\n本文不從中推算任何人的壽命或病情。作為非醫學的現代類比，可以檢查一項活動是否外表熱鬧，內部卻長期缺人、欠清楚安排，仍只靠勉強維持。\n\n[zhouyi-16; legge1882-16]\n\n### 上六 · 沈迷已久也可以改變\n\n> 冥豫，成有渝，无咎。\n\n冥豫呈現沈暗於滿足之中，後半句仍保留改變的空間。Legge 的解釋同樣沒有將末尾處境說成毫無轉機。\n\n發現自己只顧享受關注而忽略工作，可以從一個具體修正開始。無需先證明過去所有選擇都錯了，才有資格調整現在。\n\n[zhouyi-16; legge1882-16]\n\n## 把熱烈的活動構想化成可行安排\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一次討論中，大家很興奮地想辦街區音樂分享會。發起人沒有立刻公布日期，而是先確認場地條件、參與形式和需要承擔的工作，讓願意參加的人清楚知道自己答應了什麼。\n\n籌備中，有人發現原計畫太滿。發起人接受這條意見，縮小活動範圍，保留讓參與者自由選擇的空間；他不把提問者看成掃興的人。\n\n活動能否做好仍要看實際準備。豫的學習意義在於讓熱情支持行動，而不是讓氣氛代替判斷。\n\n## 常見誤讀\n\n1. 豫不保證集體熱情一定帶來好結果，也不支持以興奮氣氛施壓讓人加入、付費或做出承諾。\n\n2. 六五的疾病語言是需按來源解釋的古典形象，不能用於醫學判斷、壽命預測或安慰人無需就醫。\n\n## 三個練習\n\n1. 把最近讓你興奮的想法寫成一個有範圍的行動，而非宏大口號。\n\n2. 找出一條仍未核實的條件，邀請能提出不同意見的人檢查。\n\n3. 寫明自己什麼時候願意調整或退出，避免只因已被看好而繼續。\n\n## 延伸閱讀\n\n### 隨 (hexagram-17)\n\n豫關注眾人響應的情緒與動力，隨繼續追問怎樣跟隨、跟隨什麼。願意響應以後，仍需保留選擇依據。\n\n## 結語\n\n讀豫卦時，可以問：這份熱情正在幫助我看清下一步，還是使我忽略了本來會認真檢查的條件？\n\n## 版本說明\n\n九四採用底本明確列出的“簪”異文；頁面正文另作“戠”。\n\n## 資料來源\n\n- [zhouyi-16: 周易·豫](https://zh.wikisource.org/w/index.php?title=周易/豫&oldid=10645735)\n\n- [legge1882-16: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 16, chapter XVI, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

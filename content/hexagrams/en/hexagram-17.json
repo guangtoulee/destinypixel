@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-17",
+  "locale": "en",
+  "kingWenNumber": 17,
+  "name": "随",
+  "pinyin": "Suí",
+  "englishName": "Suí — Following",
+  "unicode": "䷐",
+  "codePoint": "U+4DD0",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "dui",
+    "name": "兑",
+    "image": "泽",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+  ],
+  "title": "Studying Following: choosing to follow and knowing why",
+  "plainSummary": "When following a person or method, keep your grounds for judgment. If circumstances change, allow yourself to choose again.",
+  "introduction": [
+    "Following a teacher when learning a skill and accepting arrangements when joining an activity are familiar forms of following. The difficulty is how to benefit from others without handing over all your judgment. Following describes both following others and gaining followers yourself. It makes following a relationship requiring choice and responsibility rather than mere obedience."
+  ],
+  "identityText": "Suí is hexagram 17 in the traditional King Wen sequence, with the symbol ䷐. Its lower trigram is Zhen ☳ and its upper trigram is Dui ☱; their traditional images are thunder and lake, respectively. Count the lines from the bottom: 初九, 六二, 六三, 九四, 九五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.",
+  "guaci": {
+    "label": "Hexagram statement",
+    "classical": "隨：元亨，利貞，无咎。",
+    "paragraphs": [
+      "Legge understands sui as following and notes that it includes both following others and being followed. Both situations, however, must be governed by what is appropriate and right. Great progress and freedom from blame are understood within those conditions, not as proof that a particular guide is necessarily trustworthy.",
+      "A contemporary reading first asks: which of this person’s abilities am I learning from, on what grounds, and which decisions remain my responsibility? The clearer the purpose and evidence, the less likely following is to become dependence without boundaries."
+    ],
+    "sourceRefs": [
+      "zhouyi-17",
+      "legge1882-17"
+    ],
+    "classicalTranslation": "Editorial rendering: Following: great favorable progress. Right constancy is beneficial; no blame."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.",
+      "The Commentary on the Judgment discusses “动而说,” movement with joy, and following the time. The Commentary on the Images uses thunder within the lake, yet places practice in entering rest toward evening. Following is not only about keeping up; it also includes responding to seasons and rhythms.",
+      "Today this can help you notice whether constant participation is being mistaken for the only proof of loyalty. When rest or a change of plan is needed, explaining the conditions promptly is more meaningful than forcing yourself to keep up and becoming unreliable."
+    ],
+    "sourceRefs": [
+      "zhouyi-17",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "官有渝，貞吉。出門交有功。",
+      "focus": "Change an old pursuit and go out to learn",
+      "paragraphs": [
+        "Legge reads “the office changes” as a change in the object of one’s pursuit, followed by going out to form connections. This is an attributed interpretive approach; the ancient wording should not be used to predict a modern change of office.",
+        "When a learning method no longer fits, encounter new experience and compare actual results. Change need not be pursued only for novelty, nor does it mean everything previously learned was useless."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: One’s pursuit changes. Right constancy brings good fortune. Going out through the gate to form connections brings accomplishment."
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "係小子，失丈夫。",
+      "focus": "Choices affect the help available to you",
+      "paragraphs": [
+        "The line contrasts a younger boy with a mature man. Legge reads it as attaching oneself to the young and letting go of someone older and experienced. Ancient ideas about age and social roles are present here.",
+        "Today, age alone should not decide whom to listen to. Ask whether advice is supported by relevant experience and evidence. Choosing answers that easily please you can also mean missing genuinely helpful feedback."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: Attached to the young boy, one loses the mature man."
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "係丈夫，失小子。隨有求得，利居貞。",
+      "focus": "Even a more mature basis for choice needs principles",
+      "paragraphs": [
+        "This line reverses the previous choice while retaining the requirement to abide in right constancy. Legge likewise does not remove the condition of right conduct simply because a suitable person has been found.",
+        "After seeking guidance from an experienced person, still check whether the method fits the present task. Reputation and experience offer clues, but they do not exempt every opinion from examination."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: Attached to the mature man, one loses the young boy. In following, what is sought is obtained; it is favorable to abide in right constancy."
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "隨有獲，貞凶。有孚在道，以明，何咎。",
+      "focus": "When others follow you, transparency matters even more",
+      "paragraphs": [
+        "Legge reads a risk in gaining followers within ancient ruler–minister relationships and emphasizes sincerity and its open expression. This article does not transplant those power structures into present-day norms.",
+        "If you lead a group, make the grounds for choices, interests, and limits clearer. Popularity is not proof of correctness, and trust must not require others to stop asking questions."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: Following brings gains; even with right constancy, misfortune. With sincerity on the right path, made clear, what blame is there?"
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "孚于嘉，吉。",
+      "focus": "Place trust in what deserves recognition",
+      "paragraphs": [
+        "Jia carries the sense of something good or praiseworthy. Legge reads it as sincerely supporting good things; trust is not belief without an object.",
+        "You can support a practice shown by action to be beneficial without fixing all your trust on one person. People make mistakes; recognizing a specific practice keeps discussion grounded in facts."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: Sincere commitment to what is good: good fortune."
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "拘係之，乃從維之。王用亨于西山。",
+      "focus": "Recognize the ancient language of strong attachment",
+      "paragraphs": [
+        "Binding, fastening, and a king’s offering make up the final line. Legge explains them through firmly maintained sincerity while preserving the sacrificial setting at the western mountain.",
+        "Contemporary learning may reflect on sustaining long-term commitments, but these words cannot authorize restraint, coercion, or preventing departure. Classical images of connection do not cancel individual consent in any real relationship."
+      ],
+      "sourceRefs": [
+        "zhouyi-17",
+        "legge1882-17"
+      ],
+      "classicalTranslation": "Editorial rendering: Held fast, then bound still more firmly. The king makes an offering at the western mountain."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "Changing a way of learning",
+    "label": "Original contemporary scenario",
+    "paragraphs": [
+      "A beginner in photography has long practiced from one tutorial but finds that her subjects differ from its examples. Instead of immediately switching among every available course, she writes down the specific problem and asks someone with relevant experience for help.",
+      "The new teacher explains the conditions under which the method applies and encourages her to compare before-and-after results. She accepts the useful parts, keeps asking about uncertainties, and leaves herself time to absorb and practice what she learns.",
+      "Later, when sharing her experience with peers, she also explains that her sample is limited. Following here becomes an evidence-based learning relationship with feedback and room for adjustment, without treating anyone as an invariably correct answer."
+    ]
+  },
+  "misreadings": [
+    "Following does not require following authority, the majority, or people close to you. The ancient contrast between a boy and a mature man cannot become a direct ranking of people by age or gender.",
+    "Binding and sacrifice are historical images. They must not justify control, forced participation, or relationships from which someone cannot freely leave."
+  ],
+  "practice": [
+    "Write down the person or method you currently follow and your actual reasons for choosing them.",
+    "Separate the help they can provide from the decisions for which you remain responsible.",
+    "Identify one piece of evidence that would prompt you to reconsider this following, rather than merely saying it feels wrong."
+  ],
+  "related": [
+    {
+      "id": "hexagram-16",
+      "name": "Enthusiasm",
+      "paragraph": "Enthusiasm concerns the motivation and emotion behind a response. Following concerns how that response develops into an ongoing relationship. Enthusiasm can begin it, but continuing choices still require grounds and feedback."
+    }
+  ],
+  "closing": "When reading Following, ask: do I still know why I am following, or am I continuing only because I have followed for so long?",
+  "sourceIds": [
+    "zhouyi-17",
+    "legge1882-17",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 93,
+    "nonWhitespaceCharacterCount": 7457,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Following",
+  "sourceLocale": "zh",
+  "sourceContentHash": "92c786b61a644c1e41e8174874bd189af4fb4f16c21aa875674665488856b02c",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Studying Following: choosing to follow and knowing why\n\nWhen following a person or method, keep your grounds for judgment. If circumstances change, allow yourself to choose again.\n\nFollowing a teacher when learning a skill and accepting arrangements when joining an activity are familiar forms of following. The difficulty is how to benefit from others without handing over all your judgment. Following describes both following others and gaining followers yourself. It makes following a relationship requiring choice and responsibility rather than mere obedience.\n\n## Identifying the hexagram\n\nSuí is hexagram 17 in the traditional King Wen sequence, with the symbol ䷐. Its lower trigram is Zhen ☳ and its upper trigram is Dui ☱; their traditional images are thunder and lake, respectively. Count the lines from the bottom: 初九, 六二, 六三, 九四, 九五, 上六. A solid line is yang and a broken line is yin. Nine and six in the line headings identify yang and yin; they do not indicate additional lines.\n\nThe six lines are numbered from the bottom upward; the figure below displays their actual positions from top to bottom.\n\n```text\n━━  ━━  上六\n━━━━━━  九五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## Hexagram statement\n\n> 隨：元亨，利貞，无咎。\n\nEditorial rendering: Following: great favorable progress. Right constancy is beneficial; no blame.\n\nLegge understands sui as following and notes that it includes both following others and being followed. Both situations, however, must be governed by what is appropriate and right. Great progress and freedom from blame are understood within those conditions, not as proof that a particular guide is necessarily trustworthy.\n\nA contemporary reading first asks: which of this person’s abilities am I learning from, on what grounds, and which decisions remain my responsibility? The clearer the purpose and evidence, the less likely following is to become dependence without boundaries.\n\n[zhouyi-17; legge1882-17]\n\n## Interpretation in the Ten Wings\n\nThe Commentary on the Judgment (Tuan zhuan) and the Commentary on the Images (Xiang zhuan) belong to the Yi zhuan, the commentaries commonly called the Ten Wings. Their interpretations are kept separate below from the hexagram and line statements, followed by applications for contemporary learning.\n\nThe Commentary on the Judgment discusses “动而说,” movement with joy, and following the time. The Commentary on the Images uses thunder within the lake, yet places practice in entering rest toward evening. Following is not only about keeping up; it also includes responding to seasons and rhythms.\n\nToday this can help you notice whether constant participation is being mistaken for the only proof of loyalty. When rest or a change of plan is needed, explaining the conditions promptly is more meaningful than forcing yourself to keep up and becoming unreliable.\n\n[zhouyi-17; hon-sep]\n\n## Six lines, from bottom to top\n\nThe quotations below are line statements; the explanations that follow are original learning commentary. Good fortune, no blame, and regret belong to ancient divinatory language and cannot be turned directly into guarantees about an individual’s future.\n\n### 初九 · Change an old pursuit and go out to learn\n\n> 官有渝，貞吉。出門交有功。\n\nEditorial rendering: One’s pursuit changes. Right constancy brings good fortune. Going out through the gate to form connections brings accomplishment.\n\nLegge reads “the office changes” as a change in the object of one’s pursuit, followed by going out to form connections. This is an attributed interpretive approach; the ancient wording should not be used to predict a modern change of office.\n\nWhen a learning method no longer fits, encounter new experience and compare actual results. Change need not be pursued only for novelty, nor does it mean everything previously learned was useless.\n\n[zhouyi-17; legge1882-17]\n\n### 六二 · Choices affect the help available to you\n\n> 係小子，失丈夫。\n\nEditorial rendering: Attached to the young boy, one loses the mature man.\n\nThe line contrasts a younger boy with a mature man. Legge reads it as attaching oneself to the young and letting go of someone older and experienced. Ancient ideas about age and social roles are present here.\n\nToday, age alone should not decide whom to listen to. Ask whether advice is supported by relevant experience and evidence. Choosing answers that easily please you can also mean missing genuinely helpful feedback.\n\n[zhouyi-17; legge1882-17]\n\n### 六三 · Even a more mature basis for choice needs principles\n\n> 係丈夫，失小子。隨有求得，利居貞。\n\nEditorial rendering: Attached to the mature man, one loses the young boy. In following, what is sought is obtained; it is favorable to abide in right constancy.\n\nThis line reverses the previous choice while retaining the requirement to abide in right constancy. Legge likewise does not remove the condition of right conduct simply because a suitable person has been found.\n\nAfter seeking guidance from an experienced person, still check whether the method fits the present task. Reputation and experience offer clues, but they do not exempt every opinion from examination.\n\n[zhouyi-17; legge1882-17]\n\n### 九四 · When others follow you, transparency matters even more\n\n> 隨有獲，貞凶。有孚在道，以明，何咎。\n\nEditorial rendering: Following brings gains; even with right constancy, misfortune. With sincerity on the right path, made clear, what blame is there?\n\nLegge reads a risk in gaining followers within ancient ruler–minister relationships and emphasizes sincerity and its open expression. This article does not transplant those power structures into present-day norms.\n\nIf you lead a group, make the grounds for choices, interests, and limits clearer. Popularity is not proof of correctness, and trust must not require others to stop asking questions.\n\n[zhouyi-17; legge1882-17]\n\n### 九五 · Place trust in what deserves recognition\n\n> 孚于嘉，吉。\n\nEditorial rendering: Sincere commitment to what is good: good fortune.\n\nJia carries the sense of something good or praiseworthy. Legge reads it as sincerely supporting good things; trust is not belief without an object.\n\nYou can support a practice shown by action to be beneficial without fixing all your trust on one person. People make mistakes; recognizing a specific practice keeps discussion grounded in facts.\n\n[zhouyi-17; legge1882-17]\n\n### 上六 · Recognize the ancient language of strong attachment\n\n> 拘係之，乃從維之。王用亨于西山。\n\nEditorial rendering: Held fast, then bound still more firmly. The king makes an offering at the western mountain.\n\nBinding, fastening, and a king’s offering make up the final line. Legge explains them through firmly maintained sincerity while preserving the sacrificial setting at the western mountain.\n\nContemporary learning may reflect on sustaining long-term commitments, but these words cannot authorize restraint, coercion, or preventing departure. Classical images of connection do not cancel individual consent in any real relationship.\n\n[zhouyi-17; legge1882-17]\n\n## Changing a way of learning\n\nOriginal contemporary scenario\n\nThe following contemporary scenario was created for learning.\n\nA beginner in photography has long practiced from one tutorial but finds that her subjects differ from its examples. Instead of immediately switching among every available course, she writes down the specific problem and asks someone with relevant experience for help.\n\nThe new teacher explains the conditions under which the method applies and encourages her to compare before-and-after results. She accepts the useful parts, keeps asking about uncertainties, and leaves herself time to absorb and practice what she learns.\n\nLater, when sharing her experience with peers, she also explains that her sample is limited. Following here becomes an evidence-based learning relationship with feedback and room for adjustment, without treating anyone as an invariably correct answer.\n\n## Common misreadings\n\n1. Following does not require following authority, the majority, or people close to you. The ancient contrast between a boy and a mature man cannot become a direct ranking of people by age or gender.\n\n2. Binding and sacrifice are historical images. They must not justify control, forced participation, or relationships from which someone cannot freely leave.\n\n## Three practices\n\n1. Write down the person or method you currently follow and your actual reasons for choosing them.\n\n2. Separate the help they can provide from the decisions for which you remain responsible.\n\n3. Identify one piece of evidence that would prompt you to reconsider this following, rather than merely saying it feels wrong.\n\n## Related reading\n\n### Enthusiasm (hexagram-16)\n\nEnthusiasm concerns the motivation and emotion behind a response. Following concerns how that response develops into an ongoing relationship. Enthusiasm can begin it, but continuing choices still require grounds and feedback.\n\n## Closing question\n\nWhen reading Following, ask: do I still know why I am following, or am I continuing only because I have followed for so long?\n\n## Sources\n\n- [zhouyi-17: 周易·隨](https://zh.wikisource.org/w/index.php?title=周易/隨&oldid=10645020)\n\n- [legge1882-17: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 17, chapter XVII, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nClassical quotations retain the Chinese source’s character forms and modern punctuation. The commentary is translated from original Simplified Chinese learning prose. The historical English source and received Chinese text are used together, and interpretations by later translators are attributed in the article. This article is not a basis for medical, investment, or other professional decisions.\n"
+}

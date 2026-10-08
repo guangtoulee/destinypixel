@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-56",
+  "locale": "zh-TW",
+  "kingWenNumber": 56,
+  "name": "旅",
+  "pinyin": "Lǚ",
+  "englishName": "Lǚ — The Wanderer",
+  "unicode": "䷷",
+  "codePoint": "U+4DF7",
+  "lowerTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "離",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "title": "旅卦學習：身處陌生環境，如何安頓並拿捏分寸",
+  "plainSummary": "來到不熟悉的地方，先找到可靠的落腳處、瞭解規則，再決定自己能承擔什麼。",
+  "introduction": [
+    "旅卦中的人並沒有穩固的主場：住處、資財、同行協助與他人的接納都很重要。它寫短暫安頓，也寫住所失火和先笑後哭。閱讀時可以體會客居的不穩定，但不應把外來者遇到的所有困難都歸咎於自身做得不夠好。"
+  ],
+  "identityText": "旅是傳統文王序第56卦，卦符䷷，下卦艮☶、上卦離☲，傳統取象分別為山與火。爻從最下方往上數，依次為初六、六二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "旅：小亨，旅貞吉。",
+    "paragraphs": [
+      "Legge 將旅解釋為出行者、異鄉人所處的狀態，並強調謹慎與正直。他的解釋保留古代身份秩序，不能直接套成現代移居、旅行或謀職的成功公式。",
+      "本文的學習重點是，熟悉環境中的做法未必適用於陌生處境。先確認基本安排和相處方式，有助於保留選擇；小亨也提醒目標可以適度，而不必剛到就證明自己能掌控一切。"
+    ],
+    "sourceRefs": [
+      "zhouyi-56",
+      "legge1882-56"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》從止而麗乎明等方面解釋旅；《象傳》以山上有火取象，說用刑應明慎、不留獄。後者屬於古代司法倫理，不能化成個人對他人的處罰權。",
+      "用於日常交往，可借其謹慎和不無故拖延的方向：說明規則、及時回應、避免讓暫住或新加入的人一直不知所措。這是本文提出的日常事務類比。"
+    ],
+    "sourceRefs": [
+      "zhouyi-56",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "旅瑣瑣，斯其所取災。",
+      "focus": "不要讓局促使視野只剩瑣碎得失",
+      "paragraphs": [
+        "瑣瑣呈現細小、卑瑣或局促的狀態，Legge 以狹隘處事解釋其不利。這樣的道德解釋有範圍，不能說明所有旅途不幸都是自找。",
+        "在新環境中，可以先分清基本需要與一時爭執。小問題值得解決，但若全部注意力都用在爭一口氣，可能忽略真正重要的安排。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "旅即次，懷其資，得僮僕貞。",
+      "focus": "安頓由具體條件組成",
+      "paragraphs": [
+        "有住處、帶著資財、得到可靠僕從，是古代旅行者的支持組合。Legge 也將其讀為基本條件較為齊備。",
+        "現代不繼承主僕制度，可改為檢查住宿、所需物品、聯絡和自願合作是否清楚。幫助應建立在尊重與明確約定上，不能把協助者視作可隨意支使的資源。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "旅焚其次，喪其僮僕，貞厲。",
+      "focus": "失去落腳點與支持會放大不穩定",
+      "paragraphs": [
+        "住處焚毀，又失去僕從，爻辭把多重損失連在一起。Legge 的注釋聯繫到強硬行為，但這不是一切真實火災的因果說明。",
+        "普通類比是誤解或失當溝通使已經有限的支持進一步減少。需要及時修復能修復的部分；若有現實危險，應先處理安全，不能等待古文暗示的轉機。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "旅于處，得其資斧，我心不快。",
+      "focus": "暫時有條件，也未必已有歸屬感",
+      "paragraphs": [
+        "旅者找到可停處、有資斧，心卻不快。Legge 區分臨時落腳與真正安居，保留外在條件和內在感受的差別。",
+        "剛加入一個團隊，即使工具與任務齊全，也可能還不熟悉關係。可以給適應留時間，尋找清楚溝通，不必要求自己一到場就表現得完全自在。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "射雉一矢亡，終以譽命。",
+      "focus": "合宜的參與可能需要有限投入",
+      "paragraphs": [
+        "射雉而失一箭，最終得到稱譽與任命。Legge 將雉聯繫到古代拜見禮物，強調它在交往中的作用。",
+        "現代可以在能力範圍內貢獻一件具體工作，讓別人認識自己。但投入與認可之間沒有必然交換，不能因為希望被接納就無限付出或索取回報。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "鳥焚其巢，旅人先笑後號咷。喪牛于易，凶。",
+      "focus": "不要因一時順利忘記客居的脆弱",
+      "paragraphs": [
+        "鳥巢焚毀與先笑後哭構成強烈反轉。Legge 以失去溫順分寸解釋喪牛，也對這種象徵讀法提出疑問。",
+        "現代提醒可以是，獲得暫時方便後仍尊重場所與他人的邊界。它不是火災或丟失牲畜的預報，也不能用來責怪實際遭遇災害的人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-56",
+        "legge1882-56"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "第一次短期加入外地的合作專案",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位設計者到陌生城市參加兩週專案，先確認工作時間、設備使用和聯絡方式，也詢問哪些習慣需要瞭解。她沒有假定自己原來的流程可以直接替代當地做法。",
+      "初期她仍有不自在，便把不明白的地方逐項問清，並在約定範圍內完成一項可交付的工作。協作者的幫助得到感謝，額外任務也重新確認時間。",
+      "離開前，她整理交接、歸還物品並說明未完事項。旅卦在這裡幫助人珍惜臨時支持、保持分寸，不把客居變成必須討好所有人的壓力。"
+    ]
+  },
+  "misreadings": [
+    "旅不預測出行吉凶、火災或失物，也不替代真實行程與安全資訊。",
+    "客居者遭遇排斥或傷害，不應被一概解釋為不夠謙遜；古代主僕關係也不是現代協作規範。"
+  ],
+  "practice": [
+    "列出陌生環境中需要先確認的三項基本安排。",
+    "找出一件自己尚不理解的慣例，用清楚且尊重的方式詢問。",
+    "為暫時的合作安排一個交接動作，讓離開也有完整收尾。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-52",
+      "name": "艮",
+      "paragraph": "艮強調止於合宜之處，旅讓人看見臨時落腳與安頓的條件。在陌生環境中，知道在哪裡停一下、先瞭解什麼，常與繼續行動同樣重要。"
+    }
+  ],
+  "closing": "讀旅卦時，可以問：我現在最需要先安頓清楚的是什麼，誰能提供真實而合適的資訊？",
+  "sourceIds": [
+    "zhouyi-56",
+    "legge1882-56",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1657,
+    "nonWhitespaceCharacterCount": 1885,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "旅",
+  "sourceLocale": "zh",
+  "sourceContentHash": "3ab04366c4898ad0a215486b8b7c35da02db808c1aaade2f7195c416f8e46f60",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 旅卦學習：身處陌生環境，如何安頓並拿捏分寸\n\n來到不熟悉的地方，先找到可靠的落腳處、瞭解規則，再決定自己能承擔什麼。\n\n旅卦中的人並沒有穩固的主場：住處、資財、同行協助與他人的接納都很重要。它寫短暫安頓，也寫住所失火和先笑後哭。閱讀時可以體會客居的不穩定，但不應把外來者遇到的所有困難都歸咎於自身做得不夠好。\n\n旅是傳統文王序第56卦，卦符䷷，下卦艮☶、上卦離☲，傳統取象分別為山與火。爻從最下方往上數，依次為初六、六二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 0 1 1 0 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n旅：小亨，旅貞吉。\n\nLegge 將旅解釋為出行者、異鄉人所處的狀態，並強調謹慎與正直。他的解釋保留古代身份秩序，不能直接套成現代移居、旅行或謀職的成功公式。\n\n本文的學習重點是，熟悉環境中的做法未必適用於陌生處境。先確認基本安排和相處方式，有助於保留選擇；小亨也提醒目標可以適度，而不必剛到就證明自己能掌控一切。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》從止而麗乎明等方面解釋旅；《象傳》以山上有火取象，說用刑應明慎、不留獄。後者屬於古代司法倫理，不能化成個人對他人的處罰權。\n\n用於日常交往，可借其謹慎和不無故拖延的方向：說明規則、及時回應、避免讓暫住或新加入的人一直不知所措。這是本文提出的日常事務類比。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 不要讓局促使視野只剩瑣碎得失\n\n旅瑣瑣，斯其所取災。\n\n瑣瑣呈現細小、卑瑣或局促的狀態，Legge 以狹隘處事解釋其不利。這樣的道德解釋有範圍，不能說明所有旅途不幸都是自找。\n\n在新環境中，可以先分清基本需要與一時爭執。小問題值得解決，但若全部注意力都用在爭一口氣，可能忽略真正重要的安排。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 安頓由具體條件組成\n\n旅即次，懷其資，得僮僕貞。\n\n有住處、帶著資財、得到可靠僕從，是古代旅行者的支持組合。Legge 也將其讀為基本條件較為齊備。\n\n現代不繼承主僕制度，可改為檢查住宿、所需物品、聯絡和自願合作是否清楚。幫助應建立在尊重與明確約定上，不能把協助者視作可隨意支使的資源。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 失去落腳點與支持會放大不穩定\n\n旅焚其次，喪其僮僕，貞厲。\n\n住處焚毀，又失去僕從，爻辭把多重損失連在一起。Legge 的注釋聯繫到強硬行為，但這不是一切真實火災的因果說明。\n\n普通類比是誤解或失當溝通使已經有限的支持進一步減少。需要及時修復能修復的部分；若有現實危險，應先處理安全，不能等待古文暗示的轉機。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 暫時有條件，也未必已有歸屬感\n\n旅于處，得其資斧，我心不快。\n\n旅者找到可停處、有資斧，心卻不快。Legge 區分臨時落腳與真正安居，保留外在條件和內在感受的差別。\n\n剛加入一個團隊，即使工具與任務齊全，也可能還不熟悉關係。可以給適應留時間，尋找清楚溝通，不必要求自己一到場就表現得完全自在。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 合宜的參與可能需要有限投入\n\n射雉一矢亡，終以譽命。\n\n射雉而失一箭，最終得到稱譽與任命。Legge 將雉聯繫到古代拜見禮物，強調它在交往中的作用。\n\n現代可以在能力範圍內貢獻一件具體工作，讓別人認識自己。但投入與認可之間沒有必然交換，不能因為希望被接納就無限付出或索取回報。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 不要因一時順利忘記客居的脆弱\n\n鳥焚其巢，旅人先笑後號咷。喪牛于易，凶。\n\n鳥巢焚毀與先笑後哭構成強烈反轉。Legge 以失去溫順分寸解釋喪牛，也對這種象徵讀法提出疑問。\n\n現代提醒可以是，獲得暫時方便後仍尊重場所與他人的邊界。它不是火災或丟失牲畜的預報，也不能用來責怪實際遭遇災害的人。\n\n參考來源: [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234), [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 第一次短期加入外地的合作專案\n\n原創現代情境\n\n一位設計者到陌生城市參加兩週專案，先確認工作時間、設備使用和聯絡方式，也詢問哪些習慣需要瞭解。她沒有假定自己原來的流程可以直接替代當地做法。\n\n初期她仍有不自在，便把不明白的地方逐項問清，並在約定範圍內完成一項可交付的工作。協作者的幫助得到感謝，額外任務也重新確認時間。\n\n離開前，她整理交接、歸還物品並說明未完事項。旅卦在這裡幫助人珍惜臨時支持、保持分寸，不把客居變成必須討好所有人的壓力。\n\n## 避免誤讀\n\n- 旅不預測出行吉凶、火災或失物，也不替代真實行程與安全資訊。\n\n- 客居者遭遇排斥或傷害，不應被一概解釋為不夠謙遜；古代主僕關係也不是現代協作規範。\n\n## 三個練習\n\n1. 列出陌生環境中需要先確認的三項基本安排。\n\n2. 找出一件自己尚不理解的慣例，用清楚且尊重的方式詢問。\n\n3. 為暫時的合作安排一個交接動作，讓離開也有完整收尾。\n\n## 延伸閱讀\n\n艮 (hexagram-52): 艮強調止於合宜之處，旅讓人看見臨時落腳與安頓的條件。在陌生環境中，知道在哪裡停一下、先瞭解什麼，常與繼續行動同樣重要。\n\n讀旅卦時，可以問：我現在最需要先安頓清楚的是什麼，誰能提供真實而合適的資訊？\n\n## 參考來源\n\n- [zhouyi-56](https://zh.wikisource.org/w/index.php?title=周易/旅&oldid=10647234)\n\n- [legge1882-56](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-56 · SHA256 3ab04366c4898ad0a215486b8b7c35da02db808c1aaade2f7195c416f8e46f60\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

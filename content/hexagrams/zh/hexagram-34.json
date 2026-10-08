@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-34",
+  "locale": "zh",
+  "kingWenNumber": 34,
+  "name": "大壮",
+  "pinyin": "Dà Zhuàng",
+  "englishName": "Dà Zhuàng — Great Power",
+  "unicode": "䷡",
+  "codePoint": "U+4DE1",
+  "lowerTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "title": "大壮卦学习：力量大了，更要看怎样使用",
+  "plainSummary": "有能力推进时，也检查方式是否合宜；真正的力量应当保留转向和停下的余地。",
+  "introduction": [
+    "能更快地决定、说服或推进，并不意味着应当每次都使出全部力量。大壮卦反复用公羊触藩的图像，让人看见强行向前也可能使自己被卡住。它讨论的既是力量，也是力量怎样受到方向与分寸的约束。"
+  ],
+  "identityText": "大壮是传统文王序第34卦，卦符䷡，下卦乾☰、上卦震☳，传统取象分别为天与雷。爻从最下方数起，依次为初九、九二、九三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "大壯：利貞。",
+    "paragraphs": [
+      "卦辞没有许诺越强越好，反而只留下利贞。Legge 明确把它理解为力量需要服从正当的原则，以合宜方式使用。",
+      "现代学习可以先问：我能做到，是否也有理由这样做？资源、声量或职位更大的一方，需要听见决定如何影响别人，不能把可以推进误当成不必说明。"
+    ],
+    "sourceRefs": [
+      "zhouyi-34",
+      "legge1882-34"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》将刚与动相连；《象传》以雷在天上取象，提出非礼弗履。传统的礼有历史制度背景，现代不能简单等同于服从既有权威。",
+      "本文保留的方向，是给行为以可以说明的边界。尊重同意、核实条件、减少不必要的压迫，是现代合作中应独立成立的要求。"
+    ],
+    "sourceRefs": [
+      "zhouyi-34",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "壯于趾，征凶，有孚。",
+      "focus": "刚有力量时，不急着全速向前",
+      "paragraphs": [
+        "力量集中于足趾，像正要发动。Legge 将此看作过早推进的危险，不能只凭动能决定时机。",
+        "刚得到某种工具或权限，可以先了解限制、试做小范围任务。会操作一个按钮，不代表已经了解它对所有相关人的影响。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "貞吉。",
+      "focus": "简短的提醒仍指向行为依据",
+      "paragraphs": [
+        "九二只有贞吉，《象传》以中解释。Legge 同样从适中而合宜的力量使用理解。",
+        "当事情进行得顺时，可以继续执行已经验证的规则，不必为了体现掌控而频繁改变。稳定也可以是运用力量的一种方式。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。",
+      "focus": "用尽力气可能使自己更受困",
+      "paragraphs": [
+        "Legge 将此解为有人尽用其力，而君子不如此；随后公羊撞篱、角受牵缠，使结果具体起来。这里的用罔存在训释难点，须保留所采读法。",
+        "普通争议中，如果越压越使对方防备，可以先回到事实与共同需要。把人分成君子小人无助于核实问题，继续加力也不一定能解决。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "貞吉悔亡，藩決不羸，壯于大輿之輹。",
+      "focus": "有通路时，把力量用在支撑上",
+      "paragraphs": [
+        "篱藩打开而未被缠住，随后出现大车的承载结构。Legge 将其读为谨慎行进后的有力支撑。",
+        "如果已经找到清楚流程，就把力量用于使它可靠运行，不必一直寻找新的对抗。有效并不一定显得激烈。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "喪羊于易，无悔。",
+      "focus": "放下逞强，未必是损失",
+      "paragraphs": [
+        "Legge 将丧羊联系到放下羊一般的强劲姿态，并指出本卦不是禁止力量，而是要引导它。",
+        "一个争论不必由你说最后一句，事情也可以继续。少一次证明自己更强，可能为实际合作留出空间；这不要求放弃合理权益。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "羝羊觸藩，不能退，不能遂，无攸利，艱則吉。",
+      "focus": "卡住以后，先承认实际困难",
+      "paragraphs": [
+        "公羊再一次撞篱，这次进退都不能。Legge 将转机联系到看见困难、反思与止住不智的用力。",
+        "陷入僵局时，可以请相关人一起检查原先假设，寻找退路或不同方式。艰不意味着必须承受更多痛苦才配得到好结果。"
+      ],
+      "sourceRefs": [
+        "zhouyi-34",
+        "legge1882-34"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "掌握更多工具以后怎样推进",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一位团队成员掌握了新的批量整理工具，想立刻替大家修改所有资料。她先在一小部分做演示，让使用者检查是否符合实际需要，也明确哪些修改需要另行确认。",
+      "有人提出旧结构有重要用途，她没有因为工具更强就否定对方，而是调整方案，保留必要的信息。工具因此减少工作量，而不是制造新的冲突。",
+      "大壮在这里提醒，能力增加以后，对范围与影响的判断也要跟上。速度不能单独证明方法合宜。"
+    ]
+  },
+  "misreadings": [
+    "大壮不奖励霸道、暴力或强迫，也不证明支持者多的一方必然正确。",
+    "公羊和车的图像不是动物处理或工程操作建议；卦象不用于现实事故、收益或身体能力预测。"
+  ],
+  "practice": [
+    "写下最近增加的一项能力或权限，以及它可能影响的人。",
+    "列出使用前必须确认的一条边界。",
+    "若已陷入僵局，提出一种不依靠继续加力的核实或协商方式。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-33",
+      "name": "遁",
+      "paragraph": "大壮关注怎样用力，遁关注怎样收束。能够停下不等于没有力量，强而合宜也需要随条件改变动作。"
+    }
+  ],
+  "closing": "读大壮卦时，可以问：我用的力正在解决问题，还是只在让所有人更难退让？",
+  "sourceIds": [
+    "zhouyi-34",
+    "legge1882-34",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "九四采用底本明列的“輿”“輹”异文；页面正文分别作“轝”“腹”。",
+  "counts": {
+    "chineseCharacterCount": 1455,
+    "nonWhitespaceCharacterCount": 1675,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "大壮",
+  "sourceLocale": "zh",
+  "sourceContentHash": "a4d09bff1c1526b9805bdf7dff7da7d6b31c9371f1c086fe321b92674fa49369",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 大壮卦学习：力量大了，更要看怎样使用\n\n一句话：有能力推进时，也检查方式是否合宜；真正的力量应当保留转向和停下的余地。\n\n能更快地决定、说服或推进，并不意味着应当每次都使出全部力量。大壮卦反复用公羊触藩的图像，让人看见强行向前也可能使自己被卡住。它讨论的既是力量，也是力量怎样受到方向与分寸的约束。\n\n## 先认清这是什么卦\n\n大壮是传统文王序第34卦，卦符䷡，下卦乾☰、上卦震☳，传统取象分别为天与雷。爻从最下方数起，依次为初九、九二、九三、九四、六五、上六。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷡　上卦：震☳　下卦：乾☰\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━ ━━━━  上六\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辞说了什么\n\n经文：“大壯：利貞。”\n\n卦辞没有许诺越强越好，反而只留下利贞。Legge 明确把它理解为力量需要服从正当的原则，以合宜方式使用。\n\n现代学习可以先问：我能做到，是否也有理由这样做？资源、声量或职位更大的一方，需要听见决定如何影响别人，不能把可以推进误当成不必说明。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》将刚与动相连；《象传》以雷在天上取象，提出非礼弗履。传统的礼有历史制度背景，现代不能简单等同于服从既有权威。\n\n本文保留的方向，是给行为以可以说明的边界。尊重同意、核实条件、减少不必要的压迫，是现代合作中应独立成立的要求。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初九：刚有力量时，不急着全速向前\n\n经文：“壯于趾，征凶，有孚。”\n\n力量集中于足趾，像正要发动。Legge 将此看作过早推进的危险，不能只凭动能决定时机。\n\n刚得到某种工具或权限，可以先了解限制、试做小范围任务。会操作一个按钮，不代表已经了解它对所有相关人的影响。\n\n### 九二：简短的提醒仍指向行为依据\n\n经文：“貞吉。”\n\n九二只有贞吉，《象传》以中解释。Legge 同样从适中而合宜的力量使用理解。\n\n当事情进行得顺时，可以继续执行已经验证的规则，不必为了体现掌控而频繁改变。稳定也可以是运用力量的一种方式。\n\n### 九三：用尽力气可能使自己更受困\n\n经文：“小人用壯，君子用罔，貞厲。羝羊觸藩，羸其角。”\n\nLegge 将此解为有人尽用其力，而君子不如此；随后公羊撞篱、角受牵缠，使结果具体起来。这里的用罔存在训释难点，须保留所采读法。\n\n普通争议中，如果越压越使对方防备，可以先回到事实与共同需要。把人分成君子小人无助于核实问题，继续加力也不一定能解决。\n\n### 九四：有通路时，把力量用在支撑上\n\n经文：“貞吉悔亡，藩決不羸，壯于大輿之輹。”\n\n篱藩打开而未被缠住，随后出现大车的承载结构。Legge 将其读为谨慎行进后的有力支撑。\n\n如果已经找到清楚流程，就把力量用于使它可靠运行，不必一直寻找新的对抗。有效并不一定显得激烈。\n\n### 六五：放下逞强，未必是损失\n\n经文：“喪羊于易，无悔。”\n\nLegge 将丧羊联系到放下羊一般的强劲姿态，并指出本卦不是禁止力量，而是要引导它。\n\n一个争论不必由你说最后一句，事情也可以继续。少一次证明自己更强，可能为实际合作留出空间；这不要求放弃合理权益。\n\n### 上六：卡住以后，先承认实际困难\n\n经文：“羝羊觸藩，不能退，不能遂，无攸利，艱則吉。”\n\n公羊再一次撞篱，这次进退都不能。Legge 将转机联系到看见困难、反思与止住不智的用力。\n\n陷入僵局时，可以请相关人一起检查原先假设，寻找退路或不同方式。艰不意味着必须承受更多痛苦才配得到好结果。\n\n## 掌握更多工具以后怎样推进\n\n以下是为学习而设的现代情境。\n\n一位团队成员掌握了新的批量整理工具，想立刻替大家修改所有资料。她先在一小部分做演示，让使用者检查是否符合实际需要，也明确哪些修改需要另行确认。\n\n有人提出旧结构有重要用途，她没有因为工具更强就否定对方，而是调整方案，保留必要的信息。工具因此减少工作量，而不是制造新的冲突。\n\n大壮在这里提醒，能力增加以后，对范围与影响的判断也要跟上。速度不能单独证明方法合宜。\n\n## 几个容易误读的地方\n\n大壮不奖励霸道、暴力或强迫，也不证明支持者多的一方必然正确。\n\n公羊和车的图像不是动物处理或工程操作建议；卦象不用于现实事故、收益或身体能力预测。\n\n## 做一个小练习\n\n1. 写下最近增加的一项能力或权限，以及它可能影响的人。\n2. 列出使用前必须确认的一条边界。\n3. 若已陷入僵局，提出一种不依靠继续加力的核实或协商方式。\n\n## 和遁卦一起读\n\n大壮关注怎样用力，遁关注怎样收束。能够停下不等于没有力量，强而合宜也需要随条件改变动作。\n\n读大壮卦时，可以问：我用的力正在解决问题，还是只在让所有人更难退让？\n\n## 阅读依据\n\n- [周易·大壯](https://zh.wikisource.org/w/index.php?title=周易/大壯&oldid=10646529)。Received text; Wikisource revision 10646529。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 34, chapter XXXIV, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n\n文字说明：九四采用底本明列的“輿”“輹”异文；页面正文分别作“轝”“腹”。\n"
+}

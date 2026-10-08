@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-29",
+  "locale": "zh-TW",
+  "kingWenNumber": 29,
+  "name": "坎",
+  "pinyin": "Kǎn",
+  "englishName": "Kǎn — Repeated Water",
+  "unicode": "䷜",
+  "codePoint": "U+4DDC",
+  "lowerTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "title": "坎卦學習：困難一再出現時，怎麼一步步應對",
+  "plainSummary": "困難反覆出現時，先掌握能查證的事實，再從眼前做得到的小步驟找出口。",
+  "introduction": [
+    "同一個難題一再出現，很容易讓人以為只剩兩條路：硬衝過去，或認定自己無能為力。坎卦用坑陷與流水描寫重重險境，也在不同爻位留下小有進展、樸實溝通等可能。學習它有助於減少混亂，但卦象無法評估現實危險的程度，也不能取代必要的保護與求助。"
+  ],
+  "identityText": "坎是傳統文王序第29卦，卦符䷜，下卦坎☵、上卦坎☵，傳統取象分別為水與水。爻從最下方數起，依次為初六、九二、六三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "習坎：有孚，維心亨，行有尚。",
+    "paragraphs": [
+      "這裡的習與重疊、反覆相連，上下都是坎。Legge 將坎讀作坑、險穴或流水經過的險谷，並將有孚聯繫到真誠與穩定的內在依據。",
+      "現代可先區分重複的是哪件事：條件未變、做法未變，還是資訊始終不清楚？把問題具體化，才有機會調整。感到害怕不是品格缺陷，也不能由一條凶辭推出事情已無希望。"
+    ],
+    "sourceRefs": [
+      "zhouyi-29",
+      "legge1882-29"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》以重險解釋習坎；《象傳》寫水洊至，並談常德行、習教事。傳文把持續面對與練習聯繫起來。",
+      "今天可以準備清楚的檢查步驟、記錄有效經驗，並與可信的人共同核實。練習的目的在於增加實際判斷，而不是要求人在真正危險中反覆逞強。"
+    ],
+    "sourceRefs": [
+      "zhouyi-29",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "習坎，入于坎窞，凶。",
+      "focus": "避免讓困難繼續加深",
+      "paragraphs": [
+        "陷在重險之中又進入坑穴，是初爻的畫面。Legge 強調行動可能使處境更深，而非總能靠移動脫身。",
+        "若一種嘗試連續增加成本，可以先停止重複它，查清缺少的資訊。這裡不判斷讀者命運，也不把困境歸咎於個人不夠堅強。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "坎有險，求小得。",
+      "focus": "先取得一點可確認的進展",
+      "paragraphs": [
+        "文字沒有要求立刻出險，而是求小得。Legge 也區分尚未全部擺脫困難與得到局部緩解。",
+        "面對複雜任務，可先解決一個可核實的卡點，例如確認聯絡人或補齊一項資料。小進展不能被誇大成整體問題已解決，卻確實可以提供下一步依據。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "來之坎坎，險且枕，入于坎窞，勿用。",
+      "focus": "進退都受阻時，先重新判斷",
+      "paragraphs": [
+        "往來都遇險，使動作本身不再保證改善。Legge 保留了此時不宜繼續原有行動的警告。",
+        "如果幾個選擇都建立在同一項錯誤假設上，可以先檢查假設，而非急著在它們之間換來換去。暫停要用來弄清問題，不是永遠放棄行動。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "樽酒簋貳，用缶，納約自牖，終无咎。",
+      "focus": "溝通可以樸素而切實",
+      "paragraphs": [
+        "酒、食器與陶缶構成簡單的饋獻，牖是窗。Legge 以不鋪張的誠意及使對方理解的方式展開這條。",
+        "需要幫助時，清楚說出事實、已嘗試的方法與具體問題，可能比準備一套誇張說辭更有效。誠懇溝通仍需選擇合適對象，不能向任何人交出隱私或信任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "坎不盈，禔既平，无咎。",
+      "focus": "留意條件怎樣逐漸疏通",
+      "paragraphs": [
+        "Legge 將這一爻讀成水尚未滿溢、處境將得到疏通與平整。其圖像關注的是險處的變化，而非對每個讀者的結果保證。",
+        "當一個問題緩解後，檢查是哪些條件真的改變了。記錄有效做法，也確認尚未解決的部分，避免因為鬆一口氣就停止核實。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "係用徽纆，寘于叢棘，三歲不得，凶。",
+      "focus": "嚴重束縛需要被看見",
+      "paragraphs": [
+        "繩索與叢棘表現深重受困，Legge 將其置於拘禁的比喻中，也承認特定歷史所指並不清楚。",
+        "這段不預言三年困局。若現實中被限制、受傷害或長期無法解決問題，應尋求合適支持；不能把古文當作只能忍受、無人能幫的結論。"
+      ],
+      "sourceRefs": [
+        "zhouyi-29",
+        "legge1882-29"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "處理一再卡關的資料申請",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位活動組織者的資料送件好幾次都被退回，起初她只是不停修改格式。後來，她把歷次回覆逐一列出，才發現每次真正缺的都是同一份確認資訊。她於是不再反覆上傳，轉而聯絡能說明要求的人。",
+      "她先補上這一項，再逐步查核其他內容，沒有因為解決一個問題就宣稱整個流程已經完成。如果對方提供的資訊仍互相矛盾，她會繼續釐清。",
+      "在這個例子裡，坎的學習重點是減少沒有根據的重複，找出雖小卻真實的出口。它不保證等候時間，也不保證申請會通過。"
+    ]
+  },
+  "misreadings": [
+    "坎不等於天生多災，也不能據此判斷現實事故、健康或財務風險。凶辭需要放回古代占筮語言。",
+    "水與坑的意象不提供涉水或救援指導。實際危險需要相應的現實保護與幫助。"
+  ],
+  "practice": [
+    "寫出最近反覆出現的問題，確認每次真正相同的部分是什麼。",
+    "找一個能夠核實的小步驟，暫時不要求它解決全部問題。",
+    "記錄哪項條件改變後才適合繼續，避免重複增加耗損。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-30",
+      "name": "離",
+      "paragraph": "坎討論險中的應對，離可以進一步討論明察依靠什麼條件。面對困難時，穩定行動與清楚瞭解都重要，不能只依靠勇氣或想像。"
+    }
+  ],
+  "closing": "讀坎卦時，不妨問自己：有沒有一個還沒查證的小事實，能讓我不用再碰上同樣的困難？",
+  "sourceIds": [
+    "zhouyi-29",
+    "legge1882-29",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六四採用底本明列的整句異文「樽酒簋貳，用缶，納約自牖」；九五保留正文的「禔」。",
+  "counts": {
+    "chineseCharacterCount": 1645,
+    "nonWhitespaceCharacterCount": 1882,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "坎",
+  "sourceLocale": "zh",
+  "sourceContentHash": "808f9ba7f7d13d567c3dc280db776df7c271be1246ff1022266f0176379b03c2",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 坎卦學習：困難一再出現時，怎麼一步步應對\n\n困難反覆出現時，先掌握能查證的事實，再從眼前做得到的小步驟找出口。\n\n同一個難題一再出現，很容易讓人以為只剩兩條路：硬衝過去，或認定自己無能為力。坎卦用坑陷與流水描寫重重險境，也在不同爻位留下小有進展、樸實溝通等可能。學習它有助於減少混亂，但卦象無法評估現實危險的程度，也不能取代必要的保護與求助。\n\n## 卦的身分與爻序\n\n坎是傳統文王序第29卦，卦符䷜，下卦坎☵、上卦坎☵，傳統取象分別為水與水。爻從最下方數起，依次為初六、九二、六三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n習坎：有孚，維心亨，行有尚。\n\n這裡的習與重疊、反覆相連，上下都是坎。Legge 將坎讀作坑、險穴或流水經過的險谷，並將有孚聯繫到真誠與穩定的內在依據。\n\n現代可先區分重複的是哪件事：條件未變、做法未變，還是資訊始終不清楚？把問題具體化，才有機會調整。感到害怕不是品格缺陷，也不能由一條凶辭推出事情已無希望。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》以重險解釋習坎；《象傳》寫水洊至，並談常德行、習教事。傳文把持續面對與練習聯繫起來。\n\n今天可以準備清楚的檢查步驟、記錄有效經驗，並與可信的人共同核實。練習的目的在於增加實際判斷，而不是要求人在真正危險中反覆逞強。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 避免讓困難繼續加深\n\n習坎，入于坎窞，凶。\n\n陷在重險之中又進入坑穴，是初爻的畫面。Legge 強調行動可能使處境更深，而非總能靠移動脫身。\n\n若一種嘗試連續增加成本，可以先停止重複它，查清缺少的資訊。這裡不判斷讀者命運，也不把困境歸咎於個人不夠堅強。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九二 · 先取得一點可確認的進展\n\n坎有險，求小得。\n\n文字沒有要求立刻出險，而是求小得。Legge 也區分尚未全部擺脫困難與得到局部緩解。\n\n面對複雜任務，可先解決一個可核實的卡點，例如確認聯絡人或補齊一項資料。小進展不能被誇大成整體問題已解決，卻確實可以提供下一步依據。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六三 · 進退都受阻時，先重新判斷\n\n來之坎坎，險且枕，入于坎窞，勿用。\n\n往來都遇險，使動作本身不再保證改善。Legge 保留了此時不宜繼續原有行動的警告。\n\n如果幾個選擇都建立在同一項錯誤假設上，可以先檢查假設，而非急著在它們之間換來換去。暫停要用來弄清問題，不是永遠放棄行動。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六四 · 溝通可以樸素而切實\n\n樽酒簋貳，用缶，納約自牖，終无咎。\n\n酒、食器與陶缶構成簡單的饋獻，牖是窗。Legge 以不鋪張的誠意及使對方理解的方式展開這條。\n\n需要幫助時，清楚說出事實、已嘗試的方法與具體問題，可能比準備一套誇張說辭更有效。誠懇溝通仍需選擇合適對象，不能向任何人交出隱私或信任。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九五 · 留意條件怎樣逐漸疏通\n\n坎不盈，禔既平，无咎。\n\nLegge 將這一爻讀成水尚未滿溢、處境將得到疏通與平整。其圖像關注的是險處的變化，而非對每個讀者的結果保證。\n\n當一個問題緩解後，檢查是哪些條件真的改變了。記錄有效做法，也確認尚未解決的部分，避免因為鬆一口氣就停止核實。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上六 · 嚴重束縛需要被看見\n\n係用徽纆，寘于叢棘，三歲不得，凶。\n\n繩索與叢棘表現深重受困，Legge 將其置於拘禁的比喻中，也承認特定歷史所指並不清楚。\n\n這段不預言三年困局。若現實中被限制、受傷害或長期無法解決問題，應尋求合適支持；不能把古文當作只能忍受、無人能幫的結論。\n\n引文來源：[zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381), [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 處理一再卡關的資料申請\n\n原創現代情境\n\n一位活動組織者的資料送件好幾次都被退回，起初她只是不停修改格式。後來，她把歷次回覆逐一列出，才發現每次真正缺的都是同一份確認資訊。她於是不再反覆上傳，轉而聯絡能說明要求的人。\n\n她先補上這一項，再逐步查核其他內容，沒有因為解決一個問題就宣稱整個流程已經完成。如果對方提供的資訊仍互相矛盾，她會繼續釐清。\n\n在這個例子裡，坎的學習重點是減少沒有根據的重複，找出雖小卻真實的出口。它不保證等候時間，也不保證申請會通過。\n\n## 避免誤讀\n\n- 坎不等於天生多災，也不能據此判斷現實事故、健康或財務風險。凶辭需要放回古代占筮語言。\n\n- 水與坑的意象不提供涉水或救援指導。實際危險需要相應的現實保護與幫助。\n\n## 三個練習\n\n1. 寫出最近反覆出現的問題，確認每次真正相同的部分是什麼。\n\n2. 找一個能夠核實的小步驟，暫時不要求它解決全部問題。\n\n3. 記錄哪項條件改變後才適合繼續，避免重複增加耗損。\n\n## 延伸閱讀\n\n### 離 (hexagram-30)\n\n坎討論險中的應對，離可以進一步討論明察依靠什麼條件。面對困難時，穩定行動與清楚瞭解都重要，不能只依靠勇氣或想像。\n\n## 結語\n\n讀坎卦時，不妨問自己：有沒有一個還沒查證的小事實，能讓我不用再碰上同樣的困難？\n\n## 版本說明\n\n六四採用底本明列的整句異文「樽酒簋貳，用缶，納約自牖」；九五保留正文的「禔」。\n\n## 資料來源\n\n- [zhouyi-29](https://zh.wikisource.org/w/index.php?title=周易/坎&oldid=10646381)\n\n- [legge1882-29](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

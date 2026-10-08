@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-60",
+  "locale": "zh-TW",
+  "kingWenNumber": 60,
+  "name": "节",
+  "pinyin": "Jié",
+  "englishName": "Jié — Limitation",
+  "unicode": "䷻",
+  "codePoint": "U+4DFB",
+  "lowerTrigram": {
+    "id": "dui",
+    "name": "兌",
+    "image": "澤",
+    "symbol": "☱",
+    "linesBottomUp": [
+      1,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "title": "節卦學習：訂下能夠持續的適當限度",
+  "plainSummary": "合適的界線能幫助事情持續；限制若過度嚴苛，也需要及時調整。",
+  "introduction": [
+    "節卦並不把節制等同於越少越好。初九不出戶庭無咎，九二不出門庭卻凶；安節、甘節與苦節又有不同結果。相似動作因處境不同而不同，說明界限的價值在於是否合宜，而不在於限制看起來有多嚴格。"
+  ],
+  "identityText": "節是傳統文王序第60卦，卦符䷻，下卦兌☱、上卦坎☵，傳統取象分別為澤與水。爻從最下方往上數，依次為初九、九二、六三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "節：亨。苦節不可貞。",
+    "paragraphs": [
+      "Legge 將節聯繫到分節、約束與制度，並明確解釋過於嚴酷的規定不能長久維持。卦辭一開始就為節制劃出界限，而不是把受苦當成正確的證明。",
+      "現代學習可以把時間、精力、承諾與共同資源安排得清楚。設限的目的是使重要事情可持續，也減少相互誤解；如果限制不斷損害基本需要，就應該檢查和調整，而非只要求更強的忍耐。"
+    ],
+    "sourceRefs": [
+      "zhouyi-60",
+      "legge1882-60"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》說苦節之道窮，又談節以制度、不傷財、不害民；《象傳》以澤上有水取象，提出制數度、議德行。傳文將限制與適度、通達聯繫起來。",
+      "本文用於日常學習和協作，不提出個人財務或醫療做法。可以觀察規則是否清楚、負擔是否相稱、是否有處理例外的方式，而不是只用執行得最嚴格的人作為標準。"
+    ],
+    "sourceRefs": [
+      "zhouyi-60",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "不出戶庭，无咎。",
+      "focus": "條件不合適時，暫停推進有意義",
+      "paragraphs": [
+        "初九沒有走出戶庭，Legge 將其解釋為此時應謹慎守住行動範圍。它不等於任何場合都要閉門不出。",
+        "收到一個資訊不完整的請求，可以先核實再承諾。這個界限幫助避免草率，也應說明自己還需要知道什麼，而不是讓對方猜測沉默的含義。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "不出門庭，凶。",
+      "focus": "同樣的停留，也可能錯過該行動的時候",
+      "paragraphs": [
+        "九二同樣不出，卻得到不同判斷。Legge 明確區分應該行動時仍然不動的情況。",
+        "如果必要資訊已經清楚，自己又有責任回應，就不能一直以謹慎為由拖延。規則需要幫助判斷時機，而不是成為回避行動的固定藉口。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "不節若，則嗟若，无咎。",
+      "focus": "看見缺少限度造成的後果",
+      "paragraphs": [
+        "不節而後嘆息，Legge 將無咎解釋為無可歸咎於他人；《小象》也追問這種嘆息還能責怪誰。它不是說毫無節制不會有問題。",
+        "接下太多一般任務後，可以承認當初沒有估量容量，重新安排並溝通。承擔能負責的部分即可，不必把一切困難都變成對自己的全面否定。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "安節，亨。",
+      "focus": "讓界限成為能夠安住的安排",
+      "paragraphs": [
+        "安節在 Legge 的解釋中是平靜自然地遵循合宜限制，減少持續的勉強。",
+        "例如給討論設定清楚長度，並預留記錄未完問題的辦法。參與者知道什麼時候結束、之後如何繼續，限制就可能帶來安心，而不是只有被打斷的感覺。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "甘節，吉；往有尚。",
+      "focus": "好的規則讓人看得見其作用",
+      "paragraphs": [
+        "甘節的甘與上爻苦形成鮮明對照。Legge 將其讀為制定令人能夠接受的約束，同時強調自身也按規則行事。",
+        "提出共同規則的人可以說明目的、聽取影響，並承擔相應約束。當人知道限制在保護什麼，就更容易判斷它是否值得遵循和如何改進。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "苦節，貞凶，悔亡。",
+      "focus": "嚴格過頭時，需要修正的可能是規則",
+      "paragraphs": [
+        "苦節在末爻受到明確警示，Legge 認為過度嚴苛會產生不良後果，同時保留後來改正的可能。",
+        "若一個安排長期讓人無法滿足基本需要，應重新檢查。不能把所有不適都解釋成缺乏意志力，也不能因為已經堅持很久，就拒絕承認限制本身可能不合適。"
+      ],
+      "sourceRefs": [
+        "zhouyi-60",
+        "legge1882-60"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "為一個興趣小組安排可持續的討論時間",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個小組每次討論都會超時，成員漸漸難以參加。主持人提出約定結束時間，同時讓大家提前提交重點問題，並為未討論的內容留下一次繼續的機會。",
+      "執行後，大家發現某些活動確實需要更長時間，於是提前說明並讓成員自由選擇是否參加延長部分。約定不再靠臨場情緒決定，也沒有僵硬到任何變化都不能容納。",
+      "節卦的學習在這裡著重於清楚而可持續的限度。規則是否合適，由參與者的實際需要與回饋檢查，不以誰最能忍受不便來評定認真程度。"
+    ]
+  },
+  "misreadings": [
+    "節不等於苛刻節食、剝奪休息或壓縮基本生活需要；本文不提供健康與財務處方。",
+    "古代吉凶不能代替規則是否公平、合法或有效的現實判斷；有問題的限制可以被詢問和修正。"
+  ],
+  "practice": [
+    "為一個反覆超出負擔的一般任務寫下合理上限，並說明它保護什麼。",
+    "檢查該界限是否也適用於提出規則的人，以及如何處理合理例外。",
+    "寫出一個需要調整限制的信號，避免把堅持本身當作唯一目標。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-59",
+      "name": "渙",
+      "paragraph": "渙幫助鬆開不必要的固結，節幫助形成合適的邊界。鬆與緊都服務具體需要，既不是所有限制都該消除，也不是限制越多越穩定。"
+    }
+  ],
+  "closing": "讀節卦時，可以問：這條界限正在幫助事情持續，還是只在證明我們能承受多少不便？",
+  "sourceIds": [
+    "zhouyi-60",
+    "legge1882-60",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1633,
+    "nonWhitespaceCharacterCount": 1855,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "節",
+  "sourceLocale": "zh",
+  "sourceContentHash": "9618e7ba583e25504b1185ca34365f2f83e854320c1adc696a0945af208ee7ac",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 節卦學習：訂下能夠持續的適當限度\n\n合適的界線能幫助事情持續；限制若過度嚴苛，也需要及時調整。\n\n節卦並不把節制等同於越少越好。初九不出戶庭無咎，九二不出門庭卻凶；安節、甘節與苦節又有不同結果。相似動作因處境不同而不同，說明界限的價值在於是否合宜，而不在於限制看起來有多嚴格。\n\n節是傳統文王序第60卦，卦符䷻，下卦兌☱、上卦坎☵，傳統取象分別為澤與水。爻從最下方往上數，依次為初九、九二、六三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 1 1 0 0 1 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━ ━━━━  六三\n━━━━━━━━━  九二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n節：亨。苦節不可貞。\n\nLegge 將節聯繫到分節、約束與制度，並明確解釋過於嚴酷的規定不能長久維持。卦辭一開始就為節制劃出界限，而不是把受苦當成正確的證明。\n\n現代學習可以把時間、精力、承諾與共同資源安排得清楚。設限的目的是使重要事情可持續，也減少相互誤解；如果限制不斷損害基本需要，就應該檢查和調整，而非只要求更強的忍耐。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》說苦節之道窮，又談節以制度、不傷財、不害民；《象傳》以澤上有水取象，提出制數度、議德行。傳文將限制與適度、通達聯繫起來。\n\n本文用於日常學習和協作，不提出個人財務或醫療做法。可以觀察規則是否清楚、負擔是否相稱、是否有處理例外的方式，而不是只用執行得最嚴格的人作為標準。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初九 · 條件不合適時，暫停推進有意義\n\n不出戶庭，无咎。\n\n初九沒有走出戶庭，Legge 將其解釋為此時應謹慎守住行動範圍。它不等於任何場合都要閉門不出。\n\n收到一個資訊不完整的請求，可以先核實再承諾。這個界限幫助避免草率，也應說明自己還需要知道什麼，而不是讓對方猜測沉默的含義。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 同樣的停留，也可能錯過該行動的時候\n\n不出門庭，凶。\n\n九二同樣不出，卻得到不同判斷。Legge 明確區分應該行動時仍然不動的情況。\n\n如果必要資訊已經清楚，自己又有責任回應，就不能一直以謹慎為由拖延。規則需要幫助判斷時機，而不是成為回避行動的固定藉口。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六三 · 看見缺少限度造成的後果\n\n不節若，則嗟若，无咎。\n\n不節而後嘆息，Legge 將無咎解釋為無可歸咎於他人；《小象》也追問這種嘆息還能責怪誰。它不是說毫無節制不會有問題。\n\n接下太多一般任務後，可以承認當初沒有估量容量，重新安排並溝通。承擔能負責的部分即可，不必把一切困難都變成對自己的全面否定。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 讓界限成為能夠安住的安排\n\n安節，亨。\n\n安節在 Legge 的解釋中是平靜自然地遵循合宜限制，減少持續的勉強。\n\n例如給討論設定清楚長度，並預留記錄未完問題的辦法。參與者知道什麼時候結束、之後如何繼續，限制就可能帶來安心，而不是只有被打斷的感覺。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 好的規則讓人看得見其作用\n\n甘節，吉；往有尚。\n\n甘節的甘與上爻苦形成鮮明對照。Legge 將其讀為制定令人能夠接受的約束，同時強調自身也按規則行事。\n\n提出共同規則的人可以說明目的、聽取影響，並承擔相應約束。當人知道限制在保護什麼，就更容易判斷它是否值得遵循和如何改進。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 嚴格過頭時，需要修正的可能是規則\n\n苦節，貞凶，悔亡。\n\n苦節在末爻受到明確警示，Legge 認為過度嚴苛會產生不良後果，同時保留後來改正的可能。\n\n若一個安排長期讓人無法滿足基本需要，應重新檢查。不能把所有不適都解釋成缺乏意志力，也不能因為已經堅持很久，就拒絕承認限制本身可能不合適。\n\n參考來源: [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027), [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 為一個興趣小組安排可持續的討論時間\n\n原創現代情境\n\n一個小組每次討論都會超時，成員漸漸難以參加。主持人提出約定結束時間，同時讓大家提前提交重點問題，並為未討論的內容留下一次繼續的機會。\n\n執行後，大家發現某些活動確實需要更長時間，於是提前說明並讓成員自由選擇是否參加延長部分。約定不再靠臨場情緒決定，也沒有僵硬到任何變化都不能容納。\n\n節卦的學習在這裡著重於清楚而可持續的限度。規則是否合適，由參與者的實際需要與回饋檢查，不以誰最能忍受不便來評定認真程度。\n\n## 避免誤讀\n\n- 節不等於苛刻節食、剝奪休息或壓縮基本生活需要；本文不提供健康與財務處方。\n\n- 古代吉凶不能代替規則是否公平、合法或有效的現實判斷；有問題的限制可以被詢問和修正。\n\n## 三個練習\n\n1. 為一個反覆超出負擔的一般任務寫下合理上限，並說明它保護什麼。\n\n2. 檢查該界限是否也適用於提出規則的人，以及如何處理合理例外。\n\n3. 寫出一個需要調整限制的信號，避免把堅持本身當作唯一目標。\n\n## 延伸閱讀\n\n渙 (hexagram-59): 渙幫助鬆開不必要的固結，節幫助形成合適的邊界。鬆與緊都服務具體需要，既不是所有限制都該消除，也不是限制越多越穩定。\n\n讀節卦時，可以問：這條界限正在幫助事情持續，還是只在證明我們能承受多少不便？\n\n## 參考來源\n\n- [zhouyi-60](https://zh.wikisource.org/w/index.php?title=周易/節&oldid=2405027)\n\n- [legge1882-60](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-60 · SHA256 9618e7ba583e25504b1185ca34365f2f83e854320c1adc696a0945af208ee7ac\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

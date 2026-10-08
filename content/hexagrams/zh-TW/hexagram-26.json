@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-26",
+  "locale": "zh-TW",
+  "kingWenNumber": 26,
+  "name": "大畜",
+  "pinyin": "Dà Xù",
+  "englishName": "Dà Xù — Great Accumulation",
+  "unicode": "䷙",
+  "codePoint": "U+4DD9",
+  "lowerTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "gen",
+    "name": "艮",
+    "image": "山",
+    "symbol": "☶",
+    "linesBottomUp": [
+      0,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    1
+  ],
+  "title": "大畜卦導讀：讓累積的力量成為能承擔的本領",
+  "plainSummary": "有力量時，先學會約束與練習，讓累積真正成為承擔事情的能力。",
+  "introduction": [
+    "知道很多事、投入很多時間，不一定就能處理複雜任務。大畜把累積與約束放在一起：能前進，也能停下來；能學習前人的經驗，也能在適當條件下承擔新的行動。它不是「囤得越多越好」的口號。"
+  ],
+  "identityText": "大畜是傳統文王序第26卦，卦符䷙，下卦乾☰、上卦艮☶，傳統取象分別為天與山。爻從最下方數起，依次為初九、九二、九三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "大畜：利貞，不家食吉，利涉大川。",
+    "paragraphs": [
+      "Legge 明確討論畜的約束與積累兩義，把不家食放在古代出仕、得到供養的語境中理解；涉川仍是面對重大行程的意象。這裡不能簡單改成出門吃飯就吉利。",
+      "現代可以借此思考，知識和能力如何走出個人收藏，變成能服務真實事情的本領。走出去之前需要準備，準備也應有其要承擔的方向。"
+    ],
+    "sourceRefs": [
+      "zhouyi-26",
+      "legge1882-26"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《彖傳》談能止健與日新其德；《象傳》取天在山中之象，強調多識前言往行以畜德。前人的言行在這裡成為學習材料。",
+      "今天讀經驗、看案例，可以問它們在什麼條件下成立，再透過練習核實。收藏很多資料不等於理解，照搬前人的選擇也不等於已經獲得判斷。"
+    ],
+    "sourceRefs": [
+      "zhouyi-26",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "有厲，利已。",
+      "focus": "知道何時先停止",
+      "paragraphs": [
+        "已有危險，適宜停止，是 Legge 對開頭的明確讀法。停止在這裡可以是一種有依據的動作。",
+        "接到超出準備程度的任務時，可以先確認條件，不必只為顯得有能力便答應。推遲或拒絕應說明實際限度，而不是任憑焦慮決定所有事。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "輿說輹。",
+      "focus": "行動條件未齊時不強行推進",
+      "paragraphs": [
+        "車的部件脫開，使車不能照原樣前行。Legge 借這一圖像說明受到約束的移動；古代車件的具體結構不宜隨意現代化。",
+        "一個關鍵資料尚未確認時，可以先完成其他準備。知道缺少什麼，比反覆催促自己快一點更接近解決問題。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "良馬逐，利艱貞，吉。日閑輿衛，利有攸往。",
+      "focus": "把練習與實際行程連接",
+      "paragraphs": [
+        "良馬、駕車與護衛的訓練共同出現。Legge 強調每天練習相關能力，同時認清行程的困難。",
+        "例如準備主持一次討論，可以演練開場、時間分配和遇到疑問怎樣回應。練習應接近真實任務，而不只是重複最熟悉、最容易得到滿足的部分。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "童牛之牿，元吉。",
+      "focus": "約束可以在問題尚小時建立",
+      "paragraphs": [
+        "牿在所選傳統讀法中是加在幼牛角部的木具，Legge 將它用作預先約束的意象。這裡屬於古代畜養場景。",
+        "現代類比只討論提前建立合宜條件，例如共同寫清規則、設置能及時回饋的步驟；不提供動物處理方法，也不將馴畜比喻用來控制人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "豶豕之牙，吉。",
+      "focus": "處理原因，不只對抗表面",
+      "paragraphs": [
+        "豶豕是已去勢之豬，牙仍在，卻在傳統解釋中被用來說明危險動力受到改變。Legge 以此展開約束的思路。",
+        "現代學習可以問，重複問題背後是否有可調整的條件，而非每次只與同一表面現象對抗。這個類比不允許對人使用強制或傷害，也不把古代畜養判斷當現代科學。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "何天之衢，亨。",
+      "focus": "空間打開後，讓積累得到運用",
+      "paragraphs": [
+        "天之衢使末爻出現寬闊通路。Legge 將其讀為約束階段已過，力量有更充分的施展空間。",
+        "準備足夠時，可以接受一項範圍清楚的真實任務，讓積累經受回饋。永遠只準備而不嘗試，也可能使學習與實際需要失去聯繫。"
+      ],
+      "sourceRefs": [
+        "zhouyi-26",
+        "legge1882-26"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "從蒐集資料到真正向人講解",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位學習者收藏了大量地方史資料，卻還不能向別人講清一條街的變化。她先選定一個小範圍，核對來源，將故事中不確定的部分分開，並請熟悉主題的人試聽。",
+      "試講讓她發現，問題不在資料少，而在順序與術語不清。她據此修改，又確認場地時間和聽眾需要，最後承擔一次簡短講解。",
+      "大畜在這個例子裡既是收束，也是積累與施展。成效來自理解、練習和現實回饋，不能用收藏數量代替。"
+    ]
+  },
+  "misreadings": [
+    "大畜不等於壓抑一切行動，最後也有通路；準備與實踐應彼此檢驗。",
+    "牛、豬與車的古代圖像不提供安全、馴養或控制他人的實際方法。本卦也不能用於投資持有、健康或事業成功的預測。"
+  ],
+  "practice": [
+    "選一項你正在積累的知識，寫出它要幫助完成的具體任務。",
+    "找一次接近真實任務的小練習，檢查哪裡仍需補足。",
+    "分別列出開始行動的必要條件，以及無需繼續增加的準備。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-09",
+      "name": "小畜",
+      "paragraph": "小畜可以幫助觀察有限範圍內的約束與修整，大畜更展開較充分的積累及其運用。它們不只是金額或規模的小與大，具體爻象和解釋都要分別讀。"
+    }
+  ],
+  "closing": "讀大畜卦時，可以問：我積累的東西，已經怎樣改變了自己實際做事的能力？",
+  "sourceIds": [
+    "zhouyi-26",
+    "legge1882-26",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六四採用底本明列的“牿”異文，頁面正文另作“告”；九二保留該頁“輹”，九三保留該版本中的“吉”。",
+  "counts": {
+    "chineseCharacterCount": 1764,
+    "nonWhitespaceCharacterCount": 2013,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "大畜",
+  "sourceLocale": "zh",
+  "sourceContentHash": "134673d870f3f5b965e7bc2cc7fbde35357e51faa3d56a3851df6af7097868d5",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 大畜卦導讀：讓累積的力量成為能承擔的本領\n\n有力量時，先學會約束與練習，讓累積真正成為承擔事情的能力。\n\n知道很多事、投入很多時間，不一定就能處理複雜任務。大畜把累積與約束放在一起：能前進，也能停下來；能學習前人的經驗，也能在適當條件下承擔新的行動。它不是「囤得越多越好」的口號。\n\n## 先認識這一卦\n\n大畜是傳統文王序第26卦，卦符䷙，下卦乾☰、上卦艮☶，傳統取象分別為天與山。爻從最下方數起，依次為初九、九二、九三、六四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━━━━━  上九\n━━  ━━  六五\n━━  ━━  六四\n━━━━━━  九三\n━━━━━━  九二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 大畜：利貞，不家食吉，利涉大川。\n\nLegge 明確討論畜的約束與積累兩義，把不家食放在古代出仕、得到供養的語境中理解；涉川仍是面對重大行程的意象。這裡不能簡單改成出門吃飯就吉利。\n\n現代可以借此思考，知識和能力如何走出個人收藏，變成能服務真實事情的本領。走出去之前需要準備，準備也應有其要承擔的方向。\n\n[zhouyi-26; legge1882-26]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《彖傳》談能止健與日新其德；《象傳》取天在山中之象，強調多識前言往行以畜德。前人的言行在這裡成為學習材料。\n\n今天讀經驗、看案例，可以問它們在什麼條件下成立，再透過練習核實。收藏很多資料不等於理解，照搬前人的選擇也不等於已經獲得判斷。\n\n[zhouyi-26; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 知道何時先停止\n\n> 有厲，利已。\n\n已有危險，適宜停止，是 Legge 對開頭的明確讀法。停止在這裡可以是一種有依據的動作。\n\n接到超出準備程度的任務時，可以先確認條件，不必只為顯得有能力便答應。推遲或拒絕應說明實際限度，而不是任憑焦慮決定所有事。\n\n[zhouyi-26; legge1882-26]\n\n### 九二 · 行動條件未齊時不強行推進\n\n> 輿說輹。\n\n車的部件脫開，使車不能照原樣前行。Legge 借這一圖像說明受到約束的移動；古代車件的具體結構不宜隨意現代化。\n\n一個關鍵資料尚未確認時，可以先完成其他準備。知道缺少什麼，比反覆催促自己快一點更接近解決問題。\n\n[zhouyi-26; legge1882-26]\n\n### 九三 · 把練習與實際行程連接\n\n> 良馬逐，利艱貞，吉。日閑輿衛，利有攸往。\n\n良馬、駕車與護衛的訓練共同出現。Legge 強調每天練習相關能力，同時認清行程的困難。\n\n例如準備主持一次討論，可以演練開場、時間分配和遇到疑問怎樣回應。練習應接近真實任務，而不只是重複最熟悉、最容易得到滿足的部分。\n\n[zhouyi-26; legge1882-26]\n\n### 六四 · 約束可以在問題尚小時建立\n\n> 童牛之牿，元吉。\n\n牿在所選傳統讀法中是加在幼牛角部的木具，Legge 將它用作預先約束的意象。這裡屬於古代畜養場景。\n\n現代類比只討論提前建立合宜條件，例如共同寫清規則、設置能及時回饋的步驟；不提供動物處理方法，也不將馴畜比喻用來控制人。\n\n[zhouyi-26; legge1882-26]\n\n### 六五 · 處理原因，不只對抗表面\n\n> 豶豕之牙，吉。\n\n豶豕是已去勢之豬，牙仍在，卻在傳統解釋中被用來說明危險動力受到改變。Legge 以此展開約束的思路。\n\n現代學習可以問，重複問題背後是否有可調整的條件，而非每次只與同一表面現象對抗。這個類比不允許對人使用強制或傷害，也不把古代畜養判斷當現代科學。\n\n[zhouyi-26; legge1882-26]\n\n### 上九 · 空間打開後，讓積累得到運用\n\n> 何天之衢，亨。\n\n天之衢使末爻出現寬闊通路。Legge 將其讀為約束階段已過，力量有更充分的施展空間。\n\n準備足夠時，可以接受一項範圍清楚的真實任務，讓積累經受回饋。永遠只準備而不嘗試，也可能使學習與實際需要失去聯繫。\n\n[zhouyi-26; legge1882-26]\n\n## 從蒐集資料到真正向人講解\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一位學習者收藏了大量地方史資料，卻還不能向別人講清一條街的變化。她先選定一個小範圍，核對來源，將故事中不確定的部分分開，並請熟悉主題的人試聽。\n\n試講讓她發現，問題不在資料少，而在順序與術語不清。她據此修改，又確認場地時間和聽眾需要，最後承擔一次簡短講解。\n\n大畜在這個例子裡既是收束，也是積累與施展。成效來自理解、練習和現實回饋，不能用收藏數量代替。\n\n## 常見誤讀\n\n1. 大畜不等於壓抑一切行動，最後也有通路；準備與實踐應彼此檢驗。\n\n2. 牛、豬與車的古代圖像不提供安全、馴養或控制他人的實際方法。本卦也不能用於投資持有、健康或事業成功的預測。\n\n## 三個練習\n\n1. 選一項你正在積累的知識，寫出它要幫助完成的具體任務。\n\n2. 找一次接近真實任務的小練習，檢查哪裡仍需補足。\n\n3. 分別列出開始行動的必要條件，以及無需繼續增加的準備。\n\n## 延伸閱讀\n\n### 小畜 (hexagram-09)\n\n小畜可以幫助觀察有限範圍內的約束與修整，大畜更展開較充分的積累及其運用。它們不只是金額或規模的小與大，具體爻象和解釋都要分別讀。\n\n## 結語\n\n讀大畜卦時，可以問：我積累的東西，已經怎樣改變了自己實際做事的能力？\n\n## 版本說明\n\n六四採用底本明列的“牿”異文，頁面正文另作“告”；九二保留該頁“輹”，九三保留該版本中的“吉”。\n\n## 資料來源\n\n- [zhouyi-26: 周易·大畜](https://zh.wikisource.org/w/index.php?title=周易/大畜&oldid=10646304)\n\n- [legge1882-26: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 26, chapter XXVI, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

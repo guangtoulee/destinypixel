@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-06",
+  "locale": "en",
+  "kingWenNumber": 6,
+  "name": "讼",
+  "pinyin": "Sòng",
+  "englishName": "Sòng — Conflict",
+  "unicode": "䷅",
+  "codePoint": "U+4DC5",
+  "lowerTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+  ],
+  "title": "Song (Conflict): establish what the disagreement needs to resolve",
+  "plainSummary": "Even when you believe you are right, distinguish the facts, your purpose and the cost of the dispute before deciding how to respond.",
+  "introduction": [
+    "A dispute often begins with a small difference and later becomes something neither side feels able to stop. Song does not declare victory for a disputant simply because they believe themselves sincere. It brings together obstruction, caution, fair judgment and the cost of carrying a dispute to its limit. As a learning text, it can help shift attention from “I must win” to “How can this matter actually be resolved?”"
+  ],
+  "identityText": "Song is hexagram 6 in the traditional King Wen sequence, written ䷅. Its lower trigram is Kan ☵ and its upper trigram is Qian ☰, traditionally associated with water and heaven. Count from the bottom: first six, nine in the second place, six in the third, nine in the fourth, nine in the fifth and top nine. Unbroken lines are yang and broken lines are yin; nine and six identify these line forms rather than adding lines.",
+  "guaci": {
+    "label": "Judgment of the hexagram",
+    "classical": "訟：有孚，窒，惕，中吉，終凶。利見大人，不利涉大川。",
+    "paragraphs": [
+      "In Legge’s interpretation, even a sincerely motivated dispute encounters obstruction. Caution and restraint are favourable, while pursuing the matter to its bitter end receives a warning. Meeting a great person points toward a weighty judgment; the unfavourable crossing of a great river cautions against taking on substantial additional risk in this situation.",
+      "This is an interpretation of a historical divinatory statement, not legal advice. In an ordinary disagreement today, look for facts and procedures both sides can recognise. Where rights, mistreatment or a formal dispute are involved, the hexagram cannot require either party to abandon seeking help."
+    ],
+    "sourceRefs": [
+      "zhouyi-06",
+      "legge1882-06"
+    ],
+    "classicalTranslation": "Song: sincerity meets obstruction. Be watchful; restraint brings good fortune, while pursuing the dispute to the end brings misfortune. Meeting a person of stature is beneficial; crossing the great river is not."
+  },
+  "tenWings": {
+    "label": "Interpretation in the Ten Wings",
+    "paragraphs": [
+      "The Tuan and Xiang commentaries belong to the Yizhuan, among the writings commonly called the Ten Wings. The following discussion distinguishes commentary from the hexagram and line statements, then identifies the modern learning application.",
+      "The Xiang explains Song through heaven and water moving apart, then directs attention to planning at the beginning of an undertaking. Many disagreements concern conditions that were not made clear at the outset.",
+      "Learning from Song therefore involves more than calming down after an argument. It can mean clarifying deliverables, attribution, timing and the handling of changes before work begins. These are modern applications; the ancient text does not itself provide a contract template."
+    ],
+    "sourceRefs": [
+      "zhouyi-06",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "不永所事，小有言，終吉。",
+      "focus": "Not every argument needs to be prolonged",
+      "paragraphs": [
+        "Legge reads this line as refusing to let the disputed matter become protracted, even when some criticism follows, rather than allowing it to grow further.",
+        "Once the facts have been explained, answering every personal comment may not help. End discussion that contributes nothing to resolution while keeping necessary records. Stopping an argument does not mean denying your needs."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "Do not prolong the affair. There is some criticism, but good fortune in the end."
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "不克訟，歸而逋，其邑人三百戶无眚。",
+      "focus": "Recognise the limits of the current way of disputing",
+      "paragraphs": [
+        "The text describes failing to prevail, returning and withdrawing, and mentions the inhabitants of a settlement. Legge understands the restraint through retreat to a smaller place.",
+        "A practical parallel is ending a form of argument that only draws more people into the consequences, then presenting clear facts instead. Three hundred households is not a formula for calculating real gains and losses, and withdrawal cannot become a reason for someone else to coerce you."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "Unable to prevail in the dispute, return and withdraw. The settlement’s three hundred households escape harm."
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "食舊德，貞厲，終吉。或從王事，无成。",
+      "focus": "Attend first to responsibilities already established",
+      "paragraphs": [
+        "In Legge’s explanation, living on former virtue concerns support and position arising from earlier service. The line then introduces royal work and not claiming accomplishment for oneself.",
+        "A modern starting point is to complete the part you have clearly undertaken, without turning every responsibility into a bargaining chip for credit. This does not require accepting the appropriation of your contribution. Attribution and boundaries that need clarification should still be discussed."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "Live on the support of former virtue. Be steadfast amid danger; good fortune comes in the end. If serving the king’s work, do not claim its achievement."
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "不克訟，復即命渝，安貞吉。",
+      "focus": "Allow yourself to change how you approach the dispute",
+      "paragraphs": [
+        "An inability to prevail appears again, followed by returning, changing and settling. Legge understands a change in the intention to contend and a return to appropriate firmness.",
+        "Revising a view when new evidence appears is not a loss of dignity. Explain where your judgment was mistaken while preserving the matters still unresolved. The whole issue need not be treated as either total victory or total defeat."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "Unable to prevail, return and change your course. Resting in steadfast rightness brings good fortune."
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "訟，元吉。",
+      "focus": "Make room for a fair judgment",
+      "paragraphs": [
+        "The statement is very short. The Xiang explains its good fortune through being centred and correct; Legge’s notes also connect the fifth position with a great person capable of sound judgment.",
+        "A modern parallel is a mutually accepted coordinator and a clear procedure. Someone is not necessarily fair merely because they support your position, and this line cannot establish that a particular lawsuit will be won."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "The dispute: great good fortune."
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "或錫之鞶帶，終朝三褫之。",
+      "focus": "A victory may prove unstable",
+      "paragraphs": [
+        "The ceremonial belt is a bestowed sign of distinction, yet the text describes its repeated removal within a short time. Legge preserves the contrast between honour gained and lost again.",
+        "An argument can be won in words while damaging trust or leaving the undertaking unable to continue. Before closing, ask whether you have obtained a solution or only temporarily overpowered someone else. That question does not require a prediction."
+      ],
+      "sourceRefs": [
+        "zhouyi-06",
+        "legge1882-06"
+      ],
+      "classicalTranslation": "A ceremonial belt may be bestowed, yet taken away three times before the morning ends."
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "A disagreement about podcast credits",
+    "label": "Original modern learning situation",
+    "paragraphs": [
+      "Two friends make a podcast together. One assumes that editing the programme should put their name first; the other considers the topic and interviews the main contribution. They begin comparing who worked harder, moving further from their original purpose.",
+      "They first list the work actually completed and acknowledge that they never agreed on the order of credits. They can then discuss a reasonable description for this episode and a clear arrangement for the next, asking a person both trust to help organise the discussion if necessary.",
+      "This does not guarantee immediate agreement, but makes the disagreement more concrete and discussable. Formal rights or interests still require the appropriate professional channels; the hexagram cannot decide them for either person."
+    ]
+  },
+  "misreadings": [
+    "The warning about an unfavourable ending concerns escalation; it does not require a person who has been harmed to remain silent. Seeking support and protecting rights may be necessary actions.",
+    "Song does not identify bad people or predict legal outcomes, compensation amounts or an inevitable breakdown of a relationship."
+  ],
+  "practice": [
+    "Describe the disputed issue in one sentence without evaluating anyone’s character.",
+    "List the confirmed facts, the interpretations still contested and the result you actually want.",
+    "Check whether both parties can accept a way of discussing the matter. If not, first identify the kind of help needed."
+  ],
+  "related": [
+    {
+      "id": "hexagram-05",
+      "name": "Xu",
+      "paragraph": "Xu directs attention to the conditions of waiting; Song helps recognise how disputes form. A long wait may produce impatience, but impatience is not evidence that turns a question directly into an accusation."
+    }
+  ],
+  "closing": "After reading Song, ask whether your next response will make the problem clearer or merely prolong the argument.",
+  "sourceIds": [
+    "zhouyi-06",
+    "legge1882-06",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 78,
+    "nonWhitespaceCharacterCount": 6795,
+    "countBasis": "Complete translated reader-facing prose, retained Chinese classical quotations, and original editorial glosses; excludes source list, metadata and diagram"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "Song · Conflict",
+  "sourceLocale": "zh",
+  "sourceContentHash": "baa27fd905799199db66fd2993309b308a3038690fe852309fc8585ab0a2e0c5",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# Song (Conflict): establish what the disagreement needs to resolve\n\nIn one sentence: Even when you believe you are right, distinguish the facts, your purpose and the cost of the dispute before deciding how to respond.\n\nChinese classical passages are retained below. Their English renderings are original editorial glosses, not quotations from a named translation.\n\nA dispute often begins with a small difference and later becomes something neither side feels able to stop. Song does not declare victory for a disputant simply because they believe themselves sincere. It brings together obstruction, caution, fair judgment and the cost of carrying a dispute to its limit. As a learning text, it can help shift attention from “I must win” to “How can this matter actually be resolved?”\n\n## The figure\n\n06 · ䷅ · Song · Conflict · Sòng\n\nSong is hexagram 6 in the traditional King Wen sequence, written ䷅. Its lower trigram is Kan ☵ and its upper trigram is Qian ☰, traditionally associated with water and heaven. Count from the bottom: first six, nine in the second place, six in the third, nine in the fourth, nine in the fifth and top nine. Unbroken lines are yang and broken lines are yin; nine and six identify these line forms rather than adding lines.\n\n```\n━━━━━━━  上九\n━━━━━━━  九五\n━━━━━━━  九四\n━━━ ━━━  六三\n━━━━━━━  九二\n━━━ ━━━  初六\n```\n\n## Judgment: the received text\n\n訟：有孚，窒，惕，中吉，終凶。利見大人，不利涉大川。\n\nSong: sincerity meets obstruction. Be watchful; restraint brings good fortune, while pursuing the dispute to the end brings misfortune. Meeting a person of stature is beneficial; crossing the great river is not.\n\nIn Legge’s interpretation, even a sincerely motivated dispute encounters obstruction. Caution and restraint are favourable, while pursuing the matter to its bitter end receives a warning. Meeting a great person points toward a weighty judgment; the unfavourable crossing of a great river cautions against taking on substantial additional risk in this situation.\n\nThis is an interpretation of a historical divinatory statement, not legal advice. In an ordinary disagreement today, look for facts and procedures both sides can recognise. Where rights, mistreatment or a formal dispute are involved, the hexagram cannot require either party to abandon seeking help.\n\n## Reading the Ten Wings\n\nThe Tuan and Xiang commentaries belong to the Yizhuan, among the writings commonly called the Ten Wings. The following discussion distinguishes commentary from the hexagram and line statements, then identifies the modern learning application.\n\nThe Xiang explains Song through heaven and water moving apart, then directs attention to planning at the beginning of an undertaking. Many disagreements concern conditions that were not made clear at the outset.\n\nLearning from Song therefore involves more than calming down after an argument. It can mean clarifying deliverables, attribution, timing and the handling of changes before work begins. These are modern applications; the ancient text does not itself provide a contract template.\n\n## The six lines, from bottom to top\n\n### 初六 · Not every argument needs to be prolonged\n\n不永所事，小有言，終吉。\n\nDo not prolong the affair. There is some criticism, but good fortune in the end.\n\nLegge reads this line as refusing to let the disputed matter become protracted, even when some criticism follows, rather than allowing it to grow further.\n\nOnce the facts have been explained, answering every personal comment may not help. End discussion that contributes nothing to resolution while keeping necessary records. Stopping an argument does not mean denying your needs.\n\n### 九二 · Recognise the limits of the current way of disputing\n\n不克訟，歸而逋，其邑人三百戶无眚。\n\nUnable to prevail in the dispute, return and withdraw. The settlement’s three hundred households escape harm.\n\nThe text describes failing to prevail, returning and withdrawing, and mentions the inhabitants of a settlement. Legge understands the restraint through retreat to a smaller place.\n\nA practical parallel is ending a form of argument that only draws more people into the consequences, then presenting clear facts instead. Three hundred households is not a formula for calculating real gains and losses, and withdrawal cannot become a reason for someone else to coerce you.\n\n### 六三 · Attend first to responsibilities already established\n\n食舊德，貞厲，終吉。或從王事，无成。\n\nLive on the support of former virtue. Be steadfast amid danger; good fortune comes in the end. If serving the king’s work, do not claim its achievement.\n\nIn Legge’s explanation, living on former virtue concerns support and position arising from earlier service. The line then introduces royal work and not claiming accomplishment for oneself.\n\nA modern starting point is to complete the part you have clearly undertaken, without turning every responsibility into a bargaining chip for credit. This does not require accepting the appropriation of your contribution. Attribution and boundaries that need clarification should still be discussed.\n\n### 九四 · Allow yourself to change how you approach the dispute\n\n不克訟，復即命渝，安貞吉。\n\nUnable to prevail, return and change your course. Resting in steadfast rightness brings good fortune.\n\nAn inability to prevail appears again, followed by returning, changing and settling. Legge understands a change in the intention to contend and a return to appropriate firmness.\n\nRevising a view when new evidence appears is not a loss of dignity. Explain where your judgment was mistaken while preserving the matters still unresolved. The whole issue need not be treated as either total victory or total defeat.\n\n### 九五 · Make room for a fair judgment\n\n訟，元吉。\n\nThe dispute: great good fortune.\n\nThe statement is very short. The Xiang explains its good fortune through being centred and correct; Legge’s notes also connect the fifth position with a great person capable of sound judgment.\n\nA modern parallel is a mutually accepted coordinator and a clear procedure. Someone is not necessarily fair merely because they support your position, and this line cannot establish that a particular lawsuit will be won.\n\n### 上九 · A victory may prove unstable\n\n或錫之鞶帶，終朝三褫之。\n\nA ceremonial belt may be bestowed, yet taken away three times before the morning ends.\n\nThe ceremonial belt is a bestowed sign of distinction, yet the text describes its repeated removal within a short time. Legge preserves the contrast between honour gained and lost again.\n\nAn argument can be won in words while damaging trust or leaving the undertaking unable to continue. Before closing, ask whether you have obtained a solution or only temporarily overpowered someone else. That question does not require a prediction.\n\n## An original modern example · A disagreement about podcast credits\n\nTwo friends make a podcast together. One assumes that editing the programme should put their name first; the other considers the topic and interviews the main contribution. They begin comparing who worked harder, moving further from their original purpose.\n\nThey first list the work actually completed and acknowledge that they never agreed on the order of credits. They can then discuss a reasonable description for this episode and a clear arrangement for the next, asking a person both trust to help organise the discussion if necessary.\n\nThis does not guarantee immediate agreement, but makes the disagreement more concrete and discussable. Formal rights or interests still require the appropriate professional channels; the hexagram cannot decide them for either person.\n\n## Misreadings to avoid\n\n- The warning about an unfavourable ending concerns escalation; it does not require a person who has been harmed to remain silent. Seeking support and protecting rights may be necessary actions.\n\n- Song does not identify bad people or predict legal outcomes, compensation amounts or an inevitable breakdown of a relationship.\n\n## Practice\n\n1. Describe the disputed issue in one sentence without evaluating anyone’s character.\n\n2. List the confirmed facts, the interpretations still contested and the result you actually want.\n\n3. Check whether both parties can accept a way of discussing the matter. If not, first identify the kind of help needed.\n\n## Read alongside\n\n**Xu (hexagram-05)**\n\nXu directs attention to the conditions of waiting; Song helps recognise how disputes form. A long wait may produce impatience, but impatience is not evidence that turns a question directly into an accusation.\n\nAfter reading Song, ask whether your next response will make the problem clearer or merely prolong the argument.\n\n## Sources\n\n- [周易·訟](https://zh.wikisource.org/w/index.php?title=周易/訟&oldid=10645409)\n\n- [The Yî King](https://sacred-texts.com/book/the-i-ching/shell/vi-the-sung-hexagram)\n\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}

@@ -10204,3 +10204,6 @@ body.report-exporting .report-header {
 .atelier-start { display:inline-flex; align-items:center; min-height:44px; margin-top:14px; padding:10px 16px; border-radius:10px; background:#705170; color:white; font-size:14px; }
 #choose-stones { scroll-margin-top:20px; }
 .atelier-site [data-section-reading] { width:min(1120px,calc(100% - 32px)); }
+
+.oracle-learning-link,.oracle-library-link { display:inline-flex;align-items:center;min-height:44px;line-height:1.6;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere; }
+.oracle-learning-link:focus-visible,.oracle-library-link:focus-visible { outline:3px solid currentColor;outline-offset:4px; }

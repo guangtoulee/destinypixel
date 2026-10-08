@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-25",
+  "locale": "zh-TW",
+  "kingWenNumber": 25,
+  "name": "无妄",
+  "pinyin": "Wú Wàng",
+  "englishName": "Wú Wàng — Innocence",
+  "unicode": "䷘",
+  "codePoint": "U+4DD8",
+  "lowerTrigram": {
+    "id": "zhen",
+    "name": "震",
+    "image": "雷",
+    "symbol": "☳",
+    "linesBottomUp": [
+      1,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "qian",
+    "name": "乾",
+    "image": "天",
+    "symbol": "☰",
+    "linesBottomUp": [
+      1,
+      1,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+  ],
+  "title": "無妄卦導讀：誠實做事，也承認結果不全由自己決定",
+  "plainSummary": "依事實和自己的責任行動，少一些沒有根據的猜想；遇到意外，也別把所有結果都怪在自己身上。",
+  "introduction": [
+    "認真做事卻碰上計畫外的麻煩，常讓人忍不住尋找某個絕對原因。無妄卦傳統上有不妄為、真誠的解釋，也明確寫到無妄之災：不順遂並不一定代表當事人做錯了什麼。因此，它適合用來反思行動依據，以及無法掌控的條件。"
+  ],
+  "identityText": "無妄是傳統文王序第25卦，卦符䷘，下卦震☳、上卦乾☰，傳統取象分別為雷與天。爻從最下方數起，依次為初九、六二、六三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "无妄：元亨。利貞。其匪正有眚，不利有攸往。",
+    "paragraphs": [
+      "Legge 將妄聯繫到魯莽與不真誠，無妄則偏向樸實、沒有矯詐；但卦辭仍強調正當，偏離後有眚。這裡不是說只要相信自己動機純粹，就可以任意行動。",
+      "現代學習可以把想像與已知事實分開。一個沒有惡意的人仍可能判斷錯誤，也可能遭遇與自身過錯無關的損失。行動要負責，結果卻不能簡單等同於個人德行的成績單。"
+    ],
+    "sourceRefs": [
+      "zhouyi-25",
+      "legge1882-25"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。",
+      "《象傳》以天下雷行、萬物自然生發取象，談順應時序以養育萬物；《彖傳》同樣把行動與正聯繫起來。它們是傳統的自然與倫理解釋。",
+      "本文借此提醒，在改變事情之前先瞭解真實條件。不能因為一個方法聽起來積極，就假定所有對象、時機與處境都適用。"
+    ],
+    "sourceRefs": [
+      "zhouyi-25",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "无妄，往吉。",
+      "focus": "從真實而清楚的行動開始",
+      "paragraphs": [
+        "Legge 把初爻讀為沒有不真誠的行為，並保留向前的吉辭。它呈現一種起步態度，卻不能替現實行動免去核實。",
+        "答應一件事之前，確認自己能做什麼，並如實說明不確定處。真誠可以體現在清楚的承諾，而不是必須立刻給出肯定回答。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "不耕穫，不菑畬，則利有攸往。",
+      "focus": "把事情本身與逐利的想像分開",
+      "paragraphs": [
+        "耕作、收穫與田地年序構成這句難解的古文。Legge 採取不專為獲利而耕作的解釋，不應把它偷換成不勞動也會有收穫。",
+        "現代聯想可以是先把正在學習的技能練明白，暫時放下對立即回報的催促。但合理考慮成本與需要並非不真誠，也不必無條件為人付出。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "无妄之災，或繫之牛，行人之得，邑人之災。",
+      "focus": "意外損失不證明當事人有錯",
+      "paragraphs": [
+        "繫著的牛被行人得到，鄰里卻蒙受災害；Legge 明確把鄰人看作無辜受牽連者。它使無過也可能遭災的事實進入文本。",
+        "遇到問題先查事情怎樣發生，而不是立即尋找誰命不好或不夠善良。安慰別人時，也別用凡事有因要求受損的人先檢討品格。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "可貞，无咎。",
+      "focus": "守住已經有依據的原則",
+      "paragraphs": [
+        "這句很短，Legge 將它讀為能夠保持正確與堅定。它沒有要求為了製造變化而不斷採取新動作。",
+        "如果既有做法經過核實仍合宜，可以穩定執行，再觀察新資訊。保持原則與固執不同：有相關證據變化時，仍應重新檢查。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "无妄之疾，勿藥有喜。",
+      "focus": "把古代占辭與現代醫療嚴格分開",
+      "paragraphs": [
+        "原文確實說到無妄之疾以及不用藥的喜，Legge 也按這一古代判斷翻譯。學習文章不能刪改原句來避開難處，更不能把它當作現代醫學知識。",
+        "這條不應用來決定用藥、停藥、延遲就醫或判斷自己會自行痊癒。本文在這裡僅解釋歷史文本，不把醫療畫面轉成給現實病人的建議。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "无妄，行有眚，无攸利。",
+      "focus": "好意也可能遇到不宜行動的處境",
+      "paragraphs": [
+        "末爻仍稱無妄，卻說行有眚。Legge 據此提醒即使真誠，在相應時機繼續行動仍會失當。",
+        "看到別人遇到困難時，可以先問需要什麼，而非立即替其作決定。動機善意不能代替對方同意、實際能力與相關事實。"
+      ],
+      "sourceRefs": [
+        "zhouyi-25",
+        "legge1882-25"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "準備充分的計畫，仍可能遇上意外",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位講者認真準備了分享資料，活動當天卻因場地臨時關閉而取消。她可以檢查自己是否漏看通知，也承認有些變化不在她的控制之內；取消本身不能證明準備毫無價值。",
+      "下一步是向有關人說明已經確認的情況，妥善安排後續，而不是為了顯得負責就承諾一個尚未落實的新日期。",
+      "這個例子把責任與全能分開。無妄的學習方向，是既誠實處理自己能做的部分，也不把所有意外解釋成某個人應得的懲罰。"
+    ]
+  },
+  "misreadings": [
+    "無妄不等於毫無風險，也不保證好人總有好結果。“無妄之災”尤其不能被改寫為受害者有隱秘過錯。",
+    "九五是歷史文本，不能成為任何治療決定的依據；這卦也不用於預測醫療、投資或他人的忠誠。"
+  ],
+  "practice": [
+    "把一個擔憂分成已確認事實、合理推測與尚無依據的想像。",
+    "寫出自己能承擔的實際行動，以及確實不在控制範圍內的條件。",
+    "在準備幫助別人前，先確認對方的需要和同意。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-24",
+      "name": "復",
+      "paragraph": "復幫助修正偏離，無妄提醒不要把所有問題都假定為自己的偏離。有時需要調整，有時先承認意外並查清事實。"
+    }
+  ],
+  "closing": "讀無妄卦時，可以問：我現在的行動依據是什麼，又有哪些結果其實不能靠我的真誠單獨決定？",
+  "sourceIds": [
+    "zhouyi-25",
+    "legge1882-25",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1813,
+    "nonWhitespaceCharacterCount": 2050,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings; excluding source list, metadata, line diagram, and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "無妄",
+  "sourceLocale": "zh",
+  "sourceContentHash": "02559f4683c1bfd42c8bf3636b1656be9c34de40775ac11a2fec5656e0c0d32e",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 無妄卦導讀：誠實做事，也承認結果不全由自己決定\n\n依事實和自己的責任行動，少一些沒有根據的猜想；遇到意外，也別把所有結果都怪在自己身上。\n\n認真做事卻碰上計畫外的麻煩，常讓人忍不住尋找某個絕對原因。無妄卦傳統上有不妄為、真誠的解釋，也明確寫到無妄之災：不順遂並不一定代表當事人做錯了什麼。因此，它適合用來反思行動依據，以及無法掌控的條件。\n\n## 先認識這一卦\n\n無妄是傳統文王序第25卦，卦符䷘，下卦震☳、上卦乾☰，傳統取象分別為雷與天。爻從最下方數起，依次為初九、六二、六三、九四、九五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻由下往上編號；下圖依實際位置，由上往下顯示。\n\n```text\n━━━━━━  上九\n━━━━━━  九五\n━━━━━━  九四\n━━  ━━  六三\n━━  ━━  六二\n━━━━━━  初九\n```\n\n## 卦辭\n\n> 无妄：元亨。利貞。其匪正有眚，不利有攸往。\n\nLegge 將妄聯繫到魯莽與不真誠，無妄則偏向樸實、沒有矯詐；但卦辭仍強調正當，偏離後有眚。這裡不是說只要相信自己動機純粹，就可以任意行動。\n\n現代學習可以把想像與已知事實分開。一個沒有惡意的人仍可能判斷錯誤，也可能遭遇與自身過錯無關的損失。行動要負責，結果卻不能簡單等同於個人德行的成績單。\n\n[zhouyi-25; legge1882-25]\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，也就是通常所說的「十翼」中的篇章。以下先區分傳文與卦辭、爻辭，再說明現代學習上的應用。\n\n《象傳》以天下雷行、萬物自然生發取象，談順應時序以養育萬物；《彖傳》同樣把行動與正聯繫起來。它們是傳統的自然與倫理解釋。\n\n本文借此提醒，在改變事情之前先瞭解真實條件。不能因為一個方法聽起來積極，就假定所有對象、時機與處境都適用。\n\n[zhouyi-25; hon-sep]\n\n## 六爻：由下往上讀\n\n以下引文屬於爻辭；後面的解釋是原創學習說明。吉、無咎、有悔等屬於古代占辭的語言，不能直接當成對個人未來的保證。\n\n### 初九 · 從真實而清楚的行動開始\n\n> 无妄，往吉。\n\nLegge 把初爻讀為沒有不真誠的行為，並保留向前的吉辭。它呈現一種起步態度，卻不能替現實行動免去核實。\n\n答應一件事之前，確認自己能做什麼，並如實說明不確定處。真誠可以體現在清楚的承諾，而不是必須立刻給出肯定回答。\n\n[zhouyi-25; legge1882-25]\n\n### 六二 · 把事情本身與逐利的想像分開\n\n> 不耕穫，不菑畬，則利有攸往。\n\n耕作、收穫與田地年序構成這句難解的古文。Legge 採取不專為獲利而耕作的解釋，不應把它偷換成不勞動也會有收穫。\n\n現代聯想可以是先把正在學習的技能練明白，暫時放下對立即回報的催促。但合理考慮成本與需要並非不真誠，也不必無條件為人付出。\n\n[zhouyi-25; legge1882-25]\n\n### 六三 · 意外損失不證明當事人有錯\n\n> 无妄之災，或繫之牛，行人之得，邑人之災。\n\n繫著的牛被行人得到，鄰里卻蒙受災害；Legge 明確把鄰人看作無辜受牽連者。它使無過也可能遭災的事實進入文本。\n\n遇到問題先查事情怎樣發生，而不是立即尋找誰命不好或不夠善良。安慰別人時，也別用凡事有因要求受損的人先檢討品格。\n\n[zhouyi-25; legge1882-25]\n\n### 九四 · 守住已經有依據的原則\n\n> 可貞，无咎。\n\n這句很短，Legge 將它讀為能夠保持正確與堅定。它沒有要求為了製造變化而不斷採取新動作。\n\n如果既有做法經過核實仍合宜，可以穩定執行，再觀察新資訊。保持原則與固執不同：有相關證據變化時，仍應重新檢查。\n\n[zhouyi-25; legge1882-25]\n\n### 九五 · 把古代占辭與現代醫療嚴格分開\n\n> 无妄之疾，勿藥有喜。\n\n原文確實說到無妄之疾以及不用藥的喜，Legge 也按這一古代判斷翻譯。學習文章不能刪改原句來避開難處，更不能把它當作現代醫學知識。\n\n這條不應用來決定用藥、停藥、延遲就醫或判斷自己會自行痊癒。本文在這裡僅解釋歷史文本，不把醫療畫面轉成給現實病人的建議。\n\n[zhouyi-25; legge1882-25]\n\n### 上九 · 好意也可能遇到不宜行動的處境\n\n> 无妄，行有眚，无攸利。\n\n末爻仍稱無妄，卻說行有眚。Legge 據此提醒即使真誠，在相應時機繼續行動仍會失當。\n\n看到別人遇到困難時，可以先問需要什麼，而非立即替其作決定。動機善意不能代替對方同意、實際能力與相關事實。\n\n[zhouyi-25; legge1882-25]\n\n## 準備充分的計畫，仍可能遇上意外\n\n原創現代情境\n\n以下是為了學習而設計的現代情境。\n\n一位講者認真準備了分享資料，活動當天卻因場地臨時關閉而取消。她可以檢查自己是否漏看通知，也承認有些變化不在她的控制之內；取消本身不能證明準備毫無價值。\n\n下一步是向有關人說明已經確認的情況，妥善安排後續，而不是為了顯得負責就承諾一個尚未落實的新日期。\n\n這個例子把責任與全能分開。無妄的學習方向，是既誠實處理自己能做的部分，也不把所有意外解釋成某個人應得的懲罰。\n\n## 常見誤讀\n\n1. 無妄不等於毫無風險，也不保證好人總有好結果。“無妄之災”尤其不能被改寫為受害者有隱秘過錯。\n\n2. 九五是歷史文本，不能成為任何治療決定的依據；這卦也不用於預測醫療、投資或他人的忠誠。\n\n## 三個練習\n\n1. 把一個擔憂分成已確認事實、合理推測與尚無依據的想像。\n\n2. 寫出自己能承擔的實際行動，以及確實不在控制範圍內的條件。\n\n3. 在準備幫助別人前，先確認對方的需要和同意。\n\n## 延伸閱讀\n\n### 復 (hexagram-24)\n\n復幫助修正偏離，無妄提醒不要把所有問題都假定為自己的偏離。有時需要調整，有時先承認意外並查清事實。\n\n## 結語\n\n讀無妄卦時，可以問：我現在的行動依據是什麼，又有哪些結果其實不能靠我的真誠單獨決定？\n\n## 資料來源\n\n- [zhouyi-25: 周易·无妄](https://zh.wikisource.org/w/index.php?title=周易/无妄&oldid=10645038)\n\n- [legge1882-25: The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge) — Hexagram 25, chapter XXV, judgement, six lines and notes\n\n- [hon-sep: Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams: Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf) — U+4DC0–U+4DFF\n\n- [legge-scan-rights: Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\n經文引文保留中文底本的字形與現代標點；正文由簡體中文原創學習解讀改寫為臺灣繁體中文。英文歷史底本與中文傳世文本相互參照，近現代譯者的觀點均在文中註明。本文不能作為醫療、投資或其他專業決策的依據。\n"
+}

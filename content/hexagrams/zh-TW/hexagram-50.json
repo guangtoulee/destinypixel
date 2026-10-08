@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-50",
+  "locale": "zh-TW",
+  "kingWenNumber": 50,
+  "name": "鼎",
+  "pinyin": "Dǐng",
+  "englishName": "Dǐng — The Cauldron",
+  "unicode": "䷱",
+  "codePoint": "U+4DF1",
+  "lowerTrigram": {
+    "id": "xun",
+    "name": "巽",
+    "image": "風",
+    "symbol": "☴",
+    "linesBottomUp": [
+      0,
+      1,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "離",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+  ],
+  "title": "鼎卦學習：讓內容、承載與使用彼此配合",
+  "plainSummary": "好的內容需要穩固的支撐、妥善的處理和可靠的交付，才能真正幫助別人。",
+  "introduction": [
+    "鼎是一種烹煮與禮儀器具。鼎卦從足、腹中之實、耳寫到鉉，把容器的各部分與能否使用聯繫起來。它可以幫助我們思考轉化與供養，卻不只是“有好材料就一定有好結果”：支撐斷裂，內容再豐富也可能傾覆。"
+  ],
+  "identityText": "鼎是傳統文王序第50卦，卦符䷱，下卦巽☴、上卦離☲，傳統取象分別為風與火。爻從最下方往上數，依次為初六、九二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "鼎：元吉，亨。",
+    "paragraphs": [
+      "Legge 把鼎放在烹飪、祭祀和養人的語境中理解，又結合卦形討論器物的各部分。這些象徵解釋屬於譯者注釋，不應當作考古製造圖或唯一字義。",
+      "現代學習可以借鼎觀察內容與承載的關係：一項知識、服務或作品，需要什麼樣的組織安排才能被妥善處理和交到使用者手裡？卦辭的吉亨不保證結果，仍要具體檢查每個支持環節。"
+    ],
+    "sourceRefs": [
+      "zhouyi-50",
+      "legge1882-50"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》談以木巽火、亨飪、享帝與養賢，把器物用途擴展到古代禮制和政治秩序；《象傳》說木上有火，提出正位凝命。",
+      "本文把這些意象用於明確角色與責任的日常事務。知道誰準備、誰檢查、誰交付，有助於使內容被用好；古代等級安排並不自動成為今天應遵守的組織方式。"
+    ],
+    "sourceRefs": [
+      "zhouyi-50",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "鼎顛趾，利出否，得妾以其子，无咎。",
+      "focus": "清理舊物與歷史制度需要分開看",
+      "paragraphs": [
+        "鼎足顛倒可倒出不潔之物，隨後出現納妾因子得認可的古代家庭制度。Legge 保留了兩種圖像，不能只摘前半句，把後半句假裝不存在。",
+        "現代類比僅取先清除妨礙使用之物，例如整理過時內容。妾與生子的價值判斷屬於歷史背景，不支持以婚育、生育能力或家庭地位評定人的價值。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "九二",
+      "polarity": "yang",
+      "classical": "鼎有實，我仇有疾，不我能即，吉。",
+      "focus": "內容充實，也要辨認干擾",
+      "paragraphs": [
+        "鼎中有實，與對方有疾而不能接近並列。Legge 將這裡的疾讀為厭惡，而非患病，並在有內容和避免妨礙之間展開解釋；“仇”的具體關係不能簡單等同於現代敵人名單。",
+        "可以先把自己的工作準備扎實，並識別哪些干擾確實影響使用。不能因這句古文猜測某人患病，或慶幸他人不幸會給自己帶來好處。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "鼎耳革，其行塞，雉膏不食，方雨虧悔，終吉。",
+      "focus": "好內容也可能卡在傳遞方式上",
+      "paragraphs": [
+        "鼎耳改變，移動受阻，豐美食物不能被享用。Legge 保留了因器具部位不合而無法發揮內容價值的過程。",
+        "一份出色研究若表達不清、交付方式不合，也可能無人使用。可以改進說明和介面，但雨來悔減是爻辭的意象，不代表現實問題會自行等到解決。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "鼎折足，覆公餗，其刑渥，凶。",
+      "focus": "承載不足會讓責任落空",
+      "paragraphs": [
+        "鼎足斷裂、公家的食物傾覆，是本卦最明顯的失敗畫面。Legge 將其讀為承擔了不能勝任的責任，並涉及嚴重失職與羞愧。",
+        "接下一項重要工作之前，應核實人員、時間和能力。發現支撐不足就說明情況、補充幫助或調整範圍，比為了保住面子繼續承諾更負責。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "鼎黃耳金鉉，利貞。",
+      "focus": "讓承接與提舉的部分相互配合",
+      "paragraphs": [
+        "黃色鼎耳與金屬鉉相配，鉉是提舉器物的構件。Legge 從剛柔與得中展開解釋，仍保留持守合宜的要求。",
+        "合作中，準備內容的人與負責傳遞的人需要互相理解。不能讓一方不斷增加複雜度，而另一方直到最後才知道如何承接。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "鼎玉鉉，大吉，无不利。",
+      "focus": "成熟的使用包括分寸與品質",
+      "paragraphs": [
+        "玉鉉把結尾放在提舉與使用器物的部分。Legge 以堅實而溫潤的結合解釋其美好，並非建議實際以某種材料替換器具。",
+        "現代可以思考：成熟成果是否同時清楚、可靠、方便使用，並尊重使用者？完成不只是東西已經做出來，還包括它能被妥善交付和持續使用。"
+      ],
+      "sourceRefs": [
+        "zhouyi-50",
+        "legge1882-50"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "把資料整理成真正能教的一堂課",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位講師有豐富研究資料，卻發現初學者難以跟上。她先刪去過時內容，再按學習順序安排例子，明確哪些概念需要先解釋，哪些細節可以留給後續閱讀。",
+      "試講時，她檢查講義、時間和提問安排。助手也提前知道如何發放材料、記錄疑問，而不是臨場接住所有沒有安排的工作。",
+      "課程因此有了可靠承載。鼎卦在這裡不是保證講師成功，而是提醒：豐富內容需要合適結構與協作，任何一隻“鼎足”都不應被長期忽略。"
+    ]
+  },
+  "misreadings": [
+    "鼎不預測懷孕、生育、疾病或權位；古代妾子制度需要明確放回歷史背景。",
+    "鼎足斷裂等意象不替代真實器具和工程安全判斷，本文也不是烹飪或設備操作指南。"
+  ],
+  "practice": [
+    "選一項正在準備的成果，分別列出內容、承載結構和交付方式。",
+    "找出其中最脆弱的支撐，確認是否需要幫助或縮小承諾。",
+    "請一位實際使用者試用，檢查作品完成與作品可用之間還差什麼。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-48",
+      "name": "井",
+      "paragraph": "井關注資源能否被穩定取得，鼎關注資源如何經處理而成為可共享的成果。維護供給與改善轉化，都需要具體而不顯眼的工作。"
+    }
+  ],
+  "closing": "讀鼎卦時，可以問：我在不斷增加內容時，有沒有同時照顧承載和交付它的條件？",
+  "sourceIds": [
+    "zhouyi-50",
+    "legge1882-50",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "九四保留底本正文“刑渥”；頁面另列“形渥”異文，正文不以這一字的選擇推導現實處罰。",
+  "counts": {
+    "chineseCharacterCount": 1704,
+    "nonWhitespaceCharacterCount": 1952,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "鼎",
+  "sourceLocale": "zh",
+  "sourceContentHash": "589bf6bcd1db8a55ecdcf86ecc30acffb14db2179978ea1d72cc03ad0c4ec694",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 鼎卦學習：讓內容、承載與使用彼此配合\n\n好的內容需要穩固的支撐、妥善的處理和可靠的交付，才能真正幫助別人。\n\n鼎是一種烹煮與禮儀器具。鼎卦從足、腹中之實、耳寫到鉉，把容器的各部分與能否使用聯繫起來。它可以幫助我們思考轉化與供養，卻不只是“有好材料就一定有好結果”：支撐斷裂，內容再豐富也可能傾覆。\n\n鼎是傳統文王序第50卦，卦符䷱，下卦巽☴、上卦離☲，傳統取象分別為風與火。爻從最下方往上數，依次為初六、九二、九三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 0 1 1 1 0 1\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━━━━━━  九二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n鼎：元吉，亨。\n\nLegge 把鼎放在烹飪、祭祀和養人的語境中理解，又結合卦形討論器物的各部分。這些象徵解釋屬於譯者注釋，不應當作考古製造圖或唯一字義。\n\n現代學習可以借鼎觀察內容與承載的關係：一項知識、服務或作品，需要什麼樣的組織安排才能被妥善處理和交到使用者手裡？卦辭的吉亨不保證結果，仍要具體檢查每個支持環節。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》談以木巽火、亨飪、享帝與養賢，把器物用途擴展到古代禮制和政治秩序；《象傳》說木上有火，提出正位凝命。\n\n本文把這些意象用於明確角色與責任的日常事務。知道誰準備、誰檢查、誰交付，有助於使內容被用好；古代等級安排並不自動成為今天應遵守的組織方式。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初六 · 清理舊物與歷史制度需要分開看\n\n鼎顛趾，利出否，得妾以其子，无咎。\n\n鼎足顛倒可倒出不潔之物，隨後出現納妾因子得認可的古代家庭制度。Legge 保留了兩種圖像，不能只摘前半句，把後半句假裝不存在。\n\n現代類比僅取先清除妨礙使用之物，例如整理過時內容。妾與生子的價值判斷屬於歷史背景，不支持以婚育、生育能力或家庭地位評定人的價值。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九二 · 內容充實，也要辨認干擾\n\n鼎有實，我仇有疾，不我能即，吉。\n\n鼎中有實，與對方有疾而不能接近並列。Legge 將這裡的疾讀為厭惡，而非患病，並在有內容和避免妨礙之間展開解釋；“仇”的具體關係不能簡單等同於現代敵人名單。\n\n可以先把自己的工作準備扎實，並識別哪些干擾確實影響使用。不能因這句古文猜測某人患病，或慶幸他人不幸會給自己帶來好處。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 好內容也可能卡在傳遞方式上\n\n鼎耳革，其行塞，雉膏不食，方雨虧悔，終吉。\n\n鼎耳改變，移動受阻，豐美食物不能被享用。Legge 保留了因器具部位不合而無法發揮內容價值的過程。\n\n一份出色研究若表達不清、交付方式不合，也可能無人使用。可以改進說明和介面，但雨來悔減是爻辭的意象，不代表現實問題會自行等到解決。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九四 · 承載不足會讓責任落空\n\n鼎折足，覆公餗，其刑渥，凶。\n\n鼎足斷裂、公家的食物傾覆，是本卦最明顯的失敗畫面。Legge 將其讀為承擔了不能勝任的責任，並涉及嚴重失職與羞愧。\n\n接下一項重要工作之前，應核實人員、時間和能力。發現支撐不足就說明情況、補充幫助或調整範圍，比為了保住面子繼續承諾更負責。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六五 · 讓承接與提舉的部分相互配合\n\n鼎黃耳金鉉，利貞。\n\n黃色鼎耳與金屬鉉相配，鉉是提舉器物的構件。Legge 從剛柔與得中展開解釋，仍保留持守合宜的要求。\n\n合作中，準備內容的人與負責傳遞的人需要互相理解。不能讓一方不斷增加複雜度，而另一方直到最後才知道如何承接。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上九 · 成熟的使用包括分寸與品質\n\n鼎玉鉉，大吉，无不利。\n\n玉鉉把結尾放在提舉與使用器物的部分。Legge 以堅實而溫潤的結合解釋其美好，並非建議實際以某種材料替換器具。\n\n現代可以思考：成熟成果是否同時清楚、可靠、方便使用，並尊重使用者？完成不只是東西已經做出來，還包括它能被妥善交付和持續使用。\n\n參考來源: [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086), [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 把資料整理成真正能教的一堂課\n\n原創現代情境\n\n一位講師有豐富研究資料，卻發現初學者難以跟上。她先刪去過時內容，再按學習順序安排例子，明確哪些概念需要先解釋，哪些細節可以留給後續閱讀。\n\n試講時，她檢查講義、時間和提問安排。助手也提前知道如何發放材料、記錄疑問，而不是臨場接住所有沒有安排的工作。\n\n課程因此有了可靠承載。鼎卦在這裡不是保證講師成功，而是提醒：豐富內容需要合適結構與協作，任何一隻“鼎足”都不應被長期忽略。\n\n## 避免誤讀\n\n- 鼎不預測懷孕、生育、疾病或權位；古代妾子制度需要明確放回歷史背景。\n\n- 鼎足斷裂等意象不替代真實器具和工程安全判斷，本文也不是烹飪或設備操作指南。\n\n## 三個練習\n\n1. 選一項正在準備的成果，分別列出內容、承載結構和交付方式。\n\n2. 找出其中最脆弱的支撐，確認是否需要幫助或縮小承諾。\n\n3. 請一位實際使用者試用，檢查作品完成與作品可用之間還差什麼。\n\n## 延伸閱讀\n\n井 (hexagram-48): 井關注資源能否被穩定取得，鼎關注資源如何經處理而成為可共享的成果。維護供給與改善轉化，都需要具體而不顯眼的工作。\n\n讀鼎卦時，可以問：我在不斷增加內容時，有沒有同時照顧承載和交付它的條件？\n\n## 版本說明\n\n九四保留底本正文“刑渥”；頁面另列“形渥”異文，正文不以這一字的選擇推導現實處罰。\n\n## 參考來源\n\n- [zhouyi-50](https://zh.wikisource.org/w/index.php?title=周易/鼎&oldid=10647086)\n\n- [legge1882-50](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-50 · SHA256 589bf6bcd1db8a55ecdcf86ecc30acffb14db2179978ea1d72cc03ad0c4ec694\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

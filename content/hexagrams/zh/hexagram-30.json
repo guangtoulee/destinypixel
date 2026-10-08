@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-30",
+  "locale": "zh",
+  "kingWenNumber": 30,
+  "name": "离",
+  "pinyin": "Lí",
+  "englishName": "Lí — The Clinging Fire",
+  "unicode": "䷝",
+  "codePoint": "U+4DDD",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "title": "离卦学习：明亮的判断，靠什么维持",
+  "plainSummary": "想把事情看清楚，先确认判断依靠什么，也给清楚表达和持续修正留下条件。",
+  "introduction": [
+    "灵光一现可以帮助开始，却不一定能支持长久的理解。离卦同时涉及明亮与附着，像火需要有所依托，也像判断需要事实和合宜的关系。六爻并非全部光明顺利，夕阳、突发、流泪和征伐都提醒我们，明亮也有不同处境。"
+  ],
+  "identityText": "离是传统文王序第30卦，卦符䷝，下卦离☲、上卦离☲，传统取象分别为火与火。爻从最下方数起，依次为初九、六二、九三、九四、六五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。",
+  "guaci": {
+    "label": "卦辞",
+    "classical": "離：利貞，亨。畜牝牛，吉。",
+    "paragraphs": [
+      "Legge 说明离有光明、火的意味，也有附着之义，且承认如何确定作者的整体主题并不简单。他把牝牛的形象联系到温顺与谦和的传统德性。",
+      "现代学习可借此检查自己的理解建立在什么之上，同时避免把温和当成失去判断。卦辞并不要求养牛才能得吉，也不把顺从变成任何人的固定角色。"
+    ],
+    "sourceRefs": [
+      "zhouyi-30",
+      "legge1882-30"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解释",
+    "paragraphs": [
+      "《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。",
+      "《彖传》用日月依天、草木依土解释附丽；《象传》谈继明照于四方。传文强调明的延续，不只是瞬间闪耀。",
+      "今天可以通过清楚的来源、记录与交接，让理解能够被别人检查和接续。知道得多和使别人看得清楚，仍是两项需要分别努力的事。"
+    ],
+    "sourceRefs": [
+      "zhouyi-30",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "履錯然，敬之无咎。",
+      "focus": "起步杂乱时先认真看脚下",
+      "paragraphs": [
+        "错然的步履与敬相连，Legge 将其读作初动虽乱，仍谨慎行走。它没有要求开始时便绝对完美。",
+        "第一次整理复杂资料时，可以先分清事实、解释和待核实项。认真检查基本顺序，比一开始就追求漂亮结论更可靠。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "黃離，元吉。",
+      "focus": "明亮也可以有中和的分寸",
+      "paragraphs": [
+        "黄色与离的明相连，传统注解将之联系到中位。Legge 保留这种颜色与爻位的象征解释。",
+        "现代可以借它想到适度表达：把证据能够支持的说清楚，不多夸一步。黄色不是个人幸运色，也不会使判断自动更正确。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "日昃之離，不鼓缶而歌，則大耋之嗟，凶。",
+      "focus": "面对阶段变化，不只停在叹息",
+      "paragraphs": [
+        "日落的光、歌唱与老年的叹息构成这一爻。Legge 按光明将暮与人的回应解释，不应据此推算寿命。",
+        "一个阶段将结束时，可以保存已经学到的内容，安排合理收尾。承认失落与继续生活可以并存，不需要要求自己必须快乐才能得到好结果。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "突如其來如，焚如，死如，棄如。",
+      "focus": "突发而猛烈的方式可能难以持续",
+      "paragraphs": [
+        "这一爻的语言急促、激烈，包含焚、死、弃。Legge 保留了突然出现而不被容纳的图像，不是预言现实灾害。",
+        "现代类比可以是没有准备便发布极端结论，随后无法承担影响。表达前留出核实和思考的空间，能让清楚不只是一时声势。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "出涕沱若，戚嗟若，吉。",
+      "focus": "看见困难，也容许真实感受",
+      "paragraphs": [
+        "流泪与忧戚没有被简单判为不好，文字后面仍有吉。Legge 将其放在重要位置上的忧惧与持正中解释。",
+        "难过不证明你已经失去判断。可以在承认感受的同时，寻找实际支持和下一步依据；不能因此说流泪必定带来好运或问题会自动解决。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "王用出征，有嘉折首，獲匪其醜，无咎。",
+      "focus": "运用力量时仍需分辨对象",
+      "paragraphs": [
+        "末爻写王者出征、处理首领与其他被俘者的区别，Legge 以有限而有分辨的惩罚解释。这是古代政治战争语言。",
+        "现代只保留不把问题无限扩大、避免笼统归罪的提醒。古文不能授权暴力、惩罚或指控，更不能让个人自行决定谁该受到伤害。"
+      ],
+      "sourceRefs": [
+        "zhouyi-30",
+        "legge1882-30"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "让一份资料说明可以被接续",
+    "label": "原创现代情境",
+    "paragraphs": [
+      "一位成员负责整理展品背景，开始时只写下自己理解的故事。后来她把原始来源、确定事实和解释分开，标明尚未核实的部分，并让另一位成员试读。",
+      "试读者发现一处连接并不清楚，她补上依据，没有为了保持流畅而掩盖疑问。自己暂时离开工作时，其他人也能据记录继续核查。",
+      "离的现代应用由此成为可延续的明察。清楚不仅是说得有感染力，也包括让别人知道怎样判断你说的话。"
+    ]
+  },
+  "misreadings": [
+    "离不保证名气、光明前途或灾祸；古文的焚死、老年与流泪不应用作个人命运预测。",
+    "附丽与牝牛的传统解释不要求无条件顺从。战争段落须留在历史语境，不能当作现实行动许可。"
+  ],
+  "practice": [
+    "选一个自己很确信的观点，列出实际支持它的来源。",
+    "明确其中一个仍不确定的部分，并决定怎样进一步核实。",
+    "试着把理解讲给别人，检查对方是否知道结论从何而来。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-29",
+      "name": "坎",
+      "paragraph": "坎提醒人在困难中稳定应对，离提醒清楚的判断需要有所依托。面对问题时，耐心与可检查的理解可以相互支持。"
+    }
+  ],
+  "closing": "读离卦时，可以问：我眼前觉得明白的东西，是否有足够可靠的依据让这份明白持续下去？",
+  "sourceIds": [
+    "zhouyi-30",
+    "legge1882-30",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_editorial_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "九三采用底本明列的“嗟”异文；正文另作“差”。",
+  "counts": {
+    "chineseCharacterCount": 1514,
+    "nonWhitespaceCharacterCount": 1736,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "离",
+  "sourceLocale": "zh",
+  "sourceContentHash": "a240ceb2bf63093ec618a1be31d3cf05687e7f45169508ea75ea00ca0af38fe5",
+  "translationStatus": "source_original",
+  "articleMarkdown": "# 离卦学习：明亮的判断，靠什么维持\n\n一句话：想把事情看清楚，先确认判断依靠什么，也给清楚表达和持续修正留下条件。\n\n灵光一现可以帮助开始，却不一定能支持长久的理解。离卦同时涉及明亮与附着，像火需要有所依托，也像判断需要事实和合宜的关系。六爻并非全部光明顺利，夕阳、突发、流泪和征伐都提醒我们，明亮也有不同处境。\n\n## 先认清这是什么卦\n\n离是传统文王序第30卦，卦符䷝，下卦离☲、上卦离☲，传统取象分别为火与火。爻从最下方数起，依次为初九、六二、九三、九四、六五、上九。实线为阳，断线为阴；九、六是爻题中标识阳、阴的数字，并不是额外的爻数。\n\n卦符：䷝　上卦：离☲　下卦：离☲\n\n六爻位置自下而上编号；下面的图按实际位置从上往下显示：\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辞说了什么\n\n经文：“離：利貞，亨。畜牝牛，吉。”\n\nLegge 说明离有光明、火的意味，也有附着之义，且承认如何确定作者的整体主题并不简单。他把牝牛的形象联系到温顺与谦和的传统德性。\n\n现代学习可借此检查自己的理解建立在什么之上，同时避免把温和当成失去判断。卦辞并不要求养牛才能得吉，也不把顺从变成任何人的固定角色。\n\n## 《易传》怎样解读这个卦\n\n《彖传》《象传》属于《易传》，是通常所说的“十翼”中的篇章。下面把传文与卦辞、爻辞分开，再说明现代学习应用。\n\n《彖传》用日月依天、草木依土解释附丽；《象传》谈继明照于四方。传文强调明的延续，不只是瞬间闪耀。\n\n今天可以通过清楚的来源、记录与交接，让理解能够被别人检查和接续。知道得多和使别人看得清楚，仍是两项需要分别努力的事。\n\n## 六爻逐条读\n\n以下引文属于爻辞；后面的解释为原创学习说明。吉、无咎、有悔等是古代占辞的语言，不能直接换成对个人未来的保证。\n\n### 初九：起步杂乱时先认真看脚下\n\n经文：“履錯然，敬之无咎。”\n\n错然的步履与敬相连，Legge 将其读作初动虽乱，仍谨慎行走。它没有要求开始时便绝对完美。\n\n第一次整理复杂资料时，可以先分清事实、解释和待核实项。认真检查基本顺序，比一开始就追求漂亮结论更可靠。\n\n### 六二：明亮也可以有中和的分寸\n\n经文：“黃離，元吉。”\n\n黄色与离的明相连，传统注解将之联系到中位。Legge 保留这种颜色与爻位的象征解释。\n\n现代可以借它想到适度表达：把证据能够支持的说清楚，不多夸一步。黄色不是个人幸运色，也不会使判断自动更正确。\n\n### 九三：面对阶段变化，不只停在叹息\n\n经文：“日昃之離，不鼓缶而歌，則大耋之嗟，凶。”\n\n日落的光、歌唱与老年的叹息构成这一爻。Legge 按光明将暮与人的回应解释，不应据此推算寿命。\n\n一个阶段将结束时，可以保存已经学到的内容，安排合理收尾。承认失落与继续生活可以并存，不需要要求自己必须快乐才能得到好结果。\n\n### 九四：突发而猛烈的方式可能难以持续\n\n经文：“突如其來如，焚如，死如，棄如。”\n\n这一爻的语言急促、激烈，包含焚、死、弃。Legge 保留了突然出现而不被容纳的图像，不是预言现实灾害。\n\n现代类比可以是没有准备便发布极端结论，随后无法承担影响。表达前留出核实和思考的空间，能让清楚不只是一时声势。\n\n### 六五：看见困难，也容许真实感受\n\n经文：“出涕沱若，戚嗟若，吉。”\n\n流泪与忧戚没有被简单判为不好，文字后面仍有吉。Legge 将其放在重要位置上的忧惧与持正中解释。\n\n难过不证明你已经失去判断。可以在承认感受的同时，寻找实际支持和下一步依据；不能因此说流泪必定带来好运或问题会自动解决。\n\n### 上九：运用力量时仍需分辨对象\n\n经文：“王用出征，有嘉折首，獲匪其醜，无咎。”\n\n末爻写王者出征、处理首领与其他被俘者的区别，Legge 以有限而有分辨的惩罚解释。这是古代政治战争语言。\n\n现代只保留不把问题无限扩大、避免笼统归罪的提醒。古文不能授权暴力、惩罚或指控，更不能让个人自行决定谁该受到伤害。\n\n## 让一份资料说明可以被接续\n\n以下是为学习而设的现代情境。\n\n一位成员负责整理展品背景，开始时只写下自己理解的故事。后来她把原始来源、确定事实和解释分开，标明尚未核实的部分，并让另一位成员试读。\n\n试读者发现一处连接并不清楚，她补上依据，没有为了保持流畅而掩盖疑问。自己暂时离开工作时，其他人也能据记录继续核查。\n\n离的现代应用由此成为可延续的明察。清楚不仅是说得有感染力，也包括让别人知道怎样判断你说的话。\n\n## 几个容易误读的地方\n\n离不保证名气、光明前途或灾祸；古文的焚死、老年与流泪不应用作个人命运预测。\n\n附丽与牝牛的传统解释不要求无条件顺从。战争段落须留在历史语境，不能当作现实行动许可。\n\n## 做一个小练习\n\n1. 选一个自己很确信的观点，列出实际支持它的来源。\n2. 明确其中一个仍不确定的部分，并决定怎样进一步核实。\n3. 试着把理解讲给别人，检查对方是否知道结论从何而来。\n\n## 和坎卦一起读\n\n坎提醒人在困难中稳定应对，离提醒清楚的判断需要有所依托。面对问题时，耐心与可检查的理解可以相互支持。\n\n读离卦时，可以问：我眼前觉得明白的东西，是否有足够可靠的依据让这份明白持续下去？\n\n## 阅读依据\n\n- [周易·離](https://zh.wikisource.org/w/index.php?title=周易/離&oldid=10646424)。Received text; Wikisource revision 10646424。\n- [The Yî King](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)。James Legge；Hexagram 30, chapter XXX, judgement, six lines and notes。\n- [Chinese Philosophy of Change (Yijing)](https://plato.stanford.edu/entries/chinese-change/)。Tze-Ki Hon；Modern scholarly context。\n- [Yijing Hexagram Symbols](https://www.unicode.org/charts/PDF/U4DC0.pdf)。Unicode Consortium；U+4DC0–U+4DFF。\n- [Sacred Books of the East volume16 scan metadata](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)。Edition and rights metadata。\n\n经文引文保留繁体字并加现代标点；正文为简体中文原创学习解读。英文历史底本与中文传世文本对照使用，近现代译者的意见在文中注明。本文不构成医学、投资或其他专业决定的依据。\n\n文字说明：九三采用底本明列的“嗟”异文；正文另作“差”。\n"
+}

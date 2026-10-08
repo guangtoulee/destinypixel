@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-63",
+  "locale": "zh-TW",
+  "kingWenNumber": 63,
+  "name": "既济",
+  "pinyin": "Jì Jì",
+  "englishName": "Jì Jì — After Completion",
+  "unicode": "䷾",
+  "codePoint": "U+4DFE",
+  "lowerTrigram": {
+    "id": "li",
+    "name": "離",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "upperTrigram": {
+    "id": "kan",
+    "name": "坎",
+    "image": "水",
+    "symbol": "☵",
+    "linesBottomUp": [
+      0,
+      1,
+      0
+    ]
+  },
+  "linesBottomUp": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "title": "既濟卦學習：完成以後，如何照顧已經做成的事",
+  "plainSummary": "事情完成後，還有交接、維護與檢查；完成不表示從此可以不再照看。",
+  "introduction": [
+    "既濟字面有已經渡過、已經完成之意，卦形也呈現陰陽相間、各在傳統相應位置的秩序。但卦辭立即說初吉終亂，末爻更寫濡首之危。它把讀者帶到一個常被忽略的階段：達成目標以後。"
+  ],
+  "identityText": "既濟是傳統文王序第63卦，卦符䷾，下卦離☲、上卦坎☵，傳統取象分別為火與水。爻從最下方往上數，依次為初九、六二、九三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "既濟：亨小。利貞。初吉終亂。",
+    "paragraphs": [
+      "Legge 將既濟解釋為大事已成，接下來仍需處理小處、鞏固已經建立的秩序。初吉終亂在他的讀法中是對可能鬆懈的提醒，不是所有成功最終注定失敗的自然法則。",
+      "現代學習可以區分交付、驗收、日常使用和後續維護。一個成果已經完成，只說明某個階段達到了條件；誰接手、如何更新、遇到問題找誰，仍需要明確安排。"
+    ],
+    "sourceRefs": [
+      "zhouyi-63",
+      "legge1882-63"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。",
+      "《彖傳》從剛柔正、位當解釋既濟，又指出終止則亂；《象傳》以水在火上取象，提出思患而預防。這裡的預防應理解為有針對性的照看，而非永遠猜測最壞結果。",
+      "本文的普通應用是保留必要記錄、安排維護責任和檢查已知薄弱點。現實風險的判斷來自證據與適用規範，不能由卦形替代技術、醫學或法律結論。"
+    ],
+    "sourceRefs": [
+      "zhouyi-63",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初九",
+      "polarity": "yang",
+      "classical": "曳其輪，濡其尾，无咎。",
+      "focus": "剛完成時，未必需要立刻再啟動",
+      "paragraphs": [
+        "拖住車輪、尾部沾濕，Legge 把它理解為成功之後暫緩新的推進，避免重新冒進。",
+        "完成一個活動後，可以先整理未結事項，再決定是否立即擴大下一次。短暫停頓讓成果得到收尾，不必把繼續忙碌當成唯一的積極表現。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "婦喪其茀，勿逐，七日得。",
+      "focus": "局部缺失不一定要以慌亂回應",
+      "paragraphs": [
+        "茀在 Legge 的譯解中是車上遮蔽物，失去後不急追逐，七日得。它保留古代女性出行的禮儀背景。",
+        "現代可先確認缺失物對當前任務有什麼影響、是否有可用替代。七日不是失物必返的期限，也不意味著實際需要處理的問題都可以放著等待。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "九三",
+      "polarity": "yang",
+      "classical": "高宗伐鬼方，三年克之，小人勿用。",
+      "focus": "成功的行動也可能消耗巨大",
+      "paragraphs": [
+        "古文提到高宗攻伐鬼方，三年才克。Legge 以古代王朝戰爭解釋其艱難，又提醒承擔者需合宜；其具體年代推定不在本文確認為事實。",
+        "現代類比只取重大事務需要時間、能力與支持的提醒。不能把古代征伐當作現實擴張或對抗的授權，也不能憑卦象把別人劃為不能使用的小人。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "六四",
+      "polarity": "yin",
+      "classical": "繻有衣袽，終日戒。",
+      "focus": "為已知薄弱處準備實際補救",
+      "paragraphs": [
+        "繻與衣袽的字義和讀法有討論，Legge 採用準備破布以防舟漏的解釋。本文明確這是所據注釋路線，不把古文視為完整的船具操作說明。",
+        "一般工作可以保留備份、交接記錄或替代安排。準備應對應真實可能的問題，而不是無限增加防範，讓所有人始終無法結束工作。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "九五",
+      "polarity": "yang",
+      "classical": "東鄰殺牛，不如西鄰之禴祭，實受其福。",
+      "focus": "盛大形式未必勝過適時而真誠的做法",
+      "paragraphs": [
+        "東鄰殺牛與西鄰簡祭對照，Legge 強調誠意，《小象》又突出時機。文本並非鼓勵不斷增加供物來換取結果。",
+        "完成之後表達感謝，可以具體、及時並與實際貢獻相稱。一次認真交接或一封準確說明，可能比隆重慶祝更能照顧成果和參與者。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上六",
+      "polarity": "yin",
+      "classical": "濡其首，厲。",
+      "focus": "不要把已經渡過當成可以再次輕忽危險",
+      "paragraphs": [
+        "從初爻濡尾到上爻濡首，程度明顯加重。Legge 將其解釋為再次冒進、陷入過深的危險。",
+        "熟悉一個流程之後，也要留意條件是否已經改變。以往順利不能保證這一次同樣適用，但需要檢查什麼，應由具體變化決定。"
+      ],
+      "sourceRefs": [
+        "zhouyi-63",
+        "legge1882-63"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "一份共享手冊完成後的工作",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一個小組終於完成新人手冊，先請真實使用者檢查能否按步驟找到所需資訊。作者把過期資料刪除，也把仍需另行諮詢的問題清楚標出。",
+      "交付時，他們明確誰維護連結、哪些變化需要更新，以及離開小組的人如何交接。慶祝完成之後，手冊並沒有變成無人負責的固定檔案。",
+      "既濟的學習在這裡是承認完成值得肯定，同時照顧它進入日常使用後的條件。維護無需把完成取消，卻能讓已經做成的東西繼續有用。"
+    ]
+  },
+  "misreadings": [
+    "既濟不保證已經成功，也不預言成功必然崩潰；應先核實當前完成了什麼。",
+    "七日、三年、濡首與古代戰爭不能用來推算現實期限、健康狀況或衝突結局。"
+  ],
+  "practice": [
+    "為一項剛完成的成果寫清完成標準，確認它確實已經達到。",
+    "列出交付以後仍需承擔的維護與交接事項，並明確負責人。",
+    "挑一個已有證據的薄弱點安排檢查，避免把預防變成沒有邊界的焦慮。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-64",
+      "name": "未濟",
+      "paragraph": "既濟關心完成之後如何維持，未濟關心尚未完成時如何繼續。它們並列在六十四卦末尾，使完成與未完成成為連續需要判斷的處境，而非固定的人生標籤。"
+    }
+  ],
+  "closing": "讀既濟卦時，可以問：我們慶祝已經做成的時候，是否也說清了接下來由誰照顧它？",
+  "sourceIds": [
+    "zhouyi-63",
+    "legge1882-63",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "counts": {
+    "chineseCharacterCount": 1640,
+    "nonWhitespaceCharacterCount": 1867,
+    "countBasis": "reader-facing article prose and quotations, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "textualNote": null,
+  "displayName": "既濟",
+  "sourceLocale": "zh",
+  "sourceContentHash": "9d7f2cc4af24a96d79bdb8f9c6253e5ffba1b718251f2c315ea67ada97c4a529",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 既濟卦學習：完成以後，如何照顧已經做成的事\n\n事情完成後，還有交接、維護與檢查；完成不表示從此可以不再照看。\n\n既濟字面有已經渡過、已經完成之意，卦形也呈現陰陽相間、各在傳統相應位置的秩序。但卦辭立即說初吉終亂，末爻更寫濡首之危。它把讀者帶到一個常被忽略的階段：達成目標以後。\n\n既濟是傳統文王序第63卦，卦符䷾，下卦離☲、上卦坎☵，傳統取象分別為火與水。爻從最下方往上數，依次為初九、六二、九三、六四、九五、上六。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n六爻結構（由下往上）: 1 0 1 0 1 0\n\n六爻位置由下往上編號；下圖依實際位置由上往下顯示。\n\n```text\n━━━━ ━━━━  上六\n━━━━━━━━━  九五\n━━━━ ━━━━  六四\n━━━━━━━━━  九三\n━━━━ ━━━━  六二\n━━━━━━━━━  初九\n```\n\n## 卦辭\n\n既濟：亨小。利貞。初吉終亂。\n\nLegge 將既濟解釋為大事已成，接下來仍需處理小處、鞏固已經建立的秩序。初吉終亂在他的讀法中是對可能鬆懈的提醒，不是所有成功最終注定失敗的自然法則。\n\n現代學習可以區分交付、驗收、日常使用和後續維護。一個成果已經完成，只說明某個階段達到了條件；誰接手、如何更新、遇到問題找誰，仍需要明確安排。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》《象傳》屬於《易傳》，是通常所說的“十翼”中的篇章。下面把傳文與卦辭、爻辭分開，再說明現代學習應用。\n\n《彖傳》從剛柔正、位當解釋既濟，又指出終止則亂；《象傳》以水在火上取象，提出思患而預防。這裡的預防應理解為有針對性的照看，而非永遠猜測最壞結果。\n\n本文的普通應用是保留必要記錄、安排維護責任和檢查已知薄弱點。現實風險的判斷來自證據與適用規範，不能由卦形替代技術、醫學或法律結論。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 初九 · 剛完成時，未必需要立刻再啟動\n\n曳其輪，濡其尾，无咎。\n\n拖住車輪、尾部沾濕，Legge 把它理解為成功之後暫緩新的推進，避免重新冒進。\n\n完成一個活動後，可以先整理未結事項，再決定是否立即擴大下一次。短暫停頓讓成果得到收尾，不必把繼續忙碌當成唯一的積極表現。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六二 · 局部缺失不一定要以慌亂回應\n\n婦喪其茀，勿逐，七日得。\n\n茀在 Legge 的譯解中是車上遮蔽物，失去後不急追逐，七日得。它保留古代女性出行的禮儀背景。\n\n現代可先確認缺失物對當前任務有什麼影響、是否有可用替代。七日不是失物必返的期限，也不意味著實際需要處理的問題都可以放著等待。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九三 · 成功的行動也可能消耗巨大\n\n高宗伐鬼方，三年克之，小人勿用。\n\n古文提到高宗攻伐鬼方，三年才克。Legge 以古代王朝戰爭解釋其艱難，又提醒承擔者需合宜；其具體年代推定不在本文確認為事實。\n\n現代類比只取重大事務需要時間、能力與支持的提醒。不能把古代征伐當作現實擴張或對抗的授權，也不能憑卦象把別人劃為不能使用的小人。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 六四 · 為已知薄弱處準備實際補救\n\n繻有衣袽，終日戒。\n\n繻與衣袽的字義和讀法有討論，Legge 採用準備破布以防舟漏的解釋。本文明確這是所據注釋路線，不把古文視為完整的船具操作說明。\n\n一般工作可以保留備份、交接記錄或替代安排。準備應對應真實可能的問題，而不是無限增加防範，讓所有人始終無法結束工作。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 九五 · 盛大形式未必勝過適時而真誠的做法\n\n東鄰殺牛，不如西鄰之禴祭，實受其福。\n\n東鄰殺牛與西鄰簡祭對照，Legge 強調誠意，《小象》又突出時機。文本並非鼓勵不斷增加供物來換取結果。\n\n完成之後表達感謝，可以具體、及時並與實際貢獻相稱。一次認真交接或一封準確說明，可能比隆重慶祝更能照顧成果和參與者。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 上六 · 不要把已經渡過當成可以再次輕忽危險\n\n濡其首，厲。\n\n從初爻濡尾到上爻濡首，程度明顯加重。Legge 將其解釋為再次冒進、陷入過深的危險。\n\n熟悉一個流程之後，也要留意條件是否已經改變。以往順利不能保證這一次同樣適用，但需要檢查什麼，應由具體變化決定。\n\n參考來源: [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417), [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 一份共享手冊完成後的工作\n\n原創現代情境\n\n一個小組終於完成新人手冊，先請真實使用者檢查能否按步驟找到所需資訊。作者把過期資料刪除，也把仍需另行諮詢的問題清楚標出。\n\n交付時，他們明確誰維護連結、哪些變化需要更新，以及離開小組的人如何交接。慶祝完成之後，手冊並沒有變成無人負責的固定檔案。\n\n既濟的學習在這裡是承認完成值得肯定，同時照顧它進入日常使用後的條件。維護無需把完成取消，卻能讓已經做成的東西繼續有用。\n\n## 避免誤讀\n\n- 既濟不保證已經成功，也不預言成功必然崩潰；應先核實當前完成了什麼。\n\n- 七日、三年、濡首與古代戰爭不能用來推算現實期限、健康狀況或衝突結局。\n\n## 三個練習\n\n1. 為一項剛完成的成果寫清完成標準，確認它確實已經達到。\n\n2. 列出交付以後仍需承擔的維護與交接事項，並明確負責人。\n\n3. 挑一個已有證據的薄弱點安排檢查，避免把預防變成沒有邊界的焦慮。\n\n## 延伸閱讀\n\n未濟 (hexagram-64): 既濟關心完成之後如何維持，未濟關心尚未完成時如何繼續。它們並列在六十四卦末尾，使完成與未完成成為連續需要判斷的處境，而非固定的人生標籤。\n\n讀既濟卦時，可以問：我們慶祝已經做成的時候，是否也說清了接下來由誰照顧它？\n\n## 參考來源\n\n- [zhouyi-63](https://zh.wikisource.org/w/index.php?title=周易/既濟&oldid=2572417)\n\n- [legge1882-63](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n\nSource: zh · hexagram-63 · SHA256 9d7f2cc4af24a96d79bdb8f9c6253e5ffba1b718251f2c315ea67ada97c4a529\n\nTranslation status: complete_translation_pending_review; independent editorial review: pending_translation_review; human native-speaker/expert review: not performed; unpublished.\n"
+}

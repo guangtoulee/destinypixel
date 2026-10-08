@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "id": "hexagram-35",
+  "locale": "zh-TW",
+  "kingWenNumber": 35,
+  "name": "晋",
+  "pinyin": "Jìn",
+  "englishName": "Jìn — Progress",
+  "unicode": "䷢",
+  "codePoint": "U+4DE2",
+  "lowerTrigram": {
+    "id": "kun",
+    "name": "坤",
+    "image": "地",
+    "symbol": "☷",
+    "linesBottomUp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "upperTrigram": {
+    "id": "li",
+    "name": "离",
+    "image": "火",
+    "symbol": "☲",
+    "linesBottomUp": [
+      1,
+      0,
+      1
+    ]
+  },
+  "linesBottomUp": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+  ],
+  "title": "晉卦學習：機會來了以後，怎麼踏實向前",
+  "plainSummary": "機會與肯定來臨時，穩穩做好該做的事，別讓對得失的擔心打亂方向。",
+  "introduction": [
+    "受到邀請、獲得回應，或開始被人看見，常讓人既期待又緊張。晉卦以受賜、接見與逐漸前進為背景，也寫到阻礙、憂愁、偷偷推進與過度用力。它讓我們分辨進展的品質，而不只是替結果貼上一個令人開心的標籤。"
+  ],
+  "identityText": "晉是傳統文王序第35卦，卦符䷢，下卦坤☷、上卦離☲，傳統取象分別為地與火。爻從最下方數起，依次為初六、六二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。",
+  "guaci": {
+    "label": "卦辭",
+    "classical": "晉：康侯用錫馬蕃庶，晝日三接。",
+    "paragraphs": [
+      "Legge 將卦辭讀作有功於安定的諸侯得到許多馬匹，並在一天中多次受見。這是古代君臣獎賞的場景，不能直接翻成讀者即將升職加薪。",
+      "現代學習可由此詢問：得到機會後，我需要怎樣回應實際信任？認可可以鼓勵人，卻不能替代繼續準備、明確職責與完成工作。"
+    ],
+    "sourceRefs": [
+      "zhouyi-35",
+      "legge1882-35"
+    ],
+    "classicalTranslation": null
+  },
+  "tenWings": {
+    "label": "十翼中的解釋",
+    "paragraphs": [
+      "《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。",
+      "《彖傳》以進解釋晉，描述明出地上；《象傳》由此談自昭明德。傳文不只關注被別人看見，也討論自己如何使行為更加清楚。",
+      "今天可以透過可靠的行動說明能力，而不只是改善形象。進展的品質可以用兌現承諾、獲得更清楚理解來檢查，不必全由外界注意力衡量。"
+    ],
+    "sourceRefs": [
+      "zhouyi-35",
+      "hon-sep"
+    ]
+  },
+  "lineNotes": [
+    {
+      "position": 1,
+      "label": "初六",
+      "polarity": "yin",
+      "classical": "晉如，摧如，貞吉。罔孚，裕无咎。",
+      "focus": "受阻時保留合宜的餘地",
+      "paragraphs": [
+        "Legge 將初爻讀作想前進卻受到抑制，尚未得到信任時仍保持寬裕。進展不一定一開始就被所有人認可。",
+        "如果新的想法暫未被接受，可以核實對方需要什麼依據，補充說明。不必立刻認定自己不行，也不要把所有質疑都解釋成打壓。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 2,
+      "label": "六二",
+      "polarity": "yin",
+      "classical": "晉如，愁如，貞吉。受茲介福，于其王母。",
+      "focus": "進展與憂慮可以同時存在",
+      "paragraphs": [
+        "這一爻仍在前進，卻有愁；王母在 Legge 的讀法中聯繫祖母的祝福。它保留古代家族與政治背景。",
+        "獲得支持後緊張並不奇怪，可以明確準備與求助的範圍。王母的意象不能被拿來預測某位女性一定給予資源或好消息。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 3,
+      "label": "六三",
+      "polarity": "yin",
+      "classical": "眾允，悔亡。",
+      "focus": "信任來自共同認可",
+      "paragraphs": [
+        "Legge 將眾允讀作周圍人的信任，註釋又聯繫共同目標。它不等於多數意見永遠正確。",
+        "在合作中可以讓參與者知道任務怎樣完成，也認真處理他們指出的問題。清楚溝通與實際兌現，能比不斷自我宣傳更紮實地建立信任。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 4,
+      "label": "九四",
+      "polarity": "yang",
+      "classical": "晉如鼫鼠，貞厲。",
+      "focus": "檢查前進的方式是否值得信任",
+      "paragraphs": [
+        "鼫鼠的動物意象，在 Legge 的解釋裡帶有偷偷推進的意味；他也對具體動物辨識保持疑問。",
+        "如果取得機會的方法依靠隱瞞資訊或使別人誤解，就需要重新檢查。不能據這一爻認定某個現實人物卑劣，也不必把謹慎低調都看成可疑。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 5,
+      "label": "六五",
+      "polarity": "yin",
+      "classical": "悔亡，失得勿恤，往吉无不利。",
+      "focus": "別讓每一次得失都改變方向",
+      "paragraphs": [
+        "Legge 保留不必反覆憂慮得失、繼續合宜行程的讀法。它不是要人忽略實際損失或不做判斷。",
+        "工作獲得好評或暫時未被選中，都可以提供回饋，但不必每一次就推翻目標。把注意力放回可改進的內容，讓事實比自我評價更具體。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    },
+    {
+      "position": 6,
+      "label": "上九",
+      "polarity": "yang",
+      "classical": "晉其角，維用伐邑，厲吉无咎，貞吝。",
+      "focus": "推進過強時，即使有限也有代價",
+      "paragraphs": [
+        "末爻用角與征伐寫強力推進，且保留厲與吝。Legge 沒有因行動限於自身城邑，就把用力說成毫無問題。",
+        "現代只借此提醒檢查強推的後果，不把征伐轉為實際指令。為了保住進展而持續壓迫合作者，可能損傷進展真正依靠的關係。"
+      ],
+      "sourceRefs": [
+        "zhouyi-35",
+        "legge1882-35"
+      ],
+      "classicalTranslation": null
+    }
+  ],
+  "specialStatement": null,
+  "modernExample": {
+    "title": "第一次受邀分享自己的作品",
+    "label": "原創現代情境",
+    "paragraphs": [
+      "一位創作者收到分享邀請，先是開心，接著又擔心自己夠不夠好。她先了解聽眾與時間限制，選擇真正熟悉的內容，準備清楚的例子，不急著把自己表現成什麼都懂。",
+      "有人對其中一個觀點提出疑問，她把疑問當成需要查證的資訊，據此修改資料。分享結束後，她記錄哪些地方清楚、哪些還要練習，不只在意掌聲多不多。",
+      "晉在這裡幫助她回應機會。會不會再收到邀請，仍取決於許多因素，卦文不會替她安排結果。"
+    ]
+  },
+  "misreadings": [
+    "晉不預測升職、獎賞或獲得資助；古代馬匹、三接與王母不能直接對應現實中的資源與日期。",
+    "前進的方式需要獨立檢查，不能因為有認可就合理化隱瞞、強迫或無邊界的擴張。"
+  ],
+  "practice": [
+    "寫下一個真實到來的機會，以及它具體要求你承擔什麼。",
+    "找出一個可以透過準備而減少的不確定性。",
+    "結束後用實際回饋檢查表現，避免只記錄得失和自我評價。"
+  ],
+  "related": [
+    {
+      "id": "hexagram-36",
+      "name": "明夷",
+      "paragraph": "晉讓明出地上，明夷讓明入地中。兩者並讀，可以思考何時適合顯露、何時需要謹慎保全，而不是把可見程度當成個人價值。"
+    }
+  ],
+  "closing": "讀晉卦時，不妨問自己：我回應的是機會本身，還是只在追逐被看見的感覺？",
+  "sourceIds": [
+    "zhouyi-35",
+    "legge1882-35",
+    "hon-sep",
+    "unicode-hexagrams",
+    "legge-scan-rights"
+  ],
+  "createdAt": "2026-10-07",
+  "reviewStatus": {
+    "content": "complete_editorial_draft",
+    "lineStructure": "validated",
+    "editorialReview": "passed_independent_model_translation_review",
+    "nativeExpertReview": "not_performed",
+    "published": false,
+    "citations": "source_checked_with_access_limitations_recorded"
+  },
+  "textualNote": "六五採用底本明列的「失」字異文；頁面正文另作「矢」。九四保留「鼫」。",
+  "counts": {
+    "chineseCharacterCount": 1576,
+    "nonWhitespaceCharacterCount": 1805,
+    "countBasis": "reader-facing article prose and quotations, including editorial classical renderings, excluding source list, metadata, line diagram and Markdown syntax"
+  },
+  "learningQuestion": null,
+  "displayName": "晉",
+  "sourceLocale": "zh",
+  "sourceContentHash": "d0ec71bce748611d61067679f5b557cac901fd211bdb4984a1811b11da38e67f",
+  "translationStatus": "complete_translation_reviewed",
+  "articleMarkdown": "# 晉卦學習：機會來了以後，怎麼踏實向前\n\n機會與肯定來臨時，穩穩做好該做的事，別讓對得失的擔心打亂方向。\n\n受到邀請、獲得回應，或開始被人看見，常讓人既期待又緊張。晉卦以受賜、接見與逐漸前進為背景，也寫到阻礙、憂愁、偷偷推進與過度用力。它讓我們分辨進展的品質，而不只是替結果貼上一個令人開心的標籤。\n\n## 卦的身分與爻序\n\n晉是傳統文王序第35卦，卦符䷢，下卦坤☷、上卦離☲，傳統取象分別為地與火。爻從最下方數起，依次為初六、六二、六三、九四、六五、上九。實線為陽，斷線為陰；九、六是爻題中標識陽、陰的數字，並不是額外的爻數。\n\n```text\n━━━━━━━━━  上九\n━━━━ ━━━━  六五\n━━━━━━━━━  九四\n━━━━ ━━━━  六三\n━━━━ ━━━━  六二\n━━━━ ━━━━  初六\n```\n\n## 卦辭\n\n晉：康侯用錫馬蕃庶，晝日三接。\n\nLegge 將卦辭讀作有功於安定的諸侯得到許多馬匹，並在一天中多次受見。這是古代君臣獎賞的場景，不能直接翻成讀者即將升職加薪。\n\n現代學習可由此詢問：得到機會後，我需要怎樣回應實際信任？認可可以鼓勵人，卻不能替代繼續準備、明確職責與完成工作。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 十翼中的解釋\n\n《彖傳》與《象傳》都是《易傳》的篇章，也就是通常所稱的「十翼」。以下先將傳文與卦辭、爻辭分開介紹，再說明可供今日學習的應用。\n\n《彖傳》以進解釋晉，描述明出地上；《象傳》由此談自昭明德。傳文不只關注被別人看見，也討論自己如何使行為更加清楚。\n\n今天可以透過可靠的行動說明能力，而不只是改善形象。進展的品質可以用兌現承諾、獲得更清楚理解來檢查，不必全由外界注意力衡量。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n## 六爻解讀：由下而上\n\n### 初六 · 受阻時保留合宜的餘地\n\n晉如，摧如，貞吉。罔孚，裕无咎。\n\nLegge 將初爻讀作想前進卻受到抑制，尚未得到信任時仍保持寬裕。進展不一定一開始就被所有人認可。\n\n如果新的想法暫未被接受，可以核實對方需要什麼依據，補充說明。不必立刻認定自己不行，也不要把所有質疑都解釋成打壓。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六二 · 進展與憂慮可以同時存在\n\n晉如，愁如，貞吉。受茲介福，于其王母。\n\n這一爻仍在前進，卻有愁；王母在 Legge 的讀法中聯繫祖母的祝福。它保留古代家族與政治背景。\n\n獲得支持後緊張並不奇怪，可以明確準備與求助的範圍。王母的意象不能被拿來預測某位女性一定給予資源或好消息。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六三 · 信任來自共同認可\n\n眾允，悔亡。\n\nLegge 將眾允讀作周圍人的信任，註釋又聯繫共同目標。它不等於多數意見永遠正確。\n\n在合作中可以讓參與者知道任務怎樣完成，也認真處理他們指出的問題。清楚溝通與實際兌現，能比不斷自我宣傳更紮實地建立信任。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 九四 · 檢查前進的方式是否值得信任\n\n晉如鼫鼠，貞厲。\n\n鼫鼠的動物意象，在 Legge 的解釋裡帶有偷偷推進的意味；他也對具體動物辨識保持疑問。\n\n如果取得機會的方法依靠隱瞞資訊或使別人誤解，就需要重新檢查。不能據這一爻認定某個現實人物卑劣，也不必把謹慎低調都看成可疑。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 六五 · 別讓每一次得失都改變方向\n\n悔亡，失得勿恤，往吉无不利。\n\nLegge 保留不必反覆憂慮得失、繼續合宜行程的讀法。它不是要人忽略實際損失或不做判斷。\n\n工作獲得好評或暫時未被選中，都可以提供回饋，但不必每一次就推翻目標。把注意力放回可改進的內容，讓事實比自我評價更具體。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n### 上九 · 推進過強時，即使有限也有代價\n\n晉其角，維用伐邑，厲吉无咎，貞吝。\n\n末爻用角與征伐寫強力推進，且保留厲與吝。Legge 沒有因行動限於自身城邑，就把用力說成毫無問題。\n\n現代只借此提醒檢查強推的後果，不把征伐轉為實際指令。為了保住進展而持續壓迫合作者，可能損傷進展真正依靠的關係。\n\n引文來源：[zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579), [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n## 第一次受邀分享自己的作品\n\n原創現代情境\n\n一位創作者收到分享邀請，先是開心，接著又擔心自己夠不夠好。她先了解聽眾與時間限制，選擇真正熟悉的內容，準備清楚的例子，不急著把自己表現成什麼都懂。\n\n有人對其中一個觀點提出疑問，她把疑問當成需要查證的資訊，據此修改資料。分享結束後，她記錄哪些地方清楚、哪些還要練習，不只在意掌聲多不多。\n\n晉在這裡幫助她回應機會。會不會再收到邀請，仍取決於許多因素，卦文不會替她安排結果。\n\n## 避免誤讀\n\n- 晉不預測升職、獎賞或獲得資助；古代馬匹、三接與王母不能直接對應現實中的資源與日期。\n\n- 前進的方式需要獨立檢查，不能因為有認可就合理化隱瞞、強迫或無邊界的擴張。\n\n## 三個練習\n\n1. 寫下一個真實到來的機會，以及它具體要求你承擔什麼。\n\n2. 找出一個可以透過準備而減少的不確定性。\n\n3. 結束後用實際回饋檢查表現，避免只記錄得失和自我評價。\n\n## 延伸閱讀\n\n### 明夷 (hexagram-36)\n\n晉讓明出地上，明夷讓明入地中。兩者並讀，可以思考何時適合顯露、何時需要謹慎保全，而不是把可見程度當成個人價值。\n\n## 結語\n\n讀晉卦時，不妨問自己：我回應的是機會本身，還是只在追逐被看見的感覺？\n\n## 版本說明\n\n六五採用底本明列的「失」字異文；頁面正文另作「矢」。九四保留「鼫」。\n\n## 資料來源\n\n- [zhouyi-35](https://zh.wikisource.org/w/index.php?title=周易/晉&oldid=10646579)\n\n- [legge1882-35](https://tianmu.org/good-work-library/confucian/general-texts/the-i-ching-james-legge)\n\n- [hon-sep](https://plato.stanford.edu/entries/chinese-change/)\n\n- [unicode-hexagrams](https://www.unicode.org/charts/PDF/U4DC0.pdf)\n\n- [legge-scan-rights](https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_16.djvu)\n"
+}
