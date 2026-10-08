@@ -14,11 +14,13 @@ last page, preserving their exact bytes. All 231 source/translation hashes and t
 English and Russian aggregate hashes match. `final-reviewed/packages/` contains the
 untouched packages; its manifest links every extracted full record to its package and
 Library identity. Earlier candidates and drafts remain historical evidence only.
-Current authorization is **local engineering only**. Do not push, create a public PR,
-deploy a Preview or publish production. The parent is awaiting explicit public-release
-confirmation after automatic approval review rejected publishing to the public repository.
-Previously published checkpoints stay intact. A private Library recovery backup is allowed.
-PR23's completed release is not permission to publish this round.
+The user explicitly authorized this release on **2026-10-08 at 12:53:30 UTC**. Push the
+verified implementation branch, create a draft PR and obtain a Ready Preview. Merge only
+after the parent completes external browser QA of the exact PR head, then wait for and
+verify the production deployment. Existing project, security settings and prior public
+checkpoints are preserved. `release-readiness.json` records the refreshed remote baseline.
+Earlier local-only validation reports describe their historical checkpoint, not this
+new release authorization.
 
 ## Receiving complete source
 

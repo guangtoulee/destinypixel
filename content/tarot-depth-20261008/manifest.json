@@ -1,7 +1,7 @@
 {
   "schemaVersion": "destinypixel.tarot.depth-batches.v1",
   "baselineCommit": "3656f3f0d2d66190cd0af457230e51e945683059",
-  "publicationGate": "local_only_no_push_pr_preview_or_production_until_explicit_public_release_confirmation",
+  "publicationGate": "user_authorized_release_after_parent_external_preview_qa",
   "cards": {
     "fool": {
       "deckOrder": 0,

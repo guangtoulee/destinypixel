@@ -198,8 +198,8 @@
     "Protected Sun/education/hexagrams/artwork/tools unchanged; original 312 tarot records recoverable; scope check and diff whitespace check pass"
   ],
   "pending": [
-    "Explicit user confirmation for public disclosure/release; do not push, create public PR or deploy Preview/production",
-    "Parent external browser QA when authorized"
+    "Ready Preview and parent external browser QA of exact PR head",
+    "Merge after QA; wait for production deployment and verify live site"
   ],
   "fullChineseLibraryPackage": {
     "libraryFileId": "libfile_0b9e272bf8c881919d1cbe2c97ee6358",
@@ -215,7 +215,7 @@
   "integratedChineseEditions": 77,
   "validatedChineseEditions": 77,
   "fullyValidatedFourLanguageCards": 77,
-  "currentAuthorization": "local_only_no_push_pr_preview_or_production",
+  "currentAuthorization": "push_implementation_branch_draft_pr_preview_then_production_after_parent_external_qa",
   "translationStatus": "231 final parent-reviewed editions received and installed exactly; earlier candidates/drafts archived only",
   "approvedEditorialCorrection": {
     "cardId": "page-of-cups",
@@ -229,8 +229,8 @@
   "candidateTranslationEditionCount": 39,
   "candidateTranslationCards": 13,
   "unreviewedDraftEditions": 2,
-  "publicationState": "local only; no push, public PR, Preview or production deployment",
-  "externalParentBrowserQa": "pending after explicit public-release authorization",
+  "publicationState": "release authorized 2026-10-08 12:53:30 UTC; preparing draft PR and Preview",
+  "externalParentBrowserQa": "pending Ready Preview",
   "browserFourLanguage": {
     "views": 616,
     "caseNavigations": 1232,
