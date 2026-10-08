@@ -44,6 +44,7 @@ async function main() {
     const html = page.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0] ?? "";
     assert.ok(html, `${key}: missing article`);
     const visible = text(html);
+    assert.equal(text(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? ""), plainText(article.title), `${key}: visible title mismatch`);
     for (const paragraph of [article.quickTake.upright, article.quickTake.reversed, article.hook, ...article.openingParagraphs]) {
       assert.ok(visible.includes(plainText(paragraph)), `${key}: quick take or opening paragraph omitted`);
     }

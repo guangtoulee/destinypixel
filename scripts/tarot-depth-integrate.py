@@ -66,6 +66,11 @@ versions = json.loads(versions_path.read_text()) if versions_path.exists() else 
 catalog_path = ROOT / "lib/tarot-learning/catalog.json"
 catalog = json.loads(catalog_path.read_text())
 pending = []
+final_manifest = None
+if any(locale != "zh" for locale in args.locales):
+    assert args.translations and args.translations.resolve() == (DATA / "final-reviewed").resolve(), "Only final parent-reviewed input may be integrated"
+    final_manifest = json.loads((args.translations / "manifest.json").read_text())
+    assert final_manifest["review"] == "parent_final_independent_review"
 
 for original in source["records"]:
     card_id = original["cardId"]
@@ -82,6 +87,12 @@ for original in source["records"]:
     for locale in args.locales:
         assert locale == "zh" or args.translations is not None, "Full translation directory required"
         edition = {k: approved[k] for k in ("cardId", "title", "quickTake", "bodyMarkdown")} if locale == "zh" else json.loads((args.translations / locale / f"{card_id}.json").read_text())
+        final_input = None
+        if locale != "zh":
+            final_input = final_manifest["editions"][f"{locale}/{card_id}"]
+            assert hashlib.sha256((args.translations / locale / f"{card_id}.json").read_bytes()).hexdigest() == final_input["recordSha256"]
+            assert digest(edition["bodyMarkdown"]) == final_input["translatedBodySha256"] == edition["translatedBodySha256"]
+            assert edition["sourceBodySha256"] in (original["bodySha256"], approved["bodySha256"])
         assert edition["cardId"] == card_id and edition["title"] and all(edition["quickTake"].values())
         assert structure(edition["bodyMarkdown"]) == structure(original["bodyMarkdown"]), f"Structure/citation mismatch: {locale}/{card_id}"
         opening, body_sections = split_body(edition["bodyMarkdown"])
@@ -118,27 +129,31 @@ for original in source["records"]:
                 by_role[target].setdefault("legacyAnchors", []).append(anchor)
         has_quick_opening = original["bodyMarkdown"].startswith("正位先读一句：")
         assert len(opening) >= (3 if has_quick_opening else 1)
-        if has_quick_opening and locale == "zh":
-            assert all(opening[i].split("：", 1)[1].rstrip("。") == edition["quickTake"][key].rstrip("。") for i, key in enumerate(("upright", "reversed")))
+        if has_quick_opening:
+            assert all(re.split("[:：]", opening[i], maxsplit=1)[1].strip().rstrip(".。") == edition["quickTake"][key].strip().rstrip(".。") for i, key in enumerate(("upright", "reversed"))), f"Quick-take mismatch: {locale}/{card_id}"
         visible_opening = opening[2:] if has_quick_opening else opening
         article.update(title=edition["title"], quickTake=edition["quickTake"], hook=visible_opening[0],
             openingParagraphs=visible_opening[1:], plainLanguageSummary=None, sections=sections,
             articleMarkdown=f"# {edition['title']}\n\n{edition['bodyMarkdown']}",
-            sources=copy.deepcopy(original["sources"]), sourceBatch=args.batch,
+            sources=copy.deepcopy(original["sources"] if locale == "zh" else edition["sources"]), sourceBatch=args.batch,
             publishedAt=old.get("publishedAt", "2026-10-07"), updatedAt="2026-10-08")
         for field in ("sourceRecord", "counts", "countsOriginal", "translationInputMetadata"):
             article.pop(field, None)
         archive = f"content/tarot/revisions/2026-10-08/{card_id}.{locale}.json"
-        article["review"] = {"type": "parent_reviewed_chinese" if locale == "zh" else "model_translation_review_candidate", "nativeHumanReview": False,
+        article["review"] = {"type": "parent_reviewed_chinese" if locale == "zh" else "parent_final_independent_translation_review", "nativeHumanReview": False,
             "checkedOn": "2026-10-08", "published": False}
         article["contentProvenance"] = {"sourceLocale": "zh-CN", "sourceBodySha256": original["bodySha256"],
             "sourceArticleSha256": original["bodySha256"], "sourceHashBasis": "exact delivered bodyMarkdown without added title",
             "articleSha256": digest(article["articleMarkdown"]), "sourcePackageSha256": receipt["sourcePackageSha256"],
             "previousRecord": archive, "editionBodySha256": digest(edition["bodyMarkdown"])}
+        if final_input:
+            article["contentProvenance"].update(translationSourceBodySha256=edition["sourceBodySha256"],
+                translationPackageSha256=final_input["wholeFileSha256"], translationLibraryFileId=final_input["libraryFileId"],
+                translationRecordSha256=final_input["recordSha256"], translationPackage=final_input["fileName"])
         if correction_path.exists():
             article["editorialRevision"] = copy.deepcopy(approved["editorialRevision"])
             article["editorialRevision"]["correctedBodySha256"] = approved["bodySha256"]
-            article["editorialRevision"]["status"] = "integrated locally; not published; final parent-reviewed translations pending"
+            article["editorialRevision"]["status"] = "integrated locally; not published; approved brief-feedback correction retained"
         key = f"{locale}/{card_id}"
         versions["articleMarkdownSha256"][key] = digest(article["articleMarkdown"])
         versions["editions"][key] = {"bodySha256": digest(edition["bodyMarkdown"]), "recordSha256": digest(json.dumps(article, ensure_ascii=False, indent=2) + "\n"),
@@ -165,7 +180,7 @@ write_json(versions_path, versions)
 write_json(DATA / "manifest.json", manifest)
 receipt["editorialReview"] = "parent independently reviewed Chinese"
 if any(locale != "zh" for locale in args.locales):
-    receipt["translationReview"] = "model-reviewed candidates; final parent-reviewed translations pending"
+    receipt["translationReview"] = "parent final independent translation review; exact private Library packages"
 receipt["integratedLocales"] = list(dict.fromkeys([*receipt.get("integratedLocales", []), *args.locales]))
 write_json(received / "receipt.json", receipt)
 print(f"Integrated {len(source['records'])} cards / {len(pending)} full editions from {args.batch}; original records archived; HTTP/build validation pending")

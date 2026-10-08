@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "寶劍七牌義 聰明的辦法也要經得起說明",
-  "plainLanguageSummary": "檢查策略隱瞞了什麼，以及誰會承擔它的後果。",
+  "plainLanguageSummary": null,
   "keywords": [
     "策略",
     "隱瞞",
@@ -36,7 +36,13 @@
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 自己承認這張牌含義有分歧",
-      "bodyMarkdown": "Waite 在1911年標註轉錄中列出計畫、嘗試、願望、希望，也列出爭執和可能失敗的方案，並直接說明這些意義之間差異很大。逆位既有建議、指導，也有閒言和不實言論。\n\n因此，把它簡化成「有人騙你」，既縮窄了原文，也把推測變成指控。本文用策略、知情和責任來延伸，目的是檢查做事方式，不是替你偵測別人的秘密。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)"
+      "bodyMarkdown": "Waite 在 1911 年標注轉錄中列出計畫、嘗試、願望、希望，也列出爭執和可能失敗的方案，並直接說明這些意義之間差異很大。逆位既有建議、指導，也有閒言和不實言論。\n\n因此，把它簡化成「有人騙你」，既縮窄了原文，也把推測變成指控。本文用策略、知情和責任來延伸，目的是檢查做事方式，不是替你偵測別人的秘密。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "抱走五柄、留下兩柄，很容易讓人想到有選擇的處理；但「選擇」與「取巧」的分界，需要看使用權限和共同約定。只完成最必要的五件事，可能是聰明的取捨；把別人仍在等待的兩件事藏起來，則會把成本轉給他人。同一個動作輪廓，不能自動給出道德結論。\n\n回頭的姿勢也不只支持心虛一種解釋：人可能在確認距離、留意環境或檢查遺漏。讀牌時保留這些可能，才不會讓一張適合討論策略的牌，變成沒有證據的偵探故事。\n\n判斷一種策略是否合適，可以從受影響者的位置重說一遍：如果我只知道對方願意告訴我的部分，還能作出自己的決定嗎？這個問題不要求人交出私人想法，卻能檢查共同任務中的關鍵遺漏。抽在他人相關位置時，建議把問題轉回「我有哪些需要確認的約定」，不要嘗試偵測秘密。若記錄與對方說明一致，就應允許懷疑暫時結束；不能把對方願意解釋也說成更會掩飾。讓判斷有可以被事實改變的條件，才是真正的審慎。"
     },
     {
       "id": "section-03",
@@ -51,34 +57,40 @@
       "bodyMarkdown": "逆位可提醒你把獨自盤算的方案拿給可信的人看，或補上遺漏的交代。也可能發現原先的策略無法持續。願意修正比繼續編理由更省力，但牌本身不能證明秘密將被揭穿，更不意味著對方必須交出所有隱私。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 給創作留一點不必公開的空間",
+      "bodyMarkdown": "**原創虛構案例，建議位，正位。** 詩遠參加一個業餘寫作小組，每週展示草稿。他最近想試寫喜劇，但一開始就被追問完整情節，會打斷他的嘗試。小組沒有要求每次交出所有內容。他問：「我怎樣既參與交流，又保留創作空間？」已知他願意分享進度，也沒有使用別人的素材或承擔代寫任務。\n\n畫中人物只帶走部分劍，留下一部分，這可以啓發他區分適合公開與尚需獨自發展的內容。回頭的姿態讓策略帶著環境意識：保留草稿時，也看見同伴需要知道什麼。它不證明小組會竊取點子，更不要求把正常交流都變成防備。\n\n詩遠決定本週只分享一個已經能獨立討論的場景，說明完整結構仍在試驗，暫時想聽節奏回饋，不蒐集結局建議。他仍按約定參加，其他草稿則給自己兩週不展示的時間，之後再決定是否需要讀者意見。\n\n如果這是一項有明確交付約定的合作，便不能用創作隱私隱藏影響別人工作的進度；應提前重新協商。反過來，若大家本來就尊重自選分享，說明邊界便足夠，不必編藉口。正位在此服務於誠實的策略，讓選擇有理由、有邊界，也不製造不必要的敵人。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 省事的辦法 為什麼越來越難交代",
+      "bodyMarkdown": "**原創虛構案例，調整位，逆位。** 一凡為讀書社整理活動筆記，為了趕時間，只摘錄自己最認同的觀點，略過爭議與未定事項。成員讀後以為大家已同意下月主題。她問：「怎樣修正這份記錄？」已知原始筆記仍在，主題並未正式表決，其他人尚未據此安排活動。\n\n留下兩柄劍的畫面可以幫助她檢查被省略的部分：並非所有內容都需寫入摘要，但會影響共同決定的資訊必須保留。逆位在這裡適合把獨自決定的取捨拿出來接受建議，與 Waite 逆位含有指導和忠告的歷史方向相接。沒有證據表明她想欺騙誰，也無需靠這種指控才有理由修正文稿。\n\n她在原文注明哪些只是提議，補上不同意見與下一步決定方式，再請一位參會者核對。向小組簡短說明此前摘要讓狀態顯得過於確定，給出修訂版連結，避免兩份記錄同時流傳。\n\n若原始討論其實已經有清楚結論，只是她忘記記錄表決，就應補證據而不是撤回正確決定；若有人已據舊稿投入時間，還需要一對一說明影響。逆位的修正不是把所有細節無限公開，而是讓受影響的人拿到足夠準確的資訊，能夠重新安排自己的參與。"
+    },
+    {
       "id": "section-05",
       "role": "situations",
       "title": "捷徑與隱私有不同邊界",
-      "bodyMarkdown": "工作中借用舊提案可以提高效率，但要核實資料、署名和使用權限，不能把未做過的研究寫成已經驗證。\n\n為了避免討論而私自改動共享計畫，短期也許順利，之後卻可能讓夥伴無法準備。你可以先說明更改理由，爭取授權。個人學習時，背答案看起來進展很快，換一道題就露出空缺；此時需要換一種檢驗理解的方法。"
+      "bodyMarkdown": "工作中借用舊提案可以提高效率，但要確認數據、署名和使用權限，不能把未做過的研究寫成已經驗證。\n\n為了避免討論而私自改動共享計畫，短期也許順利，之後卻可能讓夥伴無法準備。你可以先說明更改理由，爭取授權。個人學習時，背答案看起來進展很快，換一道題就露出空缺；此時需要換一種檢驗理解的方法。"
     },
     {
       "id": "section-06",
       "role": "practice",
       "title": "練習 給捷徑做一次說明測試",
-      "bodyMarkdown": "寫下你正在考慮的一個省事辦法，再寫：「如果要向受影響的人解釋，我最想跳過哪一句？」那一句通常值得核實。補充事實、獲得同意，或改用不依賴隱瞞的方案。"
+      "bodyMarkdown": "寫下你正在考慮的一個省事辦法，再寫：「如果要向受影響的人解釋，我最想跳過哪一句？」那一句通常值得確認。補充事實、獲得同意，或改用不依賴隱瞞的方案。"
     },
     {
       "id": "section-07",
       "role": "common_misread",
       "title": "回頭的人不是感情案件的證據",
-      "bodyMarkdown": "寶劍七不能證明出軌、偷竊或蓄意欺騙。若已經有具體疑點，應依據事實溝通和核查；抽牌不能替猜疑增加證據，也不授權侵犯他人隱私。"
-    },
-    {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "寶劍五：比較爭勝的代價與策略的代價；寶劍侍從：把懷疑轉成可以核實的問題。"
+      "bodyMarkdown": "寶劍七不能證明出軌、偷竊或蓄意欺騙。若已經有具體疑點，應依據事實溝通和查核；抽牌不能替猜疑增加證據，也不授權侵犯他人隱私。"
     },
     {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍七](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n- [Commons Swords07.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords07.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍七](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "seven-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "seven-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑七，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍七",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktsw07.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "seven-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑七",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍七",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktsw07.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "seven-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords07.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords07.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "seven-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords07.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords07.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍七牌義 聰明的辦法也要經得起說明\n\n一句話：檢查策略隱瞞了什麼，以及誰會承擔它的後果。\n\n關鍵詞：策略、隱瞞、取捨\n\n正位速讀：換個方法可能有用，但要核對代價、責任和遺漏。\n\n逆位速讀：計畫需要重新審視，接受建議或把未說清的事講明白。\n\n如果這個辦法只能在別人不知情時成立，你願意認真看看它靠什麼運作嗎？\n\n## 五柄被帶走 兩柄留在原處\n\n人物戴紅帽、穿紅靴，身體邁向畫面左側，頭卻回望右邊。雙手抱著五柄長劍，握持位置靠近劍刃；另外兩柄劍仍竪在地上。右後方排列著有圖案的帳篷和旗幟，左側遠處還有一小群模糊人影。天空是大片黃色。\n\n步子、回頭和留下的兩柄劍一起製造出緊張感。畫面沒有畫出許可、交易或追趕過程，所以「拿走」是可見動作，「偷竊」則多了一層情節判斷。這個差別很適合用來練習不把第一印象當成全部事實。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n\n## Waite 自己承認這張牌含義有分歧\n\nWaite 在1911年標註轉錄中列出計畫、嘗試、願望、希望，也列出爭執和可能失敗的方案，並直接說明這些意義之間差異很大。逆位既有建議、指導，也有閒言和不實言論。\n\n因此，把它簡化成「有人騙你」，既縮窄了原文，也把推測變成指控。本文用策略、知情和責任來延伸，目的是檢查做事方式，不是替你偵測別人的秘密。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n\n## 正位 換路徑之前先看邊界\n\n正位可表示你需要靈活處理，未必適合正面硬碰。但靈活不等於免除說明：你使用了誰的資源，繞過了哪項約定，誰會因為不知道而無法保護自己的利益？\n\n隱私與隱瞞也要區分。保留個人生活的細節可以是合理邊界；對共同決定隱去關鍵條件，則可能損害合作。判斷的重點在具體約定和實際後果，而不是所有事情都必須公開。\n\n## 逆位 讓計畫接受一次外部檢查\n\n逆位可提醒你把獨自盤算的方案拿給可信的人看，或補上遺漏的交代。也可能發現原先的策略無法持續。願意修正比繼續編理由更省力，但牌本身不能證明秘密將被揭穿，更不意味著對方必須交出所有隱私。\n\n## 捷徑與隱私有不同邊界\n\n工作中借用舊提案可以提高效率，但要核實資料、署名和使用權限，不能把未做過的研究寫成已經驗證。\n\n為了避免討論而私自改動共享計畫，短期也許順利，之後卻可能讓夥伴無法準備。你可以先說明更改理由，爭取授權。個人學習時，背答案看起來進展很快，換一道題就露出空缺；此時需要換一種檢驗理解的方法。\n\n## 練習 給捷徑做一次說明測試\n\n寫下你正在考慮的一個省事辦法，再寫：「如果要向受影響的人解釋，我最想跳過哪一句？」那一句通常值得核實。補充事實、獲得同意，或改用不依賴隱瞞的方案。\n\n## 回頭的人不是感情案件的證據\n\n寶劍七不能證明出軌、偷竊或蓄意欺騙。若已經有具體疑點，應依據事實溝通和核查；抽牌不能替猜疑增加證據，也不授權侵犯他人隱私。\n\n## 接著讀什麼\n\n寶劍五：比較爭勝的代價與策略的代價；寶劍侍從：把懷疑轉成可以核實的問題。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍七](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n- [Commons Swords07.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords07.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍七牌義 聰明的辦法也要經得起說明\n\n如果這個辦法只能在別人不知情時成立，你願意認真看看它靠什麼運作嗎？\n\n## 五柄被帶走 兩柄留在原處\n\n人物戴紅帽、穿紅靴，身體邁向畫面左側，頭卻回望右邊。雙手抱著五柄長劍，握持位置靠近劍刃；另外兩柄劍仍竪在地上。右後方排列著有圖案的帳篷和旗幟，左側遠處還有一小群模糊人影。天空是大片黃色。\n\n步子、回頭和留下的兩柄劍一起製造出緊張感。畫面沒有畫出許可、交易或追趕過程，所以「拿走」是可見動作，「偷竊」則多了一層情節判斷。這個差別很適合用來練習不把第一印象當成全部事實。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n\n## Waite 自己承認這張牌含義有分歧\n\nWaite 在 1911 年標注轉錄中列出計畫、嘗試、願望、希望，也列出爭執和可能失敗的方案，並直接說明這些意義之間差異很大。逆位既有建議、指導，也有閒言和不實言論。\n\n因此，把它簡化成「有人騙你」，既縮窄了原文，也把推測變成指控。本文用策略、知情和責任來延伸，目的是檢查做事方式，不是替你偵測別人的秘密。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n抱走五柄、留下兩柄，很容易讓人想到有選擇的處理；但「選擇」與「取巧」的分界，需要看使用權限和共同約定。只完成最必要的五件事，可能是聰明的取捨；把別人仍在等待的兩件事藏起來，則會把成本轉給他人。同一個動作輪廓，不能自動給出道德結論。\n\n回頭的姿勢也不只支持心虛一種解釋：人可能在確認距離、留意環境或檢查遺漏。讀牌時保留這些可能，才不會讓一張適合討論策略的牌，變成沒有證據的偵探故事。\n\n判斷一種策略是否合適，可以從受影響者的位置重說一遍：如果我只知道對方願意告訴我的部分，還能作出自己的決定嗎？這個問題不要求人交出私人想法，卻能檢查共同任務中的關鍵遺漏。抽在他人相關位置時，建議把問題轉回「我有哪些需要確認的約定」，不要嘗試偵測秘密。若記錄與對方說明一致，就應允許懷疑暫時結束；不能把對方願意解釋也說成更會掩飾。讓判斷有可以被事實改變的條件，才是真正的審慎。\n\n## 正位 換路徑之前先看邊界\n\n正位可表示你需要靈活處理，未必適合正面硬碰。但靈活不等於免除說明：你使用了誰的資源，繞過了哪項約定，誰會因為不知道而無法保護自己的利益？\n\n隱私與隱瞞也要區分。保留個人生活的細節可以是合理邊界；對共同決定隱去關鍵條件，則可能損害合作。判斷的重點在具體約定和實際後果，而不是所有事情都必須公開。\n\n## 逆位 讓計畫接受一次外部檢查\n\n逆位可提醒你把獨自盤算的方案拿給可信的人看，或補上遺漏的交代。也可能發現原先的策略無法持續。願意修正比繼續編理由更省力，但牌本身不能證明秘密將被揭穿，更不意味著對方必須交出所有隱私。\n\n## 案例一 給創作留一點不必公開的空間\n\n**原創虛構案例，建議位，正位。** 詩遠參加一個業餘寫作小組，每週展示草稿。他最近想試寫喜劇，但一開始就被追問完整情節，會打斷他的嘗試。小組沒有要求每次交出所有內容。他問：「我怎樣既參與交流，又保留創作空間？」已知他願意分享進度，也沒有使用別人的素材或承擔代寫任務。\n\n畫中人物只帶走部分劍，留下一部分，這可以啓發他區分適合公開與尚需獨自發展的內容。回頭的姿態讓策略帶著環境意識：保留草稿時，也看見同伴需要知道什麼。它不證明小組會竊取點子，更不要求把正常交流都變成防備。\n\n詩遠決定本週只分享一個已經能獨立討論的場景，說明完整結構仍在試驗，暫時想聽節奏回饋，不蒐集結局建議。他仍按約定參加，其他草稿則給自己兩週不展示的時間，之後再決定是否需要讀者意見。\n\n如果這是一項有明確交付約定的合作，便不能用創作隱私隱藏影響別人工作的進度；應提前重新協商。反過來，若大家本來就尊重自選分享，說明邊界便足夠，不必編藉口。正位在此服務於誠實的策略，讓選擇有理由、有邊界，也不製造不必要的敵人。\n\n## 案例二 省事的辦法 為什麼越來越難交代\n\n**原創虛構案例，調整位，逆位。** 一凡為讀書社整理活動筆記，為了趕時間，只摘錄自己最認同的觀點，略過爭議與未定事項。成員讀後以為大家已同意下月主題。她問：「怎樣修正這份記錄？」已知原始筆記仍在，主題並未正式表決，其他人尚未據此安排活動。\n\n留下兩柄劍的畫面可以幫助她檢查被省略的部分：並非所有內容都需寫入摘要，但會影響共同決定的資訊必須保留。逆位在這裡適合把獨自決定的取捨拿出來接受建議，與 Waite 逆位含有指導和忠告的歷史方向相接。沒有證據表明她想欺騙誰，也無需靠這種指控才有理由修正文稿。\n\n她在原文注明哪些只是提議，補上不同意見與下一步決定方式，再請一位參會者核對。向小組簡短說明此前摘要讓狀態顯得過於確定，給出修訂版連結，避免兩份記錄同時流傳。\n\n若原始討論其實已經有清楚結論，只是她忘記記錄表決，就應補證據而不是撤回正確決定；若有人已據舊稿投入時間，還需要一對一說明影響。逆位的修正不是把所有細節無限公開，而是讓受影響的人拿到足夠準確的資訊，能夠重新安排自己的參與。\n\n## 捷徑與隱私有不同邊界\n\n工作中借用舊提案可以提高效率，但要確認數據、署名和使用權限，不能把未做過的研究寫成已經驗證。\n\n為了避免討論而私自改動共享計畫，短期也許順利，之後卻可能讓夥伴無法準備。你可以先說明更改理由，爭取授權。個人學習時，背答案看起來進展很快，換一道題就露出空缺；此時需要換一種檢驗理解的方法。\n\n## 練習 給捷徑做一次說明測試\n\n寫下你正在考慮的一個省事辦法，再寫：「如果要向受影響的人解釋，我最想跳過哪一句？」那一句通常值得確認。補充事實、獲得同意，或改用不依賴隱瞞的方案。\n\n## 回頭的人不是感情案件的證據\n\n寶劍七不能證明出軌、偷竊或蓄意欺騙。若已經有具體疑點，應依據事實溝通和查核；抽牌不能替猜疑增加證據，也不授權侵犯他人隱私。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍七，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍七](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "seven-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "VII",
-    "rank": "seven",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑七",
-    "nameEn": "Seven of Swords",
-    "title": "宝剑七牌义 聪明的办法也要经得起说明",
-    "plainLanguageSummary": "检查策略隐瞒了什么，以及谁会承担它的后果。",
-    "hook": "如果这个办法只能在别人不知情时成立，你愿意认真看看它靠什么运作吗？",
-    "keywords": [
-      "策略",
-      "隐瞒",
-      "取舍"
-    ],
-    "uprightQuickTake": "换个方法可能有用，但要核对代价、责任和遗漏。",
-    "reversedQuickTake": "计划需要重新审视，接受建议或把未说清的事讲明白。",
-    "articleSlug": "tarot-seven-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "五柄被带走 两柄留在原处",
-        "paragraphs": [
-          "人物戴红帽、穿红靴，身体迈向画面左侧，头却回望右边。双手抱着五柄长剑，握持位置靠近剑刃；另外两柄剑仍竖在地上。右后方排列着有图案的帐篷和旗帜，左侧远处还有一小群模糊人影。天空是大片黄色。",
-          "步子、回头和留下的两柄剑一起制造出紧张感。画面没有画出许可、交易或追赶过程，所以「拿走」是可见动作，「偷窃」则多了一层情节判断。这个差别很适合用来练习不把第一印象当成全部事实。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 自己承认这张牌含义有分歧",
-        "paragraphs": [
-          "Waite 在1911年标注转录中列出计划、尝试、愿望、希望，也列出争执和可能失败的方案，并直接说明这些意义之间差异很大。逆位既有建议、指导，也有闲言和不实言论。",
-          "因此，把它简化成「有人骗你」，既缩窄了原文，也把推测变成指控。本文用策略、知情和责任来延伸，目的是检查做事方式，不是替你侦测别人的秘密。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw07.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 换路径之前先看边界",
-        "paragraphs": [
-          "正位可表示你需要灵活处理，未必适合正面硬碰。但灵活不等于免除说明：你使用了谁的资源，绕过了哪项约定，谁会因为不知道而无法保护自己的利益？",
-          "隐私与隐瞒也要区分。保留个人生活的细节可以是合理边界；对共同决定隐去关键条件，则可能损害合作。判断的重点在具体约定和实际后果，而不是所有事情都必须公开。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 让计划接受一次外部检查",
-        "paragraphs": [
-          "逆位可提醒你把独自盘算的方案拿给可信的人看，或补上遗漏的交代。也可能发现原先的策略无法持续。愿意修正比继续编理由更省力，但牌本身不能证明秘密将被揭穿，更不意味着对方必须交出所有隐私。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "捷径与隐私有不同边界",
-        "paragraphs": [
-          "工作中借用旧提案可以提高效率，但要核实数据、署名和使用权限，不能把未做过的研究写成已经验证。",
-          "为了避免讨论而私自改动共享计划，短期也许顺利，之后却可能让伙伴无法准备。你可以先说明更改理由，争取授权。个人学习时，背答案看起来进展很快，换一道题就露出空缺；此时需要换一种检验理解的方法。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 给捷径做一次说明测试",
-        "paragraphs": [
-          "写下你正在考虑的一个省事办法，再写：「如果要向受影响的人解释，我最想跳过哪一句？」那一句通常值得核实。补充事实、获得同意，或改用不依赖隐瞒的方案。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "回头的人不是感情案件的证据",
-        "paragraphs": [
-          "宝剑七不能证明出轨、偷窃或蓄意欺骗。若已经有具体疑点，应依据事实沟通和核查；抽牌不能替猜疑增加证据，也不授权侵犯他人隐私。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "five-of-swords",
-        "nameZh": "宝剑五",
-        "reason": "比较争胜的代价与策略的代价"
-      },
-      {
-        "cardId": "page-of-swords",
-        "nameZh": "宝剑侍从",
-        "reason": "把怀疑转成可以核实的问题"
-      }
-    ],
-    "sources": [
-      {
-        "id": "seven-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑七，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "seven-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑七",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw07.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "seven-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords07.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "seven",
-      "gitBlobSha": "7e36859f054e157e770a985dd595b644510d1a08",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/seven-of-swords.webp",
-      "sha256": "5bdfee615470d1e299dbfd8a90489cc2b5a817c7641add885bea19144da47832",
-      "localFile": "images/07-seven.webp",
-      "bytes": 146952,
-      "dimensions": [
-        560,
-        965
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/seven-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords07.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:19:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1114,
-        1919
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1121,
-    "bodyChineseCharacterCount": 742
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 847,
-    "words": 2,
-    "articleUtf8Bytes": 4385
-  },
+  "sourceBatch": "depth77-swords-03",
   "sourceLocale": "zh-CN",
   "name": "寶劍七",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍七",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "seven-of-swords",
-      "sourceArticleSha256": "ac96fe72fb01ac414ae11400eb0ebc2efe558def902d623a107d8365a6dec4d7",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 952,
-    "completeArticleCharacters": 1907
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "ac96fe72fb01ac414ae11400eb0ebc2efe558def902d623a107d8365a6dec4d7",
-    "articleSha256": "83f89094af9b9d3d88ea9bb13edeb59aa9f2a0f68685710217c5a47f58079931",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "a842ccc96b24aa4e68d4f930f48d5d9a7a11ca3a27ca4428df7f33d99595873b",
+    "sourceArticleSha256": "a842ccc96b24aa4e68d4f930f48d5d9a7a11ca3a27ca4428df7f33d99595873b",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "c551f7304e2d1de6aa96ac9303af5e338be16e37d44b3363e7a55010e1f2f3e7",
+    "sourcePackageSha256": "5edf66858fd04265619439c27d7c24453417291662a1bddf97eb1c23598569c2",
+    "previousRecord": "content/tarot/revisions/2026-10-08/seven-of-swords.zh-TW.json",
+    "editionBodySha256": "fee4d04f7a992c0a7f51506aeef94bc90c781967a940fc4ebcdfba8aaa4b0d9d",
+    "translationSourceBodySha256": "a842ccc96b24aa4e68d4f930f48d5d9a7a11ca3a27ca4428df7f33d99595873b",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "102253a01fb2a6900ccc52a0fbde29eae59780fac879df8ea081a9d8dfb470f7",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

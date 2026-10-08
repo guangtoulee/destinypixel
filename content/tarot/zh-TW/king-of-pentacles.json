@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "星幣國王 讓資源經得起長期使用",
-  "plainLanguageSummary": "成熟的管理，是讓現有條件穩定發揮作用。",
+  "plainLanguageSummary": null,
   "keywords": [
     "經營",
     "責任",
@@ -22,39 +22,57 @@
   ],
   "quickTake": {
     "upright": "用經驗與清楚規則管理資源，對實際結果負責。",
-    "reversed": "地位和控制壓過了用途，或沿用成功經驗卻不再核查。"
+    "reversed": "地位和控制壓過了用途，或沿用成功經驗卻不再查核。"
   },
   "hook": "星幣國王幾乎被葡萄藤的圖案包圍：衣袍上有，王座旁也有。豐盛在這裡不是孤立的一枚幣，而是一整片需要維護、安排和負責的環境。",
   "sections": [
     {
       "id": "section-01",
       "role": "image",
-      "title": "厚重王座上反復出現牛首",
+      "title": "厚重王座上反覆出現牛首",
       "bodyMarkdown": "人物坐在深色高背王座上，冠飾帶有紅花，頸間圍著紅布，深色長袍布滿綠色藤葉與紫紅色葡萄圖案。一手握著頂端帶圓球的權杖，另一手搭在一枚大星幣上。王座上方兩端及前方兩側可見牛首裝飾。\n\n一隻穿鎧甲的腳從長袍下露出，靠在帶雕刻的底座上。周圍藤蔓繁密，右後方是有紅色屋頂的城堡建築，天空明亮。畫中物品很多，但人物並未忙於搬動它們；「成熟管理」是從持有與環境關係中提出的解釋，不是服飾自動證明的人格。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents14.jpg)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "繁盛的環境需要有人看見維護",
+      "bodyMarkdown": "國王的衣袍、王座和周邊植物幾乎融成一片，手中的權杖與星幣又顯示他和資源的聯繫。現代解讀可由此關注責任範圍：哪些是已經建立的條件，哪些仍需要維護，誰會受到管理方式影響？鎧甲腳露在豐盛衣袍之下，也可以提醒讀者別只看安適的外觀；這是一種聯想，不是它的唯一密碼。\n\n星幣騎士適合執行一段明確責任，國王更容易把視野拉到整體安排。星幣九強調個人使用已有成果，國王則需要面對他人的依賴與回饋。成熟不只是持有更多東西，也包括讓規則清楚、讓不同意見進得來。"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 特別提醒 星幣並不只談錢",
-      "bodyMarkdown": "Waite 在星幣國王條目中提醒讀者注意王座反復出現的牛首，並解釋五角星符號。他還明確說，這一花色並非特別只處理金錢問題。國王的正位詞條重視勇氣、能實現事情的才智，以及商業和一般智力方面的能力。\n\n逆位舊義帶有強烈的負面道德判斷。本篇不將那些詞變成對現實人物的指控，而以責任、資源用途和決策可檢驗性組織現代學習。國王的角色不限定性別，也不以財富多少證明成熟。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)"
+      "bodyMarkdown": "Waite 在星幣國王條目中提醒讀者注意王座反覆出現的牛首，並解釋五角星符號。他還明確說，這一花色並非特別只處理金錢問題。國王的正位條目重視勇氣、能實現事情的才智，以及商業和一般智力方面的能力。\n\n逆位舊義帶有強烈的負面道德判斷。本篇不將那些詞變成對現實人物的指控，而以責任、資源用途和決策可檢驗性組織現代學習。國王的角色不限定性別，也不以財富多少證明成熟。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)"
     },
     {
       "id": "section-03",
       "role": "upright",
       "title": "正位 把經驗用在可靠的安排上",
-      "bodyMarkdown": "正位可用來思考：誰在對一件事的長期運行負責？負責的人需要知道現有條件、維護成本和可承擔的範圍，也要知道何時尋求不同專長的幫助。經驗的價值，是讓判斷更接近實際，而不是免於解釋。\n\n資源可以是工具、空間、團隊時間或積累的知識。讓使用規則清楚，避免某些人反復等待，也為異常情況保留處理辦法。真正穩健的安排，經得起別人詢問和實際試用。"
+      "bodyMarkdown": "正位可用來思考：誰在對一件事的長期運行負責？負責的人需要知道現有條件、維護成本和可承擔的範圍，也要知道何時尋求不同專長的幫助。經驗的價值，是讓判斷更接近實際，而不是免於解釋。\n\n資源可以是工具、空間、團隊時間或積累的知識。讓使用規則清楚，避免某些人反覆等待，也為異常情況保留處理辦法。真正穩健的安排，經得起別人詢問和實際試用。"
     },
     {
       "id": "section-04",
       "role": "reversed",
       "title": "逆位 留意成功經驗怎樣變硬",
-      "bodyMarkdown": "逆位可檢查是否開始用地位代替依據：因為以前做成過，就不再聽取新的限制；因為掌握資源，就認為別人理應同意所有安排。控制帶來服從時，也可能遮住了本應進入決策的資訊。\n\n另一種情況是只維護外觀，把必要的修整不斷推後。回到可核查的運行情況，聽取使用者回饋，再決定調整。你可以保留已有優勢，同時承認某個方法不再適合。"
+      "bodyMarkdown": "逆位可檢查是否開始用地位代替依據：因為以前做成過，就不再聽取新的限制；因為掌握資源，就認為別人理應同意所有安排。控制帶來服從時，也可能遮住了本應進入決策的資訊。\n\n另一種情況是只維護外觀，把必要的修整不斷推後。回到可查核的運行情況，聽取使用者回饋，再決定調整。你可以保留已有優勢，同時承認某個方法不再適合。"
     },
     {
       "id": "section-05",
       "role": "situations",
       "title": "誰來維護已經建立的東西",
       "bodyMarkdown": "管理共享工作室時，除了購置設備，還要安排維護、預約和新人使用說明。負責一個長期專案，定期核對實際進度與團隊負荷，別只依據上次成功時的節奏安排。\n\n共同生活的重大計畫也需要各方參與。某人提供較多物品或空間，可以擁有相應責任，卻不能因此自動獲得對所有人的最終決定權。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 工作室的設備終於不再靠熟人才能借",
+      "bodyMarkdown": "原創虛構案例。一個共享手作工作室已有不錯的設備，使用者卻總要私下詢問創辦人：哪些機器能借、耗材誰補、故障找誰。創辦人願意幫忙，但常被重複問題打斷。問「怎樣長期正常運轉？」，管理建議位出現星幣國王正位。 本次問題是：「怎樣讓共享工作室長期正常運轉？」\n\n牌中成熟的環境和握持資源的人物，可以對應已有基礎與負責人的角色。此時重點不在再買設備，而在讓資源經得起重複使用。創辦人請經常使用設備的人列出不方便之處，按設備說明和實際安全要求整理預約、使用與報修規則，並明確誰負責維護。\n\n如果某台設備需要資格或訓練，不能因追求方便而開放給所有人；若規則已經清楚卻仍少有人使用，則進一步瞭解設備是否符合需要。試行後請新人按說明完成一次允許範圍內的使用流程，觀察哪裡仍需口頭解釋。管理是否成熟，要看日常能否運行，也看負責人不在場時大家是否知道該做什麼。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 過去的成功為什麼變成大家不敢提意見的理由",
+      "bodyMarkdown": "原創虛構案例。阿岩曾帶領團隊辦成大型社區市集，這次計畫照搬流程。成員提醒場地更小、志工減少，他總回答「上次就是這樣成功的」。會議裡後來無人再提問題，但私下仍有人擔心任務接不住。盲點位抽到星幣國王逆位。 本次問題是：「新專案的討論為什麼越來越安靜？」\n\n牌中穩固的王座可以啓發檢查權威是否變成不容修正的位置，繁茂環境則提醒過去成果可能遮住新的維護成本。已有會議記錄支持「經驗取代查核」的解釋，不能直接將 Waite 的負面道德詞變成對阿岩人格的指控。\n\n他把上次計畫與本次人數、場地條件逐項對照，邀請執行者提出最容易失效的環節，先刪掉一項無法可靠承擔的活動。如果成員提出的限制已得到解決，舊流程仍可能部分有效；如果差異明顯，就縮小規模而非要求更多承諾。下一次會議應看到具體問題被回答，不能只把安靜或點頭當成獲得支持。"
     },
     {
       "id": "section-06",
@@ -66,31 +84,37 @@
       "id": "section-07",
       "role": "common_misread",
       "title": "容易看錯的地方",
-      "bodyMarkdown": "星幣國王不是富有男性的固定代號，也不保證商業成功或安全收益。它可幫助我們討論成熟經營，卻不能依據身份、財富或一張牌判斷誰更有道德、更值得信任。"
+      "bodyMarkdown": "星幣國王不是富有男性的固定代號，也不保證商業成功或安全收益。它可幫助我們討論成熟經營，卻不能依據身分、財富或一張牌判斷誰更有道德、更值得信任。"
+    },
+    {
+      "id": "depth-reflection",
+      "role": "reflection",
+      "title": "讓經驗接受新的問題",
+      "bodyMarkdown": "在人物位抽到國王，可以問誰承擔資源責任、誰擁有決策權，但不能用它確認某人的資產、職業資格或可信度。正位也不保證經營成功，逆位不證明腐敗。特別面對財務、合約與長期承諾，經驗值得參考，實際記錄和專業查核仍不可省略。對普通群體事務，同樣可以用「誰能提出異議、問題如何修正」來觀察穩健是否真實。"
     },
     {
       "id": "section-08",
       "role": "sources",
       "title": "原文與牌面",
-      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製。本篇實際查看的是頁面列出的 500px 標準縮圖，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents14.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。"
+      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents14.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。"
     }
   ],
   "relatedCards": [],
   "sources": [
     {
       "sourceId": "king-of-pentacles-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：星幣國王，Commons 所標 Pam-A 牌面",
       "url": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "king-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币国王，Commons 所标 Pam-A 牌面",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：星幣國王，Commons 所標 Pam-A 牌面",
         "url": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
         "observedFileVersion": "05:31, 6 April 2024 1,107 × 1,920 (803 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "页面列出的 500px 标准缩略图",
+        "observedRepresentation": "頁面列出的 500px 標準縮圖",
         "sha256": "580d700e00c990c7ccc016051d8a547c14be97867d6418e6ebc34db01d171231",
         "checkedAt": "2026-10-07"
       }
@@ -100,16 +124,23 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣國王",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktpeki.htm",
-      "edition": "所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。",
+      "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "king-of-pentacles-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币国王",
+        "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣國王",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktpeki.htm",
         "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "king-of-pentacles-waite-crosscheck",
+      "type": "Waite 英文全文复核",
+      "title": "The Pictorial Key to the Tarot Part 3",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -160,123 +191,11 @@
       "retrievalNote": "原始 JPEG 请求遇到 429 后停止重复请求；依站点提示选择该文件页列出的标准缩略图。缩略图哈希仅代表实际查看的缩略图字节。"
     }
   },
-  "articleMarkdown": "# 星幣國王 讓資源經得起長期使用\n\n成熟的管理，是讓現有條件穩定發揮作用。\n\n關鍵詞：經營、責任、穩健\n\n正位速讀：用經驗與清楚規則管理資源，對實際結果負責。\n\n逆位速讀：地位和控制壓過了用途，或沿用成功經驗卻不再核查。\n\n星幣國王幾乎被葡萄藤的圖案包圍：衣袍上有，王座旁也有。豐盛在這裡不是孤立的一枚幣，而是一整片需要維護、安排和負責的環境。\n\n## 厚重王座上反復出現牛首\n\n人物坐在深色高背王座上，冠飾帶有紅花，頸間圍著紅布，深色長袍布滿綠色藤葉與紫紅色葡萄圖案。一手握著頂端帶圓球的權杖，另一手搭在一枚大星幣上。王座上方兩端及前方兩側可見牛首裝飾。\n\n一隻穿鎧甲的腳從長袍下露出，靠在帶雕刻的底座上。周圍藤蔓繁密，右後方是有紅色屋頂的城堡建築，天空明亮。畫中物品很多，但人物並未忙於搬動它們；「成熟管理」是從持有與環境關係中提出的解釋，不是服飾自動證明的人格。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents14.jpg)\n\n## Waite 特別提醒 星幣並不只談錢\n\nWaite 在星幣國王條目中提醒讀者注意王座反復出現的牛首，並解釋五角星符號。他還明確說，這一花色並非特別只處理金錢問題。國王的正位詞條重視勇氣、能實現事情的才智，以及商業和一般智力方面的能力。\n\n逆位舊義帶有強烈的負面道德判斷。本篇不將那些詞變成對現實人物的指控，而以責任、資源用途和決策可檢驗性組織現代學習。國王的角色不限定性別，也不以財富多少證明成熟。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)\n\n## 正位 把經驗用在可靠的安排上\n\n正位可用來思考：誰在對一件事的長期運行負責？負責的人需要知道現有條件、維護成本和可承擔的範圍，也要知道何時尋求不同專長的幫助。經驗的價值，是讓判斷更接近實際，而不是免於解釋。\n\n資源可以是工具、空間、團隊時間或積累的知識。讓使用規則清楚，避免某些人反復等待，也為異常情況保留處理辦法。真正穩健的安排，經得起別人詢問和實際試用。\n\n## 逆位 留意成功經驗怎樣變硬\n\n逆位可檢查是否開始用地位代替依據：因為以前做成過，就不再聽取新的限制；因為掌握資源，就認為別人理應同意所有安排。控制帶來服從時，也可能遮住了本應進入決策的資訊。\n\n另一種情況是只維護外觀，把必要的修整不斷推後。回到可核查的運行情況，聽取使用者回饋，再決定調整。你可以保留已有優勢，同時承認某個方法不再適合。\n\n## 誰來維護已經建立的東西\n\n管理共享工作室時，除了購置設備，還要安排維護、預約和新人使用說明。負責一個長期專案，定期核對實際進度與團隊負荷，別只依據上次成功時的節奏安排。\n\n共同生活的重大計畫也需要各方參與。某人提供較多物品或空間，可以擁有相應責任，卻不能因此自動獲得對所有人的最終決定權。\n\n## 練習 檢查一項資源是否好用\n\n挑一項由你管理的共享資源，寫下誰在用、如何申請、誰負責維護、出問題聯繫誰。請一位使用者指出最不方便的一處，再決定一個具體改動。把「我覺得安排好了」交給真實使用檢驗。\n\n## 容易看錯的地方\n\n星幣國王不是富有男性的固定代號，也不保證商業成功或安全收益。它可幫助我們討論成熟經營，卻不能依據身份、財富或一張牌判斷誰更有道德、更值得信任。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製。本篇實際查看的是頁面列出的 500px 標準縮圖，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents14.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。\n",
+  "articleMarkdown": "# 星幣國王 讓資源經得起長期使用\n\n星幣國王幾乎被葡萄藤的圖案包圍：衣袍上有，王座旁也有。豐盛在這裡不是孤立的一枚幣，而是一整片需要維護、安排和負責的環境。\n\n## 厚重王座上反覆出現牛首\n\n人物坐在深色高背王座上，冠飾帶有紅花，頸間圍著紅布，深色長袍布滿綠色藤葉與紫紅色葡萄圖案。一手握著頂端帶圓球的權杖，另一手搭在一枚大星幣上。王座上方兩端及前方兩側可見牛首裝飾。\n\n一隻穿鎧甲的腳從長袍下露出，靠在帶雕刻的底座上。周圍藤蔓繁密，右後方是有紅色屋頂的城堡建築，天空明亮。畫中物品很多，但人物並未忙於搬動它們；「成熟管理」是從持有與環境關係中提出的解釋，不是服飾自動證明的人格。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents14.jpg)\n\n## 繁盛的環境需要有人看見維護\n\n國王的衣袍、王座和周邊植物幾乎融成一片，手中的權杖與星幣又顯示他和資源的聯繫。現代解讀可由此關注責任範圍：哪些是已經建立的條件，哪些仍需要維護，誰會受到管理方式影響？鎧甲腳露在豐盛衣袍之下，也可以提醒讀者別只看安適的外觀；這是一種聯想，不是它的唯一密碼。\n\n星幣騎士適合執行一段明確責任，國王更容易把視野拉到整體安排。星幣九強調個人使用已有成果，國王則需要面對他人的依賴與回饋。成熟不只是持有更多東西，也包括讓規則清楚、讓不同意見進得來。\n\n## Waite 特別提醒 星幣並不只談錢\n\nWaite 在星幣國王條目中提醒讀者注意王座反覆出現的牛首，並解釋五角星符號。他還明確說，這一花色並非特別只處理金錢問題。國王的正位條目重視勇氣、能實現事情的才智，以及商業和一般智力方面的能力。\n\n逆位舊義帶有強烈的負面道德判斷。本篇不將那些詞變成對現實人物的指控，而以責任、資源用途和決策可檢驗性組織現代學習。國王的角色不限定性別，也不以財富多少證明成熟。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)\n\n## 正位 把經驗用在可靠的安排上\n\n正位可用來思考：誰在對一件事的長期運行負責？負責的人需要知道現有條件、維護成本和可承擔的範圍，也要知道何時尋求不同專長的幫助。經驗的價值，是讓判斷更接近實際，而不是免於解釋。\n\n資源可以是工具、空間、團隊時間或積累的知識。讓使用規則清楚，避免某些人反覆等待，也為異常情況保留處理辦法。真正穩健的安排，經得起別人詢問和實際試用。\n\n## 逆位 留意成功經驗怎樣變硬\n\n逆位可檢查是否開始用地位代替依據：因為以前做成過，就不再聽取新的限制；因為掌握資源，就認為別人理應同意所有安排。控制帶來服從時，也可能遮住了本應進入決策的資訊。\n\n另一種情況是只維護外觀，把必要的修整不斷推後。回到可查核的運行情況，聽取使用者回饋，再決定調整。你可以保留已有優勢，同時承認某個方法不再適合。\n\n## 誰來維護已經建立的東西\n\n管理共享工作室時，除了購置設備，還要安排維護、預約和新人使用說明。負責一個長期專案，定期核對實際進度與團隊負荷，別只依據上次成功時的節奏安排。\n\n共同生活的重大計畫也需要各方參與。某人提供較多物品或空間，可以擁有相應責任，卻不能因此自動獲得對所有人的最終決定權。\n\n## 案例一 工作室的設備終於不再靠熟人才能借\n\n原創虛構案例。一個共享手作工作室已有不錯的設備，使用者卻總要私下詢問創辦人：哪些機器能借、耗材誰補、故障找誰。創辦人願意幫忙，但常被重複問題打斷。問「怎樣長期正常運轉？」，管理建議位出現星幣國王正位。 本次問題是：「怎樣讓共享工作室長期正常運轉？」\n\n牌中成熟的環境和握持資源的人物，可以對應已有基礎與負責人的角色。此時重點不在再買設備，而在讓資源經得起重複使用。創辦人請經常使用設備的人列出不方便之處，按設備說明和實際安全要求整理預約、使用與報修規則，並明確誰負責維護。\n\n如果某台設備需要資格或訓練，不能因追求方便而開放給所有人；若規則已經清楚卻仍少有人使用，則進一步瞭解設備是否符合需要。試行後請新人按說明完成一次允許範圍內的使用流程，觀察哪裡仍需口頭解釋。管理是否成熟，要看日常能否運行，也看負責人不在場時大家是否知道該做什麼。\n\n## 案例二 過去的成功為什麼變成大家不敢提意見的理由\n\n原創虛構案例。阿岩曾帶領團隊辦成大型社區市集，這次計畫照搬流程。成員提醒場地更小、志工減少，他總回答「上次就是這樣成功的」。會議裡後來無人再提問題，但私下仍有人擔心任務接不住。盲點位抽到星幣國王逆位。 本次問題是：「新專案的討論為什麼越來越安靜？」\n\n牌中穩固的王座可以啓發檢查權威是否變成不容修正的位置，繁茂環境則提醒過去成果可能遮住新的維護成本。已有會議記錄支持「經驗取代查核」的解釋，不能直接將 Waite 的負面道德詞變成對阿岩人格的指控。\n\n他把上次計畫與本次人數、場地條件逐項對照，邀請執行者提出最容易失效的環節，先刪掉一項無法可靠承擔的活動。如果成員提出的限制已得到解決，舊流程仍可能部分有效；如果差異明顯，就縮小規模而非要求更多承諾。下一次會議應看到具體問題被回答，不能只把安靜或點頭當成獲得支持。\n\n## 練習 檢查一項資源是否好用\n\n挑一項由你管理的共享資源，寫下誰在用、如何申請、誰負責維護、出問題聯繫誰。請一位使用者指出最不方便的一處，再決定一個具體改動。把「我覺得安排好了」交給真實使用檢驗。\n\n## 容易看錯的地方\n\n星幣國王不是富有男性的固定代號，也不保證商業成功或安全收益。它可幫助我們討論成熟經營，卻不能依據身分、財富或一張牌判斷誰更有道德、更值得信任。\n\n## 讓經驗接受新的問題\n\n在人物位抽到國王，可以問誰承擔資源責任、誰擁有決策權，但不能用它確認某人的資產、職業資格或可信度。正位也不保證經營成功，逆位不證明腐敗。特別面對財務、合約與長期承諾，經驗值得參考，實際記錄和專業查核仍不可省略。對普通群體事務，同樣可以用「誰能提出異議、問題如何修正」來觀察穩健是否真實。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents14.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "king",
-    "nameZh": "星币国王",
-    "title": "星币国王 让资源经得起长期使用",
-    "oneLiner": "成熟的管理，是让现有条件稳定发挥作用。",
-    "keywords": [
-      "经营",
-      "责任",
-      "稳健"
-    ],
-    "uprightQuickTake": "用经验与清楚规则管理资源，对实际结果负责。",
-    "reversedQuickTake": "地位和控制压过了用途，或沿用成功经验却不再核查。",
-    "hook": "星币国王几乎被葡萄藤的图案包围：衣袍上有，王座旁也有。丰盛在这里不是孤立的一枚币，而是一整片需要维护、安排和负责的环境。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "厚重王座上反复出现牛首",
-        "paragraphs": [
-          "人物坐在深色高背王座上，冠饰带有红花，颈间围着红布，深色长袍布满绿色藤叶与紫红色葡萄图案。一手握着顶端带圆球的权杖，另一手搭在一枚大星币上。王座上方两端及前方两侧可见牛首装饰。",
-          "一只穿铠甲的脚从长袍下露出，靠在带雕刻的底座上。周围藤蔓繁密，右后方是有红色屋顶的城堡建筑，天空明亮。画中物品很多，但人物并未忙于搬动它们；“成熟管理”是从持有与环境关系中提出的解释，不是服饰自动证明的人格。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents14.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 特别提醒 星币并不只谈钱",
-        "paragraphs": [
-          "Waite 在星币国王条目中提醒读者注意王座反复出现的牛首，并解释五角星符号。他还明确说，这一花色并非特别只处理金钱问题。国王的正位词条重视勇气、能实现事情的才智，以及商业和一般智力方面的能力。",
-          "逆位旧义带有强烈的负面道德判断。本篇不将那些词变成对现实人物的指控，而以责任、资源用途和决策可检验性组织现代学习。国王的角色不限定性别，也不以财富多少证明成熟。 [核对 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpeki.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 把经验用在可靠的安排上",
-        "paragraphs": [
-          "正位可用来思考：谁在对一件事的长期运行负责？负责的人需要知道现有条件、维护成本和可承担的范围，也要知道何时寻求不同专长的帮助。经验的价值，是让判断更接近实际，而不是免于解释。",
-          "资源可以是工具、空间、团队时间或积累的知识。让使用规则清楚，避免某些人反复等待，也为异常情况保留处理办法。真正稳健的安排，经得起别人询问和实际试用。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 留意成功经验怎样变硬",
-        "paragraphs": [
-          "逆位可检查是否开始用地位代替依据：因为以前做成过，就不再听取新的限制；因为掌握资源，就认为别人理应同意所有安排。控制带来服从时，也可能遮住了本应进入决策的信息。",
-          "另一种情况是只维护外观，把必要的修整不断推后。回到可核查的运行情况，听取使用者反馈，再决定调整。你可以保留已有优势，同时承认某个方法不再适合。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "谁来维护已经建立的东西",
-        "paragraphs": [
-          "管理共享工作室时，除了购置设备，还要安排维护、预约和新人使用说明。负责一个长期项目，定期核对实际进度与团队负荷，别只依据上次成功时的节奏安排。",
-          "共同生活的重大计划也需要各方参与。某人提供较多物品或空间，可以拥有相应责任，却不能因此自动获得对所有人的最终决定权。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 检查一项资源是否好用",
-        "paragraphs": [
-          "挑一项由你管理的共享资源，写下谁在用、如何申请、谁负责维护、出问题联系谁。请一位使用者指出最不方便的一处，再决定一个具体改动。把“我觉得安排好了”交给真实使用检验。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "星币国王不是富有男性的固定代号，也不保证商业成功或安全收益。它可帮助我们讨论成熟经营，却不能依据身份、财富或一张牌判断谁更有道德、更值得信任。"
-        ]
-      }
-    ],
-    "cardId": "king-of-pentacles",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "K",
-    "ordinal": 14,
-    "arcana": "minor",
-    "suit": "pentacles",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameEn": "King of Pentacles",
-    "articleSlug": "tarot-king-of-pentacles-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "king-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币国王，Commons 所标 Pam-A 牌面",
-        "url": "https://commons.wikimedia.org/wiki/File:Pents14.jpg",
-        "observedFileVersion": "05:31, 6 April 2024 1,107 × 1,920 (803 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "页面列出的 500px 标准缩略图",
-        "sha256": "580d700e00c990c7ccc016051d8a547c14be97867d6418e6ebc34db01d171231",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "king-of-pentacles-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币国王",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktpeki.htm",
-        "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "sourceClaimBoundary": "反复牛首与五角星；花色并非专门只谈金钱；实现事情的才智。可检验的资源管理与非性别化角色为现代展开。",
-    "chineseCharacterCount": 1064
-  },
-  "sourceBatch": "pentacles",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 991,
-    "words": 2,
-    "articleUtf8Bytes": 4394
-  },
+  "sourceBatch": "depth77-pentacles-06",
   "sourceCounts": {
     "mainTextChineseCharacters": 1088,
     "completeArticleChineseCharacters": 1207
@@ -293,38 +212,29 @@
     "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
   },
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceCounts": {
-      "mainTextChineseCharacters": 1088,
-      "completeArticleChineseCharacters": 1207
-    },
-    "translation": {
-      "sourceLocale": "zh-CN",
-      "sourceCardId": "king-of-pentacles",
-      "sourceArticleSha256": "5104540ea9c39b39b74793def8cecf263356a90bb7ca70bcaf500ba63fa0bced",
-      "sourcePackage": "destinypixel-tarot-78-zh-CN",
-      "translatedOn": "2026-10-07",
-      "method": "ICU 76 Hans-Hant draft with editorial terminology and wording review",
-      "nativeHumanReview": false,
-      "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
-    }
-  },
-  "countsOriginal": {
-    "paragraphs": 14,
-    "sections": 8,
-    "unicodeCharacters": 1750,
-    "wordsWhitespaceSeparated": 68
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "5104540ea9c39b39b74793def8cecf263356a90bb7ca70bcaf500ba63fa0bced",
-    "articleSha256": "7e0b6bc6f9826b8c5df659937cc6973378b85a2f0f18221eeea5e7de125bfa1a",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "06e8a13ad2e0d5c88879733616e390ecf67c783118f581b1246e126312cff0cf",
+    "sourceArticleSha256": "06e8a13ad2e0d5c88879733616e390ecf67c783118f581b1246e126312cff0cf",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "517b5a3e55c414e301950463ad7f78c6abcf22bfb62b6bdaba6de5ca5b616be2",
+    "sourcePackageSha256": "c8015f19d9901d9eaabd00dcebf5128b83a55deb73ca1abfe3184d4eee42768e",
+    "previousRecord": "content/tarot/revisions/2026-10-08/king-of-pentacles.zh-TW.json",
+    "editionBodySha256": "fb0e7ff8ef4269316d1774c4857d3811857cb86657bdaf182a2dffa3860e6e28",
+    "translationSourceBodySha256": "06e8a13ad2e0d5c88879733616e390ecf67c783118f581b1246e126312cff0cf",
+    "translationPackageSha256": "f738e7730a6b5ad7ba539d2ea8c51e6a72efdc1d997c6812eb6bee3b47d376ee",
+    "translationLibraryFileId": "libfile_d48a171bd06081918441c34cbc46b229",
+    "translationRecordSha256": "885e25813d79b530d8142ad4192e40393f8b45b2c46ed22ed55aecff789cbe6a",
+    "translationPackage": "destinypixel-reviewed-pentacles.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

@@ -1,4 +1,4 @@
-# Tarot depth revision: 77 cards · intake and validation plan
+# Tarot depth revision: 77 cards · final four-language integration
 
 Baseline: `3656f3f0d2d66190cd0af457230e51e945683059` (merged PR23).
 Branch: `codex/tarot-depth-77-20261008`.
@@ -7,6 +7,13 @@ This round excludes the revised Sun, the three editorial articles and every hexa
 Complete manuscripts are archived under `incoming/`; independently retained translations
 are under `translations/`. See `checkpoint.json` for exact counts at the saved checkpoint.
 No placeholder article is installed or published.
+
+Final parent-reviewed translations are archived separately under `final-reviewed/`.
+Fifteen private Library files were read through the official full-text interface to the
+last page, preserving their exact bytes. All 231 source/translation hashes and the supplied
+English and Russian aggregate hashes match. `final-reviewed/packages/` contains the
+untouched packages; its manifest links every extracted full record to its package and
+Library identity. Earlier candidates and drafts remain historical evidence only.
 Current authorization is **local engineering only**. Do not push, create a public PR,
 deploy a Preview or publish production. The parent is awaiting explicit public-release
 confirmation after automatic approval review rejected publishing to the public repository.
@@ -77,10 +84,26 @@ reading the first real package. Never ask the author to replace full prose with 
 
 ## Batch checkpoint and regression
 
-The current checkpoint integrates and validates all 77 Chinese editions locally. The
-39 existing translated editions remain candidates, and two English drafts remain unreviewed;
-none replaces a live non-Chinese article. Final three-language manuscripts will come from
-the parent. No new translation work is authorized at this checkpoint.
+The current checkpoint integrates all 77 cards in four languages: 308 complete editions.
+The final 231 translations came from the parent; no replacement translation was generated
+during integration. The 39 earlier candidates and two English drafts remain archived and
+were not used as integration inputs. See `FOUR_LANGUAGE_VALIDATION.md` for the fresh
+four-language checks; `LOCAL_VALIDATION.md` records the earlier Chinese-only checkpoint.
+
+For this verified input route:
+
+```sh
+python3 scripts/tarot-depth-final-intake.py /workspace/tarot-depth-private-intake
+python3 scripts/tarot-depth-integrate.py BATCH content/tarot-depth-20261008/final-reviewed --locales zh-TW en ru
+python3 scripts/validate-tarot-depth-final.py
+python3 scripts/validate-tarot-depth-content.py
+```
+
+Intake and integration intentionally reject already archived/installed records. Do not
+rerun them over a completed checkpoint; use the validation commands for existing data.
+Runtime sources use the supplied localized source metadata. Hidden quick-take prefixes
+must match the two visible quick-take fields in all languages before they are removed from
+the opening display. The original full body and its hash remain unchanged in the archive.
 
 For the eventual complete four-language batch: archive → review Chinese completeness/cases → fully translate
 Traditional Chinese, English and Russian → compare complete text/structure/sources →

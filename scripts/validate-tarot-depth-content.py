@@ -103,6 +103,33 @@ for review_path in sorted((DATA / "translations").glob("*/review.json")):
         translation_count += 1
     batch_cards = {key.split("/")[1] for key in report["editions"]}
     assert set(report["editions"]) == {f"{locale}/{card}" for card in batch_cards for locale in ("en", "zh-TW", "ru")}
+final_reviewed = {}
+final_manifest_path = DATA / "final-reviewed" / "manifest.json"
+final_manifest = read(final_manifest_path) if final_manifest_path.exists() else None
+if final_manifest:
+    assert final_manifest["review"] == "parent_final_independent_review"
+for locale in ("en", "zh-TW", "ru"):
+    for path in sorted((DATA / "final-reviewed" / locale).glob("*.json")):
+        reviewed_raw = path.read_bytes()
+        reviewed = json.loads(reviewed_raw)
+        card = reviewed["cardId"]
+        key = f"{locale}/{card}"
+        assert card == path.stem and card in sources and key not in final_reviewed
+        assert sha(reviewed["bodyMarkdown"]) == reviewed["translatedBodySha256"], f"Final translation body hash mismatch: {key}"
+        approved_hashes = {sources[card]["bodySha256"]}
+        if card in corrected_sources:
+            approved_hashes.add(corrected_sources[card]["bodySha256"])
+        assert reviewed["sourceBodySha256"] in approved_hashes, f"Unapproved translation source: {key}"
+        assert [item.get("url") for item in reviewed["sources"]] == [item.get("url") for item in sources[card]["sources"]], f"Final source URL sequence changed: {key}"
+        assert final_manifest is not None
+        receipt = final_manifest["editions"][key]
+        assert sha(reviewed_raw) == receipt["recordSha256"], f"Final record differs from receipt: {key}"
+        assert reviewed["sourceBodySha256"] == receipt["sourceBodySha256"]
+        assert reviewed["translatedBodySha256"] == receipt["translatedBodySha256"]
+        final_reviewed[key] = reviewed
+if final_reviewed:
+    assert set(final_reviewed) == set(final_manifest["editions"])
+    assert set(final_reviewed) == {f"{locale}/{card}" for locale in ("en", "zh-TW", "ru") for card in sources}, "Final reviewed translations incomplete"
 integrated = set(v["cards"])
 assert integrated <= sources.keys()
 expected_editions = set()
@@ -147,7 +174,17 @@ for card in sorted(integrated):
         assert sha(body) == v["editions"][key]["bodySha256"] == article["contentProvenance"]["editionBodySha256"]
         assert sha(raw) == v["editions"][key]["recordSha256"]
         assert sha(article["articleMarkdown"]) == v["articleMarkdownSha256"][key]
-        assert article["sources"] == source["sources"], f"Source metadata lost: {key}"
+        reviewed = source if locale == "zh" else final_reviewed[key]
+        assert article["sources"] == reviewed["sources"], f"Reviewed localized source metadata lost: {key}"
+        if locale != "zh":
+            for field in ("title", "quickTake", "bodyMarkdown"):
+                assert edition[field] == reviewed[field], f"Final reviewed translation changed: {key}/{field}"
+            assert article["contentProvenance"]["translationSourceBodySha256"] == reviewed["sourceBodySha256"], f"Final translation source provenance changed: {key}"
+            assert article["contentProvenance"]["editionBodySha256"] == reviewed["translatedBodySha256"]
+            assert article["review"]["type"] == "parent_final_independent_translation_review", f"Candidate review used for final edition: {key}"
+            receipt = final_manifest["editions"][key]
+            for runtime_field, receipt_field in (("translationPackageSha256", "wholeFileSha256"), ("translationLibraryFileId", "libraryFileId"), ("translationRecordSha256", "recordSha256"), ("translationPackage", "fileName")):
+                assert article["contentProvenance"][runtime_field] == receipt[receipt_field], f"Final package provenance mismatch: {key}/{runtime_field}"
         assert article["contentProvenance"]["sourceBodySha256"] == source["bodySha256"], f"Original provenance changed: {key}"
         assert article["contentProvenance"]["sourceArticleSha256"] == source["bodySha256"]
         assert article["contentProvenance"]["articleSha256"] == sha(article["articleMarkdown"])
@@ -166,9 +203,11 @@ for card in sorted(integrated):
         assert [(s["title"], s["bodyMarkdown"]) for s in article["sections"]] == sections, f"Visible sections lost or rewritten: {key}"
         visible_intro = intro[2:] if source["bodyMarkdown"].startswith("正位先读一句：") else intro
         assert [article["hook"], *article["openingParagraphs"]] == visible_intro
-        if locale == "zh" and source["bodyMarkdown"].startswith("正位先读一句："):
-            for opening, label, orientation in zip(intro[:2], ("正位先读一句：", "逆位先读一句："), ("upright", "reversed")):
-                assert opening.removeprefix(label).rstrip("。") == article["quickTake"][orientation].rstrip("。"), f"Hidden opening is not duplicated in quick take: {key}"
+        if source["bodyMarkdown"].startswith("正位先读一句："):
+            for opening, orientation in zip(intro[:2], ("upright", "reversed")):
+                labelled = re.split(r"[:：]", opening, maxsplit=1)
+                assert len(labelled) == 2 and labelled[0].strip(), f"Missing quick-take label: {key}/{orientation}"
+                assert labelled[1].strip().rstrip(".。") == article["quickTake"][orientation].strip().rstrip(".。"), f"Hidden opening is not duplicated in quick take: {key}/{orientation}"
         cases = [s for s in article["sections"] if s["role"] in ("case-1", "case-2")]
         assert len(cases) == 2 and cases[0]["bodyMarkdown"] != cases[1]["bodyMarkdown"]
         assert all(len(s["bodyMarkdown"].split("\n\n")) >= 3 for s in cases), f"Truncated cases: {key}"
@@ -192,5 +231,6 @@ for card in sorted(integrated):
         assert m["cards"][card]["locales"][locale] in ("integrated", "validated")
 
 print(f"PASS {len(sources)} exact received Chinese manuscripts; {len(integrated)} integrated cards / {len(expected_editions)} full editions")
-print(f"PASS {len(translated)} translated cards / {translation_count} retained full translations with exact hashes and structural parity")
+print(f"PASS {len(translated)} candidate cards / {translation_count} retained candidate translations with exact hashes and structural parity")
+print(f"PASS {len(final_reviewed)} final reviewed translations received; {sum(not key.startswith('zh/') for key in expected_editions)} integrated with exact final body/title/quick take and localized sources")
 print("PASS full body and section parity, two complete cases, source metadata, exact archives, old anchors, catalog and dates; HTTP/build/browser checks are separate")

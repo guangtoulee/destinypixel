@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "destinypixel.tarot.article.v3",
+  "cardId": "ten-of-swords",
+  "deckOrder": 59,
+  "majorNumber": null,
+  "number": "X",
+  "roman": null,
+  "rank": "ten",
+  "rankOrder": 10,
+  "suit": "swords",
+  "arcana": "minor",
+  "nameZh": "宝剑十",
+  "nameEn": "Ten of Swords",
+  "locale": "en",
+  "deckSystem": "RWS",
+  "title": "Ten of Swords Meaning: Acknowledge Where This Road Ends",
+  "plainLanguageSummary": "Let what has ended or cannot continue end, and protect room for the next step.",
+  "keywords": [
+    "An ending",
+    "Exhaustion",
+    "Closure"
+  ],
+  "quickTake": {
+    "upright": "A way of doing things may no longer be sustainable; acknowledge the damage and attend to closure.",
+    "reversed": "Relief or a chance to regain your footing may appear, while a return to the old pattern remains worth watching."
+  },
+  "hook": "Sometimes the hardest part is not making one more effort, but admitting that the old approach can no longer rescue the situation.",
+  "sections": [
+    {
+      "id": "section-01",
+      "role": "image",
+      "title": "There is still a bright band beneath the black sky",
+      "bodyMarkdown": "A figure lies face-down with their head to the right. Red fabric covers the lower body and one hand extends beside it. Ten swords pierce the back in a dense, uneven row. A broad black sky fills the upper image, while a yellow band appears near the distant water, with low mountains beyond.\n\nThe exaggerated number of swords pushes the sense of “no more can be borne” to an extreme. The distant brightness can suggest a new phase, but it supplies no timetable. The colours alone do not establish that this is sunrise. Acknowledge the ending in the foreground without treating the whole picture as sealed in darkness. [View the image examined for this article](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp)"
+    },
+    {
+      "id": "section-02",
+      "role": "tradition",
+      "title": "Waite explicitly limits a literal death reading",
+      "bodyMarkdown": "In the text labelled 1911, Waite writes of pain, sadness and desolation, and specifically says this is not especially a card of violent death. Reversal includes advantages, success and favourable conditions, with a warning that they may not last.\n\nReading the card as the end of an old approach, depletion and closure is a modern reflective application. Its forceful imagery offers no basis for predicting death, illness or violence. Nor does it guarantee that “we have hit bottom, so tomorrow must bring a rebound.” [Check Waite’s original entry](https://original.sacred-texts.com/tarot/pkt/pktsw10.htm)"
+    },
+    {
+      "id": "section-03",
+      "role": "upright",
+      "title": "Upright: Specify what cannot continue",
+      "bodyMarkdown": "Upright, the card can help you face an ending already becoming apparent: a plan lacks the conditions to continue, a promise cannot be fulfilled, or a long-used method has exhausted its resources. Admitting an ending does not make every past effort worthless.\n\nDefine the scope of what ends. It may be a version, a way of collaborating or a repeated self-blaming explanation, rather than your entire career or future. Then handle necessary handovers and preserve what you learned so the losses do not keep growing."
+    },
+    {
+      "id": "section-04",
+      "role": "reversed",
+      "title": "Reversed: Relief needs fresh support",
+      "bodyMarkdown": "Reversed, the card can help you notice reduced pressure, someone taking over or a willingness to close an old task. It may also reflect knowing something should end but reinvesting because you cannot accept the loss. Ask what the new conditions have genuinely changed. Retrying without changed conditions may simply repeat the same depletion."
+    },
+    {
+      "id": "section-05",
+      "role": "situations",
+      "title": "Closing something can be more responsible than persisting",
+      "bodyMarkdown": "If project testing shows that the core assumption does not hold, preserve the records and explain why before stopping ineffective investment. Keep materials other work can reuse; the project itself need not survive.\n\nWhen a collaboration ends, list outstanding deliverables and existing agreements rather than rushing to prove who failed completely. If a personal goal has required overextending yourself for months, stop the current intensity and choose a sustainable approach. Changing the plan does not mean giving up on yourself."
+    },
+    {
+      "id": "section-06",
+      "role": "practice",
+      "title": "Practice: Put a boundary around an ending",
+      "bodyMarkdown": "Make two columns: “What ends here” and “What remains.” Make the first specific to a way of doing something. The second might include a skill, relationship or lesson. Choose one practical closing action so the ending becomes more than a verdict in your head."
+    },
+    {
+      "id": "section-07",
+      "role": "common_misread",
+      "title": "This is not a final sentence on a person",
+      "bodyMarkdown": "The Ten of Swords does not mean your life is over or that hope must instantly reappear. Do not use it to predict anyone’s death or harm. Bring the image back to workable reality: what needs to stop, who can help and what needs care first."
+    },
+    {
+      "id": "section-08",
+      "role": "related",
+      "title": "Read next",
+      "bodyMarkdown": "Death: Compare broad transformation with a specific approach reaching its end; Six of Swords: Continue considering supported departure and transition."
+    },
+    {
+      "id": "section-09",
+      "role": "sources",
+      "title": "Sources for this article",
+      "bodyMarkdown": "- [Pamela Colman Smith: Ten of Swords, actual RWS image at the fixed repository commit](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Ten of Swords](https://original.sacred-texts.com/tarot/pkt/pktsw10.htm)\n- [Commons Swords10.jpg file page and upload history](https://commons.wikimedia.org/wiki/File:Swords10.jpg)\n\nVersion note: The actual RWS WebP assets from a fixed repository commit were inspected individually. The Commons Pam-A file pages were used to check provenance and versions; no claim of pixel-for-pixel identity between the files is made. Waite is cited from an English transcription labelled 1911. The modern situations, questions and exercises were written originally for DestinyPixel, without borrowing paid card-meaning content."
+    }
+  ],
+  "relatedCards": [
+    {
+      "cardId": "death",
+      "name": "Death",
+      "nameZh": "死神",
+      "reason": "Compare broad transformation with a specific approach reaching its end"
+    },
+    {
+      "cardId": "six-of-swords",
+      "name": "Six of Swords",
+      "nameZh": "宝剑六",
+      "reason": "Continue considering supported departure and transition"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "ten-of-swords-image",
+      "type": "Direct image observation",
+      "title": "Pamela Colman Smith: Ten of Swords, actual RWS image at the fixed repository commit",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ten-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑十，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "ten-of-swords-waite",
+      "type": "Waite’s original text",
+      "title": "A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Ten of Swords",
+      "url": "https://original.sacred-texts.com/tarot/pkt/pktsw10.htm",
+      "edition": "English transcription at Sacred Texts labelled [1911]; the physical 1910 first edition was not checked",
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ten-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑十",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw10.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      }
+    },
+    {
+      "sourceId": "ten-of-swords-commons",
+      "type": "Source and version comparison",
+      "title": "Commons Swords10.jpg file page and upload history",
+      "url": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+      "edition": null,
+      "checkedOn": "2026-10-07",
+      "sourceMetadata": {
+        "id": "ten-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords10.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    }
+  ],
+  "image": {
+    "sourcePageUrl": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+    "creator": "Pamela Colman Smith",
+    "observationBasis": "repository_webp",
+    "observedAsset": {
+      "packagePath": null,
+      "sha256": "126d9212c6920c386ae62d31d05f157e34f21bd18ec1ec85a914c47f07e8b269",
+      "widthPx": 560,
+      "heightPx": 971,
+      "bytes": 140464,
+      "basis": "repository_webp",
+      "secondary": false,
+      "checkedOn": "2026-10-07",
+      "originalFullPackagePath": "reference-images/ten-of-swords.webp",
+      "bundled": false,
+      "accessNote": "Image bytes omitted from this text-only package. Use the source URL or verified existing repository asset; SHA-256 identifies the originally inspected file."
+    },
+    "sha256": "126d9212c6920c386ae62d31d05f157e34f21bd18ec1ec85a914c47f07e8b269",
+    "widthPx": 560,
+    "heightPx": 971,
+    "checkedOn": "2026-10-07",
+    "repositoryAssetInspected": true,
+    "sourceMetadata": {
+      "rank": "ten",
+      "gitBlobSha": "f12f6e36f7e1423c8b6f995be4d7d34c2019dc18",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+      "sha256": "126d9212c6920c386ae62d31d05f157e34f21bd18ec1ec85a914c47f07e8b269",
+      "localFile": "images/10-ten.webp",
+      "bytes": 140464,
+      "dimensions": [
+        560,
+        971
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/ten-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:20:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1107,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    }
+  },
+  "articleMarkdown": "# Ten of Swords Meaning: Acknowledge Where This Road Ends\n\nIn one sentence: Let what has ended or cannot continue end, and protect room for the next step.\n\nKeywords: An ending · Exhaustion · Closure\n\nUpright at a glance: A way of doing things may no longer be sustainable; acknowledge the damage and attend to closure.\n\nReversed at a glance: Relief or a chance to regain your footing may appear, while a return to the old pattern remains worth watching.\n\nSometimes the hardest part is not making one more effort, but admitting that the old approach can no longer rescue the situation.\n\n## There is still a bright band beneath the black sky\n\nA figure lies face-down with their head to the right. Red fabric covers the lower body and one hand extends beside it. Ten swords pierce the back in a dense, uneven row. A broad black sky fills the upper image, while a yellow band appears near the distant water, with low mountains beyond.\n\nThe exaggerated number of swords pushes the sense of “no more can be borne” to an extreme. The distant brightness can suggest a new phase, but it supplies no timetable. The colours alone do not establish that this is sunrise. Acknowledge the ending in the foreground without treating the whole picture as sealed in darkness. [View the image examined for this article](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp)\n\n## Waite explicitly limits a literal death reading\n\nIn the text labelled 1911, Waite writes of pain, sadness and desolation, and specifically says this is not especially a card of violent death. Reversal includes advantages, success and favourable conditions, with a warning that they may not last.\n\nReading the card as the end of an old approach, depletion and closure is a modern reflective application. Its forceful imagery offers no basis for predicting death, illness or violence. Nor does it guarantee that “we have hit bottom, so tomorrow must bring a rebound.” [Check Waite’s original entry](https://original.sacred-texts.com/tarot/pkt/pktsw10.htm)\n\n## Upright: Specify what cannot continue\n\nUpright, the card can help you face an ending already becoming apparent: a plan lacks the conditions to continue, a promise cannot be fulfilled, or a long-used method has exhausted its resources. Admitting an ending does not make every past effort worthless.\n\nDefine the scope of what ends. It may be a version, a way of collaborating or a repeated self-blaming explanation, rather than your entire career or future. Then handle necessary handovers and preserve what you learned so the losses do not keep growing.\n\n## Reversed: Relief needs fresh support\n\nReversed, the card can help you notice reduced pressure, someone taking over or a willingness to close an old task. It may also reflect knowing something should end but reinvesting because you cannot accept the loss. Ask what the new conditions have genuinely changed. Retrying without changed conditions may simply repeat the same depletion.\n\n## Closing something can be more responsible than persisting\n\nIf project testing shows that the core assumption does not hold, preserve the records and explain why before stopping ineffective investment. Keep materials other work can reuse; the project itself need not survive.\n\nWhen a collaboration ends, list outstanding deliverables and existing agreements rather than rushing to prove who failed completely. If a personal goal has required overextending yourself for months, stop the current intensity and choose a sustainable approach. Changing the plan does not mean giving up on yourself.\n\n## Practice: Put a boundary around an ending\n\nMake two columns: “What ends here” and “What remains.” Make the first specific to a way of doing something. The second might include a skill, relationship or lesson. Choose one practical closing action so the ending becomes more than a verdict in your head.\n\n## This is not a final sentence on a person\n\nThe Ten of Swords does not mean your life is over or that hope must instantly reappear. Do not use it to predict anyone’s death or harm. Bring the image back to workable reality: what needs to stop, who can help and what needs care first.\n\n## Read next\n\nDeath: Compare broad transformation with a specific approach reaching its end; Six of Swords: Continue considering supported departure and transition.\n\n## Sources for this article\n\n- [Pamela Colman Smith: Ten of Swords, actual RWS image at the fixed repository commit](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp)\n- [A. E. Waite, The Pictorial Key to the Tarot, Part III, Section 2, Ten of Swords](https://original.sacred-texts.com/tarot/pkt/pktsw10.htm)\n- [Commons Swords10.jpg file page and upload history](https://commons.wikimedia.org/wiki/File:Swords10.jpg)\n\nVersion note: The actual RWS WebP assets from a fixed repository commit were inspected individually. The Commons Pam-A file pages were used to check provenance and versions; no claim of pixel-for-pixel identity between the files is made. Waite is cited from an English transcription labelled 1911. The modern situations, questions and exercises were written originally for DestinyPixel, without borrowing paid card-meaning content.\n\n",
+  "articleSlug": null,
+  "articleSlugStatus": "not_created",
+  "publicationStatus": "reviewed_multilingual_manuscript_not_published",
+  "sourceRecord": {
+    "cardId": "ten-of-swords",
+    "idStatus": "verified_existing",
+    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
+    "number": "X",
+    "rank": "ten",
+    "suit": "swords",
+    "arcana": "minor",
+    "tradition": "Rider–Waite–Smith",
+    "locale": "zh",
+    "nameZh": "宝剑十",
+    "nameEn": "Ten of Swords",
+    "title": "宝剑十牌义 承认这条路已经走到尽头",
+    "plainLanguageSummary": "让已经结束或无法继续的部分结束，先保住下一步的空间。",
+    "hook": "最难的有时不是再努力一次，而是承认：继续用原来的办法，已经不能把事情救回来。",
+    "keywords": [
+      "终点",
+      "耗尽",
+      "收尾"
+    ],
+    "uprightQuickTake": "某种做法已难以继续，需要承认损耗并处理收尾。",
+    "reversedQuickTake": "可能出现缓解或重新站稳的机会，也要防止反复拖回旧局面。",
+    "articleSlug": "tarot-ten-of-swords-meaning",
+    "articleSlugStatus": "proposed_not_registered",
+    "status": "complete_chinese_editorial_draft_not_published",
+    "checkedAt": "2026-10-07",
+    "sections": [
+      {
+        "key": "art",
+        "title": "黑色天空下 地平线仍有亮带",
+        "paragraphs": [
+          "一个人俯卧在地面，头朝画面右侧，红色布料覆盖身体下部，一只手伸在身旁。十柄剑密集地插在背上，高低不齐。上方是大片黑色天空，靠近远处水面的位置出现黄色亮带，水的另一边还能看到低矮的山形。",
+          "画面以夸张的数量把「无法再承受」推到极端。远处的亮色可以引出新阶段的联想，但它没有给出时间表；也不能仅凭天色确定此刻是日出。重要的是承认前景的终止，同时没有把整张画都封成黑色。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp)"
+        ]
+      },
+      {
+        "key": "tradition",
+        "title": "Waite 明确限制了字面死亡的解读",
+        "paragraphs": [
+          "Waite 在1911年标注本中写到疼痛、悲伤和荒凉，并特别指出这并非专指暴力死亡的牌。逆位包含好处、成功与有利条件，同时提醒这些未必长久。",
+          "本文把它读作旧方式终结、损耗与收尾，是现代反思应用。牌上的强烈图像不是死亡、疾病或暴力事件的预测依据，也不是证明「已经触底，所以明天必然反弹」的保证。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw10.htm)"
+        ]
+      },
+      {
+        "key": "upright",
+        "title": "正位 把不能继续的部分说清楚",
+        "paragraphs": [
+          "正位可以帮助你面对一个已经显露的终点：计划缺少继续条件，承诺无法兑现，或长期使用的做法已经耗尽资源。承认结束，不等于把所有投入都判为毫无价值。",
+          "先划定结束的范围。也许该停的是某个版本、某种合作方式，或反复自责的解释，而非你整个事业和未来。接着处理必要交接、保存经验，让损失不再继续扩大。"
+        ]
+      },
+      {
+        "key": "reversed",
+        "title": "逆位 缓解需要新的支撑",
+        "paragraphs": [
+          "逆位可用于观察压力是否减轻、是否有人接手，或是否终于愿意关闭旧任务。也可能是知道该结束，却总因不甘心重新投入。看新条件到底改变了什么；没有改变的重试，可能只是把同一轮消耗再走一次。"
+        ]
+      },
+      {
+        "key": "examples",
+        "title": "收尾可以比坚持更负责任",
+        "paragraphs": [
+          "项目测试已经确认核心假设不成立，先保留记录、说明原因，再停止无效投入。能被别的工作复用的材料可以留下，项目本身不一定必须活下去。",
+          "一项合作结束后，列清未交付内容和双方已有约定，比急着证明谁彻底失败更有用。个人目标连续数月靠透支维持，可以终止当前强度，重新设定可持续的做法；改变计划不等于放弃自己。"
+        ]
+      },
+      {
+        "key": "practice",
+        "title": "练习 为一个结束划边界",
+        "paragraphs": [
+          "写两栏：「到这里为止的是什么」「仍然保留的是什么」。前者尽量具体到一个做法，后者可以是技能、关系或经验。然后选一项收尾动作，让结束不只停留在心里的判决。"
+        ]
+      },
+      {
+        "key": "misread",
+        "title": "它不是对一个人的最后判词",
+        "paragraphs": [
+          "宝剑十不表示你的人生完了，也不意味着所有希望都要立刻出现。不要据此预测任何人的死亡或伤害。把图像带回可处理的现实：哪里该停，谁能协助，下一步先照顾什么。"
+        ]
+      }
+    ],
+    "relatedCards": [
+      {
+        "cardId": "death",
+        "nameZh": "死神",
+        "reason": "比较整体转化与具体做法走到终点"
+      },
+      {
+        "cardId": "six-of-swords",
+        "nameZh": "宝剑六",
+        "reason": "继续思考有支持的离开与过渡"
+      }
+    ],
+    "sources": [
+      {
+        "id": "ten-of-swords-image",
+        "layer": "画面观察",
+        "title": "Pamela Colman Smith：宝剑十，站内固定提交的实际 RWS 图像",
+        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "ten-of-swords-waite",
+        "layer": "Waite 原文",
+        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑十",
+        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw10.htm",
+        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
+        "checkedAt": "2026-10-07"
+      },
+      {
+        "id": "ten-of-swords-commons",
+        "layer": "版本与来源对照",
+        "title": "Commons Swords10.jpg 文件页与上传历史",
+        "url": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "image": {
+      "rank": "ten",
+      "gitBlobSha": "f12f6e36f7e1423c8b6f995be4d7d34c2019dc18",
+      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/ten-of-swords.webp",
+      "sha256": "126d9212c6920c386ae62d31d05f157e34f21bd18ec1ec85a914c47f07e8b269",
+      "localFile": "images/10-ten.webp",
+      "bytes": 140464,
+      "dimensions": [
+        560,
+        971
+      ],
+      "creator": "Pamela Colman Smith",
+      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
+      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
+      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
+      "productionAsset": "/tarot/rws/ten-of-swords.webp",
+      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords10.jpg",
+      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
+      "commonsFileVersionUtc": "2024-04-06T05:20:00Z",
+      "commonsTimestampPrecision": "minute",
+      "commonsDimensions": [
+        1107,
+        1920
+      ],
+      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
+      "checkedAt": "2026-10-07"
+    },
+    "chineseCharacterCount": 1150,
+    "bodyChineseCharacterCount": 761
+  },
+  "sourceBatch": "swords",
+  "counts": {
+    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
+    "chineseCharacters": 0,
+    "words": 585,
+    "articleUtf8Bytes": 5330
+  },
+  "sourceLocale": "zh-CN",
+  "name": "Ten of Swords",
+  "translationProvenance": {
+    "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+    "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+    "sourceCardId": "ten-of-swords",
+    "sourceArticleSha256": "8355a7e70d6e3cea2e033e9ccf4a7e9be1238049e4872892e6722bfa0a9ee268",
+    "sourceLocale": "zh-CN",
+    "targetLocale": "en",
+    "chineseSourceModified": false,
+    "humanNativeReviewClaimed": false,
+    "translatedOn": "2026-10-07"
+  },
+  "nameLocalized": "Ten of Swords",
+  "review": {
+    "type": "independent_model_editorial_review",
+    "nativeHumanReview": false,
+    "checkedOn": "2026-10-07",
+    "published": false
+  },
+  "translationInputMetadata": {
+    "sourceLocale": "zh-CN",
+    "translationProvenance": {
+      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
+      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
+      "sourceCardId": "ten-of-swords",
+      "sourceArticleSha256": "8355a7e70d6e3cea2e033e9ccf4a7e9be1238049e4872892e6722bfa0a9ee268",
+      "sourceLocale": "zh-CN",
+      "targetLocale": "en",
+      "chineseSourceModified": false,
+      "humanNativeReviewClaimed": false,
+      "translatedOn": "2026-10-07"
+    }
+  },
+  "countsOriginal": {
+    "sections": 9,
+    "mainTextWords": 650,
+    "mainTextChineseCharacters": 0,
+    "completeArticleCharacters": 5308
+  },
+  "contentProvenance": {
+    "sourceLocale": "zh-CN",
+    "sourceArticleSha256": "8355a7e70d6e3cea2e033e9ccf4a7e9be1238049e4872892e6722bfa0a9ee268",
+    "articleSha256": "5aee20204886fee45cc9b50f372ed24db7ca355334a34799e27269d7e921def3",
+    "chineseOriginalModified": false,
+    "imageBytesBundled": false
+  }
+}

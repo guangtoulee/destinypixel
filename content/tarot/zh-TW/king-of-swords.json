@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "寶劍國王牌義 為你的判斷給出理由",
-  "plainLanguageSummary": "有權作決定的人，也需要說明依據並接受複核。",
+  "plainLanguageSummary": null,
   "keywords": [
     "判斷",
     "標準",
@@ -36,7 +36,13 @@
       "id": "section-02",
       "role": "tradition",
       "title": "Waite 更關心職位所擁有的裁決權",
-      "bodyMarkdown": "Waite 在1911年標註轉錄中把國王描述為處在裁決位置，聯繫判斷、權威、命令和法律。他指出這張牌與大牌正義有相似處，同時更強調職位授予的權力。逆位著重於權力的不良運用。\n\n本文由此延伸出證據、程序與問責的現代讀法。這裡談的是日常決定如何作出，不提供法律結論；國王也不固定對應男性上司、父親或某個特定職業。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)"
+      "bodyMarkdown": "Waite 在 1911 年標注轉錄中把國王描述為處在裁決位置，聯繫判斷、權威、命令和法律。他指出這張牌與大牌正義有相似處，同時更強調職位授予的權力。逆位著重於權力的不良運用。\n\n本文由此延伸出證據、程序與問責的現代讀法。這裡談的是日常決定如何作出，不提供法律結論；國王也不固定對應男性上司、父親或某個特定職業。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "穩定中軸與高背椅讓判斷看上去有分量，但劍仍由一個具體的人握著。現代讀法可以據此追問：標準從哪裡來，誰會受影響，決定者怎樣接受糾錯？說話沈著並不能單獨證明公平，能否說明理由、核對事實和一致執行，才有可觀察的依據。\n\n寶劍王牌像是形成一項清楚主張，國王則把主張放到持續負責的位置。若抽在建議位，可練習建立程序；若在阻礙位，即使正位，也要檢查是否過度依賴一個人的裁斷，把合作中其他必要資訊擋在門外。\n\n判斷是否負責任，還要看決定之後發生了什麼。有沒有人記錄落實情況，發現錯誤後是否允許改正，受影響者知道到哪裡回饋嗎？規則如果只在宣佈時很完整，執行時卻無人解釋，仍可能造成困惑。抽在個人選擇中，國王也不必意味著找一個權威替自己決定；可以先借用清楚的比較方法，再由自己承擔偏好和取捨。若他人的專業判斷很重要，就請對方解釋適用範圍與不確定之處，不因頭銜或自信語氣省略必要的查核。"
     },
     {
       "id": "section-03",
@@ -51,10 +57,22 @@
       "bodyMarkdown": "逆位可提示先有結論再找理由，或借專業術語讓人無法提出異議。也可能對別人十分嚴格，對自己的錯誤卻不作說明。檢查標準是否一致、受影響的人是否有機會陳述，以及出現錯誤後有沒有修正路徑。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 選哪一張海報 先把標準說在前面",
+      "bodyMarkdown": "**原創虛構案例，決策建議位，正位。** 宜舟組織讀書節，收到兩張海報草圖。一張很醒目，另一張日期與地點更容易讀。他問：「怎樣帶大家選出合適版本？」已知海報主要放在手機群組聊天裡，小螢幕可讀性很重要；設計者都是志工夥伴，都願意修改。\n\n國王坐在穩定中軸、握劍作判斷的姿態，可以支持他把選擇從個人喜好轉向公開標準。但這不代表組織者最懂設計，也不意味著他的第一眼喜歡必然正確。劍的權威在此需要靠可檢驗的任務支撐：讀者能否快速找到何時、何地、怎樣報名。\n\n他在投票前先說明這些標準，把兩版縮成實際手機尺寸，請幾位未參與設計的人找出關鍵資訊。若可讀性差異明確，就以測試為主要依據；視覺風格在滿足資訊要求後再比較，並記錄需修改的部分。\n\n如果海報實際用於展廳遠距離張貼，手機測試就不是合適標準，需要重做使用情境；若兩版同樣清楚，則可以讓活動氛圍與共同偏好決定。正位強調的是對判斷過程負責，而非把一個審美意見包裝成絕對客觀。選定後也給設計者說明理由，讓回饋能幫助下一次創作。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 同一條規則 為什麼總有臨時例外",
+      "bodyMarkdown": "**原創虛構案例，問題根源位，逆位。** 書南負責業餘合唱團的曲目徵集，規定週五前提交，卻給熟悉的成員延到週日，對其他人仍說已經截止。有人提出不理解，他覺得規則明明寫得很清楚。問題是：「這次爭議我該怎樣看？」已知尚未開始排練，改動徵集流程仍有餘地。\n\n高背椅與穩定正面姿態容易讓執行者把自己的決定視作規則本身。逆位則讓他檢查規則是否被一致運用。牌不能據此宣佈他人品有問題，但已知的兩套截止時間足以支持一次流程修正。別人質疑的可能不是文字不清楚，而是例外沒有被說明。\n\n書南先承認自己給了不同時間，將本輪延期統一向所有成員公佈，說明最終截止與之後的選擇方法。下次若確需例外，提前寫明哪些條件可以申請，並記錄理由，而非只在私聊中臨時答應。這個安排也讓他不必每次靠個人關係作決定。\n\n若兩次提交屬於完全不同的工作階段，時間差異可能有合理原因，只需清楚說明；如果本輪已進入不可更改的排練，則應選擇對已投入者影響最小的補救，而非機械重開。逆位的重點是讓權力接受核對，修正要針對真實影響，不能以維護威信為由拒絕所有回饋。"
+    },
+    {
       "id": "section-05",
       "role": "situations",
       "title": "在有影響的決定裡多留一步複核",
-      "bodyMarkdown": "團隊分配任務時，先看工作量、技能與時間，而不是誰最少反對。把分配理由說明白，才容易看見遺漏和不公平。\n\n挑選合作方案時，先列評估條件，再閱讀各方案，避免只為已經喜歡的選項找證據。家庭約定共同開支，可以討論記錄方式與例外情況，不能把自己負責記帳變成自己擁有最終決定權。"
+      "bodyMarkdown": "團隊分配任務時，先看工作量、技能與時間，而不是誰最少反對。把分配理由說明白，才容易看見遺漏和不公平。\n\n挑選合作方案時，先列評估條件，再閱讀各方案，避免只為已經喜歡的選項找證據。家庭約定共同開支，可以討論記錄方式與例外情況，不能把自己負責記賬變成自己擁有最終決定權。"
     },
     {
       "id": "section-06",
@@ -69,16 +87,10 @@
       "bodyMarkdown": "寶劍國王不代表沒有感情才專業，也不能保證某項裁決必然對你有利。受影響者的處境同樣是相關資訊；有條理地思考，應讓責任更清楚，而不是讓人更難被聽見。"
     },
     {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "正義：比較衡量公平與職位所承擔的裁決責任；寶劍王后：把清楚標準與聆聽邊界放在一起看。"
-    },
-    {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n- [Commons Swords14.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords14.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "king-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "king-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑国王，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktswki.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "king-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑国王",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktswki.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "king-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords14.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords14.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "king-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords14.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords14.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍國王牌義 為你的判斷給出理由\n\n一句話：有權作決定的人，也需要說明依據並接受複核。\n\n關鍵詞：判斷、標準、責任\n\n正位速讀：用一致的標準和可靠事實作決定，並承擔後果。\n\n逆位速讀：權威壓過證據，或用規則掩蓋偏見和控制。\n\n「就按我說的做」可以結束一次討論，卻未必構成一個值得信任的決定。\n\n## 人物正面坐著 劍略向一側傾斜\n\n國王正面坐在高背石椅上，藍色長袍覆蓋雙腿，外披紫色披風，領部和內襯可見紅色。右手握劍，劍身從胸前向畫面左上方略微傾斜；另一隻手停在身體側旁。王冠上方的椅背布滿對稱雕紋，其中有清楚的蝴蝶形圖案。\n\n兩邊背景是樹、雲和藍色天空，右上方有飛鳥。相較騎士的前衝，這裡的人物和椅背形成穩定的中軸。穩定可以支持審慎，也可能令人聯想到不易改變的位置；畫面沒有保證坐在高位者必然正確。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n\n## Waite 更關心職位所擁有的裁決權\n\nWaite 在1911年標註轉錄中把國王描述為處在裁決位置，聯繫判斷、權威、命令和法律。他指出這張牌與大牌正義有相似處，同時更強調職位授予的權力。逆位著重於權力的不良運用。\n\n本文由此延伸出證據、程序與問責的現代讀法。這裡談的是日常決定如何作出，不提供法律結論；國王也不固定對應男性上司、父親或某個特定職業。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n\n## 正位 把判斷變成別人能理解的過程\n\n正位可以提醒你先確定標準，再比較事實，最後說明為什麼作出這個決定。若不同意見出現，不必把它們視作對地位的挑戰；能回應質疑，通常比只維持堅定表情更可靠。\n\n一致不等於所有情況機械地同樣處理。條件確實不同，就說明差異為何相關；需要例外，就記錄理由。對結果負責也包括承認資訊不足，知道何時應請更瞭解情況的人參與。\n\n## 逆位 規則有沒有只約束別人\n\n逆位可提示先有結論再找理由，或借專業術語讓人無法提出異議。也可能對別人十分嚴格，對自己的錯誤卻不作說明。檢查標準是否一致、受影響的人是否有機會陳述，以及出現錯誤後有沒有修正路徑。\n\n## 在有影響的決定裡多留一步複核\n\n團隊分配任務時，先看工作量、技能與時間，而不是誰最少反對。把分配理由說明白，才容易看見遺漏和不公平。\n\n挑選合作方案時，先列評估條件，再閱讀各方案，避免只為已經喜歡的選項找證據。家庭約定共同開支，可以討論記錄方式與例外情況，不能把自己負責記帳變成自己擁有最終決定權。\n\n## 練習 給一個決定寫簡短說明\n\n選一個會影響別人的決定，寫出採用的標準、主要依據、尚存的不確定，以及誰可以提出補充。最後加一句：「如果＿＿發生，我會重新評估。」能夠被修正的判斷，才不會只能靠權威撐住。\n\n## 理性不是免除感受的通行證\n\n寶劍國王不代表沒有感情才專業，也不能保證某項裁決必然對你有利。受影響者的處境同樣是相關資訊；有條理地思考，應讓責任更清楚，而不是讓人更難被聽見。\n\n## 接著讀什麼\n\n正義：比較衡量公平與職位所承擔的裁決責任；寶劍王后：把清楚標準與聆聽邊界放在一起看。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n- [Commons Swords14.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords14.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍國王牌義 為你的判斷給出理由\n\n「就按我說的做」可以結束一次討論，卻未必構成一個值得信任的決定。\n\n## 人物正面坐著 劍略向一側傾斜\n\n國王正面坐在高背石椅上，藍色長袍覆蓋雙腿，外披紫色披風，領部和內襯可見紅色。右手握劍，劍身從胸前向畫面左上方略微傾斜；另一隻手停在身體側旁。王冠上方的椅背布滿對稱雕紋，其中有清楚的蝴蝶形圖案。\n\n兩邊背景是樹、雲和藍色天空，右上方有飛鳥。相較騎士的前衝，這裡的人物和椅背形成穩定的中軸。穩定可以支持審慎，也可能令人聯想到不易改變的位置；畫面沒有保證坐在高位者必然正確。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n\n## Waite 更關心職位所擁有的裁決權\n\nWaite 在 1911 年標注轉錄中把國王描述為處在裁決位置，聯繫判斷、權威、命令和法律。他指出這張牌與大牌正義有相似處，同時更強調職位授予的權力。逆位著重於權力的不良運用。\n\n本文由此延伸出證據、程序與問責的現代讀法。這裡談的是日常決定如何作出，不提供法律結論；國王也不固定對應男性上司、父親或某個特定職業。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n穩定中軸與高背椅讓判斷看上去有分量，但劍仍由一個具體的人握著。現代讀法可以據此追問：標準從哪裡來，誰會受影響，決定者怎樣接受糾錯？說話沈著並不能單獨證明公平，能否說明理由、核對事實和一致執行，才有可觀察的依據。\n\n寶劍王牌像是形成一項清楚主張，國王則把主張放到持續負責的位置。若抽在建議位，可練習建立程序；若在阻礙位，即使正位，也要檢查是否過度依賴一個人的裁斷，把合作中其他必要資訊擋在門外。\n\n判斷是否負責任，還要看決定之後發生了什麼。有沒有人記錄落實情況，發現錯誤後是否允許改正，受影響者知道到哪裡回饋嗎？規則如果只在宣佈時很完整，執行時卻無人解釋，仍可能造成困惑。抽在個人選擇中，國王也不必意味著找一個權威替自己決定；可以先借用清楚的比較方法，再由自己承擔偏好和取捨。若他人的專業判斷很重要，就請對方解釋適用範圍與不確定之處，不因頭銜或自信語氣省略必要的查核。\n\n## 正位 把判斷變成別人能理解的過程\n\n正位可以提醒你先確定標準，再比較事實，最後說明為什麼作出這個決定。若不同意見出現，不必把它們視作對地位的挑戰；能回應質疑，通常比只維持堅定表情更可靠。\n\n一致不等於所有情況機械地同樣處理。條件確實不同，就說明差異為何相關；需要例外，就記錄理由。對結果負責也包括承認資訊不足，知道何時應請更瞭解情況的人參與。\n\n## 逆位 規則有沒有只約束別人\n\n逆位可提示先有結論再找理由，或借專業術語讓人無法提出異議。也可能對別人十分嚴格，對自己的錯誤卻不作說明。檢查標準是否一致、受影響的人是否有機會陳述，以及出現錯誤後有沒有修正路徑。\n\n## 案例一 選哪一張海報 先把標準說在前面\n\n**原創虛構案例，決策建議位，正位。** 宜舟組織讀書節，收到兩張海報草圖。一張很醒目，另一張日期與地點更容易讀。他問：「怎樣帶大家選出合適版本？」已知海報主要放在手機群組聊天裡，小螢幕可讀性很重要；設計者都是志工夥伴，都願意修改。\n\n國王坐在穩定中軸、握劍作判斷的姿態，可以支持他把選擇從個人喜好轉向公開標準。但這不代表組織者最懂設計，也不意味著他的第一眼喜歡必然正確。劍的權威在此需要靠可檢驗的任務支撐：讀者能否快速找到何時、何地、怎樣報名。\n\n他在投票前先說明這些標準，把兩版縮成實際手機尺寸，請幾位未參與設計的人找出關鍵資訊。若可讀性差異明確，就以測試為主要依據；視覺風格在滿足資訊要求後再比較，並記錄需修改的部分。\n\n如果海報實際用於展廳遠距離張貼，手機測試就不是合適標準，需要重做使用情境；若兩版同樣清楚，則可以讓活動氛圍與共同偏好決定。正位強調的是對判斷過程負責，而非把一個審美意見包裝成絕對客觀。選定後也給設計者說明理由，讓回饋能幫助下一次創作。\n\n## 案例二 同一條規則 為什麼總有臨時例外\n\n**原創虛構案例，問題根源位，逆位。** 書南負責業餘合唱團的曲目徵集，規定週五前提交，卻給熟悉的成員延到週日，對其他人仍說已經截止。有人提出不理解，他覺得規則明明寫得很清楚。問題是：「這次爭議我該怎樣看？」已知尚未開始排練，改動徵集流程仍有餘地。\n\n高背椅與穩定正面姿態容易讓執行者把自己的決定視作規則本身。逆位則讓他檢查規則是否被一致運用。牌不能據此宣佈他人品有問題，但已知的兩套截止時間足以支持一次流程修正。別人質疑的可能不是文字不清楚，而是例外沒有被說明。\n\n書南先承認自己給了不同時間，將本輪延期統一向所有成員公佈，說明最終截止與之後的選擇方法。下次若確需例外，提前寫明哪些條件可以申請，並記錄理由，而非只在私聊中臨時答應。這個安排也讓他不必每次靠個人關係作決定。\n\n若兩次提交屬於完全不同的工作階段，時間差異可能有合理原因，只需清楚說明；如果本輪已進入不可更改的排練，則應選擇對已投入者影響最小的補救，而非機械重開。逆位的重點是讓權力接受核對，修正要針對真實影響，不能以維護威信為由拒絕所有回饋。\n\n## 在有影響的決定裡多留一步複核\n\n團隊分配任務時，先看工作量、技能與時間，而不是誰最少反對。把分配理由說明白，才容易看見遺漏和不公平。\n\n挑選合作方案時，先列評估條件，再閱讀各方案，避免只為已經喜歡的選項找證據。家庭約定共同開支，可以討論記錄方式與例外情況，不能把自己負責記賬變成自己擁有最終決定權。\n\n## 練習 給一個決定寫簡短說明\n\n選一個會影響別人的決定，寫出採用的標準、主要依據、尚存的不確定，以及誰可以提出補充。最後加一句：「如果＿＿發生，我會重新評估。」能夠被修正的判斷，才不會只能靠權威撐住。\n\n## 理性不是免除感受的通行證\n\n寶劍國王不代表沒有感情才專業，也不能保證某項裁決必然對你有利。受影響者的處境同樣是相關資訊；有條理地思考，應讓責任更清楚，而不是讓人更難被聽見。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍國王，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍國王](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "king-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "K",
-    "rank": "king",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑国王",
-    "nameEn": "King of Swords",
-    "title": "宝剑国王牌义 为你的判断给出理由",
-    "plainLanguageSummary": "有权作决定的人，也需要说明依据并接受复核。",
-    "hook": "「就按我说的做」可以结束一次讨论，却未必构成一个值得信任的决定。",
-    "keywords": [
-      "判断",
-      "标准",
-      "责任"
-    ],
-    "uprightQuickTake": "用一致的标准和可靠事实作决定，并承担后果。",
-    "reversedQuickTake": "权威压过证据，或用规则掩盖偏见和控制。",
-    "articleSlug": "tarot-king-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "人物正面坐着 剑略向一侧倾斜",
-        "paragraphs": [
-          "国王正面坐在高背石椅上，蓝色长袍覆盖双腿，外披紫色披风，领部和内衬可见红色。右手握剑，剑身从胸前向画面左上方略微倾斜；另一只手停在身体侧旁。王冠上方的椅背布满对称雕纹，其中有清楚的蝴蝶形图案。",
-          "两边背景是树、云和蓝色天空，右上方有飞鸟。相较骑士的前冲，这里的人物和椅背形成稳定的中轴。稳定可以支持审慎，也可能令人联想到不易改变的位置；画面没有保证坐在高位者必然正确。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "Waite 更关心职位所拥有的裁决权",
-        "paragraphs": [
-          "Waite 在1911年标注转录中把国王描述为处在裁决位置，联系判断、权威、命令和法律。他指出这张牌与大牌正义有相似处，同时更强调职位授予的权力。逆位着重于权力的不良运用。",
-          "本文由此延伸出证据、程序与问责的现代读法。这里谈的是日常决定如何作出，不提供法律结论；国王也不固定对应男性上司、父亲或某个特定职业。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktswki.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 把判断变成别人能理解的过程",
-        "paragraphs": [
-          "正位可以提醒你先确定标准，再比较事实，最后说明为什么作出这个决定。若不同意见出现，不必把它们视作对地位的挑战；能回应质疑，通常比只维持坚定表情更可靠。",
-          "一致不等于所有情况机械地同样处理。条件确实不同，就说明差异为何相关；需要例外，就记录理由。对结果负责也包括承认信息不足，知道何时应请更了解情况的人参与。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 规则有没有只约束别人",
-        "paragraphs": [
-          "逆位可提示先有结论再找理由，或借专业术语让人无法提出异议。也可能对别人十分严格，对自己的错误却不作说明。检查标准是否一致、受影响的人是否有机会陈述，以及出现错误后有没有修正路径。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "在有影响的决定里多留一步复核",
-        "paragraphs": [
-          "团队分配任务时，先看工作量、技能与时间，而不是谁最少反对。把分配理由说明白，才容易看见遗漏和不公平。",
-          "挑选合作方案时，先列评估条件，再阅读各方案，避免只为已经喜欢的选项找证据。家庭约定共同开支，可以讨论记录方式与例外情况，不能把自己负责记账变成自己拥有最终决定权。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 给一个决定写简短说明",
-        "paragraphs": [
-          "选一个会影响别人的决定，写出采用的标准、主要依据、尚存的不确定，以及谁可以提出补充。最后加一句：「如果＿＿发生，我会重新评估。」能够被修正的判断，才不会只能靠权威撑住。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "理性不是免除感受的通行证",
-        "paragraphs": [
-          "宝剑国王不代表没有感情才专业，也不能保证某项裁决必然对你有利。受影响者的处境同样是相关信息；有条理地思考，应让责任更清楚，而不是让人更难被听见。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "justice",
-        "nameZh": "正义",
-        "reason": "比较衡量公平与职位所承担的裁决责任"
-      },
-      {
-        "cardId": "queen-of-swords",
-        "nameZh": "宝剑王后",
-        "reason": "把清楚标准与聆听边界放在一起看"
-      }
-    ],
-    "sources": [
-      {
-        "id": "king-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑国王，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "king-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑国王",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktswki.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "king-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords14.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "king",
-      "gitBlobSha": "182aca7adb1bea8121ddb037f5d66daada130b22",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/king-of-swords.webp",
-      "sha256": "64147e29ecf104fb92eb7176607dce1addb2f69d39da3112967bb0c94b6bd96d",
-      "localFile": "images/14-king.webp",
-      "bytes": 193136,
-      "dimensions": [
-        560,
-        962
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/king-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords14.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:22:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1117,
-        1919
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1152,
-    "bodyChineseCharacterCount": 767
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 864,
-    "words": 2,
-    "articleUtf8Bytes": 4470
-  },
+  "sourceBatch": "depth77-swords-06",
   "sourceLocale": "zh-CN",
   "name": "寶劍國王",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍國王",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "king-of-swords",
-      "sourceArticleSha256": "6217bb87e0d92320c570d8a3655b2cfc2b1aa0a6a478f8a4fc945f0d627bf0e4",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 975,
-    "completeArticleCharacters": 1934
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "6217bb87e0d92320c570d8a3655b2cfc2b1aa0a6a478f8a4fc945f0d627bf0e4",
-    "articleSha256": "b747920c94e202619f5fd5c94aa6894389dd2b02ba6eb3a43e102a0218f15a5e",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "940abd26be03651c614400460a3b745e8780109f0b8bae636f2d3a6ccb8f4864",
+    "sourceArticleSha256": "940abd26be03651c614400460a3b745e8780109f0b8bae636f2d3a6ccb8f4864",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "ec3c63356e037b8cee1436da526e2ed681ef7159f73accd6a4a42092c03849a9",
+    "sourcePackageSha256": "76d9d70f40f519f68a5cd88989b9ffeb604ffa14b6e5b6f6f58970e2b12545aa",
+    "previousRecord": "content/tarot/revisions/2026-10-08/king-of-swords.zh-TW.json",
+    "editionBodySha256": "fddde3c5fdf544f8f7d2d3cb984f32d95bab0db66d6328b99df2f0ef7fef713f",
+    "translationSourceBodySha256": "940abd26be03651c614400460a3b745e8780109f0b8bae636f2d3a6ccb8f4864",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "34573072bdeb50c51463ba23c65fe11e9a72d095d131f2b7d62a0730b77b1562",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

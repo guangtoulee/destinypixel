@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "寶劍九牌義 別讓最壞的猜想獨自佔滿夜晚",
-  "plainLanguageSummary": "擔心是真實的感受，但它還不是事情已經發生的證據。",
+  "plainLanguageSummary": null,
   "keywords": [
     "憂慮",
     "反芻",
@@ -24,7 +24,7 @@
     "upright": "留意反覆盤旋的擔心，把事實和想像分開看。",
     "reversed": "願意說出憂慮，或發現自己仍在同一輪擔心裡打轉。"
   },
-  "hook": "夜裡一封沒有回音的電子郵件，可能在腦海裡長成十種後果。此刻最響亮的想法，未必最接近事實。",
+  "hook": "夜裡的一封未回郵件，可能在腦海裡長成十種後果。此刻最響亮的想法，未必最接近事實。",
   "sections": [
     {
       "id": "section-01",
@@ -35,32 +35,50 @@
     {
       "id": "section-02",
       "role": "tradition",
-      "title": "原文很沉重 讀者需要知道邊界",
-      "bodyMarkdown": "Waite 在1911年標註轉錄中形容人物哀嘆，並強調極深的悲傷；逆位詞表中有懷疑、恐懼與羞愧。他的舊式占斷含有具體災厄與健康相關條目，本文不將那些內容當成現實預測。\n\n下面圍繞擔憂、反覆回想和支持展開，是現代反思延伸。寶劍九不是精神健康診斷，也不能用來測量一個人的痛苦是否「足夠嚴重」。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)"
+      "title": "原文很沈重 讀者需要知道邊界",
+      "bodyMarkdown": "Waite 在 1911 年標注轉錄中形容人物哀嘆，並強調極深的悲傷；逆位詞表中有懷疑、恐懼與羞愧。他的舊式佔斷含有具體災厄與健康相關項目，本文不將那些內容當成現實預測。\n\n下面圍繞擔憂、反覆回想和支持展開，是現代反思延伸。寶劍九不是精神健康診斷，也不能用來測量一個人的痛苦是否「足夠嚴重」。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "九柄劍橫在人物上方，並沒有穿透身體，正好提供一個重要區分：事情造成的痛苦可以非常真實，但腦中反覆出現的結局仍需另行確認。承認感受與檢查事實可以同時進行，誰也不必先證明擔心正確，才有資格獲得傾聽。\n\n與寶劍十相比，九的畫面重心在正在承受的體驗，十則把終止畫得格外強烈。因此不要因為九接近十，就自動替故事安排更糟的下一幕。牌序不是一條必須發生在某人身上的劇情線。\n\n若問題是「壞事會不會發生」，這張牌更適合把解讀轉向擔心本身：現在最需要確認的事實是什麼，誰能幫助整理，哪些問題暫時無法知道答案？不要用再抽幾張牌不斷追求確定，否則每一幅圖都可能變成新的擔憂素材。抽在過去位時，可以討論此前的不安是否仍影響當前判斷，但不必要求重新講出所有難受細節。若困擾持續影響日常生活，實際支持比反覆佔問更重要；需要什麼幫助，應尊重當事人的表達和現實情況。"
     },
     {
       "id": "section-03",
       "role": "upright",
       "title": "正位 先把腦中的故事寫下來",
-      "bodyMarkdown": "正位適合留意一種經驗：事情還沒確定，自己卻已經反覆經歷最壞結局。感受值得被照顧，同時仍需要檢查哪些是事實，哪些是對未來的推演。\n\n擔心不全是多餘的，有時確有一個需要處理的問題。可以把它縮成明天能核實的一件事，暫時不要求自己在此刻解決全部人生。若獨自整理很困難，向可信的人說清需要，也屬於有效行動。"
+      "bodyMarkdown": "正位適合留意一種經驗：事情還沒確定，自己卻已經反覆經歷最壞結局。感受值得被照顧，同時仍需要檢查哪些是事實，哪些是對未來的推演。\n\n擔心不全是多餘的，有時確有一個需要處理的問題。可以把它縮成明天能確認的一件事，暫時不要求自己在此刻解決全部人生。若獨自整理很困難，向可信的人說清需要，也屬於有效行動。"
     },
     {
       "id": "section-04",
       "role": "reversed",
-      "title": "逆位 不以沉默判斷有沒有好轉",
+      "title": "逆位 不以沈默判斷有沒有好轉",
       "bodyMarkdown": "逆位可能是開始講出憂慮，也可能只是把它藏得更深。觀察可見的變化：是否能獲得支持、是否減少無休止確認、是否有一點新的處理辦法。不能因為方向倒過來，就宣佈所有擔心即將消失。"
+    },
+    {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 發出去的消息 被自己反覆重讀",
+      "bodyMarkdown": "**原創虛構案例，阻礙位，正位。** 亦然給讀書會群發了一條活動建議，過了兩個小時只有一個人回覆。她開始反覆查看措辭，覺得其他人一定認為自己很無聊。她問：「為什麼我今天很難繼續做自己的事？」已知群裡平常回覆就慢，活動要到下週，也沒人提出反對。\n\n床沿人物捂臉、劍橫列在上方，可以作為反覆回想的視覺入口。她已經在腦中經歷了「大家討厭這條建議」的結果，但這個結果尚未成為事實。畫面沒有顯示其他人的反應，因此不能用它回答群友心裡在想什麼。她感到難受是真的，群體否定她仍只是一個解釋。\n\n她先停止逐字重讀，在紙上寫明「尚未收到多數回覆」，把自己的推斷另列一行。等到事先約好的匯總時間，再發一個可直接選擇的時間問題；在這之前回到原定的閱讀任務。這樣做是在減少不必要的反覆確認，並非要求她立刻不在意。\n\n如果建議裡確實漏掉日期，便補一次資訊；若有人後來提出不同意見，也就意見本身調整，不追溯成所有沈默早有惡意。正位讓她先找到困住注意力的循環，行動則來自群裡的實際節奏，而不是一種災難預告。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 願意說出擔心以後 怎樣得到合適幫助",
+      "bodyMarkdown": "**原創虛構案例，建議位，逆位。** 知微準備第一次主持小型分享會，已寫好流程，卻總擔心忘詞。朋友說「你一定沒問題」，她聽完仍不踏實。她問：「我該怎樣準備最後兩天？」已知場地允許放提示卡，內容熟悉，真正沒試過的是開場後怎樣轉入提問。\n\n逆位可以考慮從獨自承受轉向表達，但不能直接宣佈擔心已經消失。畫中人物遮著臉、沒有向外溝通，促使她把一句泛泛的「我害怕搞砸」說得更具體。九柄劍並非九個實際錯誤，她也不用為每一種想像中的失誤都設計一套複雜補救。\n\n她請朋友陪自己演練五分鐘開場與第一輪提問，要求回饋卡在哪裡，而不是只給鼓勵。隨後寫一張簡短提示卡，包含開場、過渡句和冷場時可用的問題。練習結束後不再無限重播整場，在既定時間檢查材料即可。\n\n如果演練發現內容本身太長，就刪減；如果只是某個詞想不起來，提示卡已足夠。若朋友無法提供具體回饋，可以自己錄一次再聽，不必把找不到陪練理解成無處求助。逆位的積極變化要落實為更適合的支持與準備，而非強迫自己表現得毫無擔憂。"
     },
     {
       "id": "section-05",
       "role": "situations",
-      "title": "在發出結論前先核實一件事",
-      "bodyMarkdown": "交完報告後不停回放一個小錯誤，可以先判斷它是否影響結果；若確實影響，安排一次清楚的更正，而不是整晚想像所有人都在批評你。\n\n朋友短時間沒回復，先核對有沒有明確的緊急事項，別把沉默填成拒絕。考試前怕準備不足，可以寫下最需要復習的兩點，再按實際時間安排。若困擾持續影響睡眠或日常生活，應尋求合適的專業支持，抽牌不能替代評估。"
+      "title": "在發出結論前先確認一件事",
+      "bodyMarkdown": "交完報告後不停回放一個小錯誤，可以先判斷它是否影響結果；若確實影響，安排一次清楚的更正，而不是整晚想像所有人都在批評你。\n\n朋友短時間沒回覆，先核對有沒有明確的緊急事項，別把沈默填成拒絕。考試前怕準備不足，可以寫下最需要複習的兩點，再按實際時間安排。若困擾持續影響睡眠或日常生活，應尋求合適的專業支持，抽牌不能替代評估。"
     },
     {
       "id": "section-06",
       "role": "practice",
       "title": "練習 給擔心加上證據欄",
-      "bodyMarkdown": "寫下最反覆的一句擔心，旁邊分列「支持它的事實」「目前不知道的事」「下一次可核實的時間」。再寫一個今晚能減輕負荷的小安排。目的不是強迫樂觀，而是不讓猜想冒充已經確定的結局。"
+      "bodyMarkdown": "寫下最反覆的一句擔心，旁邊分列「支持它的事實」「目前不知道的事」「下一次可確認的時間」。再寫一個今晚能減輕負荷的小安排。目的不是強迫樂觀，而是不讓猜想冒充已經確定的結局。"
     },
     {
       "id": "section-07",
@@ -69,16 +87,10 @@
       "bodyMarkdown": "不要把寶劍九解讀為疾病、死亡或必然失敗的預告，也不要用「只是想太多」否定他人的處境。牌可以幫你開始表達，實際困擾仍應得到實際的幫助。"
     },
     {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "寶劍八：區分具體行動限制與反覆憂慮；寶劍四：為減少刺激和恢復安排空間。"
-    },
-    {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍九](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n- [Commons Swords09.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords09.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍九](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "nine-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "nine-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑九，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍九",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktsw09.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "nine-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑九",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍九",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktsw09.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "nine-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords09.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords09.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "nine-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords09.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords09.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍九牌義 別讓最壞的猜想獨自佔滿夜晚\n\n一句話：擔心是真實的感受，但它還不是事情已經發生的證據。\n\n關鍵詞：憂慮、反芻、求助\n\n正位速讀：留意反覆盤旋的擔心，把事實和想像分開看。\n\n逆位速讀：願意說出憂慮，或發現自己仍在同一輪擔心裡打轉。\n\n夜裡一封沒有回音的電子郵件，可能在腦海裡長成十種後果。此刻最響亮的想法，未必最接近事實。\n\n## 劍橫在黑暗裡 沒有刺入身體\n\n一個穿淺色長衣的人坐在床沿，身體前傾，雙手蓋住臉。九柄劍橫向排列在黑色背景上，劍柄在左，劍身一直伸向右側。被子鋪在腿前，方格中交替出現紅色花朵與深色符號。床側還刻著兩個人物，其中一人持物朝另一人靠近。\n\n黑色背景佔據大半畫面，床上的人像被自己的痛苦包圍。不過，劍並未畫成插在人物身上。把橫列的劍聯想到反覆出現的念頭，是一種現代讀圖方式；我們無法僅憑這張靜態圖認定人物是否失眠，或正在經歷哪種疾病。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n\n## 原文很沉重 讀者需要知道邊界\n\nWaite 在1911年標註轉錄中形容人物哀嘆，並強調極深的悲傷；逆位詞表中有懷疑、恐懼與羞愧。他的舊式占斷含有具體災厄與健康相關條目，本文不將那些內容當成現實預測。\n\n下面圍繞擔憂、反覆回想和支持展開，是現代反思延伸。寶劍九不是精神健康診斷，也不能用來測量一個人的痛苦是否「足夠嚴重」。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n\n## 正位 先把腦中的故事寫下來\n\n正位適合留意一種經驗：事情還沒確定，自己卻已經反覆經歷最壞結局。感受值得被照顧，同時仍需要檢查哪些是事實，哪些是對未來的推演。\n\n擔心不全是多餘的，有時確有一個需要處理的問題。可以把它縮成明天能核實的一件事，暫時不要求自己在此刻解決全部人生。若獨自整理很困難，向可信的人說清需要，也屬於有效行動。\n\n## 逆位 不以沉默判斷有沒有好轉\n\n逆位可能是開始講出憂慮，也可能只是把它藏得更深。觀察可見的變化：是否能獲得支持、是否減少無休止確認、是否有一點新的處理辦法。不能因為方向倒過來，就宣佈所有擔心即將消失。\n\n## 在發出結論前先核實一件事\n\n交完報告後不停回放一個小錯誤，可以先判斷它是否影響結果；若確實影響，安排一次清楚的更正，而不是整晚想像所有人都在批評你。\n\n朋友短時間沒回復，先核對有沒有明確的緊急事項，別把沉默填成拒絕。考試前怕準備不足，可以寫下最需要復習的兩點，再按實際時間安排。若困擾持續影響睡眠或日常生活，應尋求合適的專業支持，抽牌不能替代評估。\n\n## 練習 給擔心加上證據欄\n\n寫下最反覆的一句擔心，旁邊分列「支持它的事實」「目前不知道的事」「下一次可核實的時間」。再寫一個今晚能減輕負荷的小安排。目的不是強迫樂觀，而是不讓猜想冒充已經確定的結局。\n\n## 痛苦不證明災難將要發生\n\n不要把寶劍九解讀為疾病、死亡或必然失敗的預告，也不要用「只是想太多」否定他人的處境。牌可以幫你開始表達，實際困擾仍應得到實際的幫助。\n\n## 接著讀什麼\n\n寶劍八：區分具體行動限制與反覆憂慮；寶劍四：為減少刺激和恢復安排空間。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍九](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n- [Commons Swords09.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords09.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍九牌義 別讓最壞的猜想獨自佔滿夜晚\n\n夜裡的一封未回郵件，可能在腦海裡長成十種後果。此刻最響亮的想法，未必最接近事實。\n\n## 劍橫在黑暗裡 沒有刺入身體\n\n一個穿淺色長衣的人坐在床沿，身體前傾，雙手蓋住臉。九柄劍橫向排列在黑色背景上，劍柄在左，劍身一直伸向右側。被子鋪在腿前，方格中交替出現紅色花朵與深色符號。床側還刻著兩個人物，其中一人持物朝另一人靠近。\n\n黑色背景佔據大半畫面，床上的人像被自己的痛苦包圍。不過，劍並未畫成插在人物身上。把橫列的劍聯想到反覆出現的念頭，是一種現代讀圖方式；我們無法僅憑這張靜態圖認定人物是否失眠，或正在經歷哪種疾病。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n\n## 原文很沈重 讀者需要知道邊界\n\nWaite 在 1911 年標注轉錄中形容人物哀嘆，並強調極深的悲傷；逆位詞表中有懷疑、恐懼與羞愧。他的舊式佔斷含有具體災厄與健康相關項目，本文不將那些內容當成現實預測。\n\n下面圍繞擔憂、反覆回想和支持展開，是現代反思延伸。寶劍九不是精神健康診斷，也不能用來測量一個人的痛苦是否「足夠嚴重」。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n九柄劍橫在人物上方，並沒有穿透身體，正好提供一個重要區分：事情造成的痛苦可以非常真實，但腦中反覆出現的結局仍需另行確認。承認感受與檢查事實可以同時進行，誰也不必先證明擔心正確，才有資格獲得傾聽。\n\n與寶劍十相比，九的畫面重心在正在承受的體驗，十則把終止畫得格外強烈。因此不要因為九接近十，就自動替故事安排更糟的下一幕。牌序不是一條必須發生在某人身上的劇情線。\n\n若問題是「壞事會不會發生」，這張牌更適合把解讀轉向擔心本身：現在最需要確認的事實是什麼，誰能幫助整理，哪些問題暫時無法知道答案？不要用再抽幾張牌不斷追求確定，否則每一幅圖都可能變成新的擔憂素材。抽在過去位時，可以討論此前的不安是否仍影響當前判斷，但不必要求重新講出所有難受細節。若困擾持續影響日常生活，實際支持比反覆佔問更重要；需要什麼幫助，應尊重當事人的表達和現實情況。\n\n## 正位 先把腦中的故事寫下來\n\n正位適合留意一種經驗：事情還沒確定，自己卻已經反覆經歷最壞結局。感受值得被照顧，同時仍需要檢查哪些是事實，哪些是對未來的推演。\n\n擔心不全是多餘的，有時確有一個需要處理的問題。可以把它縮成明天能確認的一件事，暫時不要求自己在此刻解決全部人生。若獨自整理很困難，向可信的人說清需要，也屬於有效行動。\n\n## 逆位 不以沈默判斷有沒有好轉\n\n逆位可能是開始講出憂慮，也可能只是把它藏得更深。觀察可見的變化：是否能獲得支持、是否減少無休止確認、是否有一點新的處理辦法。不能因為方向倒過來，就宣佈所有擔心即將消失。\n\n## 案例一 發出去的消息 被自己反覆重讀\n\n**原創虛構案例，阻礙位，正位。** 亦然給讀書會群發了一條活動建議，過了兩個小時只有一個人回覆。她開始反覆查看措辭，覺得其他人一定認為自己很無聊。她問：「為什麼我今天很難繼續做自己的事？」已知群裡平常回覆就慢，活動要到下週，也沒人提出反對。\n\n床沿人物捂臉、劍橫列在上方，可以作為反覆回想的視覺入口。她已經在腦中經歷了「大家討厭這條建議」的結果，但這個結果尚未成為事實。畫面沒有顯示其他人的反應，因此不能用它回答群友心裡在想什麼。她感到難受是真的，群體否定她仍只是一個解釋。\n\n她先停止逐字重讀，在紙上寫明「尚未收到多數回覆」，把自己的推斷另列一行。等到事先約好的匯總時間，再發一個可直接選擇的時間問題；在這之前回到原定的閱讀任務。這樣做是在減少不必要的反覆確認，並非要求她立刻不在意。\n\n如果建議裡確實漏掉日期，便補一次資訊；若有人後來提出不同意見，也就意見本身調整，不追溯成所有沈默早有惡意。正位讓她先找到困住注意力的循環，行動則來自群裡的實際節奏，而不是一種災難預告。\n\n## 案例二 願意說出擔心以後 怎樣得到合適幫助\n\n**原創虛構案例，建議位，逆位。** 知微準備第一次主持小型分享會，已寫好流程，卻總擔心忘詞。朋友說「你一定沒問題」，她聽完仍不踏實。她問：「我該怎樣準備最後兩天？」已知場地允許放提示卡，內容熟悉，真正沒試過的是開場後怎樣轉入提問。\n\n逆位可以考慮從獨自承受轉向表達，但不能直接宣佈擔心已經消失。畫中人物遮著臉、沒有向外溝通，促使她把一句泛泛的「我害怕搞砸」說得更具體。九柄劍並非九個實際錯誤，她也不用為每一種想像中的失誤都設計一套複雜補救。\n\n她請朋友陪自己演練五分鐘開場與第一輪提問，要求回饋卡在哪裡，而不是只給鼓勵。隨後寫一張簡短提示卡，包含開場、過渡句和冷場時可用的問題。練習結束後不再無限重播整場，在既定時間檢查材料即可。\n\n如果演練發現內容本身太長，就刪減；如果只是某個詞想不起來，提示卡已足夠。若朋友無法提供具體回饋，可以自己錄一次再聽，不必把找不到陪練理解成無處求助。逆位的積極變化要落實為更適合的支持與準備，而非強迫自己表現得毫無擔憂。\n\n## 在發出結論前先確認一件事\n\n交完報告後不停回放一個小錯誤，可以先判斷它是否影響結果；若確實影響，安排一次清楚的更正，而不是整晚想像所有人都在批評你。\n\n朋友短時間沒回覆，先核對有沒有明確的緊急事項，別把沈默填成拒絕。考試前怕準備不足，可以寫下最需要複習的兩點，再按實際時間安排。若困擾持續影響睡眠或日常生活，應尋求合適的專業支持，抽牌不能替代評估。\n\n## 練習 給擔心加上證據欄\n\n寫下最反覆的一句擔心，旁邊分列「支持它的事實」「目前不知道的事」「下一次可確認的時間」。再寫一個今晚能減輕負荷的小安排。目的不是強迫樂觀，而是不讓猜想冒充已經確定的結局。\n\n## 痛苦不證明災難將要發生\n\n不要把寶劍九解讀為疾病、死亡或必然失敗的預告，也不要用「只是想太多」否定他人的處境。牌可以幫你開始表達，實際困擾仍應得到實際的幫助。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍九，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍九](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "nine-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "IX",
-    "rank": "nine",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑九",
-    "nameEn": "Nine of Swords",
-    "title": "宝剑九牌义 别让最坏的猜想独自占满夜晚",
-    "plainLanguageSummary": "担心是真实的感受，但它还不是事情已经发生的证据。",
-    "hook": "夜里的一封未回邮件，可能在脑海里长成十种后果。此刻最响亮的想法，未必最接近事实。",
-    "keywords": [
-      "忧虑",
-      "反刍",
-      "求助"
-    ],
-    "uprightQuickTake": "留意反复盘旋的担心，把事实和想象分开看。",
-    "reversedQuickTake": "愿意说出忧虑，或发现自己仍在同一轮担心里打转。",
-    "articleSlug": "tarot-nine-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "剑横在黑暗里 没有刺入身体",
-        "paragraphs": [
-          "一个穿浅色长衣的人坐在床沿，身体前倾，双手盖住脸。九柄剑横向排列在黑色背景上，剑柄在左，剑身一直伸向右侧。被子铺在腿前，方格中交替出现红色花朵与深色符号。床侧还刻着两个人物，其中一人持物朝另一人靠近。",
-          "黑色背景占据大半画面，床上的人像被自己的痛苦包围。不过，剑并未画成插在人物身上。把横列的剑联想到反复出现的念头，是一种现代读图方式；我们无法仅凭这张静态图认定人物是否失眠，或正在经历哪种疾病。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "原文很沉重 读者需要知道边界",
-        "paragraphs": [
-          "Waite 在1911年标注转录中形容人物哀叹，并强调极深的悲伤；逆位词表中有怀疑、恐惧与羞愧。他的旧式占断含有具体灾厄与健康相关项目，本文不将那些内容当成现实预测。",
-          "下面围绕担忧、反复回想和支持展开，是现代反思延伸。宝剑九不是精神健康诊断，也不能用来测量一个人的痛苦是否「足够严重」。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw09.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先把脑中的故事写下来",
-        "paragraphs": [
-          "正位适合留意一种经验：事情还没确定，自己却已经反复经历最坏结局。感受值得被照顾，同时仍需要检查哪些是事实，哪些是对未来的推演。",
-          "担心不全是多余的，有时确有一个需要处理的问题。可以把它缩成明天能核实的一件事，暂时不要求自己在此刻解决全部人生。若独自整理很困难，向可信的人说清需要，也属于有效行动。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 不以沉默判断有没有好转",
-        "paragraphs": [
-          "逆位可能是开始讲出忧虑，也可能只是把它藏得更深。观察可见的变化：是否能获得支持、是否减少无休止确认、是否有一点新的处理办法。不能因为方向倒过来，就宣布所有担心即将消失。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "在发出结论前先核实一件事",
-        "paragraphs": [
-          "交完报告后不停回放一个小错误，可以先判断它是否影响结果；若确实影响，安排一次清楚的更正，而不是整晚想象所有人都在批评你。",
-          "朋友短时间没回复，先核对有没有明确的紧急事项，别把沉默填成拒绝。考试前怕准备不足，可以写下最需要复习的两点，再按实际时间安排。若困扰持续影响睡眠或日常生活，应寻求合适的专业支持，抽牌不能替代评估。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 给担心加上证据栏",
-        "paragraphs": [
-          "写下最反复的一句担心，旁边分列「支持它的事实」「目前不知道的事」「下一次可核实的时间」。再写一个今晚能减轻负荷的小安排。目的不是强迫乐观，而是不让猜想冒充已经确定的结局。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "痛苦不证明灾难将要发生",
-        "paragraphs": [
-          "不要把宝剑九解读为疾病、死亡或必然失败的预告，也不要用「只是想太多」否定他人的处境。牌可以帮你开始表达，实际困扰仍应得到实际的帮助。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "eight-of-swords",
-        "nameZh": "宝剑八",
-        "reason": "区分具体行动限制与反复忧虑"
-      },
-      {
-        "cardId": "four-of-swords",
-        "nameZh": "宝剑四",
-        "reason": "为减少刺激和恢复安排空间"
-      }
-    ],
-    "sources": [
-      {
-        "id": "nine-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑九，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "nine-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑九",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw09.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "nine-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords09.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "nine",
-      "gitBlobSha": "b1a8dadb20311413ea5b3b3b8d7f770578813ceb",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/nine-of-swords.webp",
-      "sha256": "c82551bed5cdabc581e6f80e3b6e4a33ec499ee47c3c49b044adbc8be928d707",
-      "localFile": "images/09-nine.webp",
-      "bytes": 153198,
-      "dimensions": [
-        560,
-        965
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/nine-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords09.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:20:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1114,
-        1919
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1169,
-    "bodyChineseCharacterCount": 783
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 898,
-    "words": 2,
-    "articleUtf8Bytes": 4528
-  },
+  "sourceBatch": "depth77-swords-04",
   "sourceLocale": "zh-CN",
   "name": "寶劍九",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍九",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "nine-of-swords",
-      "sourceArticleSha256": "4528bb523eca8b077ce0fe6fdfd092900b474f967a84e89cbef260c301627065",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 1005,
-    "completeArticleCharacters": 1950
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "4528bb523eca8b077ce0fe6fdfd092900b474f967a84e89cbef260c301627065",
-    "articleSha256": "ac634acc92f87ca199e83c135497c52b38deb285ad1a09ae1b8de013551dc5be",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "2cf8f666a2f8f48e74f79139e3c0bf0650bd04b1db61ad7ffe3213753d001339",
+    "sourceArticleSha256": "2cf8f666a2f8f48e74f79139e3c0bf0650bd04b1db61ad7ffe3213753d001339",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "4a64adf9858783387e15e56b751d3d8858c37edff242503ba0ece5945e1d7c37",
+    "sourcePackageSha256": "e7ac4168e63486457b391b6c7a39970053570391ce8035209408f729b24688ba",
+    "previousRecord": "content/tarot/revisions/2026-10-08/nine-of-swords.zh-TW.json",
+    "editionBodySha256": "ff24870a8137aca021baeac2aba764bd15de5ef916191229886cf6e04c821082",
+    "translationSourceBodySha256": "2cf8f666a2f8f48e74f79139e3c0bf0650bd04b1db61ad7ffe3213753d001339",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "4133f4f43669b2dedc0dcc7248b31a39e56ce02d8cd3ad2df1a29a5d89e79a0c",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

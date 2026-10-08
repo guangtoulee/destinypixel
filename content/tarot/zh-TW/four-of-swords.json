@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "寶劍四牌義 把暫停真正留給恢復",
-  "plainLanguageSummary": "暫時退出爭論和忙碌，給自己一段有邊界的安靜。",
+  "plainLanguageSummary": null,
   "keywords": [
     "休整",
     "退後",
@@ -30,19 +30,25 @@
       "id": "section-01",
       "role": "image",
       "title": "躺著的是墓上的雕像",
-      "bodyMarkdown": "金黃色的人形橫臥在長方形台座上，頭靠畫面右側，雙手在胸前合攏。上方牆面排列著三柄劍，劍尖向下；第四柄劍沿台座正面橫放，方向與身體一致。左上角的彩色玻璃窗中，一人站立，一人跪著，窗內色彩與室內灰牆形成對照。\n\n從畫面可以看到盔甲般的衣著和極少的動作；Waite 則明確稱它為墓上的騎士雕像。不要把畫中的靜止直接當成睡眠、住院或死亡消息。這裡可供學習的是安靜、退後和暫時停止交鋒的構圖。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)"
+      "bodyMarkdown": "金黃色的人形橫臥在長方形臺座上，頭靠畫面右側，雙手在胸前合攏。上方牆面排列著三柄劍，劍尖向下；第四柄劍沿臺座正面橫放，方向與身體一致。左上角的彩色玻璃窗中，一人站立，一人跪著，窗內色彩與室內灰牆形成對照。\n\n從畫面可以看到盔甲般的衣著和極少的動作；Waite 則明確稱它為墓上的騎士雕像。不要把畫中的靜止直接當成睡眠、住院或死亡消息。這裡可供學習的是安靜、退後和暫時停止交鋒的構圖。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)"
     },
     {
       "id": "section-02",
       "role": "tradition",
       "title": "休止與警醒在原文裡並存",
-      "bodyMarkdown": "Waite 的1911年標註本同時給出警醒、退隱、獨處與隱士般休息等詞義。他也說明墓葬意象參與了設計。逆位列有謹慎管理、節約與預防一類含義，和今天常說的「休息不足」並不完全相同。\n\n本文用此牌討論恢復安排，是現代生活中的延伸。它不提供健康判斷，也不把休息描述為某種能夠保證解決所有問題的方法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)"
+      "bodyMarkdown": "Waite 的 1911 年標注本同時給出警醒、退隱、獨處與隱士般休息等詞義。他也說明墓葬意象參與了設計。逆位列有謹慎管理、節約與預防一類含義，和今天常說的「休息不足」並不完全相同。\n\n本文用此牌討論恢復安排，是現代生活中的延伸。它不提供健康判斷，也不把休息描述為某種能夠保證解決所有問題的方法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "從畫面走到問題 還要核對什麼",
+      "bodyMarkdown": "三柄劍在牆上，一柄在臺座側面，武器都暫時脫離了手。這個空間沒有交鋒動作，暫停因此有了具體形狀。做現代應用時，可以問「哪些事務能夠先放到架上」，而不是把所有任務一起帶進休息。彩窗裡還有人物關係，也提醒我們安靜可以發生在有支援的環境中，不必把退後理解成徹底失聯。\n\n這裡的雕像是圖像身分，不是正在經歷的身體狀態。由墓上祈禱姿態聯想到反省，有解釋上的距離，應保留這段距離，避免把象徵變成現實消息。"
     },
     {
       "id": "section-03",
       "role": "upright",
       "title": "正位 暫停需要被安排出來",
-      "bodyMarkdown": "正位提醒你降低外界要求，讓自己有機會重新組織思路。停止爭論、延後非緊急答復，或把一段時間從任務清單裡空出來，都可以是具體做法。\n\n安靜不一定意味著獨自扛著。把交接做好、告訴合作者何時恢復聯繫，反而能讓休息更踏實。若只是帶著工作手機躺下，繼續反覆確認每條通知，身體雖然沒動，注意力仍在被調用。"
+      "bodyMarkdown": "正位提醒你降低外界要求，讓自己有機會重新組織思路。停止爭論、延後非緊急答覆，或把一段時間從任務清單裡空出來，都可以是具體做法。\n\n安靜不一定意味著獨自扛著。把交接做好、告訴合作者何時恢復聯繫，反而能讓休息更踏實。若只是帶著工作手機躺下，繼續反覆確認每條通知，身體雖然沒動，注意力仍在被調用。"
     },
     {
       "id": "section-04",
@@ -51,10 +57,22 @@
       "bodyMarkdown": "逆位可從兩頭觀察：你已經恢復一些餘力，準備逐步重返；或者仍很疲憊，卻覺得自己不配繼續停下。不要只憑牌的方向決定該動還是該歇，先看實際精力、工作負荷和已有支持，再調節節奏。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 爭論到第三版 先暫停什麼",
+      "bodyMarkdown": "**原創虛構案例，建議位，正位。** 林初和兩位夥伴為社區展覽排版，已經連續三晚改海報。每次有人發新版本，另一人就繼續改顏色，文字錯誤卻仍沒核對完。他問：「今晚怎樣才能讓工作真正往前走？」距離交稿還有四天，並沒有必須連夜完成的要求。\n\n牆上的三柄劍與橫置的一柄劍，讓他注意到事情可以被分開放下。正位並不是叫三人放棄展覽，而是暫時停止無止境的風格交鋒。騎士雕像的靜止可以支持反省的空間，不能被當成他已出現某種健康問題的證據。\n\n他把當前文件存成一個明確版本，發消息約定今晚不再改色，明天下午集中收意見。文字校對由一人負責，其他人只在指定文件中註解，避免各自覆蓋文件。然後真正離開編輯介面，給判斷留出間隔。\n\n如果印刷截止其實就在次日上午，這個安排就不合適；應先完成必要校對與交付，再安排停頓。若只是有人偏好深夜工作，也不應自動把這種偏好變成全組義務。此牌的幫助在於把暫停設計成可執行的協作安排：停哪項、誰接手、什麼時候回來，都說得清楚。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 休息以後 要不要一口氣補完",
+      "bodyMarkdown": "**原創虛構案例，下一步位，逆位。** 樂言暫停個人 Podcast 兩週，最近重新有了寫提綱的興致，卻列出一晚剪完三期的計畫。她問：「我現在怎樣恢復更新比較好？」已知聽眾沒有要求補齊尚未更新的集數，素材已備好一集，她可用的晚間時間仍然有限。\n\n把寶劍四逆位讀作重返活動，需要有現實支持；此處重新出現的興趣是一條線索，卻不證明她能夠一次承擔三倍工作。雕像、牆上寶劍和側面橫劍的分置，可以提示先把任務分區：恢復錄音、完成剪輯、公開更新，不必同時啓動。Waite 的逆位裡有謹慎管理的方向，也有助於檢查安排，不過「逐步恢復」是本文的現代用法。\n\n她先做一個二十分鐘試錄，第二天再聽，確認內容與時間能否承受；只排好第一期，暫不公開承諾連續更新三集。試錄後若仍有餘力，再加第二項任務。\n\n另一個可能是她並不想繼續這個題目，只是覺得停更很丟臉。那就需要調整節目或結束舊系列，而非更細緻地安排強迫自己的進度。反過來，若已有穩定餘量與現成流程，也不必因為一張逆位牌故意拖慢。恢復多少，應由實際體驗決定。"
+    },
+    {
       "id": "section-05",
       "role": "situations",
       "title": "給工作和談話留一個空檔",
-      "bodyMarkdown": "連續趕稿後，不妨把下一天的非必要會議移開，先處理交接和最關鍵的一件事。恢復不是把積壓任務全補完後才有資格領取的獎勵。\n\n關係爭執中，可以約好晚些時候再談，並說明暫停期間要想清哪個問題；這樣不同於突然失聯。學習遇到瓶頸時，短暫離開題目，再回來核對錯誤步驟，往往比疲憊地重復同一遍更有幫助。"
+      "bodyMarkdown": "連續趕稿後，不妨把下一天的非必要會議移開，先處理交接和最關鍵的一件事。恢復不是把積壓任務全補完後才有資格領取的獎勵。\n\n關係爭執中，可以約好晚些時候再談，並說明暫停期間要想清哪個問題；這樣不同於突然失聯。學習遇到瓶頸時，短暫離開題目，再回來核對錯誤步驟，往往比疲憊地重複同一遍更有幫助。"
     },
     {
       "id": "section-06",
@@ -69,16 +87,10 @@
       "bodyMarkdown": "寶劍四不要求你永遠退場，也不能根據雕像斷言某個人的身體狀況。它更適合提醒你把暫停做得清楚：暫退什麼、保留什麼、何時再看。"
     },
     {
-      "id": "section-08",
-      "role": "related",
-      "title": "接著讀什麼",
-      "bodyMarkdown": "隱士：比較主動求索與暫時休整；寶劍六：從靜止恢復走向有支持的過渡。"
-    },
-    {
       "id": "section-09",
       "role": "sources",
-      "title": "本篇資料",
-      "bodyMarkdown": "- [Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍四](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n- [Commons Swords04.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords04.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。"
+      "title": "本篇資料與版本",
+      "bodyMarkdown": "- [Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍四](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。"
     }
   ],
   "relatedCards": [
@@ -98,15 +110,15 @@
   "sources": [
     {
       "sourceId": "four-of-swords-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像",
       "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "four-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑四，站内固定提交的实际 RWS 图像",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像",
         "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp",
         "checkedAt": "2026-10-07"
       }
@@ -116,12 +128,12 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍四",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktsw04.htm",
-      "edition": "Sacred Texts 頁面標註 [1911] 的英文轉錄；本稿未核對1910實體初版",
+      "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "four-of-swords-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑四",
+        "title": "A. E. Waite《塔羅圖解》第三部 第二節 寶劍四",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktsw04.htm",
         "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
         "checkedAt": "2026-10-07"
@@ -129,18 +141,25 @@
     },
     {
       "sourceId": "four-of-swords-commons",
-      "type": "版本與來源對照",
-      "title": "Commons Swords04.jpg 檔案頁與上傳歷史",
+      "type": "版本与来源对照",
+      "title": "Commons Swords04.jpg 文件頁與上傳歷史",
       "url": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "four-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords04.jpg 文件页与上传历史",
+        "layer": "版本與來源對照",
+        "title": "Commons Swords04.jpg 文件頁與上傳歷史",
         "url": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "waite-wikisource-20261008",
+      "type": "原文复核",
+      "title": "A. E. Waite The Pictorial Key to the Tarot 第三部 寶劍組",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -193,164 +212,11 @@
       "checkedAt": "2026-10-07"
     }
   },
-  "articleMarkdown": "# 寶劍四牌義 把暫停真正留給恢復\n\n一句話：暫時退出爭論和忙碌，給自己一段有邊界的安靜。\n\n關鍵詞：休整、退後、靜觀\n\n正位速讀：減少刺激，留出恢復和整理思路的時間。\n\n逆位速讀：休息仍不踏實，或到了重新安排節奏的時候。\n\n電腦合上了，腦子裡的會議卻還沒散。真正的暫停，往往還要再關掉一層催促。\n\n## 躺著的是墓上的雕像\n\n金黃色的人形橫臥在長方形台座上，頭靠畫面右側，雙手在胸前合攏。上方牆面排列著三柄劍，劍尖向下；第四柄劍沿台座正面橫放，方向與身體一致。左上角的彩色玻璃窗中，一人站立，一人跪著，窗內色彩與室內灰牆形成對照。\n\n從畫面可以看到盔甲般的衣著和極少的動作；Waite 則明確稱它為墓上的騎士雕像。不要把畫中的靜止直接當成睡眠、住院或死亡消息。這裡可供學習的是安靜、退後和暫時停止交鋒的構圖。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n\n## 休止與警醒在原文裡並存\n\nWaite 的1911年標註本同時給出警醒、退隱、獨處與隱士般休息等詞義。他也說明墓葬意象參與了設計。逆位列有謹慎管理、節約與預防一類含義，和今天常說的「休息不足」並不完全相同。\n\n本文用此牌討論恢復安排，是現代生活中的延伸。它不提供健康判斷，也不把休息描述為某種能夠保證解決所有問題的方法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n\n## 正位 暫停需要被安排出來\n\n正位提醒你降低外界要求，讓自己有機會重新組織思路。停止爭論、延後非緊急答復，或把一段時間從任務清單裡空出來，都可以是具體做法。\n\n安靜不一定意味著獨自扛著。把交接做好、告訴合作者何時恢復聯繫，反而能讓休息更踏實。若只是帶著工作手機躺下，繼續反覆確認每條通知，身體雖然沒動，注意力仍在被調用。\n\n## 逆位 分清想回來和被推回來\n\n逆位可從兩頭觀察：你已經恢復一些餘力，準備逐步重返；或者仍很疲憊，卻覺得自己不配繼續停下。不要只憑牌的方向決定該動還是該歇，先看實際精力、工作負荷和已有支持，再調節節奏。\n\n## 給工作和談話留一個空檔\n\n連續趕稿後，不妨把下一天的非必要會議移開，先處理交接和最關鍵的一件事。恢復不是把積壓任務全補完後才有資格領取的獎勵。\n\n關係爭執中，可以約好晚些時候再談，並說明暫停期間要想清哪個問題；這樣不同於突然失聯。學習遇到瓶頸時，短暫離開題目，再回來核對錯誤步驟，往往比疲憊地重復同一遍更有幫助。\n\n## 練習 設計一段真正的空白\n\n選一個能做到的短時段，寫下開始和結束時間、暫時不處理的事情，以及必要時由誰接手。結束後只問自己：哪一種刺激少一點，我的注意力就容易回來？把有效的安排保留下來。\n\n## 休息不是逃避一切責任\n\n寶劍四不要求你永遠退場，也不能根據雕像斷言某個人的身體狀況。它更適合提醒你把暫停做得清楚：暫退什麼、保留什麼、何時再看。\n\n## 接著讀什麼\n\n隱士：比較主動求索與暫時休整；寶劍六：從靜止恢復走向有支持的過渡。\n\n## 本篇資料\n\n- [Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍四](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n- [Commons Swords04.jpg 檔案頁與上傳歷史](https://commons.wikimedia.org/wiki/File:Swords04.jpg)\n\n版本說明：逐圖觀察站內固定提交的實際 RWS WebP 資產；Commons 的 Pam-A 檔案頁用於來源與版本對照，未宣稱兩份檔案逐像素一致。Waite 依據網頁標註1911年的英文轉錄。現代情境、提問與練習由 DestinyPixel 原創編寫，未借用付費牌義內容。\n\n",
+  "articleMarkdown": "# 寶劍四牌義 把暫停真正留給恢復\n\n電腦合上了，腦子裡的會議卻還沒散。真正的暫停，往往還要再關掉一層催促。\n\n## 躺著的是墓上的雕像\n\n金黃色的人形橫臥在長方形臺座上，頭靠畫面右側，雙手在胸前合攏。上方牆面排列著三柄劍，劍尖向下；第四柄劍沿臺座正面橫放，方向與身體一致。左上角的彩色玻璃窗中，一人站立，一人跪著，窗內色彩與室內灰牆形成對照。\n\n從畫面可以看到盔甲般的衣著和極少的動作；Waite 則明確稱它為墓上的騎士雕像。不要把畫中的靜止直接當成睡眠、住院或死亡消息。這裡可供學習的是安靜、退後和暫時停止交鋒的構圖。 [查看本篇實看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n\n## 休止與警醒在原文裡並存\n\nWaite 的 1911 年標注本同時給出警醒、退隱、獨處與隱士般休息等詞義。他也說明墓葬意象參與了設計。逆位列有謹慎管理、節約與預防一類含義，和今天常說的「休息不足」並不完全相同。\n\n本文用此牌討論恢復安排，是現代生活中的延伸。它不提供健康判斷，也不把休息描述為某種能夠保證解決所有問題的方法。 [核對 Waite 單牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n\n## 從畫面走到問題 還要核對什麼\n\n三柄劍在牆上，一柄在臺座側面，武器都暫時脫離了手。這個空間沒有交鋒動作，暫停因此有了具體形狀。做現代應用時，可以問「哪些事務能夠先放到架上」，而不是把所有任務一起帶進休息。彩窗裡還有人物關係，也提醒我們安靜可以發生在有支援的環境中，不必把退後理解成徹底失聯。\n\n這裡的雕像是圖像身分，不是正在經歷的身體狀態。由墓上祈禱姿態聯想到反省，有解釋上的距離，應保留這段距離，避免把象徵變成現實消息。\n\n## 正位 暫停需要被安排出來\n\n正位提醒你降低外界要求，讓自己有機會重新組織思路。停止爭論、延後非緊急答覆，或把一段時間從任務清單裡空出來，都可以是具體做法。\n\n安靜不一定意味著獨自扛著。把交接做好、告訴合作者何時恢復聯繫，反而能讓休息更踏實。若只是帶著工作手機躺下，繼續反覆確認每條通知，身體雖然沒動，注意力仍在被調用。\n\n## 逆位 分清想回來和被推回來\n\n逆位可從兩頭觀察：你已經恢復一些餘力，準備逐步重返；或者仍很疲憊，卻覺得自己不配繼續停下。不要只憑牌的方向決定該動還是該歇，先看實際精力、工作負荷和已有支持，再調節節奏。\n\n## 案例一 爭論到第三版 先暫停什麼\n\n**原創虛構案例，建議位，正位。** 林初和兩位夥伴為社區展覽排版，已經連續三晚改海報。每次有人發新版本，另一人就繼續改顏色，文字錯誤卻仍沒核對完。他問：「今晚怎樣才能讓工作真正往前走？」距離交稿還有四天，並沒有必須連夜完成的要求。\n\n牆上的三柄劍與橫置的一柄劍，讓他注意到事情可以被分開放下。正位並不是叫三人放棄展覽，而是暫時停止無止境的風格交鋒。騎士雕像的靜止可以支持反省的空間，不能被當成他已出現某種健康問題的證據。\n\n他把當前文件存成一個明確版本，發消息約定今晚不再改色，明天下午集中收意見。文字校對由一人負責，其他人只在指定文件中註解，避免各自覆蓋文件。然後真正離開編輯介面，給判斷留出間隔。\n\n如果印刷截止其實就在次日上午，這個安排就不合適；應先完成必要校對與交付，再安排停頓。若只是有人偏好深夜工作，也不應自動把這種偏好變成全組義務。此牌的幫助在於把暫停設計成可執行的協作安排：停哪項、誰接手、什麼時候回來，都說得清楚。\n\n## 案例二 休息以後 要不要一口氣補完\n\n**原創虛構案例，下一步位，逆位。** 樂言暫停個人 Podcast 兩週，最近重新有了寫提綱的興致，卻列出一晚剪完三期的計畫。她問：「我現在怎樣恢復更新比較好？」已知聽眾沒有要求補齊尚未更新的集數，素材已備好一集，她可用的晚間時間仍然有限。\n\n把寶劍四逆位讀作重返活動，需要有現實支持；此處重新出現的興趣是一條線索，卻不證明她能夠一次承擔三倍工作。雕像、牆上寶劍和側面橫劍的分置，可以提示先把任務分區：恢復錄音、完成剪輯、公開更新，不必同時啓動。Waite 的逆位裡有謹慎管理的方向，也有助於檢查安排，不過「逐步恢復」是本文的現代用法。\n\n她先做一個二十分鐘試錄，第二天再聽，確認內容與時間能否承受；只排好第一期，暫不公開承諾連續更新三集。試錄後若仍有餘力，再加第二項任務。\n\n另一個可能是她並不想繼續這個題目，只是覺得停更很丟臉。那就需要調整節目或結束舊系列，而非更細緻地安排強迫自己的進度。反過來，若已有穩定餘量與現成流程，也不必因為一張逆位牌故意拖慢。恢復多少，應由實際體驗決定。\n\n## 給工作和談話留一個空檔\n\n連續趕稿後，不妨把下一天的非必要會議移開，先處理交接和最關鍵的一件事。恢復不是把積壓任務全補完後才有資格領取的獎勵。\n\n關係爭執中，可以約好晚些時候再談，並說明暫停期間要想清哪個問題；這樣不同於突然失聯。學習遇到瓶頸時，短暫離開題目，再回來核對錯誤步驟，往往比疲憊地重複同一遍更有幫助。\n\n## 練習 設計一段真正的空白\n\n選一個能做到的短時段，寫下開始和結束時間、暫時不處理的事情，以及必要時由誰接手。結束後只問自己：哪一種刺激少一點，我的注意力就容易回來？把有效的安排保留下來。\n\n## 休息不是逃避一切責任\n\n寶劍四不要求你永遠退場，也不能根據雕像斷言某個人的身體狀況。它更適合提醒你把暫停做得清楚：暫退什麼、保留什麼、何時再看。\n\n## 本篇資料與版本\n\n- [Pamela Colman Smith：寶劍四，站內固定提交的實際 RWS 圖像](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)\n- [A. E. Waite《塔羅圖解》第三部 第二節 寶劍四](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)\n\n版本說明：本文依據 RWS 既有固定提交 WebP 牌面；與 Commons 掃描不作逐畫素一致性斷言。歷史解釋核對 Waite 英文轉錄，現代提問、練習與以上虛構案例為原創應用。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "cardId": "four-of-swords",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "IV",
-    "rank": "four",
-    "suit": "swords",
-    "arcana": "minor",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameZh": "宝剑四",
-    "nameEn": "Four of Swords",
-    "title": "宝剑四牌义 把暂停真正留给恢复",
-    "plainLanguageSummary": "暂时退出争论和忙碌，给自己一段有边界的安静。",
-    "hook": "电脑合上了，脑子里的会议却还没散。真正的暂停，往往还要再关掉一层催促。",
-    "keywords": [
-      "休整",
-      "退后",
-      "静观"
-    ],
-    "uprightQuickTake": "减少刺激，留出恢复和整理思路的时间。",
-    "reversedQuickTake": "休息仍不踏实，或到了重新安排节奏的时候。",
-    "articleSlug": "tarot-four-of-swords-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sections": [
-      {
-        "key": "art",
-        "title": "躺着的是墓上的雕像",
-        "paragraphs": [
-          "金黄色的人形横卧在长方形台座上，头靠画面右侧，双手在胸前合拢。上方墙面排列着三柄剑，剑尖向下；第四柄剑沿台座正面横放，方向与身体一致。左上角的彩色玻璃窗中，一人站立，一人跪着，窗内色彩与室内灰墙形成对照。",
-          "从画面可以看到盔甲般的衣着和极少的动作；Waite 则明确称它为墓上的骑士雕像。不要把画中的静止直接当成睡眠、住院或死亡消息。这里可供学习的是安静、退后和暂时停止交锋的构图。 [查看本篇实看牌面](https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "休止与警醒在原文里并存",
-        "paragraphs": [
-          "Waite 的1911年标注本同时给出警醒、退隐、独处与隐士般休息等词义。他也说明墓葬意象参与了设计。逆位列有谨慎管理、节约与预防一类含义，和今天常说的「休息不足」并不完全相同。",
-          "本文用此牌讨论恢复安排，是现代生活中的延伸。它不提供健康判断，也不把休息描述为某种能够保证解决所有问题的方法。 [核对 Waite 单牌原文](https://original.sacred-texts.com/tarot/pkt/pktsw04.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 暂停需要被安排出来",
-        "paragraphs": [
-          "正位提醒你降低外界要求，让自己有机会重新组织思路。停止争论、延后非紧急答复，或把一段时间从任务清单里空出来，都可以是具体做法。",
-          "安静不一定意味着独自扛着。把交接做好、告诉合作者何时恢复联系，反而能让休息更踏实。若只是带着工作手机躺下，继续反复确认每条通知，身体虽然没动，注意力仍在被调用。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 分清想回来和被推回来",
-        "paragraphs": [
-          "逆位可从两头观察：你已经恢复一些余力，准备逐步重返；或者仍很疲惫，却觉得自己不配继续停下。不要只凭牌的方向决定该动还是该歇，先看实际精力、工作负荷和已有支持，再调节节奏。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "给工作和谈话留一个空档",
-        "paragraphs": [
-          "连续赶稿后，不妨把下一天的非必要会议移开，先处理交接和最关键的一件事。恢复不是把积压任务全补完后才有资格领取的奖励。",
-          "关系争执中，可以约好晚些时候再谈，并说明暂停期间要想清哪个问题；这样不同于突然失联。学习遇到瓶颈时，短暂离开题目，再回来核对错误步骤，往往比疲惫地重复同一遍更有帮助。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 设计一段真正的空白",
-        "paragraphs": [
-          "选一个能做到的短时段，写下开始和结束时间、暂时不处理的事情，以及必要时由谁接手。结束后只问自己：哪一种刺激少一点，我的注意力就容易回来？把有效的安排保留下来。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "休息不是逃避一切责任",
-        "paragraphs": [
-          "宝剑四不要求你永远退场，也不能根据雕像断言某个人的身体状况。它更适合提醒你把暂停做得清楚：暂退什么、保留什么、何时再看。"
-        ]
-      }
-    ],
-    "relatedCards": [
-      {
-        "cardId": "hermit",
-        "nameZh": "隐士",
-        "reason": "比较主动求索与暂时休整"
-      },
-      {
-        "cardId": "six-of-swords",
-        "nameZh": "宝剑六",
-        "reason": "从静止恢复走向有支持的过渡"
-      }
-    ],
-    "sources": [
-      {
-        "id": "four-of-swords-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：宝剑四，站内固定提交的实际 RWS 图像",
-        "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "four-of-swords-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解》第三部 第二节 宝剑四",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktsw04.htm",
-        "edition": "Sacred Texts 页面标注 [1911] 的英文转录；本稿未核对1910实体初版",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "four-of-swords-commons",
-        "layer": "版本与来源对照",
-        "title": "Commons Swords04.jpg 文件页与上传历史",
-        "url": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "image": {
-      "rank": "four",
-      "gitBlobSha": "ede675cc56fd96fd95669d4bca0d357d96e1a2e5",
-      "url": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/public/tarot/rws/four-of-swords.webp",
-      "sha256": "dd76ddb9f49f95c98a03e7489f691fbe659bf84ead865429a8ebe4cbbdcfa34b",
-      "localFile": "images/04-four.webp",
-      "bytes": 167006,
-      "dimensions": [
-        560,
-        962
-      ],
-      "creator": "Pamela Colman Smith",
-      "versionLabel": "站内固定提交的实际 RWS WebP 资产",
-      "repositoryCommit": "284f7641e41dcaa6685d2d387e31245ca8264d66",
-      "visualInspection": "已通过 GitHub 文件内容读取并逐张显示实际像素核验",
-      "productionAsset": "/tarot/rws/four-of-swords.webp",
-      "commonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Swords04.jpg",
-      "commonsVersionLabel": "文件页标注 Pam-A，牌面年代1910，TaionWC 于2024年4月6日上传的较高清扫描",
-      "commonsFileVersionUtc": "2024-04-06T05:17:00Z",
-      "commonsTimestampPrecision": "minute",
-      "commonsDimensions": [
-        1117,
-        1919
-      ],
-      "commonsPixelComparison": "本次实看的是站内 WebP；Commons JPEG 未成功下载，未作逐像素一致性或色彩一致性断言",
-      "checkedAt": "2026-10-07"
-    },
-    "chineseCharacterCount": 1106,
-    "bodyChineseCharacterCount": 746
-  },
-  "sourceBatch": "swords",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 845,
-    "words": 3,
-    "articleUtf8Bytes": 4316
-  },
+  "sourceBatch": "depth77-swords-02",
   "sourceLocale": "zh-CN",
   "name": "寶劍四",
   "translationProvenance": {
@@ -366,36 +232,31 @@
   },
   "nameLocalized": "寶劍四",
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceLocale": "zh-CN",
-    "translationProvenance": {
-      "sourceFile": "/workspace/shared/tarot-78/reviewed/destinypixel-tarot-78-zh-CN/articles.zh-CN.json",
-      "sourceFileSha256": "d5fad6e3a4c982cca11e40f2f9be363a317f0438a2846d43a6f9873724aeb835",
-      "sourceCardId": "four-of-swords",
-      "sourceArticleSha256": "2b7ac2d38574e1f07759122b31d5f17ee31db85ba2e4a8c090e13fdf2cafcbe5",
-      "sourceLocale": "zh-CN",
-      "targetLocale": "zh-TW",
-      "chineseSourceModified": false,
-      "humanNativeReviewClaimed": false,
-      "translatedOn": "2026-10-07"
-    }
-  },
-  "countsOriginal": {
-    "sections": 9,
-    "mainTextWords": null,
-    "mainTextChineseCharacters": 940,
-    "completeArticleCharacters": 1882
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "2b7ac2d38574e1f07759122b31d5f17ee31db85ba2e4a8c090e13fdf2cafcbe5",
-    "articleSha256": "8d67a201eda82c3027a347d4fbb9744d669436980d061aaa16085119cc85f813",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "2552d8643d0a971f6232dba0389073177280411eb2d57a8e1fd6823abe23f3b9",
+    "sourceArticleSha256": "2552d8643d0a971f6232dba0389073177280411eb2d57a8e1fd6823abe23f3b9",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "c5bd34e142fb074aa583b9e7a7c205095d8457311085e12f2479e06127f5c9de",
+    "sourcePackageSha256": "e0a46d308fe66ba17d85a732960c963f37dfdc136a9ec225a4f1c06f57ab288f",
+    "previousRecord": "content/tarot/revisions/2026-10-08/four-of-swords.zh-TW.json",
+    "editionBodySha256": "135d60ec7e57a4a7bb623ff884091c82c5d674937ee890ed6204df51c3324358",
+    "translationSourceBodySha256": "2552d8643d0a971f6232dba0389073177280411eb2d57a8e1fd6823abe23f3b9",
+    "translationPackageSha256": "2dad121c2b21287e5db97c0a1eeb953e767c207bcb409c121293d74080c18785",
+    "translationLibraryFileId": "libfile_c759cd24cd548191ac2523b75c333225",
+    "translationRecordSha256": "d8ec922bae94c1e3ca4860b05031895a39afe3cb5be84d53040452de4307b220",
+    "translationPackage": "destinypixel-reviewed-swords.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [
+    "section-08"
+  ],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }

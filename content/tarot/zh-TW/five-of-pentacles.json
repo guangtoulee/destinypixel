@@ -14,7 +14,7 @@
   "locale": "zh-TW",
   "deckSystem": "RWS",
   "title": "星幣五 困難需要被接住",
-  "plainLanguageSummary": "感到資源不足時，先照顧眼前的需要，再尋找可用的幫助。",
+  "plainLanguageSummary": null,
   "keywords": [
     "匱乏",
     "排斥",
@@ -22,7 +22,7 @@
   ],
   "quickTake": {
     "upright": "承認正在承受的困難，把需要說具體。",
-    "reversed": "可以重新找支持，也要核實困難是否真的緩解。"
+    "reversed": "可以重新找支持，也要確認困難是否真的緩解。"
   },
   "hook": "星幣五最刺眼的對比，是窗裡的亮與窗外的冷。光就在身邊，卻不等於人已經得到庇護；看見資源和用得上資源，常常隔著一段距離。",
   "sections": [
@@ -31,6 +31,12 @@
       "role": "image",
       "title": "雪地中的人並沒有停在門口",
       "bodyMarkdown": "黑色背景上布滿白色雪點，兩個人朝畫面右邊行進。前面的人用橙褐色披布裹住頭和身體，露出的衣擺破舊；後面的人穿藍色衣物，撐著拐杖，一隻腳離地，腿部有包裹的線條。\n\n他們上方是一扇窄長的彩色玻璃窗，五枚黃色星幣嵌在窗格裡，周圍有紅、藍、綠的裝飾。窗框很厚，前景地面積雪。畫中沒有可見的門，也沒有畫出室內的人；因此不能僅憑這幅圖斷言「他們只要回頭，就一定能進去」。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents05.jpg)"
+    },
+    {
+      "id": "depth-image-reasoning",
+      "role": "image-reasoning",
+      "title": "窗是可見的，入口尚不可見",
+      "bodyMarkdown": "這張牌最容易被補出一個好聽的結局：亮窗就在身邊，只要願意求助就能得救。然而牌面沒有門，也沒有說明室內的人願不願意接納。忠於圖像，就要保留這段未知，把「可能存在支持」與「實際可以得到支持」分開。\n\n兩個人同行，可以引出陪伴的主題，卻不能保證他們有餘力解決彼此的困難。與星幣六已經出現明確給予動作不同，星幣五仍要尋找可達的入口。困難也可能來自制度、交通、時間和資格等現實門檻，不能只追問當事人為何想得太消極。"
     },
     {
       "id": "section-02",
@@ -42,7 +48,7 @@
       "id": "section-03",
       "role": "upright",
       "title": "正位 先把需要從羞恥裡分出來",
-      "bodyMarkdown": "正位可以幫助你承認：某件事確實已經超出目前可用的資源。缺時間、缺支持、缺生活必需品，帶來的限制並不靠樂觀就能消失。先區分最迫切的需要和可以稍後處理的問題，才有下一步。\n\n求助越具體，越容易判斷誰能回應。例如「這周能否幫我接一次班」，比「我什麼都做不好」更接近可處理的事情。對方未必有能力答應；一次拒絕也不能用來證明你不值得被幫助。"
+      "bodyMarkdown": "正位可以幫助你承認：某件事確實已經超出目前可用的資源。缺時間、缺支持、缺生活必需品，帶來的限制並不靠樂觀就能消失。先區分最迫切的需要和可以稍後處理的問題，才有下一步。\n\n求助越具體，越容易判斷誰能回應。例如「這週能否幫我接一次班」，比「我什麼都做不好」更接近可處理的事情。對方未必有能力答應；一次拒絕也不能用來證明你不值得被幫助。"
     },
     {
       "id": "section-04",
@@ -57,10 +63,22 @@
       "bodyMarkdown": "工作中被排除在必要討論之外，先明確自己缺哪些資訊，向負責人提出具體的訪問或同步需求。不要立刻把資訊缺口解釋成所有人都不歡迎你。\n\n朋友的聚會方式超出你的承受範圍時，可以提出更方便的替代活動。若已經影響基本生活，優先尋找現實中可聯繫的公共服務或可信賴的支持者，牌面本身無法提供必需資源。"
     },
     {
+      "id": "depth-case-1",
+      "role": "case-1",
+      "title": "案例一 沒帶設備的人為何退出學習小組",
+      "bodyMarkdown": "原創虛構案例。成人學習者阿路報名免費的影像課程，前兩週按時參加，後來發現課堂練習預設每人有一台電腦。她只能用手機，練習速度明顯跟不上，便不再發言。她問「我是不是不適合繼續參加這個學習小組？」，現狀位抽到星幣五正位。\n\n牌中的艱難行進與明亮窗戶，可以對應她看得見學習機會，卻缺少進入練習的條件。重點是設備門檻，不能據此認定她不夠努力，也不能假定組織者必然提供幫助。先問她最難完成的是哪一步，才知道求助需要多具體。\n\n她向課程負責人詢問是否有設備借用或可共享的練習時段，同時請同學演示手機能夠完成的部分。若課程實際支持手機，只是說明沒有講清，下一步就是補操作資訊；若確實必須使用電腦且無法借用，就比較其他合適的課程，不必把退出這一個安排理解為放棄學習。是否獲得支持，要以明確回覆和實際可用的設備為準。"
+    },
+    {
+      "id": "depth-case-2",
+      "role": "case-2",
+      "title": "案例二 終於有人回應不等於問題全部解決",
+      "bodyMarkdown": "原創虛構案例。阿真搬到新區域後，晚間公車不便，錯過幾次活動便覺得自己已被排除。最近組織者主動給她發來週末場次，她仍擔心去了也跟不上。問「我該怎樣重新加入社區活動？」，下一步位是星幣五逆位。\n\n這裡可以採用現代的重新連接讀法，因為已有真實邀請作為依據；它不是 Waite 逆位詞表中「混亂」的直譯。雪地中的兩人提醒同行可能減輕困難，窗戶則提醒先確認入口。阿真先確認週末的地址、結束時間與參與方式，再問是否能和熟悉路線的成員在門口會合。\n\n如果活動時間仍無法配合交通，阻礙並未因牌逆位而消失，可以詢問白天場次或遠端參與。若路線與安排已經可行，困難主要是怕尷尬，則先參加半小時並準備一個簡單自我介紹。衡量變化的標準，是她真的獲得一次可參與的機會，而不是強迫自己立刻感到完全融入。"
+    },
+    {
       "id": "section-06",
       "role": "practice",
       "title": "練習 寫一份能發出去的求助",
-      "bodyMarkdown": "只選一個眼前需要，寫明「我現在缺什麼、希望怎樣幫助、需要到什麼時候」。再核實一個可能有能力回應的對象或服務。你不必先講完全部經歷，才有資格詢問能否獲得幫助。"
+      "bodyMarkdown": "只選一個眼前需要，寫明「我現在缺什麼、希望怎樣幫助、需要到什麼時候」。再確認一個可能有能力回應的對象或服務。你不必先講完全部經歷，才有資格詢問能否獲得幫助。"
     },
     {
       "id": "section-07",
@@ -69,28 +87,34 @@
       "bodyMarkdown": "星幣五不預測疾病、殘障或必然失業，也不證明窮困來自個人不努力。窗光可以提醒我們尋找入口，卻不能讓我們忽略真實的阻礙，或責怪尚未獲得幫助的人。"
     },
     {
+      "id": "depth-reflection",
+      "role": "reflection",
+      "title": "困難不該變成人的標籤",
+      "bodyMarkdown": "星幣五可以描述一段匱乏處境，不適合將任何人定義為失敗者，也不能從受傷人物推斷健康結果。讀牌時允許難受存在，同時把問題縮到今天最需要被處理的障礙。支持若暫時不可得，應承認這個事實並尋找其他管道；不要用「你沒有敞開心扉」解釋所有拒絕，更不要許諾只要態度積極就能消除物質限制。"
+    },
+    {
       "id": "section-08",
       "role": "sources",
       "title": "原文與牌面",
-      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製。本篇實際查看的是頁面列出的 500px 標準縮圖，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents05.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。"
+      "bodyMarkdown": "牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents05.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。"
     }
   ],
   "relatedCards": [],
   "sources": [
     {
       "sourceId": "five-of-pentacles-image",
-      "type": "畫面觀察",
+      "type": "画面观察",
       "title": "Pamela Colman Smith：星幣五，Commons 所標 Pam-A 牌面",
       "url": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
       "edition": null,
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "five-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币五，Commons 所标 Pam-A 牌面",
+        "layer": "畫面觀察",
+        "title": "Pamela Colman Smith：星幣五，Commons 所標 Pam-A 牌面",
         "url": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
         "observedFileVersion": "05:26, 6 April 2024 1,112 × 1,920 (879 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "页面列出的 500px 标准缩略图",
+        "observedRepresentation": "頁面列出的 500px 標準縮圖",
         "sha256": "cf87e40e801207119edd6838f23c6db117a4ed14a3932c3aa0e4dd3f0b6dbe2c",
         "checkedAt": "2026-10-07"
       }
@@ -100,16 +124,23 @@
       "type": "Waite 原文",
       "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣五",
       "url": "https://original.sacred-texts.com/tarot/pkt/pktpe05.htm",
-      "edition": "所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。",
+      "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
       "checkedOn": "2026-10-07",
       "sourceMetadata": {
         "id": "five-of-pentacles-waite",
         "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币五",
+        "title": "A. E. Waite《塔羅圖解之鑰》第三部第二節 星幣五",
         "url": "https://original.sacred-texts.com/tarot/pkt/pktpe05.htm",
         "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
         "checkedAt": "2026-10-07"
       }
+    },
+    {
+      "sourceId": "five-of-pentacles-waite-crosscheck",
+      "type": "Waite 英文全文复核",
+      "title": "The Pictorial Key to the Tarot Part 3",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "checkedOn": "2026-10-08"
     }
   ],
   "image": {
@@ -160,123 +191,11 @@
       "retrievalNote": "原始 JPEG 请求遇到 429 后停止重复请求；依站点提示选择该文件页列出的标准缩略图。缩略图哈希仅代表实际查看的缩略图字节。"
     }
   },
-  "articleMarkdown": "# 星幣五 困難需要被接住\n\n感到資源不足時，先照顧眼前的需要，再尋找可用的幫助。\n\n關鍵詞：匱乏、排斥、支援\n\n正位速讀：承認正在承受的困難，把需要說具體。\n\n逆位速讀：可以重新找支持，也要核實困難是否真的緩解。\n\n星幣五最刺眼的對比，是窗裡的亮與窗外的冷。光就在身邊，卻不等於人已經得到庇護；看見資源和用得上資源，常常隔著一段距離。\n\n## 雪地中的人並沒有停在門口\n\n黑色背景上布滿白色雪點，兩個人朝畫面右邊行進。前面的人用橙褐色披布裹住頭和身體，露出的衣擺破舊；後面的人穿藍色衣物，撐著拐杖，一隻腳離地，腿部有包裹的線條。\n\n他們上方是一扇窄長的彩色玻璃窗，五枚黃色星幣嵌在窗格裡，周圍有紅、藍、綠的裝飾。窗框很厚，前景地面積雪。畫中沒有可見的門，也沒有畫出室內的人；因此不能僅憑這幅圖斷言「他們只要回頭，就一定能進去」。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents05.jpg)\n\n## 舊書寫了物質困境，也承認解釋衝突\n\nWaite 將這張牌主要聯繫到物質上的困難，同時記錄了另一些占卜者關於關係與契合的不同解釋，並明確表示這些說法無法統一。逆位舊義仍偏向混亂、失序與不和，不能直接翻譯成「困難馬上結束」。\n\n本篇把重點放在實際需要、排斥感與獲得支持的條件上。逆位可用作重新連接支援的提問，這是現代反思讀法；既不把困難視為道德缺陷，也不將畫中身體狀態變成健康預言。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)\n\n## 正位 先把需要從羞恥裡分出來\n\n正位可以幫助你承認：某件事確實已經超出目前可用的資源。缺時間、缺支持、缺生活必需品，帶來的限制並不靠樂觀就能消失。先區分最迫切的需要和可以稍後處理的問題，才有下一步。\n\n求助越具體，越容易判斷誰能回應。例如「這周能否幫我接一次班」，比「我什麼都做不好」更接近可處理的事情。對方未必有能力答應；一次拒絕也不能用來證明你不值得被幫助。\n\n## 逆位 用事實判斷有沒有走出困境\n\n可以問：是否終於知道去哪咨詢、有人願意同行，或一個實際障礙已被移開？把這些小變化記下來，比急著宣佈轉運更可靠。若資源仍不可獲得，就繼續檢查資格、費用、交通或資訊方面的門檻。\n\n另一種讀法是困難被遮住了：為了不顯得落後，答應自己承擔不了的安排。允許說出「這個方式我目前做不到」，也能為別人理解和調整留出空間。\n\n## 支持要能抵達需要它的人\n\n工作中被排除在必要討論之外，先明確自己缺哪些資訊，向負責人提出具體的訪問或同步需求。不要立刻把資訊缺口解釋成所有人都不歡迎你。\n\n朋友的聚會方式超出你的承受範圍時，可以提出更方便的替代活動。若已經影響基本生活，優先尋找現實中可聯繫的公共服務或可信賴的支持者，牌面本身無法提供必需資源。\n\n## 練習 寫一份能發出去的求助\n\n只選一個眼前需要，寫明「我現在缺什麼、希望怎樣幫助、需要到什麼時候」。再核實一個可能有能力回應的對象或服務。你不必先講完全部經歷，才有資格詢問能否獲得幫助。\n\n## 容易看錯的地方\n\n星幣五不預測疾病、殘障或必然失業，也不證明窮困來自個人不努力。窗光可以提醒我們尋找入口，卻不能讓我們忽略真實的阻礙，或責怪尚未獲得幫助的人。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製。本篇實際查看的是頁面列出的 500px 標準縮圖，版本資訊來自 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents05.jpg)。\n\n傳統部分依據 A. E. Waite《塔羅圖解之鑰》第三部第二節的[本牌英文原文](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)。所用來源為 Internet Sacred Text Archive 頁面標註 [1911] 的英文轉錄；本批未核對 1910 年實體初版。生活情境、提問與練習為原創現代反思，不是原書直譯。\n",
+  "articleMarkdown": "# 星幣五 困難需要被接住\n\n星幣五最刺眼的對比，是窗裡的亮與窗外的冷。光就在身邊，卻不等於人已經得到庇護；看見資源和用得上資源，常常隔著一段距離。\n\n## 雪地中的人並沒有停在門口\n\n黑色背景上布滿白色雪點，兩個人朝畫面右邊行進。前面的人用橙褐色披布裹住頭和身體，露出的衣擺破舊；後面的人穿藍色衣物，撐著拐杖，一隻腳離地，腿部有包裹的線條。\n\n他們上方是一扇窄長的彩色玻璃窗，五枚黃色星幣嵌在窗格裡，周圍有紅、藍、綠的裝飾。窗框很厚，前景地面積雪。畫中沒有可見的門，也沒有畫出室內的人；因此不能僅憑這幅圖斷言「他們只要回頭，就一定能進去」。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents05.jpg)\n\n## 窗是可見的，入口尚不可見\n\n這張牌最容易被補出一個好聽的結局：亮窗就在身邊，只要願意求助就能得救。然而牌面沒有門，也沒有說明室內的人願不願意接納。忠於圖像，就要保留這段未知，把「可能存在支持」與「實際可以得到支持」分開。\n\n兩個人同行，可以引出陪伴的主題，卻不能保證他們有餘力解決彼此的困難。與星幣六已經出現明確給予動作不同，星幣五仍要尋找可達的入口。困難也可能來自制度、交通、時間和資格等現實門檻，不能只追問當事人為何想得太消極。\n\n## 舊書寫了物質困境，也承認解釋衝突\n\nWaite 將這張牌主要聯繫到物質上的困難，同時記錄了另一些占卜者關於關係與契合的不同解釋，並明確表示這些說法無法統一。逆位舊義仍偏向混亂、失序與不和，不能直接翻譯成「困難馬上結束」。\n\n本篇把重點放在實際需要、排斥感與獲得支持的條件上。逆位可用作重新連接支援的提問，這是現代反思讀法；既不把困難視為道德缺陷，也不將畫中身體狀態變成健康預言。 [核對 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)\n\n## 正位 先把需要從羞恥裡分出來\n\n正位可以幫助你承認：某件事確實已經超出目前可用的資源。缺時間、缺支持、缺生活必需品，帶來的限制並不靠樂觀就能消失。先區分最迫切的需要和可以稍後處理的問題，才有下一步。\n\n求助越具體，越容易判斷誰能回應。例如「這週能否幫我接一次班」，比「我什麼都做不好」更接近可處理的事情。對方未必有能力答應；一次拒絕也不能用來證明你不值得被幫助。\n\n## 逆位 用事實判斷有沒有走出困境\n\n可以問：是否終於知道去哪咨詢、有人願意同行，或一個實際障礙已被移開？把這些小變化記下來，比急著宣佈轉運更可靠。若資源仍不可獲得，就繼續檢查資格、費用、交通或資訊方面的門檻。\n\n另一種讀法是困難被遮住了：為了不顯得落後，答應自己承擔不了的安排。允許說出「這個方式我目前做不到」，也能為別人理解和調整留出空間。\n\n## 支持要能抵達需要它的人\n\n工作中被排除在必要討論之外，先明確自己缺哪些資訊，向負責人提出具體的訪問或同步需求。不要立刻把資訊缺口解釋成所有人都不歡迎你。\n\n朋友的聚會方式超出你的承受範圍時，可以提出更方便的替代活動。若已經影響基本生活，優先尋找現實中可聯繫的公共服務或可信賴的支持者，牌面本身無法提供必需資源。\n\n## 案例一 沒帶設備的人為何退出學習小組\n\n原創虛構案例。成人學習者阿路報名免費的影像課程，前兩週按時參加，後來發現課堂練習預設每人有一台電腦。她只能用手機，練習速度明顯跟不上，便不再發言。她問「我是不是不適合繼續參加這個學習小組？」，現狀位抽到星幣五正位。\n\n牌中的艱難行進與明亮窗戶，可以對應她看得見學習機會，卻缺少進入練習的條件。重點是設備門檻，不能據此認定她不夠努力，也不能假定組織者必然提供幫助。先問她最難完成的是哪一步，才知道求助需要多具體。\n\n她向課程負責人詢問是否有設備借用或可共享的練習時段，同時請同學演示手機能夠完成的部分。若課程實際支持手機，只是說明沒有講清，下一步就是補操作資訊；若確實必須使用電腦且無法借用，就比較其他合適的課程，不必把退出這一個安排理解為放棄學習。是否獲得支持，要以明確回覆和實際可用的設備為準。\n\n## 案例二 終於有人回應不等於問題全部解決\n\n原創虛構案例。阿真搬到新區域後，晚間公車不便，錯過幾次活動便覺得自己已被排除。最近組織者主動給她發來週末場次，她仍擔心去了也跟不上。問「我該怎樣重新加入社區活動？」，下一步位是星幣五逆位。\n\n這裡可以採用現代的重新連接讀法，因為已有真實邀請作為依據；它不是 Waite 逆位詞表中「混亂」的直譯。雪地中的兩人提醒同行可能減輕困難，窗戶則提醒先確認入口。阿真先確認週末的地址、結束時間與參與方式，再問是否能和熟悉路線的成員在門口會合。\n\n如果活動時間仍無法配合交通，阻礙並未因牌逆位而消失，可以詢問白天場次或遠端參與。若路線與安排已經可行，困難主要是怕尷尬，則先參加半小時並準備一個簡單自我介紹。衡量變化的標準，是她真的獲得一次可參與的機會，而不是強迫自己立刻感到完全融入。\n\n## 練習 寫一份能發出去的求助\n\n只選一個眼前需要，寫明「我現在缺什麼、希望怎樣幫助、需要到什麼時候」。再確認一個可能有能力回應的對象或服務。你不必先講完全部經歷，才有資格詢問能否獲得幫助。\n\n## 容易看錯的地方\n\n星幣五不預測疾病、殘障或必然失業，也不證明窮困來自個人不努力。窗光可以提醒我們尋找入口，卻不能讓我們忽略真實的阻礙，或責怪尚未獲得幫助的人。\n\n## 困難不該變成人的標籤\n\n星幣五可以描述一段匱乏處境，不適合將任何人定義為失敗者，也不能從受傷人物推斷健康結果。讀牌時允許難受存在，同時把問題縮到今天最需要被處理的障礙。支持若暫時不可得，應承認這個事實並尋找其他管道；不要用「你沒有敞開心扉」解釋所有拒絕，更不要許諾只要態度積極就能消除物質限制。\n\n## 原文與牌面\n\n牌面由 Pamela Colman Smith 繪製；本篇採用 RWS 畫面，依據所列 [Commons 文件頁](https://commons.wikimedia.org/wiki/File:Pents05.jpg)及其對應的已查證圖像。傳統部分依據 A. E. Waite《The Pictorial Key to the Tarot》第三部第二節的[本牌英文條目](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)，並以[英文全文](https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3)複核。這裡區分直接可見的圖像、歷史佔辭與現代反思應用；兩則案例均為原創虛構，不是占卜準確性的實證。",
   "articleSlug": null,
   "articleSlugStatus": "not_created",
   "publicationStatus": "reviewed_multilingual_manuscript_not_published",
-  "sourceRecord": {
-    "rank": "five",
-    "nameZh": "星币五",
-    "title": "星币五 困难需要被接住",
-    "oneLiner": "感到资源不足时，先照顾眼前的需要，再寻找可用的帮助。",
-    "keywords": [
-      "匮乏",
-      "排斥",
-      "支援"
-    ],
-    "uprightQuickTake": "承认正在承受的困难，把需要说具体。",
-    "reversedQuickTake": "可以重新找支持，也要核实困难是否真的缓解。",
-    "hook": "星币五最刺眼的对比，是窗里的亮与窗外的冷。光就在身边，却不等于人已经得到庇护；看见资源和用得上资源，常常隔着一段距离。",
-    "sections": [
-      {
-        "key": "art",
-        "title": "雪地中的人并没有停在门口",
-        "paragraphs": [
-          "黑色背景上布满白色雪点，两个人朝画面右边行进。前面的人用橙褐色披布裹住头和身体，露出的衣摆破旧；后面的人穿蓝色衣物，撑着拐杖，一只脚离地，腿部有包裹的线条。",
-          "他们上方是一扇窄长的彩色玻璃窗，五枚黄色星币嵌在窗格里，周围有红、蓝、绿的装饰。窗框很厚，前景地面积雪。画中没有可见的门，也没有画出室内的人；因此不能仅凭这幅图断言“他们只要回头，就一定能进去”。 [查看本篇牌面](https://commons.wikimedia.org/wiki/File:Pents05.jpg)"
-        ]
-      },
-      {
-        "key": "tradition",
-        "title": "旧书写了物质困境，也承认解释冲突",
-        "paragraphs": [
-          "Waite 将这张牌主要联系到物质上的困难，同时记录了另一些占卜者关于关系与契合的不同解释，并明确表示这些说法无法统一。逆位旧义仍偏向混乱、失序与不和，不能直接翻译成“困难马上结束”。",
-          "本篇把重点放在实际需要、排斥感与获得支持的条件上。逆位可用作重新连接支援的提问，这是现代反思读法；既不把困难视为道德缺陷，也不将画中身体状态变成健康预言。 [核对 Waite 原文](https://original.sacred-texts.com/tarot/pkt/pktpe05.htm)"
-        ]
-      },
-      {
-        "key": "upright",
-        "title": "正位 先把需要从羞耻里分出来",
-        "paragraphs": [
-          "正位可以帮助你承认：某件事确实已经超出目前可用的资源。缺时间、缺支持、缺生活必需品，带来的限制并不靠乐观就能消失。先区分最迫切的需要和可以稍后处理的问题，才有下一步。",
-          "求助越具体，越容易判断谁能回应。例如“这周能否帮我接一次班”，比“我什么都做不好”更接近可处理的事情。对方未必有能力答应；一次拒绝也不能用来证明你不值得被帮助。"
-        ]
-      },
-      {
-        "key": "reversed",
-        "title": "逆位 用事实判断有没有走出困境",
-        "paragraphs": [
-          "可以问：是否终于知道去哪咨询、有人愿意同行，或一个实际障碍已被移开？把这些小变化记下来，比急着宣布转运更可靠。若资源仍不可获得，就继续检查资格、费用、交通或信息方面的门槛。",
-          "另一种读法是困难被遮住了：为了不显得落后，答应自己承担不了的安排。允许说出“这个方式我目前做不到”，也能为别人理解和调整留出空间。"
-        ]
-      },
-      {
-        "key": "examples",
-        "title": "支持要能抵达需要它的人",
-        "paragraphs": [
-          "工作中被排除在必要讨论之外，先明确自己缺哪些信息，向负责人提出具体的访问或同步需求。不要立刻把信息缺口解释成所有人都不欢迎你。",
-          "朋友的聚会方式超出你的承受范围时，可以提出更方便的替代活动。若已经影响基本生活，优先寻找现实中可联系的公共服务或可信赖的支持者，牌面本身无法提供必需资源。"
-        ]
-      },
-      {
-        "key": "practice",
-        "title": "练习 写一份能发出去的求助",
-        "paragraphs": [
-          "只选一个眼前需要，写明“我现在缺什么、希望怎样帮助、需要到什么时候”。再核实一个可能有能力回应的对象或服务。你不必先讲完全部经历，才有资格询问能否获得帮助。"
-        ]
-      },
-      {
-        "key": "misread",
-        "title": "容易看错的地方",
-        "paragraphs": [
-          "星币五不预测疾病、残障或必然失业，也不证明穷困来自个人不努力。窗光可以提醒我们寻找入口，却不能让我们忽略真实的阻碍，或责怪尚未获得帮助的人。"
-        ]
-      }
-    ],
-    "cardId": "five-of-pentacles",
-    "idStatus": "verified_existing",
-    "idSource": "https://github.com/guangtoulee/destinypixel/blob/284f7641e41dcaa6685d2d387e31245ca8264d66/lib/oracle/cast.ts",
-    "number": "V",
-    "ordinal": 5,
-    "arcana": "minor",
-    "suit": "pentacles",
-    "tradition": "Rider–Waite–Smith",
-    "locale": "zh",
-    "nameEn": "Five of Pentacles",
-    "articleSlug": "tarot-five-of-pentacles-meaning",
-    "articleSlugStatus": "proposed_not_registered",
-    "status": "complete_chinese_editorial_draft_not_published",
-    "checkedAt": "2026-10-07",
-    "sources": [
-      {
-        "id": "five-of-pentacles-image",
-        "layer": "画面观察",
-        "title": "Pamela Colman Smith：星币五，Commons 所标 Pam-A 牌面",
-        "url": "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
-        "observedFileVersion": "05:26, 6 April 2024 1,112 × 1,920 (879 KB) TaionWC ( talk | contribs ) Higher-quality scan",
-        "observedRepresentation": "页面列出的 500px 标准缩略图",
-        "sha256": "cf87e40e801207119edd6838f23c6db117a4ed14a3932c3aa0e4dd3f0b6dbe2c",
-        "checkedAt": "2026-10-07"
-      },
-      {
-        "id": "five-of-pentacles-waite",
-        "layer": "Waite 原文",
-        "title": "A. E. Waite《塔罗图解之钥》第三部第二节 星币五",
-        "url": "https://original.sacred-texts.com/tarot/pkt/pktpe05.htm",
-        "edition": "所用来源为 Internet Sacred Text Archive 页面标注 [1911] 的英文转录；本批未核对 1910 年实体初版。",
-        "checkedAt": "2026-10-07"
-      }
-    ],
-    "sourceClaimBoundary": "雪中两人经过亮窗；物质困难及相互不兼容的关系旧义；逆位仍负面。重新连接支援不是 Waite 原义。",
-    "chineseCharacterCount": 1047
-  },
-  "sourceBatch": "pentacles",
-  "counts": {
-    "countBasis": "Quick takes, hook, optional summary and complete substantive sections, excluding intro duplicates, source and related sections; Markdown links count by label",
-    "chineseCharacters": 967,
-    "words": 2,
-    "articleUtf8Bytes": 4348
-  },
+  "sourceBatch": "depth77-pentacles-02",
   "sourceCounts": {
     "mainTextChineseCharacters": 1067,
     "completeArticleChineseCharacters": 1186
@@ -293,38 +212,29 @@
     "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
   },
   "review": {
-    "type": "independent_model_editorial_review",
+    "type": "parent_final_independent_translation_review",
     "nativeHumanReview": false,
-    "checkedOn": "2026-10-07",
+    "checkedOn": "2026-10-08",
     "published": false
-  },
-  "translationInputMetadata": {
-    "sourceCounts": {
-      "mainTextChineseCharacters": 1067,
-      "completeArticleChineseCharacters": 1186
-    },
-    "translation": {
-      "sourceLocale": "zh-CN",
-      "sourceCardId": "five-of-pentacles",
-      "sourceArticleSha256": "e16c0563b46bab4fcc02d74ef366daa713df339da9aa11aa1688fe11f4309bb0",
-      "sourcePackage": "destinypixel-tarot-78-zh-CN",
-      "translatedOn": "2026-10-07",
-      "method": "ICU 76 Hans-Hant draft with editorial terminology and wording review",
-      "nativeHumanReview": false,
-      "provenancePolicy": "Original sourceRecord, sourceMetadata and image object retained unchanged; reader-facing text localised"
-    }
-  },
-  "countsOriginal": {
-    "paragraphs": 14,
-    "sections": 8,
-    "unicodeCharacters": 1730,
-    "wordsWhitespaceSeparated": 66
   },
   "contentProvenance": {
     "sourceLocale": "zh-CN",
-    "sourceArticleSha256": "e16c0563b46bab4fcc02d74ef366daa713df339da9aa11aa1688fe11f4309bb0",
-    "articleSha256": "58e4c9fd79032384d4a53c1e6f21ce0368e3941fc52b55cf70caa5544ea32b36",
-    "chineseOriginalModified": false,
-    "imageBytesBundled": false
-  }
+    "sourceBodySha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+    "sourceArticleSha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+    "sourceHashBasis": "exact delivered bodyMarkdown without added title",
+    "articleSha256": "1193bb62217afc7a2a40543eeb5f778e0930150e605f50f11f27ab60ad61898f",
+    "sourcePackageSha256": "ea18a69cc1f933a65c7858ce53fed9356c7a71d5adf2dd85e19dca43c7bed76a",
+    "previousRecord": "content/tarot/revisions/2026-10-08/five-of-pentacles.zh-TW.json",
+    "editionBodySha256": "19ad1404e2955d48d065508c791b6d80d3efe5bd0f521623db86889b9a985523",
+    "translationSourceBodySha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+    "translationPackageSha256": "f738e7730a6b5ad7ba539d2ea8c51e6a72efdc1d997c6812eb6bee3b47d376ee",
+    "translationLibraryFileId": "libfile_d48a171bd06081918441c34cbc46b229",
+    "translationRecordSha256": "7f3d0664d4fc5f5eb4e43b0d83936874ea966d5bf438c18849b85505bd0ec67c",
+    "translationPackage": "destinypixel-reviewed-pentacles.zh-TW.json"
+  },
+  "legacyIntroAnchors": [],
+  "legacyRelatedAnchors": [],
+  "openingParagraphs": [],
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-08"
 }
