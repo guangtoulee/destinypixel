@@ -1,0 +1,205 @@
+{
+  "batchId": "depth77-pentacles-02",
+  "sourceRecords": 2,
+  "translations": 6,
+  "locales": [
+    "zh-TW",
+    "en",
+    "ru"
+  ],
+  "review": "Full translations model-reviewed against source; not native human certification.",
+  "records": [
+    {
+      "cardId": "four-of-pentacles",
+      "bodySha256": "7c0cce9fbb34c148762c3367d94a2f57a7fb7255772b30dda257feba2351d704",
+      "sourceHashMatches": true,
+      "sectionCount": 12,
+      "paragraphPattern": [
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 3,
+          "lists": 0
+        },
+        {
+          "paragraphs": 3,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        }
+      ],
+      "sourceURLs": [
+        "https://commons.wikimedia.org/wiki/File:Pents04.jpg",
+        "https://original.sacred-texts.com/tarot/pkt/pktpe04.htm",
+        "https://commons.wikimedia.org/wiki/File:Pents04.jpg",
+        "https://original.sacred-texts.com/tarot/pkt/pktpe04.htm",
+        "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
+      ],
+      "translations": [
+        {
+          "locale": "zh-TW",
+          "path": "translations/zh-TW/four-of-pentacles.json",
+          "bodySha256": "d257745b460884bed48e80a73206f81fb3eba1a1db9168edf18bee57a2205ab8",
+          "words": 74,
+          "characters": 2660,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        },
+        {
+          "locale": "en",
+          "path": "translations/en/four-of-pentacles.json",
+          "bodySha256": "7dabef1826822798e8013f4101b841e3d1e2cc53ee7ae3bc5f7e5ef3dd486ded",
+          "words": 1501,
+          "characters": 9381,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        },
+        {
+          "locale": "ru",
+          "path": "translations/ru/four-of-pentacles.json",
+          "bodySha256": "8d7939de45ef2a835773975ed449e6c066c735bcdfff75edcbaa549850a403ad",
+          "words": 1233,
+          "characters": 9224,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        }
+      ]
+    },
+    {
+      "cardId": "five-of-pentacles",
+      "bodySha256": "25c6043f2264821bb5e13885e060f4189ec20c72e32e04b64ba19be6d046c469",
+      "sourceHashMatches": true,
+      "sectionCount": 12,
+      "paragraphPattern": [
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 2,
+          "lists": 0
+        },
+        {
+          "paragraphs": 3,
+          "lists": 0
+        },
+        {
+          "paragraphs": 3,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        },
+        {
+          "paragraphs": 1,
+          "lists": 0
+        }
+      ],
+      "sourceURLs": [
+        "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
+        "https://original.sacred-texts.com/tarot/pkt/pktpe05.htm",
+        "https://commons.wikimedia.org/wiki/File:Pents05.jpg",
+        "https://original.sacred-texts.com/tarot/pkt/pktpe05.htm",
+        "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3"
+      ],
+      "translations": [
+        {
+          "locale": "zh-TW",
+          "path": "translations/zh-TW/five-of-pentacles.json",
+          "bodySha256": "4b174600b52ac30eb25e70b71d51c0afff486b70775ea731a210ca9fe7a13110",
+          "words": 75,
+          "characters": 2777,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        },
+        {
+          "locale": "en",
+          "path": "translations/en/five-of-pentacles.json",
+          "bodySha256": "27d8942d8105c70a2c87b59b44e3beaba6497e0d711e5bef696d627a4e62356e",
+          "words": 1546,
+          "characters": 9673,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        },
+        {
+          "locale": "ru",
+          "path": "translations/ru/five-of-pentacles.json",
+          "bodySha256": "780d0651ed029ec99352c1c5ac6305ef2190bc2020cea7f071ac009a3f51137d",
+          "words": 1288,
+          "characters": 9715,
+          "structureMatches": true,
+          "sourceURLSequenceMatches": true
+        }
+      ]
+    }
+  ]
+}

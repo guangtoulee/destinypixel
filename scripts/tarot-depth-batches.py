@@ -48,11 +48,12 @@ def receive(args):
         assert record.get("locale", "zh-CN") in ("zh", "zh-CN"), "Incoming source must be Chinese"
         md = record.get("articleMarkdown", record.get("bodyMarkdown"))
         assert isinstance(md, str) and len(md) >= 1500, f"Missing/short full manuscript: {card_id}"
-        assert re.search(r"^# .+", md, re.M) and len(re.findall(r"^## .+", md, re.M)) >= 6, f"Missing full article structure: {card_id}"
+        assert (record.get("title") or re.search(r"^# .+", md, re.M)) and len(re.findall(r"^## .+", md, re.M)) >= 6, f"Missing full article structure: {card_id}"
         article_hash = sha(md.encode())
-        if record.get("sha256"):
-            assert article_hash == record["sha256"], f"Manuscript hash mismatch: {card_id}"
-        source_slug = record.get("articleSlug")
+        expected_hash = record.get("bodySha256", record.get("sha256"))
+        if expected_hash:
+            assert article_hash == expected_hash, f"Manuscript hash mismatch: {card_id}"
+        source_slug = record.get("articleSlug", record.get("slug"))
         assert source_slug in (None, state["slug"]), f"Route identity mismatch: {card_id}"
         receipt.append({"cardId": card_id, "route": state["route"], "articleSha256": article_hash,
                         "characters": len(md), "sectionCount": len(re.findall(r"^## .+", md, re.M))})
@@ -93,7 +94,7 @@ def check_scope(_args):
     baseline = m["baselineCommit"]
     allowed = {f"content/tarot/{locale}/{card}.json" for locale in LOCALES for card in m["cards"]}
     allowed.update({"content/tarot/article.schema.json", "lib/tarot-learning/catalog.json",
-        "lib/tarot-learning/metadata.ts", "lib/tarot-learning/content.ts", "lib/tarot-learning/learning.test.ts",
+        "lib/tarot-learning/metadata.ts", "lib/tarot-learning/content.ts", "lib/tarot-learning/learning.test.ts", "lib/tarot-editorial.test.ts",
         "components/tarot-learning-article.tsx", "scripts/validate-tarot-learning.py",
         "scripts/check-tarot-learning.tsx", "scripts/check-tarot-learning-browser.mjs"})
     prefixes = ("content/tarot-depth-20261008/", "content/tarot/revisions/2026-10-08/",

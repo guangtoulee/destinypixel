@@ -4,6 +4,7 @@ import { journalArticles, journalLocales, journalMetadata } from "./journal";
 import { tarotLearningIds, tarotLearningId } from "./tarot-learning/paths";
 import { tarotLearningSitemap } from "./tarot-learning/metadata";
 import { tarotEducationSlugs, editorialCardIds, relatedEditorialSlugs } from "./tarot-editorial/navigation";
+import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
 
 test("education slugs remain separate from the original card routes and old articles", () => {
   for (const slug of tarotEducationSlugs) {
@@ -26,9 +27,9 @@ test("education slugs remain separate from the original card routes and old arti
   }
 });
 
-test("only the Sun and its directory receive the editorial sitemap revision date", () => {
+test("sitemap revision dates change only for the Sun, its directory and explicitly revised cards", () => {
   for (const entry of tarotLearningSitemap()) {
     const path = new URL(entry.url).pathname;
-    assert.equal(entry.lastModified, ["/journal/tarot-sun", "/journal/tarot-cards"].includes(path) ? "2026-10-08" : "2026-10-07");
+    assert.equal(entry.lastModified, ["/journal/tarot-sun", "/journal/tarot-cards",...Object.keys(depthManifest.cards).map(id=>`/journal/tarot-${id}`)].includes(path) ? "2026-10-08" : "2026-10-07");
   }
 });

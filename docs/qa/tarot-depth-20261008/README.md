@@ -4,8 +4,9 @@ Baseline: `3656f3f0d2d66190cd0af457230e51e945683059` (merged PR23).
 Branch: `codex/tarot-depth-77-20261008`.
 
 This round excludes the revised Sun, the three editorial articles and every hexagram.
-No manuscript has been received for this round yet. The manifest contains workflow
-state and existing identities only; no placeholder article is installed or published.
+Complete manuscripts are archived under `incoming/`; independently retained translations
+are under `translations/`. See `checkpoint.json` for exact counts at the saved checkpoint.
+No placeholder article is installed or published.
 Release remains **Preview only** until the parent confirms the batch release scope
 and external browser QA. PR23's completed release is not permission to merge this round.
 
@@ -32,9 +33,12 @@ python3 scripts/tarot-depth-batches.py status
 python3 scripts/tarot-depth-batches.py check-scope
 ```
 
-Intake saves exact original JSON bytes and a receipt containing package/article hashes,
+Intake saves the received local JSON bytes and a receipt containing package/article hashes,
 characters, section counts and resolved routes under `content/tarot-depth-20261008/incoming/`.
-It does not publish or declare the source reviewed. The minimum structure check detects
+For task-message deliveries, JSON file formatting is reconstructed; every supplied field is
+retained and the exact delivered `bodyMarkdown` is verified against its supplied `bodySha256`.
+A local package hash identifies the saved file, not the whitespace of the original message.
+Intake does not publish or declare the source reviewed. The minimum structure check detects
 obviously short/incomplete delivery; it cannot certify editorial quality or distinct cases.
 If the author's package uses another envelope, retain it unchanged and adapt intake after
 reading the first real package. Never ask the author to replace full prose with a summary.

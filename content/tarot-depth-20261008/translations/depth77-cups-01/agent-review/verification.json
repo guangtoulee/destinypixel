@@ -1,0 +1,247 @@
+{
+  "batchId": "depth77-cups-01",
+  "reviewType": "model translation review; not native-human certification",
+  "sourceRecords": 3,
+  "completeTranslations": 9,
+  "records": [
+    {
+      "cardId": "ace-of-cups",
+      "sourceBodySha256": "247b9c6ffa553c41008da19835025d3b75db14820ccec4f371d4113071fb7f2c",
+      "structure": {
+        "headings": 9,
+        "blocks": 35,
+        "blockTypes": [
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "list",
+          "paragraph"
+        ],
+        "listItems": 2,
+        "links": [
+          "https://commons.wikimedia.org/wiki/File:Cups01.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcuac.htm",
+          "https://commons.wikimedia.org/wiki/File:Cups01.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcuac.htm"
+        ],
+        "caseOpenings": 2
+      },
+      "translations": {
+        "zh-TW": {
+          "path": "translations/zh-TW/ace-of-cups.json",
+          "bodySha256": "6e4633ca29df277bf5b655674dd32326be7d06b7b9ebf743af0653a03de50626",
+          "characters": 2631,
+          "whitespaceWords": 80,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "en": {
+          "path": "translations/en/ace-of-cups.json",
+          "bodySha256": "4208746c2bfe878595199d18316615f7b625accbe7cffe4bd8b9f15586e28a44",
+          "characters": 9046,
+          "whitespaceWords": 1492,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "ru": {
+          "path": "translations/ru/ace-of-cups.json",
+          "bodySha256": "e06baa1c39d9bd55b4dc1b898853420c9d28996caa88df73a52f00d35f34bb6a",
+          "characters": 8804,
+          "whitespaceWords": 1197,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        }
+      }
+    },
+    {
+      "cardId": "two-of-cups",
+      "sourceBodySha256": "766d1a3a5a2b78d6bfe00e516a80a0ec703230c36e95c3dd9b04b0913ce6b8ec",
+      "structure": {
+        "headings": 9,
+        "blocks": 35,
+        "blockTypes": [
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "list",
+          "paragraph"
+        ],
+        "listItems": 3,
+        "links": [
+          "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcu02.htm",
+          "https://original.sacred-texts.com/tarot/pkt/pkt0304.htm",
+          "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcu02.htm",
+          "https://original.sacred-texts.com/tarot/pkt/pkt0304.htm"
+        ],
+        "caseOpenings": 2
+      },
+      "translations": {
+        "zh-TW": {
+          "path": "translations/zh-TW/two-of-cups.json",
+          "bodySha256": "4cb560f0378fa9bcf225650ced0f4417df34fc52fb1b8c6f764297e267cf19cd",
+          "characters": 2678,
+          "whitespaceWords": 83,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "en": {
+          "path": "translations/en/two-of-cups.json",
+          "bodySha256": "78533482d5e3a5faab97c0c796af1ca4d18710d4c1f6978edf0c85bcbd7f4e88",
+          "characters": 9075,
+          "whitespaceWords": 1415,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "ru": {
+          "path": "translations/ru/two-of-cups.json",
+          "bodySha256": "77a4739f3dbb7d8546a20723f83dd15cdf87a27ccefd894c91f22f7b8c782cbd",
+          "characters": 8837,
+          "whitespaceWords": 1189,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        }
+      }
+    },
+    {
+      "cardId": "three-of-cups",
+      "sourceBodySha256": "099fbf68c0d2b2a8100b1690238a2865d7c2183a30f2359ec6d9a18dee29ae7b",
+      "structure": {
+        "headings": 9,
+        "blocks": 35,
+        "blockTypes": [
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "case-opening",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "paragraph",
+          "heading",
+          "paragraph",
+          "heading",
+          "list",
+          "paragraph"
+        ],
+        "listItems": 2,
+        "links": [
+          "https://commons.wikimedia.org/wiki/File:Cups03.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcu03.htm",
+          "https://commons.wikimedia.org/wiki/File:Cups03.jpg",
+          "https://original.sacred-texts.com/tarot/pkt/pktcu03.htm"
+        ],
+        "caseOpenings": 2
+      },
+      "translations": {
+        "zh-TW": {
+          "path": "translations/zh-TW/three-of-cups.json",
+          "bodySha256": "d0ed6234827968d523e53f19d9697b021445ec0f2535f317ab41294cf2b60632",
+          "characters": 2474,
+          "whitespaceWords": 71,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "en": {
+          "path": "translations/en/three-of-cups.json",
+          "bodySha256": "db1a3293ad4c95dc292476a739aba9930872afe4e94cfaee51ed9d0b9c0c4eef",
+          "characters": 8615,
+          "whitespaceWords": 1379,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        },
+        "ru": {
+          "path": "translations/ru/three-of-cups.json",
+          "bodySha256": "0c88d413ec90c701d905af36ca5d009f894546cd76f3b43bba83091972db2d5e",
+          "characters": 8348,
+          "whitespaceWords": 1129,
+          "paragraphAndCitationParity": "passed",
+          "completeCases": 2
+        }
+      }
+    }
+  ]
+}

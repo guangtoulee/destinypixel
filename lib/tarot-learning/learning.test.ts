@@ -9,6 +9,7 @@ import { tarotLearningCatalog,tarotLearningMetadata,tarotLearningSitemap } from 
 import { journalLanguageTags,journalLocales } from "@/lib/journal-locales";
 import manifest from "@/content/tarot/provenance.json";
 import editorialManifest from "@/content/tarot-editorial/provenance.json";
+import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -18,7 +19,8 @@ test("every real cast ID resolves to the complete correct-language article witho
    const article=await loadTarotLearningArticle(id,locale);assert.ok(article);assert.equal(article.cardId,id);assert.equal(article.locale,locale==="zh"?"zh-CN":locale);assert.equal(article.deckOrder,i);
    assert.equal(article.title,catalog[i].title);assert.equal(article.sections.length >= (id === "sun" ? 6 : 7),true);
    const key=`${locale}/${id}` as keyof typeof manifest.articleMarkdownSha256;
-   const approvedHash = id === "sun" ? editorialManifest.manuscripts[`${locale}/tarot-sun`].sha256 : manifest.articleMarkdownSha256[key];
+   const revisedHashes:Record<string,string>=depthManifest.articleMarkdownSha256;
+   const approvedHash = id === "sun" ? editorialManifest.manuscripts[`${locale}/tarot-sun`].sha256 : revisedHashes[key]??manifest.articleMarkdownSha256[key];
    assert.equal(createHash("sha256").update(article.articleMarkdown).digest("hex"),approvedHash);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);
   }
