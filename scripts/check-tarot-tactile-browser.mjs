@@ -1,3 +1,4 @@
+import { openTarotSettings } from "./tarot-browser-helpers.mjs";
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {mkdirSync, writeFileSync} from 'node:fs';
@@ -37,7 +38,7 @@ try {
       const top = page.locator('.tarot-deck-top');
       const slots = page.locator('[data-drop-slot]');
       const flipped = page.locator('#tarot-board .is-revealed');
-      for (const control of [shuffle, draw, page.locator('.tarot-select select')]) {
+      for (const control of [shuffle, draw, page.locator('.tarot-settings-disclosure > summary')]) {
         assert.ok((await control.boundingBox()).height >= 44, 'primary target below 44px');
       }
       await expect(draw).toBeDisabled();
@@ -86,9 +87,11 @@ try {
       await expect(page.locator('dialog[open]')).toHaveCount(0);
       await expect(flipped).toHaveCount(3);
       // Cancellation and confirmation both leave consistent deck/result state.
+      await openTarotSettings(page);
       await page.locator('.tarot-settings>.cel-button-text').click();
       await expect(flipped).toHaveCount(3);
       accept = true;
+      await openTarotSettings(page);
       await page.locator('.tarot-settings>.cel-button-text').click();
       await expect(page.locator('#tarot-board .tarot-flipper')).toHaveCount(0);
       await expect(draw).toBeDisabled();

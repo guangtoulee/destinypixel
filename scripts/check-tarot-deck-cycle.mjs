@@ -1,3 +1,4 @@
+import { openTarotSettings } from "./tarot-browser-helpers.mjs";
 // Actual browser gestures and order checks. AI response is a local fixture; no writes leave the browser.
 import assert from "node:assert/strict";
 import {createRequire} from "node:module";
@@ -20,6 +21,7 @@ try {
    });
    await page.goto(`${base}/tarot?locale=${locale}`);
    await expect(page.locator("#table")).toHaveAttribute("aria-busy","false");
+   await openTarotSettings(page);
    await page.locator(".tarot-controls [role=tab]").last().click();
    const top=page.locator(".tarot-deck-top"),deck=page.locator(".tarot-bottom-deck"),stack=page.locator(".tarot-deck-stack");
    await deck.locator(".cel-button").click();await expect(top).toBeEnabled();
@@ -88,7 +90,7 @@ try {
    await placed.press("Enter");await expect(page.locator(".tarot-art-versions, .tarot-art-version-options")).toHaveCount(0);
    await expect(page.locator(".tarot-dialog-source a")).toHaveAttribute("href","/tarot/attribution.json");await page.keyboard.press("Escape");
    // Structured mode still deals the advanced top into the selected slot.
-   await page.locator(".tarot-controls [role=tab]").first().click();await page.locator(".tarot-select select").selectOption("single");
+   await page.locator(".tarot-controls [role=tab]").first().click();await openTarotSettings(page);await page.locator(".tarot-select select").selectOption("single");
    await deck.locator(".cel-button").click();await expect(top).toBeEnabled();await top.press("ArrowDown");await expect(deck).toHaveAttribute("aria-busy","false");
    const selected=await top.getAttribute("data-card-id");await top.press("Enter");await page.locator("[data-drop-slot='0']").press("Enter");
    await expect(page.locator("[data-drop-slot='0'] img")).toHaveAttribute("src",`/tarot/rws/${selected}.webp`);

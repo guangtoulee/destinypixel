@@ -348,8 +348,9 @@ export default function TarotExperience({
         onPull={point => setIncoming(point ? slotAt(point) : null)} />;
   return (
     <section className="tarot-workspace" id="table" aria-busy={!interactive}>
-      <ol className="tarot-journey" aria-label={workspaceCopy.nav}>{workspaceCopy.steps.map((step, i) => <li key={step} aria-current={i === (!mixes ? 0 : !table.cards.length ? 1 : !table.cards.some(card => card.revealed) ? 2 : 3) ? "step" : undefined}><span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>{step}</li>)}</ol>
-      <div ref={workbench} className={`tarot-workbench ${table.mode === "free" ? "is-free-workbench" : ""}`}>
+      <div ref={workbench} data-has-cards={table.cards.length > 0} className={`tarot-workbench ${table.mode === "free" ? "is-free-workbench" : ""}`}>
+      <details className="tarot-settings-disclosure" open={table.mode === "free" ? true : undefined}>
+      <summary><span>{table.mode === "free" ? c.freeMode : c.spreads[table.spread]}</span><span>{workspaceCopy.spreads} <span aria-hidden="true">⌄</span></span></summary>
       <div className="tarot-controls" id="tarot-spreads">
         <div className="cel-tabs" role="tablist" aria-label={c.tarot}>
           {(["spread", "free"] as const).map((mode) => (
@@ -399,7 +400,8 @@ export default function TarotExperience({
           </button>
         </div>
       </div>
-      {table.mode === "free" ? <details className="tarot-free-help"><summary>{c.tableHelp}</summary><p>{c.freeHelp} {c.rotationHelp}</p></details> : <details className="tarot-free-help tarot-spread-help"><summary>{c.tableHelp}</summary><p>{workspaceCopy.help}</p></details>}
+      {table.mode === "spread" && <details className="tarot-free-help tarot-spread-help"><summary>{c.tableHelp}</summary><p>{workspaceCopy.help}</p></details>}
+      </details>
       <div className="tarot-play-surface">
       {table.mode === "spread" && deck}
       <div
@@ -559,6 +561,7 @@ export default function TarotExperience({
       {table.mode === "free" && deck}
       </div>
       </div>
+      {table.mode === "free" && <details className="tarot-free-help tarot-free-reading-help"><summary>{c.tableHelp}</summary><p>{c.freeHelp} {c.rotationHelp}</p></details>}
       {table.cards.some((card) => card.revealed) && (
         <div className="tarot-reading-list">
           {table.cards

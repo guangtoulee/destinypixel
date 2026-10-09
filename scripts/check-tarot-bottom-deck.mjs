@@ -1,3 +1,4 @@
+import { openTarotSettings } from "./tarot-browser-helpers.mjs";
 // Local-only interaction checks; no AI, account, payment or analytics requests.
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
@@ -29,6 +30,7 @@ try {
     const board = page.locator("#tarot-board");
     const tabs = page.locator(".tarot-controls [role=tab]");
     await expect(top).toBeDisabled();
+    await openTarotSettings(page);
     await tabs.last().click();
     await shuffle.click();
     await expect(top).toBeEnabled();
@@ -96,6 +98,7 @@ try {
     await expect(free).toHaveCount(0); await expect(top).toBeDisabled();
     cases++;
     for (const [spread,size] of [["single",1],["three",3],["relationship",5],["choice",5],["celtic",10]]) {
+      await openTarotSettings(page);
       await page.locator(".tarot-select select").selectOption(spread);
       await expect(board.locator("[data-drop-slot]")).toHaveCount(size);
       await shuffle.click(); await expect(top).toBeEnabled();

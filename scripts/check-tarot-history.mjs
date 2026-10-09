@@ -1,3 +1,4 @@
+import { openTarotSettings } from "./tarot-browser-helpers.mjs";
 // Requires Playwright and its Chromium browser (or CHROMIUM_PATH).
 // node scripts/check-tarot-history.mjs http://127.0.0.1:3002
 import assert from "node:assert/strict";
@@ -31,6 +32,7 @@ try {
     await page.goto(new URL("/astrology", base).href);
     // Full document navigation reproduces native session-history form restoration.
     await page.goto(new URL("/tarot", base).href);
+    await openTarotSettings(page);
     await select.selectOption("single");
     await expect(board).toHaveClass(/tarot-spread-single/);
     await page.locator(".tarot-bottom-deck button.cel-button").first().click();
@@ -44,6 +46,7 @@ try {
     await page.goBack();
     await expect(page).toHaveURL(new URL("/astrology", base).href);
     await page.goForward();
+    await openTarotSettings(page);
     await expect(select).toBeVisible();
     await consistent("after browser Back/Forward");
     // A fresh choice must still update the board after history restoration.

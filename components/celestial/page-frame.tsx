@@ -20,6 +20,7 @@ import "./celestial.css";
 import "./tarot-workspace.css";
 import { TarotHeader, TarotNavigation } from "@/components/tarot-navigation";
 import { tarotWorkspaceCopy } from "@/lib/tarot-workspace-copy";
+import { TarotScene } from "./tarot-scene";
 export function CelestialPageFrame({
   kind,
   locale,
@@ -72,6 +73,7 @@ export function CelestialPageFrame({
           __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
         }}
       />
+      {!astro && <TarotScene />}
       <div className="cel-shell">
         {astro ? <header className="cel-header">
           <a href={celestialHref("/", locale)} className="cel-brand">
