@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import {
   ArrowDown,
@@ -28,10 +29,12 @@ import { constrainCard, freeCardWidth } from "@/lib/celestial/tarot-layout";
 import { trackToolEvent } from "@/lib/analytics";
 import { CardBack } from "./card-back";
 import { BottomDeck, type DeckDropPoint } from "./bottom-deck";
-import { SaveCelestialRecord } from "./save-record";
 import { TarotCardDialog } from "./tarot-card-dialog";
 import { ReadingPanel } from "./reading-panel";
 import { tarotWorkspaceCopy } from "@/lib/tarot-workspace-copy";
+// The save panel only appears after a card is placed. Keep its translation
+// dictionary and account UI out of the initial public card-table bundle.
+const SaveCelestialRecord = dynamic(() => import("./save-record").then(module => module.SaveCelestialRecord));
 const subscribeToHydration = () => () => {};
 const clientReady = () => true;
 const serverReady = () => false;

@@ -1,0 +1,29 @@
+{
+  "measurement": "390x844 local Chromium, new browser page, initial load plus 2 seconds, decoded response bytes; not wire bytes or field CWV",
+  "comparisons": [
+    {
+      "route": "/tarot?locale=zh",
+      "beforeDecodedScriptBytes": 1653331,
+      "afterDecodedScriptBytes": 530758,
+      "reductionPercent": 67.9,
+      "beforeDocumentLanguage": "en",
+      "afterDocumentLanguage": "zh-Hans"
+    },
+    {
+      "route": "/journal/tarot-cards?locale=zh",
+      "beforeDecodedScriptBytes": 479954,
+      "afterDecodedScriptBytes": 481525,
+      "reductionPercent": -0.33,
+      "beforeDocumentLanguage": "en",
+      "afterDocumentLanguage": "zh-Hans"
+    },
+    {
+      "route": "/journal/tarot-sun?locale=zh",
+      "beforeDecodedScriptBytes": 481477,
+      "afterDecodedScriptBytes": 483048,
+      "reductionPercent": -0.33,
+      "beforeDocumentLanguage": "en",
+      "afterDocumentLanguage": "zh-Hans"
+    }
+  ]
+}
