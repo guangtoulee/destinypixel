@@ -102,11 +102,14 @@ export function BottomDeck({ count, topCardId, disabled, interactive, compact = 
     onShuffle(); setCycles(0); setShuffling(true);
     timer.current = setTimeout(finishMotion, reducedMotion() ? 80 : 850);
   }
-  return <div className={`tarot-bottom-deck ${shuffling ? "is-shuffling" : ""} ${cycling ? "is-cycling" : ""} ${lifted ? "is-lifting" : ""}`} aria-busy={shuffling || cycling}>
+  return <div className={`tarot-bottom-deck ${disabled ? "is-unmixed" : ""} ${shuffling ? "is-shuffling" : ""} ${cycling ? "is-cycling" : ""} ${lifted ? "is-lifting" : ""}`} aria-busy={shuffling || cycling}>
     <div ref={stack} className={`tarot-deck-stack ${returnTarget ? "is-return-target" : ""}`}>
       {tucking && <div className="tarot-tucking-card" aria-hidden="true"><CardBack/></div>}
-      <div className="tarot-stack-layers" aria-hidden="true">
-        {Array.from({length: Math.min(count, 7)}, (_, i) => <div key={i} style={{"--layer": i, "--scatter-x": `${62 + (i % 2 ? 1 : -1) * (20 + i * 7)}px`, "--scatter-y": `${-100 - (i % 3) * 30}px`, "--scatter-angle": `${(i - 3) * 17}deg`} as CSSProperties}><CardBack/></div>)}
+      <div className="tarot-stack-layers" aria-hidden={compact ? true : undefined}>
+        {Array.from({length: Math.min(Math.max(count - 1, 0), 6)}, (_, i) => <div key={i} style={{"--layer": i < 3 ? i : i + 1, "--scatter-x": `${62 + (i % 2 ? 1 : -1) * (20 + i * 7)}px`, "--scatter-y": `${-100 - (i % 3) * 30}px`, "--scatter-angle": `${(i - 3) * 17}deg`} as CSSProperties}>
+          {compact ? <CardBack/> : <button type="button" className="tarot-fan-choice" aria-label={`${c.drawSelected} · ${i + 2}`} disabled={!interactive || disabled || shuffling || cycling}
+            onClick={() => { if (!locked.current) onDraw(i + 1); }}><CardBack/></button>}
+        </div>)}
       </div>
       <button ref={top} type="button" className="tarot-deck-top" data-card-id={topCardId} disabled={disabled || shuffling || cycling || !count}
         aria-label={c.drawSelected} aria-describedby={`${helpId} ${cycleHelpId}`} aria-keyshortcuts="ArrowDown"
@@ -156,6 +159,7 @@ export function BottomDeck({ count, topCardId, disabled, interactive, compact = 
     <div className="tarot-deck-actions">
       <div className="tarot-deck-label"><h2>{c.deckShortTitle}</h2><span aria-live="polite">{count} {c.remaining}</span></div>
       <button type="button" className="cel-button" onClick={shuffle} disabled={!interactive || shuffling || cycling || !count}><Shuffle size={16}/>{c.shuffleShort}</button>
+      <button type="button" className="cel-button-soft tarot-draw-action" disabled={!interactive || disabled || shuffling || cycling || !count} onClick={() => { if (!locked.current) onDraw(0); }}>{c.drawSelected}<span aria-hidden="true">↑</span></button>
       <p id={helpId}>{disabled ? c.ribbonStart : compact ? c.dropHint : c.ribbonHelp}</p>
       <span id={cycleHelpId} className="tarot-deck-key-help">{c.cycleKeyHelp}</span>
       <span className="tarot-deck-status" role="status">{shuffling ? c.shuffle : cycles ? `${c.cycled} · ${cycles}` : disabled ? "" : c.shuffled}</span>

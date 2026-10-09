@@ -1,3 +1,5 @@
+import { TarotHeader, TarotNavigation } from "@/components/tarot-navigation";
+import learn from "../tarot-learning.module.css";
 import HexagramLearningArticle from "@/components/hexagram-learning-article";
 import { hexagramNumber,hexagramIds } from "@/lib/hexagram-learning/identity";
 import { hexagramMetadata } from "@/lib/hexagram-learning/metadata";
@@ -68,12 +70,13 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const ui = journalUi[locale];
   const copy = article.translations[locale];
   const library = pillarLibraryCopy(locale);
+  const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
   const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
     ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.kind !== "education");
   return (
-    <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
+    <main className={`${styles.page}${tarotGuide ? ` ${learn.page}` : ""}`} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
-      <JournalHeader locale={locale} slug={article.slug} />
+      {tarotGuide ? <><TarotHeader locale={locale} path={`/journal/${article.slug}`} /><TarotNavigation locale={locale} current="guide" /></> : <JournalHeader locale={locale} slug={article.slug} />}
       <article>
         <header className={styles.articleHero}>
           <nav className={styles.breadcrumb} aria-label={ui.breadcrumb}><a href={journalHomeHref(locale)}>{ui.home}</a><span aria-hidden="true">/</span><a href={journalHref(locale)}>{ui.journal}</a><span aria-hidden="true">/</span><span>{copy.topic}</span></nav>
@@ -92,9 +95,9 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           {article.pillar && <figure className={styles.portraitArt}><Image src={getPillarImagePath(article.pillar)} alt={`${article.pillar} · ${pillarName(article.pillar, locale)} · ${library.art}`} width={768} height={1024} priority sizes="(max-width:650px) 70vw, 290px" /><figcaption>{library.art}</figcaption></figure>}
           </div>
         </header>
-        <div className={styles.readingLayout}>
-          <aside className={styles.contents}><p>{ui.contents}</p><nav aria-label={ui.sections}>{copy.sections.map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}</nav></aside>
-          <div className={styles.articleBody}>
+        <div className={`${styles.readingLayout}${tarotGuide ? ` ${learn.reading}` : ""}`}>
+          <aside className={`${styles.contents}${tarotGuide ? ` ${learn.contents}` : ""}`}><p>{ui.contents}</p><nav aria-label={ui.sections}>{copy.sections.map((section) => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}</nav></aside>
+          <div className={`${styles.articleBody}${tarotGuide ? ` ${learn.prose}` : ""}`}>
             {article.kind === "education" && <TarotEditorialCards slug={article.slug} locale={locale} />}
             {copy.takeaway && <div className={styles.takeaway}><span>{ui.takeaway}</span><p>{copy.takeaway}</p></div>}
             {copy.sections.map((section) => <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>

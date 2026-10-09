@@ -31,6 +31,7 @@ import { BottomDeck, type DeckDropPoint } from "./bottom-deck";
 import { SaveCelestialRecord } from "./save-record";
 import { TarotCardDialog } from "./tarot-card-dialog";
 import { ReadingPanel } from "./reading-panel";
+import { tarotWorkspaceCopy } from "@/lib/tarot-workspace-copy";
 const subscribeToHydration = () => () => {};
 const clientReady = () => true;
 const serverReady = () => false;
@@ -45,6 +46,7 @@ export default function TarotExperience({
   copy: CelestialCopy;
   cards: CardInfo[];
 }) {
+  const workspaceCopy = tarotWorkspaceCopy(locale);
   const interactive = useSyncExternalStore(subscribeToHydration, clientReady, serverReady);
   const [boardSize, setBoardSize] = useState({width: 500, height: 350});
   const [table, setTable] = useState<TableState>(() => initialTable()),
@@ -156,7 +158,7 @@ export default function TarotExperience({
     if (window.matchMedia("(max-width: 740px)").matches) {
       requestAnimationFrame(() => {
         const target = table.mode === "spread" ? board.current?.querySelector(`[data-drop-slot="${slot}"]`) : board.current;
-        if (target && target.getBoundingClientRect().top < 0) target.scrollIntoView({ behavior: readingScrollBehavior(), block: "center" });
+        if (target && (target.getBoundingClientRect().top < 0 || target.getBoundingClientRect().bottom > window.innerHeight)) target.scrollIntoView({ behavior: readingScrollBehavior(), block: "center" });
       });
     }
     if (table.mode === "spread") {
@@ -336,10 +338,20 @@ export default function TarotExperience({
       </span>
     );
   };
+  const deck = <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={table.mode === "free" ? c : { ...c, ribbonStart: workspaceCopy.beforeShuffle, ribbonHelp: workspaceCopy.deckHelp }}
+        onDraw={draw} onShuffle={mix}
+        topCardId={table.deck[0]?.id} onCycle={() => setTable(cycleDeck)}
+        contains={point => {
+          const r = board.current?.getBoundingClientRect();
+          return Boolean(r && point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom);
+        }}
+        onPull={point => setIncoming(point ? slotAt(point) : null)} />;
   return (
     <section className="tarot-workspace" id="table" aria-busy={!interactive}>
-      <div ref={workbench} className={`tarot-workbench ${table.mode === "free" ? "is-free-workbench" : ""}`}>
-      <div className="tarot-controls">
+      <div ref={workbench} data-has-cards={table.cards.length > 0} className={`tarot-workbench ${table.mode === "free" ? "is-free-workbench" : ""}`}>
+      <details className="tarot-settings-disclosure" open={table.mode === "free" ? true : undefined}>
+      <summary><span>{table.mode === "free" ? c.freeMode : c.spreads[table.spread]}</span><span>{workspaceCopy.spreads} <span aria-hidden="true">⌄</span></span></summary>
+      <div className="tarot-controls" id="tarot-spreads">
         <div className="cel-tabs" role="tablist" aria-label={c.tarot}>
           {(["spread", "free"] as const).map((mode) => (
             <button
@@ -388,8 +400,10 @@ export default function TarotExperience({
           </button>
         </div>
       </div>
-      {table.mode === "free" ? <details className="tarot-free-help"><summary>{c.tableHelp}</summary><p>{c.freeHelp} {c.rotationHelp}</p></details> : <p className="tarot-instructions">{c.spreadHelp}</p>}
+      {table.mode === "spread" && <details className="tarot-free-help tarot-spread-help"><summary>{c.tableHelp}</summary><p>{workspaceCopy.help}</p></details>}
+      </details>
       <div className="tarot-play-surface">
+      {table.mode === "spread" && deck}
       <div
         className={`tarot-table ${incoming !== null ? "is-receiving" : ""} ${table.mode === "free" ? "tarot-free" : ""} tarot-spread-${table.spread}`}
         ref={board}
@@ -431,7 +445,7 @@ export default function TarotExperience({
                       <span className="tarot-empty-slot">
                         <b>{String(i + 1).padStart(2, "0")}</b>
                         <span>✧</span>
-                        <small>{c.empty}</small>
+                        <small>{workspaceCopy.empty}</small>
                       </span>
                     )}
                   </button>
@@ -544,16 +558,10 @@ export default function TarotExperience({
         </div>
       </div>
       {table.mode === "free" && focused && <p className="tarot-orientation-status" aria-live="polite">{focused.reversed ? c.reversed : c.upright} · {c.placementAngle} {focused.rotation}°</p>}
-      <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={c}
-        onDraw={draw} onShuffle={mix}
-        topCardId={table.deck[0]?.id} onCycle={() => setTable(cycleDeck)}
-        contains={point => {
-          const r = board.current?.getBoundingClientRect();
-          return Boolean(r && point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom);
-        }}
-        onPull={point => setIncoming(point ? slotAt(point) : null)} />
+      {table.mode === "free" && deck}
       </div>
       </div>
+      {table.mode === "free" && <details className="tarot-free-help tarot-free-reading-help"><summary>{c.tableHelp}</summary><p>{c.freeHelp} {c.rotationHelp}</p></details>}
       {table.cards.some((card) => card.revealed) && (
         <div className="tarot-reading-list">
           {table.cards

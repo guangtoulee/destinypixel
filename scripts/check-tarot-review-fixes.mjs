@@ -1,3 +1,4 @@
+import { openTarotSettings } from "./tarot-browser-helpers.mjs";
 import assert from "node:assert/strict";
 import {createRequire} from "node:module";
 const {chromium,expect}=createRequire(import.meta.url)("playwright/test");
@@ -10,7 +11,8 @@ try {
   await page.route("**/*",r=>new URL(r.request().url()).origin===new URL(base).origin && r.request().method()==="GET"?r.continue():r.abort());
   await page.goto(`${base}/tarot?locale=${locale}`);
   await expect(page.locator("#table")).toHaveAttribute("aria-busy","false");
-  await page.locator(".tarot-controls [role=tab]").last().click();
+  await openTarotSettings(page);
+   await page.locator(".tarot-controls [role=tab]").last().click();
   await page.locator(".tarot-check input").uncheck();
   await page.locator(".tarot-bottom-deck .cel-button").click();
   await expect(page.locator(".tarot-deck-top")).toBeEnabled();
