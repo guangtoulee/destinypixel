@@ -57,7 +57,9 @@
 @keyframes tarot-card-land{from{translate:60px 95px;rotate:-12deg;scale:.85;opacity:.3}60%{translate:10px -12px;rotate:3deg;opacity:1}to{translate:0 0;rotate:0deg;scale:1;opacity:1}}
 .cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-table-toolbar{grid-row:2;margin:0 auto;min-height:44px;padding:0;justify-content:center;color:#e8d8e4;font-size:12px}
 .cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-bottom-deck{grid-row:3;display:flex;flex-direction:column;align-items:center;gap:26px;padding:24px 0 28px;background:none;border:0;box-shadow:none}
-.cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-deck-stack{width:170px;height:293px;margin:0 0 8px;filter:drop-shadow(0 20px 18px #100d2880)}
+/* Do not filter this single-card-sized ancestor: the transformed fan overflows it.
+   Per-card box shadows below preserve depth without a clipped filter surface. */
+.cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-deck-stack{width:170px;height:293px;margin:0 0 8px}
 .cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-stack-layers>div{--fan-x:calc((var(--layer) - 3) * 47px);--fan-angle:calc((var(--layer) - 3) * 11deg);transform-origin:center 115%;transform:translateX(var(--fan-x)) rotate(var(--fan-angle));box-shadow:0 5px 18px #0c092966;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
 .cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-deck-top{transition:translate .25s,filter .25s}
 .cel-tarot-page .tarot-workbench:not(.is-free-workbench) .tarot-deck-top:hover:not(:disabled){translate:0 -14px;filter:brightness(1.12)}
