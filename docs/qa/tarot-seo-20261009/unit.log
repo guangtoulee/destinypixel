@@ -1,0 +1,29 @@
+✔ Ascendant is on eastern horizon; MC is on the upper meridian in both hemispheres (3.085219ms)
+✔ Natal positions retain independent NASA/JPL fixture accuracy; full aspects are not truncated (121.868273ms)
+✔ Rejects bad coordinates, missing time, unknown cities, ambiguous DST and prototype keys (6.323547ms)
+✔ Aspect boundary uses circular separation and exact six-degree orb (5.60414ms)
+✔ 78 unique cards: draw, replace and return conserve the full physical deck (1.767875ms)
+✔ API requires a complete unique spread and preserves orientations and positions (0.52218ms)
+✔ detailed tarot readings require a question but allow optional bounded context (1.417485ms)
+✔ All 78 cards have distinct original meanings in all four locales and all five spreads have labels (12.158596ms)
+✔ AI JSON is bounded plain text and the provider receives only the supplied derived data (69.27056ms)
+✔ Detailed natal reading covers every planet and house, prioritizes tight aspects and excludes birth identifiers (14.135307ms)
+✔ Detailed AI output rejects missing/duplicate chapters and truncated answers (6.183326ms)
+✔ bounded snapshots preserve every planet, house, card and supplied interpretation (22.116643ms)
+✔ invalid snapshots cannot contain duplicate cards, broken houses, oversized questions or fake AI targets (2.279599ms)
+✔ request cap uses bytes, including streamed requests; private URLs never reach analytics (64.407539ms)
+✔ member and administrator routes enforce ownership, origin, namespace, pagination and idempotent persistence (164.307283ms)
+✔ cycling sends the original top card underneath without altering dealt cards or orientations (9.406673ms)
+✔ cycling preserves spread slots, count, replacements and safe zero/one-card behavior (0.33723ms)
+✔ default artwork covers every stable card identity with an attributed existing file (12.108721ms)
+✔ changing artwork leaves every localized meaning and stable identity intact (25.516937ms)
+✔ artwork comparison offers only actual faces and never substitutes another edition (3.776404ms)
+✔ all 24 rotation steps keep every corner and selection margin inside the table (13.083416ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1347.539664

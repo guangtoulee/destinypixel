@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { journalLocales, journalOgLocales } from "@/lib/journal-locales";
 import { normalizeReportLocale } from "@/lib/report-i18n";
 import {
   celestialCopy,
@@ -26,6 +27,8 @@ export async function generateMetadata({
       title: c.tarotTitle,
       description: c.tarotDescription,
       url: celestialHref("/tarot", locale),
+      locale: journalOgLocales[locale],
+      alternateLocale: journalLocales.filter(other => other !== locale).map(other => journalOgLocales[other]),
       images: ["/tarot/opengraph-image"],
     },
     twitter: {
