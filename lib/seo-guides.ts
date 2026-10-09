@@ -212,6 +212,7 @@ export const seoGuides: SeoGuide[] = [
         question: "Already drew a stick at a temple—can I look up the number?",
         answer:
           "You can open this site’s entry for a number, but it may be an original modern reflection rather than your temple’s verse. For an offline draw, compare the actual poem and named edition; use the temple’s own booklet when they do not match.",
+        link: { label: "Match your number to the right poem and edition", href: "/journal/fortune-stick-number-and-edition" },
       },
       {
         question: "Is an online stick “the same” as a temple draw?",

@@ -1,3 +1,4 @@
+import { fortuneStickEditionsArticle, fortuneStickEditionsRussian } from "./journal-fortune-stick-editions";
 import { birthTimeArticle } from "./compatibility/birth-time-article";
 import type { JournalSourceArticle, JournalTranslation } from "./journal";
 
@@ -107,52 +108,7 @@ const entries: Entry[] = [
       ], action: { label: "Перейти к оракулу палочек", href: "/sticks?locale=ru" },
     },
   },
-  {
-    slug: "fortune-stick-number-and-edition", relatedSlug: "how-to-ask-fortune-sticks",
-    sources: [{ label: "DestinyPixel · Collection and source notes / 签系与来源说明 / Коллекции и источники", href: "/sticks" }, { label: "DestinyPixel · Guanyin lookup scope / 观音查签范围 / Поиск Гуаньинь", href: "/learn/guanyin-fortune-sticks" }],
-    en: {
-      title: "Why the same fortune-stick number can have different meanings",
-      description: "Looking up a Guanyin or temple fortune-stick number? Check the collection, original wording and edition before trusting an online meaning or AI explanation.",
-      topic: "Reading the source", introduction: "You leave a temple with a numbered slip, search the number online and find a poem that looks nothing like yours. A second page gives another meaning. Before worrying that you have received contradictory predictions, check whether the pages are even discussing the same text. A number identifies a position within a collection; by itself it does not establish the collection, the edition or the wording you are trying to understand.",
-      takeaway: "Match the named collection and the actual verse before matching an interpretation. A familiar number is not enough to identify your temple slip.",
-      sections: [
-        ["Start with the name above the number", "Keep a note of the temple or publisher, the collection name and the number exactly as shown on your slip. A Guanyin collection and a Guandi collection should not be treated as interchangeable search results just because both contain a number thirty-three. If the slip has no clear collection name, keep the opening line and ask the place that issued it when possible. You can record this privately without uploading a photograph. The first task is identifying the text, not deciding whether the online interpretation sounds comforting. A page with a confident title can still belong to the wrong collection."],
-        ["Compare words before comparing meanings", "Place the opening lines side by side. Are they the same verse, a translation of it or a completely different text? Check any title, accompanying story and source note as well. A modern paraphrase may intentionally use different words, but it should make clear what it is paraphrasing. If the opening lines do not match and the page supplies no edition information, stop short of claiming you have found the meaning of your exact slip. You can still read it as a separate symbolic text. Keeping those two uses distinct prevents a search result from silently replacing the document you actually received."],
-        ["Separate four layers of a reading", "The original verse is the text being discussed. A translation carries it into another language and may need to explain images or wordplay. An adaptation can reshape the imagery for a contemporary audience. An interpretation then connects the text with a situation or question. These layers can all be useful, but they do different jobs. A newly written English reflection is not automatically a line-by-line translation of a Chinese poem. An AI response based on that reflection is another interpretive layer, not a newly discovered historical source. Look for clear labels before treating any of these versions as interchangeable evidence."],
-        ["What DestinyPixel’s number lookup provides", "The site offers five collections, with one hundred entries each for Guanyin, Guandi and Wong Tai Sin, and sixty each for Yuelao and the Wealth Gods. These are the ranges in this product, not a statement that every temple uses these same collections. The library combines selected traditional material with modern symbolic texts. Its source notes distinguish the kind of material shown, and language editions may contain adaptations rather than matching translations. When you enter a number, you retrieve the corresponding entry in this library. That does not certify that the entry reproduces the exact paper slip you obtained elsewhere."],
-        ["Can AI explain the slip anyway?", "An AI explanation is useful only within the material and context supplied to it. On this site the optional reading explains the displayed library entry in relation to your question. It does not authenticate your temple slip, consult an unseen original or inspect a photograph of the paper you are holding. If the displayed entry differs from your slip, its explanation belongs to that displayed entry. Avoid filling the gap by assuming that all versions must mean the same thing. For a specific temple edition, consult its own published explanation or ask the issuing temple about the actual wording when that is possible."],
-        ["A simple lookup checklist", "Before searching, collect four details: collection name, number, opening line and named source if one is printed. In a search query, include the collection and an exact opening phrase rather than only the number. Once you find a candidate page, compare its wording and source label, then decide whether you want a translation, cultural context or a personal reflection. Those are different requests and may need different resources. If you cannot identify the edition, keep that uncertainty in your notes. You can still use a modern reading as a conversation prompt, while being honest that you have not established the meaning of the original temple document."],
-      ], action: { label: "Explore the collections and source notes", href: "/sticks" },
-    },
-    zh: {
-      title: "同一个签号，为什么签文不同？查观音灵签前先核对这四件事",
-      description: "寺庙求到的签和网上解签不一样？先查签系、签号、原文与版本，区分传统签文、翻译、现代改写和AI解释。",
-      topic: "读签也读来源", introduction: "从庙里带回一张签纸，按号码一搜，诗句却完全不同；再打开另一页，解释又变了。先别急着理解成互相矛盾的预言，要确认大家谈的是不是同一篇文字。签号标记的是某个签系内部的位置，单靠数字不能确定签系、版本和你手中那段文字。",
-      takeaway: "先对签系和实际诗句，再对解释。号码一样，不足以证明网上找到的就是手里的那支签。",
-      sections: [
-        ["先看号码上方写的是什么", "记下寺庙或出版者、签系名称，以及签纸上的号码。观音签和关帝签即使都出现第三十三签，也不能当成同一个搜索结果。签系不清楚时，保留开头原句，条件允许就向发签处询问。可以自己记录，不必上传签纸照片。第一步是辨认文字，不是挑一个听起来舒服的解释；标题再肯定，也可能来自不同签系。"],
-        ["先比较文字，再比较意思", "把签诗开头并排看：是同一首、翻译，还是完全不同的文字？也看看题名、典故和来源注记。现代转述可以换措辞，但应说明依据什么改写。如果开头不同，页面又没有版本信息，就不要声称已经找到了手中签纸的准确解释。它仍可以作为另一段象征文字来阅读，只是不能悄悄替换原来得到的那张签。"],
-        ["把四个层次分清楚", "原文是被讨论的文字；翻译把它转成另一种语言，可能需要解释意象和双关；改写为现代读者重新组织表达；解读则把文字与具体问题联系起来。四者都可能有用，但作用不同。新写的一段英文反思不自动等于中文签诗的逐句翻译，AI再解释它，也不是发现了新的古籍来源。把标签读清楚，再决定如何使用。"],
-        ["本站按签号查到的是什么？", "本站观音、关帝、黄大仙各收录100个条目，月老和财神各60个，这是产品里的编号范围，并不代表每座庙都用这套排列。资料库包含部分传统材料与现代象征文字，来源说明标记材料类型，不同语言也可能采用改写而非逐句对应。输入号码查到的是本站资料库中的对应条目，并不能认证它就是你在别处领到的纸签。"],
-        ["AI能不能直接解释手里的签？", "本站可选AI解读依据当前显示的资料库条目和你提交的问题，不会认证寺庙签纸，不会读到未提供的原文，也不会查看你手里拿着的纸张照片。如果显示条目与手中签纸不同，解释针对的就是显示条目。不要自行假设所有版本意思都一样。想核实某一庙本，应寻找该版本公开说明，或在条件允许时询问发签处的原文含义。"],
-        ["查签前的一张小清单", "保留四项：签系、号码、开头原句、印刷来源。搜索时带上签系和一段准确原句，不只输入数字。找到候选页面后核对文字与来源，再明确自己要的是翻译、文化背景，还是个人反思，这可能需要不同资料。版本无法确认，就保留这个不确定性；可以用现代解读打开话题，同时诚实地承认还没有核实原签的解释。"],
-      ], action: { label: "查看签系、签文与来源说明", href: "/sticks?locale=zh" },
-    },
-    ru: {
-      title: "Почему один номер палочки может означать разные тексты?",
-      description: "Как сверить храмовый листок с онлайн-оракулом: название коллекции, первые строки, издание и различия между переводом, адаптацией и ответом ИИ.",
-      topic: "Текст и его источник", introduction: "Вы принесли из храма пронумерованный листок, нашли номер в интернете, а стих оказался другим. Следующая страница объясняет его иначе. Прежде чем видеть противоречивые предсказания, проверьте, о том ли тексте речь. Номер обозначает место внутри коллекции; сам по себе он не устанавливает коллекцию, издание или слова вашего листка.",
-      takeaway: "Сначала сопоставьте коллекцию и сам стих, затем объяснение. Одинакового номера недостаточно, чтобы опознать храмовый текст.",
-      sections: [
-        ["Посмотрите на название над номером", "Сохраните название храма или издателя, коллекцию и номер в исходном виде. Коллекции Гуаньинь и Гуаньди не взаимозаменяемы, даже если обе содержат номер тридцать три. Если название неясно, запишите первую строку и по возможности спросите там, где получили листок. Загружать фотографию необязательно. Сначала нужно установить текст, а не выбрать самое утешительное объяснение."],
-        ["Сравните слова раньше значений", "Сопоставьте первые строки: это тот же стих, перевод или совсем другой текст? Проверьте заголовок, сопровождающую историю и указание источника. Современный пересказ может менять слова, но должен обозначать основу. Если строки не совпадают, а издание не названо, нельзя уверенно считать страницу толкованием именно вашего листка. Читать её отдельно можно, незаметно подменять ею исходный документ — не стоит."],
-        ["Различайте четыре слоя", "Оригинал — обсуждаемый текст. Перевод переносит его в другой язык и иногда объясняет образы. Адаптация меняет подачу для современной аудитории. Интерпретация связывает текст с вопросом человека. Это разные задачи. Новый английский текст не обязательно является построчным переводом китайского стиха, а объяснение ИИ не превращается в найденный исторический источник. Сначала прочитайте обозначения этих слоёв."],
-        ["Что выдаёт поиск номера на DestinyPixel?", "В продукте по сто записей для Гуаньинь, Гуаньди и Вонг Тай Сина и по шестьдесят для Юэлао и богов богатства. Это диапазоны сайта, не утверждение об устройстве всех храмовых изданий. Библиотека объединяет отдельные традиционные материалы и современные символические тексты, а языковые версии могут быть адаптациями. Поиск возвращает запись этой библиотеки, но не удостоверяет её совпадение с полученной в другом месте бумажной палочкой или листком."],
-        ["Что в таком случае объясняет ИИ?", "Дополнительное чтение на сайте использует отображаемую запись и ваш вопрос. Оно не удостоверяет храмовый листок, не читает невидимый оригинал и не рассматривает фотографию бумаги у вас в руках. Если запись отличается от листка, объяснение относится к записи. Не предполагайте автоматически одинаковый смысл всех версий. Для конкретного издания ищите его опубликованное объяснение или спрашивайте выдавший документ храм, когда это возможно."],
-        ["Короткая проверка перед поиском", "Запишите коллекцию, номер, первую строку и указанный источник. В запрос добавьте название и точную фразу, а не только цифру. На найденной странице сопоставьте текст и источник, затем решите, что вам нужно: перевод, культурный контекст или личное размышление. Если издание не удалось установить, сохраните эту неопределённость. Современное чтение можно использовать как начало разговора, не объявляя его проверенным объяснением исходного документа."],
-      ], action: { label: "Открыть коллекции и пояснения источников", href: "/sticks?locale=ru" },
-    },
-  },
+
 ];
 
 function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslation {
@@ -171,8 +127,8 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
   })) };
 }
 
-export const searchGrowthArticles: JournalSourceArticle[] = entries.map(entry => ({
+export const searchGrowthArticles: JournalSourceArticle[] = [...entries.map(entry => ({
   slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-09-30" : "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
-}));
-export const searchGrowthRussian: Record<string, JournalTranslation> = Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")]));
+})), fortuneStickEditionsArticle];
+export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian };
