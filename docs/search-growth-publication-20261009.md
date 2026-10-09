@@ -41,7 +41,11 @@
 
 ## 发布核验
 
-发布后追加提交、部署与线上检查结果。
+内容提交 `5bb40e74151fd36747e13eb62ff555ee78ffeb97` 已正常推送到 main。Vercel 对应部署链接为 <https://vercel.com/destinypixel/destinypixel/HuYLnZSraJHDNgHAj6Ys1ydp45YS>；状态接口最后一次返回 pending，后续查询迟迟未返回，因此没有把该接口记作 success，而是直接验证生产结果。
+
+正式域名四语文章已全部通过 `check-journal-search.ts`：HTTP 200、逐段新版正文、单 H1、canonical、四语与 x-default 链接、2026-09-20 首发/2026-10-09 修改日期、sitemap 日期和抽签工具回链。正式 Guanyin learn 页新增上下文链接也通过。浏览器在正式中文页确认新版标题、8 节正文和修改日期。这些结果确认内容已上线，但不代表新增索引或流量。
+
+本任务 `outputs/seo-publication-20261009/` 保存本地/线上 journal 检查、23 项测试与生产构建日志。根仓库仍保持原分支、原 HEAD 且干净。后续只补交本发布记录，不修改已验收内容。
 
 复查命令：
 
