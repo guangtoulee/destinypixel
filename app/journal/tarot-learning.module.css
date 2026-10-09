@@ -15,3 +15,60 @@
 @media(hover:hover){.page .tileLink:hover{transform:translateY(-3px);border-color:#a28aaa}}
 @media(max-width:650px){.page .reading{padding-top:20px}.page .contents{max-height:none;padding:18px;margin-bottom:35px}.page .contents nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 15px}.page .contents a{font-size:12px;line-height:1.6;min-height:44px}.page .prose p,.page .prose li{font-size:16px}.page .hero{gap:26px}.page .figure{width:220px}.page .grid{gap:18px 12px}.page .tileLink{padding:10px}.page .tile p{font-size:13px}.page .quick dd{font-size:17px}.page h1{overflow-wrap:break-word}}
 @media(prefers-reduced-motion:reduce){.page .tileLink{transition:none;transform:none}}
+
+/* Static, viewport-sized landscape: long articles never stretch or tile the artwork.
+   An isolated background layer keeps the reading surfaces and sticky contents above it. */
+.page {
+  --tarot-chrome-text:#fff4ee;
+  --tarot-chrome-muted:#e8dce9;
+  --tarot-chrome-accent:#efcca5;
+  --tarot-chrome-line:#f4dfcd40;
+  --tarot-chrome-selected:#43324d;
+  position:relative;
+  isolation:isolate;
+  background:#211b32;
+}
+.page::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(#21172e70,#241c3855 45%,#191627b8),url('/tarot/scene/twilight-terrace.webp') center/cover no-repeat;
+}
+.page>article {
+  width:min(1184px,calc(100% - 40px));
+  margin:28px auto 56px;
+  padding-top:10px;
+  background:#fcf9f3fa;
+  border:1px solid #efdbb9b3;
+  border-radius:22px;
+  box-shadow:0 18px 60px #100d282b;
+}
+.page>header:has(h1) {
+  margin-top:28px;
+  margin-bottom:28px;
+  padding:32px;
+  background:#fcf9f3f5;
+  border:1px solid #efdbb9b3;
+  border-radius:18px;
+}
+.page .contents {background:#eee7f0;border-color:#d5c6dc}
+.page .contents>p {color:#685274}
+.page .group>h2 {color:#fff0dc;border-color:#efdbb959;text-shadow:0 2px 10px #171225}
+.page .jump a {background:#f8f0e6;color:#49364e;border-color:#e4c79d}
+.page .tileLink {background:#fcf9f3f5;border-color:#e1cfba}
+.page>aside {padding:20px 24px;background:#282135ed;border:1px solid #efdbb940;border-radius:12px;color:#f0deef}
+.page>aside p {color:#e5d8e7}
+.page>aside>a {display:inline-block;margin-top:14px;color:#f4d1a6;text-decoration:underline;text-underline-offset:3px}
+.page>footer {color:#fff0dc;border-color:#efdbb959}
+.page>footer p,.page>footer nav {color:#e3d6e8}
+.page :focus-visible {outline-color:#a979bc}
+.page>header :focus-visible,.page>[data-tarot-navigation] :focus-visible,.page>footer :focus-visible {outline-color:#f4d1a6}
+@media(max-width:650px) {
+  .page::before {background-image:linear-gradient(#21172e80,#241c3855 45%,#191627b8),url('/tarot/scene/twilight-terrace-mobile.webp')}
+  .page>article {width:calc(100% - 24px);margin:18px auto 36px;border-radius:14px;padding-top:4px}
+  .page>article>header,.page .reading {width:calc(100% - 32px)}
+  .page>header:has(h1) {padding:24px 20px;border-radius:14px;margin-block:18px 24px}
+  .page>aside {padding:18px 20px}
+}

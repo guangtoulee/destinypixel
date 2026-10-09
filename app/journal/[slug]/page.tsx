@@ -70,7 +70,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const ui = journalUi[locale];
   const copy = article.translations[locale];
   const library = pillarLibraryCopy(locale);
-  const tarotGuide = article.kind === "education";
+  const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
   const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
     ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.kind !== "education");
   return (
