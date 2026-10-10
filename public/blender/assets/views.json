@@ -1,0 +1,186 @@
+{
+  "defaultView": "axis",
+  "up": [
+    0,
+    1,
+    0
+  ],
+  "views": [
+    {
+      "id": "foyer",
+      "label": "序厅",
+      "description": "船艏装置与序厅展墙，前墙隐藏",
+      "position": [
+        15,
+        1.85,
+        1.6
+      ],
+      "target": [
+        15,
+        2.5,
+        -3.7
+      ],
+      "projection": "perspective",
+      "hideGroups": [
+        "02a_FRONT_FACADE"
+      ],
+      "fov": 66.99037082672325
+    },
+    {
+      "id": "history",
+      "label": "风起沧溟",
+      "description": "历史背景展区、船厂沙盘和舰船展柜",
+      "position": [
+        26.5,
+        1.72,
+        -6.0
+      ],
+      "target": [
+        24.7,
+        1.85,
+        -15
+      ],
+      "projection": "perspective",
+      "hideGroups": [],
+      "fov": 54.16710223213955
+    },
+    {
+      "id": "core",
+      "label": "探舰寻踪",
+      "description": "中央沉舰遗存与文物展柜",
+      "position": [
+        18.05,
+        1.85,
+        -6.15
+      ],
+      "target": [
+        14.55,
+        2.07,
+        -15.2
+      ],
+      "projection": "perspective",
+      "hideGroups": [],
+      "fov": 56.357181844542175
+    },
+    {
+      "id": "tail",
+      "label": "尾厅",
+      "description": "尾厅主题屏和舰船模型，南隔墙隐藏",
+      "position": [
+        15,
+        1.8,
+        -22.95
+      ],
+      "target": [
+        15,
+        2.3,
+        -28.2
+      ],
+      "projection": "perspective",
+      "hideGroups": [
+        "02b_TAIL_PARTITION"
+      ],
+      "fov": 77.56872724772971
+    },
+    {
+      "id": "technology",
+      "label": "沉舰新生",
+      "description": "科技保护展区与文物修复展示",
+      "position": [
+        4.72,
+        1.72,
+        -5.66
+      ],
+      "target": [
+        4.85,
+        1.75,
+        -19.5
+      ],
+      "projection": "perspective",
+      "hideGroups": [],
+      "fov": 54.16710223213955
+    },
+    {
+      "id": "axis",
+      "label": "全馆剖透轴测",
+      "description": "全馆剖透，吊顶和入口前墙隐藏",
+      "position": [
+        43,
+        45,
+        32
+      ],
+      "target": [
+        15,
+        0,
+        -15
+      ],
+      "projection": "orthographic",
+      "hideGroups": [
+        "03_CEILING",
+        "02a_FRONT_FACADE"
+      ],
+      "orthoSize": 30.0
+    },
+    {
+      "id": "plan",
+      "label": "正投平面",
+      "description": "正投平面，吊顶隐藏",
+      "position": [
+        15,
+        60,
+        -15
+      ],
+      "target": [
+        15,
+        0,
+        -15
+      ],
+      "projection": "orthographic",
+      "hideGroups": [
+        "03_CEILING"
+      ],
+      "orthoSize": 21.25,
+      "up": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "wreck",
+      "label": "沉舰肋骨细节",
+      "description": "船体破损钢板与横向肋骨细节",
+      "position": [
+        12.3,
+        2.4,
+        -11.0
+      ],
+      "target": [
+        15.0,
+        2.25,
+        -15.7
+      ],
+      "projection": "perspective",
+      "hideGroups": [],
+      "fov": 37.64941927792143
+    },
+    {
+      "id": "cabin",
+      "label": "船舱复原",
+      "description": "船舱复原与床铺、桌椅",
+      "position": [
+        18.9,
+        1.62,
+        -22.2
+      ],
+      "target": [
+        21.3,
+        1.4,
+        -22.2
+      ],
+      "projection": "perspective",
+      "hideGroups": [],
+      "fov": 64.01076641616699
+    }
+  ]
+}

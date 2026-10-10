@@ -1,0 +1,136 @@
+{
+  "title": "近代沉舰考古专题展",
+  "units": "metres",
+  "source": "沉舰考古展馆_精细模型.blend",
+  "sourceObjectCounts": {
+    "MESH": 1384,
+    "CURVE": 202,
+    "FONT": 26
+  },
+  "sourceGeometryObjects": 1612,
+  "triangleCount": 406460,
+  "meshCount": 41,
+  "drawCalls": 41,
+  "groups": [
+    {
+      "id": "01_FLOOR",
+      "label": "地坪与分区",
+      "triangles": 31996
+    },
+    {
+      "id": "02_WALLS",
+      "label": "围护与隔墙",
+      "triangles": 7636
+    },
+    {
+      "id": "02a_FRONT_FACADE",
+      "label": "序厅剖透前墙",
+      "triangles": 856
+    },
+    {
+      "id": "02b_TAIL_PARTITION",
+      "label": "尾厅剖透南隔墙",
+      "triangles": 864
+    },
+    {
+      "id": "03_CEILING",
+      "label": "顶梁与吊顶",
+      "triangles": 4344
+    },
+    {
+      "id": "04_LIGHTING",
+      "label": "灯轨与照明",
+      "triangles": 16760
+    },
+    {
+      "id": "05_SHOWCASES",
+      "label": "展柜与玻璃",
+      "triangles": 12980
+    },
+    {
+      "id": "06_EXHIBIT_WALLS",
+      "label": "展墙与媒体屏",
+      "triangles": 26180
+    },
+    {
+      "id": "07_CORE_WRECK",
+      "label": "中央沉舰遗存",
+      "triangles": 64640
+    },
+    {
+      "id": "08_FOYER_BOW",
+      "label": "序厅船艏装置",
+      "triangles": 37404
+    },
+    {
+      "id": "09_ARTIFACTS",
+      "label": "展品与场景复原",
+      "triangles": 24576
+    },
+    {
+      "id": "10_AUXILIARY",
+      "label": "卫生间与辅助间",
+      "triangles": 4856
+    },
+    {
+      "id": "11_SIGNAGE",
+      "label": "立体标题与标识",
+      "triangles": 173368
+    }
+  ],
+  "fileBytes": 1347100,
+  "boundsBlender": {
+    "min": [
+      -0.009000643156468868,
+      -1.037000060081482,
+      -0.2800000011920929
+    ],
+    "max": [
+      30.009000778198242,
+      31.03700065612793,
+      5.519999980926514
+    ]
+  },
+  "bounds": {
+    "min": [
+      -0.009000643156468868,
+      -0.2800000011920929,
+      -31.03700065612793
+    ],
+    "max": [
+      30.009000778198242,
+      5.519999980926514,
+      1.037000060081482
+    ]
+  },
+  "width": 30,
+  "depth": 30,
+  "height": 5.5,
+  "area": 900,
+  "footprintMetres": [
+    30,
+    30
+  ],
+  "heightMetres": 5.5,
+  "compression": {
+    "method": "Draco",
+    "positionBits": 17,
+    "normalBits": 11
+  },
+  "glassAlpha": 0.14,
+  "notes": [
+    "外轮廓 30×30 米来自提供的平面图。",
+    "高度和未标注的细部尺寸按效果图推定。",
+    "展陈白模；原始照片、海洋影像和宣传画面以灰色屏面表示。"
+  ],
+  "verified": {
+    "glbHeader": true,
+    "allGeometryGroups": true,
+    "triangleCount": true,
+    "glassTransparency": true,
+    "dracoDecode": true,
+    "reimportMeshCount": 41,
+    "reimportTriangles": 406460,
+    "boundsErrorMetres": 4.8160552978515625e-05
+  }
+}

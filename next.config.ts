@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     const noindex = [
+      "/blender/:path*",
       "/report/:path*",
       "/account/:path*",
       "/admin/:path*",
