@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { BLENDER_COOKIE_NAME, verifyBlenderSession } from "@/lib/blender-access";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "近代沉舰考古专题展 · 三维场馆" },
@@ -13,7 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ShipwreckMuseumPage() {
+export default async function ShipwreckMuseumPage() {
+  if (!verifyBlenderSession((await cookies()).get(BLENDER_COOKIE_NAME)?.value)) redirect("/blender/access");
   return (
     <main style={{ width: "100%", height: "100dvh", overflow: "hidden" }}>
       <iframe

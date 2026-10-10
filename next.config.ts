@@ -46,8 +46,13 @@ const nextConfig: NextConfig = {
     return noindex.map((source) => ({
       source,
       headers: [
-        { key: "Referrer-Policy", value: "no-referrer" },
+        { key: "Referrer-Policy", value: source === "/blender/:path*" ? "same-origin" : "no-referrer" },
         { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ...(source === "/blender/:path*" ? [
+          { key: "Cache-Control", value: "private, no-store" },
+          { key: "CDN-Cache-Control", value: "no-store" },
+          { key: "Vercel-CDN-Cache-Control", value: "no-store" },
+        ] : []),
       ],
     }));
   },
