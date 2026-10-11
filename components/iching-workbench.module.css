@@ -11,6 +11,7 @@
 .intro { max-width:580px; font-size:15px; line-height:1.95; color:#7d7388; margin:22px 0 0; }
 .heroLinks { display:flex; flex-wrap:wrap; gap:25px; margin-top:25px; font-size:12px; color:#745588; }
 .heroLinks a { padding-bottom:4px; border-bottom:1px solid #cabbdb; }
+.heroLinks a svg, .scope details a svg { display:inline-block; vertical-align:-2px; }
 .heroArt { min-height:292px; display:flex; align-items:center; justify-content:center; position:relative; border-radius:50%; background:radial-gradient(ellipse,#ede3f27a,transparent 71%); }
 .orbit { position:absolute; inset:8% 17%; border:1px solid #ccbcd650; border-radius:50%; transform:rotate(-23deg); }
 .orbit:before { content:""; position:absolute; width:7px; height:7px; background:#b297c2; border-radius:50%; top:21%; left:11%; box-shadow:0 0 0 5px #b297c210; }
@@ -136,6 +137,7 @@
 .learning a { display:flex; align-items:center; gap:18px; padding:22px 23px; font-size:13px; color:#81608f; background:#f4eef8; border:1px solid #e7ddec; border-radius:11px; }
 .learning a span { font-size:24px; font-weight:300; color:#b89fc8; }
 .learning a b { margin-left:auto; font-size:17px; font-weight:400; color:#a388b4; }
+.learning a > svg { margin-left:auto; flex-shrink:0; color:#766180; }
 .scope { padding:0 0 49px; }
 .scope h2 { font-size:13px; color:#8c749a; font-weight:500; margin:0 0 12px; }
 .scope > p { font-size:11px; line-height:1.95; color:#a08eaa; max-width:900px; margin:0 0 11px; }
@@ -250,9 +252,10 @@
 .probability p { margin:9px 0 0; }
 
 @media(max-width:370px) { .castLine { grid-template-columns:67px minmax(40px,1fr) 77px; gap:10px; } .castLine small { font-size:8px; } .method { gap:6px; padding-inline:10px; } .method svg { width:15px; } }
+@media(max-width:370px) { .page:lang(zh) .hero h1 { font-size:32px; letter-spacing:-1.3px; } }
 
 /* Small reading text keeps AA contrast; pale colors are reserved for decoration. */
-.intro, .method small, .question > p, .sidebarRule p, .panelHeader > p:last-child, .progress, .castLine, .castLine small, .live, .textButton, .utility > button, .entrySwitch > button, .manualLine > label, .field, .convention, .classicalExample, .hint, .trigramPair, .summary, .record p, .rawCoins li, .formulas small, .reflection p, .learning p:not(.eyebrow), .scope > p, .scope details, .scope details a, .scope details p, .probability { color:#796785; }
+.intro, .method small, .question > p, .sidebarRule p, .panelHeader > p:last-child, .progress, .castLine, .castLine small, .live, .textButton, .utility > button, .entrySwitch > button, .manualLine > label, .field, .convention, .classicalExample, .hint, .trigramPair, .summary, .record p, .record strong, .rawCoins li, .formulas h3, .formulas small, .hexagramTop, .hexagramTop > b, .resultHeading > p, .reflection h3, .reflection p, .learning p:not(.eyebrow), .scope h2, .scope > p, .scope details, .scope details a, .scope details p, .probability { color:#766180; }
 .coinLegend, .coin { color:#775c38; }
 .coin[data-face="3"] { color:#665447; }
-.page :global(footer p) { color:#796785; }
+.page :global(footer p) { color:#766180; }

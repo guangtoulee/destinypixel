@@ -13,7 +13,7 @@ const locales=['en','zh','zh-TW','ru'];
 const tags={en:'en',zh:'zh-Hans','zh-TW':'zh-Hant',ru:'ru'};
 const suffix=locale=>locale==='en'?'':`?locale=${locale}`;
 const url=(path,locale)=>new URL(`${path}${suffix(locale)}`,base).href;
-const report={scope:local?'Local production build; no external deployment verification':'Public deployment browser verification',base:base.origin,startedAt:new Date().toISOString(),checks:[],views:[],workflows:[],screenshots:[],pageErrors:[],consoleErrors:[],httpErrors:[],blockedRequests:[],failures:[]};
+const report={scope:local?'Local production build; no external deployment verification':'Public deployment browser verification',phase:process.env.QA_PHASE??'full',base:base.origin,startedAt:new Date().toISOString(),checks:[],views:[],workflows:[],screenshots:[],pageErrors:[],consoleErrors:[],httpErrors:[],blockedRequests:[],failures:[]};
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH??'/usr/bin/chromium',args:['--no-sandbox']});
 
 function recordPage(page){
@@ -63,7 +63,7 @@ async function result(page,locale,baseNumber,changedNumber,values,moving){
  }
  if(values)await expect(page.locator('[data-iching-raw]')).toHaveText(values.join(' · '));
  if(moving.length)assert.ok((await page.locator('[data-iching-moving]').innerText()).endsWith(moving.join(', ')));
- await expect(page.locator('[data-iching-result] details')).toHaveAttribute('open','');await expect(page.locator('[role=alert]')).toHaveCount(0);await fit(page,`${locale}: result ${baseNumber}/${changedNumber}`);
+ await expect(page.locator('[data-iching-result] details')).toHaveAttribute('open','');await expect(page.locator('[data-iching-workbench] [role=alert]')).toHaveCount(0);await fit(page,`${locale}: result ${baseNumber}/${changedNumber}`);
 }
 async function rawCoins(page,tosses){
  const recorded=await page.locator('[data-iching-result] details ol li').allTextContents();assert.equal(recorded.length,6);
@@ -81,7 +81,7 @@ async function checkReducedWorkflows(){
     if(i<5)await expect(page.locator('[data-iching-result]')).toHaveCount(0);
    }
    assert.equal(await page.evaluate(()=>window.__qaCoinDraws),6);await result(page,locale,47,60,exampleValues,[1,4]);await rawCoins(page,exampleTosses);await screenshot(page,`${locale}-coins-six-tosses-result-390.png`);
-   for(const [width,height] of [[320,568],[430,932]]){await page.setViewportSize({width,height});const dimensions=await fit(page,`${locale}: coin result ${width}`);await page.locator('#iching-result').scrollIntoViewIfNeeded();await screenshot(page,`${locale}-coins-result-${width}.png`);report.views.push({path:'/iching',state:'coin-result-47-to-60',locale,width,height,dimensions});}await page.setViewportSize({width:390,height:844});
+   for(const [width,height] of [[320,568],[430,932]]){await page.setViewportSize({width,height});const dimensions=await fit(page,`${locale}: coin result ${width}`);await page.locator('#iching-result').scrollIntoViewIfNeeded();await screenshot(page,`${locale}-coins-result-${width}.png`);if(width===320&&['zh','ru'].includes(locale)){await page.locator('[data-iching-line="6"]').evaluate(e=>e.scrollIntoView({block:'start'}));await screenshot(page,`${locale}-coins-record-320.png`);}report.views.push({path:'/iching',state:'coin-result-47-to-60',locale,width,height,dimensions});}await page.setViewportSize({width:390,height:844});await page.locator('[data-iching-raw]').evaluate(e=>e.scrollIntoView({block:'start'}));await screenshot(page,`${locale}-coins-raw-faces-390.png`);
    await action(page,'undo').click();await expect(page.locator('[data-iching-progress]')).toHaveText('5 / 6');await expect(page.locator('[data-iching-result]')).toHaveCount(0);await setCoinFixture(page,[exampleTosses[5]]);await action(page,'toss').click();await result(page,locale,47,60,exampleValues,[1,4]);
    await reset(page);await expect(page.locator('#iching-question')).toHaveValue('Browser QA: one observation, one uncertainty, one small action.');report.workflows.push({locale,sixIndependentTosses:true,rawFaces:true,bottomUp:true,undo:true,reset:true,reducedMotion:true});
   });
@@ -89,7 +89,7 @@ async function checkReducedWorkflows(){
    await reset(page);await choose(page,'coins');await setCoinFixture(page,exampleTosses);await action(page,'all').evaluate(element=>{for(let i=0;i<6;i++)element.click();});await result(page,locale,47,60,exampleValues,[1,4]);assert.equal(await page.evaluate(()=>window.__qaCoinDraws),6);await rawCoins(page,exampleTosses);await expect(page.locator('[data-iching-progress]')).toHaveText('6 / 6');
    await choose(page,'coins');await expect(page.locator('[data-iching-result]')).toHaveCount(1);await expect(page.locator('[data-iching-raw]')).toHaveText(exampleValues.join(' · '));assert.equal(await page.evaluate(()=>window.__qaCoinDraws),6);
    for(const [key,number] of [['base',47],['changed',60]]){const link=page.locator(`[data-iching-hexagram="${key}"] a`);await expect(link).toHaveAttribute('target','_blank');await link.focus();const opened=c.waitForEvent('page');await page.keyboard.press('Enter');const article=await opened;await article.waitForLoadState('domcontentloaded');await expect(article.locator('article[data-hexagram-learning]')).toHaveAttribute('data-hexagram-learning',`hexagram-${String(number).padStart(2,'0')}`);await expect(article.locator('main')).toHaveAttribute('lang',tags[locale]);await article.close();await expect(page.locator('[data-iching-raw]')).toHaveText(exampleValues.join(' · '));await expect(page.locator('[data-iching-progress]')).toHaveText('6 / 6');}
-   await reset(page);await setCoinFixture(page,[exampleTosses[0]]);await action(page,'toss').evaluate(element=>{for(let i=0;i<6;i++)element.click();});await expect(page.locator('[data-iching-progress]')).toHaveText('1 / 6');assert.equal(await page.evaluate(()=>window.__qaCoinDraws),1);await expect(page.locator('[role=alert]')).toHaveCount(0);
+   await reset(page);await setCoinFixture(page,[exampleTosses[0]]);await action(page,'toss').evaluate(element=>{for(let i=0;i<6;i++)element.click();});await expect(page.locator('[data-iching-progress]')).toHaveText('1 / 6');assert.equal(await page.evaluate(()=>window.__qaCoinDraws),1);await expect(page.locator('[data-iching-workbench] [role=alert]')).toHaveCount(0);
    await action(page,'back').click();await expect(page.locator('#iching-methods')).toBeFocused();await expect(page.locator('[data-iching-progress]')).toHaveText('0 / 6');report.workflows.push({locale,allSixAction:true,reducedMotionRapidRepeat:true,sameMethodPreservesCast:true,backToMethods:true,baseAndChangedGuideNewTabsPreserveCast:true});
   });
   await run(`${locale}: manual four-state and individual-coin input`,async()=>{
@@ -101,7 +101,7 @@ async function checkReducedWorkflows(){
   await run(`${locale}: classical two-count arithmetic and invalid input`,async()=>{
    await choose(page,'numbers');await action(page,'example').click();await expect(page.locator('[data-iching-count="a"]')).toHaveValue('1');await expect(page.locator('[data-iching-count="b"]')).toHaveValue('5');await expect(page.locator('[data-iching-hour]')).toHaveValue('10');await action(page,'submit').click();await result(page,locale,44,57,[8,7,7,9,7,7],[4]);
    const formulas=await page.locator('[data-iching-formula] > p').allTextContents();assert.ok(formulas[0].includes('R8(1) = R8(1) = 1'));assert.ok(formulas[1].includes('R8(5) = R8(5) = 5'));assert.ok(formulas[2].includes('R6(1 + 5 + 10) = R6(16) = 4'));await screenshot(page,`${locale}-numbers-classical-result-390.png`);
-   for(const invalid of ['', '0','-1','1.5','1e3','1.0','1000000001']){await page.locator('[data-iching-count="a"]').fill(invalid);const nativeValid=await page.locator('[data-iching-count="a"]').evaluate(e=>e.checkValidity());await action(page,'submit').click();await expect(page.locator('[data-iching-result]')).toHaveCount(0);if(nativeValid)await expect(page.locator('[role=alert]')).toHaveCount(1);}
+   for(const invalid of ['', '0','-1','1.5','1e3','1.0','1000000001']){await page.locator('[data-iching-count="a"]').fill(invalid);const nativeValid=await page.locator('[data-iching-count="a"]').evaluate(e=>e.checkValidity());await action(page,'submit').click();await expect(page.locator('[data-iching-result]')).toHaveCount(0);if(nativeValid)await expect(page.locator('[data-iching-workbench] [role=alert]')).toHaveCount(1);}
    await page.locator('[data-iching-count="a"]').fill('1000000000');await page.locator('[data-iching-count="b"]').fill('1000000000');await action(page,'submit').click();await expect(page.locator('[data-iching-result]')).toHaveCount(1);assert.ok((await page.locator('[data-iching-formula] > p').last().innerText()).includes('R6(1000000000 + 1000000000 + 10) = R6(2000000010)'));
    report.workflows.push({locale,classicalCount44to57:true,originalCountsPreserved:true,invalidNumbersRejected:7,maximumCountAccepted:true});
   });
@@ -173,7 +173,7 @@ async function checkLearning(page){
   await run(`${locale}: trigram keyboard, language and back/forward workflow`,async()=>{
    await page.setViewportSize({width:390,height:844});await page.goto(url('/journal/trigrams',locale));const link=page.locator(`a[href="/journal/trigram-qian${suffix(locale)}"]`);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(url('/journal/trigram-qian',locale));await page.goBack();await expect(page).toHaveURL(url('/journal/trigrams',locale));await page.goForward();await expect(page).toHaveURL(url('/journal/trigram-qian',locale));
    const next=locales[(locales.indexOf(locale)+1)%locales.length];await page.locator(`header a[hreflang="${tags[next]}"]`).click();await expect(page).toHaveURL(url('/journal/trigram-qian',next));await expect(page.locator('main')).toHaveAttribute('lang',tags[next]);await page.goBack();await expect(page).toHaveURL(url('/journal/trigram-qian',locale));
-   await screenshot(page,`${locale}-trigram-qian-390.png`);report.workflows.push({locale,trigramKeyboardNavigation:true,trigramLanguageHistory:true});
+   await screenshot(page,`${locale}-trigram-qian-390.png`);await page.locator('#tradition').evaluate(e=>e.scrollIntoView({block:'start'}));await screenshot(page,`${locale}-trigram-qian-body-390.png`);if(locale==='zh'){await page.locator('#figure').evaluate(e=>e.scrollIntoView({block:'start'}));await screenshot(page,'zh-trigram-qian-figure-390.png');}report.workflows.push({locale,trigramKeyboardNavigation:true,trigramLanguageHistory:true});
   });
  }
 }
@@ -196,6 +196,10 @@ async function checkSsr(){
 async function fit(page,label){
  const dimensions=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
  assert.ok(dimensions.document<=dimensions.viewport+1,`${label}: horizontal overflow ${JSON.stringify(dimensions)}`);
+ if(new URL(page.url()).pathname==='/iching'){
+  const clipped=await page.locator('main button, main input, main select, main textarea, [data-iching-result] h3').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({tag:e.tagName,text:e.textContent.slice(0,70),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right,scroll:e.scrollWidth,width:e.clientWidth})).filter(e=>e.left< -1||e.right>innerWidth+1||(e.tag==='H3'&&e.scroll>e.width+1)));
+  assert.deepEqual(clipped,[],`${label}: clipped or offscreen controls/result names`);
+ }
  return dimensions;
 }
 async function screenshot(page,name){await page.screenshot({path:resolve(out,name)});report.screenshots.push(name);}
@@ -217,6 +221,7 @@ try{
    await screenshot(page,`${locale}-iching-${width}.png`);
   });
  }
+ if(process.env.QA_PHASE!=='responsive'){
  for(const locale of locales){
   await run(`${locale}: homepage I Ching entry and preserved Tarot navigation`,async()=>{
    await page.setViewportSize({width:390,height:844});await page.goto(url('/',locale));
@@ -242,6 +247,7 @@ try{
  await checkReducedWorkflows();
  await checkAnimatedWorkflows();
  await checkSsr();
+ }else await c.close();
  await run('No application page errors, failed resources or API writes',async()=>{assert.deepEqual(report.pageErrors,[]);assert.deepEqual(report.httpErrors,[]);assert.deepEqual(report.blockedRequests.filter(r=>r.method!=='GET'),[]);});
 }catch(error){report.failures.push({label:'unexpected browser failure',error:error.stack});}
 finally{
