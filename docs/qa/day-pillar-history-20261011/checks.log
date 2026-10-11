@@ -1,0 +1,246 @@
+Relevant unit tests
+node --conditions=react-server --import tsx --test lib/day-pillar.test.ts lib/day-pillar-library.test.ts lib/day-pillar-insights.test.ts
+✔ a complete calendar cycle has distinct public readings in all four editions (140.937043ms)
+✔ public identities follow the current animal artwork by stem-branch (0.54223ms)
+✔ all 60 calculated results have one searchable article and a real JPEG card (61.660147ms)
+✔ all 60 encyclopedia entries and original cards map to the same pillar in every language (25.250552ms)
+✔ reference facts match the site's chart labels and reject impossible pairs (0.717944ms)
+✔ expanded portraits retain their URLs and reproduce every sourced public birthday (19.656527ms)
+✔ each portrait retains its multilingual calendar, interpretation and exercise sections (2.040734ms)
+✔ invalid formats and impossible dates are rejected instead of silently normalized (2.603015ms)
+✔ Gregorian leap years and the supported birth range are explicit (23.420185ms)
+✔ known day pillars match the calendar library's published fixtures, including previously missing Ding Hai (9.766718ms)
+✔ midnight advances the civil-date card and a calibrated report may use the previous solar day (22.543692ms)
+✔ a complete cycle resolves to all sixty cards in four languages and existing images (60.410094ms)
+✔ share paths allow only a controlled public archetype and locale (12.894564ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1555.751714
+
+Scoped ESLint
+node node_modules/eslint/bin/eslint.js --config eslint.english.config.mjs components/day-pillar-experience.tsx
+PASS (exit 0; no diagnostics)
+
+Standalone TypeScript
+node node_modules/typescript/bin/tsc --noEmit --incremental false
+PASS (exit 0; no diagnostics)
+
+Production build
+npm run build
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 25ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 39.9s
+  Running TypeScript ...
+  Finished TypeScript in 18.8s ...
+  Collecting page data using 4 workers ...
+⚠ Using edge runtime on a page currently disables static generation for that page
+  Generating static pages using 4 workers (0/417) ...
+  Generating static pages using 4 workers (104/417) 
+  Generating static pages using 4 workers (208/417) 
+  Generating static pages using 4 workers (312/417) 
+✓ Generating static pages using 4 workers (417/417) in 4.1s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)                                         Revalidate  Expire
+┌ ƒ /
+├ ○ /_not-found
+├ ƒ /.well-known/agent-products.json
+├ ƒ /account
+├ ƒ /account/readings/[id]
+├ ƒ /admin
+├ ƒ /api/account
+├ ƒ /api/admin/celestial-records
+├ ƒ /api/admin/celestial-records/[id]
+├ ƒ /api/admin/overview
+├ ƒ /api/ai-profile.json
+├ ƒ /api/astrology
+├ ƒ /api/checkout/paypal
+├ ƒ /api/checkout/paypal/capture
+├ ƒ /api/compatibility
+├ ƒ /api/daoyan/episode
+├ ƒ /api/daoyan/project
+├ ƒ /api/english/auth/login
+├ ƒ /api/english/auth/register
+├ ƒ /api/english/ocr
+├ ƒ /api/english/progress
+├ ƒ /api/english/study/tutor
+├ ƒ /api/generate-natal
+├ ƒ /api/generate-transit
+├ ƒ /api/image/generate
+├ ƒ /api/image/refine
+├ ƒ /api/image/status
+├ ƒ /api/insights
+├ ƒ /api/juben/analyze
+├ ƒ /api/juben/episode
+├ ƒ /api/juben/export
+├ ƒ /api/juben/extract
+├ ƒ /api/juben/generate
+├ ƒ /api/members/auth/login
+├ ƒ /api/members/auth/logout
+├ ƒ /api/members/auth/register
+├ ƒ /api/members/auth/request-reset
+├ ƒ /api/members/auth/reset
+├ ƒ /api/members/celestial-records
+├ ƒ /api/members/celestial-records/[id]
+├ ƒ /api/members/me
+├ ƒ /api/members/saved-reports
+├ ƒ /api/oracle
+├ ƒ /api/products.json
+├ ƒ /api/prompt/admin/login
+├ ƒ /api/prompt/admin/logout
+├ ƒ /api/prompt/admin/moderate
+├ ƒ /api/prompt/admin/session
+├ ƒ /api/prompt/analyze-image
+├ ƒ /api/prompt/cron
+├ ƒ /api/prompt/expand
+├ ƒ /api/prompt/feed
+├ ƒ /api/prompt/import
+├ ƒ /api/prompt/translate
+├ ƒ /api/reports/claim
+├ ƒ /api/sticks/interpret
+├ ƒ /api/tarot
+├ ƒ /api/webhooks/paypal
+├ ƒ /astrology
+├ ○ /astrology/opengraph-image
+├ ƒ /atelier
+├ ƒ /blender
+├ ƒ /blender/access
+├ ƒ /blender/auth
+├ ○ /canddy
+├ ○ /candy
+├ ○ /celestial-lab
+├ ƒ /checkout/paypal/cancel
+├ ƒ /checkout/paypal/return
+├ ƒ /compatibility
+├ ○ /compatibility/opengraph-image
+├ ○ /danci
+├ ○ /daoyan
+├ ƒ /day-pillar
+├ ƒ /discover
+├ ○ /english
+├ ○ /english/assessment
+├ ○ /english/classic
+├ ƒ /face
+├ ƒ /iching
+├ ○ /icon.svg
+├ ○ /image
+├ ƒ /insights
+├   /insights/[slug]
+│ └ ● /insights/i-ching-vs-tarot
+├ ○ /jake
+├ ○ /jake/about
+├ ○ /jake/contact
+├ ○ /jake/faq
+├ ○ /jake/products
+├   /jake/products/[slug]
+│ ├ ● /jake/products/mango
+│ ├ ● /jake/products/green-tea-lime
+│ ├ ● /jake/products/strawberry
+│ └ ● [+13 more paths]
+├ ƒ /journal
+├ ƒ /journal/[slug]
+├ ƒ /journal/day-pillars
+├ ƒ /journal/hexagrams
+├ ƒ /journal/tarot-cards
+├ ƒ /journal/trigrams
+├ ○ /juben
+├ ○ /learn
+├   /learn/[slug]
+│ ├ ● /learn/what-is-bazi-birth-chart
+│ ├ ● /learn/guanyin-fortune-sticks
+│ ├ ● /learn/bazi-love-compatibility
+│ └ ● /learn/chinese-palm-reading-vs-western
+├ ƒ /llms.txt
+├ ○ /manifest.webmanifest
+├ ○ /mazu
+├ ○ /meizhouma
+├ ○ /mv
+├ ƒ /mv/projects/[id]
+├ ƒ /opengraph-image
+├ ƒ /oracle
+├ ƒ /palm
+├ ƒ /privacy
+├ ƒ /product-facts
+├ ƒ /prompt
+├ ○ /prompt/about
+├   /prompt/article/[id]
+│ ├ ● /prompt/article/x-public-2106560621932384657          6h      1y
+│ ├ ● /prompt/article/x-public-2107828151531548914          6h      1y
+│ ├ ● /prompt/article/x-public-2106953100028522845          6h      1y
+│ └ ● [+9 more paths]
+├ ○ /prompt/articles                                        6h      1y
+├   /prompt/case/[id]
+│ ├ ● /prompt/case/community-2109119295737508239            6h      1y
+│ ├ ● /prompt/case/community-2109110503876481180            6h      1y
+│ ├ ● /prompt/case/community-2109091557710426607            6h      1y
+│ └ ● [+25 more paths]
+├   /prompt/category/[slug]
+│ ├ ● /prompt/category/portrait-fashion                     6h      1y
+│ ├ ● /prompt/category/product-commercial                   6h      1y
+│ ├ ● /prompt/category/video-storytelling                   6h      1y
+│ └ ● [+6 more paths]
+├ ○ /prompt/privacy
+├ ○ /prompt/sitemap.xml
+├ ○ /prompt/terms
+├ ƒ /report/[id]
+├ ○ /robots.txt
+├ ƒ /service
+├ ○ /sitemap.xml
+├ ƒ /sticks
+├ ƒ /tarot
+├ ○ /tarot/opengraph-image
+├ ƒ /tools
+├ ƒ /tuteng
+├ ƒ /twitter-image
+├ ○ /ultra
+├ ƒ /white
+├ ○ /xingpan
+├ ○ /zhangshengjun
+├   /zhangshengjun/[slug]
+│ ├ ● /zhangshengjun/legend
+│ ├ ● /zhangshengjun/lushan
+│ ├ ● /zhangshengjun/news
+│ └ ● [+2 more paths]
+├ ○ /zhangshengjun/en
+├   /zhangshengjun/en/[slug]
+│ ├ ● /zhangshengjun/en/legend
+│ ├ ● /zhangshengjun/en/lushan
+│ ├ ● /zhangshengjun/en/news
+│ └ ● [+2 more paths]
+├ ○ /zhangshengjun/zh-hant
+├   /zhangshengjun/zh-hant/[slug]
+│ ├ ● /zhangshengjun/zh-hant/legend
+│ ├ ● /zhangshengjun/zh-hant/lushan
+│ ├ ● /zhangshengjun/zh-hant/news
+│ └ ● [+2 more paths]
+└ ○ /zhenggu
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+Production browser flow
+BASE_URL=http://127.0.0.1:3051 node docs/qa/day-pillar-history-20261011/check-history.cjs
+PASS: 6 flows, 36 snapshots, 18 invalid dates, 0 errors.

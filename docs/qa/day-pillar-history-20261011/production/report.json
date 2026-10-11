@@ -1,0 +1,2424 @@
+{
+  "base": "http://127.0.0.1:3051",
+  "commit": "de51c43480a81eb1767ee7d667d353e49aa84a2a",
+  "startedAt": "2026-10-11T23:42:01.573Z",
+  "flows": [
+    {
+      "width": 320,
+      "locale": "en",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?pillar=ding_you",
+          "lang": "en",
+          "cardTitle": "The Starry Rooster",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Starry Rooster"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "Enter a valid Gregorian date, including the year.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "Choose a birth date from 1800 to 2100.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "Your birth date cannot be in the future.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "locale": "zh",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "lang": "zh-Hans",
+          "cardTitle": "星芒神凤",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "丁酉 · 星芒神凤"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 320,
+          "documentWidth": 320
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "请输入有效的公历日期，包含完整年份。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "请选择 1800 至 2100 年之间的出生日期。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "出生日期不能晚于今天。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?pillar=ding_you",
+          "lang": "en",
+          "cardTitle": "The Starry Rooster",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Starry Rooster"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "Enter a valid Gregorian date, including the year.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "Choose a birth date from 1800 to 2100.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "Your birth date cannot be in the future.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "lang": "zh-Hans",
+          "cardTitle": "星芒神凤",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "丁酉 · 星芒神凤"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 390,
+          "documentWidth": 390
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "请输入有效的公历日期，包含完整年份。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "请选择 1800 至 2100 年之间的出生日期。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "出生日期不能晚于今天。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?pillar=ding_you",
+          "lang": "en",
+          "cardTitle": "The Starry Rooster",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Starry Rooster"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "Enter a valid Gregorian date, including the year.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "Choose a birth date from 1800 to 2100.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "Your birth date cannot be in the future.",
+          "url": "/day-pillar?pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "locale": "zh",
+      "stages": [
+        {
+          "stage": "initial shared Ding You",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "lang": "zh-Hans",
+          "cardTitle": "星芒神凤",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "丁酉",
+            "href": "/journal/ding-you-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=ding_you",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=ding_you",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fding_you.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "丁酉 · 星芒神凤"
+          },
+          "date": "",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "calculated Wu Wu",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "2000-01-01",
+          "historyLength": 2,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"ding_you\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=ding_you"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "language switch keeps Wu Wu",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "Back keeps Wu Wu in original language",
+          "url": "/day-pillar?locale=zh&pillar=wu_wu",
+          "lang": "zh-Hans",
+          "cardTitle": "烈日战马",
+          "canonical": "https://www.destinypixel.com/day-pillar?locale=zh",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar?locale=zh"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": null
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": "page"
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "戊午 · 烈日战马"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"locale\":\"zh\",\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?locale=zh&pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "Forward keeps Wu Wu in switched language",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        },
+        {
+          "stage": "reload reconstructs Wu Wu without a birth date",
+          "url": "/day-pillar?pillar=wu_wu",
+          "lang": "en",
+          "cardTitle": "The Climbing Horse",
+          "canonical": "https://www.destinypixel.com/day-pillar",
+          "article": {
+            "pillar": "戊午",
+            "href": "/journal/wu-wu-day-pillar"
+          },
+          "languages": [
+            {
+              "lang": "en",
+              "href": "/day-pillar?pillar=wu_wu",
+              "current": "page"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "/day-pillar?locale=zh&pillar=wu_wu",
+              "current": null
+            }
+          ],
+          "image": {
+            "src": "/_next/image?url=%2Farchetypes%2Fwu_wu.jpg%3Fv%3D20260914-new&w=3840&q=75",
+            "alt": "The Climbing Horse"
+          },
+          "date": "",
+          "historyLength": 3,
+          "historyState": {
+            "__NA": true,
+            "__PRIVATE_NEXTJS_INTERNALS_TREE": {
+              "tree": [
+                "",
+                {
+                  "children": [
+                    "day-pillar",
+                    {
+                      "children": [
+                        "__PAGE__?{\"pillar\":\"wu_wu\"}",
+                        {},
+                        null,
+                        null,
+                        4096
+                      ]
+                    },
+                    null,
+                    null,
+                    4096
+                  ]
+                },
+                null,
+                null,
+                4112
+              ],
+              "renderedSearch": "?pillar=wu_wu"
+            }
+          },
+          "localStorage": {},
+          "sessionStorage": {},
+          "viewportWidth": 1440,
+          "documentWidth": 1440
+        }
+      ],
+      "invalid": [
+        {
+          "date": "",
+          "message": "请输入有效的公历日期，包含完整年份。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "1799-01-01",
+          "message": "请选择 1800 至 2100 年之间的出生日期。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        },
+        {
+          "date": "2100-12-31",
+          "message": "出生日期不能晚于今天。",
+          "url": "/day-pillar?locale=zh&pillar=ding_you",
+          "historyLength": 2
+        }
+      ],
+      "requests": [],
+      "runtimeErrors": [],
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "en-320-calculated-wu-wu.png",
+    "zh-320-calculated-wu-wu.png",
+    "en-390-calculated-wu-wu.png",
+    "zh-390-calculated-wu-wu.png",
+    "en-1440-calculated-wu-wu.png",
+    "zh-1440-calculated-wu-wu.png"
+  ],
+  "finishedAt": "2026-10-11T23:42:23.021Z",
+  "status": "passed"
+}
