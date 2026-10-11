@@ -7,7 +7,7 @@ import DayPillarReading from "./day-pillar-reading";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, Copy, Loader2 } from "lucide-react";
 import type { DayPillarCard } from "@/lib/day-pillar-cards";
-import type { DiscoveryCopy } from "@/lib/discovery";
+import { discoveryHref, type DiscoveryCopy } from "@/lib/discovery";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { trackToolEvent } from "@/lib/analytics";
 import { dayPillarSharePath } from "@/lib/day-pillar-share";
@@ -30,7 +30,10 @@ export default function BirthdayCardFinder({locale,copy,cards,initialCard}:{loca
    const result=calculateDateDayPillar(date,today);
    if(!result.ok){setError(copy.error);trackToolEvent("tool_error","day_pillar");return;}
    const found=cards.find(c=>c.pillar===result.pillar);if(!found)throw new Error("Missing card");
-   setCard(found);setRevealedDate(date);trackToolEvent("tool_success","day_pillar");resultRef.current?.focus({preventScroll:true});
+   setCard(found);setRevealedDate(date);
+   // Native history updates useSearchParams without resetting the calculated result.
+   window.history.replaceState(null,"",`${discoveryHref(locale)}${locale==="en"?"?":"&"}pillar=${found.slug}`);
+   trackToolEvent("tool_success","day_pillar");resultRef.current?.focus({preventScroll:true});
   }catch{setError(copy.unavailable);trackToolEvent("tool_error","day_pillar");}finally{setBusy(false);}
  }
  async function shareCard(){if(!card)return;const url=new URL(dayPillarSharePath(locale,card.slug),window.location.origin).href;setShare(url);try{await navigator.clipboard.writeText(url);setShareMessage(copy.copied);trackToolEvent("tool_share","day_pillar");}catch{setShareMessage(copy.manual);}}
