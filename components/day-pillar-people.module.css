@@ -1,0 +1,21 @@
+.panel { margin-block: 26px; }
+.more { color: #45314f; font-size: 20px; line-height: 1.5; font-weight: 500; margin: 0 0 18px; }
+.method { padding: 18px 20px; background: #f3eef7; border-left: 3px solid #765095; border-radius: 6px; margin-bottom: 22px; }
+.method p:last-child { margin-bottom: 0; }
+.list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0; margin: 0; list-style: none; }
+.list .person { min-width: 0; padding: 22px; border: 1px solid #e2d9e9; border-radius: 12px; background: #fff; margin: 0; }
+.person h3 { color: #3c3047; font-size: 21px; line-height: 1.4; font-weight: 500; margin: 0 0 16px; overflow-wrap: anywhere; }
+.person dl { margin: 0; display: grid; gap: 12px; }
+.person dt { font-size: 12px; line-height: 1.5; color: #786881; }
+.person dd { font-size: 15px; line-height: 1.6; margin: 3px 0 0; color: #45314f; overflow-wrap: anywhere; }
+.person time { font-variant-numeric: tabular-nums; }
+.person .note { font-size: 13px; line-height: 1.8; margin: 18px 0 0; color: #655a6e; }
+.sources { margin-top: 18px; padding-top: 15px; border-top: 1px solid #ede6f2; }
+.sources a { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; color: #604179; font-size: 13px; line-height: 1.7; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sources svg { flex-shrink: 0; margin-top: 4px; }
+.sources small { display: block; font-size: 12px; line-height: 1.6; color: #6d6177; margin-top: 4px; }
+@media (max-width: 650px) {
+  .list { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .list .person { padding: 20px; }
+  .method { padding: 16px 18px; }
+}
