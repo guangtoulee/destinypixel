@@ -1,5 +1,6 @@
 import animalNames from "./compatibility/animal-names.json";
 import { getPillarSlug } from "./archetype-assets";
+import { dayPillarSharePath } from "./day-pillar-share";
 import { toTraditional, type JournalLocale } from "./journal-locales";
 
 export const stems = "甲乙丙丁戊己庚辛壬癸";
@@ -15,6 +16,10 @@ export function pillarArticleSlug(pillar: string) {
   return `${getPillarSlug(pillar).replace("_", "-")}-day-pillar`;
 }
 export function pillarArticleHref(pillar: string, locale: JournalLocale) { return `/journal/${pillarArticleSlug(pillar)}${locale === "en" ? "" : `?locale=${locale}`}`; }
+export function pillarCardHref(pillar: string, locale: JournalLocale) {
+  if (!dayPillarCycle.includes(pillar)) throw new Error(`Invalid day pillar: ${pillar}`);
+  return dayPillarSharePath(locale, getPillarSlug(pillar));
+}
 export function pillarLibraryHref(locale: JournalLocale) { return `/journal/day-pillars${locale === "en" ? "" : `?locale=${locale}`}`; }
 export function pillarName(pillar: string, locale: JournalLocale) {
   const name = animalNames[pillar as keyof typeof animalNames];
@@ -56,4 +61,15 @@ export function pillarLibraryCopy(locale: JournalLocale): typeof en {
 export function pillarEditionLabel(locale: JournalLocale, full: boolean) {
   const labels = { en: ["Quick portrait", "In-depth portrait"], zh: ["简明画像", "深度解析"], "zh-TW": ["簡明畫像", "深度解析"], ru: ["Краткий портрет", "Подробный портрет"] };
   return labels[locale][full ? 1 : 0];
+}
+
+/** Labels distinguish traditional reference material from the original card. */
+export function pillarCrossLinkCopy(locale: JournalLocale) {
+  const copy = {
+    en: { article: "Day Pillar encyclopedia: terms & interpretations", card: "Explore the original animal card", note: "The encyclopedia explains calendar terms, traditional interpretations and sources for learning. The original animal card offers artwork, creative stories and interaction; its character is not an ancient BaZi term." },
+    zh: { article: "日柱百科：术语与解读", card: "体验对应的原创动物卡", note: "百科用于学习历法术语、传统解读与出处；原创动物卡提供画面、创意故事与互动，角色名称不是古代命理术语。" },
+    "zh-TW": { article: "日柱百科：術語與解讀", card: "體驗對應的原創動物卡", note: "百科用於學習曆法術語、傳統解讀與出處；原創動物卡提供畫面、創意故事與互動，角色名稱不是古代命理術語。" },
+    ru: { article: "Энциклопедия столпов дня: термины и толкования", card: "Открыть авторскую карточку животного", note: "Энциклопедия объясняет календарные термины, традиционные толкования и источники для изучения. Авторская карточка предлагает иллюстрацию, творческую историю и взаимодействие; имя персонажа не является древним термином Бацзы." },
+  };
+  return copy[locale];
 }

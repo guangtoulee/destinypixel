@@ -2,7 +2,7 @@
 import CardArtwork from "./card-artwork";
 import { mobileFlowCopy } from "@/lib/mobile-flow-copy";
 import { offerBirthDate } from "@/lib/birth-date-handoff";
-import { pillarArticleHref } from "@/lib/day-pillar-library";
+import { pillarArticleHref, pillarCrossLinkCopy } from "@/lib/day-pillar-library";
 import DayPillarReading from "./day-pillar-reading";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, Copy, Loader2 } from "lucide-react";
@@ -15,10 +15,10 @@ import { getPillarDisplay } from "@/lib/bazi-totems";
 import { toTraditional } from "@/lib/journal-locales";
 import styles from "./discovery.module.css";
 
-export default function BirthdayCardFinder({locale,copy,cards}:{locale:ReportLocale;copy:DiscoveryCopy["finder"];cards:DayPillarCard[]}) {
+export default function BirthdayCardFinder({locale,copy,cards,initialCard}:{locale:ReportLocale;copy:DiscoveryCopy["finder"];cards:DayPillarCard[];initialCard?:DayPillarCard}) {
  const [revealedDate,setRevealedDate]=useState("");
  const flow=mobileFlowCopy[locale];
- const [card,setCard]=useState<DayPillarCard|null>(null);
+ const [card,setCard]=useState<DayPillarCard|null>(initialCard??null);
  const [error,setError]=useState("");const [busy,setBusy]=useState(false);const [share,setShare]=useState("");const [shareMessage,setShareMessage]=useState("");
  const resultRef=useRef<HTMLDivElement>(null);
  useEffect(()=>{if(card){resultRef.current?.focus({preventScroll:true});resultRef.current?.scrollIntoView({block:"start",behavior:"instant"});}},[card]);
@@ -33,14 +33,14 @@ export default function BirthdayCardFinder({locale,copy,cards}:{locale:ReportLoc
    setCard(found);setRevealedDate(date);trackToolEvent("tool_success","day_pillar");resultRef.current?.focus({preventScroll:true});
   }catch{setError(copy.unavailable);trackToolEvent("tool_error","day_pillar");}finally{setBusy(false);}
  }
- async function shareCard(){if(!card)return;const url=new URL(dayPillarSharePath(locale==="zh"||locale==="zh-TW"?"zh":"en",card.slug),window.location.origin).href;setShare(url);try{await navigator.clipboard.writeText(url);setShareMessage(copy.copied);trackToolEvent("tool_share","day_pillar");}catch{setShareMessage(copy.manual);}}
+ async function shareCard(){if(!card)return;const url=new URL(dayPillarSharePath(locale,card.slug),window.location.origin).href;setShare(url);try{await navigator.clipboard.writeText(url);setShareMessage(copy.copied);trackToolEvent("tool_share","day_pillar");}catch{setShareMessage(copy.manual);}}
  const pillarDisplay=card?getPillarDisplay(card.pillar,locale):null;
  const displayText=(text:string)=>locale==="zh-TW"?toTraditional(text):text;
  const home=locale==="en"?"/":`/?locale=${locale}`;
  return <section className={styles.finder} id="find-your-card" aria-label={copy.label}>
   <form onSubmit={reveal} className={styles.form} data-analytics-form="day_pillar" noValidate><label htmlFor="discovery-birthday">{copy.label}</label><div className={styles.formRow}><input id="discovery-birthday" name="birthday" type="date" min="1800-01-01" max="2100-12-31" required aria-invalid={Boolean(error)} aria-describedby={error?"discovery-error":"discovery-privacy"}/><button disabled={busy} type="submit">{busy?<Loader2 size={16} className={styles.spin}/>:<Sparkles size={16}/>}<span>{busy?copy.busy:copy.button}</span><ArrowRight size={16}/></button></div>{error&&<p className={styles.error} id="discovery-error" role="alert">{error}</p>}<p className={styles.privacy} id="discovery-privacy"><ShieldCheck size={13}/>{copy.privacy}</p></form>
   <div ref={resultRef} tabIndex={-1} className={styles.result} aria-live="polite">
-   {card?<><p className={styles.label}>{copy.result}</p><div className={styles.revealed}><CardArtwork src={card.image} name={card.name} locale={locale}/><div><h2>{card.name}</h2><p>{copy.note}</p></div></div>{pillarDisplay&&<dl className={styles.calendarFacts}><div><dt>{copy.pillarLabel}</dt><dd>{card.pillar}{locale==="en"||locale==="ru"?<small>{pillarDisplay.pinyin}</small>:null}</dd></div><div><dt>{copy.masterLabel}</dt><dd>{card.pillar[0]}<small>{displayText(pillarDisplay.stemMeaning)}</small></dd></div><div><dt>{copy.animalLabel}</dt><dd>{displayText(pillarDisplay.animal)}</dd></div></dl>}<DayPillarReading insight={card.insight} locale={locale} growth={card.growth}/><div className={styles.resultActions}><button type="button" onClick={()=>void shareCard()}><Copy size={14}/>{copy.share}</button><a href={`${home}#report`} onClick={()=>{try{offerBirthDate(window.sessionStorage,revealedDate);}catch{}}}>{copy.full}<ArrowRight size={14}/></a></div><p className={styles.handoffNote}>{flow.continueNote}</p>{<a className={styles.storyLink} href={pillarArticleHref(card.pillar, locale)}>{copy.read}<ArrowRight size={15}/></a>}{share&&<div className={styles.share}><p role="status">{shareMessage}</p><input aria-label={copy.share} value={share} readOnly onFocus={e=>e.target.select()}/></div>}</>:<div className={styles.empty}><Sparkles size={25}/><h2>{copy.prompt}</h2><p>{copy.promptBody}</p></div>}
+   {card?<><p className={styles.label}>{copy.result}</p><div className={styles.revealed}><CardArtwork src={card.image} name={card.name} locale={locale}/><div><h2>{card.name}</h2><p>{copy.note}</p></div></div>{pillarDisplay&&<dl className={styles.calendarFacts}><div><dt>{copy.pillarLabel}</dt><dd>{card.pillar}{locale==="en"||locale==="ru"?<small>{pillarDisplay.pinyin}</small>:null}</dd></div><div><dt>{copy.masterLabel}</dt><dd>{card.pillar[0]}<small>{displayText(pillarDisplay.stemMeaning)}</small></dd></div><div><dt>{copy.animalLabel}</dt><dd>{displayText(pillarDisplay.animal)}</dd></div></dl>}<DayPillarReading insight={card.insight} locale={locale} growth={card.growth}/><div className={styles.resultActions}><button type="button" onClick={()=>void shareCard()}><Copy size={14}/>{copy.share}</button><a href={`${home}#report`} onClick={()=>{try{if(revealedDate)offerBirthDate(window.sessionStorage,revealedDate);}catch{}}}>{copy.full}<ArrowRight size={14}/></a></div>{revealedDate&&<p className={styles.handoffNote}>{flow.continueNote}</p>}{<a className={styles.storyLink} data-pillar-article-link={card.pillar} href={pillarArticleHref(card.pillar, locale)}>{card.pillar} · {pillarCrossLinkCopy(locale).article}<ArrowRight size={15}/></a>}{share&&<div className={styles.share}><p role="status">{shareMessage}</p><input aria-label={copy.share} value={share} readOnly onFocus={e=>e.target.select()}/></div>}</>:<div className={styles.empty}><Sparkles size={25}/><h2>{copy.prompt}</h2><p>{copy.promptBody}</p></div>}
   </div>
  </section>;
 }
