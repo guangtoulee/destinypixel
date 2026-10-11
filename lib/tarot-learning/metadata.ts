@@ -7,10 +7,14 @@ import catalog from "./catalog.json";
 import revisions from "@/content/tarot-depth-20261008/revisions.json";
 import { tarotLearningHref,tarotLearningIds } from "./paths";
 import { tarotLearningCopy } from "./copy";
+import { editorialModifiedAt } from "@/lib/editorial-updates";
 export const tarotLearningUpdatedAt="2026-10-07";
 const revisedCards:Record<string,{publishedAt:string;updatedAt:string;locales:string[]}>=revisions.cards;
 const isRevised=(id:string,locale:ReportLocale)=>revisedCards[id]?.locales.includes(locale)??false;
-export const tarotLearningModifiedAt=(id?:string,locale:ReportLocale="en")=>!id||id==="sun"?"2026-10-08":isRevised(id,locale)?revisedCards[id].updatedAt:tarotLearningUpdatedAt;
+export const tarotLearningModifiedAt=(id?:string,locale:ReportLocale="en")=>{
+ const previous=!id||id==="sun"?"2026-10-08":isRevised(id,locale)?revisedCards[id].updatedAt:tarotLearningUpdatedAt;
+ return id?editorialModifiedAt(`tarot-${id}`,locale,previous):previous;
+};
 export const tarotLearningCatalog=(locale:ReportLocale)=>catalog[locale];
 export function tarotLearningAlternates(id?:string){return Object.fromEntries([...journalLocales.map(l=>[journalLanguageTags[l],absoluteUrl(tarotLearningHref(id,l)!)]),["x-default",absoluteUrl(tarotLearningHref(id,"en")!)]]);}
 export function tarotLearningMetadata(locale:ReportLocale,id?:string):Metadata {

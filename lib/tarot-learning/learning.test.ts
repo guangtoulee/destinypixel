@@ -10,9 +10,13 @@ import { journalLanguageTags,journalLocales } from "@/lib/journal-locales";
 import manifest from "@/content/tarot/provenance.json";
 import editorialManifest from "@/content/tarot-editorial/provenance.json";
 import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
+import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
+ const samplePaths=new Set(["content/tarot/en/sun.json","content/tarot/zh/sun.json","content/tarot/en/moon.json","content/tarot/zh/moon.json"]);
+ const sampleRecords:Record<string,{fileSha256:string;articleMarkdownSha256:string;previousFileSha256:string}>=sampleRevisions.records;
+ const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
   const catalog=tarotLearningCatalog(locale);assert.equal(catalog.length,78);
   for(const [i,id] of tarotLearningIds.entries()){
@@ -20,8 +24,17 @@ test("every real cast ID resolves to the complete correct-language article witho
    assert.equal(article.title,catalog[i].title);assert.equal(article.sections.length >= (id === "sun" ? 6 : 7),true);
    const key=`${locale}/${id}` as keyof typeof manifest.articleMarkdownSha256;
    const revisedHashes:Record<string,string>=depthManifest.articleMarkdownSha256;
-   const approvedHash = id === "sun" ? editorialManifest.manuscripts[`${locale}/tarot-sun`].sha256 : revisedHashes[key]??manifest.articleMarkdownSha256[key];
-   assert.equal(createHash("sha256").update(article.articleMarkdown).digest("hex"),approvedHash);
+   let approvedHash = id === "sun" ? editorialManifest.manuscripts[`${locale}/tarot-sun`].sha256 : revisedHashes[key]??manifest.articleMarkdownSha256[key];
+   const path=`content/tarot/${locale}/${id}.json`;
+   if(samplePaths.has(path)){
+    assert.ok(Object.hasOwn(sampleRecords,path),`Missing explicit sample receipt: ${path}`);
+    const record=sampleRecords[path],previous=readFileSync(`content/encyclopedia-samples-20261011/previous/${path}`);
+    assert.equal(digest(previous),record.previousFileSha256);
+    assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    approvedHash=record.articleMarkdownSha256;
+   }
+   assert.equal(digest(article.articleMarkdown),approvedHash,path);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);
   }
  }

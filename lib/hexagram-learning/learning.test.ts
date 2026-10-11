@@ -8,6 +8,8 @@ import { hexagramMetadata,hexagramSitemap } from "./metadata";
 import { loadHexagramArticle } from "./content";
 import identities from "@/content/hexagrams/identities.verified.json";
 import manifest from "@/content/hexagrams/provenance.json";
+import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.json";
+import { readFileSync } from "node:fs";
 import { journalLocales } from "@/lib/journal-locales";
 test("all 64 verified bottom-up patterns uniquely resolve to their actual King Wen identity",()=>{
  const patterns=new Set<string>(),numbers=new Set<number>();
@@ -17,8 +19,24 @@ test("all 64 verified bottom-up patterns uniquely resolve to their actual King W
  for(const bits of [[],[1,1,1],[-1,0,1,0,1,0],[1,1,1,1,1,2]])assert.equal(kingWenFromBits(bits),undefined);
  for(const slug of ["hexagram-00","hexagram-65","hexagram-1","hexagram-11-extra","constructor"])assert.equal(hexagramNumber(slug),undefined);
 });
-test("all 256 complete approved texts load only for their correct identity and locale",async()=>{
- for(const locale of journalLocales)for(const h of identities.hexagrams){const a=await loadHexagramArticle(h.id,locale);assert.ok(a);assert.equal(a.locale,locale);assert.equal(a.id,h.id);assert.deepEqual(a.linesBottomUp,h.linesBottomUp);assert.equal(a.lineNotes.length,6);const key=`${locale}/${h.id}` as keyof typeof manifest.articleMarkdownSha256;assert.equal(createHash('sha256').update(a.articleMarkdown).digest('hex'),manifest.articleMarkdownSha256[key]);}
+test("all 256 complete texts retain approved hashes except the two explicitly receipted Tai samples",async()=>{
+ const samplePaths=new Set(["content/hexagrams/en/hexagram-11.json","content/hexagrams/zh/hexagram-11.json"]);
+ const records:Record<string,{fileSha256:string;articleMarkdownSha256:string;previousFileSha256:string}>=sampleRevisions.records;
+ const digest=(raw:string|Buffer)=>createHash('sha256').update(raw).digest('hex');
+ for(const locale of journalLocales)for(const h of identities.hexagrams){
+  const a=await loadHexagramArticle(h.id,locale);assert.ok(a);assert.equal(a.locale,locale);assert.equal(a.id,h.id);assert.deepEqual(a.linesBottomUp,h.linesBottomUp);assert.equal(a.lineNotes.length,6);
+  const key=`${locale}/${h.id}` as keyof typeof manifest.articleMarkdownSha256,path=`content/hexagrams/${locale}/${h.id}.json`;
+  let approved=manifest.articleMarkdownSha256[key];
+  if(samplePaths.has(path)){
+   assert.ok(Object.hasOwn(records,path),`Missing explicit sample receipt: ${path}`);
+   const record=records[path],previous=readFileSync(`content/encyclopedia-samples-20261011/previous/${path}`);
+   assert.equal(digest(previous),record.previousFileSha256);
+   assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approved,`Historical approval changed: ${path}`);
+   assert.equal(digest(readFileSync(path)),record.fileSha256);
+   approved=record.articleMarkdownSha256;
+  }
+  assert.equal(digest(a.articleMarkdown),approved,path);
+ }
  for(const id of ["constructor","__proto__","../hexagram-01","hexagram-65"])assert.equal(await loadHexagramArticle(id,"en"),undefined);
 });
 test("directory and 256 editions have reciprocal canonical URLs and one brand suffix",()=>{

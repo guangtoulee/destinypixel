@@ -1,0 +1,62 @@
+{
+  "baseCommit": "179c14e1f6d5bf19a244adeaef84d13ba79ce4b1",
+  "updatedAt": "2026-10-11",
+  "articles": {
+    "ding-you-day-pillar": {
+      "notes": {
+        "en": "Explained Yin Fire, hidden Xin Metal and Indirect Wealth, with chapter sources and distinctions between traditional terminology and modern examples.",
+        "zh": "补充阴火、酉藏辛与偏财的术语说明和章节出处，区分传统解释与现代场景。"
+      }
+    },
+    "hexagram-11": {
+      "notes": {
+        "en": "Clarified the hexagram structure and Judgment, distinguished the Wings from the core text, and added a comparison of traditional commentaries on the second line.",
+        "zh": "补充卦体与卦辞说明，区分经文和传文，并增加九二的传统注解对照。"
+      }
+    },
+    "tarot-sun": {
+      "notes": {
+        "en": "Added the RWS scope and a direct answer, distinguished the modern quick reading from Waite's divinatory meanings, and clarified chapter and image sources.",
+        "zh": "补充 RWS 牌系范围与直接回答，区分现代速读和 Waite 传统占辞，完善章节及图片来源。"
+      }
+    },
+    "tarot-moon": {
+      "notes": {
+        "en": "Added the RWS scope, a direct answer and an edition comparison; clarified chapter and image sources and removed the article's self-citation.",
+        "zh": "补充 RWS 牌系范围、直接回答与版本差异，完善章节及图片来源，移除本篇标题式自引。"
+      }
+    }
+  },
+  "records": {
+    "content/hexagrams/zh/hexagram-11.json": {
+      "fileSha256": "993171381daea77c0e3d0b77ad5e088ca57ec802609d54891c3a6c4d9799844b",
+      "articleMarkdownSha256": "b9732643e37d18f49d27990078a4dcfb4c8730262a326046a586bf11596dc59e",
+      "previousFileSha256": "8f0b276410a536a9d3f5512ce1281d5021b791225d20d91d3cbdb2e00fbeae42"
+    },
+    "content/hexagrams/en/hexagram-11.json": {
+      "fileSha256": "f8f89175b73688db42135909ec7c9f8fd596766880d9f19f005d31c51bd2472f",
+      "articleMarkdownSha256": "817bc3e194d4735ce6ea94f3d9e678029347e571046e48e2d8b47d9600c85fae",
+      "previousFileSha256": "7137587631522a94481567229fc68fff34ee88b70a3bfc904df5feec5354f758"
+    },
+    "content/tarot/zh/sun.json": {
+      "fileSha256": "1893494c33d787755cc9349f447ced072cefc93023c91947bcf902d35fba1202",
+      "articleMarkdownSha256": "985846c698e8dc3c1b89dcd28378e5b76f69460b3474f872fdcd83db2fd411e7",
+      "previousFileSha256": "1ec264f658cbb6609f73ad2d2ab1cec82aa33a967d05e27647a1638c18a454c5"
+    },
+    "content/tarot/en/sun.json": {
+      "fileSha256": "75ae7126cfd498cc1cfb2ec896765a2bbd84de874b5d5a9794a13d344be6f0f2",
+      "articleMarkdownSha256": "0f4a9ab2236835cecb761ca490d7b1fb195182b40a3418d49740ef38a9964256",
+      "previousFileSha256": "7a9bfc31db907085620378e43b6afc38e7127ff537e76c1148747cfde82ca57f"
+    },
+    "content/tarot/zh/moon.json": {
+      "fileSha256": "fe442d0cd5a856aec44de353b064ae61cbf48ffdb5d6a1dab5f688da328efd70",
+      "articleMarkdownSha256": "4a5c9f0c390b3379caa9e3e184e949c5edb209b61043665d9c3c7024e7014aa8",
+      "previousFileSha256": "deac828579d970189af95aad1db659479a2957afa930ddc2337a033dca08a358"
+    },
+    "content/tarot/en/moon.json": {
+      "fileSha256": "fc62e3bdff9876f892e072e35bc9d9a798ea0b42964766f85e3f568eb0ad2549",
+      "articleMarkdownSha256": "9d2ee4463b3a684f819ca8225614e66104cfb59342d3157f1e8ec464e5c35e7c",
+      "previousFileSha256": "940719298de2cac01a90b84f5d108082b47ed18dea8a448a176fd97d7a771905"
+    }
+  }
+}

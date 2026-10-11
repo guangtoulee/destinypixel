@@ -5,6 +5,7 @@ import { tarotLearningIds, tarotLearningId } from "./tarot-learning/paths";
 import { tarotLearningSitemap } from "./tarot-learning/metadata";
 import { tarotEducationSlugs, editorialCardIds, relatedEditorialSlugs } from "./tarot-editorial/navigation";
 import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
+import { editorialModifiedAt } from "./editorial-updates";
 
 test("education slugs remain separate from the original card routes and old articles", () => {
   for (const slug of tarotEducationSlugs) {
@@ -27,12 +28,13 @@ test("education slugs remain separate from the original card routes and old arti
   }
 });
 
-test("sitemap revision dates change only for the Sun, its directory and explicitly revised cards", () => {
+test("sitemap dates preserve earlier revisions and apply the current language-specific edits", () => {
   for (const entry of tarotLearningSitemap()) {
     const url = new URL(entry.url);
     const path = url.pathname;
     const locale = url.searchParams.get("locale")??"en";
     const revised:Record<string,{locales:string[]}>=depthManifest.cards;
-    assert.equal(entry.lastModified, ["/journal/tarot-sun", "/journal/tarot-cards",...Object.keys(revised).filter(id=>revised[id].locales.includes(locale)).map(id=>`/journal/tarot-${id}`)].includes(path) ? "2026-10-08" : "2026-10-07");
+    const previous = ["/journal/tarot-sun", "/journal/tarot-cards",...Object.keys(revised).filter(id=>revised[id].locales.includes(locale)).map(id=>`/journal/tarot-${id}`)].includes(path) ? "2026-10-08" : "2026-10-07";
+    assert.equal(entry.lastModified, editorialModifiedAt(path.replace("/journal/", ""), locale as typeof journalLocales[number], previous));
   }
 });

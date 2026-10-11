@@ -12,6 +12,7 @@ import { discoveryLocales, discoveryHref, discoveryAlternates } from "@/lib/disc
 import { absoluteUrl, languageAlternates, routeSeo } from "@/lib/seo";
 import { journalArticles, journalHref, journalLocales, journalAlternates } from "@/lib/journal";
 import { seoGuidePath, seoGuides } from "@/lib/seo-guides";
+import { editorialModifiedAt } from "@/lib/editorial-updates";
 
 /** Main-site product + content only. Test/side apps stay out of the index. */
 const publicRoutes = [
@@ -35,7 +36,7 @@ function safeJournalRoutes(): MetadataRoute.Sitemap {
       return journalLocales.map((locale) => ({
         url: absoluteUrl(journalHref(locale, article?.slug)),
         lastModified:
-          article?.updatedAt ??
+          (article ? editorialModifiedAt(article.slug, locale, article.updatedAt) : undefined) ??
           journalArticles.map((item) => item.updatedAt).sort().at(-1),
         changeFrequency: article ? ("monthly" as const) : ("weekly" as const),
         priority: article ? 0.7 : 0.75,
