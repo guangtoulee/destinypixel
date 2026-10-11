@@ -1,0 +1,1321 @@
+{
+  "origin": "http://localhost:3037",
+  "startedAt": "2026-10-11T14:21:19.615Z",
+  "checks": [
+    {
+      "name": "overview layout and navigation 320px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "bodyWidth": 320,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 430px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 430,
+          "documentWidth": 430,
+          "bodyWidth": 430,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 1440px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 1440,
+          "documentWidth": 1440,
+          "bodyWidth": 1440,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reading link step-1: keyboard Enter, Tab, Shift+Tab and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-1",
+        "target": {
+          "heading": "1. Keep four details from your temple slip",
+          "top": 29.734375,
+          "bottom": 97.234375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "reading link step-4: click and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-4",
+        "target": {
+          "heading": "4. What to do when the online poem does not match",
+          "top": 30.09375,
+          "bottom": 97.59375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "reading link step-5: click and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-5",
+        "target": {
+          "heading": "5. Once it matches, how do you read the fortune-stick poem?",
+          "top": 30.234375,
+          "bottom": 131.484375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "lookup entered from new overview link: Guanyin preselected and number 33 has readable Source note",
+      "passed": true,
+      "evidence": {
+        "url": "/sticks?locale=en&type=guanyin",
+        "number": 33,
+        "sourceNote": "Source noteTraditional Guanyin Stick 33 theme; wording varies across temple editions.",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing detailed guide locale en: 200, language, canonical, five hreflangs, anchors, 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "Guanyin Fortune Stick Versions: Find the Poem Behind Your Number | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": "en",
+          "canonical": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            }
+          ]
+        },
+        "anchors": [
+          {
+            "id": "step-1",
+            "heading": "1. Keep four details from your temple slip"
+          },
+          {
+            "id": "step-4",
+            "heading": "4. What to do when the online poem does not match"
+          },
+          {
+            "id": "step-5",
+            "heading": "5. Once it matches, how do you read the fortune-stick poem?"
+          }
+        ],
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing detailed guide locale zh: 200, language, canonical, five hreflangs, anchors, 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "观音灵签版本为什么不同？按签号查签前，先认准手里这首诗 | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": "zh-Hans",
+          "canonical": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            }
+          ]
+        },
+        "anchors": [
+          {
+            "id": "step-1",
+            "heading": "1. 从签纸上留下四项信息"
+          },
+          {
+            "id": "step-4",
+            "heading": "4. 网上找到的诗不一样，该怎么办？"
+          },
+          {
+            "id": "step-5",
+            "heading": "5. 核对之后，签诗应该怎么读？"
+          }
+        ],
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing detailed guide locale zh-TW: 200, language, canonical, five hreflangs, anchors, 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "觀音靈籤版本為什麼不同？按籤號查籤前，先認準手裡這首詩 | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": "zh-Hant",
+          "canonical": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh-TW",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            }
+          ]
+        },
+        "anchors": [
+          {
+            "id": "step-1",
+            "heading": "1. 從籤紙上留下四項信息"
+          },
+          {
+            "id": "step-4",
+            "heading": "4. 網上找到的詩不一樣，該怎麼辦？"
+          },
+          {
+            "id": "step-5",
+            "heading": "5. 核對之後，籤詩應該怎麼讀？"
+          }
+        ],
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing detailed guide locale ru: 200, language, canonical, five hreflangs, anchors, 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "Версии жребиев Гуаньинь: как найти текст по номеру | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": "ru",
+          "canonical": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=ru",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/journal/fortune-stick-number-and-edition"
+            }
+          ]
+        },
+        "anchors": [
+          {
+            "id": "step-1",
+            "heading": "1. Сохраните четыре детали с храмового листка"
+          },
+          {
+            "id": "step-4",
+            "heading": "4. Что делать, если найденный стих не совпадает?"
+          },
+          {
+            "id": "step-5",
+            "heading": "5. Как читать стих после проверки?"
+          }
+        ],
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing Guanyin lookup locale en: number 33 and Source note at 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "locale": "en",
+        "metadata": {
+          "title": "Free Chinese Fortune Sticks Online | Guanyin & Kau Cim | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": "en",
+          "canonical": "https://www.destinypixel.com/sticks",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/sticks"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/sticks?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/sticks?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/sticks?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/sticks"
+            }
+          ]
+        },
+        "number": 33,
+        "sourceNote": "Source noteTraditional Guanyin Stick 33 theme; wording varies across temple editions.",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing Guanyin lookup locale zh: number 33 and Source note at 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "locale": "zh",
+        "metadata": {
+          "title": "免费在线抽签与解签｜观音灵签、月老与关帝 | DestinyPixel",
+          "htmlLang": "zh-Hans",
+          "mainLang": "zh-Hans",
+          "canonical": "https://www.destinypixel.com/sticks?locale=zh",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/sticks"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/sticks?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/sticks?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/sticks?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/sticks"
+            }
+          ]
+        },
+        "number": 33,
+        "sourceNote": "签文来源观音灵签第 33 签常见传统签诗；不同庙本可能有细微字句差异。",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing Guanyin lookup locale zh-TW: number 33 and Source note at 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "locale": "zh-TW",
+        "metadata": {
+          "title": "免費線上抽籤與解籤｜觀音靈籤、月老與關帝 | DestinyPixel",
+          "htmlLang": "zh-Hant",
+          "mainLang": "zh-Hant",
+          "canonical": "https://www.destinypixel.com/sticks?locale=zh-TW",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/sticks"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/sticks?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/sticks?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/sticks?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/sticks"
+            }
+          ]
+        },
+        "number": 33,
+        "sourceNote": "籤文來源觀音靈籤第 33 籤常見傳統籤詩；不同廟本可能有細微字句差異。",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "existing Guanyin lookup locale ru: number 33 and Source note at 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "locale": "ru",
+        "metadata": {
+          "title": "Гадание Гуаньинь онлайн — китайские палочки | DestinyPixel",
+          "htmlLang": "ru",
+          "mainLang": "ru",
+          "canonical": "https://www.destinypixel.com/sticks?locale=ru",
+          "hreflangs": [
+            {
+              "lang": "en",
+              "href": "https://www.destinypixel.com/sticks"
+            },
+            {
+              "lang": "zh-Hans",
+              "href": "https://www.destinypixel.com/sticks?locale=zh"
+            },
+            {
+              "lang": "zh-Hant",
+              "href": "https://www.destinypixel.com/sticks?locale=zh-TW"
+            },
+            {
+              "lang": "ru",
+              "href": "https://www.destinypixel.com/sticks?locale=ru"
+            },
+            {
+              "lang": "x-default",
+              "href": "https://www.destinypixel.com/sticks"
+            }
+          ]
+        },
+        "number": 33,
+        "sourceNote": "ИсточникТрадиционная тема 33-го жребия Гуаньинь; формулировки отличаются по храмовым версиям.",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "SSR JavaScript disabled: overview links, exact title/canonical, six visible FAQs and FAQ schema",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": null,
+          "canonical": "https://www.destinypixel.com/learn/guanyin-fortune-sticks",
+          "hreflangs": []
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin"
+          }
+        ],
+        "visibleFaqCount": 6,
+        "structuredFaqCount": 6
+      }
+    },
+    {
+      "name": "SSR JavaScript disabled: ordinary other guide remains without new navigation",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "readingNavigationCount": 0,
+        "metadata": {
+          "title": "What Is a BaZi Birth Chart? Four Pillars Explained | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": null,
+          "canonical": "https://www.destinypixel.com/learn/what-is-bazi-birth-chart",
+          "hreflangs": []
+        }
+      }
+    },
+    {
+      "name": "browser safety and errors",
+      "passed": true,
+      "evidence": {
+        "pageErrors": 0,
+        "httpErrors": 0,
+        "permittedWrites": 0,
+        "blockedRequests": 32,
+        "intentionalBlockPolicy": "Only same-origin GET/HEAD allowed; telemetry scripts, all external origins, all writes blocked. No AI or account action used."
+      }
+    }
+  ],
+  "pageErrors": [],
+  "httpErrors": [],
+  "requestFailures": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=4SRqEvTMJRyihhTN",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_next/static/chunks/webpack-c57ca5bdb0efcbf7.js",
+      "error": "csp"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_next/static/chunks/webpack-c57ca5bdb0efcbf7.js",
+      "error": "csp"
+    }
+  ],
+  "consoleErrors": [
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=zh",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=zh",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=zh-TW",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=zh-TW",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=ru",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/journal/fortune-stick-number-and-edition?locale=ru",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=en&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=en&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=zh&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=zh&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=zh-TW&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=zh-TW&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=ru&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/sticks?locale=ru&type=guanyin",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "blockedRequests": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    }
+  ],
+  "permittedWriteRequests": [],
+  "screenshots": [
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/reading-navigation-320.png",
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/after-390-fullpage.png",
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/reading-navigation-1440.png"
+  ],
+  "finishedAt": "2026-10-11T14:21:35.253Z",
+  "summary": {
+    "checks": 19,
+    "passed": 19,
+    "failed": 0,
+    "pageErrors": 0,
+    "httpErrors": 0,
+    "blockedRequests": 32,
+    "permittedWriteRequests": 0
+  },
+  "verifiedSourceCommit": "618c36571bf56a7975369b2c0d7a7638a5f62a16",
+  "scopeNote": "Full functional/multilingual acceptance before the scoped link underline CSS follow-up. Screenshots are refreshed in the release follow-up; refer to release-browser-report.json for final screenshot source.",
+  "finalSourceCommit": "7e9a9b12b6e3e4e65c9190aa174c213eaaaaec06",
+  "notes": [
+    "Only same-origin GET/HEAD was allowed; analytics and speed-insights scripts were intentionally blocked, all writes and external requests denied. No request bodies were logged.",
+    "Console errors are only deliberately blocked telemetry resources. net::ERR_ABORTED requests arose on subsequent navigation; csp failures occur only in JavaScript-disabled context.",
+    "Existing detailed journal translations set main lang correctly (zh-Hans/zh-Hant/ru) while root html lang stays en. This predates and is outside this change. Lookup locale sets both html/main lang correctly."
+  ],
+  "requestFailureSummary": {
+    "net::ERR_BLOCKED_BY_CLIENT.Inspector": 32,
+    "net::ERR_ABORTED": 36,
+    "csp": 2
+  }
+}
