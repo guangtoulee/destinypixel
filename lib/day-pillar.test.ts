@@ -7,6 +7,7 @@ import { getDayPillarCards } from "./day-pillar-cards";
 import { dayPillarSharePath } from "./day-pillar-share";
 import { calculateBaziEngine } from "./engines/bazi";
 import { resolveCity } from "./geo/cities";
+import { journalLocales } from "./journal-locales";
 
 test("invalid formats and impossible dates are rejected instead of silently normalized", () => {
   for (const date of ["", "2000-1-01", "2000/01/01", "2024-00-01", "2024-13-01", "2024-04-31", "2024-01-00", "2023-02-29", "1900-02-29", "2100-02-29", "2000-01-01T00:00:00Z"]) {
@@ -37,7 +38,7 @@ test("midnight advances the civil-date card and a calibrated report may use the 
   assert.equal(full.pillars.day, "壬寅");
 });
 
-test("a complete cycle resolves to all sixty available bilingual cards and existing images", () => {
+test("a complete cycle resolves to all sixty cards in four languages and existing images", () => {
   const observed = new Set<string>();
   for (let day = 0; day < 60; day += 1) {
     const date = new Date(Date.UTC(2000, 0, 1 + day)).toISOString().slice(0, 10);
@@ -46,7 +47,7 @@ test("a complete cycle resolves to all sixty available bilingual cards and exist
     observed.add(result.pillar);
   }
   assert.equal(observed.size, 60);
-  for (const locale of ["en", "zh"] as const) {
+  for (const locale of journalLocales) {
     const cards = getDayPillarCards(locale);
     assert.equal(cards.length, 60);
     assert.equal(new Set(cards.map((card) => card.slug)).size, 60);
@@ -62,10 +63,20 @@ test("a complete cycle resolves to all sixty available bilingual cards and exist
 test("share paths allow only a controlled public archetype and locale", () => {
   assert.equal(dayPillarSharePath("en", "gui_mao"), "/day-pillar?pillar=gui_mao");
   assert.equal(dayPillarSharePath("zh", "ding_hai"), "/day-pillar?locale=zh&pillar=ding_hai");
-  for (const input of ["1982-03-21", "gui_mao&birthDate=1982-03-21", "https://example.com", "gui_zi", "unknown"]) assert.equal(dayPillarSharePath("zh", input), "/day-pillar?locale=zh");
-  for (const card of getDayPillarCards("en")) {
-    const url = new URL(dayPillarSharePath("en", card.slug), "https://example.com");
-    assert.deepEqual([...url.searchParams.keys()], ["pillar"]);
-    assert.equal(url.searchParams.get("pillar"), card.slug);
+  assert.equal(dayPillarSharePath("zh-TW", "ding_you"), "/discover?locale=zh-TW&pillar=ding_you");
+  assert.equal(dayPillarSharePath("ru", "ding_you"), "/discover?locale=ru&pillar=ding_you");
+  for (const locale of journalLocales) {
+    const pathname = locale === "zh-TW" || locale === "ru" ? "/discover" : "/day-pillar";
+    const fallback = `${pathname}${locale === "en" ? "" : `?locale=${locale}`}`;
+    for (const input of ["1982-03-21", "gui_mao&birthDate=1982-03-21", "gui_mao?locale=zh", "https://example.com", "gui_zi", "unknown", "__proto__", "../gui_mao"]) {
+      assert.equal(dayPillarSharePath(locale, input), fallback, `${locale}/${input}`);
+    }
+    for (const card of getDayPillarCards(locale)) {
+      const url = new URL(dayPillarSharePath(locale, card.slug), "https://example.com");
+      assert.equal(url.pathname, pathname);
+      assert.deepEqual([...url.searchParams.keys()], locale === "en" ? ["pillar"] : ["locale", "pillar"]);
+      assert.equal(url.searchParams.get("locale") ?? "en", locale);
+      assert.equal(url.searchParams.get("pillar"), card.slug);
+    }
   }
 });
