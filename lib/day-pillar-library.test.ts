@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import { dayPillarCycle, pillarFacts, pillarArticleSlug, pillarArticleHref, pillarName } from "./day-pillar-library";
+import { dayPillarCycle, pillarFacts, pillarArticleSlug, pillarArticleHref, pillarCardHref, pillarName } from "./day-pillar-library";
+import { getDayPillarCards } from "./day-pillar-cards";
 import type { JournalTranslation } from "./journal";
 import { journalArticles, journalLocales, journalArticleSchema } from "./journal";
 import { pillarPractices } from "./day-pillar-practices";
@@ -27,7 +28,7 @@ test("all 60 calculated results have one searchable article and a real JPEG card
     for (const locale of journalLocales) {
       const copy: JournalTranslation = article.translations[locale];
       assert.ok(copy.title.includes(result.pillar));
-      assert.ok(copy.title.includes(pillarName(result.pillar, locale)));
+      // The searchable calendar title need not also carry the original card name.
       assert.ok(pillarArticleHref(result.pillar,locale).includes(article.slug));
       assert.ok(journalArticleSchema(article,locale)[0].image?.[0].includes(getPillarImagePath(result.pillar)));
       for (const source of copy.sections.flatMap(s=>s.sources??[])) {
@@ -39,6 +40,46 @@ test("all 60 calculated results have one searchable article and a real JPEG card
       }
     }
   }
+});
+
+test("all 60 encyclopedia entries and original cards map to the same pillar in every language", () => {
+  const articles = journalArticles.filter(article => article.pillar);
+  assert.equal(new Set(articles.map(article => article.pillar)).size, 60);
+  for (const locale of journalLocales) {
+    const cards = getDayPillarCards(locale);
+    assert.equal(cards.length, 60);
+    assert.equal(new Set(cards.map(card => card.slug)).size, 60);
+    const articleHrefs = new Set<string>();
+    const cardHrefs = new Set<string>();
+    for (const pillar of dayPillarCycle) {
+      const matchingArticles = articles.filter(article => article.pillar === pillar);
+      const matchingCards = cards.filter(card => card.pillar === pillar);
+      assert.equal(matchingArticles.length, 1, `${locale}/${pillar}: encyclopedia entry`);
+      assert.equal(matchingCards.length, 1, `${locale}/${pillar}: original card`);
+      const article = matchingArticles[0], card = matchingCards[0];
+      assert.equal(article.slug, `${card.slug.replace("_", "-")}-day-pillar`);
+      assert.equal(card.name, pillarName(pillar, locale));
+      assert.equal(card.image, getPillarImagePath(pillar));
+
+      const articleHref = pillarArticleHref(pillar, locale);
+      const articleUrl = new URL(articleHref, "https://www.destinypixel.com");
+      assert.equal(articleUrl.pathname, `/journal/${article.slug}`);
+      assert.equal(articleUrl.searchParams.get("locale") ?? "en", locale);
+      assert.deepEqual([...articleUrl.searchParams.keys()], locale === "en" ? [] : ["locale"]);
+
+      const cardHref = pillarCardHref(pillar, locale);
+      const cardUrl = new URL(cardHref, "https://www.destinypixel.com");
+      assert.equal(cardUrl.pathname, locale === "zh-TW" || locale === "ru" ? "/discover" : "/day-pillar");
+      assert.equal(cardUrl.searchParams.get("locale") ?? "en", locale);
+      assert.equal(cardUrl.searchParams.get("pillar"), card.slug);
+      assert.deepEqual([...cardUrl.searchParams.keys()], locale === "en" ? ["pillar"] : ["locale", "pillar"]);
+      articleHrefs.add(articleHref);
+      cardHrefs.add(cardHref);
+    }
+    assert.equal(articleHrefs.size, 60, `${locale}: unique encyclopedia destinations`);
+    assert.equal(cardHrefs.size, 60, `${locale}: unique original card destinations`);
+  }
+  for (const pillar of ["甲丑", "", "__proto__"]) assert.throws(() => pillarCardHref(pillar, "en"));
 });
 
 test("reference facts match the site's chart labels and reject impossible pairs", () => {
@@ -78,13 +119,14 @@ test("expanded portraits retain their URLs and reproduce every sourced public bi
   }
 });
 
-test("each portrait has its own complete multilingual exercise and editorial sections", () => {
+test("each portrait retains its multilingual calendar, interpretation and exercise sections", () => {
   assert.deepEqual(Object.keys(pillarPractices).sort(), [...dayPillarCycle].sort());
   for (const edition of [0,1,2] as const) assert.equal(new Set(Object.values(pillarPractices).map(p=>p[edition])).size,60);
   for (const article of journalArticles.filter(a=>a.kind === "portrait")) {
     for (const locale of journalLocales) {
       const sections = article.translations[locale].sections;
-      for (const id of ["stem-branch","personality","love","career","everyday-practice","calculation-and-context"]) assert.ok(sections.some(s=>s.id===id));
+      // Editorial sections can vary: a sourced encyclopedia need not make career claims.
+      for (const id of ["stem-branch","personality","love","everyday-practice","calculation-and-context"]) assert.ok(sections.some(s=>s.id===id), `${article.slug}/${locale}: ${id}`);
       const scene = sections.find(s=>s.id==="everyday-practice")!.paragraphs[0];
       assert.ok(scene.length > (locale.startsWith("zh") ? 40 : 120), `${article.slug}/${locale}: incomplete scene`);
       if(locale === "zh-TW") assert.equal(scene,toTraditional(scene));

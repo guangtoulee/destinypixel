@@ -1,0 +1,24 @@
+{
+  "commit": "a8816121a1b46a5c7ea8d790dfb2560b5329a449",
+  "base": "http://127.0.0.1:3046",
+  "scope": "DayPillarExperience language Link navigation",
+  "observations": [
+    {
+      "start": "/day-pillar?pillar=ding_you",
+      "click": "EN (same URL)",
+      "settledURL": "/day-pillar?pillar=ding_you",
+      "settledMainLang": "en",
+      "canonicalAfterClick": "https://www.destinypixel.com/day-pillar?locale=zh",
+      "expectedCanonical": "https://www.destinypixel.com/day-pillar"
+    },
+    {
+      "start": "/day-pillar?locale=zh&pillar=ding_you",
+      "click": "EN",
+      "settledURL": "/day-pillar?pillar=ding_you",
+      "settledMainLang": "en",
+      "canonicalAfterClick": "https://www.destinypixel.com/day-pillar?locale=zh",
+      "expectedCanonical": "https://www.destinypixel.com/day-pillar"
+    }
+  ],
+  "settling": "exact URL + correct main lang + 1000ms wait; native initial navigation had correct canonical"
+}

@@ -2,11 +2,11 @@ import type { JournalTranslation } from "../journal";
 
 export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
   "en": {
-    "title": "Ding You Day Pillar (丁酉): Men’s Personality, Yin Fire and Indirect Wealth",
-    "description": "Ding You pairs Yin Fire with Rooster Metal. Understand claims about Ding You men’s personality, Xin as the hidden stem and Indirect Wealth, with distinctions between classical texts, interpretations and modern examples.",
+    "title": "Ding You Day Pillar (丁酉): Yin Fire, Wealth and Readings for Men and Women",
+    "description": "Understand Ding You’s Yin Fire, You Metal and Indirect Wealth, then compare traditional readings for men and women with their historical assumptions and limits.",
     "topic": "Ding You Day Pillar",
-    "answer": "Ding You pairs Yin Fire with You Metal; Xin hidden in You is called Indirect Wealth relative to Ding. These terms do not establish a man’s fidelity or personality.",
-    "introduction": "If you are searching for “Ding You men’s personality,” start with two clues: Ding is Yin Fire in traditional BaZi, and You belongs to Metal. A classical text describes Ding Fire as “柔中,” suggesting a gentler quality; this article uses that idea to discuss careful expression and personal standards in modern life. These are not traits shared by all Ding You men, and “sitting on Indirect Wealth” cannot tell you whether someone is unfaithful. We begin with the terms and their sources, then use concrete situations to explore how the ideas can be understood and where conclusions are unwarranted.",
+    "answer": "Ding You pairs Yin Fire with You Metal; Xin hidden in You is called Indirect Wealth relative to Ding. This structure is the same for men and women. Traditional spouse readings use different conventions, which cannot establish anyone’s personality or marriage outcome.",
+    "introduction": "Begin with what Ding You means for anyone: Ding is Yin Fire in traditional BaZi, You belongs to Metal, and Xin hidden in You is Ding’s Indirect Wealth. A classical text describes Ding Fire as “柔中,” a gentler quality relative to Bing Fire. We explain these common terms first, then distinguish the historical spouse-star conventions used for men and women. Those conventions are cultural interpretations, not evidence that gender and a birthday determine personality, fidelity or the course of a relationship. The later everyday scene offers questions for self-observation without requiring you to fit a fixed type.",
     "takeaway": "Ding You names a Day Pillar. Yin Fire, You Metal and Indirect Wealth each have a traditional definition; attentiveness, fault-finding and fidelity must be judged through a person’s actual behavior.",
     "sections": [
       {
@@ -32,7 +32,7 @@ export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "id": "personality",
         "title": "How should “Ding Fire is gentle” be read? Why is it more than a candle metaphor?",
         "paragraphs": [
-          "The Ding Fire passage in Di Tian Sui includes “丁火柔中，内性昭融,” describing a gentler quality and an inward clarity or radiance. This is traditional language for qualities and relationships within yin–yang and five-element theory. It discusses Ding Fire; it is not a statistical finding about the personality of Ding You men.",
+          "The Ding Fire passage in Di Tian Sui includes “丁火柔中，内性昭融,” describing a gentler quality and an inward clarity or radiance. This is traditional language for qualities and relationships within yin–yang and five-element theory. It discusses Ding Fire; it is not a statistical finding about the personality of Ding You men or women.",
           "A lamp or candle readily suggests a small light, focus and warmth, but traditional interpretations also differ. In Di Tian Sui Chan Wei, Ren Tieqiao explicitly comments: “丁非灯烛之谓，较丙火则柔中耳。” In other words, Ding does not simply mean lamps and candles; its gentler quality is relative to Bing Fire. His emphasis is the relationship between Ding and Bing, rather than identifying Ding with one fixed physical object.",
           "This article therefore treats careful expression and attention to detail as modern reading angles. They can help you ask: do I notice needs that someone has not expressed? Are my requests specific enough? If these ideas do not fit your experience, you do not need to adopt them to match a Day Pillar. These cultural interpretations do not provide the basis for assessing an individual that a scientific personality measure requires."
         ],
@@ -63,13 +63,33 @@ export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ]
       },
       {
-        "id": "love",
-        "title": "How can you observe a Ding You man’s personality and relationships?",
+        "id": "gender-tradition",
+        "title": "How do traditional readings for men and women differ, and where do they stop?",
         "paragraphs": [
-          "Rather than listing shared virtues such as gentleness, intelligence and good taste, it is more useful to examine a theme through specific behavior. The following is a fictional scene created by this site. People of any gender could encounter it; it is not a representative case of Ding You men.",
-          "After his partner sings a song in front of friends, Lin notices an unsteady note and points it out immediately. He thinks he is listening carefully; his partner feels that the pleasure of finding the courage to sing has been overlooked.",
+          "Ding, You and the Ten Gods relationship remain the same for men and women. What changes in some traditional readings is the family role assigned to a star. Understanding that convention is different from claiming that men and women born on the same day have different personalities.",
+          "For men, traditional spouse interpretation commonly looks to Wealth stars. Volume five of San Ming Tong Hui explains the name through historical household and wife analogies, including distinctions between principal and secondary wives. Ding You’s Xin is Indirect Wealth under the terminology already explained above; that does not make Xin a modern lover, or prove that a Ding You man will be unfaithful, wealthy or married more than once.",
+          "For women, volume seven’s discussion of women’s charts associates the element that controls the Day Master with the husband role: the Officer and Seven Killings categories. For Ding Fire, these are Water relationships; under the usual Ten Gods rules, Ren is Direct Officer and Gui is Seven Killings. Xin in You remains Wealth, so “sitting on Indirect Wealth” is not “sitting on the husband star.” The same chapter includes a Ding You example with other pillars, including Ren; its interpretation uses that fuller combination, not the Ding You day alone. A Day Pillar without Water also cannot tell you whether a woman will have a partner.",
+          "Both conventions reflect historical gender roles and a husband–wife model of marriage. They do not encompass all gender identities or present-day partnerships, and the texts’ judgments of a wife’s virtue or a spouse’s status are not standards for evaluating people today. Neither convention supplies scientific evidence about temperament or marriage. For anyone, actual communication, consent, boundaries and kept promises are more useful grounds for judging a relationship."
+        ],
+        "sources": [
+          {
+            "label": "San Ming Tong Hui, vol. 5, “The Names of Seal, Food, Officer and Wealth”: historical wife and Wealth analogies (Chinese transcription)",
+            "href": "https://zh.wikisource.org/zh-hant/三命通會_(四庫全書本)/卷05#論古人立印食官財名義"
+          },
+          {
+            "label": "San Ming Tong Hui, vol. 7, “Women’s Charts”: spouse-star conventions and a full-chart Ding You example (Chinese transcription)",
+            "href": "https://zh.wikisource.org/wiki/三命通會_(四庫全書本)/卷07#論女命"
+          }
+        ]
+      },
+      {
+        "id": "love",
+        "title": "How can men and women use this theme to observe their relationships?",
+        "paragraphs": [
+          "Rather than listing shared virtues such as gentleness, intelligence and good taste, it is more useful to examine a theme through specific behavior. The following is a fictional scene created by this site. People of any gender could encounter it; it is not a representative case of Ding You men or women.",
+          "After a partner sings a song in front of friends, Lin notices an unsteady note and points it out immediately. Lin thinks this shows careful listening; the partner feels that the pleasure of finding the courage to sing has been overlooked.",
           "Read the situation in three steps. Hearing the unsteady note is an observation of a detail. Assuming that the partner wants technical advice at that moment is an unconfirmed guess. Asking “Would you like to hear how it felt, or work on it together?” checks what the partner actually needs. Whether close attention becomes care depends on how it is expressed, rather than on a birthday.",
-          "To judge whether a man is trustworthy, return to observable facts: does he keep promises, respect clear boundaries and communicate honestly when there is a disagreement? A Day Pillar and gender alone cannot establish fidelity, infidelity or the course of a marriage."
+          "To judge whether someone is trustworthy, return to observable facts: do they keep promises, respect clear boundaries and communicate honestly when there is a disagreement? These questions apply equally to men and women. A Day Pillar and gender alone cannot establish fidelity, infidelity or the course of a marriage."
         ]
       },
       {
@@ -134,11 +154,11 @@ export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
     }
   },
   "zh": {
-    "title": "丁酉日柱详解：男性性格怎么看，丁火、酉金与偏财是什么",
-    "description": "丁酉由阴火丁与酉金组成。解释丁酉男性性格说法、酉藏辛与坐偏财的传统含义，区分古籍依据、流派解释和现代生活类比。",
+    "title": "丁酉日柱详解：丁火、偏财与男女传统解读的边界",
+    "description": "先解释丁酉的阴火、酉金与日坐偏财，再对照男命财星、女命官杀的传统配偶说法，说明历史背景与不能据此判断性格婚恋的局限。",
     "topic": "丁酉日柱",
-    "answer": "丁酉由阴火丁与酉金组成，酉藏辛，按常用十神规则称为日坐偏财；这些术语不能判断男性是否专一或具有某种性格。",
-    "introduction": "查“丁酉男性格”，可以先读懂两个线索：丁在传统命理中属阴火，酉属金；古籍以“柔中”形容丁火，本站据此展开关于细致表达与个人标准的现代讨论。但这些并不是丁酉男性共有的性格，更不能由“坐偏财”认定一个人花心。下面先解释术语与出处，再用具体场景看这些说法怎样理解、哪里不能下结论。",
+    "answer": "丁酉由阴火丁与酉金组成，酉藏辛，按常用十神规则称为日坐偏财；这一结构男女相同。传统男女婚恋解读采用不同的配偶星约定，但不能据此判定任何人的性格或婚姻结果。",
+    "introduction": "先读懂男女共通的丁酉结构：丁在传统命理中属阴火，酉属金，酉藏辛为丁的偏财。古籍以“柔中”形容丁火，强调与丙火相比的气性。本文先解释这些术语与出处，再分别说明男命、女命的旧式配偶星说法及历史背景。这些文化解释不能证明性别与生日决定性格、忠诚或感情走向；后面的生活场景用于自我观察，不要求任何人认领固定类型。",
     "takeaway": "丁酉是一个日柱名称。“阴火”“酉金”“偏财”各有传统定义；细心、挑剔或专一，则要从一个人的实际行为判断。",
     "sections": [
       {
@@ -164,7 +184,7 @@ export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "id": "personality",
         "title": "“丁火柔中”怎样读？为什么不能只说丁火就是蜡烛？",
         "paragraphs": [
-          "《滴天髓》丁火一段有“丁火柔中，内性昭融”。这是一套用阴阳、五行描述气性与关系的传统语言。它谈丁火，并不是一条专门统计丁酉男性性格的结论。",
+          "《滴天髓》丁火一段有“丁火柔中，内性昭融”。这是一套用阴阳、五行描述气性与关系的传统语言。它谈丁火，并不是一条统计丁酉男性或女性性格的结论。",
           "灯烛很容易让人联想到细光、专注和温度，但传统解释也有分歧。任铁樵在《滴天髓阐微》注释中明确写道：“丁非灯烛之谓，较丙火则柔中耳。”他的重点是丁与丙的相对关系，并不赞成把丁固定等同于某种实物。",
           "因此，本文把“细致表达”“重视细节”作为现代阅读角度。它们可以帮助你提出问题：我会不会注意到别人没说出口的需求？我提出的要求够具体吗？如果与你的经历不符，不必为了符合日柱而认领这些特征。这些文化解释不具备科学人格测验对个人判断的依据。"
         ],
@@ -195,13 +215,33 @@ export const dingYouDepth: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ]
       },
       {
-        "id": "love",
-        "title": "丁酉男性的性格和感情，可以怎么观察？",
+        "id": "gender-tradition",
+        "title": "丁酉男命、女命的传统说法有什么不同，哪里不能照搬？",
         "paragraphs": [
-          "与其列出“温柔、聪明、有品位”的共同优点，更有用的是把主题放进具体行为。下面是本站创作的虚构场景，男女都可能遇到，不是丁酉男性的典型样本。",
-          "伴侣在朋友面前唱完一首歌。小林听出一个音不稳，第一句话就指出来。他觉得自己是在认真听；伴侣却觉得，鼓起勇气唱歌的快乐被忽略了。",
+          "丁、酉和十神关系对男女都相同。一些传统解读改变的是某颗星所比附的家庭角色。读懂这种约定，不等于同一天出生的男性和女性必然拥有不同性格。",
+          "男命的旧式配偶解读常看财星。《三命通会》卷五解释命名时，以旧式家庭中的妻室比附财，并涉及正妻、偏妻的等级区分。按前文的术语，丁酉所藏辛为偏财；这不等于今天的情人，也不能据此认定丁酉男性会花心、富有或多次结婚。",
+          "女命方面，卷七“论女命”把克日主的五行比附为夫，即官、杀的关系。对丁火而言，这一类属水；按常用十神规则，壬为正官，癸为七杀。酉中辛仍是财，所以“坐偏财”并不等于“坐夫星”。同章虽有丁酉日的例子，但同时列出壬等其他柱中的干支，解释依赖那一组完整组合，不能抽成所有丁酉女性的结论。单看日柱没有水，也不能推断女性有没有伴侣。",
+          "两套说法都带有旧时代的男女角色与夫妻婚姻模型，不能涵盖所有性别认同和今天的伴侣关系。古籍对妇德、配偶地位的评价，不应成为今天给人打分的标准，也不提供关于性情或婚姻的科学证据。无论男女，现实中的沟通、同意、边界和承诺是否兑现，才是判断关系更有用的依据。"
+        ],
+        "sources": [
+          {
+            "label": "《三命通会》卷五“论古人立印食官财名义”：妻室与财的历史比附",
+            "href": "https://zh.wikisource.org/zh-hant/三命通會_(四庫全書本)/卷05#論古人立印食官財名義"
+          },
+          {
+            "label": "《三命通会》卷七“论女命”：配偶星约定与含丁酉日的完整组合例",
+            "href": "https://zh.wikisource.org/wiki/三命通會_(四庫全書本)/卷07#論女命"
+          }
+        ]
+      },
+      {
+        "id": "love",
+        "title": "男性和女性，都可以怎样观察自己的相处方式？",
+        "paragraphs": [
+          "与其列出“温柔、聪明、有品位”的共同优点，更有用的是把主题放进具体行为。下面是本站创作的虚构场景，任何性别都可能遇到，不是丁酉男性或女性的典型样本。",
+          "伴侣在朋友面前唱完一首歌。小林听出一个音不稳，第一句话就指出来。小林觉得这是认真听的表现；伴侣却觉得，鼓起勇气唱歌的快乐被忽略了。",
           "这件事可以分三步看：听出那个音，是对细节的观察；认定对方此刻需要技术建议，是未经确认的猜测；先问“你想听感受，还是想一起改进？”，才是在确认对方的需要。细致是否成为体贴，要看它怎么被表达，而不是看生日。",
-          "判断一个男人是否值得信任，也要回到可观察的事实：承诺是否兑现，是否尊重明确的边界，出现分歧时能否诚实沟通。单凭日柱和性别，无法断定一个人专一、花心或婚姻会怎样。"
+          "判断一个人是否值得信任，也要回到可观察的事实：承诺是否兑现，是否尊重明确的边界，出现分歧时能否诚实沟通。这些问题对男性和女性同样适用。单凭日柱和性别，无法断定一个人专一、花心或婚姻会怎样。"
         ]
       },
       {

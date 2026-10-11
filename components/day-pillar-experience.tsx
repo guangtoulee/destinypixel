@@ -1,5 +1,5 @@
 "use client";
-import { pillarArticleHref, pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
+import { pillarArticleHref, pillarCrossLinkCopy, pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
 
 import { destinySupportHref } from "@/lib/support-contact";
 
@@ -100,7 +100,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
   }
 
   return <main className={styles.page} lang={locale === "zh" ? "zh-Hans" : "en"}>
-    <header className={styles.header}><Link className={styles.brand} href={home}><span aria-hidden="true" />DestinyPixel</Link><nav aria-label={locale === "zh" ? "主导航" : "Main navigation"}><Link href={home}>{text.home}</Link><Link href={locale === "zh" ? "/tools?locale=zh" : "/tools"}>{text.tools}</Link></nav><nav className={styles.languages} aria-label={text.language}><Link href={mode === "sample" ? "/day-pillar" : dayPillarSharePath("en", card.slug)} lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</Link><Link href={mode === "sample" ? "/day-pillar?locale=zh" : dayPillarSharePath("zh", card.slug)} lang="zh-Hans" aria-current={locale === "zh" ? "page" : undefined}>中文</Link></nav></header>
+    <header className={styles.header}><Link className={styles.brand} href={home}><span aria-hidden="true" />DestinyPixel</Link><nav aria-label={locale === "zh" ? "主导航" : "Main navigation"}><Link href={home}>{text.home}</Link><Link href={locale === "zh" ? "/tools?locale=zh" : "/tools"}>{text.tools}</Link></nav><nav className={styles.languages} aria-label={text.language}><a href={mode === "sample" ? "/day-pillar" : dayPillarSharePath("en", card.slug)} lang="en" aria-current={locale === "en" ? "page" : undefined}>EN</a><a href={mode === "sample" ? "/day-pillar?locale=zh" : dayPillarSharePath("zh", card.slug)} lang="zh-Hans" aria-current={locale === "zh" ? "page" : undefined}>中文</a></nav></header>
     <div className={styles.mainGrid}>
       <section className={styles.introduction}>
         <p className={styles.eyebrow}><Sparkles size={14} aria-hidden="true" />{text.eyebrow}</p><h1>{text.title}</h1><p className={styles.lead}>{text.intro}</p>
@@ -128,7 +128,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       <div className={styles.readingTitle}>{locale === "zh" && <span className={styles.pillarSeal}>{card.pillar}</span>}<div><p className={styles.eyebrow}>{text.collection}</p><h2 id="day-card-title">{card.name}</h2></div><button type="button" className={styles.shareButton} onClick={() => void copyLink()}><Copy size={15} aria-hidden="true" />{text.share}</button></div>
       <DayPillarReading insight={card.insight} locale={locale} growth={card.growth}/>
       <p className={styles.cultural}>{text.cultural}</p>
-      <a className={styles.journalLink} href={pillarArticleHref(card.pillar, locale)}>{locale === "zh" ? `${card.pillar}日柱详解：性格、感情与事业` : "Read this Day Pillar portrait"}<ArrowRight size={16} aria-hidden="true" /></a>
+      <a className={styles.journalLink} data-pillar-article-link={card.pillar} href={pillarArticleHref(card.pillar, locale)}>{card.pillar} · {pillarCrossLinkCopy(locale).article}<ArrowRight size={16} aria-hidden="true" /></a>
       <a className={styles.journalLink} href={pillarLibraryHref(locale)}>{pillarLibraryCopy(locale).browse}</a>
       {shareLink && <div className={styles.shareBox}><p role="status"><Check size={14} aria-hidden="true" />{shareMessage}</p><label htmlFor="day-card-share">{text.shareLabel}</label><input id="day-card-share" readOnly value={shareLink} onFocus={(event) => event.target.select()} /><small>{text.shareNote}</small></div>}
     </section>

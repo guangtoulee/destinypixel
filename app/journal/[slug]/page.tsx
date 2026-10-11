@@ -17,7 +17,7 @@ import Markdown from "react-markdown";
 import TarotEditorialCards from "@/components/tarot-editorial-cards";
 import TarotEditorialLinks from "@/components/tarot-editorial-links";
 import { getPillarImagePath } from "@/lib/archetype-assets";
-import { dayPillarCycle, pillarName, pillarArticleHref, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
+import { dayPillarCycle, pillarName, pillarArticleHref, pillarCardHref, pillarCrossLinkCopy, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
@@ -80,6 +80,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const updatedAt = editorialModifiedAt(article.slug, locale, article.updatedAt);
   const update = editorialUpdate(article.slug, locale);
   const library = pillarLibraryCopy(locale);
+  const crossLink = pillarCrossLinkCopy(locale);
   const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
   const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
     ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.kind !== "education");
@@ -120,7 +121,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
               {section.table && <div className={styles.tableWrap} role="region" aria-label={section.title} tabIndex={0}><table><thead><tr>{section.table.headings.map((heading) => <th key={heading} scope="col">{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
               {!section.bodyMarkdown && section.sources && <div className={styles.sources}><span>{ui.sources}</span>{section.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}
             </section>)}
-            <div className={styles.articleAction}><p>{ui.try}</p><a href={copy.action.href}>{copy.action.label}<ArrowRight size={17} aria-hidden="true" /></a></div>
+            <div className={styles.articleAction}><p>{article.pillar ? crossLink.note : ui.try}</p><a data-pillar-card-link={article.pillar || undefined} href={article.pillar ? pillarCardHref(article.pillar, locale) : copy.action.href}>{article.pillar ? `${crossLink.card} · ${pillarName(article.pillar, locale)}` : copy.action.label}<ArrowRight size={17} aria-hidden="true" /></a></div>
             {article.pillar && <nav className={styles.pillarRelated} aria-label={library.related}><h2>{library.same}</h2>{dayPillarCycle.filter(p => p[0] === article.pillar![0] && p !== article.pillar).map(p => <a key={p} href={pillarArticleHref(p, locale)}>{p} · {pillarName(p, locale)}<ArrowRight size={14} aria-hidden="true" /></a>)}<a href={pillarLibraryHref(locale)}>{library.browse}</a></nav>}
             <TarotEditorialLinks slug={article.slug} locale={locale} />
             {article.kind !== "education" && related && <aside className={styles.related}><span>{ui.related}</span><a href={journalHref(locale, related.slug)}>{related.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a></aside>}
