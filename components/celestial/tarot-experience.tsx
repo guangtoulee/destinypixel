@@ -341,7 +341,10 @@ export default function TarotExperience({
       </span>
     );
   };
-  const deck = <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={table.mode === "free" ? c : { ...c, ribbonStart: workspaceCopy.beforeShuffle, ribbonHelp: workspaceCopy.deckHelp }}
+  const spreadDeckHelp = table.cards.some(card => !card.revealed)
+    ? workspaceCopy.revealHelp
+    : table.cards.length > 0 ? workspaceCopy.meaningHelp : workspaceCopy.deckHelp;
+  const deck = <BottomDeck compact={table.mode === "free"} key={recordSession} count={table.deck.length} disabled={!mixes} interactive={interactive} copy={table.mode === "free" ? c : { ...c, ribbonStart: workspaceCopy.beforeShuffle, ribbonHelp: spreadDeckHelp }}
         onDraw={draw} onShuffle={mix}
         topCardId={table.deck[0]?.id} onCycle={() => setTable(cycleDeck)}
         contains={point => {
@@ -557,6 +560,12 @@ export default function TarotExperience({
                 <span>{c.returnCard}</span>
               </button>
             </>
+          )}
+          {table.mode === "spread" && ready && (
+            <button type="button" className="cel-button-soft tarot-complete-reset" onClick={() => reset()}>
+              <RotateCcw size={15} />
+              <span>{c.reset}</span>
+            </button>
           )}
         </div>
       </div>

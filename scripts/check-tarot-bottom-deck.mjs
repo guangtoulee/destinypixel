@@ -118,7 +118,7 @@ try {
       }
       await expect(board.locator("img")).toHaveCount(size);
       assert.equal(new Set(await board.locator("img").evaluateAll(imgs=>imgs.map(i=>i.src))).size,size);
-      await page.locator(".tarot-table-toolbar button").last().click();
+      await page.locator(".tarot-table-toolbar button[title]").last().click();
       await expect(board.locator(".tarot-flipper")).toHaveCount(size-1);
       await top.press("Enter");
       await expect(board.locator(".tarot-flipper")).toHaveCount(size);
