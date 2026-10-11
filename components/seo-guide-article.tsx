@@ -64,6 +64,23 @@ export function SeoGuideArticle({ guide }: { guide: SeoGuide }) {
         {guide.paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 24)}>{paragraph}</p>
         ))}
+        {guide.readingPaths ? (
+          <nav className={styles.readingPaths} aria-labelledby={`${guide.slug}-next-step`}>
+            <h2 id={`${guide.slug}-next-step`}>{guide.readingPaths.title}</h2>
+            <ul>
+              {guide.readingPaths.links.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}>{item.label}</Link>
+                  {item.note ? <p>{item.note}</p> : null}
+                </li>
+              ))}
+            </ul>
+            <div>
+              <Link href={guide.readingPaths.lookup.href}>{guide.readingPaths.lookup.label}</Link>
+              {guide.readingPaths.lookup.note ? <p>{guide.readingPaths.lookup.note}</p> : null}
+            </div>
+          </nav>
+        ) : null}
         {openingCta ? <CtaLinks items={[openingCta]} /> : null}
         {guide.faqAsH2 ? (
           <div className={styles.qaList}>

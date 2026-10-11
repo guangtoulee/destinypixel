@@ -16,6 +16,7 @@ export type SeoGuide = {
   description: string;
   h1: string;
   paragraphs: string[];
+  readingPaths?: { title: string; links: SeoGuideLink[]; lookup: SeoGuideLink };
   faqs: SeoGuideFaq[];
   /** Render each FAQ as an H2 + answer (AEO), instead of a single FAQ list. */
   faqAsH2?: boolean;
@@ -179,6 +180,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "learn",
     slug: "guanyin-fortune-sticks",
+    updatedAt: "2026-10-11",
     title: "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
     description:
       "Try an online Guanyin-inspired fortune-stick draw. Learn how to ask a question, read the source label and distinguish traditional verses from modern reflections.",
@@ -187,6 +189,31 @@ export const seoGuides: SeoGuide[] = [
       "Guanyin fortune sticks are a form of Chinese temple divination in which a numbered stick points to a verse. DestinyPixel offers a 100-number Guanyin-inspired draw: bring one concrete question, receive a result, and read its source note before interpreting it.",
       "The current collection mixes selected traditional entries with DestinyPixel’s original modern reflections. It is not a complete transcription of any temple’s 100-stick book, and a translated interface does not always contain a translation of the corresponding Chinese verse. A matching number alone does not establish that two texts belong to the same edition.",
     ],
+    readingPaths: {
+      title: "Choose your next step",
+      links: [
+        {
+          label: "Have a temple slip? Identify its source and version",
+          href: "/journal/fortune-stick-number-and-edition#step-1",
+          note: "Keep the temple or booklet, collection, number and opening line before choosing an explanation.",
+        },
+        {
+          label: "Poem does not match? Compare the words",
+          href: "/journal/fortune-stick-number-and-edition#step-4",
+          note: "A shared number can point to a different poem. Check the collection and edition before substituting a reading.",
+        },
+        {
+          label: "Unsure about an allusion? Read the story in context",
+          href: "/journal/fortune-stick-number-and-edition#step-5",
+          note: "Read the whole verse and its imagery, then the story or commentary from that same edition.",
+        },
+      ],
+      lookup: {
+        label: "Look up a Guanyin number on DestinyPixel",
+        href: "/sticks?locale=en&type=guanyin",
+        note: "Open “Already drew offline?” and compare the text and Source note with your slip. This retrieves our entry, which may be a modern reflection.",
+      },
+    },
     faqAsH2: true,
     faqs: [
       {
