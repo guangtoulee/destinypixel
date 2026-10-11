@@ -14,6 +14,7 @@ import { editorialUpdate, editorialModifiedAt } from "@/lib/editorial-updates";
 import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import Markdown from "react-markdown";
+import DayPillarPeople from "@/components/day-pillar-people";
 import TarotEditorialCards from "@/components/tarot-editorial-cards";
 import TarotEditorialLinks from "@/components/tarot-editorial-links";
 import { getPillarImagePath } from "@/lib/archetype-assets";
@@ -119,6 +120,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
               {section.paragraphs.map((paragraph, index) => <Fragment key={index}><p>{withLinks(paragraph, section.links)}</p>{section.figures?.filter((figure) => figure.afterParagraph === index).map((figure) => <ArticleFigure figure={figure} key={figure.src} />)}</Fragment>)}
               {section.steps && <ol>{section.steps.map((step, index) => <li key={index}>{step}</li>)}</ol>}
               {section.table && <div className={styles.tableWrap} role="region" aria-label={section.title} tabIndex={0}><table><thead><tr>{section.table.headings.map((heading) => <th key={heading} scope="col">{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
+              {section.people && <DayPillarPeople people={section.people} locale={locale} additional={Boolean(section.table)} />}
               {!section.bodyMarkdown && section.sources && <div className={styles.sources}><span>{ui.sources}</span>{section.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}
             </section>)}
             <div className={styles.articleAction}><p>{article.pillar ? crossLink.note : ui.try}</p><a data-pillar-card-link={article.pillar || undefined} href={article.pillar ? pillarCardHref(article.pillar, locale) : copy.action.href}>{article.pillar ? `${crossLink.card} · ${pillarName(article.pillar, locale)}` : copy.action.label}<ArrowRight size={17} aria-hidden="true" /></a></div>

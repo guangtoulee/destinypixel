@@ -4,6 +4,8 @@ import test from "node:test";
 import type { Metadata } from "next";
 import sitemap from "@/app/sitemap";
 import revisions from "@/content/encyclopedia-samples-20261011/revisions.json";
+import peopleRevisions from "@/content/day-pillar-people/revisions.json";
+import previousEditions from "@/content/day-pillar-people/previous-editions.json";
 import tarotDepth from "@/content/tarot-depth-20261008/revisions.json";
 import { editorialModifiedAt, editorialUpdate } from "./editorial-updates";
 import { hexagramMetadata, hexagramModifiedAt } from "./hexagram-learning/metadata";
@@ -16,9 +18,14 @@ import { loadTarotLearningArticle } from "./tarot-learning/content";
 import { tarotLearningMetadata, tarotLearningModifiedAt } from "./tarot-learning/metadata";
 import { tarotLearningIds, tarotLearningSlug } from "./tarot-learning/paths";
 
-const revisedSlugs = ["ding-you-day-pillar", "hexagram-11", "tarot-moon", "tarot-sun"];
+const sampleSlugs = ["ding-you-day-pillar", "hexagram-11", "tarot-moon", "tarot-sun"];
+const peopleSlugs = ["bing-chen", "bing-shen", "bing-yin", "bing-zi", "ding-chou", "ding-hai", "ding-mao", "ding-si", "ding-wei", "ding-you", "geng-shen", "jia-chen", "jia-wu", "jia-xu", "jia-yin", "ren-xu", "xin-mao", "xin-you", "yi-mao", "yi-si"].map(slug => `${slug}-day-pillar`);
+const peopleRevisionSlugs = [...peopleSlugs, "day-pillars"].sort();
+const revisedSlugs = [...new Set([...sampleSlugs, ...peopleRevisionSlugs])].sort();
 const revisedLocales: ReportLocale[] = ["en", "zh"];
 const previousDates: Record<string, string> = {
+  ...Object.fromEntries(journalArticles.filter(article => peopleSlugs.includes(article.slug)).map(article => [article.slug, article.updatedAt])),
+  "day-pillars": "2026-09-23",
   "ding-you-day-pillar": "2026-10-05",
   "hexagram-11": "2026-10-07",
   "tarot-sun": "2026-10-08",
@@ -35,14 +42,20 @@ const modifiedTime = (metadata: Metadata) => metadata.openGraph && "modifiedTime
 const baselineSitemapDateHash = "d1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587";
 const baselineJournalDateHash = "597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5";
 
-test("the revision registry and date utility apply only to the four edited zh/en editions", () => {
+test("revision registries apply only to the actually edited zh/en editions", () => {
   assert.equal(revisions.updatedAt, "2026-10-11");
-  assert.deepEqual(Object.keys(revisions.articles).sort(), revisedSlugs);
-  for (const [slug, article] of Object.entries(revisions.articles)) {
-    assert.deepEqual(Object.keys(article.notes).sort(), revisedLocales);
-    for (const locale of revisedLocales) assert.ok(article.notes[locale as keyof typeof article.notes].trim(), `${slug}/${locale}: update note missing`);
+  assert.deepEqual(Object.keys(revisions.articles).sort(), sampleSlugs);
+  assert.equal(peopleRevisions.baseCommit, "f54c97098cfed468d7e3145bd730c41c0b27fdb7");
+  assert.equal(peopleRevisions.updatedAt, "2026-10-11");
+  assert.deepEqual(Object.keys(peopleRevisions.articles).sort(), peopleRevisionSlugs);
+  assert.equal(revisedSlugs.length, 24);
+  for (const registry of [revisions, peopleRevisions]) {
+    for (const [slug, article] of Object.entries(registry.articles)) {
+      assert.deepEqual(Object.keys(article.notes).sort(), revisedLocales);
+      for (const locale of revisedLocales) assert.ok(article.notes[locale as keyof typeof article.notes].trim(), `${slug}/${locale}: update note missing`);
+    }
   }
-  const knownSlugs = new Set([...journalArticles.map(article => article.slug), ...hexagramIds, ...tarotLearningIds.map(tarotLearningSlug)]);
+  const knownSlugs = new Set([...journalArticles.map(article => article.slug), "day-pillars", ...hexagramIds, ...tarotLearningIds.map(tarotLearningSlug)]);
   for (const slug of [...knownSlugs, "missing", "__proto__", "constructor", "toString"]) {
     for (const locale of journalLocales) {
       const update = editorialUpdate(slug, locale);
@@ -56,15 +69,27 @@ test("the revision registry and date utility apply only to the four edited zh/en
   }
 });
 
-test("the full sitemap changes exactly eight dates and preserves every other baseline URL and date", () => {
+test("the combined rollouts change exactly 48 dates against the pre-sample baseline and preserve all other URLs and dates", () => {
   const entries = sitemap();
   assert.equal(entries.length, 982);
   assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length);
   const updated = entries.filter(entry => revisedUrls.has(entry.url));
+  assert.equal(updated.length, 48);
   assert.deepEqual(updated.map(entry => entry.url).sort(), [...revisedUrls.keys()].sort());
   for (const entry of updated) assert.equal(entry.lastModified, "2026-10-11", entry.url);
   const restoredBaseline = entries.map(entry => [entry.url, revisedUrls.get(entry.url) ?? entry.lastModified ?? null]).sort(([a], [b]) => String(a).localeCompare(String(b)));
-  assert.equal(digest(restoredBaseline), baselineSitemapDateHash, "a URL or date outside the eight edited editions changed");
+  assert.equal(digest(restoredBaseline), baselineSitemapDateHash, "a URL or date outside the edited editions changed");
+});
+
+test("the birthday rollout changes exactly 40 sitemap dates from the current main baseline", () => {
+  const baselineArticles: Record<string, Record<ReportLocale, { dateModified: string }>> = previousEditions.articles;
+  const priorDates = new Map(peopleRevisionSlugs.flatMap(slug => revisedLocales.map(locale => [absoluteUrl(journalHref(locale, slug)), slug === "day-pillars" ? "2026-09-23" : baselineArticles[slug][locale].dateModified] as const)));
+  const entries = sitemap();
+  const changes = entries.filter(entry => priorDates.has(entry.url) && entry.lastModified !== priorDates.get(entry.url));
+  assert.equal(changes.length, 40);
+  assert.ok(changes.every(entry => !new URL(entry.url).pathname.endsWith("ding-you-day-pillar")), "Ding You was already updated on the same date");
+  const restored = entries.map(entry => [entry.url, priorDates.get(entry.url) ?? entry.lastModified ?? null]).sort(([a], [b]) => String(a).localeCompare(String(b)));
+  assert.equal(digest(restored), previousEditions.sitemapDateHash, "a URL or date outside this birthday rollout changed");
 });
 
 test("journal metadata and Article schema use per-language revisions without freshening base publication dates", () => {

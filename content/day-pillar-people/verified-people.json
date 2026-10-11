@@ -1,0 +1,540 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-11",
+  "people": [
+    {
+      "id": "toni-morrison",
+      "name": { "en": "Toni Morrison", "zh": "托妮·莫里森" },
+      "birthDate": "1931-02-18",
+      "dayPillar": "甲辰",
+      "field": { "en": "Literature", "zh": "文学" },
+      "birthPlace": { "city": "Lorain", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "Lorain Public Library System",
+          "url": "https://loraincountymemory.org/collections/show/8",
+          "evidence": "Collection description explicitly states birth on February 18, 1931 in Lorain.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 20; the U.S. National Archives also corroborates the date.",
+        "zh": "原文正文第20行；美国国家档案馆另证日期。"
+      }
+    },
+    {
+      "id": "katherine-johnson",
+      "name": { "en": "Katherine Johnson", "zh": "凯瑟琳·约翰逊" },
+      "birthDate": "1918-08-26",
+      "dayPillar": "乙巳",
+      "field": { "en": "Mathematics and spaceflight", "zh": "数学与航天" },
+      "birthPlace": { "city": "White Sulphur Springs", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "NASA",
+          "url": "https://science.nasa.gov/people/katherine-johnson/",
+          "evidence": "Education section states August 26, 1918, White Sulphur Springs, West Virginia.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 256.",
+        "zh": "原文第256行。"
+      }
+    },
+    {
+      "id": "sally-ride",
+      "name": { "en": "Sally Ride", "zh": "萨莉·赖德" },
+      "birthDate": "1951-05-26",
+      "dayPillar": "丙寅",
+      "field": { "en": "Spaceflight and physics", "zh": "航天与物理" },
+      "birthPlace": { "city": "Los Angeles", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/history/sally-ride-and-valentina-tereshkova-changing-the-course-of-human-space-exploration/",
+          "evidence": "Biography states birth in Los Angeles on May 26, 1951.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 262. Its death month contains a typo, so that field is not collected; the birthday agrees with NASA's official astronaut biography PDF.",
+        "zh": "原文第262行。本文死亡月份有笔误，未采集该字段；生日与NASA官方宇航员履历PDF一致。"
+      }
+    },
+    {
+      "id": "martin-luther-king-jr",
+      "name": { "en": "Martin Luther King Jr.", "zh": "马丁·路德·金" },
+      "birthDate": "1929-01-15",
+      "dayPillar": "庚申",
+      "field": { "en": "Public service", "zh": "公共事业" },
+      "birthPlace": { "city": "Atlanta", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/people/martinlutherkingjr.htm",
+          "evidence": "Quick Facts: Atlanta, GA; January 15, 1929.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "marie-curie",
+      "name": { "en": "Marie Curie", "zh": "玛丽·居里" },
+      "birthDate": "1867-11-07",
+      "dayPillar": "辛卯",
+      "field": { "en": "Physics and chemistry", "zh": "物理与化学" },
+      "birthPlace": { "city": "Warsaw", "country": "Poland" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/people/manhattan-project-pioneers-marie-curie.htm",
+          "evidence": "Quick Facts: Warsaw, Poland; November 7, 1867.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37. Poland is the present-day country name; Warsaw was within the Russian Empire at her birth. The listed birthday follows the source's public Gregorian biographical convention; no conversion from an original historical civil record is inferred.",
+        "zh": "原文第31–37行；地点国家采用今日名称，出生时属俄罗斯帝国。生日采用来源公开传记的公历口径，不推断原始历史民用记载的历法转换。"
+      },
+      "displayNote": {
+        "en": "This uses the public biography's Gregorian birthday, rather than converting an original historical calendar record. Warsaw was then within the Russian Empire; Poland is the present-day country name.",
+        "zh": "采用公开传记的公历生日，不据此推断原始历史记载的历法转换。出生时华沙属俄罗斯帝国，波兰为今日国家名称。"
+      }
+    },
+    {
+      "id": "serena-williams",
+      "name": { "en": "Serena Williams", "zh": "塞雷娜·威廉姆斯" },
+      "birthDate": "1981-09-26",
+      "dayPillar": "丁未",
+      "field": { "en": "Sport · tennis", "zh": "体育·网球" },
+      "birthPlace": { "city": "Saginaw", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "WTA",
+          "url": "https://wtafiles.wtatennis.com/pdf/publications/2021WTAMediaGuide/2021MG_PlayerProfiles_FINAL.pdf",
+          "evidence": "Player profile date of birth: 26-SEP-1981 (SAGINAW, MI, USA).",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11",
+          "locator": "PDF page 86; printed page 114",
+          "pageNumber": 86
+        }
+      ],
+      "notes": {
+        "en": "2021 WTA Media Guide, PDF page 86, printed page 114.",
+        "zh": "2021 WTA Media Guide，PDF第86页，印刷页114。"
+      }
+    },
+    {
+      "id": "venus-williams",
+      "name": { "en": "Venus Williams", "zh": "维纳斯·威廉姆斯" },
+      "birthDate": "1980-06-17",
+      "dayPillar": "辛酉",
+      "field": { "en": "Sport · tennis", "zh": "体育·网球" },
+      "birthPlace": { "city": "Lynwood", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "WTA",
+          "url": "https://wtafiles.wtatennis.com/pdf/publications/2021WTAMediaGuide/2021MG_PlayerProfiles_FINAL.pdf",
+          "evidence": "Player profile date of birth: 17-JUN-1980 (LYNWOOD, CA, USA).",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11",
+          "locator": "PDF page 88; printed page 116",
+          "pageNumber": 88
+        }
+      ],
+      "notes": {
+        "en": "2021 WTA Media Guide, PDF page 88, printed page 116.",
+        "zh": "2021 WTA Media Guide，PDF第88页，印刷页116。"
+      }
+    },
+    {
+      "id": "frida-kahlo",
+      "name": { "en": "Frida Kahlo", "zh": "弗里达·卡罗" },
+      "birthDate": "1907-07-06",
+      "dayPillar": "丙辰",
+      "field": { "en": "Art · painting", "zh": "艺术·绘画" },
+      "birthPlace": { "city": "Mexico City (Coyoacán)", "country": "Mexico" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "Museo Frida Kahlo",
+          "url": "https://www.museofridakahlo.org.mx/frida/?lang=en",
+          "evidence": "Timeline heading July 6, 1907 followed by birth in Coyoacán.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 182–187. The circulated 1910 date is associated with the Mexican Revolution; the museum explicitly places her birth three years earlier, so 1910 is not used.",
+        "zh": "原文第182–187行；1910是与墨西哥革命关联的流传说法，博物馆明确出生早三年，不采用1910。"
+      },
+      "displayNote": {
+        "en": "The museum dates her birth to 6 July 1907. The circulated 1910 date is associated with the Mexican Revolution and is not used here.",
+        "zh": "博物馆记载生日为1907年7月6日；流传的1910年说法与墨西哥革命有关，此处不采用。"
+      }
+    },
+    {
+      "id": "albert-einstein",
+      "name": { "en": "Albert Einstein", "zh": "阿尔伯特·爱因斯坦" },
+      "birthDate": "1879-03-14",
+      "dayPillar": "丙申",
+      "field": { "en": "Physics", "zh": "物理" },
+      "birthPlace": { "city": "Ulm", "country": "Germany" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/people/manhattan-project-pioneers-albert-einstein.htm",
+          "evidence": "Quick Facts: Ulm, Germany; March 14, 1879.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 30–36.",
+        "zh": "原文第30–36行。"
+      }
+    },
+    {
+      "id": "charlie-chaplin",
+      "name": { "en": "Charlie Chaplin", "zh": "查理·卓别林" },
+      "birthDate": "1889-04-16",
+      "dayPillar": "壬戌",
+      "field": { "en": "Art · film", "zh": "艺术·电影" },
+      "birthPlace": { "city": "London", "country": "United Kingdom" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "Charlie Chaplin official website",
+          "url": "https://www.charliechaplin.com/en/articles/biography",
+          "evidence": "Overview states London, England, April 16th, 1889.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 37. This is the official biography's adopted date, not a claim that a birth certificate has been verified; the official birthday article attributes it to his autobiography.",
+        "zh": "原文第37行；为官方传记采用日期，未声称已核出生证；官方生日文章注明依其自传。"
+      },
+      "displayNote": {
+        "en": "The official biography adopts this date, which the official birthday article attributes to Chaplin's autobiography. It is not presented as a birth-certificate finding.",
+        "zh": "采用官方传记日期，官方生日文章注明依据卓别林自传；这不等于出生证明的核验结论。"
+      }
+    },
+    {
+      "id": "tsung-dao-lee",
+      "name": { "en": "Tsung-Dao Lee", "zh": "李政道" },
+      "birthDate": "1926-11-24",
+      "dayPillar": "丁巳",
+      "field": { "en": "Physics", "zh": "物理" },
+      "birthPlace": { "city": "Shanghai", "country": "China" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "上海交通大学李政道图书馆",
+          "url": "https://tdllib.sjtu.edu.cn/lzd/rwtp.htm",
+          "evidence": "人物图谱的母亲与六子女条目明载出生日期1926-11-24及出生地上海。",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 57; the chronology page agrees.",
+        "zh": "原文第57行；大事记页亦一致。"
+      }
+    },
+    {
+      "id": "qian-xuesen",
+      "name": { "en": "Qian Xuesen", "zh": "钱学森" },
+      "birthDate": "1911-12-11",
+      "dayPillar": "乙卯",
+      "field": { "en": "Aerospace and engineering", "zh": "航空航天与工程" },
+      "birthPlace": { "city": "Shanghai", "country": "China" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "清华大学",
+          "url": "https://www.tsinghua.edu.cn/info/1856/74089.htm",
+          "evidence": "生平正文及文末简历均记1911-12-11出生于上海。",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in lines 39 and 138. The record uses the source's Gregorian biographical date without reconstructing a lunar date.",
+        "zh": "原文第39、138行；保存来源采用公历传记日期，不反推农历。"
+      },
+      "displayNote": {
+        "en": "This uses the source's public Gregorian biographical date; no lunar birthday is reconstructed from it.",
+        "zh": "采用来源公开传记的公历日期，不据此反推农历生日。"
+      }
+    },
+    {
+      "id": "ella-fitzgerald",
+      "name": { "en": "Ella Fitzgerald", "zh": "艾拉·菲茨杰拉德" },
+      "birthDate": "1917-04-25",
+      "dayPillar": "丁酉",
+      "field": { "en": "Art · music", "zh": "艺术·音乐" },
+      "birthPlace": { "city": "Newport News", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "National Women's History Museum",
+          "url": "https://www.womenshistory.org/education-resources/biographies/ella-fitzgerald",
+          "evidence": "Biography states April 25, 1917, Newport News, Virginia.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 14. A Library of Congress collection record also lists 1917, while one topical navigation summary incorrectly lists 1918; the date agreed by the biography and collection record is used.",
+        "zh": "原文第14行；国会图书馆馆藏记录亦列1917，但一个专题导航摘要误列1918；采用传记及馆藏一致日期。"
+      },
+      "displayNote": {
+        "en": "The museum biography and a Library of Congress collection record agree on 1917. One Library of Congress navigation summary lists 1918 in error; 1917 is used here.",
+        "zh": "博物馆传记与国会图书馆馆藏记录均采用1917年；国会图书馆一处导航摘要误列1918年，此处采用1917年。"
+      }
+    },
+    {
+      "id": "duke-ellington",
+      "name": { "en": "Duke Ellington", "zh": "杜克·艾灵顿" },
+      "birthDate": "1899-04-29",
+      "dayPillar": "丁卯",
+      "field": { "en": "Art · music", "zh": "艺术·音乐" },
+      "birthPlace": { "city": "Washington, D.C.", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "Library of Congress",
+          "url": "https://blogs.loc.gov/music/2010/04/happy-birthday-sir-duke/",
+          "evidence": "Library article states birth April 29, 1899 in Washington, D.C.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 315.",
+        "zh": "原文第315行。"
+      }
+    },
+    {
+      "id": "rachel-carson",
+      "name": { "en": "Rachel Carson", "zh": "蕾切尔·卡森" },
+      "birthDate": "1907-05-27",
+      "dayPillar": "丙子",
+      "field": { "en": "Science writing and environmental protection", "zh": "科学写作与环境保护" },
+      "birthPlace": { "city": "Springdale", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/people/rachel-carson.htm",
+          "evidence": "Quick Facts: Springdale, PA; May 27, 1907.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "maya-angelou",
+      "name": { "en": "Maya Angelou", "zh": "玛雅·安吉罗" },
+      "birthDate": "1928-04-04",
+      "dayPillar": "甲戌",
+      "field": { "en": "Literature", "zh": "文学" },
+      "birthPlace": { "city": "St. Louis", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "National Women's History Museum",
+          "url": "https://www.womenshistory.org/education-resources/biographies/maya-angelou",
+          "evidence": "Biography identifies April 4, 1928 and St. Louis, Missouri.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 14.",
+        "zh": "原文第14行。"
+      }
+    },
+    {
+      "id": "thomas-edison",
+      "name": { "en": "Thomas Edison", "zh": "托马斯·爱迪生" },
+      "birthDate": "1847-02-11",
+      "dayPillar": "丁丑",
+      "field": { "en": "Invention and engineering", "zh": "发明与工程" },
+      "birthPlace": { "city": "Milan", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/people/thomas-edison-biography-1847-1882-birth-to-pearl-street.htm",
+          "evidence": "Quick Facts: Milan, Ohio; February 11, 1847.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "eleanor-roosevelt",
+      "name": { "en": "Eleanor Roosevelt", "zh": "埃莉诺·罗斯福" },
+      "birthDate": "1884-10-11",
+      "dayPillar": "甲午",
+      "field": { "en": "Public service", "zh": "公共事业" },
+      "birthPlace": { "city": "New York City", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/people/eleanor-roosevelt.htm",
+          "evidence": "Quick Facts: New York City; October 11, 1884.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "neil-armstrong",
+      "name": { "en": "Neil Armstrong", "zh": "尼尔·阿姆斯特朗" },
+      "birthDate": "1930-08-05",
+      "dayPillar": "丁亥",
+      "field": { "en": "Spaceflight", "zh": "航天" },
+      "birthPlace": { "city": "Wapakoneta", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/people/neil-a-armstrong/?linkId=536088590",
+          "evidence": "Official biography states August 5, 1930, Wapakoneta, Ohio.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 256.",
+        "zh": "原文第256行。"
+      }
+    },
+    {
+      "id": "ansel-adams",
+      "name": { "en": "Ansel Adams", "zh": "安塞尔·亚当斯" },
+      "birthDate": "1902-02-20",
+      "dayPillar": "甲戌",
+      "field": { "en": "Art · photography", "zh": "艺术·摄影" },
+      "birthPlace": { "city": "San Francisco", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/people/ansel-adams.htm",
+          "evidence": "Quick Facts: San Francisco; February 20, 1902.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "rosa-parks",
+      "name": { "en": "Rosa Parks", "zh": "罗莎·帕克斯" },
+      "birthDate": "1913-02-04",
+      "dayPillar": "丙辰",
+      "field": { "en": "Public service", "zh": "公共事业" },
+      "birthPlace": { "city": "Tuskegee", "country": "United States" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/people/rosa-parks.htm",
+          "evidence": "Quick Facts: Tuskegee, AL; February 4, 1913.",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source lists these facts in lines 31–37.",
+        "zh": "原文第31–37行。"
+      }
+    },
+    {
+      "id": "tu-youyou",
+      "name": { "en": "Tu Youyou", "zh": "屠呦呦" },
+      "birthDate": "1930-12-30",
+      "dayPillar": "甲寅",
+      "field": { "en": "Pharmaceutical science", "zh": "药学" },
+      "birthPlace": { "city": "Ningbo", "country": "China" },
+      "calendar": "gregorian",
+      "birthTime": null,
+      "sources": [
+        {
+          "publisher": "北京大学新闻网（转载健康中国）",
+          "url": "https://news.pku.edu.cn/info/1441/7581.htm",
+          "evidence": "文章以1930-12-30宁波出生和取名事件开篇。",
+          "evidenceType": "paraphrase_of_opened_original_page",
+          "accessedAt": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "en": "The opened source states the birthday in line 21 and is a Peking University News reprint attributed to Healthy China. The search index of her Nobel autobiography agrees, but the Nobel page returned 403 and is not counted as opened evidence.",
+        "zh": "原文第21行；北京大学新闻网转载健康中国。Nobel本人自传搜索索引一致，但Nobel页面403未列为已打开证据。"
+      },
+      "displayNote": {
+        "en": "The birthday source is Peking University News's reprint of Healthy China.",
+        "zh": "生日来源为北京大学新闻网转载的健康中国文章。"
+      }
+    }
+  ]
+}

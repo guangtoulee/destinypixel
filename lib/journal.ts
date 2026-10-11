@@ -13,6 +13,7 @@ import { threeCardTarotArticle, threeCardTarotRussian } from "@/lib/journal-thre
 import { pamelaColmanSmithArticle, pamelaColmanSmithRussian } from "@/lib/journal-pamela-colman-smith";
 import { pillarProfileArticles, pillarProfileRussian } from "@/lib/journal-pillar-profiles";
 import { getPillarImagePath } from "@/lib/archetype-assets";
+import { withDayPillarPeople, type DayPillarPerson } from "@/lib/day-pillar-people";
 import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
 import { journalLocales, journalLanguageTags, journalOgLocales, journalUi, journalHomeHref, toTraditional, type JournalLocale } from "@/lib/journal-locales";
 export { journalLocales, journalLanguageTags, journalUi } from "@/lib/journal-locales";
@@ -29,6 +30,8 @@ export type JournalSection = {
   sources?: { label: string; href: string }[];
   figures?: { src: string; width: number; height: number; alt: string; caption: string; afterParagraph: number }[];
   links?: { text: string; href: string }[];
+  /** Sourced public birth dates; no birth-time or complete-chart inference. */
+  people?: DayPillarPerson[];
 };
 export type JournalTranslation = {
   title: string;
@@ -311,7 +314,8 @@ function applyReplacements(copy: JournalTranslation, replacements?: [string, str
 export const journalArticles: JournalArticle[] = [...tarotEducationArticles, ...journalSources.map((article) => {
   const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
-  return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: { ...article.translations, "zh-TW": article.traditionalTranslation ?? applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru } };
+  const translations = { ...article.translations, "zh-TW": article.traditionalTranslation ?? applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru };
+  return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: article.pillar ? { ...translations, en: withDayPillarPeople(translations.en, article.pillar, "en"), zh: withDayPillarPeople(translations.zh, article.pillar, "zh") } : translations };
 })];
 
 export function journalAlternates(slug?: string): Record<string, string> {
@@ -350,8 +354,10 @@ export function journalArticleSchema(article: JournalArticle, locale: JournalLoc
   const copy = article.translations[locale];
   const url = absoluteUrl(journalHref(locale, article.slug));
   const home = absoluteUrl(journalHomeHref(locale));
+  const originalCitations = copy.sections.flatMap(section => section.sources?.map(source => source.href.startsWith("/") ? absoluteUrl(source.href) : source.href) ?? []);
+  const birthdayCitations = [...new Set(copy.sections.flatMap(section => section.people?.flatMap(person => person.sources.map(source => source.url)) ?? []))].filter(href => !originalCitations.includes(href));
   return [
-    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: editorialModifiedAt(article.slug, locale, article.updatedAt), ...(article.image ? { image: [absoluteUrl(article.image.src)] } : article.pillar ? { image: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}), ...(article.about ? { about: { ...article.about, ...(article.about.image ? { image: absoluteUrl(article.about.image) } : {}) } } : {}), author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: copy.sections.flatMap((section) => section.sources?.map((source) => source.href.startsWith("/") ? absoluteUrl(source.href) : source.href) ?? []), isAccessibleForFree: true },
+    { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.title, description: copy.description, mainEntityOfPage: url, inLanguage: journalLanguageTags[locale], datePublished: article.publishedAt, dateModified: editorialModifiedAt(article.slug, locale, article.updatedAt), ...(article.image ? { image: [absoluteUrl(article.image.src)] } : article.pillar ? { image: [absoluteUrl(getPillarImagePath(article.pillar))] } : {}), ...(article.about ? { about: { ...article.about, ...(article.about.image ? { image: absoluteUrl(article.about.image) } : {}) } } : {}), author: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, publisher: { "@type": "Organization", name: siteName, url: absoluteUrl("/") }, citation: [...originalCitations, ...birthdayCitations], isAccessibleForFree: true },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: journalUi[locale].home, item: home }, { "@type": "ListItem", position: 2, name: journalUi[locale].journal, item: absoluteUrl(journalHref(locale)) }, { "@type": "ListItem", position: 3, name: copy.title, item: url }] },
   ] as const;
 }

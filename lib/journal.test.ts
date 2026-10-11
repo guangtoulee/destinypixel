@@ -4,11 +4,16 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
 import { absoluteUrl } from "@/lib/seo";
-import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags } from "@/lib/journal";
+import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags, type JournalTranslation } from "@/lib/journal";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { toTraditional } from "@/lib/journal-locales";
 import { editorialModifiedAt } from "@/lib/editorial-updates";
 import { calculateDateDayPillar } from "@/lib/day-pillar";
+
+// Source-linked people are additive in zh/en; older editions retain their sections.
+const originalSectionShapes = (copy: JournalTranslation) => copy.sections
+  .filter(section => !(section.id === "famous-birthdays" && section.people && section.paragraphs.length === 0 && !section.table))
+  .map(section => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]);
 
 test("published famous birthdays reproduce the featured day pillar in every edition", () => {
   const article = journalArticles.find((item) => item.slug === "jia-zi-day-pillar")!;
@@ -71,7 +76,7 @@ test("articles have translated sections, truthful free Article schema and useful
     for (const locale of journalLocales) {
       const translation = article.translations[locale];
       if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
-        assert.deepEqual(translation.sections.map((section) => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]), article.translations.en.sections.map((section) => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]));
+        assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(article.translations.en));
       }
       assert.equal(new Set(translation.sections.map(section => section.id)).size, translation.sections.length);
       if (locale === "ru") assert.match(translation.title, /[А-Яа-яЁё]/);
