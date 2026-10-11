@@ -1,0 +1,28 @@
+
+/workspace/destinypixel/components/symbolic-insight-experience.baseline.tsx
+  1093:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/workspace/destinypixel/components/symbolic-insight-experience.baseline.tsx:1093:7
+  1091 |
+  1092 |     if (storedLocale !== locale) {
+> 1093 |       setLocale(storedLocale);
+       |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  1094 |     }
+  1095 |     // eslint-disable-next-line react-hooks/exhaustive-deps
+  1096 |   }, []);  react-hooks/set-state-in-effect
+  1195:11  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @next/next/no-html-link-for-pages
+  1200:13  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @next/next/no-html-link-for-pages
+
+✖ 3 problems (3 errors, 0 warnings)
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

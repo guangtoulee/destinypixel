@@ -1,0 +1,14 @@
+# Keep the full generated screenshot matrix locally; commit representative views.
+browser-local/
+browser-local.log
+browser-final/*.png
+!browser-final/zh-iching-320.png
+!browser-final/en-iching-1440.png
+!browser-final/zh-coins-raw-faces-390.png
+!browser-final/ru-coins-record-320.png
+!browser-final/en-trigram-qian-body-390.png
+!browser-final/zh-trigram-qian-body-390.png
+!browser-final/zh-TW-trigram-qian-body-390.png
+!browser-final/ru-trigram-qian-body-390.png
+!browser-final/zh-trigram-qian-figure-390.png
+!browser-final/zh-coins-complete-result-390.png
