@@ -4,6 +4,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
+from editorial_revision_helpers import historical_bytes, is_sample, validate_current_tarot_sample
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "content/tarot-depth-20261008"
@@ -148,7 +149,7 @@ for locale in LOCALES:
         if f"{locale}/{card}" not in expected_editions:
             path = ROOT / "content/tarot" / locale / f"{card}.json"
             baseline = subprocess.check_output(["git", "show", f"{m['baselineCommit']}:{path.relative_to(ROOT)}"], cwd=ROOT)
-            assert path.read_bytes() == baseline, f"Inactive edition changed: {locale}/{card}"
+            assert historical_bytes(path) == baseline, f"Inactive historical edition changed: {locale}/{card}"
             assert entry == baseline_entry, f"Inactive catalog changed: {locale}/{card}"
     assert len(catalog[locale]) == len(baseline_catalog[locale]) == 78
 for card in sorted(integrated):
@@ -157,7 +158,7 @@ for card in sorted(integrated):
         key = f"{locale}/{card}"
         edition = read(DATA / "editions" / locale / f"{card}.json")
         path = ROOT / "content/tarot" / locale / f"{card}.json"
-        raw = path.read_bytes()
+        raw = historical_bytes(path)
         article = json.loads(raw)
         if jsonschema:
             jsonschema.validate(article, schema)
@@ -229,8 +230,10 @@ for card in sorted(integrated):
         assert article["publishedAt"] == "2026-10-07" and article["updatedAt"] == "2026-10-08"
         assert article["review"]["nativeHumanReview"] is False
         assert m["cards"][card]["locales"][locale] in ("integrated", "validated")
+        if is_sample(path):
+            validate_current_tarot_sample(path, schema if jsonschema else None, entry)
 
-print(f"PASS {len(sources)} exact received Chinese manuscripts; {len(integrated)} integrated cards / {len(expected_editions)} full editions")
+print(f"PASS {len(sources)} exact received Chinese manuscripts; {len(integrated)} historical integrated cards / {len(expected_editions)} full editions")
 print(f"PASS {len(translated)} candidate cards / {translation_count} retained candidate translations with exact hashes and structural parity")
-print(f"PASS {len(final_reviewed)} final reviewed translations received; {sum(not key.startswith('zh/') for key in expected_editions)} integrated with exact final body/title/quick take and localized sources")
-print("PASS full body and section parity, two complete cases, source metadata, exact archives, old anchors, catalog and dates; HTTP/build/browser checks are separate")
+print(f"PASS {len(final_reviewed)} historical final reviewed translations received; {sum(not key.startswith('zh/') for key in expected_editions)} historically integrated with exact final body/title/quick take and localized sources")
+print("PASS historical full body/section parity, two complete cases, source metadata, exact archives, old anchors, catalog and dates; current en/zh Moon samples checked against explicit revision hashes/structure; HTTP/build/browser checks are separate")

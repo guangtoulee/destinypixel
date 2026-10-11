@@ -1,4 +1,5 @@
 import type { JournalTranslation } from "./journal";
+import { dingYouTraditional } from "./journal-pillars/ding-you-traditional";
 import { yiChouDepth } from "./journal-pillars/yi-chou";
 import { bingYinDepth } from "./journal-pillars/bing-yin";
 import { dingMaoDepth } from "./journal-pillars/ding-mao";
@@ -64,7 +65,7 @@ import { renXuDepth } from "./journal-pillars/ren-xu";
 import { guiHaiDepth } from "./journal-pillars/gui-hai";
 
 // Individually edited against the original bilingual card notes; preserve URLs.
-export const fullPillarProfiles: Record<string, { updatedAt: string; translations: Record<"en" | "zh" | "ru", JournalTranslation> }> = {
+export const fullPillarProfiles: Record<string, { updatedAt: string; translations: Record<"en" | "zh" | "ru", JournalTranslation>; traditionalTranslation?: JournalTranslation }> = {
   "乙丑": { updatedAt: "2026-09-24", translations: yiChouDepth },
   "丙寅": { updatedAt: "2026-09-24", translations: bingYinDepth },
   "丁卯": { updatedAt: "2026-09-29", translations: dingMaoDepth },
@@ -97,7 +98,7 @@ export const fullPillarProfiles: Record<string, { updatedAt: string; translation
   "甲午": { updatedAt: "2026-10-05", translations: jiaWuDepth },
   "乙未": { updatedAt: "2026-10-05", translations: yiWeiDepth },
   "丙申": { updatedAt: "2026-10-05", translations: bingShenDepth },
-  "丁酉": { updatedAt: "2026-10-05", translations: dingYouDepth },
+  "丁酉": { updatedAt: "2026-10-05", translations: dingYouDepth, traditionalTranslation: dingYouTraditional },
   "戊戌": { updatedAt: "2026-10-05", translations: wuXuDepth },
   "己亥": { updatedAt: "2026-10-05", translations: jiHaiDepth },
   "庚子": { updatedAt: "2026-10-05", translations: gengZiDepth },

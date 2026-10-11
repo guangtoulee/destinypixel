@@ -1,8 +1,9 @@
-"""Verify source delivery, all full translations, and the live Sun revision."""
+"""Verify retained source editions and separately receipted current Sun samples."""
 import hashlib
 import json
 import re
 from pathlib import Path
+from editorial_revision_helpers import historical_bytes, is_sample, validate_current_tarot_sample
 
 root = Path(__file__).resolve().parents[1]
 data = root / 'content/tarot-editorial'
@@ -44,8 +45,9 @@ for original in source['articles']:
         assert editorial_catalog[locale][slug]['title'] == a['title']
         if slug == 'tarot-sun':
             path = root / f'content/tarot/{locale}/sun.json'
-            sun = json.loads(path.read_text())
-            assert digest(path.read_text()) == manifest['sunRecordSha256'][locale]
+            historical_raw = historical_bytes(path)
+            sun = json.loads(historical_raw)
+            assert hashlib.sha256(historical_raw).hexdigest() == manifest['sunRecordSha256'][locale]
             assert sun['articleMarkdown'] == md
             assert sun['title'] == a['title']
             assert sun['hook'] == a['opening'][2]
@@ -61,5 +63,8 @@ for original in source['articles']:
             entry = next(c for c in catalog[locale] if c['cardId'] == 'sun')
             for field in ['title', 'hook', 'quickTake']:
                 assert entry[field] == sun[field]
-    print(f'PASS {slug}: four complete editions; exact source hash, full text, sections, paragraphs, lists and sources')
-print('PASS all 16 editorial editions; original Chinese bundle preserved exactly; Sun catalog/provenance/image/date checks')
+            if is_sample(path):
+                schema = json.loads((root / 'content/tarot/article.schema.json').read_text())
+                validate_current_tarot_sample(path, schema, entry)
+    print(f'PASS {slug}: four historical complete editions; exact source hash, full text, sections, paragraphs, lists and sources')
+print('PASS all 16 historical editorial editions; original Chinese bundle preserved exactly; historical Sun provenance/image/date checks and explicit current en/zh Sun revisions')

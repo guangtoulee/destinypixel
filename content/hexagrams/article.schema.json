@@ -3,6 +3,10 @@
   "title": "DestinyPixel complete hexagram learning article v2",
   "type": "object",
   "properties": {
+    "subtitle": {
+      "type": "string",
+      "minLength": 1
+    },
     "schemaVersion": {
       "const": 2
     },

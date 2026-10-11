@@ -34,6 +34,7 @@
 .breadcrumb a:hover { color: #674685; }
 .articleHero .introduction { max-width: 850px; }
 .byline { display: flex; gap: 13px; flex-wrap: wrap; font-size: 11px; color: #8d8195; margin-top: 26px; }
+.byline[data-editorial-update] { font-size: 12px; line-height: 1.7; color: #6e6878; }
 .readingLayout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; padding-block: 42px 80px; border-top: 1px solid #e8e1ee; }
 .contents { position: sticky; top: 28px; align-self: start; }
 .contents > p { font-size: 10px; color: #9c86aa; letter-spacing: .8px; margin: 0 0 20px; }

@@ -4,11 +4,11 @@ import type { ReportLocale } from "@/lib/report-i18n";
 import { loaders } from "./loaders";
 export type TarotLearningArticle = {
  cardId:string; locale:string; title:string; nameLocalized:string; number:string; deckOrder:number; arcana:string;
- quickTake:{upright:string;reversed:string}; hook:string; keywords:string[]; plainLanguageSummary:string|null;
+ quickTake:{upright:string;reversed:string}; quickTakeLabel?:string; shortAnswer?:{title:string;body:string}; hook:string; keywords:string[]; plainLanguageSummary:string|null;
  openingParagraphs?:string[]; publishedAt?:string; updatedAt?:string;
  legacyIntroAnchors?:string[]; legacyRelatedAnchors?:string[];
  sections:{id:string;role:string;title:string;bodyMarkdown:string;legacyAnchors?:string[]}[];
- sourceAppendix?:{id:string;title:string};
+ sourceAppendix?:{id:string;title:string;summary?:string};
  sources:{title:string;url:string|null}[]; relatedCards:{cardId:string;name?:string;reason:string}[];
  articleMarkdown:string;
 };

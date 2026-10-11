@@ -10,6 +10,7 @@ import TarotLearningArticle from "@/components/tarot-learning-article";
 import { tarotLearningId,tarotLearningIds,tarotLearningSlug } from "@/lib/tarot-learning/paths";
 import { tarotLearningMetadata } from "@/lib/tarot-learning/metadata";
 import type { Metadata } from "next";
+import { editorialUpdate, editorialModifiedAt } from "@/lib/editorial-updates";
 import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
 import Markdown from "react-markdown";
@@ -76,6 +77,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const locale = normalizeJournalLocale((await searchParams)?.locale);
   const ui = journalUi[locale];
   const copy = article.translations[locale];
+  const updatedAt = editorialModifiedAt(article.slug, locale, article.updatedAt);
+  const update = editorialUpdate(article.slug, locale);
   const library = pillarLibraryCopy(locale);
   const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
   const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
@@ -96,7 +99,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           {copy.answer && <p className={styles.directAnswer}>{copy.answer}</p>}
           <p className={styles.introduction}>{copy.introduction}</p>
           {copy.openingParagraphs?.map((paragraph, index) => <p key={index} className={styles.introduction}>{paragraph}</p>)}
-          <div className={styles.byline}><span>DestinyPixel</span><span aria-hidden="true">·</span><span>{ui.published} <time dateTime={article.publishedAt}>{article.publishedAt}</time></span>{article.updatedAt !== article.publishedAt && <span>{ui.updated} <time dateTime={article.updatedAt}>{article.updatedAt}</time></span>}</div>
+          <div className={styles.byline}><span>DestinyPixel</span><span aria-hidden="true">·</span><span>{ui.published} <time dateTime={article.publishedAt}>{article.publishedAt}</time></span>{updatedAt !== article.publishedAt && <span>{ui.updated} <time dateTime={updatedAt}>{updatedAt}</time></span>}</div>
+          {update && <p className={styles.byline} data-editorial-update>{update.note}</p>}
           {article.pillar && <a className={styles.libraryTextLink} href={pillarLibraryHref(locale)}>{library.browse}<ArrowRight size={16} aria-hidden="true" /></a>}
           </div>
           {article.pillar && <figure className={styles.portraitArt}><Image src={getPillarImagePath(article.pillar)} alt={`${article.pillar} · ${pillarName(article.pillar, locale)} · ${library.art}`} width={768} height={1024} priority sizes="(max-width:650px) 70vw, 290px" /><figcaption>{library.art}</figcaption></figure>}

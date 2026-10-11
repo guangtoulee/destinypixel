@@ -1,0 +1,119 @@
+FINAL PRODUCTION BUILD
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 41ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 16.6s
+  Running TypeScript ...
+  Finished TypeScript in 5.8s ...
+  Collecting page data using 4 workers ...
+⚠ Using edge runtime on a page currently disables static generation for that page
+  Generating static pages using 4 workers (0/417) ...
+  Generating static pages using 4 workers (104/417) 
+  Generating static pages using 4 workers (208/417) 
+  Generating static pages using 4 workers (312/417) 
+✓ Generating static pages using 4 workers (417/417) in 3.3s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+
+
+HEXAGRAM
+PASS zh: 64 approved historical articles with exact collection/article hashes; 64 current articles with explicit sample hashes, schema, six lines and source quotes
+PASS en: 64 approved historical articles with exact collection/article hashes; 64 current articles with explicit sample hashes, schema, six lines and source quotes
+PASS zh-TW: 64 approved historical articles with exact collection/article hashes; 64 current articles with explicit sample hashes, schema, six lines and source quotes
+PASS ru: 64 approved historical articles with exact collection/article hashes; 64 current articles with explicit sample hashes, schema, six lines and source quotes
+PASS 256 complete editions, 1536 regular line explanations, 8 separate special statements, 64 verified identities; archive-wide packaging not evaluated
+
+
+EDITORIAL
+PASS tarot-sun: four historical complete editions; exact source hash, full text, sections, paragraphs, lists and sources
+PASS why-the-four-fours-differ: four historical complete editions; exact source hash, full text, sections, paragraphs, lists and sources
+PASS how-to-connect-three-tarot-cards: four historical complete editions; exact source hash, full text, sections, paragraphs, lists and sources
+PASS tarot-from-game-to-occult-traditions: four historical complete editions; exact source hash, full text, sections, paragraphs, lists and sources
+PASS all 16 historical editorial editions; original Chinese bundle preserved exactly; historical Sun provenance/image/date checks and explicit current en/zh Sun revisions
+
+
+DEPTH
+PASS 77 exact received Chinese manuscripts; 77 historical integrated cards / 308 full editions
+PASS 13 candidate cards / 39 retained candidate translations with exact hashes and structural parity
+PASS 231 historical final reviewed translations received; 231 historically integrated with exact final body/title/quick take and localized sources
+PASS historical full body/section parity, two complete cases, source metadata, exact archives, old anchors, catalog and dates; current en/zh Moon samples checked against explicit revision hashes/structure; HTTP/build/browser checks are separate
+
+
+SAMPLES
+PASS content/hexagrams/en/hexagram-11.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS content/hexagrams/zh/hexagram-11.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS content/tarot/en/moon.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS content/tarot/en/sun.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS content/tarot/zh/moon.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS content/tarot/zh/sun.json: exact current file/Markdown receipt; exact pre-edit bytes; retained legacy provenance/review and identity
+PASS exactly six amended records / 568 article records; four sample slugs in zh/en only; no added records or historical provenance rewrites
+
+
+NODE
+✔ the revision registry and date utility apply only to the four edited zh/en editions (2.357425ms)
+✔ the full sitemap changes exactly eight dates and preserves every other baseline URL and date (37.455935ms)
+✔ journal metadata and Article schema use per-language revisions without freshening base publication dates (6.400729ms)
+✔ all tarot metadata and loaded schema dates retain their previous scope except revised Sun and Moon editions (566.384844ms)
+✔ hexagram dates revise only Tai zh/en and retain the existing metadata behavior (4.544426ms)
+✔ Ding You preserves the serialized published Traditional Chinese and Russian editions (0.446823ms)
+✔ all 64 verified bottom-up patterns uniquely resolve to their actual King Wen identity (1.954397ms)
+✔ all 256 complete texts retain approved hashes except the two explicitly receipted Tai samples (618.249034ms)
+✔ directory and 256 editions have reciprocal canonical URLs and one brand suffix (8.138144ms)
+✔ learning lookup preserves released cast seeds, six-line values and Tarot draws (0.837933ms)
+✔ education slugs remain separate from the original card routes and old articles (6.150097ms)
+✔ sitemap dates preserve earlier revisions and apply the current language-specific edits (36.071243ms)
+✔ every real cast ID resolves to the complete correct-language article without aliases or fallback (693.226021ms)
+✔ all complete articles and directory have unique reciprocal language URLs and metadata (7.20442ms)
+✔ tool links cannot pull full learning articles into the client (0.429327ms)
+✔ learning links preserve released deterministic casts for English, Chinese and Russian questions (5.543978ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2376.455245
+
+
+TYPESCRIPT
+
+
+JOURNAL AND EDITORIAL TESTS
+✔ published famous birthdays reproduce the featured day pillar in every edition (14.112596ms)
+✔ Traditional Chinese preserves prose meaning instead of applying software terminology (0.246376ms)
+✔ Traditional Chinese preserves every calendar stem and branch without changing aesthetic Chou (1.30759ms)
+✔ journal advertises all four complete language editions with reciprocal URLs (16.381573ms)
+✔ articles have translated sections, truthful free Article schema and useful original length (19.314433ms)
+✔ birth form feedback renders only known localized errors (0.331201ms)
+✔ English identifies the searchable calendar pair and current animal card (0.215139ms)
+✔ education slugs remain separate from the original card routes and old articles (1.504532ms)
+✔ sitemap dates preserve earlier revisions and apply the current language-specific edits (8.351389ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 799.764956
+
+
+SCOPED ESLINT
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+exit 0
+
+
+PRODUCTION BROWSER
+PASS: 16 no-JavaScript editions, 24 viewport cases

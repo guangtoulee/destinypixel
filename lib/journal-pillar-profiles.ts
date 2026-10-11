@@ -65,6 +65,7 @@ function profile(pillar: string, locale: Language): JournalTranslation {
 // The existing Jia Zi long-form guide keeps its URL and verified birthday sources.
 export const pillarProfileArticles: JournalSourceArticle[] = dayPillarCycle.filter(p => p !== "甲子").map(pillar => ({
   slug: pillarArticleSlug(pillar), pillar, kind: "portrait", ...(fullPillarProfiles[pillar] ? { portraitDepth: "full" as const } : {}), relatedSlug: "what-is-a-day-pillar", publishedAt: "2026-09-23", updatedAt: fullPillarProfiles[pillar]?.updatedAt ?? "2026-09-23",
+  ...(fullPillarProfiles[pillar]?.traditionalTranslation ? { traditionalTranslation: fullPillarProfiles[pillar].traditionalTranslation } : {}),
   translations: { en: profile(pillar, "en"), zh: profile(pillar, "zh") },
 }));
 export const pillarProfileRussian: Record<string, JournalTranslation> = Object.fromEntries(dayPillarCycle.filter(p => p !== "甲子").map(p => [pillarArticleSlug(p), profile(p, "ru")]));
