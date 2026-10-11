@@ -1,0 +1,9 @@
+PASS /astrology: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /astrology?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=zh: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=zh-TW: rendered guide, metadata, language cluster, schema, sitemap, links
+PASS /tarot?locale=ru: rendered guide, metadata, language cluster, schema, sitemap, links
+Verified 8 tool editions and homepage/guide entry links. This does not establish search indexing or traffic.

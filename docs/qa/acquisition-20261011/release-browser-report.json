@@ -1,0 +1,716 @@
+{
+  "verifiedSourceCommit": "7e9a9b12b6e3e4e65c9190aa174c213eaaaaec06",
+  "scopeNote": "Scoped release recheck after navigation link underline CSS: overview layout/visible link affordance, existing destinations/keyboard/back, lookup entry and SSR; four-language detailed guide/lookup full acceptance is in browser-report.json for prior source.",
+  "origin": "http://localhost:3037",
+  "startedAt": "2026-10-11T14:23:09.516Z",
+  "checks": [
+    {
+      "name": "overview layout and navigation 320px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "bodyWidth": 320,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin",
+            "textDecoration": "underline"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 390px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin",
+            "textDecoration": "underline"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 430px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 430,
+          "documentWidth": 430,
+          "bodyWidth": 430,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin",
+            "textDecoration": "underline"
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview layout and navigation 1440px",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "measurements": {
+          "viewport": 1440,
+          "documentWidth": 1440,
+          "bodyWidth": 1440,
+          "overflow": 0
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin",
+            "textDecoration": "underline"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reading link step-1: keyboard Enter, Tab, Shift+Tab and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-1",
+        "target": {
+          "heading": "1. Keep four details from your temple slip",
+          "top": 29.734375,
+          "bottom": 97.234375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "reading link step-4: click and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-4",
+        "target": {
+          "heading": "4. What to do when the online poem does not match",
+          "top": 30.09375,
+          "bottom": 97.59375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "reading link step-5: click and browser Back",
+      "passed": true,
+      "evidence": {
+        "destination": "/journal/fortune-stick-number-and-edition#step-5",
+        "target": {
+          "heading": "5. Once it matches, how do you read the fortune-stick poem?",
+          "top": 30.234375,
+          "bottom": 131.484375,
+          "viewportHeight": 844
+        },
+        "backUrl": "/learn/guanyin-fortune-sticks",
+        "backResponseStatus": "history restoration"
+      }
+    },
+    {
+      "name": "lookup entered from new overview link: Guanyin preselected and number 33 has readable Source note",
+      "passed": true,
+      "evidence": {
+        "url": "/sticks?locale=en&type=guanyin",
+        "number": 33,
+        "sourceNote": "Source noteTraditional Guanyin Stick 33 theme; wording varies across temple editions.",
+        "measurements": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "overflow": 0
+        }
+      }
+    },
+    {
+      "name": "SSR JavaScript disabled: overview links, exact title/canonical, six visible FAQs and FAQ schema",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "metadata": {
+          "title": "Guanyin Fortune Sticks Online: How to Draw & Read | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": null,
+          "canonical": "https://www.destinypixel.com/learn/guanyin-fortune-sticks",
+          "hreflangs": []
+        },
+        "links": [
+          {
+            "label": "Have a temple slip? Identify its source and version",
+            "href": "/journal/fortune-stick-number-and-edition#step-1",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Poem does not match? Compare the words",
+            "href": "/journal/fortune-stick-number-and-edition#step-4",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Unsure about an allusion? Read the story in context",
+            "href": "/journal/fortune-stick-number-and-edition#step-5",
+            "textDecoration": "underline"
+          },
+          {
+            "label": "Look up a Guanyin number on DestinyPixel",
+            "href": "/sticks?locale=en&type=guanyin",
+            "textDecoration": "underline"
+          }
+        ],
+        "visibleFaqCount": 6,
+        "structuredFaqCount": 6
+      }
+    },
+    {
+      "name": "SSR JavaScript disabled: ordinary other guide remains without new navigation",
+      "passed": true,
+      "evidence": {
+        "status": 200,
+        "readingNavigationCount": 0,
+        "metadata": {
+          "title": "What Is a BaZi Birth Chart? Four Pillars Explained | DestinyPixel",
+          "htmlLang": "en",
+          "mainLang": null,
+          "canonical": "https://www.destinypixel.com/learn/what-is-bazi-birth-chart",
+          "hreflangs": []
+        }
+      }
+    },
+    {
+      "name": "browser safety and errors",
+      "passed": true,
+      "evidence": {
+        "pageErrors": 0,
+        "httpErrors": 0,
+        "permittedWrites": 0,
+        "blockedRequests": 16,
+        "intentionalBlockPolicy": "Only same-origin GET/HEAD allowed; telemetry scripts, all external origins, all writes blocked. No AI or account action used."
+      }
+    }
+  ],
+  "pageErrors": [],
+  "httpErrors": [],
+  "requestFailures": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=523SdTSVa79lM_HP",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?_rsc=4SRqEvTMJRyihhTN",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=DceuR-569C42ywRH",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/journal/fortune-stick-number-and-edition?_rsc=n4EE6u9AdyDPYTWj",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?locale=en&type=guanyin&_rsc=Q8lljiH--wcN5MJC",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/sticks?_rsc=xxTqY__p9YpYWLSb",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_next/static/chunks/webpack-cc4e14b0e7aeecfb.js",
+      "error": "csp"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_next/static/chunks/webpack-cc4e14b0e7aeecfb.js",
+      "error": "csp"
+    }
+  ],
+  "consoleErrors": [
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "page": "http://localhost:3037/learn/guanyin-fortune-sticks",
+      "message": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "blockedRequests": [
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/insights/script.js",
+      "reason": "telemetry blocked"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3037/_vercel/speed-insights/script.js",
+      "reason": "telemetry blocked"
+    }
+  ],
+  "permittedWriteRequests": [],
+  "screenshots": [
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/reading-navigation-320.png",
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/after-390-fullpage.png",
+    "/workspace/destinypixel-acquisition/docs/qa/acquisition-20261011/reading-navigation-1440.png"
+  ],
+  "finishedAt": "2026-10-11T14:23:19.563Z",
+  "summary": {
+    "checks": 11,
+    "passed": 11,
+    "failed": 0,
+    "pageErrors": 0,
+    "httpErrors": 0,
+    "blockedRequests": 16,
+    "permittedWriteRequests": 0
+  },
+  "finalSourceCommit": "7e9a9b12b6e3e4e65c9190aa174c213eaaaaec06",
+  "notes": [
+    "Only same-origin GET/HEAD was allowed; analytics and speed-insights scripts were intentionally blocked, all writes and external requests denied. No request bodies were logged.",
+    "Console errors are only deliberately blocked telemetry resources. net::ERR_ABORTED requests arose on subsequent navigation; csp failures occur only in JavaScript-disabled context.",
+    "Existing detailed journal translations set main lang correctly (zh-Hans/zh-Hant/ru) while root html lang stays en. This predates and is outside this change. Lookup locale sets both html/main lang correctly."
+  ],
+  "requestFailureSummary": {
+    "net::ERR_BLOCKED_BY_CLIENT.Inspector": 16,
+    "net::ERR_ABORTED": 35,
+    "csp": 2
+  }
+}
