@@ -68,8 +68,10 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       const { calculateDateDayPillar } = await import("@/lib/day-pillar");
       const result = calculateDateDayPillar(date, localToday());
       if (!result.ok) { setError(result.error === "unsupported-year" ? text.range : result.error === "future-date" ? text.future : text.invalid); trackToolEvent("tool_error", "day_pillar"); return; }
-      if (!cards.some((item) => item.pillar === result.pillar)) { setError(text.unavailable); trackToolEvent("tool_error", "day_pillar"); return; }
+      const nextCard = cards.find((item) => item.pillar === result.pillar);
+      if (!nextCard) { setError(text.unavailable); trackToolEvent("tool_error", "day_pillar"); return; }
       setPillar(result.pillar); setMode("calculated"); setShareLink(""); setShareMessage(""); setTilted(false);
+      window.history.replaceState(null, "", dayPillarSharePath(locale, nextCard.slug));
       trackToolEvent("tool_success", "day_pillar");
       resultRef.current?.focus({ preventScroll: true });
       if (window.matchMedia("(max-width: 820px)").matches) resultRef.current?.scrollIntoView({ behavior: "instant", block: "start" });
