@@ -1,5 +1,8 @@
 import { hexagramNumber } from "@/lib/hexagram-learning/identity";
 import { hexagramMetadata } from "@/lib/hexagram-learning/metadata";
+import { trigramIdFromSlug } from "@/lib/trigram-learning/identity";
+import { trigramMetadata } from "@/lib/trigram-learning/metadata";
+import { ichingHref } from "@/lib/iching/paths";
 import { productFactsHref } from "./product-facts";
 import { compatibilityHref } from "./compatibility/copy";
 import assert from "node:assert/strict";
@@ -72,6 +75,8 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
         ? hexagramMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined),hexagramNumber(url.pathname.split("/")[2] ?? "")).alternates?.canonical
         : url.pathname === "/journal/tarot-cards" || tarotLearningId(url.pathname.split("/")[2] ?? "")
         ? tarotLearningMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), tarotLearningId(url.pathname.split("/")[2] ?? "")).alternates?.canonical
+        : url.pathname === "/journal/trigrams" || trigramIdFromSlug(url.pathname.split("/")[2] ?? "")
+        ? trigramMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined),trigramIdFromSlug(url.pathname.split("/")[2] ?? "")).alternates?.canonical
         : url.pathname === "/journal" || url.pathname.startsWith("/journal/")
         ? journalMetadata(normalizeJournalLocale(url.searchParams.get("locale") ?? undefined), getJournalArticle(url.pathname.split("/")[2])).alternates?.canonical
         : url.pathname === "/day-pillar"
@@ -80,6 +85,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
         : url.pathname === "/compatibility" ? compatibilityHref(normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
         : url.pathname === "/discover" ? discoveryHref(normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
         : url.pathname === "/astrology" || url.pathname === "/tarot" ? celestialHref(url.pathname, normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
+        : url.pathname === "/iching" ? ichingHref(normalizeReportLocale(url.searchParams.get("locale") ?? "en"))
         : canonicalPagePath(url.pathname, url.searchParams.get("locale") ?? "en");
       assert.equal(absoluteUrl(String(canonical)), variant);
     }
@@ -88,7 +94,7 @@ test("every advertised language variant has a reciprocal canonical sitemap entry
   assert.ok(byUrl.has(absoluteUrl("/atelier")));
   const traditionalEntries = entries.filter((entry) => entry.url.includes("locale=zh-TW"));
   assert.ok(traditionalEntries.length > 0);
-  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/", "/discover", "/compatibility", "/sticks", "/atelier", "/astrology", "/tarot", "/product-facts"].includes(new URL(entry.url).pathname))));
+  assert.ok(traditionalEntries.every((entry) => (new URL(entry.url).pathname.startsWith("/journal") || ["/", "/discover", "/compatibility", "/sticks", "/atelier", "/astrology", "/tarot", "/iching", "/product-facts"].includes(new URL(entry.url).pathname))));
 });
 
 test("day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants", () => {

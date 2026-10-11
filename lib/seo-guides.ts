@@ -104,7 +104,7 @@ export const seoGuides: SeoGuide[] = [
   {
     section: "insights",
     slug: "i-ching-vs-tarot",
-    updatedAt: "2026-09-29",
+    updatedAt: "2026-10-11",
     title: "I Ching vs Tarot: Which to Use for One Question? | DestinyPixel",
     description:
       "Compare tarot cards and I Ching traditions for a focused question. Choose your own cards in the free tarot studio, or explore our separate symbolic Question Oracle.",
@@ -114,6 +114,7 @@ export const seoGuides: SeoGuide[] = [
       "Tarot shines when you need language for feelings, motives, and the story you are telling yourself. I Ching / liuyao shines when you care about tendency, obstacle, and rough timing (“push now / wait”). Both work best as one sincere question; neither should be treated as a courtroom verdict or a medical order.",
       "If you already know the emotion and need a decision frame, start with I Ching. If you need to name what you feel before you choose, start with tarot. Asking the same question twice in one hour usually adds noise, not clarity.",
       "To choose your own cards, use the separate Tarot studio: shuffle a 78-card deck, select a spread and reveal the cards yourself. It supports one-card, three-card, relationship, two-paths and Celtic Cross layouts, with optional AI interpretation. This differs from the automatic Tarot-and-hexagram combination in the Question Oracle.",
+      "For I Ching casting, use the dedicated workspace: toss three coins six times, enter your own four-state lines, or choose separately labelled Plum Blossom time and number methods. It shows original and changed hexagrams, moving positions and reproducible inputs, with links to the full eight-trigram and 64-hexagram libraries. It does not provide a full Najia Liuyao chart.",
     ],
     faqAsH2: true,
     faqs: [
@@ -124,7 +125,7 @@ export const seoGuides: SeoGuide[] = [
       },
       {
         question: "What is liuyao?",
-        answer: "A six-line I Ching method used for concrete situations.",
+        answer: "Liuyao means six lines and often refers to the Najia tradition using stems and branches, host/response positions and six relationships. Our workspace provides casting, changing lines and educational articles; a six-line figure alone is not a full Najia chart.",
       },
       {
         question: "When should I start with tarot vs I Ching?",
@@ -150,6 +151,7 @@ export const seoGuides: SeoGuide[] = [
     ctas: [
       { label: "Choose your cards: free online tarot", href: "/tarot" },
       { label: "Ask one question in the Oracle", href: "/oracle" },
+      { label: "Cast with coins or Plum Blossom methods", href: "/iching" },
       {
         label: "Temple sticks",
         href: "/sticks",

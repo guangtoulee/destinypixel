@@ -42,7 +42,7 @@ async function main(){
    const strokes=decode(pre[2].replace(/<[^>]*>/g,'')).trim().split('\n');assert.equal(strokes.length,6);
    for(const [i,line] of [...a.lineNotes].reverse().entries()){assert.ok(strokes[i].endsWith(line.label));assert.equal(strokes[i].slice(0,strokes[i].lastIndexOf(line.label)).trim().includes(' '),line.polarity==='yin');}
    const sections=[...body.matchAll(/<h2 id="(section-\d+)"/g)].map(m=>m[1]);assert.equal(new Set(sections).size,sections.length);for(const s of sections)assert.ok(page.includes(`href="#${s}"`));
-   assert.ok(page.includes(`href="/oracle${locale==='en'?'':`?locale=${locale}`}"`));count++;
+   assert.ok(page.includes(`href="/iching${locale==='en'?'':`?locale=${locale}`}"`));count++;
   }));
   console.log(`PASS ${locale}: 64 full manuscripts, all classical quotes/line explanations, six-line diagrams, metadata and sources`);
  }

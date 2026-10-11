@@ -5,9 +5,9 @@ import { sectionKeys, sectionHref } from "./section-journeys";
 import { directoryTools } from "./tool-directory";
 import { journalArticles } from "./journal";
 
-test("six topics have translated guide destinations while the homepage keeps four cards", () => {
+test("seven topics have translated destinations while the homepage keeps four cards", () => {
   assert.equal(sectionKeys.length, 4);
-  assert.equal(topicKeys.length, 6);
+  assert.equal(topicKeys.length, 7);
   for (const locale of ["en", "zh", "zh-TW", "ru"] as const) {
     for (const topic of topicKeys) {
       assert.ok(topicCopy(locale).sections[topic].action);

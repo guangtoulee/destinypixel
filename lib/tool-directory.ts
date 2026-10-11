@@ -13,6 +13,10 @@ export const directoryTools: DirectoryTool[] = [
     en: { name: "Tarot studio", description: "Shuffle and choose from 78 cards. Arrange them freely or follow a spread, then reveal and explore.", prepare: "A question, or simply a moment to reflect", result: "A personal layout, upright and reversed card meanings, optional AI interpretation" },
     zh: { name: "塔罗牌桌", description: "完整78张牌，亲手洗牌、选牌、摆放、换牌与翻开，可自由摆桌或选择排阵。", prepare: "一个问题，或一段留给自己的安静时间", result: "自选牌阵、正逆位牌义与可选 AI 解读" },
   } },
+  { key: "iching", path: "/iching", group: "insight", localized: true, copy: {
+    en: { name: "I Ching · six-line casting", description: "Toss three coins six times, enter your own lines, or explore clearly labelled Plum Blossom time and number methods.", prepare: "An optional question; your coin results, time or two counts", result: "Reproducible original and changed hexagrams, moving lines, and full trigram and hexagram articles" },
+    zh: { name: "易经 · 六爻起卦", description: "模拟三枚铜钱六次，手动录入已有六爻，或使用明确标注的梅花易数时间、数字方法。", prepare: "可选问题；铜钱结果、时间或两组计数", result: "可核对的本卦、动爻与变卦，以及八卦和六十四卦完整文章" },
+  } },
   { key: "compatibility", path: "/compatibility", group: "birth", localized: true, copy: {
     en: { name: "Love compatibility", description: "Compare Bazi and birth charts to explore communication, affection and everyday rhythm.", prepare: "Both birth dates, known local birth times and supported cities", result: "Free 60–100 symbolic scores, side-by-side comparisons and a short AI reading" },
     zh: { name: "感情适配", description: "结合两人的八字与星盘，探索性格、沟通、感情表达与日常节奏。", prepare: "双方公历生日、已知的当地出生时间及支持的城市", result: "免费的 60–100 分象征性评分、双方对比与简短 AI 解读" },

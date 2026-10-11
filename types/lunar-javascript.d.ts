@@ -9,6 +9,12 @@ declare module "lunar-javascript" {
       second: number,
     ): {
       getLunar(): {
+        getYear(): number;
+        /** Negative month numbers identify leap months. */
+        getMonth(): number;
+        getDay(): number;
+        /** Zi = 0 through Hai = 11, using the Lunar New Year boundary. */
+        getYearZhiIndex(): number;
         getYearInGanZhi(): string;
         getYearInGanZhiExact(): string;
         getMonthInGanZhi(): string;

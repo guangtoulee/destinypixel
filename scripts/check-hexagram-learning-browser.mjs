@@ -36,7 +36,8 @@ try{for(const locale of ['en','zh','zh-TW','ru']){
  await page.setViewportSize({width:390,height:844});
  await page.goto(`${base}/journal/hexagrams${suffix}`);
  const first=page.locator(`a[href="/journal/hexagram-11${suffix}"]`).first();await first.focus();await page.keyboard.press('Enter');await page.waitForURL(u=>u.pathname==='/journal/hexagram-11');await page.goBack();await page.waitForURL(u=>u.pathname==='/journal/hexagrams');
- await page.goto(`${base}/journal/hexagram-63${suffix}`);await page.locator(`header a[href="/oracle${suffix}"]`).click();await page.waitForURL(u=>u.pathname==='/oracle');
+ await page.goto(`${base}/journal/hexagram-63${suffix}`);await page.locator(`header a[href="/iching${suffix}"]`).click();await page.waitForURL(u=>u.pathname==='/iching');await expect(page.locator('main')).toHaveAttribute('lang',locale==='zh'?'zh-Hans':locale==='zh-TW'?'zh-Hant':locale);await page.goBack();await page.waitForURL(u=>u.pathname==='/journal/hexagram-63');
+ await page.goto(`${base}/oracle${suffix}`);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${locale}: mobile Oracle overflow`);
  await page.locator('input[type=datetime-local]').fill('2026-10-07T12:00');
  for(const [number,question] of Object.entries(fixtures)){
@@ -51,5 +52,5 @@ try{for(const locale of ['en','zh','zh-TW','ru']){
  await page.goBack();await page.waitForURL(u=>u.pathname==='/journal/hexagram-63');await expect(page.locator('article')).toHaveAttribute('data-hexagram-learning','hexagram-63');
  await page.locator('header a[hreflang="ru"]').click();await page.waitForURL(u=>u.searchParams.get('locale')==='ru');await expect(page.locator('main')).toHaveAttribute('lang','ru');await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://www.destinypixel.com/journal/hexagram-63?locale=ru');
  assert.deepEqual(writes,[],'Learning flow must not initiate API writes or AI calls');assert.deepEqual(errors,[]);
- console.log(`PASS ${locale}: keyboard/Back, article → Oracle → correct Tai/Pi/Jiji/Weiji articles in new tabs, cast preserved, language metadata, zero API writes`);await context.close();
+ console.log(`PASS ${locale}: keyboard/Back, article → I Ching workspace; legacy Oracle → correct Tai/Pi/Jiji/Weiji articles in new tabs, cast preserved, language metadata, zero API writes`);await context.close();
 }}finally{await browser.close();}

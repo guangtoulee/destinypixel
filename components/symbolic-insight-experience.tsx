@@ -159,7 +159,7 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
       },
       oracle: {
         title: "Question Oracle",
-        short: "Time-cast Liuyao plus Tarot",
+        short: "Seeded hexagram imagery plus Tarot",
         body:
           "Ask one clear question. The page casts six lines from the question time and pairs them with a three-card Tarot mirror.",
         cta: "Ask one question",
@@ -254,7 +254,7 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
       eyebrow: "手相 · 面相 · 一事一问",
       title: "给眼前的问题，多三面镜子。",
       lead:
-        "手相和面相用照片作本地参考，问事用起问时间生成六爻与塔罗。它不是玄乎的安慰，而是把细微信号转成更直接的判断和行动建议。",
+        "手相和面相用照片作本地参考，问事用时间与问题生成卦象启发和塔罗，供梳理自己的处境与下一步行动。",
     },
     modes: {
       palm: {
@@ -273,9 +273,9 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
       },
       oracle: {
         title: "问事专区",
-        short: "时间起卦 + 塔罗三牌",
+        short: "问题种子卦象 + 塔罗三牌",
         body:
-          "一事一问。输入问题和起问时间，系统先起六爻，再抽三张塔罗，最后交给 AI 做东西方合参。",
+          "一事一问。问题与起问时间生成固定的六线卦象和三张塔罗，再由 AI 提供象征性解读。这是现代组合方法。",
         cta: "问一件事",
       },
     },
@@ -387,7 +387,7 @@ const insightCopy: Record<ContentLocale, InsightCopy> = {
       },
       oracle: {
         title: "Оракул вопроса",
-        short: "Лю Яо по времени и три карты Таро",
+        short: "Гексаграмма по исходным данным и Таро",
         body:
           "Задайте один вопрос. Система строит шесть линий по времени вопроса и добавляет зеркало Таро.",
         cta: "Задать вопрос",
@@ -1377,6 +1377,10 @@ export default function SymbolicInsightExperience({
 
             {mode === "oracle" && (
               <>
+                <p className="oracle-cast-note">
+                  {({en:"This Oracle uses a repeatable question seed. For three-coin casting, manual lines and the traditional Plum Blossom methods, open the I Ching workspace.",zh:"这里沿用问题与时间种子的现代组合卦象。三钱模拟、手动录爻与传统梅花易数方法，请进入易经起卦工作台。",ru:"Этот оракул использует повторяемые исходные данные вопроса. Для трёх монет, ввода черт и традиционных методов Мэйхуа откройте инструмент И цзин."})[copyLocale]}{" "}
+                  <a className="oracle-workbench-link" href={`/iching${locale === "en" ? "" : `?locale=${locale}`}`}>{({en:"I Ching · six-line casting",zh:"易经 · 六爻起卦",ru:"И цзин · шесть черт"})[copyLocale]} →</a>
+                </p>
                 <div className="insight-oracle-grid">
                   <label className="insight-field insight-field--full">
                     <span>{copy.fields.question}</span>

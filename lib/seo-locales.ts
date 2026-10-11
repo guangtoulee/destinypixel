@@ -3,7 +3,7 @@
 // pages retain their conversion bridge until their initial HTML is localized.
 export const localizedSeoCopy = {
   "/tools": {
-    zh: ["玄学工具导航｜八字图谱、灵签与五行手串", "探索 DestinyPixel 七项工具：出生图谱、本命灵构、手相、面相、塔罗问事、灵签，以及五行水晶手串搭配。"],
+    zh: ["工具导航｜易经六爻、塔罗、八字与五行手串", "探索 DestinyPixel 的易经六爻起卦、塔罗牌桌、星盘、出生图谱、本命灵构、灵签与五行手串，先了解所需资料与各方法的使用边界。"],
   },
   "/": {
     zh: ["六十日柱、求签、关系合盘与手串工坊｜DestinyPixel", "从四个专题开始：查日柱动物卡、读六十篇完整画像，求签问事，比较关系，或设计五行配色手串。免费工具与延伸阅读都在这里。"],
