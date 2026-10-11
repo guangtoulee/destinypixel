@@ -3,6 +3,9 @@ import learn from "../tarot-learning.module.css";
 import HexagramLearningArticle from "@/components/hexagram-learning-article";
 import { hexagramNumber,hexagramIds } from "@/lib/hexagram-learning/identity";
 import { hexagramMetadata } from "@/lib/hexagram-learning/metadata";
+import TrigramLearningArticle from "@/components/trigram-learning-article";
+import { trigramIds, trigramIdFromSlug, trigramSlug } from "@/lib/trigram-learning/identity";
+import { trigramMetadata } from "@/lib/trigram-learning/metadata";
 import TarotLearningArticle from "@/components/tarot-learning-article";
 import { tarotLearningId,tarotLearningIds,tarotLearningSlug } from "@/lib/tarot-learning/paths";
 import { tarotLearningMetadata } from "@/lib/tarot-learning/metadata";
@@ -46,12 +49,14 @@ function withLinks(paragraph: string, links?: JournalSection["links"]): ReactNod
 }
 
 export function generateStaticParams() {
-  return [...journalArticles.map((article) => ({ slug: article.slug })), ...tarotLearningIds.map(id => ({slug:tarotLearningSlug(id)})), ...hexagramIds.map(slug => ({slug}))];
+  return [...journalArticles.map((article) => ({ slug: article.slug })), ...tarotLearningIds.map(id => ({slug:tarotLearningSlug(id)})), ...hexagramIds.map(slug => ({slug})), ...trigramIds.map(id => ({slug:trigramSlug(id)}))];
 }
 
 export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const slug=(await params).slug, number=hexagramNumber(slug), cardId=tarotLearningId(slug);
   const locale=normalizeJournalLocale((await searchParams)?.locale);
+  const trigram=trigramIdFromSlug(slug);
+  if(trigram) return trigramMetadata(locale,trigram);
   if(number) return hexagramMetadata(locale,number);
   if(cardId) return tarotLearningMetadata(locale,cardId);
   const article = getJournalArticle(slug);
@@ -62,6 +67,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 export default async function JournalArticlePage({ params, searchParams }: PageProps) {
   const slug=(await params).slug, number=hexagramNumber(slug), cardId=tarotLearningId(slug);
   const resolvedLocale=normalizeJournalLocale((await searchParams)?.locale);
+  const trigram=trigramIdFromSlug(slug);
+  if(trigram) return <TrigramLearningArticle id={trigram} locale={resolvedLocale}/>;
   if(number) return <HexagramLearningArticle number={number} locale={resolvedLocale}/>;
   if(cardId) return <TarotLearningArticle id={cardId} locale={resolvedLocale}/>;
   const article = getJournalArticle(slug);

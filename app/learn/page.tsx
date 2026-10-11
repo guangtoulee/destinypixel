@@ -52,7 +52,16 @@ const guides = [
     related: [{ href: "/learn/guanyin-fortune-sticks", label: "Guanyin fortune sticks guide", key: "sticks" }],
   },
   {
-    id: "atelier", number: "05", title: "Design a five-element bracelet", tool: "Crystal bracelet atelier", href: "/atelier",
+    id: "iching", number: "05", title: "Build and understand a six-line hexagram", tool: "I Ching · six-line casting", href: "/iching",
+    intro: "Explore the I Ching with a dedicated casting workspace and the existing complete learning library. Each method keeps its own rules visible.",
+    prepare: "An optional question. Choose simulated three coins, your own coin results or four-state lines, a Beijing time, or two positive counts and an hour branch.",
+    steps: ["For coins, toss three coins six times from the bottom line upward, or generate all six tosses at once. Each face is worth 2 and each back 3; totals of 6 and 9 change.", "Review the original hexagram, moving positions and changed hexagram. The time and number tabs use the separate Plum Blossom (Meihua Yishu) method and show their inputs and arithmetic.", "Read the linked trigram and hexagram articles. Compare the classical image with a concrete situation and write down what you still need to check."],
+    result: "The original and changed figures, correct King Wen names, moving lines, raw coin values or calculation details, and complete articles in four languages.",
+    limit: "This workspace casts and explains figures. It does not produce a full Najia Liuyao chart with stems and branches, host/response positions and six relationships. Randomness and symbolic examples do not establish predictive accuracy. The yarrow-stalk method uses a different traditional division process; it is explained rather than imitated with coin probabilities.",
+    related: [{ href: "/journal/trigrams", label: "Learn the eight trigrams", key: "trigrams" }, { href: "/journal/hexagrams", label: "Read all 64 hexagrams", key: "hexagrams" }],
+  },
+  {
+    id: "atelier", number: "06", title: "Design a five-element bracelet", tool: "Crystal bracelet atelier", href: "/atelier",
     intro: "Translate a five-element color preference into a bracelet you arrange bead by bead. You can explore the workshop without generating a birth report first.",
     prepare: "Choose an element focus or browse all stones. Decide on a bead size and wrist style, then select one of the suggested bead counts.",
     steps: ["Set the bead size, wrist style and target count before arranging the bracelet. The available counts change with the size and style.", "Choose gemstones from the library. Each selection adds one bead to the preview; select a placed bead to remove it. When the bracelet is full, remove a bead before adding another.", "Review the colors, selected bead sequence and symbolic balance summary. Use Download image to keep a visual reference for your design."],

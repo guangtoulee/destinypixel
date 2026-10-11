@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11T04:08:48.521Z",
+  "scope": "Read-only reachability probe; no deployment acceptance claim",
+  "probes": [
+    {
+      "requested": "https://destinypixel-git-codex-iching-workbench-20261011-destinypixel.vercel.app/iching?locale=zh",
+      "blockedRequests": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://destinypixel-git-codex-iching-workbench-20261011-destinypixel.vercel.app/iching?locale=zh\nCall log:\n\u001b[2m  - navigating to \"https://destinypixel-git-codex-iching-workbench-20261011-destinypixel.vercel.app/iching?locale=zh\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "finalUrl": "about:blank"
+    },
+    {
+      "requested": "https://www.destinypixel.com/",
+      "blockedRequests": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.destinypixel.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.destinypixel.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "finalUrl": "about:blank"
+    }
+  ]
+}

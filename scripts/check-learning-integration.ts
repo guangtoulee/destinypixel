@@ -12,15 +12,15 @@ async function main(){
   const schema=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])).find(s=>s['@type']==='CollectionPage');
   const items=schema.mainEntity.itemListElement;assert.equal(items.length,schema.mainEntity.numberOfItems);
   assert.deepEqual(items.map((x:{position:number})=>x.position),items.map((_:unknown,i:number)=>i+1));
-  for(const slug of ['day-pillars','tarot-cards','hexagrams']){const path=`/journal/${slug}${suffix}`;assert.ok(decode(html).includes(`href="${path}"`));assert.ok(items.some((i:{url:string})=>i.url===origin+path));assert.ok(urls.includes(origin+path));}
+  for(const slug of ['day-pillars','tarot-cards','hexagrams','trigrams']){const path=`/journal/${slug}${suffix}`;assert.ok(decode(html).includes(`href="${path}"`));assert.ok(items.some((i:{url:string})=>i.url===origin+path));assert.ok(urls.includes(origin+path));}
   const cards=JSON.parse(readFileSync('lib/tarot-learning/catalog.json','utf8'))[locale];
   assert.equal(cards.length,78);for(const card of cards)assert.ok(urls.includes(`${origin}/journal/tarot-${card.cardId}${suffix}`));
   for(let n=1;n<=64;n++)assert.ok(urls.includes(`${origin}/journal/hexagram-${String(n).padStart(2,'0')}${suffix}`));
   const tarot=await get('/tarot'+suffix),oracle=await get('/oracle'+suffix);
   assert.ok(decode(tarot).includes(`href="/journal/tarot-cards${suffix}"`));assert.ok(decode(oracle).includes(`href="/journal/hexagrams${suffix}"`));
-  console.log(`PASS ${locale}: all three journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist`);
+  console.log(`PASS ${locale}: all four journal libraries, contiguous schema positions, reciprocal sitemap and both tool entry links coexist`);
  }
- assert.equal(urls.filter(u=>new URL(u).pathname.startsWith('/journal')).length,884);
- console.log('PASS combined journal: 868 article editions + 16 index/directory editions, all unique');
+ assert.equal(urls.filter(u=>new URL(u).pathname.startsWith('/journal')).length,920);
+ console.log('PASS combined journal: 900 article editions + 20 index/directory editions, all unique');
 }
 main().catch(e=>{console.error(e);process.exitCode=1});

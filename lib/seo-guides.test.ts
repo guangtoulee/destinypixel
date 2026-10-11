@@ -193,7 +193,7 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   );
   assert.equal(guide.h1, "I Ching vs Tarot: Which to Use for One Question?");
   assert.equal(guide.faqAsH2, true);
-  assert.equal(guide.paragraphs.length, 4);
+  assert.equal(guide.paragraphs.length, 5);
   assert.match(guide.paragraphs[0]!, /combines three Tarot cards with a six-line, hexagram-inspired reading/);
   assert.doesNotMatch(guide.paragraphs[0]!, /not a deck of picture archetypes/);
   assert.match(guide.paragraphs[1]!, /courtroom verdict or a medical order/);
@@ -209,7 +209,8 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
       "How does DestinyPixel’s Question Oracle fit (Tarot + hexagram-inspired / liuyao-adjacent)?",
     ],
   );
-  assert.equal(guide.faqs[1]?.answer, "A six-line I Ching method used for concrete situations.");
+  assert.match(guide.faqs[1]?.answer ?? "", /Najia/);
+  assert.match(guide.faqs[1]?.answer ?? "", /not a full Najia chart/);
   assert.equal(guide.faqs[3]?.answer, "Better to ask “what supports / blocks this path?”");
   assert.equal(guide.faqs[4]?.answer, "Wait; change the angle only if the situation changed.");
   for (const faq of guide.faqs) {
@@ -225,9 +226,9 @@ test("I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and 
   assert.equal(ctas[0]?.href, "/tarot");
   assert.deepEqual(
     ctas.map((cta) => cta.href),
-    ["/tarot", "/oracle", "/sticks", "/insights"],
+    ["/tarot", "/oracle", "/iching", "/sticks", "/insights"],
   );
-  assert.match(ctas[2]?.note ?? "", /different ritual lane/i);
+  assert.match(ctas[3]?.note ?? "", /different ritual lane/i);
   assert.ok(guide.disclaimer);
   assert.match(guide.disclaimer, /courtroom|medical/i);
   assert.match(guide.disclaimer, /symbolic|reflective/i);

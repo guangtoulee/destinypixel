@@ -10,12 +10,17 @@ import { journalLanguageTags } from "@/lib/journal-locales";
 import { absoluteUrl,siteName } from "@/lib/seo";
 import type { ReportLocale } from "@/lib/report-i18n";
 import sources from "@/content/hexagrams/sources.json";
+import { isTrigramId } from "@/lib/trigram-learning/identity";
+import { trigramCopy } from "@/lib/trigram-learning/copy";
+import { trigramHref } from "@/lib/trigram-learning/paths";
 import styles from "@/app/journal/journal.module.css";
 import learn from "@/app/journal/hexagram-learning.module.css";
+import trigrams from "@/app/journal/trigram-learning.module.css";
 
 export default async function HexagramLearningArticle({number,locale}:{number:number;locale:ReportLocale}) {
  const id=`hexagram-${String(number).padStart(2,"0")}`,a=await loadHexagramArticle(id,locale);if(!a)notFound();
  const c=hexagramCopy(locale),url=absoluteUrl(hexagramHref(number,locale)!),catalog=hexagramCatalog(locale);
+ const t=trigramCopy(locale);
  const headings=[...a.articleMarkdown.matchAll(/^## (.+)$/gm)].map(m=>m[1]);let section=0;
  const manuscript=a.articleMarkdown.replace(/^# [^\n]+\n/,"").trimStart();
  const opening=manuscript.split(/\n\s*\n/,1)[0],body=manuscript.slice(opening.length).trimStart();
@@ -29,6 +34,7 @@ export default async function HexagramLearningArticle({number,locale}:{number:nu
    <div className={styles.readingLayout}>
     <aside className={styles.contents}><p>{c.contents}</p><nav aria-label={c.contents}>{headings.map((h,i)=><a href={`#section-${i+1}`} key={i}>{h}</a>)}</nav></aside>
     <div className={styles.articleBody}>
+     <nav className={trigrams.figureLinks} aria-label={t.components}><h2>{t.components}</h2>{[{label:t.lower,trigram:a.lowerTrigram},{label:t.upper,trigram:a.upperTrigram}].map(({label,trigram})=>isTrigramId(trigram.id)?<a key={label} href={trigramHref(trigram.id,locale)}>{label}: {trigram.symbol} {t.names[trigram.id]} →</a>:null)}</nav>
      <div className={learn.prose} data-full-manuscript>
       <Markdown skipHtml components={{
        h2:({children})=><h2 id={`section-${++section}`}>{children}</h2>,
