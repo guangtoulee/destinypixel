@@ -26,7 +26,8 @@ const records: readonly DayPillarPerson[] = registry.people;
 /** Only reviewed records with a direct birthday-source receipt enter the UI. */
 export const verifiedDayPillarPeople = records.filter(person =>
   person.calendar === "gregorian" && person.birthTime === null && person.sources.length > 0 &&
-  person.sources.every(source => isSafeBirthdaySource(source.url) && source.publisher.trim() && source.evidence.trim() && source.evidenceType === "paraphrase_of_opened_original_page")
+  person.sources.every(source => isSafeBirthdaySource(source.url) && source.publisher.trim() && source.evidence.trim() &&
+    (source.evidenceType === "paraphrase_of_opened_original_page" || source.evidenceType === "short_quote_of_opened_original_page"))
 );
 
 export function peopleForPillar(pillar: string): DayPillarPerson[] {
