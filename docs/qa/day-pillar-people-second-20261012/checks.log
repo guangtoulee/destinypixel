@@ -1,0 +1,274 @@
+Runtime source: 39e418e3f56aad0512a9b6b755afb40669de8183
+
+Related tests:
+✔ a complete calendar cycle has distinct public readings in all four editions (70.506773ms)
+✔ public identities follow the current animal artwork by stem-branch (0.365606ms)
+✔ all 60 calculated results have one searchable article and a real JPEG card (109.070329ms)
+✔ all 60 encyclopedia entries and original cards map to the same pillar in every language (26.089257ms)
+✔ reference facts match the site's chart labels and reject impossible pairs (1.301626ms)
+✔ expanded portraits retain their URLs and reproduce every sourced public birthday (42.05449ms)
+✔ each portrait retains its multilingual calendar, interpretation and exercise sections (16.29989ms)
+✔ the second batch keeps the first 22 people and both first-batch historical files unchanged (1.42345ms)
+✔ all 38 approved Nobel Facts birthdays fill exactly the previously uncovered 38 pillars (56.822066ms)
+✔ all 75 prior editions and their citations survive after removing only the second-batch additions (31.445451ms)
+✔ zh/en each show 68 distinct people across all 60 pillars and four-language legacy data brings the total to 70 (1.5804ms)
+✔ only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved (49.848412ms)
+✔ the 22 source-backed birthday records match the independently supplied 20-pillar assignments (26.30463ms)
+✔ birthday source links accept HTTPS and reject executable, relative and credential-bearing URLs (0.22513ms)
+✔ only matched zh/en entries receive structured people; other languages remain untouched (7.001059ms)
+✔ a matching legacy name and date prevent a new structured record from being displayed twice (1.049753ms)
+✔ the original batch still covers 22 pillars, full zh/en coverage is 60 and zh-TW/ru retain the original four (0.845759ms)
+✔ all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged (15.559182ms)
+✔ the four legacy birthday tables keep 32 rows and their sources without duplicating new people (40.201684ms)
+✔ Article schema cites exactly the legacy sources and the directly associated birthday sources (13.374271ms)
+✔ invalid formats and impossible dates are rejected instead of silently normalized (8.091359ms)
+✔ Gregorian leap years and the supported birth range are explicit (55.770246ms)
+✔ known day pillars match the calendar library's published fixtures, including previously missing Ding Hai (10.372972ms)
+✔ midnight advances the civil-date card and a calibrated report may use the previous solar day (33.958903ms)
+✔ a complete cycle resolves to all sixty cards in four languages and existing images (43.603201ms)
+✔ share paths allow only a controlled public archetype and locale (14.721815ms)
+✔ revision registries apply only to the actually edited zh/en editions (5.227791ms)
+✔ the recorded first rollouts still change exactly 48 dates against the pre-sample baseline after restoring only second-batch dates (45.370649ms)
+✔ the recorded first birthday rollout still changes exactly 40 sitemap dates after restoring only second-batch dates (14.473298ms)
+✔ journal metadata and Article schema use per-language revisions without freshening base publication dates (11.027873ms)
+✔ all tarot metadata and loaded schema dates retain their previous scope except revised Sun and Moon editions (580.54891ms)
+✔ hexagram dates revise only Tai zh/en and retain the existing metadata behavior (2.302739ms)
+✔ Ding You preserves the serialized published Traditional Chinese and Russian editions (0.389417ms)
+✔ published famous birthdays reproduce the featured day pillar in every edition (15.661211ms)
+✔ Traditional Chinese preserves prose meaning instead of applying software terminology (0.18238ms)
+✔ Traditional Chinese preserves every calendar stem and branch without changing aesthetic Chou (1.810235ms)
+✔ journal advertises all four complete language editions with reciprocal URLs (19.604428ms)
+✔ articles have translated sections, truthful free Article schema and useful original length (11.551943ms)
+✔ birth form feedback renders only known localized errors (0.274714ms)
+✔ English identifies the searchable calendar pair and current animal card (0.185424ms)
+✔ translated landing pages keep their own canonical and translated search text (1.159986ms)
+✔ English and invalid locale aliases do not create duplicate canonical URLs (0.14496ms)
+✔ language alternates only claim translations that exist in initial HTML (0.669057ms)
+✔ standalone tools never inherit a homepage canonical or unrelated keywords (0.163347ms)
+✔ every advertised language variant has a reciprocal canonical sitemap entry (77.315756ms)
+✔ day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants (7.265536ms)
+✔ sitemap modification dates describe content rather than request time (17.357839ms)
+✔ the metaphysics sitemap excludes experiments while Prompt keeps its own inventory (6.797781ms)
+✔ fortune sticks advertises four reciprocal server-rendered languages (6.639675ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3431.072138
+
+Scoped ESLint: exit 0
+Independent TypeScript --noEmit: exit 0 (date/test worker)
+git diff --check: exit 0
+
+Production build: exit 0
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 43ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 44s
+  Running TypeScript ...
+  Finished TypeScript in 17.6s ...
+  Collecting page data using 4 workers ...
+⚠ Using edge runtime on a page currently disables static generation for that page
+  Generating static pages using 4 workers (0/417) ...
+  Generating static pages using 4 workers (104/417) 
+  Generating static pages using 4 workers (208/417) 
+  Generating static pages using 4 workers (312/417) 
+✓ Generating static pages using 4 workers (417/417) in 4.9s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)                                         Revalidate  Expire
+┌ ƒ /
+├ ○ /_not-found
+├ ƒ /.well-known/agent-products.json
+├ ƒ /account
+├ ƒ /account/readings/[id]
+├ ƒ /admin
+├ ƒ /api/account
+├ ƒ /api/admin/celestial-records
+├ ƒ /api/admin/celestial-records/[id]
+├ ƒ /api/admin/overview
+├ ƒ /api/ai-profile.json
+├ ƒ /api/astrology
+├ ƒ /api/checkout/paypal
+├ ƒ /api/checkout/paypal/capture
+├ ƒ /api/compatibility
+├ ƒ /api/daoyan/episode
+├ ƒ /api/daoyan/project
+├ ƒ /api/english/auth/login
+├ ƒ /api/english/auth/register
+├ ƒ /api/english/ocr
+├ ƒ /api/english/progress
+├ ƒ /api/english/study/tutor
+├ ƒ /api/generate-natal
+├ ƒ /api/generate-transit
+├ ƒ /api/image/generate
+├ ƒ /api/image/refine
+├ ƒ /api/image/status
+├ ƒ /api/insights
+├ ƒ /api/juben/analyze
+├ ƒ /api/juben/episode
+├ ƒ /api/juben/export
+├ ƒ /api/juben/extract
+├ ƒ /api/juben/generate
+├ ƒ /api/members/auth/login
+├ ƒ /api/members/auth/logout
+├ ƒ /api/members/auth/register
+├ ƒ /api/members/auth/request-reset
+├ ƒ /api/members/auth/reset
+├ ƒ /api/members/celestial-records
+├ ƒ /api/members/celestial-records/[id]
+├ ƒ /api/members/me
+├ ƒ /api/members/saved-reports
+├ ƒ /api/oracle
+├ ƒ /api/products.json
+├ ƒ /api/prompt/admin/login
+├ ƒ /api/prompt/admin/logout
+├ ƒ /api/prompt/admin/moderate
+├ ƒ /api/prompt/admin/session
+├ ƒ /api/prompt/analyze-image
+├ ƒ /api/prompt/cron
+├ ƒ /api/prompt/expand
+├ ƒ /api/prompt/feed
+├ ƒ /api/prompt/import
+├ ƒ /api/prompt/translate
+├ ƒ /api/reports/claim
+├ ƒ /api/sticks/interpret
+├ ƒ /api/tarot
+├ ƒ /api/webhooks/paypal
+├ ƒ /astrology
+├ ○ /astrology/opengraph-image
+├ ƒ /atelier
+├ ƒ /blender
+├ ƒ /blender/access
+├ ƒ /blender/auth
+├ ○ /canddy
+├ ○ /candy
+├ ○ /celestial-lab
+├ ƒ /checkout/paypal/cancel
+├ ƒ /checkout/paypal/return
+├ ƒ /compatibility
+├ ○ /compatibility/opengraph-image
+├ ○ /danci
+├ ○ /daoyan
+├ ƒ /day-pillar
+├ ƒ /discover
+├ ○ /english
+├ ○ /english/assessment
+├ ○ /english/classic
+├ ƒ /face
+├ ƒ /iching
+├ ○ /icon.svg
+├ ○ /image
+├ ƒ /insights
+├   /insights/[slug]
+│ └ ● /insights/i-ching-vs-tarot
+├ ○ /jake
+├ ○ /jake/about
+├ ○ /jake/contact
+├ ○ /jake/faq
+├ ○ /jake/products
+├   /jake/products/[slug]
+│ ├ ● /jake/products/mango
+│ ├ ● /jake/products/green-tea-lime
+│ ├ ● /jake/products/strawberry
+│ └ ● [+13 more paths]
+├ ƒ /journal
+├ ƒ /journal/[slug]
+├ ƒ /journal/day-pillars
+├ ƒ /journal/hexagrams
+├ ƒ /journal/tarot-cards
+├ ƒ /journal/trigrams
+├ ○ /juben
+├ ○ /learn
+├   /learn/[slug]
+│ ├ ● /learn/what-is-bazi-birth-chart
+│ ├ ● /learn/guanyin-fortune-sticks
+│ ├ ● /learn/bazi-love-compatibility
+│ └ ● /learn/chinese-palm-reading-vs-western
+├ ƒ /llms.txt
+├ ○ /manifest.webmanifest
+├ ○ /mazu
+├ ○ /meizhouma
+├ ○ /mv
+├ ƒ /mv/projects/[id]
+├ ƒ /opengraph-image
+├ ƒ /oracle
+├ ƒ /palm
+├ ƒ /privacy
+├ ƒ /product-facts
+├ ƒ /prompt
+├ ○ /prompt/about
+├   /prompt/article/[id]
+│ ├ ● /prompt/article/x-public-2106560621932384657          6h      1y
+│ ├ ● /prompt/article/x-public-2107828151531548914          6h      1y
+│ ├ ● /prompt/article/x-public-2106953100028522845          6h      1y
+│ └ ● [+9 more paths]
+├ ○ /prompt/articles                                        6h      1y
+├   /prompt/case/[id]
+│ ├ ● /prompt/case/community-2109119295737508239            6h      1y
+│ ├ ● /prompt/case/community-2109110503876481180            6h      1y
+│ ├ ● /prompt/case/community-2109091557710426607            6h      1y
+│ └ ● [+25 more paths]
+├   /prompt/category/[slug]
+│ ├ ● /prompt/category/portrait-fashion                     6h      1y
+│ ├ ● /prompt/category/product-commercial                   6h      1y
+│ ├ ● /prompt/category/video-storytelling                   6h      1y
+│ └ ● [+6 more paths]
+├ ○ /prompt/privacy
+├ ○ /prompt/sitemap.xml
+├ ○ /prompt/terms
+├ ƒ /report/[id]
+├ ○ /robots.txt
+├ ƒ /service
+├ ○ /sitemap.xml
+├ ƒ /sticks
+├ ƒ /tarot
+├ ○ /tarot/opengraph-image
+├ ƒ /tools
+├ ƒ /tuteng
+├ ƒ /twitter-image
+├ ○ /ultra
+├ ƒ /white
+├ ○ /xingpan
+├ ○ /zhangshengjun
+├   /zhangshengjun/[slug]
+│ ├ ● /zhangshengjun/legend
+│ ├ ● /zhangshengjun/lushan
+│ ├ ● /zhangshengjun/news
+│ └ ● [+2 more paths]
+├ ○ /zhangshengjun/en
+├   /zhangshengjun/en/[slug]
+│ ├ ● /zhangshengjun/en/legend
+│ ├ ● /zhangshengjun/en/lushan
+│ ├ ● /zhangshengjun/en/news
+│ └ ● [+2 more paths]
+├ ○ /zhangshengjun/zh-hant
+├   /zhangshengjun/zh-hant/[slug]
+│ ├ ● /zhangshengjun/zh-hant/legend
+│ ├ ● /zhangshengjun/zh-hant/lushan
+│ ├ ● /zhangshengjun/zh-hant/news
+│ └ ● [+2 more paths]
+└ ○ /zhenggu
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

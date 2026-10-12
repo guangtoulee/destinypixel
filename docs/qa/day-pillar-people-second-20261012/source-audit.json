@@ -1,0 +1,569 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-12",
+  "baseCommit": "05c507ce378351b3248168daa900396bddd8458a",
+  "sourceReview": {
+    "performedBy": "Parent research source worker",
+    "reportedMethod": "Each specific Nobel Prize Facts page was downloaded with HTTP 200 and its Born field was checked against the supplied birthday.",
+    "independentlyRefetchedInThisExecutionEnvironment": false,
+    "evidenceType": "short_quote_of_opened_original_page",
+    "publisher": "Nobel Prize",
+    "accessedAt": "2026-10-12",
+    "quoteLimit": "Each retained Born field is fewer than 25 words; no full source-page body is copied."
+  },
+  "engineeringValidation": {
+    "performedBy": "Second-batch registry implementation agent in this execution environment",
+    "function": "lib/day-pillar.ts:calculateDateDayPillar",
+    "implementation": "Solar.fromYmdHms(year, month, day, 12, 0, 0).getLunar().getDayInGanZhi() from lunar-javascript",
+    "convention": "Published local Gregorian civil date with the civil-midnight day boundary. Noon anchors the supplied date for calculation; it is not a birth time. No conversion to UTC, solar-time calibration, inferred birth time, or complete Bazi is performed.",
+    "comparison": "All 38 engineering results match the parent-supplied assignments independently computed using JDN and an HKO calendar anchor.",
+    "matchedDates": 38,
+    "contradictions": [],
+    "duplicatesAgainstFirstBatchAndLegacy": [],
+    "duplicateChecks": "IDs, Gregorian birthdays, and normalized English/Chinese names including diacritic and punctuation aliases, compared with the first 22 records and all 32 legacy-language table rows."
+  },
+  "firstBatchPreservation": {
+    "records": 22,
+    "unchanged": true,
+    "hashMethod": "SHA256(JSON.stringify(registry.people.slice(0, 22)))",
+    "sha256": "dc1a9e8aa23b65d5d69455fccbd3120f4a8bf087bf96673e21edcb4c57d4e208"
+  },
+  "coverage": {
+    "firstBatch": {
+      "records": 22,
+      "distinctPillars": 20
+    },
+    "legacy": {
+      "languageTableRows": 32,
+      "distinctPeople": 10,
+      "distinctPillars": 4,
+      "peoplePerEnglishOrSimplifiedChineseEdition": 8
+    },
+    "beforeSecondBatch": {
+      "englishCoveredPillars": 22,
+      "simplifiedChineseCoveredPillars": 22,
+      "totalPillars": 60
+    },
+    "secondBatch": {
+      "records": 38,
+      "distinctPillars": 38,
+      "exactComplementOfPreviouslyUncoveredPillars": true
+    },
+    "registryAfterSecondBatch": {
+      "records": 60,
+      "distinctPillars": 58
+    },
+    "combinedAfterSecondBatch": {
+      "englishCoveredPillars": 60,
+      "simplifiedChineseCoveredPillars": 60,
+      "peoplePerEnglishOrSimplifiedChineseEdition": 68,
+      "distinctPeopleAcrossAllLanguageSelections": 70,
+      "legacyOnlyPillarsCompletingCoverage": [
+        "甲子",
+        "乙丑"
+      ],
+      "traditionalChineseAndRussianCoveredPillarsUnchanged": 4
+    }
+  },
+  "reviewBalance": {
+    "men": 19,
+    "women": 19,
+    "purpose": "Selection review only. No gender property or gender presentation is added to the registry or UI."
+  },
+  "historicalBirthplaceNotes": [
+    {
+      "id": "daniel-kahneman",
+      "birthPlace": {
+        "city": "Tel Aviv",
+        "country": "British Mandate of Palestine (now Israel)"
+      },
+      "displayNote": {
+        "en": "The source locates Tel Aviv in the British Mandate of Palestine at his birth and adds its present-day location in Israel. This preserves the source's historical place label and published Gregorian birthday without reconstructing an original historical civil record.",
+        "zh": "来源以出生时的英属巴勒斯坦托管地标记特拉维夫，并注明现属以色列。保留来源的历史地名与公开传记公历生日，不据此重建原始历史民用记载。"
+      }
+    },
+    {
+      "id": "max-planck",
+      "birthPlace": {
+        "city": "Kiel",
+        "country": "Schleswig (now Germany)"
+      },
+      "displayNote": {
+        "en": "The source locates Kiel in Schleswig at his birth and gives Germany as the present-day country. This retains the historical label and published Gregorian birthday without reconstructing an original historical civil record.",
+        "zh": "来源以出生时的石勒苏益格标记基尔，并注明现属德国。保留该历史地名与公开传记公历生日，不据此重建原始历史民用记载。"
+      }
+    },
+    {
+      "id": "ada-yonath",
+      "birthPlace": {
+        "city": "Jerusalem",
+        "country": "British Mandate of Palestine (now Israel)"
+      },
+      "displayNote": {
+        "en": "The source locates Jerusalem in the British Mandate of Palestine at her birth and adds its present-day location in Israel. This preserves the source's historical place label and published Gregorian birthday without reconstructing an original historical civil record.",
+        "zh": "来源以出生时的英属巴勒斯坦托管地标记耶路撒冷，并注明现属以色列。保留来源的历史地名与公开传记公历生日，不据此重建原始历史民用记载。"
+      }
+    },
+    {
+      "id": "albert-camus",
+      "birthPlace": {
+        "city": "Mondovi",
+        "country": "French Algeria (now Algeria)"
+      },
+      "displayNote": {
+        "en": "The source preserves Mondovi, French Algeria as the historical birthplace and notes its present-day location in Algeria. This uses the source's published Gregorian birthday without inferring a conversion from an original historical civil record.",
+        "zh": "来源保留历史出生地 Mondovi、法属阿尔及利亚，并注明现属阿尔及利亚。采用来源公开传记的公历生日，不推断原始历史民用记载的历法转换。"
+      }
+    },
+    {
+      "id": "maria-goeppert-mayer",
+      "birthPlace": {
+        "city": "Kattowitz",
+        "country": "Germany (now Katowice, Poland)"
+      },
+      "displayNote": {
+        "en": "The source identifies her birthplace by its historical name Kattowitz, Germany, and adds the present-day name Katowice, Poland. This retains those labels and the published Gregorian birthday without reconstructing an original historical civil record.",
+        "zh": "来源采用出生时的 Kattowitz、德国，并注明今日名称 Katowice、波兰。保留这些历史与现代地名及公开传记公历生日，不据此重建原始历史民用记载。"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "name": {
+        "en": "Yang Zhenning",
+        "zh": "杨振宁"
+      },
+      "reason": "The parent research report identified conflicting institutional birthday records that remain unresolved. Excluded from both batches.",
+      "sourceProvenance": "Reported by the parent research worker; not independently refetched here."
+    },
+    {
+      "name": {
+        "en": "Gerty Cori",
+        "zh": "格蒂·科里"
+      },
+      "reason": "The parent research report identified an August 15 birthday at Nobel Prize and an August 8 birthday at NAS. Excluded; Herta Müller is the approved 庚子 record.",
+      "sourceProvenance": "Reported by the parent research worker; not independently refetched here."
+    }
+  ],
+  "scopeLimits": "Birthday matches are calendar-date references, not a complete birth chart or evidence that achievement, character, gender, or relationships result from a Day Pillar. No portraits, new routes, additional candidates, or Traditional Chinese/Russian body edits are included.",
+  "records": [
+    {
+      "id": "kazuo-ishiguro",
+      "birthDate": "1954-11-08",
+      "dayPillar": "戊辰",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2017/ishiguro/facts/",
+      "bornQuote": "Born: 8 November 1954, Nagasaki, Japan",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊辰"
+      }
+    },
+    {
+      "id": "barack-obama",
+      "birthDate": "1961-08-04",
+      "dayPillar": "己巳",
+      "sourceUrl": "https://www.nobelprize.org/prizes/peace/2009/obama/facts/",
+      "bornQuote": "Born: 4 August 1961, Honolulu, HI, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己巳"
+      }
+    },
+    {
+      "id": "barbara-mcclintock",
+      "birthDate": "1902-06-16",
+      "dayPillar": "庚午",
+      "sourceUrl": "https://www.nobelprize.org/prizes/medicine/1983/mcclintock/facts/",
+      "bornQuote": "Born: 16 June 1902, Hartford, CT, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "庚午"
+      }
+    },
+    {
+      "id": "shirin-ebadi",
+      "birthDate": "1947-06-21",
+      "dayPillar": "辛未",
+      "sourceUrl": "https://www.nobelprize.org/prizes/peace/2003/ebadi/facts/",
+      "bornQuote": "Born: 21 June 1947, Hamadan, Iran",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "辛未"
+      }
+    },
+    {
+      "id": "bob-dylan",
+      "birthDate": "1941-05-24",
+      "dayPillar": "壬申",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2016/dylan/facts/",
+      "bornQuote": "Born: 24 May 1941, Duluth, MN, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "壬申"
+      }
+    },
+    {
+      "id": "irene-joliot-curie",
+      "birthDate": "1897-09-12",
+      "dayPillar": "癸酉",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/1935/joliot-curie/facts/",
+      "bornQuote": "Born: 12 September 1897, Paris, France",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸酉"
+      }
+    },
+    {
+      "id": "daniel-kahneman",
+      "birthDate": "1934-03-05",
+      "dayPillar": "乙亥",
+      "sourceUrl": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/",
+      "bornQuote": "Born: 5 March 1934, Tel Aviv, British Mandate of Palestine (now Israel)",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "乙亥"
+      }
+    },
+    {
+      "id": "katalin-kariko",
+      "birthDate": "1955-01-17",
+      "dayPillar": "戊寅",
+      "sourceUrl": "https://www.nobelprize.org/prizes/medicine/2023/kariko/facts/",
+      "bornQuote": "Born: 17 January 1955, Szolnok, Hungary",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊寅"
+      }
+    },
+    {
+      "id": "syukuro-manabe",
+      "birthDate": "1931-09-21",
+      "dayPillar": "己卯",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/2021/manabe/facts/",
+      "bornQuote": "Born: 21 September 1931, Shingu, Ehime, Japan",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己卯"
+      }
+    },
+    {
+      "id": "demis-hassabis",
+      "birthDate": "1976-07-27",
+      "dayPillar": "庚辰",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/2024/hassabis/facts/",
+      "bornQuote": "Born: 27 July 1976, London, United Kingdom",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "庚辰"
+      }
+    },
+    {
+      "id": "john-steinbeck",
+      "birthDate": "1902-02-27",
+      "dayPillar": "辛巳",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1962/steinbeck/facts/",
+      "bornQuote": "Born: 27 February 1902, Salinas, CA, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "辛巳"
+      }
+    },
+    {
+      "id": "cv-raman",
+      "birthDate": "1888-11-07",
+      "dayPillar": "壬午",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1930/raman/facts/",
+      "bornQuote": "Born: 7 November 1888, Tiruchirappalli, India",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "壬午"
+      }
+    },
+    {
+      "id": "steven-chu",
+      "birthDate": "1948-02-28",
+      "dayPillar": "癸未",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1997/chu/facts/",
+      "bornQuote": "Born: 28 February 1948, St. Louis, MO, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸未"
+      }
+    },
+    {
+      "id": "john-nash",
+      "birthDate": "1928-06-13",
+      "dayPillar": "甲申",
+      "sourceUrl": "https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/",
+      "bornQuote": "Born: 13 June 1928, Bluefield, WV, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "甲申"
+      }
+    },
+    {
+      "id": "abhijit-banerjee",
+      "birthDate": "1961-02-21",
+      "dayPillar": "乙酉",
+      "sourceUrl": "https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee/facts/",
+      "bornQuote": "Born: 21 February 1961, Mumbai, India",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "乙酉"
+      }
+    },
+    {
+      "id": "max-planck",
+      "birthDate": "1858-04-23",
+      "dayPillar": "丙戌",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1918/planck/facts/",
+      "bornQuote": "Born: 23 April 1858, Kiel, Schleswig (now Germany)",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "丙戌"
+      }
+    },
+    {
+      "id": "claudia-goldin",
+      "birthDate": "1946-05-14",
+      "dayPillar": "戊子",
+      "sourceUrl": "https://www.nobelprize.org/prizes/economic-sciences/2023/goldin/facts/",
+      "bornQuote": "Born: 14 May 1946, New York, NY, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊子"
+      }
+    },
+    {
+      "id": "esther-duflo",
+      "birthDate": "1972-10-25",
+      "dayPillar": "己丑",
+      "sourceUrl": "https://www.nobelprize.org/prizes/economic-sciences/2019/duflo/facts/",
+      "bornQuote": "Born: 25 October 1972, Paris, France",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己丑"
+      }
+    },
+    {
+      "id": "ada-yonath",
+      "birthDate": "1939-06-22",
+      "dayPillar": "庚寅",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/2009/yonath/facts/",
+      "bornQuote": "Born: 22 June 1939, Jerusalem, British Mandate of Palestine (now Israel)",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "庚寅"
+      }
+    },
+    {
+      "id": "albert-camus",
+      "birthDate": "1913-11-07",
+      "dayPillar": "壬辰",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1957/camus/facts/",
+      "bornQuote": "Born: 7 November 1913, Mondovi, French Algeria (now Algeria)",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "壬辰"
+      }
+    },
+    {
+      "id": "frances-arnold",
+      "birthDate": "1956-07-25",
+      "dayPillar": "癸巳",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/2018/arnold/facts/",
+      "bornQuote": "Born: 25 July 1956, Pittsburgh, PA, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸巳"
+      }
+    },
+    {
+      "id": "desmond-tutu",
+      "birthDate": "1931-10-07",
+      "dayPillar": "乙未",
+      "sourceUrl": "https://www.nobelprize.org/prizes/peace/1984/tutu/facts/",
+      "bornQuote": "Born: 7 October 1931, Klerksdorp, South Africa",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "乙未"
+      }
+    },
+    {
+      "id": "jennifer-doudna",
+      "birthDate": "1964-02-19",
+      "dayPillar": "戊戌",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/2020/doudna/facts/",
+      "bornQuote": "Born: 19 February 1964, Washington, D.C., USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊戌"
+      }
+    },
+    {
+      "id": "gabriel-garcia-marquez",
+      "birthDate": "1927-03-06",
+      "dayPillar": "己亥",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1982/marquez/facts/",
+      "bornQuote": "Born: 6 March 1927, Aracataca, Colombia",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己亥"
+      }
+    },
+    {
+      "id": "herta-muller",
+      "birthDate": "1953-08-17",
+      "dayPillar": "庚子",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2009/muller/facts/",
+      "bornQuote": "Born: 17 August 1953, Nitzkydorf, Banat, Romania",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "庚子"
+      }
+    },
+    {
+      "id": "andrea-ghez",
+      "birthDate": "1965-06-16",
+      "dayPillar": "辛丑",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/2020/ghez/facts/",
+      "bornQuote": "Born: 16 June 1965, New York, NY, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "辛丑"
+      }
+    },
+    {
+      "id": "carolyn-bertozzi",
+      "birthDate": "1966-10-10",
+      "dayPillar": "壬寅",
+      "sourceUrl": "https://www.nobelprize.org/prizes/chemistry/2022/bertozzi/facts/",
+      "bornQuote": "Born: 10 October 1966, Boston, MA, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "壬寅"
+      }
+    },
+    {
+      "id": "maria-goeppert-mayer",
+      "birthDate": "1906-06-28",
+      "dayPillar": "癸卯",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1963/mayer/facts/",
+      "bornQuote": "Born: 28 June 1906, Kattowitz, Germany (now Katowice, Poland)",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸卯"
+      }
+    },
+    {
+      "id": "gao-xingjian",
+      "birthDate": "1940-01-04",
+      "dayPillar": "丙午",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2000/gao/facts/",
+      "bornQuote": "Born: 4 January 1940, Ganzhou, China",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "丙午"
+      }
+    },
+    {
+      "id": "samuel-ting",
+      "birthDate": "1936-01-27",
+      "dayPillar": "戊申",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1976/ting/facts/",
+      "bornQuote": "Born: 27 January 1936, Ann Arbor, MI, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊申"
+      }
+    },
+    {
+      "id": "donna-strickland",
+      "birthDate": "1959-05-27",
+      "dayPillar": "己酉",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/2018/strickland/facts/",
+      "bornQuote": "Born: 27 May 1959, Guelph, Canada",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己酉"
+      }
+    },
+    {
+      "id": "louise-gluck",
+      "birthDate": "1943-04-22",
+      "dayPillar": "庚戌",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2020/gluck/facts/",
+      "bornQuote": "Born: 22 April 1943, New York, NY, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "庚戌"
+      }
+    },
+    {
+      "id": "han-kang",
+      "birthDate": "1970-11-27",
+      "dayPillar": "辛亥",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+      "bornQuote": "Born: 27 November 1970, Gwangju, South Korea",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "辛亥"
+      }
+    },
+    {
+      "id": "rita-levi-montalcini",
+      "birthDate": "1909-04-22",
+      "dayPillar": "壬子",
+      "sourceUrl": "https://www.nobelprize.org/prizes/medicine/1986/levi-montalcini/facts/",
+      "bornQuote": "Born: 22 April 1909, Turin, Italy",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "壬子"
+      }
+    },
+    {
+      "id": "gabriela-mistral",
+      "birthDate": "1889-04-07",
+      "dayPillar": "癸丑",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1945/mistral/facts/",
+      "bornQuote": "Born: 7 April 1889, Vicuña, Chile",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸丑"
+      }
+    },
+    {
+      "id": "richard-feynman",
+      "birthDate": "1918-05-11",
+      "dayPillar": "戊午",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1965/feynman/facts/",
+      "bornQuote": "Born: 11 May 1918, New York, NY, USA",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "戊午"
+      }
+    },
+    {
+      "id": "sigrid-undset",
+      "birthDate": "1882-05-20",
+      "dayPillar": "己未",
+      "sourceUrl": "https://www.nobelprize.org/prizes/literature/1928/undset/facts/",
+      "bornQuote": "Born: 20 May 1882, Kalundborg, Denmark",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "己未"
+      }
+    },
+    {
+      "id": "paul-dirac",
+      "birthDate": "1902-08-08",
+      "dayPillar": "癸亥",
+      "sourceUrl": "https://www.nobelprize.org/prizes/physics/1933/dirac/facts/",
+      "bornQuote": "Born: 8 August 1902, Bristol, United Kingdom",
+      "engineeringResult": {
+        "ok": true,
+        "pillar": "癸亥"
+      }
+    }
+  ]
+}
