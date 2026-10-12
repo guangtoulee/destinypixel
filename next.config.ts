@@ -20,8 +20,6 @@ const nextConfig: NextConfig = {
       "/checkout/:path*",
       "/image",
       "/image/:path*",
-      "/jiankangbao",
-      "/jiankangbao/:path*",
       "/english",
       "/english/:path*",
       "/danci",
@@ -78,20 +76,6 @@ const nextConfig: NextConfig = {
         source: "/jake/:path*",
         destination: "https://www.packom.store/jake/:path*",
         permanent: true,
-      },
-    ];
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/jiankangbao",
-        destination:
-          "https://zhuangli-jiankangbao.anyulee.chatgpt.site/jiankangbao/",
-      },
-      {
-        source: "/jiankangbao/:path*",
-        destination:
-          "https://zhuangli-jiankangbao.anyulee.chatgpt.site/jiankangbao/:path*",
       },
     ];
   },
