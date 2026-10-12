@@ -1,0 +1,56 @@
+{
+  "commit": "39e418e3f56aad0512a9b6b755afb40669de8183",
+  "base": "http://127.0.0.1:3055",
+  "baseline": "http://127.0.0.1:3053",
+  "initialSummary": {
+    "editions": 240,
+    "structuredPersonOccurrences": 120,
+    "newPersonOccurrences": 76,
+    "firstBatchOccurrences": 44,
+    "structuredPillars": 58,
+    "coveredPillarsPerEnZh": 60,
+    "retainedLanguageComparisons": 120,
+    "retainedFirstBatchComparisons": 40,
+    "originalBirthdayTableRows": 32,
+    "directories": 4,
+    "articleViews": 0,
+    "libraryViews": 6,
+    "localeSwitchAndBackCases": 0,
+    "screenshots": 10,
+    "failures": 54
+  },
+  "initialFailureCauses": {
+    "telemetryConsoleAssertions": 53,
+    "networkIdleBackWait": 1,
+    "other": 0
+  },
+  "observed404Endpoints": [
+    {
+      "path": "/_vercel/insights/script.js",
+      "currentURL": "http://127.0.0.1:3055/_vercel/insights/script.js",
+      "currentStatus": 404,
+      "baselineURL": "http://127.0.0.1:3053/_vercel/insights/script.js",
+      "baselineStatus": 404,
+      "consoleLocationMatchedExactURL": true
+    },
+    {
+      "path": "/_vercel/speed-insights/script.js",
+      "currentURL": "http://127.0.0.1:3055/_vercel/speed-insights/script.js",
+      "currentStatus": 404,
+      "baselineURL": "http://127.0.0.1:3053/_vercel/speed-insights/script.js",
+      "baselineStatus": 404,
+      "consoleLocationMatchedExactURL": true
+    }
+  ],
+  "classification": "A separate instrumented browser visit to the article and original card on both ports identified these exact404URLs and console locations. Only these two URL-identified local telemetry404 messages are classified separately; all unexpected resource, console and page errors remain strict.",
+  "backWait": [
+    {
+      "case": "browser gui_you/en/390",
+      "wait": "networkidle",
+      "timeoutMs": 30000,
+      "navigatedURL": "http://127.0.0.1:3055/day-pillar?pillar=gui_you",
+      "change": "Wait for navigation commit, then assert exact URL, main language and reciprocal pillar/article link."
+    }
+  ],
+  "fullOriginalReportPreservedAt": "/tmp/day-pillar-people-second-initial-console-report-20261012.json"
+}

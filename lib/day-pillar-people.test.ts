@@ -20,6 +20,7 @@ const expectedPillars: Record<string, string> = {
   "rosa-parks": "丙辰", "tu-youyou": "甲寅",
 };
 const legacyPillars = ["甲子", "乙丑", "丙寅", "丁卯"];
+const firstBatchPeople = verifiedDayPillarPeople.filter(person => Object.hasOwn(expectedPillars, person.id));
 
 function originalTranslation(copy: JournalTranslation): JournalTranslation {
   return { ...copy, sections: copy.sections.flatMap(section => {
@@ -31,13 +32,13 @@ function originalTranslation(copy: JournalTranslation): JournalTranslation {
 }
 
 test("the 22 source-backed birthday records match the independently supplied 20-pillar assignments", () => {
-  assert.equal(registry.reviewedAt, "2026-10-11");
+  assert.equal(registry.reviewedAt, "2026-10-12");
   assert.deepEqual(verifiedDayPillarPeople, registry.people);
-  assert.equal(verifiedDayPillarPeople.length, 22);
-  assert.deepEqual(verifiedDayPillarPeople.map(person => person.id).sort(), Object.keys(expectedPillars).sort());
-  assert.equal(new Set(verifiedDayPillarPeople.map(person => person.id)).size, 22);
-  assert.equal(new Set(verifiedDayPillarPeople.map(person => person.dayPillar)).size, 20);
-  for (const person of verifiedDayPillarPeople) {
+  assert.equal(firstBatchPeople.length, 22);
+  assert.deepEqual(firstBatchPeople.map(person => person.id).sort(), Object.keys(expectedPillars).sort());
+  assert.equal(new Set(firstBatchPeople.map(person => person.id)).size, 22);
+  assert.equal(new Set(firstBatchPeople.map(person => person.dayPillar)).size, 20);
+  for (const person of firstBatchPeople) {
     assert.equal(person.dayPillar, expectedPillars[person.id], person.id);
     assert.deepEqual(calculateDateDayPillar(person.birthDate), { ok: true, pillar: person.dayPillar }, person.id);
     assert.equal(person.calendar, "gregorian", person.id);
@@ -59,7 +60,7 @@ test("birthday source links accept HTTPS and reject executable, relative and cre
   for (const url of ["javascript:alert(1)", "data:text/html,unsafe", "http://example.com", "//example.com", "/journal", "https://user:secret@example.com/birthday", "not a URL"]) assert.equal(isSafeBirthdaySource(url), false, url);
 });
 
-test("only the 20 matched zh/en entries receive people; unsupported pillars and other languages remain untouched", () => {
+test("only matched zh/en entries receive structured people; other languages remain untouched", () => {
   const addedIds: Record<"en" | "zh", string[]> = { en: [], zh: [] };
   for (const pillar of dayPillarCycle) {
     const article = journalArticles.find(item => item.pillar === pillar)!;
@@ -78,7 +79,7 @@ test("only the 20 matched zh/en entries receive people; unsupported pillars and 
       }
     }
   }
-  for (const locale of ["en", "zh"] as const) assert.deepEqual(addedIds[locale].sort(), Object.keys(expectedPillars).sort());
+  for (const locale of ["en", "zh"] as const) assert.deepEqual(addedIds[locale].sort(), verifiedDayPillarPeople.map(person => person.id).sort());
 });
 
 test("a matching legacy name and date prevent a new structured record from being displayed twice", () => {
@@ -94,11 +95,12 @@ test("a matching legacy name and date prevent a new structured record from being
   }
 });
 
-test("actual birthday coverage is 22 of 60 in zh/en and the original four pillars in zh-TW/ru", () => {
+test("the original batch still covers 22 pillars, full zh/en coverage is 60 and zh-TW/ru retain the original four", () => {
+  assert.equal(new Set([...Object.values(expectedPillars), ...legacyPillars]).size, 22);
   for (const locale of journalLocales) {
     const covered = journalArticles.filter(article => article.pillar && article.translations[locale].sections.some(section => section.id === "famous-birthdays" && ((section.people?.length ?? 0) > 0 || (section.table?.rows.length ?? 0) > 0))).map(article => article.pillar!);
-    const expected = locale === "en" || locale === "zh" ? [...new Set([...Object.values(expectedPillars), ...legacyPillars])] : legacyPillars;
-    assert.equal(covered.length, locale === "en" || locale === "zh" ? 22 : 4, locale);
+    const expected = locale === "en" || locale === "zh" ? [...dayPillarCycle] : legacyPillars;
+    assert.equal(covered.length, locale === "en" || locale === "zh" ? 60 : 4, locale);
     assert.deepEqual(covered.sort(), expected.sort(), locale);
   }
 });
