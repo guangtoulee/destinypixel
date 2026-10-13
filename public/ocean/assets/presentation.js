@@ -10,6 +10,43 @@
   };
   function element(tag, text, className) { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (className) e.className = className; return e; }
   function media(path) { return encodeURI(path.startsWith('/') ? path : `/ocean/media/${path}`); }
+  const imageLoads = new WeakMap();
+  window.OceanNetworkDiagnostics = { imageFailures: 0, imageRecoveries: 0, modelFailures: 0, modelRecoveries: 0 };
+  function setImageSource(img, source) {
+    const url = new URL(source, location.href).href;
+    const previous = imageLoads.get(img);
+    if (previous?.source === url && img.dataset.imageState !== 'unavailable') return;
+    if (previous) clearTimeout(previous.timer);
+    const state = { source: url, current: url, attempts: 0, timer: null };
+    imageLoads.set(img, state);
+    const active = () => imageLoads.get(img) === state && img.isConnected && img.src === state.current;
+    function load() {
+      state.attempts += 1;
+      const next = new URL(state.source);
+      if (state.attempts > 1) next.searchParams.set('ocean-retry', String(state.attempts - 1));
+      state.current = next.href;
+      img.dataset.imageAttempts = String(state.attempts);
+      img.dataset.imageState = state.attempts > 1 ? 'retrying' : 'loading';
+      img.src = state.current;
+    }
+    img.onload = () => {
+      if (!active()) return;
+      clearTimeout(state.timer); state.timer = null;
+      img.dataset.imageState = 'ready';
+      if (state.attempts > 1) window.OceanNetworkDiagnostics.imageRecoveries += 1;
+    };
+    img.onerror = () => {
+      if (!active() || state.timer !== null || img.dataset.imageState === 'unavailable') return;
+      window.OceanNetworkDiagnostics.imageFailures += 1;
+      if (state.attempts >= 3) { img.dataset.imageState = 'unavailable'; return; }
+      img.dataset.imageState = 'retrying';
+      state.timer = setTimeout(() => {
+        state.timer = null;
+        if (active()) load();
+      }, state.attempts * 500);
+    };
+    load();
+  }
   function openModel() {
     if (window.startOceanModel) { window.startOceanModel(); return; }
     if (modelScript) return;
@@ -25,13 +62,14 @@
     document.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-current', b.dataset.tab === tab ? 'page' : 'false'));
     history.replaceState(null, '', `#${tab}`);
     if (tab === 'model') openModel();
+    else window.cancelOceanModelLoad?.();
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
   function updateGallery() {
     const scene = manifest.scenes[sceneIndex];
     if (!scene.images[mode]) mode = Object.keys(modeNames).find(m => scene.images[m]);
     const path = scene.images[mode];
-    $('main-image').src = media(path); $('main-image').alt = `${scene.title} · ${modeNames[mode]}`;
+    setImageSource($('main-image'), media(path)); $('main-image').alt = `${scene.title} · ${modeNames[mode]}`;
     $('original-link').href = media(path);
     $('scene-number').textContent = scene.number || String(sceneIndex + 1).padStart(2, '0');
     $('scene-title').textContent = scene.title; $('scene-description').textContent = scene.description || '';
@@ -53,7 +91,7 @@
   function buildGallery() {
     $('scene-strip').replaceChildren(...manifest.scenes.map((s, i) => {
       const b = element('button', undefined, 'scene-card'); b.type = 'button'; b.setAttribute('aria-label', `${i + 1} ${s.title}`);
-      const img = element('img'); img.src = media(s.thumbnail || s.images.effect || s.images.native || s.images.white); img.alt = `${s.title}缩略图`; img.loading = 'lazy';
+      const img = element('img'); img.loading = 'lazy'; setImageSource(img, media(s.thumbnail || s.images.effect || s.images.native || s.images.white)); img.alt = `${s.title}缩略图`;
       const label = element('div', undefined, 'scene-card-body'); label.append(element('span', String(i + 1).padStart(2, '0'), 'scene-card-num'), element('span', s.title, 'scene-card-title')); b.append(img, label);
       b.onclick = () => { sceneIndex = i; updateGallery(); }; return b;
     }));
@@ -65,7 +103,7 @@
   }
   function choosePlan(kind) {
     const plan = manifest.plan[kind]; if (!plan) return;
-    $('plan-image').src = media(plan.path); $('plan-image').alt = plan.title || (kind === 'route' ? '参观动线' : '展厅分区平面');
+    setImageSource($('plan-image'), media(plan.path)); $('plan-image').alt = plan.title || (kind === 'route' ? '参观动线' : '展厅分区平面');
     $('plan-caption').textContent = plan.caption || ''; $('plan-original').href = media(plan.original || plan.path);
     document.querySelectorAll('[data-plan]').forEach(b => { b.setAttribute('aria-pressed', String(b.dataset.plan === kind)); b.disabled = !manifest.plan[b.dataset.plan]; });
   }
@@ -80,6 +118,20 @@
         if (s.title) article.append(element('h3', s.title));
         for (const p of s.paragraphs || []) article.append(element('p', p));
         if (s.bullets?.length) { const ul = element('ul'); ul.append(...s.bullets.map(x => element('li', x))); article.append(ul); }
+        for (const table of s.tables || []) {
+          const wrap = element('div', undefined, 'chapter-table-wrap');
+          wrap.tabIndex = 0; wrap.setAttribute('aria-label', table.caption || '设计资料表格');
+          const node = element('table', undefined, 'chapter-table');
+          if (table.caption) node.append(element('caption', table.caption));
+          if (table.headers?.length) {
+            const head = element('thead'), row = element('tr');
+            row.append(...table.headers.map(text => { const cell = element('th', text); cell.scope = 'col'; return cell; }));
+            head.append(row); node.append(head);
+          }
+          const body = element('tbody');
+          for (const cells of table.rows || []) { const row = element('tr'); row.append(...cells.map(text => element('td', text))); body.append(row); }
+          node.append(body); wrap.append(node); article.append(wrap);
+        }
       }
       chapterNodes.push(article);
       const a = element('a'); a.href = `#${id}`; a.append(element('span', n), element('strong', c.title)); a.onclick = e => { e.preventDefault(); article.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' }); }; navNodes.push(a);
@@ -98,7 +150,7 @@
       document.title = `${p.title} · 展览设计方案`; $('project-title').textContent = p.title; $('institution').textContent = p.institution;
       $('hero-title').textContent = p.heroTitle || p.title; $('hero-summary').textContent = p.summary; $('project-stage').textContent = p.stage; $('footer-stage').textContent = p.stage; $('project-date').textContent = p.date;
       const hero = manifest.hero || { path: manifest.scenes[0].images.effect || manifest.scenes[0].images.native, label: manifest.scenes[0].title };
-      $('hero-image').src = media(hero.path); $('hero-image').alt = hero.label || p.title; $('hero-image-label').textContent = hero.label || '';
+      setImageSource($('hero-image'), media(hero.path)); $('hero-image').alt = hero.label || p.title; $('hero-image-label').textContent = hero.label || '';
       $('project-stats').replaceChildren(...(p.stats || []).map(s => { const d = element('div', undefined, 'stat'); d.append(element('div', s.value, 'stat-value'), element('div', s.label, 'stat-label')); return d; }));
       for (const format of ['pdf','ppt']) if (manifest[format]?.path) for (const id of [`${format}-top`, `${format}-main`]) { $(id).href = media(manifest[format].path); $(id).download = manifest[format].name || `展览设计方案.${format==='ppt'?'pptx':'pdf'}`; $(id).hidden = false; }
       $('model-dimensions').textContent = manifest.model.label || '';
@@ -110,7 +162,7 @@
       $('plan-notes').replaceChildren(...(manifest.plan.notes || []).map(n => { const d = element('div'); d.append(element('h3', n.title), element('p', n.text)); return d; }));
       buildGallery(); buildProposal(); choosePlan('layout'); $('page-status').hidden = true;
       window.OceanReady = true; window.dispatchEvent(new Event('ocean-ready')); openTab(location.hash.slice(1) || 'overview');
-    } catch (error) { $('page-status').textContent = '方案暂时无法打开，请刷新页面后重试。'; }
+    } catch { $('page-status').textContent = '方案暂时无法打开，请刷新页面后重试。'; }
   }
   document.addEventListener('keydown', e => {
     if (activeTab !== 'gallery' || /INPUT|TEXTAREA/.test(e.target.tagName)) return;

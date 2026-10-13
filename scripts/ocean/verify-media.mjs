@@ -11,6 +11,7 @@ for (const name of files) {
 }
 const assetsOnly = process.argv.includes('--assets-only');
 if ((!assetsOnly && (!m.pdf?.path || !m.ppt?.path)) || !m.plan.route?.path) throw new Error('Final PDF, editable PPT and route image are required for release.');
+if (!assetsOnly && (m.release?.documentStatus !== 'accepted' || !Number.isInteger(m.release?.documentPages) || m.release.documentPages < 1)) throw new Error('The document edition must have an accepted review and a verified page count before publishing its pointer.');
 const effectCount = new Set(m.scenes.map(s => s.images.effect).filter(Boolean)).size;
 if (effectCount < 21 || effectCount > 30) throw new Error('Twenty-one to thirty distinct approved effect images are required for release.');
 if (!m.release?.frozen) throw new Error('An explicitly frozen image selection is required.');
