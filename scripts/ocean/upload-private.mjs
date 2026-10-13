@@ -5,9 +5,10 @@ import { spawnSync } from 'node:child_process';
 import { put, head, BlobNotFoundError } from '@vercel/blob';
 import nextEnv from '@next/env';
 nextEnv.loadEnvConfig(process.cwd());
-const directory = path.resolve(process.argv[2] || 'private/ocean');
+const assetsOnly = process.argv.includes('--assets-only');
+const directory = path.resolve(process.argv.slice(2).find(a=>!a.startsWith('--')) || 'private/ocean');
 const prefix = 'ocean/proposal-20261014/';
-const check = spawnSync(process.execPath, ['scripts/ocean/verify-media.mjs'], { encoding: 'utf8' });
+const check = spawnSync(process.execPath, ['scripts/ocean/verify-media.mjs', ...(assetsOnly ? ['--assets-only'] : [])], { encoding: 'utf8' });
 if (check.status !== 0) throw new Error('Final media verification must pass before upload.');
 const source = JSON.parse(fs.readFileSync(path.join(directory, 'manifest.json'), 'utf8'));
 const hashes = JSON.parse(fs.readFileSync(path.join(directory, 'media-checksums.json'), 'utf8'));
@@ -36,7 +37,9 @@ function transform(value, field = '') {
 }
 const manifest = transform(source);
 // The pointer updates only after every immutable media object is present.
+if (!assetsOnly) {
 await put(prefix + 'media-checksums.json', JSON.stringify({ assets: results }), { access: 'private', addRandomSuffix: false, allowOverwrite: true, contentType: 'application/json', cacheControlMaxAge: 60 });
 await put(prefix + 'manifest.json', JSON.stringify(manifest), { access: 'private', addRandomSuffix: false, allowOverwrite: true, contentType: 'application/json', cacheControlMaxAge: 60 });
-fs.writeFileSync(path.join(directory, 'private-upload-record.json'), JSON.stringify({ prefix, assets: results, completedAt: new Date().toISOString() }, null, 2));
-console.log(JSON.stringify({ complete: true, privateMediaFiles: results.length, bytes: results.reduce((n,r)=>n+r.bytes,0), manifestUpdated: true }));
+}
+fs.writeFileSync(path.join(directory, assetsOnly ? 'private-assets-upload-record.json' : 'private-upload-record.json'), JSON.stringify({ prefix, assets: results, completedAt: new Date().toISOString() }, null, 2));
+console.log(JSON.stringify({ complete: true, privateMediaFiles: results.length, bytes: results.reduce((n,r)=>n+r.bytes,0), manifestUpdated: !assetsOnly }));
