@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   async headers() {
     const noindex = [
       "/blender/:path*",
+      "/ocean/:path*",
       "/report/:path*",
       "/account/:path*",
       "/admin/:path*",
@@ -44,9 +45,9 @@ const nextConfig: NextConfig = {
     return noindex.map((source) => ({
       source,
       headers: [
-        { key: "Referrer-Policy", value: source === "/blender/:path*" ? "same-origin" : "no-referrer" },
+        { key: "Referrer-Policy", value: ["/blender/:path*", "/ocean/:path*"].includes(source) ? "same-origin" : "no-referrer" },
         { key: "X-Robots-Tag", value: "noindex, nofollow" },
-        ...(source === "/blender/:path*" ? [
+        ...(["/blender/:path*", "/ocean/:path*"].includes(source) ? [
           { key: "Cache-Control", value: "private, no-store" },
           { key: "CDN-Cache-Control", value: "no-store" },
           { key: "Vercel-CDN-Cache-Control", value: "no-store" },

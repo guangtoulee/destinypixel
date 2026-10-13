@@ -12,3 +12,10 @@ work/destiny-members.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Private presentation media live in private Blob storage and must never be tracked.
+/public/ocean/media/
+.vercel
+.env*
+
+/private/ocean/
