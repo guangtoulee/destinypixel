@@ -41,11 +41,17 @@ async function serve(request: NextRequest, context: Context, headersOnly: boolea
       headers.set("Content-Length", String(metadata.size));
       return new NextResponse(null, { headers });
     }
-    const result = await get(key, { access: "private", useCache: !key.endsWith("/manifest.json"), abortSignal: request.signal });
+    const metadata = await head(key);
+    const result = await get(key, {
+      access: "private", useCache: !key.endsWith("/manifest.json"),
+      // The storage stream outlives this handler's incoming request lifecycle.
+      abortSignal: AbortSignal.timeout(290_000), headers: { "Accept-Encoding": "identity" },
+    });
     if (result?.statusCode !== 200) return new NextResponse("未找到文件。", { status: 404, headers });
     headers.set("Content-Type", result.blob.contentType || oceanContentType(filename));
-    // Blob GET metadata can report zero after transfer decoding (for example JSON).
-    // Let the streamed response determine its length; HEAD uses reliable store metadata.
+    // GET metadata may report zero after decoding; head supplies the actual object size.
+    headers.set("Content-Length", String(metadata.size));
+    headers.set("Cache-Control", "private, no-store, max-age=0, no-transform");
     return new NextResponse(result.stream, { headers });
   } catch (error) {
     if (error instanceof BlobNotFoundError || (error instanceof Error && "code" in error && error.code === "ENOENT")) return new NextResponse("未找到文件。", { status: 404, headers });
