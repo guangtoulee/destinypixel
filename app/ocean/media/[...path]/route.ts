@@ -6,6 +6,7 @@ import path from "node:path";
 import { Readable } from "node:stream";
 import { OCEAN_COOKIE_NAME, OCEAN_PRIVATE_HEADERS, verifyOceanSession } from "@/lib/ocean-access";
 import { oceanContentDisposition, oceanContentType, oceanMediaKey } from "@/lib/ocean-media";
+import { diagnoseOceanStream } from "@/lib/ocean-stream";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -52,7 +53,7 @@ async function serve(request: NextRequest, context: Context, headersOnly: boolea
     // GET metadata may report zero after decoding; head supplies the actual object size.
     headers.set("Content-Length", String(metadata.size));
     headers.set("Cache-Control", "private, no-store, max-age=0, no-transform");
-    return new NextResponse(result.stream, { headers });
+    return new NextResponse(diagnoseOceanStream(result.stream, request.signal), { headers });
   } catch (error) {
     if (error instanceof BlobNotFoundError || (error instanceof Error && "code" in error && error.code === "ENOENT")) return new NextResponse("未找到文件。", { status: 404, headers });
     console.error("[ocean-media] Private storage read failed");
