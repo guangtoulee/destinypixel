@@ -1,3 +1,4 @@
+import { baziCompatibilityArticle, baziCompatibilityRussian } from "./journal-bazi-compatibility";
 import { fortuneStickEditionsArticle, fortuneStickEditionsRussian } from "./journal-fortune-stick-editions";
 import { birthTimeArticle } from "./compatibility/birth-time-article";
 import type { JournalSourceArticle, JournalTranslation } from "./journal";
@@ -10,53 +11,6 @@ type Entry = { slug: string; relatedSlug: string; sources: { label: string; href
 
 // Original, task-focused guides. Section order is shared across complete editions.
 const entries: Entry[] = [
-  {
-    slug: "bazi-vs-chinese-zodiac-compatibility", relatedSlug: "compatibility-without-birth-time",
-    sources: [{ label: "Hong Kong Observatory · 干支与八字 · Небесные стволы и земные ветви", href: "https://www.hko.gov.hk/en/gts/time/stemsandbranches.htm" }, { label: "DestinyPixel · Compatibility method / 配对方法 / Метод сравнения", href: "/compatibility" }],
-    en: {
-      title: "BaZi vs Chinese zodiac compatibility: beyond your birth-year animal",
-      description: "Same zodiac animal, different relationship styles? Compare year-sign matching with Four Pillars, five elements and DestinyPixel’s free compatibility tool.",
-      topic: "Love & the five elements",
-      introduction: "You look up two Chinese zodiac animals and find a perfect match. Yet one of you wants to settle every disagreement immediately, while the other needs a quiet evening first. Did you read the wrong table? A year-animal pairing describes a very small part of the system. This guide separates the calendar, the symbolic interpretation and the conversation you can actually have together, without asking a score to decide your relationship.",
-      takeaway: "A year animal is one calendar label. BaZi uses year, month, day and hour. More detail makes a comparison more specific, but does not make it a proven measure of love.",
-      sections: [
-        ["What does a Chinese zodiac compatibility table compare?", "A familiar zodiac chart starts with the animal associated with a birth year and compares it with another animal. It is easy to remember and easy to share, which makes it a useful cultural introduction. But two people assigned the same animal can have different birth months, days and hours. A year-based table cannot distinguish those inputs. Near a calendar boundary, also check which convention the calculator follows rather than choosing a year from a generic poster. DestinyPixel’s full birth calculation uses the start of spring, LiChun, for its year boundary; that should not be silently confused with Lunar New Year."],
-        ["What does BaZi add?", "BaZi means eight characters: a stem and a branch for each of four calendar pillars. The Hong Kong Observatory describes how these pairs are used for years, months, days and hours, and how they form a sixty-pair cycle. That is evidence for the calendar structure, not for predictions about a couple. In a reading, the day stem becomes a reference point for discussing the five elements. Looking at both complete sets can reveal different symbolic patterns despite identical year animals. It still cannot tell you whether someone keeps promises, listens during conflict or shares your plans for the future."],
-        ["How to read supporting and controlling elements", "Wood, fire, earth, metal and water form a traditional vocabulary of relationships. A supporting relationship can become a prompt about giving and receiving; a controlling relationship can become a prompt about boundaries or friction. Avoid translating these straight into good partner and bad partner. For example, one person may experience frequent advice as care while the other hears constant correction. The useful next question is what each person actually needs: encouragement, practical help or room to decide. This is a way to explore a metaphor together, not a claim that an element caused either person’s behavior or that conflict is inevitable."],
-        ["Where do the sixty animal cards fit?", "DestinyPixel’s sixty animal portraits give the calendar combinations memorable visual identities. The names, artwork and character stories are an original presentation, not sixty ancient personality diagnoses. Read your own card first and choose one description that fits a real incident, then one that does not. Invite your partner to do the same instead of announcing what their card means about them. Two people can identify with similar images while expressing affection very differently. The cards work best as an opening to that discussion; they are not additional evidence that a relationship is destined, and their illustrations do not add hidden points to the score."],
-        ["What the free comparison actually calculates", "The current tool combines a BaZi element comparison with selected planetary comparisons. Its overall index uses thirty percent BaZi and seventy percent planetary comparisons, then presents the result on an editorial scale from sixty to one hundred. That number is not a measured probability of staying together. The page also compares personality, communication, affection and everyday rhythm, and shows the two animal portraits. AI can explain the supplied result but does not choose the score. This is not a complete traditional marriage assessment or a full Western synastry reading: it does not calculate houses, rising signs or a marriage date."],
-        ["Turn the reading into one useful conversation", "Both people should check their recorded date, time and selected birthplace before comparing. Then pick one small, observable question rather than trying to settle your entire future: after a difficult workday, do you want questions, company or quiet first? Each person answers before looking back at the reading. Agree on one action to try, such as saying when you will return to a paused conversation. A week later, discuss whether that helped. If the result does not fit, say so and keep the real experience. The value of this exercise is a clearer conversation, not persuading either person to accept a label."],
-      ], action: { label: "Compare your two birth charts free", href: "/compatibility" },
-    },
-    zh: {
-      title: "生肖配对和八字合婚有什么区别？从属相看到五行与相处方式",
-      description: "同样的生肖，为什么相处模式不同？讲清生肖配对、四柱八字、五行关系与60动物卡的区别，并了解免费情感匹配的实际计算范围。",
-      topic: "感情与五行", introduction: "查生肖时明明写着“很般配”，真正相处却是一个人想立刻讲清楚，另一个人想先安静一晚。是配对表错了，还是你们不够了解彼此？年生肖只提供很小的一部分信息。这篇指南把历法、象征解读和两个人真正能讨论的事情分开，让配对结果成为交流的起点。",
-      takeaway: "生肖配对通常只看出生年的动物；八字使用年、月、日、时四柱。信息更具体，不等于已经科学验证了感情好坏。",
-      sections: [
-        ["生肖配对表到底在比较什么？", "常见配对表从出生年的动物出发，与另一个动物作比较。它好记、好分享，适合作为文化入口，却区分不了同属一个生肖、但出生月份、日期和时辰不同的人。处在换年边界附近时，还要先确认采用什么历法规则，不能只照一张年份海报选属相。本站完整出生计算以立春作为年柱边界，不应与农历正月初一混用。"],
-        ["八字比生肖多看了什么？", "四柱中的每一柱都有一个天干和一个地支，年、月、日、时合起来就是八个字。香港天文台介绍了这些干支如何用于纪年、纪月、纪日和纪时，以及六十组合的循环；这支持历法结构的说明，不是对感情预测的验证。解读时，日干可以作为理解五行关系的参照。同生肖的人可能有不同的组合，但这些组合不能替你确认一个人是否守信、是否愿意倾听、是否与你有一致的生活计划。"],
-        ["五行相生相克，怎样读成相处问题？", "木、火、土、金、水之间的关系，是传统象征语言。“相生”可以引出给予与接受的话题，“相克”可以引出边界与摩擦，但不能直接翻译成好伴侣与坏伴侣。比如，一个人不断提建议，自己觉得是在关心，对方却觉得总被纠正。这时真正有用的问题是：你此刻需要鼓励、实际帮助，还是自己决定的空间？这是借助比喻讨论具体体验，并不是说某种元素造成了这些行为。"],
-        ["60动物卡在这里起什么作用？", "本站把六十种历法组合设计成具有记忆点的动物意象。名字、画面和角色故事属于原创呈现，不是六十种古代人格诊断。可以先各自选出卡片里一条符合真实经历的描述，再选一条不符合的，让对方自己表达，不要替对方宣布“你就是这样的人”。卡片帮助打开话题，不能证明命定关系，图画也不会在分数里额外加上看不见的权重。"],
-        ["免费匹配现在怎么算？", "当前工具把八字元素比较与部分行星关系结合，总体指标中八字占30%，行星比较占70%，再呈现为60—100的编辑尺度。它不是维持关系的成功概率。结果还提供性格、沟通、感情表达与日常节奏的比较，以及双方动物意象。AI解释已经算出的结果，不决定分数。它不等于完整传统合婚或完整西方合盘，也不计算宫位、上升星座和婚期。"],
-        ["把结果变成一次有用的对话", "先由双方核对出生日期、记录时间与出生城市，再选一个可以观察的小问题：工作不顺回家时，你更希望有人问、有人陪，还是先安静？各自先回答，再回看结果。约定一件可以试行的事，例如暂停争论时明确什么时候回来继续说。一周后讨论有没有帮助。描述不符合就保留不同意见；重点是让沟通更清楚，而不是让任何一方服从标签。"],
-      ], action: { label: "免费比较两个人的出生图谱", href: "/compatibility?locale=zh" },
-    },
-    ru: {
-      title: "Совместимость по бацзы и китайскому зодиаку: что меняется кроме животного года",
-      description: "Почему одинаковые знаки не означают одинаковые отношения: четыре столпа, пять элементов, 60 животных и границы бесплатного сравнения DestinyPixel.",
-      topic: "Отношения и пять элементов", introduction: "Таблица обещает прекрасное сочетание знаков, но после ссоры одному хочется немедленно поговорить, а другому нужен тихий вечер. Ошибка ли это? Животное года описывает лишь небольшую часть символической системы. Разберём отдельно календарь, интерпретацию и разговор, который действительно можно провести вдвоём, не поручая оценке решать судьбу отношений.",
-      takeaway: "Животное года — одна календарная метка. Бацзы использует год, месяц, день и час. Более подробное сравнение не становится от этого доказанным измерением любви.",
-      sections: [
-        ["Что сравнивает таблица животных года?", "Обычная таблица сопоставляет животных двух лет рождения. Её легко запомнить, но она не различает людей одного знака с разными месяцами, днями и часами рождения. Вблизи смены года важно уточнять календарное правило, а не брать знак с общего плаката. В полном расчёте DestinyPixel границей годового столпа служит начало весны Личунь; это не то же самое, что первый день лунного нового года."],
-        ["Что добавляют четыре столпа?", "Каждый столп содержит небесный ствол и земную ветвь: вместе год, месяц, день и час дают восемь знаков. Гонконгская обсерватория описывает эти календарные пары и цикл из шестидесяти сочетаний. Это источник о календаре, а не доказательство предсказаний. Ствол дня служит ориентиром в символическом чтении пяти элементов. Но даже разные сочетания не показывают, держит ли человек слово, умеет ли слушать и совпадают ли ваши жизненные планы."],
-        ["Как понимать поддержку и сдерживание элементов?", "Дерево, огонь, земля, металл и вода образуют традиционный язык отношений. Поддержка может предложить тему отдачи и принятия, сдерживание — тему границ. Это не деление на хороших и плохих партнёров. Один даёт советы из заботы, другой слышит постоянные исправления. Спросите, что сейчас нужно: поддержка, конкретная помощь или свобода решения. Здесь метафора помогает обсудить опыт; она не доказывает, что элемент вызвал поведение или сделал конфликт неизбежным."],
-        ["Зачем нужны шестьдесят животных?", "Названия, изображения и характеры карт DestinyPixel — авторское оформление календарных сочетаний, а не древняя диагностика личности. Каждый может выбрать одно описание, совпадающее с реальным случаем, и одно неподходящее. Не назначайте партнёру характер за него. Даже похожие образы не означают одинаковый способ проявлять нежность. Карты открывают разговор, не доказывают предопределённость союза и не добавляют тайных баллов к оценке."],
-        ["Что вычисляет бесплатный инструмент?", "Общий показатель сочетает сравнение элементов бацзы с отдельными планетными отношениями: тридцать процентов и семьдесят процентов соответственно. Шкала от шестидесяти до ста — редакционный индекс, не вероятность успешного брака. Есть сравнения характера, общения, проявления чувств и повседневного ритма. ИИ объясняет готовый результат, но не выставляет балл. Это не полная традиционная оценка брака и не полная западная синастрия: дома, асценденты и дата свадьбы не рассчитываются."],
-        ["Как перейти от чтения к разговору?", "Сначала оба проверьте дату, записанное время и город рождения. Затем независимо ответьте на небольшой вопрос: после тяжёлого рабочего дня вам нужны вопросы, компания или тишина? Сравните ответы с чтением и договоритесь об одном действии, например заранее говорить, когда вернётесь к прерванному разговору. Через неделю обсудите результат. Если описание не подходит, сохраните своё несогласие. Цель — яснее понимать друг друга, а не подчиняться ярлыку."],
-      ], action: { label: "Бесплатно сравнить две карты", href: "/compatibility?locale=ru" },
-    },
-  },
   {
     slug: "compatibility-without-birth-time", relatedSlug: "bazi-vs-chinese-zodiac-compatibility",
     sources: [{ label: "IANA · Time Zone Database / 时区资料 / База часовых поясов", href: "https://www.iana.org/time-zones" }, { label: "DestinyPixel · Birth details / 出生资料 / Данные рождения", href: "/journal/prepare-birth-date-time-place" }],
@@ -130,5 +84,5 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
 export const searchGrowthArticles: JournalSourceArticle[] = [...entries.map(entry => ({
   slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-09-30" : "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
-})), fortuneStickEditionsArticle];
-export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian };
+})), baziCompatibilityArticle, fortuneStickEditionsArticle];
+export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian, [baziCompatibilityArticle.slug]: baziCompatibilityRussian };
