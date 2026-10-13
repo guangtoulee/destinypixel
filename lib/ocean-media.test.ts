@@ -6,7 +6,7 @@ import path from "node:path";
 import { NextRequest } from "next/server";
 import { GET, HEAD } from "../app/ocean/media/[...path]/route";
 import { OCEAN_COOKIE_NAME, createOceanSession } from "./ocean-access";
-import { OCEAN_BLOB_PREFIX, oceanMediaKey } from "./ocean-media";
+import { OCEAN_BLOB_PREFIX, oceanByteRange, oceanMediaKey } from "./ocean-media";
 const saved = Object.fromEntries(["BLENDER_ACCESS_PASSWORD", "BLENDER_SESSION_SECRET", "OCEAN_MEDIA_LOCAL_DIR", "VERCEL"].map(k=>[k,process.env[k]]));
 const directory = mkdtempSync(path.join(tmpdir(), "ocean-media-test-"));
 process.env.BLENDER_ACCESS_PASSWORD = "ocean-test-password";
@@ -28,4 +28,32 @@ test("missing private media returns 404 and namespace traversal is rejected", as
   const missing=await GET(request(true),{params:Promise.resolve({path:["missing.glb"]})});assert.equal(missing.status,404);
   for(const segments of [["..","secret"],["assets","bad","file.glb"],["../secret"],["%2e%2e"],["a\\b"],["a/b"],[""]])assert.equal(oceanMediaKey(segments),null);
   assert.equal(oceanMediaKey(["assets","a".repeat(64),"中文模型.glb"]),OCEAN_BLOB_PREFIX+"assets/"+"a".repeat(64)+"/中文模型.glb");
+});
+
+test("authenticated downloads support single ranges and reject unsatisfiable requests", async () => {
+  const partial = new NextRequest(request(true), { headers: { Cookie: `${OCEAN_COOKIE_NAME}=${createOceanSession()}`, Range: "bytes=2-8" } });
+  const response = await GET(partial, context);
+  assert.equal(response.status, 206);
+  assert.equal(response.headers.get("accept-ranges"), "bytes");
+  assert.equal(response.headers.get("content-range"), "bytes 2-8/16");
+  assert.equal(response.headers.get("content-length"), "7");
+  assert.equal(await response.text(), 'private');
+  const invalid = new NextRequest(request(true), { headers: { Cookie: `${OCEAN_COOKIE_NAME}=${createOceanSession()}`, Range: "bytes=20-" } });
+  const rejected = await GET(invalid, context);
+  assert.equal(rejected.status, 416);
+  assert.equal(rejected.headers.get("content-range"), "bytes */16");
+  assert.match(rejected.headers.get("cache-control") || "", /private, no-store/);
+  const head = await HEAD(partial, context);
+  assert.equal(head.status, 200);
+  assert.equal(head.headers.get("content-length"), "16");
+  const unauthorized = await GET(new NextRequest("https://www.destinypixel.com/ocean/media/fixture.json", { headers: { Range: "bytes=0-1" } }), context);
+  assert.equal(unauthorized.status, 401);
+});
+
+test("range parsing handles suffixes, open ends and oversized ends without overflow", () => {
+  assert.equal(oceanByteRange(null, 16), null);
+  assert.deepEqual(oceanByteRange("bytes=-5", 16), { start: 11, end: 15 });
+  assert.deepEqual(oceanByteRange("bytes=5-", 16), { start: 5, end: 15 });
+  assert.deepEqual(oceanByteRange("bytes=5-999", 16), { start: 5, end: 15 });
+  for (const value of ["bytes=20-", "bytes=-0", "bytes=8-2", "bytes=0-1,4-5", "bytes=9999999999999999999999-", "items=0-1", "bytes=-"]) assert.equal(oceanByteRange(value, 16), false);
 });

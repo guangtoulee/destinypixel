@@ -8,4 +8,6 @@ From the repository root, run `python3 scripts/ocean/stage-media.py /path/to/app
 
 `node scripts/ocean/upload-private.mjs` verifies every checksum, uploads media at immutable SHA-256 object paths, and updates the private manifest pointer last. Existing object paths are reused; unrelated files and stores are never deleted. Future Git deployments read the same durable private media through `/ocean/media/[...path]`.
 
+Image and model loads retry transient failures twice and cancel stale retries when the view changes. Private downloads support authenticated single byte ranges so browsers can resume large files; unauthorized range requests stay denied. Proposal tables use plain-text semantic markup and scroll within their container on narrow screens.
+
 Local review can use an explicit `OCEAN_MEDIA_LOCAL_DIR` pointing at the copied review directory. This filesystem fallback is disabled on Vercel. Browser QA and screenshots containing private project assets must stay outside Git.
