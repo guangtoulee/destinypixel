@@ -31,6 +31,9 @@ export const metadata: Metadata = {
         ? [process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION]
         : []),
     ],
+    other: {
+      "baidu-site-verification": "codeva-kXKVQLaVRO",
+    },
   },
   openGraph: {
     type: "website",
