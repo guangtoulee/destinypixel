@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {isOceanWall,materialForMuseumView} from './wall-materials.mjs';
 let renderer,scene,camera,controls,model,box,center,size,savedMaterials=new Map(),loading=false,loaded=false,view='axis',materialStyle='native';
 const $=id=>document.getElementById(id);
 function status(title,message){$('model-status').hidden=false;$('model-status').innerHTML='';const strong=document.createElement('strong'),p=document.createElement('p');strong.textContent=title;p.textContent=message;$('model-status').append(strong,p);}
@@ -8,8 +9,9 @@ function render(){if(renderer&&scene&&camera){renderer.render(scene,camera);if(w
 function resize(){if(!renderer||!camera)return;const stage=$('model-stage');const w=Math.max(stage.clientWidth,1),h=Math.max(stage.clientHeight,1);renderer.setSize(w,h,false);if(camera.isOrthographicCamera&&box)fitCamera(view,false);else{camera.aspect=w/h;camera.updateProjectionMatrix();render();}}
 function getPrefix(o){const name=String(o.userData?.collection||o.userData?.source_collection||o.name||'');return /^(04|05|07)[_ ]/.exec(name)?.[1];}
 function setLayers(){if(!model)return;const state={};document.querySelectorAll('[data-model-layer]').forEach(i=>state[i.dataset.modelLayer]=i.checked);model.traverse(o=>{const p=getPrefix(o);if(p)o.visible=state[p];});render();}
-function applyMaterial(style){materialStyle=style;if(!model)return;model.traverse(o=>{if(!o.isMesh)return;if(style==='white'){if(!savedMaterials.has(o))savedMaterials.set(o,o.material);o.material=whiteMaterial;}else if(savedMaterials.has(o))o.material=savedMaterials.get(o);});render();}
+function applyMaterial(style){materialStyle=style;if(!model)return;model.traverse(o=>{if(!o.isMesh)return;if(!savedMaterials.has(o))savedMaterials.set(o,o.material);o.material=materialForMuseumView(o,style,savedMaterials.get(o),whiteMaterial,blueWallMaterial);});render();}
 const whiteMaterial=new THREE.MeshStandardMaterial({color:0xe0e1df,roughness:.83,metalness:0});
+const blueWallMaterial=new THREE.MeshStandardMaterial({color:new THREE.Color().setRGB(.012,.033,.06,THREE.LinearSRGBColorSpace),roughness:.92,metalness:0});
 function fitCamera(type){if(!box)return;const preset=window.OceanModelConfig?.views?.find(v=>v.id===type);if(preset?.position&&preset?.target){fitPreset(preset);return;}const stage=$('model-stage'),aspect=Math.max(stage.clientWidth,1)/Math.max(stage.clientHeight,1);const radius=size.length()/2;const near=Math.max(radius/10000,.005),far=Math.max(radius*100,100);
  if(type==='perspective'){camera=new THREE.PerspectiveCamera(43,aspect,near,far);camera.up.set(0,1,0);camera.position.copy(center).add(new THREE.Vector3(.95,1.05,1.2).normalize().multiplyScalar(radius/Math.sin(THREE.MathUtils.degToRad(43/2))*1.12));camera.lookAt(center);}
  else{camera=new THREE.OrthographicCamera(-1,1,1,-1,near,far);const direction=type==='plan'?new THREE.Vector3(0,1,0):new THREE.Vector3(.95,1.02,1.13).normalize();camera.up.set(0,type==='plan'?0:1,type==='plan'?-1:0);camera.position.copy(center).add(direction.multiplyScalar(radius*3));camera.lookAt(center);camera.updateMatrixWorld(true);let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const v=new THREE.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse);minX=Math.min(minX,v.x);maxX=Math.max(maxX,v.x);minY=Math.min(minY,v.y);maxY=Math.max(maxY,v.y);}const height=Math.max(maxY-minY,(maxX-minX)/aspect)*1.15;camera.left=-height*aspect/2;camera.right=height*aspect/2;camera.top=height/2;camera.bottom=-height/2;camera.updateProjectionMatrix();}
@@ -43,8 +45,8 @@ window.startOceanModel=()=>{
    if(!current())return;
    model=gltf.scene;scene.add(model);box=new THREE.Box3().setFromObject(model);center=box.getCenter(new THREE.Vector3());size=box.getSize(new THREE.Vector3());
    if(box.isEmpty()){status('未读到模型几何','请使用完整GLB模型文件。');loading=false;modelLoadManager=null;$('model-progress').hidden=true;$('model-retry').hidden=false;return;}
-   let meshes=0;model.traverse(o=>{if(o.isMesh)meshes++;});
-   $('model-stage').dataset.modelState='ready';window.OceanModelDiagnostics={meshCount:meshes,loadAttempts:attempt+1,bounds:{min:box.min.toArray(),max:box.max.toArray()}};
+   let meshes=0,walls=0;model.traverse(o=>{if(o.isMesh){meshes++;if(isOceanWall(o))walls++;}});
+   $('model-stage').dataset.modelState='ready';window.OceanModelDiagnostics={meshCount:meshes,blueWallMeshCount:walls,wallColorLinear:[.012,.033,.06],loadAttempts:attempt+1,bounds:{min:box.min.toArray(),max:box.max.toArray()}};
    $('model-stage').dataset.meshCount=String(meshes);$('model-stage').dataset.dynamicBounds=JSON.stringify({min:box.min.toArray(),max:box.max.toArray()});
    if(attempt&&window.OceanNetworkDiagnostics)window.OceanNetworkDiagnostics.modelRecoveries+=1;
    loaded=true;loading=false;modelLoadManager=null;setLayers();applyMaterial(materialStyle);fitCamera('axis');$('model-progress').hidden=true;$('model-status').hidden=true;

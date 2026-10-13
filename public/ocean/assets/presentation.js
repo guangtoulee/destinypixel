@@ -11,41 +11,79 @@
   function element(tag, text, className) { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (className) e.className = className; return e; }
   function media(path) { return encodeURI(path.startsWith('/') ? path : `/ocean/media/${path}`); }
   const imageLoads = new WeakMap();
+  let imageGeneration = 0;
   window.OceanNetworkDiagnostics = { imageFailures: 0, imageRecoveries: 0, modelFailures: 0, modelRecoveries: 0 };
-  function setImageSource(img, source) {
+  function setImageSource(img, source, onState) {
     const url = new URL(source, location.href).href;
     const previous = imageLoads.get(img);
-    if (previous?.source === url && img.dataset.imageState !== 'unavailable') return;
-    if (previous) clearTimeout(previous.timer);
-    const state = { source: url, current: url, attempts: 0, timer: null };
-    imageLoads.set(img, state);
-    const active = () => imageLoads.get(img) === state && img.isConnected && img.src === state.current;
+    if (previous?.source === url && img.dataset.imageState !== 'unavailable') { onState?.(img.dataset.imageState, img, previous); return; }
+    previous?.cancel();
+    const state = { source: url, current: url, attempts: 0, timer: null, timeout: null, cancelled: false, generation: ++imageGeneration };
+    const startedConnected = img.isConnected;
+    const active = (requestImage, attempt) => !state.cancelled && state.attempts === attempt && imageLoads.get(requestImage) === state && (!startedConnected || requestImage.isConnected);
+    function clearTimers() { clearTimeout(state.timer); clearTimeout(state.timeout); state.timer = null; state.timeout = null; }
+    state.cancel = () => { state.cancelled = true; clearTimers(); img.onload = null; img.onerror = null; };
+    function changed(value) { img.dataset.imageState = value; onState?.(value, img, state); }
     function load() {
+      if (state.cancelled) return;
+      // Each request owns an image element. Old downloads and late load events
+      // cannot repaint the element belonging to a newer selection or retry.
+      if (img.isConnected && img.hasAttribute('src')) {
+        const oldImage = img;
+        img = oldImage.cloneNode(false); img.removeAttribute('src'); img.removeAttribute('srcset');
+        oldImage.onload = null; oldImage.onerror = null; oldImage.replaceWith(img); oldImage.removeAttribute('src');
+      }
       state.attempts += 1;
+      const attempt = state.attempts, requestImage = img;
+      imageLoads.set(requestImage, state);
       const next = new URL(state.source);
       if (state.attempts > 1) next.searchParams.set('ocean-retry', String(state.attempts - 1));
       state.current = next.href;
+      img.dataset.imageGeneration = String(state.generation);
+      img.dataset.imageSource = state.source;
       img.dataset.imageAttempts = String(state.attempts);
-      img.dataset.imageState = state.attempts > 1 ? 'retrying' : 'loading';
-      img.src = state.current;
+      let settled = false;
+      function failed() {
+        if (settled || !active(requestImage, attempt)) return;
+        settled = true; clearTimeout(state.timeout); state.timeout = null;
+        window.OceanNetworkDiagnostics.imageFailures += 1;
+        if (attempt >= 3) { changed('unavailable'); return; }
+        changed('retrying');
+        state.timer = setTimeout(() => { state.timer = null; if (active(requestImage, attempt)) load(); }, attempt * 500);
+      }
+      requestImage.onload = () => {
+        if (settled || !active(requestImage, attempt)) return;
+        if (!requestImage.naturalWidth) { failed(); return; }
+        settled = true; clearTimers(); changed('ready');
+        if (attempt > 1) window.OceanNetworkDiagnostics.imageRecoveries += 1;
+      };
+      requestImage.onerror = failed;
+      changed(attempt > 1 ? 'retrying' : 'loading');
+      // Offscreen lazy thumbnails have not started a request yet.
+      if (requestImage.loading !== 'lazy') state.timeout = setTimeout(failed, 20000);
+      requestImage.src = state.current;
     }
-    img.onload = () => {
-      if (!active()) return;
-      clearTimeout(state.timer); state.timer = null;
-      img.dataset.imageState = 'ready';
-      if (state.attempts > 1) window.OceanNetworkDiagnostics.imageRecoveries += 1;
-    };
-    img.onerror = () => {
-      if (!active() || state.timer !== null || img.dataset.imageState === 'unavailable') return;
-      window.OceanNetworkDiagnostics.imageFailures += 1;
-      if (state.attempts >= 3) { img.dataset.imageState = 'unavailable'; return; }
-      img.dataset.imageState = 'retrying';
-      state.timer = setTimeout(() => {
-        state.timer = null;
-        if (active()) load();
-      }, state.attempts * 500);
-    };
     load();
+  }
+  function galleryImageState(value, img, state) {
+    const stage = $('image-stage');
+    let feedback = $('gallery-image-status');
+    if (!feedback) {
+      feedback = element('div'); feedback.id = 'gallery-image-status'; feedback.setAttribute('role', 'status'); feedback.setAttribute('aria-live', 'polite');
+      Object.assign(feedback.style, { position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', padding: '16px 20px', background: '#102b3c', color: '#fff', fontSize: '12px', lineHeight: '1.8', textAlign: 'center' });
+      stage.append(feedback);
+    }
+    stage.dataset.imageState = value; stage.setAttribute('aria-busy', String(value === 'loading' || value === 'retrying'));
+    img.style.opacity = value === 'ready' ? '' : '0';
+    feedback.hidden = value === 'ready'; feedback.replaceChildren();
+    if (value !== 'ready') {
+      feedback.append(element('span', value === 'unavailable' ? '这张图片暂时没有载入，请重新载入。' : value === 'retrying' ? `图片载入中，正在重试（${state.attempts} / 3）…` : '正在切换场景，载入图片…'));
+      if (value === 'unavailable') {
+        const retry = element('button', '重新载入'); retry.type = 'button'; retry.id = 'gallery-image-retry';
+        Object.assign(retry.style, { color: '#fff', borderColor: '#a7774c', display: 'block', margin: '12px auto 0' }); retry.onclick = updateGallery; feedback.append(retry);
+      }
+    }
+    window.OceanGalleryDiagnostics = { sceneIndex, mode, requestedSource: state.source, displayedSource: value === 'ready' ? img.currentSrc || img.src : null, state: value, attempts: state.attempts, generation: state.generation };
   }
   function openModel() {
     if (window.startOceanModel) { window.startOceanModel(); return; }
@@ -69,7 +107,7 @@
     const scene = manifest.scenes[sceneIndex];
     if (!scene.images[mode]) mode = Object.keys(modeNames).find(m => scene.images[m]);
     const path = scene.images[mode];
-    setImageSource($('main-image'), media(path)); $('main-image').alt = `${scene.title} · ${modeNames[mode]}`;
+    setImageSource($('main-image'), media(path), galleryImageState); $('main-image').alt = `${scene.title} · ${modeNames[mode]}`;
     $('original-link').href = media(path);
     $('scene-number').textContent = scene.number || String(sceneIndex + 1).padStart(2, '0');
     $('scene-title').textContent = scene.title; $('scene-description').textContent = scene.description || '';
