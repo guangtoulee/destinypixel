@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-10-13T08:12:16.442Z",
+  "updatedAt": "2026-10-13T19:55:53.004Z",
   "sourceSummary": {
-    "community": 1341,
-    "publicX": 541,
-    "total": 1882
+    "community": 1342,
+    "publicX": 542,
+    "total": 1884
   },
   "items": [
     {
@@ -4498,6 +4498,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "gpt 5.6 + seedance 2.0 should honestly be illegal posted a side by side comparison yesterday and half of the replies got it wrong so here's round 2: one of these girls is real. the other is the ai rebuild. same room this time, no environment tells the receipts: $400 in creator fees for the real version. the ai one costs about $2 inside the system im running: - the character ref prompts (named imperfections stack) - the video prompts + the anti ai negatives - the one line fix every gpt 5.6 script needs - the full rebuild workflow comment LEFT or RIGHT and i'll dm you the full prompting system. must be following so the dm goes through"
+    },
+    {
+      "id": "x-public-2109150045706895457",
+      "title": "This AI video looks dangerously close to real Hollywood. I built this entire cinematic sequence ",
+      "description": "This AI video looks dangerously close to real Hollywood. I built this entire cinematic sequence with @Flovaai (Seedance 2.5). The lighting, motion, and character consistency are next level. Prompt below 👇  @Flovaai_Japa",
+      "prompt": "This AI video looks dangerously close to real Hollywood. I built this entire cinematic sequence with @Flovaai (Seedance 2.5). The lighting, motion, and character consistency are next level. Prompt below 👇  @Flovaai_Japan #Flovaai #Flovacpp",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/itsshara_ai/status/2109150045706895457",
+      "sourceType": "x",
+      "authorName": "Shara",
+      "authorHandle": "@itsshara_ai",
+      "createdAt": "2026-10-11T05:12:11.000Z",
+      "importedAt": "2026-10-13T19:55:52.971Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 479,
+        "reposts": 41,
+        "replies": 114,
+        "quotes": 5,
+        "bookmarks": 280,
+        "views": 40293,
+        "score": 2172
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This AI video looks dangerously close to real Hollywood. I built this entire cinematic sequence with @Flovaai (Seedance 2.5). The lighting, motion, and character consistency are next level. Prompt below 👇  @Flovaai_Japan #Flovaai #Flovacpp"
     },
     {
       "id": "x-public-2101355266495455270",
@@ -22746,6 +22789,45 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2109904469278253162",
+      "title": "社交媒体帖子 - 秋季街头风格穿搭提示词",
+      "description": "用于生成穿着棕色格纹短裤、宽松灰色连帽衫和耳罩帽的可爱女孩，呈现轻松秋日街头风格的提示词。",
+      "prompt": "1girl, cute, brown gingham short pants, oversized gray hoodie, ear muff cap, casual autumn outfit, relaxed pose, street style, detailed clothing, masterpiece, best quality",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1791878374821_j2kfe0_HUaq2XmbEAAfBEo.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ArtistaNozomu/status/2109904469278253162",
+      "sourceType": "community",
+      "authorName": "のぞむ＊AIイラスト",
+      "authorHandle": "@ArtistaNozomu",
+      "createdAt": "2026-10-13T12:00:00.000Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36362",
+      "rawText": "1girl, cute, brown gingham short pants, oversized gray hoodie, ear muff cap, casual autumn outfit, relaxed pose, street style, detailed clothing, masterpiece, best quality"
+    },
+    {
       "id": "community-2109486030953066564",
       "title": "社交媒体帖子 - 橙色楼梯上的泳装女孩",
       "description": "生成一张怀旧风格肖像的提示词，描绘了一位穿着泳衣和靴子的女孩坐在橙色楼梯上。",
@@ -22757,7 +22839,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-12T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "人像"
       ],
@@ -22798,7 +22880,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-12T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -22837,7 +22919,7 @@
       "authorName": "Mainstream Madness",
       "authorHandle": "@HairnetNation",
       "createdAt": "2026-10-12T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -22876,7 +22958,7 @@
       "authorName": "Mainstream Madness",
       "authorHandle": "@HairnetNation",
       "createdAt": "2026-10-12T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23200,7 +23282,7 @@
       "authorName": "花椰菜",
       "authorHandle": "@indesjyo",
       "createdAt": "2026-10-09T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.194Z",
+      "importedAt": "2026-10-13T19:55:49.494Z",
       "tags": [
         "摄影"
       ],
@@ -23405,7 +23487,7 @@
       "authorName": "Jengo",
       "authorHandle": "@jengo_ai_",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.195Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [
         "人像"
       ],
@@ -23446,7 +23528,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.195Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23485,7 +23567,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -23528,7 +23610,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23731,7 +23813,7 @@
       "authorName": "Letty",
       "authorHandle": "@LettyVesper",
       "createdAt": "2026-10-07T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -23938,7 +24020,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23977,7 +24059,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.495Z",
       "tags": [
         "人像",
         "平面设计"
@@ -24019,7 +24101,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "摄影"
       ],
@@ -24224,7 +24306,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-10-05T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -24267,7 +24349,7 @@
       "authorName": "Jex",
       "authorHandle": "@JexTheFool",
       "createdAt": "2026-10-05T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -24510,7 +24592,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-04T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24551,7 +24633,7 @@
       "authorName": "Zarnish",
       "authorHandle": "@ZarnishNael",
       "createdAt": "2026-10-04T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -24594,7 +24676,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-04T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -24636,7 +24718,7 @@
       "authorName": "A Nonny Moose",
       "authorHandle": "@yaddlezap",
       "createdAt": "2026-10-04T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "人像"
       ],
@@ -24677,7 +24759,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-04T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.196Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24801,7 +24883,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-03T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24842,7 +24924,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-03T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "人像"
       ],
@@ -24883,7 +24965,7 @@
       "authorName": "Prompt アトリエ｜AI画像プロンプト",
       "authorHandle": "@CyberTotal2026",
       "createdAt": "2026-10-03T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.197Z",
+      "importedAt": "2026-10-13T19:55:49.496Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -78954,7 +79036,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.201Z",
+      "importedAt": "2026-10-13T19:55:49.501Z",
       "tags": [
         "产品",
         "平面设计",
@@ -78997,7 +79079,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.201Z",
+      "importedAt": "2026-10-13T19:55:49.501Z",
       "tags": [
         "平面设计"
       ],
@@ -79038,7 +79120,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-13T08:12:13.201Z",
+      "importedAt": "2026-10-13T19:55:49.501Z",
       "tags": [
         "平面设计"
       ],
