@@ -22,6 +22,7 @@ async function serve(request: NextRequest, context: Context, headersOnly: boolea
   if (!key) return new NextResponse("未找到文件。", { status: 404, headers: OCEAN_PRIVATE_HEADERS });
   const filename = segments.at(-1)!;
   const headers = new Headers(OCEAN_PRIVATE_HEADERS);
+  headers.set("Cache-Control", "private, no-store, max-age=0, no-transform");
   headers.set("Content-Type", oceanContentType(filename));
   headers.set("Content-Disposition", oceanContentDisposition(filename));
   try {
