@@ -57,10 +57,12 @@ export function proxy(request: NextRequest) {
     const verifySession = root === "ocean" ? verifyOceanSession : verifyBlenderSession;
     const cookieName = root === "ocean" ? OCEAN_COOKIE_NAME : BLENDER_COOKIE_NAME;
     if (!isAccessEndpoint && !verifySession(request.cookies.get(cookieName)?.value)) {
-      if (protectedPath.replace(/\/$/, "").toLowerCase() === `/${root}`) {
+      const entryPath = protectedPath.replace(/\/$/, "").toLowerCase();
+      if (entryPath === `/${root}` || (root === "ocean" && entryPath === "/ocean/deepsea")) {
         const url = request.nextUrl.clone();
         url.pathname = `/${root}/access`;
         url.search = "";
+        if (entryPath === "/ocean/deepsea") url.searchParams.set("next", "deepsea");
         const response = NextResponse.redirect(url);
         for (const [key, value] of Object.entries(BLENDER_PRIVATE_HEADERS)) response.headers.set(key, value);
         return response;

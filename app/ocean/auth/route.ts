@@ -7,10 +7,10 @@ export const dynamic = "force-dynamic";
 // Best-effort per-process throttling bounds repeated guesses without adding a database dependency.
 const attempts = new Map<string, { count: number; expires: number }>();
 
-function accessRedirect(error: string) {
+function accessRedirect(error: string, deepsea = false) {
   return new NextResponse(null, {
     status: 303,
-    headers: { ...OCEAN_PRIVATE_HEADERS, Location: `/ocean/access?error=${error}` },
+    headers: { ...OCEAN_PRIVATE_HEADERS, Location: `/ocean/access?error=${error}${deepsea ? "&next=deepsea" : ""}` },
   });
 }
 
@@ -51,8 +51,9 @@ async function readPassword(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!isOceanAccessConfigured()) return accessRedirect("unavailable");
-  if (!isSameOrigin(request)) return accessRedirect("origin");
+  const deepsea = request.nextUrl.searchParams.get("next") === "deepsea";
+  if (!isOceanAccessConfigured()) return accessRedirect("unavailable", deepsea);
+  if (!isSameOrigin(request)) return accessRedirect("origin", deepsea);
   const now = Date.now();
   if (attempts.size > 2000) {
     for (const [key, value] of attempts) if (value.expires <= now) attempts.delete(key);
@@ -61,14 +62,14 @@ export async function POST(request: NextRequest) {
   const identity = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim().slice(0, 100) || "unknown";
   const previous = attempts.get(identity);
   const bucket = previous && previous.expires > now ? previous : { count: 0, expires: now + 15 * 60 * 1000 };
-  if (bucket.count >= 12) return accessRedirect("rate");
+  if (bucket.count >= 12) return accessRedirect("rate", deepsea);
   bucket.count += 1;
   attempts.set(identity, bucket);
   let password: string | null;
-  try { password = await readPassword(request); } catch { return accessRedirect("invalid"); }
-  if (!password || !verifyOceanPassword(password)) return accessRedirect("invalid");
+  try { password = await readPassword(request); } catch { return accessRedirect("invalid", deepsea); }
+  if (!password || !verifyOceanPassword(password)) return accessRedirect("invalid", deepsea);
   attempts.delete(identity);
-  const response = new NextResponse(null, { status: 303, headers: { ...OCEAN_PRIVATE_HEADERS, Location: "/ocean" } });
+  const response = new NextResponse(null, { status: 303, headers: { ...OCEAN_PRIVATE_HEADERS, Location: deepsea ? "/ocean/deepsea" : "/ocean" } });
   response.cookies.set(OCEAN_COOKIE_NAME, createOceanSession(), {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
