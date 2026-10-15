@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-15",
+  "component": "app/zhongyi1/ApothecaryArtifact.tsx",
+  "styles": "app/zhongyi1/artifact.module.css",
+  "scope": "Specialist 3D specimen verification; not a production-deployment report",
+  "browser": "Chrome via CUA browser extension, genuine WebGL renderer",
+  "viewports": [
+    {
+      "width": 1802,
+      "height": 1266,
+      "context": "standalone component preview, desktop"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "context": "standalone component and integrated /zhongyi1 route"
+    }
+  ],
+  "passed": [
+    {
+      "test": "Genuine 3D rendering",
+      "evidence": "Canvas appeared, 实时 3D badge displayed, procedural jar, lid, foot, texture and plinth rendered. Rotation changed perspective and specular highlights."
+    },
+    {
+      "test": "Button rotation and zoom",
+      "evidence": "Clicked 向右旋转药罐 and 放大药罐; before/after screenshots visibly showed a different jar perspective and larger geometry."
+    },
+    {
+      "test": "Keyboard rotation on integrated route",
+      "evidence": "Focused the canvas via semantic image locator, pressed ArrowRight, verified changed jar perspective in a screenshot."
+    },
+    {
+      "test": "Three hotspots and completion",
+      "evidence": "口沿, 釉色, 器足 all changed to checked marks, counter reached 3/3, preview wrapper observed completionCount=1."
+    },
+    {
+      "test": "Static switch and WebGL resource cleanup",
+      "evidence": "Switching to 静态模式 changed DOM canvas count from 1 to 0; switching back restored it to 1. SVG alternate and all hotspots remained usable."
+    },
+    {
+      "test": "Simulated low-performance hardware",
+      "evidence": "Temporary test wrapper reported navigator.hardwareConcurrency=1 before mount. Component selected static mode without creating a WebGL canvas, showed the intended low-performance explanation, and all hotspots completed with completionCount=1."
+    },
+    {
+      "test": "Simulated WebGL unsupported",
+      "evidence": "Temporary test wrapper returned null for WebGL getContext calls while preserving 2D canvas. Component showed the no-WebGL static explanation with canvas count=0."
+    },
+    {
+      "test": "Real WebGL context loss",
+      "evidence": "Temporary preview button invoked WEBGL_lose_context.loseContext() on the live renderer. Component automatically selected static mode, displayed the intended interruption explanation and removed the canvas. 尝试立体模式 restored one real WebGL canvas."
+    },
+    {
+      "test": "Mobile viewport layout and click alternatives",
+      "evidence": "At 390x844, document scrollWidth did not exceed innerWidth. All mode/rotate/zoom/reset controls measured 44 px high; hotspots measured 72 px high. Static and 3D modes rendered without horizontal clipping."
+    },
+    {
+      "test": "Integrated lazy load",
+      "evidence": "On http://127.0.0.1:3048/zhongyi1, skipped three tasks to artifact step; observed 正在开匣 placeholder followed by 实时 3D and exactly one canvas."
+    }
+  ],
+  "evidenceFiles": [
+    "artifact-mobile-webgl.png",
+    "artifact-mobile-webgl.jpg"
+  ],
+  "laterCodeChanges": [
+    "Replaced deprecated PCFSoftShadowMap with PCFShadowMap.",
+    "Reduced PMREM sigma from 0.06 to 0.025 to avoid the clipping warning.",
+    "Added initialComplete?: boolean. When true, seen initializes to all three hotspots and completionSent initializes true; parent can preserve completion after leaving and re-entering the step."
+  ],
+  "remainingVerification": [
+    "Later warning/API edits were type/lint checked, but an additional browser pass was blocked by CUA/CDP timeouts.",
+    "A native CUA drag attempt timed out at Page.getLayoutMetrics; direct pointer drag and physical phone touch are not recorded as passed.",
+    "Actual iOS/Android hardware, pinch gestures and GPU performance were not tested. Zoom is available through the explicit +/- buttons; wheel zoom is intentionally not installed.",
+    "A temporary viewport reset attempt timed out. Root QA uses an independent browser; this report does not claim the CUA browser override was confirmed cleared."
+  ],
+  "cleanup": "The specialist local-only preview server on 127.0.0.1:3015 was stopped with Ctrl-C through its own session 52974; exit code 0. No other processes were stopped.",
+  "status": "Preliminary CUA observations, superseded by artifact-final-results.json",
+  "supersededBy": "artifact-final-results.json"
+}

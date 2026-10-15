@@ -1,0 +1,18 @@
+{
+  "scope": "Local Chrome only. Actual CDP touch input, intentional image-delay/failure fixtures, reduced-motion narrow viewport.",
+  "cases": [
+    {
+      "name": "390×844: actual touch drag places all three pages into correct sequence",
+      "passed": true
+    },
+    {
+      "name": "390×844: actual horizontal touch gesture inks all four bands and reveals printed page",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "failures": [
+    "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: '收集山川书页', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"to.be.visible\" with timeout 5000ms\n  - waiting for getByRole('button', { name: '收集山川书页', exact: true })\n\n    at captureRawStack (/Users/lee/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:9681:17)\n    at callMatcherAsStep (/Users/lee/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/lib/matchers/expect.js:13310:57)\n    at Object.toBeVisible (/Users/lee/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/lib/matchers/expect.js:13300:23)\n    at /Users/lee/Documents/Codex/2026-10-15/task/destinypixel/docs/qa/zhongyi1-20261015/check-input-loading.cjs:55:139"
+  ],
+  "passed": false
+}

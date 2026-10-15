@@ -1,0 +1,34 @@
+{
+  "base": "http://127.0.0.1:3050",
+  "scope": "Focused local-production repair verification; controlled artwork failure before and after hydration",
+  "cases": [
+    {
+      "timing": "before-hydration",
+      "passed": true,
+      "complete": true,
+      "naturalWidth": 0,
+      "pictureDisplay": "none",
+      "heroClass": "journey_hero__r81np journey_heroFallback__B9jCu",
+      "heroBackground": "radial-gradient(at 75% 30%, rgba(131, 155, 123, 0.19), rgba(0, 0, 0, 0) 45%), repeating-linear-gradient(90deg, rgb(23, 62, 51) 0px, rgb(23, 62, 51) 120px, rgb(82, 108, 76) 121px, rgb(82, 108, 76) 124px, rgb(45, 74, 55) 125px, rgb(45, 74, 55) 230px)",
+      "startUsable": true
+    },
+    {
+      "timing": "after-hydration",
+      "passed": true,
+      "complete": true,
+      "naturalWidth": 0,
+      "pictureDisplay": "none",
+      "heroClass": "journey_hero__r81np journey_heroFallback__B9jCu",
+      "heroBackground": "radial-gradient(at 75% 30%, rgba(131, 155, 123, 0.19), rgba(0, 0, 0, 0) 45%), repeating-linear-gradient(90deg, rgb(23, 62, 51) 0px, rgb(23, 62, 51) 120px, rgb(82, 108, 76) 121px, rgb(82, 108, 76) 124px, rgb(45, 74, 55) 125px, rgb(45, 74, 55) 230px)",
+      "startUsable": true
+    },
+    {
+      "timing": "normal-smoke",
+      "passed": true,
+      "flow": "normal artwork loads → start → skip first three scenes → three artifact hotspots → keepsake honestly records 1/4 → replay resets collection"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "passed": true
+}

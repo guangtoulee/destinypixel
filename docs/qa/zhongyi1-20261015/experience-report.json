@@ -1,0 +1,303 @@
+{
+  "scope": "Local Next.js page, actual Chrome desktop and emulated touch viewport; not physical-phone or public deployment verification",
+  "base": "http://127.0.0.1:3048",
+  "started": "2026-10-15T03:20:28.048Z",
+  "cases": [
+    {
+      "view": "desktop",
+      "name": "entrance: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "Entrance loads artwork, cultural boundary, localized title and noindex",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "source dialog: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "Sources: visible disclaimer, three secure links, modal focus, Escape/close/return controls",
+      "passed": true,
+      "links": [
+        {
+          "href": "https://bowuguan.bucm.edu.cn/kpzl/ysmt/43941.htm",
+          "rel": "noreferrer",
+          "target": "_blank"
+        },
+        {
+          "href": "https://www.ihchina.cn/diaobanyinshua.html",
+          "rel": "noreferrer",
+          "target": "_blank"
+        },
+        {
+          "href": "https://www.nlc.cn/pcab/zx/xw/20260507_2652721.shtml",
+          "rel": "noreferrer",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "name": "Sound defaults muted and both toggle directions work",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "collect: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "arrange: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "Collect three pages, incomplete state gating, invalid/missing/out-of-order placement feedback, correct tap sequence",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Previous scene retains collected and arranged pages",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "print: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "Printing completes ink → cover → four tap bands → reveal with gated continue",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "artifact: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "keepsake: no horizontal overflow",
+      "passed": true,
+      "width": 1440,
+      "document": 1440,
+      "body": 1440
+    },
+    {
+      "view": "desktop",
+      "name": "All three artifact observations unlock completion and four-chapter keepsake",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "SVG keepsake downloads successfully with artwork markup",
+      "passed": true,
+      "filename": "燕赵书坊-文化纪念卡.svg",
+      "bytes": 3548
+    },
+    {
+      "view": "desktop",
+      "name": "Replay clears chapter state; all four skip actions reach honestly labeled incomplete keepsake",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Brand and first-scene return controls reach entrance",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "entrance: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "Entrance loads artwork, cultural boundary, localized title and noindex",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "source dialog: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "Sources: visible disclaimer, three secure links, modal focus, Escape/close/return controls",
+      "passed": true,
+      "links": [
+        {
+          "href": "https://bowuguan.bucm.edu.cn/kpzl/ysmt/43941.htm",
+          "rel": "noreferrer",
+          "target": "_blank"
+        },
+        {
+          "href": "https://www.ihchina.cn/diaobanyinshua.html",
+          "rel": "noreferrer",
+          "target": "_blank"
+        },
+        {
+          "href": "https://www.nlc.cn/pcab/zx/xw/20260507_2652721.shtml",
+          "rel": "noreferrer",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "view": "mobile",
+      "name": "Sound defaults muted and both toggle directions work",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "collect: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "arrange: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "Collect three pages, incomplete state gating, invalid/missing/out-of-order placement feedback, correct tap sequence",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "Previous scene retains collected and arranged pages",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "print: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "Printing completes ink → cover → four tap bands → reveal with gated continue",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "artifact: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "keepsake: no horizontal overflow",
+      "passed": true,
+      "width": 390,
+      "document": 390,
+      "body": 390
+    },
+    {
+      "view": "mobile",
+      "name": "All three artifact observations unlock completion and four-chapter keepsake",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "SVG keepsake downloads successfully with artwork markup",
+      "passed": true,
+      "filename": "燕赵书坊-文化纪念卡.svg",
+      "bytes": 3548
+    },
+    {
+      "view": "mobile",
+      "name": "Replay clears chapter state; all four skip actions reach honestly labeled incomplete keepsake",
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "name": "Brand and first-scene return controls reach entrance",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "desktop-entrance.png",
+    "desktop-sources.png",
+    "desktop-collect.png",
+    "desktop-arrange.png",
+    "desktop-print.png",
+    "desktop-artifact.png",
+    "desktop-keepsake.png",
+    "mobile-entrance.png",
+    "mobile-sources.png",
+    "mobile-collect.png",
+    "mobile-arrange.png",
+    "mobile-print.png",
+    "mobile-artifact.png",
+    "mobile-keepsake.png"
+  ],
+  "unexpectedConsole": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "knownLocalTelemetry": [],
+  "blocked": [
+    {
+      "view": "desktop",
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "view": "desktop",
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "view": "mobile",
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "view": "mobile",
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "method": "GET"
+    }
+  ],
+  "failures": [],
+  "browser": "154.0.8037.98",
+  "passed": true,
+  "finished": "2026-10-15T03:20:39.939Z"
+}

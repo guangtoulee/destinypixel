@@ -1,0 +1,65 @@
+{
+  "scope": "Local Chrome only. Actual CDP touch input, intentional image-delay/failure fixtures, reduced-motion narrow viewport.",
+  "cases": [
+    {
+      "name": "390×844: actual touch drag places all three pages into correct sequence",
+      "passed": true
+    },
+    {
+      "name": "390×844: actual horizontal touch gesture inks all four bands and reveals printed page",
+      "passed": true
+    },
+    {
+      "name": "Delayed artwork response does not block entering the interactive journey",
+      "passed": true
+    },
+    {
+      "name": "Intentionally failed artwork still leaves start control usable",
+      "passed": true
+    },
+    {
+      "name": "320×740 reduced-motion: entrance, four scenes and keepsake no horizontal overflow; key start/back/skip/replay controls ≥44px tall",
+      "passed": true
+    },
+    {
+      "name": "430×932 reduced-motion: entrance, four scenes and keepsake no horizontal overflow; key start/back/skip/replay controls ≥44px tall",
+      "passed": true
+    },
+    {
+      "name": "844×390 reduced-motion: entrance, four scenes and keepsake no horizontal overflow; key start/back/skip/replay controls ≥44px tall",
+      "passed": true
+    },
+    {
+      "name": "1440×1000: desktop mouse drag places all three pages correctly",
+      "passed": true
+    },
+    {
+      "name": "1440×1000: desktop mouse swipe completes printing; no Three.js implementation requested in first three scenes, loaded when artifact opens",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "failures": [
+    "Intentional artwork network failure did not activate CSS fallback: {\"complete\":true,\"naturalWidth\":0,\"pictureDisplay\":\"block\",\"heroClass\":\"journey_hero__r81np \"}"
+  ],
+  "failedArtworkDOM": {
+    "complete": true,
+    "naturalWidth": 0,
+    "pictureDisplay": "block",
+    "heroClass": "journey_hero__r81np "
+  },
+  "firstThreeSceneScriptCount": 7,
+  "engineScriptsAfterArtifact": [
+    {
+      "url": "http://127.0.0.1:3049/_next/static/chunks/d0bf4f79.ec3a04f42016a086.js",
+      "bytes": 359308,
+      "engine": true
+    },
+    {
+      "url": "http://127.0.0.1:3049/_next/static/chunks/a3ff99de.8b60ccbf5c2d69d4.js",
+      "bytes": 376162,
+      "engine": true
+    }
+  ],
+  "passed": false
+}

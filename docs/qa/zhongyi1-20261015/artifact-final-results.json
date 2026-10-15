@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-15",
+  "target": "http://127.0.0.1:3050/zhongyi1",
+  "browser": "Headless Google Chrome, isolated Playwright contexts",
+  "physicalPhoneTested": false,
+  "tests": [
+    {
+      "test": "Final genuine WebGL rotate/zoom",
+      "status": "passed",
+      "evidence": "One live WebGL canvas. Canvas screenshot SHA256 changed after rotation, and changed again after zoom."
+    },
+    {
+      "test": "Reset view",
+      "status": "passed",
+      "evidence": "Reset restored the exact initial canvas PNG hash."
+    },
+    {
+      "test": "Mouse pointer drag",
+      "status": "passed",
+      "evidence": "A real Playwright mouse drag across the live canvas changed the canvas screenshot hash."
+    },
+    {
+      "test": "Final integrated three-hotspot completion",
+      "status": "passed",
+      "evidence": "All three buttons checked and 领取纪念卡 enabled."
+    },
+    {
+      "test": "Completed artifact preserved on re-entry",
+      "status": "passed",
+      "evidence": "After 上一幕 → 跳过本幕 the component displayed 3/3 and the card button remained enabled."
+    },
+    {
+      "test": "Final static toggle/cleanup",
+      "status": "passed",
+      "evidence": "Canvas count 1 → 0 → 1 with static SVG alternate."
+    },
+    {
+      "test": "Final real WebGL context-loss recovery",
+      "status": "passed",
+      "evidence": "WEBGL_lose_context forced loss; component automatically switched to SVG, removed canvas, then restored WebGL on request."
+    },
+    {
+      "test": "Replay resets artifact",
+      "status": "passed",
+      "evidence": "重新体验 followed by skipping to artifact displayed 0/3 and disabled the card button."
+    },
+    {
+      "test": "390x844 emulated touch rotation",
+      "status": "passed",
+      "evidence": "Isolated mobile context with isMobile/hasTouch plus CDP touchStart/touchMove/touchEnd changed live canvas screenshot hash. This is emulated touch, not physical phone hardware."
+    },
+    {
+      "test": "Mobile click alternatives and layout",
+      "status": "passed",
+      "evidence": {
+        "horizontalOverflow": false,
+        "controls": [
+          {
+            "text": "静态模式",
+            "width": 54,
+            "height": 44
+          },
+          {
+            "text": "↶",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "↷",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "−",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "＋",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "复位",
+            "width": 53.3125,
+            "height": 44
+          },
+          {
+            "text": "壹口沿看弧线↗",
+            "width": 110.40625,
+            "height": 72
+          },
+          {
+            "text": "贰釉色看光泽↗",
+            "width": 110.40625,
+            "height": 72
+          },
+          {
+            "text": "叁器足看比例↗",
+            "width": 110.40625,
+            "height": 72
+          }
+        ]
+      }
+    },
+    {
+      "test": "Final low-performance fallback",
+      "status": "passed",
+      "evidence": "Zero WebGL canvases, static SVG appeared and all hotspots enabled the card button."
+    },
+    {
+      "test": "Final unsupported-WebGL fallback",
+      "status": "passed",
+      "evidence": "Zero WebGL canvases, static SVG appeared and all hotspots enabled the card button."
+    }
+  ],
+  "consoleWarnings": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "httpFailures": [
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3050/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3050/_vercel/speed-insights/script.js"
+    }
+  ],
+  "errors": [],
+  "staticChecks": {
+    "typescript": "node_modules/.bin/tsc --noEmit --incremental false --pretty false — exit 0",
+    "eslint": "node_modules/.bin/eslint --config eslint.english.config.mjs app/zhongyi1/ApothecaryArtifact.tsx — exit 0"
+  },
+  "notes": {
+    "wheelZoom": "Not installed; +/- controls provide zoom and the canvas does not intercept wheel scrolling.",
+    "physicalPhones": "No physical iOS or Android device test. Mobile touch result uses CDP touch events in an isolated isMobile/hasTouch Chrome context.",
+    "warnings": "No sigma or deprecated PCF shadow warnings on final build. Only local Vercel analytics 404s listed above.",
+    "processCleanup": "All isolated browser contexts closed in finally; specialist preview server 3015 was stopped through its own session.",
+    "reproducibleScript": "/tmp/zi-artifact-final.cjs"
+  }
+}
