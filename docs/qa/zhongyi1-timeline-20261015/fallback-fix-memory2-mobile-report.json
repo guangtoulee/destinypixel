@@ -1,0 +1,203 @@
+{
+  "name": "memory2-mobile",
+  "startedAt": "2026-10-15T04:22:06.183Z",
+  "checks": [
+    {
+      "label": "fallback visible in fresh context",
+      "ok": true
+    },
+    {
+      "label": "no canvas",
+      "ok": true
+    },
+    {
+      "label": "marker container hidden with display none",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 23.390625,
+          "y": 96,
+          "width": 343.21875,
+          "height": 14.390625
+        },
+        "retry": {
+          "x": 294.828125,
+          "y": 131,
+          "width": 71.78125,
+          "height": 36
+        },
+        "caption": {
+          "x": 23.390625,
+          "y": 425.703125,
+          "width": 343.21875,
+          "height": 219.296875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 84
+        },
+        "memory": 2,
+        "markerHidden": true,
+        "markerDisplay": "none",
+        "canvasCount": 0
+      }
+    },
+    {
+      "label": "fallback reason and retry do not overlap caption",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 23.390625,
+          "y": 96,
+          "width": 343.21875,
+          "height": 14.390625
+        },
+        "retry": {
+          "x": 294.828125,
+          "y": 131,
+          "width": 71.78125,
+          "height": 36
+        },
+        "caption": {
+          "x": 23.390625,
+          "y": 425.703125,
+          "width": 343.21875,
+          "height": 219.296875
+        }
+      }
+    },
+    {
+      "label": "2 GB memory boundary active",
+      "ok": true
+    },
+    {
+      "label": "mobile reason top is 96px",
+      "ok": true,
+      "detail": {
+        "x": 23.390625,
+        "y": 96,
+        "width": 343.21875,
+        "height": 14.390625
+      }
+    },
+    {
+      "label": "mobile retry top is 131px",
+      "ok": true,
+      "detail": {
+        "x": 294.828125,
+        "y": 131,
+        "width": 71.78125,
+        "height": 36
+      }
+    },
+    {
+      "label": "reason and retry are below header",
+      "ok": true,
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 84
+      }
+    },
+    {
+      "label": "artifact caption remains accessible",
+      "ok": true
+    },
+    {
+      "label": "no rotation or zoom controls in fallback inspect",
+      "ok": true
+    },
+    {
+      "label": "no drag or zoom hint in fallback inspect",
+      "ok": true,
+      "detail": "走近一件物\n考古证据\n\n商代中期\n\n台西砭镰\n\n藁城 · 考古线索\n\n藁城台西遗址出土石质砭镰，外缘弯曲、内刃锐利。研究者将其解释为切割脓疡的医疗器具。\n\n器物形制为艺术示意；医疗用途采用研究解释。\n\n← 返回时间长卷\n查看本境史实与来源 ↗\n轻量时间长卷 · 点选年代继续\n\n←\n02 / 06\n→\n上古传说\n伏羲台\n商代中期\n商代台西\n金代\n张元素\n13世纪\n李东垣\n13世纪\n罗天益\n1920—2023\n路志正\n独立文化体验 · 场景与器物均为艺术示意\n按叙事均匀布局，非等比例年代轴"
+    },
+    {
+      "label": "inspect caption does not overlap reason or retry",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 23.390625,
+          "y": 96,
+          "width": 343.21875,
+          "height": 14.390625
+        },
+        "retry": {
+          "x": 294.828125,
+          "y": 131,
+          "width": 71.78125,
+          "height": 36
+        },
+        "caption": {
+          "x": 23.390625,
+          "y": 419.109375,
+          "width": 343.21875,
+          "height": 230.890625
+        }
+      }
+    },
+    {
+      "label": "retry still usable with constraint retained",
+      "ok": true
+    },
+    {
+      "label": "no inert controls after retry",
+      "ok": true
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+  ],
+  "blockedRequests": [
+    {
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "method": "GET"
+    }
+  ],
+  "initial": {
+    "reason": {
+      "x": 23.390625,
+      "y": 96,
+      "width": 343.21875,
+      "height": 14.390625
+    },
+    "retry": {
+      "x": 294.828125,
+      "y": 131,
+      "width": 71.78125,
+      "height": 36
+    },
+    "caption": {
+      "x": 23.390625,
+      "y": 425.703125,
+      "width": 343.21875,
+      "height": 219.296875
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 84
+    },
+    "memory": 2,
+    "markerHidden": true,
+    "markerDisplay": "none",
+    "canvasCount": 0
+  },
+  "finishedAt": "2026-10-15T04:22:07.641Z",
+  "summary": {
+    "checks": 14,
+    "passed": 14,
+    "failed": 0,
+    "uncaughtErrors": 0
+  }
+}

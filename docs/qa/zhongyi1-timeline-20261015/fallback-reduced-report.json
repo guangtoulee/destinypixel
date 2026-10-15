@@ -1,0 +1,73 @@
+{
+  "name": "reduced",
+  "startedAt": "2026-10-15T04:19:04.806Z",
+  "checks": [
+    {
+      "label": "OS preference matches initial toggle",
+      "ok": true,
+      "detail": {
+        "pressed": "true",
+        "environment": {
+          "deviceMemory": 32,
+          "hardwareConcurrency": 16,
+          "reduced": true
+        }
+      }
+    },
+    {
+      "label": "toggle changes state",
+      "ok": true
+    },
+    {
+      "label": "era navigation settles",
+      "ok": true,
+      "detail": {
+        "durationMs": 98
+      }
+    },
+    {
+      "label": "reduced movement settles in under 1 second",
+      "ok": true,
+      "detail": {
+        "durationMs": 98
+      }
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector"
+  ],
+  "blockedRequests": [
+    {
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "method": "GET"
+    }
+  ],
+  "failedRequests": [
+    {
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "error": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ],
+  "environment": {
+    "deviceMemory": 32,
+    "hardwareConcurrency": 16,
+    "reduced": true
+  },
+  "headerAccessibility": "- button \"医脉长卷总览\":\n  - text: 燕 赵\n  - strong: 燕赵医脉\n  - text: 石家庄中医药史\n- text: A JOURNEY THROUGH MEDICAL HERITAGE\n- button \"查看六境全卷\": ⌘ 全卷\n- button \"关闭减弱动态\" [pressed]: ◉ 减弱动态已开\n- button \"查看史实与来源\": ⓘ 来源\n- button \"进入书坊小游戏\": 书坊小游戏 ↗",
+  "finishedAt": "2026-10-15T04:19:06.477Z",
+  "summary": {
+    "checks": 4,
+    "passed": 4,
+    "failed": 0
+  }
+}

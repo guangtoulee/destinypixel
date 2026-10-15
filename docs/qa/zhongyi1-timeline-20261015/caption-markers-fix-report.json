@@ -1,0 +1,206 @@
+{
+  "scope": "Fresh local mobile marker-safe-area and caption/canvas gesture repair verification",
+  "checks": [
+    {
+      "name": "All six mobile eras keep visible marker rectangles below header and above bottom panel",
+      "passed": true
+    },
+    {
+      "name": "Wheel over caption reading surface leaves timeline progress and era unchanged",
+      "passed": true,
+      "point": {
+        "x": 195,
+        "y": 414.453125
+      },
+      "beforeProgress": "0.2000",
+      "beforeNode": "1",
+      "hashBefore": "6eab03c2693001519792317dfb4b79d3132128ce911b89e741ab300ed34e66c5",
+      "hashAfter": "cdbddd5460fab8d2e9a4961a97a8b722936dab85171c91e6771c194dfb46afe0",
+      "note": "Canvas screenshot hashes are retained as diagnostics, not required to be byte-identical during local dev rendering."
+    },
+    {
+      "name": "Native touch drag on unobscured canvas still changes camera progress and rendered pixels",
+      "passed": true
+    }
+  ],
+  "markers": [
+    {
+      "node": "伏羲台",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "fuxi-ring",
+          "x": 161.4330596923828,
+          "y": 113.31440734863281,
+          "right": 237.4018096923828,
+          "bottom": 157.3144073486328,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "node": "商代台西",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "taixi-blade",
+          "x": 38.921722412109375,
+          "y": 275.5015869140625,
+          "right": 114.89047241210938,
+          "bottom": 319.5015869140625,
+          "height": 44
+        },
+        {
+          "id": "taixi-seeds",
+          "x": 198.2265625,
+          "y": 256.1639709472656,
+          "right": 274.1953125,
+          "bottom": 300.1639709472656,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "node": "张元素",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "zhang-book",
+          "x": 133.91539001464844,
+          "y": 276.9776306152344,
+          "right": 209.88414001464844,
+          "bottom": 320.9776306152344,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "node": "李东垣",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "li-book",
+          "x": 104.198974609375,
+          "y": 263.6238708496094,
+          "right": 187.652099609375,
+          "bottom": 307.6238708496094,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "node": "罗天益",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "luo-book",
+          "x": 91.65548706054688,
+          "y": 271.9214172363281,
+          "right": 182.60861206054688,
+          "bottom": 315.9214172363281,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "node": "路志正",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 84,
+        "height": 84
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "right": 366.609375,
+        "bottom": 844,
+        "height": 178.1875
+      },
+      "markers": [
+        {
+          "id": "modern-book",
+          "x": 141.61375427246094,
+          "y": 184.3408966064453,
+          "right": 217.58250427246094,
+          "bottom": 228.3408966064453,
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "safe-mobile390-0-伏羲台.png",
+    "safe-mobile390-1-商代台西.png",
+    "safe-mobile390-5-路志正.png"
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "passed": true
+}

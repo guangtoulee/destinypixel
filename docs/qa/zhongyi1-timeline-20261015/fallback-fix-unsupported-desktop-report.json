@@ -1,0 +1,176 @@
+{
+  "name": "unsupported-desktop",
+  "startedAt": "2026-10-15T04:22:18.110Z",
+  "checks": [
+    {
+      "label": "fallback visible in fresh context",
+      "ok": true
+    },
+    {
+      "label": "no canvas",
+      "ok": true
+    },
+    {
+      "label": "marker container hidden with display none",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 1154.640625,
+          "y": 113,
+          "width": 227.765625,
+          "height": 16.1875
+        },
+        "retry": {
+          "x": 1292.671875,
+          "y": 159,
+          "width": 89.734375,
+          "height": 40
+        },
+        "caption": {
+          "x": 64.796875,
+          "y": 189,
+          "width": 340,
+          "height": 330.5
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 96
+        },
+        "memory": 32,
+        "markerHidden": true,
+        "markerDisplay": "none",
+        "canvasCount": 0
+      }
+    },
+    {
+      "label": "fallback reason and retry do not overlap caption",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 1154.640625,
+          "y": 113,
+          "width": 227.765625,
+          "height": 16.1875
+        },
+        "retry": {
+          "x": 1292.671875,
+          "y": 159,
+          "width": 89.734375,
+          "height": 40
+        },
+        "caption": {
+          "x": 64.796875,
+          "y": 189,
+          "width": 340,
+          "height": 330.5
+        }
+      }
+    },
+    {
+      "label": "artifact caption remains accessible",
+      "ok": true
+    },
+    {
+      "label": "no rotation or zoom controls in fallback inspect",
+      "ok": true
+    },
+    {
+      "label": "no drag or zoom hint in fallback inspect",
+      "ok": true,
+      "detail": "走近一件物\n考古证据\n\n商代中期\n\n台西砭镰\n\n藁城 · 考古线索\n\n藁城台西遗址出土石质砭镰，外缘弯曲、内刃锐利。研究者将其解释为切割脓疡的医疗器具。\n\n器物形制为艺术示意；医疗用途采用研究解释。\n\n← 返回时间长卷\n轻量观赏 · 保留器物说明与可信来源\n查看本境史实与来源 ↗\n轻量时间长卷 · 点选年代继续\n\n←\n02 / 06\n→\n上古传说\n伏羲台\n商代中期\n商代台西\n金代\n张元素\n13世纪\n李东垣\n13世纪\n罗天益\n1920—2023\n路志正\n独立文化体验 · 场景与器物均为艺术示意\n按叙事均匀布局，非等比例年代轴\n非官方博物馆 · 不提供医疗服务\nWas this helpful?"
+    },
+    {
+      "label": "inspect caption does not overlap reason or retry",
+      "ok": true,
+      "detail": {
+        "reason": {
+          "x": 1154.640625,
+          "y": 113,
+          "width": 227.765625,
+          "height": 16.1875
+        },
+        "retry": {
+          "x": 1292.671875,
+          "y": 159,
+          "width": 89.734375,
+          "height": 40
+        },
+        "caption": {
+          "x": 64.796875,
+          "y": 189,
+          "width": 340,
+          "height": 384.6875
+        }
+      }
+    },
+    {
+      "label": "retry still usable with constraint retained",
+      "ok": true
+    },
+    {
+      "label": "no inert controls after retry",
+      "ok": true
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.",
+    "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context."
+  ],
+  "blockedRequests": [
+    {
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://va.vercel-scripts.com/v1/speed-insights/script.debug.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:3060/__nextjs_original-stack-frames",
+      "method": "POST"
+    }
+  ],
+  "initial": {
+    "reason": {
+      "x": 1154.640625,
+      "y": 113,
+      "width": 227.765625,
+      "height": 16.1875
+    },
+    "retry": {
+      "x": 1292.671875,
+      "y": 159,
+      "width": 89.734375,
+      "height": 40
+    },
+    "caption": {
+      "x": 64.796875,
+      "y": 189,
+      "width": 340,
+      "height": 330.5
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 96
+    },
+    "memory": 32,
+    "markerHidden": true,
+    "markerDisplay": "none",
+    "canvasCount": 0
+  },
+  "finishedAt": "2026-10-15T04:22:20.048Z",
+  "summary": {
+    "checks": 10,
+    "passed": 10,
+    "failed": 0,
+    "uncaughtErrors": 0
+  }
+}

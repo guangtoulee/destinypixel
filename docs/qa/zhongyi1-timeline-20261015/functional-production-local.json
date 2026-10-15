@@ -1,0 +1,1376 @@
+{
+  "base": "http://127.0.0.1:3061",
+  "scope": "Final build / deployed-path verification in independent headless Chrome. Mobile viewport and CDP touch emulation, not physical handset or Safari.",
+  "started": "2026-10-15T04:28:01.914Z",
+  "checks": [
+    {
+      "view": "desktop",
+      "name": "Default live canvas opens directly on first era with visible nonuniform pixels",
+      "passed": true,
+      "stats": {
+        "paletteSize": 154,
+        "brightFraction": 0.3497
+      }
+    },
+    {
+      "view": "desktop",
+      "name": "Overview and its CTA move the real camera between overview and first journey era",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "All six era controls select their own settled rendered view",
+      "passed": true,
+      "sceneHashes": [
+        "12f1b6daaf04b6b28bb8e4dc49adc25388f844d7a6d964a4d55b9a7db3deeb4b",
+        "82855c873f94cd5b48188f278809bf4677664e13f3207c2cfc7e67ee87e9ab95",
+        "63a191c9aff6079e60aaff61011216708f5e068c9339bce3e80bb9f2764b2d85",
+        "7d7076c6edaf551bdf9bfce6954030294f812cc8a169884cb19db378a4e13544",
+        "fc5fc5b023ca930bd696556a185e07201e73716746ae83d54c6112e8d263bd35",
+        "c14be3a9bcb01c366ca726f0a4e6ae8e07c000bc989655f5573232ffbc181118"
+      ]
+    },
+    {
+      "view": "desktop",
+      "name": "Previous/next era controls and last-boundary disabled state",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "All seven artifacts focus; every left/right/zoom-in/zoom-out control changes actual pixels; return restores journey",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Range scrubs progress and camera to corresponding era",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Mouse wheel changes actual journey pixels",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Sources modal renders current evidence and closes with Escape",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Overview control restores real overview camera",
+      "passed": true
+    },
+    {
+      "view": "desktop",
+      "name": "Secondary game opens and returns to a fresh canvas",
+      "passed": true,
+      "restored": {
+        "canvasNode": "0",
+        "uiNode": "fuxi",
+        "mode": "journey"
+      }
+    },
+    {
+      "view": "mobile390",
+      "name": "Default live canvas opens directly on first era with visible nonuniform pixels",
+      "passed": true,
+      "stats": {
+        "paletteSize": 171,
+        "brightFraction": 0.5083
+      }
+    },
+    {
+      "view": "mobile390",
+      "name": "Overview and its CTA move the real camera between overview and first journey era",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "All six era controls select their own settled rendered view",
+      "passed": true,
+      "sceneHashes": [
+        "61a25bbbc9345f40019941d4320b17497638028e89844990b29d5d0aee1a627b",
+        "a496408bb16e1a2cfc9e1b7050aa44b154042dd0953b0651f4c74c40e9c369f4",
+        "af47d8845bf14739cdc68cb8d603547dea6243b38cbb529e38436d047318478f",
+        "90fb68b0909fec13f5972f3db005e2a8bc392333ca0d8ab83ff67f2f44ac7ae1",
+        "7f783c100077bbb2cc6fa797d3018613d6736acaad5019286fcc66b6d40d041d",
+        "f8f9e8a5cca22dc802a5a452ceedf0ef96c8f3e1d9929e1940e6d82a1b303249"
+      ]
+    },
+    {
+      "view": "mobile390",
+      "name": "Previous/next era controls and last-boundary disabled state",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "All seven artifacts focus; every left/right/zoom-in/zoom-out control changes actual pixels; return restores journey",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "Range scrubs progress and camera to corresponding era",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "Native CDP touch drag changes actual journey pixels",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "Sources modal renders current evidence and closes with Escape",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "Overview control restores real overview camera",
+      "passed": true
+    },
+    {
+      "view": "mobile390",
+      "name": "Secondary game opens and returns to a fresh canvas",
+      "passed": true,
+      "restored": {
+        "canvasNode": "0",
+        "uiNode": "fuxi",
+        "mode": "journey"
+      }
+    }
+  ],
+  "inspections": [
+    {
+      "view": "desktop",
+      "title": "伏羲文化 · 环形意象",
+      "focusId": "fuxi-ring",
+      "hash": "f55a2c5450c501d0850931128acc2abc9a9e72bcd165bb2596a1f2141396e995",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "5ac4e7cd812c8d840b86810720ddedd215eda203fd8e0de551694143911e6bcd",
+          "after": "b65f30ddfc9fa520343678a7d20f23ef4c0bc061a5e92107828ca9f5dbbb94f6"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "b65f30ddfc9fa520343678a7d20f23ef4c0bc061a5e92107828ca9f5dbbb94f6",
+          "after": "5ac4e7cd812c8d840b86810720ddedd215eda203fd8e0de551694143911e6bcd"
+        },
+        {
+          "label": "放大观察物",
+          "before": "5ac4e7cd812c8d840b86810720ddedd215eda203fd8e0de551694143911e6bcd",
+          "after": "d9e3451e130da57b4af1dab16c4a3ab6153818d9032370ddafeb9eb8f3a7cbb4"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "d9e3451e130da57b4af1dab16c4a3ab6153818d9032370ddafeb9eb8f3a7cbb4",
+          "after": "5ac4e7cd812c8d840b86810720ddedd215eda203fd8e0de551694143911e6bcd"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "台西砭镰 · 器物示意",
+      "focusId": "taixi-blade",
+      "hash": "ac8730f3ee0491adf002fedb15213ca9e92507e3ac8bcd7e29433d689c2301ed",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "76edd695193c10b3470dcc0edbb5ffa7ac0c62c7a3d60e20ed3d6b87a25e5bd6",
+          "after": "286dce0baf147c01d2ece1487c334e277286eb76f61a0c669c66be262cc867e8"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "286dce0baf147c01d2ece1487c334e277286eb76f61a0c669c66be262cc867e8",
+          "after": "76edd695193c10b3470dcc0edbb5ffa7ac0c62c7a3d60e20ed3d6b87a25e5bd6"
+        },
+        {
+          "label": "放大观察物",
+          "before": "76edd695193c10b3470dcc0edbb5ffa7ac0c62c7a3d60e20ed3d6b87a25e5bd6",
+          "after": "82e765062db3bbd146c96c51e25657eaf248a64d4eb71271e2349dab91ad46ee"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "82e765062db3bbd146c96c51e25657eaf248a64d4eb71271e2349dab91ad46ee",
+          "after": "76edd695193c10b3470dcc0edbb5ffa7ac0c62c7a3d60e20ed3d6b87a25e5bd6"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "台西种仁 · 植物遗存",
+      "focusId": "taixi-seeds",
+      "hash": "36ac767b63a44b9c5ecb0c8d837462f4c89709896c9f305b4d855b37df40aff9",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "36ac767b63a44b9c5ecb0c8d837462f4c89709896c9f305b4d855b37df40aff9",
+          "after": "55bfedaad975c82f46be57f24d3cd508ddb27109b9ee80494e21699690e6206c"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "55bfedaad975c82f46be57f24d3cd508ddb27109b9ee80494e21699690e6206c",
+          "after": "36ac767b63a44b9c5ecb0c8d837462f4c89709896c9f305b4d855b37df40aff9"
+        },
+        {
+          "label": "放大观察物",
+          "before": "36ac767b63a44b9c5ecb0c8d837462f4c89709896c9f305b4d855b37df40aff9",
+          "after": "0487cb3d6327a58ac4efa6480c8326c91d7d89016170fc16f09bb907ff8cde62"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "0487cb3d6327a58ac4efa6480c8326c91d7d89016170fc16f09bb907ff8cde62",
+          "after": "36ac767b63a44b9c5ecb0c8d837462f4c89709896c9f305b4d855b37df40aff9"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "易水学说 · 书页意象",
+      "focusId": "zhang-book",
+      "hash": "be6ff1d67157e560b4eb91ef8276881289f54cae8f7edfd8025b804b7dc61610",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "aded5f15e37364403104e5f523fb5898d281783ce0a120bf2d40fd8471f34e2d",
+          "after": "6e7f24df8eb1900b2ac5824201f99cbf890792e1981ef5f87c0fab623b990626"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "6e7f24df8eb1900b2ac5824201f99cbf890792e1981ef5f87c0fab623b990626",
+          "after": "aded5f15e37364403104e5f523fb5898d281783ce0a120bf2d40fd8471f34e2d"
+        },
+        {
+          "label": "放大观察物",
+          "before": "aded5f15e37364403104e5f523fb5898d281783ce0a120bf2d40fd8471f34e2d",
+          "after": "980a7be35acd689e50808875d1482928b857e4ded2efbd8dc21e5a5b2a2c796d"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "980a7be35acd689e50808875d1482928b857e4ded2efbd8dc21e5a5b2a2c796d",
+          "after": "aded5f15e37364403104e5f523fb5898d281783ce0a120bf2d40fd8471f34e2d"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "《脾胃论》 · 著述意象",
+      "focusId": "li-book",
+      "hash": "a476048bc075978cbaf30780809250578be310be38b62e672bffcdd37d7dc481",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "cc34a7e1635776f66d7fc427a7c9fbecc06567438f61a58731fc58f255dde0ca",
+          "after": "4f6ebd74ae1940e77fa4a8660fa20731e69893dc4f088f6a9e65b7f3ffeac0dc"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "4f6ebd74ae1940e77fa4a8660fa20731e69893dc4f088f6a9e65b7f3ffeac0dc",
+          "after": "cc34a7e1635776f66d7fc427a7c9fbecc06567438f61a58731fc58f255dde0ca"
+        },
+        {
+          "label": "放大观察物",
+          "before": "cc34a7e1635776f66d7fc427a7c9fbecc06567438f61a58731fc58f255dde0ca",
+          "after": "b50714edfc050ea38d4ca9ad64f65e9e2a6fd4cc86fc362006eac9640b7fffa9"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "b50714edfc050ea38d4ca9ad64f65e9e2a6fd4cc86fc362006eac9640b7fffa9",
+          "after": "cc34a7e1635776f66d7fc427a7c9fbecc06567438f61a58731fc58f255dde0ca"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "《卫生宝鉴》 · 著述意象",
+      "focusId": "luo-book",
+      "hash": "d9587e21850deb6edaafcfd7a4f6e95011124193c046652bba2a0d3756919e0d",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "134524ef82d2c4459028ab8fe058b6d333ad93ec4f6e7da025cb2db457f9b341",
+          "after": "7ecd2d57a064dbd460d78a0341247aec35596be8a35c12308d80a60354fec377"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "7ecd2d57a064dbd460d78a0341247aec35596be8a35c12308d80a60354fec377",
+          "after": "134524ef82d2c4459028ab8fe058b6d333ad93ec4f6e7da025cb2db457f9b341"
+        },
+        {
+          "label": "放大观察物",
+          "before": "134524ef82d2c4459028ab8fe058b6d333ad93ec4f6e7da025cb2db457f9b341",
+          "after": "e7cf306f93ff276b8813fb6f96a973336c1c3a0082610515daf7c0e9ca0ec599"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "e7cf306f93ff276b8813fb6f96a973336c1c3a0082610515daf7c0e9ca0ec599",
+          "after": "134524ef82d2c4459028ab8fe058b6d333ad93ec4f6e7da025cb2db457f9b341"
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "title": "当代著述 · 书页意象",
+      "focusId": "modern-book",
+      "hash": "a22fd3b676d5f56de0ed87b0ef836c1237782f9bb6956e9631f978082df79740",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "d4c842a566cf5e491bea404b6a25b782e9ed058994897dc96883ca2b490e0794",
+          "after": "09175d6027fe0d1fc146936abcf9cf7ea3060252a3519fd0b601dfbbaf18cf0d"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "09175d6027fe0d1fc146936abcf9cf7ea3060252a3519fd0b601dfbbaf18cf0d",
+          "after": "d4c842a566cf5e491bea404b6a25b782e9ed058994897dc96883ca2b490e0794"
+        },
+        {
+          "label": "放大观察物",
+          "before": "d4c842a566cf5e491bea404b6a25b782e9ed058994897dc96883ca2b490e0794",
+          "after": "82f97faa9cc03af80cfb83958094e409a9007c42d606cc8333616b4b40ae11f8"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "82f97faa9cc03af80cfb83958094e409a9007c42d606cc8333616b4b40ae11f8",
+          "after": "d4c842a566cf5e491bea404b6a25b782e9ed058994897dc96883ca2b490e0794"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "伏羲文化 · 环形意象",
+      "focusId": "fuxi-ring",
+      "hash": "79f78c4a701f3cdbaae7396436b4874c94d6c40e101a93af6213e528170b74aa",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "7575b0d4abd39582139d16d1bd1fd807b27b7e3869635480e5e2e03fbb136197",
+          "after": "bfa917413ec58249ab3f9e83d5986b52c815a4a7517730d362a662ab9707a922"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "bfa917413ec58249ab3f9e83d5986b52c815a4a7517730d362a662ab9707a922",
+          "after": "7575b0d4abd39582139d16d1bd1fd807b27b7e3869635480e5e2e03fbb136197"
+        },
+        {
+          "label": "放大观察物",
+          "before": "7575b0d4abd39582139d16d1bd1fd807b27b7e3869635480e5e2e03fbb136197",
+          "after": "dbb65dade61fdc75430f5a91a6a4da03cb329421fe0862eae2e80292e182271e"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "dbb65dade61fdc75430f5a91a6a4da03cb329421fe0862eae2e80292e182271e",
+          "after": "7575b0d4abd39582139d16d1bd1fd807b27b7e3869635480e5e2e03fbb136197"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "台西砭镰 · 器物示意",
+      "focusId": "taixi-blade",
+      "hash": "3810f17a3ef2d5c832e22592709c6c66a17fe4036e17b4f60bf5861d7c16a479",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "fb945fe3f70f749b60b790a5e8cdee12c76a91b4236de4bf3545fed5ba2e8803",
+          "after": "cf0d4dc11222dd1743115e67e8d21282aac9c9e70b69a167266c0be76578bf9e"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "cf0d4dc11222dd1743115e67e8d21282aac9c9e70b69a167266c0be76578bf9e",
+          "after": "fb945fe3f70f749b60b790a5e8cdee12c76a91b4236de4bf3545fed5ba2e8803"
+        },
+        {
+          "label": "放大观察物",
+          "before": "fb945fe3f70f749b60b790a5e8cdee12c76a91b4236de4bf3545fed5ba2e8803",
+          "after": "0402c915ce1909e9b7e4b7833d823710ab4813d44240f191f427ad8a0b45e0dd"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "0402c915ce1909e9b7e4b7833d823710ab4813d44240f191f427ad8a0b45e0dd",
+          "after": "fb945fe3f70f749b60b790a5e8cdee12c76a91b4236de4bf3545fed5ba2e8803"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "台西种仁 · 植物遗存",
+      "focusId": "taixi-seeds",
+      "hash": "fc39d7d9641f1d9cd26f60359abee6aa7cdb46ca9dac6d0a577f1fbb8183d026",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "fc39d7d9641f1d9cd26f60359abee6aa7cdb46ca9dac6d0a577f1fbb8183d026",
+          "after": "19964cfa41f161f225aa722dc1acce248897f0bc139732d7f7e469a8c6911f92"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "19964cfa41f161f225aa722dc1acce248897f0bc139732d7f7e469a8c6911f92",
+          "after": "fc39d7d9641f1d9cd26f60359abee6aa7cdb46ca9dac6d0a577f1fbb8183d026"
+        },
+        {
+          "label": "放大观察物",
+          "before": "fc39d7d9641f1d9cd26f60359abee6aa7cdb46ca9dac6d0a577f1fbb8183d026",
+          "after": "b704ba74fa3e2378eb70a401d8028f5eb1c0fda3865dc9ca54d86ffb0e01c8b0"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "b704ba74fa3e2378eb70a401d8028f5eb1c0fda3865dc9ca54d86ffb0e01c8b0",
+          "after": "fc39d7d9641f1d9cd26f60359abee6aa7cdb46ca9dac6d0a577f1fbb8183d026"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "易水学说 · 书页意象",
+      "focusId": "zhang-book",
+      "hash": "beefb21607cab49d60cc4bfec08300dd0453e16e686f725be898bf572ab9943b",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "e0883b9fe2383dc49241cda6d59c80b3f3dbf463e6c1ac8a3a550c4301edb075",
+          "after": "ea2ceaf00aa2d6b4044cf37da14861e82ebc906c5defce77307a84e049d24f7a"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "ea2ceaf00aa2d6b4044cf37da14861e82ebc906c5defce77307a84e049d24f7a",
+          "after": "e0883b9fe2383dc49241cda6d59c80b3f3dbf463e6c1ac8a3a550c4301edb075"
+        },
+        {
+          "label": "放大观察物",
+          "before": "e0883b9fe2383dc49241cda6d59c80b3f3dbf463e6c1ac8a3a550c4301edb075",
+          "after": "430ff1f5fd0bd4575ced2de703c6552df351371647edb934690463bb017274d6"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "430ff1f5fd0bd4575ced2de703c6552df351371647edb934690463bb017274d6",
+          "after": "e0883b9fe2383dc49241cda6d59c80b3f3dbf463e6c1ac8a3a550c4301edb075"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "《脾胃论》 · 著述意象",
+      "focusId": "li-book",
+      "hash": "58f4f7b9803a6315e0bcaa34beeb392739f046b6534c7406fcc60220947bcdbe",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "cfe5362de455b56ea167a909fc48a97cb53b71cfe40f32d8fcc28806671d6d26",
+          "after": "5ab45c952417c979c4740fd6d9512918a9e3e94e2498a40b6f2b102cbfc581d3"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "5ab45c952417c979c4740fd6d9512918a9e3e94e2498a40b6f2b102cbfc581d3",
+          "after": "cfe5362de455b56ea167a909fc48a97cb53b71cfe40f32d8fcc28806671d6d26"
+        },
+        {
+          "label": "放大观察物",
+          "before": "cfe5362de455b56ea167a909fc48a97cb53b71cfe40f32d8fcc28806671d6d26",
+          "after": "2f739509d7f3fe8db74757b914ceb684b9af476e934b99abb86349dae488bbc7"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "2f739509d7f3fe8db74757b914ceb684b9af476e934b99abb86349dae488bbc7",
+          "after": "cfe5362de455b56ea167a909fc48a97cb53b71cfe40f32d8fcc28806671d6d26"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "《卫生宝鉴》 · 著述意象",
+      "focusId": "luo-book",
+      "hash": "fa652c675641f938f35063de895bc11e22ed54924fb10313d2b25052d5e6059f",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "6cd8c08391888c9f9bf0dfbccb6ce2ced55ae1316ffae5d2fd28898b7d8d8f0b",
+          "after": "69f6527c674abb032dc22bf7c6dca2d9d3395dc1faccd8e93f2f1339fbb26f91"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "69f6527c674abb032dc22bf7c6dca2d9d3395dc1faccd8e93f2f1339fbb26f91",
+          "after": "6cd8c08391888c9f9bf0dfbccb6ce2ced55ae1316ffae5d2fd28898b7d8d8f0b"
+        },
+        {
+          "label": "放大观察物",
+          "before": "6cd8c08391888c9f9bf0dfbccb6ce2ced55ae1316ffae5d2fd28898b7d8d8f0b",
+          "after": "9990cc3dd9078373d56d33693c958deef48ede2b4150638142d9b1444a3a30a7"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "9990cc3dd9078373d56d33693c958deef48ede2b4150638142d9b1444a3a30a7",
+          "after": "6cd8c08391888c9f9bf0dfbccb6ce2ced55ae1316ffae5d2fd28898b7d8d8f0b"
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "title": "当代著述 · 书页意象",
+      "focusId": "modern-book",
+      "hash": "576a88e18425c5a5faae4b7dda6bb9e670ec6aed9bbf754e8b96dd42c7facf74",
+      "controls": [
+        {
+          "label": "向左旋转观察",
+          "before": "7d29f9661f30c9b18e2cb450ce5d82a02d95ffae2eb38be2d2a4bb3adfcc53e9",
+          "after": "5e23fb11465013a351c4fd2e617a26d885bbc65bfa4c82b34029677f2353d548"
+        },
+        {
+          "label": "向右旋转观察",
+          "before": "5e23fb11465013a351c4fd2e617a26d885bbc65bfa4c82b34029677f2353d548",
+          "after": "7d29f9661f30c9b18e2cb450ce5d82a02d95ffae2eb38be2d2a4bb3adfcc53e9"
+        },
+        {
+          "label": "放大观察物",
+          "before": "7d29f9661f30c9b18e2cb450ce5d82a02d95ffae2eb38be2d2a4bb3adfcc53e9",
+          "after": "c83f73ea5271e0b16b67e7f4e03d47b14a6dd630200dc55c4a50d9cfc6e2ed5f"
+        },
+        {
+          "label": "缩小观察物",
+          "before": "c83f73ea5271e0b16b67e7f4e03d47b14a6dd630200dc55c4a50d9cfc6e2ed5f",
+          "after": "7d29f9661f30c9b18e2cb450ce5d82a02d95ffae2eb38be2d2a4bb3adfcc53e9"
+        }
+      ]
+    }
+  ],
+  "viewports": [
+    {
+      "view": "desktop",
+      "state": "default-journey",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000,
+        "right": 1440,
+        "bottom": 1000
+      },
+      "caption": {
+        "x": 64.796875,
+        "y": 210,
+        "width": 340,
+        "height": 330.5,
+        "right": 404.796875,
+        "bottom": 540.5
+      },
+      "footer": {
+        "x": 57.59375,
+        "y": 807.40625,
+        "width": 1324.8125,
+        "height": 192.59375,
+        "right": 1382.40625,
+        "bottom": 1000
+      },
+      "controls": [
+        {
+          "label": "医脉长卷总览",
+          "x": 54.71875,
+          "y": 22.40625,
+          "width": 164,
+          "height": 50.1875,
+          "right": 218.71875,
+          "bottom": 72.59375
+        },
+        {
+          "label": "查看六境全卷",
+          "x": 1076.703125,
+          "y": 25.5,
+          "width": 46.453125,
+          "height": 44,
+          "right": 1123.15625,
+          "bottom": 69.5
+        },
+        {
+          "label": "关闭减弱动态",
+          "x": 1137.15625,
+          "y": 25.5,
+          "width": 85.328125,
+          "height": 44,
+          "right": 1222.484375,
+          "bottom": 69.5
+        },
+        {
+          "label": "查看史实与来源",
+          "x": 1236.484375,
+          "y": 25.5,
+          "width": 46.453125,
+          "height": 44,
+          "right": 1282.9375,
+          "bottom": 69.5
+        },
+        {
+          "label": "进入书坊小游戏",
+          "x": 1296.9375,
+          "y": 25.5,
+          "width": 88.34375,
+          "height": 44,
+          "right": 1385.28125,
+          "bottom": 69.5
+        },
+        {
+          "label": "聚焦伏羲文化 · 环形意象",
+          "x": 777.4673461914062,
+          "y": 340.07373046875,
+          "width": 97.53125,
+          "height": 44,
+          "right": 874.9985961914062,
+          "bottom": 384.07373046875
+        },
+        {
+          "label": "走近伏羲文化 · 环形意象",
+          "x": 64.796875,
+          "y": 452.5,
+          "width": 152,
+          "height": 44,
+          "right": 216.796875,
+          "bottom": 496.5
+        },
+        {
+          "label": "查看本境史实与来源 ↗",
+          "x": 64.796875,
+          "y": 496.5,
+          "width": 97.953125,
+          "height": 44,
+          "right": 162.75,
+          "bottom": 540.5
+        },
+        {
+          "label": "上一年代",
+          "x": 1212.671875,
+          "y": 807.40625,
+          "width": 44,
+          "height": 44,
+          "right": 1256.671875,
+          "bottom": 851.40625
+        },
+        {
+          "label": "下一年代",
+          "x": 1338.40625,
+          "y": 807.40625,
+          "width": 44,
+          "height": 44,
+          "right": 1382.40625,
+          "bottom": 851.40625
+        },
+        {
+          "label": "前往伏羲台",
+          "x": 57.59375,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 270.0625,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往商代台西",
+          "x": 280.0625,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 492.53125,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往张元素",
+          "x": 502.53125,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 715,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往李东垣",
+          "x": 725,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 937.46875,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往罗天益",
+          "x": 947.46875,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 1159.9375,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往路志正",
+          "x": 1169.9375,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 1382.40625,
+          "bottom": 937.40625
+        },
+        {
+          "label": "拖动医脉时间线",
+          "x": 57.59375,
+          "y": 942.40625,
+          "width": 1324.8125,
+          "height": 20,
+          "right": 1382.40625,
+          "bottom": 962.40625
+        }
+      ]
+    },
+    {
+      "view": "desktop",
+      "state": "taixi-inspect",
+      "width": 1440,
+      "height": 1000,
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000,
+        "right": 1440,
+        "bottom": 1000
+      },
+      "caption": {
+        "x": 64.796875,
+        "y": 210,
+        "width": 340,
+        "height": 445.6875,
+        "right": 404.796875,
+        "bottom": 655.6875
+      },
+      "footer": {
+        "x": 57.59375,
+        "y": 807.40625,
+        "width": 1324.8125,
+        "height": 192.59375,
+        "right": 1382.40625,
+        "bottom": 1000
+      },
+      "controls": [
+        {
+          "label": "医脉长卷总览",
+          "x": 54.71875,
+          "y": 22.40625,
+          "width": 164,
+          "height": 50.1875,
+          "right": 218.71875,
+          "bottom": 72.59375
+        },
+        {
+          "label": "查看六境全卷",
+          "x": 1076.703125,
+          "y": 25.5,
+          "width": 46.453125,
+          "height": 44,
+          "right": 1123.15625,
+          "bottom": 69.5
+        },
+        {
+          "label": "关闭减弱动态",
+          "x": 1137.15625,
+          "y": 25.5,
+          "width": 85.328125,
+          "height": 44,
+          "right": 1222.484375,
+          "bottom": 69.5
+        },
+        {
+          "label": "查看史实与来源",
+          "x": 1236.484375,
+          "y": 25.5,
+          "width": 46.453125,
+          "height": 44,
+          "right": 1282.9375,
+          "bottom": 69.5
+        },
+        {
+          "label": "进入书坊小游戏",
+          "x": 1296.9375,
+          "y": 25.5,
+          "width": 88.34375,
+          "height": 44,
+          "right": 1385.28125,
+          "bottom": 69.5
+        },
+        {
+          "label": "← 返回时间长卷",
+          "x": 64.796875,
+          "y": 484.6875,
+          "width": 89.46875,
+          "height": 44,
+          "right": 154.265625,
+          "bottom": 528.6875
+        },
+        {
+          "label": "向左旋转观察",
+          "x": 64.796875,
+          "y": 545.6875,
+          "width": 44,
+          "height": 44,
+          "right": 108.796875,
+          "bottom": 589.6875
+        },
+        {
+          "label": "向右旋转观察",
+          "x": 115.796875,
+          "y": 545.6875,
+          "width": 44,
+          "height": 44,
+          "right": 159.796875,
+          "bottom": 589.6875
+        },
+        {
+          "label": "缩小观察物",
+          "x": 166.796875,
+          "y": 545.6875,
+          "width": 44,
+          "height": 44,
+          "right": 210.796875,
+          "bottom": 589.6875
+        },
+        {
+          "label": "放大观察物",
+          "x": 217.796875,
+          "y": 545.6875,
+          "width": 44,
+          "height": 44,
+          "right": 261.796875,
+          "bottom": 589.6875
+        },
+        {
+          "label": "查看本境史实与来源 ↗",
+          "x": 64.796875,
+          "y": 611.6875,
+          "width": 97.953125,
+          "height": 44,
+          "right": 162.75,
+          "bottom": 655.6875
+        },
+        {
+          "label": "上一年代",
+          "x": 1211.125,
+          "y": 807.40625,
+          "width": 44,
+          "height": 44,
+          "right": 1255.125,
+          "bottom": 851.40625
+        },
+        {
+          "label": "下一年代",
+          "x": 1338.40625,
+          "y": 807.40625,
+          "width": 44,
+          "height": 44,
+          "right": 1382.40625,
+          "bottom": 851.40625
+        },
+        {
+          "label": "前往伏羲台",
+          "x": 57.59375,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 270.0625,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往商代台西",
+          "x": 280.0625,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 492.53125,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往张元素",
+          "x": 502.53125,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 715,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往李东垣",
+          "x": 725,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 937.46875,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往罗天益",
+          "x": 947.46875,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 1159.9375,
+          "bottom": 937.40625
+        },
+        {
+          "label": "前往路志正",
+          "x": 1169.9375,
+          "y": 859.40625,
+          "width": 212.46875,
+          "height": 78,
+          "right": 1382.40625,
+          "bottom": 937.40625
+        },
+        {
+          "label": "拖动医脉时间线",
+          "x": 57.59375,
+          "y": 942.40625,
+          "width": 1324.8125,
+          "height": 20,
+          "right": 1382.40625,
+          "bottom": 962.40625
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "state": "default-journey",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "right": 390,
+        "bottom": 844
+      },
+      "caption": {
+        "x": 23.390625,
+        "y": 425.703125,
+        "width": 343.21875,
+        "height": 219.296875,
+        "right": 366.609375,
+        "bottom": 645
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "width": 343.21875,
+        "height": 178.1875,
+        "right": 366.609375,
+        "bottom": 844
+      },
+      "controls": [
+        {
+          "label": "医脉长卷总览",
+          "x": 23.390625,
+          "y": 17.5,
+          "width": 116.25,
+          "height": 48,
+          "right": 139.640625,
+          "bottom": 65.5
+        },
+        {
+          "label": "查看六境全卷",
+          "x": 190.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 234.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "关闭减弱动态",
+          "x": 234.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 278.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "查看史实与来源",
+          "x": 278.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 322.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "进入书坊小游戏",
+          "x": 322.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 366.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "聚焦伏羲文化 · 环形意象",
+          "x": 161.4330596923828,
+          "y": 113.31440734863281,
+          "width": 75.96875,
+          "height": 44,
+          "right": 237.4018096923828,
+          "bottom": 157.3144073486328
+        },
+        {
+          "label": "走近伏羲文化 · 环形意象",
+          "x": 23.390625,
+          "y": 566,
+          "width": 107,
+          "height": 44,
+          "right": 130.390625,
+          "bottom": 610
+        },
+        {
+          "label": "查看本境史实与来源 ↗",
+          "x": 23.390625,
+          "y": 610,
+          "width": 87.078125,
+          "height": 35,
+          "right": 110.46875,
+          "bottom": 645
+        },
+        {
+          "label": "上一年代",
+          "x": 226.609375,
+          "y": 665.8125,
+          "width": 44,
+          "height": 44,
+          "right": 270.609375,
+          "bottom": 709.8125
+        },
+        {
+          "label": "下一年代",
+          "x": 322.609375,
+          "y": 665.8125,
+          "width": 44,
+          "height": 44,
+          "right": 366.609375,
+          "bottom": 709.8125
+        },
+        {
+          "label": "前往伏羲台",
+          "x": 23.390625,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 78.09375,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往商代台西",
+          "x": 81.09375,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 135.796875,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往张元素",
+          "x": 138.796875,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 193.5,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往李东垣",
+          "x": 196.5,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 251.203125,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往罗天益",
+          "x": 254.203125,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 308.90625,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往路志正",
+          "x": 311.90625,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 366.609375,
+          "bottom": 780.8125
+        },
+        {
+          "label": "拖动医脉时间线",
+          "x": 23.390625,
+          "y": 782.8125,
+          "width": 343.21875,
+          "height": 32,
+          "right": 366.609375,
+          "bottom": 814.8125
+        }
+      ]
+    },
+    {
+      "view": "mobile390",
+      "state": "taixi-inspect",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 844,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "right": 390,
+        "bottom": 844
+      },
+      "caption": {
+        "x": 23.390625,
+        "y": 419.109375,
+        "width": 343.21875,
+        "height": 230.890625,
+        "right": 366.609375,
+        "bottom": 650
+      },
+      "footer": {
+        "x": 23.390625,
+        "y": 665.8125,
+        "width": 343.21875,
+        "height": 178.1875,
+        "right": 366.609375,
+        "bottom": 844
+      },
+      "controls": [
+        {
+          "label": "医脉长卷总览",
+          "x": 23.390625,
+          "y": 17.5,
+          "width": 116.25,
+          "height": 48,
+          "right": 139.640625,
+          "bottom": 65.5
+        },
+        {
+          "label": "查看六境全卷",
+          "x": 190.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 234.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "关闭减弱动态",
+          "x": 234.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 278.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "查看史实与来源",
+          "x": 278.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 322.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "进入书坊小游戏",
+          "x": 322.609375,
+          "y": 19.5,
+          "width": 44,
+          "height": 44,
+          "right": 366.609375,
+          "bottom": 63.5
+        },
+        {
+          "label": "← 返回时间长卷",
+          "x": 23.390625,
+          "y": 576,
+          "width": 81.34375,
+          "height": 44,
+          "right": 104.734375,
+          "bottom": 620
+        },
+        {
+          "label": "向左旋转观察",
+          "x": 112.734375,
+          "y": 576,
+          "width": 44,
+          "height": 44,
+          "right": 156.734375,
+          "bottom": 620
+        },
+        {
+          "label": "向右旋转观察",
+          "x": 160.734375,
+          "y": 576,
+          "width": 44,
+          "height": 44,
+          "right": 204.734375,
+          "bottom": 620
+        },
+        {
+          "label": "缩小观察物",
+          "x": 208.734375,
+          "y": 576,
+          "width": 44,
+          "height": 44,
+          "right": 252.734375,
+          "bottom": 620
+        },
+        {
+          "label": "放大观察物",
+          "x": 256.734375,
+          "y": 576,
+          "width": 44,
+          "height": 44,
+          "right": 300.734375,
+          "bottom": 620
+        },
+        {
+          "label": "查看本境史实与来源 ↗",
+          "x": 23.390625,
+          "y": 620,
+          "width": 87.078125,
+          "height": 30,
+          "right": 110.46875,
+          "bottom": 650
+        },
+        {
+          "label": "上一年代",
+          "x": 225.328125,
+          "y": 665.8125,
+          "width": 44,
+          "height": 44,
+          "right": 269.328125,
+          "bottom": 709.8125
+        },
+        {
+          "label": "下一年代",
+          "x": 322.609375,
+          "y": 665.8125,
+          "width": 44,
+          "height": 44,
+          "right": 366.609375,
+          "bottom": 709.8125
+        },
+        {
+          "label": "前往伏羲台",
+          "x": 23.390625,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 78.09375,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往商代台西",
+          "x": 81.09375,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 135.796875,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往张元素",
+          "x": 138.796875,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 193.5,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往李东垣",
+          "x": 196.5,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 251.203125,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往罗天益",
+          "x": 254.203125,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 308.90625,
+          "bottom": 780.8125
+        },
+        {
+          "label": "前往路志正",
+          "x": 311.90625,
+          "y": 715.8125,
+          "width": 54.703125,
+          "height": 65,
+          "right": 366.609375,
+          "bottom": 780.8125
+        },
+        {
+          "label": "拖动医脉时间线",
+          "x": 23.390625,
+          "y": 782.8125,
+          "width": 343.21875,
+          "height": 32,
+          "right": 366.609375,
+          "bottom": 814.8125
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "bugs": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "resourceErrors": [],
+  "screenshots": [
+    "desktop-default-journey.png",
+    "desktop-overview.png",
+    "desktop-taixi-inspect.png",
+    "desktop-final-overview.png",
+    "mobile390-default-journey.png",
+    "mobile390-overview.png",
+    "mobile390-taixi-inspect.png",
+    "mobile390-final-overview.png"
+  ],
+  "navigations": [
+    {
+      "view": "desktop",
+      "url": "http://127.0.0.1:3061/zhongyi1"
+    },
+    {
+      "view": "desktop",
+      "url": "http://127.0.0.1:3061/zhongyi1"
+    },
+    {
+      "view": "mobile390",
+      "url": "http://127.0.0.1:3061/zhongyi1"
+    },
+    {
+      "view": "mobile390",
+      "url": "http://127.0.0.1:3061/zhongyi1"
+    }
+  ],
+  "browser": "154.0.8037.98",
+  "finished": "2026-10-15T04:28:39.971Z",
+  "fastMotion": true,
+  "passed": true
+}
