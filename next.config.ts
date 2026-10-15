@@ -41,6 +41,8 @@ const nextConfig: NextConfig = {
       "/meizhouma/:path*",
       "/mv",
       "/mv/:path*",
+      "/zhongyi2",
+      "/zhongyi2/:path*",
     ];
     return noindex.map((source) => ({
       source,
@@ -78,6 +80,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.packom.store/jake/:path*",
         permanent: true,
       },
+    ];
+  },
+  async rewrites() {
+    return [
+      { source: "/zhongyi2", destination: "/zhongyi2/index.html" },
     ];
   },
   turbopack: {
