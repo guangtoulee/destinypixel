@@ -1,61 +1,25 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <base href="/zhongyi2/">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f4f0e6">
-  <meta name="description" content="走进一间可探索的数字书斋，从一页古籍，认识燕赵医脉的传承故事。石家庄中医云博物馆交互概念样板。">
-  <title>燕赵医脉 · 一部书的旅行</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="/zhongyi2#main">跳至主要内容</a>
-  <header class="site-header">
-    <a class="brand" href="/zhongyi2#" aria-label="燕赵医脉首页"><span class="brand-seal">医</span><span><strong>燕赵医脉</strong><small>YANZHAO MEDICAL HERITAGE</small></span></a>
-    <nav aria-label="主要导航"><a href="/zhongyi2#museum" class="nav-active">云上书斋</a><a href="/zhongyi2#journey">医脉寻踪</a><a href="/zhongyi2#study">研学任务</a><button class="text-button" id="about-button">关于特展</button></nav>
-    <button class="notebook-button" id="notebook-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h6a4 4 0 0 1 4 3v14a5 5 0 0 0-4-2H4zM14 7a4 4 0 0 1 4-3h3v15h-3a5 5 0 0 0-4 2"/></svg><span>我的研学册</span><b id="header-count">0</b></button>
-  </header>
-  <main id="main">
-    <section class="museum-section" id="museum" aria-label="可交互的三维书斋">
-      <div class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> 石家庄中医云博物馆 · 概念特展</p>
-          <p class="hero-series">数字特展 <i>001</i> <span> / 燕赵医脉</span></p>
-          <h1>一部书的<br><em>旅行</em><span class="small-seal">薪火<br>相传</span></h1>
-          <p class="hero-description">从一页手稿，走进一段医脉。<br>在可探索的书斋里，发现学问如何<br class="desktop-break">被写下、被留下、被传向远方。</p>
-          <button class="primary-button" id="explore-button">启程，走进书斋 <span aria-hidden="true">↗</span></button>
-          <p class="hero-meta"><span class="clock-icon"></span> 约 5 分钟 <span class="meta-dot">·</span> 4 个探索点 <span class="meta-dot">·</span> 免费探索</p>
-        </div>
-        <div class="scene-wrap" id="scene-wrap">
-          <div class="scene-topline"><span class="live-dot"></span> 可交互 3D 场景 <span class="scene-number">VOL. 01</span></div>
-          <div class="scene-watermark" aria-hidden="true">书<br>里<br>有<br>山<br>河</div>
-          <canvas id="museum-canvas" aria-label="艺术化三维书斋，可以拖动旋转，或通过下方按钮探索四件物品"></canvas>
-          <div class="scene-loading" id="scene-loading"><span class="loading-seal">书</span><p>正在展开书斋…</p></div>
-          <div class="scene-fallback" id="scene-fallback" hidden><span>卷</span><p>当前设备暂未开启三维画面</p><small>仍可通过下方四个探索点完成全部研学</small></div>
-          <div class="scene-tip" id="scene-tip"><span>↔</span> 拖动旋转 · 点击物件探索</div>
-          <div class="scene-tools"><button id="reset-view" title="恢复初始视角" aria-label="恢复初始视角">↺</button><button id="expand-view" title="放大展厅" aria-label="放大展厅">⛶</button></div>
-          <div class="hotspots" aria-label="书斋探索点"><button data-exhibit="book"><i>01</i> 古籍<span>↗</span></button><button data-exhibit="cabinet"><i>02</i> 药柜<span>↗</span></button><button data-exhibit="print"><i>03</i> 刊印<span>↗</span></button><button data-exhibit="lamp"><i>04</i> 灯火<span>↗</span></button></div>
-        </div>
-        <span class="vertical-note">纸上千年 · 云端相逢</span>
-      </div>
-      <div class="journey-bar"><div class="journey-label"><span class="tiny-seal">研</span><div><strong>你的书斋寻迹</strong><small>每一次发现，留下一枚印记</small></div></div><div class="journey-steps" id="journey-steps"><button data-exhibit="book"><span>一</span>读书</button><b></b><button data-exhibit="cabinet"><span>二</span>识物</button><b></b><button data-exhibit="print"><span>三</span>刊印</button><b></b><button data-exhibit="lamp"><span>四</span>传承</button></div><button class="text-button task-link" id="start-task">开始集章 <span>→</span></button></div>
-    </section>
-    <section class="story-section" id="journey">
-      <div class="section-intro"><div><p class="eyebrow">FOLLOW THE THREAD</p><h2>医脉，沿书页流转。</h2></div><p>一本书的背后，是人与人的连接。<br>循着四条线索，读懂知识传承的另一面。</p></div>
-      <div class="timeline" id="timeline"></div>
-      <p class="source-line">人物史料参考：北京中医药大学博物馆《元代名医——罗天益》 <a href="https://bowuguan.bucm.edu.cn/kpzl/ysmt/43941.htm" target="_blank" rel="noopener noreferrer">阅读来源 ↗</a></p>
-    </section>
-    <section class="study-section" id="study"><div class="study-art" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="paper-book"><span>燕赵<br>寻迹</span><i>研学手记</i></div><span class="art-seal">知<br>行</span></div><div class="study-copy"><p class="eyebrow">A SMALL DISCOVERY, A LASTING MEMORY</p><h2>把发现，<br>装进你的研学册。</h2><p>读一段故事，回答一个问题，集齐四枚印记。<br>完成后，生成属于你的书斋旅行纪念卡。</p><div class="study-progress"><span id="study-progress-text">已收集 0 / 4 枚印记</span><div><i id="study-progress-fill"></i></div></div><button class="primary-button" id="study-button">领取第一枚印记 <span>→</span></button><small class="local-note">研学进度仅保存在当前浏览器</small></div></section>
-    <section class="closing-section"><span class="closing-line"></span><p>书页有尽，传承无尽。</p><span class="closing-line"></span></section>
-  </main>
-  <footer><a class="footer-brand" href="/zhongyi2#">燕赵医脉 <span>YANZHAO MEDICAL HERITAGE</span></a><p>石家庄中医云博物馆 · 交互概念样板<br>书斋及道具为艺术化示意，非馆藏实物复原。</p><button class="text-button" id="sources-button">展陈说明与资料来源 ↗</button></footer>
-  <dialog class="exhibit-dialog" id="exhibit-dialog" aria-labelledby="exhibit-title"><button class="close-button" id="close-exhibit" aria-label="关闭展项">×</button><div id="exhibit-content"></div></dialog>
-  <dialog class="notebook-dialog" id="notebook-dialog" aria-labelledby="notebook-title"><button class="close-button" id="close-notebook" aria-label="关闭研学册">×</button><div class="notebook-inner"><p class="eyebrow">MY FIELD NOTES</p><h2 id="notebook-title">我的书斋研学册</h2><p class="notebook-summary" id="notebook-summary"></p><div class="stamp-grid" id="stamp-grid"></div><div id="notebook-actions"></div></div></dialog>
-  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><button class="close-button" id="close-about" aria-label="关闭特展说明">×</button><p class="eyebrow">ABOUT THIS EXHIBITION</p><h2 id="about-title">让文化，可以亲近。</h2><p>本特展是石家庄中医云博物馆的交互概念样板，以“古籍如何承载与传递学问”为线索，将网页叙事、三维观察与文化研学相结合。</p><p>人物关系及整理刊行著作的线索依据公开史料；书斋、古籍外观、药柜、印版与灯具为艺术化示意，没有对应的馆藏实物编号。工序互动表达传播概念，不代表特定古籍的历史复原。</p><p>此样板提供文化科普，不提供诊断、处方或治疗建议。研学进度仅在本浏览器保存，未接入账户、录音、积分兑换或线下预约。</p><h3>资料与参考</h3><div id="source-list"></div><p class="technical-credit">三维引擎 Three.js · MIT License<br>场景为可旋转的实时三维模型，采用程序化几何与纹理。</p></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
-</html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<base href="/zhongyi2/"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071b20">
+<meta name="description" content="拨动年代，穿行燕赵医脉。Blender三维历史长卷，连接台西遗存、易水学派与当代传承。">
+<title>燕赵医脉 · 穿行三千年的3D历史长卷</title><link rel="icon" href="./assets/favicon.svg"><link rel="stylesheet" href="./history.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script><script type="module" src="./history-app.js"></script>
+</head><body>
+<main class="experience">
+<canvas id="history-canvas" aria-label="三维历史长卷。左右拖动或使用底部时间轴穿越年代"></canvas><div class="vignette" aria-hidden="true"></div>
+<header><button class="brand" id="brand-home" aria-label="返回台西历史节点"><span class="seal">脉</span><span><strong>燕赵医脉</strong><small>A JOURNEY THROUGH MEDICAL HISTORY</small></span><i>历史长卷</i></button><nav aria-label="体验控制"><button id="overview-button" aria-label="俯瞰全卷">◇ <span>俯瞰全卷</span></button><button id="tour-button" aria-label="自动漫游" aria-pressed="false">▷ <span>自动漫游</span></button><button id="about-button" aria-label="展陈说明与操作帮助">?</button></nav></header>
+<div class="epoch-atmosphere" aria-hidden="true"><span id="ambient-era">商代</span><i>THE LIVING THREAD OF TIME</i></div>
+<aside class="event-panel" aria-label="当前历史节点"><p class="chapter-line"><span id="chapter-number">02</span><b>/</b>08 <i></i><small>沿时间，读懂一座城的医脉</small></p><div id="event-copy" aria-live="polite"></div><div class="exploration-tools" id="exploration-tools"></div><button class="evidence-link" id="evidence-button">史料与这段故事 <span>↗</span></button></aside>
+<div class="right-annotation"><span></span> BLENDER × WEB 3D <i>可交互历史场景</i></div>
+<div class="world-control"><button id="reset-camera" aria-label="恢复当前年代视角">↺</button><span id="scene-hint">左右拖动穿越年代<br>点击场景，走近历史</span></div>
+<div class="inspection-bar" id="inspection-bar" hidden><span><i>◉</i> <strong id="inspection-label">器物近看</strong><small>拖动环绕 · 滚轮或双指缩放</small></span><button id="leave-inspect">放回历史长卷 ↙</button></div>
+<div class="overview-caption" id="overview-caption" hidden><p>三千年，不止一条线。</p><span>金色脉络连接器物、人物与著作。<br>点击一座历史场景，继续你的旅行。</span><button id="leave-overview">回到当前年代 →</button></div>
+<section class="timeline-dock" aria-label="历史时间轴"><div class="timeline-top"><div class="timeline-current"><span id="current-era-label">商代中期</span><strong id="current-year">约3400年前</strong></div><p>↔　拨动时间，穿行医史 <small>精选节点 · 非等比例年尺</small></p><div class="step-buttons"><button id="previous-event" aria-label="上一个历史节点">←</button><span id="step-count">02 / 08</span><button id="next-event" aria-label="下一个历史节点">→</button></div></div><div class="time-track"><span></span><i id="time-track-progress"></i><input id="time-slider" type="range" min="0" max="7000" step="1" value="1000" aria-label="拖动时间轴穿越年代" aria-valuetext="商代台西，约3400年前"></div><div class="era-stops" id="era-stops" aria-label="选择历史事件"></div><div class="timeline-bottom"><span>石家庄中医云博物馆 · 历史展区概念样板</span><span>艺术化三维示意 <button id="credits-button">展陈说明 ↗</button></span></div></section>
+<div class="loading-screen" id="loading-screen"><div class="loading-emblem">燕赵<br>医脉</div><p>正在展开历史长卷</p><small id="loading-label">载入三维场景与器物</small><div class="loading-track"><i id="loading-progress"></i></div><span>从一片石刃，到千年医脉。</span></div>
+<div class="error-screen" id="error-screen" hidden><p>暂时无法展开三维长卷</p><span>请确认浏览器支持 WebGL 后重试；你仍可选择年代阅读史料。</span><div><button id="retry-button">重新载入</button><button id="read-history-button">阅读当前节点</button></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</main>
+<dialog id="evidence-dialog" aria-labelledby="evidence-title"><button class="dialog-close" aria-label="关闭史料" data-close="evidence-dialog">×</button><div id="evidence-content"></div></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" aria-label="关闭说明" data-close="about-dialog">×</button><p class="dialog-kicker">ABOUT THE JOURNEY</p><h2 id="about-title">让操作，成为理解历史的方式。</h2><p>拖动底部时间轴，或在场景中左右拖动，镜头会沿金色脉络穿行。点击年代可跨越，左右方向键可前后切换。点击“俯瞰全卷”查看所有历史场景。</p><ol><li><strong>台西遗存：</strong>拉开地层示意，拿起砭镰，从不同角度观察石刃。</li><li><strong>易水传灯：</strong>展开师承图，点人物，让人物、地点与著作的关联在空间里点亮。</li><li><strong>器物近看：</strong>拖动环绕、缩放，按“放回历史长卷”继续旅行。</li></ol><h3>史实与艺术表达</h3><p>节点间距不代表真实时间比例。伏羲节点属于文化记忆；台西遗存的用途保留考古解释边界。场景、土层、铜人、植物与古籍为艺术化三维示意，非馆藏扫描或具体出土层位复原。师承连线表示学术关系，不代表人物真实旅行路线。</p><p>模型由 Blender 制作并导出 GLB，在浏览器实时渲染。每个节点的“史料与这段故事”提供来源。本展介绍医学文化史，不作诊断或用药指导。</p><div class="about-legend"><span>● 本地坐标</span><span>● 全国医史背景</span><span>● 文化记忆</span></div></dialog>
+</body></html>
