@@ -13,10 +13,10 @@
   <script type="module" src="./app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳至主要内容</a>
+  <a class="skip-link" href="/zhongyi2#main">跳至主要内容</a>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="燕赵医脉首页"><span class="brand-seal">医</span><span><strong>燕赵医脉</strong><small>YANZHAO MEDICAL HERITAGE</small></span></a>
-    <nav aria-label="主要导航"><a href="#museum" class="nav-active">云上书斋</a><a href="#journey">医脉寻踪</a><a href="#study">研学任务</a><button class="text-button" id="about-button">关于特展</button></nav>
+    <a class="brand" href="/zhongyi2#" aria-label="燕赵医脉首页"><span class="brand-seal">医</span><span><strong>燕赵医脉</strong><small>YANZHAO MEDICAL HERITAGE</small></span></a>
+    <nav aria-label="主要导航"><a href="/zhongyi2#museum" class="nav-active">云上书斋</a><a href="/zhongyi2#journey">医脉寻踪</a><a href="/zhongyi2#study">研学任务</a><button class="text-button" id="about-button">关于特展</button></nav>
     <button class="notebook-button" id="notebook-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h6a4 4 0 0 1 4 3v14a5 5 0 0 0-4-2H4zM14 7a4 4 0 0 1 4-3h3v15h-3a5 5 0 0 0-4 2"/></svg><span>我的研学册</span><b id="header-count">0</b></button>
   </header>
   <main id="main">
@@ -52,7 +52,7 @@
     <section class="study-section" id="study"><div class="study-art" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="paper-book"><span>燕赵<br>寻迹</span><i>研学手记</i></div><span class="art-seal">知<br>行</span></div><div class="study-copy"><p class="eyebrow">A SMALL DISCOVERY, A LASTING MEMORY</p><h2>把发现，<br>装进你的研学册。</h2><p>读一段故事，回答一个问题，集齐四枚印记。<br>完成后，生成属于你的书斋旅行纪念卡。</p><div class="study-progress"><span id="study-progress-text">已收集 0 / 4 枚印记</span><div><i id="study-progress-fill"></i></div></div><button class="primary-button" id="study-button">领取第一枚印记 <span>→</span></button><small class="local-note">研学进度仅保存在当前浏览器</small></div></section>
     <section class="closing-section"><span class="closing-line"></span><p>书页有尽，传承无尽。</p><span class="closing-line"></span></section>
   </main>
-  <footer><a class="footer-brand" href="#">燕赵医脉 <span>YANZHAO MEDICAL HERITAGE</span></a><p>石家庄中医云博物馆 · 交互概念样板<br>书斋及道具为艺术化示意，非馆藏实物复原。</p><button class="text-button" id="sources-button">展陈说明与资料来源 ↗</button></footer>
+  <footer><a class="footer-brand" href="/zhongyi2#">燕赵医脉 <span>YANZHAO MEDICAL HERITAGE</span></a><p>石家庄中医云博物馆 · 交互概念样板<br>书斋及道具为艺术化示意，非馆藏实物复原。</p><button class="text-button" id="sources-button">展陈说明与资料来源 ↗</button></footer>
   <dialog class="exhibit-dialog" id="exhibit-dialog" aria-labelledby="exhibit-title"><button class="close-button" id="close-exhibit" aria-label="关闭展项">×</button><div id="exhibit-content"></div></dialog>
   <dialog class="notebook-dialog" id="notebook-dialog" aria-labelledby="notebook-title"><button class="close-button" id="close-notebook" aria-label="关闭研学册">×</button><div class="notebook-inner"><p class="eyebrow">MY FIELD NOTES</p><h2 id="notebook-title">我的书斋研学册</h2><p class="notebook-summary" id="notebook-summary"></p><div class="stamp-grid" id="stamp-grid"></div><div id="notebook-actions"></div></div></dialog>
   <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><button class="close-button" id="close-about" aria-label="关闭特展说明">×</button><p class="eyebrow">ABOUT THIS EXHIBITION</p><h2 id="about-title">让文化，可以亲近。</h2><p>本特展是石家庄中医云博物馆的交互概念样板，以“古籍如何承载与传递学问”为线索，将网页叙事、三维观察与文化研学相结合。</p><p>人物关系及整理刊行著作的线索依据公开史料；书斋、古籍外观、药柜、印版与灯具为艺术化示意，没有对应的馆藏实物编号。工序互动表达传播概念，不代表特定古籍的历史复原。</p><p>此样板提供文化科普，不提供诊断、处方或治疗建议。研学进度仅在本浏览器保存，未接入账户、录音、积分兑换或线下预约。</p><h3>资料与参考</h3><div id="source-list"></div><p class="technical-credit">三维引擎 Three.js · MIT License<br>场景为可旋转的实时三维模型，采用程序化几何与纹理。</p></dialog>
