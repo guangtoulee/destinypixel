@@ -7,7 +7,7 @@ import { put, head, BlobNotFoundError } from '@vercel/blob';
 // project. Credentials stay in the child environment, without reading .env files.
 const assetsOnly = process.argv.includes('--assets-only');
 const directory = path.resolve(process.argv.slice(2).find(a=>!a.startsWith('--')) || 'private/deepsea');
-const prefix = 'ocean/deepsea-su-20261016-r2/';
+const prefix = 'ocean/deepsea-su-20261016-r3/';
 const check = spawnSync(process.execPath, ['scripts/deepsea/verify-media.mjs', directory, ...(assetsOnly ? ['--assets-only'] : [])], { encoding: 'utf8' });
 if (check.status !== 0) throw new Error('Frozen media verification must pass before upload.');
 const source = JSON.parse(fs.readFileSync(path.join(directory, 'manifest.json'), 'utf8'));

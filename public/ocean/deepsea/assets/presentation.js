@@ -94,7 +94,7 @@
     document.head.append(modelScript);
   }
   function openTab(tab) {
-    if (!manifest || !['overview', 'gallery', 'plan', 'model', 'proposal'].includes(tab)) return;
+    if (!manifest || !['overview', 'gallery', 'plan', 'model', 'proposal', 'documents'].includes(tab)) return;
     activeTab = tab;
     document.querySelectorAll('.panel').forEach(p => { p.hidden = p.id !== `${tab}-panel`; p.classList.toggle('active', !p.hidden); });
     document.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-current', b.dataset.tab === tab ? 'page' : 'false'));
@@ -114,7 +114,7 @@
     $('image-kind').textContent = scene.imageLabels?.[mode] || modeNames[mode]; $('image-position').textContent = `${sceneIndex + 1} / ${manifest.scenes.length}`;
     $('scene-tags').replaceChildren(...(scene.tags || []).map(t => element('span', t)));
     $('mode-note-title').textContent = scene.isIndependentNode ? '独立深化节点' : modeNotes[mode][0]; $('mode-note').textContent = scene.isIndependentNode || mode==='effect' ? scene.designStatus || modeNotes[mode][1] : modeNotes[mode][1];
-    $('gallery-model-button').textContent=scene.independentModelPage?'打开独立切片 3D ↗':scene.isIndependentNode?'查看展厅总模型 ↗':'查看三维空间 ↗';
+    $('gallery-model-button').textContent=scene.independentModelPage?'打开宝船结构C ↗':scene.isIndependentNode?'查看展厅总模型 ↗':'查看三维空间 ↗';
     $('gallery-model-button').onclick = () => { if(scene.independentModelPage) location.href = scene.independentModelPage; else openTab('model'); };
     document.querySelectorAll('[data-mode]').forEach(b => { b.disabled = !scene.images[b.dataset.mode]; b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
     document.querySelectorAll('.scene-card').forEach((b, i) => b.setAttribute('aria-pressed', String(i === sceneIndex)));
@@ -180,6 +180,33 @@
       const card = element('article', undefined, 'narrative-card'); card.append(element('span', c.number || String(i + 1).padStart(2, '0'), 'number'), element('h3', c.title), element('p', c.summary || '')); return card;
     }));
   }
+  function buildDocuments() {
+    const books=manifest.attachments || [], drawings=manifest.drawings || [];
+    $('documents-summary').textContent=manifest.documentsSummary || '工程图纸、图文版式与多媒体专项按实际交付文件检索。独立宝船C的母船、真实截带与透明校准分开浏览。';
+    function link(item,book=false) {
+      const a=element('a',undefined,book?'document-book':'drawing-link'); a.href=media(item.path); a.target='_blank'; a.rel='noopener';
+      const title=element('strong',item.title||item.name||item.id); a.append(element('span',item.id||item.discipline||'专项附件','eyebrow'),title);
+      if(item.description||item.scale)a.append(element('p',item.description||`比例 ${item.scale}`));
+      a.append(element('span',item.format||'PDF ↗','document-format')); return a;
+    }
+    $('documents-books').replaceChildren(...books.map(b=>link(b,true)));
+    const boards=manifest.parameterBoards || [];
+    $('parameter-designs').hidden=!boards.length;
+    $('parameter-designs-list').replaceChildren(...boards.map(board=>{
+      const a=element('a',undefined,'parameter-design');a.href=media(board.path);a.target='_blank';a.rel='noopener';
+      const img=element('img');img.loading='lazy';img.alt=board.title;setImageSource(img,media(board.thumbnail || board.path));
+      const caption=element('div');caption.append(element('span',board.id,'eyebrow'),element('h3',board.title));
+      if(board.description)caption.append(element('p',board.description));
+      a.append(img,caption);return a;
+    }));
+    function filter() {
+      const query=$('documents-search').value.trim().toLocaleLowerCase();
+      const rows=drawings.filter(d=>[d.id,d.title,d.discipline,d.scale].join(' ').toLocaleLowerCase().includes(query));
+      $('documents-list').replaceChildren(...rows.map(d=>link(d)));
+      $('documents-count').textContent=`${rows.length} / ${drawings.length} 张图纸`;
+    }
+    $('documents-search').addEventListener('input',filter); filter();
+  }
   async function start() {
     try {
       const response = await fetch('/ocean/deepsea/media/manifest.json', { cache: 'no-store', credentials: 'same-origin' });
@@ -199,7 +226,7 @@
       document.querySelectorAll('[data-open]').forEach(b => b.onclick = e => { e.preventDefault(); openTab(b.dataset.open); });
       document.querySelectorAll('[data-plan]').forEach(b => b.onclick = () => choosePlan(b.dataset.plan));
       $('plan-notes').replaceChildren(...(manifest.plan.notes || []).map(n => { const d = element('div'); d.append(element('h3', n.title), element('p', n.text)); return d; }));
-      buildGallery(); buildProposal(); choosePlan('layout'); $('page-status').hidden = true;
+      buildGallery(); buildProposal(); buildDocuments(); choosePlan('layout'); $('page-status').hidden = true;
       window.OceanReady = true; window.dispatchEvent(new Event('ocean-ready')); openTab(location.hash.slice(1) || 'overview');
     } catch { $('page-status').textContent = '方案暂时无法打开，请刷新页面后重试。'; }
   }

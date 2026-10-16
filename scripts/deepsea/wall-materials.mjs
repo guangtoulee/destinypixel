@@ -27,7 +27,7 @@ export function isOceanGlass(object, material) {
 }
 
 function preserveExhibitMaterial(object, material) {
-  return inherited(object, 'oceanWhiteModelEligible') === false || material.map || material.emissiveMap || material.emissive?.getHex() > 0 || /地坪|地面|釉|陶瓷|乌木|沉积木|船肋|装备黄|骨骼|亚克力|屏|文字|灯|光/.test(material.name || '');
+  return inherited(object, 'oceanWhiteModelEligible') === false || material.map || material.emissiveMap || material.emissive?.getHex() > 0 || /地坪|地面|釉|陶瓷|乌木|沉积木|船肋|装备黄|骨骼|亚克力|屏|文字|灯|光|深海蓝|暗顶炭黑金属/.test(material.name || '');
 }
 
 export function materialForMuseumView(object, style, original, white, blueWall) {

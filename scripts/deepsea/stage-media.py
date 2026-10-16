@@ -1,49 +1,35 @@
-"""Copy an approved source manifest into ignored, gated /ocean/media files."""
-import argparse, hashlib, json, shutil
+"""Stage only frozen R3 private sources, including engineering and independent C variants."""
+import argparse,hashlib,json,shutil
 from pathlib import Path
 from PIL import Image
-
-p = argparse.ArgumentParser()
-p.add_argument('manifest', type=Path)
-p.add_argument('--output', type=Path, default=Path('private/deepsea'))
-a = p.parse_args()
-data = json.loads(a.manifest.read_text())
-a.output.mkdir(parents=True, exist_ok=True)
-records = []
-used = {}
+p=argparse.ArgumentParser();p.add_argument('manifest',type=Path);p.add_argument('--output',type=Path,default=Path('private/deepsea'));a=p.parse_args()
+data=json.loads(a.manifest.read_text());assert data['release']['edition']=='deepsea_revision_20261016_R3'
+a.output.mkdir(parents=True,exist_ok=True);records={};used={}
 def copy_asset(source):
-    file = Path(source).expanduser().resolve()
-    if not file.is_file(): raise SystemExit(f'Missing approved asset: {file}')
-    digest = hashlib.sha256(file.read_bytes()).hexdigest()
-    name = file.name
-    if name in used and used[name] != digest: name = digest[:12] + '_' + name
-    used[name] = digest
-    target = a.output / name
-    if file != target.resolve(): shutil.copy2(file, target)
-    if not any(r['filename'] == name for r in records): records.append({'filename': name, 'bytes': file.stat().st_size, 'sha256': digest})
-    return name
+ file=Path(source).expanduser().resolve();assert file.is_file(),file
+ digest=hashlib.sha256(file.read_bytes()).hexdigest();name=file.name
+ if name in used and used[name]!=digest:name=digest[:12]+'_'+name
+ used[name]=digest;target=a.output/name
+ if file!=target.resolve():shutil.copy2(file,target)
+ records[name]={'filename':name,'bytes':file.stat().st_size,'sha256':digest};return name
 for scene in data['scenes']:
-    scene['images'] = {mode: copy_asset(file) for mode, file in scene['images'].items() if file}
-    if not scene['images']: raise SystemExit(f'No approved image for scene {scene["title"]}')
-    preferred = scene['images'].get('effect') or scene['images'].get('native') or scene['images'].get('white')
-    thumb_name = 'thumb_' + Path(preferred).stem + '.jpg'
-    thumb_path = a.output / thumb_name
-    with Image.open(a.output / preferred) as image:
-        image = image.convert('RGB')
-        image.thumbnail((480, 300), Image.Resampling.LANCZOS)
-        image.save(thumb_path, quality=84, optimize=True, progressive=True)
-    scene['thumbnail'] = thumb_name
-    records.append({'filename': thumb_name, 'bytes': thumb_path.stat().st_size, 'sha256': hashlib.sha256(thumb_path.read_bytes()).hexdigest()})
-data['hero']['path'] = copy_asset(data['hero']['path'])
-for kind in ['layout', 'route']:
-    if kind in data['plan']:
-        for key in ['path', 'original']:
-            if data['plan'][kind].get(key): data['plan'][kind][key] = copy_asset(data['plan'][kind][key])
-data['model']['path'] = copy_asset(data['model']['path'])
-for node in data.get('independentNodes', []):
-    node['path'] = copy_asset(node['path'])
-for format in ['pdf', 'ppt']:
-    if data.get(format, {}).get('path'): data[format]['path'] = copy_asset(data[format]['path'])
-(a.output / 'manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2))
-(a.output / 'media-checksums.json').write_text(json.dumps({'assets': records}, ensure_ascii=False, indent=2))
-print(json.dumps({'assets': len(records), 'total_bytes': sum(r['bytes'] for r in records), 'manifest': str(a.output / 'manifest.json')}, ensure_ascii=False))
+ scene['images']={mode:copy_asset(file)for mode,file in scene['images'].items()if file}
+ preferred=scene['images'].get('effect')or scene['images'].get('native')or scene['images'].get('white');assert preferred
+ thumb='thumb_'+Path(preferred).stem+'.jpg';target=a.output/thumb
+ with Image.open(a.output/preferred)as im:
+  im=im.convert('RGB');im.thumbnail((480,300),Image.Resampling.LANCZOS);im.save(target,quality=84,optimize=True,progressive=True)
+ scene['thumbnail']=thumb;records[thumb]={'filename':thumb,'bytes':target.stat().st_size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+def transform(value,key=''):
+ if isinstance(value,str):return copy_asset(value)if key in ['path','original']else value
+ if isinstance(value,list):return[transform(v,key)for v in value]
+ if isinstance(value,dict):return{k:transform(v,k)for k,v in value.items()}
+ return value
+for key in ['hero','plan','model','independentNodes','pdf','ppt','attachments','drawings','parameterBoards']:
+ if key in data:data[key]=transform(data[key])
+for board in data.get('parameterBoards',[]):
+ thumb='thumb_'+Path(board['path']).stem+'.jpg';target=a.output/thumb
+ with Image.open(a.output/board['path'])as im:
+  im=im.convert('RGB');im.thumbnail((840,594),Image.Resampling.LANCZOS);im.save(target,quality=88,optimize=True,progressive=True)
+ board['thumbnail']=thumb;records[thumb]={'filename':thumb,'bytes':target.stat().st_size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+(a.output/'manifest.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');rows=list(records.values());(a.output/'media-checksums.json').write_text(json.dumps({'assets':rows},ensure_ascii=False,indent=2)+'\n')
+print(json.dumps({'assets':len(rows),'total_bytes':sum(x['bytes']for x in rows),'manifest':str(a.output/'manifest.json')},ensure_ascii=False))
