@@ -3,13 +3,13 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { put, head, BlobNotFoundError } from '@vercel/blob';
-import nextEnv from '@next/env';
-nextEnv.loadEnvConfig(process.cwd());
+// Run with `vercel env run -e production -- node ...` from the verified linked
+// project. Credentials stay in the child environment, without reading .env files.
 const assetsOnly = process.argv.includes('--assets-only');
 const directory = path.resolve(process.argv.slice(2).find(a=>!a.startsWith('--')) || 'private/deepsea');
-const prefix = 'ocean/deepsea-proposal-20261014/';
-const check = spawnSync(process.execPath, ['scripts/deepsea/verify-media.mjs', directory], { encoding: 'utf8' });
-if (check.status !== 0) throw new Error('Final media verification must pass before upload.');
+const prefix = 'ocean/deepsea-su-20261016-r2/';
+const check = spawnSync(process.execPath, ['scripts/deepsea/verify-media.mjs', directory, ...(assetsOnly ? ['--assets-only'] : [])], { encoding: 'utf8' });
+if (check.status !== 0) throw new Error('Frozen media verification must pass before upload.');
 const source = JSON.parse(fs.readFileSync(path.join(directory, 'manifest.json'), 'utf8'));
 const hashes = JSON.parse(fs.readFileSync(path.join(directory, 'media-checksums.json'), 'utf8'));
 const mapping = new Map();
@@ -36,6 +36,7 @@ function transform(value, field = '') {
   return value;
 }
 const manifest = transform(source);
+fs.writeFileSync(path.join(directory, 'published-manifest.json'), JSON.stringify(manifest));
 // The pointer updates only after every immutable media object is present.
 if (!assetsOnly) {
 await put(prefix + 'media-checksums.json', JSON.stringify({ assets: results }), { access: 'private', addRandomSuffix: false, allowOverwrite: true, contentType: 'application/json', cacheControlMaxAge: 60 });

@@ -6,7 +6,7 @@
   const modeNotes = {
     effect: ['空间与氛围', '效果图表达展厅的照明、色彩与材质意向，可与白模和模型材质视图对照。'],
     native: ['空间与展陈', '由本版三维模型输出，查看展墙、展柜、模型和文字界面的实际位置。'],
-    white: ['空间与几何', '查看本版真实建筑、分区与实体展项的几何关系。'],
+    white: ['空间与几何', '查看本次源墙、分区与实体展项的几何关系。'],
   };
   function element(tag, text, className) { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (className) e.className = className; return e; }
   function media(path) { return encodeURI(path.startsWith('/') ? path : `/ocean/deepsea/media/${path}`); }
@@ -111,7 +111,7 @@
     $('original-link').href = media(path);
     $('scene-number').textContent = scene.number || String(sceneIndex + 1).padStart(2, '0');
     $('scene-title').textContent = scene.title; $('scene-description').textContent = scene.description || '';
-    $('image-kind').textContent = modeNames[mode]; $('image-position').textContent = `${sceneIndex + 1} / ${manifest.scenes.length}`;
+    $('image-kind').textContent = scene.imageLabels?.[mode] || modeNames[mode]; $('image-position').textContent = `${sceneIndex + 1} / ${manifest.scenes.length}`;
     $('scene-tags').replaceChildren(...(scene.tags || []).map(t => element('span', t)));
     $('mode-note-title').textContent = scene.isIndependentNode ? '独立深化节点' : modeNotes[mode][0]; $('mode-note').textContent = scene.isIndependentNode || mode==='effect' ? scene.designStatus || modeNotes[mode][1] : modeNotes[mode][1];
     $('gallery-model-button').textContent=scene.independentModelPage?'打开独立切片 3D ↗':scene.isIndependentNode?'查看展厅总模型 ↗':'查看三维空间 ↗';
