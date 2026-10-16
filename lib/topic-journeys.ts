@@ -8,19 +8,19 @@ export const topicKeys = [...sectionKeys, "tarot", "astrology", "iching"] as con
 export type TopicKey = typeof topicKeys[number];
 const en = {
   tarot: { name: "Tarot", action: "Open the card table", next: "Try a three-card reading, learn to frame a useful question, then explore relationship themes without treating the cards as a verdict." },
-  astrology: { name: "Astrology", action: "Create my birth chart", next: "Prepare your birth details, explore your own chart, then learn what can and cannot be compared when another person's birth time is unknown." },
+  astrology: { name: "Astrology", action: "Create my birth chart", next: "Read your Sun, Moon and rising signs together, check your birth details, and understand what changes when a birth time is unknown." },
   iching: { name: "I Ching", action: "Cast six lines", next: "Try three coins or enter your own lines. Compare the original and changed hexagrams, then read the eight trigrams and all 64 hexagrams." },
   functions: "Explore the rest of DestinyPixel", functionsIntro: "Choose another tool for birth symbolism, reflection or a personal bracelet design.",
 };
 const zh: typeof en = {
   tarot: { name: "塔罗专题", action: "进入塔罗牌桌", next: "从三张牌的实例读起，练习把问题说清楚，再探索关系主题；牌面不是一段关系的判决。" },
-  astrology: { name: "星盘专题", action: "绘制我的出生星盘", next: "先准备出生资料，再读自己的星盘；想比较两个人时，了解未知时辰会影响哪些判断。" },
+  astrology: { name: "星盘专题", action: "绘制我的出生星盘", next: "把太阳、月亮、上升放在一起读，核对出生资料，再了解未知时辰会影响哪些判断。" },
   iching: { name: "易经 · 六爻", action: "开始起卦", next: "模拟三枚铜钱或录入已有六爻，核对本卦与变卦；再读八卦与六十四卦的完整介绍。" },
   functions: "继续探索全站功能", functionsIntro: "从出生意象、问事与自我观察，到亲手设计一串手串，选择下一步。",
 };
 const ru: typeof en = {
   tarot: { name: "Таро", action: "Открыть карточный стол", next: "Начните с примера расклада на три карты, уточните свой вопрос и исследуйте темы отношений. Карты не выносят приговор отношениям." },
-  astrology: { name: "Астрология", action: "Построить карту рождения", next: "Подготовьте данные рождения, изучите свою карту, затем узнайте, что можно сравнить, если время рождения другого человека неизвестно." },
+  astrology: { name: "Астрология", action: "Построить карту рождения", next: "Прочитайте Солнце, Луну и асцендент вместе, проверьте данные рождения и узнайте, что меняется при неизвестном времени." },
   iching: { name: "И цзин", action: "Построить шесть черт", next: "Бросьте три монеты или введите свои черты. Сравните исходную и изменённую гексаграммы, затем изучите восемь триграмм и все 64 гексаграммы." },
   functions: "Другие возможности DestinyPixel", functionsIntro: "Выберите другой инструмент для изучения символов рождения, размышлений или создания своего браслета.",
 };
@@ -32,7 +32,7 @@ export function topicCopy(locale: ReportLocale) {
 export const topicGuides: Record<TopicKey, string[]> = {
   ...sectionGuides,
   tarot: ["how-to-read-three-card-tarot", "how-to-ask-fortune-sticks", "yuelao-love-fortune-conversation", "pamela-colman-smith-tarot-artist"],
-  astrology: ["prepare-birth-date-time-place", "compatibility-without-birth-time", "bazi-vs-chinese-zodiac-compatibility"],
+  astrology: ["sun-moon-rising-signs-explained", "prepare-birth-date-time-place", "compatibility-without-birth-time"],
   iching: [], // Dedicated trigram and hexagram libraries supply this topic's reading links.
 };
 const russianNames: Record<string, string> = {

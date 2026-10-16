@@ -1,4 +1,5 @@
 import { baziCompatibilityArticle, baziCompatibilityRussian } from "./journal-bazi-compatibility";
+import { sunMoonRisingArticle, sunMoonRisingRussian } from "./journal-sun-moon-rising";
 import { fortuneStickEditionsArticle, fortuneStickEditionsRussian } from "./journal-fortune-stick-editions";
 import { birthTimeArticle } from "./compatibility/birth-time-article";
 import type { JournalSourceArticle, JournalTranslation } from "./journal";
@@ -84,5 +85,5 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
 export const searchGrowthArticles: JournalSourceArticle[] = [...entries.map(entry => ({
   slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-09-30" : "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
-})), baziCompatibilityArticle, fortuneStickEditionsArticle];
-export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian, [baziCompatibilityArticle.slug]: baziCompatibilityRussian };
+})), baziCompatibilityArticle, fortuneStickEditionsArticle, sunMoonRisingArticle];
+export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian, [baziCompatibilityArticle.slug]: baziCompatibilityRussian, [sunMoonRisingArticle.slug]: sunMoonRisingRussian };
