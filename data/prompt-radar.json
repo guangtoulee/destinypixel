@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-10-17T16:35:24.980Z",
+  "updatedAt": "2026-10-18T06:25:36.280Z",
   "sourceSummary": {
     "community": 1368,
-    "publicX": 558,
-    "total": 1926
+    "publicX": 561,
+    "total": 1929
   },
   "items": [
     {
@@ -2651,6 +2651,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Thanks to the Unity and Unreal CLI - it's easier than ever to use AI to build games for either engine. GPT 6 Astra and Fable 5.1 are well suited for building not just the games - but the 3D assets as well in Blender. Here's my full pipeline getting from idea to playable in-game 00:00 Intro 03:37 Blender Setup 04:37 Image Generation for Mockups (GPT Images 2.0, Grok Imagine, Nano Banana) 06:00 Blender - Seperating characters, props and environments 09:08 Making props & actors 09:58 Making environments 12:08 Making characters 13:29 Blender for rigs and animations 17:23 Integrating into Unity 18:25 Integrating into Unreal Engine 20:17 Wrap Up"
+    },
+    {
+      "id": "x-public-2111116114398720308",
+      "title": "I cracked the code. Most people struggle with AI video prompts. The trick isn't writing more — i",
+      "description": "I cracked the code. Most people struggle with AI video prompts. The trick isn't writing more — it's writing structured. I use Claude to turn a simple idea into a full JSON-style prompt: scene, character, camera movement,",
+      "prompt": "I cracked the code. Most people struggle with AI video prompts. The trick isn't writing more — it's writing structured. I use Claude to turn a simple idea into a full JSON-style prompt: scene, character, camera movement, timing, negative prompts, all mapped out. That structure is the difference between \"obviously AI\" and something that looks real. Once you have the format, it's stupidly easy to make consistently realistic videos, over and over. Want the exact JSON prompt structure I use? Comment \"WANT\" and I'll send it over",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/FynCas/status/2111116114398720308",
+      "sourceType": "x",
+      "authorName": "Cas.Fyn",
+      "authorHandle": "@FynCas",
+      "createdAt": "2026-10-16T15:24:38.000Z",
+      "importedAt": "2026-10-18T06:25:36.248Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 494,
+        "reposts": 38,
+        "replies": 489,
+        "quotes": 2,
+        "bookmarks": 722,
+        "views": 26874,
+        "score": 3855
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "I cracked the code. Most people struggle with AI video prompts. The trick isn't writing more — it's writing structured. I use Claude to turn a simple idea into a full JSON-style prompt: scene, character, camera movement, timing, negative prompts, all mapped out. That structure is the difference between \"obviously AI\" and something that looks real. Once you have the format, it's stupidly easy to make consistently realistic videos, over and over. Want the exact JSON prompt structure I use? Comment \"WANT\" and I'll send it over"
     },
     {
       "id": "x-public-2074237901060399360",
@@ -15758,6 +15799,49 @@
       "rawText": "AI video creation is getting way more controllable. ByteDance’s Seedance 2.5 has launched globally FIRST on @dreamina_ai, bringing a much more production-ready workflow for creators. You can now: → Combine up to 50 image, video & audio references → Generate 30-sec continuous scenes → Build videos up to 3 minutes with Long Video Mode → Direct scenes using timestamp-based prompts → Modify specific moments instead of regenerating everything → Create natively across 10+ languages Dreamina also gives you unlimited access to the top Seedance models under one subscription. Pricing starts at: → Seedance 2.5 — $0.097/sec → Seedance 2.0 — $0.066/sec Plus, you can save 40% with yearly membership + get an extra 32% OFF Dreamina Seedance 2.5. For me, this is where AI video starts feeling less like prompt-and-pray and more like an actual creative workflow. Sign up for free and try it:  #dreamina #dreaminapartner #seedance #dreaminaseedance25"
     },
     {
+      "id": "x-public-2110195174412591267",
+      "title": "Create with seedenc 2.0 Prompt: 1. Open ChatGPT. 2. Upload your product image. 3. Image prompt: ",
+      "description": "Create with seedenc 2.0 Prompt: 1. Open ChatGPT. 2. Upload your product image. 3. Image prompt: \"/adcreative/storyboard\" 4. Open Flow AI. 5. Video prompt: \"/ultraphotorealistic\" \"/premiumcommercialad\" \"/macroshot\" \"/spla",
+      "prompt": "Create with seedenc 2.0 Prompt: 1. Open ChatGPT. 2. Upload your product image. 3. Image prompt: \"/adcreative/storyboard\" 4. Open Flow AI. 5. Video prompt: \"/ultraphotorealistic\" \"/premiumcommercialad\" \"/macroshot\" \"/splashReveal\" \"/slowmotion\" \"/realisticPhysics\" \"/closeup\" \"/heroProduct\" These video prompts are not fixed templates. Experiment with them to create more stunning and realistic visuals!",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AizaAi12/status/2110195174412591267",
+      "sourceType": "x",
+      "authorName": "Aiza",
+      "authorHandle": "@AizaAi12",
+      "createdAt": "2026-10-14T02:25:09.000Z",
+      "importedAt": "2026-10-18T06:25:36.248Z",
+      "tags": [
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 129,
+        "reposts": 20,
+        "replies": 28,
+        "quotes": 0,
+        "bookmarks": 101,
+        "views": 5108,
+        "score": 679
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Create with seedenc 2.0 Prompt: 1. Open ChatGPT. 2. Upload your product image. 3. Image prompt: \"/adcreative/storyboard\" 4. Open Flow AI. 5. Video prompt: \"/ultraphotorealistic\" \"/premiumcommercialad\" \"/macroshot\" \"/splashReveal\" \"/slowmotion\" \"/realisticPhysics\" \"/closeup\" \"/heroProduct\" These video prompts are not fixed templates. Experiment with them to create more stunning and realistic visuals!"
+    },
+    {
       "id": "x-public-2100950307304075638",
       "title": "GPT-6 Astra is CRACKED at motion graphics now and I don't think people realize it yet. I gave it",
       "description": "GPT-6 Astra is CRACKED at motion graphics now and I don't think people realize it yet. I gave it access to an entire AI video studio, told it to act like the director, and 18 minutes later it handed me five versions of a",
@@ -18226,6 +18310,51 @@
       "rawText": "AI JUST KILLED THE ENTIRE VFX PREVIS PIPELINE what a studio used to spend $400,000 and 30 specialists on per shot: → Concept Art: 2 weeks → 3D Blockout & Layout: 1 week → Character Modeling & Rigging: 3 weeks → Lighting, Texturing, Final Render: 2 weeks → Compositing & Color Grade: 1 week what this clip shows: → Blender: a pink mannequin walking through white box buildings. no textures, no face, no hair. a 3D sketch a first-year student could make in 20 minutes. → Seedance 2.5: takes that same wireframe preview and turns it into a girl in a flowing silk dress walking above a neon cyberpunk city with volumetric fog, light reflections on glass, and hair physics that track the original mannequin's motion frame by frame. the previs IS the final shot. no modeling pipeline. no texture artists. no render farm. total time: under 30 minutes. total cost: one Seedance subscription. one student. one Blender scene. one prompt. the output looks like it came off a $50,000,000 anime feature. save this before they take it down"
     },
     {
+      "id": "x-public-2109241359278477749",
+      "title": "AI is replacing people without the right skills. Build AI skills to future-proof your career. Kn",
+      "description": "AI is replacing people without the right skills. Build AI skills to future-proof your career. Knowing AI tools isn’t enough. It’s critical to learn the right AI skills. These 9 skills outline how professionals work with ",
+      "prompt": "AI is replacing people without the right skills. Build AI skills to future-proof your career. Knowing AI tools isn’t enough. It’s critical to learn the right AI skills. These 9 skills outline how professionals work with AI, from basic interaction to system-level execution. Building a few of them will expand your career options and opportunities. Here’s the full breakdown of each skill: [ 🔖 bookmark this post for later ] 1️⃣ Prompt Engineering Write clear instructions that produce consistent, useful AI results. Most people type one prompt and fix the output later. Professionals structured prompts that deliver repeatable outcomes across tools and tasks. Tools: Claude, ChatGPT 2️⃣ Workflow Automation Link platforms together to let AI handle your repetitive work. This is how teams eliminate manual handoffs and turn routine processes into background systems. Tools: n8n, Zapier 3️⃣ AI Image Generation Produce professional-grade visuals for ads and products via text. Instead of waiting on designers or stock assets, teams generate visuals on demand and iterate instantly. Tools: NanoBanana (Gemini), Recraft 4️⃣ Vibe Coding Ship working prototypes rapidly without deep manual code knowledge. The technical wall is gone; founders are now launching functional products by describing their ideas instead of hiring expensive developers. Tools: Lovable, Replit 5️⃣ Custom GPTs Create tailored AI assistants for specific tasks without code. This turns AI from a general tool into a system that understands your workflows, tone, and use cases. Tools: OpenAI GPT Builder, Poe 6️⃣ AI Video Generation Turn concepts into cinematic video content without editing expertise. Scale video marketing and training at lower costs by generating polished scenes from text scripts. Tools: Synthesia, Runway 7️⃣ AI-Assisted Development Write and debug code faster using real-time AI guidance. Developers focus on logic and architecture while AI handles syntax, errors, and refactoring. Tools: Cursor, Google Antigravity 8️⃣ Agentic Coding Assign full coding tasks to AI agents that strategize and execute. Instead of guiding every step, you define goals and let agents plan and complete the work. Tools: OpenAI Codex, Claude Code 9️⃣ RAG Systems Link AI to your internal data for relevant, business-specific responses. This replaces generic outputs with answers grounded in your documents, systems, and knowledge base. Tools: LangChain, Haystack AI tools aren’t enough. It’s critical to build AI skills. Use this roadmap to: ➟ Identify which AI skills support your role or team ➟ Start with one skill and apply it in real work ➟ Expand only after you see results That’s how AI becomes a long-term asset, not a distraction. 📌 Get Advanced ChatGPT Guide (free):  👉 Follow me @AndrewBolis for more and 🔄 Repost this to help others use AI",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AndrewBolis/status/2109241359278477749",
+      "sourceType": "x",
+      "authorName": "Andrew Bolis",
+      "authorHandle": "@AndrewBolis",
+      "createdAt": "2026-10-11T11:15:02.000Z",
+      "importedAt": "2026-10-18T06:25:36.248Z",
+      "tags": [
+        "Runway",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Runway",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 74,
+        "reposts": 16,
+        "replies": 35,
+        "quotes": 1,
+        "bookmarks": 79,
+        "views": 10370,
+        "score": 508
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI is replacing people without the right skills. Build AI skills to future-proof your career. Knowing AI tools isn’t enough. It’s critical to learn the right AI skills. These 9 skills outline how professionals work with AI, from basic interaction to system-level execution. Building a few of them will expand your career options and opportunities. Here’s the full breakdown of each skill: [ 🔖 bookmark this post for later ] 1️⃣ Prompt Engineering Write clear instructions that produce consistent, useful AI results. Most people type one prompt and fix the output later. Professionals structured prompts that deliver repeatable outcomes across tools and tasks. Tools: Claude, ChatGPT 2️⃣ Workflow Automation Link platforms together to let AI handle your repetitive work. This is how teams eliminate manual handoffs and turn routine processes into background systems. Tools: n8n, Zapier 3️⃣ AI Image Generation Produce professional-grade visuals for ads and products via text. Instead of waiting on designers or stock assets, teams generate visuals on demand and iterate instantly. Tools: NanoBanana (Gemini), Recraft 4️⃣ Vibe Coding Ship working prototypes rapidly without deep manual code knowledge. The technical wall is gone; founders are now launching functional products by describing their ideas instead of hiring expensive developers. Tools: Lovable, Replit 5️⃣ Custom GPTs Create tailored AI assistants for specific tasks without code. This turns AI from a general tool into a system that understands your workflows, tone, and use cases. Tools: OpenAI GPT Builder, Poe 6️⃣ AI Video Generation Turn concepts into cinematic video content without editing expertise. Scale video marketing and training at lower costs by generating polished scenes from text scripts. Tools: Synthesia, Runway 7️⃣ AI-Assisted Development Write and debug code faster using real-time AI guidance. Developers focus on logic and architecture while AI handles syntax, errors, and refactoring. Tools: Cursor, Google Antigravity 8️⃣ Agentic Coding Assign full coding tasks to AI agents that strategize and execute. Instead of guiding every step, you define goals and let agents plan and complete the work. Tools: OpenAI Codex, Claude Code 9️⃣ RAG Systems Link AI to your internal data for relevant, business-specific responses. This replaces generic outputs with answers grounded in your documents, systems, and knowledge base. Tools: LangChain, Haystack AI tools aren’t enough. It’s critical to build AI skills. Use this roadmap to: ➟ Identify which AI skills support your role or team ➟ Start with one skill and apply it in real work ➟ Expand only after you see results That’s how AI becomes a long-term asset, not a distraction. 📌 Get Advanced ChatGPT Guide (free):  👉 Follow me @AndrewBolis for more and 🔄 Repost this to help others use AI"
+    },
+    {
       "id": "x-public-2090823791203213814",
       "title": "Created with Seedance 2.5 No reference images. No animators. Just prompts Prompt: [0:00–0:04] VI",
       "description": "Created with Seedance 2.5 No reference images. No animators. Just prompts Prompt: [0:00–0:04] VISUAL: MAYA CHEN, mid-20s, hospital gown, jolts awake in a black-site lab, wires ripping off her arms, alone in the dark. Hea",
@@ -18935,7 +19064,7 @@
       "authorName": "ᴍᴜʀᴘʜʏ",
       "authorHandle": "@Diplomeme",
       "createdAt": "2026-10-16T04:13:21.000Z",
-      "importedAt": "2026-10-17T11:42:51.183Z",
+      "importedAt": "2026-10-18T06:25:36.247Z",
       "tags": [
         "Kling",
         "产品",
@@ -18958,13 +19087,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 112,
+        "likes": 114,
         "reposts": 4,
         "replies": 64,
         "quotes": 0,
         "bookmarks": 53,
-        "views": 3385,
-        "score": 470
+        "views": 3570,
+        "score": 474
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "If this is the level of AI creations, then it's over for commercial and big production houses. Generated with Kling 4.0 (30 seconds) 1080P on @Kling_ai #Kling4 #KlingECP Try it with prompt : High-octane, hyper-realistic automotive commercial for the Kia Seltos, shot with the visual intensity of a Christopher Nolan-style cinematic production using actual 70mm IMAX cameras. Fast-paced multi-shot editing with quick, cinematic cuts timed at exactly one shot every 2 seconds across a complete 30-second timeline. The champagne-gold Kia Seltos, matching the exact vehicle design in the provided reference images, charges through a dense forest road surrounded by towering trees and dappled sunlight. High-contrast Nolan-esque color grading with deep shadows, cold teals, warm champagne-gold reflections, and bright highlights. Sunlight pierces through the forest canopy, reflecting across the sculpted bodywork, signature vertical LED daytime running lights, black front grille, muscular wheel arches, and distinctive rear light bar. Rapid sequence of intense cuts:•Shot 1 (0-2s): Ground-level cinematic establishing shot of an empty winding forest road, towering trees casting deep shadows as sunlight breaks through the canopy. The distant engine note of the approaching Kia Seltos builds tension.•Shot 2 (2-4s): Low eye-level tracking shot of the champagne-gold Kia Seltos emerging between the trees, accelerating along the forest road and revealing its bold front grille, distinctive vertical LED lighting signature, and commanding SUV stance.•Shot 3 (4-6s): Tight, detailed close-up of the front fascia, Kia emblem, illuminated LED daytime running lights, glossy black grille elements, and champagne-gold paint reflecting the passing forest.•Shot 4 (6-8s): Dramatic low-angle tracking shot moving alongside the front wheel as the alloy spokes spin rapidly, tires maintain realistic contact with the asphalt, and the SUV’s sculpted bodywork catches streaks of sunlight.•Shot 5 (8-10s): Fast lateral tracking shot revealing the complete side profile, muscular wheel arches, black lower-body cladding, door contours, windows, roofline, and metallic champagne-gold finish as the Kia Seltos sweeps through the forest.•Shot 6 (10-12s): Low-angle handheld-style camera whip-pan from the road surface to the SUV’s front three-quarter profile as it exits a sweeping bend, with realistic suspension movement, controlled body roll, and natural background motion blur.•Shot 7 (12-14s): Extreme close-up of sunlight traveling across the sculpted hood, Kia emblem, sharp body creases, and vertical LED lights, emphasizing precise automotive design and premium paint reflections.•Shot 8 (14-16s): Rear three-quarter tracking shot following the Kia Seltos through the forest, showcasing the distinctive rear light bar, angular vertical taillights, rear spoiler, sculpted tailgate, and authentic model badging.•Shot 9 (16-18s): Dynamic wheel-height tracking shot as the SUV drives across alternating patches of sunlight and shadow, capturing realistic tire rotation, subtle road texture, reflections along the lower doors, and the movement of the suspension over natural road undulations.•Shot 10 (18-20s): High-angle wide shot of the Kia Seltos commanding a sweeping forest road, surrounded by towering trees and atmospheric shafts of sunlight, with the winding asphalt leading the eye toward the moving SUV.•Shot 11 (20-22s): Fast front-facing tracking shot of the Kia Seltos approaching the camera along a straight section of forest road, its LED lights illuminated and grille dominating the frame as the camera smoothly retreats ahead of the vehicle.•Shot 12 (22-24s): Rapid cinematic transition into a close rear tracking angle as the SUV accelerates away through the trees, the rear lighting signature glowing against the darker forest and the road markings sweeping beneath the frame.•Shot 13 (24-26s): Dramatic low-angle front three-quarter hero shot as the Kia Seltos exits the forest bend and enters a naturally illuminated clearing, revealing its full stance, champagne-gold bodywork, alloy wheels, and signature front lighting.•Shot 14 (26-28s): Controlled cinematic orbit around the stationary Kia Seltos at a scenic forest-road pull-off, transitioning from the front three-quarter view toward the side and rear profile while the surrounding trees and golden sunlight create a premium automotive campaign atmosphere.•Shot 15 (28-30s): Hard cut to black with a final sweep of light revealing the KIA emblem followed by the SELTOS model name and the campaign tagline: “OWN EVERY TURN.” End with a powerful, clean, premium automotive advertising finish.Raw automotive documentary-style camera textures, organic lens flares, lifelike vehicle physics, authentic wheel rotation and tire contact, realistic suspension movement, natural road reflections, physically accurate metallic paint reflections, cinematic motion blur, subtle engine vibration, and an immersive forest-road atmosphere. Preserve the exact Kia Seltos identity, champagne-gold exterior color, front grille design, LED lighting signatures, alloy wheels, body proportions, side profile, and rear design from the provided reference images throughout every shot. Maintain consistent vehicle geometry, wheel design, lighting signatures, paint color, and branding across all 15 shots. No vehicle redesign, no morphing, no inconsistent body panels, no incorrect logos, no artificial CGI appearance, no impossible driving maneuvers, no exaggerated visual effects, and no abrupt changes in road geography. Ultra-detailed, 4K resolution, premium global automotive advertising quality."
@@ -23510,7 +23639,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-17T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "人像",
         "摄影"
@@ -23552,7 +23681,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-17T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -23594,7 +23723,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-17T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -23636,7 +23765,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-17T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "人像"
       ],
@@ -23677,7 +23806,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.312Z",
+      "importedAt": "2026-10-18T06:25:31.961Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -23718,7 +23847,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -23842,7 +23971,7 @@
       "authorName": "AI Art Alley",
       "authorHandle": "@aiartalley",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23881,7 +24010,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "人像"
       ],
@@ -23922,7 +24051,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -23963,7 +24092,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "人像",
         "摄影"
@@ -24005,7 +24134,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24212,7 +24341,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.962Z",
       "tags": [
         "人像"
       ],
@@ -24253,7 +24382,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.313Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "摄影"
       ],
@@ -24294,7 +24423,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -24379,7 +24508,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-10-13T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -25062,7 +25191,7 @@
       "authorName": "花椰菜",
       "authorHandle": "@indesjyo",
       "createdAt": "2026-10-09T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "摄影"
       ],
@@ -25267,7 +25396,7 @@
       "authorName": "Jengo",
       "authorHandle": "@jengo_ai_",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "人像"
       ],
@@ -25308,7 +25437,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25347,7 +25476,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25390,7 +25519,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25593,7 +25722,7 @@
       "authorName": "Letty",
       "authorHandle": "@LettyVesper",
       "createdAt": "2026-10-07T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25800,7 +25929,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25839,7 +25968,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "人像",
         "平面设计"
@@ -25881,7 +26010,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-06T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.314Z",
+      "importedAt": "2026-10-18T06:25:31.963Z",
       "tags": [
         "摄影"
       ],
@@ -80816,7 +80945,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.318Z",
+      "importedAt": "2026-10-18T06:25:31.967Z",
       "tags": [
         "产品",
         "平面设计",
@@ -80859,7 +80988,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.318Z",
+      "importedAt": "2026-10-18T06:25:31.967Z",
       "tags": [
         "平面设计"
       ],
@@ -80900,7 +81029,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-17T16:35:21.318Z",
+      "importedAt": "2026-10-18T06:25:31.967Z",
       "tags": [
         "平面设计"
       ],
