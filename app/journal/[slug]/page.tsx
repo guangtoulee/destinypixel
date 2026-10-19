@@ -13,6 +13,7 @@ import type { Metadata } from "next";
 import { editorialUpdate, editorialModifiedAt } from "@/lib/editorial-updates";
 import { Fragment, type ReactNode } from "react";
 import Image from "next/image";
+import ArticlePillarImage from "@/components/article-pillar-image";
 import Markdown from "react-markdown";
 import DayPillarPeople from "@/components/day-pillar-people";
 import TarotEditorialCards from "@/components/tarot-editorial-cards";
@@ -105,7 +106,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           {update && <p className={styles.byline} data-editorial-update>{update.note}</p>}
           {article.pillar && <a className={styles.libraryTextLink} href={pillarLibraryHref(locale)}>{library.browse}<ArrowRight size={16} aria-hidden="true" /></a>}
           </div>
-          {article.pillar && <figure className={styles.portraitArt}><Image src={getPillarImagePath(article.pillar)} alt={`${article.pillar} · ${pillarName(article.pillar, locale)} · ${library.art}`} width={768} height={1024} priority sizes="(max-width:650px) 70vw, 290px" /><figcaption>{library.art}</figcaption></figure>}
+          {article.pillar && <figure className={styles.portraitArt}><ArticlePillarImage src={getPillarImagePath(article.pillar)} alt={`${article.pillar} · ${pillarName(article.pillar, locale)} · ${library.art}`} locale={locale} /><figcaption>{library.art}</figcaption></figure>}
           </div>
         </header>
         <div className={`${styles.readingLayout}${tarotGuide ? ` ${learn.reading}` : ""}`}>

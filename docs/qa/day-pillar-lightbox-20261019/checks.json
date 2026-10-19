@@ -1,0 +1,46 @@
+{
+  "baseline": "8f9978171d87694a2d7186117ede064bc5e34013",
+  "scope": "Shared article.pillar hero image only; all 60 Day Pillar journal articles, all four UI locales.",
+  "sourceArtwork": {
+    "directory": "public/archetypes",
+    "count": 60,
+    "width": 1200,
+    "height": 1600,
+    "enlargedDelivery": "Original JPEG, loaded on open"
+  },
+  "checks": [
+    {
+      "command": "npx tsc --noEmit",
+      "result": "passed"
+    },
+    {
+      "command": "npx eslint --config eslint.english.config.mjs components/article-pillar-image.tsx app/journal/[slug]/page.tsx",
+      "result": "passed"
+    },
+    {
+      "command": "node --conditions=react-server --import tsx --test lib/day-pillar-library.test.ts lib/journal.test.ts",
+      "result": "12 tests passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed; 421 static pages generated"
+    },
+    {
+      "command": "node docs/qa/day-pillar-lightbox-20261019/check-lightbox.cjs",
+      "result": "18 Chromium production-mode browser flows plus 120 English/Chinese article responses passed",
+      "evidence": "local-browser.json"
+    }
+  ],
+  "independentReview": [
+    "Traditional Chinese and Russian at 320x568, 844x390, 1440x900",
+    "Original overflow values and scroll position restored",
+    "Dragging from artwork to backdrop does not close",
+    "10 repeated close-button/Escape/backdrop cycles",
+    "10 same-task rapid open/close cycles and reopen preserve image, focus and scroll state"
+  ],
+  "limitations": [
+    "Mobile viewports are Chromium touch emulation; no physical phone or Safari/iOS test.",
+    "Library screenshot metadata was readable (1882x2048); the screenshot binary download failed, so it was not visually inspected. Repository artwork was visually inspected."
+  ],
+  "environment": "Dependencies restored from the unchanged lockfile. Unreachable mirror URLs were temporarily routed to the official npm registry with versions/integrity preserved, then the original lockfile bytes restored. No dependency or platform configuration changes."
+}
