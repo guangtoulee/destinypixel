@@ -36,6 +36,7 @@ export const topicGuides: Record<TopicKey, string[]> = {
   iching: [], // Dedicated trigram and hexagram libraries supply this topic's reading links.
 };
 const russianNames: Record<string, string> = {
+  year_2027: "2027 · Your free year ahead (English)",
   astrology: "Карта рождения", tarot: "Карточный стол Таро", iching: "И цзин · шесть черт", compatibility: "Совместимость",
   "birth-map": "Полная карта рождения", tuteng: "Тотем рождения", "day-pillar": "Бесплатная карточка столпа дня",
   oracle: "Оракул одного вопроса", sticks: "Гадательные палочки", palm: "Наблюдение за ладонью",
@@ -47,7 +48,7 @@ export function siteFunctions(locale: ReportLocale, current: TopicKey) {
     { key: "discover", path: "/discover", fragment: "", name: c.sections.discover.name },
     ...directoryTools.map(tool => ({
       key: tool.key, path: tool.path, fragment: tool.key === "birth-map" ? "#report" : "",
-      name: locale === "ru" ? russianNames[tool.key] : locale === "zh-TW" ? toTraditional(tool.copy.zh.name) : tool.copy[locale].name,
+      name: locale === "ru" ? russianNames[tool.key] : locale === "zh-TW" ? `${toTraditional(tool.copy.zh.name)}${tool.key === "year_2027" ? "（簡體中文）" : ""}` : tool.copy[locale].name,
     })),
   ].filter(tool => tool.key !== current);
 }

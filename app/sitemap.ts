@@ -17,6 +17,7 @@ import { editorialModifiedAt } from "@/lib/editorial-updates";
 /** Main-site product + content only. Test/side apps stay out of the index. */
 const publicRoutes = [
   { path: routeSeo.home.path, priority: 1, changeFrequency: "weekly" as const },
+  { path: "/2027", priority: 0.92, changeFrequency: "monthly" as const },
   { path: routeSeo.tools.path, priority: 0.9, changeFrequency: "monthly" as const },
   { path: routeSeo.learn.path, priority: 0.82, changeFrequency: "weekly" as const },
   { path: routeSeo.insights.path, priority: 0.74, changeFrequency: "weekly" as const },

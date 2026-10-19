@@ -5,6 +5,10 @@ export type DirectoryTool = { key: string; path: string; group: ToolGroup; local
 
 // DestinyPixel core: birth symbolism, divination, observation and five-element design.
 export const directoryTools: DirectoryTool[] = [
+  { key: "year_2027", path: "/2027", group: "birth", localized: true, copy: {
+    en: { name: "2027 · Your year ahead", description: "Explore January–December through separate Bazi and birth-chart perspectives, with personal reflection prompts and clear calculation limits.", prepare: "Birth date, supported birthplace and known time, or choose time unknown", result: "A free personal calendar and original reflection prompts; no login needed" },
+    zh: { name: "2027 · 免费流年手册", description: "从八字与星盘各自的依据出发，探索公历 1—12 月的个人观察主题，了解计算边界。", prepare: "公历生日、支持的出生地点；时辰可选未知", result: "免费的个人日历与原创自省提示，无需登录" },
+  } },
   { key: "astrology", path: "/astrology", group: "birth", localized: true, copy: {
     en: { name: "Interactive birth chart", description: "Explore ten planets, rising sign, whole-sign houses, aspects and retrograde motion in a detailed tropical natal chart.", prepare: "Birth date, exact local birth time and birthplace", result: "An interactive chart, placement explanations and optional AI interpretation" },
     zh: { name: "交互星盘", description: "探索十颗星体、上升、整宫制宫位、相位与逆行，逐层读懂出生星盘。", prepare: "出生日期、准确的当地时间与出生地点", result: "可点选的完整星盘、基础说明与可选 AI 解读" },

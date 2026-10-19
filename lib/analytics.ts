@@ -1,7 +1,7 @@
 import { track } from "@vercel/analytics";
 
 export const analyticsTools = [
-  "birth_report", "birth_transits", "totem", "day_pillar", "compatibility", "temple_sticks", "astrology", "tarot", "prompt_expand", "prompt_image", "prompt_copy", "member_account", "report_checkout",
+  "birth_report", "birth_transits", "totem", "day_pillar", "compatibility", "temple_sticks", "astrology", "tarot", "year_2027", "prompt_expand", "prompt_image", "prompt_copy", "member_account", "report_checkout",
 ] as const;
 export type AnalyticsTool = (typeof analyticsTools)[number];
 const toolEvents = [
@@ -11,13 +11,13 @@ const toolEvents = [
 export type ToolEvent = (typeof toolEvents)[number];
 
 const publicPaths = new Set([
-  "/", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
+  "/", "/2027", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
   "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
   "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 const mainSitePaths = new Set([
-  "/", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
+  "/", "/2027", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
   "/oracle", "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 

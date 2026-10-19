@@ -10,11 +10,12 @@ export default function SiteFunctionLinks({ locale, current }: { locale: ReportL
       <h2 id="site-functions-heading">{c.functions}</h2>
       <p className={styles.functionIntro}>{c.functionsIntro}</p>
       <nav aria-label={c.functions}>
-        {siteFunctions(locale, current).map(tool => (
-          <a key={tool.key} href={`${sectionHref(tool.path, locale)}${tool.fragment}`}>
+        {siteFunctions(locale, current).map(tool => {
+          const routeLocale = tool.key === "year_2027" ? locale === "zh" || locale === "zh-TW" ? "zh" : "en" : locale;
+          return <a key={tool.key} href={`${sectionHref(tool.path, routeLocale)}${tool.fragment}`} hrefLang={tool.key === "year_2027" ? routeLocale === "zh" ? "zh-Hans" : "en" : undefined}>
             {tool.name}<span aria-hidden="true">↗</span>
-          </a>
-        ))}
+          </a>;
+        })}
       </nav>
     </section>
   );

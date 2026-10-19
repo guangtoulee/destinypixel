@@ -70,12 +70,29 @@ test("account and checkout analytics remove credentials and payment identifiers"
 });
 
 test("form event names are from the product allowlist", () => {
+  assert.equal(toolForForm("year_2027"), "year_2027");
   assert.equal(toolForForm("totem"), "totem");
   assert.equal(toolForForm("day_pillar"), "day_pillar");
   assert.equal(toolForForm("compatibility"), "compatibility");
   assert.equal(toolForForm("temple_sticks"), "temple_sticks");
   assert.equal(toolForForm("prompt_expand"), "prompt_expand");
   assert.equal(toolForForm("user supplied text"), null);
+});
+
+test("annual guide events and URLs never carry birth fields", () => {
+  assert.equal(isMainSitePath("/2027"), true);
+  assert.equal(analyticsPage("/2027"), "/2027");
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/2027?locale=zh&birthDate=1990-02-03&birthTime=09:30&city=London#result=PRIVATE"), "https://www.destinypixel.com/2027?locale=zh");
+  const previous = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const fakeWindow = {} as Window;
+  Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  try {
+    trackToolEvent("tool_success", "year_2027");
+    assert.deepEqual(fakeWindow.vaq?.[1][1], { name: "tool_success", data: { tool: "year_2027", area: "main" }, options: undefined });
+  } finally {
+    if (previous) Object.defineProperty(globalThis, "window", previous);
+    else Reflect.deleteProperty(globalThis, "window");
+  }
 });
 
 test("day cards keep campaign attribution without birth dates, names or shared archetypes", () => {

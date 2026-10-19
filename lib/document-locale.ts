@@ -16,7 +16,7 @@ export function resolvedDocumentPath(segments: readonly string[]): string {
 
 export function queryDocumentLocalePolicy(pathname: string): QueryLocalePolicy | null {
   if (pathname === "/journal" || pathname.startsWith("/journal/")) return "journal";
-  if (pathname === "/tools" || pathname === "/day-pillar") return "english-chinese";
+  if (pathname === "/tools" || pathname === "/day-pillar" || pathname === "/2027") return "english-chinese";
   return reportPaths.has(pathname) ? "report" : null;
 }
 

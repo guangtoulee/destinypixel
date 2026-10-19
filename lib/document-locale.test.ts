@@ -19,7 +19,7 @@ test("document language follows the actual report and article locale normalizers
 });
 
 test("the two-language directory and day-pillar page do not acquire unsupported translations", () => {
-  for (const path of ["/tools", "/day-pillar"]) {
+  for (const path of ["/tools", "/day-pillar", "/2027"]) {
     for (const locale of inputs) assert.equal(queryDocumentLanguage(path, locale), locale === "zh" ? "zh-CN" : "en", `${path}?locale=${locale}`);
     assert.equal(queryDocumentLanguage(path, null), "en");
   }
