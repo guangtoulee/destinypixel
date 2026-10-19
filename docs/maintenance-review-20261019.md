@@ -1,6 +1,6 @@
 # DestinyPixel 维护记录 · 2026-10-19
 
-状态：诊断、实现、本地构建、HTTP 与真实浏览器验收完成。原始 SSR 根语言限制仍未解决；正式部署证据随本轮交付提供，本源码记录本身不作为发布完成证明。
+状态：首批维护已发布（89aba0e）；后续已找到并完成 SSR 根语言的小范围修复及本地全面回归。对应提交和正式部署证据见本轮交付中的 evidence/ssr-lang/release.json，本源码记录本身不作为发布完成证明。
 
 ## 工作基线与范围
 
@@ -56,11 +56,11 @@
 
 已有搜索曝光、点击仅个位数的背景不能证明本次修改的效果。当前没有改版带来流量、点击或收益增长的证据。
 
-## 文档语言：已处理部分与明确限制
+## 文档语言：首批处理与后续根因修复
 
 新增根层 `DocumentLanguage` 客户端组件，按受支持的主站路径及 `locale` 同步浏览器 DOM 的 `document.documentElement.lang`，并随客户端导航更新。各已本地化页面原有的服务端 `main[lang]` 保留。
 
-**原始 SSR HTML 的根标签仍固定 `lang="en"`，这一限制尚未解决。** 这次不能宣称“SSR 文档语言已修复”。现有单根 App Router 布局不读取查询参数；在根布局引入 `headers()` 会使其覆盖的全站路由采用动态渲染。为避免这项范围更广的性能变化，本轮没有这样实施，也未迁移整套路由结构。四语言浏览器 DOM 同步已在 320px 实际视口确认；这不改变原始 SSR 根语言限制。
+首批 89aba0e 的原始 SSR HTML 根标签仍固定 `lang="en"`，当时尚未解决，因此首批交付没有声称 SSR 已修复。现有单根 App Router 布局不读取查询参数；在根布局引入 `headers()` 会使其覆盖的全站路由采用动态渲染。为避免这项范围更广的性能变化，本轮没有这样实施，也未迁移整套路由结构。首批四语言浏览器 DOM 同步已在 320px 实际视口确认。后续原始 SSR 修复方案及验证如下。
 
 ## 验证与交付状态
 
@@ -75,3 +75,36 @@
 - 以上事件是截取客户端发出的事件，不冒充后台已入库数据。浏览器屏蔽分析网络，且从未触发 AI、支付、账户或保存请求；本地星盘只执行确定性计算。浏览器 pageerror 为空。
 - 本机最初用 127.0.0.1 提交星盘时，Next 的内部 localhost 归一化触发原有同源拒绝；改用服务实际 localhost 访问后通过，没有修改同源或安全规则。
 - 本地证据保存在本轮任务目录 `evidence/`：`tests.log`、`build.log`、`typecheck.log`、`local-http.json`、`local-browser.json` 和相关截图。发布采用原有 main Git 流程；提交与正式域名核验结果以本轮交付中的 `release.json`、`production-http.json`、`production-browser.json` 为准。
+
+## 后续 SSR 根语言小修复
+
+根布局没有 searchParams props；next/root-params 只能读取根布局之前的动态路径段，当前类型生成明确没有 root params。隔离实测根布局调用 headers()：预渲染清单从 125 项降为 9 项，丢失 116 项静态输出，包含其他项目，因此没有采用。
+
+最终采用 DocumentHtml 小型 Client Component 外壳。Next 在动态路由的首次服务器渲染也会执行该组件，useSearchParams 可读取请求查询参数；本机原始 HTTP 已核验 lang，而不是只靠 useEffect 修改 DOM。server root layout 仍维护 metadata 和全部 Server Component children；没有把页面正文迁到客户端，也不引入 headers/cookies/API、路由迁移或公开 URL 改动。
+
+- 用 useSelectedLayoutSegments 读取已解析路由树，仅让原本就从查询参数动态渲染的公开主站路由进入 QueryHtml，静态页和其他项目不读取查询参数。域名 / 重写到 /zhangshengjun 后按已解析路由保持原项目分支。
+- QueryHtml 分支有完整 html/body 正文 fallback，供构建时的 prerender 尝试；实际动态请求同步读取查询参数，原始 HTTP 返回正确根语言及完整正文。没有用空白 fallback、全站 force-dynamic 或新增 connection()。
+- 轻量 document-locale resolver 与页面现有规则一致：普通工具用 report 语言别名；journal 有自己的 zh-Hans 等别名；tools/day-pillar 只认 exact locale=zh，其他值归英文。重复 locale 参数按 Page 数组语义归英文。
+- 保留首批 DocumentLanguage 浏览器同步；SSR guard 内共用 resolver，guard 外保留既有 canonical 查询行为。它也改用已解析路由，避免域名 rewrite 被误判为主站首页。
+- 仅 5 个代码文件变化：app/layout.tsx、components/document-html.tsx、components/document-language.tsx、lib/document-locale.ts 及其单测。proxy.ts、next.config.ts、页面正文、权限及安全逻辑没有变化。
+
+回归：43 项测试通过（原 39 + 4 项语言规则测试），生产构建/TypeScript、定向 Next ESLint、diff check 通过。最终 125 项静态清单与动态模式集合完全相同，revalidate/expire/srcRoute/dataRoute/renderingMode/PPR 字段无变化。
+
+243 个本机只读响应检查原始 SSR 根语言、单一 html/body、完整正文、metadata、schema、canonical、Cache-Control/Vary、重写及既有 401/重定向保护。问事页原有示例按当前起问分钟变化，该四语预览不比较全文哈希；其源码与首批完全一致，稳定字段和正文非空检查保留。Host 检查使用 node:http 显式 Host，未用会忽略 Host 的 fetch 结果作证明；重写正文和缓存与原有 /zhangshengjun 静态目标对照。
+
+真实浏览器另查 29 页，包括语言别名、两语例外、重复参数、语言链接、history.replaceState 与 13 个其他项目/静态入口，无 pageerror 或 hydration console error；上一批 22 个工具状态与统计再次通过。两个域名重写在真实临时 DNS 映射下正文和标题正确、静态 HIT 保留。没有真实 AI、账户、支付请求，也没有系统 DNS 或安全设置更改。
+
+### 首批标题与图片补充说明
+
+product-facts 只统一 metadata title 的品牌后缀，H1 和事实核对日期不改：
+
+| 语言 | 标题 |
+| --- | --- |
+| en | Tools, prices and calculation methods &#124; DestinyPixel |
+| zh | 工具、价格与计算方法 &#124; DestinyPixel |
+| zh-TW | 工具、價格與計算方法 &#124; DestinyPixel |
+| ru | Инструменты: цены и методы &#124; DestinyPixel |
+
+塔罗只修改繁体标题：从「免費在線塔羅牌：自選抽牌、感情牌陣與解讀 &#124; DestinyPixel」改为「免費線上塔羅牌：自選抽牌、感情牌陣與解讀 &#124; DestinyPixel」；英、简、俄塔罗标题、四语 H1、描述均未重写。
+
+首批最后牌面截图已复查通过：正式站 390px 和 1440px 都等待所有翻开 img 的 complete=true 且 naturalWidth>0，再重截并视觉检查；牌面完整，山湖背景和动态桌保留。后续根语言回归也复查了繁体 390px 牌面加载。
