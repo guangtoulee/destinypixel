@@ -158,7 +158,7 @@ export function Year2027Experience({ initialLang }: { initialLang: Lang }) {
   }
 
   const zones = Array.from(new Set(["Asia/Shanghai", "UTC", ...(resultZone ? [resultZone] : [])]));
-  return <main className={styles.page} lang={lang === "zh" ? "zh-CN" : "en"}>
+  return <main className={styles.page} lang={lang === "zh" ? "zh-CN" : "en"} data-server-localized>
     <div className={styles.heroWrap}>
       <header className={styles.header}><a href={`/?locale=${lang}`} className={styles.wordmark} aria-label="DestinyPixel"><span className={styles.brandStar}>✳</span>DestinyPixel</a><span className={styles.edition}>{c.edition}</span><nav className={styles.topNav} aria-label={lang === "zh" ? "页面导航" : "Page navigation"}><div className={styles.languages}><button type="button" lang="zh-CN" onClick={() => changeLanguage("zh")} aria-pressed={lang === "zh"}>中文</button><span>/</span><button type="button" lang="en" onClick={() => changeLanguage("en")} aria-pressed={lang === "en"}>EN</button></div><a className={styles.allTools} href={`/tools?locale=${lang}`}>{c.tools}<Arrow diagonal /></a></nav></header>
       <section className={styles.hero} aria-labelledby="annual-title"><div className={styles.heroCopy}><p className={styles.heroEyebrow}><span />{c.free}</p><h1 id="annual-title"><span className={styles.heroYear}>2027<span className={styles.yearStar}>✴</span></span><span className={styles.heroTitle}>{c.title}</span></h1><p className={styles.heroSubtitle}>{c.subtitle}</p><p className={styles.heroIntro}>{c.intro}</p><div className={styles.heroActions}><a href="#your-year" className={styles.lightButton}>{c.begin}<Arrow /></a><a href="#months" className={styles.textButton}>{c.browse}<span>↘</span></a></div></div><YearWheel lang={lang} /></section>
