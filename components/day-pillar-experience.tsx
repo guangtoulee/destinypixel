@@ -56,14 +56,17 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
   const [tilted, setTilted] = useState(false);
   const artRef = useRef<HTMLDivElement>(null);
   const resultRef = useRef<HTMLElement>(null);
+  const inFlight = useRef(false);
   const card = cards.find((item) => item.pillar === pillar) ?? cards[0];
   const home = locale === "zh" ? "/?locale=zh" : "/";
 
   async function reveal(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (busy) return;
+    if (inFlight.current) return;
+    inFlight.current = true;
     const date = String(new FormData(event.currentTarget).get("birthDate") ?? "");
     setBusy(true); setError("");
+    trackToolEvent("tool_start", "day_pillar");
     try {
       const { calculateDateDayPillar } = await import("@/lib/day-pillar");
       const result = calculateDateDayPillar(date, localToday());
@@ -76,7 +79,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       resultRef.current?.focus({ preventScroll: true });
       if (window.matchMedia("(max-width: 820px)").matches) resultRef.current?.scrollIntoView({ behavior: "instant", block: "start" });
     } catch { setError(text.unavailable); trackToolEvent("tool_error", "day_pillar"); }
-    finally { setBusy(false); }
+    finally { inFlight.current = false; setBusy(false); }
   }
 
   function moveLight(event: PointerEvent<HTMLDivElement>) {
@@ -106,7 +109,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
     <div className={styles.mainGrid}>
       <section className={styles.introduction}>
         <p className={styles.eyebrow}><Sparkles size={14} aria-hidden="true" />{text.eyebrow}</p><h1>{text.title}</h1><p className={styles.lead}>{text.intro}</p>
-        <form className={styles.form} onSubmit={reveal} noValidate>
+        <form className={styles.form} onSubmit={reveal} data-analytics-form="day_pillar" noValidate>
           <label htmlFor="day-pillar-date"><CalendarDays size={15} aria-hidden="true" />{text.date}</label>
           <input id="day-pillar-date" name="birthDate" type="date" onInput={() => setError("")} min="1800-01-01" max="2100-12-31" autoComplete="off" aria-invalid={Boolean(error)} aria-describedby={error ? "day-pillar-error day-pillar-convention" : "day-pillar-convention"} required />
           <button className={styles.primary} disabled={busy} type="submit">{busy ? <Loader2 size={17} className={styles.spin} aria-hidden="true" /> : <Sparkles size={17} aria-hidden="true" />}{busy ? text.busy : text.reveal}<ArrowRight size={16} aria-hidden="true" /></button>
@@ -134,7 +137,7 @@ export default function DayPillarExperience({ locale, cards, initialPillar, isSh
       <a className={styles.journalLink} href={pillarLibraryHref(locale)}>{pillarLibraryCopy(locale).browse}</a>
       {shareLink && <div className={styles.shareBox}><p role="status"><Check size={14} aria-hidden="true" />{shareMessage}</p><label htmlFor="day-card-share">{text.shareLabel}</label><input id="day-card-share" readOnly value={shareLink} onFocus={(event) => event.target.select()} /><small>{text.shareNote}</small></div>}
     </section>
-    <section className={styles.nextStep}><div><p className={styles.eyebrow}>{text.next}</p><h2>{text.nextTitle}</h2><p>{text.nextBody}</p><p className={styles.nextNote}>{text.nextNote}</p></div><div className={styles.nextActions}><Link className={styles.primary} href={`${home}#report`} onClick={() => trackToolEvent("tool_start", "day_pillar")}>{text.nextAction}<MoveUpRight size={17} aria-hidden="true" /></Link><Link className={styles.atelier} href={locale === "zh" ? "/atelier?locale=zh" : "/atelier"}><Gem size={16} aria-hidden="true" />{text.atelier}<ArrowRight size={14} aria-hidden="true" /></Link></div></section>
+    <section className={styles.nextStep}><div><p className={styles.eyebrow}>{text.next}</p><h2>{text.nextTitle}</h2><p>{text.nextBody}</p><p className={styles.nextNote}>{text.nextNote}</p></div><div className={styles.nextActions}><Link className={styles.primary} href={`${home}#report`}>{text.nextAction}<MoveUpRight size={17} aria-hidden="true" /></Link><Link className={styles.atelier} href={locale === "zh" ? "/atelier?locale=zh" : "/atelier"}><Gem size={16} aria-hidden="true" />{text.atelier}<ArrowRight size={14} aria-hidden="true" /></Link></div></section>
     <footer className={styles.footer}><div><strong>DestinyPixel</strong><p>{text.footer}</p></div><Link href={locale === "zh" ? "/journal/what-is-a-day-pillar?locale=zh" : "/journal/what-is-a-day-pillar"}>{locale === "zh" ? "日柱是什么？" : "What is a Day Pillar?"}</Link><Link href={home}>{text.home}</Link><a href={destinySupportHref}>{text.contact}</a></footer>
   </main>;
 }

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "maintainedAt": "2026-10-19",
+  "reason": "Replace two unavailable Waite source URLs with verified corresponding Sacred Text Archive chapters; article text and publication dates otherwise unchanged.",
+  "urlReplacements": [
+    {
+      "from": "https://original.sacred-texts.com/tarot/pkt/pktar13.htm",
+      "to": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/xiii-death"
+    },
+    {
+      "from": "https://original.sacred-texts.com/tarot/pkt/pkt0303.htm",
+      "to": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/section-3-the-greater-arcana-and-their-divinatory-meanings"
+    }
+  ],
+  "records": {
+    "content/tarot/en/death.json": {
+      "previousArticleMarkdownSha256": "4e97d6a020552d5039f3b287cc0dfa8ad3fbfe5470ec975da2ab475a9fcc6bb3",
+      "articleMarkdownSha256": "f29695480be8b3d3bd5c52c98373f0a708e9abb1c4d67902d30be2dd4cc3236e"
+    },
+    "content/tarot/zh/death.json": {
+      "previousArticleMarkdownSha256": "d2e49ed4302d4d4da94e09e954835b43799154c5cf3e8a30559b5041b49d9917",
+      "articleMarkdownSha256": "9f921a6db4aeac00734e3505cc99c669cc83cb6092cabf578e3669683d03819e"
+    },
+    "content/tarot/zh-TW/death.json": {
+      "previousArticleMarkdownSha256": "ba55cbdf40fc6ed042cf4b29058a72692b11b1f68d240326ae7f07452fb395c1",
+      "articleMarkdownSha256": "76a042dd9149ddc467dce30e001f97a36f9522d9563e39f0109f50f1613a905f"
+    },
+    "content/tarot/ru/death.json": {
+      "previousArticleMarkdownSha256": "3e812d147e1589a6b800de67b5995743bd82a839d92d9d0bb74e4d2d811b9dc1",
+      "articleMarkdownSha256": "86fbea7af2f76187b3ca05afbd7af1254d769c9ae32bfbf276e0caa6a7f5c6a2"
+    }
+  }
+}

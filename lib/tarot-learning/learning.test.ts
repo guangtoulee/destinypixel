@@ -11,11 +11,15 @@ import manifest from "@/content/tarot/provenance.json";
 import editorialManifest from "@/content/tarot-editorial/provenance.json";
 import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
 import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.json";
+import linkMaintenance from "@/content/tarot-link-maintenance-20261019.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
  const samplePaths=new Set(["content/tarot/en/sun.json","content/tarot/zh/sun.json","content/tarot/en/moon.json","content/tarot/zh/moon.json"]);
  const sampleRecords:Record<string,{fileSha256:string;articleMarkdownSha256:string;previousFileSha256:string}>=sampleRevisions.records;
+ const linkPaths=new Set(journalLocales.map(locale=>`content/tarot/${locale}/death.json`));
+ const linkRecords:Record<string,{previousArticleMarkdownSha256:string;articleMarkdownSha256:string}>=linkMaintenance.records;
+ assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
   const catalog=tarotLearningCatalog(locale);assert.equal(catalog.length,78);
@@ -32,6 +36,18 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.equal(digest(previous),record.previousFileSha256);
     assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
     assert.equal(digest(readFileSync(path)),record.fileSha256);
+    approvedHash=record.articleMarkdownSha256;
+   }
+   if(linkPaths.has(path)){
+    const record=linkRecords[path];
+    let previousMarkdown=article.articleMarkdown;
+    for(const {from,to} of linkMaintenance.urlReplacements){
+     assert.ok(previousMarkdown.includes(to),`Missing maintained URL: ${path}`);
+     assert.ok(!previousMarkdown.includes(from),`Unreplaced source URL: ${path}`);
+     previousMarkdown=previousMarkdown.replaceAll(to,from);
+    }
+    assert.equal(digest(previousMarkdown),approvedHash,`Only maintained source URLs may change: ${path}`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash,`Historical link receipt mismatch: ${path}`);
     approvedHash=record.articleMarkdownSha256;
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);

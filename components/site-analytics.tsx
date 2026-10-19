@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { track } from "@vercel/analytics";
-import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
+import { analyticsPage, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
 
 export function SiteAnalytics() {
   useEffect(() => {
+    isAnalyticsTestVisit();
     function onClick(event: MouseEvent) {
+      if (isAnalyticsTestVisit()) return;
       if (!(event.target instanceof Element)) return;
       const anchor = event.target.closest<HTMLAnchorElement>("a[href]");
       if (!anchor || anchor.hasAttribute("download")) return;

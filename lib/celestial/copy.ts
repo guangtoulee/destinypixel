@@ -932,7 +932,7 @@ const ru: CelestialCopy = {
 };
 export function celestialCopy(locale: ReportLocale): CelestialCopy {
   return locale === "zh-TW"
-    ? traditional(zh)
+    ? { ...traditional(zh), tarotTitle: "免費線上塔羅牌：自選抽牌、感情牌陣與解讀 | DestinyPixel" }
     : locale === "zh"
       ? zh
       : locale === "ru"

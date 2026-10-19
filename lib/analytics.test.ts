@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { analyticsPage, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent, type AnalyticsTool, type ToolEvent } from "./analytics";
+import { analyticsPage, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent, type AnalyticsTool, type ToolEvent } from "./analytics";
 
 test("the metaphysics funnel includes bracelets and excludes standalone experiments", () => {
   for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/compatibility", "/tools", "/learn", "/learn/what-is-bazi-birth-chart", "/insights/bazi-love-compatibility", "/report/example", "/day-pillar", "/journal", "/journal/prepare-birth-date-time-place"]) {
@@ -24,6 +24,43 @@ test("only controlled campaign labels survive URL sanitization", () => {
   assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/?utm_source=private-person&locale=unknown"), "https://www.destinypixel.com/");
   assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/api/private?secret=1"), null);
   assert.equal(sanitizeAnalyticsUrl("invalid"), null);
+});
+
+test("explicit QA visits suppress events and pageviews across same-tab navigation", () => {
+  const previous = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const storage = new Map<string, string>();
+  const fakeWindow = { location: { search: "?locale=zh&analytics_test=1" }, sessionStorage: {
+    setItem: (key: string, value: string) => storage.set(key, value), getItem: (key: string) => storage.get(key) ?? null,
+  }, vaq: [] };
+  Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  try {
+    assert.equal(isAnalyticsTestVisit(), true);
+    fakeWindow.location.search = "?locale=zh";
+    trackToolEvent("tool_start", "tarot");
+    assert.deepEqual(fakeWindow.vaq, []);
+    assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/astrology?locale=zh"), null);
+    assert.deepEqual([...storage], [["destinypixel:analytics-test", "1"]]);
+  } finally {
+    if (previous) Object.defineProperty(globalThis, "window", previous);
+    else Reflect.deleteProperty(globalThis, "window");
+  }
+});
+
+test("QA flag is excluded even without browser storage", () => {
+  assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/tarot?analytics_test=1"), null);
+  const previous = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const fakeWindow = { location: { search: "?analytics_test=1" }, get sessionStorage() { throw new Error("Storage unavailable"); }, vaq: [] };
+  Object.defineProperty(globalThis, "window", { configurable: true, value: fakeWindow });
+  try {
+    trackToolEvent("tool_start", "day_pillar");
+    fakeWindow.location.search = "?pillar=public-card";
+    trackToolEvent("tool_success", "day_pillar");
+    assert.deepEqual(fakeWindow.vaq, []);
+    assert.equal(sanitizeAnalyticsUrl("https://www.destinypixel.com/discover?pillar=public-card"), null);
+  } finally {
+    if (previous) Object.defineProperty(globalThis, "window", previous);
+    else Reflect.deleteProperty(globalThis, "window");
+  }
 });
 
 test("account and checkout analytics remove credentials and payment identifiers",()=>{

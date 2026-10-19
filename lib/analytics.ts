@@ -25,10 +25,23 @@ export function isMainSitePath(pathname: string): boolean {
   return mainSitePaths.has(pathname) || ["/report/", "/journal/", "/learn/", "/insights/"].some((prefix) => pathname.startsWith(prefix));
 }
 
+/** Explicit QA opt-out, remembered only in this tab. No identity or fingerprint. */
+const testWindows = new WeakSet<Window>();
+export function isAnalyticsTestVisit(): boolean {
+  if (typeof window === "undefined") return false;
+  const marked = new URLSearchParams(window.location?.search).get("analytics_test") === "1";
+  if (marked) testWindows.add(window);
+  try {
+    if (marked) window.sessionStorage.setItem("destinypixel:analytics-test", "1");
+    if (window.sessionStorage.getItem("destinypixel:analytics-test") === "1") testWindows.add(window);
+  } catch { /* Keep the in-memory opt-out when storage is unavailable. */ }
+  return testWindows.has(window);
+}
+
 /** Only fixed product identifiers are sent, never field values or generated content. */
 export function trackToolEvent(event: ToolEvent, tool: AnalyticsTool) {
   try {
-    if (typeof window === "undefined" || !analyticsTools.includes(tool) || !toolEvents.includes(event)) return;
+    if (typeof window === "undefined" || isAnalyticsTestVisit() || !analyticsTools.includes(tool) || !toolEvents.includes(event)) return;
     if (!window.va) {
       window.va = (command, properties) => {
         window.vaq ??= [];
@@ -66,6 +79,7 @@ export function toolForForm(value: string | undefined): AnalyticsTool | null {
 export function sanitizeAnalyticsUrl(raw: string): string | null {
   try {
     const url = new URL(raw);
+    if (url.searchParams.get("analytics_test") === "1" || isAnalyticsTestVisit()) return null;
     if (/^\/(api|work|admin)(\/|$)/.test(url.pathname) || url.pathname.startsWith("/account/readings/")) return null;
     if (url.pathname.startsWith("/report/")) url.pathname = "/report/[id]";
     url.hash = "";

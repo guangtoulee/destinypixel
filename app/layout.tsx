@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { SiteAnalytics } from "@/components/site-analytics";
+import { Suspense } from "react";
+import { DocumentLanguage } from "@/components/document-language";
 import {
   defaultSeoDescription,
   routeSeo,
@@ -85,6 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
+        <Suspense fallback={null}><DocumentLanguage /></Suspense>
         <TraditionalChineseBridge />
         {children}
         <SiteAnalytics />

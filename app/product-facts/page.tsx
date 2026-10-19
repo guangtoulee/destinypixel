@@ -9,7 +9,13 @@ export const dynamic = "force-dynamic";
 type Props = { searchParams?: Promise<{ locale?: string }> };
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const locale = normalizeReportLocale((await searchParams)?.locale || "en"), c = productFactsCopy(locale);
-  return { title: { absolute: c.title }, description: c.intro, alternates: { canonical: productFactsHref(locale), languages: productFactsAlternates() } };
+  const title = {
+    en: "Tools, prices and calculation methods | DestinyPixel",
+    zh: "工具、价格与计算方法 | DestinyPixel",
+    "zh-TW": "工具、價格與計算方法 | DestinyPixel",
+    ru: "Инструменты: цены и методы | DestinyPixel",
+  }[locale];
+  return { title: { absolute: title }, description: c.intro, alternates: { canonical: productFactsHref(locale), languages: productFactsAlternates() } };
 }
 export default async function ProductFactsPage({ searchParams }: Props) {
   const locale = normalizeReportLocale((await searchParams)?.locale || "en"), c = productFactsCopy(locale), catalog = currentProductCatalog();

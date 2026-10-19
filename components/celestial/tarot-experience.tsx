@@ -27,6 +27,7 @@ import {
 } from "@/lib/celestial/tarot";
 import { constrainCard, freeCardWidth } from "@/lib/celestial/tarot-layout";
 import { trackToolEvent } from "@/lib/analytics";
+import { createTarotRoundTracker } from "@/lib/celestial/tarot-analytics";
 import { CardBack } from "./card-back";
 import { BottomDeck, type DeckDropPoint } from "./bottom-deck";
 import { TarotCardDialog } from "./tarot-card-dialog";
@@ -89,8 +90,9 @@ export default function TarotExperience({
       moved: boolean;
     } | null>(null),
     dragFrame = useRef(0),
-    lastMix = useRef(0),
-    completed = useRef(false);
+    lastMix = useRef(0);
+  const round = useRef<ReturnType<typeof createTarotRoundTracker> | null>(null);
+  if (!round.current) round.current = createTarotRoundTracker();
   useEffect(() => () => controller.current?.abort(), []);
   useEffect(() => {
     const element = board.current;
@@ -108,18 +110,18 @@ export default function TarotExperience({
     setReading(null);
     setStatus("");
     setBusy(false);
-    completed.current = false;
   }
   function mix() {
     if (Date.now() - lastMix.current < 260) return;
     lastMix.current = Date.now();
     setTable((s) => ({ ...s, deck: shuffleDeck(s.deck, reversals) }));
     setMixes((n) => n + 1);
-    if (mixes === 0) trackToolEvent("tool_start", "tarot");
+    if (mixes === 0) round.current!.start();
   }
   function reset(mode = table.mode, spread = table.spread) {
     if (table.cards.length && !window.confirm(c.resetCheck)) return;
     invalidate();
+    round.current!.reset();
     setTable(initialTable(mode, spread));
     setRecordSession(n=>n+1);
     setMixes(0);
@@ -137,7 +139,6 @@ export default function TarotExperience({
   }
   function draw(index: number, point?: DeckDropPoint) {
     if (!mixes) return;
-    invalidate();
     const slot =
       table.mode === "spread"
         ? slotAt(point)
@@ -146,6 +147,9 @@ export default function TarotExperience({
           );
     if (slot === undefined) return;
     const next = takeCard(table, index, slot);
+    if (next === table) return;
+    invalidate();
+    round.current!.start();
     if (point && table.mode === "free" && board.current) {
       const r = board.current.getBoundingClientRect();
       if (point.x >= r.left && point.x <= r.right && point.y >= r.top && point.y <= r.bottom) {
@@ -204,11 +208,8 @@ export default function TarotExperience({
       (table.mode === "free" ||
         table.cards.length === spreadSizes[table.spread]);
   useEffect(() => {
-    if (ready && !completed.current) {
-      trackToolEvent("tool_success", "tarot");
-      completed.current = true;
-    }
-  }, [ready]);
+    if (ready) round.current!.complete();
+  }, [ready, table.cards]);
   async function interpret() {
     if (!ready) return;
     if (!question.trim()) {

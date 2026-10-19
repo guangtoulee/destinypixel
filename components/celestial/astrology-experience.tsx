@@ -7,13 +7,21 @@ import {
   signSymbols,
   type NatalChart,
 } from "@/lib/celestial/astrology";
-import type { CelestialCopy } from "@/lib/celestial/copy";
+import { celestialHref, type CelestialCopy } from "@/lib/celestial/copy";
 import type { NatalReading } from "@/lib/celestial/natal-reading";
 import type { ReportLocale } from "@/lib/report-i18n";
 import { trackToolEvent } from "@/lib/analytics";
 import { ChartWheel, type ChartSelection } from "./chart-wheel";
 import { SaveCelestialRecord } from "./save-record";
 import { NatalReadingPanel } from "./natal-reading-panel";
+
+const chartGuideLabels: Record<ReportLocale, string> = {
+  en: "Read your Sun, Moon and rising signs together",
+  zh: "太阳、月亮和上升星座怎么看？",
+  "zh-TW": "太陽、月亮和上升星座怎麼看？",
+  ru: "Как читать Солнце, Луну и асцендент вместе",
+};
+
 export default function AstrologyExperience({
   locale,
   copy: c,
@@ -291,6 +299,12 @@ export default function AstrologyExperience({
               </div>
             ))}
           </div>
+          <p className="cel-chart-guide">
+            <a href={celestialHref("/journal/sun-moon-rising-signs-explained", locale)}>
+              <span>{chartGuideLabels[locale]}</span>
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          </p>
         </section>
       </div>
       <section className="cel-chart-detail">

@@ -21,11 +21,14 @@ export default function BirthdayCardFinder({locale,copy,cards,initialCard}:{loca
  const [card,setCard]=useState<DayPillarCard|null>(initialCard??null);
  const [error,setError]=useState("");const [busy,setBusy]=useState(false);const [share,setShare]=useState("");const [shareMessage,setShareMessage]=useState("");
  const resultRef=useRef<HTMLDivElement>(null);
+ const inFlight=useRef(false);
  useEffect(()=>{if(card){resultRef.current?.focus({preventScroll:true});resultRef.current?.scrollIntoView({block:"start",behavior:"instant"});}},[card]);
  async function reveal(event:FormEvent<HTMLFormElement>) {
-  event.preventDefault(); if(busy)return;
+  event.preventDefault(); if(inFlight.current)return;
+  inFlight.current=true;
   const date=String(new FormData(event.currentTarget).get("birthday")??"");
   setBusy(true);setError("");setCard(null);setShare("");setShareMessage("");
+  trackToolEvent("tool_start","day_pillar");
   try { const {calculateDateDayPillar}=await import("@/lib/day-pillar");const now=new Date();const today=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
    const result=calculateDateDayPillar(date,today);
    if(!result.ok){setError(copy.error);trackToolEvent("tool_error","day_pillar");return;}
@@ -34,7 +37,7 @@ export default function BirthdayCardFinder({locale,copy,cards,initialCard}:{loca
    // Native history updates useSearchParams without resetting the calculated result.
    window.history.replaceState(null,"",`${discoveryHref(locale)}${locale==="en"?"?":"&"}pillar=${found.slug}`);
    trackToolEvent("tool_success","day_pillar");resultRef.current?.focus({preventScroll:true});
-  }catch{setError(copy.unavailable);trackToolEvent("tool_error","day_pillar");}finally{setBusy(false);}
+  }catch{setError(copy.unavailable);trackToolEvent("tool_error","day_pillar");}finally{inFlight.current=false;setBusy(false);}
  }
  async function shareCard(){if(!card)return;const url=new URL(dayPillarSharePath(locale,card.slug),window.location.origin).href;setShare(url);try{await navigator.clipboard.writeText(url);setShareMessage(copy.copied);trackToolEvent("tool_share","day_pillar");}catch{setShareMessage(copy.manual);}}
  const pillarDisplay=card?getPillarDisplay(card.pillar,locale):null;
