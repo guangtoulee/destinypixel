@@ -72,7 +72,9 @@ export function analyticsPage(pathname: string): string {
 }
 
 /** Fixed labels for the annual-feature handoffs; never accept text or personal data. */
-export function annualAnalyticsEntry(pathname: string, hash: string, marked?: string): string | undefined {
+export function annualAnalyticsEntry(pathname: string, hash: string, marked?: string, sourcePathname?: string): string | undefined {
+  // Language switches and ordinary section links are not fresh feature entries.
+  if (pathname === sourcePathname && !(pathname === "/2027" && ["#zodiac-ranking", "#your-year"].includes(hash))) return undefined;
   const allowed = ["year_2027_ranking", "taisui_guide", "taisui_peace", "year_2027_personal"];
   if (marked && allowed.includes(marked)) return marked;
   if (pathname === "/taisui") return "taisui_peace";

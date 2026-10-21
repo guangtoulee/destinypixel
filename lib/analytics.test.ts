@@ -26,6 +26,9 @@ test("annual handoffs use only fixed entry labels within the existing funnel", (
   assert.equal(annualAnalyticsEntry("/2027", "#your-year"), "year_2027_personal");
   assert.equal(annualAnalyticsEntry("/2027", "#zodiac-ranking"), "year_2027_ranking");
   assert.equal(annualAnalyticsEntry("/2027", "#private-wish", "private wish"), undefined);
+  assert.equal(annualAnalyticsEntry("/taisui", "", undefined, "/taisui"), undefined, "language switch is not a new entry");
+  assert.equal(annualAnalyticsEntry("/journal/ben-ming-nian-tai-sui", "#five-terms", undefined, "/journal/ben-ming-nian-tai-sui"), undefined);
+  assert.equal(annualAnalyticsEntry("/2027", "#your-year", undefined, "/2027"), "year_2027_personal");
 });
 
 test("only controlled campaign labels survive URL sanitization", () => {

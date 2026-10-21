@@ -59,3 +59,7 @@ node --conditions=react-server --import tsx scripts/check-journal-search.ts http
 使用现有 `guangtoulee/destinypixel` 仓库 main → `destinypixel/destinypixel` Vercel 项目的 Git 集成，未新增项目、域名、收费服务或改发布设置。精确 PR、内容提交和部署结果由任务最终回报给出，避免文档写入自身提交哈希而触发第二次无必要部署。
 
 正式域名及既有 vercel.app 别名的直接请求，在应用收到请求前被本环境代理以 `CONNECT tunnel failed, response 403` 阻断；网页读取工具也不可达。Vercel 项目只读检查返回 403，明确缺少 `destinypixel` 团队授权；环境没有可用 Vercel CLI 和其凭据。没有更改权限或尝试绕过。可通过授权 GitHub 连接读取 Vercel 对精确提交的部署状态，但这与正式页面的浏览器验收有别。该网络限制不代表站点故障；公开站点仍需在可达且已授权的云端浏览器完成独立验收。Safari／真实设备原生分享未实测。
+
+主要内容通过 [PR #37](https://github.com/guangtoulee/destinypixel/pull/37) 合并：内容提交 `83ac7b2276fa1c38c1b0f448bc19894ab6d9e2f4`，main 合并提交 `b8749563d866e824154675a299b141ef7de5102d`。[该 main 的 Vercel 部署](https://vercel.com/destinypixel/destinypixel/5FFJUaTK9tFxQWjD7zsa5TCcoce9)于 2026-10-21 07:51:55 UTC 被 GitHub 状态接口确认为 success / Deployment has completed。随后直接复核三条中文正式 URL，仍全部在 CONNECT 代理阶段被阻断，没有抵达应用。
+
+发布后补充收紧入口事件：同一路径的语言切换、普通文章章节链接不再标记为新入口，仅保留真实跨页入口和 `/2027` 的榜单／个人手册跳转。70 项回归、TypeScript、针对性 ESLint 和生产构建再次通过；隔离真实分析请求的浏览器检查确认语言切换／普通章节为零条入口事件，有用跳转每次只发一条。证据见 [analytics-browser.json](qa/taisui-20261021/analytics-browser.json) 及 `analytics-build.log`、`analytics-tests.log`。最终补充提交和部署状态在任务最终回报列出。

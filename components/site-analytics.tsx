@@ -19,7 +19,7 @@ export function SiteAnalytics() {
       if (!isMainSitePath(window.location.pathname) || !isMainSitePath(destination.pathname)) return;
       const target = analyticsPage(destination.pathname);
       if (target === "other" || target === "/report/[id]") return;
-      const knownEntry = annualAnalyticsEntry(destination.pathname, destination.hash, anchor.dataset.analyticsEntry);
+      const knownEntry = annualAnalyticsEntry(destination.pathname, destination.hash, anchor.dataset.analyticsEntry, window.location.pathname);
       if (destination.pathname === window.location.pathname && destination.hash !== "#report" && !knownEntry) return;
       try {
         track("tool_open", {
