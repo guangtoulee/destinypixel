@@ -4,12 +4,15 @@ import { absoluteUrl, canonicalPagePath, makePageMetadata, siteName } from "@/li
 
 type PageProps = { searchParams?: Promise<{ locale?: string | string[] }> };
 
-const title = "2027 Year Ahead | Free Bazi & Astrology Reflection";
-const description = "Explore a free personal calendar for January–December 2027, with separate Bazi and birth-chart perspectives, clear calculation limits and original reflection prompts. No login needed.";
+const pageCopy = {
+  en: { title: "2027 Zodiac Star Rankings & Free Bazi Year Ahead", description: "Explore all 12 zodiac signs with transparent editorial stars, understand Tai Sui, and create a free January–December 2027 Bazi and astrology reflection calendar. No login needed." },
+  zh: { title: "2027 十二生肖星级排行榜与免费八字流年手册", description: "查看十二生肖综合、事业、感情与财运编辑星级，读懂本命年与太岁关系，再生成免费 2027 年 1—12 月八字与星盘手册。无需登录，保留未知时辰选项。" },
+};
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const params = await searchParams;
   const locale = params?.locale === "zh" ? "zh" : "en";
+  const { title, description } = pageCopy[locale];
   const metadata = makePageMetadata({
     path: "/2027", title, description, locale,
     keywords: ["2027 Bazi", "2027 astrology", "2027 year ahead", "free personal calendar", "2027 八字", "2027 年度运势", "2027 星盘"],
@@ -25,6 +28,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 export default async function Year2027Page({ searchParams }: PageProps) {
   const params = await searchParams;
   const initialLang = params?.locale === "zh" ? "zh" : "en";
+  const { title, description } = pageCopy[initialLang];
   const metadata = makePageMetadata({ path: "/2027", title, description, locale: initialLang });
   const schema = {
     "@context": "https://schema.org",

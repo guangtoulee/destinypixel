@@ -11,13 +11,13 @@ const toolEvents = [
 export type ToolEvent = (typeof toolEvents)[number];
 
 const publicPaths = new Set([
-  "/", "/2027", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
+  "/", "/2027", "/taisui", "/tools", "/learn", "/tuteng", "/palm", "/face", "/oracle",
   "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/prompt", "/prompt/articles", "/juben",
   "/daoyan", "/image", "/english", "/danci", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
 const mainSitePaths = new Set([
-  "/", "/2027", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
+  "/", "/2027", "/taisui", "/white", "/tools", "/learn", "/tuteng", "/palm", "/face",
   "/oracle", "/sticks", "/astrology", "/tarot", "/compatibility", "/atelier", "/insights", "/xingpan", "/ultra", "/day-pillar", "/discover", "/journal",
 ]);
 
@@ -69,6 +69,17 @@ export function analyticsPage(pathname: string): string {
   if (pathname.startsWith("/prompt/article/")) return "/prompt/article/[id]";
   if (pathname.startsWith("/prompt/category/")) return "/prompt/category/[slug]";
   return "other";
+}
+
+/** Fixed labels for the annual-feature handoffs; never accept text or personal data. */
+export function annualAnalyticsEntry(pathname: string, hash: string, marked?: string): string | undefined {
+  const allowed = ["year_2027_ranking", "taisui_guide", "taisui_peace", "year_2027_personal"];
+  if (marked && allowed.includes(marked)) return marked;
+  if (pathname === "/taisui") return "taisui_peace";
+  if (pathname === "/journal/ben-ming-nian-tai-sui") return "taisui_guide";
+  if (pathname === "/2027" && hash === "#zodiac-ranking") return "year_2027_ranking";
+  if (pathname === "/2027" && hash === "#your-year") return "year_2027_personal";
+  return undefined;
 }
 
 export function toolForForm(value: string | undefined): AnalyticsTool | null {

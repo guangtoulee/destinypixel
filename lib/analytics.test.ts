@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { analyticsPage, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent, type AnalyticsTool, type ToolEvent } from "./analytics";
+import { analyticsPage, annualAnalyticsEntry, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent, type AnalyticsTool, type ToolEvent } from "./analytics";
 
 test("the metaphysics funnel includes bracelets and excludes standalone experiments", () => {
   for (const path of ["/", "/tuteng", "/atelier", "/oracle", "/palm", "/face", "/sticks", "/compatibility", "/tools", "/learn", "/learn/what-is-bazi-birth-chart", "/insights/bazi-love-compatibility", "/report/example", "/day-pillar", "/journal", "/journal/prepare-birth-date-time-place"]) {
@@ -16,6 +16,16 @@ test("analytics never receives report ids, birth data, questions, or totem fragm
   assert.equal(sanitizeAnalyticsUrl(raw), "https://www.destinypixel.com/report/[id]?locale=zh");
   assert.equal(analyticsPage("/report/private-id"), "/report/[id]");
   assert.equal(analyticsPage("/unexpected/private-id"), "other");
+});
+
+test("annual handoffs use only fixed entry labels within the existing funnel", () => {
+  assert.equal(analyticsPage("/taisui"), "/taisui");
+  assert.equal(isMainSitePath("/taisui"), true);
+  assert.equal(annualAnalyticsEntry("/taisui", ""), "taisui_peace");
+  assert.equal(annualAnalyticsEntry("/journal/ben-ming-nian-tai-sui", ""), "taisui_guide");
+  assert.equal(annualAnalyticsEntry("/2027", "#your-year"), "year_2027_personal");
+  assert.equal(annualAnalyticsEntry("/2027", "#zodiac-ranking"), "year_2027_ranking");
+  assert.equal(annualAnalyticsEntry("/2027", "#private-wish", "private wish"), undefined);
 });
 
 test("only controlled campaign labels survive URL sanitization", () => {

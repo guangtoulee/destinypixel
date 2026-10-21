@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
 import { absoluteUrl } from "@/lib/seo";
-import { journalArticles, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags, type JournalTranslation } from "@/lib/journal";
+import { journalArticles, journalArticleLocales, journalAlternates, journalHref, journalMetadata, journalArticleSchema, normalizeJournalLocale, journalLocales, journalLanguageTags, type JournalTranslation } from "@/lib/journal";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { toTraditional } from "@/lib/journal-locales";
 import { editorialModifiedAt } from "@/lib/editorial-updates";
@@ -50,12 +50,12 @@ test("Traditional Chinese preserves every calendar stem and branch without chang
   assert.equal(toTraditional("不以美丑评人，也不嘲笑丑陋。"), "不以美醜評人，也不嘲笑醜陋。");
 });
 
-test("journal advertises all four complete language editions with reciprocal URLs", () => {
+test("journal advertises exactly its authored language editions with reciprocal URLs", () => {
   const entries = sitemap().filter((entry) => new URL(entry.url).pathname.startsWith("/journal"));
-  assert.equal(entries.length, (journalArticles.length + 2 + 65 + tarotLearningIds.length + 1 + trigramIds.length + 1) * journalLocales.length);
+  assert.equal(entries.length, journalArticles.reduce((sum, article) => sum + journalArticleLocales(article).length, 0) + (2 + 65 + tarotLearningIds.length + 1 + trigramIds.length + 1) * journalLocales.length);
   const urls = new Set(entries.map((entry) => entry.url));
   for (const article of [undefined, ...journalArticles]) {
-    for (const locale of journalLocales) {
+    for (const locale of journalArticleLocales(article)) {
       const metadata = journalMetadata(locale, article);
       assert.equal(metadata.alternates?.canonical, journalHref(locale, article?.slug));
       assert.ok(urls.has(absoluteUrl(String(metadata.alternates?.canonical))));
@@ -73,7 +73,7 @@ test("articles have translated sections, truthful free Article schema and useful
   assert.equal(new Set(journalArticles.map((article) => article.slug)).size, journalArticles.length);
   for (const article of journalArticles) {
     assert.deepEqual(article.translations.en.sections.map((section) => section.id), article.translations.zh.sections.map((section) => section.id));
-    for (const locale of journalLocales) {
+    for (const locale of journalArticleLocales(article)) {
       const translation = article.translations[locale];
       if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
         assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(article.translations.en));
@@ -96,6 +96,14 @@ test("articles have translated sections, truthful free Article schema and useful
     const words = body.trim().split(/\s+/).length;
     assert.ok(words >= (article.kind === "portrait" ? 280 : 600), `${article.slug}: ${words} words`);
   }
+});
+
+test("the Tai Sui guide exposes only English and Simplified Chinese without changing older editions", () => {
+  const article = journalArticles.find(item => item.slug === "ben-ming-nian-tai-sui")!;
+  assert.deepEqual(journalArticleLocales(article), ["en", "zh"]);
+  assert.deepEqual(Object.keys(journalAlternates(article.slug)), ["en", "zh-Hans", "x-default"]);
+  assert.equal(journalMetadata("ru", article).alternates?.canonical, journalHref("en", article.slug));
+  assert.ok(journalArticles.filter(item => item !== article).every(item => journalArticleLocales(item).length === 4));
 });
 
 test("birth form feedback renders only known localized errors", () => {

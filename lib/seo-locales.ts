@@ -2,8 +2,11 @@
 // The home and sticks pages render Traditional Chinese directly; other legacy
 // pages retain their conversion bridge until their initial HTML is localized.
 export const localizedSeoCopy = {
+  "/taisui": {
+    zh: ["太岁平安 · 为自己许个愿", "心中的念，比形式更重要。免费点亮一盏平安灯，把祝福送给自己，再读懂本命年、犯太岁与 2027 年度参照。无需姓名、生日或账户。"],
+  },
   "/2027": {
-    zh: ["2027 流年手册｜免费八字与星盘年度观察", "免费探索公历 2027 年 1—12 月的个人观察日历，分别查看八字与星盘依据、计算边界和原创自省提示。无需登录，出生时辰可选未知；仅作传统文化与自我反思用途。"],
+    zh: ["2027 十二生肖星级排行榜与免费八字流年手册", "查看十二生肖综合、事业、感情与财运编辑星级，读懂本命年与太岁关系，再生成免费 2027 年 1—12 月八字与星盘手册。无需登录，保留未知时辰选项。"],
   },
   "/tools": {
     zh: ["工具导航｜易经六爻、塔罗、八字与五行手串", "探索 DestinyPixel 的易经六爻起卦、塔罗牌桌、星盘、出生图谱、本命灵构、灵签与五行手串，先了解所需资料与各方法的使用边界。"],

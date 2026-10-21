@@ -7,7 +7,7 @@ import { tarotLearningCopy } from "@/lib/tarot-learning/copy";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
-import { journalArticles, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
+import { journalArticles, journalArticleLocales, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import { journalUi, journalLanguageTags } from "@/lib/journal-locales";
 import styles from "./journal.module.css";
@@ -26,7 +26,7 @@ export default async function JournalPage({ searchParams }: PageProps) {
   const locale = normalizeJournalLocale((await searchParams)?.locale);
   const ui = journalUi[locale];
   const library = pillarLibraryCopy(locale);
-  const guides = journalArticles.filter(article => !article.pillar);
+  const guides = journalArticles.filter(article => !article.pillar && journalArticleLocales(article).includes(locale));
   const education = tarotEducationCopy[locale];
   const editorial = tarotEditorialCatalog(locale);
   const schema = {
