@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-10-21T06:24:01.551Z",
+  "updatedAt": "2026-10-21T13:05:02.431Z",
   "sourceSummary": {
     "community": 1381,
     "publicX": 568,
@@ -2440,6 +2440,48 @@
       "rawText": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇"
     },
     {
+      "id": "x-public-2112245518482931913",
+      "title": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of",
+      "description": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and v",
+      "prompt": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and video. A boring idea can't be revived with interesting looking images or cool scenes and without knowing basic fundamentals of camera movement / shots, the flow of the film will feel stale and slow (or too fast) This will not only stop you from burning credits 2. Add lighting into your scenes Adding a light source in your location images and referring to it will give your film a much higher quality feel and prevent an empty feeling film where seedance has to guess where the lighting is coming from For example in a kitchen scene add a lamp in the image with a golden glow coming off it 3. Don't leave direction up to the Claude No matter how good of a skill you have or level of model, it is terrible at directing To properly direct Wispr flow your idea shot by shot into Claude then add in a base acting direction for each character that the prompts always need to follow Also along with the scene and the tone of how your characters speak and move. This will prevent you from having stale feeling or AI looking movement and dialogue in your film",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/pounddz/status/2112245518482931913",
+      "sourceType": "x",
+      "authorName": "Pounds",
+      "authorHandle": "@pounddz",
+      "createdAt": "2026-10-19T18:12:29.000Z",
+      "importedAt": "2026-10-21T13:05:02.400Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 600,
+        "reposts": 54,
+        "replies": 33,
+        "quotes": 6,
+        "bookmarks": 988,
+        "views": 46827,
+        "score": 4525
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and video. A boring idea can't be revived with interesting looking images or cool scenes and without knowing basic fundamentals of camera movement / shots, the flow of the film will feel stale and slow (or too fast) This will not only stop you from burning credits 2. Add lighting into your scenes Adding a light source in your location images and referring to it will give your film a much higher quality feel and prevent an empty feeling film where seedance has to guess where the lighting is coming from For example in a kitchen scene add a lamp in the image with a golden glow coming off it 3. Don't leave direction up to the Claude No matter how good of a skill you have or level of model, it is terrible at directing To properly direct Wispr flow your idea shot by shot into Claude then add in a base acting direction for each character that the prompts always need to follow Also along with the scene and the tone of how your characters speak and move. This will prevent you from having stale feeling or AI looking movement and dialogue in your film"
+    },
+    {
       "id": "x-public-2106560621932384657",
       "title": "Made with seedance 2.5 Prompt 👇 Create a heartwarming and funny ultra-realistic 3D animated cin",
       "description": "Made with seedance 2.5 Prompt 👇 Create a heartwarming and funny ultra-realistic 3D animated cinematic video in vertical 9:16 format. Scene: A cute little toddler boy is sitting on the bathroom floor in front of a dark b",
@@ -3214,48 +3256,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dari prompt + reference. Contohnya Seedance, Kling, Omni. Yang keluar klip. Programmatic video beda. Kita minta AI Agent bikin videonya pake code. Sama kayak dia bikin website atau app, cuma yang keluar video. Dan secara ga langsung, si agent ini juga jadi editornya. Kita tinggal terima jadi. Contohnya video di post ini adalah programmatic. Walaupun gue bikinnya pake 1 prompt simpel, yang dia kerjain lumayan kompleks. Isinya: > 135 sound effect, masing-masing dipasang pas di kata yang diucapin > 647 layer dan 10.228 keyframe animasi > 30 potongan footage, masing-masing punya gerak kamera sendiri > 16 punch-in kamera dan 7 whip transition > 21 ikon yang digambar pake code (kartu BPJS, ambulans, kuitansi RS, kalender) > 16 diagram alur > 103 caption yang sinkron ke 354 kata voice over Durasi video 2 menit 34 detik, render-nya cuma 32 detik di laptop Nah, secara cost juga jauh lebih murah. Bikin video 2 menit 30 detik pake Seedance 2.5 1080p di Higgsfield (Max plan) butuh 1.800 kredit. Itu sekitar Rp1,3 juta (dan itu kalau sekali generate langsung jadi, which is ga mungkin wkwk) Pake cara ini cuma habis sekitar Rp12 ribu: footage Rp5.400, voice over Rp7 ribu, editing sama render Rp0 karena jalan di laptop. Use case-nya beda ya. Programmatic ga bisa bikin film cinematic atau dracin. Lebih cocok untuk video edukasi/tutorial/product launch"
-    },
-    {
-      "id": "x-public-2112245518482931913",
-      "title": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of",
-      "description": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and v",
-      "prompt": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and video. A boring idea can't be revived with interesting looking images or cool scenes and without knowing basic fundamentals of camera movement / shots, the flow of the film will feel stale and slow (or too fast) This will not only stop you from burning credits 2. Add lighting into your scenes Adding a light source in your location images and referring to it will give your film a much higher quality feel and prevent an empty feeling film where seedance has to guess where the lighting is coming from For example in a kitchen scene add a lamp in the image with a golden glow coming off it 3. Don't leave direction up to the Claude No matter how good of a skill you have or level of model, it is terrible at directing To properly direct Wispr flow your idea shot by shot into Claude then add in a base acting direction for each character that the prompts always need to follow Also along with the scene and the tone of how your characters speak and move. This will prevent you from having stale feeling or AI looking movement and dialogue in your film",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/pounddz/status/2112245518482931913",
-      "sourceType": "x",
-      "authorName": "Pounds",
-      "authorHandle": "@pounddz",
-      "createdAt": "2026-10-19T18:12:29.000Z",
-      "importedAt": "2026-10-20T12:52:35.999Z",
-      "tags": [
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 419,
-        "reposts": 40,
-        "replies": 30,
-        "quotes": 5,
-        "bookmarks": 687,
-        "views": 31436,
-        "score": 3167
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "3 Steps to Being Able to Produce Hollywood Level AI Animations (and not slop): 1. The quality of your animation doesn't start with the images or the prompt It starts with the idea and camera angles, then the images and video. A boring idea can't be revived with interesting looking images or cool scenes and without knowing basic fundamentals of camera movement / shots, the flow of the film will feel stale and slow (or too fast) This will not only stop you from burning credits 2. Add lighting into your scenes Adding a light source in your location images and referring to it will give your film a much higher quality feel and prevent an empty feeling film where seedance has to guess where the lighting is coming from For example in a kitchen scene add a lamp in the image with a golden glow coming off it 3. Don't leave direction up to the Claude No matter how good of a skill you have or level of model, it is terrible at directing To properly direct Wispr flow your idea shot by shot into Claude then add in a base acting direction for each character that the prompts always need to follow Also along with the scene and the tone of how your characters speak and move. This will prevent you from having stale feeling or AI looking movement and dialogue in your film"
     },
     {
       "id": "x-public-2103533820263944679",
@@ -18932,7 +18932,7 @@
       "authorName": "ᴍᴜʀᴘʜʏ",
       "authorHandle": "@Diplomeme",
       "createdAt": "2026-10-16T04:13:21.000Z",
-      "importedAt": "2026-10-21T06:24:01.517Z",
+      "importedAt": "2026-10-21T13:05:02.400Z",
       "tags": [
         "Kling",
         "产品",
@@ -18960,7 +18960,7 @@
         "replies": 65,
         "quotes": 0,
         "bookmarks": 57,
-        "views": 4140,
+        "views": 4217,
         "score": 492
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -23943,7 +23943,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.530Z",
+      "importedAt": "2026-10-21T13:04:58.231Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -23982,7 +23982,7 @@
       "authorName": "AI art gallery",
       "authorHandle": "@sandmrk",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.531Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像",
         "东方美学",
@@ -24025,7 +24025,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -24067,7 +24067,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像",
         "摄影"
@@ -24109,7 +24109,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24150,7 +24150,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -24189,7 +24189,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [
         "摄影"
       ],
@@ -24230,7 +24230,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [
         "平面设计"
       ],
@@ -24271,7 +24271,7 @@
       "authorName": "hair_hair55",
       "authorHandle": "@Hair_Hair55",
       "createdAt": "2026-10-18T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -24640,7 +24640,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24681,7 +24681,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24805,7 +24805,7 @@
       "authorName": "AI Art Alley",
       "authorHandle": "@aiartalley",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -24844,7 +24844,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像"
       ],
@@ -24885,7 +24885,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -24926,7 +24926,7 @@
       "authorName": "拓斗",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.532Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像",
         "摄影"
@@ -24968,7 +24968,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -25175,7 +25175,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像"
       ],
@@ -25216,7 +25216,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "摄影"
       ],
@@ -25257,7 +25257,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-14T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25342,7 +25342,7 @@
       "authorName": "Visual AI Club",
       "authorHandle": "@visualaiclub",
       "createdAt": "2026-10-13T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -26025,7 +26025,7 @@
       "authorName": "花椰菜",
       "authorHandle": "@indesjyo",
       "createdAt": "2026-10-09T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "摄影"
       ],
@@ -26230,7 +26230,7 @@
       "authorName": "Jengo",
       "authorHandle": "@jengo_ai_",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.232Z",
       "tags": [
         "人像"
       ],
@@ -26271,7 +26271,7 @@
       "authorName": "VoxCat",
       "authorHandle": "@VoxcatAI",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26310,7 +26310,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-08T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.533Z",
+      "importedAt": "2026-10-21T13:04:58.233Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -81779,7 +81779,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.537Z",
+      "importedAt": "2026-10-21T13:04:58.236Z",
       "tags": [
         "产品",
         "平面设计",
@@ -81822,7 +81822,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.537Z",
+      "importedAt": "2026-10-21T13:04:58.236Z",
       "tags": [
         "平面设计"
       ],
@@ -81863,7 +81863,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-21T06:23:57.537Z",
+      "importedAt": "2026-10-21T13:04:58.236Z",
       "tags": [
         "平面设计"
       ],
