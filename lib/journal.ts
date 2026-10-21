@@ -12,6 +12,7 @@ import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-ele
 import { threeCardTarotArticle, threeCardTarotRussian } from "@/lib/journal-three-card-tarot";
 import { pamelaColmanSmithArticle, pamelaColmanSmithRussian } from "@/lib/journal-pamela-colman-smith";
 import { pillarProfileArticles, pillarProfileRussian } from "@/lib/journal-pillar-profiles";
+import { taiSuiArticle } from "@/lib/journal-tai-sui";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { withDayPillarPeople, type DayPillarPerson } from "@/lib/day-pillar-people";
 import { pillarLibraryHref, pillarLibraryCopy } from "@/lib/day-pillar-library";
@@ -49,6 +50,8 @@ export type JournalTranslation = {
 };
 export type JournalArticle = {
   slug: string;
+  /** Advertise only authored editions; older articles retain their four locales. */
+  availableLocales?: readonly JournalLocale[];
   pillar?: string;
   kind?: "portrait" | "education";
   portraitDepth?: "full";
@@ -311,7 +314,12 @@ function applyReplacements(copy: JournalTranslation, replacements?: [string, str
   return JSON.parse(replacements.reduce((json, [from, to]) => json.replaceAll(from, to), JSON.stringify(copy)));
 }
 
-export const journalArticles: JournalArticle[] = [...tarotEducationArticles, ...journalSources.map((article) => {
+export const journalArticles: JournalArticle[] = [{
+  ...taiSuiArticle,
+  availableLocales: ["en", "zh"],
+  // Internal fallbacks are never listed as additional authored editions.
+  translations: { ...taiSuiArticle.translations, "zh-TW": taiSuiArticle.translations.zh, ru: taiSuiArticle.translations.en },
+}, ...tarotEducationArticles, ...journalSources.map((article) => {
   const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   const translations = { ...article.translations, "zh-TW": article.traditionalTranslation ?? applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru };
@@ -320,7 +328,7 @@ export const journalArticles: JournalArticle[] = [...tarotEducationArticles, ...
 
 export function journalAlternates(slug?: string): Record<string, string> {
   return Object.fromEntries([
-    ...journalLocales.map((locale) => [journalLanguageTags[locale], journalHref(locale, slug)]),
+    ...journalArticleLocales(getJournalArticle(slug ?? "")).map((locale) => [journalLanguageTags[locale], journalHref(locale, slug)]),
     ["x-default", journalHref("en", slug)],
   ]);
 }
@@ -329,7 +337,16 @@ export function getJournalArticle(slug: string) {
   return journalArticles.find((article) => article.slug === slug);
 }
 
+export function journalArticleLocales(article?: { availableLocales?: readonly JournalLocale[]; slug?: string }): readonly JournalLocale[] {
+  return article?.availableLocales ?? journalLocales;
+}
+
+export function journalArticleLocale(locale: JournalLocale, article?: JournalArticle): JournalLocale {
+  return journalArticleLocales(article).includes(locale) ? locale : "en";
+}
+
 export function journalMetadata(locale: JournalLocale, article?: JournalArticle): Metadata {
+  locale = journalArticleLocale(locale, article);
   const copy = article?.translations[locale];
   const title = copy?.title ?? journalUi[locale].title;
   const description = copy?.description ?? journalUi[locale].description;
@@ -339,7 +356,7 @@ export function journalMetadata(locale: JournalLocale, article?: JournalArticle)
     title: { absolute: `${title} | ${siteName}` },
     description,
     alternates: { canonical, languages: journalAlternates(article?.slug) },
-    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images, locale: journalOgLocales[locale], alternateLocale: journalLocales.filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: editorialModifiedAt(article.slug, locale, article.updatedAt) } : {}) },
+    openGraph: { type: article ? "article" : "website", title, description, url: canonical, siteName, images, locale: journalOgLocales[locale], alternateLocale: journalArticleLocales(article).filter((other) => other !== locale).map((other) => journalOgLocales[other]), ...(article ? { publishedTime: article.publishedAt, modifiedTime: editorialModifiedAt(article.slug, locale, article.updatedAt) } : {}) },
     twitter: { card: "summary_large_image", title, description, images },
     robots: { index: true, follow: true },
   };

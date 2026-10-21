@@ -20,10 +20,10 @@ import TarotEditorialCards from "@/components/tarot-editorial-cards";
 import TarotEditorialLinks from "@/components/tarot-editorial-links";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { dayPillarCycle, pillarName, pillarArticleHref, pillarCardHref, pillarCrossLinkCopy, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { JournalFooter, JournalHeader } from "@/components/journal-chrome";
-import { type JournalSection, getJournalArticle, journalArticles, journalArticleSchema, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
+import { type JournalSection, getJournalArticle, journalArticleLocale, journalArticleLocales, journalArticles, journalArticleSchema, journalHref, journalMetadata, normalizeJournalLocale } from "@/lib/journal";
 import { journalUi, journalLanguageTags, journalHomeHref } from "@/lib/journal-locales";
 import styles from "../journal.module.css";
 
@@ -34,7 +34,7 @@ export const dynamicParams = false;
 type ArticleFigureData = NonNullable<JournalSection["figures"]>[number];
 
 function ArticleFigure({ figure }: { figure: ArticleFigureData }) {
-  return <figure className={styles.articleFigure}><Image src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width:650px) 92vw, 640px" /><figcaption>{figure.caption}</figcaption></figure>;
+  return <figure className={styles.articleFigure}><Image src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width:650px) 92vw, 640px" /><figcaption>{figure.caption}{figure.src.startsWith("/journal/tai-sui/") && <> <a href={figure.src} target="_blank" rel="noreferrer">{figure.caption.includes("原创") ? "查看完整图解" : "Open full-size diagram"}</a></>}</figcaption></figure>;
 }
 
 // Wraps the first occurrence of each link text; the paragraph text itself is unchanged.
@@ -77,6 +77,8 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const article = getJournalArticle(slug);
   if (!article) notFound();
   const locale = normalizeJournalLocale((await searchParams)?.locale);
+  const authoredLocale = journalArticleLocale(locale, article);
+  if (locale !== authoredLocale) permanentRedirect(journalHref(authoredLocale, article.slug));
   const ui = journalUi[locale];
   const copy = article.translations[locale];
   const updatedAt = editorialModifiedAt(article.slug, locale, article.updatedAt);
@@ -84,10 +86,10 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const library = pillarLibraryCopy(locale);
   const crossLink = pillarCrossLinkCopy(locale);
   const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
-  const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug)
-    ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.kind !== "education");
+  const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug && journalArticleLocales(candidate).includes(locale))
+    ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.slug !== "ben-ming-nian-tai-sui" && candidate.kind !== "education" && journalArticleLocales(candidate).includes(locale));
   return (
-    <main className={`${styles.page}${tarotGuide ? ` ${learn.page}` : ""}`} lang={journalLanguageTags[locale]} data-server-localized>
+    <main className={`${styles.page}${tarotGuide ? ` ${learn.page}` : ""}${article.slug === "ben-ming-nian-tai-sui" ? ` ${styles.taiSuiArticle}` : ""}`} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
       {tarotGuide ? <><TarotHeader locale={locale} path={`/journal/${article.slug}`} /><TarotNavigation locale={locale} current="guide" /></> : <JournalHeader locale={locale} slug={article.slug} />}
       <article>

@@ -15,6 +15,9 @@ DestinyPixel is a metaphysics and symbolic self-discovery website. Its tools inc
 - Guide: ${absoluteUrl("/learn")}
 - Free birthday character finder: ${absoluteUrl("/discover")}
 - Journal (four language editions): ${absoluteUrl("/journal")}
+- 2027 zodiac editorial star rankings and free January–December Bazi / astrology reflection calendar: ${absoluteUrl("/2027")}
+- Ben Ming Nian and Tai Sui cultural guide: ${absoluteUrl("/journal/ben-ming-nian-tai-sui")}
+- Free Tai Sui peace lamp, a symbolic personal wish without efficacy claims: ${absoluteUrl("/taisui")}
 - Day Pillar introduction: ${absoluteUrl("/journal/what-is-a-day-pillar")}
 - Jia Zi Day Pillar: ${absoluteUrl("/journal/jia-zi-day-pillar")}
 - Palm Studio: ${absoluteUrl("/palm")}
@@ -44,7 +47,9 @@ Birth Totem / 本命灵构 is DestinyPixel's original visualization layer. It ma
 PRODUCT_FACTS
 
 ## Supported Languages
-Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The astrology, tarot, compatibility and fortune-stick pages, the Journal and each of its articles provide server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. Journal language alternates and the sitemap list these editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
+Core self-discovery pages support English, Simplified Chinese, Traditional Chinese, and Russian. The astrology, tarot, compatibility and fortune-stick pages and existing Journal articles provide server-rendered editions in all four languages: the default English URL, ?locale=zh, ?locale=zh-TW and ?locale=ru. The new Tai Sui guide, 2027 feature and peace lamp provide English and Simplified Chinese only. Article language alternates and the sitemap list only authored editions. Other core pages may use browser-side Traditional Chinese conversion. The tool directory and free Day Pillar tool currently provide English and Simplified Chinese. The beginner guide is English-only; do not assume that every tool shares the Journal's language coverage.
+
+The 2027 stars are a modern editorial comparison, not a traditional calculation formula, statistical probability, scientifically validated forecast or complete personal Bazi reading. The personal calendar runs from January to December and switches Bazi years at Lichun. It supports unknown birth time with explicit omissions and does not calculate luck pillars (Da Yun). The peace lamp sends no wishes to a server and promises no change in fortune.
 
 ## Contact
 Product feedback and collaboration: ${destinySupportEmail}

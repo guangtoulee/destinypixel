@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { track } from "@vercel/analytics";
-import { analyticsPage, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
+import { analyticsPage, annualAnalyticsEntry, isAnalyticsTestVisit, isMainSitePath, sanitizeAnalyticsUrl, toolForForm, trackToolEvent } from "@/lib/analytics";
 
 export function SiteAnalytics() {
   useEffect(() => {
@@ -19,12 +19,14 @@ export function SiteAnalytics() {
       if (!isMainSitePath(window.location.pathname) || !isMainSitePath(destination.pathname)) return;
       const target = analyticsPage(destination.pathname);
       if (target === "other" || target === "/report/[id]") return;
-      if (destination.pathname === window.location.pathname && destination.hash !== "#report") return;
+      const knownEntry = annualAnalyticsEntry(destination.pathname, destination.hash, anchor.dataset.analyticsEntry);
+      if (destination.pathname === window.location.pathname && destination.hash !== "#report" && !knownEntry) return;
       try {
         track("tool_open", {
           area: "main",
           target: destination.hash === "#report" ? "birth_report" : target,
           source: analyticsPage(window.location.pathname),
+          ...(knownEntry ? { entry: knownEntry } : {}),
           location: anchor.closest("header") ? "header" : anchor.closest("footer") ? "footer" : anchor.closest("nav") ? "navigation" : "content",
         });
       } catch {

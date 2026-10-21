@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { journalArticles, journalHref, journalLocales, journalLanguageTags } from "../lib/journal";
+import { journalArticles, journalArticleLocales, journalHref, journalLocales, journalLanguageTags } from "../lib/journal";
 
 // Read-only HTTP smoke check; accepts localhost for a production-build preview.
 const base = process.argv[2] ?? "https://www.destinypixel.com";
@@ -16,7 +16,7 @@ async function html(path: string) {
 }
 async function main() {
   const sitemap = await html("/sitemap.xml");
-  const checks = selected.flatMap(article => journalLocales.map(locale => ({article,locale})));
+  const checks = selected.flatMap(article => journalArticleLocales(article).map(locale => ({article,locale})));
   for (let start = 0; start < checks.length; start += 4) {
     await Promise.all(checks.slice(start, start + 4).map(async ({article,locale}) => {
       const path = journalHref(locale, article.slug);
@@ -31,7 +31,7 @@ async function main() {
       const links = [...page.matchAll(/<link\b[^>]*>/g)].map(m => attrs(m[0]));
       assert.equal(links.find(l => l.rel === "canonical")?.href, origin + path, `${path}: canonical`);
       const alternates = links.filter(l => l.rel === "alternate" && l.hrefLang);
-      for (const other of journalLocales) {
+      for (const other of journalArticleLocales(article)) {
         assert.ok(alternates.some(l => l.hrefLang === journalLanguageTags[other] && l.href === origin + journalHref(other,article.slug)), `${path}: missing language ${other}`);
       }
       assert.ok(alternates.some(l => l.hrefLang === "x-default" && l.href === origin + journalHref("en",article.slug)), `${path}: missing x-default`);
