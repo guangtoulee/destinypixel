@@ -35,4 +35,12 @@ Primary checkout `/Users/lee/destinypixel` was clean on its backup branch and le
 
 ## Release
 
-Pending normal main release and live verification; update this section after deployment evidence is available.
+Content commit `be28bec5a7893d626e6feacc0fc1c761f5a28594` was pushed normally to `origin/main` after confirming no remote divergence. GitHub's commit status reports Vercel **success**, updated `2026-10-23T03:03:21Z` (11:03:21 Beijing time). Deployment: https://vercel.com/destinypixel/destinypixel/ZJWmkeehqovh1JZrH4R7hJoFPn8g.
+
+Live verification passed on all four production editions: HTTP 200, complete new section, direct answer, unchanged H1, self-canonical, reciprocal four-language alternates and x-default, Article dates, sitemap lastmod, and both destination links. Production Chinese browser verification also showed the new section and the 2026-10-23 update date. No browser console errors were observed. The new article link was followed to the Chinese tarot table, where the relationship spread and required-question/optional-background inputs were confirmed; no AI request was made.
+
+The first GitHub connector status check returned pending; a later connector call stalled, so the final success status was read from the public GitHub commit-status endpoint. The result and complete HTTP receipts are saved locally in `outputs/seo-publication-20261023/deployment.json` and `production-http.json`.
+
+Live article: https://www.destinypixel.com/journal/tarot-queen-of-swords?locale=zh#love-reading. English uses the same path without a locale parameter; Traditional Chinese uses `locale=zh-TW`, Russian `locale=ru`.
+
+This verifies publication, not Google re-indexing or traffic growth. The next normal Monday review can observe this page without submitting repeat indexing requests or expanding more card pages solely from this tiny signal.
