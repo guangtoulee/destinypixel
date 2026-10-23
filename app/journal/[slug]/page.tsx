@@ -18,6 +18,7 @@ import Markdown from "react-markdown";
 import DayPillarPeople from "@/components/day-pillar-people";
 import TarotEditorialCards from "@/components/tarot-editorial-cards";
 import TarotEditorialLinks from "@/components/tarot-editorial-links";
+import TarotMethodLinks from "@/components/tarot-method-links";
 import { getPillarImagePath } from "@/lib/archetype-assets";
 import { dayPillarCycle, pillarName, pillarArticleHref, pillarCardHref, pillarCrossLinkCopy, pillarLibraryHref, pillarLibraryCopy, pillarEditionLabel } from "@/lib/day-pillar-library";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -91,7 +92,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   return (
     <main className={`${styles.page}${tarotGuide ? ` ${learn.page}` : ""}${article.slug === "ben-ming-nian-tai-sui" ? ` ${styles.taiSuiArticle}` : ""}`} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
-      {tarotGuide ? <><TarotHeader locale={locale} path={`/journal/${article.slug}`} /><TarotNavigation locale={locale} current="guide" /></> : <JournalHeader locale={locale} slug={article.slug} />}
+      {tarotGuide ? <><TarotHeader locale={locale} path={`/journal/${article.slug}`} availableLocales={journalArticleLocales(article)} /><TarotNavigation locale={locale} current="guide" /></> : <JournalHeader locale={locale} slug={article.slug} />}
       <article>
         <header className={styles.articleHero}>
           <nav className={styles.breadcrumb} aria-label={ui.breadcrumb}><a href={journalHomeHref(locale)}>{ui.home}</a><span aria-hidden="true">/</span><a href={journalHref(locale)}>{ui.journal}</a><span aria-hidden="true">/</span><span>{copy.topic}</span></nav>
@@ -129,6 +130,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
             <div className={styles.articleAction}><p>{article.pillar ? crossLink.note : ui.try}</p><a data-pillar-card-link={article.pillar || undefined} href={article.pillar ? pillarCardHref(article.pillar, locale) : copy.action.href}>{article.pillar ? `${crossLink.card} · ${pillarName(article.pillar, locale)}` : copy.action.label}<ArrowRight size={17} aria-hidden="true" /></a></div>
             {article.pillar && <nav className={styles.pillarRelated} aria-label={library.related}><h2>{library.same}</h2>{dayPillarCycle.filter(p => p[0] === article.pillar![0] && p !== article.pillar).map(p => <a key={p} href={pillarArticleHref(p, locale)}>{p} · {pillarName(p, locale)}<ArrowRight size={14} aria-hidden="true" /></a>)}<a href={pillarLibraryHref(locale)}>{library.browse}</a></nav>}
             <TarotEditorialLinks slug={article.slug} locale={locale} />
+            <TarotMethodLinks slug={article.slug} locale={locale} />
             {article.kind !== "education" && related && <aside className={styles.related}><span>{ui.related}</span><a href={journalHref(locale, related.slug)}>{related.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a></aside>}
           </div>
         </div>

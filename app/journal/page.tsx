@@ -29,6 +29,7 @@ export default async function JournalPage({ searchParams }: PageProps) {
   const guides = journalArticles.filter(article => !article.pillar && journalArticleLocales(article).includes(locale));
   const education = tarotEducationCopy[locale];
   const editorial = tarotEditorialCatalog(locale);
+  const methodGuides = guides.filter(article => article.kind === "education" && !tarotEducationSlugs.some(slug => slug === article.slug));
   const schema = {
     "@context": "https://schema.org", "@type": "CollectionPage", name: `${siteName} · ${ui.journal}`, url: absoluteUrl(journalHref(locale)), inLanguage: journalLanguageTags[locale],
     mainEntity: { "@type": "ItemList", numberOfItems: guides.length + 4, itemListElement: [{ "@type": "ListItem", position: 1, name: library.title, url: absoluteUrl(pillarLibraryHref(locale)) }, { "@type":"ListItem",position:2,name:tarotLearningCopy(locale).title,url:absoluteUrl(tarotLearningHref(undefined,locale)!) }, { "@type":"ListItem",position:3,name:hexagramCopy(locale).title,url:absoluteUrl(hexagramHref(undefined,locale)!) }, { "@type":"ListItem",position:4,name:trigramCopy(locale).title,url:absoluteUrl(trigramHref(undefined,locale)) }, ...guides.map((article, index) => ({ "@type": "ListItem", position: index + 5, name: article.translations[locale].title, url: absoluteUrl(journalHref(locale, article.slug)) }))] },
@@ -49,6 +50,11 @@ export default async function JournalPage({ searchParams }: PageProps) {
           <h3><a href={journalHref(locale, slug)}>{editorial[slug].title}</a></h3>
           <p className={styles.cardDescription}>{editorial[slug].description}</p>
           <a className={styles.libraryTextLink} href={journalHref(locale, slug)}>{ui.read}<ArrowRight size={16} aria-hidden="true" /></a>
+        </article>)}{methodGuides.map(article => <article className={styles.articleCard} key={article.slug}>
+          <p className={styles.eyebrow}>{article.translations[locale].topic}</p>
+          <h3><a href={journalHref(locale, article.slug)}>{article.translations[locale].title}</a></h3>
+          <p className={styles.cardDescription}>{article.translations[locale].description}</p>
+          <a className={styles.libraryTextLink} href={journalHref(locale, article.slug)}>{ui.read}<ArrowRight size={16} aria-hidden="true" /></a>
         </article>)}</div>
         <a className={styles.libraryTextLink} href={tarotLearningHref("sun", locale)}>{education.sun}<ArrowRight size={16} aria-hidden="true" /></a>
       </section>

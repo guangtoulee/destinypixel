@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { tarotEducationArticles } from "@/lib/journal-tarot-editorial";
+import { tarotMethodArticles } from "@/lib/journal-tarot-methods";
 import { absoluteUrl, siteName } from "@/lib/seo";
 import { editorialModifiedAt } from "@/lib/editorial-updates";
 import { dayPillarIntroduction } from "@/lib/journal-day-pillar";
@@ -319,7 +320,7 @@ export const journalArticles: JournalArticle[] = [{
   availableLocales: ["en", "zh"],
   // Internal fallbacks are never listed as additional authored editions.
   translations: { ...taiSuiArticle.translations, "zh-TW": taiSuiArticle.translations.zh, ru: taiSuiArticle.translations.en },
-}, ...tarotEducationArticles, ...journalSources.map((article) => {
+}, ...tarotMethodArticles, ...tarotEducationArticles, ...journalSources.map((article) => {
   const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   const translations = { ...article.translations, "zh-TW": article.traditionalTranslation ?? applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru };

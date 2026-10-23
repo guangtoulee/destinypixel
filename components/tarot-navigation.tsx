@@ -6,12 +6,12 @@ import { tarotWorkspaceCopy } from "@/lib/tarot-workspace-copy";
 import styles from "./tarot-navigation.module.css";
 import { TarotDocumentLanguage } from "./tarot-document-language";
 
-export function TarotHeader({ locale, path }: { locale: ReportLocale; path: string }) {
+export function TarotHeader({ locale, path, availableLocales = celestialLocales }: { locale: ReportLocale; path: string; availableLocales?: readonly ReportLocale[] }) {
   return <header className={styles.header}>
     <TarotDocumentLanguage language={journalLanguageTags[locale]} />
     <a className={styles.brand} href={celestialHref("/", locale)}><span aria-hidden="true">✧</span>DestinyPixel<span className={styles.edition}>TAROT</span></a>
     <div className={styles.tools}><a className={styles.account} href={memberAccountHref(locale)}>{recordCopy(locale).account}</a>
-      <nav aria-label="Language" className={styles.languages}>{celestialLocales.map(l => <a key={l} href={celestialHref(path, l)} hrefLang={journalLanguageTags[l]} lang={journalLanguageTags[l]} aria-current={l === locale ? "page" : undefined}>{{ en: "EN", zh: "简", "zh-TW": "繁", ru: "RU" }[l]}</a>)}</nav>
+      <nav aria-label="Language" className={styles.languages}>{availableLocales.map(l => <a key={l} href={celestialHref(path, l)} hrefLang={journalLanguageTags[l]} lang={journalLanguageTags[l]} aria-current={l === locale ? "page" : undefined}>{{ en: "EN", zh: "简", "zh-TW": "繁", ru: "RU" }[l]}</a>)}</nav>
     </div>
   </header>;
 }
