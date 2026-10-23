@@ -1,0 +1,126 @@
+✖ revision registries apply only to the actually edited zh/en editions (3.691542ms)
+✖ the recorded first rollouts still change exactly 48 dates against the pre-sample baseline after restoring only second-batch dates (5.306583ms)
+✖ the recorded first birthday rollout still changes exactly 40 sitemap dates after restoring only second-batch dates (10.520625ms)
+✖ journal metadata and Article schema use per-language revisions without freshening base publication dates (0.236458ms)
+✖ all tarot metadata and loaded schema dates retain their previous scope except revised Sun and Moon editions (117.881ms)
+✔ hexagram dates revise only Tai zh/en and retain the existing metadata behavior (1.168833ms)
+✔ Ding You preserves the serialized published Traditional Chinese and Russian editions (0.279333ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 2
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 612.585541
+
+✖ failing tests:
+
+test at lib/editorial-updates.test.ts:2:5022
+✖ revision registries apply only to the actually edited zh/en editions (3.691542ms)
+  AssertionError [ERR_ASSERTION]: tarot-queen-of-swords/en: unedited edition has an update
+  + actual - expected
+
+  + {
+  +   note: 'Added a concise modern meaning and a fictional love-reading comparison using the relationship spread; preserved the image study, historical source discussion and existing cases.',
+  +   updatedAt: '2026-10-23'
+  + }
+  - undefined
+
+      at TestContext.<anonymous> (/private/tmp/destinypixel-editorial-baseline-20261023/lib/editorial-updates.test.ts:82:21)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.start (node:internal/test_runner/test:1006:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { updatedAt: '2026-10-23', note: 'Added a concise modern meaning and a fictional love-reading comparison using the relationship spread; preserved the image study, historical source discussion and existing cases.' },
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:7368
+✖ the recorded first rollouts still change exactly 48 dates against the pre-sample baseline after restoring only second-batch dates (5.306583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  992 !== 982
+
+      at TestContext.<anonymous> (/private/tmp/destinypixel-editorial-baseline-20261023/lib/editorial-updates.test.ts:90:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 992,
+    expected: 982,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:8306
+✖ the recorded first birthday rollout still changes exactly 40 sitemap dates after restoring only second-batch dates (10.520625ms)
+  AssertionError [ERR_ASSERTION]: a URL or date outside this birthday rollout changed
+  + actual - expected
+
+  + '59c5cd96a9693da0dd4a4a9353021746fbe37d5227f51a6737650de7661ed711'
+  - '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e'
+
+      at TestContext.<anonymous> (/private/tmp/destinypixel-editorial-baseline-20261023/lib/editorial-updates.test.ts:108:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '59c5cd96a9693da0dd4a4a9353021746fbe37d5227f51a6737650de7661ed711',
+    expected: '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:9414
+✖ journal metadata and Article schema use per-language revisions without freshening base publication dates (0.236458ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  77 !== 75
+
+      at TestContext.<anonymous> (/private/tmp/destinypixel-editorial-baseline-20261023/lib/editorial-updates.test.ts:113:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 77,
+    expected: 75,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:10630
+✖ all tarot metadata and loaded schema dates retain their previous scope except revised Sun and Moon editions (117.881ms)
+  AssertionError [ERR_ASSERTION]: queen-of-swords/en: sitemap date
+  + actual - expected
+
+  + '2026-10-23'
+  - '2026-10-08'
+             ^
+
+      at TestContext.<anonymous> (/private/tmp/destinypixel-editorial-baseline-20261023/lib/editorial-updates.test.ts:135:14)
+      at async Test.run (node:internal/test_runner/test:1116:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '2026-10-23',
+    expected: '2026-10-08',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

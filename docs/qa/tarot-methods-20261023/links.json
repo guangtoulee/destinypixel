@@ -1,0 +1,92 @@
+{
+  "articleInternalLinks": [
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-keep-tarot-journal",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-keep-tarot-journal?locale=zh",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-read-celtic-cross",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-read-celtic-cross?locale=zh",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-read-three-card-tarot",
+      "status": 200
+    },
+    {
+      "path": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "path": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "path": "/journal/tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "path": "/tarot",
+      "status": 200
+    },
+    {
+      "path": "/tarot?locale=zh",
+      "status": 200
+    }
+  ],
+  "indexEditions": [
+    {
+      "locale": "en",
+      "educationCards": 5
+    },
+    {
+      "locale": "zh",
+      "educationCards": 5
+    },
+    {
+      "locale": "zh-TW",
+      "educationCards": 3
+    },
+    {
+      "locale": "ru",
+      "educationCards": 3
+    }
+  ],
+  "fallbacks": [
+    {
+      "requested": "/journal/how-to-read-celtic-cross?locale=ru",
+      "status": 308,
+      "location": "/journal/how-to-read-celtic-cross"
+    },
+    {
+      "requested": "/journal/how-to-read-celtic-cross?locale=zh-TW",
+      "status": 308,
+      "location": "/journal/how-to-read-celtic-cross"
+    },
+    {
+      "requested": "/journal/how-to-keep-tarot-journal?locale=ru",
+      "status": 308,
+      "location": "/journal/how-to-keep-tarot-journal"
+    },
+    {
+      "requested": "/journal/how-to-keep-tarot-journal?locale=zh-TW",
+      "status": 308,
+      "location": "/journal/how-to-keep-tarot-journal"
+    }
+  ]
+}
