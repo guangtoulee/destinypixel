@@ -12,6 +12,7 @@ import editorialManifest from "@/content/tarot-editorial/provenance.json";
 import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
 import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.json";
 import linkMaintenance from "@/content/tarot-link-maintenance-20261019.json";
+import queenRevision from "@/content/queen-swords-update-20261023/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -19,6 +20,8 @@ test("every real cast ID resolves to the complete correct-language article witho
  const sampleRecords:Record<string,{fileSha256:string;articleMarkdownSha256:string;previousFileSha256:string}>=sampleRevisions.records;
  const linkPaths=new Set(journalLocales.map(locale=>`content/tarot/${locale}/death.json`));
  const linkRecords:Record<string,{previousArticleMarkdownSha256:string;articleMarkdownSha256:string}>=linkMaintenance.records;
+ const queenRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=queenRevision.records;
+ assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -48,6 +51,14 @@ test("every real cast ID resolves to the complete correct-language article witho
     }
     assert.equal(digest(previousMarkdown),approvedHash,`Only maintained source URLs may change: ${path}`);
     assert.equal(record.previousArticleMarkdownSha256,approvedHash,`Historical link receipt mismatch: ${path}`);
+    approvedHash=record.articleMarkdownSha256;
+   }
+   if(id==="queen-of-swords"){
+    const record=queenRecords[path],previous=readFileSync(`content/queen-swords-update-20261023/previous/${path}`);
+    assert.equal(digest(previous),record.previousFileSha256);
+    assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
     approvedHash=record.articleMarkdownSha256;
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);

@@ -1,0 +1,41 @@
+{
+  "baseCommit": "d22c4bfcce43e8ee9fe6358c1d347e00af1a1c5e",
+  "updatedAt": "2026-10-23",
+  "articles": {
+    "tarot-queen-of-swords": {
+      "notes": {
+        "en": "Added a concise modern meaning and a fictional love-reading comparison using the relationship spread; preserved the image study, historical source discussion and existing cases.",
+        "zh": "补充简明的现代牌义与关系牌阵中的感情案例对照，保留原有读图、历史出处和案例。",
+        "zh-TW": "補充簡明的現代牌義與關係牌陣中的感情案例對照，保留原有讀圖、歷史出處和案例。",
+        "ru": "Добавлены краткое современное значение и вымышленный пример о любви с сопоставлением позиций расклада; сохранены разбор изображения, исторические источники и прежние примеры."
+      }
+    }
+  },
+  "records": {
+    "content/tarot/en/queen-of-swords.json": {
+      "previousFileSha256": "9baa9cb5cab71322d50e7c671c4879e61e810205794eb13b0d6d08adbd10378b",
+      "previousArticleMarkdownSha256": "3a5d1227288477e80218478257e88b536b03540c2398eb499e94caa16e094e9c",
+      "fileSha256": "9865b3b707d5d47f8c1a4a246991a1fbc8f236501caadba741463913acba93c0",
+      "articleMarkdownSha256": "523fe0da8182ad68dbda73fc3c19f7f2083ab4f2c165ab2e8b98b6e1cca3195d"
+    },
+    "content/tarot/zh/queen-of-swords.json": {
+      "previousFileSha256": "e318000404c4213612a1a1ae056af1b3d46341e7ab100408efce2341c95b20be",
+      "previousArticleMarkdownSha256": "7059a1464fd80a60060bf345ac47538570f96405d49f9720f4d512a6e6444822",
+      "fileSha256": "6b25872fdd920b383b616aa93be39b0cecbee4e5d805e48ced6492b7ae108e7c",
+      "articleMarkdownSha256": "56cf323323b59fac22a4ea6d04f4174e5b7654e49929bfa4d3213856435f5727"
+    },
+    "content/tarot/zh-TW/queen-of-swords.json": {
+      "previousFileSha256": "18a152b155cd3da5eff8bda86678801463562ada52746d24feca4bdd760f1a96",
+      "previousArticleMarkdownSha256": "e03428ab2859a8c0ae49d3d802a8ba104f99ade9e0b921676a28c243f79d0b11",
+      "fileSha256": "71222fd616773fa3d4d032ecc1a5ef2aa2111c437c862f442616900b686bc164",
+      "articleMarkdownSha256": "2d1fdc15b151c186542efeed51bf9e6f4c79e9c535289bbf0595d11b19db228c"
+    },
+    "content/tarot/ru/queen-of-swords.json": {
+      "previousFileSha256": "b6deee8358b76998c2d11870e273fafa863c9fa28279272ef071b3d772e4b55a",
+      "previousArticleMarkdownSha256": "caa24aff830c6d637ad1de008552ac79aa70555562e769dc0e761e5b6280d245",
+      "fileSha256": "cb9cb1399c59857f228bcfeed8cf3fc73914b3a2ae1612bc34370c28c7a2ae51",
+      "articleMarkdownSha256": "3784ee916e5105c0938589a7931df370c9b55e77c3b8b9602e93e18da67ad274"
+    }
+  },
+  "scope": "One existing four-language article. Original package provenance remains archived; no claim of human or native review."
+}
