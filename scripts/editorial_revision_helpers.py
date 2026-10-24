@@ -1,4 +1,4 @@
-"""Keep the six sample revisions separate from their original review receipts."""
+"""Keep later editorial revisions separate from their original review receipts."""
 import hashlib
 import json
 import re
@@ -14,6 +14,8 @@ SAMPLE_PATHS = frozenset({
     for locale in ("en", "zh") for card in ("sun", "moon")
 })
 SAMPLE_SLUGS = frozenset({"ding-you-day-pillar", "hexagram-11", "tarot-sun", "tarot-moon"})
+HANGED_MAN_DIR = ROOT / "content/hanged-man-update-20261024"
+HANGED_MAN_PATHS = frozenset(f"content/tarot/{locale}/hanged-man.json" for locale in ("en", "zh"))
 
 
 def sha(raw):
@@ -70,6 +72,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in HANGED_MAN_PATHS:
+        validate_hanged_man_record(path)
+        return (HANGED_MAN_DIR / "previous" / sample_key(path)).read_bytes()
     if not is_sample(path):
         return Path(path).read_bytes()
     validate_sample_record(path)
@@ -81,10 +86,71 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in HANGED_MAN_PATHS:
+        current, _ = validate_hanged_man_record(path)
+        return sha(current["articleMarkdown"])
     if not is_sample(path):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_hanged_man_record(path):
+    """Check the new two-language text and preserve its exact prior receipt."""
+    key = sample_key(path)
+    assert key in HANGED_MAN_PATHS, f"Not a Hanged Man revision: {key}"
+    registry = read(HANGED_MAN_DIR / "revisions.json")
+    assert registry["updatedAt"] == "2026-10-24"
+    assert set(registry["articles"]) == {"tarot-hanged-man"}
+    notes = registry["articles"]["tarot-hanged-man"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(note.strip() for note in notes.values())
+    assert set(registry["records"]) == HANGED_MAN_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+    raw, previous_raw = Path(path).read_bytes(), (HANGED_MAN_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    assert sha(raw) == record["fileSha256"], f"Current Hanged Man file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], key
+    assert sha(previous_raw) == record["previousFileSha256"], f"Historical Hanged Man file differs from receipt: {key}"
+    legacy_hash = read(ROOT / "content/tarot-depth-20261008/revisions.json")["articleMarkdownSha256"][f"{Path(path).parent.name}/hanged-man"]
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == legacy_hash, f"Historical Hanged Man approval changed: {key}"
+    allowed_changes = {"shortAnswer", "sections", "sources", "sourceAppendix", "articleMarkdown", "updatedAt", "editorialRevision"}
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Hanged Man metadata changed: {key}/{field}"
+    assert current["updatedAt"] == "2026-10-24" and current["publishedAt"] == "2026-10-07"
+    assert current["review"]["nativeHumanReview"] is False
+    previous_ids = {section["id"] for section in previous["sections"]}
+    assert [section for section in current["sections"] if section["id"] in previous_ids] == previous["sections"], f"Original Hanged Man text/order/anchors changed: {key}"
+    assert len(current["sections"]) > len(previous["sections"]), f"No substantive Hanged Man section added: {key}"
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], f"Original Hanged Man source receipts changed: {key}"
+    assert len(current["sources"]) > len(previous["sources"])
+    appendix = current["sourceAppendix"]
+    assert all(appendix[field] == value for field, value in previous["sourceAppendix"].items()), f"Original Hanged Man source anchor changed: {key}"
+    md = current["articleMarkdown"]
+    assert md.startswith(f"# {current['title']}\n\n")
+    assert set(current["shortAnswer"]) == {"title", "body"}
+    for text in [*current["shortAnswer"].values(), current["hook"], *current["quickTake"].values()]:
+        assert text.strip() and text in md, f"Hanged Man opening absent from complete Markdown: {key}"
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    ids.append(appendix["id"])
+    assert len(ids) == len(set(ids)), f"Duplicate Hanged Man anchors: {key}"
+    for section in current["sections"]:
+        assert section["bodyMarkdown"].strip()
+        assert f"## {section['title']}\n\n{section['bodyMarkdown']}" in md, f"Hanged Man section absent from complete Markdown: {key}/{section['id']}"
+    for source in current["sources"]:
+        assert source["title"].strip() and source["url"].startswith("https://") and source["url"] in md, f"Missing Hanged Man source: {key}"
+    if appendix.get("summary"):
+        assert appendix["summary"] in md
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_current_tarot_sample(path, schema=None, catalog_entry=None):
