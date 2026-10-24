@@ -13,6 +13,7 @@ import depthManifest from "@/content/tarot-depth-20261008/revisions.json";
 import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.json";
 import linkMaintenance from "@/content/tarot-link-maintenance-20261019.json";
 import queenRevision from "@/content/queen-swords-update-20261023/revisions.json";
+import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -21,7 +22,9 @@ test("every real cast ID resolves to the complete correct-language article witho
  const linkPaths=new Set(journalLocales.map(locale=>`content/tarot/${locale}/death.json`));
  const linkRecords:Record<string,{previousArticleMarkdownSha256:string;articleMarkdownSha256:string}>=linkMaintenance.records;
  const queenRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=queenRevision.records;
+ const hangedManRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=hangedManRevision.records;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
+ assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -59,6 +62,27 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
     assert.equal(record.previousArticleMarkdownSha256,approvedHash);
     assert.equal(digest(readFileSync(path)),record.fileSha256);
+    approvedHash=record.articleMarkdownSha256;
+   }
+   if(Object.hasOwn(hangedManRecords,path)){
+    const record=hangedManRecords[path],previousRaw=readFileSync(`content/hanged-man-update-20261024/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString());
+    const current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    for(const field of ["cardId","locale","deckOrder","number","title","hook","quickTake","keywords","relatedCards","image","contentProvenance","review","publicationStatus","publishedAt","legacyIntroAnchors","legacyRelatedAnchors"]){
+     assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    }
+    assert.equal(current.updatedAt,"2026-10-24");
+    assert.ok(current.shortAnswer?.title && current.shortAnswer?.body,`${path}: direct answer missing`);
+    assert.ok(current.articleMarkdown.includes(current.shortAnswer.body),`${path}: direct answer absent from complete Markdown`);
+    const retainedIds=new Set(previous.sections.map((section:{id:string})=>section.id));
+    assert.deepEqual(current.sections.filter((section:{id:string})=>retainedIds.has(section.id)),previous.sections,`${path}: original section text, order or anchors changed`);
+    assert.ok(current.sections.length>previous.sections.length,`${path}: no substantive section added`);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.ok(current.sources.length>previous.sources.length,`${path}: no additional sources`);
     approvedHash=record.articleMarkdownSha256;
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);
