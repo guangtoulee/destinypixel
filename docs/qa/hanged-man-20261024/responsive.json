@@ -1,0 +1,492 @@
+{
+  "base": "http://127.0.0.1:3048",
+  "scope": "Public GETs and browser interactions; no AI request, account write or payment",
+  "http": [
+    {
+      "locale": "en",
+      "status": 200,
+      "sections": 12,
+      "completeText": true,
+      "sourceLinks": true,
+      "sitemapDate": true
+    },
+    {
+      "locale": "zh",
+      "status": 200,
+      "sections": 12,
+      "completeText": true,
+      "sourceLinks": true,
+      "sitemapDate": true
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "sections": 9,
+      "completeText": true,
+      "sourceLinks": true,
+      "sitemapDate": true
+    },
+    {
+      "locale": "ru",
+      "status": 200,
+      "sections": 9,
+      "completeText": true,
+      "sourceLinks": true,
+      "sitemapDate": true
+    }
+  ],
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "images": true,
+      "allTocAnchors": true
+    }
+  ],
+  "interactions": [
+    "English → Chinese → Back → Forward preserves title, description, main language and canonical",
+    "Chinese related teaching links reach the actual three-card and journal pages",
+    "Chinese article CTA → Free table → no reversals → shuffle → draw → reveal → rotate 15° keeps upright → orientation switch reverses face and label"
+  ],
+  "screenshots": [
+    "article-en-1440.png",
+    "article-zh-390.png"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    }
+  ],
+  "responseErrors": [
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    }
+  ],
+  "blockedRequests": [],
+  "internalLinkCount": 17,
+  "localTelemetry404s": [
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/insights/script.js"
+    },
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:3048/_vercel/speed-insights/script.js"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-10-24T12:12:50.219Z"
+}

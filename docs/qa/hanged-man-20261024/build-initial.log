@@ -1,0 +1,49 @@
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 87ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+Failed to compile.
+
+./app/journal/[slug]/page.tsx
+Module not found: Can't resolve 'react-markdown'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/ocean/deepsea/media/[...path]/route.ts
+Module not found: Can't resolve '@vercel/blob'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/ocean/media/[...path]/route.ts
+Module not found: Can't resolve '@vercel/blob'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./components/hexagram-learning-article.tsx
+Module not found: Can't resolve 'react-markdown'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/journal/[slug]/page.tsx
+
+./components/tarot-learning-article.tsx
+Module not found: Can't resolve 'react-markdown'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/journal/[slug]/page.tsx
+
+
+> Build failed because of webpack errors
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
