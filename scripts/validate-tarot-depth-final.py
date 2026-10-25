@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+from editorial_revision_helpers import historical_record
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "content/tarot-depth-20261008"
@@ -48,7 +49,7 @@ for item in manifest["files"]:
         assert edition["sourceBodySha256"] in accepted
         assert sha(edition["bodyMarkdown"]) == edition["translatedBodySha256"] == index["translatedBodySha256"]
         assert read(DATA / "editions" / f"{key}.json") == edition, f"Candidate or rewritten edition installed: {key}"
-        article = read(ROOT / "content/tarot" / f"{key}.json")
+        article = historical_record(ROOT / "content/tarot" / f"{key}.json")
         assert article["articleMarkdown"] == f"# {edition['title']}\n\n{edition['bodyMarkdown']}"
         assert article["sources"] == edition["sources"]
         assert [s.get("url") for s in edition["sources"]] == [s.get("url") for s in sources[card]["sources"]]

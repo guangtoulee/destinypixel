@@ -11,6 +11,7 @@ import secondBatchPreviousEditions from "@/content/day-pillar-people/second-batc
 import tarotDepth from "@/content/tarot-depth-20261008/revisions.json";
 import queenSwordsRevision from "@/content/queen-swords-update-20261023/revisions.json";
 import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
+import starRevision from "@/content/star-update-20261025/revisions.json";
 import { editorialModifiedAt, editorialUpdate } from "./editorial-updates";
 import { hexagramMetadata, hexagramModifiedAt } from "./hexagram-learning/metadata";
 import { hexagramIds } from "./hexagram-learning/identity";
@@ -40,8 +41,8 @@ const previousDates: Record<string, string> = {
 };
 const revisedUrls = new Map(firstRevisedSlugs.flatMap(slug => revisedLocales.map(locale => [absoluteUrl(journalHref(locale, slug)), previousDates[slug]] as const)));
 const digest = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
-const isRevised = (slug: string, locale: ReportLocale) => slug === "tarot-queen-of-swords" || (slug === "tarot-hanged-man" || revisedSlugs.includes(slug)) && revisedLocales.includes(locale);
-const expectedDate = (slug: string, locale: ReportLocale, previous: string) => slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
+const isRevised = (slug: string, locale: ReportLocale) => slug === "tarot-queen-of-swords" || (slug === "tarot-star" || slug === "tarot-hanged-man" || revisedSlugs.includes(slug)) && revisedLocales.includes(locale);
+const expectedDate = (slug: string, locale: ReportLocale, previous: string) => slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-star" ? "2026-10-25" : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
 const modifiedTime = (metadata: Metadata) => metadata.openGraph && "modifiedTime" in metadata.openGraph ? metadata.openGraph.modifiedTime : undefined;
 
 // Membership independently checked against `git archive 179c14e1f6d5bf19a244adeaef84d13ba79ce4b1`:
@@ -73,6 +74,7 @@ const afterFirstDates = new Map([
   ...Object.entries(laterSharedJournalDates).flatMap(([slug, dates]) => journalLocales.map(locale => [absoluteUrl(journalHref(locale, slug)), dates.previous] as const)),
   ...journalLocales.map(locale => [absoluteUrl(journalHref(locale, "tarot-queen-of-swords")), "2026-10-08"] as const),
   ...revisedLocales.map(locale => [absoluteUrl(journalHref(locale, "tarot-hanged-man")), "2026-10-08"] as const),
+  ...revisedLocales.map(locale => [absoluteUrl(journalHref(locale, "tarot-star")), "2026-10-08"] as const),
 ]);
 
 // Project today's sitemap onto the independently captured first-rollout scope.
@@ -119,6 +121,11 @@ test("revision registries apply only to their actually edited language editions"
   assert.deepEqual(Object.keys(hangedManRevision.articles), ["tarot-hanged-man"]);
   assert.deepEqual(Object.keys(hangedManRevision.articles["tarot-hanged-man"].notes).sort(), revisedLocales);
   for (const locale of revisedLocales) assert.ok(hangedManRevision.articles["tarot-hanged-man"].notes[locale as keyof typeof hangedManRevision.articles["tarot-hanged-man"]["notes"]].trim());
+  assert.equal(starRevision.baseCommit, "892ecef8aa32f0c97bb4200548a943db5fffa81b");
+  assert.equal(starRevision.updatedAt, "2026-10-25");
+  assert.deepEqual(Object.keys(starRevision.articles), ["tarot-star"]);
+  assert.deepEqual(Object.keys(starRevision.articles["tarot-star"].notes).sort(), revisedLocales);
+  for (const locale of revisedLocales) assert.ok(starRevision.articles["tarot-star"].notes[locale as keyof typeof starRevision.articles["tarot-star"]["notes"]].trim());
   const knownSlugs = new Set([...journalArticles.map(article => article.slug), "day-pillars", ...hexagramIds, ...tarotLearningIds.map(tarotLearningSlug)]);
   for (const slug of [...knownSlugs, "missing", "__proto__", "constructor", "toString"]) {
     for (const locale of journalLocales) {
