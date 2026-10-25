@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/lee/Documents/Codex/2026-10-22/task/destinypixel-methods/./scripts/validate-tarot-depth-content.py", line 174, in <module>
+    assert article["articleMarkdown"] == f"# {edition['title']}\n\n{body}"
+AssertionError

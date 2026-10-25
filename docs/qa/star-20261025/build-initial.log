@@ -1,0 +1,75 @@
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 588ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.3s
+  Running TypeScript ...
+error TS2688: Cannot find type definition file for 'debug 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'debug 2'
+error TS2688: Cannot find type definition file for 'draco3d 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'draco3d 2'
+error TS2688: Cannot find type definition file for 'estree 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'estree 2'
+error TS2688: Cannot find type definition file for 'estree-jsx 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'estree-jsx 2'
+error TS2688: Cannot find type definition file for 'hast 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'hast 2'
+error TS2688: Cannot find type definition file for 'json-schema 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'json-schema 2'
+error TS2688: Cannot find type definition file for 'json5 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'json5 2'
+error TS2688: Cannot find type definition file for 'mdast 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'mdast 2'
+error TS2688: Cannot find type definition file for 'ms 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'ms 2'
+error TS2688: Cannot find type definition file for 'node 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'node 2'
+error TS2688: Cannot find type definition file for 'offscreencanvas 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'offscreencanvas 2'
+error TS2688: Cannot find type definition file for 'pako 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'pako 2'
+error TS2688: Cannot find type definition file for 'raf 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'raf 2'
+error TS2688: Cannot find type definition file for 'react 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'react 2'
+error TS2688: Cannot find type definition file for 'react-dom 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'react-dom 2'
+error TS2688: Cannot find type definition file for 'react-reconciler 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'react-reconciler 2'
+error TS2688: Cannot find type definition file for 'stats 2.js'.
+  The file is in the program because:
+    Entry point for implicit type library 'stats 2.js'
+error TS2688: Cannot find type definition file for 'three 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'three 2'
+error TS2688: Cannot find type definition file for 'trusted-types 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'trusted-types 2'
+error TS2688: Cannot find type definition file for 'unist 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'unist 2'
+error TS2688: Cannot find type definition file for 'webxr 2'.
+  The file is in the program because:
+    Entry point for implicit type library 'webxr 2'
+Failed to type check.
