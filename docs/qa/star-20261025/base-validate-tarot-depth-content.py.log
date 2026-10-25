@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tmp/star-base-20261025/scripts/validate-tarot-depth-content.py", line 174, in <module>
+    assert article["articleMarkdown"] == f"# {edition['title']}\n\n{body}"
+AssertionError

@@ -35,9 +35,11 @@ async function main() {
   }).sort();
   assert.deepEqual(editionKeys, expectedKeys, "Edition manifest differs from per-card locale declarations");
   assert.deepEqual(editionKeys, Object.keys(revisions.articleMarkdownSha256).sort());
+  const selectedKeys = process.argv[3] ? editionKeys.filter(key => key.split("/")[1] === process.argv[3]) : editionKeys;
+  assert.ok(selectedKeys.length, "No declared card editions matched the requested card ID");
   const sitemap = editionKeys.length ? decode(await get("/sitemap.xml")) : "";
   let checked = 0;
-  for (const key of editionKeys) {
+  for (const key of selectedKeys) {
     const [locale, id] = key.split("/");
     const article = JSON.parse(readFileSync(`content/tarot/${locale}/${id}.json`, "utf8"));
     const page = await get(href(id, locale));
@@ -47,6 +49,9 @@ async function main() {
     assert.equal(text(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? ""), plainText(article.title), `${key}: visible title mismatch`);
     for (const paragraph of [article.quickTake.upright, article.quickTake.reversed, article.hook, ...article.openingParagraphs]) {
       assert.ok(visible.includes(plainText(paragraph)), `${key}: quick take or opening paragraph omitted`);
+    }
+    if (article.shortAnswer) for (const paragraph of Object.values(article.shortAnswer) as string[]) {
+      assert.ok(visible.includes(plainText(paragraph)), `${key}: direct answer omitted`);
     }
     const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(ids.length, new Set(ids).size, `${key}: duplicate anchors`);
@@ -71,6 +76,7 @@ async function main() {
       const appendix = article.sourceAppendix;
       const rendered = html.match(new RegExp(`<section[^>]*data-learning-source-appendix="${escapePattern(appendix.id)}"[^>]*>([\\s\\S]*?)<\\/section>`))?.[1];
       assert.ok(rendered, `${key}: missing sources appendix`);
+      if (appendix.summary) assert.ok(text(rendered).includes(plainText(appendix.summary)), `${key}: source summary omitted`);
       assert.ok(ids.includes(appendix.id), `${key}: missing appendix legacy anchor`);
       assert.ok(html.includes(`href="#${appendix.id}"`), `${key}: source appendix missing from contents`);
       assert.equal(text(rendered.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? ""), plainText(appendix.title));
@@ -99,7 +105,7 @@ async function main() {
     assert.ok(sitemap.includes(`<loc>${origin + href(id, locale)}</loc>`), `${key}: missing sitemap URL`);
     checked++;
   }
-  console.log(`PASS ${checked} revised editions (${editionKeys.filter(key => key.startsWith("zh/")).length} Chinese): full sections, openings, quick takes, two cases, complete source appendices, old anchors, dates, citations, canonical/hreflang and sitemap`);
+  console.log(`PASS ${checked} selected editions (${selectedKeys.filter(key => key.startsWith("zh/")).length} Chinese): full sections, direct answers, openings, quick takes, two cases, complete source appendices, old anchors, dates, citations, canonical/hreflang and sitemap`);
   console.log("Only declared revised editions were checked; run the full learning-library regression separately for unchanged languages and cards.");
 }
 

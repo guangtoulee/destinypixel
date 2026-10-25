@@ -1,0 +1,4 @@
+base validate-tarot-depth-content.py AssertionError line 174 {'key': 'zh/death', 'card': 'death', 'locale': 'zh'}
+base validate-tarot-depth-final.py AssertionError line 52 {'key': 'zh-TW/death', 'card': 'death', 'locale': 'zh-TW'}
+current validate-tarot-depth-content.py AssertionError line 174 {'key': 'zh/death', 'card': 'death', 'locale': 'zh'}
+current validate-tarot-depth-final.py AssertionError line 53 {'key': 'zh-TW/death', 'card': 'death', 'locale': 'zh-TW'}
