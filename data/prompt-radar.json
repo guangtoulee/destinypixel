@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-10-27T13:29:08.996Z",
+  "updatedAt": "2026-10-27T18:53:51.397Z",
   "sourceSummary": {
-    "community": 1415,
+    "community": 1420,
     "publicX": 580,
-    "total": 1995
+    "total": 2000
   },
   "items": [
     {
@@ -24446,18 +24446,181 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2114943235789586498",
+      "title": "个人资料 / 头像 - 分屏照片转动漫风格提示词",
+      "description": "适用于 GPT Image 2 的提示词，可将上传的照片转换为分屏图像：左半部分保持写实风格，右半部分则重新构想为带有手绘涂鸦的可爱动漫插画。",
+      "prompt": "将上传的照片转化为精美的分屏插画，一半写实、一半动漫风格，呈现可爱俏皮的手绘美感。\n\n构图与格式\n采用 3:4 竖版比例。生成一张视觉连贯的完整图像，从画面中央垂直分割，分割线为不规则的撕纸白边。左半部分保留原照片的写实摄影细节，右半部分则将同一张照片重新演绎为精致的高品质日系动漫风数字插画。左右两半必须完美对齐，主体、姿势、面部朝向、发型、服装、配饰、拍摄角度及背景位置均保持一致。撕纸边缘需呈现自然撕裂的效果，带有粗糙的白色纤维和不规则的有机形状。\n\n左半部分 —— 原始照片\n尽可能忠实地还原上传的照片。保留人物的原有特征、五官、肤色、发型、表情、服装、配饰、姿势、光线和环境。维持写实的摄影质感、自然阴影和真实色彩。在人物周围添加少量精致的手绘涂鸦，注意不要遮挡重要的面部特征。\n\n右半部分 —— 动漫插画\n以精致的日系动漫插画风格重现同一场景，并融入柔和的韩系条漫美学。保留人物可辨识的特征与原始外貌。使用干净且富有表现力的线条、细腻的面部刻画、柔和的肤质渲染、淡淡的腮红、丝丝分明的秀发、轻柔的高光、平滑的阴影过渡以及精致的色彩渐变。确保原有的服装和配饰清晰可辨。将背景转化为柔和插画风格的原始环境，同时保留其构图与氛围。\n\n可爱手绘涂鸦\n在插画一侧直接叠加迷人多彩的手绘涂鸦进行装饰：\n- 粉色和红色的小爱心。\n- 黄色与金色的星星、闪光和花朵轮廓。\n- 白色或马卡龙色系的迷你卡通猫咪和小兔子。\n- 蓝色纸飞机、虚线飞行轨迹和俏皮的符号。\n- 手绘曲线、小皇冠、欢快的点缀元素和充满奇思妙想的装饰标记。\n\n采用随性的手账速写风格，线条略带不完美的手工感，搭配类似贴纸的细微描边，并使用婴儿蓝、樱花粉、奶油黄、米白和纯白等和谐柔和的马卡龙色系。让涂鸦自然地分布在人物周围，顺应整体构图，切勿遮挡面部。\n\n艺术指导\n可爱、梦幻、青春、浪漫、俏皮且极具美感。将真实的摄影作品与高品质的动漫同人插画、手账风涂鸦艺术巧妙结合。注重细腻的细节刻画、柔和的自然光线、均衡的色彩搭配，呈现干净专业的最终效果。\n\n重要规则\n1. 保留原图中人物的身份特征与可辨识的外貌。\n2. 左半部分保持照片的写实",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087718822_6znpxj_HVnJpvabkAAAECJ.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2114943235789586498",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-10-27T12:00:00.000Z",
+      "importedAt": "2026-10-27T18:53:47.649Z",
+      "tags": [
+        "GPT Image 2",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36952",
+      "rawText": "将上传的照片转化为精美的分屏插画，一半写实、一半动漫风格，呈现可爱俏皮的手绘美感。\n\n构图与格式\n采用 3:4 竖版比例。生成一张视觉连贯的完整图像，从画面中央垂直分割，分割线为不规则的撕纸白边。左半部分保留原照片的写实摄影细节，右半部分则将同一张照片重新演绎为精致的高品质日系动漫风数字插画。左右两半必须完美对齐，主体、姿势、面部朝向、发型、服装、配饰、拍摄角度及背景位置均保持一致。撕纸边缘需呈现自然撕裂的效果，带有粗糙的白色纤维和不规则的有机形状。\n\n左半部分 —— 原始照片\n尽可能忠实地还原上传的照片。保留人物的原有特征、五官、肤色、发型、表情、服装、配饰、姿势、光线和环境。维持写实的摄影质感、自然阴影和真实色彩。在人物周围添加少量精致的手绘涂鸦，注意不要遮挡重要的面部特征。\n\n右半部分 —— 动漫插画\n以精致的日系动漫插画风格重现同一场景，并融入柔和的韩系条漫美学。保留人物可辨识的特征与原始外貌。使用干净且富有表现力的线条、细腻的面部刻画、柔和的肤质渲染、淡淡的腮红、丝丝分明的秀发、轻柔的高光、平滑的阴影过渡以及精致的色彩渐变。确保原有的服装和配饰清晰可辨。将背景转化为柔和插画风格的原始环境，同时保留其构图与氛围。\n\n可爱手绘涂鸦\n在插画一侧直接叠加迷人多彩的手绘涂鸦进行装饰：\n- 粉色和红色的小爱心。\n- 黄色与金色的星星、闪光和花朵轮廓。\n- 白色或马卡龙色系的迷你卡通猫咪和小兔子。\n- 蓝色纸飞机、虚线飞行轨迹和俏皮的符号。\n- 手绘曲线、小皇冠、欢快的点缀元素和充满奇思妙想的装饰标记。\n\n采用随性的手账速写风格，线条略带不完美的手工感，搭配类似贴纸的细微描边，并使用婴儿蓝、樱花粉、奶油黄、米白和纯白等和谐柔和的马卡龙色系。让涂鸦自然地分布在人物周围，顺应整体构图，切勿遮挡面部。\n\n艺术指导\n可爱、梦幻、青春、浪漫、俏皮且极具美感。将真实的摄影作品与高品质的动漫同人插画、手账风涂鸦艺术巧妙结合。注重细腻的细节刻画、柔和的自然光线、均衡的色彩搭配，呈现干净专业的最终效果。\n\n重要规则\n1. 保留原图中人物的身份特征与可辨识的外貌。\n2. 左半部分保持照片的写实"
+    },
+    {
+      "id": "community-2114916244704891346",
+      "title": "社交媒体帖子 - 蜂蜜蜡烛裙万圣节女孩",
+      "description": "生成一位穿着融化蜂蜜色蜡烛裙的女孩，带有蜡质细节和火焰图案，营造甜美奇幻的万圣节主题。",
+      "prompt": "一个女孩穿着滴蜡造型的连衣裙庆祝万圣节。服装是一件蜂蜜色的露肩迷你裙。肩膀和裙摆边缘装饰着仿白色蜡油滴落的立体细节。蜡面带有微微的光泽，上面零星点缀着小火焰图案。\n腰间系着一条细黑丝带。没有披风。头上没戴帽子。脖子上挂着一个蜡烛小吊坠。\n颜色：蜂蜜色、白色、浅橙色、夜蓝色。全身视角，角度需能清晰展现滴蜡细节。恬静的微笑。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087720676_lrqqmw_HVjaxw1bcAExo7n.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ArtistaNozomu/status/2114916244704891346",
+      "sourceType": "community",
+      "authorName": "のぞむ＊AIイラスト",
+      "authorHandle": "@ArtistaNozomu",
+      "createdAt": "2026-10-27T12:00:00.000Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36954",
+      "rawText": "一个女孩穿着滴蜡造型的连衣裙庆祝万圣节。服装是一件蜂蜜色的露肩迷你裙。肩膀和裙摆边缘装饰着仿白色蜡油滴落的立体细节。蜡面带有微微的光泽，上面零星点缀着小火焰图案。\n腰间系着一条细黑丝带。没有披风。头上没戴帽子。脖子上挂着一个蜡烛小吊坠。\n颜色：蜂蜜色、白色、浅橙色、夜蓝色。全身视角，角度需能清晰展现滴蜡细节。恬静的微笑。"
+    },
+    {
+      "id": "community-2114916073246237022",
+      "title": "社交媒体帖子 - 温馨晨间插画",
+      "description": "手绘水彩风格插画，描绘女孩在床上伸展、猫咪安睡的场景，暖色调灯光搭配关于慢生活的中文励志文字。",
+      "prompt": "一幅温馨的手绘插画，采用舒适的水彩风格，描绘了一位年轻女子在床上醒来的场景。她留着一头凌乱的深色头发，身穿一件宽松的白色长袖衬衫和灰色格纹睡裤，脚上穿着袜子。她坐在木质床架的边缘，闭着双眼，神情安详，双臂高高举过头顶伸着懒腰。床上铺着皱巴巴的白色床单，放着蓝色枕头和一个格子图案的抱枕。一只橘猫蜷缩在床尾熟睡。画面左侧有一个小巧的木质床头柜，上面摆着一个蓝色闹钟、一个印有花朵图案的白色马克杯和一摞书。一株垂蔓绿植从床头柜一侧垂落下来。背景中，一扇窗户透进明亮的阳光，照亮了整个房间。床边的地板上放着一双条纹拖鞋。图片顶部是醒目的红色手写中文大字“早安，慢一点也没关系”。下方是较小的黑色文字“醒来这件事，可以慢慢进行。”左下角是小号英文“MORNING MOOD POSTER / good morning”，紧接着是中文“给今天留一个温柔开场”。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087725363_486mq1_HVmvpNpa4AAquD0.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/xiaoxiaodong/status/2114916073246237022#reversed-0",
+      "sourceType": "community",
+      "authorName": "小小东",
+      "authorHandle": "@xiaoxiaodong",
+      "createdAt": "2026-10-27T12:00:00.000Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
+      "tags": [
+        "平面设计"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36960",
+      "rawText": "一幅温馨的手绘插画，采用舒适的水彩风格，描绘了一位年轻女子在床上醒来的场景。她留着一头凌乱的深色头发，身穿一件宽松的白色长袖衬衫和灰色格纹睡裤，脚上穿着袜子。她坐在木质床架的边缘，闭着双眼，神情安详，双臂高高举过头顶伸着懒腰。床上铺着皱巴巴的白色床单，放着蓝色枕头和一个格子图案的抱枕。一只橘猫蜷缩在床尾熟睡。画面左侧有一个小巧的木质床头柜，上面摆着一个蓝色闹钟、一个印有花朵图案的白色马克杯和一摞书。一株垂蔓绿植从床头柜一侧垂落下来。背景中，一扇窗户透进明亮的阳光，照亮了整个房间。床边的地板上放着一双条纹拖鞋。图片顶部是醒目的红色手写中文大字“早安，慢一点也没关系”。下方是较小的黑色文字“醒来这件事，可以慢慢进行。”左下角是小号英文“MORNING MOOD POSTER / good morning”，紧接着是中文“给今天留一个温柔开场”。"
+    },
+    {
+      "id": "community-2114915979922981184",
+      "title": "社交媒体帖子 - 地铁抓拍照片提示词",
+      "description": "使用 GPT-image-2 生成逼真的地铁女性抓拍照片的提示词。",
+      "prompt": "地铁上一位漂亮女子正在看手机；一张抓拍照片。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087720398_w72rqu_HVmwGTAaoAA12mz.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/supereasyit/status/2114915979922981184",
+      "sourceType": "community",
+      "authorName": "山上有松",
+      "authorHandle": "@supereasyit",
+      "createdAt": "2026-10-27T12:00:00.000Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36953",
+      "rawText": "地铁上一位漂亮女子正在看手机；一张抓拍照片。"
+    },
+    {
       "id": "community-2114577443139047671",
       "title": "个人资料 / 头像 - GPT Image 2 微缩强制透视提示词",
       "description": "用于生成超写实俯拍照片的提示词，通过强制透视效果，基于自拍参考图创建微缩身体和巨大头部的视觉效果。",
       "prompt": "根据上传的自拍照片，生成一张 1:1 正方形、超写实的俯拍照片。该自拍是确认人物身份的唯一参考依据。请保留清晰可辨的成人面部特征、自然的面部比例、肤色、发型、原始表情、可见衣物（包括原有图案）以及配饰。对于画面中未露出的裤子和鞋子，请自然地补全，使其与原有穿搭保持一致。\n\n相机与环境\n将相机置于人物几乎正上方，垂直向下俯拍。场景为干净、宽敞的浅色室内石材地面或室外铺装路面，整体风格需与原自拍的美学氛围相契合。使用大尺寸铺路石板，整个画面中仅出现 2–3 条细窄且间距较宽的接缝。每块石板的尺寸约为微缩全身人像高度的两倍。石材纹理应保持细腻低调，画面中不得出现任何道具、植物或杂物。画面上边缘可隐约露出远处的墙根。\n\n构图与比例\n画面中仅有一人，位置略低于中心点，从头到脚完整可见。整个人物仅占画面高度的 40%，头部上方及两侧留出大面积的地面留白。\n\n运用超广角强制透视手法，打造出巨大逼真的头部与微缩的身体。从头顶到下巴，头部占人物整体轮廓高度的 75%。肩宽仅为头宽的 50%。头部以下，呈现极短且窄小的躯干、微缩的手臂、因透视压缩而显得短小的双腿，以及两只紧挨在一起的迷你鞋子。\n\n头部与身体必须无缝衔接。双臂自然下垂并贴近身体两侧。人物微微仰头，直视位于高处的相机镜头。请保持真实的人体面部结构、自然的皮肤纹理和栩栩如生的双眼。严禁出现任何卡通风格或拼贴效果。\n\n光影与写实感\n采用自然光照，呈现逼真的发丝细节、真实的布料质感、精细的石材表面、符合物理规律的接触阴影以及淡淡的胶片颗粒感。最终图像必须看起来像是用真实相机拍摄的照片。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793001762385_2hrqpq_HVh8-JmbcAAEdKA.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087720383_l1uvaf_HVh8-JmbcAAEdKA.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/Sairah_0/status/2114577443139047671",
       "sourceType": "community",
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-26T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.295Z",
+      "importedAt": "2026-10-27T18:53:47.650Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -24488,6 +24651,48 @@
       "rawText": "根据上传的自拍照片，生成一张 1:1 正方形、超写实的俯拍照片。该自拍是确认人物身份的唯一参考依据。请保留清晰可辨的成人面部特征、自然的面部比例、肤色、发型、原始表情、可见衣物（包括原有图案）以及配饰。对于画面中未露出的裤子和鞋子，请自然地补全，使其与原有穿搭保持一致。\n\n相机与环境\n将相机置于人物几乎正上方，垂直向下俯拍。场景为干净、宽敞的浅色室内石材地面或室外铺装路面，整体风格需与原自拍的美学氛围相契合。使用大尺寸铺路石板，整个画面中仅出现 2–3 条细窄且间距较宽的接缝。每块石板的尺寸约为微缩全身人像高度的两倍。石材纹理应保持细腻低调，画面中不得出现任何道具、植物或杂物。画面上边缘可隐约露出远处的墙根。\n\n构图与比例\n画面中仅有一人，位置略低于中心点，从头到脚完整可见。整个人物仅占画面高度的 40%，头部上方及两侧留出大面积的地面留白。\n\n运用超广角强制透视手法，打造出巨大逼真的头部与微缩的身体。从头顶到下巴，头部占人物整体轮廓高度的 75%。肩宽仅为头宽的 50%。头部以下，呈现极短且窄小的躯干、微缩的手臂、因透视压缩而显得短小的双腿，以及两只紧挨在一起的迷你鞋子。\n\n头部与身体必须无缝衔接。双臂自然下垂并贴近身体两侧。人物微微仰头，直视位于高处的相机镜头。请保持真实的人体面部结构、自然的皮肤纹理和栩栩如生的双眼。严禁出现任何卡通风格或拼贴效果。\n\n光影与写实感\n采用自然光照，呈现逼真的发丝细节、真实的布料质感、精细的石材表面、符合物理规律的接触阴影以及淡淡的胶片颗粒感。最终图像必须看起来像是用真实相机拍摄的照片。"
     },
     {
+      "id": "community-2114728293043974173",
+      "title": "社交媒体帖子 - 带人像的逼真挂历",
+      "description": "用于生成包含上传人像照片的电影风格逼真挂历的提示词。",
+      "prompt": "生成一本逼真的挂历，悬挂在带有纹理的混凝土墙面上，外搭温暖的木质画框。上半部分展示我上传的人像照片，采用柔和的电影感风格，浅景深效果，背景点缀温暖的散景光斑，肤色自然真实，人物神态从容自信。下半部分呈现简洁现代的日历排版，显示当前日期：左侧为加粗的月份文字，右侧为年份，下方是排列整齐的日期网格，星期日到星期六标注清晰。整体采用极简的米色与棕色配色方案，字体优雅考究，纸张纹理逼真，柔和的自然阳光投下淡淡的阴影，呈现出高端生活方式摄影质感，超高分辨率。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793087722593_sl63ga_HVkGKtYb0AATnry.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/aniyaintel/status/2114728293043974173",
+      "sourceType": "community",
+      "authorName": "Aniya Intelligence",
+      "authorHandle": "@aniyaintel",
+      "createdAt": "2026-10-26T12:00:00.000Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=36957",
+      "rawText": "生成一本逼真的挂历，悬挂在带有纹理的混凝土墙面上，外搭温暖的木质画框。上半部分展示我上传的人像照片，采用柔和的电影感风格，浅景深效果，背景点缀温暖的散景光斑，肤色自然真实，人物神态从容自信。下半部分呈现简洁现代的日历排版，显示当前日期：左侧为加粗的月份文字，右侧为年份，下方是排列整齐的日期网格，星期日到星期六标注清晰。整体采用极简的米色与棕色配色方案，字体优雅考究，纸张纹理逼真，柔和的自然阳光投下淡淡的阴影，呈现出高端生活方式摄影质感，超高分辨率。"
+    },
+    {
       "id": "community-2114356398108618940",
       "title": "个人资料 / 头像 - 水豚柚子温泉贴纸",
       "description": "可爱风格的水豚贴纸插画，展示了一只水豚在柚子浴中放松，头顶叠放着水果。",
@@ -24499,7 +24704,7 @@
       "authorName": "AI Art Alley",
       "authorHandle": "@aiartalley",
       "createdAt": "2026-10-25T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.296Z",
+      "importedAt": "2026-10-27T18:53:47.650Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -24538,7 +24743,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-25T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.650Z",
       "tags": [
         "人像",
         "摄影"
@@ -24580,7 +24785,7 @@
       "authorName": "Sophie",
       "authorHandle": "@Itx_Sophie",
       "createdAt": "2026-10-25T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像"
       ],
@@ -24701,7 +24906,7 @@
       "authorName": "Sophie",
       "authorHandle": "@Itx_Sophie",
       "createdAt": "2026-10-24T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -24990,7 +25195,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-23T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像"
       ],
@@ -25031,7 +25236,7 @@
       "authorName": "Shahid Wani",
       "authorHandle": "@meng_dagg695",
       "createdAt": "2026-10-23T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25239,7 +25444,7 @@
       "authorName": "Eris Create Lab",
       "authorHandle": "@Eris_Create_Lab",
       "createdAt": "2026-10-22T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.297Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25442,7 +25647,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-21T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像"
       ],
@@ -25483,7 +25688,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-21T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像"
       ],
@@ -25806,7 +26011,7 @@
       "authorName": "Ibrahim Kamara · Travail & Argent",
       "authorHandle": "@Ibrakamara6",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像",
         "摄影"
@@ -25848,7 +26053,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25887,7 +26092,7 @@
       "authorName": "AI art gallery",
       "authorHandle": "@sandmrk",
       "createdAt": "2026-10-20T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像",
         "东方美学",
@@ -25972,7 +26177,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.298Z",
+      "importedAt": "2026-10-27T18:53:47.651Z",
       "tags": [
         "人像",
         "摄影"
@@ -26014,7 +26219,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.299Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26055,7 +26260,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.299Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26545,7 +26750,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.299Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26586,7 +26791,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-16T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.299Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26710,7 +26915,7 @@
       "authorName": "AI Art Alley",
       "authorHandle": "@aiartalley",
       "createdAt": "2026-10-15T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.299Z",
+      "importedAt": "2026-10-27T18:53:47.652Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -83684,7 +83889,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.306Z",
+      "importedAt": "2026-10-27T18:53:47.656Z",
       "tags": [
         "产品",
         "平面设计",
@@ -83727,7 +83932,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.306Z",
+      "importedAt": "2026-10-27T18:53:47.656Z",
       "tags": [
         "平面设计"
       ],
@@ -83768,7 +83973,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-10-27T13:29:03.306Z",
+      "importedAt": "2026-10-27T18:53:47.656Z",
       "tags": [
         "平面设计"
       ],
