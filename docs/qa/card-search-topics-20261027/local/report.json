@@ -1,0 +1,220 @@
+{
+  "base": "http://127.0.0.1:3047",
+  "browser": "156.0.8078.48",
+  "search": [
+    {
+      "locale": "en",
+      "fixtureCount": 19,
+      "clearAndKeyboard": true,
+      "guideLinkAndBack": true,
+      "languageSwitchAndBack": true,
+      "pageErrors": []
+    },
+    {
+      "locale": "zh",
+      "fixtureCount": 19,
+      "clearAndKeyboard": true,
+      "guideLinkAndBack": true,
+      "languageSwitchAndBack": true,
+      "pageErrors": []
+    },
+    {
+      "locale": "zh-TW",
+      "fixtureCount": 19,
+      "clearAndKeyboard": true,
+      "guideLinkAndBack": true,
+      "languageSwitchAndBack": true,
+      "pageErrors": []
+    },
+    {
+      "locale": "ru",
+      "fixtureCount": 19,
+      "clearAndKeyboard": true,
+      "guideLinkAndBack": true,
+      "languageSwitchAndBack": true,
+      "pageErrors": []
+    }
+  ],
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 320,
+      "height": 568,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 390,
+      "height": 844,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 1440,
+      "height": 900,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 568,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 900,
+      "directoryAndResult": true,
+      "horizontalOverflow": false
+    }
+  ],
+  "ssr": [
+    {
+      "locale": "en",
+      "cardCount": 78,
+      "fullGuideLinks": 78,
+      "quickTakePairs": 78,
+      "fiveAnchors": true,
+      "metadata": true,
+      "landscape": true
+    },
+    {
+      "locale": "zh",
+      "cardCount": 78,
+      "fullGuideLinks": 78,
+      "quickTakePairs": 78,
+      "fiveAnchors": true,
+      "metadata": true,
+      "landscape": true
+    },
+    {
+      "locale": "zh-TW",
+      "cardCount": 78,
+      "fullGuideLinks": 78,
+      "quickTakePairs": 78,
+      "fiveAnchors": true,
+      "metadata": true,
+      "landscape": true
+    },
+    {
+      "locale": "ru",
+      "cardCount": 78,
+      "fullGuideLinks": 78,
+      "quickTakePairs": 78,
+      "fiveAnchors": true,
+      "metadata": true,
+      "landscape": true
+    }
+  ],
+  "topics": [
+    {
+      "locale": "en",
+      "noJSFiltering": true,
+      "knownHistoryResults": 2,
+      "languagePreservesFilter": true,
+      "clear": true,
+      "articleTagsAndRelated": true,
+      "tagKeyboardAndBack": true,
+      "standaloneGuides": 2
+    },
+    {
+      "locale": "zh",
+      "noJSFiltering": true,
+      "knownHistoryResults": 2,
+      "languagePreservesFilter": true,
+      "clear": true,
+      "articleTagsAndRelated": true,
+      "tagKeyboardAndBack": true,
+      "standaloneGuides": 0
+    },
+    {
+      "locale": "zh-TW",
+      "noJSFiltering": true,
+      "knownHistoryResults": 2,
+      "languagePreservesFilter": true,
+      "clear": true,
+      "articleTagsAndRelated": true,
+      "tagKeyboardAndBack": true,
+      "standaloneGuides": 0
+    },
+    {
+      "locale": "ru",
+      "noJSFiltering": true,
+      "knownHistoryResults": 2,
+      "languagePreservesFilter": true,
+      "clear": true,
+      "articleTagsAndRelated": true,
+      "tagKeyboardAndBack": true,
+      "standaloneGuides": 0
+    }
+  ],
+  "tool": [
+    {
+      "locale": "en",
+      "deckReady": true,
+      "sixFanChoices": true,
+      "keyboardDraw": true
+    },
+    {
+      "locale": "zh",
+      "deckReady": true,
+      "sixFanChoices": true,
+      "keyboardDraw": true
+    }
+  ],
+  "blockedWrites": [],
+  "status": "passed"
+}

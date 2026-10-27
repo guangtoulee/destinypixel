@@ -1,3 +1,5 @@
+import JournalTopicTags from "@/components/journal-topic-tags";
+import { journalArticleTopics, journalTopicUi } from "@/lib/journal-topics";
 import { TarotHeader, TarotNavigation } from "@/components/tarot-navigation";
 import learn from "../tarot-learning.module.css";
 import HexagramLearningArticle from "@/components/hexagram-learning-article";
@@ -87,8 +89,12 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
   const library = pillarLibraryCopy(locale);
   const crossLink = pillarCrossLinkCopy(locale);
   const tarotGuide = article.kind === "education" || ["how-to-read-three-card-tarot", "pamela-colman-smith-tarot-artist"].includes(article.slug);
-  const related = journalArticles.find((candidate) => candidate.slug === article.relatedSlug && journalArticleLocales(candidate).includes(locale))
-    ?? journalArticles.find((candidate) => candidate.slug !== article.slug && candidate.slug !== "ben-ming-nian-tai-sui" && candidate.kind !== "education" && journalArticleLocales(candidate).includes(locale));
+  const topics = journalArticleTopics(article);
+  const related = journalArticles.filter(candidate => candidate.slug !== article.slug && journalArticleLocales(candidate).includes(locale))
+    .map(candidate => ({ article: candidate, score: journalArticleTopics(candidate).filter(topic => topics.includes(topic)).length + (candidate.slug === article.relatedSlug ? 10 : 0) }))
+    .filter(candidate => candidate.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3).map(candidate => candidate.article);
   return (
     <main className={`${styles.page}${tarotGuide ? ` ${learn.page}` : ""}${article.slug === "ben-ming-nian-tai-sui" ? ` ${styles.taiSuiArticle}` : ""}`} lang={journalLanguageTags[locale]} data-server-localized>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(journalArticleSchema(article, locale)).replace(/</g, "\\u003c") }} />
@@ -101,6 +107,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
           <div className={article.pillar ? styles.portraitHero : undefined}>
           <div>
           <h1>{copy.title}</h1>
+          <JournalTopicTags article={article} locale={locale} />
           {copy.subtitle && <p className={styles.subtitle}>{copy.subtitle}</p>}
           {copy.answer && <p className={styles.directAnswer}>{copy.answer}</p>}
           <p className={styles.introduction}>{copy.introduction}</p>
@@ -131,7 +138,7 @@ export default async function JournalArticlePage({ params, searchParams }: PageP
             {article.pillar && <nav className={styles.pillarRelated} aria-label={library.related}><h2>{library.same}</h2>{dayPillarCycle.filter(p => p[0] === article.pillar![0] && p !== article.pillar).map(p => <a key={p} href={pillarArticleHref(p, locale)}>{p} · {pillarName(p, locale)}<ArrowRight size={14} aria-hidden="true" /></a>)}<a href={pillarLibraryHref(locale)}>{library.browse}</a></nav>}
             <TarotEditorialLinks slug={article.slug} locale={locale} />
             <TarotMethodLinks slug={article.slug} locale={locale} />
-            {article.kind !== "education" && related && <aside className={styles.related}><span>{ui.related}</span><a href={journalHref(locale, related.slug)}>{related.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a></aside>}
+            {article.kind !== "education" && related.length > 0 && <aside className={styles.related} data-topic-related><span>{journalTopicUi[locale].related}</span>{related.map(candidate => <a key={candidate.slug} href={journalHref(locale, candidate.slug)}>{candidate.translations[locale].title}<ArrowRight size={18} aria-hidden="true" /></a>)}</aside>}
           </div>
         </div>
       </article>

@@ -1,3 +1,4 @@
+import JournalTopicTags from "@/components/journal-topic-tags";
 import { notFound } from "next/navigation";
 import { JournalHeader, JournalFooter } from "@/components/journal-chrome";
 import { getTrigramArticle } from "@/lib/trigram-learning/content";
@@ -22,7 +23,7 @@ export default function TrigramLearningArticle({ id, locale }: { id: TrigramId; 
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <JournalHeader locale={locale} slug={trigramSlug(id)} />
     <article data-trigram-learning={id}>
-      <header className={styles.articleHero}><nav className={styles.breadcrumb}><a href={trigramHref(undefined, locale)}>{c.title}</a><span aria-hidden="true">/</span><span>{c.names[id]}</span></nav><p className={styles.eyebrow}>{identity.symbol} · {identity.pinyin}</p><h1>{a.title}</h1><p className={styles.introduction}>{a.summary}</p><a className={styles.libraryTextLink} href={trigramToolHref(locale)}>{c.tool} →</a></header>
+      <header className={styles.articleHero}><nav className={styles.breadcrumb}><a href={trigramHref(undefined, locale)}>{c.title}</a><span aria-hidden="true">/</span><span>{c.names[id]}</span></nav><p className={styles.eyebrow}>{identity.symbol} · {identity.pinyin}</p><h1>{a.title}</h1><JournalTopicTags article={{slug:trigramSlug(id)}} locale={locale}/><p className={styles.introduction}>{a.summary}</p><a className={styles.libraryTextLink} href={trigramToolHref(locale)}>{c.tool} →</a></header>
       <div className={styles.readingLayout}>
         <aside className={styles.contents}><p>{c.contents}</p><nav aria-label={c.contents}>{a.sections.map(section => <a href={`#${section.id}`} key={section.id}>{section.title}</a>)}<a href="#reflection">{c.reflections}</a><a href="#connections">{c.hexagrams}</a><a href="#sources">{c.sources}</a></nav></aside>
         <div className={`${styles.articleBody} ${learn.prose}`}>
