@@ -1,0 +1,157 @@
+{
+  "base": "http://127.0.0.1:3047",
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "metadata": true,
+      "sections": 8,
+      "newAnchors": true,
+      "imagesLoaded": true,
+      "horizontalOverflow": false
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200
+    },
+    {
+      "href": "/journal",
+      "status": 200
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal",
+      "status": 200
+    },
+    {
+      "href": "/?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal?locale=zh",
+      "status": 200
+    }
+  ],
+  "tool": [
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "fromArticle": true,
+      "tenLabelsMatch": true,
+      "reversalsDisabledBeforeShuffle": true,
+      "crossingTransform": "matrix(0, 0.82, -0.82, 0, 0, 0)",
+      "displayedOrientation": "upright"
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "fromArticle": true,
+      "tenLabelsMatch": true,
+      "reversalsDisabledBeforeShuffle": true,
+      "crossingTransform": "none",
+      "displayedOrientation": "upright"
+    }
+  ],
+  "pageErrors": [],
+  "browser": "151.0.7922.173",
+  "languageAndHistory": true,
+  "status": "passed"
+}

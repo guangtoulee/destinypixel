@@ -13,7 +13,7 @@ export const tarotMethodArticles: JournalArticle[] = tarotMethodSlugs.map(slug =
     kind: "education",
     availableLocales: tarotMethodLocales,
     publishedAt: "2026-10-23",
-    updatedAt: "2026-10-23",
+    updatedAt: slug === "how-to-read-celtic-cross" ? "2026-10-27" : "2026-10-23",
     // These satisfy the internal shape; unsupported editions redirect to English.
     translations: { ...translations, "zh-TW": translations.zh, ru: translations.en },
   };
