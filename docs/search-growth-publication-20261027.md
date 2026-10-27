@@ -39,7 +39,11 @@ No stash, reset, force push, Prompt Radar edits, day-pillar expansion, noindex c
 
 ## Release status
 
-Pre-publication checks passed. Production deployment and live verification will be recorded after publishing.
+Content commit `c8e789dcece4c960f5e117940ac83681d982cf93` was pushed normally to `origin/main` after verifying the fetched base was unchanged. GitHub's commit status reports Vercel **success**, updated `2026-10-27T02:16:59Z` (10:16:59 Beijing). Deployment: https://vercel.com/destinypixel/destinypixel/UtNPgUBy418T38cNhjjQZoFjSBXT.
+
+Production HTTP verification passed for all four editions: 200, full revised text, one H1, self-canonical, reciprocal language alternates and x-default, original publication date, new Article revision date and sitemap lastmod. Product-to-article links remain present. All four contextual edition-guide links are rendered and their destinations return 200. The production Chinese browser displayed the new family section, working directory anchor and visible 2026-10-27 update date; no browser console errors were observed.
+
+The Vercel connector returned 403 because its connection lacks access to the `destinypixel` team; the public GitHub Vercel commit-status endpoint and live production checks provided the release evidence. No permissions or account settings were changed. Receipts and screenshots are in the local evidence directory listed above.
 
 Live article: https://www.destinypixel.com/journal/how-to-ask-fortune-sticks?locale=zh#step-7. English uses the same path without a locale parameter; Traditional Chinese uses `locale=zh-TW`, Russian `locale=ru`.
 
