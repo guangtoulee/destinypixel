@@ -16,7 +16,7 @@ const ranks: Record<string, string[]> = {
   queen: ["queen", "王后"], king: ["king", "国王", "國王"],
 };
 const majorAliases: Record<string, string[]> = {
-  empress: ["女皇"], "high-priestess": ["女教皇"], "hanged-man": ["吊人", "倒悬者", "倒懸者"],
+  empress: ["女皇"], "hanged-man": ["吊人", "倒悬者", "倒懸者"],
   wheel: ["wheel of fortune", "命运轮", "命運輪"], judgement: ["judgment"],
 };
 

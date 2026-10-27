@@ -1,3 +1,4 @@
+import { journalTopicHref, type JournalTopic } from "@/lib/journal-topics";
 import { destinySupportHref } from "@/lib/support-contact";
 import { getJournalArticle, journalArticleLocales, journalHref, type JournalLocale } from "@/lib/journal";
 import { journalLanguageLabels, journalLanguageTags, journalUi, journalHomeHref, journalToolsHref } from "@/lib/journal-locales";
@@ -5,7 +6,7 @@ import styles from "@/app/journal/journal.module.css";
 
 // Document navigation keeps query-based language metadata in sync with the body.
 // Client-prefetched metadata can otherwise retain the English canonical.
-export function JournalHeader({ locale, slug }: { locale: JournalLocale; slug?: string }) {
+export function JournalHeader({ locale, slug, topic }: { locale: JournalLocale; slug?: string; topic?: JournalTopic }) {
   const ui = journalUi[locale];
   return (
     <header className={styles.header}>
@@ -15,7 +16,7 @@ export function JournalHeader({ locale, slug }: { locale: JournalLocale; slug?: 
         <a href={journalHref(locale)} aria-current={!slug ? "page" : undefined}>{ui.journal}</a>
       </nav>
       <nav className={styles.languages} aria-label={ui.language}>
-        {journalArticleLocales(slug ? getJournalArticle(slug) : undefined).map((language) => <a key={language} href={journalHref(language, slug)} hrefLang={journalLanguageTags[language]} lang={journalLanguageTags[language]} aria-current={locale === language ? "page" : undefined}>{journalLanguageLabels[language]}</a>)}
+        {journalArticleLocales(slug ? getJournalArticle(slug) : undefined).map((language) => <a key={language} href={topic && !slug ? journalTopicHref(language, topic) : journalHref(language, slug)} hrefLang={journalLanguageTags[language]} lang={journalLanguageTags[language]} aria-current={locale === language ? "page" : undefined}>{journalLanguageLabels[language]}</a>)}
       </nav>
     </header>
   );

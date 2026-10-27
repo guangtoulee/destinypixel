@@ -211,3 +211,21 @@
 .editorialCards > p { font-size:11px; line-height:1.6; color:#81708c; text-align:center; margin-top:18px; }
 .editorialCards > p a { text-decoration:underline; }
 @media(max-width:650px) { .editorialCards > div { display:grid; grid-template-columns:repeat(2,minmax(0,150px)); gap:20px 16px; } }
+
+.topicTags { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0; }
+.topicTags a { display:inline-flex; align-items:center; min-height:36px; max-width:100%; padding:6px 11px; border:1px solid #dcd2e4; border-radius:18px; font-size:12px; line-height:1.5; color:#634879; background:#f6f1f8; overflow-wrap:anywhere; }
+.topicTags a:hover { background:#eae0f0; }
+.topicTags a:focus-visible { outline:3px solid #9874af; outline-offset:4px; }
+.topicBrowser { width:min(1120px,calc(100% - 64px)); margin:0 auto 42px; scroll-margin-top:24px; }
+.topicBrowser h2 { font-size:25px; font-weight:500; line-height:1.4; margin:0 0 10px; }
+.topicBrowser > p { font-size:14px; color:#6e6878; line-height:1.8; margin:0 0 16px; }
+.topicFilters { display:flex; flex-wrap:wrap; gap:8px; }
+.topicFilters a { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:8px 13px; border:1px solid #ddd3e5; border-radius:8px; font-size:13px; line-height:1.5; color:#694d7d; background:white; }
+.topicFilters a[aria-current="page"] { color:white; background:#604578; border-color:#604578; }
+.topicFilters small { font-size:11px; opacity:.8; }
+.topicResults { scroll-margin-top:24px; margin-bottom:48px; }
+.topicResults > header { width:min(1120px,calc(100% - 64px)); margin:0 auto 24px; }
+.topicResults > header h2 { font-size:27px; font-weight:500; margin:0 0 10px; line-height:1.5; }
+.topicResults > header p { font-size:13px; color:#796b83; }
+.articleCard .topicTags { margin:0 0 20px; }
+@media(max-width:650px) { .topicBrowser,.topicResults > header { width:calc(100% - 40px); } .topicBrowser { margin-bottom:30px; } .topicFilters a { font-size:12px; } }

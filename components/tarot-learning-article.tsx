@@ -1,3 +1,4 @@
+import JournalTopicTags from "@/components/journal-topic-tags";
 import Image from "next/image";
 import TarotEditorialLinks from "@/components/tarot-editorial-links";
 import Markdown from "react-markdown";
@@ -29,7 +30,7 @@ export default async function TarotLearningArticle({id,locale}:{id:TarotLearning
   <article data-tarot-learning={id}>
    <header className={styles.articleHero}>
     <nav className={styles.breadcrumb}><a href={tarotLearningHref(undefined,locale)}>{c.directory}</a><span aria-hidden="true">/</span><span>{a.nameLocalized}</span></nav>
-    <p className={styles.eyebrow}>RWS · {a.number} · {a.nameLocalized}</p><h1>{a.title}</h1>
+    <p className={styles.eyebrow}>RWS · {a.number} · {a.nameLocalized}</p><h1>{a.title}</h1><JournalTopicTags article={{slug:tarotLearningSlug(id)}} locale={locale}/>
     {a.shortAnswer && <p className={learn.summary} data-learning-short-answer><strong>{a.shortAnswer.title}</strong> {a.shortAnswer.body}</p>}
     <div className={learn.hero}>
      <figure className={learn.figure}><Image src={defaultTarotDeck.faces[id]} alt={a.nameLocalized} width={560} height={960} sizes="(max-width:650px) 220px, 280px" priority/><figcaption>{tarotArtworkEditions[0].credits} · <a href={defaultTarotDeck.attribution}>{c.source}</a></figcaption></figure>

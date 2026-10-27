@@ -1,3 +1,4 @@
+import JournalTopicTags from "@/components/journal-topic-tags";
 import Markdown from "react-markdown";
 import { notFound } from "next/navigation";
 import { JournalHeader,JournalFooter } from "@/components/journal-chrome";
@@ -34,7 +35,7 @@ export default async function HexagramLearningArticle({number,locale}:{number:nu
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema).replace(/</g,"\\u003c")}}/>
   <JournalHeader locale={locale} slug={id}/>
   <article data-hexagram-learning={id}>
-   <header className={styles.articleHero}><nav className={styles.breadcrumb}><a href={hexagramHref(undefined,locale)}>{c.title}</a><span aria-hidden="true">/</span><span>{a.displayName}</span></nav><p className={styles.eyebrow}>{String(number).padStart(2,"0")} · {a.unicode} · {a.displayName}</p><h1>{a.title}</h1>{a.subtitle&&<p className={styles.subtitle}>{a.subtitle}</p>}{update&&<p className={styles.directAnswer} data-learning-short-answer>{a.identityText}</p>}<div className={learn.opening} data-manuscript-opening><Markdown skipHtml>{opening}</Markdown></div>{update&&<p className={styles.byline} data-editorial-update><span>{journalUi[locale].updated} <time dateTime={update.updatedAt}>{update.updatedAt}</time> · {update.note}</span></p>}<a className={styles.libraryTextLink} href={hexagramToolHref(locale)}>{c.tool} →</a></header>
+   <header className={styles.articleHero}><nav className={styles.breadcrumb}><a href={hexagramHref(undefined,locale)}>{c.title}</a><span aria-hidden="true">/</span><span>{a.displayName}</span></nav><p className={styles.eyebrow}>{String(number).padStart(2,"0")} · {a.unicode} · {a.displayName}</p><h1>{a.title}</h1><JournalTopicTags article={{slug:id}} locale={locale}/>{a.subtitle&&<p className={styles.subtitle}>{a.subtitle}</p>}{update&&<p className={styles.directAnswer} data-learning-short-answer>{a.identityText}</p>}<div className={learn.opening} data-manuscript-opening><Markdown skipHtml>{opening}</Markdown></div>{update&&<p className={styles.byline} data-editorial-update><span>{journalUi[locale].updated} <time dateTime={update.updatedAt}>{update.updatedAt}</time> · {update.note}</span></p>}<a className={styles.libraryTextLink} href={hexagramToolHref(locale)}>{c.tool} →</a></header>
    <div className={styles.readingLayout}>
     <aside className={styles.contents}><p>{c.contents}</p><nav aria-label={c.contents}>{headings.map((h,i)=><a href={`#section-${i+1}`} key={i}>{h}</a>)}</nav></aside>
     <div className={styles.articleBody}>

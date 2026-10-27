@@ -1,0 +1,261 @@
+{
+  "base": "http://127.0.0.1:3047",
+  "articles": [
+    {
+      "locale": "en",
+      "count": 234
+    },
+    {
+      "locale": "zh",
+      "count": 229
+    },
+    {
+      "locale": "zh-TW",
+      "count": 226
+    },
+    {
+      "locale": "ru",
+      "count": 226
+    }
+  ],
+  "topics": [
+    {
+      "locale": "en",
+      "topic": "tarot-reading",
+      "count": 84
+    },
+    {
+      "locale": "en",
+      "topic": "tarot-history",
+      "count": 2
+    },
+    {
+      "locale": "en",
+      "topic": "iching",
+      "count": 73
+    },
+    {
+      "locale": "en",
+      "topic": "day-pillars",
+      "count": 61
+    },
+    {
+      "locale": "en",
+      "topic": "birth-charts",
+      "count": 4
+    },
+    {
+      "locale": "en",
+      "topic": "bazi",
+      "count": 4
+    },
+    {
+      "locale": "en",
+      "topic": "relationships",
+      "count": 5
+    },
+    {
+      "locale": "en",
+      "topic": "fortune-sticks",
+      "count": 4
+    },
+    {
+      "locale": "en",
+      "topic": "five-elements",
+      "count": 3
+    },
+    {
+      "locale": "en",
+      "topic": "bracelets",
+      "count": 2
+    },
+    {
+      "locale": "en",
+      "topic": "palmistry",
+      "count": 1
+    },
+    {
+      "locale": "zh",
+      "topic": "tarot-reading",
+      "count": 83
+    },
+    {
+      "locale": "zh",
+      "topic": "tarot-history",
+      "count": 2
+    },
+    {
+      "locale": "zh",
+      "topic": "iching",
+      "count": 72
+    },
+    {
+      "locale": "zh",
+      "topic": "day-pillars",
+      "count": 61
+    },
+    {
+      "locale": "zh",
+      "topic": "birth-charts",
+      "count": 3
+    },
+    {
+      "locale": "zh",
+      "topic": "bazi",
+      "count": 2
+    },
+    {
+      "locale": "zh",
+      "topic": "relationships",
+      "count": 4
+    },
+    {
+      "locale": "zh",
+      "topic": "fortune-sticks",
+      "count": 3
+    },
+    {
+      "locale": "zh",
+      "topic": "five-elements",
+      "count": 3
+    },
+    {
+      "locale": "zh",
+      "topic": "bracelets",
+      "count": 2
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "tarot-reading",
+      "count": 81
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "tarot-history",
+      "count": 2
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "iching",
+      "count": 72
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "day-pillars",
+      "count": 61
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "birth-charts",
+      "count": 3
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "bazi",
+      "count": 1
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "relationships",
+      "count": 4
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "fortune-sticks",
+      "count": 3
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "five-elements",
+      "count": 3
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "bracelets",
+      "count": 2
+    },
+    {
+      "locale": "ru",
+      "topic": "tarot-reading",
+      "count": 81
+    },
+    {
+      "locale": "ru",
+      "topic": "tarot-history",
+      "count": 2
+    },
+    {
+      "locale": "ru",
+      "topic": "iching",
+      "count": 72
+    },
+    {
+      "locale": "ru",
+      "topic": "day-pillars",
+      "count": 61
+    },
+    {
+      "locale": "ru",
+      "topic": "birth-charts",
+      "count": 3
+    },
+    {
+      "locale": "ru",
+      "topic": "bazi",
+      "count": 1
+    },
+    {
+      "locale": "ru",
+      "topic": "relationships",
+      "count": 4
+    },
+    {
+      "locale": "ru",
+      "topic": "fortune-sticks",
+      "count": 3
+    },
+    {
+      "locale": "ru",
+      "topic": "five-elements",
+      "count": 3
+    },
+    {
+      "locale": "ru",
+      "topic": "bracelets",
+      "count": 2
+    }
+  ],
+  "directories": [
+    {
+      "locale": "en",
+      "cards": 78
+    },
+    {
+      "locale": "zh",
+      "cards": 78
+    },
+    {
+      "locale": "zh-TW",
+      "cards": 78
+    },
+    {
+      "locale": "ru",
+      "cards": 78
+    }
+  ],
+  "unavailable": [
+    {
+      "locale": "zh",
+      "topic": "palmistry"
+    },
+    {
+      "locale": "zh-TW",
+      "topic": "palmistry"
+    },
+    {
+      "locale": "ru",
+      "topic": "palmistry"
+    }
+  ],
+  "status": "passed"
+}

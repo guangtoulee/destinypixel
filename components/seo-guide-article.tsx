@@ -1,3 +1,4 @@
+import JournalTopicTags from "@/components/journal-topic-tags";
 import Link from "next/link";
 import type { SeoGuide, SeoGuideFaq, SeoGuideLink } from "@/lib/seo-guides";
 import { seoGuideCtas, seoGuideFaqSchema, seoGuidePath } from "@/lib/seo-guides";
@@ -52,7 +53,7 @@ export function SeoGuideArticle({ guide }: { guide: SeoGuide }) {
           __html: JSON.stringify(seoGuideFaqSchema(guide)).replace(/</g, "\\u003c"),
         }}
       />
-      <article className={styles.article}>
+      <article className={styles.article} data-seo-guide={guide.slug}>
         <nav className={styles.crumb} aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span aria-hidden>/</span>
@@ -61,6 +62,7 @@ export function SeoGuideArticle({ guide }: { guide: SeoGuide }) {
           <span>{guide.h1}</span>
         </nav>
         <h1>{guide.h1}</h1>
+        <JournalTopicTags article={guide} locale="en" />
         {guide.paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 24)}>{paragraph}</p>
         ))}
