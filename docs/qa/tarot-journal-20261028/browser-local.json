@@ -1,0 +1,170 @@
+{
+  "base": "http://127.0.0.1:3047",
+  "revision": "2026-10-28",
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "metadata": true,
+      "sections": 11,
+      "tables": 2,
+      "images": 0,
+      "newAnchors": true,
+      "horizontalOverflow": false
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200
+    },
+    {
+      "href": "/journal",
+      "status": 200
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-celtic-cross",
+      "status": 200
+    },
+    {
+      "href": "/?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/how-to-read-celtic-cross?locale=zh",
+      "status": 200
+    }
+  ],
+  "tool": [
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "fromArticle": true,
+      "mode": "free",
+      "reversalsDisabledBeforeShuffle": true,
+      "cardId": "four-of-swords",
+      "name": "Four of Swords",
+      "orientation": "Upright",
+      "meaningVisible": true,
+      "cardLibraryLink": true
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "fromArticle": true,
+      "mode": "free",
+      "reversalsDisabledBeforeShuffle": true,
+      "cardId": "death",
+      "name": "死神",
+      "orientation": "正位",
+      "meaningVisible": true,
+      "cardLibraryLink": true
+    }
+  ],
+  "pageErrors": [],
+  "browser": "151.0.7922.173",
+  "languageAndHistory": true,
+  "status": "passed"
+}

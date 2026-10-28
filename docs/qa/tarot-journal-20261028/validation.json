@@ -1,0 +1,60 @@
+{
+  "baseCommit": "714b08e2e319bb3e2ab0df624800ff4f1aab2ec1",
+  "contentCommit": "3410c03084f9b379d939323169208e15ae9c623f",
+  "date": "2026-10-28",
+  "baseline": {
+    "counts": {
+      "tests": 348,
+      "pass": 342,
+      "fail": 6
+    },
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ]
+  },
+  "current": {
+    "counts": {
+      "tests": 348,
+      "pass": 342,
+      "fail": 6
+    },
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ]
+  },
+  "sameSixHistoricalFailures": true,
+  "unchangedFiles": {
+    "content/tarot-editorial/en.json": "f6636b9978fb650e85eacc33b21949d75018807bc045d5191d1fa2f287c616de",
+    "content/tarot-editorial/zh.json": "acd82facdc0c1a4a6fd626c3d1ec59bac34cdf9123c5721b6ff5735c1830b2e0",
+    "content/tarot-editorial/en/how-to-connect-three-tarot-cards.md": "e84a47cef66022edce223a7a9f96bc937117feee5aff70be9a84ab9e3af8509f",
+    "content/tarot-editorial/zh/how-to-connect-three-tarot-cards.md": "cbc69d507c4277fe1d32058317f252ead4e2188f66ba8aa87bba6b8710b5ffb0",
+    "lib/journal-topics.ts": "477145864855c0bd66ad6502ef430fcdc38c6c3ecccbc3b1d0384170f1e73255",
+    "components/celestial/tarot-experience.tsx": "2be70842b35de8a52d1e49efd005d74ba13dfe1ebf5afc80bb90033fd961e1f7",
+    "components/celestial/celestial.css": "f702bed391d96b0179f741f080c6c3511411468260608f8f7ae7e68191d2f8cd"
+  },
+  "preservation": "All original paragraphs, sections, table, links, template, title, action and adjacent Celtic Cross article preserved in EN/ZH.",
+  "build": {
+    "passed": true,
+    "typeScriptIncluded": true,
+    "staticPagesGenerated": 426,
+    "existingWarnings": [
+      "Edge Runtime deprecated",
+      "Edge page disables static generation"
+    ]
+  },
+  "scopedLint": "passed",
+  "rootLint": "unavailable on baseline: missing root eslint.config.*",
+  "httpLocal": "passed: full paragraphs, H1, canonical/alternates, Article dates, sitemap dates, product GETs",
+  "browserLocal": "passed: 6 article viewport states, 16 internal GETs, 2 article-to-free-table draw/reveal/meaning flows",
+  "browser": "151.0.7922.173"
+}
