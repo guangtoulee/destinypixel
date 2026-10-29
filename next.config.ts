@@ -43,6 +43,8 @@ const nextConfig: NextConfig = {
       "/mv/:path*",
       "/zhongyi2",
       "/zhongyi2/:path*",
+      "/ruilan",
+      "/ruilan/:path*",
     ];
     return noindex.map((source) => ({
       source,
@@ -85,6 +87,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       { source: "/zhongyi2", destination: "/zhongyi2/index.html" },
+      { source: "/ruilan", destination: "/ruilan/index.html" },
     ];
   },
   turbopack: {
