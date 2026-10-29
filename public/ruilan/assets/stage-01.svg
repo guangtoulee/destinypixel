@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="重组构建示意" data-zh-label="重组构建示意" data-en-label="Recombinant construction concept" class="process-art"><title>重组构建示意</title><rect width="360" height="260" fill="white"/><g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" fill="none" stroke="#304D7E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M25 38 C110 60 15 111 100 140 M100 38 C15 60 110 111 25 140"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img" aria-label="重组构建示意" data-zh-label="重组构建示意" data-en-label="Recombinant construction concept" class="process-art"><title>重组构建示意</title><rect width="360" height="260" fill="white"/><g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" fill="none" stroke="#304D7E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M25 38 C110 60 15 111 100 140 M100 38 C15 60 110 111 25 140"/><path class="dna-trace" pathLength="1" stroke="#7BA7D8" stroke-width="3" d="M25 38 C110 60 15 111 100 140"/>
 <path d="M33 45 L92 45 M45 59 L80 59 M59 73 L66 73 M42 88 L83 88 M30 103 L95 103 M36 117 L89 117 M50 131 L75 131" class="dna-rungs" stroke="#E7B458"/>
-<path d="M119 89 H140 M135 84 L141 89 L135 94"/>
+<path d="M119 89 H140 M135 84 L141 89 L135 94"/><path class="process-flow" d="M117 89 H140" stroke="#E7B458" stroke-width="3"/>
 <circle cx="193" cy="89" r="39" stroke="#CDD8E6" stroke-width="6"/>
 <path d="M163 65 A39 39 0 1 1 162 112" stroke-width="3"/>
-<path d="M162 65 A39 39 0 0 0 162 112" stroke="#E7B458" stroke-width="5" class="plasmid-trace"/>
-<path d="M172 60 L161 66 L158 54 M158 111 L162 113 L158 125" stroke="#E7B458"/>
-<path d="M236 89 H253 M248 84 L254 89 L248 94"/>
+<g class="plasmid-orbit"><path d="M162 65 A39 39 0 0 0 162 112" stroke="#E7B458" stroke-width="5"/><circle cx="193" cy="50" r="3" fill="#E7B458" stroke="white"/></g>
+<path d="M172 60 L161 66 L158 54 M158 111 L162 113 L158 125" stroke="#E7B458" opacity=".35"/>
+<path d="M236 89 H253 M248 84 L254 89 L248 94"/><path class="process-flow flow-delayed" d="M236 89 H253" stroke="#E7B458" stroke-width="3"/>
 <rect x="269" y="56" width="68" height="66" rx="29"/>
-<path d="M278 88 Q288 69 300 88 T326 88" class="cell-line"/>
+<path d="M278 88 Q288 69 300 88 T326 88" class="cell-line" pathLength="1"/>
 <circle cx="291" cy="103" r="2.7" fill="#E7B458" stroke="none"/><circle cx="312" cy="72" r="2.7" fill="#E7B458" stroke="none"/>
 <path d="M24 169 H336" stroke="#D8E1EC"/>
 <circle cx="57" cy="193" r="4" fill="#304D7E"/><circle cx="183" cy="193" r="4" fill="#304D7E"/><circle cx="310" cy="193" r="4" fill="#E7B458" stroke="none"/>
