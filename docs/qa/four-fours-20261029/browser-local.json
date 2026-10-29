@@ -1,0 +1,534 @@
+{
+  "base": "http://127.0.0.1:3049",
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-29",
+      "completeOriginalSections": 5,
+      "completeNewSections": 2,
+      "fullServerContent": true,
+      "tableRows": 4,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 320,
+      "height": 568,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 568,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "metadata": true,
+      "originalPublication": "2026-10-08",
+      "modified": "2026-10-08",
+      "completeOriginalSections": 5,
+      "completeNewSections": 0,
+      "fullServerContent": true,
+      "tableRows": 0,
+      "toc": true,
+      "imagesLoaded": 4,
+      "horizontalOverflow": false
+    }
+  ],
+  "links": [
+    {
+      "locale": "en",
+      "href": "/",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-four-of-wands",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-four-of-cups",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-four-of-swords",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-four-of-pentacles",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/tarot",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-sun",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal/tarot-from-game-to-occult-traditions",
+      "status": 200
+    },
+    {
+      "locale": "en",
+      "href": "/journal#tarot-education",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-four-of-wands?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-four-of-cups?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-four-of-swords?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-four-of-pentacles?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-sun?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/tarot-from-game-to-occult-traditions?locale=zh",
+      "status": 200
+    },
+    {
+      "locale": "zh",
+      "href": "/journal?locale=zh#tarot-education",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal?locale=zh-TW&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-four-of-wands?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-four-of-cups?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-four-of-swords?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-four-of-pentacles?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/tarot?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-sun?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal/tarot-from-game-to-occult-traditions?locale=zh-TW",
+      "status": 200
+    },
+    {
+      "locale": "zh-TW",
+      "href": "/journal?locale=zh-TW#tarot-education",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal?locale=ru&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-four-of-wands?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-four-of-cups?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-four-of-swords?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-four-of-pentacles?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/tarot?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-sun?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal/tarot-from-game-to-occult-traditions?locale=ru",
+      "status": 200
+    },
+    {
+      "locale": "ru",
+      "href": "/journal?locale=ru#tarot-education",
+      "status": 200
+    }
+  ],
+  "tool": [
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "fromArticleCta": true,
+      "freeTable": true,
+      "reversalsDisabledBeforeShuffle": true,
+      "shuffled": true,
+      "drawnCard": "knight-of-wands",
+      "revealed": true,
+      "meaning": true,
+      "displayedOrientation": "upright",
+      "meaningToCardArticle": true
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "fromArticleCta": true,
+      "freeTable": true,
+      "reversalsDisabledBeforeShuffle": true,
+      "shuffled": true,
+      "drawnCard": "seven-of-pentacles",
+      "revealed": true,
+      "meaning": true,
+      "displayedOrientation": "upright",
+      "meaningToCardArticle": true
+    }
+  ],
+  "history": [
+    {
+      "action": "language-link",
+      "locale": "zh"
+    },
+    {
+      "action": "language-link",
+      "locale": "zh-TW"
+    },
+    {
+      "action": "language-link",
+      "locale": "ru"
+    },
+    {
+      "action": "back",
+      "locale": "zh-TW"
+    },
+    {
+      "action": "back",
+      "locale": "zh"
+    },
+    {
+      "action": "back",
+      "locale": "en"
+    },
+    {
+      "action": "forward",
+      "locale": "zh"
+    }
+  ],
+  "pageErrors": [],
+  "blockedMethods": [],
+  "blockedThirdPartyRequests": 0,
+  "browser": "151.0.7922.173",
+  "status": "passed"
+}

@@ -9,9 +9,10 @@ import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { toTraditional } from "@/lib/journal-locales";
 import { editorialModifiedAt } from "@/lib/editorial-updates";
 import { calculateDateDayPillar } from "@/lib/day-pillar";
+import originalEditorialEn from "@/content/tarot-editorial/en.json";
 
 // Source-linked people are additive in zh/en; older editions retain their sections.
-const originalSectionShapes = (copy: JournalTranslation) => copy.sections
+const originalSectionShapes = (copy: Pick<JournalTranslation, "sections">) => copy.sections
   .filter(section => !(section.id === "famous-birthdays" && section.people && section.paragraphs.length === 0 && !section.table))
   .map(section => [section.id, section.paragraphs.length, section.steps?.length, section.table?.rows.length]);
 
@@ -76,7 +77,11 @@ test("articles have translated sections, truthful free Article schema and useful
     for (const locale of journalArticleLocales(article)) {
       const translation = article.translations[locale];
       if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
-        assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(article.translations.en));
+        // The October 29 appendix is authored only in EN/ZH; retained editions
+        // still match the five-section historical manuscript, not that appendix.
+        const comparison = article.slug === "why-the-four-fours-differ" && (locale === "zh-TW" || locale === "ru")
+          ? originalEditorialEn["why-the-four-fours-differ"] : article.translations.en;
+        assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(comparison));
       }
       assert.equal(new Set(translation.sections.map(section => section.id)).size, translation.sections.length);
       if (locale === "ru") assert.match(translation.title, /[А-Яа-яЁё]/);

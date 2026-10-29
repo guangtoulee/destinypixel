@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "baseCommit": "4b91860f65da93b735ae979c1cb8147158e53d29",
+  "articleCountUnchanged": 79,
+  "allOriginalArticleFieldsAndSectionsPreserved": true,
+  "allOtherLanguageEditionsAndArticlesUnchanged": true,
+  "editionMetadataChanges": [
+    "why-the-four-fours-differ/en",
+    "why-the-four-fours-differ/zh"
+  ],
+  "newSourceCitationsPerEditedEdition": 4,
+  "sitemapUrlsUnchanged": 996,
+  "sitemapDateChanges": [
+    "https://www.destinypixel.com/journal/why-the-four-fours-differ",
+    "https://www.destinypixel.com/journal/why-the-four-fours-differ?locale=zh"
+  ],
+  "tests": {
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ],
+    "counts": [
+      "ℹ tests 348",
+      "ℹ pass 342",
+      "ℹ fail 6",
+      "ℹ cancelled 0",
+      "ℹ skipped 0"
+    ]
+  },
+  "contentSha256": {
+    "en": "b22916984511b91c5a8c925f49cdda015cefbaf6af6f8e1e43e2d7abba9c54dd",
+    "zh": "9858a37fb9a377cc9d001569915acd7d31d0ff64f0125862d6ca379a0ba5ec5a"
+  }
+}
