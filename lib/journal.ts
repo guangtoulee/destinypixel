@@ -177,15 +177,67 @@ const journalSources: JournalSourceArticle[] = [
     slug: "five-element-bracelet-design",
     relatedSlug: "crystal-bracelet-care",
     publishedAt: "2026-09-11",
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-10-30",
     translations: {
       en: {
-        title: "Design a five-element bracelet: a practical color-and-bead walkthrough",
-        description: "Build an 18-bead bracelet in DestinyPixel: choose a palette, arrange a repeat, understand element percentages and prepare a useful maker reference.",
+        title: "Five-element bracelet order: how to arrange your beads",
+        description: "Does a five-element bracelet need a fixed bead order? Compare the traditional generating cycle with two 20-bead layouts, then try the existing 18-bead design walkthrough.",
         topic: "Five elements & design",
         introduction: "A bracelet becomes easier to design when you separate three choices: the feeling you want the colors to express, the pattern of beads, and the physical fit. DestinyPixel’s atelier gives you a board for the first two and preset counts to explore the third. You can use it without a birth report. Here is a complete example, from a simple color intention to an image you can discuss with a maker.",
         takeaway: "Use the five elements as a symbolic palette. The balance percentages count your selected beads; they do not measure personal energy or establish a physical wrist size.",
+        answer: "DestinyPixel does not require a fixed five-element bead order. You can borrow the generating cycle as a symbolic pattern or arrange colors in blocks. Changing the order alone leaves the workshop percentages unchanged: they count beads, not the effect of a sequence.",
         sections: [
+          {
+            "id": "bead-order",
+            "title": "Is there a correct five-element bracelet order?",
+            "paragraphs": [
+              "First distinguish a list of names from a relationship. Metal, Wood, Water, Fire and Earth names the five elements; it is not the generating cycle. The Five Elements chapter of Bai Hu Tong describes the cycle Wood → Fire → Earth → Metal → Water → Wood. The arrow here means “generates” within that traditional framework, not a measured flow through gemstones.",
+              "The cited passage discusses relations between the five elements. It does not specify which gemstone starts a bracelet, whether to string it clockwise or which wrist to use. Turning that cycle into a bead repeat is a modern design choice in this guide. If a teacher or a particular practice gives you an arrangement, describe it as that practice’s rule rather than treating this color exercise as its authority.",
+              "On a circular bracelet, the first bead also depends on where you start counting. Mark a starting point in the making brief if the order matters to your design. Reversing a planned sequence changes its direction, but the atelier does not score one direction as luckier or reject neighboring categories as a harmful combination.",
+              "A BaZi or Chinese astrology chart is a separate interpretive framework. An empty category in the bead chart only means you have not selected a bead assigned to it; it is not a diagnosis that your birth chart needs that element. The workshop does not calculate a personal bead order from your birth data."
+            ],
+            "sources": [
+              {
+                "label": "Bai Hu Tong · Five Elements (Chinese primary text, Shidian Guji)",
+                "href": "https://www.shidianguji.com/zh/book/SBCK092/chapter/SBCK092_13"
+              }
+            ]
+          },
+          {
+            "id": "compare-orders",
+            "title": "Same 20 beads, two different rhythms",
+            "paragraphs": [
+              "For a short comparison before the 18-bead walkthrough below, open the bracelet atelier and choose 8 mm, Soft fit and 20 beads, then select All. Use four each of Jade, Red Agate, Tiger’s Eye, Clear Quartz and Lapis Lazuli. In this workshop they are assigned to Wood, Fire, Earth, Metal and Water respectively. These are the site’s palette labels, not a universal classification of minerals.",
+              "Read each sequence from your chosen starting point. For A, add one of each material in the order below, then repeat that five-bead group four times in total. For B, add four of the first material, then four of the next, continuing until all twenty are placed. The names and quantities stay the same; only neighboring beads change.",
+              "Both designs show 4 of 20 beads in each category, or 20% each. This equal split makes the comparison easy to check; it is not a recommended personal balance or a requirement to include all five elements. Choose A if you like frequent color changes, B if you prefer larger patches of color. Compare the preview against the clothes you actually wear.",
+              "The current atelier adds a bead to the end of the list and lets you remove individual beads; it does not offer drag-to-reorder. To compare these full layouts, download A first, note its sequence, then use Clear board and rebuild B. Save B separately and label both versions. Confirm the real bead dimensions and fit with the maker: 20 beads at a nominal 8 mm is a preview setting, not a measured inner circumference."
+            ],
+            "table": {
+              "headings": [
+                "Layout",
+                "Sequence to enter",
+                "Visible rhythm"
+              ],
+              "rows": [
+                [
+                  "A · Repeated cycle",
+                  "Jade → Red Agate → Tiger’s Eye → Clear Quartz → Lapis Lazuli; repeat the group 4 times.",
+                  "Five colors alternate around the bracelet."
+                ],
+                [
+                  "B · Color blocks",
+                  "Jade × 4 → Red Agate × 4 → Tiger’s Eye × 4 → Clear Quartz × 4 → Lapis Lazuli × 4.",
+                  "Five longer patches of color."
+                ]
+              ]
+            },
+            "links": [
+              {
+                "text": "bracelet atelier",
+                "href": "/atelier"
+              }
+            ]
+          },
           {
             id: "design-intention",
             title: "1. Give the design one clear job",
@@ -228,12 +280,64 @@ const journalSources: JournalSourceArticle[] = [
         action: { label: "Open the bracelet atelier", href: "/atelier" },
       },
       zh: {
-        title: "五行手串怎么配：从配色到十八颗珠子的完整练习",
-        description: "在 DestinyPixel 手串工坊完成十八颗珠子的配色练习：选择材质、建立重复节奏、读懂五行比例，再整理给制作者的参考资料。",
+        title: "五行珠有固定顺序吗？手串排列与配色指南",
+        description: "五行珠一定要按相生顺序串吗？区分传统相生关系与首饰排列，用同样二十颗珠子比较循环和色块，再完成十八颗手串配色练习。",
         topic: "五行与设计",
         introduction: "把手串设计拆成三件事，会容易得多：希望颜色表达什么、珠子怎样排列、实物戴起来是否合适。DestinyPixel 手串工坊提供配色与排列画板，也提供可探索的颗数预设。你不需要先生成出生报告。下面用一个完整例子，从一句配色意图走到可以与制作者沟通的设计参考。",
         takeaway: "把五行当作象征性配色语言。画面的比例统计的是已选珠子，不是个人能量，也不能直接确定实物腕围。",
+        answer: "DestinyPixel 手串工坊没有规定唯一的五行珠顺序。可以把相生次序作为象征性排列，也可以按颜色分组。只换珠序、不换珠子的种类和颗数，工坊显示的五行比例不会改变；它统计的是珠子，不是排列的效果。",
         sections: [
+          {
+            "id": "bead-order",
+            "title": "五行珠到底有没有一个正确顺序？",
+            "paragraphs": [
+              "先分清“五个名字”和“五种关系”。“金木水火土”是五行名称的列举，并不是相生次序。《白虎通》的“五行”篇写到的相生循环是：木→火→土→金→水→木。这里的箭头表示传统框架中的“生”，不是测量出的宝石能量流动方向。",
+              "这里引用的古籍段落讨论五行之间的关系，没有规定手串第一颗必须是什么宝石、应该顺时针串，或一定戴在哪只手。把相生循环转成珠子重复单元，是本指南提供的现代设计做法。如果你遵循某位老师或某种仪式的具体排法，应说明它属于那套实践，不能拿这份配色练习当成其权威依据。",
+              "手串是一个圆，“第一颗”还取决于你从哪里开始数。如果设计需要固定珠序，可以在给制作者的说明里标出起点。把既定顺序反过来会改变方向，但工坊不会据此判定哪个方向更吉利，也不会把相邻的某两类珠子判为有害组合。",
+              "八字与出生图谱属于另一套解释问题。配珠图里某类为零，只说明没有选入归到这一类的珠子，不能推导成你的八字需要补这一行。工坊也不会根据出生资料计算个人必须采用的珠序。"
+            ],
+            "sources": [
+              {
+                "label": "《白虎通德论》五行篇原文（识典古籍）",
+                "href": "https://www.shidianguji.com/zh/book/SBCK092/chapter/SBCK092_13"
+              }
+            ]
+          },
+          {
+            "id": "compare-orders",
+            "title": "同样二十颗珠子，比较两种排列",
+            "paragraphs": [
+              "先做一个短对比，再看下文原有的十八颗完整练习。打开手串工坊，选择 8 mm、“女款”（英文为 Soft fit）和 20 颗，五行筛选选“全部”。取翡翠、南红玛瑙、虎眼石、白水晶、青金石各四颗；它们在当前工坊中依次归为木、火、土、金、水。这是本站的配色标签，不是对所有矿物通用的五行分类。",
+              "从自己标定的起点读珠序。A 方案按下表顺序各加一颗，五颗为一组，总共放四组；B 方案先连续放四颗翡翠，再放四颗南红玛瑙，依次完成二十颗。材质和总颗数完全相同，改变的是哪颗珠子挨着哪颗珠子。",
+              "两个方案每类都是 4÷20，也就是 20%。这里平均分配只是为了方便核对，不是在推荐个人的最佳比例，也不要求手串必须凑齐五行。喜欢频繁换色可以选 A，喜欢大块颜色可以选 B，再用日常衣服作参照来比较。",
+              "当前工坊每次加珠都会放在顺序列表末尾，也可以单颗删除，并不支持拖动换序。对比这两个完整方案时，先下载 A 的图片并记好珠序，再点“清空重排”搭建 B。分别保存、标注版本，再与制作者确认实际珠径和佩戴尺寸。20 颗标称 8 mm 是预览设置，不能直接当成成品内围。"
+            ],
+            "table": {
+              "headings": [
+                "方案",
+                "按此顺序放入",
+                "视觉节奏"
+              ],
+              "rows": [
+                [
+                  "A · 循环排列",
+                  "翡翠→南红玛瑙→虎眼石→白水晶→青金石；整组重复四次。",
+                  "五种颜色不断交替。"
+                ],
+                [
+                  "B · 色块排列",
+                  "翡翠×4→南红玛瑙×4→虎眼石×4→白水晶×4→青金石×4。",
+                  "形成五段较长的色块。"
+                ]
+              ]
+            },
+            "links": [
+              {
+                "text": "手串工坊",
+                "href": "/atelier?locale=zh"
+              }
+            ]
+          },
           {
             id: "design-intention",
             title: "1. 先给这条手串一个清楚的设计任务",
