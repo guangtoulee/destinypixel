@@ -45,7 +45,11 @@ Only `lib/journal.ts`, `lib/journal-ru.ts` and this publication record are part 
 
 ## Release status
 
-Prepared and locally validated; production publication and verification pending. This section will record the actual content commit and observed production result.
+Content commit `34c8c07c227f0c47245d30c31e876aa9ac08a813` was pushed normally to `origin/main` after a fresh fetch confirmed the base was unchanged. GitHub's Vercel commit status reports **success**, updated `2026-10-30T02:18:25Z` (10:18:25 Beijing). Deployment: https://vercel.com/destinypixel/destinypixel/6cRsmvLqqFX2dnP2PVyGkNQBiVSz.
+
+Production verification passed for all four editions: HTTP 200, full revised paragraphs, new answer and comparison table, localized title/H1, self-canonical, reciprocal language alternates and x-default, Article publication/revision dates, sitemap lastmod, primary-source link and atelier links in both directions. The live Chinese page displayed the 2026-10-30 revision date and working comparison-section anchor; no browser console errors were observed.
+
+The Vercel connector returned a team-scope 403; GitHub's public Vercel commit status and the live production checks supplied the release evidence. No permissions or account settings were changed. Local receipts include `deployment.json`, `production-http.log`, `production-extra.json`, browser screenshots and both actual atelier sequences.
 
 Target live article: https://www.destinypixel.com/journal/five-element-bracelet-design?locale=zh#compare-orders
 
