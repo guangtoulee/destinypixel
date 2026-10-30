@@ -1,0 +1,17 @@
+PASS /journal/how-to-read-three-card-tarot: complete paragraphs/tables/sources, original sections, metadata and language-specific dates
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: zh/positions: missing full text 如果你问的是A与B，不要翻完三张后临时把牌位读成“A／B／赢家”，那是看过牌以后换了职责。本站五张牌 · 两条道路使用“
+    at file:///Users/lee/Documents/Codex/2026-10-22/task/destinypixel-method-20261030/scripts/check-tarot-question-scope.mjs:38:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v25.5.0

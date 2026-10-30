@@ -1,3 +1,4 @@
+import previousEditions from "@/content/three-card-question-scope-20261030/previous-editions.json";
 import type { JournalSourceArticle, JournalTranslation } from "@/lib/journal";
 
 const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
@@ -13,14 +14,43 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "title": "1. Give the three cards one question to work on",
         "paragraphs": [
           "Imagine you have enjoyed two dates, but messages have become less frequent. “What will happen to us?” leaves almost everything undefined. A more focused question is: “How can I clarify where this connection is going?” It gives the reading a situation and gives you something to do with it. This is an invented teaching example, not a visitor’s private reading.",
-          "You can put the question in the title field and add a short background: “We have met twice. Replies are less frequent. We haven’t discussed whether to meet again. I want to ask without making assumptions.” Those observations are more useful than a long theory about why the other person is distant. For a work question, use the same structure: name one situation, the decision in front of you and what is within your control."
-        ]
+          "You can put the question in the title field and add a short background: “We have met twice. Replies are less frequent. We haven’t discussed whether to meet again. I want to ask without making assumptions.” Those observations are more useful than a long theory about why the other person is distant. For a work question, use the same structure: name one situation, the decision in front of you and what is within your control.",
+          "One question mark can still hide several jobs. Before drawing, decide whether this reading is for understanding a situation, considering a next step, or comparing options. These are our practical checks for choosing a layout, not three universally accepted categories of tarot questions.",
+          "Try a separate invented work example: you are already involved in project A and have been invited to collaboration B. “Will I succeed, what do they think of me, and which should I choose?” asks for an outcome, another person’s thoughts and a decision at once. Select one task for this reading. The table shows how different questions about the same situation call for different position roles.",
+          "Before comparing A and B, check the actual brief, available time and who can clarify each role. Cards cannot establish a collaborator’s intentions or fill in a missing deadline. “This week” in the example is simply a scope for the exercise; a time window does not turn a reading into a forecast."
+        ],
+        "table": {
+          "headings": [
+            "Task for this reading",
+            "A question to work with",
+            "Position roles to check first"
+          ],
+          "rows": [
+            [
+              "Understand the situation",
+              "What about project A most needs clarification?",
+              "The three-card roles can keep the starting point, present concern and possible next step distinct."
+            ],
+            [
+              "Consider an action",
+              "How could I clarify the scope of project A this week?",
+              "Keep all three roles; use the final position to consider an action rather than predict a reply."
+            ],
+            [
+              "Compare options",
+              "What opportunities and challenges of continuing A or joining B should I examine?",
+              "Use a declared comparison layout, such as Two paths · 5 cards; the three-card preset does not assign one route to each card."
+            ]
+          ]
+        }
       },
       {
         "id": "positions",
         "title": "2. Read the positions before you read the cards",
         "paragraphs": [
-          "A three-card spread does not have one compulsory set of labels. Past–present–future is one familiar arrangement; DestinyPixel’s guided three-card spread uses the positions below. The last position invites a possible action, so do not silently turn it into a guaranteed future. Decide what the positions mean before interpreting your cards."
+          "A three-card spread does not have one compulsory set of labels. Past–present–future is one familiar arrangement; DestinyPixel’s guided three-card spread uses the positions below. The last position invites a possible action, so do not silently turn it into a guaranteed future. Decide what the positions mean before interpreting your cards.",
+          "If you asked about A and B, do not read the three revealed positions as “A / B / winner.” That changes their jobs after seeing the cards. Our Two paths · 5 cards option instead uses “What matters most / Path A · opening / Path A · challenge / Path B · opening / Path B · challenge.” It offers two sets of prompts, not a score or automatic winner. Choose the matching option before drawing; if you design your own positions on the free table, write them down first and identify them as your own layout.",
+          "There is a source distinction here. In Chapter 11 of Seventy-Eight Degrees of Wisdom, Rachel Pollack combines a card’s imagery with the function of its position, then designs her Work Cycle to emphasize advice. These are examples within her modern psychological and spiritual approach. Waite’s historical Part III, §7 also starts from a definite question, but uses a significator and a different ten-card method; it does not establish this site’s three positions or require every question to be action-oriented. Our task table and work scenario are original exercises. Reference: Pollack, Sun Meijun translation, 商周, first edition December 2010; actual PDF pages 331 and 358, printed pages 333 and 360, verified in this local copy."
         ],
         "table": {
           "headings": [
@@ -45,7 +75,19 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
               "What small action could give me clearer information?"
             ]
           ]
-        }
+        },
+        "links": [
+          {
+            "text": "Two paths · 5 cards",
+            "href": "/tarot"
+          }
+        ],
+        "sources": [
+          {
+            "label": "A. E. Waite, Part III §7: a definite question and a different method",
+            "href": "https://sacred-texts.com/tarot/pkt/pkt0307.htm"
+          }
+        ]
       },
       {
         "id": "worked-example",
@@ -74,7 +116,12 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
-        "links": [{ "text": "Rider–Waite–Smith", "href": "/journal/pamela-colman-smith-tarot-artist" }],
+        "links": [
+          {
+            "text": "Rider–Waite–Smith",
+            "href": "/journal/pamela-colman-smith-tarot-artist"
+          }
+        ],
         "title": "6. Try the three-card spread on the free table",
         "paragraphs": [
           "The guided mode handles the three positions for you. You do not need a birth date, a BaZi chart or an account to shuffle, choose cards and read their short meanings. The deck uses all 78 Rider–Waite–Smith cards; the example above is not a preset draw and you are unlikely to get that exact combination.",
@@ -141,14 +188,43 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "title": "1. 先给三张牌一个共同的问题",
         "paragraphs": [
           "假设你们约会过两次，相处不错，最近消息却少了。“我们以后会怎样？”范围很大。可以收拢成：“我怎样问清这段关系接下来的方向？”这样既有具体情境，也给你留下可以行动的位置。这是为讲解编写的虚构例子，不是用户的私人测算。",
-          "把这句话放进问题标题，背景简单写：“见过两次，最近回复变少，还没谈过下次见面。我想问清楚，但不想先替对方下结论。”这些观察比一大段猜测对方为何冷淡更有用。问工作也一样：说清一件事、眼前的选择，以及自己能做的部分。"
-        ]
+          "把这句话放进问题标题，背景简单写：“见过两次，最近回复变少，还没谈过下次见面。我想问清楚，但不想先替对方下结论。”这些观察比一大段猜测对方为何冷淡更有用。问工作也一样：说清一件事、眼前的选择，以及自己能做的部分。",
+          "一句话末尾只有一个问号，也可能装着好几件事。抽牌前先想清楚：这轮是梳理处境、考虑下一步，还是比较选项？这是本站方便选择布局的检查办法，不是所有塔罗流派公认的三种问题分类。",
+          "另做一个虚构的工作练习：你正在参与A项目，又收到B协作邀请。“我会不会成功、对方怎么看我、我到底该选哪条路？”同时要求结果、他人想法和选择。先选本轮想探索的一件事。下表用同一处境说明，问题改变以后，牌位需要承担的职责也可能不同。",
+          "比较A与B之前，先看真实任务说明、可用时间，以及谁能解释各自的职责。牌不能替协作者确认意愿，也不能补出未知的截止日期。例子中的“本周”只是这次练习的范围，写了时间窗也不代表预测会更准确。"
+        ],
+        "table": {
+          "headings": [
+            "这轮想做什么",
+            "可以探索的问句",
+            "先核对布局的职责"
+          ],
+          "rows": [
+            [
+              "梳理处境",
+              "A项目目前最需要我厘清哪一点？",
+              "三牌的来路、当下、下一步，可以让起点、眼前顾虑与后续行动各有位置。"
+            ],
+            [
+              "考虑行动",
+              "本周我能怎样问清A项目的协作范围？",
+              "保留三个位置的分工；最后一格用来考虑行动，不替别人预测回复。"
+            ],
+            [
+              "比较选项",
+              "继续A与加入B，各有哪些机会和挑战值得核对？",
+              "先声明比较布局，例如五张牌 · 两条道路；三牌预设没有把每张分别指定给一条路线。"
+            ]
+          ]
+        }
       },
       {
         "id": "positions",
         "title": "2. 看牌之前，先看牌位负责什么",
         "paragraphs": [
-          "三张牌没有唯一固定的排法。“过去—现在—未来”是一种常见安排；DestinyPixel 的引导式三张牌阵使用下面三个位置。最后一格说的是可能采取的下一步，不要读着读着就变成一定发生的未来。先确定牌位，再解释抽到的牌。"
+          "三张牌没有唯一固定的排法。“过去—现在—未来”是一种常见安排；DestinyPixel 的引导式三张牌阵使用下面三个位置。最后一格说的是可能采取的下一步，不要读着读着就变成一定发生的未来。先确定牌位，再解释抽到的牌。",
+          "如果你问的是A与B，不要翻完三张后临时把牌位读成“A／B／赢家”，那是看过牌以后换了职责。本站五张牌 · 两条道路使用“最在意的事情／道路 A · 机会／道路 A · 挑战／道路 B · 机会／道路 B · 挑战”。它提供两组讨论线索，不会计算分数或自动选出赢家。抽牌前选择相应牌阵；若在自由牌桌自拟位置，先写下来，并说明这是自己设计的布局。",
+          "这里要分清出处。波拉克在《78度的智慧》第十一章把牌图与所在位置的功能一起解释，又为了突出建议而设计“工作循环”；这是她的现代心理与灵性取向中的方法示例。韦特原著第三部分§7也从明确的问题出发，但采用指示牌与另一套十牌方法，并没有规定本站这三个位置，也没有要求所有问题都改成行动句。上面的任务表和工作情境均为本站原创练习。参考：瑞秋·波拉克著、孙梅君译，商周出版，2010年12月初版；本次核实扫描件PDF实际331、358页，对应印刷333、360页，页序仅适用于本地这份扫描件。"
         ],
         "table": {
           "headings": [
@@ -173,7 +249,19 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
               "什么小行动能让我得到更清楚的信息？"
             ]
           ]
-        }
+        },
+        "links": [
+          {
+            "text": "五张牌 · 两条道路",
+            "href": "/tarot?locale=zh"
+          }
+        ],
+        "sources": [
+          {
+            "label": "韦特原著第三部分§7：明确问题与另一种牌阵方法",
+            "href": "https://sacred-texts.com/tarot/pkt/pkt0307.htm"
+          }
+        ]
       },
       {
         "id": "worked-example",
@@ -202,7 +290,12 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
-        "links": [{ "text": "韦特体系", "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh" }],
+        "links": [
+          {
+            "text": "韦特体系",
+            "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh"
+          }
+        ],
         "title": "6. 在免费牌桌上自己抽一次",
         "paragraphs": [
           "排阵模式会帮你安排好三个位置。洗牌、选牌、看简明牌义不需要生日、八字资料或账号。牌堆包含完整的 78 张韦特体系牌，上面的例子不是预设抽牌结果，你不需要抽出完全一样的组合。",
@@ -330,7 +423,12 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
       },
       {
         "id": "try-it",
-        "links": [{ "text": "Райдера–Уэйта–Смит", "href": "/journal/pamela-colman-smith-tarot-artist?locale=ru" }],
+        "links": [
+          {
+            "text": "Райдера–Уэйта–Смит",
+            "href": "/journal/pamela-colman-smith-tarot-artist?locale=ru"
+          }
+        ],
         "title": "6. Попробуйте бесплатный расклад самостоятельно",
         "paragraphs": [
           "Режим готового расклада задаёт три позиции. Для перемешивания, выбора и кратких значений не нужны дата рождения, карта Ба-цзы или аккаунт. Используются все 78 карт Райдера–Уэйта–Смит. Комбинация из примера не является заранее заданным результатом; вам не нужно вытянуть именно её.",
@@ -393,5 +491,7 @@ export const threeCardTarotArticle: JournalSourceArticle = {
   publishedAt: "2026-10-02",
   updatedAt: "2026-10-02",
   translations: { en: editions.en, zh: editions.zh },
+  // Preserve the previous Traditional Chinese edition until it is separately revised.
+  traditionalTranslation: previousEditions["zh-TW"],
 };
 export const threeCardTarotRussian = editions.ru;

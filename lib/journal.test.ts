@@ -9,6 +9,7 @@ import { birthFormFeedback } from "@/lib/birth-form-feedback";
 import { toTraditional } from "@/lib/journal-locales";
 import { editorialModifiedAt } from "@/lib/editorial-updates";
 import { calculateDateDayPillar } from "@/lib/day-pillar";
+import previousQuestionScopeEditions from "@/content/three-card-question-scope-20261030/previous-editions.json";
 
 // Source-linked people are additive in zh/en; older editions retain their sections.
 const originalSectionShapes = (copy: JournalTranslation) => copy.sections
@@ -75,7 +76,17 @@ test("articles have translated sections, truthful free Article schema and useful
     assert.deepEqual(article.translations.en.sections.map((section) => section.id), article.translations.zh.sections.map((section) => section.id));
     for (const locale of journalArticleLocales(article)) {
       const translation = article.translations[locale];
-      if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
+      if (article.slug === "how-to-read-three-card-tarot") {
+        // Only two EN/ZH sections have separately tested additions; keep the
+        // original four-language shapes and all other sections in this check.
+        const previous = previousQuestionScopeEditions[locale];
+        assert.deepEqual(originalSectionShapes(previous), originalSectionShapes(previousQuestionScopeEditions.en));
+        const projected = { ...translation, sections: translation.sections.map((section, index) =>
+          (locale === "en" || locale === "zh") && ["one-question", "positions"].includes(section.id)
+            ? { ...section, paragraphs: section.paragraphs.slice(0, previous.sections[index].paragraphs.length), table: previous.sections[index].table }
+            : section) };
+        assert.deepEqual(originalSectionShapes(projected), originalSectionShapes(previousQuestionScopeEditions.en));
+      } else if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
         assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(article.translations.en));
       }
       assert.equal(new Set(translation.sections.map(section => section.id)).size, translation.sections.length);
