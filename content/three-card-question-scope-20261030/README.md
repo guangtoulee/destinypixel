@@ -1,0 +1,21 @@
+# Three-card question and layout scope, 2026-10-30
+
+The existing `/journal/how-to-read-three-card-tarot` keeps its title, URL, introduction, takeaway, eight section IDs/order, original paragraphs and position table, all original sources and action. Only EN/ZH first two sections gain a task-to-layout table, a new explicitly invented A/B collaboration example and source comparison. The original Fool/Two of Swords/Temperance case, reversals, AI/context and recording sections remain exact. No new article, card meaning, product control or Russian translation is added. The previously generated Traditional Chinese edition is pinned explicitly, so it does not silently gain new prose from the Simplified Chinese edit. Effective dates change only for the two edited editions; publication and shared base dates remain October2.
+
+## Source and original contribution
+
+Rachel Pollack, 《78度的智慧》, Sun Meijun translation, 商周出版, first edition December2010, ISBN9789861204369, Chapter11. This round visually reread PDF331 and358 / printed333 and360: image plus position contributes to meaning; the author's advice-oriented Work Cycle has its own structure. Those passages do not prescribe our three task categories, five-card preset or workplace example. They are modern author-specific method discussions, not a universal tarot law or scientific validation. We do not reproduce the Work Cycle layout, case or page image.
+
+Three additional pages were actually read by a source subagent: PDF388–390 / printed390–392, Chapter12. They contain self-reading, coherent synthesis and advice boundaries, followed by meditation. They were not used to invent mandatory background fields or claims that detail improves predictive accuracy. Speculations about others' motives and disaster predictions in those pages are not adopted. Root additionally visually checked both cited pages and their printed footers. These are five targeted reread pages, not a claim to have read the whole book.
+
+The historical comparison was checked against [Waite Part III §7](https://sacred-texts.com/tarot/pkt/pkt0307.htm): a definite question, significator and different ten-card sequence. Its historic title is not proof of antiquity; obsolete appearance/gender allocations are not adopted. Neither Waite's method nor Pollack's is called this site's three-card preset. No historical printed page number is invented for the web transcription.
+
+The three task checks, three-row comparison table, mixed-task example, A/B project scenario and advance declaration of positions are independently organized site teaching. The actual `/tarot` labels are product facts checked in source and browser, not evidence from the book. A/B prompts cannot supply missing deadlines or intentions, calculate scores or determine a winning life choice. The exercise's week is a scope, not a guaranteed forecast. Independent model-assisted source/copy review is recorded in QA; no native-human or professional certification is claimed.
+
+## Scope and preservation
+
+Base main: `d969aedab73a5764525a7234a1fe2e9bd20aa6c8`. No open PR overlapped this article. The October26 pending connection guide, October28 journal PR44 and October29 four-fours branch are deliberately untouched; no denied old publication operation is retried. Sun/Moon/Judgement/Star/Celtic/index/search and unrelated work are outside this revision.
+
+`previous-editions.json` contains the target's exact four effective baseline editions, captured before editing. `revisions.json` pins its hash, the exact previous/current source file hashes, the base commit and two authored revision notes. Dedicated tests retain every old paragraph, all original links, the other six complete sections and both unedited editions. Historical six baseline test failures are isolated and reported; this task does not delete or relax those tests. Repository/source proof and current HTTP/browser/build evidence are in `docs/qa/tarot-question-scope-20261030`.
+
+No original PDF, scan, book illustration or private account data is tracked or uploaded. Source file remains read-only; original size/mtime/hash are checked locally. No paid/AI generation, account storage, external discussion, purchase or security-setting operation is part of verification.
