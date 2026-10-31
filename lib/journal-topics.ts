@@ -23,6 +23,7 @@ export const journalTopicUi = {
 
 // Assign secondary subjects only when the article actually develops them.
 const guideTopics: Record<string, readonly JournalTopic[]> = {
+  "when-one-tarot-suit-dominates": ["tarot-reading"],
   "how-to-read-celtic-cross": ["tarot-reading"],
   "how-to-keep-tarot-journal": ["tarot-reading"],
   "why-the-four-fours-differ": ["tarot-reading"],

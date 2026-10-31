@@ -1,0 +1,94 @@
+{
+  "base": "http://127.0.0.1:3052",
+  "editions": [
+    {
+      "locale": "en",
+      "href": "/journal/when-one-tarot-suit-dominates",
+      "sections": 6,
+      "fullText": true,
+      "dateModified": "2026-10-31",
+      "canonical": true
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/when-one-tarot-suit-dominates?locale=zh",
+      "sections": 6,
+      "fullText": true,
+      "dateModified": "2026-10-31",
+      "canonical": true
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-swords",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-six-of-swords",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-page-of-swords",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-swords?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-six-of-swords?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-page-of-swords?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    }
+  ],
+  "deploymentIds": []
+}

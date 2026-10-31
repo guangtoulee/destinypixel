@@ -114,7 +114,7 @@ test("the Tai Sui guide exposes only English and Simplified Chinese without chan
   assert.deepEqual(journalArticleLocales(article), ["en", "zh"]);
   assert.deepEqual(Object.keys(journalAlternates(article.slug)), ["en", "zh-Hans", "x-default"]);
   assert.equal(journalMetadata("ru", article).alternates?.canonical, journalHref("en", article.slug));
-  const bilingual = new Set([article.slug, "how-to-read-celtic-cross", "how-to-keep-tarot-journal"]);
+  const bilingual = new Set([article.slug, "how-to-read-celtic-cross", "how-to-keep-tarot-journal", "when-one-tarot-suit-dominates"]);
   assert.ok(journalArticles.filter(item => !bilingual.has(item.slug)).every(item => journalArticleLocales(item).length === 4));
 });
 

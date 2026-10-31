@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/lee/Documents/Codex/2026-10-22/task/destinypixel-suits-20261031/scripts/validate-tarot-editorial.py", line 68, in <module>
+    validate_current_tarot_sample(path, schema, entry)
+  File "/Users/lee/Documents/Codex/2026-10-22/task/destinypixel-suits-20261031/scripts/editorial_revision_helpers.py", line 251, in validate_current_tarot_sample
+    jsonschema.validate(current, schema)
+AttributeError: module 'jsonschema' has no attribute 'validate'
