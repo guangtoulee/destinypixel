@@ -24,7 +24,7 @@ If spreads are new to you, start with the three-card worked example, then return
 
 A significator in the version compared here is deliberately selected before the deal to represent the person or subject of the question. Waite’s Part III, §7 places it face up, then shuffles the remaining pack and deals ten further cards. It is not an extra outcome discovered by that draw.
 
-Pollack explicitly notes that not everyone uses a significator and that some readers use one only in particular spreads. She also points out a practical consequence of setting a card aside: it cannot appear elsewhere in that spread. These are observations in her own modern approach, not a universal requirement to choose or omit one. Reference: Seventy-Eight Degrees of Wisdom, Sun Meijun translation, 商周, December2010 first edition, Chapter11; consulted PDF332 / printed334.
+Pollack explicitly notes that not everyone uses a significator and that some readers use one only in particular spreads. She also points out a practical consequence of setting a card aside: it cannot appear elsewhere in that spread. These are observations in her own modern approach, not a universal requirement to choose or omit one. Reference: Seventy-Eight Degrees of Wisdom, Sun Meijun translation, 商周, December 2010 first edition, Chapter 11; consulted PDF 332 / printed 334.
 
 For the current DestinyPixel Celtic preset, start with your question and the ten labelled positions. It has no separate significator slot. You do not need an eleventh position, and positions one and seven keep the jobs shown below. If you follow a printed method with a significator, record that version separately rather than silently combining its procedure with this preset.
 
