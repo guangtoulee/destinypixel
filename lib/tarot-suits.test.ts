@@ -3,6 +3,8 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import sitemap from "@/app/sitemap";
+import celticPreviousContainers from "@/content/celtic-significator-20261101/previous-containers.json";
+import celticRevision from "@/content/celtic-significator-20261101/revision.json";
 import sourceReview from "@/content/tarot-suit-patterns-20261031/source-review.json";
 import { celestialCopy } from "@/lib/celestial/copy";
 import { getJournalArticle, journalAlternates, journalArticleLocale, journalArticleLocales, journalArticleSchema, journalArticles, journalHref, journalLocales, journalMetadata, type JournalTranslation } from "@/lib/journal";
@@ -135,7 +137,9 @@ test("the existing tarot-reading topic discovers only the authored suit-guide ed
   for (const locale of ["ru", "zh-TW"] as const) assert.ok(!journalTopicEntries(locale).some(entry => entry.slug === slug), `${locale}: fallback copy appeared as an authored topic entry`);
 });
 
-test("the new guide leaves the recorded pre-existing methods and all three example cards byte-for-byte intact", () => {
+test("the suit guide retains its immutable historical receipts while explicitly validating the later Celtic revision", () => {
+  const digest = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
+  assert.equal(digest(readFileSync("content/tarot-suit-patterns-20261031/source-review.json")), "da29b7a1f477b9c581b0db160c68643f01ed43c73681c0ad865273a2d3f5c2a1", "the original suit-guide receipt changed");
   assert.equal(sourceReview.baseCommit, "f9eead1d7df1089e18a35bd74a3e155d1b8c8fe2");
   assert.equal(sourceReview.articleSlug, slug);
   assert.deepEqual(sourceReview.authoredLocales, [...authoredLocales]);
@@ -147,10 +151,44 @@ test("the new guide leaves the recorded pre-existing methods and all three examp
     "lib/journal-three-card-tarot.ts", "lib/journal-tarot-methods.ts",
     ...journalLocales.flatMap(locale => caseCards.map(card => `content/tarot/${locale}/${card}.json`)),
   ];
-  const receipts = sourceReview.previousPublishedFilesSha256;
+  const receipts: Record<string, string> = sourceReview.previousPublishedFilesSha256;
   assert.deepEqual(Object.keys(receipts).sort(), expectedPaths.sort(), "the preserved-file receipt scope changed");
+  const laterPaths = ["content/tarot-methods/en.json", "content/tarot-methods/zh.json", "lib/journal-tarot-methods.ts"];
+  const currentHashes: Record<string, string> = celticRevision.currentPublishedFileHashes;
+  assert.equal(celticRevision.baseCommit, "4da246597c28cde4c5bb37ac574d49b270324865");
+  assert.equal(celticRevision.articleSlug, "how-to-read-celtic-cross");
+  assert.equal(celticRevision.newSectionId, "significator-and-positions");
+  assert.deepEqual(celticRevision.authoredLocales, [...authoredLocales]);
+  assert.deepEqual(celticRevision.previousPublishedFileHashes, Object.fromEntries(laterPaths.map(path => [path, receipts[path]])), "the later revision does not start from the original suit-guide receipts");
+  assert.deepEqual(Object.keys(currentHashes).sort(), [...laterPaths].sort());
+  assert.equal(digest(readFileSync("content/celtic-significator-20261101/previous-containers.json")), celticRevision.previousContainersSha256);
   for (const [path, expected] of Object.entries(receipts)) {
     assert.match(expected, /^[a-f0-9]{64}$/);
-    assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), expected, `${path}: previously published file changed`);
+    const raw = readFileSync(path);
+    if (!laterPaths.includes(path)) {
+      assert.equal(digest(raw), expected, `${path}: previously published file changed`);
+      continue;
+    }
+    assert.match(currentHashes[path], /^[a-f0-9]{64}$/);
+    assert.equal(digest(raw), currentHashes[path], `${path}: current Celtic file differs from its independent revision receipt`);
+    if (path === "lib/journal-tarot-methods.ts") {
+      const moduleSource = raw.toString();
+      assert.equal((moduleSource.match(/2026-11-01/g) ?? []).length, 1);
+      assert.equal(digest(moduleSource.replace("2026-11-01", "2026-10-27")), expected, "the method module differs beyond the authorized Celtic update date");
+      continue;
+    }
+    const locale = path === "content/tarot-methods/en.json" ? "en" : "zh";
+    const previous: Record<string, JournalTranslation> = celticPreviousContainers[locale];
+    const current: Record<string, JournalTranslation> = JSON.parse(raw.toString());
+    const target: JournalTranslation = current[celticRevision.articleSlug];
+    const oldTarget: JournalTranslation = previous[celticRevision.articleSlug];
+    assert.ok(target && oldTarget);
+    assert.equal(oldTarget.sections.length, 8);
+    assert.equal(target.sections.length, oldTarget.sections.length + 1);
+    assert.equal(target.sections.filter(section => section.id === celticRevision.newSectionId).length, 1);
+    assert.equal(target.sections.findIndex(section => section.id === celticRevision.newSectionId), oldTarget.sections.findIndex(section => section.id === "which-celtic-cross") + 1);
+    const projected: Record<string, JournalTranslation> = { ...current, [celticRevision.articleSlug]: { ...target, sections: target.sections.filter(section => section.id !== celticRevision.newSectionId) } };
+    assert.deepEqual(projected, previous, `${locale}: later revision changed original metadata, section objects/order or the other article`);
+    assert.equal(digest(JSON.stringify(previous, null, 2) + "\n"), expected, `${path}: historical projection no longer reproduces the original file approval`);
   }
 });

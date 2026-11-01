@@ -1,0 +1,8 @@
+lib/celtic-significator.test.ts(127,13): error TS7022: 'schema' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+lib/tarot-suits.test.ts(183,11): error TS7022: 'target' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+lib/tarot-suits.test.ts(183,57): error TS7022: 'oldTarget' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+lib/tarot-suits.test.ts(187,41): error TS7006: Parameter 'section' implicitly has an 'any' type.
+lib/tarot-suits.test.ts(188,44): error TS7006: Parameter 'section' implicitly has an 'any' type.
+lib/tarot-suits.test.ts(188,129): error TS7006: Parameter 'section' implicitly has an 'any' type.
+lib/tarot-suits.test.ts(189,11): error TS7022: 'projected' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+lib/tarot-suits.test.ts(189,113): error TS7006: Parameter 'section' implicitly has an 'any' type.
