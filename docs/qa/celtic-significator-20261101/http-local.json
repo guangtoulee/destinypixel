@@ -1,0 +1,94 @@
+{
+  "base": "http://127.0.0.1:3053",
+  "editions": [
+    {
+      "locale": "en",
+      "href": "/journal/how-to-read-celtic-cross",
+      "sections": 9,
+      "fullText": true,
+      "dateModified": "2026-11-01",
+      "canonical": true
+    },
+    {
+      "locale": "zh",
+      "href": "/journal/how-to-read-celtic-cross?locale=zh",
+      "sections": 9,
+      "fullText": true,
+      "dateModified": "2026-11-01",
+      "canonical": true
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    }
+  ],
+  "deploymentIds": []
+}
