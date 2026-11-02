@@ -1,0 +1,122 @@
+[
+  {
+    "locale": "zh",
+    "expected": {
+      "width": 320,
+      "height": 568
+    },
+    "height": 568,
+    "images": [
+      {
+        "alt": "宝剑八",
+        "loaded": true
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 305,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords?locale=zh",
+    "width": 320
+  },
+  {
+    "locale": "zh",
+    "expected": {
+      "width": 390,
+      "height": 844
+    },
+    "height": 844,
+    "images": [
+      {
+        "alt": "宝剑八",
+        "loaded": true
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 375,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords?locale=zh",
+    "width": 390
+  },
+  {
+    "locale": "zh",
+    "expected": {
+      "width": 1440,
+      "height": 900
+    },
+    "height": 900,
+    "images": [
+      {
+        "alt": "宝剑八",
+        "loaded": false
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 1425,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords?locale=zh",
+    "width": 1440
+  },
+  {
+    "locale": "en",
+    "expected": {
+      "width": 320,
+      "height": 568
+    },
+    "height": 568,
+    "images": [
+      {
+        "alt": "Eight of Swords",
+        "loaded": true
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 305,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords",
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "expected": {
+      "width": 390,
+      "height": 844
+    },
+    "height": 844,
+    "images": [
+      {
+        "alt": "Eight of Swords",
+        "loaded": true
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 375,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords",
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "expected": {
+      "width": 1440,
+      "height": 900
+    },
+    "height": 900,
+    "images": [
+      {
+        "alt": "Eight of Swords",
+        "loaded": true
+      }
+    ],
+    "newBullets": 2,
+    "overflow": [],
+    "scrollWidth": 1425,
+    "sections": 12,
+    "url": "http://127.0.0.1:3054/journal/tarot-eight-of-swords",
+    "width": 1440
+  }
+]

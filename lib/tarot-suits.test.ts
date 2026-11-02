@@ -5,6 +5,7 @@ import test from "node:test";
 import sitemap from "@/app/sitemap";
 import celticPreviousContainers from "@/content/celtic-significator-20261101/previous-containers.json";
 import celticRevision from "@/content/celtic-significator-20261101/revision.json";
+import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import sourceReview from "@/content/tarot-suit-patterns-20261031/source-review.json";
 import { celestialCopy } from "@/lib/celestial/copy";
 import { getJournalArticle, journalAlternates, journalArticleLocale, journalArticleLocales, journalArticleSchema, journalArticles, journalHref, journalLocales, journalMetadata, type JournalTranslation } from "@/lib/journal";
@@ -14,6 +15,7 @@ import { journalTopicEntries } from "@/lib/journal-topic-catalog";
 import { journalArticleTopics, journalTopicHref } from "@/lib/journal-topics";
 import { absoluteUrl } from "@/lib/seo";
 import { tarotLearningHref, tarotLearningId } from "@/lib/tarot-learning/paths";
+import type { TarotLearningArticle } from "@/lib/tarot-learning/content";
 
 const slug = "when-one-tarot-suit-dominates";
 const authoredLocales = ["en", "zh"] as const;
@@ -137,7 +139,7 @@ test("the existing tarot-reading topic discovers only the authored suit-guide ed
   for (const locale of ["ru", "zh-TW"] as const) assert.ok(!journalTopicEntries(locale).some(entry => entry.slug === slug), `${locale}: fallback copy appeared as an authored topic entry`);
 });
 
-test("the suit guide retains its immutable historical receipts while explicitly validating the later Celtic revision", () => {
+test("the suit guide retains its immutable historical receipts while validating the later Celtic and Eight of Swords revisions", () => {
   const digest = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
   assert.equal(digest(readFileSync("content/tarot-suit-patterns-20261031/source-review.json")), "da29b7a1f477b9c581b0db160c68643f01ed43c73681c0ad865273a2d3f5c2a1", "the original suit-guide receipt changed");
   assert.equal(sourceReview.baseCommit, "f9eead1d7df1089e18a35bd74a3e155d1b8c8fe2");
@@ -154,6 +156,13 @@ test("the suit guide retains its immutable historical receipts while explicitly 
   const receipts: Record<string, string> = sourceReview.previousPublishedFilesSha256;
   assert.deepEqual(Object.keys(receipts).sort(), expectedPaths.sort(), "the preserved-file receipt scope changed");
   const laterPaths = ["content/tarot-methods/en.json", "content/tarot-methods/zh.json", "lib/journal-tarot-methods.ts"];
+  const eightSwordsPaths = ["content/tarot/en/eight-of-swords.json", "content/tarot/zh/eight-of-swords.json"];
+  const eightSwordsRecords: Record<string, { previousFileSha256: string; previousArticleMarkdownSha256: string; fileSha256: string; articleMarkdownSha256: string }> = eightSwordsRevision.records;
+  assert.equal(eightSwordsRevision.baseCommit, "7c162a22012d8909b8b8146df573c9d36e16d4b5");
+  assert.equal(eightSwordsRevision.updatedAt, "2026-11-02");
+  assert.deepEqual(Object.keys(eightSwordsRevision.articles), ["tarot-eight-of-swords"]);
+  assert.deepEqual(Object.keys(eightSwordsRecords).sort(), [...eightSwordsPaths].sort());
+  type RevisedCard = Omit<TarotLearningArticle, "sources"> & { sources: unknown[]; updatedAt: string; editorialRevision?: unknown };
   const currentHashes: Record<string, string> = celticRevision.currentPublishedFileHashes;
   assert.equal(celticRevision.baseCommit, "4da246597c28cde4c5bb37ac574d49b270324865");
   assert.equal(celticRevision.articleSlug, "how-to-read-celtic-cross");
@@ -165,6 +174,38 @@ test("the suit guide retains its immutable historical receipts while explicitly 
   for (const [path, expected] of Object.entries(receipts)) {
     assert.match(expected, /^[a-f0-9]{64}$/);
     const raw = readFileSync(path);
+    if (eightSwordsPaths.includes(path)) {
+      const record = eightSwordsRecords[path], previousRaw = readFileSync(`content/eight-swords-update-20261102/previous/${path}`);
+      const previous: RevisedCard = JSON.parse(previousRaw.toString());
+      const current: RevisedCard = JSON.parse(raw.toString());
+      assert.equal(record.previousFileSha256, expected, `${path}: the later card revision does not start from the original suit-guide receipt`);
+      assert.equal(digest(previousRaw), expected, `${path}: the historical card snapshot changed`);
+      assert.equal(digest(previous.articleMarkdown), record.previousArticleMarkdownSha256);
+      assert.equal(digest(raw), record.fileSha256, `${path}: current card file differs from its independent revision receipt`);
+      assert.equal(digest(current.articleMarkdown), record.articleMarkdownSha256);
+      assert.equal(previous.sections.length, 11);
+      assert.equal(current.sections.length, previous.sections.length + 1);
+      const added = current.sections.filter(section => section.id === "number-and-image");
+      assert.equal(added.length, 1);
+      assert.equal(current.sections.findIndex(section => section.id === "number-and-image"), previous.sections.findIndex(section => section.id === "section-02") + 1);
+      assert.equal(current.sources.length, previous.sources.length + 2);
+      assert.deepEqual(current.sources.slice(0, previous.sources.length), previous.sources, `${path}: historical source metadata changed`);
+      assert.equal(previous.updatedAt, "2026-10-08");
+      assert.equal(current.updatedAt, "2026-11-02");
+      const block = `## ${added[0].title}\n\n${added[0].bodyMarkdown}\n\n`;
+      assert.equal(current.articleMarkdown.split(block).length, 2, `${path}: the new manuscript section is missing or duplicated`);
+      const projected: RevisedCard = {
+        ...current,
+        sections: current.sections.filter(section => section.id !== "number-and-image"),
+        sources: current.sources.slice(0, previous.sources.length),
+        articleMarkdown: current.articleMarkdown.replace(block, ""),
+        updatedAt: previous.updatedAt,
+      };
+      delete projected.editorialRevision;
+      assert.deepEqual(projected, previous, `${path}: the later card revision changed original fields beyond its recorded addition`);
+      assert.equal(digest(JSON.stringify(projected, null, 2) + "\n"), expected, `${path}: the historical projection does not restore the original bytes`);
+      continue;
+    }
     if (!laterPaths.includes(path)) {
       assert.equal(digest(raw), expected, `${path}: previously published file changed`);
       continue;

@@ -1,0 +1,22 @@
+Browser tab: 3, Title: "免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel", URL: "http://127.0.0.1:3054/tarot?locale=zh".
+1 AXWebArea 免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel, URL: 127.0.0.1:3054/tarot?locale=zh
+	2 container 权杖侍从
+		3 button 关闭牌义
+		4 image 权杖侍从
+		5 text 此刻的关注点
+		6 heading 权杖侍从, Value: 2
+			7 text 权杖侍从
+		8 text 正位
+		9 container 查看牌义
+			10 checkbox 看看这张牌, Value: 1
+			11 checkbox 看牌面, Value: 0
+		12 heading 看看这张牌, Value: 3
+			13 text 看看这张牌
+		14 text 跟随新鲜的创造欲
+		15 link Description: 阅读全文，认识这张牌 (在新标签页打开), Value: 127.0.0.1:3054/journal/tarot-page-of-wands?locale=zh
+		16 container
+			17 text 韦特塔罗 · TaionWC 历史扫描 · Pamela Colman Smith · Pam-A · TaionWC  ·
+			18 link Description: 牌面来源 ↗, Value: 127.0.0.1:3054/tarot/attribution.json
+		19 button 结合我的问题详细解读
+
+The focused UI element is 3 button 关闭牌义
