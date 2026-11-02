@@ -1,0 +1,143 @@
+Browser tab: 3, Title: "Free Online Tarot Reading & Card Spreads | DestinyPixel", URL: "http://127.0.0.1:3054/tarot".
+1 AXWebArea Free Online Tarot Reading & Card Spreads | DestinyPixel, URL: 127.0.0.1:3054/tarot
+	2 container
+		3 link Description: DestinyPixel TAROT, Value: 127.0.0.1:3054/
+		4 link Description: My account, Value: 127.0.0.1:3054/account
+		5 container Language
+			6 link Description: EN, Value: 127.0.0.1:3054/tarot
+			7 link Description: 简, Value: 127.0.0.1:3054/tarot?locale=zh
+			8 link Description: 繁, Value: 127.0.0.1:3054/tarot?locale=zh-TW
+			9 link Description: RU, Value: 127.0.0.1:3054/tarot?locale=ru
+		10 container Explore tarot
+			11 link Description: Draw cards, Value: 127.0.0.1:3054/tarot#table
+			12 link Description: Card atlas, Value: 127.0.0.1:3054/journal/tarot-cards
+			13 link Description: Spreads & basics, Value: 127.0.0.1:3054/journal/how-to-connect-three-tarot-cards
+		14 text Free cards & meanings · no sign-up
+		15 heading Put your question on the table., Value: 1
+			16 text Put your question on the table.
+		17 text Shuffle, turn a card, and look closely. Start with what you see.
+		18 container table
+			19 button (collapsed) Three cards · a path Choose your spread, Secondary Actions: Expand
+				20 text Three cards · a path
+				21 text Choose your spread
+			22 container
+				23 container
+					24 button (disabled) Place on table · 2
+					25 button (disabled) Place on table · 3
+					26 button (disabled) Place on table · 4
+					27 button (disabled) Place on table · 5
+					28 button (disabled) Place on table · 6
+					29 button (disabled) Place on table · 7
+					30 button (disabled) Place on table
+				31 heading Choose a card, Value: 2
+					32 text Choose a card
+				33 container
+					34 text 78 remaining
+				35 button Shuffle
+				36 button (disabled) Place on table
+				37 text Shuffle first, then place a card.
+				38 text With the deck focused, press the down arrow to move its top card underneath.
+				39 container
+					40 button Choose · What brought you here
+						41 text 01
+						42 text ✧
+					43 checkbox 1 What brought you here, Value: 1
+					44 button Choose · What is present
+						45 text 02
+						46 text ✧
+					47 checkbox 2 What is present, Value: 0
+					48 button Choose · A possible next step
+						49 text 03
+						50 text ✧
+					51 checkbox 3 A possible next step, Value: 0
+				52 text Selected position 1  · What brought you here
+			53 container tarot-question
+				54 heading A reading for your situation, Value: 2
+					55 text A reading for your situation
+				56 text What would you like to ask? (required for a reading)
+				57 text field (settable) What would you like to ask? (required for a reading), ID: tarot-question-title
+				58 text Stay with one question. No need to include names or private details.
+				59 text Your situation (optional)
+				60 text entry area (settable) Your situation (optional), ID: tarot-question-details
+				61 text More specific context helps the reading address your situation. You can leave this blank. Avoid names, contact information and other identifying details.
+			62 text Reveal every selected card to request an interpretation. Guided spreads must be complete.
+			63 container
+				64 text DEEPSEEK · AI
+				65 heading Help me interpret, Value: 2
+					66 text Help me interpret
+				67 button (disabled) Help me interpret
+				68 text Only when you ask: chart positions, or your revealed cards, question and optional context, are sent to DeepSeek. Birth details are not attached to the tarot request. Leave identifying details out of your question and context. Symbolic reflection, not a scientific personality assessment or a prediction. Keep important decisions grounded in your circumstances.
+		69 link Description: Learn the 78 Tarot Cards →, Value: 127.0.0.1:3054/journal/tarot-cards
+		70 text Start with the picture. Explore each card’s upright and reversed meanings, its visual details, everyday examples and a small exercise.
+		71 container Free online tarot: choose a spread, then choose your cards
+			72 container
+				73 heading Free online tarot: choose a spread, then choose your cards, Value: 2, ID: cel-guide-title
+					74 text Free online tarot: choose a spread, then choose your cards
+				75 text Use a complete 78-card Rider–Waite–Smith deck for a one-card draw, a three-card reading, a relationship spread, a choice between two paths or a Celtic Cross. You shuffle and pick the cards yourself. Read their upright or reversed meanings immediately, or add your question for an optional AI interpretation.
+			76 heading How to do an online tarot reading, Value: 3
+				77 text How to do an online tarot reading
+			78 content list
+				79 text Choose a spread and decide whether to include reversed cards. Start with one card for a focused prompt, or three for the path here, the present situation and a possible next step.
+				80 text Shuffle, choose an empty position and pick a face-down card. Tap the bottom deck to deal a card, or drag one onto the table. You can return or replace cards before finishing.
+				81 text Reveal cards one at a time. Tap an open card to see its name, orientation and short meaning. For a detailed reading, enter a question title; extra context is optional. Save to your account if you want to revisit the layout and reading.
+			82 container
+				83 heading Which tarot spread should I choose?, Value: 3
+					84 text Which tarot spread should I choose?
+				85 text A one-card draw keeps attention on one theme. Three cards connect the path here, your current situation and a possible next step. The five-card relationship spread explores a connection; the five-card two-paths spread helps compare alternatives. The ten-card Celtic Cross provides more positions and context, but more cards do not guarantee a better answer. Use the free table when you want to arrange your own layout.
+			86 container
+				87 heading Upright and reversed tarot card meanings, Value: 3
+					88 text Upright and reversed tarot card meanings
+				89 text The 78 cards include 22 Major Arcana and 56 Minor Arcana across Wands, Cups, Swords and Pentacles. Major cards are commonly read as broader themes, while the suits offer everyday situations and responses. A reversed card can suggest a blocked, inward or excessive expression of its theme; it is not automatically a bad omen. Read the card together with its position and your question. The brief meanings here are our editorial interpretations of the card symbols.
+			90 container
+				91 heading Love tarot and questions that leave room to act, Value: 3
+					92 text Love tarot and questions that leave room to act
+				93 text Instead of asking “What is my partner secretly thinking?”, try “What can I do to make our next conversation clearer?” For a choice, explain the two options and what matters to you. A useful question names the situation and leaves you a role in it. You can leave the extra context blank; relevant details help the interpretation address your situation more specifically, not predict it more accurately. Avoid names or identifying details you do not want to share.
+			94 container Online tarot reading questions
+				95 heading Online tarot reading questions, Value: 2, ID: cel-search-faq-title
+					96 text Online tarot reading questions
+				97 button (collapsed) Is online tarot free without registration?, Secondary Actions: Expand
+					98 text Is online tarot free without registration?
+				99 button (collapsed) Does AI choose my cards or change the result?, Secondary Actions: Expand
+					100 text Does AI choose my cards or change the result?
+				101 button (collapsed) Can tarot give a definite yes or no or predict a reunion?, Secondary Actions: Expand
+					102 text Can tarot give a definite yes or no or predict a reunion?
+			103 container Choose another way to explore
+				104 heading Choose another way to explore, Value: 2
+					105 text Choose another way to explore
+				106 link Description: Free natal chart: Sun, Moon and rising sign, Value: 127.0.0.1:3054/astrology
+				107 link Description: BaZi and planetary relationship compatibility, Value: 127.0.0.1:3054/compatibility
+				108 link Description: Chinese fortune sticks and number lookup, Value: 127.0.0.1:3054/sticks
+				109 link Description: How to read three tarot cards: a worked example, Value: 127.0.0.1:3054/journal/how-to-read-three-card-tarot
+		110 button (collapsed) How this works, Secondary Actions: Expand
+			111 text How this works
+		112 text Original artwork: Pamela Colman Smith · Rider–Waite–Smith, Pam-A scans via Wikimedia Commons (public domain).
+		113 link Description: Card artwork & sources ↗, Value: 127.0.0.1:3054/tarot/attribution.json
+		114 button (collapsed) Can I choose my own tarot cards?, Secondary Actions: Expand
+			115 text Can I choose my own tarot cards?
+		116 button (collapsed) Can I change cards or read without AI?, Secondary Actions: Expand
+			117 text Can I change cards or read without AI?
+		118 button (collapsed) Which tarot spreads are available?, Secondary Actions: Expand
+			119 text Which tarot spreads are available?
+		120 container Read a little further
+			121 text TAROT
+			122 heading Read a little further, Value: 2, ID: tarot-next-heading
+				123 text Read a little further
+			124 text Try a three-card reading, learn to frame a useful question, then explore relationship themes without treating the cards as a verdict.
+			125 link Value: 127.0.0.1:3054/journal/how-to-read-three-card-tarot, Description: How to Read a Three-Card Tarot Spread: A Worked Example Learn to connect three tarot cards with their positions and your question. Follow a relationship example, understand reversals, and try a free three-card spread.
+			126 link Value: 127.0.0.1:3054/journal/how-to-ask-fortune-sticks, Description: How to ask fortune sticks: love, family and work examples Not sure what to ask Chinese fortune sticks? Try love, family and work examples, including a family-care question, then turn the reading into a practical next step.
+			127 link Value: 127.0.0.1:3054/journal/yuelao-love-fortune-conversation, Description: Yuelao love fortune sticks: what to say after your reading Drew a love fortune stick and still don’t know what to say? Try concrete conversation starters for waiting, mixed signals and reconnecting, with a simple next step.
+			128 link Value: 127.0.0.1:3054/journal/pamela-colman-smith-tarot-artist, Description: Pamela Colman Smith: Her Name in the Corner of the Cards Meet Pamela Colman Smith through her theatre work, hand-coloured magazine, musical landscapes and the small PCS signature on the Rider–Waite–Smith tarot.
+			129 container Read a little further
+				130 link Description: Journal, Value: 127.0.0.1:3054/journal
+				131 link Description: How it works, Value: 127.0.0.1:3054/learn
+				132 link Description: All tools, Value: 127.0.0.1:3054/tools
+		133 button (collapsed) Explore other themes, Secondary Actions: Expand
+			134 text Explore other themes
+		135 link Description: DestinyPixel, Value: 127.0.0.1:3054/
+		136 container
+			137 link Description: Birth chart, Value: 127.0.0.1:3054/astrology
+			138 link Description: Tarot studio, Value: 127.0.0.1:3054/tarot
+			139 link Description: Compatibility, Value: 127.0.0.1:3054/compatibility
+			140 link Description: Temple sticks, Value: 127.0.0.1:3054/sticks
+
+The focused UI element is 1 AXWebArea Free Online Tarot Reading & Card Spreads | DestinyPixel, URL: 127.0.0.1:3054/tarot

@@ -18,6 +18,8 @@ HANGED_MAN_DIR = ROOT / "content/hanged-man-update-20261024"
 HANGED_MAN_PATHS = frozenset(f"content/tarot/{locale}/hanged-man.json" for locale in ("en", "zh"))
 STAR_DIR = ROOT / "content/star-update-20261025"
 STAR_PATHS = frozenset(f"content/tarot/{locale}/star.json" for locale in ("en", "zh"))
+EIGHT_SWORDS_DIR = ROOT / "content/eight-swords-update-20261102"
+EIGHT_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/eight-of-swords.json" for locale in ("en", "zh"))
 
 
 def sha(raw):
@@ -74,6 +76,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in EIGHT_SWORDS_PATHS:
+        validate_eight_swords_record(path)
+        return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in STAR_PATHS:
         validate_star_record(path)
         return (STAR_DIR / "previous" / sample_key(path)).read_bytes()
@@ -91,6 +96,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in EIGHT_SWORDS_PATHS:
+        current, _ = validate_eight_swords_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in STAR_PATHS:
         current, _ = validate_star_record(path)
         return sha(current["articleMarkdown"])
@@ -101,6 +109,103 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_eight_swords_record(path):
+    """Validate the new practice section while retaining the original delivery."""
+    # Schema validation is required for these new records, even when a caller
+    # is reconstructing historical collections. Do not silently skip it.
+    import jsonschema
+
+    key = sample_key(path)
+    assert key in EIGHT_SWORDS_PATHS, f"Not an Eight of Swords revision: {key}"
+    registry = read(EIGHT_SWORDS_DIR / "revisions.json")
+    assert registry["baseCommit"] == "7c162a22012d8909b8b8146df573c9d36e16d4b5"
+    assert registry["updatedAt"] == "2026-11-02"
+    assert set(registry["articles"]) == {"tarot-eight-of-swords"}
+    notes = registry["articles"]["tarot-eight-of-swords"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(isinstance(note, str) and note.strip() for note in notes.values())
+    assert set(registry["records"]) == EIGHT_SWORDS_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (EIGHT_SWORDS_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    locale = Path(path).parent.name
+    legacy_key = f"{locale}/eight-of-swords"
+    assert sha(raw) == record["fileSha256"], f"Current Eight of Swords file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Eight of Swords Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Eight of Swords file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Eight of Swords Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Eight of Swords metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Eight of Swords metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Eight of Swords metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-02"
+    assert current["review"]["nativeHumanReview"] is False
+
+    old_sections = previous["sections"]
+    assert len(old_sections) == 11
+    assert len(current["sections"]) == 12
+    added = [section for section in current["sections"] if section["id"] == "number-and-image"]
+    assert len(added) == 1 and added[0]["role"] == "practice"
+    section = added[0]
+    assert section.keys() == {"id", "role", "title", "bodyMarkdown"}
+    assert section["title"].strip() and section["bodyMarkdown"].strip()
+    assert [item for item in current["sections"] if item["id"] != "number-and-image"] == old_sections, f"Original Eight of Swords text/order/anchors changed: {key}"
+    insertion = next(i for i, item in enumerate(old_sections) if item["id"] == "section-02") + 1
+    assert current["sections"] == old_sections[:insertion] + [section] + old_sections[insertion:], f"Eight of Swords practice inserted at another position: {key}"
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], f"Original Eight of Swords source receipts changed: {key}"
+    assert len(current["sources"]) == len(previous["sources"]) + 2
+    book, historical_comparison = current["sources"][-2:]
+    assert book["sourceId"] == "eight-swords-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["title"].strip() and book["checkedOn"] == "2026-11-02"
+    metadata = book["sourceMetadata"]
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Minor Arcana introduction" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == [200, 201] and metadata["printedPages"] == [201, 202]
+    assert metadata["readScopePdf"] == [197, 198, 199, 200, 201, 202]
+    assert historical_comparison["sourceId"] == "eight-swords-waite-wands-comparison-20261102"
+    assert historical_comparison["type"] == "original_text_comparison"
+    assert historical_comparison["checkedOn"] == "2026-11-02" and historical_comparison["title"].strip()
+    assert historical_comparison["url"] == "https://sacred-texts.com/tarot/pkt/pktwa08.htm"
+
+    md = current["articleMarkdown"]
+    insertion_text = f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n"
+    following = old_sections[insertion]
+    marker = f"## {following['title']}\n\n{following['bodyMarkdown']}"
+    assert previous["articleMarkdown"].count(marker) == 1
+    assert md == previous["articleMarkdown"].replace(marker, insertion_text + marker), f"Full Eight of Swords manuscript changed outside the new section: {key}"
+    assert md.startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in md
+    ids = [item["id"] for item in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for item in current["sections"] for anchor in item.get("legacyAnchors", [])]
+    if current.get("sourceAppendix"):
+        ids.append(current["sourceAppendix"]["id"])
+    assert len(ids) == len(set(ids)), f"Duplicate Eight of Swords anchors: {key}"
+    assert historical_comparison["url"] in section["bodyMarkdown"]
+    suffix = "?locale=zh" if locale == "zh" else ""
+    assert f"](/journal/tarot-eight-of-wands{suffix})" in section["bodyMarkdown"]
+    assert f"](/tarot{suffix})" in section["bodyMarkdown"]
+    manuscript = (EIGHT_SWORDS_DIR / f"manuscript-{locale}.md").read_text()
+    assert manuscript == md.rstrip() + "\n", f"Readable Eight of Swords manuscript differs from published source: {key}"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/eight-swords-update-20261102/revisions.json"
+    assert revision["updatedAt"] == "2026-11-02" and revision["scope"].strip()
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/eight-of-swords.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/eight-of-swords"]["recordSha256"], f"Unedited Eight of Swords file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_hanged_man_record(path):

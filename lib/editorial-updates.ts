@@ -5,10 +5,11 @@ import queenSwordsRevision from "@/content/queen-swords-update-20261023/revision
 import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
 import starRevision from "@/content/star-update-20261025/revisions.json";
 import questionScopeRevision from "@/content/three-card-question-scope-20261030/revisions.json";
+import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import type { ReportLocale } from "@/lib/report-i18n";
 
 type Revision = { notes: Partial<Record<ReportLocale, string>> };
-const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
+const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
 
 /** A date applies only to the language actually edited in this revision. */
 export function editorialUpdate(slug: string, locale: ReportLocale) {

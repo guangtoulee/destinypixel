@@ -1,0 +1,27 @@
+{
+  "baseCommit": "7c162a22012d8909b8b8146df573c9d36e16d4b5",
+  "updatedAt": "2026-11-02",
+  "articles": {
+    "tarot-eight-of-swords": {
+      "notes": {
+        "en": "Added an attributed method for checking numerical cues against the actual card image, with an original written comparison; retained all existing sections and both cases.",
+        "zh": "补充数字线索与具体牌图冲突时的读法、明确来源归属和原创书面比较；保留全部原有章节与两个案例。"
+      }
+    }
+  },
+  "records": {
+    "content/tarot/en/eight-of-swords.json": {
+      "previousFileSha256": "b6076b43ca6ab0a88bfacb4916c48ac4c153cf40d375d9e0044eed1529241d91",
+      "previousArticleMarkdownSha256": "25f4ab9509fd497e3631ff031d32327699960a787fa0078374855eb8ae6bde69",
+      "fileSha256": "4e09c1a39dbd468181bcdc2f6e247a50e0e0f4d8729661aa32e021e4ed3a6a8e",
+      "articleMarkdownSha256": "4bf2d76bad643202fb4fe65b1f94fb3eb662f982074d1295217b0ad1d626780c"
+    },
+    "content/tarot/zh/eight-of-swords.json": {
+      "previousFileSha256": "4ae055e43c274624bb3c996273a91beafb5c5cc2a6d3d7f602dddd7691867ffa",
+      "previousArticleMarkdownSha256": "836be79e5e1b50e6e5bb2d23aa37ce74932fba49ef59ed92481dd319676e8188",
+      "fileSha256": "fe1bf2bd62ea7c260fee872df677f8e66c765a039c2311fb25888014649f3fa7",
+      "articleMarkdownSha256": "d6fe01909c15c17234908a5a45cc211850ebf268bf3fcf22df98d6dc3e59f83f"
+    }
+  },
+  "scope": "One existing Eight of Swords article, English and Simplified Chinese only; historical review, provenance, title, opening, original sections, other locales and all URLs preserved."
+}
