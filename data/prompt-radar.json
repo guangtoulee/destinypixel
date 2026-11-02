@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-02T08:00:24.667Z",
+  "updatedAt": "2026-11-02T22:26:02.763Z",
   "sourceSummary": {
-    "community": 1449,
-    "publicX": 596,
-    "total": 2045
+    "community": 1454,
+    "publicX": 601,
+    "total": 2055
   },
   "items": [
     {
@@ -233,6 +233,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "TALES OF GRIMWICKE — Chapter I is 22 minutes of AI fantasy animation inspired by the many anthropomorphic animal stories I read as a kid, with a dark twist: The model: Seedance 2.5 (@ByteDanceSeed_ ) via @Segmind_ai. 847 takes generated, mostly 30-second multi-shot prompts, over 5 hours of footage. 127 clips made the cut. About $4.5k in generation, four weeks from first take to publish. Characters and locations came out of @midjourney. Using MJ for the location plates was a revelation: the cinematography and art direction are a level above, and it renders far better as a plate than Nano Banana or GPT Image. Nano Banana (@GoogleDeepMind run on @fal) did the heavy lifting editing those plates, building anchor frames and turning MJ characters into turnaround sheets. Then I let Seedance do as much of the framing and camera operating as possible. That gave the best results. A lot of what I do in my Unreal Engine films came with me: a handheld, imperfect camera operator instead of smooth moves, focus hunting, and above all weather and atmospherics. The model does water, snow, smoke and rain really well, and leaning into that is what keeps it from looking like a Temu Pixar film. The tools I built: a portal (Node on @flydotio) that holds the bible, the refs, every prompt and every take, with a Claude agent (@claudeai) that writes the prompts to the house rules. A Premiere Pro (@AdobeVideo) panel that browses the archive, drops selects on the timeline, versions the project, strips music, and sends fixes back to Seedance. Everything is done in 720p with no upscaling, because it looks terrible. Narration is my own voice through @ElevenLabs speech-to-speech. Music from @Artlist_io. None of this would exist without @PJaccetturo and @Kavanthekid. Their narrative work, Nexus and Chronicles of Bone, proved long-form AI film was possible, and their podcasts, newsletters and X posts, updated constantly as the workflow changes under everyone's feet, showed how to actually do it. Chapter II is currently in the works and I will release it initially on my YouTube channel, The Darkest Age (@CharlieDriscollAI). Consider subscribing there to see it as soon as it drops!"
+    },
+    {
+      "id": "x-public-2117169796290916732",
+      "title": "Fable 5.5 its over for video and image models 🤯 THIS IS PURE CODE one shotted this video holy s",
+      "description": "Fable 5.5 its over for video and image models 🤯 THIS IS PURE CODE one shotted this video holy shit , how this is more beautiful than ai video models Two ways to check this yourself: Ask: “Where did @karpathy go in 2026?",
+      "prompt": "Fable 5.5 its over for video and image models 🤯 THIS IS PURE CODE one shotted this video holy shit , how this is more beautiful than ai video models Two ways to check this yourself: Ask: “Where did @karpathy go in 2026?” with web search and memory turned off. Only the new Fable knows the answer. Then give it the prompt. Run the same prompt I used for the test (it’s in the screenshot) and see for yourself. Don’t rely on Grok for basic reasoning like this. Grok doesn’t have up-to-date knowledge of niche stuff. Either join the community or run the test yourself. Also, a knowledge cutoff doesn’t mean a model knows everything before that date. Sometimes a model doesn’t know about an event even if it happened before its cutoff. This test shows that too. Run the same prompt on regular Opus 5.5 and the quality drops. On Fable 5.1 it’s worse.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/chetaslua/status/2117169796290916732",
+      "sourceType": "x",
+      "authorName": "Chetaslua",
+      "authorHandle": "@chetaslua",
+      "createdAt": "2026-11-02T08:19:49.000Z",
+      "importedAt": "2026-11-02T22:26:02.733Z",
+      "tags": [
+        "Grok Imagine",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 6106,
+        "reposts": 335,
+        "replies": 278,
+        "quotes": 198,
+        "bookmarks": 4014,
+        "views": 1002522,
+        "score": 28471
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Fable 5.5 its over for video and image models 🤯 THIS IS PURE CODE one shotted this video holy shit , how this is more beautiful than ai video models Two ways to check this yourself: Ask: “Where did @karpathy go in 2026?” with web search and memory turned off. Only the new Fable knows the answer. Then give it the prompt. Run the same prompt I used for the test (it’s in the screenshot) and see for yourself. Don’t rely on Grok for basic reasoning like this. Grok doesn’t have up-to-date knowledge of niche stuff. Either join the community or run the test yourself. Also, a knowledge cutoff doesn’t mean a model knows everything before that date. Sometimes a model doesn’t know about an event even if it happened before its cutoff. This test shows that too. Run the same prompt on regular Opus 5.5 and the quality drops. On Fable 5.1 it’s worse."
     },
     {
       "id": "x-public-2090374807753728011",
@@ -963,6 +1006,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I came like a STORM Seedance 2.5 Prompt 👇: Create a ultra-realistic cinematic fashion video using the uploaded images as exact visual references for the woman, crowd, wardrobe, framing, and atmosphere. A young woman with the same short dark bob wears a fitted black turtleneck, black trousers, and black shoes, standing confidently at the center of a large crowd. Start with her walking slowly toward the middle of the crowd, calm and expressionless, with a lit cigarette naturally held between her lips. She reaches the center, stops, and faces directly into the camera. She takes one slow drag from the cigarette, then removes it from her mouth. She slowly exhales a visible stream of smoke toward the camera, with the smoke naturally drifting across her face. She lowers her hand and becomes completely still, staring directly into the lens. The entire crowd behind her remains frozen for a brief moment. Suddenly, everyone behind her begins moving in perfect synchronization — sharp head turns, shoulder jerks, folding forward and snapping upright. The movement should feel rhythmic, strange, powerful, and physically realistic. The woman does not move at all while the entire crowd moves behind her. Slowly push the camera closer to her, keeping her sharply focused while the crowd has subtle depth-of-field blur. Dark, cold, mysterious lighting with deep shadows, realistic skin, hair, clothing, cigarette ember, and physically accurate smoke. Photorealistic live-action quality, cinematic composition, natural human movement; no animation, CGI look, duplicated woman, distorted bodies, excessive smoke, text, subtitles, or logos."
+    },
+    {
+      "id": "x-public-2116628779057754513",
+      "title": "Claude Code just found proof that the tiny apps making real money online are hiding in plain sig",
+      "description": "Claude Code just found proof that the tiny apps making real money online are hiding in plain sight. an email app for mac. a collector-car price checker. a form builder. they're making up to $14,201 a month and almost non",
+      "prompt": "Claude Code just found proof that the tiny apps making real money online are hiding in plain sight. an email app for mac. a collector-car price checker. a form builder. they're making up to $14,201 a month and almost none of them tell you where their customers come from. i have the data to prove it. i've suspected this for months but last week something happened that made me finally check. my friend spent 5 months building an app ChatGPT called \"a million-dollar idea.\" launch day he opened Stripe next to me and the whole dashboard was zeros. \"0 customers.\" \"$0.00 this month.\" he looked at me and said \"why did ChatGPT tell me this would work.\" i said i don't know. but i did know. i opened Claude Code on my MacBook and ran Opus 5.5 that same night. it reverse-engineered the 25 fastest-growing businesses on TrustMRR, a site that reads revenue straight from Stripe. not the numbers founders post on X. not the \"i made $50k\" screenshots. only money Stripe actually saw land in their accounts in the last 30 days. what it found: → bytemail, an email app for mac, made $14,201 in 30 days → Skillry, a library of AI skills that started in August → $10,519 → Intentsly → $7,388 →  → $7,304 10 of them landed between $1,000 and $20,000 a month. small enough to run alone. every dollar checked and sitting on a public page anyone can open. Claude Code pulled what every one of them sells: → \"oil and gas safety audits\" — $2,226 a month. i didn't know this was a business → \"collector-car pricing\" — $1,860 from one tiny niche → \"cloud macs for ai agents\" — $1,288 from a problem that didn't exist 2 years ago → \"ai image and video generator\" — $5,341 → \"form builder\" — $1,187. the most boring idea on the list. still paid those businesses were sitting on a public page sorted by growth. bytemail had the most. Skillry was second. and 8 of the 10 left one field blank: where their customers come from. so Claude Code dug it up anyway, from reviews, Reddit, X and YouTube. the craziest one was Skillry. it started in August. the founder wrote one line that explains the whole business: \"their visual output often looks generic.\" AI builds sites that all look the same. Skillry sells the fix. free skills, Premium at $9.99 a month. $10,519 in 30 days. i've read that complaint a hundred times. never thought to sell the fix. then i checked the list everyone else uses. Indie Hackers, where founders type their own numbers. the #1 \"business\" by revenue claimed ten quadrillion dollars a month. typed by hand. nobody checked. that's the kind of list people copy their ideas from. i asked Claude Code how to steal one. it mapped Skillry's demand, offer and channels and built a one-page steal sheet. what i did: → told it the kind of business i'd actually run → set it to check TrustMRR again every Monday at 9am → had it put only new winners on top, with a steal sheet for the top one → said no once to the ones i'd never build, so they never come back Claude Code confirmed the Monday job was live. one catch: it only runs while my laptop is awake. so i handed the same job to viktor, an AI employee in my Slack that works from his own computer in the cloud. same steps, one paste. his first run took 4 minutes: 25 businesses checked, 2 winners in an Excel file, a steal sheet in my Slack. i sent the Excel file to my friend. he went quiet for a minute, then said \"why didn't ChatGPT show me any of these.\" that's when i knew for sure. the ideas that already make money aren't secret. they're on a public list almost nobody checks. the full step by step is in the article below: the Claude Code build with every prompt, and the viktor version that runs while your laptop sleeps. the prompt is in the first reply. one paste. save it so you don't lose it and send it to anyone who's ever said \"every good idea is already taken.\" it is. now you can find who took it and steal it.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Argona0x/status/2116628779057754513",
+      "sourceType": "x",
+      "authorName": "Argona",
+      "authorHandle": "@Argona0x",
+      "createdAt": "2026-10-31T20:30:00.000Z",
+      "importedAt": "2026-11-02T22:26:02.736Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1145,
+        "reposts": 110,
+        "replies": 61,
+        "quotes": 7,
+        "bookmarks": 3105,
+        "views": 170240,
+        "score": 12467
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Claude Code just found proof that the tiny apps making real money online are hiding in plain sight. an email app for mac. a collector-car price checker. a form builder. they're making up to $14,201 a month and almost none of them tell you where their customers come from. i have the data to prove it. i've suspected this for months but last week something happened that made me finally check. my friend spent 5 months building an app ChatGPT called \"a million-dollar idea.\" launch day he opened Stripe next to me and the whole dashboard was zeros. \"0 customers.\" \"$0.00 this month.\" he looked at me and said \"why did ChatGPT tell me this would work.\" i said i don't know. but i did know. i opened Claude Code on my MacBook and ran Opus 5.5 that same night. it reverse-engineered the 25 fastest-growing businesses on TrustMRR, a site that reads revenue straight from Stripe. not the numbers founders post on X. not the \"i made $50k\" screenshots. only money Stripe actually saw land in their accounts in the last 30 days. what it found: → bytemail, an email app for mac, made $14,201 in 30 days → Skillry, a library of AI skills that started in August → $10,519 → Intentsly → $7,388 →  → $7,304 10 of them landed between $1,000 and $20,000 a month. small enough to run alone. every dollar checked and sitting on a public page anyone can open. Claude Code pulled what every one of them sells: → \"oil and gas safety audits\" — $2,226 a month. i didn't know this was a business → \"collector-car pricing\" — $1,860 from one tiny niche → \"cloud macs for ai agents\" — $1,288 from a problem that didn't exist 2 years ago → \"ai image and video generator\" — $5,341 → \"form builder\" — $1,187. the most boring idea on the list. still paid those businesses were sitting on a public page sorted by growth. bytemail had the most. Skillry was second. and 8 of the 10 left one field blank: where their customers come from. so Claude Code dug it up anyway, from reviews, Reddit, X and YouTube. the craziest one was Skillry. it started in August. the founder wrote one line that explains the whole business: \"their visual output often looks generic.\" AI builds sites that all look the same. Skillry sells the fix. free skills, Premium at $9.99 a month. $10,519 in 30 days. i've read that complaint a hundred times. never thought to sell the fix. then i checked the list everyone else uses. Indie Hackers, where founders type their own numbers. the #1 \"business\" by revenue claimed ten quadrillion dollars a month. typed by hand. nobody checked. that's the kind of list people copy their ideas from. i asked Claude Code how to steal one. it mapped Skillry's demand, offer and channels and built a one-page steal sheet. what i did: → told it the kind of business i'd actually run → set it to check TrustMRR again every Monday at 9am → had it put only new winners on top, with a steal sheet for the top one → said no once to the ones i'd never build, so they never come back Claude Code confirmed the Monday job was live. one catch: it only runs while my laptop is awake. so i handed the same job to viktor, an AI employee in my Slack that works from his own computer in the cloud. same steps, one paste. his first run took 4 minutes: 25 businesses checked, 2 winners in an Excel file, a steal sheet in my Slack. i sent the Excel file to my friend. he went quiet for a minute, then said \"why didn't ChatGPT show me any of these.\" that's when i knew for sure. the ideas that already make money aren't secret. they're on a public list almost nobody checks. the full step by step is in the article below: the Claude Code build with every prompt, and the viktor version that runs while your laptop sleeps. the prompt is in the first reply. one paste. save it so you don't lose it and send it to anyone who's ever said \"every good idea is already taken.\" it is. now you can find who took it and steal it."
     },
     {
       "id": "x-public-2073434146173825278",
@@ -3095,7 +3179,7 @@
       "authorName": "Pounds",
       "authorHandle": "@pounddz",
       "createdAt": "2026-10-28T22:55:58.000Z",
-      "importedAt": "2026-11-01T18:29:24.324Z",
+      "importedAt": "2026-11-02T22:26:02.735Z",
       "tags": [
         "Seedance",
         "视频"
@@ -3115,13 +3199,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 421,
+        "likes": 425,
         "reposts": 38,
         "replies": 39,
         "quotes": 11,
-        "bookmarks": 791,
-        "views": 93330,
-        "score": 3626
+        "bookmarks": 798,
+        "views": 94174,
+        "score": 3656
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between slop and quality where people don't even care if its AI is in the amount of detail you include in your script A script is much more than dialogue Its the characters personalities, their voices, their swagger, the way the camera moves, the vibe and emotion I whisper flow my entire vision for my ad exactly including all the camera angles and camera movements then save it as a skill in Claude I then open a new chat and make my characters and locations based on the information from that skill (Using a character / scene builder skill I made that follows certain rules to generate realistic characters that don't look boring) Then on to the prompts, Seedance can hold a lot of context so I give it everything it needs so it doesn't guess about anything the best way to do that is use this prompt structure [REFERENCE MATERIALS] [VOICES] [GOAL] [CONTINUITY] [SHOTS] [VISUAL STYLE] [CAMERA AND PERFORMANCE] [AUDIO] [EXCLUSIONS] [MAINTAIN CONSISTENCY] This structure to give your prompts ensures every single thing is covered and you can truly get whats in your brain onto the screen"
@@ -3687,6 +3771,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "this is how i make AI videos people think are real.. Claude Opus 5.5 wrote the scenes. Seedance 2.5 on PromptWise made them real This is the part most people hide, so here’s the full breakdown👇"
+    },
+    {
+      "id": "x-public-2116844865279451613",
+      "title": "This AI video looks like Marvel cut its special effects budget Created by Seedance 2.5 on @makeu",
+      "description": "This AI video looks like Marvel cut its special effects budget Created by Seedance 2.5 on @makeugc Do you think it should have been made more dynamic and given the girl more superpowers? Prompt: Create a 30-second photor",
+      "prompt": "This AI video looks like Marvel cut its special effects budget Created by Seedance 2.5 on @makeugc Do you think it should have been made more dynamic and given the girl more superpowers? Prompt: Create a 30-second photorealistic LIVE-ACTION superhero apocalypse movie scene. Landscape 16:9. Real actress, real stunt performers, physical city location, full-size vehicles, natural lighting, and seamless feature-film visual effects. REFERENCE Use only Image Reference 1, the supplied photograph of the adult heroine. Preserve her exact face, hairstyle, hair colors, proportions, outfit, footwear, and accessories throughout. Render any stylized details as real skin, hair, fabric, and physical materials. Natural pores, expressive eyes, individual hair strands, clothing seams and folds. No video reference is supplied. Construct everything from this description. STORY A woman calmly faces a charging zombie horde. She inserts white wireless earbuds, starts her music, and clears the avenue with effortless telekinesis. She knocks back the front ranks, blocks a flanking alley with a taxi, sends a bus through the main horde, and collapses a damaged pedestrian skybridge onto the bus and remaining zombies. She walks away through a clear side street. One continuous event, one coherent location, exactly thirty seconds. No survivors, rescue subplot, dialogue, or flashbacks. LIVE-ACTION STYLE Everything resembles a finished theatrical film. The heroine looks like a real actress on location. Zombies resemble stunt performers in practical prosthetic makeup. Vehicles and buildings have real scale, weight, texture, and photographic lighting. Natural acting, realistic anatomy, cinematic editing, believable collisions, and physically convincing destruction. No gameplay framing, game-engine appearance, animated characters, plastic skin, repetitive combat animations, HUD, health bars, damage numbers, or targeting effects. HER POWER Her telekinesis is overwhelmingly powerful and completely effortless. Moving a bus is as easy as moving a feather. Relaxed shoulders, steady breathing, small finger and wrist gestures. Never show strain, trembling, clenched teeth, exhaustion, bracing, or loss of balance. She is quietly confident, with a faint smile and subtle head movements to the music. No exaggerated dancing. Telekinesis is invisible. Show it through object movement, displaced air, disturbed puddles, and sliding papers. No beams, glowing hands, magical symbols, or luminous shields. Objects retain realistic material behavior. Suspension extends when lifted; metal deforms; glass breaks; impacts have weight and inertia. Her power supplies the force without making objects look weightless. Each action has clear cause and effect: she looks toward a specific target, gestures, and that target immediately responds. LOCATION A wide downtown intersection after rain, under overcast daylight. Wet asphalt, puddles, isolated fires, thin smoke, damaged brick buildings, broken shop windows, abandoned vehicles, scattered glass and papers. Visibility remains clear. Keep this geography consistent: - The heroine stands at the intersection, facing north along the avenue. - The main horde starts thirty meters ahead, sprinting toward her. - An alley opens eight meters ahead on her right. A yellow taxi stands beside its entrance, with a white delivery van farther inside. - An empty city bus stands ten meters to her left, level with her, facing north. - The intersection has at least twenty-four meters of clear space for moving and rotating the bus. - The avenue provides eighteen meters of clear width along the bus's path. - A damaged enclosed pedestrian skybridge spans the avenue forty meters ahead. Missing glass, sagging central section, cracked connections. - Abandoned cars stand immediately beyond the bridge and will stop the bus directly beneath it. - The side street on her left is clear beyond the parked bus. Once the bus is lifted away, this exit is open. Establish these objects before using them. All vehicles and the bridge are empty. The heroine advances only two short steps and stays near the intersection, far from the final collapse. ZOMBIES Dozens of distinct adult infected people in dirty, torn everyday clothing, with pallid skin, clouded eyes, and convincing practical makeup. Aggressive, varied running: stumbling, splashing, reaching, and navigating obstacles. No duplicated faces or synchronized movement. They never wait motionless during her attacks. Their delays come from knockback, falling, recovering, and negotiating wreckage. The first wave creates time for the taxi action. During that action, the main horde visibly recovers in the background. They resume advancing during the bus lift. Threats come only from the established avenue and right alley. No unexplained attackers appear behind her. Emphasize impacts without graphic injury close-ups. EARBUDS Small white wireless earbuds resembling Apple AirPods: rounded earpieces with short white stems pointing downward. Correct size and natural fit. No wires, headband, or glowing details. She already holds one in each hand at the start of the close-up. She inserts both and taps the right one. No case or phone. They remain in her ears afterward. TIMELINE 00:00–00:03 — ESTABLISH THE THREAT Eye-level wide shot from a three-quarter angle behind and beside the heroine. The first frame clearly shows her full figure in the foreground, the charging horde in the middle distance, and the open street separating them. Keep her off-center so she does not hide the attackers. Immediately establish the taxi, bus, skybridge, and open intersection. The zombies start thirty meters away and rapidly gain ground. She remains calm and motionless. Use a restrained forward camera move. Sound: running footsteps, splashing water, growls, distant fire, rattling metal. No music. No low-angle opening, ground-level view, feet close-up, or delayed reveal. 00:03–00:05 — EARBUDS Cut to a stable frontal chest-up close-up. Holding one white earbud in each hand, she smoothly inserts both, releases them, and taps the right one. Natural fingers and correct earbud placement. She raises her eyes toward the attackers with a slight smile. At the tap, environmental sound becomes muffled from her listening perspective. An original dark electronic instrumental track begins, its first strong bass beat landing at 00:05. 00:05–00:09 — FIRST STRIKE Eye-level medium-wide three-quarter shot showing her, the leading attacker, and the front ranks. The first zombie lunges with arms extended. She raises one palm. He stops in midair sixty centimeters from her hand, feet off the road. His torso stops first; limbs and clothing retain brief residual movement. After less than half a second, she flicks her palm forward. He shoots backward into the horde. The same gesture sends a broad directional pressure wave up the avenue, knocking the front ranks ten to fifteen meters backward. Bodies tumble and collide, obstructing the following ranks. Water fans forward and papers rush away from her. Clearly show the newly opened gap. This buys time for the next action. She lowers her hand and takes two measured steps. The fallen zombies begin recovering immediately. 00:09–00:14 — TAXI A lateral tracking shot reveals zombies emerging from the right alley. She glances right and turns her wrist upward. The yellow taxi rises one meter. All wheels leave the road, suspension extends, and water drips from the chassis. The lift is effortless. Briefly show her, the floating taxi, and the flanking group together. She sweeps two fingers toward the alley. The taxi travels sideways, broadside first, driving the attackers back inside. It crashes into the white van and stops diagonally across the entrance. Metal buckles, glass breaks, and the van shifts backward. The wrecked vehicles completely block the alley and remain there. She stays outside the trajectory. The main horde continues recovering in the background. Sound: suspension creak, breaking glass, heavy metal impact. 00:14–00:18 — POSITION THE BUS Cut wide: heroine near the intersection, bus to her left, horde farther ahead. She looks left and slightly raises her palm. The bus lifts one and a half meters. Wheels hang, fittings vibrate, and water falls from the wheel arches. She guides it diagonally forward into the open intersection, keeping its entire path clear of her. A turn of her wrist rotates it ninety degrees. It finishes broadside across the avenue, several meters ahead of her. Maintain at least three meters of clearance from her throughout. No intersection with buildings or street furniture. Clearly show: heroine behind, bus ahead, zombies farther north. No zombie remains between her and the bus. Her posture stays loose, with no lifting strain. 00:18–00:23 — BUS STRIKE She makes a small forward push. The bus accelerates away from her, broadside first. It descends to the wet road and continues sliding under telekinetic force. Tires skid sideways. Lower metal edges scrape the asphalt, producing sparks and water spray. It knocks down the approaching ranks and sweeps through the main group. Show convincing mass and momentum. Briefly track from a three-quarter side angle so its direction and impacts remain readable. It crashes into the abandoned cars beyond the skybridge. The cars crumple and stop it directly beneath the bridge's central span. Establish the final position: bus under bridge, crushed cars beyond, remaining zombies on the far side. No zombies have crossed the bus. They are only beginning to gather against it. No fireball. Use deformation, glass, sparks, and heavy impact sound. The heroine remains near the original intersection. 00:23–00:25 — FINAL TARGET Over her shoulder, show the bus under the damaged bridge. Zombies reach upward from the far side but have not climbed over. She looks up and casually raises her hand, gently curling her fingers. A brief structural insert shows existing cracks widening and damaged connections bending under her force. Small fragments fall. Her face remains calm. The music builds. 00:25–00:28 — COLLAPSE Return wide, connecting her gesture with the distant bridge. She lowers her hand effortlessly. The central span breaks free and falls directly onto the bus and the street immediately behind it. It crushes the bus roof and blocks the remaining horde. Concrete, twisted steel, and the wrecked bus create one continuous barrier across the avenue. The released span falls with believable gravity. Steel bends, concrete fractures, glass breaks, and dust expands around the impact. Heavy debris stays in the distant collapse zone. Only the bridge and its damaged connections fail; both surrounding buildings remain standing. She remains safely near the intersection. The impact lands on the strongest musical accent: deep rumbling, tearing metal, falling masonry. 00:28–00:30 — EXIT Eye-level medium-wide shot from inside the clear side street to her left, looking back toward the intersection. She turns into it and takes a few confident steps toward the retreating camera. Her route is open because the bus has been removed. The blocked avenue and rising dust remain visible behind her. A subtle head movement follows the music. Hands relaxed, normal breathing, no fatigue. No additional earbud adjustment. A faint breeze moves her hair. No heavy debris reaches her. End at exactly thirty seconds on her forward movement. No extra scene or title. CAMERA AND EDITING Coherent live-action movie coverage, motivated cuts, and readable trajectories. Use eye-level wide and medium-wide shots for major actions. Show the heroine, controlled object, and target together when possible. Close-ups only for earbuds, facial performance, and brief structural details. Maintain screen direction and recognizable landmarks. Controlled tracking, natural perspective, realistic motion blur, restrained impact vibration. No constant shaking, random whip pans, spinning camera, extreme distortion, gameplay camera, or cuts that hide impacts. No prolonged slow motion. LIGHTING AND MATERIALS Soft gray daylight, natural skin tones, restrained orange fire reflections. Realistic skin, hair, fabric, wet asphalt, dirty glass, heavy steel, and concrete dust. Preserve reference colors without making hair or clothing glow. Telekinesis is supernatural; everything affected behaves like real physical material. No cartoon rendering, plastic faces, excessive bloom, or game-engine surfaces. AUDIO Exposed apocalypse ambience until the earbud tap, then a shift into her listening perspective and an original dark electronic instrumental with strong bass and percussion. Music continues through all cuts. Gestures and major impacts align with accents. Keep collisions and destruction audible above it. No lyrics, dialogue, narration, or subtitles. CONTINUITY One consistent heroine matching the photo. Earbuds stay in place. Objects exist before moving; wreckage persists afterward. Zombies recover and advance instead of waiting. The bus starts beside her, moves ahead, then attacks. No zombies remain between her and the deployed bus. The bus stops beneath the bridge. The bridge falls before zombies cross the bus. No teleportation, duplication, disappearing objects, resetting damage, extra fingers, or intersecting bodies. Every major movement follows her gesture. She never strains or becomes tired. No low-angle opening, civilians, rescue subplot, game aesthetic, interface, glowing outlines, text, logos, watermarks, captions, or end title. The result must feel like a real actress in a cinematic superhero apocalypse film, with physically convincing destruction and seamless feature-film visual effects.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ZentrixHQ/status/2116844865279451613",
+      "sourceType": "x",
+      "authorName": "Zentrix⌚️",
+      "authorHandle": "@ZentrixHQ",
+      "createdAt": "2026-11-01T10:48:39.000Z",
+      "importedAt": "2026-11-02T22:26:02.736Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 648,
+        "reposts": 69,
+        "replies": 41,
+        "quotes": 4,
+        "bookmarks": 306,
+        "views": 165023,
+        "score": 2873
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This AI video looks like Marvel cut its special effects budget Created by Seedance 2.5 on @makeugc Do you think it should have been made more dynamic and given the girl more superpowers? Prompt: Create a 30-second photorealistic LIVE-ACTION superhero apocalypse movie scene. Landscape 16:9. Real actress, real stunt performers, physical city location, full-size vehicles, natural lighting, and seamless feature-film visual effects. REFERENCE Use only Image Reference 1, the supplied photograph of the adult heroine. Preserve her exact face, hairstyle, hair colors, proportions, outfit, footwear, and accessories throughout. Render any stylized details as real skin, hair, fabric, and physical materials. Natural pores, expressive eyes, individual hair strands, clothing seams and folds. No video reference is supplied. Construct everything from this description. STORY A woman calmly faces a charging zombie horde. She inserts white wireless earbuds, starts her music, and clears the avenue with effortless telekinesis. She knocks back the front ranks, blocks a flanking alley with a taxi, sends a bus through the main horde, and collapses a damaged pedestrian skybridge onto the bus and remaining zombies. She walks away through a clear side street. One continuous event, one coherent location, exactly thirty seconds. No survivors, rescue subplot, dialogue, or flashbacks. LIVE-ACTION STYLE Everything resembles a finished theatrical film. The heroine looks like a real actress on location. Zombies resemble stunt performers in practical prosthetic makeup. Vehicles and buildings have real scale, weight, texture, and photographic lighting. Natural acting, realistic anatomy, cinematic editing, believable collisions, and physically convincing destruction. No gameplay framing, game-engine appearance, animated characters, plastic skin, repetitive combat animations, HUD, health bars, damage numbers, or targeting effects. HER POWER Her telekinesis is overwhelmingly powerful and completely effortless. Moving a bus is as easy as moving a feather. Relaxed shoulders, steady breathing, small finger and wrist gestures. Never show strain, trembling, clenched teeth, exhaustion, bracing, or loss of balance. She is quietly confident, with a faint smile and subtle head movements to the music. No exaggerated dancing. Telekinesis is invisible. Show it through object movement, displaced air, disturbed puddles, and sliding papers. No beams, glowing hands, magical symbols, or luminous shields. Objects retain realistic material behavior. Suspension extends when lifted; metal deforms; glass breaks; impacts have weight and inertia. Her power supplies the force without making objects look weightless. Each action has clear cause and effect: she looks toward a specific target, gestures, and that target immediately responds. LOCATION A wide downtown intersection after rain, under overcast daylight. Wet asphalt, puddles, isolated fires, thin smoke, damaged brick buildings, broken shop windows, abandoned vehicles, scattered glass and papers. Visibility remains clear. Keep this geography consistent: - The heroine stands at the intersection, facing north along the avenue. - The main horde starts thirty meters ahead, sprinting toward her. - An alley opens eight meters ahead on her right. A yellow taxi stands beside its entrance, with a white delivery van farther inside. - An empty city bus stands ten meters to her left, level with her, facing north. - The intersection has at least twenty-four meters of clear space for moving and rotating the bus. - The avenue provides eighteen meters of clear width along the bus's path. - A damaged enclosed pedestrian skybridge spans the avenue forty meters ahead. Missing glass, sagging central section, cracked connections. - Abandoned cars stand immediately beyond the bridge and will stop the bus directly beneath it. - The side street on her left is clear beyond the parked bus. Once the bus is lifted away, this exit is open. Establish these objects before using them. All vehicles and the bridge are empty. The heroine advances only two short steps and stays near the intersection, far from the final collapse. ZOMBIES Dozens of distinct adult infected people in dirty, torn everyday clothing, with pallid skin, clouded eyes, and convincing practical makeup. Aggressive, varied running: stumbling, splashing, reaching, and navigating obstacles. No duplicated faces or synchronized movement. They never wait motionless during her attacks. Their delays come from knockback, falling, recovering, and negotiating wreckage. The first wave creates time for the taxi action. During that action, the main horde visibly recovers in the background. They resume advancing during the bus lift. Threats come only from the established avenue and right alley. No unexplained attackers appear behind her. Emphasize impacts without graphic injury close-ups. EARBUDS Small white wireless earbuds resembling Apple AirPods: rounded earpieces with short white stems pointing downward. Correct size and natural fit. No wires, headband, or glowing details. She already holds one in each hand at the start of the close-up. She inserts both and taps the right one. No case or phone. They remain in her ears afterward. TIMELINE 00:00–00:03 — ESTABLISH THE THREAT Eye-level wide shot from a three-quarter angle behind and beside the heroine. The first frame clearly shows her full figure in the foreground, the charging horde in the middle distance, and the open street separating them. Keep her off-center so she does not hide the attackers. Immediately establish the taxi, bus, skybridge, and open intersection. The zombies start thirty meters away and rapidly gain ground. She remains calm and motionless. Use a restrained forward camera move. Sound: running footsteps, splashing water, growls, distant fire, rattling metal. No music. No low-angle opening, ground-level view, feet close-up, or delayed reveal. 00:03–00:05 — EARBUDS Cut to a stable frontal chest-up close-up. Holding one white earbud in each hand, she smoothly inserts both, releases them, and taps the right one. Natural fingers and correct earbud placement. She raises her eyes toward the attackers with a slight smile. At the tap, environmental sound becomes muffled from her listening perspective. An original dark electronic instrumental track begins, its first strong bass beat landing at 00:05. 00:05–00:09 — FIRST STRIKE Eye-level medium-wide three-quarter shot showing her, the leading attacker, and the front ranks. The first zombie lunges with arms extended. She raises one palm. He stops in midair sixty centimeters from her hand, feet off the road. His torso stops first; limbs and clothing retain brief residual movement. After less than half a second, she flicks her palm forward. He shoots backward into the horde. The same gesture sends a broad directional pressure wave up the avenue, knocking the front ranks ten to fifteen meters backward. Bodies tumble and collide, obstructing the following ranks. Water fans forward and papers rush away from her. Clearly show the newly opened gap. This buys time for the next action. She lowers her hand and takes two measured steps. The fallen zombies begin recovering immediately. 00:09–00:14 — TAXI A lateral tracking shot reveals zombies emerging from the right alley. She glances right and turns her wrist upward. The yellow taxi rises one meter. All wheels leave the road, suspension extends, and water drips from the chassis. The lift is effortless. Briefly show her, the floating taxi, and the flanking group together. She sweeps two fingers toward the alley. The taxi travels sideways, broadside first, driving the attackers back inside. It crashes into the white van and stops diagonally across the entrance. Metal buckles, glass breaks, and the van shifts backward. The wrecked vehicles completely block the alley and remain there. She stays outside the trajectory. The main horde continues recovering in the background. Sound: suspension creak, breaking glass, heavy metal impact. 00:14–00:18 — POSITION THE BUS Cut wide: heroine near the intersection, bus to her left, horde farther ahead. She looks left and slightly raises her palm. The bus lifts one and a half meters. Wheels hang, fittings vibrate, and water falls from the wheel arches. She guides it diagonally forward into the open intersection, keeping its entire path clear of her. A turn of her wrist rotates it ninety degrees. It finishes broadside across the avenue, several meters ahead of her. Maintain at least three meters of clearance from her throughout. No intersection with buildings or street furniture. Clearly show: heroine behind, bus ahead, zombies farther north. No zombie remains between her and the bus. Her posture stays loose, with no lifting strain. 00:18–00:23 — BUS STRIKE She makes a small forward push. The bus accelerates away from her, broadside first. It descends to the wet road and continues sliding under telekinetic force. Tires skid sideways. Lower metal edges scrape the asphalt, producing sparks and water spray. It knocks down the approaching ranks and sweeps through the main group. Show convincing mass and momentum. Briefly track from a three-quarter side angle so its direction and impacts remain readable. It crashes into the abandoned cars beyond the skybridge. The cars crumple and stop it directly beneath the bridge's central span. Establish the final position: bus under bridge, crushed cars beyond, remaining zombies on the far side. No zombies have crossed the bus. They are only beginning to gather against it. No fireball. Use deformation, glass, sparks, and heavy impact sound. The heroine remains near the original intersection. 00:23–00:25 — FINAL TARGET Over her shoulder, show the bus under the damaged bridge. Zombies reach upward from the far side but have not climbed over. She looks up and casually raises her hand, gently curling her fingers. A brief structural insert shows existing cracks widening and damaged connections bending under her force. Small fragments fall. Her face remains calm. The music builds. 00:25–00:28 — COLLAPSE Return wide, connecting her gesture with the distant bridge. She lowers her hand effortlessly. The central span breaks free and falls directly onto the bus and the street immediately behind it. It crushes the bus roof and blocks the remaining horde. Concrete, twisted steel, and the wrecked bus create one continuous barrier across the avenue. The released span falls with believable gravity. Steel bends, concrete fractures, glass breaks, and dust expands around the impact. Heavy debris stays in the distant collapse zone. Only the bridge and its damaged connections fail; both surrounding buildings remain standing. She remains safely near the intersection. The impact lands on the strongest musical accent: deep rumbling, tearing metal, falling masonry. 00:28–00:30 — EXIT Eye-level medium-wide shot from inside the clear side street to her left, looking back toward the intersection. She turns into it and takes a few confident steps toward the retreating camera. Her route is open because the bus has been removed. The blocked avenue and rising dust remain visible behind her. A subtle head movement follows the music. Hands relaxed, normal breathing, no fatigue. No additional earbud adjustment. A faint breeze moves her hair. No heavy debris reaches her. End at exactly thirty seconds on her forward movement. No extra scene or title. CAMERA AND EDITING Coherent live-action movie coverage, motivated cuts, and readable trajectories. Use eye-level wide and medium-wide shots for major actions. Show the heroine, controlled object, and target together when possible. Close-ups only for earbuds, facial performance, and brief structural details. Maintain screen direction and recognizable landmarks. Controlled tracking, natural perspective, realistic motion blur, restrained impact vibration. No constant shaking, random whip pans, spinning camera, extreme distortion, gameplay camera, or cuts that hide impacts. No prolonged slow motion. LIGHTING AND MATERIALS Soft gray daylight, natural skin tones, restrained orange fire reflections. Realistic skin, hair, fabric, wet asphalt, dirty glass, heavy steel, and concrete dust. Preserve reference colors without making hair or clothing glow. Telekinesis is supernatural; everything affected behaves like real physical material. No cartoon rendering, plastic faces, excessive bloom, or game-engine surfaces. AUDIO Exposed apocalypse ambience until the earbud tap, then a shift into her listening perspective and an original dark electronic instrumental with strong bass and percussion. Music continues through all cuts. Gestures and major impacts align with accents. Keep collisions and destruction audible above it. No lyrics, dialogue, narration, or subtitles. CONTINUITY One consistent heroine matching the photo. Earbuds stay in place. Objects exist before moving; wreckage persists afterward. Zombies recover and advance instead of waiting. The bus starts beside her, moves ahead, then attacks. No zombies remain between her and the deployed bus. The bus stops beneath the bridge. The bridge falls before zombies cross the bus. No teleportation, duplication, disappearing objects, resetting damage, extra fingers, or intersecting bodies. Every major movement follows her gesture. She never strains or becomes tired. No low-angle opening, civilians, rescue subplot, game aesthetic, interface, glowing outlines, text, logos, watermarks, captions, or end title. The result must feel like a real actress in a cinematic superhero apocalypse film, with physically convincing destruction and seamless feature-film visual effects."
     },
     {
       "id": "x-public-2086953211483857085",
@@ -13706,6 +13833,54 @@
       "rawText": "The Dragon Awakens 🐉⚡ Created with Seedance 2.5 for @WizstarAI bringing cinematic AI storytelling, powerful action, and stunning fantasy visuals to life. #WizstarPartner Try your's here 👇  Prompt: WHITE DRAGON ASCENSION | 10s | 16:9 Use image1 as SANZO. Keep his exact face, hair, skin tone, physique, tattoos and outfit. Ultra-realistic live-action Hollywood action. Practical stunts, real katana combat, realistic physics, natural smoke and cinematic lighting. No CGI, anime, cartoon or game look. LOCATION: Infinite white cyclorama with glossy reflective floor, soft diffused light, no horizon or props. OUTFIT: All-white tactical shinobi outfit with hood, half-mask, layered robes, armor, belt, tabi boots and flowing fabric. WEAPON: ONE white-handled katana on LEFT WAIST, fully sheathed. SANZO draws it once. Blade and handle leave the saya together. Saya becomes EMPTY and remains visible. No duplicate weapon or handle. Katana never returns. CREATURE: Giant aggressive celestial dragon made of dense swirling white smoke, with horns, whiskers, mane and bright white eyes. 0–2s: SANZO runs through the white void as the smoke dragon chases him. FPV and low tracking shots. Jaws snap behind him. He combat-slides beneath the jaws. Slow motion, eye close-up, 2-frame freeze. 2–3.5s: During the slide, SANZO draws the katana. Empty saya stays visible. He performs cartwheel → butterfly twist → forward somersault and lands low. 3.5–8.8s: SANZO unleashes KAGE RYUJIN GIRI — CELESTIAL EXECUTION. The dragon coils, dives, bites and tail-whips. SANZO counters with flash steps, flips, twists and aerial slashes. Each slash tears through the smoke; the dragon instantly reforms. Use fast camera moves, crash zooms, speed ramps and heavy impacts. 8.8–10s: Final dive. SANZO performs an aerial corkscrew, somersault and butterfly motion, then delivers a powerful upward diagonal slash. 2-frame freeze. Dragon breaks into white smoke ribbons and disappears. SANZO lands in a strong ninja stance, katana in RIGHT hand, blade down. EMPTY saya visible on LEFT WAIST. Fade white. NEGATIVE: CGI, anime, cartoon, game graphics, glow, beams, duplicate katana, duplicate handle, sheathing, clipping, floating weapon, blur, plastic skin, watermark, logo, subtitles, text."
     },
     {
+      "id": "x-public-2115736986170655086",
+      "title": "Here are custom AI video and image generation prompts tailored for this clip, along with a match",
+      "description": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-def",
+      "prompt": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/JohnSmith5912/status/2115736986170655086",
+      "sourceType": "x",
+      "authorName": "John Smith Ai",
+      "authorHandle": "@JohnSmith5912",
+      "createdAt": "2026-10-29T09:26:20.000Z",
+      "importedAt": "2026-11-02T22:26:02.733Z",
+      "tags": [
+        "Midjourney",
+        "Veo",
+        "Runway",
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Midjourney",
+        "Veo",
+        "Runway",
+        "Seedance"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 157,
+        "reposts": 15,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 155,
+        "views": 13420,
+        "score": 878
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >"
+    },
+    {
       "id": "x-public-2104880393212362993",
       "title": "Holy shit... the gap between what AI video tools promise and what they actually hand back just g",
       "description": "Holy shit... the gap between what AI video tools promise and what they actually hand back just got a lot smaller. Normally, using AI for video feels like a gamble: you type in a prompt, wait three minutes, and it spits b",
@@ -13923,54 +14098,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "This is f*cking gold 🤯 Someone generated a Black guy with a giant afro and a burgundy suit, got him to 20.9M views on a single clip, then launched his own memecoin to the audience. 113,900 followers. 3.1M likes. The character doesn’t exist. It’s the same playbook as Harold Puddington, Bernard l’ermitage, and Marcel Duvall before him - except Phil Jean took it one step further. The character himself is now a tradable token on  -> 20.9M views on the top pinned clip -> 5.9M on another -> 3.7M on a third -> 3.1M total likes across the account His content is organized into playlists: “Phil Film”, “Phil Fights”, “Dancing Phil”. None of the other characters do this. He’s not posting clips, he’s building franchises. People scroll past 90 real humans to argue in the comments whether this one is real. That argument is the distribution Here’s how to test the format: -> Build a character sheet in ChatGPT Images or Nano Banana 2: portrait, full body, side, three-quarter one face you can drop anywhere -> Pick ONE signature move. Not three. Not “whatever fits the scene.” One. Record yourself doing it for 5-8 seconds -> Transfer the motion to your character with Higgsfield Genjutsu or Kling Motion Control -> Post 10 clips in 10-14 days: same face, same move, new venue every single time A full 10-clip test runs ~$200-300 in tool subs. Your first character probably flops. Test 3-4, scale the one that spikes Monetization: Phil Jean is the case study of what’s possible. Subscription + memecoin + viral reach stacked at once. Most characters run one lane. He runs three. AI characters are the content meta of late 2026 Build one face people recognize in a single frame. Give them ONE signature move. Then give them a reason to come back for the next frame."
-    },
-    {
-      "id": "x-public-2115736986170655086",
-      "title": "Here are custom AI video and image generation prompts tailored for this clip, along with a match",
-      "description": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-def",
-      "prompt": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/JohnSmith5912/status/2115736986170655086",
-      "sourceType": "x",
-      "authorName": "John Smith Ai",
-      "authorHandle": "@JohnSmith5912",
-      "createdAt": "2026-10-29T09:26:20.000Z",
-      "importedAt": "2026-11-02T08:00:24.629Z",
-      "tags": [
-        "Midjourney",
-        "Veo",
-        "Runway",
-        "人像",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Midjourney",
-        "Veo",
-        "Runway",
-        "Seedance"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 156,
-        "reposts": 15,
-        "replies": 12,
-        "quotes": 0,
-        "bookmarks": 151,
-        "views": 12692,
-        "score": 862
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >"
     },
     {
       "id": "x-public-2100417339716141116",
@@ -15504,7 +15631,7 @@
       "authorName": "Anelia Ai",
       "authorHandle": "@ai_anelia",
       "createdAt": "2026-10-27T04:59:53.000Z",
-      "importedAt": "2026-11-02T08:00:24.629Z",
+      "importedAt": "2026-11-02T22:26:02.734Z",
       "tags": [
         "Grok Imagine",
         "Seedance",
@@ -15531,7 +15658,7 @@
         "replies": 152,
         "quotes": 0,
         "bookmarks": 6,
-        "views": 46877,
+        "views": 46939,
         "score": 744
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -18099,6 +18226,49 @@
       "rawText": "Cinematic When AI goes full blockbuster mode Pure chaos speed and cinematic energy. Created with seedance 2.5 on @Flovaai Prompt: A high-octane cinematic sci-fi action sequence set on a destroyed, smoke-filled highway under an overcast, moody sky. An athletic woman with curly dark hair wearing an olive green tank top and dark tactical pants rides a matte-black futuristic motorcycle with dual front heavy tires and glowing white LED headlights through chaotic traffic, avoiding burning car wrecks and fiery explosions. Dual heavy plasma gatling guns deploy from the motorcycle chassis with mechanical precision, firing upward at a massive hovering triangular alien mothership until it explodes in a brilliant fireball above the road. The motorcycle launches off a concrete barrier ramp into a dramatic mid-air slow-motion leap against light rays, exploding upon impact as the rider alights and lands gracefully in a three-point superhero landing on the asphalt surrounded by flames. She stands up and sprints at superhuman speed her futuristic cybernetic leg armor featuring glowing blue LED line accents towards a blonde female opponent in a black leather jacket. She engages in fast-paced martial arts hand-to-hand combat, delivering a powerful kinetic kick that sends the opponent flying into an overturned truck that detonates in a massive fire explosion. Hyper-realistic live-action movie aesthetic, 8k resolution, cinematic lighting, volumetric light shafts, explosive FX, low-angle tracking shot, fast action pacing, dynamic motion blur, shot on 35mm lens. #Flovaai #Flovacpp @Flovaai_Japan"
     },
     {
+      "id": "x-public-2115406342802506033",
+      "title": "Turned a cinematic street fight into a hyper-realistic AI action sequence 🔥🥋 From gravity-defy",
+      "description": "Turned a cinematic street fight into a hyper-realistic AI action sequence 🔥🥋 From gravity-defying stunts to explosive fight choreography @darkwoodslabs powered by Seedance 2.5 brings every frame to life with stunning r",
+      "prompt": "Turned a cinematic street fight into a hyper-realistic AI action sequence 🔥🥋 From gravity-defying stunts to explosive fight choreography @darkwoodslabs powered by Seedance 2.5 brings every frame to life with stunning realism. One prompt. Epic action. AI does the rest. ⚡🎬 Prompt 👇15 seconds, 9:16 vertical. Nine connected shots with hard cuts. GLOBAL STYLE Genre: supernatural martial-arts action. Visual style: photorealistic cinematic, epic scale. Mood: brutal domination of a helpless heroine, then an overwhelming comeback. Palette: cool desaturated city grays, black wardrobe, chrome. A translucent black-purple smoke aura appears only after the heroine rises. Pacing: extreme speed. Speed-ramped slow motion only at the heroine's counterattack impacts. REFERENCE ROLES @ Image1: identity, face, hair and wardrobe of the HEROINE. @ Image2: identity and wardrobe of ENEMY 1, ENEMY 2 and ENEMY 3. @ Image3: location layout, buildings, debris and lighting. SUBJECT AND SETTING HEROINE: adult woman from @ Image1. Split-dye hair, black on her right side and white on her left side, small mole under her left eye, black spiked choker, black crop tank top with grey \"YUDAY\" logo, black fingerless arm warmers with chains, studded belt, wallet chain, wide black cargo pants, chunky black boots. ENEMIES: three identical adult men from @ image. Black caps, dark rectangular sunglasses, black short-sleeve suit jackets, white open-collar shirts, gold chains, chrome cybernetic arms engraved with koi and peony irezumi. Extremely fast, extremely heavy punches. They cross long distances in an instant blur and never stand still. SETTING: the empty, damaged Shibuya scramble crossing from @ image3. Overcast daylight. Glass office facade and tilted lamp pole on the left; red storefronts, barricades and a fallen bicycle on the right; a tall dark tower with a broken giant screen on the right; Shibuya 109 in the background. FIRST FRAME AND BLOCKING The heroine stands alone on the central crosswalk, facing camera, arms relaxed. Enemies are far apart in irregular, random positions, not a ring or symmetrical formation: ENEMY 1 on the far right sidewalk near the barricades, about 15 m away. ENEMY 2 far back on the left near the tilted lamp pole, about 25 m away. ENEMY 3 far in the background, left of center near Shibuya 109, about 40 m away. Camera stays on the same side throughout, facing Shibuya 109. SHOT TIMELINE 0–1.5s — Shot 1: Wide. ENEMY 1 crosses the distance in an instant blur and lands a full-power chrome punch into her midsection. A ring of distorted air bursts from the impact. She has no time to react: her body folds and is thrown sideways toward screen-left, limp, arms and legs swinging loosely. Camera: fast lateral whip following her. Hard cut. 1.5–3s — Shot 2: Low angle. While she is still flying helplessly, ENEMY 2 closes the distance in a blur and drives a rising uppercut into her back. A transparent air-pressure ring bursts below her. The force throws her limp body straight upward, past the rooftops and higher than Shibuya 109. Hair and arms trail loosely, eyes half-closed and dazed. Only heat-haze air distortion ripples around her body, no trail. Camera: extreme fast tilt up following her. Hard cut. 3–4.5s — Shot 3: High-altitude wide shot, the city grid tiny far below. Her limp body hangs at the peak of the throw. ENEMY 3 leaps up from the far background to her height and slams a downward hammer punch into her torso. A huge transparent air-burst ring forms. She is smashed straight down by the punch, limp and helpless, with a cone of rippling air-pressure distortion ahead of her body. No smoke, fire, glow or trail. Camera: dives down behind her. Hard cut. 4.5–6s — Shot 4: Wide top-down angle. Her limp body slams back-first into the crossing center. The asphalt shatters into a large, deep crater several meters wide. Slabs crack, lift and tilt outward, crosswalk stripes break apart. A ring-shaped dust shockwave sweeps across the intersection, chunks and glass fly outward, nearby windows crack. Camera: locked, heavy impact shake. Hard cut. 6–7.5s — Shot 5: Low ground-level shot. She lies motionless on her back in the crater center, dusty, among broken asphalt. Dust drifts, small debris trickles down, then her fingers twitch. Far in the background, out of focus, the three enemies have landed in scattered positions far apart: right sidewalk, left near the glass facade, and the far back crater edge. Camera: slow creeping push-in. Hard cut. 7.5–9.5s — Shot 6: Medium-wide. She pushes up on one hand and knee, trembling, breathing hard, and rises. White steam pours from her skin and clothes, then thickens into a translucent black-purple kinetic aura: matte, smoke-like wisps mixed with heat distortion, turbulent air, swirling dust and pressure ripples blasting small debris away. All three enemies charge at her in fast blurs from different distances, reaching her one after another. Camera: fast low-angle push-in. Hard cut. 9.5–11s — Shot 7: Wide. ENEMY 1 lunges in and throws a full-power punch at her. Before it lands she vanishes: only a translucent black-purple smoke silhouette remains, a pressure ring bursts at her feet, and a streak of torn dust and smoke marks her path. His fist tears through the smoke silhouette. In the same instant she reappears directly behind him, surprise attack: a dash strike into his back, then, as he staggers, a low body blow to his abdomen. Speed ramp: slow motion for about 0.6s at impact. A translucent black-purple smoke shockwave ring expands from the contact point, his cap and sunglasses fly off, dust and debris hang in the air. Snap back to full speed: ENEMY 1 is thrown screen-right through the barricades into a metal storefront shutter, which buckles in a dust burst. Camera: fast tracking shot. Hard cut. 11–12.5s — Shot 8: Medium-wide. ENEMY 2 arrives from screen-left mid-attack, firing a rapid punch combo at her. She vanishes again, leaving a black-purple smoke silhouette that his punches tear apart, and instantly reappears behind him. Surprise attack: she spins into a heel kick into his back before he can turn. Speed ramp: slow motion at contact. A translucent black-purple smoke pressure wave bursts outward, loose glass lifts off the ground, his sunglasses shatter and fly off. Snap back to full speed: ENEMY 2 is blasted screen-left into the glass office facade, which explodes into a storm of shattering glass. Camera: whip pan left. Hard cut. 12.5–15s — Shot 9: Wide, eye level. Only two people are in frame: the heroine and ENEMY 3. ENEMY 1 and ENEMY 2 are gone. The heroine stands on the right, clearly visible: split black-and-white hair, bare arms, black crop top. ENEMY 3 leaps from the left and dives at her with a hammer punch. She vanishes into a shapeless puff of black-purple smoke; his fist smashes the empty asphalt. She reappears behind him and leaps into a volley kick to his back, lifting him off the ground. As he falls toward her, she drives an explosive uppercut. Speed ramp: slow motion at the uppercut contact. A massive black-purple smoke shockwave ring forms, debris hangs in the air. Snap back to full speed: ENEMY 3 is launched vertically into the broken giant screen on the right tower in a burst of sparks and glass. Final frame: ENEMY 3 alone, embedded in the sparking giant screen. Camera: fast tilt up following ENEMY 3. PHYSICS AND CHOREOGRAPHY Fictional cinematic contact only. Shots 1–4: the heroine is completely helpless. She never blocks, parries or guards. All three hits land cleanly on her body and she is thrown limp, arms and legs loose. Shots 7–9: she never blocks or parries. Her extreme speed is clearly visible: each time an enemy attacks, she vanishes and reappears directly behind him in an instant, then strikes from behind as a surprise attack. Enemies never stand idle or wait to be hit. Her vertical rise and fall are driven only by the force of the punches, with no propulsion from her feet or body. Hair, chains, jackets and dust react to every impact. No blood or gore. VFX Shots 1–3: transparent distorted-air burst rings that grow larger with each hit; heat-haze distortion around her body during the rise and fall. No smoke trails, fire, light trails or glow at her feet. Shots 6–9: the aura is translucent black-purple smoke with heat distortion, turbulent air and dust. Matte and non-emissive: no glow, no light, no flames. Shots 7–9: smoke silhouettes left where she vanishes, pressure rings at her feet, dust-and-smoke streaks along her path, black-purple smoke shockwave rings at each contact, debris suspended in slow motion. Her face, eye color, hair split and wardrobe never transform. LIGHTING Soft overcast daylight, constant direction. The aura casts no light. White-blue spark light in the final shot. AUDIO Ambience: empty city wind. SFX: dash whooshes, heavy impact thuds and air-burst cracks (shots 1–3); rushing wind in the rise and fall; massive crater boom (shot 4); muffled ringing silence (shot 5); heavy breathing, steam hiss, low rumble (shot 6); a sharp air-pop each time she vanishes and reappears; each counter impact a sonic boom dropping into a deep slow-motion bass thump, then crashes of metal, glass and sparks (shots 7–9). Dialogue: none. Music: aggressive phonk beat in shots 1–4, silence in shot 5, hard bass drop at shot 7 hitting on every impact. CONTINUITY AND CONSTRAINTS Keep the heroine's face, split hair (black on her right, white on her left), choker, logo top, arm warmers and cargo pants identical to @Image1. Exactly three enemies, all matching @Image2. ENEMY 1 attacks first and is defeated first; ENEMY 2 second; ENEMY 3 third. The crater stays at the crossing center after shot 4. Planned changes only: dust on her clothes, the crater, steam, the smoke aura, enemy caps and sunglasses flying off, damaged surfaces. Avoid: blocking, parrying or guarding by the heroine; rocket thrust, jet flames or light trails from her feet; meteor fire trails; glowing, neon or red aura; red afterimages; enemies grouped close or in a ring; enemies standing still, waiting, posing or watching; extra characters, weapons, blood, flames, face morphing, wardrobe changes, duplicated limbs.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/iamsofiaijaz/status/2115406342802506033",
+      "sourceType": "x",
+      "authorName": "Aijaz",
+      "authorHandle": "@iamsofiaijaz",
+      "createdAt": "2026-10-28T11:32:29.000Z",
+      "importedAt": "2026-11-02T22:26:02.735Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 134,
+        "reposts": 13,
+        "replies": 33,
+        "quotes": 0,
+        "bookmarks": 76,
+        "views": 5885,
+        "score": 593
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Turned a cinematic street fight into a hyper-realistic AI action sequence 🔥🥋 From gravity-defying stunts to explosive fight choreography @darkwoodslabs powered by Seedance 2.5 brings every frame to life with stunning realism. One prompt. Epic action. AI does the rest. ⚡🎬 Prompt 👇15 seconds, 9:16 vertical. Nine connected shots with hard cuts. GLOBAL STYLE Genre: supernatural martial-arts action. Visual style: photorealistic cinematic, epic scale. Mood: brutal domination of a helpless heroine, then an overwhelming comeback. Palette: cool desaturated city grays, black wardrobe, chrome. A translucent black-purple smoke aura appears only after the heroine rises. Pacing: extreme speed. Speed-ramped slow motion only at the heroine's counterattack impacts. REFERENCE ROLES @ Image1: identity, face, hair and wardrobe of the HEROINE. @ Image2: identity and wardrobe of ENEMY 1, ENEMY 2 and ENEMY 3. @ Image3: location layout, buildings, debris and lighting. SUBJECT AND SETTING HEROINE: adult woman from @ Image1. Split-dye hair, black on her right side and white on her left side, small mole under her left eye, black spiked choker, black crop tank top with grey \"YUDAY\" logo, black fingerless arm warmers with chains, studded belt, wallet chain, wide black cargo pants, chunky black boots. ENEMIES: three identical adult men from @ image. Black caps, dark rectangular sunglasses, black short-sleeve suit jackets, white open-collar shirts, gold chains, chrome cybernetic arms engraved with koi and peony irezumi. Extremely fast, extremely heavy punches. They cross long distances in an instant blur and never stand still. SETTING: the empty, damaged Shibuya scramble crossing from @ image3. Overcast daylight. Glass office facade and tilted lamp pole on the left; red storefronts, barricades and a fallen bicycle on the right; a tall dark tower with a broken giant screen on the right; Shibuya 109 in the background. FIRST FRAME AND BLOCKING The heroine stands alone on the central crosswalk, facing camera, arms relaxed. Enemies are far apart in irregular, random positions, not a ring or symmetrical formation: ENEMY 1 on the far right sidewalk near the barricades, about 15 m away. ENEMY 2 far back on the left near the tilted lamp pole, about 25 m away. ENEMY 3 far in the background, left of center near Shibuya 109, about 40 m away. Camera stays on the same side throughout, facing Shibuya 109. SHOT TIMELINE 0–1.5s — Shot 1: Wide. ENEMY 1 crosses the distance in an instant blur and lands a full-power chrome punch into her midsection. A ring of distorted air bursts from the impact. She has no time to react: her body folds and is thrown sideways toward screen-left, limp, arms and legs swinging loosely. Camera: fast lateral whip following her. Hard cut. 1.5–3s — Shot 2: Low angle. While she is still flying helplessly, ENEMY 2 closes the distance in a blur and drives a rising uppercut into her back. A transparent air-pressure ring bursts below her. The force throws her limp body straight upward, past the rooftops and higher than Shibuya 109. Hair and arms trail loosely, eyes half-closed and dazed. Only heat-haze air distortion ripples around her body, no trail. Camera: extreme fast tilt up following her. Hard cut. 3–4.5s — Shot 3: High-altitude wide shot, the city grid tiny far below. Her limp body hangs at the peak of the throw. ENEMY 3 leaps up from the far background to her height and slams a downward hammer punch into her torso. A huge transparent air-burst ring forms. She is smashed straight down by the punch, limp and helpless, with a cone of rippling air-pressure distortion ahead of her body. No smoke, fire, glow or trail. Camera: dives down behind her. Hard cut. 4.5–6s — Shot 4: Wide top-down angle. Her limp body slams back-first into the crossing center. The asphalt shatters into a large, deep crater several meters wide. Slabs crack, lift and tilt outward, crosswalk stripes break apart. A ring-shaped dust shockwave sweeps across the intersection, chunks and glass fly outward, nearby windows crack. Camera: locked, heavy impact shake. Hard cut. 6–7.5s — Shot 5: Low ground-level shot. She lies motionless on her back in the crater center, dusty, among broken asphalt. Dust drifts, small debris trickles down, then her fingers twitch. Far in the background, out of focus, the three enemies have landed in scattered positions far apart: right sidewalk, left near the glass facade, and the far back crater edge. Camera: slow creeping push-in. Hard cut. 7.5–9.5s — Shot 6: Medium-wide. She pushes up on one hand and knee, trembling, breathing hard, and rises. White steam pours from her skin and clothes, then thickens into a translucent black-purple kinetic aura: matte, smoke-like wisps mixed with heat distortion, turbulent air, swirling dust and pressure ripples blasting small debris away. All three enemies charge at her in fast blurs from different distances, reaching her one after another. Camera: fast low-angle push-in. Hard cut. 9.5–11s — Shot 7: Wide. ENEMY 1 lunges in and throws a full-power punch at her. Before it lands she vanishes: only a translucent black-purple smoke silhouette remains, a pressure ring bursts at her feet, and a streak of torn dust and smoke marks her path. His fist tears through the smoke silhouette. In the same instant she reappears directly behind him, surprise attack: a dash strike into his back, then, as he staggers, a low body blow to his abdomen. Speed ramp: slow motion for about 0.6s at impact. A translucent black-purple smoke shockwave ring expands from the contact point, his cap and sunglasses fly off, dust and debris hang in the air. Snap back to full speed: ENEMY 1 is thrown screen-right through the barricades into a metal storefront shutter, which buckles in a dust burst. Camera: fast tracking shot. Hard cut. 11–12.5s — Shot 8: Medium-wide. ENEMY 2 arrives from screen-left mid-attack, firing a rapid punch combo at her. She vanishes again, leaving a black-purple smoke silhouette that his punches tear apart, and instantly reappears behind him. Surprise attack: she spins into a heel kick into his back before he can turn. Speed ramp: slow motion at contact. A translucent black-purple smoke pressure wave bursts outward, loose glass lifts off the ground, his sunglasses shatter and fly off. Snap back to full speed: ENEMY 2 is blasted screen-left into the glass office facade, which explodes into a storm of shattering glass. Camera: whip pan left. Hard cut. 12.5–15s — Shot 9: Wide, eye level. Only two people are in frame: the heroine and ENEMY 3. ENEMY 1 and ENEMY 2 are gone. The heroine stands on the right, clearly visible: split black-and-white hair, bare arms, black crop top. ENEMY 3 leaps from the left and dives at her with a hammer punch. She vanishes into a shapeless puff of black-purple smoke; his fist smashes the empty asphalt. She reappears behind him and leaps into a volley kick to his back, lifting him off the ground. As he falls toward her, she drives an explosive uppercut. Speed ramp: slow motion at the uppercut contact. A massive black-purple smoke shockwave ring forms, debris hangs in the air. Snap back to full speed: ENEMY 3 is launched vertically into the broken giant screen on the right tower in a burst of sparks and glass. Final frame: ENEMY 3 alone, embedded in the sparking giant screen. Camera: fast tilt up following ENEMY 3. PHYSICS AND CHOREOGRAPHY Fictional cinematic contact only. Shots 1–4: the heroine is completely helpless. She never blocks, parries or guards. All three hits land cleanly on her body and she is thrown limp, arms and legs loose. Shots 7–9: she never blocks or parries. Her extreme speed is clearly visible: each time an enemy attacks, she vanishes and reappears directly behind him in an instant, then strikes from behind as a surprise attack. Enemies never stand idle or wait to be hit. Her vertical rise and fall are driven only by the force of the punches, with no propulsion from her feet or body. Hair, chains, jackets and dust react to every impact. No blood or gore. VFX Shots 1–3: transparent distorted-air burst rings that grow larger with each hit; heat-haze distortion around her body during the rise and fall. No smoke trails, fire, light trails or glow at her feet. Shots 6–9: the aura is translucent black-purple smoke with heat distortion, turbulent air and dust. Matte and non-emissive: no glow, no light, no flames. Shots 7–9: smoke silhouettes left where she vanishes, pressure rings at her feet, dust-and-smoke streaks along her path, black-purple smoke shockwave rings at each contact, debris suspended in slow motion. Her face, eye color, hair split and wardrobe never transform. LIGHTING Soft overcast daylight, constant direction. The aura casts no light. White-blue spark light in the final shot. AUDIO Ambience: empty city wind. SFX: dash whooshes, heavy impact thuds and air-burst cracks (shots 1–3); rushing wind in the rise and fall; massive crater boom (shot 4); muffled ringing silence (shot 5); heavy breathing, steam hiss, low rumble (shot 6); a sharp air-pop each time she vanishes and reappears; each counter impact a sonic boom dropping into a deep slow-motion bass thump, then crashes of metal, glass and sparks (shots 7–9). Dialogue: none. Music: aggressive phonk beat in shots 1–4, silence in shot 5, hard bass drop at shot 7 hitting on every impact. CONTINUITY AND CONSTRAINTS Keep the heroine's face, split hair (black on her right, white on her left), choker, logo top, arm warmers and cargo pants identical to @Image1. Exactly three enemies, all matching @Image2. ENEMY 1 attacks first and is defeated first; ENEMY 2 second; ENEMY 3 third. The crater stays at the crossing center after shot 4. Planned changes only: dust on her clothes, the crater, steam, the smoke aura, enemy caps and sunglasses flying off, damaged surfaces. Avoid: blocking, parrying or guarding by the heroine; rocket thrust, jet flames or light trails from her feet; meteor fire trails; glowing, neon or red aura; red afterimages; enemies grouped close or in a ring; enemies standing still, waiting, posing or watching; extra characters, weapons, blood, flames, face morphing, wardrobe changes, duplicated limbs."
+    },
+    {
       "id": "x-public-2088220465408172470",
       "title": "From a single idea to a moving visual — AI makes the creative workflow feel effortless. GPT-2 → ",
       "description": "From a single idea to a moving visual — AI makes the creative workflow feel effortless. GPT-2 → Seedance 2.0 🚀 Made with chatGpt + Sedance 2.5 on @Vorla_AI Join link  Prompt. 👇 .. ..Use the uploaded reference image as ",
@@ -19186,6 +19356,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "One thing I’ve learned from AI video: The better you define the visual direction, the less random the final result feels. GPT Image 2.5 is coming to CapCut and will be available through Design Studio and AI Image. I used it to develop an iPhone Duo commercial storyboard before moving into video generation. Then CapCut PC + Seedance 2.5 brought those planned shots into motion. The final step is editing: adjust the pacing, change scenes, add sound and keep refining with AI Edit. That feels much closer to an actual production workflow. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2116537788803809748",
+      "title": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this vide",
+      "description": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the ",
+      "prompt": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ZentrixHQ/status/2116537788803809748",
+      "sourceType": "x",
+      "authorName": "Zentrix⌚️",
+      "authorHandle": "@ZentrixHQ",
+      "createdAt": "2026-10-31T14:28:26.000Z",
+      "importedAt": "2026-11-02T22:26:02.737Z",
+      "tags": [
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 84,
+        "reposts": 17,
+        "replies": 20,
+        "quotes": 2,
+        "bookmarks": 81,
+        "views": 11414,
+        "score": 528
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos."
     },
     {
       "id": "x-public-2086735082308657236",
@@ -25151,18 +25364,181 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2117123873179369597",
+      "title": "个人资料 / 头像 - 水彩动漫时尚插画提示词",
+      "description": "将照片转化为可爱的手绘水彩动漫风格时尚插画，同时保留人物特征。",
+      "prompt": "将上传的照片转化为可爱、手绘水彩风格的日系动漫时尚插画。\n\n重要提示 —— 保留原照片特征：\n请仔细分析上传的图片，真实还原人物本身，完整保留其可辨识的面部特征、发型、发色、肤色、身材比例、姿势、穿搭、配饰及整体外观。切勿随意更改人物的服装或造型。\n\n艺术风格：\n- 日系甜美时尚插画与柔和动漫美学的完美融合。\n- 手绘水彩与彩色铅笔质感。\n- 精致且略带随性笔触的深棕色素描轮廓线。\n- 柔和的水彩晕染效果，透出清晰的纸张纹理。\n- 细节丰富的秀发，发丝飘逸、层次分明。\n- 简化的可爱五官，双眼微闭或流露温柔神态。\n- 淡淡的粉嫩腮红与自然甜美的浅笑。\n- 采用温暖治愈的柔和色调进行细腻 shading（明暗过渡）。\n- 略带夸张却不失自然的时尚人物比例。\n- 精细刻画衣物褶皱、缝线、图案与面料质感。\n\n装饰元素：\n在人物周围添加可爱的手绘涂鸦，例如红色描边爱心、黄色星星、细碎闪光以及俏皮的点缀线条。注意保持视觉平衡，分布自然错落。\n\n背景与构图：\n- 纯净的白色背景。\n- 全身人物插画。\n- 人物居中放置。\n- 预留充足的白色留白空间。\n- 2:3 竖版构图。\n- 不添加任何背景场景或多余物件。\n\n最终视觉效果：\n一张充满魅力的 Pinterest 风日韩系时尚贴纸插画，宛如传统水彩速写本中的手绘作品。整体氛围柔和、治愈、可爱、唯美、富有表现力，尽显手工绘制的精致感。\n\n避免：照片级写实、3D 渲染、高光数字绘画、过于锐利的矢量轮廓线、过度堆砌细节、人体结构变形、多出的手指、文字、水印或 logo。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605353303_hqxnth_HWGI704akAAamiU.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2117123873179369597",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-11-02T12:00:00.000Z",
+      "importedAt": "2026-11-02T22:25:59.934Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37208",
+      "rawText": "将上传的照片转化为可爱、手绘水彩风格的日系动漫时尚插画。\n\n重要提示 —— 保留原照片特征：\n请仔细分析上传的图片，真实还原人物本身，完整保留其可辨识的面部特征、发型、发色、肤色、身材比例、姿势、穿搭、配饰及整体外观。切勿随意更改人物的服装或造型。\n\n艺术风格：\n- 日系甜美时尚插画与柔和动漫美学的完美融合。\n- 手绘水彩与彩色铅笔质感。\n- 精致且略带随性笔触的深棕色素描轮廓线。\n- 柔和的水彩晕染效果，透出清晰的纸张纹理。\n- 细节丰富的秀发，发丝飘逸、层次分明。\n- 简化的可爱五官，双眼微闭或流露温柔神态。\n- 淡淡的粉嫩腮红与自然甜美的浅笑。\n- 采用温暖治愈的柔和色调进行细腻 shading（明暗过渡）。\n- 略带夸张却不失自然的时尚人物比例。\n- 精细刻画衣物褶皱、缝线、图案与面料质感。\n\n装饰元素：\n在人物周围添加可爱的手绘涂鸦，例如红色描边爱心、黄色星星、细碎闪光以及俏皮的点缀线条。注意保持视觉平衡，分布自然错落。\n\n背景与构图：\n- 纯净的白色背景。\n- 全身人物插画。\n- 人物居中放置。\n- 预留充足的白色留白空间。\n- 2:3 竖版构图。\n- 不添加任何背景场景或多余物件。\n\n最终视觉效果：\n一张充满魅力的 Pinterest 风日韩系时尚贴纸插画，宛如传统水彩速写本中的手绘作品。整体氛围柔和、治愈、可爱、唯美、富有表现力，尽显手工绘制的精致感。\n\n避免：照片级写实、3D 渲染、高光数字绘画、过于锐利的矢量轮廓线、过度堆砌细节、人体结构变形、多出的手指、文字、水印或 logo。"
+    },
+    {
+      "id": "community-2117106766836347247",
+      "title": "社交媒体帖子 - 动漫编辑海报提示词",
+      "description": "将照片转化为融合写实风格、动漫风格与排版元素的双联海报。",
+      "prompt": "将参考照片转化为一张高端、风格化的动漫风时尚海报，同时精准保留人物的面部特征、发型、姿势、太阳镜、珍珠耳环以及红色羽绒服。\n\n打造令人惊艳的双联垂直构图：\n\n上幅画面：以湛蓝天空为背景的女性超写实肖像，沐浴在温暖的黄金时刻阳光下，自然微风吹拂发丝，佩戴鲜艳的橙色镜片太阳镜，皮肤纹理真实细腻，呈现电影级摄影质感。\n\n下幅画面：将同一位女性重新演绎为细节丰富的动漫与漫画融合插画。完整保留她的面部特征、表情、发型、穿搭、配饰及姿势。运用极具张力的橙色轮廓光、富有表现力的精细线条、浓郁色彩以及高端图像小说级别的阴影处理。\n\n海报设计：\n\n* 深炭灰色背景搭配亮眼的橙色点缀。\n* 大号粗斜体文字“URBAN GLOW”。\n* 小号副标题：“CITY VIBES IN COLOR”。\n* 动感十足的橙色对角线图形与几何元素。\n* 现代街头潮牌时尚大片美学。\n* 高对比度，高端杂志封面级设计。\n\n重要提示：插画中的面部需与原照片高度一致。切勿改变人物身份、面部比例或标志性特征。超精细画质，4K 分辨率，专业海报设计，3:4 垂直构图。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605353620_y9luj3_HWF5VgjaAAAjgKE.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ChillaiKalan__/status/2117106766836347247",
+      "sourceType": "community",
+      "authorName": "K",
+      "authorHandle": "@ChillaiKalan__",
+      "createdAt": "2026-11-02T12:00:00.000Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
+      "tags": [
+        "人像",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37207",
+      "rawText": "将参考照片转化为一张高端、风格化的动漫风时尚海报，同时精准保留人物的面部特征、发型、姿势、太阳镜、珍珠耳环以及红色羽绒服。\n\n打造令人惊艳的双联垂直构图：\n\n上幅画面：以湛蓝天空为背景的女性超写实肖像，沐浴在温暖的黄金时刻阳光下，自然微风吹拂发丝，佩戴鲜艳的橙色镜片太阳镜，皮肤纹理真实细腻，呈现电影级摄影质感。\n\n下幅画面：将同一位女性重新演绎为细节丰富的动漫与漫画融合插画。完整保留她的面部特征、表情、发型、穿搭、配饰及姿势。运用极具张力的橙色轮廓光、富有表现力的精细线条、浓郁色彩以及高端图像小说级别的阴影处理。\n\n海报设计：\n\n* 深炭灰色背景搭配亮眼的橙色点缀。\n* 大号粗斜体文字“URBAN GLOW”。\n* 小号副标题：“CITY VIBES IN COLOR”。\n* 动感十足的橙色对角线图形与几何元素。\n* 现代街头潮牌时尚大片美学。\n* 高对比度，高端杂志封面级设计。\n\n重要提示：插画中的面部需与原照片高度一致。切勿改变人物身份、面部比例或标志性特征。超精细画质，4K 分辨率，专业海报设计，3:4 垂直构图。"
+    },
+    {
+      "id": "community-2117090571449684320",
+      "title": "社交媒体帖子 - 秋日街头约会穿搭",
+      "description": "生成可爱优雅动漫风格女孩的提示词，展现秋季街头时尚，搭配驼色夹克和酒红色裙子。",
+      "prompt": "可爱优雅，温柔浅笑，微卷长发。\n秋日街景背景。\n\n她身穿驼色短款外套，搭配柔软的羊羔毛领，内搭酒红色针织毛衣与同色系酒红百褶裙，脚踩黑色短靴。\n甜美又温暖的约会穿搭。杂志大片风格，细节质感丰富，暖阳倾洒",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605354603_2f0pyt_HWBjFxxaEAA4nMk.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ArtistaNozomu/status/2117090571449684320",
+      "sourceType": "community",
+      "authorName": "のぞむ＊AIイラスト",
+      "authorHandle": "@ArtistaNozomu",
+      "createdAt": "2026-11-02T12:00:00.000Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37211",
+      "rawText": "可爱优雅，温柔浅笑，微卷长发。\n秋日街景背景。\n\n她身穿驼色短款外套，搭配柔软的羊羔毛领，内搭酒红色针织毛衣与同色系酒红百褶裙，脚踩黑色短靴。\n甜美又温暖的约会穿搭。杂志大片风格，细节质感丰富，暖阳倾洒"
+    },
+    {
+      "id": "community-2116849131599933528",
+      "title": "个人资料 / 头像 - 神社前的昭和复古人像",
+      "description": "一张充满怀旧感的胶片颗粒人像，描绘了一位身穿碎花连衣裙的年轻女子伫立于日本神社前，营造出昭和时代特有的忧郁氛围。",
+      "prompt": "一幅东亚年轻女性的竖版人像，她留着深色齐刘海短发波波头，站在户外一座传统日本神社前。她身穿一件灰蓝色复古风碎花中长连衣裙，配有彼得潘领、短袖和纽扣式上衣设计。她的神情忧郁而疏离，目光微微偏离镜头，双手轻轻交握于腰前。背景是朱红色的神社建筑（鸟居与塔顶）和石灯笼，呈现出虚化的失焦效果。她脚下的地面可见人行横道的白色斑马线。整幅画面带有浓郁的昭和时代复古美学风格，以温暖褪色的胶片色调为特征，颗粒感明显，边缘有漏光效果，并带有老式即时摄影特有的划痕质感。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605356518_dn0ddz_HWCPEKsa0AA2NNC.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Kmsbdd0GXBOcrXQ/status/2116849131599933528#reversed-0",
+      "sourceType": "community",
+      "authorName": "いがぐりメタボ",
+      "authorHandle": "@Kmsbdd0GXBOcrXQ",
+      "createdAt": "2026-11-01T12:00:00.000Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37213",
+      "rawText": "一幅东亚年轻女性的竖版人像，她留着深色齐刘海短发波波头，站在户外一座传统日本神社前。她身穿一件灰蓝色复古风碎花中长连衣裙，配有彼得潘领、短袖和纽扣式上衣设计。她的神情忧郁而疏离，目光微微偏离镜头，双手轻轻交握于腰前。背景是朱红色的神社建筑（鸟居与塔顶）和石灯笼，呈现出虚化的失焦效果。她脚下的地面可见人行横道的白色斑马线。整幅画面带有浓郁的昭和时代复古美学风格，以温暖褪色的胶片色调为特征，颗粒感明显，边缘有漏光效果，并带有老式即时摄影特有的划痕质感。"
+    },
+    {
       "id": "community-2116773143691878877",
       "title": "个人资料 / 头像 - 异想天开的剪贴簿彩色铅笔插图",
       "description": "此提示可将上传的照片转化为温馨、异想天开的手绘彩色铅笔和蜡笔剪贴簿插图，在保留原始主体和构图的同时，添加装饰性边框和复古纹理。",
       "prompt": "将上传的照片转化为一幅温馨可爱、充满奇思妙想的手绘彩色铅笔与蜡笔拼贴画插画。\n\n重要提示 —— 保留原照片内容：\n\n首先，请仔细分析上传的照片。准确识别画面中的主体、人物、面部特征、发型、服装、姿势、表情、配饰、物品以及背景环境。\n\n将这张照片重新创作成一幅迷人的插画作品。请保留原有的构图、可辨识的面部特征、服装细节、身体姿态及人物互动关系。切勿随意替换或凭空捏造主要拍摄对象。\n\n艺术风格：\n- 纯正的手绘彩色铅笔与蜡笔插画风格。\n- 清晰可见的铅笔笔触、颗粒质感以及略带随性的手绘线条。\n- 柔和的水彩般上色效果，搭配浓郁的彩铅阴影。\n- 细腻的交叉排线与层层叠加的手绘细节。\n- 略带粗糙感、充满怀旧气息的儿童绘本插画美学。\n- 温暖、梦幻、惬意且充满童趣的氛围。\n- 奶油色纹理纸张背景。\n- 柔和的光线，带有温暖的亮部与轻柔的阴影。\n- 浓郁却略带褪色感的复古色调。\n\n拼贴装饰：\n\n在主插画四周点缀俏皮的手工拼贴画边框，包含以下元素：\n- 粉色与红色的闪粉爱心贴纸。\n- 小巧的彩色宝石与珍珠串珠。\n- 金色星星与水晶装饰。\n- 精致的手绘小花与蝴蝶。\n- 可爱的涂鸦、笑脸和小星星。\n- 小巧的装饰叶片与应季元素。\n- 多彩的手绘轮廓线与俏皮的符号。\n\n让这些装饰看起来就像真实贴在画作边缘的实体贴纸和微小饰物。\n\n构图：\n\n保持主体位于视觉中心。运用细腻的彩铅质感还原原始场景。装饰性拼贴元素主要分布在画面外缘，切勿遮挡照片中的重要部分。\n\n整幅作品应呈现出精美个人日记本的一页，或是怀旧图文回忆录般的视觉效果。\n\n最终美学效果：\n\n极致细腻、可爱温馨、怀旧文艺、柔和复古的拼贴画美学，纯手工插画质感，清晰可见的蜡笔颗粒与彩铅肌理，自然的手绘瑕疵美，温暖的柔和色调，迷人的装饰点缀，高品质的插画日记页面。\n\n重要提示：最终效果必须呈现为纯手绘插画，而非套用卡通滤镜的照片。请避免照片级写实、3D 渲染、塑料质感以及过度平滑的数字绘画效果。",
       "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
-      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793518851960_6a6xaz_HWBJ6dHbYAA8ZfF.jpg&w=1400&output=webp",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605351826_n46p8m_HWBJ6dHbYAA8ZfF.jpg&w=1400&output=webp",
       "sourceUrl": "https://x.com/Sairah_0/status/2116773143691878877",
       "sourceType": "community",
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.995Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25190,6 +25566,48 @@
       "rawText": "将上传的照片转化为一幅温馨可爱、充满奇思妙想的手绘彩色铅笔与蜡笔拼贴画插画。\n\n重要提示 —— 保留原照片内容：\n\n首先，请仔细分析上传的照片。准确识别画面中的主体、人物、面部特征、发型、服装、姿势、表情、配饰、物品以及背景环境。\n\n将这张照片重新创作成一幅迷人的插画作品。请保留原有的构图、可辨识的面部特征、服装细节、身体姿态及人物互动关系。切勿随意替换或凭空捏造主要拍摄对象。\n\n艺术风格：\n- 纯正的手绘彩色铅笔与蜡笔插画风格。\n- 清晰可见的铅笔笔触、颗粒质感以及略带随性的手绘线条。\n- 柔和的水彩般上色效果，搭配浓郁的彩铅阴影。\n- 细腻的交叉排线与层层叠加的手绘细节。\n- 略带粗糙感、充满怀旧气息的儿童绘本插画美学。\n- 温暖、梦幻、惬意且充满童趣的氛围。\n- 奶油色纹理纸张背景。\n- 柔和的光线，带有温暖的亮部与轻柔的阴影。\n- 浓郁却略带褪色感的复古色调。\n\n拼贴装饰：\n\n在主插画四周点缀俏皮的手工拼贴画边框，包含以下元素：\n- 粉色与红色的闪粉爱心贴纸。\n- 小巧的彩色宝石与珍珠串珠。\n- 金色星星与水晶装饰。\n- 精致的手绘小花与蝴蝶。\n- 可爱的涂鸦、笑脸和小星星。\n- 小巧的装饰叶片与应季元素。\n- 多彩的手绘轮廓线与俏皮的符号。\n\n让这些装饰看起来就像真实贴在画作边缘的实体贴纸和微小饰物。\n\n构图：\n\n保持主体位于视觉中心。运用细腻的彩铅质感还原原始场景。装饰性拼贴元素主要分布在画面外缘，切勿遮挡照片中的重要部分。\n\n整幅作品应呈现出精美个人日记本的一页，或是怀旧图文回忆录般的视觉效果。\n\n最终美学效果：\n\n极致细腻、可爱温馨、怀旧文艺、柔和复古的拼贴画美学，纯手工插画质感，清晰可见的蜡笔颗粒与彩铅肌理，自然的手绘瑕疵美，温暖的柔和色调，迷人的装饰点缀，高品质的插画日记页面。\n\n重要提示：最终效果必须呈现为纯手绘插画，而非套用卡通滤镜的照片。请避免照片级写实、3D 渲染、塑料质感以及过度平滑的数字绘画效果。"
     },
     {
+      "id": "community-2116939838356345235",
+      "title": "社交媒体帖子 - 超写实联系表提示词",
+      "description": "基于上传的参考图片，生成包含特定人物的 3x3 超写实照片网格，呈现多样化姿势与地中海风格光影。",
+      "prompt": "创建一张超写实的 3×3 摄影小样（contact sheet），主角为上传的面部参考图中的这位女性。每一格画面都必须精准还原她的面部特征、肤色、发型与自然身体比例。\n\n将全部九张照片置于湛蓝的天空下，点缀着极具张力的白云。她身穿一件质感细腻的象牙白亨利领衬衫，顶部纽扣敞开，搭配深靛蓝色牛仔裤与一条精致的银项链。明媚的地中海阳光勾勒出利落的阴影，让肌肤更显通透光泽。\n\n九个画格分别捕捉不同的姿态与镜头视角：自信的双手抱头分腿站立；向镜头伸出的透视缩短手掌；用 OK 手势框住一只眼睛；双手托腮的轻松微笑；单手半遮面的神秘感；低角度行走抓拍；风吹发丝的随性大笑；直视镜头的特写；以及侧身远眺的坐姿。\n\n交替使用 35mm 全身构图与 85mm 亲密人像特写。真实可见的皮肤毛孔、根根分明的发丝、逼真的牛仔布纹理、自然的手部细节、准确的人体结构、细腻的胶片颗粒感，呈现奢华时尚大片质感与极致的摄影写实效果。完美对齐的 3×3 网格，九张风格各异的照片，画格之间无边框，无文字，无水印，整体画幅比例为 4:5。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793605353388_hdd1r3_HWDhjs0asAAdDoO.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/aniyaintel/status/2116939838356345235",
+      "sourceType": "community",
+      "authorName": "Aniya Intelligence",
+      "authorHandle": "@aniyaintel",
+      "createdAt": "2026-11-01T12:00:00.000Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37206",
+      "rawText": "创建一张超写实的 3×3 摄影小样（contact sheet），主角为上传的面部参考图中的这位女性。每一格画面都必须精准还原她的面部特征、肤色、发型与自然身体比例。\n\n将全部九张照片置于湛蓝的天空下，点缀着极具张力的白云。她身穿一件质感细腻的象牙白亨利领衬衫，顶部纽扣敞开，搭配深靛蓝色牛仔裤与一条精致的银项链。明媚的地中海阳光勾勒出利落的阴影，让肌肤更显通透光泽。\n\n九个画格分别捕捉不同的姿态与镜头视角：自信的双手抱头分腿站立；向镜头伸出的透视缩短手掌；用 OK 手势框住一只眼睛；双手托腮的轻松微笑；单手半遮面的神秘感；低角度行走抓拍；风吹发丝的随性大笑；直视镜头的特写；以及侧身远眺的坐姿。\n\n交替使用 35mm 全身构图与 85mm 亲密人像特写。真实可见的皮肤毛孔、根根分明的发丝、逼真的牛仔布纹理、自然的手部细节、准确的人体结构、细腻的胶片颗粒感，呈现奢华时尚大片质感与极致的摄影写实效果。完美对齐的 3×3 网格，九张风格各异的照片，画格之间无边框，无文字，无水印，整体画幅比例为 4:5。"
+    },
+    {
       "id": "community-2116523085176373667",
       "title": "个人资料 / 头像 - 身着荷叶边婚纱的动漫新娘",
       "description": "生成一位优雅新娘的全身动漫风格肖像，她身穿带有花卉细节的精致荷叶边婚纱，适用于角色设计或浪漫插画项目。",
@@ -25201,7 +25619,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.996Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "人像"
       ],
@@ -25242,7 +25660,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.996Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25281,7 +25699,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.996Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "人像",
         "摄影"
@@ -25323,7 +25741,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25362,7 +25780,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.998Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -25483,7 +25901,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25526,7 +25944,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "人像",
         "摄影"
@@ -25691,7 +26109,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25734,7 +26152,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25777,7 +26195,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25820,7 +26238,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "人像"
       ],
@@ -25861,7 +26279,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "人像"
       ],
@@ -25902,7 +26320,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25945,7 +26363,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26025,7 +26443,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26064,7 +26482,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.935Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26105,7 +26523,7 @@
       "authorName": "AI art gallery",
       "authorHandle": "@sandmrk",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26144,7 +26562,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:18.997Z",
+      "importedAt": "2026-11-02T22:25:59.936Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -85779,7 +86197,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:19.003Z",
+      "importedAt": "2026-11-02T22:25:59.938Z",
       "tags": [
         "产品",
         "平面设计",
@@ -85822,7 +86240,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:19.003Z",
+      "importedAt": "2026-11-02T22:25:59.938Z",
       "tags": [
         "平面设计"
       ],
@@ -85863,7 +86281,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-02T08:00:19.003Z",
+      "importedAt": "2026-11-02T22:25:59.938Z",
       "tags": [
         "平面设计"
       ],
