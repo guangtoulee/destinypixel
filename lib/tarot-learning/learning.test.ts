@@ -18,6 +18,7 @@ import starRevision from "@/content/star-update-20261025/revisions.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import judgementRevision from "@/content/judgement-update-20261103/revisions.json";
 import moonRevision from "@/content/moon-update-20261103/revisions.json";
+import sunRevision from "@/content/sun-update-20261103/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -31,6 +32,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const eightSwordsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=eightSwordsRevision.records;
  const judgementRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=judgementRevision.records;
  const moonRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=moonRevision.records;
+ const sunRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=sunRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -38,6 +40,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(eightSwordsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/eight-of-swords.json`));
  assert.deepEqual(Object.keys(judgementRecords),["content/tarot/zh/judgement.json"]);
  assert.deepEqual(Object.keys(moonRecords),["content/tarot/zh/moon.json"]);
+ assert.deepEqual(Object.keys(sunRecords),["content/tarot/zh/sun.json"]);
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -54,7 +57,7 @@ test("every real cast ID resolves to the complete correct-language article witho
     const record=sampleRecords[path],previous=readFileSync(`content/encyclopedia-samples-20261011/previous/${path}`);
     assert.equal(digest(previous),record.previousFileSha256);
     assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
-    const receiptRaw=path==="content/tarot/zh/moon.json"?readFileSync(`content/moon-update-20261103/previous/${path}`):readFileSync(path);
+    const receiptRaw=path==="content/tarot/zh/moon.json"?readFileSync(`content/moon-update-20261103/previous/${path}`):path==="content/tarot/zh/sun.json"?readFileSync(`content/sun-update-20261103/previous/${path}`):readFileSync(path);
     assert.equal(digest(receiptRaw),record.fileSha256);
     approvedHash=record.articleMarkdownSha256;
    }
@@ -228,6 +231,42 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="moon"&&locale!=="en"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Moon edition changed`);
+   }
+   if(Object.hasOwn(sunRecords,path)){
+    const record=sunRecords[path],previousRaw=readFileSync(`content/sun-update-20261103/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(record.previousFileSha256,sampleRecords[path].fileSha256,`${path}: October 11 sample receipt changed`);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical sample text changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision","relatedCards"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    assert.deepEqual(current.sections.map((section:{id:string})=>section.id),previous.sections.map((section:{id:string})=>section.id),`${path}: section order changed`);
+    const edited=current.sections.filter((section:{bodyMarkdown:string},index:number)=>section.bodyMarkdown!==previous.sections[index].bodyMarkdown);
+    assert.deepEqual(edited.map((section:{id:string})=>section.id),["sun-section-2"]);
+    assert.ok(current.sections.find((section:{id:string})=>section.id==="sun-section-2").bodyMarkdown.startsWith(previous.sections.find((section:{id:string})=>section.id==="sun-section-2").bodyMarkdown+"\n\n"));
+    assert.equal(current.articleMarkdown.includes("有根的光"),true);
+    assert.equal(current.articleMarkdown.includes("放下硬控"),true);
+    assert.equal(current.articleMarkdown.includes("死而复生"),true);
+    assert.equal(current.articleMarkdown.includes("落成"),true);
+    assert.equal(current.articleMarkdown.includes("阿波罗"),false);
+    assert.equal(current.articleMarkdown.includes("卡巴拉"),false);
+    assert.deepEqual(current.relatedCards.map((card:{cardId:string})=>card.cardId),["moon","star","world","judgement"]);
+    assert.equal(current.relatedCards[0].reason,previous.relatedCards[0].reason);
+    assert.equal(current.relatedCards[1].reason,previous.relatedCards[1].reason);
+    assert.ok(current.relatedCards[2].reason.startsWith(previous.relatedCards[2].reason));
+    assert.equal(current.relatedCards[3].reason.includes("死而复生"),true);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.sources.at(-1).sourceId,"sun-pollack-2010");
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[168,169,170]);
+    assert.equal(current.updatedAt,"2026-11-03");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="sun"&&locale!=="en"){
+    assert.equal(digest(readFileSync(path)),editorialManifest.sunRecordSha256[locale],`${path}: unedited Sun edition changed`);
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);

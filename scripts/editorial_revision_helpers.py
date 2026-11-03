@@ -24,6 +24,8 @@ JUDGEMENT_DIR = ROOT / "content/judgement-update-20261103"
 JUDGEMENT_PATHS = frozenset({"content/tarot/zh/judgement.json"})
 MOON_DIR = ROOT / "content/moon-update-20261103"
 MOON_PATHS = frozenset({"content/tarot/zh/moon.json"})
+SUN_DIR = ROOT / "content/sun-update-20261103"
+SUN_PATHS = frozenset({"content/tarot/zh/sun.json"})
 
 
 def sha(raw):
@@ -62,7 +64,12 @@ def validate_sample_record(path):
     assert key in SAMPLE_PATHS, f"Not an authorized sample record: {key}"
     record = revision_registry()["records"][key]
     # The Chinese Moon supplement keeps the 2026-10-11 sample bytes in its previous/ snapshot.
-    raw = (MOON_DIR / "previous" / key).read_bytes() if key in MOON_PATHS else Path(path).read_bytes()
+    if key in MOON_PATHS:
+        raw = (MOON_DIR / "previous" / key).read_bytes()
+    elif key in SUN_PATHS:
+        raw = (SUN_DIR / "previous" / key).read_bytes()
+    else:
+        raw = Path(path).read_bytes()
     previous_raw = (REVISION_DIR / "previous" / key).read_bytes()
     current, previous = json.loads(raw), json.loads(previous_raw)
     assert sha(raw) == record["fileSha256"], f"Current sample file differs from revision receipt: {key}"
@@ -79,6 +86,8 @@ def validate_sample_record(path):
         assert current["reviewStatus"]["nativeExpertReview"] == "not_performed", key
     if key in MOON_PATHS:
         validate_moon_record(path)
+    if key in SUN_PATHS:
+        validate_sun_record(path)
     return current, previous
 
 
@@ -108,6 +117,9 @@ def historical_record(path):
 def approved_markdown_sha(path, legacy_hash):
     if sample_key(path) in MOON_PATHS:
         current, _ = validate_moon_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in SUN_PATHS:
+        current, _ = validate_sun_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in JUDGEMENT_PATHS:
         current, _ = validate_judgement_record(path)
@@ -339,6 +351,124 @@ def validate_moon_record(path):
     for unedited_locale in ("zh-TW", "ru"):
         unedited = ROOT / f"content/tarot/{unedited_locale}/moon.json"
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/moon"]["recordSha256"], f"Unedited Moon file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_sun_record(path):
+    """Validate the Chinese Pollack supplement without moving the 2026-10-11 sample receipt."""
+    key = sample_key(path)
+    assert key in SUN_PATHS, f"Not a Sun revision: {key}"
+    registry = read(SUN_DIR / "revisions.json")
+    assert registry["baseCommit"] == "6b87283f6e66995dc8f4e19089bc9af1b6c15290"
+    assert registry["updatedAt"] == "2026-11-03"
+    assert set(registry["articles"]) == {"tarot-sun"}
+    notes = registry["articles"]["tarot-sun"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert "时间表" in notes["zh"] and "死而复生" in notes["zh"]
+    assert set(registry["records"]) == SUN_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (SUN_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    sample = revision_registry()["records"][key]
+    editorial = read(ROOT / "content/tarot-editorial/provenance.json")
+    encyclopedia_previous = (REVISION_DIR / "previous" / key).read_bytes()
+    assert sha(raw) == record["fileSha256"], f"Current Sun file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Sun Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == sample["fileSha256"], f"October 11 Sun sample file receipt changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == sample["articleMarkdownSha256"], f"October 11 Sun sample Markdown receipt changed: {key}"
+    assert sha(encyclopedia_previous) == sample["previousFileSha256"] == editorial["sunRecordSha256"]["zh"], f"Historical Sun file receipt changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision", "relatedCards"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Sun metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Sun metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Sun metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-03"
+    assert previous["updatedAt"] == "2026-10-11"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"] and current["shortAnswer"] == previous["shortAnswer"]
+    assert current["cardId"] == "sun"
+
+    assert [section["id"] for section in current["sections"]] == [section["id"] for section in previous["sections"]]
+    changed = []
+    for old, section in zip(previous["sections"], current["sections"]):
+        assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+        if section != old:
+            assert section["bodyMarkdown"] != old["bodyMarkdown"]
+            changed.append(section["id"])
+            assert {item: section[item] for item in section if item != "bodyMarkdown"} == {item: old[item] for item in old if item != "bodyMarkdown"}
+    assert changed == ["sun-section-2"], f"Unexpected Sun section edits: {changed}"
+
+    tradition = next(section for section in current["sections"] if section["id"] == "sun-section-2")
+    previous_tradition = next(section for section in previous["sections"] if section["id"] == "sun-section-2")
+    assert tradition["bodyMarkdown"].startswith(previous_tradition["bodyMarkdown"] + "\n\n")
+    added = tradition["bodyMarkdown"][len(previous_tradition["bodyMarkdown"]) + 2:]
+    moon_stage, later_stage = added.split("\n\n")
+    assert moon_stage.startswith("现稿已把月亮与太阳对照成「看不清时的猜测」与「信息和表达变得明朗」。")
+    for phrase in ("**放下硬控**", "可怕／陌生", "「有根的光」", "象征叙事", "牌面不保证时间表"):
+        assert phrase in moon_stage, phrase
+    assert later_stage.startswith("Pollack 提醒：太阳往往不是故事的句号。")
+    for phrase in ("死而复生", "**感受到**", "**落成**", "终局奖状", "象征阶段叙事"):
+        assert phrase in later_stage, phrase
+    assert later_stage.count("。") <= 4
+    for phrase in ("阿波罗", "莉托", "卡巴拉", "诺斯替", "卢里亚", "佛胎", "隐士", "命运之轮"):
+        assert phrase not in added, phrase
+    assert "小岚" not in added
+
+    assert [card["cardId"] for card in previous["relatedCards"]] == ["moon", "star", "world"]
+    assert [card["cardId"] for card in current["relatedCards"]] == ["moon", "star", "world", "judgement"]
+    assert current["relatedCards"][:2] == previous["relatedCards"][:2]
+    old_world, new_world = previous["relatedCards"][2], current["relatedCards"][2]
+    assert {item: new_world[item] for item in new_world if item != "reason"} == {item: old_world[item] for item in old_world if item != "reason"}
+    assert new_world["reason"].startswith(old_world["reason"])
+    assert "太阳先感受到合一与生意，世界才落成" in new_world["reason"]
+    judgement = current["relatedCards"][3]
+    assert judgement == {"cardId": "judgement", "reason": "明亮之后的短桥：喜悦为「死而复生」做准备，不是终局奖状。", "nameZh": "审判"}
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Sun source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "sun-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-03" and "78度的智慧" in book["title"]
+    metadata = book["sourceMetadata"]
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The Sun" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [168, 169, 170]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    old_block = f"## {previous_tradition['title']}\n\n{previous_tradition['bodyMarkdown']}"
+    new_block = f"## {tradition['title']}\n\n{tradition['bodyMarkdown']}"
+    assert md.count(old_block) == 1
+    assert current["articleMarkdown"] == md.replace(old_block, new_block), "Sun Markdown changed outside the tradition section"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    manuscript = (SUN_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/sun-update-20261103/revisions.json"
+    assert revision["updatedAt"] == "2026-11-03" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    english = ROOT / "content/tarot/en/sun.json"
+    assert sha(english.read_bytes()) == revision_registry()["records"]["content/tarot/en/sun.json"]["fileSha256"], "English Sun file changed"
+    assert read(english)["updatedAt"] == "2026-10-11"
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/sun.json"
+        assert sha(unedited.read_bytes()) == editorial["sunRecordSha256"][unedited_locale], f"Unedited Sun file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
     try:
         import jsonschema
