@@ -17,6 +17,7 @@ import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.js
 import starRevision from "@/content/star-update-20261025/revisions.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import judgementRevision from "@/content/judgement-update-20261103/revisions.json";
+import moonRevision from "@/content/moon-update-20261103/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -29,12 +30,14 @@ test("every real cast ID resolves to the complete correct-language article witho
  const starRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=starRevision.records;
  const eightSwordsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=eightSwordsRevision.records;
  const judgementRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=judgementRevision.records;
+ const moonRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=moonRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
  assert.deepEqual(Object.keys(starRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/star.json`));
  assert.deepEqual(Object.keys(eightSwordsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/eight-of-swords.json`));
  assert.deepEqual(Object.keys(judgementRecords),["content/tarot/zh/judgement.json"]);
+ assert.deepEqual(Object.keys(moonRecords),["content/tarot/zh/moon.json"]);
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -51,7 +54,8 @@ test("every real cast ID resolves to the complete correct-language article witho
     const record=sampleRecords[path],previous=readFileSync(`content/encyclopedia-samples-20261011/previous/${path}`);
     assert.equal(digest(previous),record.previousFileSha256);
     assert.equal(digest(JSON.parse(previous.toString()).articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
-    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const receiptRaw=path==="content/tarot/zh/moon.json"?readFileSync(`content/moon-update-20261103/previous/${path}`):readFileSync(path);
+    assert.equal(digest(receiptRaw),record.fileSha256);
     approvedHash=record.articleMarkdownSha256;
    }
    if(linkPaths.has(path)){
@@ -190,6 +194,40 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="judgement"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Judgement edition changed`);
+   }
+   if(Object.hasOwn(moonRecords,path)){
+    const record=moonRecords[path],previousRaw=readFileSync(`content/moon-update-20261103/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(record.previousFileSha256,sampleRecords[path].fileSha256,`${path}: October 11 sample receipt changed`);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical sample text changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    assert.deepEqual(current.sections.map((section:{id:string})=>section.id),previous.sections.map((section:{id:string})=>section.id),`${path}: section order changed`);
+    const edited=current.sections.filter((section:{bodyMarkdown:string},index:number)=>section.bodyMarkdown!==previous.sections[index].bodyMarkdown);
+    assert.deepEqual(edited.map((section:{id:string})=>section.id),["section-01","section-02"]);
+    assert.ok(current.sections[0].bodyMarkdown.startsWith(previous.sections[0].bodyMarkdown+"\n\n"));
+    assert.equal(current.articleMarkdown.includes("比野兽更深"),true);
+    assert.equal(current.articleMarkdown.includes("还没完全成形"),true);
+    assert.equal(current.articleMarkdown.includes("星星池边"),true);
+    assert.equal(current.articleMarkdown.includes("那条路还在"),true);
+    assert.equal(current.articleMarkdown.includes("相对力量：月亮阶段狂野更满"),true);
+    assert.equal(current.articleMarkdown.includes("皇帝"),false);
+    assert.equal(current.articleMarkdown.includes("超我"),false);
+    assert.equal(current.articleMarkdown.includes("原我"),false);
+    assert.equal(current.articleMarkdown.includes("动物自我"),false);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.sources.at(-1).sourceId,"moon-pollack-2010");
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[160,162,163,164,165]);
+    assert.equal(current.updatedAt,"2026-11-03");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="moon"&&locale!=="en"){
+    assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Moon edition changed`);
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);

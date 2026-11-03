@@ -22,6 +22,8 @@ EIGHT_SWORDS_DIR = ROOT / "content/eight-swords-update-20261102"
 EIGHT_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/eight-of-swords.json" for locale in ("en", "zh"))
 JUDGEMENT_DIR = ROOT / "content/judgement-update-20261103"
 JUDGEMENT_PATHS = frozenset({"content/tarot/zh/judgement.json"})
+MOON_DIR = ROOT / "content/moon-update-20261103"
+MOON_PATHS = frozenset({"content/tarot/zh/moon.json"})
 
 
 def sha(raw):
@@ -59,7 +61,8 @@ def validate_sample_record(path):
     key = sample_key(path)
     assert key in SAMPLE_PATHS, f"Not an authorized sample record: {key}"
     record = revision_registry()["records"][key]
-    raw = Path(path).read_bytes()
+    # The Chinese Moon supplement keeps the 2026-10-11 sample bytes in its previous/ snapshot.
+    raw = (MOON_DIR / "previous" / key).read_bytes() if key in MOON_PATHS else Path(path).read_bytes()
     previous_raw = (REVISION_DIR / "previous" / key).read_bytes()
     current, previous = json.loads(raw), json.loads(previous_raw)
     assert sha(raw) == record["fileSha256"], f"Current sample file differs from revision receipt: {key}"
@@ -74,6 +77,8 @@ def validate_sample_record(path):
         assert current["review"]["nativeHumanReview"] is False, key
     if "reviewStatus" in current:
         assert current["reviewStatus"]["nativeExpertReview"] == "not_performed", key
+    if key in MOON_PATHS:
+        validate_moon_record(path)
     return current, previous
 
 
@@ -101,6 +106,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in MOON_PATHS:
+        current, _ = validate_moon_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in JUDGEMENT_PATHS:
         current, _ = validate_judgement_record(path)
         return sha(current["articleMarkdown"])
@@ -213,6 +221,131 @@ def validate_eight_swords_record(path):
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/eight-of-swords"]["recordSha256"], f"Unedited Eight of Swords file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
     jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_moon_record(path):
+    """Validate the Chinese Pollack supplement without moving the 2026-10-11 sample receipt."""
+    key = sample_key(path)
+    assert key in MOON_PATHS, f"Not a Moon revision: {key}"
+    registry = read(MOON_DIR / "revisions.json")
+    assert registry["baseCommit"] == "48a44065c0a58e016cc2be7291fe21c46f01ea63"
+    assert registry["updatedAt"] == "2026-11-03"
+    assert set(registry["articles"]) == {"tarot-moon"}
+    notes = registry["articles"]["tarot-moon"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert "欺骗鉴定" in notes["zh"]
+    assert set(registry["records"]) == MOON_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (MOON_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    sample = revision_registry()["records"][key]
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    encyclopedia_previous = (REVISION_DIR / "previous" / key).read_bytes()
+    assert sha(raw) == record["fileSha256"], f"Current Moon file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Moon Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == sample["fileSha256"], f"October 11 Moon sample file receipt changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == sample["articleMarkdownSha256"], f"October 11 Moon sample Markdown receipt changed: {key}"
+    assert sha(encyclopedia_previous) == sample["previousFileSha256"] == depth["editions"]["zh/moon"]["recordSha256"], f"Depth Moon file receipt changed: {key}"
+    assert sha(json.loads(encyclopedia_previous)["articleMarkdown"]) == depth["articleMarkdownSha256"]["zh/moon"]
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Moon metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Moon metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Moon metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-03"
+    assert previous["updatedAt"] == "2026-10-11"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"] and current["shortAnswer"] == previous["shortAnswer"]
+    assert current["cardId"] == "moon"
+
+    assert [section["id"] for section in current["sections"]] == [section["id"] for section in previous["sections"]]
+    changed = []
+    for old, section in zip(previous["sections"], current["sections"]):
+        assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+        if section != old:
+            assert section["bodyMarkdown"] != old["bodyMarkdown"]
+            changed.append(section["id"])
+            assert {item: section[item] for item in section if item != "bodyMarkdown"} == {item: old[item] for item in old if item != "bodyMarkdown"}
+    assert changed == ["section-01", "section-02"], f"Unexpected Moon section edits: {changed}"
+
+    image = current["sections"][0]
+    previous_image = previous["sections"][0]
+    assert image["id"] == "section-01"
+    assert image["bodyMarkdown"].startswith(previous_image["bodyMarkdown"] + "\n\n")
+    added_image = image["bodyMarkdown"][len(previous_image["bodyMarkdown"]) + 2:]
+    crayfish, strength = added_image.split("\n\n")
+    assert crayfish.startswith("现稿已看见水边的甲壳动物。")
+    for phrase in ("比野兽更深", "**还没完全成形**", "这是象征读法", "不是要你把不安命名成实体怪物", "更不是诊断"):
+        assert phrase in crayfish, phrase
+    assert strength == "在 Pollack 的象征读法里，相对力量：月亮阶段狂野更满，动物朝天嚎叫，力量牌里的动物性则被引导、被手稳住。"
+    assert strength.count("。") == 1
+
+    tradition = next(section for section in current["sections"] if section["id"] == "section-02")
+    previous_tradition = next(section for section in previous["sections"] if section["id"] == "section-02")
+    exit_paragraph, warning = previous_tradition["bodyMarkdown"].split("\n\n")
+    assert "通向未知的出口" in exit_paragraph and "某个人正在骗我" in warning
+    road = tradition["bodyMarkdown"][len(exit_paragraph) + 2:-(len(warning) + 2)]
+    assert tradition["bodyMarkdown"] == f"{exit_paragraph}\n\n{road}\n\n{warning}"
+    assert road.startswith("现稿已跟 Waite 写下：塔间小路像通向未知的出口。")
+    for phrase in ("星星", "**没有**", "**入口**", "**那条路还在**", "有人设局欺骗", "看不清不等于无路"):
+        assert phrase in road, phrase
+    assert "阴谋" not in road and "有人在骗我" not in road
+    for phrase in ("皇帝", "超我", "原我", "本我", "菩萨", "基督", "有人在骗我", "狼人", "动物自我"):
+        assert phrase not in crayfish and phrase not in strength and phrase not in road, phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Moon source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "moon-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-03" and "78度的智慧" in book["title"]
+    for source in previous["sources"]:
+        if "checkedOn" in source:
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The Moon" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [160, 162, 163, 164, 165]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-02"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    assert current["articleMarkdown"] == md, "Moon Markdown changed outside the two supplemented sections"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    manuscript = (MOON_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/moon-update-20261103/revisions.json"
+    assert revision["updatedAt"] == "2026-11-03" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    english = ROOT / "content/tarot/en/moon.json"
+    assert sha(english.read_bytes()) == revision_registry()["records"]["content/tarot/en/moon.json"]["fileSha256"], "English Moon file changed"
+    assert read(english)["updatedAt"] == "2026-10-11"
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/moon.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/moon"]["recordSha256"], f"Unedited Moon file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
     return current, previous
 
 
