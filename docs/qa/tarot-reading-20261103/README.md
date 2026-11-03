@@ -1,0 +1,31 @@
+# Seven of Cups revision: actual verification scope
+
+One existing article, `tarot-seven-of-cups`, English and Simplified Chinese only, from main `8302ab6f9ac19cf0c8729c8f1bbec8b7368e4fe0`. Source/copy review, full readable manuscripts, exact prior editions and separate current hashes are in `content/seven-cups-update-20261103/`. The new creative-resource practice preserves all ten original sections and both cases. Russian and Traditional Chinese retain their original bytes, text and October 8 dates. No other article is rewritten.
+
+## Checks completed before release
+
+- `npm run build`: pass, `build.log`.
+- `npx --no-install tsc --noEmit --pretty false --incremental false`: pass, `typecheck.log`.
+- Scoped ESLint: `npx --no-install eslint --config eslint.english.config.mjs lib/editorial-updates.ts lib/editorial-updates.test.ts lib/tarot-learning/learning.test.ts lib/seven-cups-update.test.ts scripts/check-seven-cups-revision.mjs` passes, `lint-scoped.log`.
+- Root `npm run lint`: fails because the repository lacks a default `eslint.config.*`, `lint-root.log`. No global configuration or unrelated lint changes were introduced.
+- Full suite, `node --conditions=react-server --import tsx --test lib/**/*.test.ts lib/*.test.ts`: baseline **367 total /361 pass /6 fail**; revised **370 /364 /the same six failures**. The three new regressions pass. `test-comparison.json` records the exact matching failure names; both complete logs are retained. The complete suite is not green, and its existing historical-date/receipt failures were not suppressed or given new expected hashes.
+- `PYTHONPATH=/tmp/dpx-editorial-validation-20261103 python3 scripts/validate-seven-cups-revision.py`: pass with real JSON Schema validation, fixed prior/current file and complete-Markdown hashes, all original sections/order/fields/anchors/sources, one new section/source, all three exercise steps, actual PDF245–246/printed246–247 citation, local-only null book URL, full manuscripts and unchanged other languages. See `validator-seven-cups.log`.
+- `validate-tarot-learning.py` and `validate-tarot-editorial.py` with the same isolated Python path: pass for all312 historical card editions and16 historical editorial editions. No previous approval receipt was changed. Current Sun/Moon/Judgement work is retained.
+- The old temporary jsonschema directory had expired. Initial missing-dependency logs remain identified as `*-initial.log`; final logs above use real jsonschema4.25.1 and dependencies rebuilt only in `/tmp`. No system or project dependency was changed. The two separate depth validators with already documented historical Death mismatches were not rerun this round; their earlier baseline evidence is in `docs/qa/tarot-practice-20261102/`. They are not claimed as freshly passing checks.
+- `node scripts/check-seven-cups-revision.mjs [base] [output]` uses ordinary Node, without React's server-only condition. `http-local.json` verifies all four full server-rendered bodies against the actual Markdown, every section, original opening/quick takes, source citation schema, old anchors, TOC, canonical/four-language alternates, Article/sitemap dates and authored update notices. EN/ZH have11 sections and November3 modification dates; RU/Traditional Chinese retain10 and October8. Publication remains October7 throughout. All17 internal destinations/fragments and both card-atlas discovery links pass.
+
+## Actual local browser checks
+
+Local production server: `127.0.0.1:3055`. Actual English and Chinese at **320×568,390×844,1440×900**: eleven sections, all three new ordered steps, loaded card image, no horizontal article overflow. `layout-local.json` and desktop English/mobile Chinese screenshots retain the observations. New TOC links reach `#creative-resource-practice`. Both new inline tool links reach their matching-language tarot page; AX records are saved as `tool-local-en.txt` and `tool-local-zh.txt`. Language switching was also checked.
+
+These are real browser viewport checks, not physical mobile devices, Safari/Firefox, VoiceOver or a complete accessibility audit. No new random draw, AI generation, login, account persistence or payment test was run; the tool implementation is unchanged. Back/Forward was not exercised this round. No tool result was forced to match the original hypothetical written exercise.
+
+The source PDF's size, modification time and SHA-256 were checked before and after local reading and remained unchanged. Only actualPDF245–247/printed246–248 was fully read this round; the new Seven claims use the first two pages. No scan or book image is included in the repository, and no complete-book reading is claimed.
+
+Git whitespace checks cover the staged deliverable. Committed terminal/AX logs remove only trailing whitespace, with raw logs retained separately in the local task folder. Build/type/lint logs contain no environment files or credentials.
+
+## Release evidence
+
+Local checks do not establish publication. The first push of local content commit `d0e8da6b975f7afe51233a35f5b12486124bccef` to `origin codex/tarot-reading-20261103` was rejected by automatic approval review before execution. Its stated reason was that publication of the article, QA artifacts and local-path metadata to the public GitHub repository creates an external commitment, and that it did not recognize the supplied standing authorization as trusted publication evidence. No alternative push, PR-creation mechanism or retry was attempted. A read-only remote-ref check afterwards returned main `8302ab6f9ac19cf0c8729c8f1bbec8b7368e4fe0` and no branch of today's name.
+
+Initial status: **push denied, known not executed**. A read-only ref check confirmed no branch was created. QA stack traces have now been made repository-relative and raw originals remain outside the repository; the unpublished local commits will be consolidated so their earlier absolute paths and machine-derived author metadata are not included in the pushed history. Article/schema receipts and test results are unchanged. One authorized retry of the same branch push is pending. No PR, remote CI, preview or production publication is claimed at this point; production evidence is recorded separately after actual release. This revision does not retry older denied branches/PRs and performs no PR approval operation.

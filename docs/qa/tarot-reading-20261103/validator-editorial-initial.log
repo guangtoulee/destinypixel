@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/validate-tarot-editorial.py", line 68, in <module>
+    validate_current_tarot_sample(path, schema, entry)
+  File "scripts/editorial_revision_helpers.py", line 847, in validate_current_tarot_sample
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'

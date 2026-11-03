@@ -1,0 +1,129 @@
+{
+  "base": "http://127.0.0.1:3055",
+  "editions": [
+    {
+      "locale": "en",
+      "sections": 11,
+      "completeBody": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-11-03",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "zh",
+      "sections": 11,
+      "completeBody": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-11-03",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "zh-TW",
+      "sections": 10,
+      "completeBody": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-08",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "ru",
+      "sections": 10,
+      "completeBody": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-08",
+      "canonical": true,
+      "originalAnchors": true
+    }
+  ],
+  "links": [
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/tarot/attribution.json",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/tarot",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-knight-of-cups",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-nine-of-cups",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-six-of-cups",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-cups",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-knight-of-cups?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-nine-of-cups?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-six-of-cups?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-cups?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh",
+      "status": 200,
+      "anchor": null
+    }
+  ],
+  "deploymentIds": []
+}

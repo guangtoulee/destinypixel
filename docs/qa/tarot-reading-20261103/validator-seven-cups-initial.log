@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/validate-seven-cups-revision.py", line 9, in <module>
+    current, previous = validate_seven_cups_record(ROOT / f"content/tarot/{locale}/seven-of-cups.json")
+  File "scripts/editorial_revision_helpers.py", line 152, in validate_seven_cups_record
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'

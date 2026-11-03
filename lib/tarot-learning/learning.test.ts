@@ -16,6 +16,7 @@ import queenRevision from "@/content/queen-swords-update-20261023/revisions.json
 import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
 import starRevision from "@/content/star-update-20261025/revisions.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
+import sevenCupsRevision from "@/content/seven-cups-update-20261103/revisions.json";
 import judgementRevision from "@/content/judgement-update-20261103/revisions.json";
 import moonRevision from "@/content/moon-update-20261103/revisions.json";
 import sunRevision from "@/content/sun-update-20261103/revisions.json";
@@ -30,6 +31,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const hangedManRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=hangedManRevision.records;
  const starRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=starRevision.records;
  const eightSwordsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=eightSwordsRevision.records;
+ const sevenCupsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=sevenCupsRevision.records;
  const judgementRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=judgementRevision.records;
  const moonRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=moonRevision.records;
  const sunRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=sunRevision.records;
@@ -38,6 +40,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
  assert.deepEqual(Object.keys(starRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/star.json`));
  assert.deepEqual(Object.keys(eightSwordsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/eight-of-swords.json`));
+ assert.deepEqual(Object.keys(sevenCupsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/seven-of-cups.json`));
  assert.deepEqual(Object.keys(judgementRecords),["content/tarot/zh/judgement.json"]);
  assert.deepEqual(Object.keys(moonRecords),["content/tarot/zh/moon.json"]);
  assert.deepEqual(Object.keys(sunRecords),["content/tarot/zh/sun.json"]);
@@ -168,6 +171,33 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="eight-of-swords"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Eight of Swords edition changed`);
+   }
+   if(Object.hasOwn(sevenCupsRecords,path)){
+    const record=sevenCupsRecords[path],previousRaw=readFileSync(`content/seven-cups-update-20261103/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(record.previousFileSha256,depthRecords[key].recordSha256,`${path}: original file approval changed`);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    assert.deepEqual(Object.keys(current).filter(field=>!changedFields.has(field)).sort(),Object.keys(previous).filter(field=>!changedFields.has(field)).sort());
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    const added=current.sections.filter((section:{id:string})=>!previous.sections.some((old:{id:string})=>old.id===section.id));
+    assert.equal(previous.sections.length,10);
+    assert.deepEqual(added.map((section:{id:string;role:string})=>[section.id,section.role]),[["creative-resource-practice","practice"]]);
+    assert.equal(current.sections.length,previous.sections.length+1);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>section.id!=="creative-resource-practice"),previous.sections,`${path}: original section content/order/anchors changed`);
+    assert.equal(current.sections.findIndex((section:{id:string})=>section.id==="creative-resource-practice"),previous.sections.findIndex((section:{id:string})=>section.id==="depth-positions")+1);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.updatedAt,"2026-11-03");
+    const newBlock=`## ${added[0].title}\n\n${added[0].bodyMarkdown}\n\n`;
+    assert.equal(current.articleMarkdown.split(newBlock).length,2,`${path}: new section missing or duplicated in complete Markdown`);
+    assert.equal(current.articleMarkdown.replace(newBlock,""),previous.articleMarkdown,`${path}: complete historical Markdown changed outside the addition`);
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="seven-of-cups"){
+    assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Seven of Cups edition changed`);
    }
    if(Object.hasOwn(judgementRecords,path)){
     const record=judgementRecords[path],previousRaw=readFileSync(`content/judgement-update-20261103/previous/${path}`);
