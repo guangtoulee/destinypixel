@@ -20,6 +20,8 @@ STAR_DIR = ROOT / "content/star-update-20261025"
 STAR_PATHS = frozenset(f"content/tarot/{locale}/star.json" for locale in ("en", "zh"))
 EIGHT_SWORDS_DIR = ROOT / "content/eight-swords-update-20261102"
 EIGHT_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/eight-of-swords.json" for locale in ("en", "zh"))
+SEVEN_CUPS_DIR = ROOT / "content/seven-cups-update-20261103"
+SEVEN_CUPS_PATHS = frozenset(f"content/tarot/{locale}/seven-of-cups.json" for locale in ("en", "zh"))
 JUDGEMENT_DIR = ROOT / "content/judgement-update-20261103"
 JUDGEMENT_PATHS = frozenset({"content/tarot/zh/judgement.json"})
 MOON_DIR = ROOT / "content/moon-update-20261103"
@@ -92,6 +94,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in SEVEN_CUPS_PATHS:
+        validate_seven_cups_record(path)
+        return (SEVEN_CUPS_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in JUDGEMENT_PATHS:
         validate_judgement_record(path)
         return (JUDGEMENT_DIR / "previous" / sample_key(path)).read_bytes()
@@ -115,6 +120,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in SEVEN_CUPS_PATHS:
+        current, _ = validate_seven_cups_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in MOON_PATHS:
         current, _ = validate_moon_record(path)
         return sha(current["articleMarkdown"])
@@ -137,6 +145,105 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_seven_cups_record(path):
+    """Check the current creative exercise without rewriting its old approval."""
+    import jsonschema
+
+    key = sample_key(path)
+    assert key in SEVEN_CUPS_PATHS, f"Not a Seven of Cups revision: {key}"
+    registry = read(SEVEN_CUPS_DIR / "revisions.json")
+    assert registry["baseCommit"] == "8302ab6f9ac19cf0c8729c8f1bbec8b7368e4fe0"
+    assert registry["updatedAt"] == "2026-11-03"
+    assert set(registry["articles"]) == {"tarot-seven-of-cups"}
+    notes = registry["articles"]["tarot-seven-of-cups"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(isinstance(note, str) and note.strip() for note in notes.values())
+    assert set(registry["records"]) == SEVEN_CUPS_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw = Path(path).read_bytes()
+    previous_raw = (SEVEN_CUPS_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    locale = Path(path).parent.name
+    legacy_key = f"{locale}/seven-of-cups"
+    assert sha(raw) == record["fileSha256"], f"Current Seven of Cups file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Seven of Cups complete Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Seven of Cups file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Seven of Cups Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Seven of Cups metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Seven of Cups metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Seven of Cups metadata changed: {key}/{field}"
+    assert previous["updatedAt"] == "2026-10-08"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-03"
+    assert current["review"]["nativeHumanReview"] is False
+
+    old_sections = previous["sections"]
+    assert len(old_sections) == 10 and len(current["sections"]) == 11
+    added = [section for section in current["sections"] if section["id"] == "creative-resource-practice"]
+    assert len(added) == 1 and added[0]["role"] == "practice"
+    section = added[0]
+    assert section.keys() == {"id", "role", "title", "bodyMarkdown"}
+    assert section["title"].strip() and section["bodyMarkdown"].strip()
+    assert [item for item in current["sections"] if item["id"] != section["id"]] == old_sections, f"Original Seven of Cups text/order/anchors changed: {key}"
+    insertion = next(i for i, item in enumerate(old_sections) if item["id"] == "depth-positions") + 1
+    assert current["sections"] == old_sections[:insertion] + [section] + old_sections[insertion:], f"Seven of Cups practice inserted elsewhere: {key}"
+    assert re.findall(r"^([0-9]+)\. ", section["bodyMarkdown"], re.M) == ["1", "2", "3"], f"Seven of Cups exercise must keep all three steps: {key}"
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], f"Historical Seven of Cups source receipts changed: {key}"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "seven-cups-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["title"].strip() and book["checkedOn"] == "2026-11-03"
+    metadata = book["sourceMetadata"]
+    assert metadata["layer"] == "modern_author_interpretation"
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Chapter 8, Seven of Cups" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == [245, 246] and metadata["printedPages"] == [246, 247]
+    assert metadata["readScopePdf"] == [245, 246, 247]
+
+    md = current["articleMarkdown"]
+    block = f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n"
+    following = old_sections[insertion]
+    marker = f"## {following['title']}\n\n{following['bodyMarkdown']}"
+    assert previous["articleMarkdown"].count(marker) == 1
+    assert md == previous["articleMarkdown"].replace(marker, block + marker), f"Seven of Cups complete Markdown changed outside its new section: {key}"
+    assert md.startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in md
+    ids = [item["id"] for item in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for item in current["sections"] for anchor in item.get("legacyAnchors", [])]
+    if current.get("sourceAppendix"):
+        ids.append(current["sourceAppendix"]["id"])
+    assert len(ids) == len(set(ids)), f"Duplicate Seven of Cups anchors: {key}"
+    suffix = "?locale=zh" if locale == "zh" else ""
+    assert "](https://sacred-texts.com/tarot/pkt/pktcu07.htm)" in section["bodyMarkdown"]
+    assert f"](/tarot{suffix})" in section["bodyMarkdown"]
+    assert f"](/journal/how-to-keep-tarot-journal{suffix})" in section["bodyMarkdown"]
+    assert (SEVEN_CUPS_DIR / f"manuscript-{locale}.md").read_text() == md.rstrip() + "\n", f"Readable Seven of Cups manuscript differs from published source: {key}"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/seven-cups-update-20261103/revisions.json"
+    assert revision["updatedAt"] == "2026-11-03" and revision["scope"].strip()
+
+    projected = {**current, "sections": old_sections, "sources": previous["sources"],
+                 "articleMarkdown": md.replace(block, "", 1), "updatedAt": previous["updatedAt"]}
+    projected.pop("editorialRevision")
+    assert projected == previous, f"Seven of Cups inverse projection changed old fields: {key}"
+    assert sha(json.dumps(projected, ensure_ascii=False, indent=2) + "\n") == record["previousFileSha256"], f"Seven of Cups inverse projection does not restore old bytes: {key}"
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/seven-of-cups.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/seven-of-cups"]["recordSha256"], f"Unedited Seven of Cups file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_eight_swords_record(path):
