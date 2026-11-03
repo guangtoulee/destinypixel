@@ -1,7 +1,7 @@
 import { baziCompatibilityArticle, baziCompatibilityRussian } from "./journal-bazi-compatibility";
 import { sunMoonRisingArticle, sunMoonRisingRussian } from "./journal-sun-moon-rising";
 import { fortuneStickEditionsArticle, fortuneStickEditionsRussian } from "./journal-fortune-stick-editions";
-import { birthTimeArticle } from "./compatibility/birth-time-article";
+import { birthTimeArticle, birthTimeSectionIds } from "./compatibility/birth-time-article";
 import type { JournalSourceArticle, JournalTranslation } from "./journal";
 
 type Edition = {
@@ -14,7 +14,7 @@ type Entry = { slug: string; relatedSlug: string; sources: { label: string; href
 const entries: Entry[] = [
   {
     slug: "compatibility-without-birth-time", relatedSlug: "bazi-vs-chinese-zodiac-compatibility",
-    sources: [{ label: "IANA · Time Zone Database / 时区资料 / База часовых поясов", href: "https://www.iana.org/time-zones" }, { label: "DestinyPixel · Birth details / 出生资料 / Данные рождения", href: "/journal/prepare-birth-date-time-place" }],
+    sources: [{ label: "IANA · Time Zone Database / 时区资料 / База часовых поясов", href: "https://www.iana.org/time-zones" }, { label: "DestinyPixel · Birth details / 出生资料 / Данные рождения", href: "/journal/prepare-birth-date-time-place" }, { label: "DestinyPixel product facts", href: "/product-facts" }],
     ...birthTimeArticle,
   },
   {
@@ -99,22 +99,31 @@ function translation(entry: Entry, locale: "en" | "zh" | "ru"): JournalTranslati
     "https://www.hko.gov.hk/en/gts/time/stemsandbranches.htm": { en: "Hong Kong Observatory: stems and branches", zh: "香港天文台：天干与地支", ru: "Гонконгская обсерватория: стволы и ветви" },
     "https://www.iana.org/time-zones": { en: "IANA: Time Zone Database", zh: "IANA：时区数据库", ru: "IANA: база часовых поясов" },
     "/compatibility": { en: "DestinyPixel: current comparison method", zh: "DestinyPixel：当前配对方法", ru: "DestinyPixel: метод сравнения" },
+    "/product-facts": { en: "DestinyPixel: tool inputs, AI and saving", zh: "DestinyPixel：工具输入、AI 与保存范围", ru: "DestinyPixel: данные, ИИ и сохранение" },
     "/sticks": { en: "DestinyPixel: collections and source notes", zh: "DestinyPixel：签系与来源说明", ru: "DestinyPixel: коллекции и источники" },
     "/learn/guanyin-fortune-sticks": { en: "Guanyin collection guide", zh: "观音签资料范围（英文）", ru: "Коллекция Гуаньинь (на английском)" },
     "/journal/prepare-birth-date-time-place": { en: "Prepare your birth details", zh: "准备出生日期、时间与地点", ru: "Подготовка данных рождения" },
   };
   return { ...copy, sections: copy.sections.map(([title, ...paragraphs], index) => ({
-    id: `step-${index + 1}`, title, paragraphs,
+    id: entry.slug === "compatibility-without-birth-time" ? birthTimeSectionIds[index] : `step-${index + 1}`, title, paragraphs,
+    ...(entry.slug === "compatibility-without-birth-time" && index === 2 ? { links: [{
+      text: { en: "Reveal our connection", zh: "看看我们的相处图谱", ru: "Сравнить наши карты" }[locale],
+      href: `/compatibility${locale === "en" ? "" : `?locale=${locale}`}#compare`,
+    }] } : {}),
+    ...(entry.slug === "compatibility-without-birth-time" && index === 7 ? { links: [{
+      text: { en: "product facts page", zh: "产品事实页", ru: "странице фактов о продуктах" }[locale],
+      href: `/product-facts${locale === "en" ? "" : `?locale=${locale}`}`,
+    }] } : {}),
     ...(entry.slug === "how-to-ask-fortune-sticks" && index === copy.sections.length - 1 ? { links: [{
       text: { en: "collection-and-edition guide", zh: "签系与版本指南", ru: "руководству о коллекциях и изданиях" }[locale],
       href: `/journal/fortune-stick-number-and-edition${locale === "en" ? "" : `?locale=${locale}`}`,
     }] } : {}),
-    ...(index === copy.sections.length - 1 ? { sources: entry.sources.map(source => ({ ...source, label: sourceLabels[source.href]?.[locale] ?? source.label, href: source.href.startsWith("/journal/") || source.href === "/compatibility" || source.href === "/sticks" ? `${source.href}${locale === "en" ? "" : `?locale=${locale}`}` : source.href })) } : {}),
+    ...(index === copy.sections.length - 1 ? { sources: entry.sources.map(source => ({ ...source, label: sourceLabels[source.href]?.[locale] ?? source.label, href: source.href.startsWith("/journal/") || source.href === "/compatibility" || source.href === "/sticks" || source.href === "/product-facts" ? `${source.href}${locale === "en" ? "" : `?locale=${locale}`}` : source.href })) } : {}),
   })) };
 }
 
 export const searchGrowthArticles: JournalSourceArticle[] = [...entries.map(entry => ({
-  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-09-30" : entry.slug === "how-to-ask-fortune-sticks" ? "2026-10-27" : "2026-09-20",
+  slug: entry.slug, relatedSlug: entry.relatedSlug, publishedAt: "2026-09-20", updatedAt: entry.slug === "compatibility-without-birth-time" ? "2026-11-03" : entry.slug === "how-to-ask-fortune-sticks" ? "2026-10-27" : "2026-09-20",
   translations: { en: translation(entry, "en"), zh: translation(entry, "zh") },
 })), baziCompatibilityArticle, fortuneStickEditionsArticle, sunMoonRisingArticle];
 export const searchGrowthRussian: Record<string, JournalTranslation> = { ...Object.fromEntries(entries.map(entry => [entry.slug, translation(entry, "ru")])), [fortuneStickEditionsArticle.slug]: fortuneStickEditionsRussian, [baziCompatibilityArticle.slug]: baziCompatibilityRussian, [sunMoonRisingArticle.slug]: sunMoonRisingRussian };
