@@ -30,6 +30,8 @@ SUN_DIR = ROOT / "content/sun-update-20261103"
 SUN_PATHS = frozenset({"content/tarot/zh/sun.json"})
 TOWER_DIR = ROOT / "content/tower-update-20261104"
 TOWER_PATHS = frozenset({"content/tarot/zh/tower.json"})
+DEVIL_DIR = ROOT / "content/devil-update-20261104"
+DEVIL_PATHS = frozenset({"content/tarot/zh/devil.json"})
 
 
 def sha(raw):
@@ -105,6 +107,9 @@ def historical_bytes(path):
     if sample_key(path) in TOWER_PATHS:
         validate_tower_record(path)
         return (TOWER_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in DEVIL_PATHS:
+        validate_devil_record(path)
+        return (DEVIL_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         validate_eight_swords_record(path)
         return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -139,6 +144,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in TOWER_PATHS:
         current, _ = validate_tower_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in DEVIL_PATHS:
+        current, _ = validate_devil_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         current, _ = validate_eight_swords_record(path)
@@ -822,6 +830,134 @@ def validate_tower_record(path):
     for unedited_locale in ("en", "zh-TW", "ru"):
         unedited = ROOT / f"content/tarot/{unedited_locale}/tower.json"
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/tower"]["recordSha256"], f"Unedited Tower file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_devil_record(path):
+    """Validate the Chinese Pollack supplement and keep the prior Devil receipt."""
+    key = sample_key(path)
+    assert key in DEVIL_PATHS, f"Not a Devil revision: {key}"
+    registry = read(DEVIL_DIR / "revisions.json")
+    assert registry["baseCommit"] == "de587308cb06df26730be9c8286408d5f1ba73d1"
+    assert registry["updatedAt"] == "2026-11-04"
+    assert set(registry["articles"]) == {"tarot-devil"}
+    notes = registry["articles"]["tarot-devil"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert set(registry["records"]) == DEVIL_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (DEVIL_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/devil"
+    assert sha(raw) == record["fileSha256"], f"Current Devil file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Devil Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Devil file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Devil Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Devil metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Devil metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Devil metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-04"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么恶魔紧接在节制之后"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-03"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert "\n\n" not in added_text
+        else:
+            assert section == old, f"Original Devil section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")
+    detail = image["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("半个立方体", "不完整的知识", "土星", "限制与约束", "灾祸", "魔术师", "别无其他", "脸上并无痛苦", "链圈", "错觉", "不是 Waite 原文", "147", "150"):
+        assert phrase in detail, phrase
+    assert detail.count("土星") == 1
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("节制", "化约为 6", "恋人的扭曲", "146", "149", "150", "高塔", "冲破旧结构", "/journal/tarot-tower?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    assert sequence.count("\n\n") == 1
+    reverse = next(section for section in current["sections"] if section["id"] == "section-03")["bodyMarkdown"]
+    added_reverse = reverse.split("\n\n")[-1]
+    assert "逆位可读成开始认出循环" in reverse
+    for phrase in ("151", "枷锁", "更难受", "改错了方向", "选择是否在变多"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("布莱克", "失乐园", "密宗", "Paul Douglas", "集体无意识", "赐福", "性犯罪", "148"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Devil source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "devil-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-04" and "78度的智慧" in book["title"]
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("devil-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The Devil" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [146, 147, 148, 149, 150, 151, 152]
+    assert "148" in metadata["pageNote"] and "low-resolution" in metadata["pageNote"]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-03"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Devil Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Devil anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (DEVIL_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/devil-update-20261104/revisions.json"
+    assert revision["updatedAt"] == "2026-11-04" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/devil.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/devil"]["recordSha256"], f"Unedited Devil file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
     try:
         import jsonschema
