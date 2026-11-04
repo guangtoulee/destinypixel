@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-04T07:51:50.574Z",
+  "updatedAt": "2026-11-04T20:29:54.228Z",
   "sourceSummary": {
-    "community": 1460,
-    "publicX": 604,
-    "total": 2064
+    "community": 1465,
+    "publicX": 605,
+    "total": 2070
   },
   "items": [
     {
@@ -3124,6 +3124,48 @@
       "rawText": "Claude Fable running ComfyUI workflows through the Comfy MCP is a cheat code. → Claude pulled the shot from the web, auto-detected the scene cuts + trimmed it → ran my saved depthanything v3 + openpose workflow to build the driving reference video → scrubbed every frame for the sharpest one, then character swapped me in with gpt-image-2 exactly how I directed it: wearing a tuxedo, liminal space environment, no background characters → wrote the seedance 2.0 prompts + ran the gens → stitched together the 3-panel comparison you're watching The preprocessing + prompt writing is usually most of the work on a clip like this. With the MCP I didn't touch any of it. Didn't need to look at a single node lol."
     },
     {
+      "id": "x-public-2115578348411720036",
+      "title": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seed",
+      "description": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between",
+      "prompt": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between slop and quality where people don't even care if its AI is in the amount of detail you include in your script A script is much more than dialogue Its the characters personalities, their voices, their swagger, the way the camera moves, the vibe and emotion I whisper flow my entire vision for my ad exactly including all the camera angles and camera movements then save it as a skill in Claude I then open a new chat and make my characters and locations based on the information from that skill (Using a character / scene builder skill I made that follows certain rules to generate realistic characters that don't look boring) Then on to the prompts, Seedance can hold a lot of context so I give it everything it needs so it doesn't guess about anything the best way to do that is use this prompt structure [REFERENCE MATERIALS] [VOICES] [GOAL] [CONTINUITY] [SHOTS] [VISUAL STYLE] [CAMERA AND PERFORMANCE] [AUDIO] [EXCLUSIONS] [MAINTAIN CONSISTENCY] This structure to give your prompts ensures every single thing is covered and you can truly get whats in your brain onto the screen",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/pounddz/status/2115578348411720036",
+      "sourceType": "x",
+      "authorName": "Pounds",
+      "authorHandle": "@pounddz",
+      "createdAt": "2026-10-28T22:55:58.000Z",
+      "importedAt": "2026-11-04T20:29:54.196Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 430,
+        "reposts": 38,
+        "replies": 40,
+        "quotes": 12,
+        "bookmarks": 807,
+        "views": 95351,
+        "score": 3700
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between slop and quality where people don't even care if its AI is in the amount of detail you include in your script A script is much more than dialogue Its the characters personalities, their voices, their swagger, the way the camera moves, the vibe and emotion I whisper flow my entire vision for my ad exactly including all the camera angles and camera movements then save it as a skill in Claude I then open a new chat and make my characters and locations based on the information from that skill (Using a character / scene builder skill I made that follows certain rules to generate realistic characters that don't look boring) Then on to the prompts, Seedance can hold a lot of context so I give it everything it needs so it doesn't guess about anything the best way to do that is use this prompt structure [REFERENCE MATERIALS] [VOICES] [GOAL] [CONTINUITY] [SHOTS] [VISUAL STYLE] [CAMERA AND PERFORMANCE] [AUDIO] [EXCLUSIONS] [MAINTAIN CONSISTENCY] This structure to give your prompts ensures every single thing is covered and you can truly get whats in your brain onto the screen"
+    },
+    {
       "id": "x-public-2087359288649949620",
       "title": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-s",
       "description": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-second ultra-realistic candid home-video sequence of an elderly Korean man in his mid-70s living an ordinary late morning in ",
@@ -3167,48 +3209,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "i can't believe this is how far ai video has come... seedance 2.5, prompt: Prompt: Create a 30-second ultra-realistic candid home-video sequence of an elderly Korean man in his mid-70s living an ordinary late morning in a quiet Korean residential neighborhood. SUBJECT: Elderly Korean man, natural everyday appearance, realistic weathered skin texture, deep smile lines and age spots, short thinning grey hair neatly combed back, slightly stooped but sturdy posture. Loose beige button-up short-sleeve shirt, dark grey slacks worn slightly high on the waist, brown leather sandals over thin grey socks, simple metal wristwatch. Warm, unhurried personality. Keep his face, body, hairstyle, clothing, and appearance perfectly consistent throughout. SETTING: Authentic Korean residential neighborhood — narrow concrete alleys, low-rise homes, small terraces, potted plants, laundry lines, bicycles, utility poles, overhead wires and mature trees. Quiet, lived-in atmosphere. No shops, advertisements, crowds, cafés, or commercial activity. VISUAL STYLE: Ultra-realistic documentary home-video footage from an early-2000s consumer DV camcorder. Imperfect handheld operation, natural camera shake, awkward framing, occasional reframing, autofocus hunting, slight lens breathing, exposure pumping between sunlight and shade, subtle motion blur, mild rolling shutter, faded colors, soft contrast, slight digital compression and sensor noise. No stabilization, no cinematic camera moves, no modern color grading. Everything must feel genuinely captured, not AI-generated. TIMELINE: 00:00–00:05 — Outside his small house, he sits on a low concrete wall slowly fanning himself with a folded newspaper. Wind moves the leaves above him. He squints slightly into the light and gives a small easy smile while the camera struggles to lock focus. 00:05–00:10 — He walks into a narrow residential alley with slow, deliberate steps, hands loosely clasped behind his back. A stray cat approaches. He stops, bends down carefully with one hand braced on his knee, and gently scratches its head. Autofocus shifts imperfectly between his face and the cat. 00:10–00:15 — In a small front yard, he waters a row of potted plants with a dented metal watering can, pausing to pick off a dead leaf. Water drips naturally while sunlight and cloud shadows subtly change the exposure. 00:15–00:20 — He sits on a quiet terrace with a small ceramic cup of barley tea, casually watching the neighborhood, one hand resting on his knee. He exhales slowly, content. Handheld side angle with natural camera drift. 00:20–00:25 — Close side profile. Someone off-camera casually greets him. He turns unhurriedly, smiles warmly with deep creases around his eyes, raises his hand slightly and naturally says, \"어, 안녕하세요.\" The camera reacts slightly late. 00:25–00:30 — He walks slowly down a tree-lined residential lane, hands behind his back, newspaper tucked under one arm. He notices the camera, gives a small amused nod, then looks away and continues walking. The recording abruptly cuts to black mid-motion like an old camcorder being switched off. AUDIO: Only authentic location sound: birds, distant motorcycles, light wind, rustling leaves, faint neighborhood chatter, cat sounds, slow footsteps on concrete, water trickling from the can and subtle residential ambience. Natural Korean speech only. No music, narration, cinematic sound effects, or artificial sound design. GOAL: Make it feel like a forgotten personal home video from the early 2000s — intimate, spontaneous, imperfect, warm, mundane and deeply believable. Prioritize realistic human motion, natural facial expressions, physical interaction, environmental detail and consistent identity over cinematic beauty."
-    },
-    {
-      "id": "x-public-2115578348411720036",
-      "title": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seed",
-      "description": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between",
-      "prompt": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between slop and quality where people don't even care if its AI is in the amount of detail you include in your script A script is much more than dialogue Its the characters personalities, their voices, their swagger, the way the camera moves, the vibe and emotion I whisper flow my entire vision for my ad exactly including all the camera angles and camera movements then save it as a skill in Claude I then open a new chat and make my characters and locations based on the information from that skill (Using a character / scene builder skill I made that follows certain rules to generate realistic characters that don't look boring) Then on to the prompts, Seedance can hold a lot of context so I give it everything it needs so it doesn't guess about anything the best way to do that is use this prompt structure [REFERENCE MATERIALS] [VOICES] [GOAL] [CONTINUITY] [SHOTS] [VISUAL STYLE] [CAMERA AND PERFORMANCE] [AUDIO] [EXCLUSIONS] [MAINTAIN CONSISTENCY] This structure to give your prompts ensures every single thing is covered and you can truly get whats in your brain onto the screen",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/pounddz/status/2115578348411720036",
-      "sourceType": "x",
-      "authorName": "Pounds",
-      "authorHandle": "@pounddz",
-      "createdAt": "2026-10-28T22:55:58.000Z",
-      "importedAt": "2026-11-02T22:26:02.735Z",
-      "tags": [
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 425,
-        "reposts": 38,
-        "replies": 39,
-        "quotes": 11,
-        "bookmarks": 798,
-        "views": 94174,
-        "score": 3656
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "This ad would've cost $50,000 and a month to make 6 months ago I just made it with Claude + Seedance 2.5 for $30 in about an hour Here's the exact blueprint on how I made it: >Start with the script The difference between slop and quality where people don't even care if its AI is in the amount of detail you include in your script A script is much more than dialogue Its the characters personalities, their voices, their swagger, the way the camera moves, the vibe and emotion I whisper flow my entire vision for my ad exactly including all the camera angles and camera movements then save it as a skill in Claude I then open a new chat and make my characters and locations based on the information from that skill (Using a character / scene builder skill I made that follows certain rules to generate realistic characters that don't look boring) Then on to the prompts, Seedance can hold a lot of context so I give it everything it needs so it doesn't guess about anything the best way to do that is use this prompt structure [REFERENCE MATERIALS] [VOICES] [GOAL] [CONTINUITY] [SHOTS] [VISUAL STYLE] [CAMERA AND PERFORMANCE] [AUDIO] [EXCLUSIONS] [MAINTAIN CONSISTENCY] This structure to give your prompts ensures every single thing is covered and you can truly get whats in your brain onto the screen"
     },
     {
       "id": "x-public-2086806078105551218",
@@ -3336,6 +3336,53 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "steal my full workflow to create ultra-realistic AI videos with GPT-6 Astra... higgsfield just released their API, so i took it into real conditions i generated a vlog-style video set in Paris... it looks like raw footage a friend shot on a phone here's the workflow, step by step: > step 1: steal the structure, not the pixels i captured 3-5 scenes from a hotels and river views, then pulled character inspiration from pinterest and real vlogs > step 2: analyze the reference with Gemini i sent Gemini everything i'd collected... videos, audio, keyframes and it gave me a shot-by-shot breakdown, i turned that into instructions > step 3: swap the world, keep the bones i changed a lot on the character and the environment until it felt like something of my own, not a copy > step 4: build reference images first, this is where you iterate images are cheap, video is expensive so i built a character sheet, one image per location in the same mood, then the exact start frame the video opens on, all Nano Banana Pro > step 5: one 30-second video run, not ten 3-second clips the full timestamped script goes to Seedance 2.5 through the API as ONE generation start frame as the anchor, one action per beat, camera and audio described concretely, identity locks at the end so her face, outfit and makeup is locked in Seedance handles the cuts internally > step 6: revise like a director, not a gambler the first cut came back good but not right instead of re-rolling the whole 30 seconds i regenerated only the scenes that needed changes as short clips from their own start frames, then cut them into the master with ffmpeg change one variable at a time, never re-roll what already works > step 7: finish like normal footage i assembled the final cut with ffmpeg from the best takes, added ambient music from a free library and done the rules that made it work: - the reference's structure is the asset, prompt archaeology beats prompt writing - iterate on images, commit on video, the start frame decides 80% of the shot - one action per timestamped beat, crowded beats get skipped or invented - lock identity explicitly or it drifts between cuts - fix failed shots by changing one variable, redo scenes, never the whole video - the last 10% is boring editing: trim, splice, music, encode (save this workflow)"
+    },
+    {
+      "id": "x-public-2115268962296770929",
+      "title": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正",
+      "description": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手",
+      "prompt": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手复制了一条 36.5 万点赞的抖音爆款——一条哲学知识科普视频，丢给 codex说了句：帮我复刻这个视频 然后它自己分析原片风格和节奏，自己写脚本出分镜，自己挑模型生成画面、配音、配乐，自己写代码剪辑加转场加字幕 最后直接在对话框里甩给我一条成片 全程 0 次打开剪映，0 次手动操作，根本不用Opus 5.5 ！！ 用的是 Renoise MCP，随便接到一个 Agent 上就能跑——Codex、grok，甚至豆包都行 它内置了 30+ 顶级模型，Seedance、Kling、MiniMax H3 这些全有，AI 自己选最合适的生成，你根本不用管 具体怎么玩： 1、把想复刻的爆款视频链接丢给 Agent，说一句\"复刻这个\"，它自动拆解原片的节奏、风格、分镜 2、Renoise MCP 调用最适配的模型生成画面、配音、配乐，全自动 3、生成完不用你剪——它直接写代码把素材拼成带转场、字幕、BGM 的成片，下载就能发 而且不只是复刻爆款 产品宣传片、电商广告、知识科普动画，一句话丢进去就是成片 以前做一条像样的短视频，拆片、找素材、剪辑、加字幕，一整天起步 现在一句话，睡一觉就能收成片 做短视频矩阵、批量起号、接单做广告的兄弟们，认真想想这个效率差 视频是生成效果，链接放评论区了！！👇",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/yaohui12138/status/2115268962296770929",
+      "sourceType": "x",
+      "authorName": "超级个体｜柿子",
+      "authorHandle": "@yaohui12138",
+      "createdAt": "2026-10-28T02:26:35.000Z",
+      "importedAt": "2026-11-04T20:29:54.196Z",
+      "tags": [
+        "Grok Imagine",
+        "Seedance",
+        "Kling",
+        "产品",
+        "视频"
+      ],
+      "modelHints": [
+        "Grok Imagine",
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 540,
+        "reposts": 70,
+        "replies": 72,
+        "quotes": 23,
+        "bookmarks": 580,
+        "views": 95793,
+        "score": 3433
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手复制了一条 36.5 万点赞的抖音爆款——一条哲学知识科普视频，丢给 codex说了句：帮我复刻这个视频 然后它自己分析原片风格和节奏，自己写脚本出分镜，自己挑模型生成画面、配音、配乐，自己写代码剪辑加转场加字幕 最后直接在对话框里甩给我一条成片 全程 0 次打开剪映，0 次手动操作，根本不用Opus 5.5 ！！ 用的是 Renoise MCP，随便接到一个 Agent 上就能跑——Codex、grok，甚至豆包都行 它内置了 30+ 顶级模型，Seedance、Kling、MiniMax H3 这些全有，AI 自己选最合适的生成，你根本不用管 具体怎么玩： 1、把想复刻的爆款视频链接丢给 Agent，说一句\"复刻这个\"，它自动拆解原片的节奏、风格、分镜 2、Renoise MCP 调用最适配的模型生成画面、配音、配乐，全自动 3、生成完不用你剪——它直接写代码把素材拼成带转场、字幕、BGM 的成片，下载就能发 而且不只是复刻爆款 产品宣传片、电商广告、知识科普动画，一句话丢进去就是成片 以前做一条像样的短视频，拆片、找素材、剪辑、加字幕，一整天起步 现在一句话，睡一觉就能收成片 做短视频矩阵、批量起号、接单做广告的兄弟们，认真想想这个效率差 视频是生成效果，链接放评论区了！！👇"
     },
     {
       "id": "x-public-2100171153713266688",
@@ -3597,53 +3644,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Apa bedanya AI video generation sama programmatic video? AI video generation itu bikin video dari prompt + reference. Contohnya Seedance, Kling, Omni. Yang keluar klip. Programmatic video beda. Kita minta AI Agent bikin videonya pake code. Sama kayak dia bikin website atau app, cuma yang keluar video. Dan secara ga langsung, si agent ini juga jadi editornya. Kita tinggal terima jadi. Contohnya video di post ini adalah programmatic. Walaupun gue bikinnya pake 1 prompt simpel, yang dia kerjain lumayan kompleks. Isinya: > 135 sound effect, masing-masing dipasang pas di kata yang diucapin > 647 layer dan 10.228 keyframe animasi > 30 potongan footage, masing-masing punya gerak kamera sendiri > 16 punch-in kamera dan 7 whip transition > 21 ikon yang digambar pake code (kartu BPJS, ambulans, kuitansi RS, kalender) > 16 diagram alur > 103 caption yang sinkron ke 354 kata voice over Durasi video 2 menit 34 detik, render-nya cuma 32 detik di laptop Nah, secara cost juga jauh lebih murah. Bikin video 2 menit 30 detik pake Seedance 2.5 1080p di Higgsfield (Max plan) butuh 1.800 kredit. Itu sekitar Rp1,3 juta (dan itu kalau sekali generate langsung jadi, which is ga mungkin wkwk) Pake cara ini cuma habis sekitar Rp12 ribu: footage Rp5.400, voice over Rp7 ribu, editing sama render Rp0 karena jalan di laptop. Use case-nya beda ya. Programmatic ga bisa bikin film cinematic atau dracin. Lebih cocok untuk video edukasi/tutorial/product launch"
-    },
-    {
-      "id": "x-public-2115268962296770929",
-      "title": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正",
-      "description": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手",
-      "prompt": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手复制了一条 36.5 万点赞的抖音爆款——一条哲学知识科普视频，丢给 codex说了句：帮我复刻这个视频 然后它自己分析原片风格和节奏，自己写脚本出分镜，自己挑模型生成画面、配音、配乐，自己写代码剪辑加转场加字幕 最后直接在对话框里甩给我一条成片 全程 0 次打开剪映，0 次手动操作，根本不用Opus 5.5 ！！ 用的是 Renoise MCP，随便接到一个 Agent 上就能跑——Codex、grok，甚至豆包都行 它内置了 30+ 顶级模型，Seedance、Kling、MiniMax H3 这些全有，AI 自己选最合适的生成，你根本不用管 具体怎么玩： 1、把想复刻的爆款视频链接丢给 Agent，说一句\"复刻这个\"，它自动拆解原片的节奏、风格、分镜 2、Renoise MCP 调用最适配的模型生成画面、配音、配乐，全自动 3、生成完不用你剪——它直接写代码把素材拼成带转场、字幕、BGM 的成片，下载就能发 而且不只是复刻爆款 产品宣传片、电商广告、知识科普动画，一句话丢进去就是成片 以前做一条像样的短视频，拆片、找素材、剪辑、加字幕，一整天起步 现在一句话，睡一觉就能收成片 做短视频矩阵、批量起号、接单做广告的兄弟们，认真想想这个效率差 视频是生成效果，链接放评论区了！！👇",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/yaohui12138/status/2115268962296770929",
-      "sourceType": "x",
-      "authorName": "超级个体｜柿子",
-      "authorHandle": "@yaohui12138",
-      "createdAt": "2026-10-28T02:26:35.000Z",
-      "importedAt": "2026-10-31T07:23:34.141Z",
-      "tags": [
-        "Grok Imagine",
-        "Seedance",
-        "Kling",
-        "产品",
-        "视频"
-      ],
-      "modelHints": [
-        "Grok Imagine",
-        "Seedance",
-        "Kling",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "zh",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 486,
-        "reposts": 66,
-        "replies": 67,
-        "quotes": 22,
-        "bookmarks": 531,
-        "views": 85215,
-        "score": 3132
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "我宣布，这就是 2026 年做短视频起号最快的方式！！ 一行命令直接复刻36.5w赞的抖音vibe科普视频！！ 说真的，今年所有人都在吹 Opus 5.5 做视频有多炸裂，但你们冷静想想，真正能稳定用上的有几个人，反正我周围99%的人都用不上claude… Anthropic 的封控一轮比一轮狠，限额、排队、封号，三天两头出状况，普通人想拿 Opus 5.5 当生产力工具稳定出片，基本不现实 但我刚干了一件事，直接把自己整沉默了 我随手复制了一条 36.5 万点赞的抖音爆款——一条哲学知识科普视频，丢给 codex说了句：帮我复刻这个视频 然后它自己分析原片风格和节奏，自己写脚本出分镜，自己挑模型生成画面、配音、配乐，自己写代码剪辑加转场加字幕 最后直接在对话框里甩给我一条成片 全程 0 次打开剪映，0 次手动操作，根本不用Opus 5.5 ！！ 用的是 Renoise MCP，随便接到一个 Agent 上就能跑——Codex、grok，甚至豆包都行 它内置了 30+ 顶级模型，Seedance、Kling、MiniMax H3 这些全有，AI 自己选最合适的生成，你根本不用管 具体怎么玩： 1、把想复刻的爆款视频链接丢给 Agent，说一句\"复刻这个\"，它自动拆解原片的节奏、风格、分镜 2、Renoise MCP 调用最适配的模型生成画面、配音、配乐，全自动 3、生成完不用你剪——它直接写代码把素材拼成带转场、字幕、BGM 的成片，下载就能发 而且不只是复刻爆款 产品宣传片、电商广告、知识科普动画，一句话丢进去就是成片 以前做一条像样的短视频，拆片、找素材、剪辑、加字幕，一整天起步 现在一句话，睡一觉就能收成片 做短视频矩阵、批量起号、接单做广告的兄弟们，认真想想这个效率差 视频是生成效果，链接放评论区了！！👇"
     },
     {
       "id": "x-public-2103533820263944679",
@@ -12205,6 +12205,49 @@
       "rawText": "What if you could assemble a supercar with your mind? 👀 Made with Seedance 2.5 using @atlas_cloud_ai #AtlasCloud Prompt: Create a 15-second ultra-cinematic action video in strict first-person POV. Bright sunny day, cloudless saturated blue sky, abandoned concrete runway. Two identical male hands wearing black tactical gloves remain visible and consistent throughout. Photorealistic physics, realistic inertia, metallic collisions, natural shadows and reflections. One identical black Lamborghini Aventador remains visually consistent throughout the entire sequence. 0.0–1.8s- The Fall The POV camera suddenly whips upward toward the sky. A completely disassembled black Lamborghini Aventador falls directly toward the viewer. Wheels, tires, rims, engine, suspension, doors, hood, bumpers, carbon-fiber panels, chassis and mechanical components tumble independently through the air. Parts rapidly grow larger as they approach. Intense speed, realistic depth and dangerous proximity. 1.8–3.0s- Last-Second Defense The man instinctively raises both black-gloved hands and crosses them in front of his face. Huge wheels and metallic components rush extremely close to the lens. Strong handheld camera shake, realistic motion blur and rapidly changing depth create extreme tension. 3.0–3.8s- Absolute Freeze At the last possible instant, he violently thrusts both hands forward. Every falling component suddenly freezes in mid-air only a few meters away. Extreme speed instantly becomes complete silence and stillness. Hundreds of parts remain suspended around the viewer at different depths. The camera slowly lowers from the sky toward the floating components. 3.8–5.5s- Controlled Organization He spreads both hands apart and rotates his wrists. The suspended components respond precisely to his movements. Wheels glide sideways, the chassis slowly descends, the engine moves toward the center, and smaller mechanical parts arrange themselves around their intended positions. Each component rotates naturally and aligns with perfect mechanical precision. 5.5–7.5s-Assembly Begins He suddenly thrusts both hands forward. The chassis rapidly locks together. Suspension, drivetrain, engine, transmission and structural components fly into their exact positions. The POV camera pushes forward through the assembly. Parts fly past the lens from multiple directions and connect with realistic metallic impacts and mechanical movement. 7.5–9.8s- Explosive Construction The assembly accelerates dramatically. Doors, hood, bumpers, headlights, mirrors and black carbon body panels fly toward the central frame. His gloved hands perform fast directional gestures, controlling every movement. The camera makes a dynamic orbit-like POV movement around the forming vehicle while never leaving first-person perspective. 9.8–11.0s- Final Transformation Four wheels rapidly fly toward the hubs and lock into place. Final carbon-fiber panels snap onto the body one after another. The Lamborghini instantly becomes a pristine, fully assembled black Aventador. Dust and tiny particles naturally fall onto the runway. 11.0–12.5s- Ignition A dramatic pause. The right black-gloved hand raises a Lamborghini-style remote key close to the camera. The thumb presses the start button. The headlights immediately illuminate. The engine roars to life, exhaust vibrates and the entire vehicle subtly shakes from the ignition. 12.5–15.0s- Full-Speed Launch The Aventador launches violently forward directly toward the POV camera. The rear tires briefly spin, throwing dust across the runway. The camera remains extremely low and centered. The car rapidly fills the entire frame as acceleration increases. Strong cinematic motion blur, realistic tire movement and aggressive speed ramping build intensity. End with an extreme close approach of the black front end and bright headlights."
     },
     {
+      "id": "x-public-2116254751570477122",
+      "title": "Kling 4.0 vs Seedance 2.5. Same prompt, one take each, no retries. Both landed the kickflip. See",
+      "description": "Kling 4.0 vs Seedance 2.5. Same prompt, one take each, no retries. Both landed the kickflip. Seedance kept the camera at knee height like we asked; Kling went wide and made the bigger splash. Sound on: you hear Kling fir",
+      "prompt": "Kling 4.0 vs Seedance 2.5. Same prompt, one take each, no retries. Both landed the kickflip. Seedance kept the camera at knee height like we asked; Kling went wide and made the bigger splash. Sound on: you hear Kling first, then Seedance.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/budgetpixel/status/2116254751570477122",
+      "sourceType": "x",
+      "authorName": "BudgetPixel AI",
+      "authorHandle": "@budgetpixel",
+      "createdAt": "2026-10-30T19:43:45.000Z",
+      "importedAt": "2026-11-04T20:29:54.196Z",
+      "tags": [
+        "Seedance",
+        "Kling"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 253,
+        "reposts": 48,
+        "replies": 46,
+        "quotes": 9,
+        "bookmarks": 39,
+        "views": 45874,
+        "score": 980
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Kling 4.0 vs Seedance 2.5. Same prompt, one take each, no retries. Both landed the kickflip. Seedance kept the camera at knee height like we asked; Kling went wide and made the bigger splash. Sound on: you hear Kling first, then Seedance."
+    },
+    {
       "id": "x-public-2087866473142272229",
       "title": "if you still think AI video looks like AI, you haven’t seen what’s possible now. Seedance 2.5 on",
       "description": "if you still think AI video looks like AI, you haven’t seen what’s possible now. Seedance 2.5 on Arcads full prompt: CAMERA Mini-DV tape camcorder handheld aesthetic, vertical framing. A gorgeous athletic Scandinavian ru",
@@ -13257,6 +13300,54 @@
       "rawText": "One of the hardest parts of having a good creative idea is explaining what it looks like. That’s where the workflow starts getting interesting. GPT Image 2.5 is coming to CapCut PC through Design Studio and AI Image. Take the abstract idea and turn it into a visual storyboard. Now the idea is no longer just a sentence. You can actually look at it, change it, and build from it. Then bring it into CapCut PC’s Video Studio and use Seedance 2.5 to create the video. After that, refine the result with CapCut’s AI editing tools. The workflow is basically: Imagine → Visualize → Generate → Refine. Full link in the first comment. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
     },
     {
+      "id": "x-public-2115736986170655086",
+      "title": "Here are custom AI video and image generation prompts tailored for this clip, along with a match",
+      "description": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-def",
+      "prompt": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/JohnSmith5912/status/2115736986170655086",
+      "sourceType": "x",
+      "authorName": "John Smith Ai",
+      "authorHandle": "@JohnSmith5912",
+      "createdAt": "2026-10-29T09:26:20.000Z",
+      "importedAt": "2026-11-04T20:29:54.195Z",
+      "tags": [
+        "Midjourney",
+        "Veo",
+        "Runway",
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Midjourney",
+        "Veo",
+        "Runway",
+        "Seedance"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 161,
+        "reposts": 15,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 166,
+        "views": 15155,
+        "score": 922
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >"
+    },
+    {
       "id": "x-public-2078746929874252221",
       "title": "SHE TOOK ONE SELFIE. AI TURNED IT INTO AN INFINITE PHOTOSHOOT. The trick isn't the image generat",
       "description": "SHE TOOK ONE SELFIE. AI TURNED IT INTO AN INFINITE PHOTOSHOOT. The trick isn't the image generator. It's one sentence almost nobody uses: \"Break this down into JSON.\" Here's the workflow. You give AI a single photo, and ",
@@ -13695,54 +13786,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Look at the difference the tool AND the prompt make. Bad generator + lazy prompt: stiff movement, dead eyes, that obvious \"AI look\" everyone scrolls past. Seedance + a detailed, structured prompt: natural movement, real lighting, real pacing — looks like it came off an actual production shoot. Same product photo. Completely different result. It's not one or the other. You need the right tool AND the right prompt to get agency-level output. Ready to see the exact setup? Check the comments 👇"
-    },
-    {
-      "id": "x-public-2115736986170655086",
-      "title": "Here are custom AI video and image generation prompts tailored for this clip, along with a match",
-      "description": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-def",
-      "prompt": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/JohnSmith5912/status/2115736986170655086",
-      "sourceType": "x",
-      "authorName": "John Smith Ai",
-      "authorHandle": "@JohnSmith5912",
-      "createdAt": "2026-10-29T09:26:20.000Z",
-      "importedAt": "2026-11-03T20:14:27.228Z",
-      "tags": [
-        "Midjourney",
-        "Veo",
-        "Runway",
-        "人像",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Midjourney",
-        "Veo",
-        "Runway",
-        "Seedance"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 159,
-        "reposts": 15,
-        "replies": 12,
-        "quotes": 0,
-        "bookmarks": 159,
-        "views": 14330,
-        "score": 896
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Here are custom AI video and image generation prompts tailored for this clip, along with a matching social media caption: 1. AI Video Generation Prompt (e.g., Sora, Runway Gen-2, Pika, Veo) > Prompt: A vertical, high-definition cinematic close-up video of a young woman with long blonde hair, delicate freckles, and soft green eyes. She starts with her eyes closed, then opens them slowly, looking directly at the camera with a soft expression and playfully licking her lips. Bright outdoor natural lighting with a soft green foliage background, hyper-realistic skin texture and smooth motion, 4k resolution. > 2. Midjourney / Stable Diffusion Image Prompt > Prompt: A photorealistic, intimate close-up portrait of a young woman with long blonde hair, soft freckles, and expressive green eyes. She is captured outdoors in natural daylight with a gentle expression, surrounded by soft-focus green leaves. High skin detail, hyper-realistic, shallow depth of field, 8k resolution, shot on 85mm lens --ar 9:16 --v 6.0 > 3. Social Media Caption & Hashtags > Caption: Soaking up the fresh air and outdoor vibes! 🌿✨ There’s nothing quite like golden daylight and a peaceful moment outside. What’s your favorite way to unwind? Let me know below! 👇 > Hashtags: #OutdoorPortrait #NaturalGlow #PortraitPhotography #SoftAesthetic #DailyVibes #CandidMoments #GoldenHour >"
     },
     {
       "id": "x-public-2097007833250480245",
@@ -25490,6 +25533,210 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2117775627839553765",
+      "title": "个人资料 / 头像 - 年轻女性柔和特写肖像",
+      "description": "生成一张写实的高调特写肖像，画面中是一位面带微笑、深色头发且妆容自然的年轻女性，背景为白色。",
+      "prompt": "一张照片级写实的年轻东亚女性特写肖像，肌肤白皙细腻，深棕色长直发自然垂落于肩头。她微微侧目低垂，嘴角挂着温柔浅笑，传递出宁静而温暖的气息。画面采用明亮、柔和的高调布光，营造出干净通透的氛围与轻柔的阴影。妆容清透水润，唇部与双颊点缀着淡淡的粉色。背景为纯白或浅灰色的虚化平面，进一步凸显人物面部特征。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793778238735_102xyt_HWPY329a8AAdKeX.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/HongyeMain/status/2117775627839553765#reversed-0",
+      "sourceType": "community",
+      "authorName": "Kevin Tech Labs",
+      "authorHandle": "@HongyeMain",
+      "createdAt": "2026-11-04T12:00:00.000Z",
+      "importedAt": "2026-11-04T20:29:50.837Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37299",
+      "rawText": "一张照片级写实的年轻东亚女性特写肖像，肌肤白皙细腻，深棕色长直发自然垂落于肩头。她微微侧目低垂，嘴角挂着温柔浅笑，传递出宁静而温暖的气息。画面采用明亮、柔和的高调布光，营造出干净通透的氛围与轻柔的阴影。妆容清透水润，唇部与双颊点缀着淡淡的粉色。背景为纯白或浅灰色的虚化平面，进一步凸显人物面部特征。"
+    },
+    {
+      "id": "community-2117849881054437427",
+      "title": "社交媒体帖子 - 复古绘本插画风格转换",
+      "description": "一个用于将上传的照片转换为迷人的复古儿童绘本插画的提示词，采用水粉和水彩风格。",
+      "prompt": "将上传的照片转化为精美的手绘故事书插画，呈现迷人的复古童书美学风格。\n\n艺术风格：传统水粉与水彩画质感，可见纸张纹理，笔触柔和，带有细腻的画布肌理，色彩温暖质朴，线条为精致的手绘轮廓，绘画细节丰富饱满。\n\n人物形象：保留原图人物的身份特征、五官、发型、服装、姿态及标志性细节，并将其巧妙转化为充满童趣的插画形式。眼神灵动传神，面部轮廓柔和，形态自然流畅。\n\n场景环境：将原始背景重塑为精美的故事书场景，增添丰富的环境细节、自然的有机纹理与梦幻般的氛围。\n\n色彩搭配：温暖的秋日橙、金黄色、焦红色、大地棕、柔和米色以及淡雅天蓝。色彩浓郁饱满且和谐统一。\n\n光影与氛围：柔和的自然光，温暖怀旧的气息，充满奇思妙想的叙事感，营造出温馨而梦幻的视觉魅力。\n\n最终效果：一幅细节丰富、满构图的传统儿童故事书插画，宛如手绘的复古绘本。切勿出现照片级写实、3D 渲染、数字光泽特效或生硬的 AI 生成痕迹。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793778237654_oetja5_HWQdOpkbkAEWUzp.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2117849881054437427",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-11-04T12:00:00.000Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37298",
+      "rawText": "将上传的照片转化为精美的手绘故事书插画，呈现迷人的复古童书美学风格。\n\n艺术风格：传统水粉与水彩画质感，可见纸张纹理，笔触柔和，带有细腻的画布肌理，色彩温暖质朴，线条为精致的手绘轮廓，绘画细节丰富饱满。\n\n人物形象：保留原图人物的身份特征、五官、发型、服装、姿态及标志性细节，并将其巧妙转化为充满童趣的插画形式。眼神灵动传神，面部轮廓柔和，形态自然流畅。\n\n场景环境：将原始背景重塑为精美的故事书场景，增添丰富的环境细节、自然的有机纹理与梦幻般的氛围。\n\n色彩搭配：温暖的秋日橙、金黄色、焦红色、大地棕、柔和米色以及淡雅天蓝。色彩浓郁饱满且和谐统一。\n\n光影与氛围：柔和的自然光，温暖怀旧的气息，充满奇思妙想的叙事感，营造出温馨而梦幻的视觉魅力。\n\n最终效果：一幅细节丰富、满构图的传统儿童故事书插画，宛如手绘的复古绘本。切勿出现照片级写实、3D 渲染、数字光泽特效或生硬的 AI 生成痕迹。"
+    },
+    {
+      "id": "community-2117818110459982321",
+      "title": "社交媒体帖子 - Sam Altman 长颈鹿脖子梗图",
+      "description": "一个幽默的提示词，用于使用 gpt-image-2 生成一张 Sam Altman 脖子像长颈鹿一样夸张地长的图片。",
+      "prompt": "{argument name=\"subject\" default=\"RAM altman 的脖子太高了，像长颈鹿一样\"}",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793778232935_l8khmd_HWP85oTaQAAq0Z_.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/iamthoufic/status/2117818110459982321",
+      "sourceType": "community",
+      "authorName": "thoufic",
+      "authorHandle": "@iamthoufic",
+      "createdAt": "2026-11-04T12:00:00.000Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37294",
+      "rawText": "{argument name=\"subject\" default=\"RAM altman 的脖子太高了，像长颈鹿一样\"}"
+    },
+    {
+      "id": "community-2117815347189330064",
+      "title": "社交媒体帖子 - GPT Image 2 秋季浪漫约会穿搭提示词",
+      "description": "使用 GPT Image 2 生成优雅秋季时尚插画的详细提示词，包含驼色大衣和格纹裙元素。",
+      "prompt": "一件精致的驼色羊毛定制大衣，廓形松弛有度、挺括有型，肩线自然流畅，平驳领剪裁利落规整，搭配经典的双排扣细节，直筒袖比例恰到好处，下摆平整对称。\n\n大衣呈敞开式穿着，内搭一件精致的白色衬衫，袖口点缀着优雅的蕾丝，下身配以一条米棕格纹百褶中长裙。\n\n大衣沿身体线条自然垂落，前片轮廓清晰分明，面料厚薄均匀一致，褶皱细腻而自然。\n\n脚踩棕色及膝皮靴，手拎一只小巧的定型手提包。\n\n浪漫复古的秋日约会穿搭，优雅柔美的女性风格，层次搭配精致考究，整体比例和谐匀称，尽显迷人季节风情。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793778234293_6rrvug_HWKuKw9bAAAtUa3.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ArtistaNozomu/status/2117815347189330064",
+      "sourceType": "community",
+      "authorName": "のぞむ＊AIイラスト",
+      "authorHandle": "@ArtistaNozomu",
+      "createdAt": "2026-11-04T12:00:00.000Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
+      "tags": [
+        "GPT Image 2"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37295",
+      "rawText": "一件精致的驼色羊毛定制大衣，廓形松弛有度、挺括有型，肩线自然流畅，平驳领剪裁利落规整，搭配经典的双排扣细节，直筒袖比例恰到好处，下摆平整对称。\n\n大衣呈敞开式穿着，内搭一件精致的白色衬衫，袖口点缀着优雅的蕾丝，下身配以一条米棕格纹百褶中长裙。\n\n大衣沿身体线条自然垂落，前片轮廓清晰分明，面料厚薄均匀一致，褶皱细腻而自然。\n\n脚踩棕色及膝皮靴，手拎一只小巧的定型手提包。\n\n浪漫复古的秋日约会穿搭，优雅柔美的女性风格，层次搭配精致考究，整体比例和谐匀称，尽显迷人季节风情。"
+    },
+    {
+      "id": "community-2117806055464018409",
+      "title": "社交媒体帖子 - 带有微缩自我的电影感奇幻肖像",
+      "description": "一个高度详细的提示词，用于生成超写实的电影感奇幻肖像，画面中一位女性手持自己的微缩版本，周围环绕着魔法特效。",
+      "prompt": "风格与构图：采用 9:16 竖版构图，创作一幅超写实、照片级真实感的电影感奇幻人像。一位美丽的年轻女子优雅地坐在光线柔和的现代室内空间中，身下是一个极简风格的白色圆柱形凳子。她身穿浅蓝色纽扣衬衫，袖口随意卷起，搭配修身蓝色牛仔裤和干净的白色运动鞋。一头浓密的深棕色长波浪卷发自然垂落在肩头。妆容清透自然，皮肤纹理逼真，五官精致，神情温柔而梦幻。\n\n主体人物——姿态与表情：女子双腿优雅交叠而坐，上半身微微向右转动。她满怀惊奇与怜爱地抬头凝视着悬浮在双手上方的迷你版自己。双臂向前伸出，掌心摊开并微微合拢，仿佛正用魔法托举着这个小小的身影。手指姿态自然，符合人体解剖结构，被金色的光芒细腻照亮。\n\n迷你分身——最高优先级：一个完全可辨识的该女子微缩复制体，悬浮在她张开的双掌上方约 20–30 厘米处。这个小人的五官、发型、肤色、蓝色纽扣衬衫、修身牛仔裤以及白色运动鞋，均与坐着的女子一模一样。以全身视角呈现这位迷你女子，她失重般悬停在空中，双臂微微向外伸展，双脚在脚踝处轻轻交叉，头部优雅地向上扬起。她的神情宁静而喜悦。迷你分身必须呈现出立体感，比例真实，并与整个场景在物理空间上完美融合，不可出现任何可见的底座、细线或支撑物。\n\n魔法特效：在悬浮的迷你分身周围点缀细腻的金色星光、发光粒子、微小的璀璨星辰，以及环绕她身体盘旋的优雅暖金色光圈。加入细微的闪光轨迹和柔和的镜头光晕，最明亮的金色光芒集中在迷你分身的轮廓与双脚周围。光线柔和地照亮了女子的双手、面部、头发和衣物。魔法特效需保持优雅、空灵且逼真的质感，避免卡通化效果。\n\n背景与光影：温暖的灰褐色室内墙面，强烈的自然阳光从画面左侧画外的一扇大窗倾泻而入。清晰的几何窗框阴影斜向投射在墙面与浅色地板上，勾勒出极具格调的建筑光影图案。柔和的午后阳光、女子发丝边缘温暖的轮廓光、轻柔的阴影、自然的肌肤高光，以及奶油般的中性色调。微妙的浅景深营造出电影般的空间纵深感，同时确保两个主体都清晰可见。\n\n相机与画质：全身环境人像，竖版构图，略微仰拍视角，50mm 人像镜头，f/2.8 光圈，透视真实，构图均衡，专业时尚摄影水准，高动态范围，毛孔清晰可见，发丝丝丝分明。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793778235807_i6ief2_HWP1XuxbQAAwVV8.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AizaAi12/status/2117806055464018409",
+      "sourceType": "community",
+      "authorName": "Aiza",
+      "authorHandle": "@AizaAi12",
+      "createdAt": "2026-11-04T12:00:00.000Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37296",
+      "rawText": "风格与构图：采用 9:16 竖版构图，创作一幅超写实、照片级真实感的电影感奇幻人像。一位美丽的年轻女子优雅地坐在光线柔和的现代室内空间中，身下是一个极简风格的白色圆柱形凳子。她身穿浅蓝色纽扣衬衫，袖口随意卷起，搭配修身蓝色牛仔裤和干净的白色运动鞋。一头浓密的深棕色长波浪卷发自然垂落在肩头。妆容清透自然，皮肤纹理逼真，五官精致，神情温柔而梦幻。\n\n主体人物——姿态与表情：女子双腿优雅交叠而坐，上半身微微向右转动。她满怀惊奇与怜爱地抬头凝视着悬浮在双手上方的迷你版自己。双臂向前伸出，掌心摊开并微微合拢，仿佛正用魔法托举着这个小小的身影。手指姿态自然，符合人体解剖结构，被金色的光芒细腻照亮。\n\n迷你分身——最高优先级：一个完全可辨识的该女子微缩复制体，悬浮在她张开的双掌上方约 20–30 厘米处。这个小人的五官、发型、肤色、蓝色纽扣衬衫、修身牛仔裤以及白色运动鞋，均与坐着的女子一模一样。以全身视角呈现这位迷你女子，她失重般悬停在空中，双臂微微向外伸展，双脚在脚踝处轻轻交叉，头部优雅地向上扬起。她的神情宁静而喜悦。迷你分身必须呈现出立体感，比例真实，并与整个场景在物理空间上完美融合，不可出现任何可见的底座、细线或支撑物。\n\n魔法特效：在悬浮的迷你分身周围点缀细腻的金色星光、发光粒子、微小的璀璨星辰，以及环绕她身体盘旋的优雅暖金色光圈。加入细微的闪光轨迹和柔和的镜头光晕，最明亮的金色光芒集中在迷你分身的轮廓与双脚周围。光线柔和地照亮了女子的双手、面部、头发和衣物。魔法特效需保持优雅、空灵且逼真的质感，避免卡通化效果。\n\n背景与光影：温暖的灰褐色室内墙面，强烈的自然阳光从画面左侧画外的一扇大窗倾泻而入。清晰的几何窗框阴影斜向投射在墙面与浅色地板上，勾勒出极具格调的建筑光影图案。柔和的午后阳光、女子发丝边缘温暖的轮廓光、轻柔的阴影、自然的肌肤高光，以及奶油般的中性色调。微妙的浅景深营造出电影般的空间纵深感，同时确保两个主体都清晰可见。\n\n相机与画质：全身环境人像，竖版构图，略微仰拍视角，50mm 人像镜头，f/2.8 光圈，透视真实，构图均衡，专业时尚摄影水准，高动态范围，毛孔清晰可见，发丝丝丝分明。"
+    },
+    {
       "id": "community-2117475829840257141",
       "title": "个人资料 / 头像 - 特定着装下的写实傍晚散步人像",
       "description": "一个用于生成写实人像的提示词，以上传的照片为基底。在严格保留面部特征的同时，应用特定的服装（黑色连体裤、米色风衣外套）和场景（傍晚散步）。",
@@ -25581,7 +25828,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.837Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25624,7 +25871,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.837Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25868,7 +26115,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像",
         "摄影"
@@ -25910,7 +26157,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25991,7 +26238,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像"
       ],
@@ -26032,7 +26279,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26071,7 +26318,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像",
         "摄影"
@@ -26113,7 +26360,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26273,7 +26520,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26316,7 +26563,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像",
         "摄影"
@@ -26481,7 +26728,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26524,7 +26771,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26567,7 +26814,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26610,7 +26857,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像"
       ],
@@ -26651,7 +26898,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "人像"
       ],
@@ -26692,7 +26939,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26735,7 +26982,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26815,7 +27062,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26854,7 +27101,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.807Z",
+      "importedAt": "2026-11-04T20:29:50.838Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -86569,7 +86816,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.810Z",
+      "importedAt": "2026-11-04T20:29:50.842Z",
       "tags": [
         "产品",
         "平面设计",
@@ -86612,7 +86859,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.810Z",
+      "importedAt": "2026-11-04T20:29:50.842Z",
       "tags": [
         "平面设计"
       ],
@@ -86653,7 +86900,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-04T07:51:45.810Z",
+      "importedAt": "2026-11-04T20:29:50.842Z",
       "tags": [
         "平面设计"
       ],
