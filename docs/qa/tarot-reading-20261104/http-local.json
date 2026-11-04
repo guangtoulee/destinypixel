@@ -1,0 +1,208 @@
+{
+  "base": "http://127.0.0.1:3056",
+  "editions": [
+    {
+      "slug": "how-to-read-celtic-cross",
+      "locale": "en",
+      "sections": 10,
+      "completeParagraphs": 35,
+      "completeTables": 4,
+      "completeFigures": 1,
+      "fullText": true,
+      "canonical": true,
+      "authoredAlternates": true,
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-11-04"
+    },
+    {
+      "slug": "how-to-read-celtic-cross",
+      "locale": "zh",
+      "sections": 10,
+      "completeParagraphs": 35,
+      "completeTables": 4,
+      "completeFigures": 1,
+      "fullText": true,
+      "canonical": true,
+      "authoredAlternates": true,
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-11-04"
+    },
+    {
+      "slug": "how-to-keep-tarot-journal",
+      "locale": "en",
+      "sections": 9,
+      "completeParagraphs": 21,
+      "completeTables": 1,
+      "completeFigures": 0,
+      "fullText": true,
+      "canonical": true,
+      "authoredAlternates": true,
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23"
+    },
+    {
+      "slug": "how-to-keep-tarot-journal",
+      "locale": "zh",
+      "sections": 9,
+      "completeParagraphs": 21,
+      "completeTables": 1,
+      "completeFigures": 0,
+      "fullText": true,
+      "canonical": true,
+      "authoredAlternates": true,
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23"
+    }
+  ],
+  "redirects": [
+    {
+      "slug": "how-to-read-celtic-cross",
+      "locale": "ru",
+      "status": 308,
+      "target": "/journal/how-to-read-celtic-cross"
+    },
+    {
+      "slug": "how-to-read-celtic-cross",
+      "locale": "zh-TW",
+      "status": 308,
+      "target": "/journal/how-to-read-celtic-cross"
+    },
+    {
+      "slug": "how-to-keep-tarot-journal",
+      "locale": "ru",
+      "status": 308,
+      "target": "/journal/how-to-keep-tarot-journal"
+    },
+    {
+      "slug": "how-to-keep-tarot-journal",
+      "locale": "zh-TW",
+      "status": 308,
+      "target": "/journal/how-to-keep-tarot-journal"
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "href": "/tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-pentacles",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-three-card-tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/tarot-eight-of-pentacles?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-keep-tarot-journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-celtic-cross",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "href": "/journal/how-to-read-celtic-cross?locale=zh",
+      "status": 200,
+      "fragment": null
+    }
+  ],
+  "figures": [
+    {
+      "src": "/journal/tarot-methods/celtic-reading-groups-en.svg",
+      "status": 200
+    },
+    {
+      "src": "/journal/tarot-methods/celtic-reading-groups-zh.svg",
+      "status": 200
+    }
+  ],
+  "discovery": [
+    {
+      "locale": "en",
+      "celtic": true,
+      "adjacentJournal": true
+    },
+    {
+      "locale": "zh",
+      "celtic": true,
+      "adjacentJournal": true
+    }
+  ],
+  "deploymentIds": []
+}

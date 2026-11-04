@@ -1,0 +1,17 @@
+
+> destinypixel@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 56ms
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 17.4s
+  Running TypeScript ...
+lib/celtic-significator.test.ts(27,77): error TS2352: Conversion of type '{ [k: string]: { "how-to-read-celtic-cross": { sections: JournalSection[]; title: string; subtitle?: string | undefined; answer?: string | undefined; description: string; topic: string; introduction: string; openingParagraphs?: string[] | undefined; takeaway?: string | undefined; action: { ...; }; }; }; }' to type 'Record<"en" | "zh", Record<string, JournalTranslation>>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ [k: string]: { "how-to-read-celtic-cross": { sections: JournalSection[]; title: string; subtitle?: string | undefined; answer?: string | undefined; description: string; topic: string; introduction: string; openingParagraphs?: string[] | undefined; takeaway?: string | undefined; action: { ...; }; }; }; }' is missing the following properties from type 'Record<"en" | "zh", Record<string, JournalTranslation>>': en, zh
+lib/tarot-suits.test.ts(229,13): error TS7022: 'target' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+lib/tarot-suits.test.ts(230,43): error TS7006: Parameter 'section' implicitly has an 'any' type.
+lib/tarot-suits.test.ts(232,127): error TS7006: Parameter 'section' implicitly has an 'any' type.
+Failed to type check.

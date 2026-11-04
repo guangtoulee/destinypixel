@@ -1,0 +1,23 @@
+# Give an optional clarifier a declared job
+
+This revises only the existing English and Simplified Chinese `how-to-read-celtic-cross` guide. One `clarifier-job` section follows `one-card-variation`. All nine old sections, the complete pottery-class example, original position table, significator comparison, image, sources, title, introduction, answer, action, URLs and links remain. The adjacent reading-journal guide is unchanged. Publication remains October23; only Celtic modification becomes November4. Russian and Traditional Chinese remain unsupported redirects, not newly authored translations.
+
+## Actual gap and source reading
+
+Main `3eff663caee2965c17139dc78f9e4b345eef1ff6`, recent publications, six open PRs and the existing method articles were checked before selection. Yesterday's Seven of Cups exercise, recent Eight of Swords, suit patterns, three-card task scope and Celtic significator work are retained. Today's Tower/Devil Chinese revisions and other parallel work are untouched. No old blocked article/PR operation is part of this change. No repository AGENTS.md or `.agents/skills` file was found.
+
+The original Celtic guide already distinguishes facts from cards and preserves a written reversal variation. It does not yet give an additional card a narrowly declared task or distinguish an unfinished interpretive connection from an unknown fact or an undefined position. The new three-row table and fictional rehearsal address that gap rather than merely adding another warning about repeated draws.
+
+Rachel Pollack, *78度的智慧 / Seventy-Eight Degrees of Wisdom*, 孙梅君 translation, 商周出版, December2010 first edition. The local422-page scan was read without modification or upload. Today's method study fully inspected **PDF347–349,357–358,384–390** / **printed349–351,359–360,386–392**,12 actual pages, with footers checked. The new published claim cites only **PDF348 / printed350, Chapter11, Outcome**. Prior reading ledgers are retained; no whole-book reading is claimed. A separate four-page Pentacles discovery did not supply a published claim.
+
+On PDF348 Pollack permits extra cards or further readings when a fixed spread remains ambiguous. Her usual personal extra-card limit is five, with exceptions; she warns that beginners often find random additions harder and should avoid that practice. The site's optional single-card cap is expressly its own paper-exercise convention. PDF357's specific follow-up case and PDF358's distinct open-ended Work Cycle are not reproduced or silently converted into a universal clarifier method. Chapter12 material supplied no universal reversal model and was not stretched into one.
+
+Fresh primary comparison: [Waite PartIII §7](https://sacred-texts.com/tarot/pkt/pkt0307.htm) describes a fresh ten-card operation using the ambiguous tenth card as significator; it is not a permanent eleventh position. [Eight of Pentacles](https://sacred-texts.com/tarot/pkt/pktpe08.htm) includes work/craftsmanship. No printed page is invented for the HTML texts. Lin's short teaching rehearsal, task wording and table are original applications, not either author's case or a scientifically validated information-gathering process. The only new written card is absent from the original ten; it neither replaces position10 nor establishes the friend's availability, permission or bookings.
+
+## Product boundary and preservation
+
+The actual Celtic preset has ten slots and rejects an eleventh. Free table supports custom layouts but changing modes confirms a reset, clears the existing layout and rebuilds the deck. The new text therefore uses a paper exercise and explicitly says that mode switching does not preserve the original ten. It does not describe an eleven-card preset, forced draw, hidden-person inference or AI recognition of a custom clarifier role.
+
+`previous-containers.json` retains the complete base containers, including the untouched journal. `revision.json` pins the base, previous/current published file hashes, snapshot hash and actual read/cited pages. Removing precisely this recorded section and reversing only the recorded Celtic date reconstructs the complete previous containers/module. Previous significator and suit-guide receipts remain immutable. The full manuscripts are readable exports of every section, table, figure, source, link and action from the current JSON.
+
+Actual checks, failures and untested limits are documented in `docs/qa/tarot-reading-20261104/`. Release evidence separately records the PR, exact merge/deployment mapping and full public body/tool-entry verification; a local build does not establish publication. No source scan, private path, environment file or account state belongs in the public change.

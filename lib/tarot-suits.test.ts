@@ -5,6 +5,7 @@ import test from "node:test";
 import sitemap from "@/app/sitemap";
 import celticPreviousContainers from "@/content/celtic-significator-20261101/previous-containers.json";
 import celticRevision from "@/content/celtic-significator-20261101/revision.json";
+import clarifierRevision from "@/content/celtic-clarifier-20261104/revision.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import sourceReview from "@/content/tarot-suit-patterns-20261031/source-review.json";
 import { celestialCopy } from "@/lib/celestial/copy";
@@ -210,17 +211,37 @@ test("the suit guide retains its immutable historical receipts while validating 
       assert.equal(digest(raw), expected, `${path}: previously published file changed`);
       continue;
     }
-    assert.match(currentHashes[path], /^[a-f0-9]{64}$/);
-    assert.equal(digest(raw), currentHashes[path], `${path}: current Celtic file differs from its independent revision receipt`);
+    // First strictly undo only the November 4 addition/date. Then keep the
+    // original November 1 -> October 31 projection and immutable receipts.
+    const clarifierBeforeHashes: Record<string, string> = clarifierRevision.previousPublishedFileHashes;
+    const clarifierCurrentHashes: Record<string, string> = clarifierRevision.currentPublishedFileHashes;
+    assert.equal(clarifierRevision.baseCommit, "3eff663caee2965c17139dc78f9e4b345eef1ff6");
+    assert.equal(clarifierRevision.articleSlug, celticRevision.articleSlug);
+    assert.equal(clarifierRevision.newSectionId, "clarifier-job");
+    assert.equal(clarifierBeforeHashes[path], currentHashes[path], `${path}: the later clarifier must begin at the original Celtic receipt`);
+    assert.equal(digest(raw), clarifierCurrentHashes[path], `${path}: current file differs from its separately recorded clarifier receipt`);
+    let beforeClarifier: string;
     if (path === "lib/journal-tarot-methods.ts") {
-      const moduleSource = raw.toString();
+      assert.equal((raw.toString().match(/2026-11-04/g) ?? []).length, 1);
+      beforeClarifier = raw.toString().replace("2026-11-04", "2026-11-01");
+    } else {
+      const live: Record<string, JournalTranslation> = JSON.parse(raw.toString());
+      const target: JournalTranslation = live[celticRevision.articleSlug];
+      assert.equal(target.sections.filter(section => section.id === "clarifier-job").length, 1);
+      assert.equal(target.sections.length, 10);
+      beforeClarifier = JSON.stringify({ ...live, [celticRevision.articleSlug]: { ...target, sections: target.sections.filter(section => section.id !== "clarifier-job") } }, null, 2) + "\n";
+    }
+    assert.match(currentHashes[path], /^[a-f0-9]{64}$/);
+    assert.equal(digest(beforeClarifier), currentHashes[path], `${path}: removing only the clarifier addition/date must reproduce the exact original Celtic revision`);
+    if (path === "lib/journal-tarot-methods.ts") {
+      const moduleSource = beforeClarifier;
       assert.equal((moduleSource.match(/2026-11-01/g) ?? []).length, 1);
       assert.equal(digest(moduleSource.replace("2026-11-01", "2026-10-27")), expected, "the method module differs beyond the authorized Celtic update date");
       continue;
     }
     const locale = path === "content/tarot-methods/en.json" ? "en" : "zh";
     const previous: Record<string, JournalTranslation> = celticPreviousContainers[locale];
-    const current: Record<string, JournalTranslation> = JSON.parse(raw.toString());
+    const current: Record<string, JournalTranslation> = JSON.parse(beforeClarifier);
     const target: JournalTranslation = current[celticRevision.articleSlug];
     const oldTarget: JournalTranslation = previous[celticRevision.articleSlug];
     assert.ok(target && oldTarget);

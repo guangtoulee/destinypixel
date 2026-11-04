@@ -5,6 +5,7 @@ import test from "node:test";
 import sitemap from "@/app/sitemap";
 import previousContainers from "@/content/celtic-significator-20261101/previous-containers.json";
 import revision from "@/content/celtic-significator-20261101/revision.json";
+import clarifierRevision from "@/content/celtic-clarifier-20261104/revision.json";
 import en from "@/content/tarot-methods/en.json";
 import zh from "@/content/tarot-methods/zh.json";
 import { celestialCopy } from "@/lib/celestial/copy";
@@ -20,7 +21,16 @@ const journalSlug = "how-to-keep-tarot-journal";
 const addedId = "significator-and-positions";
 const locales = ["en", "zh"] as const;
 type AuthoredLocale = (typeof locales)[number];
-const current: Record<AuthoredLocale, Record<string, JournalTranslation>> = { en, zh };
+const live: Record<AuthoredLocale, Record<string, JournalTranslation>> = { en, zh };
+// Remove only the separately receipted later addition when checking the
+// original significator rollout. Its original counts/hashes stay unchanged.
+const beforeClarifier = (container: Record<string, JournalTranslation>): Record<string, JournalTranslation> => ({
+  ...container,
+  [slug]: { ...container[slug], sections: container[slug].sections.filter(section => section.id !== "clarifier-job") },
+});
+const current: Record<AuthoredLocale, Record<string, JournalTranslation>> = {
+  en: beforeClarifier(live.en), zh: beforeClarifier(live.zh),
+};
 const previous: Record<AuthoredLocale, Record<string, JournalTranslation>> = previousContainers;
 const digest = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
 const withoutSections = (copy: JournalTranslation) => Object.fromEntries(Object.entries(copy).filter(([key]) => key !== "sections"));
@@ -43,13 +53,27 @@ test("the predecessor containers retain their independent base hashes and the me
   assert.equal(digest(readFileSync("content/celtic-significator-20261101/previous-containers.json")), revision.previousContainersSha256);
   for (const locale of locales) {
     assert.equal(digest(JSON.stringify(previous[locale], null, 2) + "\n"), baselineHashes[`content/tarot-methods/${locale}.json`]);
+    const path = `content/tarot-methods/${locale}.json`;
+    const beforeHashes: Record<string, string> = clarifierRevision.previousPublishedFileHashes;
+    const liveHashes: Record<string, string> = clarifierRevision.currentPublishedFileHashes;
+    const significatorHashes: Record<string, string> = revision.currentPublishedFileHashes;
+    assert.equal(clarifierRevision.baseCommit, "3eff663caee2965c17139dc78f9e4b345eef1ff6");
+    assert.equal(beforeHashes[path], significatorHashes[path], "the clarifier must start at the approved significator edition");
+    assert.equal(digest(readFileSync(path)), liveHashes[path]);
+    assert.equal(live[locale][slug].sections.filter(section => section.id === "clarifier-job").length, 1);
+    assert.equal(digest(JSON.stringify(current[locale], null, 2) + "\n"), significatorHashes[path], "removing only the clarifier must reproduce the exact November 1 container");
   }
-  const moduleSource = readFileSync("lib/journal-tarot-methods.ts", "utf8");
+  const liveModuleSource = readFileSync("lib/journal-tarot-methods.ts", "utf8");
+  assert.equal((liveModuleSource.match(/2026-11-04/g) ?? []).length, 1);
+  assert.equal(digest(liveModuleSource), clarifierRevision.currentPublishedFileHashes["lib/journal-tarot-methods.ts"]);
+  const moduleSource = liveModuleSource.replace("2026-11-04", "2026-11-01");
+  assert.equal(digest(moduleSource), revision.currentPublishedFileHashes["lib/journal-tarot-methods.ts"]);
+  assert.equal(clarifierRevision.previousPublishedFileHashes["lib/journal-tarot-methods.ts"], revision.currentPublishedFileHashes["lib/journal-tarot-methods.ts"]);
   assert.equal((moduleSource.match(/2026-11-01/g) ?? []).length, 1);
   assert.equal(digest(moduleSource.replace("2026-11-01", "2026-10-27")), baselineHashes["lib/journal-tarot-methods.ts"], "a module change outside the authorized Celtic update date occurred");
 });
 
-test("only the Celtic article gains one section while every prior section and the complete journal article remain intact", () => {
+test("the historical significator addition remains exact while every prior section and the complete journal article stay intact", () => {
   assert.deepEqual(Object.keys(previous).sort(), [...locales]);
   for (const locale of locales) {
     assert.deepEqual(Object.keys(current[locale]).sort(), [journalSlug, slug].sort());
@@ -71,7 +95,7 @@ test("only the Celtic article gains one section while every prior section and th
     assert.equal(new Set(updated.sections.map(section => section.id)).size, updated.sections.length);
     const loaded = getJournalArticle(slug);
     assert.ok(loaded);
-    assert.deepEqual(loaded.translations[locale], updated, `${locale}: the published registry is not using the updated container`);
+    assert.deepEqual(loaded.translations[locale], live[locale][slug], `${locale}: the published registry is not using the complete current container`);
   }
 });
 
@@ -102,7 +126,7 @@ test("the significator comparison preserves the real first and seventh positions
   assert.deepEqual(shapes[0], shapes[1]);
 });
 
-test("authored Celtic URLs retain October 23 publication and acquire November 1 updates while journal dates stay unchanged", () => {
+test("authored Celtic URLs retain October 23 publication and use the current revision date while journal dates stay unchanged", () => {
   assert.deepEqual(tarotMethodSlugs, [slug, journalSlug]);
   assert.deepEqual(tarotMethodLocales, locales);
   assert.equal(tarotMethodArticles.length, 2);
@@ -110,7 +134,7 @@ test("authored Celtic URLs retain October 23 publication and acquire November 1 
   for (const methodSlug of tarotMethodSlugs) {
     const method = getJournalArticle(methodSlug);
     assert.ok(method);
-    const updatedAt = methodSlug === slug ? "2026-11-01" : "2026-10-23";
+    const updatedAt = methodSlug === slug ? "2026-11-04" : "2026-10-23";
     assert.equal(method.publishedAt, "2026-10-23");
     assert.equal(method.updatedAt, updatedAt);
     assert.deepEqual(journalArticleLocales(method), locales);
