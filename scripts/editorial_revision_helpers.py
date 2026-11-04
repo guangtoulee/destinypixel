@@ -28,6 +28,8 @@ MOON_DIR = ROOT / "content/moon-update-20261103"
 MOON_PATHS = frozenset({"content/tarot/zh/moon.json"})
 SUN_DIR = ROOT / "content/sun-update-20261103"
 SUN_PATHS = frozenset({"content/tarot/zh/sun.json"})
+TOWER_DIR = ROOT / "content/tower-update-20261104"
+TOWER_PATHS = frozenset({"content/tarot/zh/tower.json"})
 
 
 def sha(raw):
@@ -100,6 +102,9 @@ def historical_bytes(path):
     if sample_key(path) in JUDGEMENT_PATHS:
         validate_judgement_record(path)
         return (JUDGEMENT_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in TOWER_PATHS:
+        validate_tower_record(path)
+        return (TOWER_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         validate_eight_swords_record(path)
         return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -131,6 +136,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in JUDGEMENT_PATHS:
         current, _ = validate_judgement_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in TOWER_PATHS:
+        current, _ = validate_tower_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         current, _ = validate_eight_swords_record(path)
@@ -690,6 +698,130 @@ def validate_judgement_record(path):
     for unedited_locale in ("en", "zh-TW", "ru"):
         unedited = ROOT / f"content/tarot/{unedited_locale}/judgement.json"
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/judgement"]["recordSha256"], f"Unedited Judgement file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_tower_record(path):
+    """Validate the Chinese Pollack supplement and keep the prior Tower receipt."""
+    key = sample_key(path)
+    assert key in TOWER_PATHS, f"Not a Tower revision: {key}"
+    registry = read(TOWER_DIR / "revisions.json")
+    assert registry["baseCommit"] == "0fedeffce0c2d85e876d03ebd154325751a6837b"
+    assert registry["updatedAt"] == "2026-11-04"
+    assert set(registry["articles"]) == {"tarot-tower"}
+    notes = registry["articles"]["tarot-tower"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert set(registry["records"]) == TOWER_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (TOWER_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/tower"
+    assert sha(raw) == record["fileSha256"], f"Current Tower file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Tower Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Tower file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Tower Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Tower metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Tower metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Tower metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-04"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么高塔排在恶魔与节制后面"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-03"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert "\n\n" not in added_text
+        else:
+            assert section == old, f"Original Tower section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")
+    drops = image["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("yod", "恩典", "二十二", "十个和十二个", "不是 Waite 原文", "报应"):
+        assert phrase in drops, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("恶魔", "节制", "水坝", "水闸", "不能都归到一个人身上", "事后清点", "早该知道", "星星", "157"):
+        assert phrase in sequence, phrase
+    assert sequence.count("\n\n") == 2
+    reverse = next(section for section in current["sections"] if section["id"] == "section-03")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("囚禁", "缓和", "第三种读法", "压抑"):
+        assert phrase in reverse, phrase
+    for phrase in ("巴别", "沃尔夫", "战车", "化约"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Tower source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "tower-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-04" and "78度的智慧" in book["title"]
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("tower-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The Tower" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [153, 154, 155, 156, 157]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-03"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Tower Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Tower anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (TOWER_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/tower-update-20261104/revisions.json"
+    assert revision["updatedAt"] == "2026-11-04" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/tower.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/tower"]["recordSha256"], f"Unedited Tower file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
     try:
         import jsonschema
