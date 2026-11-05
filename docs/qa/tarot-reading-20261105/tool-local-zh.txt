@@ -1,0 +1,139 @@
+Browser tab: 1, Title: "免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel", URL: "http://127.0.0.1:3057/tarot?locale=zh".
+1 AXWebArea 免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel, URL: 127.0.0.1:3057/tarot?locale=zh
+	2 container
+		3 link Description: DestinyPixel, Value: 127.0.0.1:3057/?locale=zh
+		4 container Language
+			5 link Description: EN, Value: 127.0.0.1:3057/tarot
+			6 link Description: 简, Value: 127.0.0.1:3057/tarot?locale=zh
+			7 link Description: 繁, Value: 127.0.0.1:3057/tarot?locale=zh-TW
+			8 link Description: RU, Value: 127.0.0.1:3057/tarot?locale=ru
+		9 container 探索塔罗
+			10 link Description: 抽牌桌, Value: 127.0.0.1:3057/tarot?locale=zh#table
+			11 link Description: 牌义图鉴, Value: 127.0.0.1:3057/journal/tarot-cards?locale=zh
+			12 link Description: 牌阵与入门, Value: 127.0.0.1:3057/journal/how-to-connect-three-tarot-cards?locale=zh
+		13 text 免费抽牌与牌义 · 无需注册
+		14 heading 把问题放在桌上。, Value: 1
+			15 text 把问题放在桌上。
+		16 text 洗牌，翻开一张，看看画面。先从你注意到的细节开始。
+		17 container table
+			18 button (collapsed) 三张牌 · 来路与下一步 选择你的牌阵, Secondary Actions: Expand
+				19 text 三张牌 · 来路与下一步
+				20 text 选择你的牌阵
+			21 container
+				22 container
+					23 button (disabled) 放到牌桌 · 2
+					24 button (disabled) 放到牌桌 · 3
+					25 button (disabled) 放到牌桌 · 4
+					26 button (disabled) 放到牌桌 · 5
+					27 button (disabled) 放到牌桌 · 6
+					28 button (disabled) 放到牌桌 · 7
+					29 button (disabled) 放到牌桌
+				30 heading 选一张，放到牌桌, Value: 2
+					31 text 选一张，放到牌桌
+				32 container
+					33 text 78 张待选
+				34 button 洗牌
+				35 button (disabled) 放到牌桌
+				36 text 先洗牌，再放一张到桌上。
+				37 text 键盘选中牌堆后，按向下方向键可把顶牌放到底部。
+				38 container
+					39 button 选择 · 走到这里的来路
+						40 text 01
+					41 checkbox 1 走到这里的来路, Value: 1
+					42 button 选择 · 当下的状态
+						43 text 02
+					44 checkbox 2 当下的状态, Value: 0
+					45 button 选择 · 可能的下一步
+						46 text 03
+					47 checkbox 3 可能的下一步, Value: 0
+				48 text 当前牌位 1  · 走到这里的来路
+			49 container tarot-question
+				50 heading 围绕你的问题，进一步解读, Value: 2
+					51 text 围绕你的问题，进一步解读
+				52 text 你想问什么？（详解必填）
+				53 text field (settable) 你想问什么？（详解必填）, ID: tarot-question-title
+				54 text 一次只关注一个问题，不必填写姓名或私人资料。
+				55 text 详细情况（选填）
+				56 text entry area (settable) 详细情况（选填）, ID: tarot-question-details
+				57 text 可以留空。描述越具体，解读越能贴合你的问题。请勿填写姓名、联系方式等身份信息。
+			58 text 翻开所有已选牌后，即可请 AI 帮忙解读；排阵模式需先填满牌位。
+			59 container
+				60 text DEEPSEEK · AI
+				61 heading 帮我解读, Value: 2
+					62 text 帮我解读
+				63 button (disabled) 帮我解读
+				64 text 只在你点击后：星盘位置，或已翻开的牌、问题与选填背景，会发送至 DeepSeek。塔罗请求不会自动附带出生资料；请勿在问题或背景中填写身份信息。 用于象征性探索与自我观察，不是科学人格测评，也不保证未来事件。重要决定请结合现实情况。
+		65 link Description: 塔罗 78 张牌学习目录 →, Value: 127.0.0.1:3057/journal/tarot-cards?locale=zh
+		66 text 先看画面，再理解牌义。每张牌都有正逆位速读、画面细节、日常例子和一个小练习。
+		67 container 在线塔罗怎么玩：先选牌阵，再亲手抽牌
+			68 container
+				69 heading 在线塔罗怎么玩：先选牌阵，再亲手抽牌, Value: 2, ID: cel-guide-title
+					70 text 在线塔罗怎么玩：先选牌阵，再亲手抽牌
+				71 text 完整 78 张韦特塔罗牌，支持单张牌、三张牌、感情牌阵、二选一牌阵和凯尔特十字。自己洗牌、挑牌、逐张翻开，即可查看正位与逆位的基础牌义；想进一步结合自己的问题，再开启可选的 AI 详解。
+			72 heading 三步完成一次塔罗抽牌, Value: 3
+				73 text 三步完成一次塔罗抽牌
+			74 content list
+				75 text 选择牌阵，决定是否加入逆位。只想聚焦一个主题可以抽单张；想梳理来路、当下与可能的下一步，可以选三张牌。
+				76 text 洗牌后选中空牌位，再从背面牌堆挑牌。轻点下方牌堆抽牌，也可以直接拖到牌桌；需要时可以换牌或放回。
+				77 text 逐张翻开，点已翻开的牌查看名称、正逆位与简单解释。需要详解时填写问题标题，详细情况可选填。想保留牌面和解读，可保存到账号。
+			78 container
+				79 heading 单张、三张、感情和凯尔特十字，怎么选？, Value: 3
+					80 text 单张、三张、感情和凯尔特十字，怎么选？
+				81 text 单张牌适合一个明确主题。三张牌把走到这里的来路、当下状态、可能的下一步放在一起。五张感情牌阵用于梳理一段关系；五张二选一牌阵用于比较两个方向。十张凯尔特十字提供更多牌位和背景，但牌多不等于答案更准确。想自己定义位置，也可以进入自由牌桌摆放。
+			82 container
+				83 heading 正位、逆位和大小阿卡纳是什么意思？, Value: 3
+					84 text 正位、逆位和大小阿卡纳是什么意思？
+				85 text 78 张牌分为 22 张大阿卡纳和 56 张小阿卡纳，小阿卡纳包含权杖、圣杯、宝剑、星币四组。大牌常讨论较大的主题，小牌更贴近日常情境与反应。逆位可以理解为受阻、内化或过度表达，并不自动代表坏事。把牌义与所在牌位、提问一起读，才不会只盯住单张牌的名字。本站基础牌义是围绕牌面象征编写的简明解读。
+			86 container
+				87 heading 感情塔罗怎么问，才更容易得到具体解读？, Value: 3
+					88 text 感情塔罗怎么问，才更容易得到具体解读？
+				89 text 与其问“对方心里到底在想什么”，不如问“我能怎样让下一次沟通更清楚”。面对选择，可以写明两个选项和你最在意的事情。一个好问题说明了处境，也给自己留下行动空间。详细情况可以不写；相关背景越清楚，解读越能贴合问题，但不代表预测更准确。请避免填写不想分享的姓名或身份资料。
+			90 container 在线塔罗常见问题
+				91 heading 在线塔罗常见问题, Value: 2, ID: cel-search-faq-title
+					92 text 在线塔罗常见问题
+				93 button (collapsed) 塔罗抽牌免费吗？不登录能玩吗？, Secondary Actions: Expand
+					94 text 塔罗抽牌免费吗？不登录能玩吗？
+				95 button (collapsed) AI 会帮我选牌，或者根据问题换牌吗？, Secondary Actions: Expand
+					96 text AI 会帮我选牌，或者根据问题换牌吗？
+				97 button (collapsed) 塔罗能直接判断是或否、会不会复合吗？, Secondary Actions: Expand
+					98 text 塔罗能直接判断是或否、会不会复合吗？
+			99 container 换一个角度，继续探索
+				100 heading 换一个角度，继续探索, Value: 2
+					101 text 换一个角度，继续探索
+				102 link Description: 免费星盘：太阳、月亮与上升查询, Value: 127.0.0.1:3057/astrology?locale=zh
+				103 link Description: 八字五行与行星情感匹配, Value: 127.0.0.1:3057/compatibility?locale=zh
+				104 link Description: 在线求签与签号查询, Value: 127.0.0.1:3057/sticks?locale=zh
+				105 link Description: 三张塔罗牌怎么读：一个完整示例, Value: 127.0.0.1:3057/journal/how-to-read-three-card-tarot?locale=zh
+		106 button (collapsed) 计算与解读方式, Secondary Actions: Expand
+			107 text 计算与解读方式
+		108 text 原画：Pamela Colman Smith · 韦特体系 Pam-A 版本，扫描图来自 Wikimedia Commons（公有领域）。
+		109 link Description: 牌面来源与署名 ↗, Value: 127.0.0.1:3057/tarot/attribution.json
+		110 button (collapsed) 可以自己洗牌、挑牌吗？, Secondary Actions: Expand
+			111 text 可以自己洗牌、挑牌吗？
+		112 button (collapsed) 可以换牌，或不使用 AI 吗？, Secondary Actions: Expand
+			113 text 可以换牌，或不使用 AI 吗？
+		114 button (collapsed) 有哪些塔罗排阵？, Secondary Actions: Expand
+			115 text 有哪些塔罗排阵？
+		116 container 接着读，把意思弄明白
+			117 text 塔罗专题
+			118 heading 接着读，把意思弄明白, Value: 2, ID: tarot-next-heading
+				119 text 接着读，把意思弄明白
+			120 text 从三张牌的实例读起，练习把问题说清楚，再探索关系主题；牌面不是一段关系的判决。
+			121 link Description: 三张塔罗牌怎么解读？从牌位到完整故事的实战示例 抽出三张塔罗牌后，怎样把牌义连起来？用一个感情提问示例，讲清牌位、正逆位、问题背景与下一步，再体验免费三张牌阵。, Value: 127.0.0.1:3057/journal/how-to-read-three-card-tarot?locale=zh
+			122 link Description: 求签怎么问问题？感情、家庭与工作提问实例 抽签时不知道该问什么？用感情、家庭照护分工与工作实例，把模糊担忧改成具体问题，了解家宅签怎样结合处境来读，并找到下一步。, Value: 127.0.0.1:3057/journal/how-to-ask-fortune-sticks?locale=zh
+			123 link Description: 抽到感情签后怎么开口？把月老签读成一次具体对话 抽完月老签，仍不知道该等、该问还是该联系？用等待、暧昧和争执后的三个情境，整理能直接开口的表达与下一步。, Value: 127.0.0.1:3057/journal/yuelao-love-fortune-conversation?locale=zh
+			124 link Description: 帕梅拉·科尔曼·史密斯：牌的角落，有她的名字 从一封报酬微薄的信、剧场里的姿势与音乐留下的风景，认识帕梅拉·科尔曼·史密斯，以及韦特—史密斯塔罗角落里的 PCS 花押。, Value: 127.0.0.1:3057/journal/pamela-colman-smith-tarot-artist?locale=zh
+			125 container 接着读，把意思弄明白
+				126 link Description: 原创文章, Value: 127.0.0.1:3057/journal?locale=zh
+				127 link Description: 使用指南, Value: 127.0.0.1:3057/learn?locale=zh
+				128 link Description: 全部工具, Value: 127.0.0.1:3057/tools?locale=zh
+		129 button (collapsed) 探索其他主题, Secondary Actions: Expand
+			130 text 探索其他主题
+		131 link Description: DestinyPixel, Value: 127.0.0.1:3057/?locale=zh
+		132 container
+			133 link Description: 星盘, Value: 127.0.0.1:3057/astrology?locale=zh
+			134 link Description: 塔罗牌桌, Value: 127.0.0.1:3057/tarot?locale=zh
+			135 link Description: 感情适配, Value: 127.0.0.1:3057/compatibility?locale=zh
+			136 link Description: 灵签, Value: 127.0.0.1:3057/sticks?locale=zh
+
+The focused UI element is 1 AXWebArea 免费在线塔罗牌：自选抽牌、感情牌阵与解读 | DestinyPixel, URL: 127.0.0.1:3057/tarot?locale=zh

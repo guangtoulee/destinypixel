@@ -1,3 +1,4 @@
+import kingPentaclesRevision from "@/content/king-pentacles-update-20261105/revisions.json";
 import revisions from "@/content/encyclopedia-samples-20261011/revisions.json";
 import peopleRevisions from "@/content/day-pillar-people/revisions.json";
 import secondBatchRevisions from "@/content/day-pillar-people/second-batch-revisions.json";
@@ -16,7 +17,7 @@ import temperanceRevision from "@/content/temperance-update-20261105/revisions.j
 import type { ReportLocale } from "@/lib/report-i18n";
 
 type Revision = { notes: Partial<Record<ReportLocale, string>> };
-const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [temperanceRevision, devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
+const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [kingPentaclesRevision, temperanceRevision, devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
 
 /** A date applies only to the language actually edited in this revision. */
 export function editorialUpdate(slug: string, locale: ReportLocale) {
