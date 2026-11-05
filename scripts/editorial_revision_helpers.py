@@ -32,6 +32,8 @@ TOWER_DIR = ROOT / "content/tower-update-20261104"
 TOWER_PATHS = frozenset({"content/tarot/zh/tower.json"})
 DEVIL_DIR = ROOT / "content/devil-update-20261104"
 DEVIL_PATHS = frozenset({"content/tarot/zh/devil.json"})
+TEMPERANCE_DIR = ROOT / "content/temperance-update-20261105"
+TEMPERANCE_PATHS = frozenset({"content/tarot/zh/temperance.json"})
 
 
 def sha(raw):
@@ -110,6 +112,9 @@ def historical_bytes(path):
     if sample_key(path) in DEVIL_PATHS:
         validate_devil_record(path)
         return (DEVIL_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in TEMPERANCE_PATHS:
+        validate_temperance_record(path)
+        return (TEMPERANCE_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         validate_eight_swords_record(path)
         return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -147,6 +152,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in DEVIL_PATHS:
         current, _ = validate_devil_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in TEMPERANCE_PATHS:
+        current, _ = validate_temperance_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         current, _ = validate_eight_swords_record(path)
@@ -958,6 +966,136 @@ def validate_devil_record(path):
     for unedited_locale in ("en", "zh-TW", "ru"):
         unedited = ROOT / f"content/tarot/{unedited_locale}/devil.json"
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/devil"]["recordSha256"], f"Unedited Devil file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_temperance_record(path):
+    """Validate the Chinese Pollack supplement and keep the prior Temperance receipt."""
+    key = sample_key(path)
+    assert key in TEMPERANCE_PATHS, f"Not a Temperance revision: {key}"
+    registry = read(TEMPERANCE_DIR / "revisions.json")
+    assert registry["baseCommit"] == "4f360e1f1b3c786e1a6c4d5ce2cf68c288e8b933"
+    assert registry["updatedAt"] == "2026-11-05"
+    assert set(registry["articles"]) == {"tarot-temperance"}
+    notes = registry["articles"]["tarot-temperance"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert set(registry["records"]) == TEMPERANCE_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (TEMPERANCE_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/temperance"
+    assert sha(raw) == record["fileSha256"], f"Current Temperance file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Temperance Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Temperance file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Temperance Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Temperance metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Temperance metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Temperance metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-05"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么节制夹在死神与恶魔、高塔之间"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == (0 if old["id"] == "section-01" else 1)
+        else:
+            assert section == old, f"Original Temperance section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("temperare", "按比例调和", "道德戒律", "物理上不可能的安排", "尚未成形的可能", "现实世界", "不是 Waite 原文", "139", "140", "141"):
+        assert phrase in image, phrase
+    for phrase in ("柱子", "山峰", "落地", "已经在做的行为"):
+        assert phrase not in image, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("Iris", "鸢尾", "风暴之后的平静", "死神", "141", "恶魔", "高塔", "这一环是死神后的重整", "/journal/tarot-devil?locale=zh#depth-sequence", "/journal/tarot-tower?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    assert sequence.count("\n\n") == 1
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    added_reverse = reverse[len(next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]):].strip()
+    for phrase in ("143", "走极端", "碎片", "合适的行动", "更失衡", "证据"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("送回", "力量", "重生"):
+        assert phrase not in added_reverse, phrase
+    for phrase in ("柱子", "落地", "送回力量", "狮鹰", "Wirth", "冥河", "四字", "战车", "炼金", "142", "144", "146"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Temperance source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "temperance-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-05" and book["title"] == "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；节制章，印刷／PDF 139–143"
+    assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("temperance-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Temperance" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [139, 140, 141, 142, 143]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Temperance Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Temperance anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (TEMPERANCE_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/temperance-update-20261105/revisions.json"
+    assert revision["updatedAt"] == "2026-11-05" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/temperance.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/temperance"]["recordSha256"], f"Unedited Temperance file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
     try:
         import jsonschema

@@ -12,10 +12,11 @@ import sunRevision from "@/content/sun-update-20261103/revisions.json";
 import sevenCupsRevision from "@/content/seven-cups-update-20261103/revisions.json";
 import towerRevision from "@/content/tower-update-20261104/revisions.json";
 import devilRevision from "@/content/devil-update-20261104/revisions.json";
+import temperanceRevision from "@/content/temperance-update-20261105/revisions.json";
 import type { ReportLocale } from "@/lib/report-i18n";
 
 type Revision = { notes: Partial<Record<ReportLocale, string>> };
-const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
+const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [temperanceRevision, devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
 
 /** A date applies only to the language actually edited in this revision. */
 export function editorialUpdate(slug: string, locale: ReportLocale) {
