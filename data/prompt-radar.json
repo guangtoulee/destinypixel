@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-05T08:18:10.348Z",
+  "updatedAt": "2026-11-05T20:46:30.027Z",
   "sourceSummary": {
-    "community": 1465,
+    "community": 1466,
     "publicX": 606,
-    "total": 2071
+    "total": 2072
   },
   "items": [
     {
@@ -155,7 +155,7 @@
       "authorName": "Chetaslua",
       "authorHandle": "@chetaslua",
       "createdAt": "2026-11-02T08:19:49.000Z",
-      "importedAt": "2026-11-03T20:14:27.228Z",
+      "importedAt": "2026-11-05T20:46:29.994Z",
       "tags": [
         "Grok Imagine",
         "视频"
@@ -176,13 +176,13 @@
       "contentType": "video",
       "category": "视频叙事",
       "metrics": {
-        "likes": 7662,
-        "reposts": 468,
-        "replies": 344,
-        "quotes": 271,
-        "bookmarks": 5240,
-        "views": 1515021,
-        "score": 37103
+        "likes": 7944,
+        "reposts": 495,
+        "replies": 359,
+        "quotes": 286,
+        "bookmarks": 5461,
+        "views": 2026642,
+        "score": 39521
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Fable 5.5 its over for video and image models 🤯 THIS IS PURE CODE one shotted this video holy shit , how this is more beautiful than ai video models Two ways to check this yourself: Ask: “Where did @karpathy go in 2026?” with web search and memory turned off. Only the new Fable knows the answer. Then give it the prompt. Run the same prompt I used for the test (it’s in the screenshot) and see for yourself. Don’t rely on Grok for basic reasoning like this. Grok doesn’t have up-to-date knowledge of niche stuff. Either join the community or run the test yourself. Also, a knowledge cutoff doesn’t mean a model knows everything before that date. Sometimes a model doesn’t know about an event even if it happened before its cutoff. This test shows that too. Run the same prompt on regular Opus 5.5 and the quality drops. On Fable 5.1 it’s worse."
@@ -6703,6 +6703,47 @@
       "rawText": "Can't get enough of Seedance 2.5. The best part is it can generate 30s video in one single prompt, and the result is so realistic! So, here's another one that I made using @capcutapp. Prompt: [STYLE + CAMERA + ATMOSPHERE] Gritty, raw handheld 35mm film aesthetic with natural film grain. Harsh direct sunlight creating high-contrast shadows over a dramatic coastal cliff and open ocean. Continuous single-take handheld tracking shot (3rd-person / over-the-shoulder) with no cuts. Atmosphere: high-altitude wind, realistic coastal cliff and ocean physics, sudden wingsuit deployment. Audio: heavy rhythmic breathing, intense wind howl, fabric snap of wingsuit opening, high-speed air rush over open water, near-miss whooshes past yachts, soft landing roll on sand, distant ocean waves and beach ambient noise, final bite sounds. [IMAGE REFERENCES] Use the provided Hoshino character sheet as the single strict visual reference for the male character. Exact face, black hair, dark brown eyes, lean athletic build (178 cm), gold earrings, and overall facial structure locked from the reference. Outfit: modern high-performance cliff-jumping wingsuit — sleek, form-fitting design in matte charcoal black with sharp white paneling and subtle gold zipper accents (matching his minimalist aesthetic). The wingsuit is worn from the start with a matching technical backpack. Body proportions, posture, and face remain fully locked to the Hoshino reference. [TIMELINE SECOND BY SECOND] 0-3s: [Handheld medium] Hoshino stands on the edge of a high rocky cliff overlooking the open ocean, wearing his charcoal-and-white wingsuit and technical backpack. He looks straight into the camera with calm, confident intensity, then turns and launches into a clear, controlled forward somersault in slow motion as he leaves the cliff edge. 3-5s: [Continuous freefall] He completes the somersault and falls head-first toward the sea. At exactly 1.5 seconds into the fall he fully deploys the wingsuit with a sharp snap. The wing membranes inflate and he levels out into a smooth glide. 5-12s: [High-speed tracking] Camera stays locked behind him as he rockets at full speed just above the ocean surface along the coastline. He weaves tightly past sheer cliff faces, banking hard left and right, turquoise water and rocky walls streaking past at extreme velocity. 12-18s: [Low-level chaos] He drops lower, flying just above the water. He almost collides with a large luxury yacht that suddenly turns, banks hard to avoid it, then narrowly misses a smaller motor yacht. He dips under a yacht’s outstretched boom and threads between two more vessels. 18-23s: [Water-level action] Still flying extremely low over the sea, he dodges a startled seabird that dives across his path, skims past a group of people on a nearby yacht who scatter in surprise, and banks sharply to avoid an open yacht swim platform. The camera stays locked behind him through every near-miss. 23-26s: [Landing] He flares the wingsuit hard, touches down with both feet on the soft beach sand and immediately rolls forward to kill the speed. He stands up, peels off the wingsuit in one fluid motion and drops it on the sand beside him, revealing a clean fitted white undershirt underneath. 26-28s: [Beach level] He walks a few steps still wearing the backpack and stops right in front of a classic beachside hot-dog cart. The vendor hands him a steaming hot dog fresh off the grill. 28-30s: [Close continuous] He turns, looks directly into the camera, takes a big bite of the hot dog and chews with a calm, satisfied expression as the shot holds. [STYLE & QUALITY BOOSTERS] Photorealistic 8K, ultra-detailed textures, cinematic lighting, perfect motion blur, high dynamic range, coherent physics (fabric, air, wingsuit membranes, impact, roll, near-misses with yachts, water spray), stable character locked to the Hoshino reference, realistic ocean reflections, cliff rock textures and wind, no artifacts, movie-level stability, pure single continuous take."
     },
     {
+      "id": "x-public-2117540681556328773",
+      "title": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mea",
+      "description": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and un",
+      "prompt": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and understand how others build their videos. Here are 8 GitHub repositories worth checking out: 1. Awesome Opus Videos Discover AI-generated video examples alongside the prompts used to create them.  2. Lemo Opuscar Explore a workflow for creating short films with Claude Code across 51 visual styles.  3. pdoom-video Study a locally rendered 4K60 karaoke music-video project.  4. PDoomVideo Explore another implementation of the same music-video concept and compare its creative approach.  5. mg-styles-15 Explore 15 motion graphics styles with examples, prompts, and source code.  6. ClaudeAnimationBase Experiment with hand-drawn cartoon animations and 31 character expressions.  7. Awesome Claude Videos Find a collection of video-generation examples and workflows built around Claude.  8. Opus Video Prompts Explore Chinese-language AI video examples and reusable prompt ideas.  Here's a useful way to learn: → Pick a video you like. → Study the prompt behind it. → Explore the source code. → Experiment with your own style. You don't have to figure everything out from scratch. Sometimes, the best creative inspiration is already sitting on GitHub. Bookmark these repos for your next AI video experiment.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/RodmanAi/status/2117540681556328773",
+      "sourceType": "x",
+      "authorName": "Leonard Rodman",
+      "authorHandle": "@RodmanAi",
+      "createdAt": "2026-11-03T08:53:35.000Z",
+      "importedAt": "2026-11-05T20:46:29.996Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 229,
+        "reposts": 42,
+        "replies": 14,
+        "quotes": 0,
+        "bookmarks": 343,
+        "views": 12809,
+        "score": 1695
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and understand how others build their videos. Here are 8 GitHub repositories worth checking out: 1. Awesome Opus Videos Discover AI-generated video examples alongside the prompts used to create them.  2. Lemo Opuscar Explore a workflow for creating short films with Claude Code across 51 visual styles.  3. pdoom-video Study a locally rendered 4K60 karaoke music-video project.  4. PDoomVideo Explore another implementation of the same music-video concept and compare its creative approach.  5. mg-styles-15 Explore 15 motion graphics styles with examples, prompts, and source code.  6. ClaudeAnimationBase Experiment with hand-drawn cartoon animations and 31 character expressions.  7. Awesome Claude Videos Find a collection of video-generation examples and workflows built around Claude.  8. Opus Video Prompts Explore Chinese-language AI video examples and reusable prompt ideas.  Here's a useful way to learn: → Pick a video you like. → Study the prompt behind it. → Explore the source code. → Experiment with your own style. You don't have to figure everything out from scratch. Sometimes, the best creative inspiration is already sitting on GitHub. Bookmark these repos for your next AI video experiment."
+    },
+    {
       "id": "x-public-2073498982731718929",
       "title": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building gam",
       "description": "Do you realize what the hell just happened? Fable 5 just flipped the entire website-building game right in front of you. Fully animated, studio-looking sites, smooth scrolling, 3D globes, video backgrounds, all mobile re",
@@ -12641,47 +12682,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I almost did not believe this was AI-generated. @itsPolloAI Seedance 2.0 4K renders skin pores, fabric texture, and natural facial movement in a way that feels like real camera footage. 1. Ultra HD 4K output 2. Textures hold up even on Zoom 3. Motion stays smooth, no glitching 4. Details stay consistent frame to frame This is the first time AI video felt commercial-ready, not just a tech demo."
-    },
-    {
-      "id": "x-public-2117540681556328773",
-      "title": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mea",
-      "description": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and un",
-      "prompt": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and understand how others build their videos. Here are 8 GitHub repositories worth checking out: 1. Awesome Opus Videos Discover AI-generated video examples alongside the prompts used to create them.  2. Lemo Opuscar Explore a workflow for creating short films with Claude Code across 51 visual styles.  3. pdoom-video Study a locally rendered 4K60 karaoke music-video project.  4. PDoomVideo Explore another implementation of the same music-video concept and compare its creative approach.  5. mg-styles-15 Explore 15 motion graphics styles with examples, prompts, and source code.  6. ClaudeAnimationBase Experiment with hand-drawn cartoon animations and 31 character expressions.  7. Awesome Claude Videos Find a collection of video-generation examples and workflows built around Claude.  8. Opus Video Prompts Explore Chinese-language AI video examples and reusable prompt ideas.  Here's a useful way to learn: → Pick a video you like. → Study the prompt behind it. → Explore the source code. → Experiment with your own style. You don't have to figure everything out from scratch. Sometimes, the best creative inspiration is already sitting on GitHub. Bookmark these repos for your next AI video experiment.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/RodmanAi/status/2117540681556328773",
-      "sourceType": "x",
-      "authorName": "Leonard Rodman",
-      "authorHandle": "@RodmanAi",
-      "createdAt": "2026-11-03T08:53:35.000Z",
-      "importedAt": "2026-11-03T20:14:27.231Z",
-      "tags": [
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 131,
-        "reposts": 28,
-        "replies": 11,
-        "quotes": 0,
-        "bookmarks": 182,
-        "views": 7412,
-        "score": 946
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "8 GITHUB REPOS TO LEVEL UP YOUR AI VIDEO CREATION WORKFLOW Creating AI videos doesn't always mean starting with a blank prompt. You can learn from existing projects, reuse creative ideas, explore animation styles, and understand how others build their videos. Here are 8 GitHub repositories worth checking out: 1. Awesome Opus Videos Discover AI-generated video examples alongside the prompts used to create them.  2. Lemo Opuscar Explore a workflow for creating short films with Claude Code across 51 visual styles.  3. pdoom-video Study a locally rendered 4K60 karaoke music-video project.  4. PDoomVideo Explore another implementation of the same music-video concept and compare its creative approach.  5. mg-styles-15 Explore 15 motion graphics styles with examples, prompts, and source code.  6. ClaudeAnimationBase Experiment with hand-drawn cartoon animations and 31 character expressions.  7. Awesome Claude Videos Find a collection of video-generation examples and workflows built around Claude.  8. Opus Video Prompts Explore Chinese-language AI video examples and reusable prompt ideas.  Here's a useful way to learn: → Pick a video you like. → Study the prompt behind it. → Explore the source code. → Experiment with your own style. You don't have to figure everything out from scratch. Sometimes, the best creative inspiration is already sitting on GitHub. Bookmark these repos for your next AI video experiment."
     },
     {
       "id": "x-public-2095379337180594541",
@@ -19131,6 +19131,49 @@
       "rawText": "The VFX world may never be the same again. @seedance 2.5 on BytePlus completely changed how I think about AI video generation. I tested it with a brutal challenge: freezing an entire fairground for 30 seconds in one continuous shot, using myself as the reference. What surprised me most wasn’t just the realism. It was how quickly I got a usable result. Previously, a complex shot like this could take multiple generations and endless trial-and-error. With Seedance 2.5, I was able to achieve a strong result within just a few attempts, which means significantly lower generation costs and a much more efficient creative process. Seedance2.5 API is about to launch on @BytePlusGlobal, and @lumina_ai_aiart will also roll out Seedance2.5 soon. Less retrying. Lower cost. Faster creation. This is what the next generation of AI filmmaking looks like. PROMPT & WORKFLOW 👇"
     },
     {
+      "id": "x-public-2116537788803809748",
+      "title": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this vide",
+      "description": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the ",
+      "prompt": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/ZentrixHQ/status/2116537788803809748",
+      "sourceType": "x",
+      "authorName": "Zentrix⌚️",
+      "authorHandle": "@ZentrixHQ",
+      "createdAt": "2026-10-31T14:28:26.000Z",
+      "importedAt": "2026-11-05T20:46:29.996Z",
+      "tags": [
+        "人像",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 88,
+        "reposts": 19,
+        "replies": 20,
+        "quotes": 2,
+        "bookmarks": 83,
+        "views": 15859,
+        "score": 559
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos."
+    },
+    {
       "id": "x-public-2088971729913987436",
       "title": "Created this using Seedance 2.5 on @newtakekr Prompt : Seedance 2.5 — 30秒 韩式巴士浪漫喜剧 / 急刹接住 / 浪漫长.",
       "description": "Created this using Seedance 2.5 on @newtake_kr Prompt : # Seedance 2.5 — 30秒 韩式巴士浪漫喜剧 / 急刹接住 / 浪漫长吻 / 下车脸颊吻 Use exactly 2 uploaded image assets. image1 = 成年女主唯一且最高优先级身份、脸部、发型、体型、校服与配件参考。严格保持可辨识脸部、肤色、浅蓝短发、白色云朵发夹、蓝色鱼形发夹、娇小",
@@ -19171,49 +19214,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Created this using Seedance 2.5 on @newtake_kr Prompt : # Seedance 2.5 — 30秒 韩式巴士浪漫喜剧 / 急刹接住 / 浪漫长吻 / 下车脸颊吻 Use exactly 2 uploaded image assets. image1 = 成年女主唯一且最高优先级身份、脸部、发型、体型、校服与配件参考。严格保持可辨识脸部、肤色、浅蓝短发、白色云朵发夹、蓝色鱼形发夹、娇小比例，以及参考图中的精致深蓝校服、白衬衫、蝴蝶结、格纹短裙、袜子和鞋子。 image2 = 成年男主唯一且最高优先级身份、脸部、发型、体型、校服与配件参考。严格保持可辨识脸部、黑色发型、高挑修长比例，以及参考图中的韩式男生校服造型。 所有主角与可辨识背景乘客均明确表现为20岁以上成年演员，只采用校园风校服与通学巴士题材。 生成30秒、16:9横屏、4K、24fps、超写实真人韩式浪漫电影短片。暖色下午自然光、真实皮肤、真实人体惯性、真实公交悬挂与刹车物理、细腻眼神与呼吸、自然运动模糊、轻微电影颗粒。整体必须像真正韩剧浪漫片，不要MV感、动画感、游戏CG感、塑料AI皮肤。 【人物与场景】 女主约156cm，明显娇小；男主约180cm，站在一起时有自然明显的身高差。 开场女主站在公交过道抓吊环，男主明确坐在她旁边的过道座位。车内适度拥挤，两侧有不同脸、发型、姿势的成年学生演员。窗外是温暖下午阳光。 【0–4秒｜平静放学氛围】 35mm aisle wide shot建立巴士空间，摄影机缓慢向两人推进。女主一手抓吊环，另一手拿书包；男主安静坐在旁边。窗外景物自然移动，车身有细微道路震动。周围有人看手机、聊天，整体轻松自然。 【4–8秒｜急刹与失衡必须同时发生】 司机突然重踩刹车。 首先清楚听到尖锐真实的刹车摩擦声： “끼이이익——!” 刹车开始的同一瞬间，整辆公交立刻产生强烈前倾惯性，车头下沉，车身明显震动。 所有物理反应必须同时发生： 吊环猛地向前甩； 书包、衣角、头发同时向前摆； 坐着的乘客上半身瞬间前冲； 有人本能抓住扶杆； 摄影机也被惯性猛地向前带动并轻微反弹，形成真实handheld jolt。 女主也必须在急刹开始的同一瞬间立即失去平衡。 她抓吊环的手臂突然被拉直，身体重心瞬间冲出双脚支撑范围，脚下被迫连续向前踏出凌乱的补救步伐。 动作必须是一条连续物理链： 急刹开始 → 身体同时猛烈前倾 → 双脚急促补步 → 上半身仍被惯性带走 → 手指从吊环滑脱 → 整个人自然朝男主方向跌去。 绝对不要表现成公交停稳后女主才突然失衡，也不要让她中途重新站稳。 【8–12秒｜车辆仍在晃动时男主接住】 使用女主右前方3/4 medium shot，同时看清男主座位与女主跌来的路线。 女主已经正在跌倒，而公交仍有明显急刹惯性，没有完全稳定。 男主此时最开始仍明确坐着。 看到她朝自己跌来后立即反应： 臀部离开座位 → 双腿迅速伸直 → 向过道跨半步 → 双手伸向女主腰侧与背部。 就在女主真正要摔倒的过程中，男主及时接住她。 女主因为前冲惯性真正撞进他怀里，不是提前摆好拥抱姿势。 两人被剩余车身惯性一起带得晃动半步，男主也必须调整脚步和重心，才终于把两人稳住。 女主本能抓住男主校服前襟或肩膀。 正确因果必须清楚： 急刹 → 女主同时失衡 → 正在跌倒 → 男主起身 → 接住 → 两人一起继续晃一下 → 最后才逐渐站稳。 【12–15秒｜第一次心动】 车身和摄影机从晃动逐渐恢复稳定。 medium two-shot缓慢push-in至close two-shot。 男主仍扶着女主腰背，女主仍抓着他的衣服。 两人才意识到脸之间只剩几厘米。 女主先惊讶，随后呼吸微乱，视线移开又忍不住回来，脸颊逐渐泛红。男主先确认她有没有受伤，随后眼神慢慢变得温柔。 女主轻微抬头，男主自然低头。 保留真实眼神交流，不要马上接吻。 【15–17秒｜周围学生开始兴奋】 附近学生发现两人的姿势，有人捂嘴、推朋友、探头、睁大眼睛。 说话必须像真的看到超心动现场后兴奋到憋不住，而不是读台词： 语速稍快、压低声音、句尾自然上扬、带笑、带气音，多人声音可以轻微重叠。 “뭐야, 뭐야?” 第二个“뭐야?”语调更高。 “헐, 봤어?” “헐”像吸气一样短促，“봤어?”兴奋上扬。 “대박…” 小声憋笑、难以置信。 不要播音腔，不要一字一顿。 【17–19秒｜女主害羞想退开】 女主意识到大家都在看，害羞地想退出男主怀里，低头抱紧书包，不敢看周围。 男主没有坐回去。 她刚想转身躲开，男主温柔地拉住她的手或前臂，让她停下。 女主惊讶回头。 【19–24秒｜拥抱 + 浪漫接吻】 男主顺势把她轻轻带近半步，一只手自然环住她后腰。 女主先僵住一瞬，随后没有继续退开，双手轻轻抓住男主衣襟。 摄影机从侧面约30°的close two-shot非常缓慢push-in。 两人先保持约0.5秒眼神确认。 男主自然低头，女主微微抬头。 随后完成一个清楚、温柔、持续约3–4秒的韩剧式接吻。 不要碰一下马上分开。 前段轻柔接触，随后两人身体自然放松进入拥抱状态。 女主从最初紧张逐渐放松，男主动作始终克制温柔。 不要夸张深吻、不要激烈动作。 尽量保持稳定连续镜头，仅允许极轻微arc movement。 窗边暖光自然勾勒两人的脸、发丝和校服轮廓。 【24–26秒｜吻后 / 到站】 两人自然分开，但距离仍然很近。 女主害羞低头，发现自己还抓着男主衣服，稍微松开，却忍不住露出小小笑容。 男主也温柔地笑。 附近学生更兴奋地压低声音： “헐…” “진짜 했어?” “미쳤다…” 必须是兴奋、带笑、不可思议的年轻人口语语气。“미쳤다…”不是生气，而是看到超心动画面后的感叹。 同时公交开始正常柔和减速到站。 【26–28秒｜自然下车】 车门发出真实“칙—”气压声打开，暖色下午光进入车厢。 女主先朝车门走，男主紧跟其后。 摄影机从两人后侧3/4 tracking跟随。 必须连续看清： 公交停稳 → 车门打开 → 女主踩下台阶 → 男主随后下车。 不要直接从车内瞬移到街道。 【28–30秒｜女主主动脸颊吻 / Ending】 女主先下车后没有马上走，而是在车门旁转身等男主。 男主刚踩下最后一级台阶，女主抬头看他。 她的表情从害羞变成一点调皮和勇敢。 因为明显身高差，女主自然踮起脚尖，轻轻向上靠近，在男主脸颊上短促、清楚地亲一下。 这里明确是脸颊轻吻，不是嘴对嘴。 不要突然切特写。 摄影机原本保持medium two-shot，在女主踮脚靠近时自然、柔和地push-in，清楚表现： 踮脚 → 主动靠近 → 脸颊轻吻 → 男主意外表情 → 女主害羞又开心的笑。 女主落回脚跟，脸微红，笑着转身向前走。 男主愣半拍后真正笑出来，马上追上她。 最后摄影机从后方3/4轻微tracking： 两人自然并肩走在温暖下午街道，肩膀越来越靠近，男主伸手，女主自然牵住。 公交在背景缓慢离开。 两人边走边笑。 CUT TO BLACK. 【摄影核心】 0–4秒：稳定wide + 缓慢push-in。 4–12秒：真实车内handheld惯性；急刹、人物失衡、摄影机震动必须同步。 8–12秒：3/4 medium清楚表现“坐着 → 起身 → 接住”。 12秒后：随着车辆稳定，摄影机也稳定。 12–15秒：亲密close two-shot与眼神交流。 19–24秒接吻：稳定侧面close two-shot + 极慢push-in + 极轻arc。 26–28秒：后方3/4 tracking下车。 28–30秒脸颊吻：同一镜头自然push-in，再拉回跟拍。 动作混乱时摄影机可以有物理晃动；浪漫段落必须稳定、柔和、亲密、有呼吸感。 【声音】 不要主角长对白，不要奇怪钢琴BGM。 急刹必须突出： “끼이이익——!”刹车声； 轮胎摩擦； 车体低沉震动； 吊环碰撞； 书包甩动； 座椅吱响； 自然短促“어?!”“헉!” 急刹后不要瞬间完全安静，要保留车体回弹、吊环继续摇摆、乘客调整姿势的余音。 接吻前环境声自然降低，但保留公交低频、呼吸与轻微背景声。 接吻声音自然克制。 最后脸颊吻仅使用轻微自然的“쪽”感。 【严格禁止】 不要未成年感； 不要改变image1、image2身份和校服； 不要女主变高、长腿、模特比例； 不要男主提前站起； 不要急刹后女主先站稳再突然跌倒； 不要公交停稳后女主才失衡； 女主失衡必须与急刹、车体前冲、摄影机震动同一瞬间开始； 必须在车辆仍有惯性晃动时被男主接住； 不要只有人物晃动而公交环境静止； 不要忽略“끼이이익——!”刹车声； 不要瞬移到拥抱姿势； 不要接吻太短，19–24秒内必须有约3–4秒温柔接吻； 不要粗暴拉扯、恐惧、强迫感； 不要夸张深吻； 不要最后再次嘴对嘴接吻，最后必须女主主动亲男主脸颊； 不要瞬移到街道； 不要学生用读书式语气、播音腔； 不要克隆背景人物； 不要塑料AI皮肤、动漫、CG； 不要坏手、多手指、脸崩； 不要过度慢动作； 不要极端乱晃； 不要字幕、文字、Logo、水印。 #newtakecrew #newtake"
-    },
-    {
-      "id": "x-public-2116537788803809748",
-      "title": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this vide",
-      "description": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the ",
-      "prompt": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/ZentrixHQ/status/2116537788803809748",
-      "sourceType": "x",
-      "authorName": "Zentrix⌚️",
-      "authorHandle": "@ZentrixHQ",
-      "createdAt": "2026-10-31T14:28:26.000Z",
-      "importedAt": "2026-11-05T08:18:10.314Z",
-      "tags": [
-        "人像",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 87,
-        "reposts": 19,
-        "replies": 20,
-        "quotes": 2,
-        "bookmarks": 82,
-        "views": 14961,
-        "score": 552
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "This is how to burn bridges with toxic people WAN 3.0 on @makeugc WORKFLOW: - Download this video - Create a reference photo of a man and a woman - Add the video + 2 reference photos to your video generator - Insert the prompt that I left below Here's what you get: the locations, music, and actions of the characters will remain, and the characters themselves will change to your reference ones You can also write in the prompt to change the location itself Prompt: Create a photorealistic cinematic video using the supplied reference video as the master for movement, actions, camera work, editing, and timing. Match its approximately 14.5-second duration and original portrait framing. REFERENCE MAPPING AND PRIORITY Photo 1: the replacement MAN at the far end of the bridge. Photo 2: the replacement WOMAN in the foreground. Use each photo as the authoritative reference for the character’s COMPLETE appearance: face, hairstyle, hair color, body proportions, clothing, footwear, jewelry, and visible accessories. Reproduce the exact outfit from each photo, including its colors, materials, silhouette, layers, and details. Replace BOTH the original actors AND their original clothing. Do not retain the original woman’s white shirt and white trousers or the original man’s white shirt and dark trousers unless those garments are actually present in the corresponding photo. Do not blend the original wardrobe with the reference outfits. The photos control character identity and wardrobe. The video controls the location, story, choreography, props, expressions, camera angles, and timing. Ignore the backgrounds and poses in the photos. Keep both characters and their complete outfits consistent throughout every shot. Clothing and accessories must move naturally with their bodies, with realistic weight, folds, and inertia. LOCATION Preserve the exact original environment: a narrow, weathered wooden suspension bridge over a deep, mist-filled rocky ravine. Dark suspension cables, vertical suspension ties, aged wooden planks, rocky ground at the near end, dense gray-blue fog, and soft overcast daylight. The man remains at the opposite end of the bridge. Preserve the original bridge geometry, distances, background, and perspective. Cold muted colors gradually acquire warm orange firelight as the bridge burns. Realistic skin, hair, clothing, shadows, smoke, and cinematic fire effects. ACTION AND SHOT SEQUENCE The reference video takes priority over the approximate timestamps below. 0.0–3.0 seconds: Match the original frontal shot of the woman walking toward the camera along the bridge. She wears the complete outfit from Photo 2. She carries the dark green bottle in her left hand and the olive-green rectangular canister in her right hand. Match her walking pace, foot placement, shoulder movement, gaze, and composed expression. She lifts the bottle to her lips and tilts it to drink while continuing to walk. Her reference clothing moves naturally with each step. The distant man wears the complete outfit from Photo 1 and repeats the original gestures, posture changes, and reactions at the same moments. 3.0–6.0 seconds: Reproduce the original low rear shot following the woman’s lower body as she walks toward the near end of the bridge. Show the actual lower garments and footwear from Photo 2. Do not recreate the original white trousers or bare feet if they differ from the photo. Match the canister’s position and tilt, the visible liquid falling onto the wooden planks, and the wet trail left behind. Preserve the exact coordination between her steps and the canister swing. Match the original camera height and movement. 6.0–8.8 seconds: Match the frontal shot of the woman reaching the rocky landing, with the bridge extending behind her. She lowers and releases the canister out of the foreground exactly as in the reference. The bottle stays in her left hand. Her right hand follows the original reaching movement toward her right hip and retrieves the small lighter. If the reference outfit has a suitable pocket, use that pocket. If it has no pocket, retrieve the lighter discreetly from behind an existing waistband or belt at the same position. Do not add a visible pocket or alter the reference outfit. Preserve the original gesture and timing. Reproduce the brief glance toward the bridge, head turn, and backward throwing gesture. The lighter leaves her hand at the same point in the movement. The first small flame appears on the bridge only after the throw. Preserve the original pause and her calm reaction. 8.8–10.8 seconds: Match the original cut to the bridge as flames spread across the planks and rise between the suspension lines. Keep the man at the far end in his Photo 1 outfit, preserving his original screen position, gestures, and reaction. Match the reference fire progression, smoke, brightness, and orange illumination as cinematic visual effects. Do not add explosions, injuries, falls, or additional events. 10.8–14.5 seconds: Match the final frontal shot of the woman on the rocky landing with the burning bridge behind her. She calmly raises the bottle to her lips again, tilts the bottle and her head back, and drinks. Match her posture, expression, hand positions, the length of the sip, and the final frame. Her face, hair, outfit, footwear, and accessories remain exactly consistent with Photo 2. Firelight illuminates the actual materials of her reference outfit naturally. Keep the man visible in the background wherever he appears in the original shot. CAMERA AND MOVEMENT Reproduce the original shot order, cuts, framing, camera height, perspective, and camera motion. Preserve the separate shots and their original transitions. Do not add new angles, close-ups, slow motion, or dramatic zooms. Transfer every gesture, step, glance, pause, prop interaction, and reaction to the replacement characters. Do not mirror the scene or swap hands. Preserve the timing and physical cause-and-effect of every action. CONTINUITY Keep the bottle and canister from the video consistent in appearance, size, and position. Maintain accurate grips and natural object releases. Preserve the photo outfits throughout: no wardrobe changes, disappearing accessories, changing garment lengths, or reversion to the original actors’ clothing. No changing faces, extra limbs, malformed hands, duplicated props, teleporting objects, or altered bridge geometry. AUDIO Preserve the original reference audio unchanged wherever direct audio preservation is supported. Keep the same music, timing, starting offset, and synchronization. Do not add dialogue, narration, replacement music, or extra sound effects. No added captions, text, logos, or watermarks. The finished video should look like the exact same cinematic scene performed by the two characters wearing their complete outfits from the supplied photos."
     },
     {
       "id": "x-public-2092905886876667983",
@@ -25575,6 +25575,51 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2118210300654821424",
+      "title": "社交媒体帖子 - OOTD 时尚拼贴编辑风提示词",
+      "description": "为 GPT Image 2 设计的详细提示词，可将上传的照片转换为时尚的“今日穿搭”（OOTD）编辑风拼贴画。采用上下分割构图：上方为全身模特展示，下方为置于陶瓷盘上的创意平铺情绪板，整体呈现韩系杂志美学与复古排版风格。",
+      "prompt": "将上传的照片转化为一张时尚的 OUTFIT OF THE DAY（今日穿搭）编辑风时尚拼贴画，采用 3:4 竖版构图。\n\n上半部分（50%）：\n生成一张人物全身高端时尚大片，穿着与参考图中完全一致的服装。保留人物的面部特征、发型、服饰、色彩、配饰、鞋履及自然身材比例。使用干净温暖的象牙白摄影棚背景、柔和的自然光线，以及轻松自然的模特姿态。\n\n下半部分（50%）：\n在一个精致的大号陶瓷盘上，创作一幅充满创意的平铺时尚情绪板（moodboard）。将各个穿搭单品以逼真的纸质剪贴贴纸形式呈现，带有细微的白边和柔和阴影，包括：\n- 人物的剪贴肖像。\n- 上衣、裤子或裙子。\n- 鞋子和袜子。\n- 帽子、包包、珠宝及配饰。\n- 画面中可见或与穿搭相关的其他物品。\n\n将所有元素在盘中进行美学排布，仿佛在展示一份完整的穿搭配方。\n\n设计与细节：\n在盘子上方添加优雅的复古风字体，内容为“{argument name=\"caption\" default=\"OUTFIT OF THE DAY\"}”。使用马卡龙条纹背景，盘子两侧放置超大号的银色刀叉，并点缀小巧的手绘闪光和俏皮的涂鸦。\n\n视觉风格：\n韩国高端时尚杂志美学，Pinterest 风格的编辑设计，温暖的奶油色调，柔和的马卡龙色系，逼真的产品摄影，手账拼贴风，纸质剪贴贴纸效果，柔和阴影，俏皮灵动的构图与精致的复古格调。\n\n重要提示：自动识别上传照片中的服装与配饰。请勿凭空捏造不同的穿搭，也不要改变人物身份。平铺图中的每一件物品都必须与实际穿搭或其可见配饰一一对应。\n\n超精细质感，精致的平面设计，均衡的构图，3:4 竖版海报。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1793864478489_zi6ip1_HWVlAnbaQAAf5ZF.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Sairah_0/status/2118210300654821424",
+      "sourceType": "community",
+      "authorName": "Sairah",
+      "authorHandle": "@Sairah_0",
+      "createdAt": "2026-11-05T12:00:00.000Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "产品",
+        "平面设计",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37338",
+      "rawText": "将上传的照片转化为一张时尚的 OUTFIT OF THE DAY（今日穿搭）编辑风时尚拼贴画，采用 3:4 竖版构图。\n\n上半部分（50%）：\n生成一张人物全身高端时尚大片，穿着与参考图中完全一致的服装。保留人物的面部特征、发型、服饰、色彩、配饰、鞋履及自然身材比例。使用干净温暖的象牙白摄影棚背景、柔和的自然光线，以及轻松自然的模特姿态。\n\n下半部分（50%）：\n在一个精致的大号陶瓷盘上，创作一幅充满创意的平铺时尚情绪板（moodboard）。将各个穿搭单品以逼真的纸质剪贴贴纸形式呈现，带有细微的白边和柔和阴影，包括：\n- 人物的剪贴肖像。\n- 上衣、裤子或裙子。\n- 鞋子和袜子。\n- 帽子、包包、珠宝及配饰。\n- 画面中可见或与穿搭相关的其他物品。\n\n将所有元素在盘中进行美学排布，仿佛在展示一份完整的穿搭配方。\n\n设计与细节：\n在盘子上方添加优雅的复古风字体，内容为“{argument name=\"caption\" default=\"OUTFIT OF THE DAY\"}”。使用马卡龙条纹背景，盘子两侧放置超大号的银色刀叉，并点缀小巧的手绘闪光和俏皮的涂鸦。\n\n视觉风格：\n韩国高端时尚杂志美学，Pinterest 风格的编辑设计，温暖的奶油色调，柔和的马卡龙色系，逼真的产品摄影，手账拼贴风，纸质剪贴贴纸效果，柔和阴影，俏皮灵动的构图与精致的复古格调。\n\n重要提示：自动识别上传照片中的服装与配饰。请勿凭空捏造不同的穿搭，也不要改变人物身份。平铺图中的每一件物品都必须与实际穿搭或其可见配饰一一对应。\n\n超精细质感，精致的平面设计，均衡的构图，3:4 竖版海报。"
+    },
+    {
       "id": "community-2117775627839553765",
       "title": "个人资料 / 头像 - 年轻女性柔和特写肖像",
       "description": "生成一张写实的高调特写肖像，画面中是一位面带微笑、深色头发且妆容自然的年轻女性，背景为白色。",
@@ -25586,7 +25631,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.980Z",
+      "importedAt": "2026-11-05T20:46:24.802Z",
       "tags": [
         "人像"
       ],
@@ -25627,7 +25672,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25666,7 +25711,7 @@
       "authorName": "thoufic",
       "authorHandle": "@iamthoufic",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -25707,7 +25752,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -25870,7 +25915,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.982Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25913,7 +25958,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.982Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26157,7 +26202,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.983Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "人像",
         "摄影"
@@ -26199,7 +26244,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.983Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26280,7 +26325,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.983Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "人像"
       ],
@@ -26321,7 +26366,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.983Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26360,7 +26405,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.983Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "人像",
         "摄影"
@@ -26402,7 +26447,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26562,7 +26607,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26605,7 +26650,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "人像",
         "摄影"
@@ -26770,7 +26815,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26813,7 +26858,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26856,7 +26901,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26899,7 +26944,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.803Z",
       "tags": [
         "人像"
       ],
@@ -26940,7 +26985,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "人像"
       ],
@@ -26981,7 +27026,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.984Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27024,7 +27069,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -27104,7 +27149,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27143,7 +27188,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.985Z",
+      "importedAt": "2026-11-05T20:46:24.804Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -86858,7 +86903,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.995Z",
+      "importedAt": "2026-11-05T20:46:24.807Z",
       "tags": [
         "产品",
         "平面设计",
@@ -86901,7 +86946,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.995Z",
+      "importedAt": "2026-11-05T20:46:24.807Z",
       "tags": [
         "平面设计"
       ],
@@ -86942,7 +86987,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-05T08:18:06.995Z",
+      "importedAt": "2026-11-05T20:46:24.807Z",
       "tags": [
         "平面设计"
       ],
