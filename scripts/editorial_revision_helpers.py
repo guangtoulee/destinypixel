@@ -22,6 +22,8 @@ EIGHT_SWORDS_DIR = ROOT / "content/eight-swords-update-20261102"
 EIGHT_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/eight-of-swords.json" for locale in ("en", "zh"))
 SEVEN_CUPS_DIR = ROOT / "content/seven-cups-update-20261103"
 SEVEN_CUPS_PATHS = frozenset(f"content/tarot/{locale}/seven-of-cups.json" for locale in ("en", "zh"))
+KING_PENTACLES_DIR = ROOT / "content/king-pentacles-update-20261105"
+KING_PENTACLES_PATHS = frozenset(f"content/tarot/{locale}/king-of-pentacles.json" for locale in ("en", "zh"))
 JUDGEMENT_DIR = ROOT / "content/judgement-update-20261103"
 JUDGEMENT_PATHS = frozenset({"content/tarot/zh/judgement.json"})
 MOON_DIR = ROOT / "content/moon-update-20261103"
@@ -100,6 +102,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in KING_PENTACLES_PATHS:
+        validate_king_pentacles_record(path)
+        return (KING_PENTACLES_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in SEVEN_CUPS_PATHS:
         validate_seven_cups_record(path)
         return (SEVEN_CUPS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -135,6 +140,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in KING_PENTACLES_PATHS:
+        current, _ = validate_king_pentacles_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in SEVEN_CUPS_PATHS:
         current, _ = validate_seven_cups_record(path)
         return sha(current["articleMarkdown"])
@@ -169,6 +177,106 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_king_pentacles_record(path):
+    """Check the current comparison exercise without rewriting its old approval."""
+    import jsonschema
+
+    key = sample_key(path)
+    assert key in KING_PENTACLES_PATHS, f"Not a King of Pentacles revision: {key}"
+    registry = read(KING_PENTACLES_DIR / "revisions.json")
+    assert registry["baseCommit"] == "c06f5d96327a59ad65f441fa4d012e209839fc54"
+    assert registry["updatedAt"] == "2026-11-05"
+    assert set(registry["articles"]) == {"tarot-king-of-pentacles"}
+    notes = registry["articles"]["tarot-king-of-pentacles"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(isinstance(note, str) and note.strip() for note in notes.values())
+    assert set(registry["records"]) == KING_PENTACLES_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw = Path(path).read_bytes()
+    previous_raw = (KING_PENTACLES_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    locale = Path(path).parent.name
+    legacy_key = f"{locale}/king-of-pentacles"
+    assert sha(raw) == record["fileSha256"], f"Current King of Pentacles file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current King of Pentacles complete Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical King of Pentacles file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical King of Pentacles Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected King of Pentacles metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original King of Pentacles metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original King of Pentacles metadata changed: {key}/{field}"
+    assert previous["updatedAt"] == "2026-10-08"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-05"
+    assert current["review"]["nativeHumanReview"] is False
+
+    old_sections = previous["sections"]
+    assert len(old_sections) == 12 and len(current["sections"]) == 13
+    added = [section for section in current["sections"] if section["id"] == "resources-and-freedom"]
+    assert len(added) == 1 and added[0]["role"] == "practice"
+    section = added[0]
+    assert section.keys() == {"id", "role", "title", "bodyMarkdown"}
+    assert section["title"].strip() and section["bodyMarkdown"].strip()
+    assert [item for item in current["sections"] if item["id"] != section["id"]] == old_sections, f"Original King of Pentacles text/order/anchors changed: {key}"
+    insertion = next(i for i, item in enumerate(old_sections) if item["id"] == "depth-image-reasoning") + 1
+    assert current["sections"] == old_sections[:insertion] + [section] + old_sections[insertion:], f"King of Pentacles practice inserted elsewhere: {key}"
+    assert re.findall(r"^([0-9]+)\. ", section["bodyMarkdown"], re.M) == ["1", "2", "3"], f"King of Pentacles exercise must keep all three steps: {key}"
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], f"Historical King of Pentacles source receipts changed: {key}"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "king-pentacles-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["title"].strip() and book["checkedOn"] == "2026-11-05"
+    metadata = book["sourceMetadata"]
+    assert metadata["layer"] == "modern_author_interpretation"
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Chapter 10, King of Pentacles" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == [286, 287] and metadata["printedPages"] == [287, 288]
+    assert metadata["readScopePdf"] == [286, 287]
+
+    md = current["articleMarkdown"]
+    block = f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n"
+    following = old_sections[insertion]
+    marker = f"## {following['title']}\n\n{following['bodyMarkdown']}"
+    assert previous["articleMarkdown"].count(marker) == 1
+    assert md == previous["articleMarkdown"].replace(marker, block + marker), f"King of Pentacles complete Markdown changed outside its new section: {key}"
+    assert md.startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in md
+    ids = [item["id"] for item in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for item in current["sections"] for anchor in item.get("legacyAnchors", [])]
+    if current.get("sourceAppendix"):
+        ids.append(current["sourceAppendix"]["id"])
+    assert len(ids) == len(set(ids)), f"Duplicate King of Pentacles anchors: {key}"
+    suffix = "?locale=zh" if locale == "zh" else ""
+    assert "](https://sacred-texts.com/tarot/pkt/pktpeki.htm)" in section["bodyMarkdown"]
+    assert f"](/tarot{suffix})" in section["bodyMarkdown"]
+    assert f"](/journal/tarot-fool{suffix})" in section["bodyMarkdown"]
+    assert f"](/journal/tarot-nine-of-pentacles{suffix})" in section["bodyMarkdown"]
+    assert (KING_PENTACLES_DIR / f"manuscript-{locale}.md").read_text() == md.rstrip() + "\n", f"Readable King of Pentacles manuscript differs from published source: {key}"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/king-pentacles-update-20261105/revisions.json"
+    assert revision["updatedAt"] == "2026-11-05" and revision["scope"].strip()
+
+    projected = {**current, "sections": old_sections, "sources": previous["sources"],
+                 "articleMarkdown": md.replace(block, "", 1), "updatedAt": previous["updatedAt"]}
+    projected.pop("editorialRevision")
+    assert projected == previous, f"King of Pentacles inverse projection changed old fields: {key}"
+    assert sha(json.dumps(projected, ensure_ascii=False, indent=2) + "\n") == record["previousFileSha256"], f"King of Pentacles inverse projection does not restore old bytes: {key}"
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/king-of-pentacles.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/king-of-pentacles"]["recordSha256"], f"Unedited King of Pentacles file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_seven_cups_record(path):
