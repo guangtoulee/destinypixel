@@ -38,4 +38,8 @@
 
 ## 发布
 
-待正常 main 推送后核验生产部署和四语言线上正文；尚不宣称搜索收录或流量变化。
+内容提交 `cc0e7ee829ea1bbae14746d19dccb6d548aba127` 已正常推送 main。生产部署 `dpl_FDiULa7ghQybG1zMJDuwP5km7exB` 的 Vercel GitHub 状态于 2026-11-06T02:17:11Z 显示 success。
+
+四语言线上 HTTP 检查全部通过：200、完整新版段落、title/H1、自指 canonical、语言互链与 x-default、Article 原发布日期/新修订日期，以及 sitemap lastmod 和工具链接。生产浏览器确认中文新版标题、2026-11-06 修订日与完整纽约实例。没有请求索引，不宣称新内容已经被 Google 重抓、收录或带来流量增长。
+
+Vercel 部署列表正常返回该 production 部署；后续 GitHub connector 一次迟迟未返回，已终止等待，改以 GitHub 公开 commit status 与直接线上内容交叉核验，没有扩大权限或卡在接口上。
