@@ -1,0 +1,11 @@
+{
+  "base": "http://127.0.0.1:3058",
+  "responsive": [],
+  "links": [],
+  "tool": [],
+  "pageErrors": [],
+  "blockedNonGet": 0,
+  "browser": "151.0.7922.173",
+  "status": "failed",
+  "error": "Error: expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('[data-editorial-update]')\nExpected: 1\nReceived: 0\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.count\" with timeout 5000ms\n  - waiting for locator('[data-editorial-update]')\n    14 × locator resolved to 0 elements\n       - unexpected value \"0\"\n\n    at captureRawStack (node_modules/playwright-core/lib/coreBundle.js:9681:17)\n    at callMatcherAsStep (node_modules/playwright/lib/matchers/expect.js:13310:57)\n    at Object.toHaveCount (node_modules/playwright/lib/matchers/expect.js:13300:23)\n    at metadata (scripts/check-two-swords-browser.mjs:46:57)\n    at async file://scripts/check-two-swords-browser.mjs:55:7"
+}

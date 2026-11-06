@@ -22,6 +22,8 @@ EIGHT_SWORDS_DIR = ROOT / "content/eight-swords-update-20261102"
 EIGHT_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/eight-of-swords.json" for locale in ("en", "zh"))
 SEVEN_CUPS_DIR = ROOT / "content/seven-cups-update-20261103"
 SEVEN_CUPS_PATHS = frozenset(f"content/tarot/{locale}/seven-of-cups.json" for locale in ("en", "zh"))
+TWO_SWORDS_DIR = ROOT / "content/two-swords-update-20261106"
+TWO_SWORDS_PATHS = frozenset(f"content/tarot/{locale}/two-of-swords.json" for locale in ("en", "zh"))
 KING_PENTACLES_DIR = ROOT / "content/king-pentacles-update-20261105"
 KING_PENTACLES_PATHS = frozenset(f"content/tarot/{locale}/king-of-pentacles.json" for locale in ("en", "zh"))
 JUDGEMENT_DIR = ROOT / "content/judgement-update-20261103"
@@ -104,6 +106,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in TWO_SWORDS_PATHS:
+        validate_two_swords_record(path)
+        return (TWO_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in KING_PENTACLES_PATHS:
         validate_king_pentacles_record(path)
         return (KING_PENTACLES_DIR / "previous" / sample_key(path)).read_bytes()
@@ -145,6 +150,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in TWO_SWORDS_PATHS:
+        current, _ = validate_two_swords_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in KING_PENTACLES_PATHS:
         current, _ = validate_king_pentacles_record(path)
         return sha(current["articleMarkdown"])
@@ -185,6 +193,92 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_two_swords_record(path):
+    """Preserve the old complete record while validating today's single addition."""
+    import jsonschema
+
+    key = sample_key(path)
+    assert key in TWO_SWORDS_PATHS, f"Not a Two of Swords revision: {key}"
+    registry = read(TWO_SWORDS_DIR / "revisions.json")
+    assert registry["baseCommit"] == "d8e059ed1a895e409c625865b64909126566dd82"
+    assert registry["updatedAt"] == "2026-11-06"
+    assert set(registry["articles"]) == {"tarot-two-of-swords"}
+    notes = registry["articles"]["tarot-two-of-swords"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(isinstance(note, str) and note.strip() for note in notes.values())
+    assert set(registry["records"]) == TWO_SWORDS_PATHS
+    receipt = registry["records"][key]
+    assert set(receipt) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in receipt.values())
+    raw = Path(path).read_bytes()
+    previous_raw = (TWO_SWORDS_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    locale = Path(path).parent.name
+    legacy_key = f"{locale}/two-of-swords"
+    assert sha(raw) == receipt["fileSha256"], f"Current Two of Swords bytes differ from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == receipt["articleMarkdownSha256"], f"Current Two of Swords full manuscript differs from receipt: {key}"
+    assert sha(previous_raw) == receipt["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Two of Swords approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == receipt["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Two of Swords full manuscript approval changed: {key}"
+
+    allowed = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() == {"editorialRevision"}, f"Unexpected new metadata: {key}"
+    assert previous.keys() <= current.keys(), f"Original metadata lost: {key}"
+    for field in previous.keys() - allowed:
+        assert current[field] == previous[field], f"Original Two of Swords field changed: {key}/{field}"
+    assert current["review"]["nativeHumanReview"] is False
+    assert previous["updatedAt"] == "2026-10-08"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-06"
+    old_sections = previous["sections"]
+    assert len(old_sections) == 11 and len(current["sections"]) == 12
+    added = [section for section in current["sections"] if section["id"] == "armed-truce"]
+    assert len(added) == 1 and added[0]["role"] == "practice"
+    section = added[0]
+    assert section.keys() == {"id", "role", "title", "bodyMarkdown"}
+    assert section["title"].strip() and section["bodyMarkdown"].strip()
+    insertion = next(i for i, old in enumerate(old_sections) if old["id"] == "section-02") + 1
+    assert current["sections"] == old_sections[:insertion] + [section] + old_sections[insertion:], f"Original text/order/anchors changed: {key}"
+    assert re.findall(r"^([0-9]+)\. ", section["bodyMarkdown"], re.M) == ["1", "2", "3"], f"Missing three-step learning exercise: {key}"
+    assert current["sources"][:-1] == previous["sources"], f"Original source receipts changed: {key}"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    source = current["sources"][-1]
+    assert source["sourceId"] == "two-swords-waite-recheck-20261106"
+    assert source["type"] == "original_text_crosscheck"
+    assert source["url"] == "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/two-of-swords"
+    assert source["title"].strip() and source["checkedOn"] == "2026-11-06"
+    assert "](" + source["url"] + ")" in section["bodyMarkdown"]
+    assert not ({"pdfPages", "printedPages", "readScopePdf"} & source.get("sourceMetadata", {}).keys()), f"HTML recheck must not gain invented book pages: {key}"
+
+    md = current["articleMarkdown"]
+    block = f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n"
+    following = old_sections[insertion]
+    marker = f"## {following['title']}\n\n{following['bodyMarkdown']}"
+    assert previous["articleMarkdown"].count(marker) == 1
+    assert md == previous["articleMarkdown"].replace(marker, block + marker), f"Manuscript changed outside addition: {key}"
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in md
+    ids = [item["id"] for item in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for item in current["sections"] for anchor in item.get("legacyAnchors", [])]
+    assert len(ids) == len(set(ids)), f"Duplicate anchor: {key}"
+    suffix = "?locale=zh" if locale == "zh" else ""
+    assert f"](/tarot{suffix})" in section["bodyMarkdown"]
+    assert (TWO_SWORDS_DIR / f"manuscript-{locale}.md").read_text() == md.rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/two-swords-update-20261106/revisions.json"
+    assert revision["updatedAt"] == "2026-11-06" and revision["scope"].strip()
+    projected = {**current, "sections": old_sections, "sources": previous["sources"],
+                 "articleMarkdown": md.replace(block, "", 1), "updatedAt": previous["updatedAt"]}
+    projected.pop("editorialRevision")
+    assert projected == previous, f"Inverse projection changed original record: {key}"
+    assert sha(json.dumps(projected, ensure_ascii=False, indent=2) + "\n") == receipt["previousFileSha256"], f"Inverse projection fails original byte hash: {key}"
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/two-of-swords.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/two-of-swords"]["recordSha256"]
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_king_pentacles_record(path):

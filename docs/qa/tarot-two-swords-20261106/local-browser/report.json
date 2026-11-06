@@ -1,0 +1,222 @@
+{
+  "base": "http://127.0.0.1:3058",
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 320,
+        "viewport": 320,
+        "article": 294,
+        "articleClient": 294,
+        "headingTop": 29.59375
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 390,
+        "viewport": 390,
+        "article": 364,
+        "articleClient": 364,
+        "headingTop": 30.296875
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 1440,
+        "viewport": 1440,
+        "article": 1182,
+        "articleClient": 1182,
+        "headingTop": 30.234375
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 320,
+        "viewport": 320,
+        "article": 294,
+        "articleClient": 294,
+        "headingTop": 29.6875
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 390,
+        "viewport": 390,
+        "article": 364,
+        "articleClient": 364,
+        "headingTop": 29.84375
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 1440,
+        "viewport": 1440,
+        "article": 1182,
+        "articleClient": 1182,
+        "headingTop": 29.796875
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "href": "/tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-four-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-justice",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-ace-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-eight-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-three-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-four-of-swords?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-justice?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-ace-of-swords?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-eight-of-swords?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-three-of-swords?locale=zh",
+      "status": 200
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh",
+      "status": 200
+    }
+  ],
+  "tool": [
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "keyboardInlineCta": true,
+      "matchingLanguage": true,
+      "freeDraw": {
+        "cardId": "nine-of-wands",
+        "reversalsDisabled": true,
+        "revealed": true,
+        "meaningOpened": true
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "keyboardInlineCta": true,
+      "matchingLanguage": true,
+      "freeDraw": {
+        "cardId": "page-of-cups",
+        "reversalsDisabled": true,
+        "revealed": true,
+        "meaningOpened": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "blockedNonGet": 0,
+  "browser": "151.0.7922.173",
+  "languageAndHistory": true,
+  "status": "passed"
+}

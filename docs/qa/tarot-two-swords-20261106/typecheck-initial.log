@@ -1,0 +1,4 @@
+Observed initial integration check; exact compiler diagnostic retained from exec result (exit 2):
+lib/two-swords-update.test.ts(70,22): error TS2339: Property 'editorialRevision' does not exist on type '{ sections: { id: string; role: string; title: string; bodyMarkdown: string; legacyAnchors?: string[] | undefined; }[]; sources: Source[]; articleMarkdown: string; updatedAt: string | undefined; ... 18 more ...; relatedCards: { ...; }[]; }'.
+
+Resolution: annotate the inverse projection as Record<string, unknown> before deleting editorialRevision; no article content or test assertion changed.

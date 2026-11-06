@@ -1,0 +1,63 @@
+{
+  "baseline": {
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ],
+    "assertionValues": [
+      "80,",
+      "75,",
+      "998,",
+      "982,",
+      "80,",
+      "75,",
+      "c78a40ae26a9bd81f12558840bfcb41506e69dad6d6a5f695b0c41d9cd882c97',",
+      "d1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587',",
+      "a8a193574f5ac3ae967c2a8bbaf989bc731e5890bd7ac8217e82ec1977d352c4',",
+      "4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e',",
+      "407a6abfbf117ae6b4341e98ddf6cd89e59a195e8688d86d237bcf150a5c627c',",
+      "597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5',"
+    ],
+    "totals": {
+      "tests": "376",
+      "pass": "370",
+      "fail": "6"
+    }
+  },
+  "current": {
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ],
+    "assertionValues": [
+      "80,",
+      "75,",
+      "998,",
+      "982,",
+      "80,",
+      "75,",
+      "c78a40ae26a9bd81f12558840bfcb41506e69dad6d6a5f695b0c41d9cd882c97',",
+      "d1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587',",
+      "a8a193574f5ac3ae967c2a8bbaf989bc731e5890bd7ac8217e82ec1977d352c4',",
+      "4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e',",
+      "407a6abfbf117ae6b4341e98ddf6cd89e59a195e8688d86d237bcf150a5c627c',",
+      "597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5',"
+    ],
+    "totals": {
+      "tests": "379",
+      "pass": "373",
+      "fail": "6"
+    }
+  },
+  "sameFailureNames": true,
+  "sameAssertionValues": true,
+  "assertionsCompared": 12
+}

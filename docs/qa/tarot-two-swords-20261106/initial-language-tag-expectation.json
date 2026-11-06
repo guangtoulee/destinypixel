@@ -1,0 +1,104 @@
+{
+  "base": "http://127.0.0.1:3058",
+  "responsive": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 320,
+        "viewport": 320,
+        "article": 294,
+        "articleClient": 294,
+        "headingTop": 29.59375
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 390,
+        "viewport": 390,
+        "article": 364,
+        "articleClient": 364,
+        "headingTop": 30.296875
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "completeSections": 12,
+      "completeOpening": true,
+      "metadata": true,
+      "imagesLoaded": true,
+      "toc": true,
+      "layout": {
+        "document": 1440,
+        "viewport": 1440,
+        "article": 1182,
+        "articleClient": 1182,
+        "headingTop": 30.234375
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200
+    },
+    {
+      "href": "/tarot/attribution.json",
+      "status": 200
+    },
+    {
+      "href": "/tarot",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-four-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-justice",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-ace-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-eight-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/tarot-three-of-swords",
+      "status": 200
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist",
+      "status": 200
+    }
+  ],
+  "tool": [],
+  "pageErrors": [],
+  "blockedNonGet": 0,
+  "browser": "151.0.7922.173",
+  "status": "failed",
+  "error": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('html')\nExpected: \"zh-Hans\"\nReceived: \"zh-CN\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.attribute.value\" with timeout 5000ms\n  - waiting for locator('html')\n    14 × locator resolved to <html lang=\"zh-CN\" data-scroll-behavior=\"smooth\">…</html>\n       - unexpected value \"zh-CN\"\n\n    at captureRawStack (node_modules/playwright-core/lib/coreBundle.js:9681:17)\n    at callMatcherAsStep (node_modules/playwright/lib/matchers/expect.js:13310:57)\n    at Object.toHaveAttribute (node_modules/playwright/lib/matchers/expect.js:13300:23)\n    at metadata (scripts/check-two-swords-browser.mjs:37:38)\n    at async file://scripts/check-two-swords-browser.mjs:55:7"
+}
