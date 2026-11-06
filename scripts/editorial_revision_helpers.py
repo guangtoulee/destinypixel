@@ -36,6 +36,8 @@ DEVIL_DIR = ROOT / "content/devil-update-20261104"
 DEVIL_PATHS = frozenset({"content/tarot/zh/devil.json"})
 TEMPERANCE_DIR = ROOT / "content/temperance-update-20261105"
 TEMPERANCE_PATHS = frozenset({"content/tarot/zh/temperance.json"})
+WORLD_DIR = ROOT / "content/world-update-20261106"
+WORLD_PATHS = frozenset({"content/tarot/zh/world.json"})
 
 
 def sha(raw):
@@ -120,6 +122,9 @@ def historical_bytes(path):
     if sample_key(path) in TEMPERANCE_PATHS:
         validate_temperance_record(path)
         return (TEMPERANCE_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in WORLD_PATHS:
+        validate_world_record(path)
+        return (WORLD_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         validate_eight_swords_record(path)
         return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -163,6 +168,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in TEMPERANCE_PATHS:
         current, _ = validate_temperance_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in WORLD_PATHS:
+        current, _ = validate_world_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         current, _ = validate_eight_swords_record(path)
@@ -1075,6 +1083,136 @@ def validate_devil_record(path):
         unedited = ROOT / f"content/tarot/{unedited_locale}/devil.json"
         assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/devil"]["recordSha256"], f"Unedited Devil file changed: {unedited_locale}"
         assert read(unedited)["updatedAt"] == "2026-10-08"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_world_record(path):
+    """Validate the Chinese Pollack supplement and keep the prior World receipt."""
+    key = sample_key(path)
+    assert key in WORLD_PATHS, f"Not a World revision: {key}"
+    registry = read(WORLD_DIR / "revisions.json")
+    assert registry["baseCommit"] == "92ac728529b86b7177defb3dcb7996a69aa3648d"
+    assert registry["updatedAt"] == "2026-11-06"
+    assert set(registry["articles"]) == {"tarot-world"}
+    notes = registry["articles"]["tarot-world"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    assert set(registry["records"]) == WORLD_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (WORLD_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/world"
+    assert sha(raw) == record["fileSha256"], f"Current World file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current World Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical World file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical World Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected World metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original World metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original World metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-06"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+    assert current["relatedCards"] == previous["relatedCards"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么完成之后还要往下走"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-03"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == (0 if old["id"] == "section-01" else 1)
+        else:
+            assert section == old, f"Original World section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("Pollack", "魔术师", "女祭司", "显与隐", "行动与静观", "178", "从外部看见流转", "活着的整合", "不是 Waite 原文", "神秘等级", "/journal/tarot-wheel?locale=zh", "/journal/tarot-magician?locale=zh", "/journal/tarot-high-priestess?locale=zh"):
+        assert phrase in image, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("Pollack", "合一与生意", "可辨认的阶段", "动态牌", "愚者的 0", "∞", "179", "下一程从哪一小步开始", "人生总决赛", "/journal/tarot-fool?locale=zh", "/journal/tarot-judgement?locale=zh", "/journal/tarot-sun?locale=zh"):
+        assert phrase in sequence, phrase
+    assert "绿色" not in sequence, "depth-sequence must not extend the green wreath"
+    assert sequence.count("\n\n") == 1
+    reverse = next(section for section in current["sections"] if section["id"] == "section-03")["bodyMarkdown"]
+    added_reverse = reverse[len(next(section for section in previous["sections"] if section["id"] == "section-03")["bodyMarkdown"]):].strip()
+    for phrase in ("Pollack", "182", "表象", "潜伏潜能", "完成永远作废", "证据", "潜能还在", "真实停滞", "拖延必须落地的收尾"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("物质被提升", "神圣不要求离开", "现稿已", "太阳页已写", "湿婆", "亚当", "生命之树", "脉轮", "E=mc", "吊人"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original World source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "world-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-06" and book["title"] == "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；世界章，印刷／PDF 178–182"
+    assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("world-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The World" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [178, 179, 180, 181, 182]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-03"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "World Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate World anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (WORLD_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/world-update-20261106/revisions.json"
+    assert revision["updatedAt"] == "2026-11-06" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/world.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/world"]["recordSha256"], f"Unedited World file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+        assert "Pollack" not in read(unedited)["articleMarkdown"]
+        assert "depth-sequence" not in read(unedited)["articleMarkdown"]
     try:
         import jsonschema
     except ImportError:
