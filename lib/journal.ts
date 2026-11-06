@@ -1,3 +1,4 @@
+import { birthInputArticle } from "@/lib/journal-birth-input";
 import type { Metadata } from "next";
 import { tarotEducationArticles } from "@/lib/journal-tarot-editorial";
 import { tarotMethodArticles } from "@/lib/journal-tarot-methods";
@@ -80,100 +81,7 @@ const journalSources: JournalSourceArticle[] = [
   jiaZiArticle,
   ...pillarProfileArticles,
   dayPillarIntroduction,
-  {
-    slug: "prepare-birth-date-time-place",
-    publishedAt: "2026-09-11",
-    updatedAt: "2026-09-11",
-    translations: {
-      en: {
-        title: "Before your birth chart: prepare the date, time and place",
-        description: "A practical birth-chart checklist: recorded local time, birthplace, daylight-saving uncertainty and what DestinyPixel currently does with your input.",
-        topic: "Birth map essentials",
-        introduction: "A useful first birth chart starts with a clear record. If the date is ambiguous, the time is a family estimate, or the city belongs to a different time zone, a beautifully written interpretation cannot resolve those uncertainties. This guide helps you prepare one consistent set of birth details for DestinyPixel, understand the current time calculation, and keep the result in proportion to the information you actually have.",
-        takeaway: "Keep the original local date and time, select the actual birthplace, and record uncertainty. Date-specific time-zone rules are applied automatically; repeated or skipped clock times need further verification.",
-        sections: [
-          {
-            id: "original-record",
-            title: "1. Start with the original record",
-            paragraphs: ["Look for a birth certificate or a contemporaneous hospital record if one is available to you. Write down the time exactly as recorded, including whether it uses a 12-hour or 24-hour clock. A remembered “around breakfast” is still useful family history, but it should not quietly become an exact 08:00 in your notes.", "Separate what the record says from your interpretation of it. Keep a note such as “07:40, copied from certificate” or “between 07:00 and 08:00, family recollection.” You do not need to upload the document to use the birth form. The aim is an accurate input record, not a collection of private paperwork."],
-            table: {
-              headings: ["Detail", "What to check"],
-              rows: [["Date", "Year, month and day; confirm which calendar the record uses."], ["Time", "Hours and minutes, AM/PM if relevant, and whether it is estimated."], ["Place", "Birth city and country, rather than your current home."], ["Time uncertainty", "Any known daylight-saving or clock-change issue at that date."]],
-            },
-          },
-          {
-            id: "local-clock",
-            title: "2. Keep the clock time attached to its place",
-            paragraphs: ["For this form, start from the recorded local civil date and time in the birthplace. Do not convert a New York birth into Beijing time because you now live in China, or change a London birth into the time on your present phone. Do not pre-adjust it to solar time either: DestinyPixel applies its own correction after submission.", "If a record uses a lunar calendar date, first obtain a verified Gregorian equivalent and retain both versions in your notes. The current form expects a Gregorian calendar date; it has no lunar-calendar toggle. If an AM/PM conversion crosses midnight, check the date as well as the hour instead of treating them as unrelated fields."],
-          },
-          {
-            id: "time-limits",
-            title: "3. Separate civil time, solar time and the sky",
-            paragraphs: ["Civil time and solar time answer different questions. Civil time follows a place’s clock rules. A solar-time correction accounts for longitude and the changing relationship between the Sun and a uniform clock. NOAA’s solar equations separate these terms; a longitude correction alone cannot resolve the civil-time offset.", "DestinyPixel uses the selected city’s IANA time zone and birth date to obtain the UTC instant, including historical offsets and daylight saving. Its Bazi model separately applies longitude and an approximate equation of time to produce a solar clock. Planetary longitudes use the UTC instant and Astronomy Engine’s geocentric calculations; they do not use that solar-clock label as UTC. Year and month change at precise LiChun/Jie instants; the solar-clock day changes at midnight. These calculations do not validate the symbolic interpretation. The supported calculation range is 1800–2100.", "If clocks jumped forward or repeated an hour, the form rejects a nonexistent or ambiguous time. It cannot yet choose between the two occurrences of a repeated time. Keep the original record, investigate the ambiguity and contact us before continuing. Do not silently subtract an hour or alter a valid record to bypass the check. Historical records and time-zone data can still contain uncertainty, so unusual cases deserve an independent check."],
-            sources: [{ label: "IANA: what the Time Zone Database records", href: "https://www.iana.org/time-zones" }, { label: "NOAA: general solar-position equations (PDF)", href: "https://gml.noaa.gov/grad/solcalc/solareqns.PDF" }, { label: "Astronomy Engine: time and geocentric coordinates", href: "https://github.com/cosinekitty/astronomy/tree/master/source/js" }, { label: "Lunar library: Four Pillars boundary conventions", href: "https://6tail.cn/calendar/lunar.ganzhi.html" }],
-          },
-          {
-            id: "city-choice",
-            title: "4. Select a supported birthplace deliberately",
-            paragraphs: ["Choose the full matching city from the suggestions, including its country. The current list is limited. Typing an unlisted town does not create a new location with verified coordinates, and selecting a familiar city in another country changes the assumptions behind the result.", "If your birthplace is absent, stop short of calling a nearby-city result precise. Keep a note of the actual place and the substitute if you make an exploratory comparison. Requesting support for the missing location is more useful than disguising a substitute as the original record."],
-          },
-          {
-            id: "unknown-time",
-            title: "5. Keep uncertainty visible when you read",
-            paragraphs: ["The birth map asks for a time, and this version does not offer an unknown-time calculation. If you do not know it, the Question Oracle or bracelet atelier lets you explore without inventing a birth hour. A noon placeholder is a placeholder, not a recovered fact.", "With a documented time range, comparing the endpoints can reveal whether the displayed structure changes. Label the comparison as a sensitivity exercise. It cannot determine which birth time is correct, and identical output does not prove that all intermediate assumptions are accurate."],
-          },
-          {
-            id: "first-reading",
-            title: "6. Make one reproducible first reading",
-            paragraphs: ["Before generating, review the complete date, time, selected city and the form’s gender option. Keep those choices consistent if you compare the birth map with Birth Totem; changing several fields at once makes differences difficult to understand.", "Begin your review with the input details and displayed calculation, then move to the symbolic interpretation. Pick one theme and compare it with a specific experience rather than accepting the whole description as a verdict. DestinyPixel’s animal archetypes and Birth Totem are interpretive visual systems. Clear inputs make an experiment easier to reproduce; they do not turn a symbolic reading into evidence about your abilities or future."],
-          },
-        ],
-        action: { label: "Prepare a birth map", href: "/#report" },
-      },
-      zh: {
-        title: "排盘之前：把出生日期、时间和地点准备清楚",
-        description: "出生资料核对指南：当地钟表时间、出生地、夏令时的不确定性，以及 DestinyPixel 当前时间换算的实际边界。",
-        topic: "出生图谱入门",
-        introduction: "第一次排盘，先把资料弄清楚，比先读一段漂亮的解释更有帮助。日期是否换过历法、几点是家人口述还是原始记录、选择的城市是否就是出生地，都会影响后续判断。这篇指南帮助你建立一份能够复核的输入资料，并理解 DestinyPixel 当前时间计算能做什么、还有哪些限制。",
-        takeaway: "保留出生地当时记录的日期和钟表时间，选择真实出生城市，并注明不确定之处。工具会按出生日期应用时区规则，重复或不存在的钟表时间则需要额外核实。",
-        sections: [
-          {
-            id: "original-record",
-            title: "1. 先找原始记录，再写自己的判断",
-            paragraphs: ["如果手边有出生证明或当年的医院记录，先逐字核对年月日、时分，以及记录采用十二小时制还是二十四小时制。家人记得“早饭前后”也是有价值的信息，但不要在没有依据时把它变成精确的 08:00。", "把记录和推断分开保存，例如“07:40，来自出生证明”或“07:00—08:00，家人口述”。使用出生表单不需要上传证明文件；你需要的是一份准确的输入笔记，而不是把私人证件交给工具。"],
-            table: { headings: ["资料", "核对内容"], rows: [["日期", "完整年月日，以及原始记录采用的历法。"], ["时间", "时、分、上午或下午，是否只是估计。"], ["地点", "出生城市和国家，而不是现在居住的城市。"], ["时间疑问", "该日期是否可能涉及夏令时或历史调钟。"]] },
-          },
-          {
-            id: "local-clock",
-            title: "2. 时间应当跟着出生地走",
-            paragraphs: ["填写时，以出生地当时记录的当地民用日期和钟表时间为起点。不要因为现在住在中国，就把纽约出生时间换成北京时间；也不要把伦敦的记录改成当前手机显示的时区。无需先做太阳时校正，工具会在提交后执行自己的换算。", "原始资料如果写的是农历，先核实对应的公历日期，并把两种日期都保留在笔记里。当前表单接收公历日期，没有农历切换选项。处理上午、下午或跨过午夜的时间时，日期也必须一起检查，不能只改小时。"],
-          },
-          {
-            id: "time-limits",
-            title: "3. 区分民用时间、太阳时与实际星空",
-            paragraphs: ["民用时间遵循当地钟表制度；太阳时修正则涉及经度，以及太阳运行与均匀钟表时间之间的差异。NOAA 的太阳位置计算将这些因素分开处理。仅凭经度修正，无法确定出生地当时采用的民用时差。", "DestinyPixel 按所选城市的 IANA 时区和出生日期换算 UTC 时刻，包含历史时差与夏令时。八字模型另外应用经度修正和近似均时差，得到太阳时钟。行星黄经则使用 UTC 时刻与 Astronomy Engine 的地心计算，不会把校正后的太阳时标签当作 UTC。年柱、月柱分别在立春和十二节的准确时刻切换；日柱采用当地太阳时午夜换日。这些计算不会为象征性解读提供科学证明。目前支持的计算年份为 1800—2100 年。", "如果记录落在调钟跳过或重复的时段，表单会拒绝这个不存在或含糊的时间。目前暂不能在重复时段的两个实际时刻之间选择。请保留原始记录，核实歧义并联系我们，再继续尝试；不要悄悄减去一小时，也不要为了通过校验改掉有效记录。历史记录和时区数据仍可能存在不确定性，特殊情况值得另行核对。"],
-            sources: [{ label: "IANA：时区数据库记录哪些规则", href: "https://www.iana.org/time-zones" }, { label: "NOAA：太阳位置计算公式（PDF）", href: "https://gml.noaa.gov/grad/solcalc/solareqns.PDF" }, { label: "Astronomy Engine：时间与地心坐标", href: "https://github.com/cosinekitty/astronomy/tree/master/source/js" }, { label: "Lunar 历法库：四柱交界约定", href: "https://6tail.cn/calendar/lunar.ganzhi.html" }],
-          },
-          {
-            id: "city-choice",
-            title: "4. 从建议列表中选对出生城市",
-            paragraphs: ["选择带有国家信息的完整城市名称。当前支持的城市有限，输入一个没有收录的县镇，不会自动建立经过核实的新坐标。选择另一个国家里熟悉的城市，也会改变结果的前提。", "如果真实出生地不在列表里，不要把邻近城市的试算说成精确排盘。确实要做探索性比较时，在自己的笔记中写明实际出生地和替代城市。反馈需要支持的地点，比把替代信息当成原始记录更有帮助。"],
-          },
-          {
-            id: "unknown-time",
-            title: "5. 不知道几点，就保留这个“不知道”",
-            paragraphs: ["出生图谱要求填写时间，当前没有“不知道出生时刻”的计算模式。可以先用问事专区或手串工坊，不必为了进入页面编一个出生小时。填写中午十二点只是设定了一个占位值，不是找回了事实。", "若原始资料给出了可信的时间范围，可以比较范围两端的展示结构是否变化，并注明这只是敏感性比较。它不能反向证明哪个时刻正确；两个结果相同，也不代表中间所有时间假设都已经准确。"],
-          },
-          {
-            id: "first-reading",
-            title: "6. 完成一次可以复核的体验",
-            paragraphs: ["生成前，把日期、时间、所选城市和表单中的性别选项一起检查。比较出生图谱与本命灵构时，保持这组资料一致，避免同时改动多个字段后不知道差异从哪里来。", "先查看输入资料和显示的计算，再读象征性解释。选出一个主题，用自己的一段具体经历去对照，而不是接受整篇文字作为定论。DestinyPixel 的动物原型和本命灵构是解释与视觉表达系统。清楚的输入让体验更容易复现，并不会让象征性解读变成对能力或未来的证明。"],
-          },
-        ],
-        action: { label: "准备我的出生图谱", href: "/?locale=zh#report" },
-      },
-    },
-  },
+  birthInputArticle,
   {
     slug: "five-element-bracelet-design",
     relatedSlug: "crystal-bracelet-care",
