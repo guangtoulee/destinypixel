@@ -1,0 +1,88 @@
+{
+  "scope": "Full Node test suite; compares failure names, relative files, assertion messages, actual values, expected values and operators while excluding durations, stack paths and line offsets.",
+  "logs": {
+    "baseline": "tests-baseline.log",
+    "current": "tests-current.log"
+  },
+  "baseline": {
+    "tests": 379,
+    "pass": 373,
+    "fail": 6,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "current": {
+    "tests": 382,
+    "pass": 376,
+    "fail": 6,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sameFailures": true,
+  "newFailures": [],
+  "resolvedFailures": [],
+  "unchangedFailures": [
+    {
+      "name": "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "file": "lib/day-pillar-people-second-batch.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "Expected values to be strictly equal:",
+      "actual": 80,
+      "expected": 75,
+      "operator": "strictEqual"
+    },
+    {
+      "name": "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "file": "lib/day-pillar-people-second-batch.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "Expected values to be strictly equal:",
+      "actual": 998,
+      "expected": 982,
+      "operator": "strictEqual"
+    },
+    {
+      "name": "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "file": "lib/day-pillar-people.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "Expected values to be strictly equal:",
+      "actual": 80,
+      "expected": 75,
+      "operator": "strictEqual"
+    },
+    {
+      "name": "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "file": "lib/editorial-updates.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "a URL or date outside the edited editions changed",
+      "actual": "c78a40ae26a9bd81f12558840bfcb41506e69dad6d6a5f695b0c41d9cd882c97",
+      "expected": "d1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587",
+      "operator": "strictEqual"
+    },
+    {
+      "name": "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "file": "lib/editorial-updates.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "a URL or date outside this birthday rollout changed",
+      "actual": "a8a193574f5ac3ae967c2a8bbaf989bc731e5890bd7ac8217e82ec1977d352c4",
+      "expected": "4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e",
+      "operator": "strictEqual"
+    },
+    {
+      "name": "the original 75 journal date receipt stays intact while current editions use their actual dates",
+      "file": "lib/editorial-updates.test.ts",
+      "errorCode": "ERR_ASSERTION",
+      "message": "shared article dates changed instead of applying an edition-specific revision",
+      "actual": "407a6abfbf117ae6b4341e98ddf6cd89e59a195e8688d86d237bcf150a5c627c",
+      "expected": "597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5",
+      "operator": "strictEqual"
+    }
+  ],
+  "addedPassingTests": [
+    "the interpretation-fit addition restores the fixed predecessor bytes and all earlier content in every edition",
+    "the fixed-card exercise keeps real position labels, distinct candidate checks and separately identified sources",
+    "only the authored pair gains November 7 dates while every established URL and discovery entry remains available"
+  ],
+  "conclusion": "Three added tests pass. All six pre-existing failures retain identical assertion names, actual values, expected values, messages and operators. The full suite is not wholly passing."
+}

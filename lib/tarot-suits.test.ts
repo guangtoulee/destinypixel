@@ -8,6 +8,7 @@ import celticRevision from "@/content/celtic-significator-20261101/revision.json
 import clarifierRevision from "@/content/celtic-clarifier-20261104/revision.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import sourceReview from "@/content/tarot-suit-patterns-20261031/source-review.json";
+import { sourceBeforeInterpretationFit } from "@/lib/tarot-interpretation-fit.test-helpers";
 import { celestialCopy } from "@/lib/celestial/copy";
 import { getJournalArticle, journalAlternates, journalArticleLocale, journalArticleLocales, journalArticleSchema, journalArticles, journalHref, journalLocales, journalMetadata, type JournalTranslation } from "@/lib/journal";
 import { journalLanguageTags } from "@/lib/journal-locales";
@@ -205,6 +206,10 @@ test("the suit guide retains its immutable historical receipts while validating 
       delete projected.editorialRevision;
       assert.deepEqual(projected, previous, `${path}: the later card revision changed original fields beyond its recorded addition`);
       assert.equal(digest(JSON.stringify(projected, null, 2) + "\n"), expected, `${path}: the historical projection does not restore the original bytes`);
+      continue;
+    }
+    if (path === "lib/journal-three-card-tarot.ts") {
+      assert.equal(digest(sourceBeforeInterpretationFit()), expected, `${path}: the later addition does not reproduce the immutable suit-guide receipt`);
       continue;
     }
     if (!laterPaths.includes(path)) {

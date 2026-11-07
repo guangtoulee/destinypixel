@@ -13,6 +13,7 @@ import queenSwordsRevision from "@/content/queen-swords-update-20261023/revision
 import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
 import starRevision from "@/content/star-update-20261025/revisions.json";
 import questionScopeRevision from "@/content/three-card-question-scope-20261030/revisions.json";
+import interpretationFitRevision from "@/content/three-card-interpretation-fit-20261107/revisions.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import sevenCupsRevision from "@/content/seven-cups-update-20261103/revisions.json";
 import twoSwordsRevision from "@/content/two-swords-update-20261106/revisions.json";
@@ -63,7 +64,7 @@ const isJudgementZh = (slug: string, locale: ReportLocale) => slug === "tarot-ju
 const isMoonZh = (slug: string, locale: ReportLocale) => slug === "tarot-moon" && locale === "zh";
 const isSunZh = (slug: string, locale: ReportLocale) => slug === "tarot-sun" && locale === "zh";
 const isRevised = (slug: string, locale: ReportLocale) => isDeathZh(slug, locale) || isWorldZh(slug, locale) || isTemperanceZh(slug, locale) || isDevilZh(slug, locale) || isTowerZh(slug, locale) || isJudgementZh(slug, locale) || slug === "tarot-queen-of-swords" || (slug === "tarot-two-of-swords" || slug === "tarot-king-of-pentacles" || slug === "tarot-seven-of-cups" || slug === "tarot-eight-of-swords" || slug === "how-to-read-three-card-tarot" || slug === "tarot-star" || slug === "tarot-hanged-man" || revisedSlugs.includes(slug)) && revisedLocales.includes(locale);
-const expectedDate = (slug: string, locale: ReportLocale, previous: string) => isDeathZh(slug, locale) ? "2026-11-07" : isWorldZh(slug, locale) ? "2026-11-06" : isTemperanceZh(slug, locale) ? "2026-11-05" : isDevilZh(slug, locale) || isTowerZh(slug, locale) ? "2026-11-04" : isJudgementZh(slug, locale) || isMoonZh(slug, locale) || isSunZh(slug, locale) ? "2026-11-03" : slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-two-of-swords" ? "2026-11-06" : slug === "tarot-king-of-pentacles" ? "2026-11-05" : slug === "tarot-seven-of-cups" ? "2026-11-03" : slug === "tarot-eight-of-swords" ? "2026-11-02" : slug === "how-to-read-three-card-tarot" ? "2026-10-30" : slug === "tarot-star" ? "2026-10-25" : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
+const expectedDate = (slug: string, locale: ReportLocale, previous: string) => isDeathZh(slug, locale) ? "2026-11-07" : isWorldZh(slug, locale) ? "2026-11-06" : isTemperanceZh(slug, locale) ? "2026-11-05" : isDevilZh(slug, locale) || isTowerZh(slug, locale) ? "2026-11-04" : isJudgementZh(slug, locale) || isMoonZh(slug, locale) || isSunZh(slug, locale) ? "2026-11-03" : slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-two-of-swords" ? "2026-11-06" : slug === "tarot-king-of-pentacles" ? "2026-11-05" : slug === "tarot-seven-of-cups" ? "2026-11-03" : slug === "tarot-eight-of-swords" ? "2026-11-02" : slug === "how-to-read-three-card-tarot" ? "2026-11-07" : slug === "tarot-star" ? "2026-10-25" : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
 const modifiedTime = (metadata: Metadata) => metadata.openGraph && "modifiedTime" in metadata.openGraph ? metadata.openGraph.modifiedTime : undefined;
 
 // Membership independently checked against `git archive 179c14e1f6d5bf19a244adeaef84d13ba79ce4b1`:
@@ -164,6 +165,10 @@ test("revision registries apply only to their actually edited language editions"
   assert.equal(questionScopeRevision.updatedAt, "2026-10-30");
   assert.deepEqual(Object.keys(questionScopeRevision.articles), ["how-to-read-three-card-tarot"]);
   assert.deepEqual(Object.keys(questionScopeRevision.articles["how-to-read-three-card-tarot"].notes).sort(), revisedLocales);
+  assert.equal(interpretationFitRevision.baseCommit, "52b457f7bf7c6a7e6f7e753407ab26f7b695a08f");
+  assert.equal(interpretationFitRevision.updatedAt, "2026-11-07");
+  assert.deepEqual(Object.keys(interpretationFitRevision.articles), ["how-to-read-three-card-tarot"]);
+  assert.deepEqual(Object.keys(interpretationFitRevision.articles["how-to-read-three-card-tarot"].notes).sort(), revisedLocales);
   assert.equal(eightSwordsRevision.baseCommit, "7c162a22012d8909b8b8146df573c9d36e16d4b5");
   assert.equal(eightSwordsRevision.updatedAt, "2026-11-02");
   assert.deepEqual(Object.keys(eightSwordsRevision.articles), ["tarot-eight-of-swords"]);

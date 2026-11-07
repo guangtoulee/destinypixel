@@ -5,6 +5,8 @@ import { readFileSync } from "node:fs";
 import sitemap from "@/app/sitemap";
 import previousEditions from "@/content/three-card-question-scope-20261030/previous-editions.json";
 import questionScopeRevision from "@/content/three-card-question-scope-20261030/revisions.json";
+import interpretationFitRevision from "@/content/three-card-interpretation-fit-20261107/revisions.json";
+import { beforeInterpretationFit, sourceBeforeInterpretationFit } from "@/lib/tarot-interpretation-fit.test-helpers";
 import { celestialCopy, celestialHref } from "@/lib/celestial/copy";
 import { spreadSizes } from "@/lib/celestial/tarot";
 import { editorialUpdate } from "@/lib/editorial-updates";
@@ -20,14 +22,14 @@ const without = (value: object, fields: readonly string[]) => Object.fromEntries
 const currentArticle = () => {
   const article = getJournalArticle(slug);
   assert.ok(article);
-  return article;
+  return { ...article, translations: Object.fromEntries(journalLocales.map(locale => [locale, beforeInterpretationFit(article.translations[locale], locale)])) as Record<ReportLocale, JournalTranslation> };
 };
 
 test("the question-scope revision preserves all four editions' metadata and the complete unedited translations", () => {
   const article = currentArticle();
   const fileHash = (file: string) => createHash("sha256").update(readFileSync(new URL(file, import.meta.url))).digest("hex");
   assert.equal(fileHash("../content/three-card-question-scope-20261030/previous-editions.json"), questionScopeRevision.previousEditionsSha256);
-  assert.equal(fileHash("./journal-three-card-tarot.ts"), questionScopeRevision.currentSourceSha256);
+  assert.equal(createHash("sha256").update(sourceBeforeInterpretationFit()).digest("hex"), questionScopeRevision.currentSourceSha256);
   assert.deepEqual(Object.keys(previous).sort(), [...journalLocales].sort());
   assert.deepEqual(without(threeCardTarotArticle, ["translations", "traditionalTranslation"]), {
     slug, relatedSlug: "how-to-ask-fortune-sticks", publishedAt: "2026-10-02", updatedAt: "2026-10-02",
@@ -108,7 +110,9 @@ test("the tutorial keeps the real three-card positions and describes the five-po
   }
 });
 
-test("only the authored question-scope editions acquire October 30 dates across metadata, schema and sitemap", () => {
+test("the immutable October 30 receipt survives while only its authored editions acquire the later interpretation-fit date", () => {
+  assert.equal(questionScopeRevision.updatedAt, "2026-10-30");
+  assert.equal(interpretationFitRevision.updatedAt, "2026-11-07");
   const article = currentArticle();
   assert.equal(article.publishedAt, "2026-10-02");
   assert.equal(article.updatedAt, "2026-10-02", "shared dates must not freshen unedited editions");
@@ -117,7 +121,7 @@ test("only the authored question-scope editions acquire October 30 dates across 
   assert.equal(new Set(entries.map(entry => entry.url)).size, 4);
   for (const locale of journalLocales) {
     const edited = locale === "en" || locale === "zh";
-    const date = edited ? "2026-10-30" : "2026-10-02";
+    const date: string = edited ? interpretationFitRevision.updatedAt : "2026-10-02";
     const update = editorialUpdate(slug, locale);
     if (edited) {
       assert.equal(update?.updatedAt, date);
