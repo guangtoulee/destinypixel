@@ -107,6 +107,67 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         ]
       },
       {
+        "id": "interpretation-fit",
+        "title": "Recheck the interpretation without replacing the cards",
+        "paragraphs": [
+          "What if a reading feels wrong? Disliking an interpretation and finding that it conflicts with known facts are different reasons to question it. An uncomfortable statement is not automatically a deeper truth; a reassuring one still needs a reason. You may revise or decline an interpretation without changing the question, positions or cards.",
+          "Here is a separate, invented teaching example. Xiaotong has two hours to prepare a one-page club newsletter for proofreading. Several people helped with the previous issue; this time one partner has agreed to proofread, not to write or arrange the page. Three preparation tasks remain, and Xiaotong has not estimated their duration. The question is: “How can I prepare a newsletter draft for proofreading within the two hours I have?”",
+          "For this written exercise we deliberately choose three upright cards, rather than report a real draw: Three of Pentacles in “What brought you here”; Ten of Wands in “What is present”; Page of Wands in “A possible next step.” The earlier collaboration is already part of the fictional background. The second card can prompt a question about the present workload; our modern reading of the Page can suggest trying a small first draft. None of those prompts supplies missing facts about the partner or the timetable.",
+          "Keep that question, those roles and those three upright cards fixed while checking the candidate interpretations below. The aim is to remove unsupported claims, not to find an average between a cheerful reading and a gloomy one.",
+          "A useful next check is ordinary planning: make a one-page outline, estimate the time needed for the remaining tasks and ask when the partner can proofread. If the work fits the available time, there may be no reason to shrink it; if it does not, revise the scope or schedule. That information can change the plan. Neither the cards nor this exercise can establish how the partner will respond or validate tarot as a forecasting method.",
+          "The source boundary matters. In Chapter 12 of Seventy-Eight Degrees of Wisdom, Rachel Pollack describes her own tendency to use an apparently positive part of a reading to reject an unwelcome whole, and to treat her own reading process casually so she could dismiss a result. Her account belongs to her modern psychological and spiritual approach; her accompanying belief that cards reveal truth is not evidence that an unpleasant interpretation must be accepted. Reference: Sun Meijun translation, 商周, first edition December 2010; verified actual PDF pages 387–388, printed pages 389–390. The newsletter, comparison table and checking procedure here are our original teaching exercise, not a method prescribed in those pages.",
+          "Historical meanings also need their own labels. In The Pictorial Key to the Tarot, Part III, §2, Waite gives the Ten of Wands several meanings, including burdens associated with success; it is not a single verdict of failure. His Page of Wands includes messenger and news associations. Using that Page as a prompt for a small first draft is our modern interpretation for this situation, not Waite’s universal rule or a requirement of Marseille or Thoth reading. You can compare the Ten of Wands guide and Page of Wands guide, then try the three-card tool with your own question. The tool draws its own cards; it does not load this fictional set."
+        ],
+        "table": {
+          "headings": [
+            "Candidate interpretation",
+            "What needs checking?",
+            "Keep, revise or decline?"
+          ],
+          "rows": [
+            [
+              "“The Page is enthusiastic, so more helpers will arrive and the full plan will work.”",
+              "No one has promised extra help; proofreading is the only agreed role.",
+              "Decline the invented promise. An encouraging image cannot expand someone else’s commitment."
+            ],
+            [
+              "“The Ten shows I cannot manage this; I must abandon the newsletter.”",
+              "There is unfinished work, but no time estimate and no evidence of incapacity or inevitable failure.",
+              "Decline the verdict; keep the practical question about workload. Discomfort does not make the verdict true."
+            ],
+            [
+              "“Past collaboration helped. Check the present workload, then prepare a small draft the partner can actually proofread.”",
+              "Can the remaining tasks fit two hours? What can be ready, and when is proofreading possible?",
+              "Keep this as a provisional planning prompt. Adjust it to the answers, or leave it aside if it is not useful."
+            ]
+          ]
+        },
+        "links": [
+          {
+            "text": "Ten of Wands guide",
+            "href": "/journal/tarot-ten-of-wands"
+          },
+          {
+            "text": "Page of Wands guide",
+            "href": "/journal/tarot-page-of-wands"
+          },
+          {
+            "text": "three-card tool",
+            "href": "/tarot"
+          }
+        ],
+        "sources": [
+          {
+            "label": "A. E. Waite, The Pictorial Key to the Tarot, Part III, §2: Ten of Wands",
+            "href": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/ten-of-wands"
+          },
+          {
+            "label": "A. E. Waite, The Pictorial Key to the Tarot, Part III, §2: Page of Wands",
+            "href": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/page-of-wands"
+          }
+        ]
+      },
+      {
         "id": "reversals",
         "title": "5. What if one of the three cards is reversed?",
         "paragraphs": [
@@ -278,6 +339,67 @@ const editions: Record<"en" | "zh" | "ru", JournalTranslation> = {
         "paragraphs": [
           "试着读成：“我带着好奇开始，现在悬在几种可能之间，接下来可以发出清楚的邀请，不急着替结果下结论。”三部分各有作用：第一张说起点，第二张说眼前的拉扯，第三张给一种应对方式。这样比“新开始、犹豫、平衡”三个孤立词更容易用起来。",
           "再检查这句话：哪一部分对应你确实观察到的事？哪一部分只是解释？发生什么会说明这次解读不适合？谈过之后，可能发现对方只是忙、期待不同，或者也不知道怎么开口。给这些答案留位置，不必把每种结果都解释成牌早已说中了。"
+        ]
+      },
+      {
+        "id": "interpretation-fit",
+        "title": "不换牌，也能重查解释",
+        "paragraphs": [
+          "觉得解读不对劲，怎么办？“我不喜欢这个解释”和“这个解释与已知事实不符”，是两种不同的质疑理由。让人不舒服的话，不会因此更接近真相；让人安心的话，也仍需讲出依据。你可以修正或不采纳一种解释，同时保留原问题、牌位和牌面。",
+          "另做一个原创假设练习：晓桐有两小时，想准备一页社团简讯供同伴校对。上一期有几个人一起做；这次一位同伴只答应校对，没有答应撰写或排版。眼前还剩三项准备工作，晓桐尚未估算各项耗时。问题是：“怎样用现有两小时准备一版可供校对的简讯？”",
+          "这份文字练习刻意选定三张正位牌，不是一次真实抽牌：“走到这里的来路”放星币三，“当下的状态”放权杖十，“可能的下一步”放权杖侍从。过去的合作已经写在假设背景中；第二张可用来追问目前的工作量；我们对侍从的现代读法，可以提示先试一版小草稿。这些提示都不能替同伴确认意愿，也不能补出未知的工时。",
+          "先固定这个问题、三项职责和三张正位牌，再检查下表的候选解释。这里做的是删去缺少依据的断言，不是给乐观与悲观各打五十大板。",
+          "下一步可以很朴素：先列一页提纲，估算余下工作的耗时，再问同伴何时方便校对。如果时间足够，就未必需要缩减；如果排不下，再改范围或日期。新信息可以改变计划。牌面和这份练习都不能证明同伴会如何回复，也不能用来验证塔罗预测未来的能力。",
+          "参考观点要分清归属。Rachel Pollack在《78度的智慧》第十二章中自述，自己曾抓住解读中看似积极的局部，推翻不愿接受的整体；也曾敷衍自己的读牌流程，好在结果不合意时将它作废。这属于她的现代心理与灵性取向；文中伴随的“牌揭示真相”信念，不能证明不快的解释就必须接受。出处：孙梅君译，商周出版，2010年12月初版；本次核实PDF实际第387–388页，印刷第389–390页。简讯场景、比较表和检查办法均为本站原创教学练习，不是这两页规定的读牌法。",
+          "历史牌义也需要单独说明。韦特《塔罗图解》第三部分第二节给权杖十列出多种意义，包括成功带来的负担，并非只有“失败”一种判词；权杖侍从则包含信使、消息等联系。本例把侍从当作小范围尝试的提示，是针对情境的现代读法，不是韦特的统一规则，也不要求马赛或托特体系照用。可对照权杖十解读与权杖侍从解读，再带自己的问题进入三牌工具；工具会自行抽牌，不会载入这组虚构牌面。"
+        ],
+        "table": {
+          "headings": [
+            "候选解释",
+            "需要核对什么？",
+            "保留、修正，还是不采纳？"
+          ],
+          "rows": [
+            [
+              "“侍从很有热情，所以会有更多人帮忙，完整计划一定做得成。”",
+              "没有人承诺额外协助；目前约好的职责只有校对。",
+              "不采纳凭空补出的承诺。令人鼓舞的牌图不能替别人加工作。"
+            ],
+            [
+              "“权杖十说明我没能力，必须放弃这期简讯。”",
+              "确实有未完成工作，但尚无工时估算，也没有证据证明能力不足或必然失败。",
+              "不采纳能力与结果的判词；保留对工作量的追问。不舒服不等于说中了。"
+            ],
+            [
+              "“过去合作有帮助；先核对当前工作量，再准备同伴确实能校对的小草稿。”",
+              "余下任务能否排进两小时？可以先完成什么？同伴何时方便校对？",
+              "暂作规划提示，按问到的信息调整；若无帮助，也可以放下这条读法。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "text": "权杖十解读",
+            "href": "/journal/tarot-ten-of-wands?locale=zh"
+          },
+          {
+            "text": "权杖侍从解读",
+            "href": "/journal/tarot-page-of-wands?locale=zh"
+          },
+          {
+            "text": "三牌工具",
+            "href": "/tarot?locale=zh"
+          }
+        ],
+        "sources": [
+          {
+            "label": "A. E. Waite《塔罗图解》第三部分第二节：权杖十",
+            "href": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/ten-of-wands"
+          },
+          {
+            "label": "A. E. Waite《塔罗图解》第三部分第二节：权杖侍从",
+            "href": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/page-of-wands"
+          }
         ]
       },
       {
