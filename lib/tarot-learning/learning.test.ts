@@ -26,6 +26,7 @@ import devilRevision from "@/content/devil-update-20261104/revisions.json";
 import temperanceRevision from "@/content/temperance-update-20261105/revisions.json";
 import twoSwordsRevision from "@/content/two-swords-update-20261106/revisions.json";
 import worldRevision from "@/content/world-update-20261106/revisions.json";
+import deathRevision from "@/content/death-update-20261107/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -47,6 +48,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const devilRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=devilRevision.records;
  const temperanceRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=temperanceRevision.records;
  const worldRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=worldRevision.records;
+ const deathRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=deathRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -62,6 +64,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(devilRecords),["content/tarot/zh/devil.json"]);
  assert.deepEqual(Object.keys(temperanceRecords),["content/tarot/zh/temperance.json"]);
  assert.deepEqual(Object.keys(worldRecords),["content/tarot/zh/world.json"]);
+ assert.deepEqual(Object.keys(deathRecords),["content/tarot/zh/death.json"]);
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -84,7 +87,7 @@ test("every real cast ID resolves to the complete correct-language article witho
    }
    if(linkPaths.has(path)){
     const record=linkRecords[path];
-    let previousMarkdown=article.articleMarkdown;
+    let previousMarkdown=Object.hasOwn(deathRecords,path)?JSON.parse(readFileSync(`content/death-update-20261107/previous/${path}`,"utf8")).articleMarkdown:article.articleMarkdown;
     for(const {from,to} of linkMaintenance.urlReplacements){
      assert.ok(previousMarkdown.includes(to),`Missing maintained URL: ${path}`);
      assert.ok(!previousMarkdown.includes(from),`Unreplaced source URL: ${path}`);
@@ -567,6 +570,67 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="world"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited World edition changed`);
+   }
+   if(Object.hasOwn(deathRecords,path)){
+    const record=deathRecords[path],previousRaw=readFileSync(`content/death-update-20261107/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    const previousIds=previous.sections.map((section:{id:string})=>section.id);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>previousIds.includes(section.id)).map((section:{id:string})=>section.id),previousIds,`${path}: original section order changed`);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>!previousIds.includes(section.id)).map((section:{id:string;role:string;title:string})=>[section.id,section.role,section.title]),[["depth-sequence","comparison","为什么死神夹在吊人与节制之间"]]);
+    assert.equal(current.sections.findIndex((section:{id:string})=>section.id==="depth-sequence"),previous.sections.findIndex((section:{id:string})=>section.id==="depth-comparison")+1);
+    for(const sectionId of ["section-01","section-04"]){
+     const oldSection=previous.sections.find((section:{id:string})=>section.id===sectionId);
+     const newSection=current.sections.find((section:{id:string})=>section.id===sectionId);
+     assert.ok(newSection.bodyMarkdown.startsWith(oldSection.bodyMarkdown+"\n\n"));
+     const addedText=newSection.bodyMarkdown.slice(oldSection.bodyMarkdown.length).trim();
+     assert.equal(addedText.split("\n\n").length,sectionId==="section-01"?1:2);
+    }
+    assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="depth-comparison"),previous.sections.find((section:{id:string})=>section.id==="depth-comparison"));
+    assert.equal(current.articleMarkdown.includes("四种态度"),true);
+    assert.equal(current.articleMarkdown.includes("白玫瑰"),true);
+    assert.equal(current.articleMarkdown.includes("欲望被净化"),true);
+    assert.equal(current.articleMarkdown.includes("神秘玫瑰＝生命"),true);
+    assert.equal(current.articleMarkdown.includes("不是把画中人物写成客观事实"),true);
+    assert.equal(current.articleMarkdown.includes("为什么死神夹在吊人与节制之间"),true);
+    assert.equal(current.articleMarkdown.includes("阶段叙事"),true);
+    assert.equal(current.articleMarkdown.includes("不等于「转化」本身"),true);
+    assert.equal(current.articleMarkdown.includes("放下旧面具"),true);
+    assert.equal(current.articleMarkdown.includes("容许转化"),true);
+    assert.equal(current.articleMarkdown.includes("不能拿来覆盖 Waite"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-hanged-man?locale=zh"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-temperance?locale=zh#depth-sequence"),true);
+    assert.equal(current.articleMarkdown.includes("恐惧"),true);
+    assert.equal(current.articleMarkdown.includes("证据"),true);
+    assert.equal(current.articleMarkdown.includes("立刻结束"),true);
+    assert.equal(current.articleMarkdown.includes("低落"),true);
+    assert.equal(current.articleMarkdown.includes("诊断"),true);
+    assert.equal(current.articleMarkdown.includes("寿命"),true);
+    assert.equal(current.articleMarkdown.includes("支持系统"),true);
+    assert.equal(current.articleMarkdown.includes("献花"),false);
+    assert.equal(current.articleMarkdown.includes("干净的花"),false);
+    assert.equal(current.articleMarkdown.includes("现稿已"),false);
+    assert.equal(current.articleMarkdown.includes("节制页已写"),false);
+    assert.equal(current.articleMarkdown.includes("入门仪式"),false);
+    assert.equal(current.articleMarkdown.includes("迷幻"),false);
+    assert.equal(current.articleMarkdown.includes("数秘"),false);
+    assert.equal(current.articleMarkdown.includes("性隐喻"),false);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.sources.at(-1).sourceId,"death-pollack-2010");
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[133,134,135,136,137,138]);
+    assert.equal(current.updatedAt,"2026-11-07");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="death"){
+    assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Death edition gained the Pollack supplement`);
+    assert.equal(article.updatedAt,"2026-10-08");
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);

@@ -40,6 +40,8 @@ TEMPERANCE_DIR = ROOT / "content/temperance-update-20261105"
 TEMPERANCE_PATHS = frozenset({"content/tarot/zh/temperance.json"})
 WORLD_DIR = ROOT / "content/world-update-20261106"
 WORLD_PATHS = frozenset({"content/tarot/zh/world.json"})
+DEATH_DIR = ROOT / "content/death-update-20261107"
+DEATH_PATHS = frozenset({"content/tarot/zh/death.json"})
 
 
 def sha(raw):
@@ -130,6 +132,9 @@ def historical_bytes(path):
     if sample_key(path) in WORLD_PATHS:
         validate_world_record(path)
         return (WORLD_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in DEATH_PATHS:
+        validate_death_record(path)
+        return (DEATH_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         validate_eight_swords_record(path)
         return (EIGHT_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -179,6 +184,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in WORLD_PATHS:
         current, _ = validate_world_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in DEATH_PATHS:
+        current, _ = validate_death_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in EIGHT_SWORDS_PATHS:
         current, _ = validate_eight_swords_record(path)
@@ -1307,6 +1315,143 @@ def validate_world_record(path):
         assert read(unedited)["updatedAt"] == "2026-10-08"
         assert "Pollack" not in read(unedited)["articleMarkdown"]
         assert "depth-sequence" not in read(unedited)["articleMarkdown"]
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_death_record(path):
+    """Validate the Chinese Pollack supplement and keep the prior Death receipt."""
+    key = sample_key(path)
+    assert key in DEATH_PATHS, f"Not a Death revision: {key}"
+    registry = read(DEATH_DIR / "revisions.json")
+    assert registry["baseCommit"] == "dcae0eafabed42afde80a1dcea86832704815f4d"
+    assert registry["updatedAt"] == "2026-11-07"
+    assert set(registry["articles"]) == {"tarot-death"}
+    notes = registry["articles"]["tarot-death"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    for phrase in ("四种态度", "白玫瑰", "阶段叙事", "不覆盖 Waite", "不诊断低落", "不预测寿命"):
+        assert phrase in notes["zh"], phrase
+    for phrase in ("献花", "干净的花", "现稿已", "节制页已写"):
+        assert phrase not in notes["zh"], phrase
+    assert set(registry["records"]) == DEATH_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (DEATH_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    link = read(ROOT / "content/tarot-link-maintenance-20261019.json")
+    assert sha(raw) == record["fileSha256"], f"Current Death file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Death Markdown differs from receipt: {key}"
+    # The saved previous file is the post-2026-10-19 URL maintenance edition, not the older depth file.
+    assert sha(previous_raw) == record["previousFileSha256"], f"Historical Death file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == link["records"][key]["articleMarkdownSha256"], f"Historical Death Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Death metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Death metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Death metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-07"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+    assert current["relatedCards"] == previous["relatedCards"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么死神夹在吊人与节制之间"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == (0 if old["id"] == "section-01" else 1)
+        else:
+            assert section == old, f"Original Death section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("Pollack", "四种态度", "僵化的小我", "信仰／意义框架", "少女", "画面中侧脸的年轻人", "全然天真", "白玫瑰", "欲望被净化", "神秘玫瑰＝生命", "136", "作者象征", "不是把画中人物写成客观事实", "哪一种态度", "哪一层欲望"):
+        assert phrase in image, phrase
+    for phrase in ("献花", "干净的花"):
+        assert phrase not in image, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("Pollack", "阶段叙事", "不等于「转化」本身", "放下旧面具", "容许转化", "吊人", "准备", "节制", "重调", "135", "不能拿来覆盖 Waite", "意识转化", "/journal/tarot-hanged-man?locale=zh", "/journal/tarot-temperance?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    assert sequence.count("\n\n") == 1
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    added_reverse = reverse[len(next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]):].strip()
+    for phrase in ("Pollack", "138", "恐惧", "证据", "立刻结束", "低落", "诊断", "寿命", "支持系统", "重大决定", "现实事实"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("献花", "干净的花", "现稿已", "节制页已写", "入门仪式", "迷幻", "数秘", "性隐喻", "犹大"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Death source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    assert book["sourceId"] == "death-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-07" and book["title"] == "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；死神章，印刷／PDF 133–138"
+    assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("death-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+    metadata = book["sourceMetadata"]
+    assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Death" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == [133, 134, 135, 136, 137, 138]
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Death Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Death anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (DEATH_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/death-update-20261107/revisions.json"
+    assert revision["updatedAt"] == "2026-11-07" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited_key = f"content/tarot/{unedited_locale}/death.json"
+        unedited = read(ROOT / unedited_key)
+        assert sha(unedited["articleMarkdown"]) == link["records"][unedited_key]["articleMarkdownSha256"], f"Unedited Death text changed: {unedited_locale}"
+        assert unedited["updatedAt"] == "2026-10-08"
+        assert "Pollack" not in unedited["articleMarkdown"]
+        assert "death-pollack-2010" not in {source.get("sourceId") for source in unedited["sources"]}
+        assert all(section["id"] != "depth-sequence" for section in unedited["sections"])
     try:
         import jsonschema
     except ImportError:

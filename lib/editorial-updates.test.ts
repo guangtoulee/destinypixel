@@ -24,6 +24,7 @@ import towerRevision from "@/content/tower-update-20261104/revisions.json";
 import devilRevision from "@/content/devil-update-20261104/revisions.json";
 import temperanceRevision from "@/content/temperance-update-20261105/revisions.json";
 import worldRevision from "@/content/world-update-20261106/revisions.json";
+import deathRevision from "@/content/death-update-20261107/revisions.json";
 import { editorialModifiedAt, editorialUpdate } from "./editorial-updates";
 import { hexagramMetadata, hexagramModifiedAt } from "./hexagram-learning/metadata";
 import { hexagramIds } from "./hexagram-learning/identity";
@@ -53,6 +54,7 @@ const previousDates: Record<string, string> = {
 };
 const revisedUrls = new Map(firstRevisedSlugs.flatMap(slug => revisedLocales.map(locale => [absoluteUrl(journalHref(locale, slug)), previousDates[slug]] as const)));
 const digest = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
+const isDeathZh = (slug: string, locale: ReportLocale) => slug === "tarot-death" && locale === "zh";
 const isWorldZh = (slug: string, locale: ReportLocale) => slug === "tarot-world" && locale === "zh";
 const isTemperanceZh = (slug: string, locale: ReportLocale) => slug === "tarot-temperance" && locale === "zh";
 const isDevilZh = (slug: string, locale: ReportLocale) => slug === "tarot-devil" && locale === "zh";
@@ -60,8 +62,8 @@ const isTowerZh = (slug: string, locale: ReportLocale) => slug === "tarot-tower"
 const isJudgementZh = (slug: string, locale: ReportLocale) => slug === "tarot-judgement" && locale === "zh";
 const isMoonZh = (slug: string, locale: ReportLocale) => slug === "tarot-moon" && locale === "zh";
 const isSunZh = (slug: string, locale: ReportLocale) => slug === "tarot-sun" && locale === "zh";
-const isRevised = (slug: string, locale: ReportLocale) => isWorldZh(slug, locale) || isTemperanceZh(slug, locale) || isDevilZh(slug, locale) || isTowerZh(slug, locale) || isJudgementZh(slug, locale) || slug === "tarot-queen-of-swords" || (slug === "tarot-two-of-swords" || slug === "tarot-king-of-pentacles" || slug === "tarot-seven-of-cups" || slug === "tarot-eight-of-swords" || slug === "how-to-read-three-card-tarot" || slug === "tarot-star" || slug === "tarot-hanged-man" || revisedSlugs.includes(slug)) && revisedLocales.includes(locale);
-const expectedDate = (slug: string, locale: ReportLocale, previous: string) => isWorldZh(slug, locale) ? "2026-11-06" : isTemperanceZh(slug, locale) ? "2026-11-05" : isDevilZh(slug, locale) || isTowerZh(slug, locale) ? "2026-11-04" : isJudgementZh(slug, locale) || isMoonZh(slug, locale) || isSunZh(slug, locale) ? "2026-11-03" : slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-two-of-swords" ? "2026-11-06" : slug === "tarot-king-of-pentacles" ? "2026-11-05" : slug === "tarot-seven-of-cups" ? "2026-11-03" : slug === "tarot-eight-of-swords" ? "2026-11-02" : slug === "how-to-read-three-card-tarot" ? "2026-10-30" : slug === "tarot-star" ? "2026-10-25" : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
+const isRevised = (slug: string, locale: ReportLocale) => isDeathZh(slug, locale) || isWorldZh(slug, locale) || isTemperanceZh(slug, locale) || isDevilZh(slug, locale) || isTowerZh(slug, locale) || isJudgementZh(slug, locale) || slug === "tarot-queen-of-swords" || (slug === "tarot-two-of-swords" || slug === "tarot-king-of-pentacles" || slug === "tarot-seven-of-cups" || slug === "tarot-eight-of-swords" || slug === "how-to-read-three-card-tarot" || slug === "tarot-star" || slug === "tarot-hanged-man" || revisedSlugs.includes(slug)) && revisedLocales.includes(locale);
+const expectedDate = (slug: string, locale: ReportLocale, previous: string) => isDeathZh(slug, locale) ? "2026-11-07" : isWorldZh(slug, locale) ? "2026-11-06" : isTemperanceZh(slug, locale) ? "2026-11-05" : isDevilZh(slug, locale) || isTowerZh(slug, locale) ? "2026-11-04" : isJudgementZh(slug, locale) || isMoonZh(slug, locale) || isSunZh(slug, locale) ? "2026-11-03" : slug === "tarot-queen-of-swords" ? "2026-10-23" : !isRevised(slug, locale) ? previous : slug === "tarot-two-of-swords" ? "2026-11-06" : slug === "tarot-king-of-pentacles" ? "2026-11-05" : slug === "tarot-seven-of-cups" ? "2026-11-03" : slug === "tarot-eight-of-swords" ? "2026-11-02" : slug === "how-to-read-three-card-tarot" ? "2026-10-30" : slug === "tarot-star" ? "2026-10-25" : slug === "tarot-hanged-man" ? "2026-10-24" : secondRevisionSlugs.includes(slug) ? "2026-10-12" : "2026-10-11";
 const modifiedTime = (metadata: Metadata) => metadata.openGraph && "modifiedTime" in metadata.openGraph ? metadata.openGraph.modifiedTime : undefined;
 
 // Membership independently checked against `git archive 179c14e1f6d5bf19a244adeaef84d13ba79ce4b1`:
@@ -104,6 +106,7 @@ const afterFirstDates = new Map([
   [absoluteUrl(journalHref("zh", "tarot-devil")), "2026-10-08"] as const,
   [absoluteUrl(journalHref("zh", "tarot-temperance")), "2026-10-08"] as const,
   [absoluteUrl(journalHref("zh", "tarot-world")), "2026-10-08"] as const,
+  [absoluteUrl(journalHref("zh", "tarot-death")), "2026-10-08"] as const,
   [absoluteUrl(journalHref("zh", "tarot-moon")), "2026-10-11"] as const,
   [absoluteUrl(journalHref("zh", "tarot-sun")), "2026-10-11"] as const,
 ]);
@@ -216,6 +219,11 @@ test("revision registries apply only to their actually edited language editions"
   assert.deepEqual(Object.keys(worldRevision.articles), ["tarot-world"]);
   assert.deepEqual(Object.keys(worldRevision.articles["tarot-world"].notes), ["zh"]);
   assert.ok(worldRevision.articles["tarot-world"].notes.zh.trim());
+  assert.equal(deathRevision.baseCommit, "dcae0eafabed42afde80a1dcea86832704815f4d");
+  assert.equal(deathRevision.updatedAt, "2026-11-07");
+  assert.deepEqual(Object.keys(deathRevision.articles), ["tarot-death"]);
+  assert.deepEqual(Object.keys(deathRevision.articles["tarot-death"].notes), ["zh"]);
+  assert.ok(deathRevision.articles["tarot-death"].notes.zh.trim());
   const knownSlugs = new Set([...journalArticles.map(article => article.slug), "day-pillars", ...hexagramIds, ...tarotLearningIds.map(tarotLearningSlug)]);
   for (const slug of [...knownSlugs, "missing", "__proto__", "constructor", "toString"]) {
     for (const locale of journalLocales) {
