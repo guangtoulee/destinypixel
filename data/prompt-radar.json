@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-06T20:01:43.356Z",
+  "updatedAt": "2026-11-07T07:38:10.072Z",
   "sourceSummary": {
     "community": 1467,
-    "publicX": 607,
-    "total": 2074
+    "publicX": 608,
+    "total": 2075
   },
   "items": [
     {
@@ -2868,6 +2868,52 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI filmmaking gets interesting when the prompt reads like a creative brief: GPT Image 2.5 builds the storyboard, Seedance 2.5 makes the video, CapCut shapes the cut. Brief → Visuals → Edit. #GPTImage25 #CapCutPC #AIVideo #Seedance25"
+    },
+    {
+      "id": "x-public-2118433993486205051",
+      "title": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step",
+      "description": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video w",
+      "prompt": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/maxxmalist/status/2118433993486205051",
+      "sourceType": "x",
+      "authorName": "MAX",
+      "authorHandle": "@maxxmalist",
+      "createdAt": "2026-11-05T20:03:17.000Z",
+      "importedAt": "2026-11-07T07:38:10.038Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 376,
+        "reposts": 33,
+        "replies": 19,
+        "quotes": 6,
+        "bookmarks": 1037,
+        "views": 36897,
+        "score": 4106
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]"
     },
     {
       "id": "x-public-2095249344282710124",
@@ -6310,52 +6356,6 @@
       "rawText": "She walked through the Country while everyone else accidentally became the background instantly. GPT Image 2 + Seedance 2.0 on @Sjolt_ai prompt A 15-second hyper-realistic cinematic fashion campaign video. European woman, fair glowing skin, sharp features, wavy blonde hair in sleek high ponytail, small dark rectangular sunglasses, pearl drop earring, oversized light blue black-red graphic streetwear jersey, sage green wide-leg trousers, black pointed-toe heels, babypink smooth leather hobo shoulder bag with gold dome studs hanging naturally on arm throughout all scenes. Scene 1 · 3 sec Full body wide shot. She stands alone on Paris cobblestone street corner, adjusting sunglasses with one hand, babypink bag hanging naturally on arm, warm golden hour light, real people and city chaos blurring around her, classic Haussmann buildings background. Scene 2 · 3 sec Full body shot. She strides boldly across Paris zebra crossing on Champs-Elysees, iced coffee cup in one hand, babypink bag with gold studs swinging on other arm, mouth slightly open as if singing, bold confident walk, cars and city blurring behind her. Scene 3 · 3 sec Full cinematic wide establishing shot. She is tiny in center of frame walking down grand Paris boulevard, Arc de Triomphe massive in background, real crowd of people around her, babypink bag clearly visible as burgundy detail on her arm. Scene 4 · 3 sec Medium shot. She stops on a sunlit Paris cobblestone street, spontaneous small carefree dance move, arms slightly out, babypink bag swinging naturally, street musician blurred in background, joyful open expression, warm golden light on face. Scene 5 · 3 sec Medium close-up. She stands inside Paris Metro carriage holding pole, slowly pushes sunglasses up with one finger, slight smirk, babypink bag with gold dome studs clearly visible on arm, moody warm metro overhead lighting, other passengers naturally blurred in background. Smooth seamless transitions between all 5 scenes. Overall mood: Candid chaotic Parisian city energy, luxury streetwear editorial, golden hour warmth, shot on Canon EOS R5 35mm f/1.4, Kodak Portra 400 film tone, natural film grain, handheld camera movement, real people in background every scene, hyper-realistic photography feel, no plastic skin, no robotic movement, no stiff poses, no AI artifacts. AVOID: cartoon, CGI, plastic skin, robotic movement, stiff poses, blurry face, overexposed, watermark, text overlay, logo, AI generated look, jerky motion, empty streets, studio background, fake crowd, extra fingers, deformed"
     },
     {
-      "id": "x-public-2118433993486205051",
-      "title": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step",
-      "description": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video w",
-      "prompt": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/maxxmalist/status/2118433993486205051",
-      "sourceType": "x",
-      "authorName": "MAX",
-      "authorHandle": "@maxxmalist",
-      "createdAt": "2026-11-05T20:03:17.000Z",
-      "importedAt": "2026-11-06T08:21:07.624Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 168,
-        "reposts": 20,
-        "replies": 7,
-        "quotes": 1,
-        "bookmarks": 451,
-        "views": 16561,
-        "score": 1812
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]"
-    },
-    {
       "id": "x-public-2096013890324992312",
       "title": "Seedance 2.5が凄いのは「本物みたいな動画」を作れる点です。 Seedance 2.0やKling 3.0でも、十分にリアルな動画は作れました。 ただ、AI動画を作っている人なら、 ",
       "description": "Seedance 2.5が凄いのは「本物みたいな動画」を作れる点です。 Seedance 2.0やKling 3.0でも、十分にリアルな動画は作れました。 ただ、AI動画を作っている人なら、 「これはAIだな」 とすぐに判別できました。 ところが、Seedance 2.5で作った動画は、 「これ、本物？ AI？ どっちだろう🤔」 と、AI動画を普段から見ている人でも迷うレベルのものが作れます。 これだけ進化すると、さまざまな分野で動画",
@@ -7045,6 +7045,48 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "I tested the same 16-second samurai duel prompt on Vidu Q4 Preview and Seedance 2.0. The brief called for 15 shots: a drone descent, extreme close-ups, an overhead orbit, a slow-motion leap, and a sweeping camera rotation. I provided Vidu with four reference images and tested Seedance 2.0 using the exact same images and prompt. What were the results? The two models delivered strikingly different interpretations of the same cinematic challenge.  What makes Vidu Q4 Preview interesting is the flexibility: → Up to 15 reference images per generation → Up to 3 reference audio tracks → 2K and 4K output → Up to 16 seconds per clip → Starting at $0.014/second  More references. More control over the visual direction. A surprisingly accessible price point. The real question: if you could guide every shot with 15 reference images, how would you change your AI video workflow? #ViduQ4Preview #ViduAI #ad"
+    },
+    {
+      "id": "x-public-2116387431289344020",
+      "title": "Weekend morning with Baddie 😎 Say NO to Hollywood and YES to AI. Seedance 2.5 Prompt: Create a ",
+      "description": "Weekend morning with Baddie 😎 Say NO to Hollywood and YES to AI. Seedance 2.5 Prompt: Create a 30-second, 1080p ultra-realistic personal home-video showing an ordinary summer afternoon in the life of a young Korean woma",
+      "prompt": "Weekend morning with Baddie 😎 Say NO to Hollywood and YES to AI. Seedance 2.5 Prompt: Create a 30-second, 1080p ultra-realistic personal home-video showing an ordinary summer afternoon in the life of a young Korean woman. MAIN SUBJECT Young Korean woman in her early 20s, naturally pretty, realistic skin texture, minimal makeup, relaxed and confident personality. Long black hair loosely tied into a messy side ponytail with a few loose strands around her face. Wearing a fitted pastel-blue crop top, loose cream-colored jeans, black sneakers, and a simple silver necklace. Maintain the same face, hairstyle, clothing, body proportions, and overall appearance throughout the entire video. SETTING A quiet older Seoul residential neighborhood during a warm summer afternoon. Narrow concrete lanes, small houses, old walls, potted plants, parked bicycles, utility poles, overhead wires, laundry hanging outside homes, a small convenience store, and children playing football in the street. Everything should feel lived-in, ordinary, and peaceful. CAMERA / VISUAL AESTHETIC Raw personal footage casually recorded by a friend on an early-2000s consumer DV camcorder. Strong handheld shake, imperfect framing, autofocus hunting, exposure shifts, occasional motion blur, faded colors, soft digital detail, mild noise, accidental zooms, and natural camera imperfections. No stabilization, drone footage, gimbal movement, dramatic lighting, or polished commercial cinematography. — LEAVING HOME She steps outside her house, closes the door, and adjusts her messy side ponytail. A gentle summer breeze naturally moves her loose hair and a few strands fall across her face. She smiles at the camera, brushes the strands away, and starts walking down the narrow neighborhood lane. The camera casually follows her from a few steps behind. — STOPPING AT THE STORE She reaches a tiny neighborhood convenience store and walks inside. She casually browses the shelves, picks up a colorful pack of bubble gum, and pays at the counter. She opens the packet, takes one piece, puts it in her mouth, and slips the remaining gum into her pocket. She walks back outside, chewing happily and smiling at the camera. — THE BUBBLE GUM MOMENT While walking down the street, she starts blowing a bubble with her gum. The bubble slowly grows larger until it suddenly pops against her lips. She freezes for a second, looks at the camera, and bursts into genuine laughter. She wipes the little pieces of gum away, laughs again, and continues walking. Keep the bubble formation and popping physically realistic. — DRINKING WATER She reaches a small public water tap beside an old residential wall. She turns the tap, cups her hands beneath the flowing water, and drinks a little. She splashes some water onto her face, shakes the droplets from her fingers, fixes her loose hair, and smiles toward the camera. The water flows naturally from the tap and remains consistent. — THE FOOTBALL MOMENT A few meters ahead, several neighborhood children are playing football in the street. Suddenly, the football rolls toward her and stops directly beside her sneakers. She looks down at it, then toward the children. One child calls out: “Noona! Kick it!” She smiles, positions herself beside the ball, and gently kicks it back toward the children. The ball rolls naturally along the concrete. The children excitedly chase after it, cheering and laughing. She waves at them and continues walking. The football stays with the children and does not disappear, duplicate, or return to her. She reaches the corner of the neighborhood and pauses. The camera moves closer as she turns toward it with a cheerful smile. A gentle breeze moves her ponytail again. She raises one hand, gives a casual wave, and says clearly: “Happy weekend!” She laughs softly, turns around, and continues walking down the lane. The camera follows her for a few seconds before the recording abruptly cuts to Black",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/AIwithkhan/status/2116387431289344020",
+      "sourceType": "x",
+      "authorName": "Smiling Khan",
+      "authorHandle": "@AIwithkhan",
+      "createdAt": "2026-10-31T04:30:58.000Z",
+      "importedAt": "2026-11-07T07:38:10.039Z",
+      "tags": [
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 387,
+        "reposts": 17,
+        "replies": 69,
+        "quotes": 3,
+        "bookmarks": 206,
+        "views": 46923,
+        "score": 1632
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Weekend morning with Baddie 😎 Say NO to Hollywood and YES to AI. Seedance 2.5 Prompt: Create a 30-second, 1080p ultra-realistic personal home-video showing an ordinary summer afternoon in the life of a young Korean woman. MAIN SUBJECT Young Korean woman in her early 20s, naturally pretty, realistic skin texture, minimal makeup, relaxed and confident personality. Long black hair loosely tied into a messy side ponytail with a few loose strands around her face. Wearing a fitted pastel-blue crop top, loose cream-colored jeans, black sneakers, and a simple silver necklace. Maintain the same face, hairstyle, clothing, body proportions, and overall appearance throughout the entire video. SETTING A quiet older Seoul residential neighborhood during a warm summer afternoon. Narrow concrete lanes, small houses, old walls, potted plants, parked bicycles, utility poles, overhead wires, laundry hanging outside homes, a small convenience store, and children playing football in the street. Everything should feel lived-in, ordinary, and peaceful. CAMERA / VISUAL AESTHETIC Raw personal footage casually recorded by a friend on an early-2000s consumer DV camcorder. Strong handheld shake, imperfect framing, autofocus hunting, exposure shifts, occasional motion blur, faded colors, soft digital detail, mild noise, accidental zooms, and natural camera imperfections. No stabilization, drone footage, gimbal movement, dramatic lighting, or polished commercial cinematography. — LEAVING HOME She steps outside her house, closes the door, and adjusts her messy side ponytail. A gentle summer breeze naturally moves her loose hair and a few strands fall across her face. She smiles at the camera, brushes the strands away, and starts walking down the narrow neighborhood lane. The camera casually follows her from a few steps behind. — STOPPING AT THE STORE She reaches a tiny neighborhood convenience store and walks inside. She casually browses the shelves, picks up a colorful pack of bubble gum, and pays at the counter. She opens the packet, takes one piece, puts it in her mouth, and slips the remaining gum into her pocket. She walks back outside, chewing happily and smiling at the camera. — THE BUBBLE GUM MOMENT While walking down the street, she starts blowing a bubble with her gum. The bubble slowly grows larger until it suddenly pops against her lips. She freezes for a second, looks at the camera, and bursts into genuine laughter. She wipes the little pieces of gum away, laughs again, and continues walking. Keep the bubble formation and popping physically realistic. — DRINKING WATER She reaches a small public water tap beside an old residential wall. She turns the tap, cups her hands beneath the flowing water, and drinks a little. She splashes some water onto her face, shakes the droplets from her fingers, fixes her loose hair, and smiles toward the camera. The water flows naturally from the tap and remains consistent. — THE FOOTBALL MOMENT A few meters ahead, several neighborhood children are playing football in the street. Suddenly, the football rolls toward her and stops directly beside her sneakers. She looks down at it, then toward the children. One child calls out: “Noona! Kick it!” She smiles, positions herself beside the ball, and gently kicks it back toward the children. The ball rolls naturally along the concrete. The children excitedly chase after it, cheering and laughing. She waves at them and continues walking. The football stays with the children and does not disappear, duplicate, or return to her. She reaches the corner of the neighborhood and pauses. The camera moves closer as she turns toward it with a cheerful smile. A gentle breeze moves her ponytail again. She raises one hand, gives a casual wave, and says clearly: “Happy weekend!” She laughs softly, turns around, and continues walking down the lane. The camera follows her for a few seconds before the recording abruptly cuts to Black"
     },
     {
       "id": "x-public-2111419391271186795",
@@ -25632,7 +25674,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "平面设计"
       ],
@@ -25673,7 +25715,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-05T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25718,7 +25760,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.018Z",
+      "importedAt": "2026-11-07T07:38:07.258Z",
       "tags": [
         "人像"
       ],
@@ -25759,7 +25801,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -25798,7 +25840,7 @@
       "authorName": "thoufic",
       "authorHandle": "@iamthoufic",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26002,7 +26044,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26045,7 +26087,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26289,7 +26331,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "人像",
         "摄影"
@@ -26331,7 +26373,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26412,7 +26454,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "人像"
       ],
@@ -26453,7 +26495,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26492,7 +26534,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "人像",
         "摄影"
@@ -26534,7 +26576,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26694,7 +26736,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26737,7 +26779,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "人像",
         "摄影"
@@ -26902,7 +26944,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26945,7 +26987,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26988,7 +27030,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.259Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27031,7 +27073,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "人像"
       ],
@@ -27072,7 +27114,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "人像"
       ],
@@ -27113,7 +27155,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27156,7 +27198,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -27236,7 +27278,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27275,7 +27317,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.019Z",
+      "importedAt": "2026-11-07T07:38:07.260Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -86990,7 +87032,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.022Z",
+      "importedAt": "2026-11-07T07:38:07.264Z",
       "tags": [
         "产品",
         "平面设计",
@@ -87033,7 +87075,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.022Z",
+      "importedAt": "2026-11-07T07:38:07.264Z",
       "tags": [
         "平面设计"
       ],
@@ -87074,7 +87116,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-06T20:01:40.022Z",
+      "importedAt": "2026-11-07T07:38:07.264Z",
       "tags": [
         "平面设计"
       ],
