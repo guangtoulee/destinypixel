@@ -1,3 +1,4 @@
+import fourCupsRevision from "@/content/four-cups-update-20261108/revisions.json";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -51,6 +52,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const temperanceRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=temperanceRevision.records;
  const worldRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=worldRevision.records;
  const deathRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=deathRevision.records;
+ const fourCupsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=fourCupsRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -314,6 +316,15 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="king-of-pentacles"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited King of Pentacles edition changed`);
+   }
+   if(Object.hasOwn(fourCupsRecords,path)){
+    const record=fourCupsRecords[path],previousRaw=readFileSync(`content/four-cups-update-20261108/previous/${path}`);
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(record.previousFileSha256,depthRecords[key].recordSha256,`${path}: historical receipt changed`);
+    assert.equal(digest(JSON.parse(previousRaw.toString()).articleMarkdown),approvedHash);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    approvedHash=record.articleMarkdownSha256;
    }
    if(Object.hasOwn(twoSwordsRecords,path)){
     const record=twoSwordsRecords[path],previousRaw=readFileSync(`content/two-swords-update-20261106/previous/${path}`);

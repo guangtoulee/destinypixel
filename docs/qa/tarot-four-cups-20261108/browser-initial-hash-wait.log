@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '#reversal-source-choice'
+- '#reversal-practice'
+             ^
+
+    at file:///workspace/destinypixel/scripts/check-tarot-four-cups.mjs:72:18
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '#reversal-source-choice',
+  expected: '#reversal-practice',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

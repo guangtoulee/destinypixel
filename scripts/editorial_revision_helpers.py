@@ -14,6 +14,8 @@ SAMPLE_PATHS = frozenset({
     for locale in ("en", "zh") for card in ("sun", "moon")
 })
 SAMPLE_SLUGS = frozenset({"ding-you-day-pillar", "hexagram-11", "tarot-sun", "tarot-moon"})
+FOUR_CUPS_DIR = ROOT / "content/four-cups-update-20261108"
+FOUR_CUPS_PATHS = frozenset(f"content/tarot/{locale}/four-of-cups.json" for locale in ("en", "zh"))
 HANGED_MAN_DIR = ROOT / "content/hanged-man-update-20261024"
 HANGED_MAN_PATHS = frozenset(f"content/tarot/{locale}/hanged-man.json" for locale in ("en", "zh"))
 STAR_DIR = ROOT / "content/star-update-20261025"
@@ -110,6 +112,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in FOUR_CUPS_PATHS:
+        validate_four_cups_record(path)
+        return (FOUR_CUPS_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in TWO_SWORDS_PATHS:
         validate_two_swords_record(path)
         return (TWO_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -159,6 +164,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in FOUR_CUPS_PATHS:
+        current, _ = validate_four_cups_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in TWO_SWORDS_PATHS:
         current, _ = validate_two_swords_record(path)
         return sha(current["articleMarkdown"])
@@ -208,6 +216,54 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_four_cups_record(path):
+    """Verify an additive revision without relabelling the historical approval."""
+    import jsonschema
+    key = sample_key(path)
+    assert key in FOUR_CUPS_PATHS
+    registry = read(FOUR_CUPS_DIR / "revisions.json")
+    assert registry["updatedAt"] == "2026-11-08"
+    assert set(registry["articles"]) == {"tarot-four-of-cups"}
+    assert set(registry["articles"]["tarot-four-of-cups"]["notes"]) == {"en", "zh"}
+    assert set(registry["records"]) == FOUR_CUPS_PATHS
+    raw = Path(path).read_bytes()
+    previous_raw = (FOUR_CUPS_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    receipt = registry["records"][key]
+    legacy_key = f"{Path(path).parent.name}/four-of-cups"
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    assert sha(previous_raw) == receipt["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"]
+    assert sha(previous["articleMarkdown"]) == receipt["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key]
+    assert sha(raw) == receipt["fileSha256"]
+    assert sha(current["articleMarkdown"]) == receipt["articleMarkdownSha256"]
+    allowed = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() == {"editorialRevision"}
+    assert previous.keys() <= current.keys()
+    for field in previous.keys() - allowed:
+        assert current[field] == previous[field], (key, field)
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["editorialRevision"]["nativeHumanReviewClaimed"] is False
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-08"
+    ids = ["reversal-source-choice", "reversal-practice"]
+    added = [section for section in current["sections"] if section["id"] in ids]
+    assert [section["id"] for section in added] == ids
+    insertion = next(i for i, section in enumerate(previous["sections"]) if section["id"] == "depth-positions")
+    assert current["sections"] == previous["sections"][:insertion] + added + previous["sections"][insertion:]
+    block = "".join(f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n" for section in added)
+    assert current["articleMarkdown"].count(block) == 1
+    assert current["articleMarkdown"].replace(block, "") == previous["articleMarkdown"]
+    assert (FOUR_CUPS_DIR / f"manuscript-{Path(path).parent.name}.md").read_text() == current["articleMarkdown"] + "\n"
+    assert re.findall(r"^([0-9]+)\. ", added[1]["bodyMarkdown"], re.M) == ["1", "2", "3"]
+    assert current["sources"][:-2] == previous["sources"]
+    assert len(current["sources"]) == len(previous["sources"]) + 2
+    for source in current["sources"][-2:]:
+        assert source["checkedOn"] == "2026-11-08" and source["type"] == "original_text_crosscheck"
+        assert source["url"] in added[0]["bodyMarkdown"]
+        assert not ({"pdfPages", "printedPages", "readScopePdf"} & source.keys())
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_two_swords_record(path):

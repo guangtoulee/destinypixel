@@ -1,0 +1,404 @@
+{
+  "base": "http://127.0.0.1:3060",
+  "scope": "Local production build only",
+  "views": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "fullText": true,
+      "sections": 11,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 320,
+      "height": 568,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 390,
+      "height": 844,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 1440,
+      "height": 900,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 568,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 900,
+      "fullText": true,
+      "sections": 9,
+      "image": true,
+      "overflow": false
+    }
+  ],
+  "http": [
+    {
+      "locale": "en",
+      "status": 200,
+      "initialSectionCount": 11,
+      "modified": "2026-11-08",
+      "citationCount": 4
+    },
+    {
+      "locale": "zh",
+      "status": 200,
+      "initialSectionCount": 11,
+      "modified": "2026-11-08",
+      "citationCount": 4
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "initialSectionCount": 9,
+      "modified": "2026-10-08",
+      "citationCount": 2
+    },
+    {
+      "locale": "ru",
+      "status": 200,
+      "initialSectionCount": 9,
+      "modified": "2026-10-08",
+      "citationCount": 2
+    }
+  ],
+  "links": [
+    {
+      "path": "/journal/tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/tarot/attribution.json",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-read-celtic-cross#crossing-and-reversals",
+      "status": 200,
+      "fragment": "crossing-and-reversals"
+    },
+    {
+      "path": "/journal/tarot-ace-of-cups",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-eight-of-cups",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/why-the-four-fours-differ",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/journal/tarot-three-of-cups",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-five-of-cups",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/pamela-colman-smith-tarot-artist",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-read-celtic-cross?locale=zh#crossing-and-reversals",
+      "status": 200,
+      "fragment": "crossing-and-reversals"
+    },
+    {
+      "path": "/journal/tarot-ace-of-cups?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-eight-of-cups?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/why-the-four-fours-differ?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/journal/tarot-three-of-cups?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-five-of-cups?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/pamela-colman-smith-tarot-artist?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-cards?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh-TW&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/tarot?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-ace-of-cups?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-eight-of-cups?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/why-the-four-fours-differ?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh-TW#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/journal/tarot-three-of-cups?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-five-of-cups?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/pamela-colman-smith-tarot-artist?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-cards?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=ru&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/tarot?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-ace-of-cups?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-eight-of-cups?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/why-the-four-fours-differ?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=ru#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/journal/tarot-three-of-cups?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-five-of-cups?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/pamela-colman-smith-tarot-artist?locale=ru",
+      "status": 200,
+      "fragment": null
+    }
+  ],
+  "flows": [
+    {
+      "languageSwitchAndHistory": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "articleToTool": true,
+      "shuffleDrawRevealMeaning": true,
+      "card": "page-of-wands",
+      "settingsOpened": true
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "articleToTool": true,
+      "shuffleDrawRevealMeaning": true,
+      "card": "ace-of-swords",
+      "settingsOpened": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
