@@ -14,6 +14,7 @@ import sampleRevisions from "@/content/encyclopedia-samples-20261011/revisions.j
 import linkMaintenance from "@/content/tarot-link-maintenance-20261019.json";
 import queenRevision from "@/content/queen-swords-update-20261023/revisions.json";
 import hangedManRevision from "@/content/hanged-man-update-20261024/revisions.json";
+import hangedManPollackRevision from "@/content/hanged-man-update-20261108/revisions.json";
 import starRevision from "@/content/star-update-20261025/revisions.json";
 import eightSwordsRevision from "@/content/eight-swords-update-20261102/revisions.json";
 import sevenCupsRevision from "@/content/seven-cups-update-20261103/revisions.json";
@@ -36,6 +37,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const linkRecords:Record<string,{previousArticleMarkdownSha256:string;articleMarkdownSha256:string}>=linkMaintenance.records;
  const queenRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=queenRevision.records;
  const hangedManRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=hangedManRevision.records;
+ const hangedManPollackRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=hangedManPollackRevision.records;
  const starRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=starRevision.records;
  const eightSwordsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=eightSwordsRevision.records;
  const sevenCupsRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=sevenCupsRevision.records;
@@ -52,6 +54,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
+ assert.deepEqual(Object.keys(hangedManPollackRecords),["content/tarot/zh/hanged-man.json"]);
  assert.deepEqual(Object.keys(starRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/star.json`));
  assert.deepEqual(Object.keys(eightSwordsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/eight-of-swords.json`));
  assert.deepEqual(Object.keys(sevenCupsRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/seven-of-cups.json`));
@@ -108,11 +111,13 @@ test("every real cast ID resolves to the complete correct-language article witho
    if(Object.hasOwn(hangedManRecords,path)){
     const record=hangedManRecords[path],previousRaw=readFileSync(`content/hanged-man-update-20261024/previous/${path}`);
     const previous=JSON.parse(previousRaw.toString());
-    const current=JSON.parse(readFileSync(path,"utf8"));
+    const receiptPath=Object.hasOwn(hangedManPollackRecords,path)?`content/hanged-man-update-20261108/previous/${path}`:path;
+    const receiptRaw=readFileSync(receiptPath);
+    const current=JSON.parse(receiptRaw.toString());
     assert.equal(digest(previousRaw),record.previousFileSha256);
     assert.equal(digest(previous.articleMarkdown),approvedHash,`Historical approval changed: ${path}`);
     assert.equal(record.previousArticleMarkdownSha256,approvedHash);
-    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    assert.equal(digest(receiptRaw),record.fileSha256);
     for(const field of ["cardId","locale","deckOrder","number","title","hook","quickTake","keywords","relatedCards","image","contentProvenance","review","publicationStatus","publishedAt","legacyIntroAnchors","legacyRelatedAnchors"]){
      assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
     }
@@ -125,6 +130,65 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
     assert.ok(current.sources.length>previous.sources.length,`${path}: no additional sources`);
     approvedHash=record.articleMarkdownSha256;
+   }
+   if(Object.hasOwn(hangedManPollackRecords,path)){
+    const record=hangedManPollackRecords[path],previousRaw=readFileSync(`content/hanged-man-update-20261108/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    const previousIds=previous.sections.map((section:{id:string})=>section.id);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>previousIds.includes(section.id)).map((section:{id:string})=>section.id),previousIds,`${path}: original section order changed`);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>!previousIds.includes(section.id)).map((section:{id:string;role:string;title:string})=>[section.id,section.role,section.title]),[["depth-sequence","comparison","为什么倒吊人连着世界，又为死神做准备"]]);
+    assert.equal(current.sections.findIndex((section:{id:string})=>section.id==="depth-sequence"),previous.sections.findIndex((section:{id:string})=>section.id==="depth-comparison")+1);
+    for(const sectionId of ["section-01","section-04"]){
+     const oldSection=previous.sections.find((section:{id:string})=>section.id===sectionId);
+     const newSection=current.sections.find((section:{id:string})=>section.id===sectionId);
+     assert.ok(newSection.bodyMarkdown.startsWith(oldSection.bodyMarkdown+"\n\n"));
+     const addedText=newSection.bodyMarkdown.slice(oldSection.bodyMarkdown.length).trim();
+     assert.equal(addedText.split("\n\n").length,sectionId==="section-01"?1:2);
+    }
+    assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="depth-comparison"),previous.sections.find((section:{id:string})=>section.id==="depth-comparison"));
+    assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="orientation-and-position"),previous.sections.find((section:{id:string})=>section.id==="orientation-and-position"));
+    assert.equal(current.articleMarkdown.includes("接受生命的节律"),true);
+    assert.equal(current.articleMarkdown.includes("主动加入"),true);
+    assert.equal(current.articleMarkdown.includes("态度与经验的逆转"),true);
+    assert.equal(current.articleMarkdown.includes("倒挂身体"),true);
+    assert.equal(current.articleMarkdown.includes("不能保证等待必有回报"),true);
+    assert.equal(current.articleMarkdown.includes("为什么倒吊人连着世界，又为死神做准备"),true);
+    assert.equal(current.articleMarkdown.includes("世界的舞者"),true);
+    assert.equal(current.articleMarkdown.includes("不能改写已经记下的正逆位"),true);
+    assert.equal(current.articleMarkdown.includes("不能拿来覆盖 Waite"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-world?locale=zh#depth-sequence"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-death?locale=zh#depth-sequence"),true);
+    assert.equal(current.articleMarkdown.includes("社会压力"),true);
+    assert.equal(current.articleMarkdown.includes("他人期望"),true);
+    assert.equal(current.articleMarkdown.includes("二手"),true);
+    assert.equal(current.articleMarkdown.includes("不真实"),true);
+    assert.equal(current.articleMarkdown.includes("支持系统"),true);
+    assert.equal(current.articleMarkdown.includes("臣服"),false);
+    assert.equal(current.articleMarkdown.includes("现稿已"),false);
+    assert.equal(current.articleMarkdown.includes("死神页已写"),false);
+    assert.equal(current.articleMarkdown.includes("12 是 21"),false);
+    assert.equal(current.articleMarkdown.includes("中点"),false);
+    assert.equal(current.articleMarkdown.includes("数秘"),false);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+2);
+    assert.equal(current.sources.at(-2).sourceId,"hanged-man-pollack-2010");
+    assert.equal(current.sources.at(-1).sourceId,"hanged-man-pollack-death-chapter-2010");
+    assert.equal(current.sources.at(-2).url,null);
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-2).sourceMetadata.pdfPages,[128,129,130,131,132]);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[135]);
+    assert.equal(current.updatedAt,"2026-11-08");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="hanged-man" && locale!=="en"){
+    assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Hanged Man edition gained the Pollack supplement`);
+    assert.equal(article.updatedAt,"2026-10-08");
    }
    if(Object.hasOwn(starRecords,path)){
     const record=starRecords[path],previousRaw=readFileSync(`content/star-update-20261025/previous/${path}`);
