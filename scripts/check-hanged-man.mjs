@@ -15,6 +15,8 @@ const locales = ['en', 'zh', 'zh-TW', 'ru'];
 const tags = {en:'en', zh:'zh-Hans', 'zh-TW':'zh-Hant', ru:'ru'};
 const suffix = locale => locale === 'en' ? '' : `?locale=${locale}`;
 const authored = locale => locale === 'en' || locale === 'zh';
+const modified = locale => locale === 'zh' ? '2026-11-08' : authored(locale) ? '2026-10-24' : '2026-10-08';
+const sectionCount = locale => locale === 'zh' ? 13 : authored(locale) ? 12 : 9;
 const editions = Object.fromEntries(locales.map(locale => [locale, JSON.parse(readFileSync(`content/tarot/${locale}/hanged-man.json`, 'utf8'))]));
 const plain = value => value.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 const renderText = markdown => plain(renderToStaticMarkup(React.createElement(Markdown, null, markdown)));
@@ -51,10 +53,10 @@ async function edition(locale) {
   for (const other of locales) await expect(page.locator(`link[rel=alternate][hreflang="${tags[other]}"]`)).toHaveAttribute('href', `https://www.destinypixel.com${articlePath}${suffix(other)}`);
   const schema = await page.locator('script[type="application/ld+json"]').evaluateAll(elements => elements.flatMap(element => JSON.parse(element.textContent))).then(entries => entries.find(entry => entry['@type'] === 'Article'));
   assert.equal(schema.datePublished, '2026-10-07');
-  assert.equal(schema.dateModified, authored(locale) ? '2026-10-24' : '2026-10-08');
+  assert.equal(schema.dateModified, modified(locale));
   await expect(page.locator('time[datetime="2026-10-07"]')).toHaveCount(1);
   await expect(page.locator(`time[datetime="${schema.dateModified}"]`)).toHaveCount(1);
-  await expect(page.locator('[data-learning-section]')).toHaveCount(authored(locale) ? 12 : 9);
+  await expect(page.locator('[data-learning-section]')).toHaveCount(sectionCount(locale));
   await expect(page.locator('[data-editorial-update]')).toHaveCount(authored(locale) ? 1 : 0);
   if (authored(locale)) await expect(page.locator('[data-learning-short-answer]')).toContainText(article.shortAnswer.body);
 }
@@ -70,9 +72,12 @@ try {
       assert.ok(rendered, `${locale}/${section.id}: no server section`);
       assert.equal(plain(rendered.replace(/<h2\b[^>]*>[\s\S]*?<\/h2>/, '')), renderText(section.bodyMarkdown), `${locale}/${section.id}: full server text mismatch`);
     }
-    for (const source of article.sources) assert.ok(renderedArticle.includes(source.url.replaceAll('&', '&amp;')), `${locale}: source missing`);
+    for (const source of article.sources) {
+      if (source.url) assert.ok(renderedArticle.includes(source.url.replaceAll('&', '&amp;')), `${locale}: source missing`);
+      else assert.ok(renderedArticle.includes(source.title), `${locale}: untitled local source missing`);
+    }
     const entry = sitemap.match(new RegExp(`<url>\\s*<loc>https://www\\.destinypixel\\.com${articlePath}${locale === 'en' ? '' : `\\?locale=${locale}`}<\\/loc>([\\s\\S]*?)<\\/url>`))?.[1];
-    assert.ok(entry?.includes(`<lastmod>${authored(locale) ? '2026-10-24' : '2026-10-08'}</lastmod>`), `${locale}: sitemap date mismatch`);
+    assert.ok(entry?.includes(`<lastmod>${modified(locale)}</lastmod>`), `${locale}: sitemap date mismatch`);
     if (authored(locale)) for (const link of renderedArticle.matchAll(/href="(\/[^"#]*)"/g)) internalLinks.add(link[1].replaceAll('&amp;', '&'));
     report.http.push({locale, status:200, sections:article.sections.length, completeText:true, sourceLinks:true, sitemapDate:true});
   }

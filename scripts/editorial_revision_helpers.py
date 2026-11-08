@@ -42,6 +42,8 @@ WORLD_DIR = ROOT / "content/world-update-20261106"
 WORLD_PATHS = frozenset({"content/tarot/zh/world.json"})
 DEATH_DIR = ROOT / "content/death-update-20261107"
 DEATH_PATHS = frozenset({"content/tarot/zh/death.json"})
+HANGED_MAN_POLLACK_DIR = ROOT / "content/hanged-man-update-20261108"
+HANGED_MAN_POLLACK_PATHS = frozenset({"content/tarot/zh/hanged-man.json"})
 
 
 def sha(raw):
@@ -142,6 +144,8 @@ def historical_bytes(path):
         validate_star_record(path)
         return (STAR_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in HANGED_MAN_PATHS:
+        if sample_key(path) in HANGED_MAN_POLLACK_PATHS:
+            validate_hanged_man_pollack_record(path)
         validate_hanged_man_record(path)
         return (HANGED_MAN_DIR / "previous" / sample_key(path)).read_bytes()
     if not is_sample(path):
@@ -193,6 +197,9 @@ def approved_markdown_sha(path, legacy_hash):
         return sha(current["articleMarkdown"])
     if sample_key(path) in STAR_PATHS:
         current, _ = validate_star_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in HANGED_MAN_POLLACK_PATHS:
+        current, _ = validate_hanged_man_pollack_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in HANGED_MAN_PATHS:
         current, _ = validate_hanged_man_record(path)
@@ -1591,6 +1598,161 @@ def validate_temperance_record(path):
     return current, previous
 
 
+def validate_hanged_man_pollack_record(path):
+    """Validate the Chinese Pollack supplement and keep the 2026-10-24 Hanged Man receipt."""
+    key = sample_key(path)
+    assert key in HANGED_MAN_POLLACK_PATHS, f"Not a Hanged Man Pollack revision: {key}"
+    registry = read(HANGED_MAN_POLLACK_DIR / "revisions.json")
+    assert registry["baseCommit"] == "73fcb222086507386d275dd306ba8614c275d89a"
+    assert registry["updatedAt"] == "2026-11-08"
+    assert set(registry["articles"]) == {"tarot-hanged-man"}
+    notes = registry["articles"]["tarot-hanged-man"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    for phrase in ("接受生命的节律", "主动加入", "正逆位", "社会压力", "有害处境", "不是 Waite 原文"):
+        assert phrase in notes["zh"], phrase
+    for phrase in ("臣服", "现稿已", "死神页已写", "12 是 21", "中点"):
+        assert phrase not in notes["zh"], phrase
+    assert set(registry["records"]) == HANGED_MAN_POLLACK_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (HANGED_MAN_POLLACK_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    prior = read(HANGED_MAN_DIR / "revisions.json")["records"][key]
+    assert sha(raw) == record["fileSha256"], f"Current Hanged Man file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Hanged Man Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == prior["fileSha256"], f"2026-10-24 Hanged Man file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == prior["articleMarkdownSha256"], f"2026-10-24 Hanged Man Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Hanged Man metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Hanged Man metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Hanged Man metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-08"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"] and current["shortAnswer"] == previous["shortAnswer"]
+    assert current["relatedCards"] == previous["relatedCards"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么倒吊人连着世界，又为死神做准备"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == 0
+            assert (200 <= len(added_text) <= 320) if old["id"] == "section-01" else (150 <= len(added_text) <= 230)
+        else:
+            assert section == old, f"Original Hanged Man section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("Pollack", "态度与经验的逆转", "接受生命的节律", "主动加入", "不是被动等待", "128", "130", "131", "作者象征", "强烈", "生命经验", "倒挂身体", "不能保证等待必有回报", "有害处境"):
+        assert phrase in image, phrase
+    for phrase in ("臣服", "世界之树", "松开口径", "期限练习", "再等几天"):
+        assert phrase not in image, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("Pollack", "世界的舞者", "129", "不能改写已经记下的正逆位", "人物头朝下是构图", "整张牌再转半圈才是逆位", "倒挂身体", "握杖外伸", "双臂交叉在背后", "从热闹里撤一步", "日常外在活动", "准备", "135", "不能拿来覆盖 Waite", "我是在撤回一步", "/journal/tarot-world?locale=zh#depth-sequence", "/journal/tarot-death?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    for phrase in ("12 是 21", "21 颠倒", "中点", "数秘", "命运之轮", "奥丁", "克劳利", "荒原", "4×3", "现稿已", "死神页已写", "女祭司"):
+        assert phrase not in sequence, phrase
+    assert sequence.count("\n\n") == 1
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    added_reverse = reverse[len(next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]):].strip()
+    for phrase in ("Pollack", "等太久了", "社会压力", "他人期望", "131", "132", "诊断", "安全", "生计", "责任", "证据", "支持系统", "有害处境", "作者解释"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("臣服", "小我", "二手", "世界之树", "期限检查", "松开口径"):
+        assert phrase not in added_reverse, phrase
+    for phrase in ("臣服", "现稿已", "死神页已写", "12 是 21", "21 颠倒", "中点", "数秘", "奥丁", "克劳利", "荒原"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Hanged Man source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 2
+    chapter, death_page = current["sources"][-2:]
+    assert chapter["sourceId"] == "hanged-man-pollack-2010"
+    assert death_page["sourceId"] == "hanged-man-pollack-death-chapter-2010"
+    for book, title, section, pages in (
+        (chapter, "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；吊人章，印刷／PDF 128–132", "The Hanged Man", [128, 129, 130, 131, 132]),
+        (death_page, "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；死神章，印刷／PDF 135", "Death", [135]),
+    ):
+        assert book["type"] == "modern_author_interpretation" and book["url"] is None
+        assert book["checkedOn"] == "2026-11-08" and book["title"] == title
+        assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+        metadata = book["sourceMetadata"]
+        assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+        assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+        assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+        assert metadata["section"] == section and metadata["localScanOnly"] is True
+        assert metadata["pdfPages"] == metadata["printedPages"] == pages
+        assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+    assert 135 not in chapter["sourceMetadata"]["pdfPages"]
+    assert chapter["sourceMetadata"]["pdfPages"] != death_page["sourceMetadata"]["pdfPages"]
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("hanged-man-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Hanged Man Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Hanged Man anchors"
+    assert set(previous_ids) <= set(ids)
+    orientation = next(section for section in current["sections"] if section["id"] == "orientation-and-position")
+    assert orientation == next(section for section in previous["sections"] if section["id"] == "orientation-and-position")
+    manuscript = (HANGED_MAN_POLLACK_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/hanged-man-update-20261108/revisions.json"
+    assert revision["updatedAt"] == "2026-11-08" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    english = read(ROOT / "content/tarot/en/hanged-man.json")
+    assert sha((ROOT / "content/tarot/en/hanged-man.json").read_bytes()) == read(HANGED_MAN_DIR / "revisions.json")["records"]["content/tarot/en/hanged-man.json"]["fileSha256"]
+    assert english["updatedAt"] == "2026-10-24"
+    assert "Pollack" not in english["articleMarkdown"]
+    assert all(section["id"] != "depth-sequence" for section in english["sections"])
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    for unedited_locale in ("zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/hanged-man.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/hanged-man"]["recordSha256"], f"Unedited Hanged Man file changed: {unedited_locale}"
+        assert read(unedited)["updatedAt"] == "2026-10-08"
+        assert "Pollack" not in read(unedited)["articleMarkdown"]
+        assert "hanged-man-pollack-2010" not in {source.get("sourceId") for source in read(unedited)["sources"]}
+        assert all(section["id"] != "depth-sequence" for section in read(unedited)["sections"])
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
 def validate_hanged_man_record(path):
     """Check the new two-language text and preserve its exact prior receipt."""
     key = sample_key(path)
@@ -1604,7 +1766,8 @@ def validate_hanged_man_record(path):
     record = registry["records"][key]
     assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
     assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
-    raw, previous_raw = Path(path).read_bytes(), (HANGED_MAN_DIR / "previous" / key).read_bytes()
+    raw = (HANGED_MAN_POLLACK_DIR / "previous" / key).read_bytes() if key in HANGED_MAN_POLLACK_PATHS else Path(path).read_bytes()
+    previous_raw = (HANGED_MAN_DIR / "previous" / key).read_bytes()
     current, previous = json.loads(raw), json.loads(previous_raw)
     assert sha(raw) == record["fileSha256"], f"Current Hanged Man file differs from receipt: {key}"
     assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], key
