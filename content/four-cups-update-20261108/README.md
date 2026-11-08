@@ -16,4 +16,4 @@ Every earlier section, paragraph, case, URL, anchor, source record, title, hook,
 
 `previous/` preserves the exact main-base records. `revisions.json` pins historical and current file/full-Markdown hashes. Removing only the additions must reconstruct the prior full Markdown; unrelated fields and every earlier section are compared exactly. The current additions have JSON Schema and manuscript parity validation, while original delivery receipts keep their historical meaning.
 
-Full readable manuscripts are `manuscript-en.md` and `manuscript-zh.md`. Local checks, known baseline failures, screenshots and the release blocker are in `docs/qa/tarot-four-cups-20261108/README.md`. This revision is a saved draft until the required formal-site access and acceptance can be completed.
+Full readable manuscripts are `manuscript-en.md` and `manuscript-zh.md`. Local checks, known baseline failures, screenshots and the release blocker are in `docs/qa/tarot-four-cups-20261108/README.md`. This revision is saved on a remote work branch; draft PR creation was rejected by automatic approval review and was not retried. Formal-site access and acceptance also remain blocked.
