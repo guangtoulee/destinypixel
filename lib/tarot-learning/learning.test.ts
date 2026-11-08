@@ -149,7 +149,7 @@ test("every real cast ID resolves to the complete correct-language article witho
      const newSection=current.sections.find((section:{id:string})=>section.id===sectionId);
      assert.ok(newSection.bodyMarkdown.startsWith(oldSection.bodyMarkdown+"\n\n"));
      const addedText=newSection.bodyMarkdown.slice(oldSection.bodyMarkdown.length).trim();
-     assert.equal(addedText.split("\n\n").length,sectionId==="section-01"?1:2);
+     assert.equal(addedText.split("\n\n").length,1);
     }
     assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="depth-comparison"),previous.sections.find((section:{id:string})=>section.id==="depth-comparison"));
     assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="orientation-and-position"),previous.sections.find((section:{id:string})=>section.id==="orientation-and-position"));
@@ -166,10 +166,14 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.equal(current.articleMarkdown.includes("/journal/tarot-death?locale=zh#depth-sequence"),true);
     assert.equal(current.articleMarkdown.includes("社会压力"),true);
     assert.equal(current.articleMarkdown.includes("他人期望"),true);
-    assert.equal(current.articleMarkdown.includes("二手"),true);
-    assert.equal(current.articleMarkdown.includes("不真实"),true);
+    assert.equal(current.articleMarkdown.includes("等太久了"),true);
+    assert.equal(current.articleMarkdown.includes("诊断"),true);
     assert.equal(current.articleMarkdown.includes("支持系统"),true);
     assert.equal(current.articleMarkdown.includes("臣服"),false);
+    assert.equal(current.articleMarkdown.includes("世界之树"),false);
+    assert.equal(current.articleMarkdown.includes("松开口径"),false);
+    assert.equal(current.articleMarkdown.includes("小我"),false);
+    assert.equal(current.articleMarkdown.includes("二手"),false);
     assert.equal(current.articleMarkdown.includes("现稿已"),false);
     assert.equal(current.articleMarkdown.includes("死神页已写"),false);
     assert.equal(current.articleMarkdown.includes("12 是 21"),false);

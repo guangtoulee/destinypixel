@@ -1649,13 +1649,15 @@ def validate_hanged_man_pollack_record(path):
             assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
             assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
             added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
-            assert added_text.count("\n\n") == (0 if old["id"] == "section-01" else 1)
+            assert added_text.count("\n\n") == 0
+            assert (200 <= len(added_text) <= 320) if old["id"] == "section-01" else (150 <= len(added_text) <= 230)
         else:
             assert section == old, f"Original Hanged Man section changed: {old['id']}"
     image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
-    for phrase in ("Pollack", "态度与经验的逆转", "接受生命的节律", "主动加入", "128", "130", "131", "作者象征", "入神而非受苦", "倒挂身体", "不能保证等待必有回报", "有害处境", "你必须牺牲自己", "世界之树", "不是被动等待"):
+    for phrase in ("Pollack", "态度与经验的逆转", "接受生命的节律", "主动加入", "不是被动等待", "128", "130", "131", "作者象征", "强烈", "生命经验", "倒挂身体", "不能保证等待必有回报", "有害处境"):
         assert phrase in image, phrase
-    assert "臣服" not in image
+    for phrase in ("臣服", "世界之树", "松开口径", "期限练习", "再等几天"):
+        assert phrase not in image, phrase
     sequence = added[0]["bodyMarkdown"]
     for phrase in ("Pollack", "世界的舞者", "129", "不能改写已经记下的正逆位", "人物头朝下是构图", "整张牌再转半圈才是逆位", "倒挂身体", "握杖外伸", "双臂交叉在背后", "从热闹里撤一步", "日常外在活动", "准备", "135", "不能拿来覆盖 Waite", "我是在撤回一步", "/journal/tarot-world?locale=zh#depth-sequence", "/journal/tarot-death?locale=zh#depth-sequence"):
         assert phrase in sequence, phrase
@@ -1664,9 +1666,10 @@ def validate_hanged_man_pollack_record(path):
     assert sequence.count("\n\n") == 1
     reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
     added_reverse = reverse[len(next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]):].strip()
-    for phrase in ("Pollack", "独立", "社会压力", "他人期望", "二手", "131", "132", "虚伪", "安全", "生计", "责任", "证据", "期限检查", "支持系统", "有害处境", "不真实"):
+    for phrase in ("Pollack", "等太久了", "社会压力", "他人期望", "131", "132", "诊断", "安全", "生计", "责任", "证据", "支持系统", "有害处境", "作者解释"):
         assert phrase in added_reverse, phrase
-    assert "臣服" not in added_reverse
+    for phrase in ("臣服", "小我", "二手", "世界之树", "期限检查", "松开口径"):
+        assert phrase not in added_reverse, phrase
     for phrase in ("臣服", "现稿已", "死神页已写", "12 是 21", "21 颠倒", "中点", "数秘", "奥丁", "克劳利", "荒原"):
         assert phrase not in current["articleMarkdown"], phrase
 
