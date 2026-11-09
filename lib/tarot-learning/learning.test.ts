@@ -728,7 +728,10 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.equal(current.sections.find((section:{id:string;bodyMarkdown:string})=>section.id==="section-04").bodyMarkdown.includes(ending),true);
     assert.equal(current.articleMarkdown.includes("心灵的正义律法"),true);
     assert.equal(current.articleMarkdown.includes("向上的剑"),true);
-    assert.equal(current.articleMarkdown.includes("不能预测任何案件结果"),true);
+    assert.equal(current.articleMarkdown.includes("不能用来预测案件结果"),true);
+    assert.equal(current.articleMarkdown.includes("不等同于 Waite 的原文"),true);
+    assert.equal(current.articleMarkdown.includes("现实法庭的规则"),true);
+    assert.equal(current.articleMarkdown.includes("社会法庭规则"),false);
     assert.equal(current.articleMarkdown.includes("为什么正义夹在命运之轮与倒吊人之间"),true);
     assert.equal(current.articleMarkdown.includes("地震"),true);
     assert.equal(current.articleMarkdown.includes("责任没有道德指控"),true);

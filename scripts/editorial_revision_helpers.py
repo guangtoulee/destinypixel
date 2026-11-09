@@ -1351,7 +1351,7 @@ def validate_justice_pollack_record(path):
     assert set(notes) == {"zh"} and notes["zh"].strip()
     for phrase in ("心灵的正义律法", "理解、回应并承担责任", "责任不是道德指控", "可能不愿面对某些事实", "不是 Waite 原文"):
         assert phrase in notes["zh"], phrase
-    for phrase in ("应得", "应该发生", "席米斯", "贾丝提昔亚", "现稿已"):
+    for phrase in ("应得", "应该发生", "席米斯", "贾丝提昔亚", "现稿已", "社会法庭规则"):
         assert phrase not in notes["zh"], phrase
     assert set(registry["records"]) == JUSTICE_PATHS
     record = registry["records"][key]
@@ -1397,9 +1397,9 @@ def validate_justice_pollack_record(path):
         else:
             assert section == old, f"Original Justice section changed: {old['id']}"
     image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
-    for phrase in ("Pollack", "心灵的正义律法", "没有蒙眼", "向上的剑", "天平", "121", "122", "作者象征", "不是 Waite", "社会法庭规则", "不能预测任何案件结果"):
+    for phrase in ("Pollack", "心灵的正义律法", "没有蒙眼", "向上的剑", "天平", "121", "122", "作者象征", "不等同于 Waite 的原文", "现实法庭的规则", "不能用来预测案件结果"):
         assert phrase in image, phrase
-    for phrase in ("席米斯", "贾丝提昔亚", "Themis", "Justitia", "无法撤回", "紫色", "黄色", "红袍", "魔术师", "女祭司", "应得", "应该发生"):
+    for phrase in ("席米斯", "贾丝提昔亚", "Themis", "Justitia", "无法撤回", "紫色", "黄色", "红袍", "魔术师", "女祭司", "应得", "应该发生", "社会法庭规则"):
         assert phrase not in image, phrase
     sequence = added[0]["bodyMarkdown"]
     for phrase in ("Pollack", "命运之轮", "观察", "理解并回应", "责任", "吊人", "接受与准备", "地震", "物质存在的限度", "经历会影响人", "并不等于这件事由这个人造成", "灾害或伤害", "责任没有道德指控", "123", "124", "128", "129", "不能拿来覆盖 Waite", "/journal/tarot-wheel?locale=zh", "/journal/tarot-hanged-man?locale=zh#depth-sequence"):
