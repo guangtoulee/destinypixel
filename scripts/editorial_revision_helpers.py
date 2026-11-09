@@ -44,6 +44,8 @@ DEATH_DIR = ROOT / "content/death-update-20261107"
 DEATH_PATHS = frozenset({"content/tarot/zh/death.json"})
 HANGED_MAN_POLLACK_DIR = ROOT / "content/hanged-man-update-20261108"
 HANGED_MAN_POLLACK_PATHS = frozenset({"content/tarot/zh/hanged-man.json"})
+JUSTICE_DIR = ROOT / "content/justice-update-20261109"
+JUSTICE_PATHS = frozenset({"content/tarot/zh/justice.json"})
 
 
 def sha(raw):
@@ -110,6 +112,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in JUSTICE_PATHS:
+        validate_justice_pollack_record(path)
+        return (JUSTICE_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in TWO_SWORDS_PATHS:
         validate_two_swords_record(path)
         return (TWO_SWORDS_DIR / "previous" / sample_key(path)).read_bytes()
@@ -159,6 +164,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in JUSTICE_PATHS:
+        current, _ = validate_justice_pollack_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in TWO_SWORDS_PATHS:
         current, _ = validate_two_swords_record(path)
         return sha(current["articleMarkdown"])
@@ -1322,6 +1330,167 @@ def validate_world_record(path):
         assert read(unedited)["updatedAt"] == "2026-10-08"
         assert "Pollack" not in read(unedited)["articleMarkdown"]
         assert "depth-sequence" not in read(unedited)["articleMarkdown"]
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
+def validate_justice_pollack_record(path):
+    """Validate the Chinese Pollack supplement and keep the 2026-10-08 Justice receipt."""
+    key = sample_key(path)
+    assert key in JUSTICE_PATHS, f"Not a Justice Pollack revision: {key}"
+    registry = read(JUSTICE_DIR / "revisions.json")
+    assert registry["baseCommit"] == "eb98b14175d3805d4d4cbfedef045c8ffe1188c9"
+    assert registry["updatedAt"] == "2026-11-09"
+    assert set(registry["articles"]) == {"tarot-justice"}
+    notes = registry["articles"]["tarot-justice"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    for phrase in ("心灵的正义律法", "理解、回应并承担责任", "责任不是道德指控", "可能不愿面对某些事实", "不是 Waite 原文"):
+        assert phrase in notes["zh"], phrase
+    for phrase in ("应得", "应该发生", "席米斯", "贾丝提昔亚", "现稿已", "社会法庭规则"):
+        assert phrase not in notes["zh"], phrase
+    assert set(registry["records"]) == JUSTICE_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (JUSTICE_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/justice"
+    assert sha(raw) == record["fileSha256"], f"Current Justice file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Justice Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Justice file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Justice Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Justice metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Justice metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Justice metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-09"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+    assert current["relatedCards"] == previous["relatedCards"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么正义夹在命运之轮与倒吊人之间"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == 0
+            cjk = len(re.findall(r"[\u4e00-\u9fff]", added_text))
+            assert (180 <= cjk <= 260) if old["id"] == "section-01" else (80 <= cjk <= 150), (old["id"], cjk)
+        else:
+            assert section == old, f"Original Justice section changed: {old['id']}"
+    image = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"].split("\n\n")[-1]
+    for phrase in ("Pollack", "心灵的正义律法", "没有蒙眼", "向上的剑", "天平", "121", "122", "作者象征", "不等同于 Waite 的原文", "现实法庭的规则", "不能用来预测案件结果"):
+        assert phrase in image, phrase
+    for phrase in ("席米斯", "贾丝提昔亚", "Themis", "Justitia", "无法撤回", "紫色", "黄色", "红袍", "魔术师", "女祭司", "应得", "应该发生", "社会法庭规则"):
+        assert phrase not in image, phrase
+    sequence = added[0]["bodyMarkdown"]
+    for phrase in ("Pollack", "命运之轮", "观察", "理解并回应", "责任", "吊人", "接受与准备", "地震", "物质存在的限度", "经历会影响人", "并不等于这件事由这个人造成", "灾害或伤害", "责任没有道德指控", "123", "124", "128", "129", "不能拿来覆盖 Waite", "/journal/tarot-wheel?locale=zh", "/journal/tarot-hanged-man?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    for phrase in ("应得", "应该发生", "中点", "数秘", "双蛇", "DNA", "圣杯", "佛陀", "现稿已", "/journal/tarot-wheel?locale=zh#depth-sequence"):
+        assert phrase not in sequence, phrase
+    assert sequence.count("\n\n") == 1
+    wheel = read(ROOT / "content/tarot/zh/wheel.json")
+    assert all(section["id"] != "depth-sequence" for section in wheel["sections"])
+    hanged = read(ROOT / "content/tarot/zh/hanged-man.json")
+    assert any(section["id"] == "depth-sequence" for section in hanged["sections"])
+    ending = "抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。"
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    old_reverse = next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    assert old_reverse.endswith(ending) and reverse.startswith(old_reverse + "\n\n")
+    assert reverse.count(ending) == 1 and reverse.index(ending) < reverse.index("可能不愿面对某些事实，也可能确实遭遇不公")
+    added_reverse = reverse[len(old_reverse):].strip()
+    for phrase in ("Pollack", "可能不愿面对某些事实，也可能确实遭遇不公", "127", "作者解释", "定罪", "喊冤", "证据", "申诉", "法律程序"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("应得", "应该发生", "瞧瞧每个人", "现稿已", "虚伪"):
+        assert phrase not in added_reverse, phrase
+    appeal = "面对不公时，你仍可申诉、求助并保护自己的权益。"
+    assert appeal in next(section for section in current["sections"] if section["id"] == "section-07")["bodyMarkdown"]
+    for phrase in ("应得", "应该发生", "席米斯", "贾丝提昔亚", "Themis", "Justitia", "无法撤回", "中点", "数秘", "现稿已", "/journal/tarot-wheel?locale=zh#depth-sequence"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Justice source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 2
+    chapter, hanged_page = current["sources"][-2:]
+    assert chapter["sourceId"] == "justice-pollack-2010"
+    assert hanged_page["sourceId"] == "justice-pollack-hanged-man-chapter-2010"
+    for book, title, section, pages in (
+        (chapter, "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；正义章，印刷／PDF 121–127", "Justice", [121, 122, 123, 124, 125, 126, 127]),
+        (hanged_page, "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；吊人章，印刷／PDF 128–129", "The Hanged Man", [128, 129]),
+    ):
+        assert book["type"] == "modern_author_interpretation" and book["url"] is None
+        assert book["checkedOn"] == "2026-11-09" and book["title"] == title
+        assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+        metadata = book["sourceMetadata"]
+        assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+        assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+        assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+        assert metadata["section"] == section and metadata["localScanOnly"] is True
+        assert metadata["pdfPages"] == metadata["printedPages"] == pages
+        assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+    assert chapter["sourceMetadata"]["pdfPages"] != hanged_page["sourceMetadata"]["pdfPages"]
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("justice-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Justice Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Justice anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (JUSTICE_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/justice-update-20261109/revisions.json"
+    assert revision["updatedAt"] == "2026-11-09" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    prior_date = depth["cards"]["justice"]["updatedAt"]
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/justice.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/justice"]["recordSha256"], f"Unedited Justice file changed: {unedited_locale}"
+        unedited_article = read(unedited)
+        assert unedited_article["updatedAt"] == prior_date, f"Unedited Justice date changed: {unedited_locale}"
+        assert unedited_article["publishedAt"] == "2026-10-07"
+        assert "Pollack" not in unedited_article["articleMarkdown"]
+        assert "justice-pollack-2010" not in {source.get("sourceId") for source in unedited_article["sources"]}
+        assert all(section["id"] != "depth-sequence" for section in unedited_article["sections"])
     try:
         import jsonschema
     except ImportError:
