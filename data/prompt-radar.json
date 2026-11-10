@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-09T23:05:53.000Z",
+  "updatedAt": "2026-11-10T08:43:34.233Z",
   "sourceSummary": {
     "community": 1472,
     "publicX": 612,
@@ -1484,6 +1484,52 @@
       "rawText": "This site looks like it was built by a team of 3D developers It wasn't. It's just video. And that's the part nobody expects > he generated two frames with AI > turned them into a clip with Seedance 2.0 > then gave it to Claude 4.8 to wrap into a full immersive scrollable experience Three effects that make the user feel like they're physically moving through a space: > see-through scrub > 3D scroll > mouse tracking None of them are actually 3D. The browser never renders a single polygon. It's a video being controlled by scroll position and cursor movement Most people assume sites like this require a creative developer who specializes in WebGL and weeks of optimization. The actual pipeline is three steps and fits in an afternoon full walkthrough in the article below. bookmark this before you need it"
     },
     {
+      "id": "x-public-2119341048367665201",
+      "title": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the firs",
+      "description": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody in",
+      "prompt": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody inspired by \"Gouryella\" by Gouryella • Finished in Suno Models (local and remote) • Claude Opus 5.5 • Grok 4.7 • Grok Imagine Image 2.0 and Grok Imagine Video 1.5 • Qwen-Image 2.1 • Qwen-Image-Edit 2511 • Seedance 2.5 • MiniMax H3 • GPT Image 2.5 • GPT-2 XL (the attention and prediction data on screen) • An SI model trained from scratch for the film (51M weights, 28,000 steps) • BiRefNet (mattes), Depth Anything (depth), RAFT (optical flow), face and people detection Tools • AgenC Core • ComfyUI • Grok Build + Grok Bot • Claude Code • Blender Cycles (11 3D sequences) • Python, Skia, PyTorch on CUDA • ffmpeg with NVENC The film • 5:26 at 1920x1080, 24 fps • 84 shots, 573 sung words on screen • 12 new effect packages, 29 designed transitions Hardware • RTX PRO 6000 Blackwell • RTX 5090 • 64 cores • 1 TB RAM (8 x 128 GB)",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/tetsuoai/status/2119341048367665201",
+      "sourceType": "x",
+      "authorName": "tetsuo",
+      "authorHandle": "@tetsuoai",
+      "createdAt": "2026-11-08T08:07:36.000Z",
+      "importedAt": "2026-11-10T08:43:34.203Z",
+      "tags": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "视频"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 1890,
+        "reposts": 329,
+        "replies": 291,
+        "quotes": 101,
+        "bookmarks": 740,
+        "views": 74170,
+        "score": 8058
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody inspired by \"Gouryella\" by Gouryella • Finished in Suno Models (local and remote) • Claude Opus 5.5 • Grok 4.7 • Grok Imagine Image 2.0 and Grok Imagine Video 1.5 • Qwen-Image 2.1 • Qwen-Image-Edit 2511 • Seedance 2.5 • MiniMax H3 • GPT Image 2.5 • GPT-2 XL (the attention and prediction data on screen) • An SI model trained from scratch for the film (51M weights, 28,000 steps) • BiRefNet (mattes), Depth Anything (depth), RAFT (optical flow), face and people detection Tools • AgenC Core • ComfyUI • Grok Build + Grok Bot • Claude Code • Blender Cycles (11 3D sequences) • Python, Skia, PyTorch on CUDA • ffmpeg with NVENC The film • 5:26 at 1920x1080, 24 fps • 84 shots, 573 sung words on screen • 12 new effect packages, 29 designed transitions Hardware • RTX PRO 6000 Blackwell • RTX 5090 • 64 cores • 1 TB RAM (8 x 128 GB)"
+    },
+    {
       "id": "x-public-2110036327286886731",
       "title": "Introducing Kylon: The first company harness for your humans, agents and tools. Whether you’re u",
       "description": "Introducing Kylon: The first company harness for your humans, agents and tools. Whether you’re using Codex, Claude, Devin, Hermes, Gemini CLI, OpenClaw, Muse, Instinct, Grok Bot, Dots, Perplexity Computer, Cursor, Antigr",
@@ -2135,52 +2181,6 @@
       "rawText": "OMG! @Kling_ai 4.0 is OUT TODAY !!!! I made this musicvideo with it! Here is everything you need to know … This post is sponsored by Kling AI but they allowed me to create whatever I wanted! I was one of the first few artists who got early access and used it to make this music video. What stood out to me most wasn’t just the image quality, but its ability for lipsyncing! For the lip sync, I used my preferred method: rendering the actual music track with a black frame and combining it with the stills I created. Same with prompt adherence. Shaky handheld camera actually felt shaky. The anamorphic lens look came through. And with Omni Reference, you can now work with up to 15 references across images, video, voice and elements. On launch you also get: •⁠ ⁠up to 10 keyframes •⁠ ⁠30s generations •⁠ ⁠1080p •⁠ ⁠multi-shot support •⁠ ⁠improved lip sync •⁠ ⁠improved text generation •⁠ ⁠much more flexible reference control Kling 4.0 feels less like “generate me a video” and more like “here are all the ingredients, now direct it.” oh, and its cheaper than seedance! And 4.0 Flash is A LOT faster too! Have you tried it? Let me know your thoughts! Thank you so much for helping me with this one Ben Chimoy!"
     },
     {
-      "id": "x-public-2119341048367665201",
-      "title": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the firs",
-      "description": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody in",
-      "prompt": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody inspired by \"Gouryella\" by Gouryella • Finished in Suno Models (local and remote) • Claude Opus 5.5 • Grok 4.7 • Grok Imagine Image 2.0 and Grok Imagine Video 1.5 • Qwen-Image 2.1 • Qwen-Image-Edit 2511 • Seedance 2.5 • MiniMax H3 • GPT Image 2.5 • GPT-2 XL (the attention and prediction data on screen) • An SI model trained from scratch for the film (51M weights, 28,000 steps) • BiRefNet (mattes), Depth Anything (depth), RAFT (optical flow), face and people detection Tools • AgenC Core • ComfyUI • Grok Build + Grok Bot • Claude Code • Blender Cycles (11 3D sequences) • Python, Skia, PyTorch on CUDA • ffmpeg with NVENC The film • 5:26 at 1920x1080, 24 fps • 84 shots, 573 sung words on screen • 12 new effect packages, 29 designed transitions Hardware • RTX PRO 6000 Blackwell • RTX 5090 • 64 cores • 1 TB RAM (8 x 128 GB)",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/tetsuoai/status/2119341048367665201",
-      "sourceType": "x",
-      "authorName": "tetsuo",
-      "authorHandle": "@tetsuoai",
-      "createdAt": "2026-11-08T08:07:36.000Z",
-      "importedAt": "2026-11-08T18:26:04.364Z",
-      "tags": [
-        "GPT Image 2",
-        "Grok Imagine",
-        "Seedance",
-        "视频"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Grok Imagine",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 1303,
-        "reposts": 222,
-        "replies": 218,
-        "quotes": 69,
-        "bookmarks": 511,
-        "views": 45666,
-        "score": 5543
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "ATTENTION IS ALL YOU NEED The most complex AgenC video yet. • 26 hours 51 minutes, from the first lyrics to the final file • 10.1 billion tokens • 131 agents, 23,354 model calls Music • Piano written by me, the melody inspired by \"Gouryella\" by Gouryella • Finished in Suno Models (local and remote) • Claude Opus 5.5 • Grok 4.7 • Grok Imagine Image 2.0 and Grok Imagine Video 1.5 • Qwen-Image 2.1 • Qwen-Image-Edit 2511 • Seedance 2.5 • MiniMax H3 • GPT Image 2.5 • GPT-2 XL (the attention and prediction data on screen) • An SI model trained from scratch for the film (51M weights, 28,000 steps) • BiRefNet (mattes), Depth Anything (depth), RAFT (optical flow), face and people detection Tools • AgenC Core • ComfyUI • Grok Build + Grok Bot • Claude Code • Blender Cycles (11 3D sequences) • Python, Skia, PyTorch on CUDA • ffmpeg with NVENC The film • 5:26 at 1920x1080, 24 fps • 84 shots, 573 sung words on screen • 12 new effect packages, 29 designed transitions Hardware • RTX PRO 6000 Blackwell • RTX 5090 • 64 cores • 1 TB RAM (8 x 128 GB)"
-    },
-    {
       "id": "x-public-2094252298746970456",
       "title": "wen3.0真的屌爆了啊啊啊，本以为上次的 Seedance 2.5 已经够顶了，没想到 @edimakortaiwan 刚上的 Wan 3.0 直接开大！🤯 🔗https://t.co/",
       "description": "wen3.0真的屌爆了啊啊啊，本以为上次的 Seedance 2.5 已经够顶了，没想到 @edimakortaiwan 刚上的 Wan 3.0 直接开大！🤯 🔗 这次换了「图转影片」玩法，直接喂了一张参考图进去。最夸张的是，提示词直接开放到了 2 万字限制 📝这哪是写 Prompt，简直是可以直接塞微电影剧本了（下次尝试下）😂 靠着图生视频 + 几千字的细节描述，依然是一键直出 30 秒电影级连贯画面，动作自然度直接让朋友圈以",
@@ -2740,6 +2740,52 @@
       "rawText": "AI anime production is getting powerful. GPT Image 2 created the entire storyboard from one prompt. Then Seedance 2.0 turned it into a cinematic anime scene. Step-by-step tutorial with prompts: 👇"
     },
     {
+      "id": "x-public-2118433993486205051",
+      "title": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step",
+      "description": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video w",
+      "prompt": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/maxxmalist/status/2118433993486205051",
+      "sourceType": "x",
+      "authorName": "MAX",
+      "authorHandle": "@maxxmalist",
+      "createdAt": "2026-11-05T20:03:17.000Z",
+      "importedAt": "2026-11-10T08:43:34.205Z",
+      "tags": [
+        "GPT Image 2",
+        "Seedance",
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 413,
+        "reposts": 37,
+        "replies": 23,
+        "quotes": 7,
+        "bookmarks": 1112,
+        "views": 42870,
+        "score": 4440
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]"
+    },
+    {
       "id": "x-public-2106560621932384657",
       "title": "Made with seedance 2.5 Prompt 👇 Create a heartwarming and funny ultra-realistic 3D animated cin",
       "description": "Made with seedance 2.5 Prompt 👇 Create a heartwarming and funny ultra-realistic 3D animated cinematic video in vertical 9:16 format. Scene: A cute little toddler boy is sitting on the bathroom floor in front of a dark b",
@@ -2870,52 +2916,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "On this day in 2023, Elon Musk officially announced xAI. A lot has happened since then… • Jul 12, 2023 — xAI was officially announced with the mission of understanding the true nature of the universe. • Nov 3, 2023 — Unveiled Grok, its first AI model, trained in only two months and connected to real-time knowledge from 𝕏. • Nov 6, 2023 — Launched PromptIDE for prompt engineering and interpretability research. • Mar 17, 2024 — Open-released Grok-1’s weights and architecture, a 314B-parameter Mixture-of-Experts model. • Mar 28, 2024 — Announced Grok-1.5 with major reasoning improvements and a 128K-token context window. • Apr 12, 2024 — Introduced Grok-1.5V, xAI’s first multimodal model for understanding images, documents, charts, diagrams and screenshots. • May 26, 2024 — Raised $6 billion in Series B funding. • Aug 13, 2024 — Launched Grok-2 and Grok-2 mini, bringing stronger reasoning, coding, vision and image generation to Grok. • Sep 2024 — Brought Colossus online with 100,000 NVIDIA H100 GPUs, built from start to finish in only 122 days. • Nov 4, 2024 — Opened the xAI API public beta. • Dec 9, 2024 — Launched Aurora, xAI’s own autoregressive image-generation model. • Dec 12, 2024 — Made Grok free for everyone on 𝕏 while adding web search, citations and multilingual improvements. • Dec 23, 2024 — Raised another $6 billion through its Series C funding round. • Jan–Feb 2025 — Launched standalone Grok applications for iOS and Android. • Feb 2025 — Doubled Colossus to 200,000 GPUs just 92 days after completing the first 100,000-GPU cluster. • Feb 19, 2025 — Unveiled Grok 3 and Grok 3 mini, trained with roughly 10× more compute, alongside Think and DeepSearch. • Feb–Mar 2025 — Rolled out Voice Mode and the SuperGrok subscription. • Mar 17, 2025 — Acquired AI video-generation startup Hotshot. • Mar 28, 2025 — xAI acquired 𝕏 in an all-stock transaction, combining data, models, compute, distribution and talent. • Apr–May 2025 — Released Grok 3 through the API and launched Live Search for real-time information from the web and 𝕏. • Jul 9, 2025 — Launched Grok 4 and Grok 4 Heavy with native tool use, real-time search and reinforcement learning at unprecedented scale. • Jul 12, 2025 — Brought Grok directly into Tesla vehicles through an over-the-air software update. • Jul 14, 2025 — Launched xAI for Government. • Jul–Aug 2025 — Introduced Grok Companions, launched Grok Imagine for rapid image and video generation with sound, and open-released Grok 2. • Aug 28, 2025 — Launched Grok Code Fast 1 for fast and economical agentic coding. • Sep 19, 2025 — Launched Grok 4 Fast, delivering Grok 4-class performance with significantly greater token and cost efficiency. • Sep 25, 2025 — Expanded xAI for Government through the GSA OneGov program. • Oct 27, 2025 — Launched Grokipedia, an AI-generated knowledge platform powered by Grok. • Nov 17, 2025 — Launched Grok 4.1, which reached the #1 position on LMArena’s Text Arena during its rollout. • Nov 19, 2025 — Launched Grok 4.1 Fast and the Agent Tools API while announcing a major partnership with Saudi Arabia and HUMAIN. • Dec 2025 — Partnered with El Salvador on a nationwide AI education program; launched the Grok Voice Agent API, Collections API, Grok Business and Grok Enterprise; and was selected for a major U.S. defense AI program. • By the end of 2025 — Colossus I and II had surpassed one million H100 GPU equivalents, while 𝕏 and Grok reached roughly 600 million monthly active users combined. • Jan 6, 2026 — Raised $20 billion through an upsized Series E funding round. • Jan 28, 2026 — Launched the Grok Imagine API for image creation, video generation and media editing. • Feb 2, 2026 — SpaceX acquired xAI, combining artificial intelligence, rockets, satellites, communications and real-time information. • Mar 10, 2026 — Launched Grok 4.20 and Grok 4.20 Multi-Agent, allowing multiple specialized agents to collaborate on difficult problems. • Apr 17–30, 2026 — Launched standalone Speech-to-Text and Text-to-Speech APIs, Grok Voice Think Fast 1.0 and Custom Voices. • May 5, 2026 — Launched Grok 4.3 with a 1M-token context window, configurable reasoning and advanced tool-calling capabilities. • May 6, 2026 — Launched Grok Connectors and Imagine Quality Mode while announcing a major Colossus computing partnership with Anthropic. • May 15–21, 2026 — Brought Grok subscriptions to Hermes Agent, OpenClaw and OpenCode, then launched Grok Skills for persistent expertise, workflow automation and document generation. • May 25, 2026 — Launched Grok Build, an agentic coding CLI capable of planning, searching, editing, testing and building software directly from the terminal. • May 27–Jun 15, 2026 — Expanded the Grok coding ecosystem with Kilo Code, Grok Build through the API, Composer 2.5, plugins, a marketplace, an Agent Dashboard and Warp integration. • Jun 3–18, 2026 — Launched Grok Imagine Video 1.5, expanded Grok Voice through Vapi, powered Gopuff’s Go and eToro’s Tori, and brought Grok to PowerPoint, Word, Excel, Amazon Bedrock and Databricks. • Jul 1, 2026 — Launched Voice Agent Builder, a no-code platform for deploying production-ready Grok voice agents. • Jul 6, 2026 — Launched 21 new flagship Grok voices. • Jul 8, 2026 — Launched Grok 4.5, SpaceXAI’s smartest model yet for coding, agentic tasks and knowledge work—trained alongside Cursor, served at fast-model speeds and built for dramatically greater token efficiency."
-    },
-    {
-      "id": "x-public-2118433993486205051",
-      "title": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step",
-      "description": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video w",
-      "prompt": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/maxxmalist/status/2118433993486205051",
-      "sourceType": "x",
-      "authorName": "MAX",
-      "authorHandle": "@maxxmalist",
-      "createdAt": "2026-11-05T20:03:17.000Z",
-      "importedAt": "2026-11-08T18:26:04.366Z",
-      "tags": [
-        "GPT Image 2",
-        "Seedance",
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 408,
-        "reposts": 37,
-        "replies": 21,
-        "quotes": 7,
-        "bookmarks": 1098,
-        "views": 40674,
-        "score": 4381
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "AI videos are getting too good we’re cooked. here's the full workflow with prompts, step-by-step: 1. find a real UGC video on TikTok as a reference for style, emotions, and movement (style reference not a copycat video with different face) 2. create your reference image, use Nano Banana Pro instead of GPT-image 2, nano was trained on older phones so it's not overpolished 3. get a clear image of the product you want to advertise 4. upload everything you have to GPT with prompt template (below) to generate prompt 5. upload all 3 references to Seedance 2.5 and generate using references mode, 720p is enough, and your preferred aspect ratio and duration 6. watch the result with sound and always check the eyes, skin, voice, and background 7. try the same setup in Wan 3.0 for a 2x cheaper alternative === prompt template: You are an expert at writing prompts for Seedance 2.5 (reference mode) that produce realistic, TikTok-style UGC videos. Nothing about the result should look or sound like AI. I'm uploading: - @Image1 – the exact first frame of the video (the person, outfit, setting, lighting and framing) - @Video1 – a real TikTok video. Copy the person's physical performance, energy, movement and way of talking from it - @Image2 – the product Study all three files carefully. Then write one prompt in plain English, lowercase, with these 7 numbered sections and nothing else: 1. format & visual references The length of the video, \"natural tiktok ugc style\", @Image1 as the exact first frame and visual reference for the person, outfit, setting, lighting and framing, @Video1 as the reference for physical performance, voice and accent. 2. body language & movement Match the posture, hand gestures, facial movements and body language from @Video1. Describe 1–2 specific movements you can actually see in @Video1 (for example, how she sits down, leans in or moves her hands while she talks). 3. dialogue \"she says exactly what is written between the brackets: [ ... ]\". Write the script in the brackets. It should sound like a real person talking to a friend, not like an ad: short sentences, small reactions, no marketing words. It must fit the video length when spoken at a natural pace. 4. voice, emotions & reactions How she speaks (pace, energy, tone) and how her emotions change line by line. Quote specific lines from the script and describe the reaction on each one (a quick laugh, disbelief, getting excited, turning mock-serious, ending warmly). Ask for natural changes in pitch, emphasis and speed, with tiny pauses that fit the reactions. 5. product interaction Exactly when and how @Image2 comes into the video (where she takes it from, on which line it appears), how she shows it to the camera with the label visible, and what her other hand does at the same time. 6. timing & realism Fit the full performance within the video length. Realistic skin texture, natural blinking, accurate lip sync and room sound that fits the setting (echo in a bathroom, quiet hum in a bedroom, wind and traffic outside). 7. camera & restrictions One continuous shot, the same camera as in @Image1 (handheld or stationary), and a list of what the video must NOT have: no shouting, no music, no cuts, no zooms, no captions, no tiktok logo, no extra spoken words. Rules: - Use @Image1, @Video1 and @Image2 exactly like that, so Seedance knows which file is which. - Describe only what you can see in the files. Don't invent a new room, outfit or person. - Keep every section short and concrete. No general phrases like \"high quality\" or \"cinematic\". - Give me only the finished prompt, ready to paste. MY VIDEO - Product: [product name + what it does] - Video length: [e.g. 15–20 seconds] - Accent: [e.g. american] - What she should say / the idea: [e.g. she just spent the last of her money on this cream and she's excited but feels a bit guilty]"
     },
     {
       "id": "x-public-2099613137393570002",
@@ -25851,7 +25851,7 @@
       "authorName": "Harry AI",
       "authorHandle": "@Tech_Harry1",
       "createdAt": "2026-11-07T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -25895,7 +25895,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.934Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "人像",
         "摄影"
@@ -25937,7 +25937,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -25979,7 +25979,7 @@
       "authorName": "Aiza",
       "authorHandle": "@AizaAi12",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26020,7 +26020,7 @@
       "authorName": "Popcraft AI",
       "authorHandle": "@popcraftAI",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26145,7 +26145,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.934Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "人像"
       ],
@@ -26429,7 +26429,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.934Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26472,7 +26472,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.934Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26716,7 +26716,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "人像",
         "摄影"
@@ -26758,7 +26758,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26839,7 +26839,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [
         "人像"
       ],
@@ -26880,7 +26880,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.043Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26919,7 +26919,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "人像",
         "摄影"
@@ -26961,7 +26961,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27121,7 +27121,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27164,7 +27164,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "人像",
         "摄影"
@@ -27329,7 +27329,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27372,7 +27372,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27415,7 +27415,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27458,7 +27458,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "人像"
       ],
@@ -27499,7 +27499,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "人像"
       ],
@@ -27540,7 +27540,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27583,7 +27583,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -27663,7 +27663,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-10-28T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.935Z",
+      "importedAt": "2026-11-10T08:43:30.044Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -87417,7 +87417,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.939Z",
+      "importedAt": "2026-11-10T08:43:30.047Z",
       "tags": [
         "产品",
         "平面设计",
@@ -87460,7 +87460,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.939Z",
+      "importedAt": "2026-11-10T08:43:30.047Z",
       "tags": [
         "平面设计"
       ],
@@ -87501,7 +87501,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-09T23:05:47.939Z",
+      "importedAt": "2026-11-10T08:43:30.047Z",
       "tags": [
         "平面设计"
       ],
