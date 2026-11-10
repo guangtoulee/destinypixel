@@ -1,0 +1,578 @@
+✔ report generation defaults to the current DeepSeek flash id (0.607875ms)
+✔ the metaphysics funnel includes bracelets and excludes standalone experiments (6.587042ms)
+✔ analytics never receives report ids, birth data, questions, or totem fragments (0.393167ms)
+✔ annual handoffs use only fixed entry labels within the existing funnel (0.093125ms)
+✔ only controlled campaign labels survive URL sanitization (0.147583ms)
+✔ explicit QA visits suppress events and pageviews across same-tab navigation (0.757042ms)
+✔ QA flag is excluded even without browser storage (0.111834ms)
+✔ account and checkout analytics remove credentials and payment identifiers (0.09925ms)
+✔ form event names are from the product allowlist (0.05025ms)
+✔ annual guide events and URLs never carry birth fields (0.190875ms)
+✔ day cards keep campaign attribution without birth dates, names or shared archetypes (0.111708ms)
+✔ day pillar events contain only the fixed tool and main-site area (0.099667ms)
+✔ events before the SDK mounts are queued after URL redaction is configured (0.081666ms)
+✔ discovery campaigns stay measurable without private birthday fields (0.052042ms)
+✔ relationship and oracle campaigns preserve attribution without either person's data or question (0.26025ms)
+✔ public educational pages are grouped separately from tools and private reports (0.041ms)
+✔ relationship and oracle events contain only controlled identifiers, with no runtime escape hatch (0.104833ms)
+✔ birthday handoff is one-use and expires, with no name, city or public URL (2.465209ms)
+✔ invalid, corrupt and inaccessible storage never prefill or break navigation (0.172458ms)
+✔ locale draft consumes handoff, survives navigation and edits without extending expiry (0.194292ms)
+✔ draft clears on date removal or submission and never stores ordinary form input (0.088084ms)
+✔ only the configured password passes (0.878583ms)
+✔ session expires and rejects tampering, future issuance and configuration changes (0.474708ms)
+✔ missing private configuration always fails closed (0.152625ms)
+✔ GET and HEAD protect all model files, including encoded direct URLs (5.070417ms)
+✔ valid cookies pass model requests while other site routing is preserved (0.429167ms)
+✔ private posters cannot be read through the Next.js image optimizer (0.525166ms)
+✔ login rejects wrong passwords and cross-site submissions without cookies (0.936ms)
+✔ correct password creates a scoped signed HttpOnly session (1.194875ms)
+✔ login uses the public Host or forwarded origin behind a reverse proxy (0.63825ms)
+✔ Ascendant is on eastern horizon; MC is on the upper meridian in both hemispheres (1.341333ms)
+✔ Natal positions retain independent NASA/JPL fixture accuracy; full aspects are not truncated (43.504917ms)
+✔ Rejects bad coordinates, missing time, unknown cities, ambiguous DST and prototype keys (1.288083ms)
+✔ Aspect boundary uses circular separation and exact six-degree orb (1.000125ms)
+✔ 78 unique cards: draw, replace and return conserve the full physical deck (0.903958ms)
+✔ API requires a complete unique spread and preserves orientations and positions (0.262792ms)
+✔ detailed tarot readings require a question but allow optional bounded context (0.336125ms)
+✔ All 78 cards have distinct original meanings in all four locales and all five spreads have labels (12.107083ms)
+✔ AI JSON is bounded plain text and the provider receives only the supplied derived data (20.456084ms)
+✔ Detailed natal reading covers every planet and house, prioritizes tight aspects and excludes birth identifiers (33.27725ms)
+✔ Detailed AI output rejects missing/duplicate chapters and truncated answers (20.911041ms)
+✔ bounded snapshots preserve every planet, house, card and supplied interpretation (3.022042ms)
+✔ invalid snapshots cannot contain duplicate cards, broken houses, oversized questions or fake AI targets (0.363584ms)
+✔ request cap uses bytes, including streamed requests; private URLs never reach analytics (60.829959ms)
+✔ member and administrator routes enforce ownership, origin, namespace, pagination and idempotent persistence (18.160083ms)
+✔ one start and completion per selection, preserving intentional repeated deals (1.225917ms)
+✔ resetting an unfinished round permits a fresh start without inventing a completion (0.069958ms)
+✔ cycling sends the original top card underneath without altering dealt cards or orientations (1.658209ms)
+✔ cycling preserves spread slots, count, replacements and safe zero/one-card behavior (0.136167ms)
+✔ default artwork covers every stable card identity with an attributed existing file (1.141333ms)
+✔ changing artwork leaves every localized meaning and stable identity intact (3.158666ms)
+✔ artwork comparison offers only actual faces and never substitutes another edition (1.244292ms)
+✔ all 24 rotation steps keep every corner and selection margin inside the table (19.128125ms)
+✔ the clarifier addition preserves the exact nine-section Celtic predecessor and the whole neighboring journal (2.225625ms)
+✔ the bilingual clarification keeps verified page scope, parallel decision rows and real practice destinations (0.329333ms)
+✔ the real preset retains ten cards while only authored Celtic URLs receive the November 4 date (6.87225ms)
+✔ the predecessor containers retain their independent base hashes and the method module changes only the intended date (1.8625ms)
+✔ the historical significator addition remains exact while every prior section and the complete journal article stay intact (0.384958ms)
+✔ the significator comparison preserves the real first and seventh positions without introducing an eleventh slot (0.317792ms)
+✔ authored Celtic URLs retain October 23 publication and use the current revision date while journal dates stay unchanged (81.04225ms)
+✔ the methods still resolve unsupported languages to English without creating indexed fallback editions (51.552625ms)
+✔ PayPal amounts require exact decimal strings, never float coercion (0.687208ms)
+✔ a completed order must contain exactly one matching completed capture (0.939834ms)
+✔ checkout approval links stay on the exact PayPal environment hostname (0.1335ms)
+✔ paid reports require content in every unique chapter (0.823375ms)
+✔ provider end labels are removed without accepting duplicate or incomplete chapters (0.4845ms)
+✔ translated V4.1 chapter headings normalize without hiding missing or duplicate content (0.266709ms)
+[destiny-report-generation] { kind: 'natal', stage: 'failed', message: 'Access changed' }
+[destiny-report-generation] { kind: 'natal', stage: 'failed', message: 'Access changed' }
+[destiny-report-generation] { kind: 'natal', stage: 'failed', message: 'Generation lease expired' }
+[destiny-report-generation] {
+  kind: 'natal',
+  stage: 'incomplete-content',
+  model: 'deepseek-flash',
+  attempt: 1,
+  finishReason: 'length',
+  complete: true,
+  contentLength: 808,
+  validChapters: 7,
+  expectedChapters: 7
+}
+[destiny-report-generation] { kind: 'natal', stage: 'failed', message: 'Incomplete generation' }
+[destiny-report-generation] {
+  kind: 'natal',
+  stage: 'incomplete-content',
+  model: 'deepseek-flash',
+  attempt: 1,
+  finishReason: 'stop',
+  complete: false,
+  contentLength: 539,
+  validChapters: 0,
+  expectedChapters: 7
+}
+[destiny-report-generation] {
+  kind: 'natal',
+  stage: 'incomplete-content',
+  model: 'deepseek-flash',
+  attempt: 2,
+  finishReason: 'stop',
+  complete: false,
+  contentLength: 539,
+  validChapters: 0,
+  expectedChapters: 7
+}
+[destiny-report-generation] { kind: 'natal', stage: 'failed', message: 'Incomplete generation' }
+[destiny-report-generation] {
+  kind: 'natal',
+  stage: 'incomplete-content',
+  model: 'deepseek-flash',
+  attempt: 1,
+  finishReason: 'stop',
+  complete: false,
+  contentLength: 999,
+  validChapters: 0,
+  expectedChapters: 7
+}
+▶ commerce server routes authorize persisted reports and verified provider evidence
+  ✔ a bare report ID and another member never expose private rows or start generation (22.80875ms)
+  ✔ guest proof expires and must be atomically claimed by a signed-in member (2.489416ms)
+  ✔ sandbox entitlements never become live purchases or unlock regular production members (1.70925ms)
+  ✔ email, verification and membership plan cannot grant administrator privileges (1.539083ms)
+  ✔ an explicitly bound administrator can read and generate owned reports without payment (72.286ms)
+  ✔ administrator testing never bypasses another report owner's private access (29.429458ms)
+  ✔ administrator guest reports require a successful atomic ownership claim before free testing (1.0755ms)
+  ✔ administrator access revoked during generation cannot persist unlocked content (31.052167ms)
+  ✔ production sandbox checkout is explicit and administrator-only while public paid reports stay off (1.661ms)
+  ✔ sandbox-test requests cannot bypass regular members, live mode or report ownership (1.075041ms)
+  ✔ completed administrator sandbox tests resume the same order without another provider creation (0.470167ms)
+  ✔ production sandbox capture requires the bound administrator as well as the order owner (0.885833ms)
+  ✔ generation rejects unpaid reports and arbitrary client-only context (0.308959ms)
+  ✔ paid generation reconstructs persisted birth context and uses a conditional lease write (38.971333ms)
+  ✔ cached generation avoids a provider call and an active lease returns 409 (8.683667ms)
+  ✔ a refund during generation or a replaced lease prevents content delivery (20.173458ms)
+  ✔ paid generation uses the current DeepSeek flash model unless DEEPSEEK_MODEL overrides it (5.234541ms)
+  ✔ incomplete model output is never saved as a paid report (5.581791ms)
+  ✔ one format repair recovers provider headings before persistence (2.832625ms)
+  ✔ complete provider prose with redundant end labels is normalized before private persistence (2.524125ms)
+  ✔ checkout derives price and identity on the server and preserves provider idempotency (6.446ms)
+  ✔ checkout preserves Chinese return and cancel pages without accepting arbitrary redirect input (2.124708ms)
+  ✔ capture requires the order's member and repeated requests use the same capture key (1.249417ms)
+  ✔ approved checkout resumes the same local order without creating or capturing here (0.779417ms)
+  ✔ completed checkout only advertises an unlock after actual reconciliation (1.118875ms)
+  ✔ only explicitly VOIDED old uncaptured checkouts can receive a replacement (0.525208ms)
+  ✔ 404, timeout, unknown error, pending or capture evidence never trigger replacement (26.685209ms)
+  ✔ terminal orders never return to pending or initiate another provider capture (2.50225ms)
+  ✔ wrong amount, currency, custom ID, merchant, capture or status never calls the grant RPC (0.532958ms)
+  ✔ webhooks verify signatures before reads and a verified refund overrides stale capture status (0.88725ms)
+  ✔ a signed v2 capture-declined event overrides stale completed provider evidence (0.301084ms)
+  ✔ a refund resource resolves its original capture from a PayPal up link (0.322416ms)
+  ✔ refund up links outside authenticated PayPal HTTPS origins cannot reach private or payment records (0.340416ms)
+  ✔ direct capture reconciliation recognizes the v2 DECLINED status without a webhook (0.076334ms)
+  ✔ all browser mutations reject cross-origin requests before private reads (0.250583ms)
+✔ commerce server routes authorize persisted reports and verified provider evidence (690.146084ms)
+✔ client accepts the actual date-mode response without retrying a valid calculation (104.711417ms)
+✔ unknown is explicit, ignores hidden time, and supports either or both partners (17.082416ms)
+✔ civil windows respect spring/autumn DST and reject impossible dates/cities (0.627875ms)
+✔ solar-term transitions omit uncertain pillars instead of choosing a reference hour (2.44625ms)
+✔ date-only AI payload contains uncertainty but no raw birth inputs (3.811792ms)
+✔ scores are stable, bounded and invariant when partners are swapped (125.265875ms)
+✔ changing either Bazi or planetary data can change the corresponding score (0.227583ms)
+✔ circular aspects handle 359 to 1 degrees and symmetric input (0.061709ms)
+✔ reject missing consent, future dates, unknown city, unknown time, impossible dates and DST ambiguity (0.512541ms)
+✔ AI schema rejects missing, oversized and HTML content (0.180709ms)
+✔ AI only receives derived chart data, keeps scores outside its output and fails safely (19.09ms)
+✔ all four locales have complete comparison copy and explain the score floor (0.598917ms)
+✔ all 60 animal portraits have localized love readings and actual animal names (9.325792ms)
+✔ all 25 element pairs preserve the correct nourishing/controlling direction (0.598375ms)
+✔ free result contains animal/love context and an independently readable Bazi relation (0.095208ms)
+✔ first Load failed is recovered within one submission; only calculation is replayed (31.752625ms)
+✔ a healthy first request is never repeated (0.260167ms)
+✔ temporary gateway errors and interrupted JSON recover once (8.208917ms)
+✔ invalid input, origin rejection and rate limits are not retried (0.640542ms)
+✔ persistent failure stops after two attempts with a localized error code, not raw browser text (0.494542ms)
+✔ a hung request is aborted before a successful second attempt (16.769958ms)
+✔ navigation/reset cancels a pending request and never triggers a retry (0.261792ms)
+✔ navigation during the retry delay prevents the second request (11.847083ms)
+✔ unknown-time API returns a private partial chart with no invented hour (125.789875ms)
+✔ calculation is private, rejects cross-site, oversized and invalid input (19.679875ms)
+✔ AI fallback does not call the provider when durable limiter fails or denies (9.525875ms)
+✔ a complete calendar cycle has distinct public readings in all four editions (38.916833ms)
+✔ public identities follow the current animal artwork by stem-branch (0.216458ms)
+✔ all 60 calculated results have one searchable article and a real JPEG card (76.335791ms)
+✔ all 60 encyclopedia entries and original cards map to the same pillar in every language (7.079416ms)
+✔ reference facts match the site's chart labels and reject impossible pairs (0.359708ms)
+✔ expanded portraits retain their URLs and reproduce every sourced public birthday (11.320292ms)
+✔ each portrait retains its multilingual calendar, interpretation and exercise sections (1.390875ms)
+✔ the second batch keeps the first 22 people and both first-batch historical files unchanged (0.842167ms)
+✔ all 38 approved Nobel Facts birthdays fill exactly the previously uncovered 38 pillars (65.47075ms)
+✖ all 75 prior editions and their citations survive after removing only the second-batch additions (6.635833ms)
+✔ zh/en each show 68 distinct people across all 60 pillars and four-language legacy data brings the total to 70 (1.993208ms)
+✖ only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved (6.458792ms)
+✔ the 22 source-backed birthday records match the independently supplied 20-pillar assignments (53.449167ms)
+✔ birthday source links accept HTTPS and reject executable, relative and credential-bearing URLs (0.105333ms)
+✔ only matched zh/en entries receive structured people; other languages remain untouched (83.369625ms)
+✔ a matching legacy name and date prevent a new structured record from being displayed twice (0.300833ms)
+✔ the original batch still covers 22 pillars, full zh/en coverage is 60 and zh-TW/ru retain the original four (0.24625ms)
+✖ all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged (1.848208ms)
+✔ the four legacy birthday tables keep 32 rows and their sources without duplicating new people (22.280417ms)
+✔ Article schema cites exactly the legacy sources and the directly associated birthday sources (4.289459ms)
+✔ invalid formats and impossible dates are rejected instead of silently normalized (1.413375ms)
+✔ Gregorian leap years and the supported birth range are explicit (4.729792ms)
+✔ known day pillars match the calendar library's published fixtures, including previously missing Ding Hai (34.925834ms)
+✔ midnight advances the civil-date card and a calibrated report may use the previous solar day (7.214209ms)
+✔ a complete cycle resolves to all sixty cards in four languages and existing images (16.273708ms)
+✔ share paths allow only a controlled public archetype and locale (5.291625ms)
+✔ deepsea entry redirects to its own destination and protects nested resources (15.98575ms)
+✔ login keeps the chosen museum and ignores arbitrary redirect destinations (2.316625ms)
+✔ deepsea storage is isolated and rejects path traversal (0.184083ms)
+✔ media handler independently enforces access and serves exact ranges (45.324042ms)
+✔ document language follows the actual report and article locale normalizers (0.7315ms)
+✔ the two-language directory and day-pillar page do not acquire unsupported translations (0.080958ms)
+✔ static routes and other projects stay outside request-time document localization (0.082625ms)
+✔ legacy browser synchronization preserves its original canonical query behavior (0.057917ms)
+✔ revision registries apply only to their actually edited language editions (8.453292ms)
+✖ the historical first-rollout projection still changes exactly 48 of its original 982 URL dates (134.163667ms)
+✖ the historical first birthday rollout still changes exactly 40 sitemap dates (8.332417ms)
+✖ the original 75 journal date receipt stays intact while current editions use their actual dates (0.372959ms)
+✔ all tarot metadata and loaded schema dates retain each revision's actual language scope (500.933708ms)
+✔ hexagram dates revise only Tai zh/en and retain the existing metadata behavior (3.107167ms)
+✔ Ding You preserves the serialized published Traditional Chinese and Russian editions (0.838167ms)
+✔ the Eight of Swords revision preserves the fixed two-language predecessor and every original section (21.61125ms)
+✔ the method retains historical sources and gives the locally read Pollack passage exact non-public page metadata (0.333959ms)
+✔ all four established editions keep reciprocal URLs while only the authored pair acquires the new date (18.717333ms)
+✔ geocentric tropical longitudes match independently retrieved JPL Horizons values (40.552542ms)
+✔ the independently published March equinox falls on the Pisces/Aries boundary (1.394125ms)
+✔ the same instant entered in summer-time cities produces the same sky (2.214791ms)
+✔ planetary UTC is derived from civil input, never from a solar-clock label or stale stored UTC (0.9885ms)
+✔ inner planets remain near the Sun as seen from Earth (11.369083ms)
+✔ year and month change at LiChun's instant, not midnight or Lunar New Year (51.602958ms)
+✔ an early Lunar New Year does not advance the Bazi year before LiChun (4.002625ms)
+✔ monthly Jie boundaries use precise instants, while a middle Qi does not change the month (4.650875ms)
+✔ the same instant crosses the year/month boundary together worldwide (9.21175ms)
+✔ day pillars retain the declared midnight convention for the local solar clock (8.693792ms)
+✔ luck direction and distance to Jie follow the actual instant, without a forced one-year floor (1.771292ms)
+✔ civil birth time resolves to date-specific UTC in US and European time zones (5.254291ms)
+✔ spring gaps and autumn repetitions are rejected, not silently shifted (1.372708ms)
+✔ historical offsets are used even for cities without present-day daylight saving (0.423458ms)
+✔ invalid dates, times and time zones cannot roll into a different birth input (0.495834ms)
+✔ the supported 1800–2100 range is inclusive and enforced before ephemeris work (0.222666ms)
+✔ solar-clock adjustment removes the actual civil offset and retains UTC independently (0.254ms)
+✔ existing non-DST Bazi calibration and pillars remain stable (10.384875ms)
+✔ server timezone cannot change a birth instant or solar clock (1.258167ms)
+✔ starter catalog has distinct ids, complete teaching content and one exact answer per cloze (1.271625ms)
+✔ spelling normalizes presentation and explicit regional variants without accepting misspellings or inflections (0.116166ms)
+✔ hinted answers count as supported evidence and cannot advance a recall stage (11.325792ms)
+✔ a recently displayed answer cannot turn into independent recall just by omitting a flag on retry (0.879416ms)
+✔ same-day repetitions do not count as delayed memory or push the scheduled review back (3.267375ms)
+✔ crossing midnight alone does not establish delayed recall (0.113ms)
+✔ only independent due recall advances the review interval; choice and AI sentence evidence remain separate (0.161ms)
+✔ a wrong recall demotes current confidence even after a delayed success (0.09075ms)
+✔ correcting a later context attempt resolves current weakness without erasing the earlier error (0.094791ms)
+✔ due items come before weak items, which come before unseen items (0.495042ms)
+✔ today's session resumes in its original order, removing duplicate and foreign ids before filling gaps (0.429041ms)
+✔ two sessions on one day record distinct attempts even when they select the same words (0.129917ms)
+✔ recording is immutable and event ids make double submission idempotent (0.062584ms)
+✔ restoring a save rebuilds validated evidence, sorts events, and drops duplicates and fabricated mastery (0.237667ms)
+✔ recognizing every choice does not get reported as independent spelling or delayed memory (0.121292ms)
+✔ assessment gives a balanced reproducible sample with unique options and no vocabulary estimate (9.992167ms)
+✔ input uses server catalogue and strips forged grading/model controls (4.008916ms)
+✔ recall explanations receive the displayed meaning, never an unseen cloze sentence (0.417375ms)
+✔ valid alternative wording is accepted without falsely recording target use (0.216209ms)
+✔ target evidence recognises inflections and spelling variants, not substrings or derivations (0.140875ms)
+✔ output requires usable targeted practice, valid indices, distinct options and typed feedback (0.185333ms)
+✔ provider call disables thinking, preserves the private key and retries malformed/truncated output once (18.989917ms)
+✔ upstream failure never becomes a successful fabricated tutor answer (0.642834ms)
+✔ slow provider calls are aborted and remain bounded to two attempts (13.7165ms)
+✔ public route checks origin, body bounds without content-length and burst limits (12.279416ms)
+✔ development origin follows actual loopback Host without relaxing production origins (0.727208ms)
+✔ public route hides provider errors and exposes recoverable failure state (0.4185ms)
+✔ report city entry recognizes curated names and aliases, not arbitrary typed cities (0.752833ms)
+✔ a recognized typed alias provides the actual city's coordinates to the local calculator (28.122708ms)
+✔ all 64 verified bottom-up patterns uniquely resolve to their actual King Wen identity (0.968292ms)
+✔ all 256 complete texts retain approved hashes except the two explicitly receipted Tai samples (372.183083ms)
+✔ directory and 256 editions have reciprocal canonical URLs and one brand suffix (3.164959ms)
+✔ learning lookup preserves released cast seeds, six-line values and Tarot draws (0.484292ms)
+✔ homepage distinguishes the free preview from the available complete report in every language (35.688209ms)
+✔ disabled and sandbox checkout never produce a purchasable paid homepage offer (2.146334ms)
+✔ all eight equally likely three-coin combinations yield the exact 1:3:3:1 distribution (1.276875ms)
+✔ crypto tosses request independent bytes and preserve all eighteen original coin faces (0.492833ms)
+✔ manual and coin inputs retain bottom-up line order and do not alias the caller's input (0.166958ms)
+✔ all 64 stable hexagrams preserve the approved King Wen names, symbols, and upper/lower identities (1.101958ms)
+✔ all 4096 six-line value inputs map both hexagrams correctly; only 6 and 9 move (64.226916ms)
+✔ positive remainders assign exact multiples to 8 or 6 rather than zero (0.332792ms)
+✔ Plum Blossom counting regression: A1 + B5 + You10 produces Gou44, line 4, then Xun57 (0.187584ms)
+✔ Plum Blossom observing-plum regression: Chen5 + month12 + day17 + Shen9 produces Ge49, line 1, then Xian31 (0.106208ms)
+✔ Beijing time changes lunar year at Lunar New Year, retaining the current date at late Zi (9.727958ms)
+✔ Zi ends at 01:00 and every subsequent civil hour branch follows a two-hour interval (1.755167ms)
+✔ leap lunar months retain the displayed month number and the same arithmetic (0.655834ms)
+✔ civil conversion is independent of the process or browser timezone (2.317042ms)
+✔ manual entry rejects incomplete, sparse, non-integer, and out-of-range lines or coin faces (19.048208ms)
+✔ count and lunar arithmetic reject zero, unsafe values, fractions, and out-of-range branch/month/day (0.4615ms)
+✔ civil conversion strictly validates supported years, date existence, and local-only time format (2.116417ms)
+✔ the new independent workbench leaves the released report seed and Tarot sequence intact (0.270208ms)
+✔ every published article has one to three controlled, translated subjects (3.04875ms)
+✔ topics describe substantive content instead of tagging every portrait with popular subjects (0.762541ms)
+✔ topic links preserve the authored locale and use only the existing journal route (0.454625ms)
+✔ filtered topics do not expose fallback translations as authored editions (0.371459ms)
+✔ existing SEO guides get accurate subjects and appear only in English discovery (1.27275ms)
+✔ published famous birthdays reproduce the featured day pillar in every edition (48.988042ms)
+✔ Traditional Chinese preserves prose meaning instead of applying software terminology (0.1045ms)
+✔ Traditional Chinese preserves every calendar stem and branch without changing aesthetic Chou (0.459125ms)
+✔ journal advertises exactly its authored language editions with reciprocal URLs (10.042042ms)
+✔ articles have translated sections, truthful free Article schema and useful original length (7.413334ms)
+✔ the Tai Sui guide exposes only English and Simplified Chinese without changing older editions (0.119084ms)
+✔ birth form feedback renders only known localized errors (0.1015ms)
+✔ English identifies the searchable calendar pair and current animal card (0.071666ms)
+✔ the King of Pentacles revision preserves the fixed two-language predecessor and every original section (22.822541ms)
+✔ the King/Fool comparison retains source receipts and separates local-book scope from its original paper steps (0.459708ms)
+✔ all four established editions keep reciprocal URLs while only the authored pair acquires the new date (6.043209ms)
+✔ member auth preserves legacy users while enforcing durable sessions and one-use recovery (317.586958ms)
+✔ auth accepts only bounded valid input and same-origin JSON mutations (0.919292ms)
+✔ only the configured password passes (0.79975ms)
+✔ session expires and rejects tampering, future issuance and configuration changes (0.489ms)
+✔ missing private configuration always fails closed (0.168ms)
+✔ GET and HEAD protect all model files, including encoded direct URLs, renders and PDF (33.593333ms)
+✔ valid cookies pass model requests while other site routing is preserved (0.47175ms)
+✔ private posters cannot be read through the Next.js image optimizer (0.477292ms)
+✔ login rejects wrong passwords and cross-site submissions without cookies (0.903792ms)
+✔ correct password creates a scoped signed HttpOnly session (12.968042ms)
+✔ login uses the public Host or forwarded origin behind a reverse proxy (0.722459ms)
+✔ museum cookies do not grant access to the other path (0.286ms)
+✔ decoded static traversal aliases stay private, including excluded prefixes (0.376958ms)
+✔ media route independently denies unauthorized GET and HEAD (3.120917ms)
+✔ authenticated media streams bytes with private headers and HEAD metadata (36.580834ms)
+✔ missing private media returns 404 and namespace traversal is rejected (0.811792ms)
+✔ authenticated downloads support single ranges and reject unsatisfiable requests (4.342291ms)
+✔ range parsing handles suffixes, open ends and oversized ends without overflow (0.782875ms)
+✔ successful streams preserve bytes and remain silent (35.659167ms)
+✔ consumer demand controls upstream reads (2.32925ms)
+✔ midstream failure preserves the error and records only sanitized metadata (0.518458ms)
+✔ destination cancellation interrupts a pending read and cancels the upstream (0.544334ms)
+✔ crawler exceptions only open the two public JSON catalogs, not private APIs (1.209375ms)
+✔ public catalog has four complete language editions and only main-site tools (1.996583ms)
+✔ only an available live offer exposes a price; sandbox is never advertised as public checkout (10.3665ms)
+✔ unrecognized report cities redirect before any network or persistence (53.078958ms)
+✔ real report action completes for all four languages using mocked persistence and no network (121.634ms)
+✔ missing date/time and unsupported cities identify the failed field before persistence (40.529709ms)
+✔ storage failure returns readable localized feedback without an unhandled exception (4.176833ms)
+✔ every section journey links to complete existing articles in all four languages (1.156541ms)
+✔ BaZi learn page keeps AEO structure, tool CTAs, and no Ultra links (1.494875ms)
+✔ Guanyin guide distinguishes the mixed source collection from a temple lookup (76.018583ms)
+✔ BaZi compatibility guide states the implemented scope and editorial scoring (15.873041ms)
+✔ I Ching vs Tarot insights page keeps Codex body, AEO structure, CTAs, and no Ultra links (4.447458ms)
+✔ Chinese vs Western palmistry learn page keeps Codex body, AEO structure, CTAs, and no Ultra links (10.706291ms)
+✔ translated landing pages keep their own canonical and translated search text (0.859083ms)
+✔ English and invalid locale aliases do not create duplicate canonical URLs (0.064625ms)
+✔ language alternates only claim translations that exist in initial HTML (0.65775ms)
+✔ standalone tools never inherit a homepage canonical or unrelated keywords (0.069834ms)
+✔ every advertised language variant has a reciprocal canonical sitemap entry (36.330333ms)
+✔ day pillar sitemap lists only two reciprocal language pages, never personal or shared-card variants (4.367ms)
+✔ sitemap modification dates describe content rather than request time (9.236458ms)
+✔ the metaphysics sitemap excludes experiments while Prompt keeps its own inventory (4.915167ms)
+✔ fortune sticks advertises four reciprocal server-rendered languages (3.919167ms)
+✔ the Seven of Cups revision preserves the fixed two-language predecessor and every original section (3.817708ms)
+✔ the creative practice retains historical sources and separates local-book evidence from its three original steps (0.514834ms)
+✔ all four established editions keep reciprocal URLs while only the authored pair acquires the new date (5.434708ms)
+✔ every Russian sign uses Russian text, including generated and classic fallbacks (6.467042ms)
+✔ Russian fallback localization preserves the corresponding Chinese classic verse (0.113666ms)
+▶ membership and report commerce migrations enforce durable private state
+  ✔ all migrations execute unchanged and rerun without removing existing data (55.646917ms)
+  ✔ main-site migrations neither create nor change independent application tables (8.565625ms)
+  ✔ RLS and explicit table/function privileges isolate browser roles (18.141958ms)
+  ✔ report creation is atomic and claim requires the actual guest proof (10.58ms)
+  ✔ payment matching rejects missing fields and mismatched evidence (3.946375ms)
+  ✔ checkout requires ownership and reuses one open order at its original price (7.3955ms)
+  ✔ payment event dedupe and terminal states cannot grant access twice or revive it (5.868041ms)
+  ✔ checkout replacement is atomic and cannot retire an order already entering capture (8.956458ms)
+  ✔ generation claims have one current lease, bounded retries and reusable ready content (13.340208ms)
+  ✔ admin aggregates exceed page size and exclude sandbox and refunded money (6.415083ms)
+  ✔ auth SQL throttles persist and password resets are expiring, single-use and revoke sessions (4.497542ms)
+✔ membership and report commerce migrations enforce durable private state (1112.693625ms)
+✔ education slugs remain separate from the original card routes and old articles (1.267708ms)
+✔ sitemap dates preserve earlier revisions and apply the current language-specific edits (4.932208ms)
+✔ the interpretation-fit addition restores the fixed predecessor bytes and all earlier content in every edition (6.252958ms)
+✔ the fixed-card exercise keeps real position labels, distinct candidate checks and separately identified sources (0.425542ms)
+✔ only the authored pair gains November 7 dates while every established URL and discovery entry remains available (8.265041ms)
+✔ every real cast ID resolves to the complete correct-language article without aliases or fallback (374.356166ms)
+✔ all complete articles and directory have unique reciprocal language URLs and metadata (4.422417ms)
+✔ tool links cannot pull full learning articles into the client (0.273833ms)
+✔ learning links preserve released deterministic casts for English, Chinese and Russian questions (3.098083ms)
+✔ every published card name in all four languages resolves to its own guide (764.282334ms)
+✔ practical English, simplified and traditional aliases find the same ace without other ranks (42.003792ms)
+✔ rank boundaries keep one and ten separate, while court names remain precise (25.344083ms)
+✔ whole Latin and Cyrillic words prevent misleading matches and search ignores meaning prose (24.954375ms)
+✔ empty and punctuation-only search restore all cards with consistent Unicode normalization (0.180833ms)
+✔ methods advertise only their authored en/zh editions and unsupported locales resolve to English (8.1425ms)
+✔ the Celtic teaching table uses the tool's actual position order in both languages (0.1735ms)
+✔ journal review preserves a three-way factual comparison and an eight-field template (0.074542ms)
+✔ the question-scope revision preserves all four editions' metadata and the complete unedited translations (2.509709ms)
+✔ only the two authorized sections gain material, with every original paragraph, table and link retained (0.3765ms)
+✔ the tutorial keeps the real three-card positions and describes the five-position choice spread in tool order (0.257834ms)
+✔ the immutable October 30 receipt survives while only its authored editions acquire the later interpretation-fit date (13.424625ms)
+✔ the suit-pattern guide publishes exactly two reciprocal editions with truthful dates and schema (44.017416ms)
+✔ both authored suit guides retain complete parallel paragraph, section, table and step structures (0.240792ms)
+✔ the Swords example uses real card destinations and the tool's actual three-position sequence (0.183292ms)
+✔ the existing tarot-reading topic discovers only the authored suit-guide editions (0.892708ms)
+✔ the suit guide retains its immutable historical receipts while validating the later Celtic and Eight of Swords revisions (3.637584ms)
+✔ seven topics have translated destinations while the homepage keeps four cards (3.208958ms)
+✔ the same standardized birth data produces an identical natal model (19.847125ms)
+✔ current-year luck data never participates in the natal fingerprint (3.346625ms)
+✔ different pillar structures alter silhouette, node count, and fingerprint (0.521542ms)
+✔ calibration changes practice state without changing the natal structure (0.509084ms)
+✔ a neutral calibration preserves every natal resonance score (0.939625ms)
+✔ canonical pair matching recognizes combinations and clashes in either character order (0.318542ms)
+✔ all semantic IDs and contributor references are valid (0.486875ms)
+✔ invalid calibration is rejected instead of leaking NaN into SVG geometry (0.128083ms)
+✔ privacy-safe share snapshots reproduce natal and calibrated results (3.162167ms)
+✔ malformed or overlong share payloads fail closed (0.209625ms)
+✔ geometry construction does not call Math.random (0.212292ms)
+✔ Ten Gods are translated into the five public function modules (0.04625ms)
+✔ the macro silhouette is a bilateral crest instead of independently jittered points (0.044958ms)
+✔ all twelve branches have distinct deterministic guardian motifs (0.102042ms)
+✔ ornamental grammar remains reproducible while different pillars change the crest (0.717959ms)
+✔ eight three-line identities match the verified six-line source, including asymmetric orientations (1.295209ms)
+✔ 32 editions contain substantial distinct prose, classical text, modern examples and valid reading connections (1.739209ms)
+✔ only exact known trigram slugs load articles or generate article paths (0.23925ms)
+✔ all 36 index/article language editions have reciprocal canonical, hreflang, sitemap and matching titles (1.481958ms)
+✔ the Two of Pentacles addition retains the fixed predecessor, every old field and all twelve original sections (1.876375ms)
+✔ the play exercise distinguishes an invented upright-card context from author interpretations and three practical checks (0.345292ms)
+✔ the complete four-language loader and discovery retain every URL while only EN/ZH receive November 10 dates (7.168959ms)
+✔ the Two of Swords revision preserves the fixed two-language predecessor and every original section (4.058292ms)
+✔ the bilingual exercise preserves old source receipts and distinguishes the fresh online recheck from our application (0.437417ms)
+✔ all four established editions keep reciprocal URLs while only the authored pair acquires the new date (8.675208ms)
+✔ the calendar contains only January–December 2027, continuous end-exclusive segments and explicit UTC snapshots (7.037584ms)
+✔ HKO's published 2027 LiChun minute agrees with the library and does not coincide with Lunar New Year (0.499125ms)
+✔ only the twelve Jie change month pillars; Gregorian first days and intervening Qi do not (1.360333ms)
+✔ known birth times reuse historical UTC resolution and produce independent personalized BaZi and solar snapshots (14.519958ms)
+✔ unknown time samples the real civil day without exposing a fictitious birth instant or solar time (13.392958ms)
+✔ unknown time suppresses a Sun sign on a zodiac crossing and year/month pillars on a LiChun day (8.156125ms)
+✔ unknown-time civil windows honor 23/25-hour DST dates and custom IANA locations (14.146334ms)
+✔ valid leap days work, invalid dates and skipped or repeated known clocks are rejected (7.518209ms)
+✔ transit snapshots use actual Jupiter/Saturn positions, all five major aspects and an inclusive 3° orb (0.448209ms)
+✔ traditional stem relations provide ten distinct reflective readings without an annual fate score (0.153959ms)
+✔ the guide includes every year branch once, with bilingual prompts and 1–5 accessible values (0.738042ms)
+✔ sorting preserves all animals, shared competition ranks, and original cycle order within each tie (0.9365ms)
+✔ a Goat birth-animal year is never penalized and branch labels do not become a bad-luck total (0.082542ms)
+ℹ tests 385
+ℹ suites 0
+ℹ pass 379
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2636.3775
+
+✖ failing tests:
+
+test at lib/day-pillar-people-second-batch.test.ts:2:9021
+✖ all 75 prior editions and their citations survive after removing only the second-batch additions (6.635833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  80 !== 75
+
+      at TestContext.<anonymous> (lib/day-pillar-people-second-batch.test.ts:125:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 80,
+    expected: 75,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/day-pillar-people-second-batch.test.ts:2:12392
+✖ only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved (6.458792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  998 !== 982
+
+      at TestContext.<anonymous> (lib/day-pillar-people-second-batch.test.ts:183:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 998,
+    expected: 982,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/day-pillar-people.test.ts:2:8646
+✖ all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged (1.848208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  80 !== 75
+
+      at TestContext.<anonymous> (lib/day-pillar-people.test.ts:110:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 80,
+    expected: 75,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:25751
+✖ the historical first-rollout projection still changes exactly 48 of its original 982 URL dates (134.163667ms)
+  AssertionError [ERR_ASSERTION]: a URL or date outside the edited editions changed
+  + actual - expected
+
+  + '19ae009243a1c514bf69fbfaf9e8286febb14d6f9ccb5840ec61a1d6982bd8b4'
+  - 'd1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:277:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '19ae009243a1c514bf69fbfaf9e8286febb14d6f9ccb5840ec61a1d6982bd8b4',
+    expected: 'd1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:26654
+✖ the historical first birthday rollout still changes exactly 40 sitemap dates (8.332417ms)
+  AssertionError [ERR_ASSERTION]: a URL or date outside this birthday rollout changed
+  + actual - expected
+
+  + '329415b0446cd561d080abe2e877a1b7a402ce16bf61e07cd9e9367cf8ab0ddd'
+  - '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:288:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '329415b0446cd561d080abe2e877a1b7a402ce16bf61e07cd9e9367cf8ab0ddd',
+    expected: '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:27724
+✖ the original 75 journal date receipt stays intact while current editions use their actual dates (0.372959ms)
+  AssertionError [ERR_ASSERTION]: shared article dates changed instead of applying an edition-specific revision
+  + actual - expected
+
+  + '7d661c0cb519da09e006439c5cd2cdb022e9d251f240f8d0369ab397149db24b'
+  - '597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:295:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '7d661c0cb519da09e006439c5cd2cdb022e9d251f240f8d0369ab397149db24b',
+    expected: '597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -29,6 +29,7 @@ import twoSwordsRevision from "@/content/two-swords-update-20261106/revisions.js
 import worldRevision from "@/content/world-update-20261106/revisions.json";
 import deathRevision from "@/content/death-update-20261107/revisions.json";
 import justiceRevision from "@/content/justice-update-20261109/revisions.json";
+import twoPentaclesPlayRevision from "@/content/two-pentacles-play-20261110/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -53,6 +54,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const worldRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=worldRevision.records;
  const deathRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=deathRevision.records;
  const justiceRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=justiceRevision.records;
+ const twoPentaclesPlayRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=twoPentaclesPlayRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -71,6 +73,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(worldRecords),["content/tarot/zh/world.json"]);
  assert.deepEqual(Object.keys(deathRecords),["content/tarot/zh/death.json"]);
  assert.deepEqual(Object.keys(justiceRecords),["content/tarot/zh/justice.json"]);
+ assert.deepEqual(Object.keys(twoPentaclesPlayRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/two-of-pentacles.json`));
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -317,6 +320,17 @@ test("every real cast ID resolves to the complete correct-language article witho
     approvedHash=record.articleMarkdownSha256;
    }else if(id==="king-of-pentacles"){
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited King of Pentacles edition changed`);
+   }
+   if(Object.hasOwn(twoPentaclesPlayRecords,path)){
+    const record=twoPentaclesPlayRecords[path],previousRaw=readFileSync(`content/two-pentacles-play-20261110/previous/${path}`);
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(record.previousFileSha256,depthRecords[key].recordSha256,`${path}: original file approval changed`);
+    assert.equal(digest(JSON.parse(previousRaw.toString()).articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="two-of-pentacles"){
+    assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Two of Pentacles edition changed`);
    }
    if(Object.hasOwn(twoSwordsRecords,path)){
     const record=twoSwordsRecords[path],previousRaw=readFileSync(`content/two-swords-update-20261106/previous/${path}`);

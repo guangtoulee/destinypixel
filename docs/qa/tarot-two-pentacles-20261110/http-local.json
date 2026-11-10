@@ -1,0 +1,454 @@
+{
+  "base": "http://127.0.0.1:3062",
+  "localOnly": true,
+  "editions": [
+    {
+      "locale": "en",
+      "sections": 13,
+      "completeBody": true,
+      "originalImage": true,
+      "allSources": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-11-10",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "zh",
+      "sections": 13,
+      "completeBody": true,
+      "originalImage": true,
+      "allSources": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-11-10",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "zh-TW",
+      "sections": 12,
+      "completeBody": true,
+      "originalImage": true,
+      "allSources": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-08",
+      "canonical": true,
+      "originalAnchors": true
+    },
+    {
+      "locale": "ru",
+      "sections": 12,
+      "completeBody": true,
+      "originalImage": true,
+      "allSources": true,
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-08",
+      "canonical": true,
+      "originalAnchors": true
+    }
+  ],
+  "links": [
+    {
+      "href": "/journal/tarot-cards",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal?topic=tarot-reading#topic-results",
+      "status": 200,
+      "anchor": "topic-results"
+    },
+    {
+      "href": "/tarot/attribution.json",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/tarot",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-01",
+      "status": 200,
+      "anchor": "section-01"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#depth-image-reasoning",
+      "status": 200,
+      "anchor": "depth-image-reasoning"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-02",
+      "status": 200,
+      "anchor": "section-02"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#play-and-adaptation",
+      "status": 200,
+      "anchor": "play-and-adaptation"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-03",
+      "status": 200,
+      "anchor": "section-03"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-04",
+      "status": 200,
+      "anchor": "section-04"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-05",
+      "status": 200,
+      "anchor": "section-05"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#depth-case-1",
+      "status": 200,
+      "anchor": "depth-case-1"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#depth-case-2",
+      "status": 200,
+      "anchor": "depth-case-2"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-06",
+      "status": 200,
+      "anchor": "section-06"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-07",
+      "status": 200,
+      "anchor": "section-07"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#depth-reflection",
+      "status": 200,
+      "anchor": "depth-reflection"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles#section-08",
+      "status": 200,
+      "anchor": "section-08"
+    },
+    {
+      "href": "/journal/tarot-ace-of-pentacles",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-three-of-pentacles",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200,
+      "anchor": "topic-results"
+    },
+    {
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-01",
+      "status": 200,
+      "anchor": "section-01"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#depth-image-reasoning",
+      "status": 200,
+      "anchor": "depth-image-reasoning"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-02",
+      "status": 200,
+      "anchor": "section-02"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#play-and-adaptation",
+      "status": 200,
+      "anchor": "play-and-adaptation"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-03",
+      "status": 200,
+      "anchor": "section-03"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-04",
+      "status": 200,
+      "anchor": "section-04"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-05",
+      "status": 200,
+      "anchor": "section-05"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#depth-case-1",
+      "status": 200,
+      "anchor": "depth-case-1"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#depth-case-2",
+      "status": 200,
+      "anchor": "depth-case-2"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-06",
+      "status": 200,
+      "anchor": "section-06"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-07",
+      "status": 200,
+      "anchor": "section-07"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#depth-reflection",
+      "status": 200,
+      "anchor": "depth-reflection"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh#section-08",
+      "status": 200,
+      "anchor": "section-08"
+    },
+    {
+      "href": "/journal/tarot-ace-of-pentacles?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-three-of-pentacles?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=zh-TW",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal?locale=zh-TW&topic=tarot-reading#topic-results",
+      "status": 200,
+      "anchor": "topic-results"
+    },
+    {
+      "href": "/tarot?locale=zh-TW",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-01",
+      "status": 200,
+      "anchor": "section-01"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#depth-image-reasoning",
+      "status": 200,
+      "anchor": "depth-image-reasoning"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-02",
+      "status": 200,
+      "anchor": "section-02"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-03",
+      "status": 200,
+      "anchor": "section-03"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-04",
+      "status": 200,
+      "anchor": "section-04"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-05",
+      "status": 200,
+      "anchor": "section-05"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#depth-case-1",
+      "status": 200,
+      "anchor": "depth-case-1"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#depth-case-2",
+      "status": 200,
+      "anchor": "depth-case-2"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-06",
+      "status": 200,
+      "anchor": "section-06"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-07",
+      "status": 200,
+      "anchor": "section-07"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#depth-reflection",
+      "status": 200,
+      "anchor": "depth-reflection"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=zh-TW#section-08",
+      "status": 200,
+      "anchor": "section-08"
+    },
+    {
+      "href": "/journal/tarot-ace-of-pentacles?locale=zh-TW",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-three-of-pentacles?locale=zh-TW",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist?locale=zh-TW",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-cards?locale=ru",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal?locale=ru&topic=tarot-reading#topic-results",
+      "status": 200,
+      "anchor": "topic-results"
+    },
+    {
+      "href": "/tarot?locale=ru",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-01",
+      "status": 200,
+      "anchor": "section-01"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#depth-image-reasoning",
+      "status": 200,
+      "anchor": "depth-image-reasoning"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-02",
+      "status": 200,
+      "anchor": "section-02"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-03",
+      "status": 200,
+      "anchor": "section-03"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-04",
+      "status": 200,
+      "anchor": "section-04"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-05",
+      "status": 200,
+      "anchor": "section-05"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#depth-case-1",
+      "status": 200,
+      "anchor": "depth-case-1"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#depth-case-2",
+      "status": 200,
+      "anchor": "depth-case-2"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-06",
+      "status": 200,
+      "anchor": "section-06"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-07",
+      "status": 200,
+      "anchor": "section-07"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#depth-reflection",
+      "status": 200,
+      "anchor": "depth-reflection"
+    },
+    {
+      "href": "/journal/tarot-two-of-pentacles?locale=ru#section-08",
+      "status": 200,
+      "anchor": "section-08"
+    },
+    {
+      "href": "/journal/tarot-ace-of-pentacles?locale=ru",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/tarot-three-of-pentacles?locale=ru",
+      "status": 200,
+      "anchor": null
+    },
+    {
+      "href": "/journal/pamela-colman-smith-tarot-artist?locale=ru",
+      "status": 200,
+      "anchor": null
+    }
+  ],
+  "tools": [
+    {
+      "locale": "en",
+      "href": "/tarot",
+      "status": 200,
+      "threeCardOption": true,
+      "noDrawOrAIRequest": true
+    },
+    {
+      "locale": "zh",
+      "href": "/tarot?locale=zh",
+      "status": 200,
+      "threeCardOption": true,
+      "noDrawOrAIRequest": true
+    }
+  ],
+  "discovery": [
+    {
+      "locale": "en",
+      "cardAtlas": true
+    },
+    {
+      "locale": "zh",
+      "cardAtlas": true
+    }
+  ],
+  "deploymentIds": []
+}

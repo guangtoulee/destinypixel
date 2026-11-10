@@ -1,0 +1,93 @@
+✔ revision registries apply only to their actually edited language editions (3.794625ms)
+✖ the historical first-rollout projection still changes exactly 48 of its original 982 URL dates (14.17375ms)
+✖ the historical first birthday rollout still changes exactly 40 sitemap dates (5.459208ms)
+✖ the original 75 journal date receipt stays intact while current editions use their actual dates (0.307666ms)
+✔ all tarot metadata and loaded schema dates retain each revision's actual language scope (216.339333ms)
+✔ hexagram dates revise only Tai zh/en and retain the existing metadata behavior (1.250125ms)
+✔ Ding You preserves the serialized published Traditional Chinese and Russian editions (0.318208ms)
+✔ every real cast ID resolves to the complete correct-language article without aliases or fallback (238.997875ms)
+✔ all complete articles and directory have unique reciprocal language URLs and metadata (4.502708ms)
+✔ tool links cannot pull full learning articles into the client (0.347167ms)
+✔ learning links preserve released deterministic casts for English, Chinese and Russian questions (3.100583ms)
+✔ the Two of Pentacles addition retains the fixed predecessor, every old field and all twelve original sections (2.066084ms)
+✔ the play exercise distinguishes an invented upright-card context from author interpretations and three practical checks (0.359375ms)
+✔ the complete four-language loader and discovery retain every URL while only EN/ZH receive November 10 dates (10.153583ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 11
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 567.174833
+
+✖ failing tests:
+
+test at lib/editorial-updates.test.ts:2:25751
+✖ the historical first-rollout projection still changes exactly 48 of its original 982 URL dates (14.17375ms)
+  AssertionError [ERR_ASSERTION]: a URL or date outside the edited editions changed
+  + actual - expected
+
+  + '19ae009243a1c514bf69fbfaf9e8286febb14d6f9ccb5840ec61a1d6982bd8b4'
+  - 'd1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:277:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '19ae009243a1c514bf69fbfaf9e8286febb14d6f9ccb5840ec61a1d6982bd8b4',
+    expected: 'd1ea908353a4e4e5b8fe68467afb0782b68320ddd10b8a9b36ed604e19ed0587',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:26654
+✖ the historical first birthday rollout still changes exactly 40 sitemap dates (5.459208ms)
+  AssertionError [ERR_ASSERTION]: a URL or date outside this birthday rollout changed
+  + actual - expected
+
+  + '329415b0446cd561d080abe2e877a1b7a402ce16bf61e07cd9e9367cf8ab0ddd'
+  - '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:288:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '329415b0446cd561d080abe2e877a1b7a402ce16bf61e07cd9e9367cf8ab0ddd',
+    expected: '4a0a03ac5ca4db2593a5b452383582bd54f2c89468bebe413f0e04dfa1b67e7e',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at lib/editorial-updates.test.ts:2:27724
+✖ the original 75 journal date receipt stays intact while current editions use their actual dates (0.307666ms)
+  AssertionError [ERR_ASSERTION]: shared article dates changed instead of applying an edition-specific revision
+  + actual - expected
+
+  + '7d661c0cb519da09e006439c5cd2cdb022e9d251f240f8d0369ab397149db24b'
+  - '597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5'
+
+      at TestContext.<anonymous> (lib/editorial-updates.test.ts:295:10)
+      at Test.runInAsyncScope (node:async_hooks:212:14)
+      at Test.run (node:internal/test_runner/test:1109:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+      at Test.postRun (node:internal/test_runner/test:1238:19)
+      at Test.run (node:internal/test_runner/test:1166:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:786:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '7d661c0cb519da09e006439c5cd2cdb022e9d251f240f8d0369ab397149db24b',
+    expected: '597b98f8006544264a40b96da7b537db5f3e11289f2e8acb55194333ade2b0a5',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
