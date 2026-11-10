@@ -4,20 +4,20 @@ const committee = "https://www.ctc.org.hk/chim-search/";
 const guanyinOne = "https://www.ctc.org.hk/chim/%E8%A7%80%E9%9F%B3%E7%B1%A4-%E7%AC%AC%E4%B8%80%E7%B1%A4/";
 const wongOne = "https://taonet.siksikyuen.org.hk/StickEnquiry/1/zh-TW";
 
-// Existing article, substantively revised from observed search questions on 2026-10-09.
+// Existing article, substantively revised from observed search questions on 2026-11-10.
 // Official pages identify the examples; the lookup method and explanations are our own.
 export const fortuneStickEditionsArticle: JournalSourceArticle = {
   slug: "fortune-stick-number-and-edition",
   relatedSlug: "how-to-ask-fortune-sticks",
   publishedAt: "2026-09-20",
-  updatedAt: "2026-10-09",
+  updatedAt: "2026-11-10",
   zhTwReplacements: [["簽", "籤"], ["鐘離", "鍾離"]],
   translations: {
     en: {
       title: "Guanyin Fortune Stick Versions: Find the Poem Behind Your Number",
-      description: "Different meanings for the same Guanyin fortune-stick number? Match the temple, collection and poem with official examples, then use the online lookup.",
+      description: "Match your Guanyin fortune-stick number to its poem and edition. Learn how a temple-text lookup differs from an online draw or a temple visit.",
       topic: "Find your fortune-stick text",
-      introduction: "You bring home a fortune slip, search its number and find three different answers. One mentions an ancient scholar; another promises a reunion; a third gives a poem that is not on your paper. Before choosing the answer you like best, identify the text. The useful question is: which collection and edition does this number belong to?",
+      introduction: "You bring home a fortune slip, search its number and find three different answers. One mentions an ancient scholar; another promises a reunion; a third gives a poem that is not on your paper. Before choosing the answer you like best, identify the text. The useful question is: which collection and edition does this number belong to? If you have not drawn a stick yet, start by choosing the experience you want. Looking up a temple slip, taking a new online draw and participating in a temple ritual call for different steps; section 6 helps you choose.",
       takeaway: "A number is an address inside a collection, not a universal meaning. Match the source, collection, number and actual words before reading an explanation.",
       sections: [
         {
@@ -59,8 +59,54 @@ export const fortuneStickEditionsArticle: JournalSourceArticle = {
           paragraphs: ["Read the whole verse before jumping to its fortune grade or a modern headline. First describe what happens in its imagery. Then look for a change, a condition or an action: does the scene turn, does someone wait, does help arrive? Next read the accompanying story or commentary from that edition. A title can point to cultural context that a literal translation misses.", "Only then connect it with your question. For a job decision, for example, separate what the text actually says from what you need to check with an employer. Write three short notes: the image in the poem, your possible interpretation, and one fact still unknown. This is our reading exercise, not a temple’s prescribed ritual. An auspicious label is not a percentage chance of success, and a difficult image does not establish that something bad will happen."],
         },
         {
-          id: "step-6", title: "6. Is an online draw the same as a temple draw?",
-          paragraphs: ["Separate finding a text from taking part in a ritual. An official online archive can help you retrieve a temple’s published poem. A digital draw creates a result within the particular website’s own system. Those are different activities, even if both show a number and a verse.", "DestinyPixel is an independent symbolic experience. It does not reproduce a temple visit, confirmation ritual or complete authoritative temple book. For a slip drawn elsewhere, begin with the issuing source. For a new online reflection, you can use our tool while keeping its collection and source note visible. Neither a polished design nor a longer AI response establishes that the displayed words match your paper."],
+          "id": "step-6",
+          "title": "6. Is an online draw the same as a temple draw?",
+          "paragraphs": [
+            "An online lookup retrieves a text; an online draw selects a new result; a temple visit lets you participate in that place’s practice. The Chinese Temples Committee’s number-search archive, for example, lets you consult its published texts. Opening an archived poem does not perform a new draw. Decide which task you need before choosing a website or interpreting a number.",
+            "For a new draw on DestinyPixel, choose a collection and topic in the fortune-stick tool, then use the draw button. The browser randomly selects a number from that collection’s range and displays its existing entry. Your question is not used to choose the number, and AI does not draw it. The optional AI button comes afterward: it connects the displayed entry with the topic and question you supply. You can read the entry and source note without requesting AI. More context can make the explanation more relevant, but does not establish greater predictive accuracy.",
+            "If you already have a temple slip, keep it as your reference. Suppose it says Guanyin No. 33 and an online page shows different words. Drawing another online number will not identify the original poem. Use the text-matching checklist, then the number-lookup steps if you want to compare DestinyPixel’s entry. The first task is to establish which text you have, not to get a more reassuring answer. This is a hypothetical lookup example, not a quotation from a particular No. 33 or a report of a reader’s result.",
+            "For an in-person ritual, consult the chosen temple’s own visitor guidance or ask its staff about its procedure. This guide does not prescribe a universal sequence, confirmation method or number of repetitions. DestinyPixel is an independent symbolic experience, not that temple’s remote service or a complete temple edition. These practical distinctions do not decide what religious meaning someone gives to a draw; they tell you what each activity and source can actually establish."
+          ],
+          "table": {
+            "headings": [
+              "What you want",
+              "Where to start"
+            ],
+            "rows": [
+              [
+                "Read a slip you already hold",
+                "Use the issuing temple’s archive or booklet. Match collection, number and wording; keep any mismatch unresolved until you can check the source."
+              ],
+              [
+                "Take a new online draw",
+                "Choose a tool that identifies its collection and text sources. On DestinyPixel, draw first, read the source note, then optionally request a contextual AI explanation."
+              ],
+              [
+                "Participate at a temple",
+                "Follow that temple’s current guidance. Keep the issued slip and source details if you later want to look up or discuss its text."
+              ]
+            ]
+          },
+          "links": [
+            {
+              "text": "fortune-stick tool",
+              "href": "/sticks"
+            },
+            {
+              "text": "text-matching checklist",
+              "href": "#step-4"
+            },
+            {
+              "text": "number-lookup steps",
+              "href": "#step-7"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Chinese Temples Committee: published-text lookup (Chinese)",
+              "href": "https://www.ctc.org.hk/chim-search/"
+            }
+          ]
         },
         {
           id: "step-7", title: "7. How to look up a number on DestinyPixel",
@@ -84,9 +130,9 @@ export const fortuneStickEditionsArticle: JournalSourceArticle = {
     },
     zh: {
       title: "观音灵签版本为什么不同？按签号查签前，先认准手里这首诗",
-      description: "同一个签号，网上签诗和寺庙纸签却不同？用官方实例核对签系、版本、号码与原文，再学会读签诗、查签和使用可选AI解读。",
+      description: "同一个观音签号为什么有不同签诗？用官方实例核对签系与版本，再区分网上抽签、查寺庙签文和现场求签，选对下一步。",
       topic: "找到手里这首签",
-      introduction: "带回一张签纸，按号码一搜，却找到三种答案：一页说古人求学，一页说感情重逢，另一页连诗句都和纸上不同。先别挑最顺耳的解释，先认准文字。真正需要问的是：这个号码属于哪个签系、哪个版本？",
+      introduction: "带回一张签纸，按号码一搜，却找到三种答案：一页说古人求学，一页说感情重逢，另一页连诗句都和纸上不同。先别挑最顺耳的解释，先认准文字。真正需要问的是：这个号码属于哪个签系、哪个版本？ 如果还没抽签，可以先想清楚自己要做什么。查手里的寺庙签纸、在线新抽一支签、到寺庙参与仪式，所需步骤并不相同；第6节提供了选择路线。",
       takeaway: "签号是某套签中的位置，不是通用答案。先核对来源、签系、号码和实际诗句，再读解释。",
       sections: [
         {
@@ -128,8 +174,54 @@ export const fortuneStickEditionsArticle: JournalSourceArticle = {
           paragraphs: ["先读完整诗句，再看吉凶等级和现代标题。第一步描述意象里发生了什么；第二步找变化、条件和动作：局面是否转折，有人等待，还是有人来帮忙？然后读这个版本附带的典故、解曰。题名可能指向文化背景，只做逐字翻译容易漏掉这一层。", "最后才把它与问题联系起来。例如问一份工作，就区分“诗里写了什么”和“还需要向雇主核实什么”。分别记下诗中意象、自己的可能理解、一个仍然未知的事实。这是本站提供的阅读练习，不是声称所有寺庙都规定这样解签。上签不代表成功概率，下签的困难意象也不能证明坏事一定发生。"],
         },
         {
-          id: "step-6", title: "6. 网上抽签和庙里求签，是一回事吗？",
-          paragraphs: ["查找一段文字和参加一次仪式，需要分开看。官方线上资料可以帮你找到该庙公布的签文；数字抽签则是在某个网站的系统中生成一个结果。即使都显示签号与诗句，也不等于做了同一件事。", "DestinyPixel提供独立的象征体验，不复制寺庙现场、确认仪式或整部权威庙本。想查线下抽到的签，优先回到发签来源；想开始一次新的线上反思，可以使用本站，同时留意条目与来源说明。漂亮页面和更长的AI回答，都不能证明它与手里的纸签是同一篇文字。"],
+          "id": "step-6",
+          "title": "6. 网上抽签和庙里求签，是一回事吗？",
+          "paragraphs": [
+            "按号查签是在找一段文字，在线抽签是在取得一个新结果，到庙里求签则是在参与当地的实践。例如，华人庙宇委员会的签号查询可以查阅其公布的签文；打开一篇签诗，并不等于重新抽了一支签。先分清自己想做哪件事，再选网站、读号码。",
+            "想在DestinyPixel新抽一支签，可以打开抽签工具，选择签系与主题，再点击抽签。浏览器会在该签系的号段中随机选出一个号码，显示已有的对应条目。问题内容不参与选号，也不是AI替你挑签。可选AI按钮在这之后才使用：把当前条目与你提供的主题、问题联系起来。不请求AI，也能读条目和“签文来源”。补充处境可以让解释更贴近问题，不等于提高预测的准确性。",
+            "如果已经拿到寺庙签纸，就把它留作核对依据。假设纸上写着观音第33签，但网上显示的文字不同，重新在网上抽一个号码，并不能帮你认出原诗。先看文字核对清单；想比较本站条目，再按查号步骤操作。此时要解决的是“我手里究竟是哪篇文字”，不用急着寻找更顺耳的答案。这是假设的查找情景，不引用某个版本第33签的内容，也不是用户应验故事。",
+            "想参与现场仪式，就查看所选寺庙自己的访客指引，或向工作人员询问流程。本指南不规定通用的求签顺序、确认方式或重抽次数。DestinyPixel提供独立的象征体验，不是该庙的远程服务，也不收录每座庙的完整签本。这些实际区别不替读者判断求签的宗教意义，而是帮助确认自己正在做什么、所用资料能说明什么。"
+          ],
+          "table": {
+            "headings": [
+              "你想做什么",
+              "从哪里开始"
+            ],
+            "rows": [
+              [
+                "读懂手里已有的签纸",
+                "先找发签寺庙的资料库或签本，核对签系、号码和文字；有差异就保留疑问，继续查来源。"
+              ],
+              [
+                "在线新抽一支签",
+                "选择会说明签系与文字来源的工具。在本站先抽签、读来源说明，再按需请求结合问题的AI解释。"
+              ],
+              [
+                "到寺庙参与求签",
+                "按该庙当前指引操作。保留签纸与来源信息，方便之后查阅或请教原文。"
+              ]
+            ]
+          },
+          "links": [
+            {
+              "text": "抽签工具",
+              "href": "/sticks?locale=zh"
+            },
+            {
+              "text": "文字核对清单",
+              "href": "#step-4"
+            },
+            {
+              "text": "查号步骤",
+              "href": "#step-7"
+            }
+          ],
+          "sources": [
+            {
+              "label": "华人庙宇委员会：签文查询",
+              "href": "https://www.ctc.org.hk/chim-search/"
+            }
+          ]
         },
         {
           id: "step-7", title: "7. 在本站怎样按号码查签？",
@@ -156,9 +248,9 @@ export const fortuneStickEditionsArticle: JournalSourceArticle = {
 
 export const fortuneStickEditionsRussian: JournalTranslation = {
   title: "Версии жребиев Гуаньинь: как найти текст по номеру",
-  description: "Один номер — разные стихи? Сверьте храм, сборник и текст жребия Гуаньинь на официальных примерах, затем воспользуйтесь онлайн-поиском.",
+  description: "Как найти стих Гуаньинь по номеру и версии? Сверьте источник и узнайте, чем поиск храмового текста отличается от нового онлайн-жребия и посещения храма.",
   topic: "Как найти текст своего жребия",
-  introduction: "Вы принесли из храма листок, ввели его номер в поиск и получили три разных ответа. На одной странице — древний учёный, на другой — обещание встречи, а на третьей даже стих не похож на ваш. Прежде чем выбирать приятное толкование, установите текст: к какому сборнику и изданию относится этот номер?",
+  introduction: "Вы принесли из храма листок, ввели его номер в поиск и получили три разных ответа. На одной странице — древний учёный, на другой — обещание встречи, а на третьей даже стих не похож на ваш. Прежде чем выбирать приятное толкование, установите текст: к какому сборнику и изданию относится этот номер? Если вы ещё не тянули жребий, сначала выберите, что хотите сделать. Найти текст уже полученного листка, вытянуть новый жребий онлайн и принять участие в храмовом ритуале — разные задачи. Раздел 6 поможет выбрать следующий шаг.",
   takeaway: "Номер указывает место внутри сборника, а не универсальный смысл. Сначала сверьте источник, название сборника, номер и слова, затем читайте объяснение.",
   sections: [
     {
@@ -200,8 +292,54 @@ export const fortuneStickEditionsRussian: JournalTranslation = {
       paragraphs: ["Прочитайте стих целиком, прежде чем переходить к оценке удачи или современному заголовку. Сначала опишите происходящее в его образах. Затем найдите изменение, условие или действие: поворачивается ли ситуация, кто-то ждёт или приходит помощь? После этого прочитайте историю и комментарий именно этого издания. Название может указывать на культурный контекст, который теряется при буквальном переводе.", "Лишь затем свяжите текст со своим вопросом. Например, при выборе работы отделите содержание стиха от сведений, которые ещё нужно получить у работодателя. Запишите образ, возможное прочтение и один неизвестный факт. Это наше упражнение для чтения, а не обязательный храмовый ритуал. Благоприятная оценка не означает численную вероятность успеха, а трудный образ не доказывает, что случится беда."],
     },
     {
-      id: "step-6", title: "6. Онлайн-жребий и храмовый ритуал — одно и то же?",
-      paragraphs: ["Различайте поиск текста и участие в ритуале. Официальный онлайн-архив помогает найти опубликованный храмом стих. Цифровое вытягивание создаёт результат внутри системы конкретного сайта. Это разные действия, даже когда оба показывают номер и строки.", "DestinyPixel — независимый символический опыт. Он не воспроизводит посещение храма, ритуал подтверждения или полную авторитетную храмовую книгу. Для полученного в храме листка начните с его источника. Для нового размышления можно воспользоваться нашим инструментом, обращая внимание на запись и примечание к ней. Красивый дизайн и длинный ответ ИИ не устанавливают совпадение с вашим документом."],
+      "id": "step-6",
+      "title": "6. Онлайн-жребий и храмовый ритуал — одно и то же?",
+      "paragraphs": [
+        "Поиск по номеру позволяет найти текст, онлайн-жребий даёт новый результат, а посещение храма позволяет участвовать в его практике. Например, архив Комитета китайских храмов предоставляет доступ к опубликованным текстам по номеру. Открыть такой стих — не значит вытянуть новый жребий. Сначала определите свою задачу, затем выбирайте сайт и читайте результат.",
+        "Чтобы вытянуть новый жребий на DestinyPixel, откройте инструмент жребиев, выберите сборник и тему, затем нажмите кнопку вытягивания. Браузер случайно выбирает номер в диапазоне этого сборника и показывает существующую запись. Текст вопроса не участвует в выборе номера, и ИИ его не выбирает. Необязательная кнопка ИИ используется после этого: объяснение связывает показанную запись с вашей темой и вопросом. Читать запись и примечание об источнике можно без ИИ. Дополнительные сведения помогают сделать объяснение уместнее, но не доказывают большей точности предсказания.",
+        "Если у вас уже есть храмовый листок, сохраните его для сверки. Допустим, на нём указан жребий Гуаньинь № 33, а на сайте написаны другие слова. Новый онлайн-жребий не поможет установить исходный стих. Сначала используйте список проверки текста, а затем инструкцию поиска по номеру, если хотите сравнить запись DestinyPixel. Сейчас задача — установить текст, а не найти более приятный ответ. Это условный пример поиска, а не цитата из конкретной версии жребия № 33 и не история читателя.",
+        "Для участия в ритуале на месте обратитесь к указаниям выбранного храма или спросите его сотрудников о порядке действий. Это руководство не задаёт единую для всех храмов последовательность, способ подтверждения или число повторений. DestinyPixel — независимый символический опыт, а не дистанционная услуга этого храма и не полное храмовое издание. Эти практические различия не определяют религиозный смысл жребия для читателя; они помогают понять, что именно вы делаете и что можно установить по источнику."
+      ],
+      "table": {
+        "headings": [
+          "Ваша задача",
+          "С чего начать"
+        ],
+        "rows": [
+          [
+            "Прочитать уже полученный листок",
+            "Найдите архив или книгу выдавшего его храма. Сверьте сборник, номер и слова; при расхождении сохраните вопрос открытым до проверки источника."
+          ],
+          [
+            "Вытянуть новый жребий онлайн",
+            "Выберите инструмент, который указывает сборник и источники. На DestinyPixel сначала вытяните жребий и прочитайте примечание, затем при желании запросите объяснение ИИ с учётом вопроса."
+          ],
+          [
+            "Принять участие в храме",
+            "Следуйте актуальным указаниям этого храма. Сохраните листок и сведения об источнике для дальнейшего поиска или обсуждения текста."
+          ]
+        ]
+      },
+      "links": [
+        {
+          "text": "инструмент жребиев",
+          "href": "/sticks?locale=ru"
+        },
+        {
+          "text": "список проверки текста",
+          "href": "#step-4"
+        },
+        {
+          "text": "инструкцию поиска по номеру",
+          "href": "#step-7"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Комитет китайских храмов: поиск опубликованных текстов (китайский)",
+          "href": "https://www.ctc.org.hk/chim-search/"
+        }
+      ]
     },
     {
       id: "step-7", title: "7. Как найти номер на DestinyPixel?",
