@@ -1,0 +1,439 @@
+{
+  "scope": "Independent raw-byte and AST-source preservation checks; no source changes, network or PDF access.",
+  "originalWorkCommit": "1f50d8c269b41c0bb7240fb93452eed8922071bf",
+  "incomingMainCommit": "11cf81e618b9f5107dc70b7c489e2e7c3cfe0e6f",
+  "mainComparisonAncestor": "1f2f41bfdb88e468ed5bdbc5b6d1244cf18bddd3",
+  "originalTwoPentaclesAndHistoricalQa": [
+    {
+      "path": "content/tarot/en/two-of-pentacles.json",
+      "sha256": "1a09b860ce276cfc0f5b24ee23b515c0ec0d53025efb92aacd2afb21af984eb3",
+      "expectedSha256": "1a09b860ce276cfc0f5b24ee23b515c0ec0d53025efb92aacd2afb21af984eb3",
+      "equal": true
+    },
+    {
+      "path": "content/tarot/zh/two-of-pentacles.json",
+      "sha256": "c31079004ca149408007b4f410107d6c02b2d6a425319de91500ac7d59e1aec1",
+      "expectedSha256": "c31079004ca149408007b4f410107d6c02b2d6a425319de91500ac7d59e1aec1",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/README.md",
+      "sha256": "1bb6dfd41f1bd9bc0f01c2f7a73f4122505b85c9cfae479cbf7a25cad9cfa2ad",
+      "expectedSha256": "1bb6dfd41f1bd9bc0f01c2f7a73f4122505b85c9cfae479cbf7a25cad9cfa2ad",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/manuscript-en.md",
+      "sha256": "672ffe27c9ec426613f326ab530bbb86e0576b5c44cd9336e9f751d2f183f749",
+      "expectedSha256": "672ffe27c9ec426613f326ab530bbb86e0576b5c44cd9336e9f751d2f183f749",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/manuscript-zh.md",
+      "sha256": "e2b74b44c837ff6b21842ee59700b1015ed5f0e321fec100db76625d4a4dd57b",
+      "expectedSha256": "e2b74b44c837ff6b21842ee59700b1015ed5f0e321fec100db76625d4a4dd57b",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/previous/content/tarot/en/two-of-pentacles.json",
+      "sha256": "7a245018d9549c1f61b2960c6357dee2e39455748e5e8cd012d1f5c16c91e5a0",
+      "expectedSha256": "7a245018d9549c1f61b2960c6357dee2e39455748e5e8cd012d1f5c16c91e5a0",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/previous/content/tarot/zh/two-of-pentacles.json",
+      "sha256": "74c36291e3d194a742656eb4e14a2274129391a56b9cc6e7a174d07936de804e",
+      "expectedSha256": "74c36291e3d194a742656eb4e14a2274129391a56b9cc6e7a174d07936de804e",
+      "equal": true
+    },
+    {
+      "path": "content/two-pentacles-play-20261110/revisions.json",
+      "sha256": "e7ded6b9b8df965b2bd4caaa0278c830ca4660761bfa0e96029ea20bbbf5961e",
+      "expectedSha256": "e7ded6b9b8df965b2bd4caaa0278c830ca4660761bfa0e96029ea20bbbf5961e",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/README.md",
+      "sha256": "77173e0e64ca37b14e56dfba0ec7fe9df9eabf5524ab8091004df178a324e63d",
+      "expectedSha256": "77173e0e64ca37b14e56dfba0ec7fe9df9eabf5524ab8091004df178a324e63d",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/baseline-depth-content.log",
+      "sha256": "8930670777ea68ba9071cdbce29068373dff03ef5f7193f7c0a33ac20f347439",
+      "expectedSha256": "8930670777ea68ba9071cdbce29068373dff03ef5f7193f7c0a33ac20f347439",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/baseline-depth-final.log",
+      "sha256": "64820e0d31812ba09e49946952fa2be1fdacfbb3d69bb6b057f6c92ea4b9c603",
+      "expectedSha256": "64820e0d31812ba09e49946952fa2be1fdacfbb3d69bb6b057f6c92ea4b9c603",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/build.log",
+      "sha256": "c0f2ddd81106873d4bcf8b13064042c7e6adef64aca62d053b8255e211e38908",
+      "expectedSha256": "c0f2ddd81106873d4bcf8b13064042c7e6adef64aca62d053b8255e211e38908",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/current-depth-content.log",
+      "sha256": "07fe286a9af03bc52c99423cc584b9a13feb4e55cd90c209186ea01d99afe53a",
+      "expectedSha256": "07fe286a9af03bc52c99423cc584b9a13feb4e55cd90c209186ea01d99afe53a",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/current-depth-final.log",
+      "sha256": "11c003f43b7904e9d7ea5ca454618a55155765b7510ddff28a1655c7df18a8f7",
+      "expectedSha256": "11c003f43b7904e9d7ea5ca454618a55155765b7510ddff28a1655c7df18a8f7",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/depth-baseline-comparison.json",
+      "sha256": "3ea7deed8d90032cb5411da77e6d9d829f43dc003b5da56dfbb82fe6d6d0fcf8",
+      "expectedSha256": "3ea7deed8d90032cb5411da77e6d9d829f43dc003b5da56dfbb82fe6d6d0fcf8",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/http-local.json",
+      "sha256": "1c5e1e5be9d8a89b1d1c2ac282bd2c61be9cdb7ed1f6613084408711c5a65d68",
+      "expectedSha256": "1c5e1e5be9d8a89b1d1c2ac282bd2c61be9cdb7ed1f6613084408711c5a65d68",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/layout-local.json",
+      "sha256": "e79034a0222343787f9dfd36d340b3d87b4451f45d1a34a931f02697aea1899f",
+      "expectedSha256": "e79034a0222343787f9dfd36d340b3d87b4451f45d1a34a931f02697aea1899f",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/lint-root.log",
+      "sha256": "c9502e5732698069acd1e4552ac4848818531b2c751977f4c0d5bddc1bc959b1",
+      "expectedSha256": "c9502e5732698069acd1e4552ac4848818531b2c751977f4c0d5bddc1bc959b1",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/lint-scoped.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expectedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/lint-tests.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expectedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/test-comparison.json",
+      "sha256": "049d386d90e974634b7d24609d19b19703253cb79eb3557ab4a2dd25158ee590",
+      "expectedSha256": "049d386d90e974634b7d24609d19b19703253cb79eb3557ab4a2dd25158ee590",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/tests-baseline.log",
+      "sha256": "618337a80dc1a477b7e5fbe83d1fefd0ebc328590b025bff6667da717d8b8531",
+      "expectedSha256": "618337a80dc1a477b7e5fbe83d1fefd0ebc328590b025bff6667da717d8b8531",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/tests-current.log",
+      "sha256": "f398f5c962d680f8192ce1c4908359334a7ae1eb9bdc79614afaa4115391d83a",
+      "expectedSha256": "f398f5c962d680f8192ce1c4908359334a7ae1eb9bdc79614afaa4115391d83a",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/tests-focused.log",
+      "sha256": "26ed361b6aff7b732eb23f958bd00ba9af56540c47b7c28d4e1c2988dd4694af",
+      "expectedSha256": "26ed361b6aff7b732eb23f958bd00ba9af56540c47b7c28d4e1c2988dd4694af",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/tool-local-en.txt",
+      "sha256": "cb48ff3889ce535752c7072808313f9154ce1dd27e8a2b79810a5967e4575016",
+      "expectedSha256": "cb48ff3889ce535752c7072808313f9154ce1dd27e8a2b79810a5967e4575016",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/tool-local-zh.txt",
+      "sha256": "375cefae7ae19322d1b31971b539b05f0803c6ab572aaa28977674065fe80f7f",
+      "expectedSha256": "375cefae7ae19322d1b31971b539b05f0803c6ab572aaa28977674065fe80f7f",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/typecheck-tests.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expectedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/validate-editorial.log",
+      "sha256": "3d4717ef6f7252a285335525d17cacfaa462d919a487038622b4a504a1eaab41",
+      "expectedSha256": "3d4717ef6f7252a285335525d17cacfaa462d919a487038622b4a504a1eaab41",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/validate-learning.log",
+      "sha256": "477cc68f20a7298540c1735bf03bb7bf48019415957add90ff07cc2c97824e90",
+      "expectedSha256": "477cc68f20a7298540c1735bf03bb7bf48019415957add90ff07cc2c97824e90",
+      "equal": true
+    },
+    {
+      "path": "docs/qa/tarot-two-pentacles-20261110/validate-two-pentacles.log",
+      "sha256": "ff70ca76608e8d03e06b6a0f4ffc3f8a1136ddcd4fb45f7e63f2c7a9474081dd",
+      "expectedSha256": "ff70ca76608e8d03e06b6a0f4ffc3f8a1136ddcd4fb45f7e63f2c7a9474081dd",
+      "equal": true
+    },
+    {
+      "path": "lib/two-pentacles-play.test.ts",
+      "sha256": "65e37f09705153fffd335babb56fe1f15a0826418941b4000771de37305a35d7",
+      "expectedSha256": "65e37f09705153fffd335babb56fe1f15a0826418941b4000771de37305a35d7",
+      "equal": true
+    },
+    {
+      "path": "scripts/check-two-pentacles-play.mjs",
+      "sha256": "a6297daf22b513f69d1d3f21c8e87b813894dc19ae8bb909b044bfab0b291dad",
+      "expectedSha256": "a6297daf22b513f69d1d3f21c8e87b813894dc19ae8bb909b044bfab0b291dad",
+      "equal": true
+    },
+    {
+      "path": "scripts/validate-two-pentacles-play.py",
+      "sha256": "8b045bb0f9dc38cd609c7e80358a460b5ddbb6a1e6cb7fa34aad4bdf9175bf56",
+      "expectedSha256": "8b045bb0f9dc38cd609c7e80358a460b5ddbb6a1e6cb7fa34aad4bdf9175bf56",
+      "equal": true
+    }
+  ],
+  "incomingMainExclusiveAndProtectedContent": [
+    {
+      "path": "content/tarot/en/four-of-cups.json",
+      "sha256": "9492918d36b599e5863359efd2d656e216640b1d1670462e02d253d7e8671b41",
+      "expectedSha256": "9492918d36b599e5863359efd2d656e216640b1d1670462e02d253d7e8671b41",
+      "equal": true
+    },
+    {
+      "path": "content/tarot/zh/four-of-cups.json",
+      "sha256": "c4d62bcb00b7198e3da2f2f2ce6965e26233c57aaa57f564e4c3535fa7c73068",
+      "expectedSha256": "c4d62bcb00b7198e3da2f2f2ce6965e26233c57aaa57f564e4c3535fa7c73068",
+      "equal": true
+    },
+    {
+      "path": "content/tarot/zh/justice.json",
+      "sha256": "79df6d5ea30778ac2924e8f07e10eff6f26d757444c1ace40a5dbf7aa8dd31bc",
+      "expectedSha256": "79df6d5ea30778ac2924e8f07e10eff6f26d757444c1ace40a5dbf7aa8dd31bc",
+      "equal": true
+    },
+    {
+      "path": "content/tarot/zh/wheel.json",
+      "sha256": "5c964a5b58515163623b716117bda0d305ea1a61571bbb00154975b9897d11f7",
+      "expectedSha256": "5c964a5b58515163623b716117bda0d305ea1a61571bbb00154975b9897d11f7",
+      "equal": true
+    },
+    {
+      "path": "content/wheel-update-20261110/README.md",
+      "sha256": "562dcbf6a42b698f600613c41cb03f598d81fe78eaf085812ab4d464c3458e03",
+      "expectedSha256": "562dcbf6a42b698f600613c41cb03f598d81fe78eaf085812ab4d464c3458e03",
+      "equal": true
+    },
+    {
+      "path": "content/wheel-update-20261110/manuscript-zh.md",
+      "sha256": "f25d2ed7fb38a51cd3222ccf43082ea45eb1fcf8b0299f831d69fdb03d170f8a",
+      "expectedSha256": "f25d2ed7fb38a51cd3222ccf43082ea45eb1fcf8b0299f831d69fdb03d170f8a",
+      "equal": true
+    },
+    {
+      "path": "content/wheel-update-20261110/previous/content/tarot/zh/wheel.json",
+      "sha256": "f89cbc0770271482dcbdd48d29ec84f3b6b2f5603c6af265b98ca00cf9d68fc2",
+      "expectedSha256": "f89cbc0770271482dcbdd48d29ec84f3b6b2f5603c6af265b98ca00cf9d68fc2",
+      "equal": true
+    },
+    {
+      "path": "content/wheel-update-20261110/revisions.json",
+      "sha256": "5fb1eb4d0d053791cdb082bc84736a02312b2831c553ebc0ac792df1b3d20d92",
+      "expectedSha256": "5fb1eb4d0d053791cdb082bc84736a02312b2831c553ebc0ac792df1b3d20d92",
+      "equal": true
+    },
+    {
+      "path": "data/prompt-radar.json",
+      "sha256": "6924ec46f5e1ce6063629cfc012c6d2363ee27fc3a2f3eabd9bf8d80d489b1d5",
+      "expectedSha256": "6924ec46f5e1ce6063629cfc012c6d2363ee27fc3a2f3eabd9bf8d80d489b1d5",
+      "equal": true
+    },
+    {
+      "path": "lib/journal-fortune-stick-editions.ts",
+      "sha256": "23841716844e3a971af1a06112c1cf670772c999e321a841c7f9ae124836a0e1",
+      "expectedSha256": "23841716844e3a971af1a06112c1cf670772c999e321a841c7f9ae124836a0e1",
+      "equal": true
+    },
+    {
+      "path": "scripts/validate-wheel-pollack-revision.py",
+      "sha256": "7257b9d61d4d30c0a4cda155132bcabcec113ab68ad36696b2dcde3a30e069fa",
+      "expectedSha256": "7257b9d61d4d30c0a4cda155132bcabcec113ab68ad36696b2dcde3a30e069fa",
+      "equal": true
+    }
+  ],
+  "sharedIntegrationFilesReviewedSeparately": [
+    "lib/editorial-updates.test.ts",
+    "lib/editorial-updates.ts",
+    "lib/tarot-learning/learning.test.ts",
+    "scripts/editorial_revision_helpers.py"
+  ],
+  "criticalValidatorFunctions": [
+    {
+      "function": "validate_two_pentacles_play_record",
+      "comparedTo": "1f50d8c269b41c0bb7240fb93452eed8922071bf",
+      "sha256": "b3d3726363aff375200899328a5440459423a2843174e8aee344fd7377b70181",
+      "expectedSha256": "b3d3726363aff375200899328a5440459423a2843174e8aee344fd7377b70181",
+      "equal": true
+    },
+    {
+      "function": "validate_wheel_pollack_record",
+      "comparedTo": "11cf81e618b9f5107dc70b7c489e2e7c3cfe0e6f",
+      "sha256": "86f6b38daade6aa939787981652f3a35fc1a40842c0676b2c2219b9098a6eaa8",
+      "expectedSha256": "86f6b38daade6aa939787981652f3a35fc1a40842c0676b2c2219b9098a6eaa8",
+      "equal": true
+    },
+    {
+      "function": "validate_justice_pollack_record",
+      "comparedTo": "11cf81e618b9f5107dc70b7c489e2e7c3cfe0e6f",
+      "sha256": "223eddba6d2b093ff189353deb32d487f228d2a800d10b3fcee53a45893f9c2c",
+      "expectedSha256": "223eddba6d2b093ff189353deb32d487f228d2a800d10b3fcee53a45893f9c2c",
+      "equal": true
+    }
+  ],
+  "allOtherIncomingMainFunctionsExceptDispatchers": [
+    {
+      "function": "sha",
+      "equal": true
+    },
+    {
+      "function": "read",
+      "equal": true
+    },
+    {
+      "function": "sample_key",
+      "equal": true
+    },
+    {
+      "function": "revision_registry",
+      "equal": true
+    },
+    {
+      "function": "is_sample",
+      "equal": true
+    },
+    {
+      "function": "validate_sample_record",
+      "equal": true
+    },
+    {
+      "function": "historical_record",
+      "equal": true
+    },
+    {
+      "function": "validate_two_swords_record",
+      "equal": true
+    },
+    {
+      "function": "validate_king_pentacles_record",
+      "equal": true
+    },
+    {
+      "function": "validate_seven_cups_record",
+      "equal": true
+    },
+    {
+      "function": "validate_eight_swords_record",
+      "equal": true
+    },
+    {
+      "function": "validate_moon_record",
+      "equal": true
+    },
+    {
+      "function": "validate_sun_record",
+      "equal": true
+    },
+    {
+      "function": "validate_judgement_record",
+      "equal": true
+    },
+    {
+      "function": "validate_tower_record",
+      "equal": true
+    },
+    {
+      "function": "validate_devil_record",
+      "equal": true
+    },
+    {
+      "function": "validate_world_record",
+      "equal": true
+    },
+    {
+      "function": "validate_wheel_pollack_record",
+      "equal": true
+    },
+    {
+      "function": "validate_justice_pollack_record",
+      "equal": true
+    },
+    {
+      "function": "validate_death_record",
+      "equal": true
+    },
+    {
+      "function": "validate_temperance_record",
+      "equal": true
+    },
+    {
+      "function": "validate_hanged_man_pollack_record",
+      "equal": true
+    },
+    {
+      "function": "validate_hanged_man_record",
+      "equal": true
+    },
+    {
+      "function": "validate_star_record",
+      "equal": true
+    },
+    {
+      "function": "validate_current_tarot_sample",
+      "equal": true
+    }
+  ],
+  "retainedSourceDatesAndPages": [
+    {
+      "locale": "en",
+      "updatedAt": "2026-11-10",
+      "bookCheckedOn": "2026-11-10",
+      "primaryCheckedOn": "2026-11-10",
+      "pdfPages": [
+        313,
+        314
+      ],
+      "printedPages": [
+        314,
+        315
+      ],
+      "equalToOriginalCommit": true
+    },
+    {
+      "locale": "zh",
+      "updatedAt": "2026-11-10",
+      "bookCheckedOn": "2026-11-10",
+      "primaryCheckedOn": "2026-11-10",
+      "pdfPages": [
+        313,
+        314
+      ],
+      "printedPages": [
+        314,
+        315
+      ],
+      "equalToOriginalCommit": true
+    }
+  ],
+  "freshPdfReading": false,
+  "allChecksEqual": true
+}

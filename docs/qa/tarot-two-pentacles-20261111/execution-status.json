@@ -1,0 +1,48 @@
+{
+  "typecheck": {
+    "lostSession": 34064,
+    "lostSessionStatus": "unknown after executor recovery; empty log not accepted as a pass",
+    "freshSession": 16601,
+    "freshExitCode": 0,
+    "freshLog": "typecheck-confirmed.log"
+  },
+  "lint": {
+    "recoveredSession": 76189,
+    "recoveredExitCode": 0,
+    "freshScopedExitCode": 0,
+    "rootExitCode": 2,
+    "rootReason": "repository lacks default ESLint 9 config"
+  },
+  "browser": {
+    "action": "cua.createBrowserTab",
+    "target": "http://127.0.0.1:3063/journal/tarot-two-of-pentacles",
+    "result": "Transport closed",
+    "executionStatus": "uncertain; no UI observation returned",
+    "followup": "cua.getState also returned Transport closed",
+    "completionSummaryAttempt": "returned Transport closed",
+    "todayDesktopMobileCheck": "not executed/verified",
+    "tabCreatedOrClosed": "unknown; not claimed",
+    "alternateUiAutomationUsed": false
+  },
+  "formalSite": {
+    "originalTarget": "GET https://www.destinypixel.com/journal/how-to-read-celtic-cross via configured cloud proxy",
+    "historicalResult": "Envoy CONNECT 403 on November 8, during HTTPS tunnel establishment",
+    "origin403Proven": false,
+    "websiteFailureTodayProven": false,
+    "newRequestToday": false,
+    "retryOrBypass": false,
+    "currentStatus": "restriction clearance or permitted acceptance channel not established"
+  },
+  "publishing": {
+    "push": "not attempted",
+    "createPr": "not attempted",
+    "mergeToMain": "not attempted",
+    "productionDeploy": "not attempted",
+    "productionVerification": "not performed"
+  },
+  "oldFourCupsPr": {
+    "head": "codex/tarot-reversals-20261108",
+    "base": "main",
+    "status": "previous automatic-review denial; known not executed; not retried"
+  }
+}

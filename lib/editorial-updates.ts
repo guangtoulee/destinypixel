@@ -21,10 +21,11 @@ import worldRevision from "@/content/world-update-20261106/revisions.json";
 import deathRevision from "@/content/death-update-20261107/revisions.json";
 import hangedManPollackRevision from "@/content/hanged-man-update-20261108/revisions.json";
 import justiceRevision from "@/content/justice-update-20261109/revisions.json";
+import wheelRevision from "@/content/wheel-update-20261110/revisions.json";
 import type { ReportLocale } from "@/lib/report-i18n";
 
 type Revision = { notes: Partial<Record<ReportLocale, string>> };
-const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [twoPentaclesPlayRevision, justiceRevision, hangedManPollackRevision, interpretationFitRevision, deathRevision, twoSwordsRevision, worldRevision, kingPentaclesRevision, temperanceRevision, devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
+const registries: { updatedAt: string; articles: Record<string, Revision> }[] = [twoPentaclesPlayRevision, wheelRevision, justiceRevision, hangedManPollackRevision, interpretationFitRevision, deathRevision, twoSwordsRevision, worldRevision, kingPentaclesRevision, temperanceRevision, devilRevision, towerRevision, sevenCupsRevision, sunRevision, moonRevision, judgementRevision, eightSwordsRevision, questionScopeRevision, starRevision, hangedManRevision, queenSwordsRevision, secondBatchRevisions, peopleRevisions, revisions];
 
 /** A date applies only to the language actually edited in this revision. */
 export function editorialUpdate(slug: string, locale: ReportLocale) {

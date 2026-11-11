@@ -30,6 +30,7 @@ import worldRevision from "@/content/world-update-20261106/revisions.json";
 import deathRevision from "@/content/death-update-20261107/revisions.json";
 import justiceRevision from "@/content/justice-update-20261109/revisions.json";
 import twoPentaclesPlayRevision from "@/content/two-pentacles-play-20261110/revisions.json";
+import wheelRevision from "@/content/wheel-update-20261110/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -55,6 +56,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const deathRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=deathRevision.records;
  const justiceRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=justiceRevision.records;
  const twoPentaclesPlayRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=twoPentaclesPlayRevision.records;
+ const wheelRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=wheelRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -74,6 +76,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(deathRecords),["content/tarot/zh/death.json"]);
  assert.deepEqual(Object.keys(justiceRecords),["content/tarot/zh/justice.json"]);
  assert.deepEqual(Object.keys(twoPentaclesPlayRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/two-of-pentacles.json`));
+ assert.deepEqual(Object.keys(wheelRecords),["content/tarot/zh/wheel.json"]);
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -716,6 +719,60 @@ test("every real cast ID resolves to the complete correct-language article witho
    }else if(id==="death"){
     assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Death edition gained the Pollack supplement`);
     assert.equal(article.updatedAt,"2026-10-08");
+   }
+   if(Object.hasOwn(wheelRecords,path)){
+    const record=wheelRecords[path],previousRaw=readFileSync(`content/wheel-update-20261110/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    const previousIds=previous.sections.map((section:{id:string})=>section.id);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>previousIds.includes(section.id)).map((section:{id:string})=>section.id),previousIds,`${path}: original section order changed`);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>!previousIds.includes(section.id)).map((section:{id:string;role:string;title:string})=>[section.id,section.role,section.title]),[["depth-sequence","comparison","从隐士的退后一步，到世界的整合"]]);
+    assert.equal(current.sections.findIndex((section:{id:string})=>section.id==="depth-sequence"),previous.sections.findIndex((section:{id:string})=>section.id==="depth-comparison")+1);
+    for(const sectionId of ["section-01","section-04"]){
+     const oldSection=previous.sections.find((section:{id:string})=>section.id===sectionId);
+     const newSection=current.sections.find((section:{id:string})=>section.id===sectionId);
+     assert.ok(newSection.bodyMarkdown.startsWith(oldSection.bodyMarkdown+"\n\n"));
+    }
+    assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="depth-comparison"),previous.sections.find((section:{id:string})=>section.id==="depth-comparison"));
+    const waiteReversed="他的逆位词条反而列了增加、丰盛与过量。";
+    const externalDelay="先看现实变化发生在哪儿。是排期被外部条件推迟，还是每次遇到反馈都重复旧做法？前者需要缓冲和备选安排，后者可能需要改方法。两者并不是同一种「运气差」。";
+    assert.equal(current.sections.find((section:{id:string;bodyMarkdown:string})=>section.id==="section-04").bodyMarkdown.includes(waiteReversed),true);
+    assert.equal(current.sections.find((section:{id:string;bodyMarkdown:string})=>section.id==="section-04").bodyMarkdown.includes(externalDelay),true);
+    assert.equal(current.articleMarkdown.includes("死亡与新生同时存在"),true);
+    assert.equal(current.articleMarkdown.includes("不是已定论的埃及学事实"),true);
+    assert.equal(current.articleMarkdown.includes("不能用来预测疾病、死亡、成功或失败"),true);
+    assert.equal(current.articleMarkdown.includes("从隐士的退后一步，到世界的整合"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-hermit?locale=zh"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-hermit?locale=zh#depth-sequence"),false);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-world?locale=zh"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-justice?locale=zh#depth-sequence"),true);
+    assert.equal(current.articleMarkdown.includes("只是举例，不是预测"),true);
+    assert.equal(current.articleMarkdown.includes("不保证改变「一定有意义」"),true);
+    assert.equal(current.articleMarkdown.includes(waiteReversed),true);
+    assert.equal(current.articleMarkdown.includes(externalDelay),true);
+    assert.equal(current.articleMarkdown.includes("业力"),false);
+    assert.equal(current.articleMarkdown.includes("数秘"),false);
+    assert.equal(current.articleMarkdown.includes("TARO"),false);
+    assert.equal(current.articleMarkdown.includes("现稿已"),false);
+    assert.equal(current.articleMarkdown.includes("该页还没有"),false);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.sources.at(-1).sourceId,"wheel-pollack-2010");
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[112,113,114,115,116,117,118,119,120]);
+    assert.equal(current.updatedAt,"2026-11-10");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="wheel"){
+    const priorDate=depthManifest.cards.wheel.updatedAt;
+    assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Wheel edition gained the Pollack supplement`);
+    assert.equal(article.updatedAt,priorDate);
+    assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Wheel edition changed`);
    }
    if(Object.hasOwn(justiceRecords,path)){
     const record=justiceRecords[path],previousRaw=readFileSync(`content/justice-update-20261109/previous/${path}`);

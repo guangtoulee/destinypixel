@@ -48,6 +48,8 @@ JUSTICE_DIR = ROOT / "content/justice-update-20261109"
 JUSTICE_PATHS = frozenset({"content/tarot/zh/justice.json"})
 TWO_PENTACLES_PLAY_DIR = ROOT / "content/two-pentacles-play-20261110"
 TWO_PENTACLES_PLAY_PATHS = frozenset(f"content/tarot/{locale}/two-of-pentacles.json" for locale in ("en", "zh"))
+WHEEL_DIR = ROOT / "content/wheel-update-20261110"
+WHEEL_PATHS = frozenset({"content/tarot/zh/wheel.json"})
 
 
 def sha(raw):
@@ -117,6 +119,9 @@ def historical_bytes(path):
     if sample_key(path) in TWO_PENTACLES_PLAY_PATHS:
         validate_two_pentacles_play_record(path)
         return (TWO_PENTACLES_PLAY_DIR / "previous" / sample_key(path)).read_bytes()
+    if sample_key(path) in WHEEL_PATHS:
+        validate_wheel_pollack_record(path)
+        return (WHEEL_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in JUSTICE_PATHS:
         validate_justice_pollack_record(path)
         return (JUSTICE_DIR / "previous" / sample_key(path)).read_bytes()
@@ -171,6 +176,9 @@ def historical_record(path):
 def approved_markdown_sha(path, legacy_hash):
     if sample_key(path) in TWO_PENTACLES_PLAY_PATHS:
         current, _ = validate_two_pentacles_play_record(path)
+        return sha(current["articleMarkdown"])
+    if sample_key(path) in WHEEL_PATHS:
+        current, _ = validate_wheel_pollack_record(path)
         return sha(current["articleMarkdown"])
     if sample_key(path) in JUSTICE_PATHS:
         current, _ = validate_justice_pollack_record(path)
@@ -1440,6 +1448,184 @@ def validate_world_record(path):
     return current, previous
 
 
+def validate_wheel_pollack_record(path):
+    """Validate the Chinese Pollack supplement and keep the 2026-10-08 Wheel receipt."""
+    key = sample_key(path)
+    assert key in WHEEL_PATHS, f"Not a Wheel Pollack revision: {key}"
+    registry = read(WHEEL_DIR / "revisions.json")
+    assert registry["baseCommit"] == "ff2898e2b0015efa6995f4e3d830627f36c6fed5"
+    assert registry["updatedAt"] == "2026-11-10"
+    assert set(registry["articles"]) == {"tarot-wheel"}
+    notes = registry["articles"]["tarot-wheel"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    for phrase in ("死亡与新生同时存在", "不是已定论的埃及学事实", "象征总览", "未必是问牌人的责任", "只是举例", "不保证改变一定有意义", "补充而不替换", "外部推迟并不等于重复旧方法"):
+        assert phrase in notes["zh"], phrase
+    for phrase in ("现稿已", "该页还没有", "业力", "数秘", "TARO", "TORA", "ROTA", "维斯康提", "Visconti", "Fortuna", "佛图娜", "专家认证"):
+        assert phrase not in notes["zh"], phrase
+    assert set(registry["records"]) == WHEEL_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (WHEEL_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/wheel"
+    assert sha(raw) == record["fileSha256"], f"Current Wheel file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Wheel Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Wheel file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Wheel Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Wheel metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Wheel metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Wheel metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-10"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+    assert current["relatedCards"] == previous["relatedCards"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "从隐士的退后一步，到世界的整合"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+
+    def cjk(text):
+        return len(re.findall(r"[\u4e00-\u9fff]", text))
+
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            if old["id"] == "section-01":
+                parts = added_text.split("\n\n")
+                assert len(parts) == 2, parts
+                figures, books = parts
+                assert 180 <= cjk(figures) <= 280, cjk(figures)
+                assert 40 <= cjk(books) <= 120, cjk(books)
+            else:
+                assert added_text.count("\n\n") == 0
+                assert 160 <= cjk(added_text) <= 280, cjk(added_text)
+        else:
+            assert section == old, f"Original Wheel section changed: {old['id']}"
+
+    image_added = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"]
+    image_added = image_added.split("\n\n")[-2:]
+    figures, books = image_added
+    for phrase in ("Pollack", "下行的蛇", "胡狼首", "持剑的斯芬克斯", "死亡与新生同时存在", "118", "赛特", "阿努比斯", "荷鲁斯", "作者象征", "不是已定论的埃及学事实", "不等同于 Waite 的原文", "不能用来预测疾病、死亡、成功或失败"):
+        assert phrase in figures, phrase
+    for phrase in ("早期基督徒", "福音圣徒", "116", "为什么有书", "宗教归属", "经文", "Pollack"):
+        assert phrase in books, phrase
+    for phrase in ("维斯康提", "Visconti", "Fortuna", "佛图娜", "先宣判谁将被翻转", "业力", "数秘", "TARO", "现稿已"):
+        assert phrase not in figures + books, phrase
+
+    sequence = added[0]["bodyMarkdown"]
+    assert 100 <= cjk(sequence) <= 220, cjk(sequence)
+    assert sequence.count("\n\n") == 1
+    for phrase in ("Pollack", "隐士", "退后一步", "整只命运之轮", "115", "象征总览", "世界", "活出来", "114", "不是要求隐居", "不能覆盖 Waite", "/journal/tarot-hermit?locale=zh", "/journal/tarot-world?locale=zh", "/journal/tarot-justice?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    for phrase in ("业力", "数秘", "TARO", "TORA", "ROTA", "转世", "佛陀", "中点", "圣杯", "年王", "维斯康提", "Visconti", "Fortuna", "佛图娜", "现稿已", "该页还没有", "/journal/tarot-hermit?locale=zh#depth-sequence", "/journal/tarot-world?locale=zh#depth-sequence", "必须隐居"):
+        assert phrase not in sequence, phrase
+    hermit = read(ROOT / "content/tarot/zh/hermit.json")
+    assert all(section["id"] != "depth-sequence" for section in hermit["sections"])
+    justice = read(ROOT / "content/tarot/zh/justice.json")
+    assert any(section["id"] == "depth-sequence" for section in justice["sections"])
+
+    waite_reversed = "他的逆位词条反而列了增加、丰盛与过量。"
+    external_delay = "先看现实变化发生在哪儿。是排期被外部条件推迟，还是每次遇到反馈都重复旧做法？前者需要缓冲和备选安排，后者可能需要改方法。两者并不是同一种「运气差」。"
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    old_reverse = next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    assert waite_reversed in old_reverse and external_delay in old_reverse
+    assert old_reverse.endswith(external_delay) and reverse.startswith(old_reverse + "\n\n")
+    added_reverse = reverse[len(old_reverse):].strip()
+    assert reverse.index(waite_reversed) < reverse.index("Pollack 补一条界限")
+    assert reverse.index(external_delay) < reverse.index("Pollack 补一条界限")
+    for phrase in ("Pollack", "可能并不是问牌人的责任", "120", "书里举的", "并购", "失业", "关系结束", "只是举例，不是预测", "不能用来责备", "不保证改变「一定有意义」", "不能要求人立刻想开，或放下申诉", "抵抗已经发生的改变", "一向被动的人开始有新的觉知", "之后如何回应，不等于当初造成了这场改变", "补充而不替换", "增加、丰盛与过量", "外部推迟并不等于重复旧方法", "劳动咨询、法律程序或支持"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("你会失业", "你将被裁", "你的感情会结束", "必将失业", "注定分手", "一定有意义，所以", "业力", "报应", "现稿已", "立刻想开吧", "放下申诉吧"):
+        assert phrase not in added_reverse, phrase
+    assert added_reverse.count("一定有意义") == 1
+    for phrase in ("业力", "数秘", "TARO", "TORA", "ROTA", "报应", "佛陀", "转世", "维斯康提", "Visconti", "Fortuna", "佛图娜", "现稿已", "该页还没有", "中点", "圣杯", "年王", "专家认证", "母语审校"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Wheel source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    pages = [112, 113, 114, 115, 116, 117, 118, 119, 120]
+    assert book["sourceId"] == "wheel-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-10"
+    assert book["title"] == "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；命运之轮章，印刷／PDF 112–120"
+    assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+    metadata = book["sourceMetadata"]
+    assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "The Wheel of Fortune" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == pages
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("wheel-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Wheel Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Wheel anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (WHEEL_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/wheel-update-20261110/revisions.json"
+    assert revision["updatedAt"] == "2026-11-10" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    prior_date = depth["cards"]["wheel"]["updatedAt"]
+    assert prior_date == "2026-10-08"
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/wheel.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/wheel"]["recordSha256"], f"Unedited Wheel file changed: {unedited_locale}"
+        unedited_article = read(unedited)
+        assert unedited_article["updatedAt"] == prior_date, f"Unedited Wheel date changed: {unedited_locale}"
+        assert unedited_article["publishedAt"] == "2026-10-07"
+        assert "Pollack" not in unedited_article["articleMarkdown"]
+        assert "wheel-pollack-2010" not in {source.get("sourceId") for source in unedited_article["sources"]}
+        assert all(section["id"] != "depth-sequence" for section in unedited_article["sections"])
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
 def validate_justice_pollack_record(path):
     """Validate the Chinese Pollack supplement and keep the 2026-10-08 Justice receipt."""
     key = sample_key(path)
@@ -1508,8 +1694,8 @@ def validate_justice_pollack_record(path):
     for phrase in ("应得", "应该发生", "中点", "数秘", "双蛇", "DNA", "圣杯", "佛陀", "现稿已", "/journal/tarot-wheel?locale=zh#depth-sequence"):
         assert phrase not in sequence, phrase
     assert sequence.count("\n\n") == 1
-    wheel = read(ROOT / "content/tarot/zh/wheel.json")
-    assert all(section["id"] != "depth-sequence" for section in wheel["sections"])
+    # Justice still links to the Wheel page without #depth-sequence. That fragment is
+    # already forbidden above. The Wheel page may carry its own later depth-sequence.
     hanged = read(ROOT / "content/tarot/zh/hanged-man.json")
     assert any(section["id"] == "depth-sequence" for section in hanged["sections"])
     ending = "抽到逆位不能证明你做错了，也不能证明别人不公。若你正反复自责，可先分开自己实际做过的事、能够补救的部分与根本不由你决定的结果。"
