@@ -1,0 +1,23 @@
+{
+  "scope": "Fresh exact incoming-main baseline and integrated current execution. Only known checkout prefixes and terminal whitespace are normalized; all assertion messages and line positions retained.",
+  "baselineCommit": "11cf81e618b9f5107dc70b7c489e2e7c3cfe0e6f",
+  "baselineGitContext": "Read-only git-show object context supplied through GIT_DIR/GIT_WORK_TREE; no Git settings or objects changed.",
+  "results": [
+    {
+      "validator": "validate-tarot-depth-content.py",
+      "baselineExitCode": 1,
+      "currentExitCode": 1,
+      "sameFailureIgnoringOnlyKnownCheckoutPrefixes": true,
+      "normalizedTrace": "Traceback (most recent call last):\n  File \"scripts/validate-tarot-depth-content.py\", line 174, in <module>\n    assert article[\"articleMarkdown\"] == f\"# {edition['title']}\\n\\n{body}\"\nAssertionError\n"
+    },
+    {
+      "validator": "validate-tarot-depth-final.py",
+      "baselineExitCode": 1,
+      "currentExitCode": 1,
+      "sameFailureIgnoringOnlyKnownCheckoutPrefixes": true,
+      "normalizedTrace": "Traceback (most recent call last):\n  File \"scripts/validate-tarot-depth-final.py\", line 53, in <module>\n    assert article[\"articleMarkdown\"] == f\"# {edition['title']}\\n\\n{edition['bodyMarkdown']}\"\nAssertionError\n"
+    }
+  ],
+  "allBaselineAndCurrentTracesEqual": true,
+  "broadValidatorsPassed": false
+}

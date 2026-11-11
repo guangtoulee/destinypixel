@@ -1,0 +1,21 @@
+{
+  "scope": "Exact base/current traces; ignores only known checkout prefixes, keeps assertion location and message",
+  "baselineGitContext": "The content validator uses read-only git show against its original baseline object; GIT_DIR and GIT_WORK_TREE supplied this object context to the exact archive without changing it.",
+  "initialArchiveAttempt": "Before supplying Git object context, the depth-content baseline stopped because the archive has no .git directory; this was an execution-context failure, not a matching content assertion.",
+  "results": [
+    {
+      "validator": "validate-tarot-depth-content.py",
+      "baselineExitCode": 1,
+      "currentExitCode": 1,
+      "sameFailureIgnoringCheckoutPrefix": true,
+      "normalizedFailure": "Traceback (most recent call last):\n  File \"scripts/validate-tarot-depth-content.py\", line 174, in <module>\n    assert article[\"articleMarkdown\"] == f\"# {edition['title']}\\n\\n{body}\"\nAssertionError\n"
+    },
+    {
+      "validator": "validate-tarot-depth-final.py",
+      "baselineExitCode": 1,
+      "currentExitCode": 1,
+      "sameFailureIgnoringCheckoutPrefix": true,
+      "normalizedFailure": "Traceback (most recent call last):\n  File \"scripts/validate-tarot-depth-final.py\", line 53, in <module>\n    assert article[\"articleMarkdown\"] == f\"# {edition['title']}\\n\\n{edition['bodyMarkdown']}\"\nAssertionError\n"
+    }
+  ]
+}

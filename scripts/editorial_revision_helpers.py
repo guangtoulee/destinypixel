@@ -46,6 +46,8 @@ HANGED_MAN_POLLACK_DIR = ROOT / "content/hanged-man-update-20261108"
 HANGED_MAN_POLLACK_PATHS = frozenset({"content/tarot/zh/hanged-man.json"})
 JUSTICE_DIR = ROOT / "content/justice-update-20261109"
 JUSTICE_PATHS = frozenset({"content/tarot/zh/justice.json"})
+TWO_PENTACLES_PLAY_DIR = ROOT / "content/two-pentacles-play-20261110"
+TWO_PENTACLES_PLAY_PATHS = frozenset(f"content/tarot/{locale}/two-of-pentacles.json" for locale in ("en", "zh"))
 WHEEL_DIR = ROOT / "content/wheel-update-20261110"
 WHEEL_PATHS = frozenset({"content/tarot/zh/wheel.json"})
 
@@ -114,6 +116,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in TWO_PENTACLES_PLAY_PATHS:
+        validate_two_pentacles_play_record(path)
+        return (TWO_PENTACLES_PLAY_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in WHEEL_PATHS:
         validate_wheel_pollack_record(path)
         return (WHEEL_DIR / "previous" / sample_key(path)).read_bytes()
@@ -169,6 +174,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in TWO_PENTACLES_PLAY_PATHS:
+        current, _ = validate_two_pentacles_play_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in WHEEL_PATHS:
         current, _ = validate_wheel_pollack_record(path)
         return sha(current["articleMarkdown"])
@@ -224,6 +232,99 @@ def approved_markdown_sha(path, legacy_hash):
         return legacy_hash
     validate_sample_record(path)
     return revision_registry()["records"][sample_key(path)]["articleMarkdownSha256"]
+
+
+def validate_two_pentacles_play_record(path):
+    """Keep the historical Two of Pentacles receipt while checking this addition."""
+    import jsonschema
+
+    key = sample_key(path)
+    assert key in TWO_PENTACLES_PLAY_PATHS, f"Not a Two of Pentacles play revision: {key}"
+    registry = read(TWO_PENTACLES_PLAY_DIR / "revisions.json")
+    assert registry["baseCommit"] == "1f2f41bfdb88e468ed5bdbc5b6d1244cf18bddd3"
+    assert registry["updatedAt"] == "2026-11-10"
+    assert set(registry["articles"]) == {"tarot-two-of-pentacles"}
+    notes = registry["articles"]["tarot-two-of-pentacles"]["notes"]
+    assert set(notes) == {"en", "zh"} and all(isinstance(note, str) and note.strip() for note in notes.values())
+    assert set(registry["records"]) == TWO_PENTACLES_PLAY_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw = Path(path).read_bytes()
+    previous_raw = (TWO_PENTACLES_PLAY_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    locale = Path(path).parent.name
+    legacy_key = f"{locale}/two-of-pentacles"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical record changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key]
+    assert sha(raw) == record["fileSha256"], f"Current file differs from its receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"]
+    allowed = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() == {"editorialRevision"}
+    assert previous.keys() <= current.keys()
+    for field in previous.keys() - allowed:
+        assert current[field] == previous[field], f"Existing field changed: {key}/{field}"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-10"
+
+    assert len(previous["sections"]) == 12
+    assert len({section["id"] for section in previous["sections"]}) == 12
+    added = [section for section in current["sections"] if section["id"] == "play-and-adaptation"]
+    assert len(added) == 1
+    section = added[0]
+    assert section.keys() == {"id", "role", "title", "bodyMarkdown"}
+    assert section["role"] == "practice" and section["title"].strip()
+    insertion = next(i for i, old in enumerate(previous["sections"]) if old["id"] == "section-02") + 1
+    assert current["sections"] == previous["sections"][:insertion] + added + previous["sections"][insertion:], "Old sections, order, cases or paragraphs changed"
+    assert {"depth-case-1", "depth-case-2"} <= {old["id"] for old in previous["sections"]}
+    block = f"## {section['title']}\n\n{section['bodyMarkdown']}\n\n"
+    assert current["articleMarkdown"].count(block) == 1
+    assert current["articleMarkdown"].replace(block, "") == previous["articleMarkdown"], "Unrelated full-Markdown changed"
+    assert (TWO_PENTACLES_PLAY_DIR / f"manuscript-{locale}.md").read_text() == current["articleMarkdown"] + "\n"
+    body = section["bodyMarkdown"]
+    assert re.findall(r"^([0-9]+)\. ", body, re.M) == ["1", "2", "3"]
+    for phrase in ("Pollack", "313–314", "314–315", "2010", "#section-06", "/tarot"):
+        assert phrase in body, f"Missing source or existing/tool link: {phrase}"
+    assert ("invented case" in body and "upright Two of Pentacles" in body and "not a test of predictive accuracy" in body) if locale == "en" else ("原创假设案例" in body and "正位星币二" in body and "不是检验预测准确率" in body)
+
+    assert current["sources"][:-2] == previous["sources"]
+    assert len(current["sources"]) == len(previous["sources"]) + 2
+    book, original = current["sources"][-2:]
+    assert book["sourceId"] == "two-pentacles-pollack-2010" and book["type"] == "modern_author_interpretation"
+    assert book["url"] is None and book["checkedOn"] == "2026-11-10"
+    metadata = book["sourceMetadata"]
+    assert metadata["layer"] == "modern_author_interpretation"
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Chapter 10, Two of Pentacles" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["readScopePdf"] == [313, 314]
+    assert metadata["printedPages"] == [314, 315]
+    assert original["sourceId"] == "two-pentacles-waite-recheck-20261110"
+    assert original["type"] == "original_text_crosscheck" and original["checkedOn"] == "2026-11-10"
+    assert original["url"] == "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot/two-of-pentacles"
+    assert original["url"] in body
+    assert not ({"sourceMetadata", "pdfPages", "printedPages"} & original.keys()), "Web transcription gained invented printed pages"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/two-pentacles-play-20261110/revisions.json"
+    assert revision["updatedAt"] == "2026-11-10" and revision["scope"].strip()
+
+    ids = [item["id"] for item in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for item in current["sections"] for anchor in item.get("legacyAnchors", [])]
+    if current.get("sourceAppendix"):
+        ids.append(current["sourceAppendix"]["id"])
+    assert len(ids) == len(set(ids)), "Duplicate current anchors"
+    for unedited_locale in ("ru", "zh-TW"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/two-of-pentacles.json"
+        original_key = f"{unedited_locale}/two-of-pentacles"
+        assert sha(unedited.read_bytes()) == depth["editions"][original_key]["recordSha256"], f"Unedited translation bytes changed: {unedited_locale}"
+        article = read(unedited)
+        assert article["publishedAt"] == "2026-10-07" and article["updatedAt"] == "2026-10-08"
+        assert all(item["id"] != "play-and-adaptation" for item in article["sections"])
+    jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
 
 
 def validate_two_swords_record(path):
