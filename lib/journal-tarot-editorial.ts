@@ -3,6 +3,7 @@ import en from "@/content/tarot-editorial/en.json";
 import zh from "@/content/tarot-editorial/zh.json";
 import zhTw from "@/content/tarot-editorial/zh-TW.json";
 import ru from "@/content/tarot-editorial/ru.json";
+import foursPractice from "@/content/tarot-fours-practice-20261112/sections.json";
 import { tarotEducationSlugs, tarotEducationCopy } from "./tarot-editorial/navigation";
 
 const editions = { en, zh, "zh-TW": zhTw, ru };
@@ -12,7 +13,10 @@ export const tarotEducationArticles: JournalArticle[] = tarotEducationSlugs.map(
     const a = editions[locale][slug];
     const copy: JournalTranslation = {
       title: a.title, topic: a.topic, description: a.opening[0], introduction: a.opening[0],
-      openingParagraphs: a.opening.slice(1), sections: a.sections,
+      openingParagraphs: a.opening.slice(1),
+      // Keep the historical authored collections intact; this addition has its own receipt.
+      sections: slug === "why-the-four-fours-differ" && (locale === "en" || locale === "zh")
+        ? [...a.sections, foursPractice[locale]] : a.sections,
       action: { label: tarotEducationCopy[locale].practice, href: `/tarot${locale === "en" ? "" : `?locale=${locale}`}` },
     };
     return [locale, copy];

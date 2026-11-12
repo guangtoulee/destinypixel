@@ -1,0 +1,412 @@
+{
+  "scope": "Local production build",
+  "base": "http://127.0.0.1:3062",
+  "html": [
+    {
+      "locale": "en",
+      "status": 200,
+      "initialSectionCount": 6,
+      "modified": "2026-11-12",
+      "citationCount": 7
+    },
+    {
+      "locale": "zh",
+      "status": 200,
+      "initialSectionCount": 6,
+      "modified": "2026-11-12",
+      "citationCount": 7
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "initialSectionCount": 5,
+      "modified": "2026-10-08",
+      "citationCount": 6
+    },
+    {
+      "locale": "ru",
+      "status": 200,
+      "initialSectionCount": 5,
+      "modified": "2026-10-08",
+      "citationCount": 6
+    }
+  ],
+  "views": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "sections": 6,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 320,
+      "height": 568,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 390,
+      "height": 844,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "zh-TW",
+      "width": 1440,
+      "height": 900,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 568,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 900,
+      "sections": 5,
+      "fullText": true,
+      "image": true,
+      "overflow": false
+    }
+  ],
+  "links": [
+    {
+      "path": "/",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/journal/tarot-four-of-wands",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-cups",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-swords",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-pentacles",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot/attribution.json",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-sun",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-from-game-to-occult-traditions",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/journal/tarot-four-of-wands?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-cups?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-swords?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-pentacles?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-sun?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-from-game-to-occult-traditions?locale=zh",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh-TW&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/journal/tarot-four-of-wands?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-cups?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-swords?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-pentacles?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-sun?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-from-game-to-occult-traditions?locale=zh-TW",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=zh-TW#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    },
+    {
+      "path": "/?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=ru&topic=tarot-reading#topic-results",
+      "status": 200,
+      "fragment": "topic-results"
+    },
+    {
+      "path": "/journal/tarot-four-of-wands?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-cups?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-swords?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-four-of-pentacles?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/tarot?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-sun?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/how-to-connect-three-tarot-cards?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal/tarot-from-game-to-occult-traditions?locale=ru",
+      "status": 200,
+      "fragment": null
+    },
+    {
+      "path": "/journal?locale=ru#tarot-education",
+      "status": 200,
+      "fragment": "tarot-education"
+    }
+  ],
+  "flows": [
+    {
+      "languageSwitchAndHistory": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "articleToTool": true,
+      "shuffleDrawRevealMeaning": true,
+      "card": "ace-of-cups"
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "articleToTool": true,
+      "shuffleDrawRevealMeaning": true,
+      "card": "temperance"
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

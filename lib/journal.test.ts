@@ -88,6 +88,13 @@ test("articles have translated sections, truthful free Article schema and useful
             ? { ...section, paragraphs: section.paragraphs.slice(0, previous.sections[index].paragraphs.length), table: previous.sections[index].table }
             : section) };
         assert.deepEqual(originalSectionShapes(projected), originalSectionShapes(previousQuestionScopeEditions.en));
+      } else if (article.slug === "why-the-four-fours-differ") {
+        // Compare all four complete historical editions after removing exactly
+        // the separately receipted EN/ZH addition. Its full content is checked independently.
+        const earlier = { ...translation, sections: translation.sections.filter(section => section.id !== "fours-compare-and-combine") };
+        const earlierEnglish = { ...article.translations.en, sections: article.translations.en.sections.filter(section => section.id !== "fours-compare-and-combine") };
+        assert.deepEqual(originalSectionShapes(earlier), originalSectionShapes(earlierEnglish));
+        assert.equal(translation.sections.length - earlier.sections.length, locale === "en" || locale === "zh" ? 1 : 0);
       } else if (article.slug !== "ding-you-day-pillar" || locale === "en" || locale === "zh") {
         assert.deepEqual(originalSectionShapes(translation), originalSectionShapes(article.translations.en));
       }

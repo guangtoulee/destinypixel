@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+
+Call Log:
+- Timeout 5000ms exceeded while waiting on the predicate
+    at pollMatcher (/opt/codex/cua_node/lib/node_modules/playwright/lib/matchers/expect.js:304:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9)
+    at async file:///workspace/destinypixel/scripts/check-tarot-fours-practice.mjs:58:7
+
+Node.js v24.19.0

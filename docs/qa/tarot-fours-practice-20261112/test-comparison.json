@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "total": 385,
+    "pass": 379,
+    "fail": 6
+  },
+  "final": {
+    "total": 387,
+    "pass": 381,
+    "fail": 6
+  },
+  "sameFailureNames": [
+    "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+    "all 75 prior editions and their citations survive after removing only the second-batch additions",
+    "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+    "the historical first birthday rollout still changes exactly 40 sitemap dates",
+    "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+    "the original 75 journal date receipt stays intact while current editions use their actual dates"
+  ],
+  "skipped": 0,
+  "printedActualExpectedHashesAlsoMatch": true
+}
