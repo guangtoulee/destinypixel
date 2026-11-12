@@ -52,6 +52,8 @@ WHEEL_DIR = ROOT / "content/wheel-update-20261110"
 WHEEL_PATHS = frozenset({"content/tarot/zh/wheel.json"})
 HERMIT_DIR = ROOT / "content/hermit-update-20261111"
 HERMIT_PATHS = frozenset({"content/tarot/zh/hermit.json"})
+STRENGTH_DIR = ROOT / "content/strength-update-20261112"
+STRENGTH_PATHS = frozenset({"content/tarot/zh/strength.json"})
 
 
 def sha(raw):
@@ -118,6 +120,9 @@ def validate_sample_record(path):
 
 
 def historical_bytes(path):
+    if sample_key(path) in STRENGTH_PATHS:
+        validate_strength_pollack_record(path)
+        return (STRENGTH_DIR / "previous" / sample_key(path)).read_bytes()
     if sample_key(path) in HERMIT_PATHS:
         validate_hermit_pollack_record(path)
         return (HERMIT_DIR / "previous" / sample_key(path)).read_bytes()
@@ -179,6 +184,9 @@ def historical_record(path):
 
 
 def approved_markdown_sha(path, legacy_hash):
+    if sample_key(path) in STRENGTH_PATHS:
+        current, _ = validate_strength_pollack_record(path)
+        return sha(current["articleMarkdown"])
     if sample_key(path) in HERMIT_PATHS:
         current, _ = validate_hermit_pollack_record(path)
         return sha(current["articleMarkdown"])
@@ -1456,6 +1464,213 @@ def validate_world_record(path):
     return current, previous
 
 
+def validate_strength_pollack_record(path):
+    """Validate the Chinese Pollack supplement and keep the 2026-10-08 Strength receipt."""
+    import subprocess
+
+    key = sample_key(path)
+    assert key in STRENGTH_PATHS, f"Not a Strength Pollack revision: {key}"
+    registry = read(STRENGTH_DIR / "revisions.json")
+    assert registry["baseCommit"] == "81fbd55a739ddc977d9299fb8888aa0db3c7bdce"
+    assert registry["updatedAt"] == "2026-11-12"
+    assert set(registry["articles"]) == {"tarot-strength"}
+    notes = registry["articles"]["tarot-strength"]["notes"]
+    assert set(notes) == {"zh"} and notes["zh"].strip()
+    for phrase in ("被看见、释放并引导", "而不是要除掉", "两种力气", "事先选定的目标", "可以互补", "害怕时起步", "不保证成功", "也不要求硬撑", "没被引导的冲动", "补充而不覆盖", "也不是诊断", "不替代心理支持或医疗判断"):
+        assert phrase in notes["zh"], phrase
+    for phrase in ("现稿已", "该页还没有", "威斯康提", "赫克力斯", "灵能", "凯尔特", "专家认证", "阴柔", "摧毁", "软弱", "失控"):
+        assert phrase not in notes["zh"], phrase
+    assert set(registry["records"]) == STRENGTH_PATHS
+    record = registry["records"][key]
+    assert set(record) == {"previousFileSha256", "previousArticleMarkdownSha256", "fileSha256", "articleMarkdownSha256"}
+    assert all(re.fullmatch(r"[a-f0-9]{64}", value) for value in record.values())
+
+    raw, previous_raw = Path(path).read_bytes(), (STRENGTH_DIR / "previous" / key).read_bytes()
+    current, previous = json.loads(raw), json.loads(previous_raw)
+    depth = read(ROOT / "content/tarot-depth-20261008/revisions.json")
+    legacy_key = "zh/strength"
+    assert sha(raw) == record["fileSha256"], f"Current Strength file differs from receipt: {key}"
+    assert sha(current["articleMarkdown"]) == record["articleMarkdownSha256"], f"Current Strength Markdown differs from receipt: {key}"
+    assert sha(previous_raw) == record["previousFileSha256"] == depth["editions"][legacy_key]["recordSha256"], f"Historical Strength file approval changed: {key}"
+    assert sha(previous["articleMarkdown"]) == record["previousArticleMarkdownSha256"] == depth["articleMarkdownSha256"][legacy_key], f"Historical Strength Markdown approval changed: {key}"
+
+    allowed_changes = {"sections", "sources", "articleMarkdown", "updatedAt", "editorialRevision"}
+    assert current.keys() - previous.keys() <= {"editorialRevision"}, f"Unexpected Strength metadata added: {key}"
+    assert previous.keys() <= current.keys(), f"Original Strength metadata lost: {key}"
+    for field in previous.keys() - allowed_changes:
+        assert current[field] == previous[field], f"Original Strength metadata changed: {key}/{field}"
+    assert current["publishedAt"] == "2026-10-07" and current["updatedAt"] == "2026-11-12"
+    assert current["review"]["nativeHumanReview"] is False
+    assert current["title"] == previous["title"] and current["hook"] == previous["hook"]
+    assert current["quickTake"] == previous["quickTake"]
+    assert current["openingParagraphs"] == previous["openingParagraphs"] == []
+    assert current["relatedCards"] == previous["relatedCards"]
+    assert [card["cardId"] for card in current["relatedCards"]] == ["chariot", "temperance"]
+
+    previous_ids = [section["id"] for section in previous["sections"]]
+    added = [section for section in current["sections"] if section["id"] not in previous_ids]
+    assert [section["id"] for section in current["sections"] if section["id"] in previous_ids] == previous_ids
+    assert len(added) == 1 and added[0]["id"] == "depth-sequence"
+    assert added[0]["role"] == "comparison" and added[0]["title"] == "为什么力量和战车是两种力气"
+    assert added[0].keys() == {"id", "role", "title", "bodyMarkdown"}
+    insertion = previous_ids.index("depth-comparison") + 1
+    assert [section["id"] for section in current["sections"]] == previous_ids[:insertion] + ["depth-sequence"] + previous_ids[insertion:]
+
+    def cjk(text):
+        return len(re.findall(r"[\u4e00-\u9fff]", text))
+
+    for old, section in zip(previous["sections"], [section for section in current["sections"] if section["id"] in previous_ids]):
+        if old["id"] in ("section-01", "section-03", "section-04"):
+            assert section["id"] == old["id"] and section["title"] == old["title"] and section["role"] == old["role"]
+            assert section["bodyMarkdown"].startswith(old["bodyMarkdown"] + "\n\n")
+            added_text = section["bodyMarkdown"][len(old["bodyMarkdown"]):].strip()
+            assert added_text.count("\n\n") == 0
+            count = cjk(added_text)
+            if old["id"] == "section-01":
+                assert 90 <= count <= 120, count
+            elif old["id"] == "section-03":
+                assert 30 <= count <= 55, count
+            else:
+                assert 32 <= count <= 60, count
+        else:
+            assert section == old, f"Original Strength section changed: {old['id']}"
+
+    image_added = next(section for section in current["sections"] if section["id"] == "section-01")["bodyMarkdown"]
+    old_image = next(section for section in previous["sections"] if section["id"] == "section-01")["bodyMarkdown"]
+    assert old_image.endswith("再清楚表达边界。")
+    assert "并不能证明她是在掰开还是合拢狮口" in old_image
+    assert "绝不是与真实猛兽接触的示范" in old_image
+    image_added = image_added[len(old_image):].strip()
+    for phrase in ("Pollack", "需要被看见、释放并引导的激情", "而不是要除掉", "101–102", "无限符号", "魔术师", "103", "/journal/tarot-magician?locale=zh", "自己的情绪", "不是控制别人", "真狮", "双手靠近却没有挥打", "不能覆盖 Waite"):
+        assert phrase in image_added, phrase
+    for phrase in ("威斯康提", "赫克力斯", "尼米亚", "灵能", "皇后", "恶魔", "摧毁", "驯服", "软弱", "失控", "104", "现稿已", "该页还没有", "/journal/tarot-magician?locale=zh#"):
+        assert phrase not in image_added, phrase
+
+    sequence = added[0]["bodyMarkdown"]
+    assert 75 <= cjk(sequence) <= 120, cjk(sequence)
+    assert sequence.count("\n\n") == 1
+    for phrase in ("Pollack", "两种力气", "102", "事先选定的目标", "先让感受浮现，再加以引导", "可以互补", "隐士先退后的路", "不能覆盖 Waite", "/journal/tarot-chariot?locale=zh", "/journal/tarot-hermit?locale=zh#depth-sequence"):
+        assert phrase in sequence, phrase
+    for phrase in ("凯尔特", "纵轴", "横轴", "对调", "并不真正相信", "阴柔", "阳刚", "威斯康提", "灵能", "皇后", "恶魔", "现稿已", "该页还没有", "/journal/tarot-chariot?locale=zh#", "/journal/tarot-hermit?locale=zh)"):
+        assert phrase not in sequence, phrase
+    chariot = read(ROOT / "content/tarot/zh/chariot.json")
+    magician = read(ROOT / "content/tarot/zh/magician.json")
+    hermit = read(ROOT / "content/tarot/zh/hermit.json")
+    assert all(section["id"] != "depth-sequence" for section in chariot["sections"])
+    assert all(section["id"] != "depth-sequence" for section in magician["sections"])
+    assert any(section["id"] == "depth-sequence" for section in hermit["sections"])
+
+    feelings = "先识别感受，再决定怎样回应"
+    gentleness = "温和也可以很坚决"
+    help_text = "若已经疲惫，寻求支援、缩小任务，同样能让你保住行动能力。"
+    old_upright = next(section for section in previous["sections"] if section["id"] == "section-03")["bodyMarkdown"]
+    upright = next(section for section in current["sections"] if section["id"] == "section-03")["bodyMarkdown"]
+    assert feelings in old_upright and gentleness in old_upright and old_upright.endswith(help_text)
+    assert upright.startswith(old_upright + "\n\n")
+    added_upright = upright[len(old_upright):].strip()
+    for phrase in ("Pollack", "可以在害怕的时候起步", "105", "不是保证成功", "不要求忍着撑下去"):
+        assert phrase in added_upright, phrase
+    assert added_upright.count("成功") == 1 and added_upright.index("不是保证") < added_upright.index("成功")
+    for phrase in ("必须", "硬撑", "保证会", "摧毁", "诊断", "软弱", "失控"):
+        assert phrase not in added_upright, phrase
+
+    control = "一头是总想控制局面，用催促、责备或逞强维持秩序"
+    exhaustion = "另一头是长期消耗后，连表达需要的力气也没了"
+    waite_poles = "Waite 的旧词表同时包含滥用力量与软弱"
+    old_reverse = next(section for section in previous["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    reverse = next(section for section in current["sections"] if section["id"] == "section-04")["bodyMarkdown"]
+    assert control in old_reverse and exhaustion in old_reverse and waite_poles in old_reverse
+    assert "不够强" in old_reverse
+    assert reverse.startswith(old_reverse + "\n\n")
+    assert reverse.index(control) < reverse.index("没被引导的冲动")
+    assert reverse.index(exhaustion) < reverse.index("没被引导的冲动")
+    added_reverse = reverse[len(old_reverse):].strip()
+    for phrase in ("Pollack", "没被引导的冲动", "可能会妨碍行动", "105", "补充而不覆盖 Waite", "也不是诊断"):
+        assert phrase in added_reverse, phrase
+    for phrase in ("摧毁", "人格", "软弱", "失控", "诊断为", "病理", "威斯康提", "灵能", "现稿已"):
+        assert phrase not in added_reverse, phrase
+
+    for phrase in ("威斯康提", "赫克力斯", "尼米亚", "灵能", "皇后", "恶魔", "摧毁", "凯尔特", "纵轴", "横轴", "阴柔", "阳刚", "现稿已", "该页还没有", "金色黎明", "喀巴拉", "拙火", "对调", "并不真正相信", "潘朵拉", "伊卡洛斯", "意识人格", "印刷／PDF 100", "104", "/journal/tarot-magician?locale=zh#", "/journal/tarot-chariot?locale=zh#"):
+        assert phrase not in current["articleMarkdown"], phrase
+
+    assert current["sources"][:len(previous["sources"])] == previous["sources"], "Original Strength source receipts changed"
+    assert len(current["sources"]) == len(previous["sources"]) + 1
+    book = current["sources"][-1]
+    pages = [100, 101, 102, 103, 104, 105]
+    assert book["sourceId"] == "strength-pollack-2010"
+    assert book["type"] == "modern_author_interpretation" and book["url"] is None
+    assert book["checkedOn"] == "2026-11-12"
+    assert book["title"] == "瑞秋·波拉克《78度的智慧》，孙梅君译，商周出版，2010年12月初版；力量章，印刷／PDF 100–105"
+    assert book["edition"] == "Sun Meijun translation, 商周出版, December 2010 first edition; local user-provided scan"
+    metadata = book["sourceMetadata"]
+    assert set(metadata) == {"layer", "author", "translator", "publisher", "published", "section", "pdfPages", "printedPages", "localScanOnly", "viewpoint"}
+    assert metadata["author"] == "Rachel Pollack" and metadata["translator"] == "孙梅君"
+    assert metadata["publisher"] == "商周出版" and metadata["published"] == "2010-12"
+    assert metadata["section"] == "Strength" and metadata["localScanOnly"] is True
+    assert metadata["pdfPages"] == metadata["printedPages"] == pages
+    assert metadata["viewpoint"] == "Modern author interpretation, not a scientific fact or a universal historical meaning."
+    assert re.findall(r"印刷／PDF\s*100(?!–)", current["articleMarkdown"]) == []
+    for source in previous["sources"]:
+        if str(source.get("sourceId", "")).startswith("strength-waite"):
+            assert source["checkedOn"] == "2026-10-07"
+
+    md = previous["articleMarkdown"]
+    for section_id in ("section-01", "section-03", "section-04"):
+        old = next(section for section in previous["sections"] if section["id"] == section_id)
+        new = next(section for section in current["sections"] if section["id"] == section_id)
+        old_block = f"## {old['title']}\n\n{old['bodyMarkdown']}"
+        new_block = f"## {new['title']}\n\n{new['bodyMarkdown']}"
+        assert md.count(old_block) == 1
+        md = md.replace(old_block, new_block)
+    old_comparison = next(section for section in previous["sections"] if section["id"] == "depth-comparison")
+    comparison_block = f"## {old_comparison['title']}\n\n{old_comparison['bodyMarkdown']}"
+    sequence_block = f"## {added[0]['title']}\n\n{added[0]['bodyMarkdown']}"
+    assert md.count(comparison_block) == 1
+    md = md.replace(comparison_block, comparison_block + "\n\n" + sequence_block, 1)
+    assert current["articleMarkdown"] == md, "Strength Markdown changed outside the approved supplements"
+    assert current["articleMarkdown"].startswith(f"# {current['title']}\n\n")
+    for item in current["sections"]:
+        assert f"## {item['title']}\n\n{item['bodyMarkdown']}" in current["articleMarkdown"]
+    ids = [section["id"] for section in current["sections"]]
+    ids += current.get("legacyIntroAnchors", []) + current.get("legacyRelatedAnchors", [])
+    ids += [anchor for section in current["sections"] for anchor in section.get("legacyAnchors", [])]
+    appendix = current.get("sourceAppendix")
+    if appendix:
+        ids.append(appendix["id"])
+    assert "depth-sequence" in ids and len(ids) == len(set(ids)), "Duplicate Strength anchors"
+    assert set(previous_ids) <= set(ids)
+    manuscript = (STRENGTH_DIR / "manuscript-zh.md").read_text()
+    assert manuscript == current["articleMarkdown"].rstrip() + "\n"
+    revision = current["editorialRevision"]
+    assert revision["registry"] == "content/strength-update-20261112/revisions.json"
+    assert revision["updatedAt"] == "2026-11-12" and revision["scope"].strip()
+    assert revision["nativeHumanReviewClaimed"] is False
+    assert "expert-certification" in revision["scope"]
+    prior_date = depth["cards"]["strength"]["updatedAt"]
+    assert prior_date == "2026-10-08"
+    for unedited_locale in ("en", "zh-TW", "ru"):
+        unedited = ROOT / f"content/tarot/{unedited_locale}/strength.json"
+        assert sha(unedited.read_bytes()) == depth["editions"][f"{unedited_locale}/strength"]["recordSha256"], f"Unedited Strength file changed: {unedited_locale}"
+        unedited_article = read(unedited)
+        assert unedited_article["updatedAt"] == prior_date, f"Unedited Strength date changed: {unedited_locale}"
+        assert unedited_article["publishedAt"] == "2026-10-07"
+        assert "Pollack" not in unedited_article["articleMarkdown"]
+        assert "strength-pollack-2010" not in {source.get("sourceId") for source in unedited_article["sources"]}
+        assert all(section["id"] != "depth-sequence" for section in unedited_article["sections"])
+    base = registry["baseCommit"]
+    for frozen in ("content/tarot/zh/wheel.json", "content/tarot/zh/hermit.json", "content/tarot/zh/chariot.json", "content/tarot/zh/magician.json"):
+        live = (ROOT / frozen).read_bytes()
+        committed = subprocess.check_output(["git", "show", f"{base}:{frozen}"], cwd=ROOT)
+        assert live == committed, f"{frozen} differs from the starting commit"
+    try:
+        import jsonschema
+    except ImportError:
+        pass
+    else:
+        jsonschema.validate(current, read(ROOT / "content/tarot/article.schema.json"))
+    return current, previous
+
+
 def validate_hermit_pollack_record(path):
     """Validate the Chinese Pollack supplement and keep the 2026-10-08 Hermit receipt."""
     import subprocess
@@ -1543,7 +1758,9 @@ def validate_hermit_pollack_record(path):
     for phrase in ("业力", "佛陀", "转世", "报应", "喀巴拉", "爱默生", "梭罗", "尼采", "萨满", "圣杯", "三十五", "现稿已", "该页还没有", "是否已合", "必须隐居", "/journal/tarot-strength?locale=zh#depth-sequence", "/journal/tarot-wheel?locale=zh)"):
         assert phrase not in sequence, phrase
     strength = read(ROOT / "content/tarot/zh/strength.json")
-    assert all(section["id"] != "depth-sequence" for section in strength["sections"])
+    # hermit.json stays the 2026-11-11 file, so its Strength link still has no #depth-sequence.
+    # The Strength page now has that anchor; this receipt does not rewrite the Hermit file.
+    assert any(section["id"] == "depth-sequence" for section in strength["sections"])
     wheel = read(ROOT / "content/tarot/zh/wheel.json")
     assert any(section["id"] == "depth-sequence" for section in wheel["sections"])
 
@@ -1645,7 +1862,9 @@ def validate_hermit_pollack_record(path):
         assert "hermit-pollack-2010" not in {source.get("sourceId") for source in unedited_article["sources"]}
         assert all(section["id"] != "depth-sequence" for section in unedited_article["sections"])
     base = registry["baseCommit"]
-    for frozen in ("content/tarot/zh/wheel.json", "content/tarot/zh/justice.json", "content/tarot/zh/strength.json"):
+    # strength.json received its own 2026-11-12 supplement after this Hermit receipt.
+    # Wheel and Justice remain the files from the Hermit base. The Hermit article is not rewritten.
+    for frozen in ("content/tarot/zh/wheel.json", "content/tarot/zh/justice.json"):
         live = (ROOT / frozen).read_bytes()
         committed = subprocess.check_output(["git", "show", f"{base}:{frozen}"], cwd=ROOT)
         assert live == committed, f"{frozen} differs from the starting commit"
