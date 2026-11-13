@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-12T21:00:28.950Z",
+  "updatedAt": "2026-11-13T08:34:47.482Z",
   "sourceSummary": {
     "community": 1478,
-    "publicX": 616,
-    "total": 2094
+    "publicX": 617,
+    "total": 2095
   },
   "items": [
     {
@@ -8704,6 +8704,47 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🎬AI 영상 Seedance 2.5 프롬프트 잘 짜는 법 진짜 이거 하나면 AI 영상 초급자 졸업임...👩‍🎓 AI 챗 하나에 레퍼런스 조사부터 프롬프트 작성, 검수까지 전부 시키지 않는 게 포인트 협업·학습·검수 코드를 짜고 Codex 안에 작은 영상 제작팀을 만들어 운영하기 👇AI 영상 제작팀 구성 Tips (AI에 그대로 복붙해도 OK) 1. Codex를 키고 Video Prompt Creation 프로젝트를 만듬 2. 최상위 마스터 챗을 하나 만듬 3. 마스터 챗에게 역할분담 팀이 필요하다고 명령 - 마스터챗: 전체 작업 지휘·분배·결과 회수 - 레퍼런스 학습 A/B: 영상·프롬프트 분석 - 시나리오 연구: 인물·갈등·반전·결말 설계 - Seedance 생성 A/B/C: 실제 프롬프트 제작 - 실험실: 미검증 아이디어 테스트 4. 각 채팅은 독립적으로 일하지만 뇌는 공유 기억과 제작 기준은 같지만 역할마다 보는 관점과 개성은 다르게 유지함 지침, 레퍼런스, 실패 기록, 작업 장부를 공유함, 어느 채팅에서 요청해도 내부에서 분배·회수되게 연결 5. 완성본은 설계 승인 → 한·영 프롬프트 동기화 → 자동 검수 → 렌더 순서로 진행함 6. 중요 워크플로우를 Python 코드로 만들어 보조 + 강제함 7. 채팅의 기억을 대화창에만 두지 않고 프로젝트 폴더에 구조화해서 저장함 8. 렌더(결과물)가 실패하면 그냥 “별로다”로 끝내지 않음 프레임·컷·움직임·소리를 계측해서 원인을 기록하고, 그 교훈을 다시 모든 채팅의 공통 기억으로 돌려보내기"
+    },
+    {
+      "id": "x-public-2120283325369589876",
+      "title": "Claude animations are FCKING EXPLODING every video is made in 5 minutes with a single prompt and",
+      "description": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and ",
+      "prompt": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/BrunoF566/status/2120283325369589876",
+      "sourceType": "x",
+      "authorName": "Bruno",
+      "authorHandle": "@BrunoF566",
+      "createdAt": "2026-11-10T22:31:52.000Z",
+      "importedAt": "2026-11-13T08:34:47.447Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 161,
+        "reposts": 24,
+        "replies": 9,
+        "quotes": 0,
+        "bookmarks": 306,
+        "views": 14802,
+        "score": 1375
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise."
     },
     {
       "id": "x-public-2099896573828255982",
@@ -18233,7 +18274,7 @@
       "authorName": "Felicia",
       "authorHandle": "@heyliccia",
       "createdAt": "2026-11-06T10:33:25.000Z",
-      "importedAt": "2026-11-12T21:00:28.923Z",
+      "importedAt": "2026-11-13T08:34:47.447Z",
       "tags": [
         "Kling",
         "视频"
@@ -18259,7 +18300,7 @@
         "replies": 5,
         "quotes": 1,
         "bookmarks": 85,
-        "views": 6102,
+        "views": 6146,
         "score": 653
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
@@ -26027,7 +26068,7 @@
       "authorName": "降月@十師団物語",
       "authorHandle": "@ten_division_kz",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.108Z",
+      "importedAt": "2026-11-13T08:34:44.362Z",
       "tags": [
         "人像"
       ],
@@ -26068,7 +26109,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.108Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26111,7 +26152,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.108Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26154,7 +26195,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "人像"
       ],
@@ -26195,7 +26236,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像"
       ],
@@ -26236,7 +26277,7 @@
       "authorName": "大龙",
       "authorHandle": "@JackieLiu_13",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26277,7 +26318,7 @@
       "authorName": "Harry AI",
       "authorHandle": "@Tech_Harry1",
       "createdAt": "2026-11-07T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26321,7 +26362,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "人像",
         "摄影"
@@ -26363,7 +26404,7 @@
       "authorName": "Taaruk",
       "authorHandle": "@Taaruk_",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -26571,7 +26612,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "人像"
       ],
@@ -26855,7 +26896,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26898,7 +26939,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.363Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27142,7 +27183,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像",
         "摄影"
@@ -27184,7 +27225,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27265,7 +27306,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像"
       ],
@@ -27306,7 +27347,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27345,7 +27386,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像",
         "摄影"
@@ -27387,7 +27428,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27547,7 +27588,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27590,7 +27631,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像",
         "摄影"
@@ -27755,7 +27796,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27798,7 +27839,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27841,7 +27882,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27884,7 +27925,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.109Z",
+      "importedAt": "2026-11-13T08:34:44.364Z",
       "tags": [
         "人像"
       ],
@@ -87843,7 +87884,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.112Z",
+      "importedAt": "2026-11-13T08:34:44.369Z",
       "tags": [
         "产品",
         "平面设计",
@@ -87886,7 +87927,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.113Z",
+      "importedAt": "2026-11-13T08:34:44.369Z",
       "tags": [
         "平面设计"
       ],
@@ -87927,7 +87968,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-12T21:00:25.113Z",
+      "importedAt": "2026-11-13T08:34:44.369Z",
       "tags": [
         "平面设计"
       ],
