@@ -27,4 +27,8 @@
 
 ## 发布
 
-待内容提交、生产部署和正式域名验收后补充结果。发布成功不等于已被重新抓取、收录，或搜索流量增长。
+内容提交 `73d286d304aecaa4a6ec65c31a93d41bb1e26c70` 已正常推送 main。Vercel 生产部署 `dpl_FiE5ZLnwqwHQyLMCMYUKGkwXhaiy` 对应项目 `destinypixel`、分支 main 和该提交；GitHub 上的 Vercel 状态于 2026-11-13T03:02:57Z 显示 success。
+
+正式域名四语言 HTTP 检查全部通过：200、完整新版正文、title/H1、自指 canonical、四语言 hreflang/x-default、Article 原发布日期与新修订日期、sitemap lastmod 和工具链接。生产浏览器确认中文第 3 节六段新正文、四行对照表、官方来源链接、2026-11-13 修订日及正确 canonical。
+
+Vercel 列表和详情初次返回 building；GitHub 连接器响应较慢，改用 GitHub 公开 commit status 与正式域名内容交叉核验，随后终止已不需要的等待。没有重复部署或请求索引。上述验收证明新版已发布，不证明 Google 已重抓、收录，或排名、流量已增长。
