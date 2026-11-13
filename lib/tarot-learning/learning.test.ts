@@ -33,6 +33,7 @@ import twoPentaclesPlayRevision from "@/content/two-pentacles-play-20261110/revi
 import wheelRevision from "@/content/wheel-update-20261110/revisions.json";
 import hermitRevision from "@/content/hermit-update-20261111/revisions.json";
 import strengthRevision from "@/content/strength-update-20261112/revisions.json";
+import chariotRevision from "@/content/chariot-update-20261113/revisions.json";
 
 test("every real cast ID resolves to the complete correct-language article without aliases or fallback",async()=>{
  assert.deepEqual([...tarotLearningIds],tarotDeck.map(c=>c.id));
@@ -61,6 +62,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  const wheelRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=wheelRevision.records;
  const hermitRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=hermitRevision.records;
  const strengthRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=strengthRevision.records;
+ const chariotRecords:Record<string,{previousFileSha256:string;previousArticleMarkdownSha256:string;fileSha256:string;articleMarkdownSha256:string}>=chariotRevision.records;
  const depthRecords:Record<string,{recordSha256:string}>=depthManifest.editions;
  assert.deepEqual(Object.keys(queenRecords).sort(),journalLocales.map(locale=>`content/tarot/${locale}/queen-of-swords.json`).sort());
  assert.deepEqual(Object.keys(hangedManRecords).sort(),["en","zh"].map(locale=>`content/tarot/${locale}/hanged-man.json`));
@@ -83,6 +85,7 @@ test("every real cast ID resolves to the complete correct-language article witho
  assert.deepEqual(Object.keys(wheelRecords),["content/tarot/zh/wheel.json"]);
  assert.deepEqual(Object.keys(hermitRecords),["content/tarot/zh/hermit.json"]);
  assert.deepEqual(Object.keys(strengthRecords),["content/tarot/zh/strength.json"]);
+ assert.deepEqual(Object.keys(chariotRecords),["content/tarot/zh/chariot.json"]);
  assert.deepEqual(Object.keys(linkRecords).sort(),[...linkPaths].sort());
  const digest=(raw:string|Buffer)=>createHash("sha256").update(raw).digest("hex");
  for(const locale of journalLocales){
@@ -967,6 +970,67 @@ test("every real cast ID resolves to the complete correct-language article witho
     assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Strength edition gained the Pollack supplement`);
     assert.equal(article.updatedAt,priorDate);
     assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Strength edition changed`);
+   }
+   if(Object.hasOwn(chariotRecords,path)){
+    const record=chariotRecords[path],previousRaw=readFileSync(`content/chariot-update-20261113/previous/${path}`);
+    const previous=JSON.parse(previousRaw.toString()),current=JSON.parse(readFileSync(path,"utf8"));
+    assert.equal(digest(previousRaw),record.previousFileSha256);
+    assert.equal(digest(previous.articleMarkdown),approvedHash,`${path}: historical text approval changed`);
+    assert.equal(record.previousArticleMarkdownSha256,approvedHash);
+    assert.equal(digest(readFileSync(path)),record.fileSha256);
+    const changedFields=new Set(["sections","sources","articleMarkdown","updatedAt","editorialRevision"]);
+    for(const field of Object.keys(previous).filter(field=>!changedFields.has(field)))assert.deepEqual(current[field],previous[field],`${path}: retained ${field}`);
+    const previousIds=previous.sections.map((section:{id:string})=>section.id);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>previousIds.includes(section.id)).map((section:{id:string})=>section.id),previousIds,`${path}: original section order changed`);
+    assert.deepEqual(current.sections.filter((section:{id:string})=>!previousIds.includes(section.id)).map((section:{id:string;role:string;title:string})=>[section.id,section.role,section.title]),[["depth-sequence","comparison","为什么控制住了，还不等于已经化解"]]);
+    assert.equal(current.sections.findIndex((section:{id:string})=>section.id==="depth-sequence"),previous.sections.findIndex((section:{id:string})=>section.id==="depth-comparison")+1);
+    for(const sectionId of ["section-01","section-03","section-04"]){
+     const oldSection=previous.sections.find((section:{id:string})=>section.id===sectionId);
+     const newSection=current.sections.find((section:{id:string})=>section.id===sectionId);
+     assert.ok(newSection.bodyMarkdown.startsWith(oldSection.bodyMarkdown+"\n\n"));
+     const addedText=newSection.bodyMarkdown.slice(oldSection.bodyMarkdown.length).trim();
+     assert.equal(addedText.split("\n\n").length,1);
+    }
+    assert.deepEqual(current.sections.find((section:{id:string})=>section.id==="depth-comparison"),previous.sections.find((section:{id:string})=>section.id==="depth-comparison"));
+    assert.deepEqual(current.relatedCards,[]);
+    assert.equal(current.articleMarkdown.includes("岩石般"),true);
+    assert.equal(current.articleMarkdown.includes("集中的意志也可能变僵"),true);
+    assert.equal(current.articleMarkdown.includes("这里没有可见的缰绳"),true);
+    assert.equal(current.articleMarkdown.includes("为什么控制住了，还不等于已经化解"),true);
+    assert.equal(current.articleMarkdown.includes("向外的推进可以成功"),true);
+    assert.equal(current.articleMarkdown.includes("还没有被化解"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-strength?locale=zh#depth-sequence"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-magician?locale=zh"),true);
+    assert.equal(current.articleMarkdown.includes("/journal/tarot-magician?locale=zh#"),false);
+    assert.equal(current.articleMarkdown.includes("被压住的分歧"),true);
+    assert.equal(current.articleMarkdown.includes("不是保证会赢"),true);
+    assert.equal(current.articleMarkdown.includes("单凭意志未必够用"),true);
+    assert.equal(current.articleMarkdown.includes("换方法"),true);
+    assert.equal(current.articleMarkdown.includes("退一步"),true);
+    assert.equal(current.articleMarkdown.includes("边界仍可以守住"),true);
+    assert.equal(current.articleMarkdown.includes("查看反馈、补充资源和必要的休息"),true);
+    assert.equal(current.articleMarkdown.includes("先减速核对，而不是一律加大力气"),true);
+    assert.equal(current.articleMarkdown.includes("重新选择方向也属于掌控"),true);
+    assert.equal(current.articleMarkdown.includes("不会保证竞赛获胜"),true);
+    assert.equal(current.articleMarkdown.includes("交通事故"),true);
+    assert.equal(current.articleMarkdown.includes("被扯碎"),false);
+    assert.equal(current.articleMarkdown.includes("柏拉图"),false);
+    assert.equal(current.articleMarkdown.includes("俄狄浦斯"),false);
+    assert.equal(current.articleMarkdown.includes("对诸神让步"),false);
+    assert.equal(current.articleMarkdown.includes("现稿已"),false);
+    assert.deepEqual(current.sources.slice(0,previous.sources.length),previous.sources,`${path}: original source receipts changed`);
+    assert.equal(current.sources.length,previous.sources.length+1);
+    assert.equal(current.sources.at(-1).sourceId,"chariot-pollack-2010");
+    assert.equal(current.sources.at(-1).url,null);
+    assert.deepEqual(current.sources.at(-1).sourceMetadata.pdfPages,[90,91,92,93,94,95,96]);
+    assert.equal(current.updatedAt,"2026-11-13");
+    assert.equal(current.publishedAt,"2026-10-07");
+    approvedHash=record.articleMarkdownSha256;
+   }else if(id==="chariot"){
+    const priorDate=depthManifest.cards.chariot.updatedAt;
+    assert.equal(article.articleMarkdown.includes("Pollack"),false,`${path}: unedited Chariot edition gained the Pollack supplement`);
+    assert.equal(article.updatedAt,priorDate);
+    assert.equal(digest(readFileSync(path)),depthRecords[key].recordSha256,`${path}: unedited Chariot edition changed`);
    }
    assert.equal(digest(article.articleMarkdown),approvedHash,path);
    assert.equal(tarotLearningId(tarotLearningSlug(id)),id);
