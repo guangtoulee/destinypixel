@@ -1,5 +1,6 @@
 /** One-use, short-lived handoff inside this tab only, created on an explicit continue click. */
 export const birthDateHandoffKey = "destinypixel-birthday-handoff";
+export const birthDateHandoffEvent = "destinypixel-birthday-offered";
 export const birthDateDraftKey = "destinypixel-report-birthday-draft";
 const maxAge = 15 * 60 * 1000;
 type StorageAccess = Pick<Storage, "getItem" | "setItem" | "removeItem">;

@@ -22,7 +22,7 @@ test("translated landing pages keep their own canonical and translated search te
   const zh = makePageMetadata({ ...routeSeo.home, locale: "zh" });
   const ru = makePageMetadata({ ...routeSeo.tuteng, locale: "ru" });
   assert.equal(zh.alternates?.canonical, "/?locale=zh");
-  assert.match(JSON.stringify(zh.title), /六十日柱、求签、关系合盘与手串工坊/);
+  assert.match(JSON.stringify(zh.title), /六十日柱、塔罗、灵签、本命星盘与关系合盘/);
   assert.match(zh.description ?? "", /六十篇完整画像/);
   assert.equal(ru.alternates?.canonical, "/tuteng?locale=ru");
   assert.match(JSON.stringify(ru.title), /Тотем/);

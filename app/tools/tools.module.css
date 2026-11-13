@@ -1,4 +1,4 @@
-.page { min-height: 100vh; color: #202239; background: #fcfcff; }
+.page { position: relative; min-height: 100vh; overflow-x: clip; color: #241d31; background: radial-gradient(ellipse 65% 40% at 85% 8%, rgba(164, 134, 212, 0.14), transparent 60%), linear-gradient(180deg, #fcfaf5 0%, #f8f4ec 100%); }
 .page :global(a:focus-visible) { outline: 3px solid #7956c8; outline-offset: 5px; }
 .header { width: min(1180px, calc(100% - 64px)); margin: auto; min-height: 90px; display: flex; align-items: center; gap: 36px; border-bottom: 1px solid #e9e8ef; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 700; letter-spacing: -.7px; }
@@ -23,7 +23,7 @@
 .mapLabel { position: absolute; display: flex; gap: 10px; align-items: center; padding: 15px 18px; font-size: 12px; color: #625178; border: 1px solid #e9e3f2; background: #ffffffed; border-radius: 12px; box-shadow: 0 7px 24px #6a458108; white-space: nowrap; }
 .mapLabel[data-group="birth"] { top: 2px; left: 8%; }
 .mapLabel[data-group="insight"] { top: 110px; right: 0; }
-.mapLabel[data-group="elements"] { bottom: 0; left: 14%; }
+.mapLabel[data-group="relationships"] { bottom: 0; left: 14%; }
 .content { width: min(1180px, calc(100% - 64px)); margin: auto; padding-bottom: 76px; scroll-margin-top: 25px; }
 .groupNavigation { display: flex; flex-wrap: wrap; gap: 10px; border-top: 1px solid #e8e7ef; padding-top: 26px; margin-bottom: 57px; }
 .groupNavigation a { display: flex; gap: 10px; align-items: center; background: #fff; border: 1px solid #e9e7ef; border-radius: 30px; padding: 10px 16px; font-size: 12px; color: #5b596d; }

@@ -42,10 +42,11 @@ export default async function Home({
         "@type": "ReadAction",
         target: [
           absoluteUrl("/discover"),
-          absoluteUrl("/compatibility"),
-          absoluteUrl("/atelier"),
+          absoluteUrl("/tarot"),
+          absoluteUrl("/astrology"),
           absoluteUrl("/sticks"),
           absoluteUrl("/iching"),
+          absoluteUrl("/compatibility"),
         ],
       },
     },

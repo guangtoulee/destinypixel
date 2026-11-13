@@ -1,5 +1,5 @@
 "use client";
-import SectionNavigation from "./section-navigation";
+import { SiteFooterV2, SiteHeaderV2 } from "@/components/v2/site-chrome";
 
 import { useEffect, useRef, useState, useTransition, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
@@ -493,28 +493,36 @@ export default function SpiritualSticksExperience({
     }
   }
 
+  const languageBar = (
+    <div className={styles.v2LocaleGroup} aria-label="Language selector">
+      {reportLanguageOptions.map((option) => (
+        <a
+          key={option.value}
+          className={styles.languageLink}
+          href={`/sticks?locale=${option.value}&type=${selectedType}`}
+          aria-current={locale === option.value ? "page" : undefined}
+          aria-disabled={busy || undefined}
+          onClick={(event) => {
+            if (busy) {
+              event.preventDefault();
+              return;
+            }
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+            event.preventDefault();
+            window.localStorage.setItem("destinypixel-locale", option.value);
+            startLanguageChange(() => router.push(event.currentTarget.href, { scroll: false }));
+          }}
+        >
+          {option.value === "zh" ? "简体" : option.value === "zh-TW" ? "繁體" : option.value === "ru" ? "RU" : "EN"}
+        </a>
+      ))}
+    </div>
+  );
+
   return (
     <main className={styles.page} lang={journalLanguageTags[locale]} data-server-localized>
-      <header className="white-header stick-header">
-        <div className="white-container white-header__inner">
-          <a className="white-brand" href={`/?locale=${locale}`}><span aria-hidden="true" />DestinyPixel</a>
-          <a className="white-black-link" href={`/?locale=${locale}`}>{text.navHome}</a>
-          <div className="white-language" aria-label="Language selector">
-            <Languages size={14} aria-hidden="true" />
-            {reportLanguageOptions.map((option) => <a key={option.value} className={styles.languageLink} href={`/sticks?locale=${option.value}&type=${selectedType}`} aria-current={locale === option.value ? "page" : undefined} aria-disabled={busy || undefined} onClick={(event) => {
-              if (busy) { event.preventDefault(); return; }
-              if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
-              event.preventDefault();
-              window.localStorage.setItem("destinypixel-locale", option.value);
-              // Next navigation refreshes the translated server content and metadata,
-              // while this mounted tool keeps the question and the drawn sign in memory.
-              startLanguageChange(() => router.push(event.currentTarget.href, { scroll: false }));
-            }}>{option.value === "zh" ? "简" : option.value === "zh-TW" ? "繁" : option.value === "ru" ? "RU" : "EN"}</a>)}
-          </div>
-        </div>
-      </header>
+      <SiteHeaderV2 locale={locale} current="sticks" basePath="/sticks" languageSlot={languageBar} />
       <div className={styles.container}>
-        <SectionNavigation locale={locale} current="sticks"/>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>{text.heroEyebrow}</p>
           <h1>{text.heroTitle}</h1>
@@ -555,7 +563,7 @@ export default function SpiritualSticksExperience({
               {reading && <a className={styles.readLink} href="#oracle-reading">{ui.read}<ArrowRight size={14} aria-hidden="true" /></a>}
             </div>
           </div>
-          <details className={styles.lookup}>
+          <details className={styles.lookup} open>
             <summary>{text.lookupTitle} · {text.lookupAction}</summary>
             <form className={styles.lookupFields} onSubmit={(event) => { event.preventDefault(); lookupStick(); }}>
               <label><span>{text.lookupLabel} · 1–{selectedSystem.count}</span><input type="number" required step={1} min={1} max={selectedSystem.count} value={lookupNumber} disabled={busy} onChange={(event) => setLookupNumber(event.target.value)} /></label>
@@ -586,6 +594,7 @@ export default function SpiritualSticksExperience({
         </section>}
         {children}
       </div>
+      <SiteFooterV2 locale={locale} />
     </main>
   );
 }

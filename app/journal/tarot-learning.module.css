@@ -19,11 +19,18 @@
 /* Static, viewport-sized landscape: long articles never stretch or tile the artwork.
    An isolated background layer keeps the reading surfaces and sticky contents above it. */
 .page {
+  --tarot-chrome-glass: rgba(25, 18, 38, 0.82);
+  --tarot-chrome-shadow: 0 12px 34px rgba(10, 6, 18, 0.34);
   --tarot-chrome-text:#fff4ee;
   --tarot-chrome-muted:#e8dce9;
   --tarot-chrome-accent:#efcca5;
-  --tarot-chrome-line:#f4dfcd40;
-  --tarot-chrome-selected:#43324d;
+  --tarot-chrome-line:rgba(244, 223, 205, 0.24);
+  --tarot-chrome-pill-bg: rgba(255, 248, 240, 0.08);
+  --tarot-chrome-pill-hover: rgba(255, 248, 240, 0.16);
+  --tarot-chrome-pill-border: rgba(244, 223, 205, 0.22);
+  --tarot-chrome-lang-bg: rgba(15, 10, 24, 0.45);
+  --tarot-chrome-selected:#efcca5;
+  --tarot-chrome-selected-text:#1f162d;
   position:relative;
   isolation:isolate;
   background:#211b32;

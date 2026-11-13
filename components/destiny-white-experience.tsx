@@ -8,7 +8,7 @@ import { homeOfferCopy, type HomeReportOffer } from "@/lib/home-offer";
 import { toTraditional, journalLanguageTags } from "@/lib/journal-locales";
 import CardArtwork from "./card-artwork";
 import { birthFormFeedback } from "@/lib/birth-form-feedback";
-import { resumeBirthDate, updateBirthDateDraft, clearBirthDateDraft } from "@/lib/birth-date-handoff";
+import { birthDateHandoffEvent, resumeBirthDate, updateBirthDateDraft, clearBirthDateDraft } from "@/lib/birth-date-handoff";
 import { mobileFlowCopy } from "@/lib/mobile-flow-copy";
 import { HomeIntroduction, homeIntroductionCopy } from "./home-introduction";
 import { OracleHome } from "./oracle-sanctuary";
@@ -873,11 +873,16 @@ export default function DestinyWhiteExperience({
     }
     restoreBirthday();
     window.addEventListener("pageshow", restoreBirthday);
+    window.addEventListener(birthDateHandoffEvent, restoreBirthday);
     const now = new Date();
     if (birthDateInputRef.current) {
       birthDateInputRef.current.max = `${Math.min(now.getFullYear(), 2100)}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
     }
-    return () => { clearTimeout(expiryTimer); window.removeEventListener("pageshow", restoreBirthday); };
+    return () => {
+      clearTimeout(expiryTimer);
+      window.removeEventListener("pageshow", restoreBirthday);
+      window.removeEventListener(birthDateHandoffEvent, restoreBirthday);
+    };
   }, []);
 
   useEffect(() => {

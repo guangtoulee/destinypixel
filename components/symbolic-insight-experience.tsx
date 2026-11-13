@@ -1059,7 +1059,7 @@ export default function SymbolicInsightExperience({
   });
   const [oracle, setOracle] = useState({
     question: "",
-    questionTime: formatDateTimeLocal(new Date()),
+    questionTime: "",
     birthDate: "",
     birthTime: "",
     domain: "general" as ReadingDomain,
@@ -1085,6 +1085,12 @@ export default function SymbolicInsightExperience({
   }, [locale]);
 
   useEffect(() => {
+    setOracle((current) =>
+      current.questionTime
+        ? current
+        : { ...current, questionTime: formatDateTimeLocal(new Date()) },
+    );
+
     const storedLocale = normalizeReportLocale(
       window.localStorage.getItem("destinypixel-locale") ?? initialLocale,
     );

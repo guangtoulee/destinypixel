@@ -9,7 +9,7 @@ export const siteUrl =
 export const siteName = "DestinyPixel";
 
 export const defaultSeoDescription =
-  "Explore 60 Day Pillar portraits, Chinese fortune sticks, relationship compatibility and a five-element bracelet atelier. Choose your next step on DestinyPixel.";
+  "Explore 60 BaZi Day Pillar portraits, Mountain-Lake Tarot, Chinese fortune sticks, tropical birth charts, I Ching casting, and relationship compatibility on DestinyPixel.";
 
 export const seoKeywordClusters = [
   "birth chart reading",
@@ -78,16 +78,20 @@ export const seoKeywordClusters = [
 export const routeSeo = {
   home: {
     path: "/",
-    title: "DestinyPixel | Day Pillars, Fortune Sticks, Relationships & Bracelets",
+    title: "DestinyPixel | 60 Day Pillars, Tarot, Fortune Sticks, Birth Chart & Synastry",
     description: defaultSeoDescription,
     keywords: [
       "multidimensional birth map",
-      "birth energy map",
-      "Bazi astrology fusion",
-      "AI spiritual guidance",
-      "psychological astrology",
-      "命运地图",
-      "出生能量图",
+      "60 Day Pillars",
+      "Mountain-Lake Tarot",
+      "Chinese fortune sticks",
+      "tropical birth chart",
+      "Bazi astrology compatibility",
+      "六十日柱",
+      "山湖塔罗",
+      "求签问事",
+      "本命星盘",
+      "关系合盘",
     ],
   },
   learn: {
@@ -106,10 +110,19 @@ export const routeSeo = {
   },
   tools: {
     path: "/tools",
-    title: "DestinyPixel Tools | Birth Maps, Oracles & Crystal Bracelets",
+    title: "DestinyPixel Observatory | Birth Maps, Tarot, Fortune Sticks & Compatibility",
     description:
-      "Explore birth maps, Birth Totems, palm and face reflection, question oracles, temple sticks, and five-element crystal bracelet design.",
-    keywords: ["DestinyPixel tools", "birth chart tools", "Birth Totem", "temple sticks", "crystal bracelet design"],
+      "Explore 60 Day Pillar cards, natal birth charts, Birth Totems, Mountain-Lake Tarot, I Ching six-line casting, temple fortune sticks, and relationship compatibility.",
+    keywords: [
+      "DestinyPixel tools",
+      "birth chart tools",
+      "60 Day Pillars",
+      "Birth Totem",
+      "Tarot studio",
+      "I Ching casting",
+      "temple sticks",
+      "relationship compatibility",
+    ],
   },
   palm: {
     path: "/palm",
