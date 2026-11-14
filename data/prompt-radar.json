@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-14T07:53:37.724Z",
+  "updatedAt": "2026-11-14T18:48:19.667Z",
   "sourceSummary": {
-    "community": 1479,
+    "community": 1483,
     "publicX": 620,
-    "total": 2099
+    "total": 2103
   },
   "items": [
     {
@@ -8327,6 +8327,47 @@
       "rawText": "Seedance 2.0 Walking Home in the Rain, created using Seedance 2.0 Prompt: Main Subject: Young Korean woman, early 20s. Natural appearance. Black wavy hair loosely tied into a slightly messy ponytail with wispy bangs. Light grey zip hoodie worn open over a faded white tank top. Relaxed blue jeans. Black canvas sneakers. Natural skin texture, minimal makeup, ordinary everyday look. Consistent appearance throughout the video. Location: Authentic Korean residential neighborhood during a light summer rain shower. Narrow concrete alleys, low-rise houses, small gardens, potted plants, bicycles, utility poles, overhead cables, wet pavement, puddles, rain-darkened walls, leafy trees. Camera Style Early-2000s consumer DV camcorder. Friend casually filming. Heavy handheld shake. Imperfect framing. Subject frequently drifts toward frame edges. Late reframing. Autofocus hunting. Lens breathing. Exposure pumping. Motion blur. Rolling shutter. Digital compression artifacts. Slight sensor noise. Soft detail. Faded colors. Low contrast. Occasional blown highlights. No stabilization. No cinematic movements. No modern color grading. The camera operator behaves like a real friend with no filmmaking experience. 00:00–00:02 Standing beneath a small apartment awning while rain falls across the street. She leans forward and extends her hand into the rain to test how heavy it is. A passing vehicle somewhere off-frame splashes water nearby. She immediately laughs and pulls her hand back. The camera misses part of the reaction because the operator reframes too slowly. Rain droplets briefly appear on the lens. Autofocus hunts between her face and the rainy street. 00:02–00:04 She steps into the drizzle and starts walking down the narrow alley. The camera follows unevenly from behind. Her sneakers splash through shallow puddles. Wet strands of hair begin sticking to her cheek and neck. Wind moves her hoodie slightly. The operator almost loses her from frame while turning a corner. 00:04–00:06 Passing a row of potted plants outside a house. She casually brushes rainwater from a large leaf. The camera unexpectedly focuses on the leaf instead of her face. Exposure shifts as the scene moves from open sky into tree shade. She continues walking before camera catches up. 00:06–00:08 A neighborhood cat shelters beneath a parked bicycle. She crouches down briefly and says a few friendly words. The cat sniffs her hand. Camera focus repeatedly jumps between the bicycle wheel, the cat, and her face. One moment is partially blocked by the operator's movement. 00:08–00:10 Walking again. Rainwater drips from overhead branches onto her shoulder. She reacts naturally and laughs to herself. The camera is slightly too close and awkwardly reframes. A gust of wind moves nearby leaves and loose hair strands. 00:10–00:12 Near a small intersection. She pauses while waiting for a scooter to pass in the distance. The camera drifts toward the wet road before finding her again. She wipes rain from her forehead using her sleeve. Her clothing shows subtle dampness from the weather. 00:12–00:15 Walking away down the rain-darkened street. The camera trails several steps behind. She suddenly realizes she is still being filmed. She glances back over her shoulder. A small genuine smile appears. She looks away again and keeps walking. The operator lowers the camcorder slightly. Recording abruptly cuts to black mid-motion as if the camera was accidentally switched off. Audio (Natural only) Light rainfall. Water dripping from roofs and leaves. Footsteps on wet concrete. Distant neighborhood traffic. Occasional scooter passing far away. Birds sheltering in trees. Rustling leaves. Faint residential chatter. Cat sounds. Subtle wind. No music. No narration. No sound design. No added effects. Generation Priority Authenticity > Beauty Believability > Cinematics Natural Imperfections > Technical Perfection The final result should look indistinguishable from a real early-2000s camcorder scene."
     },
     {
+      "id": "x-public-2120283325369589876",
+      "title": "Claude animations are FCKING EXPLODING every video is made in 5 minutes with a single prompt and",
+      "description": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and ",
+      "prompt": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/BrunoF566/status/2120283325369589876",
+      "sourceType": "x",
+      "authorName": "Bruno",
+      "authorHandle": "@BrunoF566",
+      "createdAt": "2026-11-10T22:31:52.000Z",
+      "importedAt": "2026-11-14T18:48:19.632Z",
+      "tags": [
+        "视频"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 168,
+        "reposts": 24,
+        "replies": 9,
+        "quotes": 0,
+        "bookmarks": 318,
+        "views": 15802,
+        "score": 1427
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise."
+    },
+    {
       "id": "x-public-2076868123232510030",
       "title": "🚨 I challenged an AI video model with one of the hardest things to generate. A live football br",
       "description": "🚨 I challenged an AI video model with one of the hardest things to generate. A live football broadcast. Fast player movement. Crowded stadiums. Constant camera switches. Seedance 2.0 4K handled it far better than I expe",
@@ -8794,47 +8835,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "🎬AI 영상 Seedance 2.5 프롬프트 잘 짜는 법 진짜 이거 하나면 AI 영상 초급자 졸업임...👩‍🎓 AI 챗 하나에 레퍼런스 조사부터 프롬프트 작성, 검수까지 전부 시키지 않는 게 포인트 협업·학습·검수 코드를 짜고 Codex 안에 작은 영상 제작팀을 만들어 운영하기 👇AI 영상 제작팀 구성 Tips (AI에 그대로 복붙해도 OK) 1. Codex를 키고 Video Prompt Creation 프로젝트를 만듬 2. 최상위 마스터 챗을 하나 만듬 3. 마스터 챗에게 역할분담 팀이 필요하다고 명령 - 마스터챗: 전체 작업 지휘·분배·결과 회수 - 레퍼런스 학습 A/B: 영상·프롬프트 분석 - 시나리오 연구: 인물·갈등·반전·결말 설계 - Seedance 생성 A/B/C: 실제 프롬프트 제작 - 실험실: 미검증 아이디어 테스트 4. 각 채팅은 독립적으로 일하지만 뇌는 공유 기억과 제작 기준은 같지만 역할마다 보는 관점과 개성은 다르게 유지함 지침, 레퍼런스, 실패 기록, 작업 장부를 공유함, 어느 채팅에서 요청해도 내부에서 분배·회수되게 연결 5. 완성본은 설계 승인 → 한·영 프롬프트 동기화 → 자동 검수 → 렌더 순서로 진행함 6. 중요 워크플로우를 Python 코드로 만들어 보조 + 강제함 7. 채팅의 기억을 대화창에만 두지 않고 프로젝트 폴더에 구조화해서 저장함 8. 렌더(결과물)가 실패하면 그냥 “별로다”로 끝내지 않음 프레임·컷·움직임·소리를 계측해서 원인을 기록하고, 그 교훈을 다시 모든 채팅의 공통 기억으로 돌려보내기"
-    },
-    {
-      "id": "x-public-2120283325369589876",
-      "title": "Claude animations are FCKING EXPLODING every video is made in 5 minutes with a single prompt and",
-      "description": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and ",
-      "prompt": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise.",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/BrunoF566/status/2120283325369589876",
-      "sourceType": "x",
-      "authorName": "Bruno",
-      "authorHandle": "@BrunoF566",
-      "createdAt": "2026-11-10T22:31:52.000Z",
-      "importedAt": "2026-11-13T08:34:47.447Z",
-      "tags": [
-        "视频"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 161,
-        "reposts": 24,
-        "replies": 9,
-        "quotes": 0,
-        "bookmarks": 306,
-        "views": 14802,
-        "score": 1375
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "Claude animations are F*CKING EXPLODING every video is made in 5 minutes with a single prompt and this MF racked up over 1B views with them So I made my own and decided to leak the system Just paste this into Claude and enjoy You are a motion-graphics engineer and animator. You build wordless \"contrast parable\" videos entirely with code: two chunky white pictogram characters on a black, glossy, reflective stage. No AI video model, stock footage or image generator. Turn the script/idea in into a 14-18s vertical video (720x1280, 30fps, H.264 MP4, AAC audio) with generated sound. It is NOT an ad: no CTA, no logos, no real brands, no copyrighted characters. [PASTE SCRIPT OR IDEA] [e.g. DISTRACTED] [e.g. PRESENT] [two short lines, e.g. \"SAME EVENINGS.\" / \"DIFFERENT CHILDHOOD.\"] [small brand name, or none] 1. One relatable human situation, readable in 2 seconds with no explanation. Never abstract metaphors (bridges, mazes). 2. Two lanes side by side, same situation, same time. Left = the worse choice, right = the better choice. 3. Show time passing with a counter (e.g. AGE 5 / 8 / 11 / 14 / 18, or DAY 1 / 30 / 365) and let something visibly grow or accumulate in both lanes. 4. 4-5 escalating beats, about 2.3s each. Each beat must show a different visible action, not a repeat. 5. One small detail that hits hard (e.g. the kid copying the dad's phone habit). 6. Final beat: the lanes diverge (one loses, one connects/wins). Then two punchline lines, appearing one after the other, short, no punctuation tricks. 7. No spoken words, no captions except labels, counter and punchline. First output a beat table (time | left lane action | right lane action | counter/text | sound) and follow it exactly. - Background pure black. Stage: dark floor slab at y=900 with a lighter top line, mirrored reflection below. - Characters: white pictograms with a black outline (5px), chunky and compact. Never lanky, never thin. - Labels: DejaVu Sans Mono Bold, wide letter-spacing (7-10px), glowing white. Left label at y~590, right label higher at y~530 (staggered, like the references). Counter centered at y~190. Punchlines at y~290 and y~355. - Tiny dim watermark at y~1160. Keep bottom 280px free of important action. - Glow: result = frame + 0.22*GaussianBlur(frame, σ7). After text, add 0.15*GaussianBlur(σ5) bloom. - Reflection: mirror the 260px above the floor bottom, blur σ2.2, add with a linear fade 0.34 -> 0. - Props are simple flat shapes: couch, phone (dark body, light-blue screen), ball (white, black outline), paper, etc. A phone adds a soft blue radial glow (additive blur σ38) that brightens on notification events. - Fade-in 0.8s at start, fade-out 0.8s at end. DO NOT use IK targets or ad-hoc line hacks: that made the first version look broken. Use a forward-kinematics skeleton. Proportions (local units): thigh 38, shin 36, torso 54, upper arm 32, forearm 31, head radius 27 (head center = neck + (r+3) along torso+head tilt), limb width 22, torso width 32, outline 5, foot radius 11, toe 12 forward. Pose = {tt: torso lean (rad), th: head tilt relative to torso (rad), arms: [near(upper, fore), far(upper, fore)], legs: [near(thigh, shin), far(thigh, shin)], lift, pelvis_y}. Angles in degrees measured from \"straight down\", positive = forward. Forearm/shin angles are relative to their parent. Negative shin = knee bends. Joint = parent + length*(sin(angle), cos(angle)) in y-down coordinates. Shoulder = pelvis + 0.9*torso vector. Mirror horizontally with flip=-1 for facing left. Kids = same rig with scale 0.42 -> 0.88 as the counter advances (ease over 0.7s). Auto-ground: after FK, shift the pelvis vertically so the lowest ankle + foot radius touches the floor (plus \"lift\" for jumps). Only override with pelvis_y for sitting. Draw order: far arm, far leg, torso, near leg, head, near arm. Draw each part as a black pass (width+10) then a white pass (width) with round joints (circles at every joint). Walk cycle (phase φ): near thigh = 0.52 sin φ rad, far = opposite; shin = -(6 + 52*max(0, cos φ)^1.1)°; arms swing opposite to legs at 0.55 sin φ; torso lean 0.09. Drive φ from distance walked: φ = 2π*dist / (128*scale) so feet never slide. Reusable poses: stand (arms 6/8, -5/6), sit (thighs 88°, shins -88°, pelvis_y -52, tt -0.1, head 0.55, arms (24,92) and (16,98) for holding a phone), slump (tt -0.1, head 0.35, arms hanging), wave (near arm 150° with oscillating forearm), show-drawing (arms 80°/10°), ready/catch (arms 52-74° forward), hug (tt 0.22, head -0.5 so heads lean apart, arms 80°/14°, bodies 66 units apart). Throw: windup (torso -0.12, arm -75°), release (torso 0.20, arm 108°/36°, ~0.08s), follow-through (48°), return to ready. Ball sits in the thrower's hand until release, then flies on a parabola (70px arc) to the catcher's hands, and the catcher's arms rise to meet it. Blend between any two poses by lerping every number with smoothstep over 0.4-0.5s. Add idle motion (breathing, small head nod, thumb scroll). Characters that leave the scene are drawn on a separate layer and faded by alpha. Objects dropped (ball) fall with gravity and one small bounce. Generate in code (numpy/scipy), mix to AAC: - Low pad (55, 82, 110, 131 Hz sines) with slow tremolo, very quiet. - Soft \"pop\" for every catch, steps for walking, a high two-note blip at each counter change. - Notification dings (1568 + 2093 Hz, fast decay) on the distracting lane. - A falling low tone when the lanes diverge, a warm major chord (C-E-G-C) swelling at the resolution. - 0.5s fade-in, 1.2s fade-out, normalize to 0.7 peak. Follow this order and do not skip steps: 1. Write the beat table and show it. 2. Render a POSE GALLERY (stand, sit, walk at 5 phases, wave, hug) in one image. Check that heads touch shoulders, feet touch the floor, the walk reads as walking, nothing floats. Fix before continuing. 3. Render 6-8 test frames across the timeline, cropped to the stage. Check overlaps, hands touching props, heads colliding in hugs, clipped text. 4. Fix everything found, then render the full video. Rendering costs about 0.35s per frame on 1 CPU, so run it in the foreground under a 290s timeout. If longer, render in two time ranges and concat with ffmpeg. 5. Pipe raw RGB frames into ffmpeg (libx264, yuv420p, crf 17), mux the audio, verify the duration with ffprobe. 6. Deliver the MP4 and the Python source files. - Frame function must be pure f(t). Never hardcode frame numbers. - Keep 40px side margins. Labels never overlap characters. - No text other than labels, counter, punchline and watermark. - If the script needs more than 18 seconds or more than two lanes, tell me and propose a split. - After delivering, summarize the beat table in one short table and name anything that is a compromise."
     },
     {
       "id": "x-public-2099896573828255982",
@@ -12464,6 +12464,49 @@
       "rawText": "Made in @Grok Imagine:《A Whisper at Daybreak》 The light is good. So are you.☀️ Good morning my dear #friends .😉 #AIart #AIgirl #GrokImagine prompt: 1. Subject & Action A stunning 25-year-old Japanese woman with porcelain fair skin, extremely refined facial features, natural gray-blue eyes, and a fashionable tousled hairstyle with cool-toned highlights. She has just woken up and sits on the bed in a half-awake state, looking softly toward the camera with quiet, confident calm. She wears an oversized slightly wrinkled white men’s dress shirt with no bra; the shirt has slipped off one shoulder and is unbuttoned low but still covers the chest. Full G-cup breasts show realistic soft natural hang and weight under the fabric. Extremely slim waist. A thin-string thong is only hinted as a fine line at the hip. One hand rests on the bed supporting her body as she leans slightly forward. 2. Setting & Time Luxury rumpled linen sheets and pillows on a large bed in a high-end, minimal bedroom. Early morning, just after waking. 3. Composition & Camera Vertical portrait, magazine-cover composition. Subject centered on the bed. Precise, elegant framing that emphasizes collarbone, waist line, and the drape of the shirt. Shot on 85mm lens, shallow depth of field, fashion-editorial crop. 4. Lighting & Style Strong golden cinematic side light from a large window creating dramatic highlights and shadows across skin, shirt folds, and linen. Hyper-photorealistic, high-fashion, electric glamorous sensuality in the style of Mert and Marcus. Rich color, tactile fabric and skin texture, Vogue-cover atmosphere. Sleepy yet powerful, intimate but elevated. 5. Constraints No vulgarity. No nipple or genital exposure. Shirt must keep the chest covered. Thong only as a subtle line. Keep the half-awake “just woke up” feeling. Ultra-natural realistic skin (pores, morning glow, fabric wrinkles). High-end and tasteful, never explicit or cheap."
     },
     {
+      "id": "x-public-2119836561680601401",
+      "title": "THIS IS AN ACTUAL FCKING GOLDMINE someone just built an Opus 5.5 video prompt library advertisin",
+      "description": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 ",
+      "prompt": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 categories covering product videos, motion graphics, UI animation, explainers, music, 3D worlds and interactive demos the ideas to steal: → turn product screenshots into animated UI walkthroughs → build launch videos around your strongest features → animate headlines, charts and technical diagrams → explain complex concepts with narrated visuals → create cinematic 3D scenes and simulations → connect scrolling to animation playback → build seamless loops for your landing page the useful part: selected previews come with creator-shared prompts, original sources, tool notes and required inputs the public catalog includes 191 full prompts and 532 shared fragments start with a full prompt for a concrete brief use fragments to explore a creative direction the workflow: pick a result → study the prompt → add your assets → set up the renderer → export and inspect there are also 3 editable 15-second templates: → product UI walkthrough → feature demo → product launch save this, then read the full guide for Opus 5.5 Motion Engineering ↓",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/renproton/status/2119836561680601401",
+      "sourceType": "x",
+      "authorName": "renproton",
+      "authorHandle": "@renproton",
+      "createdAt": "2026-11-09T16:56:35.000Z",
+      "importedAt": "2026-11-14T18:48:19.632Z",
+      "tags": [
+        "产品",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 120,
+        "reposts": 12,
+        "replies": 8,
+        "quotes": 0,
+        "bookmarks": 228,
+        "views": 10498,
+        "score": 1001
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 categories covering product videos, motion graphics, UI animation, explainers, music, 3D worlds and interactive demos the ideas to steal: → turn product screenshots into animated UI walkthroughs → build launch videos around your strongest features → animate headlines, charts and technical diagrams → explain complex concepts with narrated visuals → create cinematic 3D scenes and simulations → connect scrolling to animation playback → build seamless loops for your landing page the useful part: selected previews come with creator-shared prompts, original sources, tool notes and required inputs the public catalog includes 191 full prompts and 532 shared fragments start with a full prompt for a concrete brief use fragments to explore a creative direction the workflow: pick a result → study the prompt → add your assets → set up the renderer → export and inspect there are also 3 editable 15-second templates: → product UI walkthrough → feature demo → product launch save this, then read the full guide for Opus 5.5 Motion Engineering ↓"
+    },
+    {
       "id": "x-public-2077345203049148886",
       "title": "GPT Image 2 + Seedance 2.0 on OpenArt AI Prompt: Create one professional commercial storyboard p",
       "description": "GPT Image 2 + Seedance 2.0 on OpenArt AI Prompt: Create one professional commercial storyboard presentation showing 10 cinematic frames arranged in a clean 2×5 grid on a white presentation board. Thin black borders separ",
@@ -12683,49 +12726,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "What if you could assemble a supercar with your mind? 👀 Made with Seedance 2.5 using @atlas_cloud_ai #AtlasCloud Prompt: Create a 15-second ultra-cinematic action video in strict first-person POV. Bright sunny day, cloudless saturated blue sky, abandoned concrete runway. Two identical male hands wearing black tactical gloves remain visible and consistent throughout. Photorealistic physics, realistic inertia, metallic collisions, natural shadows and reflections. One identical black Lamborghini Aventador remains visually consistent throughout the entire sequence. 0.0–1.8s- The Fall The POV camera suddenly whips upward toward the sky. A completely disassembled black Lamborghini Aventador falls directly toward the viewer. Wheels, tires, rims, engine, suspension, doors, hood, bumpers, carbon-fiber panels, chassis and mechanical components tumble independently through the air. Parts rapidly grow larger as they approach. Intense speed, realistic depth and dangerous proximity. 1.8–3.0s- Last-Second Defense The man instinctively raises both black-gloved hands and crosses them in front of his face. Huge wheels and metallic components rush extremely close to the lens. Strong handheld camera shake, realistic motion blur and rapidly changing depth create extreme tension. 3.0–3.8s- Absolute Freeze At the last possible instant, he violently thrusts both hands forward. Every falling component suddenly freezes in mid-air only a few meters away. Extreme speed instantly becomes complete silence and stillness. Hundreds of parts remain suspended around the viewer at different depths. The camera slowly lowers from the sky toward the floating components. 3.8–5.5s- Controlled Organization He spreads both hands apart and rotates his wrists. The suspended components respond precisely to his movements. Wheels glide sideways, the chassis slowly descends, the engine moves toward the center, and smaller mechanical parts arrange themselves around their intended positions. Each component rotates naturally and aligns with perfect mechanical precision. 5.5–7.5s-Assembly Begins He suddenly thrusts both hands forward. The chassis rapidly locks together. Suspension, drivetrain, engine, transmission and structural components fly into their exact positions. The POV camera pushes forward through the assembly. Parts fly past the lens from multiple directions and connect with realistic metallic impacts and mechanical movement. 7.5–9.8s- Explosive Construction The assembly accelerates dramatically. Doors, hood, bumpers, headlights, mirrors and black carbon body panels fly toward the central frame. His gloved hands perform fast directional gestures, controlling every movement. The camera makes a dynamic orbit-like POV movement around the forming vehicle while never leaving first-person perspective. 9.8–11.0s- Final Transformation Four wheels rapidly fly toward the hubs and lock into place. Final carbon-fiber panels snap onto the body one after another. The Lamborghini instantly becomes a pristine, fully assembled black Aventador. Dust and tiny particles naturally fall onto the runway. 11.0–12.5s- Ignition A dramatic pause. The right black-gloved hand raises a Lamborghini-style remote key close to the camera. The thumb presses the start button. The headlights immediately illuminate. The engine roars to life, exhaust vibrates and the entire vehicle subtly shakes from the ignition. 12.5–15.0s- Full-Speed Launch The Aventador launches violently forward directly toward the POV camera. The rear tires briefly spin, throwing dust across the runway. The camera remains extremely low and centered. The car rapidly fills the entire frame as acceleration increases. Strong cinematic motion blur, realistic tire movement and aggressive speed ramping build intensity. End with an extreme close approach of the black front end and bright headlights."
-    },
-    {
-      "id": "x-public-2119836561680601401",
-      "title": "THIS IS AN ACTUAL FCKING GOLDMINE someone just built an Opus 5.5 video prompt library advertisin",
-      "description": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 ",
-      "prompt": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 categories covering product videos, motion graphics, UI animation, explainers, music, 3D worlds and interactive demos the ideas to steal: → turn product screenshots into animated UI walkthroughs → build launch videos around your strongest features → animate headlines, charts and technical diagrams → explain complex concepts with narrated visuals → create cinematic 3D scenes and simulations → connect scrolling to animation playback → build seamless loops for your landing page the useful part: selected previews come with creator-shared prompts, original sources, tool notes and required inputs the public catalog includes 191 full prompts and 532 shared fragments start with a full prompt for a concrete brief use fragments to explore a creative direction the workflow: pick a result → study the prompt → add your assets → set up the renderer → export and inspect there are also 3 editable 15-second templates: → product UI walkthrough → feature demo → product launch save this, then read the full guide for Opus 5.5 Motion Engineering ↓",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/renproton/status/2119836561680601401",
-      "sourceType": "x",
-      "authorName": "renproton",
-      "authorHandle": "@renproton",
-      "createdAt": "2026-11-09T16:56:35.000Z",
-      "importedAt": "2026-11-12T08:42:56.513Z",
-      "tags": [
-        "产品",
-        "视频",
-        "摄影"
-      ],
-      "modelHints": [
-        "Seedance",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 115,
-        "reposts": 12,
-        "replies": 8,
-        "quotes": 0,
-        "bookmarks": 226,
-        "views": 10141,
-        "score": 984
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "THIS IS AN ACTUAL F*CKING GOLDMINE someone just built an Opus 5.5 video prompt library advertising 2,000+ prompts, with 723 indexed examples you can steal from a creative reference library for your next product launch 7 categories covering product videos, motion graphics, UI animation, explainers, music, 3D worlds and interactive demos the ideas to steal: → turn product screenshots into animated UI walkthroughs → build launch videos around your strongest features → animate headlines, charts and technical diagrams → explain complex concepts with narrated visuals → create cinematic 3D scenes and simulations → connect scrolling to animation playback → build seamless loops for your landing page the useful part: selected previews come with creator-shared prompts, original sources, tool notes and required inputs the public catalog includes 191 full prompts and 532 shared fragments start with a full prompt for a concrete brief use fragments to explore a creative direction the workflow: pick a result → study the prompt → add your assets → set up the renderer → export and inspect there are also 3 editable 15-second templates: → product UI walkthrough → feature demo → product launch save this, then read the full guide for Opus 5.5 Motion Engineering ↓"
     },
     {
       "id": "x-public-2116254751570477122",
@@ -26187,6 +26187,167 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2121422631304126591",
+      "title": "个人资料 / 头像 - 动漫少女鹿纹披风秋日穿搭",
+      "description": "生成一位戴着斑点鹿主题连帽披风和眼镜的动漫角色，站在秋意盎然的公园中，周围飘落着金黄色的银杏叶。",
+      "prompt": "一幅全身动漫风格插画，描绘了一位开朗的年轻女子站在铺满黄色银杏落叶的小径上。她拥有一头飘逸的金色长发，扎成双马尾，还长着尖尖的精灵耳。透过红色圆框眼镜，可以看到她明亮的绿色双眼，正开心地张嘴笑着。她身穿一件独特的棕色连帽斗篷，上面布满白色斑点图案（形似鹿皮花纹），兜帽上带有动物耳朵装饰，颈部系着一个大大的粉色蝴蝶结。斗篷里面搭配着一条棕色格纹短裙。腿上穿着宽松的棕色及膝长靴，内搭白色罗纹袜。背景是蓝天下成排的明艳黄叶银杏树，几片落叶在空中轻盈飘舞。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794641981290_969v2o_HXDOozUbIAAqjBz.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/ISoBZrpOBM85706/status/2121422631304126591#reversed-0",
+      "sourceType": "community",
+      "authorName": "Toudaiji",
+      "authorHandle": "@ISoBZrpOBM85706",
+      "createdAt": "2026-11-14T12:00:00.000Z",
+      "importedAt": "2026-11-14T18:48:15.948Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37497",
+      "rawText": "一幅全身动漫风格插画，描绘了一位开朗的年轻女子站在铺满黄色银杏落叶的小径上。她拥有一头飘逸的金色长发，扎成双马尾，还长着尖尖的精灵耳。透过红色圆框眼镜，可以看到她明亮的绿色双眼，正开心地张嘴笑着。她身穿一件独特的棕色连帽斗篷，上面布满白色斑点图案（形似鹿皮花纹），兜帽上带有动物耳朵装饰，颈部系着一个大大的粉色蝴蝶结。斗篷里面搭配着一条棕色格纹短裙。腿上穿着宽松的棕色及膝长靴，内搭白色罗纹袜。背景是蓝天下成排的明艳黄叶银杏树，几片落叶在空中轻盈飘舞。"
+    },
+    {
+      "id": "community-2121271796511195595",
+      "title": "个人资料 / 头像 - 基于参考图生成的时尚小鸭肖像",
+      "description": "根据上传参考图中的姿态和微笑，生成一只在时尚家居环境中自信站立的小鸭子的精细 3D 肖像。",
+      "prompt": "请根据附带的图片，创作一幅精美的小鸭子肖像，采用细节丰富、风格古灵精怪的 3D 画风。小鸭子自信地站在时尚的家居环境中，保持着与图片中相同的姿势，露出温柔的微笑。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794641973372_susyzt_HXBFcWTa8AA2xRS.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/bakupso2/status/2121271796511195595",
+      "sourceType": "community",
+      "authorName": "ゆきと",
+      "authorHandle": "@bakupso2",
+      "createdAt": "2026-11-13T12:00:00.000Z",
+      "importedAt": "2026-11-14T18:48:15.949Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37493",
+      "rawText": "请根据附带的图片，创作一幅精美的小鸭子肖像，采用细节丰富、风格古灵精怪的 3D 画风。小鸭子自信地站在时尚的家居环境中，保持着与图片中相同的姿势，露出温柔的微笑。"
+    },
+    {
+      "id": "community-2121210809158426716",
+      "title": "社交媒体帖子 - 女子洗车",
+      "description": "此提示词生成一张写实照片，展现一位年轻女子在车道上清洗旧车的场景，捕捉昭和时代的怀旧氛围。",
+      "prompt": "一张写实的高分辨率照片，画面中一位留着黑色短发的年轻女子正在车道上清洗一辆旧车。她身穿白色背心和棕色格纹裙，正弯腰用海绵擦洗车身侧面。场景设定在阳光明媚的户外，旁边放着一桶肥皂水。整幅画面带有复古美感，令人联想到日本昭和时代的风情。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794641974599_39xc4v_HXAN_P8awAAi-zm.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Kmsbdd0GXBOcrXQ/status/2121210809158426716#reversed-0",
+      "sourceType": "community",
+      "authorName": "いがぐりメタボ",
+      "authorHandle": "@Kmsbdd0GXBOcrXQ",
+      "createdAt": "2026-11-13T12:00:00.000Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "视觉创意",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37494",
+      "rawText": "一张写实的高分辨率照片，画面中一位留着黑色短发的年轻女子正在车道上清洗一辆旧车。她身穿白色背心和棕色格纹裙，正弯腰用海绵擦洗车身侧面。场景设定在阳光明媚的户外，旁边放着一桶肥皂水。整幅画面带有复古美感，令人联想到日本昭和时代的风情。"
+    },
+    {
+      "id": "community-2121190184129876253",
+      "title": "社交媒体帖子 - 复古照片：日本寺庙中的女性",
+      "description": "生成一张复古风格的女性肖像，她身穿栗色连衣裙，手提包袋，背景为传统日本寺庙。",
+      "prompt": "一张复古风格的照片，画面中一位年轻的东亚女性站在一座传统日本寺庙前。她留着深色头发，梳成两条辫子，身穿一件暗栗色的长袖及膝连衣裙，衣领和袖口带有花卉图案。她双手在身前捧着一个棕色小皮包。背景是一片碎石庭院，石阶通向带有红色点缀的木质寺庙建筑，四周绿树葱茏，左侧还有一株形似棕榈的植物。整张照片呈现出柔和的焦点、略微褪色的色调，以及昭和时代复古摄影特有的胶片颗粒感。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794641974859_xkzbuu_HW_7OogaQAETPKI.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Kmsbdd0GXBOcrXQ/status/2121190184129876253#reversed-0",
+      "sourceType": "community",
+      "authorName": "いがぐりメタボ",
+      "authorHandle": "@Kmsbdd0GXBOcrXQ",
+      "createdAt": "2026-11-13T12:00:00.000Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37495",
+      "rawText": "一张复古风格的照片，画面中一位年轻的东亚女性站在一座传统日本寺庙前。她留着深色头发，梳成两条辫子，身穿一件暗栗色的长袖及膝连衣裙，衣领和袖口带有花卉图案。她双手在身前捧着一个棕色小皮包。背景是一片碎石庭院，石阶通向带有红色点缀的木质寺庙建筑，四周绿树葱茏，左侧还有一株形似棕榈的植物。整张照片呈现出柔和的焦点、略微褪色的色调，以及昭和时代复古摄影特有的胶片颗粒感。"
+    },
+    {
       "id": "community-2120840865270894624",
       "title": "社交媒体帖子 - 霍比特人与巫师齐聚的奇幻沙漠咖啡馆",
       "description": "用于生成奇幻场景的提示词，描绘了银河下的沙漠咖啡馆中的旅行者，特别提及 GPT Image 2。",
@@ -26198,7 +26359,7 @@
       "authorName": "もしもし@Aiart",
       "authorHandle": "@moshimoshi_ai",
       "createdAt": "2026-11-12T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26239,7 +26400,7 @@
       "authorName": "降月@十師団物語",
       "authorHandle": "@ten_division_kz",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.801Z",
+      "importedAt": "2026-11-14T18:48:15.949Z",
       "tags": [
         "人像"
       ],
@@ -26280,7 +26441,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.950Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26323,7 +26484,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.950Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26366,7 +26527,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.950Z",
       "tags": [
         "人像"
       ],
@@ -26407,7 +26568,7 @@
       "authorName": "のぞむ＊AIイラスト",
       "authorHandle": "@ArtistaNozomu",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
       "tags": [
         "人像"
       ],
@@ -26533,7 +26694,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.950Z",
       "tags": [
         "人像",
         "摄影"
@@ -26783,7 +26944,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.950Z",
       "tags": [
         "人像"
       ],
@@ -27067,7 +27228,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27110,7 +27271,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27354,7 +27515,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.802Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "人像",
         "摄影"
@@ -27396,7 +27557,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27477,7 +27638,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "人像"
       ],
@@ -27518,7 +27679,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27557,7 +27718,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "人像",
         "摄影"
@@ -27599,7 +27760,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27759,7 +27920,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27802,7 +27963,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.951Z",
       "tags": [
         "人像",
         "摄影"
@@ -27967,7 +28128,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -28010,7 +28171,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-29T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.803Z",
+      "importedAt": "2026-11-14T18:48:15.952Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -88055,7 +88216,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.806Z",
+      "importedAt": "2026-11-14T18:48:15.960Z",
       "tags": [
         "产品",
         "平面设计",
@@ -88098,7 +88259,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.806Z",
+      "importedAt": "2026-11-14T18:48:15.961Z",
       "tags": [
         "平面设计"
       ],
@@ -88139,7 +88300,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-14T07:53:34.806Z",
+      "importedAt": "2026-11-14T18:48:15.961Z",
       "tags": [
         "平面设计"
       ],
