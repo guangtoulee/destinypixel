@@ -1,0 +1,741 @@
+{
+  "base": "783d4e4310b5a28cd2d7c57809a1a8cd6b3dda47",
+  "environment": {
+    "playwright": "1.62.1",
+    "axe": "4.12.1",
+    "node": "v24.19.0"
+  },
+  "browser": "151.0.7922.173",
+  "scope": {
+    "locales": [
+      "en",
+      "zh"
+    ],
+    "widths": [
+      1440,
+      390
+    ],
+    "heights": {
+      "390": 844,
+      "1440": 900
+    }
+  },
+  "motion": "no-preference",
+  "summary": {
+    "states": 56,
+    "functionalFailures": 0,
+    "scannerErrors": 0,
+    "violationRuleOccurrences": 0,
+    "incompleteRuleOccurrences": 67
+  },
+  "interactionChecksPassed": 60,
+  "incompleteNodeOccurrences": {
+    "color-contrast": 2294,
+    "video-caption": 3,
+    "link-in-text-block": 10
+  },
+  "network": {
+    "pageExceptions": 0,
+    "httpErrors": 0,
+    "blockedTelemetryRequests": 64
+  },
+  "build": "pass",
+  "standaloneTypes": "pass",
+  "unitTests": {
+    "exit": 1,
+    "totals": [
+      "ℹ tests 385",
+      "ℹ pass 379",
+      "ℹ fail 6",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "failures": [
+      "all 75 prior editions and their citations survive after removing only the second-batch additions",
+      "only 38 zh/en article pairs and their library receive new dates, with every baseline URL/date preserved",
+      "all 75 original translations survive the additive people content and all zh-TW/ru effective dates remain unchanged",
+      "the historical first-rollout projection still changes exactly 48 of its original 982 URL dates",
+      "the historical first birthday rollout still changes exactly 40 sitemap dates",
+      "the original 75 journal date receipt stays intact while current editions use their actual dates"
+    ],
+    "sameBaselineFailures": true
+  },
+  "lint": {
+    "root": "preexisting missing default ESLint9 config",
+    "scoped": "preexisting tarot-keepsake.tsx:201 react-hooks/set-state-in-effect remains; no new errors; experience refs error resolved",
+    "script": "pass"
+  },
+  "productionBehavior": "unverified; initial browser GET blocked before HTTP with ERR_TUNNEL_CONNECTION_FAILED",
+  "states": [
+    {
+      "id": "en-1440-no-preference-home-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 97
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-tarot-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 69
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-capsule-open",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 69
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-free-empty",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-free-draw-focused",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-free-drawn",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 54
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-free-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 55
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-free-all-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 56
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-meaning-0-8",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 6
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-art-9",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "id": "en-1440-no-preference-meaning-0-10",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 3
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-art-11",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "id": "en-1440-no-preference-reset-dismiss",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 56
+        }
+      ]
+    },
+    {
+      "id": "en-1440-no-preference-reset-accept",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 50
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-home-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 97
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-tarot-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 69
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-capsule-open",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 70
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-free-empty",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-free-draw-focused",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-free-drawn",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 54
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-free-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 55
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-free-all-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 56
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-meaning-0-22",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-art-23",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-meaning-0-24",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-art-25",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-reset-dismiss",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 56
+        }
+      ]
+    },
+    {
+      "id": "zh-1440-no-preference-reset-accept",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 50
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-home-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 95
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-tarot-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 62
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-capsule-open",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 63
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-free-empty",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 35
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-free-draw-focused",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 35
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-free-drawn",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 42
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-free-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 43
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-free-all-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-meaning-0-36",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 11
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-art-37",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-meaning-0-38",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 11
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-art-39",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-reset-dismiss",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "en-390-no-preference-reset-accept",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 42
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-home-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 95
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-tarot-initial",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 63
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-capsule-open",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 63
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-free-empty",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 36
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-free-draw-focused",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 36
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-free-drawn",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 43
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-free-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-free-all-revealed",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 45
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-meaning-0-50",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-art-51",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-meaning-0-52",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 7
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-art-53",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 8
+        },
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-reset-dismiss",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 44
+        }
+      ]
+    },
+    {
+      "id": "zh-390-no-preference-reset-accept",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 43
+        }
+      ]
+    }
+  ]
+}

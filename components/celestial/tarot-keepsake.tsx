@@ -676,6 +676,7 @@ export function TarotKeepsake({
       <button
         type="button"
         className="cel-button tarot-keepsake-trigger"
+        aria-label={kc.trigger}
         onClick={() => setOpen(true)}
       >
         <Bookmark size={15} />
