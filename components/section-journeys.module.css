@@ -1105,7 +1105,7 @@
 .artJournal small {
   font-size: 10px;
   letter-spacing: 0.16em;
-  color: #847796;
+  color: #6f617f;
 }
 
 .bentoContent {
@@ -1246,7 +1246,15 @@
 .reading {
   padding-top: 44px;
   padding-bottom: 44px;
-  color: #262033;
+  color: var(--section-reading-ink, #262033);
+}
+
+.reading h2 {
+  color: var(--section-reading-ink, #211a2e);
+}
+
+.reading .kicker {
+  color: var(--section-reading-accent, #845e22);
 }
 
 .readingIntro {
@@ -1256,7 +1264,7 @@
 .readingIntro > p:last-child {
   font-size: 14.5px;
   line-height: 1.8;
-  color: #5e546e;
+  color: var(--section-reading-muted, #5e546e);
 }
 
 .guideGrid {
@@ -1307,7 +1315,7 @@
   gap: 16px 20px;
   padding: 24px 0 8px;
   font-size: 13.5px;
-  color: #62428c;
+  color: var(--section-reading-link, #62428c);
 }
 
 .functionLinks {

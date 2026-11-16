@@ -3,10 +3,12 @@
 import dynamic from "next/dynamic";
 import {
   useEffect,
+  useId,
   useRef,
   useState,
   useSyncExternalStore,
   type CSSProperties,
+  type KeyboardEvent,
 } from "react";
 import {
   ArrowDown,
@@ -67,6 +69,8 @@ const SPREAD_PILL_ORDER: readonly SpreadId[] = [
   "choice",
   "celtic",
 ];
+const SPREAD_TAB_ORDER = [...SPREAD_PILL_ORDER, "free"] as const;
+type SpreadTabId = (typeof SPREAD_TAB_ORDER)[number];
 
 type CockpitExtraCopy = {
   questionCapsuleEmpty: string;
@@ -150,6 +154,9 @@ export default function TarotExperience({
 
   const [boardSize, setBoardSize] = useState({ width: 500, height: 350 });
   const [table, setTable] = useState<TableState>(() => initialTable());
+  const [focusedSpreadTab, setFocusedSpreadTab] = useState<SpreadTabId>("three");
+  const activeSpreadTab = table.mode === "free" ? "free" : table.spread;
+  const spreadTabsId = useId();
   const [mixes, setMixes] = useState(0);
   const [incoming, setIncoming] = useState<number | null>(null);
   const [recordSession, setRecordSession] = useState(0);
@@ -170,6 +177,9 @@ export default function TarotExperience({
   const workbench = useRef<HTMLDivElement>(null);
   const questionInput = useRef<HTMLInputElement>(null);
   const capsuleInput = useRef<HTMLInputElement>(null);
+  const capsulePill = useRef<HTMLButtonElement>(null);
+  const restoreCapsuleFocus = useRef(false);
+  const spreadTabRefs = useRef<Partial<Record<SpreadTabId, HTMLButtonElement | null>>>({});
   const suppressCardClick = useRef(false);
   const revealTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const drag = useRef<{
@@ -193,7 +203,21 @@ export default function TarotExperience({
   const lastMix = useRef(0);
 
   const round = useRef<ReturnType<typeof createTarotRoundTracker> | null>(null);
-  if (!round.current) round.current = createTarotRoundTracker();
+  if (round.current === null) round.current = createTarotRoundTracker();
+
+  useEffect(() => {
+    if (questionCapsuleOpen) {
+      capsuleInput.current?.focus();
+    } else if (restoreCapsuleFocus.current) {
+      restoreCapsuleFocus.current = false;
+      capsulePill.current?.focus();
+    }
+  }, [questionCapsuleOpen]);
+
+  function closeQuestionCapsule() {
+    restoreCapsuleFocus.current = true;
+    setQuestionCapsuleOpen(false);
+  }
 
   function clearRevealTimers() {
     revealTimers.current.forEach(clearTimeout);
@@ -243,7 +267,7 @@ export default function TarotExperience({
   }
 
   function reset(mode = table.mode, spread = table.spread) {
-    if (table.cards.length && !window.confirm(c.resetCheck)) return;
+    if (table.cards.length && !window.confirm(c.resetCheck)) return false;
     clearRevealTimers();
     invalidate();
     round.current!.reset();
@@ -256,6 +280,39 @@ export default function TarotExperience({
         workbench.current?.scrollIntoView({ block: "start", behavior: "instant" }),
       );
     }
+    return true;
+  }
+
+  function focusSpreadTab(id: SpreadTabId) {
+    setFocusedSpreadTab(id);
+    spreadTabRefs.current[id]?.focus();
+  }
+
+  function handleSpreadKeyDown(event: KeyboardEvent<HTMLButtonElement>, id: SpreadTabId) {
+    const index = SPREAD_TAB_ORDER.indexOf(id);
+    let next: SpreadTabId;
+    if (event.key === "ArrowRight") {
+      next = SPREAD_TAB_ORDER[(index + 1) % SPREAD_TAB_ORDER.length];
+    } else if (event.key === "ArrowLeft") {
+      next = SPREAD_TAB_ORDER[(index - 1 + SPREAD_TAB_ORDER.length) % SPREAD_TAB_ORDER.length];
+    } else if (event.key === "Home") {
+      next = SPREAD_TAB_ORDER[0];
+    } else if (event.key === "End") {
+      next = SPREAD_TAB_ORDER[SPREAD_TAB_ORDER.length - 1];
+    } else {
+      return;
+    }
+    event.preventDefault();
+    focusSpreadTab(next);
+  }
+
+  function activateSpreadTab(id: SpreadTabId) {
+    if (id === activeSpreadTab) {
+      focusSpreadTab(id);
+      return;
+    }
+    const changed = id === "free" ? reset("free", table.spread) : reset("spread", id);
+    focusSpreadTab(changed ? id : activeSpreadTab);
   }
 
   function slotAt(point?: DeckDropPoint) {
@@ -668,11 +725,11 @@ export default function TarotExperience({
         <div className={`tarot-question-capsule ${questionCapsuleOpen ? "is-open" : ""}`}>
           {!questionCapsuleOpen ? (
             <button
+              ref={capsulePill}
               type="button"
               className="tarot-question-capsule-pill"
               onClick={() => {
                 setQuestionCapsuleOpen(true);
-                requestAnimationFrame(() => capsuleInput.current?.focus());
               }}
             >
               {question.trim() ? (
@@ -705,14 +762,14 @@ export default function TarotExperience({
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === "Escape") {
                     e.preventDefault();
-                    setQuestionCapsuleOpen(false);
+                    closeQuestionCapsule();
                   }
                 }}
               />
               <button
                 type="button"
                 className="cel-button-soft tarot-capsule-done"
-                onClick={() => setQuestionCapsuleOpen(false)}
+                onClick={closeQuestionCapsule}
               >
                 <Check size={14} />
                 <span>{extra.questionCapsuleDone}</span>
@@ -723,35 +780,52 @@ export default function TarotExperience({
 
         {/* Direct Spread Selector Pill Bar + Inline Controls */}
         <div className="tarot-cockpit-bar" id="tarot-spreads">
-          <div className="tarot-spread-pills" role="tablist" aria-label={c.spreadLabel}>
+          <div
+            className="tarot-spread-pills"
+            role="tablist"
+            aria-label={c.spreadLabel}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setFocusedSpreadTab(activeSpreadTab);
+              }
+            }}
+          >
             {SPREAD_PILL_ORDER.map((id) => {
               const active = table.mode === "spread" && table.spread === id;
               return (
                 <button
                   key={id}
+                  ref={(element) => { spreadTabRefs.current[id] = element; }}
+                  id={`${spreadTabsId}-${id}`}
                   type="button"
                   role="tab"
+                  tabIndex={focusedSpreadTab === id ? 0 : -1}
                   disabled={!interactive}
                   aria-selected={active}
+                  aria-controls="tarot-board"
                   title={c.spreads[id]}
                   className={`tarot-spread-pill ${active ? "is-active" : ""}`}
-                  onClick={() => {
-                    if (!active) reset("spread", id);
-                  }}
+                  onFocus={() => setFocusedSpreadTab(id)}
+                  onKeyDown={(event) => handleSpreadKeyDown(event, id)}
+                  onClick={() => activateSpreadTab(id)}
                 >
                   {extra.spreadShort[id]}
                 </button>
               );
             })}
             <button
+              ref={(element) => { spreadTabRefs.current.free = element; }}
+              id={`${spreadTabsId}-free`}
               type="button"
               role="tab"
+              tabIndex={focusedSpreadTab === "free" ? 0 : -1}
               disabled={!interactive}
               aria-selected={table.mode === "free"}
+              aria-controls="tarot-board"
               className={`tarot-spread-pill ${table.mode === "free" ? "is-active" : ""}`}
-              onClick={() => {
-                if (table.mode !== "free") reset("free", table.spread);
-              }}
+              onFocus={() => setFocusedSpreadTab("free")}
+              onKeyDown={(event) => handleSpreadKeyDown(event, "free")}
+              onClick={() => activateSpreadTab("free")}
             >
               {c.freeMode}
             </button>
@@ -792,6 +866,8 @@ export default function TarotExperience({
               } as CSSProperties
             }
             id="tarot-board"
+            role="tabpanel"
+            aria-labelledby={`${spreadTabsId}-${activeSpreadTab}`}
           >
             <div className="tarot-table-ornament" aria-hidden="true">
               <span>✦</span>
@@ -952,6 +1028,7 @@ export default function TarotExperience({
                 <button
                   type="button"
                   className="cel-button tarot-reveal-all-btn"
+                  aria-label={extra.revealAll}
                   onClick={revealAll}
                 >
                   <Sparkles size={15} />
