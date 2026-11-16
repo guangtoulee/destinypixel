@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-16T08:23:45.192Z",
+  "updatedAt": "2026-11-16T22:58:51.873Z",
   "sourceSummary": {
-    "community": 1487,
-    "publicX": 623,
-    "total": 2110
+    "community": 1491,
+    "publicX": 625,
+    "total": 2116
   },
   "items": [
     {
@@ -18527,6 +18527,51 @@
       "rawText": "THIS IS F**KING AMAZING. Kids’ YouTube channels like NuNu TV are pulling millions of views, with estimated monthly earnings ranging from $62.9K to $250K. And AI is making it easier than ever to create similar content. Here’s the 4-step workflow: Search YouTube for successful kids’ animation channels and study their most popular videos. Check estimated earnings using tools like vidIQ and Social Blade. Use ChatGPT to create prompts for original, colourful 3D cartoon animations. Generate your clips in Picsart AI Playground using Kling V3 Turbo in vertical 9:16 format. The interesting part? One prompt can generate a complete cartoon clip using around 25 credits. No camera, animation team or voice actors needed. Study what toddlers enjoy watching, create your own characters and stories, then test a new clip every day. There’s a huge opportunity in faceless kids’ content, and AI is lowering the barrier to entry. Save this for later."
     },
     {
+      "id": "x-public-2121573869613879703",
+      "title": "Don't use Claude until you read this: (then send it to your entire team) first, switch this on .",
+      "description": "Don't use Claude until you read this: (then send it to your entire team) > first, switch this on (nothing works without it) > settings → capabilities → \"Create and edit files\" > on Enterprise? your admin has to turn each",
+      "prompt": "Don't use Claude until you read this: (then send it to your entire team) > first, switch this on (nothing works without it) > settings → capabilities → \"Create and edit files\" > on Enterprise? your admin has to turn each tool > Go to organization settings → then artifacts > on Free plan: you still get Docs, Slides & Design > everything you make gets stored in the Artifacts tab (left sidebar) CLAUDE MOTION (the animated video one) > never let Claude invent your facts. Instead > attach the report, your logo, your screenshots > add this line to every prompt: \"One idea per scene. Max 8 words on screen.\" > if it's for Reels? ask for vertical, 1080 × 1920 > the music is muted by default. click the speaker > To have it more polished. open it in Adobe, Descript or Runway CLAUDE DATA (it was called Dashboards) > it needs a live connection to your data > if you want only a CSV, use Claude Sheets instead > start with this prompt: \"I need to decide [the decision]. Put the 3 numbers that matter most at the top, each compared with last month. Then show me why: break them down by [channel / team / region]. Tell me every assumption you made.\" > then change it by asking: \"Add a filter for region.\" > your data team can certify a query > the chart then gets a \"certified\" badge CLAUDE SHEETS > every cell gets outlined, in case Claude corrects it > for wrong edit? click on version history to restore > limit: 100,000 cells per sheet. no pivot tables > read-only on your phone > a sheet can't feed a dashboard (yet) CLAUDE WHITEBOARDS > drag a box around one area > ask about that part > Claude only reads what's on the board, not apps > so paste your context on the board first > \"follow\" a teammate to see what they see > when done, send it to Miro or export a PNG CLAUDE MEETINGS > owner: organization settings → products → Claude Meetings > auto-join: settings → capabilities → Meetings > pick \"all meetings\" or \"all except one-on-ones\" > to not interrupt, type your ask in the Meet chat > it keeps the transcript, not the audio > notes & transcripts are free during the beta > a week later, ask in any chat: \"what did we decide about pricing?\" BONUS: chain them > on a whiteboard: \"turn this board into a deck\" > in Data: ask for a short narrated video of your dashboard > and Claude Design closes on December 14 > move your projects into the Artifacts tab before that I could tell you how hard Claude is. Very hard. I could tell you that you are behind. Very behind. I could tell you that Claude is full of secrets & mysteries. Only I have the answers. But I don't. I respect your time. You are a busy professional. AI is getting easier with time. Not harder. You just need to know how to start properly. Like a bike with wheels. And if you don't know where to start, I have good news for you. I am fixing these two in my free newsletter:",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/rubenhassid/status/2121573869613879703",
+      "sourceType": "x",
+      "authorName": "Ruben Hassid",
+      "authorHandle": "@rubenhassid",
+      "createdAt": "2026-11-14T12:00:02.000Z",
+      "importedAt": "2026-11-16T22:58:51.837Z",
+      "tags": [
+        "Runway",
+        "产品",
+        "视频",
+        "平面设计"
+      ],
+      "modelHints": [
+        "Runway",
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 81,
+        "reposts": 8,
+        "replies": 19,
+        "quotes": 0,
+        "bookmarks": 141,
+        "views": 7498,
+        "score": 651
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "Don't use Claude until you read this: (then send it to your entire team) > first, switch this on (nothing works without it) > settings → capabilities → \"Create and edit files\" > on Enterprise? your admin has to turn each tool > Go to organization settings → then artifacts > on Free plan: you still get Docs, Slides & Design > everything you make gets stored in the Artifacts tab (left sidebar) CLAUDE MOTION (the animated video one) > never let Claude invent your facts. Instead > attach the report, your logo, your screenshots > add this line to every prompt: \"One idea per scene. Max 8 words on screen.\" > if it's for Reels? ask for vertical, 1080 × 1920 > the music is muted by default. click the speaker > To have it more polished. open it in Adobe, Descript or Runway CLAUDE DATA (it was called Dashboards) > it needs a live connection to your data > if you want only a CSV, use Claude Sheets instead > start with this prompt: \"I need to decide [the decision]. Put the 3 numbers that matter most at the top, each compared with last month. Then show me why: break them down by [channel / team / region]. Tell me every assumption you made.\" > then change it by asking: \"Add a filter for region.\" > your data team can certify a query > the chart then gets a \"certified\" badge CLAUDE SHEETS > every cell gets outlined, in case Claude corrects it > for wrong edit? click on version history to restore > limit: 100,000 cells per sheet. no pivot tables > read-only on your phone > a sheet can't feed a dashboard (yet) CLAUDE WHITEBOARDS > drag a box around one area > ask about that part > Claude only reads what's on the board, not apps > so paste your context on the board first > \"follow\" a teammate to see what they see > when done, send it to Miro or export a PNG CLAUDE MEETINGS > owner: organization settings → products → Claude Meetings > auto-join: settings → capabilities → Meetings > pick \"all meetings\" or \"all except one-on-ones\" > to not interrupt, type your ask in the Meet chat > it keeps the transcript, not the audio > notes & transcripts are free during the beta > a week later, ask in any chat: \"what did we decide about pricing?\" BONUS: chain them > on a whiteboard: \"turn this board into a deck\" > in Data: ask for a short narrated video of your dashboard > and Claude Design closes on December 14 > move your projects into the Artifacts tab before that I could tell you how hard Claude is. Very hard. I could tell you that you are behind. Very behind. I could tell you that Claude is full of secrets & mysteries. Only I have the answers. But I don't. I respect your time. You are a busy professional. AI is getting easier with time. Not harder. You just need to know how to start properly. Like a bike with wheels. And if you don't know where to start, I have good news for you. I am fixing these two in my free newsletter:"
+    },
+    {
       "id": "x-public-2082452602877296734",
       "title": "A FILM PRODUCER BLOCKED ME MID-CONVERSATION OVER THIS SEEDANCE 2.0 CLIP I posted it privately in",
       "description": "A FILM PRODUCER BLOCKED ME MID-CONVERSATION OVER THIS SEEDANCE 2.0 CLIP I posted it privately in a group chat. He DM’d one question: “How much did this cost?” I told him the truth. Nothing. One person. Fifteen seconds. A",
@@ -21532,6 +21577,53 @@
       "rawText": "YOU HAVE BEEN TRAINED TO TRUST A PHOTO YOUR OWN EYES CAN NO LONGER VERIFY That queso smash on the sign outside? It was never plated, never cooked, never real. It was generated by a prompt, approved by a manager who thought nobody would notice. > menu boards, delivery apps, and social platforms are increasingly running AI-generated food photography instead of real shots - Forkable, a US catering platform, quietly swapped real restaurant photos for AI images across its entire site without telling the restaurants themselves > McDonald's Netherlands pulled a fully AI-generated Christmas ad within days of backlash, proof that even a billion-dollar brand can't out-market the moment customers spot the uncanny gloss of a synthetic image > under the FTC's \"reasonable consumer standard,\" AI food imagery can legally count as false advertising the moment it materially changes what someone expected to receive - a disclaimer buried in fine print doesn't erase that > the deception now runs both directions: some customers use AI-edited photos of \"raw\" or \"moldy\" food to fraud their way into refunds, forcing DoorDash and other platforms to build detection systems just to catch fabricated evidence > researchers call this a live regulatory blind spot - almost no jurisdiction has updated food fraud law to cover AI-generated imagery, meaning there is currently very little legal deterrent for either the restaurant or the customer How to actually spot it before you order: > look for unnaturally perfect symmetry - real melted cheese pulls unevenly, AI cheese pulls in a suspiciously smooth arc > check the shadows - AI food photos often have lighting that doesn't match the direction of any visible light source > zoom in on garnish and texture - AI still struggles with fine details like sesame seed placement, herb sprigs, or steam > search the exact dish name plus the restaurant on Reddit or Instagram - real customer photos will contradict the marketing fast You were taught to trust your eyes at the counter. Now the eyes need training too."
     },
     {
+      "id": "x-public-2120135989486063888",
+      "title": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSA",
+      "description": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off",
+      "prompt": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off into a glowing blue water chute → Skyscrapers and street lights ripping past on both sides → Full scream mid-drop: “This is insane!” → Lands hard in a rooftop pool No face. No clothes from the waist down. Just speed, water, and the city falling away underneath. The slide holds weight, the water looks wet, the scream hits at the right moment, and the city has real depth instead of looking like a wallpaper. A shot like this used to need a closed set and a stunt team. These first-person drop ai-clips are quietly stacking numbers right now. One clear action, one satisfying landing, easy to watch on mute. The accounts that stay in this lane (clean thrill, same POV, no extra chaos) keep getting the views and pretty serious money. You can make versions of this with Grok Bot + Picsart: Shot Planner writes the exact sequence and locks the POV (legs only, no face). Look Keeper generates the starting frame and slide references in Picsart (GPT Image or Flux). You approve them before anything else. Credit Controller quotes the cost, then generates the drop with Seedance 2.5 or Kling using the locked references. Nothing renders until you confirm. Assembler cuts the sequence, adds the scream and water sound, and checks it against your last 25–30 clips. Quality Killer kills anything that feels templated. One brief, locked POV, cost check before spend. No crew. Below is the full setup with the agent stack and prompts What would you drop her down next?",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/EugBass/status/2120135989486063888",
+      "sourceType": "x",
+      "authorName": "EugBass",
+      "authorHandle": "@EugBass",
+      "createdAt": "2026-11-10T12:46:24.000Z",
+      "importedAt": "2026-11-16T22:58:51.834Z",
+      "tags": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "Kling"
+      ],
+      "modelHints": [
+        "GPT Image 2",
+        "Grok Imagine",
+        "Seedance",
+        "Kling",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 139,
+        "reposts": 3,
+        "replies": 39,
+        "quotes": 0,
+        "bookmarks": 47,
+        "views": 5160,
+        "score": 480
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off into a glowing blue water chute → Skyscrapers and street lights ripping past on both sides → Full scream mid-drop: “This is insane!” → Lands hard in a rooftop pool No face. No clothes from the waist down. Just speed, water, and the city falling away underneath. The slide holds weight, the water looks wet, the scream hits at the right moment, and the city has real depth instead of looking like a wallpaper. A shot like this used to need a closed set and a stunt team. These first-person drop ai-clips are quietly stacking numbers right now. One clear action, one satisfying landing, easy to watch on mute. The accounts that stay in this lane (clean thrill, same POV, no extra chaos) keep getting the views and pretty serious money. You can make versions of this with Grok Bot + Picsart: Shot Planner writes the exact sequence and locks the POV (legs only, no face). Look Keeper generates the starting frame and slide references in Picsart (GPT Image or Flux). You approve them before anything else. Credit Controller quotes the cost, then generates the drop with Seedance 2.5 or Kling using the locked references. Nothing renders until you confirm. Assembler cuts the sequence, adds the scream and water sound, and checks it against your last 25–30 clips. Quality Killer kills anything that feels templated. One brief, locked POV, cost check before spend. No crew. Below is the full setup with the agent stack and prompts What would you drop her down next?"
+    },
+    {
       "id": "x-public-2095559375028900064",
       "title": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus mag",
       "description": "EVERYONE SAYS AI CANNOT UNDERSTAND PHYSICAL TRANSFORMATION i asked Seedance 2.5 for a circus magician pulling a red cloth that turns into a staircase. one sentence. hit generate. went to walk the dog. 00:00 – a magician ",
@@ -21657,53 +21749,6 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "AI shorts video, mixed media vibe. You can easily mix different kind of medium using Seedance 2.0 in just one prompt. Create a single character in Midjourney, no character sheets. Prompt scene by scene the camera moves and character actions. Introduce your new medium . Watercolor appearance, comic onomatopoeia, anime tornadoes… And tadaaa! 90’s vibe ☺️"
-    },
-    {
-      "id": "x-public-2120135989486063888",
-      "title": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSA",
-      "description": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off",
-      "prompt": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off into a glowing blue water chute → Skyscrapers and street lights ripping past on both sides → Full scream mid-drop: “This is insane!” → Lands hard in a rooftop pool No face. No clothes from the waist down. Just speed, water, and the city falling away underneath. The slide holds weight, the water looks wet, the scream hits at the right moment, and the city has real depth instead of looking like a wallpaper. A shot like this used to need a closed set and a stunt team. These first-person drop ai-clips are quietly stacking numbers right now. One clear action, one satisfying landing, easy to watch on mute. The accounts that stay in this lane (clean thrill, same POV, no extra chaos) keep getting the views and pretty serious money. You can make versions of this with Grok Bot + Picsart: Shot Planner writes the exact sequence and locks the POV (legs only, no face). Look Keeper generates the starting frame and slide references in Picsart (GPT Image or Flux). You approve them before anything else. Credit Controller quotes the cost, then generates the drop with Seedance 2.5 or Kling using the locked references. Nothing renders until you confirm. Assembler cuts the sequence, adds the scream and water sound, and checks it against your last 25–30 clips. Quality Killer kills anything that feels templated. One brief, locked POV, cost check before spend. No crew. Below is the full setup with the agent stack and prompts What would you drop her down next?",
-      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
-      "sourceUrl": "https://x.com/EugBass/status/2120135989486063888",
-      "sourceType": "x",
-      "authorName": "EugBass",
-      "authorHandle": "@EugBass",
-      "createdAt": "2026-11-10T12:46:24.000Z",
-      "importedAt": "2026-11-16T08:23:45.158Z",
-      "tags": [
-        "GPT Image 2",
-        "Grok Imagine",
-        "Seedance",
-        "Kling"
-      ],
-      "modelHints": [
-        "GPT Image 2",
-        "Grok Imagine",
-        "Seedance",
-        "Kling",
-        "Veo"
-      ],
-      "style": "实时 AI 视频案例",
-      "lighting": "查看原帖媒体与作者说明",
-      "camera": "按原帖镜头流程执行",
-      "palette": "查看原帖媒体",
-      "mood": "公开社区实时讨论",
-      "composition": "查看原帖媒体与工作流",
-      "aspectRatio": "auto",
-      "language": "en",
-      "contentType": "video",
-      "category": "视频叙事",
-      "metrics": {
-        "likes": 138,
-        "reposts": 2,
-        "replies": 39,
-        "quotes": 0,
-        "bookmarks": 45,
-        "views": 5009,
-        "score": 468
-      },
-      "complianceNote": "Discovered through public social search; original X author and post linked.",
-      "rawText": "HER NAKED LEGS SLIDE DOWN A GLASS WATER SLIDE 50 STORIES ABOVE THE CITY. SHE YELLS “THIS IS INSANE”. 15M VIEWS. 1.5M LIKES → just her legs at the edge of a transparent platform high over a night megacity → She pushes off into a glowing blue water chute → Skyscrapers and street lights ripping past on both sides → Full scream mid-drop: “This is insane!” → Lands hard in a rooftop pool No face. No clothes from the waist down. Just speed, water, and the city falling away underneath. The slide holds weight, the water looks wet, the scream hits at the right moment, and the city has real depth instead of looking like a wallpaper. A shot like this used to need a closed set and a stunt team. These first-person drop ai-clips are quietly stacking numbers right now. One clear action, one satisfying landing, easy to watch on mute. The accounts that stay in this lane (clean thrill, same POV, no extra chaos) keep getting the views and pretty serious money. You can make versions of this with Grok Bot + Picsart: Shot Planner writes the exact sequence and locks the POV (legs only, no face). Look Keeper generates the starting frame and slide references in Picsart (GPT Image or Flux). You approve them before anything else. Credit Controller quotes the cost, then generates the drop with Seedance 2.5 or Kling using the locked references. Nothing renders until you confirm. Assembler cuts the sequence, adds the scream and water sound, and checks it against your last 25–30 clips. Quality Killer kills anything that feels templated. One brief, locked POV, cost check before spend. No crew. Below is the full setup with the agent stack and prompts What would you drop her down next?"
     },
     {
       "id": "x-public-2097972827991298162",
@@ -23500,6 +23545,49 @@
       },
       "complianceNote": "Discovered through public social search; original X author and post linked.",
       "rawText": "Meta just launched its 1st image model after Mark Zuckerberg’s AI shake-up. Muse Image is Meta Superintelligence Labs' first image generator after Muse Spark. They said the model will power new editing features in Meta’s Instagram photo app and be added to its marketer tools for creating platform ads. Meta had relied on Midjourney and Black Forest Labs for generation inside Meta AI. Muse Image brings that layer in-house, so Meta controls quality, cost, and product timing. Consumers get free access through Meta AI, WhatsApp chats, and Instagram Stories. Power users need Meta One or another monthly plan when free limits run out. Users can start from prompts, add photos, annotate edits, or sketch changes directly. Meta says it can erase photobombers, create QR codes, and keep visual text readable. Advertisers get variants through Advantage+ creative, with edits, style swaps, and brand-matched versions. Meta says internal tests trail GPT Image 2 but beat Nano Banana 2 on editing. This is another move in Meta's effort in trying to convert AI infrastructure spending into revenue beyond social ads."
+    },
+    {
+      "id": "x-public-2119818328172552530",
+      "title": "We feared ai would take our jobs, nobody said it would take our husbands. Created by Seedance 2.",
+      "description": "We feared ai would take our jobs, nobody said it would take our husbands. Created by Seedance 2.5 on @makeugc Prompt:👇 FORMAT 25-second photorealistic live-action comedy, vertical 9:16, real-time speed, one continuous u",
+      "prompt": "We feared ai would take our jobs, nobody said it would take our husbands. Created by Seedance 2.5 on @makeugc Prompt:👇 FORMAT 25-second photorealistic live-action comedy, vertical 9:16, real-time speed, one continuous uncut take. Shot on a consumer MiniDV tape camcorder by an unseen exhibition guest who happened to be filming. Authentic early-2000s camcorder look: slightly soft optics, mild chromatic fringing on bright edges, light video noise in shadows, gentle highlight clipping on spotlights, slightly drifting warm auto white balance, faint interlaced texture on fast pans, at most two brief tape dropout lines, never during the compliment, slaps or kiss. Under the camcorder texture the scene is fully real: real people, skin, fabrics and metal. No timestamp, REC icon or any text overlay. REFERENCE Image #1 is the identity, body and wardrobe reference for the adult female humanoid robot only. It is not the opening frame. Do not copy its background, floor, crowd, lanyards or booth. Preserve exactly: her face with soft features, dark expressive eyes, defined brows, subtle natural makeup, small closed-lip smile; long straight dark brown, almost black, hair with a center part, falling past the shoulders in front; small stud earrings; slim adult build with long legs. Wardrobe: cropped fitted teal-blue short-sleeved crew-neck T-shirt ending above the waist; high-waisted fitted black cycling shorts ending mid-thigh, with a thick black elastic waistband; black lace-up running sneakers with small light sole details. Exposed mechanical waist between shirt hem and waistband, matching the reference: vertical silver cylindrical actuators with visible coil springs and threaded collars on both sides, a central rectangular silver support block with a small blue-and-white label (no legible text), short piston rods and fasteners at the bottom, dark internal gaps, all seated into the black waistband ring. Her upper body is always mechanically connected to her pelvis through this assembly. Never replace it with skin, armor, a glowing core or a floating torso. Same scale and construction from every angle. CAMERA OPERATOR STYLE The operator and camcorder never appear on screen or in any reflection. Filmed at chest-to-eye height by an amateur starting three to four meters away, moving closer during the action. Constant natural micro-shake, breathing sway, small walking bounce. Imperfect framing: subjects drift off-center, horizon tilts a few degrees, heads briefly cut off at the top before the operator corrects. Slow autofocus that hunts, locks on a background display, then pulls late onto faces. Clumsy stepped zooms with slight overshoot. Exposure visibly auto-adjusts between bright displays and darker areas. These imperfections never hide key actions. The compliment, both slap contacts, the kiss and the exit always remain visible and readable. CHARACTERS Robot: clearly adult, matches the reference. Calm, self-possessed, precise. Natural expression, subtle eye movement, believable balance, a small warm smile that barely changes. She never explains herself. Human-level speed and force with clean mechanical stops, no wobble. Man: handsome adult, early thirties, only moderately taller than the robot, so she can reach his lips on her toes while he lowers his head slightly. Athletic, anatomically credible build, broad shoulders, strong arms. Fitted ivory dress shirt, sleeves rolled above the elbows, top two buttons open, tailored charcoal trousers, dark dress shoes, no jacket. Holds a nearly full champagne glass in his right hand. Goes from confident, to flattered, to shocked, to completely lost. Wife: beautiful adult woman, early thirties, elegant fitted deep burgundy evening gown with a tasteful low neckline, natural proportions, refined jewelry, evening hair and makeup. Stands on his left, holding his left arm. Her reactions carry the comedy. A real person, no mugging. Goes from polite interest, to suspicion, to shock, to cold silent judgment. LOCATION AND BLOCKING Evening VIP opening of a robotics exhibition in a modern convention hall. Glass display cases, brushed-metal booth frames, warm overhead light with cool blue exhibit accents, polished stone floor reflecting lights, guests in evening and smart-casual clothes holding drinks. Background graphics blurred and unreadable. The couple stands beside a display case, wife on the man's left holding his left arm, his right side open, open floor around them, a clear aisle past his right side. The robot approaches from his right and stops in front of him, slightly toward his right. Positions stay consistent. Main encounter camera position: slightly to the man's right-front. Robot in left foreground in three-quarter profile, man in the center, wife on the right, slightly farther back. All three faces readable; the wife is never hidden. TIMELINE 00:00-00:03 | FOUND FOOTAGE START The take begins mid-recording. The operator follows the robot as an exhibit curiosity while she walks along the aisle. Medium-full framing with her face, exposed waist and upper legs. Arms swing naturally, sneakers take weight, waist actuators compress and extend subtly with each step. Focus hunts onto a glass case, then pulls back onto her. 00:03-00:06 | SHE CHOOSES HIM Her eyes move first, then her head turns slightly right. Her gaze rests on the man, briefly takes in his build, settles on his face. She changes direction toward him with one clean pivot step. The surprised operator swings to follow, overshoots, and makes a stepped zoom out revealing the couple a few steps away. The man smiles, sipping champagne. His wife looks at the display, holding his left arm. 00:06-00:09 | APPROACH AND COMPLIMENT The robot takes two or three measured steps to his right side and stops at conversation distance, both feet settled. The operator steps closer, frame bobbing, then reframes the three-shot. The man turns toward her, pleased. The wife glances at the robot's exposed waist, then up at her face, still holding his arm. At about 00:07.3 the robot looks into his eyes and says warmly, in natural English: \"You're really cute.\" Line ends by 00:08.6. 00:09-00:11 | THE FLATTERED BEAT The man straightens, shoulders widen, a proud smile spreads. He glances sideways at his wife as if to say \"see?\", breathes in and opens his mouth to answer, but says nothing. The wife's polite smile fades, her eyes narrow. Autofocus pulls late onto her face. 00:11-00:13.5 | ONE SLAP The robot gives exactly one open-handed slap with her right hand to his left cheek: short visible backswing, compact sideways swing, single palm contact, hand moving away and lowering to her side. Physically possible path, never through his nose or jaw. Human-level force. His head turns briefly toward his own right, shoulders follow, one small balancing step, he stays upright. Champagne splashes onto the floor, leaving a small wet spot that stays for the rest of the take; he keeps the glass. No fall, blood or injury. The wife flinches, releases his arm, steps half a pace back, right hand rising and freezing mid-air as if to intervene. One nearby adult guest with a drink turns toward the sound and keeps watching for the rest of the take. Other guests continue normally. The operator flinches: frame jolts, tilts, briefly cuts off the top of the man's head, then corrects. The contact stays in frame. The man brings his face back toward the robot, eyes wide, smile gone. Recovery completes before the next action. 00:13.5-00:16.5 | THE KISS Only then the robot takes one small step closer and places her left palm lightly on his right shoulder for balance, without pulling him. She rises onto the balls of her feet; he instinctively lowers his chin a little. One brief closed-mouth kiss, about one second. Noses pass naturally with a slight head tilt. Believable lip contact, no facial merging, stable identities. His free left hand lifts slightly and freezes in the air. The glass tilts but does not spill again. He does not embrace her. The wife's raised hand drifts to her chest in disbelief, expression turning from alarm to stunned indignation. The operator makes a clumsy fast zoom in, overshoots into a tight misframed shot, then zooms back out to the three-shot. The robot ends the kiss, lowers her heels, removes her hand and takes one small step back. His frozen left hand drops to his side. 00:16.5-00:19 | THE CALM EXIT Hands at her sides, the robot gives a tiny satisfied smile, pivots toward the open aisle on his right and walks away unhurried. Feet push off the floor, hips and shoulders follow, hair and shirt move with slight inertia, waist actuators articulate in coordinated motion. The torn operator pans after her for about one second, image smearing, then whips back to the couple, landing off-center. The robot keeps walking away in the background and never returns. 00:19-00:21.5 | HIS QUESTION The man touches his reddened left cheek with his left hand, still looking after the robot, and says in baffled, conversational English, not shouted: \"What the hell just happened?\" Spoken approximately 00:19.3-00:20.9. He lowers his hand and turns his head and shoulders left to face his wife, as if expecting an explanation. The operator takes a quick step left, frame bouncing, so the man and wife are seen in near profile facing each other and his face stays readable. 00:21.5-00:23.5 | THE SECOND SLAP The wife lowers her hand from her chest and meets his eyes with a still, icy stare. She takes a half step toward him and, silently, gives exactly one open-handed slap with her right hand to the same left cheek, now facing her. Short visible backswing, single contact on his bare cheek, hand lowers. Human-level force. His head turns slightly right again, one small balancing step, still standing, glass still in his right hand. She turns and walks out of frame to the right with controlled dignity, gown moving with real fabric weight. 00:23.5-00:25 | TAPE ENDS The man stands alone, left hand rising to his cheek again, staring blankly. The camera shakes from the operator's suppressed laughter, frame tilting, autofocus hunting. The unseen operator whispers in English, voice trembling with laughter: \"No way.\" At exactly 00:25 the recording stops abruptly, as if the record button was pressed. No fade, title or black hold. IMAGE High real-world detail under the camcorder texture: skin pores, fine facial hair, natural variation, no airbrushing. Individual hair strands, no synthetic shine. His shirt stretches and creases over his shoulders. The robot's teal shirt and black shorts show real knit texture. The gown has visible fabric weight and consistent folds. Champagne behaves physically. Mechanical waist in brushed silver with springs, collars, fasteners, occlusion shadows and reflections matching the hall lights. Motivated lighting: warm overhead pools, cool display accents, real floor reflections, grounded shadows. Natural motion blur. AUDIO Camcorder onboard microphone: slightly compressed, close sounds louder, distant sounds muffled, light handling noise. Room tone of soft conversations, footsteps on stone, low equipment hum, faint glass clinks. Subtle servo whirs from the robot's waist when she moves, quieter than voices. First slap: one sharp real palm-on-cheek crack with a small hall echo, synced to contact, champagne patters on the floor, nearby conversations stop for a moment. Kiss: only a faint natural sound. Second slap: an equally real crack, a nearby guest gasps quietly. Operator: a quick sharp inhale at the first slap, suppressed laughter and the whisper at the end. Only three spoken lines, English, precise lip sync: robot \"You're really cute.\", man \"What the hell just happened?\", off-screen operator \"No way.\" The wife says nothing. No music, narration, laugh track, captions or subtitles. Underplayed, realistic performances; the comedy comes from timing and reactions. CONTINUITY Fixed order: compliment, one robot slap, one kiss, robot exits, man's line, one wife slap, tape ends. Each action finishes before the next starts. Handedness: robot's right hand slaps his left cheek; robot's left hand on his right shoulder for the kiss; man touches his left cheek with his left hand and lowers it before the second slap; wife's right hand slaps his left cheek. Glass stays in his right hand; the level drops only once; the wet spot remains. The wife never takes his arm again. The robot never returns. The man never falls. Consistent identities, wardrobe, jewelry, lighting, booth layout and background guests. NEGATIVE CONSTRAINTS No cuts, replays, slow motion or speed ramps. No cartoon look, plastic skin, waxy faces, exaggerated muscles or morphing. No extra limbs, fused fingers, sliding feet, objects passing through bodies, teleporting people or disappearing glass. No mannequin-like poses held for many seconds. No glowing eyes, holograms, sci-fi UI, text overlays or legible label text. No visible camera, operator, phone or reflection of the filmer. No copying of the reference photo's crowd, black polo shirts, lanyards or concrete floor. No comic sound effects or bass hits. No modern ultra-sharp smartphone look, no gimbal smoothness. Do not explain the robot's behavior.",
+      "negativePrompt": "保留原作者方法与归属；复刻时避免水印、低清、畸变、主体漂移和无关文字。",
+      "sourceUrl": "https://x.com/Mavern_0x/status/2119818328172552530",
+      "sourceType": "x",
+      "authorName": "Mavern",
+      "authorHandle": "@Mavern_0x",
+      "createdAt": "2026-11-09T15:44:08.000Z",
+      "importedAt": "2026-11-16T22:58:51.838Z",
+      "tags": [
+        "Seedance",
+        "视频",
+        "摄影"
+      ],
+      "modelHints": [
+        "Seedance",
+        "Veo"
+      ],
+      "style": "实时 AI 视频案例",
+      "lighting": "查看原帖媒体与作者说明",
+      "camera": "按原帖镜头流程执行",
+      "palette": "查看原帖媒体",
+      "mood": "公开社区实时讨论",
+      "composition": "查看原帖媒体与工作流",
+      "aspectRatio": "auto",
+      "language": "en",
+      "contentType": "video",
+      "category": "视频叙事",
+      "metrics": {
+        "likes": 59,
+        "reposts": 9,
+        "replies": 13,
+        "quotes": 2,
+        "bookmarks": 32,
+        "views": 18160,
+        "score": 305
+      },
+      "complianceNote": "Discovered through public social search; original X author and post linked.",
+      "rawText": "We feared ai would take our jobs, nobody said it would take our husbands. Created by Seedance 2.5 on @makeugc Prompt:👇 FORMAT 25-second photorealistic live-action comedy, vertical 9:16, real-time speed, one continuous uncut take. Shot on a consumer MiniDV tape camcorder by an unseen exhibition guest who happened to be filming. Authentic early-2000s camcorder look: slightly soft optics, mild chromatic fringing on bright edges, light video noise in shadows, gentle highlight clipping on spotlights, slightly drifting warm auto white balance, faint interlaced texture on fast pans, at most two brief tape dropout lines, never during the compliment, slaps or kiss. Under the camcorder texture the scene is fully real: real people, skin, fabrics and metal. No timestamp, REC icon or any text overlay. REFERENCE Image #1 is the identity, body and wardrobe reference for the adult female humanoid robot only. It is not the opening frame. Do not copy its background, floor, crowd, lanyards or booth. Preserve exactly: her face with soft features, dark expressive eyes, defined brows, subtle natural makeup, small closed-lip smile; long straight dark brown, almost black, hair with a center part, falling past the shoulders in front; small stud earrings; slim adult build with long legs. Wardrobe: cropped fitted teal-blue short-sleeved crew-neck T-shirt ending above the waist; high-waisted fitted black cycling shorts ending mid-thigh, with a thick black elastic waistband; black lace-up running sneakers with small light sole details. Exposed mechanical waist between shirt hem and waistband, matching the reference: vertical silver cylindrical actuators with visible coil springs and threaded collars on both sides, a central rectangular silver support block with a small blue-and-white label (no legible text), short piston rods and fasteners at the bottom, dark internal gaps, all seated into the black waistband ring. Her upper body is always mechanically connected to her pelvis through this assembly. Never replace it with skin, armor, a glowing core or a floating torso. Same scale and construction from every angle. CAMERA OPERATOR STYLE The operator and camcorder never appear on screen or in any reflection. Filmed at chest-to-eye height by an amateur starting three to four meters away, moving closer during the action. Constant natural micro-shake, breathing sway, small walking bounce. Imperfect framing: subjects drift off-center, horizon tilts a few degrees, heads briefly cut off at the top before the operator corrects. Slow autofocus that hunts, locks on a background display, then pulls late onto faces. Clumsy stepped zooms with slight overshoot. Exposure visibly auto-adjusts between bright displays and darker areas. These imperfections never hide key actions. The compliment, both slap contacts, the kiss and the exit always remain visible and readable. CHARACTERS Robot: clearly adult, matches the reference. Calm, self-possessed, precise. Natural expression, subtle eye movement, believable balance, a small warm smile that barely changes. She never explains herself. Human-level speed and force with clean mechanical stops, no wobble. Man: handsome adult, early thirties, only moderately taller than the robot, so she can reach his lips on her toes while he lowers his head slightly. Athletic, anatomically credible build, broad shoulders, strong arms. Fitted ivory dress shirt, sleeves rolled above the elbows, top two buttons open, tailored charcoal trousers, dark dress shoes, no jacket. Holds a nearly full champagne glass in his right hand. Goes from confident, to flattered, to shocked, to completely lost. Wife: beautiful adult woman, early thirties, elegant fitted deep burgundy evening gown with a tasteful low neckline, natural proportions, refined jewelry, evening hair and makeup. Stands on his left, holding his left arm. Her reactions carry the comedy. A real person, no mugging. Goes from polite interest, to suspicion, to shock, to cold silent judgment. LOCATION AND BLOCKING Evening VIP opening of a robotics exhibition in a modern convention hall. Glass display cases, brushed-metal booth frames, warm overhead light with cool blue exhibit accents, polished stone floor reflecting lights, guests in evening and smart-casual clothes holding drinks. Background graphics blurred and unreadable. The couple stands beside a display case, wife on the man's left holding his left arm, his right side open, open floor around them, a clear aisle past his right side. The robot approaches from his right and stops in front of him, slightly toward his right. Positions stay consistent. Main encounter camera position: slightly to the man's right-front. Robot in left foreground in three-quarter profile, man in the center, wife on the right, slightly farther back. All three faces readable; the wife is never hidden. TIMELINE 00:00-00:03 | FOUND FOOTAGE START The take begins mid-recording. The operator follows the robot as an exhibit curiosity while she walks along the aisle. Medium-full framing with her face, exposed waist and upper legs. Arms swing naturally, sneakers take weight, waist actuators compress and extend subtly with each step. Focus hunts onto a glass case, then pulls back onto her. 00:03-00:06 | SHE CHOOSES HIM Her eyes move first, then her head turns slightly right. Her gaze rests on the man, briefly takes in his build, settles on his face. She changes direction toward him with one clean pivot step. The surprised operator swings to follow, overshoots, and makes a stepped zoom out revealing the couple a few steps away. The man smiles, sipping champagne. His wife looks at the display, holding his left arm. 00:06-00:09 | APPROACH AND COMPLIMENT The robot takes two or three measured steps to his right side and stops at conversation distance, both feet settled. The operator steps closer, frame bobbing, then reframes the three-shot. The man turns toward her, pleased. The wife glances at the robot's exposed waist, then up at her face, still holding his arm. At about 00:07.3 the robot looks into his eyes and says warmly, in natural English: \"You're really cute.\" Line ends by 00:08.6. 00:09-00:11 | THE FLATTERED BEAT The man straightens, shoulders widen, a proud smile spreads. He glances sideways at his wife as if to say \"see?\", breathes in and opens his mouth to answer, but says nothing. The wife's polite smile fades, her eyes narrow. Autofocus pulls late onto her face. 00:11-00:13.5 | ONE SLAP The robot gives exactly one open-handed slap with her right hand to his left cheek: short visible backswing, compact sideways swing, single palm contact, hand moving away and lowering to her side. Physically possible path, never through his nose or jaw. Human-level force. His head turns briefly toward his own right, shoulders follow, one small balancing step, he stays upright. Champagne splashes onto the floor, leaving a small wet spot that stays for the rest of the take; he keeps the glass. No fall, blood or injury. The wife flinches, releases his arm, steps half a pace back, right hand rising and freezing mid-air as if to intervene. One nearby adult guest with a drink turns toward the sound and keeps watching for the rest of the take. Other guests continue normally. The operator flinches: frame jolts, tilts, briefly cuts off the top of the man's head, then corrects. The contact stays in frame. The man brings his face back toward the robot, eyes wide, smile gone. Recovery completes before the next action. 00:13.5-00:16.5 | THE KISS Only then the robot takes one small step closer and places her left palm lightly on his right shoulder for balance, without pulling him. She rises onto the balls of her feet; he instinctively lowers his chin a little. One brief closed-mouth kiss, about one second. Noses pass naturally with a slight head tilt. Believable lip contact, no facial merging, stable identities. His free left hand lifts slightly and freezes in the air. The glass tilts but does not spill again. He does not embrace her. The wife's raised hand drifts to her chest in disbelief, expression turning from alarm to stunned indignation. The operator makes a clumsy fast zoom in, overshoots into a tight misframed shot, then zooms back out to the three-shot. The robot ends the kiss, lowers her heels, removes her hand and takes one small step back. His frozen left hand drops to his side. 00:16.5-00:19 | THE CALM EXIT Hands at her sides, the robot gives a tiny satisfied smile, pivots toward the open aisle on his right and walks away unhurried. Feet push off the floor, hips and shoulders follow, hair and shirt move with slight inertia, waist actuators articulate in coordinated motion. The torn operator pans after her for about one second, image smearing, then whips back to the couple, landing off-center. The robot keeps walking away in the background and never returns. 00:19-00:21.5 | HIS QUESTION The man touches his reddened left cheek with his left hand, still looking after the robot, and says in baffled, conversational English, not shouted: \"What the hell just happened?\" Spoken approximately 00:19.3-00:20.9. He lowers his hand and turns his head and shoulders left to face his wife, as if expecting an explanation. The operator takes a quick step left, frame bouncing, so the man and wife are seen in near profile facing each other and his face stays readable. 00:21.5-00:23.5 | THE SECOND SLAP The wife lowers her hand from her chest and meets his eyes with a still, icy stare. She takes a half step toward him and, silently, gives exactly one open-handed slap with her right hand to the same left cheek, now facing her. Short visible backswing, single contact on his bare cheek, hand lowers. Human-level force. His head turns slightly right again, one small balancing step, still standing, glass still in his right hand. She turns and walks out of frame to the right with controlled dignity, gown moving with real fabric weight. 00:23.5-00:25 | TAPE ENDS The man stands alone, left hand rising to his cheek again, staring blankly. The camera shakes from the operator's suppressed laughter, frame tilting, autofocus hunting. The unseen operator whispers in English, voice trembling with laughter: \"No way.\" At exactly 00:25 the recording stops abruptly, as if the record button was pressed. No fade, title or black hold. IMAGE High real-world detail under the camcorder texture: skin pores, fine facial hair, natural variation, no airbrushing. Individual hair strands, no synthetic shine. His shirt stretches and creases over his shoulders. The robot's teal shirt and black shorts show real knit texture. The gown has visible fabric weight and consistent folds. Champagne behaves physically. Mechanical waist in brushed silver with springs, collars, fasteners, occlusion shadows and reflections matching the hall lights. Motivated lighting: warm overhead pools, cool display accents, real floor reflections, grounded shadows. Natural motion blur. AUDIO Camcorder onboard microphone: slightly compressed, close sounds louder, distant sounds muffled, light handling noise. Room tone of soft conversations, footsteps on stone, low equipment hum, faint glass clinks. Subtle servo whirs from the robot's waist when she moves, quieter than voices. First slap: one sharp real palm-on-cheek crack with a small hall echo, synced to contact, champagne patters on the floor, nearby conversations stop for a moment. Kiss: only a faint natural sound. Second slap: an equally real crack, a nearby guest gasps quietly. Operator: a quick sharp inhale at the first slap, suppressed laughter and the whisper at the end. Only three spoken lines, English, precise lip sync: robot \"You're really cute.\", man \"What the hell just happened?\", off-screen operator \"No way.\" The wife says nothing. No music, narration, laugh track, captions or subtitles. Underplayed, realistic performances; the comedy comes from timing and reactions. CONTINUITY Fixed order: compliment, one robot slap, one kiss, robot exits, man's line, one wife slap, tape ends. Each action finishes before the next starts. Handedness: robot's right hand slaps his left cheek; robot's left hand on his right shoulder for the kiss; man touches his left cheek with his left hand and lowers it before the second slap; wife's right hand slaps his left cheek. Glass stays in his right hand; the level drops only once; the wet spot remains. The wife never takes his arm again. The robot never returns. The man never falls. Consistent identities, wardrobe, jewelry, lighting, booth layout and background guests. NEGATIVE CONSTRAINTS No cuts, replays, slow motion or speed ramps. No cartoon look, plastic skin, waxy faces, exaggerated muscles or morphing. No extra limbs, fused fingers, sliding feet, objects passing through bodies, teleporting people or disappearing glass. No mannequin-like poses held for many seconds. No glowing eyes, holograms, sci-fi UI, text overlays or legible label text. No visible camera, operator, phone or reflection of the filmer. No copying of the reference photo's crowd, black polo shirts, lanyards or concrete floor. No comic sound effects or bass hits. No modern ultra-sharp smartphone look, no gimbal smoothness. Do not explain the robot's behavior."
     },
     {
       "id": "x-public-2093348085879459943",
@@ -26322,6 +26410,50 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2121954653500035343",
+      "title": "个人资料 / 头像 - GPT Image 2 提示词：将照片转换为 3D 玩具情侣",
+      "description": "详细提示词，可将上传的情侣参考照片转换为咖啡馆场景中的超精细 3D 收藏级乙烯基手办，在保留面部特征的同时应用风格化的玩具美学。",
+      "prompt": "将上传参考照片中的人物转化为超精细的 3D 收藏级潮玩情侣场景，背景设定在一家格调十足的户外咖啡馆。保留他们极具辨识度的面部特征，将其重塑为高端亮面乙烯基（vinyl）手办，呈现抛光塑料质感、略微夸张的比例、生动传神的表情以及逼真的玩具细节。\n\n女性角色留着深棕色头发，梳成优雅的法式编发盘发，佩戴黑色墨镜、精致的金色圈形耳环和叠戴金项链，身穿白色泡泡袖衬衫。她单手轻轻托腮，面带温柔笑意，深情注视着身旁的伴侣。\n\n男性角色拥有一头浓密蓬松的深色卷发，胡须修剪得干净利落，戴着黑色墨镜，身穿清爽的白色纽扣衬衫，袖口随意卷起。他腕上佩戴银色手表，正随性地将一只白色小瓷咖啡杯举至唇边。\n\n两位角色亲密地并排坐在一张打磨光滑的木质咖啡桌旁。桌上摆放着迷你白色咖啡杯、配套杯碟以及精致的银色茶匙。\n\n环境：一家迷人的欧洲高档户外咖啡馆，拥有温暖的米色石材建筑、高大的玻璃窗、葱郁的绿树、蓝色庭院遮阳伞和木质家具，背景中的咖啡馆客人呈柔和虚化效果。温暖的午后阳光折射出漂亮的光影与柔和的阴影。\n\n视觉风格：高端设计师乙烯基潮玩、亮面 3D 手办、可爱又不失精致的角色设计、光滑细腻的雕塑表面、细节丰富的发型、逼真的微缩配饰、高端收藏级潮玩摄影、电影感景深、温暖的金黄色调、超写实 3D 渲染。\n\n构图：4:5 竖版人像画幅，平视正面机位，两位角色醒目地占据前景，姿态自然放松，营造温馨亲昵的咖啡馆氛围。\n\n渲染质量：超精细 3D 建模、逼真的光泽反射、光线追踪照明、环境光遮蔽、全局光照、基于物理的材质、电影级阴影、专业产品摄影、8K 级画质。\n\n重要提示：务必保留参考照片中这对情侣的身份特征与独特面容。两人必须呈现出精美实体收藏级潮玩的质感，而非普通的人像照片。无文字、无水印、前景中无多余人物。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794815774981_p7jix4_HXKygQZbMAAYCGi.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/AIwithkhan/status/2121954653500035343",
+      "sourceType": "community",
+      "authorName": "Smiling Khan",
+      "authorHandle": "@AIwithkhan",
+      "createdAt": "2026-11-15T12:00:00.000Z",
+      "importedAt": "2026-11-16T22:58:48.183Z",
+      "tags": [
+        "GPT Image 2",
+        "人像",
+        "产品",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "产品商业",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37519",
+      "rawText": "将上传参考照片中的人物转化为超精细的 3D 收藏级潮玩情侣场景，背景设定在一家格调十足的户外咖啡馆。保留他们极具辨识度的面部特征，将其重塑为高端亮面乙烯基（vinyl）手办，呈现抛光塑料质感、略微夸张的比例、生动传神的表情以及逼真的玩具细节。\n\n女性角色留着深棕色头发，梳成优雅的法式编发盘发，佩戴黑色墨镜、精致的金色圈形耳环和叠戴金项链，身穿白色泡泡袖衬衫。她单手轻轻托腮，面带温柔笑意，深情注视着身旁的伴侣。\n\n男性角色拥有一头浓密蓬松的深色卷发，胡须修剪得干净利落，戴着黑色墨镜，身穿清爽的白色纽扣衬衫，袖口随意卷起。他腕上佩戴银色手表，正随性地将一只白色小瓷咖啡杯举至唇边。\n\n两位角色亲密地并排坐在一张打磨光滑的木质咖啡桌旁。桌上摆放着迷你白色咖啡杯、配套杯碟以及精致的银色茶匙。\n\n环境：一家迷人的欧洲高档户外咖啡馆，拥有温暖的米色石材建筑、高大的玻璃窗、葱郁的绿树、蓝色庭院遮阳伞和木质家具，背景中的咖啡馆客人呈柔和虚化效果。温暖的午后阳光折射出漂亮的光影与柔和的阴影。\n\n视觉风格：高端设计师乙烯基潮玩、亮面 3D 手办、可爱又不失精致的角色设计、光滑细腻的雕塑表面、细节丰富的发型、逼真的微缩配饰、高端收藏级潮玩摄影、电影感景深、温暖的金黄色调、超写实 3D 渲染。\n\n构图：4:5 竖版人像画幅，平视正面机位，两位角色醒目地占据前景，姿态自然放松，营造温馨亲昵的咖啡馆氛围。\n\n渲染质量：超精细 3D 建模、逼真的光泽反射、光线追踪照明、环境光遮蔽、全局光照、基于物理的材质、电影级阴影、专业产品摄影、8K 级画质。\n\n重要提示：务必保留参考照片中这对情侣的身份特征与独特面容。两人必须呈现出精美实体收藏级潮玩的质感，而非普通的人像照片。无文字、无水印、前景中无多余人物。"
+    },
+    {
       "id": "community-2121772672140886063",
       "title": "个人资料 / 头像 - GPT Image 2 多视角角色一致性提示词",
       "description": "使用 GPT Image 2，结合面部、服装和姿态深度图参考图像，生成一致的角色照片的提示词。",
@@ -26333,7 +26465,7 @@
       "authorName": "Candy",
       "authorHandle": "@CandyTravelight",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.696Z",
+      "importedAt": "2026-11-16T22:58:48.184Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -26363,6 +26495,84 @@
       "rawText": "请生成一张图片：照片级写实，竖版 2:3 比例，一位虚构的 {argument name=\"age\" default=\"20岁\"} 成年女性单人照，青春洋溢，像大二学生，不要显得成熟。图 1 为人脸参考：保持五官、肤色、发型和发色一致。图 2 为服装参考：完全按照图中所示穿着这套衣服，保持款式、颜色、材质和配饰一致。图 3 为人体模特的灰度深度图：仅作为身体姿势和拍摄角度的参考；它不是真人，不提供服装或面部细节。场景：{argument name=\"scene_description\" default=\"春日午后公园里绿树成荫的小径\"}，嫩绿的树叶，路边有长椅，柔和的自然光，iPhone 随手拍质感，真实的皮肤纹理，轻微的胶片颗粒感。单张图片，非拼图，无文字或水印，双手自然放松且五指完整，面部和四肢无变形。\n\n请再生成一张图片：参考上一张：人物、发型、服装、场景和光线完全一致，但将身体姿势和拍摄角度改为与这张深度图中的姿势匹配（深度图只是人体模型，不提供服装或面部信息）。竖版 2:3 单张图片，非拼图，无文字或水印，手指完整。"
     },
     {
+      "id": "community-2121953232410870076",
+      "title": "社交媒体帖子 - 机器人士兵",
+      "description": "一张逼真的照片，展示了一个巨大的双足机器人，其脚部和头部装有坦克履带，正站在警察维护场中，警员们在旁观察。",
+      "prompt": "一张超写实的高分辨率照片，画面中一台巨大的双足机器人矗立在工业维修场中央。机器人由厚重的黑白机械部件构成，宛如齿轮、活塞与装甲板精密咬合而成的复杂装置。它呈人形轮廓，但头部和双脚却配备了类似坦克的履带系统。双肩与胸口处可见醒目的红色警示灯。胸甲上印有“警視庁 MPD”（东京都警视厅）字样。前景中，两名身穿深蓝色制服、头戴白色头盔的警察正驻足观察这台机器人；其中一人手持平板电脑。他们的制服上同样标有“警視庁 MPD”。二人身后摆放着印有“MPD”标识的银色设备箱以及橙色交通锥。背景是一栋灰色的大型工业建筑，敞开的库门上分别标有“02”、“03”和“04”编号。建筑左侧的标牌写着“警視庁 MPD”，右侧则写着“整備場 MAINTENANCE YARD”。远处一辆白色卡车旁，还能看到几名身穿反光背心、头戴安全帽的工作人员。明亮的日光倾洒而下，湛蓝的天空万里无云，在混凝土地面上投下轮廓分明的阴影。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794815781775_4d0fm6_HXKxNz0a8AAnryU.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/kabumira862571/status/2121953232410870076#reversed-0",
+      "sourceType": "community",
+      "authorName": "カーブミラー",
+      "authorHandle": "@kabumira862571",
+      "createdAt": "2026-11-15T12:00:00.000Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "建筑空间",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37521",
+      "rawText": "一张超写实的高分辨率照片，画面中一台巨大的双足机器人矗立在工业维修场中央。机器人由厚重的黑白机械部件构成，宛如齿轮、活塞与装甲板精密咬合而成的复杂装置。它呈人形轮廓，但头部和双脚却配备了类似坦克的履带系统。双肩与胸口处可见醒目的红色警示灯。胸甲上印有“警視庁 MPD”（东京都警视厅）字样。前景中，两名身穿深蓝色制服、头戴白色头盔的警察正驻足观察这台机器人；其中一人手持平板电脑。他们的制服上同样标有“警視庁 MPD”。二人身后摆放着印有“MPD”标识的银色设备箱以及橙色交通锥。背景是一栋灰色的大型工业建筑，敞开的库门上分别标有“02”、“03”和“04”编号。建筑左侧的标牌写着“警視庁 MPD”，右侧则写着“整備場 MAINTENANCE YARD”。远处一辆白色卡车旁，还能看到几名身穿反光背心、头戴安全帽的工作人员。明亮的日光倾洒而下，湛蓝的天空万里无云，在混凝土地面上投下轮廓分明的阴影。"
+    },
+    {
+      "id": "community-2121943093411000677",
+      "title": "社交媒体帖子 - 复古照片：骑马的女子",
+      "description": "生成一张充满怀旧感的胶片颗粒风格照片，画面中一位年轻女子在风景如画的乡村骑马。",
+      "prompt": "一张复古风格的照片，画面中一位年轻的东亚女性骑在一匹棕色马背上，置身于乡村风景之中。她深色的头发扎成马尾，神情专注地低头看着手中握着的皮质缰绳。她身穿一件小碎花长袖衬衫，搭配及膝格纹裙、白色短袜和棕色皮质短靴。马匹配备了西部风格的皮质马鞍和马笼头。背景中可见木质栅栏、绿意盎然的山丘、零星散布的树木，以及湛蓝晴空下的远山。整张图片充满复古美感，带有明显的胶片颗粒感、划痕、灰尘斑点，左侧边缘还有一处漏光效果。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794815775208_kxidh6_HXKn_yOakAAfDjM.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Kmsbdd0GXBOcrXQ/status/2121943093411000677#reversed-0",
+      "sourceType": "community",
+      "authorName": "いがぐりメタボ",
+      "authorHandle": "@Kmsbdd0GXBOcrXQ",
+      "createdAt": "2026-11-15T12:00:00.000Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
+      "tags": [],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37518",
+      "rawText": "一张复古风格的照片，画面中一位年轻的东亚女性骑在一匹棕色马背上，置身于乡村风景之中。她深色的头发扎成马尾，神情专注地低头看着手中握着的皮质缰绳。她身穿一件小碎花长袖衬衫，搭配及膝格纹裙、白色短袜和棕色皮质短靴。马匹配备了西部风格的皮质马鞍和马笼头。背景中可见木质栅栏、绿意盎然的山丘、零星散布的树木，以及湛蓝晴空下的远山。整张图片充满复古美感，带有明显的胶片颗粒感、划痕、灰尘斑点，左侧边缘还有一处漏光效果。"
+    },
+    {
       "id": "community-2121800940743520742",
       "title": "社交媒体帖子 - 真人照片与涂鸦互动提示词",
       "description": "基于上传的参考图片，创建一个混合媒介时尚照片的提示词，展示真人与手绘火柴人之间的互动。",
@@ -26374,7 +26584,7 @@
       "authorName": "鱼哥",
       "authorHandle": "@MrGafish",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "人像",
         "摄影"
@@ -26416,7 +26626,7 @@
       "authorName": "Toudaiji",
       "authorHandle": "@ISoBZrpOBM85706",
       "createdAt": "2026-11-14T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -26442,6 +26652,48 @@
       },
       "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37497",
       "rawText": "一幅全身动漫风格插画，描绘了一位开朗的年轻女子站在铺满黄色银杏落叶的小径上。她拥有一头飘逸的金色长发，扎成双马尾，还长着尖尖的精灵耳。透过红色圆框眼镜，可以看到她明亮的绿色双眼，正开心地张嘴笑着。她身穿一件独特的棕色连帽斗篷，上面布满白色斑点图案（形似鹿皮花纹），兜帽上带有动物耳朵装饰，颈部系着一个大大的粉色蝴蝶结。斗篷里面搭配着一条棕色格纹短裙。腿上穿着宽松的棕色及膝长靴，内搭白色罗纹袜。背景是蓝天下成排的明艳黄叶银杏树，几片落叶在空中轻盈飘舞。"
+    },
+    {
+      "id": "community-2121727626096083452",
+      "title": "社交媒体帖子 - 戴墨镜女性竖版海报拼贴",
+      "description": "用于生成竖版海报拼贴的提示词，包含同一位女性的四张黑白电影感人像（不同姿势），并搭配全彩前景剪影。适用于时尚编辑或杂志风格排版。",
+      "prompt": "竖版海报拼贴设计，米色背景，四个横向圆角矩形上下堆叠排列，内含同一位年轻女性佩戴墨镜的黑白电影感人像，姿态各异、时尚有型。前景左侧为该女性的全彩高清抠图，她身穿粉紫色修身衬衫与黑色长裤，佩戴墨镜，姿态自信酷炫；整体呈现现代时尚大片风格，柔和的影棚布光，超写实画质，高端杂志质感，兼具景深与光影层次效果，排版干净极简，2:3 画幅比例。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1794815776535_7jpw7i_HW-i2KNagAAp0dH.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/lnxinshng252654/status/2121727626096083452",
+      "sourceType": "community",
+      "authorName": "ZDuo.MoreAi",
+      "authorHandle": "@lnxinshng252654",
+      "createdAt": "2026-11-14T12:00:00.000Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
+      "tags": [
+        "人像",
+        "平面设计"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "平面设计",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37520",
+      "rawText": "竖版海报拼贴设计，米色背景，四个横向圆角矩形上下堆叠排列，内含同一位年轻女性佩戴墨镜的黑白电影感人像，姿态各异、时尚有型。前景左侧为该女性的全彩高清抠图，她身穿粉紫色修身衬衫与黑色长裤，佩戴墨镜，姿态自信酷炫；整体呈现现代时尚大片风格，柔和的影棚布光，超写实画质，高端杂志质感，兼具景深与光影层次效果，排版干净极简，2:3 画幅比例。"
     },
     {
       "id": "community-2121593952059134027",
@@ -26539,7 +26791,7 @@
       "authorName": "ゆきと",
       "authorHandle": "@bakupso2",
       "createdAt": "2026-11-13T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "人像"
       ],
@@ -26702,7 +26954,7 @@
       "authorName": "降月@十師団物語",
       "authorHandle": "@ten_division_kz",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "人像"
       ],
@@ -26743,7 +26995,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26786,7 +27038,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26829,7 +27081,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "人像"
       ],
@@ -26996,7 +27248,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "人像",
         "摄影"
@@ -27246,7 +27498,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.185Z",
       "tags": [
         "人像"
       ],
@@ -27530,7 +27782,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27573,7 +27825,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27817,7 +28069,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.697Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "人像",
         "摄影"
@@ -27859,7 +28111,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27940,7 +28192,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "人像"
       ],
@@ -27981,7 +28233,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -28020,7 +28272,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "人像",
         "摄影"
@@ -28062,7 +28314,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -28222,7 +28474,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -28265,7 +28517,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-30T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.698Z",
+      "importedAt": "2026-11-16T22:58:48.186Z",
       "tags": [
         "人像",
         "摄影"
@@ -88518,7 +88770,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.702Z",
+      "importedAt": "2026-11-16T22:58:48.191Z",
       "tags": [
         "产品",
         "平面设计",
@@ -88561,7 +88813,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.702Z",
+      "importedAt": "2026-11-16T22:58:48.191Z",
       "tags": [
         "平面设计"
       ],
@@ -88602,7 +88854,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-16T08:23:41.702Z",
+      "importedAt": "2026-11-16T22:58:48.191Z",
       "tags": [
         "平面设计"
       ],
