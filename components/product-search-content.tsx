@@ -15,7 +15,7 @@ export function ProductSearchContent({ product, locale }: ProductSearchContentPr
     ? ["five-elements-relationship-compatibility", "bazi-vs-chinese-zodiac-compatibility", "compatibility-without-birth-time"]
     : product === "discovery"
       ? ["what-is-a-day-pillar", "prepare-birth-date-time-place", "jia-zi-day-pillar"]
-    : ["yuelao-love-fortune-conversation", "how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
+    : ["chinese-fortune-sticks-money-meaning", "yuelao-love-fortune-conversation", "how-to-ask-fortune-sticks", "fortune-stick-number-and-edition"];
   const readingLinks = articleSlugs.flatMap(slug => {
     const article = journalArticles.find(item => item.slug === slug);
     return article ? [{ title: article.translations[locale].title, description: article.translations[locale].description, href: journalHref(locale, slug) }] : [];

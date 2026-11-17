@@ -38,6 +38,7 @@ const guideTopics: Record<string, readonly JournalTopic[]> = {
   "five-elements-relationship-compatibility": ["relationships", "five-elements"],
   "how-to-ask-fortune-sticks": ["fortune-sticks"],
   "fortune-stick-number-and-edition": ["fortune-sticks"],
+  "chinese-fortune-sticks-money-meaning": ["fortune-sticks"],
   "yuelao-love-fortune-conversation": ["fortune-sticks", "relationships"],
   "five-element-bracelet-design": ["five-elements", "bracelets"],
   "crystal-bracelet-care": ["bracelets"],

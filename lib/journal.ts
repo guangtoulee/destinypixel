@@ -11,6 +11,7 @@ import { crystalCareArticle } from "@/lib/journal-crystal-care";
 import { journalRussian } from "@/lib/journal-ru";
 import { searchGrowthArticles, searchGrowthRussian } from "@/lib/journal-search-growth";
 import { loveFortuneArticle, loveFortuneRussian } from "@/lib/journal-love-fortune";
+import { moneyFortuneArticle, moneyFortuneRussian } from "@/lib/journal-money-fortune";
 import { fiveElementsArticle, fiveElementsRussian } from "@/lib/journal-five-elements";
 import { threeCardTarotArticle, threeCardTarotRussian } from "@/lib/journal-three-card-tarot";
 import { pamelaColmanSmithArticle, pamelaColmanSmithRussian } from "@/lib/journal-pamela-colman-smith";
@@ -72,6 +73,7 @@ export type JournalArticle = {
 export type JournalSourceArticle = Omit<JournalArticle, "translations"> & { translations: Record<"en" | "zh", JournalTranslation>; traditionalTranslation?: JournalTranslation };
 
 const journalSources: JournalSourceArticle[] = [
+  moneyFortuneArticle,
   pamelaColmanSmithArticle,
   threeCardTarotArticle,
   fiveElementsArticle,
@@ -334,7 +336,7 @@ export const journalArticles: JournalArticle[] = [{
   // Internal fallbacks are never listed as additional authored editions.
   translations: { ...taiSuiArticle.translations, "zh-TW": taiSuiArticle.translations.zh, ru: taiSuiArticle.translations.en },
 }, tarotSuitArticle, ...tarotMethodArticles, ...tarotEducationArticles, ...journalSources.map((article) => {
-  const ru = pillarProfileRussian[article.slug] ?? (article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
+  const ru = pillarProfileRussian[article.slug] ?? (article.slug === moneyFortuneArticle.slug ? moneyFortuneRussian : article.slug === pamelaColmanSmithArticle.slug ? pamelaColmanSmithRussian : article.slug === threeCardTarotArticle.slug ? threeCardTarotRussian : article.slug === fiveElementsArticle.slug ? fiveElementsRussian : article.slug === loveFortuneArticle.slug ? loveFortuneRussian : searchGrowthRussian[article.slug] ?? journalRussian[article.slug]);
   if (!ru) throw new Error(`Missing Russian article: ${article.slug}`);
   const translations = { ...article.translations, "zh-TW": article.traditionalTranslation ?? applyReplacements(traditionalTranslation(article.translations.zh), article.zhTwReplacements), ru };
   return { ...article, updatedAt: article.updatedAt > "2026-09-14" ? article.updatedAt : "2026-09-14", translations: article.pillar ? { ...translations, en: withDayPillarPeople(translations.en, article.pillar, "en"), zh: withDayPillarPeople(translations.zh, article.pillar, "zh") } : translations };
