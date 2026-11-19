@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-19T09:14:20.208Z",
+  "updatedAt": "2026-11-19T21:43:02.848Z",
   "sourceSummary": {
-    "community": 1500,
+    "community": 1502,
     "publicX": 628,
-    "total": 2128
+    "total": 2130
   },
   "items": [
     {
@@ -26541,6 +26541,48 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2123050336764239971",
+      "title": "个人资料 / 头像 - 年轻女性六格人像拼贴",
+      "description": "由六张影棚肖像组成的拼贴图，展示了一位留着棕色长发的年轻女性在灰色背景前的多种休闲表情。",
+      "prompt": "六张竖版人像照片以网格形式排列，画面中是一位年轻的东亚女性，留着深棕色的长波浪卷发和轻盈的刘海。她身穿一件简约的黑色细吊带背心，佩戴着一条精致的银质项链，吊坠小巧。背景是一面素净的冷灰色墙壁，暗示拍摄地为室内摄影棚；柔和的漫射光在她的脸上投下淡淡的阴影。\n\n左上：她双手托腮，掌心朝内，神情淡然，目光微微偏向左侧。\n中上：她在右眼旁比出剪刀手，同时眨着这只眼睛，双唇微启。\n右上：她双眼轻闭，头微微低垂，一只手抬起轻抚发顶。\n左下：她将脸颊靠在右手上，指尖轻触太阳穴，目光望向一旁，若有所思。\n中下：一张自然抓拍的照片，她笑容灿烂、露出牙齿，看向镜头右侧的画面之外。\n右下：她直视镜头，嘴角挂着温柔浅淡的微笑，一只手轻轻将耳后的头发向后拢去。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1795074133469_cj4mvg_HXaWZ_qbMAA_cYE.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/yudetamago__san/status/2123050336764239971#reversed-0",
+      "sourceType": "community",
+      "authorName": "なかやま",
+      "authorHandle": "@yudetamago__san",
+      "createdAt": "2026-11-18T12:00:00.000Z",
+      "importedAt": "2026-11-19T21:43:01.089Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37621",
+      "rawText": "六张竖版人像照片以网格形式排列，画面中是一位年轻的东亚女性，留着深棕色的长波浪卷发和轻盈的刘海。她身穿一件简约的黑色细吊带背心，佩戴着一条精致的银质项链，吊坠小巧。背景是一面素净的冷灰色墙壁，暗示拍摄地为室内摄影棚；柔和的漫射光在她的脸上投下淡淡的阴影。\n\n左上：她双手托腮，掌心朝内，神情淡然，目光微微偏向左侧。\n中上：她在右眼旁比出剪刀手，同时眨着这只眼睛，双唇微启。\n右上：她双眼轻闭，头微微低垂，一只手抬起轻抚发顶。\n左下：她将脸颊靠在右手上，指尖轻触太阳穴，目光望向一旁，若有所思。\n中下：一张自然抓拍的照片，她笑容灿烂、露出牙齿，看向镜头右侧的画面之外。\n右下：她直视镜头，嘴角挂着温柔浅淡的微笑，一只手轻轻将耳后的头发向后拢去。"
+    },
+    {
       "id": "community-2122887530052022398",
       "title": "个人资料 / 头像 - GPT Image 2 夜间自拍提示词",
       "description": "专为 GPT Image 2 设计的提示词，用于生成年轻东亚女性在夜间城市街道漫步的超写实智能手机自拍。",
@@ -26552,7 +26594,7 @@
       "authorName": "我叫聂磊",
       "authorHandle": "@zhy2024806",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.485Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -26583,6 +26625,47 @@
       "rawText": "超现实夜间手机自拍照，画面质感如同真实 iPhone 或手机摄像头拍摄，而非单反相机。一位美丽的东亚年轻女性，保留参考图中的面部特征，深棕色长发略显凌乱，在微风中自然飘动；肌肤白皙如瓷，棕色大眼睛灵动有神；妆容柔和自然，脸颊微泛红晕，粉润双唇嘟起做出可爱的“嘟嘟脸”表情。身穿灰色修身细吊带背心，一手随意举着智能手机，正漫步于夜晚安静的城市林荫人行道上。暖色路灯照亮她的脸庞，投下柔和的阴影，背景是停放的车辆、绿树与空旷的街道。带有轻微的手持动态模糊，自然的手机 HDR 效果，逼真的皮肤纹理，根根分明的真实发丝，轻微的数码噪点，前置摄像头视角，随性的生活感美学，深夜悠闲散步，Instagram 风格自拍，细节丰富，照片级真实，整体观感明显是一张未经修饰的手机随拍，而非 AI 生成或影棚摄影作品。"
     },
     {
+      "id": "community-2123049585887138069",
+      "title": "社交媒体帖子 - 蒸汽朋克工匠肖像",
+      "description": "生成一幅电影质感的蒸汽朋克插画，描绘了一位拥有机械义肢的女性工匠在温暖灯光的工作室中修理发条装置的场景。",
+      "prompt": "一幅细节丰富、极具电影质感的蒸汽朋克风格肖像画：一位黑发盘成优雅发髻的美丽女子，正坐在堆满杂物的木质工作台前。她装配着精密的金色机械义肢手臂，脸颊上绘有精致的金色花丝纹饰。她全神贯注，正用微型工具组装一套复杂的黄铜发条装置。在她右侧，摆放着一颗抛光金属自动人偶头颅，齿轮与镜片清晰外露。背景是一间光线昏暗的工作室，墙上挂满蓝图，铜管纵横交错，复古油灯散发着温暖的琥珀色光芒。左侧墙壁的黑板上用大字写着拉丁文“INVENIMUS AUT FACIMUS”，下方则是绿色的“DEFICIMUS”。画面四周环绕着华丽的装饰艺术（Art Deco）边框，饰有几何图案，底部中央点缀着一枚带翼徽章。整体色调以浓郁的棕色、复古金色、深邃的黑色与柔和的绿色为主。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1795074133391_w4sk36_HXY7ZRlakAA7UYI.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/CosmicCowboyCDN/status/2123049585887138069#reversed-0",
+      "sourceType": "community",
+      "authorName": "Cosmic Cowboy",
+      "authorHandle": "@CosmicCowboyCDN",
+      "createdAt": "2026-11-18T12:00:00.000Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "插画三维",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37622",
+      "rawText": "一幅细节丰富、极具电影质感的蒸汽朋克风格肖像画：一位黑发盘成优雅发髻的美丽女子，正坐在堆满杂物的木质工作台前。她装配着精密的金色机械义肢手臂，脸颊上绘有精致的金色花丝纹饰。她全神贯注，正用微型工具组装一套复杂的黄铜发条装置。在她右侧，摆放着一颗抛光金属自动人偶头颅，齿轮与镜片清晰外露。背景是一间光线昏暗的工作室，墙上挂满蓝图，铜管纵横交错，复古油灯散发着温暖的琥珀色光芒。左侧墙壁的黑板上用大字写着拉丁文“INVENIMUS AUT FACIMUS”，下方则是绿色的“DEFICIMUS”。画面四周环绕着华丽的装饰艺术（Art Deco）边框，饰有几何图案，底部中央点缀着一枚带翼徽章。整体色调以浓郁的棕色、复古金色、深邃的黑色与柔和的绿色为主。"
+    },
+    {
       "id": "community-2122950449246715945",
       "title": "社交媒体帖子 - 海滨时尚人像提示词",
       "description": "用于生成超写实全身女性海滨岩石海岸时尚人像的详细提示词，包含适合 gpt-image-2 的特定服装与灯光指令。",
@@ -26594,7 +26677,7 @@
       "authorName": "Rubi",
       "authorHandle": "@AIwithRubii",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26637,7 +26720,7 @@
       "authorName": "Ssr_404",
       "authorHandle": "@ziyouzhixu",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26681,7 +26764,7 @@
       "authorName": "Hania Ai",
       "authorHandle": "@HaniaAi12",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26724,7 +26807,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-17T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.485Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "人像",
         "摄影"
@@ -26766,7 +26849,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-11-17T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.485Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -26932,7 +27015,7 @@
       "authorName": "Smiling Khan",
       "authorHandle": "@AIwithkhan",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.485Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26976,7 +27059,7 @@
       "authorName": "Candy",
       "authorHandle": "@CandyTravelight",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.485Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -27137,7 +27220,7 @@
       "authorName": "Toudaiji",
       "authorHandle": "@ISoBZrpOBM85706",
       "createdAt": "2026-11-14T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27302,7 +27385,7 @@
       "authorName": "ゆきと",
       "authorHandle": "@bakupso2",
       "createdAt": "2026-11-13T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.091Z",
       "tags": [
         "人像"
       ],
@@ -27465,7 +27548,7 @@
       "authorName": "降月@十師団物語",
       "authorHandle": "@ten_division_kz",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "人像"
       ],
@@ -27506,7 +27589,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27549,7 +27632,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27592,7 +27675,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "人像"
       ],
@@ -27759,7 +27842,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "人像",
         "摄影"
@@ -28009,7 +28092,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "人像"
       ],
@@ -28293,7 +28376,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -28336,7 +28419,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -28580,7 +28663,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.092Z",
       "tags": [
         "人像",
         "摄影"
@@ -28622,7 +28705,7 @@
       "authorName": "Sairah",
       "authorHandle": "@Sairah_0",
       "createdAt": "2026-11-01T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -28703,7 +28786,7 @@
       "authorName": "Jema Christian",
       "authorHandle": "@jemachristian",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [
         "人像"
       ],
@@ -28744,7 +28827,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-10-31T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.486Z",
+      "importedAt": "2026-11-19T21:43:01.093Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -89281,7 +89364,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.489Z",
+      "importedAt": "2026-11-19T21:43:01.103Z",
       "tags": [
         "产品",
         "平面设计",
@@ -89324,7 +89407,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.489Z",
+      "importedAt": "2026-11-19T21:43:01.103Z",
       "tags": [
         "平面设计"
       ],
@@ -89365,7 +89448,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-19T09:14:09.489Z",
+      "importedAt": "2026-11-19T21:43:01.103Z",
       "tags": [
         "平面设计"
       ],
