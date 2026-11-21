@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "updatedAt": "2026-11-21T08:38:52.416Z",
+  "updatedAt": "2026-11-21T20:11:48.233Z",
   "sourceSummary": {
-    "community": 1506,
+    "community": 1508,
     "publicX": 628,
-    "total": 2134
+    "total": 2136
   },
   "items": [
     {
@@ -26541,6 +26541,89 @@
       "rawText": "Grok Imagine prompt: a Morgana superior mirage over the ocean, a distant ship appearing to float in the air with distorted castle-like structures above it, surreal atmospheric illusion, cold arctic sea, realistic photography"
     },
     {
+      "id": "community-2123964230890348559",
+      "title": "个人资料 / 头像 - 宝蓝色毛衣女性肖像提示词",
+      "description": "一个详细的提示词，用于生成穿着宝蓝色毛衣的女性的两个变体（戴面具和不戴面具），并保持与参考图像的面部一致性。",
+      "prompt": "根据参考图，生成两张同一位美丽年轻女性的独立图片，需精准还原她的面部特征、迷人的绿色眼眸、自然肤色，以及用宝蓝色丝带蝴蝶结扎起的蓬松半扎长棕色波浪卷发。第一张图片中，她身穿一件漂亮的宝蓝色宽松针织毛衣（不含任何黑色衣物），以优雅放松的姿态坐着，单膝微曲，脸颊轻托于手上；全脸清晰可见，妆容柔和自然，双颊红润，嘴唇呈光泽粉色。第二张图片中，人物、五官、发型、蓝色丝带蝴蝶结及宝蓝色毛衣均与第一张完全一致，但需增加一个同色系的宝蓝色针织口罩遮住口鼻，一只手在脸颊旁轻轻扶着口罩，同时确保她美丽的双眼依然清晰可见。两张图片均需采用柔和的炭灰色摄影棚背景、电影级光影、逼真的皮肤纹理、细腻的针织面料质感，呈现专业时尚摄影风格与超写实的 8K 画质；采用 9:16 竖版比例，不含黑色衣物、文字及水印。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1795246973200_rn3dk1_HXnWMCRaYAAbHkf.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Lianaalane/status/2123964230890348559",
+      "sourceType": "community",
+      "authorName": "liana",
+      "authorHandle": "@Lianaalane",
+      "createdAt": "2026-11-21T12:00:00.000Z",
+      "importedAt": "2026-11-21T20:11:45.005Z",
+      "tags": [
+        "人像",
+        "摄影"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测摄影提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "prompt",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37686",
+      "rawText": "根据参考图，生成两张同一位美丽年轻女性的独立图片，需精准还原她的面部特征、迷人的绿色眼眸、自然肤色，以及用宝蓝色丝带蝴蝶结扎起的蓬松半扎长棕色波浪卷发。第一张图片中，她身穿一件漂亮的宝蓝色宽松针织毛衣（不含任何黑色衣物），以优雅放松的姿态坐着，单膝微曲，脸颊轻托于手上；全脸清晰可见，妆容柔和自然，双颊红润，嘴唇呈光泽粉色。第二张图片中，人物、五官、发型、蓝色丝带蝴蝶结及宝蓝色毛衣均与第一张完全一致，但需增加一个同色系的宝蓝色针织口罩遮住口鼻，一只手在脸颊旁轻轻扶着口罩，同时确保她美丽的双眼依然清晰可见。两张图片均需采用柔和的炭灰色摄影棚背景、电影级光影、逼真的皮肤纹理、细腻的针织面料质感，呈现专业时尚摄影风格与超写实的 8K 画质；采用 9:16 竖版比例，不含黑色衣物、文字及水印。"
+    },
+    {
+      "id": "community-2123734795746484634",
+      "title": "个人资料 / 头像 - 昭和复古花卉连衣裙人像",
+      "description": "生成一张写实风格的女性照片，她身着复古花卉连衣裙，置身于宁静的日式庭院中，捕捉充满怀旧感的昭和时代氛围。",
+      "prompt": "一张照片级逼真的年轻女性肖像，散发着温柔怀旧的昭和时代美学气息。她留着一头深色秀发，松松地编成一条侧边麻花辫；身穿一袭复古风奶油色中长连衣裙，裙上点缀着精致的紫色碎花图案，短袖设计搭配彼得潘领与纽扣门襟。她伫立在一座葱郁的日式庭院中，抬手轻触头顶青枫的枝叶。光线柔和斑驳，为画面覆上一层温暖的胶片颗粒感，仿佛将人带回 20 世纪 70 年代的复古时光。",
+      "negativePrompt": "遵循原提示词中的避免项；不要水印、乱码、低清、畸形手、错误透视或主体漂移。",
+      "imageUrl": "https://wsrv.nl/?url=https%3A%2F%2Fcms-assets.youmind.com%2Fmedia%2F1795246973067_k56nl4_HXkFikUagAA-Eqk.jpg&w=1400&output=webp",
+      "sourceUrl": "https://x.com/Kmsbdd0GXBOcrXQ/status/2123734795746484634#reversed-0",
+      "sourceType": "community",
+      "authorName": "いがぐりメタボ",
+      "authorHandle": "@Kmsbdd0GXBOcrXQ",
+      "createdAt": "2026-11-20T12:00:00.000Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
+      "tags": [
+        "人像"
+      ],
+      "modelHints": [
+        "GPT Image 2"
+      ],
+      "style": "社区实测视觉提示词",
+      "lighting": "按原提示词的光线描述执行",
+      "camera": "按原提示词的镜头与景别执行",
+      "palette": "按原提示词的配色关系执行",
+      "mood": "按原提示词的情绪目标执行",
+      "composition": "按原提示词的构图与画幅执行",
+      "aspectRatio": "auto",
+      "language": "zh",
+      "contentType": "image",
+      "category": "人像时尚",
+      "metrics": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 0,
+        "score": 0
+      },
+      "complianceNote": "CC BY 4.0 community index via YouMind; original X author and post linked. Detail: https://youmind.com/zh-CN/gpt-image-2-prompts?id=37685",
+      "rawText": "一张照片级逼真的年轻女性肖像，散发着温柔怀旧的昭和时代美学气息。她留着一头深色秀发，松松地编成一条侧边麻花辫；身穿一袭复古风奶油色中长连衣裙，裙上点缀着精致的紫色碎花图案，短袖设计搭配彼得潘领与纽扣门襟。她伫立在一座葱郁的日式庭院中，抬手轻触头顶青枫的枝叶。光线柔和斑驳，为画面覆上一层温暖的胶片颗粒感，仿佛将人带回 20 世纪 70 年代的复古时光。"
+    },
+    {
       "id": "community-2123423368301138088",
       "title": "个人资料 / 头像 - 大理石雕塑头像提示词",
       "description": "用于 GPT Image 2 的提示词，可将上传的照片转换为具有博物馆灯光效果的超写实古典希腊罗马风格大理石雕塑头像。",
@@ -26552,7 +26635,7 @@
       "authorName": "Smiling Khan",
       "authorHandle": "@AIwithkhan",
       "createdAt": "2026-11-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.315Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -26594,7 +26677,7 @@
       "authorName": "Ayesha",
       "authorHandle": "@AyeshaEvie",
       "createdAt": "2026-11-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -26636,7 +26719,7 @@
       "authorName": "Aiza",
       "authorHandle": "@AizaAi12",
       "createdAt": "2026-11-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26679,7 +26762,7 @@
       "authorName": "Tree.ai",
       "authorHandle": "@dreamchyzw",
       "createdAt": "2026-11-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "人像"
       ],
@@ -26720,7 +26803,7 @@
       "authorName": "なかやま",
       "authorHandle": "@yudetamago__san",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "人像",
         "摄影"
@@ -26762,7 +26845,7 @@
       "authorName": "我叫聂磊",
       "authorHandle": "@zhy2024806",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "摄影"
@@ -26804,7 +26887,7 @@
       "authorName": "Cosmic Cowboy",
       "authorHandle": "@CosmicCowboyCDN",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "人像"
       ],
@@ -26845,7 +26928,7 @@
       "authorName": "Rubi",
       "authorHandle": "@AIwithRubii",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26888,7 +26971,7 @@
       "authorName": "Ssr_404",
       "authorHandle": "@ziyouzhixu",
       "createdAt": "2026-11-18T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -26975,7 +27058,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-17T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "人像",
         "摄影"
@@ -27017,7 +27100,7 @@
       "authorName": "Wareen AI 💟",
       "authorHandle": "@Wareenaa",
       "createdAt": "2026-11-17T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像"
@@ -27183,7 +27266,7 @@
       "authorName": "Smiling Khan",
       "authorHandle": "@AIwithkhan",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.316Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27227,7 +27310,7 @@
       "authorName": "Candy",
       "authorHandle": "@CandyTravelight",
       "createdAt": "2026-11-15T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2"
       ],
@@ -27388,7 +27471,7 @@
       "authorName": "Toudaiji",
       "authorHandle": "@ISoBZrpOBM85706",
       "createdAt": "2026-11-14T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [],
       "modelHints": [
         "GPT Image 2"
@@ -27553,7 +27636,7 @@
       "authorName": "ゆきと",
       "authorHandle": "@bakupso2",
       "createdAt": "2026-11-13T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "人像"
       ],
@@ -27716,7 +27799,7 @@
       "authorName": "降月@十師団物語",
       "authorHandle": "@ten_division_kz",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "人像"
       ],
@@ -27757,7 +27840,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27800,7 +27883,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -27843,7 +27926,7 @@
       "authorName": "いがぐりメタボ",
       "authorHandle": "@Kmsbdd0GXBOcrXQ",
       "createdAt": "2026-11-10T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.006Z",
       "tags": [
         "人像"
       ],
@@ -28010,7 +28093,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-06T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "人像",
         "摄影"
@@ -28260,7 +28343,7 @@
       "authorName": "Kevin Tech Labs",
       "authorHandle": "@HongyeMain",
       "createdAt": "2026-11-04T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "人像"
       ],
@@ -28544,7 +28627,7 @@
       "authorName": "沧瑶",
       "authorHandle": "@CryY666666",
       "createdAt": "2026-11-02T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.317Z",
+      "importedAt": "2026-11-21T20:11:45.007Z",
       "tags": [
         "GPT Image 2",
         "人像",
@@ -89532,7 +89615,7 @@
       "authorName": "wory＠ホッピング中",
       "authorHandle": "@wory37303852",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.321Z",
+      "importedAt": "2026-11-21T20:11:45.011Z",
       "tags": [
         "产品",
         "平面设计",
@@ -89575,7 +89658,7 @@
       "authorName": "皮皮特",
       "authorHandle": "@mm_zzm44854",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.321Z",
+      "importedAt": "2026-11-21T20:11:45.011Z",
       "tags": [
         "平面设计"
       ],
@@ -89616,7 +89699,7 @@
       "authorName": "やまもん",
       "authorHandle": "@yammamon",
       "createdAt": "2026-04-19T12:00:00.000Z",
-      "importedAt": "2026-11-21T08:38:49.321Z",
+      "importedAt": "2026-11-21T20:11:45.011Z",
       "tags": [
         "平面设计"
       ],
